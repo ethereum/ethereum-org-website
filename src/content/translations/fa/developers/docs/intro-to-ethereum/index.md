@@ -118,4 +118,4 @@ _آیا منبعی اجتماعی می‌شناسید که به شما کمک ک
 
 ## آموزش‌های مرتبط {#related-tutorials}
 
-- [راهنمایی برای توسعه‌دهنده‌ی اتریوم، قسمت 1 ](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– یک کاوش بسیار مبتدی در اتریوم با استفاده از Python و web3.py‏_
+- [راهنمایی برای توسعه‌دهنده‌ی اتریوم، قسمت 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– یک کاوش بسیار مبتدی در اتریوم با استفاده از Python و web3.py‏_

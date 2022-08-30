@@ -19,7 +19,7 @@ Ziel des Übersetzungsprogramms ist es, Ethereum für jeden zugänglich zu mache
 
 Daher ist das Übersetzungsprogramm offen zugänglich. Die Mitarbeit erfolgt auf freiwilliger Basis und unbezahlt. Würden Übersetzer für die von ihnen übersetzten Wörter bezahlt, könnten wir nur Übersetzer mit ausreichend Erfahrung (also professionelle Übersetzer) dazu einladen, an dem Übersetzungsprogramm teilzunehmen. Damit würde das Übersetzungsprogramm Personen ausschließen und das steht der allgemeinen Zielsetzung entgegen: Jeder soll die Möglichkeit haben, teilzunehmen und sich am Ökosystem zu beteiligen.
 
-Wir setzen alles daran, unseren Mitwirkenden eine erfolgreiche Teilnahme am Ethereum-Ökosystem zu ermöglichen. Es gibt viele nicht-monetäre Anreize wie: [ angebotene POAPs ](/contributing/translation-program/acknowledgements/#poap) und ein [Übersetzungszertifikat](/contributing/translation-program/acknowledgements/#certificate) sowie [ Übersetzungsranglisten ](/contributing/translation-program/acknowledgements/) und [die Nennung all unserer Übersetzer auf der Site](/contributing/translation-program/contributors/).
+Wir setzen alles daran, unseren Mitwirkenden eine erfolgreiche Teilnahme am Ethereum-Ökosystem zu ermöglichen. Es gibt viele nicht-monetäre Anreize wie: [angebotene POAPs](/contributing/translation-program/acknowledgements/#poap) und ein [Übersetzungszertifikat](/contributing/translation-program/acknowledgements/#certificate) sowie [Übersetzungsranglisten](/contributing/translation-program/acknowledgements/) und [die Nennung all unserer Übersetzer auf der Site](/contributing/translation-program/contributors/).
 
 ## Wie kann ich Strings mit `<HTML-Tags>` übersetzen? {#tags}
 

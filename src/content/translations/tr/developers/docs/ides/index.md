@@ -35,7 +35,6 @@ Bir [tümleşik geliştirme ortamı (IDE)](https://wikipedia.org/wiki/Integrated
 **Visual Studio Code -** **_Resmi Ethereum destekli, profesyonel çapraz platform IDE'sidir._**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Ethereum için Blok Zinciri Geliştirme Kiti](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain)
 - [Azure Blockchain Workbench](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
 - [Kod örnekleri](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)

@@ -39,7 +39,7 @@ incomplete: true
 
 - [pwasm_ethereum 外部库与类以太坊网络交互](https://github.com/openethereum/pwasm-ethereum)
 - [使用 JavaScript 和 Rust 搭建去中心化聊天室](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
-- [使用 Vue.js 和 Rust 构建一个去中心化待办事项应用程序 ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
+- [使用 Vue.js 和 Rust 构建一个去中心化待办事项应用程序](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [从 Enigma 开始 - 用 Rust 编程语言](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [Secret Contracts 介绍](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 - [在 Oasis (Compound) 上部署 Solidity 合约](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)
@@ -52,7 +52,7 @@ incomplete: true
 - [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS 应用程序界面参考_
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _采用 Rust 实现以太坊虚拟机_
-- [rust-web3](https://github.com/tomusdrw/rust-web3) - _ Web3.js 库 Rust 语言实现_
+- [rust-web3](https://github.com/tomusdrw/rust-web3) - _Web3.js 库 Rust 语言实现_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rust 语言的 Wavelet 智能合约_
 - [Foundry](https://github.com/gakonst/foundry) - _以太坊应用开发工具包_
 - [Ethers_rs](https://github.com/gakonst/ethers-rs)- _可实现以太坊库和钱包功能_

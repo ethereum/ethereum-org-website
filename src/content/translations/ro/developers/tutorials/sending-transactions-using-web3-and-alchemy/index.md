@@ -14,9 +14,9 @@ source: Documentație Alchemy
 sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
 ---
 
-This is a beginner friendly guide to sending Ethereum transactions using web3. Există trei etape principale pentru a trimite o tranzacție în blockchain-ul Ethereum: crearea, semnarea și difuzarea. Le vom parcurge pe toate trei, în speranța că vom răspunde tuturor întrebărilor pe care le puteți avea! In this tutorial, we'll be using [Alchemy](https://www.alchemy.com/) to send our transactions to the Ethereum chain. You can [create a free Alchemy account here](https://dashboard.alchemyapi.io/signup/).
+This is a beginner friendly guide to sending Ethereum transactions using web3. Există trei etape principale pentru a trimite o tranzacție în blockchain-ul Ethereum: crearea, semnarea și difuzarea. Le vom parcurge pe toate trei, în speranța că vom răspunde tuturor întrebărilor pe care le puteți avea! In this tutorial, we'll be using [Alchemy](https://www.alchemy.com/) to send our transactions to the Ethereum chain. You can [create a free Alchemy account here](https://auth.alchemyapi.io/signup).
 
-**NOTE:** This guide is for signing your transactions on the _backend_ for your app, if you want to integrate signing your transactions on the frontend, check out integrating [Web3 with a browser provider](https://docs.alchemyapi.io/documentation/alchemy-web3#with-a-browser-provider).
+**NOTE:** This guide is for signing your transactions on the _backend_ for your app, if you want to integrate signing your transactions on the frontend, check out integrating [Web3 with a browser provider](https://docs.alchemy.com/reference/api-overview#with-a-browser-provider).
 
 ## Noțiuni de bază {#the-basics}
 
@@ -55,13 +55,13 @@ This is what we will be using in this tutorial.
 ### 6\. Ce este biblioteca web3? {#what-is-the-web3-library}
 
 - Web3.js este o bibliotecă de coduri de încapsulare (wrapper) în jurul apelurilor JSON-RPC standard, care se utilizează destul de des în dezvoltarea Ethereum.
-- Există mai multe biblioteci web3 pentru diferite limbaje. În acest tutorial vom folosi [Alchemy Web3Web3](https://docs.alchemyapi.io/documentation/alchemy-web3), care este scrisă în JavaScript. Puteți verifica și alte opțiuni [aici](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries).
+- Există mai multe biblioteci web3 pentru diferite limbaje. În acest tutorial vom folosi [Alchemy Web3Web3](https://docs.alchemy.com/reference/api-overview), care este scrisă în JavaScript. Puteți verifica și alte opțiuni [aici](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries).
 
 În regulă, acum că am eliminat câteva dintre aceste întrebări, haideți să trecem la tutorial. Feel free to ask questions anytime in the Alchemy [discord](https://discord.gg/gWuC7zB)!
 
 **NOTE:** This guide requires an Alchemy account, an Ethereum address or MetaMask wallet, NodeJs, and npm installed. Daca nu, urmați acești pași:
 
-1.  [Creați un cont gratuit Alchemy](https://dashboard.alchemyapi.io/signup/)
+1.  [Creați un cont gratuit Alchemy](https://auth.alchemyapi.io/signup)
 2.  [Create MetaMask account](https://metamask.io/) (or get an Ethereum address)
 3.  [Urmați aceste etape pentru a instala „NodeJs” și „NPM”](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
 
@@ -86,7 +86,7 @@ cd sendtx-example
 
 ### 4\. Instalați Alchemy Web3 (sau orice bibliotecă web3) {#install-alchemy-web3}
 
-Executați următoarea comandă în directorul proiectului dvs. pentru a instala [Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3):
+Executați următoarea comandă în directorul proiectului dvs. pentru a instala [Alchemy Web3](https://docs.alchemy.com/reference/api-overview):
 
 ```
 npm install @alch/alchemy-web3

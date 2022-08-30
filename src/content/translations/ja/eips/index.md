@@ -23,7 +23,7 @@ EIP は、イーサリアムで変更がどのように行われ、文書化さ�
 
 ## EIP の歴史 {#history-of-eips}
 
-[イーサリアム改善提案改善提案(EIP) Github リポジトリ](https://github.com/ethereum/EIPs) は 2015 年 10 月に作成されました。 EIP のプロセスは、[Bitcoin 改善提案(BIP)](https://github.com/bitcoin/bips) に基づいており、この BIP 自体[Python 改善提案 (PEP)](https://www.python.org/dev/peps/)に準じています。
+[イーサリアム改善提案改善提案(EIP) GitHub リポジトリ](https://github.com/ethereum/EIPs) は 2015 年 10 月に作成されました。 EIP のプロセスは、[Bitcoin 改善提案(BIP)](https://github.com/bitcoin/bips) に基づいており、この BIP 自体[Python 改善提案 (PEP)](https://www.python.org/dev/peps/)に準じています。
 
 EIP 編集者は、技術的な健全性、正しいスペル/文法、およびコードスタイルについての EIP のレビューを担当します。 Martin Becze、Vitalik Buterin、Gavin Wood、および他数名が、2015 年から 2016 年まで初代の EIP 編集者でした。 現在の EIP 編集者は次のとおりです:
 

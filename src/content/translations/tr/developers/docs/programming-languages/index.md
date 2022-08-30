@@ -18,7 +18,7 @@ Projeler, kaynaklar ve sanal topluluklar bulmak için tercih ettiğiniz programl
 - [.Net Geliştiricileri için Ethereum](/developers/docs/programming-languages/dot-net/)
 - [Go Geliştiricileri için Ethereum](/developers/docs/programming-languages/golang/)
 - [Java Geliştiricileri için Ethereum](/developers/docs/programming-languages/java/)
-- [Javascript Geliştiricileri için Ethereum](/developers/docs/programming-languages/javascript/)
+- [JavaScript Geliştiricileri için Ethereum](/developers/docs/programming-languages/javascript/)
 - [Python Geliştiricileri için Ethereum](/developers/docs/programming-languages/python/)
 - [Ruby geliştiricileri için Ethereum](/developers/docs/programming-languages/ruby/)
 - [Rust Geliştiricileri için Ethereum](/developers/docs/programming-languages/rust/)

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import ButtonLink from "./ButtonLink"
 import Icon from "./Icon"

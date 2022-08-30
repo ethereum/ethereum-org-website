@@ -12,6 +12,10 @@ This is a list of key Ethereum-related projects and resources which have been de
 
 This list is curated by our community. If there's something missing or incorrect, please edit this page!
 
+## Proof-of-work {#pow}
+
+[Proof of work](/developers/docs/consensus-mechanisms/pow) is a consensus engine that was implemented in Ethereum until September 2022. It was deprecated when Ethereum swapped to a [proof-of-stake](/developers/docs/consensus-mechanisms/pos) based consensus mechanism. This was achieved by deprecating the parts of the client software related to proof-of-work mining, including [Ethhash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethhash) (the mining algorithm) and all the consensus logic and block gossiping functionality that was originally built in to execution clients. The clients themselves were not deprecated but several of their core components were. The concept of proof-of-work was deprecated as the total effect of removing the related components of the client software.
+
 ## Software {#software}
 
 This section is for software for the desktop, command line, or server which has been deprecated. The main types are wallets, integrated development environments, languages, and Ethereum clients. Definitely be careful to not install deprecated software unless you are certain it is from the original source, e.g. a repo hosted under https://github.com/ethereum.
@@ -188,6 +192,18 @@ Minimal was a modular implementation of the Ethereum blockchain written in Go.
 
 Minimal was replaced by [polgon-sdk](https://github.com/0xPolygon/polygon-edge)
 
+### Hyperledger Burrow {#hyperledger-burrow}
+
+Deprecated in 2022.
+
+**Summary**
+
+Hyperledger Burrow was a permissioned Ethereum smart-contract blockchain node. It executed Ethereum EVM and WASM smart contract code on permissioned virtual machines.
+
+**Archives**
+
+[Archived GitHub repo](https://github.com/hyperledger/burrow)
+
 ### Mana-Ethereum {#mana-ethereum}
 
 **Summary**
@@ -234,7 +250,7 @@ Ethereum-H was an Ethereum client written in Haskell. It was deprecated around 2
 
 **Alternatives**
 
-[Geth](https://geth.ethereum.org/), [Nethermind](http://nethermind.io/), [Besu](https://pegasys.tech/solutions/hyperledger-besu/) and [Erigon](https://github.com/ledgerwatch/erigon) are viable alternative Ethereum clients - there is no current Haskell client.
+[Geth](https://geth.ethereum.org/), [Nethermind](http://nethermind.io/), [Besu](https://besu.hyperledger.org/en/stable/) and [Erigon](https://github.com/ledgerwatch/erigon) are viable alternative Ethereum clients - there is no current Haskell client.
 
 ### ruby-ethereum {#ruby-ethereum}
 
@@ -248,7 +264,7 @@ ruby-ethereum was an Ethereum client written in Ruby. It was deprecated around 2
 
 **Alternatives**
 
-[Geth](https://geth.ethereum.org/), [Nethermind](http://nethermind.io/), [Besu](https://pegasys.tech/solutions/hyperledger-besu/) and [Erigon](https://github.com/ledgerwatch/erigon) are viable alternative Ethereum clients. There is no current Ruby client.
+[Geth](https://geth.ethereum.org/), [Nethermind](http://nethermind.io/), [Besu](https://besu.hyperledger.org/en/stable/) and [Erigon](https://github.com/ledgerwatch/erigon) are viable alternative Ethereum clients. There is no current Ruby client.
 
 ### Parity {#parity}
 

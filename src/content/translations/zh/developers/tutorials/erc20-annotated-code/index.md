@@ -19,7 +19,7 @@ published: 2021-03-09
 
 ## 接口 {#the-interface}
 
-像 ERC-20 这样的标准，其目的是允许符合标准的多种代币，都可以在应用程序之间进行互操作，例如钱包和分布式交易所。 为实现这个目的，我们要创建一个 [接口](https://www.geeksforgeeks.org/solidity-basics-of-interface/)。 任何需要使用代币合约的代码 可以在接口中使用相同的定义，并且与使用它的所有代币合约兼容。无论是像 Metamask 这样的钱包、 诸如 etherscan.io 之类的去中心化应用程序，或一种不同的合约，例如流动资金池。
+像 ERC-20 这样的标准，其目的是允许符合标准的多种代币，都可以在应用程序之间进行互操作，例如钱包和分布式交易所。 为实现这个目的，我们要创建一个 [接口](https://www.geeksforgeeks.org/solidity-basics-of-interface/)。 任何需要使用代币合约的代码 可以在接口中使用相同的定义，并且与使用它的所有代币合约兼容。无论是像 MetaMask 这样的钱包、 诸如 etherscan.io 之类的去中心化应用程序，或一种不同的合约，例如流动资金池。
 
 ![ERC-20 接口说明](erc20_interface.png)
 

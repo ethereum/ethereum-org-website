@@ -74,7 +74,7 @@ Los binarios ejecutables para las implementaciones estables de clientes de la re
 - [Geth](https://geth.ethereum.org/downloads/)
 - [OpenEthereum,](https://github.com/openethereum/openethereum/releases)
 - [Nethermind](https://downloads.nethermind.io/)
-- [Besu](https://pegasys.tech/solutions/hyperledger-besu/)
+- [Besu](https://besu.hyperledger.org/en/stable/)
 - [Erigon](https://github.com/ledgerwatch/erigon)
 
 **Tenga en cuenta que OpenEthereum[ha quedado obsoleta](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd)y no tiene mantenimiento.** Debe usarla con precaución y, preferiblemente, cambiar de cliente.

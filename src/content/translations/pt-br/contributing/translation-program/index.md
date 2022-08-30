@@ -130,7 +130,7 @@ Se você é um tradutor da ethereum.org ou deseja vir a ser, fique à vontade pa
 
 - [Portal de idiomas da Microsoft](https://www.microsoft.com/en-us/language) _: útil para encontrar e verificar as traduções padrão de termos técnicos_
 - [Linguee](https://www.linguee.com/) _: mecanismo de busca para traduções e dicionário que permite a pesquisa por palavra ou frase_
-- [ Proz ](https://www.proz.com/search/) _: banco de dados de traduções, dicionários e glossários para termos especializados_
+- [Proz](https://www.proz.com/search/) _: banco de dados de traduções, dicionários e glossários para termos especializados_
 - [Eurotermbank](https://www.eurotermbank.com/) _: coleções de terminologia europeia em 42 idiomas_
 
 ### Comunidades {#communities}
@@ -152,7 +152,3 @@ Para se manter atualizado sobre os avanços mais recentes do Programa de traduç
 Nossa comunidade de tradução também está trabalhando na plataforma [Staking Launchpad](https://launchpad.ethereum.org/en/). Isto permite que qualquer pessoa se torne um validador do Ethereum e ajude a proteger a rede. A plataforma Launchpad está atualmente disponível em 17 idiomas.
 
 Se estiver interessado, [participe do projeto de tradução da plataforma Ethereum Staking Launchpad no Crowdin](https://crowdin.com/project/ethereum-staking-launchpad). Você pode [abrir uma demanda](https://github.com/ethereum/staking-launchpad/issues/new) no GitHub para solicitar a adição de um novo idioma, se seu idioma não estiver disponível no Crowdin.
-
-## Traduções em andamento {#in-progress}
-
-<TranslationsInProgress />

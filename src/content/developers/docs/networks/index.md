@@ -3,7 +3,6 @@ title: Networks
 description: An overview of Ethereum's networks and where to get testnet ether (ETH) for testing your application.
 lang: en
 sidebar: true
-preMergeBanner: true
 ---
 
 Networks are different Ethereum environments you can access for development, testing, or production use cases. Since Ethereum is a protocol, there can be multiple independent "networks" that conform to the protocol without interacting with each other.
@@ -61,7 +60,6 @@ Sepolia is a proof-of-stake testnet. Although Sepolia is still running, it is no
 
 - [Sepolia faucet](https://faucet.sepolia.dev/)
 - [FaucETH](https://fauceth.komputing.org)
-
 
 #### Ropsten _(deprecated)_ {#ropsten}
 
@@ -146,4 +144,4 @@ If a public Ethereum network is like the public internet, a consortium network i
 
 ## Further reading {#further-reading}
 
-_Know of a community resource that helped you? Edit this page and add it!_
+- [The Evolution of Ethereum Testnets](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

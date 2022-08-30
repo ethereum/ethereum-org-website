@@ -95,7 +95,7 @@ Si es bilingüe y quiere ayudarnos a llegar a más personas, también puede invo
 - [Ethereum Madrid](https://ethereummadrid.com/): cadena de bloques, DeFi, y cursos de gobernanza, eventos y blog.
 - [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners): guía de Ethereum para principiantes en español.
 - [Tutoriales en línea](https://tutoriales.online/curso/solidity): para aprender Solidity y programación en Ethereum.
-- [Curso introductorio al desarrollo en Ethereum ](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU): introducción a Solidity, prueba y desarrollo de su primer contrato inteligente.
+- [Curso introductorio al desarrollo en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU): introducción a Solidity, prueba y desarrollo de su primer contrato inteligente.
 - [Curso introductorio a la seguridad y piratería en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci): entender los aspectos vulnerables comunes y problemas de seguridad en un contrato inteligente real.
 - [Curso Introducción a Desarrollo DeFi](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - aprende como trabajan los contratos intelifentes DeFi en Solidity y crea tu propio creador de mercado automatizado
 
@@ -106,7 +106,7 @@ Si es bilingüe y quiere ayudarnos a llegar a más personas, también puede invo
 
 ### Vietnamita {#vi}
 
-- [Tino Group](https://wiki.tino.org/ethereum-la-gi/): información general de Ethreum, dapps, carteras y preguntas más frecuentes.
+- [Tino Group](https://wiki.tino.org/ethereum-la-gi/): información general de Ethereum, dapps, carteras y preguntas más frecuentes.
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth): plataforma web con subpáginas de noticias y educación de Ethereum.
 - [Coin68](https://coin68.com/ethereum-tieu-diem/): portal de criptomonedas con contenido educativo y noticias de Ethereum.
 
