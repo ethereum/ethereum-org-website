@@ -36,6 +36,7 @@ export const Button: ComponentStyleConfig = {
     },
     _focus: {
       boxShadow: "outline",
+      outline: 0,
     },
   },
   sizes: {
