@@ -143,8 +143,8 @@ const config: GatsbyConfig = {
         // See: https://www.gatsbyjs.org/docs/mdx/plugins/
         gatsbyRemarkPlugins: [
           {
-            // Local plugin to adjust the images urls of the translated md files
-            resolve: path.resolve(`./plugins/gatsby-remark-image-urls`),
+            // Local plugin to adjust the images & links urls of the translated md files
+            resolve: path.resolve(`./plugins/gatsby-remark-fix-static-urls`),
           },
           {
             resolve: `gatsby-remark-autolink-headers`,
