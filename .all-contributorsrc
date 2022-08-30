@@ -8546,6 +8546,16 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "vvladd",
+      "name": "Vlad Kokhan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13506999?v=4",
+      "profile": "https://github.com/vvladd",
+      "contributions": [
+        "doc",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
