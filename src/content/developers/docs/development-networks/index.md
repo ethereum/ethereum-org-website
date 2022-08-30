@@ -59,7 +59,7 @@ Some consensus clients have built-in tools for spinning up local Beacon chains f
 
 ### Public Ethereum Test-chains {#public-beacon-testchains}
 
-There are also currently three public test implementations of Ethereum. The recommended testnet with long-term support is Prater (which will eventually merge with the Goerli chain). Sepolia is also expected to be maintained for the foreseeable future, but the validator set is permissioned meaning there is no general access to new validators on this testnet. The Ropsten Chain is expected to be deprecated.
+There are also three current public test implementations of Ethereum. The recommended testnet with long-term support is Goerli. Sepolia is also expected to be maintained for the foreseeable future, but the validator set is permissioned meaning there is no general access to new validators on this testnet. The Ropsten chain is expected to be deprecated.
 
 - [Prater Staking Launchpad](https://prater.launchpad.ethereum.org/en/)
 - [Ropsten Staking Launchpad](https://ropsten.launchpad.ethereum.org/en/)
