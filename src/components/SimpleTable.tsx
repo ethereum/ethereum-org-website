@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import Link from "./Link"
 import Translation from "./Translation"
@@ -118,7 +118,7 @@ export interface TableRow {
 }
 
 export interface IProps {
-  columns: Array<TranslationKey>
+  columns: Array<string>
   content: Array<TableRow>
   hasError: boolean
 }

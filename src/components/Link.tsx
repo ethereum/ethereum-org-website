@@ -3,7 +3,7 @@ import { Link as GatsbyLink, navigate as gatsbyNavigate } from "gatsby"
 import { LocalizedLink as IntlLink } from "gatsby-theme-i18n"
 import { NavigateOptions } from "@reach/router"
 import { IntlShape } from "react-intl"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import Icon from "./Icon"
 
@@ -69,6 +69,7 @@ const GlossaryIcon = styled(Icon)`
 export interface IProps {
   to?: string
   href?: string
+  children?: React.ReactNode
   dir?: Direction
   hideArrow?: boolean
   className?: string
@@ -208,6 +209,8 @@ const Link: React.FC<IProps> = ({
 
   // Use `gatsby-theme-i18n` Link (which prepends lang path)
   return (
+    // @ts-ignore: IntlLink is requiring a `language` prop but that prop should
+    // be optional. Opened issue: https://github.com/gatsbyjs/themes/issues/171
     <InternalLink
       dir={dir}
       className={isGlossary ? `is-glossary ${className}` : className}

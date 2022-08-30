@@ -39,7 +39,7 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 
 - [pwasm_ethereum bibliotecă pentru interacțiuni cu rețele ca Ethereum](https://github.com/openethereum/pwasm-ethereum)
 - [Construiți un chat descentralizat folosind JavaScript și Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
-- [Dezvoltă o aplicație Todo descentralizată folosind Vue.js și Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
+- [Dezvoltă o aplicație Todo descentralizată folosind Vue.js și Rust](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Noțiuni de bază ale Enigma - Limbaj de programare în Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [Introducere despre contractele secrete](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 - [Implementarea contractelor Solidity pe Oasis (compus)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)

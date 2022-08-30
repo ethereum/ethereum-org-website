@@ -346,7 +346,7 @@ DeFi es un proyecto de código abierto. Puede inspeccionar, copiar e innovar tod
 
 - [Finematics - Educación DeFi](https://finematics.com/) – _Vídeos sobre DeFi_
 - [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) – _DeFi Básico: Todo lo que necesitas saber para empezar en este apabullante espacio._
-- [Whiteboard Crypto](https://youtu.be/17QRFlml4pA) – _¿Qué es DeFi?_
+- [Whiteboard Crypto](https://youtu.be/17QRFlml4pA)_¿Qué es DeFi?_
 
 ### Comunidades {#communities}
 

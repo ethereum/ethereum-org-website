@@ -25,7 +25,7 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 ## 1. 注册免费 Alchemy 帐户 {#sign-up-for-a-free-alchemy-account}
 
-创建一个 Alchemy 帐户很容易。[在此免费注册](https://dashboard.alchemyapi.io/signup/)。
+创建一个 Alchemy 帐户很容易。[在此免费注册](https://auth.alchemyapi.io/signup)。
 
 ## 2. 创建一个 Alchemy 应用程序 {#create-an-alchemy-app}
 
@@ -79,7 +79,7 @@ _**注：**将 [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.a
 
 **_注意：_**下面的脚本需要在一个**节点环境**中运行或**保存到一个文件运行**，而不是通过命令行运行。 如果您尚未安装节点或 npm ，请查看此[适用于 mac 的快速设置指南](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs)。
 
-有大量可与与 Alchemy 集成的[Web3 库](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries)。但是，我们建议使用[Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3)，它是 web3.js 的替代插件，可以与 Alchemy 无缝配合工作。 这个库有很多优点，例如自动重试和可靠的 WebSocket 支持。
+有大量可与与 Alchemy 集成的[Web3 库](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries)。但是，我们建议使用[Alchemy Web3](https://docs.alchemy.com/reference/api-overview)，它是 web3.js 的替代插件，可以与 Alchemy 无缝配合工作。 这个库有很多优点，例如自动重试和可靠的 WebSocket 支持。
 
 要安装 AlchemyWeb3.js，请**导航到项目目录**并运行：
 
@@ -153,4 +153,4 @@ The latest block number is 11043912
 
 不知道下一步怎么办？ 尝试部署您的第一个智能合约，并在我们的 [Hello World 智能合约指南](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract)中用 solidity 编程，或者用 [Dashboard Demo App](https://docs.alchemyapi.io/tutorials/demo-app) 测试您的仪表盘知识！
 
-[免费注册 Alchemy](https://dashboard.alchemyapi.io/signup/)，查看我们的[文档](https://docs.alchemyapi.io/)，关注我们的[Twitter](https://twitter.com/AlchemyPlatform)获取最新消息。
+[免费注册 Alchemy](https://auth.alchemyapi.io/signup)，查看我们的[文档](https://docs.alchemyapi.io/)，关注我们的[Twitter](https://twitter.com/AlchemyPlatform)获取最新消息。

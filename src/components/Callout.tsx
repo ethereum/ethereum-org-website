@@ -1,6 +1,6 @@
 // Libraries
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Translation from "./Translation"
 import { TranslationKey } from "../utils/translations"
@@ -47,6 +47,7 @@ const Content = styled.div`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   image?: string
   emoji?: string
   alt?: string

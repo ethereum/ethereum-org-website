@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import BannerNotification from "./BannerNotification"
 import Link from "./Link"
 import Translation from "./Translation"
@@ -20,6 +20,7 @@ const StyledBannerNotification = styled(BannerNotification)`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   announcementOnly?: boolean
   className?: string
 }

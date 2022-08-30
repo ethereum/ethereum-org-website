@@ -49,7 +49,7 @@ La preuve de travail implique les points suivants :
 - `parentHash` – un identifiant unique pour le bloc précèdent (c'est ainsi que les blocs sont liés dans une chaîne).
 - `transactions` – les transactions incluses dans le bloc.
 - `stateRoot` – l'état global du système : les solde des comptes, le stockage du contrat, le code du contrat et les nonces des comptes sont inclues.
-- `nonce` – le hachage, qui en combinaison avec mixHash, prouve que le bloc a été passe par la [ preuve de travail ](/developers/docs/consensus-mechanisms/pow/).
+- `nonce` – le hachage, qui en combinaison avec mixHash, prouve que le bloc a été passe par la [preuve de travail](/developers/docs/consensus-mechanisms/pow/).
 
 ## Durée de blocage {#block-time}
 

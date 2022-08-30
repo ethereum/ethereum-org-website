@@ -37,10 +37,10 @@ Wenn wir Entscheidungen in puncto Design oder Werbetexte tätigen, ziehen wir de
 
 ### 1. Inspirierend {#1-inspirational}
 
-Die Seite sollte Nutzer dazu anregen, sich vorzustellen, welche Veränderungen Ethreum für die Welt brignen könnte. Menschen sollen sich motiviert fühlen, die Tools des Ethereum-Ökösystems zu erkunden, damit zu experimentieren und zu basteln.
+Die Seite sollte Nutzer dazu anregen, sich vorzustellen, welche Veränderungen Ethereum für die Welt brignen könnte. Menschen sollen sich motiviert fühlen, die Tools des Ethereum-Ökösystems zu erkunden, damit zu experimentieren und zu basteln.
 
 - **Fundamental:** Die Seite sollte vermitteln, wie Ethereum ambitioniert versucht, die Welt zu verändern. Es sollte klar werden, dass Ethereum nicht nur eine weitere technische Errungenschaft ist, sondern eine transformative Technologie.
-- **Fördern durch Bildung:** Die Informationen sollten so gestaltet sein, dass Besucher das Potenzial von Ethreum verstehen, einen Platz im Ökösystem finden und sich befähigt fühlen, sich zu beteiligen.
+- **Fördern durch Bildung:** Die Informationen sollten so gestaltet sein, dass Besucher das Potenzial von Ethereum verstehen, einen Platz im Ökösystem finden und sich befähigt fühlen, sich zu beteiligen.
 
 Visuelle Ausrichtung • Inhalt
 
@@ -91,4 +91,4 @@ Sie können unsere Designgrundsätze in Aktion sehen, und zwar [überall auf uns
 
 Obwohl diese Grundsätze auf die ethereum.org-Website ausgerichtet sind, hoffen wir, dass große Teile davon repräsentativ für die Werte des Ethereum-Ökosystems insgesamt stehen (z. B. lassen sich Einflüsse aus den [Grundsätzen des Ethereum-Whitepapers](https://github.com/ethereum/wiki/wiki/White-Paper#philosophy) erkennen). Vielleicht möchten Sie sogar einige davon für Ihr eigenes Projekt berücksichtigen.
 
-Teilen Sie uns Ihre Meinung mit auf [Discord Server](https://discord.gg/CetY6Y4). Sie können auch [ein Thema erstellen](<(https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=)>).
+Teilen Sie uns Ihre Meinung mit auf [Discord Server](https://discord.gg/CetY6Y4). Sie können auch [ein Thema erstellen](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=).

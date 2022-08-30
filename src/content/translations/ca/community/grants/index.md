@@ -29,7 +29,7 @@ Aquests programes donen suport a l'ample ecosistema Ethereum oferint subvencions
 Aquests projectes han creat les seves pròpies subvencions per projectes enfocades al desenvolupament i la experimentació amb les seves pròpies tecnologies.
 
 - [Aave Grants Program](https://aavegrants.org/) – _[Aave](https://aave.com/) grants DAO_
-- [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) – _[Balancer](https://balancer.fi/) ecosystem fund_
+- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/) ecosystem fund_
 - [Compound Grants Program](https://compoundgrants.org/) – _[Compound](https://compound.finance/) finance ecosystem_
 - [Consensys Grants Program](https://consensys.net/grants/) – _[Consensys](https://consensys.net/) blockchain funding & Ethereum grants_
 - [dYdX Grants Program](https://dydxgrants.com/) – _[dYdX](https://dydx.exchange/) decentralized exchange_

@@ -1,7 +1,7 @@
 // Library imports
 import React, { useState, useEffect, useRef, useMemo } from "react"
 import { useIntl } from "react-intl"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import FocusTrap from "focus-trap-react"
 // Component imports
 import { ButtonPrimary } from "./SharedStyledComponents"
@@ -154,18 +154,20 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
   const intl = useIntl()
   const containerRef = useRef<HTMLInputElement>(null)
   useOnClickOutside(containerRef, () => handleClose(), [`mousedown`])
+  const [location, setLocation] = useState("")
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const [feedbackSubmitted, setFeedbackSubmitted] = useState<boolean>(false)
   const [isHelpful, setIsHelpful] = useState<boolean | null>(null)
 
-  const location = typeof window !== "undefined" ? window.location.href : ""
-
   useEffect(() => {
-    // Reset component state when path (location) changes
-    setIsOpen(false)
-    setFeedbackSubmitted(false)
-    setIsHelpful(null)
-  }, [location])
+    if (typeof window !== "undefined") {
+      setLocation(window.location.href)
+      // Reset component state when path (location) changes
+      setIsOpen(false)
+      setFeedbackSubmitted(false)
+      setIsHelpful(null)
+    }
+  }, [])
 
   const surveyUrl = useSurvey(feedbackSubmitted, isHelpful)
 

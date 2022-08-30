@@ -20,7 +20,7 @@ Si eres nuevo en el tema de los nodos, te recomendamos primero revisar nuestra a
 
 Puedes observar la red de Ethereum en tiempo real accediendo este [mapa de nodos](https://etherscan.io/nodetracker).
 
-Existen varios [clientes de Ethereum ](/developers/docs/nodes-and-clients/#execution-clients), en una variedad de lenguajes de programación como Go, Rust, JavaScript, Typescript, Python, C# .NET, Nim y Java. Lo que estas implementaciones tienen en común es que todas siguen una especificación formal (originalmente, el [libro amarillo de Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)). Esta especificación determina cómo funcionan la red de Ethereum y las funciones de la blockchain.
+Existen varios [clientes de Ethereum](/developers/docs/nodes-and-clients/#execution-clients), en una variedad de lenguajes de programación como Go, Rust, JavaScript, Typescript, Python, C# .NET, Nim y Java. Lo que estas implementaciones tienen en común es que todas siguen una especificación formal (originalmente, el [libro amarillo de Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)). Esta especificación determina cómo funcionan la red de Ethereum y las funciones de la blockchain.
 
 ![Cliente de ejecución](./client-diagram.png) Diagrama simplificado de las características del cliente de Ethereum.
 
@@ -118,7 +118,7 @@ En esta tabla se resumen los diferentes clientes. Todos ellos pasan [pruebas de 
 | ------------------------------------------------------------------------- | -------- | --------------------- | ------------------------------------------ | ----------------------------- | ------------------ |
 | [Geth](https://geth.ethereum.org/)                                        | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Snap, Full                    | Archivo, podado    |
 | [Nethermind](http://nethermind.io/)                                       | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, etc.     | Fast, Beam, Archive           | Archivo, podado    |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)                  | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more | Rápido, completo              | Archivo, podado    |
+| [Besu](https://besu.hyperledger.org/en/stable/)                           | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more | Rápido, completo              | Archivo, podado    |
 | [Erigon](https://github.com/ledgerwatch/erigon)                           | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full                          | Archivo, podado    |
 | [OpenEthereum (Deprecated)](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS | Mainnet, Kovan, Ropsten, etc.              | Warp, Completo                | Archivo, eliminado |
 
@@ -320,5 +320,5 @@ Existe mucha información acerca de los clientes de Ethereum en internet. Estos 
 
 ## Tutoriales relacionados {#related-tutorials}
 
-- [Ejecución de un nodo con Geth](/developers/tutorials/run-light-node-geth/)_: cómo descargar, instalar y ejecutar Geth. Covering syncmodes, the JavaScript console, and more._
-- [Convierta su Raspberry Pi 4 en un nodo validador con solo intercambiar su tarjeta MicroSD - Guía de instalación ](/developers/tutorials/run-node-raspberry-pi/) _ Intercambie su Raspberry Pi 4, conecte un cable ethernet, conecte el disco SSD y encienda el dispositivo para convertir el Raspberry Pi 4 en un nodo completo de Ethereum mediante la activación de la capa de ejecución (red principal) o la capa de consenso (cadena de baliza/validador)._
+- [Ejecución de un nodo con Geth](/developers/tutorials/run-light-node-geth/) _: cómo descargar, instalar y ejecutar Geth. Covering syncmodes, the JavaScript console, and more._
+- [Convierta su Raspberry Pi 4 en un nodo validador con solo intercambiar su tarjeta MicroSD - Guía de instalación](/developers/tutorials/run-node-raspberry-pi/) _Intercambie su Raspberry Pi 4, conecte un cable ethernet, conecte el disco SSD y encienda el dispositivo para convertir el Raspberry Pi 4 en un nodo completo de Ethereum mediante la activación de la capa de ejecución (red principal) o la capa de consenso (cadena de baliza/validador)._
