@@ -651,7 +651,7 @@ This function gets four perfectly legitimate parameters, except that the cache i
         );
 ```
 
-This function sends five values. We know that the fifth value is ignored because it is not a valid cache entry.
+This function sends five values. We know that the fifth value is ignored because it is not a valid cache entry, which would have caused a revert had it not been included.
 
 ```solidity
         (_success, _callOutput) = _cacheAddr.call(_callInput);
@@ -667,13 +667,197 @@ This function sends five values. We know that the fifth value is ignored because
 
 ## A sample application {#a-sample-app}
 
+Writing tests in Solidity is all very well, but at the end of the day a dapp needs to be able to process requests from outside the chain to be useful. This article demonstrates how to use caching in a dapp with `WORM`, which stands for "Write Once, Read Many". If a key is not yet written, you can write a value to it. If the key is written already, you get a revert.
+
+
 ### The contract {#the-contract}
+
+[This is the contract](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/WORM.sol). It mostly repeats what we have already done with `Cache` and `CacheTest`, so we only cover the parts that are interesting.
+
+```solidity
+import "./Cache.sol";
+
+contract WORM is Cache {
+```
+
+The easiest way to use `Cache` is to inherit it in our own contract. 
+
+```solidity
+    function writeEntryCached() external {
+        uint[] memory params = _readParams(2);
+        writeEntry(params[0], params[1]);
+    }    // writeEntryCached
+```
+
+This function is similar to `fourParam` in `CacheTest` above. Because we don't follow the ABI specifications, it is best not to declare any parameters into the function.
+
+```solidity
+    // Make it easier to call us
+    // Function signature for writeEntryCached(), courtesy of
+    // https://www.4byte.directory/signatures/?bytes4_signature=0xe4e4f2d3
+    bytes4 constant public WRITE_ENTRY_CACHED = 0xe4e4f2d3;
+```
+
+The external code that calls `writeEntryCached` will need to manually build the calldata, instead of using `worm.writeEntryCached`, because we do not follow the ABI specifications. Having this constant value just makes it easier to write it.
+
+Note that even though we define `WRITE_ENTRY_CACHED` as a state variable, to read it externally it is necessary to use the getter function for it, `worm.WRITE_ENTRY_CACHED()`. 
+
+```solidity
+    function readEntry(uint key) public view 
+        returns (uint _value, address _writtenBy, uint _writtenAtBlock)
+```
+
+The read function is a `view`, so it does not require a transaction and does not cost gas. As a result, there is no benefit to using the cache for the parameter. With view functions it is best to use the standard mechanism that is simpler.
+
+
+### The testing code {#the-testing-code}
+
+[This is the testing code for the contract](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/WORM.t.sol). Again, let us look only at what is interesting.
+
+```solidity
+    function testWReadWrite() public {
+        worm.writeEntry(0xDEAD, 0x60A7);
+
+        vm.expectRevert(bytes("entry already written"));
+        worm.writeEntry(0xDEAD, 0xBEEF);
+```
+
+[This (`vm.expectRevert`)](https://book.getfoundry.sh/cheatcodes/expect-revert#expectrevert) is how we specify in a Foundry test that the next call should fail, and the reported reason for a failure. This applies when we use the syntax `<contract>.<function name>()` rather than building the calldata and calling the contract using the low level interface (`<contract>.call()`, etc.).
+
+```solidity
+    function testReadWriteCached() public {
+        uint cacheGoat = worm.cacheWrite(0x60A7);
+```
+
+Here we use the fact that `cacheWrite` returns the cache key. This is not something we'd expect to use in production, because `cacheWrite` changes the state, and therefore can only be called during a transaction. Transactions don't have return values, if they have results those results are supposed to be emitted as events. So the `cacheWrite` return value is only accessible from on-chain code, and on-chain code does not need parameter caching.
+
+
+```solidity
+        (_success,) = address(worm).call(_callInput);
+```
+
+This is how we tell Solidity that while `<contract address>.call()` has two return values, we only care about the first. 
+
+
+```solidity
+        (_success,) = address(worm).call(_callInput);
+        assertEq(_success, false);  
+```        
+
+Since we use the low level `<address>.call()` function, we can't use `vm.expectRevert()` and have to look at the boolean success value we get from the call.
+
+```solidity
+    event EntryWritten(uint indexed key, uint indexed value);
+
+        .
+        .
+        .
+
+        _callInput = bytes.concat(
+            worm.WRITE_ENTRY_CACHED(), worm.encodeVal(a), worm.encodeVal(b));
+        vm.expectEmit(true, true, false, false);
+        emit EntryWritten(a, b);
+        (_success,) = address(worm).call(_callInput);
+```
+
+This is the way we verify that code [emits an event correctly](https://book.getfoundry.sh/cheatcodes/expect-emit) in Foundry.
 
 ### The client {#the-client}
 
+One thing you don't get with Solidity tests is JavaScript code you can cut and paste into your own application. To write that code I deployed WORM to [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), [Optimism's](https://www.optimism.io/) new testnet. It is at address [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
+
+[You can see JavaScript code for the client here](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/javascript/index.js). To use it:
+
+1. Clone the git repository:
+
+   ```sh
+   git clone https://github.com/qbzzt/20220915-all-you-can-cache.git
+   ```
+
+
+2. Install the necessary packages:
+
+   ```sh
+   cd javascript
+   yarn
+   ```
+
+
+3. Copy the configuration file:
+
+   ``sh
+   cp .env.example .env
+   ```
+
+
+4. Edit `.env` for your configuration:
+
+   | Parameter           | Value |
+   | ------------------- | ----- |
+   | MNEMONIC            | The mnemonic for an account that has enough ETH to pay for a transaction. [You can get free ETH for the Optimism Goerli network here](https://optimismfaucet.xyz/).
+   | OPTIMISM_GOERLI_URL | URL to Optimism Goerli. The public endpoint, `https://goerli.optimism.io`, is rate limited but sufficient to what we need here
+
+
+5. Run `index.js`.
+
+   ```sh
+   node index.js
+   ```
+
+   This sample application first writes an entry to WORM, displaying the calldata and a link to the transaction on Etherscan. Then it reads back that entry, and displays the key it uses and the values in the entry (value, block number, and author).
+
+
+Most of the client is normall Dapp JavaScript. so again we'll only go over the interesting parts.
+
+```javascript
+.
+.
+.
+const main = async () => {  
+    const func = await worm.WRITE_ENTRY_CACHED() 
+
+    // Need a new key every time
+    const key = await worm.encodeVal(Number(new Date()))
+```
+
+A given slot can only be written into once, so we use the timestamp to make sure we don't reuse slots.
+
+```javascript
+    const val = await worm.encodeVal("0x600D")
+
+    // Write an entry
+    const calldata = func + key.slice(2) + val.slice(2)
+```
+
+Ethers expects the call data to be a hex string, `0x` followed by an even number of hexadecimal digits. As `key` and `val` both start with `0x`, we need to remove those headers.
+
+```javascript
+    const tx = await worm.populateTransaction.writeEntryCached()
+    tx.data = calldata
+
+    sentTx = await wallet.sendTransaction(tx)
+```
+
+As with the Solidity testing code, we cannot call a cached function normally. Instead, we need to use a lower level mechanism.
+
+
+```javascript
+    .
+    .
+    .
+    // Read the entry just written
+    const realKey = '0x' + key.slice(4)  // remove the FF flag
+    const entryRead = await worm.readEntry(realKey)
+    .
+    .
+    .
+```
+
+For reading entries we can use the normal mechanism. There's no need to use parameter caching with `view` functions.
+
 ## Conclusion {#conclusion}
 
-The code in this article is a proof of concept, the purpose is to make the concepts easy to understand. For a production-ready system you might want to implement some additional functionality:
+The code in this article is a proof of concept, the purpose is to make the idea easy to understand. For a production-ready system you might want to implement some additional functionality:
 
 * Handle values that aren't `uint256`. For example, strings.
 * Instead of a global cache, maybe have a mapping between users and caches. Different users use different values.
@@ -682,10 +866,12 @@ The code in this article is a proof of concept, the purpose is to make the conce
 
   However, that is a potentially dangerous operation. Imagine the following sequence of events:
 
-  1. Noam Naive calls `encodeVal` to encode the address to which he wants to send tokens. That address is one of the first used on the application, so the encoded value is 0x06. This is a `view` function, not a transaction, so it's between Noam and the node he uses, and nobody else knows about it.
+  1. Noam Naive calls `encodeVal` to encode the address to which he wants to send tokens. That address is one of the first used on the application, so the encoded value is 0x06. This is a `view` function, not a transaction, so it's between Noam and the node he uses, and nobody else knows about it
 
   2. Owen Owner runs the cache reoredring operation. Very few people actually use that address, so it is now encoded as 0x201122. A different value, 10<sup>18</sup>, is assigned 0x06.
 
   3. Noam Naive sends his tokens to 0x06. They go to the address `0x0000000000000000000000000de0b6b3a7640000`, and since nobody knows the private key for that address, they are just stuck there. Noam is *not happy*.
 
   There are ways to solve this problem, and the related problem of transactions that are in the mempool during the cache reorder, but you must be aware of it.
+
+I demostrated caching here with Optimism, because I'm an Optimism employee and this is the rollup I know best. But it should work with any rollup that charges a lot for writing to L1, but a minimum cost for internal processing.
