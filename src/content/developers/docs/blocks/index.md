@@ -3,7 +3,6 @@ title: Blocks
 description: An overview of blocks in the Ethereum blockchain – their data structure, why they're needed, and how they're made.
 lang: en
 sidebar: true
-preMergeBanner: true
 ---
 
 Blocks are batches of transactions with a hash of the previous block in the chain. This links blocks together (in a chain) because hashes are cryptographically derived from the block data. This prevents fraud, because one change in any block in history would invalidate all the following blocks as all subsequent hashes would change and everyone running the blockchain would notice.
@@ -99,7 +98,7 @@ gas_limit: maximum gas allowed in this block
 gas_used: the actual amount of gas used in this block
 timestamp: the block time
 extra_data: arbitrary additional data as raw bytes
-base_fee_per_gas: the base fee value 
+base_fee_per_gas: the base fee value
 block_hash: Hash of execution block
 transactions_root: root hash of the transactions in the payload
 ```
@@ -118,7 +117,7 @@ gas_limit: maximum gas allowed in this block
 gas_used: the actual amount of gas used in this block
 timestamp: the block time
 extra_data: arbitrary additional data as raw bytes
-base_fee_per_gas: the base fee value 
+base_fee_per_gas: the base fee value
 block_hash: Hash of execution block
 transactions: list of transactions to be executed
 ```

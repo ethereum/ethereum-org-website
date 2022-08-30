@@ -3,13 +3,12 @@ title: Mining algorithms
 description: A detailed look at the algorithms used for Ethereum mining.
 lang: en
 sidebar: true
-preMergeBanner: true
 ---
 
 <InfoBanner emoji=":wave:">
 
 Proof-of-work is no longer underlying Ethereum's consensus mechanism, meaning mining has been switched off. Instead, Ethereum is secured by validators who stake ETH. You can start staking your ETH today. Read more on [The Merge](/upgrades/merge/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos/), and [staking](/staking/). This page is for historical interest only.
-   
+
 </InfoBanner>
  
  
