@@ -58,13 +58,13 @@ Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/lea
 - [Turbo-Geth](https://github.com/ledgerwatch/turbo-geth) - _Go Ethereum'un daha hızlı bir türevi_
 - [Golem](https://github.com/golemfactory/golem) - _Golem, bilgi işlem gücü için küresel bir pazar oluşturuyor_
 - [Quorum](https://github.com/jpmorganchase/quorum) - _İzin verilen veri gizliliğini destekleyen Ethereum uygulaması_
-- [Prysm](https://github.com/prysmaticlabs/prysm) - _ Ethereum "Serenity" 2.0 Go Uygulaması_
+- [Prysm](https://github.com/prysmaticlabs/prysm) - _Ethereum "Serenity" 2.0 Go Uygulaması_
 - [Eth Tweet](https://github.com/yep/eth-tweet) - _Merkeziyetsiz Twitter: Ethereum blok zincirinde çalışan bir mikroblog hizmeti_
-- [Plazma MVP Golang](https://github.com/kyokan/plasma) - _ Golang uygulaması ve Minimum Uygulanabilir Plazma şartnamesinin eki_
+- [Plazma MVP Golang](https://github.com/kyokan/plasma) - _Golang uygulaması ve Minimum Uygulanabilir Plazma şartnamesinin eki_
 - [Açık Ethereum Madencilik Havuzu](https://github.com/sammy007/open-ethereum-pool) - _Açık kaynaklı bir Ethereum madencilik havuzu_
-- [Ethereum HD Cüzdan](https://github.com/miguelmota/go-ethereum-hdwallet) - _ Go'daki Ethereum HD Cüzdan türevleri_
+- [Ethereum HD Cüzdan](https://github.com/miguelmota/go-ethereum-hdwallet) - _Go'daki Ethereum HD Cüzdan türevleri_
 - [Multi Geth](https://github.com/multi-geth/multi-geth) - _Pek çok Ethereum ağ türü için destek_
-- [Geth Hafif İstemci](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _ Hafif Ethereum Alt Protokolünün Geth uygulaması_
+- [Geth Hafif İstemci](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _Hafif Ethereum Alt Protokolünün Geth uygulaması_
 
 Daha fazla kaynak mı arıyorsunuz? Göz atın: [ethereum.org/developers](/developers/).
 

@@ -27,7 +27,7 @@ sidebar: true
 
 - 节点或客户端工具
 - 密钥管理
-- 质押即服务(SaaS)
+- 质押即服务 (SaaS)
 - 质押池
 
 目前，我们仅在这些类别中上架产品或服务。
@@ -168,5 +168,5 @@ sidebar: true
 如果您想将质押产品或服务添加到 ethereum.org，请在 GitHub 上创建一个提议。
 
 <ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_staking_product.md">
-  创建一个议题
+  创建一个提议
 </ButtonLink>

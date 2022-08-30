@@ -9,7 +9,7 @@ JavaScript 是以太坊生态中最受欢迎的语言之一。 事实上，有�
 
 有机会在[堆栈的所有级别](/developers/docs/ethereum-stack/)使用 JavaScript（或接近）。
 
-## Javascript 和以太坊的交互 {#interact-with-ethereum}
+## JavaScript 和以太坊的交互 {#interact-with-ethereum}
 
 ### JavaScript 应用编程接口库 {#javascript-api-libraries}
 

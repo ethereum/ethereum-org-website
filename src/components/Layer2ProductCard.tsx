@@ -1,6 +1,6 @@
 // Libraries
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 
@@ -81,6 +81,7 @@ const Children = styled.div`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   url?: string
   background: string
   image: string

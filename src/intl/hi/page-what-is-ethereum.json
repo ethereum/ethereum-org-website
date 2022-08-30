@@ -53,5 +53,17 @@
   "page-what-is-ethereum-wallets": "वॉलेट",
   "page-what-is-ethereum-wallets-desc": "आप अपने ETH और अपने इथेरियम खाते को कैसे प्रबंधित करते हैं। आरंभ करने के लिए आपको एक वॉलेट की आवश्यकता होगी - हम आपको एक वॉलेट चुनने में मदद करेंगे।",
   "page-what-is-ethereum-welcome": "इथेरियम में आपका स्वागत है",
-  "page-what-is-ethereum-welcome-2": "हमें उम्मीद है कि आप बने रहेंगे।"
+  "page-what-is-ethereum-welcome-2": "हमें उम्मीद है कि आप बने रहेंगे।",
+  "page-what-is-ethereum-defi-title": "विकेन्द्रीकृत वित्त (DeFi)",
+  "page-what-is-ethereum-defi-description": "एक अधिक खुली वित्तीय प्रणाली जो आपको अपने पैसे पर अधिक नियंत्रण देती है और नई संभावनाओं को खोलती है।",
+  "page-what-is-ethereum-defi-alt": "लेगो ब्रिक्स से बना ETH लोगो।",
+  "page-what-is-ethereum-nft-title": "नॉन-फंजिबल टोकन्स (NFTs)",
+  "page-what-is-ethereum-nft-description": "एथेरियम संपत्ति के रूप में अद्वितीय वस्तुओं का प्रतिनिधित्व करने का एक तरीका जिसका कारोबार किया जा सकता है, स्वामित्व के प्रमाण के रूप में उपयोग किया जाता है, और रचनाकारों के लिए नए अवसर पैदा करता है।",
+  "page-what-is-ethereum-nft-alt": "होलोग्राम के माध्यम से एक Eth लोगो प्रदर्शित किया जा रहा है।",
+  "page-what-is-ethereum-dao-title": "विकेन्द्रीकृत स्वायत्त संगठन (DAO)",
+  "page-what-is-ethereum-dao-description": "साझा लक्ष्यों और एकत्रित धन के साथ ऑनलाइन समुदायों को सहयोग करने और स्थापित करने का एक नया तरीका।",
+  "page-what-is-ethereum-dao-alt": "एक प्रस्ताव पर मतदान करने वाले डीएओ का विवरण।",
+  "page-what-is-ethereum-use-cases-title": "एथेरियम उपयोग के मामलों की खोज करें",
+  "page-what-is-ethereum-use-cases-subtitle": "इथेरियम ने नए उत्पादों और सेवाओं का निर्माण किया है जो हमारे जीवन के विभिन्न क्षेत्रों में सुधार कर सकते हैं।",
+  "page-what-is-ethereum-use-cases-subtitle-two": "हम अभी भी शुरुआती चरण में हैं लेकिन उत्साहित होने के लिए आगे बहुत कुछ है।"
 }

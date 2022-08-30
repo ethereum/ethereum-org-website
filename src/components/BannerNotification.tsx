@@ -1,11 +1,12 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 export interface IStyledBanner {
   shouldShow: boolean
 }
 
 export interface IProps {
+  children?: React.ReactNode
   shouldShow?: boolean
   className?: string
 }

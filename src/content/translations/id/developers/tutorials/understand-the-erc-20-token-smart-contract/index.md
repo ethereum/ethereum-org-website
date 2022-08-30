@@ -180,4 +180,4 @@ contract ERC20Basic is IERC20 {
 }
 ```
 
-Implementasi standar token ERC-20 luar biasa lainnya adalah [implementasi OpenZeppelin ERC-20 ](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20).
+Implementasi standar token ERC-20 luar biasa lainnya adalah [implementasi OpenZeppelin ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20).

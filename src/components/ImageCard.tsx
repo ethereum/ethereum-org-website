@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 const StyledCard = styled.div`
@@ -22,6 +22,7 @@ const Description = styled.p`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   image: string
   alt: string
   title: string

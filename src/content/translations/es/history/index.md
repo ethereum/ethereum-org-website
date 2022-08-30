@@ -121,7 +121,7 @@ La actualización de Berlín optimizó el coste del gas para ciertas acciones de
 
 #### Sumario {#beacon-chain-genesis-summary}
 
-La [cadena de baliza ](/upgrades/beacon-chain/) necesita 16.384 depósitos de 32 ETH apostados para enviarse de forma segura. Esto sucedió el 27 de noviembre, es decir, la cadena de baliza comenzó a producir bloques el 1 de diciembre de 2020. Este es un primer paso importante en el cumplimiento de la [Visión de Ethereum](/upgrades/vision/).
+La [cadena de baliza](/upgrades/beacon-chain/) necesita 16.384 depósitos de 32 ETH apostados para enviarse de forma segura. Esto sucedió el 27 de noviembre, es decir, la cadena de baliza comenzó a producir bloques el 1 de diciembre de 2020. Este es un primer paso importante en el cumplimiento de la [Visión de Ethereum](/upgrades/vision/).
 
 [Leer el anuncio de Ethereum Foundation](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 

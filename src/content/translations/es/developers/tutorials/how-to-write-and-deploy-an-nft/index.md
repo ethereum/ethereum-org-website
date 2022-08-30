@@ -46,19 +46,19 @@ Una vez que haya creado una cuenta de Alchemy, puede generar una clave de API cr
 
 ## Paso 3: Crear una cuenta Ethereum (dirección) {#create-eth-address}
 
-Necesitamos una cuenta Ethereum para enviar y recibir transacciones. Para este tutorial, usaremos Metamask, una cartera virtual en el navegador usada para manejar la dirección de su cuenta Ethereum. Si quiere más información sobre cómo funcionan las transacciones en Ethereum, eche un vistazo a [esta página](/developers/docs/transactions/) de Ethereum Foundation.
+Necesitamos una cuenta Ethereum para enviar y recibir transacciones. Para este tutorial, usaremos MetaMask, una cartera virtual en el navegador usada para manejar la dirección de su cuenta Ethereum. Si quiere más información sobre cómo funcionan las transacciones en Ethereum, eche un vistazo a [esta página](/developers/docs/transactions/) de Ethereum Foundation.
 
-Puede descargar y crear una cuenta Metamask gratis [aquí](https://metamask.io/download.html). Cuando esté creando una cuenta, o si ya tiene una cuenta, asegúrese de cambiarla a la «Ropsten Test Network» (red de pruebas de Robsten) en la parte superior derecha ( para que no tratemos con dinero real).
+Puede descargar y crear una cuenta MetaMask gratis [aquí](https://metamask.io/download.html). Cuando esté creando una cuenta, o si ya tiene una cuenta, asegúrese de cambiarla a la «Ropsten Test Network» (red de pruebas de Robsten) en la parte superior derecha ( para que no tratemos con dinero real).
 
 ![Configure Ropsten como su red](./metamask-ropsten.png)
 
 ## Paso 4: Añadir ether de un faucet {#step-4-add-ether-from-a-faucet}
 
-Para desarrollar nuestro contrato inteligente en la red de prueba, necesitaremos algunos ETH de prueba. Para obtener ETH, puede ir a [FaucETH](https://fauceth.komputing.org) e introducir la dirección de su cuenta Ropsten, hacer clic en «Request funds» (Solicitar fondos) y luego en «Ethereum Testnet Ropsten» (Ropsten de red de prueba de Ethereum) antes de volver a hacer clic en el botón «Request funds». Deberían aparecer ETH en su cuenta de Metamask poco después.
+Para desarrollar nuestro contrato inteligente en la red de prueba, necesitaremos algunos ETH de prueba. Para obtener ETH, puede ir a [FaucETH](https://fauceth.komputing.org) e introducir la dirección de su cuenta Ropsten, hacer clic en «Request funds» (Solicitar fondos) y luego en «Ethereum Testnet Ropsten» (Ropsten de red de prueba de Ethereum) antes de volver a hacer clic en el botón «Request funds». Deberían aparecer ETH en su cuenta de MetaMask poco después.
 
 ## Paso 5: Comprobar su balance {#check-balance}
 
-Para comprobar que nuestro balance está ahí, hagamos una solicitud de [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance)usando [la herramienta de composición de Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Esto devolverá la cantidad de ETH a nuestra cartera. Después de introducir la dirección de su cuenta de Metamask y hacer clic en «Send Request» (Enviar Solicitud), debería ver una respuesta como esta:
+Para comprobar que nuestro balance está ahí, hagamos una solicitud de [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance)usando [la herramienta de composición de Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Esto devolverá la cantidad de ETH a nuestra cartera. Después de introducir la dirección de su cuenta de MetaMask y hacer clic en «Send Request» (Enviar Solicitud), debería ver una respuesta como esta:
 
     `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
 

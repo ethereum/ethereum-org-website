@@ -239,7 +239,7 @@ def endAuction():
 }
 ```
 
-如果您已经熟悉智能合约，可以在 [此处找到 Yul 中的完整 ERC20 实例 ](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example)。
+如果您已经熟悉智能合约，可以在 [此处找到 Yul 中的完整 ERC20 实例](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example)。
 
 ## Fe {#fe}
 

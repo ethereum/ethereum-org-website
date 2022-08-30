@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import Emoji from "./Emoji"
 import { margin } from "styled-system"
 
@@ -69,6 +69,7 @@ const Content = styled.div<{
 `
 
 export interface IProps {
+  children?: React.ReactNode
   className?: string
   emoji?: string
   isWarning?: boolean

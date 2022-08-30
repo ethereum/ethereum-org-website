@@ -16,7 +16,9 @@ sourceUrl: https://ethereumdev.io/logging-data-with-events/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-In Solidity, gli [eventi](/developers/docs/smart-contracts/anatomy/#events-and-logs) sono segnali inviati che possono essere attivati dagli Smart Contract. Le dapp, o altri elementi connessi all'API JSON-RPC di Ethereum, possono attendere questi eventi e agire di conseguenza. Gli eventi sono anche indicizzabili, così che la cronologia dell'evento sia ricercabile in seguito.
+In Solidity, gli [eventi](/developers/docs/smart-contracts/anatomy/#events-and-logs) sono segnali inviati che possono essere attivati dagli Smart Contract. Le dapp, o altri elementi connessi all'API JSON-RPC di Ethereum, possono attendere questi eventi e agire di conseguenza. Gli eventi sono anche indicizzabili così che la cronologia dell'evento sia ricercabile in seguito.
+
+## Eventi {#events}
 
 L'evento più comune sulla blockchain Ethereum al momento della scrittura di questo articolo è l'evento Transfer, emesso dai token ERC20 quando qualcuno trasferisce token.
 

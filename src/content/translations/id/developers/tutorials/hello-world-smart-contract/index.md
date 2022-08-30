@@ -15,7 +15,7 @@ sidebar: true
 published: 2021-03-31
 ---
 
-Jika Anda baru dalam pengembangan rantai blok dan tidak tahu harus mulai dari mana, atau jika Anda hanya ingin memahami cara menyebarkan dan berinteraksi dengan kontrak pintar, panduan ini cocok untuk Anda. Kami akan memandu pembuatan dan menyebarkan kontrak pintar sederhana di jaringan uji Ropsten menggunakan dompet virtual ([Metamask](https://metamask.io/)), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), dan [Alchemy](https://alchemyapi.io/eth) (jangan khawatir jika Anda belum mengerti beberapa hal ini, kami akan menjelaskannya).
+Jika Anda baru dalam pengembangan rantai blok dan tidak tahu harus mulai dari mana, atau jika Anda hanya ingin memahami cara menyebarkan dan berinteraksi dengan kontrak pintar, panduan ini cocok untuk Anda. Kami akan memandu pembuatan dan menyebarkan kontrak pintar sederhana di jaringan uji Ropsten menggunakan dompet virtual ([MetaMask](https://metamask.io/)), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), dan [Alchemy](https://alchemyapi.io/eth) (jangan khawatir jika Anda belum mengerti beberapa hal ini, kami akan menjelaskannya).
 
 Di bagian 2 dari tutorial ini kita akan membahas bagaimana kita dapat berinteraksi dengan kontrak pintar kita setelah disebarkan, dan di bagian 3 kita akan membahas cara mempublikasikannya di Etherscan.
 
@@ -41,15 +41,15 @@ Setelah Anda membuat akun Alchemy, Anda dapat membuat kunci API dengan membuat a
 
 ## Langkah 3: Buat akun Ethereum (alamat) {#step-3}
 
-Kita memerlukan akun Ethereum untuk mengirim dan menerima transaksi. Untuk tutorial ini, kita akan menggunakan Metamask, dompet virtual dalam peramban yang digunakan untuk mengelola alamat akun Ethereum Anda. Selengkapnya tentang [transaksi](/developers/docs/transactions/).
+Kita memerlukan akun Ethereum untuk mengirim dan menerima transaksi. Untuk tutorial ini, kita akan menggunakan MetaMask, dompet virtual dalam peramban yang digunakan untuk mengelola alamat akun Ethereum Anda. Selengkapnya tentang [transaksi](/developers/docs/transactions/).
 
-Anda dapat mengunduh dan membuat akun Metamask secara gratis [di sini](https://metamask.io/download.html). Saat Anda membuat akun, atau jika Anda sudah memiliki akun, pastikan untuk beralih ke "Jaringan Pengujian Ropsten" di kanan atas (sehingga kita tidak berurusan dengan uang asli).
+Anda dapat mengunduh dan membuat akun MetaMask secara gratis [di sini](https://metamask.io/download.html). Saat Anda membuat akun, atau jika Anda sudah memiliki akun, pastikan untuk beralih ke "Jaringan Pengujian Ropsten" di kanan atas (sehingga kita tidak berurusan dengan uang asli).
 
 ![contoh metamask ropsten](./metamask-ropsten-example.png)
 
 ## Langkah 4: Tambahkan ether dari Keran {#step-4}
 
-Untuk menyebarkan kontrak pintar kita ke jaringan uji, kita memerlukan beberapa ETH palsu. Untuk mendapatkan ETH, Anda dapat beralih ke [keran Ropsten](https://faucet.dimensions.network/) dan memasukkan alamat akun Ropsten Anda, lalu klik "Kirim ETH Ropsten." Mungkin perlu beberapa saat untuk menerima ETH palsu Anda karena kepadatan jaringan. Anda seharusnya akan melihat ETH dalam akun Metamask Anda dengan segera!
+Untuk menyebarkan kontrak pintar kita ke jaringan uji, kita memerlukan beberapa ETH palsu. Untuk mendapatkan ETH, Anda dapat beralih ke [keran Ropsten](https://faucet.dimensions.network/) dan memasukkan alamat akun Ropsten Anda, lalu klik "Kirim ETH Ropsten." Mungkin perlu beberapa saat untuk menerima ETH palsu Anda karena kepadatan jaringan. Anda seharusnya akan melihat ETH dalam akun MetaMask Anda dengan segera!
 
 ## Langkah 5: Periksa Saldo Anda {#step-5}
 
@@ -200,9 +200,9 @@ contract HelloWorld {
 
 Ini adalah kontrak pintar super sederhana yang menyimpan pesan saat dibuat dan dapat diperbarui dengan memanggil fungsi `update`.
 
-## Langkah 11: Hubungkan Metamask & Alchemy ke proyek Anda {#step-11}
+## Langkah 11: Hubungkan MetaMask & Alchemy ke proyek Anda {#step-11}
 
-Kita telah membuat dompet Metamask, akun Alchemy, dan menulis kontrak pintar kitar, sekarang saatnya untuk menghubungkan ketiganya.
+Kita telah membuat dompet MetaMask, akun Alchemy, dan menulis kontrak pintar kitar, sekarang saatnya untuk menghubungkan ketiganya.
 
 Setiap transaksi yang dikirim dari dompet virtual Anda memerlukan tanda tangan menggunakan kunci pribadi unik Anda. Untuk menyediakan program kita dengan izin ini, kita dapat menyimpan kunci pribadi kita (dan kunci API Alchemy) dengan aman dalam sebuah berkas lingkungan.
 
@@ -214,7 +214,7 @@ Pertama-tama, instal paket dotenv ke dalam direktori proyek Anda:
 npm install dotenv --save
 ```
 
-Kemudian, buat sebuah berkas `.env` dalam direktori akar proyek kita, dan tambahkan kunci pribadi Metamask dan URL API Alchemy HTTP-nya.
+Kemudian, buat sebuah berkas `.env` dalam direktori akar proyek kita, dan tambahkan kunci pribadi MetaMask dan URL API Alchemy HTTP-nya.
 
 - Ikuti [petunjuk ini](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) untuk mengekspor kunci pribadi
 - Lihat di bawah ini untuk mendapatkan URL HTTP Alchemy API
@@ -344,7 +344,7 @@ Jika kita pergi ke [etherscan Ropsten](https://ropsten.etherscan.io/) dan mencar
 
 ![kontrak etherscan](./etherscan-contract.png)
 
-`From` harus sesuai dengan alamat akun Metamask Anda dan alamat To akan bertuliskan “Contract Creation” tetapi jika kita mengklik transaksi, kita akan melihat akun kontrak kita di bagian `To`:
+`From` harus sesuai dengan alamat akun MetaMask Anda dan alamat To akan bertuliskan “Contract Creation” tetapi jika kita mengklik transaksi, kita akan melihat akun kontrak kita di bagian `To`:
 
 ![transaksi etherscan](./etherscan-transaction.png)
 

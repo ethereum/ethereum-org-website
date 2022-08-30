@@ -39,7 +39,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 
 - [Pustaka eksternal pwasm_ethereum untuk berinteraksi dengan jaringan seperti Ethereum](https://github.com/openethereum/pwasm-ethereum)
 - [Bangun Obrolan yang Terdesentralisi Menggunakan JavaScript dan Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
-- [Bangun Aplikasi Todo Terdesentralisasi Menggunakan Vue.js dan Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
+- [Bangun Aplikasi Todo Terdesentralisasi Menggunakan Vue.js dan Rust](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Mulai Menggunakan Enigma - Dalam Bahasa Pemrograman Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [Pengantar Kontrak Rahasia](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 - [Menggunakan Kontrak Solidity di Oasis (Gabungan)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)

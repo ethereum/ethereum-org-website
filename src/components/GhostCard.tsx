@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 const Container = styled.div`
   position: relative;
@@ -31,6 +31,7 @@ const Ghost = styled(BaseCard)`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   className?: string
 }
 

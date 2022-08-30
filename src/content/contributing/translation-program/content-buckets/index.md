@@ -211,7 +211,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [How to write & deploy an NFT (Part 1/3 of NFT tutorial series)](/developers/tutorials/how-to-write-and-deploy-an-nft/)
 - [How to mint an NFT (Part 2/3 of NFT tutorial series)](/developers/tutorials/how-to-mint-an-nft/)
 - [How to view your NFT in your wallet (Part 3/3 of NFT tutorial series)](/developers/tutorials/how-to-view-nft-in-metamask/)
-transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/)
+  transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/)
 - [Understand the ERC-20 token smart contract](/developers/tutorials/understand-the-erc-20-token-smart-contract/)
 - [Uniswap-v2 contract walkthrough](/developers/tutorials/uniswap-v2-annotated-code/)
 - Submit a tutorial

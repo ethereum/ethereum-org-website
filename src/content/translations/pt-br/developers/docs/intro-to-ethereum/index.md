@@ -118,4 +118,4 @@ _Conhece algum recurso da comunidade que o ajudou? Edite esta página e adicione
 
 ## Tutoriais relacionados {#related-tutorials}
 
-- [Um guia do desenvolvedor para Ethereum, parte 1 ](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _: uma exploração muito amigável para iniciantes do Ethereum usando Python e web3.py_
+- [Um guia do desenvolvedor para Ethereum, parte 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _: uma exploração muito amigável para iniciantes do Ethereum usando Python e web3.py_
