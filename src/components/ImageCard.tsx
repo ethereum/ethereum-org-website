@@ -22,6 +22,7 @@ const Description = styled.p`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   image: string
   alt: string
   title: string

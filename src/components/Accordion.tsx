@@ -83,6 +83,7 @@ const StyledEmoji = styled(Emoji)`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   contentPreview: string
   title: string
   emoji: string

@@ -88,6 +88,7 @@ const SecondaryScrollLink = styled(StyledScrollButton)`
 export interface IProps extends ILinkProps, MarginProps {
   toId?: string
   isSecondary?: boolean
+  children?: React.ReactNode
 }
 
 const ButtonLink: React.FC<IProps> = ({
