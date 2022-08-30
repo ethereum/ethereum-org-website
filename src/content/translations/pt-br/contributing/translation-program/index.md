@@ -152,7 +152,3 @@ Para se manter atualizado sobre os avanços mais recentes do Programa de traduç
 Nossa comunidade de tradução também está trabalhando na plataforma [Staking Launchpad](https://launchpad.ethereum.org/en/). Isto permite que qualquer pessoa se torne um validador do Ethereum e ajude a proteger a rede. A plataforma Launchpad está atualmente disponível em 17 idiomas.
 
 Se estiver interessado, [participe do projeto de tradução da plataforma Ethereum Staking Launchpad no Crowdin](https://crowdin.com/project/ethereum-staking-launchpad). Você pode [abrir uma demanda](https://github.com/ethereum/staking-launchpad/issues/new) no GitHub para solicitar a adição de um novo idioma, se seu idioma não estiver disponível no Crowdin.
-
-## Traduções em andamento {#in-progress}
-
-<TranslationsInProgress />

@@ -265,7 +265,7 @@ ethers.utils.formatEther(balance)
 
 **Alchemyweb3 -** **_Enveloppe autour de Web3.js avec nouvelles tentatives automatiques et API améliorées._**
 
-- [Documentation](https://docs.alchemyapi.io/documentation/alchemy-web3)
+- [Documentation](https://docs.alchemy.com/reference/api-overview)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
 **Alchemy NFT API -** **_API pour récupérer les données NFT, y compris la détention, les attributs de métadonnées et plus encore._**

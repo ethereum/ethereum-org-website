@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 // SVG imports
 import GreenCheck from "../../assets/staking/green-check-product-glyph.svg"
 import Caution from "../../assets/staking/caution-product-glyph.svg"

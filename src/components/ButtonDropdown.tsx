@@ -1,6 +1,6 @@
 // Libraries
 import React, { useState, createRef } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 import { motion } from "framer-motion"
 

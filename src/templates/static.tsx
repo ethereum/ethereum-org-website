@@ -3,7 +3,7 @@ import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import ButtonLink from "../components/ButtonLink"
 import Breadcrumbs from "../components/Breadcrumbs"
@@ -25,7 +25,6 @@ import TableOfContents, {
   Item as ItemTableOfContents,
 } from "../components/TableOfContents"
 import Translation from "../components/Translation"
-import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
 import DocLink from "../components/DocLink"
 import GhostCard from "../components/GhostCard"
@@ -135,7 +134,6 @@ const components = {
   Divider,
   SectionNav,
   Pill,
-  TranslationsInProgress,
   Emoji,
   DocLink,
   ExpandableCard,

@@ -65,7 +65,6 @@ EVM работает как [стековая машина](https://wikipedia.or
 - [evmone](https://github.com/ethereum/evmone) — _C++_
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) — _JavaScript_
 - [eEVM](https://github.com/microsoft/eevm) — _C++_
-- [Hyperledger Burrow](https://github.com/hyperledger/burrow) — _Go_
 
 ## Дополнительные ресурсы {#further-reading}
 

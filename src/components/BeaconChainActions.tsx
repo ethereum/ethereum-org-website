@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 
 import { translateMessageId } from "../utils/translations"

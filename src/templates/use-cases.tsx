@@ -3,7 +3,7 @@ import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import ButtonLink from "../components/ButtonLink"
@@ -30,7 +30,6 @@ import UpgradeTableOfContents, {
   Item as ItemTableOfContents,
 } from "../components/UpgradeTableOfContents"
 import TableOfContents from "../components/TableOfContents"
-import TranslationsInProgress from "../components/TranslationsInProgress"
 import Translation from "../components/Translation"
 import SectionNav from "../components/SectionNav"
 import {
@@ -167,7 +166,6 @@ const components = {
   Divider,
   SectionNav,
   Pill,
-  TranslationsInProgress,
   Emoji,
   UpgradeStatus,
   DocLink,

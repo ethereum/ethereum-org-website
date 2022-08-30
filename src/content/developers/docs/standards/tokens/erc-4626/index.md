@@ -161,14 +161,6 @@ function totalSupply() public view returns (uint256)
 
 Returns the total number of unredeemed vault shares in circulation.
 
-#### balanceOfUnderlying {#balanceofunderlying}
-
-```solidity
-function balanceOfUnderlying(address owner) public view returns (uint256)
-```
-
-This function returns the total amount of underlying tokens held in the vault for `owner`.
-
 #### balanceOf {#balanceof}
 
 ```solidity
