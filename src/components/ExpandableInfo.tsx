@@ -98,6 +98,7 @@ const ButtonContainer = styled(motion.div)`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   image?: string
   title: ReactNode
   contentPreview: ReactNode

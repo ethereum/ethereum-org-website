@@ -69,6 +69,7 @@ const Content = styled.div<{
 `
 
 export interface IProps {
+  children?: React.ReactNode
   className?: string
   emoji?: string
   isWarning?: boolean

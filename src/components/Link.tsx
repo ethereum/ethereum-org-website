@@ -69,6 +69,7 @@ const GlossaryIcon = styled(Icon)`
 export interface IProps {
   to?: string
   href?: string
+  children?: React.ReactNode
   dir?: Direction
   hideArrow?: boolean
   className?: string
