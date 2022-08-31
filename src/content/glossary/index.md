@@ -57,7 +57,7 @@ In [Solidity](#solidity), `assert(false)` compiles to `0xfe`, an invalid opcode,
 
 ### attestation {#attestation}
 
-A validator vote for [block](#block). Validators must attest to blocks, signaling that they agree with the state proposed by the block.
+A validator vote for a [block](#block). Validators must attest to blocks, signalling that they agree with the state proposed by the block.
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos/attestations/">
   Attestations
@@ -89,7 +89,7 @@ A positional number representation where the most significant digit is first in 
 
 ### block {#block}
 
-A block is a unit of information that is created by a [block proposer](#block-proposer) and sent to other nodes over the peer-to-peer network. Blocks include lists of transactions to execute as well as consensus-related information that allow [validators](#validator) to check the information in the block is valid. This allows nodes to update their view of the state of Ethereum.
+A block is a unit of information created by a [block proposer](#block-proposer) and sent to other nodes over the peer-to-peer network. Blocks include lists of transactions to execute and consensus-related information that allow [validators](#validator) to check the information in the block is valid. This allows nodes to update their view of the state of Ethereum.
 
 <DocLink to="/developers/docs/blocks/">
   Blocks
@@ -122,7 +122,7 @@ The states that a block can exist in. The possible states include:
 - proposed: the block was proposed by a validator
 - scheduled: validators are currently submitting data
 - missed/skipped: the proposer did not propose a block within the eligible time frame.
-- orphaned: the block was reorg'd out by the fork chocie mechanism
+- orphaned: the block was reorg'd out by the fork choice mechanism
 
 ### block time {#block-time}
 
@@ -130,11 +130,11 @@ The time interval between blocks being added to the blockchain.
 
 ### block validation {#block-validation}
 
-Checking that a new block contains valid transactions and that it builds on the heaviest historical chain.
+The process of checking that a new block contains valid transactions and that it builds on the heaviest historical chain.
 
 ### blockchain {#blockchain}
 
-A sequence of [blocks](#block), each linking to its predecessor all the way to the [genesis block](#genesis-block). The integrity of the blockchain is crypto-economically secured using a proof-of-stake based consensus mechanism.
+A sequence of [blocks](#block), each linking to its predecessor all the way to the [genesis block](#genesis-block). The integrity of the blockchain is crypto-economically secured using a proof-of-stake-based consensus mechanism.
 
 <DocLink to="/developers/docs/intro-to-ethereum#what-is-a-blockchain">
   What is a Blockchain?
@@ -276,7 +276,7 @@ A network-wide setting that controls how much computation is required to produce
 
 ### difficulty bomb {#difficulty-bomb}
 
-Planned exponential increase in [proof-of-work](#pow) [difficulty](#difficulty) setting that was designed to motivate the transition to [proof-of-stake](#pos), reducing the chances of a [fork](#hard-fork). This was only a feature of Ethereum before it transitioned to proof-of-stake.
+Planned exponential increase in [proof-of-work](#pow) [difficulty](#difficulty) setting that was designed to motivate the transition to [proof-of-stake](#pos), reducing the chances of a [fork](#hard-fork). The difficulty bomb was removed at [The Merge](/upgrades/merge/).
 
 ### digital signature {#digital-signatures}
 
@@ -312,7 +312,7 @@ In the context of cryptography, lack of predictability or level of randomness. W
 
 ### epoch {#epoch}
 
-A period of 32 [slots](#slot) (6.4 minutes). [Validator](#validator) [committees](#committee) are shuffled every epoch for security reasons. There's an opportunity at each epoch for the chain to be [finalized](#finality).
+A period of 32 [slots](#slot) (6.4 minutes). [Validator](#validator) [committees](#committee) are shuffled every epoch for security reasons. Each epoch has an opportunity for the chain to be [finalized](#finality).
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
   Proof-of-stake
@@ -354,7 +354,7 @@ The ENS registry is a single central [contract](#smart-contract) that provides a
 
 ### execution client {#execution-client}
 
-Execution clients (f.k.a. "Eth1 clients"), such as Besu, Erigon, go-ethereum, Nethermind, are tasked with processing and broadcasting transactions, as well as with managing Ethereum's state. They run the computations for each transaction in the [Ethereum Virtual Machine](#evm) to ensure that the rules of the protocol are followed.
+Execution clients (formerly known as "Eth1 clients"), such as Besu, Erigon, go-ethereum, Nethermind, are tasked with processing and broadcasting transactions and managing Ethereum's state. They run the computations for each transaction in the [Ethereum Virtual Machine](#evm) to ensure that the rules of the protocol are followed.
 
 ### execution layer {#execution-layer}
 
@@ -436,7 +436,7 @@ A denomination of [ether](#ether). 1 finney = 10<sup>15</sup> [wei](#wei). 10<su
 
 ### fork {#fork}
 
-A change in protocol causing the creation of an alternative chain, or a temporal divergence into two potential block paths.
+A change in protocol causing the creation of an alternative chain or a temporal divergence into two potential block paths.
 
 ### fork-choice algorithm {#fork-choice-algorithm}
 
@@ -644,7 +644,7 @@ The third development stage of Ethereum, launched in October 2017.
 
 ### mining {#mining}
 
-The process of verifying transactions and contract execution on the Ethereum blockchain in exchange for a reward in ether with the mining of every block. This was how Ethereumw as secured before it moved to [proof-of-stake](#pos).
+The process of verifying transactions and contract execution on the Ethereum blockchain in exchange for a reward in ether with the mining of every block. This was how Ethereum was secured before it moved to [proof-of-stake](#pos).
 
 ### mining pool {#mining-pool}
 
@@ -707,7 +707,7 @@ In cryptography, a value that can only be used once. An account nonce is a trans
 
 ### ommer (uncle) block {#ommer}
 
-When a proof-of-work [miner](#miner) finds a valid [block](#block), another miner may have published a competing block which is added to the tip of the blockchain first. This valid, but stale, block can be included by newer blocks as _ommers_ and receive a partial block reward. The term "ommer" is the preferred gender-neutral term for the sibling of a parent block, but this is also sometimes referred to as an "uncle". This was relevant for Ethereum when it was a [proof-of-work](pow) network but ommers are not a feature of [proof-of-stake](#pos) Ethereum because precisely one block proposer is selected in each slot.
+When a proof-of-work [miner](#miner) finds a valid [block](#block), another miner may have published a competing block which is added to the tip of the blockchain first. This valid, but stale, block can be included by newer blocks as _ommers_ and receive a partial block reward. The term "ommer" is the preferred gender-neutral term for the sibling of a parent block, but this is also sometimes referred to as an "uncle". This was relevant for Ethereum when it was a [proof-of-work](pow) network, but ommers are not a feature of [proof-of-stake](#pos) Ethereum because precisely one block proposer is selected in each slot.
 
 ### optimistic rollup {#optimistic-rollup}
 
@@ -835,7 +835,7 @@ The process of converting a data structure into a sequence of bytes.
 
 ### shard / shard chain {#shard}
 
-Shard chains are discrete sections of the total blockchain that can subsets of validators cna be responsible for. This will offer increased transaction throughput for Ethereum and improve data availability for [layer 2](#layer-2) solutions like [optimistic rollups](#optimistic-rollups) and [ZK-rollups](#zk-rollups).
+Shard chains are discrete sections of the total blockchain that can subsets of validators can be responsible for. This will offer increased transaction throughput for Ethereum and improve data availability for [layer 2](#layer-2) solutions like [optimistic rollups](#optimistic-rollups) and [ZK-rollups](#zk-rollups).
 
 <DocLink to="/upgrades/shard-chains">
   Shard chains
@@ -859,7 +859,7 @@ A computer programming term that describes an object of which only a single inst
 
 ### slasher {#slasher}
 
-A slasher is an entity that scans attestations searching for slashable offenses. Slashings are broadcasted to the network and the next block proposer adds the proof to the block. The block proposer then receives a reward for slashing the malicious validator.
+A slasher is an entity that scans attestations searching for slashable offenses. Slashings are broadcast to the network, and the next block proposer adds the proof to the block. The block proposer then receives a reward for slashing the malicious validator.
 
 ### slot {#slot}
 
@@ -951,7 +951,7 @@ The process of downloading the entire latest version of a blockchain to a node.
 
 ### sync committee {#sync-committee}
 
-A sync committee is a randomly selected group of [validators](#validator) that refresh every ~27 hours. Their purpose is to add their signatures to valid block headers. Sync committees allow [light clients](#light-client) to keep track of the head of the blockchain without having to access the entire validator set.
+A sync committee is a randomly selected group of [validators](#validator) that refresh every ~27 hours. Their purpose is to add their signatures to valid block headers. Sync committees allow [light clients](#light-client) to keep track of the head of the blockchain without needing to access the entire validator set.
 
 ### szabo {#szabo}
 
@@ -999,7 +999,7 @@ Data committed to the Ethereum Blockchain signed by an originating [account](#ac
 
 ### transaction fee {#transaction-fee}
 
-A fee you need to pay whenever you use the Ethereum network. Examples include sending funds from your [wallet](#wallet) or a [dapp](#dapp) interaction, like swapping tokens or buying a collectible. You can think of this like a service charge. This fee will change based on how busy the network is. This is because [validators](#validator), the people responsible for processing your transaction, are likely to prioritise transactions with higher fees – so congestion forces the price up.
+A fee you need to pay whenever you use the Ethereum network. Examples include sending funds from your [wallet](#wallet) or a [dapp](#dapp) interaction, like swapping tokens or buying a collectable. You can think of this like a service charge. This fee will change based on how busy the network is. This is because [validators](#validator), the people responsible for processing your transaction, are likely to prioritise transactions with higher fees – so congestion forces the price up.
 
 At a technical level, your transaction fee relates to how much [gas](#gas) your transaction requires.
 
