@@ -785,7 +785,7 @@ One thing you don't get with Solidity tests is JavaScript code you can cut and p
 
 3. Copy the configuration file:
 
-   ``sh
+   ```sh
    cp .env.example .env
    ```
 
