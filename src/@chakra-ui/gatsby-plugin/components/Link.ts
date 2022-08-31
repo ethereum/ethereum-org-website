@@ -6,9 +6,10 @@ export const Link: ComponentStyleConfig = {
     textDecoration: "underline",
     _focus: {
       boxShadow: "none",
-      outline: "1px solid",
-      outlineColor: "primary",
-      outlineOffset: "2px",
+    },
+    _focusVisible: {
+      boxShadow: "none",
+      outlineStyle: "auto",
     },
   },
 }
