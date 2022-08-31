@@ -510,7 +510,7 @@ Cache keys below 16 are just one byte.
         .
         .
     }   // testReadParam
-```solidity
+```
 
 The tests after the call are identical to those after the first call.
 
