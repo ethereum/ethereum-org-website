@@ -853,6 +853,16 @@ const DappsPage = ({
       image: getImage(data.rotki),
       alt: translateMessageId("page-dapps-rotki-logo-alt", intl),
     },
+    {
+      title: "Krystal",
+      description: translateMessageId(
+        "page-dapps-dapp-description-krystal",
+        intl
+      ),
+      link: "https://defi.krystal.app/",
+      image: getImage(data.krystal),
+      alt: translateMessageId("page-dapps-krystal-logo-alt", intl),
+    },
   ]
 
   const computing = [
@@ -1897,6 +1907,9 @@ export const query = graphql`
       ...dappImage
     }
     rotki: file(relativePath: { eq: "dapps/rotki.png" }) {
+      ...dappImage
+    }
+    krystal: file(relativePath: { eq: "dapps/krystal.png" }) {
       ...dappImage
     }
     poap: file(relativePath: { eq: "dapps/poap.png" }) {
