@@ -57,7 +57,6 @@ const Card = styled(Link)`
 
   &:hover,
   &:focus {
-    outline: none;
     text-decoration: none;
     border-radius: 4px;
     box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);

@@ -9,7 +9,7 @@ export const Link: ComponentStyleConfig = {
     },
     _focusVisible: {
       boxShadow: "none",
-      outlineStyle: "auto",
+      outline: "auto",
     },
   },
 }
