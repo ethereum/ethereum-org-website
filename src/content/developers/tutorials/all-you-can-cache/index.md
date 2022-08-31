@@ -493,7 +493,7 @@ The output is the four parameters. Here we verify it is correct.
 
             // First value in the Cache
             bytes1(0x01),   
-```solidity
+```
 
 Cache keys below 16 are just one byte.
 
