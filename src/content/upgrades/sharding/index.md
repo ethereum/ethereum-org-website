@@ -36,7 +36,7 @@ With lower hardware requirements, sharding will make it easier to run [clients](
 <br />
 
 <InfoBanner isWarning>
-  At first, you'll need to run a Mainnet (execution layer) client at the same time as your consensus layer client. <a href="https://launchpad.ethereum.org" target="_blank">The launchpad</a> will walk you through the hardware requirements and process.
+  You'll need to run an execution client at the same time as your consensus client. <a href="https://launchpad.ethereum.org" target="_blank">The launchpad</a> will walk you through the hardware requirements and process.
 </InfoBanner>
 
 ## Shard chains version 1: data availability {#data-availability}
