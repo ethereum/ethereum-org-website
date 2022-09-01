@@ -132,7 +132,7 @@ Optimistic Kovan 水龙头：
 
 要开发以太坊应用程序，在部署前，你想在私有网络上运行它，以便了解它的运行情况。 如同在自己的电脑上创建用于 Web 开发的本地服务器，你可以创建本地区块链实例来测试你的去中心化应用程序。 这样，迭代将比公共测试网快很多。
 
-有一些项目和工具专门协助这方面的工作。 进一步了解<a href=“/developers/docs/development networks/”>开发网络</a>。
+有一些项目和工具专门协助这方面的工作。 进一步了解[开发网络](/developers/docs/development-networks/)。
 
 ### 联盟网络 {#consortium-networks}
 
