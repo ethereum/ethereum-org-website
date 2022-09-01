@@ -107,10 +107,24 @@ const Text = styled.p`
 ```tsx
 import { Icon } from "@chakra-ui/react"
 import { BsQuestionSquareFill } from "react-icons/bs"
-;<Icon as={BsQuestionSquareFill} />
+
+<Icon as={BsQuestionSquareFill} />
 ```
 
-- [Deprecated]`src/components/SharedStyledComponents` - we are not using this anymore, use Chakra components instead.
+- [Deprecated]`src/components/SharedStyledComponents` - we are not using this anymore, replace everything with Chakra components.
+
+```tsx
+// before
+import { ButtonPrimary, ButtonSecondary } from "../SharedStyledComponents"
+
+// now
+import Button from "../Button" // <-- use the new Button component built with Chakra
+
+// use our primary button (uses the default `solid` variant)
+<Button />
+// or the outline version
+<Button variant="outline" />
+```
 
 ## Do you have any other question?
 

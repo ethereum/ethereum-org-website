@@ -198,6 +198,7 @@ const StepBox = styled(Link)`
   text-decoration: none;
   width: 100%;
   &:hover {
+    text-decoration: none;
     background: ${(props) => props.theme.colors.ednBackground};
     transition: transform 0.2s;
     transform: scale(1.05);
@@ -1155,7 +1156,7 @@ const DappsPage = ({
       {
         content: translateMessageId("page-dapps-what-are-dapps", intl),
         to: "#what-are-dapps",
-        isSecondary: true,
+        variant: "outline",
       },
     ],
   }
@@ -1548,7 +1549,7 @@ const DappsPage = ({
               </TextNoMargin>
             </div>
             <AddDappButton
-              isSecondary
+              variant="outline"
               to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dapp.md&title="
             >
               <Translation id="page-dapps-add-button" />
@@ -1578,21 +1579,21 @@ const DappsPage = ({
               </CardContainer>
               {selectedCategory === CategoryType.FINANCE && (
                 <MoreButtonContainer>
-                  <ButtonLink isSecondary to="/defi/">
+                  <ButtonLink variant="outline" to="/defi/">
                     <Translation id="page-dapps-more-on-defi-button" />
                   </ButtonLink>
                 </MoreButtonContainer>
               )}
               {selectedCategory === CategoryType.COLLECTIBLES && (
                 <MoreButtonContainer>
-                  <ButtonLink isSecondary to="/nft/">
+                  <ButtonLink variant="outline" to="/nft/">
                     <Translation id="page-dapps-more-on-nft-button" />
                   </ButtonLink>
                 </MoreButtonContainer>
               )}
               {selectedCategory === CategoryType.GAMING && (
                 <MoreButtonContainer>
-                  <ButtonLink isSecondary to="/nft/">
+                  <ButtonLink variant="outline" to="/nft/">
                     <Translation id="page-dapps-more-on-nft-gaming-button" />
                   </ButtonLink>
                 </MoreButtonContainer>

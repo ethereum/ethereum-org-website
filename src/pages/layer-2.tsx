@@ -287,12 +287,12 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
       {
         content: translateMessageId("layer-2-hero-button-2", intl),
         toId: "use-layer-2",
-        isSecondary: true,
+        variant: "outline",
       },
       {
         content: translateMessageId("layer-2-hero-button-3", intl),
         toId: "how-to-get-onto-layer-2",
-        isSecondary: true,
+        variant: "outline",
       },
     ],
   }

@@ -93,6 +93,7 @@ const NavLink = styled(Link)`
     fill: ${(props) => props.theme.colors.text200};
   }
   &:hover {
+    text-decoration: none;
     color: ${(props) => props.theme.colors.primary};
     svg {
       fill: ${(props) => props.theme.colors.primary};

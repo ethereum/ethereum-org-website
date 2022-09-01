@@ -26,6 +26,7 @@ const Container = styled(Link)<{ isExternal: boolean }>`
   color: ${({ theme }) => theme.colors.text};
   border: 1px solid ${({ theme }) => theme.colors.border};
   &:hover {
+    text-decoration: none;
     box-shadow: 0 0 1px ${({ theme }) => theme.colors.primary};
     background: ${({ theme }) => theme.colors.tableBackgroundHover};
     border-radius: 4px;

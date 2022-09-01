@@ -228,7 +228,9 @@ const ProductCard: React.FC<IProps> = ({
             )
           )}
       </SubjectContainer>
-      <StyledButtonLink to={url}>Open {name}</StyledButtonLink>
+      <StyledButtonLink h={20} to={url}>
+        Open {name}
+      </StyledButtonLink>
     </Card>
   )
 }
