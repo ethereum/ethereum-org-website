@@ -118,7 +118,6 @@
   "arbitrum-description": "Arbitrum 是一种乐观卷叠，目的是提供与以太坊完全一致的交互体验，但交易成本只是它们在一层网络上的很小比例。",
   "optimism-description": "乐观以太坊是一种 EVM 等效的乐观卷叠链。它的目标是快捷、简单和安全。",
   "boba-description": "Boba 是最初从乐观卷叠分叉而来的乐观卷叠链，它是一种旨在降低铸币费用，提高交易吞吐量，并扩展智能合约能力的扩容解决方案。",
-  "dydx-description": "dYdX 旨在建立一个强大、专业的交易所来交易加密资产，在这里用户能够真正掌控自己的交易，并最终拥有交易所本身。",
   "loopring-description": "Loopring 的零知识卷叠二层网络解决方案旨在提供与以太坊主链相同的安全保障，并大规模提升可扩展性：交易吞吐量增加 1000 倍，交易费用降至一层网络 0.1%。",
   "zksync-description": "zkSync 是由 Matter Labs 推出的以用户为中心的零知识卷叠平台。它是以太坊的扩容解决方案，已经在以太坊主链上线，支持付款、代币交换和 NFT 挖矿。",
   "zkspace-description": "ZKSpace 平台由三个主要部分组成：利用零知识卷叠技术建立的二层自动化做市商，被称为 ZKSwap；还有被称为 ZKSquare 的支付服务，以及被称为 ZKSea 的非同质化代币市场。",
