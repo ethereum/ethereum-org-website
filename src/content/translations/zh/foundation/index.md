@@ -35,7 +35,7 @@ EF 不是一家公司，甚至不是传统的非营利组织。 他们的作用�
 
 Fellowship 计划为以太坊基金提供了与改变世界的人合作的机会。 其项目很有可能通过使用以太坊对新兴经济体产生影响。 该方案具有独特的经验，包括辅导、专门知识和接触以太坊生态系统领袖。
 
-在 [ellowship.ethereum.foundation](https://fellowship.ethereum.foundation/) 或查看 [最近在 Fellowship 发表的博客](https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion/)
+在 [fellowship.ethereum.foundation](https://fellowship.ethereum.foundation/) 或查看 [最近在 Fellowship 发表的博客](https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion/)
 
 <br/>
 
