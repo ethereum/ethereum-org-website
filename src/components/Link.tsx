@@ -97,6 +97,8 @@ const LinkWrapper: React.FC<IProps> = ({
         isExternal
         _after={{
           content: !hideArrow ? '"↗"' : undefined,
+          ml: 0.5,
+          mr: 1.5,
         }}
         onClick={(e) => {
           // only track events on external links
@@ -134,6 +136,10 @@ const LinkWrapper: React.FC<IProps> = ({
           aria-label="See definition"
           fontSize="12px"
           margin="0 0.25rem 0 0.35rem"
+          _hover={{
+            transition: "transform 0.1s",
+            transform: "scale(1.2)",
+          }}
         />
       )}
     </Link>

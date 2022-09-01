@@ -6,6 +6,7 @@ import Link from "./Link"
 import Emoji from "./Emoji"
 
 export interface IProps {
+  children?: React.ReactNode
   to: string
   className?: string
   isExternal?: boolean
