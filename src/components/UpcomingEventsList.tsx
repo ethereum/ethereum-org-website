@@ -7,7 +7,7 @@ import EventCard from "./EventCard"
 import InfoBanner from "./InfoBanner"
 import Link from "./Link"
 import Translation from "./Translation"
-import ButtonLink from "./ButtonLink"
+import Button from "./Button"
 
 // Data
 import events from "../data/community-events.json"
@@ -161,9 +161,9 @@ const UpcomingEventsList: React.FC<IProps> = () => {
       </EventList>
       <ButtonLinkContainer>
         {isVisible && (
-          <ButtonLink onClick={loadMoreEvents}>
+          <Button onClick={loadMoreEvents}>
             <Translation id="page-community-upcoming-events-load-more" />
-          </ButtonLink>
+          </Button>
         )}
       </ButtonLinkContainer>
     </>

@@ -162,6 +162,7 @@ const StepBox = styled(Link)`
   width: 100%;
   margin-top: -1px;
   &:hover {
+    text-decoration: none;
     background: ${(props) => props.theme.colors.ednBackground};
     transition: transform 0.2s;
     transform: scale(1.05);
@@ -252,16 +253,6 @@ const StablecoinAccordion: React.FC<IProps> = () => {
         }
       }
       oasis: file(relativePath: { eq: "dapps/stabledai.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 24
-            layout: FIXED
-            placeholder: BLURRED
-            quality: 100
-          )
-        }
-      }
-      dydx: file(relativePath: { eq: "exchanges/dydx.png" }) {
         childImageSharp {
           gatsbyImageData(
             width: 24
@@ -402,12 +393,6 @@ const StablecoinAccordion: React.FC<IProps> = () => {
       alt: translateMessageId("uniswap-logo", intl),
     },
     {
-      title: "DyDx",
-      image: getImage(data.dydx),
-      link: "https://dydx.exchange",
-      alt: translateMessageId("dydx-logo", intl),
-    },
-    {
       title: "Loopring",
       image: getImage(data.loopring),
       link: "https://loopring.org",
@@ -433,12 +418,6 @@ const StablecoinAccordion: React.FC<IProps> = () => {
       image: getImage(data.compound),
       link: "https://compound.finance",
       alt: translateMessageId("compound-logo", intl),
-    },
-    {
-      title: "DyDx",
-      image: getImage(data.dydx),
-      link: "https://dydx.exchange",
-      alt: translateMessageId("dydx-logo", intl),
     },
     {
       title: "Aave",

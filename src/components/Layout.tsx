@@ -66,6 +66,7 @@ const Main = styled.main`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   data?: {
     pageData?: {
       frontmatter?: {
@@ -143,6 +144,9 @@ const Layout: React.FC<IProps> = ({
 
   return (
     <LocaleProvider pageContext={pageContext}>
+      {/* our current react-intl types does not support react 18 */}
+      {/* TODO: once we upgrade react-intl to v6, remove this ts-ignore */}
+      {/* @ts-ignore */}
       <IntlProvider locale={locale!} key={locale} messages={messages}>
         <ApolloProvider client={client}>
           <ThemeProvider theme={theme}>

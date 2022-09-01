@@ -90,6 +90,7 @@ const ButtonLink = styled.button`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   contentPreview?: ReactNode
   title: ReactNode
   svg?: ComponentType<SVGProps<SVGElement>>

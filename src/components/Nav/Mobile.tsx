@@ -224,6 +224,7 @@ const BottomLink = styled(Link)`
     fill: ${(props) => props.theme.colors.text};
   }
   &:hover {
+    text-decoration: none;
     color: ${(props) => props.theme.colors.primary};
     & > svg {
       fill: ${(props) => props.theme.colors.primary};

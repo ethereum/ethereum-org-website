@@ -156,7 +156,7 @@ const BeaconChainActions: React.FC = () => {
           <StyledButtonLink to="https://launchpad.ethereum.org">
             <Translation id="get-started" />
           </StyledButtonLink>
-          <ButtonLink isSecondary to="/staking/">
+          <ButtonLink variant="outline" to="/staking/">
             <Translation id="page-upgrades-index-staking-learn" />
           </ButtonLink>
         </StyledCardLeft>
@@ -168,7 +168,7 @@ const BeaconChainActions: React.FC = () => {
             intl
           )}
         >
-          <ButtonLink isSecondary to="/upgrades/get-involved/">
+          <ButtonLink variant="outline" to="/upgrades/get-involved/">
             <Translation id="consensus-run-beacon-chain" />
           </ButtonLink>
         </StyledCardRight>

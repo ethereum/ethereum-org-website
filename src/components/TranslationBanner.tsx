@@ -157,7 +157,10 @@ const TranslationBanner: React.FC<IProps> = ({
             </div>
             {!isPageContentEnglish && (
               <div>
-                <SecondaryButtonLink isSecondary to={`/en${originalPagePath}`}>
+                <SecondaryButtonLink
+                  variant="outline"
+                  to={`/en${originalPagePath}`}
+                >
                   <Translation id="translation-banner-button-see-english" />
                 </SecondaryButtonLink>
               </div>

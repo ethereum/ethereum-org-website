@@ -192,11 +192,6 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
       image: getImage(data.bancor),
     },
     {
-      title: "dYdX",
-      link: "https://dydx.exchange/",
-      image: getImage(data.dydx),
-    },
-    {
       title: "Kyber",
       link: "https://kyberswap.com/#/swap/",
       image: getImage(data.kyber),
@@ -501,9 +496,6 @@ export const query = graphql`
       ...listItemImage
     }
     bancor: file(relativePath: { eq: "exchanges/bancor.png" }) {
-      ...listItemImage
-    }
-    dydx: file(relativePath: { eq: "exchanges/dydx.png" }) {
       ...listItemImage
     }
   }

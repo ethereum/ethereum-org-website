@@ -287,12 +287,12 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
       {
         content: translateMessageId("layer-2-hero-button-2", intl),
         toId: "use-layer-2",
-        isSecondary: true,
+        variant: "outline",
       },
       {
         content: translateMessageId("layer-2-hero-button-3", intl),
         toId: "how-to-get-onto-layer-2",
-        isSecondary: true,
+        variant: "outline",
       },
     ],
   }
@@ -1114,16 +1114,7 @@ export const query = graphql`
         )
       }
     }
-    dydx: file(relativePath: { eq: "layer-2/dydx.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
+
     l2beat: file(relativePath: { eq: "layer-2/l2beat.jpg" }) {
       childImageSharp {
         gatsbyImageData(

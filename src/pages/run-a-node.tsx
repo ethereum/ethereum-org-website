@@ -107,10 +107,7 @@ const Column = styled.div`
 `
 
 const ResponsiveButtonLink = styled(ButtonLink)`
-  display: flex;
-  align-items: center;
   gap: 1rem;
-  width: fit-content;
   padding-left: 2rem;
   padding-right: 2rem;
 
@@ -430,7 +427,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
       {
         content: <Translation id="page-run-a-node-hero-cta-2" />,
         toId: "getting-started",
-        isSecondary: true,
+        variant: "outline",
       },
     ],
   }
@@ -873,7 +870,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
               <ButtonContainer>
                 <ResponsiveButtonLink
                   to="/developers/docs/nodes-and-clients/run-a-node/#spinning-up-node"
-                  isSecondary
+                  variant="outline"
                 >
                   <code>
                     <Translation id="page-run-a-node-build-your-own-software-option-2-button" />
@@ -902,7 +899,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
                 <DiscordIcon name="discord" />
                 <Translation id="page-run-a-node-community-link-1" />
               </ResponsiveButtonLink>
-              <ResponsiveButtonLink to="/community/online/" isSecondary>
+              <ResponsiveButtonLink to="/community/online/" variant="outline">
                 <Translation id="page-run-a-node-community-link-2" />
               </ResponsiveButtonLink>
             </ButtonContainer>
