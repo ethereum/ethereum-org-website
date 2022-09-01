@@ -124,7 +124,7 @@ const LinkWrapper: React.FC<IProps> = ({
       to={to}
       as={IntlLink}
       language={language}
-      isPartiallyActive={isPartiallyActive}
+      partiallyActive={isPartiallyActive}
       activeStyle={{ color: theme.colors.primary }}
       whiteSpace={isGlossary ? "nowrap" : "normal"}
       {...commonProps}
