@@ -87,7 +87,7 @@ def mkcache(cache_size, seed):
     return o
 ```
 
-缓存生成过程中，先按顺序填充 32 MB 内存，然后从[严格内存硬哈希函数</em> (2014)](http://www.hashcash.org/papers/memohash.pdf) 执行两次 Sergio Demian Lerner 的 _RandMemoHash_ 算法。 输出一组 524288 个 64 字节值。
+缓存生成过程中，先按顺序填充 32 MB 内存，然后从[严格内存硬哈希函数 (2014)](http://www.hashcash.org/papers/memohash.pdf) 执行两次 Sergio Demian Lerner 的 _RandMemoHash_ 算法。 输出一组 524288 个 64 字节值。
 
 ## 数据聚合函数 {#date-aggregation-function}
 
