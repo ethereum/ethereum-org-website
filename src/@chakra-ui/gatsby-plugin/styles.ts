@@ -16,6 +16,9 @@ const styles = {
     body: {
       lineHeight: "1.6rem",
     },
+    ".test": {
+      color: "primary !important",
+    },
   }),
 }
 
