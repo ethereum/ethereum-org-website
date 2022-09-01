@@ -9,13 +9,13 @@ Ethereum is secured using its native cryptocurrency, ether (ETH). Node operators
 
 There are two primary roles for a validator: 1) checking new blocks and “attesting” to them if they are valid, 2) proposing new blocks when selected at random from the total validator pool. If the validator fails to do either of these tasks when asked they miss out on an ether payout.
 
-There are also some actions that are very difficult to do accidentally and signify some malicious intent, such as proposing multiple blocks for the same slot or attesting to multiple blocks for the same slot. These are “slashable” behaviors that result in the validator having some amount of ether (up to 0.5 ETH) burned before the validator is removed from the network, which takes 36 days. The slashed validator’s ether slowly drains away across the exit period, but on Day 18 they receive a “correlation penalty” which is larger when more validators are slashed around the same time. The Beacon Chain’s incentive structure therefore pays for honesty and punishes bad actors.
+There are also some actions that are very difficult to do accidentally and signify some malicious intent, such as proposing multiple blocks for the same slot or attesting to multiple blocks for the same slot. These are “slashable” behaviors that result in the validator having some amount of ether (up to 1 ETH) burned before the validator is removed from the network, which takes 36 days. The slashed validator’s ether slowly drains away across the exit period, but on Day 18 they receive a “correlation penalty” which is larger when more validators are slashed around the same time. The Beacon Chain’s incentive structure therefore pays for honesty and punishes bad actors.
 
 All rewards and penalties are applied once per epoch.
 
 Read on for more details...
 
-## Rewards and penalties{#rewards}
+## Rewards and penalties {#rewards}
 
 ### Attestation rewards {#attestation-rewards}
 
@@ -25,15 +25,19 @@ Validators receive attestation rewards when they make votes that are consistent 
 base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch * sqrt(sum(active_balance))))
 ```
 
-where `base_reward_factor` = 64, `base_rewards_per_epoch` = 4 and the `active balance` is the total staked ether across all active validators.
+where `base_reward_factor` is 64, `base_rewards_per_epoch` is 4 and `sum(active balance)` is the total staked ether across all active validators.
 
 This means the base reward is proportional to the validator's effective balance and inversely proportional to the number of validators on the network. The more validators, the greater the overall issuance (as `sqrt(N)` but the smaller the `base_reward` per validator (as `1/sqrt(N)`). These factors influence the APR for a staking node. Read the rationale for this in [Vitalik's notes](https://notes.ethereum.org/@vbuterin/rkhCgQteN?type=view#Base-rewards).
 
-For each attesting validator in each epoch, 1/8 of the `base_reward` then goes to the block producer, leaving up to 7/8 available for the attestor.
+For each slot in an epoch, 1/8 of the `base_reward` goes to the block proposer, and 7/8 is available to be split over the attesting validators assigned to that slot. 
 
 The `base_reward` for each validator is then also multiplied by the `participation_rate` which is the fraction of all active validators that participate consistently with each other. So, if all validators attest identically, `base_reward`==`base_reward`, if 10% of validators fail to participate or do so differently to the majority `base_reward` == `base_reward * 0.9`. This ensures there is no benefit to attacking other validators.
 
-The `base_reward` is also modified by the `inclusion_delay` which rewards prompt attestations. If the delay between block proposal and attestation is >= 1 slot, the attestor receives the full 7/8 * `base_reward`. For each additional missed slot, the denominator is increased by 8, meaning that the reward for a delay of two slots is scaled by 7/16, for three slots it is 7/24, for four slots it is 7/32 (or, put another way, `7/8 * base_reward * 1/k`where`k` = number of slots separating block and attestation). 32 is the maximum inclusion delay denominator that can be applied. This means the slower the attestation, the smaller the reward.
+The `base_reward` is also modified by the `inclusion_delay` which rewards prompt attestations, and degrades the reward for delayed attestations as these are less valuable to the network when forming consensus. If the distance between the attestation and block it is included in is only one block, the attester received the full `7/8 * base_reward`. 
+
+This is the maximum possible reward, and will degrade inversely as the number of blocks increases before the attestation is included. If we denote this "inclusion distance" as `k`, the maximum reward (`7/8 * base_reward`) is divided by `k` to determine the reward after inclusion delay: `(7/8 * base_reward) / k`. Since an attestation cannot be included in the same slot, the optimal distance is one. The further allowable distance is 32 before the attestation is forfeited entirely. The inclusion delay factor can be summed up as `inclusion_delay = 7 / (8 * k)`.
+
+Note that empty slots (where a block was not proposed) do not count towards the inclusion distance for attestations from other validators. If a validator is assigned to attest to the 10th slot in an epoch, and there is no block proposed for the 11th slot causing the attestation to be included in a block at slot 12, this would still be considered an inclusion distance of 1. This prevents penalizing active validators for another validator being unavailable.
 
 There are also three additional rewards: `source` (reward for voting for the correct source checkpoint), `target` (reward for voting for the correct target checkpoint), `head` (reward for voting for the correct head block). The value of each of these is equal to `base_reward * inclusion_delay * participation_rate`. The same value can be removed from the validator's balance as a penalty for an incorrect or missing `source`, `target` or `head` vote.
 
@@ -41,7 +45,7 @@ When validators are assigned to sync committees they receive rewards for each sl
 
 ### Attestation scenarios
 
-Assuming attestations are timely (same slot as proposed block) the following table describes the attestation rewards for four scenarios:
+Assuming attestations are timely (included in the very next block, inclusion distance of 1) the following table describes the attestation rewards for four scenarios:
 
 | `source`          | `target`          | `head`            | `base_reward`                            | penalty            | `inclusion_delay`    | Result                                                            |
 | ----------------- | ----------------- | ----------------- | ---------------------------------------- | ------------------ | -------------------- | ----------------------------------------------------------------- |
@@ -89,7 +93,8 @@ The reward, penalty and slashing design of the Beacon Chain encourages individua
 [Incentives in Ethereum's hybrid Casper protocol](https://arxiv.org/pdf/1903.04205.pdf)
 [Rewards and Penalties on Ethereum 2.0](https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/)
 [Vitalik's annotated spec](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#rewards-and-penalties-1)
+[Eth2 Slashing Prevention Tips](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50)
 
 _Sources_  
-[_https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/_](https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/)  
-\__[\_https://benjaminion.xyz/eth2-annotated-spec/phase0/beacon-chain/_](https://benjaminion.xyz/eth2-annotated-spec/phase0/beacon-chain/)
+_[https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/](https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/)_
+_[https://benjaminion.xyz/eth2-annotated-spec/phase0/beacon-chain/](https://benjaminion.xyz/eth2-annotated-spec/phase0/beacon-chain/)_
