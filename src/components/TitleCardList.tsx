@@ -60,6 +60,7 @@ const ItemLink = styled(Link)`
   width: 100%;
   color: #000000;
   &:hover {
+    text-decoration: none;
     box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
     background: ${(props) => props.theme.colors.primary100};
     color: ${(props) => props.theme.colors.black} !important;

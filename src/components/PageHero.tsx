@@ -1,8 +1,11 @@
 import React, { ReactNode } from "react"
 import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
-import ButtonLink, { IProps as IButtonLinkProps } from "./ButtonLink"
+import { Wrap, WrapItem } from "@chakra-ui/react"
+
 import { Content } from "./SharedStyledComponents"
+import ButtonLink, { IProps as IButtonLinkProps } from "./ButtonLink"
+import Button, { IProps as IButtonProps } from "./Button"
 
 export interface IIsReverse {
   isReverse: boolean
@@ -78,27 +81,16 @@ const Subtitle = styled.div`
   }
 `
 
-const ButtonRow = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-`
+export interface IButtonLink extends IButtonLinkProps {
+  content: ReactNode
+}
 
-const StyledButtonLink = styled(ButtonLink)`
-  margin-right: 1rem;
-  margin-bottom: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 1rem;
-  }
-`
-
-export interface IButton extends Partial<IButtonLinkProps> {
+export interface IButton extends IButtonProps {
   content: ReactNode
 }
 
 export interface IContent {
-  buttons?: Array<IButton>
+  buttons?: Array<IButtonLink | IButton>
   title: ReactNode
   header: ReactNode
   subtitle: ReactNode
@@ -111,6 +103,10 @@ export interface IProps {
   isReverse?: boolean
   children?: ReactNode
   className?: string
+}
+
+function isButtonLink(button: IButton | IButtonLink): button is IButtonLink {
+  return (button as IButtonLink).to !== undefined
 }
 
 const PageHero: React.FC<IProps> = ({
@@ -128,18 +124,37 @@ const PageHero: React.FC<IProps> = ({
           <Header>{header}</Header>
           <Subtitle>{subtitle}</Subtitle>
           {buttons && (
-            <ButtonRow>
-              {buttons.map((button, idx) => (
-                <StyledButtonLink
-                  isSecondary={button.isSecondary}
-                  key={idx}
-                  to={button.to}
-                  toId={button.toId}
-                >
-                  {button.content}
-                </StyledButtonLink>
-              ))}
-            </ButtonRow>
+            <Wrap spacing={2}>
+              {buttons.map((button, idx) => {
+                if (isButtonLink(button)) {
+                  return (
+                    <WrapItem>
+                      <ButtonLink
+                        key={idx}
+                        variant={button.variant}
+                        to={button.to}
+                      >
+                        {button.content}
+                      </ButtonLink>
+                    </WrapItem>
+                  )
+                }
+
+                if (button.toId) {
+                  return (
+                    <WrapItem>
+                      <Button
+                        key={idx}
+                        variant={button.variant}
+                        toId={button.toId}
+                      >
+                        {button.content}
+                      </Button>
+                    </WrapItem>
+                  )
+                }
+              })}
+            </Wrap>
           )}
           {children}
         </HeroContent>

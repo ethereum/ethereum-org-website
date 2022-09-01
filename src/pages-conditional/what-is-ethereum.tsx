@@ -8,7 +8,8 @@ import { useIntl } from "react-intl"
 import Translation from "../components/Translation"
 import Callout from "../components/Callout"
 import Card from "../components/Card"
-import OriginalButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/ButtonLink"
+import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
 import Tooltip from "../components/Tooltip"
 import Tabs from "../components/Tabs"
@@ -204,15 +205,14 @@ const StatDescription = styled.div`
   color: ${({ theme }) => theme.colors.text200};
 `
 
-const ButtonLink = styled(OriginalButtonLink)``
-
 const ButtonRow = styled.div`
   display: flex;
   align-items: center;
   margin-top: 1rem;
   flex-wrap: wrap;
 
-  & ${ButtonLink} {
+  & > button,
+  & > a {
     margin-right: 1rem;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
@@ -399,7 +399,7 @@ const WhatIsEthereumPage = ({
   const tooltipContent = ({ apiUrl, apiProvider, ariaLabel }) => (
     <div>
       <Translation id="data-provided-by" />{" "}
-      <Link to={apiUrl} ariaLabel={ariaLabel}>
+      <Link to={apiUrl} aria-label={ariaLabel}>
         {apiProvider}
       </Link>
     </div>
@@ -428,9 +428,9 @@ const WhatIsEthereumPage = ({
               <Translation id="page-what-is-ethereum-subtitle" />
             </Subtitle>
             <ButtonRow>
-              <ButtonLink toId="summary">
+              <Button toId="summary">
                 <Translation id="page-what-is-ethereum-button-lets-start" />
-              </ButtonLink>
+              </Button>
             </ButtonRow>
           </Header>
           <Hero
@@ -773,7 +773,7 @@ const WhatIsEthereumPage = ({
                   <ButtonLink to="/eth/">
                     <Translation id="page-what-is-ethereum-what-is-ether" />
                   </ButtonLink>
-                  <ButtonLink to="/get-eth/" isSecondary>
+                  <ButtonLink to="/get-eth/" variant="outline">
                     <Translation id="page-what-is-ethereum-get-eth" />
                   </ButtonLink>
                 </ButtonRow>
@@ -799,7 +799,7 @@ const WhatIsEthereumPage = ({
                   <ButtonLink to="/dapps/">
                     <Translation id="page-what-is-ethereum-explore-applications" />
                   </ButtonLink>
-                  <ButtonLink to="/defi/" isSecondary>
+                  <ButtonLink to="/defi/" variant="outline">
                     <Translation id="page-what-is-ethereum-learn-defi" />
                   </ButtonLink>
                 </ButtonRow>
@@ -860,7 +860,7 @@ const WhatIsEthereumPage = ({
                   <ButtonLink to="/smart-contracts/">
                     <Translation id="page-what-is-ethereum-more-on-smart-contracts" />
                   </ButtonLink>
-                  <ButtonLink to="/dapps/" isSecondary>
+                  <ButtonLink to="/dapps/" variant="outline">
                     <Translation id="page-what-is-ethereum-explore-dapps" />
                   </ButtonLink>
                 </ButtonRow>
@@ -932,7 +932,7 @@ const WhatIsEthereumPage = ({
                 <ButtonLink to="/energy-consumption/">
                   <Translation id="page-what-is-ethereum-more-on-energy-consumption" />
                 </ButtonLink>
-                <ButtonLink to="/upgrades/merge/" isSecondary>
+                <ButtonLink to="/upgrades/merge/" variant="outline">
                   <Translation id="page-what-is-ethereum-the-merge-update" />
                 </ButtonLink>
               </ButtonRow>

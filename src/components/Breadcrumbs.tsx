@@ -39,6 +39,7 @@ const CrumbLink = styled(Link)`
   color: ${(props) => props.theme.colors.textTableOfContents};
 
   &:hover {
+    text-decoration: none;
     color: ${(props) => props.theme.colors.primary};
   }
 
