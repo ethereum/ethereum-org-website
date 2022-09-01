@@ -92,20 +92,23 @@ Flexible Web3 data solutions support the scenarios above and provide the foundat
 
 Explore projects and join the DeSci community.
 
-- [Atoms: smart contract peer-review)](https://www.atoms.org)
+- [Molecule: Fund and get funded for your research projects](https://discover.molecule.to/)
+- [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
+- [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
+- [Atoms: smart contract peer-review](https://www.atoms.org)
+- [Bio.xyz: get funded for your biotech DAO or desci project](https://bio.xyz/)
+- [LabDAO: fold a protein in-silico](https://alphafodl.vercel.app/)
 - [dClimate API: query climate data collected by a decentralized community](https://api.dclimate.net/)
 - [DeSci Foundation: DeSci publishing tool builder](https://descifoundation.org/)
 - [DeSci.World: one-stop shop for users to view, engage with decentralized science](https://desci.world)
-- [Molecule: Fund and get funded for your research projects](https://discover.molecule.to/)
+- [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
 - [OceanDAO: DAO governed funding for data-related science](https://oceanprotocol.com/dao)
 - [Opscientia: open decentralized science workflows](https://opsci.io/research/)
-- [LabDAO: fold a protein in-silico](https://alphafodl.vercel.app/)
-- [Bio.xyz: get funded for your biotech DAO or desci project](https://biodao.xyz/)
-- [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
-- [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
-- [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
-- [Active Inference Lab](https://www.activeinference.org/)
+- [IdeaMarkets: enabling decentralized scientifc credibility](https://ideamarkets.substack.com/p/desci-x-ideamarket)
 - [Cherubs DAO: NFT funded and DAO governed impact fund for mental health & brain wellness](https://cherubsdao.com/)
+- [Active Inference Lab](https://www.activeinference.org/)
+- [AthenaDAO: Collective funding women’s reproductive health research](https://www.athenadao.co/)
+
 
 ## Further reading {#further-reading}
 
