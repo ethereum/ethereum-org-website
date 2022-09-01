@@ -1710,7 +1710,7 @@ const walletData: WalletData[] = [
     macOS: false,
     firefox: false,
     chromium: false,
-    hardware: true,
+    hardware: false,
     open_source: true,
     repo_url: "https://github.com/status-im/",
     non_custodial: true,
