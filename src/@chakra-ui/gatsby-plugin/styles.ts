@@ -84,10 +84,10 @@ const styles = {
     // Anchor tag styles
     // Selected specifically for mdx rendered side icon link
     ".header-anchor": {
-      position: "relative",
+      position: "relative !important",
       display: "initial",
       marginLeft: "-1.5em",
-      paddingRight: "0.5rem",
+      paddingRight: "0.5rem !important",
       fontSize: "1rem",
       verticalAlign: "middle",
 
