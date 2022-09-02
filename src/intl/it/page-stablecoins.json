@@ -142,5 +142,7 @@
   "page-stablecoins-why-stablecoins": "Perché stablecoin?",
   "page-stablecoins-how-they-work-button": "Come funzionano",
   "page-stablecoins-why-stablecoins-body": "ETH, come Bitcoin, ha un prezzo volatile perché è una nuova tecnologia. Quindi potrebbe essere consigliabile non spenderlo regolarmente. Gli stablecoin rispecchiano il valore delle valute tradizionali per dare accesso a una moneta stabile che puoi usare su Ethereum.",
-  "page-stablecoins-more-defi-button": "Maggiori informazioni sulla finanza decentralizzata (DeFi)"
+  "page-stablecoins-more-defi-button": "Maggiori informazioni sulla finanza decentralizzata (DeFi)",
+  "page-stablecoins-tools-title": "Scopri di più sugli stablecoin",
+  "page-stablecoins-tools-stablecoinswtf-description": "Stablecoins.wtf offre un pannello di controllo con dati di mercato storici, statistiche e contenuti educativi per gli stablecoin più importanti."
 }
