@@ -100,6 +100,7 @@ const SideNavLink = styled(Link)`
   text-decoration: none;
   color: ${(props) => props.theme.colors.text};
   &:hover {
+    text-decoration: none;
     color: ${(props) => props.theme.colors.primary};
   }
   &.active {

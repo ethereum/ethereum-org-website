@@ -165,13 +165,17 @@ const isValidAddress = (address: string): boolean => {
   return /^(0x)?[0-9a-f]{40}$/i.test(address)
 }
 
-const Results: React.FC<StateResultsProvided> = ({
+interface ResultsProp extends StateResultsProvided {
+  children?: React.ReactNode
+}
+
+const Results = ({
   searchState: state,
   searchResults: res,
   children,
-}) => {
+}: ResultsProp) => {
   if (res && res.nbHits > 0) {
-    return <>{children}</>
+    return children
   }
   if (state.query && isValidAddress(state.query)) {
     return (

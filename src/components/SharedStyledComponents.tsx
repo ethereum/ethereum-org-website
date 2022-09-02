@@ -135,6 +135,7 @@ export const NavLink = styled(Link)`
     fill: ${(props) => props.theme.colors.text200};
   }
   &:hover {
+    text-decoration: none;
     color: ${(props) => props.theme.colors.primary};
     svg {
       fill: ${(props) => props.theme.colors.primary};
@@ -377,6 +378,7 @@ export const CardItem = styled(Link)`
   color: ${(props) => props.theme.colors.text};
 
   &:hover {
+    text-decoration: none;
     box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
     border: 1px solid ${(props) => props.theme.colors.black300};
   }

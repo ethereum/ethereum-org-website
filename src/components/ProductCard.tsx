@@ -140,6 +140,7 @@ const REPO_DATA = gql`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   url: string
   background: string
   image: string
@@ -227,7 +228,9 @@ const ProductCard: React.FC<IProps> = ({
             )
           )}
       </SubjectContainer>
-      <StyledButtonLink to={url}>Open {name}</StyledButtonLink>
+      <StyledButtonLink h={20} to={url}>
+        Open {name}
+      </StyledButtonLink>
     </Card>
   )
 }

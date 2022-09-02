@@ -12,6 +12,7 @@ const Container = styled(Link)`
   border: 1px solid ${(props) => props.theme.colors.lightBorder};
   color: ${(props) => props.theme.colors.text};
   &:hover {
+    text-decoration: none;
     box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
   }
   &:hover path {

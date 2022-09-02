@@ -187,7 +187,9 @@ const StatDivider = styled.div`
 `
 
 interface L2DataResponse {
-  data: Array<[string, number, number]>
+  daily: {
+    data: Array<[string, number, number]>
+  }
 }
 
 interface FeeDataResponse {
@@ -210,6 +212,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
         const l2BeatData = await getData<L2DataResponse>(
           `${GATSBY_FUNCTIONS_PATH}/l2beat`
         )
+
         // formatted TVL from L2beat API formatted
         const TVL = new Intl.NumberFormat(localeForStatsBoxNumbers, {
           style: "currency",
@@ -217,13 +220,13 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
           notation: "compact",
           minimumSignificantDigits: 2,
           maximumSignificantDigits: 3,
-        }).format(l2BeatData.data[l2BeatData.data.length - 1][1])
+        }).format(l2BeatData.daily.data[l2BeatData.daily.data.length - 1][1])
         setTVL(`${TVL}`)
         // Calculate percent change ((new value - old value) / old value) *100)
         const percentage =
-          ((l2BeatData.data[l2BeatData.data.length - 1][1] -
-            l2BeatData.data[l2BeatData.data.length - 31][1]) /
-            l2BeatData.data[l2BeatData.data.length - 31][1]) *
+          ((l2BeatData.daily.data[l2BeatData.daily.data.length - 1][1] -
+            l2BeatData.daily.data[l2BeatData.daily.data.length - 31][1]) /
+            l2BeatData.daily.data[l2BeatData.daily.data.length - 31][1]) *
           100
         setL2PercentChange(
           percentage > 0
@@ -284,12 +287,12 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
       {
         content: translateMessageId("layer-2-hero-button-2", intl),
         toId: "use-layer-2",
-        isSecondary: true,
+        variant: "outline",
       },
       {
         content: translateMessageId("layer-2-hero-button-3", intl),
         toId: "how-to-get-onto-layer-2",
-        isSecondary: true,
+        variant: "outline",
       },
     ],
   }
@@ -1111,16 +1114,7 @@ export const query = graphql`
         )
       }
     }
-    dydx: file(relativePath: { eq: "layer-2/dydx.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
+
     l2beat: file(relativePath: { eq: "layer-2/l2beat.jpg" }) {
       childImageSharp {
         gatsbyImageData(

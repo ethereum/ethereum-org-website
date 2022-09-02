@@ -115,7 +115,7 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
           <Translation id="page-staking-launchpad-widget-p3" />
         </p>
         <ButtonContainer>
-          <ButtonLink to="#node-and-client-tools" isSecondary>
+          <ButtonLink to="#node-and-client-tools" variant="outline">
             <Emoji text="🛠" mr="1rem" />
             <Translation id="page-staking-launchpad-widget-link" />
           </ButtonLink>
