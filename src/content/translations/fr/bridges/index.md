@@ -126,5 +126,5 @@ Les ponts sont essentiels pour l'accueil des utilisateurs sur les L2 d'Ethereum,
 - [Qu'est-ce que les ponts à chaînes croisées ?](https://www.alchemy.com/overviews/cross-chain-bridges) _10 mai 2022 - Alchimie_
 - [Ponts Blockchain : Construire des réseaux de crypto-réseaux](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) _8 septembre 2021 - Dmitriy Berenzon_
 - [Ponts dans l'espace crypto](https://medium.com/chainsafe-systems/bridges-in-crypto-space-12e158f5fd1e) _23 août 2021 - Ben Adar Hyman_
-- [Le Trilemme d'interopérabilité](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17) _1er octobre 2021 Arjun Bhuptani_
+- [Le Trilemme d'interopérabilité](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17) _1er octobre 2021 - Arjun Bhuptani_
 - [Sécurisez le pont : La communication inter-chaînes bien faite](https://medium.com/dragonfly-research/secure-the-bridge-cross-chain-communication-done-right-part-i-993f76ffed5d) _23 août 2021 - Celia Wan_
