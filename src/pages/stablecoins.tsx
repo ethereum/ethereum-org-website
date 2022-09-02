@@ -537,17 +537,6 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
       ),
     },
     {
-      background: "#212121",
-      url: "https://trade.dydx.exchange/portfolio/overview",
-      alt: translateMessageId("dydx-logo", intl),
-      image: getImage(data.dydx),
-      name: "dYdX",
-      description: translateMessageId(
-        "page-stablecoins-stablecoins-dapp-description-3",
-        intl
-      ),
-    },
-    {
       background: "linear-gradient(135deg, #c7efe6 0%, #eeeac7 100%)",
       url: "https://oasis.app",
       alt: translateMessageId("oasis-logo", intl),
@@ -968,16 +957,6 @@ export const query = graphql`
       childImageSharp {
         gatsbyImageData(
           width: 64
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    dydx: file(relativePath: { eq: "exchanges/dydx.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 80
           layout: FIXED
           placeholder: BLURRED
           quality: 100

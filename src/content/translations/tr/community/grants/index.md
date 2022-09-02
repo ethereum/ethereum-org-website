@@ -31,7 +31,6 @@ Bu projeler kendi teknolojilerini geliştirmeye ve deneyimlemeye yönelik olarak
 - [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/) Ekosistem Fonu_
 - [Compound Hibe Programı](https://compoundgrants.org/) – _[Compound](https://compound.finance/) finans ekosistemi_
 - [Consensys Hibe Programı](https://consensys.net/grants/) – _[Consensys](https://consensys.net/) blok zinciri fonlama & Ethereum hibeleri_
-- [dYdX Hibe Programı](https://dydxgrants.com/) – _[dYdX](https://dydx.exchange/) merkeziyetsiz borsa_
 - [Lido Ekosistem Hibeleri Organizasyonu (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/) finans ekosistemi_
 - [mStable Hibe Programı](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) topluluğu_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) ekosistemi_

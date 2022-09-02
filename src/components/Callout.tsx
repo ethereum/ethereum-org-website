@@ -47,6 +47,7 @@ const Content = styled.div`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   image?: string
   emoji?: string
   alt?: string

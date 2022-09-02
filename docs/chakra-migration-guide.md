@@ -8,6 +8,63 @@ This is part of our [UI library implementation epic](https://github.com/ethereum
 
 All `styled` components need to be removed and replaced with the corresponded Chakra component. [See the list of components](https://chakra-ui.com/docs/components).
 
+Use as much native Chakra components as possible.
+
+### Wrappers or layout divs
+
+Use the [native layouts components](https://chakra-ui.com/docs/components/box)
+
+```tsx
+// before
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`
+
+// now
+<Stack direction='row'>
+```
+
+Center things using the `<Center />` component
+
+```tsx
+// before
+const Center = styled.div`
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+// now
+<Center h="100px">
+```
+
+Group buttons using `<ButtonGroup />` or `<Wrap />`
+
+```tsx
+// before
+const ButtonRow = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+`
+
+// now
+<ButtonGroup variant='outline' spacing={2}>
+  <Button>Button 1</Button>
+  <Button>Button 2</Button>
+</ButtonGroup>
+
+// or
+<Wrap spacing={2}>
+  <WrapItem><Button variant="outline">Button 1</Button></WrapItem>
+  <WrapItem><Button variant="outline">Button 2</Button></WrapItem>
+</Wrap>
+```
+
 ## Override styles using style props
 
 - You can see how to use the different style props here: [https://chakra-ui.com/docs/styled-system/style-props](https://chakra-ui.com/docs/styled-system/style-props#margin-and-padding)

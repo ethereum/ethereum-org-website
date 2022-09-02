@@ -32,7 +32,6 @@ Diese Projekte haben ihre eigenen Zuschüsse für Projektvorhaben zur Entwicklun
 - [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/)-Ökosystemfonds_
 - [Programm für Verbundzuschüsse](https://compoundgrants.org/) – _[Verbund](https://compound.finance/)-Finanzökosystem_
 - [Consensys-Zuschussprogram](https://consensys.net/grants/) – _[Consensys](https://consensys.net/)-Blockchain-Finanzierung und Ethereum-Zuschüsse_
-- [dYdX-Zuschussprogram](https://dydxgrants.com/) – _[dYdX](https://dydx.exchange/) dezentralisierte Börse_
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/)-Finanzökosystem_
 - [mStable-Zuschussprogram](https://docs.mstable.org/advanced/grants-program) – _[mStable](https://mstable.org/)-Community_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/)-Ökosystem_

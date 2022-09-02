@@ -118,7 +118,6 @@
   "arbitrum-description": "Arbitrum è un Rollup Ottimistico che punta a dare la sensazione di interagire con Ethereum, ma con transazioni che costano una frazione di quanto costano sul L1.",
   "optimism-description": "Optimistic Ethereum è una catena di Rollup Ottimistici equivalente all'EVM. Mira a esser veloce, semplice e sicura.",
   "boba-description": "Boba è un Rollup Ottimistico originariamente biforcato da Optimism ed è una soluzione di scaling che mira a ridurre le commissioni del carburante, migliorare il volume delle transazioni ed estendere le capacità degli smart contract.",
-  "dydx-description": "dYdX mira a creare una borsa potente e professionale per scambiare risorse cripto. in cui gli utenti possiedono davvero ciò che scambiano ed, eventualmente, la borsa stessa.",
   "loopring-description": "La soluzione di L2 zkRollup di Loopring mira a offrire le stesse garanzie di sicurezza della rete principale di Ethereum, con un grande aumento di scalabilità: volume aumentato del 1000x e costo ridotto allo 0,1% di L1.",
   "zksync-description": "zkSync è una piattaforma di rollup zk incentrata sull'utente prodotta da Matter Labs. È una soluzione di scalabilità per Ethereum, già live sulla rete principale di Ethereum. Supporta pagamenti, scambi di token e conio di NFT.",
   "zkspace-description": "La piattaforma di ZKSpace consiste in tre parti principali: una DEX AMM di Livello 2 che usa la tecnologia di Rollup ZK detta ZKSwap, un servizio di pagamento detto ZKSquare e un mercato di NFT detto ZKSea.",

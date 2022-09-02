@@ -14,9 +14,9 @@ source: Dokumen Alchemy
 sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
 ---
 
-This is a beginner friendly guide to sending Ethereum transactions using web3. Ada tiga langkah utama untuk mengirim transaksi ke blockchain ethereum: buat, tandatangani, dan siarkan. Kita akan membahas ketiganya, dengan harapan menjawab pertanyaan apa pun yang Anda miliki! In this tutorial, we'll be using [Alchemy](https://www.alchemy.com/) to send our transactions to the Ethereum chain. You can [create a free Alchemy account here](https://dashboard.alchemyapi.io/signup/).
+This is a beginner friendly guide to sending Ethereum transactions using web3. Ada tiga langkah utama untuk mengirim transaksi ke blockchain ethereum: buat, tandatangani, dan siarkan. Kita akan membahas ketiganya, dengan harapan menjawab pertanyaan apa pun yang Anda miliki! In this tutorial, we'll be using [Alchemy](https://www.alchemy.com/) to send our transactions to the Ethereum chain. You can [create a free Alchemy account here](https://auth.alchemyapi.io/signup).
 
-**NOTE:** This guide is for signing your transactions on the _backend_ for your app, if you want to integrate signing your transactions on the frontend, check out integrating [Web3 with a browser provider](https://docs.alchemyapi.io/documentation/alchemy-web3#with-a-browser-provider).
+**NOTE:** This guide is for signing your transactions on the _backend_ for your app, if you want to integrate signing your transactions on the frontend, check out integrating [Web3 with a browser provider](https://docs.alchemy.com/reference/api-overview#with-a-browser-provider).
 
 ## Dasar-Dasar {#the-basics}
 
@@ -55,13 +55,13 @@ This is what we will be using in this tutorial.
 ### 6\. Apa itu pustaka web3? {#what-is-the-web3-library}
 
 - Web3.js adalah pustaka pembungkus seputar pemanggilan JSON-RPC standar yang cukup umum untuk digunakan dalam pengembangan Ethereum.
-- Ada banyak pustaka web3 untuk bahasa pemrograman berbeda. Dalam tutorial ini, kita akan menggunakan [Web3 Alchemy](https://docs.alchemyapi.io/documentation/alchemy-web3) yang ditulis dalam JavaScript. Anda dapat memeriksa opsi lainnya [di sini](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries).
+- Ada banyak pustaka web3 untuk bahasa pemrograman berbeda. Dalam tutorial ini, kita akan menggunakan [Web3 Alchemy](https://docs.alchemy.com/reference/api-overview) yang ditulis dalam JavaScript. Anda dapat memeriksa opsi lainnya [di sini](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries).
 
 Baiklah, karena kita telah menjawab beberapa pertanyaan, mari kita teruskan ke bagian tutorial. Feel free to ask questions anytime in the Alchemy [discord](https://discord.gg/gWuC7zB)!
 
 **NOTE:** This guide requires an Alchemy account, an Ethereum address or MetaMask wallet, NodeJs, and npm installed. Jika tidak, ikuti langkah-langkah ini:
 
-1.  [Buat akun Alchemy gratis](https://dashboard.alchemyapi.io/signup/)
+1.  [Buat akun Alchemy gratis](https://auth.alchemyapi.io/signup)
 2.  [Create MetaMask account](https://metamask.io/) (or get an Ethereum address)
 3.  [Ikuti langkah-langkah ini untuk menginstal NodeJs dan NPM](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
 
@@ -86,7 +86,7 @@ cd sendtx-example
 
 ### 4\. Instal Web3 Alchemy (atau pustaka web3 mana pun) {#install-alchemy-web3}
 
-Jalankan perintah berikut dalam direktori proyek Anda untuk menginstal [Web3 Alchemy](https://docs.alchemyapi.io/documentation/alchemy-web3):
+Jalankan perintah berikut dalam direktori proyek Anda untuk menginstal [Web3 Alchemy](https://docs.alchemy.com/reference/api-overview):
 
 ```
 npm install @alch/alchemy-web3

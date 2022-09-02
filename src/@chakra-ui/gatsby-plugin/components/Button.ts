@@ -3,7 +3,7 @@ import type { ComponentStyleConfig } from "@chakra-ui/theme"
 const commonOutline = {
   border: "1px",
   color: "text",
-  bg: "background",
+  bg: "transparent",
   borderColor: "text",
   _hover: {
     color: "primary",
@@ -36,6 +36,7 @@ export const Button: ComponentStyleConfig = {
     },
     _focus: {
       boxShadow: "outline",
+      outline: 0,
     },
   },
   sizes: {

@@ -83,6 +83,7 @@ const Overlay = ({ isActive }) => (
 )
 
 export interface IProps {
+  children?: React.ReactNode
   className?: string
   isOpen: boolean
   setIsOpen: (isOpen: boolean) => void

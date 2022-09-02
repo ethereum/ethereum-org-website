@@ -28,6 +28,7 @@ const TopContent = styled.div`
   position: relative;
 `
 export interface IProps {
+  children?: React.ReactNode
   emoji: string
   title: string
   description: string

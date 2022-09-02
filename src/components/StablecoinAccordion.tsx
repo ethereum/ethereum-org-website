@@ -262,16 +262,6 @@ const StablecoinAccordion: React.FC<IProps> = () => {
           )
         }
       }
-      dydx: file(relativePath: { eq: "exchanges/dydx.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 24
-            layout: FIXED
-            placeholder: BLURRED
-            quality: 100
-          )
-        }
-      }
       gitcoin: file(relativePath: { eq: "dapps/gitcoin.png" }) {
         childImageSharp {
           gatsbyImageData(
@@ -403,12 +393,6 @@ const StablecoinAccordion: React.FC<IProps> = () => {
       alt: translateMessageId("uniswap-logo", intl),
     },
     {
-      title: "DyDx",
-      image: getImage(data.dydx),
-      link: "https://dydx.exchange",
-      alt: translateMessageId("dydx-logo", intl),
-    },
-    {
       title: "Loopring",
       image: getImage(data.loopring),
       link: "https://loopring.org",
@@ -434,12 +418,6 @@ const StablecoinAccordion: React.FC<IProps> = () => {
       image: getImage(data.compound),
       link: "https://compound.finance",
       alt: translateMessageId("compound-logo", intl),
-    },
-    {
-      title: "DyDx",
-      image: getImage(data.dydx),
-      link: "https://dydx.exchange",
-      alt: translateMessageId("dydx-logo", intl),
     },
     {
       title: "Aave",

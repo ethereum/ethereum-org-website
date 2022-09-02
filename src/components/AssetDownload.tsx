@@ -12,6 +12,7 @@ export interface IHide {
 }
 
 export interface IPropsBase {
+  children?: React.ReactNode
   alt: string
   artistName?: string
   artistUrl?: string

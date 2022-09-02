@@ -23,6 +23,7 @@ const Title = styled.p`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   emoji: string
   title?: ReactNode
   description: ReactNode

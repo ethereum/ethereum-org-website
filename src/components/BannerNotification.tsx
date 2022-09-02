@@ -6,6 +6,7 @@ export interface IStyledBanner {
 }
 
 export interface IProps {
+  children?: React.ReactNode
   shouldShow?: boolean
   className?: string
 }

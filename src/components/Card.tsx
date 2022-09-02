@@ -27,6 +27,7 @@ const StyledEmoji = styled(Emoji)`
 const TopContent = styled.div``
 
 export interface IProps {
+  children?: React.ReactNode
   emoji?: string
   title?: ReactNode
   description?: ReactNode
