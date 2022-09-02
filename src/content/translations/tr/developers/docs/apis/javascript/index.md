@@ -28,14 +28,14 @@ Bu kütüphaneler, sağlayıcıları kullanarak JSON-RPC, INFURA, Etherscan, Alc
 **Ethers örneği**
 
 ```js
-// A Web3Provider wraps a standard Web3 provider, which is
-// what MetaMask injects as window.ethereum into each page
+// Bir Web3Provider, standart bir Web3 sağlayıcısını sarar;
+// MetaMask'in her sayfaya window.ethereum olarak ne enjekte ettiği
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-// The MetaMask plugin also allows signing transactions to
-// send ether and pay to change state within the blockchain.
-// Bunun için hesap imzalayana ihtiyacımız var...
-sabit imzalayan = sağlayıcı.getSigner()
+// MetaMask eklentisi ayrıca, imzalama işlemlerinin ether göndermesine ve
+// blok zinciri içindeki durumu değiştirmek için ödeme yapmasına izin verir.
+// Bunun için hesap imzalayana(signer) ihtiyacımız var...
+const signer  = provider.getSigner()
 ```
 
 **Web3js örneği**
