@@ -407,12 +407,12 @@ const TableOfContents: React.FC<IProps> = ({
 
   const activeHash = useActiveHash(titleIds)
 
-  if (!items) {
-    return null
-  }
   // Exclude <h1> from TOC
   if (items.length === 1) {
     items = items[0].items!
+  }
+  if (!items) {
+    return null
   }
   if (isMobile) {
     return (
