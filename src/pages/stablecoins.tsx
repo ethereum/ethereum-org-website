@@ -537,17 +537,6 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
       ),
     },
     {
-      background: "#212121",
-      url: "https://trade.dydx.exchange/portfolio/overview",
-      alt: translateMessageId("dydx-logo", intl),
-      image: getImage(data.dydx),
-      name: "dYdX",
-      description: translateMessageId(
-        "page-stablecoins-stablecoins-dapp-description-3",
-        intl
-      ),
-    },
-    {
       background: "linear-gradient(135deg, #c7efe6 0%, #eeeac7 100%)",
       url: "https://oasis.app",
       alt: translateMessageId("oasis-logo", intl),
@@ -592,7 +581,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
           intl
         ),
         toId: "how",
-        isSecondary: true,
+        variant: "outline",
       },
     ],
   }
@@ -723,7 +712,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                     </div>
                     <div>
                       <ButtonLink
-                        isSecondary
+                        variant="outline"
                         to="https://kb.oasis.app/help/what-is-dai"
                       >
                         <Translation id="page-stablecoins-dai-banner-learn-button" />
@@ -758,7 +747,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                     </div>
                     <div>
                       <ButtonLink
-                        isSecondary
+                        variant="outline"
                         to="https://www.coinbase.com/usdc"
                       >
                         <Translation id="page-stablecoins-usdc-banner-learn-button" />
@@ -818,7 +807,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
             <ButtonLink to="/dapps/">
               <Translation id="page-stablecoins-explore-dapps" />
             </ButtonLink>
-            <ButtonLinkWrap isSecondary to="/defi/">
+            <ButtonLinkWrap variant="outline" to="/defi/">
               <Translation id="page-stablecoins-more-defi-button" />
             </ButtonLinkWrap>
           </ButtonLinkContainer>
@@ -968,16 +957,6 @@ export const query = graphql`
       childImageSharp {
         gatsbyImageData(
           width: 64
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    dydx: file(relativePath: { eq: "exchanges/dydx.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 80
           layout: FIXED
           placeholder: BLURRED
           quality: 100

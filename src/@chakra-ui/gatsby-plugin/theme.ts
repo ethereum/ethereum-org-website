@@ -10,6 +10,9 @@ import styles from "./styles"
 // Foundational style overrides
 import foundations from "./foundations"
 
+// Component style overrides
+import * as components from "./components"
+
 import semanticTokens from "./semanticTokens"
 
 const config: ThemeConfig = {
@@ -18,11 +21,18 @@ const config: ThemeConfig = {
   useSystemColorMode: true,
 }
 
+/**
+ * Override default styles with our custom theme.
+ *
+ * The complete list of default Chakra styles can be found here:
+ * https://github.com/chakra-ui/chakra-ui/tree/main/packages/theme/src
+ */
 const theme: ThemeOverride = {
   config,
   styles,
   ...foundations,
   semanticTokens,
+  components,
 }
 
 export default extendTheme(theme)

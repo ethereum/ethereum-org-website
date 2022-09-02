@@ -32,7 +32,6 @@ lang: zh
 - [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/) 生态系统基金_
 - [Compound 资助计划](https://compoundgrants.org/) – _[Compound](https://compound.finance/) 金融生态系统_
 - [Consensys 资助计划](https://consensys.net/grants/) – _[Consensys](https://consensys.net/) 区块链融资与以太坊资助_
-- [dYdX 资助计划](https://dydxgrants.com/) – _[dYdX](https://dydx.exchange/) 去中心化交易所_
 - [Lido 生态系统资助组织 (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/) 金融生态系统_
 - [mStable 资助计划](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) 社区_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) 生态系统_

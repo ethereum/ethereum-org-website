@@ -29,18 +29,6 @@ const Banner = styled.div<{
     flex-direction: column;
   }
 
-  a {
-    color: ${(props) =>
-      props.isWarning
-        ? props.theme.colors.warningLink
-        : props.theme.colors.infoLink};
-    &:hover {
-      color: ${(props) =>
-        props.isWarning
-          ? props.theme.colors.warningLinkHover
-          : props.theme.colors.infoLinkHover};
-    }
-  }
   ${margin}
 `
 

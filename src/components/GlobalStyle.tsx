@@ -755,14 +755,15 @@ const GlobalStyle: React.FC = () => {
         /* Anchor tag styles */
         /* Selected specifically for mdx rendered side icon link */
         .header-anchor {
-          position: relative;
+          position: relative !important;
           display: initial;
           margin-left: -1.5em;
-          padding-right: 0.5rem;
+          padding-right: 0.5rem !important;
           font-size: 1rem;
           vertical-align: middle;
 
           svg {
+            display: inline;
             fill: ${theme.colors.primary};
             visibility: hidden;
           }

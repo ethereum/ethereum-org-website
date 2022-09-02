@@ -21,7 +21,7 @@ In terms of architectural fundamentals, understanding what an [API](https://www.
 
 Many [Block Explorers](/developers/docs/data-and-analytics/block-explorers/) offer [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API) gateways that will provide developers visibility into real-time data on blocks, transactions, miners, accounts, and other on-chain activity.
 
-Developers can then process and transform this data to give their users unique insights and interactions with the [blockchain](/glossary/#blockchain).
+Developers can then process and transform this data to give their users unique insights and interactions with the [blockchain](/glossary/#blockchain). For example, [Etherscan](etherscan.io) provides execution and consensus data for every 12s slot.
 
 ## The Graph {#the-graph}
 
@@ -37,12 +37,10 @@ Using [GraphQL](https://graphql.org/), developers can query any of the curated o
 
 [Dune Analytics](https://dune.com/) pre-processes blockchain data into relational database (PostgreSQL and DatabricksSQL) tables, allows users to query blockchain data using SQL and build dashboards based on query results. On-chain data are organized into 4 raw tables: `blocks`, `transactions`, (event) `logs` and (call) `traces`. Popular contracts and protocols have been decoded, and each has its own set of event and call tables. Those event and call tables are processed further and organized into abstraction tables by the type of protocols, for example, dex, lending, stablecoins, etc.
 
-For example, [Etherscan](etherscan.io) provides execution and consensus data for every 6s slot.
-
 ## Further Reading {#further-reading}
 
 - [Graph Network Overview](https://thegraph.com/docs/en/about/network/)
 - [Graph Query Playground](https://thegraph.com/explorer/subgraph/graphprotocol/graph-network-mainnet?version=current)
 - [API code examples on EtherScan](https://etherscan.io/apis#contracts)
-- [Beaconcha.in Beacon Chain explorer](beaconcha.in)
+- [Beaconcha.in Beacon Chain explorer](https://beaconcha.in)
 - [Dune Basics](https://docs.dune.com/#dune-basics)

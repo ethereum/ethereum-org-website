@@ -68,10 +68,10 @@ const StudioRedirectPage = () => (
         </Link>
         . Check out our developer portal for tools, documentation, and more.
       </p>
-      <ButtonLink mr={"1rem"} isSecondary to="https://remix.ethereum.org">
+      <ButtonLink mr={1} variant="outline" to="https://remix.ethereum.org">
         Use Remix
       </ButtonLink>
-      <ButtonLink isSecondary to="/developers/">
+      <ButtonLink variant="outline" to="/developers/">
         Developer portal
       </ButtonLink>
     </Content>
