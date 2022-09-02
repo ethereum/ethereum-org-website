@@ -520,5 +520,14 @@
     "description": "We will celebrate privacy and discuss latest findings & development, as well as must haves and upcoming opportunities of the Ethereum Ecosystem.",
     "startDate": "2023-04-29",
     "endDate": "2023-04-30"
+  },  
+  {
+    "title": "ETHMiami",
+    "to": "https://ethmiami.net/",
+    "sponsor": null,
+    "location": "Miami, USA",
+    "description": "Web3 IRL Hackathon & Ethereum Cultural Fest of the Year.",
+    "startDate": "2022-11-26",
+    "endDate": "2022-11-30"
   }
 ]

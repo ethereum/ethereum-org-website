@@ -23,6 +23,7 @@ Anyone is free to suggest a project to list on the DeSci page on ethereum.org. E
 - **Informative website and documentation** - it is important that visitors to the project website can understand what the project actually does, how it contributes to decentralization of science infrastructure and how to participate.
 - **Project should be part of the Ethereum ecosystem** - At ethereum.org we believe Ethereum (and its Layer 2's) to be the appropriate base layer for the DeSci movement.
 - **The project is fairly well established** - The project has real users that have been able to access the project's services for several months.
+
 ### Nice-to-haves
 
 - **Available in multiple languages** - your project is translated into multiple languages allowing users around the world to access it.

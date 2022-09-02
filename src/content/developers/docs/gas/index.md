@@ -163,7 +163,6 @@ If you want to monitor gas prices, so you can send your ETH for less, you can us
 
 ## Related tools {#related-tools}
 
-- [Bloxy Gas Analytics](https://stat.bloxy.info/superset/dashboard/gas/?standalone=true) _Ethereum network gas stats_
 - [Blocknative's Gas Platform](https://www.blocknative.com/gas) _Gas estimation API powered by Blocknative's global mempool data platform_
 
 ## Further reading {#further-reading}

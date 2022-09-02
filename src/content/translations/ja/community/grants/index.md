@@ -30,7 +30,6 @@ lang: ja
 - [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/)エコシステムファンド_
 - [Compound 助成プログラム](https://compoundgrants.org/) – _[Compound](https://compound.finance/)金融エコシステム_
 - [Consensys 助成プログラム](https://consensys.net/grants/) – _[Consensys](https://consensys.net/)ブロックチェーン資金調達およびイーサリアム助成プログラム_
-- [dYdX 助成プログラム](https://dydxgrants.com/) – _[dYdX](https://dydx.exchange/)分散型取引所_
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/)金融エコシステム_
 - [mStable](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/)コミュニティ_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/)エコシステム_

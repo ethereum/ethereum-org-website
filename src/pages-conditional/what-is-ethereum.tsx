@@ -209,6 +209,7 @@ const ButtonRow = styled.div`
   display: flex;
   align-items: center;
   margin-top: 1rem;
+  margin-bottom: 1.45rem;
   flex-wrap: wrap;
 
   & > button,
@@ -768,16 +769,14 @@ const WhatIsEthereumPage = ({
               <p>
                 <Translation id="page-what-is-ethereum-meet-ether-desc-2" />
               </p>
-              <p>
-                <ButtonRow>
-                  <ButtonLink to="/eth/">
-                    <Translation id="page-what-is-ethereum-what-is-ether" />
-                  </ButtonLink>
-                  <ButtonLink to="/get-eth/" variant="outline">
-                    <Translation id="page-what-is-ethereum-get-eth" />
-                  </ButtonLink>
-                </ButtonRow>
-              </p>
+              <ButtonRow>
+                <ButtonLink to="/eth/">
+                  <Translation id="page-what-is-ethereum-what-is-ether" />
+                </ButtonLink>
+                <ButtonLink to="/get-eth/" variant="outline">
+                  <Translation id="page-what-is-ethereum-get-eth" />
+                </ButtonLink>
+              </ButtonRow>
             </Width60>
           </TwoColumnContent>
         </Section>
@@ -794,16 +793,14 @@ const WhatIsEthereumPage = ({
               <p>
                 <Translation id="page-what-is-ethereum-what-can-i-do-desc-1" />
               </p>
-              <p>
-                <ButtonRow>
-                  <ButtonLink to="/dapps/">
-                    <Translation id="page-what-is-ethereum-explore-applications" />
-                  </ButtonLink>
-                  <ButtonLink to="/defi/" variant="outline">
-                    <Translation id="page-what-is-ethereum-learn-defi" />
-                  </ButtonLink>
-                </ButtonRow>
-              </p>
+              <ButtonRow>
+                <ButtonLink to="/dapps/">
+                  <Translation id="page-what-is-ethereum-explore-applications" />
+                </ButtonLink>
+                <ButtonLink to="/defi/" variant="outline">
+                  <Translation id="page-what-is-ethereum-learn-defi" />
+                </ButtonLink>
+              </ButtonRow>
             </Width60>
           </TwoColumnContent>
         </Section>
@@ -823,13 +820,11 @@ const WhatIsEthereumPage = ({
               <p>
                 <Translation id="page-what-is-ethereum-who-runs-ethereum-desc-2" />
               </p>
-              <p>
-                <ButtonRow>
-                  <ButtonLink to="/run-a-node/">
-                    <Translation id="page-what-is-ethereum-run-a-node" />
-                  </ButtonLink>
-                </ButtonRow>
-              </p>
+              <ButtonRow>
+                <ButtonLink to="/run-a-node/">
+                  <Translation id="page-what-is-ethereum-run-a-node" />
+                </ButtonLink>
+              </ButtonRow>
             </Width60>
           </TwoColumnContent>
         </Section>
@@ -855,16 +850,14 @@ const WhatIsEthereumPage = ({
               <p>
                 <Translation id="page-what-is-ethereum-smart-contract-desc-3" />
               </p>
-              <p>
-                <ButtonRow>
-                  <ButtonLink to="/smart-contracts/">
-                    <Translation id="page-what-is-ethereum-more-on-smart-contracts" />
-                  </ButtonLink>
-                  <ButtonLink to="/dapps/" variant="outline">
-                    <Translation id="page-what-is-ethereum-explore-dapps" />
-                  </ButtonLink>
-                </ButtonRow>
-              </p>
+              <ButtonRow>
+                <ButtonLink to="/smart-contracts/">
+                  <Translation id="page-what-is-ethereum-more-on-smart-contracts" />
+                </ButtonLink>
+                <ButtonLink to="/dapps/" variant="outline">
+                  <Translation id="page-what-is-ethereum-explore-dapps" />
+                </ButtonLink>
+              </ButtonRow>
             </Width60>
           </TwoColumnContent>
         </Section>
@@ -927,16 +920,14 @@ const WhatIsEthereumPage = ({
             <p>
               <Translation id="page-what-is-ethereum-energy-desc-2" />
             </p>
-            <p>
-              <ButtonRow>
-                <ButtonLink to="/energy-consumption/">
-                  <Translation id="page-what-is-ethereum-more-on-energy-consumption" />
-                </ButtonLink>
-                <ButtonLink to="/upgrades/merge/" variant="outline">
-                  <Translation id="page-what-is-ethereum-the-merge-update" />
-                </ButtonLink>
-              </ButtonRow>
-            </p>
+            <ButtonRow>
+              <ButtonLink to="/energy-consumption/">
+                <Translation id="page-what-is-ethereum-more-on-energy-consumption" />
+              </ButtonLink>
+              <ButtonLink to="/upgrades/merge/" variant="outline">
+                <Translation id="page-what-is-ethereum-the-merge-update" />
+              </ButtonLink>
+            </ButtonRow>
           </Width60>
         </TwoColumnContent>
       </Section>

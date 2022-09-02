@@ -1362,6 +1362,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://stackoverflow.com/users/5062825/ramansb"><img src="https://avatars.githubusercontent.com/u/13969478?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ramandeep</b></sub></a><br /><a href="#ideas-RamanSB" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/vvladd"><img src="https://avatars.githubusercontent.com/u/13506999?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vlad Kokhan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=vvladd" title="Documentation">📖</a> <a href="#translation-vvladd" title="Translation">🌍</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/SavPhill"><img src="https://avatars.githubusercontent.com/u/38789408?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Phill</b></sub></a><br /><a href="#content-SavPhill" title="Content">🖋</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
