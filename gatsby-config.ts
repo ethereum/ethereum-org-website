@@ -200,13 +200,6 @@ const config: GatsbyConfig = {
         labelFormat: "[filename]--[local]",
       },
     },
-    {
-      resolve: "@chakra-ui/gatsby-plugin",
-      options: {
-        resetCSS: true,
-        isUsingColorMode: true,
-      },
-    },
     // Source assets
     {
       resolve: `gatsby-source-filesystem`,

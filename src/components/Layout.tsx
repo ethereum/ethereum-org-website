@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react"
 import { ApolloProvider } from "@apollo/client"
-import { useColorModeValue } from "@chakra-ui/react"
-import { ThemeProvider } from "@emotion/react"
+import { ChakraProvider } from "@chakra-ui/react"
 import styled from "@emotion/styled"
 import { IntlProvider } from "react-intl"
 import { LocaleProvider } from "gatsby-theme-i18n"
 
-import { lightTheme, darkTheme } from "../theme"
 import GlobalStyle from "./GlobalStyle"
 
 import Footer from "./Footer"
@@ -20,12 +18,14 @@ import FeedbackWidget from "./FeedbackWidget"
 import { SkipLink, SkipLinkAnchor } from "./SkipLink"
 
 import { ZenModeContext } from "../contexts/ZenModeContext"
+import OldThemeProvider from "./OldThemeProvider"
 
 import { useKeyPress } from "../hooks/useKeyPress"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { scrollIntoView } from "../utils/scrollIntoView"
 import { isMobile } from "../utils/isMobile"
+import theme from "../@chakra-ui/gatsby-plugin/theme"
 
 import type { Context } from "../types"
 
@@ -88,9 +88,6 @@ const Layout: React.FC<IProps> = ({
   pageContext,
   children,
 }) => {
-  // TODO: tmp - for backward compatibility with old theme
-  const theme = useColorModeValue(lightTheme, darkTheme)
-
   const [isZenMode, setIsZenMode] = useState<boolean>(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState<boolean>(false)
 
@@ -149,46 +146,48 @@ const Layout: React.FC<IProps> = ({
       {/* @ts-ignore */}
       <IntlProvider locale={locale!} key={locale} messages={messages}>
         <ApolloProvider client={client}>
-          <ThemeProvider theme={theme}>
-            <GlobalStyle />
-            <SkipLink hrefId="#main-content" />
-            <TranslationBanner
-              shouldShow={shouldShowTranslationBanner}
-              isPageContentEnglish={isPageContentEnglish}
-              isPageRightToLeft={isPageRightToLeft}
-              originalPagePath={pageContext.originalPath!}
-            />
-            <TranslationBannerLegal
-              shouldShow={isLegal}
-              isPageRightToLeft={isPageRightToLeft}
-              originalPagePath={pageContext.originalPath!}
-            />
-            <ContentContainer>
-              <VisuallyHidden isHidden={isZenMode}>
-                <Nav path={path} />
-                {shouldShowSideNav && <SideNavMobile path={path} />}
-              </VisuallyHidden>
-              <SkipLinkAnchor id="main-content" />
-              <MainContainer>
-                {shouldShowSideNav && (
-                  <VisuallyHidden isHidden={isZenMode}>
-                    <SideNav path={path} />
-                  </VisuallyHidden>
-                )}
-                <MainContent>
-                  <ZenModeContext.Provider
-                    value={{ isZenMode, handleZenModeChange }}
-                  >
-                    <Main>{children}</Main>
-                  </ZenModeContext.Provider>
-                </MainContent>
-              </MainContainer>
-              <VisuallyHidden isHidden={isZenMode}>
-                <Footer />
-              </VisuallyHidden>
-              <FeedbackWidget />
-            </ContentContainer>
-          </ThemeProvider>
+          <ChakraProvider theme={theme} resetCSS={true}>
+            <OldThemeProvider>
+              <GlobalStyle />
+              <SkipLink hrefId="#main-content" />
+              <TranslationBanner
+                shouldShow={shouldShowTranslationBanner}
+                isPageContentEnglish={isPageContentEnglish}
+                isPageRightToLeft={isPageRightToLeft}
+                originalPagePath={pageContext.originalPath!}
+              />
+              <TranslationBannerLegal
+                shouldShow={isLegal}
+                isPageRightToLeft={isPageRightToLeft}
+                originalPagePath={pageContext.originalPath!}
+              />
+              <ContentContainer>
+                <VisuallyHidden isHidden={isZenMode}>
+                  <Nav path={path} />
+                  {shouldShowSideNav && <SideNavMobile path={path} />}
+                </VisuallyHidden>
+                <SkipLinkAnchor id="main-content" />
+                <MainContainer>
+                  {shouldShowSideNav && (
+                    <VisuallyHidden isHidden={isZenMode}>
+                      <SideNav path={path} />
+                    </VisuallyHidden>
+                  )}
+                  <MainContent>
+                    <ZenModeContext.Provider
+                      value={{ isZenMode, handleZenModeChange }}
+                    >
+                      <Main>{children}</Main>
+                    </ZenModeContext.Provider>
+                  </MainContent>
+                </MainContainer>
+                <VisuallyHidden isHidden={isZenMode}>
+                  <Footer />
+                </VisuallyHidden>
+                <FeedbackWidget />
+              </ContentContainer>
+            </OldThemeProvider>
+          </ChakraProvider>
         </ApolloProvider>
       </IntlProvider>
     </LocaleProvider>
