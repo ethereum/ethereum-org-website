@@ -101,8 +101,8 @@ The sync mode and client you choose will affect space requirements, but we've es
 
 | Client     | Disk size (snap sync) | Disk size (full archive) |
 | ---------- | --------------------- | ------------------------ |
-| Geth       | 400GB+                | 12TB+                    |
-| Nethermind | 400GB+                | 12TB+                    |
+| Geth       | 500GB+                | 12TB+                    |
+| Nethermind | 500GB+                | 12TB+                    |
 | Besu       | 800GB+                | 12TB+                    |
 | Erigon     | N/A                   | 2.5TB+                   |
 
@@ -219,13 +219,13 @@ You need to declare any client settings that aren't default at the start. You ca
 
 Execution and consensus clients communicate via an authenticated endpoint specified in [Engine API](https://github.com/ethereum/execution-apis/tree/main/src/engine). In order to connect to a consensus client, the execution client must generate a [`jwtsecret`](https://jwt.io/) at a known path. For security and stability reasons, clients should run on the same machine, and both clients must know this path as it is used to authenticate a local RPC connection between them. The execution client must also define a listening port for authenticated APIs.
 
-This token is generated automatically by the client software, but in some cases, e.g. during pre-Merge testing, you might need to do it yourself. You can generate it by running:
+This token is generated automatically by the client software, but in some cases, e.g. during pre-Merge testing, you might need to do it yourself. You can generate it using [OpenSSL](https://www.openssl.org/):
 
 ```
 openssl rand -hex 32 > jwtsecret
 ```
 
-**Note that it is recommended to connect an execution and consensus client on a testnet only for now (e.g. Kiln, Ropsten, Sepolia, Goerli) and await merge-ready client releases before replicating the process on Mainnet.**
+**Note that it is recommended to connect an execution and consensus client on a testnet only for now (e.g. Ropsten, Sepolia, Goerli) and await merge-ready client releases before replicating the process on Mainnet.**
 
 #### Running an execution client {#running-an-execution-client}
 
@@ -264,7 +264,7 @@ Besu also comes with a launcher option which will ask a series of questions and 
 besu --Xlauncher
 ```
 
-Besu's [documentation](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) contains additional options and configuration details.
+[Besu's documentation](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) contains additional options and configuration details including [a guide on preparing for The Merge](https://besu.hyperledger.org/en/latest/public-networks/how-to/prepare-for-the-merge/).
 
 ##### Running Erigon
 
@@ -315,7 +315,7 @@ The consensus client also needs the path to the execution client's `jwt-secret` 
 
 If you plan to run a validator, make sure to add a configuration flag which specifies Ethereum address of the fee recipient. This is where ether rewards for your validator accumulates. Each consensus client has an option e.g. `--suggested-fee-recipient=0xabcd1` that takes an Ethereum address as an argument.
 
-**Note that we recommend waiting for merge-ready client releases before doing this on Ethereum Mainnet—for now just practice on a testnet such as Kiln, Ropsten, Sepolia or Goerli**
+**Note that we recommend waiting for merge-ready client releases before doing this on Ethereum Mainnet—for now just practice on a testnet such as Sepolia, Goerli or Ropsten**
 
 When starting Beacon Node on testnet, you can significantly save syncing time by using public endpoint for [Checkpoint sync](https://notes.ethereum.org/@launchpad/checkpoint-sync).
 
@@ -393,6 +393,8 @@ Running your own validator allows for [solo staking](https://ethereum.org/en/sta
 
 The easiest way to get started with staking and validator key generation is to use the [Prater Testnet Staking Launchpad](https://prater.launchpad.ethereum.org/), which allows you to test your setup by [running nodes on Goerli](https://notes.ethereum.org/@launchpad/goerli). When you're ready for Mainnet, you can repeat these steps using the [Mainnet Staking Launchpad](https://launchpad.ethereum.org/). Make sure to check [Mainnet readiness checklist](https://launchpad.ethereum.org/en/merge-readiness) to smoothly run your validator through the Merge.
 
+Look into [staking page](/staking) for an overview about staking options. 
+
 ### Using the node {#using-the-node}
 
 Execution clients offer [RPC API endpoints](/developers/docs/apis/json-rpc/) that you can use to submit transactions, interact with or deploy smart contracts on the Ethereum network in various ways:
@@ -459,6 +461,7 @@ As part of your monitoring, make sure to keep an eye on your machine's performan
 
 ## Further reading {#further-reading}
 
+- [Ethereum Staking Guides](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, updated often_
 - [Guide | How to setup a validator for Ethereum staking on mainnet](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, updated regularly_
 - [ETHStaker guides on running validators on testnets](https://github.com/remyroy/ethstaker#guides) – _ETHStaker, updated regularly_
 - [Ethereum Staking Guides](https://github.com/SomerEsat/ethereum-staking-guides) _– Somer Esat, updated regularly_
