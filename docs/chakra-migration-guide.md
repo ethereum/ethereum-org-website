@@ -107,7 +107,6 @@ const Text = styled.p`
 ```tsx
 import { Icon } from "@chakra-ui/react"
 import { BsQuestionSquareFill } from "react-icons/bs"
-
 ;<Icon as={BsQuestionSquareFill} />
 ```
 
