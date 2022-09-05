@@ -1368,6 +1368,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/calumtomeny"><img src="https://avatars.githubusercontent.com/u/939917?v=4?s=100" width="100px;" alt=""/><br /><sub><b>calumtomeny</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=calumtomeny" title="Documentation">📖</a></td>
     <td align="center"><a href="https://robertu7.github.io/"><img src="https://avatars.githubusercontent.com/u/4065233?v=4?s=100" width="100px;" alt=""/><br /><sub><b>robertu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=robertu7" title="Documentation">📖</a> <a href="#translation-robertu7" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/ldlsalazar"><img src="https://avatars.githubusercontent.com/u/112458077?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lorena De Leon Salazar</b></sub></a><br /><a href="#translation-ldlsalazar" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://akcela.co.uk"><img src="https://avatars.githubusercontent.com/u/95427666?v=4?s=100" width="100px;" alt=""/><br /><sub><b>James Adams</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=JAdams-eth" title="Documentation">📖</a></td>
   </tr>
 </table>
 
