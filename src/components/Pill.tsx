@@ -28,6 +28,7 @@ const Secondary = styled.div`
   border-radius: 0.25rem;
 `
 export interface IProps {
+  children?: React.ReactNode
   className?: string
   isSecondary?: boolean
   color?: string

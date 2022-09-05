@@ -27,6 +27,7 @@ import {
   SloganGradient,
 } from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
+import BugBountyBanner from "../components/Banners/BugBountyBanner"
 import { Context } from "../types"
 
 const HeroCard = styled.div`
@@ -108,7 +109,6 @@ const ButtonRow = styled.div`
 `
 
 const StyledButton = styled(ButtonLink)`
-  flex: 0 1 7.75rem;
   margin-right: 1rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-bottom: 1rem;
@@ -398,6 +398,8 @@ const BugBountiesPage = ({
           intl
         )}
       />
+      {/* TODO: Remove September 8 */}
+      <BugBountyBanner />
       <Content>
         <HeroCard>
           <HeroContainer>
@@ -419,14 +421,14 @@ const BugBountiesPage = ({
               <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
                 <Translation id="page-upgrades-bug-bounty-submit" />
               </StyledButton>
-              <StyledButton isSecondary to="#rules">
+              <StyledButton variant="outline" to="#rules">
                 <Translation id="page-upgrades-bug-bounty-rules" />
               </StyledButton>
             </ButtonRow>
           </HeroContainer>
           <LeaderboardContainer>
             <Leaderboard content={allBounterHunters} limit={5} />
-            <ButtonLink isSecondary to="#leaderboard">
+            <ButtonLink variant="outline" to="#leaderboard">
               <Translation id="page-upgrades-bug-bounty-leaderboard" />
             </ButtonLink>
           </LeaderboardContainer>

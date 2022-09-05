@@ -31,7 +31,9 @@ const TopContent = styled.div`
   align-items: flex-start;
 `
 
-export interface IProps {}
+export interface IProps {
+  children?: React.ReactNode
+}
 
 const SectionNav: React.FC<IProps> = ({ children }) => (
   <Card>

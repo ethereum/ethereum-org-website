@@ -240,7 +240,7 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
       {
         content: translateMessageId("page-upgrades-whats-ethereum", intl),
         to: "/what-is-ethereum/",
-        isSecondary: true,
+        variant: "outline",
       },
     ],
   }
@@ -422,7 +422,7 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
             </H2>
             <Translation id="page-upgrades-help-desc" />
           </div>
-          <ContributeButton isSecondary to="/upgrades/get-involved/">
+          <ContributeButton variant="outline" to="/upgrades/get-involved/">
             <Translation id="page-upgrades-get-involved-2" />
           </ContributeButton>
         </ContributeCard>

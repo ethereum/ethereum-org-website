@@ -100,7 +100,7 @@ Explore projects and join the DeSci community.
 - [OceanDAO: DAO governed funding for data-related science](https://oceanprotocol.com/dao)
 - [Opscientia: open decentralized science workflows](https://opsci.io/research/)
 - [LabDAO: fold a protein in-silico](https://alphafodl.vercel.app/)
-- [Bio.xyz: get funded for your biotech DAO or desci project](https://www.molecule.to/)
+- [Bio.xyz: get funded for your biotech DAO or desci project](https://biodao.xyz/)
 - [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
 - [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
 - [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
@@ -127,3 +127,4 @@ Explore projects and join the DeSci community.
 - [Conversation between Vitalik Buterin and the scientist Aubrey de Grey about the intersection of longevity research and crypto](https://www.youtube.com/watch?v=x9TSJK1widA)
 - [Scientific Publishing Is Broken. Can Web3 Fix It?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
 - [Juan Benet - DeSci, Independent Labs, & Large Scale Data Science](https://www.youtube.com/watch?v=zkXM9H90g_E)
+- [Sebastian Brunemeier - How DeSci Can Transform Biomedical Research & Venture Capital](https://www.youtube.com/watch?v=qB4Tc3FcVbM)

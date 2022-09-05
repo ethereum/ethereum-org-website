@@ -50,10 +50,10 @@ const Description = styled.p`
   color: ${(props) => props.theme.colors.text200};
 `
 
-const Image = styled(GatsbyImage)`
+const Image = styled(GatsbyImage)<{ maximagewidth?: number }>`
   align-self: center; /* prevents crop */
   width: 100%;
-  max-width: ${(props) => `${props.maxImageWidth}px`};
+  max-width: ${(props) => `${props.maximagewidth}px`};
   margin-top: -6rem;
   margin-bottom: -6rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
@@ -67,6 +67,7 @@ const H2 = styled.h2`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   image: string
   maxImageWidth?: number
   titleKey: TranslationKey
@@ -90,7 +91,7 @@ const CalloutBanner: React.FC<IProps> = ({
     <Image
       image={image}
       alt={alt}
-      maxImageWidth={maxImageWidth}
+      maximagewidth={maxImageWidth}
       objectFit="contain"
     />
     <Content>

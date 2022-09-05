@@ -24,6 +24,7 @@ const Item = styled(Link)`
   width: 100%;
   color: #000000;
   &:hover {
+    text-decoration: none;
     border-radius: 4px;
     box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
     background: ${(props) => props.theme.colors.tableBackgroundHover};
