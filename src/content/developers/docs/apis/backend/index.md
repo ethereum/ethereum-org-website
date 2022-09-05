@@ -57,10 +57,11 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 - [ethercluster.com](https://www.ethercluster.com/)
 
-**Chainstack -** **_Shared and dedicated Ethereum nodes as a service._**
+**Chainstack -** **_Elastic and dedicated Ethereum nodes as a service._**
 
 - [chainstack.com](https://chainstack.com)
 - [Documentation](https://docs.chainstack.com)
+- [Ethereum API reference]()
 
 **QuickNode -** **_Blockchain Infrastructure as a Service._**
 
