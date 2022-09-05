@@ -52,9 +52,7 @@ Gray Glacier ağ yükseltmesi, [zorluk bombasını](/glossary/#difficulty-bomb) 
 
 #### Özet {#arrow-glacier-summary}
 
-The Arrow Glacier ağ yükseltmesi [zorluk bombasını](/glossary/#difficulty-bomb) bir kaç ay ertelendi. Bu yükseltmede sunulan tek değişiklik budur ve doğası gereği [Muir Glacier](#muir-glacier) yükseltmesine benzer. [Bizans](#byzantium), [Konstantinopolis](#constantinople) ve
-
-Londra ağ yükseltmelerinde de benzer değişiklikler yapıldı.
+The Arrow Glacier ağ yükseltmesi [zorluk bombasını](/glossary/#difficulty-bomb) bir kaç ay ertelendi. Bu yükseltmede sunulan tek değişiklik budur ve doğası gereği [Muir Glacier](#muir-glacier) yükseltmesine benzer. [Bizans](#byzantium), [Konstantinopolis](#constantinople) ve [Londra](#london) ağ yükseltmelerinde de benzer değişiklikler yapıldı.
 
 - [EF Blog - Arrow Glacier Yükseltme Duyurusu](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - Ethereum Arrow Glacier Yükseltmesi](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
@@ -252,6 +250,7 @@ Bizans çatallanması:
 
 - Blok [madenciliği](/developers/docs/consensus-mechanisms/pow/mining/) ödüllerini 5'ten 3 ETH'ye düşürdü.
 - [Zorluk bombasını](/glossary/#difficulty-bomb) bir yıl geciktirdi.
+- Diğer sözleşmelere durum değiştirmeyen çağrılar yapabilme kabiliyeti ekledi.
 - [Katman 2 ölçeklendirmesine](/developers/docs/scaling/#layer-2-scaling) izin vermek için belirli şifreleme yöntemleri ekledi.
 
 [Ethereum Vakfı'nın duyurusunu okuyun](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
