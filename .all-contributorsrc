@@ -8603,6 +8603,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "JAdams-eth",
+      "name": "James Adams",
+      "avatar_url": "https://avatars.githubusercontent.com/u/95427666?v=4",
+      "profile": "https://akcela.co.uk",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
