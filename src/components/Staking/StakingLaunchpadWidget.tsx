@@ -4,7 +4,7 @@ import { useIntl } from "react-intl"
 
 import { StyledSelect as Select } from "../SharedStyledComponents"
 import ButtonLink from "../ButtonLink"
-import Emoji from "../Emoji"
+import Emoji from "../OldEmoji"
 import Translation from "../Translation"
 
 import { trackCustomEvent } from "../../utils/matomo"
