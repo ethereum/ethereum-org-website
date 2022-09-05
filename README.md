@@ -1364,6 +1364,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/SavPhill"><img src="https://avatars.githubusercontent.com/u/38789408?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Phill</b></sub></a><br /><a href="#content-SavPhill" title="Content">🖋</a></td>
+    <td align="center"><a href="http://u64.cam"><img src="https://avatars.githubusercontent.com/u/17013462?v=4?s=100" width="100px;" alt=""/><br /><sub><b>cam</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Acamerondurham" title="Bug reports">🐛</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=camerondurham" title="Documentation">📖</a></td>
   </tr>
 </table>
 
