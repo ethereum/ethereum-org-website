@@ -8565,6 +8565,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "camerondurham",
+      "name": "cam",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17013462?v=4",
+      "profile": "http://u64.cam",
+      "contributions": [
+        "bug",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
