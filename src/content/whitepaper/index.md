@@ -517,6 +517,7 @@ The concept of an arbitrary state transition function as implemented by the Ethe
 18. [Mike Hearn on Smart Property at Turing Festival](http://www.youtube.com/watch?v=Pu4PAMFPo5Y)
 19. [Ethereum RLP](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
 20. [Ethereum Merkle Patricia trees](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
+21. [Peter Todd on Merkle sum trees] (https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
 _For history of the whitepaper, see [this wiki](https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
 
