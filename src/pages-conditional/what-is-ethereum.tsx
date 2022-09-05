@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { useTheme } from "@emotion/react"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 
@@ -42,6 +42,7 @@ import {
 } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { trackCustomEvent } from "../utils/matomo"
+import { getImage, getSrc } from "../utils/image"
 
 import useFetchStat, {
   defaultFormatter,
@@ -414,7 +415,7 @@ const WhatIsEthereumPage = ({
           "page-what-is-ethereum-meta-description",
           intl
         )}
-        image={getImage(data.ogImage)?.images.fallback.src}
+        image={getSrc(data.ogImage)}
       />
       <Content>
         <HeroContainer>
@@ -435,7 +436,7 @@ const WhatIsEthereumPage = ({
             </ButtonRow>
           </Header>
           <Hero
-            image={getImage(data.hero)}
+            image={getImage(data.hero)!}
             alt={translateMessageId(
               "page-what-is-ethereum-alt-img-bazaar",
               intl
@@ -466,7 +467,7 @@ const WhatIsEthereumPage = ({
             <TwoColumnContent reverse>
               <Width40>
                 <GatsbyImage
-                  image={getImage(data.whatIsCryptocurrency)}
+                  image={getImage(data.whatIsCryptocurrency)!}
                   alt=""
                 />
               </Width40>
@@ -512,7 +513,7 @@ const WhatIsEthereumPage = ({
         <Section>
           <TwoColumnContent>
             <Width40>
-              <GatsbyImage image={getImage(data.diffEthAndBtc)} alt="" />
+              <GatsbyImage image={getImage(data.diffEthAndBtc)!} alt="" />
             </Width40>
             <Width60>
               <h2>
@@ -678,7 +679,7 @@ const WhatIsEthereumPage = ({
               </BannerGrid>
             </BannerBody>
             <BannerImage>
-              <GatsbyImage image={getImage(data.stats)} alt="" />
+              <GatsbyImage image={getImage(data.stats)!} alt="" />
             </BannerImage>
           </Banner>
         </Section>
@@ -757,7 +758,7 @@ const WhatIsEthereumPage = ({
         <Section bgColor={theme.colors.homeBoxTurquoise}>
           <TwoColumnContent>
             <Width40>
-              <GatsbyImage image={getImage(data.ethCoin)} alt="" />
+              <GatsbyImage image={getImage(data.ethCoin)!} alt="" />
             </Width40>
             <Width60>
               <h2>
@@ -784,7 +785,7 @@ const WhatIsEthereumPage = ({
         <Section>
           <TwoColumnContent reverse>
             <Width40>
-              <GatsbyImage image={getImage(data.meetEth)} alt="" />
+              <GatsbyImage image={getImage(data.meetEth)!} alt="" />
             </Width40>
             <Width60>
               <h2>
@@ -808,7 +809,7 @@ const WhatIsEthereumPage = ({
         <Section bgColor={theme.colors.homeBoxPurple}>
           <TwoColumnContent>
             <Width40>
-              <GatsbyImage image={getImage(data.whoRunsEthereum)} alt="" />
+              <GatsbyImage image={getImage(data.whoRunsEthereum)!} alt="" />
             </Width40>
             <Width60>
               <h2>
@@ -833,7 +834,7 @@ const WhatIsEthereumPage = ({
           <TwoColumnContent reverse>
             <Width40>
               <GatsbyImage
-                image={getImage(data.whatAreSmartContracts)}
+                image={getImage(data.whatAreSmartContracts)!}
                 alt=""
               />
             </Width40>
@@ -866,7 +867,7 @@ const WhatIsEthereumPage = ({
       <Section>
         <TwoColumnContent>
           <Width40>
-            <GatsbyImage image={getImage(data.criminalActivity)} alt="" />
+            <GatsbyImage image={getImage(data.criminalActivity)!} alt="" />
           </Width40>
           <Width60>
             <h2>
@@ -964,7 +965,7 @@ const WhatIsEthereumPage = ({
         </Column>
         <CardContainer>
           <StyledCallout
-            image={getImage(data.developers)}
+            image={getImage(data.developers)!}
             titleKey="page-what-is-ethereum-build"
             alt={translateMessageId("page-what-is-ethereum-alt-img-lego", intl)}
             descriptionKey="page-what-is-ethereum-build-desc"
@@ -976,7 +977,7 @@ const WhatIsEthereumPage = ({
             </div>
           </StyledCallout>
           <StyledCallout
-            image={getImage(data.community)}
+            image={getImage(data.community)!}
             titleKey="page-what-is-ethereum-community"
             alt={translateMessageId("page-what-is-ethereum-alt-img-comm", intl)}
             descriptionKey="page-what-is-ethereum-comm-desc"

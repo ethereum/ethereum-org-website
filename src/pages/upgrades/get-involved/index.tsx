@@ -1,10 +1,9 @@
-import React, { useContext, useState, useEffect, ReactNode } from "react"
+import React, { useState, useEffect, ReactNode } from "react"
 import { useTheme } from "@emotion/react"
 import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 import { shuffle } from "lodash"
-import { getImage } from "gatsby-plugin-image"
 import { translateMessageId, TranslationKey } from "../../../utils/translations"
 import Card from "../../../components/Card"
 import Leaderboard, { Person } from "../../../components/Leaderboard"
@@ -28,6 +27,7 @@ import {
 } from "../../../components/SharedStyledComponents"
 import Breadcrumbs from "../../../components/Breadcrumbs"
 import FeedbackCard from "../../../components/FeedbackCard"
+import { getImage, ImageDataLike } from "../../../utils/image"
 
 const HeroContainer = styled.div`
   padding-left: 0rem;
@@ -171,7 +171,7 @@ type Client = {
   description: ReactNode
   alt: TranslationKey
   url: string
-  image: (isDarkTheme?: boolean) => typeof getImage
+  image: (isDarkTheme?: boolean) => ImageDataLike | null
   githubUrl: string
   isBeta?: boolean
   children?: ReactNode
@@ -373,7 +373,7 @@ const GetInvolvedPage = ({
             key={idx}
             url={client.url}
             background={client.background}
-            image={getImage(client.image(isDarkTheme))}
+            image={getImage(client.image(isDarkTheme))!}
             name={client.name}
             description={client.description}
             alt={translateMessageId(client.alt, intl)}
@@ -456,7 +456,7 @@ const GetInvolvedPage = ({
       </Content>
       <Staking>
         <StyledCalloutBanner
-          image={getImage(data.rhino)}
+          image={getImage(data.rhino)!}
           alt={translateMessageId("page-staking-image-alt", intl)}
           titleKey={"page-upgrades-get-involved-stake"}
           descriptionKey={"page-upgrades-get-involved-stake-desc"}

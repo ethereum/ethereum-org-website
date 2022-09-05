@@ -4,7 +4,7 @@ import { useIntl } from "react-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
@@ -48,6 +48,7 @@ import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
 import { Lang } from "../utils/languages"
+import { getImage } from "../utils/image"
 import { Context } from "../types"
 
 const Page = styled.div`
@@ -373,7 +374,7 @@ const UpgradePage = ({
             {getLocaleTimestamp(intl.locale as Lang, lastUpdatedDate)}
           </LastUpdated>
         </TitleCard>
-        <Image image={getImage(mdx.frontmatter.image)} />
+        <Image image={getImage(mdx.frontmatter.image)!} alt="" />
       </HeroContainer>
       <MoreContent to="#content">
         <Icon name="chevronDown" />

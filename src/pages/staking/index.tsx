@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
-import { getImage } from "gatsby-plugin-image"
 import styled from "@emotion/styled"
 
 import ButtonDropdown, {
@@ -26,6 +25,7 @@ import StakingHomeTableOfContents from "../../components/Staking/StakingHomeTabl
 import StakingCommunityCallout from "../../components/Staking/StakingCommunityCallout"
 
 import { translateMessageId, TranslationKey } from "../../utils/translations"
+import { getImage } from "../../utils/image"
 import type { Context } from "../../types"
 
 const HeroStatsWrapper = styled.div`
@@ -255,7 +255,7 @@ const StakingPage = ({
     title: translateMessageId("page-staking-hero-title", intl),
     header: translateMessageId("page-staking-hero-header", intl),
     subtitle: translateMessageId("page-staking-hero-subtitle", intl),
-    image: getImage(data.rhino),
+    image: getImage(data.rhino)!,
     alt: translateMessageId("page-staking-image-alt", intl),
     buttons: [],
   }

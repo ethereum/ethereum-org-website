@@ -388,25 +388,25 @@ const StablecoinAccordion: React.FC<IProps> = () => {
   const dapps: Array<CardListItem> = [
     {
       title: "Uniswap",
-      image: getImage(data.uniswap),
+      image: getImage(data.uniswap)!,
       link: "https://uniswap.org",
       alt: translateMessageId("uniswap-logo", intl),
     },
     {
       title: "Loopring",
-      image: getImage(data.loopring),
+      image: getImage(data.loopring)!,
       link: "https://loopring.org",
       alt: translateMessageId("loopring-logo", intl),
     },
     {
       title: "1inch",
-      image: getImage(data.oneinch),
+      image: getImage(data.oneinch)!,
       link: "https://app.1inch.io",
       alt: translateMessageId("1inch-logo", intl),
     },
     {
       title: "Matcha",
-      image: getImage(data.matcha),
+      image: getImage(data.matcha)!,
       link: "https://matcha.xyz",
       alt: translateMessageId("matcha-logo", intl),
     },
@@ -415,19 +415,19 @@ const StablecoinAccordion: React.FC<IProps> = () => {
   const borrow: Array<CardListItem> = [
     {
       title: "Compound",
-      image: getImage(data.compound),
+      image: getImage(data.compound)!,
       link: "https://compound.finance",
       alt: translateMessageId("compound-logo", intl),
     },
     {
       title: "Aave",
-      image: getImage(data.aave),
+      image: getImage(data.aave)!,
       link: "https://aave.com",
       alt: translateMessageId("aave-logo", intl),
     },
     {
       title: "Oasis",
-      image: getImage(data.oasis),
+      image: getImage(data.oasis)!,
       link: "https://oasis.app",
       alt: translateMessageId("oasis-logo", intl),
     },
@@ -439,7 +439,7 @@ const StablecoinAccordion: React.FC<IProps> = () => {
         "page-stablecoins-accordion-earn-project-bounties",
         intl
       ),
-      image: getImage(data.gitcoin),
+      image: getImage(data.gitcoin)!,
       link: "https://gitcoin.co/explorer",
       description: translateMessageId(
         "page-stablecoins-accordion-earn-project-1-description",
@@ -452,7 +452,7 @@ const StablecoinAccordion: React.FC<IProps> = () => {
         "page-stablecoins-accordion-earn-project-community",
         intl
       ),
-      image: getImage(data.maker),
+      image: getImage(data.maker)!,
       link: "https://makerdao.world/en/resources/",
       description: translateMessageId(
         "page-stablecoins-accordion-earn-project-2-description",
@@ -465,7 +465,7 @@ const StablecoinAccordion: React.FC<IProps> = () => {
         "page-stablecoins-accordion-earn-project-bug-bounties",
         intl
       ),
-      image: getImage(data.eth),
+      image: getImage(data.eth)!,
       link: "/bug-bounty/",
       description: translateMessageId(
         "page-stablecoins-accordion-earn-project-3-description",
@@ -478,37 +478,37 @@ const StablecoinAccordion: React.FC<IProps> = () => {
   const exchanges: Array<CardListItem> = [
     {
       title: "Coinbase",
-      image: getImage(data.coinbase),
+      image: getImage(data.coinbase)!,
       link: "https://coinbase.com",
       alt: translateMessageId("coinbase-logo", intl),
     },
     {
       title: "Gemini",
-      image: getImage(data.gemini),
+      image: getImage(data.gemini)!,
       link: "https://gemini.com",
       alt: translateMessageId("gemini-logo", intl),
     },
     {
       title: "Kraken",
-      image: getImage(data.kraken),
+      image: getImage(data.kraken)!,
       link: "https://kraken.com",
       alt: translateMessageId("kraken-logo", intl),
     },
     {
       title: "Coinmama",
-      image: getImage(data.coinmama),
+      image: getImage(data.coinmama)!,
       link: "https://coinmama.com",
       alt: translateMessageId("coinmama-logo", intl),
     },
     {
       title: "Bittrex",
-      image: getImage(data.bittrex),
+      image: getImage(data.bittrex)!,
       link: "https://global.bittrex.com",
       alt: translateMessageId("bittrex-logo", intl),
     },
     {
       title: "Binance",
-      image: getImage(data.binance),
+      image: getImage(data.binance)!,
       link: "https://binance.com",
       alt: translateMessageId("binance-logo", intl),
     },

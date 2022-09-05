@@ -1,9 +1,11 @@
-import React, { useContext } from "react"
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { useTheme } from "@emotion/react"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
+
 import { translateMessageId } from "../utils/translations"
+import { getImage } from "../utils/image"
 
 export interface IProps {}
 
@@ -39,7 +41,7 @@ const Logo: React.FC<IProps> = () => {
   const image = isDarkTheme ? data.light : data.dark
   return (
     <GatsbyImage
-      image={getImage(image)}
+      image={getImage(image)!}
       alt={translateMessageId("ethereum-foundation-logo", intl)}
     />
   )

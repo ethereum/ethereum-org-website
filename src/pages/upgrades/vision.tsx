@@ -2,9 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
-import { getImage } from "gatsby-plugin-image"
 
-import { translateMessageId } from "../../utils/translations"
 import Translation from "../../components/Translation"
 import Card from "../../components/Card"
 import ActionCard from "../../components/ActionCard"
@@ -25,6 +23,9 @@ import {
   Divider,
 } from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
+
+import { translateMessageId } from "../../utils/translations"
+import { getImage } from "../../utils/image"
 
 const StyledCardContainer = styled(CardContainer)`
   margin-top: 2rem;
@@ -99,7 +100,7 @@ const VisionPage = ({
     title: translateMessageId("page-upgrades-vision-title", intl),
     header: translateMessageId("page-upgrades-vision-future", intl),
     subtitle: translateMessageId("page-upgrades-vision-subtitle", intl),
-    image: getImage(data.oldship),
+    image: getImage(data.oldship)!,
     alt: translateMessageId("page-eth-whats-eth-hero-alt", intl),
   }
 
@@ -303,7 +304,7 @@ const VisionPage = ({
             <ActionCard
               isRight
               key={idx}
-              image={upgrade.image}
+              image={upgrade.image!}
               title={upgrade.title}
               description={upgrade.description}
               to={upgrade.to}

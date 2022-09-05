@@ -3,7 +3,7 @@ import React from "react"
 import { useIntl } from "react-intl"
 import { useTheme } from "@emotion/react"
 import styled from "@emotion/styled"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 
 // Assets
@@ -22,6 +22,7 @@ import { Context } from "../types"
 
 // Utils
 import { translateMessageId } from "../utils/translations"
+import { getImage } from "../utils/image"
 
 const Image = styled(GatsbyImage)`
   align-self: center;
@@ -100,7 +101,7 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
         <HeroContainer>
           <Header>
             <Image
-              image={getImage(assetPageHeroImage)}
+              image={getImage(assetPageHeroImage)!}
               alt={translateMessageId("page-assets-eth-diamond-gray", intl)}
             />
             <h1>

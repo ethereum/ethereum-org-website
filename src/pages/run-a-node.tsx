@@ -1,7 +1,7 @@
 // Libraries
 import React, { ComponentType, SVGProps } from "react"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 import styled from "@emotion/styled"
 
@@ -42,6 +42,7 @@ import NakedButton from "../components/NakedButton"
 // Utils
 import { translateMessageId, TranslationKey } from "../utils/translations"
 import { scrollIntoView } from "../utils/scrollIntoView"
+import { getImage } from "../utils/image"
 
 // Styles
 const GappedPage = styled(Page)`
@@ -417,7 +418,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
     title: <Translation id="page-run-a-node-title" />,
     header: <Translation id="page-run-a-node-hero-header" />,
     subtitle: <Translation id="page-run-a-node-hero-subtitle" />,
-    image: getImage(data.ethereumInside),
+    image: getImage(data.ethereumInside)!,
     alt: translateMessageId("page-run-a-node-hero-alt", intl),
     buttons: [
       {
@@ -529,14 +530,14 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
             </p>
           </Width60>
           <Width40>
-            <GatsbyImage image={getImage(data.hackathon)} />
+            <GatsbyImage image={getImage(data.hackathon)!} alt="" />
           </Width40>
         </TwoColumnContent>
       </Content>
 
       <FlexContent>
         <StyledExpandableInfo
-          image={getImage(data.impact)}
+          image={getImage(data.impact)!}
           title={<Translation id="page-run-a-node-who-title" />}
           contentPreview={<Translation id="page-run-a-node-who-preview" />}
           background="runNodeGradient2"
@@ -905,7 +906,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
             </ButtonContainer>
           </Column>
           <Column>
-            <GatsbyImage image={getImage(data.community)} />
+            <GatsbyImage image={getImage(data.community)!} alt="" />
           </Column>
         </SplitContent>
       </Content>
@@ -945,7 +946,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
 
       <StakingCalloutContainer>
         <Column>
-          <Leslie image={getImage(data.leslie)} />
+          <Leslie image={getImage(data.leslie)!} alt="" />
         </Column>
         <Column>
           <h2>

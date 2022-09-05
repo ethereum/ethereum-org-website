@@ -1,10 +1,10 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { getImage } from "gatsby-plugin-image"
 import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 
 import { translateMessageId } from "../utils/translations"
+import { getImage, ImageDataLike } from "../utils/image"
 
 import CardList from "./CardList"
 import Card from "./Card"
@@ -71,12 +71,6 @@ export const DataLogo = graphql`
   }
 `
 
-type ChildImage = {
-  childImageSharp: {
-    gatsbyImageData: Record<string, unknown>
-  }
-}
-
 const BeaconStaticQuery = graphql`
   query {
     beaconscan: file(relativePath: { eq: "upgrades/etherscan.png" }) {
@@ -89,8 +83,8 @@ const BeaconStaticQuery = graphql`
 `
 
 type BeaconQueryTypes = {
-  beaconscan: ChildImage
-  beaconchain: ChildImage
+  beaconscan: ImageDataLike | null
+  beaconchain: ImageDataLike | null
 }
 
 const BeaconChainActions: React.FC = () => {
@@ -100,14 +94,14 @@ const BeaconChainActions: React.FC = () => {
   const datapoints: Array<CardListItem> = [
     {
       title: "beaconscan",
-      image: getImage(data.beaconscan),
+      image: getImage(data.beaconscan)!,
       alt: "",
       link: "https://beaconscan.com",
       description: translateMessageId("consensus-beaconscan-desc", intl),
     },
     {
       title: "beaconcha.in",
-      image: getImage(data.beaconchain),
+      image: getImage(data.beaconchain)!,
       alt: "",
       link: "https://beaconcha.in",
       description: translateMessageId("consensus-beaconcha-in-desc", intl),

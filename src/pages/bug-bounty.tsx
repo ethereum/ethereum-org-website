@@ -1,7 +1,7 @@
 import React, { ReactNode, useContext } from "react"
 import { useTheme } from "@emotion/react"
 import styled from "@emotion/styled"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 
@@ -29,6 +29,7 @@ import {
 import FeedbackCard from "../components/FeedbackCard"
 import BugBountyBanner from "../components/Banners/BugBountyBanner"
 import { Context } from "../types"
+import { getImage } from "../utils/image"
 
 const HeroCard = styled.div`
   display: flex;
@@ -438,17 +439,17 @@ const BugBountiesPage = ({
         <Translation id="page-upgrades-bug-bounty-clients" />
       </ClientIntro>
       <ClientRow>
-        <Client image={getImage(data.besu)} />
-        <Client image={getImage(data.erigon)} />
-        <Client image={getImage(data.geth)} />
-        <Client image={getImage(data.nethermind)} />
+        <Client image={getImage(data.besu)!} alt="" />
+        <Client image={getImage(data.erigon)!} alt="" />
+        <Client image={getImage(data.geth)!} alt="" />
+        <Client image={getImage(data.nethermind)!} alt="" />
       </ClientRow>
       <ClientRow>
-        <Client image={lighthouseImage} />
-        <Client image={getImage(data.lodestar)} />
-        <Client image={getImage(data.nimbus)} />
-        <Client image={getImage(data.prysm)} />
-        <Client image={tekuImage} />
+        <Client image={lighthouseImage!} alt="" />
+        <Client image={getImage(data.lodestar)!} alt="" />
+        <Client image={getImage(data.nimbus)!} alt="" />
+        <Client image={getImage(data.prysm)!} alt="" />
+        <Client image={tekuImage!} alt="" />
       </ClientRow>
       <StyledGrayContainer id="rules">
         <Content>
