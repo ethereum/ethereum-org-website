@@ -1,46 +1,9 @@
 import React from "react"
-import { motion } from "framer-motion"
-import { Link } from "gatsby"
-import styled from "@emotion/styled"
+import { Box, Link, ListItem, UnorderedList } from "@chakra-ui/react"
 
 import type { Item as ItemTableOfContents } from "./TableOfContents"
 
 const customIdRegEx = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/
-
-const Aside = styled.aside`
-  padding: 0rem;
-  text-align: right;
-  margin-bottom: 2rem;
-  overflow-y: auto;
-`
-
-const OuterList = styled(motion.ul)`
-  list-style-type: none;
-  list-style-image: none;
-  padding: 0;
-  margin: 0;
-  font-size: 1.25rem;
-  text-align: right;
-  line-height: 1.6;
-  font-weight: 400;
-  padding-right: 0.25rem;
-  padding-left: 1rem;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
-
-const ListItem = styled.li`
-  margin: 0;
-`
-
-const StyledTableOfContentsLink = styled(Link)`
-  position: relative;
-  display: inline-block;
-  color: ${(props) => props.theme.colors.text300};
-  margin-bottom: 0.5rem !important;
-`
 
 const slugify = (s: string): string =>
   encodeURIComponent(String(s).trim().toLowerCase().replace(/\s+/g, "-"))
@@ -87,9 +50,16 @@ const TableOfContentsLink: React.FC<IPropsTableOfContentsLink> = ({
     classes += " nested"
   }
   return (
-    <StyledTableOfContentsLink to={url} className={classes}>
+    <Link
+      href={url}
+      className={classes}
+      position="relative"
+      display="inline-block"
+      mb={2}
+      color="text300"
+    >
       {trimmedTitle(item.title)}
-    </StyledTableOfContentsLink>
+    </Link>
   )
 }
 
@@ -115,7 +85,7 @@ const ItemsList: React.FC<IPropsItemsList> = ({
   return (
     <>
       {items.map((item, index) => (
-        <ListItem key={index}>
+        <ListItem margin={0} key={index}>
           <div>
             <TableOfContentsLink depth={depth} item={item} />
           </div>
@@ -145,11 +115,28 @@ const UpgradeTableOfContents: React.FC<IProps> = ({
   }
 
   return (
-    <Aside className={className}>
-      <OuterList>
+    <Box
+      as="aside"
+      className={className}
+      p={0}
+      mb={8}
+      textAlign="end"
+      overflowY="auto"
+      display={{ base: "none", l: "block" }}
+    >
+      <UnorderedList
+        m={0}
+        py={0}
+        ps={4}
+        pe={1}
+        fontSize="1.25rem"
+        fontWeight="normal"
+        lineHeight="1.6"
+        styleType="none"
+      >
         <ItemsList items={items} depth={0} maxDepth={maxDepth} />
-      </OuterList>
-    </Aside>
+      </UnorderedList>
+    </Box>
   )
 }
 
