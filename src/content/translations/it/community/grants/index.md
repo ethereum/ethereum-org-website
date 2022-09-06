@@ -17,8 +17,8 @@ Questi programmi supportano il grande ecosistema di Ethereum offrendo sovvenzion
 
 - [Programma di supporto per l'ecosistema EF](https://esp.ethereum.foundation) - _Finanziamento di progetti open source a favore di Ethereum, con particolare interesse agli strumenti universali, alle infrastrutture, alla ricerca e ai beni pubblici_
 - [Ethereum RFPs](https://github.com/ethereum/requests-for-proposals) - _Richieste di proposte (RFP) da parte della Fondazione Ethereum relative a progetti lavori e progetti nell'ecosistema Ethereum_
-- [MetaCartel](https://www.metacartel.org/grants/) - _Sviluppo di Dapp e creazione di DAO_ Sovvenzioni che vanno da 1.000 a 8.000 USD.
-- [Moloch DAO](https://www.molochdao.com/) - _Privacy, scaling di livello 2, sicurezza del cliente e molto Livelloaltro_
+- [MetaCartel](https://www.metacartel.org/grants/) - _Sviluppo di Dapp, creazione di DAO_
+- [Moloch DAO](https://www.molochdao.com/) - _Privacy, ridimensionamento di livello 2, sicurezza del client e molto altro_
 - [Sovvenzioni aperte](https://opengrants.com/explore)
 - [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Foglio di calcolo di Google delle organizzazioni che offrono sovvenzioni_
 
@@ -28,12 +28,14 @@ Questi progetti hanno creato le proprie sovvenzioni per progetti volti a svilupp
 
 - [Aave Grants Program](https://aavegrants.org/) – _[Aave](https://aave.com/) sovvenzioni DAO_
 - [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/) ecosystem fund_
-- [Compound Grants Program](https://compoundgrants.org/) – _[Compound](https://compound.finance/) finance ecosystem_
-- [Consensys Grants Program](https://consensys.net/grants/) – _[Consensys](https://consensys.net/) finanziamento della blockchain e sovvenzioni di Ethereum_
-- [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/) finance ecosystem_
-- [mStable Grants Program](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) community_
-- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) ecosystem_
-- [Programma di Sovvenzioni di Uniswap](https://www.unigrants.org/) – Community di _[Uniswap](https://uniswap.org/) _
+- [Chainlink Grants Program](https://chain.link/community/grants) - _Sovvenzioni per la comunity di [Chainlink](https://chain.link/)_
+- [Compound Grants Program](https://compoundgrants.org/) – _Ecosistema finanziario [Compound](https://compound.finance/)_
+- [Consensys Grants Program](https://consensys.net/grants/) – _Finanziamento della blockchain [Consensys](https://consensys.net/) e sovvenzioni connesse a Ethereum_
+- [dYdX Grants Program](https://dydxgrants.com/) – _Scambio decentralizzato [dYdX](https://dydx.exchange/)_
+- [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _Ecosistema finanziario [Lido](https://lido.fi/)_
+- [mStable Grants Program](https://docs.mstable.org/advanced/grants-program) - _Community [mStable](https://mstable.org/)_
+- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _Ecosistema [The Graph](https://thegraph.com/)_
+- [Uniswap Grants Program](https://www.unigrants.org/) – _Community [Uniswap](https://uniswap.org/)_
 
 ## Finanziamento quadratico {#quadratic-funding}
 

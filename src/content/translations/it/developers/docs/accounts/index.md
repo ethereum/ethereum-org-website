@@ -1,11 +1,11 @@
 ---
 title: Conti di Ethereum
-description: "Informazioni sugli account Ethereum: struttura dei dati e rapporto con la crittografia con coppie di chiavi."
+description: "Informazioni sui conti di Ethereum: loro struttura dei dati e relazioni con la crittografia con coppie di chiavi."
 lang: it
 sidebar: true
 ---
 
-Un account Ethereum è un'entità con un saldo in ether (ETH) che può inviare transazioni su Ethereum. I conti sono controllabili da utenti o distribuibili come Contratti Intelligenti.
+Un conto di Ethereum è un'entità con un saldo in ether (ETH) che può inviare transazioni su Ethereum. I conti sono controllabili da utenti o distribuibili come Contratti Intelligenti.
 
 ## Prerequisiti {#prerequisites}
 
@@ -52,13 +52,13 @@ I conti di Ethereum hanno quattro campi:
 
 Un conto è composto da una coppia di chiavi crittografiche: pubblica e privata. Aiutano a provare che una transazione è stata realmente firmata dal mittente e prevenire le falsificazioni. La tua chiave privata è ciò che usi per firmare le transazioni, quindi ti concede la custodia dei fondi associati al tuo conto. Non possiedi mai realmente le criptovalute, possiedi le chiavi private; i fondi sono sempre nel registro mastro di Ethereum.
 
-Questo impedisce ai malintenzionati di trasmettere transazioni false perché è sempre possibile verificare il mittente di una transazione.
+Questo impedisce ai malintenzionati di trasmettere false transazioni perché puoi sempre verificare il mittente di una transazione.
 
 Se Alice vuole inviare ether dal proprio conto a quello di Bob, Alice deve creare una richiesta di transazione e inviarla alla rete per la verifica. L'uso di Ethereum della crittografia a chiave pubblica assicura che Alice possa provare che abbia originariamente avviato la richiesta di transazione. Senza i meccanismi crittografici, un utente malintenzionato "Eve" potrebbe semplicemente trasmettere pubblicamente una richiesta che somiglia a qualcosa del tipo "invia 5 ETH dal conto di Alice a quello di Eve" e nessuno potrebbe verificare che non fosse provenuto da Alice.
 
 ## Creazione del conto {#account-creation}
 
-Quando vuoi creare un account, la maggior parte delle librerie generano genereranno una chiave privata casuale.
+Quando vuoi creare un conto, gran parte delle librerie genererà una chiave privata casuale.
 
 Una chiave privata si compone di 64 caratteri hex ed è codificabile con una password.
 

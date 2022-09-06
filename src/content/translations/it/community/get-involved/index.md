@@ -27,6 +27,8 @@ Hai conoscenze in matematica, crittografia o economia? Potresti essere interessa
 - [Ethresearch.ch](https://ethresear.ch) - Il forum principale di Ethereum per la ricerca, e il forum più influente al mondo per la criptoeconomia
 - [Lista dei desideri del programma di supporto per gli ecosistemi](https://esp.ethereum.foundation/wishlist/) - aree di ricerca in cui il programma di supporto per gli ecosistemi Ethereum sta cercando attivamente domande di sovvenzione
 
+[Esplora altre aree di ricerca attive](/community/research/).
+
 ## Competenze non tecniche <Emoji text=":briefcase:" size={1} /> {#non-technical}
 
 Se non sei uno sviluppatore, può essere difficile sapere da dove iniziare all’interno di Ethereum. Di seguito alcuni suggerimenti, insieme alle risorse per ambienti professionali specifici.
@@ -96,15 +98,16 @@ L'ecosistema Ethereum ha come missione di finanziare beni pubblici e progetti di
 - [Lavori useWeb3](https://www.useweb3.xyz/jobs)
 - [Lavori Web3](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
+- [Crypto Valley Jobs](https://cryptovalley.jobs/)
 
-## Entra a far parte di una OAD {#decentralized-autonomous-organizations-daos}
+## Entra a far parte di una DAO {#decentralized-autonomous-organizations-daos}
 
-Le "OAD" sono Organizzazioni Autonome Decentralizzate. Questi gruppi sfruttano la tecnologia di Ethereum per facilitare organizzazione e collaborazione. Ad esempio, per il controllo dei membri, il voto su proposte o la gestione delle risorse comuni. Mentre le OAD sono ancora sperimentali, ti offrono l'opportunità di trovare gruppi con cui ti identifichi, trovare collaboratori, ed aumentare il tuo impatto sulla community di Ethereum. [Maggiori informazioni sulle OAD](/dao/)
+Le "DAO" sono organizzazioni autonome decentralizzate (Decentralized Autonomous Organizations). Questi gruppi sfruttano la tecnologia di Ethereum per facilitare organizzazione e collaborazione. Ad esempio, per il controllo dei membri, il voto su proposte o la gestione delle risorse comuni. Mentre le DAO sono ancora sperimentali, ti offrono l'opportunità di trovare gruppi con cui ti identifichi, trovare collaboratori, ed aumentare il tuo impatto sulla community di Ethereum. [Maggiori informazioni sulle DAO](/dao/)
 
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Promuovi il concetto di DAO in campo non tecnico e aiuta le persone a creare valore tramite una DAO._
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Community di creatori che credono nella proprietà collettiva di internet_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Collettivo di sviluppo su base freelance di Web3 operante come una DAO_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Sviluppo e governance decentralizzati di dApp e protocolli_
+- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Sviluppo decentralizzato e governance di dApp e protocolli_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Governance comunitaria di DAOhaus_
 - [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _Supereroe di proprietà della Comunità_
 - [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _Ingegneria legale_
