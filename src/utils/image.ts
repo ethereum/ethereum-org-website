@@ -41,6 +41,10 @@ export function getImage(
   return getGatsbyImage(node)
 }
 
+/**
+ * Custom temporary `getSrc` function to accept `null` values in the passed
+ * node image.
+ */
 export function getSrc(node: ImageDataLike | null): string | undefined {
   if (!node) {
     return
