@@ -184,13 +184,12 @@ const ProductCard: React.FC<IProps> = ({
 
   const hasRepoData = data && data.repository && !error
 
-  // Check if image is an svg as gatsby-plugin-image doesn't support svg
-  const isSvg = typeof image === "string"
+  const isImgSrc = typeof image === "string"
 
   return (
     <Card>
       <ImageWrapper background={background}>
-        {isSvg ? (
+        {isImgSrc ? (
           <img src={image} alt={alt} />
         ) : (
           <Image image={image} alt={alt} objectFit="contain" />
