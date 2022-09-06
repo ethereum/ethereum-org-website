@@ -256,7 +256,7 @@ Light client mode downloads all block headers, block data, and verifies some ran
 
 #### Snap sync {#snap-sync}
 
-Snap sync is the latest approach to syncing a client, pioneered by the Geth team. Using dynamic snapshots served by peers retrieves all the account and storage data without downloading intermediate trie nodes and then reconstructs the Merkle trie locally.
+Snap sync is the latest approach to syncing a client, pioneered by the Geth team. Using dynamic snapshots served by peers retrieves all the account and storage data without downloading intermediate trie nodes and then reconstructs the Merkle tree locally.
 
 - Fastest sync strategy, currently default in Ethereum mainnet
 - Saves a lot of disk usage and network bandwidth without sacrificing security
