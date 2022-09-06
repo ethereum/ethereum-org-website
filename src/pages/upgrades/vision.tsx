@@ -9,7 +9,7 @@ import Translation from "../../components/Translation"
 import Card from "../../components/Card"
 import ActionCard from "../../components/ActionCard"
 import Link from "../../components/Link"
-import Emoji from "../../components/Emoji"
+import Emoji from "../../components/OldEmoji"
 import Trilemma from "../../components/Trilemma"
 import PageHero, {
   IContent as IPageHeroContent,

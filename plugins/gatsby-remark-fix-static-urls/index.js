@@ -3,7 +3,8 @@ const visitWithParents = require("unist-util-visit-parents")
 const isRelativeUrl = require("is-relative-url")
 
 /**
- * Modify the images urls on translated md files to point to the source ones.
+ * Modify the images & links urls on translated md files to point to the source
+ * ones.
  *
  * E.g.
  * Before
@@ -27,12 +28,18 @@ module.exports = ({ markdownNode, markdownAST }) => {
     return markdownAST
   }
 
-  // loop for each image node in the mdx file
-  visitWithParents(markdownAST, ["image"], (node) => {
+  // loop for each node in the mdx file
+  visitWithParents(markdownAST, ["image", "link"], (node) => {
     const isRelativeToMdFile = isRelativeUrl(node.url)
     if (isRelativeToMdFile) {
-      const fileName = path.basename(node.url)
-      node.url = `${relativePath}/${fileName}`
+      const ext = path.extname(node.url)
+
+      // ignore things that are not files, e.g. a hashed link '#anchor'
+      if (ext === "") {
+        return
+      }
+
+      node.url = path.join(relativePath, node.url)
     }
   })
 

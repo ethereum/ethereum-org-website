@@ -4,7 +4,7 @@ import { GatsbyImage, getImage, getSrc } from "gatsby-plugin-image"
 
 import Translation from "../components/Translation"
 import ButtonLink from "./ButtonLink"
-import Emoji from "./Emoji"
+import Emoji from "./OldEmoji"
 import Link from "./Link"
 
 export interface IHide {
@@ -12,6 +12,7 @@ export interface IHide {
 }
 
 export interface IPropsBase {
+  children?: React.ReactNode
   alt: string
   artistName?: string
   artistUrl?: string

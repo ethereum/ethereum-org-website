@@ -55,6 +55,7 @@ const Label = styled.span`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   callback?: () => void
   checked: boolean
   className?: string

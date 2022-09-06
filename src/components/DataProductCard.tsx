@@ -36,6 +36,7 @@ const Card = styled(Link)`
   border: 1px solid ${(props) => props.theme.colors.lightBorder};
   text-decoration: none;
   &:hover {
+    text-decoration: none;
     box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
     background: ${(props) => props.theme.colors.tableBackgroundHover};
     transition: transform 0.1s;

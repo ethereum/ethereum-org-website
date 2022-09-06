@@ -15,7 +15,7 @@ import GhostCard from "../components/GhostCard"
 import Link from "../components/Link"
 import InfoBanner from "../components/InfoBanner"
 import DocLink from "../components/DocLink"
-import Emoji from "../components/Emoji"
+import Emoji from "../components/OldEmoji"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import ProductList from "../components/ProductList"
@@ -198,6 +198,7 @@ const StepBox = styled(Link)`
   text-decoration: none;
   width: 100%;
   &:hover {
+    text-decoration: none;
     background: ${(props) => props.theme.colors.ednBackground};
     transition: transform 0.2s;
     transform: scale(1.05);
@@ -721,13 +722,6 @@ const DappsPage = ({
       image: getImage(data.loopring),
       alt: translateMessageId("page-dapps-loopring-logo-alt", intl),
     },
-    {
-      title: "dYdX",
-      description: translateMessageId("page-dapps-dapp-description-dydx", intl),
-      link: "https://dydx.exchange/",
-      image: getImage(data.dydx),
-      alt: "page-dapps-dydx-logo-alt",
-    },
   ]
 
   const lottery = [
@@ -852,6 +846,16 @@ const DappsPage = ({
       link: "https://rotki.com/",
       image: getImage(data.rotki),
       alt: translateMessageId("page-dapps-rotki-logo-alt", intl),
+    },
+    {
+      title: "Krystal",
+      description: translateMessageId(
+        "page-dapps-dapp-description-krystal",
+        intl
+      ),
+      link: "https://defi.krystal.app/",
+      image: getImage(data.krystal),
+      alt: translateMessageId("page-dapps-krystal-logo-alt", intl),
     },
   ]
 
@@ -1155,7 +1159,7 @@ const DappsPage = ({
       {
         content: translateMessageId("page-dapps-what-are-dapps", intl),
         to: "#what-are-dapps",
-        isSecondary: true,
+        variant: "outline",
       },
     ],
   }
@@ -1548,7 +1552,7 @@ const DappsPage = ({
               </TextNoMargin>
             </div>
             <AddDappButton
-              isSecondary
+              variant="outline"
               to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dapp.md&title="
             >
               <Translation id="page-dapps-add-button" />
@@ -1578,21 +1582,21 @@ const DappsPage = ({
               </CardContainer>
               {selectedCategory === CategoryType.FINANCE && (
                 <MoreButtonContainer>
-                  <ButtonLink isSecondary to="/defi/">
+                  <ButtonLink variant="outline" to="/defi/">
                     <Translation id="page-dapps-more-on-defi-button" />
                   </ButtonLink>
                 </MoreButtonContainer>
               )}
               {selectedCategory === CategoryType.COLLECTIBLES && (
                 <MoreButtonContainer>
-                  <ButtonLink isSecondary to="/nft/">
+                  <ButtonLink variant="outline" to="/nft/">
                     <Translation id="page-dapps-more-on-nft-button" />
                   </ButtonLink>
                 </MoreButtonContainer>
               )}
               {selectedCategory === CategoryType.GAMING && (
                 <MoreButtonContainer>
-                  <ButtonLink isSecondary to="/nft/">
+                  <ButtonLink variant="outline" to="/nft/">
                     <Translation id="page-dapps-more-on-nft-gaming-button" />
                   </ButtonLink>
                 </MoreButtonContainer>
@@ -1872,9 +1876,6 @@ export const query = graphql`
     oneinch: file(relativePath: { eq: "exchanges/1inch.png" }) {
       ...dappImage
     }
-    dydx: file(relativePath: { eq: "exchanges/dydx.png" }) {
-      ...dappImage
-    }
     augur: file(relativePath: { eq: "dapps/augur.png" }) {
       ...dappImage
     }
@@ -1897,6 +1898,9 @@ export const query = graphql`
       ...dappImage
     }
     rotki: file(relativePath: { eq: "dapps/rotki.png" }) {
+      ...dappImage
+    }
+    krystal: file(relativePath: { eq: "dapps/krystal.png" }) {
       ...dappImage
     }
     poap: file(relativePath: { eq: "dapps/poap.png" }) {

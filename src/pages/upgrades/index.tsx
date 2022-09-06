@@ -8,7 +8,7 @@ import ButtonLink from "../../components/ButtonLink"
 import Card from "../../components/Card"
 import ActionCard from "../../components/ActionCard"
 import CalloutBanner from "../../components/CalloutBanner"
-import Emoji from "../../components/Emoji"
+import Emoji from "../../components/OldEmoji"
 import UpgradeArticles from "../../components/UpgradeArticles"
 import ExpandableCard from "../../components/ExpandableCard"
 import GhostCard from "../../components/GhostCard"
@@ -240,7 +240,7 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
       {
         content: translateMessageId("page-upgrades-whats-ethereum", intl),
         to: "/what-is-ethereum/",
-        isSecondary: true,
+        variant: "outline",
       },
     ],
   }
@@ -422,7 +422,7 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
             </H2>
             <Translation id="page-upgrades-help-desc" />
           </div>
-          <ContributeButton isSecondary to="/upgrades/get-involved/">
+          <ContributeButton variant="outline" to="/upgrades/get-involved/">
             <Translation id="page-upgrades-get-involved-2" />
           </ContributeButton>
         </ContributeCard>

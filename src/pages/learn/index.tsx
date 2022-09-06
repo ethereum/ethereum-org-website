@@ -558,7 +558,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="https://future.com/what-is-decentralized-science-aka-desci/">
+                    <Link to="/desci/">
                       <Translation id="decentralized-science" />
                     </Link>
                   </li>

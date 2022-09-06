@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "@emotion/styled"
 import axios from "axios"
 
-import Emoji from "./Emoji"
+import Emoji from "./OldEmoji"
 import Translation from "./Translation"
 import Icon from "./Icon"
 import Link from "./Link"

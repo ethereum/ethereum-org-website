@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 
 import ButtonLink from "./ButtonLink"
 import Icon from "./Icon"
-import Emoji from "./Emoji"
+import Emoji from "./OldEmoji"
 import Translation from "./Translation"
 
 const H3 = styled.h3`
@@ -157,7 +157,10 @@ const TranslationBanner: React.FC<IProps> = ({
             </div>
             {!isPageContentEnglish && (
               <div>
-                <SecondaryButtonLink isSecondary to={`/en${originalPagePath}`}>
+                <SecondaryButtonLink
+                  variant="outline"
+                  to={`/en${originalPagePath}`}
+                >
                   <Translation id="translation-banner-button-see-english" />
                 </SecondaryButtonLink>
               </div>

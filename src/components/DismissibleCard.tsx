@@ -29,6 +29,7 @@ const CloseIconContainer = styled.span`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   storageKey: string
 }
 
