@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { Box, Flex, LinkBox, LinkOverlay } from "@chakra-ui/react"
+import { Box, Flex, FlexProps, LinkBox, LinkOverlay } from "@chakra-ui/react"
 
 import { ImageProp } from "../types"
 
@@ -9,7 +9,7 @@ export type CardListItem = {
   description?: ReactNode
   caption?: ReactNode
   link?: string
-  id?: string | number
+  id?: string
 } & ImageProp
 
 export interface IProps {
@@ -17,7 +17,7 @@ export interface IProps {
   clickHandler?: (idx: string | number) => void
 }
 
-const CardContainer = (props) => {
+const CardContainer = (props: FlexProps) => {
   return (
     <Flex
       p={4}
@@ -35,14 +35,14 @@ const CardContainer = (props) => {
   )
 }
 
-const Card = (props) => {
-  const { title, description, caption, link, image, alt } = props
+const Card = (props: CardListItem & Omit<FlexProps, "title" | "id">) => {
+  const { title, description, caption, link, image, alt, ...rest } = props
 
   const isLink = !!link
   const Title = isLink ? LinkOverlay : Box
 
   return (
-    <CardContainer>
+    <CardContainer {...rest}>
       {image && (
         <Box
           as={GatsbyImage}
