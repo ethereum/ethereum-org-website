@@ -7,10 +7,10 @@ import {
   LinkBox,
   LinkOverlay,
   StackProps,
-  Text,
 } from "@chakra-ui/react"
 
 import { ImageProp } from "../types"
+import * as url from "../utils/url"
 import Link from "./Link"
 
 export type CardListItem = {
@@ -18,7 +18,6 @@ export type CardListItem = {
   description?: ReactNode
   caption?: ReactNode
   link?: string
-  isExternal: boolean
   id?: string
 } & ImageProp
 
@@ -46,18 +45,10 @@ const CardContainer = (props: StackProps) => {
 }
 
 const Card = (props: CardListItem & Omit<StackProps, "title" | "id">) => {
-  const {
-    title,
-    description,
-    caption,
-    link,
-    image,
-    alt,
-    isExternal = true,
-    ...rest
-  } = props
+  const { title, description, caption, link, image, alt, ...rest } = props
 
   const isLink = !!link
+  const isExternal = url.isExternal(link || "")
 
   return (
     <CardContainer {...rest}>
@@ -89,7 +80,7 @@ const Card = (props: CardListItem & Omit<StackProps, "title" | "id">) => {
           </Box>
         </Flex>
       )}
-      {isExternal && <Text as="span">↗</Text>}
+      {isExternal && <Box>↗</Box>}
     </CardContainer>
   )
 }
