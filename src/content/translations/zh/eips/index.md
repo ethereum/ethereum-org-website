@@ -25,16 +25,27 @@ EIP 作为一个中心角色，记载以太坊的变化并且记载在以太坊�
 
 [Ethereum Improvement Proposals (EIP) GitHub 存储库](https://github.com/ethereum/EIPs) 于 2015 年 10 月创建。 EIP 进程基于[比特币改进提议 (BIP)](https://github.com/bitcoin/bips) 进程。它本身基于 [Python 增强提议 (PEP)](https://www.python.org/dev/peps/) 进程。
 
-EIP 编辑人员的任务是审查 EIP 的技术可靠性、正确的拼写/语法和代码风格。 Martin Becze、Vitalik Buterin、Gavin Wood 和其他一些人是 2015 年至 2016 年末最初的 EIP 编辑者。 当前 EIP 编辑者是：
+EIP 编辑人员的任务是审查 EIP 的技术可靠性、正确的拼写/语法和代码风格。 Martin Becze、Vitalik Buterin、Gavin Wood 和其他一些人是 2015 年至 2016 年末最初的 EIP 编辑者。 
 
-- Alex Beregszaszi（EWASM/以太坊基金会）
-- Greg Colvin（社区）
-- Casey Detrio（EWASM/以太坊基金会）
-- Matt Garnett（Quilt）
-- Hudson James（以太坊基金会）
-- Nick Johnson (ENS)
-- Nick Savers（社区）
-- Micah Zoltu（社区）
+当前 EIP 编辑者是：
+
+- Alex Beregszaszi (@axic)
+- Gavin John (@Pandapip1)
+- Greg Colvin (@gcolvin)
+- Matt Garnett (@lightclient)
+- Sam Wilson (@SamWilsn)
+
+名誉 EIP 编辑者是：
+
+- Casey Detrio (@cdetrio)
+- Hudson Jameson (@Souptacular)
+- Martin Becze (@wanderer)
+- Micah Zoltu (@MicahZoltu)
+- Nick Johnson (@arachnid)
+- Nick Savers (@nicksavers)
+- Vitalik Buterin (@vbuterin)
+
+如果您想要成为一名 EIP 编辑者，请参考 [EIP-5069](https://eips.ethereum.org/EIPS/eip-5069).
 
 EIP 编辑们与 [Ethereum Cat Herders](https://ethereumcatherders.com/) 和 [Ethererum Magicians](https://ethereum-magicians.org/) 的社区成员共同决定实施哪个 EIP，共同负责促进 EIP 实施以及将 EIP 推入到“最终”或“已撤销”阶段。
 
