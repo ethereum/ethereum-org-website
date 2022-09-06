@@ -22,7 +22,7 @@ const YouTube: React.FC<IProps> = ({ id, start = "0", title = "YouTube" }) => {
   const baseUrl = "https://www.youtube.com/embed/"
   const src = baseUrl + id + startQuery
   return (
-    <Box as="figure" display="block" marginY="1rem">
+    <Box as="figure" display="block" my={4}>
       <iframe
         width="100%"
         height="315"
