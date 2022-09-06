@@ -1374,6 +1374,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/Colt-M1873"><img src="https://avatars.githubusercontent.com/u/47551017?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Van De Biao</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Colt-M1873" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/srv-smn"><img src="https://avatars.githubusercontent.com/u/47235134?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sourav Suman</b></sub></a><br /><a href="#ideas-srv-smn" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/ivpavici"><img src="https://avatars.githubusercontent.com/u/2848732?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ivan Pavičić</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ivpavici" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aivpavici" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 

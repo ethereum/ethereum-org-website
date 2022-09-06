@@ -8639,6 +8639,16 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "ivpavici",
+      "name": "Ivan Pavičić",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2848732?v=4",
+      "profile": "https://github.com/ivpavici",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
