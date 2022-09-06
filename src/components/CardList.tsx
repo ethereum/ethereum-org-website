@@ -1,14 +1,24 @@
 import React, { ReactNode } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { Box, Flex, FlexProps, LinkBox, LinkOverlay } from "@chakra-ui/react"
+import {
+  Box,
+  Flex,
+  HStack,
+  LinkBox,
+  LinkOverlay,
+  StackProps,
+  Text,
+} from "@chakra-ui/react"
 
 import { ImageProp } from "../types"
+import Link from "./Link"
 
 export type CardListItem = {
   title?: ReactNode
   description?: ReactNode
   caption?: ReactNode
   link?: string
+  isExternal: boolean
   id?: string
 } & ImageProp
 
@@ -17,11 +27,11 @@ export interface IProps {
   clickHandler?: (idx: string | number) => void
 }
 
-const CardContainer = (props: FlexProps) => {
+const CardContainer = (props: StackProps) => {
   return (
-    <Flex
+    <HStack
+      spacing={4}
       p={4}
-      justify="space-between"
       color="text"
       border="1px solid"
       borderColor="border"
@@ -35,26 +45,38 @@ const CardContainer = (props: FlexProps) => {
   )
 }
 
-const Card = (props: CardListItem & Omit<FlexProps, "title" | "id">) => {
-  const { title, description, caption, link, image, alt, ...rest } = props
+const Card = (props: CardListItem & Omit<StackProps, "title" | "id">) => {
+  const {
+    title,
+    description,
+    caption,
+    link,
+    image,
+    alt,
+    isExternal = true,
+    ...rest
+  } = props
 
   const isLink = !!link
-  const Title = isLink ? LinkOverlay : Box
 
   return (
     <CardContainer {...rest}>
-      {image && (
-        <Box
-          as={GatsbyImage}
-          image={image}
-          alt={alt}
-          minW="20px"
-          mr={4}
-          mt={1}
-        />
-      )}
-      <Flex flex="1 1 75%" direction="column" mr={8}>
-        <Title href={link}>{title}</Title>
+      {image && <Box as={GatsbyImage} image={image} alt={alt} minW="20px" />}
+      <Flex flex="1 1 75%" direction="column">
+        {isLink ? (
+          <LinkOverlay
+            as={Link}
+            href={link}
+            hideArrow
+            color="text"
+            textDecoration="none"
+            _hover={{ textDecoration: "none" }}
+          >
+            {title}
+          </LinkOverlay>
+        ) : (
+          <Box>{title}</Box>
+        )}
 
         <Box fontSize="sm" mb={0} opacity={0.6}>
           {description}
@@ -67,6 +89,7 @@ const Card = (props: CardListItem & Omit<FlexProps, "title" | "id">) => {
           </Box>
         </Flex>
       )}
+      {isExternal && <Text as="span">↗</Text>}
     </CardContainer>
   )
 }
