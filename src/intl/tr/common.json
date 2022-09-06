@@ -36,12 +36,14 @@
   "dark-mode": "Koyu",
   "data-provided-by": "Veri kaynağı:",
   "decentralized-applications-dapps": "Merkezi olmayan uygulamalar (dapps)",
+  "decentralized-science": "Merkeziyetsiz bilim (DeSci)",
   "deposit-contract": "Mevduat sözleşmeleri",
   "devcon": "Devcon",
   "developers": "Geliştiriciler",
   "developers-home": "Geliştirici Ana Sayfası",
   "docs": "Belgeler",
   "documentation": "Dokümanlar",
+  "dydx-logo": "Dydx logosu",
   "ecosystem": "Ekosistem\n",
   "edit-page": "Sayfayı düzenle",
   "ef-blog": "Ethereum Foundation Blogu",
@@ -135,6 +137,7 @@
   "language-it": "İtalyanca",
   "language-ja": "Japonca",
   "language-ka": "Gürcüce",
+  "language-kk": "Kazakça",
   "language-ko": "Korece",
   "language-lt": "Litvanca",
   "language-ml": "Malayalam",
@@ -142,6 +145,7 @@
   "language-ms": "Malayca",
   "language-nb": "Norveççe",
   "language-nl": "Felemenkçe",
+  "language-ph": "Filipince",
   "language-pl": "Lehçe",
   "language-pt": "Portekizce",
   "language-pt-br": "Portekizce (Brezilya)",
@@ -269,5 +273,6 @@
   "nft-page": "Değiştirilemeyen tokenler (NFT'ler)",
   "decentralized-social-networks": "Merkezî olmayan sosyal ağlar",
   "decentralized-identity": "Merkezî olmayan kimlik",
-  "yes": "Evet"
+  "yes": "Evet",
+  "zero-knowledge-proofs": "Sıfır bilgili ispatlar"
 }
