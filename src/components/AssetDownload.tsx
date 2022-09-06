@@ -4,7 +4,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 import Translation from "../components/Translation"
 import ButtonLink from "./ButtonLink"
-import Emoji from "./Emoji"
+import Emoji from "./OldEmoji"
 import Link from "./Link"
 
 import { getImage, getSrc, ImageDataLike } from "../utils/image"

@@ -6,7 +6,7 @@ import Translation from "./Translation"
 import { TranslationKey } from "../utils/translations"
 
 // Components
-import Emoji from "./Emoji"
+import Emoji from "./OldEmoji"
 
 const StyledCard = styled.div`
   display: flex;

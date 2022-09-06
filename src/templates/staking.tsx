@@ -36,7 +36,7 @@ import {
   Header4,
   InfoGrid,
 } from "../components/SharedStyledComponents"
-import Emoji from "../components/Emoji"
+import Emoji from "../components/OldEmoji"
 import YouTube from "../components/YouTube"
 import Breadcrumbs from "../components/Breadcrumbs"
 import StakingLaunchpadWidget from "../components/Staking/StakingLaunchpadWidget"

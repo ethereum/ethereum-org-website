@@ -6,7 +6,7 @@ import styled from "@emotion/styled"
 
 import CardList from "./CardList"
 import Link from "./Link"
-import Emoji from "./Emoji"
+import Emoji from "./OldEmoji"
 import Translation from "./Translation"
 import { StyledSelect as Select } from "./SharedStyledComponents"
 

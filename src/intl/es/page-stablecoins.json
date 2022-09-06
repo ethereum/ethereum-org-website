@@ -142,5 +142,7 @@
   "page-stablecoins-why-stablecoins": "¿Por qué monedas estables?",
   "page-stablecoins-how-they-work-button": "Cómo funcionan",
   "page-stablecoins-why-stablecoins-body": "ETH, al igual que el bitcoin, tiene un precio volátil porque es una tecnología nueva, así que es posible que no quiera gastarla regularmente. Las monedas estables reflejan el valor de las monedas tradicionales para darle acceso a dinero estable que puede usar en Ethereum.",
-  "page-stablecoins-more-defi-button": "Más sobre finanzas descentralizadas (DeFi)"
+  "page-stablecoins-more-defi-button": "Más sobre finanzas descentralizadas (DeFi)",
+  "page-stablecoins-tools-title": "Aprende más sobre stablecoins",
+  "page-stablecoins-tools-stablecoinswtf-description": "Stablecoins.wtf ofrece un tablero con datos históricos del mercado, estadísticas y contenido educativo para las monedas estables más destacadas."
 }

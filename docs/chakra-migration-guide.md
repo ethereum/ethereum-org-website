@@ -126,6 +126,18 @@ import Button from "../Button" // <-- use the new Button component built with Ch
 <Button variant="outline" />
 ```
 
+- [Deprecated] `src/components/OldEmoji` - replace it with the new `src/components/Emoji`
+
+```tsx
+// before
+<Emoji size={3} mr="1rem" text=":star:">
+
+// now
+<Emoji fontSize="5xl" mr={4} text=":star:">
+```
+
+Note: check out the [`fontSize`](https://chakra-ui.com/docs/styled-system/theme#typography) and [`spacing`](https://chakra-ui.com/docs/styled-system/theme#spacing) possible values.
+
 ## Do you have any other question?
 
 Ping us in Discord, in the `#ui-library-migration` channel, or leave a comment here or in your opened PR, and we can help you out 💪

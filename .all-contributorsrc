@@ -8603,6 +8603,52 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "JAdams-eth",
+      "name": "James Adams",
+      "avatar_url": "https://avatars.githubusercontent.com/u/95427666?v=4",
+      "profile": "https://akcela.co.uk",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "taiyangc",
+      "name": "Eric Chen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1467354?v=4",
+      "profile": "https://github.com/taiyangc",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Colt-M1873",
+      "name": "Van De Biao",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47551017?v=4",
+      "profile": "https://github.com/Colt-M1873",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "srv-smn",
+      "name": "Sourav Suman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47235134?v=4",
+      "profile": "https://github.com/srv-smn",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "ivpavici",
+      "name": "Ivan Pavičić",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2848732?v=4",
+      "profile": "https://github.com/ivpavici",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,

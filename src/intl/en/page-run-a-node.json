@@ -120,7 +120,7 @@
   "page-run-a-node-voice-your-choice-title": "Voice your choice",
   "page-run-a-node-voice-your-choice-preview": "Don't give up control in the event of a fork.",
   "page-run-a-node-voice-your-choice-1": "In the event of a chain fork, where two chains emerge with two different sets of rules, running your own node guarantees your ability to choose which set of rules you support. It's up to you to upgrade to new rules and support proposed changes, or not.",
-  "page-run-a-node-voice-your-choice-2": "If you're staking ETH, running your own node allows you to chose your own client, to minimize your risk of slashing and to react to fluctuating demands of the network over time. Staking with a third party forfeits your vote on which client you think is the best choice.",
+  "page-run-a-node-voice-your-choice-2": "If you're staking ETH, running your own node allows you to choose your own client, to minimize your risk of slashing and to react to fluctuating demands of the network over time. Staking with a third party forfeits your vote on which client you think is the best choice.",
   "page-run-a-node-what-title": "<i>What</i> does it mean to \"run a node\"?",
   "page-run-a-node-what-1-subtitle": "Run software.",
   "page-run-a-node-what-1-text": "Known as a 'client', this software downloads a copy of the Ethereum blockchain and verifies the validity of every block, then keeps it up-to-date with new blocks and transactions, and helps others download and update their own copies.",
