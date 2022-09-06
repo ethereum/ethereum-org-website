@@ -11,7 +11,7 @@ Il Programma di Traduzione è uno sforzo collaborativo per tradurre ethereum.org
 
 I nostri progressi finora:
 
-- [**Oltre 3,600** traduttori](/contributing/translation-program/contributors/)
+- [**Oltre 3.600** traduttori](/contributing/translation-program/contributors/)
 - [**46** lingue attive sul sito](/languages/)
 - [**2,9 milioni** di parole tradotte nel 2021](/contributing/translation-program/acknowledgements/)
 - [**1,5 milioni** di parole tradotte nel 2022 finora](/contributing/translation-program/acknowledgements/)
@@ -174,3 +174,7 @@ Ci impegnamo per tradurre i contenuti di Ethereum in quante più lingue possibil
 Per questo motivo, abbiamo creato un [manuale del Programma di Traduzione](/contributing/translation-program/playbook/), contenente alcuni consigli e buone pratiche scelte nel processo di traduzione di ethereum.org.
 
 Vuoi collaborare ulteriormente o usare alcune delle nostre risorse di traduzione? Hai qualche commento sul manuale? Ci farebbe molto piacere ricevere il tuo parere su translations@ethereum.org.
+
+## Traduzioni in corso {#in-progress}
+
+<TranslationsInProgress />

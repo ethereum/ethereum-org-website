@@ -2,7 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 
 import Link from "../components/Link"
-import Emoji from "../components/Emoji"
+import Emoji from "../components/OldEmoji"
 import ButtonLink from "../components/ButtonLink"
 import { Page, Content, Divider } from "../components/SharedStyledComponents"
 

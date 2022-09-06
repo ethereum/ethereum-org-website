@@ -75,7 +75,7 @@ Nick Szabo は、自動的で暗号的に安全なプロセスに基づいて構
 
 - [ステーブルコイン](/stablecoins/)
 - [唯一無二なデジタルアセットの作成と配布](/nft/)
-- [自動で開かれた為替](/get-eth/#dex/)
+- [自動で開かれた為替](/get-eth/#dex)
 - [分散型ゲーム](/dapps/?category=gaming)
 - [自動的に支払いを行う保険契約](https://etherisc.com/)
 - [カスタマイズされ、相互運用可能な通貨を作成するための標準](/developers/docs/standards/tokens/)
@@ -86,7 +86,7 @@ Finematics によるスマートコントラクトの説明:
 
 <YouTube id="pWGLtjG-F5c" />
 
-## さらに学びたい方へ {#further-reading}
+## 参考文献 {#further-reading}
 
 - [スマートコントラクトが世界をどのように変えるか](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
 - [スマートコントラクト: 弁護士を不要にするブロックチェーンテクノロジー](https://blockgeeks.com/guides/smart-contracts/)

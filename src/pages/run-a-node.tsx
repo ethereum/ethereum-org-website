@@ -32,7 +32,7 @@ import {
 } from "../components/SharedStyledComponents"
 import ExpandableCard from "../components/ExpandableCard"
 import ExpandableInfo from "../components/ExpandableInfo"
-import Emoji from "../components/Emoji"
+import Emoji from "../components/OldEmoji"
 import Link from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
 import FeedbackCard from "../components/FeedbackCard"

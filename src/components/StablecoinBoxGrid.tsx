@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 import Link, { navigate } from "./Link"
-import Emoji from "./Emoji"
+import Emoji from "./OldEmoji"
 import Translation from "./Translation"
 import { isMobile } from "../utils/isMobile"
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled from "@emotion/styled"
-import Emoji from "./Emoji"
+import Emoji from "./OldEmoji"
 
 export interface IBoxItem {
   emoji: string

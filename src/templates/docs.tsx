@@ -21,7 +21,7 @@ import TableOfContents, {
 } from "../components/TableOfContents"
 import SectionNav from "../components/SectionNav"
 import Translation from "../components/Translation"
-import Emoji from "../components/Emoji"
+import Emoji from "../components/OldEmoji"
 import DocsNav from "../components/DocsNav"
 import DeveloperDocsLinks from "../components/DeveloperDocsLinks"
 import RollupProductDevDoc from "../components/RollupProductDevDoc"

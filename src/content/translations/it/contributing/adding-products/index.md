@@ -9,7 +9,7 @@ _Una nota sull'aggiunta di portafogli: nell'ambito della [nostra tabella di marc
 
 # Aggiungere prodotti su Ethereum {#adding-products}
 
-Chiunque è libero di suggerire nuovi portafogli e dapp da aggiungere ai contenuti su ethereum.org, ove ritenuto appropriato. **No, non elencheremo la tua dapp sulla nostra pagina iniziale** 😜
+Chiunque è libero di suggerire nuovi portafogli e dapp da aggiungere ai contenuti su ethereum.org, ove ritenuto appropriato. **No, non elencheremo la tua dapp sulla nostra pagina iniziale**
 
 Attualmente, portafogli e dapp vengono elencati su:
 

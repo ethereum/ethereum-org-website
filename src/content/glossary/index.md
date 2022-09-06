@@ -211,11 +211,11 @@ The economics of cryptocurrencies.
 
 ## D {#section-d}
 
-### Đ {#D-with-stroke}
+### Đ {#d-with-stroke}
 
 Đ (D with stroke) is used in Old English, Middle English, Icelandic, and Faroese to stand for an uppercase letter “Eth”. It is used in words like ĐEV or Đapp (decentralized application), where the Đ is the Norse letter “eth”. The uppercase eth (Ð) is also used to symbolize the cryptocurrency Dogecoin. This is commonly seen in older Ethereum literature but is used less often today.
 
-### DAG {#DAG}
+### DAG {#dag}
 
 DAG stands for Directed Acyclic Graph. It is a data structure composed of nodes and links between them. Ethereum uses a DAG in its [proof of work](#proof-of-work) algorithm, [Ethash](#ethash).
 

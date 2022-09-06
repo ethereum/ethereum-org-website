@@ -36,7 +36,6 @@ Enterprises have been experimenting with blockchain technology since around 2016
 
 Another development which is shifting the focus toward public blockchains is [Layer 2](/developers/docs/scaling/#layer-2-scaling). Layer 2 is primarily a scalability technology category which makes high throughput applications possible on public chains. But Layer 2 solutions can also [address some of the other challenges that have driven enterprise developers to choose private chains in the past](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/).
 
-The Baseline Protocol is one key project which is defining a protocol that enables confidential and complex collaboration between enterprises without leaving any sensitive data on-chain. It has gained significant [momentum](https://www.oasis-open.org/2020/08/26/baseline-protocol-achieves-key-milestone-with-release-of-v0-1-implementation-for-enterprise/) throughout 2020.
 
 ## Enterprise developer resources {#enterprise-developer-resources}
 
@@ -77,16 +76,17 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 
 ### Scalability solutions {#scalability-solutions}
 
-[Layer 2](/developers/docs/scaling/#layer-2-scaling) is a set of technologies or systems that run on top of Ethereum (Layer 1), inherit security properties from Layer 1, and provide greater transaction processing capacity (throughput), lower transaction fees (operating cost), and faster transaction confirmations than Layer 1. Layer 2 scaling solutions are secured by Layer 1, but they enable blockchain applications to handle many more users or actions or data than Layer 1 could accommodate. Many of them leverage recent advances in cryptography and zero-knowledge (ZK) proofs to maximize performance and security.
+[Layer 2](/layer-2) is a set of technologies or systems that run on top of Ethereum (Layer 1), inherit security properties from Layer 1, and provide greater transaction processing capacity (throughput), lower transaction fees (operating cost), and faster transaction confirmations than Layer 1. Layer 2 scaling solutions are secured by Layer 1, but they enable blockchain applications to handle many more users or actions or data than Layer 1 could accommodate. Many of them leverage recent advances in cryptography and zero-knowledge (ZK) proofs to maximize performance and security.
 
 Building your application on top of a Layer 2 scalability solution can help [address many of the concerns that have previously driven companies to build on private blockchains](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/), yet retain the benefits of building on Mainnet.
 
-Examples of L2 solutions that are production ready or will be soon include:
+Layer 2 projects include:
 
 - Optimistic rollups (data on chain, fraud proofs)
   - [Optimism](https://optimism.io/)
   - [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/)
   - [Fuel Network](https://fuel.sh)
+  - [Boba Network](https://boba.network/)
 - ZK-rollups (data on chain, ZK validity proofs)
   - [Loopring](https://loopring.org)
   - [Starkware](https://starkware.co)
@@ -95,17 +95,13 @@ Examples of L2 solutions that are production ready or will be soon include:
 - Validium (data off chain, ZK validity proofs)
   - [Starkware](https://starkware.co)
   - [Matter Labs zkPorter](https://matter-labs.io/)
-- Plasma (data off chain, fraud proofs)
-  - [OMG Network](https://omg.network/)
-  - [Gazelle](https://gzle.io)
-  - [Matic Network](https://matic.network/)
-  - [LeapDAO](https://ipfs.leapdao.org/)
 - State channels
   - [Connext](https://connext.network/)
   - [Kchannels](https://www.kchannels.io/)
   - [Perun](https://perun.network)
   - [Raiden](https://raiden.network/)
 - Sidechains
+  - [Polygon POS](https://polygon.technology/)
   - [Skale](https://skale.network)
   - [POA Network](https://www.poa.network/)
 - Hybrid solutions that combine properties of multiple categories
@@ -128,10 +124,15 @@ Here are some of the enterprise applications that have been deployed to the publ
 - [Societe Generale](https://www.societegenerale.com/en/news/newsroom/societe-generale-performs-first-financial-transaction-settled-central-bank-digital) _bond issuance_
 - [Cadence](https://www.forbes.com/sites/benjaminpirus/2019/10/09/fatburger-and-others-feed-30-million-into-ethereum-for-new-bond-offering/#513870be115b) _bond offering and tokenization for FAT Brands_
 - [Sila](https://silamoney.com/) _banking and ACH payments infrastructure-as-a-service_
-- [Tinlake](https://tinlake.centrifuge.io/) _receivables financing via tokenized real-world assets such as invoices, mortgages or streaming royalties_
 - [Kratos](https://triterras.com/kratos) _commodity trading and trade finance platform that connects and enables commodity traders to trade and source capital from lenders directly online_
-- [Fasset](https://www.fasset.com/) _a platform for supporting sustainable infrastructure_
 - [Taurus](https://www.taurushq.com/) _issues tokenized securities_
+
+### Asset tokenization {#tokenization}
+
+- [Tinlake](https://tinlake.centrifuge.io/) _receivables financing via tokenized real-world assets such as invoices, mortgages or streaming royalties_
+- [RealT](https://realt.co/) _investors around the globe can buy into the US real estate market through fully-compliant, fractional, tokenized ownership._
+- [AgroToken](https://agrotoken.io/en/) _tokenizing and trading agricultural commodities_ 
+- [Fasset](https://www.fasset.com/) _a platform for supporting sustainable infrastructure_
 
 ### Notarization of data {#notarization-of-data}
 
@@ -148,10 +149,14 @@ Here are some of the enterprise applications that have been deployed to the publ
 - [Morpheus.network](https://morpheus.network/) _supply chain automation platform which implements a hybrid of private chains with notarized data on the Ethereum Mainnet, and is in use by companies such as Canadian food, oil & gas distributor Federated Co-op Ltd. and Argentinian pet food provider Vitalcan_
 - [Minespider](https://www.minespider.com/) _supply chain tracking_
 - [Follow Our Fibre](https://www.followourfibre.com) _viscose supply chain traceability_
-- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _enables companies to engage in a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across your network of trusted business partners_
+- [EY OpsChain Contract Manager](https://blockchain.ey.com/products/contract-managerhttps://blockchain.ey.com/products/contract-manager) _enables companies to engage in a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across your network of trusted business partners_
 - [Treum](https://treum.io/) _brings transparency, traceability, and tradability to supply chains, using blockchain technology_
 - [TradeTrust](https://www.tradetrust.io/) _verifies electronic Bills of Lading (eBLs) for international shipping_
 - [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _mints NFTs for each new batch of beer, enabling greater visibility and efficiency across its supply chain_
+
+### Insurance {#insurance}
+- [Arbol](https://www.arbolmarket.com/) _parmetric insurance to cover weather related risks_
+- [Etherisc](https://etherisc.com/) _decentralized insurance for a variety of risks_
 
 ### Credentials and certifications {#credentials}
 

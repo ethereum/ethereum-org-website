@@ -13,7 +13,7 @@ import PageMetadata from "../../components/PageMetadata"
 import Pill from "../../components/Pill"
 import Tag from "../../components/Tag"
 import TutorialTags from "../../components/TutorialTags"
-import Emoji from "../../components/Emoji"
+import Emoji from "../../components/OldEmoji"
 import {
   ButtonSecondary,
   FakeLink,

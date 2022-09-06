@@ -39,7 +39,7 @@ import {
   Header1,
   Header4,
 } from "../components/SharedStyledComponents"
-import Emoji from "../components/Emoji"
+import Emoji from "../components/OldEmoji"
 import YouTube from "../components/YouTube"
 import MergeInfographic from "../components/MergeInfographic"
 import FeedbackCard from "../components/FeedbackCard"
