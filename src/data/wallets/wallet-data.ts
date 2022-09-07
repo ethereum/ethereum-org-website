@@ -2153,7 +2153,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-09-01",
     name: "BitBox02",
-    image_name: "placeholder",
+    image_name: "shiftcrypto",
     brand_color: "#000000",
     url: "https://shiftcrypto.ch/",
     wallet_live_date: "1970-01-01",
@@ -2199,7 +2199,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-09-01",
     name: "Ellipal",
-    image_name: "placeholder",
+    image_name: "ellipal",
     brand_color: "#18213b",
     url: "https://www.ellipal.com/",
     wallet_live_date: "1970-01-01",
@@ -2245,7 +2245,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-09-01",
     name: "Archos",
-    image_name: "placeholder",
+    image_name: "archos",
     brand_color: "#ffffff",
     url: "https://www.archos.com/",
     wallet_live_date: "1970-01-01",
@@ -2291,7 +2291,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-09-01",
     name: "Bitfi",
-    image_name: "placeholder",
+    image_name: "bitfi",
     brand_color: "#ffffff",
     url: "https://bitfi.com/",
     wallet_live_date: "1970-01-01",
@@ -2337,7 +2337,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-09-01",
     name: "CoolWallet",
-    image_name: "placeholder",
+    image_name: "coolwallet",
     brand_color: "#ffffff",
     url: "https://www.coolwallet.io/",
     wallet_live_date: "1970-01-01",
@@ -2383,7 +2383,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-09-01",
     name: "Bitlox",
-    image_name: "placeholder",
+    image_name: "bitlox",
     brand_color: "#ffffff",
     url: "https://www.bitlox.com/",
     wallet_live_date: "1970-01-01",
