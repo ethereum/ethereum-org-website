@@ -7,9 +7,9 @@ import {
 } from "@chakra-ui/react"
 import { MdAdd, MdClose } from "react-icons/md"
 
-export interface IProps extends TagProps {
+export interface IProps {
   name: string
-  onChoose: (tagName: string) => void
+  onClick: (tagName: string) => void
   value: string
   isActive: boolean
   shouldShowIcon: boolean
@@ -17,14 +17,14 @@ export interface IProps extends TagProps {
 
 const Tag: React.FC<IProps> = ({
   name,
-  onChoose,
+  onClick,
   value,
   isActive = true,
   shouldShowIcon = true,
 }) => {
   return (
     <ChakraTag
-      onClick={() => onChoose(value)}
+      onClick={() => onClick(value)}
       variant={isActive ? "active" : "custom"}
     >
       <TagLabel>{name}</TagLabel>
