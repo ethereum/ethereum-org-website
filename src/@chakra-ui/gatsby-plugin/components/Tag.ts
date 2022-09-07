@@ -1,21 +1,20 @@
 import type { ComponentStyleConfig } from "@chakra-ui/theme"
 
 export const Tag: ComponentStyleConfig = {
-  parts: ["container", "label"],
   baseStyle: {
     container: {
       display: "flex",
       alignItems: "center",
       bgImage:
         "radial-gradient(46.28% 66.31% at 66.95% 58.35%,rgba(127, 127, 213, 0.2) 0%,rgba(134, 168, 231, 0.2) 50%,rgba(145, 234, 228, 0.2) 100%)",
-      marginBottom: "0.5em",
-      marginRight: "0.5em",
-      padding: "8px 8px",
-      borderRadius: "4px",
+      mb: 2,
+      mr: 2,
+      p: 2,
+      borderRadius: "base",
       textTransform: "uppercase",
-      fontSize: "0.875rem",
+      fontSize: "sm",
       fontWeight: "normal",
-      boxShadow: "tableBoxShadow",
+      boxShadow: "table",
       border: "1px solid",
       borderColor: "white800",
       cursor: "pointer",
@@ -36,9 +35,5 @@ export const Tag: ComponentStyleConfig = {
         boxShadow: "none",
       },
     },
-  },
-  defaultProps: {
-    // prevent the default colorScheme's styles applying
-    colorScheme: "custom",
   },
 }

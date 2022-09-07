@@ -25,15 +25,11 @@ const Tag: React.FC<IProps> = ({
   return (
     <ChakraTag
       onClick={() => onChoose(value)}
-      variant={isActive ? "active" : "subtle"}
+      variant={isActive ? "active" : "custom"}
     >
       <TagLabel>{name}</TagLabel>
       {shouldShowIcon && (
-        <TagRightIcon
-          boxSize="18px"
-          as={isActive ? MdClose : MdAdd}
-          style={{ marginLeft: "1em" }}
-        />
+        <TagRightIcon boxSize="18px" as={isActive ? MdClose : MdAdd} ml="4" />
       )}
     </ChakraTag>
   )
