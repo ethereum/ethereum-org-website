@@ -229,9 +229,9 @@ const DepositContractPage = ({
     // Create textToSpeechRequest
     let speech = new SpeechSynthesisUtterance()
     speech.lang = "en-US"
-    speech.text = DEPOSIT_CONTRACT_ADDRESS.split("").join(" ")
+    speech.text = DEPOSIT_CONTRACT_ADDRESS.split("").join(",")
     speech.volume = 1
-    speech.rate = 0.5
+    speech.rate = 1
     speech.pitch = 1
     // Add event listeners
     // Explicity set state in listener callback
