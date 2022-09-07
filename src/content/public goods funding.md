@@ -167,7 +167,7 @@ Imagine two parks are planned for development, with the teams building each park
 
 The table below shows how much each park will receive under a quadratic funding scheme:
 
-[insert image]
+![A diagram showing showing funds received during a quadratic funding round](./quadratic-funding-table.png)
 
 We can easily calculate the final amount received by each project using the quadratic formula: 
 
