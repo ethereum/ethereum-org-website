@@ -463,7 +463,7 @@ const TutorialsPage = ({
                   key={name}
                   isActive={isActive}
                   shouldShowIcon={false}
-                  onSelect={handleTagSelect}
+                  onChoose={handleTagSelect}
                   value={tag.name}
                 />
               )
