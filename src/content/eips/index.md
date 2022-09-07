@@ -11,7 +11,7 @@ sidebar: true
 
 [Ethereum Improvement Proposals (EIPs)](https://eips.ethereum.org/) are standards specifying potential new features or processes for Ethereum. EIPs contain technical specifications for the proposed changes and act as the “source of truth” for the community. Network upgrades and application standards for Ethereum are discussed and developed through the EIP process.
 
-Anyone within the Ethereum community has the ability to create an EIP. Guidelines for writing EIPs are included in [EIP 1](https://eips.ethereum.org/EIPS/eip-1). The EIP should provide a concise technical specification of the feature its rationale. The EIP author is responsible for building consensus within the community and documenting dissenting opinions. Given the high technical bar for submitting a well-formed EIP, historically, most EIP authors have been application or protocol developers.
+Anyone within the Ethereum community has the ability to create an EIP. Guidelines for writing EIPs are included in [EIP 1](https://eips.ethereum.org/EIPS/eip-1). The EIP should provide a concise technical specification of the feature and its rationale. The EIP author is responsible for building consensus within the community and documenting dissenting opinions. Given the high technical bar for submitting a well-formed EIP, historically, most EIP authors have been application or protocol developers.
 
 ## Why do EIPs matter? {#why-do-eips-matter}
 
@@ -47,7 +47,7 @@ Emeritus EIP editors are
 
 If you would like to become an EIP editor, please check [EIP-5069](https://eips.ethereum.org/EIPS/eip-5069).
 
-EIP editors alongside with community members of [Ethereum Cat Herders](https://ethereumcatherders.com/) and [Ethereum Magicians](https://ethereum-magicians.org/) are deciding which EIP gets implemented, are responsible for facilitation of EIPs as well as moving the EIPs to "Final" or "Withdrawn" stage.
+EIP editors alongside with community members of [Ethereum Cat Herders](https://ethereumcatherders.com/) and [Ethereum Magicians](https://ethereum-magicians.org/) are deciding which EIP gets implemented, are responsible for the facilitation of EIPs as well as moving the EIPs to "Final" or "Withdrawn" stage.
 
 Full standardization process alongside with chart is described in [EIP-1](https://eips.ethereum.org/EIPS/eip-1)
 
@@ -61,7 +61,7 @@ If you’re interested to read more about EIPs, check out the [EIPs website](htt
 
 ## Participate {#participate}
 
-Anyone can create EIP or ERC although you should read [EIP-1](https://eips.ethereum.org/EIPS/eip-1) which outlines the EIP process, what is EIP, types of EIPs, what EIP document should contain, EIP format and template, list of EIP Editors and all you need to know about EIPs before creating one. Your new EIP should define new feature that is not really complex yet not super niche and can be used in by projects in the Ethereum ecosystem. The hardest part is facilitation, you as the author need to facilitate people around your EIP, collect feedback, write articles describing problems that your EIP solves and collaborate with projects to implement your EIP.
+Anyone can create EIPs or ERCs although you should read [EIP-1](https://eips.ethereum.org/EIPS/eip-1) which outlines the EIP process, what is EIP, types of EIPs, what an EIP document should contain, EIP format and template, list of EIP editors and all you need to know about EIPs before creating one. Your new EIP should define any new feature that is not really complex yet not super niche and can be used by projects in the Ethereum ecosystem. The hardest part is facilitation - you as the author need to facilitate people around your EIP, collect feedback, write articles describing problems that your EIP solves and collaborate with projects to implement your EIP.
 
 If you’re interested to follow along the discussion process or share your input about EIPs, check out the [Ethereum Magicians forum](https://ethereum-magicians.org/), where EIPs are discussed with the community.
 
