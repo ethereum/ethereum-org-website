@@ -1,10 +1,5 @@
 import React from "react"
-import {
-  Tag as ChakraTag,
-  TagRightIcon,
-  TagLabel,
-  TagProps,
-} from "@chakra-ui/react"
+import { Tag as ChakraTag, TagRightIcon, TagLabel } from "@chakra-ui/react"
 import { MdAdd, MdClose } from "react-icons/md"
 
 export interface IProps {
