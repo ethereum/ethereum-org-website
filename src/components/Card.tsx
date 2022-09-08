@@ -3,11 +3,6 @@ import styled from "@emotion/styled"
 import Emoji from "./Emoji"
 import { Flex, Text } from "@chakra-ui/react"
 
-const Description = styled.p`
-  opacity: 0.8;
-  margin: 0;
-`
-
 const TopContent = styled.div``
 
 export interface IProps {
@@ -42,7 +37,11 @@ const Card: React.FC<IProps> = ({
           {title}
         </Text>
       )}
-      {description && <Description>{description}</Description>}
+      {description && (
+        <Text opacity={0.8} m={0}>
+          {description}
+        </Text>
+      )}
     </TopContent>
     {children}
   </Flex>
