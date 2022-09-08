@@ -2429,7 +2429,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-09-01",
     name: "Tangem",
-    image_name: "placeholder",
+    image_name: "tangem",
     brand_color: "#ffffff",
     url: "https://tangem.com/en/",
     wallet_live_date: "1970-01-01",
@@ -2496,7 +2496,9 @@ const walletData: WalletData[] = [
     open_source: false,
     repo_url: "",
     non_custodial: true,
-    security_audit: ["https://bc-vault.com/2020/05/bc-vault-completes-security-assessment-by-siq/"],
+    security_audit: [
+      "https://bc-vault.com/2020/05/bc-vault-completes-security-assessment-by-siq/",
+    ],
     scam_protection: false,
     hardware_support: false,
     walletconnect: true,
@@ -2521,7 +2523,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-09-01",
     name: "Coinkite",
-    image_name: "placeholder",
+    image_name: "coinkite",
     brand_color: "#ffffff",
     url: "https://coinkite.com/",
     wallet_live_date: "1970-01-01",
@@ -2567,7 +2569,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-09-01",
     name: "Satochip",
-    image_name: "placeholder",
+    image_name: "satochip",
     brand_color: "#ffffff",
     url: "https://satochip.io/",
     wallet_live_date: "1970-01-01",
@@ -2613,7 +2615,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-09-01",
     name: "SafePal",
-    image_name: "placeholder",
+    image_name: "safepal",
     brand_color: "#ffffff",
     url: "https://www.safepal.com/",
     wallet_live_date: "1970-01-01",
@@ -2659,7 +2661,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-09-01",
     name: "Arculus",
-    image_name: "placeholder",
+    image_name: "arculus",
     brand_color: "#ffffff",
     url: "https://www.getarculus.com/",
     wallet_live_date: "1970-01-01",
@@ -2705,7 +2707,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-09-01",
     name: "D'Cent",
-    image_name: "placeholder",
+    image_name: "dcent",
     brand_color: "#ffffff",
     url: "https://dcentwallet.com/",
     wallet_live_date: "1970-01-01",
@@ -2751,7 +2753,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-09-01",
     name: "SecuX",
-    image_name: "placeholder",
+    image_name: "secux",
     brand_color: "#ffffff",
     url: "https://secuxtech.com/",
     wallet_live_date: "1970-01-01",
@@ -2797,7 +2799,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-09-01",
     name: "Ngrave",
-    image_name: "placeholder",
+    image_name: "ngrave",
     brand_color: "#ffffff",
     url: "https://www.ngrave.io/",
     wallet_live_date: "1970-01-01",
@@ -2843,7 +2845,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-09-01",
     name: "Keycard",
-    image_name: "placeholder",
+    image_name: "keycard",
     brand_color: "#ffffff",
     url: "https://keycard.tech/",
     wallet_live_date: "1970-01-01",
