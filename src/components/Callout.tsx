@@ -6,13 +6,7 @@ import Translation from "./Translation"
 import { TranslationKey } from "../utils/translations"
 // Components
 import Emoji from "./OldEmoji"
-import { Flex } from "@chakra-ui/react"
-
-const Description = styled.p`
-  font-size: 1.25rem;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-`
+import { Flex, Text } from "@chakra-ui/react"
 
 const Image = styled(GatsbyImage)`
   margin-top: -10rem;
@@ -62,9 +56,9 @@ const Callout: React.FC<IProps> = ({
         <h3>
           <Translation id={titleKey} />
         </h3>
-        <Description>
+        <Text color="text200" fontSize="xl" lineHeight="140%">
           <Translation id={descriptionKey} />
-        </Description>
+        </Text>
       </div>
       {children}
     </Flex>
