@@ -14,7 +14,7 @@ summaryPoint4: The Merge will reduce Ethereum's energy consumption by ~99.95%.
 <UpgradeStatus dateKey="page-upgrades-merge-date">
 The Merge is the most significant upgrade in the history of Ethereum. Extensive testing and bug bounties were undertaken to ensure a safe transition to proof-of-stake.
 
-This process is in its final stages, with plans to undergo The Merge on a few public testnets before finally moving forward with Mainnet. If you're excited about The Merge, follow the [EF Blog](https://blog.ethereum.org) or the client communication channels for the latest official word on _When Merge?_
+This process is in its final stages. Now that the testnets have undergone The Merge, [The Merge has been announced on Mainnet](https://blog.ethereum.org/2022/08/24/mainnet-merge-announcement).
 </UpgradeStatus>
 
 ## What is The Merge? {#what-is-the-merge}
