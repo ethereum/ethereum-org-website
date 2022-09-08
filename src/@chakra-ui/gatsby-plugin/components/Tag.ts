@@ -35,5 +35,6 @@ export const Tag: ComponentStyleConfig = {
         boxShadow: "none",
       },
     },
+    custom: {}, // empty variant
   },
 }
