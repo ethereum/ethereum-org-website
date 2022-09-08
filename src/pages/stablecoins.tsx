@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from "react"
 import styled from "@emotion/styled"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 
@@ -32,6 +32,7 @@ import Translation from "../components/Translation"
 
 import { getData } from "../utils/cache"
 import { translateMessageId } from "../utils/translations"
+import { getImage } from "../utils/image"
 
 const StyledContent = styled(Content)`
   margin-bottom: -2rem;
@@ -568,7 +569,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
     title: translateMessageId("page-stablecoins-title", intl),
     header: translateMessageId("page-stablecoins-hero-header", intl),
     subtitle: translateMessageId("page-stablecoins-hero-subtitle", intl),
-    image: getImage(data.stablecoins),
+    image: getImage(data.stablecoins)!,
     alt: translateMessageId("page-stablecoins-hero-alt", intl),
     buttons: [
       {
@@ -722,7 +723,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                 </div>
               </StyledLeftColumn>
               <Image
-                image={getImage(data.dailarge)}
+                image={getImage(data.dailarge)!}
                 alt={translateMessageId("page-stablecoins-dai-logo", intl)}
               />
             </StyledDaiBanner>
@@ -757,7 +758,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                 </div>
               </StyledLeftColumn>
               <Image
-                image={getImage(data.usdclarge)}
+                image={getImage(data.usdclarge)!}
                 alt={translateMessageId("page-stablecoins-usdc-logo", intl)}
               />
             </USDCBanner>
@@ -796,7 +797,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
           descriptionKey={
             "page-stablecoins-stablecoins-dapp-callout-description"
           }
-          image={getImage(data.doge)}
+          image={getImage(data.doge)!}
           maxImageWidth={600}
           alt={translateMessageId(
             "page-stablecoins-stablecoins-dapp-callout-image-alt",
@@ -849,7 +850,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
               background={dapp.background}
               url={dapp.url}
               alt={dapp.alt}
-              image={dapp.image}
+              image={dapp.image!}
               name={dapp.name}
               description={dapp.description}
             />

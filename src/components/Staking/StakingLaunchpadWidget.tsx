@@ -45,13 +45,15 @@ const ButtonContainer = styled.div`
     }
   }
 `
+type NetworkType = "testnet" | "mainnet"
+
 export interface IProps {}
 
 const StakingLaunchpadWidget: React.FC<IProps> = () => {
   const intl = useIntl()
-  const [selection, setSelection] = useState("testnet")
+  const [selection, setSelection] = useState<NetworkType>("testnet")
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     trackCustomEvent({
       eventCategory: `Selected testnet vs mainnet for Launchpad link`,
       eventAction: `Clicked`,
@@ -72,8 +74,8 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
     },
   }
 
-  const selectOptions = Object.keys(data).map((key) => ({
-    label: data[key].label,
+  const selectOptions = Object.entries(data).map(([key, option]) => ({
+    label: option.label,
     value: key,
   }))
 

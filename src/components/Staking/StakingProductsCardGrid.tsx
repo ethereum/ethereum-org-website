@@ -164,27 +164,28 @@ const Status: React.FC<{ status: FlagType }> = ({ status }) => {
   }
 }
 
+const svgMapping = {
+  "abyss-glyph.svg": Abyss,
+  "allnodes-glyph.svg": Allnodes,
+  "ankr-glyph.svg": Ankr,
+  "bloxstaking-glyph.svg": Bloxstaking,
+  "dappnode-glyph.svg": Dappnode,
+  "docker-icon.svg": Docker,
+  "default-open-source-glyph.svg": DefaultOpenSource,
+  "kiln-glyph.svg": Kiln,
+  "lido-glyph.svg": Lido,
+  "rocket-pool-glyph.svg": RocketPool,
+  "stafi-glyph.svg": Stafi,
+  "stakewise-glyph.svg": Stakewise,
+  "stereum-glyph.svg": Stereum,
+  "wagyu-glyph.svg": Wagyu,
+  "stakefish-glyph.svg": Stakefish,
+}
+
 const getSvgFromPath = (
-  svgPath: string
+  svgPath: keyof typeof svgMapping
 ): ComponentType<SVGProps<SVGElement>> => {
-  const mapping = {
-    "abyss-glyph.svg": Abyss,
-    "allnodes-glyph.svg": Allnodes,
-    "ankr-glyph.svg": Ankr,
-    "bloxstaking-glyph.svg": Bloxstaking,
-    "dappnode-glyph.svg": Dappnode,
-    "docker-icon.svg": Docker,
-    "default-open-source-glyph.svg": DefaultOpenSource,
-    "kiln-glyph.svg": Kiln,
-    "lido-glyph.svg": Lido,
-    "rocket-pool-glyph.svg": RocketPool,
-    "stafi-glyph.svg": Stafi,
-    "stakewise-glyph.svg": Stakewise,
-    "stereum-glyph.svg": Stereum,
-    "wagyu-glyph.svg": Wagyu,
-    "stakefish-glyph.svg": Stakefish,
-  }
-  return mapping[svgPath]
+  return svgMapping[svgPath]
 }
 enum FlagType {
   VALID = "green-check",

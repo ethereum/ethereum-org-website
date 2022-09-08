@@ -305,7 +305,7 @@ Nethermind.Runner --config mainnet \
 
 Nethermind docs offer a [complete guide](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) on running Nethermind with consensus client.
 
-Execution client will initiate its core functions, chosen endpoints, and start looking for peers. After successfully discovering peers, the client starts synchronization. After the Merge, it awaits the connection from consensus client. Current blockchain data will be available once the client is successfully synced to the current state.
+An execution client will initiate its core functions, chosen endpoints, and start looking for peers. After successfully discovering peers, the client starts synchronization. After the Merge, the execution client will await a connection from consensus client. Current blockchain data will be available once the client is successfully synced to the current state.
 
 #### Starting the consensus client {#starting-the-consensus-client}
 
@@ -313,11 +313,11 @@ The consensus client must be started with the right port configuration to establ
 
 The consensus client also needs the path to the execution client's `jwt-secret` in order to authenticate the RPC connection between them. Similar to execution examples above, each consensus client has a configuration flag which takes the jwt token file path as an argument. This must be consistent with the `jwtsecret` path provided to the execution client.
 
-If you plan to run a validator, make sure to add a configuration flag which specifies Ethereum address of the fee recipient. This is where ether rewards for your validator accumulates. Each consensus client has an option e.g. `--suggested-fee-recipient=0xabcd1` that takes an Ethereum address as an argument.
+If you plan to run a validator, make sure to add a configuration flag specifying the Ethereum address of the fee recipient. This is where ether rewards for your validator accumulate. Each consensus client has an option, e.g. `--suggested-fee-recipient=0xabcd1`, that takes an Ethereum address as an argument.
 
 **Note that we recommend waiting for merge-ready client releases before doing this on Ethereum Mainnet—for now just practice on a testnet such as Sepolia, Goerli or Ropsten**
 
-When starting Beacon Node on testnet, you can significantly save syncing time by using public endpoint for [Checkpoint sync](https://notes.ethereum.org/@launchpad/checkpoint-sync).
+When starting a Beacon Node on a testnet, you can save significant syncing time by using a public endpoint for [Checkpoint sync](https://notes.ethereum.org/@launchpad/checkpoint-sync).
 
 #### Running a consensus client
 
@@ -330,8 +330,8 @@ lighthouse beacon_node
     --network mainnet \
     --datadir /data/ethereum \
     --http \
-    --execution.urls http://127.0.0.1:8551 \
-    --jwt-secret="/path/to/jwtsecret" \
+    --execution-endpoint http://127.0.0.1:8551 \
+    --execution-jwt /path/to/jwtsecret \
 ```
 
 ##### Running Lodestar
@@ -368,7 +368,7 @@ Prysm comes with script which allows easy automatic installation. Details can be
 ./prysm.sh beacon-chain \
     --mainnet
     --datadir /data/ethereum  \
-    --http-web3provider=http://localhost:8551  \
+    --execution-endpoint=http://localhost:8551  \
     --jwt-secret=/path/to/jwtsecret
 ```
 
@@ -381,15 +381,15 @@ teku --network mainnet \
     --ee-jwt-secret-file "/path/to/jwtsecret" \
 ```
 
-Learn more about running Merge ready setup with Teku in [its documentation](https://docs.teku.consensys.net/en/22.8.0/HowTo/Prepare-for-The-Merge/).
+Learn more about running a Merge ready setup with Teku in its [documentation](https://docs.teku.consensys.net/en/22.8.0/HowTo/Prepare-for-The-Merge/).
 
-Consensus client connects to the execution client to read the deposit contract and identify validators. It also connects to other Beacon Node peers and syncs consensus slots from genesis. When it reaches the current epoch, the Beacon API becomes usable for your validators. Learn more about [Beacon Node APIs](https://eth2docs.vercel.app/).
+When a consensus client connects to the execution client to read the deposit contract and identify validators, it also connects to other Beacon Node peers and begins syncing consensus slots from genesis. Once the Beacon Node reaches the current epoch, the Beacon API becomes usable for your validators. Learn more about [Beacon Node APIs](https://eth2docs.vercel.app/).
 
 ### Adding Validators {#adding-validators}
 
-Consensus client serves as a Beacon Node to which validator client connects. Each consensus client has its own validator software described in detail in its respective documentation.
+A consensus client serves as a Beacon Node for validators to connect. Each consensus client has its own validator software described in detail in its respective documentation.
 
-Running your own validator allows for [solo staking](https://ethereum.org/en/staking/solo/), the most impactful and trustless way. This requires a deposit of 32 ETH. For running a validator on your own node with a smaller amount, a decentralized pool with permissionless node operators, such as [Rocket Pool](https://rocketpool.net/node-operators), might interest you.
+Running your own validator allows for [solo staking](https://ethereum.org/en/staking/solo/), the most impactful and trustless method to support the Ethereum network. However, this requires a deposit of 32 ETH. To run a validator on your own node with a smaller amount, a decentralized pool with permissionless node operators, such as [Rocket Pool](https://rocketpool.net/node-operators), might interest you.
 
 The easiest way to get started with staking and validator key generation is to use the [Prater Testnet Staking Launchpad](https://prater.launchpad.ethereum.org/), which allows you to test your setup by [running nodes on Goerli](https://notes.ethereum.org/@launchpad/goerli). When you're ready for Mainnet, you can repeat these steps using the [Mainnet Staking Launchpad](https://launchpad.ethereum.org/). Make sure to check [Mainnet readiness checklist](https://launchpad.ethereum.org/en/merge-readiness) to smoothly run your validator through the Merge.
 
@@ -411,27 +411,29 @@ The consensus clients all expose a [Beacon API](https://ethereum.github.io/beaco
 
 The default port for the execution client JSON-RPC is `8545` but you can modify the ports of local endpoints in the configuration. By default, the RPC interface is only reachable on the localhost of your computer. To make it remotely accessible, you might want to expose it to the public by changing the address to `0.0.0.0`. This will make it reachable over local network and public IP addresses. In most cases you'll also need to set up port forwarding on your router.
 
-You should do this with caution as this will let anyone on the internet control your node. Malicious actors could access your node to bring down your system or steal your funds if you're using your client as a wallet.
+Approach exposing ports to the internet with caution as this will let anyone on the internet control your node. Malicious actors could access your node to bring down your system or steal your funds if you're using your client as a wallet.
 
 A way around this is to prevent potentially harmful RPC methods from being modifiable. For example, with Geth, you can declare modifiable methods with a flag: `--http.api web3,eth,txpool`.
 
-You can also host access to your RPC interface by pointing the service of a web server, like Nginx, to your client's local address and port. This also enables you to setup a certificate for a secure `https` connection to your own RPC.
+Access to the RPC interface can be extended through the development of edge layer APIs or web server applications, like Nginx, and connecting them to your client's local address and port. Leveraging a middle layer can also allow developers the ability to setup a certificate for secure `https` connections to the RPC interface.
 
-The most privacy-preserving and also very simple way to set up a publicly reachable endpoint, you can host it on your own [Tor](https://www.torproject.org/) onion service. This will let you reach the RPC outside your local network without a static public IP address or opened ports. However, keep in mind the RPC is accessible only via the Tor network which is not supported by all the applications and might result in connection issues.
+Setting up a web server, a proxy, or external facing Rest API is not the only way to provide access to the RPC endpoint of your node. Another privacy-preserving way to set up a publicly reachable endpoint is to host the node on your own [Tor](https://www.torproject.org/) onion service. This will let you reach the RPC outside your local network without a static public IP address or opened ports. However, using this configuration may only allow the RPC endpoint to be accessible via the Tor network which is not supported by all the applications and might result in connection issues.
 
 To do this, you have to create your own [onion service](https://community.torproject.org/onion-services/). Checkout [the documentation](https://community.torproject.org/onion-services/setup/) on onion service setup to host your own. You can point it to a web server with proxy to the RPC port or just directly to the RPC.
+
+Lastly, and one of the most popular ways to provide access to internal networks is through a VPN connection. Depending on your use case and the quantity of users needing access to your node, a secure VPN connection might be an option. [OpenVPN](https://openvpn.net/) is a full-featured SSL VPN which implements OSI layer 2 or 3 secure network extension using the industry standard SSL/TLS protocol, supports flexible client authentication methods based on certificates, smart cards, and/or username/password credentials, and allows user or group-specific access control policies using firewall rules applied to the VPN virtual interface.
 
 ### Operating the node {#operating-the-node}
 
 You should regularly monitor your node to make sure it's running properly. You may need to do occasional maintenance.
 
-#### Keeping node online {#keeping-node-online}
+#### Keeping a node online {#keeping-node-online}
 
-Your node doesn't have to be online nonstop, but you should keep it online as much as possible to keep it in sync with the network. You can shut it down to restart it, but keep in mind that:
+Your node doesn't have to be online all the time, but you should keep it online as much as possible to keep it in sync with the network. You can shut it down to restart it, but keep in mind that:
 
-- Shutting down can take up to a few minutes if the recent state is still being written on disk.
-- Forced shut downs can damage the database.
-- Your client will go out of sync with the network and will need to resync when you restart it. This takes depending on how long it has been offline.
+- Shutting down can take a few minutes if the recent state is still being written on disk.
+- Forced shut downs can damage the database requiring you to resync the entire node. 
+- Your client will go out of sync with the network and will need to resync when you restart it. While the node can begin syncing from were it was last shutdown, the process can take time depending on how long it has been offline.
 
 _This doesn't apply on consensus layer validator nodes._ Taking your node offline will affect all services dependent on it. If you are running a node for _staking_ purposes you should try to minimize downtime as much as possible.
 

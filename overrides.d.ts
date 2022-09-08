@@ -1,7 +1,3 @@
-// temporary override until we figure out how to solve the `getImage` type
-// error. https://github.com/gatsbyjs/gatsby/issues/35748
-declare module "gatsby-plugin-image"
-
 // temporary deactivate this lib since they didn't release the correct types to
 // support react 18
 declare module "react-helmet"

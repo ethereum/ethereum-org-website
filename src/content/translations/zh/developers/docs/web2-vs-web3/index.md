@@ -1,5 +1,5 @@
 ---
-title: Web2 与 Web3 对比
+title: Web2 与 Web3 的对比
 description:
 lang: zh
 sidebar: true
@@ -28,7 +28,7 @@ Web2 指的是我们如今众所周知的互联网版本。 一个在互联网�
 
 这并不意味着所有服务都需要转变成去中心化应用程序。 这些示例说明了 Web2 和 Web3 服务之间的主要差异。
 
-## Web3 的局限性 {#web3-limitations}
+## Web3 局限性 {#web3-limitations}
 
 Web3 现在有一些局限性：
 
@@ -60,3 +60,4 @@ Web3 现在有一些局限性：
 - [去中心化的含义](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274) _2017 年 2 月 6 日 - Vitalik Buterin_
 - [去中心化缘何如此重要](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _2018 年 2 月 18 日- Chris Dixon_
 - [什么是 Web 3.0 以及为何它很重要](https://medium.com/fabric-ventures/what-is-web-3-0-why-it-matters-934eb07f3d2b) _2019 年 12 月 31 日 - Max Mersch 与 Richard Muirhead_
+- [我们为什么需要 Web 3.0](https://medium.com/@gavofyork/why-we-need-web-3-0-5da4f2bf95ab)_ 2018 年 9 月 12 日 - Gavin Wood_

@@ -1,11 +1,13 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { GatsbyImage, getImage, getSrc } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Translation from "../components/Translation"
 import ButtonLink from "./ButtonLink"
 import Emoji from "./OldEmoji"
 import Link from "./Link"
+
+import { getImage, getSrc, ImageDataLike } from "../utils/image"
 
 export interface IHide {
   shouldHide: boolean
@@ -27,7 +29,7 @@ interface IPropsWithSVG extends IPropsBase {
 }
 interface IPropsWithImage extends IPropsBase {
   svg?: never
-  image: any
+  image: ImageDataLike | null
 }
 
 export type IProps = IPropsWithImage | IPropsWithSVG
@@ -95,7 +97,7 @@ const AssetDownload: React.FC<IProps> = ({
   svg,
 }) => {
   const baseUrl = `https://ethereum.org`
-  const downloadUri = src ? src : getSrc(image)
+  const downloadUri = src ? src : image ? getSrc(image) : ""
   const downloadUrl = `${baseUrl}${downloadUri}`
   const Svg = svg
 
@@ -106,11 +108,8 @@ const AssetDownload: React.FC<IProps> = ({
         {children && <ImageContainer>{children}</ImageContainer>}
         {!children && (
           <ImageContainer>
-            {Svg ? (
-              <Svg alt={alt} />
-            ) : (
-              <Image image={getImage(image)} alt={alt} />
-            )}
+            {Svg && <Svg alt={alt} />}
+            {image && <Image image={getImage(image)!} alt={alt} />}
           </ImageContainer>
         )}
         {artistName && (

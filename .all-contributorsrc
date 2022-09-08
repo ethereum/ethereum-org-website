@@ -8649,6 +8649,63 @@
         "doc",
         "bug"
       ]
+    },
+    {
+      "login": "Batxent",
+      "name": "tommy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7824431?v=4",
+      "profile": "https://github.com/Batxent",
+      "contributions": [
+        "doc",
+        "translation"
+      ]
+    },
+    {
+      "login": "martinyung",
+      "name": "Martin Yung",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8136256?v=4",
+      "profile": "https://medium.com/@martinyce",
+      "contributions": [
+        "code",
+        "translation"
+      ]
+    },
+    {
+      "login": "pankajjagtapp",
+      "name": "Pankaj Jagtap",
+      "avatar_url": "https://avatars.githubusercontent.com/u/89507661?v=4",
+      "profile": "https://github.com/pankajjagtapp",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "hannsu",
+      "name": "nulun",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20453231?v=4",
+      "profile": "https://github.com/hannsu",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Denllay",
+      "name": "Denllay",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75447714?v=4",
+      "profile": "https://github.com/Denllay",
+      "contributions": [
+        "doc",
+        "translation"
+      ]
+    },
+    {
+      "login": "yalexis-eth",
+      "name": "yalexis.eth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96504224?v=4",
+      "profile": "http://yalexis.eth.xyz",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
