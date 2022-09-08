@@ -330,8 +330,8 @@ lighthouse beacon_node
     --network mainnet \
     --datadir /data/ethereum \
     --http \
-    --execution.urls http://127.0.0.1:8551 \
-    --jwt-secret="/path/to/jwtsecret" \
+    --execution-endpoint http://127.0.0.1:8551 \
+    --execution-jwt /path/to/jwtsecret \
 ```
 
 ##### Running Lodestar
