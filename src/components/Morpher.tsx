@@ -7,6 +7,7 @@ const NavLink = styled(Link)`
   font-size: 1rem;
   color: ${(props) => props.theme.colors.text};
   &:hover {
+    text-decoration: none;
     color: ${(props) => props.theme.colors.primary};
   }
   &.active {

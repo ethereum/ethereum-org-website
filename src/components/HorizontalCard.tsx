@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
 import styled from "@emotion/styled"
-import Emoji from "./Emoji"
+import Emoji from "./OldEmoji"
 
 const StyledCard = styled.div`
   border-radius: 4px;

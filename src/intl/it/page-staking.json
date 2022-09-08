@@ -156,7 +156,7 @@
   "page-staking-section-comparison-requirements-title": "Requisiti",
   "page-staking-section-comparison-solo-requirements-li1": "Devi depositare 32 ETH",
   "page-staking-section-comparison-solo-requirements-li2": "Mantieni l'hardware che opera sia un client di esecuzione che un client di consenso di Ethereum, mentre è connesso a Internet",
-  "page-staking-section-comparison-solo-requirements-li3": "Il <a href=\"https://prater.launchpad.ethereum.org\" target=\"_blank\">Launchpad di Staking</a> ti accompagnerà per il processo e i requisiti hardware",
+  "page-staking-section-comparison-solo-requirements-li3": "Il <a href=\"https://goerli.launchpad.ethereum.org\" target=\"_blank\">Launchpad di Staking</a> ti guiderà nel processo e per i requisiti hardware",
   "page-staking-section-comparison-saas-requirements-li1": "Deposita 32 ETH e genera le tue chiavi con l'assistenza",
   "page-staking-section-comparison-saas-requirements-li2": "Memorizza le tue chiavi in sicurezza",
   "page-staking-section-comparison-saas-requirements-li3": "Il resto è fatto, sebbene i servizi specifici varieranno",

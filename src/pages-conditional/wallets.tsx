@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
 
@@ -21,10 +21,11 @@ import {
   StyledCard,
   TwoColumnContent,
 } from "../components/SharedStyledComponents"
+import FeedbackCard from "../components/FeedbackCard"
 
 import { translateMessageId } from "../utils/translations"
+import { getImage, getSrc } from "../utils/image"
 import { Context } from "../types"
-import FeedbackCard from "../components/FeedbackCard"
 
 const StyledTwoColumnContent = styled(TwoColumnContent)`
   margin-bottom: -2rem;
@@ -224,7 +225,7 @@ const WalletsPage = ({
     title: translateMessageId("page-wallets-title", intl),
     header: translateMessageId("page-wallets-slogan", intl),
     subtitle: translateMessageId("page-wallets-subtitle", intl),
-    image: getImage(data.hero),
+    image: getImage(data.hero)!,
     alt: translateMessageId("page-wallets-alt", intl),
     buttons: [
       {
@@ -239,7 +240,7 @@ const WalletsPage = ({
       <PageMetadata
         title={translateMessageId("page-wallets-meta-title", intl)}
         description={translateMessageId("page-wallets-meta-description", intl)}
-        image={getImage(data.ogImage)?.images.fallback.src}
+        image={getSrc(data.ogImage)}
       />
       <PageHero content={heroContent} isReverse />
       <StyledGrayContainer>
@@ -342,7 +343,7 @@ const WalletsPage = ({
             <ButtonLink to="/wallets/find-wallet/">
               <Translation id="page-wallets-find-wallet-btn" />
             </ButtonLink>
-            <FindWallet image={getImage(data.findWallet)} alt="" />
+            <FindWallet image={getImage(data.findWallet)!} alt="" />
           </CentralColumn>
         </Content>
       </GradientContainer>

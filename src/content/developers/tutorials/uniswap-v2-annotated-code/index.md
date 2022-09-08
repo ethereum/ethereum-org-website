@@ -131,7 +131,7 @@ These are all the interfaces that the contract needs to know about, either becau
 contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 ```
 
-This contract inherits from `UniswapV2ERC20`, which provides the the ERC-20 functions for the liquidity tokens.
+This contract inherits from `UniswapV2ERC20`, which provides the ERC-20 functions for the liquidity tokens.
 
 ```solidity
     using SafeMath  for uint;

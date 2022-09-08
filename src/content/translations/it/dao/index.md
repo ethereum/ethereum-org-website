@@ -73,7 +73,7 @@ _In genere usato per organizzazioni più fitte e incentrate sul fattore umano, c
 
 La reputazione rappresenta la prova di partecipazione e concede potere di voto nella DAO. A differenza dell'appartenenza basata sui token o le quote, le DAO basate sulla reputazione non trasferiscono la proprietà ai contributori. La reputazione non può esser comprata, trasferita o delegata; i membri della DAO devono ottenere la reputazione tramite la partecipazione. Il voto su catena è privo di permessi e i potenziali membri possono inviare liberamente proposte per unirsi alla DAO e richiedere di ricevere reputazione e token come ricompensa in cambio dei loro contributi.
 
-_Tipicamente usate per lo sviluppo e l’amministrazione decentralizzati di protocolli e dApp, ma solo utili anche per una varia serie di organizzazioni come enti di beneficienza, collettivi di lavoratori, club d'investimento, etc._
+_Tipicamente usate per lo sviluppo e la governance decentralizzati di protocolli e dapp, ma anche ben adatti a una diversa serie di organizzazioni come beneficienze, collettivi di lavoratori, club d'investimento, etc._
 
 #### Un celebre esempio {#reputation-example}
 
@@ -121,7 +121,7 @@ Ethereum è la base perfetta per le DAO per una serie di motivi:
 - [Che cos'è una DAO e a cosa serve?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [Come avviare una comunità digitale basata su DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [Cos'è una DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
-- [What is Holographic Consensus?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
+- [Cos'è il Consenso Olografico?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
 
 ### Video {#videos}
 
