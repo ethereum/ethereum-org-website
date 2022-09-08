@@ -8678,6 +8678,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "hannsu",
+      "name": "nulun",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20453231?v=4",
+      "profile": "https://github.com/hannsu",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
