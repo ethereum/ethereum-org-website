@@ -21,14 +21,6 @@ const Image = styled(GatsbyImage)`
   min-height: 200px;
 `
 
-const Content = styled.div`
-  margin-top: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-`
-
 export interface IProps {
   children?: React.ReactNode
   image?: string
@@ -64,7 +56,7 @@ const Callout: React.FC<IProps> = ({
     className={className}
   >
     {image && <Image image={image} alt={alt} />}
-    <Content>
+    <Flex direction="column" justify="space-between" mt={10} h="full">
       <div>
         {emoji && <Emoji text={emoji} size={3} />}
         <h3>
@@ -75,7 +67,7 @@ const Callout: React.FC<IProps> = ({
         </Description>
       </div>
       {children}
-    </Content>
+    </Flex>
   </Flex>
 )
 
