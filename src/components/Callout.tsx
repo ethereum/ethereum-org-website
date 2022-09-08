@@ -6,24 +6,7 @@ import Translation from "./Translation"
 import { TranslationKey } from "../utils/translations"
 // Components
 import Emoji from "./OldEmoji"
-
-const StyledCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(
-    49.21deg,
-    rgba(127, 127, 213, 0.2) 19.87%,
-    rgba(134, 168, 231, 0.2) 58.46%,
-    rgba(145, 234, 228, 0.2) 97.05%
-  );
-  padding: 1.5rem;
-  margin: 1rem;
-  margin-top: 8rem;
-  border-radius: 4px;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 4rem;
-  }
-`
+import { Flex } from "@chakra-ui/react"
 
 const Description = styled.p`
   font-size: 1.25rem;
@@ -65,7 +48,21 @@ const Callout: React.FC<IProps> = ({
   children,
   className,
 }) => (
-  <StyledCard className={className}>
+  <Flex
+    direction="column"
+    bgGradient="linear-gradient(
+    49.21deg,
+    rgba(127, 127, 213, 0.2) 19.87%,
+    rgba(134, 168, 231, 0.2) 58.46%,
+    rgba(145, 234, 228, 0.2) 97.05%
+  )"
+    p={6}
+    m={4}
+    mt={32}
+    mb={[16]}
+    borderRadius="base"
+    className={className}
+  >
     {image && <Image image={image} alt={alt} />}
     <Content>
       <div>
@@ -79,7 +76,7 @@ const Callout: React.FC<IProps> = ({
       </div>
       {children}
     </Content>
-  </StyledCard>
+  </Flex>
 )
 
 export default Callout
