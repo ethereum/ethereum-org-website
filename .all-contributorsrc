@@ -8697,6 +8697,15 @@
         "doc",
         "translation"
       ]
+    },
+    {
+      "login": "yalexis-eth",
+      "name": "yalexis.eth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96504224?v=4",
+      "profile": "http://yalexis.eth.xyz",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
