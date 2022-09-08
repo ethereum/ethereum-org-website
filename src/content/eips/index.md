@@ -1,5 +1,5 @@
 ---
-title: Ethereum Improvement Proposals
+title: Ethereum Improvement Proposals (EIPs)
 description: The basic information you need to understand EIPs
 lang: en
 sidebar: true
