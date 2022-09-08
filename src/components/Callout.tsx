@@ -45,7 +45,7 @@ const Callout: React.FC<IProps> = ({
     p={6}
     m={4}
     mt={32}
-    mb={[16]}
+    mb={{ base: 16, lg: 4 }}
     borderRadius="base"
     className={className}
   >
