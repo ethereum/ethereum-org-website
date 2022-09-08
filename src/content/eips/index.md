@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-# Introduction to Ethereum Improvement Proposals {#introduction-to-ethereum-improvement-proposals}
+# Introduction to Ethereum Improvement Proposals (EIPs) {#introduction-to-ethereum-improvement-proposals}
 
 ## What are EIPs? {#what-are-eips}
 
