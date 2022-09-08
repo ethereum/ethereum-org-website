@@ -1386,6 +1386,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="http://yalexis.eth.xyz"><img src="https://avatars.githubusercontent.com/u/96504224?v=4?s=100" width="100px;" alt=""/><br /><sub><b>yalexis.eth</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=yalexis-eth" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/smartprogrammer93"><img src="https://avatars.githubusercontent.com/u/33181301?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ahmad Bitar</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=smartprogrammer93" title="Documentation">📖</a></td>
       <td align="center"><a href="https://carllippert.com"><img src="https://avatars.githubusercontent.com/u/16457876?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Carl Lippert</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=carllippert" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/tymtam2"><img src="https://avatars.githubusercontent.com/u/1097613?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tymek Majewski</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=tymtam2" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
