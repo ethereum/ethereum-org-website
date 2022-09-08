@@ -28,7 +28,9 @@ const Card: React.FC<IProps> = ({
     className={className}
   >
     <div>
-      {emoji && <Emoji fontSize="5xl" text={emoji} mb={4} />}
+      {emoji && (
+        <Emoji fontSize="5xl" text={emoji} mb={4} display="inline-block" />
+      )}
       {title && (
         <Text as="h3" mt={0}>
           {title}
