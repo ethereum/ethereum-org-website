@@ -1,11 +1,7 @@
 import React, { ReactNode } from "react"
 import styled from "@emotion/styled"
 import Emoji from "./Emoji"
-import { Flex } from "@chakra-ui/react"
-
-const Title = styled.h3`
-  margin-top: 0;
-`
+import { Flex, Text } from "@chakra-ui/react"
 
 const Description = styled.p`
   opacity: 0.8;
@@ -41,7 +37,11 @@ const Card: React.FC<IProps> = ({
   >
     <TopContent>
       {emoji && <Emoji fontSize="5xl" text={emoji} mb={4} />}
-      {title && <Title>{title}</Title>}
+      {title && (
+        <Text as="h3" mt={0}>
+          {title}
+        </Text>
+      )}
       {description && <Description>{description}</Description>}
     </TopContent>
     {children}
