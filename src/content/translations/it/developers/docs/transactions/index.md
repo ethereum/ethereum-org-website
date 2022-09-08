@@ -3,6 +3,7 @@ title: Transazioni
 description: "Panoramica sulle transazioni Ethereum: come funzionano, struttura dati e come inviarle tramite un'applicazione."
 lang: it
 sidebar: true
+preMergeBanner: true
 ---
 
 Le transazioni sono istruzioni firmate crittograficamente da account. Un account avvia una transazione per aggiornare lo stato della rete Ethereum. La transazione più semplice è il trasferimento di ETH da un account ad un altro.
@@ -103,12 +104,34 @@ Esempio di risposta:
 
 Con l'hash di firma, la transazione può provare crittograficamente che proviene dal mittente ed è stata inviata alla rete.
 
+### Il campo di dati {#the-data-field}
+
+La grande maggioranza delle transazioni accede a un contratto da un conto controllato dall'esterno (externally-owned). Gran parte dei contratti è scritta in Solidity e interpreta il proprio campo dei dati secondo l'[interfaccia binaria dell'applicazione (Application Binary Interface – ABI)](/glossary/#abi/).
+
+I primi quattro byte specificano quale funzione chiamare, usando l'hash del nome e degli argomenti della funzione. Talvolta si può identificare la funzione dal selettore, usando [questo database](https://www.4byte.directory/signatures/).
+
+Il resto dei calldata sono gli argomenti, [codificati come specificato nelle specifiche dell'ABI](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
+
+Ad esempio, diamo un'occhiata a [questa transazione](https://etherscan.io/tx/0xd0dcbe007569fcfa1902dae0ab8b4e078efe42e231786312289b1eee5590f6a1). Usa **Clicca per scoprire di più** per visualizzare i calldata.
+
+Il selettore della funzione è `0xa9059cbb`. Ci sono diverse [funzioni note con questa firma](https://www.4byte.directory/signatures/?bytes4_signature=0xa9059cbb). In questo caso, [il codice sorgente del contratto](https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48#code) è stato caricato su Etherscan, quindi sappiamo che la funzione è `transfer(address,uint256)`.
+
+Il resto dei dati è:
+
+```
+0000000000000000000000004f6742badb049791cd9a37ea913f2bac38d01279
+000000000000000000000000000000000000000000000000000000003b0559f4
+```
+
+Secondo le specifiche ABI, i valori interi (come gli indirizzi, che sono interi da 20 byte), appaiono nell'ABI come words a 32 byte, con riempimento di zeri nella parte anteriore. Quindi sappiamo che l'indirizzo `to` è [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279). Il `value` è 0x3b0559f4 = 990206452.
+
 ## Tipi di transazioni {#types-of-transactions}
 
 Su Ethereum esistono diversi tipi di transazioni:
 
-- Transazioni ordinarie: una transazione da un portafoglio a un altro.
+- Transazioni regolari: una transazione da un conto a un altro.
 - Transazioni di distribuzione del contratto: una transazione senza un indirizzo 'to', in cui il campo dei dati è usato per il codice del contratto.
+- Esecuzione di un contratto: una transazione che interagisce con uno smart contract distribuito. In questo caso, l'indirizzo 'a' è l'indirizzo dello smart contract.
 
 ### Carburante {#on-gas}
 

@@ -65,7 +65,6 @@ Az összes [Ethereum kliens](/developers/docs/nodes-and-clients/#execution-clien
 - [evmone](https://github.com/ethereum/evmone) - _C++_
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
 - [eEVM](https://github.com/microsoft/eevm) - _C++_
-- [Hyperledger Burrow](https://github.com/hyperledger/burrow) - _Go_
 
 ## További olvasnivaló {#further-reading}
 

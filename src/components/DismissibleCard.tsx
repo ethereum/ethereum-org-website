@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import Icon from "./Icon"
 
@@ -29,6 +29,7 @@ const CloseIconContainer = styled.span`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   storageKey: string
 }
 

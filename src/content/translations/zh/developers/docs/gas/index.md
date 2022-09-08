@@ -3,11 +3,12 @@ title: Gas 和费用
 description:
 lang: zh
 sidebar: true
+preMergeBanner: true
 ---
 
 Gas 对以太坊网络至关重要。 正是这种燃料使它能够运行，正如车辆需要汽油一样。
 
-## 先决条件 {#prerequisites}
+## 前置要求 {#prerequisites}
 
 为了更好地理解此页面，推荐先阅读[交易](/developers/docs/transactions/)和 [EVM](/developers/docs/evm/)。
 
@@ -19,7 +20,7 @@ Gas 是指在以太坊网络上执行特定操作所需的计算工作量。
 
 ![显示 EVM 操作所需 Gas 的图表](./gas.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-本质上，Gas 费用是以太坊的货币以太 (ETH) 支付的。 Gas 价格以 Gwei 标明，Gwei 本身就是 ETH 的一个单位――每个 Gwei 等于 0.000000001 ETH (10<sup>-9</sup> ETH)。 例如，您可以说您的 Gas 成本为 1 Gwei，而不是说您的 Gas 成本为 0.000000001 以太。 “gwei”一词本身表示“giga-wei”，等于 100,000,000 wei。 Wei 本身（以 [b-money](https://www.investopedia.com/terms/b/bmoney.asp) 的发明者 [Wei Dai](https://wikipedia.org/wiki/Wei_Dai) 命名）是 ETH 中最小的单位。
+本质上，Gas 费用是以太坊的货币以太 (ETH) 支付的。 Gas 价格以 Gwei 标明，Gwei 本身就是 ETH 的一个单位――每个 Gwei 等于 0.000000001 ETH (10<sup>-9</sup> ETH)。 例如，您可以说您的 Gas 成本为 1 Gwei，而不是说您的 Gas 成本为 0.000000001 以太。 “gwei”一词本身表示“giga-wei”，等于 1,000,000,000 wei。 Wei 本身（以 [b-money](https://www.investopedia.com/terms/b/bmoney.asp) 的发明者 [Wei Dai](https://wikipedia.org/wiki/Wei_Dai) 命名）是 ETH 中最小的单位。
 
 ## 伦敦升级之前 {#pre-london}
 
@@ -138,15 +139,11 @@ Gas 费高是由于以太坊广受欢迎。 在以太坊进行任何操作都需
 
 第二层扩容是一项主要举措，可大大优化 gas 成本、用户体验和可扩展性。 [关于第二层扩容的更多信息](/developers/docs/scaling/#layer-2-scaling)。
 
-在信标链上引入的新验证模式应能降低高耗电量，减少对专门硬件的依赖。 这个链将使去中心化的以太坊网络能够达成共识并保持网络安全。同时通过代替要求财务承诺来限制能源消耗。
-
-任何拥有至少 32 个 ETH 的人都可以抵押这些 ETH，成为负责处理交易、验证区块并提出要添加到链中的新区块的验证者。 少于 32 个 ETH 的用户可以加入权益质押池。
-
 ## 降低 gas 成本的策略 {#strategies-for-you-to-reduce-gas-costs}
 
-如果您尝试降低 ETH 的 gas 成本，则可以设置小费来表明交易的优先级别。 矿工会“继续工作”并执行每 gas 提供小费更高的交易。因为他们可以保留您支付的小费，而不会倾向于执行小费较低的交易。
+如果你希望降低以太币的燃料费用，可以设置小费来表明交易的优先级。 矿工将“处理”并执行每单位燃料小费更高的交易，因为他们可以保留你支付的小费；矿工不太愿意执行小费较低的交易。
 
-如果想要监控 gas 价格，用较少的费用发送 ETH，您可以使用多种不同的工具，例如：
+如果想要监控燃料价格，从而以较少的费用发送以太币，你可以使用多种不同的工具，例如：
 
 - [Etherscan](https://etherscan.io/gastracker) _交易 gas 价格估算器_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _支持类型 0 传统交易和类型 2 EIP-1559 交易的 gas 估算 Chrome 插件。_

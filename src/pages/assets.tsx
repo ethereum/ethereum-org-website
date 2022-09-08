@@ -1,10 +1,15 @@
-import React, { useContext } from "react"
+// Libraries
+import React from "react"
 import { useIntl } from "react-intl"
-import { ThemeContext } from "styled-components"
-import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { useTheme } from "@emotion/react"
+import styled from "@emotion/styled"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 
+// Assets
+import EthGlyphColoredSvg from "../assets/assets/eth-glyph-colored.svg"
+
+// Components
 import AssetDownload from "../components/AssetDownload"
 import Link from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
@@ -12,9 +17,12 @@ import Translation from "../components/Translation"
 import { Page, Content } from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
 
-import { translateMessageId } from "../utils/translations"
-import EthGlyphColoredSvg from "../assets/assets/eth-glyph-colored.svg"
+// Types
 import { Context } from "../types"
+
+// Utils
+import { translateMessageId } from "../utils/translations"
+import { getImage } from "../utils/image"
 
 const Image = styled(GatsbyImage)`
   align-self: center;
@@ -78,8 +86,8 @@ const Header = styled.header`
 
 const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
   const intl = useIntl()
-  const themeContext = useContext(ThemeContext)
-  const isDarkTheme = themeContext.isDark
+  const theme = useTheme()
+  const isDarkTheme = theme.isDark
   const assetPageHeroImage = isDarkTheme
     ? data.ethDiamondPurpleHero
     : data.ethDiamondBlackHero
@@ -93,7 +101,7 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
         <HeroContainer>
           <Header>
             <Image
-              image={getImage(assetPageHeroImage)}
+              image={getImage(assetPageHeroImage)!}
               alt={translateMessageId("page-assets-eth-diamond-gray", intl)}
             />
             <h1>
@@ -272,6 +280,24 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             image={data.dao}
             artistName="Patrick Atkins"
             artistUrl="https://www.patrickatkins.co.uk/"
+          />
+        </Row>
+
+        <Row>
+          <AssetDownload
+            title={translateMessageId("page-assets-leslie-the-rhino", intl)}
+            alt={translateMessageId("page-assets-leslie-the-rhino", intl)}
+            artistName="Tomo Saito"
+            artistUrl="https://tomosaito.com/"
+            image={data.leslieTheRhino}
+          />
+          <AssetDownload
+            title={translateMessageId("page-assets-leslie-the-rhino", intl)}
+            alt={translateMessageId("page-assets-leslie-the-rhino", intl)}
+            artistName="Tomo Saito"
+            artistUrl="https://tomosaito.com/"
+            image={data.leslieTheRhino}
+            shouldHide={true}
           />
         </Row>
 
@@ -589,6 +615,9 @@ export const query = graphql`
       ...assetItem
     }
     dao: file(relativePath: { eq: "use-cases/dao-2.png" }) {
+      ...assetItem
+    }
+    leslieTheRhino: file(relativePath: { eq: "upgrades/upgrade_rhino.png" }) {
       ...assetItem
     }
     ethGifCat: file(relativePath: { eq: "eth-gif-cat.png" }) {

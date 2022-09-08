@@ -1,6 +1,6 @@
 import React from "react"
-import styled from "styled-components"
-import Emoji from "./Emoji"
+import styled from "@emotion/styled"
+import Emoji from "./OldEmoji"
 
 import Checkbox from "./Checkbox"
 
@@ -28,6 +28,7 @@ const TopContent = styled.div`
   position: relative;
 `
 export interface IProps {
+  children?: React.ReactNode
   emoji: string
   title: string
   description: string

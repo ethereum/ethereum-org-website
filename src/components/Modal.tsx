@@ -1,5 +1,5 @@
 import React, { useRef } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { motion } from "framer-motion"
 
 import Icon from "./Icon"
@@ -79,6 +79,7 @@ const Overlay: React.FC<IPropsOverlay> = ({ isActive }) => (
 )
 
 export interface IProps {
+  children?: React.ReactNode
   className?: string
   isOpen: boolean
   setIsOpen: (isOpen: boolean) => void

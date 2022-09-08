@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react"
 import { motion } from "framer-motion"
 import { Link } from "gatsby"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import ButtonLink from "./ButtonLink"
 import Icon from "./Icon"
@@ -79,6 +79,7 @@ const StyledTableOfContentsLink = styled(Link)`
   margin-bottom: 0.5rem !important;
   /* Add left border bullet on hover */
   &:hover {
+    text-decoration: none;
     color: ${(props) => props.theme.colors.primary};
     &:after {
       content: "";
@@ -429,7 +430,7 @@ const TableOfContents: React.FC<IProps> = ({
       <OuterList>
         {shouldShowEditButtom && (
           <ButtonContainer>
-            <ButtonLink to={editPath} isSecondary={true} hideArrow mt={0}>
+            <ButtonLink to={editPath} variant="outline" hideArrow mt={0}>
               <ButtonContent>
                 <GithubIcon name="github" />{" "}
                 <span>

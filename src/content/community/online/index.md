@@ -15,7 +15,6 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> - the financial side of Ethereum, including DeFi</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethdev/">r/ethdev</Link> - focused on Ethereum development</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethtrader/">r/ethtrader</Link> - trends & market analysis</SocialListItem>
-<SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/EtherMining/">r/EtherMining</Link> - focused on securing the Ethereum Network (mining)</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethstaker/">r/ethstaker</Link> - welcome to all interested in staking on Ethereum</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum-magicians.org">Fellowship of Ethereum Magicians</Link> - community oriented around technical standards in Ethereum</SocialListItem>
 <SocialListItem socialIcon="stackExchange"><Link to="https://ethereum.stackexchange.com">Ethereum Stackexchange</Link> - discussion and help for Ethereum developers</SocialListItem>
@@ -37,7 +36,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> - Keep up to date with the latest from the Ethereum Foundation</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> - Offical account of the Ethereum Foundation</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethdotorg">@ethdotorg</Link> - The portal to Ethereum, built for our growing global community</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://hive.one/c/Ethereum?page=1">List of influential Ethereum twitter accounts</Link></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://hive.one/c/ethereum?page=1">List of influential Ethereum twitter accounts</Link></SocialListItem>
 
 <Divider />
 

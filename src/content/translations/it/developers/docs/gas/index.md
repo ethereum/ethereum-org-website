@@ -3,6 +3,7 @@ title: Gas e commissioni
 description:
 lang: it
 sidebar: true
+preMergeBanner: true
 ---
 
 Il carburante è un elemento essenziale per la rete Ethereum. Consente di far funzionare la rete, proprio come un'automobile ha bisogno di benzina per funzionare.
@@ -136,11 +137,7 @@ Il prezzo del carburante da solo in realtà non determina quanto dobbiamo pagare
 
 Gli [aggiornamenti di scalabilità](/upgrades/) di Ethereum dovrebbero infine risolvere alcuni problemi delle commissioni del carburante, che, a loro volta, consentiranno alla piattaforma di elaborare migliaia di transazioni al secondo e di scalare globalmente.
 
-La scalabilità di Livello 2 è un'iniziativa fondamentale per migliorare notevolmente i costi del carburante, l'esperienza utente e la scalabilità. [Maggiori informazioni sullo scaling di Livello 2](/developers/docs/scaling/layer-2-rollups/).
-
-Il nuovo modello di Proof of Stake introdotto sulla beacon chain dovrebbe ridurre l'elevato consumo energetico e la dipendenza da hardware specializzato. Questa catena consentirà alla rete decentralizzata di Ethereum di concordare e mantenere la rete sicura, limitando al contempo il consumo di energia, richiedendo invece un impegno finanziario.
-
-Chiunque abbia almeno 32 ETH può metterli in staking e diventare un validatore responsabile dell'elaborazione delle transazioni, convalidando i blocchi e proponendo nuovi blocchi da aggiungere alla catena. Gli utenti con meno di 32 ETH possono unirsi ai gruppi di staking.
+La scalabilità di Livello 2 è un'iniziativa fondamentale per migliorare notevolmente i costi del carburante, l'esperienza utente e la scalabilità. [Maggiori informazioni sul ridimensionamento del Livello 2](/developers/docs/scaling/#layer-2-scaling/).
 
 ## Strategie utili per ridurre i costi del carburante {#strategies-for-you-to-reduce-gas-costs}
 
@@ -152,6 +149,7 @@ Se desideri monitorare i prezzi del carburante in modo da poter inviare i tuoi E
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _- Estensione per la stima del carburante di Chrome, che supporta sia transazioni legacy di Tipo 0 sia transazioni EIP-1559 di Tipo 2._
 
 - [ETH Gas Station](https://ethgasstation.info/) _- Strumenti di misurazione per il mercato del carburante dedicati ai consumatori_
+- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Calcola le commissioni del gas nella tua valuta locale per diversi tipi di transazione sulla rete principale, su Arbitrum e su Polygon._
 
 ## Strumenti correlati {#related-tools}
 

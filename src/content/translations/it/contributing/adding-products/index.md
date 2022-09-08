@@ -9,7 +9,7 @@ _Una nota sull'aggiunta di portafogli: nell'ambito della [nostra tabella di marc
 
 # Aggiungere prodotti su Ethereum {#adding-products}
 
-Chiunque è libero di suggerire nuovi portafogli e dapp da aggiungere ai contenuti su ethereum.org, ove ritenuto appropriato. **No, non elencheremo la tua dapp sulla nostra pagina iniziale** 😜
+Chiunque è libero di suggerire nuovi portafogli e dapp da aggiungere ai contenuti su ethereum.org, ove ritenuto appropriato. **No, non elencheremo la tua dapp sulla nostra pagina iniziale**
 
 Attualmente, portafogli e dapp vengono elencati su:
 
@@ -108,6 +108,6 @@ _Stiamo anche studiando altre opzioni per votare, in modo tale che la community 
 
 Se desideri aggiungere a ethereum.org un portafoglio o una dapp che soddisfa i criteri, crea un ticket su GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
   Crea un ticket
 </ButtonLink>
