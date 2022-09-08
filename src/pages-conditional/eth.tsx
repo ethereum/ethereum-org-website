@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
 
@@ -27,10 +27,11 @@ import {
   Page,
   StyledCard,
 } from "../components/SharedStyledComponents"
+import FeedbackCard from "../components/FeedbackCard"
 
 import { translateMessageId } from "../utils/translations"
+import { getImage, getSrc } from "../utils/image"
 import { Context } from "../types"
-import FeedbackCard from "../components/FeedbackCard"
 
 const Slogan = styled.p`
   font-style: normal;
@@ -278,7 +279,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
       <PageMetadata
         title={translateMessageId("page-eth-whats-eth-meta-title", intl)}
         description={translateMessageId("page-eth-whats-eth-meta-desc", intl)}
-        image={getImage(data.ogImage)?.images.fallback.src}
+        image={getSrc(data.ogImage)}
       />
       <Content>
         <HeroContainer>
@@ -301,7 +302,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
             </ButtonLink>
           </Header>
           <Hero
-            image={getImage(data.eth)}
+            image={getImage(data.eth)!}
             alt={translateMessageId("page-eth-whats-eth-hero-alt", intl)}
             loading="eager"
           />
@@ -376,7 +377,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
               "page-eth-whats-ethereum-desc",
               intl
             )}
-            image={getImage(data.ethereum)}
+            image={getImage(data.ethereum)!}
           />
           <TextDivider />
           <div>
@@ -396,7 +397,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
                 "page-eth-whats-defi-description",
                 intl
               )}
-              image={getImage(data.defi)}
+              image={getImage(data.defi)!}
             />
           </div>
           <TextDivider />
@@ -442,7 +443,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
         <StyledCalloutBanner
           titleKey={"page-eth-where-to-buy"}
           descriptionKey={"page-eth-where-to-buy-desc"}
-          image={getImage(data.ethCat)}
+          image={getImage(data.ethCat)!}
           alt={translateMessageId("page-eth-cat-img-alt", intl)}
           maxImageWidth={300}
         >

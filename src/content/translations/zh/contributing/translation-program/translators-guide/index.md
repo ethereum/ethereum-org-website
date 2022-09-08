@@ -155,7 +155,7 @@ nonce - _不可翻译的文本_
 
 如何翻译 dApp 的示例：
 
-- 去中心化应用程序（dApps）→ _翻译完整形式（括号中为英文缩写）_
+- 去中心化应用程序(dApps)→ _翻译完整形式(括号中为英文缩写)_
 
 ### 没有既定翻译的术语 {#terms-without-established-translations}
 
@@ -252,10 +252,10 @@ Ethereum.org 的访问者来自世界各地，来自不同的背景。 因此，
   - 不同日期格式的一些示例：
     - 英语（英国）(dd/mm/yyyy) – 1st January, 2022
     - 英语（美国）(mm/dd/yyyy) – January 1st, 2022
-    - 中文 (yyyy-mm-dd) – 2022 年 01 月 01 日
-    - 法语 (dd/mm/yyyy) – 01/01/2022
-    - 意大利语 (dd/mm/yyyy) –01/01/22
-    - 德语 (yyyy/mm/dd) – 2022/01/01 2022 年 1 月
+    - 中文 (yyyy-mm-dd) – 2022 年 1 月 1 日
+    - 法语 (dd/mm/yyyy) – 1er janvier 2022
+    - 意大利语 (dd/mm/yyyy) – 1º gennaio 2022
+    - 德语 (yyyy/mm/dd) – 1. Januar 2022
 
 **货币**
 

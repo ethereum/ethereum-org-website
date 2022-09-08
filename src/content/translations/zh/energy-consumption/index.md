@@ -7,13 +7,13 @@ sidebar: true
 
 # 以太坊能源消耗 {#introduction}
 
-在从工作量证明 (PoW) 到权益证明 (PoS) 的[合并](/upgrades/merge/index.md)之后，以太坊的能源消耗将减少约 99.95%。 合并后，以太坊提高安全性所需的碳消耗将显著减少。
+在从工作量证明 (PoW) 到权益证明 (PoS) 的[合并](/upgrades/merge)之后，以太坊的能源消耗将减少约 99.95%。 合并后，以太坊提高安全性所需的碳消耗将显著减少。
 
-自成立以来，以太坊一直致力于实施权益证明共识机制，但在不牺牲安全性和去中心化的情况下做到这一点需要多年的重点研究和开发。 因此，网络从使用工作量证明共识开始。 工作量证明共识要求矿工使用他们的计算硬件来解决难题。 难题的解决证明矿工已消耗了能量，表明他们为添加到区块链的权利投入了现实世界的价值。 工作量证明和权益证明都只是决定谁可以添加下一个区块的机制。 将工作量证明换成权益证明，其中投资的实际价值来自直接在智能合约中质押的以太币，因此矿工无需消耗能量即可添加到区块链。 因此，保护网络的环境成本大大降低。
+自成立以来，以太坊一直致力于实现权益证明共识机制，但在不影响[以太坊成为安全、可扩展和去中心化区块链的愿景](/upgrades/vision/)的情况下，这需要多年的专注研究和开发. 因此，网络从使用工作量证明共识开始。 工作量证明共识要求矿工使用他们的计算硬件来解决难题。 难题的解决证明矿工已消耗了能量，表明他们为添加到区块链的权利投入了现实世界的价值。 工作量证明和权益证明都只是决定谁可以添加下一个区块的机制。 将工作量证明换成权益证明，其中投资的实际价值来自直接在智能合约中质押的以太币，因此矿工无需消耗能量即可添加到区块链。 因此，保护网络的环境成本大大降低。
 
 ## 合并 {#the-merge}
 
-自 2020 年 11 月以来，[信标链](/upgrades/beacon-chain/)一直运行权益证明，同时在并行的以太坊主网运行工作量证明。 2022 年，以太坊开发人员通过与他们自己的信标链合并，将几个运行权益证明的**测试网络（测试网）**转换为权益证明。 这有助于客户端团队在迁移到更长期的网络之前测试软件。 在这些测试网之后，以太坊开发人员推出了新的测试网供社区使用 (Kiln & Kintsugi)，并运行了现有测试网和主网的多个影子分叉。 现在这些已经稳定下来，团队正在进入测试的最后阶段：将长期存在的测试网（Ropsten、Goerli、Sepolia）过渡为权益证明。 以太坊主网与信标链的合并预计将在 2022 年下半年进行。 在合并的那一刻，以太坊的工作量证明挖矿将被关闭，权益证明共识将接管，网络消耗的能量将下降到合并前的 <0.05%。
+自 2020 年 11 月以来，[信标链](/upgrades/beacon-chain/)一直运行权益证明，同时在并行的以太坊主网运行工作量证明。 在 2022 年，以太坊开发人员通过与他们自己的信标链合并，将几个运行工作量证明的**测试网络(测试网)**转换为权益证明。 这有助于客户端团队在迁移到更长期的网络之前测试软件。 在这些测试网之后，以太坊开发人员推出了新的测试网供社区使用 (Kiln & Kintsugi)，并运行了现有测试网和主网的多个影子分叉。 现在这些已经稳定下来，团队正在进入测试的最后阶段：将长期存在的测试网（Ropsten、Goerli、Sepolia）过渡为权益证明。 以太坊主网与信标链的合并预计将在 2022 年下半年进行。 在合并的那一刻，以太坊的工作量证明挖矿将被关闭，权益证明共识将接管，网络消耗的能量将下降到合并前的 <0.05%。
 
 ## 为什么权益证明比工作量证明更环保 {#why-pos-is-greener-than-pow}
 
@@ -39,15 +39,15 @@ sidebar: true
 
 ![各行业能源消耗比较](./energy.png)
 
-上图显示了各个行业的年能源消耗，以“TWh/年”为单位（于 2022 年 6 月检索）。 _请注意，图中显示的估算值来自下文链接指向的公开来源。 这些估算值 仅作例证，不代表官方估算、承诺或预测。_
+上图显示了以 TWh/yr 为单位的各个行业的估计年能耗(检索于 2022 年 6 月)。 _请注意，图中显示的估算值来自下文链接指向的公开来源。 这些估算值 仅作例证，不代表官方估算、承诺或预测。_
 
-为了了解以太坊能源消耗的实际情况，我们可以比较其他行业的年度估算值。 如果我们把以太坊看作一个将数字资产作为投资安全持有的平台，或许我们可以将其比作开采黄金，估计花费大约 [240 TWh/年](https://www.kitco.com/news/2021-05-17/Gold-s-energy-consumption-doubles-that-of-bitcoin-Galaxy-Digital.html)。 作为一个数字支付平台，我们或许可以与 PayPal（大约 [0.26 TWh/年](https://app.impaakt.com/analyses/paypal-consumed-264100-mwh-of-energy-in-2020-24-from-non-renewable-sources-27261)）进行比较。 作为一个娱乐平台，我们或许可以将其与游戏行业（估计消耗约 [34 TW/年](https://www.researchgate.net/publication/336909520_Toward_Greener_Gaming_Estimating_National_Energy_Use_and_Energy_Efficiency_Potential)）或 Netflix（消耗约 [94 TWh/年](https://www.carbonbrief.org/factcheck-what-is-the-carbon-footprint-of-streaming-video-on-netflix)），或 Youtube（估计消耗约 [244 TWh/年](https://thefactsource.com/how-much-electricity-does-youtube-use/)）进行比较。 Youtube 的能源消耗估算值已按频道和单个视频进行细分。 [这些估算值](https://thefactsource.com/how-much-electricity-does-youtube-use/)表明，人们在 2019 年观看江南 Style 时消耗的能源是以太坊使用权益证明的 45 倍。
+为了了解以太坊能源消耗的实际情况，我们可以比较其他行业的年度估算值。 如果我们把以太坊看作一个将数字资产作为投资安全持有的平台，或许我们可以将其比作开采黄金，估计花费大约 [240 TWh/年](https://www.kitco.com/news/2021-05-17/Gold-s-energy-consumption-doubles-that-of-bitcoin-Galaxy-Digital.html)。 作为一个数字支付平台，我们或许可以与 PayPal 相提并论(估计消耗大约 [0.26 TWh/yr](https://app.impaakt.com/analyses/paypal-consumed-264100-mwh-of-energy-in-2020-24-from-non-renewable-sources-27261))。 作为一个娱乐平台，我们或许可以将其与游戏行业进行比较，估计花费约 [34 TW/yr](https://www.researchgate.net/publication/336909520_Toward_Greener_Gaming_Estimating_National_Energy_Use_and_Energy_Efficiency_Potential) 。 Netflix 的能源消耗估计值在 [约 0.45TWhr/yr](https://s22.q4cdn.com/959853165/files/doc_downloads/2020/02/0220_Netflix_EnvironmentalSocialGovernanceReport_FINAL.pdf) 之间变化很大(他们的 2019 年报告的自己的估计值)高达约 94 TWh/年(由 [Shift Project](https://theshiftproject.org/en/article/unsustainable-use-online-video/) 估计值) - 在 [Carbon Brief](https://www.carbonbrief.org/factcheck-what-is-the-carbon-footprint-of-streaming-video-on-netflix) 上有一些关于这些估计值的假设的讨论 。 或者，可以将以太坊与 Youtube 进行比较，后者估计花费约 [244 TWh/yr](https://thefactsource.com/how-much-electricity-does-youtube-use/) ，尽管这些值在很大程度上取决于流式传输视频的设备类型以及数据中心等底层基础设施的能源效率。 Youtube 的能源消耗估算值已按频道和单个视频进行细分。 [这些估算值](https://thefactsource.com/how-much-electricity-does-youtube-use/)表明，人们在 2019 年观看江南 Style 时消耗的能源是以太坊使用权益证明的 45 倍。
 
 ## 更加节能的以太坊 {#green-ethereum}
 
 虽然从历史上看，以太坊的能源消耗一直很大，但在将区块生产从耗能转型到节能的过程中，开发人员投入了大量时间和智慧。 引用 [Bankless](http://podcast.banklesshq.com/) 的话，减少工作量证明所消耗能量的最佳方法就是“关闭它”，这便是以太坊承诺采取的方法。
 
-与此同时，以太坊上建立了一个庞大、不断发展且高度活跃的**再生金融 (ReFI)** 社区。 再生金融应用程序使用去中心化金融组件来构建具有积极外部影响，从而使环境受益的金融应用程序。 再生金融是范围更广的“Solarpunk”运动的一部分，该运动与以太坊紧密结合，旨在将技术进步和环境管理结合起来。 以太坊的去中心化、无需许可和可组合的特性使其成为再生金融和 solarpunk 社区的理想基础层。 在合并之后，以太坊的技术和理念将最终调和，以太坊应该成为一种环保技术。
+与此同时，在以太坊上建立了一个庞大、不断发展且高度活跃的**再生金融 (ReFi)** 社区。 再生金融应用程序使用去中心化金融组件来构建具有积极外部影响，从而使环境受益的金融应用程序。 再生金融是范围更广的“Solarpunk”运动的一部分，该运动与以太坊紧密结合，旨在将技术进步和环境管理结合起来。 以太坊的去中心化、无需许可和可组合的特性使其成为再生金融和 solarpunk 社区的理想基础层。 在合并之后，以太坊的技术和理念将最终调和，以太坊应该成为一种环保技术。
 
 <InfoBanner emoji=":evergreen_tree:">
   如果您认为这些数据不正确或可以更加精确，请提出问题或拉取请求。 这些是 ethereum.org 团队使用可公开访问的信息和当前以太坊路线图做出的估计。 这些说法并不代表以太坊基金会的正式承诺。 

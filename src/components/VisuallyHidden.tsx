@@ -33,6 +33,7 @@ const Container = styled.span`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   isHidden?: boolean
 }
 

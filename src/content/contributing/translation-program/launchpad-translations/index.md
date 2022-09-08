@@ -35,6 +35,7 @@ The Launchpad contains 7 source files, all of which should be translated. You ca
 ![Screenshot showing how files are shown in the Crowdin user interface](./launchpad-files.png)
 
 ### Translate {#translate}
+
 After selecting the file you want to translate, it will open in the online editor. If you have never used Crowdin before, you can use this quick guide to go over the basics.
 
 For a more in-depth guide to using Crowdin, visit our [how to translate page](/contributing/translation-program/how-to-translate).

@@ -399,6 +399,10 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
     }
   }
 
+  if (!page.context) {
+    return
+  }
+
   const isTranslated = page.context.locale !== defaultLanguage
   const hasNoContext = page.context.isOutdated === undefined
 

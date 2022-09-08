@@ -59,7 +59,8 @@ sidebar: true
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _ 遵守 Apache 2.0 开源许可并用 Java 编写的开源以太坊客户端_
 - [Infura](https://infura.io/) _对以太坊和 IPFS 网络的可调用的 API 访问_
 - [Provide](https://provide.services/) _为 Enterprise Web3 应用程序提供基础架构和 API_
-- [Unibright](https://unibright.io/) _一个拥有 20 多年业务流程和整合经验的区块链专家、架构师、开发人员和咨询人员团队_
+- [QuickNode](https://www.quicknode.com/) _通过非同质化代币应用程序接口、代币应用程序接口等高级应用程序接口提供可靠、快速的节点，同时提供统一的产品套件和企业级解决方案_
+- [Unibright](https://unibright.io/)_，一个拥有 20 多年业务流程和整合经验的区块链专家、架构师、开发人员和咨询人员团队_
 
 ### 工具和库 {#tooling-and-libraries}
 
@@ -67,7 +68,7 @@ sidebar: true
 - [Epirus](https://www.web3labs.com/epirus) _ Web3 实验室的开发、部署和监控区块链应用程序的平台_
 - [Ernst & Young 的“Nightfall”](https://github.com/EYBlockchain/nightfall) _私有的交易工具包_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _与 Web3 应用提供商一起使用的交易签名应用程序_
-- [Tenderly](https://tenderly.co/) _一个提供实时分析、警报和监测并支持私有网络的数据平台。_
+- [Tenderly](https://tenderly.co/)_，一个提供实时分析、告警和监控，并为专用网络提供支持的数据平台_
 - [Truffle Suite](https://trufflesuite.com) _区块链开发套件（Truffle、Ganache、Drizzle）_
 
 ### 可扩展性解决方案 {#scalability-solutions}
@@ -82,7 +83,7 @@ sidebar: true
   - [Optimism](https://optimism.io/)
   - [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/)
   - [Fuel Network](https://fuel.sh)
-- ZK-rollups（链上数据，ZK 有效性证明）
+- ZK rollups（链上数据，ZK 有效性证明）
   - [Loopring](https://loopring.org)
   - [Starkware](https://starkware.co)
   - [Matter Labs zkSync](https://matter-labs.io/)
@@ -91,7 +92,7 @@ sidebar: true
   - [Starkware](https://starkware.co)
   - [Matter Labs zkPorter](https://matter-labs.io/)
 - Plasma（链下数据，欺诈证明）
-  - [OMG 网络](https://omg.network/)
+  - [OMG Network](https://omg.network/)
   - [Gazelle](https://gzle.io)
   - [Matic Network](https://matic.network/)
   - [LeapDAO](https://ipfs.leapdao.org/)
@@ -112,8 +113,8 @@ sidebar: true
 
 ### 支付 {#payments}
 
-- [Brave 浏览器](https://basicattentiontoken.org/) _让用户关注广告，用户可以通过 BAT 代币支付出版商以支持他们。_
-- [hCaptcha](https://www.hcaptcha.com/) _防止机器人的 CAPTCHA 系统，这个系统将用户标记机器学习数据的费用支付给网站操作者。 现在由 Cloudfllar 部署。_
+- [Brave 浏览器](https://basicattentiontoken.org/) _因用户对广告的关注而向用户支付款项，而用户可以通过基本注意力代币向发行人支付款项，以为其提供支持。_
+- [hCaptcha](https://www.hcaptcha.com/) _防止机器人的 CAPTCHA 系统，这个系统将用户标记机器学习数据的费用支付给网站操作者。 现在由 Cloudflare 部署_
 - [Audius](https://audius.co/) _一个直接连接音乐粉丝和艺术家的流媒体服务，并且允许艺术家由他们的粉丝全额支付，直接和即时支付给每个流媒体_
 - [EthereumAds（以太坊广告）](https://ethereumads.com/) _供网站运营商出售广告空间并通过以太坊获得报酬_
 

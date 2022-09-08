@@ -56,7 +56,7 @@ Per creare costantemente blocchi malevoli ma validi, bisognerebbe avere più del
 
 Il Proof of Work è anche responsabile del rilascio di nuova valuta nel sistema e dell'incentivazione dei miner a fare il proprio lavoro.
 
-I miner che creano correttamente un blocco sono ricompensati con 2 ETH freschi di conio e con tutte le commissioni sulle transazioni all'interno del blocco. Un miner può ottenere anche 1,75 ETH per un blocco zio (uncle block), Con blocco zio si intende un blocco valido creato da un miner praticamente nello stesso momento in cui un altro miner estrae il blocco valido. Questa condizione in genere si verifica a causa della latenza della rete.
+I miner che creano correttamente un blocco sono premiati con due ETH appena coniati, ma non ricevono più tutte le commissioni sulle transazioni, poiché la commissione di base viene bruciata, mentre la mancia e la ricompensa del blocco vanno al miner. Un miner può ottenere anche 1,75 ETH per un blocco zio (uncle block), Con blocco zio si intende un blocco valido creato da un miner praticamente nello stesso momento in cui un altro miner estrae il blocco valido. Questa condizione in genere si verifica a causa della latenza della rete.
 
 ## Finalità {#finality}
 

@@ -1,7 +1,7 @@
 // Libraries
-import React, { useContext } from "react"
+import React from "react"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 import styled from "@emotion/styled"
 import { useTheme } from "@emotion/react"
@@ -15,10 +15,11 @@ import PageMetadata from "../../../components/PageMetadata"
 import Translation from "../../../components/Translation"
 import TranslationLeaderboard from "../../../components/TranslationLeaderboard"
 import { Content, Page } from "../../../components/SharedStyledComponents"
+import FeedbackCard from "../../../components/FeedbackCard"
 
 // Utils
 import { translateMessageId } from "../../../utils/translations"
-import FeedbackCard from "../../../components/FeedbackCard"
+import { getImage } from "../../../utils/image"
 
 // Styles
 const H1 = styled.h1`
@@ -159,7 +160,7 @@ const TranslatorAcknowledgements = ({
           </LeftColumn>
           <RightColumn>
             <Image
-              image={getImage(data.dogeComputer)}
+              image={getImage(data.dogeComputer)!}
               alt={translateMessageId(
                 "page-contributing-translation-program-acknowledgements-hero-image-alt",
                 intl
@@ -201,7 +202,7 @@ const TranslatorAcknowledgements = ({
             "page-contributing-translation-program-acknowledgements-our-translators-cta",
             intl
           )}
-          image={getImage(data.ethereum)}
+          image={getImage(data.ethereum)!}
         />
       </Content>
 
@@ -220,7 +221,7 @@ const TranslatorAcknowledgements = ({
         </p>
         <CertificateImageWrapper>
           <Image
-            image={getImage(themedCertificateImage)}
+            image={getImage(themedCertificateImage)!}
             alt="translator certificate"
             objectFit="contain"
           />
