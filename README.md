@@ -1381,6 +1381,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/pankajjagtapp"><img src="https://avatars.githubusercontent.com/u/89507661?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pankaj Jagtap</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=pankajjagtapp" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/hannsu"><img src="https://avatars.githubusercontent.com/u/20453231?v=4?s=100" width="100px;" alt=""/><br /><sub><b>nulun</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=hannsu" title="Code">💻</a></td>
     </tr>
+    <tr>
+      <td align="center"><a href="https://github.com/Denllay"><img src="https://avatars.githubusercontent.com/u/75447714?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Denllay</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Denllay" title="Documentation">📖</a> <a href="#translation-Denllay" title="Translation">🌍</a></td>
+    </tr>
   </tobdy>
 </table>
 
