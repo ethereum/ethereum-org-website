@@ -1,19 +1,11 @@
 // Libraries
 import React from "react"
-import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Translation from "./Translation"
 import { TranslationKey } from "../utils/translations"
 // Components
 import Emoji from "./OldEmoji"
-import { Flex, Text } from "@chakra-ui/react"
-
-const Image = styled(GatsbyImage)`
-  margin-top: -10rem;
-  align-self: center;
-  max-width: 263px;
-  min-height: 200px;
-`
+import { Flex, Image, Text } from "@chakra-ui/react"
 
 export interface IProps {
   children?: React.ReactNode
@@ -49,7 +41,17 @@ const Callout: React.FC<IProps> = ({
     borderRadius="base"
     className={className}
   >
-    {image && <Image image={image} alt={alt} />}
+    {image && (
+      <Image
+        as={GatsbyImage}
+        image={image}
+        alt={alt}
+        mt={-40}
+        alignSelf="center"
+        maxW="263px"
+        minH="200px"
+      />
+    )}
     <Flex direction="column" justify="space-between" mt={10} h="full">
       <div>
         {emoji && <Emoji text={emoji} size={3} />}
