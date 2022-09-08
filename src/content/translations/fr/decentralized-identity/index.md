@@ -174,11 +174,12 @@ Il existe de nombreux projets ambitieux utilisant Ethereum comme base pour des s
 ### Vidéos {#videos}
 
 - [Identité décentralisée (Bonus Session Livestream)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Une formidable vidéo explicative sur l'identité décentralisée par Andreas Antonopolous_
-- [Connexion avec Ethereum et Identité décentralisée avec Ceramic, IDX, React, et 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _tutoriel YouTube sur la création d'un système de gestion d'identité pour créer, lire et mettre à jour un profil d'utilisateur en utilisant son portefeuille Ethereum par Nader Dabit_
+- [Connexion avec Ethereum et Decentralized Identity avec Ceramic, IDX, React, et 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _tutoriel YouTube sur la création d'un système de gestion d'identité pour créer, lire et mettre à jour un profil d'utilisateur en utilisant son portefeuille Ethereum par Nader Dabit_
 - [BrightID - Identité décentralisée sur Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Épisode de podcast non bancaire parlant de BrightID, une solution d'identité décentralisée pour Ethereum_
-- [The Off Chain Internet: Decentralized Identity & Verifiable Credentials](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — _EthDenver 2022 présentation de Evin McMullen_
+- [The Off Chain Internet : Identités décentralisées & Références vérifiables](https://www.youtube.com/watch?v=Ez_Bb6j87mg) — _Présentation EthDenver 2022 par Evin McMullen_
 
 ### Communautés {#communities}
 
 - [ERC-725 Alliance sur GitHub](https://github.com/erc725alliance) — _Supporters de la norme ERC725 pour la gestion d'identité sur la blockchain Ethereum_
 - [Serveur Discord SpruceID](https://discord.com/invite/Sf9tSFzrnt) — _Communauté pour les adeptes et les développeurs travaillant sur la connexion avec Ethereum_
+- [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Une communauté de développeurs contribuant à la construction d'un framework de données vérifiables pour les applications_

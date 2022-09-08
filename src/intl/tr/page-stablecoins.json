@@ -142,5 +142,7 @@
   "page-stablecoins-why-stablecoins": "Neden sabit paralar?",
   "page-stablecoins-how-they-work-button": "Nasıl çalışırlar",
   "page-stablecoins-why-stablecoins-body": "ETH, Bitcoin gibi, yeni bir teknoloji olduğu için değişken bir fiyata sahiptir. Bu yüzden düzenli olarak harcamak istemeyebilirsiniz. Sabit paralar, Ethereum'da kullanabileceğiniz istikrarlı paraya erişmenizi sağlamak için geleneksel para birimlerinin değerini yansıtır.",
-  "page-stablecoins-more-defi-button": "Merkeziyetsiz Finans (DeFi) hakkında daha fazla bilgi"
+  "page-stablecoins-more-defi-button": "Merkeziyetsiz Finans (DeFi) hakkında daha fazla bilgi",
+  "page-stablecoins-tools-title": "Sabit paralar hakkında daha fazla bilgi edinin",
+  "page-stablecoins-tools-stablecoinswtf-description": "Stablecoins.wtf, en önde gelen sabit paralar için geçmiş piyasa verileri, istatistikler ve eğitim içeriği içeren bir gösterge tablosu sunar."
 }

@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
-import { getImage } from "gatsby-plugin-image"
 import styled from "@emotion/styled"
 
 import ButtonDropdown, {
@@ -26,6 +25,7 @@ import StakingHomeTableOfContents from "../../components/Staking/StakingHomeTabl
 import StakingCommunityCallout from "../../components/Staking/StakingCommunityCallout"
 
 import { translateMessageId, TranslationKey } from "../../utils/translations"
+import { getImage } from "../../utils/image"
 import type { Context } from "../../types"
 
 const HeroStatsWrapper = styled.div`
@@ -255,7 +255,7 @@ const StakingPage = ({
     title: translateMessageId("page-staking-hero-title", intl),
     header: translateMessageId("page-staking-hero-header", intl),
     subtitle: translateMessageId("page-staking-hero-subtitle", intl),
-    image: getImage(data.rhino),
+    image: getImage(data.rhino)!,
     alt: translateMessageId("page-staking-image-alt", intl),
     buttons: [],
   }
@@ -648,52 +648,67 @@ const StakingPage = ({
             <ul>
               <li>
                 <Link to="https://vitalik.ca/general/2020/11/06/pos2020.html">
-                  Why Proof of Stake (Nov 2020)
+                  <Translation id="page-staking-further-reading-1-link" />
                 </Link>{" "}
-                <i>- Vitalik Buterin </i>
+                -{" "}
+                <i>
+                  <Translation id="page-staking-further-reading-author-vitalik-buterin" />
+                </i>
               </li>
               <li>
                 <Link to="https://notes.ethereum.org/9l707paQQEeI-GPzVK02lA?view#">
-                  Serenity Design Rationale
+                  <Translation id="page-staking-further-reading-2-link" />
                 </Link>{" "}
-                <i>- Vitalik Buterin </i>
+                -{" "}
+                <i>
+                  <Translation id="page-staking-further-reading-author-vitalik-buterin" />
+                </i>
               </li>
               <li>
                 <Link to="https://vitalik.ca/general/2017/12/31/pos_faq.html">
-                  Proof of Stake FAQ (Dec 2017)
+                  <Translation id="page-staking-further-reading-3-link" />
                 </Link>{" "}
-                <i>- Vitalik Buterin</i>
+                -{" "}
+                <i>
+                  <Translation id="page-staking-further-reading-author-vitalik-buterin" />
+                </i>
               </li>
               <li>
                 <Link to="https://hackmd.io/@benjaminion/eth2_news">
-                  Eth2 News
+                  <Translation id="page-staking-further-reading-4-link" />
                 </Link>{" "}
-                <i>- Ben Edgington</i>
+                -{" "}
+                <i>
+                  <Translation id="page-staking-further-reading-4-author" />
+                </i>
               </li>
               <li>
                 <Link to="https://blog.ethereum.org/2022/01/31/finalized-no-33/">
-                  Finalized no. 33, the Ethereum consensus-layer (Jan 2022)
+                  <Translation id="page-staking-further-reading-5-link" />
                 </Link>{" "}
-                <i>- Danny Ryan</i>
+                -{" "}
+                <i>
+                  <Translation id="page-staking-further-reading-5-author" />
+                </i>
               </li>
               <li>
                 <Link to="https://www.attestant.io/posts/">
-                  Attestant Posts
+                  <Translation id="page-staking-further-reading-6-link" />
                 </Link>
               </li>
               <li>
                 <Link to="https://kb.beaconcha.in/">
-                  Beaconcha.in Knowledge Base
+                  <Translation id="page-staking-further-reading-7-link" />
                 </Link>
               </li>
               <li>
                 <Link to="https://beaconcha.in/education">
-                  Beaconcha.in Community-Contributed Educational Materials
+                  <Translation id="page-staking-further-reading-8-link" />
                 </Link>
               </li>
               <li>
                 <Link to="https://launchpad.ethereum.org/en/faq">
-                  Ethereum Staking Launchpad FAQ
+                  <Translation id="page-staking-further-reading-9-link" />
                 </Link>
               </li>
             </ul>

@@ -16,7 +16,7 @@ For more visual learners, watch Luka walk through getting set up with Crowdin. A
 ## Written guide {#written-guide}
 
 ### Join our project in Crowdin {#join-project}
- 
+
 You will need to log in to your Crowdin account or sign up if you don’t already have one. All that is required to sign up is an e-mail account and password.
 
 <ButtonLink to="https://crowdin.com/project/ethereum-org/invite">
@@ -31,7 +31,7 @@ Each language also contains information on the total amount of translatable word
 Open the language you want to translate into to see the list of files, available for translation.
 
 ![List of languages in Crowdin](./list-of-languages.png)
- 
+
 ### Find a document to work on {#find-document}
 
 The website content is divided into a number of documents and content buckets. You can check the progress of each document on the right – if translation progress is below 100%, please contribute!
@@ -47,7 +47,7 @@ We encourage you to translate in this numerical order (1 → 2 → 3 → ⋯) to
 [Learn more about ethereum.org content buckets](/contributing/translation-program/content-buckets/)
 
 ### Translate {#translate}
- 
+
 After selecting the file you want to translate, it will open in the online editor. If you have never used Crowdin before, you can use this quick guide to go over the basics.
 
 ![Crowdin online editor](./online-editor.png)

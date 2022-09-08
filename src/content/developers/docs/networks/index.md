@@ -32,9 +32,9 @@ You should test any contract code you write on a testnet before deploying to Mai
 
 Most testnets use a proof-of-authority consensus mechanism. This means a small number of nodes are chosen to validate transactions and create new blocks – staking their identity in the process. Testnets do not incentivize proof-of-work mining, which can leave them vulnerable.
 
-As [The Merge](/upgrades/merge) get closer more of the public proof-of-work and proof-of-authority testnets are becoming proof-of-stake. Swapping their consensus mechanisms acts as rehearsals for the Ethereum Mainnet merge. Ropsten, Sepolia and Goerli are all expected to be proof-of-stake networks by the end of summer 2022, with Goerli being maintained long term.
+As [The Merge](/upgrades/merge) gets closer, more of the public proof-of-work and proof-of-authority testnets are upgrading to proof-of-stake. Swapping their consensus mechanisms acts as a rehearsal for the Ethereum Mainnet merge. Ropsten, Sepolia and Goerli are all expected to be proof-of-stake networks by the end of summer 2022, with Goerli being maintained long term.
 
-ETH on testnets has no real value; therefore, there are no markets for testnet ETH. Since you need ETH to actually interact with Ethereum, most people get testnet ETH from faucets. Most faucets are webapps where you can input an address which you request ETH to be sent to.
+ETH on testnets has no real value; therefore, there are no markets for testnet ETH. Since you need ETH to actually interact with the Ethereum network, most people get testnet ETH from faucets. Most faucets are web-apps where you can input an address and request ETH to be sent.
 
 #### Sepolia {#sepolia}
 

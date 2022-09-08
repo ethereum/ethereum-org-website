@@ -1,6 +1,6 @@
 ---
-title: Dagger-Hashamoto
-description: A detailed look at the Dagger-Hashamoto algorithm.
+title: Dagger-Hashimoto
+description: A detailed look at the Dagger-Hashimoto algorithm.
 lang: en
 sidebar: true
 ---

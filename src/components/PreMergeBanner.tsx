@@ -20,6 +20,7 @@ const StyledBannerNotification = styled(BannerNotification)`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   announcementOnly?: boolean
   className?: string
 }

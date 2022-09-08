@@ -91,4 +91,4 @@ sidebar: true
 
 虽然这些原则主要体现在 ethereum.org 网站上，但我们希望其中许多原则能够代表以太坊生态系统的整体价值（例如，您可以看到[以太坊原则白皮书](https://github.com/ethereum/wiki/wiki/White-Paper#philosophy)的影响）。 也许您甚至想将其中一些原则运用到您自己的项目中！
 
-请通过 [Discord 服务器](https://discord.gg/CetY6Y4)或者[创建一个提议](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=)来分享您的想法。
+请通过 [Discord 服务器](https://discord.gg/CetY6Y4)或者[创建一个提议](<(https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=)>)来分享您的想法。
