@@ -166,19 +166,20 @@ Esistono molti progetti ambiziosi che usano Ethereum come fondamenta per le solu
 
 ### Articoli {#articles}
 
-- [Blockchain Use Cases: Blockchain in Digital Identity](https://consensys.net/blockchain-use-cases/digital-identity/) — _ConsenSys_
-- [What is Ethereum ERC725? Self-Sovereign Identity Management on the Blockchain](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _Sam Town_
-- [How Blockchain Could Solve the Problem of Digital Identity](https://time.com/6142810/proof-of-humanity/) — _Andrew R. Chow_
-- [What Is Decentralized Identity And Why Should You Care?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
+- [Casi d'Uso della Blockchain: La Blockchain nell'Identità Digitale](https://consensys.net/blockchain-use-cases/digital-identity/) — _ConsenSys_
+- [Cos'è Ethereum ERC725? Gestione dell'Identità Sovrana Personale sulla Blockchain](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _Sam Town_
+- [Come la Blockchain Potrebbe Risolvere il Problema dell'Identità Digitale](https://time.com/6142810/proof-of-humanity/) — _Andrew R. Chow_
+- [Cos'È l'Identità Decentralizzata e Perché Dovrebbe Interessarti?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
 
 ### Video {#videos}
 
-- [Decentralized Identity (Bonus Livestream Session)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Un eccellente video che spiega le identità decentralizzate di Andreas Antonopolous_
-- [Sign In with Ethereum and Decentralized Identity with Ceramic, IDX, React, and 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _Tutorial YouTube sulla creazione di un sistema di gestione delle identità per creare, leggere e aggiornare il profilo di un utente usando il suo portafoglio di Ethereum, di Nader Dabit_
-- [BrightID - Decentralized Identity on Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Episodio del podcast Bankless, discussione su BrightID, una soluzione di identità decentralizzata per Ethereum_
-- [The Off Chain Internet: Decentralized Identity & Verifiable Credentials](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — Presentazione di EthDenver 2022 di Evin McMullen
+- [Identità Decentralizzata (Sessione Live Bonus)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Un ottimo video esplicativo sull'identità decentralizzata di Andreas Antonopolous_
+- [Accedi con Ethereum e l'Identità Decentralizzata con Ceramic, IDX, React e 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _Tutorial YouTube sulla costruzione di un sistema di gestione dell'identità per creare, leggere e aggiornare il profilo di un utente usando il proprio portafoglio Ethereum, di Nader Dabit_
+- [BrightID - Identità Decentralizzata su Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Episodio del podcast Bankless, discussione su BrightID, una soluzione di identità decentralizzata per Ethereum_
+- [L'Internet al Di Fuori della Catena: Identità Decentralizzata e Credenziali Verificabili](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — Presentazione di EthDenver 2022 di Evin McMullen
 
 ### Community {#communities}
 
-- [ERC-725 Alliance on GitHub](https://github.com/erc725alliance) — _Sostenitori dello standard ERC725 per la gestione dell'identità sulla blockchain di Ethereum_
-- [SpruceID Discord server](https://discord.com/invite/Sf9tSFzrnt) — _Community di appassionati e sviluppatori al lavoro sulle funzioni di login con Ethereum_
+- [ERC-725 Alliance su GitHub](https://github.com/erc725alliance) — _Sostenitori dello standard ERC725 per la gestione dell'identità sulla blockchain di Ethereum_
+- [Server Discord di SpruceID](https://discord.com/invite/Sf9tSFzrnt) — _Community per appassionati e sviluppatori al lavoro sull'Accesso con Ethereum_
+- [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Una community di sviluppatori che contribuiscono a creare una rete per i dati verificabili per le applicazioni_

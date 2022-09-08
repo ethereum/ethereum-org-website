@@ -33,7 +33,7 @@ Dato un vecchio stato valido `(S)` e un nuovo set di transazioni valide `(T)`, l
 
 ### Stato {#state}
 
-Nell'ambito di Ethereum, lo stato è un'enorme struttura di dati chiamata [albero di Merkle Patricia modificato](https://eth.wiki/en/fundamentals/patricia-tree), che tiene tutti gli [account](/developers/docs/accounts/) collegati tramite hash e riducibili a un singolo hash radice memorizzato sulla blockchain.
+Nell'ambito di Ethereum, lo stato è un'enorme struttura di dati chiamata [albero di Merkle Patricia modificato](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/), che tiene tutti gli [account](/developers/docs/accounts/) collegati tramite hash e riducibili a un singolo hash radice memorizzato sulla blockchain.
 
 ### Transazioni {#transactions}
 
@@ -57,7 +57,7 @@ Il bytecode compilato dello smart contract compilato viene eseguito come numero 
 
 Tutte le implementazioni dell'EVM devono rispettare le specifiche descritte nello Yellowpaper di Ethereum.
 
-Nei 5 anni di storia di Ethereum, l'EVM ha subito diverse revisioni, ed esistono diverse implementazioni dell'EVM in vari linguaggi di programmazione.
+Nei 7 anni di storia di Ethereum, l'EVM ha subito diverse revisioni, ed esistono diverse implementazioni dell'EVM in vari linguaggi di programmazione.
 
 Tutti i [client Ethereum](/developers/docs/nodes-and-clients/#execution-clients) includono un'implementazione dell'EVM. Inoltre, esistono diverse implementazioni standalone, tra cui:
 

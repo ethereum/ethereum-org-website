@@ -100,7 +100,7 @@ const ProductList: React.FC<IProps> = ({ content, category }) => (
             <ItemDesc>{description}</ItemDesc>
           </LeftContainer>
           {link && (
-            <StyledButton isSecondary to={link}>
+            <StyledButton variant="outline" to={link}>
               <Translation id="page-dapps-ready-button" />
             </StyledButton>
           )}

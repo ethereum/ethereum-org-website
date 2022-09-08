@@ -3,12 +3,12 @@ import React, { useState, createRef } from "react"
 import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 import { motion } from "framer-motion"
+import { MdMenu } from "react-icons/md"
 
 // Components
-import Icon from "./Icon"
 import Link from "./Link"
+import Button from "./Button"
 import Translation from "./Translation"
-import { ButtonSecondary } from "./SharedStyledComponents"
 
 // Utils
 import { useOnClickOutside } from "../hooks/useOnClickOutside"
@@ -65,24 +65,6 @@ const listVariants = {
   },
 }
 
-const Button = styled(ButtonSecondary)`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  min-width: 240px;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 100%;
-    justify-content: center;
-  }
-`
-
-const StyledIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-right: 1rem;
-  }
-`
-
 const DropdownItem = styled.li`
   margin: 0;
   color: ${(props) => props.theme.colors.text};
@@ -98,6 +80,7 @@ const NavLink = styled(Link)`
   padding: 0.5rem;
   color: ${(props) => props.theme.colors.text};
   &:hover {
+    text-decoration: none;
     color: ${(props) => props.theme.colors.primary};
   }
 `
@@ -156,11 +139,13 @@ const ButtonDropdown: React.FC<IProps> = ({ list, className }) => {
       aria-label={`Select ${translateMessageId(list.text, intl)}`}
     >
       <Button
+        variant="outline"
+        minW={{ base: "100%", lg: "240" }}
+        leftIcon={<MdMenu />}
         onClick={() => setIsOpen(!isOpen)}
         onKeyDown={onKeyDownHandler}
         tabIndex={0}
       >
-        <StyledIcon name="menu" />
         <Translation id={list.text} />
       </Button>
       <DropdownList
