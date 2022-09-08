@@ -8733,6 +8733,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Cryptolibertarian-id",
+      "name": "Cryptolibertarian.id",
+      "avatar_url": "https://avatars.githubusercontent.com/u/108990005?v=4",
+      "profile": "http://cryptolibertarian.id",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
