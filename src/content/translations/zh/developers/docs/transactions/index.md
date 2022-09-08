@@ -3,11 +3,12 @@ title: 交易
 description: 以太坊交易 – 工作原理、数据结构以及如何通过应用发送。
 lang: zh
 sidebar: true
+preMergeBanner: true
 ---
 
-交易是来自帐户的密码学签名指令。 帐户将发起交易以更新以太坊网络的状态。 最简单的交易是将 ETH 从一个账户转到另一个帐户。
+交易是由帐户发出，带密码学签名的指令。 帐户将发起交易以更新以太坊网络的状态。 最简单的交易是将 ETH 从一个账户转到另一个帐户。
 
-## 先决条件 {#prerequisites}
+## 前置要求 {#prerequisites}
 
 为了帮助您更好地理解这个页面，我们建议您先阅读[账户](/developers/docs/accounts/)和我们的[以太坊简介](/developers/docs/intro-to-ethereum/)。
 
@@ -40,10 +41,10 @@ Gas 是指矿工处理交易所需的算力。 用户必须为此计算支付费
   from: "0xEA674fdDe714fd979de3EdF0F56AA9716B898ec8",
   to: "0xac03bb73b6a9e108530aff4df5077c2b3d481e5a",
   gasLimit: "21000",
-  maxFeePerGas: "300",
-  maxPriorityFeePerGas: "10",
+  maxFeePerGas: "300"
+  maxPriorityFeePerGas: "10"
   nonce: "0",
-  value: "10000000000"
+  value: "10000000000",
 }
 ```
 
@@ -105,7 +106,7 @@ Geth 这样的以太坊客户端将处理此签名过程。
 
 ### `data`字段 {#the-data-field}
 
-绝大多数交易从外部所有的帐户访问合约。 大多数合约用 Solidity 语言编写，并根据[应用程序二进制接口 (ABI)](/glossary/#abi应用应用应用/) 解释其`data`字段。
+绝大多数交易从外部所有的帐户访问合约。 大多数合约用 Solidity 语言编写，并根据[应用程序二进制接口 (ABI)](/glossary/#abi) 解释其`data`字段。
 
 前四个字节使用函数名称和参数的哈希指定要调用的函数。 有时可以使用[本数据库](https://www.4byte.directory/signatures/)根据选择器识别函数。
 
@@ -128,7 +129,7 @@ Geth 这样的以太坊客户端将处理此签名过程。
 
 以太坊有几种不同类型的交易：
 
-- 常规交易：从一个钱包到另一个钱包的交易。
+- 常规交易：从一个帐户到另一个帐户的交易。
 - 合约部署交易：没有“to”地址的交易，数据字段用于合约代码。
 - 执行合约：与已部署的智能合约进行交互的交易。 在这种情况下，“to”地址是智能合约地址。
 
@@ -205,5 +206,5 @@ _还有哪些社区资源对您有所帮助？ 请编辑本页面并添加它！
 
 - [帐户](/developers/docs/accounts/)
 - [以太坊虚拟机 (EVM)](/developers/docs/evm/)
-- [Gas](/developers/docs/gas/)
+- [燃料](/developers/docs/gas/)
 - [矿工](/developers/docs/consensus-mechanisms/pow/mining/)
