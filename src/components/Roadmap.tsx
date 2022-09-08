@@ -169,7 +169,7 @@ const Roadmap: React.FC<IProps> = () => {
         .
       </p>
       <p>
-        <Translation id="page-about-p-2" />{" "}
+        <Translation id="page-about-p-2" />
         <Link to="https://github.com/ethereum/ethereum-org-website">
           <Translation id="page-about-link-2" />
         </Link>
@@ -193,9 +193,9 @@ const Roadmap: React.FC<IProps> = () => {
         <Translation id="page-about-h3" />
       </h3>
       <p>
-        <Translation id="page-about-p-5" />{" "}
+        <Translation id="page-about-p-5" />
         <Link to="https://github.com/ethereum/ethereum-org-website/labels/Status%3A%20In%20Progress">
-          <Translation id="page-about-link-3" />{" "}
+          <Translation id="page-about-link-3" />
         </Link>
         .
       </p>
@@ -204,7 +204,7 @@ const Roadmap: React.FC<IProps> = () => {
         <Translation id="page-about-h3-2" />
       </h3>
       <p>
-        <Translation id="page-about-p-6" />{" "}
+        <Translation id="page-about-p-6" />
         <Link to="https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aissue+is%3Aopen+label%3A%22Status%3A+Up+Next%22">
           <Translation id="page-about-link-3" />
         </Link>
@@ -215,9 +215,9 @@ const Roadmap: React.FC<IProps> = () => {
         <Translation id="page-about-h3-1" />
       </h3>
       <p>
-        <Translation id="page-about-p-7" />{" "}
+        <Translation id="page-about-p-7" />
         <Link to="https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aissue+is%3Aclosed">
-          <Translation id="page-about-link-6" />{" "}
+          <Translation id="page-about-link-6" />
         </Link>
         .
       </p>
