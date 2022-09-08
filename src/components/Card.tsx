@@ -1,9 +1,6 @@
 import React, { ReactNode } from "react"
-import styled from "@emotion/styled"
 import Emoji from "./Emoji"
 import { Flex, Text } from "@chakra-ui/react"
-
-const TopContent = styled.div``
 
 export interface IProps {
   children?: React.ReactNode
@@ -30,7 +27,7 @@ const Card: React.FC<IProps> = ({
     p={6}
     className={className}
   >
-    <TopContent>
+    <div>
       {emoji && <Emoji fontSize="5xl" text={emoji} mb={4} />}
       {title && (
         <Text as="h3" mt={0}>
@@ -42,7 +39,7 @@ const Card: React.FC<IProps> = ({
           {description}
         </Text>
       )}
-    </TopContent>
+    </div>
     {children}
   </Flex>
 )
