@@ -29,7 +29,7 @@ import {
   ListItem,
   KBD,
 } from "../components/SharedStyledComponents"
-import Emoji from "../components/Emoji"
+import Emoji from "../components/OldEmoji"
 import YouTube from "../components/YouTube"
 import PreMergeBanner from "../components/PreMergeBanner"
 import FeedbackCard from "../components/FeedbackCard"

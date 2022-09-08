@@ -85,7 +85,7 @@ Per i prodotti del software correlati alla configurazione del nodo o del client,
 
 **Quali client del livello del consenso (ad es. Lighthouse, Teku, Nimbus, Prysm) sono supportati?**
 
-- Quali clienti sono supportati? L'utente può scegliere?
+- Quali client sono supportati? L'utente può scegliere?
 - Questo serve a determinare il punteggio "multi-client" dei prodotti.
 
 #### Staking come servizio {#staking-as-a-service}

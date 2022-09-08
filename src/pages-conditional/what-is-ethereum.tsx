@@ -1,14 +1,15 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { useTheme } from "@emotion/react"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 
 import Translation from "../components/Translation"
 import Callout from "../components/Callout"
 import Card from "../components/Card"
-import OriginalButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/ButtonLink"
+import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
 import Tooltip from "../components/Tooltip"
 import Tabs from "../components/Tabs"
@@ -41,6 +42,7 @@ import {
 } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { trackCustomEvent } from "../utils/matomo"
+import { getImage, getSrc } from "../utils/image"
 
 import useFetchStat, {
   defaultFormatter,
@@ -204,15 +206,15 @@ const StatDescription = styled.div`
   color: ${({ theme }) => theme.colors.text200};
 `
 
-const ButtonLink = styled(OriginalButtonLink)``
-
 const ButtonRow = styled.div`
   display: flex;
   align-items: center;
   margin-top: 1rem;
+  margin-bottom: 1.45rem;
   flex-wrap: wrap;
 
-  & ${ButtonLink} {
+  & > button,
+  & > a {
     margin-right: 1rem;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
@@ -399,7 +401,7 @@ const WhatIsEthereumPage = ({
   const tooltipContent = ({ apiUrl, apiProvider, ariaLabel }) => (
     <div>
       <Translation id="data-provided-by" />{" "}
-      <Link to={apiUrl} ariaLabel={ariaLabel}>
+      <Link to={apiUrl} aria-label={ariaLabel}>
         {apiProvider}
       </Link>
     </div>
@@ -413,7 +415,7 @@ const WhatIsEthereumPage = ({
           "page-what-is-ethereum-meta-description",
           intl
         )}
-        image={getImage(data.ogImage)?.images.fallback.src}
+        image={getSrc(data.ogImage)}
       />
       <Content>
         <HeroContainer>
@@ -428,13 +430,13 @@ const WhatIsEthereumPage = ({
               <Translation id="page-what-is-ethereum-subtitle" />
             </Subtitle>
             <ButtonRow>
-              <ButtonLink toId="summary">
+              <Button toId="summary">
                 <Translation id="page-what-is-ethereum-button-lets-start" />
-              </ButtonLink>
+              </Button>
             </ButtonRow>
           </Header>
           <Hero
-            image={getImage(data.hero)}
+            image={getImage(data.hero)!}
             alt={translateMessageId(
               "page-what-is-ethereum-alt-img-bazaar",
               intl
@@ -465,7 +467,7 @@ const WhatIsEthereumPage = ({
             <TwoColumnContent reverse>
               <Width40>
                 <GatsbyImage
-                  image={getImage(data.whatIsCryptocurrency)}
+                  image={getImage(data.whatIsCryptocurrency)!}
                   alt=""
                 />
               </Width40>
@@ -511,7 +513,7 @@ const WhatIsEthereumPage = ({
         <Section>
           <TwoColumnContent>
             <Width40>
-              <GatsbyImage image={getImage(data.diffEthAndBtc)} alt="" />
+              <GatsbyImage image={getImage(data.diffEthAndBtc)!} alt="" />
             </Width40>
             <Width60>
               <h2>
@@ -677,7 +679,7 @@ const WhatIsEthereumPage = ({
               </BannerGrid>
             </BannerBody>
             <BannerImage>
-              <GatsbyImage image={getImage(data.stats)} alt="" />
+              <GatsbyImage image={getImage(data.stats)!} alt="" />
             </BannerImage>
           </Banner>
         </Section>
@@ -756,7 +758,7 @@ const WhatIsEthereumPage = ({
         <Section bgColor={theme.colors.homeBoxTurquoise}>
           <TwoColumnContent>
             <Width40>
-              <GatsbyImage image={getImage(data.ethCoin)} alt="" />
+              <GatsbyImage image={getImage(data.ethCoin)!} alt="" />
             </Width40>
             <Width60>
               <h2>
@@ -768,16 +770,14 @@ const WhatIsEthereumPage = ({
               <p>
                 <Translation id="page-what-is-ethereum-meet-ether-desc-2" />
               </p>
-              <p>
-                <ButtonRow>
-                  <ButtonLink to="/eth/">
-                    <Translation id="page-what-is-ethereum-what-is-ether" />
-                  </ButtonLink>
-                  <ButtonLink to="/get-eth/" isSecondary>
-                    <Translation id="page-what-is-ethereum-get-eth" />
-                  </ButtonLink>
-                </ButtonRow>
-              </p>
+              <ButtonRow>
+                <ButtonLink to="/eth/">
+                  <Translation id="page-what-is-ethereum-what-is-ether" />
+                </ButtonLink>
+                <ButtonLink to="/get-eth/" variant="outline">
+                  <Translation id="page-what-is-ethereum-get-eth" />
+                </ButtonLink>
+              </ButtonRow>
             </Width60>
           </TwoColumnContent>
         </Section>
@@ -785,7 +785,7 @@ const WhatIsEthereumPage = ({
         <Section>
           <TwoColumnContent reverse>
             <Width40>
-              <GatsbyImage image={getImage(data.meetEth)} alt="" />
+              <GatsbyImage image={getImage(data.meetEth)!} alt="" />
             </Width40>
             <Width60>
               <h2>
@@ -794,16 +794,14 @@ const WhatIsEthereumPage = ({
               <p>
                 <Translation id="page-what-is-ethereum-what-can-i-do-desc-1" />
               </p>
-              <p>
-                <ButtonRow>
-                  <ButtonLink to="/dapps/">
-                    <Translation id="page-what-is-ethereum-explore-applications" />
-                  </ButtonLink>
-                  <ButtonLink to="/defi/" isSecondary>
-                    <Translation id="page-what-is-ethereum-learn-defi" />
-                  </ButtonLink>
-                </ButtonRow>
-              </p>
+              <ButtonRow>
+                <ButtonLink to="/dapps/">
+                  <Translation id="page-what-is-ethereum-explore-applications" />
+                </ButtonLink>
+                <ButtonLink to="/defi/" variant="outline">
+                  <Translation id="page-what-is-ethereum-learn-defi" />
+                </ButtonLink>
+              </ButtonRow>
             </Width60>
           </TwoColumnContent>
         </Section>
@@ -811,7 +809,7 @@ const WhatIsEthereumPage = ({
         <Section bgColor={theme.colors.homeBoxPurple}>
           <TwoColumnContent>
             <Width40>
-              <GatsbyImage image={getImage(data.whoRunsEthereum)} alt="" />
+              <GatsbyImage image={getImage(data.whoRunsEthereum)!} alt="" />
             </Width40>
             <Width60>
               <h2>
@@ -823,13 +821,11 @@ const WhatIsEthereumPage = ({
               <p>
                 <Translation id="page-what-is-ethereum-who-runs-ethereum-desc-2" />
               </p>
-              <p>
-                <ButtonRow>
-                  <ButtonLink to="/run-a-node/">
-                    <Translation id="page-what-is-ethereum-run-a-node" />
-                  </ButtonLink>
-                </ButtonRow>
-              </p>
+              <ButtonRow>
+                <ButtonLink to="/run-a-node/">
+                  <Translation id="page-what-is-ethereum-run-a-node" />
+                </ButtonLink>
+              </ButtonRow>
             </Width60>
           </TwoColumnContent>
         </Section>
@@ -838,7 +834,7 @@ const WhatIsEthereumPage = ({
           <TwoColumnContent reverse>
             <Width40>
               <GatsbyImage
-                image={getImage(data.whatAreSmartContracts)}
+                image={getImage(data.whatAreSmartContracts)!}
                 alt=""
               />
             </Width40>
@@ -855,16 +851,14 @@ const WhatIsEthereumPage = ({
               <p>
                 <Translation id="page-what-is-ethereum-smart-contract-desc-3" />
               </p>
-              <p>
-                <ButtonRow>
-                  <ButtonLink to="/smart-contracts/">
-                    <Translation id="page-what-is-ethereum-more-on-smart-contracts" />
-                  </ButtonLink>
-                  <ButtonLink to="/dapps/" isSecondary>
-                    <Translation id="page-what-is-ethereum-explore-dapps" />
-                  </ButtonLink>
-                </ButtonRow>
-              </p>
+              <ButtonRow>
+                <ButtonLink to="/smart-contracts/">
+                  <Translation id="page-what-is-ethereum-more-on-smart-contracts" />
+                </ButtonLink>
+                <ButtonLink to="/dapps/" variant="outline">
+                  <Translation id="page-what-is-ethereum-explore-dapps" />
+                </ButtonLink>
+              </ButtonRow>
             </Width60>
           </TwoColumnContent>
         </Section>
@@ -873,7 +867,7 @@ const WhatIsEthereumPage = ({
       <Section>
         <TwoColumnContent>
           <Width40>
-            <GatsbyImage image={getImage(data.criminalActivity)} alt="" />
+            <GatsbyImage image={getImage(data.criminalActivity)!} alt="" />
           </Width40>
           <Width60>
             <h2>
@@ -927,16 +921,14 @@ const WhatIsEthereumPage = ({
             <p>
               <Translation id="page-what-is-ethereum-energy-desc-2" />
             </p>
-            <p>
-              <ButtonRow>
-                <ButtonLink to="/energy-consumption/">
-                  <Translation id="page-what-is-ethereum-more-on-energy-consumption" />
-                </ButtonLink>
-                <ButtonLink to="/upgrades/merge/" isSecondary>
-                  <Translation id="page-what-is-ethereum-the-merge-update" />
-                </ButtonLink>
-              </ButtonRow>
-            </p>
+            <ButtonRow>
+              <ButtonLink to="/energy-consumption/">
+                <Translation id="page-what-is-ethereum-more-on-energy-consumption" />
+              </ButtonLink>
+              <ButtonLink to="/upgrades/merge/" variant="outline">
+                <Translation id="page-what-is-ethereum-the-merge-update" />
+              </ButtonLink>
+            </ButtonRow>
           </Width60>
         </TwoColumnContent>
       </Section>
@@ -973,7 +965,7 @@ const WhatIsEthereumPage = ({
         </Column>
         <CardContainer>
           <StyledCallout
-            image={getImage(data.developers)}
+            image={getImage(data.developers)!}
             titleKey="page-what-is-ethereum-build"
             alt={translateMessageId("page-what-is-ethereum-alt-img-lego", intl)}
             descriptionKey="page-what-is-ethereum-build-desc"
@@ -985,7 +977,7 @@ const WhatIsEthereumPage = ({
             </div>
           </StyledCallout>
           <StyledCallout
-            image={getImage(data.community)}
+            image={getImage(data.community)!}
             titleKey="page-what-is-ethereum-community"
             alt={translateMessageId("page-what-is-ethereum-alt-img-comm", intl)}
             descriptionKey="page-what-is-ethereum-comm-desc"

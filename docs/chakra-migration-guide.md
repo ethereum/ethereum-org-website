@@ -107,10 +107,36 @@ const Text = styled.p`
 ```tsx
 import { Icon } from "@chakra-ui/react"
 import { BsQuestionSquareFill } from "react-icons/bs"
+
 ;<Icon as={BsQuestionSquareFill} />
 ```
 
-- [Deprecated]`src/components/SharedStyledComponents` - we are not using this anymore, use Chakra components instead.
+- [Deprecated]`src/components/SharedStyledComponents` - we are not using this anymore, replace everything with Chakra components.
+
+```tsx
+// before
+import { ButtonPrimary, ButtonSecondary } from "../SharedStyledComponents"
+
+// now
+import Button from "../Button" // <-- use the new Button component built with Chakra
+
+// use our primary button (uses the default `solid` variant)
+<Button />
+// or the outline version
+<Button variant="outline" />
+```
+
+- [Deprecated] `src/components/OldEmoji` - replace it with the new `src/components/Emoji`
+
+```tsx
+// before
+<Emoji size={3} mr="1rem" text=":star:">
+
+// now
+<Emoji fontSize="5xl" mr={4} text=":star:">
+```
+
+Note: check out the [`fontSize`](https://chakra-ui.com/docs/styled-system/theme#typography) and [`spacing`](https://chakra-ui.com/docs/styled-system/theme#spacing) possible values.
 
 ## Do you have any other question?
 

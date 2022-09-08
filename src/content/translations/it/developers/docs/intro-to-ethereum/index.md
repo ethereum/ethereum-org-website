@@ -3,6 +3,7 @@ title: Introduzione a Ethereum
 description: Introduzione ai concetti fondamentali di Ethereum per sviluppatori di dapp.
 lang: it
 sidebar: true
+preMergeBanner: true
 ---
 
 ## Cos'è una blockchain? {#what-is-a-blockchain}
@@ -19,7 +20,7 @@ Al momento Ethereum usa un meccanismo di consenso basato sul [Proof of Work](/de
 
 I nuovi blocchi vengono trasmessi ai nodi della rete, controllati e verificati, aggiornando lo stato di tutti.
 
-Quindi, ricapitolando, quando si inviano ETH a qualcuno, la transazione deve essere sottoposta a mining e inclusa in un nuovo blocco. Lo stato aggiornato viene quindi condiviso con l'intera rete.
+Quindi, ricapitolando, quando invii ETH a qualcuno, la transazione deve essere aggiunta al blocco che sarà minato. Lo stato aggiornato viene quindi condiviso con l'intera rete.
 
 Lascia che Austin ti accompagni attraverso la blockchain:
 
@@ -49,9 +50,9 @@ L'importo di ether pagato corrisponde al tempo necessario per eseguire il calcol
 
 ## Cosa sono gli Smart Contract? {#what-are-smart-contracts}
 
-In pratica, i partecipanti non scrivono nuovo codice ogni volta che desiderano richiedere un calcolo sull'EVM. Piuttosto, gli sviluppatori dell'applicazione caricano i programmi (frammenti di codice riutilizzabili) nell'archiviazione EMV e gli utenti richiedono di eseguire questi frammenti di codice con parametri variabili. Smart contract è il nome con il quale chiamiamo questi programmi caricati ed eseguiti dalla rete.
+In pratica, i partecipanti non scrivono nuovo codice ogni volta che desiderano richiedere un calcolo sull'EVM. Piuttosto, gli sviluppatori dell'applicazione caricano i programmi (frammenti di codice riutilizzabili) nello stato EVM e gli utenti fanno richieste di eseguire questi frammenti di codice con parametri variabili. Smart contract è il nome con il quale chiamiamo questi programmi caricati ed eseguiti dalla rete.
 
-A un livello molto basilare, puoi pensare a uno smart contract come una sorta di distributore automatico: uno script che, quando viene chiamato con certi parametri, esegue delle azioni o dei calcoli se sono soddisfatte determinate condizioni. Per esempio, un semplice smart contract potrebbe creare e assegnare la proprietà di un asset digitale se il richiedente invia ether a un destinatario specifico.
+A un livello molto basilare, puoi pensare a uno smart contract come una sorta di distributore automatico: uno script che, quando viene chiamato con certi parametri, esegue delle azioni o dei calcoli se sono soddisfatte determinate condizioni. Ad esempio, uno smart contract del fornitore semplice potrebbe creare e assegnare la proprietà di una risorsa digitale se il chiamante invia ETH a un destinatario specifico.
 
 Qualunque sviluppatore può creare uno smart contract e renderlo pubblico sulla rete, usando la blockchain come livello di dati, in cambio di una commissione pagata alla rete. Qualunque utente può quindi richiedere a questo smart contract di eseguire il suo codice, anche in questo caso pagando una commissione alla rete.
 
@@ -61,11 +62,11 @@ Dunque, con gli smart contract, gli sviluppatori possono creare e distribuire ap
 
 ### Blockchain {#blockchain}
 
-La sequenza di tutti i blocchi che sono stati salvati nella rete Ethereum in tutta la sua storia. È chiamata in questo modo perché ciascun blocco contiene un riferimento a quello precedente, il che aiuta a mantenere un ordine a livello di tutti i blocchi (e quindi a livello della storia precisa).
+La sequenza di tutti i blocchi che sono stati salvati nella rete Ethereum in tutta la sua storia. È chiamata in questo modo perché ciascun blocco contiene un riferimento a quello precedente, il che aiuta a mantenere un ordine tra tutti i blocchi (e quindi a livello della storia precisa).
 
 ### ETH {#eth}
 
-La criptovaluta nativa di Ethereum. Gli utenti pagano ether ad altri utenti affinché le loro richieste di esecuzione di codice vengano soddisfatte.
+**Ether (ETH)** è la criptovaluta nativa di Ethereum. Gli utenti pagano ETH agli altri utenti affinché le richieste d'esecuzione del loro codice siano soddisfatte.
 
 [Maggiori informazioni su ETH](/developers/docs/intro-to-ether/)
 
@@ -83,7 +84,7 @@ Le macchine fisiche che memorizzano lo stato dell'EVM. I nodi comunicano tra di 
 
 ### Account {#accounts}
 
-Luogo in cui vengono conservati gli ether. Gli utenti possono inizializzare account, depositare ether negli account e trasferire ether dai loro account ad altri utenti. Account e saldi degli account sono memorizzati in una grande tabella nell'EVM; fanno parte dello stato complessivo dell'EVM.
+Dove sono conservati gli ETH. Gli utenti possono inizializzare degli account, depositare ether negli account e trasferire ether dai loro account ad altri utenti. Account e saldi degli account sono memorizzati in una grande tabella nell'EVM; fanno parte dello stato complessivo dell'EVM.
 
 [Maggiori informazioni sugli account](/developers/docs/accounts/)
 
@@ -91,8 +92,8 @@ Luogo in cui vengono conservati gli ether. Gli utenti possono inizializzare acco
 
 "Richiesta di transazione" è il termine formale per indicare una richiesta di esecuzione del codice sull'EVM, mentre una "transazione" è una richiesta di transazione portata a termine e il cambiamento associato nello stato dell'EVM. Qualunque utente può trasmettere una richiesta di transazione alla rete da un nodo. Affinché la richiesta di transazione influenzi lo stato dell'EVM concordato, deve esser convalidata, eseguita e "inviata alla rete" da un altro nodo. L'esecuzione di codice innesca un cambiamento di stato dell'EVM; al salvataggio della transazione, questo cambiamento di stato viene trasmesso a tutti i nodi della rete. Alcuni esempi di transazione:
 
-- Invio di X ether dal mio account a quello di Alice.
-- Pubblicare il codice di uno Smart Contract nella memoria dell'EVM.
+- Inviare X ETH dal mio account a quello di Alice.
+- Pubblicare il codice di uno Smart Contract nello stato dell'EVM.
 - Eseguire il codice dello Smart Contract all'indirizzo X dell'EVM, con argomenti Y.
 
 [Maggiori informazioni sulle transazioni](/developers/docs/transactions/)
@@ -105,7 +106,7 @@ Il volume di transazioni è molto alto, quindi le transazioni sono "salvate" in 
 
 ### Smart Contract {#smart-contracts}
 
-Uno snippet di codice riutilizzabile (programma) che uno sviluppatore pubblica nella memoria dell'EVM. Chiunque può richiedere che il codice dello smart contract venga eseguito effettuando una richiesta di transazione. Siccome gli sviluppatori possono scrivere applicazioni arbitrarie eseguibili nell'EVM (videogiochi, marketplace, strumenti finanziari, ecc.) pubblicando smart contract, spesso queste sono chiamate [dApp o app decentralizzate](/developers/docs/dapps/).
+Uno snippet di codice riutilizzabile (programma) che uno sviluppatore pubblica nello stato dell'EVM. Chiunque può richiedere che il codice dello smart contract venga eseguito effettuando una richiesta di transazione. Siccome gli sviluppatori possono scrivere applicazioni arbitrarie eseguibili nell'EVM (videogiochi, marketplace, strumenti finanziari, ecc.) pubblicando smart contract, spesso queste sono chiamate [dApp o app decentralizzate](/developers/docs/dapps/).
 
 [Maggiori informazioni sugli Smart Contract](/developers/docs/smart-contracts/)
 
@@ -118,4 +119,4 @@ _Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e ag
 
 ## Tutorial correlati {#related-tutorials}
 
-- [A developer's guide to Ethereum, part 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _: panoramica di base di Ethereum usando Python e web3.py, adatta ai principianti _
+- [Una guida per sviluppatori a Ethereum, parte 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– Un'esplorazione di Ethereum pensata per i principianti usando Python e web3.py_

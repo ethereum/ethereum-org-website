@@ -2,7 +2,6 @@
 import React, { ReactNode, useState } from "react"
 import styled from "@emotion/styled"
 // Component imports
-import { ButtonPrimary, ButtonSecondary } from "./SharedStyledComponents"
 import Translation from "./Translation"
 // SVG imports
 import ThumbsUp from "../assets/feedback-thumbs-up.svg"
@@ -10,6 +9,7 @@ import ThumbsUp from "../assets/feedback-thumbs-up.svg"
 import { trackCustomEvent } from "../utils/matomo"
 // import { getFeedbackSurveyUrl } from "../utils/getFeedbackSurveyUrl"
 import { useSurvey } from "../hooks/useSurvey"
+import Button from "./Button"
 
 const Card = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.border};
@@ -38,26 +38,6 @@ const Title = styled.h3`
 const ButtonContainer = styled.div`
   display: flex;
   gap: 1rem;
-`
-
-const StyledButtonSecondary = styled(ButtonSecondary)`
-  display: flex;
-  gap: 0.5rem;
-  color: ${({ theme }) => theme.colors.primary};
-  border-color: ${({ theme }) => theme.colors.primary};
-  line-height: 140%;
-  vertical-align: middle;
-  svg {
-    height: 1.5rem;
-    &.flip {
-      transform: scaleY(-1);
-    }
-  }
-`
-
-const StyledButtonPrimary = styled(ButtonPrimary)`
-  color: white;
-  font-weight: 700;
 `
 
 export interface IProps {
@@ -118,19 +98,25 @@ const FeedbackCard: React.FC<IProps> = ({
         <ButtonContainer>
           {!feedbackSubmitted ? (
             <>
-              <StyledButtonSecondary onClick={() => handleSubmit(true)}>
-                <ThumbsUp />
+              <Button
+                variant="outline-color"
+                leftIcon={<ThumbsUp />}
+                onClick={() => handleSubmit(true)}
+              >
                 <Translation id="yes" />
-              </StyledButtonSecondary>
-              <StyledButtonSecondary onClick={() => handleSubmit(false)}>
-                <ThumbsUp className="flip" />
+              </Button>
+              <Button
+                variant="outline-color"
+                leftIcon={<ThumbsUp className="flip" />}
+                onClick={() => handleSubmit(false)}
+              >
                 <Translation id="no" />
-              </StyledButtonSecondary>
+              </Button>
             </>
           ) : (
-            <StyledButtonPrimary onClick={handleSurveyOpen}>
+            <Button variant="outline-color" onClick={handleSurveyOpen}>
               <Translation id="feedback-widget-thank-you-cta" />
-            </StyledButtonPrimary>
+            </Button>
           )}
         </ButtonContainer>
       </Content>

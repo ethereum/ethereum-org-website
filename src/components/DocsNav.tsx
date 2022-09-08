@@ -2,7 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 
 import Link from "./Link"
-import Emoji from "./Emoji"
+import Emoji from "./OldEmoji"
 import Translation from "./Translation"
 
 import docLinks from "../data/developer-docs-links.yaml"
