@@ -1377,6 +1377,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/srv-smn"><img src="https://avatars.githubusercontent.com/u/47235134?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sourav Suman</b></sub></a><br /><a href="#ideas-srv-smn" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center"><a href="https://github.com/ivpavici"><img src="https://avatars.githubusercontent.com/u/2848732?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ivan Pavičić</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ivpavici" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aivpavici" title="Bug reports">🐛</a></td>
       <td align="center"><a href="https://github.com/Batxent"><img src="https://avatars.githubusercontent.com/u/7824431?v=4?s=100" width="100px;" alt=""/><br /><sub><b>tommy</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Batxent" title="Documentation">📖</a> <a href="#translation-Batxent" title="Translation">🌍</a></td>
+      <td align="center"><a href="https://medium.com/@martinyce"><img src="https://avatars.githubusercontent.com/u/8136256?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Martin Yung</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=martinyung" title="Code">💻</a> <a href="#translation-martinyung" title="Translation">🌍</a></td>
     </tr>
   </tobdy>
 </table>
