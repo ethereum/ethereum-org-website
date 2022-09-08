@@ -1,15 +1,7 @@
 import React, { ReactNode } from "react"
 import styled from "@emotion/styled"
 import Emoji from "./OldEmoji"
-
-const StyledCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  background: ${(props) => props.theme.colors.ednBackground};
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.lightBorder};
-  padding: 1.5rem;
-`
+import { Flex } from "@chakra-ui/react"
 
 const Title = styled.h3`
   margin-top: 0;
@@ -41,14 +33,23 @@ const Card: React.FC<IProps> = ({
   children,
   className,
 }) => (
-  <StyledCard className={className}>
+  <Flex
+    direction="column"
+    bg="ednBackground"
+    borderRadius="2px"
+    border="1px"
+    borderStyle="solid"
+    borderColor="lightBorder"
+    p={6}
+    className={className}
+  >
     <TopContent>
       {emoji && <StyledEmoji size={3} text={emoji} />}
       {title && <Title>{title}</Title>}
       {description && <Description>{description}</Description>}
     </TopContent>
     {children}
-  </StyledCard>
+  </Flex>
 )
 
 export default Card
