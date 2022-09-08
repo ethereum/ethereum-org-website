@@ -2,7 +2,6 @@ import React from "react"
 import { useIntl } from "react-intl"
 import styled from "@emotion/styled"
 import { graphql, useStaticQuery } from "gatsby"
-import { getImage } from "gatsby-plugin-image"
 
 import ButtonLink from "../ButtonLink"
 import CalloutBanner from "../CalloutBanner"
@@ -10,6 +9,7 @@ import Translation from "../Translation"
 
 import { translateMessageId } from "../../utils/translations"
 import { trackCustomEvent } from "../../utils/matomo"
+import { getImage } from "../../utils/image"
 
 const StyledCallout = styled(CalloutBanner)`
   margin: 4rem 0;
@@ -53,7 +53,7 @@ const StakingCommunityCallout: React.FC<IProps> = (props) => {
   return (
     <StyledCallout
       {...props}
-      image={getImage(image)}
+      image={getImage(image)!}
       alt={translateMessageId("page-staking-image-alt", intl)}
       titleKey={"page-staking-join-community"}
       descriptionKey={"page-staking-join-community-desc"}

@@ -1,9 +1,10 @@
 // Libraries
 import React from "react"
 import styled from "@emotion/styled"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import Translation from "./Translation"
 import { TranslationKey } from "../utils/translations"
+
 // Components
 import Emoji from "./OldEmoji"
 
@@ -48,7 +49,7 @@ const Content = styled.div`
 
 export interface IProps {
   children?: React.ReactNode
-  image?: string
+  image?: IGatsbyImageData
   emoji?: string
   alt?: string
   titleKey: TranslationKey
@@ -66,7 +67,7 @@ const Callout: React.FC<IProps> = ({
   className,
 }) => (
   <StyledCard className={className}>
-    {image && <Image image={image} alt={alt} />}
+    {image && <Image image={image} alt={alt || ""} />}
     <Content>
       <div>
         {emoji && <Emoji text={emoji} size={3} />}
