@@ -330,8 +330,8 @@ lighthouse beacon_node
     --network mainnet \
     --datadir /data/ethereum \
     --http \
-    --execution.urls http://127.0.0.1:8551 \
-    --jwt-secret="/path/to/jwtsecret" \
+    --execution-endpoint http://127.0.0.1:8551 \
+    --execution-jwt /path/to/jwtsecret \
 ```
 
 ##### Running Lodestar
@@ -368,7 +368,7 @@ Prysm comes with script which allows easy automatic installation. Details can be
 ./prysm.sh beacon-chain \
     --mainnet
     --datadir /data/ethereum  \
-    --http-web3provider=http://localhost:8551  \
+    --execution-endpoint=http://localhost:8551  \
     --jwt-secret=/path/to/jwtsecret
 ```
 

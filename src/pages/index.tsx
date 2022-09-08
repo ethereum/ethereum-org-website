@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "@emotion/styled"
 
 import type { Context } from "../types"
@@ -23,8 +23,9 @@ import {
   GrayContainer,
   LeftColumn,
 } from "../components/SharedStyledComponents"
-import { translateMessageId, isLangRightToLeft } from "../utils/translations"
 import PreMergeBanner from "../components/PreMergeBanner"
+import { translateMessageId, isLangRightToLeft } from "../utils/translations"
+import { getImage } from "../utils/image"
 
 import SimpleWalletContent from "!!raw-loader!../data/SimpleWallet.sol"
 import SimpleTokenContent from "!!raw-loader!../data/SimpleToken.sol"
@@ -606,7 +607,7 @@ const HomePage = ({
                 title={card.title}
                 description={card.description}
                 to={card.to}
-                image={card.image}
+                image={card.image!}
                 alt={card.alt}
               />
             ))}
@@ -785,7 +786,7 @@ const HomePage = ({
                 description={tout.description}
                 alt={tout.alt}
                 to={tout.to}
-                image={tout.image}
+                image={tout.image!}
               />
             )
           })}
@@ -793,7 +794,7 @@ const HomePage = ({
         <StyledCalloutBanner
           titleKey={"page-index-contribution-banner-title"}
           descriptionKey={"page-index-contribution-banner-description"}
-          image={getImage(data.finance)}
+          image={getImage(data.finance)!}
           maxImageWidth={600}
           alt={translateMessageId(
             "page-index-contribution-banner-image-alt",

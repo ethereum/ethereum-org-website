@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
 import Translation from "./Translation"
 import { TranslationKey } from "../utils/translations"
@@ -68,7 +68,7 @@ const H2 = styled.h2`
 
 export interface IProps {
   children?: React.ReactNode
-  image: string
+  image: IGatsbyImageData
   maxImageWidth?: number
   titleKey: TranslationKey
   descriptionKey: TranslationKey

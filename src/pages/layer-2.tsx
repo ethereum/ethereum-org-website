@@ -1,7 +1,7 @@
 // Libraries
 import React, { useEffect, useState } from "react"
 import { graphql, PageProps } from "gatsby"
-import { getImage, GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 
@@ -34,10 +34,11 @@ import {
   getLocaleForNumberFormat,
   TranslationKey,
 } from "../utils/translations"
+import { Lang } from "../utils/languages"
+import { getImage } from "../utils/image"
 
 // Constants
 import { GATSBY_FUNCTIONS_PATH } from "../constants"
-import { Lang } from "../utils/languages"
 
 // Styles
 
@@ -277,7 +278,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
     title: translateMessageId("layer-2-hero-title", intl),
     header: translateMessageId("layer-2-hero-header", intl),
     subtitle: translateMessageId("layer-2-hero-subtitle", intl),
-    image: getImage(data.heroImage),
+    image: getImage(data.heroImage)!,
     alt: translateMessageId("layer-2-hero-alt-text", intl),
     buttons: [
       {
@@ -509,7 +510,8 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
           </Flex50>
           <Flex50>
             <GatsbyImage
-              image={getImage(data.whatIsEthereum)}
+              image={getImage(data.whatIsEthereum)!}
+              alt=""
               style={{ maxHeight: "400px" }}
               objectFit="contain"
             />
@@ -570,7 +572,8 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             }}
           >
             <GatsbyImage
-              image={getImage(data.dao)}
+              image={getImage(data.dao)!}
+              alt=""
               style={{ width: "100%" }}
               objectFit="contain"
             />
@@ -646,7 +649,8 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             }}
           >
             <GatsbyImage
-              image={getImage(data.rollup)}
+              image={getImage(data.rollup)!}
+              alt=""
               style={{ width: "100%" }}
               objectFit="contain"
             />
@@ -657,7 +661,8 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             ({ image, title, description, childSentence, childLink }) => (
               <RollupCard key={title}>
                 <GatsbyImage
-                  image={image}
+                  image={image!}
+                  alt=""
                   objectPosition="0"
                   objectFit="contain"
                 />
@@ -715,7 +720,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                 <Layer2ProductCard
                   key={idx}
                   background={l2.background}
-                  image={getImage(data[l2.imageKey])}
+                  image={getImage(data[l2.imageKey])!}
                   description={translateMessageId(
                     l2.descriptionKey as TranslationKey,
                     intl
@@ -747,7 +752,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                 <Layer2ProductCard
                   key={idx}
                   background={l2.background}
-                  image={getImage(data[l2.imageKey])}
+                  image={getImage(data[l2.imageKey])!}
                   description={translateMessageId(
                     l2.descriptionKey as TranslationKey,
                     intl
@@ -805,7 +810,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
       <PaddedContent id="how-to-get-onto-layer-2">
         <Layer2Onboard
           layer2DataCombined={layer2DataCombined}
-          ethIcon={getImage(data.ethHome)}
+          ethIcon={getImage(data.ethHome)!}
           ethIconAlt={translateMessageId("ethereum-logo", intl)}
         />
       </PaddedContent>

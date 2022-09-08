@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
 import Link from "./Link"
 
@@ -97,7 +97,7 @@ const Logo = styled(GatsbyImage)`
 `
 
 export interface DataRow {
-  logo: string
+  logo: IGatsbyImageData
   coin: string
   apy: string
 }
@@ -105,7 +105,7 @@ export interface DataRow {
 export interface IProps {
   url: string
   background: string
-  image: string
+  image: IGatsbyImageData
   alt?: string
   name: string
   description?: string
@@ -135,7 +135,7 @@ const DataProductCard: React.FC<IProps> = ({
           {data.map(({ logo, coin, apy }, idx) => (
             <DataRow key={idx}>
               <Box>
-                {logo && <Logo image={logo} />}
+                {logo && <Logo image={logo} alt="" />}
                 {coin}
               </Box>
               <div>{apy}% APY</div>

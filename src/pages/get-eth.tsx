@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 
 import { translateMessageId, TranslationKey } from "../utils/translations"
@@ -25,6 +25,7 @@ import {
 } from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
 import { CardListItem } from "../components/CardList"
+import { getImage } from "../utils/image"
 
 const Subtitle = styled.div<{
   mb?: string
@@ -176,7 +177,8 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
     {
       title: "Localcryptos.com",
       link: "https://localcryptos.com/",
-      image: getImage(data.localcryptos),
+      image: getImage(data.localcryptos)!,
+      alt: "",
     },
   ].sort((a, b) => a.title.localeCompare(b.title))
 
@@ -184,27 +186,32 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
     {
       title: "1inch",
       link: "https://1inch.exchange/#/",
-      image: getImage(data.oneinch),
+      image: getImage(data.oneinch)!,
+      alt: "",
     },
     {
       title: "Bancor",
       link: "https://www.bancor.network/",
-      image: getImage(data.bancor),
+      image: getImage(data.bancor)!,
+      alt: "",
     },
     {
       title: "Kyber",
       link: "https://kyberswap.com/#/swap/",
-      image: getImage(data.kyber),
+      image: getImage(data.kyber)!,
+      alt: "",
     },
     {
       title: "Loopring",
       link: "https://loopring.io/",
-      image: getImage(data.loopring),
+      image: getImage(data.loopring)!,
+      alt: "",
     },
     {
       title: "Uniswap",
       link: "https://app.uniswap.org/#/swap",
-      image: getImage(data.uniswap),
+      image: getImage(data.uniswap)!,
+      alt: "",
     },
   ].sort((a, b) => a.title.localeCompare(b.title))
 
@@ -244,7 +251,7 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
 
       <HeroContainer>
         <Hero
-          image={getImage(data.hero)}
+          image={getImage(data.hero)!}
           alt={translateMessageId("page-get-eth-hero-image-alt", intl)}
           loading="eager"
         />
@@ -368,7 +375,7 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
       </Content>
       <TwoColumnContent>
         <WalletLeftColumn>
-          <WalletImage image={getImage(data.wallet)} />
+          <WalletImage image={getImage(data.wallet)!} alt="" />
           <h3>
             <Translation id="page-get-eth-community-safety" />
           </h3>
@@ -417,7 +424,7 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
       <CalloutBanner
         titleKey="page-get-eth-use-your-eth"
         descriptionKey="page-get-eth-use-your-eth-dapps"
-        image={getImage(data.dapps)}
+        image={getImage(data.dapps)!}
         alt={translateMessageId(
           "page-index-sections-individuals-image-alt" as TranslationKey,
           intl
