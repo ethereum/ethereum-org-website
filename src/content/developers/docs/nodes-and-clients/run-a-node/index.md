@@ -393,7 +393,7 @@ Running your own validator allows for [solo staking](https://ethereum.org/en/sta
 
 The easiest way to get started with staking and validator key generation is to use the [Prater Testnet Staking Launchpad](https://prater.launchpad.ethereum.org/), which allows you to test your setup by [running nodes on Goerli](https://notes.ethereum.org/@launchpad/goerli). When you're ready for Mainnet, you can repeat these steps using the [Mainnet Staking Launchpad](https://launchpad.ethereum.org/). Make sure to check [Mainnet readiness checklist](https://launchpad.ethereum.org/en/merge-readiness) to smoothly run your validator through the Merge.
 
-Look into [staking page](/staking) for an overview about staking options. 
+Look into [staking page](/staking) for an overview about staking options.
 
 ### Using the node {#using-the-node}
 
@@ -432,7 +432,7 @@ You should regularly monitor your node to make sure it's running properly. You m
 Your node doesn't have to be online all the time, but you should keep it online as much as possible to keep it in sync with the network. You can shut it down to restart it, but keep in mind that:
 
 - Shutting down can take a few minutes if the recent state is still being written on disk.
-- Forced shut downs can damage the database requiring you to resync the entire node. 
+- Forced shut downs can damage the database requiring you to resync the entire node.
 - Your client will go out of sync with the network and will need to resync when you restart it. While the node can begin syncing from were it was last shutdown, the process can take time depending on how long it has been offline.
 
 _This doesn't apply on consensus layer validator nodes._ Taking your node offline will affect all services dependent on it. If you are running a node for _staking_ purposes you should try to minimize downtime as much as possible.

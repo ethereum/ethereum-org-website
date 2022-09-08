@@ -36,7 +36,6 @@ Enterprises have been experimenting with blockchain technology since around 2016
 
 Another development which is shifting the focus toward public blockchains is [Layer 2](/developers/docs/scaling/#layer-2-scaling). Layer 2 is primarily a scalability technology category which makes high throughput applications possible on public chains. But Layer 2 solutions can also [address some of the other challenges that have driven enterprise developers to choose private chains in the past](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/).
 
-
 ## Enterprise developer resources {#enterprise-developer-resources}
 
 ### Organizations {#organizations}
@@ -131,7 +130,7 @@ Here are some of the enterprise applications that have been deployed to the publ
 
 - [Tinlake](https://tinlake.centrifuge.io/) _receivables financing via tokenized real-world assets such as invoices, mortgages or streaming royalties_
 - [RealT](https://realt.co/) _investors around the globe can buy into the US real estate market through fully-compliant, fractional, tokenized ownership._
-- [AgroToken](https://agrotoken.io/en/) _tokenizing and trading agricultural commodities_ 
+- [AgroToken](https://agrotoken.io/en/) _tokenizing and trading agricultural commodities_
 - [Fasset](https://www.fasset.com/) _a platform for supporting sustainable infrastructure_
 
 ### Notarization of data {#notarization-of-data}
@@ -155,6 +154,7 @@ Here are some of the enterprise applications that have been deployed to the publ
 - [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _mints NFTs for each new batch of beer, enabling greater visibility and efficiency across its supply chain_
 
 ### Insurance {#insurance}
+
 - [Arbol](https://www.arbolmarket.com/) _parmetric insurance to cover weather related risks_
 - [Etherisc](https://etherisc.com/) _decentralized insurance for a variety of risks_
 

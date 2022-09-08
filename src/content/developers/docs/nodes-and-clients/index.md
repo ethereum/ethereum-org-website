@@ -137,15 +137,17 @@ On the other hand, if you run a client, you can share it with your friends who m
 
 The Ethereum community maintains multiple open-source execution clients (previously known as 'Eth1 clients', or just 'Ethereum clients'), developed by different teams using different programming languages. This makes the network stronger and more diverse. The ideal goal is to achieve diversity without any client dominating to reduce any single points of failure.
 
-This table summarizes the different clients in alphabetical order. All of them are actively maintained to stay updated with network upgrades, follow current specifications and pass [client tests](https://github.com/ethereum/tests).
+This table summarizes the different clients. All of them pass [client tests](https://github.com/ethereum/tests) and are actively maintained to stay updated with network upgrades.
 
-| Client                                                   | Language | Operating systems     | Networks                                   | Sync strategies              | State pruning   |
-| -------------------------------------------------------- | -------- | --------------------- | ------------------------------------------ | ---------------------------- | --------------- |
-| [Akula](https://akula.app)                               | Rust     | Linux                 | Mainnet, Görli, Rinkeby, Ropsten, and more | Full                         | Archive, Pruned |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/) | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more | Fast, Full, Snap, Checkpoint | Archive, Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon)          | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full, Snap                   | Archive, Pruned |
-| [Geth](https://geth.ethereum.org/)                       | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Snap, Full                   | Archive, Pruned |
-| [Nethermind](http://nethermind.io/)                      | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Snap, Fast                   | Archive, Pruned |
+| Client                                          | Language | Operating systems     | Networks                                   | Sync strategies                    | State pruning   |
+| ----------------------------------------------- | -------- | --------------------- | ------------------------------------------ | ---------------------------------- | --------------- |
+| [Geth](https://geth.ethereum.org/)              | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Snap, Full                         | Archive, Pruned |
+| [Nethermind](http://nethermind.io/)             | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Snap (without serving), Fast, Full | Archive, Pruned |
+| [Besu](https://besu.hyperledger.org/en/stable/) | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more | Fast, Full                         | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full                               | Archive, Pruned |
+| [Akula](https://akula.app)                      | Rust     | Linux                 | Mainnet, Görli, Rinkeby, Ropsten, and more | Full                               | Archive, Pruned |
+
+**Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer being maintained.** Use it with caution and preferably switch to another client implementation.
 
 For more on supported networks, read up on [Ethereum networks](/developers/docs/networks/).
 
@@ -193,9 +195,11 @@ There are multiple consensus clients (previously known as 'Eth2' clients) to sup
 
 ### Lighthouse {#lighthouse}
 
-Lighthouse is a consensus client implementation written in Rust under the Apache-2.0 license. It is maintained by Sigma Prime and has been stable and production-ready since Beacon Chain genesis. It is relied upon by various enterprises, staking pools and individuals. It aims to be secure, performant and interoperable in a wide range of environments, from desktop PCs to sophisticated automated deployments.
+- Fastest sync strategy developed by Geth, currently its default.
+- Nethermind only implemented the consuming part until now. They are working on enabling serving other nodes soon.
+- Saves a lot of disk usage and network bandwidth without sacrificing security.
 
-Documentation can be found in [Lighthouse Book](https://lighthouse-book.sigmaprime.io/).
+[More on Snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
 
 ### Lodestar {#lodestar}
 
@@ -207,9 +211,10 @@ More information can be found on our [Lodestar website](https://lodestar.chainsa
 
 Nimbus is a consensus client implementation written in Nim under the Apache-2.0 license. It is a production-ready client in use by solo-stakers and staking pools. Nimbus is designed for resource efficiency, making it easy to run on resource-restricted devices and enterprise infrastructure with equal ease, without compromising stability or reward performance. A lighter resource footprint means the client has a greater margin of safety when the network is under stress.
 
-Documentation can be found in the [Nimbus Guide](https://nimbus.guide/).
+Implemented by Trinity. Works like fast sync but also downloads the data needed to execute latest blocks, which allows you to query the chain within the first few minutes from starting.
 
-### Prysm {#prysm}
+- Syncs state first and enables you to query RPC in a few minutes.
+- Still in development and not fully reliable, background sync is slowed down and RPC responses might fail.
 
 Prysm is a full-featured, open source consensus client written in Go under the GPL-3.0 license. It features an optional webapp UI and prioritizes user experience, documentation, and configurability for both stake-at-home and institutional users.
 
@@ -263,7 +268,13 @@ Snap sync is the latest approach to syncing a client, pioneered by the Geth team
 
 [More on snap sync](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
 
-### Consensus layer sync modes {#consensus-layer-sync-modes}
+| Client       | Disk size (fast sync) | Disk size (full archive) |
+| ------------ | --------------------- | ------------------------ |
+| Geth         | 400GB+                | 6TB+                     |
+| OpenEthereum | 280GB+                | 6TB+                     |
+| Nethermind   | 500GB+                | 12TB+                    |
+| Besu         | 750GB+                | 5TB+                     |
+| Erigon       | N/A                   | 1TB+                     |
 
 #### Optimistic sync {#optimistic-sync}
 

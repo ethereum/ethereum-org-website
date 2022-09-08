@@ -29,19 +29,18 @@ Before we can add the safety rail functionality we need an ERC-20 contract. In t
 1. Select **ERC20**.
 2. Enter these settings:
 
-   | Parameter | Value |
-   | - | - |
-   | Name      | SafetyRailsToken
-   | Symbol    | SAFE
-   | Premint   | 1000
-   | Features  | None
-   | Access Control | Ownable 
-   | Upgradability  | None
-   
+   | Parameter      | Value            |
+   | -------------- | ---------------- |
+   | Name           | SafetyRailsToken |
+   | Symbol         | SAFE             |
+   | Premint        | 1000             |
+   | Features       | None             |
+   | Access Control | Ownable          |
+   | Upgradability  | None             |
+
 3. Scroll up and click **Open in Remix** (for Remix) or **Download** to use a different environment. I'm going to assume you're using Remix, if you use something else just make the appropriate changes.
 4. We now have a fully functional ERC-20 contract. You can expand `.deps` > `npm` to see the imported code.
 5. Compile, deploy, and play with the contract to see that it functions as an ERC-20 contract. If you need to learn how to use Remix, [use this tutorial](https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth).
-
 
 ## Common mistakes {#common-mistakes}
 
@@ -53,10 +52,9 @@ Users sometimes send tokens to the wrong address. While we cannot read their min
 
 2. Sending the tokens to an empty address, one that doesn't correspond to an [externally owned account](/developers/docs/accounts/#externally-owned-accounts-and-key-pairs) or a [smart contract](/developers/docs/smart-contracts). While I don't have statistics on how often this happens, [one incident could have cost 20,000,000 tokens](https://gov.optimism.io/t/message-to-optimism-community-from-wintermute/2595).
 
-
 ### Preventing transfers {#preventing-transfers}
 
-The OpenZeppelin ERC-20 contract includes [a hook, `_beforeTokenTransfer`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol#L364-L368), that is called before a token is transferred. By default this hook does not do anything, but we can hang our own functionality on it, such as checks that revert if there's a problem. 
+The OpenZeppelin ERC-20 contract includes [a hook, `_beforeTokenTransfer`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol#L364-L368), that is called before a token is transferred. By default this hook does not do anything, but we can hang our own functionality on it, such as checks that revert if there's a problem.
 
 To use the hook, add this function after the constructor:
 
@@ -75,7 +73,7 @@ Some parts of this function may be new if you aren't very familiar with Solidity
         internal virtual
 ```
 
-The `virtual` keyword means that just as we inherited functionality from `ERC20` and overrode this function, other contracts can inherit from us and override this function. 
+The `virtual` keyword means that just as we inherited functionality from `ERC20` and overrode this function, other contracts can inherit from us and override this function.
 
 ```solidity
         override(ERC20)
@@ -93,7 +91,7 @@ This line calls the `_beforeTokenTransfer` function of the contract or contracts
 
 We want to add these requirements to the function:
 
-- The `to` address cannot equal `address(this)`, the address of the ERC-20 contract itself.  
+- The `to` address cannot equal `address(this)`, the address of the ERC-20 contract itself.
 - The `to` address cannot be empty, it has to be either:
   - An externally owned accounts (EOA). We can't check if an address is an EOA directly, but we can check an address's ETH balance. EOAs almost always have a balance, even if they are no longer used - it's difficult to clear them to the last wei.
   - A smart contract. Testing if an address is a smart contract is a bit harder. There is an opcode that checks the external code length, called [`EXTCODESIZE`](https://www.evm.codes/#3b), but it is not available directly in Solidity. We have to use [Yul](https://docs.soliditylang.org/en/v0.8.15/yul.html), which is EVM assembly, for it. There are other values we could use from Solidity ([`<address>.code` and `<address>.codehash`](https://docs.soliditylang.org/en/v0.8.15/units-and-global-variables.html#members-of-address-types)), but they cost more.
@@ -104,12 +102,12 @@ Lets go over the new code line by line:
         require(to != address(this), "Can't send tokens to the contract address");
 ```
 
-This is the first requirement, check that `to` and `this(address)` are not the same thing. 
+This is the first requirement, check that `to` and `this(address)` are not the same thing.
 
-```solidity 
+```solidity
         bool isToContract;
         assembly {
-           isToContract := gt(extcodesize(to), 0)              
+           isToContract := gt(extcodesize(to), 0)
         }
 ```
 
@@ -121,30 +119,27 @@ This is how we check if an address is a contract. We cannot receive output direc
 
 And finally, we have the actual check for empty addresses.
 
-
-
 ## Administrative access {#admin-access}
 
 Sometimes it is useful to have an administrator that can undo mistakes. To reduce the potential for abuse, this administrator can be a [multisig](https://blog.logrocket.com/security-choices-multi-signature-wallets/) so multiple people have to agree on an action. In this article we'll have two administrative features:
 
 1. Freezing and unfreezing accounts. This can be useful, for example, when an account might be compromised.
-2. Asset cleanup. 
+2. Asset cleanup.
 
-   Sometimes frauds send fraudulant tokens to the real token's contract to gain legitimacy. For example, [see here](https://optimistic.etherscan.io/token/0x2348b1a1228ddcd2db668c3d30207c3e1852fbbe?a=0x4200000000000000000000000000000000000042). The legitimate ERC-20 contract is [0x4200....0042](https://optimistic.etherscan.io/address/0x4200000000000000000000000000000000000042). The scam that pretends to be it is [0x234....bbe](https://optimistic.etherscan.io/address/0x2348b1a1228ddcd2db668c3d30207c3e1852fbbe).  
-   
+   Sometimes frauds send fraudulant tokens to the real token's contract to gain legitimacy. For example, [see here](https://optimistic.etherscan.io/token/0x2348b1a1228ddcd2db668c3d30207c3e1852fbbe?a=0x4200000000000000000000000000000000000042). The legitimate ERC-20 contract is [0x4200....0042](https://optimistic.etherscan.io/address/0x4200000000000000000000000000000000000042). The scam that pretends to be it is [0x234....bbe](https://optimistic.etherscan.io/address/0x2348b1a1228ddcd2db668c3d30207c3e1852fbbe).
+
    It is also possible that people send legitimate ERC-20 tokens to our contract by mistake, which is anotehr reason to want to have a way to get them out.
 
 OpenZeppelin provides two mechanisms to enable administrative access:
 
 - [`Ownable`](https://docs.openzeppelin.com/contracts/4.x/access-control#ownership-and-ownable) contracts have a single owner. Functions that have the `onlyOwner` [modifier](https://www.tutorialspoint.com/solidity/solidity_function_modifiers.htm) can only be called by that owner. Owners can transfer ownership to somebody else or renounce it completely. The rights of all other accounts are typically identical.
-- [`AccessControl`](https://docs.openzeppelin.com/contracts/4.x/access-control#role-based-access-control) contracts have [role based access control (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control). 
+- [`AccessControl`](https://docs.openzeppelin.com/contracts/4.x/access-control#role-based-access-control) contracts have [role based access control (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control).
 
 For the sake of simplicity, in this article we use `Ownable`.
 
-
 ### Freezing and thawing contracts {#freezing-and-thawing-contracts}
 
-Freezing and thawing contracts requires several changes: 
+Freezing and thawing contracts requires several changes:
 
 - A [mapping](https://www.tutorialspoint.com/solidity/solidity_mappings.htm) from addresses to [booleans](https://en.wikipedia.org/wiki/Boolean_data_type) to keep track of which addresses are frozen. All values are initially zero, which for boolean values is interpreted as false. This is what we want because by default accounts are not frozen.
 
@@ -159,36 +154,35 @@ Freezing and thawing contracts requires several changes:
   ```solidity
     // When accounts are frozen or unfrozen
     event AccountFrozen(address indexed _addr);
-    event AccountThawed(address indexed _addr);   
+    event AccountThawed(address indexed _addr);
   ```
-  
+
 - Functions for freezing and thawing accounts. These two functions are nearly identical, so we'll only go over the freeze function.
 
   ```solidity
-      function freezeAccount(address addr) 
+      function freezeAccount(address addr)
         public
         onlyOwner
   ```
-  
+
   Functions marked [`public`](https://www.tutorialspoint.com/solidity/solidity_contracts.htm) can be called from other smart contracts or directly by a transaction.
-  
+
   ```solidity
     {
-        require(!frozenAccounts[addr], "Account already frozen");        
-        frozenAccounts[addr] = true;        
-        emit AccountFrozen(addr);        
+        require(!frozenAccounts[addr], "Account already frozen");
+        frozenAccounts[addr] = true;
+        emit AccountFrozen(addr);
     }  // freezeAccount
   ```
 
   If the account is already frozen, revert. Otherwise, freeze it and `emit` an event.
 
-- Change `_beforeTokenTransfer` to prevent money being moved from a frozen account. Note that money can still be transferred into the frozen account. 
+- Change `_beforeTokenTransfer` to prevent money being moved from a frozen account. Note that money can still be transferred into the frozen account.
 
-   ```solidity
-        require(!frozenAccounts[from], "The account is frozen");   
-   ```
-   
-   
+  ```solidity
+       require(!frozenAccounts[from], "The account is frozen");
+  ```
+
 ### Asset cleanup {#asset-cleanup}
 
 To release ERC-20 tokens held by this contract we need to call a function on the token contract to which they belong, either [`transfer`](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md#transfer) or [`approve`](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md#approve). There's no point wasting gas in this case on allowances, we might as well transfer directly.
@@ -213,7 +207,6 @@ This is the syntax to create an object for a contract when we receive the addres
 ```
 
 This is a cleanup function, so presumably we don't want to leave any tokens. Instead of getting the balance from the user manually, we might as well automate the process.
-
 
 ## Conclusion {#conclusion}
 

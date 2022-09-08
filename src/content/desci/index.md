@@ -104,7 +104,6 @@ Explore projects and join the DeSci community.
 - [Opscientia: open decentralized science workflows](https://opsci.io/research/)
 - [IdeaMarkets: enabling decentralized scientifc credibility](https://ideamarket.io/)
 
-
 ## Further reading {#further-reading}
 
 - [DeSci Wiki by Jocelynn Pearl and Ultrarare](https://docs.google.com/document/d/1aQC6zn-eXflSmpts0XGE7CawbUEHwnL6o-OFXO52PTc/edit#)

@@ -108,7 +108,7 @@ const Text = styled.p`
 import { Icon } from "@chakra-ui/react"
 import { BsQuestionSquareFill } from "react-icons/bs"
 
-<Icon as={BsQuestionSquareFill} />
+;<Icon as={BsQuestionSquareFill} />
 ```
 
 - [Deprecated]`src/components/SharedStyledComponents` - we are not using this anymore, replace everything with Chakra components.
