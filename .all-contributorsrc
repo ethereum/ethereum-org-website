@@ -8649,6 +8649,16 @@
         "doc",
         "bug"
       ]
+    },
+    {
+      "login": "Batxent",
+      "name": "tommy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7824431?v=4",
+      "profile": "https://github.com/Batxent",
+      "contributions": [
+        "doc",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
