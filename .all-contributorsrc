@@ -8715,6 +8715,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "carllippert",
+      "name": "Carl Lippert",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16457876?v=4",
+      "profile": "https://carllippert.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
