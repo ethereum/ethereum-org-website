@@ -4,7 +4,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import Translation from "./Translation"
 import { TranslationKey } from "../utils/translations"
 // Components
-import Emoji from "./OldEmoji"
+import Emoji from "./Emoji"
 import { Flex, Image, Text } from "@chakra-ui/react"
 
 export interface IProps {
@@ -54,7 +54,7 @@ const Callout: React.FC<IProps> = ({
     )}
     <Flex direction="column" justify="space-between" mt={10} h="full">
       <div>
-        {emoji && <Emoji text={emoji} size={3} />}
+        {emoji && <Emoji text={emoji} fontSize="5xl" />}
         <h3>
           <Translation id={titleKey} />
         </h3>
