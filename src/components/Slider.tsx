@@ -113,7 +113,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
   const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla])
   const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla])
   const scrollTo = useCallback(
-    (index) => {
+    (index: number) => {
       if (embla) {
         embla.scrollTo(index)
       }

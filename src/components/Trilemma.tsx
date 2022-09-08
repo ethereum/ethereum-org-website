@@ -191,7 +191,7 @@ const Trilemma: React.FC<IProps> = () => {
     mobileModalOpen: false,
   })
 
-  const handleClick = (selection) => {
+  const handleClick = (selection: string) => {
     if (selection === "isEthereum") {
       setState({
         isDecentralizedAndSecure: true,

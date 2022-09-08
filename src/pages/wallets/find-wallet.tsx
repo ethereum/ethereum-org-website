@@ -1,6 +1,6 @@
 // Libraries
 import React, { useState } from "react"
-import { graphql } from "gatsby"
+import { graphql, PageProps } from "gatsby"
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 import styled from "@emotion/styled"
@@ -26,6 +26,7 @@ import FilterBurger from "../../assets/wallets/filter_burger.svg"
 // Utils
 import { translateMessageId } from "../../utils/translations"
 import { trackCustomEvent } from "../../utils/matomo"
+import { Context } from "../../types"
 
 // Styles
 const HeroContainer = styled.div`
@@ -312,7 +313,7 @@ const ResetIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.primary};
 `
 
-const filterDefault = {
+const filterDefault: { [index: string]: boolean } = {
   android: false,
   ios: false,
   linux: false,
@@ -343,7 +344,10 @@ const filterDefault = {
 
 const randomizedWalletData = shuffle(walletData)
 
-const FindWalletPage = ({ data, location }) => {
+const FindWalletPage = ({
+  data,
+  location,
+}: PageProps<Queries.FindWalletPageQuery, Context>) => {
   const intl = useIntl()
 
   const [showFeatureFilters, setShowFeatureFilters] = useState(false)
@@ -351,14 +355,14 @@ const FindWalletPage = ({ data, location }) => {
   const [filters, setFilters] = useState(filterDefault)
   const [selectedPersona, setSelectedPersona] = useState(NaN)
 
-  const updateFilterOption = (key) => {
+  const updateFilterOption = (key: string) => {
     const updatedFilters = { ...filters }
     updatedFilters[key] = !updatedFilters[key]
     setFilters(updatedFilters)
     setSelectedPersona(NaN)
   }
 
-  const updateFilterOptions = (keys, value) => {
+  const updateFilterOptions = (keys: Array<string>, value: boolean) => {
     const updatedFilters = { ...filters }
     for (let key of keys) {
       updatedFilters[key] = value
@@ -546,7 +550,7 @@ const FindWalletPage = ({ data, location }) => {
 export default FindWalletPage
 
 export const query = graphql`
-  {
+  query FindWalletPage {
     hero: file(relativePath: { eq: "wallets/find-wallet-hero.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)

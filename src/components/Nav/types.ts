@@ -17,6 +17,8 @@ export interface IItem {
 export interface ISection {
   text: TranslationKey
   ariaLabel: TranslationKey
+  to?: string
+  isPartiallyActive?: boolean
   items: Array<IItem>
 }
 

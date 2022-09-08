@@ -4,7 +4,7 @@ import styled from "@emotion/styled"
 import Pill from "./Pill"
 
 // Represent string as 32-bit integer
-const hashCode = (string) => {
+const hashCode = (string: string) => {
   let hash = 0
   for (const char of string) {
     const code = char.charCodeAt(0)

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react"
+import React, { useState, useContext, ReactNode, ReactElement } from "react"
 import styled from "@emotion/styled"
 import { useTheme } from "@emotion/react"
 import Highlight, {
@@ -231,7 +231,7 @@ const codeTheme = {
   },
 }
 
-const getValidChildrenForCodeblock = (child) => {
+const getValidChildrenForCodeblock = (child: ReactElement): ReactElement => {
   try {
     if (typeof child !== "string") {
       return getValidChildrenForCodeblock(child.props.children)

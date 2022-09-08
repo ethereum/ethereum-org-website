@@ -281,10 +281,10 @@ const BugBountiesPage = ({
     sortBountyHuntersFn
   )
 
-  const bountyHuntersArrayToObject: Record<string, INode> = [
+  const bountyHuntersArrayToObject = [
     ...consensusBountyHunters,
     ...executionBountyHunters,
-  ].reduce((acc, next) => {
+  ].reduce((acc: Record<string, INode>, next) => {
     const name = next.name
     if (!name) {
       return acc

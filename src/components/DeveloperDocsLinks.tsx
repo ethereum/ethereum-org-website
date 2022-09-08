@@ -12,34 +12,32 @@ const DeveloperDocsLinks: React.FC<IProps> = ({ headerId }) => (
   <React.Fragment>
     {docLinks
       .filter(({ id }) => id.includes(headerId))
-      .map(({ items, id }) => (
+      .map(({ items = [], id }) => (
         <ul key={id}>
-          {items &&
-            items.map(({ id, to, path, description, items }) => (
-              <ListItem key={id}>
-                {to || path ? (
-                  <Link to={to || path}>
-                    <Translation id={id} />
-                  </Link>
-                ) : (
+          {items.map(({ id, to, path, description, items = [] }) => (
+            <ListItem key={id}>
+              {to || path ? (
+                <Link to={to || path}>
                   <Translation id={id} />
-                )}
-                <i>
-                  {" – "}
-                  <Translation id={description} />
-                </i>
-                <ul>
-                  {items &&
-                    items.map(({ id, to, path }) => (
-                      <ListItem key={id}>
-                        <Link to={to || path}>
-                          <Translation id={id} />
-                        </Link>
-                      </ListItem>
-                    ))}
-                </ul>
-              </ListItem>
-            ))}
+                </Link>
+              ) : (
+                <Translation id={id} />
+              )}
+              <i>
+                {" – "}
+                <Translation id={description} />
+              </i>
+              <ul>
+                {items.map(({ id, to, path }) => (
+                  <ListItem key={id}>
+                    <Link to={to || path}>
+                      <Translation id={id} />
+                    </Link>
+                  </ListItem>
+                ))}
+              </ul>
+            </ListItem>
+          ))}
         </ul>
       ))}
   </React.Fragment>

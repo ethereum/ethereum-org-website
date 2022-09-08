@@ -74,7 +74,7 @@ const ModalCloseIcon = styled(Icon)`
   margin: 1rem;
 `
 
-const Overlay = ({ isActive }) => (
+const Overlay = ({ isActive }: { isActive: boolean }) => (
   <StyledOverlay
     initial={false}
     animate={{ opacity: isActive ? 1 : 0, zIndex: isActive ? 1001 : -1 }}

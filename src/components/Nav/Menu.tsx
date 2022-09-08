@@ -76,9 +76,7 @@ const Menu: React.FC<IProps> = ({ path, sections }) => {
         </TwoColumns>
       </NavDropdown>
 
-      {Object.keys(restSections).map((sectionKey) => {
-        const section = restSections[sectionKey]
-
+      {Object.entries(restSections).map(([sectionKey, section]) => {
         return (
           <NavDropdown
             key={sectionKey}

@@ -320,8 +320,7 @@ const MobileNavMenu: React.FC<IProps> = ({
         initial="closed"
       >
         <MenuItems>
-          {Object.keys(linkSections).map((sectionKey, idx) => {
-            const section = linkSections[sectionKey]
+          {Object.entries(linkSections).map(([_sectionKey, section], idx) => {
             return section.items ? (
               <NavListItem
                 key={idx}

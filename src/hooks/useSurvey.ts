@@ -29,9 +29,9 @@ export const useSurvey = (
       },
     }
     let url = surveyUrls.__default[isHelpful ? YES : NO]
-    Object.keys(surveyUrls).forEach((key) => {
+    Object.entries(surveyUrls).forEach(([key, surveyUrl]) => {
       if (location.includes(key)) {
-        url = surveyUrls[key][isHelpful ? YES : NO]
+        url = surveyUrl[isHelpful ? YES : NO]
       }
     })
     return url

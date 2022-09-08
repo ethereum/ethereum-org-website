@@ -261,14 +261,19 @@ const FileContributors: React.FC<IProps> = ({
   const [isModalOpen, setModalOpen] = useState(false)
   const intl = useIntl()
 
-  const { loading, error, data } = useQuery(COMMIT_HISTORY, {
+  const { loading, error, data } = useQuery<{
+    repository: {
+      ref: { target: { history: { edges: Array<{ node: Commit }> } } }
+    }
+  }>(COMMIT_HISTORY, {
     variables: { relativePath },
   })
 
   if (error) return null
 
-  const commits: Array<Commit> =
-    data?.repository?.ref?.target?.history?.edges?.map((commit) => commit.node)
+  const commits: Array<Commit> = (
+    data?.repository?.ref?.target?.history?.edges || []
+  ).map((commit) => commit.node)
 
   const lastCommit = commits?.[0] || {}
   const lastContributor = lastCommit?.author || {}

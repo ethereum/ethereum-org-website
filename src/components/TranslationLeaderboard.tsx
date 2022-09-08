@@ -112,6 +112,8 @@ const Flex = styled.div`
   display: flex;
 `
 
+type DateRangeType = "monthData" | "quarterData" | "allTimeData"
+
 export interface IProps {
   monthData: any
   quarterData: any
@@ -123,7 +125,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
   quarterData,
   allTimeData,
 }) => {
-  const leaderboardData = {
+  const leaderboardData: { [key in DateRangeType]: Array<any> } = {
     monthData: reverse(sortBy(monthData.data, ({ user }) => user.totalCosts)),
     quarterData: reverse(
       sortBy(quarterData.data, ({ user }) => user.totalCosts)
@@ -133,7 +135,8 @@ const TranslationLeaderboard: React.FC<IProps> = ({
     ),
   }
   const [filterAmount, updateFilterAmount] = useState(10)
-  const [dateRangeType, updateDateRangeType] = useState("monthData")
+  const [dateRangeType, updateDateRangeType] =
+    useState<DateRangeType>("monthData")
 
   const showLess = () => {
     updateFilterAmount(10)

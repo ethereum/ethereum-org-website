@@ -273,7 +273,7 @@ const H2 = styled.h2`
 //   ]
 
 interface IFramework {
-  id: string
+  id: keyof Queries.DevelopersLocalEnvironmentPageQuery
   url: string
   githubUrl: string
   background: string

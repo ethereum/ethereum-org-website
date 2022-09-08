@@ -327,7 +327,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
   )
   const ALGORITHMIC = translateMessageId("page-stablecoins-algorithmic", intl)
 
-  const stablecoins = useMemo(
+  const stablecoins: { [index: string]: any } = useMemo(
     () => ({
       USDT: { type: FIAT, url: "https://tether.to/" },
       USDC: { type: FIAT, url: "https://www.coinbase.com/usdc" },
