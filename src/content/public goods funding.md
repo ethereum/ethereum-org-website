@@ -121,11 +121,11 @@ More importantly, a public goods market provides incentives for individuals and 
 
 Creators of open-source software, such as [OpenSSL](https://en.m.wikipedia.org/wiki/OpenSSL), are rarely compensated and must rely on charitable donors to fund their work. This discourages developers working on those projects and further disincentivizes others from working on similar projects that could advance society's good. 
 
-Blockchain-based public goods markets solve the problem by enabling anyone to easily contribute to organizations building public goods in a decentralized, trust-minimized, and secure manner. Rewarding builders of public goods this way averts a repeat of the tragedy of commons and leads to better outcomes for society in general. 
+Blockchain-based public goods markets enable anyone to easily contribute to organizations building public goods in a decentralized, trust-minimized, and secure manner. Rewarding builders of public goods may avert the tragedy of commons and lead to better outcomes for society in general. 
 
 ## How can Ethereum advance public goods funding? {#using-ethereum-to-fund-public-goods} 
 
-Ethereum's qualities—immutability, trustlessness, and decentralization—make it an improvement on conventional means of coordinating to develop public goods. As a programmable blockchain, Ethereum supports [smart contracts](/smart-contracts/), which programs that execute instructions based on predefined conditions. Smart contracts are the core primitives that power public goods markets running on the blockchain.
+Ethereum's qualities—immutability, trustlessness, and decentralization—could make it a platform for improving conventional means of coordinating to develop public goods. As a programmable blockchain, Ethereum supports [smart contracts](/smart-contracts/), which programs that execute instructions based on predefined conditions. Smart contracts are the core primitives that power public goods markets running on the blockchain.
 
 With Ethereum, public goods, especially digital public goods (e.g., open-source software), that have historically suffered neglect can be funded efficiently. The benefits of using Ethereum to improve public goods funding include:
 
