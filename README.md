@@ -1390,6 +1390,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="http://cryptolibertarian.id"><img src="https://avatars.githubusercontent.com/u/108990005?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cryptolibertarian.id</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Cryptolibertarian-id" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/MahendraBishnoi29"><img src="https://avatars.githubusercontent.com/u/74294202?v=4?s=100" width="100px;" alt=""/><br /><sub><b>browny</b></sub></a><br /><a href="#ideas-MahendraBishnoi29" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
+    <tr>
+      <td align="center"><a href="https://github.com/sandakersmann"><img src="https://avatars.githubusercontent.com/u/6118832?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Marius Kjærstad</b></sub></a><br /><a href="#ideas-sandakersmann" title="Ideas, Planning, & Feedback">🤔</a></td>
+    </tr>
   </tbody>
 </table>
 
