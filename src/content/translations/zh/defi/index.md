@@ -83,7 +83,7 @@ summaryPoint3: 基于任何人都可以用来编程的开源技术。
 - [开始加密货币存款](#saving)
 - [交易代币](#swaps)
 - [扩充您的投资组合](#investing)
-- [为您的灵感提供资金支持](#crowdfunding)
+- [为您的想法提供资金](#crowdfunding)
 - [购买保险](#insurance)
 - [管理您的投资组合](#aggregators)
 

@@ -1,5 +1,5 @@
 import React from "react"
-import { Icon, Link, LinkProps, useTheme } from "@chakra-ui/react"
+import { Icon, Link as ChakraLink, LinkProps, useTheme } from "@chakra-ui/react"
 import { navigate as gatsbyNavigate } from "gatsby"
 import { LocalizedLink as IntlLink } from "gatsby-theme-i18n"
 import { NavigateOptions } from "@reach/router"
@@ -43,7 +43,7 @@ export interface IProps extends IBaseProps, LinkProps {
  * - Intl links
  * e.g. <Link href="/page-2/" language="de">
  */
-const LinkWrapper: React.FC<IProps> = ({
+const Link: React.FC<IProps> = ({
   to: toProp,
   href,
   language,
@@ -82,9 +82,9 @@ const LinkWrapper: React.FC<IProps> = ({
   // See https://github.com/gatsbyjs/gatsby/issues/21909
   if (isHash) {
     return (
-      <Link href={to} {...commonProps}>
+      <ChakraLink href={to} {...commonProps}>
         {children}
-      </Link>
+      </ChakraLink>
     )
   }
 
@@ -92,7 +92,7 @@ const LinkWrapper: React.FC<IProps> = ({
   // Opens in separate window.
   if (isExternal || isPdf || isStatic) {
     return (
-      <Link
+      <ChakraLink
         href={to}
         isExternal
         _after={{
@@ -114,13 +114,13 @@ const LinkWrapper: React.FC<IProps> = ({
         {...commonProps}
       >
         {children}
-      </Link>
+      </ChakraLink>
     )
   }
 
   // Use `gatsby-theme-i18n` Link (which prepends lang path)
   return (
-    <Link
+    <ChakraLink
       to={to}
       as={IntlLink}
       language={language}
@@ -142,7 +142,7 @@ const LinkWrapper: React.FC<IProps> = ({
           }}
         />
       )}
-    </Link>
+    </ChakraLink>
   )
 }
 
@@ -159,4 +159,4 @@ export function navigate(
   gatsbyNavigate(link, options)
 }
 
-export default LinkWrapper
+export default Link

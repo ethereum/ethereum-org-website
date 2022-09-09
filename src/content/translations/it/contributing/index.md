@@ -5,7 +5,7 @@ lang: it
 sidebar: true
 ---
 
-# Contribuire a ethereum.org 🦄 {#contributing-to-ethereumorg}
+# Contribuire a ethereum.org {#contributing-to-ethereumorg}
 
 Il sito web di ethereum.org e, più in generale, Ethereum, è un progetto open-source. Quindi, se vuoi contribuire a migliorare [il nostro portale per Ethereum](/about/), ecco come puoi fare.
 
@@ -18,7 +18,7 @@ Il sito web di ethereum.org e, più in generale, Ethereum, è un progetto open-s
 
 - [Lavora su un ticket aperto](https://github.com/ethereum/ethereum-org-website/issues) _– Attività che abbiamo identificato come necessarie_
 - [Unisciti al programma di traduzione](/contributing/translation-program/) _– Aiutaci a offrire ethereum.org in nuove lingue_
-- [Aggiungi articoli della community](/contributing/content-resources/) _– Aggiungi un articolo utile a una pagina rilevante_
+- [Aggiungi risorse della community](/contributing/content-resources/) _– Aggiungi un articolo o risorsa utili a una pagina rilevante_
 - [Aggiungi un prodotto](/contributing/adding-products/) _– Aggiungi una dapp o un portafoglio a una pagina rilevante_
 - [Aggiungi strumenti per sviluppatori](/contributing/adding-developer-tools/) _– Aggiungi uno strumento per sviluppatori a una pagina rilevante_
 - [Aggiungi una piattaforma di scambio](/contributing/adding-exchanges/) _– Aggiungi una piattaforma di scambio al nostro [strumento di ricerca dedicato](/get-eth/#country-picker)_
@@ -30,7 +30,7 @@ Il sito web di ethereum.org e, più in generale, Ethereum, è un progetto open-s
 - [Aggiungi un prodotto o servizio di staking](/contributing/adding-staking-products/) - _Aggiungi un progetto che aiuti a facilitare lo staking in solo, in pool o lo staking come servizio_
 - [Aggiungi un portafoglio](/contributing/adding-wallets/) _- Aggiungi un portafoglio per la [pagina trova portafogli](/wallets/find-wallet/)._
 
-_Hai domande?_ 🤔 Consulta il nostro [server Discord](https://discord.gg/CetY6Y4)
+_Hai domande?_ Consulta il nostro [server Discord](https://discord.gg/CetY6Y4)
 
 ## Come lavorare su ethereum.org {#how-to-update-content}
 
@@ -74,7 +74,7 @@ Se il tuo contributo viene inserito su ethereum.org, conieremo per te un POAP di
 ### Come richiederlo {#how-to-claim}
 
 1. Unisciti al nostro [server Discord](https://discord.gg/E8dET2ux8y).
-2. Incolla un link al tuo contributo nel canale `#🥇 | poaps`.
+2. Incolla un link al tuo contributo nel [canale](https://discord.com/channels/714888181740339261/804005643211898911) `# | poaps`.
 3. Attendi che un membro del nostro team ti invii un link al tuo POAP.
 4. Richiedi il tuo POAP!
 

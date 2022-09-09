@@ -17,7 +17,7 @@ lang: fa
 
 ## منابع Ethereum.org {#ethereum-org}
 
-Ethereum.org به صورت بومی به بیش از 40 زبان ترجمه شده است که می‌توانید در [صفحه‌ی زبان‌ها](/languages)ی ما آن‌ها را بیابید.
+Ethereum.org به بیش از 40 زبان بومی ترجمه شده است که می‌توانید در [صفحه‌ی زبان‌ها](/languages)ی ما آن‌ها را بیابید.
 
 اگر دوزبانه هستید و می‌خواهید به ما کمک کنید تا افراد بیشتری را جذب کنیم، می‌توانید در [برنامه‌ی ترجمه ethereum.org](/contributing/translation-program/#translation-program) نیز مشارکت داشته باشید و به ما کمک کنید تا وب‌سایت را ترجمه کنیم.
 
@@ -30,7 +30,7 @@ Ethereum.org به صورت بومی به بیش از 40 زبان ترجمه شد
 - [BeInCrypto](http://www.beincrypto.com.br) - اخبار و مقالات ارزهای دیجیتال، از جمله فهرستی از صرافی‌های موجود در برزیل
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) - نسخه‌ی برزیلی Cointelegraph، یک رسانه خبری مهم ارزهای دیجیتال
 - [Livecoins](http://www.livecoins.com.br/ethereum) - ابزارها و اخبار ارزهای رمزنگاری‌شده
-- [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - اخبار و گزارش‌های ارزهای دیجیتال
+- [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - اخبار و گزارش‌های ارزهای رمزنگاری‌شده
 
 **آموزشی**
 
@@ -46,11 +46,11 @@ Ethereum.org به صورت بومی به بیش از 40 زبان ترجمه شد
 **منابع کلی**
 
 - [Ethereum.cn](https://www.ethereum.cn/) - محتوای نگهداری‌شده توسط انجمن، پوشش ارتقای لایه اجماع، تمام یادداشت‌های گردهمایی‌های برنامه‌نویسی هسته، لایه‌ی 2 و غیره.
-- [EthFans](https://ethfans.org/) - همه‌چیز را از اصول اولیه تا موضوعات پیشرفته‌ی اتریوم بیاموزید
+- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - همه‌چیز را از اصول اولیه تا موضوعات پیشرفته‌ی اتریوم بیاموزید
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - محتوای نگهداری شده توسط انجمن، پوشش دانش مرتبط با اتریوم، دیفای، NFT،‏ Web3
 - [123ETH](https://123eth.org/) - دروازه‌ای به اکوسیستم اتریوم
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - دوره‌های آنلاین رایگان درباره ارزهای دیجیتال و کاربردهای آن
-- [Whitepaper اتریوم](/zh/whitepaper) - نسخه‌ی چینی وایت‌پیپر اتریوم
+- [Whitepaper اتریوم](https://github.com/ethereum/wiki/wiki/[%E4%B8%AD%E6%96%87]-%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%99%BD%E7%9A%AE%E4%B9%A6) - نسخه‌ی چینی وایت‌پیپر
 
 **اکوسیستم اتریوم**
 
@@ -60,13 +60,20 @@ Ethereum.org به صورت بومی به بیش از 40 زبان ترجمه شد
 
 **برای توسعه‌دهندگان**
 
-- [DappLearning](https://github.com/Dapp-Learning-DAO/Dapp-Learning) - یک گروه آموزشی برای مطالعه‌ی پروژه‌های جریان اصلی dApp و اشتراک‌گذاری افکار و نظرات به‌صورت هفتگی
+- [DappLearning](https://github.com/Dapp-Learning-DAO/Dapp-Learning) - یک گروه آموزشی برای مطالعه‌ی پروژه‌های dapp و تبادل اندیشه و نظرات به‌صورت هفتگی
 - [LearnBlockchain](https://learnblockchain.cn/) - انجمنی برای توسعه‌دهندگان جهت اشتراک‌گذاری اطلاعات در مورد فناوری زنجیره‌‌ی بلوکی
 
 **برای محققین رمزنگاری**
 
 - [SecbitLabs](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw) - یک حساب WeChat که رمزنگاری، امنیت و غیره را توضیح می‌دهد
 - [Sparkbyte](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ) - یک حساب WeChat که فناوری zk را توضیح می‌دهد
+
+### چک {#cs}
+
+- [Gwei.cz](https://gwei.cz) - جامعه‌ی محلی با محوریت Web3 که محتوای آموزشی تولید می‌کند و رویدادهای آنلاین و حضوری را سامان‌دهی می‌کند
+- [Gwei.cz Příručka](https://prirucka.gwei.cz/) - راهنمای اتریوم برای مبتدیان
+- [DAO Příručka](https://dao.gwei.cz/) - راهنمای DAOها برای مبتدیان
+- [تبحر در اتریوم](https://ipfs.infura-ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - یادگیری زیروبم اتریوم به زبان چک
 
 ### فرانسوی {#fr}
 
@@ -87,26 +94,27 @@ Ethereum.org به صورت بومی به بیش از 40 زبان ترجمه شد
 - [اتریوم ایتالیا](https://www.ethereum-italia.it/) - آموزش، رویدادها و اخبار اتریوم با تمرکز بر قراردادهای هوشمند و فناوری زنجیره‌‌ی بلوکی
 - [پادکست اتریوم ایتالیا](https://www.ethereum-italia.it/podcast/) - پادکست اتریوم به زبان ایتالیایی
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/it-it/learn/modules/blockchain-learning-solidity/) - یاد بگیرید چگونه از Solidity استفاده کنید
-- [Microsoft Learn (قراردادهای هوشمندا)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - با نوشتن قراردادهای هوشمند با استفاده از Solidity آشنا شوید
-- [Microsoft Learn (dApps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - ایجاد یک رابط کاربری با برنامه‌های غیرمتمرکز
+- [Microsoft Learn (قراردادهای هوشمند)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - با نوشتن قراردادهای هوشمند با استفاده از Solidity آشنا شوید
+- [Microsoft Learn (dappها)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - یک رابط کاربری با برنامه‌های غیرمتمرکز بسازید
 
 ### اسپانیایی {#es}
 
 - [اتریوم مادرید](https://ethereummadrid.com/) - دوره‌ها، رویدادها و وبلاگ در مورد زنجیره بلوکی، دیفای و حاکمیت
 - [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) - راهنمای اتریوم برای مبتدیان به زبان اسپانیایی
-- [آموزش آنلاین](https://tutoriales.online/curso/solidity) - Solidity و برنامه‌نویسی در اتریوم را بیاموزید
-- [دوره‌ی معرفی توسعه‌ی اتریوم](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) - اصول Solidity، تست و ساخت اولین قرارداد هوشمند خود
-- [دوره مقدماتی امنیت و هک در اتریوم](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) - آسیب‌ها و مشکلات امنیتی رایج در قراردادهای هوشمند واقعی را متوجه شوید
+- [Tutoriales online](https://tutoriales.online/curso/solidity) - Solidity و برنامه‌نویسی در اتریوم را بیاموزید
+- [دوره‌ی معرفی توسعه‌ی اتریوم](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) - اصول Solidity، تست کردن و ساختن اولین قرارداد هوشمند خود
+- [دوره مقدماتی امنیت و هک در اتریوم](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) - آسیب‌پذیری‌ها و مشکلات امنیتی رایج در قراردادهای هوشمند واقعی را متوجه شوید
 - [مقدمه ای بر دوره توسعه DeFi](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - یاد بگیرید که قراردادهای هوشمند دیفای چگونه با Solidity کار می‌کنند و بازارساز خودکار (Automated Market Maker) خود را بسازید
+- [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) - آموزش زنجیره‌‌ی بلوکی به زبان غیرفنی از سطح مقدماتی تا سطح پیشرفته. همه‌چیز را درباره‌ی رمزارز و اتریوم یاد بگیرید.
 
-### ترکی استانبولی {#tr}
+### ترکی {#tr}
 
-- [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) - دوره‌ی آموزشی با تمرکز بر زنجیره بلوکی و ارزهای رمزنگاری‌شده
+- [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) - دوره‌ی آموزشی با تمرکز بر زنجیره‌ی بلوکی و ارزهای رمزنگاری‌شده
 - [تغییر نام عالی: چه اتفاقی برای Eth2 افتاد؟](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) - ترجمه‌ی ترکی پست وبلاگی تغییر نام عالی که فاصله گرفتن از اصطلاح «Eth2» را توضیح می‌دهد
 
 ### ویتنامی {#vi}
 
-- [گروه تینو](https://wiki.tino.org/ethereum-la-gi/) - مروری بر اتریوم، برنامه‌های غیرمتمرکز (dAppها)، کیف‌پول‌ها و پرسش‌های متداول
+- [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - مرور کلی اتریوم، dAppها، کیف پول‌ها و سؤالات متداول
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - پلتفرم وب با زیرصفحاتی در مورد اخبار و آموزش اتریوم
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) - درگاه ارزهای رمزنگاری‌شده با اخبار و محتوای آموزشی اتریومی
 
@@ -115,5 +123,5 @@ Ethereum.org به صورت بومی به بیش از 40 زبان ترجمه شد
 - [انجمن تبادل دارایی‌های مجازی و رمزنگاری‌شده‌ی ژاپن](https://jvcea.or.jp/)
 - [انجمن تجارت دارایی‌های رمزنگاری‌شده‌ی ژاپن](https://cryptocurrency-association.org/)
 - [با توسعه‌ی زنجیره‌‌ی بلوکی شروع کنید - بیاموزید | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - این سایت، شما را با مسیر یادگیری زنجیره‌‌ی بلوکی و توسعه در پلتفرم اتریوم آشنا می‌کند
-- [تبحر در اتریوم](https://www.oreilly.co.jp/books/9784873118963/) - تبحر در اتریوم به زبان ژاپنی
+- [تبحر در اتریوم](https://www.oreilly.co.jp/books/9784873118963/) - یادگیری زیروبم اتریوم به زبان ژاپنی
 - [توسعه‌ی قراردادهای هوشمند به‌صورت عملی با Solidity و اتریوم](https://www.oreilly.co.jp/books/9784873119342/) - توسعه‌ی قراردادهای هوشمند عملی با Solidity و اتریوم به زبان ژاپنی

@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react"
 import styled from "@emotion/styled"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 
@@ -15,7 +15,7 @@ import GhostCard from "../components/GhostCard"
 import Link from "../components/Link"
 import InfoBanner from "../components/InfoBanner"
 import DocLink from "../components/DocLink"
-import Emoji from "../components/Emoji"
+import Emoji from "../components/OldEmoji"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import ProductList from "../components/ProductList"
@@ -32,10 +32,11 @@ import {
   OptionContainer,
   OptionText,
 } from "../components/SharedStyledComponents"
+import FeedbackCard from "../components/FeedbackCard"
 
 import { translateMessageId } from "../utils/translations"
+import { getImage, getSrc } from "../utils/image"
 import { Context } from "../types"
-import FeedbackCard from "../components/FeedbackCard"
 
 const MagiciansImage = styled(GatsbyImage)`
   background-size: cover;
@@ -847,6 +848,16 @@ const DappsPage = ({
       image: getImage(data.rotki),
       alt: translateMessageId("page-dapps-rotki-logo-alt", intl),
     },
+    {
+      title: "Krystal",
+      description: translateMessageId(
+        "page-dapps-dapp-description-krystal",
+        intl
+      ),
+      link: "https://defi.krystal.app/",
+      image: getImage(data.krystal),
+      alt: translateMessageId("page-dapps-krystal-logo-alt", intl),
+    },
   ]
 
   const computing = [
@@ -1139,7 +1150,7 @@ const DappsPage = ({
     title: translateMessageId("decentralized-applications-dapps", intl),
     header: translateMessageId("page-dapps-hero-header", intl),
     subtitle: translateMessageId("page-dapps-hero-subtitle", intl),
-    image: getImage(data.doge),
+    image: getImage(data.doge)!,
     alt: translateMessageId("page-dapps-doge-img-alt", intl),
     buttons: [
       {
@@ -1158,7 +1169,7 @@ const DappsPage = ({
       <PageMetadata
         title={translateMessageId("decentralized-applications-dapps", intl)}
         description={translateMessageId("page-dapps-desc", intl)}
-        image={getImage(data.ogImage)?.images.fallback.src}
+        image={getSrc(data.ogImage)}
       />
       <PageHero content={heroContent} />
       <Divider />
@@ -1230,7 +1241,7 @@ const DappsPage = ({
               description={choice.description}
               url={choice.url}
               alt={choice.alt}
-              image={choice.image}
+              image={choice.image!}
               name={choice.name}
             >
               <Pill color={choice.pillColor}>{choice.type}</Pill>
@@ -1364,7 +1375,7 @@ const DappsPage = ({
             <StyledCalloutBanner
               titleKey={"page-dapps-wallet-callout-title"}
               descriptionKey={"page-dapps-wallet-callout-description"}
-              image={getImage(data.wallet)}
+              image={getImage(data.wallet)!}
               maxImageWidth={300}
               alt={translateMessageId(
                 "page-dapps-wallet-callout-image-alt",
@@ -1618,7 +1629,7 @@ const DappsPage = ({
         <ImageContainer id="what-are-dapps">
           <StyledGhostCard>
             <MagiciansImage
-              image={getImage(data.magicians)}
+              image={getImage(data.magicians)!}
               alt={translateMessageId("page-dapps-magician-img-alt", intl)}
             />
           </StyledGhostCard>
@@ -1888,6 +1899,9 @@ export const query = graphql`
       ...dappImage
     }
     rotki: file(relativePath: { eq: "dapps/rotki.png" }) {
+      ...dappImage
+    }
+    krystal: file(relativePath: { eq: "dapps/krystal.png" }) {
       ...dappImage
     }
     poap: file(relativePath: { eq: "dapps/poap.png" }) {

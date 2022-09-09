@@ -27,9 +27,11 @@ lang: ja
 - [Ethresear.ch](https://ethresear.ch) - イーサリアム研究の主要なフォーラムであり、暗号経済学の世界で最も影響力のあるフォーラム
 - [エコシステム・サポート・プログラムのウィッシュリスト](https://esp.ethereum.foundation/wishlist/) - イーサリアムのエコシステム・サポート・プログラムが助成金の申請を募集している研究分野。
 
+[研究が活発な領域を探索](/community/research/)
+
 ## 非技術的なスキル<Emoji text=":briefcase:" size={1} /> {#non-technical}
 
-開発者でない場合は、イーサリアムで何から始めればよいか、迷われる場合があると思います。 下記に、いくつかの提案と特定の専門的な背景を持つ人々向けのリソースを紹介します。
+開発者でない場合は、イーサリアムで何から始めればよいか、迷われる場合があると思います。 下記に、いくつかのお勧めと特定の専門的な背景を持つ方向けのリソースを紹介します。
 
 ### 自分の都市でミートアップを開催 {#meetups}
 
@@ -61,9 +63,9 @@ ETH をステーキングすると、イーサリアムネットワークの保�
 
 - [ステーキングの詳細](/staking/)
 
-### プロジェクト支援 {#suport-projects}
+### プロジェクト支援 {#support-projects}
 
-イーサリアムのエコシステムは、公共財や影響のあるプロジェクトに資金を提供しています。 少額の寄付であなたの支援を示し、重要なプロジェクトの実現にご協力ください。
+イーサリアムのエコシステムは、公共善や影響のあるプロジェクトに資金を提供しています。 少額の寄付であなたの支援を示し、重要なプロジェクトの実現にご協力ください。
 
 - [Gitcoin](https://gitcoin.co/fund)
 - [clr.fund](https://clr.fund/#/about)
@@ -96,6 +98,7 @@ ETH をステーキングすると、イーサリアムネットワークの保�
 - [useWeb3 の求人](https://www.useweb3.xyz/jobs)
 - [Web3 の求人](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
+- [Crypto Valley Jobs](https://cryptovalley.jobs/)
 
 ## 分散型自律組織(DAO)への参加 {#decentralized-autonomous-organizations-daos}
 
@@ -104,7 +107,7 @@ ETH をステーキングすると、イーサリアムネットワークの保�
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _非技術分野で分散型自律組織(DAO)の概念をプロモーションし、価値の創造を支援_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _インターネットは共同所有されるべきという信念を共有する開発者コミュニティ_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _分散型自律組織(DAO)として機能しているフリーランスの Web3 開発共同体_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _非中央集権型の開発、分散型アプリ(Dapp)のガバナンスおよびプロトコル_
+- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _分散型開発、分散型アプリ(Dapp)のガバナンスとプロトコル_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _DAOhaus のコミュニティガバナンス_
 - [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _コミュニティにより所有されているスーパーヒーロー・フランチャイズ_
 - [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _リーガル・エンジニアリング_

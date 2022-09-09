@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import Icon from "./Icon"
 import Link from "./Link"
 import Translation from "./Translation"
@@ -130,7 +130,7 @@ export interface ITitleCardItem {
   description: string
   caption?: string
   link?: string
-  image?: string
+  image?: IGatsbyImageData
   alt?: string
   id?: number
 }
@@ -169,7 +169,7 @@ const TitleCardList: React.FC<IProps> = ({
       const isLink = !!link
       return isLink ? (
         <ItemLink key={id || idx} to={link}>
-          {image && <Image image={image} alt={alt} />}
+          {image && <Image image={image} alt={alt || ""} />}
           <LeftContainer>
             <ItemTitle>{title}</ItemTitle>
 
@@ -183,7 +183,7 @@ const TitleCardList: React.FC<IProps> = ({
         </ItemLink>
       ) : (
         <Item key={idx} onClick={() => clickHandler(idx)}>
-          {image && <Image image={image} alt={alt} />}
+          {image && <Image image={image} alt={alt || ""} />}
           <LeftContainer>
             <ItemTitle>{title}</ItemTitle>
 

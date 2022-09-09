@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
 const StyledCard = styled.div`
   background: ${(props) => props.theme.colors.searchBackground};
@@ -23,7 +23,7 @@ const Description = styled.p`
 
 export interface IProps {
   children?: React.ReactNode
-  image: string
+  image: IGatsbyImageData
   alt: string
   title: string
   description: string

@@ -3,6 +3,7 @@ title: Intro agli ether
 description: Introduzione di uno sviluppatore alla criptovaluta ether.
 lang: it
 sidebar: true
+preMergeBanner: true
 ---
 
 ## Prerequisiti {#prerequisites}
@@ -19,7 +20,7 @@ La prima criptovaluta è stata Bitcoin, creata da Satoshi Nakamoto. Dal rilascio
 
 ## Cos'è un ether? {#what-is-ether}
 
-**Ether (ETH)** è la criptovaluta impiegata per molti scopi sulla rete Ethereum. Fondamentalmente è l'unica forma di pagamento accettabile per le commissioni sulle transazioni, e dopo [la fusione](/upgrades/merge) è necessaria anche per convalidare e proporre blocchi sulla rete principale. Ether viene anche utilizzato come forma primaria di garanzia nei mercati dei prestiti [DeFi](/defi), come unità di conto nei mercati NFT, come pagamento guadagnato per l'esecuzione di servizi o la vendita di beni fisici e altro ancora.
+**Ether (ETH)** è la criptovaluta impiegata per molti scopi sulla rete Ethereum. Fondamentalmente è l'unica forma di pagamento accettabile per le commissioni sulle transazioni, e dopo [la fusione](/upgrades/merge) servianno degli ether per convalidare e proporre blocchi sulla rete principale. Ether viene anche utilizzato come forma primaria di garanzia nei mercati dei prestiti [DeFi](/defi), come unità di conto nei mercati NFT, come pagamento guadagnato per l'esecuzione di servizi o la vendita di beni fisici e altro ancora.
 
 Ethereum consente agli sviluppatori di creare [**applicazioni decentralizzate (dapp)**](/developers/docs/dapps), che condividono tutte un pool di potenza di elaborazione. Questo pool condiviso è limitato, quindi Ethereum necessita di un meccanismo per determinare chi lo usa. In caso contrario, una dApp potrebbe consumare accidentalmente o malevolmente tutte le risorse della rete, impedendo ad altri di accedervi.
 
@@ -33,13 +34,15 @@ Capita [spesso](https://www.reuters.com/article/us-crypto-currencies-lending-ins
 
 La coniazione è il processo con vengono creati nuovi ether sul registro di Ethereum. Il protocollo sottostante di Ethereum crea i nuovi ether, cosa impossibile da fare per un utente.
 
-L'ether è coniato quando un miner crea un blocco sulla blockchain di Ethereum. Come incentivo ai miner, il protocollo concede una ricompensa in ogni blocco, aumentando il saldo di un indirizzo impostato dal miner del blocco. Nel tempo la ricompensa per i blocchi è cambiata e oggi ammonta a 2 ETH per blocco.
+L'ether è coniato quando è creato un nuovo blocco sulla blockchain di Ethereum. Come incentivo a creare i blocchi, il protocollo concede una ricompensa in ogni blocco, incrementando il saldo di un indirizzo impostato dal produttore del blocco. Nel tempo la ricompensa per i blocchi è cambiata e oggi ammonta a 2 ETH per blocco. Dopo la fusione, l'emissione di ogni validatore dipende dalla quantità di ether che hanno messo in staking e dalle loro prestazioni.
 
 ## Bruciare ether {#burning-ether}
 
 Oltre a essere creato tramite le ricompense per il blocco, l'ether può essere anche distrutto o "bruciato", come si dice in gergo. L'ether bruciato viene rimosso dalla circolazione in via permanente.
 
-La bruciatura di ether ha luogo in ogni transazione su Ethereum. Quando gli utenti pagano per le proprie transazioni, la loro commissione sul carburante viene distrutta dal protocollo. In base alla domanda della rete, [alcuni blocchi](https://etherscan.io/block/12965263) bruciano più ether di quanto ne creino.
+La bruciatura di ether ha luogo in ogni transazione su Ethereum. Quando gli utenti pagano per le proprie transazioni, viene distrutta una commissione di base sul gas, impostata dalla rete a seconda della domanda di transazioni. Questo, insieme a dimensioni variabili dei blocchi e una commissione del gas massima, semplifica la stima della commissione di transazione su Ethereum. Quando la domanda della rete è elevata, i [blocchi](https://etherscan.io/block/12965263) possono bruciare più ether di quanto ne sia coniato, compensando efficacemente l'emissione di ether.
+
+Bruciare la commissione di base impedisce vari metodi in cui i produttori del blocco potrebbero altrimenti manipolarla. Ad esempio, se i produttori del blocco hanno ricevuto la commissione di base, potrebbero includere le proprie transazioni gratuitamente e aumentare la commissione di base per tutti gli altri. In caso contrario, potrebbero rimborsare la commissione di base ad alcuni utenti al di fuori della catena, creando così un mercato delle commissioni sulle transazioni più opaco e complesso.
 
 ## Denominazioni dell'ether {#denominations}
 
@@ -66,11 +69,12 @@ Quando l'indirizzo del destinatario è uno [smart contract](/developers/docs/sma
 
 Gli utenti possono interrogare il saldo di ether di qualsiasi [accout](/developers/docs/accounts/) consultando il rispettivo campo del `saldo`, che mostra le posizioni in ether denominate in wei.
 
-[Etherscan](https://etherscan.io) è uno strumento popolare per consultare i saldi dell'indirizzo attraverso un'applicazione basata sul web. Per esempio, [questa pagina di Etherscan](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) mostra il saldo per la Ethereum Foundation.
+[Etherscan](https://etherscan.io) è uno strumento popolare per consultare i saldi dell'indirizzo attraverso un'applicazione basata sul web. Per esempio, [questa pagina di Etherscan](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) mostra il saldo per la Ethereum Foundation. I saldi del conto sono anche interrogabili usando i portafogli o direttamente effettuando richieste ai nodi.
 
 ## Letture consigliate {#further-reading}
 
 - [Definire Ether ed Ethereum](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _CME Group_
 - [Ethereum Whitepaper](/whitepaper/): La proposta originale per Ethereum. Questo documento include una descrizione dell'ether e le motivazioni dietro alla sua creazione.
+- [Gwei Calculator](https://www.alchemy.com/gwei-calculator): Usa questa calcolatrice di gwei per convertire facilmente wei, gwei ed ether. Basta inserire qualsiasi importo di wei, gwei o ETH e calcolare automaticamente la conversione.
 
-_Conosci una risorsa della community che ti è stata utile? Modificare questa pagina e aggiungerla!_
+_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_

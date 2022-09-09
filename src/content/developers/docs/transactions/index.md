@@ -153,7 +153,7 @@ So for Bob to send Alice 1 ETH at a `baseFeePerGas` of 190 gwei and `maxPriority
 0.0042 ETH
 ```
 
-Bob's account will be debited **-1.0042 ETH**
+Bob's account will be debited **-1.0042 ETH** (1 ETH for Alice + 0.0042 ETH in gas fees)
 
 Alice's account will be credited **+1.0 ETH**
 

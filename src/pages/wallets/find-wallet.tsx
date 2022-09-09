@@ -1,7 +1,7 @@
 // Libraries
 import React, { useState } from "react"
 import { graphql } from "gatsby"
-import { getImage, GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 import styled from "@emotion/styled"
 import { shuffle } from "lodash"
@@ -26,6 +26,7 @@ import FilterBurger from "../../assets/wallets/filter_burger.svg"
 // Utils
 import { translateMessageId } from "../../utils/translations"
 import { trackCustomEvent } from "../../utils/matomo"
+import { getImage } from "../../utils/image"
 
 // Styles
 const HeroContainer = styled.div`
@@ -758,6 +759,16 @@ export const query = graphql`
       }
     }
     bitcoindotcom: file(relativePath: { eq: "wallets/bitcoindotcom.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    zerion: file(relativePath: { eq: "wallets/zerion.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    enkrypt: file(relativePath: { eq: "wallets/enkrypt.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
