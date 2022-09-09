@@ -99,7 +99,7 @@ The problems explained in the previous section lead to "coordination failures" t
 
 ### Regenerative cryptoeconomics and public goods markets {#regenerative-cryptoeconomics-and-public-goods-markets} 
 
-"Regenerative cryptoeconomics" concerns using blockchain technology to design incentives and mechanisms that support regenerative economic systems. A regenerative economy is one where common resources are replenished regularly to encourage long-term sustainability. 
+"Regenerative cryptoeconomics" concerns using blockchain technology to design incentives and mechanisms that support regenerative economic systems. A regenerative economy is one that has positive environmental and social externalities that also generate more capital assets. 
 
 This contrasts with an extractive economy in which resources are extracted without any attempt to replenish them. In this case, every individual act of consumption subtracts from the shared resource pool, leading to its eventual depletion. 
 
