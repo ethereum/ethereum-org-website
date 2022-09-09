@@ -1,51 +1,11 @@
 // Libraries
 import React from "react"
-import styled from "@emotion/styled"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import Translation from "./Translation"
 import { TranslationKey } from "../utils/translations"
-
 // Components
-import Emoji from "./OldEmoji"
-
-const StyledCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(
-    49.21deg,
-    rgba(127, 127, 213, 0.2) 19.87%,
-    rgba(134, 168, 231, 0.2) 58.46%,
-    rgba(145, 234, 228, 0.2) 97.05%
-  );
-  padding: 1.5rem;
-  margin: 1rem;
-  margin-top: 8rem;
-  border-radius: 4px;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 4rem;
-  }
-`
-
-const Description = styled.p`
-  font-size: 1.25rem;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-`
-
-const Image = styled(GatsbyImage)`
-  margin-top: -10rem;
-  align-self: center;
-  max-width: 263px;
-  min-height: 200px;
-`
-
-const Content = styled.div`
-  margin-top: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-`
+import Emoji from "./Emoji"
+import { Flex, Heading, Image, Text } from "@chakra-ui/react"
 
 export interface IProps {
   children?: React.ReactNode
@@ -66,21 +26,45 @@ const Callout: React.FC<IProps> = ({
   children,
   className,
 }) => (
-  <StyledCard className={className}>
-    {image && <Image image={image} alt={alt || ""} />}
-    <Content>
+  <Flex
+    direction="column"
+    bgGradient="linear-gradient(
+    49.21deg,
+    rgba(127, 127, 213, 0.2) 19.87%,
+    rgba(134, 168, 231, 0.2) 58.46%,
+    rgba(145, 234, 228, 0.2) 97.05%
+  )"
+    p={6}
+    m={4}
+    mt={32}
+    mb={{ base: 16, lg: 4 }}
+    borderRadius="base"
+    className={className}
+  >
+    {image && (
+      <Image
+        as={GatsbyImage}
+        image={image}
+        alt={alt || ""}
+        mt={-40}
+        alignSelf="center"
+        maxW="263px"
+        minH="200px"
+      />
+    )}
+    <Flex direction="column" justify="space-between" mt={10} h="full">
       <div>
-        {emoji && <Emoji text={emoji} size={3} />}
-        <h3>
+        {emoji && <Emoji text={emoji} fontSize="5xl" />}
+        <Heading as="h3" fontSize="2xl" lineHeight={1.4}>
           <Translation id={titleKey} />
-        </h3>
-        <Description>
+        </Heading>
+        <Text color="text200" fontSize="xl" lineHeight="140%">
           <Translation id={descriptionKey} />
-        </Description>
+        </Text>
       </div>
       {children}
-    </Content>
-  </StyledCard>
+    </Flex>
+  </Flex>
 )
 
 export default Callout
