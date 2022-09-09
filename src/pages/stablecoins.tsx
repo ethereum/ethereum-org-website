@@ -1,13 +1,13 @@
 import React, { useEffect, useState, useMemo } from "react"
-import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import styled from "@emotion/styled"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 
 import ButtonLink from "../components/ButtonLink"
 import CalloutBanner from "../components/CalloutBanner"
 import DataProductCard from "../components/DataProductCard"
-import Emoji from "../components/Emoji"
+import Emoji from "../components/OldEmoji"
 import FeedbackCard from "../components/FeedbackCard"
 import GhostCard from "../components/GhostCard"
 import HorizontalCard from "../components/HorizontalCard"
@@ -32,6 +32,7 @@ import Translation from "../components/Translation"
 
 import { getData } from "../utils/cache"
 import { translateMessageId } from "../utils/translations"
+import { getImage } from "../utils/image"
 
 const StyledContent = styled(Content)`
   margin-bottom: -2rem;
@@ -331,7 +332,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
     () => ({
       USDT: { type: FIAT, url: "https://tether.to/" },
       USDC: { type: FIAT, url: "https://www.coinbase.com/usdc" },
-      DAI: { type: CRYPTO, url: "https://oasis.app/dai" },
+      DAI: { type: CRYPTO, url: "https://kb.oasis.app/help/what-is-dai" },
       BUSD: { type: FIAT, url: "https://www.binance.com/en/busd" },
       PAX: { type: FIAT, url: "https://www.paxos.com/pax/" },
       TUSD: { type: FIAT, url: "https://www.trusttoken.com/trueusd" },
@@ -537,17 +538,6 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
       ),
     },
     {
-      background: "#212121",
-      url: "https://trade.dydx.exchange/portfolio/overview",
-      alt: translateMessageId("dydx-logo", intl),
-      image: getImage(data.dydx),
-      name: "dYdX",
-      description: translateMessageId(
-        "page-stablecoins-stablecoins-dapp-description-3",
-        intl
-      ),
-    },
-    {
       background: "linear-gradient(135deg, #c7efe6 0%, #eeeac7 100%)",
       url: "https://oasis.app",
       alt: translateMessageId("oasis-logo", intl),
@@ -579,7 +569,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
     title: translateMessageId("page-stablecoins-title", intl),
     header: translateMessageId("page-stablecoins-hero-header", intl),
     subtitle: translateMessageId("page-stablecoins-hero-subtitle", intl),
-    image: getImage(data.stablecoins),
+    image: getImage(data.stablecoins)!,
     alt: translateMessageId("page-stablecoins-hero-alt", intl),
     buttons: [
       {
@@ -592,7 +582,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
           intl
         ),
         toId: "how",
-        isSecondary: true,
+        variant: "outline",
       },
     ],
   }
@@ -722,7 +712,10 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                       </ButtonLink>
                     </div>
                     <div>
-                      <ButtonLink isSecondary to="https://oasis.app/dai">
+                      <ButtonLink
+                        variant="outline"
+                        to="https://kb.oasis.app/help/what-is-dai"
+                      >
                         <Translation id="page-stablecoins-dai-banner-learn-button" />
                       </ButtonLink>
                     </div>
@@ -730,7 +723,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                 </div>
               </StyledLeftColumn>
               <Image
-                image={getImage(data.dailarge)}
+                image={getImage(data.dailarge)!}
                 alt={translateMessageId("page-stablecoins-dai-logo", intl)}
               />
             </StyledDaiBanner>
@@ -755,7 +748,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                     </div>
                     <div>
                       <ButtonLink
-                        isSecondary
+                        variant="outline"
                         to="https://www.coinbase.com/usdc"
                       >
                         <Translation id="page-stablecoins-usdc-banner-learn-button" />
@@ -765,7 +758,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                 </div>
               </StyledLeftColumn>
               <Image
-                image={getImage(data.usdclarge)}
+                image={getImage(data.usdclarge)!}
                 alt={translateMessageId("page-stablecoins-usdc-logo", intl)}
               />
             </USDCBanner>
@@ -804,7 +797,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
           descriptionKey={
             "page-stablecoins-stablecoins-dapp-callout-description"
           }
-          image={getImage(data.doge)}
+          image={getImage(data.doge)!}
           maxImageWidth={600}
           alt={translateMessageId(
             "page-stablecoins-stablecoins-dapp-callout-image-alt",
@@ -815,7 +808,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
             <ButtonLink to="/dapps/">
               <Translation id="page-stablecoins-explore-dapps" />
             </ButtonLink>
-            <ButtonLinkWrap isSecondary to="/defi/">
+            <ButtonLinkWrap variant="outline" to="/defi/">
               <Translation id="page-stablecoins-more-defi-button" />
             </ButtonLinkWrap>
           </ButtonLinkContainer>
@@ -857,7 +850,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
               background={dapp.background}
               url={dapp.url}
               alt={dapp.alt}
-              image={dapp.image}
+              image={dapp.image!}
               name={dapp.name}
               description={dapp.description}
             />
@@ -965,16 +958,6 @@ export const query = graphql`
       childImageSharp {
         gatsbyImageData(
           width: 64
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    dydx: file(relativePath: { eq: "exchanges/dydx.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 80
           layout: FIXED
           placeholder: BLURRED
           quality: 100

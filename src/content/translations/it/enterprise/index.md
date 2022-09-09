@@ -59,7 +59,8 @@ Alcuni sforzi collaborativi per rendere la rete Ethereum aziendale più intuitiv
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _client Ethereum open source aziendale sviluppato con licenza Apache 2.0 e scritto in Java_
 - [Infura](https://infura.io/) _accesso scalabile all'API alle reti di Ethereum e IPFS_
 - [Provide](https://provide.services/) _infrastruttura e API per applicazioni aziendali Web3_
-- [Unibright](https://unibright.io/) _team di specialisti della blockchain, architetti, sviluppatori e consulenti con più di 20 anni di esperienza in processi di business e integrazione_
+- [QuickNode](https://www.quicknode.com/) _fornisce nodi affidabili e veloci con API di alto livello come l'API NFT, l'API Token, etc., consegnando una suite di prodotti unificata e soluzioni aziendali_
+- [Unibright](https://unibright.io/), _ un team di specialisti della blockchain, architetti, sviluppatori e consulenti con più di 20 anni di esperienza nei processi di business e integrazione_
 
 ### Strumenti e librerie {#tooling-and-libraries}
 
@@ -67,7 +68,7 @@ Alcuni sforzi collaborativi per rendere la rete Ethereum aziendale più intuitiv
 - [Epirus](https://www.web3labs.com/epirus) _piattaforma per sviluppare, distribuire e monitorare le applicazioni della blockchain di Web3 Labs_
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _kit di strumenti per transazioni private_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _applicazione per la firma delle transazioni da usare con un provider web3_
-- [Tenderly](https://tenderly.co/) _piattaforma di dati che fornisce analisi in tempo reale, avvisando e monitorando con supporto per le reti private._
+- [Tenderly](https://tenderly.co/) _una Piattaforma di dati che fornisce analitiche in tempo reale, avvisando e monitorando con supporto alle reti private_
 - [Truffle Suite](https://trufflesuite.com) _suite di sviluppo per la blockchain (Truffle, Ganache, Drizzle)_
 
 ### Soluzioni di scalabilità {#scalability-solutions}
@@ -112,8 +113,8 @@ Ecco alcune applicazioni aziendali che sono state distribuite alla rete principa
 
 ### Pagamenti {#payments}
 
-- [Brave Browser](https://basicattentiontoken.org/) _paga gli utenti per l'attenzione dedicata agli annunci e gli utenti possono pagare gli editori per supportarli, tramite il Token Basic Attention._
-- [hCaptcha](https://www.hcaptcha.com/) _Sistema CAPTCHA di prevenzione da bot che paga gli operatori dei siti web per l'operazione di etichettatura dei dati da parte degli utenti per il machine learning. Ora distribuito da Cloudflare._
+- [Brave Browser](https://basicattentiontoken.org/) _paga gli utenti per l'attenzione prestata agli annunci pubblicitari e gli utenti possono pagare gli editori per supportarli, tramite il Token d'attenzione di base_
+- [hCaptcha](https://www.hcaptcha.com/) _Sistema CAPTCHA di prevenzione da bot che paga gli operatori dei siti web per l'operazione di etichettatura dei dati da parte degli utenti per il machine learning. Attualmente distribuito da Cloudflare_
 - [Audius](https://audius.co/) _un servizio di streaming che collega i fan musicali direttamente agli artisti e consente a questi ultimi di essere pagati totalmente dai fan, direttamente e istantaneamente per ogni flusso_
 - [EthereumAds](https://ethereumads.com/) _consente agli operatori dei siti web di vendere spazi pubblicitari e di essere pagati tramite Ethereum_
 
@@ -143,7 +144,7 @@ Ecco alcune applicazioni aziendali che sono state distribuite alla rete principa
 - [Morpheus.network](https://morpheus.network/) _piattaforma di automatizzazione della catena d'approvvigionamento che implementa un ibrido di catene private con dati autenticati sulla rete principale Ethereum e viene utilizzata da aziende come il distributore di carburante e petrolio canadese Federated Co-op Ltd. e il fornitore di alimenti per animali domestici argentino Vitalcan_
 - [Minespider](https://www.minespider.com/) _monitoraggio della catena di approvvigionamento_
 - [Follow Our Fibre](https://www.followourfibre.com) _tracciabilità della filiera della viscosa_
-- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _consente alle aziende di interagire in un flusso di lavoro di approvvigionamento emettendo richieste di RFQ, contratti, ordini d'acquisto e fatture sulla rete di partner aziendali fidati_
+- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _consente alle aziende di interagire in un flusso di lavoro di approvvigionamento emettendo richieste di preventivo, contratti, ordini d'acquisto e fatture sulla rete di partner aziendali fidati_
 - [Treum](https://treum.io/) _assicura trasparenza, tracciabilità e commerciabilità alle catene d'approvvigionamento usando la tecnologia della blockchain_
 - [TradeTrust](https://www.tradetrust.io/) _verifica le Polizze di Carico (B/L) per la spedizione internazionale_
 - [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _conia NFT per ogni nuovo lotto di birra, consentendo una maggiore visibilità ed efficienza lungo l'intera catena di approvvigionamento_

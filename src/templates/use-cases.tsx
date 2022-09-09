@@ -3,8 +3,8 @@ import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import styled from "@emotion/styled"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
@@ -30,7 +30,6 @@ import UpgradeTableOfContents, {
   Item as ItemTableOfContents,
 } from "../components/UpgradeTableOfContents"
 import TableOfContents from "../components/TableOfContents"
-import TranslationsInProgress from "../components/TranslationsInProgress"
 import Translation from "../components/Translation"
 import SectionNav from "../components/SectionNav"
 import {
@@ -40,7 +39,7 @@ import {
   Header4,
   ListItem,
 } from "../components/SharedStyledComponents"
-import Emoji from "../components/Emoji"
+import Emoji from "../components/OldEmoji"
 import YouTube from "../components/YouTube"
 import PreMergeBanner from "../components/PreMergeBanner"
 import FeedbackCard from "../components/FeedbackCard"
@@ -48,6 +47,7 @@ import FeedbackCard from "../components/FeedbackCard"
 import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
 import { Lang } from "../utils/languages"
+import { getImage } from "../utils/image"
 import { Context } from "../types"
 
 const Page = styled.div`
@@ -167,7 +167,6 @@ const components = {
   Divider,
   SectionNav,
   Pill,
-  TranslationsInProgress,
   Emoji,
   UpgradeStatus,
   DocLink,
@@ -230,7 +229,7 @@ const HeroContainer = styled.div`
   }
 `
 
-const Image = styled(GatsbyImage)`
+const Image = styled(GatsbyImage)<{ useCase: string }>`
   flex: 1 1 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -402,8 +401,8 @@ const UseCasePage = ({
         </TitleCard>
         <Image
           useCase={useCase}
-          image={getImage(mdx.frontmatter.image)}
-          alt={mdx.frontmatter.alt}
+          image={getImage(mdx.frontmatter.image)!}
+          alt={mdx.frontmatter.alt || ""}
         />
       </HeroContainer>
       <MoreContent to="#content">

@@ -22,8 +22,8 @@ DeSci aims to create an ecosystem where scientists are incentivized to openly sh
 Decentralized science allows for more diverse funding sources (from [DAOs](/dao/), [quadratic donations](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) to crowdfunding and more), more accessible access data and methods, and by providing incentives for reproducibility.
 
 ### Juan Benet - DeSci, Independent Labs, & Large Scale Data Science
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zkXM9H90g_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zkXM9H90g_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## How DeSci improves science {#desci-improves-science}
 
@@ -92,20 +92,17 @@ Flexible Web3 data solutions support the scenarios above and provide the foundat
 
 Explore projects and join the DeSci community.
 
-- [Atoms: smart contract peer-review)](https://www.atoms.org)
+- [Molecule: Fund and get funded for your research projects](https://discover.molecule.to/)
+- [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
+- [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
+- [LabDAO: fold a protein in-silico](https://alphafodl.vercel.app/)
 - [dClimate API: query climate data collected by a decentralized community](https://api.dclimate.net/)
 - [DeSci Foundation: DeSci publishing tool builder](https://descifoundation.org/)
 - [DeSci.World: one-stop shop for users to view, engage with decentralized science](https://desci.world)
-- [Molecule: Fund and get funded for your research projects](https://discover.molecule.to/)
+- [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
 - [OceanDAO: DAO governed funding for data-related science](https://oceanprotocol.com/dao)
 - [Opscientia: open decentralized science workflows](https://opsci.io/research/)
-- [LabDAO: fold a protein in-silico](https://alphafodl.vercel.app/)
-- [Bio.xyz: get funded for your biotech DAO or desci project](https://www.molecule.to/)
-- [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
-- [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
-- [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
-- [Active Inference Lab](https://www.activeinference.org/)
-- [Cherubs DAO: NFT funded and DAO governed impact fund for mental health & brain wellness](https://cherubsdao.com/)
+- [IdeaMarkets: enabling decentralized scientifc credibility](https://ideamarket.io/)
 
 ## Further reading {#further-reading}
 
@@ -127,3 +124,4 @@ Explore projects and join the DeSci community.
 - [Conversation between Vitalik Buterin and the scientist Aubrey de Grey about the intersection of longevity research and crypto](https://www.youtube.com/watch?v=x9TSJK1widA)
 - [Scientific Publishing Is Broken. Can Web3 Fix It?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
 - [Juan Benet - DeSci, Independent Labs, & Large Scale Data Science](https://www.youtube.com/watch?v=zkXM9H90g_E)
+- [Sebastian Brunemeier - How DeSci Can Transform Biomedical Research & Venture Capital](https://www.youtube.com/watch?v=qB4Tc3FcVbM)

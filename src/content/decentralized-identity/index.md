@@ -132,7 +132,7 @@ Decentralized identity has many potential use-cases:
 
 ### 1. Universal logins {#universal-dapp-logins}
 
-Decentralized identity can help replace password-based logins with [decentralized authentication](https://www.ibm.com/blogs/blockchain/2018/10/decentralized-identity-an-alternative-to-password-based-authentication/). Service providers can can issue attestations to users, which can be stored in an Ethereum wallet. An example attestation would be an [NFT](/nft/) granting the holder access to an online community.
+Decentralized identity can help replace password-based logins with [decentralized authentication](https://www.ibm.com/blogs/blockchain/2018/10/decentralized-identity-an-alternative-to-password-based-authentication/). Service providers can issue attestations to users, which can be stored in an Ethereum wallet. An example attestation would be an [NFT](/nft/) granting the holder access to an online community.
 
 A [Sign-In with Ethereum](https://login.xyz/) function would then enable servers to confirm the user's Ethereum account and fetch the required attestation from their account address. This means users can access platforms and websites without having to memorize long passwords and improves the online experience for users.
 
@@ -182,4 +182,4 @@ There are many ambitious projects using Ethereum as a foundation for decentraliz
 
 - [ERC-725 Alliance on GitHub](https://github.com/erc725alliance) — _Supporters of the ERC725 standard for managing identity on the Ethereum blockchain_
 - [SpruceID Discord server](https://discord.com/invite/Sf9tSFzrnt) — _Community for enthusiasts and developers working on Sign-in with Ethereum_
-- [Veramo Labs](https://discord.com/invite/Sf9tSFzrnt) — _A community of developers contributing to building a framework for verifiable data for applications_
+- [Veramo Labs](https://discord.gg/sYBUXpACh4) — _A community of developers contributing to building a framework for verifiable data for applications_

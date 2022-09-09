@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 const TableContainer = styled.div`
   overflow-x: auto;
@@ -11,7 +11,9 @@ const TableContainer = styled.div`
   }
 `
 
-export interface IProps {}
+export interface IProps {
+  children?: React.ReactNode
+}
 
 const MarkdownTable: React.FC<IProps> = ({ children }) => (
   <TableContainer>

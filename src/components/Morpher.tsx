@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import Link from "./Link"
 
 const NavLink = styled(Link)`
@@ -7,6 +7,7 @@ const NavLink = styled(Link)`
   font-size: 1rem;
   color: ${(props) => props.theme.colors.text};
   &:hover {
+    text-decoration: none;
     color: ${(props) => props.theme.colors.primary};
   }
   &.active {
