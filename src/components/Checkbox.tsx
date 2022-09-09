@@ -1,59 +1,32 @@
 import React from "react"
-import styled from "@emotion/styled"
+import {
+  Checkbox as ChakraCheckbox,
+  Icon,
+  VisuallyHiddenInput,
+  Text,
+  VStack,
+} from "@chakra-ui/react"
 
-const CheckboxContainer = styled.div`
-  display: inline-block;
-  vertical-align: middle;
-`
+// Checkbox Container
+const containerProps = {
+  display: "inline-block",
+  verticalAlign: "middle",
+}
 
-const HiddenCheckbox = styled.input`
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-`
+// Hidden input
 
-const StyledCheckbox = styled.div<{
-  size: number
-  checked: boolean
-}>`
-  display: inline-block;
-  width: ${(props) => props.size}rem;
-  height: ${(props) => props.size}rem;
-  min-width: ${(props) => props.size}rem;
-  background: ${(props) =>
-    props.checked
-      ? props.theme.colors.primary400
-      : props.theme.colors.background};
-  border: 1px solid ${(props) => props.theme.colors.black50};
-  border-radius: 3px;
-  transition: all 150ms;
-  &:hover {
-    box-shadow: ${(props) => props.theme.colors.tableItemBoxShadow};
-    border: 1px solid ${(props) => props.theme.colors.primary600};
-    transition: transform 0.1s;
-    transform: scale(1.02);
-  }
-`
+// StyledCheckbox
 
-const Icon = styled.svg<{
-  checked: boolean
-}>`
-  fill: none;
-  stroke: ${(props) => props.theme.colors.white};
-  stroke-width: 2px;
-  visibility: ${(props) => (props.checked ? "visible" : "hidden")};
-`
+// Icon
+const svgProps = {
+  fill: "none",
+  stroke: `${(props) => props.theme.colors.white}`,
+  strokeWidth: "2px",
+  visibility: `${(props) => (props.checked ? "visible" : "hidden")}`,
+}
+// Label
 
-const Label = styled.span`
-  margin-left: 0.5rem;
-`
-
+// Props
 export interface IProps {
   children?: React.ReactNode
   callback?: () => void
@@ -62,6 +35,7 @@ export interface IProps {
   size?: number
 }
 
+// Checkbox
 const Checkbox: React.FC<IProps> = ({
   callback,
   checked,
@@ -70,26 +44,38 @@ const Checkbox: React.FC<IProps> = ({
   size = 2,
   ...rest
 }) => {
+  console.log({
+    checkboxProps: {
+      callback,
+      checked,
+      children,
+      className,
+      size,
+      ...rest,
+    },
+  })
+
   const handleClick = () => {
     if (callback) {
       callback()
     }
   }
+
   return (
-    <CheckboxContainer className={className} onClick={handleClick}>
-      <HiddenCheckbox type="checkbox" checked={checked} readOnly {...rest} />
-      <StyledCheckbox
+    <VStack className={className} onClick={handleClick} {...containerProps}>
+      <VisuallyHiddenInput type="checkbox" checked={checked} readOnly />
+      <ChakraCheckbox
         aria-hidden="true"
         checked={checked}
         className="styled-checkbox"
         size={size}
       >
-        <Icon checked={checked} viewBox="0 0 24 24">
+        <svg checked={checked} viewBox="0 0 24 24" {...svgProps}>
           <polyline points="20 6 9 17 4 12" />
-        </Icon>
-      </StyledCheckbox>
-      {children && <Label>{children}</Label>}
-    </CheckboxContainer>
+        </svg>
+      </ChakraCheckbox>
+      {children && <Text>{children}</Text>}
+    </VStack>
   )
 }
 
