@@ -125,7 +125,7 @@ Blockchain-based public goods markets enable anyone to easily contribute to orga
 
 ## How can Ethereum advance public goods funding? {#using-ethereum-to-fund-public-goods} 
 
-Ethereum's qualities—immutability, trustlessness, and decentralization—could make it a platform for improving conventional means of coordinating to develop public goods. As a programmable blockchain, Ethereum supports [smart contracts](/smart-contracts/), which programs that execute instructions based on predefined conditions. Smart contracts are the core primitives that power public goods markets running on the blockchain.
+Ethereum's qualities—immutability, trustlessness, and decentralization—could make it a platform for improving conventional means of coordinating to develop public goods. As a programmable blockchain, Ethereum supports [smart contracts](/smart-contracts/), which are programs that execute instructions based on predefined conditions. Smart contracts are the core primitives that power public goods markets running on the blockchain.
 
 With Ethereum, public goods, especially digital public goods (e.g., open-source software), that have historically suffered neglect can be funded efficiently. The benefits of using Ethereum to improve public goods funding include:
 
