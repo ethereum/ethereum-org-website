@@ -8762,6 +8762,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "scottfits",
+      "name": "Scott Fitsimones",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1193692?v=4",
+      "profile": "http://scottfits.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
