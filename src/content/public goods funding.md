@@ -235,7 +235,7 @@ Some [decentralized identity protocols](/decentralized-identity/#use-decentraliz
 
 As a rule, "bribe-for-vote" schemes only work if the briber can verify that the bribee voted for their preferred option. Without proof that bribing voters affected the outcome, malicious actors intent on manipulating a vote are less likely to offer bribes. Information about transactions performed on the Ethereum blockchain is public, hence executing bribery and collusion is easier (users can provide transaction data as proof of voting for the briber's choice).
 
-But what if it was possible to publish results of an on-chain vote, while concealing specifics of individual votes—without reducing the integrity of the process? This is precisely what [Minimum Anti-Collusion Infrastructure](https://ethresear.ch/t/minimal-anti-collusion-infrastructure/5413) seeks to achieve. 
+But what if it was possible to publish results of an on-chain vote, while concealing specifics of individual votes—without reducing the integrity of the process? This is precisely what [Minimum Anti-Collusion Infrastructure](https://ethresear.ch/t/minimal-anti-collusion-infrastructure/5413) seeks to achieve (albeit with some trust assumptions). 
 
 Using MACI, it is possible to tally results from a quadratic voting round without needing to publish a breakdown of votes cast by each user. This is achieved using a combination of Ethereum smart contracts for recording and aggregating votes from users and [zero-knowledge proof](/zero-knowledge-proofs/) circuits that prove the vote tallying was performed correctly. 
 
