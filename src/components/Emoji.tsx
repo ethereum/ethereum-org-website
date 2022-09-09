@@ -24,7 +24,7 @@ const Emoji = (props: IProps) => {
       // avoid differences in SSR
       options={{ protocol: IS_DEV ? "http" : "https" }}
       svg
-      d="inline-block"
+      display="inline-block"
       {...props}
     />
   )
