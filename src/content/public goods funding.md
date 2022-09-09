@@ -3,7 +3,7 @@ title: Public goods funding
 description: An overview of public goods funding solutions on Ethereum
 lang: en
 template: use-cases
-emoji: 🌎 
+emoji: 🌎
 sidebar: true
 sidebarDepth: 2
 summaryPoint1: Public goods are nonexcludable and nonrivalrous and benefit everyone
@@ -175,7 +175,7 @@ We can easily calculate the final amount received by each project using the quad
 
 2. `Park B`: Adding the square roots of each donor's contribution ($20) gives $40. Subtracting the total amount contributed ($800) from the square of $40 ($1,600) gives $800—the matched funds. 
 
-#### Why is quadratic funding ideal? {#advantages-of-quadratic-funding} 
+#### Advantages of quadratic funding {#advantages-of-quadratic-funding} 
 
 Again, we can use the example of raising funds for public parks to show why quadratic funding is ideal for funding public goods:
 
@@ -221,7 +221,7 @@ Some may ask: "Why do you need a blockchain to coordinate a quadratic funding ro
 
 2. **Bribery and collusion**: It is possible to bribe voters to donate to a particular project (even if they prefer another option), thereby artificially inflating perceived preference for the former. This defeats the purpose of voting since the votes cast by a bribed individual may not reflect their true preference. Hence, just like Sybil attacks, bribery and collusion reduce the effectiveness of quadratic funding mechanisms. 
 
-Ethereum solves both problems in the following ways:
+Ethereum mitigates both problems in the following ways:
 
 ### Decentralized identity {#decentralized-identity} 
 
@@ -231,17 +231,23 @@ Some [decentralized identity protocols](/decentralized-identity/#use-decentraliz
 
 ### Zero-knowledge proofs {#zero-knowledge-proofs} 
 
-[Zero-knowledge proofs](/zero-knowledge-proofs/) enable anyone to prove the validity of a claim without exposing the underlying information. For example, Alice can prove her status as a United States citizen without having to provide her passport details. 
+[Zero-knowledge proofs](/zero-knowledge-proofs/) allowing for proving the validity of a claim without exposing the underlying information. For example, Alice can prove her status as a United States citizen without having to provide her passport details. This feature makes zero-knowledge proofs are useful for preventing bribery and collusion in on-chain voting schemes as explained below:
 
-Zero-knowledge proofs are particularly useful for preventing bribery and collusion in public voting. This is achieved by obfuscating details about individual votes whilst preserving the integrity of voting results. 
+As a rule, "bribe-for-vote" schemes only work if the briber can verify that the bribee voted for their preferred option. Without proof that bribing voters affected the outcome, malicious actors intent on manipulating a vote are less likely to offer bribes. Information about transactions performed on the Ethereum blockchain is public, hence executing bribery and collusion is easier (users can provide transaction data as proof of voting for the briber's choice).
 
-Bribe-for-vote schemes only work if the bribee can prove they voted for the briber's preferred option. This is relatively easy to execute on an online voting platform, more so on Ethereum where all information is public. 
+But what if it was possible to publish results of an on-chain vote, while concealing specifics of individual votes—without reducing the integrity of the process? This is precisely what [Minimum Anti-Collusion Infrastructure](https://ethresear.ch/t/minimal-anti-collusion-infrastructure/5413) seeks to achieve. 
 
-But zero-knowledge proofs ensure individuals can prove they voted in an election without having to reveal how they voted. [Minimum Anti-Collusion Infrastructure](https://github.com/privacy-scaling-explorations/maci/blob/master/specs/01_introduction.md), which uses smart contracts, is an implementation of this technique and has been successfully used to protect quadratic funding from bribery and collusion. 
+Using MACI, it is possible to tally results from a quadratic voting round without needing to publish a breakdown of votes cast by each user. This is achieved using a combination of Ethereum smart contracts for recording and aggregating votes from users and [zero-knowledge proof](/zero-knowledge-proofs/) circuits that prove the vote tallying was performed correctly. 
 
-Using MACI, it is possible to correctly tally results from a qudratic voting round and verify that an individual participated, while hiding details of how they voted. Since bribers cannot possibly know how a bribed individual, they have less incentive to hand out bribes in hopes of swinging votes.
+MACI also allows users to submit multiple votes with the caveat that only votes encrypted with a valid keypair will be processed. Hence, a bribee could vote for a briber's choice using an invalid keypair, but the latter cannot know if the vote was valid or not (since the final tally doesn't say how each voter voted). Here's how the [MACI documentation](https://github.com/privacy-scaling-explorations/maci/tree/master/specs) describes it:
 
-[More on MACI](https://clr.fund/#/about/maci). 
+> When Alice casts her vote, she signs her vote with her private key, encrypts her signature with Dave's public key, and submits the result to the smart contract.
+Each voter may change her keypair at any time. To do this, she creates and signs a key-change command, encrypts it, and sends it to the smart contract. This makes it impossible for a briber to ever be sure that their bribe has any effect on the bribee's vote.
+
+> If Bob, for instance, bribes Alice to vote a certain way, she can simply use the first public key she had registered ⁠— which is now void ⁠— to cast a vote. Since said vote is encrypted, as was the key-changing message which Alice had previously sent to Dave, Bob has no way to tell if Alice had indeed voted the way he wanted her to.
+Even if Alice reveals the cleartext of her vote to Bob, she just needs to not show him the updated key command that she previously used to invalidate that key. In short, as long as she had submitted a single encrypted command before her vote, there is no way to tell if said vote is valid or not.
+
+Already, some quadratic funding applications have [integrated with MACI](https://clr.fund/#/about/maci) to reduce the impact of bribery and collusion. It is hoped that this would disincentivize malicious actors from trying to corrupt the quadratic funding process by bribing voters to signal false preferences for certain projects. 
 
 ## Funding public goods with Ethereum {#fund-public-goods-with-ethereum}
 
