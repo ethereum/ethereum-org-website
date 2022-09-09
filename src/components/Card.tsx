@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
+import { Flex, Heading, Text } from "@chakra-ui/react"
 import Emoji from "./Emoji"
-import { Flex, Text } from "@chakra-ui/react"
 
 export interface IProps {
   children?: React.ReactNode
@@ -20,7 +20,7 @@ const Card: React.FC<IProps> = ({
   <Flex
     direction="column"
     bg="ednBackground"
-    borderRadius="2px"
+    borderRadius="sm"
     border="1px"
     borderStyle="solid"
     borderColor="lightBorder"
@@ -32,9 +32,9 @@ const Card: React.FC<IProps> = ({
         <Emoji fontSize="5xl" text={emoji} mb={4} display="inline-block" />
       )}
       {title && (
-        <Text as="h3" mt={0}>
+        <Heading as="h3" mt={0} fontSize="2xl" lineHeight={1.4}>
           {title}
-        </Text>
+        </Heading>
       )}
       {description && (
         <Text opacity={0.8} m={0}>
