@@ -529,5 +529,14 @@
     "description": "Web3 IRL Hackathon & Ethereum Cultural Fest of the Year.",
     "startDate": "2022-11-26",
     "endDate": "2022-11-30"
+  },
+  {    
+    "title": "ETHBrno",
+    "to": "https://ethbrno.cz",
+    "sponsor": null,
+    "location": "Brno, Czech Republic",
+    "description": "Lunarpunk hackathon focused on privacy and security. We believe that privacy is a fundamental human right. And good privacy needs good security foundations.",
+    "startDate": "2022-11-11",
+    "endDate": "2022-11-13"
   }
 ]
