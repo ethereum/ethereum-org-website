@@ -5,7 +5,7 @@ import Translation from "./Translation"
 import { TranslationKey } from "../utils/translations"
 // Components
 import Emoji from "./Emoji"
-import { Flex, Image, Text } from "@chakra-ui/react"
+import { Flex, Heading, Image, Text } from "@chakra-ui/react"
 
 export interface IProps {
   children?: React.ReactNode
@@ -55,9 +55,9 @@ const Callout: React.FC<IProps> = ({
     <Flex direction="column" justify="space-between" mt={10} h="full">
       <div>
         {emoji && <Emoji text={emoji} fontSize="5xl" />}
-        <h3>
+        <Heading as="h3" fontSize="2xl" lineHeight={1.4}>
           <Translation id={titleKey} />
-        </h3>
+        </Heading>
         <Text color="text200" fontSize="xl" lineHeight="140%">
           <Translation id={descriptionKey} />
         </Text>
