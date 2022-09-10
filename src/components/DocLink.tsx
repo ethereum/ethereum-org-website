@@ -1,95 +1,68 @@
 import React from "react"
 import { useTheme } from "@emotion/react"
-import styled from "@emotion/styled"
-import Icon from "./Icon"
+import { Icon, Box, Container, Text } from "@chakra-ui/react"
+import { AiOutlineArrowRight } from "react-icons/ai"
 import Link from "./Link"
-import Emoji from "./OldEmoji"
+import Emoji from "./Emoji"
 
 export interface IProps {
   children?: React.ReactNode
   to: string
-  className?: string
   isExternal?: boolean
 }
 
-const Container = styled(Link)<{ isExternal: boolean }>`
-  position: relative;
-  z-index: 1;
-  text-decoration: none;
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  width: 100%;
-  justify-content: space-between;
-  padding: 1rem;
-  border-radius: 2px;
-  color: ${({ theme }) => theme.colors.text};
-  border: 1px solid ${({ theme }) => theme.colors.border};
-  &:hover {
-    text-decoration: none;
-    box-shadow: 0 0 1px ${({ theme }) => theme.colors.primary};
-    background: ${({ theme }) => theme.colors.tableBackgroundHover};
-    border-radius: 4px;
-
-    svg {
-      fill: ${(props) => props.theme.colors.primary};
-      transition: transform 0.1s;
-      transform: scale(1.2)
-        rotate(${({ isExternal }) => (isExternal ? "-45deg" : "0")});
-    }
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    width: 100%;
-  }
-`
-
-const TextCell = styled.div`
-  flex: 1;
-  flex-direction: column;
-  color: ${({ theme }) => theme.colors.text};
-`
-
-const Title = styled.p`
-  color: ${({ theme }) => theme.colors.text300};
-  font-weight: 600;
-  margin: 0;
-`
-
-const Arrow = styled(Icon)<{ isExternal: boolean }>`
-  margin: 0rem 1.5rem;
-  align-self: center;
-  min-width: 2rem;
-  transform: rotate(${({ isExternal }) => (isExternal ? "-45deg" : "0")});
-`
-
-const EmojiCell = styled.div`
-  display: flex;
-  align-items: center;
-`
-
-const DocLink: React.FC<IProps> = ({
-  to,
-  children,
-  className,
-  isExternal = false,
-}) => {
+const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
   const theme = useTheme()
 
   return (
-    <Container to={to} className={className} isExternal={isExternal} hideArrow>
-      <EmojiCell>
-        <Emoji size={1} text=":page_with_curl:" mr={`1rem`} />
-      </EmojiCell>
-      <TextCell>
-        <Title>{children}</Title>
-      </TextCell>
-      <Arrow
-        isExternal={isExternal}
-        color={theme.colors.text}
-        name="arrowRight"
-      />
-    </Container>
+    <Link to={to} isExternal={isExternal} textDecoration="none" hideArrow>
+      <Container
+        position="relative"
+        zIndex={1}
+        textDecoration="none"
+        display="flex"
+        flexDirection="row"
+        flex={1}
+        width="100%"
+        justifyContent="space-between"
+        padding="1rem"
+        borderRadius="sm"
+        color="text"
+        border="1px"
+        borderStyle="solid"
+        borderColor="border"
+        _hover={{
+          textDecoration: "none",
+          background: "tableBackgroundHover",
+          borderRadius: "base",
+        }}
+        role="group"
+      >
+        <Box display="flex" alignItems="center">
+          <Emoji fontSize="md" mr={4} text=":page_with_curl:" />
+        </Box>
+        <Box flex={1} flexDirection="column" color="text">
+          <Text color="text300" fontWeight="semibold" margin={0}>
+            {children}
+          </Text>
+        </Box>
+        <Icon
+          as={AiOutlineArrowRight}
+          color="text"
+          alignSelf="center"
+          minWidth="2rem"
+          boxSize={6}
+          marginX="1.5rem"
+          _groupHover={{
+            fill: "primary",
+            transition: "transform 0.1s",
+            transform: "scale(1.2)",
+          }}
+        />
+      </Container>
+    </Link>
   )
 }
 
 export default DocLink
+
