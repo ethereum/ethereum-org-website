@@ -89,8 +89,8 @@ With the SD card inserted into the Raspberry Pi, connect the ethernet cable and 
 Once everything is installed and configured, log in to the device via an ssh connection or using the terminal directly if a monitor and keyboard is attached to the board. Use the `ethereum` account to log in, as this has permissions required to start the node.
 
 ```shell
-User: ethereum
-Password: ethereum
+User: ubuntu
+Password: ubuntu
 ```
 
 The user can then choose the execution-consensus client combination they wish to run, and start their systemctl processes as follows (example runs Geth and Lighthouse):
