@@ -58,9 +58,11 @@ const checkIsMdxOutdated = (filePath: string): boolean => {
   let englishMatch = ""
   let intlMatch = ""
   try {
+    // @ts-ignore
     englishData.match(re).forEach((match) => {
       englishMatch += match.replace(re, (_, p1, p2) => p1 + p2)
     })
+    // @ts-ignore
     translatedData.match(re).forEach((match) => {
       intlMatch += match.replace(re, (_, p1, p2) => p1 + p2)
     })
@@ -443,7 +445,9 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
     const { createTypes } = actions
     const { sdls } = Schema
 
-    createTypes([...Object.keys(sdls).map((sdlKey) => sdls[sdlKey])])
+    createTypes([
+      ...Object.keys(sdls).map((sdlKey) => sdls[sdlKey as keyof typeof sdls]),
+    ])
   }
 
 export const onPreBootstrap: GatsbyNode["onPreBootstrap"] = ({ reporter }) => {

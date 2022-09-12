@@ -720,7 +720,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                 <Layer2ProductCard
                   key={idx}
                   background={l2.background}
-                  image={getImage(data[l2.imageKey])!}
+                  image={getImage(data[l2.imageKey as keyof typeof data])!}
                   description={translateMessageId(
                     l2.descriptionKey as TranslationKey,
                     intl
@@ -752,7 +752,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                 <Layer2ProductCard
                   key={idx}
                   background={l2.background}
-                  image={getImage(data[l2.imageKey])!}
+                  image={getImage(data[l2.imageKey as keyof typeof data])!}
                   description={translateMessageId(
                     l2.descriptionKey as TranslationKey,
                     intl

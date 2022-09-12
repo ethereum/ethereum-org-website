@@ -82,7 +82,13 @@ const config: GatsbyConfig = {
             }
           }
         }`,
-        resolvePages: ({ site, allSitePage: { nodes: allPages } }) => {
+        resolvePages: ({
+          site,
+          allSitePage: { nodes: allPages },
+        }: {
+          site: { siteMetadata: { siteUrl: string } }
+          allSitePage: { nodes: Array<{ path: string }> }
+        }) => {
           return allPages
             .filter((page) => {
               // Filter out 404 pages
