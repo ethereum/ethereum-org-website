@@ -1,6 +1,6 @@
 import React from "react"
 import { useTheme } from "@emotion/react"
-import { Icon, Box, Container, Text } from "@chakra-ui/react"
+import { Icon, Box, Container, Text, Flex } from "@chakra-ui/react"
 import { AiOutlineArrowRight } from "react-icons/ai"
 import Link from "./Link"
 import Emoji from "./Emoji"
@@ -40,7 +40,7 @@ const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
       >
         <Flex align="center">
           <Emoji fontSize="md" mr={4} text=":page_with_curl:" />
-        </Box>
+        </Flex>
         <Box flex={1} flexDirection="column" color="text">
           <Text color="text300" fontWeight="semibold" margin={0}>
             {children}
