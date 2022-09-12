@@ -57,7 +57,7 @@ In [Solidity](#solidity), `assert(false)` compiles to `0xfe`, an invalid opcode,
 
 ### attestation {#attestation}
 
-A validator vote for a [block](#block). Validators must attest to blocks, signalling that they agree with the state proposed by the block.
+A claim made by an entity that something is true. In context of Ethereum, consensus validators must make a claim as to what they believe the state of the chain to be. At designated times, each validator is responsible for publishing different attestations that formally declare this validator's view of the chain, including the last finalized checkpoint and the current head of the chain.
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos/attestations/">
   Attestations
@@ -77,7 +77,7 @@ Every [block](#block) has a reserve price known as the 'base fee'. It is the min
 
 ### Beacon Chain {#beacon-chain}
 
-The Beacon Chain was the blockchain that introduced [proof-of-stake](#pos) and [validators](#validator) to Ethereum. It ran alongside the proof-of-work Ethereum Mainnet from November 2020 until the two chains were merged in September 2022 to form the Ethereum of today.
+The Beacon Chain was the blockchain that introduced [proof-of-stake](#pos) and [validators](#validator) to Ethereum. It ran alongside the proof-of-work Ethereum Mainnet from December 2020 until the two chains were merged in September 2022 to form the Ethereum of today.
 
 <DocLink to="/upgrades/beacon-chain/">
   Beacon Chain
@@ -89,7 +89,7 @@ A positional number representation where the most significant digit is first in 
 
 ### block {#block}
 
-A block is a unit of information created by a [block proposer](#block-proposer) and sent to other nodes over the peer-to-peer network. Blocks include lists of transactions to execute and consensus-related information that allow [validators](#validator) to check the information in the block is valid. This allows nodes to update their view of the state of Ethereum.
+A block is a bundled unit of information that include an ordered list of transactions and consensus-related information. Blocks are proposed by proof-of-stake validators, at which point they are shared across the entire peer-to-peer network, where they can easily be independently verified by all other nodes. Consensus rules govern what contents of a block are considered valid, and any invalid blocks are disregarded by the network. The ordering of these blocks and the transactions therein create a deterministic chain of events with the end representing the current state of the network.
 
 <DocLink to="/developers/docs/blocks/">
   Blocks
@@ -113,7 +113,7 @@ The specific validator chosen to create a block in a particular [slot](#slot).
 
 ### block reward {#block-reward}
 
-The amount of ether rewarded to the producer of a new valid block.
+The amount of ether rewarded to the proposer of a new valid block.
 
 ### block status {#block-status}
 
@@ -122,7 +122,7 @@ The states that a block can exist in. The possible states include:
 - proposed: the block was proposed by a validator
 - scheduled: validators are currently submitting data
 - missed/skipped: the proposer did not propose a block within the eligible time frame.
-- orphaned: the block was reorg'd out by the fork choice mechanism
+- orphaned: the block was reorg'd out by the [fork choice algorithm](#fork-choice-algorithm)
 
 ### block time {#block-time}
 
@@ -130,14 +130,14 @@ The time interval between blocks being added to the blockchain.
 
 ### block validation {#block-validation}
 
-The process of checking that a new block contains valid transactions and that it builds on the heaviest historical chain.
+The process of checking that a new block contains valid transactions and signatures, builds on the heaviest historical chain, and follows all other consensus rules. Valid blocks are added to the end of the chain and propagated to others on the network. Invalid blocks are disregarded.
 
 ### blockchain {#blockchain}
 
-A sequence of [blocks](#block), each linking to its predecessor all the way to the [genesis block](#genesis-block). The integrity of the blockchain is crypto-economically secured using a proof-of-stake-based consensus mechanism.
+A sequence of [blocks](#block), each linking to its predecessor all the way to the [genesis block](#genesis-block) by referencing the hash of the previous block. The integrity of the blockchain is crypto-economically secured using a proof-of-stake-based consensus mechanism.
 
 <DocLink to="/developers/docs/intro-to-ethereum#what-is-a-blockchain">
-  What is a Blockchain?
+  What is a blockchain?
 </DocLink>
 
 ### bootnode {#bootnode}
@@ -174,7 +174,7 @@ Converting code written in a high-level programming language (e.g., [Solidity](#
 
 ### committee {#committee}
 
-A group of at least 128 [validators](#validator) assigned to validate blocks in each slot. One of the validators in the committee is the aggregator, responsible for aggregating the signatures of all other validators in the committee that agree on an attestation.
+A group of at least 128 [validators](#validator) assigned to validate blocks in each slot. One of the validators in the committee is the aggregator, responsible for aggregating the signatures of all other validators in the committee that agree on an attestation. Not to be confused with [sync committee](#sync-committee).
 
 ### computational infeasibility {#computational-infeasibility}
 
@@ -220,7 +220,7 @@ The economics of cryptocurrencies.
 
 ### DAG {#DAG}
 
-DAG stands for Directed Acyclic Graph. It is a data structure composed of nodes and links between them. Ethereum uses a DAG in its [proof of work](#proof-of-work) algorithm, [Ethash](#ethash).
+DAG stands for Directed Acyclic Graph. It is a data structure composed of nodes and links between them. Ethereum uses a DAG in its [proof-of-work](#pow) algorithm, [Ethash](#ethash).
 
 ### Dapp {#dapp}
 
@@ -272,11 +272,11 @@ Short for "decentralized finance," a broad category of [dapps](#dapp) aiming to 
 
 ### difficulty {#difficulty}
 
-A network-wide setting that controls how much computation is required to produce a valid nonce in [proof-of-work](#pow) networks.
+A network-wide setting in [proof-of-work](#pow) networks that controls how much average computation is required to find a valid nonce. The difficulty is represented by the number of leading zeroes that are required in the resulting block hash for it to be considered valid. This concept is deprecated in Ethereum since the transition to proof-of-stake.
 
 ### difficulty bomb {#difficulty-bomb}
 
-Planned exponential increase in [proof-of-work](#pow) [difficulty](#difficulty) setting that was designed to motivate the transition to [proof-of-stake](#pos), reducing the chances of a [fork](#hard-fork). The difficulty bomb was removed at [The Merge](/upgrades/merge/).
+Planned exponential increase in [proof-of-work](#pow) [difficulty](#difficulty) setting that was designed to motivate the transition to [proof-of-stake](#pos), reducing the chances of a [fork](#hard-fork). The difficulty bomb was deprecated with the [transition to proof-of-stake](/upgrades/merge).
 
 ### digital signature {#digital-signatures}
 
@@ -294,7 +294,7 @@ A data structure containing `(key, value)` pairs used by Ethereum nodes to ident
 
 ### double spend {#double-spend}
 
-A deliberate blockchain fork, where a user with a sufficiently large amount of mining power/stake sends a transaction moving some currency off-chain (e.g. exiting into fiat money or making an off-chain purchase) then reorganising the blockchain to remove that transaction. A successful double spend leaves the attacker with both their on and off-chain assets.
+A deliberate blockchain fork, where a user with a sufficiently large amount of mining power/stake sends a transaction moving some currency off-chain (e.g. exiting into fiat money or making an off-chain purchase) then reorganizing the blockchain to remove that transaction. A successful double spend leaves the attacker with both their on and off-chain assets.
 
 ## E {#section-e}
 
@@ -312,7 +312,7 @@ In the context of cryptography, lack of predictability or level of randomness. W
 
 ### epoch {#epoch}
 
-A period of 32 [slots](#slot) (6.4 minutes). [Validator](#validator) [committees](#committee) are shuffled every epoch for security reasons. Each epoch has an opportunity for the chain to be [finalized](#finality).
+A period of 32 [slots](#slot), each slot being 12 seconds, totalling 6.4 minutes. Validator [committees](#committee) are shuffled every epoch for security reasons. Each epoch has an opportunity for the chain to be [finalized](#finality). Each validator is assigned new responsibilities at the start of each epoch.
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
   Proof-of-stake
@@ -354,7 +354,7 @@ The ENS registry is a single central [contract](#smart-contract) that provides a
 
 ### execution client {#execution-client}
 
-Execution clients (formerly known as "Eth1 clients"), such as Besu, Erigon, go-ethereum, Nethermind, are tasked with processing and broadcasting transactions and managing Ethereum's state. They run the computations for each transaction in the [Ethereum Virtual Machine](#evm) to ensure that the rules of the protocol are followed.
+Execution clients (formerly known as "Eth1 clients"), such as Besu, Erigon, Go-Ethereum (Geth), Nethermind, are tasked with processing and broadcasting transactions and managing Ethereum's state. They run the computations for each transaction using the [Ethereum Virtual Machine](#evm) to ensure that the rules of the protocol are followed.
 
 ### execution layer {#execution-layer}
 
@@ -362,7 +362,7 @@ Ethereum's execution layer is the network of [execution clients](#execution-clie
 
 ### externally owned account (EOA) {#eoa}
 
-Externally owned accounts (EOAs) are [accounts](#account) that are controlled by users who control the [private keys](#private-key) for an account, typically generated using a [seed phrase](#hd-wallet-seed). Externally owned accounts are accounts without any code associated with them. Typically these accounts are used with a [wallet](#wallet).
+Externally owned accounts (EOAs) are [accounts](#account) that are controlled by [private keys](#private-key), typically generated using a [seed phrase](#hd-wallet-seed). Unlike smart contracts, externally owned accounts are accounts without any code associated with them. Typically these accounts are managed with a [wallet](#wallet).
 
 ### Ethereum Request for Comments (ERC) {#erc}
 
@@ -419,7 +419,7 @@ A default function called in the absence of data or a declared function name.
 A service carried out via [smart contract](#smart-contract) that dispenses funds in the form of free test ether that can be used on a testnet.
 
 <DocLink to="/developers/docs/networks/#testnet-faucets">
-  Testnet Faucets
+  Testnet faucets
 </DocLink>
 
 ### finality {#finality}
@@ -644,11 +644,7 @@ The third development stage of Ethereum, launched in October 2017.
 
 ### mining {#mining}
 
-The process of verifying transactions and contract execution on the Ethereum blockchain in exchange for a reward in ether with the mining of every block. This was how Ethereum was secured before it moved to [proof-of-stake](#pos).
-
-### mining pool {#mining-pool}
-
-The pooling of resources by [proof-of-work](#pow) miners who share their processing power and split [block rewards](#block-reward).
+The process of repeatedly hashing a block header while incrementing a [nonce](#nonce) until the result contains an arbitrary number of leading binary zeros. This is the process by which new [blocks](#block) are added to a proof-of-work [blockchain](#blockchain). This was how Ethereum was secured before it moved to [proof-of-stake](#pos).
 
 ### miner {#miner}
 
@@ -921,6 +917,14 @@ Depositing a quantity of [ether](#ether) (your stake) to become a validator and 
   Stake your ETH to become an Ethereum validator
 </DocLink>
 
+### staking pool {#staking-pool}
+
+The combined ETH of more than one Ethereum staker, used to reach the 32 ETH required to activate a set of validator keys. A node operator uses these keys to participate in consensus and the [block rewards](#block-reward) are split amongst contributing stakers. Staking pools or delegating staking are not native to the Ethereum protocol, but many solutions have been built by the community.
+
+<DocLink to="/staking/pools/">
+  Pooled staking
+</DocLink>
+
 ### STARK {#stark}
 
 Short for "scalable transparent argument of knowledge", a STARK is a type of [zero-knowledge proof](#zk-proof).
@@ -999,7 +1003,7 @@ Data committed to the Ethereum Blockchain signed by an originating [account](#ac
 
 ### transaction fee {#transaction-fee}
 
-A fee you need to pay whenever you use the Ethereum network. Examples include sending funds from your [wallet](#wallet) or a [dapp](#dapp) interaction, like swapping tokens or buying a collectable. You can think of this like a service charge. This fee will change based on how busy the network is. This is because [validators](#validator), the people responsible for processing your transaction, are likely to prioritise transactions with higher fees – so congestion forces the price up.
+A fee you need to pay whenever you use the Ethereum network. Examples include sending funds from your [wallet](#wallet) or a [dapp](#dapp) interaction, like swapping tokens or buying a collectable. You can think of this like a service charge. This fee will change based on how busy the network is. This is because [validators](#validator), the people responsible for processing your transaction, are likely to prioritize transactions with higher fees – so congestion forces the price up.
 
 At a technical level, your transaction fee relates to how much [gas](#gas) your transaction requires.
 
