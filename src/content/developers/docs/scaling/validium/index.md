@@ -84,7 +84,7 @@ Data availability managers in validium attest to the availability of data for of
 
 Validiums differ in their approach to data availability management. Some rely on trusted parties to store state data, while others use randomly assigned validators for the task.
 
-#### Data availability committee (DAC) {#data-availability-committee)
+#### Data availability committee (DAC) {#data-availability-committee}
 
 To guarantee the availability of off-chain data, some validium solutions appoint a group of trusted entities, collectively known as a data availability committee (DAC), to store copies of the state and provide proof of data availability. DACs are easier to implement and require less coordination since membership is low.
 

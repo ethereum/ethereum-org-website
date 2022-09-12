@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 
@@ -21,6 +21,7 @@ import {
   Page,
 } from "../components/SharedStyledComponents"
 import { translateMessageId } from "../utils/translations"
+import { getImage } from "../utils/image"
 import { Context } from "../types"
 
 const ButtonRow = styled.div`
@@ -330,7 +331,7 @@ const CommunityPage = ({
     title: translateMessageId("page-community-hero-title", intl),
     header: translateMessageId("page-community-hero-header", intl),
     subtitle: translateMessageId("page-community-hero-subtitle", intl),
-    image: getImage(data.enterprise),
+    image: getImage(data.enterprise)!,
     alt: translateMessageId("page-community-hero-alt", intl),
   }
 
@@ -456,7 +457,7 @@ const CommunityPage = ({
             </IntroLeftColumn>
             <ImageContainer>
               <IntroImage
-                image={getImage(data.developerBlocks)}
+                image={getImage(data.developerBlocks)!}
                 alt={translateMessageId(
                   "page-community-get-involved-image-alt",
                   intl
@@ -498,7 +499,7 @@ const CommunityPage = ({
           </FeatureContent>
           <ImageContainer>
             <FeatureImage
-              image={getImage(data.ethereum)}
+              image={getImage(data.ethereum)!}
               alt={translateMessageId(
                 "page-community-open-source-image-alt",
                 intl
@@ -532,7 +533,7 @@ const CommunityPage = ({
           </FeatureContent>
           <ImageContainer>
             <FeatureImage
-              image={getImage(data.finance)}
+              image={getImage(data.finance)!}
               alt={translateMessageId("page-index-internet-image-alt", intl)}
             />
           </ImageContainer>
@@ -555,7 +556,7 @@ const CommunityPage = ({
           </FeatureContent>
           <ImageContainer>
             <FeatureImage
-              image={getImage(data.hackathon)}
+              image={getImage(data.hackathon)!}
               alt={translateMessageId("page-community-support-alt", intl)}
             />
           </ImageContainer>

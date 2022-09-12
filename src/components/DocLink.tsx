@@ -3,7 +3,7 @@ import { useTheme } from "@emotion/react"
 import styled from "@emotion/styled"
 import Icon from "./Icon"
 import Link from "./Link"
-import Emoji from "./Emoji"
+import Emoji from "./OldEmoji"
 
 export interface IProps {
   children?: React.ReactNode

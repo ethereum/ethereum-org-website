@@ -7,7 +7,6 @@ import { IntlProvider } from "react-intl"
 import { LocaleProvider } from "gatsby-theme-i18n"
 
 import { lightTheme, darkTheme } from "../theme"
-import GlobalStyle from "./GlobalStyle"
 
 import Footer from "./Footer"
 import VisuallyHidden from "./VisuallyHidden"
@@ -150,7 +149,6 @@ const Layout: React.FC<IProps> = ({
       <IntlProvider locale={locale!} key={locale} messages={messages}>
         <ApolloProvider client={client}>
           <ThemeProvider theme={theme}>
-            <GlobalStyle />
             <SkipLink hrefId="#main-content" />
             <TranslationBanner
               shouldShow={shouldShowTranslationBanner}

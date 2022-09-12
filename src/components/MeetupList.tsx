@@ -4,7 +4,7 @@ import styled from "@emotion/styled"
 import { sortBy } from "lodash"
 
 // Components
-import Emoji from "./Emoji"
+import Emoji from "./OldEmoji"
 import InfoBanner from "./InfoBanner"
 import Link from "./Link"
 import Translation from "./Translation"

@@ -30,12 +30,14 @@ Both account types have the ability to:
 - Creating an account costs nothing
 - Can initiate transactions
 - Transactions between externally-owned accounts can only be ETH/token transfers
+- Made up of a cryptographic pair of keys: public and private keys that control account activities
 
 **Contract**
 
 - Creating a contract has a cost because you're using network storage
 - Can only send transactions in response to receiving a transaction
 - Transactions from an external account to a contract account can trigger code which can execute many different actions, such as transferring tokens or even creating a new contract
+- Contract accounts don't have private keys. Instead, they are controlled by the logic of the smart contract code
 
 ## An account examined {#an-account-examined}
 

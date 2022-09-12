@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react"
 import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
-import { getImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 import { shuffle } from "lodash"
 import { translateMessageId, TranslationKey } from "../../utils/translations"
+import { getImage } from "../../utils/image"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import ButtonLink from "../../components/ButtonLink"
@@ -18,6 +18,7 @@ import {
 } from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
 import { Context } from "../../types"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -82,7 +83,7 @@ interface ILearningTool {
   name: string
   description: TranslationKey
   url: string
-  image: string
+  image?: IGatsbyImageData
   alt: TranslationKey
   background: string
   subjects: Array<string>
@@ -272,7 +273,7 @@ const LearningToolsPage = ({
               background={sandbox.background}
               url={sandbox.url}
               alt={translateMessageId(sandbox.alt, intl)}
-              image={sandbox.image}
+              image={sandbox.image!}
               name={sandbox.name}
               subjects={sandbox.subjects}
             >
@@ -298,7 +299,7 @@ const LearningToolsPage = ({
               background={game.background}
               url={game.url}
               alt={translateMessageId(game.alt, intl)}
-              image={game.image}
+              image={game.image!}
               name={game.name}
               subjects={game.subjects}
             >
@@ -321,7 +322,7 @@ const LearningToolsPage = ({
               url={bootcamp.url}
               background={bootcamp.background}
               alt={translateMessageId(bootcamp.alt, intl)}
-              image={bootcamp.image}
+              image={bootcamp.image!}
               name={bootcamp.name}
               subjects={bootcamp.subjects}
             >
@@ -332,7 +333,7 @@ const LearningToolsPage = ({
       </StackContainer>
       <Content>
         <CalloutBanner
-          image={getImage(data.learn)}
+          image={getImage(data.learn)!}
           alt={translateMessageId("page-index-tout-enterprise-image-alt", intl)}
           titleKey={"page-learning-tools-documentation"}
           descriptionKey={"page-learning-tools-documentation-desc"}

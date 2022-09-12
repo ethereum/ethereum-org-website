@@ -151,7 +151,7 @@ export default ComponentName
 import Emoji from "./Emoji"
 
 // Within JSX:
-;<Emoji text=":star:" size={1} /> // sized in `em`
+;<Emoji text=":star:" fontSize="xl" /> // the base fontSize is `md`
 ```
 
 - **Icons**: We use [React Icons](https://react-icons.github.io/react-icons/)

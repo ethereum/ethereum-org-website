@@ -27,9 +27,11 @@ Matematik, kriptografi ya da ekonomi alanlarında bir geçmişiniz var mı? Ethe
 - [Ethresear.ch](https://ethresear.ch) - Ethereum'un birincil araştırma forumu ve kriptoekonomi alanında dünyanın en etkili forumu
 - [Ekosistem Destek Programının istek listesi](https://esp.ethereum.foundation/wishlist/) - Ethereum Ekosistem Destek Programının aktif olarak hibe başvuruları aradığı araştırma alanları
 
+[Daha fazla aktif araştırma alanı keşfedin](/community/research/).
+
 ## Teknik olmayan beceri grupları <Emoji text=":briefcase:" size={1} /> {#non-technical}
 
-Bir geliştirici değilseniz, Ethereum'da nereden başlayacağınızı bilmek zor olabilir. Burada, belirli profesyonel geçmişlere yönelik kaynaklarla birlikte birkaç öneri bulunmaktadır.
+Bir geliştirici değilseniz Ethereum'da nereden başlayacağınızı bilmek zor olabilir. Burada, belirli profesyonel geçmişlere yönelik kaynaklarla birlikte birkaç öneri bulunmaktadır.
 
 ### Şehrinizde bir buluşma düzenleyin {#meetups}
 
@@ -57,13 +59,13 @@ Ethereum'u daha fazla merkeziyetsizleştirmeye yardım etmek için binlerce dü�
 
 ### ETH'nizi stake edin {#staking}
 
-ETH'nizi stake ederek, Ethereum ağının güvenliğini sağlamaya yardımcı olurken ödüller kazanabilirsiniz.
+ETH'nizi hisseleyerek Ethereum ağının güvenliğini sağlamaya yardımcı olurken ödüller kazanabilirsiniz.
 
 - [Stake etme hakkında daha fazla bilgi](/staking/)
 
 ### Projeleri destekleyin {#support-projects}
 
-Ethereum ekosistemi, kamu mallarını ve etkili projeleri finanse etmeyi hedefler. Çok küçük bağışlarla desteğinizi gösterebilir ve önemli işlerin gerçekleşmesine olanak sağlayabilirsiniz.
+Ethereum ekosistemi, kamu mallarını ve etkili projeleri finanse etme misyonuna sahiptir. Çok küçük bağışlarla desteğinizi gösterebilir ve önemli işlerin gerçekleşmesine olanak sağlayabilirsiniz.
 
 - [Gitcoin](https://gitcoin.co/fund)
 - [clr.fund](https://clr.fund/#/about)
@@ -96,22 +98,24 @@ Ethereum ekosistemi, kamu mallarını ve etkili projeleri finanse etmeyi hedefle
 - [useWeb3 İşleri](https://www.useweb3.xyz/jobs)
 - [Web3 İşleri](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
+- [Crypto Valley İşleri](https://cryptovalley.jobs/)
 
 ## Bir DAO'ya katılın {#decentralized-autonomous-organizations-daos}
 
-"DAO'lar", merkeziyetsiz otonom organizasyonlardır. Bu gruplar, organizasyonu ve işbirliğini kolaylaştırmak için Ethereum teknolojisinden yararlanır. Örneğin; üyeliği kontrol etmek, teklifleri oylamak veya havuza alınan varlıkları yönetmek için. DAO'lar hala deneysel olsalar da aynı fikirde olduğunuz gruplar ile iş ortakları bulmanız ve Ethereum topluluğu üzerindeki etkinizi artırmanız için fırsatlar sunarlar. [DAO'lar hakkında daha fazla bilgi](/dao/)
+"DAO'lar", merkeziyetsiz otonom organizasyonlardır. Bu gruplar, organizasyonu ve iş birliğini kolaylaştırmak için Ethereum teknolojisinden yararlanır. Örneğin; üyeliği kontrol etmek, teklifleri oylamak veya havuza alınan varlıkları yönetmek için. DAO'lar hâlâ deneysel olsalar da aynı fikirde olduğunuz gruplar ile iş ortakları bulmanız ve Ethereum topluluğu üzerindeki etkinizi artırmanız için fırsatlar sunar. [DAO'lar hakkında daha fazla bilgi](/dao/)
 
+- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _DAO konseptinin teknoloji harici alanlarda tanıtılması ve insanların DAO aracılığıyla değer yaratmalarına yardım edilmesi_
+- [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _İnternetin ortaklaşa sahipliğine inanan yapımcıların topluluğu_
+- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _DAO olarak çalışan bir freelancer Web3 geliştirme kolektifi_
+- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Merkeziyetsiz geliştirme & dapps yöneti̇mi̇ & protokolleri_
+- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _DAOHaus'un topluluk yönetimi_
+- [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _Topluluk sahibi süper kahraman franchise_
 - [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _Hukuk mühendisliği_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Sanat topluluğu_
-- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _DAO kuluçka merkezi_
+- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _DAO kuluçkası_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Başlangıç öncesi kripto projeleri için girişimler_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _Gerçek Hayat için MMORPG Oyun Mekanikleri_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _Dijifiziksel Giyim Firmaları_
-- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Ethereum geliştirmelerini desteklemeye odaklı bir topluluk_
 - [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _Kadınlar tarafından yürütülen projeler_
+- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Ethereum geliştirmelerini desteklemeye odaklı bir topluluk_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Web3 yapımcılar kolektifi_
-- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _DAO konseptinin teknoloji harici alanlarda tanıtılması ve insanların DAO aracılığıyla değer yaratmalarına yardım edilmesi._
-- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _DAO olarak çalışan bir freelancer Web3 geliştirme kolektifi_
-- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _DAOHaus'un topluluk yönetişimi_
-- [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _İnternetin ortaklaşa sahipliğine inanan yapımcıların topluluğu_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Merkeziyetsiz geliştirme & dApp'lerin yönetişimi & protokoller_

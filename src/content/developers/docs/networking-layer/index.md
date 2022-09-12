@@ -14,7 +14,7 @@ Execution clients gossip transactions over the execution-layer peer-to-peer netw
 
 ## Prerequisites {#prerequisites}
 
-Some knowledge of Ethereum [nodes and clients](/src/content/developers/docs/nodes-and-clients/) will be helpful for understanding this page.
+Some knowledge of Ethereum [nodes and clients](/developers/docs/nodes-and-clients/) will be helpful for understanding this page.
 
 ## The Execution Layer {#execution-layer}
 

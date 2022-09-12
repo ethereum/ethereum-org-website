@@ -298,5 +298,11 @@
     "emoji": ":uae:",
     "location": "Dubai",
     "link": "https://www.meetup.com/defi-dubai/"
+  },
+  {
+    "title": "ETHAnglia",
+    "emoji": ":gb:",
+    "location": "Norwich",
+    "link": "https://www.ethanglia.org/"
   }
 ]
