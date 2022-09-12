@@ -61,7 +61,7 @@ Verifying a smart contract basically involves the following steps:
 
 4. Compare the deployed bytecode with the recompiled bytecode. If the codes match, the contract gets verified with the given source code and compilation settings.
 
-5. Additionally, if the the metadata hashes at the end of the bytecode match, it will be a full match.
+5. Additionally, if the metadata hashes at the end of the bytecode match, it will be a full match.
 
 Note that this is a simplistic description of verification and there are many exceptions that would not work with this such as having [immutable variables](https://docs.sourcify.dev/docs/immutables/).
 
