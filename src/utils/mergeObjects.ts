@@ -1,5 +1,8 @@
 // Wrapper on `Object.assign` to throw error if keys clash
-const mergeObjects = <T, U>(target: T, newObject: U): T & U => {
+const mergeObjects = <T extends object, U extends object>(
+  target: T,
+  newObject: U
+): T & U => {
   const targetKeys = Object.keys(target)
   for (const key of Object.keys(newObject)) {
     if (targetKeys.includes(key)) {

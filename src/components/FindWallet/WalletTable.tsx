@@ -39,6 +39,9 @@ import GreenCheck from "../../assets/staking/green-check-product-glyph.svg"
 import { trackCustomEvent } from "../../utils/matomo"
 import { getImage } from "../../utils/image"
 
+// Types
+import type { WalletData } from "../../data/wallets/wallet-data"
+
 // Styles
 const Container = styled.table`
   width: 100%;
@@ -432,8 +435,16 @@ const StyledIcon = styled(Icon)<{ hasFeature: boolean }>`
   }
 `
 
+type DropdownItem = {
+  label: string
+  value: string
+  filterKey: string
+  category: string
+  icon: JSX.Element
+}
+
 // Constants
-const featureDropdownItems = [
+const featureDropdownItems: Array<DropdownItem> = [
   {
     label: "Open source",
     value: "Open source",
@@ -562,7 +573,13 @@ const featureDropdownItems = [
   },
 ]
 
-const WalletTable = ({ data, filters, walletData }) => {
+interface WalletTableProps {
+  data: any
+  filters: { [index: string]: boolean }
+  walletData: Array<WalletData>
+}
+
+const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
   const [walletCardData, setWalletData] = useState(
     walletData.map((wallet) => {
       return { ...wallet, moreInfo: false, key: wallet.image_name }
@@ -578,7 +595,7 @@ const WalletTable = ({ data, filters, walletData }) => {
     featureDropdownItems[9]
   )
 
-  const updateMoreInfo = (key) => {
+  const updateMoreInfo = (key: string) => {
     const temp = [...walletCardData]
 
     for (const [idx, wallet] of temp.entries()) {
@@ -623,7 +640,7 @@ const WalletTable = ({ data, filters, walletData }) => {
       .map((item) => item[0])
 
     for (let item of mobileFiltersTrue) {
-      if (wallet[item]) {
+      if (wallet[item as keyof typeof wallet]) {
         mobileCheck = true
         break
       } else {
@@ -632,7 +649,7 @@ const WalletTable = ({ data, filters, walletData }) => {
     }
 
     for (let item of desktopFiltersTrue) {
-      if (wallet[item]) {
+      if (wallet[item as keyof typeof wallet]) {
         desktopCheck = true
         break
       } else {
@@ -641,7 +658,7 @@ const WalletTable = ({ data, filters, walletData }) => {
     }
 
     for (let item of browserFiltersTrue) {
-      if (wallet[item]) {
+      if (wallet[item as keyof typeof wallet]) {
         browserCheck = true
         break
       } else {
@@ -650,7 +667,7 @@ const WalletTable = ({ data, filters, walletData }) => {
     }
 
     for (let item of hardwareFiltersTrue) {
-      if (wallet[item]) {
+      if (wallet[item as keyof typeof wallet]) {
         hardwareCheck = true
         break
       } else {
@@ -660,7 +677,7 @@ const WalletTable = ({ data, filters, walletData }) => {
 
     featureFilterKeys.forEach((filter) => {
       if (filters[filter] && showWallet === true) {
-        showWallet = filters[filter] === wallet[filter]
+        showWallet = filters[filter] === wallet[filter as keyof typeof wallet]
       }
     })
 
@@ -707,7 +724,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                 options: [...filteredFeatureDropdownItems],
               },
             ]}
-            onChange={(selectedOption) => {
+            onChange={(selectedOption: DropdownItem) => {
               setFirstFeatureSelect(selectedOption)
               trackCustomEvent({
                 eventCategory: "WalletFeatureCompare",
@@ -729,7 +746,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                 options: [...filteredFeatureDropdownItems],
               },
             ]}
-            onChange={(selectedOption) => {
+            onChange={(selectedOption: DropdownItem) => {
               setSecondFeatureSelect(selectedOption)
               trackCustomEvent({
                 eventCategory: "WalletFeatureCompare",
@@ -751,7 +768,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                 options: [...filteredFeatureDropdownItems],
               },
             ]}
-            onChange={(selectedOption) => {
+            onChange={(selectedOption: DropdownItem) => {
               setThirdFeatureSelect(selectedOption)
               trackCustomEvent({
                 eventCategory: "WalletFeatureCompare",
@@ -765,6 +782,7 @@ const WalletTable = ({ data, filters, walletData }) => {
         </th>
       </WalletContentHeader>
       {filteredWallets.map((wallet, idx) => {
+        type WalletKey = keyof typeof wallet
         const deviceLabels: Array<string> = []
 
         wallet.ios && deviceLabels.push("iOS")
@@ -812,7 +830,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                             eventCategory: "WalletExternalLinkList",
                             eventAction: `Go to wallet`,
                             eventName: `${wallet.name} ${idx}`,
-                            eventValue: filters,
+                            eventValue: JSON.stringify(filters),
                           }}
                         >
                           <Icon name="webpage" size={"1.5rem"} color={true} />
@@ -825,7 +843,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                               eventCategory: "WalletExternalLinkList",
                               eventAction: `Go to wallet`,
                               eventName: `${wallet.name} ${idx}`,
-                              eventValue: filters,
+                              eventValue: JSON.stringify(filters),
                             }}
                           >
                             <Icon name="twitter" size={"1.5rem"} color={true} />
@@ -839,7 +857,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                               eventCategory: "WalletExternalLinkList",
                               eventAction: `Go to wallet`,
                               eventName: `${wallet.name} ${idx}`,
-                              eventValue: filters,
+                              eventValue: JSON.stringify(filters),
                             }}
                           >
                             <Icon name="discord" size={"1.5rem"} color={true} />
@@ -852,7 +870,7 @@ const WalletTable = ({ data, filters, walletData }) => {
               </td>
               <td>
                 <FlexInfoCenter>
-                  {wallet[firstFeatureSelect.filterKey!] ? (
+                  {wallet[firstFeatureSelect.filterKey as WalletKey] ? (
                     <GreenCheck />
                   ) : (
                     <Warning />
@@ -861,7 +879,7 @@ const WalletTable = ({ data, filters, walletData }) => {
               </td>
               <td>
                 <FlexInfoCenter>
-                  {wallet[secondFeatureSelect.filterKey!] ? (
+                  {wallet[secondFeatureSelect.filterKey as WalletKey] ? (
                     <GreenCheck />
                   ) : (
                     <Warning />
@@ -870,7 +888,7 @@ const WalletTable = ({ data, filters, walletData }) => {
               </td>
               <td>
                 <FlexInfoCenter>
-                  {wallet[thirdFeatureSelect.filterKey!] ? (
+                  {wallet[thirdFeatureSelect.filterKey as WalletKey] ? (
                     <GreenCheck />
                   ) : (
                     <Warning />
@@ -897,8 +915,14 @@ const WalletTable = ({ data, filters, walletData }) => {
   )
 }
 
-const WalletMoreInfo = ({ wallet, filters, idx }) => {
-  const walletHasFilter = (filterKey) => {
+interface WalletMoreInfoProps {
+  wallet: any
+  filters: { [index: string]: boolean }
+  idx: any
+}
+
+const WalletMoreInfo = ({ wallet, filters, idx }: WalletMoreInfoProps) => {
+  const walletHasFilter = (filterKey: string) => {
     return wallet[filterKey] === true
   }
   // Cast as Number because TypeScript warned about sorting implictily by true/false
@@ -1034,7 +1058,7 @@ const WalletMoreInfo = ({ wallet, filters, idx }) => {
                 eventCategory: "WalletExternalLinkList",
                 eventAction: `Go to wallet`,
                 eventName: `${wallet.name} ${idx}`,
-                eventValue: filters,
+                eventValue: JSON.stringify(filters),
               }}
             >
               Check out {wallet.name}

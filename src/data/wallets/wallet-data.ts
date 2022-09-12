@@ -1,4 +1,4 @@
-interface WalletData {
+export interface WalletData {
   last_updated: string
   name: string
   image_name: string
@@ -46,7 +46,7 @@ interface WalletData {
   mpc?: boolean
 }
 
-const walletData: WalletData[] = [
+const walletData: Array<WalletData> = [
   {
     last_updated: "June 22, 2022",
     name: "Keystone",

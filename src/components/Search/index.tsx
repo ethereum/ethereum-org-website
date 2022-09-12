@@ -14,6 +14,7 @@ import type { StateResultsProvided } from "react-instantsearch-core"
 import algoliasearch from "algoliasearch/lite"
 import { Hit } from "@algolia/client-search"
 import styled from "@emotion/styled"
+import type { MultipleQueriesQuery } from "@algolia/client-search"
 
 import Input from "./Input"
 import Link from "../Link"
@@ -229,8 +230,8 @@ const Search: React.FC<ISearchProps> = ({
   const searchClient = {
     // Avoid Algolia request (by mocking one) if search query is empty
     // https://www.algolia.com/doc/guides/building-search-ui/going-further/conditional-requests/js/
-    search(requests) {
-      if (requests.every(({ params }) => !params.query)) {
+    search(requests: Array<MultipleQueriesQuery>) {
+      if (requests.every(({ params }) => !params?.query)) {
         return Promise.resolve({
           results: requests.map(() => ({
             hits: [],
@@ -273,7 +274,7 @@ const Search: React.FC<ISearchProps> = ({
       <InstantSearch
         searchClient={searchClient}
         indexName={indices[0].name}
-        onSearchStateChange={({ query }) => setQuery(query)}
+        onSearchStateChange={({ query }: { query: string }) => setQuery(query)}
       >
         <Configure filters={`lang:${intl.locale}`} hitsPerPage={8} />
         <Input
