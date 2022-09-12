@@ -25,7 +25,7 @@ const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
         flex={1}
         width="100%"
         justifyContent="space-between"
-        padding="1rem"
+        padding={4}
         borderRadius="sm"
         color="text"
         border="1px"
@@ -52,7 +52,7 @@ const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
           alignSelf="center"
           minWidth="2rem"
           boxSize={6}
-          marginX="1.5rem"
+          marginX={6}
           _groupHover={{
             fill: "primary",
             transition: "transform 0.1s",
@@ -65,4 +65,3 @@ const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
 }
 
 export default DocLink
-
