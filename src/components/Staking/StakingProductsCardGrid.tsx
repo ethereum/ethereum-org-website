@@ -1,10 +1,4 @@
-import React, {
-  ComponentType,
-  SVGProps,
-  useContext,
-  useEffect,
-  useState,
-} from "react"
+import React, { ComponentType, SVGProps, useEffect, useState } from "react"
 import styled from "@emotion/styled"
 import { useTheme } from "@emotion/react"
 import { shuffle } from "lodash"
@@ -148,7 +142,7 @@ const Cta = styled(PaddedDiv)`
   }
 `
 
-const Status: React.FC<{ status: FlagType }> = ({ status }) => {
+const Status: React.FC<{ status?: FlagType }> = ({ status }) => {
   if (!status) return null
   const styles = { width: "24", height: "auto" }
   switch (status) {
@@ -202,19 +196,19 @@ type Product = {
   url: string
   platforms: Array<string>
   ui: Array<string>
-  minEth: number
+  minEth?: number
   openSource: FlagType
   audited: FlagType
   bugBounty: FlagType
   battleTested: FlagType
-  trustless: FlagType
-  selfCustody: FlagType
-  liquidityToken: FlagType
-  permissionless: FlagType
-  permissionlessNodes: FlagType
-  multiClient: FlagType
-  diverseClients: FlagType
-  economical: FlagType
+  trustless?: FlagType
+  selfCustody?: FlagType
+  liquidityToken?: FlagType
+  permissionless?: FlagType
+  permissionlessNodes?: FlagType
+  multiClient?: FlagType
+  diverseClients?: FlagType
+  economical?: FlagType
   matomo: EventOptions
 }
 interface ICardProps {
@@ -245,7 +239,7 @@ const StakingProductCard: React.FC<ICardProps> = ({
     matomo,
   },
 }) => {
-  const Svg = getSvgFromPath(svgPath)
+  const Svg = getSvgFromPath(svgPath as keyof typeof svgMapping)
   const data = [
     {
       label: <Translation id="page-staking-considerations-solo-1-title" />,
@@ -343,8 +337,13 @@ const StakingProductCard: React.FC<ICardProps> = ({
   )
 }
 
+type NodeTools = typeof stakingProducts.nodeTools
+type KeyGen = typeof stakingProducts.keyGen
+type Saas = typeof stakingProducts.saas
+type Pool = typeof stakingProducts.pools
+
 export interface IProps {
-  category: string
+  category: keyof typeof stakingProducts
 }
 
 const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
@@ -443,7 +442,7 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
   }
 
   const getFlagFromBoolean = (bool: boolean): FlagType =>
-    !!bool ? FlagType.VALID : FlagType.FALSE
+    bool ? FlagType.VALID : FlagType.FALSE
 
   const getBrandProperties = ({
     name,
@@ -452,6 +451,13 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
     url,
     socials,
     matomo,
+  }: {
+    name: string
+    svgPath: string
+    hue: number
+    url: string
+    socials: any
+    matomo: any
   }) => ({
     name,
     svgPath,
@@ -461,7 +467,13 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
     matomo,
   })
 
-  const getTagProperties = ({ platforms, ui }) => ({
+  const getTagProperties = ({
+    platforms,
+    ui,
+  }: {
+    platforms: Array<string>
+    ui: Array<string>
+  }) => ({
     platforms,
     ui,
   })
@@ -471,6 +483,11 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
     audits,
     hasBugBounty,
     launchDate,
+  }: {
+    isFoss: boolean
+    audits: any
+    hasBugBounty: boolean
+    launchDate: string
   }) => ({
     openSource: getFlagFromBoolean(isFoss),
     audited: getFlagFromBoolean(audits?.length),
@@ -485,7 +502,7 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
     // Pooled staking services
     if (category === "pools") {
       products.push(
-        ...categoryProducts.map((listing) => ({
+        ...(categoryProducts as Pool).map((listing) => ({
           ...getBrandProperties(listing),
           ...getTagProperties(listing),
           ...getSharedSecurityProperties(listing),
@@ -494,7 +511,7 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
             listing.hasPermissionlessNodes
           ),
           diverseClients: getDiversityOfClients(listing.pctMajorityClient),
-          liquidityToken: getFlagFromBoolean(listing.tokens?.length),
+          liquidityToken: getFlagFromBoolean(!!listing.tokens?.length),
           minEth: listing.minEth,
         }))
       )
@@ -503,7 +520,7 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
     // Solo staking products
     if (category === "nodeTools") {
       products.push(
-        ...categoryProducts.map((listing) => ({
+        ...(categoryProducts as NodeTools).map((listing) => ({
           ...getBrandProperties(listing),
           ...getTagProperties(listing),
           ...getSharedSecurityProperties(listing),
@@ -519,7 +536,7 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
     // Staking as a service
     if (category === "saas") {
       products.push(
-        ...categoryProducts.map((listing) => ({
+        ...(categoryProducts as Saas).map((listing) => ({
           ...getBrandProperties(listing),
           ...getTagProperties(listing),
           ...getSharedSecurityProperties(listing),
@@ -533,7 +550,7 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
     // Key generators
     if (category === "keyGen") {
       products.push(
-        ...categoryProducts.map((listing) => ({
+        ...(categoryProducts as KeyGen).map((listing) => ({
           ...getBrandProperties(listing),
           ...getTagProperties(listing),
           ...getSharedSecurityProperties(listing),
