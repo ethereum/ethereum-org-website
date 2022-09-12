@@ -1,7 +1,6 @@
 import React from "react"
 import { Box, VisuallyHiddenInput, Text } from "@chakra-ui/react"
 
-// Props
 export interface IProps {
   children?: React.ReactNode
   callback?: () => void
@@ -10,7 +9,6 @@ export interface IProps {
   size?: number
 }
 
-// Checkbox
 const Checkbox: React.FC<IProps> = ({
   callback,
   checked,
@@ -19,17 +17,6 @@ const Checkbox: React.FC<IProps> = ({
   size = 2,
   ...rest
 }) => {
-  console.log({
-    checkboxProps: {
-      callback,
-      checked,
-      children,
-      className,
-      size,
-      ...rest,
-    },
-  })
-
   const handleClick = () => {
     if (callback) {
       callback()
@@ -58,14 +45,14 @@ const Checkbox: React.FC<IProps> = ({
     h: `${size}rem`,
     minW: `${size}rem`,
     bg: `${checked ? "primary400" : "background"}`,
-    border: "px",
+    border: "1px",
     borderStyle: "solid",
     borderColor: "black50",
     borderRadius: "3px",
     transition: "all 150ms",
     _hover: {
       boxShadow: "tableItemBoxShadow",
-      border: "px",
+      border: "1px",
       borderStyle: "solid",
       borderColor: "primary600",
       transition: "transform 0.1s",
@@ -81,7 +68,7 @@ const Checkbox: React.FC<IProps> = ({
           viewBox="0 0 24 24"
           fill="none"
           stroke="white"
-          strokeWidth={0.5}
+          strokeWidth="2px"
           visibility={`${checked ? "visible" : "hidden"}`}
         >
           <polyline points="20 6 9 17 4 12" />
