@@ -176,7 +176,7 @@ Withdrawals are planned for the Shanghai upgrade, the next major upgrade followi
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Validators will not receive any liquid ETH rewards til the Shanghai upgrade when withdrawals are enabled.&quot;"
+title="Misconception: &quot;Validators will not receive any liquid ETH rewards till the Shanghai upgrade when withdrawals are enabled.&quot;"
 contentPreview="False. Fee tips/MEV will be credited to a Mainnet account controlled by the validator, available immediately.">
 This may seem counterintuitive to the above note that withdrawals are not enabled til the Shanghai upgrade, but validators WILL have immediate access to the fee rewards/MEV earned during block proposals.
 
