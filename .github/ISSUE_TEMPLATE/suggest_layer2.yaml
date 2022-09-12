@@ -141,7 +141,7 @@ body:
   - type: dropdown
     id: layer_2_active_maintained
     attributes:
-      label: is there an active team developing the project?
+      label: Is there an active team developing the project?
       options:
         - "Yes"
         - "No"
