@@ -18,7 +18,8 @@ Read on for more details...
 ## Rewards and penalties {#rewards}
 
 ### Rewards {#rewards}
-Validators receive rewards when they make votes that are consistent with the majority of other validators, when they propose blocksd and when they participate in sync committees. The value of the rewards in each epoch are calculated from a `base_reward`. This is the base unit that other rewards are calculated from. The `base_reward` represents the average reward received by a validator under optimal conditions per epoch. This is calculated from the validator's effective balance and the total number of active validators as follows:
+
+Validators receive rewards when they make votes that are consistent with the majority of other validators, when they propose blocks, and when they participate in sync committees. The value of the rewards in each epoch are calculated from a `base_reward`. This is the base unit that other rewards are calculated from. The `base_reward` represents the average reward received by a validator under optimal conditions per epoch. This is calculated from the validator's effective balance and the total number of active validators as follows:
 
 ```
 base_reward = effective_balance * (base_reward_factor / (base_rewards_per_epoch * sqrt(sum(active_balance))))
@@ -29,6 +30,7 @@ where `base_reward_factor` is 64, `base_rewards_per_epoch` is 4 and `sum(active 
 This means the base reward is proportional to the validator's effective balance and inversely proportional to the number of validators on the network. The more validators, the greater the overall issuance (as `sqrt(N)` but the smaller the `base_reward` per validator (as `1/sqrt(N)`). These factors influence the APR for a staking node. Read the rationale for this in [Vitalik's notes](https://notes.ethereum.org/@vbuterin/rkhCgQteN?type=view#Base-rewards).
 
 The total reward is then calculated as the sum of five components that each have a weighting that determines how much each component adds to the total reward. The components are:
+
 ```
 1. source vote: the validator has made a timely vote for the correct source checkpoint
 2. target vote: the validator has made a timely vote for the correct target checkpoint
@@ -36,6 +38,7 @@ The total reward is then calculated as the sum of five components that each have
 4. sync committee reward: the validator has participated in a sync committee
 5. proposer reward: the validator has proposed a block in the correct slot
 ```
+
 The weightings for each component are as follows:
 
 ```
@@ -46,19 +49,19 @@ SYNC_REWARD_WEIGHT	uint64(2)
 PROPOSER_WEIGHT	uint64(8)
 ```
 
-These weights sum to 64. The reward is calculated as the sum of the applicable weigths divided by 64. A validator that has made timely source, target and head votes, proposed a block and participated in a sync committee could there receive `64/64 * base_reward == base_reward`. However, a validator is not usually a block proposer, so their maximum reward is `64-8 /64 * base_reward == 7/8 * base_reward`. Validators that are neither block proposers nor in a sync committee can receive `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`.
+These weights sum to 64. The reward is calculated as the sum of the applicable weights divided by 64. A validator that has made timely source, target and head votes, proposed a block and participated in a sync committee could receive `64/64 * base_reward == base_reward`. However, a validator is not usually a block proposer, so their maximum reward is `64-8 /64 * base_reward == 7/8 * base_reward`. Validators that are neither block proposers nor in a sync committee can receive `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`.
 
-An additional reward is added to incentivize rapid attestations. This is the `inclusion_delay_reward`. This has a value equal to the `base_reward` multiplied by `1/delay` where `delay` is the number of slots separating the block proposal and attestation. For example, if the attestation is submitted within one slot of the block proposal the attestor receives `base_reward * 1/1 == base_reward`. If the attestation arrives int he next slot, the attestor received `base_reward * 1/2` and so on.
+An additional reward is added to incentivize rapid attestations. This is the `inclusion_delay_reward`. This has a value equal to the `base_reward` multiplied by `1/delay` where `delay` is the number of slots separating the block proposal and attestation. For example, if the attestation is submitted within one slot of the block proposal the attestor receives `base_reward * 1/1 == base_reward`. If the attestation arrives in the next slot, the attestor received `base_reward * 1/2` and so on.
 
 Block proposers receive `8 / 64 * base_reward` for **each valid attestation** included in the block, so the actual value of the reward scales with the number of attesting validators. Block proposers can also increase their reward by including evidence of misbehavior by other validators in their proposed block. These rewards are the "carrots" that encourage validator honesty. A block proposer which includes slashing will be rewarded with the `slashed_validators_effective_balance / 512`.
 
 ### Penalties {#penalties}
 
-So far we have considered perfectly well-behaved validators, but what about validators that do not make timely head, source and target votes or do so slowly? 
+So far we have considered perfectly well-behaved validators, but what about validators that do not make timely head, source and target votes or do so slowly?
 
-The penalties for missing the head, target and source votes are equal to the rewards the attestor would have received had they submitted them. This means that instead of having the reward aded to their balance, they have an equal value removed from their balance. There is no penalty associated with the `inclusion_delay` - the reward will simply not be added to the validator's balance. There is no penalty for failing to propose a block. 
+The penalties for missing the head, target and source votes are equal to the rewards the attestor would have received had they submitted them. This means that instead of having the reward added to their balance, they have an equal value removed from their balance. There is no penalty associated with the `inclusion_delay` - the reward will simply not be added to the validator's balance. There is no penalty for failing to propose a block.
 
-Read more about rewards and penalties in the [consensus specs](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/beacon-chain.md). Rewards and penalties were adjusted in the Altair upgrade - watch DannY Ryan and Vitalik discuss this in this [Peep an EIP video](https://www.youtube.com/watch?v=iaAEGs1DMgQ).
+Read more about rewards and penalties in the [consensus specs](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/beacon-chain.md). Rewards and penalties were adjusted in the Bellatrix upgrade - watch Danny Ryan and Vitalik discuss this in this [Peep an EIP video](https://www.youtube.com/watch?v=iaAEGs1DMgQ).
 
 ## Slashing {#slashing}
 
