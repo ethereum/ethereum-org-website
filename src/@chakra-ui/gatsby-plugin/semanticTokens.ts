@@ -9,8 +9,9 @@ const oldDarkThemeColors = oldDarkTheme.colors
 // define each of the old colors as a `semanticToken`:
 // `name: { _light: lightColor, _dark: darkColor }`
 const oldColors = Object.keys(oldLightThemeColors).reduce((colors, color) => {
-  const lightColor = oldLightThemeColors[color]
-  const darkColor = oldDarkThemeColors[color]
+  const lightColor =
+    oldLightThemeColors[color as keyof typeof oldLightThemeColors]
+  const darkColor = oldDarkThemeColors[color as keyof typeof oldDarkThemeColors]
 
   if (typeof lightColor !== "string" || typeof darkColor !== "string") {
     return colors

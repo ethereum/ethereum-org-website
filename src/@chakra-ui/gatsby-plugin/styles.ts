@@ -1,9 +1,9 @@
-import { mode } from "@chakra-ui/theme-tools"
+import { mode, StyleFunctionProps } from "@chakra-ui/theme-tools"
 
 import { lightTheme as oldTheme } from "../../theme"
 
 const styles = {
-  global: (props) => ({
+  global: (props: StyleFunctionProps) => ({
     /**
      * THESE ARE OLD GLOBAL STYLES - carried over from old css files
      *
