@@ -137,7 +137,7 @@ body:
     id: layer_2_users
     attributes:
       label: Has the project sustained its users over time?
-      description: Please provide supporting information such as TVL history, transaction statistics, and whether it is used by known companies or projects
+      description: Please provide supporting information such as TVL history, transaction statistics, and whether known companies or projects use it.
   - type: dropdown
     id: layer_2_active_maintained
     attributes:
