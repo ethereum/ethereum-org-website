@@ -1,32 +1,6 @@
 import React from "react"
-import {
-  Checkbox as ChakraCheckbox,
-  Icon,
-  VisuallyHiddenInput,
-  Text,
-  VStack,
-} from "@chakra-ui/react"
+import { Box, VisuallyHiddenInput, Text } from "@chakra-ui/react"
 
-// Checkbox Container
-const containerProps = {
-  display: "inline-block",
-  verticalAlign: "middle",
-}
-
-// Hidden input
-
-// StyledCheckbox
-
-// Icon
-const svgProps = {
-  fill: "none",
-  stroke: `${(props) => props.theme.colors.white}`,
-  strokeWidth: "2px",
-  visibility: `${(props) => (props.checked ? "visible" : "hidden")}`,
-}
-// Label
-
-// Props
 export interface IProps {
   children?: React.ReactNode
   callback?: () => void
@@ -35,7 +9,6 @@ export interface IProps {
   size?: number
 }
 
-// Checkbox
 const Checkbox: React.FC<IProps> = ({
   callback,
   checked,
@@ -44,38 +17,69 @@ const Checkbox: React.FC<IProps> = ({
   size = 2,
   ...rest
 }) => {
-  console.log({
-    checkboxProps: {
-      callback,
-      checked,
-      children,
-      className,
-      size,
-      ...rest,
-    },
-  })
-
   const handleClick = () => {
     if (callback) {
       callback()
     }
   }
 
+  const checkboxContainerAttributes = {
+    display: "inline-block",
+    verticalAlign: "middle",
+    className: className,
+    onClick: handleClick,
+  }
+
+  const hiddenCheckboxAttributes = {
+    type: "checkbox",
+    checked: checked,
+    readOnly: true,
+    ...rest,
+  }
+
+  const styledCheckboxAttributes = {
+    "aria-hidden": true,
+    className: "styled-checkbox",
+    display: "inline-block",
+    w: `${size}rem`,
+    h: `${size}rem`,
+    minW: `${size}rem`,
+    bg: `${checked ? "primary400" : "background"}`,
+    border: "px",
+    borderStyle: "solid",
+    borderColor: "black50",
+    borderRadius: "3px",
+    transition: "all 150ms",
+    _hover: {
+      boxShadow: "tableItemBoxShadow",
+      border: "px",
+      borderStyle: "solid",
+      borderColor: "primary600",
+      transition: "transform 0.1s",
+      transform: "scale(1.02)",
+    },
+  }
+
   return (
-    <VStack className={className} onClick={handleClick} {...containerProps}>
-      <VisuallyHiddenInput type="checkbox" checked={checked} readOnly />
-      <ChakraCheckbox
-        aria-hidden="true"
-        checked={checked}
-        className="styled-checkbox"
-        size={size}
-      >
-        <svg checked={checked} viewBox="0 0 24 24" {...svgProps}>
+    <Box {...checkboxContainerAttributes}>
+      <VisuallyHiddenInput {...hiddenCheckboxAttributes} />
+      <Box {...styledCheckboxAttributes}>
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          strokeWidth={0.5}
+          visibility={`${checked ? "visible" : "hidden"}`}
+        >
           <polyline points="20 6 9 17 4 12" />
         </svg>
-      </ChakraCheckbox>
-      {children && <Text>{children}</Text>}
-    </VStack>
+      </Box>
+      {children && (
+        <Text as="span" ml={2}>
+          {children}
+        </Text>
+      )}
+    </Box>
   )
 }
 
