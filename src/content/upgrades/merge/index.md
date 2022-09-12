@@ -120,7 +120,7 @@ For more information, check out this blog post by Tim Beiko on [How The Merge Im
 
 ## What date is The Merge? {#wen-merge}
 
-The Merge is expected to land within Q3/Q4 2022. The client developers are currently working to a soft deadline of 19th September 2022, but this could change depending upon the success of the final testnet merge (Goerli) in mid-August, continued client refinements and the hashrate of the existing miners continuing in a predictable manner. Everyone is working hard to deliver The Merge as soon as possible.
+The Merge is happening on 14/15th September. The precise timing depends upon how the network hash rate develops and it can be monitored at [bordel.wtf](bordel.wtf). The Merge will be triggered when the network passes a threshold accumulated difficulty, known as the TTD (terminal total difficulty). You can track total difficulty milestones using the [Nethermind TTD bot](https://explorer.forta.network/bot/0x5c2f5e0854ff24b425efc3a860953ee2923d9b0bc73ea86acd29d45d588e7bdc).
 
 ## After The Merge {#after-the-merge}
 
