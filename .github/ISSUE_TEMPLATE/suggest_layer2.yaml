@@ -149,4 +149,4 @@ body:
     id: layer_2_block_explorer
     attributes:
       label: Is there a block explorer?
-      description: Are there block explorers for the network? Please share URLs
+      description: Are there block explorers for the network? Please share URLs.
