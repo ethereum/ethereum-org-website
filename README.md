@@ -1396,6 +1396,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/kryptopaul"><img src="https://avatars.githubusercontent.com/u/87016182?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Paul Lechocki</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=kryptopaul" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/justalike"><img src="https://avatars.githubusercontent.com/u/44633493?v=4?s=100" width="100px;" alt=""/><br /><sub><b>justalike</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=justalike" title="Documentation">📖</a></td>
       <td align="center"><a href="http://l5d.li"><img src="https://avatars.githubusercontent.com/u/26670751?v=4?s=100" width="100px;" alt=""/><br /><sub><b>grayliquid</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=grayliquid" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/MHMasoon"><img src="https://avatars.githubusercontent.com/u/63204823?v=4?s=100" width="100px;" alt=""/><br /><sub><b>MohammadHosein Masoon</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=MHMasoon" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
