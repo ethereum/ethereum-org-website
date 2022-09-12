@@ -1,6 +1,7 @@
 import React from "react"
 import { Box, VisuallyHiddenInput, Text } from "@chakra-ui/react"
 
+// Props
 export interface IProps {
   children?: React.ReactNode
   callback?: () => void
@@ -9,6 +10,7 @@ export interface IProps {
   size?: number
 }
 
+// Checkbox
 const Checkbox: React.FC<IProps> = ({
   callback,
   checked,
@@ -17,6 +19,17 @@ const Checkbox: React.FC<IProps> = ({
   size = 2,
   ...rest
 }) => {
+  console.log({
+    checkboxProps: {
+      callback,
+      checked,
+      children,
+      className,
+      size,
+      ...rest,
+    },
+  })
+
   const handleClick = () => {
     if (callback) {
       callback()
