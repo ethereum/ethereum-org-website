@@ -38,7 +38,7 @@ const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
         }}
         role="group"
       >
-        <Box display="flex" alignItems="center">
+        <Flex align="center">
           <Emoji fontSize="md" mr={4} text=":page_with_curl:" />
         </Box>
         <Box flex={1} flexDirection="column" color="text">
