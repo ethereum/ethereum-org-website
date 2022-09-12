@@ -81,6 +81,7 @@ const Children = styled.div`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   url?: string
   background: string
   image: string
@@ -140,9 +141,11 @@ const Layer2ProductCard: React.FC<IProps> = ({
           </Link>
         )}
       </Content>
-      <StyledButtonLink to={url}>
-        {translateMessageId("layer-2-explore", intl)} {name}
-      </StyledButtonLink>
+      <div>
+        <StyledButtonLink to={url} display="flex">
+          {translateMessageId("layer-2-explore", intl)} {name}
+        </StyledButtonLink>
+      </div>
     </Card>
   )
 }

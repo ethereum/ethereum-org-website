@@ -4,14 +4,13 @@ description: A high level explanation of the importance of Ethereum client diver
 lang: en
 sidebar: true
 sidebarDepth: 2
-preMergeBanner: true
 ---
 
 The behavior of an Ethereum node is controlled by the client software it runs. There are several production-level Ethereum clients, each one developed and maintained in different languages by separate teams. The clients are built to a common spec that ensures the clients seamlessly communicate with each other and have the same functionality and provide an equivalent user experience. However, at the moment the distribution of clients across nodes is not equal enough to realize this network fortification to its full potential. Ideally, users divide roughly equally across the various clients to bring as much client diversity as possible to the network.
 
 ## Prerequisites {#prerequisites}
 
-If you don't already have an understanding of what nodes and clients are, check out [nodes and clients](/developers/docs/nodes-and-clients/). The Beacon Chain is explained [here](/upgrades/beacon-chain/). [Execution](/glossary/#execution-layer) and [consensus](/glossary/#consensus-layer) layers are defined in the glossary.
+If you don't already understand what nodes and clients are, check out [nodes and clients](/developers/docs/nodes-and-clients/). [Execution](/glossary/#execution-layer) and [consensus](/glossary/#consensus-layer) layers are defined in the glossary.
 
 ## Why are there multiple clients? {#why-multiple-clients}
 
@@ -31,11 +30,11 @@ Client diversity also offers resilience to attacks. For example, an attack that 
 
 ### Proof-of-stake finality {#finality}
 
-Ethereum has had 100% uptime since the network began. After The Merge, the risks caused by poor client diversity become more alarming. A critical bug in a consensus client with over 33% of the Ethereum nodes could prevent the Beacon Chain from finalizing, causing Ethereum to go offline.
+A bug in a consensus client with over 33% of the Ethereum nodes could prevent the Beacon Chain from finalizing, meaning users could not trust that transactions would not be reverted or changed at some point. This would be very problematic for many of the apps built on top of Ethereum, particularly DeFi.
 
 <Emoji text="🚨" mr="1rem" /> Worse still, a critical bug in a client with a two-thirds majority could cause the chain to <a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">incorrectly split and finalize</a>, leading to a large set of validators getting stuck on an invalid chain. If they want to rejoin the correct chain, these validators face slashing or a slow and expensive voluntary withdrawal and reactivation. The magnitude of a slashing scales with the number of culpable nodes with a two-thirds majority slashed maximally (32 ETH).
 
-Although these are unlikely scenarios, the Ethereum eco-system can mitigate their risk by evening out the distribution of clients across the active nodes. Ideally, no consensus client would ever have more than a 33% share of the total nodes.
+Although these are unlikely scenarios, the Ethereum eco-system can mitigate their risk by evening out the distribution of clients across the active nodes. Ideally, no consensus client would ever reach a 33% share of the total nodes.
 
 ### Shared responsibility {#responsibility}
 

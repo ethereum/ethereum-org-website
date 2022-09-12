@@ -343,7 +343,7 @@ const FileContributors: React.FC<IProps> = ({
             <Translation id="see-contributors" />
           </ContributorsButton>
           {editPath && (
-            <GithubButton to={editPath} hideArrow isSecondary={true}>
+            <GithubButton to={editPath} hideArrow variant="outline">
               <ButtonContent>
                 <GithubIcon name="github" />
                 <span>

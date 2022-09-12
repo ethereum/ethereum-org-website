@@ -6,5 +6,8 @@
   "page-upgrades-shards-date": "~2023",
   "page-upgrades-merge-banner-intro": "The Merge is approaching, and comes with changes to Ethereum.",
   "page-upgrades-merge-banner-content-outdated": "Some content on this page is out-of-date related to these changes. Updates are coming soon.",
-  "page-upgrades-merge-banner-developers-landing": "Some docs have a banner indicating they are out-of-date. Updates coming soon."
+  "page-upgrades-merge-banner-developers-landing": "Some docs have a banner indicating they are out-of-date. Updates coming soon.",
+  "page-upgrades-post-merge-banner-tutorial-ood": "This tutorial is out of date after the merge and may not work. Please raise a PR if you would like to contribute.",
+  "page-upgrades-post-merge-banner-tutorial-light-node-ood": "This tutorial is out of date after the merge. Light nodes do not currently work on proof-of-stake, but are expected to ship soon.",
+  "page-upgrades-post-merge-banner-governance-ood": "Some content on this page is out-of-date after the merge. Please raise a PR if you would like to contribute."
 }
