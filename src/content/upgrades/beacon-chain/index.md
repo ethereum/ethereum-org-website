@@ -12,7 +12,7 @@ summaryPoint4: The consensus logic and block gossip protocol introduced by the B
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
-  The Beacon Chain shipped on December 1, 2020. At the time, it was a separate chain to Ethereum Mainnet. It ran proof-of-stake but did not handle any transactions. The Beacon Chain was merged with the original Ethereum Mainnet in 2022 to take over the consensus logic and block propagation for Ethereum. Since The Merge, there has only been one Ethereum chain.
+  The Beacon Chain shipped on December 1, 2020, and formalized proof-of-stake as Ethereum's consensus mechanism with The Merge upgrade on September 15, 2022.
 </UpgradeStatus>
 
 ## What was the Beacon Chain? {#what-is-the-beacon-chain}

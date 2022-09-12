@@ -11,6 +11,10 @@ summaryPoint3: The Merge refers to the original Ethereum Mainnet becoming part o
 summaryPoint4: The Merge reduced Ethereum's energy consumption by ~99.95%.
 ---
 
+<UpgradeStatus dateKey="page-upgrades-beacon-date">
+  The Merge was completed on September 15, 2022. This completed Ethereum's transition to proof-of-stake consensus, officially deprecating proof-of-work and reducing energy consumption by ~99.95%.
+</UpgradeStatus>
+
 ## What was The Merge? {#what-is-the-merge}
 
 The Merge was the joining of the original execution layer of Ethereum (the Mainnet that has existed since [genesis](/history/#frontier)) with its new proof-of-stake consensus layer, the Beacon Chain. It eliminated the need for energy-intensive mining and instead enabled the the network to be secured using staked ETH. It was a truly exciting step in realizing the Ethereum vision—more scalability, security, and sustainability.
