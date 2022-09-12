@@ -8,13 +8,13 @@ incomplete: true
 
 ## Pré-requisitos {#prerequisites}
 
-Para melhor entender esta página, recomendamos que você leia primeiro [ transações ](/developers/docs/transactions/), [blocos](/developers/docs/blocks/) e [prova de trabalho ](/developers/docs/consensus-mechanisms/pow/).
+Para melhor entender esta página, recomendamos que você leia primeiro [transações](/developers/docs/transactions/), [blocos](/developers/docs/blocks/) e [prova de trabalho](/developers/docs/consensus-mechanisms/pow/).
 
 ## O que é mineração de Ethereum? {#what-is-ethereum-mining}
 
 Mineração é o processo de criação de um bloco de transações a ser adicionado à blockchain do Ethereum.
 
-Ethereum, como Bitcoin, atualmente usa um mecanismo de consenso denominada [ prova de trabalho (PoW) ](/developers/docs/consensus-mechanisms/pow/). A mineração é a força vital da prova de trabalho. Minerador de Ethereum – computadores rodando software – usando o tempo e o poder de computação deles para processar transações e produzir blocos.
+Ethereum, como Bitcoin, atualmente usa um mecanismo de consenso denominada [prova de trabalho (PoW)](/developers/docs/consensus-mechanisms/pow/). A mineração é a força vital da prova de trabalho. Minerador de Ethereum – computadores rodando software – usando o tempo e o poder de computação deles para processar transações e produzir blocos.
 
 <InfoBanner emoji=":wave:">
    A prova de participação substituirá a mineração e a prova de trabalho ao longo do próximo ano. Você pode começar a fazer o staking do seu ETH hoje. <a href="/staking/">Mais sobre staking</a>    
@@ -41,8 +41,8 @@ Para conhecer ainda mais a rentabilidade da mineração, use uma calculadora de 
 
 ## Como as transações Ethereum são mineradas {#how-ethereum-transactions-are-mined}
 
-1. Um usuário escreve e assina uma solicitação de [ transação ](/developers/docs/transactions/) com a chave privada de alguma [ conta ](/developers/docs/accounts/).
-2. O usuário transmite a solicitação de transação para toda a rede Ethereum de algum [ nó ](/developers/docs/nodes-and-clients/).
+1. Um usuário escreve e assina uma solicitação de [transação](/developers/docs/transactions/) com a chave privada de alguma [conta](/developers/docs/accounts/).
+2. O usuário transmite a solicitação de transação para toda a rede Ethereum de algum [nó](/developers/docs/nodes-and-clients/).
 3. Ao ouvir tomar conhecimento da nova solicitação de transação, cada nó na rede Ethereum adiciona a solicitação ao seu mempool local, uma lista de todas as solicitações de transação sobre as quais eles têm conhecimento que ainda não foram confirmadas na blockchain em um bloco.
 4. Em algum ponto, um nó de mineração agrega várias dezenas ou centenas de solicitações de transação a um [bloco](/developers/docs/blocks/) potencial, de uma forma que maximiza as [taxas de transação](/developers/docs/gas/) que eles ganham enquanto ainda estão abaixo do limite de gás de bloco. Então, o nó de mineração:
    1. Verifica a validade de cada pedido de transação (por exemplo, ninguém está tentando transferir o ether de uma conta para a qual não produziu uma assinatura, a solicitação não está malformada, etc.), e em seguida executa o código da solicitação, alterando o estado de sua cópia local do EVM. O minerador atribui a taxa de transação para cada um desses pedidos de transação à sua própria conta.

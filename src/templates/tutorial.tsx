@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import ButtonLink from "../components/ButtonLink"
 import Card from "../components/Card"
@@ -14,7 +14,9 @@ import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
-import TableOfContents from "../components/TableOfContents"
+import TableOfContents, {
+  Item as ItemTableOfContents,
+} from "../components/TableOfContents"
 import SectionNav from "../components/SectionNav"
 import CallToContribute from "../components/CallToContribute"
 import {
@@ -29,10 +31,10 @@ import {
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
-import PreMergeBanner from "../components/PreMergeBanner"
+import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import FeedbackCard from "../components/FeedbackCard"
 
-import { isLangRightToLeft } from "../utils/translations"
+import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
 
@@ -161,15 +163,22 @@ const TutorialPage = ({
     throw new Error("Required `relativePath` is missing on pageContext")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
-  const showMergeBanner = !!mdx.frontmatter.preMergeBanner
 
-  const tocItems = mdx.tableOfContents?.items
+  const showPostMergeBanner = !!mdx.frontmatter.postMergeBannerTranslation
+  const postMergeBannerTranslationString = mdx.frontmatter
+    .postMergeBannerTranslation as TranslationKey | null
+
+  const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
 
   const { editContentUrl } = siteData.siteMetadata || {}
   const absoluteEditPath = `${editContentUrl}${relativePath}`
   return (
     <div>
-      {showMergeBanner && <PreMergeBanner />}
+      {showPostMergeBanner && (
+        <PostMergeBanner
+          translationString={postMergeBannerTranslationString!}
+        />
+      )}
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
           title={mdx.frontmatter.title}
@@ -181,7 +190,7 @@ const TutorialPage = ({
           <TutorialMetadata tutorial={mdx} />
           <MobileTableOfContents
             items={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth}
+            maxDepth={mdx.frontmatter.sidebarDepth!}
             editPath={absoluteEditPath}
             isMobile={true}
           />
@@ -197,7 +206,7 @@ const TutorialPage = ({
         {mdx.frontmatter.sidebar && tocItems && (
           <DesktopTableOfContents
             items={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth}
+            maxDepth={mdx.frontmatter.sidebarDepth!}
             editPath={absoluteEditPath}
           />
         )}
@@ -236,7 +245,7 @@ export const query = graphql`
         sidebarDepth
         address
         isOutdated
-        preMergeBanner
+        postMergeBannerTranslation
       }
       body
       tableOfContents

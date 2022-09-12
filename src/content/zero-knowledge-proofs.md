@@ -43,7 +43,7 @@ In basic form, a zero-knowledge proof is made up of three elements: **witness**,
 
 - **Challenge**: The verifier randomly picks another question from the set and asks the prover to answer it.
 
-- **Response**: The prover accepts the question, calculates the answer, and returns it to the verifier. The prover’s response allows the verifier to check if the former really has access to the witness. To ensure the prover isn’t guessing blindly and getting the correct answers by chance, the verifier picks more questions to ask. By repeating this interaction many times, the possibility of the verifier faking knowledge of the witness drops significantly until the verifier is satisfied.
+- **Response**: The prover accepts the question, calculates the answer, and returns it to the verifier. The prover’s response allows the verifier to check if the former really has access to the witness. To ensure the prover isn’t guessing blindly and getting the correct answers by chance, the verifier picks more questions to ask. By repeating this interaction many times, the possibility of the prover faking knowledge of the witness drops significantly until the verifier is satisfied.
 
 The above describes the structure of an ‘interactive zero-knowledge proof’. Early zero-knowledge protocols used interactive proving, where verifying the validity of a statement required back-and-forth communication between provers and verifiers.
 
@@ -99,7 +99,7 @@ ZK-STARKs produce larger proofs than ZK-SNARKs meaning they generally have highe
 
 Credit card payments are often visible to multiple parties, including the payments provider, banks, and other interested parties (e.g., government authorities). While financial surveillance has benefits for identifying illegal activity, it also undermines the privacy of ordinary citizens.
 
-Cryptocurrencies were intended to provide a means for users to conduct private, peer-to-peer transactions. But most cryptocurrency transactions are openly visible on public blockchains. User identities are often pseudonymous and either wilfully linked to real-world identities (e.g. by including ETH addresses on Twitter or Github profiles) or can be associated with real-world identities using basic on and off-chain data analysis.
+Cryptocurrencies were intended to provide a means for users to conduct private, peer-to-peer transactions. But most cryptocurrency transactions are openly visible on public blockchains. User identities are often pseudonymous and either wilfully linked to real-world identities (e.g. by including ETH addresses on Twitter or GitHub profiles) or can be associated with real-world identities using basic on and off-chain data analysis.
 
 There are specific “privacy coins” designed for completely anonymous transactions. Privacy-focused blockchains, such as ZCash and Monero, shield transaction details, including sender/receiver addresses, asset type, quantity, and the transaction timeline.
 

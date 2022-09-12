@@ -143,5 +143,5 @@ _Hinweis_: Alle Batch-Funktionen einschließlich des Hakens gibt es auch als Ver
 
 - [EIP-1155: Multi-Token-Standard](https://eips.ethereum.org/EIPS/eip-1155)
 - [ERC-1155: Openzeppelin Docs](https://docs.openzeppelin.com/contracts/3.x/erc1155)
-- [ERC-1155: Github Repo](https://github.com/enjin/erc-1155)
+- [ERC-1155: GitHub Repo](https://github.com/enjin/erc-1155)
 - [Alchemy NFT API](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)

@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import Emoji from "./Emoji"
 import { margin } from "styled-system"
 
@@ -29,18 +29,6 @@ const Banner = styled.div<{
     flex-direction: column;
   }
 
-  a {
-    color: ${(props) =>
-      props.isWarning
-        ? props.theme.colors.warningLink
-        : props.theme.colors.infoLink};
-    &:hover {
-      color: ${(props) =>
-        props.isWarning
-          ? props.theme.colors.warningLinkHover
-          : props.theme.colors.infoLinkHover};
-    }
-  }
   ${margin}
 `
 
@@ -69,6 +57,7 @@ const Content = styled.div<{
 `
 
 export interface IProps {
+  children?: React.ReactNode
   className?: string
   emoji?: string
   isWarning?: boolean

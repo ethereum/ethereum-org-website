@@ -1,6 +1,6 @@
 // Libraries
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 export interface IProps {
   listData: Array<React.ReactNode>

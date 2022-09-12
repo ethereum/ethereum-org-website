@@ -1,10 +1,12 @@
 import React from "react"
-import styled, { useTheme } from "styled-components"
+import { useTheme } from "@emotion/react"
+import styled from "@emotion/styled"
 import Icon from "./Icon"
 import Link from "./Link"
 import Emoji from "./Emoji"
 
 export interface IProps {
+  children?: React.ReactNode
   to: string
   className?: string
   isExternal?: boolean
@@ -24,6 +26,7 @@ const Container = styled(Link)<{ isExternal: boolean }>`
   color: ${({ theme }) => theme.colors.text};
   border: 1px solid ${({ theme }) => theme.colors.border};
   &:hover {
+    text-decoration: none;
     box-shadow: 0 0 1px ${({ theme }) => theme.colors.primary};
     background: ${({ theme }) => theme.colors.tableBackgroundHover};
     border-radius: 4px;

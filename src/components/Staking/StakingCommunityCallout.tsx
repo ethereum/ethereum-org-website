@@ -1,6 +1,6 @@
 import React from "react"
 import { useIntl } from "react-intl"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { graphql, useStaticQuery } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 

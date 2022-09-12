@@ -35,7 +35,6 @@ Majoritatea IDE-urilor consacrate au construit plug-inuri pentru creşterea sati
 **Visual Studio Code -** **_IDE profesionist pentru mai multe platforme, acceptat oficial de Ethereum._**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Kit de dezvoltare Blockchain pentru Ethereum](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain)
 - [Azure Blockchain Workbench](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
 - [Exemple de cod](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)

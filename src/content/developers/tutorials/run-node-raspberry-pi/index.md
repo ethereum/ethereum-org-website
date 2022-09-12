@@ -9,7 +9,7 @@ skill: intermediate
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/kiln/kiln-testnet.html
-preMergeBanner: true
+postMergeBannerTranslation: page-upgrades-post-merge-banner-tutorial-ood
 ---
 
 **Ethereum on Arm is a custom Linux image that can turn a Raspberry Pi into an Ethereum node.**
@@ -143,7 +143,7 @@ Congratulations, you now have a full Ethereum node and validator running on a Ra
 ## Feedback appreciated {#feedback-appreciated}
 
 We know the Raspberry Pi has a massive user base that could have a very positive impact on the health of the Ethereum network.
-Please dig into the details in this tutorial, try running on other testnets or even Ethereum Mainnet, check out the Ethereum on Arm Github, give feedback, raise issues and pull requests and help advance the technology and documentation!
+Please dig into the details in this tutorial, try running on other testnets or even Ethereum Mainnet, check out the Ethereum on Arm GitHub, give feedback, raise issues and pull requests and help advance the technology and documentation!
 
 ## References {#references}
 

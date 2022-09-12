@@ -77,9 +77,9 @@ Daha fazla kaynak mı arıyorsunuz? Göz atın: [ethereum.org/developers](/devel
 
 ## .NET Toplumuna Katkıda Bulunanlar {#dot-net-community-contributors}
 
-Nethereum'da çoğu zaman [Gitter](https://gitter.im/Nethereum/Nethereum)'da zaman geçiriyoruz. Burası herkesin kabul edildiği, soru ve cevaplar yazabildiği, yardım alabildiği veya sadece kafa dağıttığı bir yerdir. [Nethereum Github deposunda](https://github.com/Nethereum) bir PR veya bir konu açmaktan veya sadece sahip olduğumuz birçok yan/örnek projeye göz atmaktan çekinmeyin. Ayrıca bizi [Discord](https://discord.gg/jQPrR58FxX) üzerinde de bulabilirsiniz!
+Nethereum'da çoğu zaman [Gitter](https://gitter.im/Nethereum/Nethereum)'da zaman geçiriyoruz. Burası herkesin kabul edildiği, soru ve cevaplar yazabildiği, yardım alabildiği veya sadece kafa dağıttığı bir yerdir. [Nethereum GitHub deposunda](https://github.com/Nethereum) bir PR veya bir konu açmaktan veya sadece sahip olduğumuz birçok yan/örnek projeye göz atmaktan çekinmeyin. Ayrıca bizi [Discord](https://discord.gg/jQPrR58FxX) üzerinde de bulabilirsiniz!
 
-Nethermind'da [Gitter](https://gitter.im/nethermindeth/nethermind) aracılığıyla iletişime geçelim. PR' veya konular için şuraya bakın: [Nethermind Github deposu](https://github.com/NethermindEth/nethermind).
+Nethermind'da [Gitter](https://gitter.im/nethermindeth/nethermind) aracılığıyla iletişime geçelim. PR' veya konular için şuraya bakın: [Nethermind GitHub deposu](https://github.com/NethermindEth/nethermind).
 
 ## Diğer toplu listeler {#other-aggregated-lists}
 

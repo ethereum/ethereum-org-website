@@ -27,7 +27,7 @@ Beacon Chain će tijekom vremena mijenjati ulogu, međutim to je temeljna kompon
 
 Beacon Chain će predstaviti [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) Ethereumu. Ovo je novi način da pomognete održati Ethereum sigurnim. Shvatite to kao javno dobro koje će Ethereum učiniti zdravijim i zaraditi vam više ETH-a u procesu. U praksi, to će uključiti vaše ulaganje ETH-a kako biste aktivirali softver za validaciju. Kao validator, obrađivat ćete transakcije i stvarati nove blokove u lancu.
 
-Ulagati i postati validator, jednostavnije je od [ rudarenja ](/developers/docs/mining/) (kako je mreža trenutačno zaštićena). Postoji nada da će to dugoročno pomoći da Ethereum bude sigurniji. Što više ljudi sudjeluje u mreži, to će ona biti decentraliziranija i sigurnija od napada.
+Ulagati i postati validator, jednostavnije je od [rudarenja](/developers/docs/mining/) (kako je mreža trenutačno zaštićena). Postoji nada da će to dugoročno pomoći da Ethereum bude sigurniji. Što više ljudi sudjeluje u mreži, to će ona biti decentraliziranija i sigurnija od napada.
 
 <InfoBanner emoji=":money_bag:">
 Ako ste zainteresirani za validiranje i pomoć u osiguranju za Beacon Chain, <a href="/staking/"> saznajte više o sudjelovanju</a>.

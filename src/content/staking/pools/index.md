@@ -67,17 +67,10 @@ Typically ERC-20 liquidity tokens are issued to stakers that represents the valu
 </ExpandableCard>
 
 <ExpandableCard title="When can I withdraw my stake?">
-Currently, withdrawing funds from a validator on the Beacon Chain is not possible, which currently limits the ability to actually <em>redeem</em> your liquidity token for the ETH rewards locked in the consensus layer.
 
-Alternatively, pools that utilize an ERC-20 liquidity token allow users to trade this token in the open market, effectively allowing you to "withdraw" without actually removing ETH from the Beacon Chain.
-</ExpandableCard>
+Currently, withdrawing funds from an Ethereum validator is not possible, which limits the ability to actually _redeem_ your liquidity token for the ETH rewards locked in the consensus layer.
 
-<ExpandableCard title="Do pooled stakers need to do anything for The Merge?">
-Pooled stakers <strong>do not need to do anything to prepare for The Merge</strong>.
-
-However, as The Merge approaches, be on high alert for scammers. **You do not need to upgrade your ETH or staked ETH tokens** for the transition to proof-of-stake.
-
-Learn more about [The Merge](/upgrades/merge/)
+Alternatively, pools that utilize an ERC-20 liquidity token allow users to trade this token in the open market, allowing you to sell your staking position, effectively "withdrawing" without actually removing ETH from the staking contract.
 </ExpandableCard>
 
 <ExpandableCard title="Is this different from staking with my exchange?">

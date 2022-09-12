@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { motion } from "framer-motion"
 import { useIntl } from "react-intl"
 
@@ -67,6 +67,7 @@ const SideNavLink = styled(Link)`
   text-decoration: none;
   color: ${(props) => props.theme.colors.text};
   &:hover {
+    text-decoration: none;
     color: ${(props) => props.theme.colors.primary};
   }
   &.active {

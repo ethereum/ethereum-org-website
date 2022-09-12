@@ -426,19 +426,19 @@ _我们希望有更多关于构建预言机智能合约的文档。 如果您能
 
 **文章**
 
-- [什么是区块链 Oracle？](https://chain.link/education/blockchain-oracles)- _Chainlink_
+- [什么是区块链 Oracle？](https://chain.link/education/blockchain-oracles) - _Chainlink_
 - [预言机](https://docs.ethhub.io/built-on-ethereum/oracles/what-are-oracles/) – _EthHub_
-- [什么是区块链预言机？](https://betterprogramming.pub/what-is-a-blockchain-oracle-f5ccab8dbd72)- _Patrick Collins_
-- [去中心化预言机：综述](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841)– _Julien Thevenard_
-- [在以太坊部署区块链预言机](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e)– _Pedro Costa_
-- [为什么智能合约无法调用应用程序接口？](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls)- _StackExchange_
-- [我们为什么需要去中心化预言机](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles)- _Bankless_
-- [因此您想要使用价格预言机](https://samczsun.com/so-you-want-to-use-a-price-oracle/)- _samczsun_
+- [什么是区块链预言机？](https://betterprogramming.pub/what-is-a-blockchain-oracle-f5ccab8dbd72) - _Patrick Collins_
+- [去中心化预言机：综述](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) – _Julien Thevenard_
+- [在以太坊部署区块链预言机](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_
+- [为什么智能合约无法调用应用程序接口？](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) - _StackExchange_
+- [我们为什么需要去中心化预言机](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles) - _Bankless_
+- [因此您想要使用价格预言机](https://samczsun.com/so-you-want-to-use-a-price-oracle/) - _samczsun_
 
 **相关视频**
 
-- [预言机和区块链实用程序拓展](https://youtu.be/BVUZpWa8vpw)- _Real Vision Finance_
+- [预言机和区块链实用程序拓展](https://youtu.be/BVUZpWa8vpw) - _Real Vision Finance_
 
 **教程**
 
-- [如何在 Solidity 中获取以太坊的当前价格](https://blog.chain.link/fetch-current-crypto-price-data-solidity/)- _ Chainlink _
+- [如何在 Solidity 中获取以太坊的当前价格](https://blog.chain.link/fetch-current-crypto-price-data-solidity/) - _Chainlink_

@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import Emoji from "./Emoji"
 import Translation from "./Translation"
@@ -31,7 +31,9 @@ const TopContent = styled.div`
   align-items: flex-start;
 `
 
-export interface IProps {}
+export interface IProps {
+  children?: React.ReactNode
+}
 
 const SectionNav: React.FC<IProps> = ({ children }) => (
   <Card>

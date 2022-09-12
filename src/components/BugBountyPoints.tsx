@@ -1,8 +1,8 @@
 import React, { useContext, useState, useEffect } from "react"
-import { ThemeContext } from "styled-components"
+import { useTheme } from "@emotion/react"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import axios from "axios"
 
 import Emoji from "./Emoji"
@@ -103,8 +103,8 @@ const BugBountyPoints: React.FC<IProps> = () => {
     currentDAIPriceUSD: 1,
     hasError: false,
   })
-  const themeContext = useContext(ThemeContext)
-  const isDarkTheme = themeContext.isDark
+  const theme = useTheme()
+  const isDarkTheme = theme.isDark
 
   useEffect(() => {
     axios

@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React, { ReactNode } from "react"
+import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useQuery, gql } from "@apollo/client"
 
@@ -140,11 +140,12 @@ const REPO_DATA = gql`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   url: string
   background: string
   image: string
   name: string
-  description?: string
+  description?: ReactNode
   note?: string
   alt?: string
   githubUrl?: string
@@ -227,7 +228,9 @@ const ProductCard: React.FC<IProps> = ({
             )
           )}
       </SubjectContainer>
-      <StyledButtonLink to={url}>Open {name}</StyledButtonLink>
+      <StyledButtonLink h={20} to={url}>
+        Open {name}
+      </StyledButtonLink>
     </Card>
   )
 }

@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React, { ReactNode } from "react"
+import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 import Link from "./Link"
@@ -57,6 +57,7 @@ const Card = styled(Link)`
 
   &:hover,
   &:focus {
+    text-decoration: none;
     border-radius: 4px;
     box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
     background: ${(props) => props.theme.colors.tableBackgroundHover};
@@ -66,11 +67,12 @@ const Card = styled(Link)`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   to: string
   alt?: string
   image: string
-  title: string
-  description?: string
+  title: ReactNode
+  description?: ReactNode
   className?: string
   isRight?: boolean
   isBottom?: boolean

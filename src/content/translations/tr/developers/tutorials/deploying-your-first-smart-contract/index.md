@@ -80,7 +80,7 @@ Ardından "deploy and run transactions" ekranına gidin:
 
 ![Remix araç çubuğundaki yayınla simgesi](./remix-deploy.png)
 
-Bu ekranda öncelikle sözleşmeye verdiğimiz ismin göründüğünden emin olmalısınız. Sözleşme adını görüyorsanız Deploy butonuna tıklayın. Sayfanın üst kısmında görebileceğiniz gibi, mevcut ortam “Javascript VM”, yani bu daha hızlı ve herhangi bir ücret ödemeden test edebilmek için akıllı sözleşmemizi yerel bir test blok zincirinde dağıtıp etkileşime geçeceğimiz anlamına geliyor.
+Bu ekranda öncelikle sözleşmeye verdiğimiz ismin göründüğünden emin olmalısınız. Sözleşme adını görüyorsanız Deploy butonuna tıklayın. Sayfanın üst kısmında görebileceğiniz gibi, mevcut ortam “JavaScript VM”, yani bu daha hızlı ve herhangi bir ücret ödemeden test edebilmek için akıllı sözleşmemizi yerel bir test blok zincirinde dağıtıp etkileşime geçeceğimiz anlamına geliyor.
 
 ![Remix solidity derleyicisindeki deploy (dağıt) düğmesi](./remix-deploy-button.png)
 

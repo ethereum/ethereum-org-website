@@ -34,19 +34,19 @@ A questo punto, per importare Web3.js in uno script Node.js o un progetto fronte
 const Web3 = require("web3")
 ```
 
-Ora che hai incluso la libreria nel progetto, dobbiamo inizializzarla, se il progetto deve poter comunicare con la blockchain. Gran parte delle librerie di Ethereum comunica con un [nodo](/developers/docs/nodes-and-clients/) tramite le chiamate RPC. Per avviare il nostro provider web3, istanzieremo un'istanza di Web3 passando per il costruttore dell'URL del provider. Se hai un nodo o un'[istanza ganache in esecuzione sul tuo computer](https://ethereumdev.io/testing-your-smart-contract-with-existing-protocols-ganache-fork/), apparirà così:
+Ora che hai incluso la libreria nel progetto, dobbiamo inizializzarla. Il progetto deve poter comunicare con la blockchain. Gran parte delle librerie di Ethereum comunica con un [nodo](/developers/docs/nodes-and-clients/) tramite le chiamate RPC. Per avviare il nostro provider Web3, istanzieremo un'istanza di Web3 passando per il costruttore dell'URL del provider. Se hai un nodo o un'[istanza ganache in esecuzione sul tuo computer](https://ethereumdev.io/testing-your-smart-contract-with-existing-protocols-ganache-fork/), apparirà così:
 
 ```js
 const web3 = new Web3("http://localhost:8545")
 ```
 
-Se desideri accedere direttamente a un nodo ospitato, puoi usare Infura o quelli gratuiti forniti da [Cloudfare](https://cloudflare-eth.com/):
+Se desideri accedere direttamente a un nodo ospitato, puoi usare Infura o quelli gratuiti forniti da [Cloudflare](https://cloudflare-eth.com/):
 
 ```js
 const web3 = new Web3("https://cloudflare-eth.com")
 ```
 
-Per verificare di aver configurato correttamente la nostra istanza di web3, proveremo a recuperare il numero dell'ultimo blocco usando la funzione `getBlockNumber`. Questa funzione accetta un callback come parametro e restituisce il numero del blocco come un intero.
+Per verificare di aver configurato correttamente la nostra istanza di Web3, proveremo a recuperare il numero dell'ultimo blocco usando la funzione `getBlockNumber`. Questa funzione accetta un callback come parametro e restituisce il numero del blocco come un intero.
 
 ```js
 var Web3 = require("web3")
@@ -57,7 +57,7 @@ web3.eth.getBlockNumber(function (error, result) {
 })
 ```
 
-Se viene eseguito, questo programma produrrà semplicemente il numero dell'ultimo blocco: la cima della blockchain. Puoi anche usare le chiamate della funzione await/async per evitare di annidare callback nel tuo codice:
+Se viene eseguito, questo programma produrrà semplicemente il numero dell'ultimo blocco: la cima della blockchain. Puoi anche usare le chiamate della funzione `await/async` per evitare di annidare delle callback nel tuo codice:
 
 ```js
 async function getBlockNumber() {
@@ -69,13 +69,13 @@ async function getBlockNumber() {
 getBlockNumber()
 ```
 
-Puoi vedere tutte le funzioni disponibili sull'istanza di web3 nella [documentazione ufficiale di web3](https://web3js.readthedocs.io/en/v1.2.6/web3-eth.html#).
+Puoi vedere tutte le funzioni disponibili sull'istanza di web3 nella [documentazione ufficiale di web3.js](https://web3js.readthedocs.io/en/v1.2.6/web3-eth.html#).
 
 Gran parte delle librerie di Web3 sono asincrone perché, in background, la libreria effettua chiamate RPC di JSON al nodo, il quale restituisce il risultato.
 
 <Divider />
 
-Se lavori nel browser, alcuni portafogli iniettano direttamente un'istanza web3 e dovresti provare a usarla appena possibile, specialmente se prevedi di interagire con l'indirizzo di Ethereum dell'utente per effettuare le transazioni.
+Se lavori nel browser, alcuni portafogli iniettano direttamente un'istanza Web3 e dovresti provare a usarla appena possibile, specialmente se prevedi di interagire con l'indirizzo di Ethereum dell'utente per effettuare le transazioni.
 
 Qui riportiamo il frammento che permette di rilevare se è disponibile un portafoglio di MetaMask e, in tal caso, provare ad abilitarlo. In seguito, ti consentirà di leggere il saldo dell'utente e abilitarlo per convalidare le transazioni che vorresti effettuasse sulla blockchain di Ethereum:
 
@@ -92,4 +92,4 @@ if (window.ethereum != null) {
 }
 ```
 
-Esistono alternative a web3.js, come [Ethers.js](https://docs.ethers.io/ethers.js/html/), ma concentreremo tutti i tutorial di JavaScript su web3.js, essendo la libreria ufficiale per interagire con Ethereum nel browser. Nel prossimo tutorial vedremo [come ascoltare facilmente i nuovi blocchi in arrivo sulla blockchain e esaminarne il contenuto](https://ethereumdev.io/listening-to-new-transactions-happening-on-the-blockchain/).
+Esistono alternative a web3.js, come [Ethers.js](https://docs.ethers.io/), ma concentreremo tutti i tutorial di JavaScript su web3.js, essendo la libreria ufficiale per interagire con Ethereum nel browser. Nel prossimo tutorial vedremo [come ascoltare facilmente i nuovi blocchi in arrivo sulla blockchain e esaminarne il contenuto](https://ethereumdev.io/listening-to-new-transactions-happening-on-the-blockchain/).

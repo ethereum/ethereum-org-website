@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import ButtonLink from "./ButtonLink"
 import Icon from "./Icon"
@@ -157,7 +157,10 @@ const TranslationBanner: React.FC<IProps> = ({
             </div>
             {!isPageContentEnglish && (
               <div>
-                <SecondaryButtonLink isSecondary to={`/en${originalPagePath}`}>
+                <SecondaryButtonLink
+                  variant="outline"
+                  to={`/en${originalPagePath}`}
+                >
                   <Translation id="translation-banner-button-see-english" />
                 </SecondaryButtonLink>
               </div>
