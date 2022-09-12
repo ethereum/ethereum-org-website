@@ -21,7 +21,7 @@ More relevant is the overall energy consumption and carbon footprint of the netw
 
 [Digiconomist provides whole-network energy consumption and carbon footprints for Bitcoin and Ethereum](https://digiconomist.net/ethereum-energy-consumption). At the time of writing this article, Bitcoin expends about 200 TWh/yr of energy and emits about 100 MT (megatons) of carbon per year, while generating about 32,000 T of electrical waste from obsolete hardware annually. In comparison, the total energy expenditure for securing Ethereum is closer to **0.01 TWh/yr**.
 
-![Comparison of energy expenditure across industries](./energy.png)
+<AdoptionChart />
 
 The figure above shows the estimated annual energy consumption in TWh/yr for various industries (retrieved in June 2022).
 _Note that the estimates presented in the plot are from publicly available sources that have been linked to in the text below. They are

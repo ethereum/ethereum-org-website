@@ -45,6 +45,7 @@ import Icon from "../components/Icon"
 import SocialListItem from "../components/SocialListItem"
 import YouTube from "../components/YouTube"
 import PostMergeBanner from "../components/Banners/PostMergeBanner"
+import AdoptionChart from "../components/AdoptionChart"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
@@ -146,6 +147,7 @@ const components = {
   MatomoOptOut,
   Callout,
   YouTube,
+  AdoptionChart,
 }
 
 const StaticPage = ({

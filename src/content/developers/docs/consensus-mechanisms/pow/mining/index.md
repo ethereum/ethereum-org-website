@@ -6,11 +6,9 @@ sidebar: true
 ---
 
 <InfoBanner emoji=":wave:">
-
-Proof-of-work is no longer underlying Ethereum's consensus mechanism, meaning mining has been switched off. Instead, Ethereum is secured by validators who stake ETH. You can start staking your ETH today. Read more on [The Merge](/upgrades/merge/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos/), and [staking](/staking/). This page is for historical interest.
-
+   Proof-of-work is no longer underlying Ethereum's consensus mechanism, meaning mining has been switched off. Instead, Ethereum is secured by validators who stake ETH. You can start staking your ETH today. Read more on [The Merge](/upgrades/merge/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos/), and [staking](/staking/). This page is for historical interest.
 </InfoBanner>
- 
+
 ## Prerequisites {#prerequisites}
 
 To better understand this page, we recommend you first read up on [transactions](/developers/docs/transactions/), [blocks](/developers/docs/blocks/) and [proof-of-work](/developers/docs/consensus-mechanisms/pow/).
