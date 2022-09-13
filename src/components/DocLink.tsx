@@ -25,14 +25,8 @@ const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
     <LinkBox>
       <LinkOverlay href={to} isExternal={isExternal}>
         <Container
-          position="relative"
-          zIndex={1}
           textDecoration="none"
-          display="flex"
-          flexDirection="row"
-          flex={1}
           width="100%"
-          justifyContent="space-between"
           padding={4}
           borderRadius="sm"
           color="text"
@@ -46,28 +40,37 @@ const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
           }}
           role="group"
         >
-          <Flex align="center">
-            <Emoji fontSize="md" mr={4} text=":page_with_curl:" />
+          <Flex
+            position="relative"
+            zIndex={1}
+            display="flex"
+            flexDirection="row"
+            flex={1}
+            justifyContent="space-between"
+          >
+            <Flex align="center">
+              <Emoji fontSize="md" mr={4} text=":page_with_curl:" />
+            </Flex>
+            <Box flex={1} flexDirection="column" color="text">
+              <Text color="text300" fontWeight="semibold" margin={0}>
+                {children}
+              </Text>
+            </Box>
+            <Icon
+              as={AiOutlineArrowRight}
+              color="text"
+              alignSelf="center"
+              minWidth="2rem"
+              boxSize={6}
+              marginX={6}
+              _groupHover={{
+                fill: "primary",
+                transition: "transform 0.1s",
+                transform: "scale(1.2)",
+                rotate: isExternal ? "-45deg" : "0",
+              }}
+            />
           </Flex>
-          <Box flex={1} flexDirection="column" color="text">
-            <Text color="text300" fontWeight="semibold" margin={0}>
-              {children}
-            </Text>
-          </Box>
-          <Icon
-            as={AiOutlineArrowRight}
-            color="text"
-            alignSelf="center"
-            minWidth="2rem"
-            boxSize={6}
-            marginX={6}
-            _groupHover={{
-              fill: "primary",
-              transition: "transform 0.1s",
-              transform: "scale(1.2)",
-              rotate: isExternal ? "-45deg" : "0",
-            }}
-          />
         </Container>
       </LinkOverlay>
     </LinkBox>
