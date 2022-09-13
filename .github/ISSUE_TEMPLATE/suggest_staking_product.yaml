@@ -72,7 +72,7 @@ body:
         - "Portions of code are open source: _provide link(s) to project repo(s)_"
         - "No, code is closed source"
         - "N/A, no custom software is involved"
-    validation:
+    validations:
       required: true
   - type: dropdown
     id: staking_product_fork
