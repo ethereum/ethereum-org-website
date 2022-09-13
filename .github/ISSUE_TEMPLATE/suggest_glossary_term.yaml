@@ -34,7 +34,7 @@ body:
       label: Sources, if any (please do not submit copywrited content without appropriate approval)
       description: Please list any sources utilized
     validations:
-      required: true
+      required: false
   - type: textarea
     id: glossary_terms_ethereumdotorg_links
     attributes:
