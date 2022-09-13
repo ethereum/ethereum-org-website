@@ -56,9 +56,10 @@ const EnergyConsumptionChart: React.FC = () => {
     breakpoint?: number
   }>
 
+  // TODO: Extract translatable strings
   const energyConsumptionChartData: Data = [
     {
-      name: "Youtube",
+      name: "YouTube",
       amount: 244,
       color: "#FF0000",
     },
@@ -91,7 +92,7 @@ const EnergyConsumptionChart: React.FC = () => {
       breakpoint: mediumBreakpoint,
     },
     {
-      name: "Paypal",
+      name: "PayPal",
       amount: 0.26,
       color: "#C1B6F5",
       breakpoint: smallBreakpoint,
