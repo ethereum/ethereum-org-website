@@ -37,7 +37,7 @@ body:
       description: List the pages where you think this tool is most relevant on ethereum.org
     validations:
       required: true
-  - type: input
+  - type: dropdown
     id: dev_tool_open_source
     attributes:
       label: Is the product open source?
