@@ -18,7 +18,7 @@ This page assumes the reader is familiar with Ethereum fundamentals, including [
 
 Oracles are applications that source, verify, and transmit external information (i.e., information stored off-chain) to smart contracts running on the blockchain. Besides “pulling” off-chain data and broadcasting it on Ethereum, oracles can also “push” information from the blockchain to external systems. An example is an oracle that unlocks a smart lock once the user sends the fee via an Ethereum transaction. 
 
-Oracles act as a “bridge” connecting smart contracts and blockchains to the real world. Without oracles, smart contract applications would be limited in usefulness and real-world value. A blockchain oracle provides a mechanism for extracting real-world information which smart contracts can use to trigger state changes in the [Ethereum Virtual Machine](/developers/docs/evm/)
+Oracles act as a “bridge” connecting smart contracts on blockchains to the real world. Without oracles, smart contract applications would only be able to access on-chain data. A blockchain oracle provides a mechanism for triggering smart contract functions using real-world data.
 
 Oracles differ based on the source of data (one or multiple sources), direction of information (inbound or outbound), trust models (centralized or decentralized) and system architecture (immediate-read, publish-subscribe, and request-response). We can also distinguish between oracles that only retrieve external data (input oracles) and ones that perform computation off-chain (computational oracles).
 
@@ -38,7 +38,7 @@ The scenario described earlier also highlights the problem with designing blockc
 
 To do this, an oracle is typically made up of a smart contract running on-chain and some off-chain components. The on-chain contract receives requests for data from other smart contracts, which it passes to the off-chain component (called an oracle node). This oracle node can query data sources—using application programming interfaces (APIs), for example—and send transactions to store the requested data in the smart contract's storage. 
 
-Essentially, a blockchain oracle bridges the information gap between the blockchain and the external environment, creating “hybrid smart contracts”. A hybrid smart contract is one that functions based on a combination of on-chain contract code and off-chain infrastructure. Decentralized prediction markets, described in the introduction, are an excellent example of hybrid smart contracts.  
+Essentially, a blockchain oracle bridges the information gap between the blockchain and the external environment, creating “hybrid smart contracts”. A hybrid smart contract is one that functions based on a combination of on-chain contract code and off-chain infrastructure. Decentralized prediction markets, described in the introduction, are an excellent example of hybrid smart contracts.  Other examples might include crop insurance smart contracts that pay out when a set of oracles determine that certain weather phenomena have taken place.
 
 ## What is the oracle problem? {#the-oracle-problem}
 
