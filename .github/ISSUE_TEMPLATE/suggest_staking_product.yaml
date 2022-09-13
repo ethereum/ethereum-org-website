@@ -39,6 +39,10 @@ body:
         - "Other: (describe)"
     validations:
       required: true
+  - type: input
+    id: staking_product_type_other
+    attributes:
+      label: If other product type, please describe
   - type: textarea
     id: staking_product_logo
     attributes:
