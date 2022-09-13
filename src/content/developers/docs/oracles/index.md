@@ -26,7 +26,7 @@ Oracles differ based on the source of data (one or multiple sources), trust mode
 
 Most developers see smart contracts as simply pieces of code running at specific addresses on the blockchain. However, a more [general view of smart contracts](/smart-contracts/) is that they are self-executing software programs capable of enforcing agreements between parties once specific conditions are met—which explains the term, “smart contracts.”
 
-But there’s a problem with using smart contracts to enforce agreements between people: blockchains are designed to be “deterministic”.  A [deterministic system](https://en.wikipedia.org/wiki/Deterministic_algorithm) is one that always produces the same results given an initial state and a particular input—there is no randomness or variation in the process of computing outputs from inputs. 
+But using smart contracts to enforce agreements between people isn't exactly straightforward, given that blockchains are designed to be “deterministic”.  A [deterministic system](https://en.wikipedia.org/wiki/Deterministic_algorithm) is one that always produces the same results given an initial state and a particular input—there is no randomness or variation in the process of computing outputs from inputs. 
 
 To achieve deterministic execution, blockchains limit nodes to reaching consensus on simple binary (true/false) questions using *only* data stored on the blockchain itself. Examples of such questions include: “Did the account owner (identified by a public key) sign this transaction with the paired private key?”, “Does this account have enough funds to cover the transaction?”, “Is this transaction valid in the context of this smart contract?”, and so on. 
 
@@ -122,8 +122,8 @@ contract Oracle {
   )
   public
   {
-    uint lenght = requests.push(Request(currentId, _urlToQuery, _attributeToFetch, ""));
-    Request storage r = requests[lenght-1];
+    uint length = requests.push(Request(currentId, _urlToQuery, _attributeToFetch, ""));
+    Request storage r = requests[length-1];
 
     // Hardcoded oracles address
     r.quorum[address(0x6c2339b46F41a06f09CA0051ddAD54D1e582bA77)] = 1;
