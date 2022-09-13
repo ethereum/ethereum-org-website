@@ -8807,6 +8807,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "patoshii",
+      "name": "Patoshi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/381050?v=4",
+      "profile": "https://www.xcubicle.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -8814,5 +8823,6 @@
   "projectOwner": "ethereum",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitConvention": "angular"
 }
