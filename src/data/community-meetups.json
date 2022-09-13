@@ -310,5 +310,11 @@
     "emoji": ":gb:",
     "location": "Norwich",
     "link": "https://www.ethanglia.org/"
+  },
+  {
+    "title": "CryptoSD",
+    "emoji": ":us:",
+    "location": "San Diego",
+    "link": "http://cryptosandiego.org"
   }
 ]
