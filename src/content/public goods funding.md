@@ -17,7 +17,7 @@ But there might be a solution to the problems of funding public goods: blockchai
 
 ## What is a public good? {#what-is-a-public-good} 
 
-As mentioned, public goods are defined as commodities or services made freely available to all members of a society. A public good has "positive externalities", meaning that the benefits of providing it outweigh the disadvantages. Public goods also have two common characteristics:
+As mentioned, public goods are defined as commodities or services made freely available to all members of a society. For a commodity or service to be classified as a public good, it must possess the folllowing characteristics: 
 
 1. **Nonexcludable**: A public good is *nonexcludable* in the sense that it is costly or impossible to exclude any individual from accessing it. A public road is one example of a public good—no one can prevent you from driving on it (provided you have a license). 
 
@@ -25,7 +25,7 @@ As mentioned, public goods are defined as commodities or services made freely av
 
 A **private good** is the opposite: they are *rivalrous* and *excludable*. For example, if Alice eats a slice of pizza, then Bob cannot eat the same slice of (Alice and Bob are "rivals" in consumption). More so, by eating the slice of pizza, Alice prevents (or "excludes") Bob from eating it, making it excludable.
 
-Other examples of public goods include:
+Many public goods are also marked by their "positive externalities". An externality is an indirect cost or benefit borne by   A positive externan meaning that i benefits of providing it outweigh the disadvantages.Other examples of public goods include:
 
 - Education 
 - Access to information 
