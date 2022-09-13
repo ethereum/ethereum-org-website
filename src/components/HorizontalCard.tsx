@@ -1,26 +1,6 @@
 import React, { ReactNode } from "react"
-import styled from "@emotion/styled"
 import Emoji from "./OldEmoji"
-
-const StyledCard = styled.div`
-  border-radius: 4px;
-  display: flex;
-`
-
-const Content = styled.div`
-  flex: 0 1 75%;
-  margin-left: 2rem;
-`
-
-const Description = styled.p`
-  opacity: 0.8;
-  margin-top: -1rem;
-  margin-bottom: 0.5rem;
-`
-
-const Title = styled.p`
-  font-size: 1.25rem;
-`
+import { Text, Box } from "@chakra-ui/react"
 
 export interface IProps {
   children?: React.ReactNode
@@ -33,20 +13,25 @@ export interface IProps {
 
 const HorizontalCard: React.FC<IProps> = ({
   emoji,
-  title,
-  description,
   children,
   className,
   emojiSize,
 }) => (
-  <StyledCard className={className}>
+  <Box
+    display="flex"
+    flexGrow="0"
+    flexShrink="1"
+    flexBasis="75%"
+    borderRadius="base"
+    className={className}
+  >
     <Emoji size={emojiSize} text={emoji} />
-    <Content>
-      <Title>{title}</Title>
-      <Description>{description}</Description>
+    <Box display="flex" ml="8">
+      <Text fontSize="lg" />
+      <Box as="p" p="0.8" mt="-4" mb="2" />
       {children}
-    </Content>
-  </StyledCard>
+    </Box>
+  </Box>
 )
 
 export default HorizontalCard
