@@ -1,9 +1,10 @@
 import React from "react"
 import { useTheme } from "@emotion/react"
+import { AspectRatio } from "@chakra-ui/react"
 
 import darkVideo from "../assets/ethereum-hero-dark.mp4"
 import lightVideo from "../assets/ethereum-hero-light.mp4"
-import { AspectRatio } from "@chakra-ui/react"
+
 
 export interface IProps {
   className?: string
