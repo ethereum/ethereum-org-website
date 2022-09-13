@@ -73,7 +73,7 @@ body:
       description: Select one option, providing any available links to repositories
       options:
         - "Yes, everything is open source: provide link(s) to project repo(s)"
-        - "Portions of code are open source: _provide link(s) to project repo(s)_"
+        - "Portions of code are open source: provide link(s) to project repo(s)"
         - "No, code is closed source"
         - "N/A, no custom software is involved"
     validations:
@@ -91,7 +91,7 @@ body:
   - type: textarea
     id: staking_product_development
     attributes:
-      label: Is the product out of _beta_ development?
+      label: Is the product out of beta development?
       description: Provide information as to where the product is in the development lifecycle
     validations:
       required: true
