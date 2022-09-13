@@ -20,11 +20,11 @@ Oracles are applications that source, verify, and transmit external information 
 
 Oracles act as a “bridge” connecting smart contracts on blockchains to the real world. Without oracles, smart contract applications would only be able to access on-chain data. A blockchain oracle provides a mechanism for triggering smart contract functions using real-world data.
 
-Oracles differ based on the source of data (one or multiple sources), direction of information (inbound or outbound), trust models (centralized or decentralized) and system architecture (immediate-read, publish-subscribe, and request-response). We can also distinguish between oracles that only retrieve external data (input oracles) and ones that perform computation off-chain (computational oracles).
+Oracles differ based on the source of data (one or multiple sources), trust models (centralized or decentralized) and system architecture (immediate-read, publish-subscribe, and request-response). We can also distinguish between oracles based on whether they retrieve external data for use by on-chain contracts (input oracles), send information from the blockchain to the real world (output orales), or perform computational tasks off-chain (computational oracles).
 
 ## Why do smart contracts need oracles? {#why-do-smart-contracts-need-oracles}
 
-Most developers see smart contracts as simply pieces of code running at specific addresses on the blockchain. However, a more [general view art contracts](/smart-contracts/) is that they are self-executing software programs capable of enforcing agreements between parties once specific conditions are met—which explains the term, “smart contracts.”
+Most developers see smart contracts as simply pieces of code running at specific addresses on the blockchain. However, a more [general view of smart contracts](/smart-contracts/) is that they are self-executing software programs capable of enforcing agreements between parties once specific conditions are met—which explains the term, “smart contracts.”
 
 But there’s a problem with using smart contracts to enforce agreements between people: blockchains are designed to be “deterministic”.  A [deterministic system](https://en.wikipedia.org/wiki/Deterministic_algorithm) is one that always produces the same results given an initial state and a particular input—there is no randomness or variation in the process of computing outputs from inputs. 
 
