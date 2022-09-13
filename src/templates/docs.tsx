@@ -35,7 +35,7 @@ import {
   Header4,
   ListItem,
 } from "../components/SharedStyledComponents"
-import PreMergeBanner from "../components/PreMergeBanner"
+import PostMergeBanner from "../components/Banners/PostMergeBanner"
 
 import { ZenModeContext } from "../contexts/ZenModeContext"
 import { isLangRightToLeft } from "../utils/translations"
@@ -191,7 +191,7 @@ const DocsPage = ({
   const { editContentUrl } = siteData.siteMetadata || {}
   const absoluteEditPath = `${editContentUrl}${relativePath}`
   const isDevelopersHome = relativePath.endsWith("/developers/docs/index.md")
-  const showMergeBanner = !!mdx.frontmatter.preMergeBanner || isDevelopersHome
+  const showPostMergeBanner = !!mdx.frontmatter.postMergeBanner
 
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
@@ -204,13 +204,7 @@ const DocsPage = ({
           <Translation id="banner-page-incomplete" />
         </BannerNotification>
       )}
-      {showMergeBanner && (
-        <PreMergeBanner announcementOnly={isDevelopersHome}>
-          {isDevelopersHome && (
-            <Translation id="page-upgrades-merge-banner-developers-landing" />
-          )}
-        </PreMergeBanner>
-      )}
+      {showPostMergeBanner && <PostMergeBanner />}
       <ContentContainer isZenMode={isZenMode}>
         <Content>
           <H1 id="top">{mdx.frontmatter.title}</H1>
@@ -270,7 +264,6 @@ export const query = graphql`
         sidebar
         sidebarDepth
         isOutdated
-        preMergeBanner
       }
       body
       tableOfContents

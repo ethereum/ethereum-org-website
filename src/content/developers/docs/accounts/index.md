@@ -99,6 +99,12 @@ Example:
 
 The contract address is usually given when a contract is deployed to the Ethereum Blockchain. The address comes from the creator's address and the number of transactions sent from that address (the “nonce”).
 
+## Validator keys {#validators-keys}
+
+There is also another type of key in Ethereum, introduced when Ethereum switched from proof-of-work to proof-of-stake based consensus. These are 'BLS' keys and they are used to identify validators. These keys can be efficiently aggregated to reduce the bandwidth required for the network to come to consensus. Without this key aggregation the minimum stake for a validator would be much higher.
+
+[More on validator keys](/developers/docs/consensus-mechanisms/pos/keys/).
+
 ## A note on wallets {#a-note-on-wallets}
 
 An account is not a wallet. An account is the keypair for a user-owned Ethereum account. A wallet is an interface or application that lets you interact with your Ethereum account.

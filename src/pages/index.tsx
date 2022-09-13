@@ -23,7 +23,6 @@ import {
   GrayContainer,
   LeftColumn,
 } from "../components/SharedStyledComponents"
-import PreMergeBanner from "../components/PreMergeBanner"
 import { translateMessageId, isLangRightToLeft } from "../utils/translations"
 import { getImage } from "../utils/image"
 
@@ -561,7 +560,6 @@ const HomePage = ({
         title={translateMessageId("page-index-meta-title", intl)}
         description={translateMessageId("page-index-meta-description", intl)}
       />
-      <PreMergeBanner announcementOnly />
       <Hero
         image={getImage(data.hero)!}
         alt={translateMessageId("page-index-hero-image-alt", intl)}

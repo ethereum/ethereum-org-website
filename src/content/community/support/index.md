@@ -107,4 +107,8 @@ Transactions on Ethereum can sometimes get stuck if you have submitted a lower t
 
 #### How do I mine Ethereum? {#mining-ethereum}
 
-We do not recommend buying mining equipment if you are not already mining Ethereum. In ~Q3/Q4 2022, [The Merge](/upgrades/merge/) will happen, switching Ethereum from proof-of-work to proof-of-stake. This change means mining Ethereum will no longer be possible.
+Ethereum mining is no longer possible. Mining was switched off when Ethereum moved from proof-of-work to proof-of-stake. Now, instead of miners, Ethereum has validators. Validators stake ETH and receive staking rewards for securing the network.
+
+#### How do I become a staker/validator? {#become-validator}
+
+To become a validator, you must stake 32 ETH in the Ethereum deposit contract and set up a validator node. More information is available on our [staking pages](/staking) and at [the staking launchpad](https://launchpad.ethereum.org/).
