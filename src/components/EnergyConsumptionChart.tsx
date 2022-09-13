@@ -1,6 +1,6 @@
 import React, { useMemo } from "react"
+import { Box, Flex } from "@chakra-ui/react"
 import { useTheme } from "@emotion/react"
-import styled from "@emotion/styled"
 import {
   BarChart,
   Bar,
@@ -12,38 +12,8 @@ import {
   ResponsiveContainer,
   Legend,
 } from "recharts"
-
+import Translation from "./Translation"
 import { useWindowSize } from "../hooks/useWindowSize"
-
-const Container = styled.div`
-  max-width: 500px;
-  width: 100%;
-  border-radius: 0.3rem;
-`
-
-// @ts-ignore
-const StyledText = styled(Text)`
-  font-size: 10px;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.m}) {
-    font-size: 12px;
-  }
-`
-
-const StyledLegend = styled.div`
-  text-align: center;
-  color: ${({ theme }) => (theme.isDark ? theme.colors.text : "#08084d")};
-  font-weight: 600;
-  margin-top: 2rem;
-`
-
-interface ILegendProps {
-  legend: string
-}
-
-const CustomLegend: React.FC<ILegendProps> = ({ legend }) => {
-  return <StyledLegend>{legend}</StyledLegend>
-}
 
 interface ITickProps {
   x: number
@@ -56,7 +26,7 @@ const CustomTick: React.FC<ITickProps> = ({ x, y, payload }) => {
 
   return (
     <g transform={`translate(${x},${y})`}>
-      <StyledText
+      <Text
         x={0}
         y={0}
         dy={15}
@@ -64,44 +34,91 @@ const CustomTick: React.FC<ITickProps> = ({ x, y, payload }) => {
         fill={theme.colors.text}
         textAnchor="middle"
         verticalAnchor="middle"
+        fontSize="10px"
       >
         {payload.value}
-      </StyledText>
+      </Text>
     </g>
   )
 }
 
-export interface IProps {
-  data: Array<{
+const EnergyConsumptionChart: React.FC = () => {
+  const theme = useTheme()
+  const [width] = useWindowSize()
+
+  const smallBreakpoint = Number(theme.breakpoints.s.replace("px", ""))
+  const mediumBreakpoint = Number(theme.breakpoints.m.replace("px", ""))
+
+  type Data = Array<{
     name: string
     amount: number
     color: string
     breakpoint?: number
   }>
-  legend: string
-}
 
-const EnergyConsumptionChart: React.FC<IProps> = ({ data, legend }) => {
-  const theme = useTheme()
-  const [width] = useWindowSize()
+  const energyConsumptionChartData: Data = [
+    {
+      name: "Youtube",
+      amount: 244,
+      color: "#FF0000",
+    },
+    {
+      name: "Gold mining",
+      amount: 240,
+      color: "#D7B14A",
+      breakpoint: mediumBreakpoint,
+    },
+    {
+      name: "BTC PoW",
+      amount: 200,
+      color: "#F2A900",
+    },
+    {
+      name: "ETH PoW",
+      amount: 112,
+      color: "#C1B6F5",
+    },
+    {
+      name: "Netflix",
+      amount: 94,
+      color: "#E50914",
+      breakpoint: smallBreakpoint,
+    },
+    {
+      name: "Gaming",
+      amount: 34,
+      color: "#71BB8A",
+      breakpoint: mediumBreakpoint,
+    },
+    {
+      name: "Paypal",
+      amount: 0.26,
+      color: "#C1B6F5",
+      breakpoint: smallBreakpoint,
+    },
+    {
+      name: "ETH PoS",
+      amount: 0.01,
+      color: "#C1B6F5",
+    },
+  ]
 
-  const filteredData = useMemo(() => {
-    return data.filter((cell) => {
-      if (!cell.breakpoint) {
-        return true
-      }
-
-      return cell.breakpoint < width
-    })
-  }, [data, width])
+  const filteredData = useMemo(
+    () =>
+      energyConsumptionChartData.filter(
+        (cell) => !cell.breakpoint || cell.breakpoint < width
+      ),
+    [energyConsumptionChartData, width]
+  )
 
   return (
-    <Container>
-      <ResponsiveContainer height={500}>
+    <Flex justify="center" alignSelf="center" w="100%">
+      <ResponsiveContainer height={500} width={width - 64}>
         <BarChart
           margin={{ top: 30, right: 30, bottom: 30, left: 30 }}
           barGap={15}
           barSize={38}
+          // data={energyConsumptionChartData}
           data={filteredData}
         >
           <CartesianGrid
@@ -117,7 +134,13 @@ const EnergyConsumptionChart: React.FC<IProps> = ({ data, legend }) => {
             tick={<CustomTick />}
             interval={0}
           />
-          <Legend content={<CustomLegend legend={legend} />} />
+          <Legend
+            content={
+              <Box textAlign="center" color="text" fontWeight="600" mt={8}>
+                <Translation id="page-what-is-ethereum-energy-consumption-chart-legend" />
+              </Box>
+            }
+          />
           <Bar
             dataKey="amount"
             radius={[4, 4, 0, 0]}
@@ -136,7 +159,7 @@ const EnergyConsumptionChart: React.FC<IProps> = ({ data, legend }) => {
           </Bar>
         </BarChart>
       </ResponsiveContainer>
-    </Container>
+    </Flex>
   )
 }
 

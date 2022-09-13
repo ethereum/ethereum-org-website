@@ -310,52 +310,6 @@ const WhatIsEthereumPage = ({
     },
   ]
 
-  const smallBreakpoint = Number(theme.breakpoints.s.replace("px", ""))
-  const energyConsumptionChartData = [
-    {
-      name: "Youtube",
-      amount: 244,
-      color: "#FF0000",
-    },
-    {
-      name: "Gold mining",
-      amount: 240,
-      color: "#D7B14A",
-      breakpoint: smallBreakpoint,
-    },
-    {
-      name: "BTC PoW",
-      amount: 200,
-      color: "#F2A900",
-    },
-    {
-      name: "ETH PoW",
-      amount: 112,
-      color: "#C1B6F5",
-    },
-    {
-      name: "Netflix",
-      amount: 94,
-      color: "#E50914",
-    },
-    {
-      name: "Gaming",
-      amount: 34,
-      color: "#71BB8A",
-      breakpoint: smallBreakpoint,
-    },
-    {
-      name: "Paypal",
-      amount: 0.26,
-      color: "#C1B6F5",
-    },
-    {
-      name: "ETH PoS",
-      amount: 0.01,
-      color: "#C1B6F5",
-    },
-  ]
-
   const tabs = [
     {
       title: translateMessageId(
@@ -906,10 +860,7 @@ const WhatIsEthereumPage = ({
       <Section>
         <TwoColumnContent reverse>
           <Width40>
-            <EnergyConsumptionChart
-              data={energyConsumptionChartData}
-              legend="Annual Energy Consumption in TW/yr"
-            />
+            <EnergyConsumptionChart />
           </Width40>
           <Width60>
             <h2>
