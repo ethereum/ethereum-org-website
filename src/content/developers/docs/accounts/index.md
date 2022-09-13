@@ -15,8 +15,8 @@ Accounts are a very beginner-friendly topic. But to help you better understand t
 
 Ethereum has two account types:
 
-- Externally-owned – controlled by anyone with the private keys
-- Contract – a smart contract deployed to the network, controlled by code. Learn about [smart contracts](/developers/docs/smart-contracts/)
+- Externally-owned account (EOA) – controlled by anyone with the private keys
+- Contract account – a smart contract deployed to the network, controlled by code. Learn about [smart contracts](/developers/docs/smart-contracts/)
 
 Both account types have the ability to:
 
