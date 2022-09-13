@@ -169,6 +169,7 @@ const Section = styled.div<{
   bgColor?: string
   padding?: string
 }>`
+  width: 100%;
   padding: ${({ padding }) => padding ?? "3rem 2rem"};
   background-color: ${({ bgColor = "transparent" }) => bgColor};
 

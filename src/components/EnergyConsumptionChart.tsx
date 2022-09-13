@@ -1,5 +1,5 @@
 import React, { useMemo } from "react"
-import { Box, Flex } from "@chakra-ui/react"
+import { Box, Center } from "@chakra-ui/react"
 import { useTheme } from "@emotion/react"
 import {
   BarChart,
@@ -112,54 +112,56 @@ const EnergyConsumptionChart: React.FC = () => {
   )
 
   return (
-    <Flex justify="center" alignSelf="center" w="100%">
-      <ResponsiveContainer height={500} width={width - 64}>
-        <BarChart
-          margin={{ top: 30, right: 30, bottom: 30, left: 30 }}
-          barGap={15}
-          barSize={38}
-          // data={energyConsumptionChartData}
-          data={filteredData}
-        >
-          <CartesianGrid
-            vertical={false}
-            strokeDasharray="5 3"
-            stroke="#B9B9B9"
-          />
-          <XAxis
-            dataKey="name"
-            tickLine={false}
-            axisLine={false}
-            // @ts-ignore
-            tick={<CustomTick />}
-            interval={0}
-          />
-          <Legend
-            content={
-              <Box textAlign="center" color="text" fontWeight="600" mt={8}>
-                <Translation id="page-what-is-ethereum-energy-consumption-chart-legend" />
-              </Box>
-            }
-          />
-          <Bar
-            dataKey="amount"
-            radius={[4, 4, 0, 0]}
-            // Disable animation ~ issue w/ LabelList. Ref: https://github.com/recharts/recharts/issues/1135
-            isAnimationActive={false}
+    <Center w="full">
+      <Box maxW="500px" w="full">
+        <ResponsiveContainer height={500}>
+          <BarChart
+            margin={{ top: 30, right: 30, bottom: 30, left: 30 }}
+            barGap={15}
+            barSize={38}
+            // data={energyConsumptionChartData}
+            data={filteredData}
           >
-            <LabelList
-              position="top"
-              fill={theme.colors.text}
-              fontSize={14}
-              offset={10}
+            <CartesianGrid
+              vertical={false}
+              strokeDasharray="5 3"
+              stroke="#B9B9B9"
             />
-            {filteredData.map((cell, index) => (
-              <Cell key={`cell-${index}`} fill={cell.color} />
-            ))}
-          </Bar>
-        </BarChart>
-      </ResponsiveContainer>
-    </Flex>
+            <XAxis
+              dataKey="name"
+              tickLine={false}
+              axisLine={false}
+              // @ts-ignore
+              tick={<CustomTick />}
+              interval={0}
+            />
+            <Legend
+              content={
+                <Box textAlign="center" color="text" fontWeight="600" mt={8}>
+                  <Translation id="page-what-is-ethereum-energy-consumption-chart-legend" />
+                </Box>
+              }
+            />
+            <Bar
+              dataKey="amount"
+              radius={[4, 4, 0, 0]}
+              // Disable animation ~ issue w/ LabelList. Ref: https://github.com/recharts/recharts/issues/1135
+              isAnimationActive={false}
+            >
+              <LabelList
+                position="top"
+                fill={theme.colors.text}
+                fontSize={14}
+                offset={10}
+              />
+              {filteredData.map((cell, index) => (
+                <Cell key={`cell-${index}`} fill={cell.color} />
+              ))}
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
+      </Box>
+    </Center>
   )
 }
 

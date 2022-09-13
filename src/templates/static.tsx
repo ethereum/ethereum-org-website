@@ -52,6 +52,10 @@ import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
 
+const Container = styled.div`
+  width: 100%;
+`
+
 const Page = styled.div`
   display: flex;
   justify-content: space-between;
@@ -188,7 +192,7 @@ const StaticPage = ({
   const slug = mdx.fields?.slug || ""
 
   return (
-    <div>
+    <Container>
       {showPostMergeBanner && (
         <PostMergeBanner
           translationString={postMergeBannerTranslationString!}
@@ -226,7 +230,7 @@ const StaticPage = ({
           />
         )}
       </Page>
-    </div>
+    </Container>
   )
 }
 
