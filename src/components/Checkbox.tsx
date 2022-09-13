@@ -22,48 +22,41 @@ const Checkbox: React.FC<IProps> = ({
       callback()
     }
   }
-
-  const checkboxContainerAttributes = {
-    display: "inline-block",
-    verticalAlign: "middle",
-    className: className,
-    onClick: handleClick,
-  }
-
-  const hiddenCheckboxAttributes = {
-    type: "checkbox",
-    checked: checked,
-    readOnly: true,
-    ...rest,
-  }
-
-  const styledCheckboxAttributes = {
-    "aria-hidden": true,
-    className: "styled-checkbox",
-    display: "inline-block",
-    w: `${size}rem`,
-    h: `${size}rem`,
-    minW: `${size}rem`,
-    bg: `${checked ? "primary400" : "background"}`,
-    border: "1px",
-    borderStyle: "solid",
-    borderColor: "black50",
-    borderRadius: "3px",
-    transition: "all 150ms",
-    _hover: {
-      boxShadow: "tableItemBoxShadow",
-      border: "1px",
-      borderStyle: "solid",
-      borderColor: "primary600",
-      transition: "transform 0.1s",
-      transform: "scale(1.02)",
-    },
-  }
-
   return (
-    <Box {...checkboxContainerAttributes}>
-      <VisuallyHiddenInput {...hiddenCheckboxAttributes} />
-      <Box {...styledCheckboxAttributes}>
+    <Box
+      display="inline-block"
+      verticalAlign="middle"
+      className={className}
+      onClick={handleClick}
+    >
+      <VisuallyHiddenInput
+        type="checkbox"
+        checked={checked}
+        readOnly
+        {...rest}
+      />
+      <Box
+        aria-hidden={true}
+        className="styled-checkbox"
+        display="inline-block"
+        w={`${size}rem`}
+        h={`${size}rem`}
+        minW={`${size}rem`}
+        bg={`${checked ? "primary400" : "background"}`}
+        border="1px"
+        borderStyle="solid"
+        borderColor="black50"
+        borderRadius="3px"
+        transition="all 150ms"
+        _hover={{
+          boxShadow: "tableItemBoxShadow",
+          border: "1px",
+          borderStyle: "solid",
+          borderColor: "primary600",
+          transition: "transform 0.1s",
+          transform: "scale(1.02)",
+        }}
+      >
         <svg
           viewBox="0 0 24 24"
           fill="none"
