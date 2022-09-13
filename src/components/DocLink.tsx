@@ -8,6 +8,7 @@ import {
   Flex,
   LinkBox,
   LinkOverlay,
+  useMediaQuery,
 } from "@chakra-ui/react"
 import { AiOutlineArrowRight } from "react-icons/ai"
 import Emoji from "./Emoji"
@@ -20,13 +21,14 @@ export interface IProps {
 
 const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
   const theme = useTheme()
+  const [isLarger] = useMediaQuery("(max-width: m)")
 
   return (
     <LinkBox>
       <LinkOverlay href={to} isExternal={isExternal}>
         <Container
           textDecoration="none"
-          width="100%"
+          width={isLarger ? "" : "100%"}
           padding={4}
           borderRadius="sm"
           color="text"
