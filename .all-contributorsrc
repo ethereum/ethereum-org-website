@@ -8412,7 +8412,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/91174156?v=4",
       "profile": "https://github.com/z3zzz",
       "contributions": [
-        "content"
+        "content",
+        "ideas"
       ]
     },
     {
@@ -8743,6 +8744,78 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "MahendraBishnoi29",
+      "name": "browny",
+      "avatar_url": "https://avatars.githubusercontent.com/u/74294202?v=4",
+      "profile": "https://github.com/MahendraBishnoi29",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "sandakersmann",
+      "name": "Marius Kjærstad",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6118832?v=4",
+      "profile": "https://github.com/sandakersmann",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "scottfits",
+      "name": "Scott Fitsimones",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1193692?v=4",
+      "profile": "http://scottfits.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "kryptopaul",
+      "name": "Paul Lechocki",
+      "avatar_url": "https://avatars.githubusercontent.com/u/87016182?v=4",
+      "profile": "https://github.com/kryptopaul",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "justalike",
+      "name": "justalike",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44633493?v=4",
+      "profile": "https://github.com/justalike",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "grayliquid",
+      "name": "grayliquid",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26670751?v=4",
+      "profile": "http://l5d.li",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "MHMasoon",
+      "name": "MohammadHosein Masoon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/63204823?v=4",
+      "profile": "https://github.com/MHMasoon",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "patoshii",
+      "name": "Patoshi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/381050?v=4",
+      "profile": "https://www.xcubicle.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -8750,5 +8823,6 @@
   "projectOwner": "ethereum",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitConvention": "angular"
 }

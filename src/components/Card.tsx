@@ -1,30 +1,6 @@
 import React, { ReactNode } from "react"
-import styled from "@emotion/styled"
-import Emoji from "./OldEmoji"
-
-const StyledCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  background: ${(props) => props.theme.colors.ednBackground};
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.lightBorder};
-  padding: 1.5rem;
-`
-
-const Title = styled.h3`
-  margin-top: 0;
-`
-
-const Description = styled.p`
-  opacity: 0.8;
-  margin: 0;
-`
-
-const StyledEmoji = styled(Emoji)`
-  margin-bottom: 1rem;
-`
-
-const TopContent = styled.div``
+import { Flex, Heading, Text } from "@chakra-ui/react"
+import Emoji from "./Emoji"
 
 export interface IProps {
   children?: React.ReactNode
@@ -41,14 +17,31 @@ const Card: React.FC<IProps> = ({
   children,
   className,
 }) => (
-  <StyledCard className={className}>
-    <TopContent>
-      {emoji && <StyledEmoji size={3} text={emoji} />}
-      {title && <Title>{title}</Title>}
-      {description && <Description>{description}</Description>}
-    </TopContent>
+  <Flex
+    direction="column"
+    bg="ednBackground"
+    borderRadius="sm"
+    border="1px"
+    borderStyle="solid"
+    borderColor="lightBorder"
+    p={6}
+    className={className}
+  >
+    <div>
+      {emoji && <Emoji fontSize="5xl" text={emoji} mb={4} />}
+      {title && (
+        <Heading as="h3" mt={0} fontSize="2xl" lineHeight={1.4}>
+          {title}
+        </Heading>
+      )}
+      {description && (
+        <Text opacity={0.8} m={0}>
+          {description}
+        </Text>
+      )}
+    </div>
     {children}
-  </StyledCard>
+  </Flex>
 )
 
 export default Card

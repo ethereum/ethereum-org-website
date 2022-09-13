@@ -186,7 +186,7 @@ event Deposit(
 
 Where `sender` is the user who exchanged `assets` for `shares`, and transferred those `shares` to `owner`.
 
-#### Widthdraw Event
+#### Withdraw Event
 
 **MUST** be emitted when shares are withdrawn from the vault by a depositor in the [`redeem`](#redeem) or [`withdraw`](#withdraw) methods.
 

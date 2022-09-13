@@ -25,7 +25,7 @@ The Merge represents the joining of the existing execution layer of Ethereum (th
 
 <MergeInfographic />
 
-It's important to remember that initially, the [Beacon Chain](/upgrades/beacon-chain/) shipped separately from [Mainnet](/glossary/#mainnet). Ethereum Mainnet - with all it's accounts, balances, smart contracts, and blockchain state - continues to be secured by [proof-of-work](/developers/docs/consensus-mechanisms/pow/), even while the Beacon Chain runs in parallel using [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). The approaching Merge is when these two systems finally come together, and proof-of-work is replaced permanently by proof-of-stake.
+It's important to remember that initially, the [Beacon Chain](/upgrades/beacon-chain/) shipped separately from [Mainnet](/glossary/#mainnet). Ethereum Mainnet - with all its accounts, balances, smart contracts, and blockchain state - continues to be secured by [proof-of-work](/developers/docs/consensus-mechanisms/pow/), even while the Beacon Chain runs in parallel using [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). The approaching Merge is when these two systems finally come together, and proof-of-work is replaced permanently by proof-of-stake.
 
 Let's consider an analogy. Imagine Ethereum is a spaceship that isn't quite ready for an interstellar voyage. With the Beacon Chain, the community has built a new engine and a hardened hull. After significant testing, it's almost time to hot-swap the new engine for the old mid-flight. This will merge the new, more efficient engine into the existing ship, ready to put in some serious lightyears and take on the universe.
 
@@ -120,7 +120,7 @@ For more information, check out this blog post by Tim Beiko on [How The Merge Im
 
 ## What date is The Merge? {#wen-merge}
 
-The Merge is expected to land within Q3/Q4 2022. The client developers are currently working to a soft deadline of 19th September 2022, but this could change depending upon the success of the final testnet merge (Goerli) in mid-August, continued client refinements and the hashrate of the existing miners continuing in a predictable manner. Everyone is working hard to deliver The Merge as soon as possible.
+The Merge is happening on 14/15th September. The precise timing depends upon how the network hash rate develops and it can be monitored at [bordel.wtf](bordel.wtf). The Merge will be triggered when the network passes a threshold accumulated difficulty, known as the TTD (terminal total difficulty). You can track total difficulty milestones using the [Nethermind TTD bot](https://explorer.forta.network/bot/0x5c2f5e0854ff24b425efc3a860953ee2923d9b0bc73ea86acd29d45d588e7bdc).
 
 ## After The Merge {#after-the-merge}
 
@@ -176,7 +176,7 @@ Withdrawals are planned for the Shanghai upgrade, the next major upgrade followi
 </ExpandableCard>
 
 <ExpandableCard
-title="Misconception: &quot;Validators will not receive any liquid ETH rewards til the Shanghai upgrade when withdrawals are enabled.&quot;"
+title="Misconception: &quot;Validators will not receive any liquid ETH rewards till the Shanghai upgrade when withdrawals are enabled.&quot;"
 contentPreview="False. Fee tips/MEV will be credited to a Mainnet account controlled by the validator, available immediately.">
 This may seem counterintuitive to the above note that withdrawals are not enabled til the Shanghai upgrade, but validators WILL have immediate access to the fee rewards/MEV earned during block proposals.
 
