@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { useIntl } from "react-intl"
-import { useReward } from "react-rewards"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "@emotion/styled"
@@ -32,6 +31,7 @@ import SimpleTokenContent from "!!raw-loader!../data/SimpleToken.sol"
 import CreateWalletContent from "!!raw-loader!../data/CreateWallet.js"
 import SimpleDomainRegistryContent from "!!raw-loader!../data/SimpleDomainRegistry.sol"
 import { useConsoleEasterEgg } from "../hooks/useConsoleEasterEgg"
+import { useConfetti } from "../hooks/useConfetti"
 
 const Hero = styled(GatsbyImage)`
   width: 100%;
@@ -426,6 +426,7 @@ const HomePage = ({
   }
 
   useConsoleEasterEgg()
+  useConfetti("confetti-easter-egg")
 
   const cards = [
     {
@@ -558,16 +559,7 @@ const HomePage = ({
       code: SimpleDomainRegistryContent,
     },
   ]
-  const { reward } = useReward("easter-egg", "confetti", {
-    spread: 180,
-    elementCount: 42,
-    position: "absolute",
-    zIndex: 10,
-    lifetime: 420,
-  })
-  useEffect(() => {
-    reward()
-  })
+
   return (
     <Page dir={dir}>
       <PageMetadata
@@ -579,7 +571,7 @@ const HomePage = ({
         alt={translateMessageId("page-index-hero-image-alt", intl)}
         loading="eager"
       />
-      <div id="easter-egg" />
+      <div id="confetti-easter-egg" />
       <Morpher />
       <Header>
         <H1>
