@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
+import { Flex, Heading } from "@chakra-ui/react"
 
 import Translation from "./Translation"
 import { TranslationKey } from "../utils/translations"
@@ -62,10 +63,6 @@ const Image = styled(GatsbyImage)<{ maximagewidth?: number }>`
   }
 `
 
-const H2 = styled.h2`
-  margin-top: 0rem;
-`
-
 export interface IProps {
   children?: React.ReactNode
   image: IGatsbyImageData
@@ -88,6 +85,17 @@ const CalloutBanner: React.FC<IProps> = ({
   id,
 }) => (
   <StyledCard className={className} id={id}>
+    {/*<Flex
+    className={className}
+    direction={{ base: "column", lg: "row-reverse" }}
+    bg="layer2Gradient"
+    p={{ base: 8, sm: 12 }}
+    mx={{ base: 8, lg: 4 }}
+    mt={{ base: 16, lg: 24 }}
+    mb={{ base: 16, lg: 4 }}
+    borderRadius="base"
+    id={id}
+    >*/}
     <Image
       image={image}
       alt={alt}
@@ -95,14 +103,15 @@ const CalloutBanner: React.FC<IProps> = ({
       objectFit="contain"
     />
     <Content>
-      <H2>
+      <Heading as="h2" mt={0} fontSize="2rem" lineHeight="1.4">
         <Translation id={titleKey} />
-      </H2>
+      </Heading>
       <Description>
         <Translation id={descriptionKey} />
       </Description>
       {children}
     </Content>
+    {/* </Flex> */}
   </StyledCard>
 )
 
