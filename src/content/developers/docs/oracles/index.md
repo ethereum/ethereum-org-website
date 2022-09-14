@@ -16,7 +16,7 @@ This page assumes the reader is familiar with Ethereum fundamentals, including [
 
 ## What is a blockchain oracle? {#what-is-a-blockchain-oracle} 
 
-Oracles are applications that source, verify, and transmit external information (i.e. information stored off-chain) to smart contracts running on the blockchain. Besides “pulling” off-chain data and broadcasting it on Ethereum, oracles can also “push” information from the blockchain to external systems. An example is an oracle that unlocks a smart lock once the user sends the fee via an Ethereum transaction.
+Oracles are applications that source, verify, and transmit external information (i.e. information stored off-chain) to smart contracts running on the blockchain. Besides “pulling” off-chain data and broadcasting it on Ethereum, oracles can also “push” information from the blockchain to external systems. An example of the latter is an oracle that unlocks a smart lock once the user sends the fee via an Ethereum transaction.
 
 Oracles act as a “bridge” connecting smart contracts on blockchains to the real world. Without oracles, smart contract applications would only be able to access on-chain data. A blockchain oracle provides a mechanism for triggering smart contract functions using real-world data.
 
@@ -28,11 +28,15 @@ Most developers see smart contracts as simply pieces of code running at specific
 
 But using smart contracts to enforce agreements between people isn't straightforward, given that Ethereum is deterministic. A [deterministic system](https://en.wikipedia.org/wiki/Deterministic_algorithm) is one that always produces the same results given an initial state and a particular input—there is no randomness or variation in the process of computing outputs from inputs.
 
-To achieve deterministic execution, blockchains limit nodes to reaching consensus on simple binary (true/false) questions using *only* data stored on the blockchain itself. Examples of such questions include: “Did the account owner (identified by a public key) sign this transaction with the paired private key?”, “Does this account have enough funds to cover the transaction?”, “Is this transaction valid in the context of this smart contract?”, and so on. 
+To achieve deterministic execution, blockchains limit nodes to reaching consensus on simple binary (true/false) questions using *only* data stored on the blockchain itself. Examples of such questions include: 
+
+- “Did the account owner (identified by a public key) sign this transaction with the paired private key?”
+- “Does this account have enough funds to cover the transaction?”
+- “Is this transaction valid in the context of this smart contract?”, etc. 
 
 If blockchains received information from external sources (i.e., from the real world), determinism would be impossible to achieve, preventing nodes from agreeing on the validity of changes to the blockchain’s state. Take for example a smart contract that executes a transaction based on the current ETH-USD exchange rate obtained from a traditional price API. This figure would likely change frequently (not to mention that the API could get deprecated or hacked), meaning nodes executing the same contract code would arrive at different results. 
 
-For a public blockchain, like Ethereum, with thousands of nodes around the world processing transactions, determinism is critical. With no central authority serving as a source of truth, it is expected that nodes should arrive at the state after applying the same transactions. A case whereby node A executes a smart contract’s code and gets 3 as a result, while node B gets 7 after running the same transaction would cause consensus to break down and eliminate Ethereum’s value as a decentralized computing platform. 
+For a public blockchain, like Ethereum, with thousands of nodes around the world processing transactions, determinism is critical. With no central authority serving as a source of truth, it is expected that nodes should arrive at the state after applying the same transactions. A case whereby node A executes a smart contract’s code and gets "3" as a result, while node B gets "7" after running the same transaction would cause consensus to break down and eliminate Ethereum’s value as a decentralized computing platform. 
 
 The scenario described earlier also highlights the problem with designing blockchains to pull information from external sources. Oracles, however, solve this problem by taking information from off-chain sources and storing it on the blockchain for smart contracts to consume. Since information stored on-chain is unalterable and publicly available, Ethereum nodes can safely use off-chain data to compute state changes without breaking consensus. 
 
