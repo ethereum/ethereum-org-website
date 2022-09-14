@@ -1399,6 +1399,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/MHMasoon"><img src="https://avatars.githubusercontent.com/u/63204823?v=4?s=100" width="100px;" alt=""/><br /><sub><b>MohammadHosein Masoon</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=MHMasoon" title="Documentation">📖</a></td>
       <td align="center"><a href="https://www.xcubicle.com"><img src="https://avatars.githubusercontent.com/u/381050?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Patoshi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=patoshii" title="Documentation">📖</a></td>
     </tr>
+    <tr>
+      <td align="center"><a href="jointheleague.org"><img src="https://avatars.githubusercontent.com/u/302478?v=4?s=100" width="100px;" alt=""/><br /><sub><b>June Clarke </b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=joonspoon" title="Documentation">📖</a></td>
+    </tr>
   </tbody>
 </table>
 
