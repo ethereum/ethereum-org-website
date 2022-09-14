@@ -120,7 +120,7 @@ For more information, check out this blog post by Tim Beiko on [How The Merge Im
 
 ## What date is The Merge? {#wen-merge}
 
-The Merge is happening on 14/15th September. The precise timing depends upon how the network hash rate develops and it can be monitored at [bordel.wtf](bordel.wtf). The Merge will be triggered when the network passes a threshold accumulated difficulty, known as the TTD (terminal total difficulty). You can track total difficulty milestones using the [Nethermind TTD bot](https://explorer.forta.network/bot/0x5c2f5e0854ff24b425efc3a860953ee2923d9b0bc73ea86acd29d45d588e7bdc).
+The Merge is happening on 14/15th September. The precise timing depends upon how the network hash rate develops and it can be monitored at [bordel.wtf](https://bordel.wtf). The Merge will be triggered when the network passes a threshold accumulated difficulty, known as the TTD (terminal total difficulty). You can track total difficulty milestones using the [Nethermind TTD bot](https://explorer.forta.network/bot/0x5c2f5e0854ff24b425efc3a860953ee2923d9b0bc73ea86acd29d45d588e7bdc).
 
 ## After The Merge {#after-the-merge}
 
