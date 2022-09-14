@@ -36,12 +36,9 @@ Read more about the ethereum.org Translation Program [mission and vision](/contr
 
 ### Our progress so far {#our-progress}
 
-- [**3,800 +** translators](/contributing/translation-program/contributors/)
+- [**3,900 +** translators](/contributing/translation-program/contributors/)
 - [**48** languages live on site](/languages/)
-- [**2.9 million** words translated in 2021](/contributing/translation-program/acknowledgements/)
-- [**1.9 million** words translated in 2022 so far](/contributing/translation-program/acknowledgements/)
-
-If you want to get involved and help us grow the global Ethereum community by translating the website into your language, follow the steps below!
+- [**2.2 million** words translated in 2022 so far](/contributing/translation-program/acknowledgements/)
 
 <InfoBanner emoji=":tada:">
   Check out our <Link to="/contributing/translation-program/acknowledgements/">Translator Acknowledgements</Link> page, and{" "}
