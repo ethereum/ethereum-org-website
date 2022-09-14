@@ -538,5 +538,14 @@
     "description": "Lunarpunk hackathon focused on privacy and security. We believe that privacy is a fundamental human right. And good privacy needs good security foundations.",
     "startDate": "2022-11-11",
     "endDate": "2022-11-13"
+  },
+  {    
+    "title": "Web3SD",
+    "to": "http://web3.sd",
+    "sponsor": null,
+    "location": "San Diego, CA",
+    "description": "A Web3 conference for everyone!",
+    "startDate": "2022-10-22",
+    "endDate": "2022-10-22"
   }
 ]
