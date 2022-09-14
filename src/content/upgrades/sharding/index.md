@@ -8,11 +8,11 @@ image: ../../../assets/upgrades/newrings.png
 summaryPoint1: Sharding is a multi-phase upgrade to improve Ethereum’s scalability and capacity.
 summaryPoint2: Sharding provides secure distribution of data storage requirements, enabling rollups to be even cheaper, and making nodes easier to operate.
 summaryPoint3: They enable layer 2 solutions to offer low transaction fees while leveraging the security of Ethereum.
-summaryPoint4: This upgrade is planned to follow The Merge of Mainnet with the Beacon Chain.
+summaryPoint4: This upgrade has become more of a focus since Ethereum moved to proof-of-stake.
 ---
 
 <UpgradeStatus dateKey="page-upgrades-shards-date">
-    Sharding should ship sometime in 2023, depending on how quickly work progresses after <a href="/upgrades/merge/">The Merge</a>. These shards will give Ethereum more capacity to store and access data, but they won’t be used for executing code.
+    Sharding could ship sometime in 2023. Shards will give Ethereum more capacity to store and access data, but they won’t be used for executing code.
 </UpgradeStatus>
 
 ## What is sharding? {#what-is-sharding}
@@ -31,30 +31,24 @@ Sharding is a good way to scale if you want to keep things decentralized as the 
 
 Sharding will eventually let you run Ethereum on a personal laptop or phone. So more people should be able to participate, or run [clients](/developers/docs/nodes-and-clients/), in a sharded Ethereum. This will increase security because the more decentralized the network, the smaller the attack surface area.
 
-With lower hardware requirements, sharding will make it easier to run [clients](/developers/docs/nodes-and-clients/) on your own, without relying on any intermediary services at all. And if you can, consider running multiple clients. This can help network health by further reducing points of failure. [Run a Beacon Chain client](/upgrades/get-involved/)
+With lower hardware requirements, sharding will make it easier to run [clients](/developers/docs/nodes-and-clients/) on your own, without relying on any intermediary services at all. And if you can, consider running multiple clients. This can help network health by further reducing points of failure.
 
 <br />
 
 <InfoBanner isWarning>
-  At first, you'll need to run a Mainnet (execution layer) client at the same time as your Beacon Chain (consensus later) client. <a href="https://launchpad.ethereum.org" target="_blank">The launchpad</a> will walk you through the hardware requirements and process.
+  You'll need to run an execution client at the same time as your consensus client. <a href="https://launchpad.ethereum.org" target="_blank">The launchpad</a> will walk you through the hardware requirements and process.
 </InfoBanner>
 
 ## Shard chains version 1: data availability {#data-availability}
 
 <InfoBanner emoji=":construction:" isWarning>
   <strong>Note:</strong> The plans for sharding have been evolving as more efficient paths to scaling have been developed. "Danksharding" is a new approach to sharding, which does not utilize the concept of shard "chains" but instead uses shard "blobs" to split up the data, along with "data availability sampling" to confirm all data has been made available. This change in plan solves the same original problem.<br/><br/>
-  <strong>Details below may be out of date with the latest development plans.</strong> While we update things, check out <a href="https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum">The Hitchhiker's Guide to the Ethereum</a> for an excellent breakdown of Ethereum plans after The Merge.
+  <strong>Details below may be out of date with the latest development plans.</strong> While we update things, check out <a href="https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum">The Hitchhiker's Guide to the Ethereum</a> for an excellent breakdown of Ethereum roadmap.
 </InfoBanner>
 
 When the first shard chains are shipped they will just provide extra data to the network. They won’t handle transactions or smart contracts. But they’ll still offer incredible improvements to transactions per second when combined with rollups.
 
 Rollups are a "layer 2" technology that exists today. They allow dapps to bundle or “roll up” transactions into a single transaction off-chain, generate a cryptographic proof and then submit it to the chain. This reduces the data needed for a transaction. Combine this with all the extra data availability provided by shards and you get 100,000 transactions per second.
-
-<InfoBanner>
-  Given recent progress in layer 2 scaling solution research and development, this has prompted the prioritization of transitioning to proof-of-stake ahead of sharding. Sharding will be the focus following The Merge.
-
-[More on rollups](/developers/docs/scaling/#rollups)
-</InfoBanner>
 
 ## Shard chains version 2: code execution {#code-execution}
 
@@ -92,25 +86,9 @@ This is still an active discussion point. We’ll update these pages once we kno
 
 The Ethereum upgrades are all somewhat interrelated. So let’s recap how the shard chains relate the other upgrades.
 
-### Shards and the beacon chain {#shards-and-beacon-chain}
+### Shards and the Ethereum blockchain {#shards-and-blockchain}
 
-The Beacon Chain contains all the logic for keeping shards secure and synced up. The Beacon Chain will coordinate the stakers in the network, assigning them to shards they need to work on. And it will also facilitate communication between shards by receiving and storing shard transaction data that is accessible by other shards. This will give shards a snapshot of Ethereum’s state to keep everything up-to-date.
-
-<ButtonLink to="/upgrades/beacon-chain/">
-  The Beacon Chain
-</ButtonLink>
-
-### Shards and The Merge {#shards-and-docking}
-
-By the time additional shards are added, Ethereum Mainnet will already be secured by the Beacon Chain using proof-of-stake. This enables a fertile Mainnet to build shard chains off of, powered by layer 2 solutions that supercharge the scalability.
-
-It remains to be seen whether Mainnet will exist as the only “smart” shard that can handle code execution – but either way, the decision to expand shards can be revisited as needed.
-
-<ButtonLink to="/upgrades/merge/">
-  The Merge
-</ButtonLink>
-
-<Divider />
+The logic for keeping shards secure and synced up is all integrated into the Ethereum clients that build the blockchain. Stakers in the network will be assigned to shards to work on. Shards will have access to snapshots of other shards so they can build a view of Ethereum’s state to keep everything up-to-date.
 
 ### Read more {#read-more}
 

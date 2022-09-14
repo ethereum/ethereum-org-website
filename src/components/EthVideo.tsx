@@ -5,7 +5,6 @@ import { Box } from "@chakra-ui/react"
 import darkVideo from "../assets/ethereum-hero-dark.mp4"
 import lightVideo from "../assets/ethereum-hero-light.mp4"
 
-
 export interface IProps {
   className?: string
   videoSrc?: string
