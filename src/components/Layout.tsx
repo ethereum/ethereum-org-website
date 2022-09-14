@@ -8,6 +8,9 @@ import { LocaleProvider } from "gatsby-theme-i18n"
 
 import { lightTheme, darkTheme } from "../theme"
 
+import BannerNotification from "./BannerNotification"
+import Link from "./Link"
+import Translation from "./Translation"
 import Footer from "./Footer"
 import VisuallyHidden from "./VisuallyHidden"
 import Nav from "./Nav"
@@ -92,6 +95,7 @@ const Layout: React.FC<IProps> = ({
 
   const [isZenMode, setIsZenMode] = useState<boolean>(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState<boolean>(false)
+  const [isHomepage, setIsHomepage] = useState<boolean>(false)
 
   const locale = pageContext.locale
   const messages = require(`../intl/${locale}.json`)
@@ -116,6 +120,7 @@ const Layout: React.FC<IProps> = ({
       const idTag = location.hash.split("#")
       scrollIntoView(idTag[1])
     }
+    setIsHomepage(path === `/${locale}/`)
   }, [path, location])
 
   const handleZenModeChange = (val?: boolean): void => {
@@ -166,6 +171,17 @@ const Layout: React.FC<IProps> = ({
                 <Nav path={path} />
                 {shouldShowSideNav && <SideNavMobile path={path} />}
               </VisuallyHidden>
+              <BannerNotification
+                shouldShow={isHomepage}
+                justify="center"
+                zIndex="1"
+              >
+                <Translation id="merge-complete" />
+                &nbsp;
+                <Link to="/upgrades/merge">
+                  <Translation id="learn-more" />
+                </Link>
+              </BannerNotification>
               <SkipLinkAnchor id="main-content" />
               <MainContainer>
                 {shouldShowSideNav && (
