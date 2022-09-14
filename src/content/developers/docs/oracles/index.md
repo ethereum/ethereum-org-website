@@ -16,7 +16,7 @@ This page assumes the reader is familiar with Ethereum fundamentals, including [
 
 ## What is a blockchain oracle? {#what-is-a-blockchain-oracle} 
 
-Oracles are applications that source, verify, and transmit external information (i.e., information stored off-chain) to smart contracts running on the blockchain. Besides “pulling” off-chain data and broadcasting it on Ethereum, oracles can also “push” information from the blockchain to external systems. An example is an oracle that unlocks a smart lock once the user sends the fee via an Ethereum transaction. 
+Oracles are applications that source, verify, and transmit external information (i.e. information stored off-chain) to smart contracts running on the blockchain. Besides “pulling” off-chain data and broadcasting it on Ethereum, oracles can also “push” information from the blockchain to external systems. An example is an oracle that unlocks a smart lock once the user sends the fee via an Ethereum transaction.
 
 Oracles act as a “bridge” connecting smart contracts on blockchains to the real world. Without oracles, smart contract applications would only be able to access on-chain data. A blockchain oracle provides a mechanism for triggering smart contract functions using real-world data.
 
