@@ -1388,7 +1388,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://carllippert.com"><img src="https://avatars.githubusercontent.com/u/16457876?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Carl Lippert</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=carllippert" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/tymtam2"><img src="https://avatars.githubusercontent.com/u/1097613?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tymek Majewski</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=tymtam2" title="Documentation">📖</a></td>
       <td align="center"><a href="http://cryptolibertarian.id"><img src="https://avatars.githubusercontent.com/u/108990005?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Cryptolibertarian.id</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Cryptolibertarian-id" title="Documentation">📖</a></td>
-      <td align="center"><a href="https://github.com/MahendraBishnoi29"><img src="https://avatars.githubusercontent.com/u/74294202?v=4?s=100" width="100px;" alt=""/><br /><sub><b>browny</b></sub></a><br /><a href="#ideas-MahendraBishnoi29" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center"><a href="https://github.com/MahendraBishnoi29"><img src="https://avatars.githubusercontent.com/u/74294202?v=4?s=100" width="100px;" alt=""/><br /><sub><b>browny</b></sub></a><br /><a href="#ideas-MahendraBishnoi29" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=MahendraBishnoi29" title="Code">💻</a></td>
     </tr>
     <tr>
       <td align="center"><a href="https://github.com/sandakersmann"><img src="https://avatars.githubusercontent.com/u/6118832?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Marius Kjærstad</b></sub></a><br /><a href="#ideas-sandakersmann" title="Ideas, Planning, & Feedback">🤔</a></td>
@@ -1398,6 +1398,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="http://l5d.li"><img src="https://avatars.githubusercontent.com/u/26670751?v=4?s=100" width="100px;" alt=""/><br /><sub><b>grayliquid</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=grayliquid" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/MHMasoon"><img src="https://avatars.githubusercontent.com/u/63204823?v=4?s=100" width="100px;" alt=""/><br /><sub><b>MohammadHosein Masoon</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=MHMasoon" title="Documentation">📖</a></td>
       <td align="center"><a href="https://www.xcubicle.com"><img src="https://avatars.githubusercontent.com/u/381050?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Patoshi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=patoshii" title="Documentation">📖</a></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="jointheleague.org"><img src="https://avatars.githubusercontent.com/u/302478?v=4?s=100" width="100px;" alt=""/><br /><sub><b>June Clarke </b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=joonspoon" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>

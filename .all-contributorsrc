@@ -8751,7 +8751,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/74294202?v=4",
       "profile": "https://github.com/MahendraBishnoi29",
       "contributions": [
-        "ideas"
+        "ideas",
+        "code"
       ]
     },
     {
@@ -8813,6 +8814,15 @@
       "name": "Patoshi",
       "avatar_url": "https://avatars.githubusercontent.com/u/381050?v=4",
       "profile": "https://www.xcubicle.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "joonspoon",
+      "name": "June Clarke ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/302478?v=4",
+      "profile": "jointheleague.org",
       "contributions": [
         "doc"
       ]
