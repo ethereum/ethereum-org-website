@@ -2,7 +2,7 @@ const fs = require("fs")
 const translations = require("../../src/utils/languages").default
 
 var config = {
-  index_name: "dev-ethereum-org",
+  index_name: "prod-ethereum-org",
   start_urls: [
     {
       url: "https://ethereum.org/(?P<lang>.*?)/developers/tutorials/",
