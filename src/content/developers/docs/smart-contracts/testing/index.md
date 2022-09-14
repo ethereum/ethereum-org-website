@@ -69,6 +69,8 @@ ii. "Non-admins cannot mint new tokens"
 
 iii. "The contract reverts on errors"
 
+While running unit tests, it is also important to integrate with a tool that measures how much of the code is covered during tests. **Code coverage tools**, as they are often called, instrument source files with additional data to detect whenever each line of code has been executed at runtime. This is important, as you cannot reliably predict the behavior of a particular piece of code without testing it first.
+
 #### Integration testing
 
 Integration testing is a level higher than unit testing on the testing hierarchy. In integration testing, individual components of the smart contract are tested together.
@@ -91,17 +93,13 @@ Static analysis and dynamic analysis are two automated testing methods for evalu
 
 #### Static analysis
 
-Static analysis examines the source code or bytecode of a smart contract before execution. This means you can debug contract code without actually running the program. Static analyzers can detect common vulnerabilities in Ethereum smart contracts and aid compliance with best practices.
+As the name suggests, static analysis examines the source code or bytecode of a smart contract **statically**, meaning it doesn't have to execute the program to find bugs. Instead, static analysis tools perform analysis on low-level representations of a smart contract's internal operations, such as a [control flow graph](https://en.wikipedia.org/wiki/Control-flow_graph). In most cases, static analyzers can observe feasible execution paths in Solidity source code and identify operations that violate security properties. 
 
 #### Dynamic analysis
 
-Dynamic analysis techniques require executing the smart contract in a runtime environment to identify issues in your code. Dynamic code analyzers observe contract behaviors during execution and generate a detailed report of identified vulnerabilities and property violations.
+Dynamic analysis techniques (e.g., symbolic execution) execute a smart contract in an emulated runtime environment to identify issues in the code. These tools work by sending transactions that call functions in the target contract with either concrete or symbolic input values. If the smart contract enters an error state (e.g., one where an assertion fails), the problem is flagged and inputs that results in that state generated for evaluation. 
 
-Fuzzing is an example of a dynamic analysis technique for testing contracts. During fuzz testing, a fuzzer feeds your smart contract with malformed and invalid data and monitors how the contract responds to those inputs.
-
-Like any program, smart contracts rely on inputs provided by users to execute functions. And, while we assume users will provide correct inputs, this may not always be the case.
-
-In some cases, sending incorrect input values to a smart contract can cause resource leaks, crashes, or worse, lead to unintended code execution. Fuzzing campaigns identify such problems beforehand, allowing you to eliminate the vulnerability.
+An example of a dynamic analysis technique is fuzzing, which involves invoking a smart contrat's functions using malformed and invalid data as inputs and observing how the contract responds to those inputs. While we assume users will provide correct inputs when calling functions, this may not always be the case. Unexpected input values sent to a smart contract can cause resource leaks, crashes, or worse, lead to unintended code execution; hence, fuzzing smart contracts to detect such problems in advance is ideal.
 
 ## Manual testing for smart contracts {#manual-testing-for-smart-contracts}
 
@@ -133,7 +131,7 @@ Formal verification is considered important for smart contracts because it helps
 
 ### Unit testing tools {#unit-testing-tools}
 
-**Solidity-Coverage** - _Solidity code coverage tool useful for testing smart contracts._
+**Solidity-Coverage** - _solidity-coverage helps measure the percentage of source code covered in unit tests and integrate with most testing frameworks._
 
 - [GitHub](https://github.com/sc-forks/solidity-coverage)
 
@@ -174,11 +172,6 @@ Formal verification is considered important for smart contracts because it helps
 
 ### Static analysis tools {#static-analysis-tools}
 
-**Mythril** - _EVM bytecode assessment tool for detecting contract vulnerabilities using taint analysis, concolic analysis, and control flow checking._
-
-- [GitHub](https://github.com/ConsenSys/mythril-classic)
-- [Documentation](https://mythril-classic.readthedocs.io/en/master/about.html)
-
 **Slither** - _Python-based Solidity static analysis framework for finding vulnerabilities, enhancing code comprehension, and writing custom analyses for smart contracts._
 
 - [GitHub](https://github.com/crytic/slither)
@@ -200,7 +193,12 @@ Formal verification is considered important for smart contracts because it helps
 **Manticore** - _Dynamic symbolic execution framework for analyzing EVM bytecode._
 
 - [GitHub](https://github.com/trailofbits/manticore)
-- [Documentation](https://github.com/trailofbits/manticore/wiki)
+- [Documentation](https://manticore.readthedocs.io/en/latest/index.html)
+
+**Mythril** - _EVM bytecode assessment tool for detecting contract vulnerabilities using taint analysis, concolic analysis, and control flow checking._
+
+- [GitHub](https://github.com/ConsenSys/mythril-classic)
+- [Documentation](https://mythril-classic.readthedocs.io/en/master/about.html)
 
 ### Smart contract auditing services {#smart-contract-auditing-services}
 
