@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import { Flex, Heading } from "@chakra-ui/react"
+import { Flex, Heading, Text } from "@chakra-ui/react"
 
 import Translation from "./Translation"
 import { TranslationKey } from "../utils/translations"
@@ -44,8 +44,8 @@ const Content = styled.div`
 `
 
 const Description = styled.p`
-  font-size: 1.25rem;
-  width: 90%;
+  // font-size: 1.25rem;
+  // width: 90%;
   line-height: 140%;
   margin-bottom: 2rem;
   color: ${(props) => props.theme.colors.text200};
@@ -106,9 +106,9 @@ const CalloutBanner: React.FC<IProps> = ({
       <Heading as="h2" mt={0} fontSize="2rem" lineHeight="1.4">
         <Translation id={titleKey} />
       </Heading>
-      <Description>
+      <Text fontSize="xl" w="90%" lineHeight="140%" mb={8} color="text200">
         <Translation id={descriptionKey} />
-      </Description>
+      </Text>
       {children}
     </Content>
     {/* </Flex> */}
