@@ -25,7 +25,7 @@ export interface IProps {
 }
 
 const PostMergeBanner: React.FC<IProps> = ({ translationString }) => (
-  <StyledBannerNotification>
+  <StyledBannerNotification shouldShow={true}>
     <p>
       <Translation id={translationString} />
     </p>
