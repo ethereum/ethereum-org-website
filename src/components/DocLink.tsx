@@ -1,15 +1,5 @@
 import React from "react"
-import { useTheme } from "@emotion/react"
-import {
-  Icon,
-  Box,
-  Container,
-  Text,
-  Flex,
-  LinkBox,
-  LinkOverlay,
-  useMediaQuery,
-} from "@chakra-ui/react"
+import { Icon, Box, Text, Flex, LinkBox, LinkOverlay } from "@chakra-ui/react"
 import { AiOutlineArrowRight } from "react-icons/ai"
 import Emoji from "./Emoji"
 
@@ -20,15 +10,11 @@ export interface IProps {
 }
 
 const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
-  const theme = useTheme()
-  const [isLarger] = useMediaQuery("(max-width: m)")
-
   return (
     <LinkBox>
       <LinkOverlay href={to} isExternal={isExternal}>
-        <Container
+        <Box
           textDecoration="none"
-          width={isLarger ? "" : "100%"}
           padding={4}
           borderRadius="sm"
           color="text"
@@ -73,7 +59,7 @@ const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
               }}
             />
           </Flex>
-        </Container>
+        </Box>
       </LinkOverlay>
     </LinkBox>
   )
