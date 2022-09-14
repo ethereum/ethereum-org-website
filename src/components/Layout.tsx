@@ -175,12 +175,15 @@ const Layout: React.FC<IProps> = ({
                 shouldShow={isHomepage}
                 justify="center"
                 zIndex="1"
+                textAlign="center"
               >
-                <Translation id="merge-complete" />
-                &nbsp;
-                <Link to="/upgrades/merge">
-                  <Translation id="learn-more" />
-                </Link>
+                <div>
+                  <Translation id="merge-complete" />
+                  &nbsp;
+                  <Link to="/upgrades/merge">
+                    <Translation id="learn-more" />
+                  </Link>
+                </div>
               </BannerNotification>
               <SkipLinkAnchor id="main-content" />
               <MainContainer>
