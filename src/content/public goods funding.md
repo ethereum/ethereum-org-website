@@ -8,7 +8,7 @@ sidebar: true
 sidebarDepth: 2
 summaryPoint1: Public goods are nonexcludable and nonrivalrous and benefit everyone
 summaryPoint2: Traditional models of funding public goods are inefficient and encourage coordination failures
-summaryPoint3: Public goods markets on Ethereum make it easier to fund and develop critical digital public goods
+summaryPoint3: Ethereum provides useful infrastructure for improving funding and development of critical public goods
 ---
  
 Public goods are commodities and services provided to all members of a society (without the possibility of direct profit) usually by government or private organizations. While the creation of public goods is critical to societal progress and wellbeing, traditional models of coordinating to fund public goods suffer problems that limit their efficiency and effectiveness. This makes it difficult to build useful public goods and results in worse outcomes that affect everyone. 
@@ -113,9 +113,11 @@ Put simply, a public goods market provides a mechanism for private individuals t
 
 Currently, the majority of public goods are created by either governments or private markets—both of which have problems: 
 
-Besides the principal-agent problem, governments often lack the flexibility and capacity to provide certain public goods. Private markets can fund those public goods efficiently, but the desire to maximize profits leads to negative externalities. 
+1. Governments reduce the free-rider problem by charging people (i.e., the consumers) taxes, which it uses to fund the development of public goods. Put another way, the government returns money belonging to the citizenry to them in the form of public goods. However, this creates a negative externality, namely the cost borne by individuals who don't necessarily consume certain public goods. Moreover, funding of public goods by the public sector suffers from principal-agent problems and, in many cases, governments often lack the flexibility and capacity to provide certain public goods.  
 
-A public goods market creates a third alternative that combines the best qualities of the two approaches while minimizing negative consequences. Here, members of the public are able to coordinate on allocating capital to areas they believe are neglected but critical to societal wellbeing, prosperity, and progress. 
+2. Private markets can finance public goods efficiently, but the funding of public goods by the private sector has also runs into issues. For example, unlike govenrnments, private companies find it more difficult to charge consumers of a public good (and, thus, cannot solve the free-rider problem). This discourages the provision of certain public goods by private organization and results in a “market failure” (inefficient allocation of goods and services in a free market). In cases where private markets *do* provide a public good, the desire to maximize returns on investment may cause negative externalities, such as social media companies monetizing user data. 
+
+A public goods market creates a third alternative that combines the best qualities of the two approaches while minimizing negative consequences. Here, members of the general public are able to coordinate on allocating capital to areas they believe are neglected but critical to societal wellbeing, prosperity, and progress. This approach is more flexible and efficient compared to traditional government-controlled funding, but also minimizes some of the negative externalities associated with funding public goods via the private sector. 
 
 More importantly, a public goods market provides incentives for individuals and groups to work on creating services that benefit society, especially when they stand to make little to no profits. To illustrate this point, consider the free and open-source software (FOSS) industry:
 
