@@ -26,7 +26,7 @@ Oracles differ based on the source of data (one or multiple sources), trust mode
 
 Most developers see smart contracts as simply pieces of code running at specific addresses on the blockchain. However, a more [general view of smart contracts](/smart-contracts/) is that they are self-executing software programs capable of enforcing agreements between parties once specific conditions are met—which explains the term, “smart contracts.”
 
-But using smart contracts to enforce agreements between people isn't exactly straightforward, given that blockchains are designed to be “deterministic”.  A [deterministic system](https://en.wikipedia.org/wiki/Deterministic_algorithm) is one that always produces the same results given an initial state and a particular input—there is no randomness or variation in the process of computing outputs from inputs. 
+But using smart contracts to enforce agreements between people isn't straightforward, given that Ethereum is deterministic. A [deterministic system](https://en.wikipedia.org/wiki/Deterministic_algorithm) is one that always produces the same results given an initial state and a particular input—there is no randomness or variation in the process of computing outputs from inputs.
 
 To achieve deterministic execution, blockchains limit nodes to reaching consensus on simple binary (true/false) questions using *only* data stored on the blockchain itself. Examples of such questions include: “Did the account owner (identified by a public key) sign this transaction with the paired private key?”, “Does this account have enough funds to cover the transaction?”, “Is this transaction valid in the context of this smart contract?”, and so on. 
 
@@ -236,7 +236,7 @@ With centralized oracles, there's no way to confirm if the information provided 
 
 Centralized oracles aren't guaranteed to always make off-chain data available to other smart contracts. If the provider decides to turn off the service or a hacker hijacks the oracle's off-chain component, your smart contract is at risk of a denial of service (DoS) attack. 
 
-### Poor incentive compatibility {#poor-incentive-compatibility}
+#### Poor incentive compatibility {#poor-incentive-compatibility}
 
 Centralized oracles often have poorly designed or non-existent incentives for the data provider to send accurate/unaltered information. Paying the oracle for their services may encourage honest behavior, but this may not be enough. With smart contracts controlling enormous amounts of value, the payoff from manipulating oracle data is greater than ever. 
 
