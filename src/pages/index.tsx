@@ -558,7 +558,7 @@ const HomePage = ({
     spread: 180,
     elementCount: 42,
     position: "absolute",
-    zIndex: 1000,
+    zIndex: 10,
     lifetime: 500,
   })
   useEffect(() => {
