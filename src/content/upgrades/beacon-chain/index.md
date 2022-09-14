@@ -7,7 +7,7 @@ sidebar: true
 image: ../../../assets/upgrades/core.png
 summaryPoint1: The Beacon Chain introduced proof-of-stake to the Ethereum ecosystem.
 summaryPoint2: It was merged with the original Ethereum proof-of-work chain in September 2022.
-summaryPoint3: The consensus logic and block gossip protocol introduced by the Beacon Chain now secures Ethereum.
+summaryPoint3: The Beacon Chain introduced the consensus logic and block gossip protocol which now secures Ethereum.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">

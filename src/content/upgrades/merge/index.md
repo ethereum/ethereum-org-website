@@ -6,13 +6,13 @@ template: upgrade
 sidebar: true
 image: ../../../assets/upgrades/merge.png
 summaryPoint1: Ethereum Mainnet uses proof-of-stake, but this wasn't always the case.
-summaryPoint2: The transition from the original proof-of-work mechanism to proof-of-stake was called The Merge.
-summaryPoint3: The Merge refers to the original Ethereum Mainnet becoming part of a separate proof-of-stake blockchain called the Beacon Chain, now existing as one chain.
+summaryPoint2: The upgrade from the original proof-of-work mechanism to proof-of-stake was called The Merge.
+summaryPoint3: The Merge refers to the original Ethereum Mainnet merging with a separate proof-of-stake blockchain called the Beacon Chain, now existing as one chain.
 summaryPoint4: The Merge reduced Ethereum's energy consumption by ~99.95%.
 ---
 
 <UpgradeStatus dateKey="page-upgrades-beacon-date">
-  The Merge was completed on September 15, 2022. This completed Ethereum's transition to proof-of-stake consensus, officially deprecating proof-of-work and reducing energy consumption by ~99.95%.
+  The Merge was executed on September 15, 2022. This completed Ethereum's transition to proof-of-stake consensus, officially deprecating proof-of-work and reducing energy consumption by ~99.95%.
 </UpgradeStatus>
 
 ## What was The Merge? {#what-is-the-merge}
