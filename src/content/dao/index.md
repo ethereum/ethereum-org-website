@@ -70,14 +70,15 @@ There are many considerations when governing a DAO, such as how voting and propo
 
 ### Delegation {#governance-delegation}
 
-Delegation is like the DAO version of representative democracy. Token holders delegate votes to users who nominate themselves and commit to stewarding the protocol and staying informed. 
+Delegation is like the DAO version of representative democracy. Token holders delegate votes to users who nominate themselves and commit to stewarding the protocol and staying informed.
 
 #### A famous example {#governance-example}
 
 [ENS](https://claim.ens.domains/delegate-ranking) – ENS holders can delegate their votes to engaged community members to represent them.
 
 ### Automatic transaction governance {#governance-example}
-In many DAOs, transactions will be automatically executed if a quorum of members votes affirmative. 
+
+In many DAOs, transactions will be automatically executed if a quorum of members votes affirmative.
 
 #### A famous example {#governance-example}
 

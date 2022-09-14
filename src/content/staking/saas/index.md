@@ -76,21 +76,7 @@ All of these keys can always be regenerated in a reproducible manner using your 
 </ExpandableCard>
 
 <ExpandableCard title="When can I withdraw?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-  When you stake 32 ETH with a SaaS provider, that ETH is still deposited to the official staking deposit contract. As such, SaaS stakers are currently limited by the same withdrawal restrictions as solo stakers. This means that staking your ETH is currently a one-way deposit. This will be the case until the Shanghai upgrade planned to follow the Merge.
-</ExpandableCard>
-
-<ExpandableCard title="What will change with the Merge?" eventCategory="SaasStaking" eventName="clicked what will change with the Merge">
-  After the Merge, SaaS stakers will begin to receive unburnt transaction fees/tips. Check with your provider to determine how to update your settings to include an Ethereum address you control where these funds will be sent when the time comes.
-
-The Merge will <em>not</em> enable the ability to withdraw your stake or protocol rewards; this feature is planned for the Shanghai upgrade, which will follow the Merge by an estimated six months to a year.
-</ExpandableCard>
-
-<ExpandableCard title="Do SaaS stakers need to do anything for The Merge?">
-SaaS stakers <strong>do not need to do anything to prepare for The Merge</strong>.
-
-There are a few things node operators must attend to for this upgrade. Check with your staking provider for assurance their systems are ready to go.
-
-Learn more about [The Merge](/upgrades/merge/)
+  When you stake 32 ETH with a SaaS provider, that ETH is still deposited to the official staking deposit contract. As such, SaaS stakers are currently limited by the same withdrawal restrictions as solo stakers. This means that staking your ETH is currently a one-way deposit. This will be the case until the Shanghai upgrade.
 </ExpandableCard>
 
 <ExpandableCard title="What happens if I get slashed?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
