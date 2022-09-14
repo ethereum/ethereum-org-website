@@ -49,6 +49,20 @@ If you want to get involved and help us grow the global Ethereum community by tr
   <Link to="/contributing/translation-program/acknowledgements/#poap">More on POAPs</Link>
 </InfoBanner>
 
+#### Acknowledgements {#acknowledgements}
+
+Ethereum.org is translated by thousands of community members and they are the key part of the Translation Program.
+We want to acknowledge our translators and support them on their career paths. Here are some of our translator acknowledgements:
+
+**Certificate**
+If you have contributed to the Translation Program and at least 5,000 of your translated words have been approved, you are eligible for an ethereum.org translator certificate. [More on certificates](/contributing/translation-program/acknowledgements/#certificate)
+
+**POAPs**
+All of our translators are eligible for a POAP (Proof of Attendance Protocol) - an NFT that proves their contribution to the ethereum.org Translation Program. [More on POAPs](/contributing/translation-program/acknowledgements/#poap)
+
+**Translator acknowledgements**
+Public acknowledgements of our top translators using [leaderboards](/contributing/translation-program/acknowledgements/) and a [list of all contributors to the Translation Program](/contributing/translation-program/contributors/).
+
 ### What we're working on {#our-projects}
 
 Our community of contributors is actively translating multiple high-impact websites and resources for the global Ethereum community.
