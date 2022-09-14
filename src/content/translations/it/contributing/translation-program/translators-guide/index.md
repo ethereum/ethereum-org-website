@@ -147,15 +147,15 @@ Nell'esempio seguente, passando con il mouse su <0> puoi vedere che che il tag r
 
 ### Formule/abbreviazioni brevi vs. complete {#short-vs-full-forms}
 
-Sul sito web vengono usate molte abbreviazioni, ad es. dApp, NFT, DAO, DeFi, ecc. Queste abbreviazioni sono comunemente usate in inglese e gran parte dei visitatori del sito web ne è a conoscenza.
+Nel sito web sono usate molte abbreviazioni, es. dApp, NFT, DAO, DeFi, etc. Queste abbreviazioni sono comunemente usate in inglese e gran parte dei visitatori del sito web ne è a conoscenza.
 
 Dal momento che di solito non esistono traduzioni attestate in altre lingue, il modo migliore per trattare questi termini e altri simili è quello di fornire una traduzione descrittiva della forma estesa e aggiungere l'abbreviazione inglese tra parentesi.
 
 Non tradurre queste abbreviazioni, poiché la maggior parte delle persone non le conoscerebbe e le versioni localizzate non avrebbero molto senso per la maggior parte dei visitatori.
 
-Esempio di come tradurre dApp:
+Esempio di come tradurre le dApp:
 
-- Applicazioni decentralizzate (dApp) → _Traduzione della forma estesa (abbreviazione inglese tra parentesi)_
+- Applicazioni decentralizzate (dApp) → _Tradotto integralmente (abbreviazione tra parentesi)_
 
 ### Termini senza traduzioni attestate {#terms-without-established-translations}
 
@@ -250,8 +250,8 @@ Alcuni esempi di aspetti a cui prestare particolare attenzione:
 
 - Per la traduzione delle date, occorre tenere conto di una serie di considerazioni e differenze basate sulla lingua, tra cui il formato della data, il separatore, l'uso delle maiuscole/minuscole e gli zeri iniziali. Esistono anche differenze tra le date scritte per esteso e le date numeriche.
   - Alcuni esempi di formati di data diversi:
-    - English UK (dd/mm/yyyy) – 1st January, 2022
-    - English US (mm/dd/yyyy) – January 1st, 2022
+    - Inglese UK (gg/mm/aaaa) – 1st January, 2022
+    - Inglese US (mm/gg/aaaa) – January 1st, 2022
     - Cinese (aaaa-mm-gg) – 2022 年 1 月 1 日
     - Francese (gg/mm/aaaa) – 1er janvier 2022
     - Italiano (gg/mm/aaaa) – 1º gennaio 2022

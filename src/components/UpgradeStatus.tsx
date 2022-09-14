@@ -48,6 +48,7 @@ const Content = styled.p`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   dateKey: TranslationKey
   isShipped?: boolean
 }

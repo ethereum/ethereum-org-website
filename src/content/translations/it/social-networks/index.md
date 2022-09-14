@@ -22,7 +22,7 @@ Esistono molti social network decentralizzati come alternative ai servizi social
 
 ### Come funzionano i social network decentralizzati? {#decentralized-social-networks-overview}
 
-I social decentralizzati sono una classe di [applicazioni decentralizzate (dApp)](/dapps/): applicazioni alimentate da [smart contract](/developers/docs/smart-contracts/) distribuiti sulla blockchain. Il codice del contratto serve da backend per queste app e ne definisce la logica aziendale.
+I social network decentralizzati sono una classe di [applicazioni decentralizzate (dapp)](/dapps/), applicazioni sviluppate dai [contratti intelligenti](/developers/docs/smart-contracts/) distribuiti sulla blockchain. Il codice del contratto serve da backend per queste app e ne definisce la logica aziendale.
 
 Le piattaforme social tradizionali si affidano ai database per memorizzare le informazioni degli utenti, il codice del programma e altre forme di dati. Ma questo crea singoli punti di guasto e introduce un rischio significativo. Ad esempio, i server di Facebook sono tristemente [andati offline per ore](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) l'anno scorso, impedendo agli utenti di accedere alla piattaforma.
 
@@ -42,9 +42,9 @@ Molte piattaforme social basate sulla blockchain hanno token nativi che rendono 
 
 4. Poiché le dapp sono eseguite sulla rete di Ethereum, sostenuta da una rete di nodi globale e peer-to-peer, i social decentralizzati sono meno esposte a interruzioni e guasti del server.
 
-5. Le piattaforme social decentralizzate offrono un sistema di monetizzazione migliorato per i creatori di contenuti tramite i token non fungibili (NFT), pagamenti cripto in-app e altro.
+5. Le piattaforme social decentralizzate offrono un quadro di monetizzazione migliorato per i creatori di contenuti tramite i token non fungibili (NFT), i pagamenti in cripto in app e altro.
 
-6. I social network decentralizzati consentono agli utenti un elevato livello di privacy e anonimato. Per esempio, una persona può accedere a un social basato su Ethereum usando un profilo ENS o un portafoglio, senza dover condividere dati personali identificabili (PII) come nomi, indirizzi email, etc.
+6. I social decentralizzati consentono agli utenti un livello elevato di privacy e anonimato. Per esempio, una persona può accedere a un social basato su Ethereum usando un profilo ENS o un portafoglio, senza dover condividere dati personali identificabili (PII) come nomi, indirizzi email, etc.
 
 7. I social decentralizzati non si affidano a database centralizzati, ma all'archiviazione decentralizzata, considerevolmente migliori per proteggere i dati degli utenti.
 

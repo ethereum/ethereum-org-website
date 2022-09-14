@@ -11,7 +11,7 @@ Centinaia di migliaia di appassionati di Ethereum si riuniscono in questi forum 
 
 ## Forum {#forums}
 
-<SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethereum">r/ethereum</Link> - all things Ethereum</SocialListItem>
+<SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethereum">r/ethereum</Link> - tutto su Ethereum</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> - il lato finanziario di Ethereum, inclusa la DeFi</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethdev/">r/ethdev</Link> - focalizzato sullo sviluppo di Ethereum</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethtrader/">r/ethtrader</Link> - tendenze e analisi di mercato</SocialListItem>
@@ -23,19 +23,19 @@ Centinaia di migliaia di appassionati di Ethereum si riuniscono in questi forum 
 ## Stanze di chat {#chat-rooms}
 
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> - community orientata all'offerta di assistenza per la gestione dei progetti per lo sviluppo di Ethereum</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Hackers</Link> - Chat Discord gestita da ETHGlobal: una comunità online per gli hacker di Ethereum in tutto il mondo</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> - Comunità Discord focalizzata sullo sviluppo di Ethereum</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.io/ethstaker">EthStaker Discord</Link> - community oriented around offer project management support to Ethereum development</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Hackers</Link> - Chat Discord gestita da ETHGlobal: una community online per gli hacker di Ethereum in tutto il mondo</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> - Community Discord focalizzata sullo sviluppo di Ethereum</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://discord.io/ethstaker">EthStaker Discord</Link> - community orientata all'offerta di assistenza per la gestione dei progetti per lo sviluppo di Ethereum</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/CetY6Y4">Ethereum.org website team</Link> - date un'occhiata e chattate sullo sviluppo e la progettazione di ethereum.org con il team e le persone della community</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ZH5aXDgWEU">Web3 University</Link> - community focalizzata sull'apprendimento dello sviluppo di web3 </SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> - chat per lo sviluppo di solidity (Gitter)</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereumsolidity:gitter.im">Solidity Matrix</Link> - chat per lo sviluppo di solidity (Matrix)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - chat per lo sviluppo di solidity (Matrix)</SocialListItem>
 
 ## YouTube e Twitter {#youtube-and-twitter}
 
-<SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> - Resta aggiornato con le ultime novità della Ethereum Foundation</SocialListItem>
+<SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> - Mantieniti aggiornato con le ultime notizie dalla Ethereum Foundation</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> - Account ufficiale della Ethereum Foundation</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethdotorg">@ethdotorg</Link> - Il portale per Ethereum, costruito per la nostra comunità globale in espansione</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethdotorg">@ethdotorg</Link> - Il portale per Ethereum, costruito per la nostra community globale in espansione</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://hive.one/c/Ethereum?page=1">Elenco di profili twitter influenti di Ethereum</Link></SocialListItem>
 
 <Divider />

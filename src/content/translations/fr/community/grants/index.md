@@ -32,7 +32,6 @@ Ces projets ont crée leurs propres subventions pour encourager d'autres projets
 - [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _Fonds pour l'écosystème [Balancer](https://balancer.fi/)_
 - [Programme de subventions Compound](https://compoundgrants.org/) – _Écosystème financier [Compound](https://compound.finance/)_
 - [Programme de subventions Consensys](https://consensys.net/grants/) – _Subventions Ethereum et financement de blockchain [Consensys](https://consensys.net/)_
-- [Programme de subventions dYdX](https://dydxgrants.com/) – _Échanges décentralisés [dYdX](https://dydx.exchange/)_
 - [Organisme de subvention Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _Écosystème financier [Lido](https://lido.fi/)_
 - [Programme de subventions mStable](https://docs.mstable.org/advanced/grants-program) - _Communauté [mStable](https://mstable.org/)_
 - [TheGraph](https://airtable.com/shrdfvnFvVch3IOVm) – _Écosystème [TheGraph](https://thegraph.com/)_

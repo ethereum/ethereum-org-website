@@ -234,8 +234,7 @@ Avec le trading centralisé, vous devez déposer vos actifs avant les échanges 
 
 Il existe des outils de gestion de fonds sur Ethereum qui vous permettront de développer votre portefeuille en vous appuyant sur la stratégie de votre choix. C'est automatique, ouvert à tous, et personne ne pourra vous demander de commission.
 
-Voilà un bon exemple [DeFi Pulse Index fund (DPI)](https://defipulse.com/blog/defi-pulse-index/). C'est un fond qui se rééquilibre automatiquement pour garantir qu'il inclue toujours
-les meilleurs DeFi tokens par capitalisation boursière. Pas besoin de gérer les détails et vous pouvez retirer les fonds quand bon vous semble.
+Voilà un bon exemple [DeFi Pulse Index fund (DPI)](https://defipulse.com/blog/defi-pulse-index/). C'est un fond qui se rééquilibre automatiquement pour garantir qu'il inclue toujours [les meilleurs DeFi tokens par capitalisation boursière](https://www.coingecko.com/en/defi). Pas besoin de gérer les détails et vous pouvez retirer les fonds quand bon vous semble.
 
 <ButtonLink to="/dapps/?category=finance">
   Voir les applications d'investissement dapps
@@ -346,8 +345,8 @@ DeFi est un mouvement open source. Les protocoles et applications DeFi sont ouve
 ### Vidéos {#videos}
 
 - [Finematics - decentralized finance education](https://finematics.com/) _vidéos de DeFi_
-- [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) – _DeFi basics: Everything you need to know to get started in this occasionally baffling space_
-- [Whiteboard Crypto](https://youtu.be/17QRFlml4pA) _What is DeFi?_
+- [The Defiant](https://www.youtube.com/playlist?list=PlaDcID4s1KronHMKojfjwiHL0DdQEPDcq) - _Les bases de la DeFi : Tout ce que vous avez besoin de savoir pour commencer dans cet espace parfois déroutant_
+- [Whiteboard Crypto](https://youtu.be/17QRFlml4pA) - _Qu'est-ce que DeFi?_
 
 ### Communautés {#communities}
 

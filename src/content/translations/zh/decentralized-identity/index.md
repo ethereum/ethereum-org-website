@@ -174,7 +174,7 @@ summaryPoint3: 多亏了加密技术，用户现在拥有了再次发布、持�
 ### 视频 {#videos}
 
 - [去中心化身份（奖励直播环节）](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _一个很好的去中心化身份解说视频，来自 Andreas Antonopolous_
-- [使用以太坊 Ceramic、IDX、React 和 3ID Connect 的去中心化身份登录](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _来自 Nader Dabit 的一个 YouTube 教程，关于使用以太坊钱包创建、读取和更新用户个人资料的身份管理系统_
+- [使用以太坊登录和使用 Ceramic、IDX、React 和 3ID Connect 的去中心化身份](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _YouTube 教程，介绍如何使用以太坊创建、读取和更新用户个人资料的身份管理系统 Nader Dabit 的钱包_
 - [BrightID - 以太坊上的去中心化身份](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Bankless 播客节目讨论 BrightID（以太坊的去中心化身份解决方案）_
 - [链下互联网：去中心化身份和可验证凭证](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — Evin McMullen 的 EthDenver 2022 演讲
 
@@ -182,3 +182,4 @@ summaryPoint3: 多亏了加密技术，用户现在拥有了再次发布、持�
 
 - [GitHub 上的 ERC-725 联盟](https://github.com/erc725alliance) — _支持 ERC725 标准管理以太坊区块链上的身份_
 - [SpruceID Discord 服务器](https://discord.com/invite/Sf9tSFzrnt) — _使用以太坊登录的爱好者和开发者社区_
+- [Veramo Labs](https://discord.gg/sYBUXpACh4) — _一个开发人员社区，致力于为应用程序构建可验证数据的框架_

@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 import { motion } from "framer-motion"
 
-import Emoji from "../Emoji"
+import Emoji from "../OldEmoji"
 import Icon from "../Icon"
 import Link from "../Link"
 import NakedButton from "../NakedButton"
@@ -224,6 +224,7 @@ const BottomLink = styled(Link)`
     fill: ${(props) => props.theme.colors.text};
   }
   &:hover {
+    text-decoration: none;
     color: ${(props) => props.theme.colors.primary};
     & > svg {
       fill: ${(props) => props.theme.colors.primary};
