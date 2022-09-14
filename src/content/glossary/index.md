@@ -253,7 +253,7 @@ A type of [dapp](#dapp) that lets you swap tokens with peers on the network. You
 
 ### deed {#deed}
 
-See [non-fungible token (NFT)](#nft)
+See [non-fungible token (NFT)](#nft).
 
 ### DeFi {#defi}
 
@@ -269,7 +269,7 @@ A network-wide setting that controls how much computation is required to produce
 
 ### difficulty bomb {#difficulty-bomb}
 
-Planned exponential increase in [proof-of-work](#pow) [difficulty](#difficulty) setting designed to motivate the transition to [proof-of-stake](#pos), reducing the chances of a [fork](#hard-fork)
+Planned exponential increase in [proof-of-work](#pow) [difficulty](#difficulty) setting designed to motivate the transition to [proof-of-stake](#pos), reducing the chances of a [fork](#hard-fork).
 
 ### digital signature {#digital-signatures}
 
@@ -616,7 +616,7 @@ The [fork-choice algorithm](#fork-choice-algorithm) used by Ethereum's consensus
 
 ### Mainnet {#mainnet}
 
-Short for "main network," this is the main public Ethereum [blockchain](#blockchain). Real ETH, real value, and real consequences. Also known as layer 1 when discussing [layer 2](#layer-2) scaling solutions. (Also, see [testnet](#testnet))
+Short for "main network," this is the main public Ethereum [blockchain](#blockchain). Real ETH, real value, and real consequences. Also known as layer 1 when discussing [layer 2](#layer-2) scaling solutions. (Also, see [testnet](#testnet)).
 
 <DocLink to="/developers/docs/networks/">
   Ethereum networks
@@ -883,7 +883,7 @@ Short for "succinct non-interactive argument of knowledge", a SNARK is a type of
 
 ### soft fork {#soft-fork}
 
-A divergence in a [blockchain](#blockchain) that occurs when the [consensus rules](#consensus-rules) become change. Contrary to a [hard fork](#hard-fork), a soft fork is backwards compatible; upgraded nodes can validate blocks created by non-upgraded nodes as long as they follow the new consensus rules.
+A divergence in a [blockchain](#blockchain) that occurs when the [consensus rules](#consensus-rules) change. Contrary to a [hard fork](#hard-fork), a soft fork is backwards compatible; upgraded nodes can validate blocks created by non-upgraded nodes as long as they follow the new consensus rules.
 
 ### Solidity {#solidity}
 
@@ -999,15 +999,15 @@ A fee you need to pay whenever you use the Ethereum network. Examples include se
 
 At a technical level, your transaction fee relates to how much [gas](#gas) your transaction requires.
 
-Reducing transaction fees is a subject of intense interest right now. See [Layer 2](#layer-2)
+Reducing transaction fees is a subject of intense interest right now. See [Layer 2](#layer-2).
 
 ### trustlessness {#trustlessness}
 
-The ability of a network to mediate transactions without any of the involved parties needing to trust a third party
+The ability of a network to mediate transactions without any of the involved parties needing to trust a third party.
 
 ### Turing complete {#turing-complete}
 
-A concept named after English mathematician and computer scientist Alan Turing- a system of data-manipulation rules (such as a computer's instruction set, a programming language, or a cellular automaton) is said to be "Turing complete" or "computationally universal" if it can be used to simulate any Turing machine.
+A concept named after English mathematician and computer scientist Alan Turing - a system of data-manipulation rules (such as a computer's instruction set, a programming language, or a cellular automaton) is said to be "Turing complete" or "computationally universal" if it can be used to simulate any Turing machine.
 
 <Divider />
 
@@ -1015,7 +1015,7 @@ A concept named after English mathematician and computer scientist Alan Turing- 
 
 ### validator {#validator}
 
-A [node](#node) in a [proof-of-stake](#pos) system responsible for storing data, processing transactions, and adding new blocks to the blockchain. To active validator software, you need to be able to [stake](#staking) 32 ETH.
+A [node](#node) in a [proof-of-stake](#pos) system responsible for storing data, processing transactions, and adding new blocks to the blockchain. To activate validator software, you need to be able to [stake](#staking) 32 ETH.
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos">
   Proof-of-stake
@@ -1034,7 +1034,7 @@ A security model for certain [layer 2](#layer-2) solutions where, to increase sp
 
 ### validium {#validium}
 
-An off-chain solution that uses [validity proofs](#validity-proof) to improve transaction throughput. Unlike [Zero-knowledge rollups](#zk-rollup), Validium data isn't stored on layer 1 [Mainnet](#mainnet).
+An off-chain solution that uses [validity proofs](#validity-proof) to improve transaction throughput. Unlike [Zero-knowledge rollups](#zk-rollup), validium data isn't stored on layer 1 [Mainnet](#mainnet).
 
 <DocLink to="/developers/docs/scaling/validium/">
   Validium
@@ -1062,7 +1062,7 @@ Software that holds [private keys](#private-key). Used to access and control Eth
 
 ### Web3 {#web3}
 
-The third version of the web. First proposed by Dr. Gavin Wood, Web3 represents a new vision and focus for web applications- from centrally owned and managed applications, to applications built on decentralized protocols (see [dapp](#dapp)).
+The third version of the web. First proposed by Dr. Gavin Wood, Web3 represents a new vision and focus for web applications - from centrally owned and managed applications, to applications built on decentralized protocols (see [dapp](#dapp)).
 
 <DocLink to="/developers/docs/web2-vs-web3/">
   Web2 vs Web3

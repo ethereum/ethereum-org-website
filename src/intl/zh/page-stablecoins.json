@@ -142,5 +142,7 @@
   "page-stablecoins-why-stablecoins": "为什么使用稳定币？",
   "page-stablecoins-how-they-work-button": "它们如何运作",
   "page-stablecoins-why-stablecoins-body": "以太币和比特币一样是一种新技术，所以价值存在波动。因此您可能不会想在日常生活中使用它。稳定币作为传统货币价值的替代品，成为您能够在以太坊上使用的稳定资金。",
-  "page-stablecoins-more-defi-button": "关于去中心化金融 (DeFi) 的更多信息"
+  "page-stablecoins-more-defi-button": "关于去中心化金融 (DeFi) 的更多信息",
+  "page-stablecoins-tools-title": "进一步了解稳定币",
+  "page-stablecoins-tools-stablecoinswtf-description": "Stablecoins.wtf提供了一个仪表板，其中包含了一些最知名稳定币的历史市场数据、统计信息和教育内容。"
 }

@@ -60,6 +60,7 @@ Verschiedene Organisationen unternahmen gemeinsame Anstrengungen, um Ethereum un
 - [Infura](https://infura.io/) _ skalierbarer API-Zugriff auf die Ethereum- und IPFS-Netzwerke_
 - [Provide](https://provide.services/) _Infrastruktur und APIs für Enterprise-Web3-Anwendungen_
 - [Unibright](https://unibright.io/) _ein Team von Blockchain-Spezialisten, Architekten, Entwicklern und Beratern mit über 20 Jahren Erfahrung in Geschäftsprozessen und Integration_
+- [Zero Services GmbH](https://www.zeroservices.eu/) _Anbieter von Managed Services verteilt auf Rechenzentren in Europa und Asien. Betreibt & Überwacht dezentrale Infrastruktur sicher und zuverlässig_
 
 ### Tools und Bibliotheken {#tooling-and-libraries}
 

@@ -27,7 +27,7 @@
   "page-stablecoins-accordion-earn-project-2-description": "टेक्नोलॉजी, कंटेंट और MakerDao समुदाय (वह टीम जो आपके लिए Dai लाए) के लिए अन्य काम।",
   "page-stablecoins-accordion-earn-project-3-description": "जब आप वास्तव में अपनी चीज़ों को जानते हों, तो Dai कमाने के लिए बग ढूंढें।",
   "page-stablecoins-accordion-earn-project-bounties": "Gitcoin बाउंटी",
-  "page-stablecoins-accordion-earn-project-bug-bounties": "Eth2 बग बाउंटी",
+  "page-stablecoins-accordion-earn-project-bug-bounties": "सहमति परत बग बाउंटी",
   "page-stablecoins-accordion-earn-project-community": "MakerDao संप्रदाय",
   "page-stablecoins-accordion-earn-projects-copy": "ये ऐसे प्लेटफ़ॉर्म हैं, जो आपको अपने काम के लिए स्थिर कॉइन में भुगतान करेंगे।",
   "page-stablecoins-accordion-earn-projects-title": "स्थिर कॉइन कहां से अर्जित करें",
@@ -134,12 +134,15 @@
   "page-stablecoins-top-coins-intro": "बाजार पूंजीकरण है",
   "page-stablecoins-top-coins-intro-code": "टोकन के मूल्य से गुणा होने वाले टोकन की कुल संख्या। यह सूची गतिशील है और यहां सूचीबद्ध परियोजनाएं जरूरी नहीं हैं कि ethereum.org टीम द्वारा समर्थित हों।",
   "page-stablecoins-types-of-stablecoin": "वे कैसे काम करते हैं: स्थिर मुद्रा के प्रकार",
-  "page-stablecoins-usdc-banner-body": "USDC संभवतः सबसे प्रसिद्ध फिएट-समर्थित स्थिर मुद्रा है। इसका मूल्य लगभग एक डॉलर है और यह सर्किल और कॉइनबेस द्वारा समर्थित है।",
+  "page-stablecoins-usdc-banner-body": "USDC शायद सबसे प्रसिद्ध फिएट-समर्थित स्थिर मुद्रा है। इसका मूल्य मोटे तौर पर एक डॉलर है और यह सर्कल और कॉइनबेस द्वारा समर्थित है।",
   "page-stablecoins-usdc-banner-learn-button": "USDC के बारे में जानें",
   "page-stablecoins-usdc-banner-swap-button": "USDC के लिए ETH स्वैप करें",
   "page-stablecoins-usdc-banner-title": "USDC",
   "page-stablecoins-usdc-logo": "USDC का लोगो",
   "page-stablecoins-why-stablecoins": "स्थिर कॉइन क्यों?",
   "page-stablecoins-how-they-work-button": "वे कैसे काम करते हैं",
-  "page-stablecoins-why-stablecoins-body": "बिटकॉइन की तरह ETH की कीमत अस्थिर होती है, क्योंकि यह नई तकनीक है। इसलिए आप इसे नियमित रूप से खर्च नहीं करना चाहेंगे। स्थिर कॉइन आपको इथेरियम पर उपयोग किए जा सकने वाले स्थिर धन तक पहुंच प्रदान करने के लिए पारंपरिक मुद्राओं के मूल्य को दर्शाती हैं।"
+  "page-stablecoins-why-stablecoins-body": "बिटकॉइन की तरह ETH की कीमत अस्थिर होती है, क्योंकि यह नई तकनीक है। इसलिए आप इसे नियमित रूप से खर्च नहीं करना चाहेंगे। स्थिर कॉइन आपको इथेरियम पर उपयोग किए जा सकने वाले स्थिर धन तक पहुंच प्रदान करने के लिए पारंपरिक मुद्राओं के मूल्य को दर्शाती हैं।",
+  "page-stablecoins-more-defi-button": "विकेंद्रीकृत वित्त (DeFi) पर अधिक जानकारी",
+  "page-stablecoins-tools-title": "स्थिर मुद्रा के बारे में अधिक जानें",
+  "page-stablecoins-tools-stablecoinswtf-description": "Stablecoins.wtf एक डैशबोर्ड उपलब्ध कराता है, जहाँ सबसे प्रमुख स्थिर मुद्रा का पुराना डेटा, आंकड़े और शैक्षणिक सामग्री उपलब्ध होती है।"
 }

@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
 import styled from "@emotion/styled"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
 import Link from "./Link"
 
@@ -70,7 +70,7 @@ export interface IProps {
   children?: React.ReactNode
   to: string
   alt?: string
-  image: string
+  image: IGatsbyImageData | string
   title: ReactNode
   description?: ReactNode
   className?: string
@@ -89,7 +89,8 @@ const ActionCard: React.FC<IProps> = ({
   isRight,
   isBottom = true,
 }) => {
-  const isImageURL = typeof image === "string" && image.includes("http")
+  const isImageURL = typeof image === "string"
+
   return (
     <Card to={to} className={className} hideArrow={true}>
       <ImageWrapper
@@ -97,7 +98,7 @@ const ActionCard: React.FC<IProps> = ({
         isBottom={isBottom}
         className="action-card-image-wrapper"
       >
-        {!isImageURL && <Image image={image} alt={alt} />}
+        {!isImageURL && <Image image={image} alt={alt || ""} />}
         {isImageURL && (
           <img src={image} alt={alt} className="action-card-image" />
         )}

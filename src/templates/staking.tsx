@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { MDXProvider } from "@mdx-js/react"
 import styled from "@emotion/styled"
 
@@ -50,6 +50,7 @@ import StakingGuides from "../components/Staking/StakingGuides"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Context } from "../types"
 import { Lang } from "../utils/languages"
+import { getImage } from "../utils/image"
 
 const Page = styled.div`
   display: flex;
@@ -418,8 +419,8 @@ const StakingPage = ({
           />
         </TitleCard>
         <Image
-          image={getImage(mdx.frontmatter.image)}
-          alt={mdx.frontmatter.alt}
+          image={getImage(mdx.frontmatter.image)!}
+          alt={mdx.frontmatter.alt || ""}
           objectFit="contain"
         />
       </HeroContainer>
