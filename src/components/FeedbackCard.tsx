@@ -40,6 +40,10 @@ const ButtonContainer = styled.div`
   gap: 1rem;
 `
 
+const ThumbsDown = styled(ThumbsUp)`
+  transform: scaleY(-1);
+`
+
 export interface IProps {
   prompt?: string
   isArticle?: boolean
@@ -107,7 +111,7 @@ const FeedbackCard: React.FC<IProps> = ({
               </Button>
               <Button
                 variant="outline-color"
-                leftIcon={<ThumbsUp className="flip" />}
+                leftIcon={<ThumbsDown />}
                 onClick={() => handleSubmit(false)}
               >
                 <Translation id="no" />
