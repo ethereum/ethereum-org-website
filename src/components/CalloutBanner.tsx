@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import { Flex, Heading, Text } from "@chakra-ui/react"
+import { Flex, Heading, Image, Text } from "@chakra-ui/react"
 
 import Translation from "./Translation"
 import { TranslationKey } from "../utils/translations"
@@ -21,18 +21,6 @@ const Content = styled.div`
   // @media (max-width: ${(props) => props.theme.breakpoints.s}) {
   //   padding-left: 0;
   // }
-`
-
-const Image = styled(GatsbyImage)<{ maximagewidth?: number }>`
-  align-self: center; /* prevents crop */
-  width: 100%;
-  max-width: ${(props) => `${props.maximagewidth}px`};
-  margin-top: -6rem;
-  margin-bottom: -6rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 0rem;
-    margin-top: -6rem;
-  }
 `
 
 export interface IProps {
@@ -68,10 +56,15 @@ const CalloutBanner: React.FC<IProps> = ({
     id={id}
   >
     <Image
+      as={GatsbyImage}
       image={image}
       alt={alt}
-      maximagewidth={maxImageWidth}
       objectFit="contain"
+      alignSelf="center"
+      w="full"
+      maxW={`${maxImageWidth}px`}
+      mt={-24}
+      mb={{ base: 0, lg: -24 }}
     />
     <Content>
       <Heading as="h2" mt={0} fontSize="2rem" lineHeight="1.4">
