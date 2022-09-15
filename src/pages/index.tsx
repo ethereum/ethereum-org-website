@@ -401,15 +401,6 @@ const StyledCardList = styled(TitleCardList)`
   }
 `
 
-const StyledCalloutBanner = styled(CalloutBanner)`
-  margin: 8rem 0 4rem;
-  padding: 2rem 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 4rem;
-    padding: 2rem;
-  }
-`
-
 const HomePage = ({
   data,
   pageContext: { language = "en" },
@@ -791,7 +782,12 @@ const HomePage = ({
             )
           })}
         </StyledCardContainer>
-        <StyledCalloutBanner
+        <CalloutBanner
+          mt={24}
+          mx={0}
+          mb={16}
+          py={8}
+          px={{ base: 8, lg: 16 }}
           titleKey={"page-index-contribution-banner-title"}
           descriptionKey={"page-index-contribution-banner-description"}
           image={getImage(data.finance)!}
@@ -812,7 +808,7 @@ const HomePage = ({
               <StyledIcon name="github" /> GitHub
             </StyledButtonLink>
           </ButtonRow>
-        </StyledCalloutBanner>
+        </CalloutBanner>
       </StyledContent>
     </Page>
   )

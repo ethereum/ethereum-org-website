@@ -118,11 +118,6 @@ const ContributeCard = styled.div`
   }
 `
 
-const StyledCallout = styled(CalloutBanner)`
-  margin-left: 0rem;
-  margin-right: 0rem;
-`
-
 const ContributeButton = styled(ButtonLink)`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 100%;
@@ -320,7 +315,9 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
           </CardContainer>
         </Vision>
       </Content>
-      <StyledCallout
+      <CalloutBanner
+        ml={0}
+        mr={0}
         image={getImage(data.oldship)!}
         alt={translateMessageId("page-eth-whats-eth-hero-alt", intl)}
         titleKey={"page-upgrades-dive"}
@@ -331,7 +328,7 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
             <Translation id="page-upgrades-vision-btn" />
           </ButtonLink>
         </div>
-      </StyledCallout>
+      </CalloutBanner>
       <Content>
         <H2>
           <Translation id="page-upgrades-the-upgrades" />

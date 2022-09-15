@@ -153,16 +153,6 @@ const StyledGrayContainer = styled(GrayContainer)`
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
 `
 
-const StyledCalloutBanner = styled(CalloutBanner)`
-  background: transparent;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-    padding: 0rem;
-    padding-top: 4rem;
-    margin-left: 0rem;
-  }
-`
-
 type Layer = "el" | "cl"
 
 type Client = {
@@ -455,7 +445,12 @@ const GetInvolvedPage = ({
         {getClientCards("cl")}
       </Content>
       <Staking>
-        <StyledCalloutBanner
+        <CalloutBanner
+          bg="transparent"
+          w={{ base: "full", md: "null" }}
+          p={{ base: 0, md: "null" }}
+          pt={{ base: 16, md: "null" }}
+          ml={{ base: 0, md: "null" }}
           image={getImage(data.rhino)!}
           alt={translateMessageId("page-staking-image-alt", intl)}
           titleKey={"page-upgrades-get-involved-stake"}
@@ -466,7 +461,7 @@ const GetInvolvedPage = ({
               <Translation id="page-upgrades-get-involved-stake-eth" />
             </ButtonLink>
           </div>
-        </StyledCalloutBanner>
+        </CalloutBanner>
       </Staking>
       <StyledGrayContainer>
         <Content>

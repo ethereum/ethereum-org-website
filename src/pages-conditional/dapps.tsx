@@ -131,13 +131,6 @@ const StyledInfoBanner = styled(InfoBanner)`
   }
 `
 
-const StyledCalloutBanner = styled(CalloutBanner)`
-  margin: 8rem 0 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 0;
-  }
-`
-
 const MobileOptionContainer = styled(OptionContainer)`
   text-align: center;
   @media (min-width: ${(props) => props.theme.breakpoints.m}) {
@@ -1372,7 +1365,10 @@ const DappsPage = ({
                 />
               </RightColumn>
             </TwoColumnContent>
-            <StyledCalloutBanner
+            <CalloutBanner
+              mt={24}
+              mx={0}
+              mb={{ base: 0, lg: 16 }}
               titleKey={"page-dapps-wallet-callout-title"}
               descriptionKey={"page-dapps-wallet-callout-description"}
               image={getImage(data.wallet)!}
@@ -1387,7 +1383,7 @@ const DappsPage = ({
                   <Translation id="page-dapps-wallet-callout-button" />
                 </ButtonLink>
               </div>
-            </StyledCalloutBanner>
+            </CalloutBanner>
           </Content>
         )}
         {selectedCategory === CategoryType.GAMING && (
