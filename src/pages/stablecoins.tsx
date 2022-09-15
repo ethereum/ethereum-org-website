@@ -167,10 +167,6 @@ const H3 = styled.h3`
   }
 ` */
 
-const StyledCalloutBanner = styled(CalloutBanner)`
-  margin: 2rem 0 4rem;
-`
-
 const FullWidthContainer = styled(Page)`
   padding: 0rem 2rem;
   padding-bottom: 4rem;
@@ -792,7 +788,9 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
       </FullWidthContainer>
       <Divider />
       <Content>
-        <StyledCalloutBanner
+        <CalloutBanner
+          mt={8}
+          mb={16}
           titleKey={"page-stablecoins-stablecoins-dapp-callout-title"}
           descriptionKey={
             "page-stablecoins-stablecoins-dapp-callout-description"
@@ -812,7 +810,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
               <Translation id="page-stablecoins-more-defi-button" />
             </ButtonLinkWrap>
           </ButtonLinkContainer>
-        </StyledCalloutBanner>
+        </CalloutBanner>
         <h2>
           <Translation id="page-stablecoins-save-stablecoins" />
         </h2>
