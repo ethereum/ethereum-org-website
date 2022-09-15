@@ -1,29 +1,11 @@
 import React from "react"
-import styled from "@emotion/styled"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import { Flex, Heading, Image, Text } from "@chakra-ui/react"
+import { Flex, FlexProps, Heading, Image, Text } from "@chakra-ui/react"
 
 import Translation from "./Translation"
 import { TranslationKey } from "../utils/translations"
 
-const Content = styled.div`
-  // padding-left: 2rem;
-  // flex: 1 0 50%;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 2rem;
-    // padding-left: 1rem;
-    // flex-direction: column;
-    // width: 100%;
-  }
-  // @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-  //   padding-left: 0;
-  // }
-`
-
-export interface IProps {
+export interface IProps extends FlexProps {
   children?: React.ReactNode
   image: IGatsbyImageData
   maxImageWidth?: number
@@ -66,15 +48,28 @@ const CalloutBanner: React.FC<IProps> = ({
       mt={-24}
       mb={{ base: 0, lg: -24 }}
     />
-    <Content>
-      <Heading as="h2" mt={0} fontSize="2rem" lineHeight="1.4">
+    <Flex
+      flexGrow={1}
+      flexShrink={0}
+      flexBasis="50%"
+      direction="column"
+      justifyContent="center"
+      pl={{ base: 0, sm: 4, lg: 8 }}
+      w={{ base: "full", lg: "null" }}
+    >
+      <Heading
+        as="h2"
+        mt={0}
+        fontSize={{ base: "2xl", sm: "2rem" }}
+        lineHeight="1.4"
+      >
         <Translation id={titleKey} />
       </Heading>
       <Text fontSize="xl" w="90%" lineHeight="140%" mb={8} color="text200">
         <Translation id={descriptionKey} />
       </Text>
       {children}
-    </Content>
+    </Flex>
   </Flex>
 )
 

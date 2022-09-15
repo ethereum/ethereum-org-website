@@ -791,6 +791,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
         <CalloutBanner
           mt={8}
           mb={16}
+          mx={0}
           titleKey={"page-stablecoins-stablecoins-dapp-callout-title"}
           descriptionKey={
             "page-stablecoins-stablecoins-dapp-callout-description"
