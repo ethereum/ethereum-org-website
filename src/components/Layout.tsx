@@ -195,7 +195,9 @@ const Layout: React.FC<IProps> = ({
                 </div>
               </BannerNotification>
               <SkipLinkAnchor id="main-content" />
-              {isMergePage && <Centered id="confetti-easter-egg" />}
+              {(isMergePage || isHomepage) && (
+                <Centered id="confetti-easter-egg" />
+              )}
               <MainContainer>
                 {shouldShowSideNav && (
                   <VisuallyHidden isHidden={isZenMode}>
