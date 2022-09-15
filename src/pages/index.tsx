@@ -569,7 +569,6 @@ const HomePage = ({
         alt={translateMessageId("page-index-hero-image-alt", intl)}
         loading="eager"
       />
-      <div id="confetti-easter-egg" />
       <Morpher />
       <Header>
         <H1>
