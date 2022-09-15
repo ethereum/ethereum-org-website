@@ -103,6 +103,7 @@ Explore projects and join the DeSci community.
 - [OceanDAO: DAO governed funding for data-related science](https://oceanprotocol.com/dao)
 - [Opscientia: open decentralized science workflows](https://opsci.io/research/)
 - [IdeaMarkets: enabling decentralized scientifc credibility](https://ideamarket.io/)
+- [HairDAO: funding early stage androgenetic alopecia (male/female partnern hair loss) research](hairdao.xyz)  
 
 ## Further reading {#further-reading}
 
