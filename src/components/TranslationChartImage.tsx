@@ -18,6 +18,7 @@ const TranslationChartImage: React.FC<IProps> = () => {
 
   const Image = styled(GatsbyImage)`
     background-size: contain;
+    object-fit: contain;
 
     @media (max-width: ${(props) => props.theme.breakpoints.s}) {
       max-height: 300px;
@@ -32,7 +33,7 @@ const TranslationChartImage: React.FC<IProps> = () => {
       ) {
         childImageSharp {
           gatsbyImageData(
-            height: 100
+            height: 500
             layout: FIXED
             placeholder: BLURRED
             quality: 100
@@ -44,7 +45,7 @@ const TranslationChartImage: React.FC<IProps> = () => {
       ) {
         childImageSharp {
           gatsbyImageData(
-            height: 100
+            height: 500
             layout: FIXED
             placeholder: BLURRED
             quality: 100
