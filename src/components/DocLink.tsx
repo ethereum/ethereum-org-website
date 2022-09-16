@@ -38,7 +38,7 @@ const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
           <Flex align="center">
             <Emoji fontSize="md" mr={4} text=":page_with_curl:" />
           </Flex>
-          <Box flex={1} flexDirection="column" color="text">
+          <Box flex={1} flexDirection="column">
             <LinkOverlay
               href={to}
               as={Link}
@@ -53,7 +53,6 @@ const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
           </Box>
           <Icon
             as={AiOutlineArrowRight}
-            color="text"
             alignSelf="center"
             minWidth="2rem"
             boxSize={6}
