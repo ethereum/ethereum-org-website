@@ -3,7 +3,6 @@ title: Development Networks
 description: An overview of development networks and the tools available to help build Ethereum applications.
 lang: en
 sidebar: true
-preMergeBanner: true
 ---
 
 When building an Ethereum application with smart contracts, you'll want to run it on a local network to see how it works before deploying it.
@@ -20,7 +19,7 @@ Development networks are essentially Ethereum clients (implementations of Ethere
 
 **Why not just run a standard Ethereum node locally?**
 
-You _could_ [run a node](/developers/docs/nodes-and-clients/#running-your-own-node) (like Geth, Erigon, or Nethermind) but since development networks are purpose-built for development, they often come packed with convenient features like:
+You _could_ [run a node](/developers/docs/nodes-and-clients/#running-your-own-node) but since development networks are purpose-built for development, they often come packed with convenient features like:
 
 - Deterministically seeding your local blockchain with data (e.g. accounts with ETH balances)
 - Instantly mining blocks with each transaction it receives, in order and with no delay
@@ -57,9 +56,9 @@ Some consensus clients have built-in tools for spinning up local Beacon chains f
 - [Local testnet using Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
 - [Local testnet using Nimbus](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
 
-### Public Beacon Test-chains {#public-beacon-testchains}
+### Public Ethereum Test-chains {#public-beacon-testchains}
 
-There are also public test implementations of the Beacon Chain. The recommended testnet with long-term support is Goerli (which will merge with the Prater chain in August 2022). The Ropsten Chain was recently merged with its own Beacon Chain and is currently still available for testing consensus client implementations and post-merge application development.
+There are also three current public test implementations of Ethereum. The recommended testnet with long-term support is Goerli. Sepolia is also expected to be maintained for the foreseeable future, but the validator set is permissioned meaning there is no general access to new validators on this testnet. The Ropsten chain is expected to be deprecated.
 
 - [Goerli Staking Launchpad](https://goerli.launchpad.ethereum.org/)
 - [Ropsten Staking Launchpad](https://ropsten.launchpad.ethereum.org/)

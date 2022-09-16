@@ -27,7 +27,6 @@ import {
   SloganGradient,
 } from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
-import BugBountyBanner from "../components/Banners/BugBountyBanner"
 import { Context } from "../types"
 import { getImage } from "../utils/image"
 
@@ -399,8 +398,6 @@ const BugBountiesPage = ({
           intl
         )}
       />
-      {/* TODO: Remove September 8 */}
-      <BugBountyBanner />
       <Content>
         <HeroCard>
           <HeroContainer>

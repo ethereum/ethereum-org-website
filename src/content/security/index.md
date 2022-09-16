@@ -214,6 +214,14 @@ As a general rule, staff will never communicate with you through private, unoffi
   </div>
 </InfoBanner>
 
+### 'Eth2' token scam {#eth2-token-scam}
+
+In the run-up to [The Merge](/upgrades/merge/), scammers took advantage of the confusion around the term 'Eth2' to try and get users to redeem their ETH for an 'ETH2' token. There is no 'ETH2', and no other legitimate token was introduced with The Merge. The ETH that you owned before The Merge is the same ETH now. There is **no need to take any action related to your ETH to account for the switch from proof-of-work to proof-of-stake**.
+
+Scammers may appear as "support", telling you that if you deposit your ETH, you will receive back 'ETH2'. There is no [official Ethereum support](/community/support/), and there is no new token. Never share your wallet seed phrase with anyone.
+
+_Note: There are derivative tokens/tickers that may represent staked ETH (ie. rETH from Rocket Pool, stETH from Lido, ETH2 from Coinbase), but these are not something you need to "migrate to."_
+
 ### Phishing scams {#phishing-scams}
 
 Phishing scams are another increasingly common angle that scammers will use to attempt to steal your wallet's funds.
@@ -240,7 +248,7 @@ These fraudulent brokers find their targets by using fake accounts on YouTube to
 
 ### Crypto mining pool scams {#mining-pool-scams}
 
-Mining pool scams involve people contacting you unsolicited, and claiming that you can make large returns by joining an Ethereum mining pool. The scammer will make claims and stay in contact with you for however long it takes. Essentially, the scammer will try and convince you that when you join an Ethereum mining pool, your cryptocurrency will be used to create ETH and that you will be paid dividends in the form of ETH. What will end up happening is, you will notice that your cryptocurrency is making small returns. This is simply to bait you into investing more. Eventually, all of your funds will be sent to an unknown address and the scammer will either disappear or in some cases will continue to stay in touch as has happened in a recent case.
+As of September 2022, mining on Ethereum is no longer possible. However, mining pool scams still exist. Mining pool scams involve people contacting you unsolicited and claiming that you can make large returns by joining an Ethereum mining pool. The scammer will make claims and stay in contact with you for however long it takes. Essentially, the scammer will try and convince you that when you join an Ethereum mining pool, your cryptocurrency will be used to create ETH and that you will be paid dividends in the form of ETH. What will end up happening is, you will notice that your cryptocurrency is making small returns. This is simply to bait you into investing more. Eventually, all of your funds will be sent to an unknown address, and the scammer will either disappear or in some cases will continue to stay in touch as has happened in a recent case.
 
 Bottom line, be wary of people who contact you on social media asking for you to be part of a mining pool. Once you lose your crypto, it is gone.
 
@@ -251,14 +259,6 @@ Some things to remember:
 - Rarely, if ever, are such schemes legitimate. If they were, they would probably be mainstream and you will have heard of them.
 
 [Man loses $200k in mining pool scam](https://www.reddit.com/r/CoinBase/comments/r0qe0e/scam_or_possible_incredible_payout/)
-
-### 'Eth2' token scam {#eth2-token-scam}
-
-With [The Merge](/upgrades/merge/) coming in 2022, scammers have taken advantage of the confusion around the term 'Eth2' to try and get users to redeem their ETH for an 'ETH2' token. There is no 'ETH2' or any other new token introduced with The Merge. The ETH that you own today will continue to be the same ETH after The Merge, and there is no need to do any swaps of your ETH for The Merge.
-
-Scammers may appear in the form of "support" telling you if you deposit your ETH you will receive back 'ETH2'. There is no [official Ethereum support](/community/support/), and there is no new token. Never share your wallet seed phrase with anyone.
-
-_Note: There are derivative tokens/tickers that may represent staked ETH (ie. rETH from Rocket Pool, stETH from Lido, ETH2 from Coinbase), but these are not something you need to "migrate to."_
 
 ### Airdrop scams {#airdrop-scams}
 

@@ -3,7 +3,6 @@ title: Transactions
 description: An overview of Ethereum transactions – how they work, their data structure, and how to send them via an application.
 lang: en
 sidebar: true
-preMergeBanner: true
 ---
 
 Transactions are cryptographically signed instructions from accounts. An account will initiate a transaction to update the state of the Ethereum network. The simplest transaction is transferring ETH from one account to another.
@@ -19,9 +18,9 @@ An Ethereum transaction refers to an action initiated by an externally-owned acc
 ![Diagram showing a transaction cause state change](./tx.png)
 _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-Transactions, which change the state of the EVM, need to be broadcast to the whole network. Any node can broadcast a request for a transaction to be executed on the EVM; after this happens, a miner will execute the transaction and propagate the resulting state change to the rest of the network.
+Transactions, which change the state of the EVM, need to be broadcast to the whole network. Any node can broadcast a request for a transaction to be executed on the EVM; after this happens, a validator will execute the transaction and propagate the resulting state change to the rest of the network.
 
-Transactions require a fee and must be mined to become valid. To make this overview simpler we'll cover gas fees and mining elsewhere.
+Transactions require a fee and must be included in a validated block. To make this overview simpler we'll cover gas fees and validation elsewhere.
 
 A submitted transaction includes the following information:
 
@@ -31,10 +30,10 @@ A submitted transaction includes the following information:
 - `value` – amount of ETH to transfer from sender to recipient (in WEI, a denomination of ETH)
 - `data` – optional field to include arbitrary data
 - `gasLimit` – the maximum amount of gas units that can be consumed by the transaction. Units of gas represent computational steps
-- `maxPriorityFeePerGas` - the maximum amount of gas to be included as a tip to the miner
+- `maxPriorityFeePerGas` - the maximum amount of gas to be included as a tip to the validator
 - `maxFeePerGas` - the maximum amount of gas willing to be paid for the transaction (inclusive of `baseFeePerGas` and `maxPriorityFeePerGas`)
 
-Gas is a reference to the computation required to process the transaction by a miner. Users have to pay a fee for this computation. The `gasLimit`, and `maxPriorityFeePerGas` determine the maximum transaction fee paid to the miner. [More on Gas](/developers/docs/gas/).
+Gas is a reference to the computation required to process the transaction by a validator. Users have to pay a fee for this computation. The `gasLimit`, and `maxPriorityFeePerGas` determine the maximum transaction fee paid to the validator. [More on Gas](/developers/docs/gas/).
 
 The transaction object will look a little like this:
 
@@ -159,7 +158,7 @@ Alice's account will be credited **+1.0 ETH**
 
 The base fee will be burned **-0.00399 ETH**
 
-Miner keeps the tip **+0.000210 ETH**
+Validator keeps the tip **+0.000210 ETH**
 
 Gas is required for any smart contract interaction too.
 
@@ -175,11 +174,10 @@ Once the transaction has been submitted the following happens:
 1. Once you send a transaction, cryptography generates a transaction hash:
    `0x97d99bc7729211111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`
 2. The transaction is then broadcast to the network and included in a pool with lots of other transactions.
-3. A miner must pick your transaction and include it in a block in order to verify the transaction and consider it "successful".
-   - You may end up waiting at this stage if the network is busy and miners aren't able to keep up.
-4. Your transaction will receive "confirmations". The number of confirmations is the number of blocks created since the block that included your transaction. The higher the number, the greater the certainty that the network processed and recognized the transaction.
-   - Recent blocks may get re-organized, giving the impression the transaction was unsuccessful; however, the transaction may still be valid but included in a different block.
-   - The probability of a re-organization diminishes with every subsequent block mined, i.e. the greater the number of confirmations, the more immutable the transaction is.
+3. A validator must pick your transaction and include it in a block in order to verify the transaction and consider it "successful".
+4. As time passes the block containing your transaction will be upgraded to "justified" then "finalized". These upgrades make it much
+   more certain that your transaction was successful and will never be altered. Once a block is "finalized" it could only ever be changed
+   by an attack that would cost many billions of dollars.
 
 ## A visual demo {#a-visual-demo}
 
@@ -217,4 +215,3 @@ _Know of a community resource that helped you? Edit this page and add it!_
 - [Accounts](/developers/docs/accounts/)
 - [Ethereum virtual machine (EVM)](/developers/docs/evm/)
 - [Gas](/developers/docs/gas/)
-- [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
