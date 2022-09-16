@@ -42,6 +42,10 @@ Read more about the ethereum.org Translation Program [mission and vision](/contr
 
 ### Acknowledgements {#acknowledgements}
 
+Image test
+
+<TranslationChartImage />
+
 Ethereum.org is translated by thousands of community members and they are the key part of the Translation Program.
 We want to acknowledge our translators and support them on their career paths. Here are some of our translator acknowledgements:
 
