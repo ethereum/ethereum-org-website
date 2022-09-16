@@ -61,7 +61,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 - [chainstack.com](https://chainstack.com)
 - [Documentation](https://docs.chainstack.com)
-- [Ethereum API reference]()
+- [Ethereum API reference](https://docs.chainstack.com/api/ethereum/ethereum-api-reference)
 
 **QuickNode -** **_Blockchain Infrastructure as a Service._**
 
