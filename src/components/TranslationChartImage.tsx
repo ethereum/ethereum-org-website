@@ -11,29 +11,34 @@ const TranslationChartImage: React.FC<IProps> = () => {
   const isDarkTheme = theme.isDark
 
   const data = useStaticQuery(graphql`
-    query {
-      pageviewsDark: file(
-        relativePath: { eq: "translation-program/pageviews-dark.png" }
-      ) {
-        gatsbyImageData(
-          height: 100
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
+    {
       pageviewsLight: file(
         relativePath: { eq: "translation-program/pageviews-light.png" }
       ) {
-        gatsbyImageData(
-          height: 100
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
+        childImageSharp {
+          gatsbyImageData(
+            height: 100
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
+        }
+      }
+      pageviewsDark: file(
+        relativePath: { eq: "translation-program/pageviews-dark.png" }
+      ) {
+        childImageSharp {
+          gatsbyImageData(
+            height: 100
+            layout: FIXED
+            placeholder: BLURRED
+            quality: 100
+          )
+        }
       }
     }
   `)
+
   const ethImage = isDarkTheme ? data.pageviewsDark : data.pageviewsLight
 
   return (
