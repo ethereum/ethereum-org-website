@@ -222,7 +222,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
   - Features
     - Dedicated and Share nodes
     - Dashboard
-    - Hosting off AWS on multiple hosting providers accross different locations in Latin America
+    - Hosting off AWS on multiple hosting providers across different locations in Latin America
     - Prysm and Lighthouse clients
 - [**SettleMint**](https://console.settlemint.com/)
   - [Docs](https://docs.settlemint.com/)
