@@ -40,9 +40,11 @@ const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
               <Emoji fontSize="md" mr={4} text=":page_with_curl:" />
             </Flex>
             <Box flex={1} flexDirection="column" color="text">
+            <LinkOverlay href={to} isExternal={isExternal}>
               <Text color="text300" fontWeight="semibold" margin={0}>
                 {children}
               </Text>
+            </LinkOverlay>
             </Box>
             <Icon
               as={AiOutlineArrowRight}
