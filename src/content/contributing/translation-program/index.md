@@ -40,7 +40,7 @@ Read more about the ethereum.org Translation Program [mission and vision](/contr
 - [**48** languages live on site](/languages/)
 - [**2.2 million** words translated in 2022 so far](/contributing/translation-program/acknowledgements/)
 
-#### Acknowledgements {#acknowledgements}
+### Acknowledgements {#acknowledgements}
 
 Ethereum.org is translated by thousands of community members and they are the key part of the Translation Program.
 We want to acknowledge our translators and support them on their career paths. Here are some of our translator acknowledgements:
