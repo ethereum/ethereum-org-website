@@ -8826,6 +8826,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "slf188",
+      "name": "菲利",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49417481?v=4",
+      "profile": "huggingface.co/slf188",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
