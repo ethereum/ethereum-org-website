@@ -1404,6 +1404,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="huggingface.co/slf188"><img src="https://avatars.githubusercontent.com/u/49417481?v=4?s=100" width="100px;" alt=""/><br /><sub><b>菲利</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=slf188" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/DamitusThyYeetus123"><img src="https://avatars.githubusercontent.com/u/108782125?v=4?s=100" width="100px;" alt=""/><br /><sub><b>DamitusThyYeetus123</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=DamitusThyYeetus123" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/matusame"><img src="https://avatars.githubusercontent.com/u/97032288?v=4?s=100" width="100px;" alt=""/><br /><sub><b>matusame</b></sub></a><br /><a href="#translation-matusame" title="Translation">🌍</a></td>
+      <td align="center"><a href="https://github.com/laurentlucian"><img src="https://avatars.githubusercontent.com/u/33508364?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lohan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=laurentlucian" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
