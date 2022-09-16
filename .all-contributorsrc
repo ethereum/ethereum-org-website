@@ -8844,6 +8844,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "matusame",
+      "name": "matusame",
+      "avatar_url": "https://avatars.githubusercontent.com/u/97032288?v=4",
+      "profile": "https://github.com/matusame",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
