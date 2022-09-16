@@ -15,18 +15,22 @@ const TranslationChartImage: React.FC<IProps> = () => {
       pageviewsDark: file(
         relativePath: { eq: "translation-program/pageviews-dark.png" }
       ) {
-        height: 100
-        layout: FIXED
-        placeholder: BLURRED
-        quality: 100
+        gatsbyImageData(
+          height: 100
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
       pageviewsLight: file(
         relativePath: { eq: "translation-program/pageviews-light.png" }
       ) {
-        height: 100
-        layout: FIXED
-        placeholder: BLURRED
-        quality: 100
+        gatsbyImageData(
+          height: 100
+          layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
   `)
