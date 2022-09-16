@@ -40,12 +40,6 @@ Read more about the ethereum.org Translation Program [mission and vision](/contr
 - [**48** languages live on site](/languages/)
 - [**2.2 million** words translated in 2022 so far](/contributing/translation-program/acknowledgements/)
 
-<InfoBanner emoji=":tada:">
-  Check out our <Link to="/contributing/translation-program/acknowledgements/">Translator Acknowledgements</Link> page, and{" "}
-  claim your POAP token! If you translated ethereum.org in 2022, there's a unique POAP waiting for you.{" "}
-  <Link to="/contributing/translation-program/acknowledgements/#poap">More on POAPs</Link>
-</InfoBanner>
-
 #### Acknowledgements {#acknowledgements}
 
 Ethereum.org is translated by thousands of community members and they are the key part of the Translation Program.
