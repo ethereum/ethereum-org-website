@@ -31,7 +31,6 @@ import SimpleTokenContent from "!!raw-loader!../data/SimpleToken.sol"
 import CreateWalletContent from "!!raw-loader!../data/CreateWallet.js"
 import SimpleDomainRegistryContent from "!!raw-loader!../data/SimpleDomainRegistry.sol"
 import { useConsoleEasterEgg } from "../hooks/useConsoleEasterEgg"
-import { useConfetti } from "../hooks/useConfetti"
 
 const Hero = styled(GatsbyImage)`
   width: 100%;
@@ -426,7 +425,6 @@ const HomePage = ({
   }
 
   useConsoleEasterEgg()
-  useConfetti("confetti-easter-egg")
 
   const cards = [
     {
@@ -571,7 +569,6 @@ const HomePage = ({
         alt={translateMessageId("page-index-hero-image-alt", intl)}
         loading="eager"
       />
-      <div id="confetti-easter-egg" />
       <Morpher />
       <Header>
         <H1>
