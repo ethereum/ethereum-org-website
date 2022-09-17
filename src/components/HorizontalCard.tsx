@@ -25,7 +25,7 @@ const HorizontalCard: React.FC<IProps> = ({
     borderRadius="base"
     className={className}
   >
-    <Emoji size={emojiSize} text={emoji} />
+    <Emoji fontSize={emojiSize} text={emoji} />
     <Box display="flex" ml="8">
       <Text fontSize="lg" />
       <Box as="p" p="0.8" mt="-4" mb="2" />
