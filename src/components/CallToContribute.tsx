@@ -5,16 +5,7 @@ import ButtonLink from "./ButtonLink"
 import Icon from "./Icon"
 
 import Translation from "./Translation"
-
-const StyledCard = styled.div`
-  display: flex;
-  background: ${(props) => props.theme.colors.ednBackground};
-  align-items: center;
-  margin-top: 2rem;
-  border: 1px solid ${(props) => props.theme.colors.primary};
-  border-radius: 4px;
-  box-shadow: inset 0 -2px 0 0 ${(props) => props.theme.colors.primary400};
-`
+import { Flex } from "@chakra-ui/react"
 
 const Column = styled.div`
   flex: 1 1 50%;
@@ -75,7 +66,16 @@ export interface IProps {
 }
 
 const CallToContribute: React.FC<IProps> = ({ editPath }) => (
-  <StyledCard>
+  <Flex
+    bg="ednBackground"
+    alignItems="center"
+    mt={8}
+    borderWidth="1px"
+    borderStyle="solid"
+    borderColor="primary"
+    borderRadius="base"
+    boxShadow="inset 0 -2px 0 0 primary400"
+  >
     <ImageColumn>
       ░░░░░░░░░▄░░░░░░░░░░░░░░▄░░░░ ░░░░░░░░▌▒█░░░░░░░░░░░▄▀▒▌░░░
       ░░░░░░░░▌▒▒█░░░░░░░░▄▀▒▒▒▐░░░ ░░░░░░░▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐░░░
@@ -117,7 +117,7 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => (
         </span>
       </GithubButton>
     </Column>
-  </StyledCard>
+  </Flex>
 )
 
 export default CallToContribute
