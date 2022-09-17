@@ -78,7 +78,7 @@ There are many similarities between these pooled staking options and centralized
 
 Unlike centralized exchanges, many other pooled staking options utilize smart contracts and/or liquidity tokens, which are usually ERC-20 tokens that can be held in your own wallet, and bought or sold just like any other token. This offers a layer of sovereignty and security by giving you control over your tokens, but still does not give you direct control over the validator client attesting on your behalf in the background.
 
-Some pooling options are more decentralized than others when it comes to the nodes that back them. To promote the health and decentralization of the network, stakers are always encourage to select a pooling service that enables a permissionless decentralized set of node operators.
+Some pooling options are more decentralized than others when it comes to the nodes that back them. To promote the health and decentralization of the network, stakers are always encouraged to select a pooling service that enables a permissionless decentralized set of node operators.
 </ExpandableCard>
 
 ## Further reading {#further-reading}
