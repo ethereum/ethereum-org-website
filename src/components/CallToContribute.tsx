@@ -88,7 +88,15 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => (
       ░░░░▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀░░░ ░░░░░░▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀░░░░░
       ░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▀▀░░░░░░░░
     </ImageColumn>
-    <Column>
+    <Flex
+      direction="column"
+      flexGrow={1}
+      flexShrink={1}
+      flexBasis="50%"
+      p={4}
+      color="text"
+      textAlign={{ base: "center", lg: "left" }}
+    >
       <Title>
         <Translation id="page-calltocontribute-title" />
       </Title>
@@ -116,7 +124,7 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => (
           <Translation id="page-calltocontribute-span" />
         </span>
       </GithubButton>
-    </Column>
+    </Flex>
   </Flex>
 )
 
