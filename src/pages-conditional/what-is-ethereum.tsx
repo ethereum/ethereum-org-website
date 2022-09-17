@@ -35,6 +35,7 @@ import AdoptionChart from "../components/AdoptionChart"
 import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
 import Slider, { EmblaSlide } from "../components/Slider"
 import FeedbackCard from "../components/FeedbackCard"
+import Quiz from "../components/Quiz/Quiz"
 
 import {
   getLocaleForNumberFormat,
@@ -52,6 +53,9 @@ import { GATSBY_FUNCTIONS_PATH } from "../constants"
 import { Context } from "../types"
 import StatErrorMessage from "../components/StatErrorMessage"
 import StatLoadingMessage from "../components/StatLoadingMessage"
+import { Center } from "@chakra-ui/react"
+
+import quizzes from "../data/learnQuzzes/index"
 
 const Slogan = styled.p`
   font-style: normal;
@@ -942,6 +946,18 @@ const WhatIsEthereumPage = ({
           </StyledCallout>
         </CardContainer>
       </Content>
+
+      <Content>
+        <Center w="100%">
+          <h2>
+            <Translation id="quiz-test-your-knowledge" />
+          </h2>
+        </Center>
+        <Center w="100%">
+          <Quiz quiz={quizzes["what-is-ethereum"]} />
+        </Center>
+      </Content>
+
       <Content>
         <FeedbackCard />
       </Content>
