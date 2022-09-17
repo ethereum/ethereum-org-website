@@ -73,7 +73,7 @@ Réseau de test de preuve d'autorité pour ceux qui exécutent des clients OpenE
 - [Robinet Chainlink](https://faucets.chain.link/)
 - [Robinet Paradigm](https://faucet.paradigm.xyz/)
 
-#### Optimisic Kovan {#optimistic-kovan}
+#### Optimistic Kovan {#optimistic-kovan}
 
 Un réseau de test pour [Optimism](https://www.optimism.io/).
 

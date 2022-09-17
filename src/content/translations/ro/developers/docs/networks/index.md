@@ -73,7 +73,7 @@ Un testnet bazat pe dovada-autorității pentru cei care rulează clienții Open
 - [Chainlink faucet](https://faucets.chain.link/)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
 
-#### Optimisic Kovan {#optimistic-kovan}
+#### Optimistic Kovan {#optimistic-kovan}
 
 A testnet for [Optimism](https://www.optimism.io/).
 
