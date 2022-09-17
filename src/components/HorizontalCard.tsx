@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react"
-import Emoji from "./OldEmoji"
+import Emoji from "./Emoji"
 import { Text, Box } from "@chakra-ui/react"
 
 export interface IProps {
