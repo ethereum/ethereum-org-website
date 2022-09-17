@@ -244,12 +244,12 @@ const WhatIsEthereumPage = ({
 
   const localeForStatsBoxNumbers = getLocaleForNumberFormat(intl.locale as Lang)
 
-  const txCount = useFetchStat<{
-    result: Array<{ unixTimeStamp: string; transactionCount: number }>
-  }>(
+  const txCount = useFetchStat<
+    Array<{ unixTimeStamp: string; transactionCount: number }>
+  >(
     `${GATSBY_FUNCTIONS_PATH}/txs`,
     (response) => {
-      return response.result
+      return response
         .map(({ unixTimeStamp, transactionCount }) => ({
           timestamp: parseInt(unixTimeStamp) * 1000, // unix milliseconds
           value: transactionCount,
