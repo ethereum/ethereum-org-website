@@ -1,28 +1,45 @@
 // Libraries
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Box, Center, Text, useColorMode } from "@chakra-ui/react"
 
 // Components
 import QuizQuestion from "./QuizQuestion"
 
+// Data
+import quizzes from "../../data/learnQuzzes/index"
+
 // Types
 export interface IProps {
-  quiz: any
+  quizKey?: string | undefined
 }
 
-const Quiz: React.FC<IProps> = ({ quiz }) => {
+const Quiz: React.FC<IProps> = ({ quizKey }) => {
   const { colorMode } = useColorMode()
   const [currentQuestionIndex, updateCurrentQuestionIndex] = useState(0)
-  const [quizData, setQuizdata] = useState(
-    quiz.questions.map((question) => {
-      return {
-        ...question,
-        userAnswer: undefined,
-      }
-    })
-  )
+  const [quizData, setQuizData] = useState(undefined)
 
-  return (
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const baseQuizKey =
+        quizKey ||
+        Object.keys(quizzes).filter((quizUri) =>
+          window.location.href.includes(quizUri)
+        )[0]
+      setQuizData({
+        ...quizzes[baseQuizKey],
+        questions: quizzes[baseQuizKey].questions.map((question) => {
+          return {
+            ...question,
+            userAnswer: undefined,
+          }
+        }),
+      })
+    }
+  }, [])
+
+  console.log(quizData)
+
+  return !quizData ? null : (
     <Box
       w={{
         md: "600px",
@@ -31,7 +48,10 @@ const Quiz: React.FC<IProps> = ({ quiz }) => {
       bg={colorMode === "dark" ? "gray.900" : "white"}
       borderRadius={"4px"}
       boxShadow={"0px 9px 16px -6px rgba(0, 0, 0, 0.13)"}
-      padding={"49px 62px"}
+      padding={{
+        md: "49px 62px",
+        base: "20px 30px",
+      }}
     >
       <Center>
         <Text
@@ -39,11 +59,11 @@ const Quiz: React.FC<IProps> = ({ quiz }) => {
           fontWeight={"700"}
           color={colorMode === "dark" ? "orange.300" : "blue.300"}
         >
-          {quiz.title}
+          {quizData.title}
         </Text>
       </Center>
       <Center>
-        <QuizQuestion questionData={quizData[currentQuestionIndex]} />
+        <QuizQuestion questionData={quizData.questions[currentQuestionIndex]} />
       </Center>
     </Box>
   )

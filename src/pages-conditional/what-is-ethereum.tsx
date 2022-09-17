@@ -55,8 +55,6 @@ import StatErrorMessage from "../components/StatErrorMessage"
 import StatLoadingMessage from "../components/StatLoadingMessage"
 import { Center } from "@chakra-ui/react"
 
-import quizzes from "../data/learnQuzzes/index"
-
 const Slogan = styled.p`
   font-style: normal;
   font-weight: normal;
@@ -954,7 +952,7 @@ const WhatIsEthereumPage = ({
           </h2>
         </Center>
         <Center w="100%">
-          <Quiz quiz={quizzes["what-is-ethereum"]} />
+          <Quiz />
         </Center>
       </Content>
 
