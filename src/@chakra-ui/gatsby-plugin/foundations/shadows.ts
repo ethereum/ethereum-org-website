@@ -4,6 +4,7 @@ const shadows = {
   outline: "0 0 0 4px var(--eth-colors-primaryHover)",
   table:
     "0 14px 66px rgba(0,0,0,.07), 0 10px 17px rgba(0,0,0,.03), 0 4px 7px rgba(0,0,0,.05)",
+  tableItemBoxShadow: "0px 4px 4px var(--eth-colors-tableItemBoxShadow)",
 }
 
 export default shadows

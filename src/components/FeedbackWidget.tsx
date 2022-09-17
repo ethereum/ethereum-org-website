@@ -1,12 +1,11 @@
 // Library imports
 import React, { useState, useEffect, useRef, useMemo } from "react"
+import { Box, Button, ButtonProps, Flex, Icon, Text } from "@chakra-ui/react"
+
 import { useIntl } from "react-intl"
-import styled from "@emotion/styled"
 import FocusTrap from "focus-trap-react"
 // Component imports
 import Translation from "./Translation"
-import Button from "./Button"
-import Icon from "./Icon"
 import NakedButton from "./NakedButton"
 // SVG imports
 import FeedbackGlyph from "../assets/feedback-glyph.svg"
@@ -17,140 +16,47 @@ import { translateMessageId } from "../utils/translations"
 import { useOnClickOutside } from "../hooks/useOnClickOutside"
 import { useKeyPress } from "../hooks/useKeyPress"
 import { useSurvey } from "../hooks/useSurvey"
+import { MdClose } from "react-icons/md"
 
-const FixedDot = styled(NakedButton)<{
+interface FixedDotProps extends ButtonProps {
   bottomOffset: number
-}>`
-  width: 3rem;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background-color: ${({ theme }) => theme.colors.primary};
-  box-shadow: 0px 4px 4px ${({ theme }) => theme.colors.tableItemBoxShadow};
-  position: sticky;
-  bottom: 1rem;
-  margin-left: auto;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    bottom: ${({ bottomOffset }) => 1 + bottomOffset}rem;
-    margin-top: 150vh;
-  }
-  right: 1rem;
-  z-index: 98; /* Below the mobile menu */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-    transition: transform 0.2s ease-in-out;
-  }
-  transition: transform 0.2s ease-in-out;
-`
-
-const ModalBackground = styled.div`
-  display: block;
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  z-index: 1001; /* Above the nav bar */
-`
-
-const Container = styled.div<{
-  bottomOffset: number
-}>`
-  display: flex;
-  box-sizing: border-box;
-  width: 300px;
-  background-color: ${({ theme }) => theme.colors.ednBackground};
-  border: 1px solid ${({ theme }) => theme.colors.buttonColor};
-  box-shadow: 0px 4px 4px ${({ theme }) => theme.colors.tableItemBoxShadow};
-  border-radius: 0.25rem;
-  position: fixed;
-  right: 2rem;
-  bottom: 5rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    offset-position: bottom -300px;
-    bottom: ${({ bottomOffset }) => 5 + bottomOffset}rem;
-  }
-  z-index: 1002; /* Above the ModalBackground */
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
-    width: auto;
-    left: 1rem;
-    right: 1rem;
-  }
-
-  &:hover {
-    transform: scale(1.02);
-    transition: transform 0.2s ease-in-out;
-  }
-  transition: transform 0.2s ease-in-out;
-
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
-
-  .title {
-    font-weight: 700;
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-
-  .subtitle {
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-
-  .timing {
-    font-weight: 700;
-    font-size: 0.75rem;
-    line-height: 1rem;
-    letter-spacing: 0.025em;
-    color: ${({ theme }) => theme.colors.searchBorder};
-  }
-
-  a {
-    width: 100%;
-    color: ${({ theme }) => theme.colors.text} !important;
-  }
-`
-
-const ButtonContainer = styled.div`
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 1.25rem;
-  width: 100%;
-  * {
-    flex: 1;
-    color: ${({ theme }) => theme.colors.white};
-    font-weight: 700;
-  }
-`
-
-const StyledFeedbackGlyph = styled(FeedbackGlyph)`
-  path {
-    fill: ${({ theme }) => theme.colors.white};
-  }
-`
-
-const IconContainer = styled(NakedButton)`
-  position: absolute;
-  right: 0.5rem;
-  top: 0.5rem;
-  cursor: pointer;
-  &:hover {
-    transform: scale(1.1);
-    transition: transform 0.2s ease-in-out;
-  }
-  transition: transform 0.2s ease-in-out;
-`
-
-export interface IProps {
-  className?: string
+}
+const FixedDot: React.FC<FixedDotProps> = ({
+  children,
+  bottomOffset,
+  ...props
+}) => {
+  const size = "3rem"
+  return (
+    <NakedButton
+      w={size}
+      h={size}
+      borderRadius="full"
+      bgColor="primary"
+      boxShadow="tableItemBoxShadow"
+      position="sticky"
+      bottom={{ base: `${bottomOffset + 1}rem`, lg: 4 }}
+      ms="auto"
+      mt={{ base: "150vh", lg: "inherit" }}
+      insetEnd={4}
+      zIndex={98} /* Below the mobile menu */
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      _hover={{
+        cursor: "pointer",
+        transform: "scale(1.1)",
+        transition: "transform 0.2s ease-in-out",
+      }}
+      transition="transform 0.2s ease-in-out"
+      {...props}
+    >
+      {children}
+    </NakedButton>
+  )
 }
 
-const FeedbackWidget: React.FC<IProps> = ({ className }) => {
+const FeedbackWidget: React.FC = () => {
   const intl = useIntl()
   const containerRef = useRef<HTMLInputElement>(null)
   useOnClickOutside(containerRef, () => handleClose(), [`mousedown`])
@@ -221,82 +127,130 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
   useKeyPress(`Escape`, handleClose)
 
   if (!location.includes("/en/")) return null
-
+  const closeButtonSize = "24px"
   return (
     <>
       <FixedDot onClick={handleOpen} bottomOffset={bottomOffset} id="dot">
-        <StyledFeedbackGlyph />
+        <Icon as={FeedbackGlyph} color="white" h="32px" w="26px" />
       </FixedDot>
       {isOpen && (
-        <ModalBackground>
+        <Box
+          display="block"
+          position="fixed"
+          inset={0}
+          bgColor="blackAlpha.400"
+          zIndex={1001} /* Above the nav bar */
+        >
           <FocusTrap
             focusTrapOptions={{
               fallbackFocus: `#dot`,
             }}
           >
-            <Container
-              bottomOffset={bottomOffset}
-              ref={containerRef}
-              className={className}
+            <Flex
               id="modal"
+              ref={containerRef}
+              boxSizing="border-box"
+              w={{ base: "auto", sm: "300px" }}
+              bgColor="ednBackground"
+              border="1px"
+              borderColor="buttonColor"
+              boxShadow="tableItemBoxShadow"
+              borderRadius="base" /* 0.25rem */
+              position="fixed"
+              insetEnd={{ base: 4, sm: 8 }}
+              insetStart={{ base: 4, sm: "auto" }}
+              bottom={{ base: `${bottomOffset + 5}rem`, lg: 20 }}
+              zIndex={1002} /* Above the modal background */
+              _hover={{
+                transform: "scale(1.02)",
+                transition: "transform 0.2s ease-in-out",
+              }}
+              transition="transform 0.2s ease-in-out"
+              direction="column"
+              alignItems="center"
+              textAlign="center"
+              p={8}
             >
-              <p className="title">
+              <NakedButton
+                onClick={handleClose}
+                aria-label={translateMessageId("close", intl)}
+                position="absolute"
+                insetEnd={2}
+                top={2}
+                cursor="pointer"
+                h={closeButtonSize}
+                w={closeButtonSize}
+                minW={closeButtonSize}
+                minH={closeButtonSize}
+                _hover={{
+                  transform: "scale(1.1)",
+                  transition: "transform 0.2s ease-in-out",
+                }}
+                transition="transform 0.2s ease-in-out"
+              >
+                <Icon as={MdClose} h={closeButtonSize} w={closeButtonSize} />
+              </NakedButton>
+
+              <Text fontWeight="bold" fontSize="xl" lineHeight={6}>
                 {feedbackSubmitted ? (
                   <Translation id="feedback-widget-thank-you-title" />
                 ) : (
                   <Translation id="feedback-widget-prompt" />
                 )}
-              </p>
+              </Text>
               {feedbackSubmitted && (
-                <p className="subtitle">
+                <Text fontWeight="normal" fontSize="md" lineHeight={5}>
                   <Translation id="feedback-widget-thank-you-subtitle" />
-                </p>
+                </Text>
               )}
               {feedbackSubmitted && (
-                <p className="timing">
+                <Text
+                  fontWeight="bold"
+                  fontSize="xs"
+                  lineHeight={4}
+                  letterSpacing="wide"
+                  color="searchBorder"
+                >
                   <Translation id="feedback-widget-thank-you-timing" />
-                </p>
+                </Text>
               )}
-              <ButtonContainer>
+              <Flex flexWrap="nowrap" gap={6} width="full">
                 {feedbackSubmitted ? (
                   <Button
-                    variant="outline-color"
+                    variant="solid"
                     onClick={handleSurveyOpen}
                     aria-label={translateMessageId(
                       "feedback-widget-thank-you-cta",
                       intl
                     )}
+                    flex={1}
                   >
                     <Translation id="feedback-widget-thank-you-cta" />
                   </Button>
                 ) : (
                   <>
                     <Button
-                      variant="outline-color"
+                      variant="solid"
                       onClick={() => handleSubmit(true)}
                       aria-label={translateMessageId("yes", intl)}
+                      flex={1}
                     >
                       <Translation id="yes" />
                     </Button>
                     <Button
-                      variant="outline-color"
+                      variant="solid"
                       onClick={() => handleSubmit(false)}
                       aria-label={translateMessageId("no", intl)}
+                      flex={1}
                     >
                       <Translation id="no" />
                     </Button>
                   </>
                 )}
-              </ButtonContainer>
-              <IconContainer
-                onClick={handleClose}
-                aria-label={translateMessageId("close", intl)}
-              >
-                <Icon name="close" />
-              </IconContainer>
-            </Container>
+              </Flex>
+            </Flex>
           </FocusTrap>
-        </ModalBackground>
+        </Box>
       )}
     </>
   )
