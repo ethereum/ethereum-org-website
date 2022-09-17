@@ -5,7 +5,7 @@ import ButtonLink from "./ButtonLink"
 import Icon from "./Icon"
 
 import Translation from "./Translation"
-import { Flex } from "@chakra-ui/react"
+import { Flex, Heading } from "@chakra-ui/react"
 
 const Column = styled.div`
   flex: 1 1 50%;
@@ -97,9 +97,17 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => (
       color="text"
       textAlign={{ base: "center", lg: "left" }}
     >
-      <Title>
+      <Heading
+        as="h2"
+        fontFamily="monospace"
+        textTransform="uppercase"
+        bg="border"
+        p={1}
+        fontSize="2rem"
+        lineHeight={1.4}
+      >
         <Translation id="page-calltocontribute-title" />
-      </Title>
+      </Heading>
       <Description>
         <Translation id="page-calltocontribute-desc-1" />
       </Description>
