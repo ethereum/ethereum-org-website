@@ -5,7 +5,7 @@ import ButtonLink from "./ButtonLink"
 import Icon from "./Icon"
 
 import Translation from "./Translation"
-import { Flex, Heading } from "@chakra-ui/react"
+import { Flex, Heading, Text } from "@chakra-ui/react"
 
 const Column = styled.div`
   flex: 1 1 50%;
@@ -46,19 +46,6 @@ const GithubButton = styled(ButtonLink)`
 const GithubIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.background};
   margin-right: 0.5rem;
-`
-
-const Description = styled.p`
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text};
-  font-family: ${(props) => props.theme.fonts.monospace};
-`
-
-const Title = styled.h2`
-  font-family: ${(props) => props.theme.fonts.monospace};
-  text-transform: uppercase;
-  background: ${(props) => props.theme.colors.border};
-  padding: 0.25rem;
 `
 
 export interface IProps {
@@ -108,24 +95,24 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => (
       >
         <Translation id="page-calltocontribute-title" />
       </Heading>
-      <Description>
+      <Text lineHeight="140%" color="text" fontFamily="monospace">
         <Translation id="page-calltocontribute-desc-1" />
-      </Description>
-      <Description>
+      </Text>
+      <Text lineHeight="140%" color="text" fontFamily="monospace">
         <Translation id="page-calltocontribute-desc-2" />
-      </Description>
-      <Description>
+      </Text>
+      <Text lineHeight="140%" color="text" fontFamily="monospace">
         <Translation id="page-calltocontribute-desc-3" />{" "}
         <Link to="https://www.notion.so/efdn/Writer-template-4b40d196cde7422ca6a2091de33550bd">
           <Translation id="page-calltocontribute-link" />
         </Link>
-      </Description>
-      <Description>
+      </Text>
+      <Text lineHeight="140%" color="text" fontFamily="monospace">
         <Translation id="page-calltocontribute-desc-4" />{" "}
         <Link to="https://discord.gg/CetY6Y4">
           <Translation id="page-calltocontribute-link-2" />
         </Link>{" "}
-      </Description>
+      </Text>
       <GithubButton to={editPath}>
         <GithubIcon name="github" />{" "}
         <span>
