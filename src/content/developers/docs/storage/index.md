@@ -28,7 +28,7 @@ This is known as **blockchain-based** persistence.
 
 The issue with blockchain-based persistence is that the chain could get far too big to upkeep and store all the data feasibly (e.g. [many sources](https://healthit.com.au/how-big-is-the-internet-and-how-do-we-measure-it/) estimate the Internet to require over 40 Zetabytes of storage capacity).
 
-The blockchain must also have some type of incentive structure. For blockchain-based persistence, there is a payment made to the miner. When the data is added to the chain, the nodes are paid to add the data on.
+The blockchain must also have some type of incentive structure. For blockchain-based persistence, there is a payment made to the validator. When the data is added to the chain, the validators are paid to add the data on.
 
 Platforms with blockchain-based persistence:
 
@@ -89,15 +89,14 @@ Decentralized tools without KYC:
 
 Most of these tools have their own version of a [consensus mechanism](/developers/docs/consensus-mechanisms/) but generally they are based on either [**proof-of-work (PoW)**](/developers/docs/consensus-mechanisms/pow/) or [**proof-of-stake (PoS)**](/developers/docs/consensus-mechanisms/pos/).
 
-PoW based:
+Proof-of-work based:
 
 - Skynet
 - Arweave
+
+Proof-of-stake based:
+
 - Ethereum
-
-PoS based:
-
-- [The Beacon Chain](/upgrades/beacon-chain/)
 - Filecoin
 - 0Chain
 

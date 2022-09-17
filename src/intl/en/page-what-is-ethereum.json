@@ -87,6 +87,7 @@
   "page-what-is-ethereum-energy-desc-1": "Ethereum is currently using proof-of-work mechanism that consumes a large amount of energy. In the coming months (Q3/Q4 2022) Ethereum will undergo its biggest update yet and will switch to proof of stake mechanism which will <b>greatly reduce the environmental impact</b> it has.",
   "page-what-is-ethereum-energy-desc-2": "This update will reduce the energy required to secure Ethereum by about <b>99.95%</b>, creating a <b>more secure network for a much smaller carbon cost</b>. This will make Ethereum a truly low-carbon blockchain while boosting its security and scalability.",
   "page-what-is-ethereum-more-on-energy-consumption": "More on energy consumption",
+  "page-what-is-ethereum-energy-consumption-chart-legend": "Annual Energy Consumption in TW/yr",
   "page-what-is-ethereum-the-merge-update": "The Merge update",
   "page-what-is-ethereum-additional-reading": "Additional reading",
   "page-what-is-ethereum-week-in-ethereum": "Week in Ethereum News",

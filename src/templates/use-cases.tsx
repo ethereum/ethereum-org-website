@@ -41,7 +41,6 @@ import {
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/OldEmoji"
 import YouTube from "../components/YouTube"
-import PreMergeBanner from "../components/PreMergeBanner"
 import FeedbackCard from "../components/FeedbackCard"
 
 import { isLangRightToLeft } from "../utils/translations"
@@ -316,8 +315,7 @@ const UseCasePage = ({
     throw new Error("Required `title` property missing for use-cases template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
-  const showMergeBanner = !!mdx.frontmatter.preMergeBanner
-  const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
+  const tocItems = mdx.tableOfContents?.items
   const summaryPoints = getSummaryPoints(mdx.frontmatter)
 
   const { editContentUrl } = siteData.siteMetadata || {}
@@ -369,19 +367,15 @@ const UseCasePage = ({
 
   return (
     <Container>
-      {showMergeBanner ? (
-        <PreMergeBanner />
-      ) : (
-        <StyledBannerNotification shouldShow>
-          <StyledEmoji text=":pencil:" />
-          <div>
-            <Translation id="template-usecase-banner" />{" "}
-            <Link to={absoluteEditPath}>
-              <Translation id="template-usecase-edit-link" />
-            </Link>
-          </div>
-        </StyledBannerNotification>
-      )}
+      <StyledBannerNotification shouldShow>
+        <StyledEmoji text=":pencil:" />
+        <div>
+          <Translation id="template-usecase-banner" />{" "}
+          <Link to={absoluteEditPath}>
+            <Translation id="template-usecase-edit-link" />
+          </Link>
+        </div>
+      </StyledBannerNotification>
       <HeroContainer>
         <TitleCard>
           <Emoji size={4} text={mdx.frontmatter.emoji!} />
@@ -470,7 +464,6 @@ export const useCasePageQuery = graphql`
           }
         }
         isOutdated
-        preMergeBanner
       }
       body
       tableOfContents

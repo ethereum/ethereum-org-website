@@ -34,7 +34,6 @@ There are many ways to describe Ethereum, but at its heart is a blockchain. Bloc
    "number": 1234567,
    "hash": "0xabc123...",
    "parentHash": "0xdef456...",
-   "miner": "0xa1b2c3...",
    ...,
    "transactions": [...]
 }
@@ -58,7 +57,7 @@ This new decentralized tech stack has spawned new developer tools. Such tools ex
 
 Python developers that want to interact with Ethereum are likely to reach for [Web3.py](https://web3py.readthedocs.io/). Web3.py is a library that greatly simplifies the way you connect to an Ethereum node, then send and receive data from it.
 
-<div class="featured">Note: “Ethereum node” and “Ethereum client” are used interchangeably. In either case, it refers to the software that a participant in the Ethereum network runs. This software can read block data, receive updates when new blocks are added to the chain ("mined"), broadcast new transactions, and more.</div>
+<div class="featured">Note: “Ethereum node” and “Ethereum client” are used interchangeably. In either case, it refers to the software that a participant in the Ethereum network runs. This software can read block data, receive updates when new blocks are added to the chain, broadcast new transactions, and more. Technically, the client is the software, the node is the computer running the software.</div>
 
 [Ethereum clients](/developers/docs/nodes-and-clients/) can be configured to be reachable by [IPC](https://wikipedia.org/wiki/Inter-process_communication), HTTP, or Websockets, so Web3.py will need to mirror this configuration. Web3.py refers to these connection options as **providers**. You’ll want to choose one of the three providers to link the Web3.py instance with your node.
 
@@ -236,13 +235,13 @@ Out[9]: AttributeDict({
 
 A lot of information gets returned about a block, but just a couple things to point out here:
 
-- The block number is zero — no matter how long ago you configured the tester provider. Unlike the real Ethereum network, which mines a new block roughly every 15 seconds, this simulation will wait until you give it some work to do.
+- The block number is zero — no matter how long ago you configured the tester provider. Unlike the real Ethereum network, which adds a new block every 12 seconds, this simulation will wait until you give it some work to do.
 - `transactions` is an empty list, for the same reason: we haven’t done anything yet. This first block is an **empty block**, just to kick off the chain.
 - Notice that the `parentHash` is just a bunch of empty bytes. This signifies that it's the first block in the chain, also known as the **genesis block**.
 
 ## Tour stop #3: [transactions](/developers/docs/transactions/) {#tour-stop-3-transactions}
 
-We’re stuck at block zero until there’s a transaction to mine, so let’s give it one. Send a few test ether from one account to another:
+We’re stuck at block zero until there’s a pending transaction, so let’s give it one. Send a few test ether from one account to another:
 
 ```python
 In [10]: tx_hash = w3.eth.send_transaction({
@@ -253,11 +252,11 @@ In [10]: tx_hash = w3.eth.send_transaction({
 })
 ```
 
-This is typically the point where you’d wait for several seconds for your transaction to get mined into a new block. The full process goes something like this:
+This is typically the point where you’d wait for several seconds for your transaction to get included in a new block. The full process goes something like this:
 
-1. Submit a transaction and hold on to the transaction hash. Until it gets mined, the transaction is “pending.”
+1. Submit a transaction and hold on to the transaction hash. Until the block containing the transaction is created and broadcast, the transaction is “pending.”
    `tx_hash = w3.eth.send_transaction({ … })`
-2. Wait for the transaction to be mined:
+2. Wait for the transaction to be included in a block:
    `w3.eth.wait_for_transaction_receipt(tx_hash)`
 3. Continue application logic. To view the successful transaction:
    `w3.eth.get_transaction(tx_hash)`

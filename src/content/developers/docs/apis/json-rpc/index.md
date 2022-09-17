@@ -19,7 +19,13 @@ Ethereum clients each may utilize different programming languages when implement
 
 While you may choose to interact directly with Ethereum clients via the JSON-RPC API, there are often easier options for dapp developers. Many [JavaScript](/developers/docs/apis/javascript/#available-libraries) and [backend API](/developers/docs/apis/backend/#available-libraries) libraries exist to provide wrappers on top of the JSON-RPC API. With these libraries, developers can write intuitive, one-line methods in the programming language of their choice to initialize JSON-RPC requests (under the hood) that interact with Ethereum.
 
-## Spec {#spec}
+## Consensus client APIs {#consensus-clients}
+
+This page deals mainly with the JSON-RPC API used by Ethereum execution clients. However, consensus clients also have an RPC API that allows users to query information about the node, request Beacon blocks, Beacon state, and other consensus-related information directly from a node. This API is documented on the [Beacon API webpage](https://ethereum.github.io/beacon-APIs/#/).
+
+An internal API is also used for inter-client communication within a node - that is, it enables the consensus client and execution client to swap data. This is called the 'Engine API' and the specs are available on [Github](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md).
+
+## Execution client spec {#spec}
 
 [Read the full JSON-RPC API spec on GitHub](https://github.com/ethereum/execution-apis).
 

@@ -8751,7 +8751,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/74294202?v=4",
       "profile": "https://github.com/MahendraBishnoi29",
       "contributions": [
-        "ideas"
+        "ideas",
+        "code"
       ]
     },
     {
@@ -8780,6 +8781,96 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "justalike",
+      "name": "justalike",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44633493?v=4",
+      "profile": "https://github.com/justalike",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "grayliquid",
+      "name": "grayliquid",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26670751?v=4",
+      "profile": "http://l5d.li",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "MHMasoon",
+      "name": "MohammadHosein Masoon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/63204823?v=4",
+      "profile": "https://github.com/MHMasoon",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "patoshii",
+      "name": "Patoshi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/381050?v=4",
+      "profile": "https://www.xcubicle.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "joonspoon",
+      "name": "June Clarke ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/302478?v=4",
+      "profile": "jointheleague.org",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "slf188",
+      "name": "菲利",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49417481?v=4",
+      "profile": "huggingface.co/slf188",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "DamitusThyYeetus123",
+      "name": "DamitusThyYeetus123",
+      "avatar_url": "https://avatars.githubusercontent.com/u/108782125?v=4",
+      "profile": "https://github.com/DamitusThyYeetus123",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "matusame",
+      "name": "matusame",
+      "avatar_url": "https://avatars.githubusercontent.com/u/97032288?v=4",
+      "profile": "https://github.com/matusame",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "laurentlucian",
+      "name": "Lohan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33508364?v=4",
+      "profile": "https://github.com/laurentlucian",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "marcellamalune",
+      "name": "Marcella",
+      "avatar_url": "https://avatars.githubusercontent.com/u/63505124?v=4",
+      "profile": "https://github.com/marcellamalune",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -8787,5 +8878,6 @@
   "projectOwner": "ethereum",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitConvention": "angular"
 }

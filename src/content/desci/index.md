@@ -23,7 +23,7 @@ Decentralized science allows for more diverse funding sources (from [DAOs](/dao/
 
 ### Juan Benet - DeSci, Independent Labs, & Large Scale Data Science
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zkXM9H90g_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YouTube id="zkXM9H90g_E" />
 
 ## How DeSci improves science {#desci-improves-science}
 
