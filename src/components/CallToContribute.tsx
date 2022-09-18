@@ -24,25 +24,6 @@ const ImageColumn = styled(Column)`
   }
 `
 
-const GithubButton = styled(ButtonLink)`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: ${(props) => props.theme.colors.background};
-  background-color: ${(props) => props.theme.colors.secondaryButtonBackground};
-  border: 1px solid ${(props) => props.theme.colors.secondaryButtonBorder};
-  &:hover {
-    background-color: ${(props) =>
-      props.theme.colors.secondaryButtonBackgroundHover};
-    color: ${(props) => props.theme.colors.secondaryButtonHoverColor};
-  }
-  &:active {
-    background-color: ${(props) =>
-      props.theme.colors.secondaryButtonBackgroundActive};
-    color: ${(props) => props.theme.colors.secondaryButtonHoverColor};
-  }
-`
-
 const GithubIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.background};
   margin-right: 0.5rem;
@@ -113,12 +94,30 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => (
           <Translation id="page-calltocontribute-link-2" />
         </Link>{" "}
       </Text>
-      <GithubButton to={editPath}>
+      <Flex
+        as={ButtonLink}
+        to={editPath}
+        alignItems="center"
+        justifyContent="center"
+        color="background"
+        bg="secondaryButtonBackground"
+        borderWidth="1px"
+        borderStyle="solid"
+        borderColor="secondaryButtonBorder"
+        _hover={{
+          background: "secondaryButtonBackgroundHover",
+          color: "secondaryButtonHoverColor",
+        }}
+        _active={{
+          background: "secondaryButtonBackgroundActive",
+          color: "secondaryButtonHoverColor",
+        }}
+      >
         <GithubIcon name="github" />{" "}
         <span>
           <Translation id="page-calltocontribute-span" />
         </span>
-      </GithubButton>
+      </Flex>
     </Flex>
   </Flex>
 )
