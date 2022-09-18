@@ -38,7 +38,7 @@ Many blockchain-based social platforms have native tokens that power monetizatio
 
 2. Decentralized social networks are built on open-source ideals and make source code for applications available for public inspection. By eliminating the implementation of opaque algorithms common in traditional social media, blockchain-based social networks can align the interests of users and platform creators.
 
-3. Decentralized social networks eliminate the "middle-man." Content creators have direct ownership over their content, and they engage directly with followers, fans, buyers, and other parties, with nothing but a smart contract in between.
+3. Decentralized social networks eliminate the "middle-man". Content creators have direct ownership over their content, and they engage directly with followers, fans, buyers, and other parties, with nothing but a smart contract in between.
 
 4. As dapps running on the Ethereum network, which is sustained by a global, peer-to-peer network of nodes, decentralized social networks are less susceptible to server downtime and outages.
 
