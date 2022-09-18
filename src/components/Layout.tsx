@@ -213,7 +213,7 @@ const Layout: React.FC<IProps> = ({
               <VisuallyHidden isHidden={isZenMode}>
                 <Footer />
               </VisuallyHidden>
-              <FeedbackWidget />
+              <FeedbackWidget location={path} />
             </ContentContainer>
           </ThemeProvider>
         </ApolloProvider>

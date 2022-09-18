@@ -56,24 +56,23 @@ const FixedDot: React.FC<FixedDotProps> = ({
   )
 }
 
-const FeedbackWidget: React.FC = () => {
+interface FeedbackWidgetProps {
+  location: string
+}
+const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
   const intl = useIntl()
   const containerRef = useRef<HTMLInputElement>(null)
   useOnClickOutside(containerRef, () => handleClose(), [`mousedown`])
-  const [location, setLocation] = useState("")
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const [feedbackSubmitted, setFeedbackSubmitted] = useState<boolean>(false)
   const [isHelpful, setIsHelpful] = useState<boolean | null>(null)
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      setLocation(window.location.href)
-      // Reset component state when path (location) changes
-      setIsOpen(false)
-      setFeedbackSubmitted(false)
-      setIsHelpful(null)
-    }
-  }, [])
+    // Reset component state when path (location) changes
+    setIsOpen(false)
+    setFeedbackSubmitted(false)
+    setIsHelpful(null)
+  }, [location])
 
   const surveyUrl = useSurvey(feedbackSubmitted, isHelpful)
 
