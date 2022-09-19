@@ -1410,6 +1410,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center"><a href="https://ladislasfontaine.com/"><img src="https://avatars.githubusercontent.com/u/42914253?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ladislas Fontaine</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ladislasfontaine" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/YasshhYadav"><img src="https://avatars.githubusercontent.com/u/91071840?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yash Yadav</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=YasshhYadav" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
