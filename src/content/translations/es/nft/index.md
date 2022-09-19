@@ -11,7 +11,6 @@ alt: Un logotipo Eth mostrado a través de un holograma.
 summaryPoint1: Una forma de representar cualquier cosa exclusiva como un activo de Ethereum.
 summaryPoint2: Los NFT están otorgando más poder a los creadores de contenido que nunca.
 summaryPoint3: Impulsados por contratos inteligentes en la cadena de bloques de Ethereum.
-preMergeBanner: true
 ---
 
 Los NFT están revolucionando el mundo del arte digital y los coleccionables. Los artistas digitales están cambiando sus vidas gracias a las enormes ventas al nuevo público criptográfico. Y las celebridades se unen a medida que descubren una nueva oportunidad de conectar con los seguidores. Pero el arte digital es solo una manera de utilizar los NFT. Realmente se pueden utilizar para representar la propiedad de cualquier activo único, como un equivalente de un objeto en el plano físico o digital.
@@ -20,7 +19,7 @@ Si Andy Warhol hubiera nacido a finales de los 90, probablemente habría creado 
 
 ## ¿Qué es un NFT? {#what-are-nfts}
 
-Los NFT son tókenes que podemos utilizar para representar la propiedad de objetos únicos. Nos permiten tokenizar cosas como arte, coleccionables e incluso bienes raíces. Solo pueden tener un propietario oficial a la vez y están asegurados por la red de Ethereum; es decir, nadie puede modificar el registro de propiedad o copiar y pegar un nuevo NFT a existencia.
+Los NFT son tókenes que podemos utilizar para representar la propiedad de objetos únicos. Nos permiten tokenizar cosas como arte, coleccionables e incluso bienes raíces. Solo pueden tener un propietario oficial a la vez y están asegurados por la cadena de boques de Ethereum; es decir, nadie puede modificar el registro de propiedad o copiar y pegar un nuevo NFT existente.
 
 NFT son las siglas en inglés de «token no fungible». «No fungible» es un término económico que se puede usar para describir cosas como sus muebles, el archivo de una canción o su ordenador. Los tókenes no son intercambiables por otros artículos debido a que tienen propiedades únicas.
 
@@ -96,7 +95,7 @@ Los NFT son diferentes a los tókenes ERC-20 (como DAI o LINK) debido a que cada
   - Firmas
 - ¡Y muchísimas más cosas!
 
-Un NFT solo puede tener un propietario a la vez. El propietario es representado a través de una identificación única y unos metadatos que ningún otro token puede duplicar. Los NFT son acuñados gracias al uso de los contratos inteligentes, los cuales asignan la propiedad del dueño y administran la capacidad de transferir de los NFT. Cuando alguien crea o acuña un NFT, se ejecuta un código almacenado en contratos inteligentes que se ajustan a los diferentes estándares, como el ERC-721. Esta información se añade a la cadena de bloques, donde se gestiona el NFT. El proceso de acuñar —explicado de forma superficial— consta de los siguientes pasos:
+El propietario de un NFT viene representado a través de una ID única y metadatos que ningún otro token puede duplicar. Los NFT se acuñan gracias al uso de los contratos inteligentes, los cuales asignan la propiedad al dueño y administran la capacidad de transferir de los NFT. Cuando alguien crea o acuña un NFT, se ejecuta un código almacenado en contratos inteligentes que se ajustan a los diferentes estándares, como el [ERC-721](/developers/docs/standards/tokens/erc-721/). Esta información se añade a la cadena de bloques, donde se gestiona el NFT. El proceso de acuñar —explicado de forma superficial— consta de los siguientes pasos:
 
 - La creación de un nuevo bloque
 - La validación de la información
@@ -291,11 +290,10 @@ La popularidad de los NFT está creciendo mucho, lo que significa que están sie
 
 Para aclarar algunas dudas:
 
-- Los NFT no están directamente incrementando la huella de carbono de Ethereum.
-- La manera actual que tiene Ethereum para mantener seguros sus fondos y activos consume mucha energía, pero eso está a punto de mejorar.
-- Cuando se haya mejorado ese aspecto, la huella de carbono de Ethereum será 99,95 % mejor, haciendo que esta tecnología consuma energía de una forma más eficiente en comparación con otras industrias existentes.
+- La creación y transferencia de un NFT son solo transacciones en la cadena de bloques de Ethereum, no tienen ningún impacto directo en la energía consumida por Ethereum, y tampoco gastan su propia energía de forma independiente.
+- Ethereum es una cadena de bloques de bajo consumo, lo que significa que el impacto ambiental de la creación, compra y transferencia de NFT es muy pequeño.
 
-Para explicar mejor esta cuestión, tendremos que ponernos un poco más técnicos, así que preste atención…
+Las siguientes secciones a continuación lo explican más al detalle de forma técnica...
 
 ### No culpe a los NFT {#nft-qualities}
 
@@ -305,67 +303,27 @@ Que sea descentralizado significa que usted y todos los demás pueden verificar 
 
 Que sea seguro significa que nadie puede copiar o pegar su NFT (ni robarlo).
 
-Estas ventajas de Ethereum hacen posible ser propietario de un objeto único digital y obtener un precio justo por su contenido. Sin embargo, esto tiene un costo. Las cadenas de bloques como Bitcoin y Ethereum consumen mucha energía en estos tiempos porque se necesita mucha energía para preservar estas ventajas. Si fuera fácil reescribir el registro de Ethereum para robar NFT o criptomonedas, el sistema colapsaría.
+Estas ventajas de Ethereum hacen posible ser propietario de un objeto único digital y obtener un precio justo por su contenido. Ethereum protege los activos utilizando un mecanismo de consenso descentralizado que implica una [prueba de participación](/developers/docs/consensus-mechanisms/pos). Este es un método de bajo consumo de carbono para determinar quién puede añadir un bloque de transacciones a la cadena, y se considera más seguro que la alternativa de uso intensivo de energía, ['proof-of-work'](/developers/docs/consensus-mechanisms/pow). Los NFT se han asociado con un alto gasto energético porque Ethereum solía asegurarse utilizando la denominada prueba de trabajo. Esto ya no es así.
 
-#### El trabajo de acuñar su NFT {#minting-nfts}
+#### Acuñando un NFT {#minting-nfts}
 
 Cuando se minta un NFT, ocurren algunas cosas:
 
 - Debe ser confirmado como un activo en la cadena de bloques.
 - El saldo de la cuenta del propietario debe ser actualizada para incluir ese activo. Esto hace posible que luego sea intercambiado o verificablemente «poseído».
-- Las transacciones que confirman los pasos de arriba necesitan ser añadidas a un bloque e «inmortalizadas» en la cadena.
-- Todos en la red deben confirmar el bloque como «correcto». Este consenso elimina la necesidad de intermediarios debido a que la red acepta que su NFT existe y que usted es su propietario. Además, está en la cadena, por lo que todos pueden comprobarlo. Esta es una de las maneras en las que Ethereum ayuda a los creadores de NFT a maximizar sus ganancias.
+- Las transacciones que confirman los pasos de arriba necesitan ser añadidas a un bloque e «inmortalizadas» en la cadena de bloques.
+- Todos en la red deben confirmar el bloque como «correcto». Este consenso elimina la necesidad de intermediarios debido a que la red acepta que su NFT existe y que usted es su propietario. Además, está en la cadena, por lo que todos pueden comprobarlo. Esta es una de las formas en que Ethereum ayuda a los creadores de NFT a maximizar sus ganancias.
 
-Todos estos pasos son hechos por los mineros. Ellos hacen saber al resto de la red sobre su NFT y quién es su propietario. Esto significa que el proceso de minado necesita ser considerablemente difícil, porque, de lo contrario, todos podrían reclamar que son dueños del NFT que acaba de mintar y transferir el comprobante de propiedad de forma fraudulenta. Existen muchos incentivos para garantizar que los mineros actúen con honestidad.
+Todas estas tareas son realizadas por productores y validadores de bloques. Los productores de bloques añaden su transacción NFT a un bloque y la transmiten al resto de la red. Los validadores comprueban que la transacción es válida y entonces la añaden a sus bases de datos. Existen muchos incentivos para garantizar que los mineros actúen con honestidad. De lo contrario, cualquiera podría afirmar que es dueño del TNF que acaba de acuñar y transferir fraudulentamente la propiedad.
 
-[Más sobre minería](/developers/docs/consensus-mechanisms/pow/)
+#### Seguridad de los NFT {#nft-security}
 
-#### Asegurar su NFT con la minería {#securing-nfts}
+La seguridad en Ethereum proviene de la prueba de participación. El sistema está diseñado para desincentivar económicamente las acciones maliciosas, lo que hace que Ethereum esté a prueba de la manipulación. Esto es lo que hace que los NFT sean posibles. Una vez que el bloque que contiene su transacción NFT finalice, le costaría a un atacante millones de ETH cambiarla. Cualquiera que ejecute el software Ethereum podría detectar inmediatamente una manipulación deshonesta con un NFT, y el mal actor sería castigado económicamente y expulsado.
 
-La dificultad de la minería proviene del hecho de que se necesita mucha energía para crear nuevos bloques en la cadena. Hay algo que es importante mencionar: los bloques son creados de forma consistente, no solo cuando son necesarios. Se crean cada 12 segundos, aproximadamente.
+Las cuestiones de seguridad relativas a los NFT suelen estar relacionadas con estafas de phishing, vulnerabilidades de contratos inteligentes o errores de usuario (como exponer sin darse cuenta las claves privadas), haciendo que la seguridad de las carteras sea crítica para los propietarios de NFT.
 
-Esto es importante, pues hace que Ethereum sea a prueba de manipulaciones, una característica esencial que hace posible a los NFT. Mientras más bloques, más segura es la cadena. Si su NFT fue creado en el bloque número 600 y un hacker intentase robarlo modificando sus datos, cambiaría la huella digital de todos los bloques posteriores. Eso significa que todos los que estén ejecutando software basado en Ethereum lo detectarían inmediatamente e impedirían que sucediera.
-
-Sin embargo, esto quiere decir que se necesita constantemente la energía de las computadoras. También quiere decir que un bloque que no contiene ninguna transacción de NFT producirá aproximadamente la misma huella de carbón, ya que se consumirá igualmente la energía de la computadora. Otras transacciones que no sean de NFT también llenarán los bloques.
-
-#### Ahora mismo, las cadenas de bloques consumen mucha energía {#blockchains-intensive}
-
-Sí: existe una huella de carbono asociada con la creación de bloques a través de la minería (y esto también es un problema para cadenas como Bitcoin), pero no es culpa directa de los NFT.
-
-Gran parte de la minería usa fuentes de energía renovables o energía sin aprovechar en lugares remotos. Y también está el argumento de que las industrias que los NFT y las criptomonedas están interrumpiendo tienen grandes huellas de carbono. Pero solo porque las industrias actuales sean malas, eso no quiere decir que debamos dejar de esforzarnos por ser mejores.
-
-Y en eso estamos. Ethereum está mejorando para que usar Ethereum (y, por consiguiente, los NFT) sea más eficiente en cuanto al consumo de energía. Y ese siempre ha sido el plan.
-
-No estamos aquí para defender la huella ambiental que deja la minería, sino que queremos explicar cómo las cosas están mejorando.
-
-### Un futuro más verde... {#a-greener-future}
-
-Desde que Ethereum se creó, el consumo de energía que produce la minería ha sido un gran centro de atención para los desarrolladores e investigadores. La visión siempre ha sido reemplazar este funcionamiento lo antes posible. [Más sobre la visión de Ethereum](/upgrades/vision/)
-
-La visión se está llevando a cabo ahora mismo.
-
-#### Un Ethereum más verde {#greener-ethereum}
-
-Ethereum está pasando actualmente por una serie de mejoras que reemplazarán la minería con la [apuesta (staking)](/staking/). Esto eliminará la energía de las computadoras como una medida de seguridad y reducirá la huella de carbono de Ethereum en un 99,95 % aproximadamente<sup>[^1]</sup>. En un mundo como este, los participantes usan fondos en vez de energía de computación para asegurar a la red.
-
-El costo de energía de Ethereum será el costo de una computadora instalada en una casa multiplicado por el número de nodos en la red. Si hay 10.000 nodos en la red y el costo de usar una computadora es de aproximadamente 525 kWh por año, eso se traduciría en 5.250.000 kWh<sup>[^1]</sup> por año para la red entera.
-
-Podemos basarnos en este dato para comparar el futuro de Ethereum con un servicio global como Visa. 100.000 transacciones de Visa usan 149 kWh de energía<sup>[^2]</sup>. En la prueba de participación de Ethereum, ese mismo número de transacciones costaría 17,4 kWh de energía o ~11% del total de energía<sup>[^3]</sup>. Eso sin considerar las muchas optimizaciones en las que se están trabajando en paralelo con la capa de consenso y la cadena de fragmentación, como acumulaciones o [«rollups»](/glossary/#rollups). Se podría llegar a consumir tan solo 0,1666666667 kWh de energía por 100.000 transacciones.
-
-Esto mejora la eficiencia de la energía mientras que preserva la descentralización y la seguridad de Ethereum. Quizás muchas otras cadenas de bloques ya estén usando alguna forma de apuesta , pero estarán aseguradas por unos cuantos participantes interesados, no por los miles que Ethereum tendrá. A mayor descentralización, mayor seguridad tiene el sistema.
-
-[Más información sobre las estimaciones de energía](#footnotes-and-sources)
-
-_Hemos proporcionado una comparación básica con Visa como referencia para la comprensión del consumo de energía de la prueba de participación de Ethereum con un nombre conocido. No obstante, en la práctica no es correcto hacer una comparación basándose en la cantidad de transacciones. La energía que produce Ethereum se basa en el tiempo. Si en Ethereum se hicieran más o menos transacciones de un minuto para el otro, el consumo de energía sería el mismo._
-
-_También es importante recordar que Ethereum no consta solo de transacciones financieras: es una plataforma para aplicaciones, por lo que una comparación más justa incluiría no solo a Visa sino a otras compañías, como AWS y más._
-
-#### Calendario {#timelines}
-
-El proceso ya ha comenzado. [La cadena de baliza](/upgrades/beacon-chain/), la primera actualización, salió en diciembre del 2020. Esto proporciona la base para la apuesta al permitir que los participantes se unan al sistema. El siguiente paso que es relevante para la eficiencia de la energía es la mezcla de la cadena actual —que está asegurada por los mineros— en la cadena de baliza, donde no se necesita minar. Todavía no hay una fecha definida, pero se estima que esto ocurra en 2022. Este proceso se conoce como la fusión (anteriormente referida como el acoplamiento). [Más información sobre la fusión](/upgrades/merge/).
-
-<ButtonLink to="/upgrades/">
-  Más información sobre las actualizaciones de Ethereum
+<ButtonLink to="/security/">
+  Más sobre seguridad
 </ButtonLink>
 
 ## Construya con NFT {#build-with-nfts}
@@ -379,69 +337,5 @@ La mayoría de los NFT están desarrollados usando un estándar consistente cono
 - [Guía sobre NFT para principiantes](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) — _Linda Xie, enero del 2020_
 - [Todo lo que debes saber sobre el metaverso](https://foundation.app/blog/enter-the-metaverse) — _Foundation Team; foundation.app_
 - [No: los criptoartistas no están dañando el planeta](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
-- [El valor de poder de un país; ya no más](https://blog.ethereum.org/2021/05/18/country-power-no-more/) — _Carl Beekhuizen, 18 de mayo de 2021_
-
-<Divider />
-
-### Fuentes y pies de página {#footnotes-and-sources}
-
-Esto explica cómo llegamos a nuestras estimaciones energéticas anteriores. Estas estimaciones aplican a la red como un todo y no están únicamente reservadas al proceso de creación, compra o venta de NFT.
-
-#### 1. Reducción del 99,95 % de energía de la minería {#fn-1}
-
-La reducción de 99,95 % en el consumo de energía de un sistema asegurado por la minería a un sistema asegurado por la apuesta se calcula usando las siguientes fuentes:
-
-- 44,49 TWh de la energía eléctrica anual se usa para la minería de Ethereum — [Digiconomist](https://digiconomist.net/ethereum-energy-consumption)
-
-- El ordenador promedio que ejecuta el proceso de prueba de participación usa 0,06 kWh de energía por hora — [Gráfico de energía de Silicon Valley](https://www.siliconvalleypower.com/residents/save-energy/appliance-energy-use-chart) (algunas estimaciones son un poco más altas a 0,15 kWh)
-
-En el momento de redactar este texto, hay 140.592 validadores de 16.405 direcciones únicas. De esos, se asume que 87.897 validadores están haciendo apuestas desde casa.
-
-Presuponemos que la persona promedio que hace apuestas desde casa usa un ordenador de 100 watts para ejecutar un promedio de 5,4 clientes validadores.
-
-Los 87.897 validadores que están haciendo apuestas desde casa, nos aportan 16.300 usuarios que consumen 1,64 megavatios de energía.
-
-Los validadores restantes los ejecutan apostadores custodios como las casas de cambio y servicios de apuestas. Podemos asumir que ellos usan 100 vatios por cada 5,5 validadores. Para ir sobre seguro, esta es una gran sobrestimación.
-
-Por lo tanto, en total, Ethereum en prueba de participación consume alrededor de 2,62 megavatios, que es aproximadamente lo mismo que una pequeña ciudad estadounidense.
-
-Es una reducción de al menos 99,95% en el uso total de energía respecto a la estimación de Digiconomist de 44,94 TWh por año que consumen actualmente los mineros de Ethereum.
-
-#### 2. Consumo de energía de Visa {#fn-2}
-
-El costo de 100.000 transacciones de Visa es de 149 kwH – [Consumo de energía promedio de la red Bitcoin por transacción en comparación con la red VISA en 2020, Statista](https://www.statista.com/statistics/881541/bitcoin-energy-consumption-transaction-comparison-visa/)
-
-Hasta septiembre de 2020, procesaron 140.839.000.000 transacciones – [Informe financiero de Visa T4 2020](https://s1.q4cdn.com/050606653/files/doc_financials/2020/q4/Visa-Inc.-Q4-2020-Operational-Performance-Data.pdf)
-
-#### 3. Uso de energía para 100.000 transacciones en una red de prueba de participación fragmentada {#fn-3}
-
-Se calcula que las actualizaciones de escalabilidad podrán permitir que la red procese entre 25.000 y 100.000 transacciones por segundo, con [100.000 como el máximo teórico justo ahora](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698).
-
-[Vitalik Buterin sobre el potencial de las transacciones por segundo con la fragmentación](https://twitter.com/VitalikButerin/status/1312905884549300224)
-
-Como mínimo, fraccionar permitirá aumentar 64 veces la cantidad de transacciones, que en la actualidad se sitúa en alrededor de 15 transacciones. Esa es la cantidad de cadenas de fragmentación (datos y capacidad adicionales) que se están introduciendo. [Más información sobre las cadenas de fragmentación](/upgrades/sharding/)
-
-Eso significa que podemos estimar cuánto tiempo llevará procesar 100.000 transacciones para poder compararlo con el ejemplo anterior de Visa.
-
-- `15 * 64 = 960` transacciones por segundo.
-- `100.000 / 960 = 104,2` segundos para procesar 100.000 transacciones.
-
-En 104,2 segundos, la red Ethereum utilizará la siguiente cantidad de energía:
-
-`1,44kWh uso diario * 10.000 nodos de red = 14.400kWh` por día.
-
-Hay 86.400 segundos en un día, así que `14.400 / 86.400 = 0,1666666667kWh` por segundo.
-
-Si multiplicamos esa cifra por el tiempo en que se tarda en procesar 100.000 transacciones: `0,166666666667 * 104,2 = 17,36666701 kWh`.
-
-Eso es, **11,6554809866 %** de la energía consumida por la misma cantidad de transacciones con Visa.
-
-Y recuerde, esto se basa en la cantidad mínima de transacciones que Ethereum será capaz de manejar por segundo. Si Ethereum alcanza su potencial de 100.000 transacciones por segundo, 100.000 transacciones consumirán 0,1666666667 kWh.
-
-Por decirlo de otra manera, si Visa manejó 140.839.000.000 transacciones a un costo de 149 kWh por 100.000 transacciones, eso es 209.850.110 kWh de energía consumida durante el año.
-
-Ethereum en un solo año consume 5.256.000 kWh. Con un potencial de entre 788.940.000.000 y 3.153.600.00.000 de transacciones procesadas en ese tiempo.
-
-<InfoBanner emoji=":evergreen_tree:">
-  Si cree que estas estadísticas son incorrectas o pueden hacerse más exactas, cree un asunto o una solicitud de extracción. Estas son estimaciones realizadas por el equipo de ethereum.org utilizando informacción accesible, pública y el diseño planificado de Ethereum. No representa una promesa oficial de Ethereum Foundation.
-</InfoBanner>
+- [Consumo energético de Ethereum](/energy-consumption/)
+- [El valor energético de un país; nada más](https://blog.ethereum.org/2021/05/18/country-power-no-more/) — _Carl Beekhuizen, 18 de mayo de 2021_
