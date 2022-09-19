@@ -3,6 +3,7 @@ title: 以太坊治理
 description: 简介：如何做出关于以太坊的决策。
 lang: zh
 sidebar: true
+postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # 以太坊治理简介 {#introduction}

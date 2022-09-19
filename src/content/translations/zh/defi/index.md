@@ -1,5 +1,5 @@
 ---
-title: 去中心化金融
+title: 去中心化金融 (DeFi)
 description: 以太坊上的去中心化金融简介
 lang: zh
 template: use-cases
