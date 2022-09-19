@@ -134,7 +134,7 @@
   "page-stablecoins-top-coins-intro": "La capitalització del mercat és",
   "page-stablecoins-top-coins-intro-code": "el nombre total de tokens que hi ha multiplicat pel valor de cada símbol. La llista és dinàmica i els projectes enumerats aquí no estan necessàriament recolzats per l'equip d'ethereum.org.",
   "page-stablecoins-types-of-stablecoin": "Com funcionen: tipus de monedes estables",
-  "page-stablecoins-usdc-banner-body": "L'USDc és probablement la moneda estable més famosa recolzada per diners fiduciari. El seu valor és aproximadament d'un dòlar i està recolzada per Circle i Coinbase.",
+  "page-stablecoins-usdc-banner-body": "L'USDC és probablement la moneda estable més famosa recolzada per diners fiduciari. El seu valor és aproximadament d'un dòlar i està recolzada per Circle i Coinbase.",
   "page-stablecoins-usdc-banner-learn-button": "Més informació sobre USDC",
   "page-stablecoins-usdc-banner-swap-button": "Intercanvieu ETH per USDC",
   "page-stablecoins-usdc-banner-title": "USDC",
@@ -142,5 +142,7 @@
   "page-stablecoins-why-stablecoins": "Per què monedes estables?",
   "page-stablecoins-how-they-work-button": "Com funcionen",
   "page-stablecoins-why-stablecoins-body": "L'ETH, com el Bitcoin, té un preu volàtil perquè és una tecnologia nova, així que és possible que no vulgueu gastar-la regularment. Les monedes estables reflecteixen el valor de les monedes tradicionals per donar-vos accés a diners estables que podeu utilitzar a Ethereum.",
-  "page-stablecoins-more-defi-button": "Més informació sobre finances descentralitzades (DeFi)"
+  "page-stablecoins-more-defi-button": "Més informació sobre finances descentralitzades (DeFi)",
+  "page-stablecoins-tools-title": "Learn more about stablecoins",
+  "page-stablecoins-tools-stablecoinswtf-description": "Stablecoins.wtf offers a dashboard with historical market data, statistics, and educational content for the most prominent stablecoins."
 }

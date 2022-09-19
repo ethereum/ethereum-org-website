@@ -19,9 +19,9 @@ Si Andy Warhol hagués nascut a finals dels noranta, probablement hauria encunya
 
 ## Què és un NFT? {#what-are-nfts}
 
-Els NFT són tókens que poden ser utilitzats per a representar la propietat d'objectes únics. Ens permeten tokenitzar coses com ara obres d'art, col·leccionables o inclús propietats immobiliàries. Només poden tenir un titular oficial alhora i estan protegits per la cadena de blocs d'Ethereum; ningú no pot modificar el títol de propietat o copiar/enganxar un nou NFT en el medi existent.
+Els NFT són tókens que poden ser utilitzats per a representar la propietat d'objectes únics. They let us tokenize things like art, collectibles, even real estate. Ownership of an asset is secured by the Ethereum blockchain – no one can modify the record of ownership or copy/paste a new NFT into existence.
 
-NFT significa token no fungible o «non-fungible token», en anglès. No fungible és un concepte econòmic que bé podríeu utilitzar per a descriure coses com ara els vostres mobles, un fitxer d'àudio o el vostre ordinador. Aquests objectes no són intercanviables per d'altres ja que tenen propietats úniques.
+NFT significa token no fungible. No fungible és un concepte econòmic que bé podríeu utilitzar per a descriure coses com ara els vostres mobles, un fitxer d'àudio o el vostre ordinador. Aquests objectes no són intercanviables per d'altres ja que tenen propietats úniques.
 
 Els objectes fungibles, d'altra banda, poden ser intercanviats perquè el seu valor els defineix més que les seves propietats úniques. Per exemple, els ETH o els dòlars són fungibles perquè un ETH o un dòlar es pot canviar per un altre ETH o un altre dòlar.
 
@@ -55,12 +55,18 @@ El món dels NFT és relativament nou. En teoria, l'abast dels NFT és per tot a
 - [Un col·leccionable digital](https://www.larvalabs.com/cryptopunks/details/1)
 - [Un nom de domini](https://app.ens.domains/name/ethereum.eth)
 - [Un tiquet que us dona accés a un esdeveniment o un cupó](https://www.yellowheart.io/)
+- [Comprar béns del món real](https://www.tangible.store/)
+- [Fraccionament de béns immobles](https://realt.co/)
+- [Certificats de grau](https://www.degreecert.com/)
+- [Drets musicals a través de NFT](https://opulous.org/)
+- [Moure per a guanyar](https://yeticoineth.com/about.html)
+- [Identitat digital](https://photochromic.io/)
 
 ### Exemples d'ethereum.org {#ethereum-org-examples}
 
 Utilitzem els NFT per a retornar els nostres contribuïdors i tenim, fins i tot, el nostre propi nom de domini en NFT.
 
-#### POAP (protocol de prova d'assistència o «Proof of attendance protocol», en anglès) {#poaps}
+#### POAP (Proof of attendance protocol) {#poaps}
 
 Si contribuïu a ethereum.org, podeu reclamar un NFT POAP. Són col·leccionables que demostren que heu participat en un esdeveniment. Algunes trobades sobre criptomonedes han utilitzat els POAP com a tiquet pels seus esdeveniments. [Més informació sobre les contribucions](/contributing/#poap).
 
@@ -68,7 +74,7 @@ Si contribuïu a ethereum.org, podeu reclamar un NFT POAP. Són col·leccionable
 
 #### ethereum.eth {#ethereum-dot-eth}
 
-Aquest lloc web té un nom de domini alternatiu impulsat pels NFT, **ethereum.eth**. La nostra adreça `.org` és gestionada centralment mitjançant un sistema de proveïdor de nom de domini (DNS, en anglès), mentre que el `.eth` d'ethereum està registrat a Ethereum mitjançant el Servei de Noms d'Ethereum (ENS, en anglès). És de la nostra propietat i la gestionem nosaltres mateixos. [Feu-hi una ullada al nostre registre ENS](https://app.ens.domains/name/ethereum.eth)
+Aquest lloc web té un nom de domini alternatiu impulsat pels NFT, **ethereum.eth**. La nostra adreça `.org` és gestionada centralment mitjançant un sistema de proveïdor de nom de domini (DNS), mentre que el `.eth` d'ethereum està registrat a Ethereum mitjançant el Servei de Noms d'Ethereum (ENS). És de la nostra propietat i la gestionem nosaltres mateixos. [Feu-hi una ullada al nostre registre ENS](https://app.ens.domains/name/ethereum.eth)
 
 [Més informació sobre l'ENS](https://app.ens.domains)
 
@@ -89,7 +95,7 @@ Els NFT són diferents dels tókens ERC-20, com ara DAI o LINK, en els quals cad
   - Signatures
 - Moltíssimes més opcions amb les quals es pot esdevenir creatiu!
 
-Un NFT només pot tenir un propietari a la vegada. La propietat és gestionada mitjançant l'«uniqueID» i les metadades que cap altre token pot replicar. Els NFT són encunyats mitjançant petits contractes que n'assignen la titularitat i gestionen la transferibilitat. Quan algú crea o encunya un NFT, executa codi emmagatzemat en petits contractes que conformen diferents estàndards, com l'ERC-721. Aquesta informació s'afegeix a la cadena de blocs on es gestiona l'NFT. El procés d'encunyació, des d'una perspectiva superior, té els següents passos a seguir:
+Ownership of NFTs is managed through the unique ID and metadata that no other token can replicate. Els NFT són encunyats mitjançant petits contractes que n'assignen la titularitat i gestionen la transferibilitat. When someone creates or mints an NFT, they execute code stored in smart contracts that conform to different standards, such as [ERC-721](/developers/docs/standards/tokens/erc-721/). Aquesta informació s'afegeix a la cadena de blocs on es gestiona l'NFT. El procés d'encunyació, des d'una perspectiva superior, té els següents passos a seguir:
 
 - Crear un nou bloc
 - Validar la informació
@@ -243,7 +249,7 @@ A més, no és gaire difícil a Ethereum, perquè ambdós mons (NFT i DeFi) comp
 
 Els creadors d'NFT poden crear també «accions» per als seus NFT. Així, donen l'oportunitat als inversors i als seguidors de tenir una part de l'NFT sense haver de comprar-lo tot complet. D'aquesta forma, s'hi afegeixen moltes més oportunitats als encunyadors i col·leccionistes d'NFT per igual.
 
-- Els NFT fraccionats poden ser comercialitzats en [cases d'Intercanvi descentralitzades o DEX, per les seves sigles en anglès](/defi/#dex), com Uniswap, no tan sols en [mercats NFT](/dapps?category=collectibles). Això comporta més compradors i més venedors.
+- Els NFT fraccionats poden ser comercialitzats en [cases d'Intercanvi descentralitzades](/defi/#dex), com Uniswap, no tan sols en [mercats NFT](/dapps?category=collectibles). Això comporta més compradors i més venedors.
 - Es pot definir un preu general per a un NFT mitjançant el preu de les seves fraccions.
 - Disposeu de més d'una oportunitat per tenir i gaudir d'articles que us importen. És més difícil tenir un preu fora de la propietat dels NFT.
 
@@ -252,13 +258,19 @@ Encara és experimental però podeu aprendre més sobre la titularitat de les fr
 - [NIFTEX](https://landing.niftex.com/)
 - [NFTX](https://gallery.nftx.org/)
 
-En teoria, això obriria la possibilitat de fer coses com ara tenir una porció d'un Picasso. Us convertiríeu en un accionista d'un NFT de Picasso, cosa que vol dir que tindríeu dret de veu en coses com ara el repartiment d'ingressos. És molt probable que aviat posseir una fracció d'un NFT doni accés a una organització autònoma descentralitzada (DAO per les seves sigles en anglès) per a gestionar aquell actiu.
+En teoria, això obriria la possibilitat de fer coses com ara tenir una porció d'un Picasso. Us convertiríeu en un accionista d'un NFT de Picasso, cosa que vol dir que tindríeu dret de veu en coses com ara el repartiment d'ingressos. És molt probable que aviat posseir una fracció d'un NFT doni accés a una organització autònoma descentralitzada (DAO) per a gestionar aquell actiu.
 
 Són organitzacions impulsades per Ethereum que permeten a desconeguts, com ara accionistes globals d'un actiu, coordinar-se en seguretat sense haver de confiar necessàriament en els altres. Això és degut al fet que no es pot gastar ni una sola peseta sense l'aprovació del grup.
 
 Com ja hem dit abans, és un espai emergent. Els NFT, les DAO o els tókens fraccionats s'estan desenvolupant a ritmes diferents. Però tota la seva infraestructura existeix i pot treballar conjuntament de forma fàcil perquè tots parlen la mateixa llengua: Ethereum. Per tant, estigueu pendents d'aquest espai.
 
 [Més informació sobre les DAO](/dao/)
+
+### Certificats d'autenticitat {#certificates}
+
+Les empreses que ofereixen certificats falsos de títols universitaris són, pel que sembla, una indústria multimilionària que els NFT poden ajudar a combatre. Els NFT poden ser una forma segura i ràpida de verificar les credencials de grau d'algú.
+
+[A Corea del Sud, una universitat ja expedeix certificats de grau com a NFT](https://forkast.news/headlines/south-korea-nfts-graduates-hoseo/), amb l'esperança que els NFT millorin l'accés als serveis administratius i evitin la falsificació o alteració del títol. [El Trinity Business School (TBS), a Irlanda, també té previst oferir NFT a partir de 2023](https://trinitynews.ie/2022/04/business-school-to-offer-degree-nfts/).
 
 <Divider />
 
@@ -278,11 +290,10 @@ Els NFT estan creixent en popularitat i això significa que també estan sota un
 
 Volem aclarir alguns punts:
 
-- Els NFT no incrementen directament la petjada de carboni d'Ethereum.
-- La manera en què Ethereum manté els vostres fons i actius de forma segura actualment és mitjançant un medi d'energia intensiva, però això està a punt de millorar.
-- Un cop millorada, la petjada de carboni d'Ethereum serà un 99,95% millor, fent que sigui energèticament més eficient que moltes de les empreses existents avui en dia.
+- Creating and transferring NFTs are just Ethereum transactions - they have no direct impact on the energy expended by Ethereum, nor do they independently expend their own energy.
+- Ethereum is a low-energy blockchain, meaning the environmental impact of creating, buying and transferring NFTs is very small.
 
-Per ampliar-ne la informació ens haurem de posar més tècnics, per això tingueu una mica de paciència...
+The next sections explain further with a little more technical detail...
 
 ### No culpeu els NFT {#nft-qualities}
 
@@ -292,67 +303,27 @@ Descentralitzat significa que qualsevol pot verificar que posseïu alguna cosa. 
 
 Segur vol dir que ningú pot copiar/enganxar el vostre NFT o robar-lo.
 
-Aquestes qualitats d'Ethereum fan que sigui possible posseir la titularitat d'articles digitals únics i d'aconseguir un preu correcte pels vostres continguts. Però tot això té un cost. Les cadenes de blocs com Bitcoin i Ethereum actualment consumeixen molta energia a causa del fet que en fa falta molta per mantenir aquestes qualitats. Si fos fàcil reescriure la història d'Ethereum per robar NFT o criptomonedes, el sistema col·lapsaria.
+Aquestes qualitats d'Ethereum fan que sigui possible posseir la titularitat d'articles digitals únics i d'aconseguir un preu correcte pels vostres continguts. Ethereum protects the assets using a decentralized consensus mechanism which involves ['proof-of-stake'](/developers/docs/consensus-mechanisms/pos). This is a low carbon method to determine who can add a block of transactions to the chain, and is considered more secure than the energy-intensive alternative, ['proof-of-work'](/developers/docs/consensus-mechanisms/pow). NFTs have been associated with high energy expenditure because Ethereum used to be secured using proof-of-work. This is no longer true.
 
-#### El treball d'encunyar el vostre NFT {#minting-nfts}
+#### Minting NFTs {#minting-nfts}
 
 Quan encunyeu un NFT, han de succeir certes coses:
 
 - Ha de ser confirmat com un actiu a la cadena de blocs.
 - El balanç de comptes del titular s'ha d'actualitzar per incloure aquest actiu. Això fa possible que sigui comerciable o que la «propietat» sigui verificable.
-- Les transaccions que confirmen tot això necessiten ser afegides a un bloc i «immortalitzades» a la cadena.
-- El bloc ha de ser confirmat per totes les persones de la xarxa com a «correcte». Aquest consens evita la necessitat d'intermediaris, ja que la xarxa dona per bo que el vostre NFT existeix i que us pertany. I està en cadena, per tant qualsevol pot comprovar-ho. Aquesta és una de les formes en què Ethereum ajuda els creadors d'NFT a maximitzar els seus guanys.
+- The transactions that confirm the above need to be added to a block and "immortalized" on the chain.
+- El bloc ha de ser confirmat per totes les persones de la xarxa com a «correcte». Aquest consens evita la necessitat d'intermediaris, ja que la xarxa dona per bo que el vostre NFT existeix i que us pertany. I està en cadena, per tant qualsevol pot comprovar-ho. This is one of the ways Ethereum helps NFT creators to maximize their earnings.
 
-Totes aquestes tasques les fan els miners. I permeten a la resta de la xarxa tenir coneixement del vostre NFT i de qui és la titularitat. Això vol dir que la mineria ha de ser suficientment complicada; d'altra banda, qualsevol podria dir que és titular de l'NFT que acabeu d'encunyar i transferir-se la titularitat fraudulentament. Existeixen molts incentius localment per assegurar que els miners actuen amb honestedat.
+All these tasks are done by block producers and validators. Block proposers add your NFT transaction to a block and broadcast it to the rest of the network. Validators check that the transaction is valid and then add it to their databases. There are lots of crypto-economic incentives in place to make sure validators are acting honestly. Otherwise, anyone could just claim that they own the NFT you just minted and fraudulently transfer ownership.
 
-[Més informació sobre la mineria](/developers/docs/consensus-mechanisms/pow/)
+#### NFT security {#nft-security}
 
-#### Protegir el vostre NFT amb la mineria {#securing-nfts}
+Ethereum's security comes from proof-of-stake. The system is designed to economically disincentivize malicious actions, making Ethereum tamper-proof. This is what makes NFTs possible. Once the block containing your NFT transaction becomes finalized it would cost an attacker millions of ETH to change it. Anyone running Ethereum software would immediately be able to detect dishonest tampering with an NFT, and the bad actor would be economically penalized and ejected.
 
-La dificultat de la mineria ve del fet que comporta un munt de poder de computació per a crear nous blocs a la cadena. És important recalcar que els blocs es creen de manera coherent, no només quan es necessiten. Es creen cada 12 segons aproximadament.
+Security issues relating to NFTs are most often related to phishing scams, smart contract vulnerabilities or user errors (such as inadvertently exposing private keys), making good wallet security critical for NFT owners.
 
-Això és important per fer que Ethereum sigui a prova de manipulació, una de les qualitats que fa possible els NFT. Com més blocs, més segura és la cadena. Si el vostre NFT es va crear al bloc #600 i un pirata intentés robar-lo modificant les seves dades, l'empremta digital de tots els blocs subsegüents canviaria. Per tant, qualsevol individu que estigués executant un software d'Ethereum seria capaç immediatament de detectar-ho i evitar que succeís.
-
-Això vol dir, tanmateix, que constantment s'ha d'estar utilitzant energia computacional. També significa que un bloc que contingui 0 transaccions d'NFT tindrà aproximadament la mateixa empremta de carboni, ja que es consumirà energia computacional per crear-lo. Altres transaccions sense NFT ompliran els blocs.
-
-#### Les cadenes de blocs consumeixen molta energia actualment {#blockchains-intensive}
-
-Per tant, sí, hi ha una empremta de carboni associada a la creació de blocs mitjançant la mineria; i això també és un problema per a les cadenes com Bitcoin, però no és directament culpa dels NFT.
-
-Molta mineria utilitza fonts d'energies renovables o energies sense explotar a llocs remots. Existeix, a més, l'argument que les indústries que les NFT i les criptomonedes estan alterant tenen també enormes empremtes de carboni. Però tan sols perquè les indústries existents siguin dolentes, no significa que no ens hauríem d'esforçar per ser millors.
-
-I ho som. Ethereum està evolucionant per fer l'ús d'Ethereum (i, com a resultat, els NFT) més energèticament eficient. I aquest ha estat sempre el pla.
-
-No estem aquí per defensar l'empremta mediambiental de la mineria, sinó que volem explicar com estan canviant les coses a millor.
-
-### Un futur més verd... {#a-greener-future}
-
-Durant tot aquest temps que Ethereum ha existit, el consum energètic de la mineria ha estat un gran àmbit d'atenció per als desenvolupadors i els investigadors. I la visió sempre ha estat reemplaçar-la el més aviat possible. [Més informació sobre la visió d'Ethereum](/upgrades/vision/)
-
-Aquesta visió s'està lliurant ara mateix.
-
-#### Un Ethereum més verd {#greener-ethereum}
-
-Ethereum està passant actualment per una sèrie de millores que reemplaçaran la mineria amb [les participacions](/staking/). Això traurà l'energia computacional com a mecanisme de seguretat i reduirà la petjada de carboni d'Ethereum en ~99,95%<sup>[^1]</sup>. En aquest món, els participants comprometen fons en lloc de poder computacional per protegir la xarxa.
-
-El cost energètic d'Ethereum serà el cost d'executar un ordinador personal multiplicat pel nombre de nodes a la xarxa. Si hi ha 10.000 nodes a la xarxa i el cost d'execució d'un ordinador personal és aproximadament 525 kWh per any, això fa un total de 5.250.000 kWh<sup>[^1]</sup> per any per a tota la xarxa.
-
-Podem utilitzar aquest càlcul per comparar el futur d'Ethereum amb un servei global com Visa. 100.000 transaccions de Visa utilitzen 149 kWh d'energia<sup>[^2]</sup>. En la prova de participació d'Ethereum, aquest mateix nombre de transaccions costarien 17,4 kWh d'energia o ~11% del total de l'energia<sup>[^3]</sup>. Això sense considerar totes les optimitzacions fetes en paral·lel a la capa de consens i les cadenes de fragments, com ara els [rollups](/glossary/#rollups). Podria ser tan poc com 0,1666666667 kWh d'energia per cada 100.000 transaccions.
-
-L'important és que millora l'eficiència energètica a la vegada que preserva la descentralització i protecció d'Ethereum. Moltes altres cadenes de blocs externes podrien utilitzar algun tipus de participacions, però estan protegides per uns pocs apostadors selectes, no pels milers que Ethereum tindrà. Com més descentralització, més protegit estarà el sistema.
-
-[Més informació sobre les estimacions energètiques](#footnotes-and-sources)
-
-_Hem aportat la comparació bàsica de Visa perquè tingueu una base per comprendre el consum energètic de la prova de participació d'Ethereum respecte a un nom familiar. Tanmateix, a la pràctica, no és realment correcte comparar-los basant-se en nombre de transaccions. La despesa energètica d'Ethereum està basada en el temps. Si Ethereum fes més o menys transaccions d'un minut a l'altre, la despesa energètica seria la mateixa._
-
-_És important també recordar que Ethereum fa més que només transaccions financeres, és una plataforma per a aplicacions; per tant, una comparació més justa podria ser amb moltes companyies o industries incloent-hi Visa, AWS i d'altres!_
-
-#### Terminis {#timelines}
-
-El procés ja ha començat. [La cadena de balisa](/upgrades/beacon-chain/), la primera millora, llençada el desembre de 2020. Proporciona la base per a les participacions permetent als apostadors accedir al sistema. El següent pas rellevant per a l'eficiència energètica és fusionar la cadena actual, la que està protegida pels miners, amb la cadena de balisa, on la mineria no és necessària. Els terminis poden no ser exactes en aquest punt, però s'estima que succeirà en algun moment de 2022. Aquest procés es coneix com La Fusió (anteriorment anomenada l'acoblament). [Més informació sobre la fusió](/upgrades/merge/).
-
-<ButtonLink to="/upgrades/">
-  Més informació sobre les millores d'Ethereum
+<ButtonLink to="/security/">
+  More on security
 </ButtonLink>
 
 ## Construir amb NFT {#build-with-nfts}
@@ -366,69 +337,5 @@ La majoria dels NFT són construïts utilitzant un estàndard conegut com a [ERC
 - [Guia per a principiants dels NFT](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, gener de 2020_
 - [Tot el que heu de saber sobre el metavers](https://foundation.app/blog/enter-the-metaverse) – _Equip de la Fundació, foundation.app_
 - [No, els criptoartistes no estan malmetent el planeta](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
+- [Consum energètic d'Ethereum](/energy-consumption/)
 - [Mai més el poder d'un país](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, 18 de maig de 2021_
-
-<Divider />
-
-### Notes a peu de pàgina i fonts {#footnotes-and-sources}
-
-Tot això explica com hem arribat a les nostres estimacions energètiques mencionades abans. Aquestes estimacions s'apliquen a la xarxa com a una totalitat i no estan reservades només al procés de creació, compra o venda d'NFT.
-
-#### 1. Un 99,95% de reducció d'energia de la mineria {#fn-1}
-
-La reducció del consum energètic del 99,95% d'un sistema protegit per miners a un sistema protegit per participacions es calcula utilitzant les següents fonts d'informació:
-
-- Anualment es consumeixen 44,49 TWh d'energia elèctrica minant Ethereum - [Digiconomist](https://digiconomist.net/ethereum-energy-consumption)
-
-- Un ordinador de sobretaula mitjà, l'únic que es necessita per a executar una prova de participació, utilitza una energia de 0,06 kWh – [Gràfic de l'energia a Silicon Valley](https://www.siliconvalleypower.com/residents/save-energy/appliance-energy-use-chart) (Alguns estimen que és una mica més alta, d'uns 0,15 kWh)
-
-En el moment d'escriure això, hi ha 140.592 validadors de 16.405 adreces úniques. D'aquests, se suposa que 87.897 validadors participen des de casa.
-
-Se suposa que un individu mitjà amb participacions des de casa utilitza una configuració d'ordinador personal de 100 watts per executar una mitjana de 5,4 clients validadors.
-
-Amb els 87.897 validadors executant des de casa ens dona 16.300 usuaris consumint ~1,64 megawatts d'energia.
-
-La resta dels validadors s'executen mitjançant participacions de custòdia com ara mercats d'intercanvi i serveis de participacions. Es pot suposar que utilitzen 100 watts per cada 5,5 validadors. Aquesta és una sobreestimació bruta per anar a cop segur.
-
-Per tant, en total, Ethereum consumeix en proves de participació al voltant de 2,62 megawatts, que és el mateix que un poble petit americà.
-
-Això és una reducció d'almenys el 99,95% del total de la despesa energètica de l'estimació de Digiconomist dels 44,49 TWh per any que els actuals miners d'Ethereum consumeixen.
-
-#### 2. Consum energètic de Visa {#fn-2}
-
-El cost de les 100.000 transaccions de Visa és de 149 kWh - [Despesa energètica mitjana de la xarxa Bitcoin per transacció comparada amb la xarxa Visa el 2020, Statista](https://www.statista.com/statistics/881541/bitcoin-energy-consumption-transaction-comparison-visa/)
-
-Cap a finals de setembre de 2020 havien processat 140.839.000.000 transaccions - [Informes financers de Visa del quart trimestre de 2020](https://s1.q4cdn.com/050606653/files/doc_financials/2020/q4/Visa-Inc.-Q4-2020-Operational-Performance-Data.pdf)
-
-#### 3. Despesa energètica per 100.000 transaccions en una xarxa de prova de participació fragmentada {#fn-3}
-
-S'estima que les millores en l'escalabilitat permetran la xarxa processar entre 25.000 i 100.000 transaccions per segon, amb [un màxim teòric de moment de 100.000](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698).
-
-[Vitalik Buterin parla sobre el potencial de les transaccions per segon amb la fragmentació](https://twitter.com/VitalikButerin/status/1312905884549300224)
-
-Amb un mínim, la fragmentació permetrà una quantitat de transaccions multiplicada per 64 en comparació amb les que es fan avui en dia que ronden les 15. Aquesta és la quantitat de cadenes fragmentades (capacitat i dades extra) que s'han introduït. [Més informació sobre les cadenes de fragments](/upgrades/sharding/)
-
-Això vol dir que podem estimar quant es trigaria a processar 100.000 transaccions per poder comparar-ho amb l'exemple de Visa esmentat.
-
-- `15 * 64 = 960` transaccions per segon.
-- `100.000 / 960 = 104,2` segons en processar 100.000 transaccions.
-
-En 104,2 segons, la xarxa Ethereum utilitzarà la mateixa quantitat d'energia:
-
-`1,44Kwh d'ús diari * 10.000 nodes de xarxa = 14.400 kWh` al dia.
-
-Un dia té 86.400 segons, per tant `14.400 / 86.400 = 0,1666666667 kWh` per segon.
-
-Si multipliquem això per la quantitat de temps que fa falta per a processar 100.000 transaccions: `0,1666666667 * 104,2 = 17,3666666701 kWh`.
-
-Això és un **11,6554809866%** de l'energia consumida per la mateixa quantitat de transaccions a Visa.
-
-Recordeu que tot això està basat en la mínima quantitat de transaccions per segon que Ethereum estarà capacitada a dur a terme. Si Ethereum assoleix el seu potencial de 100.000 transaccions per segon, 100.000 transaccions consumirien 0,1666666667 kWh.
-
-Per dir-ho d'una altra manera, si Visa gestionés 140.839.000.000 transaccions a un cost de 149 kWh per cada 100.000 transaccions significaria un consum d'energia anual de 209.850.110 kWh.
-
-Ethereum en un sol any consumeix 5.256.000 kWh. Amb un potencial de 788.940.000.000 - 3.153.600.000.000 transaccions processades en aquest espai de temps.
-
-<InfoBanner emoji=":evergreen_tree:">
-  Si creieu que aquestes afirmacions són incorrectes o poden ser més exactes, plantegeu un problema o una PR. Són estimacions fetes per l'equip d'ethereum.org utilitzant informació accessible públicament i el disseny d'Ethereum planejat. No representa una promesa oficial de la Fundació Ethereum. 
-</InfoBanner>
