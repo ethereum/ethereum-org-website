@@ -1408,6 +1408,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/marcellamalune"><img src="https://avatars.githubusercontent.com/u/63505124?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Marcella</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=marcellamalune" title="Code">💻</a></td>
       <td align="center"><a href="https://londonbustimes.com/"><img src="https://avatars.githubusercontent.com/u/8823227?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Leon Todd</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=leontodd" title="Documentation">📖</a></td>
     </tr>
+    <tr>
+      <td align="center"><a href="https://ladislasfontaine.com/"><img src="https://avatars.githubusercontent.com/u/42914253?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ladislas Fontaine</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ladislasfontaine" title="Documentation">📖</a></td>
+    </tr>
   </tbody>
 </table>
 
