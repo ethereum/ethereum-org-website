@@ -8871,6 +8871,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "leontodd",
+      "name": "Leon Todd",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8823227?v=4",
+      "profile": "https://londonbustimes.com/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
