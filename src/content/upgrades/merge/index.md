@@ -47,7 +47,7 @@ This transition to proof-of-stake changed the way ether is issued. Learn more ab
 
 _This bears repeating_: As a user or holder of ETH or any other digital asset on Ethereum, as well as non-node-operating stakers, **you do not need to do anything with your funds or wallet to account for The Merge.** ETH is just ETH. There is no such thing as "old ETH"/"new ETH" or "ETH1"/"ETH2" and wallets work exactly the same after The Merge as they did before—people telling you otherwise are likely scammers.
 
-Despite swapping out proof-of-work, the entire history of Ethereum since genesis remained intact and unaltered by the transition to proof-of-stake. Any funds held in your wallet before The Merge will are still accessible after The Merge. **No action is required to upgrade on your part.**
+Despite swapping out proof-of-work, the entire history of Ethereum since genesis remained intact and unaltered by the transition to proof-of-stake. Any funds held in your wallet before The Merge are still accessible after The Merge. **No action is required to upgrade on your part.**
 
 [More on Ethereum security](/security/#eth2-token-scam)
 
