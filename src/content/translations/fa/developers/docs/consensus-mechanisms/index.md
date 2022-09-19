@@ -3,12 +3,9 @@ title: مکانیزم‌های اجماع
 description: توضیحی درباره پروتکل‌های اجماع در سیستم‌های توزیع‌شده و نقشی که در اتریوم ایفا می‌کنند.
 lang: fa
 sidebar: true
-incomplete: true
 ---
 
-وقتی صحبت از زنجیره‌های بلوکی مانند اتریوم می‌شود که در اصل پایگاه داده‌های توزیع‌شده هستند، گره‌های شبکه باید بتوانند در مورد وضعیت فعلی سیستم به توافق برسند. این امر با استفاده از مکانیزم‌های اجماع حاصل می‌شود.
-
-گرچه مکانیزم‌های اجماع مستقیماً به ساختن برنامه‌ی غیرمتمرکز مرتبط نیستند، درک آن‌ها سبب روشن شدن مفاهیم مرتبط با شما و تجربه‌ی کاربری‌تان، مانند قیمت گاز و زمان تراکنش، می‌شود.
+The term 'consensus mechanism' is often used colloquially to refer to 'proof-of-stake', 'proof-of-work' or 'proof-of-authority' protocols. However, these are just components in consensus mechanisms that protect against Sybil attacks. Consensus mechanisms are the complete stack of ideas, protocols and incentives that enable a distributed set of nodes to agree on the state of a blockchain.
 
 ## پیش‌نیازها {#prerequisites}
 
@@ -16,29 +13,31 @@ incomplete: true
 
 ## اجماع چیست؟ {#what-is-consensus}
 
-منظور از اجماع، یک توافقنامه‌ی کلی است که به آن دست یافته‌ایم. فرض کنید گروهی از افراد به سینما می‌روند. اگر هیچ اختلاف‌نظری درباره‌ی فیلم انتخاب‌شده وجود نداشته باشد، آنگاه اجماع حاصل شده است. در بدترین حالت گروه در نهایت تقسیم می‌شوند.
+منظور از اجماع، یک توافقنامه‌ی کلی است که به آن دست یافته‌ایم. فرض کنید گروهی از افراد به سینما می‌روند. If there is no disagreement on a proposed choice of film, then a consensus is achieved. If there is disagreement, the group must have the means to decide which film to see. In extreme cases, the group will eventually split.
 
-در رابطه با زنجیره‌ی بلوکی،‌ این فرایند رسمی‌سازی شده است، و اجماع زمانی اتفاق می‌افتد که حداقل ‏‎51% گره‌های شبکه روی وضعیت همگانی بعدی شبکه توافق داشته باشند.
+In regards to the Ethereum blockchain, the process is formalized, and reaching consensus means that at least 66% of the nodes on the network agree on the global state of the network.
 
 ## مکانیزم اجماع چیست؟ {#what-is-a-consensus-mechanism}
 
-مکانیزم‌های اجماع (که به نام پروتکل‌های اجماع یا الگوریتم‌های اجماع هم شناخته می‌شوند) این امکان را می‌دهند که سیستم‌های توزیع شده (شبکه‌های کامپیوترها) با هم کار کنند و امن بمانند.
+The term consensus mechanism refers to the entire stack of protocols, incentives and ideas that allow a network of nodes to agree on the state of a blockchain.
 
-برای دهه‌ها،‌ این مکانیزم در برقرار کردن اجماع بین گره‌های پایگاه داده‌ها، سرور‌های برنامه‌های کاربردی و سایر زیرساخت‌ها مورد استفاده قرار می‌گرفت. در سال های گذشته، مکانیزم اجماع جدیدی اختراع شده تا به سیستم‌های رمزنگاری شده مانند اتریوم اجازه دهد که در مورد وضعیت شبکه توافق کنند.
+Ethereum uses a proof-of-stake-based consensus mechanism that derives its crypto-economic security from a set of rewards and penalties applied to capital locked by stakers. This incentive structure encourages individual stakers to operate honest validators, punishes those who don't, and creates an extremely high cost to attack the network.
 
-یک مکانیزم اجماع در سیستم اقتصاد رمزارزی هم‌چنین به جلوگیری از حمله‌های مشخص اقتصادی کمک می‌کند. در تئوری،‌ یک مهاجم می‌تواند با کنترل ‏‎51% شبکه اجماع را به خطر بیاندازد. مکانیزم‌های اجماع با هدف ناممکن ساختن این «حمله‌ی ‎51%‏» طراحی شده‌اند. مکانیزم های مختلفی طراحی‌شده‌اند تا این مشکل امنیتی را با روش‌های مختلفی حل کنند.
+Then, there is a protocol that governs how honest validators are selected to propose or validate blocks, process transactions and vote for their view of the head of the chain. In the rare situations where multiple blocks are in the same position near the head of the chain, there is a fork-choice mechanism that selects blocks that make up the 'heaviest' chain, measured by the number of validators that voted for the blocks weighted by their staked ether balance.
 
-<YouTube id="dylgwcPH4EA" />
+Some concepts are important to consensus that are not explicitly defined in code, such as the additional security offered by potential out-of-band social coordination as a last line of defense against attacks on the network.
+
+These components together form the consensus mechanism.
 
 ## انواع مکانیزم‌های اجماع {#types-of-consensus-mechanisms}
 
-### اثبات کار {#proof-of-work}
+### Proof-of-work based {#proof-of-work}
 
-در حال حاضر اتریوم به مانند بیت‌کوین، از مکانیزم اجماع **اثبات کار (PoW)** استفاده می‌کند.
+Like Bitcoin, Ethereum once used a **proof-of-work (PoW)** based consensus protocol.
 
-#### ساخت بلوک {#pow-block-creation}
+#### ساختن بلوک {#pow-block-creation}
 
-اثبات کار توسط [استخراج‌گرها](/developers/docs/consensus-mechanisms/pow/mining/)، که برای درست‌کردن بلوک‌های پر از تراکنش‌ رقابت می‌کنند، انجام می‌شود. برنده، بلوک را با بقیه شبکه به اشتراک می‌گذارد و مقداری اتر تازه ضرب‌شده به دست می‌آورد. رایانه‌ای در رقابت برنده می‌شود که بتواند پازل ریاضی را سریع‌تر حل کند - این کار یک لینک رمزنگاری شده بین بلوک فعلی و بلوک قبل ایجاد می‌کند. حل این معما همان کار در «اثبات کار» است.
+Validators create blocks. One validator is randomly selected in each slot to be the block proposer. Their consensus client requests a bundle of transactions as an 'execution payload' from their paired execution client. They wrap this in consensus data to form a block, which they send to other nodes on the Ethereum network. This block production is rewarded in ETH. In rare cases when multiple possible blocks exist for a single slot, or nodes hear about blocks at different times, the fork choice algorithm picks the block that forms the chain with the greatest weight of attestations (where weight is the number of validators attesting scaled by their ETH balance).
 
 #### ایمنی {#pow-security}
 
@@ -46,17 +45,17 @@ incomplete: true
 
 اطلاعات بیشتر درباره‌ی [اثبات کار](/developers/docs/consensus-mechanisms/pow/)
 
-### اثبات سهام {#proof-of-stake}
+### Proof-of-stake based {#proof-of-stake}
 
-اتریوم برنامه دارد که پروتکل اجماع خود را به **اثبات سهام (PoS)** ارتقا دهد.
+Ethereum now uses a **proof-of-stake (PoS)** based consensus protocol.
 
-#### ساخت بلوک {#pos-block-creation}
+#### ساختن بلوک {#pos-block-creation}
 
 اثبات سهام توسط اعتبارسنج‌هایی که برای مشارکت در سیستم اتر سهام‌گذاری کرده‌اند انجام می‌شود. اعتبارسنج به شکل تصادفی برای ساخت بلوک جدید انتخاب می‌شود و آن را با بقیه‌ی شبکه به اشتراک گذاشته و پاداش دریافت می‌کند. به جای کار محاسباتی بسیار زیاد، کافی است که اتر خود را در شبکه سهام‌گذاری کنید. این مشوقی است که برای رفتار سالم در شبکه تعیین شده است.
 
 #### ایمنی {#pos-security}
 
-یک سیستم اثبات سهام با توجه به این حقیقت که برای فریب دادن زنجیره نیاز به ‎51%‏ اتر سهام‌گذاری‌شده نیاز دارید، ایمن می‌ماند. و همچنین برای رفتارهای بداندیش سهام شما تقطیع می‌شود.
+A proof-of-stake system is secure crypto-economically because an attacker attempting to take control of the chain must destroy a massive amount of ETH. A system of rewards incentivizes individual stakers to behave honestly, and penalties disincentivize stakers from acting maliciously.
 
 اطلاعات بیشتر درباره‌ی [اثبات سهام](/developers/docs/consensus-mechanisms/pos/)
 
@@ -68,15 +67,13 @@ incomplete: true
 
 ### مقاومت سیبیل و انتخاب زنجیره {#sybil-chain}
 
-از دید فنی، اثبات کار و اثبات سهام خود پروتکل‌های اجماع نیستند، اما معمولاً برای راحتی به این نام خطاب می‌شوند. این‌ها در واقع مکانیزم‌های مقاومت سیبیل و انتخاب‌کننده‌ی نویسنده‌ی بلوک‌ هستند؛ روشی هستند برای انتخاب اینکه چه کسی آخرین بلوک را بنویسد. این مکانیزم مقاومت سیبیل ترکیب‌شده با قانون انتخاب زنجیره‌ است که در مجموع مکانیزم اجماع را می‌سازد.
+Proof-of-work and proof-of-stake alone are not consensus protocols, but they are often referred to as such for simplicity. این‌ها در واقع مکانیزم‌های مقاومت سیبیل و انتخاب‌کننده‌ی نویسنده‌ی بلوک‌ هستند؛ روشی هستند برای انتخاب اینکه چه کسی آخرین بلوک را بنویسد. Another important component is the chain selection (aka fork choice) algorithm that enables nodes to pick one single correct block at the head of the chain in scenarios where multiple blocks exist in the same position.
 
 **مقاومت سیبیل** میزان گذر یک پروتکل در مقابل یک [حمله‌ی سیبیل](https://wikipedia.org/wiki/Sybil_attack) را می‌سنجد. حملات سیبیل وقتی اتفاق می‌افتند که یک کاربر یا گروه تظاهر می‌کند چند کاربر مختلف است. مقاومت در برابر چنین حملاتی برای یک زنجیره‌ی بلوکی غیرمتمرکز بسیار ضروری است و به استخراج‌گرها و اعتبارسنج‌ها امکان می‌دهد بر اساس منابعی که در اختیار گذاشته‌اند به‌صورت مساوی پاداش دریافت کنند. اثبات سهام و اثبات کار با مجبور کردن کاربر به هزینه کردن انرژی بسیار یا گذاشتن وثیقه‌ی زیاد، جلوی این حمله را می‌گیرند. این تمهیدات محافظتی، مانعی به‌صرفه علیه حملات سیبیل هستند.
 
-یک **قانون انتخاب زنجیره** برای تصمیم‌گیری در این باره که کدام زنجیره، زنجیره‌ی «درست» است، استفاده می‌شود. اتریوم و بیت‌کوین هم‌اکنون از قانون «بلندترین زنجیره» استفاده می‌کنند، به این معنی که بلندترین زنجیره آنی خواهد بود که بقیه‌ی گره‌ها آن را معتبر دانسته و با آن کار می‌کنند. برای زنجیره‌های اثبات کار، بلندترین زنجیره بر اساس سختی اثبات کار تجمیعی کل زنجیره مشخص می‌شود.
+یک **قانون انتخاب زنجیره** برای تصمیم‌گیری در این باره که کدام زنجیره، زنجیره‌ی «درست» است، استفاده می‌شود. Bitcoin uses the "longest chain" rule, which means that whichever blockchain is the longest will be the one the rest of the nodes accept as valid and work with. برای زنجیره‌های اثبات کار، بلندترین زنجیره بر اساس سختی اثبات کار تجمیعی کل زنجیره مشخص می‌شود. Ethereum used to use the longest chain rule too; however, now that Etheruem runs on proof-of-stake it adopted an updated fork-choice algorithm that measures the 'weight' of the chain. The weight is the accumulated sum of validator votes, weighted by validator staked-ether balances.
 
-ترکیب اثبات کار و قانون بلندترین زنجیره به عنوان «اجماع ناکاموتو» شناخته می‌شود.
-
-[زنجیره‌ی بیکن](/upgrades/beacon-chain/) از یک مکانیزم اجماعی به نام [گجت قطعیت دوستانه‌ی Casper‏ (Casper the Friendly Finality Gadget)‏](https://arxiv.org/abs/1710.09437) استفاده می‌کند که مبتنی بر اثبات سهام است.
+Ethereum uses a consensus mechanism known as [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/) that combines [Casper FFG proof-of-stake](https://arxiv.org/abs/1710.09437) with the [GHOST fork-choice rule](https://arxiv.org/abs/2003.03052).
 
 ## بیشتر بخوانید {#further-reading}
 
@@ -84,8 +81,9 @@ incomplete: true
 - [اجماع ناکاموتو چیست؟ راهنمای کامل مبتدی‌ها](https://blockonomi.com/nakamoto-consensus/)
 - [Casper چگونه کار می‌کند؟](https://medium.com/unitychain/intro-to-casper-ffg-9ed944d98b2d)
 - [درباره‌ی ایمنی و کارایی زنجیره‌های بلوکی مبتنی بر اثبات کار](https://eprint.iacr.org/2016/555.pdf)
+- [تحمل خطای بیزانس](https://en.wikipedia.org/wiki/Byzantine_fault)
 
-_آیا منبعی اجتماعی می‌شناسید که به شما کمک کرده باشد؟ این صفحه را ویرایش کنید و آن را اضافه کنید!_
+_آیا منبعی اجتماعی می‌شناسید که به شما کمک کرده باشد؟ این صفحه را ویرایش کنید و به آن اضافه کنید!_
 
 ## موضوعات مرتبط {#related-topics}
 

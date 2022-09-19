@@ -96,6 +96,12 @@ Repeat passphrase:
 
 آدرس قرارداد معمولا وقتی داده می‌شود که قرارداد توسط زنجیره‌ی بلوکی اتریوم گسترش داده می‌شود. آدرس از طریق سازنده‌ی آدرس و عدد تراکنش آن آدرس («Nonce») می‌آید.
 
+## Validator keys {#validators-keys}
+
+There is also another type of key in Ethereum, introduced when Ethereum switched from proof-of-work to proof-of-stake based consensus. These are 'BLS' keys and they are used to identify validators. These keys can be efficiently aggregated to reduce the bandwidth required for the network to come to consensus. Without this key aggregation the minimum stake for a validator would be much higher.
+
+[More on validator keys](/developers/docs/consensus-mechanisms/pos/keys/).
+
 ## یادداشتی درباره‌ی کیف پول‌ها {#a-note-on-wallets}
 
 حساب با کیف پول متفاوت است. یک حساب یک جفت‌کلید برای یک حساب اتریوم تحت مالکیت کاربر است. یک کیف پول یک رابط یا برنامه‌ی کاربردی است که به شما اجازه می‌دهد با حساب اتریومتان ارتباط برقرار کنید.
@@ -110,7 +116,7 @@ Repeat passphrase:
 
 ## بیشتر بخوانید {#further-reading}
 
-_آیا منبعی اجتماعی می‌شناسید که به شما کمک کرده باشد؟ این صفحه را ویرایش و آن را اضافه کنید!_
+_آیا منبعی اجتماعی می‌شناسید که به شما کمک کرده باشد؟ این صفحه را ویرایش کنید و به آن اضافه کنید!_
 
 ## موضوعات مرتبط {#related-topics}
 

@@ -3,12 +3,13 @@ title: اثبات کار (PoW)
 description: توضیحی درباره‌ی پروتکل اجماع اثبات کار و نقشش در اتریوم.
 lang: fa
 sidebar: true
-incomplete: true
 ---
 
-اتریوم همچون بیت‌کوین از پروتکل اجماعی به نام **[اثبات کار (PoW)](https://wikipedia.org/wiki/Proof_of_work)** استفاده می‌کند. این پروتکل به گره‌های اتریوم اجازه می‌دهد که روی وضعیت تمام اطلاعات ثبت‌شده روی زنجیره‌ی بلوکی اتریوم توافق کنند و از برخی انواع حملات اقتصادی ممانعت می‌کند.
+The Ethereum network began by using a consensus mechanism that involved **[Proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow)**. This allowed the nodes of the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain and prevented certain kinds of economic attacks. However, Ethereum switched off proof-of-work in 2022 and started using [proof-of-stake](/developers/docs/consensus-mechanisms/pos) instead.
 
-سال آینده،‌ اثبات کار جای خود را به **[اثبات سهام (PoS)](/developers/docs/consensus-mechanisms/pos)** خواهد داد. تغییر به اثبات سهام باعث می‌شود که استخراج از اتریوم رخت بربندد. [اطلاعات بیشتر در مورد ادغام](/upgrades/merge/)
+<InfoBanner emoji=":wave:">
+    Proof-of-work has now been deprecated. Ethereum no longer uses proof-of-work as part of its consensus mechanism. Instead, it uses proof-of-stake. Read more on <a href="/developers/docs/consensus-mechanisms/pos/">proof-of-stake</a> and <a href="/staking/">staking</a>.    
+</InfoBanner>
 
 ## پیش‌نیازها {#prerequisites}
 
@@ -16,70 +17,66 @@ incomplete: true
 
 ## اثبات کار (PoW) چیست؟ {#what-is-pow}
 
-اثبات کار مکانیزمی است که اجازه می‌دهد شبکه‌ی غیرمتمرکز اتریوم به اجماع برسد یا در مورد موجودی حساب‌ها و ترتیب تراکنش‌ها توافق کند. این کار جلوی «خرج دوباره» کوین‌ها را می‌گیرد و باعث حصول اطمینان از این موضوع می‌شود که حمله و خراب‌کاری در زنجیره‌ی اتریوم فوق‌العاده سخت است.
+Nakamoto consensus, which utilizes proof-of-work, is the mechanism that once allowed the decentralized Ethereum network to come to consensus (i.e. all nodes agree) on things like account balances and the order of transactions. This prevented users from "double spending" their coins and ensured that the Ethereum chain was tremendously difficult to attack or manipulate. These security properties now come from proof-of-stake instead using the consensus mechanism known as [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/).
 
 ## اثبات کار و استخراج {#pow-and-mining}
 
-اثبات کار الگوریتم پایه‌ای است که سختی و قوانین کاری که استخراج‌گران باید انجام دهند را مشخص می‌کند. استخراج خودِ «کار» است. این همان عمل اضافه کردن بلوک‌های معتبر به زنجیره است. این نکته‌ی مهمی است چرا که طول زنجیره‌ کمک می‌کند که شبکه زنجیره‌ی درست اتریوم را بداند و وضعیت فعلی اتریوم را بفهمد. هر چه «کار» بیشتری انجام شود، زنجیره طولانی‌تر می‌شود و هر چه شماره‌ی بلوک بیشتر شود، شبکه از وضعیت فعلی مطمئن‌تر می‌شود.
+Proof-of-work is the underlying algorithm that sets the difficulty and rules for the work miners do on proof-of-work blockchains. استخراج خودِ «کار» است. این همان عمل اضافه کردن بلوک‌های معتبر به زنجیره است. This is important because the chain's length helps the network follow the correct fork of the blockchain. هر چه «کار» بیشتری انجام شود، زنجیره طولانی‌تر می‌شود و هر چه شماره‌ی بلوک بیشتر شود، شبکه از وضعیت فعلی مطمئن‌تر می‌شود.
 
 [اطلاعات بیشتر درباره‌ی استخراج](/developers/docs/consensus-mechanisms/pow/mining/)
 
-## اثبات کار اتریوم چگونه کار می‌کند؟ {#how-it-works}
+## How did Ethereum's proof-of-work work? {#how-it-works}
 
-تراکنش‌های اتریوم در بلوک‌ها پردازش می‌شوند. هر بلوک شامل چیزهای زیر است:
+تراکنش‌های اتریوم در بلوک‌ها پردازش می‌شوند. In the now-deprecated proof-of-work Ethereum, each block contained:
 
 - سختی بلوک - برای مثال: 3,324,092,183,262,715
 - mixHash - برای مثال: `0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`
 - نانس (Nonce) - برای مثال: `0xd3ee432b4fb3d26b`
 
-این اطلاعات بلوک مستقیماً به اثبات کار مرتبط است.
+This block data was directly related to proof-of-work.
 
 ### کار در اثبات کار {#the-work}
 
-پروتکل اثبات کار، Ethash، نیاز دارد که استخراج‌گران برای پیدا کردن نانس به روش آزمون و خطا به رقابت شدید بپردازند. تنها بلوک دارای نانس (Nonce) معتبر می‌توانند به زنجیره اضافه شوند.
+The proof-of-work protocol, Ethash, required miners to go through an intense race of trial and error to find the nonce for a block. Only blocks with a valid nonce could be added to the chain.
 
-استخراج‌گر در هنگام مسابقه برای ساخت بلوک، به طور منظم و تکراری یک مجموعه‌داده را، که فقط با دانلود و اجرای همه‌ی زنجیره به دست می‌آید (همان طور که استخراج‌گر هم دانلود و اجرا می‌کند)، از یک تابع ریاضی عبور می‌دهد. این مجموعه‌داده برای ساختن mixHash و رسیدن به نانس (Nonce) هدف که توسط سختی بلوک مشخص می‌شود، استفاده می‌شود. بهترین راه برای انجام این کار آزمون و خطاست.
+When racing to create a block, a miner repeatedly put a dataset, that could only be obtained by downloading and running the full chain (as a miner does), through a mathematical function. The dataset was used to generate a mixHash below a target that is dictated by the block difficulty. بهترین راه برای انجام این کار آزمون و خطاست.
 
-سختی برای هش یک هدف تعیین می‌کند. هر چه هدف کمتر باشد، مجموعه‌ی هش‌های معتبر کوچک‌تر است. وقتی ساخته شد، اعتبارسنجی آن برای دیگر استخراج‌گران و کلاینت‌ها بسیار ساده خواهد بود. حتی اگر یک تراکش تغییر کند، هش کاملاً متفاوت خواهد بود و سیگنال تقلب خواهد داد.
+The difficulty determined the target for the hash. هر چه هدف کمتر باشد، مجموعه‌ی هش‌های معتبر کوچک‌تر است. Once generated, this was incredibly easy for other miners and clients to verify. حتی اگر یک تراکش تغییر کند، هش کاملاً متفاوت خواهد بود و سیگنال تقلب خواهد داد.
 
-هش کردن باعث می‌شود که بسیار ساده بتوان تقلب‌ها را کشف کرد. اما اثبات کار در مقام یک فرایند، یک بازدارنده‌ی مهم از حملات به زنجیره‌ هم است.
+هش کردن باعث می‌شود که بسیار ساده بتوان تقلب‌ها را کشف کرد. But proof-of-work as a process was also a big deterrent to attacking the chain.
 
 ### اثبات کار و امنیت {#security}
 
-استخراج‌گران برای انجام این کار روی شبکه‌ی اصلی اتریوم تشویق می‌گیرند. مشوق کمی برای زیرمجموعه‌ای از استخراج‌گران که زنجیره‌ی خودشان را بسازند وجود دارد - که سیستم را تضعیف می‌کند. زنجیره‌های بلوکی بر یک وضعیت به‌عنوان منبع حقیقت متکی هستند. و کاربران همواره بلندترین یا «سنگین‌ترین» زنجیره‌ را انتخاب می‌کنند.
+Miners were incentivized to do this work on the main Ethereum chain. There was little incentive for a subset of miners to start their own chain—it undermines the system. زنجیره‌های بلوکی بر یک وضعیت به‌عنوان منبع حقیقت متکی هستند.
 
-هدف اثبات کار افزایش زنجیره است. بلندترین زنجیره قابل قبول‌ترین زنجیره‌ی معتبر است، چرا که بیشترین میزان کار پردازشی را داشته است. در سیستم اثبات کار اتریوم، ساخت بلوک‌های جدیدی که تراکنش‌ها را پاک کند، تراکنش‌های جعلی بسازد یا یک زنجیره‌ی دوم را نگهداری کند، تقریباً غیرممکن است. دلیل این موضوع آن است که استخراج‌گر بداندیش نیاز دارد که نانس (Nonce) بلوک را همواره زودتر از هر کس دیگری پیدا کند.
+The objective of proof-of-work was to extend the chain. The longest chain was most believable as the valid one because it had the most computational work done to generate it. Within Ethereum's PoW system, it was nearly impossible to create new blocks that erase transactions, create fake ones, or maintain a second chain. That's because a malicious miner would have needed to always solve the block nonce faster than everyone else.
 
-برای این که به‌طور مداوم بتوانید بلوک‌های معتبر اما بداندیش بسازید نیاز دارید که بیش از ‎51%‏ توان استخراج شبکه را داشته باشید تا از بقیه جلو بیفتید. شما به توان پردازشی بسیار زیادی برای انجام این میزان از «کار» نیاز دارید. و انرژی استفاده شده ممکن است از سودی که شما از این حمله به دست می‌آورید فراتر رود.
+To consistently create malicious yet valid blocks, a malicious miner would have needed over 51% of the network mining power to beat everyone else. That amount of "work" requires a lot of expensive computing power and the energy spent might even have outweighed the gains made in an attack.
 
 ### اقتصاد اثبات کار {#economics}
 
-اثبات کار همچنین مسئول صدور ارز جدید به درون سیستم و تشویق استخراج‌گران به انجام کار است.
+Proof-of-work was also responsible for issuing new currency into the system and incentivizing miners to do the work.
 
-Miners who successfully create a block get rewarded with two freshly minted ETH but no longer receive all the transaction fees, as the base fee gets burned, while the tip and block reward goes to the miner. استخراج‌گران همچنین برای ساخت بلوک‌های عمو معادل 1.75 اتر دریافت می‌کنند. بلوک‌های عمو بلوک‌های معتبری هستند که توسط یک استخراج‌گر عملاً همزمان با استخراج‌گر دیگری که بلوک را به‌طور موفق استخراج کرده است ساخته می‌شوند. بلوک‌های عمو معمولا به علت تأخیر شبکه رخ می‌دهند.
+Since the [Constantinople upgrade](/history/#constantinople), miners who successfully create a block were rewarded with two freshly minted ETH and part of the transaction fees. Ommer blocks also compensated 1.75 ETH. Ommer blocks were valid blocks created by a miner practically at the same time as another miner created the canonical block, which was ultimately determined by which chain was built on top of first. Ommer blocks usually happened due to network latency.
 
 ## قطعیت {#finality}
 
 یک تراکنش روی اتریوم زمانی «قطعیت» دارد که عضوی از بلوکی باشد که نتواند عوض شود.
 
-از آنجا که استخراج‌گران به شکل غیر متمرکز کار می‌کنند دو بلوک معتبر نمی‌توانند در یک زمان استخراج شوند. این کار یک فورک موقت ایجاد می‌کند. در نهایت، یکی از این زنجیره‌ها، پس از آنکه بلوکی متعاقباً استخراج شده و به آن اضافه می‌شود و در نتیجه بلندتر می‌شود، زنجیره‌ی پذیرفته‌شده خواهد شد.
+Because miners worked in a decentralized way, two valid blocks could be mined at the same time. این کار یک فورک موقت ایجاد می‌کند. Eventually, one of these chains became the accepted chain after subsequent blocks were mined and added to it, making it longer.
 
-برای پیچیده‌تر کردن موضوع، تراکنش‌هایی که در فورک موقتی رد شده‌اند ممکن است در زنجیره‌ی پذیرفته‌شده وجود داشته باشند. این به این معنا است که شرایط می‌تواند معکوس شود. پس قطعیت به زمانی گفته می‌شود که یک تراکنش غیرقابل معکوس شدن باشد. برای اتریوم، زمان پیشنهاد شده شش بلوک یا کمی بیشتر از 1 دقیقه است. بعد از شش بلوک با اعتماد نسبی می‌توان گفت که تراکنش موفقیت‌آمیز بوده است. شما می‌توانید برای اطمینان بیشتر زمان بیشتری منتظر بمانید.
-
-هنگام ساخت برنامه‌های غیرمتمرکز قطعیت چیزی است که باید در ذهن داشت. اشتباه نشان دادن اطلاعات تراکنش می‌تواند تجربه‌ی کاربری بسیار ضیعفی باشد، به‌ویژه اگر ارزش آن تراکنش زیاد باشد.
-
-به یاد داشته باشید که این موضوع زمان شامل زمانی که تراکنش منتظر برداشته شدن توسط یک استخراج‌گر است نمی‌شود.
+To complicate things further, transactions rejected on the temporary fork may not have been included in the accepted chain. این به این معنا است که شرایط می‌تواند معکوس شود. پس قطعیت به زمانی گفته می‌شود که یک تراکنش غیرقابل معکوس شدن باشد. Under the previous proof-of-work Ethereum, the more blocks were mined on top of a specific block `N`, the higher confidence that the transactions in `N` were successful and would not be reverted. Now, with proof-of-stake, finalization is an explicit, rather than probabilistic, property of a block.
 
 ## استفاده از انرژی اثبات کار {#energy}
 
-یکی از بزرگترین انتقادها به اثبات کار، میزان مصرف انرژی مورد نیاز برای ایمن نگه داشتن شبکه است. برای حفظ امنیت و غیر متمرکز بودن، اتریوم روی اثبات کار سالانه 73.2 تراوات ساعت انرژی مصرف می‌کند که به اندازه‌ی یک کشوری با ابعاد متوسط همانند اتریش است.
+یکی از بزرگترین انتقادها به اثبات کار، میزان مصرف انرژی مورد نیاز برای ایمن نگه داشتن شبکه است. To maintain security and decentralization, Ethereum on proof-of-work consumed large amounts of energy. Shortly before switching to proof-of-stake, Ethereum miners were collectively consuming about 70 TWh/yr (about the same as the Czech Republic - according to [digiconomist](digiconomist.net) on 18-July-2022).
 
 ## نقاط مثبت و منفی {#pros-and-cons}
 
 | نقاط مثبت                                                                                                                                                                                                  | نقاط منفی                                                                                                                                              |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | اثبات کار خنثی است. شما برای شروع و گرفتن پاداش بلوک‌ها و حرکت از 0 اتر به موجودی مثبت، نیازی به اتر ندارید. با [اثبات سهام](/developers/docs/consensus-mechanisms/pos/)، شما برای شروع نیاز به اتر دارید. | اثبات کار به حدی انرژی مصرف می‌کند که برای محیط زیست بد است.                                                                                           |
-| اثبات کار یک مکانیزم اجماع آزموده‌شده است که بیت‌کوین و اتریوم را برای سال‌ها ایمن و غیرمتمرکز نگه داشته است.                                                                                              | اگر می‌خواهید استخراج کنید، نیاز به دستگاه‌های مخصوصی دارید که برای شروع سرمایه‌گذاری گرانی است.                                                       |
+| اثبات کار یک مکانیزم اجماع آزموده‌شده است که بیت‌کوین و اتریوم را برای سال‌ها ایمن و غیرمتمرکز نگه داشته است.                                                                                              | اگر می‌خواهید استخراج کنید، نیاز به دستگاه‌های مخصوصی دارید که برای شروع، سرمایه‌گذاری گرانی است.                                                      |
 | در مقایسه با اثبات سهام، پیاده‌سازی راحت‌تری دارد.                                                                                                                                                         | با توجه به پردازش موردنیاز روزافزون، استخرهای استخراج احتمالاً تبدیل به غول‌های بازی استخراج می‌شوند و این به ریسک متمرکز شدن و عدم امنیت منجر می‌شود. |
 
 ## در مقایسه با اثبات سهام {#compared-to-pos}

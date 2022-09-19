@@ -14,6 +14,14 @@ sidebarDepth: 2
 
 اگر از قبل درک درستی از گره‌ها و کلاینت‌ها ندارید، به [گره‌ها و کلاینت‌ها](/developers/docs/nodes-and-clients/) مراجعه کنید.
 
+## Stakers {#stakoooooooooooooors}
+
+Solo stakers must run their own infrastructure rather than relying on third-party providers. This means running an execution client coupled with a consensus client. Before [The Merge](/upgrades/merge), it was possible to run a consensus client only and use a centralized provider for execution data; this is no longer possible - a solo staker must run both clients. However, there are services available to ease this process.
+
+[Read more on running a node](/developers/docs/nodes-and-clients/run-a-node/).
+
+The services described on this page are for non-staking nodes.
+
 ## سرویس‌های گره چگونه کار می‌کنند؟ {#how-do-node-services-work}
 
 ارائه‌دهندگان خدمات گره، کلاینت‌های گره‌ی توزیع شده را در پشت‌صحنه برای شما اجرا می‌کنند، بنابراین نیازی ندارید که خودتان آن‌ها را انجام دهید.
@@ -24,7 +32,7 @@ sidebarDepth: 2
 
 ادغام با اغلب سرویس‌های گره به‌شدت آسان است، که معمولاً شامل یک خط تغییر در کد خود برای تعویض گره‌ای که خودتان میزبانی می‌کنید یا حتی جابجایی آن‌ها بین خودشان می‌شود.
 
-اغلب اوقات سرویس‌های گره انواع مختلفی از [کلاینت های گره](/developers/docs/nodes-and-clients/#execution-clients) و [نوع ها](/developers/docs/nodes-and-clients/#node-types) را اجرا می‌کنند که به شما این امکان را می‌دهد تا علاوه بر روش‌های خاص کلاینت در یک وب سرویس به گره‌های کامل و بایگانی‌شده نیز دسترسی داشته باشید.
+سرویس‌های گره اغلب [کلاینت‌های گره](/developers/docs/nodes-and-clients/#execution-clients) و [انواع گره](/developers/docs/nodes-and-clients/#node-types) گوناگونی را اجرا می‌کنند که به شما این امکان را می‌دهد علاوه بر روش‌های خاص کلاینت در یک API به گره‌های کامل و بایگانی‌شده نیز دسترسی داشته باشید.
 
 خاطرنشان می‌شود که سرویس‌های گرهْ کلیدهای خصوصی یا اطلاعات شما را نباید و نمی‌توانند ذخیره کنند.
 
@@ -32,7 +40,7 @@ sidebarDepth: 2
 
 مزیت اصلی استفاده از سرویس گره این است که نیازی به صرف زمان مهندسی برای نگهداری و مدیریت گره‌ها ندارید. این کار به شما امکان می‌دهد به‌جای نگرانی در مورد تعمیر و نگهداری زیرساخت، روی ساخت محصول خود تمرکز کنید.
 
-اجرای گره‌های شخصی شما از ذخیره‌سازی تا پهنای باند و زمان مهندسی ارزشمند شما، می‌تواند بسیار هزینه‌بر باشد. Things like spinning up more nodes when scaling, upgrading nodes to the latest versions, and ensuring state consistency, can distract from building and spending resources on your desired web3 product.
+اجرای گره‌های شخصی شما از ذخیره‌سازی تا پهنای باند و زمان مهندسی ارزشمند شما، می‌تواند بسیار هزینه‌بر باشد. مواردی مانند چرخش تعداد بیشتری گره هنگام مقیاس‌بندی، ارتقای گره‌ها به آخرین نسخه‌ها و اطمینان از ثبات وضعیت، می‌تواند حواس را از ساختن و صرف منابع روی محصول Web3 موردنظر شما منحرف کند.
 
 ## معایب استفاده از یک سرویس گره چیست؟ {#cons-of-using-a-node-service}
 
@@ -44,17 +52,18 @@ sidebarDepth: 2
 
 در اینجا فهرستی از محبوب ترین ارائه‌دهندگان گره‌ی اتریوم آورده شده است، به‌راحتی می‌توانید مواردی که درج نشده‌اند را اضافه کنید! هر سرویس گره علاوه بر سطوح رایگان یا پولی، مزایا و ویژگی‌های مختلفی را ارائه می‌کند، شما باید قبل از تصمیم‌گیری، بررسی کنید که کدامیک به بهترین شکل با نیازهای شما مطابقت دارند.
 
-- [**Alchemy**](https://www.alchemy.com/)
+- [**Alchemy**](https://alchemy.com/)
   - [مستندات](https://docs.alchemyapi.io/)
   - ویژگی‌ها
-    - دارای سطح رایگان
-    - مقیاس‌پذیری در حین استفاده
-    - داده‌های آرشیوی رایگان
-    - ابزار تجزیه و تحلیل
-    - پیشخان
-    - نقاط پایانی منحصربه‌فرد وب سرویس
-    - قلاب‌های وب
-    - پشتیبانی مستقیم
+    - دارای بزرگترین سطح کاربری رایگان با 300 میلیون واحد محاسباتی در ماه (حدود 30 میلیون درخواست getLatestBlock)
+    - پشتیبانی چند زنجیره‌ای برای Polygon‏، Starknet‏، Optimism‏، Arbitrum
+    - قدرت‌بخشی به حدود 70% بزرگترین dappهای اتریوم و حجم تراکنش دیفای
+    - هشدارهای قلاب‌های وب لحظه‌ای از طریق Alchemy Notify
+    - بهترین پشتیبانی و اطمینان‌پذیری / ثبات در این سطح
+    - NFT API متعلق به Alchemy
+    - داشبورد با Request Explorer‏، Mempool Watcher و Composer
+    - دسترسی به فاست شبکه‌ی تست یکپارچه
+    - انجمن سازنده Active Discord با 18 هزار کاربر
 - [**Ankr**](https://www.ankr.com/)
   - [مستندات](https://docs.ankr.com/)
   - ویژگی‌ها
@@ -85,13 +94,25 @@ sidebarDepth: 2
     - اتصال به سرویس‌های ابری شما
     - هزینه‌ی ساعتی
     - پشتیبانی مستقیم شبانه‌روزی در تمام ایام هفته
+- [**DataHub**](https://datahub.figment.io)
+  - [مستندات](https://docs.figment.io/)
+  - ویژگی‌ها
+    - گزینه‌ی سطح کاربری رایگان با 3,000,000 درخواست در ماه
+    - نقاط پایانی RPC و WSS
+    - گره‌های کامل و بایگانی اختصاصی
+    - مقیاس‌بندی خودکار (تخفیف حجمی)
+    - داده‌های بایگانی‌شده‌ی رایگان
+    - تجزیه و تحلیل سرویس
+    - داشبورد
+    - پشتیبانی مستقیم شبانه‌روزی در تمام ایام هفته
+    - پرداخت با رمزارز (سازمانی)
 - [**GetBlock**](https://getblock.io/)
   - [مستندات](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - ویژگی‌ها
     - دسترسی به بیش از 40 گره‌ی زنجیره‌ی بلوکی
     - 40 هزار درخواست رایگان روزانه
-    - کلیدهای وب سرویس نامحدود
-    - سرعت اتصال بالا 1 گیگابایت بر ثانیه
+    - کلیدهای API نامحدود
+    - سرعت اتصال بالا به میزان 1 گیگابایت بر ثانیه
     - ردیابی+آرشیو
     - تجزیه و تحلیل پیشرفته
     - به‌روزرسانی‌های خودکار
@@ -101,64 +122,74 @@ sidebarDepth: 2
     - دارای سطح رایگان
     - مقیاس‌پذیری در حین استفاده
     - تجزیه و تحلیل
-    - پیشخان
-    - نقاط پایانی منحصربه‌فرد وب سرویس
+    - داشبورد
+    - نقاط پایانی منحصربه‌فرد API
     - گره‌های کامل اختصاصی
-    - زمان همگام‌سازی سریع برای بکارگیری‌های اختصاصی
+    - همگام‌سازی سریع برای استقرار اختصاصی
     - پشتیبانی مستقیم شبانه‌روزی در تمام ایام هفته
-    - دسترسی به بیش از 50 گره زنجیره‌ی بلوکی
+    - دسترسی به بیش از 50 گره‌ی زنجیره‌ی بلوکی
 - [**Infura**](https://infura.io/)
   - [مستندات](https://infura.io/docs)
   - ویژگی‌ها
     - دارای سطح رایگان
     - مقیاس‌پذیری در حین استفاده
-    - داده‌های آرشیوی پولی
+    - داده‌های بایگانی‌شده‌ی پولی
     - پشتیبانی مستقیم
-    - پیشخان
+    - داشبورد
 - [**Kaleido**](https://kaleido.io/)
   - [مستندات](https://docs.kaleido.io/)
   - ویژگی‌ها
-    - Free startier tier
-    - One-click Ethereum node deployment
-    - Customizable clients and algorithms (Geth, Quorum & Besu || PoA, IBFT & Raft)
-    - 500+ administrative and service APIs
-    - RESTful interface for Ethereum transaction submission (Apache Kafka backed)
-    - Outbound streams for event delivery (Apache Kafka backed)
-    - Deep collection of "off-chain" and ancillary services (e.g. bilateral encrypted messaging transport)
-    - Straightforward network onboarding with governance and role-based access control
-    - Sophisticated user management for both administrators and end users
-    - Highly scalable, resilient, enterprise-grade infrastructure
-    - Cloud HSM private key management
-    - Ethereum Mainnet Tethering
-    - ISO 27k and SOC 2, Type 2 certifications
-    - Dynamic runtime configuration (e.g. adding cloud integrations, altering node ingresses, etc.)
-    - Support for multi-cloud, multi-region and hybrid deployment orchestrations
-    - Simple hourly SaaS-based pricing
-    - SLAs and 24x7 support
+    - دارای سطح رایگان برای شروع کار
+    - استقرار گره‌ی اتریوم با یک کلیک
+    - کلاینت‌ها و الگوریتم‌های قابل تنظیم (Geth‏، Quorum و Besu || PoA‏، IBFT و Raft)
+    - بیش از 500 API اداری و خدماتی
+    - رابط RESTful برای ارسال تراکنش اتریوم (با پشتیبانی Apache Kafka)
+    - جریان‌های خروجی برای ارائه‌ی رویداد (با پشتیبانی Apache Kafka)
+    - مجموعه‌ای عمیق از خدمات «خارج زنجیره» و فرعی (مانند حمل‌ونقل پیام‌های رمزگذاری‌شده‌ی دوجانبه)
+    - نصب راحت و سریع روی شبکه با کنترل دسترسی مبتنی بر نقش و حاکمیت
+    - مدیریت پیشرفته‌ی کاربر هم برای مدیران و هم برای کاربران نهایی
+    - زیرساخت بسیار مقیاسپذیر، تاب‌آورتر و در سطح سازمانی
+    - مدیریت کلید خصوصی Cloud HSM
+    - اتصال شبکه‌ی اصلی اتریوم
+    - گواهینامه‌های ISO 27k و SOC 2، نوع 2
+    - پیکربندی پویای زمان به‌کار (به‌عنوان مثال افزودن ادغام‌های ابری، تغییر ورودی گره‌ها و غیره)
+    - پشتیبانی از ارکستراسیون‌های چند ابری، چند منطقه‌ای و ترکیبی استقرار
+    - قیمت‌گذاری ساعتی ساده مبتنی بر SaaS
+    - SLAها و پشتیبانی شبانه‌روزی در تمام ایام هفته
 - [**Moralis**](https://moralis.io/)
   - [مستندات](https://docs.moralis.io/)
   - ویژگی‌ها
     - گره‌های اشتراکی رایگان
-    - گره‌های آرشیو اشتراکی رایگان
+    - گره‌های بایگانی‌شده‌ی اشتراکی رایگان
     - تمرکز بر حفظ حریم خصوصی (سیاست عدم حفظ سوابق کار)
     - پشتیبانی از زنجیره‌ی متقاطع
     - مقیاس‌پذیری در حین استفاده
-    - پیشخان
+    - داشبورد
     - SDK اتریوم منحصربه‌فرد
-    - نقاط پایانی منحصربه‌فرد وب سرویس
+    - نقاط پایانی منحصربه‌فرد API
     - پشتیبانی فنی مستقیم
-- [**Pocket Network**](https://www.pokt.network/)
+- [**NOWNodes**](https://nownodes.io/)
+  - [مستندات](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
+  - ویژگی‌ها
+    - دسترسی به بیش از 50 گره‌ی زنجیره‌ی بلوکی
+    - کلید API رایگان
+    - جستجوگر‌های بلوک
+    - زمان پاسخ API ⩽‏ 1 ثانیه
+    - تیم پشتیبانی شبانه‌روزی در تمام ایام هفته
+    - مدیر حساب‌های شخصی
+    - گره‌های مشترک، بایگانی‌شده، پشتیبانی و اختصاصی
+- [**شبکه‌ی Pocket**](https://www.pokt.network/)
   - [مستندات](https://docs.pokt.network/home/)
   - ویژگی‌ها
     - پروتکل و بازار RPC غیرمتمرکز
     - 1 میلیون درخواست در روز در سطح رایگان (به ازای هر نقطه‌ی پایانی، حداکثر 2)
     - [نقاط پایانی عمومی](https://docs.pokt.network/home/resources/public-rpc-endpoints)
-    - برنامه‌ی +Pre-Stake (اگر به بیش از 1 میلیون درخواست در روز نیاز دارید)
+    - برنامه‌ی +Pre-Stake (در صورت نیاز به بیش از 1 میلیون درخواست در روز)
     - پشتیبانی از بیش از 15 زنجیره‌ی بلوکی
     - بیش از 6400 گره که برای خدمت‌رسانی به برنامه‌های کاربردی POKT کسب می‌کنند
-    - گره‌ی آرشیو، گره‌ی آرشیو با ردیابی و پشتیبانی از گره‌ی شبکه‌ی تست
+    - گره‌ی بایگانی‌شده، گره‌ی بایگانی‌شده با ردیابی و پشتیبانی از گره‌ی شبکه‌ی تست
     - تنوع در کلاینت گره شبکه‌ی اصلی اتریوم
-    - هیچ نقطه شکستی وجود ندارد
+    - هیچ نقطه‌ی شکستی وجود ندارد‌
     - زمان خاموشی صفر
     - اقتصاد توکنی نزدیک به صفر و مقرون‌به‌صرفه (برای پهنای باند شبکه، یک بار POKT را سهام‌گذاری کنید)
     - بدون هزینه‌های ماهانه، زیرساخت‌های خود را به یک دارایی تبدیل کنید
@@ -166,43 +197,65 @@ sidebarDepth: 2
     - تعداد درخواست‌ها در روز و تعداد گره‌ها را در هر ساعت به‌طور بی‌نهایت مقیاس‌پذیر کنید
     - خصوصی‌ترین و مقاوم‌ترین گزینه در برابر سانسور
     - پشتیبانی عملی از توسعه‌دهندگان
-    - پیشخان و تجزیه و تحلیل [پورتال Pocket](https://bit.ly/ETHorg_POKTportal)
-- [**QuikNode**](https://www.quiknode.io/)
+    - داشبورد و تجزیه و تحلیل [پورتال Pocket](https://bit.ly/ETHorg_POKTportal)
+- [**QuickNode**](https://www.quicknode.com)
+  - [مستندات](https://www.quicknode.com/docs/)
   - ویژگی‌ها
-    - ۷ - روز امتحان رایگان
-    - پشتیبانی متنوع
-    - قلاب‌های وب
-    - پیشخان
-    - تجزیه و تحلیل
+    - عملکرد و اطمینان‌پذیری پیشرو در صنعت
+    - پشتیبانی فنی شبانه‌روزی در تمام ایام هفته و جامعه توسعه‌دهندگان در Discord
+    - شبکه‌ای دارای تعادل جغرافیایی، چند ابری/فلزی، با تأخیر کم
+    - پشتیبانی چند زنجیره‌ای (Optimism‏، Arbitrum‏، Polygon‏ + 11 مورد دیگر)
+    - لایه‌های میانی برای سرعت و پایداری (مسیریابی تماس، حافظه‌ی پنهان، نمایه‌سازی)
+    - نظارت بر قرارداد هوشمند از طریق Webhooks
+    - داشبورد بصری، بسته‌ی تجزیه و تحلیل، نویسنده‌ی RPC
+    - ویژگی‌های امنیتی پیشرفته (JWY،‏ ماسک کردن، قرار دادن در فهرست سفید)
+    - API داده‌ها و تجزیه و تحلیل NFT
+    - [دارای گواهینامه SOC2](https://www.quicknode.com/security)
+    - مناسب برای اشخاص مختلف، از توسعه‌دهندگان گرفته تا سازمان‌ها
 - [**Rivet**](https://rivet.cloud/)
   - [مستندات](https://rivet.readthedocs.io/en/latest/)
   - ویژگی‌ها
     - دارای سطح رایگان
     - مقیاس‌پذیری در حین استفاده
+- [**SenseiNode**](https://senseinode.com)
+  - [مستندات](https://docs.senseinode.com/)
+  - ویژگی‌ها‍
+    - گره‌های اختصاصی و اشتراکی
+    - داشبورد
+    - میزبانی AWS روی چندین ارائه‌دهنده‌ی خدمات میزبانی در موقعیت‌های مکانی گوناگون در آمریکای لاتین
+    - کلاینت‌های Prysm و Lighthouse
 - [**SettleMint**](https://console.settlemint.com/)
   - [مستندات](https://docs.settlemint.com/)
   - ویژگی‌ها
     - دوره‌ی آزمایشی رایگان
-    - مقیاس‌پذیری در حین استفاده
+    - مقیاس‌پذیری دلخواه
     - پشتیبانی از GraphQL
-    - نقاط پایانی RPC،‏ HTTPS و WSS
+    - نقاط پایانی RPC و WSS
     - گره‌های کامل اختصاصی
     - اتصال به سرویس‌های ابری خود
     - ابزار تجزیه و تحلیل
-    - پیشخان
+    - داشبورد
     - هزینه‌ی ساعتی
     - پشتیبانی مستقیم
 - [**Watchdata**](https://watchdata.io/)
   - [مستندات](https://docs.watchdata.io/)
   - ویژگی‌ها
-    - Data reliability
-    - Uninterrupted connection with no downtime
-    - Process automation
-    - Free tariffs
-    - High limits that suit any user
-    - Support for various nodes
-    - Resource scaling
-    - High processing speeds
+    - اطمینان‌پذیری داده‌ها
+    - اتصال بدون وقفه بدون توقف
+    - خودکارسازی فرایند
+    - تعرفه‌های رایگان
+    - سقف بالا برای امکانات گوناگون که برای هر کاربری مناسب است
+    - پشتیبانی از گره‌های مختلف
+    - مقیاس‌پذیری منابع
+    - سرعت پردازش بالا
+- [**ZMOK**](https://zmok.io/)
+  - [مستندات](https://docs.zmok.io/)
+  - ویژگی‌ها
+    - پیشدستی به‌عنوان سرویس
+    - استخر حافظه‌ی معاملات جهانی با روش‌های جستجو/فیلتر
+    - هزینه‌ی TX نامحدود و گاز بی‌نهایت برای ارسال تراکنش‌ها
+    - دریافت بلوک جدید و خواندن زنجیره‌‌ی بلوکی به سریع‌ترین شکل ممکن
+    - تضمین بهترین قیمت برای هر فراخوانی API
 
 ## بیشتر بخوانید {#further-reading}
 

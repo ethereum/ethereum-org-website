@@ -17,21 +17,22 @@ sidebar: true
 
 ![شکلی نشان‌دهنده‌ی یک تراکنش که باعث تغییر وضعیت می‌شود](./tx.png) _نمودار برگرفته از [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-تراکنش‌هایی که وضعیت EVM را تغییر می‌دهند، باید در کل شبکه پخش شوند. هر گره‌ای می‌تواند درخواستی برای اجرای تراکنش در EVM ارسال کند. پس از این اتفاق، یک استخراج‌گر تراکنش را اجرا می‌کند و تغییر حالت حاصل را به بقیه‌ی شبکه پخش می‌کند.
+تراکنش‌هایی که وضعیت EVM را تغییر می‌دهند، باید در کل شبکه پخش شوند. Any node can broadcast a request for a transaction to be executed on the EVM; after this happens, a validator will execute the transaction and propagate the resulting state change to the rest of the network.
 
-تراکنش‌ها نیاز به کارمزد دارند و برای معتبر شدن باید استخراج شوند. برای ساده‌تر کردن این نمای کلی، کارمزدهای گاز و استخراج را در جای دیگری پوشش خواهیم داد.
+Transactions require a fee and must be included in a validated block. To make this overview simpler we'll cover gas fees and validation elsewhere.
 
 تراکنش ارسالی شامل اطلاعات زیر است:
 
 - `recipient` - آدرس دریافت‌کننده (اگر یک حساب با مالکیت خارجی باشد، تراکنش یک ارزش را منتقل می‌کند. اگر یک حساب قرارداد باشد، تراکنش کد قرارداد را اجرا می‌کند)
 - `signature` - شناسه‌ی فرستنده. زمانی ایجاد می‌شود که کلید خصوصی فرستنده تراکنش را امضا کند و تأیید کند که فرستنده این تراکنش را مجاز کرده است
+- `nonce` - a sequencially incrementing counter which indicate the transaction number from the account
 - `value` - مقدار اتر برای انتقال از فرستنده به گیرنده (به WEI، واحد خردی از اتر)
 - `data` - فیلد اختیاری برای گنجاندن داده‌های دلخواه
 - `gasLimit` - حداکثر مقدار واحدهای گازی که می‌تواند توسط تراکنش مصرف شود. واحدهای گاز مراحل محاسباتی را نشان می‌دهند
-- `maxPriorityFeePerGas` - حداکثر مقدار گازی که باید به‌عنوان پاداش برای استخراج‌گر لحاظ شود
+- `maxPriorityFeePerGas` - the maximum amount of gas to be included as a tip to the validator
 - `maxFeePerGas` - حداکثر مقدار گازی که مایل به پرداخت برای تراکنش است (شامل `baseFeePerGas` و `maxPriorityFeePerGas`)
 
-گاز به محاسباتی اشاره می‌کند که برای پردازش تراکنش توسط یک استخراج‌گر لازم است. کاربران برای این محاسبه باید هزینه‌ای بپردازند. `gasLimit` و `maxPriorityFeePerGas` حداکثر کارمزد تراکنش پرداختی به استخراج‌گر را تعیین می‌کنند. [درباره‌ی گاز بیشتر بدانید](/developers/docs/gas/).
+Gas is a reference to the computation required to process the transaction by a validator. کاربران برای این محاسبه باید هزینه‌ای بپردازند. The `gasLimit`, and `maxPriorityFeePerGas` determine the maximum transaction fee paid to the validator. [درباره‌ی گاز بیشتر بدانید](/developers/docs/gas/).
 
 شی‌ء تراکنش کمی شبیه به این خواهد بود:
 
@@ -103,45 +104,46 @@ sidebar: true
 
 با هش امضا، می‌توان به صورت رمزنگاری ثابت کرد که تراکنش از فرستنده آمده و به شبکه ارسال شده است.
 
-### The data field {#the-data-field}
+### فیلد داده‌ها {#the-data-field}
 
-The vast majority of transactions access a contract from an externally-owned account. Most contracts are written in Solidity and interpret their data field in accordance with the [application binary interface (ABI)](/glossary/#abi).
+اکثریت قریب‌به‌اتفاق تراکنش‌ها از طریق یک حساب دارای مالکیت خارجی به یک قرارداد دسترسی دارند. اکثر قراردادها در Solidity نوشته شده‌اند و فیلد داده‌های آن‌ها را مطابق با [رابط باینری برنامه (ABI)](/glossary/#abi) تفسیر می‌کنند.
 
-The first four bytes specify which function to call, using the hash of the function's name and arguments. You can sometimes identify the function from the selector using [this database](https://www.4byte.directory/signatures/).
+چهار بایت اول با استفاده از هش نام تابع و آرگومان‌ها مشخص می‌کند که کدام تابع را فراخوانی کند. گاهی اوقات می‌توانید تابع را از انتخابگر با استفاده از [این پایگاه داده](https://www.4byte.directory/signatures/) شناسایی کنید.
 
-The rest of the calldata is the arguments, [encoded as specified in the ABI specs](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
+بقیه فراخوان‌داده‌ها (calldata) آرگومان هستند، که [مطابق با مشخصات ABI مشخص شده‌اند](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
 
-For example, lets look at [this transaction](https://etherscan.io/tx/0xd0dcbe007569fcfa1902dae0ab8b4e078efe42e231786312289b1eee5590f6a1). Use **Click to see More** to see the calldata.
+برای مثال، بیایید به [این تراکنش](https://etherscan.io/tx/0xd0dcbe007569fcfa1902dae0ab8b4e078efe42e231786312289b1eee5590f6a1) نگاه کنیم. از **برای مشاهده‌ی بیشتر کلیک کنید** برای دیدن فراخوان‌داده‌ها استفاده کنید.
 
-The function selector is `0xa9059cbb`. There are several [known functions with this signature](https://www.4byte.directory/signatures/?bytes4_signature=0xa9059cbb). In this case [the contract source code](https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48#code) has been uploaded to Etherscan, so we know the function is `transfer(address,uint256)`.
+انتخابگر تابع `0xa9059cbb` است. چندین [تابع شناخته‌شده با این امضا وجود دارد](https://www.4byte.directory/signatures/?bytes4_signature=0xa9059cbb). در این مورد [کد منبع قرارداد](https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48#code) در Etherscan آپلود شده است، بنابراین می‌دانیم که این تابع `transfer(address, uint256)` است.
 
-The rest of the data is:
+بقیه داده‌ها عبارتند از:
 
 ```
 0000000000000000000000004f6742badb049791cd9a37ea913f2bac38d01279
 000000000000000000000000000000000000000000000000000000003b0559f4
 ```
 
-According to the ABI specifications, integer values (such as addresses, which are 20-byte integers) appear in the ABI as 32-byte words, padded with zeros in the front. So we know that the `to` address is [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279). The `value` is 0x3b0559f4 = 990206452.
+با توجه به مشخصات ABI، مقادیر صحیح (مانند آدرس‌ها که اعداد صحیح 20 بایتی هستند) در ABI به صورت کلمات 32 بایتی ظاهر می‌شوند که ممکن است یک یا چند صفر در ابتدای آن‌ها قرار داده شود. بنابراین ما می‌دانیم که آدرس `«to»‏`
+` 4f6742badb049791cd9a302791cd9a302791cd99a32791cd99a310.com است. <code>مقدار``0 `x3b0559f4 = 990206452 است.
 
 ## انواع تراکنش‌ها {#types-of-transactions}
 
-در اتریوم چند نوع مختلف تراکنش وجود دارد:
+در اتریوم چند نوع تراکنش مختلف وجود دارد:
 
-- تراکنش‌های منظم: تراکنش از یک کیف پول به کیف پولی دیگر.
+- تراکنش های منظم: تراکنش از یک حساب به حساب دیگر.
 - تراکنش‌های استقرار قرارداد: تراکنش بدون آدرس «to»، که در آن از فیلد داده‌ها برای کد قرارداد استفاده می‌شود.
-- Execution of a contract: a transaction that interacts with a deployed smart contract. In this case, 'to' address is the smart contract address.
+- اجرای قرارداد: تراکنشی که با یک قرارداد هوشمند مستقر تعامل دارد. در این مورد، آدرس «to»، آدرس قرارداد هوشمند است.
 
 ### درباره‌ی گاز {#on-gas}
 
 همان‌طور که گفته شد، انجام تراکنش‌ها [گاز](/developers/docs/gas/) مصرف می‌کند. تراکنش‌های انتقال ساده به 21000 واحد گاز نیاز دارند.
 
-بنابراین برای اینکه باب 1 اتر را به آلیس با `baseFeePerGas` 190 gwei و `maxPriorityFeePerGas` 10 gwei ارسال کند، باب باید هزینه‌ی زیر را بپردازد:
+بنابراین برای اینکه باب 1 اتر را به آلیس با `baseFeePerGas` به میزان 190 gwei و `maxPriorityFeePerGas` به میزان 10 gwei ارسال کند، باب باید هزینه‌ی زیر را بپردازد:
 
 ```
 (190 + 10) * 21000 = 4,200,000 gwei
---or--
-0.0042 ETH
+--یا--
+0.0042 اتر
 ```
 
 حساب باب **1.0042- اتر** بدهکار خواهد شد
@@ -150,7 +152,7 @@ According to the ABI specifications, integer values (such as addresses, which ar
 
 کارمزد پایه **0.00399- اتر** خواهد شد
 
-استخراج‌گر **0.000210+ اتر** را نگه می‌دارد
+Validator keeps the tip **+0.000210 ETH**
 
 گاز برای هر تعامل قرارداد هوشمند نیز لازم است.
 
@@ -163,12 +165,11 @@ According to the ABI specifications, integer values (such as addresses, which ar
 هنگامی که تراکنش ارسال شد، موارد زیر اتفاق می‌افتد:
 
 1. وقتی یک تراکنش را ارسال می‌کنید، رمزنگاری یک هش تراکنش ایجاد می‌کند: `0x97d99bc7729211111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`
+
 2. تراکنش سپس به شبکه پخش می‌شود و در یک استخر با بسیاری از تراکنش‌های دیگر گنجانده می‌شود.
-3. یک استخراج‌گر باید تراکنش شما را انتخاب کند و آن را در یک بلوک قرار دهد تا تراکنش را تأیید کند و آن را «موفق» در نظر بگیرد.
-   - اگر شبکه مشغول باشد و استخراج‌گرها قادر به ادامه دادن نباشند، ممکن است در این مرحله منتظر بمانید.
-4. تراکنش شما «تأییدات» را دریافت خواهد کرد. تعداد تأییدیه‌ها برابر با تعداد بلوک‌های ایجاد شده از زمان بلوکی است که شامل تراکنش شما می‌شود. هرچه این عدد بیشتر باشد، نشان دهنده‌ی اطمینان بیشتر از پردازش و شناسایی تراکنش توسط شبکه خواهد بود.
-   - بلوک‌های اخیر ممکن است دوباره سازماندهی شوند و این تصور را ایجاد کنند که تراکنش ناموفق بوده است. با این حال، تراکنش ممکن است همچنان معتبر باشد اما در بلوک دیگری گنجانده شود.
-   - احتمال سازماندهی مجدد با استخراج هر بلوک بعدی کاهش می‌یابد، یعنی هر چه تعداد تأییدات بیشتر باشد، تراکنش تغییرناپذیرتر است.
+
+3. A validator must pick your transaction and include it in a block in order to verify the transaction and consider it "successful".
+4. As time passes the block containing your transaction will be upgraded to "justified" then "finalized". These upgrades make it much more certain that your transaction was successful and will never be altered. Once a block is "finalized" it could only ever be changed by an attack that would cost many billions of dollars.
 
 ## یک نسخه‌ی آزمایشی تصویری {#a-visual-demo}
 
@@ -178,7 +179,7 @@ According to the ABI specifications, integer values (such as addresses, which ar
 
 ## پاکت تراکنش تایپ‌شده {#typed-transaction-envelope}
 
-اتریوم در ابتدا یک قالب برای تراکنش‌ها داشت. هر تراکنش حاوی نانش (nonce)، قیمت گاز، حد گاز، آدرس گیرنده، مقدار، داده، v، r و s بود. این فیلدها به صورت RLP کدگذاری شده‌اند و چیزی شبیه به این هستند:
+اتریوم در ابتدا یک قالب برای تراکنش‌ها داشت. هر تراکنش حاوی نانس (nonce)، قیمت گاز، حد گاز، آدرس گیرنده، مقدار، داده، v، r و s بود. این فیلدها به صورت RLP کدگذاری شده‌اند و چیزی شبیه به این هستند:
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
@@ -188,7 +189,7 @@ According to the ABI specifications, integer values (such as addresses, which ar
 
 EIP-2718 یک پاکت جدید تعمیم یافته برای تراکنش‌های تایپ‌شده است. در استاندارد جدید، تراکنش‌ها به صورت زیر تفسیر می‌شوند:
 
-`TransactionType || TransactionPayload`
+`نوع معامله || TransactionPayload`
 
 که در آن فیلدها به صورت زیر تعریف می‌شوند:
 
@@ -206,4 +207,3 @@ _آیا منبعی اجتماعی می‌شناسید که به شما کمک ک
 - [حساب‌ها](/developers/docs/accounts/)
 - [ماشین مجازی اتریوم (EVM)](/developers/docs/evm/)
 - [گاز](/developers/docs/gas/)
-- [استخراج](/developers/docs/consensus-mechanisms/pow/mining/)
