@@ -25,6 +25,7 @@ const CalloutBanner: React.FC<IProps> = ({
   children,
   className,
   id,
+  ...restProps
 }) => (
   <Flex
     direction={{ base: "column", lg: "row-reverse" }}
@@ -32,10 +33,11 @@ const CalloutBanner: React.FC<IProps> = ({
     p={{ base: 8, sm: 12 }}
     mx={{ base: 8, lg: 4 }}
     mt={{ base: 16, lg: 24 }}
-    mb={{ base: 16, lg: 4 }}
+    mb={{ base: 16, lg: 40 }}
     borderRadius="base"
     className={className}
     id={id}
+    {...restProps}
   >
     <Image
       as={GatsbyImage}
@@ -55,7 +57,7 @@ const CalloutBanner: React.FC<IProps> = ({
       direction="column"
       justifyContent="center"
       pl={{ base: 0, sm: 4, lg: 8 }}
-      w={{ base: "full", lg: "null" }}
+      w={{ base: "full", lg: "inherit" }}
     >
       <Heading
         as="h2"

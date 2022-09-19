@@ -1366,7 +1366,7 @@ const DappsPage = ({
               </RightColumn>
             </TwoColumnContent>
             <CalloutBanner
-              mt={24}
+              mt={32}
               mx={0}
               mb={{ base: 0, lg: 16 }}
               titleKey={"page-dapps-wallet-callout-title"}
