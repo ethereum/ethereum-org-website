@@ -3,6 +3,7 @@ title: Gouvernance d'Ethereum
 description: Une introduction à la façon dont les décisions concernant Ethereum sont prises.
 lang: fr
 sidebar: true
+postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # Introduction à la gouvernance d'Ethereum {#introduction}
