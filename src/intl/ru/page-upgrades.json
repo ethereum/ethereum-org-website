@@ -2,9 +2,12 @@
   "page-upgrades-merge-infographic-el": "Состояние Ethereum: транзакции, приложения, контракты, балансы",
   "page-upgrades-merge-infographic-alt-text": "Инфографика, показывающая, как сеть Beacon Chain сливается со слоем исполнения Ethereum при переходе от доказательства работы к доказательству владения.",
   "page-upgrades-beacon-date": "Отправлено!",
-  "page-upgrades-merge-date": "сентябрь 2022 г.",
+  "page-upgrades-merge-date": "Примерно III/IV квартал 2022 г.",
   "page-upgrades-shards-date": "Примерно 2023 г.",
   "page-upgrades-merge-banner-intro": "Слияние все ближе, и Ethereum ждут перемены.",
   "page-upgrades-merge-banner-content-outdated": "Часть материалов на этой странице, касающихся изменений, устарела. Скоро они будут обновлены.",
-  "page-upgrades-merge-banner-developers-landing": "У некоторых докумеентов есть баннер, показывающий, что они устарели. Скоро они будут обновлены."
+  "page-upgrades-merge-banner-developers-landing": "У некоторых докумеентов есть баннер, показывающий, что они устарели. Скоро они будут обновлены.",
+  "page-upgrades-post-merge-banner-tutorial-ood": "This tutorial is out of date after the merge and may not work. Please raise a PR if you would like to contribute.",
+  "page-upgrades-post-merge-banner-tutorial-light-node-ood": "This tutorial is out of date after the merge. Light nodes do not currently work on proof-of-stake, but are expected to ship soon.",
+  "page-upgrades-post-merge-banner-governance-ood": "Some content on this page is out-of-date after the merge. Please raise a PR if you would like to contribute."
 }

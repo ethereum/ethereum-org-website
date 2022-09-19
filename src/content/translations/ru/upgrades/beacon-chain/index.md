@@ -6,63 +6,71 @@ template: upgrade
 sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: Сеть Beacon Chain ничего не меняет в том Ethereum, который мы используем сегодня.
-summaryPoint2: Она будет координировать работу сети, выступая в качестве уровня консенсуса.
-summaryPoint3: Она ввела в экосистему Ethereum доказательство владения.
-summaryPoint4: В технических дорожных картах вы могли видеть это под названием «Фаза 0».
+summaryPoint2: Она ввела в экосистему Ethereum доказательство владения.
+summaryPoint3: It was merged with the original Ethereum proof-of-work chain in 2022.
+summaryPoint4: The consensus logic and block gossip protocol introduced by the Beacon Chain now secures Ethereum.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
-    Запуск Beacon Chain выполнен 1 декабря 2020 года в полдень (UTC). Чтобы узнать больше, <a href="https://beaconscan. com/">ознакомьтесь с данными</a>. Если вы хотите помочь с проверкой цепочки, вы можете <a href="/staking/">вложить свои ETH</a>.
+  The Beacon Chain shipped on December 1, 2020. At the time, it was a separate chain to Ethereum Mainnet. It ran proof-of-stake but did not handle any transactions. The Beacon Chain was merged with the original Ethereum Mainnet in 2022 to take over the consensus logic and block propagation for Ethereum. Since The Merge, there has only been one Ethereum chain.
 </UpgradeStatus>
 
-## Что делает Beacon Chain? {#what-does-the-beacon-chain-do}
+## What was the Beacon Chain? {#what-is-the-beacon-chain}
 
-Beacon Chain будет осуществлять или координировать расширенную сеть [осколков](/upgrades/sharding/) и [стейкеров](/staking/). Но это не будет похоже на сегодняшнюю [основную сеть Ethereum](/glossary/#mainnet). Она не может работать с аккаунтами или смарт-контрактами.
+The Beacon Chain was the name of the original proof-of-stake blockchain that was launched in 2020. It was created to ensure the proof-of-stake consensus logic was sound and sustainable before enabling it on Ethereum Mainnet. Therefore, it ran alongside the original proof-of-work Ethereum. Switching off proof-of-work and switching on proof-of-stake on Ethereum required instructing the Beacon Chain to accept transactions from the original Ethereum chain, bundle them into blocks and then organize them into a blockchain using a proof-of-stake based consensus mechanism. At the same moment, the original Ethereum clients turned off their mining, block propagation and consensus logic, handing that all over to the Beacon Chain. This event was known as [The Merge](/upgrades/merge/). Once The Merge happened, there were no longer two blockchains; there was just one proof-of-stake Ethereum chain.
 
-Роль Beacon Chain со временем изменится, но это основополагающий компонент для [безопасного, устойчивого и масштабируемого Ethereum, над которым мы работаем](/upgrades/vision/).
+## What did the Beacon Chain do? {#what-does-the-beacon-chain-do}
 
-## Функции Beacon Chain {#beacon-chain-features}
+The Beacon Chain was the name given to a ledger of accounts that conducted and coordinated the network of Ethereum [stakers](/staking/) before those stakers started validating real Ethereum transactions. It did not process transactions or handle smart contract interactions.
+
+It introduced the consensus engine (or "consensus layer") that took the place of proof-of-work mining on Ethereum and brought many significant improvements with it.
+
+The Beacon Chain was a foundational component for [the secure, environmentally friendly and scalable Ethereum we have now](/upgrades/vision/).
+
+## Beacon Chain impact {#beacon-chain-features}
 
 ### Введение стейкинга {#introducing-staking}
 
-Beacon Chain вводит [доказательство владения](/developers/docs/consensus-mechanisms/pos/) в Ethereum. Это новый способ обеспечить безопасность работы Ethereum. Он взаимовыгоден для участников, делая Ethereum безопаснее и позволяя получать участникам ETH в процессе. На практике вам придется вложить ETH для того, чтобы активировать ПО валидатора. В качестве валидатора вы будете обрабатывать транзакции и создавать блоки для общей цепочки.
+The Beacon Chain introduced [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) to Ethereum. This keeps Ethereum secure and earns validators more ETH in the process. In practice, staking involves staking ETH in order to activate validator software. As a staker, you run the software that creates and validates new blocks in the chain.
 
-Вложение своих средств и становление валидатором легче, чем [майнинг](/developers/docs/mining/) (как сеть защищена на текущий момент). И предполагается, что это помогает Ethereum быть более защищенным в долгосрочной перспективе. Чем больше людей принимают участие в работе сети, тем она становится более децентрализованной и защищенной от атак.
+Staking serves a similar purpose that [mining](/developers/docs/mining/) used to, but is different in many ways. Mining required large up-front expenditures in the form of powerful hardware and energy consumption, resulting in economies of scale, and promoting centralization. Mining also did not come with any requirement to lock up assets as collateral, limiting the protocol's ability to punish bad actors after an attack.
+
+The transition to proof-of-stake made Ethereum significantly more secure and decentralized by comparison to proof-of-work. The more people that participate in the network, the more decentralized and safe from attacks it becomes.
 
 <InfoBanner emoji=":money_bag:">
-Если вы хотите стать валидатором и принять участие в защите Beacon Chain, <a href="/staking/">узнайте больше о стейкинге</a>.
+  If you're interested in becoming a validator and helping secure the Ethereum, <a href="/staking/">learn more about staking</a>.
 </InfoBanner>
 
-Это также важное изменение для другого обновления: [цепочек осколков](/upgrades/sharding/).
+### Setting up for sharding {#setting-up-for-sharding}
 
-### Настройка цепей-осколков {#setting-up-for-shard-chains}
+Since the Beacon Chain merged with the original Ethereum Mainnet, the Ethereum community started looking to scaling the network.
 
-После слияния основной сети с Beacon Chain следующее обновление добавит цепочки-осколки в сеть с доказательством владения. Эти «осколки» увеличат пропускную способность сети и улучшат скорость транзакций за счет расширения сети до 64 блокчейнов. Beacon Chain - это важный первый шаг в введении цепей-осколков, потому что они требуют вложений для защиты работы.
+Proof-of-stake has the advantage of having a registry of all approved block producers at any given time, each with ETH at stake. This registry sets the stage for the ability to divide and conquer but reliably split up specific network responsibilities.
 
-Однажды Beacon Chain также станет отвечать за случайное назначение стейкеров, чтобы валидировать цепочки-осколки. Это залог усложнения сговора и установления контроля над осколками цепочки со стороны стейкеров. Таким образом, это значит, что их шансы [меньше, чем 1 к триллиону](https://medium.com/@chihchengliang/minimum-committee-size-explained-67047111fa20).
+This responsibility is in contrast to proof-of-work, where miners have no obligation to the network and could stop mining and turn their node software off permanently in an instant without repercussion. There is also no registry of known block proposers and no reliable way to split network responsibilities safely.
+
+[Подробнее о шардинге](/upgrades/sharding/)
 
 ## Взаимосвязь между обновлениями {#relationship-between-upgrades}
 
 Все обновления Ethereum в некоторой степени взаимосвязаны. Поэтому резюмируем, как Beacon Chain влияет на другие улучшения.
 
-### Основная сеть и Beacon Chain {#mainnet-and-beacon-chain}
+### Beacon Chain and The Merge {#merge-and-beacon-chain}
 
-Сначала Beacon Chain будет существовать отдельно от основной сети Ethereum, которую мы используем сегодня. Но в конечном счете они будут связаны. План состоит в том, чтобы «объединить» основную сеть с системой доказательства владения, которая контролируется и координируется с помощью Beacon Chain.
+At first, The Beacon Chain existed separately from Ethereum Mainnet, but they were merged in 2022.
 
 <ButtonLink to="/upgrades/merge/">
-    Слияние
+  Слияние
 </ButtonLink>
 
 ### Осколки и Beacon Chain {#shards-and-beacon-chain}
 
-Цепочки-осколки способны только на безопасный вход в экосистему Ethereum с механизмом консенсуса на основе доказательства владения. Beacon Chain вводит ставки, прокладывая путь к последующему обновлению с цепочками-осколками.
+Sharding can only safely enter the Ethereum ecosystem with a proof-of-stake consensus mechanism in place. The Beacon Chain introduced staking, which 'merged' with Mainnet, paving the way for sharding to help further scale Ethereum.
 
 <ButtonLink to="/upgrades/sharding/">
-    Цепочки-осколки
+  Цепочки-осколки
 </ButtonLink>
 
-<Divider />
+## Дополнительные ресурсы
 
-## Взаимодействие с Beacon Chain {#interact-with-beacon-chain}
-
-<BeaconChainActions />
+[More on Ethereum's future upgrades](/upgrades/vision) [More of proof-of-stake](/develoeprs/docs/consensus-mechanisms/pos)
