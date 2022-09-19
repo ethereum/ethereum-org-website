@@ -123,7 +123,6 @@ const ButtonContainer = styled.div`
   width: 100%;
   * {
     flex: 1;
-    color: ${({ theme }) => theme.colors.white};
     font-weight: 700;
   }
 `
