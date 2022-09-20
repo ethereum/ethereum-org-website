@@ -18,12 +18,12 @@ const HorizontalCard: React.FC<IProps> = ({
   emojiSize,
 }) => (
   <Flex borderRadius="base" className={className}>
-    <Emoji fontSize={emojiSize} text={emoji} />
-    <Text display="flex" flexGrow="0" flexShrink="1" flexBasis="75%" ml="8">
+    <Emoji fontSize={`${emojiSize}rem`} text={emoji} />
+    <Flex grow="0" shrink="1" basis="75%" ml="8">
       <Text fontSize="lg" />
-      <Box as="p" opacity="0.8" mt="-4" mb="2" />
+      <Text opacity="0.8" mt="-4" mb="2" />
       {children}
-    </Text>
+    </Flex>
   </Flex>
 )
 
