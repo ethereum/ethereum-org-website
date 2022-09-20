@@ -21,7 +21,7 @@ If you're looking to fiddle with code before you [set up a local development env
 
 **[EthFiddle](https://ethfiddle.com/)** - **_Web-based IDE that lets you write, compile, and debug your smart contract_**
 
-- **[Gitter](https://gitter.im/loomnetwork/ethfiddle)**
+- [Gitter](https://gitter.im/loomnetwork/ethfiddle)
 
 ## Desktop IDEs {#desktop-ides}
 
