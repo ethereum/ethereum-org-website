@@ -26,7 +26,7 @@ Looking for future protocol upgrades? [Learn about upcoming upgrades to Ethereum
 
 ## 2022 {#2022}
 
-### Paris {#paris}
+### Paris (The Merge) {#paris}
 
 <Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Sep-15-2022 06:42:42 AM +UTC</code><br />
 <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Block number: 15537393<br />
