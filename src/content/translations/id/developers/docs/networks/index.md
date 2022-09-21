@@ -73,7 +73,7 @@ Testnet bukti kerja untuk mereka yang menjalankan klien OpenEthereum.
 - [Keran Chainlink](https://faucets.chain.link/)
 - [Keran Paradigm](https://faucet.paradigm.xyz/)
 
-#### Optimisic Kovan {#optimistic-kovan}
+#### Optimistic Kovan {#optimistic-kovan}
 
 Testnet untuk [Optimism](https://www.optimism.io/).
 

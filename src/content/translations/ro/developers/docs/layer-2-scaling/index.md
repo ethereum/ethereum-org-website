@@ -159,7 +159,7 @@ Canal de stare tic tac toe:
 
 ## Plasma {#plasma}
 
-Un lanț „plasma” este un blockchain separat care este ancorat pe lanțul principal Ethereum și utilizează dovezi de fraudă (cum ar fi rollup-urile [Optimisic](#optimistic-rollups)) pentru a arbitra disputele.
+Un lanț „plasma” este un blockchain separat care este ancorat pe lanțul principal Ethereum și utilizează dovezi de fraudă (cum ar fi rollup-urile [Optimistic](#optimistic-rollups)) pentru a arbitra disputele.
 
 | Avantaje                                                                                                                                                             | Dezavantaje                                                                                                                                                                                        |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
