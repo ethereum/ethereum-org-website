@@ -13,6 +13,8 @@ export interface IProps {
 
 const HorizontalCard: React.FC<IProps> = ({
   emoji,
+  title,
+  description,
   children,
   className,
   emojiSize,
@@ -20,8 +22,10 @@ const HorizontalCard: React.FC<IProps> = ({
   <Flex borderRadius="base" className={className}>
     <Emoji fontSize={`${emojiSize}rem`} text={emoji} />
     <Flex grow="0" shrink="1" basis="75%" ml="8">
-      <Text fontSize="lg" />
-      <Text opacity="0.8" mt="-4" mb="2" />
+      <Text fontSize="lg">{title}</Text>
+      <Text opacity="0.8" mt="-4" mb="2">
+        {description}
+      </Text>
       {children}
     </Flex>
   </Flex>
