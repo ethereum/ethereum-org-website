@@ -367,7 +367,9 @@ const TutorialsPage = ({
             return false
           }
         }
-        return true
+        return hasTutorialsCheck
+          ? tutorial.lang === pageContext.language
+          : tutorial.lang === "en"
       })
     }
     setState({ activeTagNames, filteredTutorials })
