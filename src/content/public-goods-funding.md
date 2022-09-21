@@ -103,7 +103,7 @@ The problems explained in the previous section lead to "coordination failures" t
 
 This contrasts with an extractive economy in which resources are extracted without any attempt to replenish them. In this case, every individual act of consumption subtracts from the shared resource pool, leading to its eventual depletion. 
 
-Regenerative systems are 'positive-sum': contributing replenishing a common resource benefits the individual *and* the group. Conversely. In contrast, extractive systems are 'zero-sum': overconsuming a common resource benefits the individual in the short-term, but leads to worse long-term outcomes for the group (of which they are part).
+Regenerative systems are 'positive-sum': contributing replenishing a common resource benefits the individual *and* the group. In contrast, extractive systems are 'zero-sum': overconsuming a common resource benefits the individual in the short-term, but leads to worse long-term outcomes for the group (of which they are part).
 
 A key contribution of regenerative cryptoeconomics is the creation and coordination of **public goods markets** using blockchains, such as Ethereum. A [public goods market](https://forum.effectivealtruism.org/posts/ZjBnzzqkrB7JNLjTg/the-case-for-promoting-creating-public-goods-markets-as-a) is defined as a "decentralized and highly responsive process for allocating capital according to the collective desires of a population to support the creation of public goods." 
 
