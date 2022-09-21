@@ -21,9 +21,9 @@ const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
         borderStyle="solid"
         borderColor="border"
         _hover={{
-          textDecoration: "none",
           background: "tableBackgroundHover",
           borderRadius: "base",
+          boxShadow: "0 0 1px var(--eth-colors-primary)",
         }}
         role="group"
       >
@@ -43,7 +43,7 @@ const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
               href={to}
               as={Link}
               isExternal={isExternal}
-              _hover={{ textDecoration: "none" }}
+              textDecoration="none"
               hideArrow
             >
               <Text color="text300" fontWeight="semibold" margin={0}>
