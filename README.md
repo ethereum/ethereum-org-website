@@ -1412,6 +1412,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://ladislasfontaine.com/"><img src="https://avatars.githubusercontent.com/u/42914253?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ladislas Fontaine</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ladislasfontaine" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/YasshhYadav"><img src="https://avatars.githubusercontent.com/u/91071840?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yash Yadav</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=YasshhYadav" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/barro32"><img src="https://avatars.githubusercontent.com/u/1510990?v=4?s=100" width="100px;" alt=""/><br /><sub><b>barro</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=barro32" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/Master7130"><img src="https://avatars.githubusercontent.com/u/85327930?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Master7130</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Master7130" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
