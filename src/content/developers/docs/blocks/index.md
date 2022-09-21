@@ -103,7 +103,7 @@ block_hash: Hash of execution block
 transactions_root: root hash of the transactions in the payload
 ```
 
-The `execution_payload` itself contains the following (notice this is idential to the header except that instead of the root hash of the transactions it includes the actual list of transactions:
+The `execution_payload` itself contains the following (notice this is idential to the header except that instead of the root hash of the transactions it includes the actual list of transactions) :
 
 ```
 parent_hash: hash of the parent block
