@@ -44,6 +44,7 @@ const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
               as={Link}
               isExternal={isExternal}
               textDecoration="none"
+              _hover={{ textDecoration: "none" }}
               hideArrow
             >
               <Text color="text300" fontWeight="semibold" margin={0}>
