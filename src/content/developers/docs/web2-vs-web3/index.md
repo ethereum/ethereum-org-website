@@ -16,7 +16,7 @@ Many Web3 developers have chosen to build dapps because of Ethereum's inherent d
 - Anyone who is on the network has permission to use the service – or in other words, permission isn't required.
 - No one can block you or deny you access to the service.
 - Payments are built in via the native token, ether (ETH).
-- Ethereum is turing-complete, meaning you can pretty much program anything.
+- Ethereum is turing-complete, meaning you can program pretty much anything.
 
 ## Practical comparisons {#practical-comparisons}
 
