@@ -29,6 +29,28 @@ const whatIsEthereumQuiz = {
         },
       },
     },
+    {
+      correctAnswer: "a",
+      question: "Blah Blah",
+      answers: {
+        a: {
+          label: "a",
+          description: "a",
+        },
+        b: {
+          label: "b",
+          description: "b",
+        },
+        c: {
+          label: "c",
+          description: "c",
+        },
+        d: {
+          label: "d",
+          description: "d",
+        },
+      },
+    },
   ],
 }
 

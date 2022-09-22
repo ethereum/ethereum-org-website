@@ -38,6 +38,7 @@ const semanticTokens = {
     bodyLight: { _light: "gray.500", _dark: "gray.100" },
     disabled: { _light: "gray.400", _dark: "gray.500" },
     background: { _light: "white", _dark: "gray.700" },
+    quizButton: { _light: "gray.100", _dark: "gray.700" },
     success: "green.500",
     error: "red.500",
     attention: "yellow.200",
