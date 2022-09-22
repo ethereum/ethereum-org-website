@@ -2,10 +2,10 @@ import React from "react"
 import styled from "@emotion/styled"
 import Link from "./Link"
 import ButtonLink from "./ButtonLink"
-import Icon from "./Icon"
 
 import Translation from "./Translation"
-import { Flex, Heading, Text } from "@chakra-ui/react"
+import { Flex, Heading, Icon, Text } from "@chakra-ui/react"
+import { FaGithub } from "react-icons/fa"
 
 const Column = styled.div`
   flex: 1 1 50%;
@@ -24,11 +24,6 @@ const ImageColumn = styled(Column)`
   }
 `
 
-const GithubIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.background};
-  margin-right: 0.5rem;
-`
-
 export interface IProps {
   editPath: string
 }
@@ -42,7 +37,7 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => (
     borderStyle="solid"
     borderColor="primary"
     borderRadius="base"
-    boxShadow="inset 0 -2px 0 0 primary400"
+    boxShadow="inset 0 -2px 0 0 var(--eth-colors-primary400)"
   >
     <ImageColumn>
       ░░░░░░░░░▄░░░░░░░░░░░░░░▄░░░░ ░░░░░░░░▌▒█░░░░░░░░░░░▄▀▒▌░░░
@@ -113,7 +108,14 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => (
           color: "secondaryButtonHoverColor",
         }}
       >
-        <GithubIcon name="github" />{" "}
+        <Icon
+          fill="background"
+          mr={2}
+          w={6}
+          h={6}
+          as={FaGithub}
+          name="github"
+        />{" "}
         <span>
           <Translation id="page-calltocontribute-span" />
         </span>
