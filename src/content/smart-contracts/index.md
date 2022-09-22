@@ -7,9 +7,9 @@ sidebar: true
 
 # Introduction to smart contracts {#introduction-to-smart-contracts}
 
-A smart contract is a digital contract that automatically executes the agreed on terms when its conditions are met. Smart contracts are the fundamental building blocks of [Ethereum applications](/dapps/). Fundamentally, they are computer programs following "if X then Y" logic, which means they behave exactly as programmed and are resistant to participants' reneging on the terms of the contract. 
+A smart contract is a computer program following "if X then Y" logic, which means they behave exactly as programmed and are resistant to participants' reneging on the terms of the contract. They are the fundamental building blocks of Ethereum's application layer.
 
-In 1994, Nick Szazbo wrote [an introduction to the concept](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) and, in 1996, [an exploration of what smart contracts could do](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
+Nick Szabo coined the term "smart contract". In 1994, he wrote [an introduction to the concept](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html), and in 1996 he wrote [an exploration of what smart contracts could do](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
 Szabo envisioned a digital marketplace where automatic, cryptographically-secure processes enable transactions and business functions to happen without trusted intermediaries. Smart contracts on Ethereum put this vision into practice.
 
@@ -31,19 +31,19 @@ A simple metaphor for a smart contract is a vending machine, which works somewha
 - The vending machine displays the price
 - You pay the price
 - The vending machine verifies that you paid the right amount
-- The vending machine gives you your item.
+- The vending machine gives you your item
 
 The vending machine will only dispense your desired product after all requirements are met. If you don't select a product or insert enough money, the vending machine won't give out your product.
 
 ### Automatic execution {#automation}
 
-The main virtue of a smart contract is that it automatically executes the outcome when its conditions are met. There is no need to wait for a human to execute the result. This removes the need for a  trusted intermediary.
+The main benefit of a smart contract is that it deterministically executes unambiguous code when certain conditions are met. There is no need to wait for a humans to interpret or negotiate the result. This removes the need for trusted intermediaries.
 
-For example, you could write a smart contract that holds funds in escrow for a child, allowing them to withdraw funds after a specific date. If they try to withdraw before that, the smart contract won't execute. Or you could write a contract that automatically gives you a digital version of a car's title when you pay the dealer.
+For example, you could write a smart contract that holds funds in escrow for a child, allowing them to withdraw funds after a specific date. If they try to withdraw before that date, the smart contract won't execute. Or you could write a contract that automatically gives you a digital version of a car's title when you pay the dealer.
 
 ### Predictable outcomes {#predictability}
 
-Traditional contracts are risky because they rely on people to implement them. For example, two judges might interpret a contract differently, which could lead to inconsistent decisions and unequal outcomes. Smart contracts remove this possibility. Instead, smart contracts execute precisely based on the conditions written within the contract's code. This precision means that given the same circumstances, the smart contract will produce the same result.
+Traditional contracts are ambiguous because they rely on humans to interpret and implement them. For example, two judges might interpret a contract differently, which could lead to inconsistent decisions and unequal outcomes. Smart contracts remove this possibility. Instead, smart contracts execute precisely based on the conditions written within the contract's code. This precision means that given the same circumstances, the smart contract will produce the same result.
 
 ### Public record {#public-record}
 
@@ -59,7 +59,7 @@ Finally, like traditional contracts, you can check what's in a smart contract be
 
 ## Smart contract use cases {#use-cases}
 
-Smart contracts can do essentially anything that a computer programs do.
+Smart contracts can do essentially anything that computer programs can do.
 
 They can perform computations, create currency, store data, mint NFTs, send communications and even generate graphics. Here are some popular, real-world examples:
 
