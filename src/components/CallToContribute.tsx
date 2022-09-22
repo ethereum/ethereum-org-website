@@ -1,28 +1,10 @@
 import React from "react"
-import styled from "@emotion/styled"
 import Link from "./Link"
 import ButtonLink from "./ButtonLink"
 
 import Translation from "./Translation"
 import { Flex, Heading, Icon, Text } from "@chakra-ui/react"
 import { FaGithub } from "react-icons/fa"
-
-const Column = styled.div`
-  flex: 1 1 50%;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  color: ${(props) => props.theme.colors.text};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    text-align: center;
-  }
-`
-
-const ImageColumn = styled(Column)`
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
 
 export interface IProps {
   editPath: string
@@ -39,7 +21,16 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => (
     borderRadius="base"
     boxShadow="inset 0 -2px 0 0 var(--eth-colors-primary400)"
   >
-    <ImageColumn>
+    <Flex
+      direction="column"
+      flexGrow={1}
+      flexShrink={1}
+      flexBasis="50%"
+      p={4}
+      color="text"
+      textAlign={{ base: "center", lg: "left" }}
+      display={{ base: "none", lg: "flex" }}
+    >
       ░░░░░░░░░▄░░░░░░░░░░░░░░▄░░░░ ░░░░░░░░▌▒█░░░░░░░░░░░▄▀▒▌░░░
       ░░░░░░░░▌▒▒█░░░░░░░░▄▀▒▒▒▐░░░ ░░░░░░░▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐░░░
       ░░░░░▄▄▀▒░▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐░░░ ░░░▄▀▒▒▒░░░▒▒▒░░░▒▒▒▀██▀▒▌░░░
@@ -50,7 +41,7 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => (
       ░▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▒▄▒▒▐░░ ░░▀▄▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▄▒▒▒▒▌░░
       ░░░░▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀░░░ ░░░░░░▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀░░░░░
       ░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▀▀░░░░░░░░
-    </ImageColumn>
+    </Flex>
     <Flex
       direction="column"
       flexGrow={1}
