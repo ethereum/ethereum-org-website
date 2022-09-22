@@ -1,8 +1,8 @@
 // Library imports
 import React, { useState, useEffect, useRef, useMemo } from "react"
 import { Box, Button, ButtonProps, Flex, Icon, Text } from "@chakra-ui/react"
-
 import { useIntl } from "react-intl"
+import { MdClose } from "react-icons/md"
 import FocusTrap from "focus-trap-react"
 // Component imports
 import Translation from "./Translation"
@@ -16,7 +16,6 @@ import { translateMessageId } from "../utils/translations"
 import { useOnClickOutside } from "../hooks/useOnClickOutside"
 import { useKeyPress } from "../hooks/useKeyPress"
 import { useSurvey } from "../hooks/useSurvey"
-import { MdClose } from "react-icons/md"
 
 interface FixedDotProps extends ButtonProps {
   bottomOffset: number
@@ -33,7 +32,7 @@ const FixedDot: React.FC<FixedDotProps> = ({
       h={size}
       borderRadius="full"
       bgColor="primary"
-      boxShadow="tableItemBoxShadow"
+      boxShadow="tableItemBox"
       position="sticky"
       bottom={{ base: `${bottomOffset + 1}rem`, lg: 4 }}
       ms="auto"
@@ -153,7 +152,7 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
               bgColor="ednBackground"
               border="1px"
               borderColor="buttonColor"
-              boxShadow="tableItemBoxShadow"
+              boxShadow="tableItemBox"
               borderRadius="base" /* 0.25rem */
               position="fixed"
               insetEnd={{ base: 4, sm: 8 }}
