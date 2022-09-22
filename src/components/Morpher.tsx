@@ -142,7 +142,7 @@ const Morpher = () => {
   return (
     <Link
       textDecor="none"
-      fontSize="1rem"
+      fontSize="md"
       color="text"
       _hover={{ color: "primary" }}
       to="/languages/"
