@@ -1415,6 +1415,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/Master7130"><img src="https://avatars.githubusercontent.com/u/85327930?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Master7130</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Master7130" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/Lude15"><img src="https://avatars.githubusercontent.com/u/109084476?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lude15</b></sub></a><br /><a href="#ideas-Lude15" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center"><a href="https://crust.network"><img src="https://avatars.githubusercontent.com/u/10335300?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Luke Fan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=badkk" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/TABASCOatw"><img src="https://avatars.githubusercontent.com/u/84655644?v=4?s=100" width="100px;" alt=""/><br /><sub><b>TABASCO</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=TABASCOatw" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
