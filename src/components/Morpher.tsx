@@ -145,9 +145,6 @@ const Morpher = () => {
       fontSize="1rem"
       color="text"
       _hover={{ color: "primary" }}
-      sx={{
-        "&.active": { fontWeight: "bold" },
-      }}
       to="/languages/"
     >
       <span>{state.text}</span>
