@@ -22,28 +22,28 @@ const InfoBanner: React.FC<IProps> = ({
 }) => {
   const banner = (
     <Flex
-      alignItems="center"
+      align="center"
       p={6}
-      borderRadius={0.5}
+      borderRadius={"sm"}
       maxW={shouldCenter ? "55rem" : "100%"}
       color="black300"
       bg={isWarning ? "warning" : "infoBanner"}
-      direction={{ sm: "column" }}
+      direction={{  base: "column", sm: "row" }}
       {...props}
     >
       {emoji && (
         <Emoji
           flexGrow="0"
           flexShrink="0"
-          mr={{base : 6, sm: 0}}
-          mb={{ sm: 2 }}
-          alignSelf={{ sm: "flex-start" }}
+          mr={{base : 0, sm: 6}}
+          mb={{ base: 2, sm: 0 }}
+          alignSelf={{ base: "flex-start", sm: "auto" }}
           text={emoji}
           fontSize={"2em"}
         />
       )}
       <Flex
-        display={{ base: shouldSpaceBetween ? "flex" : "block", sm: "block" }}
+        display={{ base: "block", sm: shouldSpaceBetween ? "flex" : "block" }}
         alignItems={shouldSpaceBetween ? "center" : "auto"}
         w={shouldSpaceBetween ? "100%" : "auto"}
         justifyContent={shouldSpaceBetween ? "space-between" : "auto"}
