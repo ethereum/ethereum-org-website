@@ -38,7 +38,7 @@ Many blockchain-based social platforms have native tokens that power monetizatio
 
 2. Decentralized social networks are built on open-source ideals and make source code for applications available for public inspection. By eliminating the implementation of opaque algorithms common in traditional social media, blockchain-based social networks can align the interests of users and platform creators.
 
-3. Decentralized social networks eliminate the "middle-man." Content creators have direct ownership over their content, and they engage directly with followers, fans, buyers, and other parties, with nothing but a smart contract in between.
+3. Decentralized social networks eliminate the "middle-man". Content creators have direct ownership over their content, and they engage directly with followers, fans, buyers, and other parties, with nothing but a smart contract in between.
 
 4. As dapps running on the Ethereum network, which is sustained by a global, peer-to-peer network of nodes, decentralized social networks are less susceptible to server downtime and outages.
 
@@ -80,7 +80,7 @@ Reddit has [touted Community Points](https://cointelegraph.com/news/reddit-to-re
 
 The program is already live, with the r/CryptoCurrency subreddit [running its version of Community Points called "Moons"](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki). Per the official description, Moons "reward posters, commenters, and moderators for their contributions to the subreddit." Because these tokens are on the blockchain (users receive them in wallets), they are independent of Reddit and cannot be taken away.
 
-After concluding a beta phase on the Rinkeby testnet, Reddit Community Points are now on [Arbitrum Nova](https://nova.arbitrum.io/), a blockchain that combines properties of a [sidechain](/developers/docs/scaling/sidechains/) and an [optimistic rollup](/developers/docs/scaling/optimistic-rollups/). Besides using Community Points to unlock special features, users can also trade them for fiat on exchanges. Also, the amount of Community Points a user owns determines their influence on the decision-making process within the community.
+After concluding a beta phase on the Rinkeby testnet, Reddit Community Points are now on [Arbitrum Nova](https://nova.arbitrum.io/), a blockchain that combines properties of a [validium](/developers/docs/scaling/validium/) and an [optimistic rollup](/developers/docs/scaling/optimistic-rollups/). Besides using Community Points to unlock special features, users can also trade them for fiat on exchanges. Also, the amount of Community Points a user owns determines their influence on the decision-making process within the community.
 
 ### Twitter {#twitter}
 

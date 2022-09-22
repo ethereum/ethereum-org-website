@@ -31,10 +31,10 @@ import {
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/OldEmoji"
 import YouTube from "../components/YouTube"
-import PreMergeBanner from "../components/PreMergeBanner"
+import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import FeedbackCard from "../components/FeedbackCard"
 
-import { isLangRightToLeft } from "../utils/translations"
+import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
 
@@ -163,7 +163,10 @@ const TutorialPage = ({
     throw new Error("Required `relativePath` is missing on pageContext")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
-  const showMergeBanner = !!mdx.frontmatter.preMergeBanner
+
+  const showPostMergeBanner = !!mdx.frontmatter.postMergeBannerTranslation
+  const postMergeBannerTranslationString = mdx.frontmatter
+    .postMergeBannerTranslation as TranslationKey | null
 
   const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
 
@@ -171,7 +174,11 @@ const TutorialPage = ({
   const absoluteEditPath = `${editContentUrl}${relativePath}`
   return (
     <div>
-      {showMergeBanner && <PreMergeBanner />}
+      {showPostMergeBanner && (
+        <PostMergeBanner
+          translationString={postMergeBannerTranslationString!}
+        />
+      )}
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
           title={mdx.frontmatter.title}
@@ -238,7 +245,7 @@ export const query = graphql`
         sidebarDepth
         address
         isOutdated
-        preMergeBanner
+        postMergeBannerTranslation
       }
       body
       tableOfContents

@@ -45,11 +45,17 @@ import Icon from "../components/Icon"
 import SocialListItem from "../components/SocialListItem"
 import YouTube from "../components/YouTube"
 import TranslationChartImage from "../components/TranslationChartImage"
+import PostMergeBanner from "../components/Banners/PostMergeBanner"
+import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
 
 import { getLocaleTimestamp } from "../utils/time"
-import { isLangRightToLeft } from "../utils/translations"
+import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
+
+const Container = styled.div`
+  width: 100%;
+`
 
 const Page = styled.div`
   display: flex;
@@ -147,6 +153,7 @@ const components = {
   Callout,
   YouTube,
   TranslationChartImage,
+  EnergyConsumptionChart,
 }
 
 const StaticPage = ({
@@ -166,6 +173,10 @@ const StaticPage = ({
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
 
+  const showPostMergeBanner = !!mdx.frontmatter.postMergeBannerTranslation
+  const postMergeBannerTranslationString = mdx.frontmatter
+    .postMergeBannerTranslation as TranslationKey | null
+
   // FIXME: remove this any, currently not sure how to fix the ts error
   const parent: any = mdx.parent
   const lastUpdatedDate = parent.fields
@@ -183,38 +194,45 @@ const StaticPage = ({
   const slug = mdx.fields?.slug || ""
 
   return (
-    <Page dir={isRightToLeft ? "rtl" : "ltr"}>
-      <PageMetadata
-        title={mdx.frontmatter.title}
-        description={mdx.frontmatter.description}
-      />
-      <ContentContainer>
-        <Breadcrumbs slug={slug} />
-        <LastUpdated
-          dir={isLangRightToLeft(intl.locale as Lang) ? "rtl" : "ltr"}
-        >
-          <Translation id="page-last-updated" />:{" "}
-          {getLocaleTimestamp(intl.locale as Lang, lastUpdatedDate)}
-        </LastUpdated>
-        <MobileTableOfContents
-          editPath={absoluteEditPath}
-          items={tocItems}
-          isMobile={true}
-          maxDepth={mdx.frontmatter.sidebarDepth!}
-        />
-        <MDXProvider components={components}>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
-        </MDXProvider>
-        <FeedbackCard isArticle />
-      </ContentContainer>
-      {mdx.frontmatter.sidebar && tocItems && (
-        <TableOfContents
-          editPath={absoluteEditPath}
-          items={tocItems}
-          maxDepth={mdx.frontmatter.sidebarDepth!}
+    <Container>
+      {showPostMergeBanner && (
+        <PostMergeBanner
+          translationString={postMergeBannerTranslationString!}
         />
       )}
-    </Page>
+      <Page dir={isRightToLeft ? "rtl" : "ltr"}>
+        <PageMetadata
+          title={mdx.frontmatter.title}
+          description={mdx.frontmatter.description}
+        />
+        <ContentContainer>
+          <Breadcrumbs slug={slug} />
+          <LastUpdated
+            dir={isLangRightToLeft(intl.locale as Lang) ? "rtl" : "ltr"}
+          >
+            <Translation id="page-last-updated" />:{" "}
+            {getLocaleTimestamp(intl.locale as Lang, lastUpdatedDate)}
+          </LastUpdated>
+          <MobileTableOfContents
+            editPath={absoluteEditPath}
+            items={tocItems}
+            isMobile={true}
+            maxDepth={mdx.frontmatter.sidebarDepth!}
+          />
+          <MDXProvider components={components}>
+            <MDXRenderer>{mdx.body}</MDXRenderer>
+          </MDXProvider>
+          <FeedbackCard isArticle />
+        </ContentContainer>
+        {mdx.frontmatter.sidebar && tocItems && (
+          <TableOfContents
+            editPath={absoluteEditPath}
+            items={tocItems}
+            maxDepth={mdx.frontmatter.sidebarDepth!}
+          />
+        )}
+      </Page>
+    </Container>
   )
 }
 
@@ -236,6 +254,7 @@ export const staticPageQuery = graphql`
         sidebar
         sidebarDepth
         isOutdated
+        postMergeBannerTranslation
       }
       body
       tableOfContents

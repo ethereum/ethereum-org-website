@@ -8,7 +8,6 @@ import Card from "../../components/Card"
 import Callout from "../../components/Callout"
 import Link from "../../components/Link"
 import Translation from "../../components/Translation"
-import PreMergeBanner from "../../components/PreMergeBanner"
 import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
 import {
@@ -251,9 +250,6 @@ const DevelopersPage = ({
         title={translateMessageId("page-developer-meta-title", intl)}
         description={translateMessageId("page-developers-meta-desc", intl)}
       />
-      <PreMergeBanner announcementOnly>
-        <Translation id="page-upgrades-merge-banner-developers-landing" />
-      </PreMergeBanner>
       <Content>
         <HeroContainer>
           <HeroCopyContainer>

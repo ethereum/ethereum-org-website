@@ -1,84 +1,45 @@
 import React from "react"
-import styled from "@emotion/styled"
+import { Flex, FlexProps, Text } from "@chakra-ui/react"
 
 import Link from "./Link"
-import Emoji from "./OldEmoji"
+import Emoji from "./Emoji"
 import Translation from "./Translation"
 
 import docLinks from "../data/developer-docs-links.yaml"
 import { DeveloperDocsLink } from "../types"
 import { TranslationKey } from "../utils/translations"
 
-const Container = styled.div`
-  display: flex;
-  justify-content: space-between;
-  @media (max-width: 604px) {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-`
-
 // TODO make entire card a link
-const Card = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 1rem;
-  width: 262px;
-  height: 82px;
-  background-color: ${(props) => props.theme.colors.background};
-  border: 1px solid ${(props) => props.theme.colors.border};
-  border-radius: 4px;
-  @media (max-width: 604px) {
-    width: 100%;
-  }
-`
+const Card: React.FC<FlexProps> = ({ children, ...props }) => (
+  <Flex
+    alignItems="center"
+    mt={4}
+    w="262px"
+    h="82px"
+    bg="background"
+    border="1px"
+    borderColor="border"
+    borderRadius={1}
+    {...props}
+  >
+    {children}
+  </Flex>
+)
 
-const PreviousCard = styled(Card)`
-  justify-content: flex-start;
-`
-
-const NextCard = styled(Card)`
-  justify-content: flex-end;
-`
-const TextDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  max-width: 166px;
-  height: 100%;
-  word-wrap: break-word;
-  padding: 1rem;
-  line-height: 1rem;
-`
-
-const PreviousTextDiv = styled(TextDiv)`
-  align-items: flex-start;
-  padding-left: 0rem;
-`
-
-const NextTextDiv = styled(TextDiv)`
-  align-items: flex-end;
-  padding-right: 0rem;
-`
-
-const PreviousNavLink = styled(Link)`
-  text-align: left;
-`
-
-const NextNavLink = styled(Link)`
-  text-align: right;
-`
-
-const EmojiLink = styled(Link)`
-  text-decoration: none;
-  padding: 1rem;
-  height: 100%;
-`
-
-const UppercaseSpan = styled.span`
-  text-transform: uppercase;
-`
+const TextDiv: React.FC<FlexProps> = ({ children, ...props }) => (
+  <Flex
+    direction="column"
+    justify="space-between"
+    maxW="166px"
+    h="100%"
+    wordWrap="break-word"
+    p={4}
+    lineHeight={4}
+    {...props}
+  >
+    {children}
+  </Flex>
+)
 
 export interface DocsArrayProps {
   to: string
@@ -125,42 +86,46 @@ const DocsNav: React.FC<IProps> = ({ relativePath }) => {
     currentIndex + 1 < docsArray.length ? docsArray[currentIndex + 1] : null
 
   return (
-    <Container>
+    <Flex
+      direction={{ base: "column-reverse", m: "row" }}
+      justify="space-between"
+      alignItems={{ base: "center", m: "flex-start" }}
+    >
       {previousDoc ? (
-        <PreviousCard>
-          <EmojiLink to={previousDoc.to}>
-            <Emoji text=":point_left:" size={3} />
-          </EmojiLink>
-          <PreviousTextDiv>
-            <UppercaseSpan>
+        <Card justify="flex-start">
+          <Link to={previousDoc.to} textDecoration="none" p={4} h="100%">
+            <Emoji text=":point_left:" fontSize="5xl" />
+          </Link>
+          <TextDiv ps="0">
+            <Text textTransform="uppercase" m="0">
               <Translation id="previous" />
-            </UppercaseSpan>
-            <PreviousNavLink to={previousDoc.to}>
+            </Text>
+            <Link to={previousDoc.to} textAlign="start">
               <Translation id={previousDoc.id} />
-            </PreviousNavLink>
-          </PreviousTextDiv>
-        </PreviousCard>
+            </Link>
+          </TextDiv>
+        </Card>
       ) : (
-        <div />
+        <Flex />
       )}
       {nextDoc ? (
-        <NextCard>
-          <NextTextDiv>
-            <UppercaseSpan>
+        <Card justify="flex-end">
+          <TextDiv alignItems="flex-end" pe="0">
+            <Text textTransform="uppercase" m="0">
               <Translation id="next" />
-            </UppercaseSpan>
-            <NextNavLink to={nextDoc.to}>
+            </Text>
+            <Link to={nextDoc.to} textAlign="end">
               <Translation id={nextDoc.id} />
-            </NextNavLink>
-          </NextTextDiv>
-          <EmojiLink to={nextDoc.to}>
-            <Emoji text=":point_right:" size={3} />
-          </EmojiLink>
-        </NextCard>
+            </Link>
+          </TextDiv>
+          <Link to={nextDoc.to} textDecoration="none" p={4} h="100%">
+            <Emoji text=":point_right:" fontSize="5xl" />
+          </Link>
+        </Card>
       ) : (
-        <div />
+        <Flex />
       )}
-    </Container>
+    </Flex>
   )
 }
 

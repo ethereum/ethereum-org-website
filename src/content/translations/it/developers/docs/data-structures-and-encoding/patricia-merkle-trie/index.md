@@ -179,7 +179,7 @@ Ora, costruiamo un trie di questo tipo con le seguenti coppie chiave/valore nel 
     hashE:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coin' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
 ```
 
-Quando in un nodo si fa riferimento a un altro nodo, viene inserito `H(rlp.encode(x))`, dove `H(x) = keccak256(x) if len(x) >= 32 else x` e `rlp.encode` è la funzione di codifica [RLP](/fundamentals/rlp).
+Quando in un nodo si fa riferimento a un altro nodo, viene inserito `H(rlp.encode(x))`, dove `H(x) = keccak256(x) if len(x) >= 32 else x` e `rlp.encode` è la funzione di codifica [RLP](/developers/docs/data-structures-and-encoding/rlp).
 
 Nota che, aggiornando un trie, si deve memorizzare la coppia chiave/valore `(keccak256(x), x)` in una tabella di ricerca persistente _se_ il nodo appena creato ha una lunghezza >= 32. Se invece il nodo è inferiore a questo valore, non è necessario memorizzare nulla, poiché la funzione f(x) = x è reversibile.
 
