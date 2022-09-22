@@ -116,7 +116,7 @@ While many searchers are still making good money from MEV, as opportunities beco
 
 As DeFi grows and increases in popularity, MEV may soon significantly outweigh the base Ethereum block reward. With that comes a growing possibility of selfish block remining and consensus instability. Some consider this to be an existential threat to Ethereum, and disincentivizing selfish mining is an active area of research in Ethereum protocol theory. One solution currently being explored is [MEV reward smoothing](https://ethresear.ch/t/committee-driven-mev-smoothing/10408).
 
-## MEV after The Merge {#mev-after-the-merge} 
+## MEV in Ethereum Proof-of-Stake (PoS) {#mev-in-ethereum-proof-of-stake}
 
 As explained, MEV has negative implications for overall user experience and consensus-layer security. But Ethereum’s transition to a proof-of-stake consensus (dubbed “The Merge”) potentially introduces new MEV-related risks: 
 
@@ -204,8 +204,9 @@ Some projects, such as MEV Boost, use the Builder API as part of an overall stru
 
 ## Related resources {#related-resources}
 
-- [Flashbots GitHub](https://github.com/flashbots/pm)
-- [MEV-Explore](https://explore.flashbots.net/) _Dashboard and live transaction explorer for MEV transactions_
+- [Flashbots GitHub](https://github.com/flashbots/pm) - _Collection of resources to learn about the Flashbots project_
+- [MEV-Explore](https://explore.flashbots.net/) - _Dashboard and live transaction explorer for MEV transactions_
+- [mevboost.org](https://www.mevboost.org/) - _Tracker with real-time stats for MEV-Boost relays and block builders_
 
 ## Further reading {#further-reading}
 
