@@ -19,7 +19,7 @@ const ImageCard: React.FC<IProps> = ({
   children,
   className,
 }) => (
-  <Box  bg="searchBackground" borderRadius={1} border="1px solid lightBorder" p={6}> 
+  <Box bg="searchBackground" borderRadius={1} border="1px solid lightBorder" p={6}> 
     <Image as={GatsbyImage} src={image} alt={alt} w={12} h={12} mb={4}  />
     <h3>{title}</h3>
     <Text opacity={0.8} >{description}</Text>
