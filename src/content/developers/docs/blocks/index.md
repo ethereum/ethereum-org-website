@@ -91,7 +91,7 @@ parent_hash: hash of the parent block
 fee_recipient: account address for paying transaction fees to
 state_root: root hash for the global state after applying changes in this block
 receipts_root: hash of the transaction receipts trie
-logs_bloom: data structure containign event logs
+logs_bloom: data structure containing event logs
 prev_randao: value used in random validator selection
 block_number: the number of the current block
 gas_limit: maximum gas allowed in this block
@@ -110,7 +110,7 @@ parent_hash: hash of the parent block
 fee_recipient: account address for paying transaction fees to
 state_root: root hash for the global state after applying changes in this block
 receipts_root: hash of the transaction receipts trie
-logs_bloom: data structure containign event logs
+logs_bloom: data structure containing event logs
 prev_randao: value used in random validator selection
 block_number: the number of the current block
 gas_limit: maximum gas allowed in this block
