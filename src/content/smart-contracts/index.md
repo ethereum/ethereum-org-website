@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-# Introduction to smart contracts {#introduction-to-smart-contracts}
+Smart contracts turn the terms of an agreement into computer code that executes when the contract terms are met.
 
 A smart contract is a computer program following "if X then Y" logic, which means they behave exactly as programmed and are resistant to participants' reneging on the terms of the contract. They are the fundamental building blocks of Ethereum's application layer.
 
