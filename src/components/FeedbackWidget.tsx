@@ -1,6 +1,6 @@
 // Library imports
 import React, { useState, useEffect, useRef, useMemo } from "react"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import styled from "@emotion/styled"
 import FocusTrap from "focus-trap-react"
 // Component imports
@@ -12,7 +12,6 @@ import NakedButton from "./NakedButton"
 import FeedbackGlyph from "../assets/feedback-glyph.svg"
 // Utility imports
 import { trackCustomEvent } from "../utils/matomo"
-import { translateMessageId } from "../utils/translations"
 // Hook imports
 import { useOnClickOutside } from "../hooks/useOnClickOutside"
 import { useKeyPress } from "../hooks/useKeyPress"
@@ -150,7 +149,7 @@ export interface IProps {
 }
 
 const FeedbackWidget: React.FC<IProps> = ({ className }) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const containerRef = useRef<HTMLInputElement>(null)
   useOnClickOutside(containerRef, () => handleClose(), [`mousedown`])
   const [location, setLocation] = useState("")
@@ -258,10 +257,7 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
                   <Button
                     variant="outline-color"
                     onClick={handleSurveyOpen}
-                    aria-label={translateMessageId(
-                      "feedback-widget-thank-you-cta",
-                      intl
-                    )}
+                    aria-label={t("feedback-widget-thank-you-cta")}
                   >
                     <Translation id="feedback-widget-thank-you-cta" />
                   </Button>
@@ -270,24 +266,21 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
                     <Button
                       variant="outline-color"
                       onClick={() => handleSubmit(true)}
-                      aria-label={translateMessageId("yes", intl)}
+                      aria-label={t("yes")}
                     >
                       <Translation id="yes" />
                     </Button>
                     <Button
                       variant="outline-color"
                       onClick={() => handleSubmit(false)}
-                      aria-label={translateMessageId("no", intl)}
+                      aria-label={t("no")}
                     >
                       <Translation id="no" />
                     </Button>
                   </>
                 )}
               </ButtonContainer>
-              <IconContainer
-                onClick={handleClose}
-                aria-label={translateMessageId("close", intl)}
-              >
+              <IconContainer onClick={handleClose} aria-label={t("close")}>
                 <Icon name="close" />
               </IconContainer>
             </Container>

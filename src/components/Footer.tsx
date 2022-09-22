@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { useIntl } from "react-intl"
+import { useI18next } from "gatsby-plugin-react-i18next"
 import { StaticQuery, graphql } from "gatsby"
 import { Icon } from "@chakra-ui/react"
 import { FaDiscord, FaGithub, FaTwitter, FaYoutube } from "react-icons/fa"
@@ -136,9 +136,9 @@ export interface LinkSection {
 export interface IProps {}
 
 const Footer: React.FC<IProps> = () => {
-  const intl = useIntl()
+  const { language } = useI18next()
 
-  const isPageRightToLeft = isLangRightToLeft(intl.locale as Lang)
+  const isPageRightToLeft = isLangRightToLeft(language as Lang)
 
   const linkSections: Array<LinkSection> = [
     {
@@ -377,7 +377,7 @@ const Footer: React.FC<IProps> = () => {
             <LastUpdated>
               <Translation id="website-last-updated" />:{" "}
               {getLocaleTimestamp(
-                intl.locale as Lang,
+                language as Lang,
                 data.allSiteBuildMetadata.edges[0].node.buildTime
               )}
             </LastUpdated>

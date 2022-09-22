@@ -1,10 +1,11 @@
 import React, { useState } from "react"
 import styled from "@emotion/styled"
-import { useIntl } from "react-intl"
+import { useI18next } from "gatsby-plugin-react-i18next"
 import Link, { navigate } from "./Link"
 import Emoji from "./OldEmoji"
 import Translation from "./Translation"
 import { isMobile } from "../utils/isMobile"
+import { Lang } from "../utils/languages"
 
 const OpenTitle = styled.h3`
   font-size: 2.5rem;
@@ -273,14 +274,14 @@ export interface IProps {
 }
 
 const StablecoinBoxGrid: React.FC<IProps> = ({ items }) => {
-  const intl = useIntl()
+  const { language } = useI18next()
   const [indexOpen, setOpenIndex] = useState<number>(0)
 
   // TODO generalize
   const handleSelect = (idx: number): void => {
     setOpenIndex(idx)
     if (isMobile()) {
-      navigate(`/stablecoins/#type-${idx}`, intl)
+      navigate(`/stablecoins/#type-${idx}`, language as Lang)
     }
   }
 

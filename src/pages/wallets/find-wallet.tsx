@@ -2,7 +2,7 @@
 import React, { useState, useRef } from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import styled from "@emotion/styled"
 import { shuffle } from "lodash"
 
@@ -24,7 +24,6 @@ import walletData from "../../data/wallets/wallet-data"
 import FilterBurger from "../../assets/wallets/filter_burger.svg"
 
 // Utils
-import { translateMessageId } from "../../utils/translations"
 import { trackCustomEvent } from "../../utils/matomo"
 import { getImage } from "../../utils/image"
 import { useOnClickOutside } from "../../hooks/useOnClickOutside"
@@ -360,7 +359,7 @@ const filterDefault = {
 const randomizedWalletData = shuffle(walletData)
 
 const FindWalletPage = ({ data, location }) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const wrapperRef = useRef<HTMLDivElement>(null)
 
   const [showFeatureFilters, setShowFeatureFilters] = useState(false)
@@ -394,11 +393,8 @@ const FindWalletPage = ({ data, location }) => {
   return (
     <PageStyled showMobileSidebar={showMobileSidebar}>
       <PageMetadata
-        title={translateMessageId("page-find-wallet-meta-title", intl)}
-        description={translateMessageId(
-          "page-find-wallet-meta-description",
-          intl
-        )}
+        title={t("page-find-wallet-meta-title")}
+        description={t("page-find-wallet-meta-description")}
       />
 
       <HeroContainer>

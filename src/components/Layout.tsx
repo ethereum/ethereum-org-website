@@ -3,8 +3,6 @@ import { ApolloProvider } from "@apollo/client"
 import { useColorModeValue } from "@chakra-ui/react"
 import { ThemeProvider } from "@emotion/react"
 import styled from "@emotion/styled"
-import { IntlProvider } from "react-intl"
-import { LocaleProvider } from "gatsby-theme-i18n"
 
 import { lightTheme, darkTheme } from "../theme"
 
@@ -93,7 +91,6 @@ const Layout: React.FC<IProps> = ({
   const [isZenMode, setIsZenMode] = useState<boolean>(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState<boolean>(false)
   const locale = pageContext.locale
-  const messages = require(`../intl/${locale}.json`)
 
   // Exit Zen Mode on 'esc' click
   useKeyPress(`Escape`, () => handleZenModeChange(false))
@@ -141,31 +138,35 @@ const Layout: React.FC<IProps> = ({
     !isTranslationBannerIgnored
 
   return (
-    <LocaleProvider pageContext={pageContext}>
-      {/* our current react-intl types does not support react 18 */}
-      {/* TODO: once we upgrade react-intl to v6, remove this ts-ignore */}
-      {/* @ts-ignore */}
-      <IntlProvider locale={locale!} key={locale} messages={messages}>
-        <ApolloProvider client={client}>
-          <ThemeProvider theme={theme}>
-            <SkipLink hrefId="#main-content" />
-            <TranslationBanner
-              shouldShow={shouldShowTranslationBanner}
-              isPageContentEnglish={isPageContentEnglish}
-              isPageRightToLeft={isPageRightToLeft}
-              originalPagePath={pageContext.originalPath!}
-            />
-            <TranslationBannerLegal
-              shouldShow={isLegal}
-              isPageRightToLeft={isPageRightToLeft}
-              originalPagePath={pageContext.originalPath!}
-            />
-            <ContentContainer>
+    <ApolloProvider client={client}>
+      <ThemeProvider theme={theme}>
+        <SkipLink hrefId="#main-content" />
+        <TranslationBanner
+          shouldShow={shouldShowTranslationBanner}
+          isPageContentEnglish={isPageContentEnglish}
+          isPageRightToLeft={isPageRightToLeft}
+          originalPagePath={pageContext.originalPath!}
+        />
+        <TranslationBannerLegal
+          shouldShow={isLegal}
+          isPageRightToLeft={isPageRightToLeft}
+          originalPagePath={pageContext.originalPath!}
+        />
+        <ContentContainer>
+          <VisuallyHidden isHidden={isZenMode}>
+            <Nav path={path} />
+            {shouldShowSideNav && <SideNavMobile path={path} />}
+          </VisuallyHidden>
+          <SkipLinkAnchor id="main-content" />
+          {isMergePage && <Centered id="confetti-easter-egg" />}
+          <MainContainer>
+            {shouldShowSideNav && (
               <VisuallyHidden isHidden={isZenMode}>
                 <Nav path={path} />
                 {shouldShowSideNav && <SideNavMobile path={path} />}
               </VisuallyHidden>
               <SkipLinkAnchor id="main-content" />
+              {isMergePage && <Centered id="confetti-easter-egg" />}
               <MainContainer>
                 {shouldShowSideNav && (
                   <VisuallyHidden isHidden={isZenMode}>
@@ -187,8 +188,6 @@ const Layout: React.FC<IProps> = ({
             </ContentContainer>
           </ThemeProvider>
         </ApolloProvider>
-      </IntlProvider>
-    </LocaleProvider>
   )
 }
 

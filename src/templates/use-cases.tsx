@@ -1,5 +1,4 @@
 import React from "react"
-import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -308,7 +307,6 @@ const UseCasePage = ({
   data: { siteData, pageData: mdx },
   pageContext,
 }: PageProps<Queries.UseCasePageQuery, Context>) => {
-  const intl = useIntl()
   if (!siteData || !mdx?.frontmatter)
     throw new Error(
       "UseCases page template query does not return expected values"

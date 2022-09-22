@@ -1,9 +1,8 @@
 import React from "react"
 import { Icon, Link as ChakraLink, LinkProps, useTheme } from "@chakra-ui/react"
 import { navigate as gatsbyNavigate } from "gatsby"
-import { LocalizedLink as IntlLink } from "gatsby-theme-i18n"
+import { Link as IntlLink } from "gatsby-plugin-react-i18next"
 import { NavigateOptions } from "@reach/router"
-import { IntlShape } from "react-intl"
 
 import { BsQuestionSquareFill } from "react-icons/bs"
 
@@ -145,14 +144,14 @@ const Link: React.FC<IProps> = ({
 
 export function navigate(
   to: string,
-  intl: IntlShape,
+  language: Lang,
   options?: NavigateOptions<{}>
 ) {
   if (typeof window === "undefined") {
     return
   }
 
-  const link = `/${intl.locale as Lang}${to}`
+  const link = `/${language}${to}`
   gatsbyNavigate(link, options)
 }
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import styled from "@emotion/styled"
-import { useIntl } from "react-intl"
+import { useI18next } from "gatsby-plugin-react-i18next"
 
 import Translation from "../Translation"
 import StatErrorMessage from "../StatErrorMessage"
@@ -52,16 +52,14 @@ const Label = styled.p`
 export interface IProps {}
 
 const StatsBoxGrid: React.FC<IProps> = () => {
-  const intl = useIntl()
+  const { language } = useI18next()
   const [totalEth, setTotalEth] = useState<string>("0")
   const [totalValidators, setTotalValidators] = useState<string>("0")
   const [currentApr, setCurrentApr] = useState<string>("0")
   const [error, setError] = useState(false)
 
   useEffect(() => {
-    const localeForStatsBoxNumbers = getLocaleForNumberFormat(
-      intl.locale as Lang
-    )
+    const localeForStatsBoxNumbers = getLocaleForNumberFormat(language as Lang)
 
     const formatInteger = (amount: number): string =>
       new Intl.NumberFormat(localeForStatsBoxNumbers).format(amount)
@@ -100,7 +98,7 @@ const StatsBoxGrid: React.FC<IProps> = () => {
         setError(true)
       }
     })()
-  }, [intl.locale])
+  }, [language])
 
   // TODO: Improve error handling
   if (error) return <StatErrorMessage />

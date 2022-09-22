@@ -1,9 +1,7 @@
-import { IntlShape } from "react-intl"
-
 import type { Lang } from "./languages"
 import type { Direction } from "../types"
 
-import defaultStrings from "../intl/en.json"
+import defaultStrings from "../../i18n/locales/en.json"
 
 export type TranslationKey = keyof typeof defaultStrings
 
@@ -38,31 +36,6 @@ export const getDirection = (lang?: Lang): Direction => {
   }
 
   return isLangRightToLeft(lang) ? "rtl" : "ltr"
-}
-
-export const translateMessageId = (
-  id: TranslationKey,
-  intl: IntlShape
-): string => {
-  if (!id) {
-    consoleError(`No id provided for translation.`)
-    return ""
-  }
-  if (!intl || !intl.formatMessage) {
-    consoleError(`Invalid/no intl provided for translation id ${id}`)
-    return ""
-  }
-  const translation = intl.formatMessage({
-    id,
-    defaultMessage: getDefaultMessage(id),
-  })
-  if (translation === id) {
-    consoleError(
-      `Intl ID string "${id}" has no match. Default message of "" returned.`
-    )
-    return ""
-  }
-  return translation
 }
 
 // Overwrites the default Persian numbering of the Farsi language to use Hindu-Arabic numerals (0-9)

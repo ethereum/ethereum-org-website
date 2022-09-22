@@ -27,7 +27,7 @@ const mergeTranslations = (): void => {
         mergeObjects(result, obj)
       })
 
-      const outputFilename = `src/intl/${currentTranslation}.json`
+      const outputFilename = `./i18n/locales/${currentTranslation}.json`
 
       fs.writeFileSync(
         outputFilename,
