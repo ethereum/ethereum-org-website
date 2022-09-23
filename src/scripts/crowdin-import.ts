@@ -76,6 +76,7 @@ const USER_SELECTION: UserSelectionObject = {
   th: [],
   tr: [],
   uk: [],
+  uz: [],
   vi: [],
   zh: [],
   "zh-tw": [],
