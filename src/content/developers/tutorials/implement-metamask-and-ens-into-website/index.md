@@ -1,7 +1,7 @@
 ---
 title: "Connect your website to MetaMask and ENS"
-description: Learn how to fetch the user's account data and possible ENS domain and thus making it accessible to your website
-author: Sebastian Supreme
+description: "Learn how to fetch the user's account data and possible ENS domain using JavaScript and the ethers.js library and thus making it accessible to your website."
+author: "Sebastian Supreme"
 sidebar: true
 tags: ["metamask", "ens", "ethersjs", "ethers.js", "javascript", "html", "css"]
 skill: intermediate
@@ -26,8 +26,8 @@ For that, you need to include the following line into the head of your HTML file
   <link rel="preconnect" href="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js">
 </head>
 ```
-Now we move on to the body.
-We create a button to control the action to connect to MetaMask later on.
+Now, we move on to the body.
+We create a button to control the action of connecting to MetaMask, which we will implement later on.
 Additionally, we insert the library script.
 ```html
 <body>
@@ -189,7 +189,7 @@ connectbutton.addEventListener('click', () => {
 ```
 ## Conclusion {#conclusion}
 
-Congratulations, if you followed the steps and completed the basic website layout by yourself, then you should have a functioning test set up to connect to your Ethereum account.
+Congratulations! If you followed the steps and completed the basic website layout by yourself, then you should have a functioning test set up to connect to your Ethereum account.
 You can now use the data stored in the variables to your heart's content.
 Note that this implementation example will throw errors if the user cancels the connection attempt. You need to implement a way to handle those events by yourself.
 
