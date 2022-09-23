@@ -1,6 +1,6 @@
 import React from "react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import { Box, Image, Text } from "@chakra-ui/react"
+import { Box, Heading, Image, Text } from "@chakra-ui/react"
 
 export interface IProps {
   children?: React.ReactNode
@@ -17,12 +17,17 @@ const ImageCard: React.FC<IProps> = ({
   title,
   description,
   children,
-  className,
 }) => (
-  <Box bg="searchBackground" borderRadius="base" border="1px" borderColor="lightBorder" p={6}> 
-    <Image as={GatsbyImage} src={image} alt={alt} w={12} h={12} mb={4}  />
+  <Box
+    bg="searchBackground"
+    borderRadius="base"
+    border="1px"
+    borderColor="lightBorder"
+    p={6}
+  >
+    <Image as={GatsbyImage} image={image} alt={alt} w={12} h={12} mb={4} />
     <Heading as="h3">{title}</Heading>
-    <Text opacity={0.8} >{description}</Text>
+    <Text opacity={0.8}>{description}</Text>
     {children}
   </Box>
 )
