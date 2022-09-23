@@ -217,7 +217,7 @@ Implemented by Trinity. Works like fast sync but also downloads the data needed 
 
 Learn more in [Nimbus docs](https://nimbus.guide/)
 
-### Prysm (#prysm)
+### Prysm {#prysm}
 
 Prysm is a full-featured, open source consensus client written in Go under the GPL-3.0 license. It features an optional webapp UI and prioritizes user experience, documentation, and configurability for both stake-at-home and institutional users.
 
