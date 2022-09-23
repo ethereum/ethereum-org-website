@@ -137,6 +137,7 @@ const repoToCrowdinCode: { [key: string]: string } = {
   pt: "pt-PT",
   ml: "ml-IN",
   sr: "sr-CS",
+  se: "sv-SE",
 }
 /**
  * Names for each bucket in order, zero indexed.
