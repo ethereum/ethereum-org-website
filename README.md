@@ -1422,6 +1422,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/thib-web3"><img src="https://avatars.githubusercontent.com/u/66329321?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Thibaut</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=thib-web3" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/ImMiguelP"><img src="https://avatars.githubusercontent.com/u/61770010?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Miguel</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ImMiguelP" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/rayzhudev"><img src="https://avatars.githubusercontent.com/u/20132960?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ray Zhu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=rayzhudev" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/BenedettiLucca"><img src="https://avatars.githubusercontent.com/u/108427035?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lucca Benedetti</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=BenedettiLucca" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
