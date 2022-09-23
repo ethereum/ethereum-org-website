@@ -17,7 +17,7 @@ title="ETH issuance tldr">
 
 - Before The Merge ~13,000 ETH/day was issued to pay miners
 - After The Merge, issuance depends upon the number of active validators on the network, so varies slot to slot.
-- The total issuance is approximaely 90% smaller now than it was pre-merge.
+- The total issuance is approximately 90% smaller now than it was pre-merge.
 - Ether is also burned in every slot, with a greater amount burned when gas is higher. This means ether can be inflationary or deflationary depending on network demand.
 
 </Card>
