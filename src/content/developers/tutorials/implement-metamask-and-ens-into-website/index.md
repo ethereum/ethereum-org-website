@@ -102,7 +102,7 @@ async function reverseResolutionENS(address){
     }
 }
 ```
-Now we write another function to request a MetaMask connection.
+Now, we write another function to request a MetaMask connection.
 ```javascript
 // SPDX-License-Identifier: MIT
 //Request account connection
