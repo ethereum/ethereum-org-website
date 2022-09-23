@@ -6,21 +6,21 @@ sidebar: true
 incomplete: true
 ---
 
-Oracles extract information from the real world and put it on the blockchain for smart contracts to use. This is necessary because smart contracts running on Ethereum cannot access information stored outside the blockchain network. 
+Oracles are data feeds that bring data from off the blockchain (off-chain) data sources and puts it on the blockchain (on-chain) for smart contracts to use. This is necessary because smart contracts running on Ethereum cannot access information stored outside the blockchain network. 
 
-Giving smart contracts the ability to execute based on real-world inputs extends decentralized applications' value. For instance, decentralized prediction markets rely on oracles to provide information about outcomes with which they can validate user predictions. Suppose Alice bets 20 ETH on who will become the next U.S. President. In that case, the prediction-market dapp needs an oracle to confirm election results and determine if Alice is eligible for a payout.
+Giving smart contracts the ability to execute using off-chain data inputs extends decentralized applications' value. For instance, decentralized prediction markets rely on oracles to provide information about outcomes with which they can validate user predictions. Suppose Alice bets 20 ETH on who will become the next U.S. President. In that case, the prediction-market dapp needs an oracle to confirm election results and determine if Alice is eligible for a payout.
 
 ## Prerequisites {#prerequisites}
 
-This page assumes the reader is familiar with Ethereum fundamentals, including [nodes](/developers/docs/nodes-and-clients/), [consensus mechanisms](/developers/docs/consensus-mechanisms/), and the [EVM](/developers/docs/evm/). You should also have a good grasp of [smart contracts](/developers/docs/smart-contracts/) and [smart contract anatomy](/developers/docs/smart-contracts/anatomy/), especially events. 
+This page assumes the reader is familiar with Ethereum fundamentals, including [nodes](/developers/docs/nodes-and-clients/), [consensus mechanisms](/developers/docs/consensus-mechanisms/), and the [EVM](/developers/docs/evm/). You should also have a good grasp of [smart contracts](/developers/docs/smart-contracts/) and [smart contract anatomy](/developers/docs/smart-contracts/anatomy/), especially [events](/glossary/#events). 
 
 ## What is a blockchain oracle? {#what-is-a-blockchain-oracle} 
 
-Oracles are applications that source, verify, and transmit external information (i.e. information stored off-chain) to smart contracts running on the blockchain. Besides “pulling” off-chain data and broadcasting it on Ethereum, oracles can also “push” information from the blockchain to external systems. An example of the latter is an oracle that unlocks a smart lock once the user sends the fee via an Ethereum transaction.
+Oracles are applications that source, verify, and transmit external information (i.e. information stored off-chain) to smart contracts running on the blockchain. Besides “pulling” off-chain data and broadcasting it on Ethereum, oracles can also “push” information from the blockchain to external systems. An example of the latter could be an oracle that unlocks a smart lock once the user sends the fee via an Ethereum transaction.
 
-Oracles act as a “bridge” connecting smart contracts on blockchains to the real world. Without oracles, smart contract applications would only be able to access on-chain data. An oracle provides a mechanism for triggering smart contract functions using real-world data.
+Oracles act as a “bridge” connecting smart contracts on blockchains to off-chain data providers. Without oracles, smart contract applications would only be able to access on-chain data. An oracle provides a mechanism for triggering smart contract functions using off-chain data.
 
-Oracles differ based on the source of data (one or multiple sources), trust models (centralized or decentralized) and system architecture (immediate-read, publish-subscribe, and request-response). We can also distinguish between oracles based on whether they retrieve external data for use by on-chain contracts (input oracles), send information from the blockchain to the real world (output orales), or perform computational tasks off-chain (computational oracles).
+Oracles differ based on the source of data (one or multiple sources), trust models (centralized or decentralized), and system architecture (immediate-read, publish-subscribe, and request-response). We can also distinguish between oracles based on whether they retrieve external data for use by on-chain contracts (input oracles), send information from the blockchain to the off-chain applications (output oracles), or perform computational tasks off-chain (computational oracles).
 
 ## Why do smart contracts need oracles? {#why-do-smart-contracts-need-oracles}
 
