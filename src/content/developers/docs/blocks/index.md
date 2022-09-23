@@ -91,7 +91,7 @@ parent_hash: hash of the parent block
 fee_recipient: account address for paying transaction fees to
 state_root: root hash for the global state after applying changes in this block
 receipts_root: hash of the transaction receipts trie
-logs_bloom: data structure containign event logs
+logs_bloom: data structure containing event logs
 prev_randao: value used in random validator selection
 block_number: the number of the current block
 gas_limit: maximum gas allowed in this block
@@ -103,14 +103,14 @@ block_hash: Hash of execution block
 transactions_root: root hash of the transactions in the payload
 ```
 
-The `execution_payload` itself contains the following (notice this is idential to the header except that instead of the root hash of the transactions it includes the actual list of transactions:
+The `execution_payload` itself contains the following (notice this is idential to the header except that instead of the root hash of the transactions it includes the actual list of transactions) :
 
 ```
 parent_hash: hash of the parent block
 fee_recipient: account address for paying transaction fees to
 state_root: root hash for the global state after applying changes in this block
 receipts_root: hash of the transaction receipts trie
-logs_bloom: data structure containign event logs
+logs_bloom: data structure containing event logs
 prev_randao: value used in random validator selection
 block_number: the number of the current block
 gas_limit: maximum gas allowed in this block

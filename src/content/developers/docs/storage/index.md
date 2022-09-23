@@ -47,6 +47,7 @@ Platforms with contract-based persistence:
 - [Skynet](https://siasky.net/)
 - [Storj](https://storj.io/)
 - [0Chain](https://0chain.net/)
+- [Crust Network](https://crust.network)
 
 ### Additional considerations {#additional-consideration}
 
@@ -56,6 +57,7 @@ IPFS is a distributed system for storing and accessing files, websites, applicat
 - [Pinata](https://www.pinata.cloud/) _(IPFS pinning service)_
 - [web3.storage](https://web3.storage/) _(IPFS/Filecoin pinning service)_
 - [Infura](https://infura.io/product/ipfs) _(IPFS pinning service)_
+- [IPFS Scan](https://ipfs-scan.io) _(IPFS pinning explorer)_
 
 ## Data retention {#data-retention}
 
@@ -71,6 +73,7 @@ Types of dStorage with a challenge mechanism:
 - Skynet
 - Arweave
 - Filecoin
+- Crust Network
 
 ### Decentrality {#decentrality}
 
@@ -84,6 +87,7 @@ Decentralized tools without KYC:
 - Filecoin
 - IPFS
 - Ethereum
+- Crust Network
 
 ### Consensus {#consensus}
 
@@ -99,6 +103,7 @@ Proof-of-stake based:
 - Ethereum
 - Filecoin
 - 0Chain
+- Crust Network
 
 ## Related tools {#related-tools}
 
@@ -136,6 +141,12 @@ Proof-of-stake based:
 - [0Chain.net](https://0chain.net/)
 - [Documentation](https://docs.0chain.net/0chain/)
 - [GitHub](https://github.com/0chain/)
+
+**Crust Network - _Crust is a dStorage platform on top of the IPFS._**
+
+- [Crust.network](https://crust.network)
+- [Documentation](https://wiki.crust.network)
+- [Github](https://github.com/crustio)
 
 **Swarm - _A distributed storage platform and content distribution service for the Ethereum web3 stack._**
 
