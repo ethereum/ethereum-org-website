@@ -360,6 +360,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "uz",
+    "hrefLang": "uz",
+    "name": "Uzbek",
+    "localName": "O'zbekcha",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "vi",
     "hrefLang": "vi",
     "name": "Vietnamese",
