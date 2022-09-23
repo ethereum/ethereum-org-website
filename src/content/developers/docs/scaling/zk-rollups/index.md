@@ -103,7 +103,7 @@ ZK-STARKs are 'transparent', as they can work without the trusted setup of a Com
 
 ZK-STARKs also provide more scalability because the time needed to prove and verify validity proofs increases _quasilinearly_ in relation to the complexity of the underlying computation. With ZK-SNARKs, proving and verification times scale _linearly_ in relation to the size of the underlying computation. This means ZK-STARKs require less time than ZK-SNARKs for proving and verifying when large datasets are involved, making them useful for high-volume applications.
 
-ZK-STARKs are also secure against quantum computers, while the Elliptic Curve Cryptography (ECC) used in ZK-SNARKs is widely believed to be susceptible to quantum computing attacks. The downside to ZK-STARKs is that they produce larger proof sizes, which are more expensive to verify on Ethereum. Also, they don't support recursion, which is key to scaling off-chain compuation with zero-knowledge proofs.
+ZK-STARKs are also secure against quantum computers, while the Elliptic Curve Cryptography (ECC) used in ZK-SNARKs is widely believed to be susceptible to quantum computing attacks. The downside to ZK-STARKs is that they produce larger proof sizes, which are more expensive to verify on Ethereum.
 
 #### How do validity proofs work in ZK-rollups? {#validity-proofs-in-zk-rollups}
 
