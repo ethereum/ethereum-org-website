@@ -8970,6 +8970,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "rayzhudev",
+      "name": "Ray Zhu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20132960?v=4",
+      "profile": "https://github.com/rayzhudev",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
