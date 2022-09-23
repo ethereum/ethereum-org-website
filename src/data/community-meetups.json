@@ -322,5 +322,11 @@
     "emoji": ":us:",
     "location": "San Diego",
     "link": "http://cryptosandiego.org"
+  },
+  {
+    "title": "Ghana Crypto and Defi Summit",
+    "emoji": ":gh:",
+    "location": "Ghana, Accra",
+    "link": "https://afrideficon.live/"
   }
 ]
