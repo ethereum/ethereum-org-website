@@ -39,14 +39,14 @@ const InfoBanner: React.FC<IProps> = ({
           mb={{ base: 2, sm: 0 }}
           alignSelf={{ base: "flex-start", sm: "auto" }}
           text={emoji}
-          fontSize={"2em"}
+          fontSize="4xl"
         />
       )}
       <Flex
         display={{ base: "block", sm: shouldSpaceBetween ? "flex" : "block" }}
-        alignItems={shouldSpaceBetween ? "center" : "auto"}
+        align={shouldSpaceBetween ? "center" : "auto"}
         w={shouldSpaceBetween ? "100%" : "auto"}
-        justifyContent={shouldSpaceBetween ? "space-between" : "auto"}
+        justify={shouldSpaceBetween ? "space-between" : "auto"}
       >
         {children}
       </Flex>
