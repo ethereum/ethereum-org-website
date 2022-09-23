@@ -28,14 +28,14 @@ const InfoBanner: React.FC<IProps> = ({
       maxW={shouldCenter ? "55rem" : "100%"}
       color="black300"
       bg={isWarning ? "warning" : "infoBanner"}
-      direction={{  base: "column", sm: "row" }}
+      direction={{ base: "column", sm: "row" }}
       {...props}
     >
       {emoji && (
         <Emoji
           flexGrow="0"
           flexShrink="0"
-          mr={{base : 0, sm: 6}}
+          mr={{ base: 0, sm: 6 }}
           mb={{ base: 2, sm: 0 }}
           alignSelf={{ base: "flex-start", sm: "auto" }}
           text={emoji}
