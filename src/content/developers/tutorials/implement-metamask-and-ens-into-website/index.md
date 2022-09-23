@@ -38,7 +38,7 @@ Additionally, we insert the library script.
 ```
 ## CSS {#css}
 
-Now we temporarily move to the css file to style the button and give it a nice look.
+We temporarily move to the css file to style the button and give it a nice look.
 ```css
 a {
     position: absolute;
