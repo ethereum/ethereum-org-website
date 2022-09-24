@@ -1,16 +1,12 @@
 import React, { ReactNode } from "react"
 import styled from "@emotion/styled"
+import { Text, Heading } from "@chakra-ui/react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
 import Link from "./Link"
 
 const Content = styled.div`
   padding: 1.5rem;
-`
-
-const Description = styled.p`
-  opacity: 0.8;
-  margin-bottom: 0rem;
 `
 
 const ChildrenContainer = styled.div`
@@ -28,11 +24,6 @@ const ImageWrapper = styled.div<{
   background: ${(props) => props.theme.colors.cardGradient};
   box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
   min-height: 260px;
-`
-
-const Title = styled.h3`
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
 `
 
 const Image = styled(GatsbyImage)`
@@ -104,8 +95,12 @@ const ActionCard: React.FC<IProps> = ({
         )}
       </ImageWrapper>
       <Content className="action-card-content">
-        <Title>{title}</Title>
-        <Description>{description}</Description>
+        <Heading as="h3" fontSize="2xl" mt={2} mb={4}>
+          {title}
+        </Heading>
+        <Text mb={0} opacity={0.8}>
+          {description}
+        </Text>
         {children && <ChildrenContainer>{children}</ChildrenContainer>}
       </Content>
     </Card>
