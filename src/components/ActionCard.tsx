@@ -17,24 +17,14 @@ const Image = styled(GatsbyImage)`
   }
 `
 
-const Card = styled(Link)`
-  text-decoration: none;
-  flex: 1 1 372px;
-  color: ${(props) => props.theme.colors.text};
-  box-shadow: 0px 14px 66px rgba(0, 0, 0, 0.07),
-    0px 10px 17px rgba(0, 0, 0, 0.03), 0px 4px 7px rgba(0, 0, 0, 0.05);
-  margin: 1rem;
-
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    border-radius: 4px;
-    box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
-    transition: transform 0.1s;
-    transform: scale(1.02);
-  }
-`
+const LinkFocusStyles = {
+  textDecoration: "none",
+  borderRadius: "4px",
+  boxShadow: "0px 8px 17px rgba(0, 0, 0, 0.15)",
+  bg: "tableBackgroundHover",
+  transition: "transform 0.1s",
+  transform: "scale(1.02)",
+}
 
 export interface IProps {
   children?: React.ReactNode
@@ -62,7 +52,20 @@ const ActionCard: React.FC<IProps> = ({
   const isImageURL = typeof image === "string"
 
   return (
-    <Card to={to} className={className} hideArrow={true}>
+    <Link
+      boxShadow="
+	  0px 14px 66px rgba(0, 0, 0, 0.07),
+    0px 10px 17px rgba(0, 0, 0, 0.03), 0px 4px 7px rgba(0, 0, 0, 0.05)"
+      color="text"
+      flex="1 1 372px"
+      _hover={LinkFocusStyles}
+      _focus={LinkFocusStyles}
+      to={to}
+      className={className}
+      hideArrow={true}
+      m={4}
+      textDecoration="none"
+    >
       <Flex
         minH={"260px"}
         bg={"cardGradient"}
@@ -86,7 +89,7 @@ const ActionCard: React.FC<IProps> = ({
         </Text>
         {children && <Box mt={8}>{children}</Box>}
       </Box>
-    </Card>
+    </Link>
   )
 }
 
