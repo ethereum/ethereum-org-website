@@ -1,17 +1,9 @@
 import React, { ReactNode } from "react"
 import styled from "@emotion/styled"
-import { Text, Heading } from "@chakra-ui/react"
+import { Box, Text, Heading } from "@chakra-ui/react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
 import Link from "./Link"
-
-const Content = styled.div`
-  padding: 1.5rem;
-`
-
-const ChildrenContainer = styled.div`
-  margin-top: 2rem;
-`
 
 const ImageWrapper = styled.div<{
   isRight: boolean | undefined
@@ -94,15 +86,15 @@ const ActionCard: React.FC<IProps> = ({
           <img src={image} alt={alt} className="action-card-image" />
         )}
       </ImageWrapper>
-      <Content className="action-card-content">
+      <Box p={6} className="action-card-content">
         <Heading as="h3" fontSize="2xl" mt={2} mb={4}>
           {title}
         </Heading>
         <Text mb={0} opacity={0.8}>
           {description}
         </Text>
-        {children && <ChildrenContainer>{children}</ChildrenContainer>}
-      </Content>
+        {children && <Box mt={8}>{children}</Box>}
+      </Box>
     </Card>
   )
 }
