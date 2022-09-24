@@ -1,22 +1,9 @@
 import React, { ReactNode } from "react"
 import styled from "@emotion/styled"
-import { Box, Text, Heading } from "@chakra-ui/react"
+import { Box, Flex, Text, Heading } from "@chakra-ui/react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
 import Link from "./Link"
-
-const ImageWrapper = styled.div<{
-  isRight: boolean | undefined
-  isBottom: boolean | undefined
-}>`
-  display: flex;
-  flex-direction: row;
-  justify-content: ${(props) => (props.isRight ? `flex-end` : `center`)};
-  align-items: ${(props) => (props.isBottom ? `flex-end` : `center`)};
-  background: ${(props) => props.theme.colors.cardGradient};
-  box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
-  min-height: 260px;
-`
 
 const Image = styled(GatsbyImage)`
   width: 100%;
@@ -76,16 +63,20 @@ const ActionCard: React.FC<IProps> = ({
 
   return (
     <Card to={to} className={className} hideArrow={true}>
-      <ImageWrapper
-        isRight={isRight}
-        isBottom={isBottom}
+      <Flex
+        minH={"260px"}
+        bg={"cardGradient"}
+        direction={"row"}
+        justify={isRight ? "flex-end" : "center"}
+        align={isBottom ? "flex-end" : "center"}
         className="action-card-image-wrapper"
+        boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
       >
         {!isImageURL && <Image image={image} alt={alt || ""} />}
         {isImageURL && (
           <img src={image} alt={alt} className="action-card-image" />
         )}
-      </ImageWrapper>
+      </Flex>
       <Box p={6} className="action-card-content">
         <Heading as="h3" fontSize="2xl" mt={2} mb={4}>
           {title}
