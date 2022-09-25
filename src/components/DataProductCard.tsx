@@ -66,7 +66,7 @@ const DataProductCard: React.FC<IProps> = ({
         alt={alt ? alt : `${name} logo`}
         width="100%"
         alignSelf="center"
-        maxWidth="372px"
+        maxWidth={{ base: "311px", sm: "372px" }}
         maxHeight="257px"
       />
     </Box>
