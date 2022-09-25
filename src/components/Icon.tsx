@@ -38,7 +38,7 @@ import {
 } from "react-icons/bs"
 import { IoCodeOutline, IoCodeDownload } from "react-icons/io5"
 
-const socialColors = {
+export const socialColors = {
   reddit: "#ff4301",
   twitter: "#1da1f2",
   youtube: "#ff0000",
