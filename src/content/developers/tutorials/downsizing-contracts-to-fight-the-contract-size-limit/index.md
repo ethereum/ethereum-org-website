@@ -146,3 +146,34 @@ function doSomething() { checkStuff(); }
 ```
 
 Those tips should help you to significantly reduce the contract size. Once again, I cannot stress enough, always focus on splitting contracts if possible for the biggest impact.
+
+### Use `bytes32` {#use-bytes32}
+
+- If you can fit your data in 32 bytes, then you should use `bytes32` datatype rather than bytes or strings, as it is much cheaper in Dolidity.
+- Any fixed size variable in Solidity is cheaper than variable size.
+
+### Pack variables {#pack-variables}
+
+- The below code is an example of poor code and will consume 3 storage slot:
+
+```
+uint8 numberOne;
+uint256 bigNumber;
+uint8 numberTwo;
+```
+
+- A more efficient way to do this in Solidity is:
+
+```
+uint8 numberOne;
+uint8 numberTwo;
+uint256 bigNumber;
+```
+
+### Make use of single line swaps {#make-use-of-line-swaps}
+
+- This is space-efficient:
+
+```
+(hello, world) = (world, hello)
+```
