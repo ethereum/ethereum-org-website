@@ -14,7 +14,7 @@ const SectionNav: React.FC<IProps> = ({ children }) => (
     marginTop={12}
     justify="space-between"
     background="searchBackground"
-    borderRadius="2xl"
+    borderRadius="base"
     border="1px solid"
     borderColor="lightBorder"
     padding={6}
