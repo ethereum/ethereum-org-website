@@ -44,6 +44,7 @@ import UpcomingEventsList from "../components/UpcomingEventsList"
 import Icon from "../components/Icon"
 import SocialListItem from "../components/SocialListItem"
 import YouTube from "../components/YouTube"
+import TranslationChartImage from "../components/TranslationChartImage"
 import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
 
@@ -151,6 +152,7 @@ const components = {
   MatomoOptOut,
   Callout,
   YouTube,
+  TranslationChartImage,
   EnergyConsumptionChart,
 }
 
