@@ -9,7 +9,6 @@ export interface IProps {
 
 const SectionNav: React.FC<IProps> = ({ children }) => (
   <Flex
-    display="flex"
     flexDirection="column"
     color="textTableOfContents"
     marginTop={12}
