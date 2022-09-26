@@ -229,7 +229,7 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
         "page-get-eth-article-keeping-crypto-safe",
         intl
       ),
-      link: "https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
+      link: "https://medium.com/the-coinbase-blog/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
       description: "Coinbase",
     },
     {
