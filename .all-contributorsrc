@@ -8989,6 +8989,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "MacMorgan",
+      "name": "Mac Morgan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17681?v=4",
+      "profile": "http://www.printfly.com/",
+      "contributions": [
+        "doc",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
