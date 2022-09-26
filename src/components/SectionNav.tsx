@@ -9,7 +9,7 @@ export interface IProps {
 
 const SectionNav: React.FC<IProps> = ({ children }) => (
   <Flex
-    flexDirection="column"
+    direction="column"
     color="textTableOfContents"
     marginTop={12}
     justifyContent="space-between"
