@@ -47,6 +47,7 @@ export type Lang =
   | "th"
   | "tr"
   | "uk"
+  | "uz"
   | "vi"
   | "zh"
   | "zh-tw"

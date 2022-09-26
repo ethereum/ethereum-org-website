@@ -45,7 +45,7 @@ const ShardChainsList: React.FC<IProps> = () => {
         "page-upgrade-article-author-ethos-dev",
         intl
       ),
-      link: "https://ethos.dev/beacon-chain/",
+      link: "https://web.archive.org/web/20220719213551/https://ethos.dev/beacon-chain/",
     },
     {
       title: translateMessageId(

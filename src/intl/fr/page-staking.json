@@ -156,7 +156,7 @@
   "page-staking-section-comparison-requirements-title": "Conditions requises",
   "page-staking-section-comparison-solo-requirements-li1": "Vous devez déposer 32 ETH",
   "page-staking-section-comparison-solo-requirements-li2": "Maintenir un matériel qui exécute à la fois un client d'exécution Ethereum et un client de consensus tout en étant connecté à l'internet",
-  "page-staking-section-comparison-solo-requirements-li3": "La <a href=\"https://prater.launchpad.ethereum.org\" target=\"_blank\">Plateforme de lancement de la mise en jeu</a> vous guidera à travers le processus et les exigences matérielles",
+  "page-staking-section-comparison-solo-requirements-li3": "La <a href=\"https://goerli.launchpad.ethereum.org\" target=\"_blank\">Plateforme de lancement de la mise en jeu</a> vous guidera à travers le processus et les exigences matérielles",
   "page-staking-section-comparison-saas-requirements-li1": "Déposez 32 ETH et générez vos clés avec une assistance",
   "page-staking-section-comparison-saas-requirements-li2": "Stockez vos clés en toute sécurité",
   "page-staking-section-comparison-saas-requirements-li3": "Le reste est pris en charge, mais les services spécifiques peuvent varier",

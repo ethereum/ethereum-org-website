@@ -72,7 +72,7 @@ lang: fa
 - [فاست Chainlink](https://faucets.chain.link/)
 - [فاست Paradigm](https://faucet.paradigm.xyz/)
 
-#### Optimisic Kovan {#optimistic-kovan}
+#### Optimistic Kovan {#optimistic-kovan}
 
 یک شبکه‌ی تست برای [Optimism](https://www.optimism.io/).
 

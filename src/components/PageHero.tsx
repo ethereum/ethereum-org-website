@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
 import styled from "@emotion/styled"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import { Wrap, WrapItem } from "@chakra-ui/react"
 
 import { Content } from "./SharedStyledComponents"
@@ -94,7 +94,7 @@ export interface IContent {
   title: ReactNode
   header: ReactNode
   subtitle: ReactNode
-  image: string
+  image: IGatsbyImageData
   alt: string
 }
 

@@ -6,7 +6,7 @@ tags: ["clients", "geth", "nodes"]
 skill: beginner
 lang: en
 published: 2022-03-04
-preMergeBanner: true
+postMergeBannerTranslation: page-upgrades-post-merge-banner-tutorial-light-node-ood
 ---
 
 **Please note that Geth light clients can be very slow to find peers. This is because they rely on full-node operators volunteering themselves as light servers from which the light clients can request data. There are usually only a small number of light servers available.**
