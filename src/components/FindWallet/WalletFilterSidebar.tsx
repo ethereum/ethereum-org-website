@@ -3,7 +3,8 @@ import React, { useState } from "react"
 import styled from "@emotion/styled"
 
 // Components
-import Checkbox from "../Checkbox"
+import Checkbox from "../Checkbox" // to remove
+import NewCheckbox from "../NewCheckbox"
 import Icon from "../Icon"
 
 // Data
@@ -574,10 +575,10 @@ const WalletFilterSidebar = ({
                                 updateFilterOption(option.filterKey)
                               }}
                             >
-                              <Checkbox
+                              <NewCheckbox
                                 aria-label={option.name}
                                 checked={filters[option.filterKey!]}
-                                size={1.5}
+                                size="md"
                               />
                               <p aria-hidden="true">{option.name}</p>
                             </CheckboxGridOption>
