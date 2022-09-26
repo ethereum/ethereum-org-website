@@ -73,7 +73,7 @@ _In genere usato per organizzazioni più fitte e incentrate sul fattore umano, c
 
 La reputazione rappresenta la prova di partecipazione e concede potere di voto nella DAO. A differenza dell'appartenenza basata sui token o le quote, le DAO basate sulla reputazione non trasferiscono la proprietà ai contributori. La reputazione non può esser comprata, trasferita o delegata; i membri della DAO devono ottenere la reputazione tramite la partecipazione. Il voto su catena è privo di permessi e i potenziali membri possono inviare liberamente proposte per unirsi alla DAO e richiedere di ricevere reputazione e token come ricompensa in cambio dei loro contributi.
 
-_Tipicamente usate per lo sviluppo e la governance decentralizzati di protocolli e dapp, ma anche ben adatti a una diversa serie di organizzazioni come beneficienze, collettivi di lavoratori, club d'investimento, etc._
+_Tipicamente usati per lo sviluppo e la governance decentralizzati di protocolli e dapp, ma anche ben adatti a una diversa serie di organizzazioni, quali beneficienze, collettivi di lavoratori, club d'investimento, etc._
 
 #### Un celebre esempio {#reputation-example}
 

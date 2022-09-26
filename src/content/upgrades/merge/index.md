@@ -64,7 +64,7 @@ Key action items include:
 2. Authenticate both execution and consensus clients with a shared JWT secret so they can securely communicate.
 3. Set a `fee recipient` address to receive your earned transaction fee tips/MEV.
 
-Not completing the first two items above items will result in your node being seen as "offline" until both layers are synced and authenticated.
+Not completing the first two items above will result in your node being seen as "offline" until both layers are synced and authenticated.
 
 Not setting a `fee recipient` will still allow your validator to behave as usual, but you will miss out on unburnt fee tips and any MEV you would have otherwise earned in blocks your validator proposes.
 </ExpandableCard>

@@ -65,7 +65,7 @@ Other ZK-rollups may rotate the operator role by using a [proof-of-stake](/devel
 
 As explained, transaction data is published on Ethereum as `calldata`. `calldata` is a data area in a smart contract used to pass arguments to a function and behaves similarly to [memory](/developers/docs/smart-contracts/anatomy/#memory). While `calldata` isn’t stored as part of Ethereum’s state, it persists on-chain as part of the Ethereum chain's [history logs](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs). `calldata` does not affect Ethereum's state, making it a cheap way to store data on-chain.
 
-The`calldata` keyword often identifies the smart contract method being called by a transaction and holds inputs to the method in the form of an arbitrary sequence of bytes. ZK-rollups use `calldata` to publish compressed transaction data on-chain; the rollup operator simply adds a new batch by calling the required function in the rollup contract and passes the compressed data as function arguments. This helps reduce costs for users since a large part of rollup fees go toward storing transaction data on-chain.
+The `calldata` keyword often identifies the smart contract method being called by a transaction and holds inputs to the method in the form of an arbitrary sequence of bytes. ZK-rollups use `calldata` to publish compressed transaction data on-chain; the rollup operator simply adds a new batch by calling the required function in the rollup contract and passes the compressed data as function arguments. This helps reduce costs for users since a large part of rollup fees go toward storing transaction data on-chain.
 
 ### State commitments {#state-commitments}
 
@@ -103,7 +103,7 @@ ZK-STARKs are 'transparent', as they can work without the trusted setup of a Com
 
 ZK-STARKs also provide more scalability because the time needed to prove and verify validity proofs increases _quasilinearly_ in relation to the complexity of the underlying computation. With ZK-SNARKs, proving and verification times scale _linearly_ in relation to the size of the underlying computation. This means ZK-STARKs require less time than ZK-SNARKs for proving and verifying when large datasets are involved, making them useful for high-volume applications.
 
-ZK-STARKs are also secure against quantum computers, while the Elliptic Curve Cryptography (ECC) used in ZK-SNARKs is widely believed to be susceptible to quantum computing attacks. The downside to ZK-STARKs is that they produce larger proof sizes, which are more expensive to verify on Ethereum. Also, they don't support recursion, which is key to scaling off-chain compuation with zero-knowledge proofs.
+ZK-STARKs are also secure against quantum computers, while the Elliptic Curve Cryptography (ECC) used in ZK-SNARKs is widely believed to be susceptible to quantum computing attacks. The downside to ZK-STARKs is that they produce larger proof sizes, which are more expensive to verify on Ethereum.
 
 #### How do validity proofs work in ZK-rollups? {#validity-proofs-in-zk-rollups}
 
