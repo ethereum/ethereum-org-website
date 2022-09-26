@@ -12,7 +12,7 @@ const SectionNav: React.FC<IProps> = ({ children }) => (
     direction="column"
     color="textTableOfContents"
     marginTop={12}
-    justifyContent="space-between"
+    justify="space-between"
     background="searchBackground"
     borderRadius="2xl"
     border="1px solid"
