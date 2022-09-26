@@ -36,9 +36,9 @@ Read more about the ethereum.org Translation Program [mission and vision](/contr
 
 ### Our progress so far {#our-progress}
 
-- [**3,900 +** translators](/contributing/translation-program/contributors/)
+- [**4,000 +** translators](/contributing/translation-program/contributors/)
 - [**48** languages live on site](/languages/)
-- [**2.2 million** words translated in 2022 so far](/contributing/translation-program/acknowledgements/)
+- [**2.4 million** words translated in 2022 so far](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 
