@@ -20,7 +20,7 @@ const SectionNav: React.FC<IProps> = ({ children }) => (
     padding={6}
     paddingBottom={0}
   >
-    <Flex display="flex" alignItems="flex-start">
+    <Flex align="flex-start">
       <Emoji text=":point_right:" mb={4} />
       <Heading
         as="h2"
