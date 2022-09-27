@@ -70,5 +70,19 @@ export const Button: ComponentStyleConfig = {
       color: "primary",
       borderColor: "primary",
     },
+    icon: {
+      appearance: "none",
+      display: "grid",
+      placeItems: "center",
+      background: "inherit",
+      padding: "initial",
+      border: 0,
+      color: "inherit",
+      boxShadow: "none",
+      _hover: {
+        color: "primary",
+        boxShadow: "none",
+      },
+    },
   },
 }
