@@ -1,28 +1,6 @@
 import React, { useState, useEffect } from "react"
-import styled from "@emotion/styled"
 import { MATOMO_LS_KEY } from "../utils/matomo"
-
-const Container = styled.div`
-  border: 1px solid ${({ theme }) => theme.colors.border};
-  background-color: ${({ theme }) => theme.colors.background};
-  border-radius: 4px;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-  margin-top: 2rem;
-  align-items: flex-start;
-  justify-content: space-between;
-  p {
-    color: ${({ theme }) => theme.colors.fail};
-  }
-  form {
-    margin: 0;
-  }
-  input {
-    margin-right: 0.5rem;
-  }
-`
+import { Flex, FormControl, FormLabel, Input, Text } from "@chakra-ui/react"
 
 export interface IProps {}
 
@@ -53,31 +31,43 @@ const MatomoOptOut: React.FC<IProps> = () => {
     localStorage.setItem(MATOMO_LS_KEY, String(!checked))
   }
   return (
-    <Container>
-      <p>
+    <Flex
+      border="1px solid"
+      borderColor="border"
+      bgColor="background"
+      borderRadius={1}
+      p={6}
+      direction="column"
+      mb={4}
+      mt={8}
+      alignItems="flex-start"
+      justifyContent="space-between"
+    >
+      <Text color="fail">
         You can opt out of being tracked by Matomo Analytics and prevent the
         website from analysing the actions you take using the website. This will
         prevent us from learning from your actions and creating a better website
         experience for you and other users.
-      </p>
+      </Text>
       {loading ? (
         "Loading preferences..."
       ) : (
-        <form>
-          <input
+        <FormControl m={0}>
+          <Input
             type="checkbox"
             id="matomo"
             checked={!isOptedOut}
             onChange={handleCheckbox}
+            mr={2}
           />
-          <label htmlFor="matomo">
+          <FormLabel htmlFor="matomo">
             {isOptedOut
               ? "You are opted out. Check this box to opt-in."
               : "You are not opted out. Uncheck this box to opt-out."}
-          </label>
-        </form>
+          </FormLabel>
+        </FormControl>
       )}
-    </Container>
+    </Flex>
   )
 }
 
