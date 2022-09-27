@@ -265,7 +265,6 @@ export const query = graphql`
         incomplete
         sidebarDepth
         isOutdated
-        preMergeBanner
         hideEditButton
       }
       body

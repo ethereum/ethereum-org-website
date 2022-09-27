@@ -24,6 +24,5 @@ export const Frontmatter = `
     author: String
     tags: [String]
     isOutdated: Boolean
-    preMergeBanner: Boolean
   }
 `

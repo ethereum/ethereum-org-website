@@ -3,7 +3,6 @@ title: Avvia il tuo nodo di Ethereum
 description: Introduzione generale all'esecuzione della propria istanza di un client di Ethereum.
 lang: it
 sidebarDepth: 2
-preMergeBanner: true
 ---
 
 Eseguire il tuo nodo ti offre vari benefici, apre nuove possibilità e aiuta a supportare l'ecosistema. Questa pagina ti guiderà verso l'avvio del tuo nodo e la partecipazione alla convalida delle transazioni di Ethereum.

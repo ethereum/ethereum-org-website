@@ -10,7 +10,6 @@ alt: Ein ETH-Logo abgebildet als Hologramm
 summaryPoint1: Ein Weg, alles Einzigartige als eine Ethereum-basierte Anlage darzustellen
 summaryPoint2: NFTs geben Content Creators mehr Einfluss denn je
 summaryPoint3: Auf Grundlage von Smart Contracts auf der Ethereum-Blockchain
-preMergeBanner: true
 ---
 
 NFTs erobern derzeit regelrecht die Welt der digitalen Kunst im Sturm. Digitale Künstler erleben dank der enormen Verkäufe an ein neues Krypto-Publikum gerade einen wahren Wandel in ihrem Leben. Und auch prominente Personen springen auf diesen Zug auf, da sich neue Gelegenheiten eröffnen, um mit ihren Fans zu kommunizieren. Doch digitale Kunst ist nur eine Verwendungsform für NFTs. Tatsächlich lassen sie sich nutzen, um jegliche Form von Besitz an einem einzigartigen Asset darzustellen, wie zum Beispiel eine Urkunde für einen digitalen oder physischen Gegenstand.
