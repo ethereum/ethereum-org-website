@@ -2,7 +2,6 @@
 title: Proof-of-stake (PoS)
 description: Spiegazione del protocollo di consenso Proof-of-stake e del suo ruolo in Ethereum.
 lang: it
-sidebar: true
 ---
 
 Il proof-of-stake (PoS) è il [meccanismo di consenso](/developers/docs/consensus-mechanisms/) che Ethereum userà dopo [La Fusione](/upgrades/merge). Ethereum sta abbandonando il [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/) a favore del proof-of-stake, poiché è più sicuro, consuma meno energia ed è migliore per implementare nuove soluzioni di ridimensionamento. Sebbene il passaggio al proof-of-stake sia in programma da sempre, è anche più complesso del proof-of-work e per raffinare il meccanismo sono stati necessari anni di ricerca e sviluppo. La sfida, ora, è implementare il proof-of-stake sulla rete principale di Ethereum. Questo processo si chiama ["La Fusione"](/upgrades/merge/).
@@ -46,7 +45,7 @@ Quando la rete opera in modo ottimale ed onesto, c'è sempre e solo un nuovo blo
 
 La minaccia di un [attacco 51%](https://www.investopedia.com/terms/1/51-attack.asp) esiste ancora sul proof-of-stake, come già nel proof-of-work, ma è ancora più rischiosa per gli utenti malevoli. Un utente malevolo necessiterebbe del 51% di ETH in staking (circa $15.000.000.000 USD). Potrebbero poi usare le proprie attestazioni per garantire che la propria biforcazione preferita fosse quella con le maggiori attestazioni accumulate. Il 'peso' delle attestazioni accumulate è quello che i client di consenso usano per determinare la catena corretta, così, l'utente malevolo potrebbe rendere canonica la propria biforcazione. Tuttavia, un punto di forza del proof-of-stake rispetto al proof-of-work è che la community gode di una flessibilità nel preparare un contrattacco. Ad esempio, i validatori onesti potrebbero decidere di continuare a costruire sulla catena di minoranza e ignorare la biforcazione dell'utente malevolo, incoraggiando app, scambi e pool a fare lo stesso. Potrebbero anche decidere di rimuovere forzatamente l'utente malevolo dalla rete e di distruggerne l'ether in staking. Si tratta di difese economiche forti contro un attacco 51%.
 
-Gli attacchi 51% sono solo un tipo di attività malevola. Gli utenti malevoli potrebbero tentare attacchi a lungo raggio (sebbene il gadget di finalità neutralizzi questo vettore d'attacco), a corto raggio 'reorg' (sebbene il potenziamento del propositore e le scadenze dell'attestazione lo mitighino), attacchi di rimbalzo e bilanciamento (anch'essi mitigati dal potenziamento del propositore, fermo restando comunque che sono stati dimostrati solo in condizioni di rete idealizzate) o attacchi valanga (neutralizzati dalla regola degli algoritmi di scelta della biforcazione, di considerare solo l'ultimo messaggio).
+Quando invii una transazione su uno shard, un validatore si occuperà di aggiungere la tua transazione a un blocco shard. I validatori sono scelti in base a un algoritmo dalla beacon chain per proporre nuovi blocchi.
 
 In generale è stato dimostrato che il proof-of-stake, come implementato su Ethereum, è più sicuro economicamente rispetto al proof-of-work.
 

@@ -2,7 +2,6 @@
 title: Validium
 description: O introducere despre Validium ca soluție de scalare utilizată actualmente de comunitatea Ethereum.
 lang: ro
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---

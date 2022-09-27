@@ -1,7 +1,6 @@
 ---
 title: Wie kann ich mich einbringen?
 description: So können Sie sich in der Ethereum-Community engagieren
-sidebar: true
 lang: de
 ---
 

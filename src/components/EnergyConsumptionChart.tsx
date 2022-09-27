@@ -86,7 +86,7 @@ const EnergyConsumptionChart: React.FC = () => {
       breakpoint: smallBreakpoint,
     },
     {
-      name: "Gaming",
+      name: "Gaming in the US",
       amount: 34,
       color: "#71BB8A",
       breakpoint: mediumBreakpoint,
@@ -123,11 +123,6 @@ const EnergyConsumptionChart: React.FC = () => {
             // data={energyConsumptionChartData}
             data={filteredData}
           >
-            <CartesianGrid
-              vertical={false}
-              strokeDasharray="5 3"
-              stroke="#B9B9B9"
-            />
             <XAxis
               dataKey="name"
               tickLine={false}

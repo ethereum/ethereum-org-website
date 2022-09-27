@@ -2,7 +2,6 @@
 title: 以太坊白皮书
 description: 以太坊的介绍性文件，2013年在以太坊启动前发布。
 lang: zh
-sidebar: true
 sidebarDepth: 2
 ---
 

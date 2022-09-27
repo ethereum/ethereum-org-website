@@ -2,7 +2,6 @@
 title: Programmiersprachen
 description:
 lang: de
-sidebar: true
 ---
 
 Ein häufiges Missverständnis ist, dass Entwickler [Smart Contracts](/developers/docs/smart-contracts/) schreiben müssen, um auf Ethereum aufzubauen. Doch das ist falsch. Einer der Vorteile des Ethereum-Netzwerks und der Ethereum-Community besteht darin, dass es möglich ist, in jeder Programmiersprache am Netzwerk und der Community [teilzunehmen](/community/).

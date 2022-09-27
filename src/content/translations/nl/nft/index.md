@@ -4,7 +4,6 @@ description: Een overzicht van NFT's op Ethereum
 lang: nl
 template: use-cases
 emoji: ":frame_with_picture:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/infrastructure_transparent.png
 alt: Een Eth-logo dat via een hologram wordt weergegeven.

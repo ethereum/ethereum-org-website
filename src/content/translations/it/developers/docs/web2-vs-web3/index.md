@@ -2,7 +2,6 @@
 title: Web2 e Web3
 description:
 lang: it
-sidebar: true
 ---
 
 Web2 si riferisce alla versione di Internet che la maggior parte di noi conosce attualmente. Una rete dominata da aziende che offrono servizi in cambio dei dati personali. Il Web3, nel contesto di Ethereum, si riferisce alle app decentralizzate che vengono eseguite sulla blockchain. Queste app consentono a chiunque di partecipare senza monetizzare i propri dati personali.

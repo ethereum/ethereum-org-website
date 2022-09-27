@@ -2,7 +2,6 @@
 title: Wdrażanie inteligentnych kontraktów
 description:
 lang: pl
-sidebar: true
 incomplete: true
 ---
 

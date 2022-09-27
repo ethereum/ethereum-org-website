@@ -2,7 +2,6 @@
 title: 节点和客户端
 description: 以太坊节点和客户端软件的概述，以及如何设置节点和为什么您应该这样做。
 lang: zh
-sidebar: true
 sidebarDepth: 2
 preMergeBanner: true
 ---

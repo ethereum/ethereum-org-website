@@ -4,7 +4,6 @@ description: What is decentralized identity, and why does it matter?
 lang: en
 template: use-cases
 emoji: ":id:"
-sidebar: true
 sidebarDepth: 2
 image: ../../assets/eth-gif-cat.png
 summaryPoint1: Traditional identity systems have centralized the issuance, maintenance and control of your identifiers.

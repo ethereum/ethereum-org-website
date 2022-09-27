@@ -2,7 +2,6 @@
 title: Maksimal çıkarılabilir değer (MEV)
 description: Maksimal çıkarılabilir değere (MEV) giriş
 lang: tr
-sidebar: true
 ---
 
 Maksimal çıkarılabilir değer (MEV), bir bloktaki işlemlerin sırasını dahil ederek, hariç tutarak ve değiştirerek standart blok ödülü ve gaz ücretlerini aşan blok üretiminden elde edilebilecek maksimum değeri ifade eder.

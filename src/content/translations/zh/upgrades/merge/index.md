@@ -3,7 +3,6 @@ title: 合并
 description: 了解“合并”：当以太坊主网加入信标链协调的的权益证明系统时。
 lang: zh
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: 最终，当前以太坊主网将与信标链权益证明系统“合并”。
 summaryPoint2: 这将标志着以太坊工作证明的淘汰以及向权益证明的完全过渡。

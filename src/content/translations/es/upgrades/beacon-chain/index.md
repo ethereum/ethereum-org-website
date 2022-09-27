@@ -3,7 +3,6 @@ title: La cadena de baliza
 description: "Descubra todo lo relacionado con la cadena de baliza: la actualización que introdujo la prueba de participación en Ethereum."
 lang: es
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: La cadena de baliza no cambia del Ethereum que usamos hoy.
 summaryPoint2: Coordinará la red, sirviendo como la capa de consenso.

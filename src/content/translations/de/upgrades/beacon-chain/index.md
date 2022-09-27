@@ -3,7 +3,6 @@ title: Die Beacon Chain
 description: Informieren Sie sich über die Beacon Chain – das Upgrade, mit dem Proof-of-Stake für Ethereum eingeführt wurde
 lang: de
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: Die Beacon Chain ändert nichts an Ethereum, das wir heute verwenden.
 summaryPoint2: Sie wird die Koordination im Netzwerk übernehmen und dabei als Konsensuslayer dienen.

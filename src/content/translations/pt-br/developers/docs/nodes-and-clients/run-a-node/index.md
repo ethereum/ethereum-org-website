@@ -2,7 +2,6 @@
 title: Execute seu próprio nó Ethereum
 description: Introdução geral para a execução da sua própria instância de um cliente Ethereum.
 lang: pt-br
-sidebar: true
 sidebarDepth: 2
 ---
 

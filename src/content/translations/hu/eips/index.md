@@ -2,7 +2,6 @@
 title: Ethereum Fejlesztési Javaslatok (EIP-k)
 description: Az alapvető információk, melyek az Ethereum fejlesztési javaslatok (EIP-k) megértéséhez szükségesek.
 lang: hu
-sidebar: true
 ---
 
 # Bevezetés az Ethereum Fejlesztési Javaslatokba (EIP-k) {#introduction-to-ethereum-improvement-proposals-eips}

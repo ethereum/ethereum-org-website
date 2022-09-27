@@ -405,7 +405,7 @@ const Nav: React.FC<IProps> = ({ path }) => {
     <NavContainer>
       <StyledNav aria-label={translateMessageId("nav-primary", intl)}>
         <NavContent>
-          <HomeLogoNavLink to="/">
+          <HomeLogoNavLink to="/" aria-label={translateMessageId("home", intl)}>
             <HomeLogo />
           </HomeLogoNavLink>
           {/* Desktop */}

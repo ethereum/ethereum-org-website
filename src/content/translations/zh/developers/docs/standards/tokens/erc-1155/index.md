@@ -2,7 +2,6 @@
 title: ERC-1155 多代币标准
 description:
 lang: zh
-sidebar: true
 ---
 
 ## 介绍 {#introduction}

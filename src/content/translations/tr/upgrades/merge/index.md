@@ -3,7 +3,6 @@ title: Birleştirme
 description: Mainnet Ethereum'un, İşaret Zinciri koordineli hisse ispatı sistemine katılacağı Birleştirme hakkında bilgi edinin.
 lang: tr
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: Nihayetinde mevcut Ethereum Mainnet, işaret zincirinin hisse ispatı sistemi ile birleşecektir.
 summaryPoint2: Bu birleştirme, Ethereum için iş ispatına bir son verecek ve hisse ispatına tam geçişi sağlayacaktır.

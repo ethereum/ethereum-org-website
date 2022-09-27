@@ -8,7 +8,6 @@ tags:
   - "nodi"
 skill: intermediate
 lang: it
-sidebar: true
 published: 2021-01-13
 ---
 

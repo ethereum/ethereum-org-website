@@ -8,7 +8,6 @@ tags:
   - "存储"
 skill: advanced
 lang: zh
-sidebar: true
 published: 2021-12-30
 ---
 

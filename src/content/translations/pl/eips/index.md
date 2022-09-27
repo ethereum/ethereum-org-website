@@ -2,7 +2,6 @@
 title: Wniosek dotyczący ulepszenia Ethereum (EIP)
 description: Podstawowe informacje potrzebne do zrozumienia wniosków dotyczących ulepszeń Ethereum (EIP).
 lang: pl
-sidebar: true
 ---
 
 # Wprowadzenie do wniosków dotyczących ulepszeń Ethereum (EIP) {#introduction-to-ethereum-improvement-proposals-eips}

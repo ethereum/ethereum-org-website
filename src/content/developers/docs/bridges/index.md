@@ -2,7 +2,6 @@
 title: Bridges
 description: An overview of bridging for developers
 lang: en
-sidebar: true
 ---
 
 With the proliferation of L1 blockchains and L2 [scaling](/developers/docs/scaling/) solutions, alongside an ever-growing number of decentralized applications going cross-chain, the need for communication and asset movement across chains has become an essential part of network infrastructure. Different types of bridges exist to help make this possible.

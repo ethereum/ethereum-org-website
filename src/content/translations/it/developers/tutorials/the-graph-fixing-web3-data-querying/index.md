@@ -3,7 +3,6 @@ title: "The Graph: query di dati in Web3"
 description: La blockchain è come un database ma senza SQL. Contiene tutti i dati, ma non c'è modo di accedervi. Vediamo come risolvere la situazione con The Graph e GraphQL.
 author: Markus Waas
 lang: it
-sidebar: true
 tags:
   - "Solidity"
   - "Smart Contract"

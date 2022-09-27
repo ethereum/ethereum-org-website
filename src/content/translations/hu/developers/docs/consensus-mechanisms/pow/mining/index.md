@@ -2,7 +2,6 @@
 title: Bányászat
 description: Egy magyarázat arról, hogyan működik a bányászat az Ethereumon és hogyan segíti az Ethereum biztonságát és decentralizáltságát.
 lang: hu
-sidebar: true
 incomplete: true
 ---
 

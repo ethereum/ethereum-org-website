@@ -2,7 +2,6 @@
 title: Sprachen von Smart Contracts
 description: Übersicht und Vergleich der zwei wichtigsten Smart-Contract-Sprachen – Solidity und Vyper
 lang: de
-sidebar: true
 ---
 
 Das Tolle an Ethereum ist, dass Smart Contracts mit relativ Entwickler-freundlichen Sprachen programmiert werden können. Wenn Sie mit Python oder einer anderen [Sprache mit geschweiften Klammern](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages) vertraut sind, können Sie eine Sprache mit vertrauter Syntax finden.

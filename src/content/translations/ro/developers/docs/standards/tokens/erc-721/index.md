@@ -2,7 +2,6 @@
 title: Standardul de tokenuri nefungibile ERC-721
 description:
 lang: ro
-sidebar: true
 ---
 
 ## Introducere {#introduction}

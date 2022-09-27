@@ -2,7 +2,6 @@
 title: 以太坊开发标准
 description:
 lang: zh
-sidebar: true
 incomplete: true
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: 以太坊基金会与社区资助方案
 description: 以太坊生态系统的资助方案清单。
-sidebar: true
 lang: zh
 ---
 

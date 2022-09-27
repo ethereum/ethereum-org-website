@@ -2,7 +2,6 @@
 title: Spin up your own Ethereum node
 description: General introduction to running your own instance of an Ethereum client.
 lang: en
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -22,7 +21,7 @@ The first step in spinning up your node is choosing your approach. Based on requ
 
 This page will guide you through these decisions and help you find the most suitable way to run your Ethereum instance.
 
-To choose from client implementations, see all the available Mainnet ready [execution clients](/developers/docs/nodes-and-clients/#execution-clients), [consensus clients](/developers/docs/nodes-and-clients/#consensus-clients) and learn about [client diversity](/developers/docs/client-diversity).
+To choose from client implementations, see all the available Mainnet ready [execution clients](/developers/docs/nodes-and-clients/#execution-clients), [consensus clients](/developers/docs/nodes-and-clients/#consensus-clients) and learn about [client diversity](/developers/docs/nodes-and-clients/client-diversity).
 
 Decide whether to run the software on your own [hardware or in the cloud](#local-vs-cloud), considering clients' [requirements](#requirements).
 
@@ -162,7 +161,7 @@ Here are the release pages of clients where you can find their pre-built binarie
 - [Geth](https://geth.ethereum.org/downloads/)
 - [Nethermind](https://downloads.nethermind.io/)
 
-It is also worth noting that client diversity is an [issue on the execution layer](/developers/docs/client-diversity/#execution-layer). It is recommended that readers consider running a minority execution client.
+It is also worth noting that client diversity is an [issue on the execution layer](/developers/docs/nodes-and-clients/client-diversity/#execution-layer). It is recommended that readers consider running a minority execution client.
 
 ##### Consensus clients {#consensus-clients}
 
@@ -174,7 +173,7 @@ It is also worth noting that client diversity is an [issue on the execution laye
 
 [Client diversity](/developers/docs/nodes-and-clients/client-diversity/) is critical for consensus nodes running validators. If majority of validators is running a single client implementation, network security is at risk. It is therefore recommended to consider choosing a minority client.
 
-[See the latest network client usage](https://clientdiversity.org/) and learn more about [client diversity](/developers/docs/client-diversity).
+[See the latest network client usage](https://clientdiversity.org/) and learn more about [client diversity](/developers/docs/nodes-and-clients/client-diversity).
 
 ##### Verifying the software {#verifying-the-software}
 
@@ -444,7 +443,7 @@ Consider creating a service to run your clients automatically on startup. For ex
 
 You need to keep your client software up-to-date with the latest security patches, features, and [EIPs](/eips/). Especially before [hard forks](/history/), make sure you are running the correct client versions.
 
-> Before important network updates, EF publishes a post on its [blog](blog.ethereum.org). You can [subscribe to these announcements](https://groups.google.com/a/ethereum.org/g/announcements) to get a notification to your mail when your node needs an update.
+> Before important network updates, EF publishes a post on its [blog](https://blog.ethereum.org). You can [subscribe to these announcements](https://groups.google.com/a/ethereum.org/g/announcements) to get a notification to your mail when your node needs an update.
 
 Updating clients is very simple. Each client has specific instructions in their documentation, but the process is generally just to download the latest version and restart the client with the new executable. The client should pick up where it left off, but with the updates applied.
 

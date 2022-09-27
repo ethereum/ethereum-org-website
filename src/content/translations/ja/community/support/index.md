@@ -1,7 +1,6 @@
 ---
 title: イーサリアムサポート
 description: イーサリアムエコシステムにおけるサポート
-sidebar: true
 lang: ja
 ---
 

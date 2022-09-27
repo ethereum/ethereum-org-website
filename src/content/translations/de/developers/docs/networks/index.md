@@ -2,7 +2,6 @@
 title: Netzwerke
 description: Eine Übersicht über Ethereums Netzwerke und wo man Testnet Ether (ETH) zum Testen neuer Anwendungen bekommt.
 lang: de
-sidebar: true
 ---
 
 Da Ethereum ein Protokoll ist, kann es mehrere unabhängige "Netzwerke" geben, die diesem Protokoll entsprechen, jedoch nicht miteinander interagieren.

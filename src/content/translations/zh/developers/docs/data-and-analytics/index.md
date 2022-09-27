@@ -2,7 +2,6 @@
 title: 数据和分析
 description: 如何获取在链分析和数据以用于您的去中心化应用程序。
 lang: zh
-sidebar: true
 ---
 
 ## 简介 {#Introduction}
