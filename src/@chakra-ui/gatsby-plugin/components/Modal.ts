@@ -23,9 +23,8 @@ export const Modal: ComponentStyleConfig = {
         borderBottom: "1px solid",
         textTransform: "uppercase",
         fontWeight: "normal",
-        fontSize: "1rem",
-        fontFamily:
-          'SFMono-Regular, Consolas, "Roboto Mono", "Droid Sans Mono", "Liberation Mono", Menlo, Courier, monospace',
+        fontSize: "md",
+        fontFamily: "monospace",
       },
       closeButton: {
         padding: 0,
@@ -33,11 +32,11 @@ export const Modal: ComponentStyleConfig = {
         height: "24px",
         borderRadius: 0,
         color: "rgb(178, 178, 178)",
-        fontSize: "0.875rem",
+        fontSize: "sm",
         margin: 0,
-        top: "1rem",
-        right: "1rem",
-        bottom: "1rem",
+        top: 4,
+        right: 4,
+        bottom: 4,
       },
       body: {
         padding: 0,

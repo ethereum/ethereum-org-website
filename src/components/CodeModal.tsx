@@ -28,12 +28,11 @@ const CodeModal: React.FC<IProps> = ({
   return (
     <Modal
       isOpen={isOpen}
-      blockScrollOnMount={false}
       scrollBehavior="inside"
       variant="code"
       onClose={() => setIsOpen(false)}
     >
-      <ModalOverlay zIndex={1001} />
+      <ModalOverlay />
       <ModalContent>
         <ModalHeader>{title}</ModalHeader>
         <ModalCloseButton />
