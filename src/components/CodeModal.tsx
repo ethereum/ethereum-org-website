@@ -7,9 +7,6 @@ import {
   ModalBody,
   ModalCloseButton,
 } from "@chakra-ui/react"
-
-import { useKeyPress } from "../hooks/useKeyPress"
-
 export interface IProps {
   children?: React.ReactNode
   isOpen: boolean
@@ -23,8 +20,6 @@ const CodeModal: React.FC<IProps> = ({
   setIsOpen,
   title,
 }) => {
-  useKeyPress(`Escape`, () => setIsOpen(false))
-
   return (
     <Modal
       isOpen={isOpen}
