@@ -58,7 +58,7 @@ export interface LearningTool {
   name: string
   description: TranslationKey
   url: string
-  image: string
+  image: IGatsbyImageData | string
   alt: TranslationKey
   background: string
   subjects: Array<string>

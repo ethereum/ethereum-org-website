@@ -1,6 +1,6 @@
 // Library imports
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 // Component imports
 import { CardGrid } from "./SharedStyledComponents"
@@ -8,7 +8,6 @@ import ProductCard from "./ProductCard"
 import Translation from "./Translation"
 // Util imports
 import { translateMessageId } from "../utils/translations"
-import { Lang } from "../utils/languages"
 // Type imports
 import { LearningToolsCardGridProps } from "../types"
 
