@@ -4,7 +4,6 @@ description: Een overzicht van DAO's op Ethereum
 lang: nl
 template: use-cases
 emoji: ":handshake:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/use-cases/dao-2.png
 alt: Een vertegenwoordiging van een DAO die over een voorstel stemt.

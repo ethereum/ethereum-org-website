@@ -8999,6 +8999,33 @@
         "doc",
         "bug"
       ]
+    },
+    {
+      "login": "Aksa12",
+      "name": "Aksa12",
+      "avatar_url": "https://avatars.githubusercontent.com/u/41188167?v=4",
+      "profile": "https://github.com/Aksa12",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "lawlesx",
+      "name": "Aniruddha Sil",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52166437?v=4",
+      "profile": "https://lawlesx.vercel.app/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "bt3gl",
+      "name": "♡",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1130416?v=4",
+      "profile": "https://github.com/bt3gl",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

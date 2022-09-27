@@ -2,7 +2,6 @@
 title: Valore estraibile massimo (MEV)
 description: Un'introduzione al valore estraibile massimo (MEV)
 lang: it
-sidebar: true
 ---
 
 Il valore estraibile massimo (MEV) si riferisce al valore massimo che può essere estratto dalla produzione del blocco oltre alla ricompensa del blocco standard e alle commissioni del gas, includendo, escludendo e modificando l'ordine delle transazioni in un blocco.

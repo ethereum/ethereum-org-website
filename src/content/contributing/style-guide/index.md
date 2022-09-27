@@ -2,7 +2,6 @@
 title: Style Guide
 description: Style guide for ethereum.org
 lang: en
-sidebar: true
 ---
 
 # Ethereum.org style guide {#style-guide}

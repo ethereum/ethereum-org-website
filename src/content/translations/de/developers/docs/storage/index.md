@@ -2,7 +2,6 @@
 title: Dezentrale Speicher
 description: Übersicht über dezentrale Speicher und verfügbare Tools für die Integration der Speicher in eine dApp
 lang: de
-sidebar: true
 ---
 
 Im Gegensatz zu einem zentralisierten Server, der von einem einzelnen Unternehmen oder einer Organisation betrieben wird, bestehen dezantrale Speichersysteme aus einem Peer-to-Peer-Netzwerk, aufgebaut aus Nutzern, die einen Teil der gesamten Daten aufbewahren. Das macht das Speichersystem sehr robust. Diese können in Blockchain-basierten Anwendungen oder jedem anderen Peer-to-Peer Netzwerk sein.

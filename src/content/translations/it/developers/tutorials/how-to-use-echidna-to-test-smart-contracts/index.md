@@ -3,7 +3,6 @@ title: Come usare Echidna per testare gli smart contract
 description: Come usare Echidna per testare automaticamente gli smart contract
 author: "Trailofbits"
 lang: it
-sidebar: true
 tags:
   - "Solidity"
   - "smart contract"

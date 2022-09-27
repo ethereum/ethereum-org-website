@@ -2,7 +2,6 @@
 title: Normes de développement Ethereum
 description:
 lang: fr
-sidebar: true
 incomplete: true
 ---
 

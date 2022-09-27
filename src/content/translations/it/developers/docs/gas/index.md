@@ -2,8 +2,6 @@
 title: Gas e commissioni
 description:
 lang: it
-sidebar: true
-preMergeBanner: true
 ---
 
 Il carburante è un elemento essenziale per la rete Ethereum. Consente di far funzionare la rete, proprio come un'automobile ha bisogno di benzina per funzionare.

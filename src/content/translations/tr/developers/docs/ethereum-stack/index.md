@@ -2,7 +2,6 @@
 title: Ethereum Yığınına Giriş
 description: Ethereum yazılım yığınının farklı katmanlarına ve nasıl uyuştuklarına dair bir inceleme.
 lang: tr
-sidebar: true
 ---
 
 Herhangi bir yazılım yığınında görülebileceği gibi ''Ethereum yığını'' da amacınıza bağlı olarak projeden projeye farklılık gösterecektir.

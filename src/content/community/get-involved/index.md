@@ -1,7 +1,6 @@
 ---
 title: How can I get involved?
 description: How to get involved in the Ethereum community.
-sidebar: true
 lang: en
 ---
 

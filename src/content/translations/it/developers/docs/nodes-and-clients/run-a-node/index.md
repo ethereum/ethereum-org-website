@@ -2,7 +2,6 @@
 title: Avvia il tuo nodo di Ethereum
 description: Introduzione generale all'esecuzione della propria istanza di un client di Ethereum.
 lang: it
-sidebar: true
 sidebarDepth: 2
 preMergeBanner: true
 ---

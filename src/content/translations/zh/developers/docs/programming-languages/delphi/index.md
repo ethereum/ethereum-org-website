@@ -2,7 +2,6 @@
 title: 面向 Delphi 开发者的以太坊资源
 description: 学习如何使用 Delphi 编程语言为以太坊开发
 lang: zh
-sidebar: true
 incomplete: true
 ---
 

@@ -3,7 +3,6 @@ title: Shardketens
 description: Lees meer over shardketens - partities van het netwerk die Ethereum meer transactiecapaciteit geven en het runnen van Ethereum makkelijker maken.
 lang: nl
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: Sharding is een multi-fase upgrade om de schaalbaarheid en capaciteit van Ethereum te verbeteren.
 summaryPoint2: Shardketens bieden extra, goedkopere opslaglagen voor applicaties en rollups om gegevens op te slaan.

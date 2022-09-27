@@ -3,7 +3,6 @@ title: "The Graph: Fixing Web3 data querying"
 description: Blockchain is like a database but without SQL. All the data is there, but no way to access it. Let me show you how to fix this with The Graph and GraphQL.
 author: Markus Waas
 lang: en
-sidebar: true
 tags:
   [
     "solidity",

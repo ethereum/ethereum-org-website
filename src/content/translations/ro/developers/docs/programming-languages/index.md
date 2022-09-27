@@ -2,7 +2,6 @@
 title: Limbaje de programare
 description:
 lang: ro
-sidebar: true
 ---
 
 A common misconception is that developers must write [smart contracts](/developers/docs/smart-contracts/) in order to build on Ethereum. Acest lucru este fals. Una dintre frumusețile rețelei și comunității Ethereum este că puteţi [participa](/community/) în aproape orice limbaj de programare.

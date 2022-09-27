@@ -2,7 +2,6 @@
 title: 添加开发者工具
 lang: zh
 description: 开发者工具上架 ethereum.org 的标准
-sidebar: true
 ---
 
 # 添加开发者工具 {#contributing-to-ethereumorg-}

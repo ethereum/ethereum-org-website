@@ -2,7 +2,6 @@
 title: چرخاندن گره‌ی اتریوم خودتان
 description: مقدمه‌ای عمومی بر اجرای نمونه‌ی خودتان از کلاینت اتریوم.
 lang: fa
-sidebar: true
 sidebarDepth: 2
 ---
 

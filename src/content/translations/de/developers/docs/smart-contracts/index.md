@@ -2,7 +2,6 @@
 title: Einführung in Smart Contracts
 description: Eine Übersicht zu Smart Contracts mit dem Fokus auf ihre einzigartigen Besonderheiten und Beschränkungen
 lang: de
-sidebar: true
 ---
 
 ## Was ist ein Smart Contract? {#what-is-a-smart-contract}

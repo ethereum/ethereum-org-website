@@ -2,7 +2,6 @@
 title: Mining
 description: An explanation of how mining worked on Ethereum.
 lang: en
-sidebar: true
 ---
 
 <InfoBanner emoji=":wave:">

@@ -2,8 +2,6 @@
 title: 挖矿
 description: 关于挖矿在以太坊中如何工作以及如何帮助保持以太坊安全和去中心化的解释。
 lang: zh
-sidebar: true
-preMergeBanner: true
 ---
 
 <InfoBanner emoji=":wave:">

@@ -2,7 +2,6 @@
 title: Dados e Estatísticas
 description: Como obter dados e análises em cadeia para uso em seus dapps
 lang: pt-br
-sidebar: true
 ---
 
 ## Introdução {#Introduction}

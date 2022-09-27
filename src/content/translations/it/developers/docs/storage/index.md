@@ -2,7 +2,6 @@
 title: Archiviazione Decentralizzata
 description: Panoramica di cos'è l'archiviazione decentralizzata e degli strumenti disponibili per integrarla in una dapp.
 lang: it
-sidebar: true
 ---
 
 A differenza di un server centralizzato gestito da una singola società o organizzazione, il sistema di storage decentralizzato consiste in una rete peer-to-peer di operatori-user che trattengono una porzione di tutti i dati esistenti, creando un sistema resiliente di salvataggio e condivisione di file. Tale sistema può trovarsi in un'applicazione basata sulla blockchain o in qualunque rete peer-to-peer.

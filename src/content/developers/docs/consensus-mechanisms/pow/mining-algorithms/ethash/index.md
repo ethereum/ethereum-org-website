@@ -2,7 +2,6 @@
 title: Ethash
 description: A detailed look at the Ethash algorithm.
 lang: en
-sidebar: true
 ---
 
 <InfoBanner emoji=":wave:">

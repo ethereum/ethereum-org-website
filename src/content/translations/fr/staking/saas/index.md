@@ -4,7 +4,6 @@ description: Un aperçu de la façon de débuter avec la mise en jeu ETH mutuali
 lang: fr
 template: staking
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../../assets/staking/leslie-saas.png
 alt: Leslie le rhinocéros flottant dans les nuages.
 sidebarDepth: 2

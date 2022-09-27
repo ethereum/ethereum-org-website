@@ -2,8 +2,6 @@
 title: Introduzione alle dapp
 description:
 lang: it
-sidebar: true
-preMergeBanner: true
 ---
 
 Un'applicazione decentralizzata (dApp) è un'applicazione costruita su una rete decentralizzata che coniuga uno [smart contract](/developers/docs/smart-contracts/) con un'interfaccia utente frontend. In Ethereum gli Smart Contract sono accessibili e trasparenti (come le API aperte) quindi una dapp può anche includere Smart Contract scritto da altri.

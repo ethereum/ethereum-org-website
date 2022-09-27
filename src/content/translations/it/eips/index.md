@@ -2,7 +2,6 @@
 title: Proposte di miglioramento di Ethereum (EIP)
 description: Informazioni di base necessarie per capire le proposte di miglioramento di Ethereum (EIP).
 lang: it
-sidebar: true
 ---
 
 # Introduzione alle Proposte di miglioramento di Ethereum (EIP) {#introduction-to-ethereum-improvement-proposals-eips}

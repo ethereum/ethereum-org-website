@@ -2,7 +2,6 @@
 title: ERC-721 非同质化代币标准
 description:
 lang: zh
-sidebar: true
 ---
 
 ## 简介 {#introduction}

@@ -2,7 +2,6 @@
 title: 翻译计划
 lang: zh
 description: 如何为 ethereum.org 的翻译计划贡献力量
-sidebar: true
 ---
 
 # 翻译计划 {#translation-program}

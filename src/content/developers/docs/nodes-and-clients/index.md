@@ -2,7 +2,6 @@
 title: Nodes and clients
 description: An overview of Ethereum nodes and client software, plus how to set up a node and why you should do it.
 lang: en
-sidebar: true
 sidebarDepth: 2
 ---
 

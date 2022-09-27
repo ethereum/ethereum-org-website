@@ -2,7 +2,6 @@
 title: Hizmet olarak node'lar
 description: Düğüm hizmetleri, bunların artıları ve eksileri ve popüler sağlayıcılara giriş düzeyinde bir genel bakış.
 lang: tr
-sidebar: true
 sidebarDepth: 2
 ---
 
