@@ -1,5 +1,5 @@
 ---
-title: First Steps in your Developer Journey with Ethereum using Infura
+title: First Steps in your Web3 Developer Journey with Ethereum using Infura
 description: "This article details the developer journey getting started with Ethereum development leveraging Infura. We will walk through sending a transaction to your Metamask wallet, IPFS Operations, deploying a NFT smart contract and minting an NFT"
 author: "Chris Anatalio"
 tags:
@@ -12,11 +12,11 @@ source: Infura.io blog
 sourceUrl: https://blog.infura.io/post/getting-started-with-infura-28e41844cc89
 ---
 
-# Getting Started With Infura
+# First Steps in your Web3 Developer Journey with Ethereum using Infura
 
 ![Getting Started with Infura](./infura-hero.png)
 
-## Get Started with Infura: Using the Infura Ethereum API, IPFS API and other Features!
+## Starting your developer journey in Web3 with Infura: Using the Infura Ethereum API, IPFS API and other Features!
 
 Welcome to [Infura](https://infura.io/register)! We provide developers with simple, rock-solid, scalable access to Web3 tools and infrastructure. Our [Ethereum](https://infura.io/product/ethereum) and [IPFS API](https://infura.io/product/ipfs) suite serves and supports thousands of decentralized applications([dApps](https://ethereum.org/en/dapps/)) every day.
 
@@ -81,7 +81,7 @@ Learn more about [securing your project in the Infura Docs](https://docs.infura.
 
 In this module, we are going to show you how to connect to an Infura Ethereum node with a React/Typescript application using [web3.js](https://web3js.readthedocs.io/en/v1.8.0/).
 
-Keep in mind that all requests are `POST` requests.  Check out this [Github Repository to follow along](https://github.com/anataliocs/Getting-Started-With-Infura)!
+Keep in mind that all requests are `POST` requests. Check out this [Github Repository to follow along](https://github.com/anataliocs/Getting-Started-With-Infura)!
 
 We will connect to your MetaMask wallet, send a transaction, and then review a transaction, all using the [Infura API](https://docs.infura.io/infura/networks/ethereum/json-rpc-methods).
 
@@ -325,7 +325,7 @@ Now let’s walk through uploading and pinning image data to IPFS using Infura.
 
 - Upload and pin data to IPFS
 - Retrieve IPFS data
-- Review code implementation
+- Review [code implementation](https://github.com/anataliocs/Getting-Started-With-Infura)
 
 ### Module 3.1: Update your .env config
 
@@ -946,6 +946,8 @@ Also, check out the [LearnWeb3 DAO](https://learnweb3.io/) for a detailed, proje
 - [Web3 Unleashed with Emily Lin](https://www.youtube.com/playlist?list=PLVGaL7nFtvpBnLGcWnNRQsIAB3Fs-0Exx)
 
 And finally, check out [Speedrun Ethereum by Austin Griffith of the Ethereum Foundation](https://speedrunethereum.com/)!
+
+Good luck on your continuing developer journey into Web3!
 
 ---
 
