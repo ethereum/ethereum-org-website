@@ -1424,6 +1424,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/rayzhudev"><img src="https://avatars.githubusercontent.com/u/20132960?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ray Zhu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=rayzhudev" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/BenedettiLucca"><img src="https://avatars.githubusercontent.com/u/108427035?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lucca Benedetti</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=BenedettiLucca" title="Documentation">📖</a></td>
       <td align="center"><a href="http://www.printfly.com/"><img src="https://avatars.githubusercontent.com/u/17681?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mac Morgan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=MacMorgan" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AMacMorgan" title="Bug reports">🐛</a></td>
+      <td align="center"><a href="https://github.com/Aksa12"><img src="https://avatars.githubusercontent.com/u/41188167?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aksa12</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Aksa12" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
