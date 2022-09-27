@@ -190,8 +190,6 @@ const DocsPage = ({
 
   const { editContentUrl } = siteData.siteMetadata || {}
   const absoluteEditPath = `${editContentUrl}${relativePath}`
-  const isDevelopersHome = relativePath.endsWith("/developers/docs/index.md")
-  const showPostMergeBanner = !!mdx.frontmatter.postMergeBanner
 
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
@@ -204,7 +202,6 @@ const DocsPage = ({
           <Translation id="banner-page-incomplete" />
         </BannerNotification>
       )}
-      {showPostMergeBanner && <PostMergeBanner />}
       <ContentContainer isZenMode={isZenMode}>
         <Content>
           <H1 id="top">{mdx.frontmatter.title}</H1>
