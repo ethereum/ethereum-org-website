@@ -1,9 +1,8 @@
 // Library imports
 import React from "react"
-import styled from "@emotion/styled"
+import { Grid } from "@chakra-ui/react"
 import { useIntl } from "react-intl"
 // Component imports
-import { CardGrid } from "./SharedStyledComponents"
 import ProductCard from "./ProductCard"
 import Translation from "./Translation"
 // Util imports
@@ -11,18 +10,17 @@ import { translateMessageId } from "../utils/translations"
 // Type imports
 import { LearningToolsCardGridProps } from "../types"
 
-// Styled components
-const StyledCardGrid = styled(CardGrid)`
-  margin-bottom: 2rem;
-`
-
 // Component
 const LearningToolsCardGrid: React.FC<LearningToolsCardGridProps> = ({
   category,
 }) => {
   const intl = useIntl()
   return (
-    <StyledCardGrid>
+    <Grid
+      templateColumns="repeat(auto-fill, minmax(min(100%, 280px), 1fr))"
+      gap={8}
+      mb={8}
+    >
       {category
         .sort(({ locales }) => (locales?.length ? -1 : 0))
         .map(({ name, description, background, url, alt, image, subjects }) => (
@@ -38,7 +36,7 @@ const LearningToolsCardGrid: React.FC<LearningToolsCardGridProps> = ({
             <Translation id={description} />
           </ProductCard>
         ))}
-    </StyledCardGrid>
+    </Grid>
   )
 }
 
