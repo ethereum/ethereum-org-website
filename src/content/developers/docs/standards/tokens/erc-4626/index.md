@@ -161,14 +161,6 @@ function totalSupply() public view returns (uint256)
 
 Returns the total number of unredeemed vault shares in circulation.
 
-#### balanceOfUnderlying {#balanceofunderlying}
-
-```solidity
-function balanceOfUnderlying(address owner) public view returns (uint256)
-```
-
-This function returns the total amount of underlying tokens held in the vault for `owner`.
-
 #### balanceOf {#balanceof}
 
 ```solidity
@@ -194,7 +186,7 @@ event Deposit(
 
 Where `sender` is the user who exchanged `assets` for `shares`, and transferred those `shares` to `owner`.
 
-#### Widthdraw Event
+#### Withdraw Event
 
 **MUST** be emitted when shares are withdrawn from the vault by a depositor in the [`redeem`](#redeem) or [`withdraw`](#withdraw) methods.
 

@@ -1,10 +1,10 @@
 // Libraries
 import React, { useState } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { sortBy } from "lodash"
 
 // Components
-import Emoji from "./Emoji"
+import Emoji from "./OldEmoji"
 import InfoBanner from "./InfoBanner"
 import Link from "./Link"
 import Translation from "./Translation"
@@ -28,6 +28,7 @@ const Item = styled(Link)`
   color: #000000;
 
   &:hover {
+    text-decoration: none;
     border-radius: 4px;
     box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
     background: ${(props) => props.theme.colors.tableBackgroundHover};

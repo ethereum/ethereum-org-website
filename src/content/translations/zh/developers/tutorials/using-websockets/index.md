@@ -25,13 +25,13 @@ published: 2020-12-01
 
 与任何网络连接一样，您不应该假设 WebSocket 将永远保持打开状态而不会中断，但是正确地手动处理丢弃的连接和重新连接可能很难做到正确。 WebSocket 的另一个缺点是，您在响应中不会得到 HTTP 状态码，而只会得到错误消息。
 
-[Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3)自动添加对 WebSocket 失败的处理并重试，而无需进行配置。
+[Alchemy Web3](https://docs.alchemy.com/reference/api-overview)自动添加对 WebSocket 失败的处理并重试，而无需进行配置。
 
 ## 试试看 {#try-it-out}
 
 测试 WebSocket 最简单的方式是安装命令行工具来进行 WebSocket 请求，例如[wscat](https://github.com/websockets/wscat)。 使用 wscat，您可以发送如下请求：
 
-_注意：如果您有 Alchemy 帐户，则可以将`demo`替换成自己的 API 密钥。 [在此处注册免费的 Alchemy 帐户！](https://dashboard.alchemyapi.io/signup/)_
+_注意：如果您有 Alchemy 帐户，则可以将`demo`替换成自己的 API 密钥。 [在此处注册免费的 Alchemy 帐户！](https://auth.alchemyapi.io/signup)_
 
 ```
 $ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
@@ -251,4 +251,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-免费[注册 Alchemy](https://dashboard.alchemyapi.io/signup/)，查看[我们的文档](https://docs.alchemyapi.io/)，如需了解最新消息，请在[Twitter](https://twitter.com/AlchemyPlatform)上关注我们。
+免费[注册 Alchemy](https://auth.alchemyapi.io/signup)，查看[我们的文档](https://docs.alchemyapi.io/)，如需了解最新消息，请在[Twitter](https://twitter.com/AlchemyPlatform)上关注我们。

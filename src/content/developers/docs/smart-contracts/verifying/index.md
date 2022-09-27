@@ -7,7 +7,7 @@ sidebar: true
 
 [Smart contracts](/developers/docs/smart-contracts/) are designed to be “trustless”, meaning users shouldn’t have to trust third parties (e.g., developers and companies) before interacting with a contract. As a requisite for trustlessness, users and other developers must be able to verify a smart contract’s source code. Source code verification assures users and developers that the published contract code is the same code running at the contract address on the Ethereum blockchain.
 
-It is important to make the distinction between "source code verification" and "[formal verification](/developers/docs/smart-contracts/formal-verification/)". The former, which will be explained in detail below, refers to verifying that the given source code of a smart contract in a high-level language (e.g. Solidity) compiles to the same bytecode to be executed at the contract address. The latter describes verifying the correctness of a smart contract, meaning the contract behaves as expected. Although context-dependent, contract verification usually refers to source code verification.
+It is important to make the distinction between "source code verification" and "[formal verification](/developers/docs/smart-contracts/formal-verification/)". Source code verification, which will be explained in detail below, refers to verifying that the given source code of a smart contract in a high-level language (e.g. Solidity) compiles to the same bytecode to be executed at the contract address. However, formal verification describes verifying the correctness of a smart contract, meaning the contract behaves as expected. Although context-dependent, contract verification usually refers to source code verification.
 
 ## What is source code verification? {#what-is-source-code-verification}
 
@@ -61,7 +61,7 @@ Verifying a smart contract basically involves the following steps:
 
 4. Compare the deployed bytecode with the recompiled bytecode. If the codes match, the contract gets verified with the given source code and compilation settings.
 
-5. Additionally, if the the metadata hashes at the end of the bytecode match, it will be a full match.
+5. Additionally, if the metadata hashes at the end of the bytecode match, it will be a full match.
 
 Note that this is a simplistic description of verification and there are many exceptions that would not work with this such as having [immutable variables](https://docs.sourcify.dev/docs/immutables/).
 

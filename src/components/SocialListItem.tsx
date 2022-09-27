@@ -1,6 +1,6 @@
 // Libraries
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 // Components
 import Icon from "./Icon"
@@ -26,6 +26,7 @@ const ChildrenContainer = styled.div`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   socialIcon: string
 }
 const SocialListItem: React.FC<IProps> = ({ children, socialIcon }) => {

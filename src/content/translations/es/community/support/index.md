@@ -107,4 +107,4 @@ Debido a la demanda de la red, las transacciones en Ethereum pueden a veces esta
 
 #### ¿Cómo puedo minar Ethereum? {#mining-ethereum}
 
-No recomendamos comprar equipo destinado a minar si aún no ha minado en Ethereum. En el tercer/cuarto trimestre de 2022, se producirá [la fusión](/upgrades/merge/), cambiando Ethereum de prueba de trabajo a prueba de participación. Este cambio significa que ya no se podrá minar Ethereum. Si todavía le interesa minar Ethereum, puede pedir ayuda a comunidades mineras, como [/r/EtherMining](https://www.reddit.com/r/EtherMining/).
+No recomendamos comprar equipo destinado a minar si aún no ha minado en Ethereum. En el tercer/cuarto trimestre de 2022, se producirá [la fusión](/upgrades/merge/), cambiando Ethereum de prueba de trabajo a prueba de participación. Este cambio significa que ya no se podrá minar Ethereum.

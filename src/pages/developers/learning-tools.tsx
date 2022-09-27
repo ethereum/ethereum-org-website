@@ -1,8 +1,7 @@
 // Library imports
 import React, { useEffect, useState } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
-import { getImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 import { shuffle } from "lodash"
 // Component imports
@@ -222,6 +221,15 @@ const LearningToolsPage = ({
       subjects: ["Solidity", "web3"],
       locales: ["es"],
     },
+    {
+      name: "Speed Run Ethereum",
+      description: "page-learning-tools-speed-run-ethereum-description",
+      url: "https://speedrunethereum.com/",
+      image: getImage(data.speedRunEthereum),
+      alt: "page-learning-tools-speed-run-ethereum-logo-alt",
+      background: "#ffffff",
+      subjects: ["Solidity", "web3"],
+    },
   ]
 
   return (
@@ -270,7 +278,7 @@ const LearningToolsPage = ({
       </StackContainer>
       <Content>
         <CalloutBanner
-          image={getImage(data.learn)}
+          image={getImage(data.learn)!}
           alt={translateMessageId("page-index-tout-enterprise-image-alt", intl)}
           titleKey={"page-learning-tools-documentation"}
           descriptionKey={"page-learning-tools-documentation-desc"}
@@ -336,6 +344,11 @@ export const query = graphql`
       ...learningToolImage
     }
     replit: file(relativePath: { eq: "dev-tools/replit.png" }) {
+      ...learningToolImage
+    }
+    speedRunEthereum: file(
+      relativePath: { eq: "dev-tools/speed-run-ethereum.png" }
+    ) {
       ...learningToolImage
     }
     ethdotbuild: file(relativePath: { eq: "dev-tools/eth-dot-build.png" }) {

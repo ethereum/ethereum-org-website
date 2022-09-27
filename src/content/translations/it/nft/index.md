@@ -11,6 +11,7 @@ alt: Un logo Eth visualizzato tramite ologramma.
 summaryPoint1: Un modo per rappresentare qualsiasi cosa unica come un attivo basato su Ethereum.
 summaryPoint2: Gli NFTs stanno dando più potere che mai ai creatori di contenuti.
 summaryPoint3: Alimentato da smart contract sulla blockchain Ethereum.
+preMergeBanner: true
 ---
 
 I NFT stanno avendo un successo travolgente nel mondo dell'arte digitale e degli oggetti da collezione. La vita di moltissimi artisti digitali sta cambiando grazie alle enormi vendite ad un nuovo pubblico di cripto-utenti. Anche diverse celebrità si stanno interessando al fenomeno, individuando nuove opportunità per agganciare i fan. Ma l'arte digitale è solo un modo per utilizzare i NFT. In realtà possono essere utilizzati per rappresentare la proprietà di qualsiasi bene unico, come un atto connesso a un oggetto nel mondo digitale o fisico.
@@ -55,6 +56,12 @@ Il mondo degli NFT è relativamente nuovo. In teoria, rientra in questo mondo tu
 - [Un pezzo da collezione digitale](https://www.larvalabs.com/cryptopunks/details/1)
 - [Un nome di dominio](https://app.ens.domains/name/ethereum.eth)
 - [Un biglietto che ti dà accesso a un evento o un coupon](https://www.yellowheart.io/)
+- [Acquista beni del mondo reale](https://www.tangible.store/)
+- [Immobili frazionalizzati](https://realt.co/)
+- [Certificati di laurea](https://www.degreecert.com/)
+- [Royalty musicali tramite NFT](https://opulous.org/)
+- [Move 2 earn](https://yeticoineth.com/about.html)
+- [Identità digitale](https://photochromic.io/)
 
 ### Esempi di ethereum.org {#ethereum-org-examples}
 
@@ -64,7 +71,7 @@ Utilizziamo gli NFT per dare un riconoscimento ai nostri collaboratori e abbiamo
 
 Se contribuisci a ethereum.org, puoi rivendicare un NFT POAP. Si tratta di oggetti da collezione che dimostrano che hai partecipato ad un evento. In occasione di alcuni incontri nel mondo delle criptovalute sono stati usati i POAP come biglietto per i loro eventi. [Ulteriori informazioni sul contributo](/contributing/#poap).
 
-![ethereum.org POAP](../../assets/use-cases/poap.png)
+![ethereum.org POAP](../../../../assets/use-cases/poap.png)
 
 #### ethereum.eth {#ethereum-dot-eth}
 
@@ -260,6 +267,12 @@ Come abbiamo detto, si tratta di uno spazio emergente. NFT, DAO e token fraziona
 
 [Maggiori informazioni sulle DAO](/dao/)
 
+### Certificati d'autenticità {#certificates}
+
+Le aziende che offrono finti certificati di laurea sono a quanto pare un'industria da un miliardo di dollari, che gli NFT possono aiutare a combattere. Gli NFT possono essere un modo sicuro e rapido per verificare le credenziali di laurea di qualcuno.
+
+[In Sud Corea, un'università sta già emettendo certificati di laurea in forma di NFT](https://forkast.news/headlines/south-korea-nfts-graduates-hoseo/), nella speranza che gli NFT miglioreranno l'accesso ai servizi amministrativi e impediranno la contraffazione o alterazione delle lauree. [Anche la Trinity Business School (TBS) in Irlanda prevede di offrire gli NFT a partire dal 2023](https://trinitynews.ie/2022/04/business-school-to-offer-degree-nfts/).
+
 <Divider />
 
 ## Ethereum e NFT {#ethereum-and-nfts}
@@ -284,15 +297,15 @@ Per chiarire alcune cose:
 
 Per spiegarti meglio dovremo entrare un po' più nel tecnico, quindi abbi pazienza...
 
-### Non incolpare i NFT {#nft-qualities}
+### Non incolpare gli NFT {#nft-qualities}
 
 L'intero ecosistema degli NFT funziona perché Ethereum è decentralizzato e sicuro.
 
 Decentralizzato significa che tu e tutti gli altri potete verificare il possesso di qualcosa. Il tutto senza fidarsi o affidare la custodia a terzi, che possono imporre le proprie regole a piacimento. Significa anche che il tuo NFT è trasferibile tra molti prodotti e mercati diversi.
 
-Sicuro significa che nessuno può copiare/incollare il tuo NFT o rubartelo.
+Sicuro significa che nessuno può copiare/incollare il tuo NFT o sottrarlo.
 
-Queste qualità di Ethereum rendono possibile possedere digitalmente oggetti unici e ottenere un prezzo equo per i tuoi contenuti. Ma ciò ha un costo. Blockchain come Bitcoin ed Ethereum consumano molta energia in questo momento, in quanto occorre molta energia per preservare queste qualità. Se fosse facile riscrivere la storia di Ethereum in modo da rubare NFT o criptovalute, il sistema crollerebbe.
+Queste qualità di Ethereum rendono possibile possedere digitalmente oggetti unici e ottenere un prezzo equo per i tuoi contenuti. Ma questo ha un costo. Blockchain come Bitcoin ed Ethereum consumano molta energia in questo momento, in quanto occorre molta energia per preservare queste qualità. Se fosse facile riscrivere la storia di Ethereum in modo da rubare NFT o criptovalute, il sistema crollerebbe.
 
 #### Il processo per coniare il tuo NFT {#minting-nfts}
 
@@ -303,7 +316,7 @@ Quando si conia un NFT, devono accadere alcune cose:
 - Le transazioni che confermano quanto sopra devono essere aggiunte ad un blocco e "immortalate" nella catena.
 - Il blocco deve essere confermato da tutti nella rete come "corretto". Questo consenso elimina la necessità di intermediari, in quanto la rete accetta che il NFT esiste e appartiene a te. Inoltre, essendo sulla catena, può essere verificato da chiunque. Questo è uno dei modi con cui Ethereum aiuta i creatori di NFT a massimizzare i guadagni.
 
-Tutti questi compiti sono svolti dai "minatori", che provvedono a informare il resto della rete del tuo NFT e di chi lo possiede. Ciò significa che il mining deve essere sufficientemente difficile, altrimenti chiunque potrebbe affermare di possedere l'NFT che hai appena coniato e trasferire la proprietà in modo fraudolento. Esistono molti incentivi per garantire che i "minatori" agiscano con onestà.
+Tutti questi compiti sono svolti dai miner, che provvedono a informare il resto della rete del tuo NFT e di chi lo possiede. Ciò significa che il mining deve essere sufficientemente difficile, altrimenti chiunque potrebbe affermare di possedere il NFT che hai appena coniato e trasferire la proprietà in modo fraudolento. Esistono molti incentivi per garantire che i miner agiscano con onestà.
 
 [Maggiori informazioni sul mining](/developers/docs/consensus-mechanisms/pow/)
 
@@ -313,7 +326,7 @@ La difficoltà del mining deriva dal fatto che ci vuole tanta potenza di calcolo
 
 Ciò è importante per rendere Ethereum a prova di manomissione, una delle qualità che rende possibile gli NFT. Maggiore è il numero di blocchi, più sicura è la catena. Se il tuo NFT è stato creato nel blocco #600 e un hacker dovesse provare a rubare il tuo NFT modificando i suoi dati, l'impronta digitale di tutti i blocchi successivi cambierebbe. Chiunque esegua il software Ethereum sarebbe quindi immediatamente in grado di capire ed evitare che accada.
 
-Tuttavia ciò significa che la potenza di calcolo deve essere utilizzata costantemente. Significa anche che un blocco contenente 0 transazioni di NFT avrà comunque grossomodo la stessa impronta di carbonio, in quanto verrà consumato potenza di calcolo per crearlo. I blocchi saranno riempiti da altre transazioni non basate su NFT.
+Questo significa però che occorre usare costantemente della potenza di calcolo. Significa anche che un blocco contenente 0 transazioni di NFT avrà comunque grossomodo la stessa impronta di carbonio, in quanto verrà consumata potenza di calcolo per crearlo. I blocchi saranno riempiti da altre transazioni non basate su NFT.
 
 #### In questo momento le blockchain sono ad alta intensità energetica {#blockchains-intensive}
 
@@ -321,35 +334,35 @@ Ebbene sì, la creazione di blocchi mediante il mining è associata a un'impront
 
 Molte attività connesse al mining utilizzano fonti energetiche rinnovabili o energia inutilizzata in luoghi remoti. Ricordiamo inoltre che i settori che gli NFT e le criptovalute stanno rivoluzionando hanno anch'essi enormi impronte di carbonio. Ma solo perché i settori esistenti sono poco virtuosi, non significa che non dovremmo sforzarci di fare meglio.
 
-Infatti lo facciamo. Ethereum sta evolvendo per rendere l'utilizzo di Ethereum (e di riflesso degli NFT) più efficiente sotto il profilo energetico. Questo è sempre stato il piano, fin dall'inizio.
+Infatti lo facciamo. Ethereum sta evolvendo per rendere l'utilizzo di Ethereum (e di riflesso gli NFT) più efficiente sotto il profilo energetico. Questo è sempre stato il piano, fin dall'inizio.
 
-Non siamo qui per difendere l'impronta ambientale del mining, ma vogliamo spiegare in che modo le cose stanno cambiando in meglio.
+Non siamo qui per difendere l'impronta ambientale del mining, ma vogliamo spiegare in che modo le cose stanno cambiando per il meglio.
 
 ### Un futuro più verde... {#a-greener-future}
 
-Da quando Ethereum è in circolazione, il consumo energetico dei "minatori" è stato un settore enorme di interesse per sviluppatori e ricercatori. E la visione è sempre stata quella di sostituirlo il prima possibile. [Maggiori informazioni sulla visione di Ethereum](/upgrades/vision/)
+Da quando Ethereum è in circolazione, il consumo energetico del mining è stato un'enorme area di interesse per sviluppatori e ricercatori. E la visione è sempre stata quella di sostituirlo il prima possibile. [Maggiori informazioni sulla visione di Ethereum](/upgrades/vision/)
 
 Questa visione sta prendendo forma in questo momento.
 
 #### Un Ethereum più verde {#greener-ethereum}
 
-È attualmente in corso una serie di aggiornamenti di Ethereum che sostituiranno il mining con lo [staking](/staking/). Questo processo rimuoverà la potenza di calcolo come meccanismo di sicurezza e ridurrà l'impronta di carbonio di Ethereum di circa il 99,95%<sup>[^1]</sup>. In questo mondo, gli "scommettitori" (staker) impegnano fondi anziché potenza di calcolo per proteggere la rete.
+Ethereum sta attualmente attraversando una serie di aggiornamenti che sostituiranno il mining con lo [staking](/staking/). Questo processo rimuoverà la potenza di calcolo come meccanismo di sicurezza e ridurrà l'impronta di carbonio di Ethereum di circa il 99,95%<sup>[^1]</sup>. In questo mondo, gli staker impegnano fondi anziché potenza di calcolo per proteggere la rete.
 
-Il costo energetico di Ethereum diventerà il costo di funzionamento di un computer domestico moltiplicato per il numero di nodi nella rete. Se ci sono 10.000 nodi nella rete e il costo connesso al funzionamento di un computer domestico è di circa 525 kWh all'anno, si arriva a 5.250.000 kWh<sup>[^1]</sup> all'anno per l'intera rete.
+Il costo energetico di Ethereum diventerà il costo di funzionamento di un computer domestico moltiplicato per il numero di nodi nella rete. Se ci sono 10.000 nodi nella rete e il costo connesso al funzionamento di un computer domestico è di circa 525kWh all'anno, si arriva a 5.250.000kWh<sup>[^1]</sup> all'anno per l'intera rete.
 
-Possiamo usarlo per confrontare il futuro di Ethereum a un servizio globale come Visa. 100.000 transazioni Visa utilizzano 149 kWh di energia<sup>[^2]</sup>. In Ethereum, con proof-of-stake, quello stesso numero di transazioni costerebbe 17,4 kWh d'energia o circa l'11% dell'energia totale<sup>[^3]</sup>. Questo senza considerare le molte ottimizzazioni a cui si sta lavorando in parallelo al livello del consenso e le catene di frammenti, come i [rollup](/glossary/#rollups). Si potrebbe arrivare addirittura a 0,1666666667 kWh di energia per 100.000 transazioni.
+Possiamo usare questo dato per confrontare il futuro di Ethereum con un servizio globale come Visa. 100.000 transazioni Visa utilizzano 149kWh di energia<sup>[^2]</sup>. In Ethereum con proof-of-stake, quello stesso numero di transazioni costerebbe 17.4 kWh d'energia, pari a circa l'11% dell'energia totale<sup>[^3]</sup>. Questo senza considerare le molte ottimizzazioni a cui si sta lavorando in parallelo al livello del consenso e le shard chain, come i [rollup](/glossary/#rollups). Si potrebbe arrivare addirittura a 0,1666666667kWh di energia per 100.000 transazioni.
 
-È importante sottolineare che ciò migliora l'efficienza energetica preservando la decentralizzazione e la sicurezza di Ethereum. Molte altre blockchain esistenti potrebbero già utilizzare una qualche forma di staking, ma sono garantite da pochi staker selezionati, non dalle migliaia che avrà Ethereum. Maggiore è la decentralizzazione, più sicuro è il sistema.
+È importante sottolineare che ciò migliora l'efficienza energetica preservando la decentralizzazione e la sicurezza di Ethereum. È possibile che molte altre blockchain esistenti usino già una qualche forma di staking, ma sono garantite da pochi staker selezionati, non dalle migliaia che avrà Ethereum. Maggiore è la decentralizzazione, più sicuro è il sistema.
 
 [Maggiori informazioni sulle stime energetiche](#footnotes-and-sources)
 
-_Abbiamo fornito il confronto di base con Visa, ossia con un nome familiare, per farti comprendere il consumo energetico di Ethereum proof-of-stake. Tuttavia, nella pratica non è proprio corretto confrontare in base al numero di transazioni. La produzione di energia di Ethereum è basata sul tempo. Se Ethereum facesse più o meno transazioni da un minuto all'altro, la produzione di energia rimarrebbe la stessa._
+_Abbiamo fornito il confronto di base con Visa, ossia con un nome familiare, per farti comprendere il consumo energetico di Ethereum proof-of-stake. Tuttavia, nella pratica non è proprio corretto confrontare in base al numero di transazioni. La produzione di energia di Ethereum è basata sul tempo. Se Ethereum facesse più o meno le stesse transazioni ogni minuto, la produzione di energia rimarrebbe la stessa._
 
 _È anche importante ricordare che Ethereum non fa solo transazioni finanziarie: è una piattaforma per applicazioni, quindi sarebbe più equo fare un confronto con diverse aziende/diversi settori tra cui Visa, AWS ed altre ancora!_
 
 #### Tempistiche {#timelines}
 
-Il processo è già iniziato. [La Beacon Chain](/upgrades/beacon-chain/), il primo aggiornamento, è stato lanciato a dicembre 2020. Esso fornisce le basi per lo staking consentendo agli staker di unirsi al sistema. Il passo successivo relativo all'efficienza energetica è quello di fondere l'attuale catena, quella protetta dai "minatori", nella Beacon Chain, in cui il mining non è necessario. Le tempistiche non possono essere precise in questa fase, ma si stima che ciò accadrà a un certo punto nel 2022. Questo processo è noto come fusione (precedentemente indicato come docking). [Maggiori informazioni sulla fusione](/upgrades/merge/).
+Il processo è già iniziato. [La Beacon Chain](/upgrades/beacon-chain/), il primo aggiornamento, è stato lanciato a dicembre 2020. Esso fornisce le basi per lo staking consentendo agli staker di unirsi al sistema. Il passo successivo relativo all'efficienza energetica è quello di fondere l'attuale catena, quella protetta dai miner, nella beacon chain, in cui il mining non è necessario. Le tempistiche non possono essere precise in questa fase, ma si stima che ciò accadrà a un certo punto nel corso del 2022. Questo processo è noto come La Fusione (in precedenza “docking”). [Maggiori informazioni sulla fusione](/upgrades/merge/).
 
 <ButtonLink to="/upgrades/">
   Maggiori informazioni sugli aggiornamenti di Ethereum
@@ -357,7 +370,7 @@ Il processo è già iniziato. [La Beacon Chain](/upgrades/beacon-chain/), il pri
 
 ## Costruire con i NFT {#build-with-nfts}
 
-La maggior parte dei NFT è costruita utilizzando uno standard coerente, noto come [ERC-721](/developers/docs/standards/tokens/erc-721/). Tuttavia, esistono altri standard che potrebbero interessarti. Lo standard [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) ammette i token semi-fungibili, particolarmente utili nel campo del gioco. Più di recente, è stato proposto l'[EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) per rendere notevolmente più efficiente la coniazione dei NFT. Questo standard permette di coniare tutti i NTF desiderati in un'unica transazione!
+La maggior parte degli NFT è costruita utilizzando uno standard coerente, noto come [ERC-721](/developers/docs/standards/tokens/erc-721/). Tuttavia, esistono altri standard che potrebbero interessarti. Lo standard [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) ammette i token semi-fungibili, particolarmente utili nel campo del gioco. Più di recente, è stato proposto l'[EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) per rendere notevolmente più efficiente la coniazione degli NFT. Questo standard permette di coniare tutti gli NTF che vuoi in un'unica transazione!
 
 ## Lettura consigliate {#further-reading}
 
@@ -388,7 +401,7 @@ Si ipotizza che la persona media che effettua lo staking da casa utilizzi un per
 
 Gli 87.897 validatori che operano da casa equivalgono a 16.300 utenti che consumano ~1,64 megawatt di energia.
 
-Gli altri validatori sono gestiti da operatori di custodia, quali scambi e servizi di staking. Si può presumere che utilizzino 100w per 5,5 validatori. S tratta di una sovrastima generale, per sicurezza.
+Gli altri validatori sono gestiti da operatori di custodia, quali scambi e servizi di staking. Si può presumere che consumino 100w per 5,5 validatori. Si tratta di una sovrastima generale, con margine di sicurezza.
 
 In totale, Ethereum con il proof-of-stake consuma quindi qualcosa come 2,62 megawatt, circa lo stesso di una piccola città americana.
 
@@ -402,7 +415,7 @@ A settembre 2020 hanno elaborato 140.839.000.000 transazioni – [Report finanzi
 
 #### 3. Consumo energetico per 100.000 transazioni su una rete di proof-of-stake frammentata {#fn-3}
 
-Si stima che gli aggiornamenti di scalabilità consentiranno alla rete di elaborare tra le 25.000 e le 100.000 transazioni al secondo, con [100.000 come il massimo teorico al momento](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698).
+Si stima che gli aggiornamenti di scalabilità consentiranno alla rete di elaborare tra le 25.000 e le 100.000 transazioni al secondo, con [100.000 come massimo teorico al momento](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698).
 
 [Vitalik Buterin sulle transazioni per secondo potenziali con lo sharding](https://twitter.com/VitalikButerin/status/1312905884549300224)
 
@@ -419,16 +432,16 @@ In 104,2 secondi, la rete Ethereum utilizzerà la seguente quantità di energia:
 
 Ci sono 86.400 secondi in un giorno, quindi `14.400 / 86.400 = 0,1666666667kWh` al secondo.
 
-Se lo moltiplichiamo per il tempo necessario per elaborare 100.000 transazioni: `0,1666666667 * 104,2 = 17,3666666701 kWh`.
+Se moltiplichiamo ciò per la quantità di tempo impiegata per elaborare 100.000 transazioni: `0.1666666667 * 104.2 = 17.3666666701 kWh`.
 
 Ciò equivale all'**11,6554809866%** dell'energia consumata dalla stessa quantità di transazioni con Visa.
 
 E ricorda, questo si basa sulla quantità minima di transazioni che Ethereum potrà gestire al secondo. Se Ethereum raggiunge il suo potenziale di 100.000 transazioni al secondo, 100.000 transazioni consumerebbero 0,1666666667 kWh.
 
-In altre parole, se Visa ha gestito 140.839.000.000 di transazioni a un costo di 149 kWh per 100.000 transazioni, pari a 209.850.110 kWh di energia consumata per l'anno.
+In altre parole, se Visa gestisse 140.839.000.000 di transazioni a un costo di 149 kWh per 100.000 transazioni, consumerebbe 209.850.110 kWh di energia all'anno.
 
-Ethereum in un solo anno consuma 5.256.000 kWh. con un potenziale di 788.940.000.000 - 3.153.600.000.000 transazioni elaborate in quel periodo.
+Ethereum in un anno consuma 5.256.000 kWh. Con un potenziale di 788.940.000.000 - 3.153.600.000.000 transazioni elaborate in quel periodo.
 
 <InfoBanner emoji=":evergreen_tree:">
-  Se pensi che questi dati siano errati o possano essere resi più accurati, ti invitiamo ad aprire una segnalazione o un PR. Queste sono stime del team di ethereum.org effettuate usando informazioni pubblicamente accessibili e il design pianificato di Ethereum. Esse non costituiscono una promessa ufficiale dell'Ethereum Foundation. 
+  Se pensi che questi dati siano errati o possano essere resi più accurati, ti invitiamo ad aprire una segnalazione o un PR. Queste sono stime del team di ethereum.org effettuate usando informazioni pubblicamente accessibili e il design pianificato di Ethereum. Esse non costituiscono una promessa ufficiale dell'Ethereum Foundation.
 </InfoBanner>

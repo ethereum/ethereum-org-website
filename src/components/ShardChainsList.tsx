@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import CardList, { CardListItem } from "./CardList"
 import { useIntl } from "react-intl"
 
@@ -19,7 +19,10 @@ const ShardChainsList: React.FC<IProps> = () => {
         "page-upgrade-article-title-sharding-is-great",
         intl
       ),
-      description: "Vitalik Buterin",
+      description: translateMessageId(
+        "page-upgrade-article-author-vitalik-buterin",
+        intl
+      ),
       link: "https://vitalik.ca/general/2021/04/07/sharding.html",
     },
     {
@@ -27,7 +30,10 @@ const ShardChainsList: React.FC<IProps> = () => {
         "page-upgrade-article-title-rollup-roadmap",
         intl
       ),
-      description: "Vitalik Buterin",
+      description: translateMessageId(
+        "page-upgrade-article-author-vitalik-buterin",
+        intl
+      ),
       link: "https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698",
     },
     {
@@ -35,8 +41,11 @@ const ShardChainsList: React.FC<IProps> = () => {
         "page-upgrade-article-title-two-point-oh",
         intl
       ),
-      description: "Ethos.dev",
-      link: "https://ethos.dev/beacon-chain/",
+      description: translateMessageId(
+        "page-upgrade-article-author-ethos-dev",
+        intl
+      ),
+      link: "https://web.archive.org/web/20220719213551/https://ethos.dev/beacon-chain/",
     },
     {
       title: translateMessageId(
@@ -48,6 +57,17 @@ const ShardChainsList: React.FC<IProps> = () => {
         intl
       ),
       link: "https://blog.ethereum.org/2020/03/27/sharding-consensus/",
+    },
+    {
+      title: translateMessageId(
+        "page-upgrade-article-title-hitchhikers-guide-to-ethereum",
+        intl
+      ),
+      description: translateMessageId(
+        "page-upgrade-article-author-delphi-digital",
+        intl
+      ),
+      link: "https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum",
     },
   ]
 

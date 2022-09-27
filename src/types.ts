@@ -1,3 +1,5 @@
+import { IGatsbyImageData } from "gatsby-plugin-image"
+
 import type { Messages } from "./interfaces"
 import type { Lang } from "./utils/languages"
 import { TranslationKey } from "./utils/translations"
@@ -44,7 +46,7 @@ export type ForbidOptional<T = {}> = {
 }
 
 type OptionalImageProp = {
-  image: string
+  image: IGatsbyImageData
   alt: string
 }
 

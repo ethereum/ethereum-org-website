@@ -1,7 +1,7 @@
 // Libraries
 import React, { useState } from "react"
-import { getImage, GatsbyImage } from "gatsby-plugin-image"
-import styled from "styled-components"
+import { GatsbyImage } from "gatsby-plugin-image"
+import styled from "@emotion/styled"
 
 // Components
 import ButtonLink from "../ButtonLink"
@@ -37,6 +37,7 @@ import GreenCheck from "../../assets/staking/green-check-product-glyph.svg"
 
 // Utils
 import { trackCustomEvent } from "../../utils/matomo"
+import { getImage } from "../../utils/image"
 
 // Styles
 const Container = styled.table`
@@ -525,8 +526,8 @@ const featureDropdownItems = [
     icon: <ERC20Support />,
   },
   {
-    label: "EIP-1559 support",
-    value: "EIP-1559 support",
+    label: "Fee optimization",
+    value: "Fee optimization",
     filterKey: "eip_1559_support",
     category: "feature",
     icon: <Eip1559 />,
@@ -539,8 +540,8 @@ const featureDropdownItems = [
     icon: <BuyCrypto />,
   },
   {
-    label: "Withdraw crypto",
-    value: "Withdraw crypto",
+    label: "Sell for fiat",
+    value: "Sell for fiat",
     filterKey: "withdraw_crypto",
     category: "trade_and_buy",
     icon: <WithdrawCrypto />,
@@ -792,6 +793,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                   <div>
                     <Image
                       image={getImage(data[wallet.image_name])!}
+                      alt=""
                       objectFit="contain"
                     />
                   </div>
@@ -970,7 +972,7 @@ const WalletMoreInfo = ({ wallet, filters, idx }) => {
             </Features>
           </WalletMoreInfoCategory>
           <WalletMoreInfoCategory>
-            <h4>Trade & buy</h4>
+            <h4>Buy crypto / Sell for fiat</h4>
             <Features>
               {orderedFeatureDropdownItems.map((feature) => {
                 if (feature.category === "trade_and_buy")

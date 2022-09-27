@@ -1,5 +1,6 @@
 import React from "react"
-import styled, { useTheme } from "styled-components"
+import { useTheme } from "@emotion/react"
+import styled from "@emotion/styled"
 
 const Container = styled.div`
   display: flex;

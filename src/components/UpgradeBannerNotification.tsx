@@ -1,8 +1,8 @@
 import React from "react"
 import BannerNotification from "./BannerNotification"
-import Emoji from "./Emoji"
+import Emoji from "./OldEmoji"
 import Link from "./Link"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 const StyledBannerNotification = styled(BannerNotification)`
   display: flex;

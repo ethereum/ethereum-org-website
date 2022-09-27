@@ -5,9 +5,15 @@ lang: en
 sidebar: true
 ---
 
-**Note that Ethash is Ethereum's proof-of-work mining algorithm. Proof-of-work mining will be switched off completely at [The Merge](/upgrades/merge) at which point Ethereum will be secured using a [proof-of-stake](/developers/docs/consensus-mechanisms/pos) mechanism instead.**
+<InfoBanner emoji=":wave:">
+   Ethash was Ethereum's proof-of-work mining algorithm. Proof-of-work has now been **switched off entirely** and Ethereum is now secured using [proof-of-stake](/developers/docs/consensus-mechanisms/pos) instead. Read more on <a href="/upgrades/merge/">The Merge</a>, <a href="/developers/docs/consensus-mechanisms/pos/">proof-of-stake</a> and <a href="/staking/">staking</a>. This page is for historical interest!  
+</InfoBanner>
 
-[Ethash](https://github.com/ethereum/wiki/wiki/Ethash) is a modified version of the [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashamoto) algorithm. Ethash proof-of-work is [memory hard](https://wikipedia.org/wiki/Memory-hard_function), which was thought to make the algorithm ASIC resistant, but ASIC Ethash-mining has since been shown to be possible. Memory hardness is achieved with a proof of work algorithm that requires choosing subsets of a fixed resource dependent on the nonce and block header. This resource (a few gigabytes in size) is called a DAG. The DAG is changed every 30000 blocks, a 125-hour window called an epoch (roughly 5.2 days) and takes a while to generate. Since the DAG only depends on block height, it can be pre-generated but if it's not, the client needs to wait until the end of this process to produce a block. If clients do not pre-generate and cache DAGs ahead of time the network may experience massive block delay on each epoch transition. Note that the DAG does not need to be generated for verifying the proof-of-work essentially allowing for verification with both low CPU and small memory.
+[Ethash](https://github.com/ethereum/wiki/wiki/Ethash) is a modified version of the [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashamoto) algorithm. Ethash proof-of-work is [memory hard](https://wikipedia.org/wiki/Memory-hard_function), which was thought to make the algorithm ASIC resistant. Ethash ASICs were eventually developed but GPU mining was still a viable option until proof-of-work was switched off. Ethash is still used to mine other coins on other non-Ethereum proof-of-work networks.
+
+## How does Ethash work? {#how-does-ethash-work}
+
+Memory hardness is achieved with a proof of work algorithm that requires choosing subsets of a fixed resource dependent on the nonce and block header. This resource (a few gigabytes in size) is called a DAG. The DAG is changed every 30000 blocks, a ~125-hour window called an epoch (roughly 5.2 days) and takes a while to generate. Since the DAG only depends on block height, it can be pre-generated, but if it's not the client needs to wait until the end of this process to produce a block. If clients do not pre-generate and cache DAGs ahead of time the network may experience massive block delay on each epoch transition. Note that the DAG does not need to be generated for verifying the proof-of-work essentially allowing for verification with both low CPU and small memory.
 
 The general route that the algorithm takes is as follows:
 

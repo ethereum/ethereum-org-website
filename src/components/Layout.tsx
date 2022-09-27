@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react"
 import { ApolloProvider } from "@apollo/client"
-import { ThemeProvider } from "styled-components"
-import styled from "styled-components"
+import { useColorModeValue } from "@chakra-ui/react"
+import { ThemeProvider } from "@emotion/react"
+import styled from "@emotion/styled"
 import { IntlProvider } from "react-intl"
 import { LocaleProvider } from "gatsby-theme-i18n"
 
-import { lightTheme, darkTheme, GlobalStyle } from "../theme"
+import { lightTheme, darkTheme } from "../theme"
 
+import BannerNotification from "./BannerNotification"
+import Link from "./Link"
+import Translation from "./Translation"
 import Footer from "./Footer"
 import VisuallyHidden from "./VisuallyHidden"
 import Nav from "./Nav"
@@ -20,6 +24,7 @@ import { SkipLink, SkipLinkAnchor } from "./SkipLink"
 import { ZenModeContext } from "../contexts/ZenModeContext"
 
 import { useKeyPress } from "../hooks/useKeyPress"
+import { useConfetti } from "../hooks/useConfetti"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { scrollIntoView } from "../utils/scrollIntoView"
@@ -27,7 +32,6 @@ import { isMobile } from "../utils/isMobile"
 
 import type { Context } from "../types"
 
-import "../styles/layout.css"
 import client from "../apollo"
 
 const ContentContainer = styled.div`
@@ -64,7 +68,13 @@ const Main = styled.main`
   flex-grow: 1;
 `
 
+const Centered = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
 export interface IProps {
+  children?: React.ReactNode
   data?: {
     pageData?: {
       frontmatter?: {
@@ -86,24 +96,18 @@ const Layout: React.FC<IProps> = ({
   pageContext,
   children,
 }) => {
-  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(false)
+  // TODO: tmp - for backward compatibility with old theme
+  const theme = useColorModeValue(lightTheme, darkTheme)
+
   const [isZenMode, setIsZenMode] = useState<boolean>(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState<boolean>(false)
-
+  const [isHomepage, setIsHomepage] = useState<boolean>(false)
+  const [isMergePage, setIsMergePage] = useState<boolean>(false)
   const locale = pageContext.locale
   const messages = require(`../intl/${locale}.json`)
 
   // Exit Zen Mode on 'esc' click
   useKeyPress(`Escape`, () => handleZenModeChange(false))
-
-  // set isDarkTheme based on browser/app user preferences
-  useEffect(() => {
-    if (localStorage && localStorage.getItem("dark-theme") !== null) {
-      setIsDarkTheme(localStorage.getItem("dark-theme") === "true")
-    } else {
-      setIsDarkTheme(window.matchMedia("(prefers-color-scheme: dark)").matches)
-    }
-  }, [])
 
   useEffect(() => {
     if (path.includes("/docs/")) {
@@ -122,14 +126,11 @@ const Layout: React.FC<IProps> = ({
       const idTag = location.hash.split("#")
       scrollIntoView(idTag[1])
     }
+    setIsHomepage(path === `/${locale}/`)
+    setIsMergePage(path === `/${locale}/upgrades/merge/`)
   }, [path, location])
 
-  const handleThemeChange = (): void => {
-    setIsDarkTheme(!isDarkTheme)
-    if (localStorage) {
-      localStorage.setItem("dark-theme", String(!isDarkTheme))
-    }
-  }
+  useConfetti("confetti-easter-egg")
 
   const handleZenModeChange = (val?: boolean): void => {
     // Use 'val' param if provided. Otherwise toggle
@@ -140,8 +141,6 @@ const Layout: React.FC<IProps> = ({
       localStorage.setItem("zen-mode", String(newVal))
     }
   }
-
-  const theme = isDarkTheme ? darkTheme : lightTheme
 
   const isPageLanguageEnglish = pageContext.isDefaultLang
   const isPageContentEnglish = !!pageContext.isContentEnglish
@@ -158,10 +157,12 @@ const Layout: React.FC<IProps> = ({
 
   return (
     <LocaleProvider pageContext={pageContext}>
+      {/* our current react-intl types does not support react 18 */}
+      {/* TODO: once we upgrade react-intl to v6, remove this ts-ignore */}
+      {/* @ts-ignore */}
       <IntlProvider locale={locale!} key={locale} messages={messages}>
         <ApolloProvider client={client}>
           <ThemeProvider theme={theme}>
-            <GlobalStyle />
             <SkipLink hrefId="#main-content" />
             <TranslationBanner
               shouldShow={shouldShowTranslationBanner}
@@ -176,14 +177,25 @@ const Layout: React.FC<IProps> = ({
             />
             <ContentContainer>
               <VisuallyHidden isHidden={isZenMode}>
-                <Nav
-                  handleThemeChange={handleThemeChange}
-                  isDarkTheme={isDarkTheme}
-                  path={path}
-                />
+                <Nav path={path} />
                 {shouldShowSideNav && <SideNavMobile path={path} />}
               </VisuallyHidden>
+              <BannerNotification
+                shouldShow={isHomepage}
+                justify="center"
+                zIndex="1"
+                textAlign="center"
+              >
+                <div>
+                  <Translation id="merge-complete" />
+                  &nbsp;
+                  <Link to="/upgrades/merge">
+                    <Translation id="learn-more" />
+                  </Link>
+                </div>
+              </BannerNotification>
               <SkipLinkAnchor id="main-content" />
+              {isMergePage && <Centered id="confetti-easter-egg" />}
               <MainContainer>
                 {shouldShowSideNav && (
                   <VisuallyHidden isHidden={isZenMode}>

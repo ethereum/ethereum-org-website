@@ -382,9 +382,27 @@
     "to": "https://www.ethereumbrasil.com/",
     "sponsor": null,
     "location": "São Paulo, Brazil",
-    "description": "A event dedicated to support the construction of the brazilian web3 builder community.",
-    "startDate": "2022-09-27",
-    "endDate": "2022-09-29"
+    "description": "We are building both a hub for regional projects with big ambitions; and, a gateway for local and international brands to connect with the Ethereum Brasil builder community.",
+    "startDate": "2022-09-09",
+    "endDate": "2022-09-11"
+  },
+  {
+    "title": "Arab Blockchain Week 2022",
+    "to": "https://www.arabblockchainweek.com/",
+    "sponsor": null,
+    "location": "Hybrid",
+    "description": "ABW22 is a week-long online and in-person gathering that will feature all blockchain events targeting Arab regions. The decentralized community-organized initiative aspires to support the growth of blockchain and crypto adoption across the Arab region",
+    "startDate": "2022-10-01",
+    "endDate": "2022-10-08"
+  },
+  {
+    "title": "Ethereum Zurich",
+    "to": "https://www.ethree.ch/ethereumzurich/",
+    "sponsor": null,
+    "location": "Zurich, Switzerland",
+    "description": "UX Hackathon, Ethereum Zurich is a wallet UX hackathon exploring innovative ways of implementing the HOPR protocol into the MetaMask wallet.",
+    "startDate": "2022-09-16",
+    "endDate": "2022-09-16"
   },
   {
     "title": "ETHBogotá",
@@ -393,6 +411,15 @@
     "location": "Bogotá, Colombia",
     "description": "Join for ETHGlobal's return to South America and kick off Devcon in the perfect way, by building.",
     "startDate": "2022-10-07",
+    "endDate": "2022-10-09"
+  },
+  {
+    "title": "Leading Privacy Alliance Conference",
+    "to": "https://www.leadingprivacy.com/devcon",
+    "sponsor": null,
+    "location": "Bogotá, Colombia",
+    "description": "This event will bring together the brightest minds of privacy during DevCon in Bogota.",
+    "startDate": "2022-10-09",
     "endDate": "2022-10-09"
   },
   {
@@ -484,5 +511,41 @@
     "description": "The Ethereum dev conference in Dubai on everything DeFi, NFTs, EVM scaling, layers 2 and more with a focus on decentralization and community projects.",
     "startDate": "2023-03-14",
     "endDate": "2023-03-16"
+  },
+  {
+    "title": "The First Hackathon around Privacy",
+    "to": "https://www.leadingprivacy.com/istanbul",
+    "sponsor": null,
+    "location": "Turkey, Istanbul",
+    "description": "We will celebrate privacy and discuss latest findings & development, as well as must haves and upcoming opportunities of the Ethereum Ecosystem.",
+    "startDate": "2023-04-29",
+    "endDate": "2023-04-30"
+  },
+  {
+    "title": "ETHMiami",
+    "to": "https://ethmiami.net/",
+    "sponsor": null,
+    "location": "Miami, USA",
+    "description": "Web3 IRL Hackathon & Ethereum Cultural Fest of the Year.",
+    "startDate": "2022-11-26",
+    "endDate": "2022-11-30"
+  },
+  {
+    "title": "ETHBrno",
+    "to": "https://ethbrno.cz",
+    "sponsor": null,
+    "location": "Brno, Czech Republic",
+    "description": "Lunarpunk hackathon focused on privacy and security. We believe that privacy is a fundamental human right. And good privacy needs good security foundations.",
+    "startDate": "2022-11-11",
+    "endDate": "2022-11-13"
+  },
+  {
+    "title": "Web3SD",
+    "to": "http://web3.sd",
+    "sponsor": null,
+    "location": "San Diego, CA",
+    "description": "A Web3 conference for everyone!",
+    "startDate": "2022-10-22",
+    "endDate": "2022-10-22"
   }
 ]

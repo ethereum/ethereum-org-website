@@ -266,7 +266,7 @@ ethers.utils.formatEther(balance)
 
 **Alchemyweb3 -** **_Wrapper per Web3.js con nuovi tentativi automatici e API migliorate._**
 
-- [Documentazione](https://docs.alchemyapi.io/documentation/alchemy-web3)
+- [Documentazione](https://docs.alchemy.com/reference/api-overview)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
 ## Letture consigliate {#further-reading}

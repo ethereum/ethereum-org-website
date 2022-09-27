@@ -69,9 +69,19 @@ _Tipik olarak hayır kurumları, işçi kolektifleri ve girişim kulüpleri gibi
 
 [MolochDAO](http://molochdao.com/) – MolochDAO, Ethereum projelerini finanse etmeye odaklıdır. Üyelik için bir teklif gerektirirler, bu sayede grup potansiyel imtiyaz sahipleri hakkında bilinçli kararlar vermek için yeterli deneyim ve sermayeye sahip olup olmadığınızı değerlendirir. Serbest piyasada bir DAO'ya erişim satın alamazsınız.
 
+### İtibara dayalı üyelik {#reputation-based-membership}
+
+İtibar, katılımın kanıtını temsil eder ve DAO'da oy kullanma yetkisi verir. Token veya paylaşıma dayalı üyeliğin aksine, itibara dayalı DAO'lar mülkiyeti, katkıda bulunanlara devretmez. İtibar satın alınamaz, devredilemez veya başkası tarafından temsil edilemez; DAO üyeleri katılım yoluyla itibar kazanmalıdır. Zincir üzerinde oylama izinsizdir ve potansiyel üyeler, DAO'ya katılmak için serbestçe teklif gönderebilir ve katkıları karşılığında ödül olarak itibar ve token almayı talep edebilir.
+
+_Protokollerin ve merkeziyetsiz uygulamaların merkeziyetsiz gelişimi ve yönetişimi için kullanılır, ancak aynı zamanda hayır kurumları, işçi kolektifleri, yatırım kulüpleri vb. gibi çeşitli kuruluşlar için de çok uygundur._
+
+#### Meşhur bir örnek {#reputation-example}
+
+[DXdao](https://DXdao.eth.link) – DXdao, 2019'dan beri merkeziyetsiz protokolleri yöneten ve uygulamalar oluşturan küresel bağımsız bir kolektiftir. Fonları koordine etmek ve yönetmek için itibara dayalı yönetişim ve holografik konsensüsten yararlanır, bu da hiç kimsenin geleceğini etkileme yolunu satın alamayacağı anlamına gelir.
+
 ## DAO'lar nasıl çalışır? {#how-daos-work}
 
-Bir DAO'nun belkemiği onun akıllı sözleşmesidir. Sözleşme, organizasyonun kurallarını belirler ve grubun hazinesini tutar. Sözleşmenin Ethereum'da yayınlandığı andan itibaren kimse oylama olmadan kuralları değiştiremez. Birisi koddaki kurallara veya mantığa uymayan bir şey yapmaya çalışırsa, başarılı olamaz. Ve hazinenin de akıllı sözleşme tarafından belirlenmesi, kimsenin grubun onayı olmadan parayı harcayamayacağı anlamına gelir. Bu, DAO'ların merkezi bir otoriteye ihtiyacı olmadığı anlamına gelir. Bir merkezi otoritenin yerine grup, kararları ortaklaşa verir ve ödemeler oylama geçince otomatik olarak yetkilendirilir.
+Bir DAO'nun belkemiği onun akıllı sözleşmesidir. Sözleşme, organizasyonun kurallarını belirler ve grubun hazinesini tutar. Sözleşmenin Ethereum'da yayınlandığı andan itibaren kimse oylama olmadan kuralları değiştiremez. Birisi koddaki kurallara veya mantığa uymayan bir şey yapmaya çalışırsa, başarılı olamaz. Ve hazinenin de akıllı sözleşme tarafından belirlenmesi, kimsenin grubun onayı olmadan parayı harcayamayacağı anlamına gelir. Bu, DAO'ların merkezi bir otoriteye ihtiyacı olmadığı anlamına gelir. Bunun yerine, grup kararları toplu olarak alır ve oylar geçtiğinde ödemeler otomatik olarak yetkilendirilir.
 
 Bu, akıllı sözleşmelerin Ethereum'da yayınlandıktan sonra kurcalanamaz olmaları sayesinde mümkündür. İnsanlar fark etmeden kodu (yani DAO'ların kurallarını) değiştiremezsiniz çünkü her şey halka açıktır.
 
@@ -90,19 +100,19 @@ Ethereum, birkaç nedenden dolayı DAO'lar için mükemmel bir temeldir:
 
 ## Bir DAO başlatma veya DAO'ya katılma {#join-start-a-dao}
 
-### Bir DAO'ya katılma {#join-a-dao}
+### Bir DAO'ya katıl {#join-a-dao}
 
 - [Ethereum topluluk DAO'ları](/community/get-involved/#decentralized-autonomous-organizations-daos)
 - [DAOHaus'un DAO listesi](https://app.daohaus.club/explore)
 
-### Bir DAO başlatma {#start-a-dao}
+### Bir DAO başlat {#start-a-dao}
 
 - [DAOHaus ile bir DAO çağırma](https://app.daohaus.club/summon)
 - [Aragon tarafından güçlendirilmiş bir DAO oluşturma](https://aragon.org/product)
 - [Bir koloni başlatma](https://colony.io/)
-- [DAOStack ile bir DAO oluşturma](https://daostack.io/)
+- [DAOstack'in holografik konsensüsüyle bir DAO oluşturun](https://alchemy.daostack.io/daos/create)
 
-## Daha fazla okuma {#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 ### DAO Makaleleri {#dao-articles}
 
@@ -111,6 +121,7 @@ Ethereum, birkaç nedenden dolayı DAO'lar için mükemmel bir temeldir:
 - [Bir DAO nedir ve amacı nedir?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [DAO Destekli bir Dijital Topluluk Nasıl Başlatılır](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [Bir DAO nedir?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
+- [Holografik Uzlaşma Nedir?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
 
 ### Videolar {#videos}
 

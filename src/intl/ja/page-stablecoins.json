@@ -134,7 +134,7 @@
   "page-stablecoins-top-coins-intro": "時価総額は",
   "page-stablecoins-top-coins-intro-code": "存在するトークンの合計数にトークンあたりの価値を掛けたものです。この一覧は動的で、ここにリストされているプロジェクトは必ずしもethereum.orgチームによって承認されていません。",
   "page-stablecoins-types-of-stablecoin": "動作の仕組み: ステーブルコインの種類",
-  "page-stablecoins-usdc-banner-body": "USDcはおそらく最も有名な不換紙幣担保型のステーブルコインです。その価値はおよそ1ドルで、Circle と Coinbaseによって裏付けされています。",
+  "page-stablecoins-usdc-banner-body": "USDCは、おそらく最も有名なフィアット型のステーブルコインです。価値はおよそ1ドルで、CircleとCoinbaseにより発行されています。",
   "page-stablecoins-usdc-banner-learn-button": "USDCについて学ぶ",
   "page-stablecoins-usdc-banner-swap-button": "ETHをUSDCに交換する",
   "page-stablecoins-usdc-banner-title": "USDC",
@@ -142,5 +142,7 @@
   "page-stablecoins-why-stablecoins": "なぜステーブルコインなのか？",
   "page-stablecoins-how-they-work-button": "動作の仕組み",
   "page-stablecoins-why-stablecoins-body": "ETHはビットコインと同じく、新しい技術なので価格が変動します。そのため、頻繁に使うのは控えた方がいいかもしれません。ステーブルコインは、従来の通貨の価値を反映して、イーサリアムで使える安定したお金へのアクセスを提供します。",
-  "page-stablecoins-more-defi-button": "分散型金融(DeFi)の詳細"
+  "page-stablecoins-more-defi-button": "分散型金融(DeFi)の詳細",
+  "page-stablecoins-tools-title": "ステーブルコインについての詳細",
+  "page-stablecoins-tools-stablecoinswtf-description": "Stablecoins.wtfは、最有力のステーブルコインの歴史的な市場データ、統計、および教育コンテンツを備えたダッシュボードを提供しています。"
 }
