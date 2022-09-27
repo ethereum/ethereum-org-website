@@ -1,24 +1,13 @@
-import React from "react"
-import { Button, ButtonProps } from "@chakra-ui/react"
+import styled from "@emotion/styled"
 
-const NakedButton: React.FC<ButtonProps> = ({ children, ...props }) => (
-  <Button
-    appearance="none"
-    bg="inherit"
-    border="none"
-    color="inherit"
-    display="inline-block"
-    fontFamily="inherit"
-    padding="initial"
-    cursor="pointer"
-    _hover={{
-      bg: "inherit",
-      color: "inherit",
-    }}
-    {...props}
-  >
-    {children}
-  </Button>
-)
-
+const NakedButton = styled.button`
+  appearance: none;
+  background: none;
+  border: none;
+  color: inherit;
+  display: inline-block;
+  font: inherit;
+  padding: initial;
+  cursor: pointer;
+`
 export default NakedButton
