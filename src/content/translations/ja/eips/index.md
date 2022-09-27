@@ -2,7 +2,6 @@
 title: イーサリアム改善提案 (EIP)
 description: イーサリアム改善提案(EIP)を理解するために必要な基本的な情報
 lang: ja
-sidebar: true
 ---
 
 # イーサリアム改善提案 (EIP)入門 {#introduction-to-ethereum-improvement-proposals-eips}

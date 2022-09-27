@@ -2,7 +2,6 @@
 title: Meccanismi di consenso
 description: Spiegazione dei protocolli di consenso nei sistemi distribuiti e ruolo che svolgono in Ethereum.
 lang: it
-sidebar: true
 ---
 
 Per le blockchain come Ethereum, che sono essenzialmente database distribuiti, i nodi della rete devono essere in grado di raggiungere un accordo sullo stato corrente del sistema. Questo risultato si ottiene utilizzando meccanismi di consenso.

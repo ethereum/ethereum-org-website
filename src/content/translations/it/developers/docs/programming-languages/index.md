@@ -2,7 +2,6 @@
 title: Linguaggi di programmazione
 description:
 lang: it
-sidebar: true
 ---
 
 Spesso si crede erroneamente che gli sviluppatori debbano scrivere Smart Contract per sviluppare su Ethereum. Non è vero. Uno degli aspetti positivi della rete e della community Ethereum è che si può [partecipare](/community/) usando praticamente qualsiasi linguaggio di programmazione.

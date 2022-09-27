@@ -4,7 +4,6 @@ description: Ein Überblick über NFTs auf Ethereum
 lang: de
 template: use-cases
 emoji: ":frame_with_picture:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/infrastructure_transparent.png
 alt: Ein ETH-Logo abgebildet als Hologramm

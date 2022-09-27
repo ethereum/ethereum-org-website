@@ -2,7 +2,6 @@
 title: Aggiungere prodotti o servizi di staking
 description: La politica che usiamo quando aggiungiamo prodotti o servizi di staking a ethereum.org
 lang: it
-sidebar: true
 ---
 
 # Aggiungere prodotti o servizi di staking {#adding-staking-products-or-services}

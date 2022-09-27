@@ -2,7 +2,6 @@
 title: Histoire et fourches d'Ethereum
 description: Historique de la blockchain Ethereum, y compris les avancées majeures, les événements clés et les fourches.
 lang: fr
-sidebar: true
 sidebarDepth: 1
 ---
 

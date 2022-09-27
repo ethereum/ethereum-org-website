@@ -2,7 +2,6 @@
 title: Что такое Web3 и почему это важно?
 description: "Web3 — новый этап в эволюции Интернета: введение в тему и почему это важно."
 lang: ru
-sidebar: true
 ---
 
 # Введение в Web3 {#introduction}

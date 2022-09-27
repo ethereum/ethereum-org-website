@@ -3,7 +3,6 @@ title: A Beacon Chain
 description: Saiba mais sobre a Beacon Chain — a melhoria que introduziu a prova de participação no Ethereum.
 lang: pt-br
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: A Beacon Chain não muda nada sobre o Ethereum que usamos hoje.
 summaryPoint2: Coordenará a rede, servindo de camada de consenso.

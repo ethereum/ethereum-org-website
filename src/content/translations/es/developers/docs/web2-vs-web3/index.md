@@ -2,7 +2,6 @@
 title: Comparación entre web2 y web3
 description:
 lang: es
-sidebar: true
 ---
 
 Web2 se refiere a la versión de Internet que la mayoría de nosotros conocemos hoy. Internet está dominada por compañías que prestan servicios a cambio de sus datos personales. Web3, en el contexto de Ethereum, se refiere a las aplicaciones descentralizadas que se ejecutan en la cadena de bloques. Estas son aplicaciones que permiten a cualquiera participar sin comercializar sus datos personales.

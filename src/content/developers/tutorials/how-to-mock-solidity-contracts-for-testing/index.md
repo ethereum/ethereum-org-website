@@ -3,7 +3,6 @@ title: How to mock Solidity smart contracts for testing
 description: Why you should make fun of your contracts when testing
 author: Markus Waas
 lang: en
-sidebar: true
 tags: ["solidity", "smart contracts", "testing", "mocking"]
 skill: intermediate
 published: 2020-05-02

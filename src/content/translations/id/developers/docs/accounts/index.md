@@ -2,7 +2,6 @@
 title: Akun Ethereum
 description: Penjelasan tentang akun Ethereum - struktur datanya dan hubungannya dengan kriptografi pasangan kunci.
 lang: id
-sidebar: true
 ---
 
 Akun Ethereum adalah entitas dengan saldo eter (ETH) yang dapat mengirim transaksi di Ethereum. Akun dapat dikontrol pengguna atau digunakan sebagai kontrak pintar.

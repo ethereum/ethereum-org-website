@@ -2,7 +2,6 @@
 title: Reti di sviluppo
 description: Panoramica delle reti di sviluppo e degli strumenti disponibili per creare applicazioni Ethereum.
 lang: it
-sidebar: true
 ---
 
 Quando si crea un'applicazione Ethereum con Smart Contract, è consigliabile eseguirla prima su una rete locale per vedere come funziona prima di distribuirla.

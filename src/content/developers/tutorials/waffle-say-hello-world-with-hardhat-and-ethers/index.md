@@ -6,7 +6,6 @@ tags:
   ["waffle", "smart contracts", "solidity", "testing", "hardhat", "ethers.js"]
 skill: basic
 lang: en
-sidebar: true
 published: 2020-10-16
 ---
 

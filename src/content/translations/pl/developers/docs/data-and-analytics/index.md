@@ -2,7 +2,6 @@
 title: Dane i analityka
 description: Jak uzyskać analizy i dane on-chain do wykorzystania w Twoich aplikacjach zdecentralizowanych
 lang: pl
-sidebar: true
 ---
 
 ## Wprowadzenie {#Introduction}

@@ -3,7 +3,6 @@ title: Menggunakan WebSockets
 description: Panduan untuk menggunakan WebSocket dan Alchemy untuk membuat permintaan JSON-RPC dan berlangganan ke aksi.
 author: "Elan Halpern"
 lang: id
-sidebar: true
 tags:
   - "alchemy"
   - "websocket"

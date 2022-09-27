@@ -4,7 +4,6 @@ description: 以太坊上的非同质化代币简介
 lang: zh
 template: use-cases
 emoji: ":frame_with_picture:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/infrastructure_transparent.png
 alt: 通过全息图显示的以太币徽标。

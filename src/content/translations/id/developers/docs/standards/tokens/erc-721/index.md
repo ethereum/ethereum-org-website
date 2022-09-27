@@ -2,7 +2,6 @@
 title: Standar Token Non-Fungible ERC-721
 description:
 lang: id
-sidebar: true
 ---
 
 ## Pendahuluan {#introduction}

@@ -2,7 +2,6 @@
 title: Zero-knowledge proofs
 description: An non-technical introduction to zero-knowledge proofs for beginners.
 lang: en
-sidebar: true
 ---
 
 ## What are zero-knowledge proofs? {#what-are-zk-proofs}

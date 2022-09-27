@@ -4,7 +4,6 @@ description: نگاهی کلی به NFTهای بر پایه اتریوم
 lang: fa
 template: use-cases
 emoji: ":frame_with_picture:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/infrastructure_transparent.png
 alt: لوگوی اتر که از طریق هولوگرام نمایش داده شده‌ است.

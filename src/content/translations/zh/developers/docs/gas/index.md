@@ -2,8 +2,6 @@
 title: Gas 和费用
 description:
 lang: zh
-sidebar: true
-preMergeBanner: true
 ---
 
 Gas 对以太坊网络至关重要。 正是这种燃料使它能够运行，正如车辆需要汽油一样。

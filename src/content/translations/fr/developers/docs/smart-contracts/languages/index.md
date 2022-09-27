@@ -2,7 +2,6 @@
 title: Langages du contrat intelligent
 description: "Présentation et comparaison des deux principaux langages de contrat intelligent : Solidity et Vyper"
 lang: fr
-sidebar: true
 ---
 
 Un aspect important d'Ethereum est que les contrats intelligents peuvent être programmés en utilisant des langages relativement conviviaux pour les développeurs. Si vous maitrisez Python ou n'importe quel [langage d'accolades](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), vous pouvez trouver un langage avec une syntaxe qui vous sera familière.

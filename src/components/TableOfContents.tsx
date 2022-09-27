@@ -371,6 +371,7 @@ export interface IProps {
   className?: string
   slug?: string
   editPath?: string
+  hideEditButton?: boolean
   isMobile?: boolean
 }
 
@@ -380,6 +381,7 @@ const TableOfContents: React.FC<IProps> = ({
   className,
   slug,
   editPath,
+  hideEditButton = false,
   isMobile = false,
 }) => {
   const { isZenMode, handleZenModeChange } = useContext(ZenModeContext)
@@ -405,12 +407,12 @@ const TableOfContents: React.FC<IProps> = ({
 
   const activeHash = useActiveHash(titleIds)
 
+  // Exclude <h1> from TOC
+  if (items?.length === 1) {
+    items = items[0].items!
+  }
   if (!items) {
     return null
-  }
-  // Exclude <h1> from TOC
-  if (items.length === 1) {
-    items = items[0].items!
   }
   if (isMobile) {
     return (
@@ -423,12 +425,11 @@ const TableOfContents: React.FC<IProps> = ({
   }
 
   const shouldShowZenModeToggle = slug?.includes("/docs/")
-  const shouldShowEditButtom = !!editPath
 
   return (
     <Aside className={className}>
       <OuterList>
-        {shouldShowEditButtom && (
+        {!hideEditButton && (
           <ButtonContainer>
             <ButtonLink to={editPath} variant="outline" hideArrow mt={0}>
               <ButtonContent>

@@ -2,7 +2,6 @@
 title: Contribuire
 description: Scopri i vari modi in cui puoi contribuire a ethereum.org
 lang: it
-sidebar: true
 ---
 
 # Contribuire a ethereum.org {#contributing-to-ethereumorg}

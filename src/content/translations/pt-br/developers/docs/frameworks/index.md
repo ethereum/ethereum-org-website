@@ -2,7 +2,6 @@
 title: Dapp Desenvolvimento de Infraestrutura
 description: Explore as vantagens de frameworks e compare as opções disponíveis.
 lang: pt-br
-sidebar: true
 ---
 
 ## Introdução aos frameworks {#introduction-to-frameworks}

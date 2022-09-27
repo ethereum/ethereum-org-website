@@ -2,7 +2,6 @@
 title: Dovada-muncii (PoW)
 description: O explicație a protocolului de consens „dovada-muncii” și a rolului său în Ethereum.
 lang: ro
-sidebar: true
 incomplete: true
 ---
 

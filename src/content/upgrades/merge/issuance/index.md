@@ -2,7 +2,6 @@
 title: How The Merge impacts ETH supply
 description: Breakdown on how The Merge will impact ETH supply
 lang: en
-sidebar: true
 ---
 
 # How The Merge impacts ETH supply {#how-the-merge-impacts-ETH-supply}

@@ -2,7 +2,6 @@
 title: Доказательство владения (PoS)
 description: Объяснение протокола доказательства владения и его роли в Ethereum.
 lang: ru
-sidebar: true
 incomplete: true
 ---
 

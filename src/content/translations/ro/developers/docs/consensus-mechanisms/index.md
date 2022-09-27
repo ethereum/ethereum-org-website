@@ -2,7 +2,6 @@
 title: Mecanisme de consens
 description: O explicație a protocoalelor de consens în sistemele distribuite și a rolului pe care acestea îl joacă în Ethereum.
 lang: ro
-sidebar: true
 incomplete: true
 ---
 

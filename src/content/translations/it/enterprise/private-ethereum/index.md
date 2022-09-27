@@ -2,7 +2,6 @@
 title: Ethereum privata per le imprese
 description: Risorse per applicazioni aziendali sulle blockchain private di Ethereum.
 lang: it
-sidebar: true
 ---
 
 # Ethereum privata per le imprese {#private-ethereum-for-enterprise}

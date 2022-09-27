@@ -1,7 +1,6 @@
 ---
 title: Language resources
 description: Non-english resources to learn about Ethereum
-sidebar: true
 lang: en
 ---
 

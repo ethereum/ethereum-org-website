@@ -10,7 +10,6 @@ tags:
   - "contrats intelligents"
 skill: beginner
 lang: fr
-sidebar: true
 published: 2021-04-22
 ---
 

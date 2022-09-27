@@ -4,7 +4,6 @@ description: Ethereum'daki DAO'lara genel bakış
 lang: tr
 template: use-cases
 emoji: ":handshake:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/use-cases/dao-2.png
 alt: Bir teklif üzerinde oy kullanan bir DAO'nun temsili.

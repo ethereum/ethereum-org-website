@@ -1,7 +1,6 @@
 ---
 title: Sprachressourcen
 description: Ressourcen in nicht englischer Sprache, um mehr über Ethereum zu erfahren
-sidebar: true
 lang: de
 ---
 

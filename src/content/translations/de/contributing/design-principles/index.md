@@ -2,7 +2,6 @@
 title: Designprinzipien
 lang: de
 description: Die Grundsätze hinter den Entscheidungen über Design und Inhalt von ethereum.org
-sidebar: true
 ---
 
 # Unsere Designgrundsätze {#contributing-to-ethereumorg-}

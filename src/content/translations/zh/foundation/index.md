@@ -1,7 +1,7 @@
 ---
 title: 以太坊基金会
 description: 了解以太坊基金会（EF），一个致力于支持以太坊和相关技术的非营利组织。
-sidebar: false
+hideEditButton: true
 lang: zh
 ---
 

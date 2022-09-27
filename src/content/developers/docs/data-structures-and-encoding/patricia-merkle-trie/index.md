@@ -2,7 +2,6 @@
 title: Patricia Merkle Trees
 description: Introduction to Patricia Merkle Tries.
 lang: en
-sidebar: true
 sidebarDepth: 2
 ---
 

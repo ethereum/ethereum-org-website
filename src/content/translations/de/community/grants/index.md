@@ -1,7 +1,6 @@
 ---
 title: Ethereum Foundation und Förderprogramme der Community
 description: Eine Auflistung der Förderprogramme im gesamten Ethereum-Ökosystem.
-sidebar: true
 lang: de
 ---
 
