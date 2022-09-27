@@ -6,7 +6,6 @@ import { MdClose } from "react-icons/md"
 import FocusTrap from "focus-trap-react"
 // Component imports
 import Translation from "./Translation"
-import NakedButton from "./NakedButton"
 // SVG imports
 import FeedbackGlyph from "../assets/feedback-glyph.svg"
 // Utility imports
@@ -27,11 +26,11 @@ const FixedDot: React.FC<FixedDotProps> = ({
 }) => {
   const size = "3rem"
   return (
-    <NakedButton
+    <Button
       w={size}
       h={size}
       borderRadius="full"
-      bgColor="primary"
+      variant="solid"
       boxShadow="tableItemBox"
       position="sticky"
       bottom={{ base: `${bottomOffset + 1}rem`, lg: 4 }}
@@ -51,7 +50,7 @@ const FixedDot: React.FC<FixedDotProps> = ({
       {...props}
     >
       {children}
-    </NakedButton>
+    </Button>
   )
 }
 
@@ -169,7 +168,8 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
               textAlign="center"
               p={8}
             >
-              <NakedButton
+              <Button
+                variant="ghost"
                 onClick={handleClose}
                 aria-label={translateMessageId("close", intl)}
                 position="absolute"
@@ -187,7 +187,7 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
                 transition="transform 0.2s ease-in-out"
               >
                 <Icon as={MdClose} h={closeButtonSize} w={closeButtonSize} />
-              </NakedButton>
+              </Button>
 
               <Text fontWeight="bold" fontSize="xl" lineHeight={6}>
                 {feedbackSubmitted ? (
