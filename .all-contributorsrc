@@ -8566,7 +8566,8 @@
       "profile": "https://github.com/SavPhill",
       "contributions": [
         "content",
-        "doc"
+        "doc",
+        "code"
       ]
     },
     {
@@ -9025,6 +9026,15 @@
       "profile": "https://github.com/bt3gl",
       "contributions": [
         "doc"
+      ]
+    },
+    {
+      "login": "LuisUrrutia",
+      "name": "Luis Sebastian Urrutia Fuentes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3771248?v=4",
+      "profile": "https://github.com/LuisUrrutia",
+      "contributions": [
+        "code"
       ]
     }
   ],
