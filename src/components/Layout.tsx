@@ -165,22 +165,7 @@ const Layout: React.FC<IProps> = ({
                 <Nav path={path} />
                 {shouldShowSideNav && <SideNavMobile path={path} />}
               </VisuallyHidden>
-              {/* <BannerNotification
-                shouldShow={isHomepage}
-                justify="center"
-                zIndex="1"
-                textAlign="center"
-              >
-                <div>
-                  <Translation id="merge-complete" />
-                  &nbsp;
-                  <Link to="/upgrades/merge">
-                    <Translation id="learn-more" />
-                  </Link>
-                </div>
-              </BannerNotification> */}
               <SkipLinkAnchor id="main-content" />
-              {/* {isMergePage && <Centered id="confetti-easter-egg" />} */}
               <MainContainer>
                 {shouldShowSideNav && (
                   <VisuallyHidden isHidden={isZenMode}>
