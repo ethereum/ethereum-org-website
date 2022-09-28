@@ -1429,6 +1429,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center"><a href="https://lawlesx.vercel.app/"><img src="https://avatars.githubusercontent.com/u/52166437?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aniruddha Sil</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=lawlesx" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/bt3gl"><img src="https://avatars.githubusercontent.com/u/1130416?v=4?s=100" width="100px;" alt=""/><br /><sub><b>♡</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=bt3gl" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/LuisUrrutia"><img src="https://avatars.githubusercontent.com/u/3771248?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Luis Sebastian Urrutia Fuentes</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=LuisUrrutia" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
