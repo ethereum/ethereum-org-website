@@ -3,7 +3,6 @@ title: 挖矿算法
 description: 以太坊挖矿所用的算法的详细介绍
 lang: zh
 sidebar: true
-preMergeBanner: true
 ---
 
 以太坊挖矿曾使用过两种算法：Dagger Hashimoto 和 Ethash。 但 Dagger Hashimoto 从未用于以太坊主网，它在主网启动之前便已被 Ethash 所取代。 Dagger Hashimoto 是一种研发性质的挖矿算法，它为 Ethash 打下了基础。 但是作为以太坊发展中的一项重要创新，Dagger Hashimoto 算法也有其历史意义。 在预计将于 2022 年第三至第四季度进行的[以太坊合并](/upgrades/merge/)的过程中，以工作量为证明的挖矿方式将被停用，并被权益证明所取代。

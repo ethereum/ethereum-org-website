@@ -10,7 +10,6 @@ alt: Um logo Eth sendo exibido via holograma.
 summaryPoint1: Uma forma de representar qualquer coisa única como um ativo baseado no Ethereum.
 summaryPoint2: Os NFTs estão dando mais poder do que nunca aos criadores de conteúdo.
 summaryPoint3: Desenvolvido por contratos inteligentes na blockchain Ethereum.
-preMergeBanner: true
 ---
 
 Os NFTs estão atualmente tomando o mundo da arte digital e de colecionáveis de forma avassaladora. Os artistas digitais estão vendo suas vidas mudarem graças a enormes vendas para um novo público de criptomoedas. E as celebridades estão participando, pois têm uma nova oportunidade de se conectarem a seus fãs. Mas a arte digital é apenas uma maneira de usar NFTs. Realmente eles podem ser usados para representar a propriedade de qualquer bem único, como uma ação para um item no ambiente digital ou físico.
