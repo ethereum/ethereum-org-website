@@ -1,10 +1,10 @@
+import { Flex, Heading, Icon, Text } from "@chakra-ui/react"
+import { FaGithub } from "react-icons/fa"
 import React from "react"
 import Link from "./Link"
 import ButtonLink from "./ButtonLink"
 
 import Translation from "./Translation"
-import { Flex, Heading, Icon, Text } from "@chakra-ui/react"
-import { FaGithub } from "react-icons/fa"
 
 export interface IProps {
   editPath: string
@@ -13,10 +13,9 @@ export interface IProps {
 const CallToContribute: React.FC<IProps> = ({ editPath }) => (
   <Flex
     bg="ednBackground"
-    alignItems="center"
+    align="center"
     mt={8}
-    borderWidth="1px"
-    borderStyle="solid"
+    border="1px"
     borderColor="primary"
     borderRadius="base"
     boxShadow="inset 0 -2px 0 0 var(--eth-colors-primary400)"
@@ -80,7 +79,7 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => (
           <Translation id="page-calltocontribute-link-2" />
         </Link>{" "}
       </Text>
-      <Flex
+      <ButtonLink
         as={ButtonLink}
         to={editPath}
         alignItems="center"
@@ -98,19 +97,12 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => (
           background: "secondaryButtonBackgroundActive",
           color: "secondaryButtonHoverColor",
         }}
+        leftIcon={
+          <Icon fill="background" w={6} h={6} as={FaGithub} name="github" />
+        }
       >
-        <Icon
-          fill="background"
-          mr={2}
-          w={6}
-          h={6}
-          as={FaGithub}
-          name="github"
-        />{" "}
-        <span>
-          <Translation id="page-calltocontribute-span" />
-        </span>
-      </Flex>
+        <Translation id="page-calltocontribute-span" />
+      </ButtonLink>
     </Flex>
   </Flex>
 )
