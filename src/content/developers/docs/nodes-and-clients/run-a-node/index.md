@@ -262,7 +262,7 @@ Besu also comes with a launcher option which will ask a series of questions and 
 besu --Xlauncher
 ```
 
-[Besu's documentation](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) contains additional options and configuration details including [a guide on preparing for The Merge](https://besu.hyperledger.org/en/latest/public-networks/how-to/prepare-for-the-merge/).
+[Besu's documentation](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) contains additional options and configuration details.
 
 ##### Running Erigon
 
@@ -303,7 +303,7 @@ Nethermind.Runner --config mainnet \
 
 Nethermind docs offer a [complete guide](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) on running Nethermind with consensus client.
 
-An execution client will initiate its core functions, chosen endpoints, and start looking for peers. After successfully discovering peers, the client starts synchronization. After the Merge, the execution client will await a connection from consensus client. Current blockchain data will be available once the client is successfully synced to the current state.
+An execution client will initiate its core functions, chosen endpoints, and start looking for peers. After successfully discovering peers, the client starts synchronization. The execution client will await a connection from consensus client. Current blockchain data will be available once the client is successfully synced to the current state.
 
 #### Starting the consensus client {#starting-the-consensus-client}
 
@@ -377,8 +377,6 @@ teku --network mainnet \
     --ee-endpoint http://localhost:8551 \
     --ee-jwt-secret-file "/path/to/jwtsecret" \
 ```
-
-Learn more about running a Merge ready setup with Teku in its [documentation](https://docs.teku.consensys.net/en/22.8.0/HowTo/Prepare-for-The-Merge/).
 
 When a consensus client connects to the execution client to read the deposit contract and identify validators, it also connects to other Beacon Node peers and begins syncing consensus slots from genesis. Once the Beacon Node reaches the current epoch, the Beacon API becomes usable for your validators. Learn more about [Beacon Node APIs](https://eth2docs.vercel.app/).
 
