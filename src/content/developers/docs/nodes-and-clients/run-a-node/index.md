@@ -212,7 +212,7 @@ Before starting the Ethereum client software, perform a last check that your env
 - System has the correct time and date.
 - Your router and firewall accept connections on listening ports. By default Ethereum clients use a listener (TCP) port and a discovery (UDP) port, both on 30303 by default.
 
-Run your client on a testnet first to help make sure everything is working correctly. [Running a Geth light node](/developers/tutorials/run-light-node-geth/) should help.
+Run your client on a testnet first to help make sure everything is working correctly.
 
 You need to declare any client settings that aren't default at the start. You can use flags or the config file to declare your preferred configuration. Set of features and config syntax of each client differs. Check out your client's documentation for the specifics.
 
