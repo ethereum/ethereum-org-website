@@ -218,13 +218,12 @@ You need to declare any client settings that aren't default at the start. You ca
 
 Execution and consensus clients communicate via an authenticated endpoint specified in [Engine API](https://github.com/ethereum/execution-apis/tree/main/src/engine). In order to connect to a consensus client, the execution client must generate a [`jwtsecret`](https://jwt.io/) at a known path. For security and stability reasons, clients should run on the same machine, and both clients must know this path as it is used to authenticate a local RPC connection between them. The execution client must also define a listening port for authenticated APIs.
 
-This token is generated automatically by the client software, but in some cases, e.g. during pre-Merge testing, you might need to do it yourself. You can generate it using [OpenSSL](https://www.openssl.org/):
+This token is generated automatically by the client software, you might need to do it yourself. You can generate it using [OpenSSL](https://www.openssl.org/):
 
 ```
 openssl rand -hex 32 > jwtsecret
 ```
 
-**Note that it is recommended to connect an execution and consensus client on a testnet only for now (e.g. Ropsten, Sepolia, Goerli) and await merge-ready client releases before replicating the process on Mainnet.**
 
 #### Running an execution client {#running-an-execution-client}
 
@@ -314,7 +313,6 @@ The consensus client also needs the path to the execution client's `jwt-secret` 
 
 If you plan to run a validator, make sure to add a configuration flag specifying the Ethereum address of the fee recipient. This is where ether rewards for your validator accumulate. Each consensus client has an option, e.g. `--suggested-fee-recipient=0xabcd1`, that takes an Ethereum address as an argument.
 
-**Note that we recommend waiting for merge-ready client releases before doing this on Ethereum Mainnet—for now just practice on a testnet such as Sepolia, Goerli or Ropsten**
 
 When starting a Beacon Node on a testnet, you can save significant syncing time by using a public endpoint for [Checkpoint sync](https://notes.ethereum.org/@launchpad/checkpoint-sync).
 
