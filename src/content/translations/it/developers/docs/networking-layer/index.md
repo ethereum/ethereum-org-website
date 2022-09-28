@@ -4,7 +4,6 @@ description: Un'introduzione al livello di rete di Ethereum.
 lang: it
 sidebar: true
 sidebarDepth: 2
-preMergeBanner: true
 ---
 
 Ethereum è una rete in peer-to-peer con migliaia di nodi che devono poter comunicare gli uni con gli altri, usando dei protocolli standardizzati. Il "livello di rete" è lo stack di protocolli che consentono a quei nodi di trovarsi reciprocamente e scambiare informazioni. Questo comprende l'attività di "gossip” di informazioni (comunicazione da uno a molti) sulla rete, oltre alle richieste di scambio e le risposte tra nodi specifici (comunicazione uno a uno). Ogni nodo deve aderire a specifiche regole di rete per essere certo di inviare e ricevere le informazioni corrette.

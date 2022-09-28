@@ -10,7 +10,6 @@ alt: Un logo Eth affiché par hologramme.
 summaryPoint1: Un moyen de représenter toute chose unique en tant qu'actif Ethereum.
 summaryPoint2: Les NFT offrent plus de possibilités que jamais aux créateurs de contenus.
 summaryPoint3: Alimentés par des contrats intelligents sur la blockchain Ethereum.
-preMergeBanner: true
 ---
 
 Les NFT révolutionnent actuellement le monde de l'art numérique et des objets de collection. La vie des artistes numériques est bouleversée avec les ventes énormes à un nouveau public crypto. Et les célébrités se joignent à elles car elles voient là une nouvelle occasion de se rapprocher de leurs fans. Mais l'art numérique n'est qu'une façon d'utiliser les NFT. Ils peuvent être utilisés pour attester de la propriété de n'importe quel actif unique, à l'instar d'un acte de propriété d'un objet dans la sphère numérique ou physique.

@@ -3,7 +3,6 @@ title: Nodi e client
 description: Panoramica dei nodi Ethereum e del software client, come configurare un nodo e perché farlo.
 lang: it
 sidebarDepth: 2
-preMergeBanner: true
 ---
 
 Ethereum è una rete distribuita di computer (noti come nodi) che eseguono software che possono verificare i blocchi e i dati delle transazioni. Per fare del tuo computer un nodo di Ethereum deve essere eseguita l'applicazione software, detta client.
