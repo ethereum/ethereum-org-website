@@ -80,23 +80,7 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => (
         </Link>{" "}
       </Text>
       <ButtonLink
-        as={ButtonLink}
         to={editPath}
-        alignItems="center"
-        justifyContent="center"
-        color="background"
-        bg="secondaryButtonBackground"
-        borderWidth="1px"
-        borderStyle="solid"
-        borderColor="secondaryButtonBorder"
-        _hover={{
-          background: "secondaryButtonBackgroundHover",
-          color: "secondaryButtonHoverColor",
-        }}
-        _active={{
-          background: "secondaryButtonBackgroundActive",
-          color: "secondaryButtonHoverColor",
-        }}
         leftIcon={
           <Icon fill="background" w={6} h={6} as={FaGithub} name="github" />
         }
