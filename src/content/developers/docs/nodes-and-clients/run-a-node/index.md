@@ -218,7 +218,7 @@ You need to declare any client settings that aren't default at the start. You ca
 
 Execution and consensus clients communicate via an authenticated endpoint specified in [Engine API](https://github.com/ethereum/execution-apis/tree/main/src/engine). In order to connect to a consensus client, the execution client must generate a [`jwtsecret`](https://jwt.io/) at a known path. For security and stability reasons, clients should run on the same machine, and both clients must know this path as it is used to authenticate a local RPC connection between them. The execution client must also define a listening port for authenticated APIs.
 
-This token is generated automatically by the client software, you might need to do it yourself. You can generate it using [OpenSSL](https://www.openssl.org/):
+This token is generated automatically by the client software, but in some cases, you might need to do it yourself. You can generate it using [OpenSSL](https://www.openssl.org/):
 
 ```
 openssl rand -hex 32 > jwtsecret
