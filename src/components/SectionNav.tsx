@@ -1,50 +1,40 @@
 import React from "react"
-import styled from "@emotion/styled"
-
-import Emoji from "./OldEmoji"
+import { Flex, Heading } from "@chakra-ui/react"
+import Emoji from "./Emoji"
 import Translation from "./Translation"
-
-const Card = styled.div`
-  display: flex;
-  flex-direction: column;
-  color: ${(props) => props.theme.colors.textTableOfContents};
-  margin-top: 3rem;
-  justify-content: space-between;
-  background: ${(props) => props.theme.colors.searchBackground};
-  border-radius: 4px;
-  border: 1px solid ${(props) => props.theme.colors.lightBorder};
-  padding: 1.5rem;
-  padding-bottom: 0rem;
-`
-
-const Title = styled.h2`
-  font-size: 1rem;
-  line-height: 140%;
-  letter-spacing: 0.04em;
-  margin-left: 1.5rem;
-  text-transform: uppercase;
-  color: ${(props) => props.theme.colors.textTableOfContents};
-`
-
-const TopContent = styled.div`
-  display: flex;
-  align-items: flex-start;
-`
 
 export interface IProps {
   children?: React.ReactNode
 }
 
 const SectionNav: React.FC<IProps> = ({ children }) => (
-  <Card>
-    <TopContent>
-      <Emoji text=":point_right:" mb={`1em`} />
-      <Title>
+  <Flex
+    direction="column"
+    color="textTableOfContents"
+    marginTop={12}
+    justify="space-between"
+    background="searchBackground"
+    borderRadius="base"
+    border="1px solid"
+    borderColor="lightBorder"
+    padding={6}
+    paddingBottom={0}
+  >
+    <Flex align="flex-start">
+      <Emoji text=":point_right:" mb={4} />
+      <Heading
+        as="h2"
+        fontSize="md"
+        lineHeight={7 / 5}
+        letterSpacing="wider"
+        marginLeft={6}
+        textTransform="uppercase"
+      >
         <Translation id="in-this-section" />
-      </Title>
-    </TopContent>
+      </Heading>
+    </Flex>
     {children}
-  </Card>
+  </Flex>
 )
 
 export default SectionNav
