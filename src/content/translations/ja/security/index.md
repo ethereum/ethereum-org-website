@@ -2,7 +2,6 @@
 title: イーサリアムのセキュリティと詐欺対策
 description: イーサリアムを安全に利用するために
 lang: ja
-sidebar: true
 ---
 
 # イーサリアムのセキュリティと詐欺対策 {#introduction}
@@ -262,7 +261,7 @@ _注:ステークされた ETH を表す、Rocket Pool の rETH、Lido の stETH
 
 <Divider />
 
-## さらに学びたい方へ {#further-reading}
+## 参考文献 {#further-reading}
 
 ### ウェブセキュリティ {#reading-web-security}
 

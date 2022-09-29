@@ -2,14 +2,13 @@
 title: Aggiungere prodotti
 description: La politica che usiamo per l'aggiunta di portafogli e dapp su ethereum.org
 lang: it
-sidebar: true
 ---
 
 _Una nota sull'aggiunta di portafogli: nell'ambito della [nostra tabella di marcia relativa al prodotto per il T1](https://github.com/ethereum/ethereum-org-website/issues/5105), stiamo perfezionando la pagina dei portafogli. Sarà incluso il perfezionamento dei criteri di inserimento per la pagina dei portafogli. Finché non avremo ricercato, stabilito e pubblicato i criteri di inserimento rivisti, non aggiungeremo attivamente alcun nuovo portafoglio al sito web._
 
 # Aggiungere prodotti su Ethereum {#adding-products}
 
-Chiunque è libero di suggerire nuovi portafogli e dapp da aggiungere ai contenuti su ethereum.org, ove ritenuto appropriato. **No, non elencheremo la tua dapp sulla nostra pagina iniziale** 😜
+Chiunque è libero di suggerire nuovi portafogli e dapp da aggiungere ai contenuti su ethereum.org, ove ritenuto appropriato. **No, non elencheremo la tua dapp sulla nostra pagina iniziale**
 
 Attualmente, portafogli e dapp vengono elencati su:
 
@@ -108,6 +107,6 @@ _Stiamo anche studiando altre opzioni per votare, in modo tale che la community 
 
 Se desideri aggiungere a ethereum.org un portafoglio o una dapp che soddisfa i criteri, crea un ticket su GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
   Crea un ticket
 </ButtonLink>

@@ -1,7 +1,6 @@
 ---
 title: Фонд Ethereum и программы грантов сообщества
 description: Список программ грантов в рамках экосистемы Ethereum.
-sidebar: true
 lang: ru
 ---
 
@@ -27,10 +26,9 @@ lang: ru
 В рамках этих проектов созданы их собственные гранты, направленные на разработку и тестирование собственных технологий.
 
 - [Программа грантов Aave](https://aavegrants.org/) — _гранты DAO от [Aave](https://aave.com/)_
-- [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) — _фонд экосистемы [Balancer](https://balancer.fi/)_
+- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) — _фонд экосистемы [Balancer](https://balancer.fi/)_
 - [Программа грантов Compound](https://compoundgrants.org/) — _финансовая экосистема [Compound](https://compound.finance/)_
 - [Программа грантов Consensys](https://consensys.net/grants/) — _гранты Ethereum и финансирование блокчейна [Consensys](https://consensys.net/)_
-- [Программа грантов dYdX](https://dydxgrants.com/) — _децентрализованная биржа [dYdX](https://dydx.exchange/)_
 - [Организация грантов Lido Ecosystem (LEGO)](https://lego.lido.fi/) — _финансовая экосистема [Lido](https://lido.fi/)_
 - [Программа грантов mStable](https://docs.mstable.org/advanced/grants-program) — _сообщество [mStable](https://mstable.org/)_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) — _экосистема [The Graph](https://thegraph.com/)_

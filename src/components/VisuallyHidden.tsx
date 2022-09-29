@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 // "Accessibility/SEO Friendly CSS Hiding"
 // Source: https://css-tricks.com/snippets/css/accessibilityseo-friendly-css-hiding/
@@ -33,6 +33,7 @@ const Container = styled.span`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   isHidden?: boolean
 }
 

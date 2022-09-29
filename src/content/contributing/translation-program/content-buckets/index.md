@@ -2,7 +2,6 @@
 title: Content buckets
 lang: en
 description: Which pages each content bucket of Ethereum.org contains
-sidebar: true
 ---
 
 # Content buckets {#content-buckets}

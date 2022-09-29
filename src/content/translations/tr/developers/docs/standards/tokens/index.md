@@ -2,7 +2,6 @@
 title: Token Standartları
 description:
 lang: tr
-sidebar: true
 incomplete: true
 ---
 

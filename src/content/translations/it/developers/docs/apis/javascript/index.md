@@ -2,7 +2,6 @@
 title: Librerie API JavaScript
 description: Introduzione alle librerie client JavaScript che consentono di interagire con la blockchain da un'applicazione.
 lang: it
-sidebar: true
 ---
 
 Per interagire con la blockchain Ethereum (ad esempio leggere i dati della blockchain e/o inviare transazioni alla rete), una web app deve connettersi a un nodo Ethereum.
@@ -266,7 +265,7 @@ ethers.utils.formatEther(balance)
 
 **Alchemyweb3 -** **_Wrapper per Web3.js con nuovi tentativi automatici e API migliorate._**
 
-- [Documentazione](https://docs.alchemyapi.io/documentation/alchemy-web3)
+- [Documentazione](https://docs.alchemy.com/reference/api-overview)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
 ## Letture consigliate {#further-reading}

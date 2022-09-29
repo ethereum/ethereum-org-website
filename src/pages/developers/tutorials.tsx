@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 
@@ -13,7 +13,7 @@ import PageMetadata from "../../components/PageMetadata"
 import Pill from "../../components/Pill"
 import Tag from "../../components/Tag"
 import TutorialTags from "../../components/TutorialTags"
-import Emoji from "../../components/Emoji"
+import Emoji from "../../components/OldEmoji"
 import {
   ButtonSecondary,
   FakeLink,
@@ -48,6 +48,7 @@ const TutorialCard = styled(Link)`
   width: 100%;
   color: #000000;
   &:hover {
+    text-decoration: none;
     border-radius: 4px;
     box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
     background: ${(props) => props.theme.colors.tableBackgroundHover};
@@ -230,7 +231,7 @@ interface IExternalTutorial {
 }
 
 interface ITutorial {
-  to?: string | null
+  to: string
   title: string
   description: string
   author: string
@@ -258,7 +259,7 @@ const TutorialsPage = ({
       to:
         tutorial?.fields?.slug?.substr(0, 3) === "/en"
           ? tutorial.fields.slug.substr(3)
-          : tutorial.fields?.slug,
+          : tutorial.fields?.slug || "/",
       title: tutorial?.frontmatter?.title || "",
       description: tutorial?.frontmatter?.description || "",
       author: tutorial?.frontmatter?.author || "",
@@ -414,7 +415,7 @@ const TutorialsPage = ({
               <Translation id="page-tutorial-new-github-desc" />
             </p>
             <GithubButton
-              isSecondary
+              variant="outline"
               to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_tutorial.md&title="
             >
               <GithubIcon name="github" />{" "}
@@ -436,7 +437,7 @@ const TutorialsPage = ({
               <Translation id="page-tutorial-pull-request-desc-3" />
             </p>
             <GithubButton
-              isSecondary
+              variant="outline"
               to="https://github.com/ethereum/ethereum-org-website/new/dev/src/content/developers/tutorials"
             >
               <GithubIcon name="github" />{" "}
@@ -462,7 +463,7 @@ const TutorialsPage = ({
                   key={name}
                   isActive={isActive}
                   shouldShowIcon={false}
-                  onSelect={handleTagSelect}
+                  onClick={handleTagSelect}
                   value={tag.name}
                 />
               )
@@ -562,7 +563,6 @@ export const query = graphql`
           skill
           published
           lang
-          preMergeBanner
         }
       }
     }

@@ -2,7 +2,6 @@
 title: Kendi Ethereum düğümünüzü başlatın
 description: Kendi Ethereum istemcinizi çalıştırmaya genel bir giriş.
 lang: tr
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -74,7 +73,7 @@ Stabil Mainnet istemci uygulamaları için yürütülebilir ikili programlar yay
 - [Geth](https://geth.ethereum.org/downloads/)
 - [OpenEthereum,](https://github.com/openethereum/openethereum/releases)
 - [Nethermind](https://downloads.nethermind.io/)
-- [Besu](https://pegasys.tech/solutions/hyperledger-besu/)
+- [Besu](https://besu.hyperledger.org/en/stable/)
 - [Erigon](https://github.com/ledgerwatch/erigon)
 
 **OpenEthereum'un [kullanımdan kaldırıldığını](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) ve artık sürdürülmediğini unutmayın**. Dikkatli kullanın ve tercihen başka bir istemci uygulamasına geçin.

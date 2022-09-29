@@ -2,7 +2,6 @@
 title: Esploratori dei blocchi
 description: Introduzione agli esploratori di blocchi, il tuo portale nel mondo dei dati della blockchain, dove puoi eseguire ricerche su informazioni su transazioni, account, contratti e altro ancora.
 lang: it
-sidebar: true
 sidebarDepth: 3
 ---
 

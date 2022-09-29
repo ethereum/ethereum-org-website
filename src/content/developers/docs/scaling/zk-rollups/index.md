@@ -2,7 +2,6 @@
 title: Zero-Knowledge rollups
 description: An introduction to zero-knowledge rollups—a scaling solution used by the Ethereum community.
 lang: en
-sidebar: true
 ---
 
 Zero-knowledge rollups (ZK-rollups) are layer 2 [scaling solutions](/developers/docs/scaling/) that increase throughput on Ethereum Mainnet by moving computation and state-storage off-chain. ZK-rollups can process thousands of transactions in a batch and then only post some minimal summary data to Mainnet. This summary data defines the changes that should be made to the Ethereum state and some cryptographic proof that those changes are correct.
@@ -31,7 +30,7 @@ The ZK-rollup's core architecture is made up of the following components:
 
 2. **Off-chain virtual machine (VM)**: While the ZK-rollup protocol lives on Ethereum, transaction execution and state storage happen on a separate virtual machine independent of the [EVM](/developers/docs/evm/). This off-chain VM is the execution environment for transactions on the ZK-rollup and serves as the secondary layer or "layer 2" for the ZK-rollup protocol. Validity proofs verified on Ethereum Mainnet guarantee the correctness of state transitions in the off-chain VM.
 
-ZK-rollups are "hybrid scaling solutions"—off-chain protocols that operate independently, but derive security from Ethereum. Specifically, the Ethereum network enforces the validity of state updates on the ZK-rollup and guarantees the availability of data behind every update to the rollup's state. As a result, ZK-rollups are considerably safer than pure off-chain scaling solutions, such as [sidechains](/developers/docs/scaling/sidechains/), which are responsible for their security properties.
+ZK-rollups are "hybrid scaling solutions"—off-chain protocols that operate independently but derive security from Ethereum. Specifically, the Ethereum network enforces the validity of state updates on the ZK-rollup and guarantees the availability of data behind every update to the rollup's state. As a result, ZK-rollups are considerably safer than pure off-chain scaling solutions, such as [sidechains](/developers/docs/scaling/sidechains/), which are responsible for their security properties, or [validiums](/developers/docs/scaling/validiums/), which also verify transactions on Ethereum with validity proofs, but store transaction data elsewhere.
 
 ZK-rollups rely on the main Ethereum protocol for the following:
 
@@ -65,7 +64,7 @@ Other ZK-rollups may rotate the operator role by using a [proof-of-stake](/devel
 
 As explained, transaction data is published on Ethereum as `calldata`. `calldata` is a data area in a smart contract used to pass arguments to a function and behaves similarly to [memory](/developers/docs/smart-contracts/anatomy/#memory). While `calldata` isn’t stored as part of Ethereum’s state, it persists on-chain as part of the Ethereum chain's [history logs](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs). `calldata` does not affect Ethereum's state, making it a cheap way to store data on-chain.
 
-The`calldata` keyword often identifies the smart contract method being called by a transaction and holds inputs to the method in the form of an arbitrary sequence of bytes. ZK-rollups use `calldata` to publish compressed transaction data on-chain; the rollup operator simply adds a new batch by calling the required function in the rollup contract and passes the compressed data as function arguments. This helps reduce costs for users since a large part of rollup fees go toward storing transaction data on-chain.
+The `calldata` keyword often identifies the smart contract method being called by a transaction and holds inputs to the method in the form of an arbitrary sequence of bytes. ZK-rollups use `calldata` to publish compressed transaction data on-chain; the rollup operator simply adds a new batch by calling the required function in the rollup contract and passes the compressed data as function arguments. This helps reduce costs for users since a large part of rollup fees go toward storing transaction data on-chain.
 
 ### State commitments {#state-commitments}
 
@@ -103,7 +102,7 @@ ZK-STARKs are 'transparent', as they can work without the trusted setup of a Com
 
 ZK-STARKs also provide more scalability because the time needed to prove and verify validity proofs increases _quasilinearly_ in relation to the complexity of the underlying computation. With ZK-SNARKs, proving and verification times scale _linearly_ in relation to the size of the underlying computation. This means ZK-STARKs require less time than ZK-SNARKs for proving and verifying when large datasets are involved, making them useful for high-volume applications.
 
-ZK-STARKs are also secure against quantum computers, while the Elliptic Curve Cryptography (ECC) used in ZK-SNARKs is widely believed to be susceptible to quantum computing attacks. The downside to ZK-STARKs is that they produce larger proof sizes, which are more expensive to verify on Ethereum. Also, they don't support recursion, which is key to scaling off-chain compuation with zero-knowledge proofs.
+ZK-STARKs are also secure against quantum computers, while the Elliptic Curve Cryptography (ECC) used in ZK-SNARKs is widely believed to be susceptible to quantum computing attacks. The downside to ZK-STARKs is that they produce larger proof sizes, which are more expensive to verify on Ethereum.
 
 #### How do validity proofs work in ZK-rollups? {#validity-proofs-in-zk-rollups}
 
@@ -244,7 +243,8 @@ Projects working on zkEVMs include:
 ## Further reading on ZK-rollups reading {#further-reading-on-zk-rollups}
 
 - [What Are Zero-Knowledge Rollups?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
-- [EthHub on zk-rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
+- [What are zero-knowledge rollups?](https://alchemy.com/blog/zero-knowledge-rollups)
+- [EthHub on ZK-rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 - [STARKs vs SNARKs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
 - [What is a zkEVM?](https://www.alchemy.com/overviews/zkevm)
 - [Intro to zkEVM](https://hackmd.io/@yezhang/S1_KMMbGt)

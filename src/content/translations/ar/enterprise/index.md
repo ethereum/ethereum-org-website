@@ -2,7 +2,6 @@
 title: مؤسسة
 description: إرشادات ومقالات وأدوات عن سلاسل كتل إيثريوم العامة والخاصة ذات الصلة بالمؤسسة
 lang: ar
-sidebar: true
 ---
 
 # إيثريوم للمؤسسات {#ethereum-for-enterprise}

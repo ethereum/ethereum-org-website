@@ -1,6 +1,6 @@
 import React from "react"
-import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import styled from "@emotion/styled"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
 import Link from "./Link"
 
@@ -36,6 +36,7 @@ const Card = styled(Link)`
   border: 1px solid ${(props) => props.theme.colors.lightBorder};
   text-decoration: none;
   &:hover {
+    text-decoration: none;
     box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
     background: ${(props) => props.theme.colors.tableBackgroundHover};
     transition: transform 0.1s;
@@ -96,7 +97,7 @@ const Logo = styled(GatsbyImage)`
 `
 
 export interface DataRow {
-  logo: string
+  logo: IGatsbyImageData
   coin: string
   apy: string
 }
@@ -104,7 +105,8 @@ export interface DataRow {
 export interface IProps {
   url: string
   background: string
-  image: string
+  image: IGatsbyImageData
+  alt?: string
   name: string
   description?: string
   data?: Array<DataRow>
@@ -114,13 +116,14 @@ const DataProductCard: React.FC<IProps> = ({
   url,
   background,
   image,
+  alt,
   name,
   description,
   data,
 }) => (
   <Card hideArrow={true} to={url}>
     <ImageWrapper background={background}>
-      <Image image={image} alt={`${name} logo`} />
+      <Image image={image} alt={alt ? alt : `${name} logo`} />
     </ImageWrapper>
     <Content>
       <div>
@@ -132,7 +135,7 @@ const DataProductCard: React.FC<IProps> = ({
           {data.map(({ logo, coin, apy }, idx) => (
             <DataRow key={idx}>
               <Box>
-                {logo && <Logo image={logo} />}
+                {logo && <Logo image={logo} alt="" />}
                 {coin}
               </Box>
               <div>{apy}% APY</div>

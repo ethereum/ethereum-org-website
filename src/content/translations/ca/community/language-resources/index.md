@@ -1,7 +1,6 @@
 ---
 title: Recursos d'idiomes
 description: Recursos de parla no anglesa per aprendre sobre Ethereum
-sidebar: true
 lang: ca
 ---
 

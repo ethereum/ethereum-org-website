@@ -2,7 +2,6 @@
 title: Pengantar ether
 description: Pengantar pengembang untuk mata uang kripto ether.
 lang: id
-sidebar: true
 ---
 
 ## Prasyarat {#prerequisites}

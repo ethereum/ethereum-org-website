@@ -2,7 +2,6 @@
 title: Ethereum dla deweloperów Phyton
 description: Dowiedz się, jak programować dla Ethereum przy użyciu projektów i narzędzi opartych na języku Python
 lang: pl
-sidebar: true
 incomplete: true
 ---
 

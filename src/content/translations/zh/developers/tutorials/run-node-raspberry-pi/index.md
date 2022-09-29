@@ -8,7 +8,6 @@ tags:
   - "共识层"
   - "节点"
 lang: zh
-sidebar: true
 skill: intermediate
 published: 2020-05-07
 source: r/ethereum

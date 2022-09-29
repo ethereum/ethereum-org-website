@@ -2,7 +2,6 @@
 title: Macchina virtuale Ethereum (EVM)
 description: Introduzione alla macchina virtuale Ethereum e al suo ruolo per quanto riguarda stato, transazioni e Smart Contract.
 lang: it
-sidebar: true
 ---
 
 La creazione di istanze fisiche dell’EVM non può essere paragonata allo scrivere codice per puntare a un cloud o a un’onda dell'oceano, ma _esiste_ come entità singola gestita da migliaia di computer collegati, che eseguono un client Ethereum.
@@ -33,7 +32,7 @@ Dato un vecchio stato valido `(S)` e un nuovo set di transazioni valide `(T)`, l
 
 ### Stato {#state}
 
-Nell'ambito di Ethereum, lo stato è un'enorme struttura di dati chiamata [albero di Merkle Patricia modificato](https://eth.wiki/en/fundamentals/patricia-tree), che tiene tutti gli [account](/developers/docs/accounts/) collegati tramite hash e riducibili a un singolo hash radice memorizzato sulla blockchain.
+Nell'ambito di Ethereum, lo stato è un'enorme struttura di dati chiamata [albero di Merkle Patricia modificato](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/), che tiene tutti gli [account](/developers/docs/accounts/) collegati tramite hash e riducibili a un singolo hash radice memorizzato sulla blockchain.
 
 ### Transazioni {#transactions}
 
@@ -57,7 +56,7 @@ Il bytecode compilato dello smart contract compilato viene eseguito come numero 
 
 Tutte le implementazioni dell'EVM devono rispettare le specifiche descritte nello Yellowpaper di Ethereum.
 
-Nei 5 anni di storia di Ethereum, l'EVM ha subito diverse revisioni, ed esistono diverse implementazioni dell'EVM in vari linguaggi di programmazione.
+Nei 7 anni di storia di Ethereum, l'EVM ha subito diverse revisioni, ed esistono diverse implementazioni dell'EVM in vari linguaggi di programmazione.
 
 Tutti i [client Ethereum](/developers/docs/nodes-and-clients/#execution-clients) includono un'implementazione dell'EVM. Inoltre, esistono diverse implementazioni standalone, tra cui:
 
@@ -65,7 +64,6 @@ Tutti i [client Ethereum](/developers/docs/nodes-and-clients/#execution-clients)
 - [evmone](https://github.com/ethereum/evmone) - _C++_
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
 - [eEVM](https://github.com/microsoft/eevm) - _C++_
-- [Hyperledger Burrow](https://github.com/hyperledger/burrow) - _Go_
 
 ## Letture consigliate {#further-reading}
 

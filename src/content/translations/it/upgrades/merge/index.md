@@ -3,7 +3,6 @@ title: La Fusione
 description: Scopri informazioni sulla Fusione; quando la Rete principale di Ethereum si unisce al sistema di proof-of-stake coordinato della Beacon Chain.
 lang: it
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: Alla fine l'attuale Mainnet di Ethereum si "fonderà" con il sistema proof-of-stake della Beacon Chain.
 summaryPoint2: Questo segnerà la fine del proof-of-work per Ethereum, e la completa transizione al proof-of-stake.

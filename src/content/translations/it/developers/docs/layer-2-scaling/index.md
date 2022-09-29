@@ -2,7 +2,6 @@
 title: Passaggio al livello 2
 description: Introduzione alle diverse opzioni di crescita attualmente in fase di sviluppo da parte della community Ethereum.
 lang: it
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 isOutdated: true
@@ -234,7 +233,7 @@ Combinano le parti migliori di diverse tecnologie di livello 2 e possono offrire
 
 **ZK rollup**
 
-- [EthHub on zk-rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
+- [EthHub on ZK-rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 
 **Optimistic rollup**
 

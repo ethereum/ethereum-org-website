@@ -2,7 +2,6 @@
 title: State Channels
 description: An introduction to state channels and payment channels as a scaling solution currently utilized by the Ethereum community.
 lang: en
-sidebar: true
 sidebarDepth: 3
 ---
 
@@ -74,7 +73,7 @@ After initializing the channel's state, peers interact by signing transactions a
 
 - The transaction which triggers the state transition (e.g., Alice sends 5 ETH to Bob)
 
-State updates in the channel are not broadcasted on-chain as is normally the case when users interact on Mainnet, which aligns with state channels' goal to minimize on-chain footprint. So long as participants agree on state updates, they are as final as an Ethereum transaction. Participants only need to depend on Mainnet's consensus if a dispute comes up.
+State updates in the channel are not broadcasted on-chain as is normally the case when users interact on Mainnet, which aligns with state channels' goal to minimize on-chain footprint. As long as participants agree on state updates, they are as final as an Ethereum transaction. Participants only need to depend on Mainnet's consensus if a dispute arises.
 
 ### Closing the channel {#closing-the-channel}
 

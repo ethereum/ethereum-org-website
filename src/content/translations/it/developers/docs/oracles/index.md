@@ -2,7 +2,6 @@
 title: Oracoli
 description: Gli oracoli aiutano a inserire dati del mondo reale in un'applicazione Ethereum perché gli Smart Contract non possono interrogare autonomamente i dati del mondo reale.
 lang: it
-sidebar: true
 incomplete: true
 ---
 

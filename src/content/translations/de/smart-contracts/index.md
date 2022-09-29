@@ -2,7 +2,6 @@
 title: Smart Contracts
 description: Eine nicht-technische Einführung in Smart Contracts
 lang: de
-sidebar: true
 ---
 
 # Einführung in Smart Contracts {#introduction-to-smart-contracts}

@@ -2,7 +2,6 @@
 title: Узлы и клиенты
 description: Немного об узлах Ethereum и клиентском программном обеспечении, а также о том, как настроить узел и почему вы должны это сделать.
 lang: ru
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -118,7 +117,7 @@ Ethereum — это распределенная сеть компьютеров
 | ----------------------------------------------------------------------- | -------- | --------------------- | ----------------------------------------------- | ----------------------- | -------------- |
 | [Geth](https://geth.ethereum.org/)                                      | Перейти  | Linux, Windows, macOS | Основная сеть, Görli, Rinkeby, Ropsten          | Снимок, полная          | Архив, обрезка |
 | [Nethermind](http://nethermind.io/)                                     | C#, .NET | Linux, Windows, macOS | Основная сеть, Görli, Ropsten, Rinkeby и другие | Быстрая, луч, архив     | Архив, обрезка |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)                | Java     | Linux, Windows, macOS | Основная сеть, Rinkeby, Ropsten, Görli и другие | Fast, Full              | Архив, обрезка |
+| [Besu](https://besu.hyperledger.org/en/stable/)                         | Java     | Linux, Windows, macOS | Основная сеть, Rinkeby, Ropsten, Görli и другие | Fast, Full              | Архив, обрезка |
 | [Erigon](https://github.com/ledgerwatch/erigon)                         | Перейти  | Linux, Windows, macOS | Основная сеть, Görli, Rinkeby, Ropsten          | Полная                  | Архив, обрезка |
 | [OpenEthereum (устарело)](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS | Основная сеть, Kovan, Ropsten и другие          | Warp, Full              | Архив, обрезка |
 

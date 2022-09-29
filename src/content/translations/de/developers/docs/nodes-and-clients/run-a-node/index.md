@@ -2,7 +2,6 @@
 title: Errichte deinen eigenen Ethereum-Node
 description: Allgemeine Einführung in den Betrieb einer eigenen Ethereum-Client-Instanz.
 lang: de
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -74,7 +73,7 @@ Ausführbare Binärdateien für stabile Mainnet-Client-Implementierungen können
 - [Geth](https://geth.ethereum.org/downloads/)
 - [OpenEthereum](https://github.com/openethereum/openethereum/releases)
 - [Nethermind](https://downloads.nethermind.io/)
-- [Besu](https://pegasys.tech/solutions/hyperledger-besu/)
+- [Besu](https://besu.hyperledger.org/en/stable/)
 - [Erigon](https://github.com/ledgerwatch/erigon)
 
 **Beachte, dass OpenEthereum [veraltet](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) ist und nicht mehr gewartet wird.** Verwende es mit Vorsicht und wechsle lieber zu einer anderen Client-Implementierung.

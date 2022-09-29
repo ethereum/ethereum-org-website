@@ -2,7 +2,6 @@
 title: Ethereum-beveiliging en -scampreventie
 description: Veilig blijven op Ethereum
 lang: nl
-sidebar: true
 ---
 
 # Ethereum-beveiliging en -scampreventie {#introduction}

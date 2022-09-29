@@ -2,7 +2,6 @@
 title: Normes de jetons
 description:
 lang: fr
-sidebar: true
 incomplete: true
 ---
 

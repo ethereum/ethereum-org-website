@@ -1,7 +1,7 @@
-import React, { useState } from "react"
-import styled from "styled-components"
+import React, { ReactNode, useState } from "react"
+import styled from "@emotion/styled"
 import { motion } from "framer-motion"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
 import Icon from "./Icon"
 
@@ -98,9 +98,10 @@ const ButtonContainer = styled(motion.div)`
 `
 
 export interface IProps {
-  image?: string
-  title: string
-  contentPreview: string
+  children?: React.ReactNode
+  image?: IGatsbyImageData
+  title: ReactNode
+  contentPreview: ReactNode
   background: string
   forceOpen: boolean
   className?: string
@@ -169,7 +170,7 @@ const ExpandableInfo: React.FC<IProps> = ({
   return (
     <Card background={background} className={className}>
       <Content>
-        {image && <GatsbyImage image={image} />}
+        {image && <GatsbyImage image={image} alt="" />}
         <TitleContent>
           <Question>
             <Header>

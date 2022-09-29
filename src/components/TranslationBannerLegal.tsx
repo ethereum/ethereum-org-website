@@ -1,10 +1,10 @@
 // Libraries
 import React, { useEffect, useState } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 // Component
 import { ButtonPrimary } from "./SharedStyledComponents"
-import Emoji from "./Emoji"
+import Emoji from "./OldEmoji"
 import Icon from "./Icon"
 import Translation from "./Translation"
 

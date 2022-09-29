@@ -2,7 +2,6 @@
 title: گره‌ها و کلاینت‌ها
 description: نگاهی اجمالی بر گره‌ها و نرم‌افزار کلاینت اتریوم، به علاوه‌ی نحوه‌ی راه‌اندازی یک گره و علت انجام آن.
 lang: fa
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -118,7 +117,7 @@ If you're more of a technical user, learn how to [spin up your own node](/develo
 | ------------------------------------------------------------------------- | --------------- | ----------------------- | -------------------------------------------- | ------------------- | ----------------------- |
 | [Geth](https://geth.ethereum.org/)                                        | Go              | لینوکس، ویندوز، مک‌اواس | شبکه‌ی اصلی، Görli،‏ Rinkeby،‏ Ropsten       | Snap, Full          | آرشیو، هرس‌شده (Pruned) |
 | [Nethermind](http://nethermind.io/)                                       | سی‌شارپ، دات‌نت | لینوکس، ویندوز، مک‌اواس | شبکه‌ی اصلی، Görli، Rinkeby، Ropsten و بیشتر | Fast, Beam, Archive | آرشیو، هرس‌شده (Pruned) |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)                  | جاوا            | لینوکس، ویندوز، مک‌اواس | Mainnet, Rinkeby, Ropsten, Görli, and more   | سریع، کامل          | آرشیو، هرس‌شده (Pruned) |
+| [Besu](https://besu.hyperledger.org/en/stable/)                           | جاوا            | لینوکس، ویندوز، مک‌اواس | Mainnet, Rinkeby, Ropsten, Görli, and more   | سریع، کامل          | آرشیو، هرس‌شده (Pruned) |
 | [Erigon](https://github.com/ledgerwatch/erigon)                           | Go              | لینوکس، ویندوز، مک‌اواس | شبکه‌ی اصلی، Görli، Rinkeby، Ropsten         | Full                | آرشیو، هرس‌شده (Pruned) |
 | [OpenEthereum (Deprecated)](https://github.com/openethereum/openethereum) | Rust            | لینوکس، ویندوز، مک‌اواس | شبکه‌ی اصلی، Kovan،‏ Ropsten و بیشتر         | Warp، کامل          | آرشیو، هرس‌شده (Pruned) |
 

@@ -10,7 +10,6 @@ tags:
   - "智能合约"
 skill: beginner
 lang: zh
-sidebar: true
 published: 2021-04-22
 ---
 

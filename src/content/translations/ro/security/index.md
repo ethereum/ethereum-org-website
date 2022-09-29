@@ -2,7 +2,6 @@
 title: Securitatea și prevenirea fraudelor pe Ethereum
 description: Cum să vă păstrați securitatea pe Ethereum
 lang: ro
-sidebar: true
 ---
 
 # Securitatea și prevenirea fraudelor pe Ethereum {#introduction}

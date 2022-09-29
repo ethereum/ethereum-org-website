@@ -2,7 +2,6 @@
 title: Execute seu próprio nó Ethereum
 description: Introdução geral para a execução da sua própria instância de um cliente Ethereum.
 lang: pt-br
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -74,7 +73,7 @@ Os binários executáveis para implementações do cliente estável na rede prin
 - [Geth](https://geth.ethereum.org/downloads/)
 - [OpenEthereum,](https://github.com/openethereum/openethereum/releases)
 - [Nethermind](https://downloads.nethermind.io/)
-- [Besu](https://pegasys.tech/solutions/hyperledger-besu/)
+- [Besu](https://besu.hyperledger.org/en/stable/)
 - [Erigon](https://github.com/ledgerwatch/erigon)
 
 **Note que o OpenEthereum [foi descontinuado](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) e não está mais sendo mantido.** Use-o com cuidado e de preferência mude para outra implementação do cliente.

@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
-import styled from "styled-components"
-import Emoji from "./Emoji"
+import styled from "@emotion/styled"
+import Emoji from "./OldEmoji"
 
 const StyledCard = styled.div`
   border-radius: 4px;
@@ -23,6 +23,7 @@ const Title = styled.p`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   emoji: string
   title?: ReactNode
   description: ReactNode

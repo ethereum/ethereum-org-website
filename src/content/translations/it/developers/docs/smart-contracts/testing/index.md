@@ -2,7 +2,6 @@
 title: Test degli Smart Contract
 description:
 lang: it
-sidebar: true
 incomplete: true
 ---
 

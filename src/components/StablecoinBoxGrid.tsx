@@ -1,8 +1,8 @@
 import React, { useState } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 import Link, { navigate } from "./Link"
-import Emoji from "./Emoji"
+import Emoji from "./OldEmoji"
 import Translation from "./Translation"
 import { isMobile } from "../utils/isMobile"
 
@@ -152,7 +152,7 @@ interface ILink {
   text: string
 }
 
-export interface IPropsGridItem {
+interface IPropsGridItem {
   description: string
   columnNumber: number
   rowNumber: number
@@ -259,8 +259,17 @@ const GridItem: React.FC<IPropsGridItem> = ({
   )
 }
 
+export interface IPropsBoxItem {
+  description: string
+  emoji: string
+  title: string
+  pros?: Array<string>
+  cons?: Array<string>
+  links: Array<ILink>
+}
+
 export interface IProps {
-  items: Array<IPropsGridItem>
+  items: Array<IPropsBoxItem>
 }
 
 const StablecoinBoxGrid: React.FC<IProps> = ({ items }) => {

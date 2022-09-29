@@ -2,7 +2,6 @@
 title: 集成开发环境 (IDE)
 description:
 lang: zh
-sidebar: true
 ---
 
 当建立一个[集成开发环境](https://wikipedia.org/wiki/Integrated_development_environment)时，以太坊上的应用编程类似于任何其他软件项目编程。 这里有许多选项可供选择，最后，请选择一个最适合您偏好的集成开发环境或代码编辑器。 对您的以太坊开发来说，最好的集成开发环境很可能就是您在传统软件开发中使用过的集成开发环境。
@@ -35,7 +34,6 @@ sidebar: true
 **Visual Studio Code -** **_以太坊官方支持的专业跨平台集成开发环境。_**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [以太坊区块链开发工具包](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain)
 - [Azure 区块链工作台](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
 - [代码示例](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)

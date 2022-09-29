@@ -2,7 +2,6 @@
 title: Kanali stanja
 description: Uvod v kanale stanja kot rešitev za razširljivost, ki jo trenutno uporablja skupnost Ethereum.
 lang: sl
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---

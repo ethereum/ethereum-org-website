@@ -2,7 +2,6 @@
 title: Bahasa pemrograman
 description:
 lang: id
-sidebar: true
 ---
 
 Kesalahpahaman yang umum adalah bahwa pengembang harus menulis kontrak pintar untuk membangun di Ethereum. Ini tidak benar. Salah satu kelebihan jaringan dan komunitas Ethereum adalah Anda bisa [berpartisipasi](/community/) dalam bahasa pemrograman mana pun.

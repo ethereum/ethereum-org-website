@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 import ButtonLink from "./ButtonLink"
@@ -100,7 +100,7 @@ const ProductList: React.FC<IProps> = ({ content, category }) => (
             <ItemDesc>{description}</ItemDesc>
           </LeftContainer>
           {link && (
-            <StyledButton isSecondary to={link}>
+            <StyledButton variant="outline" to={link}>
               <Translation id="page-dapps-ready-button" />
             </StyledButton>
           )}

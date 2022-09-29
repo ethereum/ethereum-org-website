@@ -1,7 +1,6 @@
 ---
 title: Yayasan Ethereum dan program hibah masyarakat
 description: Daftar program hibah di seluruh ekosistem Ethereum.
-sidebar: true
 lang: id
 ---
 
@@ -28,7 +27,7 @@ Proyek-proyek ini telah menciptakan hibah sendiri untuk proyek-proyek yang bertu
 
 - [TheGraph](https://airtable.com/shrdfvnFvVch3IOVm) – _ekosistem [The Graph](https://thegraph.com/)_
 - [Program Hibah Uniswap](https://www.unigrants.org/) – _komunitas [Uniswap](https://uniswap.org/)_
-- [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) – _Dana Ekosistem [Balancer](https://balancer.fi/)_
+- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _Dana Ekosistem [Balancer](https://balancer.fi/)_
 - [mStable](https://docs.mstable.org/advanced/grants-program) - _[komunitas](https://mstable.org/) mStable_
 
 ## Pendanaan kuadrat {#quadratic-funding}

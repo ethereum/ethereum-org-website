@@ -8,7 +8,6 @@ tags:
   - "noduri"
 skill: beginner
 lang: ro
-sidebar: true
 published: 2022-03-04
 ---
 

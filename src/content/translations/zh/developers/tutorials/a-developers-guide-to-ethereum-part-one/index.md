@@ -3,7 +3,6 @@ title: 面向 Python 开发者的以太坊介绍，第一部分
 description: 这是一篇介绍以太坊开发的文章，对那些熟悉 Python 编程语言的人来说尤其有用。
 author: Marc Garreau
 lang: zh
-sidebar: true
 tags:
   - "入门指南"
   - "python"
