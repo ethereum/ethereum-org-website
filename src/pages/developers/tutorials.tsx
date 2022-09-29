@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useMemo, useState } from "react"
 import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
@@ -256,18 +256,39 @@ const TutorialsPage = ({
   data,
   pageContext,
 }: PageProps<Queries.DevelopersTutorialsPageQuery, Context>) => {
-  const intl = useIntl()
-  const filteredTutorialsByLang = filterTutorialsByLang(
-    data.allTutorials.nodes,
-    externalTutorials,
-    pageContext.locale
+  const filteredTutorialsByLang = useMemo(
+    () =>
+      filterTutorialsByLang(
+        data.allTutorials.nodes,
+        externalTutorials,
+        pageContext.locale
+      ),
+    [pageContext.locale]
   )
-  const allTags = getSortedTutorialTagsForLang(filteredTutorialsByLang)
 
+  const intl = useIntl()
+  const [isModalOpen, setModalOpen] = useState(false)
   const [filteredTutorials, setFilteredTutorials] = useState(
     filteredTutorialsByLang
   )
-  const [selectedTags, setSelectedTags] = useState<string[]>([])
+  const [selectedTags, setSelectedTags] = useState<Array<string>>([])
+
+  const allTags = useMemo(
+    () => getSortedTutorialTagsForLang(filteredTutorials),
+    [filteredTutorials]
+  )
+
+  useEffect(() => {
+    let tutorials = filteredTutorialsByLang
+
+    if (selectedTags.length) {
+      tutorials = tutorials.filter((tutorial) => {
+        return selectedTags.every((tag) => (tutorial.tags || []).includes(tag))
+      })
+    }
+
+    setFilteredTutorials(tutorials)
+  }, [selectedTags])
 
   const handleTagSelect = (tagName: string) => {
     const tempSelectedTags = selectedTags
@@ -281,13 +302,6 @@ const TutorialsPage = ({
 
     setSelectedTags([...tempSelectedTags])
   }
-
-  // TODO: Update setFilteredTutorials with filteredTutorialsByLang filtered out by selectedTags
-  useEffect(() => {
-    console.log("CHANGE")
-  }, [selectedTags])
-
-  const [isModalOpen, setModalOpen] = useState(false)
 
   return (
     <StyledPage>

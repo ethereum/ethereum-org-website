@@ -4,11 +4,11 @@ import { Lang } from "./languages"
 
 // Take all tutorials, and return a list of tutorials for a specific locale
 export const filterTutorialsByLang = (
-  internalTutorials: Array<any>,
+  internalTutorials: any,
   externalTutorials: Array<IExternalTutorial>,
   locale: Lang
-) => {
-  const internalTutorialsMap = internalTutorials.map<any>((tutorial) => ({
+): Array<ITutorial> => {
+  const internalTutorialsMap = internalTutorials.map((tutorial) => ({
     to:
       tutorial?.fields?.slug?.substr(0, 3) === "/en"
         ? tutorial.fields.slug.substr(3)
@@ -61,10 +61,15 @@ export const filterTutorialsByLang = (
   return filteredTutorials
 }
 
-export const getSortedTutorialTagsForLang = (filteredTutorialsByLang) => {
-  const allTags = filteredTutorialsByLang.reduce((tags, tutorial) => {
-    return [...tags, ...tutorial.tags]
-  }, [])
+export const getSortedTutorialTagsForLang = (
+  filteredTutorialsByLang: Array<ITutorial> = []
+) => {
+  const allTags = filteredTutorialsByLang.reduce<Array<string>>(
+    (tags, tutorial) => {
+      return [...tags, ...(tutorial.tags || [])]
+    },
+    []
+  )
 
   const reducedTags = allTags.reduce((acc, tag) => {
     if (acc[tag]) {
