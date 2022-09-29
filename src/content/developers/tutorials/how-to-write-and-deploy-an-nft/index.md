@@ -234,7 +234,7 @@ Your `.env` should now look like this:
     API_URL="https://eth-goerli.g.alchemy.com/v2/your-api-key"
     PRIVATE_KEY="your-metamask-private-key"
 
-To actually connect these to our code, we’ll reference these variables in our hardhat.config.js file on step 13.
+To actually connect these to our code, we’ll reference these variables in our hardhat.config.js file in step 13.
 
 <InfoBanner isWarning={true}>
 Don't commit <code>.env</code>! Please make sure never to share or expose your <code>.env</code> file with anyone, as you are compromising your secrets in doing so. If you are using version control, add your <code>.env</code> to a <a href="https://git-scm.com/docs/gitignore">gitignore</a> file.
@@ -328,17 +328,17 @@ We’re finally ready to deploy our smart contract! Navigate back to the root of
 
 You should then see something like:
 
-    Contract deployed to address: 0x81c587EB0fE773404c42c1d2666b5f557C470eED
+    Contract deployed to address: 0x4C5266cCc4b3F426965d2f51b6D910325a0E7650
 
 If we go to the [Goerli etherscan](https://goerli.etherscan.io/) and search for our contract address we should be able to see that it has been deployed successfully. If you can't see it immediately, please wait a while as it can take some time. The transaction will look something like this:
 
-![View your transaction address on Etherscan](./etherscan-transaction.png)
+![View your transaction address on Etherscan](./etherscan-goerli-contract-creation.png)
 
 The From address should match your MetaMask account address and the To address will say “Contract Creation.” If we click into the transaction, we’ll see our contract address in the To field:
 
-![View your contract address on Etherscan](./etherscan-contract.png)
+![View your contract address on Etherscan](./etherscan-goerli-tx-details.png)
 
-Yasssss! You just deployed your NFT smart contract to the Ethereum chain!
+Yasssss! You just deployed your NFT smart contract to the Ethereum (testnet) chain!
 
 To understand what’s going on under the hood, let’s navigate to the Explorer tab in our [Alchemy dashboard](https://dashboard.alchemyapi.io/explorer). If you have multiple Alchemy apps make sure to filter by app and select “MyNFT”.
 
