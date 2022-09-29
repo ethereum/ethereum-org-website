@@ -1431,6 +1431,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/bt3gl"><img src="https://avatars.githubusercontent.com/u/1130416?v=4?s=100" width="100px;" alt="♡"/><br /><sub><b>♡</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=bt3gl" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/LuisUrrutia"><img src="https://avatars.githubusercontent.com/u/3771248?v=4?s=100" width="100px;" alt="Luis Sebastian Urrutia Fuentes"/><br /><sub><b>Luis Sebastian Urrutia Fuentes</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=LuisUrrutia" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/jakubalsoori"><img src="https://avatars.githubusercontent.com/u/93258205?v=4?s=100" width="100px;" alt="jakubalsoori"/><br /><sub><b>jakubalsoori</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=jakubalsoori" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://www.compassft.com/"><img src="https://avatars.githubusercontent.com/u/85337624?v=4?s=100" width="100px;" alt="Wenceslas Sanchez"/><br /><sub><b>Wenceslas Sanchez</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=wenceslas-sanchez" title="Documentation">📖</a></td>
     </tr>
   </tbody>
   <tfoot>
