@@ -547,5 +547,14 @@
     "description": "A Web3 conference for everyone!",
     "startDate": "2022-10-22",
     "endDate": "2022-10-22"
+  },
+  {
+    "title": "ETHLisbon",
+    "to": "https://www.ethlisbon.org",
+    "sponsor": null,
+    "location": "Lisbon, Portugal",
+    "description": "ETHLisbon is an Ethereum-focused hackathon bringing together the best Web 3.0 builders to the crypto capital of Europe.",
+    "startDate": "2022-10-28",
+    "endDate": "2022-10-30"
   }
 ]
