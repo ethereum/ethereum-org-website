@@ -266,17 +266,17 @@ const TutorialsPage = ({
     [pageContext.locale]
   )
 
+  const allTags = useMemo(
+    () => getSortedTutorialTagsForLang(filteredTutorialsByLang),
+    [filteredTutorialsByLang]
+  )
+
   const intl = useIntl()
   const [isModalOpen, setModalOpen] = useState(false)
   const [filteredTutorials, setFilteredTutorials] = useState(
     filteredTutorialsByLang
   )
   const [selectedTags, setSelectedTags] = useState<Array<string>>([])
-
-  const allTags = useMemo(
-    () => getSortedTutorialTagsForLang(filteredTutorials),
-    [filteredTutorials]
-  )
 
   useEffect(() => {
     let tutorials = filteredTutorialsByLang
