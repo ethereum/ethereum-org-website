@@ -5,8 +5,7 @@ import styled from "@emotion/styled"
 
 // Components
 import BannerNotification from "./BannerNotification"
-import Emoji from "./OldEmoji"
-import Icon from "./Icon"
+import Emoji from "./Emoji"
 import Link from "./Link"
 import Translation from "./Translation"
 
@@ -16,38 +15,8 @@ import { TranslationKey } from "../utils/translations"
 
 // Constants
 import { GATSBY_FUNCTIONS_PATH } from "../constants"
-
-const CloseIconContainer = styled.span`
-  position: absolute;
-  cursor: pointer;
-  top: 1.5rem;
-  right: 1.5rem;
-
-  & > svg {
-    fill: ${(props) => props.theme.colors.background};
-
-    &:hover path {
-      fill: ${(props) => props.theme.colors.background};
-    }
-  }
-`
-
-const StyledEmoji = styled(Emoji)`
-  margin-right: 1rem;
-  flex-shrink: 0;
-`
-
-const StyledBannerNotification = styled(BannerNotification)`
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  position: relative;
-  padding-right: 3rem;
-`
-
-const Span = styled.span`
-  padding-left: 5px;
-`
+import { Box, Center, IconButton, Wrap } from "@chakra-ui/react"
+import { CloseIcon } from "@chakra-ui/icons"
 
 interface CountdownRendererProps {
   days: number
@@ -55,6 +24,41 @@ interface CountdownRendererProps {
   minutes: number
   seconds: number
   completed: boolean
+}
+
+interface BannerWrapperProps {
+  isBannerVisible: boolean
+  onClose: () => void
+  children: JSX.Element
+}
+
+const BannerWrapper: React.FC<BannerWrapperProps> = ({
+  onClose,
+  isBannerVisible,
+  children,
+}) => {
+  return (
+    <BannerNotification shouldShow={isBannerVisible} position="relative">
+      <Center position="relative" paddingRight="2.5rem" flexWrap="wrap">
+        <Emoji
+          marginRight="1rem"
+          flexShrink={0}
+          text=":tada:"
+          w="1rem"
+          h="1rem"
+        />
+        {children}
+      </Center>
+      <IconButton
+        aria-label="Close Banner"
+        icon={<CloseIcon />}
+        onClick={onClose}
+        position="absolute"
+        top={0}
+        right={0}
+      />
+    </BannerNotification>
+  )
 }
 
 export interface IProps {
@@ -106,39 +110,35 @@ const ReleaseBanner: React.FC<IProps> = ({ storageKey }) => {
   }: CountdownRendererProps): React.ReactNode => {
     if (completed) {
       return (
-        <StyledBannerNotification shouldShow={show}>
-          <CloseIconContainer onClick={handleClose}>
-            <Icon name="close" />
-          </CloseIconContainer>
-          <StyledEmoji size={2} text=":tada:" />
-          <Translation
-            id={"london-upgrade-banner-released" as TranslationKey}
-          />
-          <Span>
-            <Link to="/history/#london">
-              <Translation id="learn-more" />
-            </Link>
-          </Span>
-        </StyledBannerNotification>
+        <BannerWrapper onClose={handleClose} isBannerVisible={show}>
+          <>
+            <Translation
+              id={"london-upgrade-banner-released" as TranslationKey}
+            />
+            <Box paddingLeft="5px">
+              <Link to="/history/#london">
+                <Translation id="learn-more" />
+              </Link>
+            </Box>
+          </>
+        </BannerWrapper>
       )
     } else {
       return (
-        <StyledBannerNotification shouldShow={show}>
-          <CloseIconContainer onClick={handleClose}>
-            <Icon name="close" />
-          </CloseIconContainer>
-          <StyledEmoji size={2} text=":tada:" />
-          <Translation id={"london-upgrade-banner" as TranslationKey} />
-          <Span>
-            {zeroPad(days, 2)}:{zeroPad(hours, 2)}:{zeroPad(minutes, 2)}:
-            {zeroPad(seconds, 2)}!
-          </Span>
-          <Span>
-            <Link to="/history/#london">
-              <Translation id="learn-more" />
-            </Link>
-          </Span>
-        </StyledBannerNotification>
+        <BannerWrapper onClose={handleClose} isBannerVisible={show}>
+          <>
+            <Translation id={"london-upgrade-banner" as TranslationKey} />
+            <Box paddingLeft="5px">
+              {zeroPad(days, 2)}:{zeroPad(hours, 2)}:{zeroPad(minutes, 2)}:
+              {zeroPad(seconds, 2)}!
+            </Box>
+            <Box paddingLeft="5px">
+              <Link to="/history/#london">
+                <Translation id="learn-more" />
+              </Link>
+            </Box>
+          </>
+        </BannerWrapper>
       )
     }
   }
