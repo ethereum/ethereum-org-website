@@ -3,7 +3,6 @@ title: シャードチェーン
 description: シャードチェーン - イーサリアムのトランザクション処理量を増やし、実行を容易にするネットワークのパーティション
 lang: ja
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: シャーディングは、イーサリアムのスケーラビリティと性能を向上させるための複数のフェーズにわたるアップグレードです。
 summaryPoint2: シャードチェーンは、アプリケーションやロールアップがデータを格納するための安価なストレージレイヤーを提供します。

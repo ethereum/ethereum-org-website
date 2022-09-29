@@ -4,7 +4,6 @@ description: An overview of how to get started solo staking your ETH
 lang: en
 template: staking
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../assets/staking/leslie-solo.png
 alt: Leslie the rhino on her own computer chip.
 sidebarDepth: 2

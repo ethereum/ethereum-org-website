@@ -2,7 +2,6 @@
 title: Introduzione allo stack di Ethereum
 description: Percorso all'interno dei vari livelli dello stack di Ethereum che indica anche come interagiscono.
 lang: it
-sidebar: true
 ---
 
 Come ogni stack di software, lo "stack di Ethereum" completo varia da progetto a progetto in base ai propri obiettivi.

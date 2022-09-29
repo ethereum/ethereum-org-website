@@ -2,7 +2,6 @@
 title: Ethereum untuk pengembang .NET
 description: Pelajari cara menjadi pengembang untuk Ethereum dengan proyek dan peralatan berbasis .NET
 lang: id
-sidebar: true
 incomplete: true
 ---
 

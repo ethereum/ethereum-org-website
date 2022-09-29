@@ -1,7 +1,6 @@
 ---
 title: رویدادهای اتریوم
 description: چگونه در انجمن اتریوم شرکت کنیم؟
-sidebar: true
 lang: fa
 ---
 

@@ -4,7 +4,6 @@ description: Una visión de las finanzas descentralizadas en Ethereum
 lang: es
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../assets/use-cases/defi.png
 alt: Un logo de Ethereum hecho de bloques de Lego.
 sidebarDepth: 2

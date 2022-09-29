@@ -2,7 +2,6 @@
 title: اثبات سهام (PoS)
 description: توضیحی درباره‌ی پروتکل اجماع اثبات سهام و نقش آن در اتریوم.
 lang: fa
-sidebar: true
 incomplete: true
 ---
 

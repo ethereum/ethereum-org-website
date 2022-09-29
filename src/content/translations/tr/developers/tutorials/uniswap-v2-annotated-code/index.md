@@ -2,7 +2,6 @@
 title: "Uniswap-v2 Sözleşmesine Genel Bakış"
 description: Uniswap-v2 sözleşmesi nasıl çalışır? Neden bu şekilde yazılmıştır?
 author: Ori Pomerantz
-sidebar: true
 tags:
   - "katılık"
   - "uniswap"

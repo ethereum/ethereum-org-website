@@ -2,7 +2,6 @@
 title: Введение в Ethereum
 description: Введение разработчика децентрализованных приложений в основные концепции Ethereum.
 lang: ru
-sidebar: true
 ---
 
 ## Что такое блокчейн? {#what-is-a-blockchain}

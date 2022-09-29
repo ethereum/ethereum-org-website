@@ -2,7 +2,6 @@
 title: Ethereum Python fejlesztőknek
 description: Tanulj meg Ethereumra fejleszteni Python alapú projektek és eszközök használatával
 lang: hu
-sidebar: true
 incomplete: true
 ---
 

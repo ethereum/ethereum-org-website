@@ -2,7 +2,6 @@
 title: Spin up your own Ethereum node
 description: General introduction to running your own instance of an Ethereum client.
 lang: en
-sidebar: true
 sidebarDepth: 2
 ---
 

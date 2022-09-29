@@ -4,7 +4,6 @@ description: An overview of decentralized science on Ethereum
 lang: en
 template: use-cases
 emoji: ":microscope:"
-sidebar: true
 sidebarDepth: 2
 image: ../../assets/future_transparent.png
 alt: ""
@@ -118,7 +117,6 @@ Explore projects and join the DeSci community.
 - [An Active Inference Ontology for Decentralized Science: from Situated Sensemaking to the Epistemic Commons](https://zenodo.org/record/6320575)
 - [DeSci: The Future of Research by Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Science Funding (Epilogue: DeSci and new crypto primitives) by Nadia](https://nadia.xyz/science-funding)
-
 
 ### Videos {#videos}
 

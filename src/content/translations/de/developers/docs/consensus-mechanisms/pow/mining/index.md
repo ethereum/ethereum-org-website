@@ -2,7 +2,6 @@
 title: Mining
 description: Eine Erklärung, wie "Mining" in Ethereum funktioniert und wie es dazu beiträgt, Ethereum sicher und dezentral zu halten.
 lang: de
-sidebar: true
 incomplete: true
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: イーサリアムのイベント
 description: イーサリアムコミュニティへの参加方法
-sidebar: true
 lang: ja
 ---
 

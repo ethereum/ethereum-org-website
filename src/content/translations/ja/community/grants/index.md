@@ -1,7 +1,6 @@
 ---
 title: イーサリアム財団とコミュニティの助成プログラム
 description: イーサリアムエコシステム全体の助成プログラムリスト
-sidebar: true
 lang: ja
 ---
 

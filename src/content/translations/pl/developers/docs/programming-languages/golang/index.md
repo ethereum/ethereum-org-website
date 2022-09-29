@@ -2,7 +2,6 @@
 title: Ethereum dla deweloperów Go
 description: Dowiedz się, jak programować dla Ethereum przy użyciu projektów i narzędzi w języku Go
 lang: pl
-sidebar: true
 incomplete: true
 ---
 

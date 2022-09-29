@@ -3,7 +3,6 @@ title: "Analiza contractului ERC-20"
 description: Ce conține contractul OpenZeppelin ERC-20 și de ce există?
 author: Ori Pomerantz
 lang: ro
-sidebar: true
 tags:
   - "solidity"
   - "erc-20"

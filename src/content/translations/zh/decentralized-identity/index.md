@@ -4,7 +4,6 @@ description: 什么是去中心化身份，它为什么很重要？
 lang: zh
 template: use-cases
 emoji: ":id:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/eth-gif-cat.png
 summaryPoint1: 传统身份系统有权对您的身份标识进行发布、维护和控制。

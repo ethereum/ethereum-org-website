@@ -2,7 +2,6 @@
 title: Pengantar Ethereum
 description: Pengantar pengembang dapp tentang konsep inti Ethereum.
 lang: id
-sidebar: true
 ---
 
 ## Apa itu blockchain? {#what-is-a-blockchain}

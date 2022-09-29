@@ -1,7 +1,6 @@
 ---
 title: Active areas of Ethereum research
 description: Explore different areas of open research and learn how to get involved.
-sidebar: true
 lang: en
 ---
 

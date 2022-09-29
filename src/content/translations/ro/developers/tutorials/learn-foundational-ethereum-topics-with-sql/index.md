@@ -13,7 +13,6 @@ tags:
   - "Gaz"
 skill: beginner
 lang: ro
-sidebar: true
 published: 2021-05-11
 source: paulapivat.com
 sourceUrl: https://paulapivat.com/post/query_ethereum/

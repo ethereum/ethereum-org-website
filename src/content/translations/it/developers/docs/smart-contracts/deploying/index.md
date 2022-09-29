@@ -2,7 +2,6 @@
 title: Distribuzione di Smart Contract
 description:
 lang: it
-sidebar: true
 ---
 
 Uno Smart Contract deve essere distribuito per essere a disposizione degli utenti di una rete Ethereum.

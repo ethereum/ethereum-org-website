@@ -2,7 +2,6 @@
 title: Sidechain
 description: Un'introduzione alle sidechain come soluzione di scalabilità, attualmente utilizzate dalla comunità Ethereum.
 lang: it
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---

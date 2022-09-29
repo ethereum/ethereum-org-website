@@ -3,7 +3,6 @@ title: Łańcuchy odłamkowe
 description: Dowiedz się więcej na temat łańcuchów odłamkowych – podział sieci na drobne kawałki zwiększa transakcyjną pojemność Ethereum i sprawia, że łatwiej ją uruchamiać.
 lang: pl
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: Sharding jest wieloetapowym uaktualnieniem, które polega na zwiększeniu skalowalności i pojemności.
 summaryPoint2: Łańcuchy odłamkowe rozkładają obciążenie sieci na 64 nowe łańcuchy.

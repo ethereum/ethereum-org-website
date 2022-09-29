@@ -2,7 +2,6 @@
 title: Canali di stato
 description: Un'introduzione ai canali di stato e ai canali di pagamento come soluzione di scalabilità, attualmente utilizzata dalla comunità Ethereum.
 lang: it
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---

@@ -2,7 +2,6 @@
 title: Anatomia degli Smart Contract
 description: "Uno sguardo più da vicino agli Smart Contract: funzioni, dati e variabili."
 lang: it
-sidebar: true
 ---
 
 Uno Smart Contract è un programma che viene eseguito a un indirizzo di Ethereum. È composto di dati e funzioni che entrano in esecuzione appena si riceve una transazione. Ecco una panoramica di cosa costituisce uno Smart Contract.

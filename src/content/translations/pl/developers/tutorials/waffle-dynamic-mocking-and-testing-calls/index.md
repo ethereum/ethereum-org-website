@@ -10,7 +10,6 @@ tags:
   - "tworzenie atrap"
 skill: intermediate
 lang: pl
-sidebar: true
 published: 2020-11-14
 ---
 

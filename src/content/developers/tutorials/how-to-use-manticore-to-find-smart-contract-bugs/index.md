@@ -3,7 +3,6 @@ title: How to use Manticore to find bugs in smart contracts
 description: How to use Manticore to automatically find bugs in smart contracts
 author: Trailofbits
 lang: en
-sidebar: true
 tags:
   ["solidity", "smart contracts", "security", "testing", "formal verification"]
 skill: advanced

@@ -2,7 +2,6 @@
 title: Introduction to the Ethereum stack
 description: A walkthrough of the different layers of the Ethereum stack and how they fit together.
 lang: en
-sidebar: true
 ---
 
 Like any software stack, the complete "Ethereum stack" will vary from project to project depending on your goals.

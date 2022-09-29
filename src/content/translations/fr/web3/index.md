@@ -2,7 +2,6 @@
 title: Qu'est-ce que le Web3 et pourquoi est-ce important ?
 description: Une introduction au Web3 — la prochaine évolution du World Wide Web — et son intérêt.
 lang: fr
-sidebar: true
 ---
 
 # Introduction au Web3 {#introduction}

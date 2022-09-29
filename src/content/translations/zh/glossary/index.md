@@ -2,7 +2,6 @@
 title: 以太坊词汇表
 description: 以太坊相关的技术和非技术术语不完全清单
 lang: zh
-sidebar: true
 sidebarDepth: 2
 ---
 

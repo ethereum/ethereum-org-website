@@ -2,7 +2,6 @@
 title: Documentazione sullo sviluppo di Ethereum
 description: Presentazione della documentazione sullo sviluppo per ethereum.org
 lang: it
-sidebar: true
 ---
 
 Questa documentazione è stata creata per supportare nello sviluppo per Ethereum. Tratta il concetto che sta alla base di Ethereum, spiega lo stack e propone documentazione su argomenti avanzati per utilizzi e casi d'uso più complessi.

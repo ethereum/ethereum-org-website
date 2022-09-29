@@ -3,7 +3,6 @@ title: Rantai shard
 description: Pelajari tentang rantai shard - partisi jaringan yang memberi Ethereum lebih banyak kapasitas transaksi dan membuatnya lebih mudah dijalankan.
 lang: id
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: Sharding adalah peningkatan multi-fase untuk meningkatkan skalabilitas dan kapasitas Ethereum.
 summaryPoint2: Rantai shard menyediakan lapisan penyimpanan tambahan, yang lebih murah untuk aplikasi dan rollup dalam menyimpan data.

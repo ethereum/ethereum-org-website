@@ -1,7 +1,6 @@
 ---
 title: Ressources linguistiques
 description: Ressources non anglophones pour en savoir plus sur Ethereum
-sidebar: true
 lang: fr
 ---
 

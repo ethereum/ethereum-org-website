@@ -4,14 +4,12 @@ description: Ethereum'daki NFT'lere genel bakış
 lang: tr
 template: use-cases
 emoji: ":frame_with_picture:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/infrastructure_transparent.png
 alt: Hologram aracılığıyla görüntülenen bir Eth logosu.
 summaryPoint1: Benzersiz bir şeyi Ethereum tabanlı bir varlık olarak göstermenin yolu.
 summaryPoint2: NFT'ler içerik oluşturuculara her zamankinden daha fazla güç veriyor.
 summaryPoint3: Ethereum blok zincirindeki akıllı sözleşmelerle desteklenmektedir.
-preMergeBanner: true
 ---
 
 NFT'ler şu anda dijital sanat ve koleksiyon dünyasını kasıp kavuruyor. Yeni bir kripto kitlesine yapılan büyük satışlar sayesinde dijital sanatçıların hayatları değişiyor. Ve hayranlarla bağlantı kurmak için yeni bir fırsat bulan ünlüler de katılıyor. Ancak dijital sanat, NFT'leri kullanmanın yollarından sadece biridir. Aslında dijital veya fiziksel dünyadaki bir öğenin tapusu gibi, herhangi bir benzersiz varlığın sahipliğini temsil etmek için kullanılabilirler.

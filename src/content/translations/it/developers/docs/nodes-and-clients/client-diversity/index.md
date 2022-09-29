@@ -4,7 +4,6 @@ description: Una spiegazione generica dell'importanza della diversità di client
 lang: it
 sidebar: true
 sidebarDepth: 2
-preMergeBanner: true
 ---
 
 Il comportamento di un nodo di Ethereum è controllato dal software del client che esegue. Esistono diversi client di Ethereum di livello di produzione, ognuno sviluppato e mantenuto in diversi linguaggi da team distinti. I client sono costruiti su specifiche comuni che assicurano che i client comunichino senza problemi tra loro e abbiano le stesse funzionalità, fornendo un'esperienza utente equivalente. Tuttavia, al momento, la distribuzione dei client tra i nodi non è abbastanza equilibrata da realizzare in tutta la sua potenzialità questa fortificazione della rete. Idealmente, gli utenti dovrebbero dividersi approssimativamente in modo equo tra i vari client, per portare quanta più diversità dei client possibile alla rete.
