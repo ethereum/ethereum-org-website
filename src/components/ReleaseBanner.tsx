@@ -14,7 +14,7 @@ import { TranslationKey } from "../utils/translations"
 
 // Constants
 import { GATSBY_FUNCTIONS_PATH } from "../constants"
-import { Box, Center, IconButton, Wrap } from "@chakra-ui/react"
+import { Box, Center, IconButton } from "@chakra-ui/react"
 import { CloseIcon } from "@chakra-ui/icons"
 
 interface CountdownRendererProps {
