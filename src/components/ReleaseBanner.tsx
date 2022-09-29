@@ -1,7 +1,6 @@
 // Libraries
 import React, { useEffect, useState } from "react"
 import Countdown, { zeroPad } from "react-countdown"
-import styled from "@emotion/styled"
 
 // Components
 import BannerNotification from "./BannerNotification"
@@ -39,7 +38,7 @@ const BannerWrapper: React.FC<BannerWrapperProps> = ({
 }) => {
   return (
     <BannerNotification shouldShow={isBannerVisible} position="relative">
-      <Center position="relative" paddingRight="2.5rem" flexWrap="wrap">
+      <Center position="relative" paddingRight="2rem" flexWrap="wrap">
         <Emoji
           marginRight="1rem"
           flexShrink={0}
@@ -54,8 +53,9 @@ const BannerWrapper: React.FC<BannerWrapperProps> = ({
         icon={<CloseIcon />}
         onClick={onClose}
         position="absolute"
-        top={0}
-        right={0}
+        top="1.5"
+        right="1.5"
+        size="xs"
       />
     </BannerNotification>
   )
