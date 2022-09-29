@@ -1433,6 +1433,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/jakubalsoori"><img src="https://avatars.githubusercontent.com/u/93258205?v=4?s=100" width="100px;" alt="jakubalsoori"/><br /><sub><b>jakubalsoori</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=jakubalsoori" title="Documentation">📖</a></td>
       <td align="center"><a href="https://www.compassft.com/"><img src="https://avatars.githubusercontent.com/u/85337624?v=4?s=100" width="100px;" alt="Wenceslas Sanchez"/><br /><sub><b>Wenceslas Sanchez</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=wenceslas-sanchez" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/Abyscuit"><img src="https://avatars.githubusercontent.com/u/36307949?v=4?s=100" width="100px;" alt="Marcus Escobedo"/><br /><sub><b>Marcus Escobedo</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Abyscuit" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://workfromhomejobs.me/remote-developer-jobs/"><img src="https://avatars.githubusercontent.com/u/4492996?v=4?s=100" width="100px;" alt="fr33dr4g0n"/><br /><sub><b>fr33dr4g0n</b></sub></a><br /><a href="#ideas-fr33dr4g0n" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
   </tbody>
   <tfoot>
