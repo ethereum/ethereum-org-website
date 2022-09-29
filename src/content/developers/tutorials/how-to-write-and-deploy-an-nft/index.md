@@ -49,7 +49,7 @@ You can download and create a MetaMask account for free [here](https://metamask.
 
 ## Step 4: Add ether from a Faucet {#step-4-add-ether-from-a-faucet}
 
-In order to deploy our smart contract to the test network, we’ll need some fake ETH. To get ETH you can go to the [Goerli Faucet]([https://fauceth.komputing.org](https://goerlifaucet.com/)) hosted by Alchemy, log in and enter your account address, click “Send Me ETH”. You should see ETH in your MetaMask account soon after!
+In order to deploy our smart contract to the test network, we’ll need some fake ETH. To get ETH you can go to the [Goerli Faucet](https://goerlifaucet.com/) hosted by Alchemy, log in and enter your account address, click “Send Me ETH”. You should see ETH in your MetaMask account soon after!
 
 ## Step 5: Check your Balance {#check-balance}
 
