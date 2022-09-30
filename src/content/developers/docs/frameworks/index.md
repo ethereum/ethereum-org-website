@@ -95,6 +95,9 @@ Before diving into frameworks, we recommend you first read through our introduct
 
 ## Further reading {#further-reading}
 
+- [Guide to the Ethereum stack](https://www.freecodecamp.org/news/full-stack-ethereum-development/) - Freecodecamp's guide to full Ethereum stack
+- [More about dapps](https://www.investopedia.com/terms/d/decentralized-applications-dapps.asp) - Investopedia on the term dapps
+
 _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related topics {#related-topics}
