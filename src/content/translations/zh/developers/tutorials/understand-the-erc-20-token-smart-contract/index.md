@@ -1,6 +1,6 @@
 ---
 title: 了解ERC-20通证智能合约
-description: 介绍如何在以太坊测试网络上部署您第一个智能合约
+description: 如何在以太坊测试网络中部署第一个智能合约
 author: "jdourlens"
 tags:
   - "智能合约"
