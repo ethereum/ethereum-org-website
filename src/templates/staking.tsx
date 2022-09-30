@@ -4,6 +4,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { MDXProvider } from "@mdx-js/react"
 import styled from "@emotion/styled"
+import { Table, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react"
 
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
@@ -16,7 +17,6 @@ import Contributors from "../components/Contributors"
 import SharedInfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
 import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
@@ -316,7 +316,12 @@ const components = {
   h4: Header4,
   p: Paragraph,
   pre: Pre,
-  table: MarkdownTable,
+  table: Table,
+  thead: Thead,
+  tbody: Tbody,
+  th: Th,
+  tr: Tr,
+  td: Td,
   MeetupList,
   RandomAppList,
   Roadmap,

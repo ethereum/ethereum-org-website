@@ -3,6 +3,7 @@ import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
+import { Table, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react"
 
 import BannerNotification from "../components/BannerNotification"
 import ButtonLink from "../components/ButtonLink"
@@ -13,7 +14,6 @@ import FeedbackCard from "../components/FeedbackCard"
 import FileContributors from "../components/FileContributors"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import TableOfContents, {
@@ -150,7 +150,12 @@ const components = {
   p: Paragraph,
   li: ListItem,
   pre: Codeblock,
-  table: MarkdownTable,
+  table: Table,
+  thead: Thead,
+  tbody: Tbody,
+  th: Th,
+  tr: Tr,
+  td: Td,
   ButtonLink,
   InfoBanner,
   Card,

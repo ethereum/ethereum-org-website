@@ -5,6 +5,7 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { Table, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react"
 
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
@@ -19,16 +20,13 @@ import Contributors from "../components/Contributors"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
 import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import Roadmap from "../components/Roadmap"
-import UpgradeTableOfContents, {
-  Item as ItemTableOfContents,
-} from "../components/UpgradeTableOfContents"
+import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents from "../components/TableOfContents"
 import Translation from "../components/Translation"
 import SectionNav from "../components/SectionNav"
@@ -154,7 +152,12 @@ const components = {
   p: Paragraph,
   li: ListItem,
   pre: Pre,
-  table: MarkdownTable,
+  table: Table,
+  thead: Thead,
+  tbody: Tbody,
+  th: Th,
+  tr: Tr,
+  td: Td,
   MeetupList,
   RandomAppList,
   Roadmap,

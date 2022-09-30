@@ -4,6 +4,7 @@ import { useIntl } from "react-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
+import { Table, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react"
 
 import ButtonLink from "../components/ButtonLink"
 import Breadcrumbs from "../components/Breadcrumbs"
@@ -13,7 +14,6 @@ import Contributors from "../components/Contributors"
 import FeedbackCard from "../components/FeedbackCard"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
-import MarkdownTable from "../components/MarkdownTable"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
@@ -127,7 +127,12 @@ const components = {
   li: ListItem,
   pre: Pre,
   hr: HR,
-  table: MarkdownTable,
+  table: Table,
+  thead: Thead,
+  tbody: Tbody,
+  th: Th,
+  tr: Tr,
+  td: Td,
   MeetupList,
   RandomAppList,
   Roadmap,
