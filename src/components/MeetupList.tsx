@@ -1,10 +1,18 @@
 // Libraries
 import React, { useState } from "react"
 import { sortBy } from "lodash"
-import { Box, Flex, Input, Text } from "@chakra-ui/react"
+import {
+  Box,
+  Flex,
+  Input,
+  LinkBox,
+  LinkOverlay,
+  Text,
+  useColorMode,
+} from "@chakra-ui/react"
 
 // Components
-import Emoji from "./OldEmoji"
+import Emoji from "./Emoji"
 import InfoBanner from "./InfoBanner"
 import Link from "./Link"
 import Translation from "./Translation"
@@ -42,6 +50,7 @@ export interface IProps {}
 const MeetupList: React.FC<IProps> = () => {
   const [searchField, setSearchField] = useState<string>("")
   const filteredMeetups = filterMeetups(searchField)
+  const { colorMode } = useColorMode()
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>): void =>
     setSearchField(event.target.value)
@@ -58,52 +67,61 @@ const MeetupList: React.FC<IProps> = () => {
         border="1px solid"
         borderColor="searchBorder"
         color="text"
+        bg="searchBackground"
         p={2}
-        borderRadius={1}
+        borderRadius="base"
         w="100%"
-        _focus={{ outline: "primary solid 1px" }}
+        _focus={{ outline: "solid 1px", outlineColor: "primary" }}
         _placeholder={{ color: "text200" }}
       />
-      <Box boxShadow="tableBoxShadow">
+      <Box
+        boxShadow={colorMode === "dark" ? "tableBox.dark" : "tableBox.light"}
+      >
         {filteredMeetups.length ? (
           filteredMeetups.map((meetup, idx) => (
-            <Link
-              key={idx}
-              to={meetup.link}
-              textDecoration="none"
-              display="flex"
-              justifyContent="space-between"
-              color="text"
-              boxShadow="0 1px 1px tableItemBoxShadow"
-              mb={0.25}
-              p={4}
-              w="100%"
-              _hover={{
-                textDecoration: "none",
-                borderRadius: 1,
-                boxShadow: "0 0 1px primary",
-                bg: "tableBackgroundHover",
-              }}
-            >
-              <Flex flex="1 1 75%" mr={4}>
-                <Box mr={4} opacity="0.4">
-                  {idx + 1}
-                </Box>
-                <Box>{meetup.title}</Box>
-              </Flex>
-              <Flex
-                textAlign={"right"}
-                alignContent={"flex-start"}
-                flex="1 1 25%"
-                mr={4}
-                flexWrap="wrap"
+            <LinkBox key={idx}>
+              <LinkOverlay
+                as={Link}
+                href={meetup.link}
+                textDecoration="none"
+                display="flex"
+                justifyContent="space-between"
+                color="text"
+                boxShadow={
+                  colorMode === "dark"
+                    ? "tableItemBox.dark"
+                    : "tableItemBox.light"
+                }
+                mb={0.25}
+                p={4}
+                w="100%"
+                _hover={{
+                  textDecoration: "none",
+                  borderRadius: "base",
+                  boxShadow: "0 0 1px primary",
+                  bg: "tableBackgroundHover",
+                }}
               >
-                <Emoji text={meetup.emoji} size={1} mr={`0.5em`} />
-                <Text mb={0} opacity={"0.6"}>
-                  {meetup.location}
-                </Text>
-              </Flex>
-            </Link>
+                <Flex flex="1 1 75%" mr={4}>
+                  <Box mr={4} opacity="0.4">
+                    {idx + 1}
+                  </Box>
+                  <Box>{meetup.title}</Box>
+                </Flex>
+                <Flex
+                  textAlign="right"
+                  alignContent="flex-start"
+                  flex="1 1 25%"
+                  mr={4}
+                  flexWrap="wrap"
+                >
+                  <Emoji text={meetup.emoji} boxSize={4} mr={2} />
+                  <Text mb={0} opacity={"0.6"}>
+                    {meetup.location}
+                  </Text>
+                </Flex>
+              </LinkOverlay>
+            </LinkBox>
           ))
         ) : (
           <InfoBanner emoji=":information_source:">
