@@ -2,7 +2,7 @@
 import React from "react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
-import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react"
+import { Box, Center, Flex, Heading, Image, Text } from "@chakra-ui/react"
 
 // Components
 import ButtonLink from "./ButtonLink"
@@ -47,17 +47,14 @@ const Layer2ProductCard: React.FC<IProps> = ({
       direction="column"
       justify="space-between"
       bg="searchBackground"
-      borderRadius={1}
+      borderRadius="base"
       border={"1px solid lightBorder"}
       textDecoration="none"
       padding={2}
       _hover={{ transition: "transform 0.1s", transform: "scale(1.02)" }}
     >
-      <Flex
+      <Center
         bg={background}
-        direction="row"
-        justify="center"
-        align="center"
         boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
         minH="200px"
       >
@@ -70,16 +67,10 @@ const Layer2ProductCard: React.FC<IProps> = ({
           maxW={{ base: "311px", sm: "372px" }}
           maxH={"257px"}
         />
-      </Flex>
-      <Flex
-        p={6}
-        textAlign="left"
-        h="100%"
-        direction="column"
-        className="hover"
-      >
+      </Center>
+      <Flex p={6} h="100%" direction="column">
         <Box>
-          <Heading as="h3" mt="0" mb={3}>
+          <Heading as="h3" size="md" mt={0} mb={3}>
             {name}
           </Heading>
           {children && (
