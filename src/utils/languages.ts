@@ -44,6 +44,7 @@ export type Lang =
   | "sl"
   | "sr"
   | "sw"
+  | "ta"
   | "th"
   | "tr"
   | "uk"
