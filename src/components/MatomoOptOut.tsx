@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { MATOMO_LS_KEY } from "../utils/matomo"
-import { Flex, FormControl, FormLabel, Input, Text } from "@chakra-ui/react"
+import { Checkbox, Flex, Text } from "@chakra-ui/react"
 
 export interface IProps {}
 
@@ -40,8 +40,8 @@ const MatomoOptOut: React.FC<IProps> = () => {
       direction="column"
       mb={4}
       mt={8}
-      alignItems="flex-start"
-      justifyContent="space-between"
+      align="flex-start"
+      justify="space-between"
     >
       <Text color="fail">
         You can opt out of being tracked by Matomo Analytics and prevent the
@@ -52,20 +52,18 @@ const MatomoOptOut: React.FC<IProps> = () => {
       {loading ? (
         "Loading preferences..."
       ) : (
-        <FormControl m={0}>
-          <Input
-            type="checkbox"
-            id="matomo"
-            checked={!isOptedOut}
-            onChange={handleCheckbox}
-            mr={2}
-          />
-          <FormLabel htmlFor="matomo">
-            {isOptedOut
-              ? "You are opted out. Check this box to opt-in."
-              : "You are not opted out. Uncheck this box to opt-out."}
-          </FormLabel>
-        </FormControl>
+        <Checkbox
+          type="checkbox"
+          id="matomo"
+          isChecked={!isOptedOut}
+          onChange={handleCheckbox}
+          mr={2}
+          size="md"
+        >
+          {isOptedOut
+            ? "You are opted out. Check this box to opt-in."
+            : "You are not opted out. Uncheck this box to opt-out."}
+        </Checkbox>
       )}
     </Flex>
   )
