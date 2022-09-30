@@ -219,7 +219,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67
 }
 ```
 
-### net_listening {#net_peercount}
+### net_listening {#net_listening}
 
 Returns `true` if client is actively listening for network connections.
 
@@ -244,7 +244,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":
 }
 ```
 
-### net_peerCount {#net_listening}
+### net_peerCount {#net_peercount}
 
 Returns number of peers currently connected to the client.
 
