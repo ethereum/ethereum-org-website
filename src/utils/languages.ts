@@ -26,6 +26,7 @@ export type Lang =
   | "ja"
   | "ka"
   | "kk"
+  | "km"
   | "ko"
   | "lt"
   | "ml"
