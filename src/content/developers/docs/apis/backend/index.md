@@ -2,7 +2,6 @@
 title: Backend API libraries
 description: An introduction to the Ethereum client APIs that let you interact with the blockchain from your application.
 lang: en
-sidebar: true
 ---
 
 In order for a software application to interact with the Ethereum blockchain (i.e. read blockchain data and/or send transactions to the network), it must connect to an Ethereum node.

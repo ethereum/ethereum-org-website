@@ -2,7 +2,6 @@
 title: 面向 Rust 开发者的以太坊
 description: 学习如何使用并通过基于 rust 的项目及工具参与以太坊的开发
 lang: zh
-sidebar: true
 incomplete: true
 ---
 

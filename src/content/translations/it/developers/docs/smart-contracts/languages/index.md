@@ -2,7 +2,6 @@
 title: Linguaggi degli Smart Contract
 description: Panoramica e confronto dei due linguaggi principali degli Smart Contract - Solidity e Viper.
 lang: it
-sidebar: true
 ---
 
 Uno degli aspetti positivi di Ethereum è che gli Smart Contract possono essere programmati utilizzando linguaggi relativamente comodi per gli sviluppatori. Se hai esperienza con Python o altri [linguaggi a parentesi graffa](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), troverai un linguaggio con una sintassi familiare.

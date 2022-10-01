@@ -2,7 +2,6 @@
 title: O nas
 description: O zespole, społeczności i misji ethereum.org
 lang: pl
-sidebar: true
 ---
 
 # O ethereum.org {#about-ethereumorg}

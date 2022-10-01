@@ -2,7 +2,6 @@
 title: Słownik Ethereum
 description: Niekompletny słownik terminów technicznych i nietechnicznych związanych z Ethereum
 lang: pl
-sidebar: true
 sidebarDepth: 2
 ---
 

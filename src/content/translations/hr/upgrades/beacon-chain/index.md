@@ -3,7 +3,6 @@ title: Beacon Chain
 description: Saznajte više o nadogradnji Beacon Chain – prvoj velikoj nadogradnji Eth2 za Ethereum.
 lang: hr
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: Beacon Chain ne mijenja ništa o Ethereumu kojim se koristimo danas.
 summaryPoint2: Koordinirat će mrežu.

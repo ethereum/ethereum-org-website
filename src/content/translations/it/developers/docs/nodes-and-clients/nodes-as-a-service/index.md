@@ -2,9 +2,7 @@
 title: Nodi come servizio
 description: Panoramica entry-level dei servizi dei nodi, dei pro e dei contro, e dei fornitori più diffusi.
 lang: it
-sidebar: true
 sidebarDepth: 2
-preMergeBanner: true
 ---
 
 ## Introduzione {#Introduction}

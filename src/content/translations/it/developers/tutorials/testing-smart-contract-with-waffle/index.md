@@ -10,7 +10,6 @@ tags:
   - "erc-20"
 skill: intermedio
 lang: it
-sidebar: true
 published: 2020-10-16
 ---
 

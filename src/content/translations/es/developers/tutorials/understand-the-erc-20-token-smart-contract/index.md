@@ -10,7 +10,6 @@ tags:
   - "erc-20"
 skill: beginner
 lang: es
-sidebar: true
 published: 2020-04-05
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/aprenda-sobre-el-contrato-erc20tokens/

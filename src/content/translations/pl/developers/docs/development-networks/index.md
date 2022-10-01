@@ -2,7 +2,6 @@
 title: Frameworki programistyczne
 description: Przegląd sieci programistycznych i narzędzi dostępnych do tworzenia aplikacji Ethereum.
 lang: pl
-sidebar: true
 ---
 
 Podczas tworzenia aplikacji Ethereum z inteligentnymi kontraktami, chcesz uruchomić ją w sieci lokalnej, aby zobaczyć, jak działa przed jej wdrożeniem.

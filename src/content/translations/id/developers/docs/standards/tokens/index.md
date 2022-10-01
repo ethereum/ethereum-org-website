@@ -2,7 +2,6 @@
 title: Standar Token
 description:
 lang: id
-sidebar: true
 incomplete: true
 ---
 

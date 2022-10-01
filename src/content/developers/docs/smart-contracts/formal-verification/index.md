@@ -2,7 +2,6 @@
 title: Formal verification of smart contracts
 description: An overview of formal verification for Ethereum smart contracts
 lang: en
-sidebar: true
 ---
 
 [Smart contracts](/developers/docs/smart-contracts/) are making it possible to create decentralized, trustless, and robust applications that introduce new use-cases and unlock value for users. Because smart contracts handle large amounts of value, security is a critical consideration for developers.

@@ -8,7 +8,6 @@ tags:
   - "couche de consensus"
   - "nœuds"
 lang: fr
-sidebar: true
 skill: intermediate
 published: 2020-05-07
 source: r/ethereum

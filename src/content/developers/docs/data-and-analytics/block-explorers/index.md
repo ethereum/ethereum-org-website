@@ -2,7 +2,6 @@
 title: Block explorers
 description: An introduction to block explorers, your portal into the world of blockchain data, where you can query information about transactions, accounts, contracts, and more.
 lang: en
-sidebar: true
 sidebarDepth: 3
 ---
 

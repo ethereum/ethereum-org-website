@@ -3,7 +3,6 @@ title: Lista kontrolna integracji tokenów
 description: Lista kontrolna rzeczy do rozważenia podczas interakcji z tokenami
 author: "Trailofbits"
 lang: pl
-sidebar: true
 tags:
   - "solidity"
   - "inteligentne kontrakty"

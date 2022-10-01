@@ -1,7 +1,6 @@
 ---
 title: Dukungan Ethereum
 description: Mendapatkan dukungan di ekosistem Ethereum.
-sidebar: true
 lang: id
 ---
 

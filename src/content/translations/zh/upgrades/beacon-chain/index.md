@@ -3,7 +3,6 @@ title: 信标链
 description: 了解信标链 - 引入权益证明的以太坊升级。
 lang: zh
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: 信标链对我们今天使用的以太坊没有造成任何变化。
 summaryPoint2: 它将作为共识层协调网络。

@@ -2,7 +2,6 @@
 title: Framework di sviluppo delle dapp
 description: Scopri Esplora i vantaggi dei framework e confronta le opzioni disponibili.
 lang: it
-sidebar: true
 ---
 
 ## Introduzione ai framework {#introduction-to-frameworks}

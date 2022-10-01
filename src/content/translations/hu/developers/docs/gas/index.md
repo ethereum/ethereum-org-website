@@ -2,7 +2,6 @@
 title: Gáz és tranzakciós díjak
 description:
 lang: hu
-sidebar: true
 incomplete: true
 isOutdated: true
 ---

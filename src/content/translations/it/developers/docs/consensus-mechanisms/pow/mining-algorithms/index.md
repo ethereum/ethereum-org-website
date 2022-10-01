@@ -3,7 +3,6 @@ title: Algoritmi di mining
 description: Uno sguardo dettagliato agli algoritmi usati per il mining di Ethereum.
 lang: it
 sidebar: true
-preMergeBanner: true
 ---
 
 Il mining di Ethereum ha usato due algoritmi di mining, Dagger Hashimoto e Ethash. Dagger Hashimoto non è mai stato usato per fare mining di Ethereum, essendo stato sostituito da Ethash prima del lancio della rete principale. Era un algoritmo di mining di ricerca, che ha spianato la strada per Ethash. Riveste però un significato storico come un'importante innovazione nello sviluppo di Ethereum. Il mining proof-of-work stesso sarà abbandonato in favore del proof-of-stake durante [La Fusione](/upgrades/merge/), prevista nel terzo o quarto trimestre del 2022.

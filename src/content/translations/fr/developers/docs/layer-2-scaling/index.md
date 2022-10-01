@@ -2,7 +2,6 @@
 title: Évolutivité vers la couche 2
 description: Introduction aux différentes options d'évolutivité actuellement en cours de développement par la communauté Ethereum.
 lang: fr
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 isOutdated: true

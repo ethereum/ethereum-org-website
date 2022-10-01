@@ -2,7 +2,6 @@
 title: Механизмы консенсуса
 description: Объяснение протоколов консенсуса в распределенных системах и роль, которую они играют в Ethereum.
 lang: ru
-sidebar: true
 incomplete: true
 ---
 

@@ -2,7 +2,6 @@
 title: ERC-721 standard za nezamenljive žetone
 description:
 lang: sl
-sidebar: true
 ---
 
 ## Uvod {#introduction}

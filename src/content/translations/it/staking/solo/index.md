@@ -4,7 +4,6 @@ description: Una panoramica di come iniziare a mettere in staking in solo i tuoi
 lang: it
 template: staking
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../../assets/staking/leslie-solo.png
 alt: Leslie il rinoceronte sul suo chip informatico.
 sidebarDepth: 2

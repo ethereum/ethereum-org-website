@@ -1,7 +1,7 @@
 ---
 title: Ethereum Foundation
 description: Learn about the Ethereum Foundation (EF), a non-profit organization dedicated to supporting Ethereum and related technologies.
-sidebar: false
+hideEditButton: true
 lang: en
 ---
 

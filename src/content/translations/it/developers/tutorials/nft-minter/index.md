@@ -14,7 +14,6 @@ tags:
   - "Pinata"
 skill: intermediate
 lang: it
-sidebar: true
 published: 2021-10-06
 ---
 

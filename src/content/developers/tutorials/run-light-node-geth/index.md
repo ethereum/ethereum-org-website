@@ -5,7 +5,6 @@ author: "Brian Gu"
 tags: ["clients", "geth", "nodes"]
 skill: beginner
 lang: en
-sidebar: true
 published: 2022-03-04
 postMergeBannerTranslation: page-upgrades-post-merge-banner-tutorial-light-node-ood
 ---

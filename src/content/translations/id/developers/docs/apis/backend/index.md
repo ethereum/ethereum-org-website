@@ -2,7 +2,6 @@
 title: Pustaka API Backend
 description: Pengantar API klien Ethereum yang membantu Anda berinteraksi dengan blockchain dari aplikasi Anda.
 lang: id
-sidebar: true
 ---
 
 Agar aplikasi perangkat lunak dapat berinteraksi dengan blockchain Ethereum (yaitu membaca data blockchain dan/atau mengirim transaksi ke jaringan), aplikasi harus terhubung ke node Ethereum.

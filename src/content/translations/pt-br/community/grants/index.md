@@ -1,7 +1,6 @@
 ---
 title: Fundação Ethereum e programas de recompensas da comunidade
 description: Uma listagem dos programas de recompensas por meio do ecossistema Ethereum.
-sidebar: true
 lang: pt-br
 ---
 

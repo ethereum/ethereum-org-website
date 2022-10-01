@@ -2206,7 +2206,7 @@ const walletData: WalletData[] = [
     active_development_team: true,
     languages_supported: ["en"],
     twitter: "https://twitter.com/enkryptcom",
-    discord: "https://discord.com/invite/W8TrqJXS",
+    discord: "https://discord.com/invite/Gz8vBneyKe",
     reddit: "https://www.reddit.com/r/enkryptcom/",
     telegram: "https://t.me/enkryptcom",
     ios: false,

@@ -1,7 +1,6 @@
 ---
 title: Assistance Ethereum
 description: Obtenez de l'aide sur l'écosystème Ethereum.
-sidebar: true
 lang: fr
 ---
 

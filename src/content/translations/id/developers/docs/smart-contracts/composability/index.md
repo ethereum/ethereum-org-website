@@ -2,7 +2,6 @@
 title: Komposabilitas kontrak pintar
 description:
 lang: id
-sidebar: true
 incomplete: true
 ---
 

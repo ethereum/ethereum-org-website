@@ -1,7 +1,6 @@
 ---
 title: چطور می‌توانم مشارکت کنم؟
 description: چگونه در انجمن اتریوم شرکت کنیم؟
-sidebar: true
 lang: fa
 ---
 

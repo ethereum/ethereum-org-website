@@ -2,7 +2,6 @@
 title: حاکمیت اتریوم
 description: مقدمه‌ای بر چگونگی تصمیم‌گیری برای اتریوم.
 lang: fa
-sidebar: true
 ---
 
 # مقدمه‌ای بر حاکمیت اتریوم {#introduction}

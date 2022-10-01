@@ -3,7 +3,6 @@ title: Η κύρια αλυσίδα (Beacon Chain)
 description: Μάθετε για το beacon chain - την πρώτη σημαντική αναβάθμιση Eth2 σε Ethereum.
 lang: el
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: Η εφαρμογή της κύριας αλυσίδας δεν αλλάζει τίποτα για το Ethereum όπως το χρησιμοποιούμε μέχρι σήμερα
 summaryPoint2: Θα κατευθύνει το δίκτυο

@@ -3,7 +3,6 @@ title: ビーコンチェーン
 description: ビーコンチェーン - プルーフ・オブ・ステークのイーサリアム導入アップグレード
 lang: ja
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: ビーコンチェーンは、現在使用されているイーサリアムを変更するものではありません。
 summaryPoint2: ビーコンチェーンは、コンセンサスレイヤーとして機能し、ネットワークを調整します。

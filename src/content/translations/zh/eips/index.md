@@ -2,7 +2,6 @@
 title: 以太坊改进提议 (EIP)
 description: 了解以太坊改进提议 (EIP) 的基本信息。
 lang: zh
-sidebar: true
 ---
 
 # 隆重介绍以太坊改进提议（EIPs） {#introduction-to-ethereum-improvement-proposals-eips}

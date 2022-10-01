@@ -2,8 +2,6 @@
 title: Intro agli ether
 description: Introduzione di uno sviluppatore alla criptovaluta ether.
 lang: it
-sidebar: true
-preMergeBanner: true
 ---
 
 ## Prerequisiti {#prerequisites}
