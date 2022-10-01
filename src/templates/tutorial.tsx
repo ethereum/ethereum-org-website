@@ -3,7 +3,16 @@ import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
-import { Table, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react"
+import {
+  ListItem,
+  Table,
+  Tbody,
+  Td,
+  Th,
+  Thead,
+  Tr,
+  UnorderedList,
+} from "@chakra-ui/react"
 
 import ButtonLink from "../components/ButtonLink"
 import Card from "../components/Card"
@@ -26,7 +35,6 @@ import {
   Header2,
   Header3,
   Header4,
-  ListItem,
   KBD,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/OldEmoji"
@@ -127,6 +135,7 @@ const components = {
   h4: H4,
   p: Paragraph,
   kbd: KBD,
+  ul: UnorderedList,
   li: ListItem,
   pre: Codeblock,
   table: Table,

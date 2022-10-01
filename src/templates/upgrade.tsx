@@ -5,7 +5,16 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { Table, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react"
+import {
+  ListItem,
+  Table,
+  Tbody,
+  Td,
+  Th,
+  Thead,
+  Tr,
+  UnorderedList,
+} from "@chakra-ui/react"
 
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
@@ -169,6 +178,8 @@ const components = {
   th: Th,
   tr: Tr,
   td: Td,
+  ul: UnorderedList,
+  li: ListItem,
   MeetupList,
   RandomAppList,
   Roadmap,

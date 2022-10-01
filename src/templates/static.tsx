@@ -4,7 +4,16 @@ import { useIntl } from "react-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
-import { Table, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react"
+import {
+  ListItem,
+  Table,
+  Tbody,
+  Td,
+  Th,
+  Thead,
+  Tr,
+  UnorderedList,
+} from "@chakra-ui/react"
 
 import ButtonLink from "../components/ButtonLink"
 import Breadcrumbs from "../components/Breadcrumbs"
@@ -36,7 +45,6 @@ import {
   Header2,
   Header3,
   Header4,
-  ListItem,
   CardContainer,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/OldEmoji"
@@ -124,6 +132,7 @@ const components = {
   h3: Header3,
   h4: Header4,
   p: Paragraph,
+  ul: UnorderedList,
   li: ListItem,
   pre: Pre,
   hr: HR,

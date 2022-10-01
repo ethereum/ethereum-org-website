@@ -3,7 +3,16 @@ import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
-import { Table, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react"
+import {
+  ListItem,
+  Table,
+  Tbody,
+  Td,
+  Th,
+  Thead,
+  Tr,
+  UnorderedList,
+} from "@chakra-ui/react"
 
 import BannerNotification from "../components/BannerNotification"
 import ButtonLink from "../components/ButtonLink"
@@ -33,7 +42,6 @@ import {
   Header2,
   Header3,
   Header4,
-  ListItem,
 } from "../components/SharedStyledComponents"
 import PostMergeBanner from "../components/Banners/PostMergeBanner"
 
@@ -148,6 +156,7 @@ const components = {
   h3: H3,
   h4: H4,
   p: Paragraph,
+  ul: UnorderedList,
   li: ListItem,
   pre: Codeblock,
   table: Table,

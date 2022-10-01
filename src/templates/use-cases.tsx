@@ -5,7 +5,16 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { Table, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react"
+import {
+  Table,
+  Tbody,
+  Td,
+  Th,
+  Thead,
+  Tr,
+  UnorderedList,
+  ListItem,
+} from "@chakra-ui/react"
 
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
@@ -35,7 +44,6 @@ import {
   Paragraph,
   Header1,
   Header4,
-  ListItem,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/OldEmoji"
 import YouTube from "../components/YouTube"
@@ -150,6 +158,7 @@ const components = {
   h3: H3,
   h4: Header4,
   p: Paragraph,
+  ul: UnorderedList,
   li: ListItem,
   pre: Pre,
   table: Table,

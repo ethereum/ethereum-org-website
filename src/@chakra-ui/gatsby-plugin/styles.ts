@@ -23,11 +23,6 @@ const styles = {
     p: {
       margin: "0px 0px 1.45rem",
     },
-    // should be replace with https://chakra-ui.com/docs/components/list
-    "ul, ol": {
-      margin: "0px 0px 1.45rem 1.45rem",
-      padding: 0,
-    },
     // YouTube embeds
     iframe: {
       display: "block",
