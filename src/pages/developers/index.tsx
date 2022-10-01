@@ -176,6 +176,10 @@ const StyledCard = styled(Card)`
   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
   margin: 1rem;
   padding: 1.5rem;
+  justify-content: space-between;
+  h3 {
+    min-height: 67px !important;
+  }
   @media (max-width: 1120px) {
     flex: 1 1 40%;
   }
