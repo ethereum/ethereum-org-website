@@ -67,7 +67,7 @@ As an anti-censorship mechanism, the validium protocol allows users to withdraw 
 
 ### Batch submission {#batch-submission}
 
-After executing a batch of transactions, the operator submits the associated validity proof to the Lverifier contract and proposes a new state root to the main contract. If the proof is valid, the main contract updates the validium's state and finalizes the results of transactions in the batch.
+After executing a batch of transactions, the operator submits the associated validity proof to the verifier contract and proposes a new state root to the main contract. If the proof is valid, the main contract updates the validium's state and finalizes the results of transactions in the batch.
 
 Unlike a ZK-rollup, block producers on a validium are not required to publish transaction data for transaction batches (only block headers). This makes validium a purely off-chain scaling protocol, as opposed to "hybrid" scaling protocols (i.e., [layer 2](/layer-2/)) that publish state data on the main Ethereum chain as `calldata`.
 
