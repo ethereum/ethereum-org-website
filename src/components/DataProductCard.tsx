@@ -1,9 +1,15 @@
 import React from "react"
 
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import { Box, Heading, Image, Text } from "@chakra-ui/react"
-
-import Link from "./Link"
+import {
+  Box,
+  Flex,
+  Heading,
+  Image,
+  Text,
+  LinkOverlay,
+  LinkBox,
+} from "@chakra-ui/react"
 
 export interface DataRow {
   logo: IGatsbyImageData
@@ -30,16 +36,14 @@ const DataProductCard: React.FC<IProps> = ({
   description,
   data,
 }) => (
-  <Link
-    href={url}
+  <LinkBox
     color="text"
     background="searchBackground"
     border="1px solid"
     borderColor="lightBorder"
-    borderRadius="4px"
+    borderRadius="base"
     overflow="hidden"
     boxShadow="table"
-    textDecoration="none"
     display="flex"
     flexDirection="column"
     _hover={{
@@ -48,11 +52,8 @@ const DataProductCard: React.FC<IProps> = ({
       transition: "transform 0.1s ease 0s",
       transform: "scale(1.02)",
     }}
-    isExternal
-    hideArrow
   >
-    <Box
-      display="flex"
+    <Flex
       alignItems="center"
       justifyContent="center"
       boxShadow="rgb(0 0 0 / 10%) 0px -1px 0px inset;"
@@ -69,13 +70,11 @@ const DataProductCard: React.FC<IProps> = ({
         maxWidth={{ base: "311px", sm: "372px" }}
         maxHeight="257px"
       />
-    </Box>
-    <Box
+    </Flex>
+    <Flex
       textAlign="left"
-      display="flex"
       flexDirection="column"
       justifyContent="space-between"
-      height="100%"
     >
       <Box>
         <Heading
@@ -87,7 +86,9 @@ const DataProductCard: React.FC<IProps> = ({
           margin="2rem 1rem"
           marginBottom="1rem"
         >
-          {name}
+          <LinkOverlay href={url} isExternal>
+            {name}
+          </LinkOverlay>
         </Heading>
         <Text
           fontSize="sm"
@@ -108,10 +109,9 @@ const DataProductCard: React.FC<IProps> = ({
           borderColor="lightBorder"
         >
           {data.map(({ logo, coin, apy }, idx) => (
-            <Box
+            <Flex
               key={idx}
               color="text300"
-              display="flex"
               fontSize="sm"
               justifyContent="space-between"
               padding="1rem"
@@ -121,7 +121,7 @@ const DataProductCard: React.FC<IProps> = ({
               borderLeft="0"
               borderRight="0"
             >
-              <Box display="flex" alignItems="center">
+              <Flex alignItems="center">
                 {logo && (
                   <Image
                     as={GatsbyImage}
@@ -133,16 +133,14 @@ const DataProductCard: React.FC<IProps> = ({
                   />
                 )}
                 {coin}
-              </Box>
-              <Box display="flex" alignItems="center">
-                {apy}% APY
-              </Box>
-            </Box>
+              </Flex>
+              <Flex alignItems="center">{apy}% APY</Flex>
+            </Flex>
           ))}
         </Box>
       )}
-    </Box>
-  </Link>
+    </Flex>
+  </LinkBox>
 )
 
 export default DataProductCard
