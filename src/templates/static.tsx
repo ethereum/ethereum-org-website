@@ -5,7 +5,6 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
 import {
-  ListItem,
   Table,
   Tbody,
   Td,
@@ -133,7 +132,6 @@ const components = {
   h4: Header4,
   p: Paragraph,
   ul: UnorderedList,
-  li: ListItem,
   pre: Pre,
   hr: HR,
   table: Table,

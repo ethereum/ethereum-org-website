@@ -19,6 +19,21 @@ const styles = {
       bg: mode("white", "gray.700")(props),
       lineHeight: "1.6rem",
     },
+    // styles used by markdown pages - we can't use `ListItem` in them.
+    li: {
+      mb: 3,
+      ps: 0,
+    },
+    "li > ol": {
+      ms: 5,
+      mb: 3,
+      mt: 3,
+    },
+    "li > ul": {
+      ms: 5,
+      mb: 3,
+      mt: 3,
+    },
     // should be replace with https://chakra-ui.com/docs/components/text
     p: {
       margin: "0px 0px 1.45rem",

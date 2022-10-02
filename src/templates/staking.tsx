@@ -5,7 +5,6 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import { MDXProvider } from "@mdx-js/react"
 import styled from "@emotion/styled"
 import {
-  ListItem,
   Table,
   Tbody,
   Td,
@@ -332,7 +331,6 @@ const components = {
   tr: Tr,
   td: Td,
   ul: UnorderedList,
-  li: ListItem,
   MeetupList,
   RandomAppList,
   Roadmap,

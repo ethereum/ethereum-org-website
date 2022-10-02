@@ -4,7 +4,6 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
 import {
-  ListItem,
   Table,
   Tbody,
   Td,
@@ -43,7 +42,6 @@ import {
   Header3,
   Header4,
 } from "../components/SharedStyledComponents"
-import PostMergeBanner from "../components/Banners/PostMergeBanner"
 
 import { ZenModeContext } from "../contexts/ZenModeContext"
 import { isLangRightToLeft } from "../utils/translations"
@@ -157,7 +155,6 @@ const components = {
   h4: H4,
   p: Paragraph,
   ul: UnorderedList,
-  li: ListItem,
   pre: Codeblock,
   table: Table,
   thead: Thead,

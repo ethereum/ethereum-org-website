@@ -6,7 +6,6 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 import {
-  ListItem,
   Table,
   Tbody,
   Td,
@@ -179,7 +178,6 @@ const components = {
   tr: Tr,
   td: Td,
   ul: UnorderedList,
-  li: ListItem,
   MeetupList,
   RandomAppList,
   Roadmap,
