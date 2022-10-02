@@ -95,6 +95,7 @@ When introducing an unfamiliar acronym, spell out the full term, and put the acr
 **For example:**
 
 "Ethereum, like Bitcoin, currently uses a consensus protocol called **proof-of-work (PoW)**."
+"**Zero-knowledge rollups (ZK-rollups)** are layer 2 scaling solutions."
 
 ### Consistency {#consistency}
 
