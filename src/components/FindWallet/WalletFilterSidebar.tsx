@@ -531,54 +531,53 @@ const WalletFilterSidebar = ({
                     {item.options.length > 0 && item.showOptions && (
                       <CheckboxGrid>
                         {item.options.map((option) => {
+                          const handleClick = (evt) => {
+                            console.log("superpippo click")
+                            console.log({ evt })
+                            let closeShowOptions = true
+
+                            for (let filterOption of item.options) {
+                              if (filterOption.name === option.name) {
+                                if (!filters[filterOption.filterKey!]) {
+                                  closeShowOptions = false
+                                  break
+                                }
+                              } else {
+                                if (filters[filterOption.filterKey!]) {
+                                  closeShowOptions = false
+                                  break
+                                }
+                              }
+                            }
+
+                            if (closeShowOptions) {
+                              setShowOptions(idx, itemidx, !item.showOptions)
+                            }
+
+                            console.log({
+                              eventCategory: "WalletFilterSidebar",
+                              eventAction: `${filterOption.title}`,
+                              eventName: `${option.filterKey} ${!filters[
+                                option.filterKey!
+                              ]}`,
+                            })
+                            trackCustomEvent({
+                              eventCategory: "WalletFilterSidebar",
+                              eventAction: `${filterOption.title}`,
+                              eventName: `${option.filterKey} ${!filters[
+                                option.filterKey!
+                              ]}`,
+                            })
+                            updateFilterOption(option.filterKey)
+                          }
+
                           return (
-                            <CheckboxGridOption
-                              onClick={() => {
-                                let closeShowOptions = true
-
-                                for (let filterOption of item.options) {
-                                  if (filterOption.name === option.name) {
-                                    if (!filters[filterOption.filterKey!]) {
-                                      closeShowOptions = false
-                                      break
-                                    }
-                                  } else {
-                                    if (filters[filterOption.filterKey!]) {
-                                      closeShowOptions = false
-                                      break
-                                    }
-                                  }
-                                }
-
-                                if (closeShowOptions) {
-                                  setShowOptions(
-                                    idx,
-                                    itemidx,
-                                    !item.showOptions
-                                  )
-                                }
-
-                                console.log({
-                                  eventCategory: "WalletFilterSidebar",
-                                  eventAction: `${filterOption.title}`,
-                                  eventName: `${option.filterKey} ${!filters[
-                                    option.filterKey!
-                                  ]}`,
-                                })
-                                trackCustomEvent({
-                                  eventCategory: "WalletFilterSidebar",
-                                  eventAction: `${filterOption.title}`,
-                                  eventName: `${option.filterKey} ${!filters[
-                                    option.filterKey!
-                                  ]}`,
-                                })
-                                updateFilterOption(option.filterKey)
-                              }}
-                            >
+                            <CheckboxGridOption onClick={handleClick}>
                               <NewCheckbox
                                 aria-label={option.name}
                                 checked={filters[option.filterKey!]}
                                 size="md"
+                                // callback={evt => handleClick(evt)}
                               />
                               <p aria-hidden="true">{option.name}</p>
                             </CheckboxGridOption>
