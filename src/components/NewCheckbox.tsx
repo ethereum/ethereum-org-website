@@ -51,7 +51,7 @@ const NewCheckbox: React.FC<IProps> = ({
 }) => {
   const handleClick = (evt) => {
     console.log("pippo click")
-    evt.stopPropagation()
+    // evt.stopPropagation()
     evt.preventDefault()
     // if (callback) {
     //   callback()
@@ -60,19 +60,19 @@ const NewCheckbox: React.FC<IProps> = ({
 
   return (
     <ChakraCheckbox
-      defaultChecked={checked}
-      checked={checked}
+      // bg={`${checked ? "primary400" : "background"}`}
+      isChecked={checked}
       className={className}
       onClick={handleClick}
       onChange={handleClick}
       size={size}
-      icon={
-        <CustomIcon
-          // handleClick={handleClick}
-          checked={checked}
-        />
-      }
-      readOnly
+      // icon={
+      //   <CustomIcon
+      //     // handleClick={handleClick}
+      //     checked={checked}
+      //   />
+      // }
+      isReadOnly={true}
       // pointerEvents="none"
       _hover={{
         boxShadow: "tableItemBoxShadow",
@@ -81,6 +81,11 @@ const NewCheckbox: React.FC<IProps> = ({
         borderColor: "primary600",
         transition: "transform 0.1s",
         transform: "scale(1.02)",
+      }}
+      inputProps={{
+        readOnly: true,
+        capture: false,
+        checked: checked,
       }}
       {...rest}
     >

@@ -9,7 +9,7 @@ const baseStyleControl = {
     _hover: null,
   },
   _focusVisible: null,
-  pointerEvents: "none",
+  // pointerEvents: "none",
 }
 
 const baseStyleContainer = {
@@ -17,6 +17,10 @@ const baseStyleContainer = {
   borderColor: "black50",
   borderRadius: "3px",
   transition: "all 150ms",
+  pointerEvents: "none",
+}
+
+const baseStyleLabel = {
   _hover: {
     boxShadow: "tableItemBoxShadow",
     border: "1px",
@@ -25,21 +29,25 @@ const baseStyleContainer = {
     transition: "transform 0.1s",
     transform: "scale(1.02)",
   },
+  // pointerEvents: "none",
+  class: "pippo",
 }
 
-const baseStyleLabel = {
+const baseStyleInput = {
   pointerEvents: "none",
+  class: "pippo",
 }
 
 export const Checkbox: ComponentMultiStyleConfig = {
   // icon: baseStyleIcon,
   // container: baseStyleContainer,
   // label: baseStyleLabel,
-  parts: ["control", "container", "label"],
+  parts: ["control", "container", "label", "input"],
   baseStyle: {
     control: baseStyleControl,
     container: baseStyleContainer,
     label: baseStyleLabel,
+    input: baseStyleInput,
   },
   sizes: {
     md: {
