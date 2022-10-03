@@ -13,6 +13,7 @@ import {
   Thead,
   Tr,
   UnorderedList,
+  chakra,
 } from "@chakra-ui/react"
 
 import ButtonLink from "../components/ButtonLink"
@@ -158,6 +159,7 @@ const components = {
   h4: Header4,
   p: Paragraph,
   ul: UnorderedList,
+  li: chakra.li,
   pre: Pre,
   table: Table,
   thead: Thead,

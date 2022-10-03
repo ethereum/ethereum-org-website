@@ -3,7 +3,7 @@ import type { ComponentStyleConfig } from "@chakra-ui/theme"
 export const List: ComponentStyleConfig = {
   baseStyle: {
     container: {
-      marginStart: 5,
+      ms: 6,
     },
     item: {
       mb: 3,
