@@ -72,7 +72,7 @@ _Findet in der Regel Anwendung für kleinere, auf den Menschen ausgerichtete Org
 
 Reputation ist ein Nachweis der Teilnahme und gewährt Stimmrechte im DAO. Im Gegensatz zur token- oder anteilsbasierten Mitgliedschaft übertragen reputationsbasierte DAOs keine Vermögenswerte an Mitwirkende. Reputation kann weder gekauft, übertragen noch delegiert werden. DAO-Mitglieder können Reputation nur durch Teilnahme erwerben. On-Chain-Abstimmungen sind frei zugänglich. Jedes potenzielle Mitglied kann einen Antrag auf Beitritt zur DAO und Vergütung seiner Mitwirkung in Form von Reputation und Token stellen.
 
-_Typischerweise für die dezentrale Entwicklung und Steuerung von Protokollen und dApps verwendet, aber auch gut geeignet für eine Vielzahl von Organisationen wie Wohltätigkeitsorganisationen, Arbeiterkollektive, Investmentclubs usw._
+_Typischerweise für die dezentrale Entwicklung und Steuerung von Protokollen und dapps verwendet, aber auch gut geeignet für eine Vielzahl von Organisationen wie Wohltätigkeitsorganisationen, Arbeiterkollektive, Investmentclubs usw._
 
 #### Bekanntes Beispiel {#reputation-example}
 
