@@ -186,6 +186,8 @@ Sie können Ihrer Krypto in Echtzeit beim Wachsen zusehen, indem Sie sie verleih
 - Sie können dann jederzeit normales Dai in Höhe Ihres aDai-Guthabens abheben.
 
 <ButtonLink to="/dapps/?category=finance">
+  Zu Lending-dapps
+</ButtonLink>
   Zu Lending-dApps
 </ButtonLink>
 
