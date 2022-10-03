@@ -1435,6 +1435,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/Abyscuit"><img src="https://avatars.githubusercontent.com/u/36307949?v=4?s=100" width="100px;" alt="Marcus Escobedo"/><br /><sub><b>Marcus Escobedo</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Abyscuit" title="Documentation">📖</a></td>
       <td align="center"><a href="https://workfromhomejobs.me/remote-developer-jobs/"><img src="https://avatars.githubusercontent.com/u/4492996?v=4?s=100" width="100px;" alt="fr33dr4g0n"/><br /><sub><b>fr33dr4g0n</b></sub></a><br /><a href="#ideas-fr33dr4g0n" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
+    <tr>
+      <td align="center"><a href="https://www.linkedin.com/in/ritesh-in/"><img src="https://avatars.githubusercontent.com/u/88592710?v=4?s=100" width="100px;" alt="Ritesh Singh"/><br /><sub><b>Ritesh Singh</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=codespirit7" title="Documentation">📖</a></td>
+    </tr>
   </tbody>
   <tfoot>
     
