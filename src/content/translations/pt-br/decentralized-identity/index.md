@@ -4,7 +4,6 @@ description: O que é uma identidade descentralizada e por que isso importa?
 lang: pt-br
 template: use-cases
 emoji: ":id:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/eth-gif-cat.png
 summaryPoint1: Os sistemas de identidade tradicionais centralizaram a emissão, manutenção e controle de seus identificadores.

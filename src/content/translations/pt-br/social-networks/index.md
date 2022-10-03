@@ -4,7 +4,6 @@ description: Uma visão geral das redes sociais descentralizadas no Ethereum
 lang: pt-br
 template: use-cases
 emoji: ":mega:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/ethereum-learn.png
 summaryPoint1: Plataformas baseadas em blockchain para interação social, criação e distribuição de conteúdo.
