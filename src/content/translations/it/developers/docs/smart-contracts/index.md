@@ -2,32 +2,33 @@
 title: Introduzione agli Smart Contract
 description: Panoramica sugli Smart Contract, incentrata sulle loro caratteristiche e limitazioni uniche.
 lang: it
-sidebar: true
 ---
 
 ## Cos'è uno smart contract? {#what-is-a-smart-contract}
 
 Uno Smart Contract è semplicemente un programma eseguito sulla blockchain di Ethereum. È una raccolta di codice (le funzioni) e dati (lo stato) che risiede a un indirizzo specifico sulla blockchain di Ethereum.
 
-Gli smart contract sono un tipo di [account Ethereum](/developers/docs/accounts/). Significa che hanno un saldo e possono inviare transazioni in rete. Però non sono controllati da un utente, ma distribuiti in rete ed eseguiti come programmato. Gli account degli utenti possono quindi interagire con uno Smart Contract inviando transazioni che eseguono una funzione definita sul contratto. Gli Smart Contract possono definire regole, come un normale contratto, e imporle automaticamente tramite codice. Gli smart contract non sono eliminabili di default e le interazioni con essi sono irreversibili.
+Gli smart contract sono un tipo di [account Ethereum](/developers/docs/accounts/). Ciò significa che hanno un saldo e possono essere oggetto di transazioni. Però non sono controllati da un utente, ma distribuiti in rete ed eseguiti come programmato. Gli account degli utenti possono quindi interagire con uno Smart Contract inviando transazioni che eseguono una funzione definita sul contratto. Gli Smart Contract possono definire regole, come un normale contratto, e imporle automaticamente tramite codice. Gli smart contract non sono eliminabili di default e le interazioni con essi sono irreversibili.
 
 ## Prerequisiti {#prerequisites}
 
-È importante aver letto gli argomenti su [account](/developers/docs/accounts/), [transazioni](/developers/docs/transactions/) e [macchina virtuale di Ethereum](/developers/docs/evm/) prima di entrare nel mondo degli Smart Contract.
+Se stai muovendo i primi passi o stai cercando un'introduzione meno tecnica, consigliamo la nostra [introduzione agli smart contract](/smart-contracts/).
+
+È importante aver letto gli argomenti su [account](/developers/docs/accounts/), [transazioni](/developers/docs/transactions/) e [macchina virtuale di Ethereum](/developers/docs/evm/) prima di entrare nel mondo degli smart contract.
 
 ## Un distributore automatico digitale {#a-digital-vending-machine}
 
-Forse la migliore metafora per capire cos’è uno smart contract è quella di un distributore automatico, come descritto da [Nick Szabo](https://unenumerated.blogspot.com/). Con i giusti input, è garantito un determinato output.
+Forse la metafora più efficace per uno smart contract è un distributore automatico, come descritto da [Nick Szabo](https://unenumerated.blogspot.com/). Con i giusti input si ottiene un determinato output.
 
-Per ricevere uno snack da un distributore la logica necessaria è la seguente:
+Per ottenere uno snack da un distributore:
 
 ```
 denaro + scelta dello snack = snack erogato
 ```
 
-Questa logica è programmata nel distributore.
+Questa logica è programmata nel distributore automatico.
 
-Uno Smart Contract, proprio come un distributore automatico, ha al suo interno una logica programmata. Ecco un semplice esempio di come un distributore automatico potrebbe essere scritto come smart contract:
+Uno smart contract, proprio come un distributore automatico, contiene una logica programmata al suo interno. Ecco un semplice esempio di come questo distributore automatico apparirebbe se fosse uno smart contract scritto in Solidity:
 
 ```solidity
 pragma solidity 0.8.7;
@@ -66,40 +67,44 @@ Proprio come un distributore automatico, che elimina la necessità di avere un a
 
 ## Senza autorizzazioni {#permissionless}
 
-Chiunque può scrivere uno smart contract e distribuirlo nella rete. Per distribuire un contratto, è sufficiente sapere programmare in un [linguaggio per Smart Contract](/developers/docs/smart-contracts/languages/) e avere abbastanza ETH. Distribuire uno Smart Contract è tecnicamente una transazione, quindi occorre pagare del[carburante](/developers/docs/gas/) così come avviene per un semplice trasferimento di ETH. I costi del carburante per la distribuzione di un contratto sono però molto più elevati.
+Chiunque può scrivere uno smart contract e distribuirlo sulla rete. È sufficiente sapere programmare in un [linguaggio per smart contract](/developers/docs/smart-contracts/languages/) e avere ETH sufficienti per distribuire il contratto. Distribuire uno smart contract tecnicamente è una transazione, quindi occorre pagare una certa quantità di [gas](/developers/docs/gas/), proprio come accade per un semplice trasferimento di ETH. Tuttavia, i costi del gas per la distribuzione del contratto sono molto più elevati.
 
-Per scrivere Smart Contract, Ethereum prevede linguaggi comodi per gli sviluppatori:
+Ethereum prevede linguaggi pratici per gli sviluppatori per la scrittura di smart contract:
 
 - Solidity
 - Vyper
 
 [Ulteriori informazioni sui linguaggi](/developers/docs/smart-contracts/languages/)
 
-I contratti devono però essere compilati prima di poter essere distribuiti affinché la macchina virtuale Ethereum possa interpretarli e memorizzarli. [Maggiori informazioni sulla compilazione](/developers/docs/smart-contracts/compiling/)
+I contratti devono però essere compilati prima di poter essere distribuiti, affinché la macchina virtuale Ethereum possa interpretarli e memorizzarli. [Ulteriori informazioni sulla compilazione](/developers/docs/smart-contracts/compiling/)
 
 ## Componibilità {#composability}
 
-Gli Smart Contract sono pubblici su Ethereum e possono essere considerati come API aperte. Significa che è possibile chiamare altri Smart Contract nel proprio contratto in modo da ampliare enormemente quello che è possibile fare con uno Smart Contract. I contratti possono anche distribuire altri contratti.
+Gli smart contract sono pubblici su Ethereum e possono essere paragonati ad API aperte. Questo significa che puoi chiamare altri smart contract nel tuo contratto in modo da estendere ampiamente quanto possibile. I contratti possono anche distribuire altri contratti.
 
-Scopri di più sulla [componibilità degli Smart Contract](/developers/docs/smart-contracts/composability/).
+Scopri di più sulla [componibilità degli smart contract](/developers/docs/smart-contracts/composability/).
 
 ## Limitazioni {#limitations}
 
-Gli Smart Contract da soli non possono ottenere informazioni sugli eventi del mondo reale perché non possono inviare richieste HTTP. Sono stati progettati così. Basarsi su informazioni esterne potrebbe pregiudicare il consenso, importante per la sicurezza e la decentralizzazione.
+Gli smart contract da soli non possono ottenere informazioni sugli eventi del mondo reale, in quanto non possono inviare richieste HTTP. È così per progettazione. Basarsi su informazioni esterne potrebbe pregiudicare il consenso, importante per la sicurezza e la decentralizzazione.
 
 Esistono modi per aggirare questa condizione, grazie agli [oracoli](/developers/docs/oracles/).
 
-Un altro limite degli smart contract è la dimensione massima del contratto. Uno smart contract può avere una dimensione massima di 24KB, altrimenti esaurirà il carburante. Questo problema può essere aggirato usando [il Diamond Pattern](https://eips.ethereum.org/EIPS/eip-2535) (Schema a Diamante).
+Un altro limite degli smart contract è la dimensione massima del contratto. Uno smart contract può avere una dimensione massima di 24KB o esaurirà il carburante. Questo problema può essere aggirato usando [il Diamond Pattern](https://eips.ethereum.org/EIPS/eip-2535) (schema a diamante).
 
-## Risorse degli Smart Contract {#smart-contract-resources}
+## Contratti multifirma {#multisig}
 
-**OpenZeppelin Contracts -** **_Libreria per lo sviluppo sicuro di Smart Contract._**
+I contratti multifirma (firma multipla) sono conti per smart contract che richiedono più firme valide per eseguire una transazione. Ciò è molto utile per evitare singoli punti di fallimento per i contratti che detengono importi sostanziali di ether o altri token. I multifirma dividono inoltre la responsabilità per l'esecuzione del contratto e la gestione delle chiavi tra diverse parti e impediscono la perdita di una singola chiave privata, che si tradurrebbe in una perdita di fondi irreversibile. Per questi motivi, i contratti multifirma sono utilizzabili per una semplice governance DAO. Per poter esser eseguiti i multifirma richiedono N di M firme accettabili possibili (dove N ≤ M e M > 1). `N = 3, M = 5` e `N = 4, M = 7` sono comunemente usati. Un multifirma 4/7 richiede quattro di sette possibili firme valide. Questo significa che i fondi possono comunque essere recuperati, anche se vengono perse tre firme. In questo caso, significa anche che la maggioranza dei possessori della chiave deve acconsentire e firmare affinché il contratto venga eseguito.
+
+## Risorse sugli Smart Contract {#smart-contract-resources}
+
+**OpenZeppelin Contracts -** **_Libreria per lo sviluppo sicuro di smart contract._**
 
 - [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [Forum della community](https://forum.openzeppelin.com/c/general/16)
 
-**DappSys -** **_Blocchi di programmazione sicuri, semplici e flessibili per Smart Contract._**
+**DappSys -** **_Blocchi di programmazione sicuri, semplici e flessibili per smart contract._**
 
 - [Dappsys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)

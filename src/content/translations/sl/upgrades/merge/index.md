@@ -3,7 +3,6 @@ title: Spojitev
 description: Preberite več o spojitvi – ko se bo glavno omrežje Ethereum pridružilo sistemu z dokazom o deležu, ki ga bo usklajevala oddajniška veriga.
 lang: sl
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: Sčasoma se bo trenutno glavno Ethereum omrežje "spojilo" s sistemom dokaza o deležu oddajniške verige.
 summaryPoint2: To bo za Ethereum pomenilo konec sistema z dokazom o delu in popoln prehod na sistem dokaza o deležu.

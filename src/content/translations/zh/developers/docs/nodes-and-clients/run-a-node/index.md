@@ -2,9 +2,7 @@
 title: 启动您自己的以太坊节点
 description: 如何运行自己的以太坊客户端简介
 lang: zh
-sidebar: true
 sidebarDepth: 2
-preMergeBanner: true
 ---
 
 运行您自己的节点为您提供各种好处，打开新的可能性，并为支持生态系统提供帮助。 这个页面将引导您启动您自己的节点，并参与验证以太坊交易。

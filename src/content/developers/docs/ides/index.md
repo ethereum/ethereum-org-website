@@ -2,7 +2,6 @@
 title: Integrated Development Environments (IDEs)
 description:
 lang: en
-sidebar: true
 ---
 
 When it comes to setting up an [integrated development environment (IDE)](https://wikipedia.org/wiki/Integrated_development_environment), programming applications on Ethereum is similar to programming any other software project. There are many options to choose from, so at the end of the day, pick the IDE or code editor that best suits your preferences. Most likely the best IDE choice for your Ethereum development is the IDE you already use for traditional software development.
@@ -11,22 +10,17 @@ When it comes to setting up an [integrated development environment (IDE)](https:
 
 If you're looking to fiddle with code before you [set up a local development environment](/developers/local-environment/), these web apps are custom-built for Ethereum smart contract development.
 
-**Remix -** **_Web-based IDE with built in static analysis, and a test blockchain virtual machine_**
+**[Remix](https://remix.ethereum.org/)** - **_Web-based IDE with built in static analysis, and a test blockchain virtual machine_**
 
-- [remix.ethereum.org](https://remix.ethereum.org/)
+**[ChainIDE](https://chainide.com/)** - **_A cloud-based multi-chain IDE_**
 
-**EthFiddle -** **_Web-based IDE that lets you write, compile, and debug your smart contract_**
+**[Replit (Solidity Starter)](https://replit.com/@replit/Solidity-starter-beta)** - **_A customizable development environment for Ethereum with hot reloading, error checking, and first-class testnet support_**
 
-- [ethfiddle.com](https://ethfiddle.com/)
+**[Tenderly Sandbox](https://sandbox.tenderly.co/)** - **_A fast prototyping environment where you can write, execute, and debug smart contracts in the browser using Solidity and JavaScript_**
+
+**[EthFiddle](https://ethfiddle.com/)** - **_Web-based IDE that lets you write, compile, and debug your smart contract_**
+
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
-
-**ChainIDE -** **_A Cloud-Based Multi-Chain IDE_**
-
-- [chainide.com](https://chainide.com/)
-
-**Replit -** **_A customizable development environment for Ethereum with hot reloading, error checking, and first-class testnet support_**
-
-- [Solidity starter](https://replit.com/@replit/Solidity-starter-beta)
 
 ## Desktop IDEs {#desktop-ides}
 

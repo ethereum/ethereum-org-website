@@ -2,7 +2,6 @@
 title: Istoricul şi fork-urile lui Ethereum
 description: Un istoric al blockchain-ului Ethereum care cuprinde repere majore, lansări și fork-uri.
 lang: ro
-sidebar: true
 sidebarDepth: 1
 ---
 

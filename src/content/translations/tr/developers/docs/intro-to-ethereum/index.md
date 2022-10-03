@@ -2,7 +2,6 @@
 title: Ethereum'a giriş
 description: Bir dapp geliştiricisi Ethereum'un temel kavramlarını tanıtıyor.
 lang: tr
-sidebar: true
 ---
 
 ## Blok zinciri nedir? {#what-is-a-blockchain}

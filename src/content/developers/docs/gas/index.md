@@ -2,7 +2,6 @@
 title: Gas and fees
 description:
 lang: en
-sidebar: true
 ---
 
 Gas is essential to the Ethereum network. It is the fuel that allows it to operate, in the same way that a car needs gasoline to run.
@@ -32,10 +31,11 @@ In the transaction, the gas limit is 21,000 units, and the gas price is 200 gwei
 Total fee would have been: `Gas units (limit) * Gas price per unit`
 i.e `21,000 * 200 = 4,200,000 gwei` or 0.0042 ETH
 
-Let's say Jordan has to pay Taylor 1 ETH. In the transaction, the gas limit is 21,000 units and the base fee is 10 gwei. Jordan includes a tip of 2 gwei.
-
 ## After the London upgrade {#post-london}
 
+Let's say Jordan has to pay Taylor 1 ETH. In the transaction, the gas limit is 21,000 units and the base fee is 10 gwei. Jordan includes a tip of 2 gwei.
+
+Total fee would have been: `Gas units (limit) * (Base fee + Tip)`
 `21,000 * (10 + 2) = 252,000 gwei` or 0.000252 ETH.
 
 When Jordan sends the money, 1.000252 ETH will be deducted from Jordan's account.

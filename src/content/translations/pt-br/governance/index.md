@@ -3,11 +3,12 @@ title: Governança Ethereum
 description: Uma introdução à forma como as decisões sobre a Ethereum são tomadas.
 lang: pt-br
 sidebar: true
+postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # Introdução à governança Ethereum {#introduction}
 
-_Se ninguém é proprietário da Ethereum, como são feitas as decisões sobre mudanças passadas e futuras na Ethereum? A governança Ethereum refere-se ao processo que permite que tais decisões sejam tomadas_
+_Se ninguém é proprietário da Ethereum, como são feitas as decisões sobre mudanças passadas e futuras na Ethereum? A governança Ethereum refere-se ao processo que permite que tais decisões sejam tomadas._
 
 <Divider />
 
@@ -21,7 +22,7 @@ Ninguém possui ou controla o protocolo Ethereum, mas ainda é necessário tomar
 
 ## Governança Ethereum {#ethereum-governance}
 
-A governança Ethereum é o processo pelo qual as alterações no protocolo são feitas. É importante salientar que este processo não está relacionado à maneira como as pessoas e os aplicativos usam o protocolo – o Ethereum é sem restrições. Qualquer pessoa de qualquer lugar do mundo pode participar de atividades on-chain. Não há regras definidas para quem pode ou não desenvolver um aplicativo ou enviar uma transação. No entanto, há um processo para propor alterações ao protocolo central, sobre o qual esses aplicativos são executados. Uma vez que muitas pessoas dependem da estabilidade do Ethereum, existe uma limitação de coordenação muito alta para mudanças principais, incluindo processos sociais e técnicos, para garantir que quaisquer alterações no Ethereum sejam seguras e amplamente suportadas pela comunidade
+A governança Ethereum é o processo pelo qual as alterações no protocolo são feitas. É importante salientar que este processo não está relacionado à maneira como as pessoas e os aplicativos usam o protocolo – o Ethereum é sem restrições. Qualquer pessoa de qualquer lugar do mundo pode participar de atividades on-chain. Não há regras definidas para quem pode ou não desenvolver um aplicativo ou enviar uma transação. No entanto, há um processo para propor alterações ao protocolo central, sobre o qual esses aplicativos são executados. Uma vez que tantas pessoas dependem da estabilidade do Ethereum, existe uma limitação de coordenação muito alta para mudanças principais, incluindo processos sociais e técnicos, para garantir que quaisquer alterações no Ethereum sejam seguras e amplamente suportadas pela comunidade.
 
 ### Governança on-chain versus off-chain {#on-chain-vs-off-chain}
 
@@ -115,7 +116,7 @@ Ter muitas partes interessadas com motivações e convicções diferentes signif
 
 De um modo geral, os desacordos são tratados com discussões de longo prazo em fóruns públicos para compreender a raiz do problema e permitir que qualquer um faça ponderações. Normalmente, um grupo concede ou um meio termo é alcançado. Se houver um grupo que se sinta suficientemente forte, a imposição de uma determinada mudança poderá resultar em uma divisão da cadeia. Uma divisão da cadeia é quando algumas partes interessadas protestam pela implementação de uma mudança no protocolo, resultando em algo diferente, versões incompatíveis do protocolo que opera, do qual emergem dois blockchains distintos.
 
-### Fork de DAO {#dao-fork}
+### Bifurcação (Fork) de DAO {#dao-fork}
 
 Forks são quando é necessário fazer grandes melhorias técnicas ou alterações na rede e modificar as "regras" do protocolo. [Os clientes da Ethereum](/developers/docs/nodes-and-clients/) devem atualizar seu software para implementar as novas regras do fork.
 

@@ -2,7 +2,6 @@
 title: Minarea
 description: O explicație a modului în care funcționează minarea în Ethereum și modul în care aceasta ajută la menținerea lui Ethereum în securitate și descentralizat.
 lang: ro
-sidebar: true
 incomplete: true
 ---
 

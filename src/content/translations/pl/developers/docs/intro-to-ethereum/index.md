@@ -2,7 +2,6 @@
 title: Wprowadzenie do Ethereum
 description: Wprowadzenie dla dewelopera aplikacji zdecentralizowanych do podstawowych pojęć Ethereum.
 lang: pl
-sidebar: true
 ---
 
 ## Czym jest blockchain? {#what-is-a-blockchain}

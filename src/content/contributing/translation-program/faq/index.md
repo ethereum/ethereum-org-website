@@ -2,7 +2,6 @@
 title: Translation Program frequently asked questions (FAQ)
 lang: en
 description: Frequently asked questions about the ethereum.org Translation Program
-sidebar: true
 ---
 
 # Translating ethereum.org guide {#translating-ethereum-guide}

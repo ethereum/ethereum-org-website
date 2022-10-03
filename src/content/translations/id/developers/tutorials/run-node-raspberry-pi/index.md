@@ -8,7 +8,6 @@ tags:
   - "lapisan konsensus"
   - "node"
 lang: id
-sidebar: true
 skill: intermediate
 published: 2020-05-07
 source: r/ethereum

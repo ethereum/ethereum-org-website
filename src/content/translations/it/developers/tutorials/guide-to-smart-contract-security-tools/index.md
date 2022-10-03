@@ -3,7 +3,6 @@ title: Una guida agli strumenti di sicurezza per gli smart contract
 description: Una panoramica di tre differenti tecniche di test e analisi del programma
 author: "Trailofbits"
 lang: it
-sidebar: true
 tags:
   - "Solidity"
   - "smart contract"

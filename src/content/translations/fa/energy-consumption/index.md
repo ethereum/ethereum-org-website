@@ -2,7 +2,6 @@
 title: مصرف انرژی اتریوم
 description: اطلاعات بنیادینی که برای درک مصرف انرژی اتریوم نیاز دارید.
 lang: fa
-sidebar: true
 ---
 
 # مصرف انرژی اتریوم {#introduction}

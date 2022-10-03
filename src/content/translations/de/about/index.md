@@ -2,7 +2,6 @@
 title: Über uns
 description: Über das Team, die Community und die Mission von ethereum.org
 lang: de
-sidebar: true
 ---
 
 # Über Ethereum.org {#about-ethereumorg}

@@ -10,7 +10,6 @@ tags:
   - "模拟"
 skill: intermediate
 lang: zh
-sidebar: true
 published: 2020-11-14
 ---
 

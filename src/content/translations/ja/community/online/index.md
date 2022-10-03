@@ -1,7 +1,6 @@
 ---
 title: オンラインコミュニティ
 description: イーサリアムエコシステムの助成プログラムリスト
-sidebar: true
 lang: ja
 ---
 
@@ -33,8 +32,8 @@ lang: ja
 
 ## YouTube と Twitter {#youtube-and-twitter}
 
-<SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">イーサリアム財団</Link> - イーサリアム財団の最新情報</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> - イーサリアム財団の公式アカウント</SocialListItem>
+<SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">イーサリアム・ファウンデーション</Link> - イーサリアム財団の最新情報</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> - イーサリアム・ファウンデーションの公式アカウント</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethdotorg">@ethdotorg</Link> - 日々拡大するグローバルコミュニティのために作られたイーサリアムへのポータル</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://hive.one/c/Ethereum?page=1">影響力のあるイーサリアムに関する Twitter アカウントリスト</Link></SocialListItem>
 

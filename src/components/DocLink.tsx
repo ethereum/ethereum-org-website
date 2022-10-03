@@ -1,94 +1,73 @@
 import React from "react"
-import { useTheme } from "@emotion/react"
-import styled from "@emotion/styled"
-import Icon from "./Icon"
+import { Icon, Box, Text, Flex, LinkBox, LinkOverlay } from "@chakra-ui/react"
+import { AiOutlineArrowRight } from "react-icons/ai"
+import Emoji from "./Emoji"
 import Link from "./Link"
-import Emoji from "./OldEmoji"
 
 export interface IProps {
   children?: React.ReactNode
   to: string
-  className?: string
   isExternal?: boolean
 }
 
-const Container = styled(Link)<{ isExternal: boolean }>`
-  position: relative;
-  z-index: 1;
-  text-decoration: none;
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  width: 100%;
-  justify-content: space-between;
-  padding: 1rem;
-  border-radius: 2px;
-  color: ${({ theme }) => theme.colors.text};
-  border: 1px solid ${({ theme }) => theme.colors.border};
-  &:hover {
-    text-decoration: none;
-    box-shadow: 0 0 1px ${({ theme }) => theme.colors.primary};
-    background: ${({ theme }) => theme.colors.tableBackgroundHover};
-    border-radius: 4px;
-
-    svg {
-      fill: ${(props) => props.theme.colors.primary};
-      transition: transform 0.1s;
-      transform: scale(1.2)
-        rotate(${({ isExternal }) => (isExternal ? "-45deg" : "0")});
-    }
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    width: 100%;
-  }
-`
-
-const TextCell = styled.div`
-  flex: 1;
-  flex-direction: column;
-  color: ${({ theme }) => theme.colors.text};
-`
-
-const Title = styled.p`
-  color: ${({ theme }) => theme.colors.text300};
-  font-weight: 600;
-  margin: 0;
-`
-
-const Arrow = styled(Icon)<{ isExternal: boolean }>`
-  margin: 0rem 1.5rem;
-  align-self: center;
-  min-width: 2rem;
-  transform: rotate(${({ isExternal }) => (isExternal ? "-45deg" : "0")});
-`
-
-const EmojiCell = styled.div`
-  display: flex;
-  align-items: center;
-`
-
-const DocLink: React.FC<IProps> = ({
-  to,
-  children,
-  className,
-  isExternal = false,
-}) => {
-  const theme = useTheme()
-
+const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
   return (
-    <Container to={to} className={className} isExternal={isExternal} hideArrow>
-      <EmojiCell>
-        <Emoji size={1} text=":page_with_curl:" mr={`1rem`} />
-      </EmojiCell>
-      <TextCell>
-        <Title>{children}</Title>
-      </TextCell>
-      <Arrow
-        isExternal={isExternal}
-        color={theme.colors.text}
-        name="arrowRight"
-      />
-    </Container>
+    <LinkBox>
+      <Box
+        padding={4}
+        borderRadius="sm"
+        color="text"
+        border="1px"
+        borderStyle="solid"
+        borderColor="border"
+        _hover={{
+          background: "tableBackgroundHover",
+          borderRadius: "base",
+          boxShadow: "0 0 1px var(--eth-colors-primary)",
+        }}
+        role="group"
+      >
+        <Flex
+          position="relative"
+          zIndex={1}
+          display="flex"
+          flexDirection="row"
+          flex={1}
+          justifyContent="space-between"
+        >
+          <Flex align="center">
+            <Emoji fontSize="md" mr={4} text=":page_with_curl:" />
+          </Flex>
+          <Box flex={1} flexDirection="column">
+            <LinkOverlay
+              href={to}
+              as={Link}
+              isExternal={isExternal}
+              textDecoration="none"
+              _hover={{ textDecoration: "none" }}
+              hideArrow
+            >
+              <Text color="text300" fontWeight="semibold" margin={0}>
+                {children}
+              </Text>
+            </LinkOverlay>
+          </Box>
+          <Icon
+            as={AiOutlineArrowRight}
+            alignSelf="center"
+            minWidth="2rem"
+            boxSize={6}
+            marginX={6}
+            _groupHover={{
+              fill: "primary",
+              transition: "transform 0.1s",
+              transform: "scale(1.2)",
+              rotate: isExternal ? "-45deg" : "0",
+            }}
+          />
+        </Flex>
+      </Box>
+    </LinkBox>
   )
 }
 

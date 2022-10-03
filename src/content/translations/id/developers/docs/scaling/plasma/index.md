@@ -2,7 +2,6 @@
 title: Rantai plasma
 description: Pengantar rantai plasma sebagai solusi penskalaan yang saat ini digunakan oleh komunitas Ethereum.
 lang: id
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---

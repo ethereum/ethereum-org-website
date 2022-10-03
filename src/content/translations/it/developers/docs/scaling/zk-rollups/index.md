@@ -2,7 +2,6 @@
 title: Rollup a conoscenza zero (zero-knowledge)
 description: Introduzione ai rollup a conoscenza zero
 lang: it
-sidebar: true
 ---
 
 ## Prerequisiti {#prerequisites}

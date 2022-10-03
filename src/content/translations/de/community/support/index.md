@@ -1,7 +1,6 @@
 ---
 title: Ethereum-Support
 description: Support im Ethereum-Ökosystem erhalten
-sidebar: true
 lang: de
 ---
 
@@ -35,7 +34,7 @@ _Das ist keine vollständige Liste. Brauchen Sie Hilfe bei der Suche nach Unters
 
 Suchen Sie eine Ethereum-Wallet? [Sehen Sie sich unsere vollständige Liste der Ethereum-Wallets an](/wallets/find-wallet/).
 
-## DApps erstellen {#building-support}
+## Dapps erstellen {#building-support}
 
 Erstellen kann durchaus schwer sein. Hier finden Sie einige Breiche mit Schwerpunkt auf Entwicklung mit erfahrenen Ethereum-Entwicklern, die Ihnen gerne helfen.
 
@@ -46,7 +45,7 @@ Erstellen kann durchaus schwer sein. Hier finden Sie einige Breiche mit Schwerpu
 
 In unserem Bereich mit [Ethereum-Entwicklerressourcen](/developers/) finden Sie auch Dokumentationen und Entwicklungsleitfäden.
 
-### Werkzeuge {#dapp-tooling}
+### Tools {#dapp-tooling}
 
 Bezieht sich Ihre Frage auf ein bestimmtes Tool, Projekt oder eine Bibliothek? Die meisten Projekte haben Chat-Server oder Foren, die Unterstützung bieten.
 
@@ -107,4 +106,8 @@ Transaktionen auf Ethereum können manchmal stecken bleiben, wenn Sie eine niedr
 
 #### Wie kann ich Ethereum minen? {#mining-ethereum}
 
-Wir raten davon ab, Mining-Ausrüstung zu kaufen, wenn Sie nicht bereits schon Ethereum minen. Vorraussichtlich im 3./4. Quartal 2022 wird [Die Zusammenführung](/upgrades/merge/) vonstattengehen, wodurch Ethereum von Proof-of-Work zu Proof-of-Stake wechselt. Diese Änderung bedeutet, dass das Mining von Ethereum nicht mehr möglich sein wird.
+Ethereum-Mining ist nicht mehr möglich. Das Mining wurde abgeschaltet, als Ethereum von Proof-of-Work zu Proof-of-Stake wechselte. Anstatt Miner hat Ethereum jetzt Validatoren. Validatoren setzen ETH ein und erhalten für das Staking des Netzwerkes eine Belohnung.
+
+#### Wie werde ich Staker/Validator? {#become-validator}
+
+Um ein Validator zu werden, müssen Sie 32 ETH in den Einlagenvertrag von Ethereum einzahlen und einen Validator-Knoten aufbauen. Weitere Informationen dazu finden Sie auf den [Staking-Seiten](/staking) und [dem Staking-Launchpad](https://launchpad.ethereum.org/).

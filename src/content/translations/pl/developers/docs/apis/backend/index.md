@@ -2,7 +2,6 @@
 title: Biblioteki backendowego API
 description: Wprowadzenie do API klienta Ethereum, które pozwala na interakcję z blockchainem z aplikacji.
 lang: pl
-sidebar: true
 ---
 
 Aby aplikacja mogła wchodzić w interakcję z blockchainem Ethereum (tj. odczytywać dane blockchainu i/lub wysyłać transakcje do sieci), musi łączyć się z węzłem Ethereum.

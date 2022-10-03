@@ -3,7 +3,6 @@ title: Cara menggunakan Manticore untuk menemukan bug dalam kontrak pintar
 description: Cara menggunakan Manticore untuk menemukan bug dalam kontrak pintar secara otomatis
 author: Trailofbits
 lang: id
-sidebar: true
 tags:
   - "solidity"
   - "kontrak pintar"

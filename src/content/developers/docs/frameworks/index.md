@@ -2,7 +2,6 @@
 title: Dapp Development Frameworks
 description: Explore the advantages of frameworks and compare available options.
 lang: en
-sidebar: true
 ---
 
 ## Introduction to frameworks {#introduction-to-frameworks}

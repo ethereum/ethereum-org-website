@@ -2,7 +2,6 @@
 title: Blocuri
 description: O prezentare generală a blocurilor din blockchain-ul Ethereum – structura lor de date, motivul pentru care sunt necesare și modul în care sunt realizate.
 lang: ro
-sidebar: true
 ---
 
 Blocurile sunt loturi de tranzacții cu un hash din blocul anterior din lanț. Acesta leagă blocurile (în lanț), deoarece hash-urile sunt derivate criptografic din datele blocului. Acest lucru previne frauda, pentru că o modificare a oricărui bloc din istoric ar invalida toate blocurile următoare, întrucât toate hash-urile ulterioare se vor schimba și toți cei care rulează blockchain-ul vor observa.

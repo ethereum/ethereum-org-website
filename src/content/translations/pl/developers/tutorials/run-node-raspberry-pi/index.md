@@ -7,7 +7,6 @@ tags:
   - "eth2"
   - "węzły"
 lang: pl
-sidebar: true
 skill: intermediate
 published: 2020-05-07
 source: r/ethereum

@@ -2,7 +2,6 @@
 title: Introducción a ether
 description: Una introducción para desarrolladores a la criptomoneda ethereum
 lang: es
-sidebar: true
 ---
 
 ## Requisitos previos {#prerequisites}

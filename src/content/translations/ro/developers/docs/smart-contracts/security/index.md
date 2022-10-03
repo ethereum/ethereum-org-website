@@ -2,7 +2,6 @@
 title: Securitatea contractelor inteligente
 description: Considerații de securitate pentru dezvoltatorii Ethereum
 lang: ro
-sidebar: true
 ---
 
 Contractele inteligente Ethereum sunt extrem de flexibile, capabile atât să dețină cantități mari de tokenuri (de multe ori peste 1 miliard USD), cât și să ruleze o logică imuabilă pe baza codului de contract inteligent implementat anterior. Pe de-o parte, acest lucru a creat un ecosistem vibrant și creativ de contracte inteligente ce nu necesită autorizarea, interconectate, dar este şi ecosistemul perfect pentru a atrage atacatorii care doresc să profite prin exploatarea vulnerabilității din contractele inteligente și a comportamentului neașteptat în Ethereum. Codul de contract inteligent, _de obicei_ nu poate fi schimbat ca să fie remediate defectele de securitate; activele care au fost furate din contracte inteligente sunt irecuperabile, iar activele furate sunt extrem de dificil de urmărit. The total of amount of value stolen or lost due to smart contract issues is easily over $1B. Unele dintre cele mai mari pierderi din cauza erorilor de programare a contractelor inteligente includ:

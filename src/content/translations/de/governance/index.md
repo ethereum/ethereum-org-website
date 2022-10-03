@@ -2,7 +2,6 @@
 title: Ethereum – Steuerung
 description: Eine Einführung in die Entscheidungsfindung bei Ethereum
 lang: de
-sidebar: true
 ---
 
 # Governance bei Ethereum – eine Einführung {#introduction}

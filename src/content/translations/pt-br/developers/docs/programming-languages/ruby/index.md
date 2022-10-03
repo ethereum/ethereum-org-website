@@ -2,7 +2,6 @@
 title: Ethereum for Ruby Developers
 description: Learn how to develop for Ethereum using Ruby-based projects and tooling.
 lang: pt-br
-sidebar: true
 incomplete: false
 ---
 

@@ -2,7 +2,6 @@
 title: Adding staking products or services
 description: The policy we use when adding a staking products or services to ethereum.org
 lang: en
-sidebar: true
 ---
 
 # Adding staking products or services {#adding-staking-products-or-services}

@@ -2,7 +2,6 @@
 title: Що таке Web3 і чому це важливо?
 description: Коротко про наступну версію всесвітньої мережі Web3 і чому це важливо.
 lang: uk
-sidebar: true
 ---
 
 # Коротко про Web3 {#introduction}

@@ -2,7 +2,6 @@
 title: Prueba de participación (PoS)
 description: Una explicación del protocolo de consenso de la prueba de participación y su papel en Ethereum.
 lang: es
-sidebar: true
 incomplete: true
 ---
 

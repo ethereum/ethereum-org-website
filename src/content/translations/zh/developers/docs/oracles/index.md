@@ -2,7 +2,6 @@
 title: 预言机
 description: 预言机有助于将真实世界数据输入您的以太坊应用程序，因为智能合约本身无法查询真实世界的数据。
 lang: zh
-sidebar: true
 incomplete: true
 ---
 

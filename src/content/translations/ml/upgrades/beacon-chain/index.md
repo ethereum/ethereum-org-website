@@ -3,7 +3,6 @@ title: ബീക്കൺ ചെയിൻ
 description: ബീക്കൺ ചെയിനിനെ കുറിച്ച് പഠിക്കൂ - Ethereumലേക്കുള്ള ആദ്യത്തെ പ്രധാന Eth2 നവീകരണം.
 lang: ml
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: ബീക്കൺ ചെയിൻ നാം ഇന്ന് ഉപയോഗിക്കുന്ന Ethereumലെ ഒന്നും മാറ്റുന്നില്ല.
 summaryPoint2: ഇത് നെറ്റ്‌വർക്കുകളെ ബന്ധിപ്പിക്കുന്നു.
