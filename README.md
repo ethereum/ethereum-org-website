@@ -1437,6 +1437,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center"><a href="https://www.linkedin.com/in/ritesh-in/"><img src="https://avatars.githubusercontent.com/u/88592710?v=4?s=100" width="100px;" alt="Ritesh Singh"/><br /><sub><b>Ritesh Singh</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=codespirit7" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://www.linkedin.com/in/simonletort"><img src="https://avatars.githubusercontent.com/u/367992?v=4?s=100" width="100px;" alt="Simon Letort"/><br /><sub><b>Simon Letort</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=simonletort" title="Documentation">📖</a></td>
     </tr>
   </tbody>
   <tfoot>
