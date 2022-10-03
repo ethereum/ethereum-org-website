@@ -142,5 +142,7 @@
   "page-stablecoins-why-stablecoins": "為何選擇穩定幣？",
   "page-stablecoins-how-they-work-button": "運作原理",
   "page-stablecoins-why-stablecoins-body": "以太幣如同比特幣，因為是一種新科技，價格容易變動。所以您可能不會想要經常花費以太幣，穩定幣具傳統貨幣的穩定性，讓您有可以在以太坊使用的穩定金錢。",
-  "page-stablecoins-more-defi-button": "更多關於去中心化金融 (DeFi)"
+  "page-stablecoins-more-defi-button": "更多關於去中心化金融 (DeFi)",
+  "page-stablecoins-tools-title": "了解關於穩定幣的更多資訊",
+  "page-stablecoins-tools-stablecoinswtf-description": "Stablecoins.wtf 提供具有主流穩定幣之市場歷史資料、統計數據及教育內容的儀表板。"
 }

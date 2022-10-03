@@ -4,7 +4,6 @@ description: نگاهی کلی به DAOهای بر پایه اتریوم
 lang: fa
 template: use-cases
 emoji: ":handshake:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/use-cases/dao-2.png
 alt: تصویری از یک DAO در حال رأی دادن به یک پیشنهاد.

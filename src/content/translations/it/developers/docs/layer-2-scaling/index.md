@@ -2,7 +2,6 @@
 title: Passaggio al livello 2
 description: Introduzione alle diverse opzioni di crescita attualmente in fase di sviluppo da parte della community Ethereum.
 lang: it
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 isOutdated: true

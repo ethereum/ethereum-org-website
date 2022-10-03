@@ -8,7 +8,6 @@ tags:
   - "camada de consenso"
   - "nós"
 lang: pt-br
-sidebar: true
 skill: intermediário
 published: 2020-05-07
 source: r/ethereum

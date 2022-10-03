@@ -2,7 +2,6 @@
 title: استخراج
 description: An explanation of how mining worked on Ethereum.
 lang: fa
-sidebar: true
 ---
 
 <InfoBanner emoji=":wave:">

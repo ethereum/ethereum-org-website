@@ -2,7 +2,6 @@
 title: Bevezetés az Ethereumba
 description: A dapp fejlesztője bemutatja az Ethereum alapfogalmait.
 lang: hu
-sidebar: true
 ---
 
 ## Mi az a blokklánc? {#what-is-a-blockchain}

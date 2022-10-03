@@ -1,7 +1,6 @@
 ---
 title: Mụta
 lang: ig
-sidebar: true
 ---
 
 # Mụta maka Ethereum {#learn-about-ethereum}

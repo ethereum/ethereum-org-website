@@ -2,7 +2,6 @@
 title: 以太坊改进提议 (EIP)
 description: 了解以太坊改进提议 (EIP) 的基本信息。
 lang: zh
-sidebar: true
 ---
 
 # 隆重介绍以太坊改进提议（EIPs） {#introduction-to-ethereum-improvement-proposals-eips}
@@ -23,11 +22,11 @@ EIP 作为一个中心角色，记载以太坊的变化并且记载在以太坊�
 
 ## EIP 历史 {#history-of-eips}
 
-[Ethereum Improvement Proposals (EIP) GitHub 存储库](https://github.com/ethereum/EIPs) 于 2015 年 10 月创建。 EIP 进程基于[比特币改进提议 (BIP)](https://github.com/bitcoin/bips) 进程。它本身基于 [Python 增强提议 (PEP)](https://www.python.org/dev/peps/) 进程。
+[Ethereum Improvement Proposals (EIP) Github 存储库](https://github.com/ethereum/EIPs) 于 2015 年 10 月创建。 EIP 进程基于[比特币改进提议 (BIP)](https://github.com/bitcoin/bips) 进程。它本身基于 [Python 增强提议 (PEP)](https://www.python.org/dev/peps/) 进程。
 
 EIP 编辑人员的任务是审查 EIP 的技术可靠性、正确的拼写/语法和代码风格。 Martin Becze、Vitalik Buterin、Gavin Wood 和其他一些人是 2015 年至 2016 年末最初的 EIP 编辑者。
 
-当前 EIP 编辑者是：
+现有以太坊改进提案编辑人员有
 
 - Alex Beregszaszi (@axic)
 - Gavin John (@Pandapip1)
@@ -35,7 +34,7 @@ EIP 编辑人员的任务是审查 EIP 的技术可靠性、正确的拼写/语�
 - Matt Garnett (@lightclient)
 - Sam Wilson (@SamWilsn)
 
-名誉 EIP 编辑者是：
+以太坊改进提案名誉编辑人员有
 
 - Casey Detrio (@cdetrio)
 - Hudson Jameson (@Souptacular)
@@ -45,31 +44,31 @@ EIP 编辑人员的任务是审查 EIP 的技术可靠性、正确的拼写/语�
 - Nick Savers (@nicksavers)
 - Vitalik Buterin (@vbuterin)
 
-如果您想要成为一名 EIP 编辑者，请参考 [EIP-5069](https://eips.ethereum.org/EIPS/eip-5069).
+如果你想成为以太坊改进提案编辑人员，请查看 [EIP-5069](https://eips.ethereum.org/EIPS/eip-5069)。
 
-EIP 编辑们与 [Ethereum Cat Herders](https://ethereumcatherders.com/) 和 [Ethererum Magicians](https://ethereum-magicians.org/) 的社区成员共同决定实施哪个 EIP，共同负责促进 EIP 实施以及将 EIP 推入到“最终”或“已撤销”阶段。
+以太坊改进提案编辑人员与[以太坊牧猫人组织](https://ethereumcatherders.com/)及 [Ethererum Magicians](https://ethereum-magicians.org/) 社区的成员共同决定要实施的以太坊改进提案，共同负责以太坊改进提案的推广以及推动以太坊改进提案进入“定稿”或“已撤销”阶段。
 
-完整的标准化过程和图表在 [EIP-1](https://eips.ethereum.org/EIPS/eip-1) 中描述
+完整的标准化流程和图表在 [EIP-1](https://eips.ethereum.org/EIPS/eip-1) 中描述
 
 ## 查看更多 {#learn-more}
 
-如果您有兴趣阅读更多关于 EIP 的信息，请查看 [EIP 网站](https://eips.ethereum.org/) ，您可以在那里找到更多信息，包括：
+如果你有兴趣阅读更多关于以太坊改进提案的信息，请查看[以太坊改进提案网站](https://eips.ethereum.org/)，该网站提供了更多信息，包括：
 
-- [各种不同类型的 EIP](https://eips.ethereum.org/)
-- [已创建的 EIP 列表](https://eips.ethereum.org/all)
-- [EIP 状态和它们的含义](https://eips.ethereum.org/)
+- [各种不同类型的以太坊改进提案](https://eips.ethereum.org/)
+- [已编制以太坊改进提案清单](https://eips.ethereum.org/all)
+- [以太坊改进提案的状态和含义](https://eips.ethereum.org/)
 
 ## 参与 {#participate}
 
-任何人都可以创建 EIP 或 ERC，尽管你应该阅读 [EIP-1](https://eips.ethereum.org/EIPS/eip-1)，其中概述了 EIP 过程、什么是 EIP、EIP 的类型、EIP 文件应该包含什么、EIP 格式和模板、EIP 编辑名单以及在创建 EIP 之前你需要了解的所有内容。 你的新 EIP 应该定义新的功能，这些功能并不复杂，但也不是超级小众的，可以在以太坊生态系统的项目中使用。 最难的部分是推进，作为作者，您需要推动人们围绕 EIP，收集反馈，写文章描述您的 EIP 解决的问题，并与项目合作，实施您的 EIP。
+任何人都可以编制以太坊改进提案或以太坊意见征求，但编制前应该先阅读 [EIP-1](https://eips.ethereum.org/EIPS/eip-1)，其中概述了以太坊改进提案流程、什么是以太坊改进提案、以太坊改进提案类型、以太坊改进提案文件内容、以太坊改进提案的格式和模板、以太坊改进提案编辑人员名单以及在编制以太坊改进提案之前你需要了解的所有以太坊改进提案相关内容。 你新编制的以太坊改进提案应该定义新功能，新功能不太复杂，但也不太小众，可以在以太坊生态系统的项目中使用。 最难的部分是推广，作为创作者，需要促使人们关注你的以太坊改进提案，收集反馈，撰写文章描述你的以太坊改进提案解决的问题，并与项目合作实施你的以太坊改进提案。
 
-如果您有兴趣跟随或分享您对 EIP 的贡献，请查看 [Ethereum Magicans 论坛](https://ethereum-magicians.org/)，在那里与社区讨论 EIP。
+如果你有兴趣关注讨论过程或分享你对以太坊改进提案的看法意见，请查看 [Ethereum Magicans 论坛](https://ethereum-magicians.org/)，在那里与社区讨论以太坊改进提案。
 
 另请参见：
 
-- [如何创建 EIP](https://eips.ethereum.org/EIPS/eip-1)
+- [如何编制以太坊改进提案](https://eips.ethereum.org/EIPS/eip-1)
 
-## 参考文献 {#references}
+## 引用 {#references}
 
 <cite class="citation">
 

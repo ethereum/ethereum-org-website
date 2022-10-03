@@ -2,7 +2,6 @@
 title: Ethereum Improvement Proposals (EIPs)
 description: The basic information you need to understand EIPs
 lang: en
-sidebar: true
 ---
 
 # Introduction to Ethereum Improvement Proposals (EIPs) {#introduction-to-ethereum-improvement-proposals}

@@ -2,7 +2,6 @@
 title: اثبات سهام (PoS)
 description: توضیحی درباره‌ی پروتکل اجماع اثبات سهام و نقش آن در اتریوم.
 lang: fa
-sidebar: true
 ---
 
 Proof-of-stake (PoS) underlies Ethereum's [consensus mechanism](/developers/docs/consensus-mechanisms/). Ethereum switched on its proof-of-stake mechanism in 2022 because it is more secure, less energy-intensive, and better for implementing new scaling solutions compared to the previous [proof-of-work](/developers/docs/consensus-mechanisms/pow) architecture.

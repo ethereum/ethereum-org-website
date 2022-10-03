@@ -2,8 +2,6 @@
 title: 以太币简介
 description: 开发者讲解以太币加密货币
 lang: zh
-sidebar: true
-preMergeBanner: true
 ---
 
 ## 前提条件 {#prerequisites}

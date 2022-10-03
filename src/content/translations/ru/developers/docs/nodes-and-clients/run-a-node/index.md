@@ -2,7 +2,6 @@
 title: Развертывание собственного узла Ethereum
 description: Общее введение в запуск собственного экземпляра клиента Ethereum.
 lang: ru
-sidebar: true
 sidebarDepth: 2
 ---
 

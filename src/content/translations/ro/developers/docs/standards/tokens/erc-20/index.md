@@ -2,7 +2,6 @@
 title: Standardul de token ERC-20
 description:
 lang: ro
-sidebar: true
 ---
 
 ## Introducere {#introduction}

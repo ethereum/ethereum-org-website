@@ -2,7 +2,6 @@
 title: 智能合约语言
 description: 两种主要的智能合约语言（Solidity 和 Vyper）的概述和比较。
 lang: zh
-sidebar: true
 ---
 
 关于以太坊的一个重要方面是，智能合约可以使用相对友好的开发者语言编程。 如果您熟悉 Python 或任何[大括号语言](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages)，可以找到一种语法熟悉的语言。

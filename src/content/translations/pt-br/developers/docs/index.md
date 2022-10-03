@@ -2,7 +2,6 @@
 title: "Ethereum: Documentação de desenvolvimento"
 description: Introduzindo a documentação de desenvolvimento da rede Ethereum.
 lang: pt-br
-sidebar: true
 ---
 
 O objetivo dessa documentação é ajudá-lo a criar utilizando o Ethereum. Ela cobre o Ethereum como um conceito, explica a tecnologia de pilha do Ethereum e documenta tópicos avançados para aplicativos e casos de uso mais complexos.

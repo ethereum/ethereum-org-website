@@ -2,7 +2,6 @@
 title: Kendi Ethereum düğümünüzü başlatın
 description: Kendi Ethereum istemcinizi çalıştırmaya genel bir giriş.
 lang: tr
-sidebar: true
 sidebarDepth: 2
 ---
 

@@ -2,7 +2,6 @@
 title: Translation program playbook
 lang: en
 description: A collection of tips and important considerations for setting up a translation program
-sidebar: true
 ---
 
 # Translation Program Playbook {#translation-program-playbook}

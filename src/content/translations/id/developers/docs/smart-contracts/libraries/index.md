@@ -2,7 +2,6 @@
 title: Pustaka kontrak pintar
 description:
 lang: id
-sidebar: true
 ---
 
 Anda tidak perlu menulis setiap kontrak pintar dalam proyek Anda dari nol. Ada banyak pustaka kontrak pintar sumber terbuka tersedia yang menyediakan blok pembangun yang dapat digunakan kembali untuk proyek Anda yang bisa menghindarkan Anda dari keharusan untuk membuat ulang rodanya.

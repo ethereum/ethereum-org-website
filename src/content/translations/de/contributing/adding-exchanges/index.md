@@ -2,7 +2,6 @@
 title: Handelsplätze hinzufügen
 description: Richtlinien für das Hinzufügen von Handelsplätzen auf ethereum.org
 lang: de
-sidebar: true
 ---
 
 # Ethereum-Handelsplätze hinzufügen {#adding-ethereum-exchanges}

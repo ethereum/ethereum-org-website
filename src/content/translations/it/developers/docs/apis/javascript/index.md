@@ -2,22 +2,23 @@
 title: Librerie API JavaScript
 description: Introduzione alle librerie client JavaScript che consentono di interagire con la blockchain da un'applicazione.
 lang: it
-sidebar: true
 ---
 
 Per interagire con la blockchain Ethereum (ad esempio leggere i dati della blockchain e/o inviare transazioni alla rete), una web app deve connettersi a un nodo Ethereum.
 
 Per questo scopo, ogni client di Ethereum implementa la specifica [JSON-RPC](/developers/docs/apis/json-rpc/), quindi esiste una serie uniforme di [endpoint](/developers/docs/apis/json-rpc/endpoints/) su cui possono basarsi le applicazioni.
 
-Se desideri utilizzare JavaScript per connetterti a un nodo Ethereum, puoi usare JavaScript vanilla, ma tieni presente che ci sono già molte librerie all'interno dell'ecosistema che possono facilitarti la vita. Con queste librerie, gli sviluppatori possono scrivere metodi a una riga intuitivi per inizializzare le richieste RPC JSON (under the hood) che interagiscono con Ethereum.
+Se desideri utilizzare JavaScript per connetterti a un nodo Ethereum, puoi usare Javascript vanilla, ma tieni presente che ci sono già molte librerie all'interno dell'ecosistema che possono facilitarti la vita. Con queste librerie, gli sviluppatori possono scrivere metodi a una riga intuitivi per inizializzare le richieste RPC JSON (under the hood) che interagiscono con Ethereum.
+
+Sei pregato di notare che, a partire dalla [Fusione](/upgrades/merge/), per operare un nodo occorrono due elementi di software di Ethereum connessi (un client di esecuzione e un client di consenso). Assicurati che il tuo nodo includa sia un client di esecuzione che un client di consenso. Se il tuo nodo non si trova sulla tua macchina locale (ad es. se è in esecuzione su un'istanza AWS), occorrerà aggiornare di conseguenza gli indirizzi IP nel tutorial. Per ulteriori informazioni, consulta la nostra pagina sull'[esecuzione di un nodo](/developers/docs/nodes-and-clients/run-a-node/).
 
 ## Prerequisiti {#prerequisites}
 
-Potrebbe essere conoscere non solo JavaScript ma anche lo [stack di Ethereum](/developers/docs/ethereum-stack/) e[i client di Ethereum](/developers/docs/nodes-and-clients/).
+Potrebbe essere utile conoscere non solo Javascript ma anche lo [stack di Ethereum](/developers/docs/ethereum-stack/) e [i client di Ethereum](/developers/docs/nodes-and-clients/).
 
 ## Perché usare una libreria? {#why-use-a-library}
 
-Queste librerie eliminano buona parte della complessità legata al dover interagire direttamente con un nodo Ethereum. Forniscono inoltre funzioni di utilità (ad esempio conversione da ETH a Gwei) in modo da ridurre il tempo necessario per districarsi tra le complessità dei client Ethereum e potersi concentrare sulle funzionalità uniche dell'applicazione.
+Queste librerie eliminano buona parte della complessità legata al dover interagire direttamente con un nodo Ethereum. Assicurano inoltre funzioni di utilità (ad esempio la conversione da ETH a Gwei) per fare in modo che gli sviluppatori debbano dedidare meno tempo alle complessità dei client Ethereum e più tempo alle funzionalità specifiche dell'applicazione.
 
 ## Caratteristiche della libreria {#library-features}
 
@@ -25,20 +26,20 @@ Queste librerie eliminano buona parte della complessità legata al dover interag
 
 Utilizzando i provider, queste librerie consentono di connettersi a Ethereum e leggerne i dati, tramite JSON-RPC, INFURA, Etherscan, Alchemy o MetaMask.
 
-**Esempio Ethers**
+**Esempio da Ethers**
 
 ```js
-// Un Web3Provider esegue il wrapping di un provider Web3 standard, che è
-// ciò che MetaMask inserisce come window.ethereum in ogni pagina
+// Un Web3Provider avvolge un fornitore standard di Web3, che è
+// ciò che MetaMask inseriscie come window.ethereum in ogni pagina
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-// Il plugin MetaMask permette anche di firmare le transazioni per
-// inviare ether e pagare per cambiare stato all'interno della blockchain.
+// Il plugin di MetaMask consente anche di firmare le transazioni per
+// inviare ether e pagare per modificare lo stato nella blockchain.
 // Per questo, abbiamo bisogno del firmatario dell'account...
 const signer = provider.getSigner()
 ```
 
-**Esempio Web3js**
+**Esempio da Web3js**
 
 ```js
 var web3 = new Web3("http://localhost:8545")
@@ -71,7 +72,7 @@ Una volta eseguita la configurazione, sarà possibile interrogare la blockchain 
 
 ### Funzionalità del portafoglio {#wallet-functionality}
 
-Queste librerie offrono funzionalità per creare portafogli, gestire chiavi e firmare transazioni.
+Queste librerie offrono le funzionalità per creare portafogli, gestire chiavi e firmare transazioni.
 
 Ecco un esempio da Ethers
 
@@ -215,9 +216,9 @@ Ciò significa che è possibile:
 
 ### Funzioni di utilità {#utility-functions}
 
-Le funzioni di utilità forniscono pratiche scorciatoie che rendono la programmazione con Ethereum un po’ più semplice.
+Le funzioni di utilità forniscono pratiche scorciatoie che rendono la programmazione con Ethereum un po' più semplice.
 
-I valori ETH sono in Wei per default. 1 ETH = 1.000.000.000.000.000 WEI, un numero di cifre veramente elevato! `web3.utils.toWei` converte ether in Wei.
+I valori ETH sono in Wei per default. 1 ETH = 1.000.000.000.000.000.000 WEI, un numero di cifre veramente elevato! `web3.utils.toWei` converte ether in Wei.
 
 E in ethers funziona così:
 
@@ -242,7 +243,7 @@ ethers.utils.formatEther(balance)
 - [Documentazione](https://web3js.readthedocs.io/en/1.0/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
-**Ethers.js -** **_Implementazione completa del portafoglio Ethereum e delle utility in JavaScript e TypeScript._**
+**Ethers.js -** **_Implementazione completa del portafoglio Ethereum e delle utility in JavaScript e TypeScript_**
 
 - [Documentazione](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
@@ -264,9 +265,14 @@ ethers.utils.formatEther(balance)
 - [Documentazione](https://0x.org/docs/web3-wrapper#introduction)
 - [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 
-**Alchemyweb3 -** **_Wrapper per Web3.js con nuovi tentativi automatici e API migliorate._**
+**Alchemyweb3 -** **_Wrapper per Web3.js con nuovi tentativi automatici e API migliorate_**
 
 - [Documentazione](https://docs.alchemy.com/reference/api-overview)
+- [GitHub](https://github.com/alchemyplatform/alchemy-web3)
+
+**Alchemy NFT API -** **_API per recuperare i dati degli NFT, inclusi proprietà, attributi dei metadati e altro_**
+
+- [Documentazione](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
 ## Letture consigliate {#further-reading}

@@ -4,7 +4,6 @@ description: ETHステーキングプールの始め方の概要
 lang: ja
 template: staking
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../../assets/staking/leslie-saas.png
 alt: 雲に浮かぶサイのレスリー
 sidebarDepth: 2
@@ -76,21 +75,7 @@ ETH のステーキングを支援するステーキング・アズ・ア・サ�
 </ExpandableCard>
 
 <ExpandableCard title="引き出しが可能になる時期" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-  SaaSプロバイダーで32 ETHをステークした場合も、そのETHは正式なステーキングデポジットコントラクトに預け入れられます。 そのため、SaaSステーカーもソロスステーカーと同じく、現在のところ資金を引き出すことはできません。 つまり、ETHのステーキングは、現状では、一方通行の入金だけとなります。 マージ後に予定されている上海アップグレードまでは、引き出せない状態が続きます。
-</ExpandableCard>
-
-<ExpandableCard title="マージに伴う変更" eventCategory="SaasStaking" eventName="clicked what will change with the Merge">
-  マージ後、SaaSステーカーは未燃焼のトランザクションフィー/チップの受け取り始めます。 引き出しが可能になった時に、この資金をイーサリアムのアドレスに送金できるように設定を変更する方法については、お使いのプロバイダーにご確認ください。
-
-マージにより、ステークやプロトコルの報酬を<em>引き出せるようにはなりません</em>。引き出しが可能になるのは、マージから半年から 1 年後を予定している上海アップグレードです。
-</ExpandableCard>
-
-<ExpandableCard title="SaaSステーカーはマージでの対応不要">
-SaaSのステーカーは<strong>マージに向けて何もする必要がありません。</strong>
-
-ノードオペレータは、このアップグレードに向けて、いくつか注意しなければならない点があります。 ステーキングプロバイダーのシステムの準備ができているかどうか確認してください。
-
-[マージ](/upgrades/merge/)についてもっと知る
+  SaaSプロバイダーで32 ETHをステークした場合も、そのETHは正式なステーキングデポジットコントラクトに預け入れられます。 そのため、SaaSステーカーもソロスステーカーと同じく、現在のところ資金を引き出すことはできません。 つまり、ETHのステーキングは、現状では、一方通行の入金だけとなります。 ただし、これは上海アップグレードが行われるまでです。
 </ExpandableCard>
 
 <ExpandableCard title="スラッシングされた場合" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

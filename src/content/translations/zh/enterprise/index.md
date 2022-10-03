@@ -2,7 +2,6 @@
 title: 在以太坊主网络上的企业
 description: 有关公共以太坊区块链上的企业应用的指南、文章和工具
 lang: zh
-sidebar: true
 ---
 
 # 企业以太坊主网络 {#ethereum-for-enterprise}

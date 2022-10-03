@@ -2,8 +2,6 @@
 title: Gas e commissioni
 description:
 lang: it
-sidebar: true
-preMergeBanner: true
 ---
 
 Il carburante è un elemento essenziale per la rete Ethereum. Consente di far funzionare la rete, proprio come un'automobile ha bisogno di benzina per funzionare.
@@ -30,39 +28,27 @@ Mettiamo che Alice debba pagare 1 ETH a Bob. Nella transazione, il limite di car
 
 La commissione totale sarebbe: `Unità di carburante (limite) * Prezzo del gas per unità`, es. ` 21.000 * 200 = 4.200.000 gwei` o 0,0042 ETH
 
-Quando Alice invia il denaro, vengono detratti dal suo account 1,0042 ETH. Bob riceve un accredito di 1,0000 ETH, Il miner riceverebbe 0,0042 ETH.
-
-Questo video offre una panoramica concisa del carburante, con la spiegazione della sua esistenza:
-
-<YouTube id="AJvzNICwcwc" />
+Ipotizziamo che Jordan debba pagare 1 ETH a Taylor. Nella transazione, il limite di carburante è di 21.000 unità e la commissione base è di 10 gwei. Jordan include una mancia di 2 gwei.
 
 ## Dopo l'aggiornamento di Londra {#post-london}
 
-[L'Aggiornamento di Londra](/history/#london) è stato implementato il 5 agosto 2021 per rendere più prevedibili le transazioni agli utenti, modificando il meccanismo di transazione-commissione di Ethereum. Tra i benefici d'alto livello introdotti da questa modifica vi sono una migliore stima della commissione sulle transazioni, un'inclusione generalmente più rapida della transazione e la compensazione dell'emissione di ETH bruciando una percentuale di commissioni sulle transazioni.
+`21.000 * (10 + 2) = 252.000 gwei` o 0,000252 ETH.
 
-A partire dall'aggiornamento di Londra della rete, ogni blocco ha una commissione base, il prezzo minimo per unità di carburante per l'inclusione nel blocco, calcolato dalla rete in base alla domanda di spazio per i blocchi. Poiché la commissione base della commissione sulle transazioni viene bruciata, gli utenti dovrebbero anche impostare una mancia (commissione prioritaria) nelle proprie transazioni. La mancia compensa i miner per aver eseguito e propagato le transazioni dell'utente nei blocchi e dovrebbe essere impostata automaticamente da gran parte dei portafogli.
+Quando Jordan invia il denaro, dal suo account sono sottratti 1,000252 ETH. Taylor riceve un accredito di 1,0000 ETH. Il validatore riceve la mancia di 0,000042 ETH. La commissione base di 0,00021 ETH è bruciata.
 
-Il calcolo della commissione sulle transazioni totale funziona così: `Unità di carburante (limite) * (commissione base + Mancia)`
-
-Ipotizziamo che Jordan debba pagare 1 ETH a Taylor. Nella transazione, il limite di carburante è di 21.000 unità e la commissione base è di 100 gwei. Jordan include una mancia di 10 gwei.
-
-Usando la formula di sopra possiamo effettuare il calcolo come segue: ` 21.000 * (100 + 10) = 2.310.000 gwei` o 0,00231 ETH.
-
-Quando Jordan invia il denaro, sul suo account sono sottratti 1,00231 ETH. Taylor riceve un accredito di 1,0000 ETH. Il miner riceve la mancia di 0,00021 ETH. La commissione base di 0,0021 ETH è bruciata.
-
-Inoltre, Jordan può anche impostare una commissione massima (`maxFeePerGas`) per la transazione. A Jordan viene rimborsata la differenza tra commissione massima ed effettiva, es. `rimborso = commissione max - (commissione base + commissione prioritaria)`. Jordan può impostare un importo massimo da pagare per la transazione da eseguire, senza preoccuparsi di pagare troppo "oltre" la commissione base quando la transazione è eseguita.
+Inoltre, Jordan può anche impostare una commissione massima (`maxFeePerGas`) per la transazione. A Jordan viene rimborsata la differenza tra commissione massima ed effettiva, ovvero `rimborso = commissione max - (commissione base + commissione prioritaria)`. Jordan può impostare un importo massimo da pagare per la transazione da eseguire, senza preoccuparsi di pagare troppo "oltre" la commissione base quando la transazione è eseguita.
 
 ### Dimensione del blocco {#block-size}
 
-Prima dell'Aggiornamento di Londra, Ethereum aveva blocchi di dimensioni fisse. Nei momenti di domanda elevata della rete, questi blocchi operavano a piena capacità. Quindi, spesso gli utenti dovevano attendere che calasse la domanda elevata prima di poter essere inclusi in un blocco, e questo si traduceva in un'esperienza non soddisfacente per l'utente.
+Prima dell'Aggiornamento di Londra, Ethereum aveva blocchi di dimensioni fisse. Nei momenti di domanda elevata della rete, questi blocchi operavano a piena capacità. Quindi, spesso gli utenti dovevano attendere che la domanda elevata calasse per poter essere inclusi in un blocco, il che si traduceva in un'esperienza non soddisfacente per l'utente.
 
-L'Aggiornamento di Londra ha introdotto in Ethereum blocchi di dimensioni variabili. Ogni blocco ha una dimensione prevista di 15 milioni di gas, ma la dimensione dei blocchi aumenta o diminuisce in base alla domanda della rete, fino al limite massimo di 30 milioni di gas del blocco (2 volte la dimensione target del blocco). Il protocollo raggiunge una dimensione del blocco equilibrata di 15 milioni in media tramite il processo di _tâtonnement_. Significa che se la dimensione del blocco è maggiore di quella prevista, il protocollo aumenta la commissione base per il blocco successivo. Analogamente, il protocollo riduce la commissione base se la dimensione del blocco è inferiore a quella prevista. L'importo della commissione base si adatta proporzionalmente alla distanza della dimensione del blocco corrente rispetto al target. [Maggiori informazioni sui blocchi](/developers/docs/blocks/).
+L'Aggiornamento di Londra ha introdotto blocchi di dimensioni variabili in Ethereum. Ogni blocco ha una dimensione prevista di 15 milioni di carburante, ma la dimensione dei blocchi aumenta o diminuisce in base alla domanda della rete, fino al limite massimo di 30 milioni di carburante per blocco (2 volte la dimensione prevista del blocco). Il protocollo raggiunge una dimensione del blocco equilibrata di 15 milioni in media tramite il processo di _tâtonnement_. Significa che se la dimensione del blocco supera quella prevista, il protocollo aumenta la commissione base per il blocco successivo. Analogamente, il protocollo riduce la commissione base se la dimensione del blocco è inferiore a quella prevista. L'importo della commissione base si adatta proporzionalmente alla distanza della dimensione del blocco corrente rispetto a quella prevista. [Maggiori informazioni sui blocchi](/developers/docs/blocks/).
 
 ### Tariffa base {#base-fee}
 
-Ogni blocco ha una commissione base che funge da prezzo di riserva. Per poter essere inserito in un blocco, il prezzo offerto per il carburante deve essere pari almeno alla commissione base. La commissione base è calcolata indipendentemente dal blocco corrente ed è invece determinata dai blocchi che lo precedono, il che rende le commissioni sulle transazioni più prevedibili per gli utenti. Quando il blocco è minato, questa commissione base viene "bruciata", ovvero rimossa dalla circolazione.
+Ogni blocco ha una commissione base che funge da prezzo di riserva. Per poter essere inseriti in un blocco, il prezzo offerto per il carburante deve essere pari almeno alla commissione base. La commissione base è calcolata indipendentemente dal blocco corrente ed è invece determinata dai blocchi che lo precedono, il che rende le commissioni sulle transazioni più prevedibili per gli utenti. Quando il blocco è minato, questa commissione base viene "bruciata", ovvero rimossa dalla circolazione.
 
-La commissione base è calcolata con una formula che confronta le dimensioni del blocco precedente (la quantità di carburante usata per tutte le transazioni) con le dimensioni di quello corrente. La commissione base aumenta di un massimo del 12,5% per blocco se la dimensione target del blocco viene superata. Questa crescita esponenziale rende economicamente impensabile che la dimensione del blocco resti elevata per un tempo indefinito.
+La commissione base è calcolata con una formula che confronta le dimensioni del blocco precedente (la quantità di carburante usata per tutte le transazioni) con le dimensioni di quello corrente. La commissione base aumenta di un massimo del 12,5% per blocco se la dimensione prevista del blocco viene superata. Questa crescita esponenziale rende economicamente impensabile che la dimensione del blocco resti elevata per un tempo indefinito.
 
 | Numero del blocco | Gas incluso | Aumento della commissione | Tariffa base corrente |
 | ----------------- | ----------: | ------------------------: | --------------------: |
@@ -75,7 +61,7 @@ La commissione base è calcolata con una formula che confronta le dimensioni del
 | 7                 |         30M |                     12,5% |            180,2 gwei |
 | 8                 |         30M |                     12,5% |            202,7 gwei |
 
-Rispetto al mercato del carburante basato su aste prima dell'aggiornamento di Londra, questa modifica del meccanismo delle commissioni sulle transazioni ha reso più affidabile la previsione delle commissioni. Secondo la tabella sopra, per creare una transazione sul blocco numero 9, un portafoglio indica all'utente con certezza che la **commissione base massima** da aggiungere al blocco successivo è `commissione base corrente * 112,5%` o `202,8 gwei * 112,5% = 228,1 gwei`.
+Rispetto al mercato del carburante basato su aste prima dell'aggiornamento di Londra, questa modifica del meccanismo delle commissioni sulle transazioni ha reso più affidabile la previsione delle commissioni. Secondo la tabella che precede, per creare una transazione sul blocco numero 9, un portafoglio indica all'utente con certezza che la **commissione base massima** da aggiungere al blocco successivo è `commissione base corrente * 112,5%` o `202,8 gwei * 112,5% = 228,1 gwei`.
 
 Inoltre, è importante notare che, vista la velocità con cui la commissione base aumenta mentre si avanza verso un blocco completo, è improbabile assistere a picchi prolungati di blocchi completi.
 
@@ -89,7 +75,7 @@ Inoltre, è importante notare che, vista la velocità con cui la commissione bas
 
 ### Commissione prioritaria (mance) {#priority-fee}
 
-Prima dell'Aggiornamento di Londra, i miner avrebbero ricevuto la commissione del carburante totale da ogni transazione inclusa in un blocco.
+Prima dell'Aggiornamento di Londra, i miner avrebbero ricevuto la commissione sul carburante totale da ogni transazione inclusa in un blocco.
 
 In virtù del fatto che la nuova commissione base viene bruciata, l'aggiornamento di Londra ha introdotto una commissione prioritaria (mancia) per incentivare i miner a includere una transazione nel blocco. Senza mance, i miner troverebbero economicamente conveniente minare blocchi vuoti, poiché riceverebbero la stessa ricompensa. In condizioni normali, una piccola mancia fornisce ai miner un incentivo minimo per includere una transazione. Per le transazioni che devono essere prioritariamente eseguite prima di altre nello stesso blocco, occorrerà una mancia più cospicua per tentare di superare le transazioni concorrenti.
 
@@ -103,7 +89,7 @@ Uno dei benefici principali ottenuti con l'aggiornamento di Londra è il miglior
 
 ## EIP-1559 {#eip-1559}
 
-L'implementazione dell'[EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) nell'Aggiornamento di Londra ha reso il meccanismo delle commissioni sulle transazioni più complesso rispetto al precedente sistema basato su aste dei prezzi del carburante, ma ha il vantaggio di rendere le commissioni del carburante più prevedibili, migliorando l'efficienza del mercato delle commissioni sulle transazioni. Gli utenti possono inviare transazioni con una `maxFeePerGas` corrispondente a quanto desiderano pagare affinché la transazione sia eseguita, sapendo che non pagheranno di più del prezzo di mercato del gas (`baseFeePerGas`) e otterranno il rimborso di qualsiasi extra, tranne la mancia.
+L'implementazione dell'[EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) nell'Aggiornamento di Londra ha reso il meccanismo delle commissioni sulle transazioni più complesso rispetto al precedente sistema basato su aste dei prezzi del carburante, ma ha il vantaggio di rendere le commissioni sul carburante più prevedibili, migliorando l'efficienza del mercato delle commissioni sulle transazioni. Gli utenti possono inviare transazioni con una `maxFeePerGas` corrispondente a quanto sono disposti a pagare affinché la transazione sia eseguita, sapendo che non pagheranno di più del prezzo di mercato del carburante (`baseFeePerGas`) e otterranno il rimborso di qualsiasi extra, tranne la mancia.
 
 In questo video viene spiegato l'EIP-1559 e i vantaggi che comporta:
 
@@ -115,33 +101,33 @@ Approfondisci con queste [Risorse relative all'EIP-1559](https://hackmd.io/@timb
 
 ## Perché esistono le commissioni sul carburante? {#why-do-gas-fees-exist}
 
-In breve, le commissioni sul carburante contribuiscono a mantenere la rete di Ethereum sicura. Richiedendo una commissione per ogni calcolo eseguito sulla rete, evitiamo lo spam sulla rete da parte di attori malevoli. Per evitare cicli infiniti accidentali od ostili oppure altri sprechi di calcolo nel codice, ogni transazione deve definire un limite al numero di passaggi di calcolo dell'esecuzione del codice che può utilizzare. Questa unità di calcolo fondamentale è il "carburante".
+In breve, le commissioni sul carburante contribuiscono a mantenere rete Ethereum sicura. Richiedendo una commissione per ogni calcolo eseguito sulla rete, evitiamo lo spam sulla rete da parte di attori malevoli. Per evitare cicli infiniti accidentali od ostili oppure altri sprechi di calcolo nel codice, ogni transazione deve definire un limite al numero di passaggi di calcolo dell'esecuzione del codice che può utilizzare. Questa unità di calcolo fondamentale è il "carburante".
 
-Sebbene una transazione preveda un limite, tutto il gas non utilizzato in una transazione viene rimborsato all'utente (ciò che viene restituito è: `commissione massima - (commissione base + mancia)`).
+Sebbene una transazione preveda un limite, tutto il carburante non utilizzato in una transazione viene rimborsato all'utente (ciò che viene restituito è: `commissione massima - (commissione base + mancia)`).
 
-![Diagramma che mostra come viene rimborsato il carburante inutilizzato](../transactions/gas-tx.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramma che mostra come viene rimborsato il carburante inutilizzato](../transactions/gas-tx.png) _Diagramma adattato dall' [illustrazione dell'Ethereum EVM](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Cosa si intende con limite di carburante? {#what-is-gas-limit}
 
-Il limite di carburante indica la quantità massima di carburante che si è disposti a consumare in una transazione. Le transazioni più complicate, che coinvolgono [smart contract](/developers/docs/smart-contracts/), richiedono un maggiore lavoro di calcolo e quindi un limite di carburante superiore rispetto a un semplice pagamento. Un trasferimento di ETH standard richiede un limite di carburante di 21.000 unità di carburante.
+Il limite di carburante indica la quantità massima di carburante che si è disposti a consumare in una transazione. Le transazioni più complicate che coinvolgono [smart contract](/developers/docs/smart-contracts/) richiedono un maggiore lavoro di calcolo e quindi un limite di carburante superiore rispetto a un semplice pagamento. Un trasferimento di ETH standard richiede un limite di carburante di 21.000 unità di carburante.
 
-Per esempio, se imposti un limite di carburante di 50.000 per un semplice trasferimento di ETH, l'EVM consuma 21.000 unità e le rimanenti 29.000 vengono rimborsate. Tuttavia, se specifichi troppo poco carburante, ad esempio un limite di carburante di 20.000 per un semplice trasferimento di ETH, l'EVM consumerà le tue 20.000 unità di carburante tentando di soddisfare la transazione, che però non potrà essere completata. A quel punto l'EVM annulla ogni modifica, ma dato che il miner ha già eseguito un lavoro pari a 20.000 unità di gas, questo carburante viene consumato.
+Per esempio, se imposti un limite di carburante di 50.000 per un semplice trasferimento di ETH, l'EVM consuma 21.000 unità e le rimanenti 29.000 vengono rimborsate. Tuttavia, se specifichi troppo poco carburante, ad esempio un limite di carburante di 20.000 per un semplice trasferimento di ETH, l'EVM consumerà le tue 20.000 unità di carburante tentando di soddisfare la transazione, che però non potrà essere completata. A quel punto l'EVM annulla ogni modifica, ma dato che il miner ha già eseguito un lavoro pari a 20.000 unità di carburante, questo carburante viene consumato.
 
 ## Perché le commissioni del carburante possono esser così elevate? {#why-can-gas-fees-get-so-high}
 
-Le commissioni del carburante elevate sono dovute alla popolarità di Ethereum. Eseguire qualsiasi operazione su Ethereum richiede il consumo di carburante, ma bisogna considerare che lo spazio di carburante per blocco è limitato. Le commissioni includono l'esecuzione di calcoli, l'archiviazione o la manipolazione di dati, o ancora il trasferimento di token, tutte operazioni che consumano diverse quantità di unità di "carburante". All'aumentare della complessità delle funzionalità delle dApp, cresce anche il numero di operazioni che uno smart contract esegue, il che significa che ogni transazione occupa più spazio in un blocco di dimensioni limitate. Se c'è troppa domanda, gli utenti devono offrire una mancia maggiore per tentare di superare le transazioni degli altri utenti. Una mancia più cospicua può rendere più probabile che la tua transazione troverà posto nel blocco successivo.
+Le commissioni sul carburante elevate sono dovute alla popolarità di Ethereum. Eseguire qualsiasi operazione su Ethereum richiede il consumo di carburante, ma bisogna considerare che lo spazio di carburante per blocco è limitato. Le commissioni includono l'esecuzione di calcoli, l'archiviazione o la manipolazione di dati, o ancora il trasferimento di token, tutte operazioni che consumano diverse quantità di unità di "carburante". All'aumentare della complessità delle funzionalità delle dapp, cresce anche il numero di operazioni che uno smart contract esegue, il che significa che ogni transazione occupa più spazio in un blocco di dimensioni limitate. Se c'è troppa domanda, gli utenti devono offrire una mancia maggiore per tentare di superare le transazioni degli altri utenti. Una mancia più cospicua può rendere più probabile che la tua transazione troverà posto nel blocco successivo.
 
-Il prezzo del carburante da solo in realtà non determina quanto dobbiamo pagare per una transazione particolare. Per calcolare la commissione sulle transazioni dobbiamo moltiplicare il carburante usato per la commissione sulle transazioni, misurata in gwei.
+Il prezzo del carburante da solo in realtà non determina quanto dobbiamo pagare per una specifica transazione. Per calcolare la commissione sulle transazioni dobbiamo moltiplicare il carburante usato per la commissione sulle transazioni, misurata in gwei.
 
 ## Iniziative per ridurre i costi del gas {#initiatives-to-reduce-gas-costs}
 
-Gli [aggiornamenti di scalabilità](/upgrades/) di Ethereum dovrebbero infine risolvere alcuni problemi delle commissioni del carburante, che, a loro volta, consentiranno alla piattaforma di elaborare migliaia di transazioni al secondo e di scalare globalmente.
+Gli [aggiornamenti di scalabilità](/upgrades/) di Ethereum dovrebbero infine risolvere alcuni problemi delle commissioni sul carburante, che, a loro volta, consentiranno alla piattaforma di elaborare migliaia di transazioni al secondo e di scalare globalmente.
 
-La scalabilità di Livello 2 è un'iniziativa fondamentale per migliorare notevolmente i costi del carburante, l'esperienza utente e la scalabilità. [Maggiori informazioni sul ridimensionamento del Livello 2](/developers/docs/scaling/#layer-2-scaling/).
+Il ridimensionamento del Livello 2 è un'iniziativa fondamentale per migliorare notevolmente i costi del carburante, l'esperienza utente e la scalabilità. [Maggiori informazioni sul ridimensionamento del Livello 2](/developers/docs/scaling/#layer-2-scaling).
 
 ## Strategie utili per ridurre i costi del carburante {#strategies-for-you-to-reduce-gas-costs}
 
-Se stai cercando di ridurre i costi del carburante per i tuoi ETH, puoi impostare una mancia per indicare il livello di priorità della tua transazione. I miner “lavoreranno su” ed eseguiranno le transazioni che offrono una mancia maggiore per il carburante, poiché terranno le mance pagate dall'utente e saranno meno inclini a eseguire transazioni che prevedono mance inferiori.
+Se stai cercando di ridurre i costi del carburante per i tuoi ETH, puoi impostare una mancia per indicare il livello di priorità della tua transazione. I miner anteporranno ed eseguiranno le transazioni che offrono una mancia maggiore per il carburante, poiché terranno le mance pagate dall'utente e saranno meno inclini a eseguire transazioni che prevedono mance inferiori.
 
 Se desideri monitorare i prezzi del carburante in modo da poter inviare i tuoi ETH a un costo inferiore, puoi usare un ampio ventaglio di strumenti, come:
 
@@ -153,7 +139,6 @@ Se desideri monitorare i prezzi del carburante in modo da poter inviare i tuoi E
 
 ## Strumenti correlati {#related-tools}
 
-- [Bloxy Gas Analytics](https://stat.bloxy.info/superset/dashboard/gas/?standalone=true) _Statistiche sul carburante nella rete Ethereum_
 - [Blocknative's Gas Platform](https://www.blocknative.com/gas) _- API per la stima del carburante sviluppata dalla piattaforma di dati mempool globale di Blocknative_
 
 ## Letture consigliate {#further-reading}

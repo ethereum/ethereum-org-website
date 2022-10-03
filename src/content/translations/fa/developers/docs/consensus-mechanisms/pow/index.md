@@ -2,7 +2,6 @@
 title: اثبات کار (PoW)
 description: توضیحی درباره‌ی پروتکل اجماع اثبات کار و نقشش در اتریوم.
 lang: fa
-sidebar: true
 ---
 
 The Ethereum network began by using a consensus mechanism that involved **[Proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow)**. This allowed the nodes of the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain and prevented certain kinds of economic attacks. However, Ethereum switched off proof-of-work in 2022 and started using [proof-of-stake](/developers/docs/consensus-mechanisms/pos) instead.

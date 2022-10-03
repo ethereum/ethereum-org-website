@@ -2,7 +2,6 @@
 title: Mechanizmy konsensusu
 description: Wyjaśnienie protokołów konsensusu w systemach rozproszonych i roli, jaką odgrywają w Ethereum.
 lang: pl
-sidebar: true
 incomplete: true
 ---
 

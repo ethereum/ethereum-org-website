@@ -2,7 +2,6 @@
 title: Standardi za žetone
 description:
 lang: sl
-sidebar: true
 incomplete: true
 ---
 

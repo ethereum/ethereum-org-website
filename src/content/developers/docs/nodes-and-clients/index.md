@@ -2,13 +2,12 @@
 title: Nodes and clients
 description: An overview of Ethereum nodes and client software, plus how to set up a node and why you should do it.
 lang: en
-sidebar: true
 sidebarDepth: 2
 ---
 
 Ethereum is a distributed network of computers (known as nodes) running software that can verify blocks and transaction data. The software application, known as a client, must be run on your computer to turn it into an Ethereum node.
 
-**Note: it is still possible to run an execution client on its own. However, this will no longer be possible after [The Merge](/upgrades/merge). After The Merge, both execution and consensus clients must be run together in order for a user to gain access to the Ethereum network. Some testnets (Kiln, Ropsten, Sepolia, and Goerli) have already been through their versions of The Merge, meaning execution clients alone are already insufficient for accessing those networks unless they are coupled to a consensus client that can keep track of the head of the chain.**
+**Note: it is not possible to run an execution client on its own anymore. After [The Merge](/upgrades/merge), both execution and consensus clients must be run together in order for a user to gain access to the Ethereum network.**
 
 ## Prerequisites {#prerequisites}
 
@@ -126,7 +125,7 @@ If you're more of a technical user, dive into more details and options on how to
 
 ## Alternatives {#alternatives}
 
-Setting up your own node can cost you time and resources but you don’t always need to run your own instance. In this case, you can use a third party API provider like [Infura](https://infura.io), [Alchemy](https://alchemyapi.io), or [QuikNode](https://www.quiknode.io). Alternatively, [ArchiveNode](https://archivenode.io/) is a community-funded Archive node that hopes to bring archive data on the Ethereum blockchain to independent developers who otherwise couldn't afford it. For an overview of using these services, check out [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/).
+Setting up your own node can cost you time and resources but you don’t always need to run your own instance. In this case, you can use a third party API provider like [Infura](https://infura.io), [Alchemy](https://alchemyapi.io), [Chainstack](https://chainstack.com), or [QuikNode](https://www.quiknode.io). Alternatively, [ArchiveNode](https://archivenode.io/) is a community-funded Archive node that hopes to bring archive data on the Ethereum blockchain to independent developers who otherwise couldn't afford it. For an overview of using these services, check out [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/).
 
 If somebody runs an Ethereum node with a public API in your community, you can point your light wallets (like MetaMask) to a community node [via Custom RPC](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) and gain more privacy than with some random trusted third party.
 
@@ -214,6 +213,10 @@ Implemented by Trinity. Works like fast sync but also downloads the data needed 
 
 - Syncs state first and enables you to query RPC in a few minutes.
 - Still in development and not fully reliable, background sync is slowed down and RPC responses might fail.
+
+Learn more in [Nimbus docs](https://nimbus.guide/)
+
+### Prysm {#prysm}
 
 Prysm is a full-featured, open source consensus client written in Go under the GPL-3.0 license. It features an optional webapp UI and prioritizes user experience, documentation, and configurability for both stake-at-home and institutional users.
 

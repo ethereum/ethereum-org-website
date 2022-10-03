@@ -2,7 +2,6 @@
 title: Ethereum per sviluppatori Delphi
 description: Impara a sviluppare per Ethereum utilizzando il linguaggio di programmazione Delphi
 lang: it
-sidebar: true
 incomplete: true
 ---
 
@@ -52,5 +51,6 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 - [Delphi and Ethereum Name Service (ENS)](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
 - [QuikNode, Ethereum and Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)
 - [Delphi e la Dark Forest di Ethereum](https://svanas.medium.com/delphi-and-the-ethereum-dark-forest-5b430da3ad93)
+- [Scambia un token per un altro su Delphi](https://svanas.medium.com/swap-one-token-for-another-in-delphi-bcb999c47f7)
 
 Cerchi altre risorse? Dai un'occhiata a [ethereum.org/developers](/developers/).

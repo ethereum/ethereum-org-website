@@ -2,7 +2,6 @@
 title: 代币标准
 description:
 lang: zh
-sidebar: true
 incomplete: true
 ---
 

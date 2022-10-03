@@ -2,7 +2,6 @@
 title: Tranzacții
 description: O prezentare generală a tranzacțiilor Ethereum – cum funcționează, structura datelor și cum să le trimiteţi printr-o aplicație.
 lang: ro
-sidebar: true
 ---
 
 Tranzacțiile sunt instrucțiuni semnate criptografic din conturi. Un cont inițiază o tranzacție pentru a actualiza starea rețelei Ethereum. Cea mai simplă tranzacție este transferarea de ETH dintr-un cont în altul.

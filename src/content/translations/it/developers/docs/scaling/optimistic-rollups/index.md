@@ -2,7 +2,6 @@
 title: Rollup ottimistici
 description: Introduzione ai rollup ottimistici
 lang: it
-sidebar: true
 ---
 
 ## Prerequisiti {#prerequisites}

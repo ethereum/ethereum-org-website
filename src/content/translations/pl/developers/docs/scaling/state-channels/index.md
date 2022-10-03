@@ -2,7 +2,6 @@
 title: Kanały uzyskiwania informacji
 description: Wprowadzenie do kanałów uzyskiwania informacji i kanałów płatności jako rozwiązania skalowania obecnie wykorzystywanego przez społeczność Ethereum.
 lang: pl
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---

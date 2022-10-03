@@ -2,7 +2,6 @@
 title: Ethereum fejlesztési dokumentáció
 description: Bevezetés az Ethereum fejlesztési hálózat dokumentációba.
 lang: hu
-sidebar: true
 ---
 
 Ezt a dokumentációt arra tervezték, hogy segítsen az Ethereumon való fejlesztésben. Lefedi az Ethereumot, mint koncepciót, elmagyarázza az Ethereum tech stack-et, és dokumentálja a haladó témákat és a komplexebb alkalmazásokat és használati eseteket.

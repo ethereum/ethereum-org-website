@@ -1,7 +1,6 @@
 ---
 title: Supporto Ethereum
 description: Ottenere supporto nell'ecosistema Ethereum.
-sidebar: true
 lang: it
 ---
 

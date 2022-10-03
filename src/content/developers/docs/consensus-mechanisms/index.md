@@ -2,7 +2,6 @@
 title: Consensus mechanisms
 description: An explanation of consensus protocols in distributed systems and the role they play in Ethereum.
 lang: en
-sidebar: true
 ---
 
 The term 'consensus mechanism' is often used colloquially to refer to 'proof-of-stake', 'proof-of-work' or 'proof-of-authority' protocols. However, these are just components in consensus mechanisms that protect against Sybil attacks. Consensus mechanisms are the complete stack of ideas, protocols and incentives that enable a distributed set of nodes to agree on the state of a blockchain.
@@ -71,7 +70,7 @@ Proof-of-work and proof-of-stake alone are not consensus protocols, but they are
 
 **Sybil resistance** measures how a protocol fares against a [Sybil attack](https://wikipedia.org/wiki/Sybil_attack). Sybil attacks are when one user or group pretends to be many users. Resistance to this type of attack is essential for a decentralized blockchain and enables miners and validators to be rewarded equally based on resources put in. Proof-of-work and proof-of-stake protect against this by making users expend a lot of energy or put up a lot of collateral. These protections are an economic deterrent to Sybil attacks.
 
-A **chain selection rule** is used to decide which chain is the "correct" chain. Bitcoin uses the "longest chain" rule, which means that whichever blockchain is the longest will be the one the rest of the nodes accept as valid and work with. For proof-of-work chains, the longest chain is determined by the chain's total cumulative proof-of-work difficulty. Ethereum used to use the longest chain rule too; however, now that Etheruem runs on proof-of-stake it adopted an updated fork-choice algorithm that measures the 'weight' of the chain. The weight is the accumulated sum of validator votes, weighted by validator staked-ether balances.
+A **chain selection rule** is used to decide which chain is the "correct" chain. Bitcoin uses the "longest chain" rule, which means that whichever blockchain is the longest will be the one the rest of the nodes accept as valid and work with. For proof-of-work chains, the longest chain is determined by the chain's total cumulative proof-of-work difficulty. Ethereum used to use the longest chain rule too; however, now that Ethereum runs on proof-of-stake it adopted an updated fork-choice algorithm that measures the 'weight' of the chain. The weight is the accumulated sum of validator votes, weighted by validator staked-ether balances.
 
 Ethereum uses a consensus mechanism known as [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/) that combines [Casper FFG proof-of-stake](https://arxiv.org/abs/1710.09437) with the [GHOST fork-choice rule](https://arxiv.org/abs/2003.03052).
 

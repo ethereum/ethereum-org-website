@@ -2,8 +2,6 @@
 title: 以太坊简介
 description: 面向 dapp 开发者介绍以太坊的核心概念。
 lang: zh
-sidebar: true
-preMergeBanner: true
 ---
 
 ## 什么是区块链？ {#what-is-a-blockchain}
