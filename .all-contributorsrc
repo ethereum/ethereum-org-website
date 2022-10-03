@@ -9090,6 +9090,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "AidanPine",
+      "name": "AidanPine",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92037147?v=4",
+      "profile": "https://github.com/AidanPine",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
