@@ -2,7 +2,6 @@
 title: آموزش اتریوم
 description: توضیحات تکنیکال و غیر تکنیکال٫٫ مراجع و ابزار‌هایی برای یادگیری اتریوم
 lang: fa
-sidebar: true
 ---
 
 # آموزش اتریوم {#learn-about-ethereum}

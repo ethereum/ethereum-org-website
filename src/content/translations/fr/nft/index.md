@@ -4,7 +4,6 @@ description: Un aperçu des NFT sur Ethereum
 lang: fr
 template: use-cases
 emoji: ":frame_with_picture:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/infrastructure_transparent.png
 alt: Un logo Eth affiché par hologramme.

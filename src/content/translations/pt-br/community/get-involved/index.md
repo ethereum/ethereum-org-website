@@ -1,7 +1,6 @@
 ---
 title: Como posso participar?
 description: Como fazer parte da comunidade Ethereum.
-sidebar: true
 lang: pt-br
 ---
 

@@ -2,7 +2,6 @@
 title: Gas dan biaya
 description:
 lang: id
-sidebar: true
 ---
 
 Gas penting untuk jaringan Ethereum. Ini adalah bahan bakar yang memungkinkan Ethereum beroperasi, sama seperti sebuah mobil memerlukan bensin untuk bergerak.

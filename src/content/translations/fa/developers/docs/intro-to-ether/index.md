@@ -2,7 +2,6 @@
 title: معرفی اتر
 description: معرفی ارز رمزنگاری‌شده اتر برای توسعه‌دهندگان
 lang: fa
-sidebar: true
 ---
 
 ## پیش‌نیازها {#prerequisites}

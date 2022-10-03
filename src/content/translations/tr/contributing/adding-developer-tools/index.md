@@ -2,7 +2,6 @@
 title: Geliştirici araçları ekleme
 lang: tr
 description: Ethereum.org'da geliştirici araçlarını listeleme kriterlerimiz
-sidebar: true
 ---
 
 # Geliştirici araçları ekleme {#contributing-to-ethereumorg-}

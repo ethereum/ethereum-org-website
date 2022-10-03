@@ -2,7 +2,6 @@
 title: Hakkımızda
 description: Ethereum.org ekibi, topluluğu ve misyonu hakkında
 lang: tr
-sidebar: true
 ---
 
 # Ethereum.org hakkında {#about-ethereumorg}

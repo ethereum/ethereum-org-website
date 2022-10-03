@@ -2,7 +2,6 @@
 title: Begriffe zum Glossar hinzufügen
 lang: de
 description: Unsere Kriterien für die Aufnahme neuer Begriffe in das Glossar von ethereum.org
-sidebar: true
 ---
 
 # Begriffe zum Glossar hinzufügen {#contributing-to-ethereumorg-}

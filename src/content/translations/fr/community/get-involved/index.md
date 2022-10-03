@@ -1,7 +1,6 @@
 ---
 title: Comment s'impliquer ?
 description: Comment s'impliquer dans la communauté Ethereum.
-sidebar: true
 lang: fr
 ---
 

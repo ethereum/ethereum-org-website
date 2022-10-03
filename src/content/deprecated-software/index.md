@@ -2,7 +2,6 @@
 title: Deprecated software
 description: Software which has been deprecated by its maintainers
 lang: en
-sidebar: true
 sidebarDepth: 2
 ---
 

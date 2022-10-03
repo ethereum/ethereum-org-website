@@ -2,7 +2,6 @@
 title: Mining algorithms
 description: A detailed look at the algorithms used for Ethereum mining.
 lang: en
-sidebar: true
 ---
 
 <InfoBanner emoji=":wave:">

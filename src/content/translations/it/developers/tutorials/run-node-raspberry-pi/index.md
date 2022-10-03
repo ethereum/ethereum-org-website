@@ -8,7 +8,6 @@ tags:
   - "livello di consenso"
   - "nodi"
 lang: it
-sidebar: true
 skill: intermediate
 published: 2020-05-07
 source: r/ethereum

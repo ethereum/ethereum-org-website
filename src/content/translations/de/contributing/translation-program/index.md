@@ -2,7 +2,6 @@
 title: Übersetzungsprogramm
 lang: de
 description: So können Sie einen Beitrag zum Übersetzungsprogramm von ethereum.org leisten
-sidebar: true
 ---
 
 # Übersetzungsprogramm {#translation-program}

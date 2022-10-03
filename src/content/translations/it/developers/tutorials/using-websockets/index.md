@@ -3,7 +3,6 @@ title: Uso dei WebSocket
 description: Guida all'uso di WebSocket e Alchemy per creare richieste JSON-RPC e iscriversi a eventi.
 author: "Elan Halpern"
 lang: it
-sidebar: true
 tags:
   - "alchemy"
   - "websocket"

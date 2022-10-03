@@ -2,7 +2,6 @@
 title: Program Penerjemahan
 lang: id
 description: Bagaimana berkontribusi pada Program Terjemahan ethereum.org
-sidebar: true
 ---
 
 # Program Penerjemahan {#translation-program}

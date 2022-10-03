@@ -2,7 +2,6 @@
 title: Academic Grants Round
 description: Instructions, deadlines, and information for the Academic Grants Round
 lang: en
-sidebar: true
 sidebarDepth: 2
 ---
 

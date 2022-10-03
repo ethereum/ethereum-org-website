@@ -2,9 +2,7 @@
 title: 节点和客户端
 description: 以太坊节点和客户端软件的概述，以及如何设置节点和为什么您应该这样做。
 lang: zh
-sidebar: true
 sidebarDepth: 2
-preMergeBanner: true
 ---
 
 以太坊是一个由计算机组成的分布式网络，这些计算机运行可验证区块和交易数据的软件，称为节点。 软件应用程序（客户端）必须在电脑上运行，将你的电脑变成一个以太坊节点。

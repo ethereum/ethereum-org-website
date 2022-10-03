@@ -4,7 +4,6 @@ description: Pregled DeFi na Ethereumu
 lang: sl
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../assets/use-cases/defi.png
 alt: Logotip Ethereum narejen iz lego kock.
 sidebarDepth: 2

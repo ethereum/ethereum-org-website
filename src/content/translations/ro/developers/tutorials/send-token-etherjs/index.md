@@ -8,7 +8,6 @@ tags:
   - "JETOANE"
 skill: beginner
 lang: ro
-sidebar: true
 published: 2021-04-06
 ---
 

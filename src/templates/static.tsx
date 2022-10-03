@@ -44,6 +44,7 @@ import UpcomingEventsList from "../components/UpcomingEventsList"
 import Icon from "../components/Icon"
 import SocialListItem from "../components/SocialListItem"
 import YouTube from "../components/YouTube"
+import TranslationChartImage from "../components/TranslationChartImage"
 import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
 
@@ -151,6 +152,7 @@ const components = {
   MatomoOptOut,
   Callout,
   YouTube,
+  TranslationChartImage,
   EnergyConsumptionChart,
 }
 
@@ -183,11 +185,7 @@ const StaticPage = ({
 
   const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
   const { editContentUrl } = siteData.siteMetadata || {}
-  const absoluteEditPath =
-    relativePath.split("/").includes("whitepaper") ||
-    relativePath.split("/").includes("events")
-      ? ""
-      : `${editContentUrl}${relativePath}`
+  const absoluteEditPath = `${editContentUrl}${relativePath}`
 
   const slug = mdx.fields?.slug || ""
 
@@ -216,17 +214,19 @@ const StaticPage = ({
             items={tocItems}
             isMobile={true}
             maxDepth={mdx.frontmatter.sidebarDepth!}
+            hideEditButton={!!mdx.frontmatter.hideEditButton}
           />
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
           <FeedbackCard isArticle />
         </ContentContainer>
-        {mdx.frontmatter.sidebar && tocItems && (
+        {tocItems && (
           <TableOfContents
             editPath={absoluteEditPath}
             items={tocItems}
             maxDepth={mdx.frontmatter.sidebarDepth!}
+            hideEditButton={!!mdx.frontmatter.hideEditButton}
           />
         )}
       </Page>
@@ -249,10 +249,10 @@ export const staticPageQuery = graphql`
         title
         description
         lang
-        sidebar
         sidebarDepth
         isOutdated
         postMergeBannerTranslation
+        hideEditButton
       }
       body
       tableOfContents

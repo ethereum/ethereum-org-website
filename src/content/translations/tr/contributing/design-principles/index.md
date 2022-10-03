@@ -2,7 +2,6 @@
 title: Tasarım ilkeleri
 lang: tr
 description: Ethereum.org'un tasarım ve içerik kararlarının arkasındaki ilkeler
-sidebar: true
 ---
 
 # Tasarım prensiplerimiz {#contributing-to-ethereumorg-}

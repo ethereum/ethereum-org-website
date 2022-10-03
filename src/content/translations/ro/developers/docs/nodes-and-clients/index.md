@@ -2,7 +2,6 @@
 title: Noduri și clienți
 description: O prezentare generală a nodurilor Ethereum și a software-ului client plus cum să configurați un nod și de ce ar trebui să faceți acest lucru.
 lang: ro
-sidebar: true
 sidebarDepth: 2
 ---
 

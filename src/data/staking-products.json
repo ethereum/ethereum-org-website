@@ -259,7 +259,12 @@
       "hue": 20,
       "launchDate": "2021-03-01",
       "url": "https://www.kiln.fi/",
-      "audits": [],
+      "audits": [
+        {
+          "name": "Prescient Assurance",
+          "url": "https://drive.google.com/file/d/1K-Q0r2lXqnOePsV3e7c9sErl6iz8EKHX/view"
+        }
+      ],
       "minEth": 32,
       "additionalStake": null,
       "additionalStakeUnit": null,

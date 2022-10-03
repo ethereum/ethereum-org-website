@@ -2,7 +2,6 @@
 title: Stocare descentralizată
 description: Prezentare generală a stocării descentralizate și a instrumentelor disponibile pentru a o integra într-o aplicație dapp.
 lang: ro
-sidebar: true
 ---
 
 Spre deosebire de un server centralizat operat de o singură companie sau organizație, sistemele de stocare descentralizate constau dintr-o rețea peer-to-peer de utilizatori-operatori care dețin o parte din datele globale, ce creează un sistem rezilient de stocare și partajare a fișierelor. Acestea pot fi într-o aplicație blockchain sau orice rețea peer-to-peer.

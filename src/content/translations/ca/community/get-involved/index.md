@@ -1,7 +1,6 @@
 ---
 title: Com puc involucrar-me?
 description: Com involucrar-se amb la comunitat Ethereum.
-sidebar: true
 lang: ca
 ---
 

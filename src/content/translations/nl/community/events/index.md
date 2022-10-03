@@ -1,7 +1,6 @@
 ---
 title: Ethereum-evenementen
 description: Hoe betrokken raken bij de Ethereum-gemeenschap.
-sidebar: true
 lang: nl
 ---
 

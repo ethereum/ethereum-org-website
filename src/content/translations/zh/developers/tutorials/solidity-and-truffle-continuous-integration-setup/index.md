@@ -3,7 +3,6 @@ title: "Solidity 和 Truffle 持续集成设置"
 description: 如何为 Truffle 测试设置 Travis 或 Circle CI 以及有用的插件
 author: Markus Waas
 lang: zh
-sidebar: true
 tags:
   - "solidity"
   - "智能合约"

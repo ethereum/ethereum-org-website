@@ -2,7 +2,6 @@
 title: Data dan analitik
 description: Cara mendapatkan data dan analitik on-chain untuk digunakan di dapp Anda
 lang: id
-sidebar: true
 ---
 
 ## Pendahuluan {#Introduction}

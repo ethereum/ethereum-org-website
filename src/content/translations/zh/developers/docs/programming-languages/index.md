@@ -2,7 +2,6 @@
 title: 编程语言
 description:
 lang: zh
-sidebar: true
 ---
 
 一个常见的误解是开发者必须编写[智能合约](/developers/docs/smart-contracts/)才能在以太坊上构建。 这是错误的。 以太坊网络及其社区的一个美好之处是您可以使用任意编程语言[参与](/community/)其中。
