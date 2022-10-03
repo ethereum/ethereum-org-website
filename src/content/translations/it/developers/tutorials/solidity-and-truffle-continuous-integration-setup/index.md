@@ -3,7 +3,6 @@ title: "Configurazione dell'integrazione continua di Solidity e Truffle"
 description: Come configurare Travis o Circle CI per il test con Truffle insieme ai plugin utili
 author: Markus Waas
 lang: it
-sidebar: true
 tags:
   - "Solidity"
   - "smart contract"

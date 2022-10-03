@@ -1,7 +1,6 @@
 ---
 title: Esdeveniments d'Ethereum
 description: Com involucrar-se amb la comunitat Ethereum.
-sidebar: true
 lang: ca
 ---
 

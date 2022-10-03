@@ -2,20 +2,19 @@
 title: Macchina virtuale Ethereum (EVM)
 description: Introduzione alla macchina virtuale Ethereum e al suo ruolo per quanto riguarda stato, transazioni e Smart Contract.
 lang: it
-sidebar: true
 ---
 
 La creazione di istanze fisiche dell’EVM non può essere paragonata allo scrivere codice per puntare a un cloud o a un’onda dell'oceano, ma _esiste_ come entità singola gestita da migliaia di computer collegati, che eseguono un client Ethereum.
 
-Il protocollo Ethereum stesso esiste unicamente allo scopo di garantire un funzionamento continuo, ininterrotto e immutabile di questa speciale macchina a stati. È l'ambiente in cui sono presenti tutti gli account Ethereum e gli Smart Contract. In qualsiasi blocco della catena, Ethereum ha uno, e solo uno, stato "canonico", e la EVM è ciò che definisce le regole per calcolare un nuovo stato valido da blocco a blocco.
+Il protocollo di Ethereum stesso esiste unicamente allo scopo di mantenere la continua, ininterrotta e immutabile operazione di questa speciale macchina di stato. È l'ambiente in cui risiedono tutti i conti e contratti intelligenti di Ethereum. A ogni dato blocco nella catena, Ethereum ha un solo stato 'canonico' e l'EVM è ciò che definisce le regole di calcolo di un nuovo stato valido da blocco a blocco.
 
 ## Prerequisiti {#prerequisites}
 
-Per comprendere l'EVM, è richiesta una conoscenza di base dei termini comuni dell'informatica, come ad esempio [byte](https://wikipedia.org/wiki/Byte), [memoria](https://wikipedia.org/wiki/Computer_memory) e [stack](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>). Sarebbe anche utile conoscere i concetti di crittografia/blockchain, quali le [funzioni hash](https://wikipedia.org/wiki/Cryptographic_hash_function), il [proof-of-work](https://wikipedia.org/wiki/Proof_of_work) e l'[albero di Merkle](https://wikipedia.org/wiki/Merkle_tree).
+Per comprendere l'EVM, è richiesta una conoscenza di base dei termini comuni dell'informatica, come ad esempio [byte](https://wikipedia.org/wiki/Byte), [memoria](https://wikipedia.org/wiki/Computer_memory) e [stack](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>). Sarebbe inoltre utile esser a conoscenza dei concetti crittografici e della blockchain come le [funzioni di hash](https://wikipedia.org/wiki/Cryptographic_hash_function) e l'[albero di Merkle](https://wikipedia.org/wiki/Merkle_tree).
 
 ## Dal libro mastro alla macchina a stati {#from-ledger-to-state-machine}
 
-Per descrivere blockchain come Bitcoin, viene spesso utilizzata l'analogia con un "libro mastro distribuito", che permette l'esistenza di una valuta decentralizzata utilizzando strumenti base della crittografia. Una criptovaluta si comporta come una "normale" valuta per via delle regole che decidono cosa si può e cosa non si può fare per modificare il libro mastro. Ad esempio, un indirizzo Bitcoin non può spendere più Bitcoin di quanti ne abbia ricevuti in precedenza. Queste regole sono alla base di tutte le transazioni su Bitcoin e di molte altre blockchain.
+Per descrivere blockchain come Bitcoin, viene spesso utilizzata l'analogia con un "libro mastro distribuito", che permette l'esistenza di una valuta decentralizzata utilizzando strumenti base della crittografia. Il libro mastro mantiene un registro delle attività che deve aderire a una serie di regole che governano ciò che qualcuno può e non può fare per modificarlo. Ad esempio, un indirizzo Bitcoin non può spendere più Bitcoin di quanti ne abbia ricevuti in precedenza. Queste regole sono alla base di tutte le transazioni su Bitcoin e di molte altre blockchain.
 
 Ethereum ha la sua valuta nativa (Ether), che segue quasi esattamente le stesse regole intuitive, ma consente anche una funzione molto più potente: [gli smart contract](/developers/docs/smart-contracts/). Per questa caratteristica più complessa, è necessaria un'analogia più complessa. Invece di essere un libro mastro distribuito, Ethereum è una [macchina di stato distribuita](https://wikipedia.org/wiki/Finite-state_machine). Lo stato di Ethereum è una grande enorme struttura di dati che contiene non solo tutti gli account e i saldi, ma una _macchina a stati_, che puiò cambiare da blocco a blocco in base a un set predefinito di regole, e che può eseguire codice macchina arbitrario. Le regole specifiche di cambio stato da blocco a blocco sono definite dall'EVM.
 

@@ -3,7 +3,6 @@ title: Rețeaua Beacon
 description: Informații despre rețeaua Beacon - primul upgrade major Eth2 la Ethereum.
 lang: ro
 template: upgrade
-sidebar: true
 image: ../../../../assets/upgrades/core.png
 summaryPoint1: Rețeaua Beacon nu schimbă Ethereum-ul pe care îl folosim astăzi.
 summaryPoint2: Va coordona rețeaua.

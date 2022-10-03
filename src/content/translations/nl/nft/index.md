@@ -4,14 +4,12 @@ description: Een overzicht van NFT's op Ethereum
 lang: nl
 template: use-cases
 emoji: ":frame_with_picture:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/infrastructure_transparent.png
 alt: Een Eth-logo dat via een hologram wordt weergegeven.
 summaryPoint1: Een manier om iets unieks te vertegenwoordigen als een op Ethereum gebaseerd activum.
 summaryPoint2: NFT's geven meer macht aan contentmakers dan ooit tevoren.
 summaryPoint3: Mogelijk gemaakt door slimme contracten op de Ethereum-blockchain.
-preMergeBanner: true
 ---
 
 NFT's veroveren momenteel de wereld van digitale kunst en verzamelobjecten. Digitale kunstenaars zien hun leven veranderen dankzij de enorme verkoop aan nieuw crypto-publiek. Beroemdheden doen ook mee omdat ze een nieuwe kans zien om in contact te komen met fans. Maar digitale kunst is slechts één manier om NFT's te gebruiken. Eigenlijk kunnen ze worden gebruikt om eigendom van unieke activa te vertegenwoordigen, zoals een eigendomsbewijs voor een item in het digitale of fysieke domein.
@@ -20,7 +18,7 @@ Als Andy Warhol eind jaren negentig zou zijn geboren, zou hij waarschijnlijk Cam
 
 ## Wat is een NFT? {#what-are-nfts}
 
-NFT's zijn tokens die we kunnen gebruiken om eigendom van unieke items te vertegenwoordigen. Ze laten ons zaken als kunst, verzamelobjecten en zelfs onroerend goed tokeniseren. Ze kunnen slechts één officiële eigenaar tegelijk hebben en ze zijn beveiligd door de Ethereum-blockchain – niemand kan de eigendomsdossiers wijzigen of een nieuwe NFT creëren door te kopiëren/plakken.
+NFT's zijn tokens die we kunnen gebruiken om eigendom van unieke items te vertegenwoordigen. Ze laten ons zaken als kunst, verzamelobjecten en zelfs onroerend goed tokeniseren. Het eigendom van een asset wordt beveiligd door de Ethereum-blockchain – niemand kan het eigendomsverleden aanpassen of een nieuw NFT kopiëren/plakken.
 
 NFT staat voor 'non-fungible token'. Niet-fungibel is een economische term die u kunt gebruiken om dingen zoals uw meubels, een songbestand of uw computer te beschrijven. Deze dingen kunnen niet door andere voorwerpen worden gewisseld, omdat ze unieke eigenschappen hebben.
 
@@ -96,7 +94,7 @@ NFT's zijn anders dan ERC-20-tokens, zoals DAI of LINK, omdat elke individuele t
   - Handtekeningen
 - En nog veel meer opties om creatief mee te worden!
 
-Een NFT kan maar één eigenaar tegelijk hebben. Eigendom wordt beheerd door middel van het unieke ID en de metadata die door geen ander token gerepliceerd kunnen worden. NFT's worden aangemaakt door middel van slimme contracten die eigendom toewijzen en de overdraagbaarheid van de NFT's beheren. Wanneer iemand een NFT creëert of maakt, voert hij code uit die is opgeslagen in slimme contracten die voldoen aan verschillende normen, zoals ERC-721. Deze informatie wordt toegevoegd aan de blockchain waar de NFT wordt beheerd. Het maakproces, vanaf een hoog niveau, heeft de volgende stappen doorlopen:
+Eigendom van NFT's wordt beheerd door middel van het unieke ID en de metadata die door geen ander token gerepliceerd kunnen worden. NFT's worden aangemaakt door middel van slimme contracten die eigendom toewijzen en de overdraagbaarheid van de NFT's beheren. Wanneer iemand een NFT creëert of mint, voert hij code uit die is opgeslagen in slimme contracten die voldoen aan verschillende normen, zoals [ERC-721](/developers/docs/standards/tokens/erc-721/). Deze informatie wordt toegevoegd aan de blockchain waar de NFT wordt beheerd. Het mintproces, vanaf een hoog niveau, heeft de volgende stappen die doorlopen worden:
 
 - Creëren van een nieuw blok
 - Informatie valideren
@@ -291,11 +289,10 @@ NFT's worden steeds populairder, wat betekent dat ze ook onder meer toezicht kom
 
 Een paar dingen ter verduidelijking:
 
-- NFT's vergroten niet direct de koolstofvoetafdruk van Ethereum.
-- De manier waarop Ethereum uw fondsen en activa veilig houdt is op het moment energie-intensief, maar dit wordt binnenkort verbeterd.
-- Eenmaal verbeterd, zal de koolstofvoetafdruk van Ethereum 99,95 procent beter zijn, waardoor het energiezuiniger wordt dan veel bestaande industrieën.
+- Het maken en overdragen van NFT's zijn gewoon Ethereum-transacties - ze hebben geen directe invloed op een verhoging van het energieverbruik van Ethereum, en ze verbruiken ook niet zelfstandig hun eigen energie.
+- Ethereum is een energiezuinige blockchain, wat betekent dat de impact op het milieu voor het creëren, kopen en overdragen van NFT's zeer klein is.
 
-Om dit verder uit te leggen zullen we een beetje technischer moeten worden, dus heb hier enig geduld voor...
+De volgende hoofdstukken leggen dit verder uit met wat meer technische details...
 
 ### Geef de NFT's niet de schuld {#nft-qualities}
 
@@ -305,72 +302,32 @@ Gedecentraliseerd betekent dat u en iedereen kan verifiëren dat u iets bezit. D
 
 Veilig betekent dat niemand uw NFT kan kopiëren/plakken of stelen.
 
-Deze kwaliteiten van Ethereum maken het digitaal bezit van unieke items en het krijgen van een eerlijke prijs voor uw content mogelijk. Maar dat kost wel geld. Blockchains zoals Bitcoin en Ethereum zijn op dit moment energie-intensief omdat er veel energie nodig is om deze kwaliteiten te behouden. Als het gemakkelijk was om de geschiedenis van Ethereum te herschrijven om NFT's of cryptovaluta te stelen, dan zou het systeem instorten.
+Deze kwaliteiten van Ethereum maken het digitaal bezit van unieke items en het krijgen van een eerlijke prijs voor uw content mogelijk. Ethereum beschermt de assets met een gedecentraliseerd consensusmechanisme dat ['proof-of-stake'](/developers/docs/consensus-mechanisms/pos) omvat. Dit is een koolstofarme methode om te bepalen wie een transactieblok aan de chain kan toevoegen, en wordt beschouwd als veiliger dan het energie-intensieve alternatief, ['proof-of-work'](/developers/docs/consensus-mechanisms/pow). NFT's zijn geassocieerd met hoge energiekosten, omdat Ethereum werd beveiligd met proof-of-work. Dit is niet meer van toepassing.
 
-#### Het werk voor het slaan van uw NFT {#minting-nfts}
+#### Minten van NFT's {#minting-nfts}
 
 Wanneer u een NFT slaat, moeten er een paar dingen gebeuren:
 
 - Het moet worden bevestigd als een asset op de blockchain.
 - Het accountsaldo van de eigenaar moet worden bijgewerkt om die asset op te nemen. Vervolgens is het mogelijk om de asset te verhandelen of verifieerbaar te "bezitten".
-- De transacties die het bovenstaande bevestigen moeten worden toegevoegd aan een blok en "geïmmortaliseerd" worden in de blockchain.
+- De transacties die het bovenstaande bevestigen moeten worden toegevoegd aan een blok en "geïmmortaliseerd" worden in de keten.
 - Het blok moet door iedereen in het netwerk worden bevestigd als "juist". Deze consensus neemt de noodzaak voor tussenpersonen weg omdat het netwerk akkoord gaat met het bestaan van uw NFT en met het feit dat het van u is. En het is in de blockchain zodat iedereen het kan controleren. Dit is een van de manieren waarop Ethereum de NFT-makers helpt om hun inkomsten te maximaliseren.
 
-Al deze taken worden uitgevoerd door miners. En ze laten de rest van het netwerk weten over uw NFT en wie de eigenaar is. Dit betekent dat mining zo moeilijk mogelijk moet zijn, anders zou iedereen kunnen beweren dat hij eigenaar is van het NFT dat u zojuist heeft geslagen en het eigendom op frauduleuze wijze kunnen overdragen. Er zijn veel stimulansen om ervoor te zorgen dat miners eerlijk handelen.
+Al deze taken worden uitgevoerd door blokproducenten en -validators. Blokvoorstellers voegen uw NFT-transactie toe aan een blok en zenden deze uit naar de rest van het netwerk. Validators controleren of de transactie geldig is en voegen deze toe aan hun databases. Er zijn veel crypto-economische motieven die ervoor zorgen dat validators eerlijk handelen. Anders zou iedereen kunnen beweren dat hij eigenaar is van het NFT dat u zojuist heeft gemint en deze op frauduleuze wijze kunnen overgedragen.
 
-[Meer over mining](/developers/docs/consensus-mechanisms/pow/)
+#### NFT-beveiliging {#nft-security}
 
-#### Uw NFT beveiligen met mining {#securing-nfts}
+De veiligheid van Ethereum komt van proof-of-stake. Het systeem is ontworpen om kwaadaardige acties economisch te ontmoedigen, dit maakt Ethereum manipulatiebestendig. Dit is wat NFT's mogelijk maakt. Zodra het blok met uw NFT-transactie wordt afgerond, zou het een aanvaller miljoenen ETH kosten om het te veranderen. Iedereen die Ethereum-software gebruikt, zou onmiddellijk in staat zijn om oneerlijke manipulatie met een NFT te detecteren, en de slechte speler wordt dan economisch gestraft en verwijderd.
 
-De moeilijkheid van mining komt voort uit het feit dat er veel rekenkracht nodig is om nieuwe blokken in de chain te maken. Belangrijk is dat blokken consequent worden aangemaakt, niet alleen wanneer ze nodig zijn. Ze worden ongeveer om de 12 seconden aangemaakt.
+Beveiligingskwesties met betrekking tot NFT's hebben meestal te maken met phishing-scams, kwetsbaarheden van slimme contracten of gebruikersfouten (zoals het per ongeluk blootstellen van privésleutels), waardoor goede portemonneebeveiliging van cruciaal belang is voor NFT-eigenaren.
 
-Dit is belangrijk om Ethereum sabotagebestendig te houden, een van de kwaliteiten die NFT's mogelijk maakt. Hoe meer blokken in de chain, hoe veiliger de chain is. Als uw NFT in blok #600 werd gemaakt en een hacker zou dit proberen te stelen door de data aan te passen, zou de digitale vingerafdruk van alle daaropvolgende blokken ook veranderen. Dat betekent dat iedereen die Ethereum-software draait, het direct kan detecteren en voorkomen dat het gebeurt.
-
-Dit betekent echter dat de rekenkracht voortdurend moet worden gebruikt. Het betekent ook dat een blok met 0 NFT-transacties nog ongeveer dezelfde koolstofvoetafdruk zal hebben, omdat de rekenkracht nog steeds zal worden verbruikt om het te creëren. Andere niet-NFT transacties zullen de blokken vullen.
-
-#### Blockchains zijn energie-intensief op dit moment. {#blockchains-intensive}
-
-Dus ja, er is een koolstofvoetafdruk gekoppeld aan het maken van blokken door te minen - en dit is ook een probleem voor blockchains zoals Bitcoin - maar het is niet direct de schuld van NFT's.
-
-Veel miners gebruiken hernieuwbare energiebronnen of ongebruikte energie op afgelegen locaties. En er is ook het argument dat de industrieën die door NFT's en cryptovaluta's verstoord worden, ook enorme koolstofvoetafdrukken hebben. Maar alleen omdat bestaande industrieën slecht zijn, betekent niet dat we niet moeten proberen beter te zijn.
-
-En dat doen we ook. Ethereum evolueert om Ethereum (en dus NFT's) energiezuiniger te maken. En dat was altijd het plan.
-
-We zijn hier niet om de ecologische voetafdruk van mining te verdedigen, in plaats daarvan willen we uitleggen hoe alles beter wordt.
-
-### Een groenere toekomst... {#a-greener-future}
-
-Sinds het bestaan van Ethereum is de energieconsumptie van mining een enorm aandachtsgebied voor ontwikkelaars en onderzoekers. En de visie is er altijd op gericht geweest om deze consumptie zo snel mogelijk te vervangen. [Meer over Ethereums visie](/upgrades/vision/)
-
-Deze visie wordt nu uitgedragen.
-
-#### Een groener Ethereum {#greener-ethereum}
-
-Ethereum doorloopt momenteel een reeks upgrades die mining zullen vervangen door [staking](/staking/). Dit zal de rekenkracht als beveiligingsmechanisme verwijderen en de koolstofvoetafdruk van Ethereum verminderen met ~99,95%<sup>[^1]</sup>. In deze wereld gebruiken stakers geld in plaats van rekenkracht om het netwerk te beveiligen.
-
-De energiekosten van Ethereum zullen de kosten voor het beheren van een thuiscomputer worden, vermenigvuldigd met het aantal nodes in het netwerk. Als er 10.000 nodes in het netwerk zitten en de kosten voor het runnen van een thuiscomputer bedragen ongeveer 525 kWh per jaar. Dat is 5.250.000 kWu<sup>[^1]</sup> per jaar voor het hele netwerk.
-
-We kunnen dit gebruiken om de toekomst van Ethereum te vergelijken met een mondiale dienst zoals Visa. 100.000 Visa-transacties gebruiken 149 kWu energie<sup>[^2]</sup>. In proof-of-stake Ethereum zou datzelfde aantal transacties 17,4 kWu energie kosten of circa 11% van de totale energie<sup>[^3]</sup>. Dat is zonder rekening te houden met de vele optimalisaties waaraan parallel wordt gewerkt in de consensuslaag en shardketens, zoals [rollups](/glossary/#rollups). Voor 100.000 transacties zou dat zo weinig als 0,1666666667 kWu kunnen zijn.
-
-Belangrijk is dat dit de energie-efficiëntie verbetert en tegelijkertijd de decentralisatie en veiligheid van Ethereum behoudt. Veel andere blockchains maken mogelijk al gebruik van een of andere vorm van staking, maar ze worden beveiligd door een paar selecte stakers, niet de duizenden die Ethereum zal hebben. Hoe meer decentralisatie, hoe veiliger het systeem.
-
-[Meer over energieschattingen](#footnotes-and-sources)
-
-_We hebben de basisvergelijking met Visa gegeven om uw inzicht in het proof-of-stake Ethereum-energiegebruik een uitgangspunt te geven met behulp van een bekende naam. In de praktijk is het echter niet echt juist om te vergelijken op basis van het aantal transacties. Ethereum heeft een tijdgebonden energieverbruik. Als Ethereum van de ene minuut op de andere meer of minder transacties zou doen, zou het energieverbruik hetzelfde blijven._
-
-_Het is ook belangrijk om te onthouden dat Ethereum meer doet dan alleen financiële transacties. Het is een platform voor applicaties, dus een eerlijkere vergelijking kan zijn ten opzichte van vele bedrijven/industrieën, waaronder Visa, AWS en meer!_
-
-#### Tijdlijnen {#timelines}
-
-Het proces is al begonnen. [De Beacon Chain](/upgrades/beacon-chain/), de eerste upgrade, verscheen in december 2020. Dit vormt de basis voor staking door stakers toe te staan om deel te nemen aan het systeem. De volgende stap die relevant is voor energie-efficiëntie is het samenvoegen van de huidige keten (die door miners beveiligd is) in de Beacon Chain (waar mining niet meer nodig is). Tijdlijnen kunnen in dit stadium niet precies zijn, maar er wordt geschat dat dit ergens in 2022 zal gebeuren. Dit proces staat bekend als de merge (voorheen aangeduid als de docking). [Meer over de merge](/upgrades/merge/).
-
-<ButtonLink to="/upgrades/">
-  Meer over Ethereum-upgrades
+<ButtonLink to="/security/">
+  Meer over beveiliging
 </ButtonLink>
 
 ## Bouwen met NFT's {#build-with-nfts}
 
-De meeste NFT's zijn gebouwd met een consistente standaard bekend als [ERC-721](/developers/docs/standards/tokens/erc-721/). Er zijn echter andere normen die u wellicht wilt bekijken. De [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) standaard staat semi-vervangbare tokens toe, wat vooral handig is in de gaming-wereld. En recenter is [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) voorgesteld om het slaan van NFT's veel efficiënter te maken. Deze standaard staat u toe om er zoveel te slaan als u wilt in een enkele transactie!
+De meeste NFT's zijn gebouwd met een consistente standaard bekend als [ERC-721](/developers/docs/standards/tokens/erc-721/). Er zijn echter andere standaarden die u wellicht wilt bekijken. De standaard [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) staat semi-vervangbare tokens toe, wat vooral handig is in de gaming-wereld. En recenter is [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) voorgesteld om het minten van NFT's veel efficiënter te maken. Deze standaard staat u toe om er zoveel te minten als u wilt in een enkele transactie!
 
 ## Lees verder {#further-reading}
 
@@ -379,69 +336,5 @@ De meeste NFT's zijn gebouwd met een consistente standaard bekend als [ERC-721](
 - [A beginner's guide to NFTs](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, januari 2020_
 - [Everything you need to know about the metaverse](https://foundation.app/blog/enter-the-metaverse) – _Foundation-team, foundation.app_
 - [Nee, cryptokunstenaars schaden de planeet niet](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
+- [Energieverbruik van Ethereum](/energy-consumption/)
 - [A country's worth of power, no more](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, 18 mei 2021_
-
-<Divider />
-
-### Voetteksten en bronnen {#footnotes-and-sources}
-
-Dit verklaart hoe we zijn gekomen tot onze bovenstaande energieschattingen. Deze schattingen gelden voor het netwerk als geheel en zijn niet alleen voorbehouden voor het proces van creëren, kopen en verkopen van NFT's.
-
-#### 1. 99.95% energiezuiniger minen {#fn-1}
-
-De vermindering van het energieverbruik met 99,95% van een door mining beveiligd systeem naar een door staking beveiligd systeem, wordt berekend met behulp van de volgende gegevensbronnen:
-
-- 44,49 TWh jaarlijkse elektrische energie wordt verbruikt door het minen van Ethereum - [Digiconomist](https://digiconomist.net/ethereum-energy-consumption)
-
-- De gemiddelde desktopcomputer, alles wat nodig is om proof-of-stake uit te voeren, gebruikt 0,06 kWh energie per uur - [Silicon Valley-elektriciteitsgrafiek](https://www.siliconvalleypower.com/residents/save-energy/appliance-energy-use-chart) (Sommige schattingen zijn iets hoger, 0,15 kWh)
-
-Op het moment van schrijven zijn er 140.592 validators vanaf 16.405 unieke adressen. Aangenomen wordt dat daarvan 87.897 validators staken vanuit huis.
-
-Men gaat ervan uit dat de gemiddelde persoon die staket vanuit huis een persoonlijke desktopcomputer van 100 Watt gebruikt om een gemiddelde van 5,4 validator-clients te draaien.
-
-De 87.897 validators die staken vanuit huis geven ons 16.300 gebruikers die circa 1,64 megawatt aan energie verbruiken.
-
-De rest van de validators wordt uitgevoerd door bewaring-stakers zoals exchanges en staking-diensten. Men kan ervan uitgaan dat zij 100 W per 5,5 validators gebruiken. Dit is een grove overschatting om aan de veilige kant te blijven.
-
-In totaal verbruikt Ethereum op basis van proof-of-stake daarom iets in de trant van 2,62 megawatt, wat ongeveer hetzelfde is als een kleine Amerikaanse stad.
-
-Dit is een vermindering van het totale energieverbruik met ten minste 99,95% ten opzichte van de schatting van de Digiconomist van 44,4 TWh per jaar die de Ethereum-miners momenteel verbruiken.
-
-#### 2. Energieverbruik van Visa {#fn-2}
-
-De kosten van 100.000 Visa-transacties is 149 kWu - [Gemiddeld energieverbruik van Bitcoin-netwerk per transactie in vergelijking met het VISA-netwerk vanaf 2020, Statista](https://www.statista.com/statistics/881541/bitcoin-energy-consumption-transaction-comparison-visa/)
-
-In het jaar eindigend in september 2020 verwerkten ze 140.839.000.000 transacties - [Financiaal verslag K4 2020 van Visa](https://s1.q4cdn.com/050606653/files/doc_financials/2020/q4/Visa-Inc.-Q4-2020-Operational-Performance-Data.pdf)
-
-#### 3. Energieverbruik voor 100.000 transacties op een geshard proof-of-stake netwerk {#fn-3}
-
-Geschat wordt dat upgrades voor schaalbaarheid het netwerk toestaan om tussen de 25.000 en 100.000 transacties per seconde te verwerken, met [100.000 als het theoretische maximum op dit moment](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698).
-
-[Vitalik Buterin over het potentieel voor transacties per seconde met sharding](https://twitter.com/VitalikButerin/status/1312905884549300224)
-
-Minimaal zal sharding 64 keer de hoeveelheid transacties van vandaag de dag toestaan, die momenteel op ongeveer 15 transacties staat. Dat is de hoeveelheid shardketens (extra gegevens en capaciteit) die wordt geïntroduceerd. [Meer over shardketens](/upgrades/sharding/)
-
-Dat betekent dat we kunnen inschatten hoelang het zal duren om 100.000 transacties te verwerken zodat we het kunnen vergelijken met het bovenstaande voorbeeld van Visa.
-
-- `15 * 64 = 960` transacties per seconde.
-- `100.000 / 960 = 104,2` seconden voor het verwerken van 100.000 transacties.
-
-In 104,2 seconden zal het Ethereum-netwerk de volgende hoeveelheid energie gebruiken:
-
-`1,44 kWu dagelijks gebruik * 10.000 netwerknodes = 14.400 kWu` per dag.
-
-Er zijn 86.400 seconden in een dag, dus `14.400 / 86.400 = 0,1666666667 kWu` per seconde.
-
-Als we dat vermenigvuldigen met de hoeveelheid tijd die het kost om 100.000 transacties te verwerken: `0.1666666667 * 104,2 = 17,3666666701 kWu`.
-
-Dat is **11,6554809866%** van de energie die wordt verbruikt door dezelfde hoeveelheid Visa-transacties.
-
-En vergeet niet dat dit gebaseerd is op het minimum aantal transacties dat Ethereum per seconde zal kunnen verwerken. Als Ethereum zijn potentieel van 100.000 transacties per seconde bereikt, zouden 100.000 transacties 0,1666666667 kWu verbruiken.
-
-Met andere woorden, als Visa 140.839.000.000 transacties afhandelt waarbij 149 kWu verbruikt wordt per 100.000 transacties, is dat 209.850.110 kWu aan energie verbruikt voor het jaar.
-
-Ethereum in één jaar verbruikt 5.256.000 kWu. Met een potentieel van 788.940.000.000 - 3.153.600.000.000 transacties verwerkt in die tijd.
-
-<InfoBanner emoji=":evergreen_tree:">
-  Als u denkt dat deze statistieken onjuist zijn of nauwkeuriger kunnen worden gemaakt, meld dan een probleem of PR. Dit zijn schattingen van het ethereum.org-team die zijn gemaakt met publiek toegankelijke informatie en het geplande Ethereum-ontwerp. Dit is geen officiële belofte van de Ethereum Foundation.
-</InfoBanner>

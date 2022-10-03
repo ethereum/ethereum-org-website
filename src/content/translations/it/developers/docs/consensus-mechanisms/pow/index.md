@@ -2,77 +2,73 @@
 title: Proof of Work (PoW)
 description: Spiegazione del consenso con il protocollo Proof of Work e il suo ruolo in Ethereum.
 lang: it
-sidebar: true
-incomplete: true
 ---
 
-Ethereum, come Bitcoin, usa attualmente un protocollo di consenso chiamato **[Proof of Work (PoW)](https://wikipedia.org/wiki/Proof_of_work)**, che consente ai nodi della rete Ethereum di concordare sullo stato di tutte le informazioni registrate sulla blockchain Ethereum e impedisce alcuni tipi di attacchi economici.
+La rete Ethereum venne avviata usando un meccanismo di consenso che utilizzava il **[Proof of Work (PoW)](/developers/docs/consensus-mechanisms/pow)** che consentiva ai nodi della rete Ethereum di concordare sullo stato di tutte le informazioni registrate sulla blockchain Ethereum e impediva alcuni tipi di attacchi economici. Tuttavia, Ethereum ha disattivato il Proof of Work nel 2022 e ha iniziato, invece, a usare il [Proof of Stake](/developers/docs/consensus-mechanisms/pos).
 
-Durante il prossimo anno, il Proof of Work sarà progressivamente dismesso a favore del **[Proof of Stake (PoS)](/developers/docs/consensus-mechanisms/pos)**. La transizione al Proof of Stake eliminerà anche il mining da Ethereum. [Maggiori informazioni sulla fusione.](/upgrades/merge/)
+<InfoBanner emoji=":wave:">
+    Il Proof of Work è diventato ormai obsoleto. Ethereum non usa più il Proof of Work come parte del suo meccanismo di consenso, e usa invece il Proof of Stake. Leggi di più sul <a href="/developers/docs/consensus-mechanisms/pos/">Proof of Stake</a> e sullo <a href="/staking/">staking</a>.    
+</InfoBanner>
 
 ## Prerequisiti {#prerequisites}
 
-Per comprendere meglio questa pagina, ti consigliamo innanzi tutto di leggere il materiale relativo alle [transazioni](/developers/docs/transactions/), [ai blocchi](/developers/docs/blocks/), e [ai meccanismi di consenso](/developers/docs/consensus-mechanisms/).
+Per comprendere meglio questa pagina, consigliamo innanzi tutto di leggere il materiale relativo alle [transazioni](/developers/docs/transactions/), [ai blocchi](/developers/docs/blocks/), e [ai meccanismi di consenso](/developers/docs/consensus-mechanisms/).
 
 ## Cos'è la Proof of Work (PoW)? {#what-is-pow}
 
-Il Proof of Work è il meccanismo che consente alla rete decentralizzata di Ethereum di raggiungere il consenso o di giungere a un accordo su cose come i saldi degli account e l'ordine delle transazioni. Ciò impedisce agli utenti di "spendere due volte" le proprie monete e assicura che la catena di Ethereum sia estremamente difficile da attaccare o manipolare.
+Il consenso di Nakamoto, che utilizza il Proof of Work, è il meccanismo che un tempo consentiva di raggiungere il consenso nella rete decentralizzata Ethereum (ossia l'accordo di tutti i nodi) su alcuni aspetti come il saldo degli account e l'ordine delle transazioni. Questo impediva che gli utenti spendessero due volte le loro monete e assicurava che la catena Ethereum fosse estremamente difficile da attaccare o manipolare. Ora queste proprietà di sicurezza provengono invece dal Proof of Stake, usando il meccanismo di consenso noto come [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/).
 
 ## Proof of Work e mining {#pow-and-mining}
 
-Il Proof of Work è l'algoritmo sottostante che imposta la difficoltà e le regole per il lavoro che i miner devono svolgere. Il mining è il "lavoro" stesso. Si tratta dell'atto di aggiungere blocchi validi alla catena. Questo è importante perché la lunghezza della catena aiuta le rete a seguire la corretta catena Ethereum e a capire lo stato attuale di Ethereum. Più "lavoro" viene svolto, più è lunga la catena, più elevato è il numero di blocchi e più alta è la certezza che la rete si trovi allo stato delle cose attuale.
+Il Proof of Work è l'algoritmo sottostante che imposta la difficoltà e le regole per il lavoro che i miner devono svolgere su blockchain di Proof of Work. Il mining è il "lavoro" da svolgere. Si tratta dell'atto di aggiungere blocchi validi alla catena. Questo è importante perché la lunghezza della catena aiuta le rete a seguire la corretta diramazione della blockchain. Più "lavoro" viene svolto, più è lunga la catena e maggiore è il numero di blocchi, e più la rete può essere certa dello stato attuale delle cose.
 
 [Maggiori informazioni sul mining](/developers/docs/consensus-mechanisms/pow/mining/)
 
-## Come funziona la Proof of Work di Ethereum? {#how-it-works}
+## Come funzionava il Proof of Work di Ethereum? {#how-it-works}
 
-Le transazioni di Ethereum vengono elaborate in blocchi. Ogni blocco ha una serie di attributi:
+Le transazioni di Ethereum vengono elaborate in blocchi. Nell'Ethereum Proof of Work ora obsoleto, ogni blocco conteneva:
 
 - difficoltà del blocco, ad esempio: 3.324.092.183.262.715
 - un mixHash, ad esempio: `0x44bca881b07a6a09f83b130798072441705d9a665c5ac8bdf2f39a3cdf3bee29`
 - nonce, ad esempio: `0xd3ee432b4fb3d26b`
 
-Questi blocchi di dati sono correlati direttamente al Proof of Work.
+Questi dati del blocco erano correlati direttamente alla al Proof of Work
 
 ### Il lavoro nel Proof of Work {#the-work}
 
-Il protocollo di Proof of Work, detto Ethash, richiede che i miner attraversino un intenso processo di tentativi ed errori per trovare il nonce di un blocco. Solo i blocchi con un nonce valido possono essere aggiunti alla catena.
+Il protocollo di Proof of Work, detto Ethash, richiedeva che i miner competessero tramite processi di tentativo ed errore per trovare il nonce di un blocco. Solo i blocchi con un nonce valido potevano essere aggiunti alla catena.
 
-Quando compete per creare un blocco, un miner inserisce ripetutamente un set di dati, ottenibile solo tramite il download e l'esecuzione dell'intera catena (che è quello che fa il miner), attraverso una funzione matematica. Il set di dati viene utilizzato per generare un mixHash al di sotto di un nonce target, come dettato dalla difficoltà del blocco. Il miglior modo per farlo è tramite un processo di ripetuti tentativi ed errori.
+Quando competeva per creare un blocco, un miner inseriva ripetutamente un set di dati, che si poteva ottenere solo tramite il download e l'esecuzione dell'intera catena (che è quello che fa il miner), attraverso una funzione matematica. Il set di dati veniva utilizzato per generare un mixHash al di sotto di un target dettato dalla difficoltà del blocco. Il miglior modo per farlo era tramite un processo di ripetuti tentativi ed errori.
 
-La difficoltà determina il target per l'hash. Più basso è il target, più piccolo è il set di hash validi. Una volta generato, è incredibilmente facile per gli altri miner e client verificarne la bontà. Anche se una transazione dovesse cambiare, l'hash sarebbe completamente diverso, segnalando una potenziale frode.
+La difficoltà determinava il target per l'hash. Più basso era il target, più piccolo era il set di hash validi. Una volta generato, era incredibilmente facile per gli altri miner e client verificarne la bontà. Anche se una transazione fosse cambiata, l'hash sarebbe stato completamente diverso, segnalando una potenziale frode.
 
-L'hashing permette di individuare le frodi con facilità. Inoltre, il processo del Proof of Work costituisce anche un grande deterrente contro gli attacchi alla catena.
+L'hashing rende le frodi facili da individuare. Ma il processo del Proof of Work era anche un grande deterrente contro gli attacchi alla catena.
 
 ### Proof of Work e sicurezza {#security}
 
-I miner sono incentivati a svolgere questo lavoro sulla catena principale di Ethereum. L'incentivo a iniziare una catena propria è molto ridotto per i miner, perché minerebbe il sistema. Le blockchain fanno affidamento sul fatto di avere un solo stato di riferimento, che è considerato l'unica fonte di verità. E gli utenti sceglieranno sempre la catena più lunga o più "pesante".
+I miner erano incentivati a fare questo lavoro sulla catena principale di Ethereum. L'incentivo a iniziare una catena propria era molto ridotto per i miner, perché avrebbe compromesso il sistema. Le blockchain fanno affidamento sul fatto di avere un solo stato di riferimento, che è considerato l'unica fonte di verità.
 
-L'obiettivo della PoW è di estendere la catena. La catena più lunga è quella più credibile in termini di validità, perché è quella che racchiude in sé la maggior parte del lavoro computazionale eseguito. Nel sistema PoW di Ethereum è praticamente impossibile creare nuovi blocchi che cancellino transazioni o che ne creino di false, o mantenere una seconda catena. Questo perché un miner malevolo dovrebbe sempre risolvere il nonce del blocco più velocemente di chiunque altro.
+L'obiettivo del Proof of Work era di estendere la catena. La catena più lunga era quella più credibile in termini di validità, perché era quella che racchiudeva in sé la maggior parte del lavoro computazionale eseguito. Nel sistema PoW di Ethereum era praticamente impossibile creare nuovi blocchi che cancellassero transazioni o che ne creassero di false, o mantenere una seconda catena. Questo perché un miner malevolo avrebbe dovuto sempre risolvere il nonce del blocco più velocemente di chiunque altro.
 
-Per creare costantemente blocchi malevoli ma validi, bisognerebbe avere più del 51% della potenza di mining della rete, per poter battere tutti gli altri. Servirebbe davvero un'enorme potenza di calcolo per essere in grado di affrontare questa quantità di "lavoro". E il costo dell'energia utilizzata potrebbe anche superare i guadagni ottenibili con un attacco.
+Per creare costantemente blocchi malevoli ma validi, un miner malevolo avrebbe dovuto avere più del 51% della potenza di mining della rete, per poter battere tutti gli altri. Tale quantità di "lavoro" richiede un grande quantità di costosa potenza di calcolo e l'energia consumata avrebbe potuto persino superare i guadagni derivanti dall'attacco.
 
 ### L'economia della Proof of Work {#economics}
 
-Il Proof of Work è anche responsabile del rilascio di nuova valuta nel sistema e dell'incentivazione dei miner a fare il proprio lavoro.
+Il Proof of Work era anche responsabile del rilascio di nuova valuta nel sistema e dell'incentivazione dei miner a fare il proprio lavoro.
 
-I miner che creano correttamente un blocco sono premiati con due ETH appena coniati, ma non ricevono più tutte le commissioni sulle transazioni, poiché la commissione di base viene bruciata, mentre la mancia e la ricompensa del blocco vanno al miner. Un miner può ottenere anche 1,75 ETH per un blocco zio (uncle block), Con blocco zio si intende un blocco valido creato da un miner praticamente nello stesso momento in cui un altro miner estrae il blocco valido. Questa condizione in genere si verifica a causa della latenza della rete.
+Dall'[aggiornamento di Costantinopoli](/history/#constantinople), i miner che creavano correttamente un blocco erano ricompensati con due ETH appena coniati e parte delle commissioni di transazione. Anche i blocchi ommer erano ricompensati con 1,75 ETH. I blocchi ommer erano blocchi validi, creati da un miner praticamente contestualmente alla creazione del blocco canonico da parte di un altro miner, determinati in ultima analisi dalla catena su cui la creazione era avvenuta prima. I blocchi ommer si verificavano in genere a causa della latenza della rete.
 
 ## Finalità {#finality}
 
 Una transazione ha una "finalità" su Ethereum quando fa parte di un blocco che non può cambiare.
 
-Dato che i miner lavorano in modo decentralizzato, è possibile che due blocchi validi vengano minati nello stesso momento. In questo caso, si crea una diramazione temporanea. Alla fine verrà accettata una sola catena (quella più lunga), creata quando verranno eseguiti il mining e l'aggiunta di un blocco successivo.
+Dato che i miner lavoravano in modo decentralizzato, era possibile che avvenisse il mining di due blocchi validi nello stesso momento. In questo caso, si crea una diramazione temporanea. Alla fine veniva accettata una sola catena (quella più lunga), creata quando venivano eseguiti il mining e l'aggiunta di blocchi successivi.
 
-Per complicare ulteriormente le cose, le transazioni che erano state rifiutate sulla diramazione temporanea potrebbero essere state aggiunte alla catena accettata. Questo significa che la catena potrebbe essere annullata. Quindi la finalità si riferisce al tempo che occorre attendere prima di considerare una transazione irreversibile. Per Ethereum, il tempo raccomandato è di sei blocchi o poco più di 1 minuto. Dopo sei blocchi, si può affermare con una certa sicurezza che la transazione ha avuto successo. Si può anche aspettare più a lungo per avere una maggiore sicurezza.
-
-La finalità è un aspetto da tenere a mente quando si progettano le dApp. Sarebbe controproducente in termini di user experience fornire informazioni errate sulla transazione, soprattutto se è di alto valore.
-
-Ricorda che il periodo di tempo non include l'attesa che intercorre prima che la transazione venga prelevata da un miner.
+Per complicare ulteriormente le cose, le transazioni che erano state rifiutate sulla diramazione temporanea potevano non essere state aggiunte alla catena accettata. Questo significa che la catena poteva essere annullata. Quindi la finalità si riferisce al tempo per cui era necessario attendere prima di considerare una transazione irreversibile. Con il precedente Ethereum di Proof of Work, più blocchi erano minati su uno specifico blocco `N`, maggiore sarebbe stata la certezza che le transazioni in `N` riuscissero e non fossero annullate. Ora, con il Proof of Stake, la finalizzazione è una proprietà esplicita, piuttosto che probabilistica, di un blocco.
 
 ## Consumo energetico del Proof of Work {#energy}
 
-Una delle principali critiche mosse al Proof of Work riguarda la quantità di energia necessaria per mantenere la rete sicura. Per garantire la sicurezza e la decentralizzazione, il sistema Proof of Work di Ethereum consuma 73,2 TWh all'anno, l'equivalente del consumo energetico di un paese di medie dimensioni come l'Austria.
+Una delle principali critiche mosse al Proof of Work riguarda la quantità di energia necessaria per mantenere la rete sicura. Per mantenere la sicurezza e la decentralizzazione, Ethereum sul Proof of Work consumava elevate quantità di energia. Poco prima di passare al Proof of Stake, i miner di Ethereum consumavano collettivamente circa 70 TWh/anno (quasi quanto la Repubblica ceca, secondo [digiconomist](digiconomist.net), il 18 luglio 2022).
 
 ## Pro e contro {#pros-and-cons}
 
@@ -91,7 +87,7 @@ Ad alto livello, il Proof of Stake ha lo stesso obiettivo del Proof of Work: per
 - I validatori non competono per creare blocchi, sono invece scelti casualmente da un algoritmo.
 - La finalità è più chiara: in alcuni checkpoint, se i 2/3 dei validatori concordano sullo stato del blocco, questo è considerato definitivo. I validatori devono scommettere il loro intero stake su questo, per cui se dovessero provare a cospirare in seguito, perderebbero il loro intero stake.
 
-[Ulteriori informazioni sul Proof of Stake](/developers/docs/consensus-mechanisms/pos/)
+[Maggiori informazioni sul Proof of Stake](/developers/docs/consensus-mechanisms/pos/)
 
 ## Preferisci un approccio visivo all'apprendimento? {#visual-learner}
 

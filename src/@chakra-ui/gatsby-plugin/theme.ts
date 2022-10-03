@@ -35,6 +35,8 @@ const theme: ThemeOverride = {
     heading:
       "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
     body: "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+    monospace:
+      "SFMono-Regular, Consolas, 'Roboto Mono', 'Droid Sans Mono', 'Liberation Mono', Menlo, Courier, monospace",
   },
   styles,
   ...foundations,

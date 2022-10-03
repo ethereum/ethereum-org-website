@@ -2,7 +2,6 @@
 title: Lär dig mer om Ethereum
 description: Ett antal tekniska och inte så tekniska artiklar, guider och resurser för att lära dig om Ethereum.
 lang: se
-sidebar: true
 ---
 
 # Lär dig mer om Ethereum {#learn-about-ethereum}

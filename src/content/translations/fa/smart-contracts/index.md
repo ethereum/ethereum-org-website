@@ -2,7 +2,6 @@
 title: قرارداد‌های هوشمند
 description: یک مقدمه‌ی غیرفنی بر قراردادهای هوشمند
 lang: fa
-sidebar: true
 ---
 
 # مقدمه‌ای بر قراردادهای هوشمند {#introduction-to-smart-contracts}

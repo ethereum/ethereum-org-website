@@ -1,7 +1,6 @@
 ---
 title: Bagaimana saya dapat terlibat?
 description: Cara terlibat di dalam komunitas Ethereum.
-sidebar: true
 lang: id
 ---
 

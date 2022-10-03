@@ -2,7 +2,6 @@
 title: Veri ve analizler
 description: Dapp'lerinizde kullanmak için zincir içi analitik ve veriler nasıl elde edilir
 lang: tr
-sidebar: true
 ---
 
 ## Giriş {#Introduction}

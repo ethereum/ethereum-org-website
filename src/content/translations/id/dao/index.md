@@ -4,7 +4,6 @@ description: Gambaran umum tentang DAO di Ethereum
 lang: id
 template: use-cases
 emoji: ":handshake:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/use-cases/dao-2.png
 alt: Sebuah representasi DAO yang mengambil suara untuk sebuah usulan.

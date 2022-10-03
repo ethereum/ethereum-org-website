@@ -2,7 +2,6 @@
 title: Nodes as a service
 description: An entry-level overview of node services, the pros and cons, and popular providers.
 lang: en
-sidebar: true
 sidebarDepth: 2
 ---
 

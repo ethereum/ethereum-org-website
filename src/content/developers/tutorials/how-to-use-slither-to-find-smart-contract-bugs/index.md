@@ -3,7 +3,6 @@ title: How to use Slither to find smart contract bugs
 description: How to use Slither to automatically find bugs in smart contracts
 author: Trailofbits
 lang: en
-sidebar: true
 tags: ["solidity", "smart contracts", "security", "testing", "static analysis"]
 skill: advanced
 published: 2020-06-09

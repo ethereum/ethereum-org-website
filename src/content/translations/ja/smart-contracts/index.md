@@ -2,7 +2,6 @@
 title: スマートコントラクト
 description: スマートコントラクトの紹介(非テクニカル面)
 lang: ja
-sidebar: true
 ---
 
 # スマートコントラクト入門 {#introduction-to-smart-contracts}

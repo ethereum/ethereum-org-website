@@ -2,7 +2,6 @@
 title: Archiviazione Decentralizzata
 description: Panoramica di cos'è l'archiviazione decentralizzata e degli strumenti disponibili per integrarla in una dapp.
 lang: it
-sidebar: true
 ---
 
 A differenza di un server centralizzato gestito da una singola società o organizzazione, il sistema di storage decentralizzato consiste in una rete peer-to-peer di operatori-user che trattengono una porzione di tutti i dati esistenti, creando un sistema resiliente di salvataggio e condivisione di file. Tale sistema può trovarsi in un'applicazione basata sulla blockchain o in qualunque rete peer-to-peer.
@@ -28,7 +27,7 @@ Questo meccanismo prende il nome di persistenza **basata sulla blockchain**.
 
 Il problema della persistenza basata sulla blockchain è che la chain potrebbe diventare troppo grande per mantenere e memorizzare tutti i dati in modo fattibile (e.g. [molte fonti](https://healthit.com.au/how-big-is-the-internet-and-how-do-we-measure-it/) stimano che, per fare ciò, internet richieda una capacità di archiviazione di oltre 40 Zetabyte).
 
-La blockchain deve anche avere qualche tipo di struttura d'incentivazione. Per la persistenza basata sulla blockchain, è previsto un pagamento a favore del miner. Quando i dati sono aggiunti alla catena, i nodi sono pagati per aggiungervi i dati.
+La blockchain deve anche avere qualche tipo di struttura d'incentivazione. Per la persistenza basata sulla blockchain, esiste un pagamento effettuato al validatore. Quando i dati sono aggiunti alla catena, i validatori sono pagati per aggiungervi i dati.
 
 Le piattaforme con persistenza basata sulla blockchain sono:
 
@@ -89,15 +88,14 @@ Strumenti decentralizzati senza KYC:
 
 Gran parte di questi strumenti ha la propria versione di un [meccanismo di consenso](/developers/docs/consensus-mechanisms/) ma, generalmente, si basano su [**Proof of Work (PoW)**](/developers/docs/consensus-mechanisms/pow/) o [**Proof of Stake (PoS)**](/developers/docs/consensus-mechanisms/pos/).
 
-Basati su PoW:
+Basata sul proof-of-work:
 
 - Skynet
 - Arweave
+
+Basata sul proof-of-stake:
+
 - Ethereum
-
-Basati su PoS:
-
-- [La Beacon Chain](/eth2/beacon-chain/)
 - Filecoin
 - 0Chain
 
@@ -161,6 +159,12 @@ Basati su PoS:
 - [Ceramic.network](https://ceramic.network/)
 - [Documentazione](https://developers.ceramic.network/learn/welcome/)
 - [GitHub](https://github.com/ceramicnetwork/js-ceramic/)
+
+**Filebase - _La prima piattaforma di archiviazione di oggetti compatibile con S3 che ti consente di archiviare i dati su più reti d'archiviazione decentralizzata, tra cui IPFS, Sia, Skynet e Storj._**
+
+- [Filebase.com](https://filebase.com/)
+- [Documentazione](https://docs.filebase.com/)
+- [GitHub](https://github.com/filebase)
 
 ## Letture consigliate {#further-reading}
 

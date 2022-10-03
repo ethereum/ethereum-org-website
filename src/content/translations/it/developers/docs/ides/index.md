@@ -2,7 +2,6 @@
 title: Ambienti di sviluppo integrati (IDE)
 description:
 lang: it
-sidebar: true
 ---
 
 Quando si tratta di configurare un [ambiente di sviluppo integrato (IDE)](https://wikipedia.org/wiki/Integrated_development_environment), la programmazione delle applicazioni su Ethereum è simile alla programmazione di qualsiasi altro progetto software. Ci sono molte opzioni tra cui scegliere, quindi in fin dei conti, seleziona l'IDE o l'editor di codice che più si adegua alle tue preferenze. Più probabilmente, la migliore scelta di IDE per il tuo sviluppo in Ethereum è l'IDE che usi già per lo sviluppo software tradizionale.
@@ -11,11 +10,11 @@ Quando si tratta di configurare un [ambiente di sviluppo integrato (IDE)](https:
 
 Se desideri provare a scrivere codice prima di [configurare un ambiente di sviluppo locale](/developers/local-environment/), queste app Web sono personalizzate per lo sviluppo di Smart Contract Ethereum.
 
-**Remix:** **_IDE basato su Web che integra analisi statica e una macchina virtuale per una blockchain di test_**
+**Remix -** **_IDE basato sul web con analisi statiche e una macchina virtuale della blockchain di prova_**
 
 - [remix.ethereum.org](https://remix.ethereum.org/)
 
-**EthFiddle:** **_IDE basato su Web che permette di scrivere, compilare Smart Contract ed eseguirne il debug_**
+**EthFiddle -** **_IDE basato sul web che ti consente di scrivere, compilare ed eseguire il debug del tuo contratto intelligente_**
 
 - [ethfiddle.com](https://ethfiddle.com/)
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
@@ -24,7 +23,7 @@ Se desideri provare a scrivere codice prima di [configurare un ambiente di svilu
 
 - [chainide.com](https://chainide.com/)
 
-**Replit -** **_Un ambiente di sviluppo personalizzabile per Ethereum con reloading immediato, controllo degli errori e supporto rete di prova di prim’ordine._**
+**Replit -** **_Un ambiente di sviluppo personalizzabile per Ethereum con ricarica rapida, controllo degli errori e supporto di prima classe della rete di prova_**
 
 - [Solidity starter](https://replit.com/@replit/Solidity-starter-beta)
 
@@ -32,7 +31,7 @@ Se desideri provare a scrivere codice prima di [configurare un ambiente di svilu
 
 Gli IDE più diffusi hanno plugin integrati che migliorano l'esperienza di sviluppo per Ethereum. Come minimo, offrono evidenziazione della sintassi per i [linguaggi di smart contract](/developers/docs/smart-contracts/languages/).
 
-**Visual Studio Code:** **_IDE professionale multi piattaforma con supporto ufficiale per Ethereum_**
+**Visual Studio Code -** **_IDE multipiattaforma professionale con supporto ufficiale a Ethereum_**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Azure Blockchain Workbench](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)

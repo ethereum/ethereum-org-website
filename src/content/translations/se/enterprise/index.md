@@ -2,7 +2,6 @@
 title: Enterprise
 description: Guider, artiklar och verktyg om offentliga och privata Ethereum-blockchains för företag
 lang: se
-sidebar: true
 ---
 
 # Ethereum för företag {#ethereum-for-enterprise}

@@ -2,7 +2,6 @@
 title: 测试用智能合约
 description:
 lang: zh
-sidebar: true
 incomplete: true
 ---
 

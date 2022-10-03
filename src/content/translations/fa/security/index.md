@@ -2,7 +2,6 @@
 title: امنیت اتریوم و جلوگیری از کلاهبرداری
 description: ایمن ماندن در اتریوم
 lang: fa
-sidebar: true
 ---
 
 # امنیت اتریوم و جلوگیری از کلاهبرداری {#introduction}

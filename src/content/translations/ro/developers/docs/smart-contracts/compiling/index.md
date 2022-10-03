@@ -2,7 +2,6 @@
 title: Compilarea contractelor inteligente
 description: O explicație a motivului pentru care trebuie să compilaţi contractele inteligente și ce face de fapt compilarea.
 lang: ro
-sidebar: true
 incomplete: true
 ---
 

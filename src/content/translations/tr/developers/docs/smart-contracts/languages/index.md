@@ -2,7 +2,6 @@
 title: Akıllı sözleşme dilleri
 description: "İki ana akıllı sözleşme diline genel bir bakış ve karşılaştırma: Solidity ve Vyper."
 lang: tr
-sidebar: true
 ---
 
 Ethereum'un harika yönlerinden birisi, akıllı sözleşmelerin nispeten geliştirici dostu dillerle yazılabilmesidir. Eğer Python veya herhangi bir [süslü ayraç dilinde](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages) deneyimliyseniz, benzer söz dizimi olan bir dil bulabilirsiniz.

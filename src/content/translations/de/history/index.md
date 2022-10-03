@@ -2,7 +2,6 @@
 title: Geschichte und Forks von Ethereum
 description: Eine Geschichte der Ethereum-Blockchain, einschließlich der wichtigsten Meilensteine, Veröffentlichungen und Abspaltungen.
 lang: de
-sidebar: true
 sidebarDepth: 1
 ---
 

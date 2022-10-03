@@ -2,7 +2,6 @@
 title: Ethereum Privat untuk Perusahaan
 description: Sumber daya untuk aplikasi perusahaan di blockchain Ethereum privat.
 lang: id
-sidebar: true
 ---
 
 # Ethereum Privat untuk perusahaan {#private-ethereum-for-enterprise}

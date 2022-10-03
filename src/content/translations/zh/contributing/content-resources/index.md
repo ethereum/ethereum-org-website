@@ -2,7 +2,6 @@
 title: 添加内容资源
 lang: zh
 description: 在 ethereum.org 上上架内容资源的标准
-sidebar: true
 ---
 
 # 添加内容资源 {#adding-content-resources}

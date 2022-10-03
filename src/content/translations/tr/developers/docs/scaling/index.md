@@ -2,7 +2,6 @@
 title: Ölçeklendirme
 description: Ethereum topluluğu tarafından geliştirilmekte olan farklı ölçekleme seçeneklerine giriş.
 lang: tr
-sidebar: true
 sidebarDepth: 3
 ---
 

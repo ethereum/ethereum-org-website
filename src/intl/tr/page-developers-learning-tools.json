@@ -35,9 +35,15 @@
   "page-learning-tools-remix-logo-alt": "Remix logosu",
   "page-learning-tools-sandbox": "Sandboxların kodu",
   "page-learning-tools-sandbox-desc": "Bu sandboxlar, akıllı sözleşmeler yazmayı ve Ethereum'u anlamayı denemek için size bir alan sağlayacaktır.",
+  "page-learning-tools-speed-run-ethereum-description": "SpeedRunEthereum, Scaffold-ETH kullanarak Solidity bilginizi test etmeyi amaçlayan bir dizi zorluktan oluşur",
+  "page-learning-tools-speed-run-ethereum-logo-alt": "Speed Run Ethereum logosu",
   "page-learning-tools-studio-description": "Akıllı sözleşmeler oluşturmak ve test etmek, onlar için bir ön uç oluşturmak için öğreticileri takip edebileceğiniz web tabanlı bir IDE.",
   "page-learning-tools-vyperfun-description": "Kendi Pokémon oyununuzu oluşturarak Vyper öğrenin.",
   "page-learning-tools-vyperfun-logo-alt": "Vyper.fun logosu",
   "page-learning-tools-nftschool-description": "Değiştirilemez tokenler veya NFT'ler ile teknik açıdan neler olup bittiğini keşfedin.",
-  "page-learning-tools-nftschool-logo-alt": "NFT school logosu"
+  "page-learning-tools-nftschool-logo-alt": "NFT school logosu",
+  "page-learning-tools-pointer-description": "Eğlenceli olan etkileşimli öğreticilerle web3 geliştirme becerilerini öğrenin. Bu sırada kripto ödülleri kazanın",
+  "page-learning-tools-pointer-logo-alt": "İşaretçi Logosu",
+  "page-learning-tools-platzi-description": "Web3 üzerinde merkeziyetsiz uygulamalar oluşturmayı öğrenin ve bir blok zincir geliştiricisi olmak için gereken tüm becerilerde ustalaşın.",
+  "page-learning-tools-platzi-logo-alt": "Platzi logosu"
 }

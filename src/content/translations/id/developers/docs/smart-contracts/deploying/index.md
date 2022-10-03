@@ -2,7 +2,6 @@
 title: Menggunakan kontrak pintar
 description:
 lang: id
-sidebar: true
 ---
 
 Anda perlu menggunakan kontrak pintar Anda agar kontrak pintar tersedia bagi pengguna jaringan Ethereum.

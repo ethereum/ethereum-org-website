@@ -2,7 +2,6 @@
 title: Networking layer
 description: An introduction to Ethereum's networking layer.
 lang: en
-sidebar: true
 sidebarDepth: 2
 ---
 

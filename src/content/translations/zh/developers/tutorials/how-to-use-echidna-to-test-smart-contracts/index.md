@@ -3,7 +3,6 @@ title: 如何使用 Echidna 测试智能合约
 description: 如何使用 Echidna 自动测试智能合约
 author: "Trailofbits"
 lang: zh
-sidebar: true
 tags:
   - "solidity"
   - "智能合约"

@@ -4,7 +4,6 @@ description: Gambaran umum tentang DeFi di Ethereum
 lang: id
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../assets/use-cases/defi.png
 alt: Logo Eth yang terbuat dari batu bata lego.
 sidebarDepth: 2

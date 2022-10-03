@@ -2,8 +2,6 @@
 title: Transazioni
 description: "Panoramica sulle transazioni Ethereum: come funzionano, struttura dati e come inviarle tramite un'applicazione."
 lang: it
-sidebar: true
-preMergeBanner: true
 ---
 
 Le transazioni sono istruzioni firmate crittograficamente da account. Un account avvia una transazione per aggiornare lo stato della rete Ethereum. La transazione più semplice è il trasferimento di ETH da un account ad un altro.
@@ -18,21 +16,22 @@ Per transazione Ethereum si intende un'azione iniziata da un account controllato
 
 ![Diagramma che mostra un cambiamento di stato causato da una transazione](./tx.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-Le transazioni, che cambiano lo stato dell'EVM, devono essere trasmesse all'intera rete. Ogni nodo può trasmettere una richiesta di esecuzione di una transazione sull'EVM; in seguito, un miner eseguirà la transazione e propagherà il cambiamento di stato che ne risulta al resto della rete.
+Le transazioni, che cambiano lo stato dell'EVM, devono essere trasmesse all'intera rete. Ogni nodo può trasmettere una richiesta di esecuzione di una transazione sull'EVM; in seguito, un validatore eseguirà la transazione e propagherà il cambiamento di stato risultante al resto della rete.
 
-Le transazioni richiedono una commissione e deve essere eseguito il mining affinché siano valide. Per semplificare questa spiegazione, parleremo in altra sede di commissioni e di mining.
+Le transazioni richiedono una commissione e devono essere incluse in un blocco validato. Per semplificare questa spiegazione, parleremo in altra sede di commissioni e di convalida.
 
 Una transazione inviata contiene le seguenti informazioni:
 
 - `recipient` – L'indirizzo ricevente (se si tratta di un account di proprietà esterna, la transazione trasferirà valore. Se si tratta di un contratto, la transazione eseguirà il codice del contratto)
 - `signature` – Identificatore del mittente. Viene generata quando la chiave privata del mittente firma la transazione e conferma che il mittente ha autorizzato la transazione
+- `nonce` - Un contatore con incremento sequenziale, che indica il numero della transazione dall'account
 - `value` – Quantità di ETH da trasferire dal mittente al destinatario (in WEI, un taglio dell'ETH)
 - `data` – Campo opzionale per includere dati arbitrari
 - `gasLimit` – Importo massimo di unità di carburante che possono essere consumate dalla transazione. Le unità di carburante rappresentano fasi di calcolo
-- `maxPriorityFeePerGas` - la quantità massima di carburante da includere come mancia al miner
-- `maxFeePerGas` - la quantità massima di carburante che si è disposti a pagare per la transazione (comprensiva di `baseFeePerGas` e `maxPriorityFeePerGas`)
+- `maxPriorityFeePerGas` - La quantità massima di carburante da includere come mancia al validatore
+- `maxFeePerGas` - La quantità massima di carburante che si è disposti a pagare per la transazione (comprensiva di `baseFeePerGas` e `maxPriorityFeePerGas`)
 
-Per carburante si intende il calcolo necessario perché un miner elabori la transazione. Gli utenti devono pagare una commissione per questo calcolo. Il `gasLimit` e la `maxPriorityFeePerGas` determinano la commissione sulle transazioni massima pagata al miner. [Maggiori informazioni sul carburante](/developers/docs/gas/).
+Il carburante è un riferimento per il calcolo necessario perché un validatore elabori la transazione. Gli utenti devono pagare una commissione per questo calcolo. Il `gasLimit` e il `maxPriorityFeePerGas` determinano la commissione massima sulla transazione pagata al validatore. [Maggiori informazioni sul carburante](/developers/docs/gas/).
 
 L'oggetto della transazione sarà qualcosa del genere:
 
@@ -151,7 +150,7 @@ Sull'account di Alice verranno accreditati **+1,0 ETH**
 
 La commissione base brucerà **-0,00399 ETH**
 
-Il miner riceverà una mancia di **+0,000210 ETH**
+Il validatore riceve la mancia di **oltre 0,000210 ETH**
 
 Il carburante è richiesto anche per ogni interazione con Smart Contract.
 
@@ -165,11 +164,8 @@ Una volta inviata una transazione, succede quanto segue:
 
 1. Una volta inviata una transazione, viene generato un hash crittografico della transazione: `0x97d99bc7729211111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`
 2. La transazione viene poi inviata alla rete e inclusa in un gruppo di molte altre transazioni.
-3. Un miner deve scegliere la transazione e includerla in un blocco per verificarla e considerarla "riuscita".
-   - In questa fase potrebbero esserci tempi di attesa se la rete è congestionata e i miner non riescono a tenere il passo.
-4. La tua transazione riceverà delle "conferme". Il numero di conferme è il numero di blocchi creati dopo il blocco che includeva la tua transazione. Più alto è il numero, maggiore è la certezza che la rete abbia elaborato e riconosciuto la transazione.
-   - I blocchi recenti potrebbero essere riorganizzati, dando l'impressione che la transazione non sia andata a buon fine; tuttavia, la transazione potrebbe comunque essere valida ma inclusa in un blocco differente.
-   - La probabilità di riorganizzazione diminuisce con ogni blocco consecutivo minato, ad es. maggiore il numero delle conferme, più immutabile è la transazione.
+3. Un validatore deve scegliere la transazione e includerla in un blocco per verificarla e considerarla "riuscita".
+4. Col passare del tempo, il blocco contenente la tua transazione sarà aggiornato a "giustificato", poi "finalizzato". Questi aggiornamenti rendono molto più certo che la transazione sia "riuscita" e che non sarà mai alterata. Una volta che un blocco è "finalizzato", l'unica cosa che potrebbe cambiarlo è un attacco che costerebbe molti miliardi di dollari.
 
 ## Dimostrazione visiva {#a-visual-demo}
 
@@ -196,7 +192,7 @@ Dove i campi sono definiti come:
 - `TransactionType` - un numero tra 0 e 0x7f, per un totale di 128 tipi di transazione possibili.
 - `TransactionPayload` - un insieme arbitrario di byte definito dal tipo di transazione.
 
-## Lettura consigliate {#further-reading}
+## Letture consigliate {#further-reading}
 
 - [EIP-2718: Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718)
 
@@ -207,4 +203,3 @@ _Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e ag
 - [Account](/developers/docs/accounts/)
 - [Macchina virtuale Ethereum (EVM)](/developers/docs/evm/)
 - [Carburante](/developers/docs/gas/)
-- [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
