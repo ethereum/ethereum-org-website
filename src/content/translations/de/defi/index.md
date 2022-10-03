@@ -95,8 +95,6 @@ Als Blockchain ist Ethereum für sichere und globale Transaktionen konzipiert. W
 <ButtonLink to="/dapps/?category=finance">
   Siehe Zahlungs-dapps
 </ButtonLink>
-  Siehe Zahlungs-dApps
-</ButtonLink>
 
 #### Geld um die Welt „streamen“... {#stream-money}
 
@@ -188,8 +186,6 @@ Sie können Ihrer Krypto in Echtzeit beim Wachsen zusehen, indem Sie sie verleih
 <ButtonLink to="/dapps/?category=finance">
   Zu Lending-dapps
 </ButtonLink>
-  Zu Lending-dApps
-</ButtonLink>
 
 #### No-Loss-Lotterien {#no-loss-lotteries}
 
@@ -228,7 +224,7 @@ Für Trader, die sich mehr Kontrolle wünschen, gibt es fortgeschrittenere Optio
 Wenn Sie sich für einen zentralen Handelsplatz entscheiden, müssen Sie Ihre Assets vor dem Handeln zuerst hinterlegen und darauf vertrauen, dass der Anbieter diese sicher verwahrt. Während Ihre Assets bei dem Anbieter hinterlegt sind, sind sie dem Risiko von Hackerangriffen ausgesetzt.
 
 <ButtonLink to="/dapps/?category=finance">
-  Zu Trading-dApps
+  Zu Trading-dapps
 </ButtonLink>
 
 <Divider />
@@ -240,7 +236,7 @@ Auf Ethereum gibt es auch Produkte für das Portfoliomanagement, deren Ziel es i
 Ein gutes Beispiel ist der [DeFi Pulse Index Fund (DPI)](https://defipulse.com/blog/defi-pulse-index/). Es handelt sich dabei um einen Fonds, der sich automatisch ausgleicht, um sicherzustellen, dass Ihr Portfolio immer die [wichtigsten Defi-Token nach Marktkapitalisierung](https://www.coingecko.com/en/defi) enthält. Sie werden niemals irgendwelche Details verwalten müssen und können jederzeit Abhebungen aus dem Fonds tätigen.
 
 <ButtonLink to="/dapps/?category=finance">
-  Zu Investment-dApps
+  Zu Investment-dapps
 </ButtonLink>
 
 <Divider />
@@ -254,7 +250,7 @@ Ethereum ist die ideale Platform für Crowdfunding:
 - Spendensammler können automatische Erstattungen einrichten, wenn es beispielsweise eine bestimmte Frist und einen Mindestbetrag gibt, die bzw. der nicht eingehalten oder erreicht wird.
 
 <ButtonLink to="/dapps/?category=finance">
-  Zu Crowdfunding-dApps
+  Zu Crowdfunding-dapps
 </ButtonLink>
 
 #### Quadratische Finanzierung {#quadratic-funding}
@@ -281,7 +277,7 @@ Eine dezentralisierte Versicherung zielt darauf ab, Versicherungen billiger und 
 Bei Ethereum-Produkten gibt es wie auch bei jeder anderen Software Fehler und Exploits. Derzeit liebt beispielsweise bei vielen Versicherungsprodukten in diesem Bereich der Schwerpunkt auf dem Schutz der Nutzer vor finanziellen Verlusten. Bei manchen Projekten wird jedoch damit begonnen, eine Absicherung für alles aufzubauen, was im Leben so passieren kann. Ein gutes Beispiel ist die Ernteversicherung von Etherisc. Es wird versucht, [Kleinbauern in Kenia gegen Dürren und Überschwemmungen abzusichern](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Dezentrale Versicherungen können Landwirten, denen herkömmliche Versicherungen oft zu teuer sind, einen erschwinglichen Versicherungsschutz bieten.
 
 <ButtonLink to="/dapps/?category=finance">
-  Zu Versicherungs-dApps
+  Zu Versicherungs-dapps
 </ButtonLink>
 
 <Divider />
@@ -291,7 +287,7 @@ Bei Ethereum-Produkten gibt es wie auch bei jeder anderen Software Fehler und Ex
 Bei all diesen Entwicklungen brauchen Sie einen Weg, um alle Ihre Investitionen, Darlehen und Trades im Auge zu behalten. Es gibt eine Reihe von Produkten, mit denen Sie alle Ihre DeFi-Aktivitäten zentral koordinieren können. Das ist der Vorteil der offenen Architektur von DeFi. Teams können Schnittstellen entwickeln, über die Sie nicht nur Ihr Guthaben für alle Produkte sehen, sondern zusätzlich auch deren Funktionen nutzen können. Das finden Sie vielleicht nützlich, wenn Sie sich umfassender mit DeFi vertraut machen.
 
 <ButtonLink to="/dapps/?category=finance">
-  Zu Portfolio-dApps
+  Zu Portfolio-dapps
 </ButtonLink>
 
 <Divider />
@@ -329,7 +325,7 @@ DeFi ist praktisch ein Ebenenmodell:
 DeFi ist eine Open-Source-Bewegung. DeFi-Protokolle und -Anwendungen sind für jeden offen, um sie zu überprüfen, aufzuspalten und zu verbessern. Durch diese kombinierten Ebenen oder Layer (sie teilen alle die gleiche Basis-Blockchain und Assets) können Protokolle vermischt und aufeinander abgestimmt werden, um neue einzigartige Möglichkeiten zu schaffen.
 
 <ButtonLink to="/developers/docs/dapps/">
-  Mehr zum Erstellen von dApps
+  Mehr zum Erstellen von dapps
 </ButtonLink>
 
 ## Weiterführende Informationen {#futher-reading}
