@@ -1,7 +1,6 @@
 ---
 title: Communautés en ligne
 description: Une liste des programmes de subventions pour l'écosystème Ethereum.
-sidebar: true
 lang: fr
 ---
 
