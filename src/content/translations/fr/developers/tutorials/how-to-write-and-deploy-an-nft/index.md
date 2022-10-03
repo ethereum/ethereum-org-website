@@ -105,7 +105,7 @@ Approuvez le package.json, et nous sommes prêts à démarrer !
 
 ## Étape 7 : Installer [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
 
-Hardat est un environnement de développement qui permet de compiler, déployer, tester et débugger vos logiciels Ethereum. Il aide les développeurs à construire des contrats intelligents et des DApps localement avant de les déployer sur la chaîne en production.
+Hardat est un environnement de développement qui permet de compiler, déployer, tester et débugger vos logiciels Ethereum. Il aide les développeurs à construire des contrats intelligents et des dapps localement avant de les déployer sur la chaîne en production.
 
 Dans notre projet my-nft, exécutez :
 
