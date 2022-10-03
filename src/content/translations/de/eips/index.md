@@ -2,7 +2,6 @@
 title: Ethereum – Vorschläge zur Verbesserung (EIPs)
 description: Die grundlegenden Informationen, die Sie benötigen, um das Prinzip der Verbesserungsvorschläge für Ethereum (Ethereum Improvement Proposals (EIPs) zu verstehen
 lang: de
-sidebar: true
 ---
 
 # Einführung in Ethereum-Verbesserungsvorschläge (EIPs) {#introduction-to-ethereum-improvement-proposals-eips}

@@ -2,7 +2,6 @@
 title: Bevezetés az Ethereum stack-be
 description: Egy áttekintő az Ethereum stack különböző rétegeiről és arról, hogyan illenek egymásba.
 lang: hu
-sidebar: true
 ---
 
 Mint bármely szoftver stack az "Ethereum stack" változni fog projektről projektre az üzleti céljaidtól függően.

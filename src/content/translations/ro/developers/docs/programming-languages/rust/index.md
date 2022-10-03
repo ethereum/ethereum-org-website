@@ -2,7 +2,6 @@
 title: Ethereum pentru programatorii Rust
 description: Învăţaţi să programaţi pentru Ethereum folosind proiecte și instrumente Rust
 lang: ro
-sidebar: true
 incomplete: true
 ---
 

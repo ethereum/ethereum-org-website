@@ -2,7 +2,6 @@
 title: Proof-of-stake (PoS)
 description: An explanation of the proof-of-stake consensus protocol and its role in Ethereum.
 lang: en
-sidebar: true
 ---
 
 Proof-of-stake (PoS) underlies Ethereum's [consensus mechanism](/developers/docs/consensus-mechanisms/). Ethereum switched on its proof-of-stake mechanism in 2022 because it is more secure, less energy-intensive, and better for implementing new scaling solutions compared to the previous [proof-of-work](/developers/docs/consensus-mechanisms/pow) architecture.
@@ -64,7 +63,7 @@ Overall, proof-of-stake, as it is implemented on Ethereum, has been demonstrated
 - [Proof of Stake FAQ](https://vitalik.ca/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
 - [What is Proof of Stake](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
 - [What Proof of Stake Is And Why It Matters](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) _Vitalik Buterin_
-- [The Beacon Chain Ethereum 2.0 explainer you need to read first](https://ethos.dev/beacon-chain/) _Ethos.dev_
+- [The Beacon Chain Ethereum 2.0 explainer you need to read first](https://web.archive.org/web/20220719213551/https://ethos.dev/beacon-chain/) _Ethos.dev_
 - [Why Proof of Stake (Nov 2020)](https://vitalik.ca/general/2020/11/06/pos2020.html) _Vitalik Buterin_
 - [Proof of Stake: How I Learned to Love Weak Subjectivity](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
 - [Proof-of-stake Ethereum attack and defense](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)

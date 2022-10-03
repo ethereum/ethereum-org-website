@@ -2,7 +2,6 @@
 title: Adding wallets
 description: The policy we use when adding a wallet to ethereum.org
 lang: en
-sidebar: true
 ---
 
 # Adding wallets {#adding-wallets}

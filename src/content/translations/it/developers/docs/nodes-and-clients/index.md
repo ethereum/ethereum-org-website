@@ -2,9 +2,7 @@
 title: Nodi e client
 description: Panoramica dei nodi Ethereum e del software client, come configurare un nodo e perché farlo.
 lang: it
-sidebar: true
 sidebarDepth: 2
-preMergeBanner: true
 ---
 
 Ethereum è una rete distribuita di computer (noti come nodi) che eseguono software che possono verificare i blocchi e i dati delle transazioni. Per fare del tuo computer un nodo di Ethereum deve essere eseguita l'applicazione software, detta client.
@@ -19,17 +17,48 @@ Se sei nuovo al tema dei nodi, consigliamo di leggere prima la nostra introduzio
 
 ## Che cosa sono i nodi e i client? {#what-are-nodes-and-clients}
 
-Un "nodo" è un computer che esegue il software del client di Ethereum. Un client è una implementazione di Ethereum che verifica tutte le transazioni presenti in un blocco, facendo in modo che la rete rimanga sicura e i dati siano accurati. Fino alla Fusione, è necessario un solo software per eseguire un nodo completo (o due per eseguire un nodo di mining). Dopo La Fusione, sono necessari due software client per eseguire un nodo completo (tre per eseguire un nodo validatore), uno per gestire e definire le transazioni (client d'esecuzione), uno per gestire il gossip del blocco e la scelta della biforcazione (client di consenso) e un client del validatore facoltativo che gestisce la produzione dei blocchi e il "voto" sui blocchi ricevuti dai suoi peer.
+Un "nodo" è qualsiasi istanza del software del client di Ethereum connessa ad altri computer che stanno anch'essi eseguendo il software di Ethereum, così da formare una rete. Un client è un'implementazione di Ethereum che verifica i dati rispetto alle regole del protocollo e mantiene sicura la rete.
 
-Puoi avere una panoramica in tempo reale della rete Ethereum dando un'occhiata a questa [mappa dei nodi](https://etherscan.io/nodetracker).
+L'Ethereum post-Fusione consiste in due parti: il livello di esecuzione e il livello di consenso. I due livelli sono eseguiti da software del client differenti. In questa pagina, faremo loro riferimento come client di esecuzione e client di consenso.
 
-Esistono molti [client d'esecuzione di Ethereum](/developers/docs/nodes-and-clients/#execution-clients) e [client di consenso](/developers/docs/nodes-and-clients/#consensus-clients), in diversi linguaggi di programmazione come Go, Rust, JavaScript, Typescript, Python, C# .NET, Nim e Java. Qello che queste implementazioni hanno in comune è che seguono tutte una specifica formale. Queste specifiche definiscono come funzionano la rete e la blockchain di Ethereum.
+- Il client di esecuzione (noto anche come il Motore di Esecuzione, client EL o, precedentemente, client di Eth1) attende le nuove transazioni trasmesse nella rete, le esegue nell'EVM e detiene l'ultimo stato e database di tutti i dati correnti di Ethereum.
+- Il client di consenso (noto anche come il Nodo Beacon, client CL o, precedentemente, client di Eth2) implementa l'algoritmo di consenso di Proof of Stake, che consente alla rete di raggiungere l'accordo secondo i dati validati dal client di esecuzione.
 
-![Client d'esecuzione e consenso accoppiati](./eth1eth2client.png) Diagramma semplificato di un client d'esecuzione e uno di consenso accoppiati.
+Prima de [La Fusione](/upgrades/merge/), i livelli di consenso e di esecuzione erano reti separate, con tutte le transazioni e le attività degli utenti su Ethereum che si verificavano dove ora si trova il livello di esecuzione. Un software del client forniva sia l'ambiente di esecuzione che la verifica del consenso dei blocchi prodotti dai miner. Il livello di consenso, [la Beacon Chain](/upgrades/beacon-chain/), è stato eseguito separatamente da dicembre 2020. Ha introdotto il Proof of Stake e coordinato la rete di validatori sulla base dei dati dalla rete Ethereum.
+
+Con la Fusione, Ethereum è passata al Proof of Stake connettendo queste reti. I client di esecuzione e di consenso collaborano per verificare lo stato di Ethereum.
+
+Il design modulare con vari pezzi di software che lavorano insieme è detto [complessità incapsulata](https://vitalik.ca/general/2022/02/28/complexity.html). Questo approccio semplifica l'esecuzione perfetta della Fusione e consente il riutilizzo di singoli client, ad esempio, nell'[ecosistema del livello 2](/layer-2/).
+
+![Client di esecuzione e consenso accoppiati](./eth1eth2client.png) Diagramma semplificato di un client di esecuzione e uno di consenso accoppiati.
+
+### Diversità dei client {#client-diversity}
+
+Sia i [client di esecuzione](/developers/docs/nodes-and-clients/#execution-clients) che i [client di consenso](/developers/docs/nodes-and-clients/#consensus-clients) esistono in numerosi linguaggi di programmazione sviluppati da diversi team.
+
+Diverse implementazioni del client possono rafforzare la rete, riducendone la dipendenza da un'unica base di codice. L'obiettivo ideale è raggiungere la diversità senza che nessun client domini la rete, eliminando così eventuali un potenziale punto di errore singolo. La varietà di linguaggi invita inoltre una community di sviluppatori più ampia e consente loro di creare integrazioni nel loro linguaggio preferito.
+
+Scopri di più sulla [diversità del client](/developers/docs/nodes-and-clients/client-diversity/).
+
+Queste implementazioni hanno in comune il fatto di seguire una specifica unica che determina come funziona la rete Ethereum e la blockchain. Ogni dettaglio tecnico è definito e le specifiche si possono trovare come:
+
+- In origine, lo [Yellow Paper di Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)
+- [Specifiche di esecuzione](https://github.com/ethereum/execution-specs/)
+- [Specifiche di consenso](https://github.com/ethereum/consensus-specs)
+- [EIP](https://eips.ethereum.org/) implementati in vari [aggiornamenti di rete](/history/)
+
+### Monitorare i nodi nella rete {#network-overview}
+
+Diversi tracker offrono una panoramica in tempo reale dei nodi nella rete Ethereum. Si noti che a causa della natura delle reti decentralizzate, questi crawler possono fornire solo una vista limitata della rete e potrebbero riportare risultati differenti.
+
+- [Mappa dei nodi](https://etherscan.io/nodetracker) di Etherscan
+- [Ethernodes](https://ethernodes.org/) di Bitfly
+- [Crawler dei Nodi di Ethereum](https://crawler.ethereum.org/)
+- [Nodewatch](https://www.nodewatch.io/) di Chainsafe, crawling dei nodi di consenso
 
 ## Tipologie di nodo {#node-types}
 
-Se desideri [eseguire il tuo nodo](/developers/docs/nodes-and-clients/run-a-node/), devi sapere che ne esistono di diversi tipi che consumano i dati in maniera diversa. I client possono eseguire 3 diversi tipi di nodi: leggero, completo e archivio. Esistono anche diverse strategie di sincronizzazione per velocizzare i tempi. La sincronizzazione è la velocità con cui si ottiene lo stato più aggiornato di Ethereum.
+Se desideri [eseguire il tuo nodo](/developers/docs/nodes-and-clients/run-a-node/), dovresti capire che ne esistono di diversi tipi che consumano i dati in maniera diversa. I client possono eseguire tre diversi tipi di nodi: leggero, completo e archivio. Esistono anche diverse strategie di sincronizzazione per velocizzare i tempi. La sincronizzazione è la velocità con cui si ottengono le informazioni più aggiornate sullo stato di Ethereum.
 
 ### Nodo completo {#full-node}
 
@@ -40,9 +69,9 @@ Se desideri [eseguire il tuo nodo](/developers/docs/nodes-and-clients/run-a-node
 
 ### Nodo leggero {#light-node}
 
-Invece di scaricare ogni blocco, i nodi leggeri scaricano le intestazioni dei blocchi. Queste contengono solo le informazioni sommarie sui contenuti dei blocchi. Ogni altra informazione di chi ha bisogno il nodo leggero viene richiesta a un nodo completo. Il nodo leggero può quindi verificare indipendentemente i dati che riceve rispetto alle radici di stato nelle intestazioni dei blocchi. I nodi leggeri consentono agli utenti di partecipare alla rete di Ethereum senza il potente hardware o l'elevata larghezza di banda necessari a eseguire i nodi completi. Infine, i nodi leggeri potrebbero funzionare su cellulari o dispositivi embedded. I nodi leggeri non partecipano al consenso (es., non possono essere miner/validatori), ma possono accedere alla blockchain di Ethereum con la stessa funzionalità di un nodo completo.
+Invece di scaricare ogni blocco, i nodi leggeri scaricano le intestazioni dei blocchi. Queste contengono solo le informazioni sommarie sui contenuti dei blocchi. Ogni altra informazione richiesta dal nodo leggero viene richiesta dal nodo completo. Il nodo leggero può quindi verificare in modo indipendente i dati che riceve rispetto alle radici di stato nelle intestazioni dei blocchi. I nodi leggeri consentono agli utenti di partecipare alla rete Ethereum senza l'hardware potente o l'elevata larghezza di banda necessari per eseguire i nodi completi. Infine, i nodi leggeri potrebbero funzionare su telefoni cellulari o dispositivi embedded. I nodi leggeri non partecipano al consenso (ossia non possono essere miner/validatori), ma possono accedere alla blockchain di Ethereum con la stessa funzionalità di un nodo completo.
 
-Il client d'esecuzione Geth prevede un'opzione di [sincronizzazione leggera](https://github.com/ethereum/devp2p/blob/master/caps/les.md). Un nodo leggero di Geth si affida comunque ai nodi completi che servono i dati al nodo leggero. Pochi nodi completi scelgono di servire i dati ai nodi leggeri, quindi spesso questi ultimi non riescono a trovare dei peer. Al momento non esiste alcun client leggero pronto per la produzione sul livello di consenso; ce ne sono però diversi in fase di sviluppo.
+Il client di esecuzione Geth include un'opzione di [sincronizzazione leggera](https://github.com/ethereum/devp2p/blob/master/caps/les.md). Tuttavia, un nodo leggero di Geth si affida ai nodi completi che servono i dati del nodo leggero. Pochi nodi completi scelgono di servire i dati dei nodi leggeri, a significare che questi ultimi non riescono spesso a trovare pari. Al momento non esiste alcun client leggero pronto per la produzione sul livello di consenso; ce ne sono però diversi in fase di sviluppo.
 
 Esistono anche dei percorsi potenziali per fornire i dati dei client leggeri sulla [rete di gossip](https://www.ethportal.net/). Questi sono vantaggiosi perché la rete di gossip potrebbe supportare una rete di nodi leggeri senza richiedere ai nodi completi di rispondere alle richieste.
 
@@ -50,24 +79,25 @@ Ethereum non supporta ancora una grande popolazione di nodi leggeri, ma il suppo
 
 ### Nodo archivio {#archive-node}
 
-- Memorizza tutto ciò che è presente nel nodo completo e crea un archivio degli stati storici. È necessario se desideri consultare qualcosa come un saldo dell'account sul blocco n. 4.000.000 o se vuoi [testare la tua serie di transazioni senza minarle, usando OpenEthereum](https://openethereum.github.io/JSONRPC-trace-module#trace_callmany), in modo semplice e affidabile.
-- Si tratta di terabyte e terabyte di dati, che rendono i nodi archivio meno interessanti per l'utente medio, ma possono essere utili per servizi come block explorer, fornitori di portafogli e analisi della catena.
+- Memorizza tutto ciò che è presente nel nodo completo e crea un archivio degli stati storici. È necessario se desideri consultare qualcosa come un saldo dell'account sul blocco n. 4.000.000 o se vuoi testare in modo semplice e affidabile la tua serie di transazioni senza minarle usando il tracciamento.
+- Si tratta di terabyte e terabyte di dati, che rendono i nodi archivio meno attraenti per gli utenti medi, ma possono essere utili per servizi come block explorer, fornitori di portafogli e analisi della catena.
 
 La sincronizzazione dei client in qualsiasi modalità diversa dall'archivio comporterà l'eliminazione dei dati della blockchain. Significa che non rimarrà un archivio di tutti gli stati storici, ma il nodo completo è in grado di ricostruirli su richiesta.
 
 ## Perché si dovrebbe eseguire un nodo Ethereum? {#why-should-i-run-an-ethereum-node}
 
-L'esecuzione di un nodo consente di utilizzare Ethereum in modo affidabile e privato, supportando l'ecosistema.
+L'esecuzione di un nodo consente di utilizzare Ethereum in modo diretto, affidabile e privato, supportando la rete tenendola più solida e decentralizzata.
 
 ### Vantaggi per lo sviluppatore {#benefits-to-you}
 
-Eseguire un nodo permette di utilizzare Ethereum in modo veramente privato, autosufficiente e affidabile. Non è necessario affidarsi alla rete perché è possibile verificare i dati da soli con il proprio client. "Non fidarti, verifica" è un principio cardine della blockchain.
+Eseguire un nodo permette di utilizzare Ethereum in modo privato, autosufficiente e affidabile. Non è necessario affidarsi alla rete perché è possibile verificare i dati da soli con il proprio client. "Non fidarti, verifica" è un popolare mantra della blockchain.
 
-- Il nodo verifica in autonomia tutte le transazioni e i blocchi in base alle regole del consenso. Significa che non devi fare affidamento su altri nodi della rete né fidarti completamente di loro.
-- Non dovrai comunicare i tuoi indirizzi e saldi a nodi casuali. Tutto può essere controllato con il proprio client.
-- La dApp può essere più sicura e privata se si utilizza un nodo personale. [MetaMask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) e altri portafogli possono essere facilmente impostati per puntare al nodo locale.
-- Puoi programmare i tuoi endpoint RPC personalizzati.
-- Puoi connetterti al tuo nodo usando le **Comunicazioni Tra Processi (IPC)** o riscrivere il nodo per caricare il tuo programma come plugin. Questo conferisce una bassa latenza, necessaria per sostituire le tue transazioni il più velocemente possibile (ad es. frontrunning).
+- Il nodo verifica in autonomia tutte le transazioni e i blocchi in base alle regole del consenso. Significa che non si deve fare affidamento su altri nodi della rete né fidarti completamente di loro.
+- Puoi usare un portafoglio Ethereum col tuo nodo. Puoi usare le dapp con maggiore sicurezza e privacy, perché non dovrai comunicare i tuoi indirizzi e saldi a nodi casuali. Tutto può essere controllato con il tuo client. [MetaMask](https://metamask.io), [Frame](https://frame.sh/)e [molti altri portafogli](/wallets/find-wallet/) offrono l'importazione RPC, consentendo loro di usare il tuo nodo.
+- Puoi eseguire e hostare tu stesso altri servizi che dipendono dai dati provenienti da Ethereum. Ad esempio, questi potrebbero essere un validatore della Beacon Chain, software come il livello 2, infrastruttura, block explorer, società di servizi di pagamento, ecc.
+- Puoi fornire i tuoi [endpoint RPC](https://ethereum.org/en/developers/docs/apis/json-rpc/) personalizzati. L'endpoint di Ethereum ospitato pubblicamente per la community o persino privatamente, consente alle persone di usare il tuo nodo ed evitare i grandi fornitori centralizzati.
+- Puoi connetterti al tuo nodo usando le **Comunicazioni interprecessuali (IPC)** o riscrivere il nodo per caricare il tuo programma come plugin. Ciò conferisce una bassa latenza, il che aiuta molto ad esempio quando si elaborano molti dati usando le librerie web3 o quando ti serve sostituire le tue transazioni il più velocemente possibile (frontrunning).
+- Puoi mettere ETH direttamente in staking per proteggere la rete e guadagnare ricompense. Per iniziare, vedi lo [staking in autonomia](https://ethereum.org/en/staking/solo/).
 
 ![Come accedere a Ethereum tramite un'applicazione e i nodi](./nodes.png)
 
@@ -75,10 +105,12 @@ Eseguire un nodo permette di utilizzare Ethereum in modo veramente privato, auto
 
 Avere una serie diversificata di nodi è importante per l'integrità, la sicurezza e la resilienza operativa di Ethereum.
 
+- I nodi completi applicano le regole di consenso e quindi non possono essere ingannati ad accettare blocchi che non li seguono. Questo fornisce ulteriore sicurezza nella rete, perché se tutti i nodi fossero leggeri, cioè non effettuassero una verifica completa, i validatori potrebbero attaccare la rete.
+- Nel caso di un attacco che superi le difese cripto-economiche del [Proof of Stake](/developers/docs/consensus-mechanisms/pos/#what-is-pos), può essere eseguito un recupero sociale dai nodi completi che scelgono di seguire la catena onesta.
+- Più nodi sulla rete risultano in una rete più diversificata e robusta, l'obiettivo ultimo della decentralizzazione, che consente un sistema resistente alla censura e affidabile.
 - I nodi forniscono accesso ai dati della blockchain per i client leggeri che dipendono da essa. In caso di picchi di utilizzo, per agevolare la sincronizzazione dei nodi leggeri, è necessario che i nodi completi siano in quantità sufficiente. I nodi leggeri non memorizzano l'intera blockchain, bensì verificano i dati attraverso le [radici di stato nelle intestazioni dei blocchi](/developers/docs/blocks/#block-anatomy). Se ne hanno bisogno, possono richiedere ulteriori informazioni ai blocchi.
-- I nodi completi applicano le regole di consenso proof-of-work e quindi non possono essere ingannati ad accettare blocchi che non li seguono. Questo fornisce ulteriore sicurezza nella rete, perché se tutti i nodi fossero leggeri, cioè non effettuassero una verifica completa, i produttori di blocchi potrebbero attaccare la rete e, ad esempio, creare blocchi con ricompense più elevate.
 
-Se si esegue un nodo completo, l'intera rete di Ethereum ne beneficia.
+Se si esegue un nodo completo, l'intera rete Ethereum ne beneficia.
 
 ## Esecuzione di un nodo proprio {#running-your-own-node}
 
@@ -86,240 +118,169 @@ Vorresti eseguire il tuo client di Ethereum?
 
 Per un'introduzione per principianti, visita la nostra pagina [Eseguire un nodo](/run-a-node), per saperne di più.
 
-Se sei un utente più tecnico, scopri come [avviare il tuo nodo](/developers/docs/nodes-and-clients/run-a-node/) da riga di comando!
-
-### Progetti {#projects}
-
-**Seleziona un client e segui le istruzioni**
-
-**ethnode -** **_Eseguire un nodo di Ethereum (Geth o OpenEthereum) per lo sviluppo locale._**
-
-- [GitHub](https://github.com/vrde/ethnode)
-
-**DAppNode -** **_Una GUI del sistema operativo per eseguire i nodi Web3, incluso Ethereum e la beacon chain, su una macchina dedicata._**
-
-- [dappnode.io](https://dappnode.io)
-
-### Risorse {#resources}
-
-- [Eseguire nodi completi di Ethereum: una guida completa](https://www.coindesk.com/learn/ethereum-nodes-and-clients-a-complete-guide/)
-- [Eseguire il proprio nodo di Ethereum](/developers/docs/nodes-and-clients/run-a-node)
-- [Documentazione di Geth](https://geth.ethereum.org/)
-- [Come installare ed eseguire un nodo di Lighthouse](https://hackernoon.com/how-to-run-an-eth-20-beacon-node-using-the-lighthouse-macos-client-7t2u3wtv)
-- [Guida rapida ai nodi di Nimbus](https://nimbus.guide/quick-start.html)
+Se sei un utente più tecnico, approfondisci i dettagli e le opzioni su come [Avviare il tuo nodo](/developers/docs/nodes-and-clients/run-a-node/).
 
 ## Alternative {#alternatives}
 
-Eseguire un nodo può essere difficile e non sempre è necessario eseguire un'istanza propria. In questo caso, è possibile utilizzare un provider di API terzo, come [Infura](https://infura.io), [Alchemy](https://alchemyapi.io) o [QuikNode](https://www.quiknode.io). In alternativa, [ArchiveNode](https://archivenode.io/) è un nodo Archive finanziato dalla community che spera di portare i dati di archivio sulla blockchain Ethereum a sviluppatori indipendenti che altrimenti non potrebbero permetterselo. Per una panoramica sull'uso di questi servizi, dai un'occhiata ai [nodi come servizi](/developers/docs/nodes-and-clients/nodes-as-a-service/).
+Configurare un nodo può richiedere tempo e risorse e non sempre è necessario eseguire un'istanza propria. In questo caso, è possibile utilizzare un provider di API terzo, come [Infura](https://infura.io), [Alchemy](https://alchemyapi.io) o [QuikNode](https://www.quiknode.io). In alternativa, [ArchiveNode](https://archivenode.io/) è un nodo archivio finanziato dalla community che spera di portare i dati di archivio sulla blockchain Ethereum a sviluppatori indipendenti che altrimenti non potrebbero permetterselo. Per una panoramica sull'uso di questi servizi, dai un'occhiata a [nodi come servizi](/developers/docs/nodes-and-clients/nodes-as-a-service/).
 
-Se qualcuno esegue un nodo di Ethereum con un'API pubblica nella tua community, puoi puntare i tuoi portafogli leggeri (come MetaMask) su un nodo della community [tramite RPC Personalizzato](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) e ottenere maggiore privacy rispetto a quella offerta da terzi fidati casuali.
+Se qualcuno esegue un nodo di Ethereum con un'API pubblica nella tua community, puoi puntare i tuoi portafogli leggeri (come MetaMask) su un nodo della community [tramite RPC Personalizzato](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) e ottenere maggiore privacy rispetto a quella offerta da terze parti casuali di fiducia.
 
-D'altro canto, se esegui un client, puoi condividerlo con gli amici che potrebbero averne bisogno.
+D'altro canto, se esegui un client, puoi condividerlo con i amici che potrebbero averne bisogno.
 
 ## Client d'esecuzione (ex "client di Eth1") {#execution-clients}
 
-La community di Ethereum mantiene numerosi client d'esecuzione open source (precedentemente noti come "client di Eth1" o semplicemente "client di Ethereum"), sviluppati da diversi team usando diversi linguaggi di programmazione. Questo rende la rete più forte e diversificata. L'obiettivo ideale è ottenere una certa diversità senza che nessun client prevalga, per ridurre eventuali punti di errore singoli.
+La community di Ethereum mantiene numerosi client di esecuzione open source (precedentemente noti come 'client di Eth1' o semplicemente 'client di Ethereum'), sviluppati da diversi team usando diversi linguaggi di programmazione. Ciò rende la rete più forte e diversificata. L'obiettivo ideale è raggiungere la diversità senza che nessun client prevalga, così da ridurre eventuali punti di errore singoli.
 
-Questa tabella riepiloga i diversi client. Tutti superano i [test dei client](https://github.com/ethereum/tests) e vengono mantenuti attivamente per rimanere al passo con gli aggiornamenti di rete.
+Questa tabella riepiloga i diversi client in ordine alfabetico. Tutti sono mantenuti attivamente per rimanere al passo con gli aggiornamenti di rete, seguono le specifiche correnti e passano i [test del client](https://github.com/ethereum/tests).
 
-| Client                                          | Linguaggio | Sistemi operativi     | Reti                                             | Strategie di sincronizzazione | Cancellazione dello stato |
-| ----------------------------------------------- | ---------- | --------------------- | ------------------------------------------------ | ----------------------------- | ------------------------- |
-| [Geth](https://geth.ethereum.org/)              | Go         | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten                 | Snap, Full                    | Archive, Pruned           |
-| [Nethermind](http://nethermind.io/)             | C#, .NET   | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby e altre         | Fast, Beam, Archive           | Archive, Pruned           |
-| [Besu](https://besu.hyperledger.org/en/stable/) | Java       | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, e altre        | Fast, Full                    | Archive, Pruned           |
-| [Erigon](https://github.com/ledgerwatch/erigon) | Go         | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten                 | Full                          | Archive, Pruned           |
-| [Akula](https://akula.app)                      | Rust       | Linux                 | Rete principale, Görli, Rinkeby, Ropsten e altre | Completo                      | Archive, Pruned           |
-
-**Sottolineiamo che OpenEthereum [è ormai superato](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) e non viene più mantenuto.** Usalo con cautela e preferibilmente passa ad un'altra implementazione del client.
+| Client                                                   | Linguaggio | Sistemi operativi     | Reti                                      | Strategie di sincronizzazione              | Cancellazione dello stato |
+| -------------------------------------------------------- | ---------- | --------------------- | ----------------------------------------- | ------------------------------------------ | ------------------------- |
+| [Akula](https://akula.app)                               | Rust       | Linux                 | Mainnet, Görli, Rinkeby, Ropsten, e altre | Completa                                   | Archive, Pruned           |
+| [Besu](https://pegasys.tech/solutions/hyperledger-besu/) | Java       | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, e altre | Rapida, Completa, Snap, Punto di controllo | Archive, Pruned           |
+| [Erigon](https://github.com/ledgerwatch/erigon)          | Go         | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten          | Completa, Snap                             | Archive, Pruned           |
+| [Geth](https://geth.ethereum.org/)                       | Go         | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten          | Snap, Completa                             | Archive, Pruned           |
+| [Nethermind](http://nethermind.io/)                      | C#, .NET   | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby e altre  | Snap, Rapida                               | Archive, Pruned           |
 
 Per ulteriori informazioni sulle reti supportate, consulta [reti Ethereum](/developers/docs/networks/).
 
-### Vantaggi delle diverse implementazioni {#advantages-of-different-implementations}
+Ogni client ha vantaggi e casi d'uso unici, quindi è necessario sceglierne uno in base alle proprie preferenze. La diversità consente implementazioni in base alle diverse caratteristiche e al pubblico di utenti. È consigliabile scegliere un client in base a funzionalità, supporto, linguaggio di programmazione o licenze.
 
-Ogni client ha vantaggi e casi d'uso differenti, quindi, è necessario sceglierne uno in base alle proprie preferenze. La diversità consente implementazioni in base alle diverse caratteristiche e al pubblico di utenti. È consigliabile scegliere un client in base a funzionalità, supporto, linguaggio di programmazione o licenze.
+### Besu {#besu}
 
-#### Go Ethereum {#geth}
+Hyperledger Besu è un client Ethereum di livello enterprise per reti pubbliche e autorizzate. Esegue tutte le funzionalità della Rete principale di Ethereum, dal monitoraggio a GraphQL, ha un monitoraggio avanzato ed è supportato da ConsensSys, entrambi in canali aperti della community e tramite SLA commerciali per le imprese. È scritto in Java con licenza Apache 2.0.
+
+L'ampia [documentazione](https://besu.hyperledger.org/en/stable/) di Besu ti guiderà per tutti i dettagli sulle sue funzionalità e configurazioni.
+
+### Erigon {#erigon}
+
+Erigon, precedentemente noto come Turbo-Geth, è nato come una diramazione di Go Ethereum orientata alla velocità e all'efficienza dello spazio su disco. Erigon è un'implementazione completamente riprogettata di Ethereum, correntemente scritta in Go, ma con implementazioni in altri linguaggi in via di sviluppo, ad es. [Akula](https://medium.com/@vorot93/meet-akula-the-fastest-ethereum-implementation-ever-built-58eaca244c39). L'obiettivo di Erigon è fornire un'implementazione più veloce, modulare e ottimizzata di Ethereum. Può eseguire una sincronizzazione completa del nodo archivio usando circa 2TB di spazio su disco, in meno di 3 giorni.
+
+### Go Ethereum {#geth}
 
 Go Ethereum (abbreviato Geth) è una delle implementazioni originali del protocollo Ethereum. Attualmente, è il client più diffuso con la più grande base di utenti e varietà di strumenti per utenti e sviluppatori. È scritto in Go, completamente open source e concesso in licenza con GNU LGPL v3.
 
-#### OpenEthereum {#openethereum}
+Scopri di più su Geth nella sua [documentazione](https://geth.ethereum.org/docs/).
 
-OpenEthereum è un client Ethereum veloce, ricco di funzionalità e avanzato basato su CLI. È creato per fornire l'infrastruttura essenziale per servizi veloci e affidabili che richiedono una sincronizzazione rapida e tempi di attività massimi. L'obiettivo di OpenEthereum è quello di essere il client Ethereum più veloce, leggero e sicuro. Offre una base di codice pulita e modulare per:
+### Nethermind {#nethermind}
 
-- personalizzazione facile.
-- integrazione leggera in servizi o prodotti.
-- necessità minime di memoria e archiviazione.
-
-OpenEthereum è sviluppato utilizzando l'innovativo linguaggio di programmazione Rust e concesso in licenza con GPLv3.
-
-**Sottolineiamo che OpenEthereum [è ormai superato](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) e non viene più mantenuto.** Usalo con cautela e preferibilmente passa ad un'altra implementazione del client.
-
-#### Nethermind {#nethermind}
-
-Nethermind è un'implementazione di Ethereum creata con lo stack di tecnologie C # .NET, funziona su tutte le principali piattaforme, inclusa ARM. Offre prestazioni eccellenti con:
+Nethermind è un'implementazione di Ethereum creata con lo stack tecnologico C # .NET, concessa in licenza con LGPL-3.0, in esecuzione su tutte le principali piattaforme, incluso ARM. Offre prestazioni eccellenti con:
 
 - una macchina virtuale ottimizzata
 - accesso allo stato
 - networking e funzionalità avanzate come dashboard Prometheus/Graphana, supporto per la registrazione aziendale seq, tracciamento RPC JSON e plug-in di analisi.
 
-Inoltre, Nethermind vanta una [documentazione dettagliata](https://docs.nethermind.io), un efficace supporto per gli sviluppatori, una community online e un supporto disponibile 7 giorni su 7, 24 ore al giorno per gli utenti premium.
+Inoltre, Nethermind vanta una [documentazione dettagliata](https://docs.nethermind.io), un efficace supporto per gli sviluppatori, una community online e un supporto disponibile 24 ore al giorno, 7 giorni su 7 per gli utenti premium.
 
-#### Besu {#besu}
+## Client di consenso (ex client di "Eth2") {#consensus-clients}
 
-Hyperledger Besu è un client Ethereum di livello enterprise per reti pubbliche e autorizzate. Esegue tutte le funzionalità della rete principale di Ethereum, dal monitoraggio a GraphQL, ha un monitoraggio avanzato ed è supportato da ConsensSys, entrambi in canali aperti della community e tramite SLA commerciali per le imprese. È scritto in Java con licenza Apache 2.0.
+Esistono diversi client di consenso (precedentemente noti come client di 'Eth2') per supportare gli [aggiornamenti di consenso](/upgrades/beacon-chain/). Eseguono la Beacon Chain e forniranno il meccanismo di consenso Proof of Stake ai client di esecuzione, dopo [La Fusione](/upgrades/merge/).
 
-#### Erigon {#erigon}
+[Visualizza i client di consenso](/upgrades/get-involved/#clients).
 
-Erigon, precedentemente noto come Turbo-Geth, è una biforcazione di Go Ethereum orientata alla velocità e all'efficienza dello spazio su disco. Erigon è un'implementazione completamente rivista di Ethereum, attualmente scritta in Go ma con la previsione di lanciare implementazioni in altri linguaggi. L'obiettivo di Erigon è fornire un'implementazione più veloce, popolare e ottimizzata di Ethereum. Può eseguire una sincronizzazione completa del nodo d'archivio usando meno di 2TB di spazio su disco, in meno di 3 giorni
+| Client                                                        | Lingua     | Sistemi operativi     | Reti                                  |
+| ------------------------------------------------------------- | ---------- | --------------------- | ------------------------------------- |
+| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Beacon Chain, Goerli, Pyrmont         |
+| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Beacon Chain, Goerli                  |
+| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Goerli                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Pyrmont |
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Sepolia |
 
-### Modalità di sincronizzazione {#sync-modes}
+### Lighthouse {#lighthouse}
 
-Per seguire e verificare i dati correnti nella rete, il client di Ethereum deve essere sincronizzato con l'ultimo stato della rete. Questo è fatto scaricando i dati dai peer, verificando crittograficamente la loro integrità e costruendo un database locale della blockchain.
+Lighthouse è un'implementazione del client di consenso scritta in Rust sotto la licenza Apache-2.0. È mantenuta da Sigma Prime ed è stabile e pronta alla produzione sin dalla genesi della Beacon Chain. È affidata a varie imprese, pool di staking e singoli individui. Mira a esser sicura, performante e interoperabile in una vasta gamma di ambienti, da PC desktop a distribuzioni automatizzate sofisticate.
 
-Le modalità di sincronizzazione rappresentano diversi approcci a questo processo con vari compromessi. I client variano anche nella loro implementazione degli algoritmi di sincronizzazione. Occorre fare sempre riferimento alla documentazione ufficiale del client scelto per le specifiche sull'implementazione.
+La documentazione è consultabile nel [Libro su Lighthouse](https://lighthouse-book.sigmaprime.io/).
 
-#### Panoramica delle strategie {#overview-of-strategies}
+### Lodestar {#lodestar}
 
-Panoramica generale degli approcci di sincronizzazione usati nei client pronti della rete principale:
+Lodestar è un'implementazione del client di consenso pronta alla produzione, scritta in Typescript sotto la licenza LGPL-3.0. È mantenuta da ChainSafe Systems ed è il più nuovo dei client di consenso per gli staker in autonomia, gli sviluppatori e i ricercatori. Lodestar consiste in un nodo beacon e un client del validatore, alimentato dalle implementazioni in JavaScript dei protocolli di Ethereum. Lodestar mira a migliorare l'utilizzabilità di Ethereum con client leggeri, espandere l'accessibilità a un gruppo più ampio di sviluppatori e contribuire ulteriormente alla diversità dell'ecosistema.
 
-##### Sincronizzazione completa
+Maggiori informazioni si possono trovare sul nostro [sito web di Lodestar](https://lodestar.chainsafe.io/)
 
-La sincronizzazione completa scarica tutti i blocchi (incluse intestazioni, transazioni e ricevute) e genera lo stato della blockchain in modo incrementale eseguendo ogni blocco a partire dalla genesi.
+### Nimbus {#nimbus}
 
-- Riduce al minimo la fiducia e offre la massima sicurezza verificando ogni transazione.
+Nimbus è un'implementazione del client di consenso scritta in Nim sotto la licenza Apache-2.0. È un client pronto alla produzione in uso dagli staker in autonomia e dai pool di staking. Nimbus è progettato per l'efficienza delle risorse, rendendo facile l'esecuzione sui dispositivi con risorse limitate e le infrastrutture aziendali con uguale facilità, senza compromettere la stabilità o ricompensare le prestazioni. Un'impronta di risorse più leggera fa sì che il client abbia un maggiore margine di sicurezza quando la rete è sotto stress.
+
+La documentazione è consulatbile nella [Guida di Nimbus](https://nimbus.guide/).
+
+### Prysm {#prysm}
+
+Prysm è un client di consenso completo e open source scritto in Go sotto la licenza GPL-3.0. Dispone di un'UI webapp facoltativa e da' priorità all'esperienza dell'utente, alla documentazione e alla configurabilità sia per gli utenti di staking domestico che per quelli istituzionali.
+
+Visita la [documentazione di Prysm](https://docs.prylabs.network/docs/getting-started/) per maggiori informazioni.
+
+### Teku {#teku}
+
+Teku è uno dei client originali della genesi della Beacon Chain. Insieme ai soliti obiettivi (sicurezza, robustezza, stabilità, utilizzabilità, prestazioni), Teku mira specificamente a conformarsi completamente a tutti i vari standard dei client di consenso.
+
+Teku offre opzioni di sviluppo molto flessibili. Il nodo beacon e il client del validatore possono operare insieme come un singolo processo, il che è estremamente conveniente per gli staker in autonomia, o i nodi possono operare separatamente per le operazioni di staking sofisticate. Inoltre, Teku è completamente interoperabile con [Web3Signer](https://github.com/ConsenSys/web3signer/) per firmare la sicurezza della chiave e la protezione dallo slashing.
+
+Teku è scritto in Java ed è sotto licenza Apache 2.0. È sviluppato dal team Protocols di ConsenSys, responsabile anche di Besu e Web3Signer. Scopri di più nella [documentazione di Teku](https://docs.teku.consensys.net/en/latest/).
+
+## Modalità di sincronizzazione {#sync-modes}
+
+Per seguire e verificare i dati correnti nella rete, il client di Ethereum deve essere sincronizzato con l'ultimo stato della rete. Ciò ha luogo scaricando i dati dai pari, verificando crittograficamente la loro integrità e costruendo un database locale della blockchain.
+
+Le modalità di sincronizzazione rappresentano diversi approcci a questo processo con vari compromessi. I client variano anche nella loro implementazione degli algoritmi di sincronizzazione. Fai sempre riferimento alla documentazione ufficiale del tuo client scelto per le specifiche sull'implementazione.
+
+### Modalità di sincronizzazione del livello di esecuzione {#execution-layer-sync-modes}
+
+#### Sincronizzazione completa {#full-sync}
+
+La sincronizzazione completa scarica tutti i blocchi (incluse intestazioni, transazioni e ricevute) e genera lo stato della blockchain in modo incrementale eseguendo ogni blocco dalla genesi.
+
+- Minimizza la fiducia e offre la massima sicurezza verificando ogni transazione.
 - Al crescere del numero di transazioni, possono volerci giorni o persino settimane per elaborare tutte le transazioni.
 
-##### Sincronizzazione rapida
+#### Sincronizzazione rapida {#fast-sync}
 
 La sincronizzazione rapida scarica tutti blocchi (incluse intestazioni, transazioni e ricevute), verifica tutte le intestazioni, scarica lo stato e lo verifica rispetto alle intestazioni.
 
-- Si basa sulla sicurezza del meccanismo del consenso.
+- Si basa sulla sicurezza del meccanismo di consenso.
 - La sincronizzazione impiega solo qualche ora.
 
-##### Sincronizzazione leggera
+#### Sincronizzazione leggera {#light-sync}
 
-La modalità client leggero scarica tutte le intestazioni e i dati del blocco e ne verifica casualmente alcuni. Sincronizza solo la punta della catena dal checkpoint attendibile.
+La modalità leggera del client scarica tutte le intestazioni e i dati del blocco e ne verifica alcuni casualmente. Sincronizza solo la punta della catena dal checkpoint attendibile.
 
-- Ottiene solo l'ultimo stato basandosi sulla fiducia negli sviluppatori e nel meccanismo del consenso.
+- Ottiene solo l'ultimo stato basandosi sulla fiducia negli sviluppatori e nel meccanismo di consenso.
 - Client pronto all'uso con lo stato di rete corrente in pochi minuti.
 
 [Maggiori informazioni sui client leggeri](https://www.parity.io/blog/what-is-a-light-client/)
 
-##### Sincronizzazione Snap
+#### Sincronizzazione snap {#snap-sync}
 
-Implementata da Geth. Usando le istantanee dinamiche servite dai peer recupera tutti i dati di conti e archiviazione senza scaricare nodi trie intermedi e ricostruisce localmente il Merkle trie.
+La sincronizzazione snap è l'ultimo approccio per sincronizzare un client, sperimentato dal team di Geth. Usando le istantanee dinamiche fornite dai pari, recupera tutti i dati di account e archivi senza scaricare nodi trie intermedi e ricostruisce localmente il Merkle trie.
 
-- Strategia di sincronizzazione più veloce sviluppata da Geth, attualmente è quella sua predefinita
-- Risparmia molto spazio su disco e larghezza di banda di rete senza sacrificare la sicurezza.
+- È la strategia di sincronizzazione più veloce, attualmente quella predefinita nella rete principale di Ethereum
+- Risparmia molto spazio su disco e larghezza di banda di rete senza sacrificare la sicurezza
 
-[Maggiori informazioni su Snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
+[Maggiori informazioni sulla sincronizzazione snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
 
-##### Sincronizzazione Warp
+### Modalità di sincronizzazione del livello di consenso {#consensus-layer-sync-modes}
 
-Implementata da OpenEthereum. I nodi generano regolarmente un'istantanea di stato critica del consenso e ogni peer può recuperare queste istantanee sulla rete, consentendo una veloce sincronizzazione da questo punto.
+#### Sincronizzazione ottimistica {#optimistic-sync}
 
-- Modalità di sincronizzazione più veloce e predefinita di OpenEthereum, basata sulle istantanee statiche fornite dai peer.
-- Strategia simile alla sincronizzazione snap ma senza certi vantaggi sotto il profilo della sicurezza.
+La sincronizzazione ottimistica è una strategia di sincronizzazione successiva alla Fusione, progettata per essere ad accettazione e retrocompatibile, consentendo ai nodi di esecuzione di sincronizzarsi tramite metodi stabiliti. Il motore di esecuzione può importare _ottimisticamente_ i blocchi beacon senza verificarli completamente, trovare l'ultima testa e, poi, avviare la sincronizzazione della catena coi suddetti metodi. Poi, dopo essersi rimesso in pari, il client di esecuzione informerà il client di consenso della validità delle transazioni nella Beacon Chain.
 
-[Maggiori informazioni su Warp](https://openethereum.github.io/Beginner-Introduction#warping---no-warp)
+[Maggiori informazioni sulla sincronizzazione ottimistica](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
 
-##### Sincronizzazione Beam
+#### Sincronizzazione del punto di controllo {#checkpoint-sync}
 
-Implementata da Nethermind e Trinity. Funziona come una sincronizzazione rapida ma scarica anche i dati necessari per eseguire gli ultimi blocchi, consentendo di interrogare la catena già nei primi minuti dall'inizio.
+La sincronizzazione del punto di controllo, anche nota come sincronizzazione a soggettività debole, crea un'esperienza utente superiore per la sincronizzazione del Nodo Beacon. Si basa sulle ipotesi di [soggettività debole](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) che consentono di sincronizzare la Beacon Chain da un punto di controllo a soggettività debole recente invece che dalla genesi. La sincronizzazione del punto di controllo rende significativamente più breve il tempo di sincronizzazione iniziale, con ipotesi di fiducia simili a quelli della sincronizzazione dalla [genesi](/glossary/#genesis-block).
 
-- Sincronizza innanzitutto lo stato e consente di effettuare interrogazioni RPC in pochi minuti.
-- Ancora in sviluppo e non totalmente affidabile, la sincronizzazione in background è rallentata e le risposte RPC potrebbero non andare a buon fine.
+In pratica, ciò significa che il tuo nodo si connette a un servizio remoto per scaricare gli stati finalizzati di recente e continua a verificare i dati da quel punto. Le terze parti che forniscono i dati sono affidabili e dovrebbero essere selezionate attentamente.
 
-[Maggiori informazioni su Beam](https://medium.com/@jason.carver/intro-to-beam-sync-a0fd168be14a)
-
-#### Configurazione nel client {#client-setup}
-
-I client offrono ricche opzioni di configurazione per soddisfare i tuoi bisogni. Seleziona la più adatta in base al livello di sicurezza, ai dati disponibili e ai costi. Oltre all'algoritmo di sincronizzazione, puoi anche impostare la potatura (pruning) di vari tipi di dati ormai datati. La potatura consente l'eliminazione di dati obsoleti, ad es. la rimozione i nodi di trie di stato irraggiungibili dai blocchi recenti.
-
-Presta attenzione alla documentazione del client o alla pagina di supporto per scoprire quale modalità di sincronizzazione è quella predefinita. Puoi definire il tipo di sincronizzazione preferita durante la configurazione, come segue:
-
-**Configurare la sincronizzazione leggera (light) su [GETH](https://geth.ethereum.org/) o [ERIGON](https://github.com/ledgerwatch/erigon)**
-
-`geth --syncmode "light"`
-
-Per ulteriori dettagli, dai un'occhiata al tutorial sull'[esecuzione del nodo leggero (light) di Geth](/developers/tutorials/run-light-node-geth/).
-
-**Configurare la sincronizzazione completa con archivio su [Besu](https://besu.hyperledger.org/)**
-
-`besu --sync-mode=FULL`
-
-Come ogni altra configurazione, è definibile con il flag d'avvio o nel file di configurazione. Un altro esempio è [Nethermind](https://docs.nethermind.io/nethermind/), che richiede di scegliere una configurazione durante la prima inizializzazione e crea un file di configurazione.
-
-## Client di consenso (ex client di "Eth2") {#consensus-clients}
-
-Esistono diversi client di consenso (precedentemente noti come client di "Eth2") per supportare gli [aggiornamenti di consenso](/upgrades/beacon-chain/). Eseguono la Beacon Chain e forniranno il meccanismo di consenso di proof-of-stake ai client d'esecuzione dopo [La Fusione](/upgrades/merge/).
-
-[Visualizza i client di consenso](/upgrades/get-involved/#clients).
-
-| Client                                                      | Lingua     | Sistemi operativi     | Reti                                  |
-| ----------------------------------------------------------- | ---------- | --------------------- | ------------------------------------- |
-| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | Beacon Chain, Prater                  |
-| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Beacon Chain, Prater                  |
-| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Beacon Chain, Prater, Pyrmont         |
-| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Beacon Chain, Prater                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Prater, Pyrmont |
-
-## Hardware {#hardware}
-
-I requisiti hardware differiscono in base al client, ma in genere non sono così elevati dal momento che il nodo deve solo rimanere sincronizzato. Non bisogna confondersi con il mining, che invece richiede molta più potenza di calcolo. Il tempo di sincronizzazione e le prestazioni naturalmente migliorano con hardware più potente. A seconda delle esigenze e dei desideri, Ethereum può essere eseguita sul proprio computer, su un server domestico, un computer a scheda singola o su server privati virtuali nel cloud.
-
-Un modo semplice per eseguire un nodo è utilizzare soluzioni 'plug and play' come [DAppNode](https://dappnode.io/), che fornisce hardware per l'esecuzione di client e applicazioni, con un'interfaccia utente semplice.
-
-### Requisiti {#requirements}
-
-Prima di installare qualsiasi client, assicurati che il tuo computer abbia abbastanza risorse per eseguirlo. I requisiti minimi e raccomandati sono indicati di seguito, ma la parte più importante è lo spazio su disco. Sincronizzare la blockchain Ethereum richiede molte risorse in ingresso/uscita. La cosa migliore è avere un disco a stato solido (SSD). Per eseguire un client Ethereum su HDD, servono almeno 8 GB di RAM da usare come cache.
-
-#### Requisiti minimi {#recommended-specifications}
-
-- CPU con 2+ core
-- Minimo 4 GB di RAM con un SSD, 8 GB+ se si dispone di un HDD
-- Larghezza banda 8 MBit/s
-
-#### Specifiche raccomandate {#recommended-specifications}
-
-- CPU veloce con 4+ core
-- 16 GB+ RAM
-- SSD veloce con almeno 500 GB di spazio libero
-- Larghezza di banda 25+ MBit/s
-
-La modalità di sincronizzazione che scegli influenzerà i requisiti di spazio, ma sotto trovi una nostra stima dello spazio su disco che ti servirà per ogni client.
-
-| Client       | Dimensione disco (sincronizzazione veloce) | Dimensione disco (archivio completo) |
-| ------------ | ------------------------------------------ | ------------------------------------ |
-| Geth         | 400GB+                                     | 6TB+                                 |
-| OpenEthereum | 280GB+                                     | 6TB+                                 |
-| Nethermind   | 200GB+                                     | 5TB+                                 |
-| Besu         | 750GB+                                     | 5TB+                                 |
-| Erigon       | N/A                                        | 1TB+                                 |
-
-- Nota: Erigon non esegue la sincronizzazione veloce, ma è possibile la potatura completa (circa 500GB)
-
-![Grafico che mostra come aumentano i GB necessari per una sincronizzazione completa](./full-sync.png)
-
-![Grafico che mostra come aumentano i GB necessari per una sincronizzazione di archivio](./archive-sync.png)
-
-Da questi grafici si capisce che i requisiti di memoria cambiano in continuazione. Per i dati più aggiornati per Geth e OpenEthereum, vedi i [dati della sincronizzazione completa](https://etherscan.io/chartsync/chaindefault) e i [dati della sincronizzazione di archivio](https://etherscan.io/chartsync/chainarchive).
-
-### Ethereum su un computer a scheda singola {#ethereum-on-a-single-board-computer}
-
-Il modo più conveniente ed economico di eseguire un nodo Ethereum è quello di utilizzare un computer a scheda singola con architettura ARM come Raspberry Pi. [Ethereum su ARM](https://twitter.com/EthereumOnARM) mette a disposizione immagini dei client di Geth, OpenEthereum, Nethermind, e Besu. Ecco un semplice tutorial che spiega [come realizzare e configurare un client ARM](/developers/tutorials/run-node-raspberry-pi/).
-
-Dispositivi di piccole dimensioni, convenienti ed efficienti come questi sono ideali per eseguire un nodo a casa.
+Maggiori informazioni sulla [sincronizzazione del punto di controllo](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)
 
 ## Letture consigliate {#further-reading}
 
 Su internet si trovano molte informazioni sui client Ethereum. Ecco alcune risorse che potrebbero essere utili.
 
-- [Ethereum 101 - Parte 2 - Comprendere i nodi](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13 febbraio 2019_
-- [Eseguire nodi completi di Ethereum: una guida per i poco motivati](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 Novembre 2019_
-- [Eseguire un nodo di Ethereum](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub, aggiornato spesso_
-- [Analizzare i requisiti hardware per poter essere un nodo convalidato e completo di Ethereum](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 settembre 2018_
-- [Eseguire un nodo di Hyperledger Besu sulla rete principale di Ethereum: benefici, requisiti e configurazione](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 Maggio 2020_
+- [Ethereum 101 - Part 2 - Understanding Nodes](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13 February 2019_
+- [Running Ethereum Full Nodes: A Guide for the Barely Motivated](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 November 2019_
+- [Running an Ethereum Node](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub, updated often_
 
 ## Argomenti correlati {#related-topics}
 
@@ -328,5 +289,5 @@ Su internet si trovano molte informazioni sui client Ethereum. Ecco alcune risor
 
 ## Tutorial correlati {#related-tutorials}
 
-- [Eseguire un nodo con Geth](/developers/tutorials/run-light-node-geth/) _– Come scaricare, installare ed eseguire Geth. Si parla di modalità di sincronizzazione, console JavaScript e altro._
-- [Trasforma il tuo Raspberry Pi 4 in un nodo validatore semplicemente eseguendo il flash della scheda MicroSD - Guida d'installazione](/developers/tutorials/run-node-raspberry-pi/) _ - Esegui il flash del tuo Raspberry Pi 4, collega un cavo Ethernet, connetti il disco SSD e alimenta il dispositivo per trasformare il Raspberry Pi 4 in un nodo completo di Ethereum eseguendo il livello d'esecuzione (rete principale) e/o il livello di consenso (Beacon Chain / validatore)._
+- [Running a Node with Geth](/developers/tutorials/run-light-node-geth/) _– Come scaricare, installare ed eseguire Geth. Si parla di modalità di sincronizzazione, console JavaScript e altro._
+- [Trasforma il tuo Raspberry Pi 4 in un nodo validatore semplicemente eseguendo il flash della scheda MicroSD - Guida d'installazione](/developers/tutorials/run-node-raspberry-pi/) _ - Esegui il flash del tuo Raspberry Pi 4, collega un cavo Ethernet, connetti il disco SSD e alimenta il dispositivo per trasformare il Raspberry Pi 4 in un nodo completo di Ethereum eseguendo il livello di esecuzione (Rete principale) e/o il livello di consenso (Beacon Chain / validatore)._

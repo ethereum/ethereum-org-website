@@ -2,7 +2,6 @@
 title: Glosar Ethereum
 description: Un glosar incomplet de termeni tehnici și netehnici referitori la Ethereum
 lang: ro
-sidebar: true
 sidebarDepth: 2
 ---
 

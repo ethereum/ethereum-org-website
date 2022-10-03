@@ -2,7 +2,6 @@
 title: Upravljanje Ethereuma
 description: Uvod v odločevalski proces Ethereuma.
 lang: sl
-sidebar: true
 ---
 
 # Uvod v upravljanje Ethereuma {#introduction}

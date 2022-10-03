@@ -2,7 +2,6 @@
 title: Lanțuri paralele
 description: O introducere despre lanțurile paralele ca soluție de scalare utilizată actualmente de comunitatea Ethereum.
 lang: ro
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---

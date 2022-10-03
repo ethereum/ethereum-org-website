@@ -1,7 +1,6 @@
 ---
 title: Hoe kan ik meedoen?
 description: Hoe meedoen aan de Ethereum-gemeenschap.
-sidebar: true
 lang: nl
 ---
 

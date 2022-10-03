@@ -2,7 +2,6 @@
 title: ERC-4626 Tokenized Vault Standard
 description: A standard for yield bearing vaults.
 lang: en
-sidebar: true
 ---
 
 ## Introduction {#introduction}

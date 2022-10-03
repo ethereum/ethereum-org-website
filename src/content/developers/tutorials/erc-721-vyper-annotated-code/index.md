@@ -3,7 +3,6 @@ title: "Vyper ERC-721 Contract Walkthrough"
 description: Ryuya Nakamura's ERC-721 contract and how it works
 author: Ori Pomerantz
 lang: en
-sidebar: true
 tags: ["vyper", "erc-721", "python"]
 skill: beginner
 published: 2021-04-01

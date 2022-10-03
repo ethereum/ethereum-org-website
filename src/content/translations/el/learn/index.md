@@ -1,7 +1,6 @@
 ---
 title: Μάθηση
 lang: el
-sidebar: true
 ---
 
 # Μάθετε για το Ethereum {#learn-about-ethereum}

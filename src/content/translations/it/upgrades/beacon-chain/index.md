@@ -3,66 +3,73 @@ title: La Beacon Chain
 description: Informati rigurado alla Beacon Chain - l'aggiornamento che ha introdotto la prova-di-interesse Ethereum.
 lang: it
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: La Beacon Chain non apporta modifiche all'Ethereum che stiamo utilizzando.
-summaryPoint2: Coordinerebbe il network, fungendo da livello di consenso.
-summaryPoint3: Ha introdotto Proof of Stake nell'ecosistema Ethereum.
-summaryPoint4: Potresti conoscere questa come "Fase 0" sulle roadmap tecniche.
+summaryPoint2: Ha introdotto Proof of Stake nell'ecosistema Ethereum.
+summaryPoint3: Nel 2022, è stata fusa con la catena di Proof of Work originale di Ethereum.
+summaryPoint4: La logica del consenso e il protocollo di gossip del blocco introdotti dalla Beacon Chain, proteggono ora Ethereum.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
-    La Beacon Chain è stata resa disponibile il 1° dicembre 2020 a mezzogiorno (UTC). Per saperne di più, <a href="https://beaconscan.com/">esplora i dati</a>. Se vuoi contribuire a convalidare la chain, puoi <a href="/staking/">"puntare" i tuoi ETH</a>.
+  La Beacon Chain è stata resa disponibile il 1° dicembre 2020. All'epoca, era una catena separata dalla Rete principale di Ethereum. Eseguiva il Poof of stake, ma non gestiva alcuna transazione. La Beacon Chain è stata fusa con la Rete principale originale di Ethereum nel 2022 per acquisire la logica di consenso e la propagazione dei blocchi per Ethereum. A partire dalla Fusione, esiste una sola catena di Ethereum.
 </UpgradeStatus>
 
-## Cosa fa la beacon chain? {#what-does-the-beacon-chain-do}
+## Cos'era la Beacon Chain? {#what-is-the-beacon-chain}
 
-La Beacon Chain condurrà o coordinerà la rete ampliata di [shard](/upgrades/sharding/) e [staker](/staking/). Ma non sarà come l'attuale [Rete principale di Ethereum](/glossary/#mainnet). Non è in grado di gestire gli account o gli Smart Contracts.
+La Beacon Chain era il nome della blockchain di Proof of stake originale, lanciata nel 2020. Fu creata per assicurare che la logica di consenso di Proof of stake fosse stabile e sostenibile prima di abilitarla sulla Rete principale di Ethereum. Di conseguenza, era eseguita insieme all'Ethereum Proof of Work originale. La disattivazione del Proof of Work e l'attivazione del Proof of stake su Ethereum ha richiesto di istruire la Beacon Chain ad accettare le transazioni dalla catena Ethereum originale, a raggrupparle in blocchi e organizzarle in una blockchain usando il meccanismo di consenso basato sul Proof of stake. Allo stesso momento, i client originali di Ethereum hanno disattivato il proprio mining, la propagazione dei blocchi e la logica di consenso, passando tutti questi aspetti alla Beacon Chain. Questo evento è noto come [La Fusione](/upgrades/merge/). Una volta verificatasi La Fusione, non esistevano più due blockchain; era stata creata un'unica catena Proof of stake di di Ethereum.
 
-Il ruolo della beacon chain cambierà con il passare del tempo ma è una componente fondamentale per [la sicurezza, la sostenibilità e la scalabilità di Ethereum che stiamo cercando di raggiungere](/upgrades/vision/).
+## Cosa faceva la Beacon Chain? {#what-does-the-beacon-chain-do}
 
-## Caratteristiche della beacon chain {#beacon-chain-features}
+La Beacon Chain era il nome dato a un registro degli account che conducevano e coordinavano la rete di [staker](/staking/) di Ethereum, prima che questi iniziassero a convalidare transazioni reali di Ethereum. Non elaborava le transazioni né gestiva le interazioni tra smart contract.
+
+Ha introdotto il motore di consenso (o "livello di consenso") che ha preso il posto del mining di Proof of Work su Ethereum, apportando con esso molti miglioramenti significativi.
+
+La Beacon Chain è stata un componente fondamentale per [l'Ethereum sicura, ecosostenibile e scalabile che conosciamo ora](/upgrades/vision/).
+
+## Impatto della Beacon Chain {#beacon-chain-features}
 
 ### Introduzione allo staking {#introducing-staking}
 
-La beacon chain introdurrà la [proof of stake](/developers/docs/consensus-mechanisms/pos/) in Ethereum. È un modo innovativo per contribuire a garantire la sicurezza di Ethereum. Può essere considerata un bene pubblico che renderà Ethereum più sana e allo stesso tempo farà guadagnare più ETH. In pratica, occorrerà fare staking con ETH per attivare il software di convalida. Come validatore, elaborerai transazioni e creerai nuovi blocchi nella catena.
+La Beacon Chain ha introdotto la [Proof of stake](/developers/docs/consensus-mechanisms/pos/) in Ethereum. Questo mantiene sicura Ethereum e consente ai validatori di guadagnare più ETH nel processo. In pratica, lo staking prevede di puntare ETH per poter attivare il software del validatore. Come staker, esegui il software che crea e convalida i nuovi blocchi nella catena.
 
-Fare staking e diventare validatore è più facile che [fare mining](/developers/docs/mining/) (cioè il metodo attuale di protezione della rete). E si spera che questo aiuti ad aumentare la sicurezza di Ethereum a lungo termine. Più persone parteciperanno alla rete, più questa sarà decentralizzata e protetta dagli attacchi.
+Lo staking serve a uno scopo simile a quello del [mining](/developers/docs/mining/), ma è differente in molti modi. Il mining richiedeva ingenti spese iniziali sotto forma di hardware potente e consumi energetici, risultando in economie di scala e promuovendo la centralizzazione. Il mining, inoltre, non prevedeva alcun requisito di bloccare le risorse come garanzie, limitando la capacità del protocollo di punire gli utenti malevoli dopo un attacco.
+
+La transizione al Proof of stake ha reso Ethereum significativamente più sicura e decentralizzata rispetto al Proof of Work. Più persone parteciperanno alla rete, più questa diventerà decentralizzata e protetta dagli attacchi.
 
 <InfoBanner emoji=":money_bag:">
-Se sei interessato a diventare un validatore e ad contribuire a proteggere la beacon chain, <a href="/staking/">scopri di più sullo staking</a>.
+  Se sei interessato a diventare un validatore e contribuire a proteggere Ethereum, <a href="/staking/">scopri di più sullo staking</a>.
 </InfoBanner>
 
-È anche un importante cambiamento per un altro aggiornamento: [shard chains](/upgrades/sharding/).
+### Prepararsi allo sharding {#setting-up-for-sharding}
 
-### Prepararsi alle shard chain {#setting-up-for-shard-chains}
+Da quando la Beacon Chain si è fusa con la Rete principale originale di Ethereum, la community di Ethereum ha iniziato a cercare di ridimensionare la rete.
 
-Dopo la fusione della rete principale con la beacon chain, il prossimo aggiornamento introdurrà le shard chain nella rete proof of stake. Questi "shard" ("frammenti" in italiano) miglioreranno la capacità della rete e la velocità delle transazioni, estendendo la rete a 64 blockchain. La beacon chain è un primo passo importante per l'introduzione delle shard chain, perché queste richiedono lo staking per funzionare in modo sicuro.
+La Proof of stake ha il vantaggio di avere un registro di tutti i produttori di blocchi approvati in ogni momento, ognuno con ETH in staking. Questo registro getta le basi per la capacità di dividere e conquistare, ma ripartisce in modo affidabile le specifiche responsabilità della rete.
 
-Alla fine la beacon chain sarà anche responsabile dell'assegnazione casuale degli staker per la convalida delle shard chain. Ciò è fondamentale per complicare la vita agli staker che tentano di cospirare per prendere il controllo di uno shard. Per essere più precisi, significa che avranno [meno di una possibilità su un trilione](https://medium.com/@chihchengliang/minimum-committee-size-explained-67047111fa20).
+Questa responsabilità è in contrasto con il Poof of Work, in cui i miner non hanno obblighi verso la rete e potrebbero interrompere il mining e disattivare permanentemente il loro software del nodo in un istante, senza ripercussioni. Inoltre, non esiste alcun registro di propositori di blocchi noti e nessun modo affidabile per ripartire le responsabilità della rete in modo sicuro.
+
+[Scopri di più sullo sharding](/upgrades/sharding/)
 
 ## Relazione tra gli aggiornamenti {#relationship-between-upgrades}
 
-Gli aggiornamenti Ethereum sono tutti abbastanza interconnessi. Quindi ricapitoliamo per vedere come la beacon chain incide sugli altri aggiornamenti.
+Gli aggiornamenti di Ethereum sono tutti in qualche modo interconnessi. Quindi ricapitoliamo per vedere come la beacon chain incide sugli altri aggiornamenti.
 
-### La rete principale e la beacon chain {#mainnet-and-beacon-chain}
+### Beacon Chain e La Fusione {#merge-and-beacon-chain}
 
-In un primo momento la beacon chain godrà di vita separata rispetto all'attuale rete principale di Ethereum. A un certo punto però le due realtà verranno collegate. L'intenzione è quella di "incorporare" la rete principale nel sistema proof of stake controllato e coordinato dalla beacon chain.
+Inizialmente la Beacon Chain esisteva separatamente dalla Rete principale di Ethereum, ma le due sono state fuse nel 2022.
 
 <ButtonLink to="/upgrades/merge/">
-    La fusione
+  La fusione
 </ButtonLink>
 
 ### Shard chain e beacon chain {#shards-and-beacon-chain}
 
-Le shard chain potranno entrare in modo sicuro nell'ecosistema Ethereum solo quando sarà presente un meccanismo di consenso proof of stake. La beacon chain introdurrà lo staking, aprendo la strada al successivo upgrade basato sulla shard chain.
+Lo sharding potrà entrare in modo sicuro nell'ecosistema Ethereum solo quando sarà presente un meccanismo di consenso Proof of stake. La Beacon Chain ha introdotto lo staking, che si è 'fuso' con la Rete principale, spianando la strada allo sharding per contribuire a ridimensionare ulteriormente Ethereum.
 
 <ButtonLink to="/upgrades/sharding/">
-    Shard chain
+  Shard chain
 </ButtonLink>
 
-<Divider />
+## Letture consigliate
 
-## Interagire con la beacon chain {#interact-with-beacon-chain}
-
-<BeaconChainActions />
+[Maggiori informazioni sugli aggiornamenti futuri di Ethereum](/upgrades/vision) [Maggiori informazioni sul Proof of stake](/develoeprs/docs/consensus-mechanisms/pos)

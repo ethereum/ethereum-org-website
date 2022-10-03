@@ -179,7 +179,7 @@ sidebarDepth: 2
     hashE:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coin' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
 ```
 
-当一个节点在另一个节点中被引用时，包含的是 `H(rlp.encode(x))`，其中 `H(x) = keccak256(x) if len(x) > > = 32 else x` 和 `rlp.encode` 是[递归长度前缀](/fundamentals/rlp)编码函数。
+当一个节点在另一个节点中被引用时，包含的是 `H(rlp.encode(x))`，其中 `H(x) = keccak256(x) if len(x) > > = 32 else x` 和 `rlp.encode` 是[递归长度前缀](/developers/docs/data-structures-and-encoding/rlp)编码函数。
 
 请注意，更新前缀树时，*如果*新创建节点的长度 >= 32，则需要将键/值对 `(keccak256(x), x)` 存储在一个持久的查询表中。 然而，如果节点比这短，则不需要存储任何数据，因为函数 f(x) = x 是可逆的。
 

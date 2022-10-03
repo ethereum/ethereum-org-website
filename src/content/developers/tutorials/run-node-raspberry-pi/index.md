@@ -4,7 +4,6 @@ description: Flash your Raspberry Pi 4, plug in an ethernet cable, connect the S
 author: "EthereumOnArm"
 tags: ["clients", "execution layer", "consensus layer", "nodes"]
 lang: en
-sidebar: true
 skill: intermediate
 published: 2022-06-10
 source: Ethereum on ARM

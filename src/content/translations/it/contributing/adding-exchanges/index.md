@@ -2,7 +2,6 @@
 title: Aggiunta di piattaforme di scambio
 description: La politica che usiamo per l'aggiunta di piattaforme di scambio su ethereum.org
 lang: it
-sidebar: true
 ---
 
 # Aggiungere piattaforme di scambio su Ethereum {#adding-ethereum-exchanges}

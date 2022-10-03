@@ -2,7 +2,6 @@
 title: Standard di sviluppo di Ethereum
 description:
 lang: it
-sidebar: true
 incomplete: true
 ---
 

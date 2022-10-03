@@ -8,7 +8,6 @@ tags:
   - "nivel de consens"
   - "noduri"
 lang: ro
-sidebar: true
 skill: intermediate
 published: 2020-05-07
 source: r/ethereum

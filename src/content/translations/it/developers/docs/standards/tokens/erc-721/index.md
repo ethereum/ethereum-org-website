@@ -2,7 +2,6 @@
 title: Standard token non fungibile ERC-721
 description:
 lang: it
-sidebar: true
 ---
 
 ## Introduzione {#introduction}

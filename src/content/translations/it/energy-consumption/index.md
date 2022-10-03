@@ -2,7 +2,6 @@
 title: Consumo energetico di Ethereum
 description: Le informazioni di base necessarie per capire il consumo energetico di Ethereum.
 lang: it
-sidebar: true
 ---
 
 # Consumo energetico di Ethereum {#introduction}

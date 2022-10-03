@@ -5,7 +5,6 @@ author: "Daniel Izdebski"
 tags: ["waffle", "smart contracts", "solidity", "testing", "mocking"]
 skill: intermediate
 lang: en
-sidebar: true
 published: 2020-11-14
 ---
 

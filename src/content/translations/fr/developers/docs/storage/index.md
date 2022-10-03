@@ -2,7 +2,6 @@
 title: Stockage décentralisé
 description: Présentation du stockage décentralisé et des outils disponibles à intégrer dans une DApp
 lang: fr
-sidebar: true
 ---
 
 Contrairement à un serveur centralisé exploité par une unique organisation ou une entreprise, les systèmes de stockage décentralisé se composent d'un réseau de pair à pair d'opérateurs-utilisateurs qui détiennent une partie de l'ensemble des données, créant ainsi un système de partage de fichiers résiliant. Cela peut être via une application basée sur la blockchain ou bien sur n'importe quel réseau basé sur le principe du pair à pair.

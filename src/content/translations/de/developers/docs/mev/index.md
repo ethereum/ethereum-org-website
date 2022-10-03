@@ -2,7 +2,6 @@
 title: Maximaler extrahierbarer Wert (MEV)
 description: Eine Einführung in den maximal extrahierbaren Wert (MEV)
 lang: de
-sidebar: true
 ---
 
 Der Maximal extrahierbare Wert (MEV) bezieht sich auf den maximalen Wert, der aus der Blockproduktion extrahiert werden kann und der über die Standard-Blockprämie und die Gasgebühren hinausgeht, indem Transaktionen in einem Block einbezogen, ausgeschlossen oder in der Reihenfolge geändert werden.

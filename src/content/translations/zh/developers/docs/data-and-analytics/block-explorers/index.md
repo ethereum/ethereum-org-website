@@ -2,7 +2,6 @@
 title: 区块浏览器
 description: 这是对于区块浏览器的介绍，让您进入区块链数据世界的大门，在这里您可以查询交易、帐户、合约以及更多以太坊区块链相关数据。
 lang: zh
-sidebar: true
 sidebarDepth: 3
 ---
 

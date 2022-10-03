@@ -4,7 +4,6 @@ description: An overview of DAOs on Ethereum
 lang: en
 template: use-cases
 emoji: ":handshake:"
-sidebar: true
 sidebarDepth: 2
 image: ../../assets/use-cases/dao-2.png
 alt: A representation of a DAO voting on a proposal.
@@ -155,6 +154,8 @@ _Typically used for decentralized development and governance of protocols and da
 - [How to Start a DAO-Powered Digital Community](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [What is a DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 - [What is Holographic Consensus?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
+- [DAOs are not corporations: where decentralization in autonomous organizations matters by Vitalik](https://vitalik.ca/general/2022/09/20/daos.html)
+- [DAOs, DACs, DAs and More: An Incomplete Terminology Guide](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Ethereum Blog](https://blog.ethereum.org)
 
 ### Videos {#videos}
 

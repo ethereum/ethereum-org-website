@@ -2,7 +2,6 @@
 title: Tentang Kami
 description: Tentang tim, komunitas, dan misi ethereum.org
 lang: id
-sidebar: true
 ---
 
 # Tentang Ethereum.org {#about-ethereumorg}

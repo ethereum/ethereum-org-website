@@ -2,7 +2,6 @@
 title: Düğümler ve istemciler
 description: Ethereum düğümlerine ve istemci yazılımına genel bakış, ayrıca bir düğümün nasıl kurulacağı ve bunu neden yapmanız gerektiğine dair bilgi.
 lang: tr
-sidebar: true
 sidebarDepth: 2
 ---
 
