@@ -96,8 +96,6 @@ When introducing an unfamiliar acronym, spell out the full term, and put the acr
 
 "Ethereum, like Bitcoin, currently uses a consensus protocol called **proof-of-work (PoW)**."
 
-"**Zero-knowledge rollups (ZK-rollups)** are layer 2 scaling solutions."
-
 ### Consistency {#consistency}
 
 Many of the topics covered on ethereum.org are technically complex. To reduce confusion to the reader, terms should be used consistently. For example, don't cycle back-and-forth between proof-of-work and PoW at random.
@@ -160,6 +158,55 @@ When referring to The Merge, treat it as a proper noun. Always capitalize the fi
 
 - The merge
 - the Merge
+
+### Zero-knowledge {#zero-knowledge}
+
+Zero-knowledge should be capitalized at the beginning of a sentence. In any other instance, all letters should be lower case. In either case, zero-knowledge should be hyphenated between each word.
+
+**Correct usage:**
+
+- Zero-knowledge
+- zero-knowledge
+
+**Incorrect usage:**
+
+- Zero-Knowledge
+- Zero knowledge
+- zero knowledge
+
+### ZK-proof {#ZK-proof}
+
+When using the abbreviated form of zero-knowledge proof you should shorten zero-knowledge to ZK, and hyphenate the abbreviation.
+
+**Correct usage:**
+
+- ZK-proof
+
+**Incorrect usage:**
+
+- Zk-proof
+- zK-proof
+- zk-proof
+- Zk proof
+- zK proof
+- zk proof
+
+### ZK-rollup {#ZK-rollup}
+
+When using the abbreviated form of zero-knowledge rollup you should shorten zero-knowledge to ZK, and hyphenate the abbreviation.
+
+**Correct usage:**
+
+- ZK-rollup
+
+**Incorrect usage:**
+
+- Zk-rollup
+- zK-rollup
+- zk-rollup
+- Zk rollup
+- zK rollup
+- zk rollup
 
 ### Use active voice {#use-active-voice}
 
