@@ -4,7 +4,6 @@ description: 以太坊去中心化社交网络概览
 lang: zh
 template: use-cases
 emoji: ":mega:"
-sidebar: true
 sidebarDepth: 2
 image: ../../assets/ethereum-learn.png
 summaryPoint1: 基于区块链的社交互动与内容平台的创建和分配。

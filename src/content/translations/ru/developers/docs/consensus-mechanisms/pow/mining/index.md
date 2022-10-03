@@ -2,7 +2,6 @@
 title: Майнинг
 description: Объяснение того, как работает майнинг Ethereum и как он помогает сохранять безопасность и децентрализованность Ethereum.
 lang: ru
-sidebar: true
 incomplete: true
 ---
 

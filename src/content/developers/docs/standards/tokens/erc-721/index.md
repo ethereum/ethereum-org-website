@@ -2,7 +2,6 @@
 title: ERC-721 Non-Fungible Token Standard
 description:
 lang: en
-sidebar: true
 ---
 
 ## Introduction {#introduction}

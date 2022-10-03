@@ -2,7 +2,6 @@
 title: Ethereum Whitepaper
 description: O lucrare introductivă la Ethereum, publicată în 2013 înainte de lansare.
 lang: ro
-sidebar: true
 sidebarDepth: 2
 ---
 

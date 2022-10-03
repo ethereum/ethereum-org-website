@@ -4,7 +4,6 @@ description: 以太坊上的去中心化自治组织简介
 lang: zh
 template: use-cases
 emoji: ":handshake:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/use-cases/dao-2.png
 alt: 去中心化自治组织代表在对提案投票。

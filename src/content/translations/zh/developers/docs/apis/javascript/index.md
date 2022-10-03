@@ -2,7 +2,6 @@
 title: JavaScript 应用编程接口库
 description: 以太坊 JavaScript 应用程序接口的介绍，使您能够从您的应用程序中与区块链进行交互。
 lang: zh
-sidebar: true
 ---
 
 为了使软件应用程序能够与以太坊区块链进行交互（例如：读取区块链数据或发送交易信息到网络），软件必须连接到以太坊节点。

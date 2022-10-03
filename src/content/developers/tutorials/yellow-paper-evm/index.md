@@ -5,7 +5,6 @@ author: "qbzzt"
 tags: ["evm", "yellow paper", "specifications"]
 skill: intermediate
 lang: en
-sidebar: true
 published: 2022-05-15
 ---
 

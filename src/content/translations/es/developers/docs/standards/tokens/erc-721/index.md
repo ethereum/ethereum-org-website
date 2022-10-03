@@ -2,7 +2,6 @@
 title: Estándar de token no fungible ERC-721
 description:
 lang: es
-sidebar: true
 ---
 
 ## Introducción {#introduction}

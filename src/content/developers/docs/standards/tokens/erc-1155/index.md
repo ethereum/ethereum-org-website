@@ -2,7 +2,6 @@
 title: ERC-1155 Multi-Token Standard
 description:
 lang: en
-sidebar: true
 ---
 
 ## Introduction {#introduction}

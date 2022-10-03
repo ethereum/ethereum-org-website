@@ -4,7 +4,6 @@ description: 简要介绍如何开始以太币联合质押
 lang: zh
 template: staking
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../../assets/staking/leslie-pool.png
 alt: 莱斯利犀牛在泳池中游泳。
 sidebarDepth: 2

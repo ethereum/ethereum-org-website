@@ -3,7 +3,6 @@ title: Lanci djelića
 description: Saznajte više o lancima djelića – particijama mreže koje Ethereumu daju veći kapacitet transakcija i olakšavaju rad.
 lang: hr
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: Razdjeljivanje je nadogradnja u više faza za poboljšanje skalabilnosti i kapaciteta Ethereuma.
 summaryPoint2: Lanci djelića šire opterećenje mreže na 64 nova lanca.

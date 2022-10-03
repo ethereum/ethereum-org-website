@@ -2,7 +2,6 @@
 title: Mining
 description: An explanation of how mining worked on Ethereum.
 lang: en
-sidebar: true
 ---
 
 <InfoBanner emoji=":wave:">
@@ -63,7 +62,7 @@ Watch Austin walk you through mining and the proof-of-work blockchain.
 
 ## The mining algorithm {#mining-algorithm}
 
-Ethereum Mainnet only ever used one mining algorithm - ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash). Ethhash was the successor to an original R&D algorithm known as ['Dagger-Hashamoto'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashamoto).
+Ethereum Mainnet only ever used one mining algorithm - ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash). Ethhash was the successor to an original R&D algorithm known as ['Dagger-Hashimoto'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto).
 
 [More on mining algorithms](/developers/docs/consensus-mechanisms/pow/mining-algorithms/).
 

@@ -2,7 +2,6 @@
 title: Nœuds et clients
 description: Présentation des nœuds Ethereum et des logiciels clients, de la façon de configurer un nœud et des raisons de le faire.
 lang: fr
-sidebar: true
 sidebarDepth: 2
 ---
 

@@ -8,7 +8,6 @@ tags:
   - "depolama"
 skill: advanced
 lang: tr
-sidebar: true
 published: 2021-12-30
 ---
 

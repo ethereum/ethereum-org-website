@@ -2,7 +2,6 @@
 title: Kompozycyjność kontraktów inteligentnych
 description:
 lang: pl
-sidebar: true
 incomplete: true
 ---
 

@@ -2,7 +2,6 @@
 title: Ethereum per sviluppatori Python
 description: Impara a sviluppare per Ethereum usando progetti e strumenti basati su Python
 lang: it
-sidebar: true
 incomplete: true
 ---
 
@@ -49,8 +48,9 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 ### Attivi: {#active}
 
 - [Web3.py](https://github.com/ethereum/web3.py) - _Libreria Python per interagire con Ethereum_
-- [Brownie](https://github.com/eth-brownie/brownie) - _Framework Python per distribuire, testare gli Smart Contract Ethereum e interagirvi_
-- [Vyper](https://github.com/ethereum/vyper/) - _Linguaggio Python per Smart Contract per l'EVM_
+- [Vyper](https://github.com/ethereum/vyper/) - _Linguaggio dei Contratti Intelligenti di Python per l'EVM_
+- [Ape](https://github.com/ApeWorX/ape) - _Lo strumento di sviluppo di contratti intelligenti per utilizzatori di Python, Scienziati dei Dati e Professionisti della Sicurezza_
+- [Brownie](https://github.com/eth-brownie/brownie) - _Quadro di Python per distribuire, testare e interagire coi contratti intelligenti di Ethereum_
 - [py-evm](https://github.com/ethereum/py-evm) - _Implementazione della macchina virtuale Ethereum_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _Strumenti per testare le applicazioni basate su Ethereum_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _Funzioni di utilità per lavorare con le basi di codice legate a Ethereum_
@@ -58,6 +58,8 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 - [py-wasm](https://github.com/ethereum/py-wasm) - _Implementazione Python dell'interprete di web assembly_
 - [pydevp2p](https://github.com/ethereum/pydevp2p) - _implementazione dello stack di Ethereum P2P_
 - [pymaker](https://github.com/makerdao/pymaker) - _API Python per i contratti Maker_
+- [siwe](https://github.com/spruceid/siwe-py) - _Accesso con Ethereum (siwe) per Python_
+- [DeFi di Web3 per le integrazioni di Ethereum](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _Un pacchetto di Python con integrazioni pronte per l'ERC-20, Uniswap e altri progetti popolari_
 
 ### Archiviato / Non più mantenuto: {#archived--no-longer-maintained}
 
@@ -76,9 +78,10 @@ I seguenti progetti basati su Ethereum usano strumenti menzionati su questa pagi
 - [Sushi](https://sushi.com/) usa [Python nella gestione e distribuzione dei suoi vesting contract](https://github.com/sushiswap/sushi-vesting-protocols)
 - [Alpha Finance](https://alphafinance.io/), di Alpha Homora, usa [Brownie per testare e distribuire gli smart contract](https://github.com/AlphaFinanceLab/alpha-staking-contract)
 
-## Collaboratori della community Python {#python-community-contributors}
+## Discussione della Community di Python {#python-community-contributors}
 
-L'[Ethereum Python Community Discord](https://discord.gg/9zk7snTfWe) ospita una community in rapida crescita ed è la risorsa dedicata alle discussioni su ognuno dei suddetti progetti e argomenti correlati.
+- [Discor dell'Ethereum Python Community](https://discord.gg/9zk7snTfWe) per Web3.py e altre discussioni del quadro di Python
+- [Discord di Vyper](<[https://discord.gg/9zk7snTfWe](https://discord.gg/SdvKC79cJk)>) per la discussione sulla programmazione dei contratti intelligenti in Vyper
 
 ## Altri elenchi aggregati {#other-aggregated-lists}
 

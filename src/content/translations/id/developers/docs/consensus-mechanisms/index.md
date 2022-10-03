@@ -2,7 +2,6 @@
 title: Mekanisme Konsensus
 description: Penjelasan tentang protokol konsensus dalam sistem terdistribusi dan peran yang dimainkannya di Ethereum.
 lang: id
-sidebar: true
 incomplete: true
 ---
 

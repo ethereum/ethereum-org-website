@@ -2,7 +2,6 @@
 title: Plazma zincirleri
 description: Şu anda Ethereum topluluğu tarafından kullanılan bir ölçeklendirme çözümü olarak plazma zincirlerine giriş.
 lang: tr
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---

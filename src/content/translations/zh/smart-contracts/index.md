@@ -2,7 +2,6 @@
 title: 智能合约
 description: 智能合约的非技术性介绍
 lang: zh
-sidebar: true
 ---
 
 # 智能合约简介 {#introduction-to-smart-contracts}

@@ -4,7 +4,6 @@ description: イーサリアム上の分散型ソーシャルネットワーク�
 lang: ja
 template: use-cases
 emoji: ":mega:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/ethereum-learn.png
 summaryPoint1: ソーシャル・インタラクションとコンテンツの作成と配信のためのブロックチェーンベースのプラットフォーム
@@ -76,11 +75,11 @@ Mirror で公開された投稿は、分散型ストレージプラットフォ�
 
 ### Reddit(レディット) {#reddit}
 
-Reddit は、ユーザーが質の高いコンテンツを投稿し、オンラインコミュニティ(subreddit)に貢献することで獲得できる ERC-20 トークンである[コミュニティポイント](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users)を使っています。 このトークンを使って、[subreddit 内での限定特典や特権](https://www.reddit.com/community-points/)を獲得することができます。 Reddit はイーサリアムのトランザクションをスケールアップする[レイヤー 2](/layer-2/)ロールアップである Arbitrum と連携しています。
+Reddit は、ERC-20 トークンである[コミュニティポイント](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users)を使っており、これはユーザーが良質のコンテンツを投稿し、オンラインコミュニティ(subreddit)に貢献することで獲得できます。 このトークンを使って、[subreddit 内での限定特典や特権](https://www.reddit.com/community-points/)を獲得することができます。 Reddit はイーサリアムのトランザクションをスケールアップする[レイヤー 2](/layer-2/)ロールアップである Arbitrum と連携しています。
 
-このプログラムはすでにベータ段階にあり、r/CryptoCurrency subreddit が[「Moons」というバージョンのコミュニティポイント](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki)を稼働しています。 下記はコミュニティの wiki からの引用です。
+このプログラムはすでに稼働しており、r/CryptoCurrency subreddit が[「Moons」というバージョンのコミュニティポイント](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki)を稼働しています。 公式の説明では、Moons は「subreddits への貢献に対して、投稿者、コメント投稿者、モデレーターに報酬を与える」というものです。 これらのトークンはブロックチェーン上にあるため(ユーザーはトークンをウォレットで受領)、Reddit から独立しており、奪われることはありません。
 
-> _Moons は、2020 年 5 月に Reddit の管理者がコミュニティポイントプロジェクトの一環として立ち上げた、Rinkeby ネットワーク上の ERC-20 トークンです。 コミュニティポイントとは、ユーザーの r/CryptoCurrency での貢献に対して、subreddit の所有権単位で報酬を得るシステムです。 Moons は Reddit から独立しており、一度ユーザーが獲得した Moons を、管理者や subreddit のモデレーターが取り上げることはできません。 Moons は、残高、送金、分配/請求、特別メンバーシップの購入を行う一連のスマートコントラクトによって管理されています。 スマートコントラクトとモバイルアプリは、独立系セキュリティ企業である Trail of Bits 社による審査・監査を受けています。_
+Rinkeby テストネットでのベータフェーズを終え、Reddit コミュニティポイントは、[Arbitrum Nova](https://nova.arbitrum.io/)、[Validium](/developers/docs/scaling/validium/)と[オプティミスティック・ロールアップ](/developers/docs/scaling/optimistic-rollups/)の特性を兼ね備えたブロックチェーンに移行しています。 コミュニティポイントは、様々な特典のために使用するほかに、取引所でフィアットと交換することも可能です。 また、ユーザーが所有するコミュニティポイントの量によって、コミュニティの意思決定に影響を与えられます。
 
 ### Twitter(ツイッター) {#twitter}
 

@@ -2,7 +2,6 @@
 title: Sécurité d'Ethereum et prévention des arnaques
 description: Rester en toute sécurité sur Ethereum
 lang: fr
-sidebar: true
 ---
 
 # Sécurité d'Ethereum et prévention des arnaques {#introduction}

@@ -2,7 +2,6 @@
 title: Contribution
 description: En savoir plus sur les différentes manières de contribuer à ethereum.org
 lang: fr
-sidebar: true
 ---
 
 # Contribuer à ethereum.org 🦄 {#contributing-to-ethereumorg}

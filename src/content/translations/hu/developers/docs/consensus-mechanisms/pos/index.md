@@ -2,7 +2,6 @@
 title: Proof-of-stake (PoS)
 description: Egy magyarázat a proof-of-stake konszenzus protokollról és az Ethereumban betöltött szerepéről.
 lang: hu
-sidebar: true
 incomplete: true
 ---
 

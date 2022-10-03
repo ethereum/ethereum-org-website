@@ -2,7 +2,6 @@
 title: 以太坊安全和预防欺诈措施
 description: 在以太坊上保持安全
 lang: zh
-sidebar: true
 ---
 
 # 以太坊安全和预防欺诈措施 {#introduction}

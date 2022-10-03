@@ -2,7 +2,6 @@
 title: Ethereum per sviluppatori Go
 description: Scopri come sviluppare per Ethereum usando progetti e strumenti basati su Go
 lang: it
-sidebar: true
 incomplete: true
 ---
 
@@ -34,11 +33,11 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 ## Articoli e documentazione di livello intermedio {#intermediate-articles-and-docs}
 
 - [Go Ethereum Documentation](https://geth.ethereum.org/docs/) - _La documentazione per il Golang ufficiale di Ethereum_
-- [Erigon Programmer's Guide](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) - _Guida illustrata che tratta gli alberi di stato, prove multiple ed elaborazioni delle transazioni_
-- [Erigon and Stateless Ethereum](https://youtu.be/3-Mn7OckSus?t=394) - _Conferenza della Community di Ethereum 2020 (EthCC 3)_
-- [Erigon: optimising Ethereum clients](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _2018 Devcon 4_
+- [Guida per Programmatori a Erigon](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) - _Guida illustrata con l'albero di stato, prove multiple ed elaborazione delle transazioni_
+- [Erigon ed Ethereum senza Stato](https://youtu.be/3-Mn7OckSus?t=394) - _Conferenza della Community di Ethereum 2020 (EthCC 3)_
+- [Erigon: ottimizzare i client di Ethereum](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _2018 Devcon 4_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [Creating a Dapp in Go with Geth](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
+- [Creare una dapp in Go con Geth](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Work with Ethereum Private Network with Golang and Geth](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Unit testing Solidity contracts on Ethereum with Go](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 - [Quick reference for using Geth as a library](https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e)
@@ -49,13 +48,13 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 - [Blockchain-as-a-Service Apps Using Ethereum and Quorum](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
 - [Distributed Storage IPFS and Swarm in Ethereum Blockchain Applications](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
 - [Mobile Clients: Libraries and Inproc Ethereum Nodes](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)
-- [Native DApps: Go bindings to Ethereum contracts](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
+- [Dapp native: Collegamenti di Go ai contratti di Ethereum](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
 
 ## Progetti e strumenti di Go {#go-projects-and-tools}
 
 - [Geth / Go Ethereum](https://github.com/ethereum/go-ethereum) - _Implementazione ufficiale di Go del protocollo di Ethereum_
 - [Go Ethereum Code Analysis](https://github.com/ZtesoftCS/go-ethereum-code-analysis) - _Controllo e analisi del codice sorgente di Go Ethereum_
-- [Erigon](https://github.com/ledgerwatch/erigon) - _Il più veloce derivato di Go Ethereum_
+- [Erigon](https://github.com/ledgerwatch/erigon) - _Derivato più veloce di Go Ethereum, incentrato sull'archiviazione dei nodi_
 - [Golem](https://github.com/golemfactory/golem) - _Golem sta creando un mercato globale per la potenza di calcolo_
 - [Quorum](https://github.com/jpmorganchase/quorum) - _Implementazione con permessi di Ethereum a supporto della privacy dei dati_
 - [Prysm](https://github.com/prysmaticlabs/prysm) - _Implementazione Go di 'Serenity' 2.0 per Ethereum_
@@ -65,6 +64,7 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 - [Ethereum HD Wallet](https://github.com/miguelmota/go-ethereum-hdwallet) - _Derivazioni del portafoglio HD di Ethereum in Go_
 - [Multi Geth](https://github.com/multi-geth/multi-geth) - _Supporto per molti tipi di reti Ethereum_
 - [Geth Light Client](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _Implementazione Geth del protocollo secondario Ethereum leggero_
+- [Ethereum Golang SDK](https://github.com/everFinance/goether) - _Una semplice implementazione del portafoglio e utilità in Golang_
 
 Cerchi altre risorse? Dai un'occhiata a [ethereum.org/developers](/developers/)
 

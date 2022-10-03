@@ -1,7 +1,6 @@
 ---
 title: پشتیبانی اتریوم
 description: در اکوسیستم اتریوم پشتیبانی دریافت کنید.
-sidebar: true
 lang: fa
 ---
 

@@ -2,7 +2,6 @@
 title: Governança d'Ethereum
 description: Una introducció sobre com es prenen les decisions a Ethereum.
 lang: ca
-sidebar: true
 ---
 
 # Introducció a la governança d'Ethereum {#introduction}

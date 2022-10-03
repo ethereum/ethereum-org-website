@@ -3,7 +3,6 @@ title: Un ghid pentru instrumentele de securitate ale contractelor inteligente
 description: O prezentare generală a trei tehnici diferite de testare și analiză a programelor
 author: "Trailofbits"
 lang: ro
-sidebar: true
 tags:
   - "solidity"
   - "contracte inteligente"
