@@ -93,6 +93,8 @@ Für fast alle Finanzdienstleistungen gibt es dezentrale Alternativen. Ethereum 
 Als Blockchain ist Ethereum für sichere und globale Transaktionen konzipiert. Wie auch Bitcoin macht Ethereum das weltweite Senden von Geld so einfach wie das Versenden einer E-Mail. Geben Sie einfach den [ENS-Namen](/nft/#nft-domains) des Empfängers (z. B. bob.eth) oder die Account-Adresse der Wallet ein und schon geht die Zahlung (typischerweise) innerhalb von Minuten direkt beim Empfänger ein. Zum Senden oder Empfangen von Zahlungen ist eine [Wallet](/wallets/) erforderlich.
 
 <ButtonLink to="/dapps/?category=finance">
+  Siehe Zahlungs-dapps
+</ButtonLink>
   Siehe Zahlungs-dApps
 </ButtonLink>
 
