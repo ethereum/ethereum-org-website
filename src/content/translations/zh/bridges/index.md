@@ -2,7 +2,6 @@
 title: 区块链桥梁简介
 description: 桥梁使用户能够跨不同的区块链转移他们的资金
 lang: zh
-sidebar: true
 ---
 
 # 区块链桥梁 {#prerequisites}
