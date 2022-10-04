@@ -43,7 +43,7 @@
   "page-upgrades-dive": "Dive into the vision",
   "page-upgrades-dive-desc": "How are we going to make Ethereum more scalable, secure, and sustainable? All while keeping Ethereum's core ethos of decentralization.",
   "page-upgrades-docking": "The Merge",
-  "page-upgrades-merge-answer-1": "The Merge occurred via the Paris upgrade on September 15, 2022.",
+  "page-upgrades-merge-answer-1": "The Merge was executed on September 15, 2022 . This completed Ethereum's transition to proof-of-stake consensus as the Beacon Chain merged with the Mainnet , officially deprecating proof-of-work and reducing energy consumption by ~99.95%.",
   "page-upgrades-merge-btn": "More on The Merge",
   "page-upgrades-merge-desc": "Mainnet Ethereum merged with the Beacon Chain, marking the end of energy-intensive mining.",
   "page-upgrades-merge-estimate": "The Merge is live",
