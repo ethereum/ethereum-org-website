@@ -1444,6 +1444,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://davelucia.com"><img src="https://avatars.githubusercontent.com/u/1019721?v=4?s=100" width="100px;" alt="Dave Lucia"/><br /><sub><b>Dave Lucia</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=davydog187" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/loicalbertin"><img src="https://avatars.githubusercontent.com/u/872896?v=4?s=100" width="100px;" alt="Loïc Albertin"/><br /><sub><b>Loïc Albertin</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=loicalbertin" title="Documentation">📖</a></td>
     </tr>
+    <tr>
+      <td align="center"><a href="https://github.com/millecodex"><img src="https://avatars.githubusercontent.com/u/39792005?v=4?s=100" width="100px;" alt="Mille Codex"/><br /><sub><b>Mille Codex</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=millecodex" title="Documentation">📖</a></td>
+    </tr>
   </tbody>
   <tfoot>
     
