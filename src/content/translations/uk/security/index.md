@@ -2,7 +2,6 @@
 title: Безпека Ethereum і запобігання шахрайству
 description: Підтримання безпеки в Ethereum
 lang: uk
-sidebar: true
 ---
 
 # Безпека Ethereum і запобігання шахрайству {#introduction}

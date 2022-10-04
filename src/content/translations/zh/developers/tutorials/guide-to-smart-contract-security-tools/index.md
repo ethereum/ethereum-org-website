@@ -3,7 +3,6 @@ title: 智能合约安全工具指南
 description: 三种不同的测试和程序分析技术概述
 author: "Trailofbits"
 lang: zh
-sidebar: true
 tags:
   - "solidity"
   - "智能合约"

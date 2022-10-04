@@ -2,7 +2,6 @@
 title: Ethereum untuk pengembang Go
 description: Pelajari cara menjadi pengembang untuk Ethereum menggunakan proyek dan peralatan berbasis Go
 lang: id
-sidebar: true
 incomplete: true
 ---
 

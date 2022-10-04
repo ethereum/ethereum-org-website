@@ -2,7 +2,6 @@
 title: Kanal State
 description: Pengantar kanal state dan kanal pembayaran sebagai solusi penskalaan yang saat ini digunakan oleh komunitas Ethereum.
 lang: id
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---

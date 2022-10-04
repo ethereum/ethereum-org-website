@@ -6,11 +6,10 @@ tags:
   - "NFTs"
   - "ERC-721"
   - "alchemy"
-  - "solidité"
+  - "solidity"
   - "contrats intelligents"
 skill: beginner
 lang: fr
-sidebar: true
 published: 2021-04-22
 ---
 
@@ -24,7 +23,7 @@ Commençons !
 
 ## Étape 1 : Installer Web3 {#install-web3}
 
-Si vous avez suivi le premier tutoriel sur la création de votre contrat intelligent NFT, vous avez déjà expérimenté Ethers.js. Web3 est similaire à Ethers, étant une bibliothèque utilisée pour faciliter la création de requêtes vers la blockchain Ethereum. Dans ce tutoriel, nous utiliserons [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3) qui est une bibliothèque Web3 améliorée proposant des essais automatiques et une prise en charge robuste de WebSocket.
+Si vous avez suivi le premier tutoriel sur la création de votre contrat intelligent NFT, vous avez déjà expérimenté Ethers.js. Web3 est similaire à Ethers, étant une bibliothèque utilisée pour faciliter la création de requêtes vers la blockchain Ethereum. Dans ce tutoriel, nous utiliserons [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3) qui est une bibliothèque Web3 améliorée proposant des essais automatiques et une prise en charge solide de WebSocket.
 
 Dans le répertoire d'accueil de votre projet, exécutez :
 
@@ -45,7 +44,7 @@ const web3 = createAlchemyWeb3(API_URL)
 
 ## Étape 3 : Récupérer l'ABI de votre contrat {#contract-abi}
 
-L'ABI (Application Binary Interface) de notre contrat est l’interface permettant d'interagir avec notre contrat intelligent. Vous en apprendrez plus sur les ABI de contrats [ici](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is). Hardhat nous génère automatiquement une ABI et l'enregistre dans le fichier `MyNFT.json`. Pour l'utiliser, nous devrons analyser les contenus en ajoutant les lignes de code suivantes à notre fichier `mint-nft.js` :
+L'ABI (Application Binary Interface) de notre contrat est l’interface permettant d'interagir avec notre contrat intelligent. Vous en apprendrez plus sur les ABI de contrats [ici](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is). Hardhat génère automatiquement pour nous une ABI et l'enregistre dans le fichier `MyNFT.json`. Pour l'utiliser, nous devrons analyser les contenus en ajoutant les lignes de code suivantes à notre fichier `mint-nft.js` :
 
 ```js
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
@@ -57,7 +56,7 @@ Si vous voulez lire l'ABI, vous pouvez l'afficher dans votre console :
 console.log(JSON.stringify(contract.abi))
 ```
 
-Pour exécuter `mint-nft.js` et voir votre ABI affichée dans la console, naviguez vers votre terminal et exécutez:
+Pour exécuter `mint-nft.js` et voir votre ABI affichée dans la console, naviguez vers votre terminal et exécutez :
 
 ```js
 node scripts/mint-nft.js
@@ -65,7 +64,7 @@ node scripts/mint-nft.js
 
 ## Étape 4 : Configurer les métadonnées de votre NFT en utilisant IPFS {#config-meta}
 
-Si vous vous rappelez de la première partie du tutoriel, notre fonction de contrat intelligent `mintNFT` accepte un paramètre tokenURI qui doit se résoudre en un document JSON décrivant les métadonnées du NFT - ce qui donne vraiment vie au NFT, en lui permettant d'avoir des propriétés configurables, comme un nom, une description ou encore une image, entre autres.
+Si vous vous rappelez de la première partie de notre tutoriel, notre fonction de contrat intelligent `mintNFT` accepte un paramètre tokenURI qui doit se résoudre en un document JSON décrivant les métadonnées du NFT - ce qui donne vraiment vie au NFT, en lui permettant d'avoir des propriétés configurables, comme un nom, une description ou encore une image, entre autres.
 
 > _IPFS (système de fichiers interplanétaire) est un protocole décentralisé et un réseau pair-à-pair permettant de stocker et de partager des données au sein d'un système de fichiers distribué._
 
@@ -77,7 +76,7 @@ Une fois que vous avez créé un compte :
 
 - Téléchargez une image sur Pinata — ce sera l'image de votre NFT. N’hésitez pas à nommer la ressource comme vous le souhaitez
 
-- Après le téléchargement, vous verrez les informations sur le fichier dans le tableau de la page Fichiers. Vous verrez également une colonne CID. Vous pouvez copier le CID en cliquant sur le bouton copier à côté de celui-ci. Vous pouvez voir votre téléchargement sur `https://gateway.pinata.cloud/ipfs/<CID>`. Vous pouvez trouver l'image que nous avons utilisée sur IPFS [ici](https://gateway.pinata.cloud/ipfs/QmarPqdEuzh5RsWpyH2hZ3qSXBCzC5RyK3ZHnFkAsk7u2f), par exemple.
+- Après le téléchargement, vous verrez les informations sur le fichier dans le tableau de la page « Fichiers ». Vous verrez également une colonne CID. Vous pouvez copier le CID en cliquant sur le bouton copier à côté de celui-ci. Vous pouvez voir votre téléchargement sur `https://gateway.pinata.cloud/ipfs/<CID>`. Vous pouvez trouver l'image que nous avons utilisée sur IPFS [ici](https://gateway.pinata.cloud/ipfs/QmarPqdEuzh5RsWpyH2hZ3qSXBCzC5RyK3ZHnFkAsk7u2f), par exemple.
 
 Pour les apprenants plus visuels, les étapes ci-dessus sont résumées ici :
 
@@ -119,7 +118,7 @@ Une fois que vous avez fini de modifier le fichier JSON, enregistrez les modific
 
 Dans l'exemple ci-dessus, notre adresse de contrat est 0x81c587EB0fE773404c42c1d2666b5f557C470eED.
 
-Ensuite, nous utiliserons la [méthode pour contrat](https://web3js.readthedocs.io/en/v1.2.0/web3-eth-contract.html?highlight=constructor#web3-eth-contract) Web3 pour créer notre contrat en utilisant l'ABI et l'adresse. Ajoutez ce qui suit dans le fichier `mint-nft.js`:
+Ensuite, nous utiliserons la [méthode pour contrat](https://web3js.readthedocs.io/en/v1.2.0/web3-eth-contract.html?highlight=constructor#web3-eth-contract) Web3 pour créer notre contrat en utilisant l'ABI et l'adresse. Ajoutez ce qui suit dans votre fichier `mint-nft.js` :
 
 ```js
 const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED"
@@ -159,7 +158,7 @@ En premier lieu, définissons une fonction nommée `mintNFT(tokenData)` et créo
 
 - `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — Le calcul que nous souhaitons effectuer dans cette transaction — qui, dans le cas présent, est le fait de frapper un NFT
 
-Votre `mint-nft.js` devrait ressembler à ceci :
+Votre fichier `mint-nft.js` devrait ressembler à ceci maintenant :
 
 ```js
    require('dotenv').config();
@@ -246,7 +245,7 @@ async function mintNFT(tokenURI) {
 }
 ```
 
-## Étape 9 : Appeler `mintNFT` et exécuter node `mint-nft.js` {#call-mintnft-fn}
+## Étape 9 : Appelez `mintNFT` et exécutez le nœud `mint-nft.js` {#call-mintnft-fn}
 
 Vous vous souvenez du `metadata.json` que vous avez téléchargé sur Pinata ? Récupérez son code de hachage et passez-le comme paramètre à la fonction `mintNFT` `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>`
 

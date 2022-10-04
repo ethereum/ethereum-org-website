@@ -4,7 +4,7 @@ import styled from "@emotion/styled"
 import { FakeLink } from "./SharedStyledComponents"
 
 import React, { useState } from "react"
-import Emoji from "./Emoji"
+import Emoji from "./OldEmoji"
 
 const Card = styled.div`
   border: 1px solid ${(props) => props.theme.colors.border};
@@ -83,6 +83,7 @@ const StyledEmoji = styled(Emoji)`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   contentPreview: string
   title: string
   emoji: string

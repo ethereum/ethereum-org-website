@@ -2,7 +2,6 @@
 title: Ethereum governance
 description: Een intro over hoe besluiten over Ethereum worden genomen.
 lang: nl
-sidebar: true
 ---
 
 # Introductie tot Ethereum governance {#introduction}

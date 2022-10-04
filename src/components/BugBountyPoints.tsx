@@ -1,15 +1,17 @@
-import React, { useContext, useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { useTheme } from "@emotion/react"
 import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "@emotion/styled"
 import axios from "axios"
 
-import Emoji from "./Emoji"
+import Emoji from "./OldEmoji"
 import Translation from "./Translation"
 import Icon from "./Icon"
 import Link from "./Link"
 import Tooltip from "./Tooltip"
+
+import { getImage } from "../utils/image"
 
 const PointsExchange = styled.div`
   flex: 1 1 560px;
@@ -196,11 +198,11 @@ const BugBountyPoints: React.FC<IProps> = () => {
             </TokenValue>
           </Row>
           <Row>
-            <Token image={getImage(data.dai)} />
+            <Token image={getImage(data.dai)!} alt="" />
             <TokenValue>{pointsInDAI} DAI</TokenValue>
           </Row>
           <Row>
-            <Token image={getImage(ethImage)} />
+            <Token image={getImage(ethImage)!} alt="" />
             <TokenValue>{pointsInETH} ETH</TokenValue>
           </Row>
         </ValueRow>

@@ -5,7 +5,7 @@ import styled from "@emotion/styled"
 
 // Components
 import BannerNotification from "./BannerNotification"
-import Emoji from "./Emoji"
+import Emoji from "./OldEmoji"
 import Icon from "./Icon"
 import Link from "./Link"
 import Translation from "./Translation"

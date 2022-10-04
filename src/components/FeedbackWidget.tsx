@@ -4,8 +4,8 @@ import { useIntl } from "react-intl"
 import styled from "@emotion/styled"
 import FocusTrap from "focus-trap-react"
 // Component imports
-import { ButtonPrimary } from "./SharedStyledComponents"
 import Translation from "./Translation"
+import Button from "./Button"
 import Icon from "./Icon"
 import NakedButton from "./NakedButton"
 // SVG imports
@@ -123,7 +123,6 @@ const ButtonContainer = styled.div`
   width: 100%;
   * {
     flex: 1;
-    color: ${({ theme }) => theme.colors.white};
     font-weight: 700;
   }
 `
@@ -154,18 +153,20 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
   const intl = useIntl()
   const containerRef = useRef<HTMLInputElement>(null)
   useOnClickOutside(containerRef, () => handleClose(), [`mousedown`])
+  const [location, setLocation] = useState("")
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const [feedbackSubmitted, setFeedbackSubmitted] = useState<boolean>(false)
   const [isHelpful, setIsHelpful] = useState<boolean | null>(null)
 
-  const location = typeof window !== "undefined" ? window.location.href : ""
-
   useEffect(() => {
-    // Reset component state when path (location) changes
-    setIsOpen(false)
-    setFeedbackSubmitted(false)
-    setIsHelpful(null)
-  }, [location])
+    if (typeof window !== "undefined") {
+      setLocation(window.location.href)
+      // Reset component state when path (location) changes
+      setIsOpen(false)
+      setFeedbackSubmitted(false)
+      setIsHelpful(null)
+    }
+  }, [])
 
   const surveyUrl = useSurvey(feedbackSubmitted, isHelpful)
 
@@ -257,7 +258,8 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
               )}
               <ButtonContainer>
                 {feedbackSubmitted ? (
-                  <ButtonPrimary
+                  <Button
+                    variant="outline-color"
                     onClick={handleSurveyOpen}
                     aria-label={translateMessageId(
                       "feedback-widget-thank-you-cta",
@@ -265,21 +267,23 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
                     )}
                   >
                     <Translation id="feedback-widget-thank-you-cta" />
-                  </ButtonPrimary>
+                  </Button>
                 ) : (
                   <>
-                    <ButtonPrimary
+                    <Button
+                      variant="outline-color"
                       onClick={() => handleSubmit(true)}
                       aria-label={translateMessageId("yes", intl)}
                     >
                       <Translation id="yes" />
-                    </ButtonPrimary>
-                    <ButtonPrimary
+                    </Button>
+                    <Button
+                      variant="outline-color"
                       onClick={() => handleSubmit(false)}
                       aria-label={translateMessageId("no", intl)}
                     >
                       <Translation id="no" />
-                    </ButtonPrimary>
+                    </Button>
                   </>
                 )}
               </ButtonContainer>

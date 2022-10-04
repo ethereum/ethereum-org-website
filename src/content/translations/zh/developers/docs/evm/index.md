@@ -1,15 +1,14 @@
 ---
-title: 以太机虚拟机 (EVM)
+title: 以太坊虚拟机 (EVM)
 description: 介绍以太坊虚拟机及其与状态、交易和智能合约的关系。
 lang: zh
-sidebar: true
 ---
 
 EVM 的物理实例不能像人们指向云或海浪那样描述，它是真实*存在*并由数以千计运行以太坊客户端的计算机共同维护的一个实体。
 
 以太坊协议本身的存在仅仅是为了保持这种特殊状态机的连续、不间断和永久的运行。 这是所有以太坊帐户和智能合约赖以存在的环境。 在链中任何给定的区块上，以太坊只有一个“规范”状态，而 EVM 定义了从一个区块计算产生下一个区块新的有效状态的规则。
 
-## 先决条件 {#prerequisites}
+## 前置要求 {#prerequisites}
 
 对计算机科学中常见术语的基本了解，如[字节](https://wikipedia.org/wiki/Byte)、[内存](https://wikipedia.org/wiki/Computer_memory)和[堆栈](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>)是理解 EVM 的前提。 熟悉诸如 [哈希函数](https://wikipedia.org/wiki/Cryptographic_hash_function)、[工作量证明](https://wikipedia.org/wiki/Proof_of_work)和 [Merkle 树](https://wikipedia.org/wiki/Merkle_tree)等密码学/区块链概念对理解也很有帮助。
 
@@ -33,7 +32,7 @@ Y(S, T)= S'
 
 ### 状态 {#state}
 
-在以太坊的上下文中，状态是一个巨大的数据结构，称为[调整后的 Merkle Patricia Trie](https://eth.wiki/en/fundamentals/patricia-tree)，使所有[帐户](/developers/docs/accounts/)通过哈希链接，并可回溯到存储在区块链上的单个根哈希。
+在以太坊环境中，状态是一种称为[改进版默克尔帕特里夏树](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/)的巨大数据结构，它保存所有通过哈希关联在一起的[帐户](/developers/docs/accounts/)并可回溯到存储在区块链上的单个根哈希。
 
 ### 交易 {#transactions}
 
@@ -49,7 +48,7 @@ EVM 作为一个[堆栈机](https://wikipedia.org/wiki/Stack_machine)运行，�
 
 然而，合约确实包含一个 Merkle Patricia _存储_ trie（作为可字寻址的字数组），该 trie 与帐户和部分全局状态关联。
 
-已编译的智能合约字节码作为许多 EVM [opcodes](/developers/docs/evm/opcodes)执行，它们执行标准的堆栈操作，例如 ` XOR`、`AND`、`ADD`、`SUB` 等。 EVM 还实现了一些区块链特定的堆栈操作，如 `ADDRESS`、`BALANCE`、`BLOCKHASH` 等。
+已编译的智能合约字节码作为许多 EVM [opcodes](/developers/docs/evm/opcodes)执行，它们执行标准的堆栈操作，例如 `XOR`、`AND`、`ADD`、`SUB`等。 EVM 还实现了一些区块链特定的堆栈操作，如 `ADDRESS`、`BALANCE`、`BLOCKHASH` 等。
 
 ![表明 EVM 操作需要 Gas 的图表](../gas/gas.png) _图表改编自[以太坊 EVM 说明](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
@@ -57,7 +56,7 @@ EVM 作为一个[堆栈机](https://wikipedia.org/wiki/Stack_machine)运行，�
 
 EVM 的所有实现都必须遵守以太坊黄皮书中描述的规范。
 
-在以太坊的 5 年历史中，EVM 经历了几次修订，并且以各种编程语言完成了 EVM 的多种实现。
+在以太坊 7 年历史中，以太坊虚拟机经历了几次修订，并且还出现了用各种编程语言编写的多种以太坊虚拟机实现。
 
 所有[以太坊客户端](/developers/docs/nodes-and-clients/#execution-clients)都包含一个 EVM 实现。 此外，还有多个独立的实现方法，包括：
 
@@ -65,6 +64,7 @@ EVM 的所有实现都必须遵守以太坊黄皮书中描述的规范。
 - [evmone](https://github.com/ethereum/evmone) - _C++_
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
 - [eEVM](https://github.com/microsoft/eevm) - _C++_
+- [Hyperledger Burrow](https://github.com/hyperledger/burrow) - _Go_
 
 ## 延伸阅读 {#further-reading}
 

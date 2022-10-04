@@ -5,7 +5,6 @@ author: "strykerin"
 tags: ["solidity", "defi", "web3.js", "truffle", "ganache", "smart contracts"]
 skill: intermediate
 lang: en
-sidebar: true
 published: 2020-12-31
 source: github.com
 sourceUrl: https://github.com/strykerin/DeFi-Token-Farm

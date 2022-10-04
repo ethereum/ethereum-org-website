@@ -1,10 +1,9 @@
 ---
-title: 去中心化金融
+title: 去中心化金融 (DeFi)
 description: 以太坊上的去中心化金融简介
 lang: zh
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../assets/use-cases/defi.png
 alt: 由乐高积木拼成的以太币徽标。
 sidebarDepth: 2
@@ -83,7 +82,7 @@ summaryPoint3: 基于任何人都可以用来编程的开源技术。
 - [开始加密货币存款](#saving)
 - [交易代币](#swaps)
 - [扩充您的投资组合](#investing)
-- [为您的灵感提供资金支持](#crowdfunding)
+- [为您的想法提供资金](#crowdfunding)
 - [购买保险](#insurance)
 - [管理您的投资组合](#aggregators)
 

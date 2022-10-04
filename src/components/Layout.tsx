@@ -7,7 +7,6 @@ import { IntlProvider } from "react-intl"
 import { LocaleProvider } from "gatsby-theme-i18n"
 
 import { lightTheme, darkTheme } from "../theme"
-import GlobalStyle from "./GlobalStyle"
 
 import Footer from "./Footer"
 import VisuallyHidden from "./VisuallyHidden"
@@ -66,6 +65,7 @@ const Main = styled.main`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   data?: {
     pageData?: {
       frontmatter?: {
@@ -92,7 +92,6 @@ const Layout: React.FC<IProps> = ({
 
   const [isZenMode, setIsZenMode] = useState<boolean>(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState<boolean>(false)
-
   const locale = pageContext.locale
   const messages = require(`../intl/${locale}.json`)
 
@@ -143,10 +142,12 @@ const Layout: React.FC<IProps> = ({
 
   return (
     <LocaleProvider pageContext={pageContext}>
+      {/* our current react-intl types does not support react 18 */}
+      {/* TODO: once we upgrade react-intl to v6, remove this ts-ignore */}
+      {/* @ts-ignore */}
       <IntlProvider locale={locale!} key={locale} messages={messages}>
         <ApolloProvider client={client}>
           <ThemeProvider theme={theme}>
-            <GlobalStyle />
             <SkipLink hrefId="#main-content" />
             <TranslationBanner
               shouldShow={shouldShowTranslationBanner}

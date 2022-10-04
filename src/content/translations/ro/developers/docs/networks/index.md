@@ -2,7 +2,6 @@
 title: Rețele
 description: O prezentare generală a rețelelor Ethereum și de unde să obţineţi ether (ETH) de testnet pentru a vă testa aplicaţia.
 lang: ro
-sidebar: true
 ---
 
 Întrucât Ethereum este un protocol, aceasta înseamnă că pot exista mai multe „rețele” independente care se conformează acestui protocol şi care nu interacționează între ele.
@@ -73,7 +72,7 @@ Un testnet bazat pe dovada-autorității pentru cei care rulează clienții Open
 - [Chainlink faucet](https://faucets.chain.link/)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
 
-#### Optimisic Kovan {#optimistic-kovan}
+#### Optimistic Kovan {#optimistic-kovan}
 
 A testnet for [Optimism](https://www.optimism.io/).
 

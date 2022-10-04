@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useMemo, useState } from "react"
 import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
@@ -13,7 +13,7 @@ import PageMetadata from "../../components/PageMetadata"
 import Pill from "../../components/Pill"
 import Tag from "../../components/Tag"
 import TutorialTags from "../../components/TutorialTags"
-import Emoji from "../../components/Emoji"
+import Emoji from "../../components/OldEmoji"
 import {
   ButtonSecondary,
   FakeLink,
@@ -22,11 +22,15 @@ import {
 
 import { getLocaleTimestamp, INVALID_DATETIME } from "../../utils/time"
 
-import foreignTutorials from "../../data/externalTutorials.json"
+import externalTutorials from "../../data/externalTutorials.json"
 import FeedbackCard from "../../components/FeedbackCard"
 import { getSkillTranslationId, Skill } from "../../components/TutorialMetadata"
 import { Context } from "../../types"
 import { Lang } from "../../utils/languages"
+import {
+  filterTutorialsByLang,
+  getSortedTutorialTagsForLang,
+} from "../../utils/tutorials"
 
 const SubSlogan = styled.p`
   font-size: 1.25rem;
@@ -48,6 +52,7 @@ const TutorialCard = styled(Link)`
   width: 100%;
   color: #000000;
   &:hover {
+    text-decoration: none;
     border-radius: 4px;
     box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
     background: ${(props) => props.theme.colors.tableBackgroundHover};
@@ -216,7 +221,7 @@ const published = (locale: string, published: string) => {
   ) : null
 }
 
-interface IExternalTutorial {
+export interface IExternalTutorial {
   url: string
   title: string
   description: string
@@ -229,8 +234,8 @@ interface IExternalTutorial {
   publishDate: string
 }
 
-interface ITutorial {
-  to?: string | null
+export interface ITutorial {
+  to: string
   title: string
   description: string
   author: string
@@ -242,7 +247,7 @@ interface ITutorial {
   isExternal: boolean
 }
 
-interface ITutorialsState {
+export interface ITutorialsState {
   activeTagNames: Array<string>
   filteredTutorials: Array<ITutorial>
 }
@@ -251,130 +256,52 @@ const TutorialsPage = ({
   data,
   pageContext,
 }: PageProps<Queries.DevelopersTutorialsPageQuery, Context>) => {
-  const intl = useIntl()
-  // Filter tutorials by language and map to object
-  const internalTutorials = data.allTutorials.nodes.map<ITutorial>(
-    (tutorial) => ({
-      to:
-        tutorial?.fields?.slug?.substr(0, 3) === "/en"
-          ? tutorial.fields.slug.substr(3)
-          : tutorial.fields?.slug,
-      title: tutorial?.frontmatter?.title || "",
-      description: tutorial?.frontmatter?.description || "",
-      author: tutorial?.frontmatter?.author || "",
-      tags: tutorial?.frontmatter?.tags?.map((tag) =>
-        (tag || "").toLowerCase().trim()
+  const filteredTutorialsByLang = useMemo(
+    () =>
+      filterTutorialsByLang(
+        data.allTutorials.nodes,
+        externalTutorials,
+        pageContext.locale
       ),
-      skill: tutorial?.frontmatter?.skill as Skill,
-      timeToRead: tutorial?.fields?.readingTime?.minutes
-        ? Math.round(tutorial?.fields?.readingTime?.minutes)
-        : null,
-      published: tutorial?.frontmatter?.published,
-      lang: tutorial?.frontmatter?.lang || "en",
-      isExternal: false,
-    })
+    [pageContext.locale]
   )
 
-  const externalTutorials = foreignTutorials.map<ITutorial>(
-    (tutorial: IExternalTutorial) => ({
-      to: tutorial.url,
-      title: tutorial.title,
-      description: tutorial.description,
-      author: tutorial.author,
-      tags: tutorial.tags.map((tag) => tag.toLowerCase().trim()),
-      skill: tutorial.skillLevel as Skill,
-      timeToRead: Number(tutorial.timeToRead),
-      published: new Date(tutorial.publishDate).toISOString(),
-      lang: tutorial.lang || "en",
-      isExternal: true,
-    })
+  const allTags = useMemo(
+    () => getSortedTutorialTagsForLang(filteredTutorialsByLang),
+    [filteredTutorialsByLang]
   )
 
-  const allTutorials: Array<ITutorial> = [
-    ...externalTutorials,
-    ...internalTutorials,
-  ]
-
-  const hasTutorialsCheck = allTutorials.some(
-    (tutorial) => tutorial.lang === pageContext.language
+  const intl = useIntl()
+  const [isModalOpen, setModalOpen] = useState(false)
+  const [filteredTutorials, setFilteredTutorials] = useState(
+    filteredTutorialsByLang
   )
+  const [selectedTags, setSelectedTags] = useState<Array<string>>([])
 
-  const filteredTutorials = allTutorials
-    .filter((tutorial) =>
-      hasTutorialsCheck
-        ? tutorial.lang === pageContext.language
-        : tutorial.lang === "en"
-    )
-    .sort((a, b) => {
-      if (a.published && b.published) {
-        return new Date(b.published).getTime() - new Date(a.published).getTime()
-      }
-      // Dont order if no published is present
-      return 0
-    })
+  useEffect(() => {
+    let tutorials = filteredTutorialsByLang
 
-  // Tally all subject tag counts
-  const tagsConcatenated: Array<string> = []
-  for (const tutorial of filteredTutorials) {
-    if (tutorial.tags) {
-      tagsConcatenated.push(...tutorial.tags)
-    }
-  }
-
-  const allTags = tagsConcatenated.map((tag) => ({ name: tag, totalCount: 1 }))
-  const sanitizedAllTags = Array.from(
-    allTags.reduce(
-      (m, { name, totalCount }) =>
-        m.set(
-          name.toLowerCase().trim(),
-          (m.get(name.toLowerCase().trim()) || 0) + totalCount
-        ),
-      new Map()
-    ),
-    ([name, totalCount]) => ({ name, totalCount })
-  ).sort((a, b) => a.name.localeCompare(b.name))
-
-  const [state, setState] = useState<ITutorialsState>({
-    activeTagNames: [],
-    filteredTutorials: filteredTutorials,
-  })
-
-  const clearActiveTags = () => {
-    setState({
-      activeTagNames: [],
-      filteredTutorials: filteredTutorials,
-    })
-  }
-
-  const handleTagSelect = (tagName: string) => {
-    const activeTagNames = state.activeTagNames
-
-    // Add or remove the selected tag
-    const index = activeTagNames.indexOf(tagName)
-    if (index > -1) {
-      activeTagNames.splice(index, 1)
-    } else {
-      activeTagNames.push(tagName)
-    }
-
-    // If no tags are active, show all tutorials, otherwise filter by active tag
-    let filteredTutorials = allTutorials
-    if (activeTagNames.length > 0) {
-      filteredTutorials = filteredTutorials.filter((tutorial) => {
-        for (const tag of activeTagNames) {
-          if (!tutorial.tags?.includes(tag)) {
-            return false
-          }
-        }
-        return true
+    if (selectedTags.length) {
+      tutorials = tutorials.filter((tutorial) => {
+        return selectedTags.every((tag) => (tutorial.tags || []).includes(tag))
       })
     }
-    setState({ activeTagNames, filteredTutorials })
-  }
 
-  const hasActiveTags = state.activeTagNames.length > 0
-  const hasNoTutorials = state.filteredTutorials.length === 0
-  const [isModalOpen, setModalOpen] = useState(false)
+    setFilteredTutorials(tutorials)
+  }, [selectedTags])
+
+  const handleTagSelect = (tagName: string) => {
+    const tempSelectedTags = selectedTags
+
+    const index = tempSelectedTags.indexOf(tagName)
+    if (index > -1) {
+      tempSelectedTags.splice(index, 1)
+    } else {
+      tempSelectedTags.push(tagName)
+    }
+
+    setSelectedTags([...tempSelectedTags])
+  }
 
   return (
     <StyledPage>
@@ -414,7 +341,7 @@ const TutorialsPage = ({
               <Translation id="page-tutorial-new-github-desc" />
             </p>
             <GithubButton
-              isSecondary
+              variant="outline"
               to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_tutorial.md&title="
             >
               <GithubIcon name="github" />{" "}
@@ -436,7 +363,7 @@ const TutorialsPage = ({
               <Translation id="page-tutorial-pull-request-desc-3" />
             </p>
             <GithubButton
-              isSecondary
+              variant="outline"
               to="https://github.com/ethereum/ethereum-org-website/new/dev/src/content/developers/tutorials"
             >
               <GithubIcon name="github" />{" "}
@@ -453,28 +380,28 @@ const TutorialsPage = ({
       <TutorialContainer>
         <TagsContainer>
           <TagContainer>
-            {sanitizedAllTags.map((tag) => {
-              const name = `${tag.name} (${tag.totalCount})`
-              const isActive = state.activeTagNames.includes(tag.name)
+            {Object.entries(allTags).map(([tagName, tagCount]) => {
+              const name = `${tagName} (${tagCount})`
+              const isActive = selectedTags.includes(tagName)
               return (
                 <Tag
                   name={name}
                   key={name}
                   isActive={isActive}
                   shouldShowIcon={false}
-                  onSelect={handleTagSelect}
-                  value={tag.name}
+                  onClick={handleTagSelect}
+                  value={tagName}
                 />
               )
             })}
-            {hasActiveTags && (
-              <ClearLink onClick={clearActiveTags}>
+            {selectedTags.length > 0 && (
+              <ClearLink onClick={() => setSelectedTags([])}>
                 <Translation id="page-find-wallet-clear" />
               </ClearLink>
             )}
           </TagContainer>
         </TagsContainer>
-        {hasNoTutorials && (
+        {filteredTutorials.length === 0 && (
           <ResultsContainer>
             <Emoji text=":crying_face:" size={3} mb={`2em`} mt={`2em`} />
             <h2>
@@ -485,7 +412,7 @@ const TutorialsPage = ({
             </p>
           </ResultsContainer>
         )}
-        {state.filteredTutorials.map((tutorial) => {
+        {filteredTutorials.map((tutorial) => {
           return (
             <TutorialCard
               key={tutorial.to}
@@ -562,7 +489,6 @@ export const query = graphql`
           skill
           published
           lang
-          preMergeBanner
         }
       }
     }

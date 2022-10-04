@@ -2,14 +2,12 @@
 title: Nodes and clients
 description: An overview of Ethereum nodes and client software, plus how to set up a node and why you should do it.
 lang: en
-sidebar: true
 sidebarDepth: 2
-preMergeBanner: true
 ---
 
 Ethereum is a distributed network of computers (known as nodes) running software that can verify blocks and transaction data. The software application, known as a client, must be run on your computer to turn it into an Ethereum node.
 
-**Note: it is still possible to run an execution client on its own. However, this will no longer be possible after [The Merge](/upgrades/merge). After The Merge, both execution and consensus clients must be run together in order for a user to gain access to the Ethereum network. Some testnets (e.g. Kiln, Ropsten) have already been through their versions of The Merge, meaning execution clients alone are already insufficient for accessing those networks unless they are coupled to a consensus client that can keep track of the head of the chain.**
+**Note: it is not possible to run an execution client on its own anymore. After [The Merge](/upgrades/merge), both execution and consensus clients must be run together in order for a user to gain access to the Ethereum network.**
 
 ## Prerequisites {#prerequisites}
 
@@ -31,7 +29,7 @@ The consensus layer, [the Beacon Chain](/upgrades/beacon-chain/), has been runni
 
 With the Merge, Ethereum transitions to proof-of-stake by connecting these networks. Execution and consensus clients work together to verify Ethereum's state.
 
-Modular design with various software pieces working together is called [encapusalted complexity](https://vitalik.ca/general/2022/02/28/complexity.html). This approach makes it easier to execute The Merge seamlessly and enables the reuse of individual clients, for example, in the [layer 2 ecosystem](/layer-2/).
+Modular design with various software pieces working together is called [encapsulated complexity](https://vitalik.ca/general/2022/02/28/complexity.html). This approach makes it easier to execute The Merge seamlessly and enables the reuse of individual clients, for example, in the [layer 2 ecosystem](/layer-2/).
 
 ![Coupled execution and consensus clients](./eth1eth2client.png)
 Simplified diagram of a coupled execution and consensus client.
@@ -127,7 +125,7 @@ If you're more of a technical user, dive into more details and options on how to
 
 ## Alternatives {#alternatives}
 
-Setting up your own node can cost you time and resources but you don’t always need to run your own instance. In this case, you can use a third party API provider like [Infura](https://infura.io), [Alchemy](https://alchemyapi.io), or [QuikNode](https://www.quiknode.io). Alternatively, [ArchiveNode](https://archivenode.io/) is a community-funded Archive node that hopes to bring archive data on the Ethereum blockchain to independent developers who otherwise couldn't afford it. For an overview of using these services, check out [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/).
+Setting up your own node can cost you time and resources but you don’t always need to run your own instance. In this case, you can use a third party API provider like [Infura](https://infura.io), [Alchemy](https://alchemyapi.io), [Chainstack](https://chainstack.com), or [QuikNode](https://www.quiknode.io). Alternatively, [ArchiveNode](https://archivenode.io/) is a community-funded Archive node that hopes to bring archive data on the Ethereum blockchain to independent developers who otherwise couldn't afford it. For an overview of using these services, check out [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/).
 
 If somebody runs an Ethereum node with a public API in your community, you can point your light wallets (like MetaMask) to a community node [via Custom RPC](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) and gain more privacy than with some random trusted third party.
 
@@ -137,15 +135,17 @@ On the other hand, if you run a client, you can share it with your friends who m
 
 The Ethereum community maintains multiple open-source execution clients (previously known as 'Eth1 clients', or just 'Ethereum clients'), developed by different teams using different programming languages. This makes the network stronger and more diverse. The ideal goal is to achieve diversity without any client dominating to reduce any single points of failure.
 
-This table summarizes the different clients in alphabetical order. All of them are actively maintained to stay updated with network upgrades, follow current specifications and pass [client tests](https://github.com/ethereum/tests).
+This table summarizes the different clients. All of them pass [client tests](https://github.com/ethereum/tests) and are actively maintained to stay updated with network upgrades.
 
-| Client                                                   | Language | Operating systems     | Networks                                   | Sync strategies              | State pruning   |
-| -------------------------------------------------------- | -------- | --------------------- | ------------------------------------------ | ---------------------------- | --------------- |
-| [Akula](https://akula.app)                               | Rust     | Linux                 | Mainnet, Görli, Rinkeby, Ropsten, and more | Full                         | Archive, Pruned |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/) | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more | Fast, Full, Snap, Checkpoint | Archive, Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon)          | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full, Snap                   | Archive, Pruned |
-| [Geth](https://geth.ethereum.org/)                       | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Snap, Full                   | Archive, Pruned |
-| [Nethermind](http://nethermind.io/)                      | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Snap, Fast                   | Archive, Pruned |
+| Client                                          | Language | Operating systems     | Networks                                   | Sync strategies                    | State pruning   |
+| ----------------------------------------------- | -------- | --------------------- | ------------------------------------------ | ---------------------------------- | --------------- |
+| [Geth](https://geth.ethereum.org/)              | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Snap, Full                         | Archive, Pruned |
+| [Nethermind](http://nethermind.io/)             | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Snap (without serving), Fast, Full | Archive, Pruned |
+| [Besu](https://besu.hyperledger.org/en/stable/) | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more | Fast, Full                         | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full                               | Archive, Pruned |
+| [Akula](https://akula.app)                      | Rust     | Linux                 | Mainnet, Görli, Rinkeby, Ropsten, and more | Full                               | Archive, Pruned |
+
+**Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer being maintained.** Use it with caution and preferably switch to another client implementation.
 
 For more on supported networks, read up on [Ethereum networks](/developers/docs/networks/).
 
@@ -159,7 +159,7 @@ Besu's extensive [documentation](https://besu.hyperledger.org/en/stable/) will g
 
 ### Erigon {#erigon}
 
-Erigon, formerly known as Turbo‐Geth, started as a fork of Go Ethereum oriented toward speed and disk‐space efficiency. Erigon is a completely re-architected implementation of Ethereum, currently written in Go but with implementations in other languages in work, e.g. [Akula](https://medium.com/@vorot93/meet-akula-the-fastest-ethereum-implementation-ever-built-58eaca244c39). Erigon's goal is to provide a faster, more modular, and more optimized implementation of Ethereum. It can perform a full archive node sync using around 2TB of disk space, in under 3 days.
+Erigon, formerly known as Turbo‐Geth, started as a fork of Go Ethereum oriented toward speed and disk‐space efficiency. Erigon is a completely re-architected implementation of Ethereum, currently written in Go but with implementations in other languages under development, e.g. [Akula](https://medium.com/@vorot93/meet-akula-the-fastest-ethereum-implementation-ever-built-58eaca244c39). Erigon's goal is to provide a faster, more modular, and more optimized implementation of Ethereum. It can perform a full archive node sync using around 2TB of disk space, in under 3 days.
 
 ### Go Ethereum {#geth}
 
@@ -193,9 +193,11 @@ There are multiple consensus clients (previously known as 'Eth2' clients) to sup
 
 ### Lighthouse {#lighthouse}
 
-Lighthouse is a consensus client implementation written in Rust under the Apache-2.0 license. It is maintained by Sigma Prime and has been stable and production-ready since Beacon Chain genesis. It is relied upon by various enterprises, staking pools and individuals. It aims to be secure, performant and interoperable in a wide range of environments, from desktop PCs to sophisticated automated deployments.
+- Fastest sync strategy developed by Geth, currently its default.
+- Nethermind only implemented the consuming part until now. They are working on enabling serving other nodes soon.
+- Saves a lot of disk usage and network bandwidth without sacrificing security.
 
-Documentation can be found in [Lighthouse Book](https://lighthouse-book.sigmaprime.io/).
+[More on Snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
 
 ### Lodestar {#lodestar}
 
@@ -207,7 +209,12 @@ More information can be found on our [Lodestar website](https://lodestar.chainsa
 
 Nimbus is a consensus client implementation written in Nim under the Apache-2.0 license. It is a production-ready client in use by solo-stakers and staking pools. Nimbus is designed for resource efficiency, making it easy to run on resource-restricted devices and enterprise infrastructure with equal ease, without compromising stability or reward performance. A lighter resource footprint means the client has a greater margin of safety when the network is under stress.
 
-Documentation can be found in the [Nimbus Guide](https://nimbus.guide/).
+Implemented by Trinity. Works like fast sync but also downloads the data needed to execute latest blocks, which allows you to query the chain within the first few minutes from starting.
+
+- Syncs state first and enables you to query RPC in a few minutes.
+- Still in development and not fully reliable, background sync is slowed down and RPC responses might fail.
+
+Learn more in [Nimbus docs](https://nimbus.guide/)
 
 ### Prysm {#prysm}
 
@@ -263,7 +270,13 @@ Snap sync is the latest approach to syncing a client, pioneered by the Geth team
 
 [More on snap sync](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
 
-### Consensus layer sync modes {#consensus-layer-sync-modes}
+| Client       | Disk size (fast sync) | Disk size (full archive) |
+| ------------ | --------------------- | ------------------------ |
+| Geth         | 400GB+                | 6TB+                     |
+| OpenEthereum | 280GB+                | 6TB+                     |
+| Nethermind   | 500GB+                | 12TB+                    |
+| Besu         | 750GB+                | 5TB+                     |
+| Erigon       | N/A                   | 1TB+                     |
 
 #### Optimistic sync {#optimistic-sync}
 

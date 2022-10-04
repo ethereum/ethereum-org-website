@@ -2,7 +2,6 @@
 title: پیشنهادهای بهبود اتریوم (EIP)
 description: اطلاعات پایه‌ای که باید درباره پیشنهادهای بهبود اتریوم (EIPها) بدانید.
 lang: fa
-sidebar: true
 ---
 
 # معرفی پیشنهادهای بهبود اتریوم (EIPها) {#introduction-to-ethereum-improvement-proposals-eips}

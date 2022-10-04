@@ -2,7 +2,6 @@
 title: Nós como serviço
 description: Uma visão inicial dos nós como um serviço, os prós e contras e os provedores mais populares.
 lang: pt-br
-sidebar: true
 sidebarDepth: 2
 ---
 

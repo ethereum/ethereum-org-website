@@ -26,6 +26,7 @@ const ChildrenContainer = styled.div`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   socialIcon: string
 }
 const SocialListItem: React.FC<IProps> = ({ children, socialIcon }) => {

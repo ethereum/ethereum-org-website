@@ -2,7 +2,6 @@
 title: Ethereum untuk pengembang JavaScript
 description: Pelajari cara menjadi pengembang untuk Ethereum menggunakan proyek dan peralatan berbasis JavaScript.
 lang: id
-sidebar: true
 ---
 
 JavaScript adalah salah satu bahasa terpopuler di ekosistem Ethereum. Faktanya, ada sebuah [tim](https://github.com/ethereumjs) yang didedikasikan untuk membawa sebanyak mungkin Ethereum ke JavaScript.

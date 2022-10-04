@@ -3,7 +3,6 @@ title: Beacon Chain
 description: Дізнайтесь про Beacon Chain – перше глобальне оновлення Eth2 для Ethereum.
 lang: uk
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: Beacon Chain ніяк не впливає на поточну роботу Ethereum.
 summaryPoint2: Йдеться лише про координування мережі.

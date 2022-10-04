@@ -2,7 +2,6 @@
 title: Ethereum fehérkönyv
 description: Az Ethereum bemutató kiadványa, melyet 2013-ban adtak ki az indulása előtt.
 lang: hu
-sidebar: true
 sidebarDepth: 2
 ---
 

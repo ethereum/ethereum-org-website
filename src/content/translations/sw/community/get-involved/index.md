@@ -1,7 +1,6 @@
 ---
 title: Nawezaje kushiriki?
 description: Jinsi ya kushiriki kwenye jamii ya Ethereum.
-sidebar: true
 lang: sw
 ---
 

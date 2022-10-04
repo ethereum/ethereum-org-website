@@ -2,7 +2,6 @@
 title: Norme de jeton non fongible ERC-721
 description:
 lang: fr
-sidebar: true
 ---
 
 ## Introduction {#introduction}

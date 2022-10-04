@@ -2,7 +2,6 @@
 title: Управление платформой Ethereum
 description: О том, как принимаются решения по Ethereum.
 lang: ru
-sidebar: true
 ---
 
 # Введение в систему управления Ethereum {#introduction}

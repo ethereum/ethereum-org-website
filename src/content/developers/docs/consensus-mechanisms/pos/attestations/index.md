@@ -2,7 +2,6 @@
 title: Attestations
 description: A description of attestations on proof-of-stake Ethereum.
 lang: en
-sidebar: true
 ---
 
 A validator is expected to create, sign and broadcast an attestation during every epoch. This page outlines what these attestations look like and how they are processed and communciated between consensus clients.

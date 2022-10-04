@@ -1,10 +1,12 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { graphql, useStaticQuery } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import OrderedList from "../OrderedList"
 import Translation from "../Translation"
+
+import { getImage } from "../../utils/image"
 
 const Flex = styled.div`
   display: flex;
@@ -56,7 +58,7 @@ const StakingHowSoloWorks: React.FC<IProps> = () => {
   return (
     <Flex>
       <OrderedList listData={items} />
-      <Image image={getImage(image)} />
+      <Image image={getImage(image)!} alt="" />
     </Flex>
   )
 }

@@ -11,7 +11,6 @@ tags:
   - "contracte inteligente"
 skill: intermediate
 lang: ro
-sidebar: true
 published: 2020-12-31
 source: github.com
 sourceUrl: https://github.com/strykerin/DeFi-Token-Farm

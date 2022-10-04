@@ -228,6 +228,18 @@
     "link": "https://www.meetup.com/NYC_Ethereum/"
   },
   {
+    "title": "Blockchain Wall Street Tech",
+    "emoji": ":us:",
+    "location": "New York City",
+    "link": "https://www.meetup.com/blockchain-wallstreet-tech/"
+  },
+  {
+    "title": "EthPDX",
+    "emoji": ":us:",
+    "location": "Portland",
+    "link": "https://www.meetup.com/ethpdx/"
+  },
+  {
     "title": "Blockchain and Brews (San Diego)",
     "emoji": ":us:",
     "location": "San Diego",
@@ -288,6 +300,12 @@
     "link": "https://www.meetup.com/Chicago-Ethereum-Meetup/"
   },
   {
+    "title": "Matos Cryptobar",
+    "emoji": ":sweden:",
+    "location": "Stockholm",
+    "link": "https://matos.club/"
+  },
+  {
     "title": "Web3Dubai",
     "emoji": ":uae:",
     "location": "Dubai",
@@ -298,5 +316,17 @@
     "emoji": ":uae:",
     "location": "Dubai",
     "link": "https://www.meetup.com/defi-dubai/"
+  },
+  {
+    "title": "ETHAnglia",
+    "emoji": ":gb:",
+    "location": "Norwich",
+    "link": "https://www.ethanglia.org/"
+  },
+  {
+    "title": "CryptoSD",
+    "emoji": ":us:",
+    "location": "San Diego",
+    "link": "http://cryptosandiego.org"
   }
 ]

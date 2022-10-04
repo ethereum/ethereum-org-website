@@ -2,7 +2,6 @@
 title: JavaScript API könyvtárak
 description: Bevezetés az JavaScript kliens könyvtárakba, melyek lehetővé teszik, hogy interakcióba lépj a blokklánccal az alkalmazásodban.
 lang: hu
-sidebar: true
 ---
 
 Ahhoz, hogy egy web alkalmazás interakcióba lépjen az Ethereum blokklánccal (vagyis képes legyen blokklánc adatok olvasására és/vagy tranzakció küldésre a hálózatra), rá kell csatlakoznia egy Ethereum csomópontra.
@@ -265,7 +264,7 @@ ethers.utils.formatEther(balance)
 
 **Alchemyweb3 -** **_Egy Web3.js wrapper automatikus újrapróbálkozásokkal és fejlesztett API-okkal._**
 
-- [Dokumentáció](https://docs.alchemyapi.io/documentation/alchemy-web3)
+- [Dokumentáció](https://docs.alchemy.com/reference/api-overview)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
 ## További olvasnivaló {#further-reading}

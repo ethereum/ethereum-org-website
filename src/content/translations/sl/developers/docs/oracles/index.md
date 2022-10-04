@@ -2,7 +2,6 @@
 title: Oracles
 description: Oraklji pomagajo pridobiti podatke iz resničnega sveta v vašo aplikacijo Ethereum, saj pametne pogodbe ne morejo same poizvedovati po podatkih iz resničnega sveta.
 lang: sl
-sidebar: true
 incomplete: true
 ---
 

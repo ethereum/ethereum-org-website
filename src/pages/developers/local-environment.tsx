@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import styled from "@emotion/styled"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 import { shuffle } from "lodash"
@@ -11,7 +11,6 @@ import { shuffle } from "lodash"
 // import Link from "../../components/Link"
 // import ButtonLink from "../../components/ButtonLink"
 import Translation from "../../components/Translation"
-import { translateMessageId, TranslationKey } from "../../utils/translations"
 import PageMetadata from "../../components/PageMetadata"
 import ProductCard from "../../components/ProductCard"
 import {
@@ -23,6 +22,10 @@ import {
   // InfoBanner,
 } from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
+
+import { translateMessageId, TranslationKey } from "../../utils/translations"
+import { getImage } from "../../utils/image"
+
 import { Context } from "../../types"
 
 const StyledPage = styled(Page)`
@@ -280,7 +283,7 @@ interface IFramework {
   name: string
   description: TranslationKey
   alt: TranslationKey
-  image?: string
+  image?: IGatsbyImageData
 }
 
 const frameworksList: Array<IFramework> = [
@@ -447,7 +450,7 @@ const ChooseStackPage = ({
           </Column>
           <Column>
             <Hero
-              image={getImage(data.hero)}
+              image={getImage(data.hero)!}
               alt={translateMessageId("alt-eth-blocks", intl)}
               loading="eager"
             />

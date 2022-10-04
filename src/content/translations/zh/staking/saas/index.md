@@ -4,7 +4,6 @@ description: 简要介绍如何开始以太币联合质押
 lang: zh
 template: staking
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../../assets/staking/leslie-saas.png
 alt: 莱斯利犀牛在云中漂浮。
 sidebarDepth: 2
@@ -70,27 +69,13 @@ summaryPoints:
 </ExpandableCard>
 
 <ExpandableCard title="为什么有两套密钥？" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
-由此可见， 每个账户都由<em>签名</em>密钥和<em>提现</em>密钥组成。 为便于验证者证实区块链的状态、参与同步委员会以及提交区块，签名密钥需要能被验证者客户端访问。 为此签名密钥必须以某种形式与互联网连接，所以它们本质上被认为是“热”密钥。 这是验证者能够参与证明的必要条件，因此，出于安全原因，用于转移或提取资金的密钥是单独分开的。
+由此可见， 每个账户都由<em>签名</em>密钥和<em>提现</em>密钥组成。 为了让验证者证明链的状态、参与同步委员会并提出区块建议，签名密钥必须易于验证者客户端访问。 为此签名密钥必须以某种形式与互联网连接，所以它们本质上被认为是“热”密钥。 这是验证者能够参与证明的必要条件，因此，出于安全原因，用于转移或提取资金的密钥是单独分开的。
 
 所有这些密钥都可以通过使用你的 24 字助记词恢复。 <em>请确保你安全地备份了助记词，否则当你提现时，可能无法生成提现密钥</em>。
 </ExpandableCard>
 
 <ExpandableCard title="我什么时候可以提现？" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-  将 32 个以太币质押给质押即服务提供商时，你的以太币依然存入官方的质押存款合约中。 因此，目前使用质押即服务的质押人受到和单独质押的用户同样的提现限制。 这意味着质押以太币目前是单向存款。 这种情况会持续到计划在合并后执行的上海升级。
-</ExpandableCard>
-
-<ExpandableCard title="合并将带来什么变化？" eventCategory="SaasStaking" eventName="clicked what will change with the Merge">
-  合并后，使用质押即服务的质押人将会开始接收未消耗掉的交易费或小费。 为了收到这些资金，请与你的提供商联系，确定如何更新你的配置，从而将您控制的以太坊地址填写进去。
-
-合并<em>不</em>会使你能够提取质押的以太币或协议收入，提现功能将在合并后的上海升级中实现，预期时间为六个月至一年。
-</ExpandableCard>
-
-<ExpandableCard title="采用质押即服务的质押人是否需要为合并做任何事？">
-采用质押即服务的质押人<strong>不需要为合并做任何准备</strong>。
-
-对于此次升级，节点运营商务必注意一些事项。 请咨询你的质押提供商，以确保他们的系统已准备就绪。
-
-详细了解 [合并]（/升级/）
+  将 32 个以太币质押给质押即服务提供商时，你的以太币依然存入官方的质押存款合约中。 因此，目前使用质押即服务的质押人受到和单独质押的用户同样的提现限制。 这意味着质押以太币目前是单向存款。 这种情况将一直持续到上海升级为止。
 </ExpandableCard>
 
 <ExpandableCard title="如果我遭到罚没，会发生什么？" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

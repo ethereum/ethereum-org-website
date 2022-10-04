@@ -1,7 +1,6 @@
 ---
 title: Поддержка Ethereum
 description: Получите поддержку в экосистеме Ethereum.
-sidebar: true
 lang: ru
 ---
 

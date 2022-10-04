@@ -38,6 +38,7 @@ import GreenCheck from "../../assets/staking/green-check-product-glyph.svg"
 
 // Utils
 import { trackCustomEvent } from "../../utils/matomo"
+import { getImage } from "../../utils/image"
 
 // Styles
 const Container = styled.table`
@@ -847,6 +848,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                   <div>
                     <Image
                       image={getImage(data[wallet.image_name])!}
+                      alt=""
                       objectFit="contain"
                     />
                   </div>

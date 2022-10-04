@@ -3,14 +3,14 @@ export const Frontmatter = `
     frontmatter: Frontmatter
   }
   type Frontmatter {
-    sidebar: Boolean
+    hideEditButton: Boolean
     sidebarDepth: Int
     incomplete: Boolean
     template: String
-    summaryPoint1: String!
-    summaryPoint2: String!
-    summaryPoint3: String!
-    summaryPoint4: String!
+    summaryPoint1: String
+    summaryPoint2: String
+    summaryPoint3: String
+    summaryPoint4: String
     position: String
     compensation: String
     location: String
@@ -24,6 +24,6 @@ export const Frontmatter = `
     author: String
     tags: [String]
     isOutdated: Boolean
-    preMergeBanner: Boolean
+    postMergeBannerTranslation: String
   }
 `

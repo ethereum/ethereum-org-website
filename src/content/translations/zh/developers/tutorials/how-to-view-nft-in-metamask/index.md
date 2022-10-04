@@ -1,7 +1,7 @@
 ---
 title: 如何在钱包中查看您的非同质化代币（非同质化代币系列教程第 3/3 部分）
 description: 本教程介绍了如何在 MetaMask 上查看所持有的非同质化代币！
-author: "Sumi Mudgil"
+author: "苏米-穆德吉尔"
 tags:
   - "NFT"
   - "ERC-721"
@@ -11,7 +11,6 @@ tags:
   - "Solidity"
 skill: beginner
 lang: zh
-sidebar: true
 published: 2021-04-22
 ---
 
@@ -19,7 +18,7 @@ published: 2021-04-22
 
 恭喜！ 您已经来到我们非同质化代币系列教程中最短和最简单的部分——如何在虚拟钱包中查看您刚刚铸造的非同质化代币。 本示例中，我们将继续使用前两部分用过的 MetaMask。
 
-作为一个前提条件，您应该已经在移动设备上安装了 MetaMask， 并且它应该包含您铸造非同质化代币的账户——您可以在 [iOS](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202) 或 [Android](https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US) 免费获得该应用程序。
+作为一个前提条件，您应该已经在移动设备上安装了 MetaMask， 并且它应该包含您铸造非同质化代币的帐户——您可以在 [iOS](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202) 或 [Android](https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US) 免费获得该应用程序。
 
 ## 第 1 步：将你的网络设置为 Ropsten {#set-network-to-ropsten}
 

@@ -1,7 +1,6 @@
 ---
 title: Asistență pentru Ethereum
 description: Obțineți asistență în ecosistemul Ethereum.
-sidebar: true
 lang: ro
 ---
 

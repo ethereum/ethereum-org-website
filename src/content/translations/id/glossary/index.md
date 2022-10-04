@@ -2,7 +2,6 @@
 title: Glosarium Ethereum
 description: Glosarium istilah teknis dan non-teknis yang tidak lengkap terkait dengan Ethereum
 lang: id
-sidebar: true
 sidebarDepth: 2
 ---
 

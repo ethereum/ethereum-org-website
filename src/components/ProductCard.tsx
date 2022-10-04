@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
 import styled from "@emotion/styled"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import { useQuery, gql } from "@apollo/client"
 
 import GitStars from "./GitStars"
@@ -140,9 +140,10 @@ const REPO_DATA = gql`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   url: string
   background: string
-  image: string
+  image: IGatsbyImageData | string
   name: string
   description?: ReactNode
   note?: string
@@ -183,18 +184,12 @@ const ProductCard: React.FC<IProps> = ({
 
   const hasRepoData = data && data.repository && !error
 
-  // Check if image is an svg as gatsby-plugin-image doesn't support svg
-  let isSvg = false
-  if (typeof image === "string") {
-    if (image.includes("svg")) {
-      isSvg = true
-    }
-  }
+  const isImgSrc = typeof image === "string"
 
   return (
     <Card>
       <ImageWrapper background={background}>
-        {isSvg ? (
+        {isImgSrc ? (
           <img src={image} alt={alt} />
         ) : (
           <Image image={image} alt={alt} objectFit="contain" />
@@ -227,7 +222,9 @@ const ProductCard: React.FC<IProps> = ({
             )
           )}
       </SubjectContainer>
-      <StyledButtonLink to={url}>Open {name}</StyledButtonLink>
+      <StyledButtonLink h={20} to={url}>
+        Open {name}
+      </StyledButtonLink>
     </Card>
   )
 }

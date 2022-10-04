@@ -2,7 +2,6 @@
 title: Mitwirken
 description: Mehr erfahren über die verschiedenen Wege, um einen Beitrag zu ethereum.org zu leisten
 lang: de
-sidebar: true
 ---
 
 # Mitwirken bei ethereum.org 🦄 {#contributing-to-ethereumorg}
