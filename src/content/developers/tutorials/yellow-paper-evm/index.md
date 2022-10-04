@@ -82,7 +82,7 @@ The function _C<sub>mem</sub>_ is defined in equation 326: _C<sub>mem</sub>(a) =
 
 **Note** that these factors only influence the _inherent_ gas cost - it does not take into account the fee market or tips to validators that determine how much an end user is required to pay - this is just the raw cost of running a particular operation on the EVM.
 
-Read more about [gas](/developers/docs/gas/#top).
+[Read more about gas](/developers/docs/gas/).
 
 ## 9.3 Execution environment {#93-execution-env}
 
