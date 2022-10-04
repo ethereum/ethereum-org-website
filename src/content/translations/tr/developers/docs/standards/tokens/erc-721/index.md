@@ -2,7 +2,6 @@
 title: ERC-721 Değiştirilemeyen Token Standardı
 description:
 lang: tr
-sidebar: true
 ---
 
 ## Giriş {#introduction}

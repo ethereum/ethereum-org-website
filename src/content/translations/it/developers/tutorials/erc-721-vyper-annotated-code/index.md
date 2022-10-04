@@ -3,7 +3,6 @@ title: "Guisa sul Contratto ERC-721 Vyper"
 description: Il contratto ERC-721 di Ryuya Nakamura e come funziona
 author: Ori Pomerantz
 lang: it
-sidebar: true
 tags:
   - "vyper"
   - "erc-721"

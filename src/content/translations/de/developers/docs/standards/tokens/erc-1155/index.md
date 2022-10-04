@@ -2,7 +2,6 @@
 title: ERC-1155 Token-Standard
 description:
 lang: de
-sidebar: true
 ---
 
 ## Einführung {#introduction}

@@ -2,7 +2,6 @@
 title: Oracle
 description: Oracle membantu memasukkan data dunia nyata ke dalam aplikasi Ethereum Anda karena kontrak pintar tidak dapat membuat kueri data dunia nyata dengan sendirinya.
 lang: id
-sidebar: true
 incomplete: true
 ---
 

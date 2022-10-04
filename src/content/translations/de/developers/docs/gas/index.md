@@ -2,7 +2,6 @@
 title: Gas und Gebühren
 description:
 lang: de
-sidebar: true
 ---
 
 Gas ist für das Ethereum-Netzwerk unerlässlich. Es ist der Treibstoff, der Ethereum den Betrieb ermöglicht, so wie ein Auto Benzin braucht, um zu fahren.

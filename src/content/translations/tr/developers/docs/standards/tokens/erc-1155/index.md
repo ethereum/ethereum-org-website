@@ -2,7 +2,6 @@
 title: ERC-1155 Çoklu Token Standardı
 description:
 lang: tr
-sidebar: true
 ---
 
 ## Giriş {#introduction}

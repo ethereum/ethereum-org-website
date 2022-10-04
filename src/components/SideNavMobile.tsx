@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { motion, AnimatePresence } from "framer-motion"
 
 import Icon from "./Icon"
@@ -100,6 +100,7 @@ const SideNavLink = styled(Link)`
   text-decoration: none;
   color: ${(props) => props.theme.colors.text};
   &:hover {
+    text-decoration: none;
     color: ${(props) => props.theme.colors.primary};
   }
   &.active {

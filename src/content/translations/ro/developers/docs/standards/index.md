@@ -2,7 +2,6 @@
 title: Standarde de dezvoltare Ethereum
 description:
 lang: ro
-sidebar: true
 incomplete: true
 ---
 

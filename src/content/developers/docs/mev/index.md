@@ -2,27 +2,25 @@
 title: Maximal extractable value (MEV)
 description: An introduction to maximal extractable value (MEV)
 lang: en
-sidebar: true
-preMergeBanner: true
 ---
 
 Maximal extractable value (MEV) refers to the maximum value that can be extracted from block production in excess of the standard block reward and gas fees by including, excluding, and changing the order of transactions in a block.
 
-### Miner extractable value
+### Miner extractable value {#miner-extractable-value}
 
-This concept was first applied in the context of [proof-of-work](/developers/docs/consensus-mechanisms/pow/), and was initially referred to as "miner extractable value". This is because in proof-of-work, miners control transaction inclusion, exclusion, and ordering. However, after the transition to proof-of-stake via [The Merge](/upgrades/merge) validators will be responsible for these roles, and mining will no longer be applicable. The value extraction methods here will still persist after this transition, and thus the term "miner extractable value" is no longer valid. "Maximal extractable value" is now used as a more inclusive replacement.
+Maximal extractable value was first applied in the context of [proof-of-work](/developers/docs/consensus-mechanisms/pow/), and initially referred to as "miner extractable value". This is because in proof-of-work, miners control transaction inclusion, exclusion, and ordering. However, since the transition to proof-of-stake via [The Merge](/upgrades/merge) validators have been responsible for these roles, and mining is no longer part of the Ethereum protocol. The value extraction methods still exist, though, so the term "Maximal extractable value" is now used instead.
 
 ## Prerequisites {#prerequisites}
 
-Make sure you're familiar with [transactions](/developers/docs/transactions/), [blocks](/developers/docs/blocks/), [gas](/developers/docs/gas/), and [mining](/developers/docs/consensus-mechanisms/pow/mining/). Familiarity with [dapps](/dapps/) and [DeFi](/defi/) is helpful as well.
+Make sure you're familiar with [transactions](/developers/docs/transactions/), [blocks](/developers/docs/blocks/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos) and [gas](/developers/docs/gas/). Familiarity with [dapps](/dapps/) and [DeFi](/defi/) is helpful as well.
 
 ## MEV extraction {#mev-extraction}
 
-In theory MEV accrues entirely to miners/validators because they are the only party that can guarantee the execution of a profitable MEV opportunity. In practice, however, a large portion of MEV is extracted by independent network participants referred to as "searchers." Searchers run complex algorithms on blockchain data to detect profitable MEV opportunities and have bots to automatically submit those profitable transactions to the network.
+In theory MEV accrues entirely to validators because they are the only party that can guarantee the execution of a profitable MEV opportunity. In practice, however, a large portion of MEV is extracted by independent network participants referred to as "searchers." Searchers run complex algorithms on blockchain data to detect profitable MEV opportunities and have bots to automatically submit those profitable transactions to the network.
 
-Miners/validators do get a portion of the full MEV amount anyway because searchers are willing to pay high gas fees (which go to the miner/validator) in exchange for higher likelihood of inclusion of their profitable transactions in a block. Assuming searchers are economically rational, the gas fee that a searcher is willing to pay will be an amount up to 100% of the searcher's MEV (because if the gas fee was higher, the searcher would lose money).
+Validators do get a portion of the full MEV amount anyway because searchers are willing to pay high gas fees (which go to the validator) in exchange for higher likelihood of inclusion of their profitable transactions in a block. Assuming searchers are economically rational, the gas fee that a searcher is willing to pay will be an amount up to 100% of the searcher's MEV (because if the gas fee was higher, the searcher would lose money).
 
-With that, for some highly competitive MEV opportunities, such as [DEX arbitrage](#mev-examples-dex-arbitrage), searchers may have to pay 90% or even more of their total MEV revenue in gas fees to the miner/validator because so many people want to run the same profitable arbitrage trade. This is because the only way to guarantee that their arbitrage transaction runs is if they submit the transaction with the highest gas price.
+With that, for some highly competitive MEV opportunities, such as [DEX arbitrage](#mev-examples-dex-arbitrage), searchers may have to pay 90% or even more of their total MEV revenue in gas fees to the validator because so many people want to run the same profitable arbitrage trade. This is because the only way to guarantee that their arbitrage transaction runs is if they submit the transaction with the highest gas price.
 
 ### Gas golfing {#mev-extraction-gas-golfing}
 
@@ -36,9 +34,7 @@ Rather than programming complex algorithms to detect profitable MEV opportunitie
 
 ### Flashbots {#mev-extraction-flashbots}
 
-Flashbots is an independent project which extends the go-ethereum client with a service that allows searchers to submit MEV transactions to miners without revealing them to the public mempool. This prevents transactions from being frontrun by generalized frontrunners.
-
-As of this writing, a significant portion of MEV transactions is routed through Flashbots, meaning generalized frontrunners aren't as effective as they used to be.
+Flashbots is an independent project which extends execution clients with a service that allows searchers to submit MEV transactions to validators without revealing them to the public mempool. This prevents transactions from being frontrun by generalized frontrunners.
 
 ## MEV examples {#mev-examples}
 
@@ -56,7 +52,9 @@ It works like this: if two DEXes are offering a token at two different prices, s
 
 Lending protocol liquidations present another well-known MEV opportunity.
 
-Lending protocols like Maker and Aave function by requiring users to deposit some sort of collateral (e.g. ETH). Users can then borrow different assets and tokens from others depending on what they need (for example, they may borrow MKR if they want to vote on a MakerDAO governance proposal or SUSHI if they want to earn a portion of trading fees on Sushiswap) up to a certain amount of their deposited collateral — for instance, 30% (the exact borrowing power percentage is determined by the protocol). The users they borrow the other tokens from function as lenders in this case.
+Lending protocols like Maker and Aave require users to deposit some collateral (e.g. ETH). This deposited collateral is then used to then lend out to other users.
+
+Users can then borrow assets and tokens from others depending on what they need (e.g. you might borrow MKR if you want to vote in a MakerDAO governance proposal) up to a certain percentage of their deposited collateral. For example, if the borrowing amount is a maximum of 30%, a user who deposits 100 DAI into the protocol can borrow up to 30 DAI worth of another asset. The protocol determines the exact borrowing power percentage.
 
 As the value of a borrower's collateral fluctuates, so too does their borrowing power. If, due to market fluctuations, the value of borrowed assets exceeds say, 30% of the value of their collateral (again, the exact percentage is determined by the protocol), the protocol typically allows anyone to liquidate the collateral, instantly paying off the lenders (this is similar to how [margin calls](https://www.investopedia.com/terms/m/margincall.asp) work in traditional finance). If liquidated, the borrower usually has to pay a hefty liquidation fee, some of which goes to the liquidator — which is where the MEV opportunity comes in.
 
@@ -104,7 +102,7 @@ At the application layer, some forms of MEV, like sandwich trading, result in an
 
 At the network layer, generalized frontrunners and the gas-price auctions they often engage in (when two or more frontrunners compete for their transaction to be included in the next block by progressively raising their own transactions' gas price) result in network congestion and high gas prices for everyone else trying to run regular transactions.
 
-Beyond what's happening _within_ blocks, MEV can have deleterious effects _between_ blocks. If the MEV available in a block significantly exceeds the standard block reward, miners may be incentivized to remine blocks and capture the MEV for themselves, causing blockchain re-organization and consensus instability.
+Beyond what's happening _within_ blocks, MEV can have deleterious effects _between_ blocks. If the MEV available in a block significantly exceeds the standard block reward, validators may be incentivized to reorg blocks and capture the MEV for themselves, causing blockchain re-organization and consensus instability.
 
 This possibility of blockchain re-organization has been [previously explored on the Bitcoin blockchain](https://dl.acm.org/doi/10.1145/2976749.2978408). As Bitcoin's block reward halves and transaction fees make up a greater and greater portion of the block reward, situations arise where it becomes economically rational for miners to give up the next block's reward and instead remine past blocks with higher fees. With the growth of MEV, the same sort of situation could occur in Ethereum, threatening the integrity of the blockchain.
 
@@ -112,9 +110,9 @@ This possibility of blockchain re-organization has been [previously explored on 
 
 MEV extraction ballooned in early 2021, resulting in extremely high gas prices in the first few months of the year. The emergence of Flashbots's MEV relay has reduced the effectiveness of generalized frontrunners and has taken gas price auctions off-chain, lowering gas prices for ordinary users.
 
-While many searchers are still making good money from MEV, as opportunities become more well-known and more and more searchers compete for the same opportunity, miners/validators will capture more and more total MEV revenue (because the same sort of gas auctions as originally described above also occur in Flashbots, albeit privately, and miners will capture the resulting gas revenue). MEV is also not unique to Ethereum, and as opportunities become more competitive on Ethereum, searchers are moving to alternate blockchains like Binance Smart Chain, where similar MEV opportunities as those on Ethereum exist with less competition.
+While many searchers are still making good money from MEV, as opportunities become more well-known and more and more searchers compete for the same opportunity, validators will capture more and more total MEV revenue (because the same sort of gas auctions as originally described above also occur in Flashbots, albeit privately, and validators will capture the resulting gas revenue). MEV is also not unique to Ethereum, and as opportunities become more competitive on Ethereum, searchers are moving to alternate blockchains like Binance Smart Chain, where similar MEV opportunities as those on Ethereum exist with less competition.
 
-As DeFi grows and increases in popularity, MEV may soon significantly outweigh the base Ethereum block reward. With that comes a growing possibility of selfish block remining and consensus instability. Some consider this to be an existential threat to Ethereum, and disincentivizing selfish mining is an active area of research in Ethereum protocol theory. One solution currently being explored is [MEV reward smoothing](https://ethresear.ch/t/committee-driven-mev-smoothing/10408).
+On the other hand, the transition from proof-of-work to proof-of-stake and the ongoing effort to scale Ethereum using rollups and sharding all change the MEV landscape in ways that are still somewhat unclear. It is not yet well known how having guaranteed block-proposers known slightly in advance changes the dynamics of MEV extraction compared to the probabilistic model in proof-of-work or how this will be disrupted when [single secret leader election](https://ethresear.ch/t/secret-non-single-leader-election/11789) and [distributed validator technology](https://github.com/ethereum/distributed-validator-specs) get implemented. Similarly, it remains to be seen what MEV opportunities exist when most user activity is ported away from Ethereum and onto its layer 2 rollups and shards.
 
 ## MEV in Ethereum Proof-of-Stake (PoS) {#mev-in-ethereum-proof-of-stake}
 
@@ -204,8 +202,9 @@ Some projects, such as MEV Boost, use the Builder API as part of an overall stru
 
 ## Related resources {#related-resources}
 
-- [Flashbots GitHub](https://github.com/flashbots/pm) - _Collection of resources to learn about the Flashbots project_
-- [MEV-Explore](https://explore.flashbots.net/) - _Dashboard and live transaction explorer for MEV transactions_
+- [Flashbots docs](https://docs.flashbots.net/)
+- [Flashbots GitHub](https://github.com/flashbots/pm)
+- [MEV-Explore](https://explore.flashbots.net/) _Dashboard and live transaction explorer for MEV transactions_
 - [mevboost.org](https://www.mevboost.org/) - _Tracker with real-time stats for MEV-Boost relays and block builders_
 
 ## Further reading {#further-reading}
@@ -219,3 +218,4 @@ Some projects, such as MEV Boost, use the Builder API as part of an overall stru
 - [MEV-Boost: Merge ready Flashbots Architecture](https://ethresear.ch/t/mev-boost-merge-ready-flashbots-architecture/11177)
 - [What Is MEV Boost](https://www.alchemy.com/overviews/mev-boost)
 - [Why run mev-boost?](https://writings.flashbots.net/writings/why-run-mevboost/)
+- [The Hitchhikers Guide To Ethereum](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum)

@@ -1,28 +1,10 @@
 import React from "react"
-import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
-
-const StyledCard = styled.div`
-  background: ${(props) => props.theme.colors.searchBackground};
-  border-radius: 4px;
-  border: 1px solid ${(props) => props.theme.colors.lightBorder};
-  padding: 1.5rem;
-`
-
-const Image = styled(GatsbyImage)`
-  & > img {
-    width: 3em !important;
-    height: 3em !important;
-    margin-bottom: 1em !important;
-  }
-`
-
-const Description = styled.p`
-  opacity: 0.8;
-`
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
+import { Box, Heading, Image, Text } from "@chakra-ui/react"
 
 export interface IProps {
-  image: string
+  children?: React.ReactNode
+  image: IGatsbyImageData
   alt: string
   title: string
   description: string
@@ -35,14 +17,19 @@ const ImageCard: React.FC<IProps> = ({
   title,
   description,
   children,
-  className,
 }) => (
-  <StyledCard className={className}>
-    <Image image={image} alt={alt} />
-    <h3>{title}</h3>
-    <Description>{description}</Description>
+  <Box
+    bg="searchBackground"
+    borderRadius="base"
+    border="1px"
+    borderColor="lightBorder"
+    p={6}
+  >
+    <Image as={GatsbyImage} image={image} alt={alt} w={12} h={12} mb={4} />
+    <Heading as="h3">{title}</Heading>
+    <Text opacity={0.8}>{description}</Text>
     {children}
-  </StyledCard>
+  </Box>
 )
 
 export default ImageCard

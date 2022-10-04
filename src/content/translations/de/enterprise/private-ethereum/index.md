@@ -2,7 +2,6 @@
 title: Privates Ethereum für Unternehmen
 description: Ressourcen für Unternehmensanwendungen auf privaten Ethereum-Blockchains.
 lang: de
-sidebar: true
 ---
 
 # Privates Ethereum für Unternehmen {#private-ethereum-for-enterprise}

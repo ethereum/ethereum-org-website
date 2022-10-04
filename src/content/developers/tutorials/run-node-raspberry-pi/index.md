@@ -4,12 +4,11 @@ description: Flash your Raspberry Pi 4, plug in an ethernet cable, connect the S
 author: "EthereumOnArm"
 tags: ["clients", "execution layer", "consensus layer", "nodes"]
 lang: en
-sidebar: true
 skill: intermediate
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/kiln/kiln-testnet.html
-preMergeBanner: true
+postMergeBannerTranslation: page-upgrades-post-merge-banner-tutorial-ood
 ---
 
 **Ethereum on Arm is a custom Linux image that can turn a Raspberry Pi into an Ethereum node.**

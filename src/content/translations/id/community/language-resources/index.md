@@ -1,7 +1,6 @@
 ---
 title: Sumber bahasa
 description: Sumber non-Inggris untuk belajar tentang Ethereum
-sidebar: true
 lang: id
 ---
 

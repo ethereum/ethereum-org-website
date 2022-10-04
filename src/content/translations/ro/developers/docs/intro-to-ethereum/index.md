@@ -2,7 +2,6 @@
 title: Introducere despre Ethereum
 description: Introducere din partea unui dezvoltator de aplicații dapp despre conceptele de bază ale lui Ethereum.
 lang: ro
-sidebar: true
 ---
 
 ## Ce este un blockchain? {#what-is-a-blockchain}

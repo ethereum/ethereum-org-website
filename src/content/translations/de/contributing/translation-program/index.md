@@ -2,7 +2,6 @@
 title: Übersetzungsprogramm
 lang: de
 description: So können Sie einen Beitrag zum Übersetzungsprogramm von ethereum.org leisten
-sidebar: true
 ---
 
 # Übersetzungsprogramm {#translation-program}
@@ -174,7 +173,3 @@ Wir sind bestrebt, Ethereum-Inhalte in so viele Sprachen wie möglich zu überse
 Daher haben wir ein [Playbook für Übersetzungsprogramme](/contributing/translation-program/playbook/) erstellt, das einige Tipps und Best Practices enthält, die wir während der Übersetzung von ethereum.org gesammelt haben.
 
 Möchten Sie Ihre Zusammenarbeit fortführen oder einige unserer Übersetzungsressourcen nutzen? Haben Sie Feedback zum Playbook? Wir würden uns freuen, von Ihnen zu hören: translations@ethereum.org.
-
-## Nicht abgeschlossene Übersetzungen {#in-progress}
-
-<TranslationsInProgress />

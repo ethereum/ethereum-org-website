@@ -2,7 +2,6 @@
 title: Inhaltsressourcen hinzufügen
 lang: de
 description: Unsere Kriterien für die Auflistung von Inhaltsressourcen auf ethereum.org
-sidebar: true
 ---
 
 # Inhaltsressourcen hinzufügen {#adding-content-resources}

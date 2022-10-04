@@ -3,7 +3,6 @@ title: La chaîne phare
 description: En savoir plus sur la chaîne phare - la mise à niveau qui a introduit la preuve d'enjeu d'Ethereum.
 lang: fr
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: La chaîne phare ne change rien à la manière actuelle d'utiliser Ethereum.
 summaryPoint2: Elle assurera la coordination du réseau, en servant de couche de consensus.

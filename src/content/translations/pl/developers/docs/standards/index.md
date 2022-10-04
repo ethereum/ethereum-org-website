@@ -2,7 +2,6 @@
 title: Standardy rozwoju Ethereum
 description:
 lang: pl
-sidebar: true
 incomplete: true
 ---
 

@@ -2,7 +2,6 @@
 title: Ethereum pentru dezvoltatorii Python
 description: Învățați cum să faceţi dezvoltare pentru Ethereum folosind proiecte şi instrumente bazate pe pzthon
 lang: ro
-sidebar: true
 incomplete: true
 ---
 

@@ -1,6 +1,6 @@
 import React from "react"
-import styled from "styled-components"
-import Emoji from "./Emoji"
+import styled from "@emotion/styled"
+import Emoji from "./OldEmoji"
 import ButtonLink from "./ButtonLink"
 
 const StyledCard = styled.div`

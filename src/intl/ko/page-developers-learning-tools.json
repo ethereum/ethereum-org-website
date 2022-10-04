@@ -35,11 +35,15 @@
   "page-learning-tools-remix-logo-alt": "Remix 로고",
   "page-learning-tools-sandbox": "코드 샌드박스",
   "page-learning-tools-sandbox-desc": "다음 샌드박스는 스마트 계약을 작성하고 이더리움을 이해하도록 실험할 수 있는 공간을 제공합니다.",
+  "page-learning-tools-speed-run-ethereum-description": "Speed Run Ethereum은 Scaffold-ETH를 사용하여 솔리디티 지식을 테스트할 수 있는 일련의 과제입니다.",
+  "page-learning-tools-speed-run-ethereum-logo-alt": "Speed Run Ethereum 로고",
   "page-learning-tools-studio-description": "웹 기반의 IDE에서는 튜토리얼을 따라 스마트 계약을 만들고 테스트하며, 프런트엔드를 구축할 수 있습니다.",
   "page-learning-tools-vyperfun-description": "자신만의 포켓몬 게임을 만들며 Vyper를 배워보기.",
   "page-learning-tools-vyperfun-logo-alt": "Vyper.fun 로고",
   "page-learning-tools-nftschool-description": "대체 불가 토큰(NFT)의 기술적인 측면에서 발생하는 내용 살펴보기.",
   "page-learning-tools-nftschool-logo-alt": "NFT 스쿨 로고",
   "page-learning-tools-pointer-description": "재미있는 양방향 튜토리얼로 웹3 개발자 기술을 학습하고, 그 과정에서 암호화폐 보상을 받기.",
-  "page-learning-tools-pointer-logo-alt": "Pointer 로고"
+  "page-learning-tools-pointer-logo-alt": "Pointer 로고",
+  "page-learning-tools-platzi-description": "웹3에서 디앱을 개발하는 방법을 알아보고 블록체인 개발자가 되기 위해 필요한 기술을 완벽하게 습득하기.",
+  "page-learning-tools-platzi-logo-alt": "Platzi 로고"
 }

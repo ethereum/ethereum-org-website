@@ -2,7 +2,6 @@
 title: Zero-Knowledge Rollups
 description: Introduction to zero-knowledge rollups
 lang: ro
-sidebar: true
 ---
 
 ## Cerințe prealabile {#prerequisites}

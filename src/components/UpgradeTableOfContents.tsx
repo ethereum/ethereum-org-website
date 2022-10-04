@@ -1,7 +1,7 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { Link } from "gatsby"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import type { Item as ItemTableOfContents } from "./TableOfContents"
 
@@ -79,7 +79,7 @@ const TableOfContentsLink: React.FC<IPropsTableOfContentsLink> = ({
     isActive = window.location.hash === url
   }
   const isNested: boolean = depth === 2
-  let classes: string = ""
+  let classes = ""
   if (isActive) {
     classes += " active"
   }

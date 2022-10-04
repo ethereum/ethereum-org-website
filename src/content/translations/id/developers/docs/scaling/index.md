@@ -2,7 +2,6 @@
 title: Penskalaan
 description: Pengenalan tentang opsi penskalaan berbeda yang sedang dikembangkan saat ini oleh komunitas Ethereum.
 lang: id
-sidebar: true
 ---
 
 ## Gambaran umum penskalaan {#scaling-overview}

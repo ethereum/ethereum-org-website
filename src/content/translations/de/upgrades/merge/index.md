@@ -3,7 +3,6 @@ title: Die Zusammenführung
 description: Erfahren Sie mehr über die Zusammenführung, wenn das Ethereum-Mainnet mit dem durch die Beacon Chain koordinierten Proof-of-Stake-System verbunden wird.
 lang: de
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: Letztendlich wird das derzeitige Ethereum-Mainnet mit dem Proof-of-Stake-System der Bacon Chain zusammengeführt.
 summaryPoint2: Das markiert das Ende des Proof-of-Work für Ethereum sowie den vollständigen Übergang zu Proof-of-Stake.

@@ -2,7 +2,6 @@
 title: Documentație de dezvoltare pentru Ethereum
 description: Prezentarea documentației pentru dezvoltatorii ethereum.org.
 lang: ro
-sidebar: true
 ---
 
 Această documentație este concepută pentru a vă ajuta să construiţi cu Ethereum. Tratează Ethereum ca un concept, explică stiva tehnică Ethereum și documentează subiecte avansate pentru aplicații și cazuri de utilizare mai complexe.

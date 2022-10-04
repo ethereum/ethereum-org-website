@@ -2,7 +2,6 @@
 title: JSON-RPC-API
 description: Ein zustandsloses, leichtgewichtiges Remote Procedure Call (RPC)-Protokoll für Ethereum-Clients
 lang: de
-sidebar: true
 ---
 
 Damit eine Softwareanwendung mit der Ethereum-Blockchain interagieren kann (indem sie Blockchain-Daten liest und/oder Transaktionen an das Netzwerk sendet), muss sie sich mit einem Ethereum-Node verbinden.

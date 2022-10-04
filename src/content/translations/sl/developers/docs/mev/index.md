@@ -2,7 +2,6 @@
 title: Maksimalna pridobljiva vrednost (MEV)
 description: Uvod v maksimalno pridobljivo vrednost (MEV)
 lang: sl
-sidebar: true
 ---
 
 Maksimalna pridobljiva vrednost (MEV) se nanaša na maksimalno vrednost, ki se lahko pridobi pri izdelavi bloka poleg standardne blokovne nagrade in provizij goriva z vključevanjem, izključevanjem in spreminjanjem vrstnega reda transakcij v bloku.

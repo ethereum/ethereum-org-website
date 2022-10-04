@@ -2,7 +2,6 @@
 title: Pengantar kontrak pintar
 description: Gambaran umum kontrak pintar, yang berfokus pada karakteristik dan batasan uniknya.
 lang: id
-sidebar: true
 ---
 
 ## Apa itu kontrak pintar? {#what-is-a-smart-contract}

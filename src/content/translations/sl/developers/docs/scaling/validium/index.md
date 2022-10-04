@@ -2,7 +2,6 @@
 title: Validium
 description: Uvod v Validium kot rešitev za razširljivost, ki jo trenutno uporablja skupnost Ethereum.
 lang: sl
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---

@@ -3,7 +3,6 @@ title: Cadeias de fragmentos
 description: "Aprenda sobre as cadeias de fragmentos: partições da rede que aumentam a capacidade de transações de Ethereum e facilitam o seu funcionamento."
 lang: pt-br
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: A fragmentação é uma atualização para melhorar o dimensionamento e a capacidade do Ethereum.
 summaryPoint2: As cadeias de fragmentos distribuem a carga da rede por 64 novas cadeias.

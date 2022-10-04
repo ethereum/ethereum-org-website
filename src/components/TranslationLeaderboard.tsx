@@ -1,10 +1,10 @@
 // Libraries
 import React, { useState } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { reverse, sortBy } from "lodash"
 
 // Components
-import Emoji from "./Emoji"
+import Emoji from "./OldEmoji"
 import { Option, OptionContainer, OptionText } from "./SharedStyledComponents"
 import Translation from "./Translation"
 

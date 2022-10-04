@@ -5,7 +5,6 @@ author: "jdourlens"
 tags: ["smart contracts", "remix", "solidity", "events"]
 skill: intermediate
 lang: en
-sidebar: true
 published: 2020-04-03
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/logging-data-with-events/
