@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import Link from "./Link"
 import Translation from "./Translation"
@@ -75,6 +75,7 @@ const LinkRow = styled(Link)`
   padding: 1rem;
   width: 100%;
   &:hover {
+    text-decoration: none;
     box-shadow: 0 0 1px ${(props) => props.theme.colors.text};
     background: ${(props) => props.theme.colors.primary200};
     color: ${(props) => props.theme.colors.black300};

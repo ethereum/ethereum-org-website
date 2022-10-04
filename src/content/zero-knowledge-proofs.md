@@ -2,10 +2,9 @@
 title: Zero-knowledge proofs
 description: An non-technical introduction to zero-knowledge proofs for beginners.
 lang: en
-sidebar: true
 ---
 
-## What are zero-knowledge proofs?
+## What are zero-knowledge proofs? {#what-are-zk-proofs}
 
 A zero-knowledge proof is a way of proving the validity of a statement without revealing the statement itself. The ‘prover’ is the party trying to prove a claim, while the ‘verifier’ is responsible for validating the claim.
 
@@ -43,7 +42,7 @@ In basic form, a zero-knowledge proof is made up of three elements: **witness**,
 
 - **Challenge**: The verifier randomly picks another question from the set and asks the prover to answer it.
 
-- **Response**: The prover accepts the question, calculates the answer, and returns it to the verifier. The prover’s response allows the verifier to check if the former really has access to the witness. To ensure the prover isn’t guessing blindly and getting the correct answers by chance, the verifier picks more questions to ask. By repeating this interaction many times, the possibility of the verifier faking knowledge of the witness drops significantly until the verifier is satisfied.
+- **Response**: The prover accepts the question, calculates the answer, and returns it to the verifier. The prover’s response allows the verifier to check if the former really has access to the witness. To ensure the prover isn’t guessing blindly and getting the correct answers by chance, the verifier picks more questions to ask. By repeating this interaction many times, the possibility of the prover faking knowledge of the witness drops significantly until the verifier is satisfied.
 
 The above describes the structure of an ‘interactive zero-knowledge proof’. Early zero-knowledge protocols used interactive proving, where verifying the validity of a statement required back-and-forth communication between provers and verifiers.
 
@@ -57,7 +56,7 @@ To solve this problem, Manuel Blum, Paul Feldman, and Silvio Micali suggested th
 
 Unlike interactive proofs, noninteractive proofs required only one round of communication between participants (prover and verifier). The prover passes the secret information to a special algorithm to compute a zero-knowledge proof. This proof is sent to the verifier, who checks that the prover knows the secret information using another algorithm.
 
-Non-interactive proving reduces communication between prover and verifier, making zk-proofs more efficient. Moreover, once a proof is generated, it is available for anyone else (with access to the shared key and verification algorithm) to verify.
+Non-interactive proving reduces communication between prover and verifier, making ZK-proofs more efficient. Moreover, once a proof is generated, it is available for anyone else (with access to the shared key and verification algorithm) to verify.
 
 Non-interactive proofs represented a breakthrough for zero-knowledge technology and spurred the development of proving systems used today. We discuss these proof types below:
 
@@ -117,7 +116,7 @@ Zero-knowledge proofs are particularly useful in the context of [decentralized i
 
 Using online services requires proving your identity and right to access those platforms. This often requires providing personal information, like names, email addresses, birth dates, and so on. You may also need to memorize long passwords or risk losing access.
 
-Zero-knowledge proofs, however, can simplify authentication for both platforms and users. Once a zk-proof has been generated using public inputs (e.g., data attesting to the user's membership of the platform) and private inputs (e.g., the user's details), the user can simply present it to authenticate their identity when they need to access the service. This improves the experience for users and frees organizations from the need to store huge amounts of user information.
+Zero-knowledge proofs, however, can simplify authentication for both platforms and users. Once a ZK-proof has been generated using public inputs (e.g., data attesting to the user's membership of the platform) and private inputs (e.g., the user's details), the user can simply present it to authenticate their identity when they need to access the service. This improves the experience for users and frees organizations from the need to store huge amounts of user information.
 
 ### Verifiable computation {#verifiable-computation}
 

@@ -1,10 +1,14 @@
 ---
 title: Mining
-description: Spiegazione del funzionamento del mining in Ethereum e di come contribuisce a mantenere la rete Ethereum sicura e decentralizzata.
+description: Una spiegazione di come funzionava il mining su Ethereum.
 lang: it
-sidebar: true
-incomplete: true
 ---
+
+<InfoBanner emoji=":wave:">
+
+Il Proof of Work non è più il meccanismo di consenso alla base di Ethereum, il che significa che il mining è stato disattivato. Invece, Ethereum è protetto dai validatori che mettono ETH in staking. Puoi iniziare fin da subito a mettere in staking i tuoi ETH. Leggi di più su [La Fusione](/upgrades/merge/), il [Proof of Stake](/developers/docs/consensus-mechanisms/pos/) e lo [staking](/staking/). Questa pagina è per interesse storico.
+
+</InfoBanner>
 
 ## Prerequisiti {#prerequisites}
 
@@ -12,34 +16,32 @@ Per comprendere meglio questa pagina, consigliamo innanzi tutto di leggere [tran
 
 ## Cos'è il mining in Ethereum? {#what-is-ethereum-mining}
 
-Il mining è il processo di creazione di un blocco di transazioni, da aggiungere alla blockchain Ethereum.
+Il mining è il processo di creazione di un blocco di transazioni, da aggiungere alla blockchain Ethereum nell'architettura ormai obsoleta di Proof of Work.
 
-Ethereum, come Bitcon, al momento utilizza un meccanismo di consenso basato sul [Proof of Work (PoW)](/developers/docs/consensus-mechanisms/pow/). Il mining è la linfa vitale del Proof of Work. I miner di Ethereum (computer che eseguono software) usano il loro tempo e la loro capacità di calcolo per elaborare transazioni e produrre blocchi.
+La parola mining origina nel contesto dell'analogia dell'oro per le criptovalute. L'oro e i metalli preziosi sono scarsi, così come i token digitali, e l'unico modo per aumentarne il volume totale in un sistema di Proof of Work attraverso il mining. Nell'Ethereum Proof of Work, l'unico metodo di emissione era tramite il mining. A differenza dell'oro e dei metalli preziosi, però, il mining di Ethereum era anche il metodo per proteggere la rete, creando, verificando, pubblicando e propagando i blocchi nella blockchain.
 
-<InfoBanner emoji=":wave:">
-   Il Proof of Stake sostituirà il mining e il Proof of Work nel corso del prossimo anno. Puoi iniziare fin da subito a mettere in staking i tuoi ETH. <a href="/staking/">Maggiori informazioni sullo staking</a>    
-</InfoBanner>
+Minare ether = Proteggere la Rete
+
+Il mining è la linfa vitale di qualsiasi blockchain basata sul Proof of Work. Prima della transizione al Proof of Stake, i miner di Ethereum (computer che eseguono software) usavano il loro tempo e la loro capacità di calcolo per elaborare transazioni e produrre blocchi.
 
 ## Perché esistono i miner? {#why-do-miners-exist}
 
-Nei sistemi decentralizzati come Ethereum dobbiamo assicurarci che tutti siano d'accordo sull'ordine delle transazioni. In questo i miner aiutano risolvendo complessi enigmi di calcolo con lo scopo di produrre blocchi, tenendo la rete al sicuro dagli attacchi.
+Nei sistemi decentralizzati come Ethereum, dobbiamo assicurarci che tutti concordino sull'ordine delle transazioni. In questo i miner aiutavano risolvendo complessi enigmi di calcolo con lo scopo di produrre blocchi, tenendo la rete al sicuro dagli attacchi.
 
 [Maggiori informazioni sul Proof of Work](/developers/docs/consensus-mechanisms/pow/)
 
-## Chi può diventare miner su Ethereum? {#who-can-become-a-miner}
-
-Tecnicamente, tutti possono minare sulla rete Ethereum usando il proprio computer. Tuttavia, non tutti possono minare ether (ETH) in modo redditizio. In gran parte dei casi, i miner devono acquistare hardware informatico dedicato per minare con profitto. Anche se è vero che chiunque può eseguire il software di mining sul proprio computer, è improbabile che i computer medi guadagnino ricompense del blocco sufficienti per coprire i costi associati al mining.
+In precedenza, chiunque poteva minare sulla rete Ethereum usando il proprio computer. Tuttavia, non tutti potevano estrarre ether (ETH) in modo redditizio. In gran parte dei casi, i miner dovevano acquistare hardware dedicato e avere accesso a fonti energetiche convenienti. Per il computer medio, era improbabile guadagnare abbastanza ricompense dei blocchi da coprire i costi associati al mining.
 
 ### Costi del mining {#cost-of-mining}
 
 - I costi potenziali dell'hardware necessario per costruire e mantenere una piattaforma di mining
 - I costi elettrici per alimentarla
-- Se effettui il mining all'interno di un gruppo, i gruppi di mining addebitano generalmente una commissione forfettaria percentuale su ciascun blocco generato dal gruppo
+- Se si effettuava il mining all'interno di un gruppo, questi gruppi di mining addebitavano generalmente una commissione forfettaria percentuale su ciascun blocco generato dal gruppo
 - I costi potenziali delle attrezzature per supportare la piattaforma di mining (ventilazione, monitoraggio energetico, cablaggio, etc.)
 
-Per esplorare ulteriormente la redditività del mining, usa un apposito calcolatore, come quello fornito da [Etherscan](https://etherscan.io/ether-mining-calculator).
+Per approfondire ulteriormente la redditività del mining, usa un apposito calcolatore, come quello messo a disposizione da [Etherscan](https://etherscan.io/ether-mining-calculator).
 
-## Come avviene il mining delle transazioni Ethereum {#how-ethereum-transactions-are-mined}
+## Come avveniva il mining delle transazioni Ethereum {#how-ethereum-transactions-were-mined}
 
 1. Un utente scrive e firma una richiesta di [transazione](/developers/docs/transactions/) con la chiave privata di un [account](/developers/docs/accounts/).
 2. L'utente trasmette la richiesta di transazione all'intera rete Ethereum attraverso un [nodo](/developers/docs/nodes-and-clients/).
@@ -52,15 +54,21 @@ Per esplorare ulteriormente la redditività del mining, usa un apposito calcolat
 7. Ogni nodo rimuove tutte le transazioni nel nuovo blocco dalla propria mempool locale di richieste di transazioni non eseguite.
 8. I nuovi nodi che si aggiungono alla rete scaricano tutti i blocchi in sequenza, incluso il blocco che contiene la transazione della quale stiamo parlando. Inizializzano la propria copia locale dell'EVM (che partirà come EVM con stato vuoto) e si avvieranno al processo di esecuzione di ogni transazione contenuta in ogni blocco aggiungendola alla propria copia dell'EVM locale e verificando le checksum dello stato ad ogni blocco che esamineranno.
 
-Il mining di ogni transazione (cioè l'inclusione in un nuovo blocco e la prima propagazione) avviene una volta sola, ma la transazione viene eseguita e verificata da ogni partecipante nel processo di avanzamento dello stato canonico dell'EVM. Questo è uno dei mantra della blockchain: **non ti fidare, verifica**.
+Il mining di ogni transazione (cioè l'inclusione in un nuovo blocco e la prima propagazione) avviene una volta sola, ma la transazione viene eseguita e verificata da ogni partecipante nel processo di avanzamento dello stato canonico dell'EVM. Questa è una delle regole fondamentali della blockchain: **non ti fidare, verifica**.
 
-## Demo visiva {#a-visual-demo}
+## Dimostrazione visiva {#a-visual-demo}
 
-Lasciati guidare da Austin attraverso il mining e la blockchain basata sul Proof of Work.
+Austin ti guiderà attraverso il mining e la blockchain basata sul proof-of-work.
 
 <YouTube id="zcX7OJ-L8XQ" />
 
-## Lettura consigliate {#further-reading}
+## L'algoritmo di mining {#mining-algorithm}
+
+La Rete principale di Ethereum ha sempre e solo usato un algoritmo di mining: ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash). Ethash era il successore di un algoritmo di R&S originale, noto come ['Dagger-Hashamoto'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashamoto).
+
+[Maggiori informazioni sugli algoritmi di mining](/developers/docs/consensus-mechanisms/pow/mining-algorithms/).
+
+## Letture consigliate {#further-reading}
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
 
@@ -68,7 +76,7 @@ Lasciati guidare da Austin attraverso il mining e la blockchain basata sul Proof
 
 - [I top miner di Ethereum](https://etherscan.io/stat/miner?range=7&blocktype=blocks)
 - [Calcolatore di mining Etherscan](https://etherscan.io/ether-mining-calculator)
-- [Calcolatore di mining Minerstar](https://minerstat.com/coin/ETH)
+- [Calcolatore di mining Minerstat](https://minerstat.com/coin/ETH)
 
 ## Argomenti correlati {#related-topics}
 

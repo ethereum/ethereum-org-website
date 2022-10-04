@@ -2,7 +2,6 @@
 title: ERC-721 Nem Felcserélhető Token Szabvány
 description:
 lang: hu
-sidebar: true
 ---
 
 ## Bevezetés {#introduction}

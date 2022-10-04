@@ -3,7 +3,6 @@ title: Lanțuri de fragmente
 description: Informații despre lanțurile de fragmente - partiții ale rețelei care oferă Ethereum o capacitate mai mare de tranzacții și facilitează rularea.
 lang: ro
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: Fragmentarea este o actualizare în mai multe faze pentru a îmbunătăți scalabilitea și capacitatea Ethereum.
 summaryPoint2: Lanțurile de fragmente distribuie sarcina rețelei pe 64 de lanțuri noi.

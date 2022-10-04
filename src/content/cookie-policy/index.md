@@ -1,6 +1,7 @@
 ---
 title: Cookie Policy
 lang: en
+hideEditButton: true
 ---
 
 # Cookie Policy {#cookie-policy}

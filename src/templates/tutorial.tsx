@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import ButtonLink from "../components/ButtonLink"
 import Card from "../components/Card"
@@ -29,12 +29,12 @@ import {
   ListItem,
   KBD,
 } from "../components/SharedStyledComponents"
-import Emoji from "../components/Emoji"
+import Emoji from "../components/OldEmoji"
 import YouTube from "../components/YouTube"
-import PreMergeBanner from "../components/PreMergeBanner"
+import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import FeedbackCard from "../components/FeedbackCard"
 
-import { isLangRightToLeft } from "../utils/translations"
+import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
 
@@ -163,15 +163,23 @@ const TutorialPage = ({
     throw new Error("Required `relativePath` is missing on pageContext")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
-  const showMergeBanner = !!mdx.frontmatter.preMergeBanner
+
+  const showPostMergeBanner = !!mdx.frontmatter.postMergeBannerTranslation
+  const postMergeBannerTranslationString = mdx.frontmatter
+    .postMergeBannerTranslation as TranslationKey | null
 
   const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
 
   const { editContentUrl } = siteData.siteMetadata || {}
+  const hideEditButton = !!mdx.frontmatter.hideEditButton
   const absoluteEditPath = `${editContentUrl}${relativePath}`
   return (
     <div>
-      {showMergeBanner && <PreMergeBanner />}
+      {showPostMergeBanner && (
+        <PostMergeBanner
+          translationString={postMergeBannerTranslationString!}
+        />
+      )}
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
           title={mdx.frontmatter.title}
@@ -196,11 +204,12 @@ const TutorialPage = ({
           />
           <FeedbackCard />
         </ContentContainer>
-        {mdx.frontmatter.sidebar && tocItems && (
+        {tocItems && (
           <DesktopTableOfContents
             items={tocItems}
             maxDepth={mdx.frontmatter.sidebarDepth!}
             editPath={absoluteEditPath}
+            hideEditButton={hideEditButton}
           />
         )}
       </Page>
@@ -234,11 +243,11 @@ export const query = graphql`
         sourceUrl
         skill
         published
-        sidebar
         sidebarDepth
         address
         isOutdated
-        preMergeBanner
+        postMergeBannerTranslation
+        hideEditButton
       }
       body
       tableOfContents

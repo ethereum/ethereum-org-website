@@ -2,7 +2,6 @@
 title: Çeviri Programı
 lang: tr
 description: ethereum.org'un Çeviri Programına nasıl katkıda bulunulur
-sidebar: true
 ---
 
 # Çeviri Programı {#translation-program}
@@ -173,7 +172,3 @@ Ethereum içeriğini mümkün olduğunca çok dile çevirmeye ve eğitim içeri�
 Bu nedenle, ethereum.org'u çevirme sürecinde edindiğimiz bazı ipuçlarını ve en iyi uygulamaları içeren bir [Çeviri Programı Kural Kitabı](/contributing/translation-program/playbook/) oluşturduk.
 
 Daha fazla iş birliği yapmak veya çeviri kaynaklarımızdan bazılarını kullanmak ister misiniz? Kural kitabı hakkında herhangi bir geri bildiriminiz var mı? Translations@ethereum.org adresinden sizden haber almak isteriz.
-
-## Devam eden çeviriler {#in-progress}
-
-<TranslationsInProgress />

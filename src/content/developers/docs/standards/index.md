@@ -2,7 +2,6 @@
 title: Ethereum Development Standards
 description:
 lang: en
-sidebar: true
 incomplete: true
 ---
 
@@ -23,14 +22,29 @@ Typically standards are introduced as [Ethereum Improvement Proposals](/eips/) (
 
 ## Types of standards {#types-of-standards}
 
-Certain EIPs relate to application-level standards (e.g. a standard smart-contract format), which are introduced as [Ethereum Requests for Comment (ERC)](https://eips.ethereum.org/erc). Many ERCs are critical standards used widely across the Ethereum ecosystem.
+There are 3 types of EIPs:
 
-- [List of ERCs](https://eips.ethereum.org/erc)
+- Standards Track: describes any change that affects most or all Ethereum implementations
+- [Meta Track](https://eips.ethereum.org/meta): describes a process surrounding Ethereum or proposes a change to a process
+- [Informational Track](https://eips.ethereum.org/informational): describes an Ethereum design issue or provides general guidelines or information to the Ethereum community
+
+Furthermore, the Standard Track is subdivided into 4 categories:
+
+- [Core](https://eips.ethereum.org/core): improvements requiring a consensus fork
+- [Networking](https://eips.ethereum.org/networking): improvements around devp2p and Light Ethereum Subprotocol, as well as proposed improvements to network protocol specifications of whisper and swarm.
+- [Interface](https://eips.ethereum.org/interface): improvements around client API/RPC specifications and standards, and certain language-level standards like method names and contract ABIs.
+- [ERC](https://eips.ethereum.org/erc): application-level standards and conventions
+
+More detailed information on these different types and categories can be found in [EIP-1](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 
 ### Token standards {#token-standards}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - A standard interface for fungible (interchangeable) tokens, like voting tokens, staking tokens or virtual currencies.
+  - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) - Defines a token interface for ERC-20 tokens that supports executing recipient code after transfer or transferFrom, or spender code after approve
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - A standard interface for non-fungible tokens, like a deed for artwork or a song.
+  - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309) - A standardized event emitted when creating/transferring one, or many non-fungible tokens using consecutive token identifiers.
+  - [ERC-4400](https://eips.ethereum.org/EIPS/eip-4400) - Interface extension for EIP-721 consumer role
+  - [ERC-4907](https://eips.ethereum.org/EIPS/eip-4907) - Add a time-limited role with restricted permissions to ERC-721 tokens.
 - [ERC-777](/developers/docs/standards/tokens/erc-777/) - A token standard improving over ERC-20.
 - [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - A token standard which can contain both fungible and non-fungible assets.
 - [ERC-4626](/developers/docs/standards/tokens/erc-4626/) - A tokenized vault standard designed to optimize and unify the technical parameters of yield-bearing vaults.

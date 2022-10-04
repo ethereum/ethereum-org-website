@@ -2,7 +2,6 @@
 title: 面向 JavaScript 开发者的以太坊资源
 description: 学习如何使用并通过基于 JavaScript 的项目及工具参与以太坊的开发。
 lang: zh
-sidebar: true
 ---
 
 JavaScript 是以太坊生态中最受欢迎的语言之一。 事实上，有一个 [团队](https://github.com/ethereumjs) 致力于尽可能多地在以太坊引入 JavaScript。

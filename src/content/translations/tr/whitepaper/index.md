@@ -2,7 +2,6 @@
 title: Ethereum Teknik Raporu
 description: Ethereum'un başlangıcından önce 2013'te yayınlanan giriş yazısı.
 lang: tr
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -12,7 +11,7 @@ _Bu tanıtım yazısının orijinali 2014 yılında, [Ethereum](/what-is-ethereu
 
 _Birkaç yıllık olmasına rağmen, bu teknik raporu güncellemeyi sürdürüyoruz çünkü Ethereum ve vizyonunun yararlı bir referansı ve doğru bir temsili olarak hizmet etmeye devam ediyor. Ethereum hakkındaki en son gelişmeleri ve protokolde nasıl değişikliklerin yapıldığını öğrenmek için [bu kılavuzu](/learn/) öneriyoruz._
 
-[Ethereum teknik raporunu PDF olarak açın](./whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf)
+[Ethereum teknik raporunu PDF olarak açın](../../../whitepaper/whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf)
 
 ## Yeni Nesil Akıllı Sözleşme ve Merkeziyetsiz Uygulama Platformu {#a-next-generation-smart-contract-and-decentralized-application-platform}
 

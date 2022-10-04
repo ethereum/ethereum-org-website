@@ -3,7 +3,6 @@ title: Cum să configurați Tellor ca oracol personal
 description: Un ghid pentru a începe integrarea oracolului Tellor în protocolul dvs.
 author: "Tellor"
 lang: ro
-sidebar: true
 tags:
   - "solidity"
   - "contracte inteligente"

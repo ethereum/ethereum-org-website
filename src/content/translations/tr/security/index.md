@@ -2,7 +2,6 @@
 title: Ethereum güvenliği ve dolandırıcılık önleme
 description: Ethereum'da güvende kalmak
 lang: tr
-sidebar: true
 ---
 
 # Ethereum güvenliği ve dolandırıcılık önleme {#introduction}

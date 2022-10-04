@@ -2,7 +2,6 @@
 title: Almacenamiento descentralizado
 description: Resumen de qué es el almacenamiento descentralizado y herramientas disponibles para integrarse en una dapp.
 lang: es
-sidebar: true
 incomplete: true
 isOutdated: true
 ---

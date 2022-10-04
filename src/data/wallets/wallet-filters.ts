@@ -131,20 +131,21 @@ const walletFilterData: { [key: string]: WalletFilter } = {
     filterKey: "erc_20_support",
   },
   eip_1559_support: {
-    title: "EIP-1559 support",
-    description: "Lower gas fees with type-2 transactions",
+    title: "Fee optimization",
+    description:
+      "Support type 2 transactions for optimized gas fees, and fee refunds for unused gas",
     filterKey: "eip_1559_support",
   },
   buy_crypto: {
     title: "Buy crypto",
     description:
-      "Buy crypto directly in the wallet \n *Note: buying crypto may be region specific",
+      "Buy crypto with fiat directly in the wallet \n *Note: buying crypto may be region specific",
     filterKey: "buy_crypto",
   },
   withdraw_crypto: {
-    title: "Withdraw crypto",
+    title: "Sell for fiat",
     description:
-      "Withdraw to fiat directly in the wallet \n *Note: withdrawing crypto may be region specific",
+      "Sell crypto to fiat directly in the wallet \n *Note: withdrawing crypto may be region specific",
     filterKey: "withdraw_crypto",
   },
   multisig: {

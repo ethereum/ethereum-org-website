@@ -68,7 +68,7 @@
   "page-upgrades-bug-bounty-type-4": "Calculation or parameter inconsistencies",
   "page-upgrades-bug-bounty-types": "Types of bugs",
   "page-upgrades-bug-bounty-validity": "In Scope",
-  "page-upgrades-bug-bounty-validity-desc": "Our bug bounty program spans end-to-end: from soundness of protocols (such as the blockchain consensus model, the wire and p2p protocols, proof of work, proof of stake, etc) and protocol/implementation compliance to network security and consensus integrity. Classical client security as well as security of cryptographic primitives are also part of the program. When in doubt, send an email to bounty@ethereum.org and ask us.",
+  "page-upgrades-bug-bounty-validity-desc": "Our bug bounty program spans end-to-end: from soundness of protocols (such as the blockchain consensus model, the wire and p2p protocols, proof of stake, etc.) and protocol/implementation compliance to network security and consensus integrity. Classical client security as well as security of cryptographic primitives are also part of the program. When in doubt, send an email to bounty@ethereum.org and ask us.",
   "page-upgrades-bug-bounty-card-critical": "Critical",
   "page-upgrades-bug-bounty-card-critical-risk": "Submit critical risk bug",
   "page-upgrades-bug-bounty-card-h2": "Medium",

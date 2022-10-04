@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react"
 import { motion } from "framer-motion"
 import { Link } from "gatsby"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import ButtonLink from "./ButtonLink"
 import Icon from "./Icon"
@@ -79,6 +79,7 @@ const StyledTableOfContentsLink = styled(Link)`
   margin-bottom: 0.5rem !important;
   /* Add left border bullet on hover */
   &:hover {
+    text-decoration: none;
     color: ${(props) => props.theme.colors.primary};
     &:after {
       content: "";
@@ -370,6 +371,7 @@ export interface IProps {
   className?: string
   slug?: string
   editPath?: string
+  hideEditButton?: boolean
   isMobile?: boolean
 }
 
@@ -379,6 +381,7 @@ const TableOfContents: React.FC<IProps> = ({
   className,
   slug,
   editPath,
+  hideEditButton = false,
   isMobile = false,
 }) => {
   const { isZenMode, handleZenModeChange } = useContext(ZenModeContext)
@@ -404,12 +407,12 @@ const TableOfContents: React.FC<IProps> = ({
 
   const activeHash = useActiveHash(titleIds)
 
+  // Exclude <h1> from TOC
+  if (items?.length === 1) {
+    items = items[0].items!
+  }
   if (!items) {
     return null
-  }
-  // Exclude <h1> from TOC
-  if (items.length === 1) {
-    items = items[0].items!
   }
   if (isMobile) {
     return (
@@ -422,14 +425,13 @@ const TableOfContents: React.FC<IProps> = ({
   }
 
   const shouldShowZenModeToggle = slug?.includes("/docs/")
-  const shouldShowEditButtom = !!editPath
 
   return (
     <Aside className={className}>
       <OuterList>
-        {shouldShowEditButtom && (
+        {!hideEditButton && (
           <ButtonContainer>
-            <ButtonLink to={editPath} isSecondary={true} hideArrow mt={0}>
+            <ButtonLink to={editPath} variant="outline" hideArrow mt={0}>
               <ButtonContent>
                 <GithubIcon name="github" />{" "}
                 <span>

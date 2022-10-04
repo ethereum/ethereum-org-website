@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
-import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
+import styled from "@emotion/styled"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
 import Link from "./Link"
 
@@ -57,6 +57,7 @@ const Card = styled(Link)`
 
   &:hover,
   &:focus {
+    text-decoration: none;
     border-radius: 4px;
     box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
     background: ${(props) => props.theme.colors.tableBackgroundHover};
@@ -66,9 +67,10 @@ const Card = styled(Link)`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   to: string
   alt?: string
-  image: string
+  image: IGatsbyImageData | string
   title: ReactNode
   description?: ReactNode
   className?: string
@@ -87,7 +89,8 @@ const ActionCard: React.FC<IProps> = ({
   isRight,
   isBottom = true,
 }) => {
-  const isImageURL = typeof image === "string" && image.includes("http")
+  const isImageURL = typeof image === "string"
+
   return (
     <Card to={to} className={className} hideArrow={true}>
       <ImageWrapper
@@ -95,7 +98,7 @@ const ActionCard: React.FC<IProps> = ({
         isBottom={isBottom}
         className="action-card-image-wrapper"
       >
-        {!isImageURL && <Image image={image} alt={alt} />}
+        {!isImageURL && <Image image={image} alt={alt || ""} />}
         {isImageURL && (
           <img src={image} alt={alt} className="action-card-image" />
         )}

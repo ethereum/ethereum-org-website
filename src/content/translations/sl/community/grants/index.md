@@ -1,7 +1,6 @@
 ---
 title: Ethereum Fundacija & Program za finančno spodbudo skupnosti
 description: Seznam programov za finančne spodbude skozi Ethereum ekosistem.
-sidebar: true
 lang: sl
 ---
 

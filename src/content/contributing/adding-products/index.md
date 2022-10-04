@@ -2,7 +2,6 @@
 title: Adding Products
 description: The policy we use when adding wallets and dapps to ethereum.org
 lang: en
-sidebar: true
 ---
 
 _A note on adding wallets: as part of [our Q1 product roadmap](https://github.com/ethereum/ethereum-org-website/issues/5105), we are refining our wallets page. This will include refining the listing criteria for our wallets page. Until we have researched, established, and published refined listing criteria, we will not be actively adding new wallets to the website._

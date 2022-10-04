@@ -1,9 +1,9 @@
 // Libraries
 import React, { ComponentType, SVGProps } from "react"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 // Assets
 import Dappnode from "../assets/run-a-node/dappnode.svg"
@@ -32,7 +32,7 @@ import {
 } from "../components/SharedStyledComponents"
 import ExpandableCard from "../components/ExpandableCard"
 import ExpandableInfo from "../components/ExpandableInfo"
-import Emoji from "../components/Emoji"
+import Emoji from "../components/OldEmoji"
 import Link from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
 import FeedbackCard from "../components/FeedbackCard"
@@ -42,6 +42,7 @@ import NakedButton from "../components/NakedButton"
 // Utils
 import { translateMessageId, TranslationKey } from "../utils/translations"
 import { scrollIntoView } from "../utils/scrollIntoView"
+import { getImage } from "../utils/image"
 
 // Styles
 const GappedPage = styled(Page)`
@@ -107,10 +108,7 @@ const Column = styled.div`
 `
 
 const ResponsiveButtonLink = styled(ButtonLink)`
-  display: flex;
-  align-items: center;
   gap: 1rem;
-  width: fit-content;
   padding-left: 2rem;
   padding-right: 2rem;
 
@@ -420,7 +418,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
     title: <Translation id="page-run-a-node-title" />,
     header: <Translation id="page-run-a-node-hero-header" />,
     subtitle: <Translation id="page-run-a-node-hero-subtitle" />,
-    image: getImage(data.ethereumInside),
+    image: getImage(data.ethereumInside)!,
     alt: translateMessageId("page-run-a-node-hero-alt", intl),
     buttons: [
       {
@@ -430,7 +428,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
       {
         content: <Translation id="page-run-a-node-hero-cta-2" />,
         toId: "getting-started",
-        isSecondary: true,
+        variant: "outline",
       },
     ],
   }
@@ -532,14 +530,14 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
             </p>
           </Width60>
           <Width40>
-            <GatsbyImage image={getImage(data.hackathon)} />
+            <GatsbyImage image={getImage(data.hackathon)!} alt="" />
           </Width40>
         </TwoColumnContent>
       </Content>
 
       <FlexContent>
         <StyledExpandableInfo
-          image={getImage(data.impact)}
+          image={getImage(data.impact)!}
           title={<Translation id="page-run-a-node-who-title" />}
           contentPreview={<Translation id="page-run-a-node-who-preview" />}
           background="runNodeGradient2"
@@ -873,7 +871,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
               <ButtonContainer>
                 <ResponsiveButtonLink
                   to="/developers/docs/nodes-and-clients/run-a-node/#spinning-up-node"
-                  isSecondary
+                  variant="outline"
                 >
                   <code>
                     <Translation id="page-run-a-node-build-your-own-software-option-2-button" />
@@ -902,13 +900,13 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
                 <DiscordIcon name="discord" />
                 <Translation id="page-run-a-node-community-link-1" />
               </ResponsiveButtonLink>
-              <ResponsiveButtonLink to="/community/online/" isSecondary>
+              <ResponsiveButtonLink to="/community/online/" variant="outline">
                 <Translation id="page-run-a-node-community-link-2" />
               </ResponsiveButtonLink>
             </ButtonContainer>
           </Column>
           <Column>
-            <GatsbyImage image={getImage(data.community)} />
+            <GatsbyImage image={getImage(data.community)!} alt="" />
           </Column>
         </SplitContent>
       </Content>
@@ -948,7 +946,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
 
       <StakingCalloutContainer>
         <Column>
-          <Leslie image={getImage(data.leslie)} />
+          <Leslie image={getImage(data.leslie)!} alt="" />
         </Column>
         <Column>
           <h2>

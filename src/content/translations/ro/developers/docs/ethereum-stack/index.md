@@ -2,7 +2,6 @@
 title: Introducere despre stiva Ethereum
 description: O prezentare a diferitelor niveluri ale stivei Ethereum și a modului în care se îmbină.
 lang: ro
-sidebar: true
 ---
 
 Ca orice stivă de software, „Stiva Ethereum” completă este diferită de la un proiect la altul, în funcție de obiectivele dvs.

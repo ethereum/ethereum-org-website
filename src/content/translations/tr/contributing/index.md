@@ -2,7 +2,6 @@
 title: Katkılar
 description: Ethereum.org'a katkıda bulunmanın farklı yolları hakkında bilgi edinin
 lang: tr
-sidebar: true
 ---
 
 # Ethereum.org'a katkıda bulunma 🦄 {#contributing-to-ethereumorg}

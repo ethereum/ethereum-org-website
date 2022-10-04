@@ -1,7 +1,6 @@
 ---
 title: How can I get involved?
 description: How to get involved in the Ethereum community.
-sidebar: true
 lang: en
 ---
 
@@ -18,6 +17,7 @@ The Ethereum community includes people of many different backgrounds and skillse
 - Watch or participate in the [Core Dev calls](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - tooling, documentation, and infrastructure areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
 - [Web3Bridge](https://www.web3bridge.com/) - join the aspiring web3 community in their initiative to identify, train, and support hundreds of developers and community members throughout Africa
+- Join the [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders)
 
 ## Researchers & Academics <Emoji text=":mag:" size={1} />‍ {#researchers-and-academics}
 
@@ -99,7 +99,6 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 - [Web3 Jobs](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)
-
 
 ## Join a DAO {#decentralized-autonomous-organizations-daos}
 

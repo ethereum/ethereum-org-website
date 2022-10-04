@@ -2,7 +2,6 @@
 title: JavaScript 应用编程接口库
 description: 以太坊 JavaScript 应用程序接口的介绍，使您能够从您的应用程序中与区块链进行交互。
 lang: zh
-sidebar: true
 ---
 
 为了使软件应用程序能够与以太坊区块链进行交互（例如：读取区块链数据或发送交易信息到网络），软件必须连接到以太坊节点。
@@ -264,7 +263,7 @@ ethers.utils.formatEther(balance)
 
 **Alchemyweb3 -** **_用于包裹 Web3.js 的库，带自动重试和增强应用程序接口。_**
 
-- [相关文档](https://docs.alchemyapi.io/documentation/alchemy-web3)
+- [相关文档](https://docs.alchemy.com/reference/api-overview)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
 **Alchemy NFT API -** **_ 用于提取非同质化代币数据的应用程序接口，包括所有权、元数据属性等数据。_**

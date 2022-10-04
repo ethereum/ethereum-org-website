@@ -2,7 +2,6 @@
 title: Entwicklungsnetzwerke
 description: Eine Übersicht über Entwicklungsnetzwerke und die zur Erstellung von Ethereum-Anwendungen verfügbaren Tools
 lang: de
-sidebar: true
 ---
 
 Wenn Sie eine Ethereum-Anwendung mit Smart Contracts erstellen, möchten Sie sie vermutlich in einem lokalen Netzwerk ausführen, um die Funktionsweise vor der Bereitstellung zu prüfen.

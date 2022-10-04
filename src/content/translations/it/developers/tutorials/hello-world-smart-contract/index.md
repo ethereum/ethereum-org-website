@@ -11,7 +11,6 @@ tags:
   - "distribuzione"
 skill: beginner
 lang: it
-sidebar: true
 published: 2021-03-31
 ---
 

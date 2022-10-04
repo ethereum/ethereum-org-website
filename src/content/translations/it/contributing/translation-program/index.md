@@ -2,7 +2,6 @@
 title: Programma di traduzione
 lang: it
 description: Come contribuire al programma di traduzione di ethereum.org
-sidebar: true
 ---
 
 # Programma di traduzione {#translation-program}
@@ -11,7 +10,7 @@ Il Programma di Traduzione è uno sforzo collaborativo per tradurre ethereum.org
 
 I nostri progressi finora:
 
-- [**Oltre 3,600** traduttori](/contributing/translation-program/contributors/)
+- [**Oltre 3.600** traduttori](/contributing/translation-program/contributors/)
 - [**46** lingue attive sul sito](/languages/)
 - [**2,9 milioni** di parole tradotte nel 2021](/contributing/translation-program/acknowledgements/)
 - [**1,5 milioni** di parole tradotte nel 2022 finora](/contributing/translation-program/acknowledgements/)

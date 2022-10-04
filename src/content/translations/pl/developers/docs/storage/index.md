@@ -2,7 +2,6 @@
 title: Zdecentralizowana pamięć
 description: Przegląd tego, czym jest zdecentralizowana pamięć i dostępne narzędzia do integracji z  integracji z aplikacjami dapp.
 lang: pl
-sidebar: true
 incomplete: true
 isOutdated: true
 ---

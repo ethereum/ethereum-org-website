@@ -8,7 +8,6 @@ tags:
   - "安全性"
 skill: intermediate
 lang: zh
-sidebar: true
 published: 2020-09-06
 source: 构建安全的合约
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md

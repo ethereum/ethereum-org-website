@@ -1,7 +1,6 @@
 ---
 title: Cum pot să mă implic?
 description: Cum să vă implicați în comunitatea Ethereum.
-sidebar: true
 lang: ro
 ---
 

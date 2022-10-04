@@ -2,7 +2,6 @@
 title: Guvernanța în Ethereum
 description: Introducere despre modul în care se iau deciziile cu privire la Ethereum.
 lang: ro
-sidebar: true
 ---
 
 # Introducere despre guvernanța în Ethereum {#introduction}
