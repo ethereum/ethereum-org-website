@@ -172,8 +172,6 @@ const IntroColumn = styled(Column)`
 
 const StyledCard = styled(Card)`
   flex: 1 1 22%;
-  justify-content: space-between;
-  gap: 20px;
   min-width: 240px;
   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
   margin: 1rem;
