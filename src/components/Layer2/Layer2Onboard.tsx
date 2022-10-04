@@ -1,7 +1,7 @@
 // Libraries
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import React, { useState } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 
 // Components
@@ -192,7 +192,7 @@ interface ExchangeOption extends Option {
 
 export interface IProps {
   layer2DataCombined: Array<Layer2>
-  ethIcon: string
+  ethIcon: IGatsbyImageData
   ethIconAlt: string
 }
 

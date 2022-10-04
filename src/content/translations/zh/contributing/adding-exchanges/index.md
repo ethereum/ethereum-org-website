@@ -2,7 +2,6 @@
 title: 添加交易所
 description: 向 ethereum.org 添加交易所时适用的政策
 lang: zh
-sidebar: true
 ---
 
 # 添加以太坊交易所 {#adding-ethereum-exchanges}
@@ -37,5 +36,5 @@ sidebar: true
 如果您想向 ethereum.org 添加交易所，请在 GitHub 上创建提议。
 
 <ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
-  创建一个议题
+  创建一个提议
 </ButtonLink>

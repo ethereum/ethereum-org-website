@@ -5,7 +5,6 @@ author: jdourlens
 tags: ["transactions", "frontend", "JavaScript", "web3.js"]
 skill: beginner
 lang: en
-sidebar: true
 published: 2020-04-19
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/calling-a-smart-contract-from-javascript/

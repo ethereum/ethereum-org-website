@@ -2,7 +2,6 @@
 title: Distribuzione di Smart Contract
 description:
 lang: it
-sidebar: true
 ---
 
 Uno Smart Contract deve essere distribuito per essere a disposizione degli utenti di una rete Ethereum.
@@ -38,9 +37,10 @@ Una volta distribuito, il contratto avrà un indirizzo Ethereum come gli altri [
 
 - [Remix](https://remix.ethereum.org)
 
-**Tenderly - _Una piattaforma per monitorare facilmente i tuoi smart contract con monitoraggio degli errori, avvisi, parametri di misurazione delle prestazioni e analisi dettagliate dei contratti_**
+**Tenderly - _Simula, esegui il debug e monitora qualunque cosa su catene compatibili con l’EVM, con dati in tempo reale_**
 
 - [tenderly.co](https://tenderly.co/)
+- [Documenti](https://docs.tenderly.co/)
 - [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 

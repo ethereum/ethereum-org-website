@@ -2,7 +2,6 @@
 title: Ethereum for Dart developers
 description: Learn how to develop for Ethereum using the Dart language
 lang: en
-sidebar: true
 incomplete: true
 ---
 

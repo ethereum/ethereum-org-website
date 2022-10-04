@@ -2,7 +2,6 @@
 title: 以太坊安全和预防欺诈措施
 description: 在以太坊上保持安全
 lang: zh
-sidebar: true
 ---
 
 # 以太坊安全和预防欺诈措施 {#introduction}
@@ -50,7 +49,7 @@ sidebar: true
 
 记住为每个账户设置的唯一强密码并不现实。 密码管理器为您的所有密码提供了一个安全、加密的存储空间，您可以通过一个强主密码进行访问。 他们还在注册新服务时生成建议使用的强密码，这样你就不必自行创建密码了。 许多密码管理器也会告诉你是否涉及数据泄露，让你在任何恶意攻击之前更改密码。
 
-![使用密码管理器的示例](./passwordManager.png)
+![密码管理器使用示例](./passwordManager.png)
 
 #### 尝试一个密码管理器： {#try-password-manager}
 
@@ -112,7 +111,7 @@ Chrome 扩展程序或 Firefox 插件等浏览器扩展程序可以增强浏览�
 人们在网络中被骗的主要原因之一通常是缺乏了解。 例如，如果您不了解以太坊网络是去中心化的，不为任何人所拥有，您就很容易上当受骗。有人假装成客户服务人员，承诺用您的私钥找回您丢失的以太币。 了解以太坊如何运作是一项值得的投资。
 
 <DocLink to="/what-is-ethereum/">
-  什么是以太坊？
+  以太坊简介
 </DocLink>
 
 <DocLink to="/eth/">
@@ -181,7 +180,7 @@ Chrome 扩展程序或 Firefox 插件等浏览器扩展程序可以增强浏览�
 
 最出名的一次发生在 2020 年 7 月，当时很多知名人士和组织的 Twitter 账户被黑。 黑客使用被盗的账户发布了一个比特币赠送活动。 尽管这些欺骗性的推文很快就被发现并删除，但黑客们还是成功骗走了 11 个比特币（截止 2021 年 9 月，这些比特币价值 50 万美元）。
 
-![Twitter 上的一个诈骗案例](./appleTwitterScam.png)
+![Twitter 上的诈骗案例](./appleTwitterScam.png)
 
 #### 名人的赠品 {#celebrity-giveaway}
 
@@ -191,15 +190,15 @@ Chrome 扩展程序或 Firefox 插件等浏览器扩展程序可以增强浏览�
 
 **赠品活动通常是骗局。 如果您把钱转到这些账户，您将永远失去它们。**
 
-![YouTube 上的一个诈骗案例](./youtubeScam.png)
+![YouTube 上的诈骗案例](./youtubeScam.png)
 
 ### 技术支持诈骗 {#support-scams}
 
-加密货币是一种相对年轻且常被误解的技术。 利用这一点的一种常见的骗局是技术支持诈骗 (Support scams)，骗子会冒充受欢迎的加密货币钱包、交易所或区块链的支持人员。
+加密货币是一种相对年轻且常被误解的技术。 利用这一点的一种常见的骗局是技术支持诈骗，骗子会冒充受欢迎的加密货币钱包、交易所或区块链的支持人员。
 
 很多关于以太坊的讨论都发生在 Discord 上。 骗子通常会通过在公开的 Discord 频道中搜索寻求支持的问题，然后冒充支持人员向询问者发送私人信息以找到他们的目标。 通过建立信任，骗子试图诱使您透露您的私钥或将您的资金发送到他们的钱包。
 
-![Discord 上的一个技术支持诈骗案例](./discordScam.png)
+![Discord 上的技术支持诈骗案例](./discordScam.png)
 
 一般来说，员工永远不会通过私人的非官方渠道与您交流。 在处理支持问题时，要牢记一些简单的事情：
 
@@ -213,13 +212,21 @@ Chrome 扩展程序或 Firefox 插件等浏览器扩展程序可以增强浏览�
   </div>
 </InfoBanner>
 
+### Eth2 代币骗局 {#eth2-token-scam}
+
+在[合并](/upgrades/merge/)的准备阶段，骗子利用“Eth2”这一术语的混淆，试图让用户将他们的 ETH 兑换成“ETH2”代币。 实际上合并并没有产生任何“ETH2”，或者任何其它合法代币。 你在合并之前拥有的 ETH 与现在是同一个 ETH。 **从工作量证明切换到权益证明，无需采取任何与你的 ETH 相关的操作**。
+
+骗子可能会以“技术支持”的面貌出现，告诉你如果存入 ETH，你将收到“ETH2”。 实际上，并没有[官方的以太坊技术支持](/community/support/)，也没有新代币。 永远不要与陌生人分享你的钱包助记词。
+
+_注意：有一些衍生的代币/票据可能代表了被质押的以太币（比如：Rocket Pool 的 rETH，Lido 的 stETH，Coinbase 的 ETH2），但这些都不需要“迁移过去”。_
+
 ### 网络钓鱼诈骗 {#phishing-scams}
 
-网络钓鱼诈骗是另一种越来越常见的诈骗手段，他们试图窃取您钱包中的资金。
+网络钓鱼诈骗是另一种越来越常见的诈骗手段，他们试图窃取你钱包中的资金。
 
-一些网络钓鱼电子邮件要求用户点击链接，将其重新定向到仿冒网站，并要求他们输入助记词、重置密码或发送电子邮件。 还有一些可能会让您在不知情的情况下安装恶意软件来感染您的电脑，并让骗子访问您的电脑文件。
+一些网络钓鱼电子邮件要求用户点击链接，将其重新定向到仿冒网站，并要求他们输入助记词、重置密码或发送 ETH。 还有一些可能会让你在不知情的情况下安装恶意软件来感染你的电脑，并让骗子访问你的电脑文件。
 
-如果你收到一封来历不明的邮件，请记住:
+如果你收到一封来历不明的电子邮件，请记住：
 
 - 永远不要打开您不认识的电子邮件地址中的链接或附件
 - 切勿将你的个人信息或密码泄露给任何人
@@ -229,19 +236,19 @@ Chrome 扩展程序或 Firefox 插件等浏览器扩展程序可以增强浏览�
 
 ### 加密货币交易经纪人诈骗 {#broker-scams}
 
-他们自称是专业的加密货币经纪人，他们会收取您的钱，代您投资。 这一提议通常伴随着不切实际的回报承诺。 在骗子收到您的钱后，他们可能会诱导您，要求您拿出更多的资金，这样您就不会错过进一步的投资收益，或者他们也可能就完全消失了。
+他们自称是专业的加密货币经纪人，他们会收取你的钱，代你投资。 这一提议通常伴随着不切实际的回报承诺。 在骗子收到你的钱后，他们可能会诱导你，要求你拿出更多的资金，这样你就不会错过进一步的投资收益，或者他们也可能就完全消失了。
 
-这些骗子利用 YouTube 上的虚假账户，找到他们的目标，然后开始看似自然地开始有关经纪人的交谈。 这些对话通常会收到很多点赞，以增加真实性，但这些“赞”都是来自机器人账户。
+这些骗子利用 YouTube 上的虚假帐户，找到他们的目标，然后开始看似自然地开始有关经纪人的交谈。 这些对话通常会收到很多点赞，以增加真实性，但这些“赞”都是来自机器人帐户。
 
-**不要相信互联网上的陌生人，让他们代您投资。 您将失去您的加密货币。**
+**不要相信互联网上的陌生人，让他们代你投资。 你将失去你的加密货币。**
 
 ![YouTube 上的交易经纪人诈骗案例](./brokerScam.png)
 
 ### 加密货币矿池骗局 {#mining-pool-scams}
 
-在矿池骗局中会有人主动联系您，并声称您可以通过加入以太坊矿池获得大量回报。 骗子会提出要求，并一直与您保持联系。 基本上，骗子会试图让您相信，用当您加入一个以太坊矿池时，您的加密货币将被用来创建 ETH，您将以 ETH 的形式获得红利。 最终会发生的是，您会发现您的加密货币只能获得微薄的回报。 这只是为了引诱您投入更多的资金。 最终，您所有的钱都会被送到一个未知的地址，而骗子要么会消失，要么在某些情况下会继续保持联系，就像最近发生的一个案例一样。
+自 2022 年 9 月起，在以太坊上挖矿已不再可能。 但是，矿池骗局仍然存在。 在矿池骗局中会有人主动联系你，并声称你可以通过加入以太坊矿池获得丰厚回报。 骗子会提出要求，并一直与你保持联系。 基本上，骗子会试图让你相信，当你加入一个以太坊矿池时，您的加密货币将被用来创建 ETH，您将以 ETH 的形式获得红利。 最终你会发现你的加密货币只能获得微薄的回报。 这只是为了引诱你投入更多的资金。 最终，你的所有资金将被发送到一个未知地址，骗子要么消失，要么在某些情况下会继续保持联系，就像最近发生的一个案例一样。
 
-总之，要提防那些在社交媒体上与您联系并要求您加入矿池的人。 一旦您失去您的加密货币，它就永远回不来了。
+总之，要提防那些在社交媒体上与你联系并要求你加入矿池的人。 一旦你失去你的加密货币，它就永远回不来了。
 
 有些事情要记住：
 
@@ -249,15 +256,7 @@ Chrome 扩展程序或 Firefox 插件等浏览器扩展程序可以增强浏览�
 - 做好关于赌注、流动性池或其他加密货币投资方式的调研
 - 这种计划即使有，也很少是合法的。 如果是的话，它们会成为主流，您会听说过它们。
 
-[有人在矿池骗局中损失 20 万美元](https://www.reddit.com/r/CoinBase/comments/r0qe0e/scam_or_possible_incredible_payout/)
-
-### Eth2 代币骗局 {#eth2-token-scam}
-
-在 2022 年[合并](/upgrades/merge/)来临之前，骗子们尝试使用“Eth2”这个新概念来欺骗用户，将他们的以太币兑换为“ETH2”代币。 实际上合并并没有产生任何“ETH2”或者任何其它新代币。 当前您所拥有的以太币在合并之后仍然是一样的以太币，而不用进行任何的兑换。
-
-骗子们可能会以“技术支持”的面貌出现，告诉您需要把手中的 ETH 存到指定地址，这样你就可以得到“ETH2”。 实际上，并没有官方的[以太坊技术支持](/community/support/)，也没有新代币。 永远不要把您钱包的助记词和陌生人分享。
-
-_注意：有一些衍生的代币/ 票据可能代表了被质押的以太币（比如：Rocket Pool 的 rETH，Lido 的 stETH，Coinbase 的 ETH2），但这些都不需要“迁移过去”。_
+[有人在矿池骗局中损失了 20 万美元](https://www.reddit.com/r/CoinBase/comments/r0qe0e/scam_or_possible_incredible_payout/)
 
 ### 空投骗局 {#airdrop-scams}
 
@@ -271,19 +270,20 @@ _注意：有一些衍生的代币/ 票据可能代表了被质押的以太币�
 
 ### 网络安全 {#reading-web-security}
 
-- [This is why you shouldn’t use texts for two-factor authentication](https://www.theverge.com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) - _The Verge_
-- [Up to 3 million devices infected by malware-laced Chrome and Edge add-ons](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) - _Dan Goodin_
-- [How to Create a Strong Password — That You Won’t Forget](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) - _AVG_
-- [What is a security key?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) - _Coinbase_
+- [为何不应使用文本进行双重身份验证](https://www.theverge.com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) - _The Verge_
+- [多达 300 万台设备被带有恶意软件的 Chrome 和 Edge 插件感染](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) - _Dan Goodin_
+- [如何创建一个不会忘记的强密码](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) - _AVG_
+- [什么是安全密钥？](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) - _Coinbase_
 
 ### 加密货币安全 {#reading-crypto-security}
 
-- [Protecting Yourself and Your Funds](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) - _MyCrypto_
-- [4 Ways to Stay Safe in Crypto](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) - _CoinDesk_
-- [Security Guide For Dummies And Smart People Too](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
-- [Crypto Security: Passwords and Authentication](https://www.youtube.com/watch?v=m8jlnZuV1i4) - _Andreas M. Antonopoulos_
+- [保护自己和资金](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) - _MyCrypto_
+- [保持加密货币安全的 4 种方法](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) - _CoinDesk_
+- [任何人都适用的安全指南](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
+- [加密货币安全：密码和身份验证](https://www.youtube.com/watch?v=m8jlnZuV1i4) - _Andreas M. Antonopoulos_
 
 ### 防诈骗指南 {#reading-scam-education}
 
-- [Staying Safe: Common Scams](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
-- [Avoiding Scams](https://bitcoin.org/en/scams) _Bitcoin.org_
+- [保持安全: 常见的诈骗手段](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
+- [避免诈骗](https://bitcoin.org/en/scams) - _Bitcoin.org_
+- [关于常见加密网络钓鱼电子邮件和消息的 Twitter 线程](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_

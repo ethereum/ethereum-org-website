@@ -2,7 +2,6 @@
 title: 去中心化应用程序开发框架
 description: 探索框架的优势并比较现有的选项。
 lang: zh
-sidebar: true
 ---
 
 ## 框架介绍 {#introduction-to-frameworks}

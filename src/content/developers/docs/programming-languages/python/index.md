@@ -2,7 +2,6 @@
 title: Ethereum for Python Developers
 description: Learn how to develop for Ethereum using python-based projects and tooling
 lang: en
-sidebar: true
 incomplete: true
 ---
 
@@ -82,7 +81,7 @@ The following Ethereum-based projects use tools mentioned on this page. The rela
 ## Python Community discussion {#python-community-contributors}
 
 - [Ethereum Python Community Discord](https://discord.gg/9zk7snTfWe) for Web3.py and other Python framework discussion
-- [Vyper Discord]([https://discord.gg/9zk7snTfWe](https://discord.gg/SdvKC79cJk)) for Vyper smart contract programming disucssion
+- [Vyper Discord](<[https://discord.gg/9zk7snTfWe](https://discord.gg/SdvKC79cJk)>) for Vyper smart contract programming disucssion
 
 ## Other aggregated lists {#other-aggregated-lists}
 

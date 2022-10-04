@@ -2,7 +2,6 @@
 title: Ethereum Mainnet'te İşletme
 description: Herkese açık Ethereum blok zincirindeki işletme uygulamaları hakkında kılavuzlar, makaleler ve araçlar
 lang: tr
-sidebar: true
 ---
 
 # İşletmeler için Ethereum Mainnet {#ethereum-for-enterprise}
@@ -59,7 +58,8 @@ Ethereum'u işletme dostu hâle getirmek için bazı ortak çabalar farklı kuru
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _Apache 2.0 lisansı altında geliştirilen kurumsal odaklı açık kaynaklı bir Ethereum istemcisi, Java ile yazılmıştır_
 - [Infura](https://infura.io/) _Ethereum ve IPFS ağlarına ölçeklenebilir API erişimi_
 - [Provide](https://provide.services/) _Kurumsal Web3 uygulamaları için altyapı ve API'ler_
-- [Unibright](https://unibright.io/) _İş süreçleri ve entegrasyon alanında 20 yılı aşkın deneyime sahip blok zinciri uzmanları, mimarlar, geliştiriciler ve danışmanlardan oluşan bir ekip_
+- [QuickNode](https://www.quicknode.com/) _birleşik bir ürün grubu ve kuruluş kademesinde çözümler sunarken NFT API, Jeton API gibi yüksek düzey API'lerle güvenilir ve hızlı düğümler düğümler sağlar_
+- [Unibright](https://unibright.io/) _iş süreçleri ve entegrasyon alanında 20 yılı aşkın deneyime sahip blok zinciri uzmanları, mimarlar, geliştiriciler ve danışmanlardan oluşan bir ekip_
 
 ### Araçlar ve kütüphaneler {#tooling-and-libraries}
 
@@ -67,7 +67,7 @@ Ethereum'u işletme dostu hâle getirmek için bazı ortak çabalar farklı kuru
 - [Epirus](https://www.web3labs.com/epirus) _Web3 Labs'e ait, blok zinciri uygulamaları geliştirmek, dağıtmak ve izlemek için bir platform_
 - [Ernst & Young'ın "Nightfall"u](https://github.com/EYBlockchain/nightfall) _özel işlemler için bir araç takımı_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _bir web3 sağlayıcısıyla kullanılacak bir işlem imzalama uygulaması_
-- [Tenderly](https://tenderly.co/) _özel ağlar için destekle birlikte gerçek zamanlı analiz, uyarı ve izleme sağlayan bir Veri Platformu._
+- [Tenderly](https://tenderly.co/)_gerçek zamanlı analizler sağlayan, özel ağlar için destek sunarak uyarılarda bulunan ve izleme gerçekleştiren bir Veri Platformudur_
 - [Truffle Suite](https://trufflesuite.com) _blok zinciri geliştirme paketi (Truffle, Ganache, Drizzle)_
 
 ### Ölçeklenebilirlik çözümleri {#scalability-solutions}
@@ -112,8 +112,8 @@ Uygulamanızı Katman 2 ölçeklenebilirlik çözümünün üzerine inşa etmek,
 
 ### Ödemeler {#payments}
 
-- [Brave Browser](https://basicattentiontoken.org/) _kullanıcılara reklamlara gösterdikleri ilgi için ödeme yapar ve kullanıcılar Basic Attention Token (Temel Dikkat Token'ı) aracılığıyla yayıncılara onları desteklemesi için ödeme yapabilir._
-- [hCaptcha](https://www.hcaptcha.com/) _Bot önleme CAPTCHA sistemi, web sitesi operatörlerine, makine öğrenimi için verileri etiketlemek üzere kullanıcılar tarafından yapılan iş için ödeme yapar. Artık Cloudflare tarafından dağıtılıyor._
+- [Brave Browser](https://basicattentiontoken.org/) _kullanıcılara reklamlara yönelttikleri dikkat karşılığında ödeme yapar ve kullanıcılar yayımcıları desteklemek için Temel Dikkat Jetonu aracılığıyla onlara ödeme yapabilir_
+- [hCaptcha](https://www.hcaptcha.com/) _Bot önleme CAPTCHA sistemi, web sitesi operatörlerine, makine öğrenimi için verileri etiketlemek üzere kullanıcılar tarafından yapılan iş için ödeme yapar. Artık Cloudflare tarafından dağıtılıyor_
 - [Audius](https://audius.co/) _müzik tutkunlarını sanatçılarla doğrudan buluşturan ve sanatçılara her dinleme için doğrudan ve anında tam olarak hayranları tarafından ödeme yapılmasına olanak tanıyan bir yayınlama hizmetidir_
 - [EthereumAds](https://ethereumads.com/) _web sitesi operatörlerinin reklam alanı satmasına ve Ethereum aracılığıyla ödeme almasına olanak tanır_
 

@@ -2,7 +2,6 @@
 title: Akıllı kontratlar dağıtmak
 description:
 lang: tr
-sidebar: true
 ---
 
 Ethereum ağının kullanıcılarının akıllı sözleşmenizi kullanabilmeleri için onu dağıtmalısınız.

@@ -2,7 +2,6 @@
 title: Plasma chains
 description: An introduction to plasma chains as a scaling solution currently utilized by the Ethereum community.
 lang: en
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---

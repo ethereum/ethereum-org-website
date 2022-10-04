@@ -2,7 +2,6 @@
 title: Dapp'lere giriş
 description:
 lang: tr
-sidebar: true
 ---
 
 Bir merkeziyetsiz uygulama (dapp), bir [akıllı sözleşme](/developers/docs/smart-contracts/) ile bir ön uç kullanıcı arayüzünü birleştiren merkeziyetsiz bir ağ üzerine kurulmuş bir uygulamadır. Ethereum'da akıllı sözleşmeler açık API'ler gibi erişilebilir ve şeffaftır: Bu yüzden merkeziyetsiz uygulamanız, başka birinin yazdığı bir akıllı sözleşmeyi bile içerebilir.

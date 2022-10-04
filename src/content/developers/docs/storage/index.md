@@ -2,7 +2,6 @@
 title: Decentralized Storage
 description: Overview of what decentralized storage is and the available tools to integrate it into a dapp.
 lang: en
-sidebar: true
 ---
 
 Unlike a centralized server operated by a single company or organization, decentralized storage systems consist of a peer-to-peer network of user-operators who hold a portion of the overall data, creating a resilient file storage sharing system. These can be in a blockchain-based application or any peer-to-peer-based network.
@@ -28,7 +27,7 @@ This is known as **blockchain-based** persistence.
 
 The issue with blockchain-based persistence is that the chain could get far too big to upkeep and store all the data feasibly (e.g. [many sources](https://healthit.com.au/how-big-is-the-internet-and-how-do-we-measure-it/) estimate the Internet to require over 40 Zetabytes of storage capacity).
 
-The blockchain must also have some type of incentive structure. For blockchain-based persistence, there is a payment made to the miner. When the data is added to the chain, the nodes are paid to add the data on.
+The blockchain must also have some type of incentive structure. For blockchain-based persistence, there is a payment made to the validator. When the data is added to the chain, the validators are paid to add the data on.
 
 Platforms with blockchain-based persistence:
 
@@ -47,6 +46,7 @@ Platforms with contract-based persistence:
 - [Skynet](https://siasky.net/)
 - [Storj](https://storj.io/)
 - [0Chain](https://0chain.net/)
+- [Crust Network](https://crust.network)
 
 ### Additional considerations {#additional-consideration}
 
@@ -56,6 +56,7 @@ IPFS is a distributed system for storing and accessing files, websites, applicat
 - [Pinata](https://www.pinata.cloud/) _(IPFS pinning service)_
 - [web3.storage](https://web3.storage/) _(IPFS/Filecoin pinning service)_
 - [Infura](https://infura.io/product/ipfs) _(IPFS pinning service)_
+- [IPFS Scan](https://ipfs-scan.io) _(IPFS pinning explorer)_
 
 ## Data retention {#data-retention}
 
@@ -71,6 +72,7 @@ Types of dStorage with a challenge mechanism:
 - Skynet
 - Arweave
 - Filecoin
+- Crust Network
 
 ### Decentrality {#decentrality}
 
@@ -84,22 +86,23 @@ Decentralized tools without KYC:
 - Filecoin
 - IPFS
 - Ethereum
+- Crust Network
 
 ### Consensus {#consensus}
 
 Most of these tools have their own version of a [consensus mechanism](/developers/docs/consensus-mechanisms/) but generally they are based on either [**proof-of-work (PoW)**](/developers/docs/consensus-mechanisms/pow/) or [**proof-of-stake (PoS)**](/developers/docs/consensus-mechanisms/pos/).
 
-PoW based:
+Proof-of-work based:
 
 - Skynet
 - Arweave
+
+Proof-of-stake based:
+
 - Ethereum
-
-PoS based:
-
-- [The Beacon Chain](/upgrades/beacon-chain/)
 - Filecoin
 - 0Chain
+- Crust Network
 
 ## Related tools {#related-tools}
 
@@ -137,6 +140,12 @@ PoS based:
 - [0Chain.net](https://0chain.net/)
 - [Documentation](https://docs.0chain.net/0chain/)
 - [GitHub](https://github.com/0chain/)
+
+**Crust Network - _Crust is a dStorage platform on top of the IPFS._**
+
+- [Crust.network](https://crust.network)
+- [Documentation](https://wiki.crust.network)
+- [Github](https://github.com/crustio)
 
 **Swarm - _A distributed storage platform and content distribution service for the Ethereum web3 stack._**
 

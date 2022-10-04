@@ -2,7 +2,6 @@
 title: Despre noi
 description: Despre echipa, comunitatea și misiunea ethereum.org
 lang: ro
-sidebar: true
 ---
 
 # Despre ethereum.org {#about-ethereumorg}

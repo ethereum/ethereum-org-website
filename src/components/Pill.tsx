@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 const Primary = styled.div<{ color?: string }>`
   display: flex;
@@ -28,6 +28,7 @@ const Secondary = styled.div`
   border-radius: 0.25rem;
 `
 export interface IProps {
+  children?: React.ReactNode
   className?: string
   isSecondary?: boolean
   color?: string

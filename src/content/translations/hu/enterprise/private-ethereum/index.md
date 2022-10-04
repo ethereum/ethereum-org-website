@@ -2,7 +2,6 @@
 title: Privát Ethereum vállalatoknak
 description: Anyagok vállalati alkalmazások számára a privát Ethereum blokkláncokon.
 lang: hu
-sidebar: true
 ---
 
 # Privát Ethereum vállalatoknak {#private-ethereum-for-enterprise}

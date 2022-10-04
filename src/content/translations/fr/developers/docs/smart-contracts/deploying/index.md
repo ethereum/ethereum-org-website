@@ -2,7 +2,6 @@
 title: Déployer des contrats intelligents
 description:
 lang: fr
-sidebar: true
 ---
 
 Vous devez déployer vos contrats intelligents afin qu'ils soient disponibles pour les utilisateurs sur un réseau Ethereum.

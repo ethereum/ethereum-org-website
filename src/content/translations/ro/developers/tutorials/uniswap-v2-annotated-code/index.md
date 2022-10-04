@@ -2,7 +2,6 @@
 title: "Analiza contractului Uniswap-v2"
 description: Cum funcționează contractul Uniswap-v2? De ce este scris în acest fel?
 author: Ori Pomerantz
-sidebar: true
 tags:
   - "solidity"
   - "uniswap"

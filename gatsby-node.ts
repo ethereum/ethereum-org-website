@@ -399,6 +399,10 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
     }
   }
 
+  if (!page.context) {
+    return
+  }
+
   const isTranslated = page.context.locale !== defaultLanguage
   const hasNoContext = page.context.isOutdated === undefined
 
@@ -435,14 +439,11 @@ export const onPostBootstrap: GatsbyNode["onPostBootstrap"] = ({ actions }) => {
 }
 
 export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] =
-  ({ actions, schema }) => {
+  ({ actions }) => {
     const { createTypes } = actions
-    const { sdls, builders } = Schema
+    const { sdls } = Schema
 
-    createTypes([
-      ...Object.keys(sdls).map((sdlKey) => sdls[sdlKey]),
-      schema.buildObjectType(builders.WalletsCsv),
-    ])
+    createTypes([...Object.keys(sdls).map((sdlKey) => sdls[sdlKey])])
   }
 
 export const onPreBootstrap: GatsbyNode["onPreBootstrap"] = ({ reporter }) => {

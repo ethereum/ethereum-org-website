@@ -2,7 +2,6 @@
 title: Network addresses
 description: An introduction to network addresses.
 lang: en
-sidebar: true
 sidebarDepth: 2
 ---
 

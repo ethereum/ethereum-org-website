@@ -2,7 +2,6 @@
 title: ERC-777 代币标准
 description:
 lang: zh
-sidebar: true
 ---
 
 ## 介绍? {#introduction}

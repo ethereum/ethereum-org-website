@@ -2,7 +2,6 @@
 title: Consum energètic d'Ethereum
 description: La informació bàsica que necessiteu per entendre el consum d'energia d'Ethereum.
 lang: ca
-sidebar: true
 ---
 
 # Consum energètic d'Ethereum {#introduction}

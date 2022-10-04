@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 
 import Link from "./Link"
@@ -39,6 +39,7 @@ const CrumbLink = styled(Link)`
   color: ${(props) => props.theme.colors.textTableOfContents};
 
   &:hover {
+    text-decoration: none;
     color: ${(props) => props.theme.colors.primary};
   }
 

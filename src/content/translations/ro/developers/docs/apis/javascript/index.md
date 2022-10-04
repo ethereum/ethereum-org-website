@@ -2,7 +2,6 @@
 title: Biblioteci API JavaScript
 description: O introducere în bibliotecile client JavaScript care vă permit să interacționaţi cu blockchain-ul din aplicația dvs.
 lang: ro
-sidebar: true
 ---
 
 Pentru ca o aplicație web să interacționeze cu blockchain-ul Ethereum (adică să citească datele blockchain-ului și/sau să trimită tranzacții către rețea), trebuie să se conecteze la un nod Ethereum.
@@ -265,7 +264,7 @@ ethers.utils.formatEther(balance)
 
 **Alchemyweb3 -** **_Wrapper în jurul Web3.js cu reîncercare automată și api-uri îmbunătățite._**
 
-- [Documentație](https://docs.alchemyapi.io/documentation/alchemy-web3)
+- [Documentație](https://docs.alchemy.com/reference/api-overview)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
 **Alchemy NFT API -** **_API for fetching NFT data, including ownership, metadata attributes and more._**

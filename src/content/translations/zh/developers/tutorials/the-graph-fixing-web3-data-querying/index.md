@@ -3,7 +3,6 @@ title: "The Graph：修复Web3数据查询"
 description: 区块链就像一个数据库，但是没有SQL。 所有数据就在那里，但是没有办法访问它。 让我告诉您如何使用The Graph和GraphQL解决这个问题。
 author: Markus Waas
 lang: zh
-sidebar: true
 tags:
   - "solidity"
   - "智能合约"

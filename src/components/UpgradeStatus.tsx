@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { TranslationKey } from "../utils/translations"
 import Translation from "./Translation"
 
@@ -48,6 +48,7 @@ const Content = styled.p`
 `
 
 export interface IProps {
+  children?: React.ReactNode
   dateKey: TranslationKey
   isShipped?: boolean
 }

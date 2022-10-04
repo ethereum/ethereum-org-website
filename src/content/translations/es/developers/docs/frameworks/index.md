@@ -2,7 +2,6 @@
 title: Frameworks de desarrollo de dapps
 description: Explora las ventajas de los frameworks y compara las opciones disponibles.
 lang: es
-sidebar: true
 ---
 
 ## Introducción a los frameworks {#introduction-to-frameworks}

@@ -2,7 +2,6 @@
 title: 添加开发者工具
 lang: zh
 description: 开发者工具上架 ethereum.org 的标准
-sidebar: true
 ---
 
 # 添加开发者工具 {#contributing-to-ethereumorg-}
@@ -47,7 +46,7 @@ sidebar: true
 
 ---
 
-## 产品顺序 {#product-ordering}
+## 产品排序 {#product-ordering}
 
 除非指定产品按特定方式排序，如按字母顺序排序，否则产品将默认从最早到最近添加到页面的顺序显示。 换句话说，最新的产品被添加到列表的底部。
 
