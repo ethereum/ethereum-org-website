@@ -2,7 +2,6 @@
 title: Adding content resources
 lang: en
 description: Our criteria for listing content resources on ethereum.org
-sidebar: true
 ---
 
 # Adding content resources {#adding-content-resources}

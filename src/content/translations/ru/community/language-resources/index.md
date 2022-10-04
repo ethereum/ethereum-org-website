@@ -1,7 +1,6 @@
 ---
 title: Языковые ресурсы
 description: Не англоязычные ресурсы для изучения Ethereum
-sidebar: true
 lang: ru
 ---
 

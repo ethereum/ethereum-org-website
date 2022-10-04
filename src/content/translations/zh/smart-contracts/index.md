@@ -2,7 +2,6 @@
 title: 智能合约
 description: 智能合约的非技术性介绍
 lang: zh
-sidebar: true
 ---
 
 # 智能合约简介 {#introduction-to-smart-contracts}
@@ -61,7 +60,7 @@ Alice 和 Bob 在参加一场自行车比赛。 假设 Alice 和 Bob 打赌 $10 
 
 ### 隐私保护 {#privacy-protection}
 
-智能合约还可以保护我们的隐私。 由于以太坊是匿名网络（您的交易公开绑定到唯一的加密地址，而不是您的身份），您可以保护您的隐私不受观察者窥探。
+智能合约还可以保护你的隐私。 由于以太坊是匿名网络（您的交易公开绑定到唯一的加密地址，而不是您的身份），您可以保护您的隐私不受观察者窥探。
 
 ### 可查看的条款 {#visible-terms}
 

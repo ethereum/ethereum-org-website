@@ -2,7 +2,6 @@
 title: Anatomia degli Smart Contract
 description: "Uno sguardo più da vicino agli Smart Contract: funzioni, dati e variabili."
 lang: it
-sidebar: true
 ---
 
 Uno Smart Contract è un programma che viene eseguito a un indirizzo di Ethereum. È composto di dati e funzioni che entrano in esecuzione appena si riceve una transazione. Ecco una panoramica di cosa costituisce uno Smart Contract.
@@ -334,51 +333,55 @@ contract CryptoPizza is IERC721, ERC165 {
 
     // Le variabili di stato costanti in Solidity sono simili ad altri linguaggi
     // ma devono essere assegnate da un'espressione che è costante al momento della compilazione.
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
+    // Scopri di più: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
     uint256 constant dnaDigits = 10;
     uint256 constant dnaModulus = 10 ** dnaDigits;
     bytes4 private constant _ERC721_RECEIVED = 0x150b7a02;
 
-    // Struct types let you define your own type
-    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
+    // I tipi di struttura ti fanno definire il tuo tipo
+    // Scopri di più: https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
     struct Pizza {
         string name;
         uint256 dna;
     }
 
-    // Creates an empty array of Pizza structs
+    // Crea un insieme vuoto di strutture di Pizza
     Pizza[] public pizzas;
 
-    // Mapping from pizza ID to its owner's address
+    // Mappatura dall'ID della pizza all'indirizzo del suo proprietario
     mapping(uint256 => address) public pizzaToOwner;
 
-    // Mapping from owner's address to number of owned token
+    // Mappatura dall'indirizzo del proprietario al numero di token posseduti
     mapping(address => uint256) public ownerPizzaCount;
 
-    // Mapping from token ID to approved address
+    // Mappatura dall'ID del token all'indirizzo approvato
     mapping(uint256 => address) pizzaApprovals;
 
-    // You can nest mappings, this example maps owner to operator approvals
+    // Puoi nidificare le mappature, questo esempio mappa le approvazioni da proprietario a operatore
     mapping(address => mapping(address => bool)) private operatorApprovals;
 
-    // Internal function to create a random Pizza from string (name) and DNA
+    // Funzione interna per creare una Pizza casuale dalla stringa (nome) e dal DNA
     function _createPizza(string memory _name, uint256 _dna)
-        // The `internal` keyword means this function is only visible
-        // within this contract and contracts that derive this contract
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
+        // La parola chiave `internal` significa che questa funzione è visibile solo
+        // tra questo contratto e i contratti derivati da esso
+        // Scopri di più: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
         internal
-        // `isUnique` is a function modifier that checks if the pizza already exists
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
+        // `isUnique` è un modificatore della funzione che verifica se la pizza esiste già
+        // Scopri di più: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
         isUnique(_name, _dna)
     {
-        // Adds Pizza to array of Pizzas and get id
+        // Aggiunge la Pizza all'insieme di Pizze e ottiene l'id
         uint256 id = SafeMath.sub(pizzas.push(Pizza(_name, _dna)), 1);
 
-        // Checks that Pizza owner is the same as current user
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
+        // Verifica che il proprietario della Pizza sia l'utente corrente
+        // Scopri di più: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
+
+        // nota che address(0) è l'indirizzo zero,
+        // indicando che pizza[id] non è ancora allocato a un utente in particolare.
+
         assert(pizzaToOwner[id] == address(0));
 
-        // Maps the Pizza to the owner
+        // Mappa la Pizza al proprietario
         pizzaToOwner[id] = msg.sender;
         ownerPizzaCount[msg.sender] = SafeMath.add(
             ownerPizzaCount[msg.sender],
@@ -386,37 +389,37 @@ contract CryptoPizza is IERC721, ERC165 {
         );
     }
 
-    // Creates a random Pizza from string (name)
+    // Crea una Pizza casuale dalla stringa (nome)
     function createRandomPizza(string memory _name) public {
         uint256 randDna = generateRandomDna(_name, msg.sender);
         _createPizza(_name, randDna);
     }
 
-    // Generates random DNA from string (name) and address of the owner (creator)
+    // Genera DNA casuale dalla stringa (nome) e dall'indirizzo del proprietario (creatore)
     function generateRandomDna(string memory _str, address _owner)
         public
-        // Functions marked as `pure` promise not to read from or modify the state
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#pure-functions
+        // Le funzioni contrassegnate come `pure` promettono di non modificare lo stato o non leggere da esso
+        // Scopri di più: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#pure-functions
         pure
         returns (uint256)
     {
-        // Generates random uint from string (name) + address (owner)
+        // Genera uint casuale dalla stringa (nome) + indirizzo (proprietario)
         uint256 rand = uint256(keccak256(abi.encodePacked(_str))) +
             uint256(_owner);
         rand = rand % dnaModulus;
         return rand;
     }
 
-    // Returns array of Pizzas found by owner
+    // Restituisce l'insieme di Pizze trovate dal proprietario
     function getPizzasByOwner(address _owner)
         public
-        // Functions marked as `view` promise not to modify state
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#view-functions
+        // Le funzioni contrassegnate come `view` promettono di non modificare lo stato
+        // Scopri di più: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#view-functions
         view
         returns (uint256[] memory)
     {
-        // Uses the `memory` storage location to store values only for the
-        // lifecycle of this function call.
+        // Usa la posizione d'archiviazione `memory` per memorizzare i valori solo per la durata
+        // di questa chiamata alla funzione.
         // Learn more: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
         uint256[] memory result = new uint256[](ownerPizzaCount[_owner]);
         uint256 counter = 0;
@@ -473,12 +476,12 @@ contract CryptoPizza is IERC721, ERC165 {
         bytes memory _data
     ) public {
         this.transferFrom(from, to, pizzaId);
-        require(_checkOnERC721Received(from, to, pizzaId, _data), "Must implmement onERC721Received.");
+        require(_checkOnERC721Received(from, to, pizzaId, _data), "Must implement onERC721Received.");
     }
 
     /**
-     * Internal function to invoke `onERC721Received` on a target address
-     * The call is not executed if the target address is not a contract
+     * Funzione interna per invocare `onERC721Received` su un dato indirizzo
+     * La chiamata non è eseguita se l'indirizzo di destinazione non è un contratto
      */
     function _checkOnERC721Received(
         address from,
@@ -499,13 +502,13 @@ contract CryptoPizza is IERC721, ERC165 {
         return (retval == _ERC721_RECEIVED);
     }
 
-    // Burns a Pizza - destroys Token completely
-    // The `external` function modifier means this function is
-    // part of the contract interface and other contracts can call it
+    // Brucia una Pizza - distrugge completamente il Token
+    // Il modificatore della funzione `external` significa che questa funzione fa
+    // parte dell'interfaccia del contratto e che gli altri contratti possono chiamarla
     function burn(uint256 _pizzaId) external {
-        require(msg.sender != address(0), "Invalid address.");
-        require(_exists(_pizzaId), "Pizza does not exist.");
-        require(_isApprovedOrOwner(msg.sender, _pizzaId), "Address is not approved.");
+        require(msg.sender != address(0), "Indirizzo non valido.");
+        require(_exists(_pizzaId), "La Pizza non esiste.");
+        require(_isApprovedOrOwner(msg.sender, _pizzaId), "Indirizzo non approvato.");
 
         ownerPizzaCount[msg.sender] = SafeMath.sub(
             ownerPizzaCount[msg.sender],
@@ -514,58 +517,58 @@ contract CryptoPizza is IERC721, ERC165 {
         pizzaToOwner[_pizzaId] = address(0);
     }
 
-    // Returns count of Pizzas by address
+    // Restituisce il numero di Pizze per indirizzo
     function balanceOf(address _owner) public view returns (uint256 _balance) {
         return ownerPizzaCount[_owner];
     }
 
-    // Returns owner of the Pizza found by id
+    // Restituisce il proprietario della Pizza trovato per id
     function ownerOf(uint256 _pizzaId) public view returns (address _owner) {
         address owner = pizzaToOwner[_pizzaId];
-        require(owner != address(0), "Invalid Pizza ID.");
+        require(owner != address(0), "ID della Pizza non valido.");
         return owner;
     }
 
-    // Approves other address to transfer ownership of Pizza
+    // Approva altri indirizzi per trasferire la proprietà della Pizza
     function approve(address _to, uint256 _pizzaId) public {
-        require(msg.sender == pizzaToOwner[_pizzaId], "Must be the Pizza owner.");
+        require(msg.sender == pizzaToOwner[_pizzaId], "Dev'essere il proprietario della Pizza.");
         pizzaApprovals[_pizzaId] = _to;
         emit Approval(msg.sender, _to, _pizzaId);
     }
 
-    // Returns approved address for specific Pizza
+    // Restituisce l'indirizzo approvato per la Pizza specifica
     function getApproved(uint256 _pizzaId)
         public
         view
         returns (address operator)
     {
-        require(_exists(_pizzaId), "Pizza does not exist.");
+        require(_exists(_pizzaId), "La Pizza non esiste.");
         return pizzaApprovals[_pizzaId];
     }
 
     /**
-     * Private function to clear current approval of a given token ID
-     * Reverts if the given address is not indeed the owner of the token
+     * La funzione privata per cancellare l'approvazione corrente dell'ID di un dato token
+     * Si ripristina se l'indirizzo dato non è il proprietario del token
      */
     function _clearApproval(address owner, uint256 _pizzaId) private {
-        require(pizzaToOwner[_pizzaId] == owner, "Must be pizza owner.");
-        require(_exists(_pizzaId), "Pizza does not exist.");
+        require(pizzaToOwner[_pizzaId] == owner, "Dev'essere il proprietario della pizza.");
+        require(_exists(_pizzaId), "La Pizza non esiste.");
         if (pizzaApprovals[_pizzaId] != address(0)) {
             pizzaApprovals[_pizzaId] = address(0);
         }
     }
 
     /*
-     * Sets or unsets the approval of a given operator
-     * An operator is allowed to transfer all tokens of the sender on their behalf
+     * Imposta o rimuove l'approvazione di un dato operatore
+     * Un operatore può trasferire tutti i token del mittente per conto suo
      */
     function setApprovalForAll(address to, bool approved) public {
-        require(to != msg.sender, "Cannot approve own address");
+        require(to != msg.sender, "Impossibile approvare il proprio indirizzo");
         operatorApprovals[msg.sender][to] = approved;
         emit ApprovalForAll(msg.sender, to, approved);
     }
 
-    // Tells whether an operator is approved by a given owner
+    // Dice se un operatore è approvato da un dato proprietario
     function isApprovedForAll(address owner, address operator)
         public
         view
@@ -574,27 +577,27 @@ contract CryptoPizza is IERC721, ERC165 {
         return operatorApprovals[owner][operator];
     }
 
-    // Takes ownership of Pizza - only for approved users
+    // Prende proprietà della Pizza - solo per gli utenti approvati
     function takeOwnership(uint256 _pizzaId) public {
-        require(_isApprovedOrOwner(msg.sender, _pizzaId), "Address is not approved.");
+        require(_isApprovedOrOwner(msg.sender, _pizzaId), "L'indirizzo non è approvato.");
         address owner = this.ownerOf(_pizzaId);
         this.transferFrom(owner, msg.sender, _pizzaId);
     }
 
-    // Checks if Pizza exists
+    // Verifica se la Pizza esiste
     function _exists(uint256 pizzaId) internal view returns (bool) {
         address owner = pizzaToOwner[pizzaId];
         return owner != address(0);
     }
 
-    // Checks if address is owner or is approved to transfer Pizza
+    // Verifica se l'indirizzo è il proprietario o è approvato per trasferire la Pizza
     function _isApprovedOrOwner(address spender, uint256 pizzaId)
         internal
         view
         returns (bool)
     {
         address owner = pizzaToOwner[pizzaId];
-        // Disable solium check because of
+        // Disabilita il controllo di solium a causa di
         // https://github.com/duaraghav8/Solium/issues/175
         // solium-disable-next-line operator-whitespace
         return (spender == owner ||
@@ -602,7 +605,7 @@ contract CryptoPizza is IERC721, ERC165 {
             this.isApprovedForAll(owner, spender));
     }
 
-    // Check if Pizza is unique and doesn't exist yet
+    // Verifica se la Pizza è univoca e non esiste ancora
     modifier isUnique(string memory _name, uint256 _dna) {
         bool result = true;
         for (uint256 i = 0; i < pizzas.length; i++) {
@@ -614,15 +617,15 @@ contract CryptoPizza is IERC721, ERC165 {
                 result = false;
             }
         }
-        require(result, "Pizza with such name already exists.");
+        require(result, "Una Pizza con quel nome esiste già.");
         _;
     }
 
-    // Returns whether the target address is a contract
+    // Restituisce se l'indirizzo di destinazione è un contratto
     function isContract(address account) internal view returns (bool) {
         uint256 size;
-        // Currently there is no better way to check if there is a contract in an address
-        // than to check the size of the code at that address.
+        // Correntemente non c'è modo migliore di verificare se esiste un contratto in un indirizzo
+        // se non controllare la dimensione del codice a quell'indirizzo.
         // Visita https://ethereum.stackexchange.com/a/14016/36603
         // per maggiori dettagli sul funzionamento.
         // TODO Controllare questo codice nuovamente prima del rilascio di Serenity, perché a quel punto
@@ -645,7 +648,7 @@ Consulta la documentazione di Solidity e Vyper per una panoramica più completa 
 
 ## Argomenti correlati {#related-topics}
 
-- [Smart Contract](/developers/docs/smart-contracts/)
+- [Contratti intelligenti](/developers/docs/smart-contracts/)
 - [Macchina virtuale Ethereum](/developers/docs/evm/)
 
 ## Tutorial correlati {#related-tutorials}

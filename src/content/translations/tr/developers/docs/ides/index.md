@@ -2,7 +2,6 @@
 title: Tümleşik Geliştirme Ortamları (IDE'ler)
 description:
 lang: tr
-sidebar: true
 ---
 
 Bir [tümleşik geliştirme ortamı (IDE)](https://wikipedia.org/wiki/Integrated_development_environment) kurmak söz konusu olduğunda Ethereum'da uygulama programlamak, başka herhangi bir yazılım projesini programlamaya benzer. Birçok seçenek bulunduğu için tercihlerinize en iyi uyan IDE veya kod editörünü seçin. Büyük ihtimalle Ethereum geliştirme için en iyi IDE seçimi, hâlihazırda geleneksel yazılım geliştirme için kullandığınız IDE olacaktır.

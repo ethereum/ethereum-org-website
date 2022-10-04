@@ -1,5 +1,6 @@
 // Library imports
 import React, { ReactNode, useState } from "react"
+import { Icon } from "@chakra-ui/react"
 import styled from "@emotion/styled"
 // Component imports
 import Translation from "./Translation"
@@ -100,14 +101,16 @@ const FeedbackCard: React.FC<IProps> = ({
             <>
               <Button
                 variant="outline-color"
-                leftIcon={<ThumbsUp />}
+                leftIcon={<Icon as={ThumbsUp} w={6} h={6} />}
                 onClick={() => handleSubmit(true)}
               >
                 <Translation id="yes" />
               </Button>
               <Button
                 variant="outline-color"
-                leftIcon={<ThumbsUp className="flip" />}
+                leftIcon={
+                  <Icon as={ThumbsUp} w={6} h={6} transform="scaleY(-1)" />
+                }
                 onClick={() => handleSubmit(false)}
               >
                 <Translation id="no" />

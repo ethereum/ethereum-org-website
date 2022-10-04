@@ -4,7 +4,6 @@ description: 什么是去中心化身份，它为什么很重要？
 lang: zh
 template: use-cases
 emoji: ":id:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/eth-gif-cat.png
 summaryPoint1: 传统身份系统有权对您的身份标识进行发布、维护和控制。
@@ -132,7 +131,7 @@ summaryPoint3: 多亏了加密技术，用户现在拥有了再次发布、持�
 
 ### 1. 通用登录 {#universal-dapp-logins}
 
-去中心化身份有助于使用[去中心化身份验证](https://www.ibm.com/blogs/blockchain/2018/10/decentralized-identity-an-alternative-to-password-based-authentication/)替代密码登录。 服务提供商可以向用户签发身份证明，这些证明可以存储在以太坊钱包中。 一个身份证明的示例是[非同质化代币](/nft/)，可授予持有者访问在线社区的权限。
+去中心化身份有助于使用[去中心化身份验证](https://www.ibm.com/blogs/blockchain/2018/10/decentralized-identity-an-alternative-to-password-based-authentication/)替代密码登录。 服务提供商可以向用户发布认证，这些认证可以存储在以太坊钱包中。 一个身份证明的示例是[非同质化代币](/nft/)，可授予持有者访问在线社区的权限。
 
 然后，[使用以太坊登录](https://login.xyz/)功能将使服务器能够确认用户的以太坊账户，并从他们的账户地址获取所需的身份证明。 这意味着用户无需记住冗长的密码即可访问平台和网站，从而改善用户的线上体验。
 
@@ -174,7 +173,7 @@ summaryPoint3: 多亏了加密技术，用户现在拥有了再次发布、持�
 ### 视频 {#videos}
 
 - [去中心化身份（奖励直播环节）](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _一个很好的去中心化身份解说视频，来自 Andreas Antonopolous_
-- [使用以太坊登录和使用 Ceramic、IDX、React 和 3ID Connect 的去中心化身份](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _YouTube 教程，介绍如何使用以太坊创建、读取和更新用户个人资料的身份管理系统 Nader Dabit 的钱包_
+- [使用以太坊和 Ceramic、IDX、React 以及 3ID Connect 的去中心化身份登录](https://www.youtube.com/watch?v=t9gWZYJxk7c) - _来自 Nader Dabit 的一个 YouTube 教程，介绍如何使用用户的以太坊钱包构建身份管理系统以创建、读取和更新他们的个人资料_
 - [BrightID - 以太坊上的去中心化身份](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Bankless 播客节目讨论 BrightID（以太坊的去中心化身份解决方案）_
 - [链下互联网：去中心化身份和可验证凭证](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — Evin McMullen 的 EthDenver 2022 演讲
 
@@ -182,4 +181,4 @@ summaryPoint3: 多亏了加密技术，用户现在拥有了再次发布、持�
 
 - [GitHub 上的 ERC-725 联盟](https://github.com/erc725alliance) — _支持 ERC725 标准管理以太坊区块链上的身份_
 - [SpruceID Discord 服务器](https://discord.com/invite/Sf9tSFzrnt) — _使用以太坊登录的爱好者和开发者社区_
-- [Veramo Labs](https://discord.gg/sYBUXpACh4) — _一个开发人员社区，致力于为应用程序构建可验证数据的框架_
+- [Veramo Labs](https://discord.gg/sYBUXpACh4) - _开发者社区，致力于为应用构建可验证数据框架_

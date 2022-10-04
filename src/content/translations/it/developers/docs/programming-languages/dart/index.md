@@ -2,7 +2,6 @@
 title: Ethereum per sviluppatori Dart
 description: Impara a sviluppare per Ethereum usando il linguaggio Dart
 lang: it
-sidebar: true
 incomplete: true
 ---
 
@@ -14,10 +13,10 @@ incomplete: true
   1.  Installare la [suite di sviluppo di Truffle](https://www.trufflesuite.com/)
   2.  Scrivere un contratto intelligente su [Solidity](https://soliditylang.org/)
   3.  Scrivere un'interfaccia utente su Dart
-- [Creare una dApp Mobile con Flutter](https://medium.com/dash-community/building-a-mobile-dapp-with-flutter-be945c80315a) richiede molto meno tempo, ancora meno se conosci già le basi.
+- [Creare una dapp Mobile con Flutter](https://medium.com/dash-community/building-a-mobile-dapp-with-flutter-be945c80315a) è molto più breve, il che potrebbe esser meglio se conosci già le basi
 - Se preferisci imparare guardando un video, puoi guardare [Build Your First Blockchain Flutter App](https://www.youtube.com/watch?v=3Eeh3pJ6PeA), (crea la tua prima App di Flutter della Blockchain) che dura circa un'ora
 - Se sei impaziente, questo potrebbe fare al caso tuo [Building a Blockchain Decentralized-app with Flutter and Dart on Ethereum](https://www.youtube.com/watch?v=jaMFEOCq_1s) (Creare un'app decentralizzata sulla Blockchain con Flutter e Dart su Ethereum), che dura solo circa venti minuti
-- [Integrating MetaMask in Flutter application](https://youtu.be/8qzVDje3IWk) (Integrare MetaMask nell'applicazione di Flutter); questo breve video è una guida con i passaggi necessari per l’integrazione di MetaMask nelle tue applicazioni Flutter.
+- [Integrare MetaMask nell'applicazione di Flutter](https://youtu.be/8qzVDje3IWk); questo breve video ti guida ai passaggi necessari per integrare MetaMask nelle tue applicazioni di Flutter
 
 ## Lavorare con i client di Ethereum {#working-with-ethereum-clients}
 

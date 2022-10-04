@@ -1,11 +1,10 @@
 ---
-title: Sicurezza degli smart contract
+title: Sicurezza dei contratti intelligenti
 description: Considerazioni sulla sicurezza per sviluppatori Ethereum
 lang: it
-sidebar: true
 ---
 
-Gli Smart Contract Ethereum sono estremamente flessibili, in grado di contenere grandi quantità di token (spesso per importi superiori a 1 miliardo di USD) e di eseguire una logica immutabile basata su codice di Smart Contract distribuito precedentemente. Sebbene questa situazione abbia creato un ecosistema vibrante e creativo di Smart Contract affidabili e interconnessi, è anche l'ecosistema perfetto per attrarre malintenzionati che cercano di trarre profitto sfruttando le vulnerabilità degli Smart Contract e il comportamento imprevisto di Ethereum. Il codice degli Smart Contract _di solito_ non può essere modificato per correggere falle di sicurezza, le risorse rubate dagli Smart Contract sono irrecuperabili e anche estremamente difficili da tracciare. L'importo totale del valore rubato o perso a causa di problemi degli Smart Contract si aggira facilmente attorno al miliardo di dollari. Alcuni dei maggiori errori dovuti a errori di codifica degli Smart Contract includono:
+Gli Smart Contract Ethereum sono estremamente flessibili, in grado di contenere grandi quantità di token (spesso per importi superiori a 1 miliardo di USD) e di eseguire una logica immutabile basata su codice di Smart Contract distribuito precedentemente. Sebbene questa situazione abbia creato un ecosistema vibrante e creativo di Smart Contract affidabili e interconnessi, è anche l'ecosistema perfetto per attrarre malintenzionati che cercano di trarre profitto sfruttando le vulnerabilità degli Smart Contract e il comportamento imprevisto di Ethereum. Il codice degli Smart Contract _di solito_ non può essere modificato per correggere falle di sicurezza, le risorse rubate dagli Smart Contract sono irrecuperabili e anche estremamente difficili da tracciare. L'importo totale del valore rubato o perso a causa di problemi degli Smart Contract supera facilmente il miliardo di dollari. Alcuni dei maggiori errori dovuti a errori di codifica degli Smart Contract includono:
 
 - [Problema 1 relativo a multi-sig Parity: persi 30 milioni di dollari](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach)
 - [Problema 2 relativo a multi-sig Parity: bloccati 300 milioni di dollari](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
@@ -35,7 +34,7 @@ Requisiti minimi:
 - Solidity non produce NESSUN avviso in fase di compilazione
 - Il codice è ben documentato
 
-C'è molto altro da dire sul processo di sviluppo, ma questo è un buon punto di partenza. Per ulteriori punti e spiegazioni dettagliate, vedi la [checklist per la qualità del processo stilata da DeFiSafety](https://docs.defisafety.com/review-process-documentation/process-quality-audit-process). [DefiSafety](https://defisafety.com/) è un servizio pubblico non ufficiale che pubblica recensioni di varie dapp Ethereum pubbliche. Parte del sistema di valutazione di DeFiSafety indica in che misura il progetto aderisce a questa checklist della qualità del processo. Seguendo questi processi:
+C'è molto altro da dire sul processo di sviluppo, ma questo è un buon punto di partenza. Per ulteriori punti e spiegazioni dettagliate, vedi la [checklist per la qualità del processo stilata da DeFiSafety](https://docs.defisafety.com/review-process-documentation/process-quality-audit-process). [DefiSafety](https://defisafety.com/) è un servizio pubblico non ufficiale che pubblica recensioni di varie grandi dapp pubbliche di Ethereum. Parte del sistema di valutazione di DeFiSafety indica in che misura il progetto aderisce a questa checklist della qualità del processo. Seguendo questi processi:
 
 - Produrrai codice più sicuro, tramite test automatici riproducibili
 - Gli auditor saranno in grado di rivedere il tuo progetto in modo più efficace

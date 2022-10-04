@@ -4,7 +4,6 @@ description: Обзор DAO на Ethereum
 lang: ru
 template: use-cases
 emoji: ":handshake:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/use-cases/dao-2.png
 alt: Представление голосований DAO по предложению.

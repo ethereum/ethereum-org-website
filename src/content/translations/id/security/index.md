@@ -2,7 +2,6 @@
 title: Keamanan Ethereum dan pencegahan penipuan
 description: Tetap aman di Ethereum
 lang: id
-sidebar: true
 ---
 
 # Keamanan Ethereum dan pencegahan penipuan {#introduction}

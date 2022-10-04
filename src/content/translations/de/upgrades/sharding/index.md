@@ -3,7 +3,6 @@ title: Shard Chains
 description: Erfahre mehr über Shard Chains – jene Aufteilung des Netzwerks, welche Ethereum mehr Kapazität für Transaktionen gibt und den Betrieb erleichtert.
 lang: de
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: Sharding ist ein mehrstufiges Upgrade, um Skalierbarkeit und Kapazitäten von Ethereum zu verbessern.
 summaryPoint2: Shard Chains bieten zusätzliche kostengünstigere Speicherebenen für Anwendungen und Rollups zur Speicherung von Daten.

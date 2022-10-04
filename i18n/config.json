@@ -192,6 +192,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "km",
+    "hrefLang": "km",
+    "name": "Khmer",
+    "localName": "ចក្រភពខ្មែរ",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "ko",
     "hrefLang": "ko",
     "name": "Korean",
@@ -249,7 +257,7 @@
   },
   {
     "code": "ph",
-    "hrefLang": "ph",
+    "hrefLang": "fil",
     "name": "Filipino",
     "localName": "Filipino",
     "langDir": "ltr",
@@ -356,6 +364,14 @@
     "hrefLang": "uk",
     "name": "Ukrainian",
     "localName": "Українська",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
+    "code": "uz",
+    "hrefLang": "uz",
+    "name": "Uzbek",
+    "localName": "O'zbekcha",
     "langDir": "ltr",
     "dateFormat": "MM/DD/YYYY"
   },

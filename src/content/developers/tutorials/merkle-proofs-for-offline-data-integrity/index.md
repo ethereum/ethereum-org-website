@@ -5,7 +5,6 @@ author: Ori Pomerantz
 tags: ["merkle", "integrity", "storage"]
 skill: advanced
 lang: en
-sidebar: true
 published: 2021-12-30
 ---
 

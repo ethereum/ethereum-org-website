@@ -3,7 +3,6 @@ title: "Ridimensionare i contratti per combattere i limiti di dimensioni"
 description: Cosa puoi fare per impedire che i tuoi smart contract diventino troppo grandi?
 author: Markus Waas
 lang: it
-sidebar: true
 tags:
   - "Solidity"
   - "smart contract"

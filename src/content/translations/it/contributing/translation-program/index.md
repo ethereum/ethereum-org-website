@@ -2,7 +2,6 @@
 title: Programma di traduzione
 lang: it
 description: Come contribuire al programma di traduzione di ethereum.org
-sidebar: true
 ---
 
 # Programma di traduzione {#translation-program}

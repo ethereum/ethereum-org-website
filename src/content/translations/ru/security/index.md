@@ -2,7 +2,6 @@
 title: Безопасность Ethereum и предотвращение мошенничества
 description: Обеспечение безопасности в Ethereum
 lang: ru
-sidebar: true
 ---
 
 # Безопасность Ethereum и предотвращение мошенничества {#introduction}
