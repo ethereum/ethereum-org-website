@@ -44,7 +44,7 @@ On top of the fee burn implemented by the London upgrade, validators can also in
 
 ## Issuance estimates {#issuance-estimates}
 
-So, how much ether is actually issued? The precise amount changes in each slot because it depends upon the amount of ether staked by validators and their performance. At the time of writing (September 2022), net issuance (`issuance-burn`) since The Merge has been ~3100 ETH (if we were still using proof-of-work, 54,000 ETH would have been issued). Extrapolating the current network usage into the future gives an estimated 0.22%/yr net issuance. However, current network usage is very low, and more transactions lead to more ETH being burned. The website [ultrasound.money](https://ultrasound.money/) allows you to make predictions for the future net issuance under a range of market conditions.
+So, how much ETH is issued? The precise amount changes in each slot because it depends upon the amount of ether staked by validators and their performance. At the time of writing (September 2022), net issuance (`issuance-burn`) since The Merge has been ~3100 ETH (if we were still using proof-of-work, 54,000 ETH would have been issued). Extrapolating the current network usage into the future gives an estimated 0.22%/yr net issuance. However, current network usage is very low, and more transactions means more burned ETH. The website [ultrasound.money](https://ultrasound.money/) allows you to make predictions for the future net issuance under a range of market conditions.
 
 ## Further reading {#further-reading}
 
