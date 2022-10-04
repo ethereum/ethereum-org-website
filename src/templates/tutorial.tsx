@@ -3,47 +3,29 @@ import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
-import {
-  Table,
-  Tbody,
-  Td,
-  Th,
-  Thead,
-  Tr,
-  UnorderedList,
-} from "@chakra-ui/react"
 
-import ButtonLink from "../components/ButtonLink"
-import Card from "../components/Card"
 import Codeblock from "../components/Codeblock"
 import TutorialMetadata from "../components/TutorialMetadata"
 import FileContributors from "../components/FileContributors"
-import InfoBanner from "../components/InfoBanner"
-import Link from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
-import Pill from "../components/Pill"
 import TableOfContents, {
   Item as ItemTableOfContents,
 } from "../components/TableOfContents"
-import SectionNav from "../components/SectionNav"
 import CallToContribute from "../components/CallToContribute"
 import {
-  Divider,
-  Paragraph,
   Header1,
   Header2,
   Header3,
   Header4,
   KBD,
 } from "../components/SharedStyledComponents"
-import Emoji from "../components/OldEmoji"
-import YouTube from "../components/YouTube"
 import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import FeedbackCard from "../components/FeedbackCard"
 
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
+import mdxComponents from "../components/mdx"
 
 const Page = styled.div`
   display: flex;
@@ -127,30 +109,14 @@ const H4 = styled(Header4)`
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  a: Link,
+  ...mdxComponents,
   h1: H1,
   h2: H2,
   h3: H3,
   h4: H4,
-  p: Paragraph,
   kbd: KBD,
-  ul: UnorderedList,
   pre: Codeblock,
-  table: Table,
-  thead: Thead,
-  tbody: Tbody,
-  th: Th,
-  tr: Tr,
-  td: Td,
-  ButtonLink,
-  InfoBanner,
-  Card,
-  Divider,
-  SectionNav,
-  Pill,
   CallToContribute,
-  Emoji,
-  YouTube,
 }
 
 const Contributors = styled(FileContributors)`

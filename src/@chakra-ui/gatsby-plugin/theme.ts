@@ -13,7 +13,11 @@ import foundations from "./foundations"
 // Component style overrides
 import * as components from "./components"
 
+// Semantic tokens
 import semanticTokens from "./semanticTokens"
+
+// MDX styles
+import mdx from "./mdx"
 
 const config: ThemeConfig = {
   cssVarPrefix: "eth",
@@ -42,6 +46,7 @@ const theme: ThemeOverride = {
   ...foundations,
   semanticTokens,
   components,
+  mdx,
 }
 
 export default extendTheme(theme)

@@ -13,7 +13,7 @@ import TableOfContents, {
 } from "../components/TableOfContents"
 import Translation from "../components/Translation"
 import PostMergeBanner from "../components/Banners/PostMergeBanner"
-import mdxComponents from "../components/mdx-components"
+import mdxComponents from "../components/mdx"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"

@@ -5,50 +5,21 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
-import {
-  Table,
-  Tbody,
-  Td,
-  Th,
-  Thead,
-  Tr,
-  UnorderedList,
-} from "@chakra-ui/react"
 
-import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
   List as ButtonDropdownList,
 } from "../components/ButtonDropdown"
 import Breadcrumbs from "../components/Breadcrumbs"
-import Card from "../components/Card"
 import Icon from "../components/Icon"
-import Contributors from "../components/Contributors"
-import InfoBanner from "../components/InfoBanner"
-import UpgradeStatus from "../components/UpgradeStatus"
 import Link from "../components/Link"
 import BeaconChainActions from "../components/BeaconChainActions"
 import ShardChainsList from "../components/ShardChainsList"
 import MergeArticleList from "../components/MergeArticleList"
-import Logo from "../components/Logo"
-import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
-import Pill from "../components/Pill"
-import RandomAppList from "../components/RandomAppList"
-import Roadmap from "../components/Roadmap"
 import UpgradeTableOfContents, {
   Item as ItemTableOfContents,
 } from "../components/UpgradeTableOfContents"
 import Translation from "../components/Translation"
-import SectionNav from "../components/SectionNav"
-import ExpandableCard from "../components/ExpandableCard"
-import {
-  Divider,
-  Paragraph,
-  Header1,
-  Header4,
-} from "../components/SharedStyledComponents"
-import Emoji from "../components/OldEmoji"
-import YouTube from "../components/YouTube"
 import MergeInfographic from "../components/MergeInfographic"
 import FeedbackCard from "../components/FeedbackCard"
 
@@ -58,6 +29,7 @@ import { getSummaryPoints } from "../utils/getSummaryPoints"
 import { Lang } from "../utils/languages"
 import { getImage } from "../utils/image"
 import { Context } from "../types"
+import mdxComponents from "../components/mdx"
 
 const Page = styled.div`
   display: flex;
@@ -128,16 +100,6 @@ const LastUpdated = styled.p`
   border-top: 1px solid ${(props) => props.theme.colors.border};
 `
 
-const Pre = styled.pre`
-  max-width: 100%;
-  overflow-x: scroll;
-  background-color: ${(props) => props.theme.colors.preBackground};
-  border-radius: 0.25rem;
-  padding: 1rem;
-  border: 1px solid ${(props) => props.theme.colors.preBorder};
-  white-space: pre-wrap;
-`
-
 const H1 = styled.h1`
   font-size: 3rem;
   font-weight: 700;
@@ -164,38 +126,12 @@ const H3 = styled.h3`
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  a: Link,
-  h1: Header1,
+  ...mdxComponents,
   h2: H2,
   h3: H3,
-  h4: Header4,
-  p: Paragraph,
-  pre: Pre,
-  table: Table,
-  thead: Thead,
-  tbody: Tbody,
-  th: Th,
-  tr: Tr,
-  td: Td,
-  ul: UnorderedList,
-  MeetupList,
-  RandomAppList,
-  Roadmap,
-  Logo,
-  ButtonLink,
-  Contributors,
-  InfoBanner,
-  Card,
-  Divider,
-  SectionNav,
-  Pill,
-  Emoji,
-  UpgradeStatus,
   BeaconChainActions,
   ShardChainsList,
   MergeArticleList,
-  YouTube,
-  ExpandableCard,
   MergeInfographic,
 }
 

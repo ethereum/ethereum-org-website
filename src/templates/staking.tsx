@@ -4,48 +4,18 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { MDXProvider } from "@mdx-js/react"
 import styled from "@emotion/styled"
-import {
-  Table,
-  Tbody,
-  Td,
-  Th,
-  Thead,
-  Tr,
-  UnorderedList,
-} from "@chakra-ui/react"
 
-import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
   List as ButtonDropdownList,
 } from "../components/ButtonDropdown"
-import Card from "../components/Card"
-import ExpandableCard from "../components/ExpandableCard"
-import DocLink from "../components/DocLink"
-import Contributors from "../components/Contributors"
 import SharedInfoBanner from "../components/InfoBanner"
-import UpgradeStatus from "../components/UpgradeStatus"
-import Link from "../components/Link"
-import Logo from "../components/Logo"
-import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
-import Pill from "../components/Pill"
-import RandomAppList from "../components/RandomAppList"
-import Roadmap from "../components/Roadmap"
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents, {
   Item as ItemTableOfContents,
 } from "../components/TableOfContents"
 import FeedbackCard from "../components/FeedbackCard"
-import SectionNav from "../components/SectionNav"
-import {
-  Divider,
-  Paragraph,
-  Header1,
-  Header4,
-  InfoGrid,
-} from "../components/SharedStyledComponents"
-import Emoji from "../components/OldEmoji"
-import YouTube from "../components/YouTube"
+import { InfoGrid } from "../components/SharedStyledComponents"
 import Breadcrumbs from "../components/Breadcrumbs"
 import StakingLaunchpadWidget from "../components/Staking/StakingLaunchpadWidget"
 import StakingProductsCardGrid from "../components/Staking/StakingProductsCardGrid"
@@ -59,6 +29,7 @@ import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Context } from "../types"
 import { Lang } from "../utils/languages"
 import { getImage } from "../utils/image"
+import mdxComponents from "../components/mdx"
 
 const Page = styled.div`
   display: flex;
@@ -124,16 +95,6 @@ const ContentContainer = styled.article`
       color: ${(props) => props.theme.colors.text200};
     }
   }
-`
-
-const Pre = styled.pre`
-  max-width: 100%;
-  overflow-x: scroll;
-  background-color: ${(props) => props.theme.colors.preBackground};
-  border-radius: 0.25rem;
-  padding: 1rem;
-  border: 1px solid ${(props) => props.theme.colors.preBorder};
-  white-space: pre-wrap;
 `
 
 const InfoTitle = styled.h2`
@@ -317,38 +278,12 @@ const InfoBanner = styled(SharedInfoBanner)`
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  a: Link,
-  h1: Header1,
+  ...mdxComponents,
   h2: H2,
   h3: H3,
-  h4: Header4,
-  p: Paragraph,
-  pre: Pre,
-  table: Table,
-  thead: Thead,
-  tbody: Tbody,
-  th: Th,
-  tr: Tr,
-  td: Td,
-  ul: UnorderedList,
-  MeetupList,
-  RandomAppList,
-  Roadmap,
-  Logo,
-  ButtonLink,
-  Contributors,
   InfoBanner,
-  Card,
   CardGrid,
   InfoGrid,
-  Divider,
-  SectionNav,
-  Pill,
-  Emoji,
-  UpgradeStatus,
-  DocLink,
-  ExpandableCard,
-  YouTube,
   StakingLaunchpadWidget,
   StakingProductsCardGrid,
   StakingComparison,
