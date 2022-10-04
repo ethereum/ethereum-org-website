@@ -1440,6 +1440,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://www.linkedin.com/in/simonletort"><img src="https://avatars.githubusercontent.com/u/367992?v=4?s=100" width="100px;" alt="Simon Letort"/><br /><sub><b>Simon Letort</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=simonletort" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/AidanPine"><img src="https://avatars.githubusercontent.com/u/92037147?v=4?s=100" width="100px;" alt="AidanPine"/><br /><sub><b>AidanPine</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=AidanPine" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/christy-pdx"><img src="https://avatars.githubusercontent.com/u/107286087?v=4?s=100" width="100px;" alt="christy-pdx"/><br /><sub><b>christy-pdx</b></sub></a><br /><a href="#content-christy-pdx" title="Content">🖋</a></td>
+      <td align="center"><a href="https://github.com/medardm"><img src="https://avatars.githubusercontent.com/u/20562573?v=4?s=100" width="100px;" alt="Medard Mandane"/><br /><sub><b>Medard Mandane</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=medardm" title="Documentation">📖</a></td>
     </tr>
   </tbody>
   <tfoot>
