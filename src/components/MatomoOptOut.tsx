@@ -35,7 +35,7 @@ const MatomoOptOut: React.FC<IProps> = () => {
       border="1px solid"
       borderColor="border"
       bgColor="background"
-      borderRadius={1}
+      borderRadius="base"
       p={6}
       direction="column"
       mb={4}
