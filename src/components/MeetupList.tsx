@@ -79,48 +79,52 @@ const MeetupList: React.FC<IProps> = () => {
       >
         {filteredMeetups.length ? (
           filteredMeetups.map((meetup, idx) => (
-            <LinkBox key={idx}>
-              <LinkOverlay
-                as={Link}
-                href={meetup.link}
-                textDecoration="none"
-                display="flex"
-                justifyContent="space-between"
-                color="text"
-                boxShadow={
-                  colorMode === "dark"
-                    ? "tableItemBox.dark"
-                    : "tableItemBox.light"
-                }
-                mb={0.25}
-                p={4}
-                w="100%"
-                _hover={{
-                  textDecoration: "none",
-                  borderRadius: "base",
-                  boxShadow: "0 0 1px primary",
-                  bg: "tableBackgroundHover",
-                }}
+            <LinkBox
+              key={idx}
+              display="flex"
+              justifyContent="space-between"
+              boxShadow={
+                colorMode === "dark"
+                  ? "tableItemBox.dark"
+                  : "tableItemBox.light"
+              }
+              mb={0.25}
+              p={4}
+              w="100%"
+              _hover={{
+                textDecoration: "none",
+                borderRadius: "base",
+                boxShadow: "0 0 1px primary",
+                bg: "tableBackgroundHover",
+              }}
+            >
+              <Flex flex="1 1 75%" mr={4}>
+                <Box mr={4} opacity="0.4">
+                  {idx + 1}
+                </Box>
+                <Box>
+                  <LinkOverlay
+                    as={Link}
+                    href={meetup.link}
+                    textDecor="none"
+                    color="text"
+                  >
+                    {meetup.title}
+                  </LinkOverlay>
+                </Box>
+              </Flex>
+              <Flex
+                textAlign="right"
+                alignContent="flex-start"
+                flex="1 1 25%"
+                mr={4}
+                flexWrap="wrap"
               >
-                <Flex flex="1 1 75%" mr={4}>
-                  <Box mr={4} opacity="0.4">
-                    {idx + 1}
-                  </Box>
-                  <Box>{meetup.title}</Box>
-                </Flex>
-                <Flex
-                  textAlign="right"
-                  alignContent="flex-start"
-                  flex="1 1 25%"
-                  mr={4}
-                  flexWrap="wrap"
-                >
-                  <Emoji text={meetup.emoji} boxSize={4} mr={2} />
-                  <Text mb={0} opacity={"0.6"}>
-                    {meetup.location}
-                  </Text>
-                </Flex>
-              </LinkOverlay>
+                <Emoji text={meetup.emoji} boxSize={4} mr={2} />
+                <Text mb={0} opacity={"0.6"}>
+                  {meetup.location}
+                </Text>
+              </Flex>
             </LinkBox>
           ))
         ) : (
