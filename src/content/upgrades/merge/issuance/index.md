@@ -28,7 +28,7 @@ Ethereum validators are rewarded with ETH for attesting to the state of the chai
 
 **Consensus layer issuance:**
 
-Small rewards are paid validators who attest to and propose blocks. Validator rewards accrue to _validator balances_ that are managed within the consensus layer. These are separate Ethereum accounts to the accounts we're used to on Mainnet, and until the Shanghai upgrade funds from validator accounts will not be withdrawable/transferrable. This means that although new ETH is still being issued, 100% of it will be locked from the market until this upgrade occurs. When the Shanghai upgrade is rolled out, this ETH will become available.
+Small rewards are paid to validators who attest to and propose blocks. Validator rewards accrue to _validator balances_ that are managed within the consensus layer. These are separate Ethereum accounts to the accounts we're used to on Mainnet, and until the Shanghai upgrade funds from validator accounts will not be withdrawable/transferrable. This means that although new ETH is still being issued, 100% of it will be locked from the market until this upgrade occurs. When withdrawals are enabled, this ETH will become available.
 
 When validator withdrawals are enabled, stakers will be incentivized to remove their _earnings/rewards (balance over 32 ETH)_ as these funds are otherwise not contributing to their stake weight (which maxes out at 32).
 
