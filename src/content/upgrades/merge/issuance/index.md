@@ -42,7 +42,7 @@ Fee burning went live with <a href="/history/#london">the London upgrade</a> in 
 
 On top of the fee burn implemented by the London upgrade, validators can also incur penalties for being offline, or worse, they can be slashed for breaking specific rules that threaten network security. These penalties result in a reduction of ETH from that validator's balance, which is not directly rewarded to any other account, effectively burning it from circulation.
 
-## Issuance estimates
+## Issuance estimates {#issuance-estimates}
 
 So, how much ether is actually issued? The precise amount changes in each slot because it depends upon the amount of ether staked by validators and their performance. At the time of writing (September 2022), net issuance (`issuance-burn`) since The Merge has been ~3100 ETH (if we were still using proof-of-work, 54,000 ETH would have been issued). Extrapolating the current network usage into the future gives an estimated 0.22%/yr net issuance. However, current network usage is very low, and more transactions lead to more ETH being burned. The website [ultrasound.money](https://ultrasound.money/) allows you to make predictions for the future net issuance under a range of market conditions.
 
