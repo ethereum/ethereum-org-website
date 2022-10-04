@@ -2,8 +2,6 @@
 title: Oracles
 description: Oracles provide Ethereum smart contracts with access to real-world data, unlocking more use-cases and greater value for users.  
 lang: en
-sidebar: true
-incomplete: true
 ---
 
 Oracles are data feeds that bring data from off the blockchain (off-chain) data sources and puts it on the blockchain (on-chain) for smart contracts to use. This is necessary because smart contracts running on Ethereum cannot access information stored outside the blockchain network. 
