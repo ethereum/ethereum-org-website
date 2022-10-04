@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react"
 import { Flex, Heading, Text } from "@chakra-ui/react"
+import styled from "@emotion/styled"
 import Emoji from "./Emoji"
 
 export interface IProps {
@@ -10,6 +11,11 @@ export interface IProps {
   className?: string
 }
 
+const Container = styled.div`
+  h3 {
+    min-height: 67px !important;
+  }
+`
 const Card: React.FC<IProps> = ({
   emoji,
   title,
@@ -26,8 +32,9 @@ const Card: React.FC<IProps> = ({
     borderColor="lightBorder"
     p={6}
     className={className}
+    style={{ justifyContent: "space-between" }}
   >
-    <div>
+    <Container>
       {emoji && <Emoji fontSize="5xl" text={emoji} mb={4} />}
       {title && (
         <Heading as="h3" mt={0} fontSize="2xl" lineHeight={1.4}>
@@ -39,7 +46,7 @@ const Card: React.FC<IProps> = ({
           {description}
         </Text>
       )}
-    </div>
+    </Container>
     {children}
   </Flex>
 )
