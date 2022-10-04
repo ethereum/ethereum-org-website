@@ -1,6 +1,6 @@
 // Libraries
 import React, { useState, SVGProps } from "react"
-import { getImage, GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { keyframes } from "@emotion/react"
 import styled from "@emotion/styled"
 
