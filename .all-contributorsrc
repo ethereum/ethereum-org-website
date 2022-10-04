@@ -9126,6 +9126,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "loicalbertin",
+      "name": "Loïc Albertin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/872896?v=4",
+      "profile": "https://github.com/loicalbertin",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
