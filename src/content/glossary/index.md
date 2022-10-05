@@ -219,7 +219,8 @@ The economics of cryptocurrencies.
 
 ### DAG {#dag}
 
-DAG stands for Directed Acyclic Graph. It is a data structure composed of nodes and links between them. Ethereum uses a DAG in its [proof-of-work](#pow) algorithm, [Ethash](#ethash).
+DAG stands for Directed Acyclic Graph. It is a data structure composed of nodes and links between them. Previous to The 
+Merge,  Ethereum used a DAG in its [proof-of-work](#pow) algorithm, [Ethash](#ethash).
 
 ### Dapp {#dapp}
 
