@@ -85,7 +85,7 @@ The following Ethereum-based projects use tools mentioned on this page. The rela
 
 ## Events
 
-- [PyChain 2022 virtual conference](https://www.pychain.org/) - virtual event to introduce blockchain to Python developers and share the practices across community boundaries
+- [PyChain 2022](https://www.pychain.org/) - a virtual conference to introduce blockchain to Python developers and share practices across community boundaries
 
 ## Other aggregated lists {#other-aggregated-lists}
 
