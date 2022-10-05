@@ -2,7 +2,6 @@
 title: Gasper
 description: Una spiegazione del meccanismo di proof-of-stake di Gasper.
 lang: it
-sidebar: true
 ---
 
 Gasper è una combinazione di Casper the Friendly Finality Gadget (Casper-FFG) e dell'algoritmo di scelta della biforcazione LMD-GHOST. Insieme, questi componenti formano il meccanismo di consenso che protegge l'Ethereum proof-of-stake. Casper è il meccanismo che aggiorna certi blocchi a "finalizzati", così che i nuovi entranti nella rete possano essere certi che stanno sincronizzando la catena canonica. L'algoritmo di scelta della biforcazione usa i voti accumulati per assicurare che al sorgere di biforcazioni nella blockchain, i nodi possano facilmente selezionare quella corretta.

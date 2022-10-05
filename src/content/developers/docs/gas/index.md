@@ -35,8 +35,9 @@ i.e `21,000 * 200 = 4,200,000 gwei` or 0.0042 ETH
 
 Let's say Jordan has to pay Taylor 1 ETH. In the transaction, the gas limit is 21,000 units and the base fee is 10 gwei. Jordan includes a tip of 2 gwei.
 
-Total fee would have been: `Gas units (limit) * (Base fee + Tip)`
-`21,000 * (10 + 2) = 252,000 gwei` or 0.000252 ETH.
+The total fee would now be: `units of gas used * (base fee + priority fee)` where the `base fee` is a value set by the protocol and the `priority fee` is a value set by the user as a tip to the validator.
+
+i.e `21,000 * (10 + 2) = 252,000 gwei` or 0.000252 ETH.
 
 When Jordan sends the money, 1.000252 ETH will be deducted from Jordan's account.
 Taylor will be credited 1.0000 ETH.

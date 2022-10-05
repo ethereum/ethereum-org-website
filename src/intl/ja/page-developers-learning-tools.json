@@ -6,7 +6,7 @@
   "page-learning-tools-browse-docs": "ドキュメントを参照",
   "page-learning-tools-capture-the-ether-description": "Capture the Etherは、イーサリアムのスマートコントラクトをハッキングして、セキュリティについて学ぶゲームです。",
   "page-learning-tools-capture-the-ether-logo-alt": "イーサロゴをキャプチャ",
-  "page-learning-tools-chainshot-description": "リモート、インストラクター主導のイーサリアム開発者ブートキャンプおよびその他のコース。",
+  "page-learning-tools-chainshot-description": "リモート、インストラクター主導のイーサリアムデベロッパーのブートキャンプおよびその他のコース。",
   "page-learning-tools-chainshot-logo-alt": "ChainShot ロゴ",
   "page-learning-tools-coding": "コーディングで学ぶ",
   "page-learning-tools-coding-subtitle": "よりインタラクティブな学習体験を希望される場合、これらのツールはイーサリアムの実験に役立ちます。",
@@ -35,6 +35,8 @@
   "page-learning-tools-remix-logo-alt": "Remix ロゴ",
   "page-learning-tools-sandbox": "コードサンドボックス",
   "page-learning-tools-sandbox-desc": "これらのサンドボックスは、スマートコントラクトを書いたり、イーサリアムを理解したりするための実験の場となります。",
+  "page-learning-tools-speed-run-ethereum-description": "Speed Run Ethereumには、Solidityの知識をScaffold-ETHを使ってテストできる演習課題があります。",
+  "page-learning-tools-speed-run-ethereum-logo-alt": "Speed Run Ethereumロゴ",
   "page-learning-tools-studio-description": "WebベースのIDEでは、チュートリアルに従ってスマートコントラクトを作成してテストし、それらのフロントエンドを構築することができます。",
   "page-learning-tools-vyperfun-description": "Vyperを学んでご自身のポケモンゲームを作りましょう。",
   "page-learning-tools-vyperfun-logo-alt": "Vyper.fun ロゴ",
@@ -42,6 +44,6 @@
   "page-learning-tools-nftschool-logo-alt": "NFT schoolロゴ",
   "page-learning-tools-pointer-description": "楽しいインタラクティブなチュートリアルでWeb3開発スキルを学びながら、仮想通貨を獲得しましょう",
   "page-learning-tools-pointer-logo-alt": "Pointerロゴ",
-  "page-learning-tools-platzi-description": "Web3上でDappを構築する方法を学び、ブロックチェーン開発者に必要なすべてのスキルを習得します。",
-  "page-learning-tools-platzi-logo-alt": "プラッツィのロゴ"
+  "page-learning-tools-platzi-description": "Web3で分散型アプリ(Dapp)を構築する方法を学び、ブロックチェーン開発者に必要なすべてのスキルを習得しましょう。",
+  "page-learning-tools-platzi-logo-alt": "Platziロゴ"
 }

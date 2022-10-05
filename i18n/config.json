@@ -192,6 +192,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "km",
+    "hrefLang": "km",
+    "name": "Khmer",
+    "localName": "ចក្រភពខ្មែរ",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "ko",
     "hrefLang": "ko",
     "name": "Korean",
