@@ -18,7 +18,7 @@ title="ETH issuance tldr">
 - Before The Merge ~13,000 ETH/day was issued to pay miners
 - After The Merge, issuance depends upon the number of active validators on the network, so varies slot to slot.
 - The total issuance is approximately 90% smaller now than it was pre-merge.
-- Ether is also burned in every slot, with a greater amount burned when gas is higher. This means ether can be inflationary or deflationary depending on network demand.
+- ETH is burned in every slot, with a greater amount burned when gas is higher. This means ETH can be inflationary or deflationary depending on network demand.
 
 </Card>
 
@@ -26,7 +26,6 @@ title="ETH issuance tldr">
 
 Ethereum validators are rewarded with ETH for attesting to the state of the chain and proposing blocks. Rewards (or penalties) are calculated and distributed at each epoch (every 6.4 minutes) based on validator performance. The validator rewards are **significantly** less than the miner rewards that used to be issued on proof-of-work (2 ETH every ~13.5 seconds), as operating a validating node is not an economically intense activity and thus does not require or warrant as high a reward.
 
-**Consensus layer issuance:**
 
 Small rewards are paid to validators who attest to and propose blocks. Validator rewards accrue to _validator balances_ that are managed within the consensus layer. These are separate Ethereum accounts to the accounts we're used to on Mainnet, and until the Shanghai upgrade funds from validator accounts will not be withdrawable/transferrable. This means that although new ETH is still being issued, 100% of it will be locked from the market until this upgrade occurs. When withdrawals are enabled, this ETH will become available.
 
