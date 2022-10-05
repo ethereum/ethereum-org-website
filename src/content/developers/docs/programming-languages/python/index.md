@@ -83,6 +83,10 @@ The following Ethereum-based projects use tools mentioned on this page. The rela
 - [Ethereum Python Community Discord](https://discord.gg/9zk7snTfWe) for Web3.py and other Python framework discussion
 - [Vyper Discord](<[https://discord.gg/9zk7snTfWe](https://discord.gg/SdvKC79cJk)>) for Vyper smart contract programming disucssion
 
+## Events
+
+- [PyChain 2022 virtual conference](https://www.pychain.org/) - virtual event to introduce blockchain to Python developers and share the practices across community boundaries
+
 ## Other aggregated lists {#other-aggregated-lists}
 
 The Vyper wiki has an [incredible list of resources for Vyper](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources)
