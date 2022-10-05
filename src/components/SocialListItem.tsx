@@ -29,7 +29,7 @@ const icons = {
 
 export interface IProps {
   children?: React.ReactNode
-  socialIcon: string
+  socialIcon: keyof typeof icons
 }
 
 const SocialListItem: React.FC<IProps> = ({ children, socialIcon }) => {
@@ -41,7 +41,6 @@ const SocialListItem: React.FC<IProps> = ({ children, socialIcon }) => {
         boxSize={10}
         color={socialColors[socialIcon]}
       />
-      {icons[socialIcon]}
       <Box
         fontStyle="italic"
         sx={{
