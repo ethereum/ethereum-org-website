@@ -33,7 +33,7 @@
   "page-upgrade-article-title-consensus-layer-specs": "Consensus layer specs",
   "page-upgrade-article-title-engine-api-specs": "Engine API specs",
   "page-upgrades-beacon-chain-btn": "More on the Beacon Chain",
-  "page-upgrades-beacon-chain-date": "The Beacon Chain went live on December 1, 2020 and took control of consensus on Ethereum Mainnet on September 15, 2022.",
+  "page-upgrades-beacon-chain-date": "The Beacon Chain went live on December 1, 2020",
   "page-upgrades-beacon-chain-desc": "The Beacon Chain brought staking to Ethereum and laid the groundwork for future upgrades. It coordinates the new proof-of-stake Ethereum.",
   "page-upgrades-beacon-chain-estimate": "The Beacon Chain is live",
   "page-upgrades-beacon-chain-title": "The Beacon Chain",
