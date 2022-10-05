@@ -3,8 +3,7 @@ import React, { useState } from "react"
 import styled from "@emotion/styled"
 
 // Components
-import Checkbox from "../Checkbox" // to remove
-import NewCheckbox from "../NewCheckbox"
+import Checkbox from "../Checkbox"
 import Icon from "../Icon"
 
 // Data
@@ -126,15 +125,6 @@ const CheckboxGrid = styled.div`
   margin-top: 14px;
   gap: 0.5rem;
   cursor: pointer;
-`
-
-const CheckboxGridOption = styled.div`
-  display: flex;
-  gap: 0.5rem;
-
-  p {
-    margin: 0;
-  }
 `
 
 const ToggleIcon = styled(Icon)`
@@ -531,9 +521,7 @@ const WalletFilterSidebar = ({
                     {item.options.length > 0 && item.showOptions && (
                       <CheckboxGrid>
                         {item.options.map((option) => {
-                          const handleClick = (evt) => {
-                            console.log("superpippo click")
-                            console.log({ evt })
+                          const handleClick = () => {
                             let closeShowOptions = true
 
                             for (let filterOption of item.options) {
@@ -554,13 +542,6 @@ const WalletFilterSidebar = ({
                               setShowOptions(idx, itemidx, !item.showOptions)
                             }
 
-                            console.log({
-                              eventCategory: "WalletFilterSidebar",
-                              eventAction: `${filterOption.title}`,
-                              eventName: `${option.filterKey} ${!filters[
-                                option.filterKey!
-                              ]}`,
-                            })
                             trackCustomEvent({
                               eventCategory: "WalletFilterSidebar",
                               eventAction: `${filterOption.title}`,
@@ -572,15 +553,19 @@ const WalletFilterSidebar = ({
                           }
 
                           return (
-                            <CheckboxGridOption onClick={handleClick}>
-                              <NewCheckbox
-                                aria-label={option.name}
-                                checked={filters[option.filterKey!]}
-                                size="md"
-                                // callback={evt => handleClick(evt)}
-                              />
-                              <p aria-hidden="true">{option.name}</p>
-                            </CheckboxGridOption>
+                            <Checkbox
+                              aria-label={option.name}
+                              checked={filters[option.filterKey!]}
+                              size="md"
+                              callback={handleClick}
+                              textProps={{
+                                "aria-hidden": "true",
+                                as: "p",
+                                m: 0,
+                              }}
+                            >
+                              {option.name}
+                            </Checkbox>
                           )
                         })}
                       </CheckboxGrid>

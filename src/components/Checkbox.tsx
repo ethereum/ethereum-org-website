@@ -1,20 +1,42 @@
 import React from "react"
-import { Box, VisuallyHiddenInput, Text } from "@chakra-ui/react"
+import {
+  Checkbox as ChakraCheckbox,
+  CheckboxProps,
+  Text,
+  Icon,
+  TextProps,
+} from "@chakra-ui/react"
 
-export interface IProps {
+const CustomIcon = () => {
+  return (
+    <Icon
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="white"
+      strokeWidth="2px"
+      w="100%"
+      h="100%"
+    >
+      <polyline points="20 6 9 17 4 12" />
+    </Icon>
+  )
+}
+
+export interface IProps extends CheckboxProps {
   children?: React.ReactNode
-  callback?: () => void
+  callback?: Function
   checked: boolean
   className?: string
-  size?: number
+  textProps?: TextProps
 }
 
 const Checkbox: React.FC<IProps> = ({
+  children,
   callback,
   checked,
-  children,
   className,
-  size = 2,
+  size,
+  textProps,
   ...rest
 }) => {
   const handleClick = () => {
@@ -22,57 +44,22 @@ const Checkbox: React.FC<IProps> = ({
       callback()
     }
   }
+
   return (
-    <Box
-      display="inline-block"
-      verticalAlign="middle"
+    <ChakraCheckbox
+      isChecked={checked}
       className={className}
-      onClick={handleClick}
+      onChange={handleClick}
+      size={size}
+      icon={<CustomIcon />}
+      {...rest}
     >
-      <VisuallyHiddenInput
-        type="checkbox"
-        checked={checked}
-        readOnly
-        {...rest}
-      />
-      <Box
-        aria-hidden={true}
-        className="styled-checkbox"
-        display="inline-block"
-        w={`${size}rem`}
-        h={`${size}rem`}
-        minW={`${size}rem`}
-        bg={`${checked ? "primary400" : "background"}`}
-        border="1px"
-        borderStyle="solid"
-        borderColor="black50"
-        borderRadius="3px"
-        transition="all 150ms"
-        _hover={{
-          boxShadow: "tableItemBoxShadow",
-          border: "1px",
-          borderStyle: "solid",
-          borderColor: "primary600",
-          transition: "transform 0.1s",
-          transform: "scale(1.02)",
-        }}
-      >
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="white"
-          strokeWidth="2px"
-          visibility={`${checked ? "visible" : "hidden"}`}
-        >
-          <polyline points="20 6 9 17 4 12" />
-        </svg>
-      </Box>
       {children && (
-        <Text as="span" ml={2}>
+        <Text as="span" ml={2} {...textProps}>
           {children}
         </Text>
       )}
-    </Box>
+    </ChakraCheckbox>
   )
 }
 
