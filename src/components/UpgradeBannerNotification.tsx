@@ -8,22 +8,6 @@ const StyledBannerNotification = chakra(BannerNotification)
 
 const StyledEmoji = chakra(Emoji)
 
-/*
-const StyledEmoji = styled(Emoji)`
-  align-self: center;
-  margin-right: 1rem;
-  flex-shrink: 0;
-`
-
-const StyledBannerNotification = styled(BannerNotification)`
-  display: flex;
-  justify-content: center;
-`
-
-const StyledBannerContent = styled.div`
-  align-self: center;
-`
-*/
 const UpgradeBannerNotification: React.FC = () => (
   <StyledBannerNotification display="flex" justifyContent="center" shouldShow>
     <StyledEmoji text=":megaphone:"  alignSelf="center" mr="1rem" flexShrink="0"/>
