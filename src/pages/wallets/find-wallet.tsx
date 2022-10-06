@@ -1,5 +1,5 @@
 // Libraries
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
@@ -27,6 +27,7 @@ import FilterBurger from "../../assets/wallets/filter_burger.svg"
 import { translateMessageId } from "../../utils/translations"
 import { trackCustomEvent } from "../../utils/matomo"
 import { getImage } from "../../utils/image"
+import { motion, useAnimation } from "framer-motion"
 
 // Styles
 const HeroContainer = styled.div`
@@ -112,6 +113,7 @@ const MobileFilterToggle = styled.div<{ showMobileSidebar: boolean }>`
     margin-left: 0;
     z-index: 1;
     width: 100%;
+    transition: max-width 0.15s;
     max-width: ${(props) => (props.showMobileSidebar ? "330px" : "150px")};
     background: ${(props) =>
       props.showMobileSidebar
@@ -174,18 +176,48 @@ const FilterSidebar = styled.div<{ showMobileSidebar: boolean }>`
   }
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    display: none;
+  }
+`
+
+const FilterSidebarMobile = styled(motion.div)<{ showMobileSidebar: boolean }>`
+  max-width: 330px;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  gap: 0.55rem;
+  overflow-y: scroll;
+  background: ${(props) => props.theme.colors.background};
+  transition: 0.5s all;
+  z-index: 20;
+  border-radius: 0px 8px 0px 0px;
+  scrollbar-width: thin;
+  scrollbar-color: ${(props) => props.theme.colors.lightBorder}
+    ${(props) => props.theme.colors.background};
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: ${(props) => props.theme.colors.background};
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: ${(props) => props.theme.colors.lightBorder};
+    border-radius: 4px;
+    border: 2px solid ${(props) => props.theme.colors.background};
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    display: flex;
     width: ${(props) => (props.showMobileSidebar ? "350px" : "350px")};
-    left: ${(props) => (props.showMobileSidebar ? "0" : "-400px")};
     height: ${(props) => (props.showMobileSidebar ? "100%" : "100%")};
-    display: ${(props) => (props.showMobileSidebar ? "flex" : "none")};
-    position: ${(props) => (props.showMobileSidebar ? "absolute" : "relative")};
+    position: ${(props) => (props.showMobileSidebar ? "absolute" : "absolute")};
     box-shadow: ${(props) =>
       props.showMobileSidebar ? "0 800px 0 800px rgb(0 0 0 / 65%)" : "none"};
   }
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    display: flex;
     width: ${(props) => (props.showMobileSidebar ? "90%" : "90%")};
     height: ${(props) => (props.showMobileSidebar ? "100%" : "100%")};
-    display: ${(props) => (props.showMobileSidebar ? "flex" : "none")};
   }
 `
 
@@ -373,6 +405,12 @@ const FindWalletPage = ({ data, location }) => {
     setFilters(filterDefault)
   }
 
+  const controls = useAnimation()
+
+  useEffect(() => {
+    controls.start(showMobileSidebar ? "active" : "inactive")
+  }, [controls.start(showMobileSidebar ? "active" : "inactive"), controls])
+
   return (
     <Page>
       <PageMetadata
@@ -507,6 +545,98 @@ const FindWalletPage = ({ data, location }) => {
             )}
           </div>
         </FilterSidebar>
+        <FilterSidebarMobile
+          variants={{
+            active: {
+              x: 0,
+            },
+            inactive: {
+              x: -350,
+            },
+          }}
+          animate={controls}
+          showMobileSidebar={showMobileSidebar}
+          initial="inactive"
+          transition={{
+            type: "tween",
+            duration: 0.2,
+          }}
+        >
+          <FilterTabs>
+            <FilterTab
+              active={!showFeatureFilters}
+              onClick={() => {
+                setShowFeatureFilters(false)
+                trackCustomEvent({
+                  eventCategory: "WalletFilterSidebar",
+                  eventAction: `WalletFilterSidebar tab clicked`,
+                  eventName: `show user personas`,
+                })
+              }}
+            >
+              <p>Profile Filters</p>
+            </FilterTab>
+            <FilterTab
+              active={showFeatureFilters}
+              onClick={() => {
+                setShowFeatureFilters(true)
+                trackCustomEvent({
+                  eventCategory: "WalletFilterSidebar",
+                  eventAction: `WalletFilterSidebar tab clicked`,
+                  eventName: `show feature filters`,
+                })
+              }}
+            >
+              <p>
+                Feature Filters (
+                {Object.values(filters).reduce((acc, filter) => {
+                  if (filter) {
+                    acc += 1
+                  }
+                  return acc
+                }, 0)}
+                )
+              </p>
+            </FilterTab>
+          </FilterTabs>
+          <ResetContainer
+            role="button"
+            aria-labelledby="reset-filter"
+            onClick={() => {
+              resetFilters()
+              trackCustomEvent({
+                eventCategory: "WalletFilterReset",
+                eventAction: `WalletFilterReset clicked`,
+                eventName: `reset filters`,
+              })
+            }}
+          >
+            <ResetIcon
+              aria-hidden="true"
+              name="arrowCounterClockwise"
+              size="14"
+            />
+            <p id="reset-filter" aria-hidden="true">
+              {"Reset filters".toUpperCase()}
+            </p>
+          </ResetContainer>
+          <div>
+            {showFeatureFilters ? (
+              <WalletFilterSidebar
+                filters={filters}
+                updateFilterOption={updateFilterOption}
+                updateFilterOptions={updateFilterOptions}
+              />
+            ) : (
+              <WalletPersonasSidebar
+                resetFilters={resetFilters}
+                setFilters={setFilters}
+                selectedPersona={selectedPersona}
+                setSelectedPersona={setSelectedPersona}
+              />
+            )}
+          </div>
+        </FilterSidebarMobile>
         <WalletContent showMobileSidebar={showMobileSidebar}>
           <WalletTable
             data={data}
