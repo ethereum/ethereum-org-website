@@ -168,16 +168,6 @@ const Caption = styled.div`
   }
 `
 
-const StyledCheckbox = styled(Checkbox)`
-  display: flex;
-  min-height: 3.5rem;
-  margin-bottom: 0.5rem;
-
-  .styled-checkbox {
-    margin-top: 0.25rem;
-  }
-`
-
 const Blockie = styled.img`
   border-radius: 4px;
   height: 4rem;
@@ -370,9 +360,14 @@ const DepositContractPage = ({
                       <Translation id="page-staking-deposit-contract-confirm-address" />
                     </CardTitle>
                   </Row>
-                  <StyledCheckbox
-                    size={1.5}
+                  <Checkbox
                     checked={state.userHasUsedLaunchpad}
+                    size="md"
+                    mb="0.5rem"
+                    display="flex"
+                    alignItems="top"
+                    variant="alignTop"
+                    minHeight="3.5rem"
                     callback={() =>
                       setState({
                         ...state,
@@ -381,10 +376,15 @@ const DepositContractPage = ({
                     }
                   >
                     <Translation id="page-staking-deposit-contract-checkbox1" />
-                  </StyledCheckbox>
-                  <StyledCheckbox
-                    size={1.5}
+                  </Checkbox>
+                  <Checkbox
                     checked={state.userUnderstandsStaking}
+                    size="md"
+                    mb="0.5rem"
+                    display="flex"
+                    alignItems="top"
+                    variant="alignTop"
+                    minHeight="3.5rem"
                     callback={() =>
                       setState({
                         ...state,
@@ -393,10 +393,15 @@ const DepositContractPage = ({
                     }
                   >
                     <Translation id="page-staking-deposit-contract-checkbox2" />
-                  </StyledCheckbox>
-                  <StyledCheckbox
-                    size={1.5}
+                  </Checkbox>
+                  <Checkbox
                     checked={state.userWillCheckOtherSources}
+                    size="md"
+                    mb="0.5rem"
+                    display="flex"
+                    alignItems="top"
+                    variant="alignTop"
+                    minHeight="3.5rem"
                     callback={() =>
                       setState({
                         ...state,
@@ -406,7 +411,7 @@ const DepositContractPage = ({
                     }
                   >
                     <Translation id="page-staking-deposit-contract-checkbox3" />
-                  </StyledCheckbox>
+                  </Checkbox>
                   <CopyButton
                     disabled={!isButtonEnabled}
                     onClick={() =>

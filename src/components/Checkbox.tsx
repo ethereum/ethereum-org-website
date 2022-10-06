@@ -55,7 +55,7 @@ const Checkbox: React.FC<IProps> = ({
       {...rest}
     >
       {children && (
-        <Text as="span" ml={2} {...textProps}>
+        <Text as="span" {...textProps}>
           {children}
         </Text>
       )}
