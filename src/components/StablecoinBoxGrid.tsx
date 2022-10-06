@@ -1,8 +1,9 @@
 import React, { useState } from "react"
+import { Box, Container, Flex, Grid, Text } from "@chakra-ui/react"
 import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 import Link, { navigate } from "./Link"
-import Emoji from "./OldEmoji"
+import Emoji from "./Emoji"
 import Translation from "./Translation"
 import { isMobile } from "../utils/isMobile"
 
@@ -42,7 +43,7 @@ const Body = styled.div`
   color: ${(props) => props.theme.colors.black300};
 `
 
-const Grid = styled.div`
+const OldGrid = styled.div`
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 3fr 3fr;
@@ -86,7 +87,7 @@ const StyledLink = styled(Link)`
   }
 `
 
-const Box = styled.div<{
+const OldBox = styled.div<{
   isOpen: boolean
   columnNumber: number
   rowNumber: number
@@ -185,7 +186,7 @@ const GridItem: React.FC<IPropsGridItem> = ({
     callback(index)
   }
   return (
-    <Box
+    <OldBox
       id={`type-${index}`}
       onClick={() => handleClick()}
       isOpen={isOpen}
@@ -194,68 +195,132 @@ const GridItem: React.FC<IPropsGridItem> = ({
       color={color}
     >
       {isOpen ? (
-        <Emoji mb={"2rem"} text={emoji} size={6} />
+        <Emoji mb={"2rem"} text={emoji} fontSize="8xl" order={1} />
       ) : (
         <>
-          <StyledEmoji size={6} text={emoji} />
-          <Title>{title}</Title>
+          <Emoji
+            fontSize="8xl"
+            text={emoji}
+            order={2}
+            margin={2}
+            alignSelf="center"
+            _hover={{
+              transition: "transform 50s",
+              transform: "rotate(180)",
+            }}
+          />
+          <Text
+            fontSize={{ base: "2rem", sm: "2.5rem" }}
+            fontWeight={400}
+            marginTop="0rem"
+          >
+            {title}
+          </Text>
         </>
       )}
+      {/**
+
+
+       */}
       <div>
         {isOpen && (
           <div>
-            <OpenTitle>{title}</OpenTitle>
-            <Body>{description}</Body>
-            <Row>
+            <Text
+              fontSize={{ base: "2rem", sm: "2.5rem" }}
+              fontWeight={700}
+              marginTop="0rem"
+            >
+              {title}
+            </Text>
+            <Box fontSize="xl" lineHeight="140%" color="black300">
+              {description}
+            </Box>
+            <Flex
+              justify="space-between"
+              marginTop={8}
+              direction={{ base: "column", md: "row" }}
+            >
               {pros && (
-                <Column>
-                  <Subtitle>
+                <Box w="100%">
+                  <Text
+                    fontSize={{ base: "1.5rem", sm: "2rem" }}
+                    fontWeight={600}
+                    marginTop="0rem"
+                    padding="0.5rem"
+                    paddingBottom="1rem"
+                    borderBottom="1px solid"
+                    borderColor="black300"
+                  >
                     <Translation id="pros" />
-                  </Subtitle>
-                  <Body>
+                  </Text>
+
+                  <Box fontSize="xl" lineHeight="140%" color="black300">
                     <ul>
                       {pros.map((pro, idx) => (
                         <li key={idx}>{pro}</li>
                       ))}
                     </ul>
-                  </Body>
-                </Column>
+                  </Box>
+                </Box>
               )}
               {cons && (
-                <Column>
-                  <Subtitle>
+                <Box w="100%">
+                  <Text
+                    fontSize={{ base: "1.5rem", sm: "2rem" }}
+                    fontWeight={600}
+                    marginTop="0rem"
+                    padding="0.5rem"
+                    paddingBottom="1rem"
+                    borderBottom="1px solid"
+                    borderColor="black300"
+                  >
                     <Translation id="cons" />
-                  </Subtitle>
-                  <Body>
+                  </Text>
+                  <Box fontSize="xl" lineHeight="140%" color="black300">
                     <ul>
                       {cons.map((con, idx) => (
                         <li key={idx}>{con}</li>
                       ))}
                     </ul>
-                  </Body>
-                </Column>
+                  </Box>
+                </Box>
               )}
-            </Row>
+            </Flex>
             <div>
-              <Subtitle>
+              <Text
+                fontSize={{ base: "1.5rem", sm: "2rem" }}
+                fontWeight={600}
+                marginTop="0rem"
+                padding="0.5rem"
+                paddingBottom="1rem"
+                borderBottom="1px solid"
+                borderColor="black300"
+              >
                 <Translation id="example-projects" />
-              </Subtitle>
-              <Body>
+              </Text>
+              <Box fontSize="xl" lineHeight="140%" color="black300">
                 <ul>
                   {links.map((link, idx) => (
                     <li key={idx}>
-                      <StyledLink key={idx} to={link.url}>
+                      <Link
+                        key={idx}
+                        to={link.url}
+                        color="black300"
+                        _hover={{
+                          color: "black",
+                        }}
+                      >
                         {link.text}
-                      </StyledLink>
+                      </Link>
                     </li>
                   ))}
                 </ul>
-              </Body>
+              </Box>
             </div>
           </div>
         )}
       </div>
-    </Box>
+    </OldBox>
   )
 }
 
@@ -285,7 +350,15 @@ const StablecoinBoxGrid: React.FC<IProps> = ({ items }) => {
   }
 
   return (
-    <Grid>
+    <Container
+      gridTemplateColumns={"3fr 1fr"}
+      gridTemplateRows={"3fr 3fr"}
+      borderRadius="2px"
+      marginX={4}
+      marginY={0}
+      display={{ base: "flex", lg: "grid" }}
+      flexDirection="column"
+    >
       {items.map((item, idx) => {
         let columnNumber = 1
         let rowNumber = 1
@@ -309,7 +382,7 @@ const StablecoinBoxGrid: React.FC<IProps> = ({ items }) => {
           />
         )
       })}
-    </Grid>
+    </Container>
   )
 }
 
