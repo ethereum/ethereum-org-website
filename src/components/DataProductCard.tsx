@@ -80,7 +80,7 @@ const DataProductCard: React.FC<IProps> = ({
         <Heading
           as="h3"
           size="lg"
-          fontSize="1.5rem"
+          fontSize="2xl"
           fontWeight="600"
           lineHeight="1.4"
           margin="2rem 1rem"
