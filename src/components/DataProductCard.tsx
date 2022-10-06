@@ -83,8 +83,9 @@ const DataProductCard: React.FC<IProps> = ({
           fontSize="2xl"
           fontWeight="600"
           lineHeight="1.4"
-          margin="2rem 1rem"
-          marginBottom="1rem"
+          my={8}
+          mx={4}
+          mb={4}
         >
           <LinkOverlay href={url} isExternal>
             {name}
@@ -93,8 +94,8 @@ const DataProductCard: React.FC<IProps> = ({
         <Text
           fontSize="sm"
           opacity="0.8"
-          margin="0 1rem"
-          marginBottom="1rem"
+          mx={4}
+          mb={4}
           lineHeight="140%"
         >
           {description}
@@ -104,7 +105,7 @@ const DataProductCard: React.FC<IProps> = ({
         <Box
           overflowY="scroll"
           maxHeight="160px"
-          marginBottom="1rem"
+          mb={4}
           borderTop="1px solid"
           borderColor="lightBorder"
         >
@@ -113,8 +114,8 @@ const DataProductCard: React.FC<IProps> = ({
               key={idx}
               color="text300"
               fontSize="sm"
-              justifyContent="space-between"
-              padding="1rem"
+              justify="space-between"
+              p={4}
               textTransform="uppercase"
               border="1px solid"
               borderColor="lightBorder"
