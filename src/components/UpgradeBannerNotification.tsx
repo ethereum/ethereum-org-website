@@ -2,7 +2,7 @@ import React from "react"
 import BannerNotification from "./BannerNotification"
 import Emoji from "src/components/Emoji"
 import Link from "./Link"
-import { Flex, chakra, Center } from "@chakra-ui/react"
+import { chakra, Center } from "@chakra-ui/react"
 
 const StyledBannerNotification = chakra(BannerNotification)
 
