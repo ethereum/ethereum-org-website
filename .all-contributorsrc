@@ -9144,6 +9144,24 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Gift-Stack",
+      "name": "Gift Opia",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72243506?v=4",
+      "profile": "https://github.com/Gift-Stack",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "dhirajgagrai",
+      "name": "Dhiraj Gagrai",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22605432?v=4",
+      "profile": "https://dhirajgagrai.dev/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,

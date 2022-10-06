@@ -1446,6 +1446,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center"><a href="https://github.com/millecodex"><img src="https://avatars.githubusercontent.com/u/39792005?v=4?s=100" width="100px;" alt="Mille Codex"/><br /><sub><b>Mille Codex</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=millecodex" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/Gift-Stack"><img src="https://avatars.githubusercontent.com/u/72243506?v=4?s=100" width="100px;" alt="Gift Opia"/><br /><sub><b>Gift Opia</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Gift-Stack" title="Code">💻</a></td>
+      <td align="center"><a href="https://dhirajgagrai.dev/"><img src="https://avatars.githubusercontent.com/u/22605432?v=4?s=100" width="100px;" alt="Dhiraj Gagrai"/><br /><sub><b>Dhiraj Gagrai</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=dhirajgagrai" title="Code">💻</a></td>
     </tr>
   </tbody>
   <tfoot>
