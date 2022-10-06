@@ -70,7 +70,7 @@ const Layer2ProductCard: React.FC<IProps> = ({
       </Center>
       <Flex p={6} h="100%" direction="column">
         <Box>
-          <Heading as="h3" size="md" mt={0} mb={3}>
+          <Heading as="h3" size="2xl" mt={0} mb={3}>
             {name}
           </Heading>
           {children && (
