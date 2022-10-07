@@ -257,7 +257,7 @@ const OldBox = styled.div<{
       }}
     >
       {isOpen ? (
-        <Emoji mb={8} text={emoji} fontSize="8xl" order="1" />
+        <Emoji mb={8} text={emoji} fontSize="8xl" />
       ) : (
         <>
           <Emoji
