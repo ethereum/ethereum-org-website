@@ -4,15 +4,15 @@ import styled from "@emotion/styled"
 import useEmblaCarousel from "embla-carousel-react"
 
 import Icon from "./Icon"
-import { Box, Container } from "@chakra-ui/react"
+import { Box, Center, Container } from "@chakra-ui/react"
 
-const Embla = styled.div`
-  position: relative;
-  padding: 2rem;
-  background-color: ${({ theme }) => theme.colors.slider.bg};
-  border: 1px solid ${({ theme }) => theme.colors.slider.border};
-  border-radius: 0.3rem;
-`
+// const Embla = styled.div`
+//   position: relative;
+//   padding: 2rem;
+//   background-color: ${({ theme }) => theme.colors.slider.bg};
+//   border: 1px solid ${({ theme }) => theme.colors.slider.border};
+//   border-radius: 0.3rem;
+// `
 
 const EmblaViewport = styled.div`
   overflow: hidden;
@@ -79,9 +79,9 @@ const Button = styled.button`
   }
 `
 
-const Dots = styled.div`
-  text-align: center;
-`
+// const Dots = styled.div`
+//   text-align: center;
+// `
 
 const DotButton = styled.button<{ selected: boolean }>`
   width: 5px;
@@ -181,7 +181,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
           />
         </Button>
       </Buttons>
-      <Dots>
+      <Box textAlign="center">
         {scrollSnaps.map((_, index) => (
           <DotButton
             key={index}
@@ -189,7 +189,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
             onClick={() => scrollTo(index)}
           />
         ))}
-      </Dots>
+      </Box>
     </Box>
   )
 }
