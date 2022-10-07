@@ -185,50 +185,108 @@ const GridItem: React.FC<IPropsGridItem> = ({
   const handleClick = (): void => {
     callback(index)
   }
+  {
+    /**
+
+const OldBox = styled.div<{
+  isOpen: boolean
+  columnNumber: number
+  rowNumber: number
+  color: string
+}>`
+  grid-row-start: ${(props) => (props.isOpen ? props.rowNumber : `auto`)};
+  grid-row-end: ${(props) => (props.isOpen ? `span 3` : `auto`)};
+  grid-column-start: ${(props) => (props.isOpen ? props.columnNumber : `auto`)};
+  color: ${(props) =>
+    props.isOpen ? props.theme.colors.black300 : props.theme.colors.text};
+  cursor: ${(props) => (props.isOpen ? `auto` : `pointer`)};
+  background: ${(props) =>
+    props.isOpen
+      ? props.theme.colors[props.color]
+      : props.theme.colors.background};
+  display: flex;
+  flex-direction: column;
+  border: 1px solid ${(props) => props.theme.colors.text};
+  padding: 1.5rem;
+  &:hover {
+    background: ${(props) =>
+      props.isOpen
+        ? props.theme.colors[props.color]
+        : props.theme.colors.ednBackground};
+    transition: ${(props) => (props.isOpen ? `auto` : `transform 0.5s`)};
+    transform: ${(props) => (props.isOpen ? `auto` : `skewX(-5deg)`)};
+    box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: ${(props) => (props.isOpen ? `column` : `row`)};
+    justify-content: ${(props) =>
+      props.isOpen ? `flex-start` : `space-between`};
+    align-items: center;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    flex-direction: column;
+  }
+  base to sm
+`*/
+  }
   return (
-    <OldBox
+    <Flex
       id={`type-${index}`}
       onClick={() => handleClick()}
-      isOpen={isOpen}
-      columnNumber={columnNumber}
-      rowNumber={rowNumber}
-      color={color}
+      gridRowStart={isOpen ? rowNumber : `auto`}
+      gridRowEnd={isOpen ? `span 3` : `auto`}
+      gridColumnStart={isOpen ? columnNumber : `auto`}
+      color={isOpen ? "black300" : "text"}
+      cursor={isOpen ? `auto` : `pointer`}
+      background={isOpen ? `${color}` : "background"}
+      direction={{
+        base: "column",
+        sm: `${isOpen ? "column" : "row"}`,
+        lg: "column",
+      }}
+      justify={{ base: `${isOpen ? "flex-start" : "space-between"}` }}
+      align="center"
+      border="1px solid"
+      borderColor="text"
+      padding={6}
+      _hover={{
+        background: `${isOpen ? color : "ednBackground"}`,
+        transition: `${isOpen ? "auto" : "transform 0.5s"}`,
+        transform: `${isOpen ? "auto" : "skewX(-5deg)"}`,
+        boxShadow: "tableBoxShadow",
+      }}
     >
       {isOpen ? (
-        <Emoji mb={"2rem"} text={emoji} fontSize="8xl" order={1} />
+        <Emoji mb={8} text={emoji} fontSize="8xl" />
       ) : (
         <>
           <Emoji
             fontSize="8xl"
             text={emoji}
-            order={2}
             margin={2}
             alignSelf="center"
+            order="2"
             _hover={{
               transition: "transform 50s",
-              transform: "rotate(180)",
+              transform: "rotate(10turn)",
             }}
           />
           <Text
             fontSize={{ base: "2rem", sm: "2.5rem" }}
             fontWeight={400}
-            marginTop="0rem"
+            marginTop={0}
           >
             {title}
           </Text>
         </>
       )}
-      {/**
-
-
-       */}
       <div>
         {isOpen && (
           <div>
             <Text
               fontSize={{ base: "2rem", sm: "2.5rem" }}
               fontWeight={700}
-              marginTop="0rem"
+              marginTop={0}
             >
               {title}
             </Text>
@@ -243,11 +301,11 @@ const GridItem: React.FC<IPropsGridItem> = ({
               {pros && (
                 <Box w="100%">
                   <Text
-                    fontSize={{ base: "1.5rem", sm: "2rem" }}
+                    fontSize={{ base: "2xl", sm: "2rem" }}
                     fontWeight={600}
-                    marginTop="0rem"
-                    padding="0.5rem"
-                    paddingBottom="1rem"
+                    marginTop={0}
+                    padding={2}
+                    paddingBottom={4}
                     borderBottom="1px solid"
                     borderColor="black300"
                   >
@@ -320,7 +378,7 @@ const GridItem: React.FC<IPropsGridItem> = ({
           </div>
         )}
       </div>
-    </OldBox>
+    </Flex>
   )
 }
 
@@ -354,10 +412,11 @@ const StablecoinBoxGrid: React.FC<IProps> = ({ items }) => {
       gridTemplateColumns={"3fr 1fr"}
       gridTemplateRows={"3fr 3fr"}
       borderRadius="2px"
-      marginX={4}
-      marginY={0}
+      margin={0}
+      paddingLeft={0}
       display={{ base: "flex", lg: "grid" }}
       flexDirection="column"
+      maxW="100%"
     >
       {items.map((item, idx) => {
         let columnNumber = 1
