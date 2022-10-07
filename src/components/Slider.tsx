@@ -1,10 +1,10 @@
-import React, { useCallback, useEffect, useState } from "react"
+import React, { ReactNode, useCallback, useEffect, useState } from "react"
 import { useTheme } from "@emotion/react"
 import styled from "@emotion/styled"
 import useEmblaCarousel from "embla-carousel-react"
 
 import Icon from "./Icon"
-import { Box, Center, Container } from "@chakra-ui/react"
+import { Box, Center, Container, Flex } from "@chakra-ui/react"
 
 // const Embla = styled.div`
 //   position: relative;
@@ -14,33 +14,33 @@ import { Box, Center, Container } from "@chakra-ui/react"
 //   border-radius: 0.3rem;
 // `
 
-const EmblaViewport = styled.div`
-  overflow: hidden;
-  width: 100%;
+// const EmblaViewport = styled.div`
+//   overflow: hidden;
+//   width: 100%;
 
-  .is-draggable {
-    cursor: move;
-    cursor: grab;
-  }
+//   .is-draggable {
+//     cursor: move;
+//     cursor: grab;
+//   }
 
-  .is-dragging {
-    cursor: grabbing;
-  }
-`
+//   .is-dragging {
+//     cursor: grabbing;
+//   }
+// `
 
-const EmblaContainer = styled.div`
-  display: flex;
-`
+// const EmblaContainer = styled.div`
+//   display: flex;
+// `
 
-export const EmblaSlide = styled.div`
-  position: relative;
-  min-width: 100%;
+// export const EmblaSlide = styled.div`
+//   position: relative;
+//   min-width: 100%;
 
-  h2,
-  h3 {
-    margin-top: 0;
-  }
-`
+//   h2,
+//   h3 {
+//     margin-top: 0;
+//   }
+// `
 
 const Buttons = styled.div`
   display: flex;
@@ -146,6 +146,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
     })
   }, [embla, setScrollSnaps, onSelect])
 
+  // TODO: Background color
   return (
     <Box
       position="relative"
@@ -156,9 +157,9 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
       w="full"
       background="slider.bg"
     >
-      <EmblaViewport ref={emblaRef}>
-        <EmblaContainer>{children}</EmblaContainer>
-      </EmblaViewport>
+      <Box overflow="hidden" ref={emblaRef}>
+        <Flex>{children}</Flex>
+      </Box>
       <Buttons>
         <Button onClick={scrollPrev} disabled={!prevBtnEnabled}>
           <Icon
@@ -190,6 +191,15 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
           />
         ))}
       </Box>
+    </Box>
+  )
+}
+
+// TODO: Add styles for margin-top 0 for h3 and h2
+export const EmblaSlide: React.FC<{ children: ReactNode }> = ({ children }) => {
+  return (
+    <Box position="relative" minWidth="full">
+      {children}
     </Box>
   )
 }
