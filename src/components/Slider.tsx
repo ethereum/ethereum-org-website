@@ -4,6 +4,7 @@ import styled from "@emotion/styled"
 import useEmblaCarousel from "embla-carousel-react"
 
 import Icon from "./Icon"
+import { Box, Container } from "@chakra-ui/react"
 
 const Embla = styled.div`
   position: relative;
@@ -146,7 +147,15 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
   }, [embla, setScrollSnaps, onSelect])
 
   return (
-    <Embla>
+    <Box
+      position="relative"
+      p="2rem"
+      borderWidth="1px"
+      borderBottomStyle="solid"
+      borderRadius="0.3rem"
+      w="full"
+      background="slider.bg"
+    >
       <EmblaViewport ref={emblaRef}>
         <EmblaContainer>{children}</EmblaContainer>
       </EmblaViewport>
@@ -181,7 +190,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
           />
         ))}
       </Dots>
-    </Embla>
+    </Box>
   )
 }
 
