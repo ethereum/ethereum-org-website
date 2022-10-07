@@ -211,19 +211,18 @@ Before starting the Ethereum client software, perform a last check that your env
 - System has the correct time and date.
 - Your router and firewall accept connections on listening ports. By default Ethereum clients use a listener (TCP) port and a discovery (UDP) port, both on 30303 by default.
 
-Run your client on a testnet first to help make sure everything is working correctly. [Running a Geth light node](/developers/tutorials/run-light-node-geth/) should help.
+Run your client on a testnet first to help make sure everything is working correctly.
 
 You need to declare any client settings that aren't default at the start. You can use flags or the config file to declare your preferred configuration. Set of features and config syntax of each client differs. Check out your client's documentation for the specifics.
 
 Execution and consensus clients communicate via an authenticated endpoint specified in [Engine API](https://github.com/ethereum/execution-apis/tree/main/src/engine). In order to connect to a consensus client, the execution client must generate a [`jwtsecret`](https://jwt.io/) at a known path. For security and stability reasons, clients should run on the same machine, and both clients must know this path as it is used to authenticate a local RPC connection between them. The execution client must also define a listening port for authenticated APIs.
 
-This token is generated automatically by the client software, but in some cases, e.g. during pre-Merge testing, you might need to do it yourself. You can generate it using [OpenSSL](https://www.openssl.org/):
+This token is generated automatically by the client software, but in some cases, you might need to do it yourself. You can generate it using [OpenSSL](https://www.openssl.org/):
 
 ```
 openssl rand -hex 32 > jwtsecret
 ```
 
-**Note that it is recommended to connect an execution and consensus client on a testnet only for now (e.g. Ropsten, Sepolia, Goerli) and await merge-ready client releases before replicating the process on Mainnet.**
 
 #### Running an execution client {#running-an-execution-client}
 
@@ -262,7 +261,7 @@ Besu also comes with a launcher option which will ask a series of questions and 
 besu --Xlauncher
 ```
 
-[Besu's documentation](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) contains additional options and configuration details including [a guide on preparing for The Merge](https://besu.hyperledger.org/en/latest/public-networks/how-to/prepare-for-the-merge/).
+[Besu's documentation](https://besu.hyperledger.org/en/latest/HowTo/Get-Started/Starting-node/) contains additional options and configuration details.
 
 ##### Running Erigon
 
@@ -303,7 +302,7 @@ Nethermind.Runner --config mainnet \
 
 Nethermind docs offer a [complete guide](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/running-nethermind-post-merge) on running Nethermind with consensus client.
 
-An execution client will initiate its core functions, chosen endpoints, and start looking for peers. After successfully discovering peers, the client starts synchronization. After the Merge, the execution client will await a connection from consensus client. Current blockchain data will be available once the client is successfully synced to the current state.
+An execution client will initiate its core functions, chosen endpoints, and start looking for peers. After successfully discovering peers, the client starts synchronization. The execution client will await a connection from consensus client. Current blockchain data will be available once the client is successfully synced to the current state.
 
 #### Starting the consensus client {#starting-the-consensus-client}
 
@@ -313,7 +312,6 @@ The consensus client also needs the path to the execution client's `jwt-secret` 
 
 If you plan to run a validator, make sure to add a configuration flag specifying the Ethereum address of the fee recipient. This is where ether rewards for your validator accumulate. Each consensus client has an option, e.g. `--suggested-fee-recipient=0xabcd1`, that takes an Ethereum address as an argument.
 
-**Note that we recommend waiting for merge-ready client releases before doing this on Ethereum Mainnet—for now just practice on a testnet such as Sepolia, Goerli or Ropsten**
 
 When starting a Beacon Node on a testnet, you can save significant syncing time by using a public endpoint for [Checkpoint sync](https://notes.ethereum.org/@launchpad/checkpoint-sync).
 
@@ -378,8 +376,6 @@ teku --network mainnet \
     --ee-endpoint http://localhost:8551 \
     --ee-jwt-secret-file "/path/to/jwtsecret" \
 ```
-
-Learn more about running a Merge ready setup with Teku in its [documentation](https://docs.teku.consensys.net/en/22.8.0/HowTo/Prepare-for-The-Merge/).
 
 When a consensus client connects to the execution client to read the deposit contract and identify validators, it also connects to other Beacon Node peers and begins syncing consensus slots from genesis. Once the Beacon Node reaches the current epoch, the Beacon API becomes usable for your validators. Learn more about [Beacon Node APIs](https://eth2docs.vercel.app/).
 

@@ -156,7 +156,6 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
   const [location, setLocation] = useState("")
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const [feedbackSubmitted, setFeedbackSubmitted] = useState<boolean>(false)
-  const [isHelpful, setIsHelpful] = useState<boolean | null>(null)
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -164,11 +163,10 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
       // Reset component state when path (location) changes
       setIsOpen(false)
       setFeedbackSubmitted(false)
-      setIsHelpful(null)
     }
   }, [])
 
-  const surveyUrl = useSurvey(feedbackSubmitted, isHelpful)
+  const surveyUrl = useSurvey(feedbackSubmitted)
 
   const bottomOffset = useMemo(() => {
     const pathsWithBottomNav = ["/staking", "/dao", "/defi", "/nft"]
@@ -204,7 +202,6 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
       eventAction: `Clicked`,
       eventName: String(choice),
     })
-    setIsHelpful(choice)
     setFeedbackSubmitted(true)
   }
   const handleSurveyOpen = (): void => {

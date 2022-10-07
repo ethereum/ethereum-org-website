@@ -124,7 +124,7 @@ const BeaconChainActions: React.FC = () => {
         intl
       ),
       description: "Ethos.dev",
-      link: "https://web.archive.org/web/20220719213551/https://ethos.dev/beacon-chain/",
+      link: "https://ethos.dev/beacon-chain/",
     },
     {
       title: translateMessageId(
