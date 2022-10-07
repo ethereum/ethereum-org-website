@@ -257,7 +257,7 @@ const OldBox = styled.div<{
       }}
     >
       {isOpen ? (
-        <Emoji mb={8} text={emoji} fontSize="8xl" />
+        <Emoji mb={8} text={emoji} fontSize="8xl" w="100%" />
       ) : (
         <>
           <Emoji
@@ -413,7 +413,7 @@ const StablecoinBoxGrid: React.FC<IProps> = ({ items }) => {
       gridTemplateRows={"3fr 3fr"}
       borderRadius="2px"
       margin={0}
-      paddingLeft={0}
+      padding={6}
       display={{ base: "flex", lg: "grid" }}
       flexDirection="column"
       maxW="100%"
