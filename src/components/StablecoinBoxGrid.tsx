@@ -413,7 +413,7 @@ const StablecoinBoxGrid: React.FC<IProps> = ({ items }) => {
       gridTemplateRows={"3fr 3fr"}
       borderRadius="2px"
       margin={0}
-      padding={6}
+      paddingLeft={0}
       display={{ base: "flex", lg: "grid" }}
       flexDirection="column"
       maxW="100%"
