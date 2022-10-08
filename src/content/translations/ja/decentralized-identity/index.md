@@ -4,7 +4,6 @@ description: 分散型アイデンティティとは、またこれが重要な�
 lang: ja
 template: use-cases
 emoji: ":id:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/eth-gif-cat.png
 summaryPoint1: 身元を証明するIDは中央集権的に発行、更新、管理されてきた従来のアイデンティティ制度
@@ -132,7 +131,7 @@ summaryPoint3: 暗号技術により、今や再び自分自身のIDとアテス
 
 ### 1. ユニバーサルログイン {#universal-dapp-logins}
 
-分散型アイデンティティは、パスワードによるログインを[分散型認証](https://www.ibm.com/blogs/blockchain/2018/10/decentralized-identity-an-alternative-to-password-based-authentication/)に置き換えることができます。 サービスプロバイダーは、イーサリアムのウォレットに保存できるアテステーションを発行することができます。 アテステーションの例としては、[非代替性トークン(NFT)](/nft/)保有者にオンラインコミュニティへのアクセス許可などが挙げられます。
+分散型アイデンティティは、パスワードによるログインを[分散型認証](https://www.ibm.com/blogs/blockchain/2018/10/decentralized-identity-an-alternative-to-password-based-authentication/)に置き換えることができます。 サービスプロバイダーは、アテステーションを発行することができ、ユーザーはそれをイーサリアムのウォレットに保存できます。 アテステーションの例としては、[非代替性トークン(NFT)](/nft/)保有者にオンラインコミュニティへのアクセス許可などが挙げられます。
 
 [イーサリアムでサインイン](https://login.xyz/)機能を使うと、サーバーはユーザーのイーサリアムアカウントを確認し、アカウントアドレスから必要なアテステーションを取得することができます。 これにより、ユーザーは長いパスワードを記憶することなくプラットフォームやウェブサイトにアクセスでき、オンライン・エクスペリエンスを向上させることができます。
 
@@ -176,7 +175,7 @@ summaryPoint3: 暗号技術により、今や再び自分自身のIDとアテス
 - [分散型アイデンティティ(ボーナスライブストリームセッション)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Andreas Antonopolous による分散型アイデンティティに関する秀逸な解説ビデオ_
 - [イーサリアムでサインインし、Ceramic、IDX、React、および 3ID Connect を使用した分散型 ID](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _Nader Dabit によるイーサリアムウォレットを使用したユーザープロファイルの作成、読み取り、更新の ID 管理システムの構築に関する YouTube チュートリアルビデオ_
 - [BrightID - イーサリアム上の分散型アイデンティティ](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _イーサリアムの分散型 ID ソリューション「BrightID」に関する Bankless ポッドキャスト_
-- [オフ・チェーン・インターネット: 分散型アイデンティティと検証可能な資格情報](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — _Evin McMullen による EthDenver 2022 のプレゼンテーション_
+- [オフ・チェーン・インターネット: 分散型アイデンティティと検証可能な資格情報](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — Evin McMullen による EthDenver 2022 のプレゼンテーション
 
 ### コミュニティ {#communities}
 

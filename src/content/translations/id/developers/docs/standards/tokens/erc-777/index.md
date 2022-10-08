@@ -2,7 +2,6 @@
 title: Standar Token ERC-777
 description:
 lang: id
-sidebar: true
 ---
 
 ## Pendahuluan? {#introduction}

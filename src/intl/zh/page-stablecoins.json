@@ -1,11 +1,11 @@
 {
-  "page-stablecoins-accordion-borrow-crypto-collateral": "加密抵押物",
-  "page-stablecoins-accordion-borrow-crypto-collateral-copy": "使用以太坊，您可以直接从其他用户借贷，而无需交易您的ETH。这可以让您发挥杠杆作用——一些人这样做来尝试积累更多ETH。",
-  "page-stablecoins-accordion-borrow-crypto-collateral-copy-p2": "但由于ETH的价格波动，您将需要超额担保。这意味着如果您想借100个稳定币，您可能需要至少150美元的价值的ETH。这将保护系统和贷方。",
-  "page-stablecoins-accordion-borrow-crypto-collateral-link": "更多关于加密支持的稳定币",
+  "page-stablecoins-accordion-borrow-crypto-collateral": "加密抵押品",
+  "page-stablecoins-accordion-borrow-crypto-collateral-copy": "使用以太坊，您可以直接从其他用户借贷，而无需交易您的 ETH。这可以为您实现杠杆作用 - 一些人这样做来尝试积累更多 ETH。",
+  "page-stablecoins-accordion-borrow-crypto-collateral-copy-p2": "但由于 ETH 的价格波动，您将需要超额担保。这意味着如果您想借 100 个稳定币，您可能需要至少 150 美元价值的 ETH。这将保护系统和贷方。",
+  "page-stablecoins-accordion-borrow-crypto-collateral-link": "有关加密支持的稳定币的更多内容",
   "page-stablecoins-accordion-borrow-pill": "高级",
-  "page-stablecoins-accordion-borrow-places-intro": "这些去中心化应用让您借入以加密货币作为抵押品的稳定币。有些接受ETH和其它代币。",
-  "page-stablecoins-accordion-borrow-places-title": "借用稳定币的地方",
+  "page-stablecoins-accordion-borrow-places-intro": "这些去中心化应用允许您借入以加密货币作为抵押品的稳定币。有些接受 ETH 和其它代币。",
+  "page-stablecoins-accordion-borrow-places-title": "借入稳定币的地方",
   "page-stablecoins-accordion-borrow-requirement-1": "以太坊钱包",
   "page-stablecoins-accordion-borrow-requirement-1-description": "您需要钱包才能使用去中心化应用",
   "page-stablecoins-accordion-borrow-requirement-2": "以太币 (ETH)",
@@ -144,5 +144,5 @@
   "page-stablecoins-why-stablecoins-body": "以太币和比特币一样是一种新技术，所以价值存在波动。因此您可能不会想在日常生活中使用它。稳定币作为传统货币价值的替代品，成为您能够在以太坊上使用的稳定资金。",
   "page-stablecoins-more-defi-button": "关于去中心化金融 (DeFi) 的更多信息",
   "page-stablecoins-tools-title": "进一步了解稳定币",
-  "page-stablecoins-tools-stablecoinswtf-description": "Stablecoins.wtf提供了一个仪表板，其中包含了一些最知名稳定币的历史市场数据、统计信息和教育内容。"
+  "page-stablecoins-tools-stablecoinswtf-description": "Stablecoins.wtf 提供了一个仪表板，其中包含了一些最知名稳定币的历史市场数据、统计信息和教育内容。"
 }

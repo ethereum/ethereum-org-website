@@ -2,7 +2,6 @@
 title: Konsensus mekanizmaları
 description: Dağıtılmış sistemlerde bulunan mutabakat protokolleri ve bu protokollerin Ethereum'daki rolü hakkında açıklama.
 lang: tr
-sidebar: true
 incomplete: true
 ---
 

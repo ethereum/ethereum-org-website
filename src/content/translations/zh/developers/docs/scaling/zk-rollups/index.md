@@ -2,7 +2,6 @@
 title: 零知识卷叠
 description: 零知识卷叠介绍
 lang: zh
-sidebar: true
 ---
 
 ## 先决条件 {#prerequisites}

@@ -2,7 +2,6 @@
 title: Creați-vă propriul nod Ethereum
 description: Introducere generală despre rularea propriei instanțe a unui client Ethereum.
 lang: ro
-sidebar: true
 sidebarDepth: 2
 ---
 

@@ -4,7 +4,6 @@ description: Un aperçu des réseaux sociaux décentralisés sur Ethereum
 lang: fr
 template: use-cases
 emoji: ":mega:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/ethereum-learn.png
 summaryPoint1: Plateformes basées sur la blockchain pour les interactions sociales, la création et la distribution de contenu.
@@ -76,11 +75,11 @@ Les plateformes Web3 natives [Web3](/web3/) ne sont pas les seules à essayer d'
 
 ### Reddit {#reddit}
 
-Reddit a [utilisé les Points Communautaires](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users), qui sont des jetons ERC-20 que les utilisateurs peuvent gagner en publiant du contenu de qualité et en apportant des contributions dans les communautés en ligne (subreddits). Vous pouvez échanger ces jetons contre [l'obtention de privilège et d'avantages exclusifs](https://www.reddit.com/community-points/) dans un subreddit. Pour ce projet, Reddit travaille avec Arbitrum, un rollup [layer 2](/layer-2/) conçu pour mettre à l'échelle les transactions Ethereum.
+Reddit a [utilisé les Points Communautaires](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users), qui sont des jetons [ERC-20](/developers/docs/standards/tokens/erc-20/) que les utilisateurs peuvent gagner en publiant du contenu de qualité et en apportant des contributions dans les communautés en ligne (subreddits). Vous pouvez échanger ces jetons dans un subreddit pour [obtenir des privilèges et des avantages exclusifs](https://www.reddit.com/community-points/). Pour ce projet, Reddit travaille avec Arbitrum, un rollup [layer 2](/layer-2/) conçu pour mettre à l'échelle les transactions Ethereum.
 
-Le programme est déjà dans la phase bêta, avec le subreddit r/CryptoMonnaie [exécutant sa version de Points Communautaires appelée « Moons »](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki). Depuis le wiki de la communauté :
+Le programme est déjà en ligne, avec le subreddit r/CryptoCurrency [exécutant sa version de Points Communautaires appelée « Moons »](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki). Par description officielle, Moons « récompensent les affichages, les commentaires, et les modérateurs pour leurs contributions au subreddit ». Parce que ces jetons sont sur la blockchain (les utilisateurs les reçoivent dans des portefeuilles), ils sont indépendants de Reddit et ne peuvent pas être retirés.
 
-> _Moons est un jeton ERC-20 sur le réseau Rinkeby lancé par les administrateurs Reddit en mai 2020 dans le cadre du projet de points communautaires. Il s'agit d'un moyen pour les utilisateurs d'être récompensés pour leurs contributions dans r/CryptoMonnaie avec une unité de propriété dans le subreddit. Les Moons sont indépendantes de Reddit et une fois gagnées, ni les administrateurs ni les modérateurs du subreddit ne peuvent les ôter aux utilisateurs. Les Moons sont gérées par un ensemble de contrats intelligents qui gèrent les soldes, les transferts, la distribution/réclamation et l'achat d'abonnements spéciaux. Les contrats intelligents et les applications mobiles ont été revus et audités par Trail of Bits, une société de sécurité indépendante._
+Après une phase bêta sur le réseau de test Rinkeby, les Points Communautaires Reddit sont maintenant sur [Arbitrum Nova](https://nova.arbitrum.io/), une blockchain qui combine les propriétés d'un [validium](/developers/docs/scaling/validium/) et d'un [rollup optimiste](/developers/docs/scaling/optimistic-rollups/). En plus d'utiliser des Points Communautaires pour débloquer des fonctionnalités spéciales, les utilisateurs peuvent également les échanger contre des monnaies officielles. De plus, le nombre de Points Communautaires qu'un utilisateur possède détermine son influence sur le processus décisionnel au sein de la communauté.
 
 ### Twitter {#twitter}
 

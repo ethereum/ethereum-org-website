@@ -2,7 +2,6 @@
 title: Katman 2'leri Ekleme
 description: Ethereum.org'a katman 2 eklerken kullandığımız politika
 lang: tr
-sidebar: true
 ---
 
 # Katman 2'leri Ekleme {#adding-layer-2}

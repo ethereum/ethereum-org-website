@@ -3,7 +3,6 @@ title: La fusión
 description: "Descubra más cosas sobre la fusión: cuando la red principal de Ethereum se une al sistema de prueba de participación coordinador de cadena de baliza."
 lang: es
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: La red principal Ethereum acabará por «fusionarse» con el sistema de prueba de participación de la cadena de baliza.
 summaryPoint2: Esto marcará el fin de la «prueba de trabajo» de Ethereum y la transición completa a la prueba de participación.

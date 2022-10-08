@@ -2,7 +2,6 @@
 title: Nilai yang dapat diekstrak penambang (MEV)
 description: Pengantar nilai yang dapat diekstrak penambang (MEV)
 lang: id
-sidebar: true
 ---
 
 Maximal (sebelumnya "miner") extractable value (MEV) merujuk pada nilai maksimum yang dapat diekstrak dari produksi blok dalam bentuk nilai kelebihan dari imbalan blok dan biaya gas standar dengan memasukkan, mengecualikan, dan mengubah urutan transaksi dalam sebuah blok.

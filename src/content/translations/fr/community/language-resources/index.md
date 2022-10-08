@@ -1,7 +1,6 @@
 ---
 title: Ressources linguistiques
 description: Ressources non anglophones pour en savoir plus sur Ethereum
-sidebar: true
 lang: fr
 ---
 
@@ -17,7 +16,7 @@ Vous connaissez une ressource éducative dans votre langue ? [Ouvrez un ticket](
 
 ## Ressources d'Ethereum.org {#ethereum-org}
 
-Ethereum.org est traduit nativement dans plus de 40 langues, que vous pouvez trouver sur notre [page des langues](/languages).
+Ethereum.org est traduit d'emblée dans plus de 40 langues, que vous pouvez trouver sur notre [page des langues](/languages).
 
 Si vous êtes bilingue et que vous souhaitez nous aider à toucher davantage de personnes, vous pouvez aussi contribuer au [Programme de traduction d'Ethereum.org](/contributing/translation-program/#translation-program) afin de nous aider à traduire le site.
 
@@ -46,7 +45,7 @@ Si vous êtes bilingue et que vous souhaitez nous aider à toucher davantage de 
 **Ressources générales**
 
 - [Ethereum.cn](https://www.ethereum.cn/) - contenu maintenu par la communauté, couvrant la mise à jour de la couche de consensus, l'intégralité des notes de réunion de l'équipe de développement, la couche 2, etc.
-- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - tout pour apprendre Ethereum, de la base jusqu'aux concepts avancés
+- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - tout apprendre, des bases aux sujets avancés d'Ethereum
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - contenu maintenu par la communauté, couvrant Ethereum, la DeFi, les NFT, ainsi que des ressources liées au Web3
 - [123ETH](https://123eth.org/) - un portail vers l'écosystème Ethereum
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - cours en ligne gratuits sur la cryptomonnaie et ses applications
@@ -60,13 +59,20 @@ Si vous êtes bilingue et que vous souhaitez nous aider à toucher davantage de 
 
 **Pour les développeurs**
 
-- [DappLearning](https://github.com/Dapp-Learning-DAO/Dapp-Learning) - un groupe d'apprentissage pour étudier les principaux projets dApp, échanger et partager des idées sur une base hebdomadaire
+- [DappLearning](https://github.com/Dapp-Learning-DAO/Dapp-Learning) - un groupe d'apprentissage pour étudier les principaux projets dApp, échanger et partager des idées et des observations sur une base hebdomadaire
 - [LearnBlockchain](https://learnblockchain.cn/) - une communauté pour les développeurs, pour partager des informations autour de la technologie blockchain
 
 **Pour les chercheurs en cryptographie**
 
 - [SecbitLabs](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw) - un groupe WeChat à propos de la cryptographie, de la sécurité, etc.
 - [Sparkbyte](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ) - un groupe WeChat à propos de la technologie ZK
+
+### Tchèque {#cs}
+
+- [Gwei.cz](https://gwei.cz) - communauté locale autour du Web3, création du contenu éducatif, organisation des événements en ligne et en présentiel
+- [Gwei.cz Příručka](https://prirucka.gwei.cz/) - guide Ethereum pour débutants
+- [DAO Příručka](https://dao.gwei.cz/) - guide pour débutants en DAO
+- [Maîtriser Ethereum](https://ipfs.infura-ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - Maîtriser Ethereum en tchèque
 
 ### Français {#fr}
 
@@ -95,25 +101,26 @@ Si vous êtes bilingue et que vous souhaitez nous aider à toucher davantage de 
 - [Ethereum Madrid](https://ethereummadrid.com/) - cours, événements et blog sur la gouvernance, la DeFi et la blockchain
 - [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) - guide Ethereum en espagnol pour les débutants
 - [Tutoriales online](https://tutoriales.online/curso/solidity) - apprendre Solidity et programmer sur Ethereum
-- [Curso Introducción a Ethereum Development](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) - Les bases de Solidity, le test et le deploiement de votre premier smart contract
-- [Curso Introducción a Seguridad y Hacking en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) - comprendre les vulnérabilités communes et les failles de sécurité dans les smart contracts
-- [Curso Introducción a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - Aprrendre comment les smart contracts DeFi fonctionnent en Solidity et créer votre propre Automated Market Maker
+- [Curso Introducción a Ethereum Development](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) - Les bases de Solidity, le test et le deploiement de votre premier contrat intelligent
+- [Curso Introducción a Seguridad y Hacking en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) - comprendre les vulnérabilités communes et les failles de sécurité dans les contrats intelligents réels
+- [Curso Introducción a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - apprendre comment les contrats intelligents DeFi fonctionnent en Solidity et créer votre propre Automated Market Maker
+- [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) - ressources d'éducation non-technique sur la blockchain pour niveau débutant à confirmé. Tout savoir sur les crypto-monnaies et Ethereum.
 
 ### Turc {#tr}
 
 - [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) - cours axés sur la cryptomonnaie et la blockchain
-- [Le grand renommage : qu'est-il arrivé à Eth2 ?](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) - traduction turque du grand blog de renommage, expliquant le déménagement de la terminologie « Eth2 »
+- [Le grand renommage : qu'est-il arrivé à Eth2 ?](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) - traduction turque du grand blog de renommage, expliquant l'éloignement de la terminologie « Eth2 »
 
 ### Vietnamien {#vi}
 
-- [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - aperçu d'Ethereum, des applications décentralisées et des portefeuilles, ainsi qu'une FAQ
+- [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - aperçu d'Ethereum, des dApps, portefeuilles et FAQ
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - plateforme Web avec des rubriques consacrées à l'actualité et aux ressources éducatives sur Ethereum
-- [Coin68](https://coin68.com/ethereum-tieu-diem/) - portail sur les cryptomonnaies avec des ressources éducatives et l'actualité Ethereum
+- [Coin68](https://coin68.com/ethereum-tieu-diem/) - portail sur les cryptomonnaies avec des ressources éducatives et l'actualité relative à Ethereum
 
 ### Japonais {#ja}
 
 - [Association japonaise d'échange d'actifs virtuels et de cryptomonnaies (JVCEA)](https://jvcea.or.jp/)
 - [Association des entreprises de cryptoactifs du Japon (JCBA)](https://cryptocurrency-association.org/)
-- [Débutez avec le développement de blockchain - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - Ce parcours vous initie à la blockchain et au développement sur la plateforme Ethereum
+- [Get started with blockchain development - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - Ce parcours vous initie à la blockchain et au développement sur la plateforme Ethereum
 - [Maîtriser Ethereum](https://www.oreilly.co.jp/books/9784873118963/) - Livre « Mastering Ethereum » en japonais
 - [Développement de contrats intelligents avec Solidity et Ethereum](https://www.oreilly.co.jp/books/9784873119342/) - Livre « Hands-On Smart Contract Development with Solidity and Ethereum » en japonais

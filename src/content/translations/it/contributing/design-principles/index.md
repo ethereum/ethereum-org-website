@@ -2,7 +2,6 @@
 title: Principi di progettazione
 lang: it
 description: I principi dietro alla progettazione e alle decisioni sui contenuti di ethereum.org
-sidebar: true
 ---
 
 # I nostri principi di progettazione {#contributing-to-ethereumorg-}

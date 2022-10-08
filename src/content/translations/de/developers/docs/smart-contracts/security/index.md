@@ -2,7 +2,6 @@
 title: Smart Contract – Sicherheit
 description: Sicherheitserwägungen für Ethereum-Entwickler
 lang: de
-sidebar: true
 ---
 
 Ethereum-Smart-Contracts sind extrem flexibel und in der Lage, sowohl große Mengen an Token (oft über $1B) zu halten, als auch unveränderliche Logik auf der Grundlage von zuvor eingesetztem Smart-Contract-Code auszuführen. Während das ein lebendiges und kreatives Ökosystem vernetzter Smart Contracts geschaffen hat, das ohne Vertrauen auskommt, ist es auch das perfekte Ökosystem, um Angreifer anzulocken, die davon profitieren, Schwachstellen in Smart Contracts und unerwartetem Verhalten in Ethereum auszunutzen. Code in Smart Contracts kann _normalerweise_ nicht geändert werden, um Sicherheitslücken zu schließen. Assets die aus Smart Contracts gestohlen wurden, können nicht zurück geholt werden und gestohlene Assets sind sehr schwer nachzuverfolgen. Die Gesamtsumme gestohlener oder verlorener Werte infolge von Problemen mit Smart Contracts beläuft sich auf weit über 1 Milliarde Dollar. Einige der größeren Codefehlern in Smart Contracts beinhalten:

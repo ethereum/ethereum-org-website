@@ -3,7 +3,6 @@ title: "Memperkecil ukuran kontrak untuk mengatasi batasan ukuran kontrak"
 description: Apa yang Anda dapat lakukan untuk mencegah kontrak pintar Anda menjadi terlalu besar?
 author: Markus Waas
 lang: id
-sidebar: true
 tags:
   - "solidity"
   - "kontrak pintar"

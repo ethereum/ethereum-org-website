@@ -2,7 +2,6 @@
 title: Ethereum untuk pengembang Rust
 description: Pelari cara menjadi pengembang untuk Ethereum menggunakan proyek dan peralatan berbasis rust
 lang: id
-sidebar: true
 incomplete: true
 ---
 

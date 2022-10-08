@@ -2,8 +2,6 @@
 title: 交易
 description: 以太坊交易 – 工作原理、数据结构以及如何通过应用发送。
 lang: zh
-sidebar: true
-preMergeBanner: true
 ---
 
 交易是由帐户发出，带密码学签名的指令。 帐户将发起交易以更新以太坊网络的状态。 最简单的交易是将 ETH 从一个账户转到另一个帐户。

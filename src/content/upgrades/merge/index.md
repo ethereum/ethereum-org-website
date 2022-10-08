@@ -3,7 +3,6 @@ title: The Merge
 description: Learn about The Merge - when Mainnet Ethereum adopted proof-of-stake.
 lang: en
 template: upgrade
-sidebar: true
 image: ../../../assets/upgrades/merge.png
 summaryPoint1: Ethereum Mainnet uses proof-of-stake, but this wasn't always the case.
 summaryPoint2: The upgrade from the original proof-of-work mechanism to proof-of-stake was called The Merge.
@@ -47,7 +46,7 @@ This transition to proof-of-stake changed the way ether is issued. Learn more ab
 
 _This bears repeating_: As a user or holder of ETH or any other digital asset on Ethereum, as well as non-node-operating stakers, **you do not need to do anything with your funds or wallet to account for The Merge.** ETH is just ETH. There is no such thing as "old ETH"/"new ETH" or "ETH1"/"ETH2" and wallets work exactly the same after The Merge as they did before—people telling you otherwise are likely scammers.
 
-Despite swapping out proof-of-work, the entire history of Ethereum since genesis remained intact and unaltered by the transition to proof-of-stake. Any funds held in your wallet before The Merge will are still accessible after The Merge. **No action is required to upgrade on your part.**
+Despite swapping out proof-of-work, the entire history of Ethereum since genesis remained intact and unaltered by the transition to proof-of-stake. Any funds held in your wallet before The Merge are still accessible after The Merge. **No action is required to upgrade on your part.**
 
 [More on Ethereum security](/security/#eth2-token-scam)
 
@@ -64,7 +63,7 @@ Key action items include:
 2. Authenticate both execution and consensus clients with a shared JWT secret so they can securely communicate.
 3. Set a `fee recipient` address to receive your earned transaction fee tips/MEV.
 
-Not completing the first two items above items will result in your node being seen as "offline" until both layers are synced and authenticated.
+Not completing the first two items above will result in your node being seen as "offline" until both layers are synced and authenticated.
 
 Not setting a `fee recipient` will still allow your validator to behave as usual, but you will miss out on unburnt fee tips and any MEV you would have otherwise earned in blocks your validator proposes.
 </ExpandableCard>

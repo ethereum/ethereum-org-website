@@ -2,7 +2,6 @@
 title: Ürün ekleme
 description: Ethereum.org'a cüzdan ve dapp eklerken kullandığımız politika
 lang: tr
-sidebar: true
 ---
 
 _Cüzdan eklemeyle ilgili bir not: [1. Çeyrek ürün yol haritamızın](https://github.com/ethereum/ethereum-org-website/issues/5105) bir parçası olarak, cüzdanlar sayfamızı iyileştiriyoruz. Bu, cüzdan sayfamız için listeleme kriterlerinin iyileştirilmesini içerecektir. İyileştirilmiş listeleme kriterlerini araştırıp, oluşturup yayınlayana kadar, web sitesine aktif olarak yeni cüzdan eklemeyeceğiz._

@@ -2,7 +2,6 @@
 title: Konszenzus mechanizmusok
 description: Egy magyarázat az elosztott rendszerek konszenzus protokolljairól és szerepükről az Ethereumban.
 lang: hu
-sidebar: true
 incomplete: true
 ---
 

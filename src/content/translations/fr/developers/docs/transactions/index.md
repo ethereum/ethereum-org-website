@@ -2,7 +2,6 @@
 title: Transactions
 description: "Présentation des transactions Ethereum : leur fonctionnement, leur structure de données et comment les envoyer via une application."
 lang: fr
-sidebar: true
 ---
 
 Les transactions sont des instructions signées cryptographiquement provenant des comptes. Un compte va initier une transaction pour mettre à jour l'état du réseau Ethereum. La transaction la plus simple consiste à transférer de l'ETH d'un compte à un autre.

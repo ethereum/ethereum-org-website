@@ -2,7 +2,6 @@
 title: Ethereum untuk Pengembang Python
 description: Pelajari cara menjadi pengembang untuk Ethereum menggunakan proyek dan peralatan berbasis Python
 lang: id
-sidebar: true
 incomplete: true
 ---
 

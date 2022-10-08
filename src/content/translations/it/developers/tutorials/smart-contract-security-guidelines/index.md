@@ -8,7 +8,6 @@ tags:
   - "sicurezza"
 skill: intermediate
 lang: it
-sidebar: true
 published: 2020-09-06
 source: Creare contratti sicuri
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md

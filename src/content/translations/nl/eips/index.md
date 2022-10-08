@@ -2,7 +2,6 @@
 title: Voorstellen ter verbetering van Ethereum (EIPs)
 description: De basisinformatie die u nodig heeft om Ethereum-verbeteringsvoorstellen (EIP's) te begrijpen.
 lang: nl
-sidebar: true
 ---
 
 # Inleiding tot Ethereum-verbeteringsvoorstellen (EIP's) {#introduction-to-ethereum-improvement-proposals-eips}

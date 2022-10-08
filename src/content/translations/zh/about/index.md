@@ -2,7 +2,6 @@
 title: 关于我们
 description: 关于 ethereum.org 的团队、社区和任务
 lang: zh
-sidebar: true
 ---
 
 # 关于 ethereum.org {#about-ethereumorg}
