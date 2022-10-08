@@ -195,10 +195,20 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
   )
 }
 
-// TODO: Add styles for margin-top 0 for h3 and h2
 export const EmblaSlide: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
-    <Box position="relative" minWidth="full">
+    <Box
+      position="relative"
+      minWidth="full"
+      sx={{
+        h2: {
+          marginTop: 0,
+        },
+        h3: {
+          marginTop: 0,
+        },
+      }}
+    >
       {children}
     </Box>
   )
