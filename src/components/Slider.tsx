@@ -158,7 +158,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
       position="relative"
       p="2rem"
       borderWidth="1px"
-      borderBottomStyle="solid"
+      borderStyle="solid"
       borderRadius="0.3rem"
       w="full"
       bg="slider.bg"
