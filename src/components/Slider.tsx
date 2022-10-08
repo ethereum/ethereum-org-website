@@ -4,7 +4,8 @@ import styled from "@emotion/styled"
 import useEmblaCarousel from "embla-carousel-react"
 
 import Icon from "./Icon"
-import { Box, Center, Container, Flex } from "@chakra-ui/react"
+import { Box, Center, Container, Flex, IconButton } from "@chakra-ui/react"
+import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons"
 
 // const Embla = styled.div`
 //   position: relative;
@@ -42,24 +43,24 @@ import { Box, Center, Container, Flex } from "@chakra-ui/react"
 //   }
 // `
 
-const Buttons = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-bottom: 1rem;
-  margin-left: 0;
+// const Buttons = styled.div`
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   margin-bottom: 1rem;
+//   margin-left: 0;
 
-  @media (min-width: ${(props) => props.theme.breakpoints.s}) {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+//   @media (min-width: ${(props) => props.theme.breakpoints.s}) {
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
 
-    justify-content: left;
+//     justify-content: left;
 
-    margin-bottom: 2rem;
-    margin-left: 2rem;
-  }
-`
+//     margin-bottom: 2rem;
+//     margin-left: 2rem;
+//   }
+// `
 
 const Button = styled.button`
   background-color: ${({ theme, disabled }) =>
@@ -146,7 +147,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
     })
   }, [embla, setScrollSnaps, onSelect])
 
-  // TODO: Background color
+  // TODO: fix colors
   return (
     <Box
       position="relative"
@@ -168,26 +169,30 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
         mb={{ sm: "2rem", base: "1rem" }}
         ml={{ sm: "2rem", base: 0 }}
       >
-        <Button onClick={scrollPrev} disabled={!prevBtnEnabled}>
-          <Icon
-            name="arrowLeftIos"
-            color={
-              prevBtnEnabled
-                ? theme.colors.slider.btnColor
-                : theme.colors.slider.btnColorDisabled
-            }
-          />
-        </Button>
-        <Button onClick={scrollNext} disabled={!nextBtnEnabled}>
-          <Icon
-            name="arrowRightIos"
-            color={
-              nextBtnEnabled
-                ? theme.colors.slider.btnColor
-                : theme.colors.slider.btnColorDisabled
-            }
-          />
-        </Button>
+        <IconButton
+          aria-label="Left arrow"
+          onClick={scrollPrev}
+          disabled={!prevBtnEnabled}
+          icon={<ChevronLeftIcon w={6} h={6} />}
+          variant="unstyled"
+          isRound
+          mr="0.8rem"
+          _hover={{ boxShadow: "none" }}
+          _focus={{ boxShadow: "none" }}
+          bg="slider.btnBg"
+        />
+        <IconButton
+          aria-label="Right arrow"
+          onClick={scrollNext}
+          disabled={!nextBtnEnabled}
+          icon={<ChevronRightIcon w={6} h={6} />}
+          variant="unstyled"
+          isRound
+          mr="0.8rem"
+          _hover={{ boxShadow: "none" }}
+          _focus={{ boxShadow: "none" }}
+          bg="slider.btnBg"
+        />
       </Flex>
       <Box textAlign="center">
         {scrollSnaps.map((_, index) => (
