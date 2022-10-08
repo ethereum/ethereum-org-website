@@ -8,15 +8,20 @@ import Button from "../Button"
 // Types
 export interface IProps {
   questionData: any
+  onAnswerSelect: (answerId: string) => void
 }
 
-const QuizQuestion: React.FC<IProps> = ({ questionData }) => {
+const QuizQuestion: React.FC<IProps> = ({ questionData, onAnswerSelect }) => {
   const { colorMode } = useColorMode()
   const { answers, question } = questionData
   const [selectedAnswer, setSelectedAnswer] = useState<string | undefined>(
     undefined
   )
 
+  const handleSelection = (answerId: string) => {
+    setSelectedAnswer(answerId)
+    onAnswerSelect(answerId)
+  }
   return (
     <Box w={"100%"}>
       <Text fontWeight={"700"} fontSize={"2xl"}>
@@ -31,9 +36,8 @@ const QuizQuestion: React.FC<IProps> = ({ questionData }) => {
           <Button
             variant={"quizButton"}
             isActive={active}
-            onClick={() => {
-              setSelectedAnswer(key)
-            }}
+            onClick={() => handleSelection(key)}
+            textAlign="start"
             leftIcon={
               <Circle
                 size={"25px"}
