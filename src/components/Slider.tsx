@@ -1,5 +1,4 @@
 import React, { ReactNode, useCallback, useEffect, useState } from "react"
-import { useTheme } from "@emotion/react"
 import styled from "@emotion/styled"
 import useEmblaCarousel from "embla-carousel-react"
 
@@ -62,23 +61,23 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons"
 //   }
 // `
 
-const Button = styled.button`
-  background-color: ${({ theme, disabled }) =>
-    disabled ? theme.colors.slider.btnBgDisabled : theme.colors.slider.btnBg};
-  border: 0;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 0.8rem;
-  cursor: pointer;
+// const Button = styled.button`
+//   background-color: ${({ theme, disabled }) =>
+//     disabled ? theme.colors.slider.btnBgDisabled : theme.colors.slider.btnBg};
+//   border: 0;
+//   border-radius: 50%;
+//   width: 35px;
+//   height: 35px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin-right: 0.8rem;
+//   cursor: pointer;
 
-  &:last-child {
-    margin-right: 0;
-  }
-`
+//   &:last-child {
+//     margin-right: 0;
+//   }
+// `
 
 // const Dots = styled.div`
 //   text-align: center;
@@ -105,7 +104,6 @@ export interface IProps {
 }
 
 const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
-  const theme = useTheme()
   const [emblaRef, embla] = useEmblaCarousel()
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false)
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false)
@@ -115,7 +113,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
   const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla])
   const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla])
   const scrollTo = useCallback(
-    (index) => {
+    (index: number) => {
       if (embla) {
         embla.scrollTo(index)
       }
@@ -156,7 +154,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
       borderBottomStyle="solid"
       borderRadius="0.3rem"
       w="full"
-      background="slider.bg"
+      bg="slider.bg"
     >
       <Box overflow="hidden" ref={emblaRef}>
         <Flex>{children}</Flex>
@@ -188,7 +186,6 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
           icon={<ChevronRightIcon w={6} h={6} />}
           variant="unstyled"
           isRound
-          mr="0.8rem"
           _hover={{ boxShadow: "none" }}
           _focus={{ boxShadow: "none" }}
           bg="slider.btnBg"
