@@ -160,7 +160,14 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
       <Box overflow="hidden" ref={emblaRef}>
         <Flex>{children}</Flex>
       </Box>
-      <Buttons>
+      <Flex
+        position={{ sm: "absolute", base: "static" }}
+        bottom={{ sm: 0 }}
+        left={{ sm: 0 }}
+        justifyContent={{ sm: "left", base: "center" }}
+        mb={{ sm: "2rem", base: "1rem" }}
+        ml={{ sm: "2rem", base: 0 }}
+      >
         <Button onClick={scrollPrev} disabled={!prevBtnEnabled}>
           <Icon
             name="arrowLeftIos"
@@ -181,7 +188,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
             }
           />
         </Button>
-      </Buttons>
+      </Flex>
       <Box textAlign="center">
         {scrollSnaps.map((_, index) => (
           <DotButton
