@@ -53,3 +53,49 @@ type OptionalImageProp = {
 type ForbidOptionalImageProp = ForbidOptional<OptionalImageProp>
 
 export type ImageProp = OptionalImageProp | ForbidOptionalImageProp
+
+/**
+ * Quiz data types
+ */
+export interface AnswerChoice {
+  answerId: string
+  isCorrect: boolean
+}
+
+export interface Answer {
+  id: string
+  label: string
+  explanation: string
+  moreInfo?: string
+  moreInfoUrl?: string
+}
+
+export interface RawQuestion {
+  prompt: string
+  answers: Array<Answer>
+  correctAnswerId: string // Answer.id
+}
+
+export interface Question extends RawQuestion {
+  id: string // 0a001 || Hash of prompt??
+}
+
+export interface QuestionBank {
+  [key: string]: RawQuestion
+}
+
+export interface RawQuiz {
+  // id: string // Use "key" from Quizzes as ID instead
+  title: string
+  questions: Array<string> // TODO: Force to be an array of questionID's
+}
+
+export interface Quiz {
+  title: string
+  questions: Array<Question>
+}
+
+export interface RawQuizzes {
+  [key: string]: RawQuiz
+}
+
