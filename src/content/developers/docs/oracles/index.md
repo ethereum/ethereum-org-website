@@ -208,11 +208,11 @@ Computational oracles also rely on off-chain nodes to perform intensive computat
 
 Oracles come in different types, including *immediate-read*, *publish-subscribe*, and *request-response*, with the latter two being the most popular among Ethereum smart contracts. Below is a brief description of the two types of oracle services:
 
-### Publish-subscribe {#publish-subscribe}
+### Publish-subscribe oracles {#publish-subscribe-oracles}
 
 An oracle service based on a publish-subscribe mechanism exposes a “data feed” which other contracts can regularly read for information. The data in this case is expected to change frequently, so client contracts must listen for updates to the data in the oracle’s storage. An excellent example is an oracle that provides information on the latest ETH-USD price to users. 
 
-### Request-response {#request-response}
+### Request-response oracles {#request-response-oracles}
 
 A request-response setup allows the client contract to request arbitrary data other than that provided by a publish-subscribe oracle. Request-response oracles are ideal in the following conditions:
 
@@ -284,9 +284,9 @@ Staking/voting also protects decentralized oracles from “Sybil attacks” wher
 
 [Schelling point](https://en.wikipedia.org/wiki/Focal_point_(game_theory)) is a game-theory concept that assumes multiple entities will always default to a common solution to a problem in absence of any communication. Schelling-point mechanisms are often used in decentralized oracle networks to enable nodes reach consensus on answers to data requests. 
 
-An early example is [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/), a proposed data feed where participants submit responses to "scalar" questions (i.e., questions whose answers are described by magnitude)along with a deposit. Users who provide values between the 25th and 75th [percentile](https://en.wikipedia.org/wiki/Percentile) are rewarded, while those whose values deviate largely from the median value are penalized. 
+An early example is [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/), a proposed data feed where participants submit responses to "scalar" questions (questions whose answers are described by magnitude, e.g., "what is the price of ETH?") along with a deposit. Users who provide values between the 25th and 75th [percentile](https://en.wikipedia.org/wiki/Percentile) are rewarded, while those whose values deviate largely from the median value are penalized. 
 
-While SchellingCoin doesn’t exist today, a number of decentralized oracles—notably [Maker Protocol’s Oracles](https://docs.makerdao.com/smart-contract-modules/oracle-module)—use this mechanism. Each Maker Oracle consists of an off-chain P2P network of nodes ("relayers" and "feeds") who submit market prices for collateral assets and an on-chain “Medianizer” contract that calculates the median of all provided values. Once the specified delay period is over, this median value becomes the new reference price for the associated asset. 
+While SchellingCoin doesn’t exist today, a number of decentralized oracles—notably [Maker Protocol’s Oracles](https://docs.makerdao.com/smart-contract-modules/oracle-module)—use the schelling-point mechanism to improve accuracy of oracle data. Each Maker Oracle consists of an off-chain P2P network of nodes ("relayers" and "feeds") who submit market prices for collateral assets and an on-chain “Medianizer” contract that calculates the median of all provided values. Once the specified delay period is over, this median value becomes the new reference price for the associated asset. 
 
 Other examples of oracles that use Schelling point mechanisms include [Chainlink Off-Chain Reporting](https://docs.chain.link/docs/off-chain-reporting/) and Witnet. In both systems, responses from oracle nodes in the peer-to-peer network are aggregated into a single aggregate value, such as a mean or median. Nodes are rewarded or punished according to the extent to which their responses align with or deviate from the aggregate value. 
 
