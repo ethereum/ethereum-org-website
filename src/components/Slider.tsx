@@ -3,7 +3,14 @@ import styled from "@emotion/styled"
 import useEmblaCarousel from "embla-carousel-react"
 
 import Icon from "./Icon"
-import { Box, Center, Container, Flex, IconButton } from "@chakra-ui/react"
+import {
+  Box,
+  Button,
+  Center,
+  Container,
+  Flex,
+  IconButton,
+} from "@chakra-ui/react"
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons"
 
 // const Embla = styled.div`
@@ -83,20 +90,20 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons"
 //   text-align: center;
 // `
 
-const DotButton = styled.button<{ selected: boolean }>`
-  width: 5px;
-  height: 5px;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  background-color: ${({ theme, selected }) =>
-    selected ? theme.colors.slider.dotActive : theme.colors.slider.dot};
-  margin-right: 1rem;
+// const DotButton = styled.button<{ selected: boolean }>`
+//   width: 5px;
+//   height: 5px;
+//   padding: 0;
+//   border: 0;
+//   border-radius: 50%;
+//   background-color: ${({ theme, selected }) =>
+//     selected ? theme.colors.slider.dotActive : theme.colors.slider.dot};
+//   margin-right: 1rem;
 
-  &:last-child {
-    margin-right: 0;
-  }
-`
+//   &:last-child {
+//     margin-right: 0;
+//   }
+// `
 
 export interface IProps {
   children?: React.ReactNode
@@ -191,15 +198,29 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
           bg="slider.btnBg"
         />
       </Flex>
-      <Box textAlign="center">
+      <Center>
         {scrollSnaps.map((_, index) => (
-          <DotButton
+          <Box
             key={index}
-            selected={index === selectedIndex}
+            backgroundColor={
+              index === selectedIndex ? "slider.dotActive" : "slider.dot"
+            }
+            border={0}
+            borderRadius="50%"
+            width="5px"
+            height="5px"
+            padding={0}
+            cursor="pointer"
             onClick={() => scrollTo(index)}
+            sx={{
+              marginRight: "1rem",
+              "&:last-child": {
+                marginRight: 0,
+              },
+            }}
           />
         ))}
-      </Box>
+      </Center>
     </Box>
   )
 }
