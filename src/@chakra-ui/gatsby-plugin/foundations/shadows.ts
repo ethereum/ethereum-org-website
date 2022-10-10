@@ -4,6 +4,11 @@ const shadows = {
   outline: "0 0 0 4px var(--eth-colors-primaryHover)",
   table:
     "0 14px 66px rgba(0,0,0,.07), 0 10px 17px rgba(0,0,0,.03), 0 4px 7px rgba(0,0,0,.05)",
+  tableBox: {
+    light:
+      "0 14px 66px rgba(0,0,0,.07), 0 10px 17px rgba(0,0,0,.03), 0 4px 7px rgba(0,0,0,.05)",
+    dark: "0 14px 66px hsla(0,0%,96.1%,.07), 0 10px 17px hsla(0,0%,96.1%,.03), 0 4px 7px hsla(0,0%,96.1%,.05)",
+  },
 }
 
 export default shadows
