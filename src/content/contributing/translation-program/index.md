@@ -50,6 +50,7 @@ We want to acknowledge our translators and support them on their career paths. H
 If you have contributed to the Translation Program and at least 5,000 of your translated words have been approved, you are eligible for an ethereum.org translator certificate. [More on certificates](/contributing/translation-program/acknowledgements/#certificate)
 
 #### POAPs {#poaps}
+
 All of our translators are eligible for a POAP (Proof of Attendance Protocol) - an NFT that proves their contribution to the ethereum.org Translation Program. [More on POAPs](/contributing/translation-program/acknowledgements/#poap)
 
 #### Translator acknowledgements {#translator-acknowledgements}
