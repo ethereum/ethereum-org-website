@@ -565,5 +565,14 @@
     "description": "The Ghana Crypto & DeFi Summit 2022 (GCDSummit2022), is the first Organic, Inclusive and Grassroots DeFi summit of its kind to happen in Ghana, Africa.",
     "startDate": "2022-11-3",
     "endDate": "2022-11-4"
-  }
+  },
+  {
+    "title": "PyChain 2022",
+    "to": "https://www.pychain.org",
+    "sponsor": null,
+    "location": "Online event",
+    "description": "The  PyChain 2022 is th virtual blockchain developer conference targeting the Python ecosystem and Python devs.",
+    "startDate": "2022-11-15",
+    "endDate": "2022-11-15"
+  }  
 ]

@@ -28,7 +28,6 @@ const styles = {
             margin: "0px 0px 1.45rem 1.45rem",
             padding: 0,
         },
-
         // imported global CSS styles for list items
         li: {
             "margin-bottom": "calc(1.45rem / 2)",
@@ -135,6 +134,11 @@ const styles = {
         },
         ".header-anchor:focus svg": {
             visibility: "visible",
+        },
+       "pre, code, kbd, samp": {
+          fontSize: "0.8em",
+          lineHeight: "1.1rem",
+          fontFamily: "SFMono-Regular,Menlo,Monaco,Consolas,monospace",
         },
     }),
 }
