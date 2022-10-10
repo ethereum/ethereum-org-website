@@ -160,7 +160,6 @@ Here are some of the enterprise applications that have been deployed to the publ
 
 ### Credentials and certifications {#credentials}
 
-- [Utah Counties](https://web.archive.org/web/20210731052556/https://www.utahcounty.gov/Dept/ClerkAud/DigitalCertCopy.html) _issuing digital marriage certificates on Ethereum_
 - [Two Italian high schools](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _digital diplomas issued on Ethereum Mainnet_
 - [University of St. Gallen](https://cointelegraph.com/news/swiss-university-fights-fake-diplomas-with-blockchain-technology) _pilot project to verify degrees by a Swiss university_
 - [Malta](https://cointelegraph.com/news/malta-to-store-education-certificates-on-a-blockchain) _all educational certificates recorded on Mainnet by [Hyland](https://www.learningmachine.com/)_
