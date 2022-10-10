@@ -91,6 +91,7 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
                   href={hasGitHub ? `${githubUrl}${username}` : "#"}
                   textDecor="none"
                   color="text"
+                  hideArrow
                 >
                   {name}{" "}
                 </LinkOverlay>
@@ -100,7 +101,15 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
                   <Translation id="page-upgrades-bug-bounty-leaderboard-points" />
                 </Box>
               </Flex>
-              {emoji && <Emoji mr={8} text={emoji} />}
+              {emoji && <Emoji mr={8} fontSize="2xl" text={emoji} />}
+              <Box
+                as="span"
+                _after={{
+                  content: '"↗"',
+                  ml: 0.5,
+                  mr: 1.5,
+                }}
+              ></Box>
             </LinkBox>
           )
         })}
