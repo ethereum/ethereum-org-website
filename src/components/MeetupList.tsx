@@ -71,7 +71,7 @@ const MeetupList: React.FC<IProps> = () => {
         p={2}
         borderRadius="base"
         w="100%"
-        _focus={{ outline: "solid 1px", outlineColor: "primary" }}
+        _focus={{ outline: "auto 1px" }}
         _placeholder={{ color: "text200" }}
       />
       <Box
@@ -108,6 +108,7 @@ const MeetupList: React.FC<IProps> = () => {
                     href={meetup.link}
                     textDecor="none"
                     color="text"
+                    hideArrow
                   >
                     {meetup.title}
                   </LinkOverlay>
@@ -125,6 +126,14 @@ const MeetupList: React.FC<IProps> = () => {
                   {meetup.location}
                 </Text>
               </Flex>
+              <Box
+                as="span"
+                _after={{
+                  content: '"↗"',
+                  ml: 0.5,
+                  mr: 1.5,
+                }}
+              ></Box>
             </LinkBox>
           ))
         ) : (
