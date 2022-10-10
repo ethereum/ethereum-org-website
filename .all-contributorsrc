@@ -9189,6 +9189,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "yashovardhan",
+      "name": "Yashovardhan Agrawal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/21066442?v=4",
+      "profile": "http://yashovardhan.dev",
+      "contributions": [
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
