@@ -113,7 +113,7 @@ Like ZK-rollups, validiums are mostly suited to simple applications, such as tok
 
 Some validium projects attempt to sidestep this problem by compiling EVM-compatible languages (e.g., Solidity, Vyper) into creating custom bytecode optimized for efficient proving. A drawback of this approach is that new zero-knowledge proof-friendly VMs may not support important EVM opcodes, and developers have to write directly in the high-level language for an optimal experience. This creates even more problems: it forces developers to build dapps with an entirely new development stack and breaks compatibility with current Ethereum infrastructure.
 
-Some teams, however, are attempting to optimize existing EVM opcodes for zk-proving circuits. This will result in the development of a zero-knowledge Ethereum Virtual Machine (zkEVM), an EVM-compatible VM that produces proofs to verify the correctness of program execution. With a zkEVM, validium chains can execute smart contracts off-chain and submit validity proofs to verify an off-chain computation (without having to re-execute it) on Ethereum.
+Some teams, however, are attempting to optimize existing EVM opcodes for ZK-proving circuits. This will result in the development of a zero-knowledge Ethereum Virtual Machine (zkEVM), an EVM-compatible VM that produces proofs to verify the correctness of program execution. With a zkEVM, validium chains can execute smart contracts off-chain and submit validity proofs to verify an off-chain computation (without having to re-execute it) on Ethereum.
 
 [More on zkEVMs](https://www.alchemy.com/overviews/zkevm).
 

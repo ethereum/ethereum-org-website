@@ -9,7 +9,7 @@ image: ../../../../../assets/staking/leslie-solo.png
 alt: Gergedan Leslie bilgisayar çipinin üstünde.
 sidebarDepth: 2
 summaryPoints:
-  - Doğrulayıcınızın düzgün şekilde çalışmasını ve çevrimiçi olmasını sağlamak için doğrudan protokolden (Birleştirmeden sonra yanmamış ücretler dahil) maksimum ödülleri alın
+  - Doğrulayıcınızın düzgün çalışmasını ve çevrimiçi olmasını sağlamak için doğrudan protokolden maksimum ödülleri alın
   - Ev donanımını çalıştırın ve Ethereum ağının güvenliğine ve merkezsizleştirilmesine kişisel olarak katkıda bulunun
   - Güveni ortadan kaldırın ve fonlarınızın anahtarlarının kontrolünü asla bırakmayın
 ---
@@ -58,7 +58,7 @@ Solo staking'in herkes için erişilebilir ve risksiz olmasını dilesek de, bu 
     <p style={{marginTop: "1rem"}}><a href="/security">Ethereum güvenliği ve dolandırıcılık önleme</a></p>
   </ExpandableCard>
   <ExpandableCard title="Çekimler kapalı (şimdilik)" eventCategory="SoloStaking" eventName="clicked no withdrawing">
-    Bir doğrulayıcı bakiyesinden stake edilen ETH veya ödüllerin çekilmesi henüz desteklenmemektedir. The Merge'in ardından Şanghay yükseltmesi için para çekme desteği planlanıyor. ETH'nizin en az bir ila iki yıl kilitli kalacağını tahmin etmelisiniz. Şanghay yükseltmesinden sonra, isterseniz payınızın bir kısmını veya tamamını serbestçe çekebileceksiniz.
+    Bir doğrulayıcı bakiyesinden stake edilen ETH veya ödüllerin çekilmesi henüz desteklenmemektedir. Yaklaşan Şanghay yükseltmesi için para çekme desteği planlanıyor. ETH'nizin en az bir ila iki yıl kilitli kalacağını tahmin etmelisiniz. Şanghay yükseltmesinden sonra, isterseniz payınızın bir kısmını veya tamamını serbestçe çekebileceksiniz.
   </ExpandableCard>
   <ExpandableCard title="Bakım" eventCategory="SoloStaking" eventName="clicked maintenance">
     Donanım bazen başarısız oluyor, ağ bağlantıları hata veriyor ve istemci yazılımının zaman zaman yükseltilmesi gerekiyor. Düğüm bakımı kaçınılmazdır ve zaman zaman ilgilenmenizi gerektirir. Beklenen ağ yükseltmelerinden veya diğer kritik müşteri yükseltmelerinden haberdar olduğunuzdan emin olmak isteyeceksiniz.
@@ -88,10 +88,6 @@ Solo staking'in herkes için erişilebilir ve risksiz olmasını dilesek de, bu 
 Staking Launchpad, stake yapmanıza yardımcı olacak açık kaynaklı bir uygulamadır. İstemcilerinizi seçme, anahtarlarınızı oluşturma ve ETH'nizi stake depozito sözleşmesine yatırma konusunda size rehberlik edecektir. Doğrulayıcınızı güvenli bir şekilde kurmak ve her şeyi kapsadığınızdan emin olmak için bir kontrol listesi sağlanmıştır.
 
 <StakingLaunchpadWidget />
-
-<InfoBanner emoji=":panda:" isWarning>
-<strong>Mevcut paydaşlara not:</strong> Birleşim yaklaşıyor ki bu, hisseleme başlatıldığından bu yana birkaç değişiklik getiriyor. Hisseleme Başlama Noktasındaki <a href="https://launchpad.ethereum.org/en/merge-readiness">Birleşim hazırlığı kontrol listesiyle</a> hazır olduğunuzdan emin olun.
-</InfoBanner>
 
 ## Düğüm ve istemci kurulum araçlarıyla ilgili olarak nelere dikkat edilmelidir {#node-tool-considerations}
 
@@ -130,7 +126,9 @@ Kaçırdığımız bir stake etme aracı için öneriniz mi var mı? Uygun olup 
 Bunlar, staking hakkında bilmeye değer en yaygın sorulardan birkaçıdır.
 
 <ExpandableCard title="Doğrulayıcı nedir?">
-Bir <em>doğrulayıcı</em>, İşaret Zincirinde yaşayan ve Ethereum protokolünün mutabakatına katılan sanal bir varlıktır. Doğrulayıcılar bir denge, ortak anahtar ve diğer özelliklerle temsil edilir. Bir <em>doğrulayıcı istemcisi</em>, özel anahtarını tutup kullanarak doğrulayıcı adına hareket eden yazılımdır. Tek bir doğrulayıcı istemcisi, birçok doğrulayıcıyı kontrol ederek birçok anahtar çiftini tutabilir.
+
+Doğrulayıcı, Ethereum üzerinde yaşayan ve Ethereum protokolünün mutabakatına katılan sanal bir varlıktır. Doğrulayıcılar bir denge, ortak anahtar ve diğer özelliklerle temsil edilir. Doğrulayıcı istemcisi, özel anahtarını tutup kullanarak doğrulayıcı adına hareket eden yazılımdır. Tek bir doğrulayıcı istemcisi, birçok doğrulayıcıyı kontrol ederek birçok anahtar çiftini tutabilir.
+
 </ExpandableCard>
 
 <ExpandableCard title="32 ETH'den fazla yatırabilir miyim?">
@@ -178,18 +176,6 @@ Tek bir merkezi bulut depolama çözümü üzerinde çalışan doğrulayıcı is
 Çevrimdışı cezalar, aynı anda kaç kişinin çevrimdışı olduğuyla orantılıdır. Bir VPS kullanmak, çevrimdışı cezaların daha şiddetli olması riskini büyük ölçüde artırır ve kesintinin yeterince büyük olması durumunda ikinci dereceden sızıntı veya kesinti riskinizi artırır. Kendi riskinizi ve ağ riskini en aza indirmek için, kullanıcıların kendi donanımlarını edinmeleri ve çalıştırmaları şiddetle tavsiye edilir.
 
 <a href="https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/">Ödüller ve cezalar hakkında daha fazla bilgi</a>
-</ExpandableCard>
-
-<ExpandableCard title="Birleştirmeden önce herhangi bir şey yapmam gerekiyor mu?">
-Şu anda fikir birliği katmanı istemcisini (İşaret Zinciri) çalıştıran Paydaşlar Birleşimden sonra yürütüm Katmanı istemcisini çalıştırmak zorunda olacaktır. Yeni Motor API'sı, iki katman arasında arayüz oluşturmak için kullanılacak ve bir JWT sırrı gerektirecek. Eğer şu anda yürütüm katmanı istemcisi olmadan bir İşaret Zinciri çalıştırıyorsanız yürütüm katmanını, ağ ile senkronize kalmak için Birleşim'den önce senkronize etmeniz gerekecektir.
-
-Birleştirme ayrıca doğrulayıcılara yanmamış işlem ücretleri getirecektir. Bu ücretler, doğrulayıcı anahtarlarla ilişkili bakiyede birikmez, bunun yerine seçtiğiniz normal bir Ethereum adresine yönlendirilebilir. Bahşişlerinizi (öncelikli ödemeler) önerilen bloklardan almak için, müşteri ayarlarınızı bahşişlerinizin gönderilmesini istediğiniz adresle güncellemelisiniz.
-
-Bireysel istemci dokümanlarının ve ek bilgilerin bağlantıları Başlama Noktasındaki Birleşim hazırlığı kontrol listesinde bulunabilir.
-
-<ButtonLink to="https://launchpad.ethereum.org/merge-readiness/">
-Birleştirme hazırlığı kontrol listesi
-</ButtonLink>
 </ExpandableCard>
 
 ## Daha fazla bilgi {#further-reading}

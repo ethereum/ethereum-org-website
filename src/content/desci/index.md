@@ -81,7 +81,7 @@ The advent of non-transferable ["soulbound" tokens](https://vitalik.ca/general/2
 
 ### Data storage, access and architecture {#data-storage}
 
-Scientific data can be made vastly more accessible using Web3 patterns, and distributed storage will enable research to survive cataclysmic events.
+Scientific data can be made vastly more accessible using Web3 patterns, and distributed storage enables research to survive cataclysmic events.
 
 The starting point must be a system accessible by any decentralized identity holding the proper verifiable credentials. This allows sensitive data to be securely replicated by trusted parties, enabling redundancy and censorship resistance, reproduction of results, and even the ability for multiple parties to collaborate and add new data to the dataset. Confidential computing methods like [compute-to-data](https://7wdata.be/predictive-analytics/compute-to-data-using-blockchain-to-decentralize-data-science-and-ai-with-the-ocean-protocol) provide alternative access mechanisms to raw data replication, creating Trusted Research Environments for the most sensitive data. Trusted Research Environments have been [cited by the NHS](https://medium.com/weavechain/whats-in-store-for-the-future-of-healthcare-data-b6398745fbbb) as a future-facing solution to data privacy and collaboration by creating an ecosystem where researchers can securely work with data on-site using standardized environments for sharing code and practices.
 
@@ -101,6 +101,14 @@ Explore projects and join the DeSci community.
 - [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
 - [OceanDAO: DAO governed funding for data-related science](https://oceanprotocol.com/dao)
 - [Opscientia: open decentralized science workflows](https://opsci.io/research/)
+- [LabDAO: fold a protein in-silico](https://alphafodl.vercel.app/)
+- [Bio.xyz: get funded for your biotech DAO or desci project](https://www.molecule.to/)
+- [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
+- [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
+- [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
+- [Active Inference Lab](https://www.activeinference.org/)
+- [Cherubs DAO: NFT funded and DAO governed impact fund for mental health & brain wellness](https://cherubsdao.com/)
+- [CureDAO: Community-Owned Precision Health Platform](https://docs.curedao.org/)
 - [IdeaMarkets: enabling decentralized scientifc credibility](https://ideamarket.io/)
 
 ## Further reading {#further-reading}

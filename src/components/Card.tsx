@@ -19,6 +19,8 @@ const Card: React.FC<IProps> = ({
 }) => (
   <Flex
     direction="column"
+    gap="1rem"
+    justifyContent="space-between"
     bg="ednBackground"
     borderRadius="sm"
     border="1px"

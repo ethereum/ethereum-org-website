@@ -86,7 +86,7 @@ By pointing the proxy contract to a new logic contract, the code executed when u
 
 Proxy patterns are a popular method for upgrading smart contracts because they eliminate the difficulties associated with contract migration. However, proxy patterns are more complicated to use and can introduce critical flaws, such as [function selector clashes](https://medium.com/nomic-foundation-blog/malicious-backdoors-in-ethereum-proxies-62629adf3357), if used improperly.
 
-[More on proxy patterns](blog.openzeppelin.com/proxy-patterns/).
+[More on proxy patterns](https://blog.openzeppelin.com/proxy-patterns/).
 
 ### Upgrade mechanism #4: Strategy pattern {#strategy-pattern}
 
