@@ -1449,6 +1449,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/Gift-Stack"><img src="https://avatars.githubusercontent.com/u/72243506?v=4?s=100" width="100px;" alt="Gift Opia"/><br /><sub><b>Gift Opia</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Gift-Stack" title="Code">💻</a></td>
       <td align="center"><a href="https://dhirajgagrai.dev/"><img src="https://avatars.githubusercontent.com/u/22605432?v=4?s=100" width="100px;" alt="Dhiraj Gagrai"/><br /><sub><b>Dhiraj Gagrai</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=dhirajgagrai" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/KurtMerbeth"><img src="https://avatars.githubusercontent.com/u/22886639?v=4?s=100" width="100px;" alt="KurtMerbeth"/><br /><sub><b>KurtMerbeth</b></sub></a><br /><a href="#content-KurtMerbeth" title="Content">🖋</a></td>
+      <td align="center"><a href="https://github.com/EmperorRP"><img src="https://avatars.githubusercontent.com/u/66853318?v=4?s=100" width="100px;" alt="Sai Leela Rahul Pujari"/><br /><sub><b>Sai Leela Rahul Pujari</b></sub></a><br /><a href="#content-EmperorRP" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
