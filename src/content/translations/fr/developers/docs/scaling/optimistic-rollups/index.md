@@ -2,7 +2,6 @@
 title: rollups optimisés
 description: Introduction aux rollups optimisés
 lang: fr
-sidebar: true
 ---
 
 ## Prérequis {#prerequisites}

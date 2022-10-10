@@ -2,7 +2,6 @@
 title: Ethereum Go fejlesztőknek
 description: Tanulj meg Ethereumra fejleszteni Go-alapú projektek és eszközök használatával
 lang: hu
-sidebar: true
 incomplete: true
 ---
 

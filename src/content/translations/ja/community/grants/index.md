@@ -1,7 +1,6 @@
 ---
 title: イーサリアム財団とコミュニティの助成プログラム
 description: イーサリアムエコシステム全体の助成プログラムリスト
-sidebar: true
 lang: ja
 ---
 
@@ -21,6 +20,7 @@ lang: ja
 - [Moloch DAO](https://www.molochdao.com/) - _プライバシー、レイヤー 2 スケーリング、クライアントセキュリティなど_
 - [公開されている助成プログラム](https://opengrants.com/explore)
 - [分散型自律組織(DAO)の助成](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _助成プログラムを提供する組織の Google スプレッドシート_
+- [マージ・データチャレンジ](https://esp.ethereum.foundation/merge-data-challenge) - _すべてのイーサリアン、データ科学者、データエンジニア、データビジュアライザー、デベロッパー、およびイーサリアムデータを徹底的に研究することにご興味がある人を募集中_
 
 ## 固有のプロジェクト {#project-specific}
 
@@ -31,7 +31,6 @@ lang: ja
 - [Chainlink 助成プログラム](https://chain.link/community/grants) - _[Chainlink](https://chain.link/) コミュニティ助成プログラム_
 - [Compound 助成プログラム](https://compoundgrants.org/) – _[Compound](https://compound.finance/)金融エコシステム_
 - [Consensys 助成プログラム](https://consensys.net/grants/) – _[Consensys](https://consensys.net/)ブロックチェーン資金調達およびイーサリアム助成プログラム_
-- [dYdX 助成プログラム](https://dydxgrants.com/) – _[dYdX](https://dydx.exchange/)分散型取引所_
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/)金融エコシステム_
 - [mStable](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/)コミュニティ_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/)エコシステム_

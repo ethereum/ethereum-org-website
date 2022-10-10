@@ -2,7 +2,6 @@
 title: Mașina virtuală Ethereum (EVM)
 description: Prezentarea mașinii virtuale Ethereum și a modului în care aceasta se referă la stare, tranzacții și contracte inteligente.
 lang: ro
-sidebar: true
 ---
 
 Reprezentarea fizică a unei EVM nu poate fi descrisă în același mod ca şi un un nor sau un val pe ocean, dar „EVM” _există_ ca o entitate unică întreținută de mii de computere conectate între ele care rulează un client Ethereum.

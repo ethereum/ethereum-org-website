@@ -3,7 +3,6 @@ title: Cadenas de fragmentos
 description: Obtenga más información sobre las cadenas de fragmentos, particiones de la red que proporcionan a Ethereum más capacidad de transacción y facilitan su ejecución.
 lang: es
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: La fragmentación es una actualización multifase para mejorar la escalabilidad y la capacidad de Ethereum.
 summaryPoint2: Las cadenas de fragmentos proporcionan capas de almacenamiento adicionales, más económicas, para que las aplicaciones y las acumulaciones (o «rollups») almacenen datos.

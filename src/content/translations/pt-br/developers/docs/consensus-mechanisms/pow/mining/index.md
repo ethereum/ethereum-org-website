@@ -2,7 +2,6 @@
 title: Mineração
 description: Uma explicação de como a mineração funciona no Ethereum e como ajuda a manter o Ethereum seguro e descentralizado.
 lang: pt-br
-sidebar: true
 incomplete: true
 ---
 

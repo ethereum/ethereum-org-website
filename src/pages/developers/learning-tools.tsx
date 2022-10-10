@@ -215,8 +215,8 @@ const LearningToolsPage = ({
     {
       name: "Platzi",
       description: "page-learning-tools-platzi-description",
-      url: "https://platzi.com/blockchain",
-      image: getImage(data.platzi)!,
+      url: "https://platzi.com/escuela/escuela-blockchain/",
+      image: getImage(data.platzi),
       alt: "page-learning-tools-platzi-logo-alt",
       background: "#121f3d",
       subjects: ["Solidity", "web3"],

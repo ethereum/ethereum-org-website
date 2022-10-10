@@ -3,7 +3,6 @@ title: 通证集成检查清单
 description: 与通证交互时需要考虑的事项检查清单
 author: "Trailofbits"
 lang: zh
-sidebar: true
 tags:
   - "solidity"
   - "智能合约"

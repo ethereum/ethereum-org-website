@@ -2,7 +2,6 @@
 title: Vodnik za prevajanje ethereum.org
 lang: sl
 description: Kako pomagati pri prevajanju ethereum.org
-sidebar: true
 ---
 
 # Vodnik za prevajanje ethereum.org {#translating-ethereum-guide}

@@ -2,7 +2,6 @@
 title: JSON-RPC API
 description: A stateless, light-weight remote procedure call (RPC) protocol for Ethereum clients.
 lang: en
-sidebar: true
 ---
 
 In order for a software application to interact with the Ethereum blockchain - either by reading blockchain data or sending transactions to the network - it must connect to an Ethereum node.
@@ -220,7 +219,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67
 }
 ```
 
-### net_listening {#net_peercount}
+### net_listening {#net_listening}
 
 Returns `true` if client is actively listening for network connections.
 
@@ -245,7 +244,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":
 }
 ```
 
-### net_peerCount {#net_listening}
+### net_peerCount {#net_peercount}
 
 Returns number of peers currently connected to the client.
 

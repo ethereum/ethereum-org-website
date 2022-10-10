@@ -2,7 +2,6 @@
 title: Sicurezza di Ethereum e prevenzione delle truffe
 description: Stai al sicuro su Ethereum
 lang: it
-sidebar: true
 ---
 
 # Sicurezza di Ethereum e prevenzione delle truffe {#introduction}

@@ -4,7 +4,6 @@ description: Pregled DAOs na Ethereumu
 lang: sl
 template: use-cases
 emoji: ":handshake:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/use-cases/dao-2.png
 alt: Predstavitev DAO, ki glasuje o predlogu.

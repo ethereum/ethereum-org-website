@@ -2,7 +2,6 @@
 title: Rólunk
 description: A csapatról, közösségről és az ethereum.org küldetéséről
 lang: hu
-sidebar: true
 ---
 
 # Az ethereum.org-ról {#about-ethereumorg}

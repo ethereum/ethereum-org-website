@@ -2,7 +2,6 @@
 title: Introduzione allo stack di Ethereum
 description: Percorso all'interno dei vari livelli dello stack di Ethereum che indica anche come interagiscono.
 lang: it
-sidebar: true
 ---
 
 Come ogni stack di software, lo "stack di Ethereum" completo varia da progetto a progetto in base ai propri obiettivi.
@@ -33,7 +32,7 @@ Uno sviluppatore di dapp deve scrivere Smart Contract solo se intende aggiungere
 
 Affinché un'applicazione interagisca con la blockchain di Ethereum, deve connettersi a un [nodo di Ethereum](/developers/docs/nodes-and-clients/). Connettersi a un nodo permette di leggere i dati della blockchain e/o inviare transazioni alla rete.
 
-I nodi Ethereum sono computer che eseguono software, ovvero un client Ethereum. Un client è una implementazione di Ethereum che verifica tutte le transazioni presenti in un blocco, facendo in modo che la rete rimanga sicura e i dati siano accurati. I nodi Ethereum sono essi stessi la blockchain Ethereum. Memorizzano in maniera collettiva lo stato della blockchain Ethereum e raggiungono il consenso sulle transazioni per modificare lo stato della blockchain.
+I nodi Ethereum sono computer che eseguono software, ovvero un client Ethereum. Un client è una implementazione di Ethereum che verifica tutte le transazioni presenti in un blocco, facendo in modo che la rete rimanga sicura e i dati siano accurati. **I nodi di Ethereum sono la blockchain di Ethereum**. Memorizzano in maniera collettiva lo stato della blockchain Ethereum e raggiungono il consenso sulle transazioni per modificare lo stato della blockchain.
 
 Connettendo la propria applicazione a un nodo di Ethereum (tramite l'[API di JSON-RPC](/developers/docs/apis/json-rpc/)), l'applicazione può leggere i dati dalla blockchain (come i saldi dell'account dell'utente) nonché trasmettere le nuove transazioni alla rete (ad es. trasferire ETH tra gli account degli utenti o eseguire le funzioni degli smart contract).
 

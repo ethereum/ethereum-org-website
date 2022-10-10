@@ -2,7 +2,6 @@
 title: Standard za žetone ERC-20
 description:
 lang: sl
-sidebar: true
 ---
 
 ## Uvod {#introduction}

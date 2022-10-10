@@ -2,7 +2,6 @@
 title: Eth2 staking community grants
 description: Instructions, deadlines, and information for the Eth2 staking grants
 lang: en
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -240,7 +239,7 @@ title="How can I learn more about Eth2?">
 - [Eth2 Overview](/eth2/) – _ethereum.org_
 - [The beacon chain](/upgrades/beacon-chain/) – _ethereum.org_
 - The Genesis of a Beacon Chain — Ben Edgington [https://hackmd.io/@benjaminion/genesis](https://hackmd.io/@benjaminion/genesis)
-- The Beacon Chain Ethereum 2.0 explainer — [https://ethos.dev/beacon-chain/](https://web.archive.org/web/20220719213551/https://ethos.dev/beacon-chain/)
+- The Beacon Chain Ethereum 2.0 explainer — [https://ethos.dev/beacon-chain/](https://ethos.dev/beacon-chain/)
 - [The State of Eth2](https://blog.ethereum.org/2020/06/02/the-state-of-eth2-june-2020/) _– Danny Ryan_
 - ['Intro to Eth2 & Staking for Beginners'](https://www.youtube.com/watch?v=tpkpW031RCI) - Superphiz
 - [https://old.reddit.com/r/ethstaker/wiki/studymaster](https://old.reddit.com/r/ethstaker/wiki/studymaster)

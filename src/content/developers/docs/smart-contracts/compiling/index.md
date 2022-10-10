@@ -2,7 +2,6 @@
 title: Compiling smart contracts
 description: An explanation of why you need to compile smart contracts and what compilation actually does.
 lang: en
-sidebar: true
 incomplete: true
 ---
 

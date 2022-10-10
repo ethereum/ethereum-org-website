@@ -2,7 +2,6 @@
 title: Conti di Ethereum
 description: "Informazioni sui conti di Ethereum: loro struttura dei dati e relazioni con la crittografia con coppie di chiavi."
 lang: it
-sidebar: true
 ---
 
 Un conto di Ethereum è un'entità con un saldo in ether (ETH) che può inviare transazioni su Ethereum. I conti sono controllabili da utenti o distribuibili come Contratti Intelligenti.
@@ -96,11 +95,17 @@ Esempio:
 
 L'indirizzo dell'account contratto viene solitamente indicato quando un contratto viene distribuito nella blockchain di Ethereum. L’indirizzo deriva da quello del creatore e dal numero di transazioni inviate da tale indirizzo (il “nonce”).
 
+## Chiavi del validatore {#validators-keys}
+
+Esiste inoltre un altro tipo di chiave su Ethereum, introdotto quando Ethereum è passato dal consenso basato sul proof-of-work al proof-of-stake. Queste sono le chiavi 'BLS' e sono usate per identificare i validatori. Queste chiavi possono esser aggregate efficientemente per ridurre la larghezza di banda necessaria affinché la rete raggiunga il consenso. Senza questa chiave, l'aggregazione della quota minima per un validatore saremme molto maggiore.
+
+[Di più sulle chiavi del validatore](/developers/docs/consensus-mechanisms/pos/keys/).
+
 ## Una nota sui portafogli {#a-note-on-wallets}
 
-Un account non è un portafoglio. Un account è la coppia di chiavi per un account Ethereum di proprietà dell'utente. Un portafoglio è un'interfaccia o un'applicazione che ti permette di interagire con il tuo account Ethereum.
+Un conto non è un portafoglio. Un conto è la coppia di chiavi per un conto di Ethereum di proprietà dell'utente. Un portafoglio è un'interfaccia o un'applicazione che ti consente di interagire col tuo conto di Ethereum.
 
-## Demo visiva {#a-visual-demo}
+## Dimostrazione visiva {#a-visual-demo}
 
 Fatti guidare da Austin attraverso le funzionalità di hash e le coppie di chiavi.
 
@@ -108,7 +113,7 @@ Fatti guidare da Austin attraverso le funzionalità di hash e le coppie di chiav
 
 <YouTube id="9LtBDy67Tho" />
 
-## Lettura consigliate {#further-reading}
+## Ulteriori letture {#further-reading}
 
 _Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
 

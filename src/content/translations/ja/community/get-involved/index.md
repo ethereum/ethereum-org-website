@@ -1,7 +1,6 @@
 ---
 title: 参加方法
 description: イーサリアムコミュニティへの参加方法
-sidebar: true
 lang: ja
 ---
 
@@ -9,7 +8,7 @@ lang: ja
 
 イーサリアムのコミュニティには、開発者、アーティスト、会計士など、さまざまな背景とスキルを持つ人々が集っており、 誰でも参加することができます。 コミュニティへの参加を始めるにあたって、下記のリストを参考にしてください。
 
-## 開発者 <Emoji text=":computer:" size={1} /> {#developers}
+## デベロッパー<Emoji text=":computer:" size={1} /> {#developers}
 
 - [ethereum.org/developers/](/developers/) - イーサリアムについての学習
 - [Gitcoin](https://gitcoin.co/) - 大小規模の技術問題に取り組み、暗号通貨の報酬を獲得
@@ -18,6 +17,7 @@ lang: ja
 - [Core Dev calls](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) - 動画の視聴および参加
 - [エコシステム・サポート・プログラムのウィッシュリスト](https://esp.ethereum.foundation/wishlist/) - イーサリアムのエコシステム・サポート・プログラムが助成金の申請を募集しているツール、ドキュメント、インフラストラクチャ分野
 - [Web3Bridge](https://www.web3bridge.com/) - アフリカ全土の何百人もの開発者やコミュニティメンバーを特定し、トレーニングし、サポートする、意欲的な Web3 コミュニティの取り組み
+- [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders)への参加
 
 ## 研究者および学者<Emoji text=":mag:" size={1} /> {#researchers-and-academics}
 
@@ -88,8 +88,8 @@ ETH をステーキングすると、イーサリアムネットワークの保�
 **イーサリアムに関する求人情報**
 
 - [ethereum.org](/about/#open-jobs)
-- [イーサリアム財団の求人掲示板(Lever)](https://jobs.lever.co/ethereumfoundation)
-- [イーサリアム財団の求人掲示板(BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [イーサリアム・ファウンデーションの求人掲示板(Lever)](https://jobs.lever.co/ethereumfoundation)
+- [イーサリアム・ファウンデーションの求人掲示板(BambooHR)](https://ethereum.bamboohr.com/jobs/)
 - [暗号通貨の求人](https://cryptocurrencyjobs.co/ethereum/)
 - [Crypto.jobs](https://crypto.jobs/)
 - [ConsenSys の求人](https://consensys.net/careers/)

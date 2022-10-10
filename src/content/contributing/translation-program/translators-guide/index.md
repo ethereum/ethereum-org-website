@@ -2,7 +2,6 @@
 title: Translators guide
 lang: en
 description: Instructions and tips for ethereum.org translators
-sidebar: true
 ---
 
 # Ethereum.org Translation Style Guide {#style-guide}

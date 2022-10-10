@@ -3,7 +3,6 @@ title: The Merge
 description: Learn about The Merge - when Mainnet Ethereum adopted proof-of-stake.
 lang: en
 template: upgrade
-sidebar: true
 image: ../../../assets/upgrades/merge.png
 summaryPoint1: Ethereum Mainnet uses proof-of-stake, but this wasn't always the case.
 summaryPoint2: The upgrade from the original proof-of-work mechanism to proof-of-stake was called The Merge.

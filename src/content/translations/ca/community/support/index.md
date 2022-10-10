@@ -1,7 +1,6 @@
 ---
 title: Suport d'Ethereum
 description: Aconseguiu suport en l'ecosistema Ethereum.
-sidebar: true
 lang: ca
 ---
 

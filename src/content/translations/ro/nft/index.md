@@ -4,7 +4,6 @@ description: Prezentare generală a NFT-urilor pe Ethereum
 lang: ro
 template: use-cases
 emoji: ":frame_with_picture:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/infrastructure_transparent.png
 alt: Sigla Eth-ului afișată printr-o hologramă.

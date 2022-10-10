@@ -2,7 +2,6 @@
 title: Produkte hinzufügen
 description: Richtlinien zum Hinzufügen von Wallets und dApps zu ethereum.org
 lang: de
-sidebar: true
 ---
 
 _Ein Hinweis zum Hinzufügen von Wallets: Im Rahmen [unserer Q1-Produkt-Roadmap](https://github.com/ethereum/ethereum-org-website/issues/5105) überarbeiten wir unsere Wallets-Seite. Dazu gehört auch eine detailliertere Ausarbeitung der Auflistungskriterien für unsere Wallets-Seite. Solange wir keine übearbeiteten Kriterien für die Auflistung von Wallets recherchiert, festgelegt und veröffentlicht haben, werden aktiv keine neuen Wallets auf der Website hinzugefügt._

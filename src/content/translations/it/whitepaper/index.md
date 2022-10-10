@@ -2,7 +2,6 @@
 title: Whitepaper Ethereum
 description: Documento introduttivo a Ethereum, pubblicato nel 2013 prima del lancio.
 lang: it
-sidebar: true
 sidebarDepth: 2
 ---
 

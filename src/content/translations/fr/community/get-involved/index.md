@@ -1,7 +1,6 @@
 ---
 title: Comment s'impliquer ?
 description: Comment s'impliquer dans la communauté Ethereum.
-sidebar: true
 lang: fr
 ---
 
@@ -18,6 +17,7 @@ La communauté Ethereum comprend des personnes d'horizons et de compétences tr�
 - Regardez ou participez aux [appels Core Dev](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
 - [Liste de souhaits du programme de soutien à l'écosystème](https://esp.ethereum.foundation/wishlist/) - domaines d'outillage, de documentation et d'infrastructure où le programme de soutien à l'écosystème Ethereum recherche activement des demandes de subvention
 - [Web3Bridge](https://www.web3bridge.com/) - rejoignez la communauté Web3 en herbe dans son initiative visant à identifier, former et soutenir des centaines de développeurs et de membres de la communauté à travers l'Afrique
+- Rejoignez le [Discord Ethereum Cat Herders](https://discord.io/EthCatHerders)
 
 ## Chercheurs et universitaires <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
 
@@ -27,9 +27,11 @@ Avez-vous une formation en mathématiques, en cryptographie ou en économie ? V
 - [Ethresear.ch](https://ethresear.ch) - le principal forum de recherche d'Ethereum et le forum le plus influent au monde pour la cryptoéconomie
 - [Liste de souhaits du programme de soutien à l'écosystème](https://esp.ethereum.foundation/wishlist/) - domaines de recherche dans lesquels le programme de soutien à l'écosystème Ethereum recherche activement des demandes de subvention
 
+[Explorer des domaines de recherche plus actifs](/community/research/).
+
 ## Compétences non techniques <Emoji text=":briefcase:" size={1} /> {#non-technical}
 
-Si vous n'êtes pas développeur, il peut être difficile de savoir par où commencer dans Ethereum. Voici quelques suggestions, ainsi que des ressources pour des parcours professionnels spécifiques.
+Si vous n'êtes pas développeur, il peut être difficile de savoir par où commencer avec Ethereum. Voici quelques suggestions, ainsi que des ressources pour des parcours professionnels spécifiques.
 
 ### Organiser une rencontre dans votre ville {#meetups}
 
@@ -57,13 +59,13 @@ Rejoignez des milliers d'opérateurs de nœuds pour aider à décentraliser dava
 
 ### Mettre en jeu vos ETH {#staking}
 
-En jalonnant votre ETH, vous pouvez gagner des récompenses tout en aidant à sécuriser le réseau Ethereum.
+En misant votre ETH, vous pouvez gagner des récompenses tout en aidant à sécuriser le réseau Ethereum.
 
 - [Plus d'infos sur la mise en jeu](/staking/)
 
 ### Soutenir les projets {#support-projects}
 
-L'écosystème Ethereum a pour mission de financer des biens publics et des projets percutants. Avec de très petits dons, vous pouvez montrer votre soutien et permettre la réalisation d'un travail important.
+L'écosystème Ethereum a pour mission de financer des biens publics et des projets ayant un impact certain. Avec de très petits dons, vous pouvez montrer votre soutien et permettre la réalisation d'un travail important.
 
 - [Gitcoin](https://gitcoin.co/fund)
 - [clr.fond](https://clr.fund/#/about)
@@ -83,7 +85,7 @@ L'écosystème Ethereum a pour mission de financer des biens publics et des proj
 
 ## Emplois Ethereum {#ethereum-jobs}
 
-**Vous voulez trouver un emploi travaillant dans Ethereum ?**
+**Vous souhaitez trouver un emploi en rapport avec Ethereum ?**
 
 - [Emplois ethereum.org](/about/#open-jobs)
 - [Offres d'emploi de l'Ethereum Foundation (Lever)](https://jobs.lever.co/ethereumfoundation)
@@ -96,22 +98,24 @@ L'écosystème Ethereum a pour mission de financer des biens publics et des proj
 - [Offres useWeb3](https://www.useweb3.xyz/jobs)
 - [Offres Web3 Jobs](https://web3.career)
 - [Offres Web3 Army](https://web3army.xyz/)
+- [Offres Crypto Valley Jobs](https://cryptovalley.jobs/)
 
 ## Rejoindre une organisation autonome décentralisée (DAO) {#decentralized-autonomous-organizations-daos}
 
 Les « DAO » sont des organisations autonomes décentralisées. Ces groupes tirent parti de la technologie Ethereum pour faciliter l'organisation et la collaboration. Par exemple, pour contrôler l'adhésion, voter sur des propositions ou gérer des actifs mis en commun. Bien que les DAO soient encore expérimentales, elles vous offrent la possibilité de trouver des groupes auxquels vous vous identifiez, de trouver des collaborateurs et d'accroître votre impact sur la communauté Ethereum. [En savoir plus sur les DAO](/dao/)
 
+- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Promouvoir le concept de DAO dans le domaine non technologique et aider les personnes à créer de la valeur grâce au DAO_
+- [Développeur DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Communauté de constructeurs qui croient en la propriété collective d'Internet_
+- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Collectif de développement Web3 indépendant travaillant en tant que DAO_
+- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _ Développement décentralisé & gouvernance des applications décentralisées (dApps) & protocoles_
+- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Gouvernance communautaire de DAOhaus_
+- [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _Franchise de super-héros appartenant à la Communauté_
 - [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _Ingénierie juridique_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Communauté artistique_
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _Incubateur DAO_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Venture pour des projets de crypto pré-amorçage_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _Mécaniques de jeu MMORPG pour la vraie vie_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _Marques de vêtements digiphysiques_
-- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Communauté axée sur le financement du développement d'Ethereum_
 - [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _Projets dirigés par des femmes_
+- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Communauté axée sur le financement du développement d'Ethereum_
 - [Guilde Raid](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Collectif de constructeurs Web3_
-- [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Promouvoir le concept de DAO dans le domaine non technologique et aider les gens à créer de la valeur grâce à la DAO._
-- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Collectif de développement Web3 indépendant travaillant en tant que DAO_
-- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Gouvernance communautaire de DAOhaus_
-- [Développeur DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Communauté de constructeurs qui croient en la propriété collective d'Internet_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Développement décentralisé et gouvernance des applications décentralisées (DApps) et protocoles_

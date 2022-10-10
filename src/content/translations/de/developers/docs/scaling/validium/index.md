@@ -2,7 +2,6 @@
 title: Validium
 description: Eine Einführung in Validium als Skalierungslösung, die derzeit von der Ethereum-Community genutzt wird.
 lang: de
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---

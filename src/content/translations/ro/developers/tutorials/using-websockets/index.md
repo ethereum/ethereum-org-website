@@ -3,7 +3,6 @@ title: Utilizarea WebSockets
 description: Ghid de utilizare a WebSockets și Alchemy pentru a face cereri JSON-RPC și a vă abona la evenimente.
 author: "Elan Halpern"
 lang: ro
-sidebar: true
 tags:
   - "alchemy"
   - "websockets"

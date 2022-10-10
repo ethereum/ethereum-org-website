@@ -2,7 +2,6 @@
 title: Mesin Virtual Ethereum (EVM)
 description: Pengantar mesin virtual Ethereum dan bagaimana kaitannya dengan state, transaksi, dan kontrak pintar.
 lang: id
-sidebar: true
 ---
 
 Instansiasi fisik EVM tidak dapat dideskripsikan dengan cara yang sama seperti seseorang menunjuk ke awan atau gelombang laut, tetapi _ada_ sebagai satu entitas tunggal yang dikelola oleh ribuan komputer terhubung yang menjalankan klien Ethereum.

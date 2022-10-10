@@ -2,7 +2,6 @@
 title: Zero-Knowledge rollups
 description: An introduction to zero-knowledge rollups—a scaling solution used by the Ethereum community.
 lang: en
-sidebar: true
 ---
 
 Zero-knowledge rollups (ZK-rollups) are layer 2 [scaling solutions](/developers/docs/scaling/) that increase throughput on Ethereum Mainnet by moving computation and state-storage off-chain. ZK-rollups can process thousands of transactions in a batch and then only post some minimal summary data to Mainnet. This summary data defines the changes that should be made to the Ethereum state and some cryptographic proof that those changes are correct.
@@ -116,7 +115,7 @@ Before accepting transactions, the operator will perform the usual checks. This 
 - The transaction is correct and matches the sender’s public key on the rollup.
 - The sender’s nonce is correct, etc.
 
-Once the ZK-rollup node has enough transactions, it aggregates them into a batch and compiles inputs for the proving circuit to compile into a succinct zk-proof. This includes:
+Once the ZK-rollup node has enough transactions, it aggregates them into a batch and compiles inputs for the proving circuit to compile into a succinct ZK-proof. This includes:
 
 - A Merkle tree comprising all the transactions in the batch.
 - Merkle proofs for transactions to prove inclusion in the batch.
@@ -131,7 +130,7 @@ The proving circuit performs the same process on the receiver's account. It chec
 
 The process repeats for every transaction; each "loop" creates a new state root from updating the sender's account and a subsequent new root from updating the receiver's account. As explained, every update to the state root represents one part of the rollup's state tree changing.
 
-The zk-proving circuit iterates over the entire transaction batch, verifying the sequence of updates that result in a final state root after the last transaction is executed. The last Merkle root computed becomes the newest canonical state root of the ZK-rollup.
+The ZK-proving circuit iterates over the entire transaction batch, verifying the sequence of updates that result in a final state root after the last transaction is executed. The last Merkle root computed becomes the newest canonical state root of the ZK-rollup.
 
 ##### Proof verification
 
@@ -173,7 +172,7 @@ However, [advances in zero-knowledge technology](https://hackmd.io/@yezhang/S1_K
 
 Like the EVM, a zkEVM transitions between states after computation is performed on some inputs. The difference is that the zkEVM also creates zero-knowledge proofs to verify the correctness of every step in the program’s execution. Validity proofs could verify the correctness of operations that touch the VM’s state (memory, stack, storage) and the computation itself (i.e., did the operation call the right opcodes and execute them correctly?).
 
-The introduction of EVM-compatible ZK-rollups is expected to help developers leverage the scalability and security guarantees of zero-knowledge proofs. More importantly, compatibility with native Ethereum infrastructure means developers can build zk-friendly dapps using familiar (and battle-tested) tooling and languages.
+The introduction of EVM-compatible ZK-rollups is expected to help developers leverage the scalability and security guarantees of zero-knowledge proofs. More importantly, compatibility with native Ethereum infrastructure means developers can build ZK-friendly dapps using familiar (and battle-tested) tooling and languages.
 
 ## How do ZK-rollup fees work? {#how-do-zk-rollup-fees-work}
 

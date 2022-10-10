@@ -4,7 +4,6 @@ description: Een overzicht van DeFi op Ethereum
 lang: nl
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../assets/use-cases/defi.png
 alt: Een Ethereum-logo gemaakt van legostenen.
 sidebarDepth: 2

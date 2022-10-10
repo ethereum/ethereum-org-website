@@ -1,7 +1,6 @@
 ---
 title: Active areas of Ethereum research
 description: Explore different areas of open research and learn how to get involved.
-sidebar: true
 lang: en
 ---
 
@@ -15,7 +14,7 @@ Ethereum research is open and transparent, embodying principles of [Decentralize
 
 ## General research resources {#general-research-resources}
 
-Regardless of the specific topic, there is a wealth of information on Ethereum research to be found at [ethresear.ch](https://ethresear.ch) and the [Eth R&D Discord channel](https://discord.gg/n7JxAeRu). These are the primary places where Ethereum researchers discuss the latest ideas and development opportunities.
+Regardless of the specific topic, there is a wealth of information on Ethereum research to be found at [ethresear.ch](https://ethresear.ch) and the [Eth R&D Discord channel](https://discord.gg/qGpsxSA). These are the primary places where Ethereum researchers discuss the latest ideas and development opportunities.
 
 This report published in May 2022 by [DelphiDigital](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum) provides a good overview of the Ethereum roadmap.
 

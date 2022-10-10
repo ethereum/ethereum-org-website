@@ -2,7 +2,6 @@
 title: Zero-knowledge proofs
 description: An non-technical introduction to zero-knowledge proofs for beginners.
 lang: en
-sidebar: true
 ---
 
 ## What are zero-knowledge proofs? {#what-are-zk-proofs}
@@ -57,7 +56,7 @@ To solve this problem, Manuel Blum, Paul Feldman, and Silvio Micali suggested th
 
 Unlike interactive proofs, noninteractive proofs required only one round of communication between participants (prover and verifier). The prover passes the secret information to a special algorithm to compute a zero-knowledge proof. This proof is sent to the verifier, who checks that the prover knows the secret information using another algorithm.
 
-Non-interactive proving reduces communication between prover and verifier, making zk-proofs more efficient. Moreover, once a proof is generated, it is available for anyone else (with access to the shared key and verification algorithm) to verify.
+Non-interactive proving reduces communication between prover and verifier, making ZK-proofs more efficient. Moreover, once a proof is generated, it is available for anyone else (with access to the shared key and verification algorithm) to verify.
 
 Non-interactive proofs represented a breakthrough for zero-knowledge technology and spurred the development of proving systems used today. We discuss these proof types below:
 
@@ -117,7 +116,7 @@ Zero-knowledge proofs are particularly useful in the context of [decentralized i
 
 Using online services requires proving your identity and right to access those platforms. This often requires providing personal information, like names, email addresses, birth dates, and so on. You may also need to memorize long passwords or risk losing access.
 
-Zero-knowledge proofs, however, can simplify authentication for both platforms and users. Once a zk-proof has been generated using public inputs (e.g., data attesting to the user's membership of the platform) and private inputs (e.g., the user's details), the user can simply present it to authenticate their identity when they need to access the service. This improves the experience for users and frees organizations from the need to store huge amounts of user information.
+Zero-knowledge proofs, however, can simplify authentication for both platforms and users. Once a ZK-proof has been generated using public inputs (e.g., data attesting to the user's membership of the platform) and private inputs (e.g., the user's details), the user can simply present it to authenticate their identity when they need to access the service. This improves the experience for users and frees organizations from the need to store huge amounts of user information.
 
 ### Verifiable computation {#verifiable-computation}
 

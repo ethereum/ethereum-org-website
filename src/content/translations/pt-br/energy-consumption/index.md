@@ -2,73 +2,60 @@
 title: Consumo de energia da Ethereum
 description: A informação básica e necessária para entender o consumo de energia da Ethereum.
 lang: pt-br
-sidebar: true
 ---
 
 # Consumo de energia do Ethereum {#introduction}
 
-Atualmente, a despesa de energia da Ethereum por meio da [prova de trabalho](/developers/docs/consensus-mechanisms/#proof-of-work) é demasiado alta e insustentável. A resolução das preocupações relativas a tais despesas energéticas, sem sacrificar segurança e descentralização, é um desafio técnico significativo, o qual tem sido foco de investigação e desenvolvimento durante anos. Vejamos por que o funcionamento atual da Ethereum tem um alto impacto ambiental, e como a próxima atualização da rede para [prova de participação](/developers/docs/consensus-mechanisms/pos) mudará drasticamente esse problema.
-
-## A energia segura a rede {#energy-secures-the-network}
-
-As transações no blockchain de Ethereum são validadas pelos [mineradores](/developers/docs/consensus-mechanisms/pow/mining). Os mineradores empacotam as transações em blocos ordenados e os adicionam ao blockchain de Ethereum. Os novos blocos são transmitidos para o resto dos operadores de nós, que executam as transações independentemente e verificam sua validez. Qualquer desonestidade mostraria uma inconsistência entre nós diferentes. Desta maneira, apenas os blocos honestos são adicionados à blockchain, tornando-se imutáveis.
-
-A capacidade de qualquer minerador para adicionar novos blocos só funciona se houver um custo associado à mineração e uma imprevisibilidade sobre qual será o nó específico que enviará o próximo bloco. Estas condições são satisfeitas impondo a prova de trabalho (PoW). Para ser elegível para enviar um bloco de transações, um minerador deve resolver um quebra-cabeça computacional arbitrário mais rápido do que qualquer outro minerador. A resolução deste quebra-cabeças cria concorrência entre os mineradores e os custos sob a forma de despesas de energia. Para enganar a blockchain, um minerador desonesto teria que ganhar consistentemente a corrida da prova de trabalho, o que é muito improvável e preventivamente caro.
-
-Ethereum tem usado a prova de trabalho desde sua origem. A migração da prova de trabalho para a prova de participação sempre foi um objetivo fundamental da Ethereum. No entanto, desenvolver um sistema de prova de participação que adira aos princípios fundamentais da Ethereum de segurança e descentralização não é trivial. Isto tem exigido muita pesquisa e avanços em criptografia, criptoeconomia e “design” de mecanismo para chegar a um ponto em que a transição seja possível.
-
-## Consumo de energia da prova de trabalho {#proof-of-work}
-
-A prova de trabalho é uma forma robusta de proteger a rede e impor mudanças honestas no blockchain. Entretanto, é problemática por várias razões. Visto que o direito de minerar um bloco requer a resolução de um desafio computacional arbitrário, os mineradores podem aumentar suas chances de sucesso investindo em hardware mais poderoso. Estes incentivos provocam uma corrida frenética entre os mineradores, que adquirem equipamentos de mineração que consomem cada vez mais. De fato, atualmente, o consumo anual de energia do protocolo de prova de trabalho do Ethereum é aproximadamente igual ao da Finlândia <sup>[^1]</sup> e a pegada de carbono é semelhante a da Suíça<sup>[^1]</sup>.
-
-## Prova de participação {#proof-of-stake}
-
-Um futuro mais ecológico já está sendo construído mediante um algoritmo de [**prova de participação (PoS)**](/upgrades/beacon-chain/). Sob a [prova de participação](/developers/docs/consensus-mechanisms/pos/), a resolução arbitrária do quebra-cabeças se torna desnecessária. Encontrar uma solução para o problema reduz consideravelmente os gastos de energia necessários para segurar a rede. Na prova de participação, os mineradores são substituídos por validadores, os quais desempenham a mesma função, exceto que, em vez de estes investirem seu capital em favor de um maior trabalho computacional, o investem fazendo stake de ETH como garantia (colateral) contra comportamentos desonestos. Se o validador está offline (quando se espera que ele cumpra alguma tarefa de validador) o ETH que emprestou pode diminuir lentamente. Já um comportamento comprovadamente desonesto resulta na remoção do ativos reservados. Isto incentiva uma participação ativa e honesta, para proteger a rede.
-
-De maneira similar à prova de trabalho, uma entidade maliciosa precisaria de, pelo menos, 51% do ETH emprestado na rede para efetuar um [ataque de 51%](/glossary/#51-attack). No entanto, ao contrário da prova de trabalho, na qual a perda potencial de um ataque falho seria apenas o custo energético de haver gerado o hash requerido para a mineração, na prova de participação, a perda potencial de tal ataque seria a quantidade total de ETH usado como garantia. Esta estrutura de desincentivo permite a segurança da rede com prova de participação enquanto elimina a necessidade de gastar energia em computação arbitrária. Explicações detalhadas com respeito à segurança da rede sob o conceito de prova de participação podem ser encontradas [aqui](/developers/docs/consensus-mechanisms/pos/) e [aqui](https://vitalik.ca/general/2017/12/31/pos_faq.html).
-
-## A integração {#the-merge}
-
-Há uma cadeia funcional com base no protocolo de prova de participação denominada [Beacon Chain](/upgrades/beacon-chain/) que vem sendo executada desde dezembro de 2020 e que está demonstrando a viabilidade desse protocolo. A integração entre as duas cadeias se dará quando o Ethereum deixe de usar a prova de trabalho e adote completamente a prova de participação. Espera-se que essa integração ocorra no 2º trimestre de 2022. [Mais sobre a integração](/upgrades/merge/).
+Ethereum é um blockchain verde. Usa um mecanismo de consenso [prova de participação](/developers/docs/consensus-mechanisms/pos) (proof of stake) que pode ser executado em dispositivos de baixa potência e não requer computação pesada para participar. O mecanismo de prova de participação do Ethereum protege a rede usando ETH envolvidos em vez de energia gasta, como em [prova de trabalho](/developers/docs/consensus-mechanisms/pos) (proof of work). A mudança para a prova de participação significa que a energia gasta pela rede Ethereum é relativamente pequena – na ordem de 0,01 TWh/ano.
 
 ## Consumo energético da prova de participação {#proof-of-stake-energy}
 
-Além de tornar o conceito de prova de participação mais confiável, a Beacon Chain também permitirá avaliar o uso de energia do Ethereum após a integração. Uma [estimativa recente](https://blog.ethereum.org/2021/05/18/country-power-no-more/) sugeriu que a mudança para a prova de participação poderia resultar em uma redução de 99,95% no consumo total de energia. Ou seja, a prova de participação seria 2.000 vezes mais eficiente do ponto de vista energético do que a prova de trabalho. Desta maneira, o consumo de energia do Ethereum seria aproximadamente igual ao custo de usar um computador pessoal de escritório para cada nó da rede.
+O gasto de energia do Ethereum é aproximadamente igual ao custo de funcionamento de um laptop modesto para cada nó na rede.
 
-![imagem](./energy_use_per_transaction.png)
+Muitos artigos estimam o gasto de energia "por transação" para comparar blockchain com outros setores. A vantagem disso é que é fácil de entender. Entretanto, estimativas baseadas em transações podem induzir ao erro porque a energia necessária para propor e validar um bloco é independente do número de transações dentro dele. Uma unidade de gasto de energia por transação implica que menos transações levaria a menor gasto de energia e vice-versa, o que não é o caso. Uma estimativa por transação é altamente dependente de como a taxa de transferência de uma transação blockchain é definida, e ajustar esta definição pode ser levado a fazer com que o valor pareça maior ou menor.
 
-<p style="text-align: center;"><small><i>As estimativas do consumo energético da prova de trabalho (PoW) por transação mostradas neste imagem se baseiam em <a href="https://blog.ethereum.org/2021/05/18/country-power-no-more/" target="_blank" rel="noopener noreferrer">dados de maio de 2021</a>, os quais sugerem um consumo de até <a href="https://digiconomist.net/ethereum-energy-consumption" target="_blank" rel="noopener noreferrer">175,56 kWh</a></i></small></p>
+Por exemplo, no Ethereum, a taxa de transferência da transação não é apenas a da camada base – é também a soma da taxa de transferência da transação de todos os seus rollups da "[camada 2](/layer-2/)", que geralmente não são incluídos nos cálculos e os reduziriam drasticamente. Essa é uma das razões pelas quais as ferramentas que comparam o consumo de energia por transação entre plataformas são enganosas.
 
-Vamos comparar esses números com um serviço como a Visa. 100.000 transações da Visa usam 149 kWh de energia<sup>[^2]</sup>. Assumindo que a fragmentação foi implementada, a taxa de transação atual do Ethereum (15 transações por segundo) será aumentada em pelo menos 64 vezes (equivalente ao número de fragmentos). Isso sem contabilizar a otimização adicional proporcionada pelos rollups. Uma estimativa realista para o Ethereum após a integração, usando a fragmentação e os rollups, seria de [25.000 a 100.000](https://twitter.com/VitalikButerin/status/1312905884549300224?s=20) transações por segundo. Podemos usar essa informação para estimar a despesa máxima e mínima de energia por cada 100.000 transações.
+Mais relevante é o consumo total de energia e o rastro de carbono da rede como um todo. A partir desses valores, podemos examinar o que essa rede oferece aos seus usuários e à sociedade em geral, e fazer uma avaliação mais holística se esse gasto de energia é justificado ou não. As medições por transação, por outro lado, implicam que o valor da rede vem apenas de seu papel na transferência criptográfica entre contas e proíbe uma análise honesta de custo-benefício.
 
-- `25.000` transações por segundo.
-- `100.000/25.000 = 4` segundos para processar 100.000 transações.
+[Digiconomist fornece o consumo de energia de toda a rede e sinais de carbono para Bitcoin e Ethereum](https://digiconomist.net/ethereum-energy-consumption). No momento da redação deste artigo, o Bitcoin gasta cerca de 200 TWh/ano de energia e emite cerca de 100 MT (megatons) de carbono por ano, enquanto gera cerca de 32.000 T de resíduos elétricos de hardware obsoleto anualmente. Em comparação, o gasto total de energia para proteger o Ethereum está mais próximo de **0.01 TWh/ano**.
 
-Podemos também avaliar o consumo energético do Ethereum por segundo fazendo uma estimativa conservadora de que 10.000 validadores ativos estão protegendo a rede (na verdade, há mais de [250.000 validadores na Beacon Chain](https://beaconscan.com/)no momento, mas muitos deles podem operar em um único nó; de fato, estima-se que há atualmente entre 3.000 e 4.000 nós individuais, portanto 10.000 é uma estimativa conservadora após a integração):
+![Comparação das despesas de energia entre setores](./energy.png)
 
-`uso diário de 1,44 kWh * 10.000 nós de rede = 14.400 kWh` por dia. Um dia tem 86.400 segundos, logo `14.400 kWh/86.400 s = 0,1667 kWh` por segundo.
+A figura acima mostra o consumo anual de energia estimado em TWh/ano para vários setores (recuperado em Junho de 2022). _Observe que as estimativas apresentadas no gráfico são de fontes publicamente disponíveis vinculadas no texto abaixo. São ilustrativas e não representam uma estimativa, promessa nem previsão oficial._
 
-Se multiplicamos isso pela quantidade de tempo que leva para processar 100.000 transações, temos `0,1667 kWh * 4 = 0,667 kWh`.
+Para colocar o consumo de energia do Ethereum no contexto, podemos comparar estimativas anualizadas para outros setores. Considerando o Ethereum uma plataforma para manter com segurança ativos digitais como investimentos, talvez possamos comparar com a mineração de ouro, o qual estima-se gastar cerca de [240 TWh/ano](https://www.kitco.com/news/2021-05-17/Gold-s-energy-consumption-doubles-that-of-bitcoin-Galaxy-Digital.html). Como uma plataforma de pagamentos digitais, talvez possamos comparar com o PayPal (estima-se um consumo de cerca de [0,26 TWh/ano](https://app.impaakt.com/analyses/paypal-consumed-264100-mwh-of-energy-in-2020-24-from-non-renewable-sources-27261)). Como plataforma de entretenimento, talvez possamos comparar com o setor de jogos, que estima gastar cerca de [34 TW/ano](https://www.researchgate.net/publication/336909520_Toward_Greener_Gaming_Estimating_National_Energy_Use_and_Energy_Efficiency_Potential). As estimativas de consumo energético da Netflix variam drasticamente entre [cerca de 0,45TWhr/ano](https://s22.q4cdn.com/959853165/files/doc_downloads/2020/02/0220_Netflix_EnvironmentalSocialGovernanceReport_FINAL.pdf) (estimativas próprias relatadas em 2019) até cerca de 94 TWh/ano (estimado pelo [Shift Project](https://theshiftproject.org/en/article/unsustainable-use-online-video/)) - há alguma discussão sobre as suposições subjacentes a essas estimativas disponíveis em [Carbon Brief](https://www.carbonbrief.org/factcheck-what-is-the-carbon-footprint-of-streaming-video-on-netflix). Como alternativa, o Ethereum pode ser comparado ao Youtube, que estima gastar cerca de [244 TWh/ano](https://thefactsource.com/how-much-electricity-does-youtube-use/), embora esses valores dependam muito do tipo de dispositivo em que os vídeos transmitidos e da eficiência energética da infraestrutura subjacente, nos centros de dados. As estimativas do gasto de energia do YouTube foram divididas por canais e vídeos individuais. [Essas estimativas](https://thefactsource.com/how-much-electricity-does-youtube-use/) implicam que as pessoas consumiram 45 vezes mais energia assistindo Gangnam Style em 2019 do que provas de participação Ethereum usam em um ano.
 
-Isso equivale a ~0,4% da energia utilizada pela Visa para o mesmo número de transações, ou seja, uma redução do consumo energético por um fator de ~225 em comparação com a rede atual baseada na prova de trabalho do Ethereum.
+## Uma camada de aplicação verde {#green-applications}
 
-Repetindo o cálculo para o máximo de transações por segundo, temos 0,1667 kWh/s, o que representa cerca de 0,1% das despesas energéticas da Visa, ou seja, uma redução de ~894.
+Embora o consumo de energia do Ethereum seja muito baixo, há também uma comunidade sobre **finanças regenerativas (ReFi)** substancial, crescente e altamente ativa construída no Ethereum. Os aplicativos ReFi usam componentes DeFi para construir aplicativos financeiros que têm externalidades positivas que beneficiam o meio ambiente. O ReFi faz parte de um movimento ["solarpunk"](https://en.wikipedia.org/wiki/Solarpunk) mais amplo que está intimamente alinhado com o Ethereum e visa unir o avanço tecnológico e a gestão ambiental. A natureza descentralizada, sem permissão e combinável do Ethereum faz dele a camada base ideal para as comunidades ReFi e solarpunk. Por meio do desenvolvimento destes (e outros, por exemplo, [DeSci](/desci/)), o Ethereum está se tornando uma tecnologia ambiental e socialmente positiva.
 
-_Nota: não é tão preciso comparar em base ao número de transações, já que o uso de energia no Ethereum é atrelado ao tempo. De fato, o uso de energia do Ethereum é o mesmo durante 1 minuto, independentemente de se são executadas 1 ou 1.000 transações._
+## Déficit de carbono do Ethereum {#carbon-debt}
 
-_Também devemos considerar que o Ethereum não está limitado a simples transações financeiras, mas também é uma plataforma completa criadas para contratos inteligentes e aplicativos descentralizados._
+O gasto atual de energia do Ethereum é muito baixo, mas nem sempre foi assim. O Ethereum mudou seu mecanismo de consenso de prova de participação (proof of stake) no 3.º trimestre de 2022. Entretanto, o Ethereum usou um mecanismo de prova de trabalho (proof of work) de 2014-2022, que teve um custo ambiental muito maior.
 
-## Um Ethereum mais ecológico {#green-ethereum}
+Desde seu início, o Ethereum pretendia implementar um mecanismo de consenso de prova de participação, mas fazê-lo sem sacrificar a segurança e a descentralização levou anos de pesquisa e desenvolvimento focados. Portanto, um mecanismo de prova de trabalho foi usado para iniciar a rede. O consenso de prova de trabalho exige que os mineradores usem seu hardware de computação para resolver um enigma, gastando energia no processo. A solução para o enigma prova que a energia foi gasta pelo minerador, demonstrando que eles investiram valor no mundo real pelo direito de adicionar à blockchain. O consumo total de energia do Ethereum atingiu seu pico durante o ápice do mercado em alta de criptomoedas em fevereiro de 2022, a pouco menos de 94 TWh/ano. No verão anterior à mudança para a prova de participação, o consumo de energia estava próximo de 60 TWh/ano, comparável ao do Uzbequistão, com uma emissão de carbono equivalente à do Azerbaijão (33 MT/ano).
 
-Embora a energia consumida pelo Ethereum seja substancial, investimos muito tempo de desenvolvimento e conhecimento para fazer a transição da validação de blocos de alto consumo energético para uma que faça um uso mais eficiente de energia. Para citar [Bankless,](http://podcast.banklesshq.com/), a melhor maneira de reduzir a energia consumida pela prova de trabalho é simplesmente "deixar de usá-la", e essa é a abordagem que o Ethereum se comprometeu a adotar.
+Tanto a prova de trabalho quanto a prova de participação são apenas mecanismos para decidir quem adiciona o próximo bloco. Trocar a prova de trabalho por prova de participação, em que o valor real investido vem do ETH colocado em stake diretamente em um contrato inteligente, elimina a necessidade de queima de energia pelos mineradores para adicionar à blockchain. Portanto, o custo ambiental de proteção da rede é drasticamente reduzido.
+
+## Por que a prova de participação é mais ecológica do que a prova de trabalho? {#why-pos-is-greener-than-pow}
+
+A prova de trabalho é uma forma robusta de proteger a rede. As transações no blockchain Ethereum sob o sistema de prova de trabalho anterior foram validadas por [mineradores](/developers/docs/consensus-mechanisms/pow/mining). Os mineradores empacotam as transações em blocos ordenados e os adicionaram ao blockchain Ethereum. Os novos blocos foram transmitidos para todos os outros operadores de nós que executam as transações de forma independente e verificam se são válidas. Qualquer desonestidade apareceu como uma inconsistência entre diferentes nós. Blocos honestos foram adicionados ao blockchain e se tornaram uma parte imutável da história. A capacidade de qualquer minerador para adicionar novos blocos só funciona se houver um custo associado à mineração e uma imprevisibilidade sobre qual será o nó específico que enviará o próximo bloco. Essas condições são atendidas pela imposição da prova de trabalho. Para ser elegível ao envio de um bloco de transações, um minerador deve ser o primeiro a enviar a solução para um enigma computacionalmente caro. Para assumir com sucesso o controle do blockchain, um minerador desonesto teria que vencer consistentemente a corrida de prova de trabalho, investindo em hardware e energia suficientes para superar a maioria dos outros mineradores.
+
+Este mecanismo de segurança da rede é problemático por várias razões. Primeiro, os mineradores aumentariam suas chances de sucesso investindo em hardwares mais poderosos, criando condições para uma disputa acirrada com os mineradores adquirindo equipamentos de mineração cada vez mais famintos por energia. Isso aumentou o consumo de energia da rede e gerou desperdício de hardware. Em segundo lugar, o protocolo de prova de trabalho do Ethereum (antes da transição para prova de participação) tinha um consumo total anual de energia aproximadamente igual ao da Finlândia <sup>[^1]</sup> e um rastro de carbono semelhante à Suíça <sup>[^1]</sup>.
+
+A prova de participação usa validadores em vez de mineradores. Os validadores desempenham a mesma função que os mineradores, exceto que, em vez de gastar seus ativos antecipadamente como gasto de energia, eles fazem staking do ETH como garantia contra comportamentos desonestos. Este ETH em staking pode ser destruído se o validador agir de forma desonesta, com penalidades mais severas para ações mais nefastas. Isso incentiva fortemente a participação ativa e honesta na segurança da rede sem exigir grandes gastos de energia. Como quase toda a energia gasta para proteger a rede de prova de trabalho veio do algoritmo de mineração, a mudança para prova de participação reduziu drasticamente o gasto de energia. Além disso, não há benefício em investir em hardware mais poderoso sob prova de participação, portanto, não há condição de dipustas acirradas e menos desperdício eletrônico. Os validadores Ethereum podem ser executados em laptops ou dispositivos de baixo consumo de energia, como um [Raspberry Pi](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/user-guide/ethereum2.0.html).
+
+Leia mais sobre [como o Ethereum implementa o proof-of-stake](/developers/docs/consensus-mechanisms/pos) e como ele se compara à proof-of-work.
 
 <InfoBanner emoji=":evergreen_tree:">
   Se você acha que essas estatísticas estão incorretas ou podem ser mais precisas, abra um problema ou PR. Estas são estimativas da equipe da ethereum.org feitas usando informações acessíveis ao público e o atual roadmap do Ethereum. Essas afirmações não representam uma promessa oficial da Fundação Ethereum. 
 </InfoBanner>
 
-## Leitura adicional {#further-reading}
+## Leia mais {#further-reading}
 
-- [Melhor eficiência energética do Ethereum](https://blog.ethereum.org/2021/05/18/country-power-no-more/) (em inglês) – _Carl Beekhuizen, 18 de maio de 2021_
+- [Melhor eficiência energética do Ethereum](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, 18 de maio de 2021_
+- [Consumo de energia do Ethereum](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 - [Emissões do Ethereum: uma estimativa minuciosa](https://kylemcdonald.github.io/ethereum-emissions/) _ Kyle McDonald_
 - [Índice de consumo de energia do Ethereum](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) — _[@InsideTheSim](https://twitter.com/InsideTheSim)_
@@ -77,17 +64,5 @@ Embora a energia consumida pelo Ethereum seja substancial, investimos muito temp
 
 - [Visão do Ethereum](/upgrades/vision/)
 - [A Beacon Chain](/upgrades/beacon-chain)
-- [A integração](/upgrades/merge/)
+- [The Merge (A Fusão)](/upgrades/merge/)
 - [Fragmentação](/upgrades/beacon-chain/)
-
-### Notas de rodapé e fontes {#footnotes-and-sources}
-
-#### 1. Consumo de energia da prova de trabalho do Ethereum {#fn-1}
-
-[Consumo de energia por país inc. Ethereum (TWh anual)](https://digiconomist.net/ethereum-energy-consumption)
-
-#### 2. Consumo de energia da Visa {#fn-2}
-
-[Consumo médio de energia da rede Bitcoin por transação em comparação com a rede VISA a partir de 2020, Statista](https://www.statista.com/statistics/881541/bitcoin-energy-consumption-transaction-comparison-visa/)
-
-[Relatório financeiro da Visa, 4º trimestre de 2020](https://s1.q4cdn.com/050606653/files/doc_financials/2020/q4/Visa-Inc.-Q4-2020-Operational-Performance-Data.pdf)
