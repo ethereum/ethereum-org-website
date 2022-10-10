@@ -66,7 +66,7 @@ export interface Answer {
   id: string
   label: string
   explanation: string
-  moreInfo?: string
+  moreInfoLabel?: string
   moreInfoUrl?: string
 }
 
@@ -98,4 +98,3 @@ export interface Quiz {
 export interface RawQuizzes {
   [key: string]: RawQuiz
 }
-
