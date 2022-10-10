@@ -288,6 +288,8 @@
       "url": "https://ava.do/",
       "audits": [],
       "minEth": 16,
+      "additionalStake": "10",
+      "additionalStakeUnit": "% RPL",
       "isFoss": true,
       "hasBugBounty": false,
       "isTrustless": true,
