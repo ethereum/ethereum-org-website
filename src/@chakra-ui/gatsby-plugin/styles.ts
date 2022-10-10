@@ -108,6 +108,7 @@ const styles = {
     "pre, code, kbd, samp": {
       fontSize: "0.8em",
       lineHeight: "1.1rem",
+      fontFamily: "SFMono-Regular,Menlo,Monaco,Consolas,monospace",
     },
   }),
 }
