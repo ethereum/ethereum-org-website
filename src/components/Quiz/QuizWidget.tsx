@@ -6,14 +6,17 @@ import {
   Center,
   Container,
   Flex,
+  Icon,
   Text,
   useColorMode,
 } from "@chakra-ui/react"
 import { shuffle } from "lodash"
+import { FaTwitter } from "react-icons/fa"
 
 // Components
 import Button from "../Button"
 import QuizQuestion from "./QuizQuestion"
+import QuizSummary from "./QuizSummary"
 import Translation from "../Translation"
 
 // Data
@@ -28,9 +31,7 @@ export interface IProps {
   maxQuestions?: number
 }
 const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
-  // TODO: Add loading indictor
-  // TODO: Add error handling
-  // TODO: Add summary page once userQuizProgress.length === quizData.length
+  // TODO: Add loading state indicator and error handling
   const { colorMode } = useColorMode()
   const isDarkMode = colorMode === "dark"
 
@@ -43,12 +44,13 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
   const [showAnswer, setShowAnswer] = useState<boolean>(false)
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
 
-  useEffect(() => {
+  const initialize = () => {
     // Reset state
     setQuizData(null)
     setCurrentQuestionAnswerChoice(null)
     setUserQuizProgress([])
     setShowAnswer(false)
+    setSelectedAnswer(null)
 
     // Get quiz key
     const currentQuizKey =
@@ -74,15 +76,18 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
     } else {
       setQuizData(null)
     }
-  }, [quizKey])
+  }
+  useEffect(initialize, [quizKey])
 
-  // Memos
+  // Memoized values
   const currentQuestionIndex = useMemo<number>(
     () => userQuizProgress.length || 0,
     [userQuizProgress]
   )
+
+  // TODO: Allow user to submit quiz for storage
   const showResults = useMemo<boolean>(
-    () => userQuizProgress.length !== quizData?.questions.length,
+    () => userQuizProgress.length === quizData?.questions.length,
     [userQuizProgress, quizData]
   )
 
@@ -95,12 +100,18 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
     return isDarkMode ? "gray.900" : "white"
   }, [isDarkMode, showAnswer])
 
+  const correctCount = useMemo<number>(
+    () => userQuizProgress.filter(({ isCorrect }) => isCorrect).length,
+    [userQuizProgress]
+  )
+
   // Handlers
   const handleSelectAnswerChoice = (answerId: string) => {
     const isCorrect =
       answerId === quizData?.questions[currentQuestionIndex].correctAnswerId
     setCurrentQuestionAnswerChoice({ answerId, isCorrect })
   }
+
   // TODO: Confirm both handleSelectAnswerChoice & handleSelection are necessary
   const handleSelection = (answerId: string) => {
     setSelectedAnswer(answerId)
@@ -110,114 +121,134 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
   const handleShowAnswer = () => {
     setShowAnswer(true)
   }
+
   const handleRetryQuestion = () => {
-    // TODO: Tell QuizQuestion component to reset
-    setCurrentQuestionAnswerChoice(null) // Setting to `null` should reset the question
-    setSelectedAnswer(null) // Being passed to child component
+    setCurrentQuestionAnswerChoice(null)
+    setSelectedAnswer(null)
     setShowAnswer(false)
   }
   const handleContinue = () => {
     if (!currentQuestionAnswerChoice) return
     setUserQuizProgress((prev) => [...prev, currentQuestionAnswerChoice])
+    setCurrentQuestionAnswerChoice(null)
     setShowAnswer(false)
   }
 
-  const handleSubmit = () => {
-    // TODO: Allow user to submit quiz for storage
-  }
-
-  return !quizData ? null : (
-    <Flex width="full" direction="column" alignItems="center">
-      <h2>
-        <Translation id="quiz-test-your-knowledge" />
-      </h2>
-      <Box
-        w={{
-          md: "600px",
-          sm: "300px",
-        }}
-        bg={cardBackground}
-        borderRadius="base"
-        boxShadow="0px 9px 16px -6px rgba(0, 0, 0, 0.13)"
-        padding={{
-          md: "49px 62px", // TODO: Remove magic numbers
-          base: "20px 30px",
-        }}
-      >
-        <Center>
-          <Text
-            fontStyle={"normal"}
-            fontWeight={"700"}
-            color={isDarkMode ? "orange.300" : "blue.300"}
-          >
-            {quizData.title}
-          </Text>
-        </Center>
-        <Center gap={1} marginBottom={6}>
-          {quizData.questions.map(({ id }, index) => {
-            let bg: string
-            if (
-              (showAnswer &&
-                index === currentQuestionIndex &&
-                currentQuestionAnswerChoice?.isCorrect) ||
-              userQuizProgress[index]?.isCorrect
-            ) {
-              bg = "#48BB78"
-            } else if (
-              (showAnswer &&
-                index === currentQuestionIndex &&
-                !currentQuestionAnswerChoice?.isCorrect) ||
-              (userQuizProgress[index] && !userQuizProgress[index].isCorrect)
-            ) {
-              bg = "#B80000"
-            } else if (index === currentQuestionIndex) {
-              bg = "#B0B0B0"
-            } else {
-              bg = "#646464"
-            }
-            return (
-              <Container
-                key={id}
-                bg={bg}
-                h="4px"
-                maxW="2rem"
-                width="full"
-                marginInline={0}
+  return (
+    quizData && (
+      <Flex width="full" direction="column" alignItems="center">
+        <h2>
+          <Translation id="quiz-test-your-knowledge" />
+        </h2>
+        <Box
+          w={{
+            md: "600px",
+            sm: "300px",
+          }}
+          bg={cardBackground}
+          borderRadius="base"
+          boxShadow="0px 9px 16px -6px rgba(0, 0, 0, 0.13)"
+          padding={{
+            md: "49px 62px", // TODO: Remove magic numbers
+            base: "20px 30px",
+          }}
+        >
+          <Center>
+            <Text
+              fontStyle={"normal"}
+              fontWeight={"700"}
+              color={isDarkMode ? "orange.300" : "blue.300"}
+            >
+              {quizData.title}
+            </Text>
+          </Center>
+          <Center gap={1} marginBottom={6}>
+            {quizData.questions.map(({ id }, index) => {
+              let bg: string
+              if (
+                (showAnswer &&
+                  index === currentQuestionIndex &&
+                  currentQuestionAnswerChoice?.isCorrect) ||
+                userQuizProgress[index]?.isCorrect
+              ) {
+                bg = "#48BB78"
+              } else if (
+                (showAnswer &&
+                  index === currentQuestionIndex &&
+                  !currentQuestionAnswerChoice?.isCorrect) ||
+                (userQuizProgress[index] && !userQuizProgress[index].isCorrect)
+              ) {
+                bg = "#B80000"
+              } else if (index === currentQuestionIndex) {
+                bg = "#B0B0B0"
+              } else {
+                bg = "#646464"
+              }
+              return (
+                <Container
+                  key={id}
+                  bg={bg}
+                  h="4px"
+                  maxW="2rem"
+                  width="full"
+                  marginInline={0}
+                />
+              )
+            })}
+          </Center>
+          <Center>
+            {showResults ? (
+              <QuizSummary
+                correctCount={correctCount}
+                questionCount={quizData.questions.length}
               />
-            )
-          })}
-        </Center>
-        <Center>
-          <QuizQuestion
-            questionData={quizData.questions[currentQuestionIndex]}
-            showAnswer={showAnswer}
-            handleSelection={handleSelection}
-            selectedAnswer={selectedAnswer}
-          />
-        </Center>
-        <Center>
-          <ButtonGroup>
-            {showAnswer &&
-              currentQuestionAnswerChoice &&
-              !currentQuestionAnswerChoice.isCorrect && (
-                <Button onClick={handleRetryQuestion} variant={"outline-color"}>
-                  Try again
+            ) : (
+              <QuizQuestion
+                questionData={quizData.questions[currentQuestionIndex]}
+                showAnswer={showAnswer}
+                handleSelection={handleSelection}
+                selectedAnswer={selectedAnswer}
+              />
+            )}
+          </Center>
+          <Center>
+            <ButtonGroup>
+              {showAnswer &&
+                currentQuestionAnswerChoice &&
+                !currentQuestionAnswerChoice.isCorrect && (
+                  <Button
+                    onClick={handleRetryQuestion}
+                    variant={"outline-color"}
+                  >
+                    Try again
+                  </Button>
+                )}
+              {showResults ? (
+                <Flex gap={4}>
+                  <Button leftIcon={<Icon as={FaTwitter} />}>
+                    Share results
+                  </Button>
+                  <Button onClick={initialize}>Take quiz again</Button>
+                </Flex>
+              ) : showAnswer ? (
+                <Button onClick={handleContinue}>
+                  {userQuizProgress.length === quizData.questions.length - 1
+                    ? "See results"
+                    : "Next question"}
+                </Button>
+              ) : (
+                <Button
+                  onClick={handleShowAnswer}
+                  disabled={!currentQuestionAnswerChoice}
+                >
+                  Submit answer
                 </Button>
               )}
-            {showAnswer ? (
-              <Button onClick={handleContinue}>Next question</Button>
-            ) : (
-              <Button
-                onClick={handleShowAnswer}
-                disabled={!currentQuestionAnswerChoice}
-              >
-                Submit answer
-              </Button>
-            )}
-          </ButtonGroup>
-        </Center>
-      </Box>
-    </Flex>
+            </ButtonGroup>
+          </Center>
+        </Box>
+      </Flex>
+    )
   )
 }
 

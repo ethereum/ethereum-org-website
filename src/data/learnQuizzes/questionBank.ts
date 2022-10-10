@@ -64,7 +64,7 @@ const questionBank: QuestionBank = {
           "Ethereum consumes approximately 0.01 TW/year, while YouTube consumes ~244 TW/year, Netflix ~94 TW/year, and PayPal ~0.26 TW/year.",
       },
     ],
-    correctAnswerId: "a002-c",
+    correctAnswerId: "a002-d",
   },
 }
 
