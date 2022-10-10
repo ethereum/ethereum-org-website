@@ -295,7 +295,7 @@
       "isTrustless": true,
       "isPermissionless": true,
       "isSelfCustody": true,
-      "platforms": ["Linux", "macOS", "Windows", "Browser"],
+      "platforms": ["Browser"],
       "ui": ["GUI"],
       "socials": {
         "twitter": "https://twitter.com/AvadoCloud",
