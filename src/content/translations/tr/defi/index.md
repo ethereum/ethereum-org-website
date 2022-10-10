@@ -1,10 +1,9 @@
 ---
-title: Merkezi Olmayan Finans (DeFi)
+title: Merkeziyetsiz finans (DeFi)
 description: Ethereum'da DeFi'ye genel bakış
 lang: tr
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../assets/use-cases/defi.png
 alt: Lego parçalarından yapılmış bir Eth logosu.
 sidebarDepth: 2
@@ -49,7 +48,7 @@ DeFi'nin potansiyelini görmenin en iyi yollarından biri, bugün var olan sorun
 | Şeffaflık üzerine kurulmuştur: Herkes bir ürünün verilerine bakabilir ve sistemin nasıl çalıştığını inceleyebilir. | Finansal kurumlar kapalı kutulardır: Kredi geçmişlerini, yönetilen varlıklarının kaydını vb. görmeyi talep edemezsiniz. |
 
 <ButtonLink to="/dapps/?category=finance">
-  DeFi uygulamalarını keşfet
+  DeFi uygulamalarını keşfedin
 </ButtonLink>
 
 ## Bitcoin ile başladı... {#bitcoin}

@@ -2,7 +2,6 @@
 title: Date și analize
 description: Cum să obţineţi statistici și date on-chain pentru a fi utilizate în aplicațiile dvs. dapp
 lang: ro
-sidebar: true
 ---
 
 ## Introducere {#Introduction}

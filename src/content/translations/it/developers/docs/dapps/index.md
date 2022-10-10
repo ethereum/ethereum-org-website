@@ -2,8 +2,6 @@
 title: Introduzione alle dapp
 description:
 lang: it
-sidebar: true
-preMergeBanner: true
 ---
 
 Un'applicazione decentralizzata (dApp) è un'applicazione costruita su una rete decentralizzata che coniuga uno [smart contract](/developers/docs/smart-contracts/) con un'interfaccia utente frontend. In Ethereum gli Smart Contract sono accessibili e trasparenti (come le API aperte) quindi una dapp può anche includere Smart Contract scritto da altri.
@@ -40,7 +38,7 @@ Uno Smart Contract è codice che gira sulla blockchain Ethereum e che funziona e
 ## Svantaggi dello sviluppo di dApp {#drawbacks-of-dapp-development}
 
 - **Manutenzione**: le dapp possono essere impegnative da mantenere perché il codice e i dati pubblicati sulla blockchain sono più difficili da modificare. Per gli sviluppatori, è difficile apportare degli aggiornamenti alle loro dApp (o ai dati sottostanti, memorizzati da una dApp) una volta distribuite, anche se vengono individuati dei bug o rischi di sicurezza in una versione precedente.
-- **Overhead delle prestazioni**: l'overhead delle prestazioni è enorme e scalare è davvero difficile. Per raggiungere il livello di sicurezza, integrità, trasparenza e affidabilità al quale aspira Ethereum, ogni nodo esegue e memorizza ogni transazione. Oltre a questo, anche la Proof of Work richiede tempo. Un calcolo back-of-the-envelope pone l'overhead a circa 1.000.000 di volte quello del calcolo standard attuale.
+- **Overhead delle prestazioni**: l'overhead delle prestazioni è enorme e scalare è davvero difficile. Per raggiungere il livello di sicurezza, integrità, trasparenza e affidabilità al quale aspira Ethereum, ogni nodo esegue e memorizza ogni transazione. Oltre a ciò, anche il consenso di proof-of-stake richiede tempo.
 - **Congestione della rete**: quando una dApp utilizza troppe risorse di calcolo, l'intera rete viene sostenuta. Attualmente, la rete è in grado di elaborare circa 10 transazioni al secondo; se le transazioni vengono inviate a un ritmo più alto, l'insieme di transazioni non confermate può "gonfiarsi" e accumularsi.
 - **Esperienza utente**: potrebbe essere difficile creare esperienze intuitive. L'utente medio potrebbe trovare troppo difficile configurare la serie di strumenti necessaria a interagire con la blockchain in modo veramente sicuro.
 - **Centralizzazione**: soluzioni facili da utilizzare e compatibili con gli sviluppatori costruite sullo strato base di Ethereum potrebbero finire per assomigliare comunque a servizi centralizzati. Ad esempio, tali servizi potrebbero memorizzare le chiavi o altre informazioni sensibili sul lato del server, servire un frontend utilizzando un server centralizzato oppure utilizzare un'importante logica commerciale su un server centralizzato prima di scrivere sulla blockchain. La centralizzazione annulla molti (se non tutti) i vantaggi della blockchain rispetto al modello tradizionale.
@@ -70,7 +68,7 @@ Uno Smart Contract è codice che gira sulla blockchain Ethereum e che funziona e
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
-## Lettura consigliate {#further-reading}
+## Letture consigliate {#further-reading}
 
 - [L'Architettura di un'applicazione Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 - [Una guida del 2021 alle applicazioni decentralizzate](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) - _LimeChain_

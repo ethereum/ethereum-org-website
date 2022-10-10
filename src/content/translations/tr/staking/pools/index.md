@@ -4,7 +4,6 @@ description: Ortak ETH hisselemeye nasıl başlanacağına dair genel bir bakı�
 lang: tr
 template: staking
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../../assets/staking/leslie-pool.png
 alt: Gergedan Leslie havuzda yüzüyor.
 sidebarDepth: 2
@@ -53,7 +52,7 @@ Nitelik göstergeleri, listelenen bir stake havuzunun sahip olabileceği dikkate
 Kurulumunuzda size yardımcı olacak çeşitli seçenekler mevcuttur. Aşağıdaki araçlarda size rehberlik etmesi için yukarıdaki göstergeleri kullanın.
 
 <InfoBanner emoji="⚠️" isWarning>
-Ağ güvenliğini iyileştirdiği ve riskinizi sınırladığı için <a href="/developers/docs/nodes-and-clients/client-diversity/">istemci çeşitliliğini</a> ciddiye alan bir hizmet seçmenin önemini lütfen unutmayın. Çoğunluk istemci kullanımını sınırladığına dair kanıta sahip hizmetler, <em>"çeşitli istemciler"</em> olarak işaretlenir
+Ağ güvenliğini iyileştirdiği ve riskinizi sınırladığı için <a href="/developers/docs/nodes-and-clients/client-diversity/">istemci çeşitliliğini</a> ciddiye alan bir hizmet seçmenin önemini lütfen unutmayın. Çoğunluk istemci kullanımını sınırladığına dair kanıta sahip hizmetler, <em style="text-transform: büyük harf;">"çeşitli istemciler"</em> olarak işaretlenir
 </InfoBanner>
 
 <StakingProductsCardGrid category="pools" />
@@ -67,17 +66,10 @@ Tipik olarak ERC-20 likidite tokenleri, stake edilen ETH artı ödüllerinin de�
 </ExpandableCard>
 
 <ExpandableCard title="Stake ettiğim tutarı ne zaman geri çekebilirim?">
-Şu anda, İşaret Zinciri'ndeki bir doğrulayıcıdan para çekmek mümkün değildir; bu, konsensus katmanında kilitli ETH ödülleri için likidite tokeninizi fiilen <em>kullanma</em> yeteneğini sınırlar.
 
-Alternatif olarak, bir ERC-20 likidite token kullanan havuzlar, kullanıcıların bu tokeni açık piyasada ticaret yapmasına izin vererek, ETH'yi İşaret Zincirinden fiilen çıkarmadan "çekmenize" izin verir.
-</ExpandableCard>
+Şu anda, bir Ethereum doğrulayıcısından para çekmek mümkün değildir, bu da fikir birliği katmanında kilitli ETH ödülleri için likidite token'ınızı gerçekten _kullanma_ yeteneğini sınırlar.
 
-<ExpandableCard title="Havuza dahil olan paydaşların Birleştirme için herhangi bir şey yapması gerekiyor mu?">
-Havuza dahil olan paydaşların <strong>Birleşmeye hazırlanmak için herhangi bir şey yapmasına gerek yoktur</strong>.
-
-Ancak, Birleştirme yaklaşırken dolandırıcılara karşı tetikte olun. **Hisse ispatına geçiş için ETH'nizi veya hisselenen ETH tokenlarınızı** yükseltmenize gerek yoktur.
-
-[Birleşme](/yükseltmeler/birleşme/) hakkında daha fazla bilgi edinin
+Alternatif olarak, bir ERC-20 likidite token'ı kullanan havuzlar, kullanıcıların bu token'ın açık pazarda ticaretini yapmalarına izin vererek hisseleme pozisyonunuzu satmanıza, ETH'yi hisseleme sözleşmesinden fiilen çıkarmadan etkin bir şekilde "çekmenize" olanak tanır.
 </ExpandableCard>
 
 <ExpandableCard title="Bu benim borsamla stake yapmaktan farklı mı?">

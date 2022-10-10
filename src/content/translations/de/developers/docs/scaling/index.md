@@ -2,7 +2,6 @@
 title: Skalierung
 description: Eine Einführung in die verschiedenen Skalierungsoptionen, die derzeit von der Ethereum Community entwickelt werden.
 lang: de
-sidebar: true
 sidebarDepth: 3
 ---
 

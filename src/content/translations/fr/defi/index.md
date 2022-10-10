@@ -4,7 +4,6 @@ description: Un aperçu de la DeFi sur Ethereum
 lang: fr
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../assets/use-cases/defi.png
 alt: Un logo Eth fait en briques lego.
 sidebarDepth: 2
@@ -345,8 +344,8 @@ DeFi est un mouvement open source. Les protocoles et applications DeFi sont ouve
 ### Vidéos {#videos}
 
 - [Finematics - decentralized finance education](https://finematics.com/) _vidéos de DeFi_
-- [The Defiant](https://www.youtube.com/playlist?list=PlaDcID4s1KronHMKojfjwiHL0DdQEPDcq) - _Les bases de la DeFi : Tout ce que vous avez besoin de savoir pour commencer dans cet espace parfois déroutant_
-- [Whiteboard Crypto](https://youtu.be/17QRFlml4pA) - _Qu'est-ce que DeFi?_
+- [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) - _Les bases de la DeFi : Tout ce que vous avez besoin de savoir pour commencer dans cet espace parfois déroutant_
+- [Whiteboard Crypto](https://youtu.be/17QRFlml4pA) _Qu'est-ce que DeFi?_
 
 ### Communautés {#communities}
 

@@ -190,8 +190,6 @@ const DocsPage = ({
 
   const { editContentUrl } = siteData.siteMetadata || {}
   const absoluteEditPath = `${editContentUrl}${relativePath}`
-  const isDevelopersHome = relativePath.endsWith("/developers/docs/index.md")
-  const showPostMergeBanner = !!mdx.frontmatter.postMergeBanner
 
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
@@ -204,7 +202,6 @@ const DocsPage = ({
           <Translation id="banner-page-incomplete" />
         </BannerNotification>
       )}
-      {showPostMergeBanner && <PostMergeBanner />}
       <ContentContainer isZenMode={isZenMode}>
         <Content>
           <H1 id="top">{mdx.frontmatter.title}</H1>
@@ -218,6 +215,7 @@ const DocsPage = ({
             items={tocItems}
             isMobile={true}
             maxDepth={mdx.frontmatter.sidebarDepth!}
+            hideEditButton={!!mdx.frontmatter.hideEditButton}
           />
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
@@ -231,13 +229,14 @@ const DocsPage = ({
           <FeedbackCard isArticle />
           <DocsNav relativePath={relativePath}></DocsNav>
         </Content>
-        {mdx.frontmatter.sidebar && tocItems && (
+        {tocItems && (
           <DesktopTableOfContents
             slug={slug}
             editPath={absoluteEditPath}
             items={tocItems}
             isPageIncomplete={isPageIncomplete}
             maxDepth={mdx.frontmatter.sidebarDepth!}
+            hideEditButton={!!mdx.frontmatter.hideEditButton}
           />
         )}
       </ContentContainer>
@@ -261,9 +260,9 @@ export const query = graphql`
         description
         lang
         incomplete
-        sidebar
         sidebarDepth
         isOutdated
+        hideEditButton
       }
       body
       tableOfContents

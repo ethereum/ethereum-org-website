@@ -3,7 +3,6 @@ title: "Îndrumar pentru contractul Vyper ERC-721"
 description: Contractul ERC-721 al lui Ryuya Nakamura și modul în care funcționează acesta
 author: Ori Pomerantz
 lang: ro
-sidebar: true
 tags:
   - "vyper"
   - "erc-721"

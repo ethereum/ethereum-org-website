@@ -3,7 +3,6 @@ title: "Solidity and Truffle continuous integration setup"
 description: How to setup Travis or Circle CI for Truffle testing along with useful plugins
 author: Markus Waas
 lang: en
-sidebar: true
 tags:
   [
     "solidity",

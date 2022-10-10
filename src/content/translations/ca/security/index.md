@@ -2,7 +2,6 @@
 title: Seguretat i prevenció d'estafes a Ethereum
 description: Anar amb compte a Ethereum
 lang: ca
-sidebar: true
 ---
 
 # Seguretat i prevenció d'estafes a Ethereum {#introduction}

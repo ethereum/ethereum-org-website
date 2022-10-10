@@ -4,14 +4,12 @@ description: Una panoramica dei NFT su Ethereum
 lang: it
 template: use-cases
 emoji: ":frame_with_picture:"
-sidebar: true
 sidebarDepth: 3
 image: ../../../../assets/infrastructure_transparent.png
 alt: Un logo Eth visualizzato tramite ologramma.
 summaryPoint1: Un modo per rappresentare qualsiasi cosa unica come un attivo basato su Ethereum.
 summaryPoint2: Gli NFTs stanno dando più potere che mai ai creatori di contenuti.
 summaryPoint3: Alimentato da smart contract sulla blockchain Ethereum.
-preMergeBanner: true
 ---
 
 I NFT stanno avendo un successo travolgente nel mondo dell'arte digitale e degli oggetti da collezione. La vita di moltissimi artisti digitali sta cambiando grazie alle enormi vendite ad un nuovo pubblico di cripto-utenti. Anche diverse celebrità si stanno interessando al fenomeno, individuando nuove opportunità per agganciare i fan. Ma l'arte digitale è solo un modo per utilizzare i NFT. In realtà possono essere utilizzati per rappresentare la proprietà di qualsiasi bene unico, come un atto connesso a un oggetto nel mondo digitale o fisico.

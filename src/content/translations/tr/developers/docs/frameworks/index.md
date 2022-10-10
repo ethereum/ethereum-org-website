@@ -2,7 +2,6 @@
 title: Dapp Geliştirme Çerçeveleri
 description: Çerçevelerin avantajlarını keşfedin ve uygun seçenekleri karşılaştırın.
 lang: tr
-sidebar: true
 ---
 
 ## Çerçevelere giriş {#introduction-to-frameworks}

@@ -2,7 +2,6 @@
 title: Programozási nyelvek
 description:
 lang: hu
-sidebar: true
 ---
 
 Általános tévhit, hogy a fejlesztőknek okosszerződéseket kell írniuk az Ethereumra történő fejlesztéshez. Ez nem igaz. Az Ethereum hálózat és közösség egyik szépsége, hogy szinte bármiyen programozási nyelvvel [részt tudsz venni](/community/).

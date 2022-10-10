@@ -205,6 +205,7 @@ const config: GatsbyConfig = {
       options: {
         resetCSS: true,
         isUsingColorMode: true,
+        portalZIndex: 1001,
       },
     },
     // Source assets

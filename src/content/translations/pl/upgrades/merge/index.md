@@ -3,7 +3,6 @@ title: Dokowanie głównej sieci z Eth2
 description: Dowiedz się więcej o dokowaniu - kiedy główna sieć Ethereum połączy się z systemem proof-of-stake koordynowanym przez łańcuch śledzący.
 lang: pl
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: Ostatecznie obecna sieć główna Ethereum zostanie połączona (zadokowana) z resztą ulepszeń zawartych w Eth2.
 summaryPoint2: Dokowanie połączy główną sieć „Eth1” z łańcuchem Eth2 i systemem fragmentacji łańcucha sieci.

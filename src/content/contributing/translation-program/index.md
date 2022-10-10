@@ -2,8 +2,6 @@
 title: Translation Program
 lang: en
 description: Information about the ethereum.org Translation Program
-sidebar: true
-sidebarDepth: 3
 ---
 
 # Translation Program {#translation-program}
@@ -36,18 +34,27 @@ Read more about the ethereum.org Translation Program [mission and vision](/contr
 
 ### Our progress so far {#our-progress}
 
-- [**3,800 +** translators](/contributing/translation-program/contributors/)
-- [**48** languages live on site](/languages/)
-- [**2.9 million** words translated in 2021](/contributing/translation-program/acknowledgements/)
-- [**1.9 million** words translated in 2022 so far](/contributing/translation-program/acknowledgements/)
+- [**4,100 +** translators](/contributing/translation-program/contributors/)
+- [**50** languages live on site](/languages/)
+- [**2.5 million** words translated in 2022 so far](/contributing/translation-program/acknowledgements/)
 
-If you want to get involved and help us grow the global Ethereum community by translating the website into your language, follow the steps below!
+<TranslationChartImage />
 
-<InfoBanner emoji=":tada:">
-  Check out our <Link to="/contributing/translation-program/acknowledgements/">Translator Acknowledgements</Link> page, and{" "}
-  claim your POAP token! If you translated ethereum.org in 2022, there's a unique POAP waiting for you.{" "}
-  <Link to="/contributing/translation-program/acknowledgements/#poap">More on POAPs</Link>
-</InfoBanner>
+### Acknowledgements {#acknowledgements}
+
+Ethereum.org is translated by thousands of community members and they are the key part of the Translation Program.
+We want to acknowledge our translators and support them on their career paths. Here are some of our translator acknowledgements:
+
+#### Certificate {#certificate}
+
+If you have contributed to the Translation Program and at least 5,000 of your translated words have been approved, you are eligible for an ethereum.org translator certificate. [More on certificates](/contributing/translation-program/acknowledgements/#certificate)
+
+#### POAPs {#poaps}
+All of our translators are eligible for a POAP (Proof of Attendance Protocol) - an NFT that proves their contribution to the ethereum.org Translation Program. [More on POAPs](/contributing/translation-program/acknowledgements/#poap)
+
+#### Translator acknowledgements {#translator-acknowledgements}
+
+Public acknowledgements of our top translators using [leaderboards](/contributing/translation-program/acknowledgements/) and a [list of all contributors to the Translation Program](/contributing/translation-program/contributors/).
 
 ### What we're working on {#our-projects}
 

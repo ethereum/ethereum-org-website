@@ -2,7 +2,6 @@
 title: Framework di sviluppo delle dapp
 description: Scopri Esplora i vantaggi dei framework e confronta le opzioni disponibili.
 lang: it
-sidebar: true
 ---
 
 ## Introduzione ai framework {#introduction-to-frameworks}
@@ -32,6 +31,11 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
+
+**Ape -** **_Lo strumento di sviluppo di smart contract per utilizzatori di Python, Data Scientist e Professionisti della Sicurezza._**
+
+- [Documentazione](https://docs.apeworx.io/ape/stable/)
+- [GitHub](https://github.com/ApeWorX/ape)
 
 **Brownie:** **_ ambiente di sviluppo e framework per il test basati su Python _**
 
@@ -75,9 +79,15 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
 
+**Foundry -** **_Un toolkit velocissimo, portatile e modulare per lo sviluppo di applicazioni di Ethereum scritte in Rust._**
+
+- [Documentazione](https://book.getfoundry.sh/)
+- [GitHub](https://github.com/gakonst/foundry/)
+- [Strumenti per Foundry](https://github.com/crisgarner/awesome-foundry)
+
 ## Letture consigliate {#further-reading}
 
-_Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
 
 ## Argomenti correlati {#related-topics}
 

@@ -1,7 +1,6 @@
 ---
 title: Resurse lingvistice
 description: Resurse care nu sunt în limba engleză pentru a afla despre Ethereum
-sidebar: true
 lang: ro
 ---
 

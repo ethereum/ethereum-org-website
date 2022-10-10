@@ -2,7 +2,6 @@
 title: ERC-721 – standard tokenów niewymiennych
 description:
 lang: pl
-sidebar: true
 ---
 
 ## Wprowadzenie {#introduction}

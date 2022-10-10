@@ -2,7 +2,6 @@
 title: Indirizzi di rete
 description: Un'introduzione agli indirizzi di rete.
 lang: it
-sidebar: true
 sidebarDepth: 2
 ---
 

@@ -2,7 +2,6 @@
 title: Einführung in Ether
 description: Eine Einführung für Entwickler in die Kryptowährung Ether.
 lang: de
-sidebar: true
 ---
 
 ## Voraussetzungen {#prerequisites}

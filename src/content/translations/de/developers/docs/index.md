@@ -2,7 +2,6 @@
 title: Ethereum-Entwicklungs-Dokumentation
 description: Einführung in die ethereum.org-Entwicklerdokumentation.
 lang: de
-sidebar: true
 ---
 
 Diese Dokumentation soll dir helfen, mit Ethereum zu entwickeln. Es umfasst Ethereum als Konzept, erklärt den Ethereum-Technologie-Stack, dokumentiert fortgeschrittene Themen für komplexere Anwendungen und Anwendungsfälle.

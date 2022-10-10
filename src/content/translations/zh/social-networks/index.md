@@ -4,7 +4,6 @@ description: 以太坊去中心化社交网络概览
 lang: zh
 template: use-cases
 emoji: ":mega:"
-sidebar: true
 sidebarDepth: 2
 image: ../../assets/ethereum-learn.png
 summaryPoint1: 基于区块链的社交互动与内容平台的创建和分配。
@@ -22,7 +21,7 @@ summaryPoint3: 代币和非同质化代币创造了一种将内容货币化的�
 
 ### 去中心化的社交网络是如何工作的？ {#decentralized-social-networks-overview}
 
-去中心化社交网络是一类[去中心化应用程序(dapps)](/dapps/)——由部署在区块链上的[智能合约](/developers/docs/smart-contracts/)驱动的应用程序。 合约代码充当这些应用程序的后端并定义它们的业务逻辑。
+去中心化社交网络是一类[去中心化应用程序 (dapps)](/dapps/) - 由部署在区块链上的[智能合约](/developers/docs/smart-contracts/)驱动的应用程序。 合约代码充当这些应用程序的后端并定义它们的业务逻辑。
 
 传统社交媒体平台依靠数据库来存储用户信息、程序代码和其他形式的数据。 但这会产生单点故障并带来重大风险。 例如，去年 Facebook 的服务器[离线了数个小时](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact)，切断了用户与平台的连接。这件事引起了极差的反响。
 
@@ -42,7 +41,7 @@ summaryPoint3: 代币和非同质化代币创造了一种将内容货币化的�
 
 4. 由于去中心化应用程序在由全球节点对等网络提供支持的以太坊网络上运行，去中心化社交网络受服务器停机和中断的影响较小。
 
-5. 去中心化社交平台通过非同质化代币 (NFTs)、应用内加密支付等为内容创建者提供改进的货币化框架。
+5. 去中心化社交平台通过非同质化代币 (NFT)、应用内加密支付等为内容创建人提供改进的货币化框架。
 
 6. 去中心化的社交网络为用户提供了高度的隐私和匿名性。 例如，个人可以使用以太坊域名服务的配置文件或钱包登录基于以太坊的社交网络，而无需共享可识别个人信息 (PII)，例如姓名、电子邮件地址等。
 
@@ -76,11 +75,11 @@ summaryPoint3: 代币和非同质化代币创造了一种将内容货币化的�
 
 ### Reddit {#reddit}
 
-Reddit 有[回赠式社区积分](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users)，即用户可以通过发布优质内容和为在线社区 (subreddit) 做贡献来获得的 ERC-20 代币。 你可以兑换这些代币以在 subreddit 内[获得独有的特权和福利](https://www.reddit.com/community-points/)。 对于这个项目，Reddit 正在与 Arbitrum 合作，后者是旨在扩展以太坊交易的[第 2 层](/layer-2/)汇总。
+Reddit 有[回赠式社区积分](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users)，这是 [ERC-20 代币](/developers/docs/standards/tokens/erc-20/)，用户可以通过发布优质内容和为在线社区 (subreddit) 做出贡献来赚取。 你可以在 subreddit 中兑换这些代币以[获得独有的特权和福利](https://www.reddit.com/community-points/)。 对于这个项目，Reddit 正在与 Arbitrum 合作，后者是旨在扩展以太坊交易的[第 2 层](/layer-2/)汇总。
 
-该程序已处于测试阶段，使用 r/CryptoCurrency subreddit [运行名为“Moons”的社区积分版本](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki)。 以下内容来自社区百科全书：
+该程序已经上线，r/加密货币 subreddit [运行其名为“Moons”的社区积分版本](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki)。 根据官方描述，Moons“奖励发布者、评论者和版主对 subreddit 的贡献。” 因为这些代币在区块链上进行交易（代币会直接进入用户钱包），代币与 Reddit 无关，因此其他人无法获取用户的代币。
 
-> _Moons 是 Rinkeby 网络上的 ERC-20 代币，由 Reddit 管理员于 2020 年 5 月作为社区积分项目的一部分推出。 Moons 是奖励用户贡献的一种方式，以 r/CryptoCurrency 为单位，并且具有 subreddit 中的所有权证明。 Moons 独立于 Reddit 存在，用户一旦获得，管理员和 subreddit 版主都无法将它们夺走。 Moons 由一套智能合约管理，智能合约可处理余额、转账、分配/索取和购买特别会员资格。 智能合约和移动应用程序已经过独立安全公司 Trail of Bits 的审查和审计。_
+在 Rinkeby 测试网上结束测试阶段后，Reddit 社区积分现在在 [Arbitrum Nova](https://nova.arbitrum.io/) 上，这是一个结合了 [validium](/developers/docs/scaling/validium/) 和 [乐观卷叠](/developers/docs/scaling/optimistic-rollups/)属性的区块链。 除了使用社区积分来解锁特殊功能外，用户还可以在交易所用它们换取法币。 此外，用户拥有的社区积分决定了他们对社区内决策过程的影响。
 
 ### Twitter {#twitter}
 

@@ -3,7 +3,6 @@ title: How to Set Up Tellor as your Oracle
 description: A guide to get started with integrating the Tellor oracle into your protocol
 author: "Tellor"
 lang: en
-sidebar: true
 tags: ["solidity", "smart contracts", "price feeds", "oracles"]
 skill: beginner
 published: 2021-06-29

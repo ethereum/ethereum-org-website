@@ -2,7 +2,6 @@
 title: Layer 2s hinzufügen
 description: Regeln zum Hinzufügen einer Ebene 2 zu ethereum.org
 lang: de
-sidebar: true
 ---
 
 # Ebene 2s hinzufügen {#adding-layer-2}

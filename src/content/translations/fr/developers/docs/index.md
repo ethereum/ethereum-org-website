@@ -2,7 +2,6 @@
 title: Documentation sur le développement Ethereum
 description: Introduction à la documentation d'ethereum.org.
 lang: fr
-sidebar: true
 ---
 
 Cette documentation est conçue pour vous aider à construire avec Ethereum. Elle couvre Ethereum en tant que concept, explique la pile de technologie Ethereum et documente les sujets avancés pour les applications et les cas d'utilisation plus complexes.

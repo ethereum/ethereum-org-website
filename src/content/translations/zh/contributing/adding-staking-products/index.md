@@ -2,7 +2,6 @@
 title: 添加质押产品或服务
 description: 将质押产品或服务添加到 ethereum.org 时适用的政策
 lang: zh
-sidebar: true
 ---
 
 # 添加质押产品或服务 {#adding-staking-products-or-services}

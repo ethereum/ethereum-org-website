@@ -2,14 +2,13 @@
 title: Ethash
 description: A detailed look at the Ethash algorithm.
 lang: en
-sidebar: true
 ---
 
 <InfoBanner emoji=":wave:">
    Ethash was Ethereum's proof-of-work mining algorithm. Proof-of-work has now been **switched off entirely** and Ethereum is now secured using [proof-of-stake](/developers/docs/consensus-mechanisms/pos) instead. Read more on <a href="/upgrades/merge/">The Merge</a>, <a href="/developers/docs/consensus-mechanisms/pos/">proof-of-stake</a> and <a href="/staking/">staking</a>. This page is for historical interest!  
 </InfoBanner>
 
-[Ethash](https://github.com/ethereum/wiki/wiki/Ethash) is a modified version of the [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashamoto) algorithm. Ethash proof-of-work is [memory hard](https://wikipedia.org/wiki/Memory-hard_function), which was thought to make the algorithm ASIC resistant. Ethash ASICs were eventually developed but GPU mining was still a viable option until proof-of-work was switched off. Ethash is still used to mine other coins on other non-Ethereum proof-of-work networks.
+[Ethash](https://github.com/ethereum/wiki/wiki/Ethash) is a modified version of the [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto) algorithm. Ethash proof-of-work is [memory hard](https://wikipedia.org/wiki/Memory-hard_function), which was thought to make the algorithm ASIC resistant. Ethash ASICs were eventually developed but GPU mining was still a viable option until proof-of-work was switched off. Ethash is still used to mine other coins on other non-Ethereum proof-of-work networks.
 
 ## How does Ethash work? {#how-does-ethash-work}
 

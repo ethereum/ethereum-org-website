@@ -2,7 +2,6 @@
 title: Seguridad en Ethereum y prevención de fraudes
 description: Actuar con seguridad en Ethereum
 lang: es
-sidebar: true
 ---
 
 # Seguridad en Ethereum y la prevención de fraude {#introduction}

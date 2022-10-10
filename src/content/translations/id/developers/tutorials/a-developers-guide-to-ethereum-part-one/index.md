@@ -3,7 +3,6 @@ title: Pengantar bagi pengembang Python untuk Ethereum, bagian 1
 description: Sebuah pengantar pada pengembangan Ethereum, khususnya berguna untuk mereka yang mengetahui bahasa pemograman Python
 author: Marc Garreau
 lang: id
-sidebar: true
 tags:
   - "memulai"
   - "python"

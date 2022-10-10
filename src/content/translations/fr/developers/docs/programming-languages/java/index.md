@@ -2,7 +2,6 @@
 title: Ethereum pour les développeurs Java
 description: Apprendre à développer sur Ethereum avec des projets et des outils basés sur Java
 lang: fr
-sidebar: true
 incomplete: true
 ---
 

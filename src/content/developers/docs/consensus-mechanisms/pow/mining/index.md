@@ -2,11 +2,10 @@
 title: Mining
 description: An explanation of how mining worked on Ethereum.
 lang: en
-sidebar: true
 ---
 
 <InfoBanner emoji=":wave:">
-   Proof-of-work is no longer underlying Ethereum's consensus mechanism, meaning mining has been switched off. Instead, Ethereum is secured by validators who stake ETH. You can start staking your ETH today. Read more on [The Merge](/upgrades/merge/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos/), and [staking](/staking/). This page is for historical interest.
+Proof-of-work is no longer underlying Ethereum's consensus mechanism, meaning mining has been switched off. Instead, Ethereum is secured by validators who stake ETH. You can start staking your ETH today. Read more on <a href='/upgrades/merge/'>The Merge</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>proof-of-stake</a>, and <a href='/staking/'>staking</a>. This page is for historical interest only.
 </InfoBanner>
 
 ## Prerequisites {#prerequisites}
@@ -63,7 +62,7 @@ Watch Austin walk you through mining and the proof-of-work blockchain.
 
 ## The mining algorithm {#mining-algorithm}
 
-Ethereum Mainnet only ever used one mining algorithm - ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash). Ethhash was the successor to an original R&D algorithm known as ['Dagger-Hashamoto'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashamoto).
+Ethereum Mainnet only ever used one mining algorithm - ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash). Ethhash was the successor to an original R&D algorithm known as ['Dagger-Hashimoto'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto).
 
 [More on mining algorithms](/developers/docs/consensus-mechanisms/pow/mining-algorithms/).
 

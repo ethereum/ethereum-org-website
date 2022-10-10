@@ -2,7 +2,6 @@
 title: Storia e diramazioni di Ethereum
 description: Storia della blockchain Ethereum che include le principali pietre miliari, versioni e diramazioni.
 lang: it
-sidebar: true
 sidebarDepth: 1
 ---
 
