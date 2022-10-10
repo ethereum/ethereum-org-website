@@ -59,9 +59,9 @@ const questionBank: QuestionBank = {
       },
       {
         id: "a002-d",
-        label: "Bitcoin",
+        label: "All of the above",
         explanation:
-          "Bitcoin consumes approximately 200 TW/year, while Ethereum consumes approximately 0.01 TW/year.",
+          "Ethereum consumes approximately 0.01 TW/year, while YouTube consumes ~244 TW/year, Netflix ~94 TW/year, and PayPal ~0.26 TW/year.",
       },
     ],
     correctAnswerId: "a002-c",

@@ -1,42 +1,50 @@
 // Libraries
-import React, { useState } from "react"
+import React, { useState, useMemo } from "react"
 import { Box, Circle, Text, useColorMode } from "@chakra-ui/react"
 
 // Components
 import Button from "../Button"
 
 // Types
+import { Question } from "../../types"
+
 export interface IProps {
-  questionData: any
-  onAnswerSelect: (answerId: string) => void
+  questionData: Question
+  showAnswer: boolean
+  handleSelection: (answerId: string) => void
+  selectedAnswer: string | null
 }
 
-const QuizQuestion: React.FC<IProps> = ({ questionData, onAnswerSelect }) => {
+const QuizQuestion: React.FC<IProps> = ({
+  questionData,
+  showAnswer,
+  handleSelection,
+  selectedAnswer,
+}) => {
   const { colorMode } = useColorMode()
-  const { answers, question } = questionData
-  const [selectedAnswer, setSelectedAnswer] = useState<string | undefined>(
-    undefined
-  )
+  const { answers, prompt } = questionData
+  const explanation = useMemo<string>(() => {
+    if (!selectedAnswer) return ""
+    return answers.filter(({ id }) => id === selectedAnswer)[0].explanation
+  }, [selectedAnswer])
 
-  const handleSelection = (answerId: string) => {
-    setSelectedAnswer(answerId)
-    onAnswerSelect(answerId)
-  }
   return (
     <Box w={"100%"}>
       <Text fontWeight={"700"} fontSize={"2xl"}>
-        {question}
+        {prompt}
       </Text>
-      {Object.keys(answers).map((key) => {
-        const active = selectedAnswer === key
+      {answers.map(({ id, label }, index) => {
+        const active = selectedAnswer === id
         const iconBackgroundDark = active ? "orange.800" : "gray.500"
         const iconBackgroundLight = active ? "blue.300" : "gray.400"
-
+        const display =
+          !showAnswer || id === selectedAnswer ? "inline-flex" : "none"
         return (
           <Button
+            display={display}
             variant={"quizButton"}
             isActive={active}
-            onClick={() => handleSelection(key)}
+            onClick={() => handleSelection(id)}
             textAlign="start"
             leftIcon={
               <Circle
@@ -53,15 +61,23 @@ const QuizQuestion: React.FC<IProps> = ({ questionData, onAnswerSelect }) => {
                   fontSize={"lg"}
                   color={active ? "white" : "text"}
                 >
-                  {key.toUpperCase()}
+                  {String.fromCharCode(97 + index).toUpperCase()}
                 </Text>
               </Circle>
             }
+            h="fit-content"
+            p={2}
           >
-            {answers[key].label}
+            {label}
           </Button>
         )
       })}
+      {showAnswer && (
+        <>
+          <Text fontWeight="bold">Explanation</Text>
+          <Text>{explanation}</Text>
+        </>
+      )}
     </Box>
   )
 }

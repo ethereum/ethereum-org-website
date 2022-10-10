@@ -35,7 +35,7 @@ import AdoptionChart from "../components/AdoptionChart"
 import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
 import Slider, { EmblaSlide } from "../components/Slider"
 import FeedbackCard from "../components/FeedbackCard"
-import Quiz from "../components/Quiz/Quiz"
+import QuizWidget from "../components/Quiz/QuizWidget"
 
 import {
   getLocaleForNumberFormat,
@@ -947,12 +947,7 @@ const WhatIsEthereumPage = ({
 
       <Content>
         <Center w="100%">
-          <h2>
-            <Translation id="quiz-test-your-knowledge" />
-          </h2>
-        </Center>
-        <Center w="100%">
-          <Quiz />
+          <QuizWidget />
         </Center>
       </Content>
 
