@@ -556,5 +556,14 @@
     "description": "ETHLisbon is an Ethereum-focused hackathon bringing together the best Web 3.0 builders to the crypto capital of Europe.",
     "startDate": "2022-10-28",
     "endDate": "2022-10-30"
-  }
+  },
+  {
+    "title": "PyChain 2022",
+    "to": "https://www.pychain.org",
+    "sponsor": null,
+    "location": "Online event",
+    "description": "The  PyChain 2022 is th virtual blockchain developer conference targeting the Python ecosystem and Python devs.",
+    "startDate": "2022-11-15",
+    "endDate": "2022-11-15"
+  }  
 ]
