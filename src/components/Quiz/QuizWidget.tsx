@@ -4,8 +4,10 @@ import {
   Box,
   ButtonGroup,
   Center,
+  Circle,
   Container,
   Flex,
+  Heading,
   Icon,
   Text,
   useColorMode,
@@ -18,6 +20,12 @@ import Button from "../Button"
 import QuizQuestion from "./QuizQuestion"
 import QuizSummary from "./QuizSummary"
 import Translation from "../Translation"
+
+// SVG import
+import Trophy from "../../assets/quiz/trophy.svg"
+import Correct from "../../assets/quiz/correct.svg"
+import Incorrect from "../../assets/quiz/incorrect.svg"
+import StarConfetti from "../../assets/quiz/star-confetti.svg"
 
 // Data
 import allQuizData from "../../data/learnQuizzes"
@@ -137,9 +145,9 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
   return (
     quizData && (
       <Flex width="full" direction="column" alignItems="center">
-        <h2>
+        <Heading as="h2">
           <Translation id="quiz-test-your-knowledge" />
-        </h2>
+        </Heading>
         <Box
           w={{
             md: "600px",
@@ -152,7 +160,55 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
             md: "49px 62px", // TODO: Remove magic numbers
             base: "20px 30px",
           }}
+          position="relative"
         >
+          <Circle
+            size="50px"
+            bg={
+              !showAnswer
+                ? "primary"
+                : currentQuestionAnswerChoice?.isCorrect
+                ? "#48BB78"
+                : "#B80000"
+            }
+            position="absolute"
+            top={0}
+            left="50%"
+            transform="translateX(-50%) translateY(-50%)"
+          >
+            <Icon
+              as={
+                !showAnswer
+                  ? Trophy
+                  : currentQuestionAnswerChoice?.isCorrect
+                  ? Correct
+                  : Incorrect
+              }
+              fontSize="1.75rem"
+              color="background"
+            />
+          </Circle>
+          {showResults &&
+            Math.floor((correctCount / quizData.questions.length) * 100) >
+              65 && (
+              <>
+                <Icon
+                  as={StarConfetti}
+                  fontSize="184px"
+                  position="absolute"
+                  left={0}
+                  top={-6}
+                />
+                <Icon
+                  as={StarConfetti}
+                  fontSize="184px"
+                  position="absolute"
+                  right={0}
+                  top={-6}
+                  transform="scaleX(-100%)"
+                />
+              </>
+            )}
           <Center>
             <Text
               fontStyle={"normal"}

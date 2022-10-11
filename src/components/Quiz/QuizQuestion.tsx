@@ -46,6 +46,8 @@ const QuizQuestion: React.FC<IProps> = ({
             isActive={active}
             onClick={() => handleSelection(id)}
             textAlign="start"
+            h="fit-content"
+            p={2}
             leftIcon={
               <Circle
                 size={"25px"}
@@ -65,8 +67,6 @@ const QuizQuestion: React.FC<IProps> = ({
                 </Text>
               </Circle>
             }
-            h="fit-content"
-            p={2}
           >
             {label}
           </Button>
