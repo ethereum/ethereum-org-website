@@ -30,16 +30,16 @@ const GitStars: React.FC<IProps> = ({ gitHubRepo, className, hideStars }) => {
         textDecoration="none"
         border="1px solid"
         borderColor="lightBorder"
-        borderRadius="4px"
+        borderRadius="base"
         float="right"
         color="text"
         _hover={{
-          boxShadow: "0 0 1px",
+          boxShadow: "0 0 1px var(--eth-colors-primary)",
           path: { fill: "primary" },
         }}
       >
         {hideStars ? (
-          <Icon as={FaGithub} m="4px" />
+          <Icon as={FaGithub} m={1} />
         ) : (
           <>
             <Center
