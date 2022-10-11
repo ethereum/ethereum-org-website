@@ -6,7 +6,7 @@ lang: en
 
 # Ethereum energy consumption {#introduction}
 
-Ethereum is a green blockchain. It uses a [proof-of-stake](/developers/docs/consensus-mechanisms/pos) consensus mechanism that can be run on low-powered devices and does not require heavy computation to participate. Ethereum's proof-of-stake mechanism secures the network by using staked ETH rather than expended energy, like in [proof-of-work](/developers/docs/consensus-mechanisms/pos). The switch to proof-of-stake means the energy expended by the Ethereum network is relatively small - on the order of 0.01 TWh/yr.
+Ethereum is a green blockchain. It uses a [proof-of-stake](/developers/docs/consensus-mechanisms/pos) consensus mechanism that can be run on low-powered devices and does not require heavy computation to participate. Ethereum's proof-of-stake mechanism secures the network by using staked ETH rather than expended energy, like in [proof-of-work](/developers/docs/consensus-mechanisms/pow). The switch to proof-of-stake means the energy expended by the Ethereum network is relatively small - on the order of 0.01 TWh/yr.
 
 ## Proof-of-stake energy expenditure {#proof-of-stake-energy}
 

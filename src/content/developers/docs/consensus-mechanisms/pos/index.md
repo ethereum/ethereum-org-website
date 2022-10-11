@@ -58,6 +58,10 @@ Overall, proof-of-stake, as it is implemented on Ethereum, has been demonstrated
 | Proof-of-stake offers greater crypto-economic security than proof-of-work                                                                                                                                           | Users need to run three pieces of software to participate in Ethereum's proof-of-stake. |
 | Less issuance of new ETH is required to incentivize network participants                                                                                                                                            |                                                                                         |
 
+## More of a visual learner? {#visual-learner}
+
+<YouTube id="psKDXvXdr7k" />
+
 ## Further reading {#further-reading}
 
 - [Proof of Stake FAQ](https://vitalik.ca/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
