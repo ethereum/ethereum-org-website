@@ -26,7 +26,7 @@ const UpgradeStatus: React.FC<IProps> = ({
     borderColor={
       isShipped ? "upgradeStatusShippedBorder" : "upgradeStatusBorder"
     }
-    borderRadius="4px"
+    borderRadius="base"
     boxShadow={`0px 4px 7px rgba(0, 0, 0, 0.05), 0px 10px 17px rgba(0, 0, 0, 0.03),
        0px 14px 66px rgba(0, 0, 0, 0.07)`}
     mb={8}
