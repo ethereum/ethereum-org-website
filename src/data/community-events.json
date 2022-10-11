@@ -557,10 +557,10 @@
     "startDate": "2022-10-28",
     "endDate": "2022-10-30"
   },
-   {
+  {
     "title": "Ghana Crypto & DeFi Summit",
     "to": "https://afrideficon.live/",
-    "sponsor": " Uniswap Foundation"
+    "sponsor": " Uniswap Foundation",
     "location": "Ghana, Accra",
     "description": "The Ghana Crypto & DeFi Summit 2022 (GCDSummit2022), is the first Organic, Inclusive and Grassroots DeFi summit of its kind to happen in Ghana, Africa.",
     "startDate": "2022-11-3",
@@ -574,5 +574,5 @@
     "description": "The  PyChain 2022 is th virtual blockchain developer conference targeting the Python ecosystem and Python devs.",
     "startDate": "2022-11-15",
     "endDate": "2022-11-15"
-  }  
+  }
 ]
