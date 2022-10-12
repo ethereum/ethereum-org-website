@@ -31,6 +31,8 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ZH5aXDgWEU">Web3 University</Link> <i>- community focused on learning web3 development </i></SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> <i>- chat for solidity development (Gitter)</i></SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> <i>- chat for solidity development (Matrix)</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> <i>- decentralized question and answer forum</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Stack Exchange</Link> <i>- question and answer forum</i></SocialListItem>
 
 ## YouTube and Twitter {#youtube-and-twitter}
 
