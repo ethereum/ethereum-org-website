@@ -51,7 +51,7 @@ const EventCard: React.FC<IProps> = ({
       width={{ base: "100%", md: "45%" }}
       padding={6}
       backgroundColor="ednBackground"
-      borderRadius="2px"
+      borderRadius="sm"
       border="1px solid"
       borderColor="lightBorder"
       float={isEven ? "right" : { base: "right", md: "none" }}
@@ -80,18 +80,17 @@ const EventCard: React.FC<IProps> = ({
     >
       <Text color="primary" marginBottom={0} textAlign="right">
         {date}
-        <Emoji text=":spiral_calendar:" fontSize="md" marginLeft="0.5em" />
+        <Emoji text=":spiral_calendar:" fontSize="md" marginLeft={2} />
       </Text>
       <Text marginBottom={0} textAlign="right">
         <Text as="span" opacity={0.6}>
           {location}
         </Text>
-        <Emoji text=":round_pushpin:" fontSize="md" marginLeft="0.5em" />
+        <Emoji text=":round_pushpin:" fontSize="md" marginLeft={2} />
       </Text>
       <Heading
         as="h3"
         marginTop={0}
-        fontSize="2xl"
         fontWeight="semibold"
         lineHeight={1.4}
       >
