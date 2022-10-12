@@ -25,7 +25,7 @@ As an ERC-20 token, WETH has more versatile use-cases—unlike ETH, which is lim
 
 - Make payments in dapps
 
-- [Trading WETH for tokens](/defi/#swaps) 
+- [Exchange WETH for other tokens](/defi/#swaps) 
 
 - Use WETH as collateral to [borrow funds](/defi/#borrowing-privacy)
 
@@ -35,7 +35,9 @@ As an ERC-20 token, WETH has more versatile use-cases—unlike ETH, which is lim
 
 To wrap ETH, you need to send it to a [smart contract](/smart-contracts/) which mints an equivalent amount of Wrapped ETH (WETH). This smart contract acts as a custodian as it holds your ETH until you decide to unwrap WETH. You can also swap ETH for WETH directly on a [decentralized exchange](/get-eth/#dex) without needing to interact with a smart contract. 
 
-The process of unwrapping ETH is similar: send WETH to the smart contract and have an equivalent amount of ETH sent to your address. Whenever you redeem WETH for ETH, those tokens are [burned](https://decrypt.co/resources/what-is-a-token-burn-how-crypto-is-removed-from-circulation) (to keep the supply of WETH and ETH equal and enforces parity in prices). You can also unwrap ETH by swapping WETH for ETH using a decentralized exchange.  
+The process of unwrapping ETH is similar: send WETH to the smart contract and have an equivalent amount of ETH sent to your address. Whenever you redeem WETH for ETH, those tokens are [burned](https://decrypt.co/resources/what-is-a-token-burn-how-crypto-is-removed-from-circulation), which keeps the supply of WETH and ETH equal and enforces parity in prices. You can also unwrap ETH by swapping WETH for ETH directly using a decentralized exchange.  
+
+Wrapping ETH to to WETH doesn't incur additional costs, as both assets are converted at a 1:1 ratio. Nevertheless, you'll need to have some extra ETH in your wallet to pay for gas fees when interacting with the WETH token contract. Gas fees on the Ethereum network—paid for performing on-chain computation—are paid solely in Ether (demoninated in gwei). 
 
 ## Wrapped Ether (WETH) vs Ether (ETH): What is the difference? {#weth-vs-eth-differences}
  
@@ -75,7 +77,7 @@ Wrapped Ether (WETH) is not issued and secured by the Ethereum network, so using
 
 3. Beyond scenarios involving malicious actors, a bug in the smart contract could prevent you from unwrapping ETH and withdrawing your locked-up assets.
  
-## Frequently Asked Questions (FAQs) {#frequently-asked-questions} 
+## Frequently Asked Questions about Wrapped Ether (WETH) {#weth-frequentl-asked-questions} 
 
 **Are ETH and WETH the same?**
 
@@ -109,3 +111,4 @@ WETH can be used with any decentralized application built on the ERC-20 standard
 - [What Is Wrapped Ether (WETH) and How to Wrap It?](https://academy.binance.com/en/articles/what-is-wrapped-ether-weth-and-how-to-wrap-it)
 - [What is Wrapped Ether (wETH) and how does it work?](https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work/amp)
 - [What are the cheapest ways to wrap ETH into WETH with the lowest gas fees?](https://medium.com/@therugpush/cheapest-way-to-wrap-eth-into-weth-446cf1ddccf7) 
+- [WETH token information on Etherscan](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
