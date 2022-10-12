@@ -7,6 +7,8 @@ import BannerNotification from "./BannerNotification"
 import Emoji from "./Emoji"
 import Link from "./Link"
 import Translation from "./Translation"
+import { Box, Center, IconButton } from "@chakra-ui/react"
+import { MdClose } from "react-icons/md"
 
 // Utils
 import { getFreshData } from "../utils/cache"
@@ -14,8 +16,6 @@ import { TranslationKey } from "../utils/translations"
 
 // Constants
 import { GATSBY_FUNCTIONS_PATH } from "../constants"
-import { Box, Center, IconButton } from "@chakra-ui/react"
-import { CloseIcon } from "@chakra-ui/icons"
 
 interface CountdownRendererProps {
   days: number
@@ -38,7 +38,7 @@ const BannerWrapper: React.FC<BannerWrapperProps> = ({
 }) => {
   return (
     <BannerNotification shouldShow={isBannerVisible} position="relative">
-      <Center position="relative" paddingRight="2rem" flexWrap="wrap">
+      <Center paddingRight="2rem" flexWrap="wrap">
         <Emoji
           marginRight="1rem"
           flexShrink={0}
@@ -50,7 +50,7 @@ const BannerWrapper: React.FC<BannerWrapperProps> = ({
       </Center>
       <IconButton
         aria-label="Close Banner"
-        icon={<CloseIcon />}
+        icon={<MdClose />}
         onClick={onClose}
         position="absolute"
         top="1.5"
