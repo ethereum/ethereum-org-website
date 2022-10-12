@@ -367,7 +367,7 @@ const questionBank: QuestionBank = {
         id: "c004-a",
         label: "Gavin Wood",
         explanation:
-          "Gavin Wood, a co-founder of Ethereum, is credited with coining the term Web3 shortly after Ethereum launched in 2014.",
+          "Gavin Wood, a co-founder of Ethereum, is credited with coining the term Web3 shortly after Ethereum launched in 2015.",
       },
       {
         id: "c004-b",
