@@ -355,7 +355,7 @@ const questionBank: QuestionBank = {
       {
         id: "c003-d",
         label: "All of the above",
-        explanation: "Web1 and Web3 do not have native, built-in payments.",
+        explanation: "Web1 and Web2 do not have native, built-in payments.",
       },
     ],
     correctAnswerId: "c003-c",
@@ -534,20 +534,20 @@ const questionBank: QuestionBank = {
     answers: [
       {
         id: "e001-a",
-        label: "Incase one of the platforms has a data breach",
+        label: "In case one of the platforms has a data breach",
         explanation:
           "This answer is correct, but there are also other correct answers.",
       },
       {
         id: "e001-b",
         label:
-          "Incase someone looking over your shoulder works out your password",
+          "In case someone looking over your shoulder works out your password",
         explanation:
           "This answer is correct, but there are also other correct answers.",
       },
       {
         id: "e001-c",
-        label: "Incase malware, such as a key-logger, steals your password",
+        label: "In case malware, such as a key-logger, steals your password",
         explanation:
           "This answer is correct, but there are also other correct answers.",
       },

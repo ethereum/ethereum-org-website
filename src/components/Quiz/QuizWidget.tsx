@@ -145,7 +145,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
   return (
     quizData && (
       <Flex width="full" direction="column" alignItems="center">
-        <Heading as="h2">
+        <Heading as="h2" mb={12}>
           <Translation id="quiz-test-your-knowledge" />
         </Heading>
         <Box
@@ -268,7 +268,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
             )}
           </Center>
           <Center>
-            <ButtonGroup>
+            <ButtonGroup gap={6}>
               {showAnswer &&
                 currentQuestionAnswerChoice &&
                 !currentQuestionAnswerChoice.isCorrect && (
@@ -280,7 +280,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
                   </Button>
                 )}
               {showResults ? (
-                <Flex gap={4}>
+                <Flex gap={6}>
                   <Button leftIcon={<Icon as={FaTwitter} />}>
                     Share results
                   </Button>
