@@ -37,8 +37,9 @@ const OrderedList: React.FC<IProps> = ({ listData, className }) => {
     <Box mb="1.45rem" className={className}>
       <ChakraOrderedList
         styleType="none"
-        pl="2rem"
+        pl={8}
         mb="0"
+        ms="1.45rem"
         sx={{
           counterReset: "li-counter",
         }}
