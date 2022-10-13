@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "@emotion/styled"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import Icon from "./Icon"
 import Link from "./Link"
@@ -10,7 +9,8 @@ import {
   Box,
   Hide,
   Icon as ChakraIcon,
-  Link as ChakraLink,
+  LinkBox,
+  LinkOverlay,
 } from "@chakra-ui/react"
 
 export interface ITitleCardItem {
@@ -42,20 +42,20 @@ const TitleCardList: React.FC<IProps> = ({
 }) => (
   <Box
     bg="background"
-    boxShadow="tableBoxShadow"
+    boxShadow="tableBox"
     width="100%"
-    margin="2rem"
-    border-radius="2px"
+    margin={8}
+    border-radius="sm"
     className={className}
   >
     <Flex
       bg="ednBackground"
       align="center"
       justifyContent="space-between"
-      padding="1rem"
+      padding={4}
       flexDirection="row-reverse"
       fontWeight="600"
-      borderBottom="1px"
+      borderBottom={0.25}
       borderBottomStyle="solid"
       borderBottomColor="text"
     >
@@ -76,43 +76,43 @@ const TitleCardList: React.FC<IProps> = ({
               width="12px"
               height="12px"
               bg="fail300"
-              marginRight="0.5rem"
-              borderRadius="64px"
+              marginRight={2}
+              borderRadius="full"
             />
             <Box
               width="12px"
               height="12px"
               bg="gridYellow"
-              marginRight="0.5rem"
-              borderRadius="64px"
+              marginRight={2}
+              borderRadius="full"
             />
             <Box
               width="12px"
               height="12px"
               bg="success300"
-              marginRight="0.5rem"
-              borderRadius="64px"
+              marginRight={2}
+              borderRadius="full"
             />
           </Flex>
         </Hide>
       )}
     </Flex>
     {content.map((listItem, idx) => {
-      let { title, description, caption, link, image, alt, id } = listItem
+      const { title, description, caption, link, image, alt, id } = listItem
       const isLink = !!link
-      console.log("isLink", image)
-      console.log("caption", caption)
+
       return isLink ? (
-        <ChakraLink
+        <LinkBox
           key={id || idx}
           as={Link}
-          to={link}
-          textDecoration="none"
+          href={link}
           display="flex"
+          textDecoration="none"
+          hideArrow
           justifyContent="space-between"
           color="text"
           marginBottom="1px"
-          padding="1rem"
+          padding={4}
           width="100%"
           boxShadow="0px 1px 1px var(--eth-colors-tableItemBoxShadow)"
           _hover={{
@@ -123,17 +123,16 @@ const TitleCardList: React.FC<IProps> = ({
           }}
         >
           {image && (
-            <GatsbyImage
-              style={{
-                marginTop: "4px",
-                minWidth: "20px",
-                marginRight: "1rem",
-              }}
+            <Box
+              as={GatsbyImage}
+              marginTop={1}
+              marginRight={4}
+              minWidth={5}
               image={image}
               alt={alt || ""}
             />
           )}
-          <Flex flex="1 1 75%" flexDirection="column" marginRight="2rem">
+          <Flex flex="1 1 75%" flexDirection="column" marginRight={8}>
             <Box>{title}</Box>
 
             <Box fontSize="s" marginBottom="0" opacity="0.7">
@@ -145,21 +144,21 @@ const TitleCardList: React.FC<IProps> = ({
               flex="1 0 25%"
               alignItems="center"
               flexWrap="wrap"
-              marginRight="1rem"
+              marginRight={4}
             >
               <Box fontSize="s" marginBottom="0" opacity="0.7">
                 {caption}
               </Box>
             </Flex>
           )}
-        </ChakraLink>
+        </LinkBox>
       ) : (
         <Flex
           key={idx}
           onClick={() => clickHandler(idx)}
           width="100%"
           marginBottom="1px"
-          padding="1rem"
+          padding={4}
           textDecoration="none"
           color="text"
           justifyContent="space-between"
@@ -172,20 +171,19 @@ const TitleCardList: React.FC<IProps> = ({
           }}
         >
           {image && (
-            <GatsbyImage
-              style={{
-                marginTop: "4px",
-                minWidth: "20px",
-                marginRight: "1rem",
-              }}
+            <Box
+              as={GatsbyImage}
+              marginTop={1}
+              marginRight={4}
+              minWidth={5}
               image={image}
               alt={alt || ""}
             />
           )}
-          <Flex flex="1 1 75%" flexDirection="column" marginRight="2rem">
+          <Flex flex="1 1 75%" flexDirection="column" marginRight={8}>
             <Box>{title}</Box>
 
-            <Box fontSize="0.875rem" marginBottom="0" opacity="0.7">
+            <Box fontSize={3.5} marginBottom="0" opacity="0.7">
               {description}
             </Box>
           </Flex>
@@ -194,9 +192,9 @@ const TitleCardList: React.FC<IProps> = ({
               flex="1 0 25%"
               alignItems="center"
               flexWrap="wrap"
-              marginRight="1rem"
+              marginRight={4}
             >
-              <Box fontSize="0.875rem" marginBottom="0" opacity="0.7">
+              <Box fontSize={3.5} marginBottom="0" opacity="0.7">
                 {caption}
               </Box>
             </Flex>
