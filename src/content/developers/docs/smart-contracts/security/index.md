@@ -108,7 +108,7 @@ The existence of audits and bug bounties doesn’t excuse your responsibility to
 
 - Make all code modifications via pull requests
 
-- Ensure pull requests have at least one independent reviewer—if you are working solo on a project, consider finding other developers and trade code reviews!
+- Ensure pull requests have at least one independent reviewer—if you are working solo on a project, consider finding other developers and trade code reviews
 
 - Use a [development environment](/developers/docs/frameworks/) for testing, compiling, deploying smart contracts
 
