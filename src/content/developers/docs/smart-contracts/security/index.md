@@ -230,7 +230,7 @@ Another common advice is to write small functions and keep contracts modular by 
 
 The EVM doesn’t permit concurrency, meaning two contracts involved in a message call cannot run simultaneously. An external call pauses the calling contract's execution and memory until the call returns, at which point execution proceeds normally. This process can be formally described as transferring [control flow](https://www.computerhope.com/jargon/c/contflow.htm) to another contract. 
 
-Although mostly harmless, transferring control flow to untrusted contracts can cause problems, such as reentrancy. A reentrancy attack occurs when a malicious contract calls back into a vulnerable contract before the original function invocation is complete. This type of attack is best explained with an example as we do below. 
+Although mostly harmless, transferring control flow to untrusted contracts can cause problems, such as reentrancy. A reentrancy attack occurs when a malicious contract calls back into a vulnerable contract before the original function invocation is complete. This type of attack is best explained with an example. 
 
 Consider a simple smart contract (‘Victim’) that allows anyone to deposit and withdraw Ether: 
 
