@@ -192,7 +192,7 @@ This example shows the basic features of emergency stops:
 
 - `isStopped` is a Boolean that evaluates to `false` at the beginning and `true` when the contract enters emergency mode. 
 
-- The function modifiers `onlyWhenStopped` and `stoppedInEmergency` check the `isStopped` variable. `stoppedInEmergency` is used to control functions that should be inaccessible when the contract is vulnerable (e.g., `deposit()`)—calls to these functions will simply revert. 
+- The function modifiers `onlyWhenStopped` and `stoppedInEmergency` check the `isStopped` variable. `stoppedInEmergency` is used to control functions that should be inaccessible when the contract is vulnerable (e.g., `deposit()`). Calls to these functions will simply revert. 
 
 `onlyWhenStopped` is used for functions that should be callable during an emergency (e.g., `emergencyWithdraw()`). Such functions can help resolve the situation, hence their exclusion from the “restricted functions” list. 
 
