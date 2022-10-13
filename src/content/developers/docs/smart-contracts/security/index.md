@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-Smart contracts are extremely flexible, capable of controlling large amounts of value and running immutable logic based on code deployed on the blockchain. This has created a vibrant ecosystem of trustless and decentralized applications that provide many advantages over legacy systems. But it also represents the perfect opportunity for attackers looking to profit by exploiting vulnerabilities in smart contracts. 
+Smart contracts are extremely flexible, and capable of controlling large amounts of value and data, while running immutable logic based on code deployed on the blockchain. This has created a vibrant ecosystem of trustless and decentralized applications that provide many advantages over legacy systems. They also represent opportunities for attackers looking to profit by exploiting vulnerabilities in smart contracts. 
 
 The peculiarities of public blockchains, like Ethereum, further complicate the issue of securing smart contracts. Deployed contract code _usually_ cannot be changed to patch security flaws, while assets stolen from smart contracts are extremely difficult to track and mostly irrecoverable. 
 
