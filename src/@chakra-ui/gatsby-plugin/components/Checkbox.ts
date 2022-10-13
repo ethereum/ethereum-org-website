@@ -4,7 +4,10 @@ const baseStyleControl = {
   bg: "background",
   _checked: {
     bg: "primary400",
-    _hover: null,
+    _hover: {
+          bg: "primary400",
+          borderColor: "primary600",
+        },
     borderColor: "black50",
   },
   border: "1px",
@@ -32,7 +35,6 @@ export const Checkbox: ComponentMultiStyleConfig = {
       control: {
         h: "1.5rem",
         w: "1.5rem",
-        minW: "1.5rem",
       },
       icon: {
         fontSize: "md",
