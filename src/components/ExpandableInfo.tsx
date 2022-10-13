@@ -84,6 +84,7 @@ const ExpandableInfo = forwardRef<IProps, "div">(
       >
         <Stack
           justify="space-between"
+          align="center"
           gap={{ base: "2rem", md: "3rem" }}
           flexDirection={{ base: "column", md: "row" }}
           width="full"
