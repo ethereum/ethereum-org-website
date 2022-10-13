@@ -90,7 +90,7 @@ After testing your contract, it is good to ask others to check the source code f
 
 Commissioning a smart contract audit is one way of conducting an independent code review. Auditors play an important role in ensuring that smart contracts are secure and free from quality defects and design errors. 
 
-That said, you should avoid treating audits as a silver bullet—don’t write bad code and expect auditors to make it flawless. Smart contract audits won't catch every bug and are mostly designed to provide an additional round of reviews, which can help detect issues missed by developers during initial development and testing. You should also follow [best practices for working with auditors](https://twitter.com/tinchoabbate/status/1400170232904400897), such as documenting code properly and adding inline comments, to maximize the benefit of a smart contract audit. 
+That said, you should avoid treating audits as a silver bullet. Smart contract audits won't catch every bug and are mostly designed to provide an additional round of reviews, which can help detect issues missed by developers during initial development and testing. You should also follow [best practices for working with auditors](https://twitter.com/tinchoabbate/status/1400170232904400897), such as documenting code properly and adding inline comments, to maximize the benefit of a smart contract audit. 
 
 #### Bug bounties {#bug-bounties}
 
