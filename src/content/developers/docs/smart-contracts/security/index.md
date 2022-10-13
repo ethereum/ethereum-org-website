@@ -76,7 +76,7 @@ The immutability of code running in the [Ethereum Virtual Machine](/developers/d
 
 The usual method is to write small unit tests using mock data that the contract is expected to receive from users. [Unit testing](/developers/docs/smart-contracts/testing/#unit-testing) is good for testing the functionality of certain functions and ensuring a smart contract works as expected. 
 
-Nevertheless, unit testing is hardly effective for improving smart contract security when used in isolation. A unit test might prove a function executes properly for sample data, but it cannot prove the same for other other inputs not under consideration. This makes it difficult to detect the edge-cases and hidden vulnerabilities that could break the safety of your smart contract. 
+Unfortunately, unit testing is minimally effective for improving smart contract security when used in isolation. A unit test might prove a function executes properly for mock data, but unit tests are only as effective as the tests that are written. This makes it difficult to detect missed edge cases and vulnerabilities that could break the safety of your smart contract. 
 
 A better approach is to combine unit testing with property-based testing performed using [static and dynamic analysis](/developers/docs/smart-contracts/testing/#static-dynamic-analysis). Static analysis relies on low-level representations, such as [control flow graphs](https://en.wikipedia.org/wiki/Control-flow_graph) and [abstract syntax trees](https://deepsource.io/glossary/ast/) to analyze reachable program states and execution paths. Meanwhile, dynamic analysis techniques, such as fuzzing, execute contract code with random input values to detect operations that violate security properties. 
 
