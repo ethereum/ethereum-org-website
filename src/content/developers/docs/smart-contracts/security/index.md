@@ -436,7 +436,7 @@ As of version 0.8.0, the Solidity compiler rejects code that results in integer 
 
 But if the oracle is corrupted and sends incorrect information on-chain, smart contracts will execute based on erroneous inputs, which can cause problems. This is the basis of the “oracle problem”, which concerns the task of making sure information from a blockchain oracle is accurate, up-to-date, and timely. 
 
-A related security concern is using an on-chain oracle, such as a decentralized exchange, to get the spot price for an asset. Lending platforms in the [decentralized finance](/defi/) (DeFi) industry often do this to determine the value of a user’s collateral to determine how much they can borrow. 
+A related security concern is using an on-chain oracle, such as a decentralized exchange, to get the spot price for an asset. Lending platforms in the [decentralized finance (DeFi)](/defi/) industry often do this to determine the value of a user’s collateral to determine how much they can borrow. 
 
 DEX prices are often or nearly accurate, largely due to arbitrageurs restoring parity in markets. However, they are open to manipulation—particularly if the on-chain oracle calculates asset prices based on historical trading patterns (as is usually the case). 
 
