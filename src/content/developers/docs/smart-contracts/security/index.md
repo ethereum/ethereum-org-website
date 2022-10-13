@@ -303,7 +303,7 @@ The summary is that because the caller’s balance isn't set to 0 until the func
 
 ##### How to prevent reentrancy attacks
 
-An approach to dealing with reentrancy is following the [checks-effects-interactions](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern) pattern. This pattern orders the execution of functions in a way that code that performs necessary checks before progressing with execution comes first, followed by code that manipulates contract state, with code that interacts with other contracts or EOAs arriving last. 
+An approach to dealing with reentrancy is following the [checks-effects-interactions pattern](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern). This pattern orders the execution of functions in a way that code that performs necessary checks before progressing with execution comes first, followed by code that manipulates contract state, with code that interacts with other contracts or EOAs arriving last. 
 
 The checks-effect-interaction pattern is used in a revised version of the `Victim` contract shown below:
 
