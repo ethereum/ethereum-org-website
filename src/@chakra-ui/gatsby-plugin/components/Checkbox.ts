@@ -14,7 +14,9 @@ const baseStyleControl = {
   borderColor: "black50",
   borderRadius: "3px",
   transition: "all 150ms",
-  _focusVisible: null,
+  _focusVisible: {
+     boxShadow: "none",
+  },
   _hover: {
     boxShadow: "tableItemBoxShadow",
     border: "1px",
