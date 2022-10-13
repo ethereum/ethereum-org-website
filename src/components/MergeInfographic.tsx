@@ -1,6 +1,6 @@
 // Library imports
 import React from "react"
-import { Box, chakra, Icon, Text } from "@chakra-ui/react"
+import { Box, chakra, Icon, VStack } from "@chakra-ui/react"
 import { useIntl } from "react-intl"
 // Component imports
 import Translation from "./Translation"
@@ -31,21 +31,21 @@ const SvgText: React.FC<SvgProps> = ({ getString }) => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       aria-hidden="true"
     >
-      <Text skewX={2} skewY="35%" fontSize={lg}>
+      <text x="2%" y="35%" fontSize={lg}>
         ⛏ {getString("docs-nav-proof-of-work")}
-      </Text>
-      <Text skewX="47%" skewY="35%" fontSize={lg}>
+      </text>
+      <text x="47%" y="35%" fontSize={lg}>
         🌱 {getString("docs-nav-proof-of-stake")}
-      </Text>
-      <Text skewX="11%" skewY="70%" fontSize={sm}>
+      </text>
+      <text x="11%" y="70%" fontSize={sm}>
         🚀 {getString("beacon-chain")}
-      </Text>
-      <Text skewX="43%" skewY="12.5%" fontSize={sm}>
+      </text>
+      <text x="43%" y="12.5%" fontSize={sm}>
         🐼 {getString("page-upgrades-get-involved-ethresearch-2")}
-      </Text>
-      <Text skewX="63%" skewY="95%" fontSize={sm}>
+      </text>
+      <text x="63%" y="95%" fontSize={sm}>
         🌳 {getString("page-upgrades-get-involved-ethresearch-1")}
-      </Text>
+      </text>
     </Icon>
   )
 }
@@ -60,7 +60,7 @@ const MergeInfographic: React.FC<IProps> = ({ className }) => {
     translateMessageId(id, intl)
 
   return (
-    <Box
+    <VStack
       className={className}
       role="img"
       aria-label={translateMessageId(
@@ -71,12 +71,12 @@ const MergeInfographic: React.FC<IProps> = ({ className }) => {
       width="100%"
       sx={{
         isolation: "isolate",
-        aspectRatio: 25 / 11,
+        aspectRatio: `${25 / 11}`,
       }}
     >
       <Box
-        position="relative"
-        top="40%"
+        position="absolute"
+        top="44%"
         left="2%"
         width="81%"
         height="18%"
@@ -87,13 +87,14 @@ const MergeInfographic: React.FC<IProps> = ({ className }) => {
         justifyContent="center"
         alignItems="center"
         lineHeight="1em"
+        textAlign="center"
         maxHeight="2em"
         color="background"
         fontSize={{
-          base: "1.375em",
-          lg: "1.125em",
-          md: "0.875",
-          sm: "0.625em",
+          base: "0.625em",
+          sm: "0.875em",
+          md: "1.125em",
+          lg: "1.375em",
         }}
         aria-hidden="true"
       >
@@ -107,8 +108,9 @@ const MergeInfographic: React.FC<IProps> = ({ className }) => {
         height="100%"
         zIndex={0}
       />
-    </Box>
+    </VStack>
   )
 }
 
 export default MergeInfographic
+
