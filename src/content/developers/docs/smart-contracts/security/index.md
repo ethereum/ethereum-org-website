@@ -104,7 +104,7 @@ A useful strategy is to set the payout of a bug bounty program in proportion to 
 
 The existence of audits and bug bounties doesn’t excuse your responsibility to write high-quality code. Good smart contract security starts with following proper design and development processes:
 
-- Store all code stored in a version control system, such as git
+- Store all code in a version control system, such as git
 
 - Make all code modifications via pull requests
 
