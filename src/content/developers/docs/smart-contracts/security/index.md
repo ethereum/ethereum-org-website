@@ -426,7 +426,7 @@ contract Attack {
     }
 }
 ```
-##### How to prevent integer underflows and overflows {#preventing-integer-underflows-and-overflows}
+##### How to prevent integer underflows and overflows
 
 As from version 0.8.0, the Solidity compiler rejects code that results in integer underflows and overflows. However, contracts compiled with a lower compiler version should either perform checks on functions involving arithmetic operations or use a library (e.g., [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) that checks for underflow/overflow. 
 
