@@ -438,7 +438,7 @@ But if the oracle is corrupted and sends incorrect information on-chain, smart c
 
 A related security concern is using an on-chain oracle, such as a decentralized exchange, to get the spot price for an asset. Lending platforms in the [decentralized finance (DeFi)](/defi/) industry often do this to determine the value of a user’s collateral to determine how much they can borrow. 
 
-DEX prices are often or nearly accurate, largely due to arbitrageurs restoring parity in markets. However, they are open to manipulation—particularly if the on-chain oracle calculates asset prices based on historical trading patterns (as is usually the case). 
+DEX prices are often accurate, largely due to arbitrageurs restoring parity in markets. However, they are open to manipulation, particularly if the on-chain oracle calculates asset prices based on historical trading patterns (as is usually the case). 
 
 For instance, an attacker could artificially pump the spot price of an asset by taking out a flash loan right before interacting with your lending contract. Querying the DEX for the asset’s price would return a higher-than-normal value (due to the attacker’s large “buy order” skewing demand for the asset), allowing them to borrow more than they should. Such "flash loan attacks" have been used to exploit reliance on price oracles among DeFi applications, costing protocols millions in lost funds. 
 
