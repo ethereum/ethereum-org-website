@@ -35,7 +35,7 @@ Registering a single address as `Owner` in a smart contract introduces the risk 
 
 In role-based access control, access to sensitive functions is distributed between a set of trusted participants. For instance, one account may be responsible for minting tokens, while another account performs upgrades or pauses the contract. Decentralizing access control this way eliminates single points of failure and reduces trust assumptions for users. 
 
-##### Using multisignature wallets {#multisignature-wallets}
+##### Using multi-signature wallets
 
 Another approach for implementing secure access control is using a [multisignature account](/developers/docs/smart-contracts/#multisig) to manage a contract. Unlike a regular EOA, multisignature accounts are owned by multiple entities and require signatures from a minimum number of accounts—say 3-of-5—to execute transactions. 
 
