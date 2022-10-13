@@ -72,7 +72,7 @@ contract VendingMachine {
 ``` 
 ### 3. Test smart contracts and verify code correctness {#test-smart-contracts-and-verify-code-correctness}
 
-The immutability of code running in the [Ethereum Virtual Machine](/developers/docs/evm/) means smart contracts demand a higher level of quality assessment during the development phase. Testing your contract religiously and observing it for any unexpected results will improve security a great deal and protect your users in the long run. 
+The immutability of code running in the [Ethereum Virtual Machine](/developers/docs/evm/) means smart contracts demand a higher level of quality assessment during the development phase. Testing your contract extensively and observing it for any unexpected results will improve security a great deal and protect your users in the long run. 
 
 The usual method is to write small tests using a sample of the data which the contract is expected to receive from users. [Unit testing](/developers/docs/smart-contracts/testing/#unit-testing) (as this approach is described) is good for testing the functionality of certain features and ensuring a smart contract works as expected. 
 
