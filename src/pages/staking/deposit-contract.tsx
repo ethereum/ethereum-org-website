@@ -361,14 +361,14 @@ const DepositContractPage = ({
                     </CardTitle>
                   </Row>
                   <Checkbox
-                    checked={state.userHasUsedLaunchpad}
+                    isChecked={state.userHasUsedLaunchpad}
                     size="md"
                     mb="0.5rem"
                     display="flex"
                     alignItems="top"
                     variant="alignTop"
                     minHeight="3.5rem"
-                    callback={() =>
+                    onChange={() =>
                       setState({
                         ...state,
                         userHasUsedLaunchpad: !state.userHasUsedLaunchpad,
@@ -378,14 +378,14 @@ const DepositContractPage = ({
                     <Translation id="page-staking-deposit-contract-checkbox1" />
                   </Checkbox>
                   <Checkbox
-                    checked={state.userUnderstandsStaking}
+                    isChecked={state.userUnderstandsStaking}
                     size="md"
                     mb="0.5rem"
                     display="flex"
                     alignItems="top"
                     variant="alignTop"
                     minHeight="3.5rem"
-                    callback={() =>
+                    onChange={() =>
                       setState({
                         ...state,
                         userUnderstandsStaking: !state.userUnderstandsStaking,
@@ -395,14 +395,14 @@ const DepositContractPage = ({
                     <Translation id="page-staking-deposit-contract-checkbox2" />
                   </Checkbox>
                   <Checkbox
-                    checked={state.userWillCheckOtherSources}
+                    isChecked={state.userWillCheckOtherSources}
                     size="md"
                     mb="0.5rem"
                     display="flex"
                     alignItems="top"
                     variant="alignTop"
                     minHeight="3.5rem"
-                    callback={() =>
+                    onChange={() =>
                       setState({
                         ...state,
                         userWillCheckOtherSources:

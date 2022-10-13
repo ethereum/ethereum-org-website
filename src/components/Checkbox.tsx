@@ -2,9 +2,7 @@ import React from "react"
 import {
   Checkbox as ChakraCheckbox,
   CheckboxProps,
-  Text,
   Icon,
-  TextProps,
 } from "@chakra-ui/react"
 
 const CustomIcon = () => {
@@ -23,43 +21,12 @@ const CustomIcon = () => {
 }
 
 export interface IProps extends CheckboxProps {
-  children?: React.ReactNode
-  callback?: Function
-  checked: boolean
   className?: string
-  textProps?: TextProps
 }
 
-const Checkbox: React.FC<IProps> = ({
-  children,
-  callback,
-  checked,
-  className,
-  size,
-  textProps,
-  ...rest
-}) => {
-  const handleClick = () => {
-    if (callback) {
-      callback()
-    }
-  }
-
+const Checkbox: React.FC<IProps> = ({ className, ...rest }) => {
   return (
-    <ChakraCheckbox
-      isChecked={checked}
-      className={className}
-      onChange={handleClick}
-      size={size}
-      icon={<CustomIcon />}
-      {...rest}
-    >
-      {children && (
-        <Text as="span" {...textProps}>
-          {children}
-        </Text>
-      )}
-    </ChakraCheckbox>
+    <ChakraCheckbox className={className} icon={<CustomIcon />} {...rest} />
   )
 }
 

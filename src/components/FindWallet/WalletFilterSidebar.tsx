@@ -5,6 +5,7 @@ import styled from "@emotion/styled"
 // Components
 import Checkbox from "../Checkbox"
 import Icon from "../Icon"
+import { Text } from "@chakra-ui/react"
 
 // Data
 import walletFilterData from "../../data/wallets/wallet-filters"
@@ -555,16 +556,13 @@ const WalletFilterSidebar = ({
                           return (
                             <Checkbox
                               aria-label={option.name}
-                              checked={filters[option.filterKey!]}
+                              isChecked={filters[option.filterKey!]}
                               size="md"
-                              callback={handleClick}
-                              textProps={{
-                                "aria-hidden": "true",
-                                as: "p",
-                                m: 0,
-                              }}
+                              onChange={handleClick}
                             >
-                              {option.name}
+                              <Text as="p" aria-hidden="true" m={0}>
+                                {option.name}
+                              </Text>
                             </Checkbox>
                           )
                         })}
