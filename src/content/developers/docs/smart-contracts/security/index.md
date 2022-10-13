@@ -84,7 +84,7 @@ A better approach is to combine unit testing with property-based testing perform
 
 ### 4. Ask for an independent review of your code {#get-independent-code-reviews}
 
-After testing your contract, it is good to ask others to check the source code for any security issues. Testing cannot possibily cannot uncover every flaw in a smart contract, but getting an independent review increases the possibility of spotting hidden vulnerabilities. 
+After testing your contract, it is good to ask others to check the source code for any security issues. Testing will not uncover every flaw in a smart contract, but getting an independent review increases the possibility of spotting vulnerabilities. 
 
 #### Audits {#audits}
 
