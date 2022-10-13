@@ -214,7 +214,7 @@ Decentralized governance can be beneficial, especially because it aligns the int
 
 One way of preventing problems related to on-chain governance is to [use a timelock](https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/). A timelock prevents a smart contract from executing certain actions until a specific amount of time passes. Other strategies include assigning a “voting weight” to each token based on how long it has been locked up for, or measuring the voting power of an address at a historical period (for example, 2-3 blocks in the past) instead of the current block. Both methods reduce the possibility of quickly amassing voting power to swing on-chain votes. 
 
-We advise reading more on [designing secure governance systems](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/) and [different voting mechanisms in DAOs](https://hackernoon.com/governance-is-the-holy-grail-for-daos). 
+More on [designing secure governance systems](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/) and [different voting mechanisms in DAOs](https://hackernoon.com/governance-is-the-holy-grail-for-daos). 
 
 ### 8. Reduce complexity in code to a minimum {#reduce-code-complexity} 
 
