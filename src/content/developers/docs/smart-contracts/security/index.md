@@ -142,7 +142,7 @@ The nuclear option is to implement an “emergency stop” function that blocks 
 
 1. A global Boolean variable indicating if the smart contract is in a stopped state or not. This variable is set to `false` when setting up the contract, but will revert to `true` once the contract is stopped. 
 
-2. Functions that reference the Boolean variable in their execution. Such functions are either accessible when the smart contract is not stopped, they are accessible when the emergency stop feature is triggered. 
+2. Functions that reference the Boolean variable in their execution. Such functions are accessible when the smart contract is not stopped, and become inaccessible when the emergency stop feature is triggered. 
 
 3. An entity that has access to the emergency stop function, which sets the Boolean variable to `true`. To prevent malicious actions, calls to this function can be restricted to a trusted address (e.g., the contract owner). 
 
