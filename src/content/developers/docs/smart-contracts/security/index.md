@@ -31,7 +31,7 @@ In the Ownable pattern, an address is set as the “owner” of the contract dur
 
 #### Role-based access control {#role-based-access-control}
 
-Registering a single address as `Owner` in a smart contract introduces the risk of centralization and represents a single point-of-failure. If the owner’s wallet keys are compromised, attackers can wreak substantial havoc on the owned contract. This is why using a role-based access control pattern with multiple administrative accounts may be a better option.
+Registering a single address as `Owner` in a smart contract introduces the risk of centralization and represents a single point-of-failure. If the owner’s account keys are compromised, attackers can attack the owned contract. This is why using a role-based access control pattern with multiple administrative accounts may be a better option.
 
 In role-based access control, access to sensitive functions is distributed between a set of trusted participants. For instance, one account may be responsible for minting tokens, while another account performs upgrades or pauses the contract. Decentralizing access control this way eliminates single points of failure and reduces trust assumptions for users. 
 
