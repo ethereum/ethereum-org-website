@@ -37,7 +37,7 @@ In role-based access control, access to sensitive functions is distributed betwe
 
 ##### Using multi-signature wallets
 
-Another approach for implementing secure access control is using a [multisignature account](/developers/docs/smart-contracts/#multisig) to manage a contract. Unlike a regular EOA, multisignature accounts are owned by multiple entities and require signatures from a minimum number of accounts—say 3-of-5—to execute transactions. 
+Another approach for implementing secure access control is using a [multi-signature account](/developers/docs/smart-contracts/#multisig) to manage a contract. Unlike a regular EOA, multi-signature accounts are owned by multiple entities and require signatures from a minimum number of accounts—say 3-of-5—to execute transactions. 
 
 Using a multisig for access control introduces an extra layer of security since actions on the target contract require consent from multiple parties. This is particularly useful if using the Ownable pattern is necessary, as it makes it more difficult for an attacker or rogue insider to manipulate sensitive contract functions for malicious purposes.
 
