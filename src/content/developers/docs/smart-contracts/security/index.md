@@ -1,6 +1,6 @@
 ---
 title: Smart contract security
-Description: An overview of guidelines for building secure Ethereum smart contracts
+description: An overview of guidelines for building secure Ethereum smart contracts
 lang: en
 sidebar: true
 ---
