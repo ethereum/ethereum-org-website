@@ -21,7 +21,7 @@ Make sure you’re familiar with the [fundamentals of smart contract development
 
 ### 1. Design proper access controls {#design-proper-access-controls}
 
-In smart contracts, functions marked `public` or `external` can be called by any external party, including externally owned accounts (EOAs) and contract accounts. Specifying public visibility for functions is necessary if you want others to interact with your contract (functions marked `private` cannot be called from outside the contract). However, giving every network participant access to contract functions can cause problems, especially if it means anyone can perform sensitive operations (e.g., minting new tokens). 
+In smart contracts, functions marked `public` or `external` can be called by any externally owned accounts (EOAs) or contract accounts. Specifying public visibility for functions is necessary if you want others to interact with your contract. Functions marked `private` however can only be called by functions within the smart contract, and not external accounts. Giving every network participant access to contract functions can cause problems, especially if it means anyone can perform sensitive operations (e.g., minting new tokens). 
 
 To prevent unauthorized use of smart contract functions, it is necessary to implement secure access controls. Access control mechanisms restrict the ability to use certain functions in a smart contract to arppoved entities, such as accounts responsible for managing the contract. The **Ownable pattern** and **role-based control** are two patterns useful for implementing access control in smart contracts: 
 
