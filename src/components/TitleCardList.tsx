@@ -183,7 +183,7 @@ const TitleCardList: React.FC<IProps> = ({
           <Flex flex="1 1 75%" flexDirection="column" marginRight={8}>
             <Box>{title}</Box>
 
-            <Box fontSize={3.5} marginBottom="0" opacity="0.7">
+            <Box fontSize="s" marginBottom="0" opacity="0.7">
               {description}
             </Box>
           </Flex>
@@ -194,7 +194,7 @@ const TitleCardList: React.FC<IProps> = ({
               flexWrap="wrap"
               marginRight={4}
             >
-              <Box fontSize={3.5} marginBottom="0" opacity="0.7">
+              <Box fontSize="s" marginBottom="0" opacity="0.7">
                 {caption}
               </Box>
             </Flex>
