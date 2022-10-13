@@ -45,7 +45,7 @@ Using a multisig for access control introduces an extra layer of security since 
 
 As mentioned, anyone can call public functions in your smart contract once it is deployed on the blockchain. Since you cannot know in advance how external accounts will interact with a contract, it is ideal to implement internal safeguards against problematic operations before deploying. You can enforce correct behavior in smart contracts by using the `require()`, `assert()`, and `revert()` statements to trigger exceptions and revert state changes if execution fails to satisfy certain requirements. 
 
-**`require()`**: `require` is prepended to functions and ensures predefined conditions are met before the called function is executed. A `require` statement can be used to validate user inputs, check state variables, or authenticate the identity of the calling account before progressing with a function. 
+**`require()`**: `require` are defined at the start of functions and ensures predefined conditions are met before the called function is executed. A `require` statement can be used to validate user inputs, check state variables, or authenticate the identity of the calling account before progressing with a function.
 
 **`assert()`**: `assert()` is used to detect internal errors and check for violation of “invariants” in your code—an invariant is a logical assertion about a contract’s state that should hold true for all function executions. An example invariant is the maximium total supply or balance of a token contract. Using `assert()` ensures that your contract never reaches a vulnerable state, and if it does, all changes to state variables are rolled back. 
 
