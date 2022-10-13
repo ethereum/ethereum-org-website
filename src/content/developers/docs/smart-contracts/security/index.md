@@ -301,7 +301,7 @@ There’s nothing wrong here, except that `Attacker` has another function that c
 
 The summary is that because the caller’s balance isn't set to 0 until the function execution completes, subsequent invocations will succeed and allow the caller to withdraw their balance multiple times. This kind of attack can be used to drain a smart contract of its funds, like what happened in the [2016 DAO hack](https://www.coindesk.com/learn/2016/06/25/understanding-the-dao-attack/). Reentrancy attacks are still a critical issue for smart contracts today as [public listings of reentrancy exploits](https://github.com/pcaversaccio/reentrancy-attacks) show. 
 
-##### How to prevent reentrancy attacks {#preventing-reentrancy-attacks}
+##### How to prevent reentrancy attacks
 
 An approach to dealing with reentrancy is following the [checks-effects-interactions](https://docs.soliditylang.org/en/develop/security-considerations.html#use-the-checks-effects-interactions-pattern) pattern. This pattern orders the execution of functions in a way that code that performs necessary checks before progressing with execution comes first, followed by code that manipulates contract state, with code that interacts with other contracts or EOAs arriving last. 
 
