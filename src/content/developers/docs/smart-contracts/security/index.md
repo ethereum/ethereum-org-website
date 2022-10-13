@@ -434,7 +434,7 @@ As of version 0.8.0, the Solidity compiler rejects code that results in integer 
 
 [Oracles](/developers/docs/oracles/) source off-chain information and send it on-chain for smart contracts to use. With oracles, you can design smart contracts that interoperate with off-chain systems, such as capital markets, greatly expanding their application.
 
-But if the oracle is corrupted and sends incorrect information on-chain, smart contracts will execute based on erroneous inputs—which can cause problems. This is the basis of the “oracle problem”, which concerns the task of making sure information from a blockchain oracle is accurate, up-to-date, and timely. 
+But if the oracle is corrupted and sends incorrect information on-chain, smart contracts will execute based on erroneous inputs, which can cause problems. This is the basis of the “oracle problem”, which concerns the task of making sure information from a blockchain oracle is accurate, up-to-date, and timely. 
 
 A related security concern is using an on-chain oracle, such as a decentralized exchange, to get the spot price for an asset. Lending platforms in the [decentralized finance](/defi/) (DeFi) industry often do this to determine the value of a user’s collateral to determine how much they can borrow. 
 
