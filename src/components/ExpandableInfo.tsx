@@ -100,7 +100,13 @@ const ExpandableInfo = forwardRef<IProps, "div">(
                   },
                 }}
               >
-                <Heading mt="0rem" mb="0.5rem" size="md" fontWeight="600">
+                <Heading
+                  mt="0rem"
+                  mb="0.5rem"
+                  fontSize={{ base: "2xl", md: "2rem" }}
+                  fontWeight="600"
+                  lineHeight="1.4"
+                >
                   {title}
                 </Heading>
               </HStack>
