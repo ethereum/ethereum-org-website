@@ -49,7 +49,7 @@ As mentioned, anyone can call public functions in your smart contract once it is
 
 **`assert()`**: `assert()` is used to detect internal errors and check for violations of “invariants” in your code. An invariant is a logical assertion about a contract’s state that should hold true for all function executions. An example invariant is the maximium total supply or balance of a token contract. Using `assert()` ensures that your contract never reaches a vulnerable state, and if it does, all changes to state variables are rolled back. 
 
-**`revert()`**: `revert()` can be used in an if-else clause that triggers an exception if the required condition is not satisfied. The sample contract below uses `revert()` to guard the execution of functions:
+**`revert()`**: `revert()` can be used in an if-else statement that triggers an exception if the required condition is not satisfied. The sample contract below uses `revert()` to guard the execution of functions:
 
 ```
 pragma solidity ^0.8.4;
