@@ -320,7 +320,7 @@ contract NoLongerAVictim {
 
 This contract performs a *check* on the user’s balance, applies the *effects* of the `withdraw()` function (by resetting the user’s balance to 0), and proceeds to perform the *interaction* (sending ETH to the user’s address). This ensures the contract updates its storage before the external call, eliminating the re-entrancy condition that enabled the first attack. The `Attacker` contract could still call back into `NoLongerAVictim`, but since `balances[msg.sender]` has been set to 0, additional withdrawals will throw an error. 
 
-Another option is to use a mutual exclusion lock (commonly described as a "mutex") that locks a portion of a contract’s state until a function invocation completes. This is implemented using a Boolean variable that is set to `true` before the function executes and reverts to `false` after the invocation is done. As seen in the example below, using a mutex protects a function against recursive calls while the original invocation is still processing—effectively stopping reentrancy. 
+Another option is to use a mutual exclusion lock (commonly described as a "mutex") that locks a portion of a contract’s state until a function invocation completes. This is implemented using a Boolean variable that is set to `true` before the function executes and reverts to `false` after the invocation is done. As seen in the example below, using a mutex protects a function against recursive calls while the original invocation is still processing, effectively stopping reentrancy. 
 
 ```solidity
 pragma solidity ^0.7.0;
