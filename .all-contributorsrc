@@ -9198,6 +9198,15 @@
       "contributions": [
         "data"
       ]
+    },
+    {
+      "login": "cheeky-gorilla",
+      "name": "cheeky-gorilla",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76262359?v=4",
+      "profile": "https://github.com/cheeky-gorilla",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
