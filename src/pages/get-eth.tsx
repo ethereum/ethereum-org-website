@@ -134,6 +134,10 @@ const CodeBox = styled.div`
   border-radius: 4px;
   padding: 0.5rem;
   margin-bottom: 1.5rem;
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column-reverse;
   }
