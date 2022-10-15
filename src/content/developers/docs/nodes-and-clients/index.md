@@ -72,11 +72,7 @@ If you want to [run your own node](/developers/docs/nodes-and-clients/run-a-node
 
 ### Light node {#light-node}
 
-- Stores just the headers of each block. (These headers only contain summary information about the contents of the block)
-- Requests any other information it requires from a full node.
-- Can independently verify the data it receives from full nodes against the state roots in the block headers it stores.
-- Enables users to participate in the Ethereum network without the powerful hardware or high bandwidth required to run full nodes.
-- Does not participate in consensus (i.e. they cannot be miners/validators), but they can access the Ethereum blockchain with the same functionality as a full node.
+Instead of downloading every block, light nodes download block headers. These headers only contain summary information about the contents of the blocks. Any other information required by the light node gets requested from a full node. The light node can then independently verify the data they receive against the state roots in the block headers. Light nodes enable users to participate in the Ethereum network without the powerful hardware or high bandwidth required to run full nodes. Eventually, light nodes might run on mobile phones or embedded devices. The light nodes do not participate in consensus (i.e. they cannot be miners/validators), but they can access the Ethereum blockchain with the same functionality as a full node.
 
 The execution client Geth includes a [light sync](https://github.com/ethereum/devp2p/blob/master/caps/les.md) option. However, a light Geth node relies upon full nodes serving light node data. Few full nodes opt to serve light node data, meaning light nodes often fail to find peers. There are currently no production-ready light clients on the consensus layer; however, several are in development.
 
