@@ -133,17 +133,17 @@ On the other hand, if you run a client, you can share it with your friends who m
 
 ## Execution clients (formerly 'Eth1 clients') {#execution-clients}
 
-The Ethereum community maintains multiple open-source execution clients (previously known as 'Eth1 clients', or just 'Ethereum clients'), developed by different teams using different programming languages. This makes the network stronger and more diverse. The ideal goal is to achieve diversity without any client dominating to reduce any single points of failure.
+The Ethereum community maintains multiple open-source execution clients (previously known as 'Eth1 clients', or just 'Ethereum clients'), developed by different teams using different programming languages. This makes the network stronger and more [diverse](/developers/docs/nodes-and-clients/client-diversity/). The ideal goal is to achieve diversity without any client dominating to reduce any single points of failure.
 
 This table summarizes the different clients. All of them pass [client tests](https://github.com/ethereum/tests) and are actively maintained to stay updated with network upgrades.
 
-| Client                                          | Language | Operating systems     | Networks                                   | Sync strategies                    | State pruning   |
-| ----------------------------------------------- | -------- | --------------------- | ------------------------------------------ | ---------------------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)              | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Snap, Full                         | Archive, Pruned |
-| [Nethermind](http://nethermind.io/)             | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Snap (without serving), Fast, Full | Archive, Pruned |
-| [Besu](https://besu.hyperledger.org/en/stable/) | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more | Fast, Full                         | Archive, Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Full                               | Archive, Pruned |
-| [Akula](https://akula.app)                      | Rust     | Linux                 | Mainnet, Görli, Rinkeby, Ropsten, and more | Full                               | Archive, Pruned |
+| Client                                          | Language | Operating systems     | Networks                                            | Sync strategies                    | State pruning   |
+| ----------------------------------------------- | -------- | --------------------- | --------------------------------------------------- | ---------------------------------- | --------------- |
+| [Geth](https://geth.ethereum.org/)              | Go       | Linux, Windows, macOS | Mainnet, Sepolia, Görli, Ropsten, Rinkeby           | Snap, Full                         | Archive, Pruned |
+| [Nethermind](http://nethermind.io/)             | C#, .NET | Linux, Windows, macOS | Mainnet, Sepolia, Görli, Ropsten, Rinkeby, and more | Snap (without serving), Fast, Full | Archive, Pruned |
+| [Besu](https://besu.hyperledger.org/en/stable/) | Java     | Linux, Windows, macOS | Mainnet, Sepolia, Görli, Ropsten, Rinkeby, and more | Fast, Full                         | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux, Windows, macOS | Mainnet, Sepolia, Görli, Rinkeby, Ropsten, and more | Full                               | Archive, Pruned |
+| [Akula](https://akula.app)                      | Rust     | Linux                 | Mainnet, Sepolia, Görli, Rinkeby, Ropsten           | Full                               | Archive, Pruned |
 
 **Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer being maintained.** Use it with caution and preferably switch to another client implementation.
 
@@ -183,13 +183,13 @@ There are multiple consensus clients (previously known as 'Eth2' clients) to sup
 
 [View consensus clients](/upgrades/get-involved/#clients).
 
-| Client                                                        | Language   | Operating systems     | Networks                              |
-| ------------------------------------------------------------- | ---------- | --------------------- | ------------------------------------- |
-| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Beacon Chain, Goerli, Pyrmont         |
-| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Beacon Chain, Goerli                  |
-| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Goerli                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Pyrmont |
-| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Sepolia |
+| Client                                                        | Language   | Operating systems     | Networks                                                          |
+| ------------------------------------------------------------- | ---------- | --------------------- | ----------------------------------------------------------------- |
+| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux, Windows, macOS | Beacon Chain, Goerli, Pyrmont, Sepolia, Ropsten, and more         |
+| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux, Windows, macOS | Beacon Chain, Goerli, Sepolia, Ropsten, and more                  |
+| [Nimbus](https://nimbus.team/)                                | Nim        | Linux, Windows, macOS | Beacon Chain, Goerli, Sepolia, Ropsten, and more                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Pyrmont, Sepolia, Ropsten, and more |
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Sepolia, Ropsten, and more          |
 
 ### Lighthouse {#lighthouse}
 
