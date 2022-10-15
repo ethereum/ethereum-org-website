@@ -1,17 +1,8 @@
 import React, { ReactNode, useCallback, useEffect, useState } from "react"
-import styled from "@emotion/styled"
 import useEmblaCarousel from "embla-carousel-react"
 
-import Icon from "./Icon"
-import {
-  Box,
-  Button,
-  Center,
-  Container,
-  Flex,
-  IconButton,
-} from "@chakra-ui/react"
-import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons"
+import { Box, Center, Flex, IconButton } from "@chakra-ui/react"
+import { MdChevronLeft, MdChevronRight } from "react-icons/md"
 
 // const Embla = styled.div`
 //   position: relative;
@@ -175,27 +166,27 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
         ml={{ sm: "2rem", base: 0 }}
       >
         <IconButton
-          aria-label="Left arrow"
+          aria-label="MdChevronLeft"
           onClick={scrollPrev}
           disabled={!prevBtnEnabled}
-          icon={<ChevronLeftIcon w={6} h={6} />}
-          variant="unstyled"
+          icon={<MdChevronLeft fontSize={24} focusable={true} />}
           isRound
           mr="0.8rem"
           _hover={{ boxShadow: "none" }}
           _focus={{ boxShadow: "none" }}
-          bg="slider.btnBg"
+          bg="stakingBlue"
+          height="40px"
         />
         <IconButton
-          aria-label="Right arrow"
+          aria-label="MdChevronRight"
           onClick={scrollNext}
           disabled={!nextBtnEnabled}
-          icon={<ChevronRightIcon w={6} h={6} />}
-          variant="unstyled"
+          icon={<MdChevronRight fontSize={24} focusable={true} />}
           isRound
           _hover={{ boxShadow: "none" }}
           _focus={{ boxShadow: "none" }}
-          bg="slider.btnBg"
+          bg="stakingBlue"
+          height="40px"
         />
       </Flex>
       <Center>
