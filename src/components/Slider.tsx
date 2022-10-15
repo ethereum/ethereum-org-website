@@ -157,17 +157,12 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
         <Flex>{children}</Flex>
       </Box>
       <Flex
-        position={{ sm: "absolute", base: "static" }}
-        bottom={{ sm: 0 }}
-        left={{ sm: 0 }}
         justifyContent={{ sm: "left", base: "center" }}
-        mb={{ sm: "2rem", base: "1rem" }}
-        ml={{ sm: "2rem", base: 0 }}
+        mb={{ sm: "0", base: "1rem" }}
       >
         <IconButton
           aria-label="MdChevronLeft"
           onClick={scrollPrev}
-          // disabled={!prevBtnEnabled}
           icon={<MdChevronLeft fontSize={24} focusable={true} />}
           isRound
           mr="0.8rem"
@@ -180,7 +175,6 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
         <IconButton
           aria-label="MdChevronRight"
           onClick={scrollNext}
-          // disabled={!nextBtnEnabled}
           icon={<MdChevronRight fontSize={24} focusable={true} />}
           isRound
           _hover={{ boxShadow: "none" }}
