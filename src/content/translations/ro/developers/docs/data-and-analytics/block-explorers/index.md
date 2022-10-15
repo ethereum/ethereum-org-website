@@ -2,7 +2,6 @@
 title: Exploratori de blocuri
 description: O introducere despre exploratorii de blocuri, portalul dvs. în lumea datelor blockchain, unde puteți interoga informații despre tranzacții, conturi, contracte și multe altele.
 lang: ro
-sidebar: true
 sidebarDepth: 3
 ---
 

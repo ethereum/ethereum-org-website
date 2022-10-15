@@ -2,7 +2,6 @@
 title: Fejlesztői hálózatok
 description: Áttekintés az fejlesztői hálózatokról és az eszközökről, melyek segítségével Ethereum applikációk fejleszthetőek.
 lang: hu
-sidebar: true
 ---
 
 Az okosszerződésekkel történő Ethereum alkalmazások fejlesztésekor fontos, hogy egy lokális hálózaton futtasd, hogy megnézd hogyan működik telepítés előtt.

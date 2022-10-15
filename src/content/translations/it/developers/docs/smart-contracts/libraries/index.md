@@ -2,7 +2,6 @@
 title: Librerie degli Smart Contract
 description:
 lang: it
-sidebar: true
 ---
 
 Non è necessario scrivere da zero ogni Smart Contract del progetto. Sono disponibili molte librerie di Smart Contract che forniscono blocchi di programmazione riutilizzabili per il progetto.

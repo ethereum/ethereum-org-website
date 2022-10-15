@@ -2,7 +2,6 @@
 title: Norme de jeton ERC-777
 description:
 lang: fr
-sidebar: true
 ---
 
 ## Introduction ? {#introduction}

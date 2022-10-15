@@ -3,7 +3,6 @@ title: "Reverse Engineering a Contract"
 description: How to understand a contract when you don't have the source code
 author: Ori Pomerantz
 lang: en
-sidebar: true
 tags: ["evm", "opcodes", "reverse engineering", "decompiler"]
 skill: advanced
 published: 2021-12-30

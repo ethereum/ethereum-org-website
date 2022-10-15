@@ -2,7 +2,6 @@
 title: Ethereum szótár
 description: Szójegyzék az Ethereumhoz kapcsolódó technikai és nem technikai szavakról, a teljesség igénye nélkül
 lang: hu
-sidebar: true
 sidebarDepth: 2
 ---
 

@@ -4,7 +4,6 @@ description: Una panoramica sulla DeFi in Ethereum
 lang: it
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../assets/use-cases/defi.png
 alt: Logo di Eth in mattoncini Lego.
 sidebarDepth: 2

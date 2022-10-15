@@ -9,6 +9,24 @@ When we reach the moment where the entire codebase is in TS, we will enable `noI
 
 This is just starting, any suggestion is always welcomed and appreciated.
 
+## Declaring types for variables
+
+When declaring types for variables, you should only declare a type when it isn't obvious and the type can't be inferred.
+
+```
+// Do not use
+const someVar: string = 'string'
+
+// Use
+const someVar = 'string'
+```
+
+Do declare a type for an unassigned variable when a type can not be inferred.
+
+```
+const someVar: string
+```
+
 ## Migration guide & contribution opportunity 🎉
 
 We'd love your help in migrating our codebase!

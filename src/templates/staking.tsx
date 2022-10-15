@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { MDXProvider } from "@mdx-js/react"
 import styled from "@emotion/styled"
 
@@ -27,7 +27,6 @@ import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents, {
   Item as ItemTableOfContents,
 } from "../components/TableOfContents"
-import TranslationsInProgress from "../components/TranslationsInProgress"
 import FeedbackCard from "../components/FeedbackCard"
 import SectionNav from "../components/SectionNav"
 import {
@@ -37,7 +36,7 @@ import {
   Header4,
   InfoGrid,
 } from "../components/SharedStyledComponents"
-import Emoji from "../components/Emoji"
+import Emoji from "../components/OldEmoji"
 import YouTube from "../components/YouTube"
 import Breadcrumbs from "../components/Breadcrumbs"
 import StakingLaunchpadWidget from "../components/Staking/StakingLaunchpadWidget"
@@ -51,6 +50,7 @@ import StakingGuides from "../components/Staking/StakingGuides"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Context } from "../types"
 import { Lang } from "../utils/languages"
+import { getImage } from "../utils/image"
 
 const Page = styled.div`
   display: flex;
@@ -330,7 +330,6 @@ const components = {
   Divider,
   SectionNav,
   Pill,
-  TranslationsInProgress,
   Emoji,
   UpgradeStatus,
   DocLink,
@@ -420,8 +419,8 @@ const StakingPage = ({
           />
         </TitleCard>
         <Image
-          image={getImage(mdx.frontmatter.image)}
-          alt={mdx.frontmatter.alt}
+          image={getImage(mdx.frontmatter.image)!}
+          alt={mdx.frontmatter.alt || ""}
           objectFit="contain"
         />
       </HeroContainer>
@@ -434,7 +433,7 @@ const StakingPage = ({
           <StyledButtonDropdown list={dropdownLinks} />
           <InfoTitle>{mdx.frontmatter.title}</InfoTitle>
 
-          {mdx.frontmatter.sidebar && tocItems && (
+          {tocItems && (
             <UpgradeTableOfContents
               items={tocItems}
               maxDepth={mdx.frontmatter.sidebarDepth!}
@@ -466,7 +465,6 @@ export const stakingPageQuery = graphql`
         title
         description
         lang
-        sidebar
         emoji
         sidebarDepth
         summaryPoints

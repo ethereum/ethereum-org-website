@@ -2,7 +2,6 @@
 title: Standardul multi-tokenuri ERC-1155
 description:
 lang: ro
-sidebar: true
 ---
 
 ## Introducere {#introduction}

@@ -2,7 +2,6 @@
 title: Ethereum pentru programatorii JavaScript
 description: Învăţaţi să programaţi pe Ethereum folosind proiecte și instrumente Java.
 lang: ro
-sidebar: true
 ---
 
 JavaScript este printre cele mai populare limbaje din ecosistemul Ethereum. De fapt, există o [echipă](https://github.com/ethereumjs) dedicată pentru a aduce cât mai mult posibil din Ethereum pe JavaScript.

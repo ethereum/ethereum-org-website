@@ -10,7 +10,6 @@ tags:
   - "mocking"
 skill: intermediate
 lang: id
-sidebar: true
 published: 2020-11-14
 ---
 

@@ -2,7 +2,6 @@
 title: Machine virtuelle Ethereum (EVM)
 description: Introduction à la machine virtuelle Ethereum et en quoi elle concerne l'état, les transactions et les contrats intelligents.
 lang: fr
-sidebar: true
 ---
 
 L’instanciation physique de l’EVM ne peut pas être décrite aussi facilement qu'on pointerait du doigt un nuage ou une vague, mais elle _existe_ en tant qu'entité unique gérée par des milliers d'ordinateurs connectés exécutant un client Ethereum.
@@ -65,7 +64,6 @@ Tous les [clients Ethereum](/developers/docs/nodes-and-clients/#execution-client
 - [evmone](https://github.com/ethereum/evmone) - _C++_
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
 - [eEVM](https://github.com/microsoft/eevm) - _C++_
-- [Hyperledger Burrow](https://github.com/hyperledger/burrow) - _Go_
 
 ## Complément d'information {#further-reading}
 

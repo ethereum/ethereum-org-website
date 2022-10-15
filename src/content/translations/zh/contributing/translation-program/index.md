@@ -2,7 +2,6 @@
 title: 翻译计划
 lang: zh
 description: 如何为 ethereum.org 的翻译计划贡献力量
-sidebar: true
 ---
 
 # 翻译计划 {#translation-program}
@@ -175,7 +174,3 @@ Ethereum.org 翻译计划旨在通过将 Ethereum.org 和其他以太坊内容�
 出于这个原因，我们制作了一本[翻译计划手册](/contributing/translation-program/playbook/)，其中包含我们在翻译 ethereum.org 的过程中获得的一些技巧和最佳实践。
 
 想要进一步合作或使用我们的一些翻译资源？ 对手册有任何反馈意见？ 我们很乐意通过 translations@ethereum.org 收到您的来信。
-
-## 进行中的翻译 {#in-progress}
-
-<TranslationsInProgress />

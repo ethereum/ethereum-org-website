@@ -2,7 +2,6 @@
 title: Preuve de travail (PoW)
 description: Explication du protocole de consensus « preuve de travail » et de son rôle dans Ethereum.
 lang: fr
-sidebar: true
 incomplete: true
 ---
 

@@ -4,7 +4,6 @@ description: Prezentare generală a organizațiilor DAO de pe Ethereum
 lang: ro
 template: use-cases
 emoji: ":handshake:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/use-cases/dao-2.png
 alt: O reprezentare a votului unui DAO în favoarea unei propuneri.

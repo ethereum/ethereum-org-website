@@ -1,3 +1,5 @@
+import { IGatsbyImageData } from "gatsby-plugin-image"
+
 import type { Messages } from "./interfaces"
 import type { Lang } from "./utils/languages"
 import { TranslationKey } from "./utils/translations"
@@ -44,10 +46,25 @@ export type ForbidOptional<T = {}> = {
 }
 
 type OptionalImageProp = {
-  image: string
+  image: IGatsbyImageData
   alt: string
 }
 
 type ForbidOptionalImageProp = ForbidOptional<OptionalImageProp>
 
 export type ImageProp = OptionalImageProp | ForbidOptionalImageProp
+
+export interface LearningTool {
+  name: string
+  description: TranslationKey
+  url: string
+  image: IGatsbyImageData | string
+  alt: TranslationKey
+  background: string
+  subjects: Array<string>
+  locales?: Array<Lang>
+}
+
+export interface LearningToolsCardGridProps {
+  category: Array<LearningTool>
+}

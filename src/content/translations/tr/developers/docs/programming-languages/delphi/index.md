@@ -2,7 +2,6 @@
 title: Delphi geliştiricileri için Ethereum
 description: Delphhi programlama dilini kullanarak nasıl Ethereum için geliştireceğinizi öğrenin
 lang: tr
-sidebar: true
 incomplete: true
 ---
 

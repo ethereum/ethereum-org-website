@@ -2,7 +2,6 @@
 title: Eine Anleitung zum Ethereum-Stack
 description: Eine Vorstellung der verschiedenen Ebenen des Ethereum-Stacks und wie sie zusammen passen
 lang: de
-sidebar: true
 ---
 
 Wie bei jedem Software-Stack variiert der komplette "Ethereum-Stack" zielabhängig von Projekt zu Projekt.

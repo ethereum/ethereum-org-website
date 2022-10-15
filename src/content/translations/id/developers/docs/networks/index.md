@@ -2,7 +2,6 @@
 title: Jaringan
 description: Sebuah gambaran umum tentang jaringan Ethereum dan di mana mendapatkan ether (ETH) testnet untuk menguji aplikasi Anda.
 lang: id
-sidebar: true
 ---
 
 Karena Ethereum adalah sebuah protokol, ini berarti ada beberapa "jaringan" independen yang sesuai dengan protokol ini yang tidak berinteraksi satu sama lain.
@@ -73,7 +72,7 @@ Testnet bukti kerja untuk mereka yang menjalankan klien OpenEthereum.
 - [Keran Chainlink](https://faucets.chain.link/)
 - [Keran Paradigm](https://faucet.paradigm.xyz/)
 
-#### Optimisic Kovan {#optimistic-kovan}
+#### Optimistic Kovan {#optimistic-kovan}
 
 Testnet untuk [Optimism](https://www.optimism.io/).
 

@@ -22,6 +22,7 @@ import Unknown from "../../assets/staking/unknown-product-glyph.svg"
 import Abyss from "../../assets/staking/abyss-glyph.svg"
 import Allnodes from "../../assets/staking/allnodes-glyph.svg"
 import Ankr from "../../assets/staking/ankr-glyph.svg"
+import Avado from "../../assets/staking/avado-glyph.svg"
 import Bloxstaking from "../../assets/staking/bloxstaking-glyph.svg"
 import Dappnode from "../../assets/staking/dappnode-glyph.svg"
 import DefaultOpenSource from "../../assets/staking/default-open-source-glyph.svg"
@@ -171,6 +172,7 @@ const getSvgFromPath = (
     "abyss-glyph.svg": Abyss,
     "allnodes-glyph.svg": Allnodes,
     "ankr-glyph.svg": Ankr,
+    "avado-glyph.svg": Avado,
     "bloxstaking-glyph.svg": Bloxstaking,
     "dappnode-glyph.svg": Dappnode,
     "docker-icon.svg": Docker,

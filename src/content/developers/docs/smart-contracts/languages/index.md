@@ -2,7 +2,6 @@
 title: Smart contract languages
 description: An overview and comparison of the two main smart contract languages – Solidity and Vyper.
 lang: en
-sidebar: true
 ---
 
 A great aspect about Ethereum is that smart contracts can be programmed using relatively developer-friendly languages. If you're experienced with Python or any [curly-bracket language](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), you can find a language with familiar syntax.
@@ -108,7 +107,7 @@ For more information, [read the Vyper rationale](https://vyper.readthedocs.io/en
 - [Vyper by Example](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
 - [More Vyper by Example](https://vyper-by-example.org/)
 - [GitHub](https://github.com/vyperlang/vyper)
-- [Vyper commmunity Discord chat](https://discord.gg/SdvKC79cJk)
+- [Vyper community Discord chat](https://discord.gg/SdvKC79cJk)
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 - [Smart contract development frameworks and tools for Vyper](/developers/docs/programming-languages/python/)
 - [VyperPunk - learn to secure and hack Vyper smart contracts](https://github.com/SupremacyTeam/VyperPunk)

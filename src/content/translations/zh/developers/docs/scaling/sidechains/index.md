@@ -2,7 +2,6 @@
 title: 侧链
 description: 这是一篇来源于以太坊社区的关于使用侧链来实现扩容解决方案的介绍文章
 lang: zh
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---

@@ -1,7 +1,7 @@
 // Libraries
 import React, { useEffect, useState } from "react"
 import { graphql, PageProps } from "gatsby"
-import { getImage, GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 
@@ -34,10 +34,11 @@ import {
   getLocaleForNumberFormat,
   TranslationKey,
 } from "../utils/translations"
+import { Lang } from "../utils/languages"
+import { getImage } from "../utils/image"
 
 // Constants
 import { GATSBY_FUNCTIONS_PATH } from "../constants"
-import { Lang } from "../utils/languages"
 
 // Styles
 
@@ -185,9 +186,15 @@ const StatDivider = styled.div`
     margin: 2rem 0;
   }
 `
-
+interface L2DataResponseItem {
+  daily: {
+    data: Array<[string, number, number]>
+  }
+}
 interface L2DataResponse {
-  data: Array<[string, number, number]>
+  layers2s: L2DataResponseItem
+  combined: L2DataResponseItem
+  bridges: L2DataResponseItem
 }
 
 interface FeeDataResponse {
@@ -210,6 +217,9 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
         const l2BeatData = await getData<L2DataResponse>(
           `${GATSBY_FUNCTIONS_PATH}/l2beat`
         )
+
+        const dailyData = l2BeatData.layers2s.daily.data
+
         // formatted TVL from L2beat API formatted
         const TVL = new Intl.NumberFormat(localeForStatsBoxNumbers, {
           style: "currency",
@@ -217,13 +227,14 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
           notation: "compact",
           minimumSignificantDigits: 2,
           maximumSignificantDigits: 3,
-        }).format(l2BeatData.data[l2BeatData.data.length - 1][1])
+        }).format(dailyData[dailyData.length - 1][1])
+
         setTVL(`${TVL}`)
         // Calculate percent change ((new value - old value) / old value) *100)
         const percentage =
-          ((l2BeatData.data[l2BeatData.data.length - 1][1] -
-            l2BeatData.data[l2BeatData.data.length - 31][1]) /
-            l2BeatData.data[l2BeatData.data.length - 31][1]) *
+          ((dailyData[dailyData.length - 1][1] -
+            dailyData[dailyData.length - 31][1]) /
+            dailyData[dailyData.length - 31][1]) *
           100
         setL2PercentChange(
           percentage > 0
@@ -274,7 +285,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
     title: translateMessageId("layer-2-hero-title", intl),
     header: translateMessageId("layer-2-hero-header", intl),
     subtitle: translateMessageId("layer-2-hero-subtitle", intl),
-    image: getImage(data.heroImage),
+    image: getImage(data.heroImage)!,
     alt: translateMessageId("layer-2-hero-alt-text", intl),
     buttons: [
       {
@@ -284,12 +295,12 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
       {
         content: translateMessageId("layer-2-hero-button-2", intl),
         toId: "use-layer-2",
-        isSecondary: true,
+        variant: "outline",
       },
       {
         content: translateMessageId("layer-2-hero-button-3", intl),
         toId: "how-to-get-onto-layer-2",
-        isSecondary: true,
+        variant: "outline",
       },
     ],
   }
@@ -506,7 +517,8 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
           </Flex50>
           <Flex50>
             <GatsbyImage
-              image={getImage(data.whatIsEthereum)}
+              image={getImage(data.whatIsEthereum)!}
+              alt=""
               style={{ maxHeight: "400px" }}
               objectFit="contain"
             />
@@ -567,7 +579,8 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             }}
           >
             <GatsbyImage
-              image={getImage(data.dao)}
+              image={getImage(data.dao)!}
+              alt=""
               style={{ width: "100%" }}
               objectFit="contain"
             />
@@ -643,7 +656,8 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             }}
           >
             <GatsbyImage
-              image={getImage(data.rollup)}
+              image={getImage(data.rollup)!}
+              alt=""
               style={{ width: "100%" }}
               objectFit="contain"
             />
@@ -654,7 +668,8 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             ({ image, title, description, childSentence, childLink }) => (
               <RollupCard key={title}>
                 <GatsbyImage
-                  image={image}
+                  image={image!}
+                  alt=""
                   objectPosition="0"
                   objectFit="contain"
                 />
@@ -712,7 +727,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                 <Layer2ProductCard
                   key={idx}
                   background={l2.background}
-                  image={getImage(data[l2.imageKey])}
+                  image={getImage(data[l2.imageKey])!}
                   description={translateMessageId(
                     l2.descriptionKey as TranslationKey,
                     intl
@@ -744,7 +759,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                 <Layer2ProductCard
                   key={idx}
                   background={l2.background}
-                  image={getImage(data[l2.imageKey])}
+                  image={getImage(data[l2.imageKey])!}
                   description={translateMessageId(
                     l2.descriptionKey as TranslationKey,
                     intl
@@ -802,7 +817,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
       <PaddedContent id="how-to-get-onto-layer-2">
         <Layer2Onboard
           layer2DataCombined={layer2DataCombined}
-          ethIcon={getImage(data.ethHome)}
+          ethIcon={getImage(data.ethHome)!}
           ethIconAlt={translateMessageId("ethereum-logo", intl)}
         />
       </PaddedContent>
@@ -1111,16 +1126,7 @@ export const query = graphql`
         )
       }
     }
-    dydx: file(relativePath: { eq: "layer-2/dydx.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
+
     l2beat: file(relativePath: { eq: "layer-2/l2beat.jpg" }) {
       childImageSharp {
         gatsbyImageData(

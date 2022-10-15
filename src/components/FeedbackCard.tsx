@@ -1,14 +1,14 @@
 // Library imports
 import React, { ReactNode, useState } from "react"
+import { Icon } from "@chakra-ui/react"
 import styled from "@emotion/styled"
 // Component imports
-import { ButtonPrimary, ButtonSecondary } from "./SharedStyledComponents"
+import Button from "./Button"
 import Translation from "./Translation"
 // SVG imports
 import ThumbsUp from "../assets/feedback-thumbs-up.svg"
 // Utility imports
 import { trackCustomEvent } from "../utils/matomo"
-// import { getFeedbackSurveyUrl } from "../utils/getFeedbackSurveyUrl"
 import { useSurvey } from "../hooks/useSurvey"
 
 const Card = styled.div`
@@ -40,26 +40,6 @@ const ButtonContainer = styled.div`
   gap: 1rem;
 `
 
-const StyledButtonSecondary = styled(ButtonSecondary)`
-  display: flex;
-  gap: 0.5rem;
-  color: ${({ theme }) => theme.colors.primary};
-  border-color: ${({ theme }) => theme.colors.primary};
-  line-height: 140%;
-  vertical-align: middle;
-  svg {
-    height: 1.5rem;
-    &.flip {
-      transform: scaleY(-1);
-    }
-  }
-`
-
-const StyledButtonPrimary = styled(ButtonPrimary)`
-  color: white;
-  font-weight: 700;
-`
-
 export interface IProps {
   prompt?: string
   isArticle?: boolean
@@ -72,8 +52,7 @@ const FeedbackCard: React.FC<IProps> = ({
   className,
 }) => {
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
-  const [isHelpful, setIsHelpful] = useState(false)
-  const surveyUrl = useSurvey(feedbackSubmitted, isHelpful)
+  const surveyUrl = useSurvey(feedbackSubmitted)
 
   const location = typeof window !== "undefined" ? window.location.href : ""
   const isTutorial = location.includes("tutorials")
@@ -94,7 +73,6 @@ const FeedbackCard: React.FC<IProps> = ({
       eventAction: `Clicked`,
       eventName: String(choice),
     })
-    setIsHelpful(choice)
     setFeedbackSubmitted(true)
   }
   const handleSurveyOpen = (): void => {
@@ -118,19 +96,27 @@ const FeedbackCard: React.FC<IProps> = ({
         <ButtonContainer>
           {!feedbackSubmitted ? (
             <>
-              <StyledButtonSecondary onClick={() => handleSubmit(true)}>
-                <ThumbsUp />
+              <Button
+                variant="outline-color"
+                leftIcon={<Icon as={ThumbsUp} w={6} h={6} />}
+                onClick={() => handleSubmit(true)}
+              >
                 <Translation id="yes" />
-              </StyledButtonSecondary>
-              <StyledButtonSecondary onClick={() => handleSubmit(false)}>
-                <ThumbsUp className="flip" />
+              </Button>
+              <Button
+                variant="outline-color"
+                leftIcon={
+                  <Icon as={ThumbsUp} w={6} h={6} transform="scaleY(-1)" />
+                }
+                onClick={() => handleSubmit(false)}
+              >
                 <Translation id="no" />
-              </StyledButtonSecondary>
+              </Button>
             </>
           ) : (
-            <StyledButtonPrimary onClick={handleSurveyOpen}>
+            <Button variant="outline-color" onClick={handleSurveyOpen}>
               <Translation id="feedback-widget-thank-you-cta" />
-            </StyledButtonPrimary>
+            </Button>
           )}
         </ButtonContainer>
       </Content>

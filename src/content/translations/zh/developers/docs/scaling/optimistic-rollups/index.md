@@ -2,7 +2,6 @@
 title: Optimistic Rollup
 description: 乐观卷叠介绍
 lang: zh
-sidebar: true
 ---
 
 ## 先决条件 {#prerequisites}

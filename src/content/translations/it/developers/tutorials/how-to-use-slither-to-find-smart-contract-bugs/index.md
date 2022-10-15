@@ -3,7 +3,6 @@ title: Come usare Slither per trovare i bug dello Smart Contract
 description: Come usare Slither per trovare automaticamente bug negli Smart Contract
 author: Trailofbits
 lang: it
-sidebar: true
 tags:
   - "Solidity"
   - "Smart Contract"

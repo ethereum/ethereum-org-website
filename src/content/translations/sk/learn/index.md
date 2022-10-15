@@ -2,7 +2,6 @@
 title: Spoznajte Ethereum
 description: Súbor technických a netechnických článkov, príručiek a zdrojov, ktoré vám pomôžu spoznať Ethereum.
 lang: sk
-sidebar: true
 ---
 
 # Spoznajte Ethereum {#learn-about-ethereum}

@@ -2,7 +2,6 @@
 title: Akıllı sözleşme kütüphaneleri
 description:
 lang: tr
-sidebar: true
 ---
 
 Projenizdeki her akıllı sözleşmeyi sıfırdan yazmanız gerekmez. Projenize yeniden kullanılabilir yapı taşları sağlayarak her şeyi sıfırdan yapmanıza gerek bırakmayacak birçok açık kaynak akıllı sözleşme kütüphanesi bulunmaktadır.

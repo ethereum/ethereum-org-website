@@ -3,7 +3,6 @@ title: La fusion
 description: En apprendre plus à propos de la fusion - lorsque le réseau principal d'Ethereum rejoint la chaîne phare coordonnée par le système de mise à enjeu.
 lang: fr
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: Prochainement, le réseau principal actuel « fusionnera » avec le système de preuve d'enjeux de la chaîne phare.
 summaryPoint2: Cette évènement marquera la transition complète vers la preuve de mise à enjeu et la fin de la preuve de travail pour Ethereum.

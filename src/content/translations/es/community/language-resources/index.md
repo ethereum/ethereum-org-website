@@ -1,7 +1,6 @@
 ---
 title: Recursos en múltiples idiomas
 description: Recursos en idiomas distintos al inglés para aprender sobre Ethereum
-sidebar: true
 lang: es
 ---
 

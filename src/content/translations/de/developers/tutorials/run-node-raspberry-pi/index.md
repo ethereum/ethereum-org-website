@@ -8,7 +8,6 @@ tags:
   - "Konsensebene"
   - "Nodes"
 lang: de
-sidebar: true
 skill: Fortgeschritten
 published: 2020-05-07
 source: r/ethereum

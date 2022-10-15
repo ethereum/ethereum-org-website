@@ -2,7 +2,6 @@
 title: Testarea contractelor inteligente
 description:
 lang: ro
-sidebar: true
 incomplete: true
 ---
 

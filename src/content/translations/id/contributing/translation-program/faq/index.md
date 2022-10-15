@@ -2,7 +2,6 @@
 title: Pertanyaan yang paling sering diajukan (FAQ) tentang Program Penerjemahan
 lang: id
 description: Pertanyaan yang paling sering diajukan tentang Program Penerjemahan ethereum.org
-sidebar: true
 ---
 
 # Panduan menerjemahkan ethereum.org {#translating-ethereum-guide}

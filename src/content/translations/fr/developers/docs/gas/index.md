@@ -2,7 +2,6 @@
 title: Gaz et frais
 description:
 lang: fr
-sidebar: true
 ---
 
 Le gaz est un élément essentiel du réseau Ethereum. Il lui permet de fonctionner, tout comme une voiture a besoin d'essence pour avancer.

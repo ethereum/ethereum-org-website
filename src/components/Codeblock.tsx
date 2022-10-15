@@ -8,7 +8,7 @@ import Highlight, {
 } from "prism-react-renderer"
 import Translation from "./Translation"
 import CopyToClipboard from "./CopyToClipboard"
-import Emoji from "./Emoji"
+import Emoji from "./OldEmoji"
 
 const LINES_BEFORE_COLLAPSABLE = 8
 

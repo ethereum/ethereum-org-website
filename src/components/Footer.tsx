@@ -2,11 +2,12 @@ import React from "react"
 import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 import { StaticQuery, graphql } from "gatsby"
+import { Icon } from "@chakra-ui/react"
+import { FaDiscord, FaGithub, FaTwitter, FaYoutube } from "react-icons/fa"
 
 import { getLocaleTimestamp } from "../utils/time"
 import Translation from "./Translation"
 import Link from "./Link"
-import Icon from "./Icon"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
 
@@ -76,6 +77,7 @@ const FooterLink = styled(Link)`
     color: ${(props) => props.theme.colors.text200};
   }
   &:hover {
+    text-decoration: none;
     color: ${(props) => props.theme.colors.primary};
     &:after {
       color: ${(props) => props.theme.colors.primary};
@@ -101,22 +103,22 @@ const SocialIcon = styled(Icon)`
 
 const socialLinks = [
   {
-    icon: "github",
+    icon: FaGithub,
     to: "https://github.com/ethereum/ethereum-org-website",
     ariaLabel: "GitHub",
   },
   {
-    icon: "twitter",
+    icon: FaTwitter,
     to: "https://twitter.com/ethdotorg",
     ariaLabel: "Twitter",
   },
   {
-    icon: "youtube",
+    icon: FaYoutube,
     to: "https://youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g",
     ariaLabel: "Youtube",
   },
   {
-    icon: "discord",
+    icon: FaDiscord,
     to: "https://discord.gg/CetY6Y4",
     ariaLabel: "Discord",
   },
@@ -383,12 +385,13 @@ const Footer: React.FC<IProps> = () => {
               {socialLinks.map((link, idx) => {
                 return (
                   <Link
+                    key={idx}
                     to={link.to}
                     hideArrow={true}
-                    key={idx}
-                    ariaLabel={link.ariaLabel}
+                    color="secondary"
+                    aria-label={link.ariaLabel}
                   >
-                    <SocialIcon name={link.icon} size="36" />
+                    <Icon as={link.icon} fontSize="4xl" ml={4} />
                   </Link>
                 )
               })}

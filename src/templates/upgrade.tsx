@@ -4,7 +4,7 @@ import { useIntl } from "react-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
@@ -31,7 +31,6 @@ import UpgradeTableOfContents, {
   Item as ItemTableOfContents,
 } from "../components/UpgradeTableOfContents"
 import Translation from "../components/Translation"
-import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
 import ExpandableCard from "../components/ExpandableCard"
 import {
@@ -40,7 +39,7 @@ import {
   Header1,
   Header4,
 } from "../components/SharedStyledComponents"
-import Emoji from "../components/Emoji"
+import Emoji from "../components/OldEmoji"
 import YouTube from "../components/YouTube"
 import MergeInfographic from "../components/MergeInfographic"
 import FeedbackCard from "../components/FeedbackCard"
@@ -49,6 +48,7 @@ import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
 import { Lang } from "../utils/languages"
+import { getImage } from "../utils/image"
 import { Context } from "../types"
 
 const Page = styled.div`
@@ -175,7 +175,6 @@ const components = {
   Divider,
   SectionNav,
   Pill,
-  TranslationsInProgress,
   Emoji,
   UpgradeStatus,
   BeaconChainActions,
@@ -375,7 +374,7 @@ const UpgradePage = ({
             {getLocaleTimestamp(intl.locale as Lang, lastUpdatedDate)}
           </LastUpdated>
         </TitleCard>
-        <Image image={getImage(mdx.frontmatter.image)} />
+        <Image image={getImage(mdx.frontmatter.image)!} alt="" />
       </HeroContainer>
       <MoreContent to="#content">
         <Icon name="chevronDown" />
@@ -389,7 +388,7 @@ const UpgradePage = ({
           <StyledButtonDropdown list={dropdownLinks} />
           <H1>{mdx.frontmatter.title}</H1>
 
-          {mdx.frontmatter.sidebar && tocItems && (
+          {tocItems && (
             <UpgradeTableOfContents
               items={tocItems}
               maxDepth={mdx.frontmatter.sidebarDepth!}
@@ -421,7 +420,6 @@ export const upgradePageQuery = graphql`
         title
         description
         lang
-        sidebar
         sidebarDepth
         summaryPoint1
         summaryPoint2

@@ -141,30 +141,36 @@ function processMarkdown(path) {
   // TODO: refactor history pages to use a component for network upgrade summaries
   // TODO: create .env commit warning component for tutorials
   // Ignore tutorials with Javascript and ExpandableCards
-  /* Commented this out due to console noise (but they are things we should fix!)
-  if (!(path.includes("/history/")) && !(markdownFile.includes("```javascript")) && !(markdownFile.includes("ExpandableCard"))) {
+  if (
+    !path.includes("/history/") &&
+    !markdownFile.includes("```javascript") &&
+    !markdownFile.includes("ExpandableCard")
+  ) {
     for (const tag of HTML_TAGS) {
-    
       const htmlTagRegex = new RegExp(tag, "g")
       let htmlTagMatch
 
       while ((htmlTagMatch = htmlTagRegex.exec(markdownFile))) {
         const lineNumber = getLineNumber(markdownFile, htmlTagMatch.index)
         console.warn(`Warning: ${tag} tag in markdown at ${path}:${lineNumber}`)
-    
+
         if (!htmlTagRegex.global) break
       }
     }
   }
-  */
 
   // Commented out as 296 instances of whitespace in link texts
-  // let whiteSpaceInLinkTextMatch
+  let whiteSpaceInLinkTextMatch
 
-  // while ((whiteSpaceInLinkTextMatch = WHITE_SPACE_IN_LINK_TEXT.exec(markdownFile))) {
-  //   const lineNumber = getLineNumber(markdownFile, whiteSpaceInLinkTextMatch.index)
-  //   console.warn(`White space in link found: ${path}:${lineNumber}`)
-  // }
+  while (
+    (whiteSpaceInLinkTextMatch = WHITE_SPACE_IN_LINK_TEXT.exec(markdownFile))
+  ) {
+    const lineNumber = getLineNumber(
+      markdownFile,
+      whiteSpaceInLinkTextMatch.index
+    )
+    console.warn(`White space in link found: ${path}:${lineNumber}`)
+  }
 
   checkMarkdownSpellingMistakes(path, markdownFile, SPELLING_MISTAKES)
   // Turned this off for testing as there are lots of Github (instead of GitHub) and Metamask (instead of MetaMask).

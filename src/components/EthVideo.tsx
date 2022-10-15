@@ -1,5 +1,6 @@
 import React from "react"
 import { useTheme } from "@emotion/react"
+import { Box } from "@chakra-ui/react"
 
 import darkVideo from "../assets/ethereum-hero-dark.mp4"
 import lightVideo from "../assets/ethereum-hero-light.mp4"
@@ -16,7 +17,7 @@ const EthVideo: React.FC<IProps> = ({ className, videoSrc }) => {
   const src = videoSrc ? videoSrc : isDarkTheme ? darkVideo : lightVideo
 
   return (
-    <div className={className}>
+    <Box className={className}>
       <video
         id="hero-video"
         width="100%"
@@ -27,7 +28,7 @@ const EthVideo: React.FC<IProps> = ({ className, videoSrc }) => {
         loop
         muted
       />
-    </div>
+    </Box>
   )
 }
 

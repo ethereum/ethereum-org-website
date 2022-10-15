@@ -1,7 +1,6 @@
 ---
 title: Ethereum Alapítvány
 description: Ismerd meg az Ethereum Alapítványt (EA), egy non-profit szervezetet, melynek célja az Ethereum és a hozzá kapcsolódó technológiák támogatása.
-sidebar: true
 lang: hu
 ---
 

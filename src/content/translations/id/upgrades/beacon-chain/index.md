@@ -3,7 +3,6 @@ title: Rantai Suar
 description: Belajar tentang Rantai Suar - peningkatan yang memperkenalkan bukti taruhan Ethereum.
 lang: id
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: Rantai Suar tidak mengubah apa pun terkait Ethereum yang kita gunakan saat ini.
 summaryPoint2: Rantai Suar akan mengoordinasikan jaringan, yang berfungsi sebagai lapisan konsensus.

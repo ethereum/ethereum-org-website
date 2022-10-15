@@ -5,15 +5,14 @@ author: "Sumi Mudgil"
 tags: ["NFTs", "ERC-721", "Alchemy", "Solidity", "smart contracts"]
 skill: beginner
 lang: en
-sidebar: true
 published: 2021-04-22
 ---
 
-With NFTs bringing blockchain into the public eye, now is an excellent opportunity to understand the hype yourself by publishing your own NFT (ERC-721 Token) on the Ethereum blockchain!
+With NFTs bringing blockchain into the public eye, now is an excellent opportunity to understand the hype yourself by publishing your own NFT contract (ERC-721 Token) on the Ethereum blockchain!
 
 Alchemy is extremely proud to be powering the biggest names in the NFT space, including Makersplace (recently set a record digital artwork sale at Christie’s for $69 Million), Dapper Labs (creators of NBA Top Shot & Crypto Kitties), OpenSea (the world’s largest NFT marketplace), Zora, Super Rare, NFTfi, Foundation, Enjin, Origin Protocol, Immutable, and more.
 
-In this tutorial, we will walk through creating and deploying an ERC-721 smart contract on the Ropsten test network using [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), [Pinata](https://pinata.cloud/) and [Alchemy](https://alchemy.com/signup/eth) (don’t fret if you don’t understand what any of this means yet — we will explain it!).
+In this tutorial, we will walk through creating and deploying an ERC-721 smart contract on the Goerli test network using [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), [Pinata](https://pinata.cloud/) and [Alchemy](https://alchemy.com/signup/eth) (don’t fret if you don’t understand what any of this means yet — we will explain it!).
 
 In Part 2 of this tutorial we’ll go through how we can use our smart contract to mint an NFT, and in Part 3 we’ll explain how to view your NFT on MetaMask.
 
@@ -27,13 +26,13 @@ In this tutorial, we’ll also take advantage of Alchemy’s developer tools for
 
 ## Step 2: Create your app (and API key) {#make-api-key}
 
-Once you’ve created an Alchemy account, you can generate an API key by creating an app. This will allow us to make requests to the Ropsten test network. Check out [this guide](https://docs.alchemyapi.io/guides/choosing-a-network) if you’re curious to learn more about test networks.
+Once you’ve created an Alchemy account, you can generate an API key by creating an app. This will allow us to make requests to the Goerli test network. Check out [this guide](https://docs.alchemyapi.io/guides/choosing-a-network) if you’re curious to learn more about test networks.
 
 1. Navigate to the “Create App” page in your Alchemy Dashboard by hovering over “Apps” in the nav bar and clicking “Create App”
 
 ![Create your app](./create-your-app.png)
 
-2. Name your app (we chose “My First NFT!”), offer a short description, select “Staging” for the Environment (used for your app bookkeeping), and choose “Ropsten” for your network.
+2. Name your app (we chose “My First NFT!”), offer a short description, select “Ethereum” for the Chain, and choose “Goerli” for your network. Since the merge the other testnets have been deprecated.
 
 ![Configure and publish your app](./configure-and-publish-your-app.png)
 
@@ -43,13 +42,13 @@ Once you’ve created an Alchemy account, you can generate an API key by creatin
 
 We need an Ethereum account to send and receive transactions. For this tutorial, we’ll use MetaMask, a virtual wallet in the browser used to manage your Ethereum account address. If you want to understand more about how transactions on Ethereum work, check out [this page](/developers/docs/transactions/) from the Ethereum foundation.
 
-You can download and create a MetaMask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Ropsten Test Network” in the upper right (so that we’re not dealing with real money).
+You can download and create a MetaMask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Goerli Test Network” in the upper right (so that we’re not dealing with real money).
 
-![Set Ropsten as your network](./metamask-ropsten.png)
+![Set Goerli as your network](./metamask-goerli.png)
 
 ## Step 4: Add ether from a Faucet {#step-4-add-ether-from-a-faucet}
 
-In order to deploy our smart contract to the test network, we’ll need some fake ETH. To get ETH you can go to the [FaucETH](https://fauceth.komputing.org) and enter your Ropsten account address, click “Request funds”, then select “Ethereum Testnet Ropsten” in the dropdown and finally click “Request funds” button again. You should see ETH in your MetaMask account soon after!
+In order to deploy our smart contract to the test network, we’ll need some fake ETH. To get ETH you can go to the [Goerli Faucet](https://goerlifaucet.com/) hosted by Alchemy, log in and enter your account address, click “Send Me ETH”. You should see ETH in your MetaMask account soon after!
 
 ## Step 5: Check your Balance {#check-balance}
 
@@ -57,7 +56,7 @@ To double check our balance is there, let’s make an [eth_getBalance](https://d
 
     `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
 
-**NOTE: **This result is in wei, not ETH. Wei is used as the smallest denomination of ether. The conversion from wei to ETH is 1 eth = 10<sup>18</sup> wei. So if we convert 0xde0b6b3a7640000 to decimal we get 1\*10<sup>18</sup> wei, which equals 1 ETH.
+> **Note** This result is in wei, not ETH. Wei is used as the smallest denomination of ether. The conversion from wei to ETH is 1 eth = 10<sup>18</sup> wei. So if we convert 0xde0b6b3a7640000 to decimal we get 1\*10<sup>18</sup> wei, which equals 1 ETH.
 
 Phew! Our fake money is all there.
 
@@ -231,10 +230,10 @@ Then, create a `.env` file in the root directory of our project, and add your Me
 
 Your `.env` should now look like this:
 
-    API_URL="https://eth-ropsten.alchemyapi.io/v2/your-api-key"
+    API_URL="https://eth-goerli.g.alchemy.com/v2/your-api-key"
     PRIVATE_KEY="your-metamask-private-key"
 
-To actually connect these to our code, we’ll reference these variables in our hardhat.config.js file on step 13.
+To actually connect these to our code, we’ll reference these variables in our hardhat.config.js file in step 13.
 
 <InfoBanner isWarning={true}>
 Don't commit <code>.env</code>! Please make sure never to share or expose your <code>.env</code> file with anyone, as you are compromising your secrets in doing so. If you are using version control, add your <code>.env</code> to a <a href="https://git-scm.com/docs/gitignore">gitignore</a> file.
@@ -266,10 +265,10 @@ Update your hardhat.config.js to look like this:
     const { API_URL, PRIVATE_KEY } = process.env;
     module.exports = {
        solidity: "0.8.1",
-       defaultNetwork: "ropsten",
+       defaultNetwork: "goerli",
        networks: {
           hardhat: {},
-          ropsten: {
+          goerli: {
              url: API_URL,
              accounts: [`0x${PRIVATE_KEY}`]
           }
@@ -324,26 +323,26 @@ Calling deploy() on a ContractFactory will start the deployment, and return a Pr
 
 We’re finally ready to deploy our smart contract! Navigate back to the root of your project directory, and in the command line run:
 
-    npx hardhat --network ropsten run scripts/deploy.js
+    npx hardhat --network goerli run scripts/deploy.js
 
 You should then see something like:
 
-    Contract deployed to address: 0x81c587EB0fE773404c42c1d2666b5f557C470eED
+    Contract deployed to address: 0x4C5266cCc4b3F426965d2f51b6D910325a0E7650
 
-If we go to the [Ropsten etherscan](https://ropsten.etherscan.io/) and search for our contract address we should be able to see that it has been deployed successfully. If you can't see it immediately, please wait a while as it can take some time. The transaction will look something like this:
+If we go to the [Goerli etherscan](https://goerli.etherscan.io/) and search for our contract address we should be able to see that it has been deployed successfully. If you can't see it immediately, please wait a while as it can take some time. The transaction will look something like this:
 
-![View your transaction address on Etherscan](./etherscan-transaction.png)
+![View your transaction address on Etherscan](./etherscan-goerli-contract-creation.png)
 
 The From address should match your MetaMask account address and the To address will say “Contract Creation.” If we click into the transaction, we’ll see our contract address in the To field:
 
-![View your contract address on Etherscan](./etherscan-contract.png)
+![View your contract address on Etherscan](./etherscan-goerli-tx-details.png)
 
-Yasssss! You just deployed your NFT smart contract to the Ethereum chain!
+Yasssss! You just deployed your NFT smart contract to the Ethereum (testnet) chain!
 
 To understand what’s going on under the hood, let’s navigate to the Explorer tab in our [Alchemy dashboard](https://dashboard.alchemyapi.io/explorer). If you have multiple Alchemy apps make sure to filter by app and select “MyNFT”.
 
-![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer.png)
+![View calls made “under the hood” with Alchemy’s Explorer Dashboard](./alchemy-explorer-goerli.png)
 
-Here you’ll see a handful of JSON-RPC calls that Hardhat/Ethers made under the hood for us when we called the .deploy() function. Two important ones to call out here are [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction), which is the request to actually write our smart contract onto the Ropsten chain, and [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash) which is a request to read information about our transaction given the hash (a typical pattern when sending transactions). To learn more about sending transactions, check out this tutorial on [sending transactions using Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
+Here you’ll see a handful of JSON-RPC calls that Hardhat/Ethers made under the hood for us when we called the .deploy() function. Two important ones to call out here are [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction), which is the request to actually write our smart contract onto the Goerli chain, and [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash) which is a request to read information about our transaction given the hash (a typical pattern when sending transactions). To learn more about sending transactions, check out this tutorial on [sending transactions using Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
 
 That’s all for Part 1 of this tutorial. In [Part 2, we’ll actually interact with our smart contract by minting an NFT](/developers/tutorials/how-to-mint-an-nft/), and in [Part 3 we’ll show you how to view your NFT in your Ethereum wallet](/developers/tutorials/how-to-view-nft-in-metamask/)!

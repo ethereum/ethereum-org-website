@@ -2,7 +2,6 @@
 title: "¿Qué es Web3 y por qué es importante?"
 description: Una introducción a la Web3 —la próxima evolución de Internet— y por qué importa.
 lang: es
-sidebar: true
 ---
 
 # Introducción a Web3 {#introduction}
@@ -50,7 +49,7 @@ Aunque es difícil proporcionar una definición estática de lo que es la Web3, 
 - **Web3 está descentralizada:** en lugar de grandes extensiones de Internet controladas y apropiadas por entidades centralizadas, la propiedad se distribuye entre sus constructores y usuarios.
 - **Web3 no tiene permisos:** todos tienen el mismo acceso para participar en la Web3, y nadie queda excluido.
 - **Web3 tiene pagos nativos:** utiliza criptomonedas para gastar y enviar dinero en línea en lugar de depender de la infraestructura obsoleta de los bancos y procesadores de pagos.
-- <**Web3 no depende de la confianza:** opera utilizando incentivos y mecanismos económicos en lugar de depender de terceros de confianza.
+- **Web3 no depende de la confianza:** opera utilizando incentivos y mecanismos económicos en lugar de depender de terceros de confianza.
 
 ### ¿Por qué es importante Web3? {#why-is-web3-important}
 

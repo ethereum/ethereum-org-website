@@ -108,6 +108,7 @@ const HomeLogoNavLink = styled(Link)`
 
 const HomeLogo = styled(HomeIcon)`
   width: 22px;
+  height: 35px;
   opacity: 0.85;
   &:hover {
     opacity: 1;
@@ -422,7 +423,7 @@ const Nav: React.FC<IProps> = ({ path }) => {
     <NavContainer>
       <StyledNav aria-label={translateMessageId("nav-primary", intl)}>
         <NavContent>
-          <HomeLogoNavLink to="/">
+          <HomeLogoNavLink to="/" aria-label={translateMessageId("home", intl)}>
             <HomeLogo />
           </HomeLogoNavLink>
           {/* Desktop */}

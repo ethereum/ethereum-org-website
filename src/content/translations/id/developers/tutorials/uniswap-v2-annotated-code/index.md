@@ -2,7 +2,6 @@
 title: "Panduan Lengkap Kontrak Uniswap-v2"
 description: Bagaimana cara kerja kontrak Uniswap-v2? Mengapa ditulis dengan cara tersebut?
 author: Ori Pomerantz
-sidebar: true
 tags:
   - "solidity"
   - "uniswap"
