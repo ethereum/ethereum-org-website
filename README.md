@@ -1453,6 +1453,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/SkyWarrior123"><img src="https://avatars.githubusercontent.com/u/102062194?v=4?s=100" width="100px;" alt="SkyWarrior123"/><br /><sub><b>SkyWarrior123</b></sub></a><br /><a href="#content-SkyWarrior123" title="Content">🖋</a></td>
       <td align="center"><a href="http://yashovardhan.dev"><img src="https://avatars.githubusercontent.com/u/21066442?v=4?s=100" width="100px;" alt="Yashovardhan Agrawal"/><br /><sub><b>Yashovardhan Agrawal</b></sub></a><br /><a href="#data-yashovardhan" title="Data">🔣</a></td>
     </tr>
+    <tr>
+      <td align="center"><a href="https://github.com/cheeky-gorilla"><img src="https://avatars.githubusercontent.com/u/76262359?v=4?s=100" width="100px;" alt="cheeky-gorilla"/><br /><sub><b>cheeky-gorilla</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Acheeky-gorilla" title="Bug reports">🐛</a></td>
+    </tr>
   </tbody>
 </table>
 
