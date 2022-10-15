@@ -143,7 +143,6 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
     })
   }, [embla, setScrollSnaps, onSelect])
 
-  // TODO: fix colors
   return (
     <Box
       position="relative"
@@ -152,7 +151,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
       borderStyle="solid"
       borderRadius="0.3rem"
       w="full"
-      bg="slider.bg"
+      bg="sliderBg"
     >
       <Box overflow="hidden" ref={emblaRef}>
         <Flex>{children}</Flex>
@@ -168,25 +167,27 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
         <IconButton
           aria-label="MdChevronLeft"
           onClick={scrollPrev}
-          disabled={!prevBtnEnabled}
+          // disabled={!prevBtnEnabled}
           icon={<MdChevronLeft fontSize={24} focusable={true} />}
           isRound
           mr="0.8rem"
           _hover={{ boxShadow: "none" }}
           _focus={{ boxShadow: "none" }}
-          bg="stakingBlue"
+          bg={prevBtnEnabled ? "sliderBtnBg" : "sliderBtnBgDisabled"}
           height="40px"
+          color={prevBtnEnabled ? "sliderBtnColor" : "sliderBtnColorDisabled"}
         />
         <IconButton
           aria-label="MdChevronRight"
           onClick={scrollNext}
-          disabled={!nextBtnEnabled}
+          // disabled={!nextBtnEnabled}
           icon={<MdChevronRight fontSize={24} focusable={true} />}
           isRound
           _hover={{ boxShadow: "none" }}
           _focus={{ boxShadow: "none" }}
-          bg="stakingBlue"
+          bg={nextBtnEnabled ? "sliderBtnBg" : "sliderBtnBgDisabled"}
           height="40px"
+          color={nextBtnEnabled ? "sliderBtnColor" : "sliderBtnColorDisabled"}
         />
       </Flex>
       <Center>
@@ -194,7 +195,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
           <Box
             key={index}
             backgroundColor={
-              index === selectedIndex ? "slider.dotActive" : "slider.dot"
+              index === selectedIndex ? "sliderDotActive" : "sliderDot"
             }
             border={0}
             borderRadius="50%"
