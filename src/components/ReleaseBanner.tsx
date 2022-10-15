@@ -50,12 +50,13 @@ const BannerWrapper: React.FC<BannerWrapperProps> = ({
       </Center>
       <IconButton
         aria-label="Close Banner"
-        icon={<MdClose />}
+        icon={<MdClose fontSize={24} />}
         onClick={onClose}
         position="absolute"
         top="1.5"
         right="1.5"
         size="xs"
+        _hover={{ background: "background", color: "primary" }}
       />
     </BannerNotification>
   )
