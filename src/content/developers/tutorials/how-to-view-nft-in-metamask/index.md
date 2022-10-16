@@ -19,7 +19,7 @@ As a prerequisite, you should already have MetaMask on mobile installed, and it 
 
 At the top of the app, press the “Wallet” button, after which you’ll be prompted to select a network. As our NFT was minted on the Goerli network, you’ll want to select Goerli as your network.
 
-![How to set Goerli as your network on MetaMask Mobile](./ropstenMetamask.gif)
+![How to set Goerli as your network on MetaMask Mobile](./goerliMetamask.gif)
 
 ## Step 2: Add your collectable to MetaMask {#add-nft-to-metamask}
 
