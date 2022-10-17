@@ -278,7 +278,7 @@ Companies offering fake certificates for university degrees are reportedly a bil
 
 Tokengating is a way of restricting access to something and using tokens as a way to unlock access. These things can vary hugely based on the platform but popular examples are gated content, private chat servers, and, in the world of ecommerce, exclusive products.   
 
-A platform that does tokengating will typically ask you to connect your wallet to prove you own the required tokens. If you have the tokens you need, you'll get access. If not, the thing will remain gated. NFTs are a great way to do this because of their uniqueness – you can't fake ownership to get the thing. 
+A platform that does tokengating will typically ask you to connect your wallet to prove you own the required NFT. If you have the NFT you need, you'll get access. If not, the thing will remain gated. NFTs are a great way to do this because of their uniqueness – you can't fake ownership to get the thing. 
 
 Since NFTs are on Ethereum, they can be used to unlock Ethereum tokengates on any platform that implements them. A single NFT you own could unlock gated content, private chat servers, and exclusive products across completely different websites and applications.
 
