@@ -574,5 +574,14 @@
     "description": "The  PyChain 2022 is th virtual blockchain developer conference targeting the Python ecosystem and Python devs.",
     "startDate": "2022-11-15",
     "endDate": "2022-11-15"
+  },
+  {
+    "title": "ETH Bangkok",
+    "to": "https://www.ethbkk.com/",
+    "sponsor": null,
+    "location": "Square Srinakarin Bangkok, Thailand",
+    "description": "A decentralized Journey to redefine blockchain technology in Thailand.",
+    "startDate": "2023-04-06",
+    "endDate": "2023-04-09"
   }
 ]
