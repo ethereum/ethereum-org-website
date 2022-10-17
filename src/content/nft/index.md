@@ -280,7 +280,7 @@ Tokengating is a way of restricting access to something and using tokens as a wa
 
 A platform that does tokengating will typically ask you to connect your wallet to prove you own the required tokens. If you have the tokens you need, you'll get access. If not, the thing will remain gated. NFTs are a great way to do this because of their uniqueness – you can't fake ownership to get the thing. 
 
-And because NFTs are on Ethereum, your NFTs can unlock Ethereum tokengates on any platform that implements them. The one NFT you own could unlock the gated content, private chat servers, and exclusive products across completely different websites and applications.
+Since NFTs are on Ethereum, they can be used to unlock Ethereum tokengates on any platform that implements them. A single NFT you own could unlock gated content, private chat servers, and exclusive products across completely different websites and applications.
 
 If minting and distributing NFTs is about community-generation or community digitisation, tokengating is about community nurturing. It sees NFTs used more as a tool for membership or loyalty – and a great way to reliably deliver the rewards that come with it. 
 
