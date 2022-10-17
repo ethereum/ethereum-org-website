@@ -1,24 +1,24 @@
 ---
-title: Introduction to smart contracts
-description: An overview of smart contracts, focussing on their unique characteristics and limitations.
-lang: en
+title: Введение в смарт-контракты
+description: Обзор смарт-контрактов с акцентом на их уникальные характеристики и ограничения.
+lang: ru
 ---
 
-## What is a smart contract? {#what-is-a-smart-contract}
+## Что такое смарт-контракт? {#what-is-a-smart-contract}
 
-A "smart contract" is simply a program that runs on the Ethereum blockchain. It's a collection of code (its functions) and data (its state) that resides at a specific address on the Ethereum blockchain.
+«Умный контракт» — это просто программа, работающая на блокчейне Ethereum. Это набор кода (его функций) и данных (его состояния), который находится по определенному адресу в блокчейне Ethereum.
 
-Smart contracts are a type of [Ethereum account](/developers/docs/accounts/). This means they have a balance and can be the target of transactions. However they're not controlled by a user, instead they are deployed to the network and run as programmed. User accounts can then interact with a smart contract by submitting transactions that execute a function defined on the smart contract. Smart contracts can define rules, like a regular contract, and automatically enforce them via the code. Smart contracts cannot be deleted by default, and interactions with them are irreversible.
+Смарт-контракты — это тип [аккаунта Ethereum](/developers/docs/accounts/). Это означает, что они имеют баланс и могут быть целью транзакций. Однако они не контролируются пользователем, вместо этого они развертываются в сети и работают, как запрограммировано. Затем учетные записи пользователей могут взаимодействовать со смарт-контрактом, отправляя транзакции, которые выполняют функцию, определенную в смарт-контракте. Смарт-контракты могут определять правила, как и обычный контракт, и автоматически применять их с помощью кода. Смарт-контракты нельзя удалить по умолчанию, а взаимодействия с ними необратимы. 
 
-## Prerequisites {#prerequisites}
+## Предпосылки {#prerequisites}
 
-If you're just getting started or looking for a less technical introduction, we recommend our [introduction to smart contracts](/smart-contracts/).
+Если вы только начинаете или ищете менее техническое введение, мы рекомендуем наше [введение в смарт-контракты](/smart-contracts/). 
 
-Make sure you've read up on [accounts](/developers/docs/accounts/), [transactions](/developers/docs/transactions/) and the [Ethereum virtual machine](/developers/docs/evm/) before jumping into the world of smart contracts.
+Убедитесь, что вы прочиталиn [accounts](/developers/docs/accounts/), [transactions](/developers/docs/transactions/) и [Ethereum virtual machine](/developers/docs/evm/) прежде чем погрузиться в мир смарт-контрактов.
 
-## A digital vending machine {#a-digital-vending-machine}
+## Цифровой торговый автомат {#a-digital-vending-machine}
 
-Perhaps the best metaphor for a smart contract is a vending machine, as described by [Nick Szabo](https://unenumerated.blogspot.com/). With the right inputs, a certain output is guaranteed.
+Возможно, лучшая метафора смарт-контракта — это торговый автомат, описанный [Ником Сабо] (https://unenumerated.blogspot.com/). При правильном входе гарантирован определенный результат. 
 
 To get a snack from a vending machine:
 
@@ -26,77 +26,76 @@ To get a snack from a vending machine:
 money + snack selection = snack dispensed
 ```
 
-This logic is programmed into the vending machine.
+Эта логика запрограммирована в торговом автомате. 
 
-A smart contract, like a vending machine, has logic programmed into it. Here's a simple example of how this vending machine would look if it were a smart contract written in Solidity:
+Смарт-контракт, как и торговый автомат, имеет запрограммированную логику. Вот простой пример того, как этот торговый автомат выглядел бы, если бы он был смарт-контрактом, написанным на Solidity: 
 
 ```solidity
 pragma solidity 0.8.7;
 
 contract VendingMachine {
 
-    // Declare state variables of the contract
+    // Объявить переменные состояния контракта
     address public owner;
     mapping (address => uint) public cupcakeBalances;
 
-    // When 'VendingMachine' contract is deployed:
-    // 1. set the deploying address as the owner of the contract
-    // 2. set the deployed smart contract's cupcake balance to 100
+    // При развертывании контракта «VendingMachine»:
+    // 1. установить адрес развертывания в качестве владельца контракта (пекарни)
+    // 2. установить баланс (количество кексов) в смарт-контракте на 100
     constructor() {
         owner = msg.sender;
         cupcakeBalances[address(this)] = 100;
     }
 
-    // Allow the owner to increase the smart contract's cupcake balance
+    // Разрешить владельцу увеличить количество кексов в пекарне
     function refill(uint amount) public {
-        require(msg.sender == owner, "Only the owner can refill.");
+        require(msg.sender == owner, "Только владелец может пополнить.");
         cupcakeBalances[address(this)] += amount;
     }
 
-    // Allow anyone to purchase cupcakes
+    // Разрешить всем покупать кексы
     function purchase(uint amount) public payable {
-        require(msg.value >= amount * 1 ether, "You must pay at least 1 ETH per cupcake");
-        require(cupcakeBalances[address(this)] >= amount, "Not enough cupcakes in stock to complete this purchase");
+        require(msg.value >= amount * 1 ether, "Вы должны заплатить не менее 1 ETH за кекс");
+        require(cupcakeBalances[address(this)] >= amount, "Недостаточно капкейков на в пекарне для совершения этой покупки");
         cupcakeBalances[address(this)] -= amount;
         cupcakeBalances[msg.sender] += amount;
     }
 }
 ```
 
-Like how a vending machine removes the need for a vendor employee, smart contracts can replace intermediaries in many industries.
+Подобно тому, как торговый автомат устраняет необходимость в работнике пекарни, смарт-контракты могут заменить посредников во многих отраслях. 
 
-## Permissionless {#permissionless}
+## Без цензуры {#permissionless}
 
-Anyone can write a smart contract and deploy it to the network. You just need to learn how to code in a [smart contract language](/developers/docs/smart-contracts/languages/), and have enough ETH to deploy your contract. Deploying a smart contract is technically a transaction, so you need to pay [Gas](/developers/docs/gas/) in the same way you need to pay gas for a simple ETH transfer. However, gas costs for contract deployment are far higher.
+Любой может написать смарт-контракт и развернуть его в сети. Вам просто нужно научиться программировать на [языке смарт-контрактов](/developers/docs/smart-contracts/languages/) и иметь достаточно ETH для развертывания вашего контракта. Развертывание смарт-контракта технически является транзакцией, поэтому вам нужно заплатить [Gas](/developers/docs/gas/) так же, как вы платите за газ за простой перевод ETH. Однако затраты на газ для контрактного развертывания намного выше. 
 
-Ethereum has developer-friendly languages for writing smart contracts:
+Ethereum имеет удобные для разработчиков языки для написания смарт-контрактов: 
 
 - Solidity
 - Vyper
 
 [More on languages](/developers/docs/smart-contracts/languages/)
 
-However, they must be compiled before they can be deployed so that Ethereum's virtual machine can interpret and store the contract. [More on compilation](/developers/docs/smart-contracts/compiling/)
+Однако они должны быть скомпилированы до того, как их можно будет развернуть, чтобы виртуальная машина Ethereum могла интерпретировать и хранить контракт. [Подробнее о компиляции](/developers/docs/smart-contracts/compiling/) 
 
-## Composability {#composability}
+## Компонуемость {#composability}
 
-Smart contracts are public on Ethereum and can be thought of as open APIs. This means you can call other smart contracts in your own smart contract to greatly extend what's possible. Contracts can even deploy other contracts.
+Смарт-контракты общедоступны в Ethereum и могут рассматриваться как открытые API. Это означает, что вы можете вызывать другие смарт-контракты в своем собственном смарт-контракте, чтобы значительно расширить возможности. Контракты могут даже развертывать другие контракты. 
 
-Learn more about [smart contract composability](/developers/docs/smart-contracts/composability/).
+Узнать больше о [smart contract composability](/developers/docs/smart-contracts/composability/).
 
-## Limitations {#limitations}
+## Ограничения {#limitations}
 
-Smart contracts alone cannot get information about "real-world" events because they can't send HTTP requests. This is by design. Relying on external information could jeopardise consensus, which is important for security and decentralization.
+Смарт-контракты сами по себе не могут получить информацию о «реальных» событиях, потому что они не могут отправлять HTTP-запросы. Это по дизайну. Опора на внешнюю информацию может поставить под угрозу консенсус, который важен для безопасности и децентрализации. 
 
-There are ways to get around this using [oracles](/developers/docs/oracles/).
+Есть способы обойти это с помощью [оракулов](/developers/docs/oracles/).
 
-Another limitation of smart contracts is the maximum contract size. A smart contract can be a maximum of 24KB or it will run out of gas. This can be circumnavigated by using [The Diamond Pattern](https://eips.ethereum.org/EIPS/eip-2535).
+Еще одним ограничением смарт-контрактов является максимальный размер контракта. Смарт-контракт может иметь размер не более 24 КБ, иначе у него закончится газ. Это можно обойти, используя  [The Diamond Pattern](https://eips.ethereum.org/EIPS/eip-2535).
 
-## Multisig contracts {#multisig}
+## Мультиподписные контракты {#multisig}
+Контракты с несколькими подписями — это учетные записи смарт-контрактов, которые требуют нескольких действительных подписей для выполнения транзакции. Это очень полезно, чтобы избежать единых точек отказа для контрактов, содержащих значительное количество эфира или других токенов. Мультиподписи также разделяют ответственность за выполнение контракта и управление ключами между несколькими сторонами и предотвращают потерю одного закрытого ключа, ведущую к необратимой потере средств. По этим причинам мультиподписные контракты можно использовать для простого управления DAO. Мультиподписи требуют N подписей из M возможных приемлемых подписей (где N ≤ M и M > 1) для выполнения. Обычно используются «N = 3, M = 5» и «N = 4, M = 7». Мультиподпись 4/7 требует четырех из семи возможных действительных подписей. Это означает, что средства все еще можно получить, даже если три подписи будут потеряны. В этом случае это также означает, что большинство держателей ключей должны согласиться и подписать договор, чтобы контракт был выполнен. 
 
-Multisig (multiple-signature) contracts are smart contract accounts that require multiple valid signatures to execute a transaction. This is very useful for avoiding single points of failure for contracts holding substantial amounts of ether or other tokens. Multisigs also divide responsibility for contract execution and key management between multiple parties and prevent the loss of a single private key leading to irreversible loss of funds. For these reasons, multisig contracts can be used for simple DAO governance. Multisigs require N signatures out of M possible acceptable signatures (where N ≤ M, and M > 1) in order to execute. `N = 3, M = 5` and `N = 4, M = 7` are commonly used. A 4/7 multisig requires four out of seven possible valid signatures. This means the funds are still retrievable even if three signatures are lost. In this case, it also means that the majority of key-holders must agree and sign in order for the contract to execute.
-
-## Smart contract resources {#smart-contract-resources}
+## Ресурсы смарт-контракта {#smart-contract-resources}
 
 **OpenZeppelin Contracts -** **_Library for secure smart contract development._**
 
@@ -109,8 +108,8 @@ Multisig (multiple-signature) contracts are smart contract accounts that require
 - [Dappsys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
-## Further reading {#further-reading}
+## читайте также {#further-reading}
 
-- [Smart Contracts: The Blockchain Technology That Will Replace Lawyers](https://blockgeeks.com/guides/smart-contracts/) _– Blockgeeks_
-- [Best Practices for Smart Contract Development](https://yos.io/2019/11/10/smart-contract-development-best-practices/) _– Nov 10, 2019 - Yos Riady_
-- [Clean contracts - a guide on smart contract patterns & practices](https://www.wslyvh.com/clean-contracts/) _– Jul 30, 2020 - wslyvh_
+- [Смарт-контракты: технология блокчейн, которая заменит юриста](https://blockgeeks.com/guides/smart-contracts/) _– Blockgeeks_
+- [Лучшие практики разработки смарт-контрактов](https://yos.io/2019/11/10/smart-contract-development-best-practices/) _– Nov 10, 2019 - Yos Riady_
+- [Чистые контракты — руководство по шаблонам и практикам смарт-контрактов](https://www.wslyvh.com/clean-contracts/) _– Jul 30, 2020 - wslyvh_
