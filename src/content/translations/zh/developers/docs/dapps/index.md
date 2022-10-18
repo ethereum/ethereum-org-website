@@ -2,8 +2,6 @@
 title: dapp 介绍
 description:
 lang: zh
-sidebar: true
-preMergeBanner: true
 ---
 
 去中心化应用 (dapp) 是在去中心化网络上构建的应用程序，结合了[智能合约](/developers/docs/smart-contracts/)和前端用户界面。 请注意，以太坊智能合约具有可访问性和透明性——就像开放 API 一样 ——所以你的 dapp 里甚至可以包含其他人写过的智能合约。

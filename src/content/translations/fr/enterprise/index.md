@@ -2,7 +2,6 @@
 title: Réseau principal Ethereum pour les entreprises
 description: Guides, articles et outils concernant les applications d'entreprise sur la blockchain publique Ethereum
 lang: fr
-sidebar: true
 ---
 
 # Réseau principal Ethereum pour les entreprises {#ethereum-for-enterprise}

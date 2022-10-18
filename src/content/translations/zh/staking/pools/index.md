@@ -4,7 +4,6 @@ description: 简要介绍如何开始以太币联合质押
 lang: zh
 template: staking
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../../assets/staking/leslie-pool.png
 alt: 莱斯利犀牛在泳池中游泳。
 sidebarDepth: 2
@@ -67,17 +66,10 @@ summaryPoints:
 </ExpandableCard>
 
 <ExpandableCard title="什么时候可以取出我的质押">
-目前，无法从信标链上的验证者提取资金，因而限制了实际<em>兑换</em>你的流动性代币，以获得锁定在共识层中的以太币奖励的能力。
 
-或者，使用 ERC-20 流动性代币的资金池允许用户在公开市场交易该代币，从而使你能够有效地“取款”，而无需将以太币从信标链中实际取出。
-</ExpandableCard>
+目前，无法从以太坊验证者中提取资金，这限制了你实际兑换流动池代币以获得锁定在共识层中的 ETH 奖励的能力。
 
-<ExpandableCard title="联合质押人是否需要为合并做任何事？">
-联合质押人<strong>无需为合并做任何准备</strong>。
-
-但是，随着合并的临近，请保持高度警惕，以免遭到诈骗。 **你无需升级你的以太币或质押的以太币代币**即可过渡到权益证明。
-
-详细了解 [合并]（/升级/）
+或者，使用 ERC-20 流动池代币的资金池允许用户在公开市场上交易该代币，允许你出售你的质押店铺位置，有效地“取款”，而无需实际从质押合约中移除 ETH。
 </ExpandableCard>
 
 <ExpandableCard title="这与交易所质押有何不同？">

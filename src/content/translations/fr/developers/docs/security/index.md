@@ -2,7 +2,6 @@
 title: Sécurité
 description: Considérations de sécurité pour les développeurs Ethereum
 lang: fr
-sidebar: true
 ---
 
 Les contrats intelligents Ethereum sont extrêmement flexibles, capables à la fois de détenir de grandes quantités de jetons (souvent plus de 1 milliard de $) et d'exécuter une logique immuable sur du code intelligent précédemment déployé. Alors que cela a créé un écosystème dynamique et créatif de contrats intelligents interconnectés et trustless, c'est aussi l'écosystème parfait pour attirer les attaquants qui cherchent à en tirer profit en exploitant des vulnérabilités dans les contrats intelligents et des comportements inattendus dans Ethereum. Le code d'un contrat intelligent ne peut _habituellement_ pas être modifié pour corriger les défauts de sécurité, les actifs volés à partir de contrats intelligents sont irrécupérables et extrêmement difficiles à tracer. Le montant total volé ou perdu en raison de problèmes sur les contrats intelligents atteint facilement le milliard de dollars. Voici quelques-uns des problèmes les plus importants dus à des erreurs de codage de contrat intelligent :

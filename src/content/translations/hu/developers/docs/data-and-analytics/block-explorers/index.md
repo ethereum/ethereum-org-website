@@ -2,7 +2,6 @@
 title: Blokk felfedezők
 description: Egy bevezetés a blokkfelfedezőkbe, a blokklánc adatok portáljába, ahol információs lekérdezéseket indíthatsz tranzakciókról, számlákról, szerződésekről és más egyébről.
 lang: hu
-sidebar: true
 sidebarDepth: 3
 ---
 

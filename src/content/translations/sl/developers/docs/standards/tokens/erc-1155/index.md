@@ -2,7 +2,6 @@
 title: Standard za multižetone ERC-1155
 description:
 lang: sl
-sidebar: true
 ---
 
 ## Uvod {#introduction}

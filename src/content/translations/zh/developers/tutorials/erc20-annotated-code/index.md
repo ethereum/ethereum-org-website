@@ -3,7 +3,6 @@ title: "ERC-20 合约概览"
 description: OpenZepelin 的 ERC-20 合约内容和解读
 author: Ori Pomerantz
 lang: zh
-sidebar: true
 tags:
   - "solidity"
   - "erc-20"

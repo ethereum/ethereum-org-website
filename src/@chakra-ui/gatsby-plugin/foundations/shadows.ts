@@ -10,7 +10,7 @@ const shadows = {
     dark: "0 14px 66px hsla(0,0%,96.1%,.07), 0 10px 17px hsla(0,0%,96.1%,.03), 0 4px 7px hsla(0,0%,96.1%,.05)",
   },
   tableItemBox: {
-    light: " 0 1px 1px rgba(0, 0, 0, 0.1)",
+    light: "0 1px 1px rgba(0, 0, 0, 0.1)",
     dark: "0 1px 1px hsla(0,0%,100%,.1)",
   },
 }

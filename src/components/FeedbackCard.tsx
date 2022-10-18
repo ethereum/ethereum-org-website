@@ -1,15 +1,15 @@
 // Library imports
 import React, { ReactNode, useState } from "react"
+import { Icon } from "@chakra-ui/react"
 import styled from "@emotion/styled"
 // Component imports
+import Button from "./Button"
 import Translation from "./Translation"
 // SVG imports
 import ThumbsUp from "../assets/feedback-thumbs-up.svg"
 // Utility imports
 import { trackCustomEvent } from "../utils/matomo"
-// import { getFeedbackSurveyUrl } from "../utils/getFeedbackSurveyUrl"
 import { useSurvey } from "../hooks/useSurvey"
-import Button from "./Button"
 
 const Card = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.border};
@@ -52,8 +52,7 @@ const FeedbackCard: React.FC<IProps> = ({
   className,
 }) => {
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
-  const [isHelpful, setIsHelpful] = useState(false)
-  const surveyUrl = useSurvey(feedbackSubmitted, isHelpful)
+  const surveyUrl = useSurvey(feedbackSubmitted)
 
   const location = typeof window !== "undefined" ? window.location.href : ""
   const isTutorial = location.includes("tutorials")
@@ -74,7 +73,6 @@ const FeedbackCard: React.FC<IProps> = ({
       eventAction: `Clicked`,
       eventName: String(choice),
     })
-    setIsHelpful(choice)
     setFeedbackSubmitted(true)
   }
   const handleSurveyOpen = (): void => {
@@ -100,14 +98,16 @@ const FeedbackCard: React.FC<IProps> = ({
             <>
               <Button
                 variant="outline-color"
-                leftIcon={<ThumbsUp />}
+                leftIcon={<Icon as={ThumbsUp} w={6} h={6} />}
                 onClick={() => handleSubmit(true)}
               >
                 <Translation id="yes" />
               </Button>
               <Button
                 variant="outline-color"
-                leftIcon={<ThumbsUp className="flip" />}
+                leftIcon={
+                  <Icon as={ThumbsUp} w={6} h={6} transform="scaleY(-1)" />
+                }
                 onClick={() => handleSubmit(false)}
               >
                 <Translation id="no" />

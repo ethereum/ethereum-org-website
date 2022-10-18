@@ -2,7 +2,6 @@
 title: Redes
 description: Una descripción general de las redes de Ethereum, así como de dónde obtener ether (ETH) en la red de prueba y cómo probar tu aplicación.
 lang: es
-sidebar: true
 ---
 
 Como Ethereum es un protocolo, puede haber múltiples "redes" que se atengan a este protocolo pero no interactúen entre sí.

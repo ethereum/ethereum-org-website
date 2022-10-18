@@ -3,7 +3,6 @@ title: Elenco di controllo per l'integrazione dei token
 description: Elenco di controllo degli aspetti da tenere presente quando si interagisce con i token
 author: "Trailofbits"
 lang: it
-sidebar: true
 tags:
   - "Solidity"
   - "Smart Contract"

@@ -2,7 +2,6 @@
 title: Smart contract
 description: Un'introduzione semplificata agli smart contract
 lang: it
-sidebar: true
 ---
 
 # Introduzione agli smart contract {#introduction-to-smart-contracts}

@@ -3,7 +3,6 @@ title: "ERC-20 Contract Walk-Through"
 description: What is in the OpenZeppelin ERC-20 contract and why is it there?
 author: Ori Pomerantz
 lang: en
-sidebar: true
 tags: ["solidity", "erc-20"]
 skill: beginner
 published: 2021-03-09

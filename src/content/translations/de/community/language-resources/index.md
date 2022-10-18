@@ -1,7 +1,6 @@
 ---
 title: Sprachressourcen
 description: Ressourcen in nicht englischer Sprache, um mehr über Ethereum zu erfahren
-sidebar: true
 lang: de
 ---
 
@@ -17,7 +16,7 @@ Kennen Sie eine Bildungsressource in Ihrer Sprache? [Eröffnen Sie ein Ticket](h
 
 ## Ressourcen von Ethereum.org {#ethereum-org}
 
-Ethereum.org ist in über 40 Sprachen übersetzt, die Sie auf unserer [Sprachenseite](/languages) finden können.
+Ethereum.org wird muttersprachlich in über 40 Sprachen übersetzt, die Sie auf unserer [Sprachenseite](/languages) finden.
 
 Wenn Sie zweisprachig sind und uns helfen möchten, mehr Menschen zu erreichen, können Sie sich auch am [Übersetzungprogramm von ethereum.org](/contributing/translation-program/#translation-program) beteiligen und uns bei der Übersetzung der Website helfen.
 
@@ -30,7 +29,7 @@ Wenn Sie zweisprachig sind und uns helfen möchten, mehr Menschen zu erreichen, 
 - [BeInCrypto](http://www.beincrypto.com.br) – Nachrichten und Artikel über Kryptowährungen, einschließlich einer Liste von verfügbaren Handelsplätzen in Brasilien
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) – brasilianische Version von Cointelegraph, einer wichtigen Nachrichtenquelle für Kryptowährungen
 - [Livecoins](http://www.livecoins.com.br/ethereum) – Nachrichten zu Kryptowährungen und Tools
-- [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - Nachrichten und Berichte über Kryptowährungen
+- [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) – Nachrichten und Berichte über Kryptowährungen
 
 **Bildung**
 
@@ -46,7 +45,7 @@ Wenn Sie zweisprachig sind und uns helfen möchten, mehr Menschen zu erreichen, 
 **Allgemeine Ressourcen**
 
 - [Ethereum.cn](https://www.ethereum.cn/) – von der Community gepflegte Inhalte, die das Upgrade der Konsensschicht, alle Notizen zu den Kernentwicklungssitzungen, Layer 2 usw. umfassen
-- [EthFans](https://ethfans.org/) – Lernen Sie alles von den Grundlagen bis zu Ethereum-Themen für Fortgeschrittene
+- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) – Lernen Sie alles von den Grundlagen bis zu Ethereum-Themen für Fortgeschrittene
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) – von der Community gepflegte Inhalte, die Ethereum, DeFi, NFT, Web3-bezogenes Wissen abdecken
 - [123ETH](https://123eth.org/) – ein Portal für das Ethereum-Ökosystem
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) – kostenlose Online-Kurse über Kryptowährungen und ihre Anwendungen
@@ -60,13 +59,20 @@ Wenn Sie zweisprachig sind und uns helfen möchten, mehr Menschen zu erreichen, 
 
 **Für Entwickler**
 
-- [DappLearning](https://github.com/Dapp-Learning-DAO/Dapp-Learning) – eine Lerngruppe, um Mainstream DApp-Projekte zu studieren, wöchentlich findet ein Gedankenaustausch statt
+- [DappLearning](https://github.com/Dapp-Learning-DAO/Dapp-Learning) - eine Lerngruppe, um Mainstream-Dapp-Projekte zu studieren und jede Woche Gedanken und Anmerkungen auszutauschen
 - [LearnBlockchain](https://learnblockchain.cn/) – eine Community für Entwickler, die Informationen über die Blockchain-Technologie austauschen
 
 **Für Kryptographieforscher**
 
 - [SecbitLabs](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw) – ein WeChat-Account, in dem Kryptographie, Sicherheit usw. erklärt werden
 - [Sparkbyte](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ) – ein WeChat-Account, in dem die zk-Technologie erklärt wird
+
+### Tschechisch {#cs}
+
+- [Gwei.cz](https://gwei.cz) - Lokale Gemeinschaft für Web3, die akademische Inhalte erstellt und Veranstaltungen organisiert, sowohl online als auch persönlich
+- [Gwei.cz Leitfaden](https://prirucka.gwei.cz/) - Ethereum Leitfaden für Anfänger
+- [DAO Leitfaden](https://dao.gwei.cz/) - Leitfaden über DAOs für Anfänger
+- [Ethereum meistern](https://ipfs.infura-ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - Ethereum meistern auf Tschechisch
 
 ### Französisch {#fr}
 
@@ -78,42 +84,43 @@ Wenn Sie zweisprachig sind und uns helfen möchten, mehr Menschen zu erreichen, 
 ### Deutsch {#de}
 
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/de-de/learn/modules/blockchain-learning-solidity/) – Solidity nutzen
-- [Microsoft Learn (Smart Contracts)](https://docs.microsoft.com/de-de/learn/modules/blockchain-solidity-ethereum-smart-contracts/) – Ethereum-Smart Contracts mit Solidity schreiben
-- [Microsoft Learn (Ethereum-Netzwerke)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) – Verbindung zu Ethereum-Netzwerken herstellen und einsetzen
+- [Microsoft Learn (Intelligente Verträge)](https://docs.microsoft.com/de-de/learn/modules/blockchain-solidity-ethereum-smart-contracts/) – Intelligente Verträge von Ethereum mit Solidity schreiben
+- [Microsoft Learn (Ethereum-Netzwerke)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) – Verbindung zu Ethereum-Netzwerken herstellen und diese einsetzen
 - [Microsoft Learn (Blockchains)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) – Einstieg in die Blockchain-Entwicklung
 
 ### Italienisch {#it}
 
-- [Ethereum Italia](https://www.ethereum-italia.it/) – Ethereum-Ausbildung, Veranstaltungen und Nachrichten mit Schwerpunkt auf Smart Contracts und Blockchain-Technologie
+- [Ethereum Italia](https://www.ethereum-italia.it/) – Ethereum-Ausbildung, Veranstaltungen und Nachrichten mit Schwerpunkt auf intelligente Verträge und Blockchain-Technologie
 - [Ethereum Italia Podcast](https://www.ethereum-italia.it/podcast/) – Ethereum-Podcast auf Italienisch
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/it-it/learn/modules/blockchain-learning-solidity/) – Lernen, wie man Solidity verwendet
-- [Microsoft Learn (Smart Contracts)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) – Lernen, wie man mit Solidity Smart Contracts schreibt
-- [Microsoft Learn (DApps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) – Erstellen eine Benutzeroberfläche mit dezentralen Anwendungen
+- [Microsoft Learn (Intelligente Verträge)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) – Lernen, wie man mit Solidity intelligente Verträge schreibt
+- [Microsoft Learn (dApps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - Erstelle eine Benutzeroberfläche mit dezentralen Anwendungen
 
 ### Spanisch {#es}
 
-- [Ethereum Madrid](https://ethereummadrid.com/) – Blockchain-, DeFi- und Governance-Kurse, Veranstaltungen und Blog
+- [Ethereum Madrid](https://ethereummadrid.com/) – Blockchain-, DeFi- und Verwaltungskurse, Veranstaltungen und Blog
 - [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) – Ethereum-Leitfaden für Anfänger auf Spanisch
 - [Online-Tutorials](https://tutoriales.online/curso/solidity) – Solidity und Programmieren auf Ethereum lernen
-- [Curso Introducción a Ethereum Development](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) – Solidity-Grundlagen, Testen und Einsatz Ihres ersten Smart Contracts
-- [Curso Introducción a Seguridad y Hacking en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) – Allgemeine Schwachstellen und Sicherheitsprobleme in echten Smart Contracts verstehen
-- [Curso Introducción a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) – Lernen, wie DeFi-Smart Contracts in Solidity funktionieren und einen eigenen Automated Market Maker erstellen
+- [Einführungskurs zur Ethereum-Entwicklung](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) – Solidity-Grundlagen, Testen und Einsatz Ihres ersten intelligenten Vertrags
+- [Einführungskurs in Sicherheit und Hacking bei Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) – Allgemeine Schwachstellen und Sicherheitsprobleme in echten intelligenten Verträgen verstehen
+- [Einführungskurs zur DeFi-Entwicklung](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) – Lernen, wie intelligente Verträge von DeFi in Solidity funktionieren und einen eigenen Automated Market Maker erstellen
+- [Krypto-Universität](https://www.youtube.com/c/Cryptoversidad) - Nicht-technische Blockchain Bildung vom Anfänger bis zum Fortgeschrittenen. Lernen Sie alles über Krypto und Ethereum.
 
 ### Türkisch {#tr}
 
-- [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) – Kurs mit Schwerpunkt auf Blockchain und Kryptowährungen
+- [BTK-Akademie](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) – Kurs mit Schwerpunkt auf Blockchain und Kryptowährungen
 - [Die große Umbenennung: Was ist mit Eth2 passiert?](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) – Türkische Übersetzung des großen Umbenennungs-Blogeintrags, erklärt die Abkehr von der Terminologie „Eth2“
 
 ### Vietnamesisch {#vi}
 
-- [Tino Group](https://wiki.tino.org/ethereum-la-gi/) – Überblick über Ethereum, DApps, Wallets und FAQs
+- [Tino Gruppe](https://wiki.tino.org/ethereum-la-gi/) - Übersicht zu Ethereum, dApps, Wallets und häufig gestellte Fragen
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) – Webplattform mit Unterseiten für Ethereum-Nachrichten und -Bildung
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) – Kryptowährungsportal mit Ethereum-Nachrichten und Bildungsinhalten
 
 ### Japanisch {#ja}
 
-- [Japan Virtual and Crypto assets Exchange Association](https://jvcea.or.jp/)
-- [Japan Cryptoasset Business Association](https://cryptocurrency-association.org/)
+- [Japan Virtual and Crypto Assets Exchange Association](https://jvcea.or.jp/)
+- [Japan Crypto Asset Business Association](https://cryptocurrency-association.org/)
 - [Einstieg in die Blockchain-Entwicklung – Mehr erfahren | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) – Dieser Lernpfad führt Sie in die Blockchain und die Entwicklung auf der Ethereum-Plattform ein
-- [Ethereum meistern](https://www.oreilly.co.jp/books/9784873118963/) – "Ethereum meistern" auf Japanisch
-- [Interaktive Smart-Contract-Entwicklung mit Solidity und Ethereum](https://www.oreilly.co.jp/books/9784873119342/) – "Interaktive Smart-Contract-Entwicklung mit Solidity und Ethereum" auf Japanisch
+- [Ethereum meistern](https://www.oreilly.co.jp/books/9784873118963/) – „Ethereum meistern" auf Japanisch
+- [Ethereum meistern](https://www.oreilly.co.jp/books/9784873118963/) – „Ethereum meistern" auf Japanisch

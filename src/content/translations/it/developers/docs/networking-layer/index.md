@@ -2,16 +2,14 @@
 title: Livello di rete
 description: Un'introduzione al livello di rete di Ethereum.
 lang: it
-sidebar: true
 sidebarDepth: 2
-preMergeBanner: true
 ---
 
 Ethereum è una rete in peer-to-peer con migliaia di nodi che devono poter comunicare gli uni con gli altri, usando dei protocolli standardizzati. Il "livello di rete" è lo stack di protocolli che consentono a quei nodi di trovarsi reciprocamente e scambiare informazioni. Questo comprende l'attività di "gossip” di informazioni (comunicazione da uno a molti) sulla rete, oltre alle richieste di scambio e le risposte tra nodi specifici (comunicazione uno a uno). Ogni nodo deve aderire a specifiche regole di rete per essere certo di inviare e ricevere le informazioni corrette.
 
-Dopo [La Fusione](/upgrades/merge/), esisteranno due parti del software del client (client d'esecuzione e client di consenso), ognuna con il proprio stack di rete distinto. Oltre a comunicare con altri nodi di Ethereum, i client d'esecuzione e di consenso devono comunicare tra loro. Questa pagina presenta una spiegazione introduttiva ai protocolli che consentono questa comunicazione.
+Il software del client si compone di due parti (i client d'esecuzione e di consenso), ognuna con il proprio distinto stack di rete. Oltre a comunicare con altri nodi di Ethereum, i client d'esecuzione e di consenso devono comunicare tra loro. Questa pagina presenta una spiegazione introduttiva ai protocolli che consentono questa comunicazione.
 
-**Nota che dopo [La Fusione](/upgrades/merge), i client d'esecuzione non saranno più responsabili del gossip dei blocchi, ma faranno ancora gossip per le transazioni sulla rete peer-to-peer del livello d'esecuzione. Le transazioni saranno passate ai client di consenso tramite una connessione RPC locale, dove saranno impacchettati in blocchi della Beacon Chain. I client di consenso eseguiranno poi il gossip dei blocchi della Beacon Chain per la propria rete p2p.**
+I client d'esecuzione compiono gossip sulle transazioni sulla rete tra pari del livello d'esecuzione. Questo richiede la comunicazione crittografata tra i pari autenticati. Quando un validatore è selezionato per proporre un blocco, le transazioni dal pool di transazione locale del nodo saranno passate ai client del consenso tramite una connessione RPC locale, che sarà impacchettata in blocchi della Beacon. I client di consenso eseguiranno poi il gossip dei blocchi della Beacon Chain per la propria rete p2p. Questo richiede due reti p2p separate: una connessa ai client d'esecuzione per il gossip della transazione e una connessa ai client del consenso per il gossip del blocco.
 
 ## Prerequisiti {#prerequisites}
 
@@ -73,11 +71,11 @@ Insieme ai messaggi di saluto, il protocollo via cavo può anche inviare un mess
 
 #### Protocollo via cavo {#wire-protocol}
 
-Una volta che i peer sono connessi ed è stata avviata una sessione RLPx, il protocollo via cavo definisce come comunicano i peer. Esistono tre attività principali definite dal protocollo via cavo: sincronizzazione della catena, propagazione del blocco e scambio di transazioni. La sincronizzazione della catena è il processo di convalida dei blocchi nei pressi della testa della catena, di verifica dei dati di proof-of-work e riesecuzione delle transazioni per assicurarsi che i loro hash di radice siano corretti, retrocedendo poi nello storico attraverso i genitori, nonni, ecc. di quei blocchi, finché l'intera catena non è stata scaricata e convalidata. La sincronizzazione di stato è un'alternativa veloce che convalida solo le intestazioni del blocco. La propagazione del blocco è il processo di invio e ricezione di blocchi appena estratti. Lo scambio di transazioni si riferisce allo scambio di transazioni in sospeso tra nodi, così che i miner possano selezionarne alcune da inserire nel blocco successivo. Le informazioni dettagliate su queste attività sono disponibili [qui](https://github.com/ethereum/devp2p/blob/master/caps/eth.md). I client che supportano questi protocolli secondari li espongono tramite [JSON-RPC](/developers/docs/apis/json-rpc).
+Una volta che i pari sono connessi e che una sessione RLPx è stata avviata, il protocollo via cavo definisce come comunicano i pari. Inizialmente, il protocollo via cavo definiva tre mansioni principali: la sincronizzazione della catena, la propagazione del blocco e lo scambio di transazioni. Tuttavia, una volta che Ethereum è passato al proof-of-stake, la propagazione dei blocchi e la sincronizzazione della catena sono divenuti parte del livello di consenso. Lo scambio di transazioni è ancora di competenza dei client d'esecuzione. Lo scambio di transazioni si riferisce allo scambio di transazioni in sospeso tra nodi, così che i miner possano selezionarne alcune da inserire nel blocco successivo. Le informazioni dettagliate su queste attività sono disponibili [qui](https://github.com/ethereum/devp2p/blob/master/caps/eth.md). I client che supportano questi protocolli secondari, li espongono tramite [JSON-RPC](/developers/docs/apis/json-rpc/).
 
 #### les (light ethereum subprotocol) {#les}
 
-Si tratta di un protocollo minimale per sincronizzare i client leggeri. Tradizionalmente, questo protocollo è stato usato raramente perché i nodi completi devono servire i dati ai client leggeri senza essere incentivati. Il comportamento predefinito dei client d'esecuzione prevede di non servire i dati al client leggero tramite les. Maggiori informazioni sono disponibili nelle [specifiche](https://github.com/ethereum/devp2p/blob/master/caps/les.md) di les.
+Si tratta di un protocollo minimale per sincronizzare i client leggeri. Tradizionalmente, questo protocollo è stato raramente usato perché i nodi completi devono servire i dati ai client leggeri senza esser incentivati. Il comportamento predefinito dei client d'esecuzione prevede di non servire i dati al client leggero tramite les. Maggiori informazioni sono disponibili nelle [specifiche](https://github.com/ethereum/devp2p/blob/master/caps/les.md) di les.
 
 #### Snap {#snap}
 
@@ -90,10 +88,6 @@ Il [witness protocol](https://github.com/ethereum/devp2p/blob/master/caps/wit.md
 #### Whisper {#whisper}
 
 Whisper era un protocollo che mirava a consegnare messaggistica sicura tra peer senza scrivere alcuna informazione nella blockchain. Faceva parte del protocollo via cavo DevP2P, ma è ora considerato obsoleto. Esistono altri [progetti correlati](https://wakunetwork.com/) con obiettivi simili.
-
-## Rete del livello d'esecuzione dopo La Fusione {#execution-after-merge}
-
-Dopo La Fusione, un nodo di Ethereum eseguirà un client d'esecuzione e un client di consenso. I client d'esecuzione funzioneranno in modo simile a oggi, ma senza le funzionalità di consenso proof-of-work e gossip dei blocchi. L'EVM, il contratto di deposito del validatore e la selezione/esecuzione delle transazioni dal mempool saranno ancora di competenza del client d'esecuzione. Questo significa che i client d'esecuzione devono ancora partecipare al gossip della transazione, in modo da poter gestire il mempool delle transazioni. Questo richiede una comunicazione crittografata tra i peer autenticati, e quindi il livello di rete per i client di consenso continuerà ad essere un componente critico, inclusi sia il protocollo di scoperta che il livello DevP2P. La codifica continuerà a essere prevalentemente RLP sul livello d'esecuzione.
 
 ## Il livello di consenso {#consensus-layer}
 
@@ -125,7 +119,7 @@ SSZ sta per simple serialization (serializzazione semplice). Usa offset fissi ch
 
 ## Connettere i client d'esecuzione e di consenso {#connecting-clients}
 
-Dopo La Fusione, sia il client di consenso che d'esecuzione funzioneranno in parallelo. Devono essere connessi tra loro, così che il client di consenso possa fornire istruzioni al client d'esecuzione e questo possa passare al client di consenso dei pacchetti di transazioni da inserire nei blocchi Beacon. Questa comunicazione tra i due client si può realizzare usando una connessione RPC locale. Un'API nota come [“Engine-API”](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md) definisce le istruzioni inviate tra i due client. Poiché entrambi i client stanno dietro un'unica identità di rete, condividono un ENR (Ethereum node record), che contiene una chiave distinta per ogni client (chiave eth1 e chiave eth2).
+I client del consenso e d'esecuzione, operano in parallelo. Devono esser connessi, così che il client del consenso possa fornire istruzioni al client d'esecuzione e che il client d'esecuzione possa passare pacchetti di transazioni al client del consenso per includerli nei blocchi della Beacon. La comunicazione tra i due client è ottenibile usando una connessione RPC locale. Un'API nota come [“Engine-API”](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md) definisce le istruzioni inviate tra i due client. Poiché entrambi i client risiedono dietro un'identità di rete singola, condividono un ENR (Registro del Nodo di Ethereum), contenente una chiave separata per ogni client (chiave eth1 e chiave eth2).
 
 Un sommario del flusso di controllo è mostrato di seguito, con indicazione tra parentesi dello stack di rete rilevante.
 
@@ -144,7 +138,7 @@ Un sommario del flusso di controllo è mostrato di seguito, con indicazione tra 
 - Il livello di consenso chiama il metodo `create block` nel client d'esecuzione (RPC locale)
 - Il livello d'esecuzione accede al mempool delle transazioni, popolato dal protocollo di gossip della transazione (esecuzione p2p)
 - Il client d'esecuzione impacchetta le transazioni in un blocco, esegue le transazioni e genera l'hash di un blocco
-- Il client di consenso prende le transazioni e l'hash del blocco dal client di consenso e li aggiunge al blocco beacon (RPC locale)
+- Il client del consenso prende le transazioni e l'hash del blocco dal client d'esecuzione e li aggiunge al blocco della beacon (RPC locale)
 - Il client di consenso trasmette il blocco al protocollo di gossip dei blocchi (consenso p2p)
 - Gli altri client ricevono il blocco proposto tramite il protocollo di gossip dei blocchi e lo convalidano come descritto sopra (consenso p2p)
 
@@ -154,7 +148,7 @@ Una volta che il blocco è stato attestato da sufficienti validatori, è aggiunt
 
 ![](exe_client_net_layer.png)
 
-Schematica del livello di rete per i client di consenso ed esecuzione post-fusione, da [ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
+Schematica del livello di rete per i client del consenso e d'esecuzione, da [ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 
 ## Letture consigliate {#further-reading}
 

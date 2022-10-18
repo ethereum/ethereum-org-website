@@ -1,7 +1,6 @@
 ---
 title: Evenimente Ethereum
 description: Cum să vă implicați în comunitatea Ethereum.
-sidebar: true
 lang: ro
 ---
 

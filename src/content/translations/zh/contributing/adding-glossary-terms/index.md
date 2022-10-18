@@ -2,7 +2,6 @@
 title: 添加词汇表术语
 lang: zh
 description: 添加新术语到 ethereum.org 词汇表的标准
-sidebar: true
 ---
 
 # 添加词汇表术语 {#contributing-to-ethereumorg-}

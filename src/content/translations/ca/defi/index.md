@@ -4,7 +4,6 @@ description: Una visió general de les DeFi a Ethereum
 lang: ca
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../assets/use-cases/defi.png
 alt: Un logotip d'Ethereum fet de peces de lego.
 sidebarDepth: 2

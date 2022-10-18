@@ -186,11 +186,15 @@ const StatDivider = styled.div`
     margin: 2rem 0;
   }
 `
-
-interface L2DataResponse {
+interface L2DataResponseItem {
   daily: {
     data: Array<[string, number, number]>
   }
+}
+interface L2DataResponse {
+  layers2s: L2DataResponseItem
+  combined: L2DataResponseItem
+  bridges: L2DataResponseItem
 }
 
 interface FeeDataResponse {
@@ -214,6 +218,8 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
           `${GATSBY_FUNCTIONS_PATH}/l2beat`
         )
 
+        const dailyData = l2BeatData.layers2s.daily.data
+
         // formatted TVL from L2beat API formatted
         const TVL = new Intl.NumberFormat(localeForStatsBoxNumbers, {
           style: "currency",
@@ -221,13 +227,14 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
           notation: "compact",
           minimumSignificantDigits: 2,
           maximumSignificantDigits: 3,
-        }).format(l2BeatData.daily.data[l2BeatData.daily.data.length - 1][1])
+        }).format(dailyData[dailyData.length - 1][1])
+
         setTVL(`${TVL}`)
         // Calculate percent change ((new value - old value) / old value) *100)
         const percentage =
-          ((l2BeatData.daily.data[l2BeatData.daily.data.length - 1][1] -
-            l2BeatData.daily.data[l2BeatData.daily.data.length - 31][1]) /
-            l2BeatData.daily.data[l2BeatData.daily.data.length - 31][1]) *
+          ((dailyData[dailyData.length - 1][1] -
+            dailyData[dailyData.length - 31][1]) /
+            dailyData[dailyData.length - 31][1]) *
           100
         setL2PercentChange(
           percentage > 0

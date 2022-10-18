@@ -2,7 +2,6 @@
 title: Introducere despre contractele inteligente
 description: O prezentare generală a contractelor inteligente, cu axare pe caracteristicile unice și limitările lor.
 lang: ro
-sidebar: true
 ---
 
 ## Ce este un contract inteligent? {#what-is-a-smart-contract}

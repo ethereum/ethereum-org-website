@@ -2,7 +2,6 @@
 title: Širjenje
 description: Uvod v različne možnosti za širjenje, ki jih trenutno razvija skupnost Ethereum.
 lang: sl
-sidebar: true
 sidebarDepth: 3
 ---
 

@@ -1,5 +1,13 @@
 {
+  "page-upgrades-merge-infographic-el": "Stato di Ethereum: transazioni, app, contratti, saldi",
+  "page-upgrades-merge-infographic-alt-text": "Infografica illustrante come la Beacon Chain si fonde al livello d'esecuzione di Ethereum, durante la transizione dal proof-of-work al proof-of-stake.",
   "page-upgrades-beacon-date": "Spedita!",
   "page-upgrades-merge-date": "Settembre 2022",
-  "page-upgrades-shards-date": "~2023"
+  "page-upgrades-shards-date": "~2023",
+  "page-upgrades-merge-banner-intro": "La Fusione si avvicina e porta cambiamenti a Ethereum.",
+  "page-upgrades-merge-banner-content-outdated": "Alcuni contenuti su questa pagina sono obsoleti rispetto a queste modifiche. Gli aggiornamenti arriveranno presto.",
+  "page-upgrades-merge-banner-developers-landing": "Parte della documentazione contiene un banner che indica che è obsoleta. Gli aggiornamenti arriveranno presto.",
+  "page-upgrades-post-merge-banner-tutorial-ood": "Questo tutorial è deprecato dopo La Fusione e potrebbe non funzionare. Sei pregato di effettuare una PR se vorresti contribuire.",
+  "page-upgrades-post-merge-banner-tutorial-light-node-ood": "Questo tutorial è deprecato dopo La Fusione e potrebbe non funzionare. Correntemente, i nodi leggeri non funzionano sul proof-of-stake, ma dovrebbero esser lanciati presto.",
+  "page-upgrades-post-merge-banner-governance-ood": "Alcuni contenuti su questa pagina sono obsoleti dopo La Fusione. Sei pregato di effettuare una PR, se vorresti contribuire."
 }

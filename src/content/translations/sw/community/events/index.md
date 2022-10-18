@@ -1,7 +1,6 @@
 ---
 title: Matukio ya Ethereum
 description: Jinsi ya kushiriki kwenye jamii ya Ethereum.
-sidebar: true
 lang: sw
 ---
 

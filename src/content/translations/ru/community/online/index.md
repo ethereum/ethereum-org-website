@@ -1,7 +1,6 @@
 ---
 title: Онлайн-сообщества
 description: Список программ грантов в рамках экосистемы Ethereum.
-sidebar: true
 lang: ru
 ---
 

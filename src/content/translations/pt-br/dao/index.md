@@ -4,10 +4,9 @@ description: Uma visão geral de DAOs no Ethereum
 lang: pt-br
 template: use-cases
 emoji: ":handshake:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/use-cases/dao-2.png
-alt: Uma representação de DAO para votação de uma proposta.
+alt: Uma representação de uma votação DAO em uma proposta.
 summaryPoint1: Comunidades de membros sem liderança centralizada.
 summaryPoint2: Uma maneira segura de colaborar com desconhecidos na Internet.
 summaryPoint3: Um local seguro para destinar fundos para uma causa específica.
@@ -69,11 +68,21 @@ _Normalmente utilizado em organizações mais coesas e com abordagem humanitári
 
 [MolochDAO](http://molochdao.com/) – MolochDAO foca no financiamento dos projetos Ethereum. Exigem uma proposta de adesão para que o grupo possa avaliar se você dispõe dos conhecimentos especializados e do capital necessários para fazer considerações fundamentadas sobre potenciais donatários. Não se pode simplesmente comprar acesso à DAO no mercado aberto.
 
+### Adesão baseada em reputação {#reputation-based-membership}
+
+A reputação representa a prova de participação e concede poder de voto na DAO. Diferentemente de adesões baseadas em ações ou tokens, as DAOs baseadas em reputação não transferem a propriedade para seus colaboradores. Reputação não pode ser comprada, transferida ou delegada; os membros da DAO devem ganhar reputação por meio de participação. A votação em cadeia não requer permissão e os potenciais membros podem apresentar propostas livremente para ingressar na DAO e solicitar o recebimento de reputação e tokens como recompensa em troca de suas contribuições.
+
+_Normalmente usado para desenvolvimento descentralizado e governança de protocolos e dapps, mas também adequado para um conjunto diversificado de organizações como instituições de caridade, coletivos de trabalhadores, clubes de investimento etc._
+
+#### Um exemplo famoso {#reputation-example}
+
+[DXdao](https://DXdao.eth.link) – O DXdao é um coletivo soberano global que cria e governa protocolos e aplicativos descentralizados desde 2019. Ela alavanca a governança baseada na reputação e o consenso holográfico para coordenar e gerenciar fundos, o que significa que ninguém pode comprar seu caminho para influenciar seu futuro.
+
 ## Como funcionam as DAOs? {#how-daos-work}
 
-A parte fundamental de uma DAO é seu contrato inteligente. O contrato define as regras da organização e mantém a tesouraria do grupo. Uma vez que o contrato seja publicado na Ethereum, ninguém poderá alterar as regras, exceto por votação. Se alguém tentar fazer algo que não esteja coberto pelas regras e lógica do código, não terá sucesso. E como o tesouro é definido pelo contrato inteligente, também significa que ninguém pode gastar o dinheiro sem a aprovação do grupo. Isso significa que as DAOs não precisam de uma autoridade central. Em vez disso, o grupo toma decisões coletivas, e os pagamentos são autorizados automaticamente quando os votos são aprovados.
+A espinha dorsal de uma DAO é seu contrato inteligente. O contrato define as regras da organização e detém a tesouraria do grupo. Dado que o contrato é publicado no Ethereum, ninguém poderá alterar as regras, exceto por votação. Se alguém tentar fazer algo que não esteja coberto pelas regras e lógica do código, não terá sucesso. E como a tesouraria é definida pelo contrato inteligente, também significa que ninguém pode gastar o dinheiro sem a aprovação do grupo. Isso significa que as DAOs não precisam de uma autoridade central. Em vez disso, o grupo toma decisões coletivas e os pagamentos são autorizados automaticamente quando os votos são aprovados.
 
-Isso é possível porque os contratos inteligentes são imunes à adulteração, uma vez que entram em funcionamento na Ethereum. Você não pode simplesmente editar o código (as regras das DAOs) sem que as pessoas percebam porque tudo é público.
+Isso é possível porque os contratos inteligentes são imunes à adulteração, visto que entram em funcionamento no Ethereum. Você não pode simplesmente editar o código (as regras das DAOs) sem que as pessoas percebam porque tudo é público.
 
 <DocLink to="/smart-contracts/">
   Mais sobre contratos inteligentes
@@ -100,7 +109,7 @@ O Ethereum é a base perfeita para DAOs por várias razões:
 - [Comece uma DAO com DAOHaus](https://app.daohaus.club/summon)
 - [Criar uma DAO apoiada por Aragon](https://aragon.org/product)
 - [Inicie sua colônia](https://colony.io/)
-- [Crie uma DAO com DAOstack](https://daostack.io/)
+- [Crie um DAO com o consenso holográfico de DAOstack](https://alchemy.daostack.io/daos/create)
 
 ## Leitura adicional {#further-reading}
 
@@ -111,6 +120,7 @@ O Ethereum é a base perfeita para DAOs por várias razões:
 - [O que é uma DAO e para que serve?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [Como começar uma comunidade digital alimentada por DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [O que é uma DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
+- [O que é Consenso Holográfico?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
 
 ### Vídeos {#videos}
 

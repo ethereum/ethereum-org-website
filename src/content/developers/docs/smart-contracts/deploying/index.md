@@ -2,7 +2,6 @@
 title: Deploying smart contracts
 description:
 lang: en
-sidebar: true
 ---
 
 You need to deploy your smart contract for it to be available to users of an Ethereum network.

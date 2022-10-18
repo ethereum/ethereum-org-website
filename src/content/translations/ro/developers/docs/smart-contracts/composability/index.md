@@ -2,7 +2,6 @@
 title: Combinabilitatea contractului inteligent
 description:
 lang: ro
-sidebar: true
 incomplete: true
 ---
 

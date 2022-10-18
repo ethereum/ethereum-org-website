@@ -1,7 +1,6 @@
 ---
 title: Как я могу участвовать в жизни сообщества?
 description: Как участвовать в жизни сообщества Ethereum.
-sidebar: true
 lang: ru
 ---
 
