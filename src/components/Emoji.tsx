@@ -10,6 +10,8 @@ export interface IProps extends HTMLChakraProps<"span">, Props {}
 const StyledEmoji = styled(Twemoji)`
   & > img {
     margin: 0 !important;
+    width: 1.5em !important;
+    height: 1.5em !important;
   }
 `
 
