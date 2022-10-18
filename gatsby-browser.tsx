@@ -31,6 +31,7 @@ require("prismjs/components/prism-solidity")
 
 // Prevents <Layout/> from unmounting on page transitions
 // https://www.gatsbyjs.com/docs/layout-components/#how-to-prevent-layout-components-from-unmounting
+// @ts-ignore: returning `null` is not accepted by the `GatsbyBrowser` type def.
 export const wrapPageElement: GatsbyBrowser<
   any,
   Context
@@ -60,8 +61,7 @@ export const wrapPageElement: GatsbyBrowser<
     window.localStorage.setItem("eth-org-language", detected)
     window.location.replace(newUrl)
 
-    // can't return null here, must return an element
-    return <div />
+    return null
   }
 
   return <Layout {...props}>{element}</Layout>

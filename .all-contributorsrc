@@ -9198,6 +9198,24 @@
       "contributions": [
         "data"
       ]
+    },
+    {
+      "login": "cheeky-gorilla",
+      "name": "cheeky-gorilla",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76262359?v=4",
+      "profile": "https://github.com/cheeky-gorilla",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "ThreeMuskets12",
+      "name": "Noah Page",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23061574?v=4",
+      "profile": "https://github.com/ThreeMuskets12",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
