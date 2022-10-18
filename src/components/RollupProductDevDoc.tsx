@@ -51,15 +51,15 @@ const RollupProductDevDoc: React.FC<IProps> = ({ rollupType }) => {
       {rollups[rollupType].map(
         ({ name, noteKey, website, developerDocs, l2beat }) => {
           return (
-            <Flex m="1rem 0" background="rollupDevDocList">
-              <Box p="1rem 1rem 0 1rem">
+            <Flex my={4} background="rollupDevDocList">
+              <Box p={4} pb={0}>
                 <Box>
                   <Heading
                     as="h4"
                     fontSize={{ base: "md", md: "xl" }}
                     fontWeight="500"
                     lineHeight="1.4"
-                    m="1rem 0"
+                    my={4}
                   >
                     {name}
                   </Heading>
