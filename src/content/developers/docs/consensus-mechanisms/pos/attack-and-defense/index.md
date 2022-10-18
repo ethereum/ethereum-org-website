@@ -151,6 +151,8 @@ Overall, despite these potential attack vectors the risk to the Beacon Chain is 
 
 ## Further Reading {#further-reading}
 
+[More detailed version of this page](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
+
 [Vitalik on settlement finality](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
 
 [LMD GHOST paper](https://arxiv.org/abs/2003.03052)
