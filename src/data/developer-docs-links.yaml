@@ -79,6 +79,8 @@
               to: /developers/docs/consensus-mechanisms/pos/attestations
             - id: docs-nav-rewards-and-penalties
               to: /developers/docs/consensus-mechanisms/pos/rewards-and-penalties/
+            - id: docs-nav-attack-and-defense
+              to: /developers/docs/consensus-mechanisms/pos/attack-and-defense/
             - id: docs-nav-keys
               to: /developers/docs/consensus-mechanisms/pos/keys/
 - id: docs-nav-ethereum-stack
