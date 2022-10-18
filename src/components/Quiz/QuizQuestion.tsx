@@ -22,12 +22,22 @@ const QuizQuestion: React.FC<IProps> = ({
   selectedAnswer,
 }) => {
   const { colorMode } = useColorMode()
-  const { answers, prompt } = questionData
+  const isDarkMode = colorMode === "dark"
+  const { answers, prompt, correctAnswerId } = questionData
+
+  // Memoized values
   const explanation = useMemo<string>(() => {
     if (!selectedAnswer) return ""
     return answers.filter(({ id }) => id === selectedAnswer)[0].explanation
   }, [selectedAnswer])
-
+  const buttonBg = useMemo<string>(() => {
+    if (!showAnswer) return "primary"
+    return correctAnswerId === selectedAnswer ? "green.500" : "red.500"
+  }, [questionData, selectedAnswer, showAnswer])
+  const letterColor = useMemo<string>(() => {
+    if (!showAnswer) return "white"
+    return correctAnswerId === selectedAnswer ? "green.500" : "red.500"
+  }, [questionData, selectedAnswer, showAnswer])
   return (
     <Box w={"100%"}>
       <Text fontWeight={"700"} fontSize={"2xl"}>
@@ -41,6 +51,7 @@ const QuizQuestion: React.FC<IProps> = ({
           !showAnswer || id === selectedAnswer ? "inline-flex" : "none"
         return (
           <Button
+            data-group
             display={display}
             variant={"quizButton"}
             isActive={active}
@@ -48,20 +59,26 @@ const QuizQuestion: React.FC<IProps> = ({
             textAlign="start"
             h="fit-content"
             p={2}
+            _active={{ bg: buttonBg, color: "white" }}
             leftIcon={
               <Circle
                 size={"25px"}
                 bg={
-                  colorMode === "dark"
+                  showAnswer
+                    ? "white"
+                    : isDarkMode
                     ? iconBackgroundDark
                     : iconBackgroundLight
                 }
+                _groupHover={{
+                  bg: isDarkMode ? "orange.700" : "blue.300",
+                }}
               >
                 <Text
                   m="0"
                   fontWeight={"700"}
                   fontSize={"lg"}
-                  color={active ? "white" : "text"}
+                  color={letterColor}
                 >
                   {String.fromCharCode(97 + index).toUpperCase()}
                 </Text>
@@ -74,7 +91,9 @@ const QuizQuestion: React.FC<IProps> = ({
       })}
       {showAnswer && (
         <>
-          <Text fontWeight="bold">Explanation</Text>
+          <Text fontWeight="bold" my={2}>
+            Explanation
+          </Text>
           <Text>{explanation}</Text>
         </>
       )}
