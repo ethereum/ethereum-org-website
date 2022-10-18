@@ -3,6 +3,7 @@ title: Public goods funding
 description: An overview of public goods funding solutions on Ethereum
 lang: en
 template: use-cases
+image: ../../assets/enterprise-eth.png
 emoji: 🌎
 sidebar: true
 sidebarDepth: 2
