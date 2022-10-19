@@ -5,9 +5,9 @@ const baseStyleControl = {
   _checked: {
     bg: "primary400",
     _hover: {
-          bg: "primary400",
-          borderColor: "primary600",
-        },
+      bg: "primary400",
+      borderColor: "primary600",
+    },
     borderColor: "black50",
   },
   border: "1px",
@@ -15,7 +15,7 @@ const baseStyleControl = {
   borderRadius: "3px",
   transition: "all 150ms",
   _focusVisible: {
-     boxShadow: "none",
+    boxShadow: "none",
   },
   _hover: {
     boxShadow: "tableItemBoxShadow",
