@@ -1,5 +1,5 @@
 // Libraries
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import styled from "@emotion/styled"
 
 // Components
@@ -143,6 +143,7 @@ const ToggleIcon = styled(Icon)`
 // Types
 
 const WalletFilterSidebar = ({
+  resetWalletFilter,
   filters,
   updateFilterOption,
   updateFilterOptions,
@@ -412,6 +413,22 @@ const WalletFilterSidebar = ({
     )
     updateFilterOptions(keys, value)
   }
+
+  const resetFilters = () => {
+    for (let filterItem of filterOptions) {
+      for (let item of filterItem.items) {
+        if (item.options.length > 0) {
+          item.showOptions = false
+        } else {
+          item.showOptions = undefined
+        }
+      }
+    }
+  }
+
+  useEffect(() => {
+    resetWalletFilter.current = resetFilters
+  }, [])
 
   return (
     <Container>

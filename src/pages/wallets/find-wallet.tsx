@@ -346,6 +346,7 @@ const randomizedWalletData = shuffle(walletData)
 
 const FindWalletPage = ({ data, location }) => {
   const intl = useIntl()
+  const resetWalletFilter = React.useRef(() => {})
 
   const [showFeatureFilters, setShowFeatureFilters] = useState(false)
   const [showMobileSidebar, setShowMobileSidebar] = useState(false)
@@ -474,6 +475,7 @@ const FindWalletPage = ({ data, location }) => {
             aria-labelledby="reset-filter"
             onClick={() => {
               resetFilters()
+              resetWalletFilter.current()
               trackCustomEvent({
                 eventCategory: "WalletFilterReset",
                 eventAction: `WalletFilterReset clicked`,
@@ -493,6 +495,7 @@ const FindWalletPage = ({ data, location }) => {
           <div>
             {showFeatureFilters ? (
               <WalletFilterSidebar
+                resetWalletFilter={resetWalletFilter}
                 filters={filters}
                 updateFilterOption={updateFilterOption}
                 updateFilterOptions={updateFilterOptions}
