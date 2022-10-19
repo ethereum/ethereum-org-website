@@ -42,7 +42,7 @@ Since its inception, Ethereum aimed to implement a proof-of-stake consensus mech
 
 [CCRI](https://carbon-ratings.com) has examined the impact of Ethereum’s merge from proof-of-work to proof-of-stake; the results have underlined the significant impact of changing the consensus protocol: The annualized electricity consumption was reduced from 22,900,320 MWh to 2,601 MWh and thus by more than **99.988 %**. Likewise, Ethereum’s carbon footprint was decreased by approximately **99.992 %** (from 11,016,000 to 870 tonnes CO2e). Depicted metaphorically, this corresponds to a reduction in emissions from the height of the Eiffel Tower to a small plastic toy figure, as shown in the figure below. 
 
-<CCRI_ethereum_merge_impacts_figure />
+![Energy consumption comparison of pre- and post-Merge Ethereum. Displayed is on the left the Eiffel tower with 330 meters height and on the right a plastic toy figure with 4 cm height within a magnifying glass.](energy_consumption_pre_post_merge.png)
 
 Both proof-of-work and proof-of-stake are just mechanisms to decide who gets to add the next block. Swapping proof-of-work for proof-of-stake, where the real-world value invested comes from ETH staked directly in a smart contract, removes the need for miners to burn energy to add to the blockchain. Therefore, the environmental cost of securing the network is drastically reduced.
 
