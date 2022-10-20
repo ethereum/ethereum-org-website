@@ -1458,6 +1458,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/ThreeMuskets12"><img src="https://avatars.githubusercontent.com/u/23061574?v=4?s=100" width="100px;" alt="Noah Page"/><br /><sub><b>Noah Page</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ThreeMuskets12" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/oceans404"><img src="https://avatars.githubusercontent.com/u/91382964?v=4?s=100" width="100px;" alt="steph"/><br /><sub><b>steph</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=oceans404" title="Code">💻</a></td>
       <td align="center"><a href="https://www.linkedin.com/in/itsdanielpark"><img src="https://avatars.githubusercontent.com/u/21699995?v=4?s=100" width="100px;" alt="Daniel Park"/><br /><sub><b>Daniel Park</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=panieldark" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/knititwearit"><img src="https://avatars.githubusercontent.com/u/5172992?v=4?s=100" width="100px;" alt="knititwearit"/><br /><sub><b>knititwearit</b></sub></a><br /><a href="#ideas-knititwearit" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
   </tbody>
 </table>
