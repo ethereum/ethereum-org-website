@@ -115,37 +115,47 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
   )
 
   // Handlers
-  const handleSelectAnswerChoice = (answerId: string) => {
+  const handleSelectAnswerChoice = (answerId: string): void => {
     const isCorrect =
       answerId === quizData?.questions[currentQuestionIndex].correctAnswerId
     setCurrentQuestionAnswerChoice({ answerId, isCorrect })
   }
 
   // TODO: Confirm both handleSelectAnswerChoice & handleSelection are necessary
-  const handleSelection = (answerId: string) => {
+  const handleSelection = (answerId: string): void => {
     setSelectedAnswer(answerId)
     handleSelectAnswerChoice(answerId)
   }
 
-  const handleShowAnswer = () => {
+  const handleShowAnswer = (): void => {
     setShowAnswer(true)
   }
 
-  const handleRetryQuestion = () => {
+  const handleRetryQuestion = (): void => {
     setCurrentQuestionAnswerChoice(null)
     setSelectedAnswer(null)
     setShowAnswer(false)
   }
-  const handleContinue = () => {
+  const handleContinue = (): void => {
     if (!currentQuestionAnswerChoice) return
     setUserQuizProgress((prev) => [...prev, currentQuestionAnswerChoice])
     setCurrentQuestionAnswerChoice(null)
     setShowAnswer(false)
   }
+  const shareTweetHandler = (): void => {
+    if (!quizData || !window) return
+    const url = `https://ethereum.org${window.location.pathname}` // TODO: Add hash link to quiz
+    const tweet = `I just took the "${quizData.title}" quiz on ethereum.org and scored ${correctCount} out of ${quizData.questions.length}! Try it yourself at ${url}`
+    window.open(
+      `https://twitter.com/intent/tweet?text=${encodeURI(
+        tweet
+      )}&hashtags=${"ethereumknowledge"}`
+    )
+  }
 
   return (
     <Flex width="full" direction="column" alignItems="center">
-      <Heading as="h2" mb={12}>
+      <Heading as="h2" mb={12} id="quiz">
         <Translation id="quiz-test-your-knowledge" />
       </Heading>
       <Box
@@ -271,7 +281,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
                 />
               )}
             </Center>
-            <Center>
+            <Center mt={8}>
               <ButtonGroup gap={6}>
                 {showAnswer &&
                   currentQuestionAnswerChoice &&
@@ -285,7 +295,10 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
                   )}
                 {showResults ? (
                   <Flex gap={6}>
-                    <Button leftIcon={<Icon as={FaTwitter} />}>
+                    <Button
+                      leftIcon={<Icon as={FaTwitter} />}
+                      onClick={shareTweetHandler}
+                    >
                       Share results
                     </Button>
                     <Button onClick={initialize}>Take quiz again</Button>
