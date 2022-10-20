@@ -9243,6 +9243,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "ryandotsmith",
+      "name": "Ryan Smith",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11726?v=4",
+      "profile": "https://r.32k.io",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
