@@ -91,11 +91,11 @@ Whisper was a protocol that aimed to deliver secure messaging between peers with
 
 ## The consensus layer {#consensus-layer}
 
-The consensus clients participate in a separate peer-to-peer network with a different specification. Consensus clients need to participate in block gossip so that they can receive new blocks from peers and broadcast them when it is their turn to be block proposer. Similarly to the execution layer, this first requires a discovery protocol so that a node can find peers and establish secure sessions for exchanging blocks, attestations etc.
+The consensus clients participate in a separate peer-to-peer network with a different specification. Consensus clients need to participate in block gossip so that they can receive new blocks from peers and broadcast them when it is their turn to be block proposer. Similar to the execution layer, this first requires a discovery protocol so that a node can find peers and establish secure sessions for exchanging blocks, attestations etc.
 
 ### Discovery {#consensus-discovery}
 
-Similarly to the execution clients, consensus clients use [discv5](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) over UDP for finding peers. The consensus layer implementation of discv5 differs from that of the execution clients only in that it includes an adaptor connecting discv5 into a [libP2P](https://libp2p.io/) stack, deprecating DevP2P. The execution layer's RLPx sessions are deprecated in favour of libP2P's noise secure channel handshake.
+Similar to the execution clients, consensus clients use [discv5](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) over UDP for finding peers. The consensus layer implementation of discv5 differs from that of the execution clients only in that it includes an adaptor connecting discv5 into a [libP2P](https://libp2p.io/) stack, deprecating DevP2P. The execution layer's RLPx sessions are deprecated in favour of libP2P's noise secure channel handshake.
 
 ### ENRs {#consensus-enr}
 
