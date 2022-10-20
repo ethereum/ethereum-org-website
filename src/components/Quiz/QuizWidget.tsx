@@ -10,6 +10,7 @@ import {
   Heading,
   Icon,
   Text,
+  Spinner,
   useColorMode,
 } from "@chakra-ui/react"
 import { shuffle } from "lodash"
@@ -143,168 +144,176 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
   }
 
   return (
-    quizData && (
-      <Flex width="full" direction="column" alignItems="center">
-        <Heading as="h2" mb={12}>
-          <Translation id="quiz-test-your-knowledge" />
-        </Heading>
-        <Box
-          w={{
-            md: "600px",
-            sm: "300px",
-          }}
-          bg={cardBackground}
-          borderRadius="base"
-          boxShadow="dropShadow"
-          padding={{
-            md: "49px 62px", // TODO: Remove magic numbers
-            base: "20px 30px",
-          }}
-          position="relative"
+    <Flex width="full" direction="column" alignItems="center">
+      <Heading as="h2" mb={12}>
+        <Translation id="quiz-test-your-knowledge" />
+      </Heading>
+      <Box
+        w={{
+          md: "600px",
+          sm: "300px",
+        }}
+        bg={cardBackground}
+        borderRadius="base"
+        boxShadow="dropShadow"
+        padding={{
+          md: "49px 62px", // TODO: Remove magic numbers
+          base: "20px 30px",
+        }}
+        position="relative"
+      >
+        {/* Trophy icon */}
+        <Circle
+          size="50px"
+          bg={
+            !showAnswer
+              ? "primary"
+              : currentQuestionAnswerChoice?.isCorrect
+              ? "#48BB78"
+              : "#B80000"
+          }
+          position="absolute"
+          top={0}
+          left="50%"
+          transform="translateX(-50%) translateY(-50%)"
         >
-          <Circle
-            size="50px"
-            bg={
+          <Icon
+            as={
               !showAnswer
-                ? "primary"
+                ? Trophy
                 : currentQuestionAnswerChoice?.isCorrect
-                ? "#48BB78"
-                : "#B80000"
+                ? Correct
+                : Incorrect
             }
-            position="absolute"
-            top={0}
-            left="50%"
-            transform="translateX(-50%) translateY(-50%)"
-          >
-            <Icon
-              as={
-                !showAnswer
-                  ? Trophy
-                  : currentQuestionAnswerChoice?.isCorrect
-                  ? Correct
-                  : Incorrect
-              }
-              fontSize="1.75rem"
-              color="background"
-            />
-          </Circle>
-          {showResults &&
-            Math.floor((correctCount / quizData.questions.length) * 100) >
-              65 && (
-              <>
-                <Icon
-                  as={StarConfetti}
-                  fontSize="184px"
-                  position="absolute"
-                  left={0}
-                  top={-8}
-                />
-                <Icon
-                  as={StarConfetti}
-                  fontSize="184px"
-                  position="absolute"
-                  right={0}
-                  top={-8}
-                  transform="scaleX(-100%)"
-                />
-              </>
-            )}
-          <Center>
-            <Text
-              fontStyle={"normal"}
-              fontWeight={"700"}
-              color={isDarkMode ? "orange.300" : "blue.300"}
-            >
-              {quizData.title}
-            </Text>
-          </Center>
-          <Center gap={1} marginBottom={6}>
-            {quizData.questions.map(({ id }, index) => {
-              let bg: string
-              if (
-                (showAnswer &&
-                  index === currentQuestionIndex &&
-                  currentQuestionAnswerChoice?.isCorrect) ||
-                userQuizProgress[index]?.isCorrect
-              ) {
-                bg = "success"
-              } else if (
-                (showAnswer &&
-                  index === currentQuestionIndex &&
-                  !currentQuestionAnswerChoice?.isCorrect) ||
-                (userQuizProgress[index] && !userQuizProgress[index].isCorrect)
-              ) {
-                bg = "error"
-              } else if (index === currentQuestionIndex) {
-                bg = "gray.400"
-              } else {
-                bg = "gray.500"
-              }
-              return (
-                <Container
-                  key={id}
-                  bg={bg}
-                  h="4px"
-                  maxW="2rem"
-                  width="full"
-                  marginInline={0}
-                />
-              )
-            })}
-          </Center>
-          <Center>
-            {showResults ? (
-              <QuizSummary
-                correctCount={correctCount}
-                questionCount={quizData.questions.length}
+            fontSize="1.75rem"
+            color="background"
+          />
+        </Circle>
+        {quizData &&
+          showResults &&
+          Math.floor((correctCount / quizData.questions.length) * 100) > 65 && (
+            <>
+              <Icon
+                as={StarConfetti}
+                fontSize="184px"
+                position="absolute"
+                left={0}
+                top={-8}
               />
-            ) : (
-              <QuizQuestion
-                questionData={quizData.questions[currentQuestionIndex]}
-                showAnswer={showAnswer}
-                handleSelection={handleSelection}
-                selectedAnswer={selectedAnswer}
+              <Icon
+                as={StarConfetti}
+                fontSize="184px"
+                position="absolute"
+                right={0}
+                top={-8}
+                transform="scaleX(-100%)"
               />
-            )}
-          </Center>
-          <Center>
-            <ButtonGroup gap={6}>
-              {showAnswer &&
-                currentQuestionAnswerChoice &&
-                !currentQuestionAnswerChoice.isCorrect && (
+            </>
+          )}
+        {quizData ? (
+          <>
+            <Center>
+              <Text
+                fontStyle={"normal"}
+                fontWeight={"700"}
+                color={isDarkMode ? "orange.300" : "blue.300"}
+              >
+                {quizData.title}
+              </Text>
+            </Center>
+            <Center gap={1} marginBottom={6}>
+              {quizData.questions.map(({ id }, index) => {
+                let bg: string
+                if (
+                  (showAnswer &&
+                    index === currentQuestionIndex &&
+                    currentQuestionAnswerChoice?.isCorrect) ||
+                  userQuizProgress[index]?.isCorrect
+                ) {
+                  bg = "success"
+                } else if (
+                  (showAnswer &&
+                    index === currentQuestionIndex &&
+                    !currentQuestionAnswerChoice?.isCorrect) ||
+                  (userQuizProgress[index] &&
+                    !userQuizProgress[index].isCorrect)
+                ) {
+                  bg = "error"
+                } else if (index === currentQuestionIndex) {
+                  bg = "gray.400"
+                } else {
+                  bg = "gray.500"
+                }
+                return (
+                  <Container
+                    key={id}
+                    bg={bg}
+                    h="4px"
+                    maxW="2rem"
+                    width="full"
+                    marginInline={0}
+                  />
+                )
+              })}
+            </Center>
+            <Center>
+              {showResults ? (
+                <QuizSummary
+                  correctCount={correctCount}
+                  questionCount={quizData.questions.length}
+                />
+              ) : (
+                <QuizQuestion
+                  questionData={quizData.questions[currentQuestionIndex]}
+                  showAnswer={showAnswer}
+                  handleSelection={handleSelection}
+                  selectedAnswer={selectedAnswer}
+                />
+              )}
+            </Center>
+            <Center>
+              <ButtonGroup gap={6}>
+                {showAnswer &&
+                  currentQuestionAnswerChoice &&
+                  !currentQuestionAnswerChoice.isCorrect && (
+                    <Button
+                      onClick={handleRetryQuestion}
+                      variant={"outline-color"}
+                    >
+                      Try again
+                    </Button>
+                  )}
+                {showResults ? (
+                  <Flex gap={6}>
+                    <Button leftIcon={<Icon as={FaTwitter} />}>
+                      Share results
+                    </Button>
+                    <Button onClick={initialize}>Take quiz again</Button>
+                  </Flex>
+                ) : showAnswer ? (
+                  <Button onClick={handleContinue}>
+                    {userQuizProgress.length === quizData.questions.length - 1
+                      ? "See results"
+                      : "Next question"}
+                  </Button>
+                ) : (
                   <Button
-                    onClick={handleRetryQuestion}
-                    variant={"outline-color"}
+                    onClick={handleShowAnswer}
+                    disabled={!currentQuestionAnswerChoice}
                   >
-                    Try again
+                    Submit answer
                   </Button>
                 )}
-              {showResults ? (
-                <Flex gap={6}>
-                  <Button leftIcon={<Icon as={FaTwitter} />}>
-                    Share results
-                  </Button>
-                  <Button onClick={initialize}>Take quiz again</Button>
-                </Flex>
-              ) : showAnswer ? (
-                <Button onClick={handleContinue}>
-                  {userQuizProgress.length === quizData.questions.length - 1
-                    ? "See results"
-                    : "Next question"}
-                </Button>
-              ) : (
-                <Button
-                  onClick={handleShowAnswer}
-                  disabled={!currentQuestionAnswerChoice}
-                >
-                  Submit answer
-                </Button>
-              )}
-            </ButtonGroup>
-          </Center>
-        </Box>
-      </Flex>
-    )
+              </ButtonGroup>
+            </Center>
+          </>
+        ) : (
+          <Flex justify="center">
+            <Spinner />
+          </Flex>
+        )}
+      </Box>
+    </Flex>
   )
 }
 
