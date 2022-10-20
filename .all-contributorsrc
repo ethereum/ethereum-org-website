@@ -9225,6 +9225,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "panieldark",
+      "name": "Daniel Park",
+      "avatar_url": "https://avatars.githubusercontent.com/u/21699995?v=4",
+      "profile": "https://www.linkedin.com/in/itsdanielpark",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
