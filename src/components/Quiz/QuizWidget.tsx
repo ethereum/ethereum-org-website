@@ -18,7 +18,7 @@ import { FaTwitter } from "react-icons/fa"
 
 // Components
 import Button from "../Button"
-import QuizQuestion from "./QuizQuestion"
+import QuizRadioGroup from "./QuizRadioGroup"
 import QuizSummary from "./QuizSummary"
 import Translation from "../Translation"
 
@@ -263,7 +263,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
                   questionCount={quizData.questions.length}
                 />
               ) : (
-                <QuizQuestion
+                <QuizRadioGroup
                   questionData={quizData.questions[currentQuestionIndex]}
                   showAnswer={showAnswer}
                   handleSelection={handleSelection}
