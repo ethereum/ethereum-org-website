@@ -155,7 +155,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
           }}
           bg={cardBackground}
           borderRadius="base"
-          boxShadow="0px 9px 16px -6px rgba(0, 0, 0, 0.13)"
+          boxShadow="dropShadow"
           padding={{
             md: "49px 62px", // TODO: Remove magic numbers
             base: "20px 30px",
@@ -197,14 +197,14 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
                   fontSize="184px"
                   position="absolute"
                   left={0}
-                  top={-6}
+                  top={-8}
                 />
                 <Icon
                   as={StarConfetti}
                   fontSize="184px"
                   position="absolute"
                   right={0}
-                  top={-6}
+                  top={-8}
                   transform="scaleX(-100%)"
                 />
               </>
@@ -227,18 +227,18 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
                   currentQuestionAnswerChoice?.isCorrect) ||
                 userQuizProgress[index]?.isCorrect
               ) {
-                bg = "#48BB78"
+                bg = "success"
               } else if (
                 (showAnswer &&
                   index === currentQuestionIndex &&
                   !currentQuestionAnswerChoice?.isCorrect) ||
                 (userQuizProgress[index] && !userQuizProgress[index].isCorrect)
               ) {
-                bg = "#B80000"
+                bg = "error"
               } else if (index === currentQuestionIndex) {
-                bg = "#B0B0B0"
+                bg = "gray.400"
               } else {
-                bg = "#646464"
+                bg = "gray.500"
               }
               return (
                 <Container

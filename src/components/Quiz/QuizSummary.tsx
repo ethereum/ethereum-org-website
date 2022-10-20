@@ -14,23 +14,29 @@ const QuizSummary: React.FC<IProps> = ({ correctCount, questionCount }) => {
   )
 
   return (
-    <Box w="full" mb={4}>
+    <Box w="full" mb={10}>
       <Text fontWeight={"700"} fontSize="2xl" textAlign="center">
         {percentCorrect >= 65 ? "You passed the quiz!" : "Your results"}
       </Text>
       <Flex
         p={4}
         justify="center"
-        border="1px"
+        boxShadow="dropShadow"
         bg="background"
         mx="auto"
         w="fit-content"
       >
-        <Flex direction="column" p={4} alignItems="center" borderRight="1px">
+        <Flex
+          direction="column"
+          p={4}
+          alignItems="center"
+          borderRight="1px"
+          borderColor="disabled"
+        >
           <Text fontWeight="700" fontSize="2xl" mb={2}>
             {percentCorrect}%
           </Text>
-          <Text fontSize="s" m={0}>
+          <Text fontSize="s" m={0} color="disabled">
             Score
           </Text>
         </Flex>
@@ -38,7 +44,7 @@ const QuizSummary: React.FC<IProps> = ({ correctCount, questionCount }) => {
           <Text fontWeight="700" fontSize="2xl" mb={2}>
             +{correctCount}
           </Text>
-          <Text fontSize="s" m={0}>
+          <Text fontSize="s" m={0} color="disabled">
             Total points
           </Text>
         </Flex>
