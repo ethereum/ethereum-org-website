@@ -1460,6 +1460,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://www.linkedin.com/in/itsdanielpark"><img src="https://avatars.githubusercontent.com/u/21699995?v=4?s=100" width="100px;" alt="Daniel Park"/><br /><sub><b>Daniel Park</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=panieldark" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/knititwearit"><img src="https://avatars.githubusercontent.com/u/5172992?v=4?s=100" width="100px;" alt="knititwearit"/><br /><sub><b>knititwearit</b></sub></a><br /><a href="#ideas-knititwearit" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center"><a href="https://r.32k.io"><img src="https://avatars.githubusercontent.com/u/11726?v=4?s=100" width="100px;" alt="Ryan Smith"/><br /><sub><b>Ryan Smith</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ryandotsmith" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://vj-codes.github.io/"><img src="https://avatars.githubusercontent.com/u/60894542?v=4?s=100" width="100px;" alt="Vaishnavi Joshi"/><br /><sub><b>Vaishnavi Joshi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=vj-codes" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
