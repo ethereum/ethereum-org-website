@@ -2,7 +2,6 @@
 title: イーサリアムのガバナンス
 description: イーサリアムに関する決定がどのように行われるかについてのご紹介
 lang: ja
-sidebar: true
 ---
 
 # イーサリアムのガバナンスの概要 {#introduction}

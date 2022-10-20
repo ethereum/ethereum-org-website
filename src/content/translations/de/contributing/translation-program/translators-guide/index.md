@@ -2,7 +2,6 @@
 title: Übersetzungsleitfaden
 lang: de
 description: Anweisungen und Tipps für ethereum.org-Übersetzer
-sidebar: true
 ---
 
 # Übersetzungsleitfaden von ethereum.org {#style-guide}

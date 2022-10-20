@@ -2,7 +2,6 @@
 title: Gaz ve ücretler
 description:
 lang: tr
-sidebar: true
 ---
 
 Gaz, Ethereum ağı için çok önemlidir. Arabaların benzinle çalıştığı gibi Ethereum ağı da gaz ile çalışır.

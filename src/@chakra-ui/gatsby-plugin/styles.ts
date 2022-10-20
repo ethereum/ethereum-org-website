@@ -28,6 +28,36 @@ const styles = {
       margin: "0px 0px 1.45rem 1.45rem",
       padding: 0,
     },
+    // imported global CSS styles for list items
+    li: {
+      "margin-bottom": "calc(1.45rem / 2)",
+    },
+    "ol li": {
+      "padding-left": "0",
+    },
+    "ul li": {
+      "padding-left": "0",
+    },
+    "li > ol": {
+      "margin-left": "1.45rem",
+      "margin-bottom": "calc(1.45rem / 2)",
+      "margin-top": "calc(1.45rem / 2)",
+    },
+    "li > ul": {
+      "margin-left": "1.45rem",
+      "margin-bottom": "calc(1.45rem / 2)",
+      "margin-top": "calc(1.45rem / 2)",
+    },
+
+    "li *:last-child": {
+      "margin-bottom": "0",
+    },
+    "p *:last-child": {
+      "margin-bottom": "0",
+    },
+    "li > p": {
+      "margin-bottom": "calc(1.45rem / 2)",
+    },
     // YouTube embeds
     iframe: {
       display: "block",
@@ -104,6 +134,11 @@ const styles = {
     },
     ".header-anchor:focus svg": {
       visibility: "visible",
+    },
+    "pre, code, kbd, samp": {
+      fontSize: "0.8em",
+      lineHeight: "1.1rem",
+      fontFamily: "SFMono-Regular,Menlo,Monaco,Consolas,monospace",
     },
   }),
 }

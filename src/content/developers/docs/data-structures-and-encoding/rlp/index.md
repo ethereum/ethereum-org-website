@@ -2,7 +2,6 @@
 title: Recursive-length prefix (RLP) serialization
 description: A definition of the rlp encoding in Ethereum's execution layer.
 lang: en
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -159,4 +158,4 @@ def to_integer(b):
 
 ## Related topics {#related-topics}
 
-- [Patricia merkle trie](/developers/docs/data-structures-and-encoding/patricia-merkle-tries)
+- [Patricia merkle trie](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)

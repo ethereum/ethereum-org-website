@@ -2,7 +2,6 @@
 title: Node sebagai layanan
 description: Gambaran umum tingkat pemula tentang layanan node, pro dan kontranya, serta penyedia populer.
 lang: id
-sidebar: true
 sidebarDepth: 2
 ---
 

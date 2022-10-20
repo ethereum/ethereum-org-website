@@ -2,7 +2,6 @@
 title: Sıfır-Bilgi Toplamaları
 description: Sıfır bilgi toplamalarına giriş
 lang: tr
-sidebar: true
 ---
 
 ## Ön koşullar {#prerequisites}

@@ -2,7 +2,6 @@
 title: Bevezetés az okosszerződésekbe
 description: Egy áttekintő az okosszerződésekről kiemelve az egyedi karakterisztikájukat és a határaikat.
 lang: hu
-sidebar: true
 ---
 
 ## Mi az az okosszerződés?

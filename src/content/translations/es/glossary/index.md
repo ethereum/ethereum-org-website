@@ -2,7 +2,6 @@
 title: Glosario de Ethereum
 description: Un glosario incompleto de términos técnicos y no técnicos relacionados con Ethereum
 lang: es
-sidebar: true
 sidebarDepth: 2
 ---
 

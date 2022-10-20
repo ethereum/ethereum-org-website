@@ -4,7 +4,6 @@ description: نگاهی کلی بر امور مالی غیرمتمرکز بر پ
 lang: fa
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../assets/use-cases/defi.png
 alt: لوگوی اتر ساخته‌شده از آجرهای لگو.
 sidebarDepth: 2

@@ -2,7 +2,6 @@
 title: Riwayat dan Fork Ethereum
 description: Riwayat blockchain Ethereum termasuk tonggak sejarah, rilis, dan fork utama.
 lang: id
-sidebar: true
 sidebarDepth: 1
 ---
 

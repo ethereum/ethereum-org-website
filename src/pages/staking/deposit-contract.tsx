@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react"
 import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
 import makeBlockie from "ethereum-blockies-base64"
-import { getImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 
 import Breadcrumbs from "../../components/Breadcrumbs"
@@ -25,6 +24,7 @@ import { DEPOSIT_CONTRACT_ADDRESS } from "../../data/addresses"
 import { translateMessageId, TranslationKey } from "../../utils/translations"
 import type { Context } from "../../types"
 import FeedbackCard from "../../components/FeedbackCard"
+import { getImage } from "../../utils/image"
 
 const Page = styled.div`
   width: 100%;
@@ -229,9 +229,9 @@ const DepositContractPage = ({
     // Create textToSpeechRequest
     let speech = new SpeechSynthesisUtterance()
     speech.lang = "en-US"
-    speech.text = DEPOSIT_CONTRACT_ADDRESS.split("").join(" ")
+    speech.text = DEPOSIT_CONTRACT_ADDRESS.split("").join(",")
     speech.volume = 1
-    speech.rate = 0.5
+    speech.rate = 1
     speech.pitch = 1
     // Add event listeners
     // Explicity set state in listener callback
@@ -282,22 +282,26 @@ const DepositContractPage = ({
     {
       title: "ConsenSys",
       link: "https://consensys.net/blog/news/eth2-phase-0-deposit-contract-address/",
-      image: getImage(data.consensys),
+      image: getImage(data.consensys)!,
+      alt: "",
     },
     {
       title: "Ethereum Foundation",
       link: "https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/",
-      image: getImage(data.ef),
+      image: getImage(data.ef)!,
+      alt: "",
     },
     {
       title: "Etherscan",
       link: `https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`,
-      image: getImage(data.etherscan),
+      image: getImage(data.etherscan)!,
+      alt: "",
     },
     {
       title: "EthHub",
       link: "https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/deposit-contract/",
-      image: getImage(data.ethhub),
+      image: getImage(data.ethhub)!,
+      alt: "",
     },
   ]
 

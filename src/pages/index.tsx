@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "@emotion/styled"
 
 import type { Context } from "../types"
@@ -24,12 +24,13 @@ import {
   LeftColumn,
 } from "../components/SharedStyledComponents"
 import { translateMessageId, isLangRightToLeft } from "../utils/translations"
-import PreMergeBanner from "../components/PreMergeBanner"
+import { getImage } from "../utils/image"
 
 import SimpleWalletContent from "!!raw-loader!../data/SimpleWallet.sol"
 import SimpleTokenContent from "!!raw-loader!../data/SimpleToken.sol"
 import CreateWalletContent from "!!raw-loader!../data/CreateWallet.js"
 import SimpleDomainRegistryContent from "!!raw-loader!../data/SimpleDomainRegistry.sol"
+import { useConsoleEasterEgg } from "../hooks/useConsoleEasterEgg"
 
 const Hero = styled(GatsbyImage)`
   width: 100%;
@@ -422,6 +423,9 @@ const HomePage = ({
     setActiveCode(id)
     setModalOpen(true)
   }
+
+  useConsoleEasterEgg()
+
   const cards = [
     {
       image: getImage(data.robotfixed),
@@ -560,7 +564,6 @@ const HomePage = ({
         title={translateMessageId("page-index-meta-title", intl)}
         description={translateMessageId("page-index-meta-description", intl)}
       />
-      <PreMergeBanner announcementOnly />
       <Hero
         image={getImage(data.hero)!}
         alt={translateMessageId("page-index-hero-image-alt", intl)}
@@ -606,7 +609,7 @@ const HomePage = ({
                 title={card.title}
                 description={card.description}
                 to={card.to}
-                image={card.image}
+                image={card.image!}
                 alt={card.alt}
               />
             ))}
@@ -785,7 +788,7 @@ const HomePage = ({
                 description={tout.description}
                 alt={tout.alt}
                 to={tout.to}
-                image={tout.image}
+                image={tout.image!}
               />
             )
           })}
@@ -793,7 +796,7 @@ const HomePage = ({
         <StyledCalloutBanner
           titleKey={"page-index-contribution-banner-title"}
           descriptionKey={"page-index-contribution-banner-description"}
-          image={getImage(data.finance)}
+          image={getImage(data.finance)!}
           maxImageWidth={600}
           alt={translateMessageId(
             "page-index-contribution-banner-image-alt",

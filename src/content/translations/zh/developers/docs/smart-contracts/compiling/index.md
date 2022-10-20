@@ -2,7 +2,6 @@
 title: 编译智能合约
 description: 解释您为什么需要编译智能合约以及编译实际上做了什么。
 lang: zh
-sidebar: true
 incomplete: true
 ---
 

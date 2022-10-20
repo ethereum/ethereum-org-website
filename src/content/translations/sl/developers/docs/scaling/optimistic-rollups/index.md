@@ -2,7 +2,6 @@
 title: Optimistični zvitki
 description: Uvod v optimistične zvitke
 lang: sl
-sidebar: true
 ---
 
 ## Predpogoji {#prerequisites}

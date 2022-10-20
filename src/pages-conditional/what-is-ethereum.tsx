@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { useTheme } from "@emotion/react"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 
@@ -42,6 +42,7 @@ import {
 } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { trackCustomEvent } from "../utils/matomo"
+import { getImage, getSrc } from "../utils/image"
 
 import useFetchStat, {
   defaultFormatter,
@@ -168,6 +169,7 @@ const Section = styled.div<{
   bgColor?: string
   padding?: string
 }>`
+  width: 100%;
   padding: ${({ padding }) => padding ?? "3rem 2rem"};
   background-color: ${({ bgColor = "transparent" }) => bgColor};
 
@@ -309,52 +311,6 @@ const WhatIsEthereumPage = ({
     },
   ]
 
-  const smallBreakpoint = Number(theme.breakpoints.s.replace("px", ""))
-  const energyConsumptionChartData = [
-    {
-      name: "Youtube",
-      amount: 244,
-      color: "#FF0000",
-    },
-    {
-      name: "Gold mining",
-      amount: 240,
-      color: "#D7B14A",
-      breakpoint: smallBreakpoint,
-    },
-    {
-      name: "BTC PoW",
-      amount: 200,
-      color: "#F2A900",
-    },
-    {
-      name: "ETH PoW",
-      amount: 112,
-      color: "#C1B6F5",
-    },
-    {
-      name: "Netflix",
-      amount: 94,
-      color: "#E50914",
-    },
-    {
-      name: "Gaming",
-      amount: 34,
-      color: "#71BB8A",
-      breakpoint: smallBreakpoint,
-    },
-    {
-      name: "Paypal",
-      amount: 0.26,
-      color: "#C1B6F5",
-    },
-    {
-      name: "ETH PoS",
-      amount: 0.01,
-      color: "#C1B6F5",
-    },
-  ]
-
   const tabs = [
     {
       title: translateMessageId(
@@ -414,7 +370,7 @@ const WhatIsEthereumPage = ({
           "page-what-is-ethereum-meta-description",
           intl
         )}
-        image={getImage(data.ogImage)?.images.fallback.src}
+        image={getSrc(data.ogImage)}
       />
       <Content>
         <HeroContainer>
@@ -435,7 +391,7 @@ const WhatIsEthereumPage = ({
             </ButtonRow>
           </Header>
           <Hero
-            image={getImage(data.hero)}
+            image={getImage(data.hero)!}
             alt={translateMessageId(
               "page-what-is-ethereum-alt-img-bazaar",
               intl
@@ -466,7 +422,7 @@ const WhatIsEthereumPage = ({
             <TwoColumnContent reverse>
               <Width40>
                 <GatsbyImage
-                  image={getImage(data.whatIsCryptocurrency)}
+                  image={getImage(data.whatIsCryptocurrency)!}
                   alt=""
                 />
               </Width40>
@@ -512,7 +468,7 @@ const WhatIsEthereumPage = ({
         <Section>
           <TwoColumnContent>
             <Width40>
-              <GatsbyImage image={getImage(data.diffEthAndBtc)} alt="" />
+              <GatsbyImage image={getImage(data.diffEthAndBtc)!} alt="" />
             </Width40>
             <Width60>
               <h2>
@@ -678,7 +634,7 @@ const WhatIsEthereumPage = ({
               </BannerGrid>
             </BannerBody>
             <BannerImage>
-              <GatsbyImage image={getImage(data.stats)} alt="" />
+              <GatsbyImage image={getImage(data.stats)!} alt="" />
             </BannerImage>
           </Banner>
         </Section>
@@ -757,7 +713,7 @@ const WhatIsEthereumPage = ({
         <Section bgColor={theme.colors.homeBoxTurquoise}>
           <TwoColumnContent>
             <Width40>
-              <GatsbyImage image={getImage(data.ethCoin)} alt="" />
+              <GatsbyImage image={getImage(data.ethCoin)!} alt="" />
             </Width40>
             <Width60>
               <h2>
@@ -784,7 +740,7 @@ const WhatIsEthereumPage = ({
         <Section>
           <TwoColumnContent reverse>
             <Width40>
-              <GatsbyImage image={getImage(data.meetEth)} alt="" />
+              <GatsbyImage image={getImage(data.meetEth)!} alt="" />
             </Width40>
             <Width60>
               <h2>
@@ -808,7 +764,7 @@ const WhatIsEthereumPage = ({
         <Section bgColor={theme.colors.homeBoxPurple}>
           <TwoColumnContent>
             <Width40>
-              <GatsbyImage image={getImage(data.whoRunsEthereum)} alt="" />
+              <GatsbyImage image={getImage(data.whoRunsEthereum)!} alt="" />
             </Width40>
             <Width60>
               <h2>
@@ -833,7 +789,7 @@ const WhatIsEthereumPage = ({
           <TwoColumnContent reverse>
             <Width40>
               <GatsbyImage
-                image={getImage(data.whatAreSmartContracts)}
+                image={getImage(data.whatAreSmartContracts)!}
                 alt=""
               />
             </Width40>
@@ -866,7 +822,7 @@ const WhatIsEthereumPage = ({
       <Section>
         <TwoColumnContent>
           <Width40>
-            <GatsbyImage image={getImage(data.criminalActivity)} alt="" />
+            <GatsbyImage image={getImage(data.criminalActivity)!} alt="" />
           </Width40>
           <Width60>
             <h2>
@@ -905,10 +861,7 @@ const WhatIsEthereumPage = ({
       <Section>
         <TwoColumnContent reverse>
           <Width40>
-            <EnergyConsumptionChart
-              data={energyConsumptionChartData}
-              legend="Annual Energy Consumption in TW/yr"
-            />
+            <EnergyConsumptionChart />
           </Width40>
           <Width60>
             <h2>
@@ -964,7 +917,7 @@ const WhatIsEthereumPage = ({
         </Column>
         <CardContainer>
           <StyledCallout
-            image={getImage(data.developers)}
+            image={getImage(data.developers)!}
             titleKey="page-what-is-ethereum-build"
             alt={translateMessageId("page-what-is-ethereum-alt-img-lego", intl)}
             descriptionKey="page-what-is-ethereum-build-desc"
@@ -976,7 +929,7 @@ const WhatIsEthereumPage = ({
             </div>
           </StyledCallout>
           <StyledCallout
-            image={getImage(data.community)}
+            image={getImage(data.community)!}
             titleKey="page-what-is-ethereum-community"
             alt={translateMessageId("page-what-is-ethereum-alt-img-comm", intl)}
             descriptionKey="page-what-is-ethereum-comm-desc"

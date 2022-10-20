@@ -2,7 +2,6 @@
 title: Rețele de dezvoltare
 description: O prezentare generală a rețelelor de dezvoltare și a instrumentelor disponibile pentru a ajuta la construirea aplicațiilor Ethereum.
 lang: ro
-sidebar: true
 ---
 
 Când creaţi o aplicație Ethereum cu contracte inteligente, trebuie să o rulaţi pe o rețea locală pentru a vedea cum funcționează, înainte de a o implementa.

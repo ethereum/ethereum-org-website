@@ -2,7 +2,6 @@
 title: Alberi di Patricia Merkle
 description: Introduzione ai Trie di Patricia Merkle.
 lang: it
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -253,5 +252,4 @@ Maggiori informazioni a riguardo si possono trovare nella documentazione [EIP 27
 ## Letture consigliate {#further-reading}
 
 - [Trie di Patricia Merkle modificato - Come Ethereum salva uno stato](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
-- [Merkling su Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)
-- [Comprendere il trie di Ethereum](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)
+- [Merkling su Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/) -[Comprendere il trie di Ethereum](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)

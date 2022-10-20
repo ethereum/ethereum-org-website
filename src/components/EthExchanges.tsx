@@ -1,17 +1,19 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { getImage } from "gatsby-plugin-image"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 import styled from "@emotion/styled"
 
 import CardList from "./CardList"
 import Link from "./Link"
-import { getLocaleTimestamp } from "../utils/time"
-import { trackCustomEvent } from "../utils/matomo"
 import Emoji from "./OldEmoji"
 import Translation from "./Translation"
 import { StyledSelect as Select } from "./SharedStyledComponents"
+
+import { getLocaleTimestamp } from "../utils/time"
+import { trackCustomEvent } from "../utils/matomo"
 import { translateMessageId } from "../utils/translations"
+import { getImage, ImageDataLike } from "../utils/image"
 import { Lang } from "../utils/languages"
 
 const Container = styled.div`
@@ -176,7 +178,7 @@ type ExchangeByCountry = {
 interface Exchange {
   name: string
   url: string
-  image: string
+  image: ImageDataLike | null
   usaExceptions: Array<string>
 }
 
@@ -185,7 +187,7 @@ type Exchanges = Record<ExchangeName, Exchange>
 interface Wallet {
   url: string
   platform: string
-  image: string
+  image: ImageDataLike | null
   isUsaOnly?: boolean
 }
 
@@ -202,7 +204,7 @@ interface FilteredData {
   title: string
   description: string | null
   link: string
-  image: string
+  image: IGatsbyImageData
   alt: string
 }
 
@@ -657,7 +659,7 @@ const EthExchanges = () => {
           title: exchanges[exchange].name,
           description,
           link: exchanges[exchange].url,
-          image: getImage(exchanges[exchange].image),
+          image: getImage(exchanges[exchange].image)!,
           alt: "",
         }
       })
@@ -699,7 +701,7 @@ const EthExchanges = () => {
               title: currentWallet,
               description,
               link: walletObject.url,
-              image: getImage(walletObject.image),
+              image: getImage(walletObject.image)!,
               alt: "",
             })
           },

@@ -4,7 +4,6 @@ description: Resum general de NFT a Ethereum
 lang: ca
 template: use-cases
 emoji: ":frame_with_picture:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/infrastructure_transparent.png
 alt: Un logotip d'Eth mostrat mitjançant un holograma.

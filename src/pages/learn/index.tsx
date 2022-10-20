@@ -2,7 +2,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 
 // Components
@@ -20,6 +20,7 @@ import Translation from "../../components/Translation"
 // Utils
 import { Lang } from "../../utils/languages"
 import { translateMessageId, isLangRightToLeft } from "../../utils/translations"
+import { getImage } from "../../utils/image"
 
 // Types
 import type { Context } from "../../types"
@@ -227,7 +228,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
     title: translateMessageId("hero-title", intl),
     header: translateMessageId("hero-header", intl),
     subtitle: translateMessageId("hero-subtitle", intl),
-    image: getImage(data.heroImage),
+    image: getImage(data.heroImage)!,
     alt: "",
     buttons: [
       {
@@ -281,7 +282,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 <>
                   <CardImage>
                     <GatsbyImage
-                      image={getImage(data.whatIsEth)}
+                      image={getImage(data.whatIsEth)!}
                       alt={translateMessageId(
                         "what-is-ethereum-card-image-alt",
                         intl
@@ -302,7 +303,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <CardImage>
-                    <GatsbyImage image={getImage(data.eth)} alt="" />
+                    <GatsbyImage image={getImage(data.eth)!} alt="" />
                   </CardImage>
                   <ButtonLink to="/eth/">
                     <Translation id="what-is-eth-card-title" />
@@ -321,7 +322,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <CardImage>
-                    <GatsbyImage image={getImage(data.impact)} alt="" />
+                    <GatsbyImage image={getImage(data.impact)!} alt="" />
                   </CardImage>
                   <ButtonLink to="/get-eth/">
                     <Translation id="where-can-i-get-eth-card-title" />
@@ -368,7 +369,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 <>
                   <CardImage>
                     <GatsbyImage
-                      image={getImage(data.wallet)}
+                      image={getImage(data.wallet)!}
                       alt={translateMessageId(
                         "what-is-a-wallet-card-alt",
                         intl
@@ -390,7 +391,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 <>
                   <CardImage>
                     <GatsbyImage
-                      image={getImage(data.futureTransparent)}
+                      image={getImage(data.futureTransparent)!}
                       alt=""
                     />
                   </CardImage>
@@ -411,7 +412,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <CardImage>
-                    <GatsbyImage image={getImage(data.dogeComputer)} alt="" />
+                    <GatsbyImage image={getImage(data.dogeComputer)!} alt="" />
                   </CardImage>
                   <ButtonLink to="/security/">
                     <Translation id="crypto-security-basics-card-button" />
@@ -439,7 +440,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </ul>
               </BannerBody>
               <BannerImage>
-                <GatsbyImage image={getImage(data.newRings)} alt="" />
+                <GatsbyImage image={getImage(data.newRings)!} alt="" />
               </BannerImage>
             </Banner>
 
@@ -469,7 +470,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 <>
                   <CardImage>
                     <GatsbyImage
-                      image={getImage(data.financeTransparent)}
+                      image={getImage(data.financeTransparent)!}
                       alt=""
                     />
                   </CardImage>
@@ -487,7 +488,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <CardImage>
-                    <GatsbyImage image={getImage(data.stablecoins)} alt="" />
+                    <GatsbyImage image={getImage(data.stablecoins)!} alt="" />
                   </CardImage>
                   <ButtonLink to="/stablecoins/">
                     <Translation id="stablecoins-card-button" />
@@ -501,7 +502,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 <>
                   <CardImage>
                     <GatsbyImage
-                      image={getImage(data.infrastructureTransparent)}
+                      image={getImage(data.infrastructureTransparent)!}
                       alt=""
                     />
                   </CardImage>
@@ -516,7 +517,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <CardImage>
-                    <GatsbyImage image={getImage(data.dao)} alt="" />
+                    <GatsbyImage image={getImage(data.dao)!} alt="" />
                   </CardImage>
                   <ButtonLink to="/dao/">
                     <Translation id="dao-card-button" />
@@ -530,7 +531,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 <>
                   <CardImage>
                     <GatsbyImage
-                      image={getImage(data.developersEthBlocks)}
+                      image={getImage(data.developersEthBlocks)!}
                       alt=""
                     />
                   </CardImage>
@@ -609,7 +610,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <CardImage>
-                    <GatsbyImage image={getImage(data.rhino)} alt="" />
+                    <GatsbyImage image={getImage(data.rhino)!} alt="" />
                   </CardImage>
                   <ButtonLink to="/staking/">
                     <Translation id="staking-ethereum-card-button" />
@@ -625,7 +626,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <CardImage>
-                    <GatsbyImage image={getImage(data.ethereumInside)} alt="" />
+                    <GatsbyImage
+                      image={getImage(data.ethereumInside)!}
+                      alt=""
+                    />
                   </CardImage>
                   <ButtonLink to="/run-a-node/">
                     <Translation id="run-a-node-card-title" />
@@ -653,7 +657,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <CardImage>
-                    <GatsbyImage image={getImage(data.hackathon)} alt="" />
+                    <GatsbyImage image={getImage(data.hackathon)!} alt="" />
                   </CardImage>
                   <ButtonLink to="/energy-consumption/">
                     <Translation id="energy-consumption-card-button" />
@@ -669,7 +673,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <CardImage>
-                    <GatsbyImage image={getImage(data.merge)} alt="" />
+                    <GatsbyImage image={getImage(data.merge)!} alt="" />
                   </CardImage>
                   <ButtonLink to="/upgrades/">
                     <Translation id="ethereum-upgrades-card-button" />
@@ -689,7 +693,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 <>
                   <CardImage>
                     <GatsbyImage
-                      image={getImage(data.financeTransparent)}
+                      image={getImage(data.financeTransparent)!}
                       alt=""
                     />
                   </CardImage>
@@ -741,7 +745,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 <>
                   <CardImage>
                     <GatsbyImage
-                      image={getImage(data.enterprise)}
+                      image={getImage(data.enterprise)!}
                       alt={translateMessageId("community-hub-card-alt", intl)}
                     />
                   </CardImage>
@@ -759,7 +763,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <CardImage>
-                    <GatsbyImage image={getImage(data.dogeComputer)} alt="" />
+                    <GatsbyImage image={getImage(data.dogeComputer)!} alt="" />
                   </CardImage>
                   <ButtonLink to="/community/get-involved/">
                     <Translation id="get-involved-card-title" />
@@ -778,7 +782,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <CardImage>
-                    <GatsbyImage image={getImage(data.impact)} alt="" />
+                    <GatsbyImage image={getImage(data.impact)!} alt="" />
                   </CardImage>
                   <ButtonLink to="/community/online/">
                     <Translation id="online-communities-card-button" />

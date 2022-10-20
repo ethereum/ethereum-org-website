@@ -77,6 +77,10 @@
               to: /developers/docs/consensus-mechanisms/pos/weak-subjectivity/
             - id: docs-nav-attestations
               to: /developers/docs/consensus-mechanisms/pos/attestations
+            - id: docs-nav-rewards-and-penalties
+              to: /developers/docs/consensus-mechanisms/pos/rewards-and-penalties/
+            - id: docs-nav-keys
+              to: /developers/docs/consensus-mechanisms/pos/keys/
 - id: docs-nav-ethereum-stack
   path: /developers/docs/
   items:

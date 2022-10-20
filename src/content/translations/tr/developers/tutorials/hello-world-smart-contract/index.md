@@ -11,7 +11,6 @@ tags:
   - "dağıtma"
 skill: beginner
 lang: tr
-sidebar: true
 published: 2021-03-31
 ---
 

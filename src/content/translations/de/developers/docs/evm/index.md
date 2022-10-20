@@ -2,7 +2,6 @@
 title: Ethereum Virtual Machine (EVM)
 description: Eine Einführung in die virtuelle Maschine von Ethereum und wie sie sich auf Zustand, Transaktionen und Smart Contracts bezieht.
 lang: de
-sidebar: true
 ---
 
 Die physische Überschreibung der EVM kann nicht auf dieselbe Weise beschrieben werden, wie eine Wolke oder Ozeanwelle. Sie _existiert_ vielmehr als eine zusammenhängende Einheit, die von tausenden verbundenen Computern, die einen Ethereum-Client laufen lassen, aufrechterhalten wird.

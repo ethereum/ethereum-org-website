@@ -9,7 +9,6 @@ tags:
   - "aksi"
 skill: intermediate
 lang: id
-sidebar: true
 published: 2020-04-03
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/logging-data-with-events/

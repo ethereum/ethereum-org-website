@@ -1,7 +1,6 @@
 ---
 title: Ethereum Foundation & community grant programs
 description: A listing of the grant programs throughout the Ethereum ecosystem.
-sidebar: true
 lang: en
 ---
 
@@ -36,6 +35,7 @@ These projects have created their own grants for projects aimed at developing an
 - [mStable Grants Program](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) community_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) ecosystem_
 - [Uniswap Grants Program](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/) community_
+- [Web3 Grants](https://web3grants.net) - _An extensive list of web3/crypto related grant programs_
 
 ## Quadratic funding {#quadratic-funding}
 

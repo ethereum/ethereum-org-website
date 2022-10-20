@@ -2,7 +2,6 @@
 title: Enterprise on Ethereum Mainnet
 description: Guides, articles, and tools about enterprise applications on the public Ethereum blockchain
 lang: en
-sidebar: true
 ---
 
 # Ethereum Mainnet for enterprise {#ethereum-for-enterprise}
@@ -36,7 +35,6 @@ Enterprises have been experimenting with blockchain technology since around 2016
 
 Another development which is shifting the focus toward public blockchains is [Layer 2](/developers/docs/scaling/#layer-2-scaling). Layer 2 is primarily a scalability technology category which makes high throughput applications possible on public chains. But Layer 2 solutions can also [address some of the other challenges that have driven enterprise developers to choose private chains in the past](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/).
 
-
 ## Enterprise developer resources {#enterprise-developer-resources}
 
 ### Organizations {#organizations}
@@ -64,6 +62,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 - [Provide](https://provide.services/) _infrastructure and APIs for Enterprise Web3 applications_
 - [QuickNode](https://www.quicknode.com/) _provides reliable and fast nodes with high-level APIs like NFT API, Token API, etc., while delivering a unified product suite and enterprise-grade solutions_
 - [Unibright](https://unibright.io/) _a team of blockchain specialists, architects, developers and consultants with 20+ years of experience in business processes and integration_
+- [Zero Services GmbH](https://www.zeroservices.eu/) _provider of managed services spread across co-locations in Europe and Asia. Operates & monitors your nodes securely and reliably_
 
 ### Tooling and libraries {#tooling-and-libraries}
 
@@ -131,7 +130,7 @@ Here are some of the enterprise applications that have been deployed to the publ
 
 - [Tinlake](https://tinlake.centrifuge.io/) _receivables financing via tokenized real-world assets such as invoices, mortgages or streaming royalties_
 - [RealT](https://realt.co/) _investors around the globe can buy into the US real estate market through fully-compliant, fractional, tokenized ownership._
-- [AgroToken](https://agrotoken.io/en/) _tokenizing and trading agricultural commodities_ 
+- [AgroToken](https://agrotoken.io/en/) _tokenizing and trading agricultural commodities_
 - [Fasset](https://www.fasset.com/) _a platform for supporting sustainable infrastructure_
 
 ### Notarization of data {#notarization-of-data}
@@ -149,18 +148,18 @@ Here are some of the enterprise applications that have been deployed to the publ
 - [Morpheus.network](https://morpheus.network/) _supply chain automation platform which implements a hybrid of private chains with notarized data on the Ethereum Mainnet, and is in use by companies such as Canadian food, oil & gas distributor Federated Co-op Ltd. and Argentinian pet food provider Vitalcan_
 - [Minespider](https://www.minespider.com/) _supply chain tracking_
 - [Follow Our Fibre](https://www.followourfibre.com) _viscose supply chain traceability_
-- [EY OpsChain Contract Manager](https://blockchain.ey.com/products/contract-managerhttps://blockchain.ey.com/products/contract-manager) _enables companies to engage in a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across your network of trusted business partners_
+- [EY OpsChain Contract Manager](https://blockchain.ey.com/products/contract-manager) _enables companies to engage in a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across your network of trusted business partners_
 - [Treum](https://treum.io/) _brings transparency, traceability, and tradability to supply chains, using blockchain technology_
 - [TradeTrust](https://www.tradetrust.io/) _verifies electronic Bills of Lading (eBLs) for international shipping_
 - [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _mints NFTs for each new batch of beer, enabling greater visibility and efficiency across its supply chain_
 
 ### Insurance {#insurance}
+
 - [Arbol](https://www.arbolmarket.com/) _parmetric insurance to cover weather related risks_
 - [Etherisc](https://etherisc.com/) _decentralized insurance for a variety of risks_
 
 ### Credentials and certifications {#credentials}
 
-- [Utah Counties](http://www.utahcounty.gov/Dept/ClerkAud/DigitalCertCopy.html) _issuing digital marriage certificates on Ethereum_
 - [Two Italian high schools](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _digital diplomas issued on Ethereum Mainnet_
 - [University of St. Gallen](https://cointelegraph.com/news/swiss-university-fights-fake-diplomas-with-blockchain-technology) _pilot project to verify degrees by a Swiss university_
 - [Malta](https://cointelegraph.com/news/malta-to-store-education-certificates-on-a-blockchain) _all educational certificates recorded on Mainnet by [Hyland](https://www.learningmachine.com/)_

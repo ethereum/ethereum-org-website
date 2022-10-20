@@ -2,7 +2,6 @@
 title: Estándares de tokens
 description:
 lang: es
-sidebar: true
 incomplete: true
 ---
 

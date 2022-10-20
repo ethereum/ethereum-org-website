@@ -2,7 +2,6 @@
 title: Sécurité d'Ethereum et prévention des arnaques
 description: Rester en toute sécurité sur Ethereum
 lang: fr
-sidebar: true
 ---
 
 # Sécurité d'Ethereum et prévention des arnaques {#introduction}
@@ -206,11 +205,19 @@ En principe, l'équipe d'Ethereum ne communiquera jamais avec vous par le biais 
   </div>
 </InfoBanner>
 
+### Arnaque au jeton « Eth2 » {#eth2-token-scam}
+
+Dans la période précédant [La Fusion](/upgrades/merge/), les scammers ont profité de la confusion autour du terme « Eth2 » pour essayer d'obtenir que les utilisateurs rachètent leur ETH pour un jeton « ETH2 ». Il n'existe pas d'« ETH2 » et aucun autre jeton légitime n'a été introduit avec La Fusion. L'ETH que vous possédiez avant La Fusion reste aujourd'hui le même ETH. Il n'y a **pas besoin de prendre des mesures liées à votre ETH pour tenir compte du passage de la preuve de travail à la preuve d'enjeu**.
+
+Les escrocs peuvent apparaître sous la forme d'une « assistance » vous indiquant que si vous déposez votre ETH, vous recevrez en retour « ETH2 ». Il n'y a pas de [support Ethereum officiel](/community/support/), et il n'y a pas de nouveau jeton. Ne partagez jamais la phrase de récupération de votre portefeuille avec qui que ce soit.
+
+_Remarque : il existe des jetons/téléscripteurs dérivés qui peuvent représenter une mise en jeu ETH (ex. rETH de Rocket Pool, stETH de Lido, ETH2 de Coinbase), mais ce ne sont pas des éléments vers lesquels vous devriez « migrer. »_
+
 ### Arnaques par hameçonnage {#phishing-scams}
 
-Les arnaques par hameçonnage représentent un autre vecteur d'attaque fréquent que les escrocs utilisent pour essayer de vider votre portefeuille.
+Les arnaques par hameçonnage représentent un autre vecteur d'attaque de plus en plus fréquent que les escrocs utilisent pour essayer de vider votre portefeuille.
 
-Certains e-mails d'hameçonnage demandent aux utilisateurs de cliquer sur des liens qui les redirigeront vers des sites web factices, leur demandant de saisir leur phrase secrète, de réinitialiser leur mot de passe ou encore d'envoyer des ETH. D'autres peuvent vous demander d'installer un logiciel malveillant à votre insu, qui infectera votre ordinateur et donnera accès aux escrocs à vos fichiers.
+Certains e-mails d'hameçonnage demandent aux utilisateurs de cliquer sur des liens qui les redirigeront vers des sites web factices, leur demandant de saisir leur phrase de récupération, de réinitialiser leur mot de passe ou encore d'envoyer des ETH. D'autres peuvent vous demander d'installer un logiciel malveillant à votre insu, qui infectera votre ordinateur et donnera accès aux escrocs à vos fichiers.
 
 Si vous recevez un e-mail de la part d'un expéditeur inconnu, rappelez-vous :
 
@@ -230,11 +237,11 @@ Ces courtiers frauduleux trouvent leur cible en utilisant de faux comptes sur Yo
 
 ![Une arnaque au faux courtier sur YouTube](./brokerScam.png)
 
-### Arnaques au groupe de minage {#mining-pool-scams}
+### Arnaques au groupe de minage de cryptomonnaies {#mining-pool-scams}
 
-Les arnaques au liées groupe de minage impliquent que des personnes vous contactent sans que vous les ayez sollicitées et vous disent que vous pouvez gagner beaucoup d'argent en faisant partie d'un groupe de minage Ethereum. L'escroc vous fera des promesses et restera en contact avec vous le temps qu'il faudra. Concrètement, l'escroc va essayer de vous faire croire qu'en rejoignant un groupe de minage Ethereum, votre cryptomonnaie sera utilisée pour créer de l'ETH et que vous recevrez des dividendes sous la forme d'ETH. Ce qui finira par se produire, c'est que vous remarquerez que votre cryptomonnaie génère de petits profits. Il s'agit simplement d'un piège pour vous inciter à investir davantage. Au bout du compte, tous vos fonds investis seront envoyés à une adresse inconnue et l'escroc disparaîtra ou, dans certains cas, restera en contact avec vous, comme cela s'est produit dans une affaire récente.
+À compter de septembre 2022, le minage sur Ethereum n'est plus possible. Cependant, il existe toujours des escroqueries dans les pools de minage. Les arnaques liées aux pools de minage impliquent que des personnes vous contactent sans que vous les ayez sollicité et vous disent que vous pouvez gagner beaucoup d'argent en faisant partie d'un pool de minage Ethereum. L'escroc vous fera des promesses et restera en contact avec vous le temps qu'il faudra. Concrètement, l'escroc va essayer de vous faire croire qu'en rejoignant un pool de minage Ethereum, votre cryptomonnaie sera utilisée pour créer de l'ETH et que vous recevrez des dividendes sous la forme d'ETH. Ce qui finira par se produire, c'est que vous remarquerez que votre cryptomonnaie génère de petits profits. Il s'agit simplement d'un piège pour vous inciter à investir davantage. Au bout du compte, tous vos fonds investis seront envoyés à une adresse inconnue et l'escroc disparaîtra ou, dans certains cas, restera en contact avec vous, comme cela s'est produit dans une affaire récente.
 
-Pour résumer, méfiez-vous des personnes qui vous contactent sur les réseaux sociaux pour vous proposer de rejoindre un groupe de minage. Une fois que vous avez perdu votre cryptomonnaie, il est trop tard.
+Pour résumer, méfiez-vous des personnes qui vous contactent sur les réseaux sociaux pour vous proposer de rejoindre un pool de minage. Une fois que vous avez perdu votre cryptomonnaie, il est trop tard.
 
 Quelques points à retenir :
 
@@ -243,14 +250,6 @@ Quelques points à retenir :
 - De telles démarches sont rarement, voire jamais légitimes. Si elles l'étaient, elles seraient probablement grand public et vous en auriez entendu parler.
 
 [Un individu perd 200 000 dollars dans une arnaque au groupe de minage](https://www.reddit.com/r/CoinBase/comments/r0qe0e/scam_or_possible_incredible_payout/)
-
-### Arnaque au jeton « Eth2 » {#eth2-token-scam}
-
-Avec l'approche de [la fusion](/upgrades/merge/), qui se produira en 2022, les escrocs ont profité de la confusion autour du terme « Eth2 » pour essayer de faire en sorte que les utilisateurs échangent leur ETH contre un jeton « ETH2 ». Il n'y a pas de jeton « ETH2 » ni d'autre jeton introduit par la fusion. L'ETH que vous possédez à l'heure actuelle va rester le même ETH après la fusion, et il n'est pas nécessaire de faire un quelconque échange avec votre ETH d'ici la fusion.
-
-Les escrocs peuvent apparaître sous la forme d'une « assistance » vous indiquant que si vous déposez votre ETH, vous recevrez en retour « ETH2 ». Il n'y a pas de [support Ethereum officiel](/community/support/), et il n'y a pas de nouveau jeton. Ne partagez jamais la phrase de départ de votre portefeuille avec qui que ce soit.
-
-_Remarque : il existe des jetons/téléscripteurs dérivés qui peuvent représenter une mise ETH (ex. rETH de Rocket Pool, stETH de Lido, ETH2 de Coinbase), mais ce ne sont pas des éléments vers lesquels vous devriez « migrer »._
 
 ### Arnaques par Airdrop {#airdrop-scams}
 
@@ -279,4 +278,5 @@ Les arnaques aux jetons airdrop consistent en un projet factice qui distribue un
 ### Prévention des arnaques {#reading-scam-education}
 
 - [Staying Safe: Common Scams](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
-- [Avoiding Scams](https://bitcoin.org/en/scams) _Bitcoin.org_
+- [Avoiding Scams](https://bitcoin.org/en/scams) - _Bitcoin.org_
+- [Fil Twitter sur les courriels et messages communs de phishing en cryptomonnaies](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_

@@ -2,7 +2,6 @@
 title: Bibliothèques de contrats intelligents
 description:
 lang: fr
-sidebar: true
 ---
 
 Vous n'avez pas besoin de rédiger tous les contrats intelligents de votre projet à partir de zéro. Il existe de nombreuses bibliothèques de contrats intelligents open source fournissant des blocs de construction réutilisables, qui peuvent vous éviter d'avoir à réinventer la roue.

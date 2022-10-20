@@ -2,7 +2,6 @@
 title: Standard token
 description:
 lang: it
-sidebar: true
 incomplete: true
 ---
 

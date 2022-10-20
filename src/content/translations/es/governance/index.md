@@ -2,7 +2,6 @@
 title: Gobernanza de Ethereum
 description: Una introducción sobre cómo se toman las decisiones relativas a Ethereum.
 lang: es
-sidebar: true
 ---
 
 # Introducción a la gobernanza de Ethereum {#introduction}

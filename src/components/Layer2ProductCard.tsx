@@ -1,7 +1,7 @@
 // Libraries
 import React from "react"
 import styled from "@emotion/styled"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 
 // Components
@@ -84,7 +84,7 @@ export interface IProps {
   children?: React.ReactNode
   url?: string
   background: string
-  image: string
+  image: IGatsbyImageData
   name: string
   description: string
   note?: string

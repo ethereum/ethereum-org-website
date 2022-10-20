@@ -11,7 +11,6 @@ alt: Một biểu tượng Eth được hiển thị ở dạng ảnh ba chiều
 summaryPoint1: Một cách để đại diện cho bất kỳ thứ gì độc nhất dưới dạng tài sản dựa trên Ethereum.
 summaryPoint2: NFT đang mang lại nhiều quyền lực hơn cho người tạo nội dung hơn bao giờ hết.
 summaryPoint3: Được hỗ trợ bởi các hợp đồng thông minh trên chuỗi khối Ethereum.
-preMergeBanner: true
 ---
 
 NFT đang tiến vào thế giới của nghệ thuật và đồ sưu tập số như một cơn bão. Các nhà sáng tạo nghệ thuật số đang chứng kiến cuộc sống của họ thay đổi nhờ vào những đợt bán hàng lớn cho một nhóm đối tượng khách hàng mới liên quan đến tiền mã hóa. Và những người nổi tiếng đang bắt đầu tham gia vào thị trường này vì họ nhận thấy một cơ hội mới để kết nối với người hâm mộ. Nhưng nghệ thuật số chỉ là một ứng dụng của NFT. Thực ra, chúng có thể dùng để đại diện cho quyền sở hữu đối với bất kì tài sản riêng biệt nào, ví dụ như chứng từ cho một món gì đó trên thế giới số hay thế giới vật lý.

@@ -4,7 +4,6 @@ description: Un aperçu de la façon de débuter avec la mise en jeu ETH mutuali
 lang: fr
 template: staking
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../../assets/staking/leslie-saas.png
 alt: Leslie le rhinocéros flottant dans les nuages.
 sidebarDepth: 2
@@ -70,27 +69,13 @@ Avez-vous une suggestion concernant un fournisseur de mise en jeu en tant que se
 </ExpandableCard>
 
 <ExpandableCard title="Il y a donc deux jeux de clés ?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
-Oui. Chaque compte est composé à la fois de <em>clés</em> de signature et de <em>clés de retrait</em>. Pour qu'un validateur puisse attester de l'état de la chaîne, participer à des comités de synchronisation et proposer des blocs, les clés de signature doivent être facilement accessibles à un client de validateur. Celles-ci doivent être connectées à Internet sous une forme ou une autre, et sont donc par nature considérées comme des clés « chaudes ». Ceci est une exigence pour que votre validateur puisse attester. Par conséquent les clés utilisées pour transférer ou retirer des fonds sont séparées pour des raisons de sécurité.
+Oui. Chaque compte est composé à la fois de <em>clés</em> de signature et de <em>clés de retrait</em>. Pour qu'un validateur puisse attester de l'état de la chaîne, participer à des comités de synchronisation et proposer des blocs, les clés de signature doivent être facilement accessibles par un client de validateur. Celles-ci doivent être connectées à Internet sous une forme ou une autre, et sont donc par nature considérées comme des clés « chaudes ». Ceci est une exigence pour que votre validateur puisse attester. Par conséquent les clés utilisées pour transférer ou retirer des fonds sont séparées pour des raisons de sécurité.
 
 Toutes ces clés peuvent à tout moment être régénérées de manière reproductible en utilisant votre phrase de récupération mnémonique de 24 mots. <em>Assurez vous de conserver cette phrase de récupération en toute sécurité ou vous ne pourrez pas générer vos clés de retrait le moment venu</em>.
 </ExpandableCard>
 
 <ExpandableCard title="Quand puis-je effectuer un retrait ?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-  Lorsque vous mettez 32 ETH en jeu avec un fournisseur SaaS, cet ETH est toujours déposé dans le cadre du contrat officiel de dépôt de mise en jeu. Ainsi, les validateurs SaaS sont actuellement limités par les mêmes restrictions de retrait que les validateurs individuels. Cela signifie que la mise en jeu de votre ETH est actuellement un dépôt à sens unique. Ce sera le cas jusqu'à la mise à niveau de Shanghai prévue pour suivre la Fusion.
-</ExpandableCard>
-
-<ExpandableCard title="Qu'est-ce qui va changer avec la Fusion ?" eventCategory="SaasStaking" eventName="clicked what will change with the Merge">
-  Après la Fusion, les validateurs SaaS commenceront à recevoir des frais de transaction/de priorité non brûlés. Vérifiez avec votre fournisseur comment mettre à jour vos paramètres pour inclure une adresse Ethereum que vous contrôlez et où ces fonds seront envoyés le moment venu.
-
-La Fusion n'activera <em>pas</em> la possibilité de retirer vos récompenses de mise en jeu ou de protocole ; cette fonctionnalité est prévue pour la mise à niveau de Shanghai, qui suivra la Fusion environ six à douzes mois plus tard.
-</ExpandableCard>
-
-<ExpandableCard title="Les validateurs SaaS doivent-ils faire quelque chose pour préparer la Fusion ?">
-Les validateurs SaaS <strong>n'ont besoin de rien faire pour préparer la Fusion</strong>.
-
-Il y a certaines choses que les opérateurs de nœuds doivent prendre en charge pour cette mise à niveau. Vérifiez auprès de votre fournisseur de mise en jeu que son système est prêt pour la Fusion.
-
-En savoir plus sur [La Fusion](/upgrades/fuge/)
+  Lorsque vous mettez 32 ETH en jeu avec un fournisseur SaaS, cet ETH est toujours déposé dans le cadre du contrat officiel de dépôt de mise en jeu. Ainsi, les validateurs SaaS sont actuellement limités par les mêmes restrictions de retrait que les validateurs individuels. Cela signifie que la mise en jeu de votre ETH est actuellement un dépôt à sens unique. Ce sera le cas jusqu'à la mise à niveau Shanghai.
 </ExpandableCard>
 
 <ExpandableCard title="Que se passe-t-il si je suis banni ?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

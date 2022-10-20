@@ -3,11 +3,12 @@ import React from "react"
 import { useIntl } from "react-intl"
 import { useTheme } from "@emotion/react"
 import styled from "@emotion/styled"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 
 // Assets
 import EthGlyphColoredSvg from "../assets/assets/eth-glyph-colored.svg"
+import MergePandaSvg from "../assets/home/merge-panda.svg"
 
 // Components
 import AssetDownload from "../components/AssetDownload"
@@ -22,6 +23,7 @@ import { Context } from "../types"
 
 // Utils
 import { translateMessageId } from "../utils/translations"
+import { getImage } from "../utils/image"
 
 const Image = styled(GatsbyImage)`
   align-self: center;
@@ -100,7 +102,7 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
         <HeroContainer>
           <Header>
             <Image
-              image={getImage(assetPageHeroImage)}
+              image={getImage(assetPageHeroImage)!}
               alt={translateMessageId("page-assets-eth-diamond-gray", intl)}
             />
             <h1>
@@ -128,6 +130,23 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             image={data.hero}
             artistName="Liam Cobb"
             artistUrl="https://liamcobb.com/"
+          />
+        </Row>
+        <Row>
+          <AssetDownload
+            title={translateMessageId("page-assets-hero-panda", intl)}
+            alt={translateMessageId("page-assets-hero-panda", intl)}
+            image={data.heroPanda}
+          />
+          <AssetDownload
+            title={translateMessageId("page-assets-merge-panda", intl)}
+            alt={translateMessageId("page-assets-merge-panda", intl)}
+            image={data.mergePanda}
+          />
+          <AssetDownload
+            title={translateMessageId("page-assets-merge-panda-svg", intl)}
+            alt={translateMessageId("page-assets-merge-panda-svg", intl)}
+            svg={MergePandaSvg}
           />
         </Row>
 
@@ -561,6 +580,12 @@ export const query = graphql`
       }
     }
     hero: file(relativePath: { eq: "home/hero.png" }) {
+      ...assetItem
+    }
+    heroPanda: file(relativePath: { eq: "home/hero-panda.png" }) {
+      ...assetItem
+    }
+    mergePanda: file(relativePath: { eq: "home/merge-panda.png" }) {
       ...assetItem
     }
     doge: file(relativePath: { eq: "doge-computer.png" }) {

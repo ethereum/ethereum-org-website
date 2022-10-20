@@ -16,7 +16,6 @@ tags:
   ]
 skill: intermediate
 lang: en
-sidebar: true
 published: 2021-10-06
 ---
 

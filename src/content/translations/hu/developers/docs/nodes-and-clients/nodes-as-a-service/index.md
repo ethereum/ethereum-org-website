@@ -2,7 +2,6 @@
 title: Csomópontok, mint szolgáltatás
 description: Belépőszintű áttekintés a csomópont-szolgáltatásokról, az előnyökről és hátrányokról, valamint a népszerű szolgáltatókról.
 lang: hu
-sidebar: true
 sidebarDepth: 2
 isOutdated: true
 ---

@@ -3,7 +3,6 @@ title: "Reducerea dimensiunii contractelor pentru a evita depășirea limitei de
 description: Ce puteți face ca să nu devină contractele prea mari?
 author: Markus Waas
 lang: ro
-sidebar: true
 tags:
   - "solidity"
   - "contracte inteligente"

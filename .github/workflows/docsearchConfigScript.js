@@ -42,7 +42,7 @@ var config = {
       default_value: "en",
     },
   },
-  selectors_exclude: ["aside", "nav", "footer"],
+  selectors_exclude: ["aside", "nav", "footer", "style"],
   strip_chars: " .,;:#",
   custom_settings: {
     attributesForFaceting: ["lang", "content"],

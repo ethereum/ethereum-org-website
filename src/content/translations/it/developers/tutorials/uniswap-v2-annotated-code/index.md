@@ -2,7 +2,6 @@
 title: "Guida dettagliata al contratto Uniswap-v2"
 description: Come funziona il contratto Uniswap-v2? Perché è scritto così?
 author: Ori Pomerantz
-sidebar: true
 tags:
   - "solidity"
   - "uniswap"

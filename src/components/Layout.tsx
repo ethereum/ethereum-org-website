@@ -92,7 +92,6 @@ const Layout: React.FC<IProps> = ({
 
   const [isZenMode, setIsZenMode] = useState<boolean>(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState<boolean>(false)
-
   const locale = pageContext.locale
   const messages = require(`../intl/${locale}.json`)
 

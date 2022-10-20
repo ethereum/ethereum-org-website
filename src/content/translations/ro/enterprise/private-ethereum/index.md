@@ -2,7 +2,6 @@
 title: Ethereum privat pentru întreprinderi
 description: Resurse pentru aplicații de întreprindere pe blockchain-urile private Ethereum.
 lang: ro
-sidebar: true
 ---
 
 # Ethereum privat pentru întreprinderi {#private-ethereum-for-enterprise}

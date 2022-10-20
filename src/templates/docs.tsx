@@ -35,7 +35,7 @@ import {
   Header4,
   ListItem,
 } from "../components/SharedStyledComponents"
-import PreMergeBanner from "../components/PreMergeBanner"
+import PostMergeBanner from "../components/Banners/PostMergeBanner"
 
 import { ZenModeContext } from "../contexts/ZenModeContext"
 import { isLangRightToLeft } from "../utils/translations"
@@ -190,8 +190,6 @@ const DocsPage = ({
 
   const { editContentUrl } = siteData.siteMetadata || {}
   const absoluteEditPath = `${editContentUrl}${relativePath}`
-  const isDevelopersHome = relativePath.endsWith("/developers/docs/index.md")
-  const showMergeBanner = !!mdx.frontmatter.preMergeBanner || isDevelopersHome
 
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
@@ -203,13 +201,6 @@ const DocsPage = ({
         <BannerNotification shouldShow={isPageIncomplete}>
           <Translation id="banner-page-incomplete" />
         </BannerNotification>
-      )}
-      {showMergeBanner && (
-        <PreMergeBanner announcementOnly={isDevelopersHome}>
-          {isDevelopersHome && (
-            <Translation id="page-upgrades-merge-banner-developers-landing" />
-          )}
-        </PreMergeBanner>
       )}
       <ContentContainer isZenMode={isZenMode}>
         <Content>
@@ -224,6 +215,7 @@ const DocsPage = ({
             items={tocItems}
             isMobile={true}
             maxDepth={mdx.frontmatter.sidebarDepth!}
+            hideEditButton={!!mdx.frontmatter.hideEditButton}
           />
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
@@ -237,13 +229,14 @@ const DocsPage = ({
           <FeedbackCard isArticle />
           <DocsNav relativePath={relativePath}></DocsNav>
         </Content>
-        {mdx.frontmatter.sidebar && tocItems && (
+        {tocItems && (
           <DesktopTableOfContents
             slug={slug}
             editPath={absoluteEditPath}
             items={tocItems}
             isPageIncomplete={isPageIncomplete}
             maxDepth={mdx.frontmatter.sidebarDepth!}
+            hideEditButton={!!mdx.frontmatter.hideEditButton}
           />
         )}
       </ContentContainer>
@@ -267,10 +260,9 @@ export const query = graphql`
         description
         lang
         incomplete
-        sidebar
         sidebarDepth
         isOutdated
-        preMergeBanner
+        hideEditButton
       }
       body
       tableOfContents

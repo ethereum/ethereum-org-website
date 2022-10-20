@@ -2,7 +2,6 @@
 title: ERC-20 Token Szabvány
 description:
 lang: hu
-sidebar: true
 ---
 
 ## Bevezetés {#introduction}
