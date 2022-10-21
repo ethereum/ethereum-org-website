@@ -7,26 +7,26 @@ image: ../../assets/enterprise-eth.png
 emoji: 🌎
 sidebar: true
 sidebarDepth: 2
-summaryPoint1: Public goods are nonexcludable and nonrivalrous and benefit everyone
+summaryPoint1: Public goods are non-excludable, non-rivalrous and benefit everyone
 summaryPoint2: Traditional models of funding public goods are inefficient and encourage coordination failures
 summaryPoint3: Ethereum provides useful infrastructure for improving funding and development of critical public goods
 ---
 
 Public goods are commodities and services provided to all members of a society (without the possibility of direct profit) usually by government or private organizations. While the creation of public goods is critical to societal progress and wellbeing, traditional models of coordinating to fund public goods suffer problems that limit their efficiency and effectiveness. This makes it difficult to build useful public goods and results in worse outcomes that affect everyone.
 
-But there might be a solution to the problems of funding public goods: blockchain technology. By applying cryptoeconomic incentives and mechanism designs, new blockchain-based projects are fixing the broken model of traditional public goods funding and solving coordination failures that plague modern markets.
+But there might be a solution to the problems of funding public goods: blockchain technology. By applying cryptoeconomic incentives and mechanism designs, new blockchain-based projects are fixing the broken model of traditional public goods funding and solving coordination failures in modern markets.
 
 ## What is a public good? {#what-is-a-public-good}
 
 As mentioned, public goods are defined as commodities or services made freely available to all members of a society. For a commodity or service to be classified as a public good, it must possess the folllowing characteristics:
 
-1. **Nonexcludable**: A public good is _nonexcludable_ in the sense that it is costly or impossible to exclude any individual from accessing it. A public road is one example of a public good—no one can prevent you from driving on it (provided you have a license).
+1. **Non-excludable**: A public good is _non-excludable_ in the sense that it is costly or impossible to exclude any individual from accessing it. A public road is one example of a public good, no one can prevent you from driving on it (provided you have a license).
 
-2. **Nonrivalrous**: A public good is _nonrivalrous_, meaning that one person consuming the commodity doesn't prevent another person from doing the same. Going back to the previous example: if you drive on a public road, that doesn't prevent another person from driving on the same road.
+2. **Non-rivalrous**: A public good is _non-rivalrous_, meaning that one person consuming the goods or service doesn't prevent another person from doing the same. Going back to the previous example: if you drive on a public road, that doesn't prevent another person from driving on the same road.
 
 A **private good** is the opposite: they are _rivalrous_ and _excludable_. For example, if Alice eats a slice of pizza, then Bob cannot eat the same slice of (Alice and Bob are "rivals" in consumption). More so, by eating the slice of pizza, Alice prevents (or "excludes") Bob from eating it, making it excludable.
 
-Many public goods are also marked by their "positive externalities". An externality is an indirect cost or benefit borne by A positive externan meaning that i benefits of providing it outweigh the disadvantages.Other examples of public goods include:
+Many public goods are also marked by their "positive externalities". An externality is an indirect cost or benefit incurred or received by a third party. Positive externalities occur when the positive gain is received by both the social level and the private level. Examples of public goods include:
 
 - Education
 - Access to information
@@ -34,17 +34,16 @@ Many public goods are also marked by their "positive externalities". An external
 - Roads
 - Public healthcare
 - Access to clean air
-- Law enforcement and national defense
 
 ## Why is funding public goods important? {#importance-of-funding-public-goods}
 
 Unlike [private goods](https://www.investopedia.com/terms/p/private-good.asp), public goods provide benefits for the majority, not just one individual. Such goods are necessary in creating a future that results in positive outcomes for all members of society. Public roads, for example, facilitate commerce and increase societal prosperity and wellbeing.
 
-Traditionally, public goods are usually made available by governments (through taxes collected from citizens). Private markets can also create public goods: the radio is an example of a public good—broadcast stations cannot prevent listeners from receiving signals (i.e., it is nonexcludable) and multiple individuals can listen at the same time (i.e., it is nonrivalrous).
+Traditionally, public goods are usually made available by governments (through taxes collected from citizens). Private markets can also create public goods: the radio is an example of a public good. Broadcast stations cannot prevent listeners from receiving signals (i.e., it is non-excludable) and multiple individuals can listen at the same time (i.e., it is non-rivalrous).
 
-However, the conventional models of building and funding public goods run into various problems. Not only have these issues stymied the development of public goods, but it has also resulted in public goods with [negative externalities](https://corporatefinanceinstitute.com/resources/knowledge/economics/negative-externalities/).
+However, the conventional models of building and funding public goods run into various problems. Not only have these issues discouraged the development of public goods, but it has also resulted in public goods with [negative externalities](https://corporatefinanceinstitute.com/resources/knowledge/economics/negative-externalities/).
 
-### Problems of traditional public goods funding {problems-of-traditional-public-goods-funding}
+## Problems of traditional public goods funding {#problems-of-traditional-public-goods-funding}
 
 ### 1. Misaligned incentives {#misaligned-incentives}
 
@@ -52,15 +51,15 @@ Traditional methods of funding public goods suffer from misaligned incentives am
 
 #### The free-rider problem {#free-rider-problem}
 
-The [free-rider problem](https://bit.ly/3ATE3KC) describes a situation whereby some individuals refuse to pay towards building a public good, but intend to use it. In this case, such individuals are "taking a free ride" on the contributions of others towards funding the public good.
+The [free-rider problem](https://bit.ly/3ATE3KC) describes a situation where some individuals refuse to pay towards building a public good, but intend to use it. In this case, such individuals are "taking a free ride" on the contributions of others toward funding the public good.
 
 The free-rider problem is central to the problem of funding public goods. If everyone refuses to pay for a public good, hoping someone else does, it becomes impossible to fund and build the public good.
 
 #### Tragedy of commons {#tragedy-of-commons}
 
-The [tragedy of commons](https://www.investopedia.com/terms/t/tragedy-of-the-commons.asp) concerns the degradation of commonly shared resources through overconsumption. A common resource is similar to a public good (they are nonexcludable), but can typically diminish in quality and availability as more people use it (i.e., they are rivalrous).
+The [tragedy of commons](https://www.investopedia.com/terms/t/tragedy-of-the-commons.asp) concerns the degradation of commonly shared resources through overconsumption. A common resource is similar to a public good (they are non-excludable), but can typically diminish in quality and availability as more people use it (i.e., they are rivalrous).
 
-Because individuals cannot prevent others from consuming the common resource, they are incentivized to take from the shared resource pool without replenishing it. But, as more people consume the resource, either of two things can happen: a) supply of the resource dwindles until there isn't any left for public consumption b) the quality of the resource degrades over time until it becomes unusable. Both situations are non-ideal, which is why solving the tragedy of commons is a key goal of new designs for funding public goods.
+Because individuals cannot prevent others from consuming the common resource, they are incentivized to take from the shared resource pool without replenishing it. But, as more people consume the resource, either of two things can happen: a) the supply of the resource reduces until there isn't any left for public consumption b) the quality of the resource degrades over time until it becomes unusable. Both situations aren't ideal, which is why solving the tragedy of commons is a key goal of new designs for funding public goods.
 
 #### Principal-agent problem {#principal-agent-problem}
 
