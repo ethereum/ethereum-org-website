@@ -1,14 +1,13 @@
 // Libraries
 import React, { useEffect, useState } from "react"
 import Countdown, { zeroPad } from "react-countdown"
+import { Box, Center, CloseButton } from "@chakra-ui/react"
 
 // Components
 import BannerNotification from "./BannerNotification"
 import Emoji from "./Emoji"
 import Link from "./Link"
 import Translation from "./Translation"
-import { Box, Center, IconButton } from "@chakra-ui/react"
-import { MdClose } from "react-icons/md"
 
 // Utils
 import { getFreshData } from "../utils/cache"
@@ -37,27 +36,16 @@ const BannerWrapper: React.FC<BannerWrapperProps> = ({
   children,
 }) => {
   return (
-    <BannerNotification shouldShow={isBannerVisible} position="relative">
-      <Center paddingRight="2rem" flexWrap="wrap">
-        <Emoji
-          marginRight="1rem"
-          flexShrink={0}
-          text=":tada:"
-          w="1rem"
-          h="1rem"
-        />
+    <BannerNotification
+      shouldShow={isBannerVisible}
+      position="relative"
+      justifyContent="space-between"
+    >
+      <Center paddingRight={8} flexWrap="wrap">
+        <Emoji marginRight={4} flexShrink={0} text=":tada:" w={4} h={4} />
         {children}
       </Center>
-      <IconButton
-        aria-label="Close Banner"
-        icon={<MdClose fontSize={24} />}
-        onClick={onClose}
-        position="absolute"
-        top="1.5"
-        right="1.5"
-        size="xs"
-        _hover={{ background: "background", color: "primary" }}
-      />
+      <CloseButton onClick={onClose} aria-label="Close Banner" float="right" />
     </BannerNotification>
   )
 }
