@@ -1462,6 +1462,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://r.32k.io"><img src="https://avatars.githubusercontent.com/u/11726?v=4?s=100" width="100px;" alt="Ryan Smith"/><br /><sub><b>Ryan Smith</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ryandotsmith" title="Documentation">📖</a></td>
       <td align="center"><a href="https://vj-codes.github.io/"><img src="https://avatars.githubusercontent.com/u/60894542?v=4?s=100" width="100px;" alt="Vaishnavi Joshi"/><br /><sub><b>Vaishnavi Joshi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=vj-codes" title="Documentation">📖</a></td>
     </tr>
+    <tr>
+      <td align="center"><a href="https://github.com/jb-0"><img src="https://avatars.githubusercontent.com/u/39060614?v=4?s=100" width="100px;" alt="Jamie Barrett"/><br /><sub><b>Jamie Barrett</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=jb-0" title="Code">💻</a></td>
+    </tr>
   </tbody>
 </table>
 
