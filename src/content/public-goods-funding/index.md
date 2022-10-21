@@ -81,7 +81,7 @@ Funding models that apply democratic voting ("one person, one vote") rules rely 
 
 2. **Voter ignorance**: Prioritizing the preferences of the majority may not necessarily lead to spending on the right public goods owing to widespread voter ignorance. In this case, informed voters are unable to push for the production of more beneficial public goods.
 
-3. **Negative externalities**: Another downside with democratic funding schemes is the cost borne by the minority. In democratic systems, those who may not necessarily need a public good are forced to pay the same as those who need it the most. For example, Bob (a risk-averse individual) is forced to pay taxes to subsidize medical procedures for Alice (a risk-seeking individual), even though Bob himself might never need such services.
+3. **Negative externalities**: Another downside with democratic funding schemes is the cost borne by the minority. In democratic systems, those who may not necessarily need a public good are forced to pay the same as those who need it the most. Consider the case where Bob (an introvert who prefers staying indoors) is forced to pay taxes to subsidize the creation of public parks for people like Alice (an extrovert who enjoys staying outdoors), even though Bob himself might never get to use the park. This is a trivial example, but there are other real-world situations where the minority in society are (unfairly) required to pay for public goods on behalf of others who need the public good but aren't willing or able to pay for it.  
 
 #### Plutocratic voting {#plutocratic-voting}
 
