@@ -1,7 +1,6 @@
 ---
-title: Ethereum Foundation et programmes de subventions communautaires
+title: Ethereum Foundation & programmes de subventions communautaires
 description: Une liste des programmes de subvention de l'écosystème Ethereum.
-sidebar: true
 lang: fr
 ---
 
@@ -16,13 +15,12 @@ Elle est supervisée par notre communauté. S'il y a quelque chose manquant ou i
 Ces programmes soutiennent le vaste écosystème Ethereum en offrant des subventions à un large éventail de projets. Il s'agit notamment de solutions pour l'évolutivité, la création de communautés, la sécurité, la confidentialité, etc. Ces subventions ne sont pas spécifiques à une seule plateforme Ethereum et constituent un bon point de départ si vous n'êtes pas sûr.
 
 - [Programme de soutien de l'écosystème EF](https://esp.ethereum.foundation) - _Financement de projets open source qui bénéficient à Ethereum, avec un intérêt particulier pour les outils universels, l'infrastructure, la recherche et les biens publics_
-  - [Round des subventions académiques](/community/grants/academic-grants-round/) - \_L'Ethereum Foundation sponsorise une vague de subventions pour soutenir les travaux académiques liés à Ethereum_Ethereum Foundation
 - [RFP Ethereum](https://github.com/ethereum/requests-for-proposals) - _Demandes de propositions par l'Ethereum Foundation pour des travaux et des projets dans l'écosystème Ethereum_
-- [MetaCartel](https://www.metacartel.org/grants/) - _Développement de Dapp, création de DAO_  
-  Subventions allant de $1K - $8K USD.
-- [DAO Moloch](https://www.molochdao.com/) - _Confidentialité, passage à l'échelle de niveau 2, sécurité du client, etc._
+- [MetaCartel](https://www.metacartel.org/grants/) - _Développement de dApp, création DAO_
+- [DAO Moloch](https://www.molochdao.com/) - _Confidentialité, mise à l'échelle de la couche 2, sécurité du client, etc._
 - [Subventions ouvertes](https://opengrants.com/explore)
 - [Subventions DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Feuille de calcul Google regroupant les organisations offrant des subventions_
+- [Défi de Fusion de Données](https://esp.ethereum.foundation/merge-data-challenge) - _Un appel à tous les Ethereans, scientifiques des données, ingénieurs des données, visualiseurs de données, développeurs et toutes personnes intéressées par la recherche de données Ethereum !_
 
 ## Projets spécifiques {#project-specific}
 
@@ -30,6 +28,7 @@ Ces projets ont crée leurs propres subventions pour encourager d'autres projets
 
 - [Programme de subventions Aave](https://aavegrants.org/) – _Subventions DAO [Aave](https://aave.com/)_
 - [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _Fonds pour l'écosystème [Balancer](https://balancer.fi/)_
+- [Programme de subventions Chainlink](https://chain.link/community/grants) - _[Subventions de la Communauté](https://chain.link/) Chainlink_
 - [Programme de subventions Compound](https://compoundgrants.org/) – _Écosystème financier [Compound](https://compound.finance/)_
 - [Programme de subventions Consensys](https://consensys.net/grants/) – _Subventions Ethereum et financement de blockchain [Consensys](https://consensys.net/)_
 - [Organisme de subvention Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _Écosystème financier [Lido](https://lido.fi/)_

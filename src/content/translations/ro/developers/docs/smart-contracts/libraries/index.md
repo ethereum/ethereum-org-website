@@ -2,7 +2,6 @@
 title: Biblioteci de contracte inteligente
 description:
 lang: ro
-sidebar: true
 ---
 
 Nu este nevoie să scrieţi începând de la zero fiecare contract inteligent din proiect. Există multe biblioteci de contracte inteligente open source disponibile, care oferă elemente de construcție reutilizabile pentru proiectul dvs., care vă pot scuti de a reinventa roata.

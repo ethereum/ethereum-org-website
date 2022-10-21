@@ -1,7 +1,6 @@
 ---
 title: Soporte técnico de Ethereum
 description: Explicación de cómo obtener soporte técnico en el ecosistema Ethereum.
-sidebar: true
 lang: es
 ---
 

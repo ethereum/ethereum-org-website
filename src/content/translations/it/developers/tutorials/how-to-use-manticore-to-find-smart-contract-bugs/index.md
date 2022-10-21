@@ -3,7 +3,6 @@ title: Come usare Manticore per trovare bug negli Smart Contract
 description: Come usare Manticore per trovare automaticamente bug negli Smart Contract
 author: Trailofbits
 lang: it
-sidebar: true
 tags:
   - "Solidity"
   - "Smart Contract"

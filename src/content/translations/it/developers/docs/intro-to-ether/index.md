@@ -2,8 +2,6 @@
 title: Intro agli ether
 description: Introduzione di uno sviluppatore alla criptovaluta ether.
 lang: it
-sidebar: true
-preMergeBanner: true
 ---
 
 ## Prerequisiti {#prerequisites}
@@ -34,7 +32,7 @@ Capita [spesso](https://www.reuters.com/article/us-crypto-currencies-lending-ins
 
 La coniazione è il processo con vengono creati nuovi ether sul registro di Ethereum. Il protocollo sottostante di Ethereum crea i nuovi ether, cosa impossibile da fare per un utente.
 
-L'ether è coniato quando è creato un nuovo blocco sulla blockchain di Ethereum. Come incentivo a creare i blocchi, il protocollo concede una ricompensa in ogni blocco, incrementando il saldo di un indirizzo impostato dal produttore del blocco. Nel tempo la ricompensa per i blocchi è cambiata e oggi ammonta a 2 ETH per blocco. Dopo la fusione, l'emissione di ogni validatore dipende dalla quantità di ether che hanno messo in staking e dalle loro prestazioni.
+L'ether è coniato come una ricompensa per ogni blocco proposto e al punto di controllo di ogni epoca per altre attività correlate al validatore per raggiungere il consenso. L'importo totale emesso dipende dal numero di validatori e da quanto ether hanno in staking. Quest'emissione totale è divisa equamente tra i validatori nel caso ideale in cui tutti i validatori siano onesti e online ma, in realtà, varia a seconda delle prestazioni del validatore. Circa 1/8 dell'emissione totale va al propositore del blocco; il resto è distribuito tra gli altri validatori. I propositori di blocchi, inoltre, ricevono mance dalle commissioni di transazione e dal reddito correlato alla MEV, ma provengono da ether riciclati, non appena emessi.
 
 ## Bruciare ether {#burning-ether}
 

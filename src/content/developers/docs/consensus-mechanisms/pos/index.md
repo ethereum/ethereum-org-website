@@ -2,7 +2,6 @@
 title: Proof-of-stake (PoS)
 description: An explanation of the proof-of-stake consensus protocol and its role in Ethereum.
 lang: en
-sidebar: true
 ---
 
 Proof-of-stake (PoS) underlies Ethereum's [consensus mechanism](/developers/docs/consensus-mechanisms/). Ethereum switched on its proof-of-stake mechanism in 2022 because it is more secure, less energy-intensive, and better for implementing new scaling solutions compared to the previous [proof-of-work](/developers/docs/consensus-mechanisms/pow) architecture.
@@ -58,6 +57,10 @@ Overall, proof-of-stake, as it is implemented on Ethereum, has been demonstrated
 | Staking is more decentralized. Economies of scale do not apply in the same way that they do for PoW mining.                                                                                                         | Proof-of-stake is more complex to implement than proof-of-work                          |
 | Proof-of-stake offers greater crypto-economic security than proof-of-work                                                                                                                                           | Users need to run three pieces of software to participate in Ethereum's proof-of-stake. |
 | Less issuance of new ETH is required to incentivize network participants                                                                                                                                            |                                                                                         |
+
+## More of a visual learner? {#visual-learner}
+
+<YouTube id="psKDXvXdr7k" />
 
 ## Further reading {#further-reading}
 

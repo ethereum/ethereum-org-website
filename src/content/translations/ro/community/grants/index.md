@@ -1,7 +1,6 @@
 ---
 title: Fundația Ethereum & programe de granturi comunitare
 description: O listă a programelor de granturi din tot ecosistemul Ethereum.
-sidebar: true
 lang: ro
 ---
 

@@ -2,7 +2,6 @@
 title: Upgrading smart contracts
 description: An overview of upgrade patterns for Ethereum smart contracts
 lang: en
-sidebar: true
 ---
 
 Smart contracts on Ethereum are self-executing programs that run in the Ethereum Virtual Machine (EVM). These programs are immutable by design, which prevents any updates to the business logic once the contract is deployed.
@@ -75,7 +74,7 @@ Using the proxy patterns requires an understanding of the **delegatecall** funct
 
 From the [Solidity documentation](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#delegatecall-callcode-and-libraries):
 
-> _There exists a special variant of a message call, named **delegatecall** which is identical to a message call apart from the fact that the code at the target address is executed in the context (i.e. at the address) of the calling contract and `msg.sender` and `msg.value` do not change their values._ > _This means that a contract can dynamically load code from a different address at runtime. Storage, current address and balance still refer to the calling contract, only the code is taken from the called address._
+> _There exists a special variant of a message call, named **delegatecall** which is identical to a message call apart from the fact that the code at the target address is executed in the context (i.e. at the address) of the calling contract and `msg.sender` and `msg.value` do not change their values._ _This means that a contract can dynamically load code from a different address at runtime. Storage, current address and balance still refer to the calling contract, only the code is taken from the called address._
 
 The proxy contract knows to invoke `delegatecall` whenever a user calls a function because it has a `fallback` function built into it. In Solidity programming the [fallback function](https://docs.soliditylang.org/en/v0.8.9/contracts.html#fallback-function) is executed when a function call does not match functions specified in a contract.
 
@@ -87,7 +86,7 @@ By pointing the proxy contract to a new logic contract, the code executed when u
 
 Proxy patterns are a popular method for upgrading smart contracts because they eliminate the difficulties associated with contract migration. However, proxy patterns are more complicated to use and can introduce critical flaws, such as [function selector clashes](https://medium.com/nomic-foundation-blog/malicious-backdoors-in-ethereum-proxies-62629adf3357), if used improperly.
 
-[More on proxy patterns](blog.openzeppelin.com/proxy-patterns/).
+[More on proxy patterns](https://blog.openzeppelin.com/proxy-patterns/).
 
 ### Upgrade mechanism #4: Strategy pattern {#strategy-pattern}
 
@@ -103,7 +102,7 @@ The main drawback is that this pattern is mostly useful for rolling out minor up
 
 ### Upgrade mechanism #5: Diamond pattern {#diamond-pattern}
 
-The diamond pattern can be considered an improvement on the proxy pattern. Diamond patterns differ from proxy patterns because the diamond proxy contract can delegates function calls to more than one logic contract.
+The diamond pattern can be considered an improvement on the proxy pattern. Diamond patterns differ from proxy patterns because the diamond proxy contract can delegate function calls to more than one logic contract.
 
 The logic contracts in the diamond pattern are known as _facets_. To make the diamond pattern work, you need to create a mapping in the proxy contract that maps [function selectors](https://docs.soliditylang.org/en/v0.8.12/abi-spec.html#function-selector) to different facet addresses.
 

@@ -2,7 +2,6 @@
 title: Introduction à l'ether
 description: Une introduction pour développeur à la cryptomonnaie ether.
 lang: fr
-sidebar: true
 ---
 
 ## Prérequis {#prerequisites}

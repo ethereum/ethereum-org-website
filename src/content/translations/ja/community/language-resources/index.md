@@ -1,7 +1,6 @@
 ---
 title: 言語リソース
 description: イーサリアムに関する英語以外のリソース
-sidebar: true
 lang: ja
 ---
 

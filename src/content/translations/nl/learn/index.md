@@ -1,7 +1,6 @@
 ---
 title: Info
 lang: nl
-sidebar: true
 ---
 
 # Info over Ethereum {#learn-about-ethereum}

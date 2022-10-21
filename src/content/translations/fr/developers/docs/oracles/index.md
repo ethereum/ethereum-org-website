@@ -2,7 +2,6 @@
 title: Oracles
 description: Les oracles servent à intégrer les données du monde réel dans votre application Ethereum, les contrats intelligents ne pouvant pas les interroger par eux-mêmes.
 lang: fr
-sidebar: true
 incomplete: true
 ---
 

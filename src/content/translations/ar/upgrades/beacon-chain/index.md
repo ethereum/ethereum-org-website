@@ -3,7 +3,6 @@ title: السلسلة المُنارة
 description: تعرّف على سلسلة المنارة - أول ترقية Eth2 رئيسية لإثيريوم.
 lang: ar
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: سلسلة المنارة لا تغير أي شيء في إثيريوم الذي نستعمله في الوقت الحالي.
 summaryPoint2: سوف تقوم بتنسيق الشبكة.

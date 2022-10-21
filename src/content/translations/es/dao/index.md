@@ -4,7 +4,6 @@ description: Una visión general de las DAO en Ethereum
 lang: es
 template: use-cases
 emoji: ":handshake:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/use-cases/dao-2.png
 alt: Imagen de una DAO votando una propuesta.
@@ -57,7 +56,7 @@ _Normalmente se utiliza para gobernar protocolos o tókenes descentralizados en 
 
 #### Un ejemplo famoso {#token-example}
 
-[MakerDAO](https://makerdao.com) – El token de MakerDAO, MKR, está ampliamente disponible en los intercambios descentralizados. De modo que cualquiera puede comprar, siempre que tenga poder de voto sobre el futuro del protocolo Maker.
+[MakerDAO](https://makerdao.com) – El token de MakerDAO, MKR, está ampliamente disponible en los intercambios descentralizados. De modo que cualquiera lo puede comprar, siempre que tenga poder de voto sobre el futuro del protocolo Maker.
 
 ### Membresía basada en participaciones {#share-based-membership}
 
@@ -73,7 +72,7 @@ _Normalmente se utiliza para organizaciones más estrechas, centradas en el ser 
 
 La reputación representa una prueba de participación y otorga poder de voto en la DAO. A diferencia de la adhesión de miembros basada en tókenes o en la participación, las DAO basadas en la reputación no transfieren la propiedad a contribuidores. La reputación no puede comprarse, transferirse ni delegarse; los miembros de la DAO deben ganarse la reputación mediante la participación. La votación en cadena se realiza sin permisos y los potenciales miembros pueden presentar propuestas libremente para unirse a la DAO y solicitar recibir reputación y tókenes como recompensa a cambio de su contribución.
 
-_Suele usarse para el desarrollo descentralizado y la gobernanza de protocolos y dApps, y resulta igualmente adecuado para un conjunto diverso de organizaciones, como las benéficas, los colectivos de trabajadores, o los grupos de inversión, entre otros._
+_Suele usarse para el desarrollo descentralizado y la gobernanza de protocolos y Dapps, pero resulta igualmente adecuado para un conjunto diverso de organizaciones, como las benéficas, los colectivos de trabajadores, o los grupos de inversión, entre otros._
 
 #### Un ejemplo famoso {#reputation-example}
 

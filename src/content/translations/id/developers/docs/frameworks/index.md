@@ -2,7 +2,6 @@
 title: Kerangka Kerja Pengembangan Dapp
 description: Jelajahi keuntungan kerangka kerja ini dan bandingkan dengan opsi yang tersedia.
 lang: id
-sidebar: true
 ---
 
 ## Pengantar kerangka kerja {#introduction-to-frameworks}

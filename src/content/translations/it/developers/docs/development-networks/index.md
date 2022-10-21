@@ -2,7 +2,6 @@
 title: Reti di sviluppo
 description: Panoramica delle reti di sviluppo e degli strumenti disponibili per creare applicazioni Ethereum.
 lang: it
-sidebar: true
 ---
 
 Quando si crea un'applicazione Ethereum con Smart Contract, è consigliabile eseguirla prima su una rete locale per vedere come funziona prima di distribuirla.
@@ -19,7 +18,7 @@ Si tratta essenzialmente di client Ethereum (implementazioni di Ethereum) proget
 
 **Perché allora non eseguire semplicemente un nodo Ethereum locale?**
 
-_Potresti_ [eseguire un nodo](/developers/docs/nodes-and-clients/#running-your-own-node) (come Geth, Erigon o Nethermind), ma poiché le reti di sviluppo sono create per lo sviluppo, spesso includono comode caratteristiche come:
+_Potresti_ [eseguire un nodo](/developers/docs/nodes-and-clients/#running-your-own-node), ma poiché le reti di sviluppo sono costruite per lo sviluppo, spesso includono funzionalità pratiche come:
 
 - Inserire in modo deterministico dati nella blockchain locale (ad esempio account con saldi ETH)
 - Eseguire il mining istantaneo di blocchi a ogni transazione ricevuta, in ordine e senza ritardi
@@ -41,16 +40,31 @@ Ganache offre sia un'applicazione desktop (Ganache UI) che uno strumento da riga
 
 ### Rete Hardhat {#hardhat-network}
 
-Rete Ethereum locale progettata per lo sviluppo. Permette di distribuire contratti, eseguire test e il debug del codice
+Rete Ethereum locale progettata per lo sviluppo. Permette di distribuire contratti, eseguire test e il debug del codice.
 
 La rete Hardhat è incorporata in Hardhat, un ambiente di sviluppo Ethereum professionale.
 
 - [Sito Web](https://hardhat.org/)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
+### Beacon Chain Locali {#local-beacon-chains}
+
+Alcuni client del consenso hanno strumenti integrati per avviare beacon chain locali per scopi di test. Sono disponibili le istruzioni per Lighthouse, Nimbus e Lodestar:
+
+- [Testnet locale usando Lodestar](https://chainsafe.github.io/lodestar/usage/local/)
+- [Testnet locale usando Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
+- [Testnet locale usando Nimbus](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
+
+### Catene di prova pubbliche di Ethereum {#public-beacon-testchains}
+
+Attualmente esistono inoltre tre implementazioni di prova pubbliche di Ethereum. La rete di prova consigliata con supporto a lungo termine è Goerli. Anche Sepolia dovrebbe essere mantenuta nel futuro prossimo, ma il validatore impostato è autorizzato, il che significare che non sussiste alcun accesso generale ai nuovi validatori su questa rete di prova. La catena di Ropsten dovrebbe essere superata.
+
+- [Launchpad di staking di Goerli](https://goerli.launchpad.ethereum.org/)
+- [Launchpad di staking di Ropsten](https://ropsten.launchpad.ethereum.org/)
+
 ## Letture consigliate {#further-reading}
 
-_Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
 
 ## Argomenti correlati {#related-topics}
 

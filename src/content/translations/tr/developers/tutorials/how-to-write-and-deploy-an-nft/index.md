@@ -10,7 +10,6 @@ tags:
   - "akıllı sözleşmeler"
 skill: beginner
 lang: tr
-sidebar: true
 published: 2021-04-22
 ---
 

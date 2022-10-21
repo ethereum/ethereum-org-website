@@ -4,7 +4,6 @@ description: Un aperçu de la façon de débuter avec la mise en jeu d'ETH mutua
 lang: fr
 template: staking
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../../assets/staking/leslie-pool.png
 alt: Leslie le rhinocéros nage dans la piscine.
 sidebarDepth: 2
@@ -67,17 +66,10 @@ Habituellement, les jetons de liquidité ERC-20 émis envers les validateurs rep
 </ExpandableCard>
 
 <ExpandableCard title="Quand puis-je retirer ma mise?">
-Actuellement, il n'est pas possible de retirer des fonds d'un validateur sur la chaîne Beacon, ce qui limite actuellement la capacité à réellement <em>échanger</em> votre jeton de liquidité en échange des récompenses ETH bloquées dans la couche de consensus.
 
-Par ailleurs, les pools qui utilisent un jeton de liquidité ERC-20 permettent aux utilisateurs d'échanger ce jeton sur le marché ouvert, vous permettant ainsi de « retirer » sans pour autant retirer l'ETH de la Chaîne de balises.
-</ExpandableCard>
+Actuellement, il n'est pas possible de retirer des fonds d'un validateur Ethereum, ce qui limite actuellement la capacité à réellement échanger votre jeton de liquidité en échange des récompenses ETH bloquées dans la couche de consensus.
 
-<ExpandableCard title="Les pools de validateurs doivent-ils faire quelque chose pour préparer la Fusion?">
-Les pools de validateurs <strong>n'ont besoin de rien faire pour préparer la Fusion</strong>.
-
-Cependant, à l'approche de la Fusion, restez attentifs pour éviter les escroqueries. **Vous n'avez pas besoin de mettre à niveau vos jetons ETH ou ETH misés** pour la transition vers la preuve d'enjeu.
-
-En savoir plus sur [La Fusion](/upgrades/merge/)
+Alternativement, les pools qui utilisent un jeton de liquidité ERC-20 permettent aux utilisateurs d'échanger ce jeton sur le marché ouvert, vous permettant de vendre votre position de mise en jeu, efficacement "retirer" sans pour autant retirer l'ETH du contrat de mise en jeu.
 </ExpandableCard>
 
 <ExpandableCard title="Est-ce différent de la mise en jeu via mon service d'échange ?">

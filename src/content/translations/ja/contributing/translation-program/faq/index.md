@@ -2,7 +2,6 @@
 title: ethereum.orgサイトの翻訳ガイド
 lang: ja
 description: ethereum.orgサイトの翻訳を支援する方法
-sidebar: true
 ---
 
 # ethereum.org サイトの翻訳ガイド {#translating-ethereum-guide}

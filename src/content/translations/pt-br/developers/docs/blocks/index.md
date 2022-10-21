@@ -2,7 +2,6 @@
 title: Blocos
 description: Uma visão geral dos blocos na blockchain do Ethereum — sua estrutura de dados, por que são necessários e como são feitos.
 lang: pt-br
-sidebar: true
 ---
 
 Blocos são lotes de transações com um hash do bloco anterior na cadeia. Isso une os blocos (em uma cadeia) porque os hashes são criptograficamente derivados dos dados do bloco. Isso previne fraudes, porque uma mudança em qualquer bloco no histórico invalidaria todos os blocos subsequentes, alteraria todos os hashes subsequentes e todos que estivessem executando o blockchain notariam.

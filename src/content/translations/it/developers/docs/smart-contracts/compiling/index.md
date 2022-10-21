@@ -2,7 +2,6 @@
 title: Compilazione di Smart Contract
 description: Spiegazione del motivo per cui è necessario compilare Smart Contract e cosa succede durante la compilazione.
 lang: it
-sidebar: true
 incomplete: true
 ---
 

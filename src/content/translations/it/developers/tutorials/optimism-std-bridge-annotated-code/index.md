@@ -2,7 +2,6 @@
 title: "Guida del ponte standard di Optimism per contratti"
 description: Come funziona il ponte standard per Optimism? Perché funziona così?
 author: Ori Pomerantz
-sidebar: true
 tags:
   - "Solidity"
   - "optimism"
@@ -329,7 +328,7 @@ contract CrossDomainEnabled {
      * Variables *
      *************/
 
-    // Messenger contract used to send and recieve messages from the other domain.
+    // Messenger contract used to send and receive messages from the other domain.
     address public messenger;
 
     /***************

@@ -2,7 +2,6 @@
 title: Ethereum .NET fejlesztőknek
 description: Tanulj meg Ethereumon fejleszteni .NET-alapú projektek és eszközök használatával
 lang: hu
-sidebar: true
 incomplete: true
 ---
 

@@ -2,7 +2,6 @@
 title: Blocks
 description: An overview of blocks in the Ethereum blockchain – their data structure, why they're needed, and how they're made.
 lang: en
-sidebar: true
 ---
 
 Blocks are batches of transactions with a hash of the previous block in the chain. This links blocks together (in a chain) because hashes are cryptographically derived from the block data. This prevents fraud, because one change in any block in history would invalidate all the following blocks as all subsequent hashes would change and everyone running the blockchain would notice.
@@ -91,7 +90,7 @@ parent_hash: hash of the parent block
 fee_recipient: account address for paying transaction fees to
 state_root: root hash for the global state after applying changes in this block
 receipts_root: hash of the transaction receipts trie
-logs_bloom: data structure containign event logs
+logs_bloom: data structure containing event logs
 prev_randao: value used in random validator selection
 block_number: the number of the current block
 gas_limit: maximum gas allowed in this block
@@ -110,7 +109,7 @@ parent_hash: hash of the parent block
 fee_recipient: account address for paying transaction fees to
 state_root: root hash for the global state after applying changes in this block
 receipts_root: hash of the transaction receipts trie
-logs_bloom: data structure containign event logs
+logs_bloom: data structure containing event logs
 prev_randao: value used in random validator selection
 block_number: the number of the current block
 gas_limit: maximum gas allowed in this block

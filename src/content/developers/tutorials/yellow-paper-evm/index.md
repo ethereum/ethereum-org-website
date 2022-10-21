@@ -5,7 +5,6 @@ author: "qbzzt"
 tags: ["evm", "yellow paper", "specifications"]
 skill: intermediate
 lang: en
-sidebar: true
 published: 2022-05-15
 ---
 
@@ -17,7 +16,7 @@ Like almost everything else in Ethereum, the Yellow Paper evolves over time. To 
 
 ### Why the EVM? {#why-the-evm}
 
-I am writing this a few months before [The Merge](/upgrades/merge). The Merge will significantly change the way blocks are handled, making that part of the current yellow paper of historical interest. On the other hand, the EVM is mostly unaffected by The Merge.
+The original yellow paper was written right at the start of Ethereum's development. It describes the original proof-of-work based consensus mechanism that was originally used to secure the network. However, Ethereum switched off proof-of-work and started using proof-of-stake based consensus in September 2022. This tutorial will focus on the parts of the yellow paper defining the Ethereum Virtual Machine. The EVM was unchanged by the transition to proof-of-stake (except for the return value of the DIFFICULTY opcode).
 
 ## 9 Execution model {#9-execution-model}
 
@@ -33,17 +32,21 @@ The term [Turing-complete](https://en.wikipedia.org/wiki/Turing_completeness) me
 
 This section gives the basics of the EVM and how it compares with other computational models.
 
-A [stack machine](https://en.wikipedia.org/wiki/Stack_machine) is a computer that stores intermediate data not in registers, but in a [stack](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>). Stack machine is the preferred architecture for virtual machines because it is easy to implement. This ease of implementation is especially important in the case of the EVM because it means that bugs, and security vulnerabilities, are a lot less likely.
+A [stack machine](https://en.wikipedia.org/wiki/Stack_machine) is a computer that stores intermediate data not in registers, but in a [stack](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>). This is the preferred architecture for virtual machines because it is easy to implement meaning that bugs, and security vulnerabilities, are a lot less likely. The memory in the stack is divided into 256-bit words. This was chosen because it is convenient for Ethereum's core cryptographic operations such as Keccak-256 hashing and elliptic curve computations. The maximum size of the stack in 1024 bytes.
 
-The memory is a byte array, which means every memory location is a single byte. This means that when you write a word (which is 256 bits) to memory it covers 32 (256/8) different memory locations. For example, if you execute this [Yul](https://docs.soliditylang.org/en/latest/yul.html) code:
+For example, if you execute this [Yul](https://docs.soliditylang.org/en/latest/yul.html) code:
 
 ```yul
 mstore(0, 0x60A7)
 ```
 
-It writes zeros to locations 0-29, 0x60 to 30, and 0xA7 to 31.
+It fills 32 memory locations - i.e. one word - with zeros in locations 0-29, 0x60 to 30, and 0xA7 to 31.
 
-The [Von Neumann architecture](https://en.wikipedia.org/wiki/Von_Neumann_architecture) specifies that the program to be executed and the data which it processes are stored in the same memory. This is a bad idea from the security perspective because it allows program code to be modified, so the EVM never stores the currently running code in memory, it is always in a different memory that is ROM (read only memory). There are only two cases code that will be executed in the future comes from memory, in both cases because the code needs to come from a different piece of code, so it _has_ to come from memory (or [storage](https://coinyuppie.com/in-depth-understanding-of-evm-storage-mechanism-and-security-issues/), but that would be too expensive).
+The EVM also has a separate non-volatile storage model that is maintained as part of the system state - this memory is organized into word arrays (as opposed to word-addressable byte arrays in the stack). The stack is referred to as "memory" while the non-volatile storage is referred to as "storage".
+
+The standard [Von Neumann architecture](https://en.wikipedia.org/wiki/Von_Neumann_architecture) stores code and data in the same memory. The EVM diverges from this norm for security reasons - sharing volatile memory makes it possible to change program code. Instead, code is saved to storage.
+
+There are only two cases in which code is executed from memory:
 
 - When a contract creates another contract (using [`CREATE`](https://www.evm.codes/#f0) or [`CREATE2`](https://www.evm.codes/#f5)), the code for the contract constructor comes from memory.
 - During the creation of _any_ contract, the constructor code runs and then returns with the code of the actual contract, also from memory.
@@ -76,6 +79,10 @@ The cost of expanding memory (if necessary).
 In equation 324, this value is written as _C<sub>mem</sub>(μ<sub>i</sub>')-C<sub>mem</sub>(μ<sub>i</sub>)_. Looking at section 9.4.1 again, we see that _μ<sub>i</sub>_ is the number of words in memory. So _μ<sub>i</sub>_ is the number of words in memory before the opcode and _μ<sub>i</sub>'_ is the number of words in memory after the opcode.
 
 The function _C<sub>mem</sub>_ is defined in equation 326: _C<sub>mem</sub>(a) = G<sub>memory</sub> × a + ⌊a<sup>2</sup> ÷ 512⌋_. _⌊x⌋_ is the floor function, a function that given a value returns the largest integer that is still not larger than the value. For example, _⌊2.5⌋ = ⌊2⌋ = 2._ When _a < √512_, _a<sup>2</sup> < 512_, and the result of the floor function is zero. So for the first 22 words (704 bytes), the cost rises linearly with the number of memory words required. Beyond that point _⌊a<sup>2</sup> ÷ 512⌋_ is positive. When the memory required is high enough the gas cost is proportional to the square of the amount of memory.
+
+**Note** that these factors only influence the _inherent_ gas cost - it does not take into account the fee market or tips to validators that determine how much an end user is required to pay - this is just the raw cost of running a particular operation on the EVM.
+
+[Read more about gas](/developers/docs/gas/).
 
 ## 9.3 Execution environment {#93-execution-env}
 
@@ -120,10 +127,10 @@ Equations 137-142 give us the initial conditions for running the EVM:
 
 Equation 143 tells us there are four possible conditions at each point in time during execution, and what to do with them:
 
-1. If _Z(σ,μ,A,I)_, it means that we have encountered an abnormal condition. In that case, the new state is identical to the old one (except gas gets burned)
-2. If the opcode is [`REVERT`](https://www.evm.codes/#fd), the new state is the same as the old state, some gas is lost, and we have output to return.
-3. If there is any output, (meaning we are at a [`RETURN`](https://www.evm.codes/#f3)), the state is the new state and returns the output.
-4. If we aren't at one of the end conditions, continue running.
+1.  `Z(σ,μ,A,I)`. Z represents a function that tests whether an operation creates an invalid state transition (see [exceptional halting](#942-exceptional-halting)). If it evaluates to True, the new state is identical to the old one (except gas gets burned) because the changes have not been implemented.
+2.  If the opcode being executed is [`REVERT`](https://www.evm.codes/#fd), the new state is the same as the old state, some gas is lost.
+3.  If the sequence of operations is finished, as signified by a [`RETURN`](https://www.evm.codes/#f3)), the state is updated to the new state.
+4.  If we aren't at one of the end conditions 1-3, continue running.
 
 ## 9.4.1 Machine State {#941-machine-state}
 

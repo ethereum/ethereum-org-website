@@ -2,12 +2,17 @@
 title: Ethash
 description: Uno sguardo dettagliato all'algoritmo Ethash.
 lang: it
-sidebar: true
 ---
 
-**È importante notare che Ethash è l'algoritmo di mining proof-of-work di Ethereum. Il mining proof-of-work sarà disattivato completamente alla [Fusione](/upgrades/merge), a partire dalla quale Ethereum sarà invece protetto usando un meccanismo di [proof-of-stake](/developers/docs/consensus-mechanisms/pos).**
+<InfoBanner emoji=":wave:">
+   Ethash era l'algoritmo di mining di proof-of-work di Ethereum. Il proof-of-work è stato ora **interamente disattivato** ed Ethereum è ora protetto usando invece il [proof-of-stake](/developers/docs/consensus-mechanisms/pos). Leggi di più su <a href="/upgrades/merge/">La Fusione</a>, sul <a href="/developers/docs/consensus-mechanisms/pos/">proof-of-stake</a> e sullo <a href="/staking/">staking</a>. Questa pagina è per interesse storico!  
+</InfoBanner>
 
-[Ethash](https://github.com/ethereum/wiki/wiki/Ethash) è una versione modificata dell'algoritmo [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashamoto). Il proof-of-work Ethash è [ad elevato consumo di memoria](https://wikipedia.org/wiki/Memory-hard_function) (memory hard), cosa che si pensava avrebbe reso l'algoritmo resistente all'ASIC, ma successivamente è stato dimostrato che era possibile il mining ASIC con Ethash. La gravosità sulla memoria è ottenuta con un algoritmo di proof-of-work che richiede la scelta di sotto-serie di una risorsa fissa, dipendente dal nonce e dall'intestazione del blocco. Questa risorsa (di pochi gigabyte di dimensioni) è detta DAG. Il DAG è modificato ogni 30.000 blocchi, una finestra di 125 ore detta epoca (circa 5,2 giorni) e ha bisogno di un po' di tempo per essere generato. Poiché il DAG dipende dall'altezza del blocco, può essere pre-generato ma, in caso contrario, il client deve attendere fino alla fine di questo processo per produrre un blocco. Se i client non si pre-generano e salvano anticipatamente nella cache i DAG, la rete potrebbe subire un enorme ritardo dei blocchi a ogni transizione d'epoca. Il DAG non deve necessariamente essere generato per verificare il proof-of-work, perché è essenzialmente possibile eseguire la verifica con poca CPU e poca memoria.
+[Ethash](https://github.com/ethereum/wiki/wiki/Ethash) è una versione modificata dell'algoritmo [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashamoto). Il proof-of-work di Ethash è [a elevato consumo di memoria](https://wikipedia.org/wiki/Memory-hard_function), cosa pensata per rendere l'algoritmo resistente agli ASIC. Gli ASIC di Ethash sono infine stati sviluppati, ma il mining della GPU è stata un'opzione ancora valida fino alla disattivazione del proof-of-work. Ethash è ancora usato per minare altre valute su altre reti di proof-of-work non di Ethereum.
+
+## Come funziona Ethash? {#how-does-ethash-work}
+
+La gravosità sulla memoria è ottenuta con un algoritmo di proof-of-work che richiede la scelta di sotto-serie di una risorsa fissa, dipendente dal nonce e dall'intestazione del blocco. Questa risorsa (di pochi gigabyte di dimensioni) è detta DAG. Il DAG è modificato ogni 30.000 blocchi, una finestra di circa 125 ore detta un'epoca (circa 5,2 giorni) e richiede un po' di tempo per generarsi. Poiché il DAG dipende solo dall'altezza del blocco, può esser pre-generato, ma se non è il client, deve attendere fino alla fine di questo processo per produrre un blocco. Se i client non si pre-generano e salvano anticipatamente nella cache i DAG, la rete potrebbe subire un enorme ritardo dei blocchi a ogni transizione d'epoca. Il DAG non deve necessariamente essere generato per verificare il proof-of-work, perché è essenzialmente possibile eseguire la verifica con poca CPU e poca memoria.
 
 Il percorso generale intrapreso dall'algoritmo è il seguente:
 
