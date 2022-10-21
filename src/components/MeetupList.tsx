@@ -1,84 +1,24 @@
 // Libraries
 import React, { useState } from "react"
-import styled from "@emotion/styled"
 import { sortBy } from "lodash"
+import {
+  Box,
+  Flex,
+  Input,
+  LinkBox,
+  LinkOverlay,
+  Text,
+  useColorMode,
+} from "@chakra-ui/react"
 
 // Components
-import Emoji from "./OldEmoji"
+import Emoji from "./Emoji"
 import InfoBanner from "./InfoBanner"
 import Link from "./Link"
 import Translation from "./Translation"
 
 // Data
 import meetups from "../data/community-meetups.json"
-
-const Table = styled.div`
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-`
-
-const Item = styled(Link)`
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  color: ${(props) => props.theme.colors.text} !important;
-  box-shadow: 0 1px 1px ${(props) => props.theme.colors.tableItemBoxShadow};
-  margin-bottom: 1px;
-  padding: 1rem;
-  width: 100%;
-  color: #000000;
-
-  &:hover {
-    text-decoration: none;
-    border-radius: 4px;
-    box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
-  }
-`
-
-const ItemNumber = styled.div`
-  margin-right: 1rem;
-  opacity: 0.4;
-`
-const ItemTitle = styled.div``
-const ItemDesc = styled.p`
-  margin-bottom: 0;
-  opacity: 0.6;
-`
-
-const RightContainer = styled.div`
-  display: flex;
-  align-items: right;
-  align-content: flex-start;
-  flex: 1 1 25%;
-  margin-right: 1rem;
-  flex-wrap: wrap;
-`
-const LeftContainer = styled.div`
-  display: flex;
-  flex: 1 1 75%;
-  margin-right: 1rem;
-`
-
-const StyledInput = styled.input`
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 1.5rem;
-
-  border: 1px solid ${(props) => props.theme.colors.searchBorder};
-  color: ${(props) => props.theme.colors.text};
-  background: ${(props) => props.theme.colors.searchBackground};
-  padding: 0.5rem;
-  border-radius: 0.25em;
-  width: 100%;
-
-  &:focus {
-    outline: ${(props) => props.theme.colors.primary} auto 1px;
-  }
-  &:placeholder {
-    color: ${(props) => props.theme.colors.text200};
-  }
-`
 
 export interface Meetup {
   title: string
@@ -110,29 +50,91 @@ export interface IProps {}
 const MeetupList: React.FC<IProps> = () => {
   const [searchField, setSearchField] = useState<string>("")
   const filteredMeetups = filterMeetups(searchField)
+  const { colorMode } = useColorMode()
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>): void =>
     setSearchField(event.target.value)
 
   return (
-    <div>
-      <StyledInput
+    <Box>
+      <Input
         onChange={handleSearch}
         placeholder={"Search by meetup title or location"}
+        display="block"
+        mr="auto"
+        ml="auto"
+        mb={6}
+        border="1px solid"
+        borderColor="searchBorder"
+        color="text"
+        bg="searchBackground"
+        p={2}
+        borderRadius="base"
+        w="100%"
+        _focus={{ outline: "auto 1px" }}
+        _placeholder={{ color: "text200" }}
       />
-      <Table>
+      <Box
+        boxShadow={colorMode === "dark" ? "tableBox.dark" : "tableBox.light"}
+      >
         {filteredMeetups.length ? (
           filteredMeetups.map((meetup, idx) => (
-            <Item key={idx} to={meetup.link}>
-              <LeftContainer>
-                <ItemNumber>{idx + 1}</ItemNumber>
-                <ItemTitle>{meetup.title}</ItemTitle>
-              </LeftContainer>
-              <RightContainer>
-                <Emoji text={meetup.emoji} size={1} mr={`0.5em`} />
-                <ItemDesc>{meetup.location}</ItemDesc>
-              </RightContainer>
-            </Item>
+            <LinkBox
+              key={idx}
+              display="flex"
+              justifyContent="space-between"
+              boxShadow={
+                colorMode === "dark"
+                  ? "tableItemBox.dark"
+                  : "tableItemBox.light"
+              }
+              mb={0.25}
+              p={4}
+              w="100%"
+              _hover={{
+                textDecoration: "none",
+                borderRadius: "base",
+                boxShadow: "0 0 1px primary",
+                bg: "tableBackgroundHover",
+              }}
+            >
+              <Flex flex="1 1 75%" mr={4}>
+                <Box mr={4} opacity="0.4">
+                  {idx + 1}
+                </Box>
+                <Box>
+                  <LinkOverlay
+                    as={Link}
+                    href={meetup.link}
+                    textDecor="none"
+                    color="text"
+                    hideArrow
+                  >
+                    {meetup.title}
+                  </LinkOverlay>
+                </Box>
+              </Flex>
+              <Flex
+                textAlign="right"
+                alignContent="flex-start"
+                flex="1 1 25%"
+                mr={4}
+                flexWrap="wrap"
+              >
+                <Emoji text={meetup.emoji} boxSize={4} mr={2} />
+                <Text mb={0} opacity={"0.6"}>
+                  {meetup.location}
+                </Text>
+              </Flex>
+              <Box
+                as="span"
+                _after={{
+                  content: '"↗"',
+                  ml: 0.5,
+                  mr: 1.5,
+                }}
+              ></Box>
+            </LinkBox>
           ))
         ) : (
           <InfoBanner emoji=":information_source:">
@@ -142,8 +144,8 @@ const MeetupList: React.FC<IProps> = () => {
             </Link>
           </InfoBanner>
         )}
-      </Table>
-    </div>
+      </Box>
+    </Box>
   )
 }
 

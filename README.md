@@ -1456,6 +1456,14 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center"><a href="https://github.com/cheeky-gorilla"><img src="https://avatars.githubusercontent.com/u/76262359?v=4?s=100" width="100px;" alt="cheeky-gorilla"/><br /><sub><b>cheeky-gorilla</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Acheeky-gorilla" title="Bug reports">🐛</a></td>
       <td align="center"><a href="https://github.com/ThreeMuskets12"><img src="https://avatars.githubusercontent.com/u/23061574?v=4?s=100" width="100px;" alt="Noah Page"/><br /><sub><b>Noah Page</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ThreeMuskets12" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/oceans404"><img src="https://avatars.githubusercontent.com/u/91382964?v=4?s=100" width="100px;" alt="steph"/><br /><sub><b>steph</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=oceans404" title="Code">💻</a></td>
+      <td align="center"><a href="https://www.linkedin.com/in/itsdanielpark"><img src="https://avatars.githubusercontent.com/u/21699995?v=4?s=100" width="100px;" alt="Daniel Park"/><br /><sub><b>Daniel Park</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=panieldark" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/knititwearit"><img src="https://avatars.githubusercontent.com/u/5172992?v=4?s=100" width="100px;" alt="knititwearit"/><br /><sub><b>knititwearit</b></sub></a><br /><a href="#ideas-knititwearit" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center"><a href="https://r.32k.io"><img src="https://avatars.githubusercontent.com/u/11726?v=4?s=100" width="100px;" alt="Ryan Smith"/><br /><sub><b>Ryan Smith</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ryandotsmith" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://vj-codes.github.io/"><img src="https://avatars.githubusercontent.com/u/60894542?v=4?s=100" width="100px;" alt="Vaishnavi Joshi"/><br /><sub><b>Vaishnavi Joshi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=vj-codes" title="Documentation">📖</a></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="https://github.com/jb-0"><img src="https://avatars.githubusercontent.com/u/39060614?v=4?s=100" width="100px;" alt="Jamie Barrett"/><br /><sub><b>Jamie Barrett</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=jb-0" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
