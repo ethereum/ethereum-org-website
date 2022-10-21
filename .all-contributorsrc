@@ -9261,6 +9261,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "jb-0",
+      "name": "Jamie Barrett",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39060614?v=4",
+      "profile": "https://github.com/jb-0",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
