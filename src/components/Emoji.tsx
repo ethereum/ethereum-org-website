@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "@emotion/styled"
 import { Box, HTMLChakraProps } from "@chakra-ui/react"
 import { Twemoji, Props } from "react-emoji-render"
 
@@ -7,18 +6,10 @@ import { IS_DEV } from "../utils/env"
 
 export interface IProps extends HTMLChakraProps<"span">, Props {}
 
-const StyledEmoji = styled(Twemoji)`
-  & > img {
-    margin: 0 !important;
-    width: 1.5em !important;
-    height: 1.5em !important;
-  }
-`
-
 const Emoji = (props: IProps) => {
   return (
     <Box
-      as={StyledEmoji}
+      as={Twemoji}
       // The emoji lib is switching the protocol based on the existence of the
       // `location` object. That condition in DEV causes hydration mismatches.
       // https://github.com/tommoor/react-emoji-render/blob/master/src/index.js#L8
@@ -27,6 +18,13 @@ const Emoji = (props: IProps) => {
       options={{ protocol: IS_DEV ? "http" : "https" }}
       svg
       display="inline-block"
+      sx={{
+        "& > img": {
+          margin: "0 !important",
+          width: "1.5em !important",
+          height: "1.5em !important",
+        },
+      }}
       {...props}
     />
   )

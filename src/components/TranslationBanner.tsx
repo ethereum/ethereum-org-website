@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react"
 
-import { Box, Flex, Heading, Icon } from "@chakra-ui/react"
+import { Box, CloseButton, Flex, Heading, useToken } from "@chakra-ui/react"
 import ButtonLink from "./ButtonLink"
 import Translation from "./Translation"
-import theme from "../@chakra-ui/gatsby-plugin/theme"
-import { MdClose } from "react-icons/md"
 import Emoji from "./Emoji"
 
 export interface IProps {
@@ -21,6 +19,7 @@ const TranslationBanner: React.FC<IProps> = ({
   isPageContentEnglish,
 }) => {
   const [isOpen, setIsOpen] = useState(shouldShow)
+  const [textColor] = useToken("colors", ["text"])
 
   useEffect(() => {
     setIsOpen(shouldShow)
@@ -50,7 +49,7 @@ const TranslationBanner: React.FC<IProps> = ({
         color="black300"
         justify="space-between"
         boxShadow={{
-          base: `0px -4px 10px 0px #333333 10%`,
+          base: `0px -4px 10px 0px ${textColor} 10%`,
           md: "rgba(0, 0, 0, 0.16) 0px 2px 4px 0px",
         }}
         borderRadius="2px"
@@ -59,7 +58,7 @@ const TranslationBanner: React.FC<IProps> = ({
           flexDirection="column"
           alignItems={isPageRightToLeft ? "flex-end" : "flex-start"}
           m="1rem"
-          mt={{ sm: "2.5rem" }}
+          mt={{ base: "2.5rem", sm: 0 }}
         >
           <Flex
             align={{ base: "flex-start", sm: "center" }}
@@ -68,7 +67,7 @@ const TranslationBanner: React.FC<IProps> = ({
           >
             <Heading
               as="h3"
-              size="1.25rem"
+              fontSize="1.5rem"
               fontWeight="700"
               lineHeight="100%"
               my="0"
@@ -79,7 +78,6 @@ const TranslationBanner: React.FC<IProps> = ({
               text=":globe_showing_asia_australia:"
               pt="0.5rem"
               ml="0.5rem"
-              my="auto"
               mb={{ base: "1rem", sm: "auto" }}
             />
           </Flex>
@@ -112,24 +110,17 @@ const TranslationBanner: React.FC<IProps> = ({
             )}
           </Flex>
         </Flex>
-        <Box
+        <CloseButton
           position="absolute"
           top="0"
           right={isPageRightToLeft ? "auto" : 0}
-          m="1rem"
+          margin="0.5rem"
+          color="secondary"
+          _hover={{
+            color: "primary",
+          }}
           onClick={() => setIsOpen(false)}
-        >
-          <Icon
-            as={MdClose}
-            fill="secondary"
-            name="close"
-            boxSize="1.5em"
-            cursor="pointer"
-            _hover={{
-              fill: "primary",
-            }}
-          />
-        </Box>
+        />
       </Flex>
     </Box>
   )
