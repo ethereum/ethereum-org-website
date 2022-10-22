@@ -32,6 +32,9 @@ import StarConfetti from "../../assets/quiz/star-confetti.svg"
 import allQuizData from "../../data/learnQuizzes"
 import questionBank from "../../data/learnQuizzes/questionBank"
 
+// Utilities
+import { trackCustomEvent } from "../../utils/matomo"
+
 // Type
 import { AnswerChoice, RawQuiz, Quiz, RawQuestion, Question } from "../../types"
 
@@ -127,11 +130,24 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
     handleSelectAnswerChoice(answerId)
   }
 
-  const handleShowAnswer = (): void => {
+  const handleShowAnswer = (questionId: string, answer: AnswerChoice): void => {
+    trackCustomEvent({
+      eventCategory: "Quiz widget",
+      eventAction: "Question answered",
+      eventName: `QID: ${questionId}`,
+      eventValue: answer.isCorrect
+        ? `Correct answer`
+        : `AID: ${answer.answerId}`,
+    })
     setShowAnswer(true)
   }
 
   const handleRetryQuestion = (): void => {
+    trackCustomEvent({
+      eventCategory: "Quiz widget",
+      eventAction: "Other",
+      eventName: "Retry question",
+    })
     setCurrentQuestionAnswerChoice(null)
     setSelectedAnswer(null)
     setShowAnswer(false)
@@ -141,9 +157,24 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
     setUserQuizProgress((prev) => [...prev, currentQuestionAnswerChoice])
     setCurrentQuestionAnswerChoice(null)
     setShowAnswer(false)
+    if (showResults) {
+      const ratioCorrect: number =
+        correctCount / quizData!.questions.length || 0
+      trackCustomEvent({
+        eventCategory: "Quiz widget",
+        eventAction: "Other",
+        eventName: "Submit results",
+        eventValue: `${Math.floor(ratioCorrect * 100)}%`,
+      })
+    }
   }
   const shareTweetHandler = (): void => {
     if (!quizData || !window) return
+    trackCustomEvent({
+      eventCategory: "Quiz widget",
+      eventAction: "Other",
+      eventName: "Share results",
+    })
     const url = `https://ethereum.org${window.location.pathname}` // TODO: Add hash link to quiz
     const tweet = `I just took the "${quizData.title}" quiz on ethereum.org and scored ${correctCount} out of ${quizData.questions.length}! Try it yourself at ${url}`
     window.open(
@@ -311,7 +342,12 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
                   </Button>
                 ) : (
                   <Button
-                    onClick={handleShowAnswer}
+                    onClick={() =>
+                      handleShowAnswer(
+                        quizData.questions[currentQuestionIndex].id,
+                        currentQuestionAnswerChoice!
+                      )
+                    }
                     disabled={!currentQuestionAnswerChoice}
                   >
                     Submit answer
