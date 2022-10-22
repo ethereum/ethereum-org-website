@@ -99,6 +99,33 @@ Fee burning went live with <a href="/history/#london">the London upgrade</a> in 
 
 On top of the fee burn implemented by the London upgrade, validators can also incur penalties for being offline, or worse, they can be slashed for breaking specific rules that threaten network security. These penalties result in a reduction of ETH from that validator's balance, which is not directly rewarded to any other account, effectively burning/removing it from circulation.
 
+### Calculating average gas price for deflation {#calculating-average-gas-price-for-deflation}
+
+As discussed above, the amount of ETH issued in a given day is dependent upon the total ETH staked. At time of writing, this is approximately 1700 ETH/day.
+
+To determine the average gas price required to completely offset this issuance in a given 24-hour period, we'll start by calculating the total number of blocks in a day:
+
+- `1 block / 12 seconds = 5 blocks/minute`
+- `(5 blocks/minute) * (60 minutes/hour) * (24 hours/day) = 7200 blocks/day`
+
+Each block targets `15x10^6 gas/block` ([more on gas](/developers/docs/gas/)). Using this, we can solve for the average gas price (in units of gwei/gas) required to offset issuance, given a total daily ETH issuance of 1700 ETH:
+
+- `7200 blocks/day * 15x10^6 gas/block * Y gwei/gas * 1 ETH/ 10^9 gwei = 1700 ETH/day`
+
+Solving for `Y`:
+
+- `Y = (1700(10^9))/(7200 * 15(10^6)) = (1700(10^3)/(7200 * 15)) = 16 gwei` (rounding to only two significant digits)
+
+Another way to rearrange this last step would be to replace `1700` with a variable `X` that represents the daily ETH issuance, and to simplify the rest to:
+
+- `Y = (X(10^3)/(7200 * 15)) = X/108`
+
+We can simplify and write this as a function of `X`:
+
+- `f(X) = X/108` where `X` is daily ETH issuance, and `f(X)` represents the gwei/gas price required to offset all of the newly issued ETH.
+
+So, for example, if `X` (daily ETH issuance) rises to 1800 based on total ETH staked, `f(X)` (gwei required to offset all of the issuance) would then be `17 gwei` (using 2 significant digits)
+
 ## Further reading {#further-reading}
 
 - [The Merge](/history/merge/)
