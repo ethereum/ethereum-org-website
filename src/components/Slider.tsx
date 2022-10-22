@@ -92,7 +92,11 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
           color={nextBtnEnabled ? "sliderBtnColor" : "sliderBtnColorDisabled"}
         />
       </Flex>
-      <Center>
+      <Center
+        position={{ sm: "absolute" }}
+        bottom={{ sm: "3.1rem" }}
+        left={{ sm: "calc((100% - 68px)/2)" }}
+      >
         {scrollSnaps.map((_, index) => (
           <Box
             key={index}
