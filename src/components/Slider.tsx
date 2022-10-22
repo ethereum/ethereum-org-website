@@ -54,10 +54,10 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
   return (
     <Box
       position="relative"
-      p="2rem"
+      p={8}
       borderWidth="1px"
       borderStyle="solid"
-      borderRadius="0.3rem"
+      borderRadius="base"
       w="full"
       bg="sliderBg"
     >
@@ -66,7 +66,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
       </Box>
       <Flex
         justifyContent={{ sm: "left", base: "center" }}
-        mb={{ sm: "0", base: "1rem" }}
+        mb={{ sm: 0, base: 4 }}
       >
         <IconButton
           aria-label="MdChevronLeft"
