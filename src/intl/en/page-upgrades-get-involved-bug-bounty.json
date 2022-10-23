@@ -12,7 +12,7 @@
   "page-upgrades-bug-bounty-misc-bugs-desc": "See the Solidity SECURITY.MD for more details about what is included in this scope.",
   "page-upgrades-bug-bounty-misc-bugs-desc-2": "Solidity does not hold security guarantees regarding compilation of untrusted input – and we do not issue rewards for crashes of the solc compiler on maliciously generated data.",
   "page-upgrades-bug-bounty-deposit-bugs": "Deposit Contract bugs",
-  "page-upgrades-bug-bounty-deposit-bugs-desc": "The specificiations and source code of the Beacon Chain Deposit Contract is part of the bug bounty program.",
+  "page-upgrades-bug-bounty-deposit-bugs-desc": "The specifications and source code of the Beacon Chain Deposit Contract is part of the bug bounty program.",
   "page-upgrades-bug-bounty-docking": "merge",
   "page-upgrades-bug-bounty-email-us": "Email us:",
   "page-upgrades-bug-bounty-help-links": "Helpful links",
