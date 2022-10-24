@@ -9289,6 +9289,42 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "frankiefab100",
+      "name": "Franklin Ohaegbulam",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46662771?v=4",
+      "profile": "http://frankiefab.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "soos3d",
+      "name": "Soos3D",
+      "avatar_url": "https://avatars.githubusercontent.com/u/99700157?v=4",
+      "profile": "https://github.com/soos3d",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "minhoryang",
+      "name": "Minho Ryang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1270855?v=4",
+      "profile": "http://keybase.io/minhoryang",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "SebastianSupreme",
+      "name": "Sebastian Supreme",
+      "avatar_url": "https://avatars.githubusercontent.com/u/106926150?v=4",
+      "profile": "https://sebastiansupreme.eth.link",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
