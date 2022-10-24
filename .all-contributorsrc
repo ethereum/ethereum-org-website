@@ -9270,6 +9270,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "hyper0x",
+      "name": "Renato",
+      "avatar_url": "https://avatars.githubusercontent.com/u/315569?v=4",
+      "profile": "https://github.com/hyper0x",
+      "contributions": [
+        "content",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
