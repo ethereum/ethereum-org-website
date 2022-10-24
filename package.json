@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "@apollo/client": "^3.3.13",
+    "@apollo/client": "^3.6.9",
     "@chakra-ui/gatsby-plugin": "^3.0.1",
     "@chakra-ui/react": "^2.2.8",
     "@emotion/react": "^11.9.3",
