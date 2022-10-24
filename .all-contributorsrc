@@ -9280,6 +9280,15 @@
         "content",
         "translation"
       ]
+    },
+    {
+      "login": "frangio",
+      "name": "Francisco",
+      "avatar_url": "https://avatars.githubusercontent.com/u/481465?v=4",
+      "profile": "https://frang.io",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
