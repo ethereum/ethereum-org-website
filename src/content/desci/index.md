@@ -95,21 +95,31 @@ Explore projects and join the DeSci community.
 - [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
 - [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
 - [LabDAO: fold a protein in-silico](https://alphafodl.vercel.app/)
-- [dClimate API: query climate data collected by a decentralized community](https://api.dclimate.net/)
-- [DeSci Foundation: DeSci publishing tool builder](https://descifoundation.org/)
-- [DeSci.World: one-stop shop for users to view, engage with decentralized science](https://desci.world)
-- [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
-- [OceanDAO: DAO governed funding for data-related science](https://oceanprotocol.com/dao)
-- [Opscientia: open decentralized science workflows](https://opsci.io/research/)
-- [LabDAO: fold a protein in-silico](https://alphafodl.vercel.app/)
-- [Bio.xyz: get funded for your biotech DAO or desci project](https://www.molecule.to/)
 - [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
-- [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
+- [PsyDAO: Psychedelic research DAO and community](https://psydao.io/)
+- [Opscientia: open decentralized science workflows](https://opsci.io/research/)
+- [Bio.xyz: get funded for your biotech DAO or desci project](https://www.molecule.to/)
+- [DeSci Foundation: DeSci publishing tool builder](https://descifoundation.org/)
 - [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
-- [Active Inference Lab](https://www.activeinference.org/)
+- [DeSci.World: one-stop shop for users to view, engage with decentralized science](https://desci.world)
+- [ValleyDAO: DAO collectively financing and democratizing access to synthetic biology research](https://www.valleydao.bio/)
+- [AthenaDAO: Decentralized collective to fund women’s reproductive health research](https://www.athenadao.co/)
+- [HyperCerts: Rewarding Impact with Hypercerts](https://hypercerts.xyz/) 
+- [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
 - [Cherubs DAO: NFT funded and DAO governed impact fund for mental health & brain wellness](https://cherubsdao.com/)
 - [CureDAO: Community-Owned Precision Health Platform](https://docs.curedao.org/)
+- [OceanDAO: DAO governed funding for data-related science](https://oceanprotocol.com/dao)
 - [IdeaMarkets: enabling decentralized scientifc credibility](https://ideamarket.io/)
+- [dClimate API: query climate data collected by a decentralized community](https://api.dclimate.net/)
+- [NewAtlantis: Open Platform for Ocean Biodiversity Regeneration](https://newatlantis.io/)
+- [Phage.Directory: help use phages to their fullest potential for phage therapy and biocontrol.](https://phage.directory/)
+- [HairDAO: advancing research for hair loss treatments in an open democratic way](https://www.hairdao.xyz/)
+- [Active Inference Lab](https://www.activeinference.org/)
+- [Scholar: lets researchers publish to an open, immutable and permanently accessible scientific record.](https://usescholar.org/)
+- [VibeBio: Community identifying, funding, and developing treatments to rare diseases and empowering patient communities.](https://vibebio.com/)
+- [BeakerDAO: DeSci investment DAO and collective](https://beakerdao.xyz/)
+- [DeSci.Global: overview of upcoming global desci events and meetups](https://www.desci.global/)
+
 
 ## Further reading {#further-reading}
 
@@ -125,6 +135,8 @@ Explore projects and join the DeSci community.
 - [An Active Inference Ontology for Decentralized Science: from Situated Sensemaking to the Epistemic Commons](https://zenodo.org/record/6320575)
 - [DeSci: The Future of Research by Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Science Funding (Epilogue: DeSci and new crypto primitives) by Nadia](https://nadia.xyz/science-funding)
+
+
 
 ### Videos {#videos}
 
