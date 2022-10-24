@@ -99,7 +99,7 @@ const EnergyConsumptionChart: React.FC = () => {
     },
     {
       name: "ETH PoS",
-      amount: 0.01,
+      amount: 0.0026,
       color: "#C1B6F5",
     },
   ]
