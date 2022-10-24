@@ -1,5 +1,6 @@
 import React from "react"
-import { Box, Link, ListItem, UnorderedList } from "@chakra-ui/react"
+import { Box, ListItem, UnorderedList } from "@chakra-ui/react"
+import Link from "../components/Link"
 
 import type { Item as ItemTableOfContents } from "./TableOfContents"
 
@@ -86,9 +87,7 @@ const ItemsList: React.FC<IPropsItemsList> = ({
     <>
       {items.map((item, index) => (
         <ListItem margin={0} key={index}>
-          <div>
-            <TableOfContentsLink depth={depth} item={item} />
-          </div>
+          <TableOfContentsLink depth={depth} item={item} />
         </ListItem>
       ))}
     </>
@@ -98,14 +97,9 @@ const ItemsList: React.FC<IPropsItemsList> = ({
 export interface IProps {
   items: Array<Item>
   maxDepth?: number
-  className?: string
 }
 
-const UpgradeTableOfContents: React.FC<IProps> = ({
-  items,
-  maxDepth = 1,
-  className,
-}) => {
+const UpgradeTableOfContents: React.FC<IProps> = ({ items, maxDepth = 1 }) => {
   if (!items) {
     return null
   }
@@ -117,7 +111,6 @@ const UpgradeTableOfContents: React.FC<IProps> = ({
   return (
     <Box
       as="aside"
-      className={className}
       p={0}
       mb={8}
       textAlign="end"
@@ -129,7 +122,7 @@ const UpgradeTableOfContents: React.FC<IProps> = ({
         py={0}
         ps={4}
         pe={1}
-        fontSize="1.25rem"
+        fontSize="xl"
         fontWeight="normal"
         lineHeight="1.6"
         styleType="none"
