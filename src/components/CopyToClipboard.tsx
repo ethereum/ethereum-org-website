@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react"
 import ClipboardJS from "clipboard"
+import { Box } from '@chakra-ui/react'
 
 export interface IProps {
   text: string
@@ -36,7 +37,7 @@ const CopyToClipboard: React.FC<IProps> = ({ children, text }) => {
     }
   }, [text])
 
-  return <div ref={targetEl}>{children(isCopied)}</div>
+  return <Box ref={targetEl}>{children(isCopied)}</Box>
 }
 
 export default CopyToClipboard

@@ -193,11 +193,9 @@ There are multiple consensus clients (previously known as 'Eth2' clients) to sup
 
 ### Lighthouse {#lighthouse}
 
-- Fastest sync strategy developed by Geth, currently its default.
-- Nethermind only implemented the consuming part until now. They are working on enabling serving other nodes soon.
-- Saves a lot of disk usage and network bandwidth without sacrificing security.
+Lighthouse is a consensus client implementation written in Rust under the Apache-2.0 license. It is maintained by Sigma Prime and has been stable and production-ready since Beacon Chain genesis. It is relied upon by various enterprises, staking pools and individuals. It aims to be secure, performant and interoperable in a wide range of environments, from desktop PCs to sophisticated automated deployments.
 
-[More on Snap](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
+Documentation can be found in [Lighthouse Book](https://lighthouse-book.sigmaprime.io/)
 
 ### Lodestar {#lodestar}
 
