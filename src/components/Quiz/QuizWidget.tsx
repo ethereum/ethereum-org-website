@@ -20,7 +20,6 @@ import { FaTwitter } from "react-icons/fa"
 import Button from "../Button"
 import QuizRadioGroup from "./QuizRadioGroup"
 import QuizSummary from "./QuizSummary"
-import Translation from "../Translation"
 
 // SVG import
 import Trophy from "../../assets/quiz/trophy.svg"
@@ -29,8 +28,8 @@ import Incorrect from "../../assets/quiz/incorrect.svg"
 import StarConfetti from "../../assets/quiz/star-confetti.svg"
 
 // Data
-import allQuizData from "../../data/learnQuizzes"
-import questionBank from "../../data/learnQuizzes/questionBank"
+import allQuizData from "../../data/quizzes"
+import questionBank from "../../data/quizzes/questionBank"
 
 // Utilities
 import { trackCustomEvent } from "../../utils/matomo"
@@ -187,7 +186,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
   return (
     <Flex width="full" direction="column" alignItems="center">
       <Heading as="h2" mb={12} id="quiz">
-        <Translation id="quiz-test-your-knowledge" />
+        Test your knowledge
       </Heading>
       <Box
         w={{

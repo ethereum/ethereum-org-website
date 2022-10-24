@@ -3,13 +3,12 @@ import { QuestionBank } from "../../types"
 
 // Declare hash map of question bank
 const questionBank: QuestionBank = {
-  // TODO: Use hash of English prompt to generate this key
   // What is Ethereum?
   a001: {
     prompt: "The biggest difference between Ethereum and Bitcoin is:",
     answers: [
       {
-        id: "a001-a", // TODO: Use hash of English question label to generate this id
+        id: "a001-a",
         label: "Ethereum doesn’t let you make payments to other people",
         explanation:
           "Both Bitcoin and Ethereum let you make payments to other people.",
@@ -481,7 +480,7 @@ const questionBank: QuestionBank = {
     correctAnswerId: "d002-c",
   },
   d003: {
-    prompt: "Who should you give your seed phrase / private keys to:",
+    prompt: "Who should you give your seed phrase / private keys to?",
     answers: [
       {
         id: "d003-a",
