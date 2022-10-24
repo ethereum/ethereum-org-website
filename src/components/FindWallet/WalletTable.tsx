@@ -1,6 +1,7 @@
 // Libraries
-import React, { useState } from "react"
+import React, { useState, SVGProps } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { keyframes } from "@emotion/react"
 import styled from "@emotion/styled"
 
 // Components
@@ -251,11 +252,34 @@ const FlexInfo = styled.div`
   }
 `
 
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`
+
+const fadeOut = keyframes`
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+`
+
 const FlexInfoCenter = styled(FlexInfo)`
   justify-content: center;
   cursor: pointer;
   height: 100%;
   display: flex;
+  animation: ${fadeIn} 0.375s;
+
+  &.fade {
+    animation: ${fadeOut} 0.375s;
+  }
 `
 
 const Image = styled(GatsbyImage)`
@@ -431,9 +455,19 @@ const StyledIcon = styled(Icon)<{ hasFeature: boolean }>`
     fill: ${({ theme }) => theme.colors.primary};
   }
 `
+// Types
+export interface DropdownOption {
+  label: string
+  value: string
+  filterKey: string
+  category: string
+  icon: SVGProps<SVGElement>
+}
+
+type ColumnClassName = "firstCol" | "secondCol" | "thirdCol"
 
 // Constants
-const featureDropdownItems = [
+const featureDropdownItems: Array<DropdownOption> = [
   {
     label: "Open source",
     value: "Open source",
@@ -562,6 +596,10 @@ const featureDropdownItems = [
   },
 ]
 
+const firstCol = "firstCol"
+const secondCol = "secondCol"
+const thirdCol = "thirdCol"
+
 const WalletTable = ({ data, filters, walletData }) => {
   const [walletCardData, setWalletData] = useState(
     walletData.map((wallet) => {
@@ -679,6 +717,38 @@ const WalletTable = ({ data, filters, walletData }) => {
     }
   )
 
+  /**
+   *
+   * @param selectedOption selected dropdown option
+   * @param stateUpdateMethod method for updating state for dropdown
+   * @param className className of column
+   *
+   * This method gets the elements with the className, adds a fade class to fade icons out, after 0.5s it will then update state for the dropdown with the selectedOption, and then remove the fade class to fade the icons back in. Then it will send a matomo event for updating the dropdown.
+   */
+  const updateDropdown = (
+    selectedOption: DropdownOption,
+    stateUpdateMethod: Function,
+    className: ColumnClassName
+  ) => {
+    const domItems: HTMLCollectionOf<Element> =
+      document.getElementsByClassName(className)
+    for (let item of domItems) {
+      item.classList.add("fade")
+    }
+    setTimeout(() => {
+      stateUpdateMethod(selectedOption)
+      for (let item of domItems) {
+        item.classList.remove("fade")
+      }
+    }, 375)
+
+    trackCustomEvent({
+      eventCategory: "WalletFeatureCompare",
+      eventAction: `Select WalletFeatureCompare`,
+      eventName: `${selectedOption.filterKey} selected`,
+    })
+  }
+
   return (
     <Container>
       <WalletContentHeader>
@@ -708,12 +778,7 @@ const WalletTable = ({ data, filters, walletData }) => {
               },
             ]}
             onChange={(selectedOption) => {
-              setFirstFeatureSelect(selectedOption)
-              trackCustomEvent({
-                eventCategory: "WalletFeatureCompare",
-                eventAction: `Select WalletFeatureCompare`,
-                eventName: `${selectedOption.filterKey} selected`,
-              })
+              updateDropdown(selectedOption, setFirstFeatureSelect, firstCol)
             }}
             defaultValue={firstFeatureSelect}
             isSearchable={false}
@@ -730,12 +795,7 @@ const WalletTable = ({ data, filters, walletData }) => {
               },
             ]}
             onChange={(selectedOption) => {
-              setSecondFeatureSelect(selectedOption)
-              trackCustomEvent({
-                eventCategory: "WalletFeatureCompare",
-                eventAction: `Select WalletFeatureCompare`,
-                eventName: `${selectedOption.filterKey} selected`,
-              })
+              updateDropdown(selectedOption, setSecondFeatureSelect, secondCol)
             }}
             defaultValue={secondFeatureSelect}
             isSearchable={false}
@@ -752,12 +812,7 @@ const WalletTable = ({ data, filters, walletData }) => {
               },
             ]}
             onChange={(selectedOption) => {
-              setThirdFeatureSelect(selectedOption)
-              trackCustomEvent({
-                eventCategory: "WalletFeatureCompare",
-                eventAction: `Select WalletFeatureCompare`,
-                eventName: `${selectedOption.filterKey} selected`,
-              })
+              updateDropdown(selectedOption, setThirdFeatureSelect, thirdCol)
             }}
             defaultValue={thirdFeatureSelect}
             isSearchable={false}
@@ -851,7 +906,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                 </FlexInfo>
               </td>
               <td>
-                <FlexInfoCenter>
+                <FlexInfoCenter className={firstCol}>
                   {wallet[firstFeatureSelect.filterKey!] ? (
                     <GreenCheck />
                   ) : (
@@ -860,7 +915,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                 </FlexInfoCenter>
               </td>
               <td>
-                <FlexInfoCenter>
+                <FlexInfoCenter className={secondCol}>
                   {wallet[secondFeatureSelect.filterKey!] ? (
                     <GreenCheck />
                   ) : (
@@ -869,7 +924,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                 </FlexInfoCenter>
               </td>
               <td>
-                <FlexInfoCenter>
+                <FlexInfoCenter className={thirdCol}>
                   {wallet[thirdFeatureSelect.filterKey!] ? (
                     <GreenCheck />
                   ) : (

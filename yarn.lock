@@ -3919,10 +3919,10 @@
     hey-listen "^1.0.8"
     tslib "^2.3.1"
 
-"@netlify/functions@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@netlify/functions/-/functions-1.0.0.tgz#5b6c02fafc567033c93b15a080cc021e5f10f254"
-  integrity sha512-7fnJv3vr8uyyyOYPChwoec6MjzsCw1CoRUO2DhQ1BD6bOyJRlD4DUaOOGlMILB2LCT8P24p5LexEGx8AJb7xdA==
+"@netlify/functions@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@netlify/functions/-/functions-1.2.0.tgz#0acce06db94113d2a42253930c45cb69ab97c530"
+  integrity sha512-zCOJPoZQLv4ISHjyBS7asqzR6Y9NU+Vb0VKYDD0xUwYmReMhLTDchjGMkt5x0Jk1EVnJwUvA29rGyQEj3tIgAA==
   dependencies:
     is-promise "^4.0.0"
 
@@ -5886,27 +5886,6 @@ babel-preset-fbjs@^3.4.0:
     "@babel/plugin-transform-template-literals" "^7.0.0"
     babel-plugin-syntax-trailing-function-commas "^7.0.0-beta.0"
 
-babel-preset-gatsby@^2.14.0:
-  version "2.14.0"
-  resolved "https://registry.yarnpkg.com/babel-preset-gatsby/-/babel-preset-gatsby-2.14.0.tgz#233b9de6ce8393e645914147c6a9624cb9b7d0f2"
-  integrity sha512-IqPgd15jJfJvqvX0i78JwLT48ctb7MdIEqHeKOuo4N8qWmyRIY8xX1IVhhSfDZ3eq62j0rVoqzT7ACUWctikmw==
-  dependencies:
-    "@babel/plugin-proposal-class-properties" "^7.14.0"
-    "@babel/plugin-proposal-nullish-coalescing-operator" "^7.14.5"
-    "@babel/plugin-proposal-optional-chaining" "^7.14.5"
-    "@babel/plugin-syntax-dynamic-import" "^7.8.3"
-    "@babel/plugin-transform-classes" "^7.15.4"
-    "@babel/plugin-transform-runtime" "^7.15.0"
-    "@babel/plugin-transform-spread" "^7.14.6"
-    "@babel/preset-env" "^7.15.4"
-    "@babel/preset-react" "^7.14.0"
-    "@babel/runtime" "^7.15.4"
-    babel-plugin-dynamic-import-node "^2.3.3"
-    babel-plugin-macros "^3.1.0"
-    babel-plugin-transform-react-remove-prop-types "^0.4.24"
-    gatsby-core-utils "^3.14.0"
-    gatsby-legacy-polyfills "^2.14.0"
-
 babel-preset-gatsby@^2.21.0:
   version "2.21.0"
   resolved "https://registry.yarnpkg.com/babel-preset-gatsby/-/babel-preset-gatsby-2.21.0.tgz#14d431680d315c5cb62f76aa00ddef271a8b095e"
@@ -5927,6 +5906,27 @@ babel-preset-gatsby@^2.21.0:
     babel-plugin-transform-react-remove-prop-types "^0.4.24"
     gatsby-core-utils "^3.21.0"
     gatsby-legacy-polyfills "^2.21.0"
+
+babel-preset-gatsby@^2.23.0:
+  version "2.23.0"
+  resolved "https://registry.yarnpkg.com/babel-preset-gatsby/-/babel-preset-gatsby-2.23.0.tgz#47482f6a9917455d3e9e0e5ce48c49b44d6d000d"
+  integrity sha512-Mo5Dnrox1d/rJq8cJ2mv1+SNASVmpB+3LMiQKIGky5B1jCMhNtUoMPmJh2Pq29be8dwngL/GG853YFfZn9U62A==
+  dependencies:
+    "@babel/plugin-proposal-class-properties" "^7.14.0"
+    "@babel/plugin-proposal-nullish-coalescing-operator" "^7.14.5"
+    "@babel/plugin-proposal-optional-chaining" "^7.14.5"
+    "@babel/plugin-syntax-dynamic-import" "^7.8.3"
+    "@babel/plugin-transform-classes" "^7.15.4"
+    "@babel/plugin-transform-runtime" "^7.15.0"
+    "@babel/plugin-transform-spread" "^7.14.6"
+    "@babel/preset-env" "^7.15.4"
+    "@babel/preset-react" "^7.14.0"
+    "@babel/runtime" "^7.15.4"
+    babel-plugin-dynamic-import-node "^2.3.3"
+    babel-plugin-macros "^3.1.0"
+    babel-plugin-transform-react-remove-prop-types "^0.4.24"
+    gatsby-core-utils "^3.23.0"
+    gatsby-legacy-polyfills "^2.23.0"
 
 backo2@^1.0.2, backo2@~1.0.2:
   version "1.0.2"
@@ -9392,10 +9392,10 @@ gatsby-core-utils@^2.2.0:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
-gatsby-core-utils@^3.14.0:
-  version "3.15.0"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.15.0.tgz#1fb6611765250c187dd6d36c2812a5b0c50204ae"
-  integrity sha512-aLNrH3gGUIeD9XGk3z/27N5qaVx7y3AAgs/Vu6PJm69t25kTwuOHKNzhlnHkIZypznZkkVeN7QbHBkIKam/ZIQ==
+gatsby-core-utils@^3.20.0, gatsby-core-utils@^3.21.0, gatsby-core-utils@^3.5.2:
+  version "3.21.0"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.21.0.tgz#5ca118857cf9f59b69f06f2ae886d8182af46515"
+  integrity sha512-pCDa9EGU8niRJQVv7ow3ijzmG0PegZaBc5Yt6z4enc4m7Dl5ZT6Edkcw9p8q/FhGiZUkzQhWaRDxUvtaoPwAOQ==
   dependencies:
     "@babel/runtime" "^7.15.4"
     ci-info "2.0.0"
@@ -9403,9 +9403,9 @@ gatsby-core-utils@^3.14.0:
     fastq "^1.13.0"
     file-type "^16.5.3"
     fs-extra "^10.1.0"
-    got "^11.8.3"
+    got "^11.8.5"
     import-from "^4.0.0"
-    lmdb "2.3.10"
+    lmdb "2.5.3"
     lock "^1.1.0"
     node-object-hash "^2.3.10"
     proper-lockfile "^4.1.2"
@@ -9413,10 +9413,10 @@ gatsby-core-utils@^3.14.0:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
-gatsby-core-utils@^3.20.0, gatsby-core-utils@^3.21.0, gatsby-core-utils@^3.5.2:
-  version "3.21.0"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.21.0.tgz#5ca118857cf9f59b69f06f2ae886d8182af46515"
-  integrity sha512-pCDa9EGU8niRJQVv7ow3ijzmG0PegZaBc5Yt6z4enc4m7Dl5ZT6Edkcw9p8q/FhGiZUkzQhWaRDxUvtaoPwAOQ==
+gatsby-core-utils@^3.23.0:
+  version "3.23.0"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-3.23.0.tgz#0c8879ffb655f2d8cfe485f03beed7db6441dc69"
+  integrity sha512-ABVTAkjZh+2H4u6GZ+r1uZrdcWuT5KG2nEpKmBWBp21GWEE+yvUqtGOocBgUeGac1A3ggvn02UzcE6BIEm9PYg==
   dependencies:
     "@babel/runtime" "^7.15.4"
     ci-info "2.0.0"
@@ -9441,18 +9441,18 @@ gatsby-graphiql-explorer@^2.21.0:
   dependencies:
     "@babel/runtime" "^7.15.4"
 
-gatsby-legacy-polyfills@^2.14.0:
-  version "2.14.0"
-  resolved "https://registry.yarnpkg.com/gatsby-legacy-polyfills/-/gatsby-legacy-polyfills-2.14.0.tgz#83e8fa3b395e5e75ee8e094275ee759ae7d570bd"
-  integrity sha512-OcJrY9eqiHtU8bi1zOiaO+wXZv+W/HOR0oP+5IvmWBIiLl4M+ln/z6PJcqk2fnfIK51zyzARvhPXAakDs5JE4w==
-  dependencies:
-    "@babel/runtime" "^7.15.4"
-    core-js-compat "3.9.0"
-
 gatsby-legacy-polyfills@^2.21.0:
   version "2.21.0"
   resolved "https://registry.yarnpkg.com/gatsby-legacy-polyfills/-/gatsby-legacy-polyfills-2.21.0.tgz#f3a387c72c2f9bd5b8fc406a0c879603fa0d4b5e"
   integrity sha512-GUvL4M4JabC59N1B9PmXGHXmVESliKEqqIjqb96yOG5aA3xgt/uDGt2bKhUmjFfkJ20fyTYUu49absLuUXzaxg==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    core-js-compat "3.9.0"
+
+gatsby-legacy-polyfills@^2.23.0:
+  version "2.23.0"
+  resolved "https://registry.yarnpkg.com/gatsby-legacy-polyfills/-/gatsby-legacy-polyfills-2.23.0.tgz#f527aea9d90932ad7f1ef7fd0a6aa260a1abb48a"
+  integrity sha512-DQexce/ezAU47bd5X5JnwIBdvr7MAJsRXzV3bhWuQhslkWJOp0l6O3EQ148s8Ezu6g66JOre5iKvSvor6qvU6Q==
   dependencies:
     "@babel/runtime" "^7.15.4"
     core-js-compat "3.9.0"
@@ -10318,7 +10318,7 @@ good-listener@^1.2.2:
   dependencies:
     delegate "^3.1.2"
 
-got@^11.8.2, got@^11.8.3:
+got@^11.8.2:
   version "11.8.3"
   resolved "https://registry.yarnpkg.com/got/-/got-11.8.3.tgz#f496c8fdda5d729a90b4905d2b07dbd148170770"
   integrity sha512-7gtQ5KiPh1RtGS9/Jbv1ofDpBFuq42gyfEib+ejaRBJuj/3tQFeR5+gw57e4ipaU8c/rCjvX6fkQz2lyDlGAOg==
@@ -11905,55 +11905,6 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.2.4.tgz#eca284f75d2965079309dc0ad9255abb2ebc1632"
   integrity sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==
 
-lmdb-darwin-arm64@2.3.10:
-  version "2.3.10"
-  resolved "https://registry.yarnpkg.com/lmdb-darwin-arm64/-/lmdb-darwin-arm64-2.3.10.tgz#4e20f75770eeedc60af3d4630975fd105a89ffe8"
-  integrity sha512-LVXbH2MYu7/ZuQ8+P9rv+SwNyBKltxo7vHAGJS94HWyfwnCbKEYER9PImBvNBwzvgtaYk6x0RMX3oor6e6KdDQ==
-
-lmdb-darwin-x64@2.3.10:
-  version "2.3.10"
-  resolved "https://registry.yarnpkg.com/lmdb-darwin-x64/-/lmdb-darwin-x64-2.3.10.tgz#e53637a6735488eaa15feb7c0e9da142015b9476"
-  integrity sha512-gAc/1b/FZOb9yVOT+o0huA+hdW82oxLo5r22dFTLoRUFG1JMzxdTjmnW6ONVOHdqC9a5bt3vBCEY3jmXNqV26A==
-
-lmdb-linux-arm64@2.3.10:
-  version "2.3.10"
-  resolved "https://registry.yarnpkg.com/lmdb-linux-arm64/-/lmdb-linux-arm64-2.3.10.tgz#ac7db8bdfe0e9dbf2be1cc3362d6f2b79e2a9722"
-  integrity sha512-Ihr8mdICTK3jA4GXHxrXGK2oekn0mY6zuDSXQDNtyRSH19j3D2Y04A7SEI9S0EP/t5sjKSudYgZbiHDxRCsI5A==
-
-lmdb-linux-arm@2.3.10:
-  version "2.3.10"
-  resolved "https://registry.yarnpkg.com/lmdb-linux-arm/-/lmdb-linux-arm-2.3.10.tgz#74235418bbe7bf41e8ea5c9d52365c4ff5ca4b49"
-  integrity sha512-Rb8+4JjsThuEcJ7GLLwFkCFnoiwv/3hAAbELWITz70buQFF+dCZvCWWgEgmDTxwn5r+wIkdUjmFv4dqqiKQFmQ==
-
-lmdb-linux-x64@2.3.10:
-  version "2.3.10"
-  resolved "https://registry.yarnpkg.com/lmdb-linux-x64/-/lmdb-linux-x64-2.3.10.tgz#d790b95061d03c5c99a57b3ad5126f7723c60a2f"
-  integrity sha512-E3l3pDiCA9uvnLf+t3qkmBGRO01dp1EHD0x0g0iRnfpAhV7wYbayJGfG93BUt22Tj3fnq4HDo4dQ6ZWaDI1nuw==
-
-lmdb-win32-x64@2.3.10:
-  version "2.3.10"
-  resolved "https://registry.yarnpkg.com/lmdb-win32-x64/-/lmdb-win32-x64-2.3.10.tgz#bff73d12d94084343c569b16069d8d38626eb2d6"
-  integrity sha512-gspWk34tDANhjn+brdqZstJMptGiwj4qFNVg0Zey9ds+BUlif+Lgf5szrfOVzZ8gVRkk1Lgbz7i78+V7YK7SCA==
-
-lmdb@2.3.10:
-  version "2.3.10"
-  resolved "https://registry.yarnpkg.com/lmdb/-/lmdb-2.3.10.tgz#640fc60815846babcbe088d7f8ed0a51da857f6a"
-  integrity sha512-GtH+nStn9V59CfYeQ5ddx6YTfuFCmu86UJojIjJAweG+/Fm0PDknuk3ovgYDtY/foMeMdZa8/P7oSljW/d5UPw==
-  dependencies:
-    msgpackr "^1.5.4"
-    nan "^2.14.2"
-    node-addon-api "^4.3.0"
-    node-gyp-build-optional-packages "^4.3.2"
-    ordered-binary "^1.2.4"
-    weak-lru-cache "^1.2.2"
-  optionalDependencies:
-    lmdb-darwin-arm64 "2.3.10"
-    lmdb-darwin-x64 "2.3.10"
-    lmdb-linux-arm "2.3.10"
-    lmdb-linux-arm64 "2.3.10"
-    lmdb-linux-x64 "2.3.10"
-    lmdb-win32-x64 "2.3.10"
-
 lmdb@2.5.2:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/lmdb/-/lmdb-2.5.2.tgz#37e28a9fb43405f4dc48c44cec0e13a14c4a6ff1"
@@ -13068,11 +13019,6 @@ node-gyp-build-optional-packages@5.0.3:
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/node-gyp-build-optional-packages/-/node-gyp-build-optional-packages-5.0.3.tgz#92a89d400352c44ad3975010368072b41ad66c17"
   integrity sha512-k75jcVzk5wnnc/FMxsf4udAoTEUv2jY3ycfdSd3yWu6Cnd1oee6/CfZJApyscA4FJOmdoixWwiwOyf16RzD5JA==
-
-node-gyp-build-optional-packages@^4.3.2:
-  version "4.3.2"
-  resolved "https://registry.yarnpkg.com/node-gyp-build-optional-packages/-/node-gyp-build-optional-packages-4.3.2.tgz#82de9bdf9b1ad042457533afb2f67469dc2264bb"
-  integrity sha512-P5Ep3ISdmwcCkZIaBaQamQtWAG0facC89phWZgi5Z3hBU//J6S48OIvyZWSPPf6yQMklLZiqoosWAZUj7N+esA==
 
 node-gyp-build@^4.2.3:
   version "4.3.0"
@@ -14805,11 +14751,6 @@ react-resize-detector@^7.1.2:
   integrity sha512-zXnPJ2m8+6oq9Nn8zsep/orts9vQv3elrpA+R8XTcW7DVVUJ9vwDwMXaBtykAYjMnkCIaOoK9vObyR7ZgFNlOw==
   dependencies:
     lodash "^4.17.21"
-
-react-rewards@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/react-rewards/-/react-rewards-2.0.4.tgz#617f6c1bb591f74bb0e0455cc6ff355ee6d36665"
-  integrity sha512-Lw7gIhD8yPDzC6boaVmcXwuTHRLSLAdqB3kZc+29YWvdHWsuc3fdAZlxI8Cm8fvD8fhP+3JkZBtzX224czw15w==
 
 react-select@^4.3.0:
   version "4.3.1"

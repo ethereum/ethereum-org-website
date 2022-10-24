@@ -5,6 +5,7 @@ import styled from "@emotion/styled"
 // Components
 import Checkbox from "../Checkbox"
 import Icon from "../Icon"
+import { Text } from "@chakra-ui/react"
 
 // Data
 import walletFilterData from "../../data/wallets/wallet-filters"
@@ -125,15 +126,6 @@ const CheckboxGrid = styled.div`
   margin-top: 14px;
   gap: 0.5rem;
   cursor: pointer;
-`
-
-const CheckboxGridOption = styled.div`
-  display: flex;
-  gap: 0.5rem;
-
-  p {
-    margin: 0;
-  }
 `
 
 const ToggleIcon = styled(Icon)`
@@ -530,57 +522,48 @@ const WalletFilterSidebar = ({
                     {item.options.length > 0 && item.showOptions && (
                       <CheckboxGrid>
                         {item.options.map((option) => {
+                          const handleClick = () => {
+                            let closeShowOptions = true
+
+                            for (let filterOption of item.options) {
+                              if (filterOption.name === option.name) {
+                                if (!filters[filterOption.filterKey!]) {
+                                  closeShowOptions = false
+                                  break
+                                }
+                              } else {
+                                if (filters[filterOption.filterKey!]) {
+                                  closeShowOptions = false
+                                  break
+                                }
+                              }
+                            }
+
+                            if (closeShowOptions) {
+                              setShowOptions(idx, itemidx, !item.showOptions)
+                            }
+
+                            trackCustomEvent({
+                              eventCategory: "WalletFilterSidebar",
+                              eventAction: `${filterOption.title}`,
+                              eventName: `${option.filterKey} ${!filters[
+                                option.filterKey!
+                              ]}`,
+                            })
+                            updateFilterOption(option.filterKey)
+                          }
+
                           return (
-                            <CheckboxGridOption
-                              onClick={() => {
-                                let closeShowOptions = true
-
-                                for (let filterOption of item.options) {
-                                  if (filterOption.name === option.name) {
-                                    if (!filters[filterOption.filterKey!]) {
-                                      closeShowOptions = false
-                                      break
-                                    }
-                                  } else {
-                                    if (filters[filterOption.filterKey!]) {
-                                      closeShowOptions = false
-                                      break
-                                    }
-                                  }
-                                }
-
-                                if (closeShowOptions) {
-                                  setShowOptions(
-                                    idx,
-                                    itemidx,
-                                    !item.showOptions
-                                  )
-                                }
-
-                                console.log({
-                                  eventCategory: "WalletFilterSidebar",
-                                  eventAction: `${filterOption.title}`,
-                                  eventName: `${option.filterKey} ${!filters[
-                                    option.filterKey!
-                                  ]}`,
-                                })
-                                trackCustomEvent({
-                                  eventCategory: "WalletFilterSidebar",
-                                  eventAction: `${filterOption.title}`,
-                                  eventName: `${option.filterKey} ${!filters[
-                                    option.filterKey!
-                                  ]}`,
-                                })
-                                updateFilterOption(option.filterKey)
-                              }}
+                            <Checkbox
+                              aria-label={option.name}
+                              isChecked={filters[option.filterKey!]}
+                              size="md"
+                              onChange={handleClick}
                             >
-                              <Checkbox
-                                aria-label={option.name}
-                                checked={filters[option.filterKey!]}
-                                size={1.5}
-                              />
-                              <p aria-hidden="true">{option.name}</p>
-                            </CheckboxGridOption>
+                              <Text as="p" aria-hidden="true" m={0}>
+                                {option.name}
+                              </Text>
+                            </Checkbox>
                           )
                         })}
                       </CheckboxGrid>

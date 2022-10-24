@@ -2,7 +2,6 @@
 title: Diversità dei client
 description: Una spiegazione generica dell'importanza della diversità di client di Ethereum.
 lang: it
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -10,7 +9,7 @@ Il comportamento di un nodo di Ethereum è controllato dal software del client c
 
 ## Prerequisiti {#prerequisites}
 
-Se non hai ancora chiaro cosa siano nodi e client, consulta [Nodi e client](/developers/docs/nodes-and-clients/). La Beacon Chain è spiegata [qui](/upgrades/beacon-chain/). I livelli di [esecuzione](/glossary/#execution-layer) e [consenso](/glossary/#consensus-layer) sono definiti nel glossario.
+Se ancora non sai cosa sono i nodi e i client, dai un'occhiata a [nodi e client](/developers/docs/nodes-and-clients/). I livelli di [esecuzione](/glossary/#execution-layer) e [consenso](/glossary/#consensus-layer) sono definiti nel glossario.
 
 ## Perché esistono diversi client? {#why-multiple-clients}
 
@@ -30,11 +29,11 @@ La diversità dei client offre anche resistenza agli attacchi. Ad esempio, un at
 
 ### Finalità del proof-of-stake {#finality}
 
-Dalla nascita della rete, Ethereum ha avuto un tempo d'attività del 100%. Dopo la Fusione, i rischi causati dalla scarsa diversità dei client diventano più allarmanti. Un bug critico in un client di consenso con oltre il 33% dei nodi di Ethereum potrebbe impedire la finalizzazione della Beacon Chain, portando Ethereum offline.
+Un bug in un client del consenso con oltre il 33% dei nodi di Ethereum potrebbe impedire alla Beacon Chain di finalizzarsi, a significare che gli utenti non potrebbero fidarsi del fatto che le transazioni sarebbero a un certo punto ripristinate o modificate. Questo sarebbe molto problematico per molte delle app basate su Ethereum, in particolare, le DeFi.
 
 <Emoji text="🚨" mr="1rem" /> Ancora peggio, un bug critico in un client con una maggioranza di due terzi potrebbe causare la <a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">una divisione e finalizzazione errata</a> della catena, bloccando un gran numero di validatori su una catena non valida. Se vogliono rientrare nella catena corretta, quei validatori devo sottoporsi a tagli (slashing) o a un prelievo volontario, costoso e lento, e alla riattivazione. L'ammontare del taglio (slashing) aumenta col numero di nodi colpevoli, potendo interessare al massimo una maggioranza di due terzi (32 ETH).
 
-Sebbene questi siano scenari improbabili, l'ecosistema di Ethereum può mitigarne il rischio equilibrando la distribuzione dei client tra i nodi attivi. Idealmente, nessun client di consenso dovrebbe mai avere una quota superiore al 33% dei nodi totali.
+Sebbene questi siano scenari improbabili, l'ecosistema di Ethereum può mitigarne il rischio equilibrando la distribuzione dei client tra i nodi attivi. Idealmente, nessun client del consenso dovrebbe mai raggiungere una quota del 33% dei nodi totali.
 
 ### Responsabilità condivisa {#responsibility}
 
@@ -97,7 +96,7 @@ Diversi pannelli di controllo forniscono statistiche sulla diversità dei client
 
 - [Ethernodes](https://ethernodes.org/)
 
-## Lettura consigliata {#further-reading}
+## Letture consigliate {#further-reading}
 
 - [Diversità dei client sul livello di consenso di Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA)
 - [Fusione di Ethereum: esegui il client di maggioranza a tuo rischio!](https://dankradfeist.de/ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.html) – _Dankrad Fiest, 24 marzo 2022_

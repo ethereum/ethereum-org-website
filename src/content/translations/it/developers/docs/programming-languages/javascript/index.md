@@ -23,7 +23,7 @@ Se vuoi scrivere in JavaScript per interrogare la blockchain, inviare transazion
 
 ### Smart Contract {#smart-contracts}
 
-Se sei uno sviluppatore JavaScript e vuoi scrivere uno Smart Contract personalizzato, consigliamo di familiarizzare con [Solidity](https://solidity.readthedocs.io). È il linguaggio più popolare per gli Smart Contract ed è fortemente ispirato a JavaScript.
+Se sei uno sviluppatore JavaScript e vuoi scrivere uno Smart Contract personalizzato, consigliamo di familiarizzare con [Solidity](https://solidity.readthedocs.io). Questo è il linguaggio degli smart contract più popolare ed è sintatticamente simile a JavaScript, il che lo rende facile da imparare.
 
 Scopri di più sugli [Smart Contract](/developers/docs/smart-contracts/).
 
@@ -31,7 +31,7 @@ Scopri di più sugli [Smart Contract](/developers/docs/smart-contracts/).
 
 ### La macchina virtuale Ethereum {#the-ethereum-virtual-machine}
 
-Esiste un'implementazione JavaScript della [macchina virtuale di Ethereum](/developers/docs/evm/), che supporta le regole più recenti relative alle diramazioni della rete. Le regole relative alle diramazioni si riferiscono alle modifiche apportate alla macchina virtuale di Ethereum (EVM) a seguito di upgrade pianificati.
+Esiste un'implementazione JavaScript della [macchina virtuale di Ethereum](/en/developers/docs/evm/), che supporta le regole più recenti relative alle diramazioni della rete. Le regole relative alle diramazioni si riferiscono alle modifiche apportate alla macchina virtuale di Ethereum (EVM) a seguito di upgrade pianificati.
 
 È suddivisa in vari pacchetti JavaScript che puoi leggere per comprendere meglio:
 
