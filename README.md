@@ -1464,6 +1464,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center"><a href="https://github.com/jb-0"><img src="https://avatars.githubusercontent.com/u/39060614?v=4?s=100" width="100px;" alt="Jamie Barrett"/><br /><sub><b>Jamie Barrett</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=jb-0" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/hyper0x"><img src="https://avatars.githubusercontent.com/u/315569?v=4?s=100" width="100px;" alt="Renato"/><br /><sub><b>Renato</b></sub></a><br /><a href="#content-hyper0x" title="Content">🖋</a> <a href="#translation-hyper0x" title="Translation">🌍</a></td>
     </tr>
   </tbody>
 </table>
