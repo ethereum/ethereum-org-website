@@ -1473,6 +1473,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center"><a href="https://github.com/jhhornn"><img src="https://avatars.githubusercontent.com/u/66667958?v=4?s=100" width="100px;" alt="Awosise Oluwaseun"/><br /><sub><b>Awosise Oluwaseun</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=jhhornn" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://mahmad.netlify.app/"><img src="https://avatars.githubusercontent.com/u/75790323?v=4?s=100" width="100px;" alt="Muhammad Ahmad"/><br /><sub><b>Muhammad Ahmad</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Mahmadabid" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
