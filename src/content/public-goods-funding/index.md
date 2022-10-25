@@ -51,7 +51,7 @@ Traditional methods of funding public goods suffer from misaligned incentives am
 
 #### The free-rider problem {#free-rider-problem}
 
-The [free-rider problem](https://bit.ly/3ATE3KC) describes a situation where some individuals refuse to pay towards building a public good, but intend to use it. In this case, such individuals are "taking a free ride" on the contributions of others toward funding the public good.
+The [free-rider problem](https://www.khanacademy.org/economics-finance-domain/microeconomics/market-failure-and-the-role-of-government/externalities-topic/a/the-role-of-government-in-paying-for-public-goods#:~:text=The%20free%20rider%20problem%20can,a%20way%20to%20do%20so.) describes a situation where some individuals refuse to pay towards building a public good, but intend to use it. In this case, such individuals are "taking a free ride" on the contributions of others toward funding the public good.
 
 The free-rider problem is central to the problem of funding public goods. If everyone refuses to pay for a public good, hoping someone else does, it becomes impossible to fund and build the public good.
 
