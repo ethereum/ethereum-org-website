@@ -1,5 +1,5 @@
 // Import libraries
-import React, { useEffect, useState, useMemo } from "react"
+import React, { useEffect, useState, useMemo, useCallback } from "react"
 import {
   Box,
   ButtonGroup,
@@ -98,6 +98,33 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
   const showResults = useMemo<boolean>(
     () => userQuizProgress.length === quizData?.questions.length,
     [userQuizProgress, quizData]
+  )
+
+  const progressBarBackground = useCallback(
+    (index: number): string => {
+      if (
+        (showAnswer &&
+          index === currentQuestionIndex &&
+          currentQuestionAnswerChoice?.isCorrect) ||
+        userQuizProgress[index]?.isCorrect
+      )
+        return "success"
+      if (
+        (showAnswer &&
+          index === currentQuestionIndex &&
+          !currentQuestionAnswerChoice?.isCorrect) ||
+        (userQuizProgress[index] && !userQuizProgress[index].isCorrect)
+      )
+        return "error"
+      if (index === currentQuestionIndex) return "gray.400"
+      return "gray.500"
+    },
+    [
+      showAnswer,
+      currentQuestionIndex,
+      currentQuestionAnswerChoice,
+      userQuizProgress,
+    ]
   )
 
   const correctCount = useMemo<number>(
@@ -207,10 +234,8 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
         Test your knowledge
       </Heading>
       <Box
-        w={{
-          md: "600px",
-          sm: "300px",
-        }}
+        w="full"
+        maxW="600px"
         bg={
           !showAnswer
             ? "neutral"
@@ -220,10 +245,8 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
         }
         borderRadius="base"
         boxShadow="drop"
-        padding={{
-          md: "49px 62px", // TODO: Remove magic numbers
-          base: "20px 30px",
-        }}
+        py={{ base: 5, md: 12 }}
+        px={{ base: 7, md: 15 }}
         position="relative"
       >
         {/* Trophy icon */}
@@ -279,40 +302,18 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
                 {quizData.title}
               </Text>
             </Center>
+            {/* Progress bar */}
             <Center gap={1} marginBottom={6}>
-              {quizData.questions.map(({ id }, index) => {
-                let bg: string
-                if (
-                  (showAnswer &&
-                    index === currentQuestionIndex &&
-                    currentQuestionAnswerChoice?.isCorrect) ||
-                  userQuizProgress[index]?.isCorrect
-                ) {
-                  bg = "success"
-                } else if (
-                  (showAnswer &&
-                    index === currentQuestionIndex &&
-                    !currentQuestionAnswerChoice?.isCorrect) ||
-                  (userQuizProgress[index] &&
-                    !userQuizProgress[index].isCorrect)
-                ) {
-                  bg = "error"
-                } else if (index === currentQuestionIndex) {
-                  bg = "gray.400"
-                } else {
-                  bg = "gray.500"
-                }
-                return (
-                  <Container
-                    key={id}
-                    bg={bg}
-                    h="4px"
-                    maxW="2rem"
-                    width="full"
-                    marginInline={0}
-                  />
-                )
-              })}
+              {quizData.questions.map(({ id }, index) => (
+                <Container
+                  key={id}
+                  bg={progressBarBackground(index)}
+                  h="4px"
+                  maxW="2rem" // TODO: Improve responsiveness for more questions on smaller screens
+                  width="full"
+                  marginInline={0}
+                />
+              ))}
             </Center>
             <Center>
               {showResults ? (
