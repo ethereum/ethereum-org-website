@@ -26,28 +26,6 @@ const commonOutline = {
   },
 }
 
-const quizButton = {
-  width: "100%",
-  whiteSpace: "inherit",
-  justifyContent: "start",
-  marginBottom: "16px",
-  bg: "quizButton",
-  border: "1px",
-  borderColor: "transparent",
-  _hover: {
-    borderColor: "primary",
-    boxSizing: "border-box",
-  },
-  _focus: {
-    borderColor: "transparent",
-    boxShadow: "none",
-  },
-  _active: {
-    bg: "primary",
-    color: "buttonColor",
-  },
-}
-
 export const Button: ComponentStyleConfig = {
   baseStyle: {
     fontWeight: "normal",
@@ -91,9 +69,6 @@ export const Button: ComponentStyleConfig = {
       ...commonOutline,
       color: "primary",
       borderColor: "primary",
-    },
-    quizButton: {
-      ...quizButton,
     },
   },
 }
