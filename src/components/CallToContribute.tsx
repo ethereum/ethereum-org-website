@@ -14,6 +14,20 @@ export type ChildOnlyType = {
   children: ReactNode
 }
 
+const ContentColumn = ({ children }: ChildOnlyType) => (
+  <Flex
+    direction="column"
+    flexGrow={1}
+    flexShrink={1}
+    flexBasis="50%"
+    p={4}
+    color="text"
+    textAlign={{ base: "center", lg: "left" }}
+  >
+    {children}
+  </Flex>
+)
+
 const DescriptionParagraph = ({ children }: ChildOnlyType) => (
   <Text lineHeight="140%" color="text" fontFamily="monospace">
     {children}
@@ -39,15 +53,7 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => {
       boxShadow="inset 0 -2px 0 0 var(--eth-colors-primary400)"
     >
       <Show above={largeBp}>
-        <Flex
-          direction="column"
-          flexGrow={1}
-          flexShrink={1}
-          flexBasis="50%"
-          p={4}
-          color="text"
-          textAlign={{ base: "center", lg: "left" }}
-        >
+        <ContentColumn>
           ░░░░░░░░░▄░░░░░░░░░░░░░░▄░░░░ ░░░░░░░░▌▒█░░░░░░░░░░░▄▀▒▌░░░
           ░░░░░░░░▌▒▒█░░░░░░░░▄▀▒▒▒▐░░░ ░░░░░░░▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐░░░
           ░░░░░▄▄▀▒░▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐░░░ ░░░▄▀▒▒▒░░░▒▒▒░░░▒▒▒▀██▀▒▌░░░
@@ -58,17 +64,9 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => {
           ░▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▒▄▒▒▐░░ ░░▀▄▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▄▒▒▒▒▌░░
           ░░░░▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀░░░ ░░░░░░▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀░░░░░
           ░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▀▀░░░░░░░░
-        </Flex>
+        </ContentColumn>
       </Show>
-      <Flex
-        direction="column"
-        flexGrow={1}
-        flexShrink={1}
-        flexBasis="50%"
-        p={4}
-        color="text"
-        textAlign={{ base: "center", lg: "left" }}
-      >
+      <ContentColumn>
         <Heading
           as="h2"
           fontFamily="monospace"
@@ -106,7 +104,7 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => {
         >
           <Translation id="page-calltocontribute-span" />
         </ButtonLink>
-      </Flex>
+      </ContentColumn>
     </Flex>
   )
 }
