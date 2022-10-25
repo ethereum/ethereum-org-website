@@ -36,8 +36,8 @@ const TranslationBanner: React.FC<IProps> = ({
   return (
     <Box
       display={isOpen ? "block" : "none"}
-      bottom={{ base: 0, md: "2rem" }}
-      right={{ base: 0, md: "2rem" }}
+      bottom={{ base: 0, md: 8 }}
+      right={{ base: 0, md: 8 }}
       position="fixed"
       zIndex="99"
     >
@@ -52,22 +52,22 @@ const TranslationBanner: React.FC<IProps> = ({
           base: `0px -4px 10px 0px ${textColor} 10%`,
           md: "rgba(0, 0, 0, 0.16) 0px 2px 4px 0px",
         }}
-        borderRadius="2px"
+        borderRadius="sm"
       >
         <Flex
           flexDirection="column"
           alignItems={isPageRightToLeft ? "flex-end" : "flex-start"}
-          m="1rem"
-          mt={{ base: "2.5rem", sm: 0 }}
+          m={4}
+          mt={{ base: 10, sm: 4 }}
         >
           <Flex
             align={{ base: "flex-start", sm: "center" }}
-            mb="1rem"
+            mb={4}
             flexDirection={{ base: "column-reverse", sm: "row" }}
           >
             <Heading
               as="h3"
-              fontSize="1.5rem"
+              fontSize="2xl"
               fontWeight="700"
               lineHeight="100%"
               my="0"
@@ -76,9 +76,9 @@ const TranslationBanner: React.FC<IProps> = ({
             </Heading>
             <Emoji
               text=":globe_showing_asia_australia:"
-              pt="0.5rem"
-              ml="0.5rem"
-              mb={{ base: "1rem", sm: "auto" }}
+              pt={2}
+              ml={2}
+              mb={{ base: 4, sm: "auto" }}
             />
           </Flex>
           <p>
@@ -98,8 +98,8 @@ const TranslationBanner: React.FC<IProps> = ({
                 <ButtonLink
                   to={originalPagePath}
                   variant="outline"
-                  ml={{ base: 0, sm: "0.5rem" }}
-                  mt={{ base: "0.5rem", sm: 0 }}
+                  ml={{ base: 0, sm: 2 }}
+                  mt={{ base: 2, sm: 0 }}
                   borderColor="#333333"
                   color="#333333"
                   language="en"
@@ -114,7 +114,7 @@ const TranslationBanner: React.FC<IProps> = ({
           position="absolute"
           top="0"
           right={isPageRightToLeft ? "auto" : 0}
-          margin="0.5rem"
+          margin={2}
           color="secondary"
           _hover={{
             color: "primary",
