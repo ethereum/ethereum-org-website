@@ -1471,6 +1471,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="http://keybase.io/minhoryang"><img src="https://avatars.githubusercontent.com/u/1270855?v=4?s=100" width="100px;" alt="Minho Ryang"/><br /><sub><b>Minho Ryang</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=minhoryang" title="Code">💻</a></td>
       <td align="center"><a href="https://sebastiansupreme.eth.link"><img src="https://avatars.githubusercontent.com/u/106926150?v=4?s=100" width="100px;" alt="Sebastian Supreme"/><br /><sub><b>Sebastian Supreme</b></sub></a><br /><a href="#ideas-SebastianSupreme" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
+    <tr>
+      <td align="center"><a href="https://github.com/jhhornn"><img src="https://avatars.githubusercontent.com/u/66667958?v=4?s=100" width="100px;" alt="Awosise Oluwaseun"/><br /><sub><b>Awosise Oluwaseun</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=jhhornn" title="Documentation">📖</a></td>
+    </tr>
   </tbody>
 </table>
 
