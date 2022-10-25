@@ -141,6 +141,10 @@ const Item = styled.li`
   font-size: 0.75rem;
   line-height: 0.875rem;
   letter-spacing: 0.04em;
+
+  p {
+    margin: 1rem auto 1rem 0;
+  }
 `
 
 const Cta = styled(PaddedDiv)`

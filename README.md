@@ -12,7 +12,7 @@
 
 This is the repo for the [ethereum.org](https://ethereum.org) website, a resource for the Ethereum community. The site's purpose is to _“Be the best portal to Ethereum for our growing global community"_ - read more about what this means [here](https://ethereum.org/en/about/).
 
-[ethereum.org](https://ethereum.org) is improved and changed over time through the contributions of community members who submit content, give feedback, or volunteer their time to manage its evolution. If you’re interested in helping to improve [ethereum.org](https://ethereum.org), find out [how to contribute](https://ethereum.org/en/contributing/).
+[ethereum.org](https://ethereum.org) is being improved and changed over time through the contributions of community members who submit content, give feedback, or volunteer their time to manage its evolution. If you’re interested in helping to improve [ethereum.org](https://ethereum.org), find out [how to contribute](https://ethereum.org/en/contributing/).
 
 ## Looking for the Ethereum blockchain's code?
 
@@ -1464,6 +1464,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center"><a href="https://github.com/jb-0"><img src="https://avatars.githubusercontent.com/u/39060614?v=4?s=100" width="100px;" alt="Jamie Barrett"/><br /><sub><b>Jamie Barrett</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=jb-0" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/hyper0x"><img src="https://avatars.githubusercontent.com/u/315569?v=4?s=100" width="100px;" alt="Renato"/><br /><sub><b>Renato</b></sub></a><br /><a href="#content-hyper0x" title="Content">🖋</a> <a href="#translation-hyper0x" title="Translation">🌍</a></td>
+      <td align="center"><a href="https://frang.io"><img src="https://avatars.githubusercontent.com/u/481465?v=4?s=100" width="100px;" alt="Francisco"/><br /><sub><b>Francisco</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=frangio" title="Documentation">📖</a></td>
+      <td align="center"><a href="http://frankiefab.com"><img src="https://avatars.githubusercontent.com/u/46662771?v=4?s=100" width="100px;" alt="Franklin Ohaegbulam"/><br /><sub><b>Franklin Ohaegbulam</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=frankiefab100" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/soos3d"><img src="https://avatars.githubusercontent.com/u/99700157?v=4?s=100" width="100px;" alt="Soos3D"/><br /><sub><b>Soos3D</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=soos3d" title="Documentation">📖</a></td>
+      <td align="center"><a href="http://keybase.io/minhoryang"><img src="https://avatars.githubusercontent.com/u/1270855?v=4?s=100" width="100px;" alt="Minho Ryang"/><br /><sub><b>Minho Ryang</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=minhoryang" title="Code">💻</a></td>
+      <td align="center"><a href="https://sebastiansupreme.eth.link"><img src="https://avatars.githubusercontent.com/u/106926150?v=4?s=100" width="100px;" alt="Sebastian Supreme"/><br /><sub><b>Sebastian Supreme</b></sub></a><br /><a href="#ideas-SebastianSupreme" title="Ideas, Planning, & Feedback">🤔</a></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="https://github.com/jhhornn"><img src="https://avatars.githubusercontent.com/u/66667958?v=4?s=100" width="100px;" alt="Awosise Oluwaseun"/><br /><sub><b>Awosise Oluwaseun</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=jhhornn" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
