@@ -80,40 +80,42 @@ const MergeInfographic: React.FC<IProps> = ({ className }) => {
         isolation: "isolate",
       }}
     >
-      <Box
-        position="absolute"
-        top="44%"
-        left="2%"
-        width="81%"
-        height="18%"
-        margin={0}
-        padding={0}
-        zIndex={2}
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        lineHeight="1em"
-        textAlign="center"
-        maxHeight="2em"
-        color="background"
-        fontSize={{
-          base: "0.625em",
-          sm: "0.875em",
-          md: "1.125em",
-          lg: "1.375em",
-        }}
-        aria-hidden="true"
-      >
-        <Translation id="page-upgrades-merge-infographic-el" />
+      <Box>
+        <Box
+          position="absolute"
+          top="40%"
+          left="2%"
+          width="81%"
+          height="18%"
+          margin={0}
+          padding={0}
+          zIndex={2}
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          lineHeight="1em"
+          textAlign="center"
+          maxHeight="2em"
+          color="background"
+          fontSize={{
+            base: "0.625em",
+            sm: "0.875em",
+            md: "1.125em",
+            lg: "1.375em",
+          }}
+          aria-hidden="true"
+        >
+          <Translation id="page-upgrades-merge-infographic-el" />
+        </Box>
+        <SvgText getString={getString} />
+        <Background
+          aria-hidden="true"
+          position="absolute"
+          width="100%"
+          height="100%"
+          zIndex={0}
+        />
       </Box>
-      <SvgText getString={getString} />
-      <Background
-        aria-hidden="true"
-        position="absolute"
-        width="100%"
-        height="100%"
-        zIndex={0}
-      />
     </AspectRatio>
   )
 }
