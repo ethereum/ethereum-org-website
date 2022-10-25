@@ -227,9 +227,10 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
       <Heading
         as="h2"
         mb={12}
-        id="quiz"
+        textAlign="center"
         scrollBehavior="smooth"
         scrollMarginTop={24}
+        id="quiz"
       >
         Test your knowledge
       </Heading>
@@ -245,7 +246,8 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
         }
         borderRadius="base"
         boxShadow="drop"
-        py={{ base: 5, md: 12 }}
+        pt={12}
+        pb={{ base: 5, md: 12 }}
         px={{ base: 7, md: 15 }}
         position="relative"
       >
