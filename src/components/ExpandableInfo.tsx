@@ -68,8 +68,8 @@ const ExpandableInfo = forwardRef<IProps, "div">(
         border="1px solid"
         borderColor="border"
         borderRadius="2px"
-        p="1.5rem"
-        mb="1rem"
+        p={6}
+        mb={4}
         spacing="0"
         background={background ?? "background"}
         position="relative"
@@ -85,25 +85,25 @@ const ExpandableInfo = forwardRef<IProps, "div">(
         <Stack
           justify="space-between"
           align="center"
-          gap={{ base: "2rem", md: "3rem" }}
+          gap={{ base: 8, md: 12 }}
           flexDirection={{ base: "column", md: "row" }}
           width="full"
         >
           {image && <GatsbyImage image={image} alt="" />}
-          <HStack gap="3rem" width="full">
-            <Box mr="1rem">
+          <HStack gap={12} width="full">
+            <Box mr={4}>
               <HStack
                 width="full"
-                m="1rem 0"
+                my={4}
                 sx={{
                   img: {
-                    mr: "1.5rem",
+                    mr: 6,
                   },
                 }}
               >
                 <Heading
-                  mt="0rem"
-                  mb="0.5rem"
+                  mt="0"
+                  mb={1}
                   fontSize={{ base: "2xl", md: "2rem" }}
                   fontWeight="600"
                   lineHeight="1.4"
@@ -146,10 +146,10 @@ const ExpandableInfo = forwardRef<IProps, "div">(
         >
           <Box
             color="text"
-            mt="2rem"
+            mt={8}
             borderTop="1px solid"
             borderColor="border"
-            paddingTop="1.5rem"
+            paddingTop={6}
           >
             {children}
           </Box>
