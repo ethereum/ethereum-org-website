@@ -2,7 +2,6 @@
 title: Proof-of-stake rewards and penalties
 description: Learn about the in-protocol incentives in proof-of-stake Ethereum.
 lang: en
-sidebar: true
 ---
 
 Ethereum is secured using its native cryptocurrency, ether (ETH). Node operators that wish to participate in validating blocks and identifying the head of the chain deposit ether into a smart contract on Ethereum. They are then paid in ether to run validator software that checks the validity of new blocks received over the peer-to-peer network and apply the fork-choice algorithm to identify the head of the chain.

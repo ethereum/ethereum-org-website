@@ -26,13 +26,13 @@ ETH 加密货币支持以太坊算力的定价机制。 当用户想要完成一
 
 因此，即使某恶意 dapp 无限循环提交，交易最终也会耗尽 ETH 并终止，从而使网络恢复正常。
 
-人们[经常](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum) [混](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845#:~:text=cryptocurrencies%20including%20ethereum) [淆](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum)以太坊和以太币 (ETH) - 当他们谈及“以太坊价格”时，其实是指 ETH 价格。
+人们[经常](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum) [会](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845#:~:text=cryptocurrencies%20including%20ethereum) [混淆](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum)以太坊和以太币 - 当他们谈及“以太坊价格”时，其实是指以太币价格。
 
 ## 铸造 ETH {#minting-ether}
 
 铸造是指在以太坊分类账上创造新以太币的过程。 底层以太坊协议创造出新以太币，单一用户不可能创造。
 
-当新区块在以太坊区块链上创建时，会铸造以太币。 作为创建区块的激励措施，该协议在每个区块中都设置了奖励，增加区块生产者所设置地址的余额。 区块奖励随时间而变化，目前奖励为每区块 2 个以太币。 合并后，授予每个验证者的奖励取决于他们质押的以太币数量和他们的表现。
+以太币铸造出来，用来奖励提议的每个区块，以及在每个时段的检查点奖励验证者执行的和达成共识有关的其他活动。 总发行量取决于验证者的数量和它们质押的以太币数量。 在所有验证者都诚实且在线的理想情况下，以太币总发行量会在所有验证者中等分，但现实中分配情况会因验证者的表现而异。 总发行量的大约 1/8 会奖励给区块提议者，剩余部分在其它验证者中分配。 区块提议者还会获得交易费小费和矿工可提取价值，但这些都来自流通中的以太币，而非新发行的以太币。
 
 ## 燃烧 ETH {#burning-ether}
 
@@ -75,4 +75,4 @@ Gwei（giga-wei 的缩写），常用于描述以太坊上的燃料费用。
 - [以太坊白皮书](/whitepaper/)：以太坊原始提案 这份资料包括了对 ETH 及其创建动机的整体描述。
 - [Gwei 计算器](https://www.alchemy.com/gwei-calculator)：使用这个 Gwei 计算器可以轻松地换算 wei、Gwei 和 ETH。 只需输入任何数量的 wei、Gwei 或 ETH，就能够自动换算。
 
-_还知道哪些社区资源对您有所帮助？ 编辑本页面并添加它！_
+_还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_

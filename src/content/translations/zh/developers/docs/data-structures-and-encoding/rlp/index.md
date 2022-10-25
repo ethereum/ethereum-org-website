@@ -2,7 +2,6 @@
 title: 递归长度前缀 (RLP) 序列化
 description: 以太坊执行层中递归长度前缀 (RLP) 编码的定义。
 lang: zh
-sidebar: true
 sidebarDepth: 2
 ---
 

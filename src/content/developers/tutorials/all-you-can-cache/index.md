@@ -2,7 +2,6 @@
 title: "All you can cache"
 description: Learn how to create and use a caching contract for cheaper rollup transactions
 author: Ori Pomerantz
-sidebar: true
 tags: ["layer-2", "caching", "storage"]
 skill: intermediate
 published: 2022-09-15

@@ -2,7 +2,6 @@
 title: 客户端多样性
 description: 对以太坊客户端多样性的重要性进行概括解释。
 lang: zh
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -10,7 +9,7 @@ sidebarDepth: 2
 
 ## 前提条件 {#prerequisites}
 
-如果你还不清楚什么是节点和客户端，请参阅[节点和客户端](/developers/docs/nodes-and-clients/)。 [点击此处](/upgrades/beacon-chain/)了解信标链。 [执行层](/glossary/#execution-layer)和[共识层](/glossary/#consensus-layer)的定义见词汇表。
+如果你还不了解什么是节点和客户端，请查看[节点和客户端](/developers/docs/nodes-and-clients/)。 [执行层](/glossary/#execution-layer)和[共识层](/glossary/#consensus-layer)的定义见词汇表。
 
 ## 为什么会有多种客户端？ {#why-multiple-clients}
 
@@ -30,11 +29,11 @@ sidebarDepth: 2
 
 ### 权益证明的最终确定性 {#finality}
 
-自建立伊始，以太坊一直保持正常运行。 合并之后，客户端多样性差带来的风险更令人担忧。 当一种拥有 33% 以上以太坊节点的共识客户端出现严重漏洞时，就可能会阻止信标链最终确定，导致以太坊离线。
+占据超过 33% 的以太坊节点的共识客户端中有一个漏洞，它可能会阻止信标链最终确定，这意味着用户可能无法相信交易在某些时候不会被回滚或更改。 对于许多建立在以太坊之上的应用程序，尤其是去中心化金融，这将是一个很大的问题。
 
 <Emoji text="🚨" mr="1rem" /> 更糟糕的是，当拥有三分之二多数节点的客户端出现严重漏洞，可能会导致链<a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">错误地分叉并最终确定</a>，让大量验证者困陷在无效链上。 如果这些验证者想重新加入正确的链，他们将面临罚没或缓慢而昂贵的自愿退出和重新激活过程。 罚没的轻重随过错节点数量而异，三分之二多数将受到最严重的惩罚（32 个以太币）。
 
-尽管这些情况不太可能发生，但为了降低这类风险，以太坊生态系统可以使客户端均衡分布在活跃节点上。 理想情况下，任何共识客户端任何时候都不会拥有超过 33% 的总节点数。
+尽管这些情况不太可能发生，但为了降低这类风险，以太坊生态系统可以使客户端均衡分布在活跃节点上。 理想情况下，任何共识客户端任何时候都不会达到总节点数的 33%。
 
 ### 共担责任 {#responsibility}
 
