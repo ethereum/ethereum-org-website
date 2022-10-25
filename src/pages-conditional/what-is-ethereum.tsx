@@ -947,7 +947,7 @@ const WhatIsEthereumPage = ({
 
       <Content>
         <Center w="100%">
-          <QuizWidget />
+          <QuizWidget quizKey="what-is-ethereum" />
         </Center>
       </Content>
 
