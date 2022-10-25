@@ -7,7 +7,6 @@ import {
   Flex,
   RadioProps,
   Text,
-  useColorMode,
   useRadio,
   useRadioGroup,
 } from "@chakra-ui/react"
@@ -15,27 +14,42 @@ import {
 // Import types
 import { Question } from "../../types"
 
+// Interfaces
+export interface CustomRadioProps extends RadioProps {
+  index: number
+  label: string
+}
 export interface IProps {
   questionData: Question
   showAnswer: boolean
   handleSelection: (answerId: string) => void
   selectedAnswer: string | null
 }
+
+// Component
 const QuizRadioGroup: React.FC<IProps> = ({
   questionData,
   showAnswer,
   handleSelection,
   selectedAnswer,
 }) => {
+  const { getRadioProps, getRootProps } = useRadioGroup({
+    onChange: handleSelection,
+  })
   const { prompt, answers, correctAnswerId } = questionData
-  const { colorMode } = useColorMode()
-  const isDarkMode = colorMode === "dark"
+
+  // Memoized values
+  const explanation = useMemo<string>(() => {
+    if (!selectedAnswer) return ""
+    return answers.filter(({ id }) => id === selectedAnswer)[0].explanation
+  }, [selectedAnswer])
+
+  const isSelectedCorrect = useMemo<boolean>(
+    () => correctAnswerId === selectedAnswer,
+    [selectedAnswer]
+  )
 
   // Custom radio button component
-  interface CustomRadioProps extends RadioProps {
-    index: number
-    label: string
-  }
   const CustomRadio: React.FC<CustomRadioProps> = ({
     index,
     label,
@@ -43,25 +57,16 @@ const QuizRadioGroup: React.FC<IProps> = ({
   }) => {
     const { state, getInputProps, getCheckboxProps, htmlProps } =
       useRadio(radioProps)
-    const iconBackgroundDark = state.isActive ? "orange.800" : "gray.500"
-    const iconBackgroundLight = state.isActive ? "blue.300" : "gray.400"
 
     // Memoized values
     const buttonBg = useMemo<string>(() => {
+      if (!state.isChecked) return "bodyInverted"
       if (!showAnswer) return "primary"
-      return correctAnswerId === selectedAnswer ? "green.500" : "red.500"
-    }, [questionData, selectedAnswer, showAnswer])
-    const circleBg = useMemo<string>(
-      () =>
-        showAnswer
-          ? "white"
-          : isDarkMode
-          ? iconBackgroundDark
-          : iconBackgroundLight,
-      [showAnswer, isDarkMode]
-    )
+      if (!isSelectedCorrect) return "error"
+      return "success"
+    }, [state.isChecked, showAnswer, isSelectedCorrect])
 
-    // Render CustomRadio
+    // Render CustomRadio component
     return (
       <chakra.label {...htmlProps} cursor="pointer" data-group w="100%">
         <input {...getInputProps({})} hidden />
@@ -70,37 +75,38 @@ const QuizRadioGroup: React.FC<IProps> = ({
           w="100%"
           p={2}
           alignItems="center"
-          bg={state.isChecked ? buttonBg : "quizButton"}
+          bg={buttonBg}
           color={state.isChecked ? "white" : "text"}
           borderRadius="base"
-          _hover={
-            showAnswer
-              ? {
-                  boxShadow: "none",
-                  cursor: "default",
-                }
-              : {
-                  outline: "1px solid var(--eth-colors-primary)",
-                  boxShadow: "primary",
-                }
-          }
+          _hover={{
+            boxShadow: showAnswer ? "none" : "primary",
+            outlineColor: "primary",
+            outline: showAnswer ? "none" : "1px solid",
+            cursor: showAnswer ? "default" : "pointer",
+          }}
         >
           <Circle
             size={"25px"}
-            bg={circleBg}
-            _groupHover={
+            bg={
               showAnswer
-                ? {
-                    bg: "white",
-                    cursor: "default",
-                  }
-                : {
-                    bg: isDarkMode ? "orange.700" : "blue.300",
-                  }
+                ? "white"
+                : state.isChecked
+                ? "primaryPressed"
+                : "disabled"
             }
+            _groupHover={{
+              bg: showAnswer ? "white" : "primaryPressed",
+            }}
             me={2}
           >
-            <Text m="0" fontWeight={"700"} fontSize={"lg"} color={letterColor}>
+            <Text
+              m="0"
+              fontWeight={"700"}
+              fontSize={"lg"}
+              color={
+                !showAnswer ? "white" : isSelectedCorrect ? "success" : "error"
+              }
+            >
               {String.fromCharCode(97 + index).toUpperCase()}
             </Text>
           </Circle>
@@ -109,24 +115,6 @@ const QuizRadioGroup: React.FC<IProps> = ({
       </chakra.label>
     )
   }
-
-  const handleChange = (value: string): void => {
-    handleSelection(value)
-  }
-
-  const { getRadioProps, getRootProps } = useRadioGroup({
-    onChange: handleChange,
-  })
-
-  // Memoized values
-  const explanation = useMemo<string>(() => {
-    if (!selectedAnswer) return ""
-    return answers.filter(({ id }) => id === selectedAnswer)[0].explanation
-  }, [selectedAnswer])
-  const letterColor = useMemo<string>(() => {
-    if (!showAnswer) return "white"
-    return correctAnswerId === selectedAnswer ? "green.500" : "red.500"
-  }, [questionData, selectedAnswer, showAnswer])
 
   // Render QuizRadioGroup
   return (

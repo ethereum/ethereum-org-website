@@ -1,4 +1,4 @@
-// Libraries
+// Import libraries
 import React, { useEffect, useState, useMemo } from "react"
 import {
   Box,
@@ -11,51 +11,52 @@ import {
   Icon,
   Text,
   Spinner,
-  useColorMode,
 } from "@chakra-ui/react"
 import { shuffle } from "lodash"
 import { FaTwitter } from "react-icons/fa"
 
-// Components
+// Import components
 import Button from "../Button"
 import QuizRadioGroup from "./QuizRadioGroup"
 import QuizSummary from "./QuizSummary"
 
-// SVG import
+// Import SVGs
 import Trophy from "../../assets/quiz/trophy.svg"
 import Correct from "../../assets/quiz/correct.svg"
 import Incorrect from "../../assets/quiz/incorrect.svg"
 import StarConfetti from "../../assets/quiz/star-confetti.svg"
 
-// Data
+// Import data
 import allQuizData from "../../data/quizzes"
 import questionBank from "../../data/quizzes/questionBank"
 
-// Utilities
+// Import utilities
 import { trackCustomEvent } from "../../utils/matomo"
 
-// Type
+// Import types
 import { AnswerChoice, RawQuiz, Quiz, RawQuestion, Question } from "../../types"
 
+// Import constants
+import { PASSING_QUIZ_SCORE } from "../../constants"
+
+// Interfaces
 export interface IProps {
   quizKey?: string
   maxQuestions?: number
 }
-const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
-  // TODO: Add loading state indicator and error handling
-  const { colorMode } = useColorMode()
-  const isDarkMode = colorMode === "dark"
 
+// Component
+const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
   const [quizData, setQuizData] = useState<Quiz | null>(null)
-  const [currentQuestionAnswerChoice, setCurrentQuestionAnswerChoice] =
-    useState<AnswerChoice | null>(null)
   const [userQuizProgress, setUserQuizProgress] = useState<Array<AnswerChoice>>(
     []
   )
   const [showAnswer, setShowAnswer] = useState<boolean>(false)
+  const [currentQuestionAnswerChoice, setCurrentQuestionAnswerChoice] =
+    useState<AnswerChoice | null>(null)
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
 
-  const initialize = () => {
+  const initialize = (): void => {
     // Reset state
     setQuizData(null)
     setCurrentQuestionAnswerChoice(null)
@@ -71,22 +72,20 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
       )[0] ||
       null
 
-    // Get quiz data, shuffle, then truncate if necessary
-    if (currentQuizKey) {
-      const rawQuiz: RawQuiz = allQuizData[currentQuizKey]
-      const questions: Array<Question> = rawQuiz.questions.map((id) => {
-        const rawQuestion: RawQuestion = questionBank[id]
-        return { id, ...rawQuestion }
-      })
-      const shuffledQuestions = shuffle(questions)
-      const trimmedQuestions = maxQuestions
-        ? shuffledQuestions.slice(0, maxQuestions)
-        : shuffledQuestions
-      const quiz: Quiz = { title: rawQuiz.title, questions: trimmedQuestions }
-      setQuizData(quiz)
-    } else {
-      setQuizData(null)
-    }
+    if (!currentQuizKey) return
+
+    // Get quiz data from key, shuffle, then truncate if necessary
+    const rawQuiz: RawQuiz = allQuizData[currentQuizKey]
+    const questions: Array<Question> = rawQuiz.questions.map((id) => {
+      const rawQuestion: RawQuestion = questionBank[id]
+      return { id, ...rawQuestion }
+    })
+    const shuffledQuestions = shuffle(questions)
+    const trimmedQuestions = maxQuestions
+      ? shuffledQuestions.slice(0, maxQuestions)
+      : shuffledQuestions
+    const quiz: Quiz = { title: rawQuiz.title, questions: trimmedQuestions }
+    setQuizData(quiz)
   }
   useEffect(initialize, [quizKey])
 
@@ -96,24 +95,34 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
     [userQuizProgress]
   )
 
-  // TODO: Allow user to submit quiz for storage
   const showResults = useMemo<boolean>(
     () => userQuizProgress.length === quizData?.questions.length,
     [userQuizProgress, quizData]
   )
 
-  const cardBackground = useMemo<string>(() => {
-    if (showAnswer) {
-      if (currentQuestionAnswerChoice?.isCorrect)
-        return isDarkMode ? "#0A160E" : "#C8F7D8"
-      return isDarkMode ? "#1B0C0C" : "#F7C8C8"
-    }
-    return isDarkMode ? "gray.900" : "white"
-  }, [isDarkMode, showAnswer])
-
   const correctCount = useMemo<number>(
     () => userQuizProgress.filter(({ isCorrect }) => isCorrect).length,
     [userQuizProgress]
+  )
+
+  const ratioCorrect = useMemo<number>(
+    () => (!quizData ? 0 : correctCount / quizData.questions.length),
+    [quizData, correctCount]
+  )
+
+  const score = useMemo<number>(
+    () => Math.floor(ratioCorrect * 100),
+    [ratioCorrect]
+  )
+
+  const isPassingScore = useMemo<boolean>(
+    () => score > PASSING_QUIZ_SCORE,
+    [score]
+  )
+
+  const showConfetti = useMemo<boolean>(
+    () => !!quizData && showResults && isPassingScore,
+    [quizData, showResults, isPassingScore]
   )
 
   // Handlers
@@ -123,7 +132,6 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
     setCurrentQuestionAnswerChoice({ answerId, isCorrect })
   }
 
-  // TODO: Confirm both handleSelectAnswerChoice & handleSelection are necessary
   const handleSelection = (answerId: string): void => {
     setSelectedAnswer(answerId)
     handleSelectAnswerChoice(answerId)
@@ -151,23 +159,23 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
     setSelectedAnswer(null)
     setShowAnswer(false)
   }
+
   const handleContinue = (): void => {
     if (!currentQuestionAnswerChoice) return
     setUserQuizProgress((prev) => [...prev, currentQuestionAnswerChoice])
     setCurrentQuestionAnswerChoice(null)
     setShowAnswer(false)
     if (showResults) {
-      const ratioCorrect: number =
-        correctCount / quizData!.questions.length || 0
       trackCustomEvent({
         eventCategory: "Quiz widget",
         eventAction: "Other",
         eventName: "Submit results",
-        eventValue: `${Math.floor(ratioCorrect * 100)}%`,
+        eventValue: `${score}%`,
       })
     }
   }
-  const shareTweetHandler = (): void => {
+
+  const handleShare = (): void => {
     if (!quizData || !window) return
     trackCustomEvent({
       eventCategory: "Quiz widget",
@@ -183,9 +191,19 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
     )
   }
 
+  // TODO: Allow user to submit quiz for storage
+  // TODO: Fix a11y keyboard tab stops
+
+  // Render QuizWidget component
   return (
     <Flex width="full" direction="column" alignItems="center">
-      <Heading as="h2" mb={12} id="quiz">
+      <Heading
+        as="h2"
+        mb={12}
+        id="quiz"
+        scrollBehavior="smooth"
+        scrollMarginTop={24}
+      >
         Test your knowledge
       </Heading>
       <Box
@@ -193,9 +211,15 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
           md: "600px",
           sm: "300px",
         }}
-        bg={cardBackground}
+        bg={
+          !showAnswer
+            ? "neutral"
+            : currentQuestionAnswerChoice?.isCorrect
+            ? "successNeutral"
+            : "errorNeutral"
+        }
         borderRadius="base"
-        boxShadow="dropShadow"
+        boxShadow="drop"
         padding={{
           md: "49px 62px", // TODO: Remove magic numbers
           base: "20px 30px",
@@ -209,8 +233,8 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
             !showAnswer
               ? "primary"
               : currentQuestionAnswerChoice?.isCorrect
-              ? "#48BB78"
-              : "#B80000"
+              ? "success"
+              : "error"
           }
           position="absolute"
           top={0}
@@ -226,38 +250,32 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
                 : Incorrect
             }
             fontSize="1.75rem"
-            color="background"
+            color="neutral"
           />
         </Circle>
-        {quizData &&
-          showResults &&
-          Math.floor((correctCount / quizData.questions.length) * 100) > 65 && (
-            <>
-              <Icon
-                as={StarConfetti}
-                fontSize="184px"
-                position="absolute"
-                left={0}
-                top={-8}
-              />
-              <Icon
-                as={StarConfetti}
-                fontSize="184px"
-                position="absolute"
-                right={0}
-                top={-8}
-                transform="scaleX(-100%)"
-              />
-            </>
-          )}
+        {showConfetti && (
+          <>
+            <Icon
+              as={StarConfetti}
+              fontSize="184px"
+              position="absolute"
+              left={0}
+              top={-8}
+            />
+            <Icon
+              as={StarConfetti}
+              fontSize="184px"
+              position="absolute"
+              right={0}
+              top={-8}
+              transform="scaleX(-100%)"
+            />
+          </>
+        )}
         {quizData ? (
           <>
             <Center>
-              <Text
-                fontStyle={"normal"}
-                fontWeight={"700"}
-                color={isDarkMode ? "orange.300" : "blue.300"}
-              >
+              <Text fontStyle="normal" fontWeight="700" color="primaryHover">
                 {quizData.title}
               </Text>
             </Center>
@@ -327,7 +345,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
                   <Flex gap={6}>
                     <Button
                       leftIcon={<Icon as={FaTwitter} />}
-                      onClick={shareTweetHandler}
+                      onClick={handleShare}
                     >
                       Share results
                     </Button>

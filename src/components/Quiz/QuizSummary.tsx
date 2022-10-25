@@ -1,35 +1,50 @@
-// Libraries
+// Import libraries
 import React, { useMemo } from "react"
 import { Box, Flex, Text } from "@chakra-ui/react"
 import { useIntl } from "react-intl"
 
+// Import utilities
+import { numberToPercent } from "../../utils/numberToPercent"
+
+// Import constants
+import { PASSING_QUIZ_SCORE } from "../../constants"
+
+// Interfaces
 export interface IProps {
   correctCount: number
   questionCount: number
 }
 
+// Component
 const QuizSummary: React.FC<IProps> = ({ correctCount, questionCount }) => {
   const { locale } = useIntl()
-  const percentCorrect = useMemo<number>(
+
+  // Memoized values
+  const ratioCorrect = useMemo<number>(
     () => correctCount / questionCount,
     [correctCount, questionCount]
   )
-  const options = {
-    style: "percent",
-    maximumFractionDigits: 0,
-  }
-  const numberToPercent = (num: number): string =>
-    new Intl.NumberFormat(locale, options).format(num)
 
+  const score = useMemo<number>(
+    () => Math.floor(ratioCorrect * 100),
+    [ratioCorrect]
+  )
+
+  const isPassingScore = useMemo<boolean>(
+    () => score > PASSING_QUIZ_SCORE,
+    [score]
+  )
+
+  // Render QuizSummary component
   return (
     <Box w="full" mb={10}>
       <Text fontWeight={"700"} fontSize="2xl" textAlign="center">
-        {percentCorrect >= 65 ? "You passed the quiz!" : "Your results"}
+        {isPassingScore ? "You passed the quiz!" : "Your results"}
       </Text>
       <Flex
         p={4}
         justify="center"
-        boxShadow="dropShadow"
+        boxShadow="drop"
         bg="background"
         mx="auto"
         w="fit-content"
@@ -42,7 +57,7 @@ const QuizSummary: React.FC<IProps> = ({ correctCount, questionCount }) => {
           borderColor="disabled"
         >
           <Text fontWeight="700" fontSize="2xl" mb={2}>
-            {numberToPercent(percentCorrect)}
+            {numberToPercent(ratioCorrect, locale)}
           </Text>
           <Text fontSize="s" m={0} color="disabled">
             Score
