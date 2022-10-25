@@ -52,6 +52,21 @@ Test ağlarındaki ETH'nin gerçek bir değeri yoktur; bu nedenle, test ağı ET
 - [Chainlink musluğu](https://faucets.chain.link/)
 - [Alchemy Goerli Musluğu](https://goerlifaucet.com/)
 
+##### Sepolia
+
+Sepolia, bir hisse kanıtı(PoS) test ağıdır. Sepolia hâlâ çalışıyor olsa da, şu anda uzun vadeli olarak sürdürülmesi planlanmamaktadır. Haziran 2022'de The Merge'den geçmeden önce Sepolia, bir iş kanıtı(PoW) test ağıydı.
+
+- [Website](https://faucet.goerli.mudit.blog/)
+- [Github](https://faucets.chain.link/)
+- [Otterscan](https://sepolia.otterscan.io/)
+- [Etherscan](https://sepolia.etherscan.io/)
+
+### Sepolia muslukları
+
+- [Sepolia musluk](https://faucet.sepolia.dev/)
+- [FaucETH](https://fauceth.komputing.org/)
+
+
 #### Kintsugi {#kintsugi}
 
 Ethereum için bir birleştirme test ağı.
@@ -61,7 +76,9 @@ Ethereum için bir birleştirme test ağı.
 - [FaucETH](https://fauceth.komputing.org)(Sosyal hesap gerektirmeyen çok zincirli musluk)
 - [Kintsugi musluğu](https://faucet.kintsugi.themerge.dev/)
 
-#### Kovan {#kovan}
+#### Kovan {#kovan} (Kullanımdan kaldırıldı)
+
+Not: Kovan test ağı [kullanımdan kaldırılmıştır](https://github.com/ethereum/pm/issues/460) ve artık protokol yükseltmelerini almayacak. Lütfen başvurularınızı Sepolia veya Goerli'ye taşımayı düşünün.
 
 OpenEthereum istemcileri çalıştıranlar için bir yetki ispatı test ağı.
 
@@ -83,6 +100,8 @@ OpenEthereum istemcileri çalıştıranlar için bir yetki ispatı test ağı.
 
 #### Rinkeby {#rinkeby}
 
+Not: Rinkeby test ağı [kullanımdan kaldırılmıştır](https://github.com/ethereum/pm/issues/460) ve artık protokol yükseltmelerini almayacak. Lütfen başvurularınızı Sepolia veya Goerli'ye taşımayı düşünün.
+
 Geth istemcisini çalıştıranlar için bir yetki ispatı test ağı.
 
 ##### Rinkeby muslukları
@@ -93,9 +112,11 @@ Geth istemcisini çalıştıranlar için bir yetki ispatı test ağı.
 - [Paradigm musluğu](https://faucet.paradigm.xyz/)
 - [Rinkeby musluğu](https://faucet.rinkeby.io/)
 
-#### Ropsten {#ropsten}
+#### Ropsten {#ropsten} (Kullanımdan kaldırıldı)
 
-İş ispatı test ağı. Bu, Ethereum'un en benzer temsili olduğu anlamına gelir.
+Not: Ropsten test ağı [kullanımdan kaldırılmıştır](https://github.com/ethereum/pm/issues/460) ve artık protokol yükseltmelerini almayacak. Lütfen başvurularınızı Sepolia veya Goerli'ye taşımayı düşünün.
+
+Ropsten, bir hisse kanıtı test ağıdır. Ropsten, 2022'nin sonlarında kullanımdan kaldırılacak. Mayıs 2022'de The Merge'den geçmeden önce, Ropsten bir iş kanıtı test ağıydı.
 
 ##### Ropsten muslukları
 
