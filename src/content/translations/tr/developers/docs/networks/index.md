@@ -61,16 +61,6 @@ Ethereum için bir birleştirme test ağı.
 - [FaucETH](https://fauceth.komputing.org)(Sosyal hesap gerektirmeyen çok zincirli musluk)
 - [Kintsugi musluğu](https://faucet.kintsugi.themerge.dev/)
 
-#### Kovan {#kovan}
-
-OpenEthereum istemcileri çalıştıranlar için bir yetki ispatı test ağı.
-
-##### Kovan muslukları
-
-- [FaucETH](https://fauceth.komputing.org)(Sosyal hesap gerektirmeyen çok zincirli musluk)
-- [Kovan musluğu](https://faucet.kovan.network/)
-- [Chainlink musluğu](https://faucets.chain.link/)
-- [Paradigm musluğu](https://faucet.paradigm.xyz/)
 
 #### Optimistic Kovan {#optimistic-kovan}
 
@@ -81,26 +71,6 @@ OpenEthereum istemcileri çalıştıranlar için bir yetki ispatı test ağı.
 - [FaucETH](https://fauceth.komputing.org)(Sosyal hesap gerektirmeyen çok zincirli musluk)
 - [Paradigm musluğu](https://faucet.paradigm.xyz/)
 
-#### Rinkeby {#rinkeby}
-
-Geth istemcisini çalıştıranlar için bir yetki ispatı test ağı.
-
-##### Rinkeby muslukları
-
-- [FaucETH](https://fauceth.komputing.org)(Sosyal hesap gerektirmeyen çok zincirli musluk)
-- [Alchemy musluğu](https://RinkebyFaucet.com)
-- [Chainlink musluğu](https://faucets.chain.link/)
-- [Paradigm musluğu](https://faucet.paradigm.xyz/)
-- [Rinkeby musluğu](https://faucet.rinkeby.io/)
-
-#### Ropsten {#ropsten}
-
-İş ispatı test ağı. Bu, Ethereum'un en benzer temsili olduğu anlamına gelir.
-
-##### Ropsten muslukları
-
-- [FaucETH](https://fauceth.komputing.org)(Sosyal hesap gerektirmeyen çok zincirli musluk)
-- [Paradigm musluğu](https://faucet.paradigm.xyz/)
 
 ## Özel ağlar {#private-networks}
 
