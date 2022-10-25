@@ -37,7 +37,7 @@ const SvgText: React.FC<SvgProps> = ({ getString }) => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       aria-hidden="true"
     >
-      <Text x="2%" y="35%" fontSize={lg} textAnchor="start" fill="currentColor">
+      <Text x="2%" y="35%" fontSize={lg}>
         ⛏ {getString("docs-nav-proof-of-work")}
       </Text>
       <Text x="47%" y="35%" fontSize={lg}>
