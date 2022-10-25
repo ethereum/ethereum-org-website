@@ -77,7 +77,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
           _hover={{ boxShadow: "none" }}
           _focus={{ boxShadow: "none" }}
           bg={prevBtnEnabled ? "sliderBtnBg" : "sliderBtnBgDisabled"}
-          height="40px"
+          size="sm"
           color={prevBtnEnabled ? "sliderBtnColor" : "sliderBtnColorDisabled"}
         />
         <IconButton
@@ -88,13 +88,13 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
           _hover={{ boxShadow: "none" }}
           _focus={{ boxShadow: "none" }}
           bg={nextBtnEnabled ? "sliderBtnBg" : "sliderBtnBgDisabled"}
-          height="40px"
+          size="sm"
           color={nextBtnEnabled ? "sliderBtnColor" : "sliderBtnColorDisabled"}
         />
       </Flex>
       <Center
         position={{ sm: "absolute" }}
-        bottom={{ sm: "3.1rem" }}
+        bottom={{ sm: "2.9rem" }}
         left={{ sm: "calc((100% - 68px)/2)" }}
       >
         {scrollSnaps.map((_, index) => (
