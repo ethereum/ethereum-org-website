@@ -1,6 +1,6 @@
 import { Flex, Heading, Icon, Text } from "@chakra-ui/react"
 import { FaGithub } from "react-icons/fa"
-import React from "react"
+import React, { ReactNode } from "react"
 import Link from "./Link"
 import ButtonLink from "./ButtonLink"
 
@@ -9,6 +9,16 @@ import Translation from "./Translation"
 export interface IProps {
   editPath: string
 }
+
+export type ChildOnlyType = {
+  children: ReactNode
+}
+
+const DescriptionParagraph = ({ children }: ChildOnlyType) => (
+  <Text lineHeight="140%" color="text" fontFamily="monospace">
+    {children}
+  </Text>
+)
 
 const CallToContribute: React.FC<IProps> = ({ editPath }) => (
   <Flex
@@ -61,24 +71,24 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => (
       >
         <Translation id="page-calltocontribute-title" />
       </Heading>
-      <Text lineHeight="140%" color="text" fontFamily="monospace">
+      <DescriptionParagraph>
         <Translation id="page-calltocontribute-desc-1" />
-      </Text>
-      <Text lineHeight="140%" color="text" fontFamily="monospace">
+      </DescriptionParagraph>
+      <DescriptionParagraph>
         <Translation id="page-calltocontribute-desc-2" />
-      </Text>
-      <Text lineHeight="140%" color="text" fontFamily="monospace">
+      </DescriptionParagraph>
+      <DescriptionParagraph>
         <Translation id="page-calltocontribute-desc-3" />{" "}
         <Link to="https://www.notion.so/efdn/Writer-template-4b40d196cde7422ca6a2091de33550bd">
           <Translation id="page-calltocontribute-link" />
         </Link>
-      </Text>
-      <Text lineHeight="140%" color="text" fontFamily="monospace">
+      </DescriptionParagraph>
+      <DescriptionParagraph>
         <Translation id="page-calltocontribute-desc-4" />{" "}
         <Link to="https://discord.gg/CetY6Y4">
           <Translation id="page-calltocontribute-link-2" />
         </Link>{" "}
-      </Text>
+      </DescriptionParagraph>
       <ButtonLink
         to={editPath}
         leftIcon={
