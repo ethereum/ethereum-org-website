@@ -2,7 +2,6 @@
 import React, { useEffect, useState, useMemo, useCallback } from "react"
 import {
   Box,
-  ButtonGroup,
   Center,
   Circle,
   Container,
@@ -346,7 +345,14 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
               )}
             </Center>
             <Center mt={8}>
-              <ButtonGroup gap={6}>
+              <Flex
+                gap={6}
+                flex={{ base: 1, sm: "unset" }}
+                direction={{ base: "column", sm: "row" }}
+                sx={{
+                  button: { width: { base: "100%", sm: "fit-content" } },
+                }}
+              >
                 {showAnswer &&
                   currentQuestionAnswerChoice &&
                   !currentQuestionAnswerChoice.isCorrect && (
@@ -358,15 +364,15 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
                     </Button>
                   )}
                 {showResults ? (
-                  <Flex gap={6}>
+                  <>
                     <Button
                       leftIcon={<Icon as={FaTwitter} />}
                       onClick={handleShare}
                     >
                       Share results
                     </Button>
-                    <Button onClick={initialize}>Take quiz again</Button>
-                  </Flex>
+                    <Button onClick={initialize}>Try again</Button>
+                  </>
                 ) : showAnswer ? (
                   <Button onClick={handleContinue}>
                     {userQuizProgress.length === quizData.questions.length - 1
@@ -386,7 +392,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
                     Submit answer
                   </Button>
                 )}
-              </ButtonGroup>
+              </Flex>
             </Center>
           </>
         ) : (
