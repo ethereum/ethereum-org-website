@@ -63,6 +63,5 @@ Most established IDEs have built plugins to enhance the Ethereum development exp
 
 ## Further reading {#further-reading}
 
-- [Blockchain development tools](https://www.alchemy.com/overviews/20-blockchain-development-tools) - Alchemy's top 20 blockchain development tools
 
 _Know of a community resource that helped you? Edit this page and add it!_
