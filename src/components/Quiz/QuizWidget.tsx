@@ -39,6 +39,9 @@ import { AnswerChoice, RawQuiz, Quiz, RawQuestion, Question } from "../../types"
 // Import constants
 import { PASSING_QUIZ_SCORE } from "../../constants"
 
+// Constants
+const PROGRESS_BAR_GAP = "4px"
+
 // Interfaces
 export interface IProps {
   quizKey?: string
@@ -305,19 +308,24 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
               </Text>
             </Center>
             {/* Progress bar */}
-            <Center gap={1} marginBottom={6}>
-              {quizData.questions.map(({ id }, index) => (
-                <Container
-                  key={id}
-                  bg={progressBarBackground(index)}
-                  h="4px"
-                  maxW="2rem" // TODO: Improve responsiveness for more questions on smaller screens
-                  width="full"
-                  marginInline={0}
-                />
-              ))}
+            <Center gap={PROGRESS_BAR_GAP} marginBottom={6}>
+              {quizData.questions.map(({ id }, index) => {
+                /* Calculate width percent based on number of questions */
+                const width = `calc(${Math.floor(
+                  100 / quizData.questions.length
+                )}% - ${PROGRESS_BAR_GAP})`
+                return (
+                  <Container
+                    key={id}
+                    bg={progressBarBackground(index)}
+                    h="4px"
+                    w={width}
+                    maxW={`min(${width}, 2rem)`}
+                    marginInline={0}
+                    p={0}
                   />
                 )
+              })}
             </Center>
             <Center>
               {showResults ? (
@@ -341,7 +349,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
                   !currentQuestionAnswerChoice.isCorrect && (
                     <Button
                       onClick={handleRetryQuestion}
-                      variant={"outline-color"}
+                      variant="outline-color"
                     >
                       Try again
                     </Button>
