@@ -228,3 +228,5 @@
           to: /developers/docs/data-structures-and-encoding/rlp/
         - id: docs-nav-data-structures-and-encoding-ssz
           to: /developers/docs/data-structures-and-encoding/ssz/
+        - id: docs-nav-data-structures-and-encoding-web3-secret-storage
+          to: /developers/docs/data-structures-and-encoding/web3-secret-storage/

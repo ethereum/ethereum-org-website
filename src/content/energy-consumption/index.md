@@ -18,6 +18,8 @@ For example, on Ethereum, the transaction throughput is not only that of the bas
 
 More relevant is the overall energy consumption and carbon footprint of the network as a whole. From those values, we can examine what that network offers to its users and society at large and make a more holistic evaluation of whether that energy expenditure is justified or not. Per transaction measurements, on the other hand, imply the value of the network only comes from its role in transferring crypto between accounts and prohibits an honest cost-benefit analysis.
 
+[CCRI](https://carbon-ratings.com) (Crypto Carbon Ratings Institute) has extensively analyzed the electricity consumption and the carbon footprint of the Ethereum network (see report [*The Merge - Implications on the Electricity Consumption and Carbon Footprint of the Ethereum Network*]( https://carbon-ratings.com/eth-report-2022)). CCRI has measured the electricity consumption of different nodes with various hardware and client software configurations. This resulted in an estimation of **2.601 MWh** (0.0026 TWh) for the network’s yearly electricity consumption at the time of analysis (September 2022), which corresponds to yearly carbon emissions of **870 tonnes CO2e** applying regional specific carbon intensity factors. 
+
 [Digiconomist provides whole-network energy consumption and carbon footprints for Bitcoin and Ethereum](https://digiconomist.net/ethereum-energy-consumption). At the time of writing this article, Bitcoin expends about 200 TWh/yr of energy and emits about 100 MT (megatons) of carbon per year, while generating about 32,000 T of electrical waste from obsolete hardware annually. In comparison, the total energy expenditure for securing Ethereum is closer to **0.01 TWh/yr**.
 
 <EnergyConsumptionChart />
@@ -37,6 +39,10 @@ While Ethereum's energy consumption is very low, there is also a substantial, gr
 Ethereum's current energy expenditure is very low, but this has not always been the case. Ethereum switched on its proof-of-stake consensus mechanism in Q3 2022. However, Ethereum used a proof-of-work mechanism from 2014-2022, which had a much greater environmental cost.
 
 Since its inception, Ethereum aimed to implement a proof-of-stake consensus mechanism, but doing so without sacrificing security and decentralization took years of focused research and development. Therefore, a proof-of-work mechanism was used to get the network started. Proof-of-work consensus requires miners to use their computing hardware to solve a puzzle, expending energy in the process. The solution to the puzzle proves that energy has been expended by the miner, demonstrating that they invested real-world value for the right to add to the blockchain. Ethereum's total energy consumption peaked during the apex of the crypto bull market in February 2022 at just under 94 TWh/yr. In the summer before the switch to proof-of-stake, the energy consumption was closer to 60 TWh/yr, comparable to that of Uzbekistan, with a carbon emission equivalent to that of Azerbaijan (33 MT/yr).
+
+[CCRI](https://carbon-ratings.com) has examined the impact of Ethereum’s merge from proof-of-work to proof-of-stake; the results have underlined the significant impact of changing the consensus protocol: The annualized electricity consumption was reduced from 22,900,320 MWh to 2,601 MWh and thus by more than **99.988 %**. Likewise, Ethereum’s carbon footprint was decreased by approximately **99.992 %** (from 11,016,000 to 870 tonnes CO2e). Depicted metaphorically, this corresponds to a reduction in emissions from the height of the Eiffel Tower to a small plastic toy figure, as shown in the figure below. 
+
+![Energy consumption comparison of pre- and post-Merge Ethereum. Displayed is on the left the Eiffel tower with 330 meters height and on the right a plastic toy figure with 4 cm height within a magnifying glass.](energy_consumption_pre_post_merge.png)
 
 Both proof-of-work and proof-of-stake are just mechanisms to decide who gets to add the next block. Swapping proof-of-work for proof-of-stake, where the real-world value invested comes from ETH staked directly in a smart contract, removes the need for miners to burn energy to add to the blockchain. Therefore, the environmental cost of securing the network is drastically reduced.
 
@@ -62,6 +68,7 @@ Read more on [how Ethereum implements proof-of-stake](/developers/docs/consensus
 - [Ethereum Emissions: A Bottom-up Estimate](https://kylemcdonald.github.io/ethereum-emissions/) _ Kyle McDonald_
 - [Ethereum Energy Consumption Index](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/) — *[@InsideTheSim](https://twitter.com/InsideTheSim)*
+- [The Merge - Implications on the Electricity Consumption and Carbon Footprint of the Ethereum Network](https://carbon-ratings.com/eth-report-2022) - _CCRI_
 
 ## Related topics {#related-topics}
 

@@ -146,7 +146,7 @@ As explained before, setting up your own Ethereum node will require running a pa
 
 #### Getting the client software {#getting-the-client}
 
-First, you need to obtain your preferred [execution client](/developers/docs/nodes-and-clients/#execution-clients) and [consensus client](developers/docs/nodes-and-clients/#consensus-clients) software.
+First, you need to obtain your preferred [execution client](/developers/docs/nodes-and-clients/#execution-clients) and [consensus client](/developers/docs/nodes-and-clients/#consensus-clients) software.
 
 You can simply download an executable application or installation package that suits your operating system and architecture. Always verify the signatures and checksums of downloaded packages. Some clients also offer repositories or Docker images for easier installation and updates. All of the clients are open source, so you can also build them from source. This is a more advanced method, but in some cases, it might be required.
 

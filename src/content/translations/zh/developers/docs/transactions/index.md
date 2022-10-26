@@ -12,7 +12,7 @@ lang: zh
 
 ## 什么是交易？ {#whats-a-transaction}
 
-以太坊交易是指由外部持有账户发起的行动，换句话说，是指由人管理而不是智能合约管理的账户。 例如，如果 Bob 发送 Alice 1 ETH，则 Bob 的帐户必须减少 1 ETH，而 Alice 的账户必须增加 1 ETH。 此项操作发生在交易中，会变更状态。
+以太坊交易是指由外部持有账户发起的行动，换句话说，是指由人管理而不是智能合约管理的账户。 例如，如果 Bob 向 Alice 发送 1 ETH，则 Bob 的帐户必须减少 1 ETH，而 Alice 的账户必须增加 1 ETH。 交易会造成状态的改变。
 
 ![显示交易导致状态更改的图表](./tx.png) _图表来自 [Ethereum EVM 插图](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
