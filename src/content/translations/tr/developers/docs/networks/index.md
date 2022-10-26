@@ -76,7 +76,7 @@ Ethereum için bir birleştirme test ağı.
 - [FaucETH](https://fauceth.komputing.org)(Sosyal hesap gerektirmeyen çok zincirli musluk)
 - [Kintsugi musluğu](https://faucet.kintsugi.themerge.dev/)
 
-#### Kovan {#kovan} (Kullanımdan kaldırıldı)
+#### Kovan _(Kullanımdan kaldırıldı)_ {#kovan} 
 
 Not: Kovan test ağı [kullanımdan kaldırılmıştır](https://github.com/ethereum/pm/issues/460) ve artık protokol yükseltmelerini almayacak. Lütfen başvurularınızı Sepolia veya Goerli'ye taşımayı düşünün.
 
@@ -98,7 +98,7 @@ OpenEthereum istemcileri çalıştıranlar için bir yetki ispatı test ağı.
 - [FaucETH](https://fauceth.komputing.org)(Sosyal hesap gerektirmeyen çok zincirli musluk)
 - [Paradigm musluğu](https://faucet.paradigm.xyz/)
 
-#### Rinkeby {#rinkeby}
+#### Rinkeby _(Kullanımdan kaldırıldı)_ {#rinkeby}
 
 Not: Rinkeby test ağı [kullanımdan kaldırılmıştır](https://github.com/ethereum/pm/issues/460) ve artık protokol yükseltmelerini almayacak. Lütfen başvurularınızı Sepolia veya Goerli'ye taşımayı düşünün.
 
@@ -112,7 +112,7 @@ Geth istemcisini çalıştıranlar için bir yetki ispatı test ağı.
 - [Paradigm musluğu](https://faucet.paradigm.xyz/)
 - [Rinkeby musluğu](https://faucet.rinkeby.io/)
 
-#### Ropsten {#ropsten} (Kullanımdan kaldırıldı)
+#### Ropsten _(Kullanımdan kaldırıldı)_ {#ropsten}
 
 Not: Ropsten test ağı [kullanımdan kaldırılmıştır](https://github.com/ethereum/pm/issues/460) ve artık protokol yükseltmelerini almayacak. Lütfen başvurularınızı Sepolia veya Goerli'ye taşımayı düşünün.
 
