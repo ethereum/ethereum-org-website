@@ -97,6 +97,6 @@
   "page-upgrades-bug-bounty-card-subheader-2": "Example",
   "page-upgrades-bug-bounty-card-text": "Attacker can sometimes put a node in a state that causes it to drop one out of every one hundred attestations made by a validator",
   "page-upgrades-bug-bounty-card-text-1": "Attacker can successfully conduct eclipse attacks on nodes with peer-ids with 4 leading zero bytes",
-  "page-upgrades-bug-bounty-card-text-2": "There is a consensus bug between two clients, but it is difficult or impractical for the attacker to trigger the event.",
-  "page-upgrades-bug-bounty-card-text-3": "There is a remote code execution in a majority client, and it is trivial for an attacker to trigger the vulnerability."
+  "page-upgrades-bug-bounty-card-text-2": "Attacker can successfully partition large parts of the network, and it is trivial for an attacker to trigger the vulnerability",
+  "page-upgrades-bug-bounty-card-text-3": "Attacker can successfully conduct remote code execution in a majority client, and it is trivial for an attacker to trigger the vulnerability"
 }

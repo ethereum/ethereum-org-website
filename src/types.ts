@@ -54,6 +54,21 @@ type ForbidOptionalImageProp = ForbidOptional<OptionalImageProp>
 
 export type ImageProp = OptionalImageProp | ForbidOptionalImageProp
 
+export interface LearningTool {
+  name: string
+  description: TranslationKey
+  url: string
+  image: IGatsbyImageData | string
+  alt: TranslationKey
+  background: string
+  subjects: Array<string>
+  locales?: Array<Lang>
+}
+
+export interface LearningToolsCardGridProps {
+  category: Array<LearningTool>
+}
+
 /**
  * Quiz data types
  */
