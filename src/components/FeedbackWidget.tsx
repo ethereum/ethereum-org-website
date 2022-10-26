@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef, useMemo } from "react"
 import { useIntl } from "react-intl"
 import styled from "@emotion/styled"
 import FocusTrap from "focus-trap-react"
-import { Text } from "@chakra-ui/react"
+import { Text, ScaleFade, Box } from "@chakra-ui/react"
 // Component imports
 import Translation from "./Translation"
 import Button from "./Button"
@@ -35,14 +35,11 @@ const FixedDot = styled(NakedButton)<{
     bottom: ${({ bottomOffset }) => 1 + bottomOffset}rem;
     margin-top: 150vh;
   }
-  #expanded-prompt {
-    display: none;
-  }
   @media (min-width: ${({ theme }) => theme.breakpoints.l}) {
     width: ${({ isExpanded }) => (isExpanded ? "15rem" : "3rem")};
     border-radius: ${({ isExpanded }) => (isExpanded ? "50px" : "50%")};
     #expanded-prompt {
-      display: ${({ isExpanded }) => (isExpanded ? "block" : "none")};
+      display: ${({ isExpanded }) => (isExpanded ? "flex" : "none")};
     }
   }
   right: 1rem;
@@ -55,7 +52,9 @@ const FixedDot = styled(NakedButton)<{
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
   }
-  transition: transform 0.2s ease-in-out, width 0.5s, border-radius 0.5s;
+  transition: transform 0.2s ease-in-out, width 0.5s linear,
+    border-radius 0.5s linear;
+  overflow: hidden;
 `
 
 const ModalBackground = styled.div`
@@ -246,17 +245,26 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
         isExpanded={isExpanded}
         id="dot"
       >
-        <StyledFeedbackGlyph />
-        <Text
-          id="expanded-prompt"
-          as="span"
-          ml="10px"
-          color="white"
-          fontWeight="bold"
-          noOfLines={1}
-        >
-          <Translation id="feedback-card-prompt-page" />
-        </Text>
+        <Box position="absolute" left="11px" display="flex">
+          <StyledFeedbackGlyph />
+          {isExpanded && (
+            <ScaleFade in={isExpanded} delay={0.5}>
+              <Text
+                id="expanded-prompt"
+                as="div"
+                ml="10px"
+                color="white"
+                fontWeight="bold"
+                noOfLines={1}
+                whiteSpace="nowrap"
+                height="100%"
+                alignItems="center"
+              >
+                <Translation id="feedback-card-prompt-page" />
+              </Text>
+            </ScaleFade>
+          )}
+        </Box>
       </FixedDot>
       {isOpen && (
         <ModalBackground>
