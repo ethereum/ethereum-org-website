@@ -316,6 +316,8 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
                   marginInline={0}
                 />
               ))}
+                  />
+                )
             </Center>
             <Center>
               {showResults ? (

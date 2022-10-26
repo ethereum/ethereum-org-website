@@ -86,7 +86,7 @@ const QuizRadioGroup: React.FC<IProps> = ({
           }}
         >
           <Circle
-            size={"25px"}
+            size="25px"
             bg={
               showAnswer
                 ? "white"
@@ -101,8 +101,8 @@ const QuizRadioGroup: React.FC<IProps> = ({
           >
             <Text
               m="0"
-              fontWeight={"700"}
-              fontSize={"lg"}
+              fontWeight="700"
+              fontSize="lg"
               color={
                 !showAnswer ? "white" : isSelectedCorrect ? "success" : "error"
               }
@@ -119,7 +119,7 @@ const QuizRadioGroup: React.FC<IProps> = ({
   // Render QuizRadioGroup
   return (
     <Flex {...getRootProps()} direction="column" w="100%">
-      <Text fontWeight={"700"} fontSize={"2xl"} mb={6}>
+      <Text fontWeight="700" fontSize="2xl" mb={6}>
         {prompt}
       </Text>
       <Flex direction="column" gap={4}>

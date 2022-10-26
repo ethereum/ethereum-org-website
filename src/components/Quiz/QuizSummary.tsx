@@ -38,7 +38,7 @@ const QuizSummary: React.FC<IProps> = ({ correctCount, questionCount }) => {
   // Render QuizSummary component
   return (
     <Box w="full" mb={10}>
-      <Text fontWeight={"700"} fontSize="2xl" textAlign="center">
+      <Text fontWeight="700" fontSize="2xl" textAlign="center">
         {isPassingScore ? "You passed the quiz!" : "Your results"}
       </Text>
       <Flex
