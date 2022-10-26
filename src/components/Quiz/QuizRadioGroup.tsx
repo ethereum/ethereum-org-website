@@ -80,8 +80,9 @@ const QuizRadioGroup: React.FC<IProps> = ({
           borderRadius="base"
           _hover={{
             boxShadow: showAnswer ? "none" : "primary",
-            outlineColor: "primary",
-            outline: showAnswer ? "none" : "1px solid",
+            outline: showAnswer
+              ? "none"
+              : "1px solid var(--eth-colors-primary)",
             cursor: showAnswer ? "default" : "pointer",
           }}
         >
