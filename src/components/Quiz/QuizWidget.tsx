@@ -371,7 +371,9 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
                     >
                       Share results
                     </Button>
-                    <Button onClick={initialize}>Try again</Button>
+                    {score < 100 && (
+                      <Button onClick={initialize}>Try again</Button>
+                    )}
                   </>
                 ) : showAnswer ? (
                   <Button onClick={handleContinue}>
