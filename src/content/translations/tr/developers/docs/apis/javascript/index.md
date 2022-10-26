@@ -27,14 +27,14 @@ Bu kütüphaneler, sağlayıcıları kullanarak JSON-RPC, INFURA, Etherscan, Alc
 **Ethers örneği**
 
 ```js
-// A Web3Provider wraps a standard Web3 provider, which is
-// what MetaMask injects as window.ethereum into each page
+// Bir Web3Provider standart bir Web3 sağlayıcısını sarar; 
+// bu, MetaMask'ın her sayfaya window.ethereum olarak enjekte ettiği şeydir.
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-// The MetaMask plugin also allows signing transactions to
-// send ether and pay to change state within the blockchain.
+// MetaMask eklentisi ayrıca, imzalama işlemlerinin Ether göndermesine ve 
+// blok zinciri içindeki durumu değiştirmek için ödeme yapmasına izin verir.
 // Bunun için hesap imzalayana ihtiyacımız var...
-sabit imzalayan = sağlayıcı.getSigner()
+const signer = provider.getSigner()
 ```
 
 **Web3js örneği**
@@ -80,27 +80,27 @@ mnemonic =
   "announce room limb pattern dry unit scale effort smooth jazz weasel alcohol"
 walletMnemonic = Wallet.fromMnemonic(mnemonic)
 
-// ...or from a private key
+// ...veya özel bir anahtardan
 walletPrivateKey = new Wallet(walletMnemonic.privateKey)
 
 walletMnemonic.address === walletPrivateKey.address
 // true
 
-// The address as a Promise per the Signer API
+// Signer API'sine göre bir Söz olarak adres
 walletMnemonic.getAddress()
 // { Promise: '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1' }
 
-// A Wallet address is also available synchronously
+// Bir Cüzdan adresi de eşzamanlı olarak mevcuttur
 walletMnemonic.address
 // '0x71CB05EE1b1F506fF321Da3dac38f25c0c9ce6E1'
 
-// The internal cryptographic components
+// Dahili şifreleme bileşenleri
 walletMnemonic.privateKey
 // '0x1da6847600b0ee25e9ad9a52abbd786dd2502fa4005dd5af9310b7cc7a3b25db'
 walletMnemonic.publicKey
 // '0x04b9e72dfd423bcf95b3801ac93f4392be5ff22143f9980eb78b3a860c4843bfd04829ae61cdba4b3b1978ac5fc64f5cc2f4350e35a108a9c9a92a81200a60cd64'
 
-// The wallet mnemonic
+// cüzdan anımsatıcısı
 walletMnemonic.mnemonic
 // {
 //   locale: 'en',
