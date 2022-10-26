@@ -88,11 +88,11 @@ export interface Answer {
 export interface RawQuestion {
   prompt: string
   answers: Array<Answer>
-  correctAnswerId: string // Answer.id
+  correctAnswerId: string
 }
 
 export interface Question extends RawQuestion {
-  id: string // 0a001 || Hash of prompt??
+  id: string
 }
 
 export interface QuestionBank {
@@ -100,7 +100,6 @@ export interface QuestionBank {
 }
 
 export interface RawQuiz {
-  // id: string // Use "key" from Quizzes as ID instead
   title: string
   questions: Array<string> // TODO: Force to be an array of questionID's
 }
