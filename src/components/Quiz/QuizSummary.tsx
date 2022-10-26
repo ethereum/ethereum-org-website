@@ -1,6 +1,6 @@
 // Import libraries
 import React, { useMemo } from "react"
-import { Box, Flex, Text } from "@chakra-ui/react"
+import { Box, Flex, Text, useMediaQuery } from "@chakra-ui/react"
 import { useIntl } from "react-intl"
 
 // Import utilities
@@ -18,6 +18,7 @@ export interface IProps {
 // Component
 const QuizSummary: React.FC<IProps> = ({ correctCount, questionCount }) => {
   const { locale } = useIntl()
+  const [largerThanMobile] = useMediaQuery("(min-width: 30em)")
 
   // Memoized values
   const ratioCorrect = useMemo<number>(
@@ -37,8 +38,8 @@ const QuizSummary: React.FC<IProps> = ({ correctCount, questionCount }) => {
 
   // Render QuizSummary component
   return (
-    <Box w="full" mb={10}>
-      <Text fontWeight="700" fontSize="2xl" textAlign="center">
+    <Box w="full" mb={10} fontSize={["xl", "2xl"]}>
+      <Text fontWeight="700" textAlign="center">
         {isPassingScore ? "You passed the quiz!" : "Your results"}
       </Text>
       <Flex
@@ -48,43 +49,45 @@ const QuizSummary: React.FC<IProps> = ({ correctCount, questionCount }) => {
         bg="background"
         mx="auto"
         w="fit-content"
+        sx={{
+          "div:not(:last-of-type)": {
+            borderEnd: "1px",
+            borderColor: "disabled",
+          },
+          div: {
+            p: 4,
+            flexDirection: "column",
+            alignItems: "center",
+          },
+        }}
+        overflowX="hidden"
       >
-        <Flex
-          direction="column"
-          p={4}
-          alignItems="center"
-          borderRight="1px"
-          borderColor="disabled"
-        >
-          <Text fontWeight="700" fontSize="2xl" mb={2}>
+        <Flex>
+          <Text fontWeight="700" mb={2}>
             {numberToPercent(ratioCorrect, locale)}
           </Text>
-          <Text fontSize="s" m={0} color="disabled">
+          <Text fontSize="sm" m={0} color="disabled">
             Score
           </Text>
         </Flex>
-        <Flex
-          direction="column"
-          p={4}
-          alignItems="center"
-          borderRight="1px"
-          borderColor="disabled"
-        >
-          <Text fontWeight="700" fontSize="2xl" mb={2}>
+        <Flex>
+          <Text fontWeight="700" mb={2}>
             +{correctCount}
           </Text>
-          <Text fontSize="s" m={0} color="disabled">
+          <Text fontSize="sm" m={0} color="disabled">
             Correct
           </Text>
         </Flex>
-        <Flex direction="column" p={4} alignItems="center">
-          <Text fontWeight="700" fontSize="2xl" mb={2}>
-            {questionCount}
-          </Text>
-          <Text fontSize="s" m={0} color="disabled">
-            Total
-          </Text>
-        </Flex>
+        {largerThanMobile && (
+          <Flex>
+            <Text fontWeight="700" mb={2}>
+              {questionCount}
+            </Text>
+            <Text fontSize="sm" m={0} color="disabled">
+              Total
+            </Text>
+          </Flex>
+        )}
       </Flex>
     </Box>
   )
