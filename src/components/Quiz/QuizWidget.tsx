@@ -253,7 +253,29 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
         pb={{ base: 5, md: 12 }}
         px={{ base: 7, md: 15 }}
         position="relative"
+        isolation="isolate"
       >
+        {showConfetti && (
+          <>
+            <Icon
+              as={StarConfetti}
+              fontSize="184px"
+              position="absolute"
+              zIndex={-1}
+              top={-8}
+              left={0}
+            />
+            <Icon
+              as={StarConfetti}
+              fontSize="184px"
+              position="absolute"
+              zIndex={-1}
+              top={-8}
+              right={0}
+              transform="scaleX(-100%)"
+            />
+          </>
+        )}
         {/* Trophy icon */}
         <Circle
           size="50px"
@@ -281,25 +303,6 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
             color="neutral"
           />
         </Circle>
-        {showConfetti && (
-          <>
-            <Icon
-              as={StarConfetti}
-              fontSize="184px"
-              position="absolute"
-              left={0}
-              top={-8}
-            />
-            <Icon
-              as={StarConfetti}
-              fontSize="184px"
-              position="absolute"
-              right={0}
-              top={-8}
-              transform="scaleX(-100%)"
-            />
-          </>
-        )}
         {quizData ? (
           <>
             <Center>
