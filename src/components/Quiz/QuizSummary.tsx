@@ -36,6 +36,9 @@ const QuizSummary: React.FC<IProps> = ({ correctCount, questionCount }) => {
     [score]
   )
 
+  const valueStyles = { fontWeight: "700", mb: 2 }
+  const labelStyles = { fontSize: "sm", m: 0, color: "disabled" }
+
   // Render QuizSummary component
   return (
     <Box w="full" mb={10} fontSize={["xl", "2xl"]}>
@@ -63,29 +66,17 @@ const QuizSummary: React.FC<IProps> = ({ correctCount, questionCount }) => {
         overflowX="hidden"
       >
         <Flex>
-          <Text fontWeight="700" mb={2}>
-            {numberToPercent(ratioCorrect, locale)}
-          </Text>
-          <Text fontSize="sm" m={0} color="disabled">
-            Score
-          </Text>
+          <Text {...valueStyles}>{numberToPercent(ratioCorrect, locale)}</Text>
+          <Text {...labelStyles}>Score</Text>
         </Flex>
         <Flex>
-          <Text fontWeight="700" mb={2}>
-            +{correctCount}
-          </Text>
-          <Text fontSize="sm" m={0} color="disabled">
-            Correct
-          </Text>
+          <Text {...valueStyles}>+{correctCount}</Text>
+          <Text {...labelStyles}>Correct</Text>
         </Flex>
         {largerThanMobile && (
           <Flex>
-            <Text fontWeight="700" mb={2}>
-              {questionCount}
-            </Text>
-            <Text fontSize="sm" m={0} color="disabled">
-              Total
-            </Text>
+            <Text {...valueStyles}>{questionCount}</Text>
+            <Text {...labelStyles}>Total</Text>
           </Flex>
         )}
       </Flex>
