@@ -871,6 +871,144 @@ const questionBank: QuestionBank = {
     ],
     correctAnswerId: "g004-d",
   },
+  // The Merge
+  h001: {
+    prompt: "The Merge moved Ethereum onto which consensus mechanism?",
+    answers: [
+      {
+        id: "h001-a",
+        label: "Proof-of-work",
+        explanation:
+          "Proof-of-work was the consensus mechanism used before The Merge.",
+      },
+      {
+        id: "h001-b",
+        label: "Proof-of-stake",
+        explanation: "Correct! The Merge moved Ethereum onto proof-of-stake.",
+      },
+      {
+        id: "h001-c",
+        label: "Proof-of-authority",
+        explanation:
+          "Ethereum does not, and has never used proof-of-authority on Ethereum Mainnet.",
+      },
+      {
+        id: "h001-d",
+        label: "All of the above",
+        explanation:
+          "It would not be possible for Ethereum to have all of these consensus mechanisms at once.",
+      },
+    ],
+    correctAnswerId: "h001-b",
+  },
+  h002: {
+    prompt: "The Merge reduced Ethereum’s energy consumption by:",
+    answers: [
+      {
+        id: "h002-a",
+        label: "50%",
+        explanation:
+          "Ethereum’s energy consumption was reduced by 99.95% after The Merge enabled the transition from proof-of-work to proof-of-stake.",
+      },
+      {
+        id: "h002-b",
+        label: "62.5%",
+        explanation:
+          "Ethereum’s energy consumption was reduced by 99.95% after The Merge enabled the transition from proof-of-work to proof-of-stake.",
+      },
+      {
+        id: "h002-c",
+        label: "90%",
+        explanation:
+          "Ethereum’s energy consumption was reduced by 99.95% after The Merge enabled the transition from proof-of-work to proof-of-stake.",
+      },
+      {
+        id: "h002-d",
+        label: "99.95%",
+        explanation:
+          "Ethereum’s energy consumption was reduced by 99.95% after The Merge enabled the transition from proof-of-work to proof-of-stake.",
+      },
+    ],
+    correctAnswerId: "h002-d",
+  },
+  h003: {
+    prompt: "When did The Merge happen?",
+    answers: [
+      {
+        id: "h003-a",
+        label: "September 15th 2022",
+        explanation:
+          "The Merge happened on September 15th 2022 at 06:42:42 AM (UTC).",
+      },
+      {
+        id: "h003-b",
+        label: "December 1st 2021",
+        explanation:
+          "The Merge happened later than this. December 1st 2022 was when the Beacon Chain was launched.",
+      },
+      {
+        id: "h003-c",
+        label: "November 27 2013",
+        explanation:
+          "The Merge happened later than this. November 27 2013 is the day the Ethereum Whitepaper was released.",
+      },
+      {
+        id: "h003-d",
+        label: "October 31st 2008",
+        explanation:
+          "The Merge happened later than this. October 31st is the day the Bitcoin Whitepaper was released.",
+      },
+    ],
+    correctAnswerId: "h003-a",
+  },
+  h004: {
+    prompt: "The Merge meant users had to exchange their ETH for ETH2:",
+    answers: [
+      {
+        id: "h004-a",
+        label: "True",
+        explanation:
+          "ETH did not change at any point before, during, or after The Merge. The idea of ‘upgrading’ ETH to ETH2 was a common tactic by malicious actors to scam users.",
+      },
+      {
+        id: "h004-b",
+        label: "False",
+        explanation:
+          "ETH did not change at any point before, during, or after The Merge. The idea of ‘upgrading’ ETH to ETH2 was a common tactic by malicious actors to scam users.",
+      },
+    ],
+    correctAnswerId: "h004-b",
+  },
+  h005: {
+    prompt: "Ethereum’s consensus layer was formerly known as:",
+    answers: [
+      {
+        id: "h005-a",
+        label: "Proof-of-work",
+        explanation:
+          "Proof-of-work was the consensus mechanism used on Ethereum prior to The Merge.",
+      },
+      {
+        id: "h005-b",
+        label: "Eth2",
+        explanation:
+          "Before being renamed the consensus layer, it was originally called ‘Eth2’.",
+      },
+      {
+        id: "h005-c",
+        label: "Eth1",
+        explanation:
+          "Eth1 was the original name given to the execution layer, not the consensus layer.",
+      },
+      {
+        id: "h005-d",
+        label: "Sharding",
+        explanation:
+          "Sharding is an update on the Ethereum roadmap related to scaling.",
+      },
+    ],
+    correctAnswerId: "h005-b",
+  },
 }
 
 export default questionBank

@@ -221,3 +221,5 @@ Plans for sharding are rapidly evolving, but given the rise and success of layer
 ## Further reading {#further-reading}
 
 <MergeArticleList />
+
+<QuizWidget quizKey="merge" />

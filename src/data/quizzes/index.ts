@@ -31,6 +31,10 @@ const quizzes: RawQuizzes = {
     title: "Layer 2s",
     questions: ["g001", "g002", "g003", "g004"],
   },
+  merge: {
+    title: "The Merge",
+    questions: ["h001", "h002", "h003", "h004", "h005"],
+  },
 }
 
 export default quizzes
