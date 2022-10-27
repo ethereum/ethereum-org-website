@@ -1,5 +1,14 @@
 [
   {
+    "title": "DeSci SF",
+    "to": "http://www.descisf.xyz/",
+    "sponsor": "Weavechain, Bacalhau, Foresight Institute, Bio.xyz, Fleming Protocol, Frontier DAO, Women of Desci",
+    "location": "PianoFight, 144 Taylor St, San Francisco, CA 94102",
+    "description": "DeSci SF 22 is a chance for the community to learn about what we are working on, find ways to collaborate, make new friends, and maintain meaningful connections in the DeSci Ecosystem. We've aligned with ETH SF, SF Blockchain Week, and SF Tech Week to make the most of these exciting events bringing Web3 communities together.",
+    "startDate": "2022-11-03",
+    "endDate": "2022-11-03"
+  },
+  {
     "title": "ETHVietnam",
     "to": "https://www.eth-vietnam.com/",
     "sponsor": null,
