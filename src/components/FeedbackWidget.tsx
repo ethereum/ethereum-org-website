@@ -52,8 +52,8 @@ const FixedDot = styled(NakedButton)<{
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
   }
-  transition: transform 0.2s ease-in-out, width 0.5s linear,
-    border-radius 0.5s linear;
+  transition: transform 0.2s ease-in-out, width 0.25s linear,
+    border-radius 0.25s linear;
   overflow: hidden;
 `
 
@@ -248,15 +248,14 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
         <Box position="absolute" left="11px" display="flex">
           <StyledFeedbackGlyph />
           {isExpanded && (
-            <ScaleFade in={isExpanded} delay={0.5}>
+            <ScaleFade in={isExpanded} delay={0.25}>
               <Text
                 id="expanded-prompt"
                 as="div"
                 ml="10px"
                 color="white"
                 fontWeight="bold"
-                noOfLines={1}
-                whiteSpace="nowrap"
+                noOfLines={2}
                 height="100%"
                 alignItems="center"
               >
