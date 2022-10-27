@@ -42,7 +42,7 @@ mstore(0, 0x60A7)
 
 `mstore` is one of three opcodes the EVM provides for interacting with memory - it loads a word into memory. The other two are `mstore8` which loads a single byte into memory, and `mload` which moves a word from memory to stack.
 
-The EVM also has a separate non-volatile **storage** model that is maintained as part of the system state - this memory is organized into word arrays (as opposed to word-addressable byte arrays in the stack). This storage is where contracts keep persistent data - a contract can only interact with its own storage. Storage is organised in key-value mappings.
+The EVM also has a separate non-volatile **storage** model that is maintained as part of the system state - this memory is organized into word arrays (as opposed to word-addressable byte arrays in the stack). This storage is where contracts keep persistent data - a contract can only interact with its own storage. Storage is organized in key-value mappings.
 
 Although it is not mentioned in this section of the Yellow Paper, it is also useful to know there is a fourth type of memory. **Calldata** is byte-addressable read-only memory used to store the value passed with the `data` parameter of a transaction. The EVM has specific opcodes for managing `calldata`. `calldatasize` returns the size of the data. `calldataload` loads the data into the stack. `calldatacopy` copies the data into memory.
 
