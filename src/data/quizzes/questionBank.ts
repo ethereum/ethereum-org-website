@@ -559,7 +559,6 @@ const questionBank: QuestionBank = {
     ],
     correctAnswerId: "e001-d",
   },
-  // Question ID d003 as well
   e002: {
     prompt: "Following The Merge, ETH must be upgraded to ETH2.",
     answers: [
@@ -747,6 +746,130 @@ const questionBank: QuestionBank = {
       },
     ],
     correctAnswerId: "f005-b",
+  },
+  // Layer 2
+  g001: {
+    prompt: "Layer 2 blockchain networks are for:",
+    answers: [
+      {
+        id: "g001-a",
+        label: "Scaling Ethereum",
+        explanation:
+          "The primary purpose of rollups and other layer 2 solutions is for scaling Ethereum.",
+      },
+      {
+        id: "g001-b",
+        label: "Making payments",
+        explanation:
+          "The primary purpose of rollups and other layer 2 solutions is for scaling Ethereum.",
+      },
+      {
+        id: "g001-c",
+        label: "Buying NFTs",
+        explanation:
+          "The primary purpose of rollups and other layer 2 solutions is for scaling Ethereum.",
+      },
+      {
+        id: "g001-d",
+        label: "Decentralizing Ethereum",
+        explanation:
+          "The primary purpose of rollups and other layer 2 solutions is for scaling Ethereum.",
+      },
+    ],
+    correctAnswerId: "g001-a",
+  },
+  g002: {
+    prompt:
+      "To scale, most alternative layer 1 networks have primarily sacrificed on:",
+    answers: [
+      {
+        id: "g002-a",
+        label: "security",
+        explanation:
+          "Most alternative Layer 1 networks on security and something else in order to scale.",
+      },
+      {
+        id: "g002-b",
+        label: "decentralization",
+        explanation:
+          "Most alternative Layer 1 networks on decentralization and something else in order to scale.",
+      },
+      {
+        id: "g002-c",
+        label: "token price",
+        explanation: "Token price does not have any impact on scaling ability.",
+      },
+      {
+        id: "g002-d",
+        label: "security and decentralization",
+        explanation:
+          "Most alternative layer 1 networks sacrifice on both security and decentralization in order to scale.",
+      },
+    ],
+    correctAnswerId: "g002-d",
+  },
+  g003: {
+    prompt: "Which of the following are not considered to be layer 2?",
+    answers: [
+      {
+        id: "g003-a",
+        label: "Validiums",
+        explanation:
+          "Validiums are not considered to be layer 2 solutions as they do not derive security or data availability from Ethereum",
+      },
+      {
+        id: "g003-b",
+        label: "Sidechains",
+        explanation:
+          "Sidechains are not considered to be layer 2 solutions as they do not derive security or data availability from Ethereum.",
+      },
+      {
+        id: "g003-c",
+        label: "Alternative layer 1 blockchains",
+        explanation:
+          "Alternative layer 1 blockchains are not considered to be layer 2 solutions.",
+      },
+      {
+        id: "g003-d",
+        label: "All of the above",
+        explanation:
+          "Validiums, Sidechains, and alternative layer 1 blockchains are not considered to be layer 2 solutions as they do not derive security or data availability from Ethereum.",
+      },
+    ],
+    correctAnswerId: "g003-d",
+  },
+  g004: {
+    prompt: "Why does Ethereum not have an ‘official’ layer 2?",
+    answers: [
+      {
+        id: "g004-a",
+        label: "Core developers are too busy working on Ethereum",
+        explanation:
+          "There are no plans for an ‘official’ layer 2 on Ethereum as we’ll benefit from a wide-variety of approaches to designing layer 2 solutions.",
+      },
+      {
+        id: "g004-b",
+        label:
+          "As an L1, Ethereum will eventually reach mass scaling on its own",
+        explanation:
+          "There are no plans for an ‘official’ layer 2 on Ethereum as we’ll benefit from a wide-variety of approaches to designing layer 2 solutions.",
+      },
+      {
+        id: "g004-c",
+        label:
+          "Core developers are still debating between optimistic and zk-rollups",
+        explanation:
+          "There are no plans for an ‘official’ layer 2 on Ethereum as we’ll benefit from a wide-variety of approaches to designing layer 2 solutions.",
+      },
+      {
+        id: "g004-d",
+        label:
+          "Ethereum will benefit from a wide-variety of approaches to designing an L2",
+        explanation:
+          "There are no plans for an ‘official’ layer 2 on Ethereum as we’ll benefit from a wide-variety of approaches to designing layer 2 solutions.",
+      },
+    ],
+    correctAnswerId: "g004-d",
   },
 }
 

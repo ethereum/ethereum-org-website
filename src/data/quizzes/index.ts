@@ -27,6 +27,10 @@ const quizzes: RawQuizzes = {
     title: "NFTs",
     questions: ["f001", "f002", "f003", "f004", "f005"],
   },
+  "layer-2": {
+    title: "Layer 2s",
+    questions: ["g001", "g002", "g003", "g004"],
+  },
 }
 
 export default quizzes
