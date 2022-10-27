@@ -4,6 +4,7 @@ const shadows = {
   outline: "0 0 0 4px var(--eth-colors-primaryHover)",
   table:
     "0 14px 66px rgba(0,0,0,.07), 0 10px 17px rgba(0,0,0,.03), 0 4px 7px rgba(0,0,0,.05)",
+  drop: "0 4px 17px 0 var(--eth-colors-blackAlpha-200)",
   tableBox: {
     light:
       "0 14px 66px rgba(0,0,0,.07), 0 10px 17px rgba(0,0,0,.03), 0 4px 7px rgba(0,0,0,.05)",

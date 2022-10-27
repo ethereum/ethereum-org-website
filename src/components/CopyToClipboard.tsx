@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react"
 import ClipboardJS from "clipboard"
-import { Box } from '@chakra-ui/react'
+import { Box } from "@chakra-ui/react"
 
 export interface IProps {
   text: string
