@@ -26,8 +26,6 @@ title="ETH issuance tldr">
 
 </Card>
 
-<!-- How ETH gets issued changed at the time of The Merge, which occurred in September 2022. Previously, new ETH was issued from two sources: the execution layer (i.e. Mainnet) and the consensus layer (i.e. Beacon Chain). Since The Merge, issuance on the execution layer is now zero. Let's break this down. -->
-
 ## Pre-merge (historical) {#pre-merge}
 
 ### Execution layer issuance {#el-issuance-pre-merge}
