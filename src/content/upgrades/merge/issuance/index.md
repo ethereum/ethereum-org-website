@@ -70,7 +70,7 @@ Execution layer issuance since The Merge is zero. Proof-of-work is no longer a v
 
 ### Consensus layer issuance {#cl-issuance-post-merge}
 
-Consensus layers issuance continues today as it did prior to The Merge, with small rewards for validators who attest to and propose blocks. Validator rewards continue to accrue to _validator balances_ that are managed within the consensus layer. These are separate Ethereum accounts to the accounts we're used to on Mainnet, and until the upcoming Shanghai upgrade funds from validator accounts will not be withdrawable/transferrable. This means that although new ETH is still being issued, 100% remains locked from the market until this upgrade occurs. When the Shanghai upgrade is rolled out, this ETH will become available.
+Consensus layer issuance continues today as it did prior to The Merge, with small rewards for validators who attest to and propose blocks. Validator rewards continue to accrue to _validator balances_ that are managed within the consensus layer. These are separate Ethereum accounts to the accounts we're used to on Mainnet, and until the upcoming Shanghai upgrade funds from validator accounts will not be withdrawable/transferrable. This means that although new ETH is still being issued, 100% remains locked from the market until this upgrade occurs. When the Shanghai upgrade is rolled out, this ETH will become available.
 
 When validator withdrawals are enabled, stakers will be incentivized to remove their _earnings/rewards (balance over 32 ETH)_ as these funds are otherwise not contributing to their stake weight (which maxes at 32).
 
