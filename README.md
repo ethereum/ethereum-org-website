@@ -1480,6 +1480,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/issa-me-sush"><img src="https://avatars.githubusercontent.com/u/29679285?v=4?s=100" width="100px;" alt="sushthecoda"/><br /><sub><b>sushthecoda</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=issa-me-sush" title="Documentation">📖</a></td>
       <td align="center"><a href="http://pentestify.io"><img src="https://avatars.githubusercontent.com/u/25382998?v=4?s=100" width="100px;" alt="Lucas Martin Calderon"/><br /><sub><b>Lucas Martin Calderon</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=LucasMartinCalderon" title="Documentation">📖</a></td>
     </tr>
+    <tr>
+      <td align="center"><a href="https://github.com/crypto8893"><img src="https://avatars.githubusercontent.com/u/115051650?v=4?s=100" width="100px;" alt="crypto8893"/><br /><sub><b>crypto8893</b></sub></a><br /><a href="#content-crypto8893" title="Content">🖋</a></td>
+    </tr>
   </tbody>
 </table>
 
