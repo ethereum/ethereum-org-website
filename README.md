@@ -1475,6 +1475,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/jhhornn"><img src="https://avatars.githubusercontent.com/u/66667958?v=4?s=100" width="100px;" alt="Awosise Oluwaseun"/><br /><sub><b>Awosise Oluwaseun</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=jhhornn" title="Documentation">📖</a></td>
       <td align="center"><a href="https://mahmad.netlify.app/"><img src="https://avatars.githubusercontent.com/u/75790323?v=4?s=100" width="100px;" alt="Muhammad Ahmad"/><br /><sub><b>Muhammad Ahmad</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Mahmadabid" title="Code">💻</a></td>
       <td align="center"><a href="http://oliverrr.net"><img src="https://avatars.githubusercontent.com/u/32515201?v=4?s=100" width="100px;" alt="Oliver"/><br /><sub><b>Oliver</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=this-oliver" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/jiOnederfull"><img src="https://avatars.githubusercontent.com/u/48719289?v=4?s=100" width="100px;" alt="Jiwon Park"/><br /><sub><b>Jiwon Park</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=jiOnederfull" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
