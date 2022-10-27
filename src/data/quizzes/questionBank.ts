@@ -123,7 +123,7 @@ const questionBank: QuestionBank = {
           "Ethereum has never went completely offline since it launched.",
       },
     ],
-    correctAnswerId: "a004-d",
+    correctAnswerId: "a004-a",
   },
   a005: {
     prompt: "Ethereum consumes more electricity than:",
