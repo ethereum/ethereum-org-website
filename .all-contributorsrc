@@ -9016,7 +9016,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/52166437?v=4",
       "profile": "https://lawlesx.vercel.app/",
       "contributions": [
-        "doc"
+        "doc",
+        "code"
       ]
     },
     {
@@ -9282,10 +9283,65 @@
       ]
     },
     {
+      "login": "frangio",
+      "name": "Francisco",
+      "avatar_url": "https://avatars.githubusercontent.com/u/481465?v=4",
+      "profile": "https://frang.io",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
       "login": "frankiefab100",
       "name": "Franklin Ohaegbulam",
       "avatar_url": "https://avatars.githubusercontent.com/u/46662771?v=4",
       "profile": "http://frankiefab.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "soos3d",
+      "name": "Soos3D",
+      "avatar_url": "https://avatars.githubusercontent.com/u/99700157?v=4",
+      "profile": "https://github.com/soos3d",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "minhoryang",
+      "name": "Minho Ryang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1270855?v=4",
+      "profile": "http://keybase.io/minhoryang",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "SebastianSupreme",
+      "name": "Sebastian Supreme",
+      "avatar_url": "https://avatars.githubusercontent.com/u/106926150?v=4",
+      "profile": "https://sebastiansupreme.eth.link",
+      "contributions": [
+        "ideas",
+        "translation"
+      ]
+    },
+    {
+      "login": "jhhornn",
+      "name": "Awosise Oluwaseun",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66667958?v=4",
+      "profile": "https://github.com/jhhornn",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Mahmadabid",
+      "name": "Muhammad Ahmad",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75790323?v=4",
+      "profile": "https://mahmad.netlify.app/",
       "contributions": [
         "code"
       ]
