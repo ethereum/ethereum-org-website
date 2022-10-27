@@ -5,63 +5,71 @@ lang: fr
 template: upgrade
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: La chaîne phare ne change rien à la manière actuelle d'utiliser Ethereum.
-summaryPoint2: Elle assurera la coordination du réseau, en servant de couche de consensus.
-summaryPoint3: Elle a introduit la preuve d'enjeu dans l'écosystème Ethereum.
-summaryPoint4: Vous pouvez le connaître sous le nom de « Phase 0 » sur les feuilles de route techniques.
+summaryPoint2: Elle a introduit la preuve d'enjeu dans l'écosystème Ethereum.
+summaryPoint3: Elle a été fusionnée avec la chaîne originale de preuve de travail Ethereum en 2022.
+summaryPoint4: Le protocole de logique de consensus et de bloc des commérages introduits par la chaîne phare sécurisent désormais Ethereum.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
-    La chaîne phare a démarré le 1er décembre à midi UTC. Pour en savoir plus, <a href="https://beaconscan.com/">explorez les données</a>. Si vous voulez aider à valider la chaîne, vous pouvez <a href="/staking/">miser vos ETH</a>.
+  La Chaîne phare a été mise en service le 1er décembre 2020. À l'époque, il s'agissait d'une chaîne séparée du réseau principal Ethereum. Elle utilisait la preuve d'enjeu sans gérer de transactions. La Chaîne phare a été fusionnée avec le réseau principal original Ethereum en 2022 pour reprendre la logique de consensus et la propagation de blocs pour Ethereum. Depuis la fusion, il n'y a eu qu'une seule chaîne Ethereum.
 </UpgradeStatus>
 
-## Que fait la chaîne phare ? {#what-does-the-beacon-chain-do}
+## Qu'est-ce que fut la Chaîne phare ? {#what-is-the-beacon-chain}
 
-La chaîne phare dirigera ou coordonnera le réseau étendu de [fragments](/upgrades/sharding/) et de [validateurs](/staking/). Mais ce ne sera pas comme le [réseau principal Ethereum](/glossary/#mainnet) d'aujourd'hui. Elle ne peut gérer ni les comptes ni les contrats intelligents.
+La Chaîne phare était le nom de la blockchain originale par preuve d'enjeu qui a été lancée en 2020. Elle a été créé pour s'assurer que la logique de consensus par preuve d'enjeu était saine et durable avant de l'activer sur le réseau principal Ethereum. Par conséquent, elle a fonctionné aux côtés de l'Ethereum original de preuve de travail. La désactivation de la preuve de travail au profit de la preuve d'enjeu sur Ethereum nécessite d'indiquer à la Chaîne phare d'accepter les transactions de la chaîne Ethereum d'origine, de les regrouper en blocs, puis les organiser en blockchain en utilisant un mécanisme de consensus basé sur la preuve d'enjeu. Au même moment, les clients originaux d'Ethereum ont arrêté leur minage, la propagation du bloc et la logique de consensus, regroupant tout ceci sur la Chaîne phare. Cet événement était connu sous le nom de [La Fusion](/upgrades/merge/). Une fois la Fusion réalisée, il n'y avait plus deux blockchains mais une chaîne unique Ethereum de preuve d'enjeu.
 
-Le rôle de la chaîne phare évoluera au fil du temps, mais restera un élément fondamental de l'[Ethereum sécurisé, durable et évolutif auquel nous travaillons](/upgrades/vision/).
+## Que fait la Chaîne phare ? {#what-does-the-beacon-chain-do}
 
-## Fonctionnalités de la chaîne phare {#beacon-chain-features}
+La Chaîne phare était le nom donné à un registre de comptes qui a mené et coordonné le réseau des [validateurs Ethereum](/staking/) avant que ces mêmes validateurs ne commencent à valider de véritables transactions Ethereum. Elle ne traitait pas les transactions ou ne gérait pas les interactions entre les contrats intelligents.
+
+Elle a introduit le moteur de consensus (ou « couche de consensus ») qui a pris la place du minage par preuve de travail sur Ethereum et a apporté de nombreuses améliorations significatives.
+
+La Chaîne phare était un composant fondamental pour [la sécurisation, le respect environnemental et l'évolutivité d'Ethereum](/upgrades/vision/).
+
+## Impact de la Chaîne phare {#beacon-chain-features}
 
 ### Présentation de la preuve d'enjeu {#introducing-staking}
 
-La chaîne phare introduira la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/) dans Ethereum. C'est une nouvelle façon pour vous de contribuer à la sécurité d'Ethereum. Pensez-y comme un bien public qui rendra Ethereum plus sain et vous fera gagner plus d'ETH dans le processus. En pratique, vous devrez miser des ETH pour activer le logiciel de validation. En tant que validateur, vous traiterez les transactions et créerez de nouveaux blocs dans la chaîne.
+La Chaîne phare introduit la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/) dans Ethereum. Cela permet de sécuriser Ethereum et pour les validateurs de gagner plus d'ETH au cours du processus. En pratique, le staking implique de miser des ETH pour activer le logiciel de validation. En tant que validateur, vous exécutez le logiciel qui créé et valide de nouveaux blocs dans la chaîne.
 
-Miser des ETH et devenir validateur est plus simple que de [miner](/developers/docs/mining/) (ce qui sécurise actuellement le réseau). Et nous espérons que cela contribuera à améliorer la sécurité d'Ethereum sur le long terme. Plus le nombre de participants sera élevé sur le réseau, plus celui-ci sera décentralisé et à l'abri des attaques.
+La mise en jeu a un objectif similaire au [minage](/developers/docs/mining/), mais diffère à plusieurs titres. Le minage nécessitait d’importantes dépenses initiales sous la forme d’une puissante consommation en matériel et énergie, entraînant des économies d’échelle et promouvant la centralisation. Le minage n'impliquait pas non plus l'obligation de bloquer les actifs en tant que garantie, ce qui limite la capacité du protocole à punir les mauvais acteurs après une attaque.
+
+La transition vers la preuve d'enjeu rend Ethereum nettement plus sûr et décentralisé par comparaison. Plus le nombre de participants sera élevé sur le réseau, plus celui-ci sera décentralisé et à l'abri des attaques.
 
 <InfoBanner emoji=":money_bag:">
-Si vous souhaitez devenir validateur et aider à sécuriser la chaîne phare, <a href="/staking/">familiarisez-vous avec le concept de mise en jeu</a>.
+  Si vous souhaitez devenir validateur et aider à sécuriser Ethereum, <a href="/staking/">familiarisez-vous avec le concept de mise en jeu</a>.
 </InfoBanner>
 
-Il s'agit également d'un changement important pour une autre mise à jour : [les chaînes de fragments](/upgrades/sharding/).
+### Mise en place de la fragmentation {#setting-up-for-sharding}
 
-### Mise en place des chaînes de fragments {#setting-up-for-shard-chains}
+Depuis que la Chaîne phare a fusionné avec le réseau principal Ethereum d'origine, la communauté Ethereum a commencé à chercher à mettre le réseau à niveau.
 
-Après que le réseau principal ait fusionné avec la chaîne phare, la prochaine mise à jour introduira les chaînes de fragments au réseau de preuve de mise à enjeu. Ces "fragments" augmenteront la capacité du réseau et amélioreront la vitesse de transaction en étendant le réseau à 64 blockchains. La chaîne phare est une première étape importante dans l'introduction des chaînes fragment, car elles requièrent des enjeux pour fonctionner en toute sécurité.
+La preuve d’enjeu présente l’avantage d’avoir un registre de tous les producteurs de blocs approuvés à un moment donné, chacun avec l’ETH en jeu. Ce registre ouvre la voie à la possibilité de diviser et de conquérir mais de manière fiable et de séparer les responsabilités spécifiques des réseaux.
 
-Au final, la chaîne phare sera également responsable de l'assignation aléatoire des validateurs pour sécuriser les chaînes fragment. Il s'agit d'un élément clé pour rendre difficile la collusion entre les acteurs et la prise de contrôle d'un fragment. Cela signifie qu'ils ont [ moins d'un milliard de chances](https://medium.com/@chihchengliang/minimum-committee-size-explained-67047111fa20).
+Cette responsabilité contraste avec la preuve de travail, où les mineurs n'ont aucune obligation à l'égard du réseau et pourraient arrêter de miner et fermer définitivement leur logiciel de nœud en un instant et sans répercussion. Il n'y a pas non plus de registre des soumissionnaires de blocs connus et aucun moyen fiable de séparer en toute sécurité les responsabilités des réseaux.
 
-## Relations entre les mises à niveau {#relationship-between-upgrades}
+[En savoir plus sur la fragmentation](/upgrades/sharding/)
 
-Les mises à niveau d'Ethereum sont plus ou moins interdépendantes. Récapitulons donc comment la chaîne phare affecte les autres mises à niveau.
+## Relation entre les mises à niveau {#relationship-between-upgrades}
 
-### Réseau principal et chaîne phare {#mainnet-and-beacon-chain}
+Les mises à niveau Ethereum sont plus ou moins interdépendantes. Récapitulons donc comment la chaîne phare affecte les autres mises à niveau.
 
-La chaîne phare existera d'abord séparément du réseau principal Ethereum que nous utilisons aujourd'hui. Mais elles finiront par être connectées. Le plan est de "fusionner" le réseau principal dans le système de preuve à enjeu qui sera contrôlé et coordonné par la chaîne phare.
+### La Chaîne phare et La Fusion {#merge-and-beacon-chain}
+
+Au début, La Chaîne phare existait séparément du réseau principal Ethereum, mais ils ont été fusionnés en 2022.
 
 <ButtonLink to="/upgrades/merge/">
-    La fusion
+  La Fusion
 </ButtonLink>
 
-### Chaîne phare et chaîne de fragments {#shards-and-beacon-chain}
+### Fragments et chaîne phare {#shards-and-beacon-chain}
 
-Les chaînes de fragments ne peuvent s'ajouter en toute sécurité dans l'écosystème Ethereum que s'il existe un mécanisme de consensus sur la preuve de mise à enjeu. La chaîne phare introduira la mise en jeu, ouvrant la voie à la mise à niveau suivante : la chaîne de fragments.
+La fragmentation ne peut s'ajouter en toute sécurité dans l'écosystème Ethereum que s'il existe un mécanisme de consensus sur la preuve d'enjeu. La Chaîne phare a introduit la notion de mise en jeu qui a « fusionnée » avec le réseau principal et a ouvert la voie à la fragmentation pour favoriser une plus grande évolutivité d'Ethereum.
 
 <ButtonLink to="/upgrades/sharding/">
-    Chaînes de fragments
+  Chaînes de fragments
 </ButtonLink>
 
-<Divider />
+## Complément d'information
 
-## Interagir avec la chaîne phare {#interact-with-beacon-chain}
-
-<BeaconChainActions />
+[En apprendre plus sur les futures mises à niveau d'Ethereum](/upgrades/vision) [En apprendre plus sur la preuve d'enjeu](/develoeprs/docs/consensus-mechanisms/pos)
