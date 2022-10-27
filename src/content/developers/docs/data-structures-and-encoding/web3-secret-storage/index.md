@@ -10,19 +10,19 @@ To make your app work on Ethereum, you can use the web3 object provided by the w
 `web3` contains the `eth` object - web3.eth.
 
 ```js
-var fs = require('fs');
-var recognizer = require('ethereum-keyfile-recognizer');
+var fs = require("fs")
+var recognizer = require("ethereum-keyfile-recognizer")
 
-fs.readFile('keyfile.json', (err, data) => {
-    var json = JSON.parse(data);
-    var result = recognizer(json);
-});
+fs.readFile("keyfile.json", (err, data) => {
+  var json = JSON.parse(data)
+  var result = recognizer(json)
+})
 
 /** result
-*               [ 'web3', 3 ]   web3 (v3) keyfile
-*  [ 'ethersale', undefined ]   Ethersale keyfile
-*                        null     invalid keyfile
-*/
+ *               [ 'web3', 3 ]   web3 (v3) keyfile
+ *  [ 'ethersale', undefined ]   Ethersale keyfile
+ *                        null     invalid keyfile
+ */
 ```
 
 This documents **version 3** of the Web3 Secret Storage Definition.

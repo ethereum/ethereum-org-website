@@ -43,7 +43,7 @@
   "page-upgrades-dive": "Dive into the vision",
   "page-upgrades-dive-desc": "How are we making Ethereum more scalable, secure, and sustainable? All while keeping Ethereum's core ethos of decentralization.",
   "page-upgrades-docking": "The Merge",
-  "page-upgrades-merge-answer-1": "The Merge was when Mainnet switched off proof-of-work and turned on proof-of-stake on 15th September 2022.",
+  "page-upgrades-merge-answer-1": "The Merge was when Ethereum transitioned to proof-of-stake consensus on September 15, 2022. The Beacon Chain merged with Mainnet, officially deprecating proof-of-work on Ethereum, and reduced Ethereum’s energy consumption by ~99.95%.",
   "page-upgrades-merge-btn": "More on The Merge",
   "page-upgrades-merge-desc": "Mainnet Ethereum merged with the proof-of-stake Beacon Chain, marking the end of energy-intensive mining.",
   "page-upgrades-merge-estimate": "The Merge is live",
