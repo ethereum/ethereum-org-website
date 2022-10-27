@@ -190,6 +190,35 @@
         "eventAction": "Clicked",
         "eventName": "Clicked Vouch + Dirk go to link"
       }
+    },
+    {
+      "name": "Avado",
+      "svgPath": "avado-glyph.svg",
+      "hue": 239,
+      "launchDate": "2018-12-01",
+      "url": "https://ava.do/",
+      "audits": [],
+      "minEth": 16,
+      "additionalStake": "10",
+      "additionalStakeUnit": "% RPL",
+      "isFoss": true,
+      "hasBugBounty": false,
+      "isTrustless": true,
+      "isPermissionless": true,
+      "multiClient": true,
+      "easyClientSwitching": true,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "twitter": "https://twitter.com/AvadoCloud",
+        "github": "https://github.com/AvadoDServer",
+        "telegram": "https://t.me/joinchat/SZowfxO-_KgJZcnz"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Avado go to link"
+      }
     }
   ],
   "keyGen": [
@@ -249,6 +278,34 @@
         "eventCategory": "StakingProductCard",
         "eventAction": "Clicked",
         "eventName": "Clicked ethdo go to link"
+      }
+    },
+    {
+      "name": "Avado",
+      "svgPath": "avado-glyph.svg",
+      "hue": 239,
+      "launchDate": "2018-12-01",
+      "url": "https://ava.do/",
+      "audits": [],
+      "minEth": 16,
+      "additionalStake": "10",
+      "additionalStakeUnit": "% RPL",
+      "isFoss": true,
+      "hasBugBounty": false,
+      "isTrustless": true,
+      "isPermissionless": true,
+      "isSelfCustody": true,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "twitter": "https://twitter.com/AvadoCloud",
+        "github": "https://github.com/AvadoDServer",
+        "telegram": "https://t.me/joinchat/SZowfxO-_KgJZcnz"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Avado go to link"
       }
     }
   ],

@@ -1,5 +1,13 @@
 {
+  "page-upgrades-merge-infographic-el": "État Ethereum : transactions, applications, contrats, soldes",
+  "page-upgrades-merge-infographic-alt-text": "Infographie illustrant comment la Chaîne phare fusionne avec la couche d'exécution d'Ethereum pendant la transition de la preuve de travail à la preuve d'enjeu.",
   "page-upgrades-beacon-date": "Expédié !",
-  "page-upgrades-merge-date": "Septembre 2022",
-  "page-upgrades-shards-date": "~2023"
+  "page-upgrades-merge-date": "~T3/T4 2022",
+  "page-upgrades-shards-date": "~2023",
+  "page-upgrades-merge-banner-intro": "La Fusion approche et apporte des changements pour Ethereum.",
+  "page-upgrades-merge-banner-content-outdated": "Certains contenus de cette page ne sont plus à jour. Les mises à jour sont à venir.",
+  "page-upgrades-merge-banner-developers-landing": "Certains documents affichent une bannière indiquant qu'ils ne sont plus à jour. Des prochaines mises à jour sont à venir.",
+  "page-upgrades-post-merge-banner-tutorial-ood": "Ce tutoriel est obsolète depuis la fusion et peut ne pas fonctionner. Veuillez éditer un PR sur GitHub si vous souhaitez contribuer.",
+  "page-upgrades-post-merge-banner-tutorial-light-node-ood": "Ce tutoriel est obsolète depuis la fusion. Les nœuds simplifiés ne fonctionnent pas actuellement avec la preuve d'enjeu, mais devraient être prochainement expédiés.",
+  "page-upgrades-post-merge-banner-governance-ood": "Certains contenus sur cette page sont périmés depuis la fusion. Veuillez éditer un PR sur GitHub si vous souhaitez contribuer."
 }

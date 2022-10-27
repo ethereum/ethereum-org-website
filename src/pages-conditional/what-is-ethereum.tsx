@@ -35,6 +35,7 @@ import AdoptionChart from "../components/AdoptionChart"
 import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
 import Slider, { EmblaSlide } from "../components/Slider"
 import FeedbackCard from "../components/FeedbackCard"
+import QuizWidget from "../components/Quiz/QuizWidget"
 
 import {
   getLocaleForNumberFormat,
@@ -52,6 +53,7 @@ import { GATSBY_FUNCTIONS_PATH } from "../constants"
 import { Context } from "../types"
 import StatErrorMessage from "../components/StatErrorMessage"
 import StatLoadingMessage from "../components/StatLoadingMessage"
+import { Center } from "@chakra-ui/react"
 
 const Slogan = styled.p`
   font-style: normal;
@@ -244,12 +246,12 @@ const WhatIsEthereumPage = ({
 
   const localeForStatsBoxNumbers = getLocaleForNumberFormat(intl.locale as Lang)
 
-  const txCount = useFetchStat<{
-    result: Array<{ unixTimeStamp: string; transactionCount: number }>
-  }>(
+  const txCount = useFetchStat<
+    Array<{ unixTimeStamp: string; transactionCount: number }>
+  >(
     `${GATSBY_FUNCTIONS_PATH}/txs`,
     (response) => {
-      return response.result
+      return response
         .map(({ unixTimeStamp, transactionCount }) => ({
           timestamp: parseInt(unixTimeStamp) * 1000, // unix milliseconds
           value: transactionCount,
@@ -942,6 +944,13 @@ const WhatIsEthereumPage = ({
           </StyledCallout>
         </CardContainer>
       </Content>
+
+      <Content>
+        <Center w="100%">
+          <QuizWidget quizKey="what-is-ethereum" />
+        </Center>
+      </Content>
+
       <Content>
         <FeedbackCard />
       </Content>

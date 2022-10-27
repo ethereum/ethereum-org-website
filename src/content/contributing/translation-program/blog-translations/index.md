@@ -2,7 +2,6 @@
 title: Ethereum Foundation blog translations
 lang: en
 description: Contribute to Ethereum by translating the Ethereum Foundation blog.
-sidebar: true
 ---
 
 # Ethereum Foundation blog translations {#blog-translations}

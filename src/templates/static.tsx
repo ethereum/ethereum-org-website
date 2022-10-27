@@ -47,6 +47,7 @@ import YouTube from "../components/YouTube"
 import TranslationChartImage from "../components/TranslationChartImage"
 import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
+import QuizWidget from "../components/Quiz/QuizWidget"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
@@ -154,6 +155,7 @@ const components = {
   YouTube,
   TranslationChartImage,
   EnergyConsumptionChart,
+  QuizWidget,
 }
 
 const StaticPage = ({
