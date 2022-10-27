@@ -347,7 +347,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
                 />
               )}
             </Center>
-            <Center mt={8}>
+            <Center mt={[8, 12]}>
               <Flex
                 gap={6}
                 flex={{ base: 1, sm: "unset" }}
