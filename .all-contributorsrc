@@ -9345,6 +9345,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "this-oliver",
+      "name": "Oliver",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32515201?v=4",
+      "profile": "http://oliverrr.net",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
