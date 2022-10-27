@@ -216,7 +216,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
     window.open(
       `https://twitter.com/intent/tweet?text=${encodeURI(
         tweet
-      )}&hashtags=${"ethereumknowledge"}`
+      )}&hashtags=${"ethereumquiz"}`
     )
   }
 
