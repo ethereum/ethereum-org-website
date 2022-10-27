@@ -16,8 +16,8 @@ var recognizer = require('ethereum-keyfile-recognizer');
 
 fs.readFile('keyfile.json', (err, data) => {
     var json = JSON.parse(data);
-    ar result = recognizer(json);
-    });
+    var result = recognizer(json);
+});
 
 /** result
 *               [ 'web3', 3 ]   web3 (v3) keyfile
