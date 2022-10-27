@@ -565,5 +565,14 @@
     "description": "PyChain 2022 is an online blockchain developer conference targeting the Python ecosystem and Python devs.",
     "startDate": "2022-11-15",
     "endDate": "2022-11-15"
+  },
+  {
+    "title": "ETHMunich",
+    "to": "https://ethmunich.de/",
+    "sponsor": null,
+    "location": "Munich, Germany",
+    "description": "ETH Munich is a first time Hackathon organised by local web3 community.",
+    "startDate": "2023-08-18",
+    "endDate": "2023-08-20"
   }
 ]
