@@ -12,9 +12,17 @@ If you're looking to fiddle with code before you [set up a local development env
 
 **[Remix](https://remix.ethereum.org/)** - **_Web-based IDE with built in static analysis, and a test blockchain virtual machine_**
 
+- [Docs](https://remix-ide.readthedocs.io/en/latest/#)
+- [Gitter](https://gitter.im/ethereum/remix)
+
 **[ChainIDE](https://chainide.com/)** - **_A cloud-based multi-chain IDE_**
 
-**[Replit (Solidity Starter)](https://replit.com/@replit/Solidity-starter-beta)** - **_A customizable development environment for Ethereum with hot reloading, error checking, and first-class testnet support_**
+- [Docs](https://chainide.gitbook.io/chainide-english-1/)
+- [Help forum](https://forum.chainide.com/)
+
+**[Replit (Solidity Starter - Beta)](https://replit.com/@replit/Solidity-starter-beta)** - **_A customizable development environment for Ethereum with hot reloading, error checking, and first-class testnet support_**
+
+- [Docs](https://docs.replit.com/)
 
 **[Tenderly Sandbox](https://sandbox.tenderly.co/)** - **_A fast prototyping environment where you can write, execute, and debug smart contracts in the browser using Solidity and JavaScript_**
 
