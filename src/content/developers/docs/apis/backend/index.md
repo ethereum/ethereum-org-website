@@ -44,7 +44,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 **Coinbase Cloud Node -** **_Blockchain Infrastructure API._**
 
-- [Node](https://www.coinbase.com/cloud/products/node)
+- [Coinbase Cloud Node](https://www.coinbase.com/cloud/products/node)
 - [Documentation](https://docs.cloud.coinbase.com/node/reference/welcome-to-node)
 
 **DataHub by Figment -** **_Web3 API services with Ethereum Mainnet and testnets._**
