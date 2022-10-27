@@ -2,7 +2,6 @@
 title: Introduction aux ponts blockchain
 description: Les ponts permettent aux utilisateurs de déplacer leurs fonds à travers différentes blockchains
 lang: fr
-sidebar: true
 ---
 
 # Ponts de connexion blockchain {#prerequisites}

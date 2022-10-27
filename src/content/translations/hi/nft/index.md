@@ -4,7 +4,6 @@ description: एथेरियम पर NFT का अवलोकन
 lang: hi
 template: use-cases
 emoji: ":frame_with_picture:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/infrastructure_transparent.png
 alt: होलोग्राम के माध्यम से एक Eth लोगो प्रदर्शित किया जा रहा है।

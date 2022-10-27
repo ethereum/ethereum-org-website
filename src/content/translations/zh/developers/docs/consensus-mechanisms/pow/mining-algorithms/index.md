@@ -2,12 +2,15 @@
 title: 挖矿算法
 description: 以太坊挖矿所用的算法的详细介绍
 lang: zh
-sidebar: true
 ---
 
-以太坊挖矿曾使用过两种算法：Dagger Hashimoto 和 Ethash。 但 Dagger Hashimoto 从未用于以太坊主网，它在主网启动之前便已被 Ethash 所取代。 Dagger Hashimoto 是一种研发性质的挖矿算法，它为 Ethash 打下了基础。 但是作为以太坊发展中的一项重要创新，Dagger Hashimoto 算法也有其历史意义。 在预计将于 2022 年第三至第四季度进行的[以太坊合并](/upgrades/merge/)的过程中，以工作量为证明的挖矿方式将被停用，并被权益证明所取代。
+<InfoBanner emoji=":wave:">
 
-两种挖矿算法的基本思想都是矿工使用暴力计算法尝试找到一个使结果低于特定难度阈值的随机数。 这个难度阈值可以动态调整，从而使区块的产出间隔相对固定。
+工作量证明不再是以太坊共识机制的基础，这意味着挖矿已终结。 取而代之的是，以太坊将由质押了以太币的验证者保护。 你可以立即开始质押以太币。 阅读有关 [The Merge](/upgrades/merge/)、[proof-of-stake](/developers/docs/consensus-mechanisms/pos/) 和 [staking](/staking/) 的更多信息。 此页面仅为满足对历史的兴趣。
+
+</InfoBanner>
+
+以太坊挖矿使用过一种称为 Ethash 的算法。 该算法的基本思想是，矿工尝试使用蛮力计算找到一个随机数输入，使得生成的哈希小于一个取决于计算难度的阈值。 此难度级别可以动态调整，从而允许定期进行区块生产。
 
 ## 前提条件 {#prerequisites}
 
@@ -15,7 +18,7 @@ sidebar: true
 
 ## Dagger Hashimoto {#dagger-hashimoto}
 
-Dagger Hashimoto 是以太坊挖矿的先导研究算法，现已被 Ethash 取代。 它是两种不同算法：Dagger 和 Hashimoto 的融合。
+Dagger Hashimoto 是以太坊挖矿的先导研究算法，现已被 Ethash 取代。 它是两种不同算法：Dagger 和 Hashimoto 的融合。 它只是一个研究实现，并在以太坊主网启动时被 Ethash 取代。
 
 [Dagger](http://www.hashcash.org/papers/dagger.html) 会生成一个[有向无环图](https://en.wikipedia.org/wiki/Directed_acyclic_graph)，将共同取哈希值的内容随机划分。 其核心原理是，每个随机数只取总数据树的一小部分。 挖矿禁止为每个随机数重新计算子树，因此需要总存储树，但若为验证某个随机数的价值，则可以重新计算。 Dagger 的设计目的是替代诸如 Scrypt 的已有算法。后者是“内存困难算法”，但当它们的内存困难程度增加到可信的安全水平时将很难验证。 然而，Dagger 容易受到共享内存硬件加速的影响，因此我们放弃了这种算法，转而采用了其他研究途径。
 
@@ -27,10 +30,10 @@ Dagger-Hashimoto 是在 Dagger 和 Hashimoto 的基础上改进而来的以太�
 
 ## Ethash {#ethash}
 
-Ethash 是以太坊目前使用的挖矿算法。 Ethash 实际上是为 Dagger Hashimoto 算法进行重要更新后的一个特殊版本命名的新名称，但它仍然继承了其前身的基本原理。 以太坊主网仅使用过 Ethash，而 Dagger Hashimoto 只是挖矿算法的一个研发版本，且在以太坊主网开始挖矿之前就已经被取代。
+Ethash 是在现已弃用的工作量证明架构下，实际用于真正的以太坊主网的挖矿算法。 Ethash 实际上是为 Dagger Hashimoto 算法进行重要更新后的一个特殊版本命名的新名称，但它仍然继承了其前身的基本原理。 以太坊主网只使用过 Ethash - Dagger Hashimoto 是挖矿算法的研发版本，在以太坊主网上开始挖矿之前被取代。
 
 [详细了解 Ethash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash)。
 
 ## 延伸阅读 {#further-reading}
 
-_还有哪些社区资源曾为你提供帮助？ 编辑并添加本页面！_
+_还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_

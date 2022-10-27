@@ -2,7 +2,6 @@
 title: Web3 secret storage definition
 description: Formal definition for web3 secret storage
 lang: en
-sidebar: true
 sidebarDepth: 2
 ---
 
