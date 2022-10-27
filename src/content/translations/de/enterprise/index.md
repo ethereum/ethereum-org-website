@@ -79,7 +79,7 @@ Die Erstellung einer Anwendung auf einer Layer-2-Skalierbarkeitslösung [kann he
 Beispiele für L2-Lösungen, die produktionsbereit sind oder es bald sein werden:
 
 - Optimistic Rollups (Daten on-chain, Betrugsnachweise)
-  - [Optimismus](https://optimism.io/)
+  - [Optimism](https://optimism.io/)
   - [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/)
   - [Fuel Network](https://fuel.sh)
 - ZK-Rollups (Daten on-chain, ZK-Gültigkeitsnachweise)
