@@ -6,17 +6,19 @@ import { useIntl } from "react-intl"
 // Import utilities
 import { numberToPercent } from "../../utils/numberToPercent"
 
-// Import constants
-import { PASSING_QUIZ_SCORE } from "../../constants"
-
 // Interfaces
 export interface IProps {
   correctCount: number
+  isPassingScore: boolean
   questionCount: number
 }
 
 // Component
-const QuizSummary: React.FC<IProps> = ({ correctCount, questionCount }) => {
+const QuizSummary: React.FC<IProps> = ({
+  correctCount,
+  isPassingScore,
+  questionCount,
+}) => {
   const { locale } = useIntl()
   const [largerThanMobile] = useMediaQuery("(min-width: 30em)")
 
@@ -29,11 +31,6 @@ const QuizSummary: React.FC<IProps> = ({ correctCount, questionCount }) => {
   const score = useMemo<number>(
     () => Math.floor(ratioCorrect * 100),
     [ratioCorrect]
-  )
-
-  const isPassingScore = useMemo<boolean>(
-    () => score > PASSING_QUIZ_SCORE,
-    [score]
   )
 
   const valueStyles = { fontWeight: "700", mb: 2 }

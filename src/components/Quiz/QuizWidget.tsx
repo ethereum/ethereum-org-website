@@ -333,6 +333,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
               {showResults ? (
                 <QuizSummary
                   correctCount={correctCount}
+                  isPassingScore={isPassingScore}
                   questionCount={quizData.questions.length}
                 />
               ) : (
