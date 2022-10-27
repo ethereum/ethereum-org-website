@@ -28,11 +28,6 @@ const QuizSummary: React.FC<IProps> = ({
     [correctCount, questionCount]
   )
 
-  const score = useMemo<number>(
-    () => Math.floor(ratioCorrect * 100),
-    [ratioCorrect]
-  )
-
   const valueStyles = { fontWeight: "700", mb: 2 }
   const labelStyles = { fontSize: "sm", m: 0, color: "disabled" }
 
