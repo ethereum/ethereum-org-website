@@ -56,7 +56,7 @@ const USER_SELECTION: UserSelectionObject = {
   ka: [],
   kk: [],
   km: [],
-  ko: [5, 6, 7],
+  ko: [],
   lt: [],
   ml: [],
   ms: [],
