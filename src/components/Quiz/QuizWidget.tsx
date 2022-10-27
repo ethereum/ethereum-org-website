@@ -335,6 +335,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
                   correctCount={correctCount}
                   isPassingScore={isPassingScore}
                   questionCount={quizData.questions.length}
+                  ratioCorrect={ratioCorrect}
                 />
               ) : (
                 <QuizRadioGroup

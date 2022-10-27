@@ -11,6 +11,7 @@ export interface IProps {
   correctCount: number
   isPassingScore: boolean
   questionCount: number
+  ratioCorrect: number
 }
 
 // Component
@@ -18,15 +19,10 @@ const QuizSummary: React.FC<IProps> = ({
   correctCount,
   isPassingScore,
   questionCount,
+  ratioCorrect,
 }) => {
   const { locale } = useIntl()
   const [largerThanMobile] = useMediaQuery("(min-width: 30em)")
-
-  // Memoized values
-  const ratioCorrect = useMemo<number>(
-    () => correctCount / questionCount,
-    [correctCount, questionCount]
-  )
 
   const valueStyles = { fontWeight: "700", mb: 2 }
   const labelStyles = { fontSize: "sm", m: 0, color: "disabled" }
