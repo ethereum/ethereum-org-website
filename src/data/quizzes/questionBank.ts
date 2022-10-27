@@ -69,9 +69,9 @@ const questionBank: QuestionBank = {
     answers: [
       {
         id: "a003-a",
-        label: "Stakers",
+        label: "Developers",
         explanation:
-          "Stakers are an important piece in the running of Ethereum, but stakers are duty-bound by the node operators to behave honestly.",
+          "Developers are cruicial to building and improving Ethereum, but they are not the group who keep Ethereum running.",
       },
       {
         id: "a003-b",
@@ -95,31 +95,32 @@ const questionBank: QuestionBank = {
     correctAnswerId: "a003-d",
   },
   a004: {
-    prompt: "What is Ethereum’s uptime?",
+    prompt:
+      "Since Ethereum launched, how many times has the network went offline?",
     answers: [
       {
         id: "a004-a",
-        label: "95%",
+        label: "Never",
         explanation:
-          "Ethereum runs on thousands of servers called nodes. Individual nodes go down, but as long as some nodes are up Ethereum will stay online.",
+          "Ethereum has never went completely offline since it launched.",
       },
       {
         id: "a004-b",
-        label: "99.99%",
+        label: "Once",
         explanation:
-          "Ethereum runs on thousands of servers called nodes. Individual nodes go down, but as long as some nodes are up Ethereum will stay online.",
+          "Ethereum has never went completely offline since it launched.",
       },
       {
         id: "a004-c",
-        label: "99.99999%",
+        label: "Four times",
         explanation:
-          "Ethereum runs on thousands of servers called nodes. Individual nodes go down, but as long as some nodes are up Ethereum will stay online.",
+          "Ethereum has never went completely offline since it launched.",
       },
       {
         id: "a004-d",
-        label: "100%",
+        label: "More than ten times",
         explanation:
-          "Ethereum runs on thousands of servers called nodes. Individual nodes go down, but as long as some nodes are up Ethereum will stay online.",
+          "Ethereum has never went completely offline since it launched.",
       },
     ],
     correctAnswerId: "a004-d",
@@ -333,7 +334,7 @@ const questionBank: QuestionBank = {
   },
   c003: {
     prompt:
-      "Which iteration of the web has native payments built into its infrastructure?",
+      "Which iteration of the web does not rely on third-party payment providers?",
     answers: [
       {
         id: "c003-a",
@@ -389,31 +390,28 @@ const questionBank: QuestionBank = {
   },
   c005: {
     prompt:
-      "You could use a single login across all of the web through the use of:",
+      "You can have a single, censorship-resistant login across all of the web through the use of:",
     answers: [
       {
         id: "c005-a",
-        label: "digital identity",
-        explanation:
-          "Digital identity is a high-level concept, not a specific idea that would allow a single login to be used across the web.",
+        label: "Sign-in with Facebook",
+        explanation: "Sign-in with Facebook is not censorship resistant.",
       },
       {
         id: "c005-b",
-        label: "centralized identity",
-        explanation:
-          "It would not be possible to use a centralized identity provider across all of the web.",
+        label: "Sign-in with Google",
+        explanation: "Sign-in with Google is not censorship resistant.",
       },
       {
         id: "c005-c",
-        label: "proof-of-identity",
+        label: "Sign-in with Ethereum",
         explanation:
-          "Proof-of-identity is a high-level concept, not a specific idea that would allow a single login to be used across the web.",
+          "Sign-in with Ethereum is the only option that is censorship-resistant and usable on any web application.",
       },
       {
         id: "c005-d",
-        label: "decentralized identity",
-        explanation:
-          "Decentralized identity authentication services, such as Sign-in-with-Ethereum, would allow the use of a single login across all of the web.",
+        label: "Sign-in with Twitter",
+        explanation: "Sign-in with Twitter is not censorship resistant.",
       },
     ],
     correctAnswerId: "c005-d",
@@ -450,19 +448,20 @@ const questionBank: QuestionBank = {
     correctAnswerId: "d001-b",
   },
   d002: {
-    prompt: "Which of the following is the best way to store your seed phrase?",
+    prompt:
+      "From the options presented, which is the most secure way to store your seed phrase?",
     answers: [
       {
         id: "d002-a",
         label: "In a photo on your phone",
         explanation:
-          "This is not secure. If this photo is uploaded to cloud storage then a hacker gets this image and gains access to your account.",
+          "This is not the most secure option. If this photo is uploaded to cloud storage then a hacker gets this image and gains access to your account.",
       },
       {
         id: "d002-b",
         label: "In a file on your computer",
         explanation:
-          "This is not secure. A hacker could get this file and gain access to your account.",
+          "This is not the most secure option. Hacker are increasingly looking for cryptocurrency related information on target devices. If a hacker accesses the file with your seed phrase they will gain access to your account.",
       },
       {
         id: "d002-c",
@@ -643,7 +642,7 @@ const questionBank: QuestionBank = {
         id: "f001-c",
         label: "tickets to exclusive events",
         explanation:
-          "NFTs represent a unique digital asset, this is commonly digital artwork, but it isn’t limited to tickets to exclusive events.",
+          "NFTs represent a unique digital asset, this could be a ticketing system, but it isn't limited to tickets.",
       },
       {
         id: "f001-d",
@@ -661,13 +660,13 @@ const questionBank: QuestionBank = {
         id: "f002-a",
         label: "True",
         explanation:
-          "NFTs are non-fungible, even if they represent the same thing, they are still unique digital assets.",
+          "NFTs are non-fungible. This means even if they represent the piece of digital art, they are still uniquely identifible. In the traditional artworld, this might be similar to originals and prints.",
       },
       {
         id: "f002-b",
         label: "False",
         explanation:
-          "NFTs are non-fungible, even if they represent the same thing, they are still unique digital assets.",
+          "NFTs are non-fungible. This means even if they represent the piece of digital art, they are still uniquely identifible. In the traditional artworld, this might be similar to originals and prints.",
       },
     ],
     correctAnswerId: "f002-b",
@@ -722,9 +721,9 @@ const questionBank: QuestionBank = {
       },
       {
         id: "f004-d",
-        label: "ownership economy",
+        label: "doge economy",
         explanation:
-          "NFTs helped create a new economy for creators, not ownership.",
+          "NFTs helped create a new economy for creators, not doges 🐶.",
       },
     ],
     correctAnswerId: "f004-c",
