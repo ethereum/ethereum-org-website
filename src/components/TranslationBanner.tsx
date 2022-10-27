@@ -76,7 +76,7 @@ const TranslationBanner: React.FC<IProps> = ({
             </Heading>
             <Emoji
               text=":globe_showing_asia_australia:"
-              pt={2}
+              fontSize="2xl"
               ml={2}
               mb={{ base: 4, sm: "auto" }}
             />

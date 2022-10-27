@@ -21,8 +21,6 @@ const Emoji = (props: IProps) => {
       sx={{
         "& > img": {
           margin: "0 !important",
-          width: "1.5em !important",
-          height: "1.5em !important",
         },
       }}
       {...props}
