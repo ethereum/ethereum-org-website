@@ -249,8 +249,8 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
         borderRadius="base"
         boxShadow="drop"
         pt={12}
-        pb={{ base: 5, md: 12 }}
-        px={{ base: 7, md: 15 }}
+        pb={[8, 12]}
+        px={[8, 12, 16]}
         position="relative"
         isolation="isolate"
       >
