@@ -113,17 +113,15 @@ Put simply, a public goods market provides a mechanism for private individuals t
 
 Currently, the majority of public goods are created by either governments or private markets—both of which have problems:
 
-1. Governments reduce the free-rider problem by charging people (i.e., the consumers) taxes, which it uses to fund the development of public goods. Put another way, the government returns money belonging to the citizenry to them in the form of public goods. However, this creates a negative externality, namely the cost borne by individuals who don't necessarily consume certain public goods. Moreover, funding of public goods by the public sector suffers from principal-agent problems and, in many cases, governments often lack the flexibility and capacity to provide certain public goods.
+**Governments** reduce the free-rider problem by charging people (i.e., the consumers) taxes, which it uses to fund the development of public goods. Put another way, the government returns money belonging to the citizenry to them in the form of public goods. However, this creates a negative externality, namely the cost borne by individuals who don't necessarily consume certain public goods. Moreover, funding of public goods by the public sector suffers from principal-agent problems and, in many cases, governments often lack the flexibility and capacity to provide certain public goods.
 
-2. Private markets can finance public goods efficiently, but the funding of public goods by the private sector has also runs into issues. For example, unlike govenrnments, private companies find it more difficult to charge consumers of a public good (and, thus, cannot solve the free-rider problem). This discourages the provision of certain public goods by private organization and results in a “market failure” (inefficient allocation of goods and services in a free market). In cases where private markets _do_ provide a public good, the desire to maximize returns on investment may cause negative externalities, such as social media companies monetizing user data.
+**Private markets** can finance public goods efficiently, but the funding of public goods by the private sector has also runs into issues. For example, unlike govenrnments, private companies find it more difficult to charge consumers of a public good (and, thus, cannot solve the free-rider problem). This discourages the provision of certain public goods by private organization and results in a “market failure” (inefficient allocation of goods and services in a free market). In cases where private markets _do_ provide a public good, the desire to maximize returns on investment may cause negative externalities, such as social media companies monetizing user data.
 
 A public goods market creates a third alternative that combines the best qualities of the two approaches while minimizing negative consequences. Here, members of the general public are able to coordinate on allocating capital to areas they believe are neglected but critical to societal wellbeing, prosperity, and progress. This approach is more flexible and efficient compared to traditional government-controlled funding, but also minimizes some of the negative externalities associated with funding public goods via the private sector.
 
-More importantly, a public goods market provides incentives for individuals and groups to work on creating services that benefit society, especially when they stand to make little to no profits. To illustrate this point, consider the free and open-source software (FOSS) industry:
+More importantly, a public goods market provides incentives for individuals and groups to work on creating services that benefit society, especially when they stand to make little to no profits. For example, creators of free and open-source software (FOSS), such as [OpenSSL](https://en.m.wikipedia.org/wiki/OpenSSL), are rarely compensated and must rely on charitable donors to fund their work. This discourages developers working on those projects and further disincentivizes others from working on similar projects that could advance society's good.
 
-Creators of open-source software, such as [OpenSSL](https://en.m.wikipedia.org/wiki/OpenSSL), are rarely compensated and must rely on charitable donors to fund their work. This discourages developers working on those projects and further disincentivizes others from working on similar projects that could advance society's good.
-
-Blockchain-based public goods markets enable anyone to easily contribute to organizations building public goods in a decentralized, trust-minimized, and secure manner. Rewarding builders of public goods may avert the tragedy of commons and lead to better outcomes for society in general.
+Blockchain-based public goods markets enable anyone to easily contribute to organizations building public goods in a decentralized, trust-minimized, and secure manner. Rewarding builders of public goods may avert the tragedy of commons and lead to better outcomes for society in general. A real-world example is the [Protocol Guild](https://protocol-guild.readthedocs.io/en/latest/index.html#), a project that uses blockchain infrastructure to coordinate funding for developers working on improving and maintaining the Ethereum protocol. 
 
 ## How can Ethereum advance public goods funding? {#using-ethereum-to-fund-public-goods}
 
@@ -148,6 +146,20 @@ As a secure and efficient payments network, Ethereum reduces friction for indivi
 Creators of public goods also benefit from Ethereum's capacity to enable seamless transfers of value. Getting funding for a public good on a traditional crowdsourcing platform would involve administrative complexity that could potentially discourage builders.
 
 With Ethereum's public goods markets, receiving money to build a public good is only a matter of providing a [wallet](/wallets/) address. This eliminates the need to complete extensive paperwork or depend on a centralized platform to collect donations.
+
+### Flexible allocation mechanisms {#flexible-allocation-mechanisms}
+ 
+As extremely flexible programs, smart contracts are useful tools for designing optimal mechanisms for allocating capital to public goods. An example is [payment splitter contracts](https://docs.openzeppelin.com/contracts/2.x/api/payment#PaymentSplitter) often used by projects based on the [retroactive public goods funding model](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c).
+
+In retroactive funding, individuals and organizations building public goods receive capital based on value contributed to the ecosystem in the past. This may be more ideal than traditional funding mechanisms that use projects' estimated future value as the basis of allocating capital. As Vitalik Buterin puts it: 
+
+> The core principle behind the concept of retroactive public goods funding is simple: it’s easier to agree on what *was* useful than what *will be* useful. 
+
+Typically, the payment splitter contract can receive payments from donors and automatically split the funds between a group of entities (identified by wallet addresses). Funds are shared based on a predefined allocation formula (typically weighted according to the each individual or organization's previous contributions to the community).
+
+An alternative design is a smart contract that streams donated funds over a fixed period. This particularly solves the problem where an individual or organization receives all the money upfront and loses all incentive to deliver on key project milestones. 
+
+Flexibility also reduces the overhead of coordinating public goods funding on a global scale. For example, parameters of a payment splitter or streaming contract (e.g., amounts donated, allocation weights, allocation timeline, etc.), can be routinely adjusted either by donors, trusted entities, or a group (via [on-chain governance](/dao/#dao-governance)). This reduces bureaucracy, increases autonomy for donors, and improves the efficiency of initiatives aimed at financing public goods.
 
 ### Incentive alignment {#incentive-alignment}
 
@@ -261,9 +273,13 @@ There are many projects using Ethereum infrastructure to create better ways of f
 
 - **[MolochDAO](https://molochdao.com/)** - _Moloch is a simple, open-source DAO framework for funding public goods projects that improve the Ethereum ecosystem._
 
-- **[Ethereum ecosystem grants](/community/grants/)** - _Comprehensive list of organizations and platforms dedicated to funding projects that benefit the wider Ethereum ecosystem._
+- **[Open Grants](https://opengrants.com/explore)** - _Open Grants is a novel funding project designed to provide long-term incentives for developers working on Ethereum R&D. 
 
-## Additional Resources {#additional-resources}
+- **[Protocol Guild](https://protocol-guild.readthedocs.io/en/latest/index.html#)** - _The Protocol Guild is an organization made up of Ethereum core protocol contributors that actively maintains an onchain registry of its membership, and allows ecosystem sponsors to directly fund the work of protocol developers._
+
+- **[Ethereum ecosystem grants](/community/grants/)** - _A comprehensive list of organizations and platforms dedicated to funding projects that benefit the wider Ethereum ecosystem._
+
+## Learning resources {#learning-resources}
 
 ### Articles and books {#articles-and-books}
 
