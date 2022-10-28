@@ -25,6 +25,7 @@ const FixedDot = styled(NakedButton)<{
 }>`
   height: 3rem;
   width: 3rem;
+  padding: 11px;
   border-radius: 50%;
   background-color: ${({ theme }) => theme.colors.primary};
   box-shadow: 0px 4px 4px ${({ theme }) => theme.colors.tableItemBoxShadow};
@@ -139,6 +140,9 @@ const ButtonContainer = styled.div`
 `
 
 const StyledFeedbackGlyph = styled(FeedbackGlyph)`
+  min-width: 26px;
+  min-height: 32px;
+  margin: 11px 0px;
   path {
     fill: ${({ theme }) => theme.colors.white};
   }
@@ -245,14 +249,18 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
         isExpanded={isExpanded}
         id="dot"
       >
-        <Box position="absolute" left="11px" display="flex">
+        <Box
+          position="absolute"
+          width="13.5rem"
+          display="flex"
+          justifyContent="space-evenly"
+        >
           <StyledFeedbackGlyph />
           {isExpanded && (
             <ScaleFade in={isExpanded} delay={0.25}>
               <Text
                 id="expanded-prompt"
                 as="div"
-                ml="10px"
                 color="white"
                 fontWeight="bold"
                 noOfLines={2}
