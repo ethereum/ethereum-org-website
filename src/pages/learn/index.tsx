@@ -872,6 +872,15 @@ export const cardImageFragment = graphql`
 
 export const query = graphql`
   query LearnPage {
+    locales: allLocale {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     heroImage: file(relativePath: { eq: "eth.png" }) {
       childImageSharp {
         gatsbyImageData(

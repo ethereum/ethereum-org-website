@@ -1442,7 +1442,16 @@ export const editorImage = graphql`
 `
 
 export const query = graphql`
-  query DappsPage {
+  query DappsPage($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     doge: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
         gatsbyImageData(

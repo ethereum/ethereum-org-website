@@ -566,7 +566,16 @@ const CommunityPage = ({
 export default CommunityPage
 
 export const query = graphql`
-  query CommunityPage {
+  query CommunityPage($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
         gatsbyImageData(

@@ -521,7 +521,16 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
 export default EthPage
 
 export const query = graphql`
-  query EthPage {
+  query EthPage($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     eth: file(relativePath: { eq: "eth.png" }) {
       childImageSharp {
         gatsbyImageData(

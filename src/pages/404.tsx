@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { graphql, PageProps } from "gatsby"
 
 import Link from "../components/Link"
 import Translation from "../components/Translation"
 
 import { Page, Content } from "../components/SharedStyledComponents"
-import { PageProps } from "gatsby"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -29,3 +29,17 @@ const NotFoundPage = (props: PageProps) => (
 )
 
 export default NotFoundPage
+
+export const query = graphql`
+  query NotFoundPage($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`

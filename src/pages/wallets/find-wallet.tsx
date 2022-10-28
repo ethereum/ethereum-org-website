@@ -565,7 +565,16 @@ const FindWalletPage = ({ data, location }) => {
 export default FindWalletPage
 
 export const query = graphql`
-  {
+  query FindWalletPage($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     hero: file(relativePath: { eq: "wallets/find-wallet-hero.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)

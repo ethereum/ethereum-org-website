@@ -35,24 +35,6 @@ const config: GatsbyConfig = {
     editContentUrl: `https://github.com/ethereum/ethereum-org-website/tree/dev/`,
   },
   plugins: [
-    // i18n support
-    {
-      resolve: `gatsby-theme-i18n`,
-      options: {
-        defaultLang: defaultLanguage,
-        prefixDefault: true,
-        locales: supportedLanguages.length
-          ? supportedLanguages.join(" ")
-          : null,
-        configPath: path.resolve(`./i18n/config.json`),
-      },
-    },
-    {
-      resolve: `gatsby-theme-i18n-react-intl`,
-      options: {
-        defaultLocale: `./src/intl/en.json`,
-      },
-    },
     // Web app manifest
     {
       resolve: `gatsby-plugin-manifest`,
@@ -265,6 +247,36 @@ const config: GatsbyConfig = {
         generateMatchPathRewrites: false,
       },
     },
+    // i18n support
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: path.resolve(`./i18n/locales`),
+        name: `locale`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
+        languages: supportedLanguages,
+        defaultLanguage: defaultLanguage,
+        // if you are using Helmet, you must include siteUrl, and make sure you add http:https
+        siteUrl,
+        // if you are using trailingSlash gatsby config include it here, as well (the default is 'always')
+        trailingSlash: "always",
+        // you can pass any i18next options
+        i18nextOptions: {
+          fallbackLng: defaultLanguage,
+          interpolation: {
+            escapeValue: false, // not needed for react as it escapes by default
+          },
+          keySeparator: false,
+          nsSeparator: false,
+        },
+      },
+    },
+    "gatsby-plugin-webpack-bundle-analyser-v2",
   ],
   // https://www.gatsbyjs.com/docs/reference/release-notes/v2.28/#feature-flags-in-gatsby-configjs
   flags: {

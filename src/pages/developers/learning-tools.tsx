@@ -313,7 +313,16 @@ export const learningToolImage = graphql`
 `
 
 export const query = graphql`
-  query DevelopersLearningToolsPage {
+  query DevelopersLearningToolsPage($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     captureTheEther: file(
       relativePath: { eq: "dev-tools/capturetheether.png" }
     ) {

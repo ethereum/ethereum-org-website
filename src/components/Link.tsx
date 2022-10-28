@@ -54,7 +54,7 @@ const Link: React.FC<IProps> = ({
 
   // TODO: in the next PR we are going to deprecate the `to` prop and just use `href`
   // this is to support the ButtonLink component which uses the `to` prop
-  const to = (toProp || href)!
+  const to = (toProp ?? href)!
 
   const isExternal = url.isExternal(to)
   const isHash = url.isHash(to)

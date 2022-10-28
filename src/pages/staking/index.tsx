@@ -718,7 +718,16 @@ const StakingPage = ({
 export default StakingPage
 
 export const query = graphql`
-  query StakingPageIndex {
+  query StakingPageIndex($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     rhino: file(relativePath: { eq: "upgrades/upgrade_rhino.png" }) {
       childImageSharp {
         gatsbyImageData(

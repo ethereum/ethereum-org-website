@@ -5,8 +5,7 @@
  */
 
 import React from "react"
-import browserLang from "browser-lang"
-import { withPrefix, GatsbyBrowser } from "gatsby"
+import { GatsbyBrowser } from "gatsby"
 
 import Prism from "prism-react-renderer/prism"
 ;(typeof global !== "undefined" ? global : window).Prism = Prism
@@ -17,12 +16,6 @@ import "@formatjs/intl-numberformat/polyfill"
 import "@formatjs/intl-numberformat/locale-data/en"
 
 import Layout from "./src/components/Layout"
-import {
-  supportedLanguages,
-  defaultLanguage,
-  isLang,
-} from "./src/utils/languages"
-import { IS_DEV } from "./src/utils/env"
 import { Context } from "./src/types"
 
 // Default languages included:
@@ -31,38 +24,19 @@ require("prismjs/components/prism-solidity")
 
 // Prevents <Layout/> from unmounting on page transitions
 // https://www.gatsbyjs.com/docs/layout-components/#how-to-prevent-layout-components-from-unmounting
-// @ts-ignore: returning `null` is not accepted by the `GatsbyBrowser` type def.
 export const wrapPageElement: GatsbyBrowser<
   any,
   Context
 >["wrapPageElement"] = ({ element, props }) => {
-  const { location, pageContext } = props
-  const { pathname, search } = location
-  const { originalPath } = pageContext
+  const newElement = React.cloneElement(
+    element, // I18nextProvider
+    element.props,
+    React.cloneElement(
+      element.props.children, // I18nextContext.Provider
+      element.props.children.props,
+      React.createElement(Layout, props, element.props.children.props.children)
+    )
+  )
 
-  const [, pathLocale] = pathname.split("/")
-
-  // client side redirect on paths that don't have a locale in them. Most useful
-  // on dev env where we don't have server redirects
-  if (IS_DEV && !isLang(pathLocale)) {
-    let detected =
-      window.localStorage.getItem("eth-org-language") ||
-      browserLang({
-        languages: supportedLanguages,
-        fallback: defaultLanguage,
-      })
-
-    if (!isLang(detected)) {
-      detected = defaultLanguage
-    }
-
-    const queryParams = search || ""
-    const newUrl = withPrefix(`/${detected}${originalPath}${queryParams}`)
-    window.localStorage.setItem("eth-org-language", detected)
-    window.location.replace(newUrl)
-
-    return null
-  }
-
-  return <Layout {...props}>{element}</Layout>
+  return newElement
 }

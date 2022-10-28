@@ -829,7 +829,16 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
 export default StablecoinsPage
 
 export const query = graphql`
-  query StablecoinsPage {
+  query StablecoinsPage($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     stablecoins: file(relativePath: { eq: "stablecoins/hero.png" }) {
       childImageSharp {
         gatsbyImageData(

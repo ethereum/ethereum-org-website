@@ -290,11 +290,16 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
               isOutdated: false,
               isContentEnglish: true,
               relativePath, // Use English path for template MDX query
-              // gatsby i18n theme context
-              locale: lang,
-              hrefLang: lang,
-              originalPath: langSlug.slice(3),
-              dateFormat: "MM/DD/YYYY",
+              // gatsby i18n plugin
+              i18n: {
+                language: lang,
+                languages: supportedLanguages,
+                defaultLanguage: defaultLanguage,
+                generateDefaultLanguagePage: false,
+                routed: true,
+                originalPath: langSlug.slice(3),
+                path: langSlug,
+              },
             },
           })
         }
@@ -310,11 +315,16 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
         isOutdated: !!node.fields.isOutdated,
         isDefaultLang: language === defaultLanguage,
         relativePath,
-        // gatsby i18n theme context
-        locale: language,
-        hrefLang: language,
-        originalPath: slug.slice(3),
-        dateFormat: "MM/DD/YYYY",
+        // gatsby i18n plugin
+        i18n: {
+          language,
+          languages: supportedLanguages,
+          defaultLanguage: defaultLanguage,
+          generateDefaultLanguagePage: false,
+          routed: true,
+          originalPath: slug.slice(3),
+          path: slug,
+        },
       },
     })
   })
@@ -344,9 +354,7 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
           page,
           lang
         )
-
         const slug = `/${lang}${originalPath}`
-
         createPage<Context>({
           path: slug,
           component: path.resolve(`src/pages-conditional/${page}.tsx`),
@@ -355,11 +363,16 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
             slug,
             isContentEnglish,
             isOutdated,
-            // gatsby i18n theme context
-            locale: lang,
-            hrefLang: lang,
-            originalPath,
-            dateFormat: "MM/DD/YYYY",
+            // gatsby i18n plugin
+            i18n: {
+              language: lang,
+              languages: supportedLanguages,
+              defaultLanguage: defaultLanguage,
+              generateDefaultLanguagePage: false,
+              routed: true,
+              originalPath,
+              path: slug,
+            },
           },
         })
       }
@@ -378,42 +391,47 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
 
   const isDefaultLang = page.path.startsWith(`/${defaultLanguage}`)
 
-  if (isDefaultLang) {
-    const path = page.path.slice(3)
+  // if (isDefaultLang) {
+  //   const path = page.path.slice(3)
 
-    if (IS_DEV) {
-      // create routes without the lang prefix e.g. `/{path}` as our i18n plugin
-      // only creates `/{lang}/{path}` routes. This is useful on dev env to avoid
-      // getting a 404 since we don't have server side redirects
-      createPage({ ...page, path })
-    }
+  //   if (IS_DEV) {
+  //     // create routes without the lang prefix e.g. `/{path}` as our i18n plugin
+  //     // only creates `/{lang}/{path}` routes. This is useful on dev env to avoid
+  //     // getting a 404 since we don't have server side redirects
+  //     createPage({ ...page, path })
+  //   }
 
-    if (!IS_DEV && !path.match(/^\/404(\/|.html)$/)) {
-      // on prod, indicate our servers to redirect the root paths to the
-      // `/{defaultLang}/{path}`
-      createRedirect({
-        ...commonRedirectProps,
-        fromPath: path,
-        toPath: page.path,
-      })
-    }
-  }
+  //   if (!IS_DEV && !path.match(/^\/404(\/|.html)$/)) {
+  //     // on prod, indicate our servers to redirect the root paths to the
+  //     // `/{defaultLang}/{path}`
+  //     createRedirect({
+  //       ...commonRedirectProps,
+  //       fromPath: path,
+  //       toPath: page.path,
+  //     })
+  //   }
+  // }
 
   if (!page.context) {
     return
   }
 
-  const isTranslated = page.context.locale !== defaultLanguage
-  const hasNoContext = page.context.isOutdated === undefined
+  const isMdxPage = page.context.isOutdated !== undefined
 
-  if (isTranslated && hasNoContext) {
+  if (!isMdxPage) {
+    const isDefaultLang = page.context.language === defaultLanguage
+
     const { isOutdated, isContentEnglish } = await checkIsPageOutdated(
-      page.context.originalPath,
-      page.context.locale
+      page.context.i18n.originalPath,
+      page.context.language
     )
+
+    const path = isDefaultLang ? `/${defaultLanguage}${page.path}` : page.path
+
     deletePage(page)
     createPage<Context>({
       ...page,
+      path,
       context: {
         ...page.context,
         isOutdated,

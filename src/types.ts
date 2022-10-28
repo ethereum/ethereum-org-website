@@ -14,6 +14,17 @@ export type Intl = {
   redirect: boolean
 }
 
+export type I18NextContext = {
+  language: string
+  routed: boolean
+  languages: string[]
+  defaultLanguage: string
+  generateDefaultLanguagePage: boolean
+  originalPath: string
+  path: string
+  siteUrl?: string
+}
+
 export type Context = {
   slug: string
   relativePath?: string
@@ -23,12 +34,7 @@ export type Context = {
   isLegal?: boolean
   isDefaultLang?: boolean
   isContentEnglish?: boolean
-
-  // gatsby i18n theme context
-  locale: Lang
-  hrefLang: string
-  originalPath: string
-  dateFormat: string
+  i18n: I18NextContext
 }
 
 export interface DeveloperDocsLink {

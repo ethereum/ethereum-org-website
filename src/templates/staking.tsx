@@ -456,7 +456,16 @@ const StakingPage = ({
 }
 
 export const stakingPageQuery = graphql`
-  query StakingPage($relativePath: String) {
+  query StakingPage($language: String!, $relativePath: String) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     pageData: mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug

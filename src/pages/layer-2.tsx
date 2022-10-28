@@ -923,7 +923,16 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
 export default Layer2Page
 
 export const query = graphql`
-  query Layer2Page {
+  query Layer2Page($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     dao: file(relativePath: { eq: "use-cases/dao-2.png" }) {
       childImageSharp {
         gatsbyImageData(

@@ -466,7 +466,16 @@ const TutorialsPage = ({
 export default TutorialsPage
 
 export const query = graphql`
-  query DevelopersTutorialsPage {
+  query DevelopersTutorialsPage($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     allTutorials: allMdx(
       filter: { slug: { regex: "/tutorials/" } }
       sort: { fields: frontmatter___published, order: DESC }

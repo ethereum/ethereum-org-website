@@ -500,7 +500,16 @@ export const sourceImage = graphql`
 `
 
 export const query = graphql`
-  query DepositContractPage {
+  query DepositContractPage($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     consensys: file(relativePath: { eq: "projects/consensys.png" }) {
       ...sourceImage
     }

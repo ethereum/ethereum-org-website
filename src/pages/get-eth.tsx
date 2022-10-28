@@ -446,7 +446,16 @@ export const listItemImage = graphql`
 `
 
 export const query = graphql`
-  query GetEthPage {
+  query GetEthPage($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     hero: file(relativePath: { eq: "get-eth.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)

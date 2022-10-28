@@ -955,7 +955,16 @@ export const calloutImage = graphql`
 `
 
 export const query = graphql`
-  query WhatIsEthereum {
+  query WhatIsEthereum($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     hero: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)

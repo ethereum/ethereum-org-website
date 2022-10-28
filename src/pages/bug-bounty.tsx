@@ -859,7 +859,16 @@ export const ClientLogosSmall = graphql`
 `
 
 export const query = graphql`
-  query BugBountyPage {
+  query BugBountyPage($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     consensusBountyHunters: allConsensusBountyHuntersCsv(
       sort: { order: DESC, fields: score }
     ) {

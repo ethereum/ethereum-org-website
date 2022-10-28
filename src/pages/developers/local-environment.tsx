@@ -614,7 +614,16 @@ export const devtoolImage = graphql`
 `
 
 export const query = graphql`
-  query DevelopersLocalEnvironmentPage {
+  query DevelopersLocalEnvironmentPage($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     hero: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
         gatsbyImageData(

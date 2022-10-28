@@ -413,7 +413,16 @@ const UpgradePage = ({
 }
 
 export const upgradePageQuery = graphql`
-  query UpgradePage($relativePath: String) {
+  query UpgradePage($language: String!, $relativePath: String) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug

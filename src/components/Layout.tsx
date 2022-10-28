@@ -90,7 +90,7 @@ const Layout: React.FC<IProps> = ({
 
   const [isZenMode, setIsZenMode] = useState<boolean>(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState<boolean>(false)
-  const locale = pageContext.locale
+  const locale = pageContext.i18n.language
 
   // Exit Zen Mode on 'esc' click
   useKeyPress(`Escape`, () => handleZenModeChange(false))
@@ -145,12 +145,12 @@ const Layout: React.FC<IProps> = ({
           shouldShow={shouldShowTranslationBanner}
           isPageContentEnglish={isPageContentEnglish}
           isPageRightToLeft={isPageRightToLeft}
-          originalPagePath={pageContext.originalPath!}
+          originalPagePath={pageContext.i18n.originalPath || ""}
         />
         <TranslationBannerLegal
           shouldShow={isLegal}
           isPageRightToLeft={isPageRightToLeft}
-          originalPagePath={pageContext.originalPath!}
+          originalPagePath={pageContext.i18n.originalPath || ""}
         />
         <ContentContainer>
           <VisuallyHidden isHidden={isZenMode}>

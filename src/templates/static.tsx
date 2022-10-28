@@ -237,7 +237,16 @@ const StaticPage = ({
 }
 
 export const staticPageQuery = graphql`
-  query StaticPage($relativePath: String) {
+  query StaticPage($language: String!, $relativePath: String) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     siteData: site {
       siteMetadata {
         editContentUrl

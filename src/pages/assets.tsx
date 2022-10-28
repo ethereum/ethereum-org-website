@@ -493,7 +493,16 @@ export const assetItem = graphql`
 `
 
 export const query = graphql`
-  query AssetsPage {
+  query AssetsPage($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     ethDiamondBlackHero: file(
       relativePath: { eq: "assets/eth-diamond-black.png" }
     ) {

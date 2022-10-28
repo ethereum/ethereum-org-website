@@ -555,7 +555,16 @@ const DevelopersPage = ({
 export default DevelopersPage
 
 export const query = graphql`
-  query DevelopersIndexPage {
+  query DevelopersIndexPage($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     ednHero: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
         gatsbyImageData(
