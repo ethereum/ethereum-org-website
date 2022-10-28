@@ -69,6 +69,12 @@ Posts published on Mirror are permanently stored on Arweave, a decentralized sto
 
 Users use the platform's native ERC-20 token $MIND to pay for items. Users can also earn $MIND tokens by publishing popular content, contributing to the ecosystem, and referring others to the platform.
 
+### Evrylife {#Evrylife}
+
+[Evrylife] (https://docs.evrylife.org/evrylife-foundation-wiki-docs/) is a new web 3 social platform being built on the Ethereum Virtual Machine and will function as a multi chain community goverened decentralized social media platform.
+
+Evrylife is being designed to become a community-governed application that functions as a web 3 social explorer. It is designed to help store, organize, find, and share content on web 3. Users of Evrylife maintain full ownership and control over their content and account data.
+
 ## Web2 social networks on Ethereum {#web2-social-networks-and-ethereum}
 
 [Web3](/web3/) native social platforms aren't the only ones trying to incorporate blockchain technology into social media. Many centralized platforms are also planning to integrate Ethereum into their infrastructure:
