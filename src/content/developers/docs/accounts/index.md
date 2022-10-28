@@ -70,19 +70,27 @@ Example:
 
 The public key is generated from the private key using the [Elliptic Curve Digital Signature Algorithm](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). You get a public address for your account by taking the last 20 bytes of the Keccak-256 hash of the public key and adding `0x` to the beginning.
 
-Here's an example of creating an account in the console using GETH's `personal_newAccount`
+Here's an example of creating an account in the console using Geth:
 
-```go
-> personal.newAccount()
-Passphrase:
-Repeat passphrase:
-"0x5e97870f263700f46aa00d967821199b9bc5a120"
+```sh
+> ./geth account new
 
-> personal.newAccount("h4ck3r")
-"0x3d80b31a78c30fc628f20b2c89d7ddbf6e53cedc"
+Your new account is locked with a password. Please give a password. Do not forget this password.
+Password: <type password>
+Repeat password: <type password>
+
+Your new key was generated
+
+Public address of the key: 0x5e97870f263700f46aa00d967821199b9bc5a120
+Path of the secret key file: /home/.ethereum/keystore/UTC-2022-10-28T13-23-25.221892533Z--f5e97870f263700f46aa00d967821199b9bc5a120
+
+- You can share your public address with anyone. Others need it to interact with you.
+- You must NEVER share the secret key with anyone! The key controls access to your funds!
+- You must BACKUP your key file! Without the key, its impossible to access account funds!
+- You must REMEMBER your password! Without the password, its impossible to decrypt the key!
 ```
 
-[GETH documentation](https://geth.ethereum.org/docs)
+[Geth documentation](https://geth.ethereum.org/docs)
 
 It is possible to derive new public keys from your private key but you cannot derive a private key from public keys. This means it's vital to keep a private key safe and, as the name suggests, **PRIVATE**.
 
