@@ -70,24 +70,19 @@ Example:
 
 The public key is generated from the private key using the [Elliptic Curve Digital Signature Algorithm](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). You get a public address for your account by taking the last 20 bytes of the Keccak-256 hash of the public key and adding `0x` to the beginning.
 
-Here's an example of creating an account in the console using Geth:
+The following code snippet shows how to use a signing tool called [Clef](https://geth.ethereum.org/docs/clef/introduction) to generate a new account. Clef is an account management and signing tool that comes bundled with the Ethereum client, [Geth](https://geth.ethereum.org/). The `clef newaccount` command creates a new key pair and saves them in an encrypted keystore.
 
-```sh
-> ./geth account new
+```
+> clef newaccount --keystore <path>
 
-Your new account is locked with a password. Please give a password. Do not forget this password.
-Password: <type password>
-Repeat password: <type password>
+Please enter a password for the new account to be created:
+> <password>
 
-Your new key was generated
-
-Public address of the key: 0x5e97870f263700f46aa00d967821199b9bc5a120
-Path of the secret key file: /home/.ethereum/keystore/UTC-2022-10-28T13-23-25.221892533Z--f5e97870f263700f46aa00d967821199b9bc5a120
-
-- You can share your public address with anyone. Others need it to interact with you.
-- You must NEVER share the secret key with anyone! The key controls access to your funds!
-- You must BACKUP your key file! Without the key, its impossible to access account funds!
-- You must REMEMBER your password! Without the password, its impossible to decrypt the key!
+------------
+INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please backup your key file      path=/home/.ethereum/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please remember your password!
+Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
 [Geth documentation](https://geth.ethereum.org/docs)
