@@ -4,7 +4,6 @@ description: مروری بر نحوه آغاز به کار سهام‌گذاری
 lang: fa
 template: staking
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../../assets/staking/leslie-pool.png
 alt: لسلی اسب آبی در حال شنا در استخر.
 sidebarDepth: 2

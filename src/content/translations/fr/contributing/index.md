@@ -16,7 +16,7 @@ Le site ethereum.org, comme Ethereum plus largement, est un projet open source. 
 
 - [Travailler sur un ticket ouvert](https://github.com/ethereum/ethereum-org-website/issues) _– Travail que nous avons identifié comme devant être fait_
 - [Rejoindre le programme de traduction](/contributing/translation-program/) _– Aidez-nous à traduire ethereum.org dans les autres langues_
-- [Ajouter un article communautaire](/contributing/content-resources/) _– Ajoutez un article utile à la page adéquate_
+- [Ajouter un article de la Communauté](/contributing/content-resources/) _– Ajoutez un article utile à la page adéquate_
 - [Ajouter un produit/service](/contributing/adding-products/) _– Ajoutez une application décentralisée (DApp) ou un portefeuille à la page adéquate_
 - [Ajouter des outils de développement](/contributing/adding-developer-tools/) _– Ajoutez un outil de développement à la page adéquate_
 - [Ajouter un échange](/contributing/adding-exchanges/) _– Ajoutez une plateforme d'échange à notre [outil de recherche d'échange](/get-eth/#country-picker)_
@@ -72,7 +72,7 @@ Si votre contribution est fusionnée au contenu d'ethereum.org, nous vous remett
 ### Comment l'obtenir {#how-to-claim}
 
 1. Rejoignez notre [serveur Discord](https://discord.gg/E8dET2ux8y).
-2. Collez un lien vers votre contribution dans le salon `#🥇 | poaps`.
+2. Collez un lien vers votre contribution dans le `# 🥇poaps`[canal](https://discord.com/channels/714888181740339261/804005643211898911).
 3. Attendez qu'un membre de notre équipe vous envoie un lien vers votre POAP.
 4. Récupérez votre POAP !
 

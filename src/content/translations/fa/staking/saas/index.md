@@ -4,7 +4,6 @@ description: مروری بر نحوه شروع سهام‌گذاری مشترک 
 lang: fa
 template: staking
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../../assets/staking/leslie-saas.png
 alt: لسلی اسب آبی شناور در میان ابرها.
 sidebarDepth: 2

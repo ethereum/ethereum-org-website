@@ -9016,7 +9016,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/52166437?v=4",
       "profile": "https://lawlesx.vercel.app/",
       "contributions": [
-        "doc"
+        "doc",
+        "code"
       ]
     },
     {
@@ -9323,7 +9324,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/106926150?v=4",
       "profile": "https://sebastiansupreme.eth.link",
       "contributions": [
-        "ideas"
+        "ideas",
+        "translation"
       ]
     },
     {
@@ -9333,6 +9335,69 @@
       "profile": "https://github.com/jhhornn",
       "contributions": [
         "doc"
+      ]
+    },
+    {
+      "login": "Mahmadabid",
+      "name": "Muhammad Ahmad",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75790323?v=4",
+      "profile": "https://mahmad.netlify.app/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "this-oliver",
+      "name": "Oliver",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32515201?v=4",
+      "profile": "http://oliverrr.net",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "jiOnederfull",
+      "name": "Jiwon Park",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48719289?v=4",
+      "profile": "https://github.com/jiOnederfull",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "ZandtLavish",
+      "name": "Zandt Lavish",
+      "avatar_url": "https://avatars.githubusercontent.com/u/99204971?v=4",
+      "profile": "https://github.com/ZandtLavish",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "issa-me-sush",
+      "name": "sushthecoda",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29679285?v=4",
+      "profile": "https://github.com/issa-me-sush",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "LucasMartinCalderon",
+      "name": "Lucas Martin Calderon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25382998?v=4",
+      "profile": "http://pentestify.io",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "crypto8893",
+      "name": "crypto8893",
+      "avatar_url": "https://avatars.githubusercontent.com/u/115051650?v=4",
+      "profile": "https://github.com/crypto8893",
+      "contributions": [
+        "content"
       ]
     }
   ],

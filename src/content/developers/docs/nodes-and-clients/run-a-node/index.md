@@ -119,7 +119,7 @@ The easiest option for running a node with your own hardware is using plug-and-p
 
 An easy and cheap way of running an Ethereum node is to use a single board computer, even with an ARM architecture like the Raspberry Pi. [Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) provides easy-to-run images of multiple execution and consensus client for Raspberry Pi and other ARM boards.
 
-Small, affordable and efficient devices like these are ideal for running a node at home but keep in mind their limited performence.
+Small, affordable and efficient devices like these are ideal for running a node at home but keep in mind their limited performance.
 
 ## Spinning up the node {#spinning-up-node}
 

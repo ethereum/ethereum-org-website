@@ -2,7 +2,6 @@
 title: ブロックチェーンブリッジの紹介
 description: 異なるブロックチェーン間の資金移動を可能にするブリッジ
 lang: ja
-sidebar: true
 ---
 
 # ブロックチェーンブリッジ {#prerequisites}
