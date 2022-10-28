@@ -8,9 +8,6 @@ import { Box, Center, Flex, Heading, Image, Text } from "@chakra-ui/react"
 import ButtonLink from "./ButtonLink"
 import Link from "./Link"
 
-// Utils
-import { translateMessageId } from "../utils/translations"
-
 export interface IProps {
   children?: React.ReactNode
   url?: string

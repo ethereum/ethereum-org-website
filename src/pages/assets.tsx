@@ -133,18 +133,18 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
         </Row>
         <Row>
           <AssetDownload
-            title={translateMessageId("page-assets-hero-panda", intl)}
-            alt={translateMessageId("page-assets-hero-panda", intl)}
+            title={t("page-assets-hero-panda")}
+            alt={t("page-assets-hero-panda")}
             image={data.heroPanda}
           />
           <AssetDownload
-            title={translateMessageId("page-assets-merge-panda", intl)}
-            alt={translateMessageId("page-assets-merge-panda", intl)}
+            title={t("page-assets-merge-panda")}
+            alt={t("page-assets-merge-panda")}
             image={data.mergePanda}
           />
           <AssetDownload
-            title={translateMessageId("page-assets-merge-panda-svg", intl)}
-            alt={translateMessageId("page-assets-merge-panda-svg", intl)}
+            title={t("page-assets-merge-panda-svg")}
+            alt={t("page-assets-merge-panda-svg")}
             svg={MergePandaSvg}
           />
         </Row>

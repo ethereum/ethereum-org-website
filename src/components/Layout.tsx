@@ -158,36 +158,27 @@ const Layout: React.FC<IProps> = ({
             {shouldShowSideNav && <SideNavMobile path={path} />}
           </VisuallyHidden>
           <SkipLinkAnchor id="main-content" />
-          {isMergePage && <Centered id="confetti-easter-egg" />}
           <MainContainer>
             {shouldShowSideNav && (
               <VisuallyHidden isHidden={isZenMode}>
-                <Nav path={path} />
-                {shouldShowSideNav && <SideNavMobile path={path} />}
+                <SideNav path={path} />
               </VisuallyHidden>
-              <SkipLinkAnchor id="main-content" />
-              {isMergePage && <Centered id="confetti-easter-egg" />}
-              <MainContainer>
-                {shouldShowSideNav && (
-                  <VisuallyHidden isHidden={isZenMode}>
-                    <SideNav path={path} />
-                  </VisuallyHidden>
-                )}
-                <MainContent>
-                  <ZenModeContext.Provider
-                    value={{ isZenMode, handleZenModeChange }}
-                  >
-                    <Main>{children}</Main>
-                  </ZenModeContext.Provider>
-                </MainContent>
-              </MainContainer>
-              <VisuallyHidden isHidden={isZenMode}>
-                <Footer />
-              </VisuallyHidden>
-              <FeedbackWidget />
-            </ContentContainer>
-          </ThemeProvider>
-        </ApolloProvider>
+            )}
+            <MainContent>
+              <ZenModeContext.Provider
+                value={{ isZenMode, handleZenModeChange }}
+              >
+                <Main>{children}</Main>
+              </ZenModeContext.Provider>
+            </MainContent>
+          </MainContainer>
+          <VisuallyHidden isHidden={isZenMode}>
+            <Footer />
+          </VisuallyHidden>
+          <FeedbackWidget />
+        </ContentContainer>
+      </ThemeProvider>
+    </ApolloProvider>
   )
 }
 
