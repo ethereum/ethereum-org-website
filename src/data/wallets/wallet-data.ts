@@ -347,7 +347,7 @@ const walletData: WalletData[] = [
     name: "Portis",
     image_name: "portis",
     brand_color: "#ffffff",
-    url: "https://portis.io",
+    url: "https://www.portis.io",
     wallet_live_date: "Nov, 2018",
     active_development_team: true,
     languages_supported: ["en"],
