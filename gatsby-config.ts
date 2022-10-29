@@ -276,7 +276,6 @@ const config: GatsbyConfig = {
         },
       },
     },
-    "gatsby-plugin-webpack-bundle-analyser-v2",
   ],
   // https://www.gatsbyjs.com/docs/reference/release-notes/v2.28/#feature-flags-in-gatsby-configjs
   flags: {
