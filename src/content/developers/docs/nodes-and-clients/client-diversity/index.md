@@ -104,7 +104,7 @@ Several dashboards give real-time client diversity statistics for the execution 
 - [Importance of client diversity](https://our.status.im/the-importance-of-client-diversity/)
 - [List of Ethereum node services](https://ethereumnodes.com/)
 - ["Five Whys" of the client diversity problem](https://notes.ethereum.org/@afhGjrKfTKmksTOtqhB9RQ/BJGj7uh08)
-- [Ethereum Diversity and How to Solve For It (Youtube)](https://www.youtube.com/watch?v=1hZgCaiqwfU)
+- [Ethereum Diversity and How to Solve For It (YouTube)](https://www.youtube.com/watch?v=1hZgCaiqwfU)
 - [clientdiversity.org](https://clientdiversity.org/)
 
 ## Related topics {#related-topics}
