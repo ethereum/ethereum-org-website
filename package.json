@@ -23,7 +23,7 @@
     "browserslist": "^4.21.0",
     "clipboard": "^2.0.6",
     "cross-fetch": "^3.1.5",
-    "dotenv": "^8.2.0",
+    "dotenv": "^16.0.3",
     "embla-carousel-react": "^7.0.0",
     "ethereum-blockies-base64": "^1.0.2",
     "focus-trap-react": "^10.0.0",
