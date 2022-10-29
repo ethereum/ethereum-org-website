@@ -420,13 +420,20 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
 
   if (!isMdxPage) {
     const isDefaultLang = page.context.language === defaultLanguage
+    const path = isDefaultLang ? `/${defaultLanguage}${page.path}` : page.path
 
     const { isOutdated, isContentEnglish } = await checkIsPageOutdated(
       page.context.i18n.originalPath,
       page.context.language
     )
 
-    const path = isDefaultLang ? `/${defaultLanguage}${page.path}` : page.path
+    if (isDefaultLang) {
+      createRedirect({
+        ...commonRedirectProps,
+        fromPath: path,
+        toPath: page.path,
+      })
+    }
 
     deletePage(page)
     createPage<Context>({
