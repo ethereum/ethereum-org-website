@@ -1,9 +1,9 @@
 import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { Box, Flex, Heading, Image } from "@chakra-ui/react"
 
 import ButtonLink from "./ButtonLink"
 import Translation from "./Translation"
-import { Box, Flex, Heading } from "@chakra-ui/react"
 
 export interface Content {
   title: string
@@ -23,6 +23,7 @@ const ProductList: React.FC<IProps> = ({ content, category }) => (
   <Box width="full">
     <Heading
       as="h3"
+      fontSize="2xl"
       borderBottom="2px solid"
       borderColor="border"
       paddingBottom={4}
@@ -40,7 +41,7 @@ const ProductList: React.FC<IProps> = ({ content, category }) => (
       >
         <Box width="5rem">
           {image && (
-            <Box
+            <Image
               as={GatsbyImage}
               image={image}
               alt={alt}
@@ -53,7 +54,7 @@ const ProductList: React.FC<IProps> = ({ content, category }) => (
           paddingBottom={4}
           width="full"
           alignItems={{ base: "flex-start", sm: "center" }}
-          marginLeft={{ base: 6, sm: 4 }}
+          marginLeft={{ base: 4, sm: 6 }}
           justifyContent="space-between"
           borderBottom="1px solid"
           borderColor="border"
