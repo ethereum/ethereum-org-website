@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Box, Container, Flex, Text } from "@chakra-ui/react"
+import { Box, Container, Flex, Heading, Text } from "@chakra-ui/react"
 import { useIntl } from "react-intl"
 import Link, { navigate } from "./Link"
 import Emoji from "./Emoji"
@@ -73,7 +73,7 @@ const GridItem: React.FC<IPropsGridItem> = ({
       gridColumnStart={isOpen ? columnNumber : `auto`}
       color={isOpen ? "black300" : "text"}
       cursor={isOpen ? `auto` : `pointer`}
-      background={isOpen ? `${color}` : "background"}
+      background={isOpen ? color : "background"}
       direction={{
         base: "column",
         sm: `${isOpen ? "column" : "row"}`,
@@ -85,14 +85,14 @@ const GridItem: React.FC<IPropsGridItem> = ({
       borderColor="text"
       padding={6}
       _hover={{
-        background: `${isOpen ? color : "ednBackground"}`,
-        transition: `${isOpen ? "auto" : "transform 0.5s"}`,
-        transform: `${isOpen ? "auto" : "skewX(-5deg)"}`,
+        background: isOpen ? color : "ednBackground",
+        transition: isOpen ? "auto" : "transform 0.5s",
+        transform: isOpen ? "auto" : "skewX(-5deg)",
         boxShadow: "tableBoxShadow",
       }}
     >
       {isOpen ? (
-        <Emoji mb={8} text={emoji} fontSize="8xl" w="100%" />
+        <Emoji mb={8} text={emoji} fontSize="8xl" w="100%" display="block" />
       ) : (
         <>
           <Emoji
@@ -106,25 +106,27 @@ const GridItem: React.FC<IPropsGridItem> = ({
               transform: "rotate(10turn)",
             }}
           />
-          <Text
+          <Heading
+            as="h3"
             fontSize={{ base: "2rem", sm: "2.5rem" }}
             fontWeight={400}
             marginTop={0}
           >
             {title}
-          </Text>
+          </Heading>
         </>
       )}
       <div>
         {isOpen && (
           <div>
-            <Text
+            <Heading
+              as="h3"
               fontSize={{ base: "2rem", sm: "2.5rem" }}
               fontWeight={700}
               marginTop={0}
             >
               {title}
-            </Text>
+            </Heading>
             <Box fontSize="xl" lineHeight="140%" color="black300">
               {description}
             </Box>
@@ -135,7 +137,8 @@ const GridItem: React.FC<IPropsGridItem> = ({
             >
               {pros && (
                 <Box w="100%">
-                  <Text
+                  <Heading
+                    as="h4"
                     fontSize={{ base: "2xl", sm: "2rem" }}
                     fontWeight={600}
                     marginTop={0}
@@ -145,7 +148,7 @@ const GridItem: React.FC<IPropsGridItem> = ({
                     borderColor="black300"
                   >
                     <Translation id="pros" />
-                  </Text>
+                  </Heading>
 
                   <Box fontSize="xl" lineHeight="140%" color="black300">
                     <ul>
@@ -158,7 +161,8 @@ const GridItem: React.FC<IPropsGridItem> = ({
               )}
               {cons && (
                 <Box w="100%">
-                  <Text
+                  <Heading
+                    as="h4"
                     fontSize={{ base: "1.5rem", sm: "2rem" }}
                     fontWeight={600}
                     marginTop="0rem"
@@ -168,7 +172,7 @@ const GridItem: React.FC<IPropsGridItem> = ({
                     borderColor="black300"
                   >
                     <Translation id="cons" />
-                  </Text>
+                  </Heading>
                   <Box fontSize="xl" lineHeight="140%" color="black300">
                     <ul>
                       {cons.map((con, idx) => (
@@ -180,17 +184,18 @@ const GridItem: React.FC<IPropsGridItem> = ({
               )}
             </Flex>
             <div>
-              <Text
+              <Heading
+                as="h4"
                 fontSize={{ base: "1.5rem", sm: "2rem" }}
                 fontWeight={600}
-                marginTop="0rem"
-                padding="0.5rem"
-                paddingBottom="1rem"
+                marginTop="0"
+                padding={2}
+                paddingBottom={4}
                 borderBottom="1px solid"
                 borderColor="black300"
               >
                 <Translation id="example-projects" />
-              </Text>
+              </Heading>
               <Box fontSize="xl" lineHeight="140%" color="black300">
                 <ul>
                   {links.map((link, idx) => (
@@ -246,8 +251,8 @@ const StablecoinBoxGrid: React.FC<IProps> = ({ items }) => {
     <Container
       gridTemplateColumns={"3fr 1fr"}
       gridTemplateRows={"3fr 3fr"}
-      borderRadius="2px"
-      margin={0}
+      borderRadius="sm"
+      my={16}
       paddingLeft={0}
       display={{ base: "flex", lg: "grid" }}
       flexDirection="column"
