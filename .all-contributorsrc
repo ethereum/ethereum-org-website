@@ -9453,6 +9453,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "alexeevcc",
+      "name": "Dmitry Alexeev",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61043916?v=4",
+      "profile": "https://cyberacademy.dev",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
