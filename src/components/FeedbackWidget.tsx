@@ -39,6 +39,10 @@ const FixedDot = styled(NakedButton)<{
   @media (min-width: ${({ theme }) => theme.breakpoints.l}) {
     width: ${({ isExpanded }) => (isExpanded ? "15rem" : "3rem")};
     border-radius: ${({ isExpanded }) => (isExpanded ? "50px" : "50%")};
+    #feedback-wrapper {
+      width: ${({ isExpanded }) => (isExpanded ? "13.5rem" : "3rem")};
+      position: ${({ isExpanded }) => (isExpanded ? "absolute" : "flex")};
+    }
     #expanded-prompt {
       display: ${({ isExpanded }) => (isExpanded ? "flex" : "none")};
     }
@@ -250,8 +254,8 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
         id="dot"
       >
         <Box
-          position="absolute"
-          width="13.5rem"
+          id="feedback-wrapper"
+          width="3rem"
           display="flex"
           justifyContent="space-evenly"
         >
@@ -266,6 +270,7 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
                 noOfLines={2}
                 height="100%"
                 alignItems="center"
+                display="none"
               >
                 <Translation id="feedback-card-prompt-page" />
               </Text>
