@@ -399,14 +399,14 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
   const isPageWithoutCustomContext = page.context.isOutdated === undefined
 
   if (isPageWithoutCustomContext) {
-    const isDefaultLang = page.context.language === defaultLanguage
-    const path = isDefaultLang ? `/${defaultLanguage}${page.path}` : page.path
+    const { language, i18n } = page.context
+    const isDefaultLang = language === defaultLanguage
 
     // as we don't have our custom context for this page, we calculate & add it
     // later to them
     const { isOutdated, isContentEnglish } = await checkIsPageOutdated(
-      page.context.i18n.originalPath,
-      page.context.language
+      i18n.originalPath,
+      language
     )
 
     // on dev, we will have 2 pages for the default lang
@@ -414,13 +414,10 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
     // - 1 for the ones without the prefix `/learn/`
     //   we do this to avoid having a 404 on those without the prefix since in
     //   dev we don't have the redirects from the server
-    if (!IS_DEV) {
-      deletePage(page)
-    }
 
+    deletePage(page)
     createPage<Context>({
       ...page,
-      path,
       context: {
         ...page.context,
         isOutdated,
@@ -429,11 +426,14 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
       },
     })
 
-    if (isDefaultLang && !path.match(/^\/404(\/|.html)$/)) {
+    const rootPath = page.path.slice(3)
+    // `routed` means that the page have the lang prefix on the url
+    // e.g. `/en/learn` or `/en`
+    if (isDefaultLang && i18n.routed && !rootPath.match(/^\/404(\/|.html)$/)) {
       createRedirect({
         ...commonRedirectProps,
-        fromPath: page.path,
-        toPath: path,
+        fromPath: rootPath,
+        toPath: page.path,
       })
     }
   }
