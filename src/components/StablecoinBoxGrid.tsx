@@ -1,130 +1,10 @@
 import React, { useState } from "react"
-import styled from "@emotion/styled"
+import { Box, Flex, Heading } from "@chakra-ui/react"
 import { useIntl } from "react-intl"
 import Link, { navigate } from "./Link"
-import Emoji from "./OldEmoji"
+import Emoji from "./Emoji"
 import Translation from "./Translation"
 import { isMobile } from "../utils/isMobile"
-
-const OpenTitle = styled.h3`
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-top: 0rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 2rem;
-  }
-`
-
-const Title = styled.h3`
-  font-size: 2.5rem;
-  font-weight: 400;
-  margin-top: 0rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 2rem;
-  }
-`
-
-const Subtitle = styled.h4`
-  font-size: 2rem;
-  font-weight: 600;
-  margin-top: 0rem;
-  padding: 0.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid ${(props) => props.theme.colors.black300};
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 1.5rem;
-  }
-`
-
-const Body = styled.div`
-  font-size: 1.25rem;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.black300};
-`
-
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: 3fr 3fr;
-  margin: 4rem 0rem;
-  border-radius: 2px;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: flex;
-    flex-direction: column;
-  }
-`
-
-const StyledEmoji = styled(Emoji)<{
-  isOpen?: boolean
-}>`
-  order: ${(props) => (props.isOpen ? `1` : `2`)};
-  margin: 0.5rem;
-  align-self: center;
-  &:hover {
-    transition: transform 50s;
-    transform: rotate(10turn);
-  }
-`
-
-const Row = styled.div`
-  display: flex;
-  margin-top: 2rem;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column;
-  }
-`
-
-const Column = styled.div`
-  width: 100%;
-`
-
-const StyledLink = styled(Link)`
-  color: ${(props) => props.theme.colors.black300};
-  &:hover {
-    color: ${(props) => props.theme.colors.black};
-  }
-`
-
-const Box = styled.div<{
-  isOpen: boolean
-  columnNumber: number
-  rowNumber: number
-  color: string
-}>`
-  grid-row-start: ${(props) => (props.isOpen ? props.rowNumber : `auto`)};
-  grid-row-end: ${(props) => (props.isOpen ? `span 3` : `auto`)};
-  grid-column-start: ${(props) => (props.isOpen ? props.columnNumber : `auto`)};
-  color: ${(props) =>
-    props.isOpen ? props.theme.colors.black300 : props.theme.colors.text};
-  cursor: ${(props) => (props.isOpen ? `auto` : `pointer`)};
-  background: ${(props) =>
-    props.isOpen
-      ? props.theme.colors[props.color]
-      : props.theme.colors.background};
-  display: flex;
-  flex-direction: column;
-  border: 1px solid ${(props) => props.theme.colors.text};
-  padding: 1.5rem;
-  &:hover {
-    background: ${(props) =>
-      props.isOpen
-        ? props.theme.colors[props.color]
-        : props.theme.colors.ednBackground};
-    transition: ${(props) => (props.isOpen ? `auto` : `transform 0.5s`)};
-    transform: ${(props) => (props.isOpen ? `auto` : `skewX(-5deg)`)};
-    box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: ${(props) => (props.isOpen ? `column` : `row`)};
-    justify-content: ${(props) =>
-      props.isOpen ? `flex-start` : `space-between`};
-    align-items: center;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    flex-direction: column;
-  }
-`
 
 // Represent string as 32-bit integer
 const hashCode = (string: string): number => {
@@ -167,6 +47,89 @@ interface IPropsGridItem {
   links: Array<ILink>
 }
 
+const OpenTitle: React.FC<{ title: string }> = ({ title }) => {
+  return (
+    <Heading
+      as="h3"
+      fontSize={{ base: "2rem", sm: "2.5rem" }}
+      fontWeight={700}
+      marginTop={0}
+    >
+      {title}
+    </Heading>
+  )
+}
+
+const Title: React.FC<{ title: string }> = ({ title }) => {
+  return (
+    <Heading
+      as="h3"
+      fontSize={{ base: "2rem", sm: "2.5rem" }}
+      fontWeight={400}
+      marginTop={0}
+    >
+      {title}
+    </Heading>
+  )
+}
+
+const Subtitle: React.FC<{ children: any }> = ({ children }) => {
+  return (
+    <Heading
+      as="h4"
+      fontSize={{ base: "2xl", sm: "2rem" }}
+      fontWeight={600}
+      marginTop={0}
+      padding={2}
+      paddingBottom={4}
+      borderBottom="1px solid"
+      borderColor="black300"
+    >
+      {children}
+    </Heading>
+  )
+}
+
+const Body: React.FC<{ children: any }> = ({ children }) => {
+  return (
+    <Box fontSize="xl" lineHeight="140%" color="black300">
+      {children}
+    </Box>
+  )
+}
+
+const StyledEmoji: React.FC<{ emoji: string }> = ({ emoji }) => {
+  return (
+    <Emoji
+      fontSize="8xl"
+      text={emoji}
+      margin={2}
+      alignSelf="center"
+      order="2"
+      _hover={{
+        transition: "transform 50s",
+        transform: "rotate(10turn)",
+      }}
+    />
+  )
+}
+
+const Row: React.FC<{ children: any }> = ({ children }) => {
+  return (
+    <Flex
+      justify="space-between"
+      marginTop={8}
+      direction={{ base: "column", md: "row" }}
+    >
+      {children}
+    </Flex>
+  )
+}
+
+const Column: React.FC<{ children: any }> = ({ children }) => {
+  return <Box width="100%">{children}</Box>
+}
+
 const GridItem: React.FC<IPropsGridItem> = ({
   description,
   columnNumber,
@@ -185,26 +148,47 @@ const GridItem: React.FC<IPropsGridItem> = ({
     callback(index)
   }
   return (
-    <Box
+    <Flex
       id={`type-${index}`}
       onClick={() => handleClick()}
-      isOpen={isOpen}
-      columnNumber={columnNumber}
-      rowNumber={rowNumber}
-      color={color}
+      gridRowStart={isOpen ? rowNumber : `auto`}
+      gridRowEnd={isOpen ? `span 3` : `auto`}
+      gridColumnStart={isOpen ? columnNumber : `auto`}
+      color={isOpen ? "black300" : "text"}
+      cursor={isOpen ? `auto` : `pointer`}
+      background={isOpen ? color : "background"}
+      direction={{
+        base: "column",
+        sm: `${isOpen ? "column" : "row"}`,
+        lg: "column",
+      }}
+      justify={{
+        base: `${isOpen ? "flex-start" : "space-between"}`,
+        lg: "flex-start",
+      }}
+      align={{ base: "center", lg: "flex-start" }}
+      border="1px solid"
+      borderColor="text"
+      padding={6}
+      _hover={{
+        background: isOpen ? color : "ednBackground",
+        transition: isOpen ? "auto" : "transform 0.5s",
+        transform: isOpen ? "auto" : "skewX(-5deg)",
+        boxShadow: "tableBoxShadow",
+      }}
     >
       {isOpen ? (
-        <Emoji mb={"2rem"} text={emoji} size={6} />
+        <Emoji mb={8} text={emoji} fontSize="8xl" />
       ) : (
         <>
-          <StyledEmoji size={6} text={emoji} />
-          <Title>{title}</Title>
+          <StyledEmoji emoji={emoji} />
+          <Title title={title} />
         </>
       )}
       <div>
         {isOpen && (
           <div>
-            <OpenTitle>{title}</OpenTitle>
+            <OpenTitle title={title} />
             <Body>{description}</Body>
             <Row>
               {pros && (
@@ -212,6 +196,7 @@ const GridItem: React.FC<IPropsGridItem> = ({
                   <Subtitle>
                     <Translation id="pros" />
                   </Subtitle>
+
                   <Body>
                     <ul>
                       {pros.map((pro, idx) => (
@@ -244,9 +229,16 @@ const GridItem: React.FC<IPropsGridItem> = ({
                 <ul>
                   {links.map((link, idx) => (
                     <li key={idx}>
-                      <StyledLink key={idx} to={link.url}>
+                      <Link
+                        key={idx}
+                        to={link.url}
+                        color="black300"
+                        _hover={{
+                          color: "black",
+                        }}
+                      >
                         {link.text}
-                      </StyledLink>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -255,7 +247,7 @@ const GridItem: React.FC<IPropsGridItem> = ({
           </div>
         )}
       </div>
-    </Box>
+    </Flex>
   )
 }
 
@@ -285,7 +277,15 @@ const StablecoinBoxGrid: React.FC<IProps> = ({ items }) => {
   }
 
   return (
-    <Grid>
+    <Box
+      gridTemplateColumns="3fr 1fr"
+      gridTemplateRows="3fr 3fr"
+      borderRadius="sm"
+      my={16}
+      display={{ base: "flex", lg: "grid" }}
+      flexDirection="column"
+      maxW="100%"
+    >
       {items.map((item, idx) => {
         let columnNumber = 1
         let rowNumber = 1
@@ -309,7 +309,7 @@ const StablecoinBoxGrid: React.FC<IProps> = ({ items }) => {
           />
         )
       })}
-    </Grid>
+    </Box>
   )
 }
 
