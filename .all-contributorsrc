@@ -9471,6 +9471,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "benlazzero",
+      "name": "benlazzero",
+      "avatar_url": "https://avatars.githubusercontent.com/u/85390423?v=4",
+      "profile": "https://github.com/benlazzero",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
