@@ -2205,7 +2205,7 @@ const walletData: WalletData[] = [
     wallet_live_date: "2022-08-03",
     active_development_team: true,
     languages_supported: ["en"],
-    twitter: "https://twitter.com/enkryptcom",
+    twitter: "https://twitter.com/enkrypt",
     discord: "https://discord.com/invite/Gz8vBneyKe",
     reddit: "https://www.reddit.com/r/enkryptcom/",
     telegram: "https://t.me/enkryptcom",
