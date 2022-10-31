@@ -10,7 +10,7 @@ interface WalletData {
   twitter: string
   discord: string
   reddit: string
-  telegram?: string
+  telegram: string
   ios: boolean
   android: boolean
   linux: boolean
@@ -2254,6 +2254,7 @@ const walletData: WalletData[] = [
     twitter: "https://twitter.com/gridplus",
     discord: "https://discord.gg/Bt5fVDTJb9",
     reddit: "https://www.reddit.com/r/GridPlus/",
+    telegram: "",
     ios: false,
     android: false,
     linux: false,
