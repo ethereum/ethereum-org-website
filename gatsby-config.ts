@@ -261,6 +261,7 @@ const config: GatsbyConfig = {
         localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
         languages: supportedLanguages,
         defaultLanguage: defaultLanguage,
+        generateDefaultLanguagePage: true,
         // if you are using Helmet, you must include siteUrl, and make sure you add http:https
         siteUrl,
         // if you are using trailingSlash gatsby config include it here, as well (the default is 'always')
