@@ -206,6 +206,6 @@
   "page-dapps-more-on-defi-button": "More on decentralized finance",
   "page-dapps-more-on-nft-button": "More on tokenised collectibles",
   "page-dapps-more-on-nft-gaming-button": "More on tokenised in-game items",
-  "page-dapps-dapp-description-pwn": "PWN is a hub for peer-to-peer (P2P) loans backed by digital assets. You can use your fungible tokens or NFTs as collateral, or invest in loans and generate returns. Also, there's no risk of liquidation before the loan expires. The contracts don't have any external dependencies like on-chain oracles either.",
+  "page-dapps-dapp-description-pwn": "Easy loans backed by any token or NFTs on Ethereum.",
   "page-dapps-pwn-image-alt": "PWN logo"
 }
