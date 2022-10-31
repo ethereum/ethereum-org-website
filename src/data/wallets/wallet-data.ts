@@ -2245,7 +2245,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-10-31",
     name: "GridPlus Lattice1",
-    image_name: "lattice",
+    image_name: "gridplus",
     brand_color: "#ffffff",
     url: "https://gridplus.io/",
     wallet_live_date: "2020-10-01",
