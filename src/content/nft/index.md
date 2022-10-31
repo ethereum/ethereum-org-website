@@ -153,6 +153,7 @@ Here's more information of some of the better developed use-cases and visions fo
 - [Domain names](#nft-domains)
 - [Physical items](#nft-physical-items)
 - [Investments and collateral](#nfts-and-defi)
+- [Tokengating](#tokengating)
 
 <Divider />
 
@@ -270,6 +271,24 @@ As we mentioned, this is an emerging space. NFTs, DAOs, fractionalised tokens ar
 Companies offering fake certificates for university degrees are reportedly a billion-dollar industry that NFTs can help combat. NFTs can be a secure and quick way to verify someone's degree credentials.
 
 [In South Korea, one university is already issuing degree certificates as an NFT](https://forkast.news/headlines/south-korea-nfts-graduates-hoseo/), with the hope that NFTs will improve access to administrative services and prevent forgery or alteration of the degree. [Trinity Business School (TBS) in Ireland is also planning on offering NFTs from 2023](https://trinitynews.ie/2022/04/business-school-to-offer-degree-nfts/).
+
+<Divider />
+
+### Tokengating {#tokengating}
+
+Tokengating is a way of restricting access to something and using NFTs as a way to unlock access. These things can vary hugely based on the platform but popular examples are gated content, private chat servers, and, in the world of ecommerce, exclusive products.
+
+A platform that does tokengating will typically ask you to connect your wallet to prove you own the required NFT. If you have the NFT you need, you'll get access. If not, the thing will remain gated. NFTs are a great way to do this because of their uniqueness – you can't fake ownership to get the thing.
+
+Since NFTs are on Ethereum, they can be used to unlock Ethereum tokengates on any platform that implements them. A single NFT you own could unlock gated content, private chat servers, and exclusive products across completely different websites and applications.
+
+If minting and distributing NFTs is about community-generation or community digitization, tokengating is about community nurturing. It sees NFTs used more as a tool for membership or loyalty – and a great way to reliably deliver the rewards that come with it.
+
+#### Examples
+
+- [Collab.land](https://collab.land/) tokengates Discord chat servers or Telegram groups
+- [Unlock protocol](https://unlock-protocol.com/) is a protocol for tokengating
+- [Shopify](https://help.shopify.com/en/manual/products/digital-service-product/nfts) have a growing roster of apps that let merchants tokengate access to products and discounts
 
 <Divider />
 
