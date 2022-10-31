@@ -3,14 +3,13 @@ title: Cum se folosește Manticore pentru a găsi erori în contractele intelige
 description: Cum se folosește Manticore pentru a găsi automat erori în contractele inteligente
 author: Trailofbits
 lang: ro
-sidebar: true
 tags:
   - "solidity"
   - "contracte inteligente"
   - "securitate"
   - "testare"
   - "verificare formală"
-skill: avansat
+skill: advanced
 published: 2020-01-13
 source: Construirea de contracte sigure
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore

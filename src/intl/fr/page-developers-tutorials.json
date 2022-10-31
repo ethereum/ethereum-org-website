@@ -19,5 +19,8 @@
   "page-tutorial-title": "Tutoriels de développement Ethereum",
   "page-tutorials-meta-description": "Naviguez et filtrez les tutoriels de la communauté Ethereum par sujet.",
   "page-tutorial-external-link": "Externe",
-  "page-tutorials-meta-title": "Tutoriels de développement Ethereum"
+  "page-tutorials-meta-title": "Tutoriels de développement Ethereum",
+  "page-tutorial-beginner": "Débutant",
+  "page-tutorial-intermediate": "Intermédiaire",
+  "page-tutorial-advanced": "Avancé"
 }

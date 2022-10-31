@@ -3,13 +3,12 @@ title: Elenco di controllo per l'integrazione dei token
 description: Elenco di controllo degli aspetti da tenere presente quando si interagisce con i token
 author: "Trailofbits"
 lang: it
-sidebar: true
 tags:
   - "Solidity"
   - "Smart Contract"
   - "sicurezza"
   - "token"
-skill: intermedio
+skill: intermediate
 published: 2020-08-13
 source: Creare contratti sicuri
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

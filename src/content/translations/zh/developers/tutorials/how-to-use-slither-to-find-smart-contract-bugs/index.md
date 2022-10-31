@@ -3,14 +3,13 @@ title: 如何使用Slither发现智能合约漏洞
 description: 如何使用Slither自动发现智能合约中的漏洞
 author: Trailofbits
 lang: zh
-sidebar: true
 tags:
   - "solidity"
   - "智能合约"
   - "安全性"
   - "测试"
   - "静态分析"
-skill: 高级
+skill: advanced
 published: 2020-06-09
 source: 构建安全的合约
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither

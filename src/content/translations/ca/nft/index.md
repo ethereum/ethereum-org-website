@@ -4,7 +4,6 @@ description: Resum general de NFT a Ethereum
 lang: ca
 template: use-cases
 emoji: ":frame_with_picture:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/infrastructure_transparent.png
 alt: Un logotip d'Eth mostrat mitjançant un holograma.
@@ -406,7 +405,7 @@ S'estima que les millores en l'escalabilitat permetran la xarxa processar entre 
 
 [Vitalik Buterin parla sobre el potencial de les transaccions per segon amb la fragmentació](https://twitter.com/VitalikButerin/status/1312905884549300224)
 
-Amb un mínim, la fragmentació permetrà una quantitat de transaccions multiplicada per 64 en comparació amb les que es fan avui en dia que ronden les 15. Aquesta és la quantitat de cadenes fragmentades (capacitat i dades extra) que s'han introduït. [Més informació sobre les cadenes de fragments](/upgrades/shard-chains/)
+Amb un mínim, la fragmentació permetrà una quantitat de transaccions multiplicada per 64 en comparació amb les que es fan avui en dia que ronden les 15. Aquesta és la quantitat de cadenes fragmentades (capacitat i dades extra) que s'han introduït. [Més informació sobre les cadenes de fragments](/upgrades/sharding/)
 
 Això vol dir que podem estimar quant es trigaria a processar 100.000 transaccions per poder comparar-ho amb l'exemple de Visa esmentat.
 

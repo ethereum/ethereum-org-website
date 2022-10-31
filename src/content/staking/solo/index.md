@@ -4,12 +4,11 @@ description: An overview of how to get started solo staking your ETH
 lang: en
 template: staking
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../assets/staking/leslie-solo.png
 alt: Leslie the rhino on her own computer chip.
 sidebarDepth: 2
 summaryPoints:
-  - Receive maximum rewards directly from the protocol (including unburnt fees after The Merge) for keeping your validator properly functioning and online
+  - Receive maximum rewards directly from the protocol for keeping your validator properly functioning and online
   - Run home hardware and personally add to the security and decentralization of the Ethereum network
   - Remove trust, and never give up control of the keys to your funds
 ---
@@ -58,7 +57,7 @@ As much as we wish that solo staking was accessible and risk free to everyone, t
     <p style={{marginTop: "1rem"}}><a href="/security">Ethereum security and scam prevention</a></p>
   </ExpandableCard>
   <ExpandableCard title="No withdrawing (for now)" eventCategory="SoloStaking" eventName="clicked no withdrawing">
-    Withdrawing staked ETH or rewards from a validator balance is not yet supported. Support for withdrawals are planned for the Shanghai upgrade following The Merge. You should anticipate your ETH being locked for at least one-to-two years. After the Shanghai upgrade you will be able to freely withdraw portions or all of your stake if you wish.
+    Withdrawing staked ETH or rewards from a validator balance is not yet supported. Support for withdrawals are planned for the upcoming Shanghai upgrade. You should anticipate your ETH being locked for at least one-to-two years. After the Shanghai upgrade you will be able to freely withdraw portions or all of your stake if you wish.
   </ExpandableCard>
   <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
     Hardware occasionally fails, network connections error out, and client software occasionally needs upgrading. Node maintenance is inevitable and will occasionally require your attention. You'll want to be sure you stay aware of any anticipated network upgrades, or other critical client upgrades.
@@ -115,7 +114,7 @@ These tools can be used as an alternative to the [Staking Deposit CLI](https://g
 
 <StakingProductsCardGrid category="keyGen" />
 
-Have a suggestion for a staking tool we missed? Check out our [product listing policy](/contributing/adding-staking-product/) to see if it would be a good fit, and to submit it for review.
+Have a suggestion for a staking tool we missed? Check out our [product listing policy](/contributing/adding-staking-products/) to see if it would be a good fit, and to submit it for review.
 
 ## Explore solo staking guides {#staking-guides}
 
@@ -126,7 +125,9 @@ Have a suggestion for a staking tool we missed? Check out our [product listing p
 These are a few of the most common questions about staking that are worth knowing about.
 
 <ExpandableCard title="What is a validator?">
-A <em>validator</em> is a virtual entity that lives on the Beacon Chain and participates in the consensus of the Ethereum protocol. Validators are represented by a balance, public key, and other properties. A <em>validator client</em> is the software that acts on behalf of the validator by holding and using its private key. A single validator client can hold many key pairs, controlling many validators.
+
+A _validator_ is a virtual entity that lives on Ethereum and participates in the consensus of the Ethereum protocol. Validators are represented by a balance, public key, and other properties. A _validator client_ is the software that acts on behalf of the validator by holding and using its private key. A single validator client can hold many key pairs, controlling many validators.
+
 </ExpandableCard>
 
 <ExpandableCard title="Can I deposit more than 32 ETH?">
@@ -154,14 +155,8 @@ Running a supermajority client (any client used by over 2/3 the network) also ho
 
 Equivalent bugs in a <em>minority client would never finalize</em> and thus would never result in a surround vote, and would simply result in inactivity penalties, <em>not slashing</em>.
 
-<p><a href="https://hackernoon.com/ethereums-client-diversity-problem">Learn more about the important of running a minority client.</a></p>
+<p><a href="https://hackernoon.com/ethereums-client-diversity-problem">Learn more about the importance of running a minority client.</a></p>
 <p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Learn more about slashing prevention</a></p>
-</ExpandableCard>
-
-<ExpandableCard title="Is staking already live?">
-Yes and no. Staking has been live since December 1, 2020, but until the Merge happens, the proof-of-stake consensus remains isolated on its own chain, while the existing Ethereum network as we know it continues to operate using proof-of-work. These two chains start separate, but with the Merge, proof-of-work will be fully deprecated, and proof-of-stake will become the sole means of consensus from here-on-out.
-
-This means that staking is currently live for users to deposit their ETH, run a validator client, and start earning rewards. After the Merge, stakers will earn higher rewards as validators begin to process transactions and earn fee tips on top of protocol rewards. After the Shanghai update (planned to follow the Merge by a few months), stakers will then be able to withdraw rewards and funds from their validator balance.
 </ExpandableCard>
 
 <ExpandableCard title="Which client is best?">
@@ -180,12 +175,6 @@ The more validator clients running on a single centralized cloud storage solutio
 Offline penalties are proportional to how many others are offline at the same time. Using a VPS greatly increases the risk that offline penalties will be more severe, and increases your risk of quadratic leaking or slashing in the event the outage is large enough. To minimize your own risk, and the risk to the network, users are strongly encouraged to obtain and operate their own hardware.
 
 <a href="https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/">More on rewards and penalties</a>
-</ExpandableCard>
-
-<ExpandableCard title="Do I need to do anything before The Merge?">
-Anyone currently running a CL (Beacon Chain) client will be required to also run an EL client after The Merge. This is a result of the new Engine API that will be used to interface between the two layers. Anyone currently running a Beacon Chain without an execution layer client will need to sync the execution layer before The Merge to continue being in sync with the network.
-
-The Merge will also bring unburnt transaction fees to validators. These fees do not accumulate in the balance associated with the validator keys, but instead can be directed to a regular Ethereum address of your choice. In order to properly receive the priority fees/tips from proposed blocks, stakers must update their client settings with the address they would like to receive tips at. See individual client documentation for details.
 </ExpandableCard>
 
 ## Further reading {#further-reading}

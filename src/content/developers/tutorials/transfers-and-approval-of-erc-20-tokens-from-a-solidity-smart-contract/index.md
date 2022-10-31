@@ -5,7 +5,6 @@ author: "jdourlens"
 tags: ["smart contracts", "tokens", "solidity", "getting started", "erc-20"]
 skill: intermediate
 lang: en
-sidebar: true
 published: 2020-04-07
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/transfers-and-approval-or-erc20-tokens-from-a-solidity-smart-contract/
@@ -91,7 +90,7 @@ contract ERC20Basic is IERC20 {
         require(numTokens <= allowed[owner][msg.sender]);
 
         balances[owner] = balances[owner]-numTokens;
-        allowed[owner][msg.sender] = allowed[owner][msg.sender]+numTokens;
+        allowed[owner][msg.sender] = allowed[owner][msg.sender]-numTokens;
         balances[buyer] = balances[buyer]+numTokens;
         emit Transfer(owner, buyer, numTokens);
         return true;
@@ -273,7 +272,7 @@ contract ERC20Basic is IERC20 {
         require(numTokens <= allowed[owner][msg.sender]);
 
         balances[owner] = balances[owner]-numTokens;
-        allowed[owner][msg.sender] = allowed[owner][msg.sender]+numTokens;
+        allowed[owner][msg.sender] = allowed[owner][msg.sender]-numTokens;
         balances[buyer] = balances[buyer]+numTokens;
         emit Transfer(owner, buyer, numTokens);
         return true;

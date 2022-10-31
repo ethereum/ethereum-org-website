@@ -1,7 +1,7 @@
 ---
 title: Ethereum Foundation
 description: L'Ethereum Foundation (EF) est une organisation à but non lucratif destinée à soutenir Ethereum et les technologies qui y sont associées.
-sidebar: false
+hideEditButton: true
 lang: fr
 ---
 
@@ -15,7 +15,7 @@ L'EF n'est pas une entreprise, ni un organisme à but non lucratif traditionnel.
 
 ## Initiatives de l'Ethereum Foundation {#ethereum-foundation-initiatives}
 
-### Programme de soutien aux écosystèmes {#ecosystem-support-program}
+### Programme de soutien à l'écosystème {#ecosystem-support-program}
 
 Le [programme de soutien aux écosystèmes](https://esp.ethereum.foundation/) a été créé pour offrir un soutien financier et non financier aux projets et aux entités au sein de la communauté Ethereum élargie, afin d’accélérer la croissance de l’écosystème. Ce programme est une extension du programme de subvention Ethereum d'origine, qui se concentrait principalement sur le financement.
 

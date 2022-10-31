@@ -9,9 +9,8 @@ tags:
   - "contrats intelligents"
   - "premiers pas"
   - "déploiement"
-skill: débutant
+skill: beginner
 lang: fr
-sidebar: true
 published: 2021-03-31
 ---
 
@@ -37,7 +36,7 @@ Une fois que vous avez créé un compte Alchemy, vous pouvez générer une clé 
 
 ![créer une vue de l'application Hello world](./create-app-view-hello-world.png)
 
-3. Cliquez sur « Create App » et voilà ! Votre application devrait apparaître dans le tableau ci-dessous.
+3. Cliquez sur « Créer l'application » et voilà ! Votre application devrait apparaître dans le tableau.
 
 ## Étape 3 : Créez un compte Ethereum (adresse) {#step-3}
 
@@ -53,14 +52,14 @@ Afin de déployer notre contrat intelligent sur le serveur test, nous aurons bes
 
 ## Étape 5 : Vérifiez votre solde {#step-5}
 
-Pour vérifier notre solde, faisons une requête [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) en utilisant [l'outil composeur d'Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Cela va retourner la quantité d'ETH présente dans notre portefeuille. Après avoir entré l'adresse de votre compte Metamask et cliqué sur « Send Request », vous devriez voir une réponse comme celle-ci :
+Pour vérifier notre solde, faisons une requête [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) en utilisant [l'outil composeur d'Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Cela va retourner la quantité d'ETH présente dans notre portefeuille. Après avoir entré l'adresse de votre compte MetaMask et cliqué sur « Send Request », vous devriez voir une réponse comme celle-ci :
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
 ```
 
 > **REMARQUE :** Ce résultat est en wei et non pas en ETH. Le wei est utilisé comme la plus petite dénomination d'ether. La conversion de wei en ETH est : 1 eth = 10<sup>18</sup> wei. Donc si nous convertissons 0x2B5E3AF16B1880000 en décimales, nous obtenons 5\*10¹⁸, ce qui équivaut à 5 ETH.
-> 
+>
 > Ouf ! Notre fausse monnaie est bien là <Emoji text=":money_mouth_face:" size={1} />.
 
 ## Étape 6 : Initialisons notre projet {#step-6}
@@ -107,7 +106,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
 
 Approuvez le package.json et nous sommes prêts à démarrer !
 
-## Étape 7 : Téléchargez [Hardhat](https://hardhat.org/getting-started/#overview ""){#step-7}
+## Étape 7 : Téléchargez [Hardhat](https://hardhat.org/getting-started/#overview){#step-7}
 
 Hardhat est un environnement de développement qui permet de compiler, déployer, tester et déboguer votre logiciel Ethereum. Il aide les développeurs à construire des contrats intelligents et des dApps localement avant de les déployer sur la chaîne en production.
 
@@ -202,7 +201,7 @@ Il s'agit d'un contrat intelligent très simple qui stocke un message lors de la
 
 ## Étape 11 : Connectez MetaMask & Alchemy à votre projet {#step-11}
 
-Maintenant que nous avons créé un portefeuille Metamask, un compte Alchemy et écrit notre contrat intelligent, il est temps de connecter les trois.
+Maintenant que nous avons créé un portefeuille MetaMask, un compte Alchemy et écrit notre contrat intelligent, il est temps de connecter les trois.
 
 Chaque transaction envoyée depuis votre portefeuille virtuel nécessite une signature en utilisant votre clé privée unique. Pour donner cette permission à notre programme, nous pouvons stocker en toute sécurité notre clé privée (et la clé API Alchemy) dans un fichier d'environnement.
 
@@ -233,7 +232,7 @@ PRIVATE_KEY = "your-metamask-private-key"
 Pour les relier à notre code, nous ferons référence à ces variables dans notre fichier `hardhat.config.js` à l'étape 13.
 
 <InfoBanner isWarning={true}>
-Ne propagez pas le fichier <code>.env</code> ! Assurez-vous de ne jamais partager ou exposer votre fichier <code>.env</code> à quiconque, car vous compromettez vos secrets en le faisant. Si vous utilisez le contrôle de version, ajoutez votre <code>.env</code> à un fichier <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
+Ne propagez pas le fichier <code>.env</code> ! Veillez à ne jamais partager ou exposer votre fichier <code>.env</code> avec quiconque car vous compromettez vos secrets en le faisant. Si vous utilisez le contrôle de version, ajoutez votre <code>.env</code> à un fichier <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
 </InfoBanner>
 
 ## Étape 12 : Installez Ethers.js {#step-12-install-ethersjs}
@@ -344,7 +343,7 @@ Si nous allons sur [Ropsten etherscan](https://ropsten.etherscan.io/) et que nou
 
 ![contrat etherscan](./etherscan-contract.png)
 
-L'adresse `From` devrait correspondre à votre adresse de compte Metamask et l'adresse To retournera « Contract Creation », mais si nous cliquons dans la transaction, nous verrons notre adresse de contrat dans le champ `To` :
+L'adresse `From` devrait correspondre à votre adresse de compte MetaMask et l'adresse To retournera « Contract Creation », mais si nous cliquons dans la transaction, nous verrons notre adresse de contrat dans le champ `To` :
 
 ![transaction etherscan](./etherscan-transaction.png)
 

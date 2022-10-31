@@ -3,14 +3,13 @@ title: Cara menggunakan Echidna untuk menguji kontrak pintar
 description: Bagaimana cara menggunakan Echidna untuk secara otomatis menguji kontrak pintar
 author: "Trailofbits"
 lang: id
-sidebar: true
 tags:
   - "solidity"
   - "kontrak pintar"
   - "keamanan"
   - "pengujian"
   - "fuzzing"
-skill: tingkat lanjut
+skill: advanced
 published: 2020-04-10
 source: Membuat kontrak yang aman
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna

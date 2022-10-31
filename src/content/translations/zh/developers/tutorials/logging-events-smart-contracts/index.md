@@ -7,9 +7,8 @@ tags:
   - "remix"
   - "solidity"
   - "事件"
-skill: 中级
+skill: intermediate
 lang: zh
-sidebar: true
 published: 2020-04-03
 source: 以太坊开发团队
 sourceUrl: https://ethereumdev.io/logging-data-with-events/

@@ -9,9 +9,8 @@ tags:
   - "pengujian"
   - "hardhat"
   - "ethers.js"
-skill: dasar
+skill: beginner
 lang: id
-sidebar: true
 published: 2020-10-16
 ---
 

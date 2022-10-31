@@ -3,13 +3,12 @@ title: Cum să configurați Tellor ca oracol personal
 description: Un ghid pentru a începe integrarea oracolului Tellor în protocolul dvs.
 author: "Tellor"
 lang: ro
-sidebar: true
 tags:
   - "solidity"
   - "contracte inteligente"
   - "fluxuri de prețuri"
   - "oracole"
-skill: începător
+skill: beginner
 published: 2021-06-29
 source: Documentație Tellor
 sourceUrl: https://docs.tellor.io/tellor/

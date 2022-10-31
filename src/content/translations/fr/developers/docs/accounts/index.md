@@ -2,7 +2,6 @@
 title: Comptes Ethereum
 description: Explication des comptes Ethereum, de leurs structures de données et de leur relation avec la cryptographie par paire de clé.
 lang: fr
-sidebar: true
 ---
 
 Un compte Ethereum est une entité avec un solde en ether (ETH) qui peut envoyer des transactions sur Ethereum. Les comptes peuvent être contrôlés par des utilisateurs ou déployés en tant que contrats intelligents.
@@ -35,7 +34,7 @@ Les deux types peuvent :
 
 - La création d'un contrat a un coût dû l'utilisation de stockage réseau
 - Vous pouvez seulement envoyer des transactions en réponse à la réception d'une transaction
-- Les transactions depuis un compte externe vers un compte de contrat peuvent déclencher un code pouvant exécutant plein d'actions différentes, comme transférer des tokens ou même créer un nouveau contrat
+- Les transactions depuis un compte externe vers un compte de contrat peuvent déclencher un code pouvant exécuter plein d'actions différentes, comme transférer des tokens ou même créer un nouveau contrat
 
 ## Description d'un compte {#an-account-examined}
 

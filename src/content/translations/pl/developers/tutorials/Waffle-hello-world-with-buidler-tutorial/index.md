@@ -9,9 +9,8 @@ tags:
   - "testowanie"
   - "hardhat"
   - "ethers.js"
-skill: podstawowy
+skill: beginner
 lang: pl
-sidebar: true
 published: 2020-10-16
 ---
 

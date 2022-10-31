@@ -2,7 +2,6 @@
 title: Máquina virtual do Ethereum (EVM)
 description: Uma introdução à máquina virtual do Ethereum e como ela se relaciona com o estado, as transações e os contratos inteligentes.
 lang: pt-br
-sidebar: true
 ---
 
 O contexto físico da Máquina Virtual do Ethereum (EVM, na sigla em inglês) não pode ser descrito da mesma maneira que é descrita uma nuvem no céu ou uma onda no meio do oceano, se não que deve ser _entendido_ como uma entidade singular mantida por milhares de computadores conectados operando um cliente de Ethereum.
@@ -65,8 +64,6 @@ Todos os [clientes Ethereum](/developers/docs/nodes-and-clients/#execution-clien
 - [evmone](https://github.com/ethereum/evmone) - _C++_
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
 - [eEVM](https://github.com/microsoft/eevm) - _C++_
-- [Hyperledger Burrow](https://github.com/hyperledger/burrow) - _Go_
-- [hevm](https://github. com/dapphub/dapptools/tree/master/src/hevm) - _Haskell_
 
 ## Leitura adicional {#further-reading}
 

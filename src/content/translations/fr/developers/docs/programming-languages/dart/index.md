@@ -2,11 +2,10 @@
 title: Ethereum pour les développeurs Dart
 description: Apprendre à développer pour Ethereum avec le langage de programmation Dart
 lang: fr
-sidebar: true
 incomplete: true
 ---
 
-## Débuter avec les Contrats intelligents et le langage Solidity {#getting-started-with-smart-contracts-and-solidity}
+## Premiers pas avec les contrats intelligents et le langage Solidity {#getting-started-with-smart-contracts-and-solidity}
 
 ## Tutos {#tutorials}
 

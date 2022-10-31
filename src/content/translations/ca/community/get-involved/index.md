@@ -1,7 +1,6 @@
 ---
 title: Com puc involucrar-me?
 description: Com involucrar-se amb la comunitat Ethereum.
-sidebar: true
 lang: ca
 ---
 
@@ -61,7 +60,7 @@ Apostant els vostres ETH podeu guanyar recompenses mentre ajudeu a protegir la x
 
 - [Més informació sobre les apostes](/staking/)
 
-### Donar suport a projectes {#suport-projects}
+### Donar suport a projectes {#support-projects}
 
 L'ecosistema Ethereum té com a missió aportar fons a béns públics i projectes d'impacte. Amb petites donacions podeu mostrar el vostre suport i permetre que es faci un treball important.
 

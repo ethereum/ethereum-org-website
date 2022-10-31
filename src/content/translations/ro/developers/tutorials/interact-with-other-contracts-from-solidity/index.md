@@ -9,9 +9,8 @@ tags:
   - "fabrici"
   - "implementare"
   - "combinabilitate"
-skill: avansat
+skill: advanced
 lang: ro
-sidebar: true
 published: 2020-04-05
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/interact-with-other-contracts-from-solidity/

@@ -2,7 +2,6 @@
 title: Node dan klien
 description: Gambaran umum tentang perangkat lunak node dan klien Ethereum, juga cara menyiapkan node dan mengapa Anda harus melakukannya.
 lang: id
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -116,7 +115,7 @@ Tabel ini meringkaskan berbagai jenis klien. Semuanya telah lulus [pengujian kli
 | ------------------------------------------------------------------------- | -------- | --------------------- | -------------------------------------------------------- | --------------------- | ---------------- |
 | [Geth](https://geth.ethereum.org/)                                        | Go       | Linux, Windows, macOS | Jaringan Utama, Görli, Rinkeby, Ropsten                  | Snap, Full            | Arsip, Dipotong  |
 | [Nethermind](http://nethermind.io/)                                       | C#, .NET | Linux, Windows, macOS | Jaringan Utama, Görli, Ropsten, Rinkeby, dan banyak lagi | Fast, Beam, Archive   | Arsip, Dipotong  |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)                  | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more               | Cepat, Penuh          | Arsip, Dipotong  |
+| [Besu](https://besu.hyperledger.org/en/stable/)                           | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, Görli, and more               | Cepat, Penuh          | Arsip, Dipotong  |
 | [Erigon](https://github.com/ledgerwatch/erigon)                           | Go       | Linux, Windows, macOS | Jaringan Utama, Görli, Rinkeby, Ropsten                  | Full                  | Arsip, Dipotong  |
 | [OpenEthereum (Deprecated)](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS | Jaringan Utama, Kovan, Ropsten, dan banyak lagi          | Warp, Penuh           | Arsip, Dipotong  |
 
@@ -160,7 +159,7 @@ Hyperledger Besu adalah klien Ethereum standar perusahaan untuk jaringan publik 
 
 #### Erigon {#erigon}
 
-Erigon, yang sebelumnya dikenal sebagai Turbo-Geth, adalah sebuah fork Go Ethereum yang diarahkan untuk efisiensi kecepatan dan pemakaian ruangan cakram. Erigon adalah sebuah implementasi yang sepenuhnya di buat kembali di Ethereum, yang saat ini ditulis dalam Go dengan implementasi dalam bahasa pemograman lain yang direncanakan. Tujuan Erigon adalah menyediakan implementasi Ethereum yang lebih cepat, lebih modular, dan lebih teroptimisasi. Ia dapat melakukan sinkronisasi node arsip penuh dengan menggunakan kurang dari 2 TB ruangan cakram, dalam waktu kurang dari 3 hari
+Erigon, yang sebelumnya dikenal sebagai Erigon, adalah sebuah fork Go Ethereum yang diarahkan untuk efisiensi kecepatan dan pemakaian ruangan cakram. Erigon adalah sebuah implementasi yang sepenuhnya di buat kembali di Ethereum, yang saat ini ditulis dalam Go dengan implementasi dalam bahasa pemograman lain yang direncanakan. Tujuan Erigon adalah menyediakan implementasi Ethereum yang lebih cepat, lebih modular, dan lebih teroptimisasi. Ia dapat melakukan sinkronisasi node arsip penuh dengan menggunakan kurang dari 2 TB ruangan cakram, dalam waktu kurang dari 3 hari
 
 ### Mode sinkronisasi {#sync-modes}
 
@@ -172,7 +171,7 @@ Mode sinkronisasi mewakili pendekatan berbeda terhadap proses ini dengan berbaga
 
 Tinjauan umum pendekatan sinkronisasi yang digunakan dalam klien untuk Jaringan Utama:
 
-##### Sinkonisasi penuh {#full-sync}
+##### Sinkonisasi penuh
 
 Sinkronisasi penuh mengunduh semua blok (termasuk header, transaksi, dan bukti pembayaran) dan menghasilkan state blockchain yang terus bertambah dengan mengeksekusi setiap blok dari blok genesis.
 
@@ -293,7 +292,7 @@ Mode sinkronisasi yang Anda pilih akan mempengaruhi persyaratan ukuran ruangan c
 
 ![Sebuah bagan menunjukkan GB yang diperlukan untuk satu sinkronisasi arsip sedang populer](./archive-sync.png)
 
-Bagan ini menunjukkan bagaimana persyaratan kapasitas penyimpanan selalu berubah. Untuk data Geth dan Parity yang paling terbaru, lihat[ data sinkronisasi penuh](https://etherscan.io/chartsync/chaindefault) dan [ data sinkronisasi arsip](https://etherscan.io/chartsync/chainarchive).
+Bagan ini menunjukkan bagaimana persyaratan kapasitas penyimpanan selalu berubah. Untuk data Geth dan Parity yang paling terbaru, lihat [data sinkronisasi penuh](https://etherscan.io/chartsync/chaindefault) dan [ data sinkronisasi arsip](https://etherscan.io/chartsync/chainarchive).
 
 ### Ethereum pada komputer papan tunggal {#ethereum-on-a-single-board-computer}
 

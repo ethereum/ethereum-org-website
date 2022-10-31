@@ -3,15 +3,14 @@ title: Solidity'nin diğer sözleşmeleriyle etkileşime geçin
 description: Mevcut bir sözleşmeden akıllı bir sözleşme nasıl kurulur ve onunla nasıl etkileşim kurulur
 author: "jdourlens"
 tags:
-  - "akıllı sözleşmeler"
+  - "akıllı kontratlar"
   - "solidity"
   - "remix"
   - "fabrikalar"
   - "dağıtma"
   - "birleştirilebilirlik"
-skill: gelişmiş
+skill: advanced
 lang: tr
-sidebar: true
 published: 2020-04-05
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/interact-with-other-contracts-from-solidity/

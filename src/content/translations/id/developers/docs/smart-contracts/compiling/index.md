@@ -2,7 +2,6 @@
 title: Mengompilasi kontrak pintar
 description: Penjelasan mengapa Anda perlu mengompilasi kontrak pintar dan apa yang sebenarnya dilakukan pengompilasian.
 lang: id
-sidebar: true
 incomplete: true
 ---
 
@@ -276,4 +275,4 @@ Di bawah ini adalah ABI untuk kontrak token ERC-20. ERC-20 adalah token yang bis
 ## Topik terkait {#related-topics}
 
 - [Pustaka klien JavaScript](/developers/docs/apis/javascript/)
-- [Mesin virtual Ethereum](/developers/docs/ethereum-virtual-machine/)
+- [Mesin virtual Ethereum](/developers/docs/evm/)

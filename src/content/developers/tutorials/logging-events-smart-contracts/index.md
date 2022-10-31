@@ -5,14 +5,13 @@ author: "jdourlens"
 tags: ["smart contracts", "remix", "solidity", "events"]
 skill: intermediate
 lang: en
-sidebar: true
 published: 2020-04-03
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/logging-data-with-events/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-In Solidity, [events](/developers/docs/smart-contracts/anatomy/#events-and-logs) are dispatched signals the smart contracts can fire. DApps, or anything connected to Ethereum JSON-RPC API, can listen to these events and act accordingly. An event can also be indexed so that the event history is searchable later.
+In Solidity, [events](/developers/docs/smart-contracts/anatomy/#events-and-logs) are dispatched signals the smart contracts can fire. Dapps, or anything connected to Ethereum JSON-RPC API, can listen to these events and act accordingly. An event can also be indexed so that the event history is searchable later.
 
 ## Events {#events}
 

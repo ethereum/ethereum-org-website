@@ -2,12 +2,11 @@
 title: "Ethereum: Documentação de desenvolvimento"
 description: Introduzindo a documentação de desenvolvimento da rede Ethereum.
 lang: pt-br
-sidebar: true
 ---
 
 O objetivo dessa documentação é ajudá-lo a criar utilizando o Ethereum. Ela cobre o Ethereum como um conceito, explica a tecnologia de pilha do Ethereum e documenta tópicos avançados para aplicativos e casos de uso mais complexos.
 
-Este é um empenho da comunidade open-source, então sinta-se à vontade para sugerir novos tópicos, adicionar novo conteúdo e fornecer exemplos onde você achar que pode ser útil. Toda a documentação é editável através do GitHub. Se não souber como, [siga estas instruções](https://github.com/ethereum/ethereum-org-website/tree/dev/docs/contributing/EDITING_MARKDOWN.md).
+Este é um empenho da comunidade open-source, então sinta-se à vontade para sugerir novos tópicos, adicionar novo conteúdo e fornecer exemplos onde você achar que pode ser útil. Toda a documentação é editável através do GitHub. Se não souber como, [siga estas instruções](https://github.com/ethereum/ethereum-org-website/tree/dev/docs/editing-markdown.md).
 
 ## Módulos de desenvolvimento {#development-modules}
 

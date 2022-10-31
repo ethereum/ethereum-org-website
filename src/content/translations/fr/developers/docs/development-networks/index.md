@@ -2,7 +2,6 @@
 title: Réseaux de développement
 description: "Présentation des réseaux de développement et des outils disponibles pour \nconstruire des applications Ethereum."
 lang: fr
-sidebar: true
 ---
 
 Quand vous construirez une application Ethereum avec des contrats intelligents, vous voudrez l'exécuter sur un réseau local pour vérifier son fonctionnement avant de la déployer.
@@ -54,5 +53,5 @@ _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
 ## Sujets connexes {#related-topics}
 
-- [Frameworks de développement](/developers/docs/frameworks/)
+- [Infrastructures de développement](/developers/docs/frameworks/)
 - [Configurer un environnement de développement local](/developers/local-environment/)

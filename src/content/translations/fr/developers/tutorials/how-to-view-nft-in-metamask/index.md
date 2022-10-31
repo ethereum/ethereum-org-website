@@ -9,9 +9,8 @@ tags:
   - "MetaMask"
   - "jetons non-fongibles"
   - "Solidity"
-skill: débutant
+skill: beginner
 lang: fr
-sidebar: true
 published: 2021-04-22
 ---
 

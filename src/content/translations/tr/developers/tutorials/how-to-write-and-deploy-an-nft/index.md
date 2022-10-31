@@ -8,9 +8,8 @@ tags:
   - "Alchemy"
   - "Solidity"
   - "akıllı sözleşmeler"
-skill: acemi
+skill: beginner
 lang: tr
-sidebar: true
 published: 2021-04-22
 ---
 
@@ -89,7 +88,7 @@ Kurulum sorularına nasıl cevap verdiğiniz çok önemli değil; referans olmas
     author:
     license: (ISC)
     About to write to /Users/thesuperb1/Desktop/my-nft/package.json:
-    
+
     {
       "name": "my-nft",
       "version": "1.0.0",

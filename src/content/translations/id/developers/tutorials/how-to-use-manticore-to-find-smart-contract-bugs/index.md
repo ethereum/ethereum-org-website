@@ -3,14 +3,13 @@ title: Cara menggunakan Manticore untuk menemukan bug dalam kontrak pintar
 description: Cara menggunakan Manticore untuk menemukan bug dalam kontrak pintar secara otomatis
 author: Trailofbits
 lang: id
-sidebar: true
 tags:
   - "solidity"
   - "kontrak pintar"
   - "keamanan"
   - "pengujian"
   - "verifikasi formal"
-skill: tingkat lanjut
+skill: advanced
 published: 2020-01-13
 source: Membuat kontrak yang aman
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore

@@ -2,7 +2,6 @@
 title: Bibliotecas de API JavaScript
 description: Uma introdução às bibliotecas de cliente JavaScript que permitem que você interaja com a cadeia de blocos de seu aplicativo.
 lang: pt-br
-sidebar: true
 ---
 
 Para que um aplicativo web interaja com a cadeia de blocos Ethereum (ou seja, leia os dados da cadeia de blocos e/ou envie transações para a rede), ele deve se conectar a um nó Ethereum.
@@ -13,7 +12,7 @@ Se você quiser usar JavaScript para se conectar a um nó Ethereum, é possível
 
 ## Pré-requisitos {#prerequisites}
 
-Além de entender o JavaScript, pode ser útil entender a [pilha de Ethereum](/developers/docs/ethereum-stack/) e[ clientes Ethereum](/developers/docs/nodes-and-clients/).
+Além de entender o JavaScript, pode ser útil entender a [pilha de Ethereum](/developers/docs/ethereum-stack/) e [clientes Ethereum](/developers/docs/nodes-and-clients/).
 
 ## Por que usar uma biblioteca? {#why-use-a-library}
 
@@ -264,7 +263,7 @@ ethers.utils.formatEther(balance)
 
 **Alchemyweb3 -** **_Wrapper em torno de Web3.js com tentativas automáticas e apis aprimoradas._**
 
-- [Documentação](https://docs.alchemyapi.io/documentation/alchemy-web3)
+- [Documentação](https://docs.alchemy.com/reference/api-overview)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
 **Alchemy NFT API -** **_API for fetching NFT data, including ownership, metadata attributes and more._**

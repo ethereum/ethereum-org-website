@@ -3,13 +3,12 @@ title: 通证集成检查清单
 description: 与通证交互时需要考虑的事项检查清单
 author: "Trailofbits"
 lang: zh
-sidebar: true
 tags:
   - "solidity"
   - "智能合约"
   - "安全性"
   - "通证"
-skill: 中级
+skill: intermediate
 published: 2020-08-13
 source: 构建安全的合约
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

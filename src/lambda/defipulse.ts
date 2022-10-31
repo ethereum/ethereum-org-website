@@ -3,7 +3,7 @@ import takeRightWhile from "lodash/takeRightWhile"
 
 import type { HandlerResponse } from "@netlify/functions"
 
-const lambda = async (): Promise<HandlerResponse> => {
+export const lambda = async (): Promise<HandlerResponse> => {
   try {
     const response = await axios.get(`https://api.llama.fi/charts/Ethereum`)
     if (response.status < 200 || response.status >= 300) {
@@ -34,8 +34,6 @@ const lambda = async (): Promise<HandlerResponse> => {
   }
 }
 
-const handler = (): Promise<HandlerResponse> => {
+export const handler = (): Promise<HandlerResponse> => {
   return lambda()
 }
-
-export { handler, lambda }

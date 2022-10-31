@@ -9,9 +9,8 @@ tags:
   - "MetaMask"
   - "tokenuri nefungibile"
   - "Solidity"
-skill: începător
+skill: beginner
 lang: ro
-sidebar: true
 published: 2021-04-22
 ---
 

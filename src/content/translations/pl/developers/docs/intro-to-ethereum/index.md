@@ -2,7 +2,6 @@
 title: Wprowadzenie do Ethereum
 description: Wprowadzenie dla dewelopera aplikacji zdecentralizowanych do podstawowych pojęć Ethereum.
 lang: pl
-sidebar: true
 ---
 
 ## Czym jest blockchain? {#what-is-a-blockchain}
@@ -107,4 +106,4 @@ Wycinek kodu (program) wielokrotnego użytku, który programista umieszcza w pam
 
 ## Powiązane samouczki {#related-tutorials}
 
-- [Przewodnik programisty po Ethereum, część 1 ](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– A bardzo przyjazna dla początkujących eksploracja Ethereum za pomocą Pythona i web3.py_
+- [Przewodnik programisty po Ethereum, część 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– A bardzo przyjazna dla początkujących eksploracja Ethereum za pomocą Pythona i web3.py_

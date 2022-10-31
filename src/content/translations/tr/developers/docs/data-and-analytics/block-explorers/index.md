@@ -1,14 +1,13 @@
 ---
-title: Blok arayıcıları
+title: Blok Arayıcıları
 description: İşlemler, hesaplar, sözleşmeler ve daha fazlası hakkında bilgi sorgulayabileceğiniz blok zinciri verileri dünyasına açılan portalınız olan blok arayıcılarına giriş.
 lang: tr
-sidebar: true
 sidebarDepth: 3
 ---
 
 Blok arayıcıları, Ethereum'un verilerine açılan portalınızdır. Bunları; bloklar, işlemler, madenciler, hesaplar ve diğer zincir üstü olaylarla ilgili gerçek zamanlı verileri görmek için kullanabilirsiniz.
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
 Bir blok arayıcısının size verdiği verileri anlamlandırabilmeniz için Ethereum'un temel kavramlarını anlamalısınız. [Ethereum'a giriş](/developers/docs/intro-to-ethereum/) ile başlayın.
 
@@ -263,9 +262,9 @@ Mutabakat katmanı üst düzey verileri şunları içerir:
 - [https://beaconscan.com/](https://beaconscan.com/)
 - [https://ethscan.org/](https://ethscan.org/) (beaconcha.in çatalı)
 
-## Daha Fazla Bilgi {#further-reading}
+## Daha fazla okuma {#further-reading}
 
-_Topluluk kaynağı size yardımcı oldu mu? Bu sayfayı düzenleyin ve yeni bilgiler ekleyin!_
+_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
 
 ## İlgili Konular {#related-topics}
 

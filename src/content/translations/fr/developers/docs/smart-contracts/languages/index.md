@@ -1,8 +1,7 @@
 ---
-title: Les langages des contrats intelligents
-description: 'Présentation et comparaison des deux principaux langages de contrat intelligent : Solidity et Vyper'
+title: Langages du contrat intelligent
+description: "Présentation et comparaison des deux principaux langages de contrat intelligent : Solidity et Vyper"
 lang: fr
-sidebar: true
 ---
 
 Un aspect important d'Ethereum est que les contrats intelligents peuvent être programmés en utilisant des langages relativement conviviaux pour les développeurs. Si vous maitrisez Python ou n'importe quel [langage d'accolades](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), vous pouvez trouver un langage avec une syntaxe qui vous sera familière.
@@ -207,7 +206,7 @@ Si vous débutez avec Ethereum et que vous n'avez pas encore jamais codé avec d
 
 - Langage intermédiaire pour Ethereum
 - Prends en charge l'[EVM](/developers/docs/evm) et l'[Ewasm](https://github.com/ewasm), un assemblage Web au petit goût d'Ethereum conçu pour être un dénominateur commun utilisable sur les deux plateformes.
-- Excellente cible pour les phases d'optimisation de haut niveau qui peuvent bénéficier à la fois aux plateformes EVM et eWASM.
+- Excellente cible pour les phases d'optimisation de haut niveau qui peuvent bénéficier à la fois aux plateformes EVM et Ewasm.
 
 **Yul+**
 
@@ -245,7 +244,7 @@ Cet exemple simple implémente une fonction puissance. Il peut être compilé en
 }
 ```
 
-Si vous avez déjà une bonne expérience en développement de contrats intelligents, vous trouverez ici une [implémentation complète ERC20 dans Yul ](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
+Si vous avez déjà une bonne expérience en développement de contrats intelligents, vous trouverez ici une [implémentation complète ERC20 dans Yul](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
 
 ## Fe {#fe}
 
@@ -306,7 +305,7 @@ Voici quelques éléments à considérer si vous n'en avez encore essayé :
 ### Quels sont les avantages de Yul et Yul+ ? {#yul-advantages}
 
 - Language simple et fonctionnel de bas niveau.
-- Permet de se rapprocher au plus près de l'EVM brute, ce qui peut aider à optimiser l'utilisation du carburant de vos contrats.
+- Permet de se rapprocher au plus près de l'EVM brute, ce qui peut aider à optimiser l'utilisation du gaz de vos contrats.
 
 ## Comparaison des langages {#language-comparisons}
 

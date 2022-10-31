@@ -2,7 +2,6 @@
 title: Redes de desenvolvimento
 description: Uma visão geral das redes de desenvolvimento e ferramentas disponíveis para ajudar a construir aplicativos Ethereum.
 lang: pt-br
-sidebar: true
 ---
 
 Quando fizer um aplicativo Ethereum com contratos inteligentes, você poderá rodar ele em uma rede local para ver como funciona antes de implementar.
@@ -11,7 +10,7 @@ Tal como você pode executar um servidor local do seu computador para desenvolvi
 
 ## Pré-requisitos {#prerequisites}
 
-Você precisa entender conceitos [ básicos da pilha de Ethereum ](/developers/docs/ethereum-stack/) e [ das redes de Ethereum ](/developers/docs/networks/) antes de mergulhar nas redes de desenvolvimento.
+Você precisa entender conceitos [básicos da pilha de Ethereum](/developers/docs/ethereum-stack/) e [das redes de Ethereum](/developers/docs/networks/) antes de mergulhar nas redes de desenvolvimento.
 
 ## O que é uma rede de desenvolvimento? {#what-is-a-development-network}
 

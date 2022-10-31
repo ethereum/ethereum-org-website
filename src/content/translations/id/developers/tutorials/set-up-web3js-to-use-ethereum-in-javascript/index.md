@@ -5,9 +5,8 @@ author: "jdourlens"
 tags:
   - "web3.js"
   - "javascript"
-skill: pemula
+skill: beginner
 lang: id
-sidebar: true
 published: 2020-04-11
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/setup-web3js-to-use-the-ethereum-blockchain-in-javascript/

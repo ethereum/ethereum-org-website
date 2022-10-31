@@ -3,13 +3,12 @@ title: "如何缩减合约以规避合约大小限制"
 description: 您可以做些什么避免智能合约变得太大？
 author: Markus Waas
 lang: zh
-sidebar: true
 tags:
   - "solidity"
   - "智能合约"
   - "存储"
   - "truffle"
-skill: 中级难度
+skill: intermediate
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size

@@ -7,9 +7,8 @@ tags:
   - "erc-721"
   - "solidity"
   - "token"
-skill: intermedio
+skill: intermediate
 lang: it
-sidebar: true
 published: 2020-03-19
 source: Hackernoon
 sourceUrl: https://hackernoon.com/how-to-implement-an-erc721-market-1e1a32j9
@@ -137,7 +136,7 @@ function cancelTrade(uint256 _trade)
 }
 ```
 
-Ecco qua. Siamo giunti alla fine dell'implementazione. È sorprendente come alcuni concetti di business siano compatti quando vengono espressi con codice, e questo è uno di questi esempi. Guarda il contratto completo [nel nostro repo](https://github.com/HQ20/contracts/blob/dev/contracts/classifieds/Classifieds.sol?ref=hackernoon.com).
+Ecco qua. Siamo giunti alla fine dell'implementazione. È sorprendente come alcuni concetti di business siano compatti quando vengono espressi con codice, e questo è uno di questi esempi. Guarda il contratto completo [nel nostro repo](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
 
 ## Conclusione {#conclusion}
 

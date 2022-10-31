@@ -2,14 +2,13 @@
 title: Norme de jeton ERC-777
 description:
 lang: fr
-sidebar: true
 ---
 
 ## Introduction ? {#introduction}
 
 ERC-777 est un type de jeton fongible améliorant le standard [ERC-20](/developers/docs/standards/tokens/erc-20/) existant.
 
-## Prérequis {#prerequisites}
+## Pré-requis {#prerequisites}
 
 Pour mieux comprendre cette page, nous vous recommandons de lire en premier lieu la page [ERC-20](/developers/docs/standards/tokens/erc-20/).
 

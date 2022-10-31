@@ -2,10 +2,9 @@
 title: Keamanan Ethereum dan pencegahan penipuan
 description: Tetap aman di Ethereum
 lang: id
-sidebar: true
 ---
 
-# Keamanan ethereum dan pencegahan penipuan {#introduction}
+# Keamanan Ethereum dan pencegahan penipuan {#introduction}
 
 Dengan berkembangnya ketertarikan pada mata uang digital, mempelajari cara terbaik menggunakan mata uang digital menjadi perlu. Mata uang digital dapat menjadi menyenangkan dan menarik, tetapi juga ada risiko serius. Jika Anda mengerjakan sejumlah pekerjaan awal ini, Anda dapat mengurangi risiko tersebut.
 

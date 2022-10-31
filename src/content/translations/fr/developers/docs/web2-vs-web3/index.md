@@ -1,8 +1,7 @@
 ---
-title: Web2 et Web3
+title: Web2 vs Web3
 description:
 lang: fr
-sidebar: true
 ---
 
 Web2 fait référence à la version d'Internet que la plupart d'entre nous connaissent aujourd'hui. Un Internet dominé par les sociétés qui fournissent des services en échange de vos données personnelles. Dans le contexte d'Ethereum, Web3 fait référence aux applications décentralisées qui s'exécutent sur la blockchain. Ce sont des applications qui permettent à quiconque de participer sans monétiser ses données personnelles.
@@ -28,7 +27,7 @@ De nombreux développeurs Web3 ont choisi de construire des dApps en raison de l
 
 Cela ne signifie pas pour autant que tous les services doivent être transformés en dApps. Ces exemples illustrent simplement les principales différences entre les services Web2 et Web3.
 
-## Limitation du Web3 {#web3-limitations}
+## Limitations du Web3 {#web3-limitations}
 
 Le Web3 affiche actuellement quelques limitations :
 

@@ -4,7 +4,6 @@ description: Prezentare generală a NFT-urilor pe Ethereum
 lang: ro
 template: use-cases
 emoji: ":frame_with_picture:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/infrastructure_transparent.png
 alt: Sigla Eth-ului afișată printr-o hologramă.
@@ -406,7 +405,7 @@ Se estimează că actualizările de scalabilitate vor permite rețelei să proce
 
 [Vitalik Buterin despre potențialul tranzacțiilor pe secundă cu sistemul de fragmentare](https://twitter.com/VitalikButerin/status/1312905884549300224)
 
-Fragmentarea va permite cel puțin un număr de tranzacții de 64 de ori mai mare decât numărul actual, care este de aproximativ 15 tranzacții. Este cantitatea de lanțuri de fragmente (date și capacitate în plus) care va fi introdusă. [Mai multe informații despre lanțurile de fragmente](/upgrades/shard-chains/)
+Fragmentarea va permite cel puțin un număr de tranzacții de 64 de ori mai mare decât numărul actual, care este de aproximativ 15 tranzacții. Este cantitatea de lanțuri de fragmente (date și capacitate în plus) care va fi introdusă. [Mai multe informații despre lanțurile de fragmente](/upgrades/sharding/)
 
 Asta înseamnă că putem estima cât timp va dura procesarea a 100.000 de tranzacții, astfel încât să putem compara cu exemplul Visa de mai sus.
 

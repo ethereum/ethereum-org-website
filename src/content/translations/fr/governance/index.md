@@ -2,12 +2,11 @@
 title: Gouvernance d'Ethereum
 description: Une introduction à la façon dont les décisions concernant Ethereum sont prises.
 lang: fr
-sidebar: true
 ---
 
 # Introduction à la gouvernance d'Ethereum {#introduction}
 
-_Si personne ne possède Ethereum, comment les décisions concernant les changements passés et futurs sur Ethereum sont-elles prises ? La gouvernance d'Ethereum se rapporte au processus qui permet de prendre de telles décisions_
+_Si personne ne possède Ethereum, comment les décisions concernant les changements passés et futurs sur Ethereum sont-elles prises ? On entend par gouvernance d'Ethereum le processus qui permet de prendre des décisions._
 
 <Divider />
 
@@ -21,7 +20,7 @@ Aucune personne ne possède ou ne contrôle le protocole d'Ethereum, mais des d�
 
 ## Gouvernance d'Ethereum {#ethereum-governance}
 
-La gouvernance d'Ethereum est le processus par lequel des changements de protocole sont apportés. Il est important de souligner que ce processus n'est pas lié à la façon dont les gens et les applications utilisent le protocole - Ethereum est sans permission. N'importe qui depuis n'importe où dans le monde peut participer aux activités sur la blockchain. Il n'y a aucune règle définie pour qui peut ou ne peut pas construire une application ou envoyer une transaction. Cependant, il y a un processus pour proposer des modifications au protocole principal, au dessus duquel ces applications s'exécutent. Étant donné que tant de personnes dépendent de la stabilité d'Ethereum, il y a un seuil de coordination très élevé pour les changements de base, y compris les processus sociaux et techniques, pour s'assurer que toute modification d'Ethereum est sécurisée et largement soutenue par la communauté.
+La gouvernance d'Ethereum est le processus par lequel des changements de protocole sont apportés. Il est important de souligner que ce processus n'est pas lié à la façon dont les gens et les applications utilisent le protocole - Ethereum est sans permission. N'importe qui depuis n'importe où dans le monde peut participer aux activités sur la blockchain. Il n'y a aucune règle définie pour qui peut ou ne peut pas construire une application ou envoyer une transaction. Cependant, il y a un processus pour proposer des modifications au protocole principal, au dessus duquel ces applications s'exécutent. Dans la mesure où un très grand nombre de personnes dépendent de la stabilité d'Ethereum, tout changement fondamental apporté à Ethereum, qu'il soit technique ou social, doit être validé par le plus grand nombre afin de s'assurer qu'il soit sûr et largement soutenu par la communauté.
 
 ### Gouvernance sur la blockchain vs hors chaîne {#on-chain-vs-off-chain}
 
@@ -123,17 +122,17 @@ La fourche DAO est la réponse à l'attaque [DAO de 2016](https://www.coindesk.c
 
 Ce plan d'action a été voté par la communauté Ethereum. Tout détenteur d'ETH a pu voter via une transaction sur [une plateforme de vote](http://v1.carbonvote.com/). Plus de 85 % des votes étaient favorables à la fourche.
 
-Il est important de noter que alors que le protocole a fait un fork pour annuler le hack, le poids du vote lors de la décision de la fourche est discutable pour quelques raisons :
+Il est important de noter qu'alors que le protocole a fait une fourche pour annuler le hack, le poids du vote lors de la décision de la fourche est discutable pour quelques raisons :
 
 - Le taux de participation au vote était incroyablement faible
 - La plupart des gens ne savaient pas que le vote se passait
 - Le vote ne représentait que les détenteurs de ETH, et non aucun des autres participants au système
 
-Un sous-ensemble de la communauté a refusé de se forcer, en grande partie parce qu'ils ont estimé que l'incident de DAO n'était pas un défaut dans le protocole. Ils ont ensuite formé [Ethereum Classic](https://ethereumclassic.org/).
+Un sous-ensemble de la communauté a refusé de suivre la fourche, en grande partie parce qu'ils ont estimé que l'incident de DAO n'était pas un défaut dans le protocole. Ils ont ensuite formé [Ethereum Classic](https://ethereumclassic.org/).
 
 Aujourd'hui, la communauté Ethereum a adopté une politique de non-intervention en cas de bugs de contrat ou de perte de fonds pour maintenir la neutralité crédible du système.
 
-Regardez-en plus sur le piratege DAO :
+Regardez-en plus sur le piratage DAO :
 
 <YouTube id="rNeLuBOVe8A" />
 
@@ -143,7 +142,7 @@ Regardez-en plus sur le piratege DAO :
 
 La fourche Ethereum/Ethereum Classic est un excellent exemple de fourche saine. Nous avons eu deux groupes qui étaient assez en désaccord les uns avec les autres sur certaines valeurs fondamentales pour considérer qu'il valait la peine de prendre les risques que comporte la poursuite de leurs actions spécifiques.
 
-La capacité à faire face à des différences politiques, philosophiques ou économiques significatives joue un rôle important dans le succès de la gouvernance d'Ethereum. Sans la capacité de fork l'alternative était en cours de combat, a forcé une participation réticente pour ceux qui ont finalement formé Ethereum Classic et une vision de plus en plus différente de ce que donne le succès d'Ethereum.
+La capacité à faire face à des différences politiques, philosophiques ou économiques significatives joue un rôle important dans le succès de la gouvernance d'Ethereum. Sans la fourche, il y aurait eu des luttes incessantes, une réticence à participer pour ceux qui ont finalement formé Ethereum Classic et une vision de plus en plus divergente de ce qui ferait le succès d'Ethereum.
 
 <Divider />
 

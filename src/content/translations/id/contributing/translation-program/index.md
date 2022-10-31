@@ -2,7 +2,6 @@
 title: Program Penerjemahan
 lang: id
 description: Bagaimana berkontribusi pada Program Terjemahan ethereum.org
-sidebar: true
 ---
 
 # Program Penerjemahan {#translation-program}
@@ -153,7 +152,3 @@ Untuk tetap mendapatkan info terkini tentang kemajuan Program Terjemahan terbaru
 Komunitas terjemahan kami juga sedang mengerjakan [Launchpad Penaruhan](https://launchpad.ethereum.org/en/). Ini memperbolehkan siapa saja untuk mengatur validator Ethereum dan membantu mengamankan jaringan Ethereum. Launchpad saat ini terdiri dari 17 bahasa.
 
 Jika Anda tertarik, [ikuti projek terjemahan Launchpad Penaruhan Ethereum di Crowdin](https://crowdin.com/project/ethereum-staking-launchpad). Anda dapat [membuat masalah](https://github.com/ethereum/staking-launchpad/issues/new) di GitHub untuk meminta penambahan bahasa baru, jika bahasa Anda tidak tersedia di Crowdin.
-
-## Terjemahan yang sedang berlangsung {#in-progress}
-
-<TranslationsInProgress />

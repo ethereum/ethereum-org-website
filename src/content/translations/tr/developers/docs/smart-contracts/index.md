@@ -2,7 +2,6 @@
 title: Akıllı sözleşmelere giriş
 description: Akıllı sözleşmelerin benzersiz özelliklerine ve kısıtlamalarına odaklanan genel bir bakış.
 lang: tr
-sidebar: true
 ---
 
 ## Akıllı sözleşme nedir? {#what-is-a-smart-contract}
@@ -106,7 +105,7 @@ Akıllı sözleşmelerin diğer bir kısıtlaması ise maksimum sözleşme boyut
 - [Dappsys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
-## Daha Fazla Okuyun {#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 - [Akıllı Sözleşmeler: Avukatların Yerini Alacak Blok Zinciri Teknolojisi](https://blockgeeks.com/guides/smart-contracts/) _– Blockgeeks_
 - [Akıllı Sözleşme Geliştirme için En İyi Yöntemler](https://yos.io/2019/11/10/smart-contract-development-best-practices/) _– 10 Kasım 2019 - Yos Riady_

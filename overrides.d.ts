@@ -1,4 +1,15 @@
-// temporary override until we figure out how to solve the `getImage` type
-// errors.
-// TODO: create issue in Gatsby repo
-declare module "gatsby-plugin-image"
+declare module "*developer-docs-links.yaml" {
+  import { DeveloperDocsLink } from "./src/types"
+  const content: Array<DeveloperDocsLink>
+  export default content
+}
+
+declare module "*.mp4" {
+  const src: string
+  export default src
+}
+
+declare module "!!raw-loader!*" {
+  const content: string
+  export default content
+}

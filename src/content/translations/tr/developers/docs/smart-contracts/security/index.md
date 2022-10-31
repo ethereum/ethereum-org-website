@@ -2,7 +2,6 @@
 title: Akıllı sözleşme güvenliği
 description: Ethereum geliştiricileri için güvenlik değerlendirmeleri
 lang: tr
-sidebar: true
 ---
 
 Ethereum akıllı sözleşmeleri aşırı esnektirler; hem büyük miktarlarda token tutabilirler (genelde 1 milyar ABD Dolarından fazla) hem de önceden dağıtılmış akıllı sözleşme kodunu esas alarak değişmez mantık çalıştırabilirler. Bu; güvene gerek olmayan ve birbirine bağlı akıllı sözleşmelerden oluşan renkli ve yaratıcı bir ekosistem oluşturmuş olsa da; akıllı sözleşmelerdeki güvenlik açıklarından ve Ethereum'daki beklenmedik davranışlardan faydalanarak kâr elde etmek isteyen saldırganları cezbetmek için mükemmel bir ekosistemdir. Akıllı sözleşme kodu _genellikle_ güvenlik açıklarını onarmak için değiştirilemez; akıllı sözleşmelerden çalınan varlıklar kurtarılamaz ve çalınan varlıkların takibini yapmak aşırı derecede zordur. Akıllı sözleşme sorunlarına bağlı olarak çalınan veya kaybolan toplam değer miktarı, kuşkusuz 1 milyar ABD dolarının üzerindedir. Akıllı sözleşme kodlama hatalarına bağlı bazı büyük kayıplar:
@@ -305,7 +304,7 @@ Slither, bu konuda yeniden giriş için bir potansiyel tespit ederek sorunun ger
 
 Böylece kodunuzla ilgili potansiyel sıkıntıları hızlıca öğrenebilmenizi sağladı. Tüm otomatikleştirilmiş test araçları gibi, Slither mükemmel değildir ve aşırı rapor etmeye meyillidir. Suistimal edilebilir bir zaafiyet olmadığında bile sizi potansiyel bir yeniden giriş hakkında uyarabilir. Genelde kod değişiklikleri arasında Slither çıktısındaki FARKLARI incelemek aşırı derecede aydınlatıcıdır: Projenizin kodu tamamlanıncaya kadar beklemektense ortaya çıkan zaafiyetleri çok daha erken keşfetmeye yardımcı olur.
 
-## Daha Fazla Okuyun {#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 **Akıllı sözleşme güvenliği için en iyi yöntemlere dair kılavuzlar**
 

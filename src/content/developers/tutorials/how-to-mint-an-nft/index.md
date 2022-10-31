@@ -5,7 +5,6 @@ author: "Sumi Mudgil"
 tags: ["NFTs", "ERC-721", "alchemy", "solidity", "smart contracts"]
 skill: beginner
 lang: en
-sidebar: true
 published: 2021-04-22
 ---
 
@@ -156,7 +155,7 @@ First, let’s define a function named `mintNFT(tokenData)` and create our trans
 
 - `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()` — The computation we wish to perform in this transaction — which in this case is minting a NFT
 
-Your <code>mint-nft.js</code> file should look like this now:
+Your `mint-nft.js` file should look like this now:
 
 ```js
    require('dotenv').config();
@@ -308,9 +307,7 @@ async function mintNFT(tokenURI) {
     })
 }
 
-mintNFT(
-  "ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP"
-)
+mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 ```
 
 Now, run `node scripts/mint-nft.js` to deploy your NFT. After a couple of seconds, you should see a response like this in your terminal:

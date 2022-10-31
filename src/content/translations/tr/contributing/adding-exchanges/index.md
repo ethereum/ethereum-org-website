@@ -2,7 +2,6 @@
 title: Borsa ekleme
 description: Ethereum.org'a borsa eklerken kullandığımız politika
 lang: tr
-sidebar: true
 ---
 
 # Ethereum borsaları ekleme {#adding-ethereum-exchanges}
@@ -37,5 +36,5 @@ Ve böylece ethereum.org, değişimin meşru ve güvenli bir hizmet olduğundan 
 Ethereum.org'a bir borsa eklemek istiyorsanız, GitHub'da bir konu oluşturun.
 
 <ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
-  Bir konu oluştur
+  Bir konu oluşturun
 </ButtonLink>

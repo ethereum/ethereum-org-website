@@ -2,7 +2,6 @@
 title: 翻訳プログラム
 lang: ja
 description: ethereum.orgサイトの翻訳プログラムに貢献する方法
-sidebar: true
 ---
 
 # 翻訳プログラム {#translation-program}
@@ -131,7 +130,3 @@ ethereum.org 翻訳プログラムにご参加いただき、ありがとうご�
 翻訳コミュニティでは、 [ステーキング・ローンチパッド](https://launchpad.ethereum.org/en/) の翻訳にも取り組んでいます。 これにより、誰でも Ethereum のバリデータとして設定でき、Ethereum ネットワークを保護することができます。 ローンチパッドは現在 17 言語に対応しています。
 
 ご興味があれば、[Crowdin の Ethereum ステーキングローンチパッドの翻訳プロジェクトにご参加ください](https://crowdin.com/project/ethereum-staking-launchpad)。 Crowdin で利用できない言語がある場合は、GitHub で[問題を作成](https://github.com/ethereum/staking-launchpad/issues/new)して、新しい言語の追加をリクエストすることができます。
-
-## 進行中の翻訳 {#in-progress}
-
-<TranslationsInProgress />

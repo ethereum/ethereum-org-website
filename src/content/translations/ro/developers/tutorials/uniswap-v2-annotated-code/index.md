@@ -2,11 +2,10 @@
 title: "Analiza contractului Uniswap-v2"
 description: Cum funcționează contractul Uniswap-v2? De ce este scris în acest fel?
 author: Ori Pomerantz
-sidebar: true
 tags:
   - "solidity"
   - "uniswap"
-skill: intermediar
+skill: intermediate
 published: 2021-05-01
 lang: ro
 ---
@@ -25,7 +24,7 @@ _Comercianții_ trimit un tip de token la fondul comun și îl primesc pe celăl
 
 Când furnizorii de lichidităţi își vor înapoi activele, aceștia pot arde tokenurile fondului comun și îşi pot primi înapoi tokenurile, inclusiv partea lor de recompense.
 
-[Faceți clic aici pentru a vedea o descriere completă](https://uniswap.org/docs/v2/core-concepts/swaps/).
+[Faceți clic aici pentru a vedea o descriere completă](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/swaps/).
 
 ### De ce v2? De ce nu v3? {#why-v2}
 
@@ -655,7 +654,7 @@ Acesta este un control al sănătăţii, pentru a ne asigura că nu pierdem în 
 
 Actualizează `reserve0` și `reserve1`, iar dacă este necesar acumulatorii de preț și marca temporală, apoi emite un eveniment.
 
-##### Sync or Skim {#sync-or-skim}
+##### Sync or Skim
 
 Este posibil ca soldurile reale să fie desincronizate de rezervele pe care crede că le are schimbul în pereche. Nu există nicio posibilitate de a retrage tokenuri fără aprobarea contractului, însă depozitele sunt o cu totul altă problemă. Un cont poate transfera tokenuri către schimb fără să apeleze nici la `mint`, nici la `swap`.
 

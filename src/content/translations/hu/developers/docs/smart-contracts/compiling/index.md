@@ -2,7 +2,6 @@
 title: Okos szerződések fordítása
 description: Egy magyarázat arról, hogy miért kell az okosszerződéseket fordítani és hogy pontosan mit csinál a fordítás.
 lang: hu
-sidebar: true
 incomplete: true
 ---
 
@@ -276,4 +275,4 @@ Lentebb van az ERC-20 token szerződés ABI-ja. Az ERC-20 egy token, mellyel az 
 ## Kapcsolódó témák {#related-topics}
 
 - [JavaScript kliens könyvtárak](/developers/docs/apis/javascript/)
-- [Ethereum virtuális gép](/developers/docs/ethereum-virtual-machine/)
+- [Ethereum virtuális gép](/developers/docs/evm/)

@@ -1,8 +1,7 @@
 ---
-title: Javascript geliştiricileri için Ethereum
+title: JavaScript Geliştiricileri için Ethereum
 description: JavaScript tabanlı projeler ve araçlarla nasıl Ethereum için geliştireceğinizi öğrenin.
 lang: tr
-sidebar: true
 ---
 
 JavaScript, Ethereum ekosistemindeki en popüler diller arasındadır. Hatta Ethereum'u mümkün olduğunca JavaScript'e taşımaya adanmış bir [ekip](https://github.com/ethereumjs) bulunuyor.
@@ -11,7 +10,7 @@ Yığının her seviyesinde JavaScript (veya benzer bir şey) yazma [fırsatlar�
 
 ## Ethereum ile etkileşime gir {#interact-with-ethereum}
 
-### Javascript API kütüphaneleri {#javascript-api-libraries}
+### JavaScript API kütüphaneleri {#javascript-api-libraries}
 
 Eğer blok zincirini sorgulamak için JavaScript yazmak isterseniz, işlemleri göndermenin ve daha fazlasını yapmanın en uygun yolu bir [JavaScript API kütüphanesi kullanmaktır](/developers/docs/apis/javascript/). Bu API'ler, geliştiricilerin [ Ethereum ağındaki düğümlerle](/developers/docs/nodes-and-clients/) kolayca etkileşim kurmasına olanak tanır.
 
@@ -61,7 +60,7 @@ Geliştirme aşamasında bir Ethereumjs istemcisi bulunuyor. Bu, anladığınız
 Ethereum JavaScript alanında aşağıdakiler de dahil olmak üzere pek çok başka şey oluyor:
 
 - cüzdan yardımcı programlarının kütüphaneleri.
-- ethereum anahtarları oluşturmak, bunları içe ve dışa aktarmak için araçlar.
+- Ethereum anahtarları oluşturmak, bunları içe ve dışa aktarmak için araçlar.
 - Ethereum sarı kağıdında açıklanan `merkle-patricia-tree` veri yapısının bir uygulaması.
 
 [EthereumJS deposunda](https://github.com/ethereumjs) en çok ilginizi çeken şeyleri inceleyin

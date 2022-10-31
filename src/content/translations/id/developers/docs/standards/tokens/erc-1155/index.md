@@ -2,7 +2,6 @@
 title: Standar Token Multi ERC-1155
 description:
 lang: id
-sidebar: true
 ---
 
 ## Pendahuluan {#introduction}
@@ -143,4 +142,4 @@ _Catatan_: Semua fungsi kelompok termasuk kaitan juga hadir sebagai versi tanpa 
 
 - [EIP-1155: Standar Token Multi](https://eips.ethereum.org/EIPS/eip-1155)
 - [ERC-1155: Dokumen Openzeppelin](https://docs.openzeppelin.com/contracts/3.x/erc1155)
-- [ERC-1155: Repo Github](https://github.com/enjin/erc-1155)
+- [ERC-1155: Repo GitHub](https://github.com/enjin/erc-1155)

@@ -8,9 +8,8 @@ tags:
   - "solidity"
   - "noțiuni de bază"
   - "erc-20"
-skill: începător
+skill: beginner
 lang: ro
-sidebar: true
 published: 2020-04-05
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/understand-the-erc20-token-smart-contract/

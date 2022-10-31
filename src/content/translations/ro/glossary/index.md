@@ -2,7 +2,6 @@
 title: Glosar Ethereum
 description: Un glosar incomplet de termeni tehnici și netehnici referitori la Ethereum
 lang: ro
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -808,7 +807,7 @@ O [furculiță tare](#hard-fork) a blockchain-ului Ethereum, care a avut loc la 
 
 Prescurtare de la "rețea de testare", o rețea utilizată pentru a simula comportamentul rețelei principale Ethereum (a se vedea [Rețelei principale](#mainnet)).
 
-<DocLink to="/developers/docs/networks/#testnets">
+<DocLink to="/developers/docs/networks/#ethereum-testnets">
   Rețele de testare
 </DocLink>
 

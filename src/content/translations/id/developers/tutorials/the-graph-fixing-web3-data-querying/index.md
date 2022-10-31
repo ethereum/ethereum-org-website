@@ -3,7 +3,6 @@ title: "The Graph: Memperbaiki pembuatan kueri data Web3"
 description: Blockchain adalah seperti sebuah basis data tapi tanpa SQL. Semua data di sana, tapi tidak ada cara mengaksesnya. Saya akan menunjukkan pada Anda cara memperbaiki ini dengan The Graph dan GraphQL.
 author: Markus Waas
 lang: id
-sidebar: true
 tags:
   - "solidity"
   - "kontrak pintar"
@@ -11,7 +10,7 @@ tags:
   - "the graph"
   - "create-eth-app"
   - "bereaksi"
-skill: tingkat menengah
+skill: intermediate
 published: 2020-09-06
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/thegraph

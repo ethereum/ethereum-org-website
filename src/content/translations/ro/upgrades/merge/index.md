@@ -3,7 +3,6 @@ title: Unirea
 description: Află mai multe despre unire - atunci când rețeaua principală Ethereum se va alătura sistemului bazat pe Dovada Mizei (proof-of-stake), coordonat de rețeaua Beacon.
 lang: ro
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: În cele din urmă, Rețeaua principală Ethereum se va „uni” cu sistemul bazat pe Dovada Mizei (proof-of-stake), coordonat de rețeaua Beacon.
 summaryPoint2: Această schimbare va marca sfârșitul sistemului bazat pe Dovada Muncii (proof-of-work) și tranziția totală spre Dovada Mizei (proof-of-stake).
@@ -57,4 +56,4 @@ Inițial, planul era ca lanțurile de fragmente să fie folosite înainte de uni
 
 Acest lucru va fi evaluat în continuu de către comunitate în ceea ce privește necesitatea unor potențiale runde multiple de lanțuri de fragmente pentru a permite o scalabilitate infinită.
 
-<ButtonLink to="/upgrades/shard-chains/">Lanțuri de fragmente</ButtonLink>
+<ButtonLink to="/upgrades/sharding/">Lanțuri de fragmente</ButtonLink>

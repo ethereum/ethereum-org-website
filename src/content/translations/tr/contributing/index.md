@@ -1,8 +1,7 @@
 ---
-title: Katkıda Bulunma
+title: Katkılar
 description: Ethereum.org'a katkıda bulunmanın farklı yolları hakkında bilgi edinin
 lang: tr
-sidebar: true
 ---
 
 # Ethereum.org'a katkıda bulunma 🦄 {#contributing-to-ethereumorg}
@@ -72,7 +71,7 @@ Katkınız ethereum.org ile birleştirilirse, sizin için benzersiz bir katkıda
 ### Nasıl talep edilir? {#how-to-claim}
 
 1. [Discord sunucumuza](https://discord.gg/E8dET2ux8y) katılın.
-2. Katkınıza yönlendiren bir bağlantıyı `#🏆 | poaps` kanalına yapıştırın.
+2. Katkınıza yönlendiren bir bağlantıyı `#🥇 | poaps` kanalına yapıştırın.
 3. Ekibimizin bir üyesinin size POAP'nize bir bağlantı göndermesini bekleyin.
 4. POAP'nizi talep edin!
 

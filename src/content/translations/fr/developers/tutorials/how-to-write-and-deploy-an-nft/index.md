@@ -3,14 +3,13 @@ title: Comment écrire & déployer un NFT (Partie 1/3 du tutoriel NFT)
 description: Ce tutoriel est la première partie de la série sur les NFT et vous guidera pas-à-pas sur la façon d'écrire et de déployer un contrat intelligent de jeton non fongible (jeton ERC-721) avec Ethereum et IPFS (Inter Planetary File System).
 author: "Sumi Mudgil"
 tags:
-  - "NFT"
+  - "NFTs"
   - "ERC-721"
-  - "Alchemy"
-  - "Solidity"
+  - "alchemy"
+  - "solidity"
   - "contrats intelligents"
-skill: débutant
+skill: beginner
 lang: fr
-sidebar: true
 published: 2021-04-22
 ---
 
@@ -34,7 +33,7 @@ Dans ce tutoriel, nous allons également tirer parti des outils de développemen
 
 Une fois que vous avez créé un compte Alchemy, vous pouvez générer une clé d'API en créant une application. Cela va nous permettre d'émettre des requêtes sur le réseau de test Ropsten. Consultez [ce guide](https://docs.alchemyapi.io/guides/choosing-a-network), si vous voulez en apprendre plus sur les réseaux de test.
 
-1. Accédez à la page « Créer une application » dans votre tableau de bord Alchemy en survolant « Apps » dans la barre de navigation et en cliquant sur « Créer une application »
+1. Accédez à la page « Create App » dans votre Tableau de bord Alchemy, en survolant « Apps » dans la barre de navigation et en cliquant sur « Create App »
 
 ![Créez votre application](./create-your-app.png)
 
@@ -42,7 +41,7 @@ Une fois que vous avez créé un compte Alchemy, vous pouvez générer une clé 
 
 ![Configurez et publiez votre application](./configure-and-publish-your-app.png)
 
-3. Cliquez sur « Créer l'application » et voilà ! Votre application devrait apparaître dans le tableau ci-dessous.
+3. Cliquez sur « Create App » et voilà ! Votre application devrait apparaître dans le tableau ci-dessous.
 
 ## Étape 3 : Créer un compte Ethereum (une adresse) {#create-eth-address}
 
@@ -89,7 +88,7 @@ La manière dont vous répondez à ces questions d'installation à peu d'importa
     author:
     license: (ISC)
     About to write to /Users/thesuperb1/Desktop/my-nft/package.json:
-    
+
     {
       "name": "my-nft",
       "version": "1.0.0",
@@ -106,7 +105,7 @@ Approuvez le package.json, et nous sommes prêts à démarrer !
 
 ## Étape 7 : Installer [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
 
-Hardat est un environnement de développement qui permet de compiler, déployer, tester et débugger vos logiciels Ethereum. Il aide les développeurs à constuire des contrats intelligents et des dApps localement avant de les déployer sur la chaîne principale.
+Hardat est un environnement de développement qui permet de compiler, déployer, tester et débugger vos logiciels Ethereum. Il aide les développeurs à construire des contrats intelligents et des dapps localement avant de les déployer sur la chaîne en production.
 
 Dans notre projet my-nft, exécutez :
 
@@ -242,7 +241,7 @@ Votre fichier `.env` devrait ressembler à ceci :
 Pour les relier à notre code, nous ferons référence à ces variables dans notre fichier hardhat.config.js à l'étape 13.
 
 <InfoBanner isWarning={true}>
-Ne propagez pas le fichier <code>.env</code> ! Assurez-vous de ne jamais partager ou exposer votre fichier <code>.env</code> avec quiconque, car vous compromettez vos secrets en le faisant. Si vous utilisez le contrôle de version, ajoutez votre <code>.env</code> à un fichier <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
+Ne propagez pas le fichier <code>.env</code> ! Veillez à ne jamais partager ou exposer votre fichier <code>.env</code> avec quiconque car vous compromettez vos secrets en le faisant. Si vous utilisez le contrôle de version, ajoutez votre <code>.env</code> à un fichier <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
 </InfoBanner>
 
 ## Étape 12 : Installer Ethers.js {#install-ethers}
@@ -345,7 +344,7 @@ L'adresse « From » doit correspondre à l'adresse de votre compte MetaMask et 
 
 Super ! Vous venez de déployer votre contrat intelligent NFT sur la chaîne Ethereum !
 
-Pour comprendre ce qui se passe sous le capot, naviguons vers l'onglet Explorateur dans notre [tableau de bord d'Alchemy](https://dashboard.alchemyapi.io/explorer). Si vous avez plusieurs applications Alchemy, veillez à filtrer par application et à sélectionner « MyNFT ».
+Pour comprendre ce qui se passe sous le capot, naviguons dans l'onglet Explorer de notre [tableau de bord Alchemy](https://dashboard.alchemyapi.io/explorer). Si vous avez plusieurs applications Alchemy, veillez à filtrer par application et à sélectionner « MyNFT ».
 
 ![Visualisez les appels effectués « sous le capot » avec le tableau de bord Explorer d'Alchemy](./alchemy-explorer.png)
 

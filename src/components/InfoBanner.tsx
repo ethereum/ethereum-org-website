@@ -1,0 +1,58 @@
+import React from "react"
+import { Flex } from "@chakra-ui/react"
+import Emoji from "./Emoji"
+
+export interface IProps {
+  children?: React.ReactNode
+  className?: string
+  emoji?: string
+  isWarning?: boolean
+  shouldCenter?: boolean
+  shouldSpaceBetween?: boolean
+}
+
+const InfoBanner: React.FC<IProps> = ({
+  children,
+  className,
+  emoji,
+  isWarning = false,
+  shouldCenter = false,
+  shouldSpaceBetween = false,
+  ...props
+}) => {
+  const banner = (
+    <Flex
+      align="center"
+      p={6}
+      borderRadius={"sm"}
+      maxW={shouldCenter ? "55rem" : "100%"}
+      color="black300"
+      bg={isWarning ? "warning" : "infoBanner"}
+      direction={{ base: "column", sm: "row" }}
+      {...props}
+    >
+      {emoji && (
+        <Emoji
+          flexGrow="0"
+          flexShrink="0"
+          mr={{ base: 0, sm: 6 }}
+          mb={{ base: 2, sm: 0 }}
+          alignSelf={{ base: "flex-start", sm: "auto" }}
+          text={emoji}
+          fontSize="4xl"
+        />
+      )}
+      <Flex
+        display={{ base: "block", sm: shouldSpaceBetween ? "flex" : "block" }}
+        align={shouldSpaceBetween ? "center" : "auto"}
+        w={shouldSpaceBetween ? "100%" : "auto"}
+        justify={shouldSpaceBetween ? "space-between" : "auto"}
+      >
+        {children}
+      </Flex>
+    </Flex>
+  )
+  return shouldCenter ? <Flex justify="center">{banner}</Flex> : banner
+}
+
+export default InfoBanner

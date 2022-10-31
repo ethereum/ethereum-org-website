@@ -12,9 +12,8 @@ tags:
   - "compound"
   - "uniswap"
   - "sablier"
-skill: pemula
+skill: beginner
 lang: id
-sidebar: true
 published: 2020-04-27
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/create-eth-app

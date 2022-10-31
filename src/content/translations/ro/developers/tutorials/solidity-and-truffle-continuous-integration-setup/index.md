@@ -3,7 +3,6 @@ title: "Configurarea integrării continue cu Solidity și Truffle"
 description: Cum să configurați „Travis” sau „Circle CI” pentru testarea „Truffle” și plugin-uri utile
 author: Markus Waas
 lang: ro
-sidebar: true
 tags:
   - "solidity"
   - "contracte inteligente"
@@ -11,7 +10,7 @@ tags:
   - "truffle"
   - "integrare continuă"
   - "ganache"
-skill: intermediar
+skill: intermediate
 published: 2020-06-05
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/continuous-integration

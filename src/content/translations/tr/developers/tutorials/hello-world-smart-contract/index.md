@@ -9,9 +9,8 @@ tags:
   - "akıllı sözleşmeler"
   - "başlarken"
   - "dağıtma"
-skill: acemi
+skill: beginner
 lang: tr
-sidebar: true
 published: 2021-03-31
 ---
 
@@ -43,13 +42,13 @@ Bir Alchemy hesabı oluşturduktan sonra, bir uygulama yaratarak bir API anahtar
 
 İşlem göndermek ve almak için bir Ethereum hesabına ihtiyacımız var. Bu eğitim için, Ethereum hesap adresinizi yönetmek için kullanılan tarayıcı üstü bir sanal cüzdan olan MetaMask'i kullanacağız. [İşlemler](/developers/docs/transactions/) üzerine dahası.
 
-[Buradan](https://metamask.io/download.html) ücretsiz olarak indirebilir ve bir Metamask hesabı oluşturabilirsiniz. Bir hesap oluşturuyorsanız veya zaten bir hesabınız varsa, sağ üstteki "Ropsten Test Ağı"na geçtiğinizden emin olun (böylece gerçek parayla uğraşmayız).
+[Buradan](https://metamask.io/download.html) ücretsiz olarak indirebilir ve bir MetaMask hesabı oluşturabilirsiniz. Bir hesap oluşturuyorsanız veya zaten bir hesabınız varsa, sağ üstteki "Ropsten Test Ağı"na geçtiğinizden emin olun (böylece gerçek parayla uğraşmayız).
 
 ![metamask ropsten örneği](./metamask-ropsten-example.png)
 
 ## Adım 4: Bir Musluktan ether ekleyin {#step-4}
 
-Akıllı sözleşmemizi test ağına dağıtmak için biraz sahte ETH'ye ihtiyacımız olacak. ETH almak için [Ropsten musluğuna](https://faucet.dimensions.network/) gidebilir ve Ropsten hesap adresinizi girip "Send Ropsten ETH"e (Ropsten ETH Gönder) tıklayabilirsiniz. Ağ trafiği nedeniyle sahte ETH'nizi almanız biraz zaman alabilir. Kısa bir süre sonra Metamask hesabınızda ETH'yi görmelisiniz!
+Akıllı sözleşmemizi test ağına dağıtmak için biraz sahte ETH'ye ihtiyacımız olacak. ETH almak için [Ropsten musluğuna](https://faucet.dimensions.network/) gidebilir ve Ropsten hesap adresinizi girip "Send Ropsten ETH"e (Ropsten ETH Gönder) tıklayabilirsiniz. Ağ trafiği nedeniyle sahte ETH'nizi almanız biraz zaman alabilir. Kısa bir süre sonra MetaMask hesabınızda ETH'yi görmelisiniz!
 
 ## Adım 5: Bakiyenizi kontrol edin {#step-5}
 
@@ -60,7 +59,7 @@ Bakiyemizin yerinde olduğundan emin olmak için [Alchemy düzenleyici arayıcı
 ```
 
 > **NOT:** Bu sonuç ETH değil, wei biçimindedir. Wei, ether'ın en küçük birimi olarak kullanılır. Wei'den ETH'ye dönüşüm: 1 eth = 10<sup>18</sup> wei'dir. Yani 0x2B5E3AF16B1880000'ı ondalık sayıya dönüştürürsek 5\*10¹⁸ elde ederiz ki bu da 5 ETH'ye eşittir.
-> 
+>
 > Vay be! Tüm sahte paramız yerinde <Emoji text=":money_mouth_face:" size={1} />.
 
 ## Adım 6: Projemizi başlatın {#step-6}
@@ -107,7 +106,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
 
 package.json'ı onayladıktan sonra hazırız!
 
-## Adım 7: [Hardhat](https://hardhat.org/getting-started/#overview ""){#step-7}'i indirin
+## Adım 7: [Hardhat](https://hardhat.org/getting-started/#overview){#step-7}'i indirin
 
 Hardhat, Ethereum yazılımınızı derlemek, dağıtmak, test etmek ve hatalarını ayıklamak için bir geliştirme ortamıdır. Canlı zincire dağıtmadan önce yerel olarak akıllı sözleşmeler ve dApp'ler oluştururken geliştiricilere yardımcı olur.
 
@@ -214,7 +213,7 @@ Sanal cüzdanınızdan gönderilen her işlem, benzersiz özel anahtarınızı k
 npm install dotenv --save
 ```
 
-Ardından projemizin kök dizininde bir `.env` dosyası oluşturun ve buna Metamask özel anahtarınızı ve HTTP Alchemy API URL'nizi ekleyin.
+Ardından projemizin kök dizininde bir `.env` dosyası oluşturun ve buna MetaMask özel anahtarınızı ve HTTP Alchemy API URL'nizi ekleyin.
 
 - Özel anahtarınızı almak için [şu talimatları](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) takip edin
 - HTTP Alchemy API URL'sini almak için aşağıya göz atın

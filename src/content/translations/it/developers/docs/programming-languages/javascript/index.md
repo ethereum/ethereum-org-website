@@ -2,7 +2,6 @@
 title: Ethereum per sviluppatori JavaScript
 description: Impara a sviluppare per Ethereum usando progetti e strumenti basati su JavaScript.
 lang: it
-sidebar: true
 ---
 
 JavaScript è tra i linguaggi più popolari nell'ecosistema Ethereum. C'è persino un [team](https://github.com/ethereumjs) che si occupa di trasferire Ethereum il più possibile in JavaScript.
@@ -20,11 +19,11 @@ Se vuoi scrivere in JavaScript per interrogare la blockchain, inviare transazion
 **Dai un'occhiata a:**
 
 - [Web3.js](https://web3js.readthedocs.io/)
-- [Ethers.js ](https://docs.ethers.io/) _– Contiene l'implementazione del portafoglio di Ethereum e le utility in JavaScript e TypeScript._
+- [Ethers.js](https://docs.ethers.io/) _– Contiene l'implementazione del portafoglio di Ethereum e le utility in JavaScript e TypeScript._
 
 ### Smart Contract {#smart-contracts}
 
-Se sei uno sviluppatore JavaScript e vuoi scrivere uno Smart Contract personalizzato, consigliamo di familiarizzare con [Solidity](https://solidity.readthedocs.io). È il linguaggio più popolare per gli Smart Contract ed è fortemente ispirato a JavaScript.
+Se sei uno sviluppatore JavaScript e vuoi scrivere uno Smart Contract personalizzato, consigliamo di familiarizzare con [Solidity](https://solidity.readthedocs.io). Questo è il linguaggio degli smart contract più popolare ed è sintatticamente simile a JavaScript, il che lo rende facile da imparare.
 
 Scopri di più sugli [Smart Contract](/developers/docs/smart-contracts/).
 

@@ -2,7 +2,6 @@
 title: Was ist Web3 und warum ist es wichtig?
 description: Eine Einführung in Web3 – die nächste Entwicklung des Internets – und warum es wichtig ist.
 lang: de
-sidebar: true
 ---
 
 # Einführung in Web3 {#introduction}
@@ -127,7 +126,7 @@ Wir stehen erst am Anfang der Entwicklung eines besseren Internets mit Web3, doc
 
 ## Wie kann ich mich einbringen {#get-involved}
 
-- [Eine Wallet wählen](/wallets/)
+- [Wählen Sie eine Wallet](/wallets/)
 - [Eine Community finden](/community/)
 - [Web3-Anwendungen erkunden](/dapps/)
 - [Einer DAO beitreten](/dao/)

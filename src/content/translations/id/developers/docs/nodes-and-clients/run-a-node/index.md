@@ -2,7 +2,6 @@
 title: Jalankan node Ethereum Anda sendiri
 description: Pengenalan umum untuk menjalankan instance klien Ethereum Anda sendiri.
 lang: id
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -74,7 +73,7 @@ Biner yang dapat dieksekusi untuk implementasi klien Jaringan Utama stabil dapat
 - [Geth](https://geth.ethereum.org/downloads/)
 - [OpenEthereum,](https://github.com/openethereum/openethereum/releases)
 - [Nethermind](https://downloads.nethermind.io/)
-- [Besu](https://pegasys.tech/solutions/hyperledger-besu/)
+- [Besu](https://besu.hyperledger.org/en/stable/)
 - [Erigon](https://github.com/ledgerwatch/erigon)
 
 **Perhatikan bahwa OpenEthereum [telah menjadi usang](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) dan tidak lagi dipertahankan.** Gunakan dengan hati-hati dan lebih baik beralih ke implementasi klien lainnya.

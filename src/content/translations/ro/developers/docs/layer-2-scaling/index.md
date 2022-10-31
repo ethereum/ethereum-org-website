@@ -2,7 +2,6 @@
 title: Scalare Nivel 2
 description: Prezentarea diferitelor opțiuni de scalare care sunt dezvoltate în prezent de comunitatea Ethereum.
 lang: ro
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 isOutdated: true
@@ -159,7 +158,7 @@ Canal de stare tic tac toe:
 
 ## Plasma {#plasma}
 
-Un lanț „plasma” este un blockchain separat care este ancorat pe lanțul principal Ethereum și utilizează dovezi de fraudă (cum ar fi rollup-urile [Optimisic](#optimistic-rollups)) pentru a arbitra disputele.
+Un lanț „plasma” este un blockchain separat care este ancorat pe lanțul principal Ethereum și utilizează dovezi de fraudă (cum ar fi rollup-urile [Optimistic](#optimistic-rollups)) pentru a arbitra disputele.
 
 | Avantaje                                                                                                                                                             | Dezavantaje                                                                                                                                                                                        |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -217,7 +216,7 @@ Combină cele mai bune părți ale mai multor tehnologii de nivel 2 și pot ofer
 ## Referințe suplimentare {#further-reading}
 
 - [Validium And The Layer 2 Two-By-Two — Issue No. 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
-- \[Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework\](https://blog.matter-labs.io/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
+- [Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework](https://blog.matter-labs.io/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
 - [Adding Hybrid PoS-Rollup Sidechain to Celer’s Coherent Layer-2 Platform on Ethereum](https://medium.com/celer-network/adding-hybrid-pos-rollup-sidechain-to-celers-coherent-layer-2-platform-d1d3067fe593)
 - [Zero-Knowledge Blockchain Scalability](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 
@@ -234,7 +233,7 @@ Combină cele mai bune părți ale mai multor tehnologii de nivel 2 și pot ofer
 
 **Rollup-uri ZK**
 
-- [EthHub despre zk-rollup-uri](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
+- [EthHub despre ZK-rollup-uri](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 
 **Rollup-uri Optimistic**
 

@@ -8,9 +8,8 @@ tags:
   - "Alchemy"
   - "Solidity"
   - "akıllı sözleşmeler"
-skill: acemi
+skill: beginner
 lang: tr
-sidebar: true
 published: 2021-04-22
 ---
 
@@ -113,7 +112,7 @@ Json dosyasını düzenlemeyi bitirdikten sonra, görüntüyü yüklemek için y
 
 ## Adım 5: Sözleşmenizin bir örneğini oluşturun {#instance-contract}
 
-Şimdi, sözleşmemizle etkileşime geçmek için, kodumuzda onun bir örneğini oluşturmalıyız. Bunu yapmak için dağıtımdan veya [Etherscan ](https://ropsten.etherscan.io/)dan sözleşmeyi dağıtmak için kullandığınız adresi arayarak alabileceğimiz sözleşme adresimize ihtiyacımız olacak.
+Şimdi, sözleşmemizle etkileşime geçmek için, kodumuzda onun bir örneğini oluşturmalıyız. Bunu yapmak için dağıtımdan veya [Etherscan](https://ropsten.etherscan.io/)dan sözleşmeyi dağıtmak için kullandığınız adresi arayarak alabileceğimiz sözleşme adresimize ihtiyacımız olacak.
 
 ![Etherscan'da sözleşme adresinizi görüntüleyin](./viewContractEtherscan.png)
 
@@ -129,7 +128,7 @@ const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 
 ## Adım 6: .env dosyasını güncelleyin {#update-env}
 
-Şimdi, Ethereum zincirine işlemler oluşturmak ve göndermek amacıyla, hesap nonce değeri almak için genel ethereum hesap adresinizi kullanacağız (aşağıda açıklanacaktır).
+Şimdi, Ethereum zincirine işlemler oluşturmak ve göndermek amacıyla, hesap nonce değeri almak için genel Ethereum hesap adresinizi kullanacağız (aşağıda açıklanacaktır).
 
 Genel anahtarınızı .env dosyanıza ekleyin: Öğreticinin 1. bölümünü tamamladıysanız, .env dosyamız şimdi şöyle görünmelidir:
 
@@ -311,15 +310,13 @@ async function mintNFT(tokenURI) {
     })
 }
 
-mintNFT(
-  "ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP"
-)
+mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 ```
 
 Şimdi, NFT'nizi dağıtmak için `node scripts/mint-nft.js` komutunu çalıştırın. Birkaç saniye sonra terminalinizde şöyle bir yanıt görmelisiniz:
 
     The hash of your transaction is: 0x10e5062309de0cd0be7edc92e8dbab191aa2791111c44274483fa766039e0e00
-    
+
     Check Alchemy's Mempool to view the status of your transaction!
 
 Sonrasında, işleminizin durumunu (beklemede, kazılmış veya ağdan düşürülmüş) görmek için [Alchemy bellek havuzunuzu](https://dashboard.alchemyapi.io/mempool) ziyaret edin. İşleminiz düştüyse, [Ropsten Etherscan](https://ropsten.etherscan.io/)'i kontrol etmek ve işlem hash değerinizi aramak da faydalı olur.

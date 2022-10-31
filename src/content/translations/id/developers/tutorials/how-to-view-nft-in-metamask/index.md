@@ -9,9 +9,8 @@ tags:
   - "MetaMask"
   - "token yang tidak dapat dipertukarkan"
   - "Solidity"
-skill: pemula
+skill: beginner
 lang: id
-sidebar: true
 published: 2021-04-22
 ---
 

@@ -2,7 +2,6 @@
 title: 面向 .NET 开发者的以太坊
 description: 学习如何使用并通过基于 .NET 的项目及工具参与以太坊的开发
 lang: zh
-sidebar: true
 incomplete: true
 ---
 
@@ -77,9 +76,9 @@ incomplete: true
 
 ## .NET 社区贡献者 {#dot-net-community-contributors}
 
-在 Nethereum，我们主要活跃于 [Gitter](https://gitter.im/Nethereum/Nethereum) 上，任何人都可以前来提问/回答问题，获得帮助或者前来逛逛。 您可以自由地在 [Nethereum GitHub 库](https://github.com/Nethereum)上提交拉取请求或者开启问题，或者只是前来浏览我们已有的许多小项目/样本项目。 您可以在[ Discord ](https://discord.gg/jQPrR58FxX)上找到我们！
+在 Nethereum，我们主要活跃于 [Gitter](https://gitter.im/Nethereum/Nethereum) 上，任何人都可以前来提问/回答问题，获得帮助或者前来逛逛。 您可以自由地在 [Nethereum GitHub 库](https://github.com/Nethereum)上提交拉取请求或者开启问题，或者只是前来浏览我们已有的许多小项目/样本项目。 您可以在 [Discord](https://discord.gg/jQPrR58FxX) 上找到我们！
 
-在 Nethermind，让我们通过 [Gitter](https://gitter.im/nethermindeth/nethermind) 取得联系。 关于拉取请求或者问题，请查看 [Nethermind GitHub 库](https://github.com/NethermindEth/nethermind)。
+如果你是 Nethermind 的新手并且需要入门帮助，请加入我们的 [Discord](http://discord.gg/PaCMRFdvWT)。 我们的开发人员随时准备回答你的问题。 不要犹豫，在 [Nethermind GitHub 存储库](https://github.com/NethermindEth/nethermind)上打开一个拉取请求或提出任何问题。
 
 ## 其他汇总列表 {#other-aggregated-lists}
 

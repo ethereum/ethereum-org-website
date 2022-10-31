@@ -3,13 +3,12 @@ title: Pengantar bagi pengembang Python untuk Ethereum, bagian 1
 description: Sebuah pengantar pada pengembangan Ethereum, khususnya berguna untuk mereka yang mengetahui bahasa pemograman Python
 author: Marc Garreau
 lang: id
-sidebar: true
 tags:
   - "memulai"
   - "python"
   - "blockchain"
   - "web3.py"
-skill: pemula
+skill: beginner
 published: 2020-09-08
 source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/

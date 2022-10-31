@@ -2,7 +2,6 @@
 title: Rollup a conoscenza zero (zero-knowledge)
 description: Introduzione ai rollup a conoscenza zero
 lang: it
-sidebar: true
 ---
 
 ## Prerequisiti {#prerequisites}
@@ -45,4 +44,4 @@ Esistono molteplici implementazioni dei rollup ZK che puoi integrare nelle tue d
 
 - [Cosa sono i rollup a conoscenza zero?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
 - [EthHub sui rollup ZK](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
-- \[STARK vs SNARK\] (https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
+- [STARK vs SNARK](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)

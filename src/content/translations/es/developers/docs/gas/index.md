@@ -2,7 +2,6 @@
 title: Gas y tarifas
 description:
 lang: es
-sidebar: true
 ---
 
 El gas es esencial para la red de Ethereum. Se trata del combustible que le permite operar, de la misma manera que un vehículo necesita gasolina para funcionar.
@@ -23,7 +22,7 @@ En esencia, las comisiones de gas son pagadas en la moneda nativa de Ethereum, e
 
 ## Antes de la actualización de Londres {#pre-london}
 
-La forma en la que se calcularon las comisiones de transacción de la red de Ethereum cambió con [la actualización de Londres ](/history/#london) en agosto del 2021. A continuación, podrá ver un resumen de cómo funcionaba antes:
+La forma en la que se calcularon las comisiones de transacción de la red de Ethereum cambió con [la actualización de Londres](/history/#london) en agosto del 2021. A continuación, podrá ver un resumen de cómo funcionaba antes:
 
 Supongamos que Alice tiene que pagar 1 ETH a Bob. En la transacción, el límite de gas es de 21.000 unidades y el precio del gas es de 200 gwei.
 
@@ -136,7 +135,7 @@ El precio del gas por sí solo no determina cuánto tenemos que pagar por una de
 
 Las [mejoras de escalabilidad](/upgrades/) de Ethereum deberían abordar algunos de los problemas de las comisiones de gas, lo que a su vez permitiría que la plataforma procesase cientos de transacciones por segundo y a escala global.
 
-La escala de la capa 2 es una iniciativa primaria para mejorar de manera considerable los costes del gas, la experiencia de usuario y la escalabilidad. [Más información sobre la escala de la capa 2 ](/developers/docs/scaling/#layer-2-scaling).
+La escala de la capa 2 es una iniciativa primaria para mejorar de manera considerable los costes del gas, la experiencia de usuario y la escalabilidad. [Más información sobre la escala de la capa 2](/developers/docs/scaling/#layer-2-scaling).
 
 El nuevo modelo de prueba de participación, introducido en la cadena de baliza, debería reducir el alto consumo de energía y la dependencia de hardware especializado. Esta cadena permitirá que la red descentralizada de Ethereum se acepte y mantenga la seguridad de la red, al tiempo que limita el consumo de energía al requerir, en cambio, un compromiso financiero.
 

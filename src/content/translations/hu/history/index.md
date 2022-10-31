@@ -2,7 +2,6 @@
 title: Az Ethereum története
 description: Az Ethereum blokklánc története a nagyobb mérföld kövekkel, kiadásokkal és forkokkal.
 lang: hu
-sidebar: true
 sidebarDepth: 1
 isOutdated: true
 ---
@@ -145,7 +144,7 @@ A Byzantium fork:
 - A [bányászati](/developers/docs/consensus-mechanisms/pow/mining/) blokk jutalom csökkentése 5-ről 3 ETH-re.
 - A [nehézségi bomba](/glossary/#difficulty-bomb) késleltetése egy évvel.
 - Más szerződések is indíthatnak állapotot nem befolyásoló hívásokat.
-- Bizonyos kriptográfiai metódusok hozzáadása, mely lehetővé teszi a \[2. réteges skálázást\]((/developers/docs/layer-2-scaling/).
+- Bizonyos kriptográfiai metódusok hozzáadása, mely lehetővé teszi a [2. réteges skálázást](/developers/docs/layer-2-scaling/).
 
 [Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 

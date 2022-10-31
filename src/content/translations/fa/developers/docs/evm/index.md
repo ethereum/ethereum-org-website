@@ -2,7 +2,6 @@
 title: ماشین مجازی اتریوم (EVM)
 description: مقدمه‌ای بر ماشین مجازی اتریوم و نحوه ارتباط آن با حالات متناهی، تراکنش‌ها و قراردادهای هوشمند.
 lang: fa
-sidebar: true
 ---
 
 نمونه‌سازی فیزیکی EVM را نمی‌توان مانند اشاره کردن به یک ابر یا یک موج اقیانوس توصیف کرد، اما به‌عنوان یک موجودیت واحد _وجود دارد_ که توسط هزاران رایانه متصل که یک کلاینت اتریوم را اجرا می‌کنند نگهداری می‌شود.
@@ -11,7 +10,7 @@ sidebar: true
 
 ## پیش‌نیازها {#prerequisites}
 
-برای درک EVM آشنایی اولیه با اصطلاحات رایج در علوم کامپیوتر مانند [بایت](https://wikipedia.org/wiki/Byte)، [حافظه](https://wikipedia.org/wiki/ Computer*memory) و یک [پشته](https://wikipedia.org/wiki/Stack*(abstract_data_type)) ضروری است. همچنین راحت بودن با مفاهیم رمزنگاری/زنجیره‌ی بلوکی همچون [توابع هش](https://wikipedia.org/wiki/Cryptographic_hash_function)، <a href="https://wikipedia.org/wiki/Proof_of_work">اثبات کار</a> و [درخت مرکل](https://wikipedia.org/wiki/Merkle_tree) نیز مفید خواهد بود.
+برای درک EVM آشنایی اولیه با اصطلاحات رایج در علوم کامپیوتر مانند [بایت](https://wikipedia.org/wiki/Byte)، [حافظه](https://wikipedia.org/wiki/Computer_memory) و یک [پشته](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) ضروری است. همچنین راحت بودن با مفاهیم رمزنگاری/زنجیره‌ی بلوکی همچون [توابع هش](https://wikipedia.org/wiki/Cryptographic_hash_function)، <a href="https://wikipedia.org/wiki/Proof_of_work">اثبات کار</a> و [درخت مرکل](https://wikipedia.org/wiki/Merkle_tree) نیز مفید خواهد بود.
 
 ## از دفتر کل تا ماشین حالات متناهی {#from-ledger-to-state-machine}
 
@@ -65,8 +64,6 @@ EVM به صورت یک [ماشین پشته‌ای](https://wikipedia.org/wiki/S
 - [evmone](https://github.com/ethereum/evmone) - _سی‌پلاس‌پلاس_
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _جاوا اسکریپت_
 - [eEVM](https://github.com/microsoft/eevm) - _سی‌پلاس‌پلاس_
-- [Hyperledger Burrow](https://github.com/hyperledger/burrow) - _گو_
-- [hevm](https://github.com/dapphub/dapptools/tree/master/src/hevm) - _هسکل_
 
 ## اطلاعات بیشتر {#further-reading}
 

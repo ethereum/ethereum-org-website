@@ -2,12 +2,11 @@
 title: Introduction to blockchain bridges
 description: Bridges allow users to move their funds across different blockchains
 lang: en
-sidebar: true
 ---
 
 # Blockchain bridges {#prerequisites}
 
-_Web3 has evolved into an ecosystem of L1 blockchains and L2 scaling solutions, each designed with unique capabilities and trade-offs. As the number of blockchains protocols increases, so does [the demand to move assets across chains](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>) To fulfill this demand, we need bridges._
+_Web3 has evolved into an ecosystem of L1 blockchains and L2 scaling solutions, each designed with unique capabilities and trade-offs. As the number of blockchains protocols increases, so does [the demand to move assets across chains](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>). To fulfill this demand, we need bridges._
 
 <Divider />
 
@@ -17,9 +16,9 @@ Blockchain bridges work just like the bridges we know in the physical world. Jus
 
 Let's consider an example:
 
-You're from the USA and are planning a trip to Europe. You have USD, but you need euros to spend. To exchange your USD for euros you can use a currency exchange for a small fee.
+You're from the USA and are planning a trip to Europe. You have USD, but you need EUR to spend. To exchange your USD for EUR you can use a currency exchange for a small fee.
 
-But, what do you do if you want to make a similar exchange to use a different blockchain? Let's say you want to exchange ETH on Ethereum Mainnet for ETH on [Arbitrum](https://arbitrum.io/). Like the currency exchange we made for euros, we need a mechanism to move our ETH from Ethereum to Arbitrum. Bridges make such a transaction possible. In this case, [Arbitrum has a native bridge](https://bridge.arbitrum.io/) that can transfer ETH from Mainnet onto Arbitrum.
+But, what do you do if you want to make a similar exchange to use a different blockchain? Let's say you want to exchange ETH on Ethereum Mainnet for ETH on [Arbitrum](https://arbitrum.io/). Like the currency exchange we made for EUR, we need a mechanism to move our ETH from Ethereum to Arbitrum. Bridges make such a transaction possible. In this case, [Arbitrum has a native bridge](https://bridge.arbitrum.io/) that can transfer ETH from Mainnet onto Arbitrum.
 
 ## Why do we need bridges? {#why-do-we-need-bridges}
 
@@ -114,15 +113,19 @@ User's funds are at risk if:
 - the bridge operators have malicious intent in a trusted bridge
 - the bridge gets hacked
 
-One recent hack was Solana’s Wormhole bridge, [where 120k wETH ($325 million USD) was stolen during the hack](https://rekt.news/wormhole-rekt/).
+One recent hack was Solana’s Wormhole bridge, [where 120k wETH ($325 million USD) was stolen during the hack](https://rekt.news/wormhole-rekt/). Many of the [top hacks in blockchains involved bridges](https://rekt.news/leaderboard/).
 
-Bridges are crucial to onboarding users onto Ethereum L2s, and even for users who want to explore different ecosystems. However, given the risks involved in interacting with bridges, users must understand the trade-offs the bridges are making.
+Bridges are crucial to onboarding users onto Ethereum L2s, and even for users who want to explore different ecosystems. However, given the risks involved in interacting with bridges, users must understand the trade-offs the bridges are making. These are some [strategies for cross-chain security](https://blog.debridge.finance/10-strategies-for-cross-chain-security-8ed5f5879946).
 
 <Divider />
 
 ## Further reading {#further-reading}
 
+- [EIP-5164: Cross-Chain Execution](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _June 18, 2022 - Brendan Asselstine_
+- [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _July 5, 2022 - Bartek Kiepuszewski_
+- ["Why the future will be multi-chain, but it will not be cross-chain."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _January 8, 2022 - Vitalik Buterin_
 - [What Are Blockchain Bridges And How Can We Classify Them?](https://blog.li.finance/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa) _Feb 18, 2021 - Arjun Chand_
+- [What Are Cross-Chain Bridges?](https://www.alchemy.com/overviews/cross-chain-bridges) _May 10, 2022 - Alchemy_
 - [Blockchain Bridges: Building Networks of Cryptonetworks](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) _Sep 8, 2021 - Dmitriy Berenzon_
 - [Bridges in Crypto-Space](https://medium.com/chainsafe-systems/bridges-in-crypto-space-12e158f5fd1e) _Aug 23, 2021 - Ben Adar Hyman_
 - [The Interoperability Trilemma](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17) _Oct 1, 2021 - Arjun Bhuptani_

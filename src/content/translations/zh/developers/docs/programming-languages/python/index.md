@@ -2,7 +2,6 @@
 title: 面向 Python 开发者的以太坊资源
 description: 学习如何使用并通过基于 Python 的项目及工具参与以太坊的开发
 lang: zh
-sidebar: true
 incomplete: true
 ---
 
@@ -49,18 +48,18 @@ incomplete: true
 ### 活跃： {#active}
 
 - [Web3.py](https://github.com/ethereum/web3.py) - _用于与以太坊交互的 Python 库_
-- [Ape ](https://github.com/ApeWorX/ape) - _适用于 Pythonistas、数据科学家和安全专业人员的智能合约开发工具_
-- [Brownie](https://github.com/eth-brownie/brownie) - _一个用于部署、测试和与以太坊智能合约交互的 Python 框架_
-- [Vyper](https://github.com/ethereum/vyper/) - _一个具有 Python 风格的以太坊智能合约编程语言_
+- [Vyper](https://github.com/ethereum/vyper/) - _一种适用于以太坊虚拟机的 Python 智能合约语言_
+- [Ape](https://github.com/ApeWorX/ape) - _面向 Pythonista、数据科学家和安全专业人员的智能合约开发工具_
+- [Brownie](https://github.com/eth-brownie/brownie) - _一个用于部署、测试以太坊智能合约并与之交互的 Python 框架_
 - [py-evm](https://github.com/ethereum/py-evm) - _以太坊虚拟机的实现_
-- [eth-tester](https://github.com/ethereum/eth-tester) - _用于测试基于以太坊应用程序的工具_
-- [eth-utils](https://github.com/ethereum/eth-utils/) - _使用以太坊相关代码库的实用函数工具_
-- [py-solc-x](https://pypi.org/project/py-solc-x/) - _Python 封装的 solidity 0.5.x 编译器_
-- [py-wasm](https://github.com/ethereum/py-wasm) - _Web 汇编解释器的 Python 实现_
-- [pydevp2p](https://github.com/ethereum/pydevp2p) - _P2P 协议栈的 Python 实现_
-- [pymaker](https://github.com/makerdao/pymaker) - _Maker 合约的 Python API _
-- [siwe](https://github.com/spruceid/siwe-py) - _注册以太坊 (siwe) 以应用 Python_
-- [用于测试的智能合约](https://github.com/tradingstrategy-ai/smart-contracts-for-testing) - _ERC-20、Uniswap 和其他常见合约随附的一个 Python 包，用于使用 Web3.py 进行测试_
+- [eth-tester](https://github.com/ethereum/eth-tester) - _用于测试以太坊应用程序的工具_
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _使用以太坊相关代码库的实用程序函数_
+- [py-solc-x](https://pypi.org/project/py-solc-x/) - _适用于 solc Solidity 编译器（支持 0.5.x）的 Python 装饰器_
+- [py-wasm](https://github.com/ethereum/py-wasm) - _使用 Python 实现的 Web 汇编解释器_
+- [pydevp2p](https://github.com/ethereum/pydevp2p) - _使用 Python 实现 P2P 协议栈_
+- [pymaker](https://github.com/makerdao/pymaker) - _面向 Maker 合约的 Python 应用程序接口_
+- [siwe](https://github.com/spruceid/siwe-py) - _面向 Python 的以太坊登录服务 (siwe)_
+- [用于以太坊集成的 Web3 去中心化金融](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _一个 Python 包，具有适用于 ERC-20、Uniswap 和其他流行项目的现成集成_
 
 ### 已归档/不再维护： {#archived--no-longer-maintained}
 
@@ -79,10 +78,11 @@ incomplete: true
 - [Sushiswap](https://sushi.com/) 使用 [Python 来管理和部署他们的归属合约](https://github.com/sushiswap/sushi-vesting-protocols)
 - 因 Alpha Homora 而知名的 [Alpha Finance](https://alphafinance.io/) 使用 [Brownie 来测试和部署他们的智能合约](https://github.com/AlphaFinanceLab/alpha-staking-contract)
 
-## Python 社区贡献者 {#python-community-contributors}
+## Python 社区讨论 {#python-community-contributors}
 
-[以太坊 Python Discord 社区](https://discord.gg/9zk7snTfWe)是一个迅速发展壮大的社区，专门用于讨论上述任何项目和相关主题的资源。
+- [以太坊 Python 社区 Discord](https://discord.gg/9zk7snTfWe)，适合讨论 Web3.py 和其他 Python 框架
+- [Vyper Discord](<[https://discord.gg/9zk7snTfWe](https://discord.gg/SdvKC79cJk)>)，适合讨论 Vyper 智能合约编程
 
 ## 其他汇总列表 {#other-aggregated-lists}
 
-维基百科中关于 Vyper 的[可靠资源列表](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources)
+Vyper 维基百科包含[丰富的 Vyper 资源列表](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources)

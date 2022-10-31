@@ -2,7 +2,6 @@
 title: Introduction à Ethereum
 description: Introduction aux concepts fondamentaux d'Ethereum pour les développeurs de DApp.
 lang: fr
-sidebar: true
 ---
 
 ## Qu'est-ce qu'une blockchain ? {#what-is-a-blockchain}
@@ -109,10 +108,10 @@ Extraits de code réutilisables (un programme) qu'un développeur publie dans l'
 
 [En savoir plus sur les contrats intelligents](/developers/docs/smart-contracts/)
 
-## Complément d'information {#further-reading}
+## En lire plus {#further-reading}
 
 - [Livre blanc Ethereum](/whitepaper/)
-- [Mais comment fonctionne Ethereum ?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) - _ Preethi Kasireddy_
+- [Mais comment fonctionne Ethereum?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) - _Preethi Kasireddy_
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 

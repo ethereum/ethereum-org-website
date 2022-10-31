@@ -2,7 +2,6 @@
 title: Compiling smart contracts
 description: An explanation of why you need to compile smart contracts and what compilation actually does.
 lang: en
-sidebar: true
 incomplete: true
 ---
 
@@ -276,4 +275,4 @@ Below is the ABI for the ERC-20 token contract. An ERC-20 is a token you can tra
 ## Related topics {#related-topics}
 
 - [JavaScript client libraries](/developers/docs/apis/javascript/)
-- [Ethereum virtual machine](/developers/docs/ethereum-virtual-machine/)
+- [Ethereum virtual machine](/developers/docs/evm/)

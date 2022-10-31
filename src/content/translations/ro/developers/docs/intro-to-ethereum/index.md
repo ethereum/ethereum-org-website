@@ -2,7 +2,6 @@
 title: Introducere despre Ethereum
 description: Introducere din partea unui dezvoltator de aplicații dapp despre conceptele de bază ale lui Ethereum.
 lang: ro
-sidebar: true
 ---
 
 ## Ce este un blockchain? {#what-is-a-blockchain}
@@ -118,4 +117,4 @@ _Cunoașteți o resursă a comunității care v-a ajutat? Editaţi această pagi
 
 ## Tutoriale corelate {#related-tutorials}
 
-- [Un ghid al dezvoltatorului pentru Ethereum, partea 1 ](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– O explorare a lui Ethereum foarte uşor de utilizat de către începători, folosind Python și web3.py_
+- [Un ghid al dezvoltatorului pentru Ethereum, partea 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– O explorare a lui Ethereum foarte uşor de utilizat de către începători, folosind Python și web3.py_

@@ -3,13 +3,12 @@ title: "Memperkecil ukuran kontrak untuk mengatasi batasan ukuran kontrak"
 description: Apa yang Anda dapat lakukan untuk mencegah kontrak pintar Anda menjadi terlalu besar?
 author: Markus Waas
 lang: id
-sidebar: true
 tags:
   - "solidity"
   - "kontrak pintar"
   - "penyimpanan"
   - "truffle"
-skill: tingkat menengah
+skill: intermediate
 published: 2020-06-26
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size

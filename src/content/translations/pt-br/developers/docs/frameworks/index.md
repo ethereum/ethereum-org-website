@@ -2,7 +2,6 @@
 title: Dapp Desenvolvimento de Infraestrutura
 description: Explore as vantagens de frameworks e compare as opções disponíveis.
 lang: pt-br
-sidebar: true
 ---
 
 ## Introdução aos frameworks {#introduction-to-frameworks}
@@ -23,7 +22,7 @@ Antes de mergulhar em frameworks, recomendamos que você primeiro leia a nossa i
 
 ## Frameworks disponíveis {#available-frameworks}
 
-**Truffle -\*\***_Um ambiente de desenvolvimento, teste de framework, compilação e outras ferramentas._\*\*
+**Truffle -** **_Um ambiente de desenvolvimento, teste de framework, compilação e outras ferramentas._**
 
 - [trufflesuite.com](https://www.trufflesuite.com/)
 - [GitHub](https://github.com/trufflesuite/truffle)
@@ -43,7 +42,7 @@ Antes de mergulhar em frameworks, recomendamos que você primeiro leia a nossa i
 - [Documentação](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
 
-**Embark -\*\***_Um ambiente de desenvolvimento, teste de framework e outras ferramentas integradas com a Ethereum, IPFS e Whisper._\*\*
+**Embark -** **_Um ambiente de desenvolvimento, teste de framework e outras ferramentas integradas com a Ethereum, IPFS e Whisper._**
 
 - [Documentação](https://embark.status.im/docs/)
 - [GitHub](https://github.com/embark-framework/embark)
@@ -87,7 +86,7 @@ Alchemy - Plataforma de Desenvolvimento Ethereum
 
 **Foundry -** **_Um conjunto de ferramentas rápido, portátil e modular para o desenvolvimento do aplicativo Ethereum, escrito em Rust._**
 
-- [Documentação](https://onbjerg.github.io/foundry-book/)
+- [Documentação](https://book.getfoundry.sh/)
 - [GitHub](https://github.com/gakonst/foundry/)
 - [Ferramentas para Foundry](https://github.com/crisgarner/awesome-foundry)
 

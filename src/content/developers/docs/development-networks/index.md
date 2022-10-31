@@ -2,7 +2,6 @@
 title: Development Networks
 description: An overview of development networks and the tools available to help build Ethereum applications.
 lang: en
-sidebar: true
 ---
 
 When building an Ethereum application with smart contracts, you'll want to run it on a local network to see how it works before deploying it.
@@ -19,10 +18,10 @@ Development networks are essentially Ethereum clients (implementations of Ethere
 
 **Why not just run a standard Ethereum node locally?**
 
-You _could_ [run a node](/developers/docs/nodes-and-clients/#running-your-own-node) (like Geth, Erigon, or Nethermind) but since development networks are purpose-built for development, they often come packed with convenient features like:
+You _could_ [run a node](/developers/docs/nodes-and-clients/#running-your-own-node) but since development networks are purpose-built for development, they often come packed with convenient features like:
 
 - Deterministically seeding your local blockchain with data (e.g. accounts with ETH balances)
-- Instantly mining blocks with each transaction it receives, in order and with no delay
+- Instantly producing blocks with each transaction it receives, in order and with no delay
 - Enhanced debugging and logging functionality
 
 ## Available tools {#available-projects}
@@ -47,6 +46,21 @@ Hardhat Network comes built-in with Hardhat, an Ethereum development environment
 
 - [Website](https://hardhat.org/)
 - [GitHub](https://github.com/nomiclabs/hardhat)
+
+### Local Beacon Chains {#local-beacon-chains}
+
+Some consensus clients have built-in tools for spinning up local beacon chains for testing purposes. Instructions for Lighthouse, Nimbus and Lodestar are available:
+
+- [Local testnet using Lodestar](https://chainsafe.github.io/lodestar/usage/local/)
+- [Local testnet using Lighthouse](https://lighthouse-book.sigmaprime.io/setup.html#local-testnets)
+- [Local testnet using Nimbus](https://github.com/status-im/nimbus-eth1/blob/master/fluffy/docs/local_testnet.md)
+
+### Public Ethereum Test-chains {#public-beacon-testchains}
+
+There are also two maintained public test implementations of Ethereum: Goerli and Sepolia. The recommended testnet with long-term support is Goerli, which anyone is free to validate on. Sepolia is a newer, smaller chain also expected to be maintained for the foreseeable future, with a permissioned validator set (meaning there is no general access to new validators on this testnet). The Ropsten chain is expected to be deprecated in Q4 2022, and the Rinkeby chain is expected to be deprecated in Q2/Q3 2023.
+
+- [Goerli Staking Launchpad](https://goerli.launchpad.ethereum.org/)
+- [Ropsten, Rinkeby & Kiln Deprecation Announcement](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
 
 ## Further reading {#further-reading}
 

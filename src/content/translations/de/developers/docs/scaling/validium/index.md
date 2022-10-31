@@ -2,7 +2,6 @@
 title: Validium
 description: Eine Einführung in Validium als Skalierungslösung, die derzeit von der Ethereum-Community genutzt wird.
 lang: de
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---
@@ -11,11 +10,11 @@ Verwendet Gültigkeitszertifikate wie [ZK-Rollups](/developers/docs/scaling/zk-r
 
 ## Voraussetzungen {#prerequisites}
 
-Sie sollten ein gutes Grundwissen über alle grundlegenden Themen und ein umfassendes Verständnis der [Ethereum-Skalierung](/developers/docs/scaling/) haben. Die Implementierung von Skalierungslösungen wie Validium ist ein fortgeschrittenes Thema, da die Technologie noch nicht so sehr erprobt ist und weiter erforscht und entwickelt wird.
+Sie sollten ein gutes Verständnis aller grundlegenden Themen und ein umfassendes Verständnis für [Ethereum-Skalierung](/developers/docs/scaling/) haben. Die Implementierung von Skalierungslösungen wie Validium ist ein fortgeschrittenes Thema, da die Technologie noch nicht so sehr erprobt ist und weiter erforscht und entwickelt wird.
 
 ## Vor- und Nachteile {#pros-and-cons}
 
-| Vorteile                                                                                                                 | Nachteile                                                                                                                                                                      |
+| Vorteile                                                                                                                 | Kontra                                                                                                                                                                         |
 | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Keine Auszahlungsverzögerung (keine Latenz für on-chain/cross-chain tx), folglich eine höhere Kapitaleffizienz.          | Begrenzte Unterstützung für allgemeine Berechnung/Smart Contracts; spezialisierte Programmiersprachen erforderlich.                                                            |
 | Nicht anfällig für bestimmte wirtschaftliche Angriffe, wie Betrugsnachweis-basierte Systeme in hochwertigen Anwendungen. | Benötigt eine hohe Rechenleistung für die Erstellung von ZK-Beweisen und ist nicht kostengünstig für Anwendungen mit geringem Transaktionsdurchsatz.                           |

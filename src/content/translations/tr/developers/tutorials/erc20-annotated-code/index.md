@@ -3,11 +3,10 @@ title: "ERC-20 Sözleşmesine Genel Bakış"
 description: OpenZeppelin ERC-20 sözleşmesinde neler var ve neden var?
 author: Ori Pomerantz
 lang: tr
-sidebar: true
 tags:
   - "solidity"
   - "erc-20"
-skill: acemi
+skill: beginner
 published: 2021-03-09
 ---
 
@@ -226,7 +225,7 @@ Bu yorum, sözleşmenin amacını açıklar.
  * https://forum.zeppelin.solutions/t/how-to-implement-erc20-supply-mechanisms/226[Tedarik
  * mekanizmaları nasıl uygulanır].
  *
- * Genel OpenZeppelin talimatlarını izledik: fonksiyonlar, başarısızlık durumunda 
+ * Genel OpenZeppelin talimatlarını izledik: fonksiyonlar, başarısızlık durumunda
  * `false` döndürmek yerine geri alınırlar. Bu davranış yine de gelenekseldir
  * ve ERC20 uygulamalarının beklentileriyle çelişmez.
  *
@@ -526,7 +525,7 @@ Bu sorunu önlemek için, bu iki fonksiyon (`increaseAllowance` ve `decreaseAllo
 A:
 
 | Alice'in İşlemi            | Alice'in Nonce Değeri | Bill'in İşlemi               | Bill'in Nonce Değeri | Bill'in Ödeneği | Bill'in Alice'den Toplam Geliri |
-| -------------------------- | ---------------------:| ---------------------------- | --------------------:| ---------------:| ------------------------------- |
+| -------------------------- | --------------------: | ---------------------------- | -------------------: | --------------: | ------------------------------- |
 | approve(Bill, 5)           |                    10 |                              |                      |               5 | 0                               |
 |                            |                       | transferFrom(Alice, Bill, 5) |               10,123 |               0 | 5                               |
 | increaseAllowance(Bill, 5) |                    11 |                              |                      |         0+5 = 5 | 5                               |
@@ -535,7 +534,7 @@ A:
 B:
 
 | Alice'in İşlemi            | Alice'in Nonce Değeri | Bill'in İşlemi                | Bill'in Nonce Değeri | Bill'in Ödeneği | Bill'in Alice'den Toplam Geliri |
-| -------------------------- | ---------------------:| ----------------------------- | --------------------:| ---------------:| -------------------------------:|
+| -------------------------- | --------------------: | ----------------------------- | -------------------: | --------------: | ------------------------------: |
 | approve(Bill, 5)           |                    10 |                               |                      |               5 |                               0 |
 | increaseAllowance(Bill, 5) |                    11 |                               |                      |        5+5 = 10 |                               0 |
 |                            |                       | transferFrom(Alice, Bill, 10) |               10,124 |               0 |                              10 |
@@ -751,7 +750,7 @@ Bir `Approval` olayı yayın. Uygulamanın nasıl yazıldığına bağlı olarak
      * @dev {decimals} değerini varsayılan olan 18 harici bir değere ayarlar.
      *
       * UYARI: Bu fonksiyon sadece yapıcıdan çağrılmalıdır. Çoğu
-      * Token sözleşmeleriyle etkileşime giren uygulama, 
+      * Token sözleşmeleriyle etkileşime giren uygulama,
       * {decimals} değerinin değişmesini beklemez ve değişirse yanlış çalışabilir.
      */
     function _setupDecimals(uint8 decimals_) internal {

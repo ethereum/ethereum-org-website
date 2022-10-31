@@ -2,7 +2,6 @@
 title: Wprowadzenie do inteligentnych kontraktów
 description: Przegląd inteligentnych kontraktów ze szczególnym uwzględnieniem ich unikalnych cech i ograniczeń.
 lang: pl
-sidebar: true
 ---
 
 ## Czym jest inteligentny kontrakt?

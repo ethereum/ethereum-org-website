@@ -2,7 +2,6 @@
 title: Zustandskanäle
 description: Eine Einführung in Zustandskanäle und Zahlungskanäle als Skalierungslösung, die derzeit von der Ethereum-Community genutzt wird.
 lang: de
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---
@@ -11,7 +10,7 @@ Zustandskanäle ermöglichen es den Teilnehmern, `x` Transaktionen außerhalb de
 
 ## Voraussetzungen {#prerequisites}
 
-Sie sollten ein gutes Grundwissen über alle grundlegenden Themen und ein umfassendes Verständnis der [Ethereum-Skalierung](/developers/docs/scaling/) haben. Die Implementierung von Skalierungslösungen wie Kanäle ist ein fortgeschrittenes Thema, da die Technologie weniger erprobt ist und weiter erforscht und entwickelt wird.
+Sie sollten ein gutes Verständnis aller grundlegenden Themen und ein umfassendes Verständnis für [Ethereum-Skalierung](/developers/docs/scaling/) haben. Die Implementierung von Skalierungslösungen wie Kanäle ist ein fortgeschrittenes Thema, da die Technologie weniger erprobt ist und weiter erforscht und entwickelt wird.
 
 ## Kanäle {#channels}
 
@@ -43,7 +42,7 @@ Vereinfachte Zustandskanäle, die sich nur mit Zahlungen befassen (z. B. ETH-Üb
 
 ## Vor- und Nachteile {#channels-pros-and-cons}
 
-| Vorteile                                                                                | Nachteile                                                                                                                                                                                     |
+| Vorteile                                                                                | Kontra                                                                                                                                                                                        |
 | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Sofortige Abhebung/Abrechnung in Mainnet (wenn beide Parteien eines Kanals kooperieren) | Zeit und Kosten für die Einrichtung und Abwicklung eines Kanals - nicht gut geeignet für gelegentliche einmalige Transaktionen zwischen beliebigen Benutzern.                                 |
 | Es ist ein extrem hoher Transaktions-Durchsatz möglich                                  | Benötigt ein regelmäßiges Beobachten des Netzwerks (Lebendigkeitserfordernis) oder das Delegieren dieser Verantwortung an andere, um die Sicherheit der eingesetzten Gelder zu gewährleisten. |
@@ -73,4 +72,4 @@ Mehrere Projekte bieten Implementierungen von Zustandskanälen, die Sie in Ihre 
 
 - [EthHub auf Zahlungskanälen](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/payment-channels/)
 
-_Kennen Sie eine Community-Ressource die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
+_Kennen Sie eine Community-Ressource die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu._

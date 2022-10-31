@@ -2,17 +2,18 @@
 title: Networking layer
 description: An introduction to Ethereum's networking layer.
 lang: en
-sidebar: true
 sidebarDepth: 2
 ---
 
-Ethereum is a peer-to-peer network with thousands of nodes that must be able to communicate with one another using standardized protocols. The "networking layer" is the stack of protocols that allow those nodes to find each other and exchange information. This includes "gossiping" information (one-to-many communication) over the network as well as swapping requests and responses between specific nodes (one-to-one communication). Each node must adhere to specific networking rules to ensure they are sending and receiving the correct information. 
+Ethereum is a peer-to-peer network with thousands of nodes that must be able to communicate with one another using standardized protocols. The "networking layer" is the stack of protocols that allow those nodes to find each other and exchange information. This includes "gossiping" information (one-to-many communication) over the network as well as swapping requests and responses between specific nodes (one-to-one communication). Each node must adhere to specific networking rules to ensure they are sending and receiving the correct information.
 
-After [The Merge](/upgrades/merge/), there will be two parts of client software (execution clients and consensus clients), each with its own distinct networking stack. As well as communicating with other Ethereum nodes, the execution and consensus clients have to communicate with each other. This page gives an introductory explanation of the protocols that enable this communication.
+There are two parts to the client software (execution clients and consensus clients), each with its own distinct networking stack. As well as communicating with other Ethereum nodes, the execution and consensus clients have to communicate with each other. This page gives an introductory explanation of the protocols that enable this communication.
+
+Execution clients gossip transactions over the execution-layer peer-to-peer network. This requires encrypted communication between authenticated peers. When a validator is selected to propose a block, transactions from the node's local transaction pool will be passed to consensus clients via a local RPC connection, which will be packaged into Beacon blocks. Consensus clients will then gossip Beacon blocks across their p2p network. This requires two separate p2p networks: one connecting execution clients for transaction gossip and one connecting consensus clients for block gossip.
 
 ## Prerequisites {#prerequisites}
 
-Some knowledge of Ethereum [nodes and clients](/src/content/developers/docs/nodes-and-clients/) will be helpful for understanding this page.
+Some knowledge of Ethereum [nodes and clients](/developers/docs/nodes-and-clients/) will be helpful for understanding this page.
 
 ## The Execution Layer {#execution-layer}
 
@@ -30,7 +31,7 @@ Discovery is the process of finding other nodes in network. This is bootstrapped
 
 The protocol used for the node-bootnode interactions is a modified form of [Kademlia](https://medium.com/coinmonks/a-brief-overview-of-kademlia-and-its-use-in-various-decentralized-platforms-da08a7f72b8f) which uses a [distributed hash table](https://en.wikipedia.org/wiki/Distributed_hash_table) to share lists of nodes. Each node has a version of this table containing the information required to connect to its closest peers. This 'closeness' is not geographical - distance is defined by the similarity of the node's ID. Each node's table is regularly refreshed as a security feature. For example, in the [Discv5](https://github.com/ethereum/devp2p/tree/master/discv5), discovery protocol nodes are also able to send 'ads' that display the subprotocols that the client supports, allowing peers to negotiate about the protocols they can both use to communicate over.
 
-Discovery starts wih a game of PING-PONG. A successful PING-PONG "bonds" the new node to a bootnode. The initial message that alerts a bootnode to the existence of a new node entering the network is a `PING`. This `PING` includes hashed information about the new node, the bootnode and an expiry time-stamp. The bootnode receives the PING and returns a `PONG` containing the `PING` hash. If the `PING` and `PONG` hashes match then the connection between the new node and bootnode is verified and they are said to have "bonded".
+Discovery starts with a game of PING-PONG. A successful PING-PONG "bonds" the new node to a bootnode. The initial message that alerts a bootnode to the existence of a new node entering the network is a `PING`. This `PING` includes hashed information about the new node, the bootnode and an expiry time-stamp. The bootnode receives the `PING` and returns a `PONG` containing the `PING` hash. If the `PING` and `PONG` hashes match then the connection between the new node and bootnode is verified and they are said to have "bonded".
 
 Once bonded, the new node can send a `FIND-NEIGHBOURS` request to the bootnode. The data returned by the bootnode includes a list of peers that the new node can connect to. If the nodes are not bonded, the `FIND-NEIGHBOURS` request will fail, so the new node will not be able to enter the network.
 
@@ -42,7 +43,7 @@ start client --> connect to bootnode --> bond to bootnode --> find neighbours --
 
 #### ENR: Ethereum Node Records {#enr}
 
-The [Ethereum Node Record (ENR)](/developers/docs/networking-layer/network addresses/) is an object that contains three basic elements: a signature (hash of record contents made according to some agreed identity scheme), a sequence number that tracks changes to the record, and an arbitrary list of key:value pairs. This is a future-proof format that allows easier exchange of identifying information between new peers and is the preferred [network address](/developers/docs/networking-layer/network-addresses) format for Ethereum nodes.
+The [Ethereum Node Record (ENR)](/developers/docs/networking-layer/network-addresses/) is an object that contains three basic elements: a signature (hash of record contents made according to some agreed identity scheme), a sequence number that tracks changes to the record, and an arbitrary list of key:value pairs. This is a future-proof format that allows easier exchange of identifying information between new peers and is the preferred [network address](/developers/docs/networking-layer/network-addresses) format for Ethereum nodes.
 
 #### Why is discovery built on UDP? {#why-udp}
 
@@ -52,7 +53,7 @@ UDP does not support any error checking, resending of failed packets, or dynamic
 
 DevP2P is itself a whole stack of protocols that Ethereum implements to establish and maintain the peer-to-peer network. After new nodes enter the network, their interactions are governed by protocols in the [DevP2P](https://github.com/ethereum/devp2p) stack. These all sit on top of TCP and include the RLPx transport protocol, wire protocol and several sub-protocols. [RLPx](https://github.com/ethereum/devp2p/blob/master/rlpx.md) is the protocol governing initiating, authenticating and maintaining sessions between nodes. RLPx encodes messages using RLP (Recursive Length Prefix) which is a very space-efficient method of encoding data into a minimal structure for sending between nodes.
 
-A RLPx session between two nodes begins with an initial cryptographic handshake. This involves the node sending an auth message which is then verified by the peer. On successful verification, the peer generates an auth-acknowledgement message to return to the initiator node. This is a key-exchange process that enables the nodes to communicate privately and securely. A successful cryptographic handshake then triggers both nodes to to send a "hello" message to one another "on the wire". The wire protocol is initiated by a successful exchange of hello messages.
+A RLPx session between two nodes begins with an initial cryptographic handshake. This involves the node sending an auth message which is then verified by the peer. On successful verification, the peer generates an auth-acknowledgement message to return to the initiator node. This is a key-exchange process that enables the nodes to communicate privately and securely. A successful cryptographic handshake then triggers both nodes to send a "hello" message to one another "on the wire". The wire protocol is initiated by a successful exchange of hello messages.
 
 The hello messages contain:
 
@@ -70,11 +71,11 @@ Along with the hello messages, the wire protocol can also send a "disconnect" me
 
 #### Wire protocol {#wire-protocol}
 
-Once peers are connected and an RLPx session has been started, the wire protocol defines how peers communicate. There are three main tasks defined by the wire protocol: chain synchronization, block propagation and transaction exchange. Chain synchronization is the process of validating blocks near the head of the chain, checking their proof-of-work data and re-executing their transactions to ensure their root hashes are correct, then cascading back in history via those blocks' parents, grandparents etc until the whole chain has been downloaded and validated. State sync is a faster alternative that only validates block headers. Block propagation is the process of sending and receiving newly mined blocks. Transaction exchange refers to exchanging pending transactions between nodes so that miners can select some of them for inclusion in the next block. Detailed information about these tasks is available [here](https://github.com/ethereum/devp2p/blob/master/caps/eth.md). Clients that support these sub-protocols expose them via the [JSON-RPC](/developers/docs/apis/json-rpc).
+Once peers are connected, and an RLPx session has been started, the wire protocol defines how peers communicate. Initially, the wire protocol defined three main tasks: chain synchronization, block propagation and transaction exchange. However, once Ethereum switched to proof-of-stake, block propagation and chain synchronization became part of the consensus layer. Transaction exchange is still in the remit of the execution clients. Transaction exchange refers to exchanging pending transactions between nodes so that miners can select some of them for inclusion in the next block. Detailed information about these tasks is available [here](https://github.com/ethereum/devp2p/blob/master/caps/eth.md). Clients that support these sub-protocols expose them via the [JSON-RPC](/developers/docs/apis/json-rpc/).
 
 #### les (light ethereum subprotocol) {#les}
 
-This is a minimal protocol for syncing light clients. Traditionaly this protocol has rarely been used because full nodes are required to serve data to light clients without being incentivized. The default behaviour of execution clients is not to serve light client data over les. More information is available in the les [spec](https://github.com/ethereum/devp2p/blob/master/caps/les.md).
+This is a minimal protocol for syncing light clients. Traditionally this protocol has rarely been used because full nodes are required to serve data to light clients without being incentivized. The default behaviour of execution clients is not to serve light client data over les. More information is available in the les [spec](https://github.com/ethereum/devp2p/blob/master/caps/les.md).
 
 #### Snap {#snap}
 
@@ -88,17 +89,13 @@ The [witness protocol](https://github.com/ethereum/devp2p/blob/master/caps/wit.m
 
 Whisper was a protocol that aimed to deliver secure messaging between peers without writing any information to the blockchain. It was part of the DevP2P wire protocol but is now deprecated. Other [related projects](https://wakunetwork.com/) exist with similar aims.
 
-## Execution layer networking after The Merge {#execution-after-merge}
-
-After the Merge, an Ethereum node will run an execution client and a consensus client. The execution clients will operate similarly to today, but with the proof-of-work consensus and block gossip functionality removed. The EVM, validator deposit contract and selecting/executing transactions from the mempool will still be the domain of the execution client. This means execution clients still need to participate in transaction gossip so that they can manage the transaction mempool. This requires encrypted communication between authenticated peers meaning the networking layer for consensus clients will still be a critical component, including both the discovery protocol and DevP2P layer. Encoding will continue to be predominantly RLP on the execution layer.
-
 ## The consensus layer {#consensus-layer}
 
-The consensus clients participate in a separate peer-to-peer network with a different specification. Consensus clients need to participate in block gossip so that they can receive new blocks from peers and broadcast them when it is their turn to be block proposer. Similarly to the execution layer, this first requires a discovery protocol so that a node can find peers and establish secure sessions for exchanging blocks, attestations etc.
+The consensus clients participate in a separate peer-to-peer network with a different specification. Consensus clients need to participate in block gossip so that they can receive new blocks from peers and broadcast them when it is their turn to be block proposer. Similar to the execution layer, this first requires a discovery protocol so that a node can find peers and establish secure sessions for exchanging blocks, attestations etc.
 
 ### Discovery {#consensus-discovery}
 
-Similarly to the execution clients, consensus clients use [discv5](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) over UDP for finding peers. The consensus layer implementation of discv5 differs from that of the execution clients only in that it includes an adaptor connecting discv5 into a [libP2P](https://libp2p.io/) stack, deprecating DevP2P. The execution layer's RLPx sessions are deprecated in favour of libP2P's noise secure channel handshake.
+Similar to the execution clients, consensus clients use [discv5](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) over UDP for finding peers. The consensus layer implementation of discv5 differs from that of the execution clients only in that it includes an adaptor connecting discv5 into a [libP2P](https://libp2p.io/) stack, deprecating DevP2P. The execution layer's RLPx sessions are deprecated in favour of libP2P's noise secure channel handshake.
 
 ### ENRs {#consensus-enr}
 
@@ -122,9 +119,9 @@ SSZ stands for simple serialization. It uses fixed offsets that make it easy to 
 
 ## Connecting the execution and consensus clients {#connecting-clients}
 
-After the Merge, both consensus and execution clients will run in parallel. They need to be connected together so that the consensus client can provide instructions to the execution client and the execution client can pass bundles of transactions to the consensus client to include in Beacon blocks. This communication between the two clients can be achieved using a local RPC connection. An API known as the ['Engine-API'](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md) defines the instructions sent between the two clients. Since both clients sit behind a single network identity, they share a ENR (Ethereum node record) which contains a separate key for each client (eth1 key and eth2 key).
+Both consensus and execution clients run in parallel. They need to be connected so that the consensus client can provide instructions to the execution client, and the execution client can pass bundles of transactions to the consensus client to include in Beacon blocks. The communication between the two clients can be achieved using a local RPC connection. An API known as the ['Engine-API'](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md) defines the instructions sent between the two clients. Since both clients sit behind a single network identity, they share an ENR (Ethereum node record) which contains a separate key for each client (eth1 key and eth2 key).
 
-A summary of the control flow is shown beloiw, with the relevant networking stack in brackets.
+A summary of the control flow is shown below, with the relevant networking stack in brackets.
 
 ##### When consensus client is not block producer:
 
@@ -135,13 +132,13 @@ A summary of the control flow is shown beloiw, with the relevant networking stac
 - Execution layer passes validation data back to consensus layer, block now considered to be validated (local RPC connection)
 - Consensus layer adds block to head of its own blockchain and attests to it, broadcasting the attestation over the network (consensus p2p)
 
-##### When consensus client is block producer
+##### When consensus client is block producer:
 
 - Consensus client receives notice that it is the next block producer (consensus p2p)
 - Consensus layer calls `create block` method in execution client (local RPC)
 - Execution layer accesses the transaction mempool which has been populated by the transaction gossip protocol (execution p2p)
 - Execution client bundles transactions into a block, executes the transactions and generates a block hash
-- Consensus client grabs the transactions and block hash from the consensus client and adds them to the beacon block (local RPC)
+- Consensus client grabs the transactions and block hash from the execution client and adds them to the beacon block (local RPC)
 - Consensus client broadcasts the block over the block gossip protocol (consensus p2p)
 - Other clients receive the proposed block via the block gossip protocol and validate as described above (consensus p2p)
 
@@ -150,7 +147,7 @@ Once the block has been attested by sufficient validators it is added to the hea
 ![](cons_client_net_layer.png)
 ![](exe_client_net_layer.png)
 
-Network layer schematic for post-merge consensus and execution clients, from [ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
+Network layer schematic for consensus and execution clients, from [ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 
 ## Further Reading {#further-reading}
 

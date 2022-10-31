@@ -4,7 +4,6 @@ description: Una visión de las finanzas descentralizadas en Ethereum
 lang: es
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../assets/use-cases/defi.png
 alt: Un logo de Ethereum hecho de bloques de Lego.
 sidebarDepth: 2
@@ -346,7 +345,7 @@ DeFi es un proyecto de código abierto. Puede inspeccionar, copiar e innovar tod
 
 - [Finematics - Educación DeFi](https://finematics.com/) – _Vídeos sobre DeFi_
 - [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) – _DeFi Básico: Todo lo que necesitas saber para empezar en este apabullante espacio._
-- [Whiteboard Crypto](https://youtu.be/17QRFlml4pA) – _¿Qué es DeFi?_
+- [Whiteboard Crypto](https://youtu.be/17QRFlml4pA)_¿Qué es DeFi?_
 
 ### Comunidades {#communities}
 

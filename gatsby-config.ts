@@ -9,13 +9,13 @@ import {
   ignoreLanguages,
 } from "./src/utils/languages"
 
+import { IS_PREVIEW } from "./src/utils/env"
+
 const siteUrl = `https://ethereum.org`
 
 const ignoreContent = (process.env.IGNORE_CONTENT || "")
   .split(",")
   .filter(Boolean)
-
-const isPreviewDeploy = process.env.IS_PREVIEW_DEPLOY === "true"
 
 const ignoreTranslations = ignoreLanguages.map(
   (lang) => `**/translations\/${lang}`
@@ -37,17 +37,20 @@ const config: GatsbyConfig = {
   plugins: [
     // i18n support
     {
-      resolve: `gatsby-plugin-intl`,
+      resolve: `gatsby-theme-i18n`,
       options: {
-        // language JSON resource path
-        path: path.resolve(`src/intl`),
-        // supported language
-        languages: supportedLanguages,
-        // language file path
-        defaultLanguage,
-        // redirect to `/${lang}/` when connecting to `/`
-        // based on user's browser language preference
-        redirect: true,
+        defaultLang: defaultLanguage,
+        prefixDefault: true,
+        locales: supportedLanguages.length
+          ? supportedLanguages.join(" ")
+          : null,
+        configPath: path.resolve(`./i18n/config.json`),
+      },
+    },
+    {
+      resolve: `gatsby-theme-i18n-react-intl`,
+      options: {
+        defaultLocale: `./src/intl/en.json`,
       },
     },
     // Web app manifest
@@ -63,7 +66,7 @@ const config: GatsbyConfig = {
         icon: `src/assets/favicon.png`,
       },
     },
-    // Sitemap generator (ethereum.org/sitemap.xml)
+    // Sitemap generator (ethereum.org/sitemap/sitemap-index.xml)
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
@@ -101,6 +104,15 @@ const config: GatsbyConfig = {
         },
       },
     },
+    // robots.txt creation
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: siteUrl,
+        sitemap: `${siteUrl}/sitemap/sitemap-index.xml`,
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
     // Ability to set custom IDs for headings (for translations)
     // i.e. https://www.markdownguide.org/extended-syntax/#heading-ids
     `gatsby-remark-autolink-headers`,
@@ -131,8 +143,8 @@ const config: GatsbyConfig = {
         // See: https://www.gatsbyjs.org/docs/mdx/plugins/
         gatsbyRemarkPlugins: [
           {
-            // Local plugin to adjust the images urls of the translated md files
-            resolve: path.resolve(`./plugins/gatsby-remark-image-urls`),
+            // Local plugin to adjust the images & links urls of the translated md files
+            resolve: path.resolve(`./plugins/gatsby-remark-fix-static-urls`),
           },
           {
             resolve: `gatsby-remark-autolink-headers`,
@@ -182,7 +194,20 @@ const config: GatsbyConfig = {
       },
     },
     // CSS in JS
-    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-emotion`,
+      options: {
+        labelFormat: "[filename]--[local]",
+      },
+    },
+    {
+      resolve: "@chakra-ui/gatsby-plugin",
+      options: {
+        resetCSS: true,
+        isUsingColorMode: true,
+        portalZIndex: 1001,
+      },
+    },
     // Source assets
     {
       resolve: `gatsby-source-filesystem`,
@@ -227,9 +252,19 @@ const config: GatsbyConfig = {
       },
     },
     // Needed for Gatsby Cloud redirect support
-    `gatsby-plugin-gatsby-cloud`,
+    {
+      resolve: `gatsby-plugin-gatsby-cloud`,
+      options: {
+        generateMatchPathRewrites: false,
+      },
+    },
     // Creates `_redirects` & `_headers` build files for Netlify
-    `gatsby-plugin-netlify`,
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        generateMatchPathRewrites: false,
+      },
+    },
   ],
   // https://www.gatsbyjs.com/docs/reference/release-notes/v2.28/#feature-flags-in-gatsby-configjs
   flags: {
@@ -239,10 +274,10 @@ const config: GatsbyConfig = {
 
 // Avoid loading Matomo in preview deploys since NODE_ENV is `production` in
 // there and it will send testing data as production otherwise
-if (!isPreviewDeploy) {
+if (!IS_PREVIEW) {
   config.plugins = [
     ...(config.plugins || []),
-    // Matomo analtyics
+    // Matomo analytics
     {
       resolve: "gatsby-plugin-matomo",
       options: {

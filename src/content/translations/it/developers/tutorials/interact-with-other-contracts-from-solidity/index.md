@@ -9,9 +9,8 @@ tags:
   - "factory"
   - "distribuzione"
   - "componibilità"
-skill: avanzato
+skill: advanced
 lang: it
-sidebar: true
 published: 2020-04-05
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/interact-with-other-contracts-from-solidity/
@@ -68,7 +67,7 @@ Nella nostra nuova `CounterFactory` che gestirà tutti gli altri Counter aggiung
 mapping(address => Counter) _counters;
 ```
 
-In Ethereum, i mapping equivalgono agli oggetti di JavaScript, che permettono di mappare una chiave di tipo A a un valore di tipo B. In questo caso mappiamo l'indirizzo di un proprietario all'istanza del suo Counter.
+In Ethereum, i mapping equivalgono agli oggetti di Javascript, che permettono di mappare una chiave di tipo A a un valore di tipo B. In questo caso mappiamo l'indirizzo di un proprietario all'istanza del suo Counter.
 
 Istanziare un nuovo Counter per un utente sarà più o meno:
 

@@ -2,7 +2,6 @@
 title: Języki inteligentnych kontraktów
 description: Przegląd i porównanie dwóch głównych języków inteligentnych kontraktów – Solidity i Vyper.
 lang: pl
-sidebar: true
 ---
 
 Świetnym aspektem Ethereum jest to, że inteligentne kontrakty można programować przy użyciu stosunkowo przyjaznych dla programistów języków. Jeśli masz doświadczenie z Pythonem lub JavaScript, możesz znaleźć język o znanej składni.
@@ -243,7 +242,7 @@ Poniższy prosty przykład implementuje funkcję potęgową. Można go skompilow
 }
 ```
 
-Jeśli masz już duże doświadczenie w inteligentnych kontraktach, pełną implementację ERC20 w Yul znajdziesz [tutaj ](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
+Jeśli masz już duże doświadczenie w inteligentnych kontraktach, pełną implementację ERC20 w Yul znajdziesz [tutaj](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
 
 ## Jak wybrać {#how-to-choose}
 

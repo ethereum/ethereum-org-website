@@ -2,7 +2,6 @@
 title: Scalabilità
 description: Introduzione alle diverse opzioni di scalabilità attualmente in fase di sviluppo da parte della community Ethereum.
 lang: it
-sidebar: true
 sidebarDepth: 3
 ---
 
@@ -28,7 +27,7 @@ Questo metodo di scalabilità richiede modifiche al protocollo Ethereum ([rete p
 
 Sharding è il processo di suddivisione orizzontale di un database per distribuire il carico. In un contesto Ethereum, lo sharding ridurrà la congestione della rete e aumenterà le transazioni al secondo creando nuove catene, note come "shard". Questo alleggerirà anche il carico per ogni validatore, che non dovrà più elaborare la totalità di tutte le transazioni sulla rete.
 
-Ulteriori informazioni sullo [sharding](/upgrades/shard-chains/).
+Ulteriori informazioni sullo [sharding](/upgrades/sharding/).
 
 ## Scalabilità off-chain {#off-chain-scaling}
 

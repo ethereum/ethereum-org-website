@@ -1,0 +1,77 @@
+import React, { useEffect, useState } from "react"
+import styled from "@emotion/styled"
+import { shuffle } from "lodash"
+
+import ActionCard from "./ActionCard"
+import data from "../data/contributors.json"
+
+const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`
+
+const ContributorCard = styled(ActionCard)`
+  max-width: 132px;
+  margin: 0.5rem;
+
+  .action-card-image-wrapper {
+    min-height: 100px;
+  }
+  .action-card-image {
+    width: 132px;
+    height: 132px;
+  }
+  .action-card-content {
+    padding: 1rem;
+    h3 {
+      font-size: ${(props) => props.theme.fontSizes.m};
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+`
+
+export interface IProps {}
+
+export interface Contributor {
+  login: string
+  name: string
+  avatar_url: string
+  profile: string
+  contributions: Array<string>
+}
+
+const Contributors: React.FC<IProps> = () => {
+  const [contributorsList, setContributorsList] = useState<Array<Contributor>>(
+    []
+  )
+
+  useEffect(() => {
+    const list = shuffle(data.contributors)
+    setContributorsList(list)
+  }, [])
+
+  return (
+    <>
+      <p>
+        Thanks to our {contributorsList.length} Ethereum community members who
+        have contributed so far!
+      </p>
+
+      <Container>
+        {contributorsList.map((contributor, idx) => (
+          <ContributorCard
+            key={idx}
+            image={contributor.avatar_url}
+            to={contributor.profile}
+            title={contributor.name}
+            alt={contributor.name}
+          />
+        ))}
+      </Container>
+    </>
+  )
+}
+
+export default Contributors

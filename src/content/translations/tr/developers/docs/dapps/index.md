@@ -2,7 +2,6 @@
 title: Dapp'lere giriş
 description:
 lang: tr
-sidebar: true
 ---
 
 Bir merkeziyetsiz uygulama (dapp), bir [akıllı sözleşme](/developers/docs/smart-contracts/) ile bir ön uç kullanıcı arayüzünü birleştiren merkeziyetsiz bir ağ üzerine kurulmuş bir uygulamadır. Ethereum'da akıllı sözleşmeler açık API'ler gibi erişilebilir ve şeffaftır: Bu yüzden merkeziyetsiz uygulamanız, başka birinin yazdığı bir akıllı sözleşmeyi bile içerebilir.
@@ -28,7 +27,7 @@ Dapp'leri kullanıma sokmak için, en iyi şekilde bir dapp'in arka ucu olarak t
 
 Akıllı sözleşme, Ethereum blok zincirinde yaşayan ve tam olarak programlandığı gibi çalışan bir koddur. Akıllı sözleşmeler ağa dağıtıldıktan sonra bunları değiştiremezsiniz. Dapp'ler, bir kişi veya şirket tarafından değil, sözleşmeye yazılan mantık tarafından kontrol edildikleri için merkeziyetsiz hâle getirilebilir. Bu aynı zamanda, sözleşmelerinizi çok dikkatli bir şekilde tasarlamanız ve iyice test etmeniz gerektiği anlamına gelir.
 
-## Dapp deliştirmenin faydaları {#benefits-of-dapp-development}
+## Dapp geliştirmenin faydaları {#benefits-of-dapp-development}
 
 - **Sıfır kesinti** – Akıllı sözleşme dağıtıldıktan ve blok zincirine ulaştıktan sonra ağ bir bütün olarak sözleşme ile etkileşmek isteyen istemcilere her zaman hizmet edebilecektir. Bu nedenle kötü niyetli aktörler, bireysel dapp'lere yönelik hizmet reddi saldırıları başlatamaz.
 - **Gizlilik** – Bir dapp dağıtmak veya onunla etkileşime girmek için gerçek hayattaki kimliğinizi sağlamanız gerekmez.
@@ -69,7 +68,7 @@ Akıllı sözleşme, Ethereum blok zincirinde yaşayan ve tam olarak programland
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla okuma {#further-reading}
 
 - [Bir Web 3.0 uygulamasının mimarisi](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 - [Merkeziyetsiz uygulamalar hakkında bir 2021 rehberi](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) - _LimeChain_

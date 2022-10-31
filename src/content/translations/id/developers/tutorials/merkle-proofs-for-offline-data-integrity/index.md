@@ -6,9 +6,8 @@ tags:
   - "merkle"
   - "integritas"
   - "penyimpanan"
-skill: tingkat lanjut
+skill: advanced
 lang: id
-sidebar: true
 published: 2021-12-30
 ---
 

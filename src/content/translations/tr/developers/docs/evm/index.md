@@ -1,8 +1,7 @@
 ---
-title: Ethereum Sanal Makinesi (EVM)
+title: Ethereum Sanal Makinası (EVM)
 description: Ethereum Sanal Makinesine (EVM) ve EVM'nin durum, işlem ve akıllı sözleşmelerle olan ilgisine dair bir giriş.
 lang: tr
-sidebar: true
 ---
 
 EVM'nin fiziksel varlığı, bir buluta veya bir okyanus dalgasına benzetilerek açıklanamaz ama EVM, bir Ethereum istemcisi çalıştıran binlerce bağlı bilgisayar tarafından sürdürülen tek bir varlık olarak _var olmaktadır_.
@@ -11,7 +10,7 @@ Ethereum protokolü sadece bu özel durum makinesinin devamlı, kesintisiz ve de
 
 ## Ön koşullar {#prerequisites}
 
-[Bayt](https://wikipedia.org/wiki/Byte), [bellek](https://wikipedia.org/wiki/Computer_memory) ve [yığın](https://wikipedia.org/wiki/Stack_(abstract_data_type)) gibi bilgisayar bilimlerindeki yaygın terminolojiyi temel seviyede kavramak, EVM'yi anlamak için zorunludur. [Hash fonksiyonları](https://wikipedia.org/wiki/Cryptographic_hash_function), [iş ispatı](https://wikipedia.org/wiki/Proof_of_work) ve [Merkle ağacı](https://wikipedia.org/wiki/Merkle_tree) gibi kriptografi/blok zinciri konseptlerine aşina olmak da yardımcı olacaktır.
+[Bayt](https://wikipedia.org/wiki/Byte), [bellek](https://wikipedia.org/wiki/Computer_memory) ve [yığın](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) gibi bilgisayar bilimlerindeki yaygın terminolojiyi temel seviyede kavramak, EVM'yi anlamak için zorunludur. [Hash fonksiyonları](https://wikipedia.org/wiki/Cryptographic_hash_function), [iş ispatı](https://wikipedia.org/wiki/Proof_of_work) ve [Merkle ağacı](https://wikipedia.org/wiki/Merkle_tree) gibi kriptografi/blok zinciri konseptlerine aşina olmak da yardımcı olacaktır.
 
 ## Defterden durum makinesine {#from-ledger-to-state-machine}
 
@@ -65,7 +64,6 @@ Tüm [Ethereum istemcileri](/developers/docs/nodes-and-clients/#execution-client
 - [evmone](https://github.com/ethereum/evmone) - _C++_
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
 - [eEVM](https://github.com/microsoft/eevm) - _C++_
-- [Hyperledger Burrow](https://github.com/hyperledger/burrow) - _Go_
 
 ## Daha Fazla Bilgi {#further-reading}
 

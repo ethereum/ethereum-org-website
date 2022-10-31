@@ -2,7 +2,6 @@
 title: Skalierung
 description: Eine Einführung in die verschiedenen Skalierungsoptionen, die derzeit von der Ethereum Community entwickelt werden.
 lang: de
-sidebar: true
 sidebarDepth: 3
 ---
 
@@ -28,7 +27,7 @@ Diese Methode der Skalierung erfordert Änderungen am Ethereum-Protokoll (Layer 
 
 Unter Sharding versteht man die horizontale Aufteilung einer Datenbank, um die Last zu verteilen. Im Ethereum-Kontext wird das Sharding die Netzwerküberlastung reduzieren und die Transaktionen pro Sekunde erhöhen, indem neue Ketten, die sogenannten „Shards", geschaffen werden. Dies entlastet auch die einzelnen Prüfer, die nicht mehr die Gesamtheit aller Transaktionen im Netz bearbeiten müssen.
 
-Erfahren Sie mehr über [Sharding](/upgrades/shard-chains/).
+Erfahren Sie mehr über [Sharding](/upgrades/sharding/).
 
 ## Off-Chain-Skalierung {#off-chain-scaling}
 
@@ -86,7 +85,7 @@ Lernen Sie mehr über [Validium](/developers/docs/scaling/validium/).
 
 ## Warum werden so viele Skalierungslösungen benötigt? {#why-do-we-need-these}
 
-- Mehrere Lösungen können dazu beitragen, die Gesamtüberlastung in einem Teil des Netzwerks zu verringern, und verhindern außerdem einzelne Fehlerquellen.
+- Mehrere Lösungen können dazu beitragen, die Gesamtüberlastung in einem Teil des Netzes zu verringern, und verhindern außerdem einzelne Fehlerquellen.
 - Das Ganze ist größer als die Summe seiner Teile. Es können verschiedene Lösungen existieren und miteinander harmonieren, was einen exponentiellen Effekt auf die künftige Transaktionsgeschwindigkeit und den Durchsatz ermöglicht.
 - Nicht alle Lösungen erfordern die direkte Nutzung des Ethereum-Konsens-Algorithmus, und Alternativen können Vorteile bieten, die sonst nur schwer zu erreichen wären.
 - Eine einzige Skalierungslösung reicht nicht aus, um die [Ethereum Vision](/upgrades/vision/) zu erfüllen.

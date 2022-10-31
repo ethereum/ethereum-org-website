@@ -2,7 +2,6 @@
 title: Mainnet-ul Ethereum pentru întreprinderi
 description: Ghiduri, articole și instrumente despre aplicațiile pentru întreprinderi pe blockchain-ul Ethereum public
 lang: ro
-sidebar: true
 ---
 
 # Mainnet-ul Ethereum pentru întreprinderi {#ethereum-for-enterprise}

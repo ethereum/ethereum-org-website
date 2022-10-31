@@ -3,7 +3,6 @@ title: Birleştirme
 description: Mainnet Ethereum'un, İşaret Zinciri koordineli hisse ispatı sistemine katılacağı Birleştirme hakkında bilgi edinin.
 lang: tr
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: Nihayetinde mevcut Ethereum Mainnet, işaret zincirinin hisse ispatı sistemi ile birleşecektir.
 summaryPoint2: Bu birleştirme, Ethereum için iş ispatına bir son verecek ve hisse ispatına tam geçişi sağlayacaktır.
@@ -23,7 +22,7 @@ Ethereum'un yıldızlararası bir yolculuk için pek de hazır olmayan bir uzay 
 
 ## Mainnet ile birleştirme {#docking-mainnet}
 
-Hazır olduğunda Ethereum Mainnet, İşaret Zinciri ile "birleşecek" ve [iş ispatı yerine hisse ispatı kullanan kendi parçasına dönüşecek. ](/developers/docs/consensus-mechanisms/pow/).
+Hazır olduğunda Ethereum Mainnet, İşaret Zinciri ile "birleşecek" ve [iş ispatı yerine hisse ispatı kullanan kendi parçasına dönüşecek](/developers/docs/consensus-mechanisms/pow/).
 
 Mainnet, tüm ETH sahipleri ve kullanıcıları için geçişin sorunsuz olmasını sağlamak için akıllı sözleşmeleri hisse kanıtı(proof-of-stake) sistemine ve ayrıca Ethereum'un tam geçmişine ve mevcut durumuna getirecek.
 
@@ -59,8 +58,8 @@ Başlangıçta plan, ölçeklenebilirliği ele almak için Birleştirmeden önce
 
 Bu, sonsuz ölçeklenebilirliğe izin vermek için potansiyel olarak birden fazla parça zinciri turuna duyulan ihtiyaç konusunda topluluk tarafından, devam eden bir değerlendirme olacaktır.
 
-<ButtonLink to="/upgrades/shard-chains/">
-  Shard zincirleri
+<ButtonLink to="/upgrades/sharding/">
+  Parça zincirleri
 </ButtonLink>
 
 ## Daha fazla okuyun {#read-more}

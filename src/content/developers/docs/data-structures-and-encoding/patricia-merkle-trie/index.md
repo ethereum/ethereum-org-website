@@ -2,7 +2,6 @@
 title: Patricia Merkle Trees
 description: Introduction to Patricia Merkle Tries.
 lang: en
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -87,7 +86,7 @@ The optimization above however introduces some ambiguity.
 
 When traversing paths in nibbles, we may end up with an odd number of nibbles to traverse, but because all data is stored in `bytes` format, it is not possible to differentiate between, for instance, the nibble `1`, and the nibbles `01` (both must be stored as `<01>`). To specify odd length, the partial path is prefixed with a flag.
 
-### Specification: Compact encoding of hex sequence with optional terminator {specification}
+### Specification: Compact encoding of hex sequence with optional terminator {#specification}
 
 The flagging of both _odd vs. even remaining partial path length_ and _leaf vs. extension node_ as described above reside in the first nibble of the partial path of any 2-item node. They result in the following:
 
@@ -179,7 +178,7 @@ Now, we build such a trie with the following key/value pairs in the underlying D
     hashE:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coin' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
 ```
 
-When one node is referenced inside another node, what is included is `H(rlp.encode(x))`, where `H(x) = keccak256(x) if len(x) >= 32 else x` and `rlp.encode` is the [RLP](/fundamentals/rlp) encoding function.
+When one node is referenced inside another node, what is included is `H(rlp.encode(x))`, where `H(x) = keccak256(x) if len(x) >= 32 else x` and `rlp.encode` is the [RLP](/developers/docs/data-structures-and-encoding/rlp) encoding function.
 
 Note that when updating a trie, one needs to store the key/value pair `(keccak256(x), x)` in a persistent lookup table _if_ the newly-created node has length >= 32. However, if the node is shorter than that, one does not need to store anything, since the function f(x) = x is reversible.
 

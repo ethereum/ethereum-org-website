@@ -1,9 +1,8 @@
 ---
-title: マージ
+title: 統合
 description: マージについて - イーサリアムメインネットがビーコンチェーンと統合し、プルーフ・オブ・ステークシステムの実現
 lang: ja
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: 現在のイーサリアムメインネットは、最終的にビーコンチェーンのプルーフ・オブ・ステークシステムと「マージ(統合)」されます。
 summaryPoint2: イーサリアムのプルーフ・オブ・ワークの終了と、プルーフ・オブ・ステークへの完全な移行がこれで完了します。
@@ -59,7 +58,7 @@ summaryPoint4: 旧称は「ドッキング」です。
 
 ただし、無限のスケーラビリティを可能にするために、複数のシャードチェーンの潜在的な必要性について、継続的な評価検証がコミュニティにより行われています。
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
   シャードチェーン
 </ButtonLink>
 

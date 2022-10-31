@@ -3,14 +3,13 @@ title: 如何使用 Echidna 测试智能合约
 description: 如何使用 Echidna 自动测试智能合约
 author: "Trailofbits"
 lang: zh
-sidebar: true
 tags:
   - "solidity"
   - "智能合约"
   - "安全性"
   - "测试"
   - "模糊测试"
-skill: 高级
+skill: advanced
 published: 2020-04-10
 source: 构建安全的合约
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna

@@ -3,7 +3,6 @@ title: "The Graph: zapytania o dane Web3"
 description: Blockchain jest jak baza danych, ale bez SQL. Wszystkie dane tam są, ale nie ma do nich dostępu. Pokażę ci, jak to naprawić za pomocą The Graph i GraphQL.
 author: Markus Waas
 lang: pl
-sidebar: true
 tags:
   - "solidity"
   - "inteligentne kontrakty"
@@ -11,7 +10,7 @@ tags:
   - "the graph"
   - "create-eth-app"
   - "reakcja"
-skill: średnie
+skill: intermediate
 published: 2020-09-06
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/thegraph

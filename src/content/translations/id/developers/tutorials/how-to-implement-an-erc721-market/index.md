@@ -7,9 +7,8 @@ tags:
   - "erc-721"
   - "solidity"
   - "token"
-skill: tingkat menengah
+skill: intermediate
 lang: id
-sidebar: true
 published: 2020-03-19
 source: Hackernoon
 sourceUrl: https://hackernoon.com/how-to-implement-an-erc721-market-1e1a32j9

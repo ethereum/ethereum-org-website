@@ -3,14 +3,13 @@ title: 如何撰写和部署非同质化代币（非同质化代币教程系列 
 description: 本教程是关于非同质化代币的系列教程的第一部分，将带您逐步了解如何使用以太坊和星际文件系统 (IPFS) 编写和部署非同质化代币（ERC-721 代币）智能合约。
 author: "Sumi Mudgil"
 tags:
-  - "非同质化代币"
+  - "NFT"
   - "ERC-721"
   - "Alchemy"
   - "Solidity"
   - "智能合约"
-skill: 初学者
+skill: beginner
 lang: zh
-sidebar: true
 published: 2021-04-22
 ---
 
@@ -18,23 +17,23 @@ published: 2021-04-22
 
 Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括 Makersplace（最近在克利斯蒂拍卖行创造了 6900 万美元的数字艺术品销售记录）、Dapper Labs（NBA Top Shot & Crypto Kitties 的创作者）、OpenSea（世界上最大的非同质化代币市场）、Zora、Super Rare、NFTfi、Foundation、Enjin、Origin Protocol、Immutable 等。
 
-在本教程中，我们将学习使用 [MetaMask](https://metamask.io/)、[Solidity](https://docs.soliditylang.org/en/v0.8.0/)、[Hardhat](https://hardhat.org/)、[Pinata](https://pinata.cloud/) 和 [Alchemy](https://alchemy.com/signup/eth)，在 Ropsten 测试网络上创建和部署 ERC-721 智能合约的全过程（如果您还不明白其中的含义，也不要着急——我们会加以解释！）。
+在本教程中，我们将学习使用 [MetaMask](https://metamask.io/)、[Solidity](https://docs.soliditylang.org/en/v0.8.0/)、[安全帽](https://hardhat.org/)、[Pinata](https://pinata.cloud/) 和 [Alchemy](https://alchemy.com/signup/eth) 在 Ropsten 测试网络上创建和部署 ERC-721 智能合约的全过程（如果您还不明白其中的含义，不要着急，我们会加以解释！）。
 
 在本教程的第二部分，我们将了解如何使用我们的智能合约来铸造非同质化代币；在第三部分，我们将说明如何在 MetaMask 上查看您的非同质化代币。
 
-当然，如果您有任何问题，请随时联系 [Alchemy Discord](https://discord.gg/gWuC7zB) 或访问 [Alchemy 的 NFT API 文档](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)！
+当然，如果您有任何问题，请随时通过 [Alchemy Discord](https://discord.gg/gWuC7zB) 联系我们或阅读 [Alchemy 的非同质化代币应用程序接口相关文档](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)！
 
 ## 步骤 1：连接到以太坊网络 {#connect-to-ethereum}
 
-有很多方法可以向以太坊区块链发出请求，但为了方便起见，我们将使用 [Alchemy](https://alchemy.com/signup/eth) 上的免费帐户。Alchemy 是一个区块链开发平台，能够提供应用程序接口，让我们无需运行自己的节点，即可与以太坊公链进行通信。
+有很多方法可以向以太坊区块链发出请求，但为了方便起见，我们将使用 [Alchemy](https://alchemy.com/signup/eth) 上的免费帐户。Alchemy 是一个区块链开发平台，能够提供应用程序接口，让我们无需运行自己的节点，即可与以太坊区块链进行通信。
 
-在本教程中，我们将利用 Alchemy 平台的开发者工具进行监测和分析，以便了解智能合约部署的底层逻辑。 如果您还没有 Alchemy 账户，您可以在[这里](https://alchemy.com/signup/eth)免费注册。
+在本教程中，我们将利用 Alchemy 平台的开发者工具进行监测和分析，以便了解智能合约部署的底层逻辑。 如果您还没有 Alchemy 帐户，您可以在[此处](https://alchemy.com/signup/eth)免费注册。
 
 ## 步骤 2：创建应用程序（和应用程序接口密钥） {#make-api-key}
 
-创建了 Alchemy 账户后，您可以通过创建应用程序来生成应用程序接口密钥。 我们可以用它向 Ropsten 测试网络发起请求。 如果您想了解更多关于测试网络的信息，请查看[本指南](https://docs.alchemyapi.io/guides/choosing-a-network)。
+创建了 Alchemy 帐户后，您可以通过创建应用程序来生成应用程序接口密钥。 我们可以用它向 Ropsten 测试网络发起请求。 如果您想了解更多关于测试网络的信息，请查看[本指南](https://docs.alchemyapi.io/guides/choosing-a-network)。
 
-1. 在 Alchemy 仪表板中，将鼠标悬停在导航栏中的“应用程序”上，单击“创建应用程序”并前往此页面。
+1. 在您的 Alchemy 仪表板中的“创建应用程序”页面上，将鼠标悬停在导航栏中的“应用程序”上 ，然后点击“创建应用程序”
 
 ![创建您的应用程序](./create-your-app.png)
 
@@ -42,21 +41,21 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
 
 ![配置并发布您的应用程序](./configure-and-publish-your-app.png)
 
-3. 点击“创建应用程序”即可！ 您的应用程序应该会出现在下面的表格中。
+3. 点击"创建应用程序"，完成！ 您的应用程序应该会出现在下面的表格中。
 
-## 步骤 3：创建一个以太坊账户（地址） {#create-eth-address}
+## 步骤 3：创建一个以太坊帐户（地址） {#create-eth-address}
 
-我们需要一个以太坊帐户来发送和接收交易。 在本教程中，我们将使用 MetaMask——浏览器中的虚拟钱包，用来管理您的以太坊账户地址。 如果您想了解更多关于以太坊交易的运作方式，请查看以太坊基金会的[这个页面](/developers/docs/transactions/)。
+我们需要一个以太坊帐户来发送和接收交易。 在本教程中，我们将使用 MetaMask——浏览器中的虚拟钱包，用来管理您的以太坊帐户地址。 如果您想了解更多关于以太坊交易的运作方式，请查看以太坊基金会的[这个页面](/developers/docs/transactions/)。
 
-您可以[在这里](https://metamask.io/download.html)免费下载并创建一个 MetaMask 账户。 创建账户时，或者如果您已经有一个账户时，确保切换到右上方的“Ropsten 测试网络”（这样我们就不会用实际货币进行交易）。
+您可以[在这里](https://metamask.io/download.html)免费下载并创建一个 MetaMask 帐户。 创建帐户时，或者如果您已经有一个帐户时，确保切换到右上方的“Ropsten 测试网络”（这样我们就不会用实际货币进行交易）。
 
 ![将 Ropsten 设为您的网络](./metamask-ropsten.png)
 
 ## 步骤 4：从水龙头添加以太币 {#step-4-add-ether-from-a-faucet}
 
-为了将我们的智能合约部署到测试网络，我们需要一些虚拟以太币。 要获取 ETH，您可以前往 [FaucETH](https://fauceth.komputing.org) 并输入您的 Ropsten 账户地址，点击“Request funds”，然后在中选择“Ethereum Testnet Ropsten” 下拉菜单，最后再次单击“Request funds”按钮。 您应该会很快在您的 MetaMask 帐户中看到以太币！
+为了将我们的智能合约部署到测试网络，我们需要一些虚拟以太币。 要获取以太币，您可以前往 [FaucETH](https://fauceth.komputing.org) 并输入您的 Ropsten 帐户地址，单击“Request funds”，然后在下拉菜单中选择“Ethereum Testnet Ropsten”，最后再次单击“Request funds”按钮。 您应该会很快在您的 MetaMask 帐户中看到以太币！
 
-## 步骤 5：查看账户余额 {#check-balance}
+## 步骤 5：查看帐户余额 {#check-balance}
 
 为了核实我们的余额，可以使用 [Alchemy 的创作者工具](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D)发出 [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) 请求。 这将返回我们钱包中的以太币金额。 输入您的 Metamask 帐户地址并单击“发送请求”后，您应该会看到这样的响应：
 
@@ -106,7 +105,7 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
 
 ## 步骤 7：安装[安全帽 (Hardhat)](https://hardhat.org/getting-started/#overview) {#install-hardhat}
 
-安全帽是一个用于编译、部署、测试和调试以太坊软件的开发环境。 在部署到实时链上之前，它帮助开发者在本地构建智能合约和去中心化应用程序。
+安全帽是一个用于编译、部署、测试和调试以太坊软件的开发环境。 它可以帮助开发者在本地构建智能合约和去中心化应用程序并部署到实时链上。
 
 在我们的 my-nft 项目内运行：
 
@@ -131,7 +130,7 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
     888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
     888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
     👷 Welcome to Hardhat v2.0.11 👷‍
-    ? What do you want to do? …
+    ? 您想做什么？ …
     Create a sample project
     ❯ Create an empty hardhat.config.js
     Quit
@@ -202,11 +201,11 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
 
 - @openzeppelin/contracts/access/Ownable.sol 在我们的智能合约上设置了[访问控制](https://docs.openzeppelin.com/contracts/3.x/access-control)，因此只有智能合约的所有者（您）可以铸造非同质化代币。 （注意：包含访问控制完全是一种偏好。 如果您希望任何人都能使用您的智能合约铸造非同质化代币，请删除第 10 行的 Ownable 和第 17 行的 onlyOwner）。
 
-在导入声明后，是我们自定义的非同质化代币智能合约。合约非常短，只包含一个计数函数、一个构造函数和独立函数！ 这要归功于我们继承的 OpenZepelin 合约，它们实现了我们创建非同质化代币所需的大多数方法。例如 `owerOf` 函数，其作用是返回非同质化代币所有者，以及 `transferFrom` 函数，其作用是将非同质化代币的所有权从一个账户转移到另一个账户。
+在导入声明后，是我们自定义的非同质化代币智能合约。合约非常短，只包含一个计数函数、一个构造函数和独立函数！ 这要归功于我们继承的 OpenZepelin 合约，它们实现了我们创建非同质化代币所需的大多数方法。例如 `owerOf` 函数，其作用是返回非同质化代币所有者，以及 `transferFrom` 函数，其作用是将非同质化代币的所有权从一个帐户转移到另一个帐户。
 
 在我们的 ERC-721 构造函数中，您会注意到我们传递 2 个字符串，“MyNFT”和“NFT”。 第一个变量是智能合约的名称，第二个变量是其符号。 您可以随意命名这些变量！
 
-最后，我们的函数 `mintNFT(address recipient, string memory tokenURI)` 允许我们铸造 NFT！ 您将注意到，这个函数包含两个变量：
+最后，我们得到了函数 `mintNFT(address recipient, string memory tokenURI)`，它允许我们铸造非同质化代币！ 您将注意到，这个函数包含两个变量：
 
 - `address recipient` 指定了接收新铸造非同质化代币的地址
 
@@ -226,7 +225,7 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
 
     npm install dotenv --save
 
-然后，在我们项目的根目录中创建一个 `.env` 文件，并将您的 MetaMask 私钥和 HTTP Alchemy API URL 添加到其中。
+然后，在项目的根目录中创建 `.env` 文件，并将您的 Metamask 私钥和超文本传输协议 Alchemy 应用程序接口网址添加到其中。
 
 - 遵循[这些说明](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key)，从 MetaMask 导出您的私钥
 
@@ -319,7 +318,7 @@ main()
 
     const MyNFT = await ethers.getContractFactory("MyNFT");
 
-ethers.js 中的 ContractFactory 是用于部署新智能合约的抽象对象。因此这里的 MyNFT 是我们非同质化代币合约实例的工厂。 使用 hardhat-ethers 插件时，ContractFactory 和合约实例默认与第一个签名账户相连。
+ethers.js 中的 ContractFactory 是用于部署新智能合约的抽象对象。因此这里的 MyNFT 是我们非同质化代币合约实例的工厂。 使用 hardhat-ethers 插件时，ContractFactory 和合约实例默认与第一个签名帐户相连。
 
     const myNFT = await MyNFT.deploy();
 
@@ -335,7 +334,7 @@ ethers.js 中的 ContractFactory 是用于部署新智能合约的抽象对象�
 
     Contract deployed to address: 0x81c587EB0fE773404c42c1d2666b5f557C470eED
 
-如果我们去 [Ropsten etherscan](https://ropsten.etherscan.io/) 并搜索我们的合约地址，我们应该能够看到它已经部署成功。 如果您无法立即看到它，请稍等片刻，因为它可能需要一些时间。 交易将类似以下︰
+如果我们前往 [Ropsten etherscan](https://ropsten.etherscan.io/) 并搜索我们的合约地址，我们应该能够看到该合约已部署成功。 如果没有即刻看到它，请稍等片刻，因为部署可能需要一些时间。 交易将类似以下︰
 
 ![在 Etherscan 上查看您的交易地址](./etherscan-transaction.png)
 
@@ -345,7 +344,7 @@ ethers.js 中的 ContractFactory 是用于部署新智能合约的抽象对象�
 
 太棒了！ 您刚刚在以太坊区块链上部署了一个非同质化代币智能合约！
 
-为了更深入了解到底发生了什么，我们转到 [Alchemy 仪表板](https://dashboard.alchemyapi.io/explorer)中的 Explorer 选项卡。 如果您有多个 Alchemy 应用程序，请确保按应用程序筛选，然后选择“MyNFT”。
+要了解后台运行情况，我们导航到 [Alchemy 仪表板](https://dashboard.alchemyapi.io/explorer)中的 Explorer 选项卡。 如果您有多个 Alchemy 应用程序，请确保按应用程序筛选，然后选择“MyNFT”。
 
 ![使用 Alchemy 的浏览器仪表板查看“后端”调用](./alchemy-explorer.png)
 

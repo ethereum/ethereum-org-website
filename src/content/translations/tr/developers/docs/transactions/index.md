@@ -2,10 +2,9 @@
 title: İşlemler
 description: Ethereum işlemlerine genel bir bakış - nasıl çalışırlar, veri yapıları ve bir uygulama aracılığıyla nasıl gönderilirler.
 lang: tr
-sidebar: true
 ---
 
-İşlemler, hesaplardan kriptografik olarak imzalanmış talimatlardır. Bir hesap, Ethereum ağının durumunu güncellemek için bir işlem başlatacaktır. En basit işlem ETH'yi bir hesaptan diğerine aktarmaktır.
+İşlemler, hesaplardan gelen kriptografik olarak imzalanmış talimatlardır. Bir hesap, Ethereum ağının durumunu güncellemek için bir işlem başlatacaktır. En basit işlem ETH'yi bir hesaptan diğerine aktarmaktır.
 
 ## Ön koşullar {#prerequisites}
 
@@ -195,7 +194,7 @@ Burada alanlar şu şekilde tanımlanır:
 - `TransactionType` - toplam 128 olası işlem türü için 0 ile 0x7f arasında bir sayı.
 - `TransactionPayload` - işlem türü tarafından tanımlanan rastgele bir bayt dizisi.
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla okuma {#further-reading}
 
 - [EIP-2718: Yazılan İşlem Zarfı](https://eips.ethereum.org/EIPS/eip-2718)
 

@@ -3,13 +3,12 @@ title: O introducere pentru dezvoltatorii Python despre Ethereum, partea 1
 description: O introducere despre dezvoltarea Ethereum, utilă în special pentru cei care au cunoștințe de programare în limbajul Python
 author: Marc Garreau
 lang: ro
-sidebar: true
 tags:
   - "noțiuni de bază"
   - "python"
   - "blockchain"
   - "web3.py"
-skill: începător
+skill: beginner
 published: 2020-09-08
 source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/

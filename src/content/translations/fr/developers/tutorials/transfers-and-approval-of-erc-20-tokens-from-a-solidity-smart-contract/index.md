@@ -8,9 +8,8 @@ tags:
   - "solidity"
   - "premiers pas"
   - "erc-20"
-skill: intermédiaire
+skill: intermediate
 lang: fr
-sidebar: true
 published: 2020-04-07
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/transfers-and-approval-or-erc20-tokens-from-a-solidity-smart-contract/

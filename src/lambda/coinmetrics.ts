@@ -2,7 +2,7 @@ import axios from "axios"
 
 import type { HandlerResponse } from "@netlify/functions"
 
-const lambda = async (): Promise<HandlerResponse> => {
+export const lambda = async (): Promise<HandlerResponse> => {
   try {
     const response = await axios.get(
       "https://community-api.coinmetrics.io/v2/assets/eth/metricdata/?metrics=TxCnt"
@@ -19,8 +19,6 @@ const lambda = async (): Promise<HandlerResponse> => {
   }
 }
 
-const handler = (): Promise<HandlerResponse> => {
+export const handler = (): Promise<HandlerResponse> => {
   return lambda()
 }
-
-export { handler, lambda }

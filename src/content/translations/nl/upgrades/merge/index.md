@@ -3,7 +3,6 @@ title: De merge
 description: Lees meer over de merge - wanneer het hoofdnet van Ethereum wordt gevoegd bij het gecoördineerde proof-of-stake systeem Beacon Chain.
 lang: nl
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: Uiteindelijk zal het huidige Ethereum-hoofdnet "fuseren" met het Beacon Chain proof-of-stake systeem.
 summaryPoint2: Dit markeert het einde van proof-of-work voor Ethereum, en de volledige overgang naar proof-of-stake.
@@ -59,7 +58,7 @@ Oorspronkelijk was het plan om aan shardketens te werken voor de merge, om de sc
 
 Dit zal een voortdurende beoordeling zijn van de gemeenschap over de noodzaak van mogelijk meerdere rondes van shardketens om eindeloze schaalbaarheid mogelijk te maken.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
   Shardketens
 </ButtonLink>
 

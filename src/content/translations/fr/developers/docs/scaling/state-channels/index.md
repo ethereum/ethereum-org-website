@@ -2,7 +2,6 @@
 title: Canaux d'état
 description: Une introduction aux canaux d'état et canaux de paiement en tant que solution de mise à l'échelle actuellement utilisée par la communauté Ethereum.
 lang: fr
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---
@@ -11,7 +10,7 @@ Les canaux d'état permettent aux participants d'effectuer des `x` transactions 
 
 ## Prérequis {#prerequisites}
 
-Vous devez avoir une bonne compréhension de tous les sujets fondamentaux et une compréhension de haut niveau de la [mise à l'échelle Ethereum](/developers/docs/scaling/). La mise en œuvre de solutions de mise à l'échelle telles que les canaux est un sujet avancé puisque la technologie est moins éprouvée et est en cours de recherche et de développement.
+Vous devez avoir une bonne compréhension de tous les sujets fondamentaux et une compréhension approfondie de la [mise à l'échelle d'Ethereum](/developers/docs/scaling/). La mise en œuvre de solutions de mise à l'échelle telles que les canaux est un sujet avancé puisque la technologie est moins éprouvée et est en cours de recherche et de développement.
 
 ## Canaux {#channels}
 

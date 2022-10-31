@@ -6,9 +6,8 @@ tags:
   - "clienți"
   - "geth"
   - "noduri"
-skill: intermediar
+skill: intermediate
 lang: ro
-sidebar: true
 published: 2021-01-13
 ---
 

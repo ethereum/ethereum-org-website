@@ -2,12 +2,11 @@
 title: Backend API libraries
 description: An introduction to the Ethereum client APIs that let you interact with the blockchain from your application.
 lang: en
-sidebar: true
 ---
 
 In order for a software application to interact with the Ethereum blockchain (i.e. read blockchain data and/or send transactions to the network), it must connect to an Ethereum node.
 
-For this purpose, every Ethereum client implements the [JSON-RPC](/developers/docs/apis/json-rpc/) specification, so there are a uniform set of [endpoints](/developers/docs/apis/json-rpc/#json-rpc-methods) that applications can rely on.
+For this purpose, every Ethereum client implements the [JSON-RPC](/developers/docs/apis/json-rpc/) specification, so there are a uniform set of [methods](/developers/docs/apis/json-rpc/#json-rpc-methods) that applications can rely on.
 
 If you want to use a specific programming language to connect with an Ethereum node, there are many convenience libraries within the ecosystem that make this much easier. With these libraries, developers can write intuitive, one-line methods to initialize JSON-RPC requests (under the hood) that interact with Ethereum.
 
@@ -43,6 +42,11 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 - [cloudflare-eth.com](https://cloudflare-eth.com)
 
+**Coinbase Cloud Node -** **_Blockchain Infrastructure API._**
+
+- [Coinbase Cloud Node](https://www.coinbase.com/cloud/products/node)
+- [Documentation](https://docs.cloud.coinbase.com/node/reference/welcome-to-node)
+
 **DataHub by Figment -** **_Web3 API services with Ethereum Mainnet and testnets._**
 
 - [DataHub](https://www.figment.io/datahub)
@@ -57,10 +61,11 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 - [ethercluster.com](https://www.ethercluster.com/)
 
-**Chainstack -** **_Shared and dedicated Ethereum nodes as a service._**
+**Chainstack -** **_Elastic and dedicated Ethereum nodes as a service._**
 
 - [chainstack.com](https://chainstack.com)
 - [Documentation](https://docs.chainstack.com)
+- [Ethereum API reference](https://docs.chainstack.com/api/ethereum/ethereum-api-reference)
 
 **QuickNode -** **_Blockchain Infrastructure as a Service._**
 

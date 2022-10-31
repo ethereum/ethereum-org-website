@@ -2,7 +2,6 @@
 title: Node sebagai layanan
 description: Gambaran umum tingkat pemula tentang layanan node, pro dan kontranya, serta penyedia populer.
 lang: id
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -18,7 +17,7 @@ Jika Anda belum memahami apa itu node dan klien, bacalah tentang [Node dan klien
 
 Penyedia layanan node menjalankan klien node terdistribusi di belakang layar untuk Anda, sehingga Anda tidak perlu melakukannya sendiri.
 
-Layanan ini umumnya menyediakan kunci API yang bisa Anda gunakan untuk menulis pada dan membaca dari blockchain. Layanan ini sering mencakup akses ke [testnet Ethereum](/developers/docs/networks/#testnets) sebagai tambahan pada Jaringan Utama.
+Layanan ini umumnya menyediakan kunci API yang bisa Anda gunakan untuk menulis pada dan membaca dari blockchain. Layanan ini sering mencakup akses ke [testnet Ethereum](/developers/docs/networks/#ethereum-testnets) sebagai tambahan pada Jaringan Utama.
 
 Beberapa layanan menawarkan node yang didedikasikan sebagai milik Anda sendiri yang dikelola mereka untuk Anda, sementara yang lainnya menggunakan penyeimbang muatan untuk mendistribusikan aktivitas di seluruh node.
 

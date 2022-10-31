@@ -2,7 +2,6 @@
 title: Ethereum szótár
 description: Szójegyzék az Ethereumhoz kapcsolódó technikai és nem technikai szavakról, a teljesség igénye nélkül
 lang: hu
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -704,7 +703,7 @@ Az Ethereum blokklánc egyik[hard-forkja](#hard-fork), mely az 2,463,000 számú
 
 A "test network", (vagyis "teszthálózat") rövidítése. A fő Ethereum hálózat (lásd: [főhálózat](#mainnet)) viselkedésének szimulálására használt hálózat.
 
-<DocLink to="/developers/docs/networks/#testnets">
+<DocLink to="/developers/docs/networks/#ethereum-testnets">
   Tesztnetek
 </DocLink>
 

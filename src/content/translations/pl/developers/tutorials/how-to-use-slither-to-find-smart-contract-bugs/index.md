@@ -3,14 +3,13 @@ title: Slither – narzędzie do znajdowania błędów w inteligentnych kontrakt
 description: Jak używać Slither do automatycznego wyszukiwania błędów w inteligentnych kontraktach
 author: Trailofbits
 lang: pl
-sidebar: true
 tags:
   - "solidity"
   - "inteligentne kontrakty"
   - "ochrona"
   - "testing"
   - "analiza statyczna"
-skill: zaawansowane
+skill: advanced
 published: 2020-06-09
 source: Tworzenie bezpiecznych kontraktów
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither

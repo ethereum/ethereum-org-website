@@ -8,9 +8,8 @@ tags:
   - "solidity"
   - "testare"
   - "erc-20"
-skill: intermediar
+skill: intermediate
 lang: ro
-sidebar: true
 published: 2020-10-16
 ---
 

@@ -3,7 +3,6 @@ title: Uso dei WebSocket
 description: Guida all'uso di WebSocket e Alchemy per creare richieste JSON-RPC e iscriversi a eventi.
 author: "Elan Halpern"
 lang: it
-sidebar: true
 tags:
   - "alchemy"
   - "websocket"
@@ -11,7 +10,7 @@ tags:
   - "primi passi"
   - "iscrizione"
   - "javascript"
-skill: principiante
+skill: beginner
 source: documentazione Alchemy
 sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
 published: 2020-12-01
@@ -25,13 +24,13 @@ A differenza di HTTP, con i WebSocket non serve fare continuamente richieste qua
 
 Come avviene con ogni connessione di rete, non presupporre che un WebSocket rimanga aperto per sempre senza interruzioni; gestire correttamente a mano la caduta di connessione e la riconnessione può essere complicato. Un altro lato negativo dei WebSocket è che non si ottengono codici di stato HTTP come risposta ma solo il messaggio di errore.
 
-​[Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3) aggiunge automaticamente la gestione degli errori WebSocket e i nuovi tentativi senza necessità di configurazione.
+​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) aggiunge automaticamente la gestione degli errori WebSocket e i nuovi tentativi senza necessità di configurazione.
 
 ## Facciamo una prova {#try-it-out}
 
 Il modo più facile per testare i WebSocket è installare uno strumento da riga di comando per eseguire richieste WebSocket come [wscat](https://github.com/websockets/wscat). Usando wscat, è possibile inviare richieste come di seguito:
 
-_Nota: se hai un account Alchemy, puoi sostituire `demo` con la tua chiave API. [Registrati qui per avere un account Alchemy gratuito!](https://dashboard.alchemyapi.io/signup/)_
+_Nota: se hai un account Alchemy, puoi sostituire `demo` con la tua chiave API. [Registrati qui per avere un account Alchemy gratuito!](https://auth.alchemyapi.io/signup)_
 
 ```
 $ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
@@ -174,7 +173,7 @@ Quando avviene la riorganizzazione della catena, i registri che fanno parte dei 
 Parametri
 
 1. Un oggetto con i seguenti campi:
-   - `adddress` (facoltativo): una stringa rappresentante un indirizzo o un array di stringhe analoghe.
+   - `address` (facoltativo): una stringa rappresentante un indirizzo o un array di stringhe analoghe.
      - Saranno emessi solo i registri creati da uno di questi indirizzi.
    - `topics`: array di specificatori di argomento.
      - Ogni specificatore di argomento è `null`, una stringa rappresentante un argomento o un array di stringhe.
@@ -251,4 +250,4 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 ---
 
-[Registrati ad Alchemy](https://dashboard.alchemyapi.io/signup/) gratis, dai un'occhiata alla [nostra documentazione](https://docs.alchemyapi.io/) e, per le ultime novità, seguici su [Twitter](https://twitter.com/AlchemyPlatform).
+[Registrati ad Alchemy](https://auth.alchemyapi.io/signup) gratis, dai un'occhiata alla [nostra documentazione](https://docs.alchemyapi.io/) e, per le ultime novità, seguici su [Twitter](https://twitter.com/AlchemyPlatform).

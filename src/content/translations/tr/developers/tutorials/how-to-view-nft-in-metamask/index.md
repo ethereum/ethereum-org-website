@@ -9,9 +9,8 @@ tags:
   - "MetaMask"
   - "değiştirilemez token'lar"
   - "Solidity"
-skill: acemi
+skill: beginner
 lang: tr
-sidebar: true
 published: 2021-04-22
 ---
 

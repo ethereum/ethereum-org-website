@@ -2,7 +2,6 @@
 title: Chi siamo
 description: Informazioni sul team, la community e la mission di ethereum.org
 lang: it
-sidebar: true
 ---
 
 # Informazioni su ethereum.org {#about-ethereumorg}
@@ -68,6 +67,4 @@ Sebbene questo sito web sia open source e tutti possano lavorarci, abbiamo un te
 
 Pubblicheremo qui tutte le posizioni aperte. Se non vedi un ruolo per te qui, vai su [Discord](https://discord.gg/CetY6Y4) e facci sapere in che modo vorresti lavorare con noi!
 
-- [Product Designer](/about/product-designer/)
-
-Vuoi esplorare anche oltre il team di ethereum.org? [Dai un'occhiata ai lavori correlati a Ethereum](/community/get-involved/#ethereum-jobs/).
+Vuoi esplorare anche oltre il team di ethereum.org? [Dai un'occhiata ad altri lavori correlati a Ethereum](/community/get-involved/#ethereum-jobs/).

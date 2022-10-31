@@ -1,8 +1,7 @@
 ---
-title: Programlama dilleri
+title: Dilleri programlama
 description:
 lang: tr
-sidebar: true
 ---
 
 Geliştiricilerin, Ethereum üzerinde inşa etmek için [akıllı sözleşmeler](/developers/docs/smart-contracts/) yazması gerektiği yaygın bir yanlış anlaşılmadır. Bu yanlıştır. Ethereum ağı ve topluluğunun güzelliklerinden biri, herhangi bir programlama dilinde [katılım](/community/) sağlayabilmenizdir.
@@ -18,7 +17,7 @@ Projeler, kaynaklar ve sanal topluluklar bulmak için tercih ettiğiniz programl
 - [.Net Geliştiricileri için Ethereum](/developers/docs/programming-languages/dot-net/)
 - [Go Geliştiricileri için Ethereum](/developers/docs/programming-languages/golang/)
 - [Java Geliştiricileri için Ethereum](/developers/docs/programming-languages/java/)
-- [Javascript Geliştiricileri için Ethereum](/developers/docs/programming-languages/javascript/)
+- [JavaScript Geliştiricileri için Ethereum](/developers/docs/programming-languages/javascript/)
 - [Python Geliştiricileri için Ethereum](/developers/docs/programming-languages/python/)
 - [Ruby geliştiricileri için Ethereum](/developers/docs/programming-languages/ruby/)
 - [Rust Geliştiricileri için Ethereum](/developers/docs/programming-languages/rust/)

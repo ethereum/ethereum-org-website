@@ -2,11 +2,10 @@
 title: "Panduan Lengkap Kontrak Uniswap-v2"
 description: Bagaimana cara kerja kontrak Uniswap-v2? Mengapa ditulis dengan cara tersebut?
 author: Ori Pomerantz
-sidebar: true
 tags:
   - "solidity"
   - "uniswap"
-skill: tingkat menengah
+skill: intermediate
 published: 2021-05-01
 lang: id
 ---
@@ -25,7 +24,7 @@ _Pedagang_ mengirimkan satu jenis token ke pool dan menerima token lainnya (cont
 
 Ketika penyedia likuiditas menginginkan kembali aset mereka, mereka dapat membakar token pool dan menerima kembali token mereka, termasuk bagian imbalan mereka.
 
-[Klik di sini untuk deskripsi lengkapnya](https://uniswap.org/docs/v2/core-concepts/swaps/).
+[Klik di sini untuk deskripsi lengkapnya](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/swaps/).
 
 ### Mengapa v2? Mengapa bukan v3? {#why-v2}
 
@@ -655,7 +654,7 @@ Ini adalah pemeriksaan kewarasan untuk memastikan kita tidak mengalami kerugian 
 
 Perbarui `reserve0` dan `reserve1`, dan jika diperlukan pengumpul harga dan stempel waktu dan pancarkan aksi.
 
-##### Sync or Skim {#sync-or-skim}
+##### Sync or Skim
 
 Saldo asli yang tidak tersinkronisasi dengan cadangan yang dianggap bursa pasangan sebagai miliknya mungkin terjadi. Tidak ada cara untuk menarik token tanpa persetujuan kontrak, tetapi setoran adalah masalah yang berbeda. Suatu akun dapat mentransfer token ke bursa tanpa memanggil `cetak` atau `tukar`.
 

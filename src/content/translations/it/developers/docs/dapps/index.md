@@ -2,7 +2,6 @@
 title: Introduzione alle dapp
 description:
 lang: it
-sidebar: true
 ---
 
 Un'applicazione decentralizzata (dApp) è un'applicazione costruita su una rete decentralizzata che coniuga uno [smart contract](/developers/docs/smart-contracts/) con un'interfaccia utente frontend. In Ethereum gli Smart Contract sono accessibili e trasparenti (come le API aperte) quindi una dapp può anche includere Smart Contract scritto da altri.
@@ -30,16 +29,16 @@ Uno Smart Contract è codice che gira sulla blockchain Ethereum e che funziona e
 
 ## Vantaggi dello sviluppo delle dapp {#benefits-of-dapp-development}
 
-- **Nessun tempo di inattività** – Una volta che lo smart contract è distribuito e sulla blockchain, la rete nel suo insieme sarà sempre in grado di servire i clienti che cercano di interagire con il contratto. Gli attori malevoli quindi non possono lanciare attacchi denial-of-service verso dapp singole.
+- **Nessun tempo di inattività** – Una volta che lo smart contract è distribuito sulla blockchain, la rete nel suo insieme sarà sempre in grado di servire i client che cercano di interagire con il contratto. Gli attori malevoli quindi non possono lanciare attacchi denial-of-service verso dapp singole.
 - **Privacy**: non è necessario fornire un'identità reale per distribuire una dapp o interagirvi.
 - **Resistenza alla censura**: nessuna entità sulla rete può impedire agli utenti di inviare transazioni, distribuire dapp o leggere dati dalla blockchain.
 - **Completa integrità dei dati**: i dati conservati sulla blockchain sono immutabili e indiscutibili, grazie alle primitive crittografiche. Attori malevoli non possono falsificare transazioni o altri dati che sono già stati resi pubblici.
-- **Calcolo trustless/comportamento verificabile** – gli Smart Contract possono essere analizzati ed è garantito che vengano eseguiti in modo prevedibile, senza la necessità di affidarsi ad un'autorità centrale. Questo non accade nei modelli tradizionali. Per esempio, quando usiamo l'online banking dobbiamo fidarci del fatto che gli istituti finanziari non abusino dei nostri dati finanziari, non manomettano record e non vengano attaccati da hacker.
+- **Calcolo trustless/comportamento verificabile** – gli smart contract possono essere analizzati ed è garantito che vengano eseguiti in modo prevedibile, senza la necessità di affidarsi ad un'autorità centrale. Questo non accade nei modelli tradizionali. Per esempio, quando usiamo l'online banking dobbiamo fidarci del fatto che gli istituti finanziari non abusino dei nostri dati finanziari, non manomettano record e non vengano attaccati da hacker.
 
 ## Svantaggi dello sviluppo di dApp {#drawbacks-of-dapp-development}
 
-- **Manutenzione**: le dapp possono essere impegnative da mantenere perché il codice e i dati pubblicati sulla blockchain sono più difficili da modificare. È difficile per gli sviluppatori fare aggiornamenti alle dapp (o ai dati sottostanti conservati nella dapp) in seguito al rilascio, anche se vengono identificati bug o rischi alla sicurezza in una vecchia versione.
-- **Overhead delle prestazioni**: l'overhead delle prestazioni è enorme e scalare è davvero difficile. Per raggiungere il livello di sicurezza, integrità, trasparenza e affidabilità al quale aspira Ethereum, ogni nodo esegue e memorizza ogni transazione. Oltre a questo, anche la Proof of Work richiede tempo. Un calcolo back-of-the-envelope pone l'overhead a circa 1.000.000 di volte quello del calcolo standard attuale.
+- **Manutenzione**: le dapp possono essere impegnative da mantenere perché il codice e i dati pubblicati sulla blockchain sono più difficili da modificare. Per gli sviluppatori, è difficile apportare degli aggiornamenti alle loro dApp (o ai dati sottostanti, memorizzati da una dApp) una volta distribuite, anche se vengono individuati dei bug o rischi di sicurezza in una versione precedente.
+- **Overhead delle prestazioni**: l'overhead delle prestazioni è enorme e scalare è davvero difficile. Per raggiungere il livello di sicurezza, integrità, trasparenza e affidabilità al quale aspira Ethereum, ogni nodo esegue e memorizza ogni transazione. Oltre a ciò, anche il consenso di proof-of-stake richiede tempo.
 - **Congestione della rete**: quando una dApp utilizza troppe risorse di calcolo, l'intera rete viene sostenuta. Attualmente, la rete è in grado di elaborare circa 10 transazioni al secondo; se le transazioni vengono inviate a un ritmo più alto, l'insieme di transazioni non confermate può "gonfiarsi" e accumularsi.
 - **Esperienza utente**: potrebbe essere difficile creare esperienze intuitive. L'utente medio potrebbe trovare troppo difficile configurare la serie di strumenti necessaria a interagire con la blockchain in modo veramente sicuro.
 - **Centralizzazione**: soluzioni facili da utilizzare e compatibili con gli sviluppatori costruite sullo strato base di Ethereum potrebbero finire per assomigliare comunque a servizi centralizzati. Ad esempio, tali servizi potrebbero memorizzare le chiavi o altre informazioni sensibili sul lato del server, servire un frontend utilizzando un server centralizzato oppure utilizzare un'importante logica commerciale su un server centralizzato prima di scrivere sulla blockchain. La centralizzazione annulla molti (se non tutti) i vantaggi della blockchain rispetto al modello tradizionale.
@@ -48,7 +47,7 @@ Uno Smart Contract è codice che gira sulla blockchain Ethereum e che funziona e
 
 <YouTube id="F50OrwV6Uk8" />
 
-## Strumenti per le dApp {#dapp-tools}
+## Strumenti per creare le dApp {#dapp-tools}
 
 **Scaffold-ETH _- Sperimenta rapidamente con Solidity utilizzando un frontend che si adatta al tuo smart contract._**
 
@@ -69,7 +68,7 @@ Uno Smart Contract è codice che gira sulla blockchain Ethereum e che funziona e
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
-## Lettura consigliate {#further-reading}
+## Letture consigliate {#further-reading}
 
 - [L'Architettura di un'applicazione Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 - [Una guida del 2021 alle applicazioni decentralizzate](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) - _LimeChain_

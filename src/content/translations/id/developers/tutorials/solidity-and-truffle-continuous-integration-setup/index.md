@@ -3,7 +3,6 @@ title: "Pengaturan integrasi berkelanjutan untuk Solidity dan Truffle"
 description: Cara menyiapkan Travis atau Circle CI untuk pengujian Truffle bersama dengan plugin yang berguna
 author: Markus Waas
 lang: id
-sidebar: true
 tags:
   - "solidity"
   - "kontrak pintar"
@@ -11,7 +10,7 @@ tags:
   - "truffle"
   - "integrasi berkelanjutan"
   - "ganache"
-skill: tingkat menengah
+skill: intermediate
 published: 2020-06-05
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/continuous-integration

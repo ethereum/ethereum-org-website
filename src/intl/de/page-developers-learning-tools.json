@@ -35,11 +35,15 @@
   "page-learning-tools-remix-logo-alt": "Remix-Logo",
   "page-learning-tools-sandbox": "Code-Sandkästen",
   "page-learning-tools-sandbox-desc": "Diese Sandkästen werden Ihnen den Raum geben, um mit dem Schreiben von Smart Contracts zu experimentieren und Ethereum zu verstehen.",
+  "page-learning-tools-speed-run-ethereum-description": "Speed Run Ethereum ist eine Challenge-Serie zum Testen Ihrer Solidity-Kenntnisse mit Scaffold-ETH.",
+  "page-learning-tools-speed-run-ethereum-logo-alt": "Speed Run Ethereum-Logo",
   "page-learning-tools-studio-description": "Eine webbasierte IDE, wo Sie Tutorials verfolgen können, die zeigen, wie Smart Contracts erstellt und getestet werden und wie ein Frontend für diese erstellt wird.",
   "page-learning-tools-vyperfun-description": "Lerne Vyper, indem Sie Ihr eigenes Pokémon-Spiel erstellen.",
   "page-learning-tools-vyperfun-logo-alt": "Vyper.fun-Logo",
   "page-learning-tools-nftschool-description": "Erkunde, was mit nicht fungiblen Token oder NFT von der technischen Seite aus geschieht.",
   "page-learning-tools-nftschool-logo-alt": "NFT-school-Logo",
   "page-learning-tools-pointer-description": "Lerne Web3 Entwicklerfähigkeiten mit unterhaltsamen interaktiven Tutorials. Erhalte dabei Krypto-Belohnungen",
-  "page-learning-tools-pointer-logo-alt": "Zeiger-Logo"
+  "page-learning-tools-pointer-logo-alt": "Zeiger-Logo",
+  "page-learning-tools-platzi-description": "Erfahren Sie, wie Sie dapps auf Web3 erstellen, und erlernen Sie alle Fähigkeiten, die ein Blockchain-Entwickler benötigt.",
+  "page-learning-tools-platzi-logo-alt": "Platzi-Logo"
 }

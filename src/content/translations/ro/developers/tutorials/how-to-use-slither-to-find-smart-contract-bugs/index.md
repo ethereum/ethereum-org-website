@@ -3,14 +3,13 @@ title: Cum se utilizează Slither pentru a găsi erori în contractele inteligen
 description: Cum se utilizează Slither pentru a găsi automat erori în contractele Inteligente
 author: Trailofbits
 lang: ro
-sidebar: true
 tags:
   - "solidity"
   - "contracte inteligente"
   - "securitate"
   - "testare"
   - "analiză statică"
-skill: avansat
+skill: advanced
 published: 2020-06-09
 source: Construirea de contracte sigure
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither

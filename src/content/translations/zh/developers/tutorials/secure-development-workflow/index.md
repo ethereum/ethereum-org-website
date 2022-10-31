@@ -6,9 +6,8 @@ tags:
   - "智能合约"
   - "安全性"
   - "solidity"
-skill: 中等难度
+skill: intermediate
 lang: zh
-sidebar: true
 published: 2020-09-07
 source: 构建安全的合约
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md

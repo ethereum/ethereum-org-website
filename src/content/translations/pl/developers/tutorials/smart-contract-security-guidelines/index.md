@@ -6,9 +6,8 @@ tags:
   - "solidity"
   - "inteligentne kontrakty"
   - "ochrona"
-skill: średnie
+skill: intermediate
 lang: pl
-sidebar: true
 published: 2020-09-06
 source: Tworzenie bezpiecznych kontraktów
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md

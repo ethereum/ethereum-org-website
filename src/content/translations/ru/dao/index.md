@@ -4,7 +4,6 @@ description: Обзор DAO на Ethereum
 lang: ru
 template: use-cases
 emoji: ":handshake:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/use-cases/dao-2.png
 alt: Представление голосований DAO по предложению.
@@ -98,7 +97,7 @@ Ethereum — идеальный фундамент для DAO по ряду пр
 ### Запуск DAO {#start-a-dao}
 
 - [Вызов DAO с DAOHaus](https://app.daohaus.club/summon)
-- [Создание DAO на основе Aragon](https://aragon.org/product)
+- [Создать DAO на основе Aragon](https://aragon.org/product)
 - [Запуск сообщества Colony](https://colony.io/)
 - [Создание DAO с помощью DAOstack](https://daostack.io/)
 

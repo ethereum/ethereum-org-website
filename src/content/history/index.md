@@ -2,7 +2,6 @@
 title: History and Forks of Ethereum
 description: A history of the Ethereum blockchain including major milestones, releases, and forks.
 lang: en
-sidebar: true
 sidebarDepth: 1
 ---
 
@@ -21,6 +20,59 @@ These rule changes may create a temporary split in the network. New blocks could
 </ExpandableCard>
 
 Looking for future protocol upgrades? [Learn about upcoming upgrades to Ethereum](/upgrades/).
+
+<Divider />
+
+## 2022 {#2022}
+
+### Paris (The Merge) {#paris}
+
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Sep-15-2022 06:42:42 AM +UTC</code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Block number: <a href="https://etherscan.io/block/15537394">15537394</a><br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: $1,472 USD<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220915075314/https://ethereum.org/">ethereum.org on waybackmachine</a>
+
+#### Summary {#paris-summary}
+
+The Paris upgrade was triggered by the proof-of-work blockchain passing a [terminal total difficulty](/glossary/#terminal-total-difficulty) of 58750000000000000000000. This happened at block 15537393 on 15th September 2022, triggering the Paris upgrade the next block. Paris was [The Merge](/upgrades/merge/) transition - its major feature was switching off the [proof-of-work](/developers/docs/consensus-mechanisms/pow) mining algorithm and associated consensus logic and switching on [proof-of-stake](/developers/docs/consensus-mechanisms/pos) instead. Paris itself was an upgrade to the [execution clients](/developers/docs/nodes-and-clients/#execution-clients) (equivalent to Bellatrix on the consensus layer) that enabled them to take instruction from their connected [consensus clients](/developers/docs/nodes-and-clients/#consensus-clients). This required a new set of internal API methods, collectively known as the [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md), to be activated. This was arguably the most significant upgrade in Ethereum history since [Homestead](#homestead)!
+
+- [Read the Paris upgrade specification](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
+
+---
+
+### Bellatrix {#bellatrix}
+
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Sep-06-2022 11:34:47 AM +UTC</code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Epoch number: 144,896<br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: $1,558 USD<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220906112525/https://ethereum.org/en/">ethereum.org on waybackmachine</a>
+
+#### Summary {#bellatrix-summary}
+
+The Bellatrix upgrade was the second scheduled upgrade for the [Beacon Chain](/upgrades/beacon-chain), preparing the chain for [The Merge](/upgrades/merge/). It brings validator penalties to their full values for inactivity and slashable offenses. Bellatrix also includes an update to the fork choice rules to prepare the chain for The Merge and the transition from the last proof-of-work block to the first proof-of-stake block. This includes making consensus clients aware of the [terminal total difficulty](/glossary/#terminal-total-difficulty) of 58750000000000000000000.
+
+- [Read the Bellatrix upgrade specification](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
+
+---
+
+### Gray Glacier {#gray-glacier}
+
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Jun-30-2022 10:54:04 AM +UTC</code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Block number: <a href="https://etherscan.io/block/15050000">15,050,000</a><br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: $1,069 USD<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220630094629/https://ethereum.org/en/">ethereum.org on waybackmachine</a>
+
+#### Summary {#gray-glacier-summary}
+
+The Gray Glacier network upgrade pushed back the [difficulty bomb](/glossary/#difficulty-bomb) by three months. This is the only change introduced in this upgrade, and is similar in nature to the [Arrow Glacier](#arrow-glacier) and [Muir Glacier](#muir-glacier) upgrades. Similar changes have been performed on the [Byzantium](#byzantium), [Constantinople](#constantinople) and [London](#london) network upgrades.
+
+- [EF Blog - Gray Glacier Upgrade Announcement](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
+
+<ExpandableCard title="Gray Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
+
+- [EIP-5133](https://eips.ethereum.org/EIPS/eip-5133) – _delays the difficulty bomb until September 2022_
+
+</ExpandableCard>
 
 <Divider />
 
@@ -46,10 +98,6 @@ The Arrow Glacier network upgrade pushed back the [difficulty bomb](/glossary/#d
 
 </ExpandableCard>
 
-#### <Emoji text=":police_car_light:" size={1} mr="0.5rem" />Node operators {#arrow-glacier-node-operators}
-
-Be sure to upgrade your client software to the latest version before December 5, 2021 to account for variable block times. This will help avoid having your client sync to a pre-fork chain, resulting in the inability to send funds or properly verify transactions.
-
 ---
 
 ### Altair {#altair}
@@ -61,7 +109,7 @@ Be sure to upgrade your client software to the latest version before December 5,
 
 #### Summary {#altair-summary}
 
-The Altair upgrade was the first scheduled upgrade for the [Beacon Chain](/upgrades/beacon-chain). It added support for "sync committees"—enabling light clients, and bringing validator inactivity and slashing penalties up to their full values.
+The Altair upgrade was the first scheduled upgrade for the [Beacon Chain](/upgrades/beacon-chain). It added support for "sync committees"—enabling light clients, and increased validator inactivity and slashing penalties as development progressed towards The Merge.
 
 - [Read the Altair upgrade specification](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
@@ -69,7 +117,7 @@ The Altair upgrade was the first scheduled upgrade for the [Beacon Chain](/upgra
 
 Altair was the first major network upgrade that had an exact rollout time. Every upgrade prior had been based on a declared block number on the proof-of-work chain, where block times vary. The Beacon Chain does not require solving for proof-of-work, and instead works on a time-based epoch system consisting of 32 twelve-second "slots" of time where validators can propose blocks. This is why we knew exactly when we would hit epoch 74,240 and Altair became live!
 
-- [Beaconcha.in Glossary - Slots](https://kb.beaconcha.in/glossary#slots)
+- [Block time](/developers/docs/blocks/#block-time)
 
 ---
 
@@ -84,7 +132,7 @@ Altair was the first major network upgrade that had an exact rollout time. Every
 
 The London upgrade introduced [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which reformed the transaction fee market, along with changes to how gas refunds are handled and the [Ice Age](/glossary/#ice-age) schedule.
 
-- [Are you a dApp developer? Be sure to upgrade your libraries and tooling.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
+- [Are you a dapp developer? Be sure to upgrade your libraries and tooling.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
 - [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Read the Ethereum Cat Herder's explainer](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
@@ -392,9 +440,10 @@ The Homestead fork that looked to the future. It included several protocol chang
 
 #### Summary {#frontier-thawing-summary}
 
-The frontier thawing fork lifted the 5,000 [gas](/glossary/#gas) limit per [block](/glossary/#block) and set the default gas price to 51 [gwei](/glossary/#gwei). This allowed for transactions – transactions require 21,000 gas.
+The frontier thawing fork lifted the 5,000 [gas](/glossary/#gas) limit per [block](/glossary/#block) and set the default gas price to 51 [gwei](/glossary/#gwei). This allowed for transactions – transactions require 21,000 gas. The [difficulty bomb](/glossary/#difficulty-bomb) was introduced to ensure a future hard-fork to [proof-of-stake](/glossary/#pos).
 
-[Read the Ethereum Foundation announcement](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
+- [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
+- [Read the Ethereum Protocol Update 1](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/)
 
 ---
 

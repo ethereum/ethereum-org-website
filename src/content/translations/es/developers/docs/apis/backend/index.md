@@ -2,7 +2,6 @@
 title: Bibliotecas de API de backend
 description: Una introducción a las API del cliente de Ethereum, que permiten interactuar con la blockchain desde tu aplicación.
 lang: es
-sidebar: true
 ---
 
 Para que una aplicación de software interactúe con la blockchain de Ethereum (por ejemplo, para que lea datos de la blockchain y/o envíe transacciones a la red), debe conectarse a un nodo de Ethereum.
@@ -61,7 +60,7 @@ Estas bibliotecas eliminan en gran parte la complejidad de interactuar directame
 
 - [quiknode.io](https://quiknode.io)
 
-**Herramientas de Python: \*\***_Variedad de bibliotecas para interactuar con Ethereum a través de Python._\*\*
+**Herramientas de Python:** **_Variedad de bibliotecas para interactuar con Ethereum a través de Python._**
 
 - [py.ethereum.org](http://python.ethereum.org/)
 - [GitHub de web3.py](https://github.com/ethereum/web3.py)

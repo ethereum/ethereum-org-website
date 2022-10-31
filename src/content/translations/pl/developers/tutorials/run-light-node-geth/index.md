@@ -6,9 +6,8 @@ tags:
   - "klienty"
   - "geth"
   - "węzły"
-skill: średnie
+skill: intermediate
 lang: pl
-sidebar: true
 published: 2020-06-14
 ---
 

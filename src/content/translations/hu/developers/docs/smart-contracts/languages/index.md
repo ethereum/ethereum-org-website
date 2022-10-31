@@ -2,7 +2,6 @@
 title: Okos szerződés nyelvek
 description: Egy áttekintő és összehasonlítás a két fő okosszerződés nyelvről - Solidity és Vyper.
 lang: hu
-sidebar: true
 ---
 
 Az Ethereum egyik nagyszerű szempontja, hogy az okosszerződéseket viszonylag fejlesztőbarát nyelveken lehet programozni. Ha már jártas vagy a Python vagy a JavaScript használatában, akkor találhatsz hasonló szintaxisú nyelvet.

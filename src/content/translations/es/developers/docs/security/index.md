@@ -2,7 +2,6 @@
 title: Seguridad
 description: Consideraciones de seguridad para los desarrolladores de Ethereum
 lang: es
-sidebar: true
 ---
 
 Los contratos Inteligentes de Ethereum son extremadamente flexibles, capaces de contener grandes cantidades de tokens (A menudo más de $1B) y ejecutar una lógica inmutable basada en el código de contrato inteligente previamente desplegado. Aunque esto ha creado un ecosistema vibrante y creativo de contratos inteligentes sin confianza e interconectados, es también el ecosistema perfecto para atraer atacantes que buscan beneficios explotando las vulnerabilidades de los contratos inteligentes y los comportamientos inesperados en Ethereum. El código del contrato inteligente _normalmente_ no se puede modificar para "poner parches" a los fallos de seguridad, por lo que los activos robados de contratos inteligentes son irrecuperables, y los activos robados son extremadamente difíciles de rastrear. La cantidad total de valor robado o perdido debido a problemas de contratos inteligentes asciende fácilmente a $1B USD. Algunos de los mayores debido a errores de codificación de contrato inteligente incluyen:
@@ -226,11 +225,11 @@ Aunque no hay sustituto para entender los conceptos básicos de seguridad de Eth
 
 ### Seguridad de contratos inteligentes {#smart-contract-security}
 
-**Slither: \*\***_Entorno de trabajo de análisis estático de Solidity escrito en Python 3._\*\*
+**Slither:** **_Entorno de trabajo de análisis estático de Solidity escrito en Python 3._**
 
 - [GitHub](https://github.com/crytic/slither)
 
-**MythX: \*\***_API de análisis de seguridad para contratos inteligentes de Ethereum._\*\*
+**MythX:** **_API de análisis de seguridad para contratos inteligentes de Ethereum._**
 
 - [mythx.io](https://mythx.io/)
 - [Documentación](https://docs.mythx.io/en/latest/)

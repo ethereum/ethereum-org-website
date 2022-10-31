@@ -1,7 +1,6 @@
 ---
 title: Como posso participar?
 description: Como fazer parte da comunidade Ethereum.
-sidebar: true
 lang: pt-br
 ---
 
@@ -61,7 +60,7 @@ Ao fazer staking de seu ETH, você pode receber recompensas enquanto ajuda a pro
 
 - [Mais sobre participação](/staking/)
 
-### Apoie projetos {#suport-projects}
+### Apoie projetos {#support-projects}
 
 O ecossistema Ethereum pretende financiar bens públicos e projetos de impacto. Com pequenas doações você mostra seu suporte e permite que trabalhos importantes sejam realizados.
 

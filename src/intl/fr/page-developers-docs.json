@@ -30,7 +30,7 @@
   "docs-nav-evm": "Machine virtuelle d'Ethereum (EVM)",
   "docs-nav-evm-description": "La machine virtuelle d'Ethereum (Ethereum Virtual Machine, EVM) gère tous les calculs sur le réseau Ethereum",
   "docs-nav-foundational-topics": "Sujets fondamentaux",
-  "docs-nav-gas": "Carburant",
+  "docs-nav-gas": "Gaz",
   "docs-nav-gas-description": "Puissance informatique requise pour traiter les transactions, payées en ETH par les expéditeurs de transactions",
   "docs-nav-golang": "Golang",
   "docs-nav-integrated-development-environments-ides": "Environnements de développement intégrés (IDE)",

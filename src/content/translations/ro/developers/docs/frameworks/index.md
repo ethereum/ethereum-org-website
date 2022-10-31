@@ -2,7 +2,6 @@
 title: Framework-uri de dezvoltare a aplicațiilor dapp
 description: Exploraţi avantajele framework-urilor și comparaţi opțiunile disponibile.
 lang: ro
-sidebar: true
 ---
 
 ## Introducere despre framework-uri {#introduction-to-frameworks}
@@ -87,7 +86,7 @@ Framework-urile sunt prevăzute cu numeroase funcționalități predefinite, cum
 
 **Foundry -** **_A blazing fast, portable and modular toolkit for Ethereum application development written in Rust._**
 
-- [Documentație](https://onbjerg.github.io/foundry-book/)
+- [Documentație](https://book.getfoundry.sh/)
 - [GitHub](https://github.com/gakonst/foundry/)
 - [Tools for Foundry](https://github.com/crisgarner/awesome-foundry)
 

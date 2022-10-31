@@ -3,7 +3,6 @@ title: A Beacon Chain
 description: Tudj meg többet a beacon chainről - az Ethereum első nagy Eth2 fejlesztéséről.
 lang: hu
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: A beacon chain nem változtatja meg azt, ahogy az Ethereumot ma használjuk.
 summaryPoint2: A hálózatot fogja koordinálni.
@@ -17,7 +16,7 @@ summaryPoint4: A technikai ütemtervekben "Fázis 0"-ként is ismerheted.
 
 ## Mit csinál a Beacon Chain? {#what-does-the-beacon-chain-do}
 
-A Beacon Chain fogja koordinálni vagy vezetni a [shardokból](/upgrades/shard-chains/) és [stakerekből](/staking/) álló kiterjesztett hálózatot. De nem olyan lesz, mint jelenleg az [Ethereum főhálózat](/glossary/#mainnet). Nem fog tudni számlákat vagy okosszerződéseket kezelni.
+A Beacon Chain fogja koordinálni vagy vezetni a [shardokból](/upgrades/sharding/) és [stakerekből](/staking/) álló kiterjesztett hálózatot. De nem olyan lesz, mint jelenleg az [Ethereum főhálózat](/glossary/#mainnet). Nem fog tudni számlákat vagy okosszerződéseket kezelni.
 
 A Beacon Chain szerepe meg fog változni idővel, de egy olyan alapvető összetevője [ a biztonságos, fenntartható és skálázható Ethereumnak, amiért dolgozunk](/upgrades/vision/).
 
@@ -33,7 +32,7 @@ A letétbe helyezés és a validátorrá válás egyszerűbb, mint a [bányásza
 Ha érdekel a letétbe helyezés és szeretnél segíteni a Beacon Chain biztosításában, akkor <a href="/staking/">tudj meg többet a letétbe helyezésről</a>.
 </InfoBanner>
 
-Ez a második Eth2 fejlesztésnél is fontos változás: [a shard láncoknál](/upgrades/shard-chains/).
+Ez a második Eth2 fejlesztésnél is fontos változás: [a shard láncoknál](/upgrades/sharding/).
 
 ### Shard láncok előkészítése {#setting-up-for-shard-chains}
 
@@ -55,7 +54,7 @@ A Beacon Chain eleinte különállóan fog létezni az Ethereum főhálózattól
 
 A shard láncokat csak a proof-of-stake konszenzus mechnanizmussal lehet biztonságosan bevezetni az Ethereum ökoszisztémába. A Beacon Chain bevezeti a letétbe helyezést (staking) ezzel lekövezve a shard láncok bevezetéséhez szükséges utat.
 
-<ButtonLink to="/upgrades/shard-chains/">Shard láncok</ButtonLink>
+<ButtonLink to="/upgrades/sharding/">Shard láncok</ButtonLink>
 
 <Divider />
 

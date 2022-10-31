@@ -93,7 +93,7 @@
       "hasBugBounty": false,
       "isTrustless": true,
       "isPermissionless": true,
-      "multiClient": false,
+      "multiClient": true,
       "easyClientSwitching": false,
       "platforms": ["Browser"],
       "ui": ["GUI"],
@@ -190,6 +190,35 @@
         "eventAction": "Clicked",
         "eventName": "Clicked Vouch + Dirk go to link"
       }
+    },
+    {
+      "name": "Avado",
+      "svgPath": "avado-glyph.svg",
+      "hue": 239,
+      "launchDate": "2018-12-01",
+      "url": "https://ava.do/",
+      "audits": [],
+      "minEth": 16,
+      "additionalStake": "10",
+      "additionalStakeUnit": "% RPL",
+      "isFoss": true,
+      "hasBugBounty": false,
+      "isTrustless": true,
+      "isPermissionless": true,
+      "multiClient": true,
+      "easyClientSwitching": true,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "twitter": "https://twitter.com/AvadoCloud",
+        "github": "https://github.com/AvadoDServer",
+        "telegram": "https://t.me/joinchat/SZowfxO-_KgJZcnz"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Avado go to link"
+      }
     }
   ],
   "keyGen": [
@@ -250,9 +279,73 @@
         "eventAction": "Clicked",
         "eventName": "Clicked ethdo go to link"
       }
+    },
+    {
+      "name": "Avado",
+      "svgPath": "avado-glyph.svg",
+      "hue": 239,
+      "launchDate": "2018-12-01",
+      "url": "https://ava.do/",
+      "audits": [],
+      "minEth": 16,
+      "additionalStake": "10",
+      "additionalStakeUnit": "% RPL",
+      "isFoss": true,
+      "hasBugBounty": false,
+      "isTrustless": true,
+      "isPermissionless": true,
+      "isSelfCustody": true,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "twitter": "https://twitter.com/AvadoCloud",
+        "github": "https://github.com/AvadoDServer",
+        "telegram": "https://t.me/joinchat/SZowfxO-_KgJZcnz"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Avado go to link"
+      }
     }
   ],
   "saas": [
+    {
+      "name": "Kiln",
+      "svgPath": "kiln-glyph.svg",
+      "hue": 20,
+      "launchDate": "2021-03-01",
+      "url": "https://www.kiln.fi/",
+      "audits": [
+        {
+          "name": "Prescient Assurance",
+          "url": "https://drive.google.com/file/d/1K-Q0r2lXqnOePsV3e7c9sErl6iz8EKHX/view"
+        }
+      ],
+      "minEth": 32,
+      "additionalStake": null,
+      "additionalStakeUnit": null,
+      "monthlyFee": 8,
+      "monthlyFeeUnit": "%",
+      "isFoss": false,
+      "hasBugBounty": false,
+      "isTrustless": false,
+      "isPermissionless": false,
+      "pctMajorityClient": null,
+      "isSelfCustody": false,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "linkedin": "https://www.linkedin.com/company/28150174",
+        "twitter": "https://twitter.com/Kiln_finance",
+        "github": "https://github.com/kilnfi/"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Kiln (saas) go to link"
+      }
+    },
     {
       "name": "Allnodes",
       "svgPath": "allnodes-glyph.svg",
@@ -305,7 +398,7 @@
       "hasBugBounty": false,
       "isTrustless": false,
       "isPermissionless": false,
-      "pctMajorityClient": null,
+      "pctMajorityClient": 43.8,
       "isSelfCustody": true,
       "platforms": ["Linux", "macOS", "Windows"],
       "ui": ["GUI"],
@@ -492,7 +585,7 @@
         }
       ],
       "isFoss": true,
-      "hasBugBounty": false,
+      "hasBugBounty": true,
       "isTrustless": true,
       "hasPermissionlessNodes": false,
       "pctMajorityClient": 43.1,

@@ -2,7 +2,6 @@
 title: Anatomia inteligentnych kontraktów
 description: Szczegółowa analiza anatomii inteligentnego kontaktu – funkcji, danych i zmiennych.
 lang: pl
-sidebar: true
 ---
 
 Inteligentny kontrakt to program, który działa pod adresem Ethereum. Składają się z danych i funkcji, które można wykonać po otrzymaniu transakcji. Oto przegląd tego, co stanowi inteligentny kontrakt.
@@ -57,7 +56,7 @@ Aby uzyskać więcej wyjaśnień, zapoznaj się z dokumentami:
 
 Wartości przechowywane tylko przez cały okres wykonywania funkcji kontraktowej nazywane są zmiennymi pamięci. Ponieważ nie są one przechowywane na stałe w blockchain, są znacznie tańsze w użyciu.
 
-Dowiedz się więcej o tym, jak EVM przechowuje dane (magazyn, pamięć i stos) w [Dokumenty Solidity ](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
+Dowiedz się więcej o tym, jak EVM przechowuje dane (magazyn, pamięć i stos) w [Dokumenty Solidity](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
 
 ### Zmienne środowiskowe {#environment-variables}
 

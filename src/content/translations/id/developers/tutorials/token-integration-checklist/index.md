@@ -3,13 +3,12 @@ title: Daftar periksa integrasi token
 description: Daftar periksa hal-hal yang perlu diperhatikan saat berinteraksi dengan token
 author: "Trailofbits"
 lang: id
-sidebar: true
 tags:
   - "solidity"
   - "kontrak pintar"
   - "keamanan"
   - "token"
-skill: tingkat menengah
+skill: intermediate
 published: 2020-08-13
 source: Membuat kontrak yang aman
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

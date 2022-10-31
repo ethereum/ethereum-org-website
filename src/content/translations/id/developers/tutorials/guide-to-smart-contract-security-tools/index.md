@@ -3,12 +3,11 @@ title: Panduan tentang peralatan keamanan kontrak pintar
 description: Gambaran umum tentang tiga teknik analisis pengujian dan program yang berbeda
 author: "Trailofbits"
 lang: id
-sidebar: true
 tags:
   - "solidity"
   - "kontrak pintar"
   - "keamanan"
-skill: tingkat menengah
+skill: intermediate
 published: 2020-09-07
 source: Membuat kontrak yang aman
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis

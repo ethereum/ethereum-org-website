@@ -6,9 +6,8 @@ tags:
   - "klien"
   - "geth"
   - "node"
-skill: tingkat menengah
+skill: intermediate
 lang: id
-sidebar: true
 published: 2021-01-13
 ---
 

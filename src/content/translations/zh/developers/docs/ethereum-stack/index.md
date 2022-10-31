@@ -2,7 +2,6 @@
 title: 以太坊堆栈简介
 description: 一次从不同层面对以太坊堆栈原理的浏览，并且了解如何让不同的以太坊堆栈融为一体。
 lang: zh
-sidebar: true
 ---
 
 就像其他任何一种堆栈结构，完整的“以太栈”会基于不同的目的在不同的项目之间变换。
@@ -11,7 +10,7 @@ sidebar: true
 
 ## 级别 1：以太坊虚拟机 {#ethereum-virtual-machine}
 
-[以太坊虚拟机 (EVM)](/developers/docs/evm/) 是以太坊智能合约的运行环境。 以太坊区块链上所有智能合约的状态都通过执行[交易](/developers/docs/transactions/)来改变。 
+[以太空虚拟机 (EVM)](/developers/docs/evm/) 是用于智能合约的运行环境。 以太坊区块链上的所有智能合约和状态更改都由[交易](/developers/docs/transactions/)执行。 以太坊虚拟机处理以在太坊网络上执行的所有交易。
 
 与任何虚拟机一样，以太坊虚拟机在执行代码和执行机器（以太坊节点）之间创建一个抽象级别。 目前，在世界各地散布着成千上万的正在执行的以太坊虚拟机节点。
 

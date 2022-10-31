@@ -2,7 +2,6 @@
 title: Smart Contracts
 description: Eine nicht-technische Einführung in Smart Contracts
 lang: de
-sidebar: true
 ---
 
 # Einführung in Smart Contracts {#introduction-to-smart-contracts}
@@ -61,7 +60,7 @@ Smart Contracts sind auch für Audits und eine Nachverfolgung nützlich. Da sich
 
 ### Schutz der Privatsphäre {#privacy-protection}
 
-Smart Contracts können auch unsere Privatsphäre schützen. Da Ethereum ein pseudonymes Netzwerk ist (Transaktionen sind öffentlich an eine eindeutige kryptographische Adresse gebunden, nicht an eine Identität), können Sie Ihre Privatsphäre vor Beobachtern schützen.
+Intelligente Verträge können zudem auch Ihre Privatsphäre schützen. Da Ethereum ein pseudonymes Netzwerk ist (Transaktionen sind öffentlich an eine eindeutige kryptographische Adresse gebunden, nicht an eine Identität), können Sie Ihre Privatsphäre vor Beobachtern schützen.
 
 ### Sichtbare Bedingungen {#visible-terms}
 
@@ -75,7 +74,7 @@ Sie können Berechnungen durchführen, Währungen erzeugen, Daten speichern, NFT
 
 - [Stablecoins](/stablecoins/)
 - [Einzigartige digitale Vermögenswerte erstellen und verteilen](/nft/)
-- [Ein automatischer, offener Währungsumtausch](/get-eth/#dex/)
+- [Ein automatischer, offener Währungsumtausch](/get-eth/#dex)
 - [Dezentralisiertes Gaming](/dapps/?category=gaming)
 - [Eine Versicherungspolice mit automatisierter Auszahlung](https://etherisc.com/)
 - [Ein Standard, der es Menschen ermöglicht, individuelle, interoperable Währungen zu schaffen](/developers/docs/standards/tokens/)

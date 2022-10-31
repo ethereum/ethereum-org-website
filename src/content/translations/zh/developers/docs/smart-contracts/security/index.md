@@ -2,10 +2,9 @@
 title: 智能合约安全性
 description: 以太坊开发者的安全考虑
 lang: zh
-sidebar: true
 ---
 
-以太坊智能合约是极为灵活的。它能够存储超过非常大量的虚拟货币（超过十亿美元），并且根据先前部署的智能合约运行不可修改的代码。 虽然这创造了一个充满活力和创造性的生态系统，但其中包含的无信任、相互关联的智能合约，也吸引了攻击者利用智能合约中的漏洞和以太坊中的未知错误来赚取利润。 智能合约代码*通常*无法修改来修复安全漏洞，因此从智能合约中被盗窃的资产是无法收回的，且被盗资产极难追踪。 由于智能合约问题而被盗或丢失的价值总额很容易超过 $1B。 一些因为智能合约代码编写错误导致较大经济损失的例子：
+以太坊智能合约是极为灵活的。它能够存储超过非常大量的虚拟货币（超过十亿美元），并且根据先前部署的智能合约运行不可修改的代码。 虽然这创造了一个充满活力和创造性的生态系统，但其中包含的无信任、相互关联的智能合约，也吸引了攻击者利用智能合约中的漏洞和以太坊中的未知错误来赚取利润。 智能合约代码*通常*无法修改来修复安全漏洞，因此从智能合约中被盗窃的资产是无法收回的，且被盗资产极难追踪。 由于智能合约问题而被盗取或丢失的价值总额很容易超过 10 亿美元。 一些因为智能合约代码编写错误导致较大经济损失的例子：
 
 - [钱包问题 #1 - 3000 万美金损失](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach)
 - [钱包问题 #2 - 3 亿美金锁定](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
@@ -35,7 +34,7 @@ sidebar: true
 - Solidity 代码编辑器不会发出任何警告
 - 您的代码有据可查
 
-上面的这些条目是编写智能合约的一个良好的开始，但是在编写代码过程中还有很多要值得注意。 关于更多条目及其详细解释，请参阅[DeFiSafety 提供的过程质量检查清单](https://docs.defisafety.com/review-process-documentation/process-quality-audit-process)。 [DefiSafety](https://defisafety.com/) 是一个对各种大型的公开以太坊去中心化应用程序进行评论的非官方公共服务提供者。 DeFiSafete 对项目的安全评级等级的一部分包括该项目是否遵守了质量检查表。 遵循这些审核过程：
+上面的这些条目是编写智能合约的一个良好的开始，但是在编写代码过程中还有很多要值得注意。 关于更多条目及其详细解释，请参阅[DeFiSafety 提供的过程质量检查清单](https://docs.defisafety.com/review-process-documentation/process-quality-audit-process)。 [DefiSafety](https://defisafety.com/) 是一个非官方的公共服务，发布对各种大型公共以太坊去中心化应用程序的评论。 DeFiSafete 对项目的安全评级等级的一部分包括该项目是否遵守了质量检查表。 遵循这些审核过程：
 
 - 通过可复现的自动化测试，产生更安全的代码
 - 审查员将能够更有效地审查您的项目
@@ -77,7 +76,7 @@ contract Victim {
 2. 发送用户的余额
 3. 将余额重置为 0，因此它们不能再次提取余额。
 
-如果从普通账户（例如您自己的 MetaMask 账户）调用，这将按预期运行：msg.sender.call.value() 只是向您的账户发送 ETH。 但是，智能合约也能调用其他合约。 如果一个自制的恶意合约调用 `withdraw()`，msg.sender.call.value() 会不仅发送 `amount` 个以太币，还会暗中调用合约来开始执行代码。 想象这个恶意合约：
+如果从普通账户（例如您自己的 MetaMask 帐户）调用，此函数将按预期运行：msg.sender.call.value() 只是向您的帐户发送以太币。 但是，智能合约也能调用其他合约。 如果一个自制的恶意合约调用 `withdraw()`，msg.sender.call.value() 会不仅发送 `amount` 个以太币，还会暗中调用合约来开始执行代码。 想象这个恶意合约：
 
 ```solidity
 contract Attacker {
@@ -217,7 +216,7 @@ contract NoLongerAVictim {
 
 延伸阅读:
 
-- [共识智能合约已知攻击](https://consensys.github.io/smart-contract-best-practices/attacks/) - 对最重要弱点的可读解释，有很多样本代码。
+- [Consensys 智能合约已知攻击](https://consensys.github.io/smart-contract-best-practices/attacks/) - 对最重要的漏洞进行深入浅出解释，并提供很多样本代码。
 - [SWC 注册](https://swcregistry.io/docs/SWC-128) - 适用于以太坊和智能合约的 CWE 的管理列表
 
 ## 安全工具 {#security-tools}
@@ -303,7 +302,7 @@ Slither 已经在这里确定了重新进入的可能性。确定问题可能出
 
 > 参考：https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities
 
-允许您快速了解代码的潜在问题。 像所有自动化测试工具一样，Slither 并不完美，它在报告一侧出现了太多错误。 即使在不存在可开发的脆弱性的情况下，它也可以就潜在的重返提出警告。 在代码更改之间在 Slither 输出中查看 DIFERENER 常常非常有启发性，可以帮助发现比等待您的项目代码完成早得多的漏洞。
+允许您快速了解代码的潜在问题。 像所有自动化测试工具一样，Slither 并不完美，它在报告一侧出现了太多错误。 即使在不存在可开发的脆弱性的情况下，它也可以就潜在的重返提出警告。 在代码更改之间在 Slither 输出中查看 DIFFERENCE 常常非常有启发性，可以帮助发现比等待您的项目代码完成早得多的漏洞。
 
 ## 延伸阅读 {#further-reading}
 

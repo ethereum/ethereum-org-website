@@ -2,7 +2,6 @@
 title: ERC-1155 Çoklu Token Standardı
 description:
 lang: tr
-sidebar: true
 ---
 
 ## Giriş {#introduction}
@@ -143,5 +142,5 @@ _Not_: Kanca dahil tüm toplu fonksiyonlar, toplu olmayan sürümler olarak da m
 
 - [EIP-1155: Çoklu Token Standardı](https://eips.ethereum.org/EIPS/eip-1155)
 - [ERC-1155: Openzeppelin Belgeleri](https://docs.openzeppelin.com/contracts/3.x/erc1155)
-- [ERC-1155: Github Deposu](https://github.com/enjin/erc-1155)
+- [ERC-1155: GitHub Deposu](https://github.com/enjin/erc-1155)
 - [Alchemy NFT API](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)

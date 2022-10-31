@@ -3,13 +3,12 @@ title: Python Geliştiricileri için Ethereum'a Giriş, Bölüm 1
 description: Özellikle Python programlama dili hakkında bilgi sahibi olanlar için yararlı olan Ethereum geliştirmeye giriş
 author: Marc Garreau
 lang: tr
-sidebar: true
 tags:
   - "başlarken"
   - "python"
   - "blok zinciri"
   - "web3.py"
-skill: acemi
+skill: beginner
 published: 2020-09-08
 source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/

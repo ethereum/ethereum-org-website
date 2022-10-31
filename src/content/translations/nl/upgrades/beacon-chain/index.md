@@ -3,7 +3,6 @@ title: De Beacon Chain
 description: Leer meer over de Beacon Chain - de upgrade die proof-of-stake Ethereum introduceerde.
 lang: nl
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: De Beacon Chain verandert niks aan de Ethereum die we nu gebruiken.
 summaryPoint2: Het zal het netwerk coördineren en als consensuslaag fungeren.
@@ -17,7 +16,7 @@ summaryPoint4: U kent dit wellicht als "Fase 0" op technische routekaarten.
 
 ## Wat doet de Beacon Chain? {#what-does-the-beacon-chain-do}
 
-De Beacon Chain zal het uitgebreide netwerk leiden of coördineren tussen [shards](/upgrades/shard-chains/) en [stakers](/staking/). Maar het zal niet zijn zoals het [Ethereum-hoofdnet](/glossary/#mainnet) dat we nu gebruiken. Het kan geen accounts of slimme contracten aan.
+De Beacon Chain zal het uitgebreide netwerk leiden of coördineren tussen [shards](/upgrades/sharding/) en [stakers](/staking/). Maar het zal niet zijn zoals het [Ethereum-hoofdnet](/glossary/#mainnet) dat we nu gebruiken. Het kan geen accounts of slimme contracten aan.
 
 Het doel van de Beacon Chain zal in de loop van de tijd veranderen, maar het is een fundamenteel onderdeel voor [het veilige, duurzame en haalbare Ethereum waar we naartoe werken.](/upgrades/vision/).
 
@@ -33,7 +32,7 @@ Sstaken en een validator worden is makkelijker dan [mining](/developers/docs/min
 Als u geïnteresseerd bent om een validator te worden en de Beacon Chain te beveiligen, <a href="/staking/">hier vindt u meer informatie over staken</a>.
 </InfoBanner>
 
-Dit is ook een belangrijke verandering voor een andere upgrade: [shardketens](/upgrades/shard-chains/).
+Dit is ook een belangrijke verandering voor een andere upgrade: [shardketens](/upgrades/sharding/).
 
 ### Opzetten van shardketens {#setting-up-for-shard-chains}
 
@@ -57,7 +56,7 @@ In het begin zal de Beacon Chain apart bestaan van het Ethereum-hoofdnet dat we 
 
 Shardketens kunnen alleen op een veilige manier in het Ethereum-netwerk komen als er een proof-of-stake consensusmechanisme geïmplementeerd is. De Beacon Chain zal het staken introduceren en de weg vrijmaken voor de upgrade van de shardketen die zal volgen.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
     Shardketens
 </ButtonLink>
 

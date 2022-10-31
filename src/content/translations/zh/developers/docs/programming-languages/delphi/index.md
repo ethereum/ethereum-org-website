@@ -2,7 +2,6 @@
 title: 面向 Delphi 开发者的以太坊
 description: 学习如何使用 Delphi 编程语言为以太坊开发
 lang: zh
-sidebar: true
 incomplete: true
 ---
 
@@ -52,5 +51,6 @@ incomplete: true
 - [Delphi 和以太坊域名服务](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
 - [QuikNode、以太坊和 Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)
 - [Delphi 和以太坊黑暗森林](https://svanas.medium.com/delphi-and-the-ethereum-dark-forest-5b430da3ad93)
+- [在 Delphi 中用一个代币交换另一个代币](https://svanas.medium.com/swap-one-token-for-another-in-delphi-bcb999c47f7)
 
 想要获取更多的资源？ 请查看 [ethereum.org/developers](/developers/)。

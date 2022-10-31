@@ -8,9 +8,8 @@ tags:
   - "solidity"
   - "testare"
   - "simulare"
-skill: intermediar
+skill: intermediate
 lang: ro
-sidebar: true
 published: 2020-11-14
 ---
 

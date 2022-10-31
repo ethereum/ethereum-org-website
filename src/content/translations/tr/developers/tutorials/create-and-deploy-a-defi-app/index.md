@@ -9,9 +9,8 @@ tags:
   - "truffle"
   - "ganache"
   - "akıllı sözleşmeler"
-skill: orta düzey
+skill: intermediate
 lang: tr
-sidebar: true
 published: 2020-12-31
 source: github.com
 sourceUrl: https://github.com/strykerin/DeFi-Token-Farm

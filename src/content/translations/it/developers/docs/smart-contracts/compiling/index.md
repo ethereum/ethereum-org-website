@@ -2,7 +2,6 @@
 title: Compilazione di Smart Contract
 description: Spiegazione del motivo per cui è necessario compilare Smart Contract e cosa succede durante la compilazione.
 lang: it
-sidebar: true
 incomplete: true
 ---
 
@@ -276,4 +275,4 @@ Di seguito è riportato l'ABI per il contratto token ERC-20. Un ERC-20 è un tok
 ## Argomenti correlati {#related-topics}
 
 - [Librerie client JavaScript](/developers/docs/apis/javascript/)
-- [Macchina virtuale Ethereum](/developers/docs/ethereum-virtual-machine/)
+- [Macchina virtuale Ethereum](/developers/docs/evm/)

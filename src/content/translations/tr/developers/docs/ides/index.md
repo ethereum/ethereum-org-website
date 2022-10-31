@@ -2,7 +2,6 @@
 title: Tümleşik Geliştirme Ortamları (IDE'ler)
 description:
 lang: tr
-sidebar: true
 ---
 
 Bir [tümleşik geliştirme ortamı (IDE)](https://wikipedia.org/wiki/Integrated_development_environment) kurmak söz konusu olduğunda Ethereum'da uygulama programlamak, başka herhangi bir yazılım projesini programlamaya benzer. Birçok seçenek bulunduğu için tercihlerinize en iyi uyan IDE veya kod editörünü seçin. Büyük ihtimalle Ethereum geliştirme için en iyi IDE seçimi, hâlihazırda geleneksel yazılım geliştirme için kullandığınız IDE olacaktır.
@@ -35,7 +34,6 @@ Bir [tümleşik geliştirme ortamı (IDE)](https://wikipedia.org/wiki/Integrated
 **Visual Studio Code -** **_Resmi Ethereum destekli, profesyonel çapraz platform IDE'sidir._**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Ethereum için Blok Zinciri Geliştirme Kiti](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain)
 - [Azure Blockchain Workbench](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
 - [Kod örnekleri](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)

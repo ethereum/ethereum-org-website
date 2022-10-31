@@ -3,7 +3,6 @@ title: Mnyororo Kioleza
 description: Jifunze juu ya Mnyororo Kioleza - Kisasisho kilichoanzishwa na Ethereum ya uthibitisho-wa-hisa.
 lang: sw
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: Mnyororo Kioleza haitabadili kitu chochote katika Ethereum ya leo.
 summaryPoint2: Itaratibu mtandao, na kutumikia kama safu ya makubaliano.
@@ -17,7 +16,7 @@ summaryPoint4: Unaweza kua unaitambua hii kama "Awamu 0" kwenye mipango ya kitaa
 
 ## Myororo wa Kioleza ni nini? {#what-does-the-beacon-chain-do}
 
-Mnyororo wa Beacon utaendeleza mwenendo wa kutanua mtandao wake wa [shards](/upgrades/shard-chains/) na [wanahisa](/staking/). Lakini haitakua kama [mtandao mkuu wa Ethereum](/glossary/#mainnet) wa leo. Inaweza kuhimili akaunti au mikataba mahiri.
+Mnyororo wa Beacon utaendeleza mwenendo wa kutanua mtandao wake wa [shards](/upgrades/sharding/) na [wanahisa](/staking/). Lakini haitakua kama [mtandao mkuu wa Ethereum](/glossary/#mainnet) wa leo. Inaweza kuhimili akaunti au mikataba mahiri.
 
 Jukumu ya mnyororo wa Kioleza litabadilika baada ya mda ila sehemu ya msingi ya [usalama, kuendeleza na ubadilikaji wa Ethereum tunayoijenga](/upgrades/vision/).
 
@@ -33,7 +32,7 @@ Kuweka hisa na kua mt hibitishaji ni rahisi kuliko [kuchimba](/developers/docs/m
 Kama ungependa kua mthibitishaji na kusaidia kulinda mnyororo wa Kioleza, <a href="/staking/">jifunze zaidi jinsi ya kuweka hisa</a>.
 </InfoBanner>
 
-Hili pia ni badiliko muhumu kwa ajili ya uboreshaji wa Eth2:[minyororo ya vigae](/upgrades/shard-chains/).
+Hili pia ni badiliko muhumu kwa ajili ya uboreshaji wa Eth2:[minyororo ya vigae](/upgrades/sharding/).
 
 ### Maandalizi ya minyororo ya shards {#setting-up-for-shard-chains}
 
@@ -57,7 +56,7 @@ Mnyororo Kioleza, mwanzoni, itakuwa imetengana na Mtandao mkuu wa Ethereum tunao
 
 Minyororo ya Vigae itakua salama kuingia katika ikolojia ya Ethereum pale tu utaratibu wa makubaliano kwenye uthibitisho-wa-hisa utakapochukua nafasi. Mnyororo Kioleza utaanzisha hisa, ikitengeneza njia ili uboreshwaji wa mnyororo-kigae ufuate.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
     Minyororo ya Kigae
 </ButtonLink>
 

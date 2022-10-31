@@ -2,7 +2,6 @@
 title: 后端应用程序接口库
 description: 以太坊客户端应用程序接口的介绍，使您能够从您的应用程序中与区块链进行交互。
 lang: zh
-sidebar: true
 ---
 
 为了使软件应用程序能够与以太坊区块链进行交互（例如：读取区块链数据或发送交易信息到网络），软件必须连接到以太坊节点。
@@ -28,7 +27,7 @@ sidebar: true
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
 
-**BlockCypher -** **_以太坊网络 API。_**
+**BlockCypher -** **_以太坊 Web 应用程序接口。_**
 
 - [blockcypher.com](https://www.blockcypher.com/)
 - [相关文档](https://www.blockcypher.com/dev/ethereum/)
@@ -62,7 +61,7 @@ sidebar: true
 - [chainstack.com](https://chainstack.com)
 - [相关文档](https://docs.chainstack.com)
 
-**QuickNode -** **_区块链基础设施即服务。_**
+**QuickNode -** **_ 区块链基础设施即服务。_**
 
 - [quicknode.com](https://quicknode.com)
 - [相关文档](https://www.quicknode.com/docs)
@@ -105,7 +104,7 @@ sidebar: true
 - [相关文档](https://docs.watchdata.io/)
 - [Discord](https://discord.com/invite/TZRJbZ6bdn)
 
-**Zmok -** **_以速度为导向的以太坊节点作为 JSON-RPC/WebSockets API 接口。_**
+**Zmok -** **_ 注重速度的以太坊节点即 JSON-RPC/WebSockets 应用程序接口。_**
 
 - [zmok.io](https://zmok.io/)
 - [GitHub](https://github.com/zmok-io)

@@ -2,7 +2,6 @@
 title: Smart contract languages
 description: An overview and comparison of the two main smart contract languages – Solidity and Vyper.
 lang: en
-sidebar: true
 ---
 
 A great aspect about Ethereum is that smart contracts can be programmed using relatively developer-friendly languages. If you're experienced with Python or any [curly-bracket language](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), you can find a language with familiar syntax.
@@ -89,6 +88,7 @@ This example should give you a sense of what Solidity contract syntax is like. F
 - Pythonic programming language
 - Strong typing
 - Small and understandable compiler code
+- Efficient bytecode generation
 - Deliberately has less features than Solidity with the aim of making contracts more secure and easier to audit. Vyper does not support:
   - Modifiers
   - Inheritance
@@ -105,10 +105,16 @@ For more information, [read the Vyper rationale](https://vyper.readthedocs.io/en
 
 - [Documentation](https://vyper.readthedocs.io)
 - [Vyper by Example](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
+- [More Vyper by Example](https://vyper-by-example.org/)
 - [GitHub](https://github.com/vyperlang/vyper)
-- [Vyper Gitter Chatroom](https://gitter.im/vyperlang/community)
+- [Vyper community Discord chat](https://discord.gg/SdvKC79cJk)
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
-- [Update Jan 8, 2020](https://blog.ethereum.org/2020/01/08/update-on-the-vyper-compiler)
+- [Smart contract development frameworks and tools for Vyper](/developers/docs/programming-languages/python/)
+- [VyperPunk - learn to secure and hack Vyper smart contracts](https://github.com/SupremacyTeam/VyperPunk)
+- [VyperExamples - Vyper vulnerability examples](https://www.vyperexamples.com/reentrancy)
+- [Vyper Hub for development](https://github.com/zcor/vyper-dev)
+- [Vyper greatest hits smart contract examples](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
+- [Awesome Vyper curated resources](https://github.com/spadebuilders/awesome-vyper)
 
 ### Example {#example}
 

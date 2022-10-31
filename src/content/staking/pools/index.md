@@ -4,7 +4,6 @@ description: An overview of how to get started with pooled ETH staking
 lang: en
 template: staking
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../assets/staking/leslie-pool.png
 alt: Leslie the rhino swimming in the pool.
 sidebarDepth: 2
@@ -58,18 +57,19 @@ Please note the importance of choosing a service that takes <a href="/developers
 
 <StakingProductsCardGrid category="pools" />
 
-Have a suggestion for a staking tool we missed? Check out our [product listing policy](/contributing/adding-staking-product/) to see if it would be a good fit, and to submit it for review.
+Have a suggestion for a staking tool we missed? Check out our [product listing policy](/contributing/adding-staking-products/) to see if it would be a good fit, and to submit it for review.
 
 ## FAQ {#faq}
 
 <ExpandableCard title="How do I earn rewards?">
-Typically ERC-20 liquidity tokens are issued to stakers that represents the value of their staked ETH plus rewards. Keep in mine that different pools will distribute staking rewards to their users via slightly different methods, but this is the common theme.
+Typically ERC-20 liquidity tokens are issued to stakers that represents the value of their staked ETH plus rewards. Keep in mind that different pools will distribute staking rewards to their users via slightly different methods, but this is the common theme.
 </ExpandableCard>
 
 <ExpandableCard title="When can I withdraw my stake?">
-Currently, withdrawing funds from a validator on the Beacon Chain is not possible, which currently limits the ability to actually <em>redeem</em> your liquidity token for the ETH rewards locked in the consensus layer.
 
-Alternatively, pools that utilize an ERC-20 liquidity token allow users to trade this token in the open market, effectively allowing you to "withdraw" without actually removing ETH from the Beacon Chain.
+Currently, withdrawing funds from an Ethereum validator is not possible, which limits the ability to actually _redeem_ your liquidity token for the ETH rewards locked in the consensus layer.
+
+Alternatively, pools that utilize an ERC-20 liquidity token allow users to trade this token in the open market, allowing you to sell your staking position, effectively "withdrawing" without actually removing ETH from the staking contract.
 </ExpandableCard>
 
 <ExpandableCard title="Is this different from staking with my exchange?">
@@ -77,7 +77,7 @@ There are many similarities between these pooled staking options and centralized
 
 Unlike centralized exchanges, many other pooled staking options utilize smart contracts and/or liquidity tokens, which are usually ERC-20 tokens that can be held in your own wallet, and bought or sold just like any other token. This offers a layer of sovereignty and security by giving you control over your tokens, but still does not give you direct control over the validator client attesting on your behalf in the background.
 
-Some pooling options are more decentralized than others when it comes to the nodes that back them. To promote the health and decentralization of the network, stakers are always encourage to select a pooling service that enables a permissionless decentralized set of node operators.
+Some pooling options are more decentralized than others when it comes to the nodes that back them. To promote the health and decentralization of the network, stakers are always encouraged to select a pooling service that enables a permissionless decentralized set of node operators.
 </ExpandableCard>
 
 ## Further reading {#further-reading}

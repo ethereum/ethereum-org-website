@@ -2,7 +2,6 @@
 title: Penskalaan
 description: Pengenalan tentang opsi penskalaan berbeda yang sedang dikembangkan saat ini oleh komunitas Ethereum.
 lang: id
-sidebar: true
 ---
 
 ## Gambaran umum penskalaan {#scaling-overview}
@@ -27,7 +26,7 @@ Metode penskalaan ini memerlukan perubahan pada protokol Ethereum (lapisan 1 [Ja
 
 Sharding adalah proses pemisahan basis data secara horizontal untuk menyebarkan muatan. Dalam konteks Ethereum, sharding akan mengurangi kemacetan jaringan dan meningkatkan transaksi per detik dengan membuat rantai baru, yang dikenal sebagai “shard.” Ini juga akan meringankan beban setiap validator yang tidak lagi diharuskan untuk memroses keseluruhan transaksi di seluruh jaringan.
 
-Pelajari lebih lanjut tentang [sharding](/upgrades/shard-chains/).
+Pelajari lebih lanjut tentang [sharding](/upgrades/sharding/).
 
 ## Penskalaan off-chain {#off-chain-scaling}
 

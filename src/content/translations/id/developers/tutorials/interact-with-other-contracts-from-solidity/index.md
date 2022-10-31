@@ -9,9 +9,8 @@ tags:
   - "pabrik"
   - "menyebarkan"
   - "komposabilitas"
-skill: tingkat lanjut
+skill: advanced
 lang: id
-sidebar: true
 published: 2020-04-05
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/interact-with-other-contracts-from-solidity/

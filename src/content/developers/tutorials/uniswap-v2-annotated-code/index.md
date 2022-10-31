@@ -2,7 +2,6 @@
 title: "Uniswap-v2 Contract Walk-Through"
 description: How does the Uniswap-v2 contract work? Why is it written that way?
 author: Ori Pomerantz
-sidebar: true
 tags: ["solidity", "uniswap"]
 skill: intermediate
 published: 2021-05-01
@@ -23,16 +22,15 @@ _Traders_ send one type of token to the pool and receive the other (for example,
 
 When liquidity providers want their assets back they can burn the pool tokens and receive back their tokens, including their share of the rewards.
 
-[Click here for a fuller description](https://uniswap.org/docs/v2/core-concepts/swaps/).
+[Click here for a fuller description](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/swaps/).
 
 ### Why v2? Why not v3? {#why-v2}
 
-As I'm writing this, [Uniswap v3](https://uniswap.org/whitepaper-v3.pdf) is almost ready. However, it is an upgrade that is much more complicated than the original. It is easier to first learn v2 and then go to v3.
+[Uniswap v3](https://uniswap.org/whitepaper-v3.pdf) is an upgrade that is much more complicated than the v2. It is easier to first learn v2 and then go to v3.
 
 ### Core Contracts vs Periphery Contracts {#contract-types}
 
-Uniswap v2 is divided into two components, a core and a periphery. This division allows the core contracts, which hold the assets and therefore _have_ to be secure, to be simpler and easier to audit.
-All the extra functionality required by traders can then be provided by periphery contracts.
+Uniswap v2 is divided into two components, a core and a periphery. This division allows the core contracts, which hold the assets and therefore _have_ to be secure, to be simpler and easier to audit. All the extra functionality required by traders can then be provided by periphery contracts.
 
 ## Data and Control Flows {#flows}
 
@@ -50,7 +48,7 @@ This is most common flow, used by traders:
 
 1. Provide the periphery account with an allowance in the amount to be swapped.
 2. Call one of the periphery contract's many swap functions (which one depends on whether ETH is involved or not, whether the trader specifies the amount of tokens to deposit or the amount of tokens to get back, etc).
-Every swap function accepts a `path`, an array of exchanges to go through.
+   Every swap function accepts a `path`, an array of exchanges to go through.
 
 #### In the periphery contract (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02-sol}
 
@@ -131,7 +129,7 @@ These are all the interfaces that the contract needs to know about, either becau
 contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 ```
 
-This contract inherits from `UniswapV2ERC20`, which provides the the ERC-20 functions for the liquidity tokens.
+This contract inherits from `UniswapV2ERC20`, which provides the ERC-20 functions for the liquidity tokens.
 
 ```solidity
     using SafeMath  for uint;
@@ -500,7 +498,7 @@ Calculate the protocol fees to collect, if any, and mint liquidity tokens accord
            _mint(address(0), MINIMUM_LIQUIDITY); // permanently lock the first MINIMUM_LIQUIDITY tokens
 ```
 
-If this is the first deposit, create `MINIMUM_LIQUIDITY` tokens and send them to address zero to lock them. They can never to redeemed, which means the pool will never be emptied completely (this saves us from division by zero in some places). The value of `MINIMUM_LIQUIDITY` is a thousand, which considering most ERC-20 are subdivided into units of 10^-18'th of a token, as ETH is divided into wei, is 10^-15 to the value of a single token. Not a high cost.
+If this is the first deposit, create `MINIMUM_LIQUIDITY` tokens and send them to address zero to lock them. They can never be redeemed, which means the pool will never be emptied completely (this saves us from division by zero in some places). The value of `MINIMUM_LIQUIDITY` is a thousand, which considering most ERC-20 are subdivided into units of 10^-18'th of a token, as ETH is divided into wei, is 10^-15 to the value of a single token. Not a high cost.
 
 In the time of the first deposit we don't know the relative value of the two tokens, so we just multiply the amounts and take a square root, assuming that the deposit provides us with equal value in both tokens.
 
@@ -664,7 +662,7 @@ This is a sanity check to make sure we don't lose from the swap. There is no cir
 
 Update `reserve0` and `reserve1`, and if necessary the price accumulators and the timestamp and emit an event.
 
-##### Sync or Skim {#sync-or-skim}
+##### Sync or Skim
 
 It is possible for the real balances to get out of sync with the reserves that the pair exchange thinks it has.
 There is no way to withdraw tokens without the contract's consent, but deposits are a different matter. An account can transfer tokens to the exchange without calling either `mint` or `swap`.
@@ -816,7 +814,7 @@ These two functions allow `feeSetter` to control the fee recipient (if any), and
 
 ### UniswapV2ERC20.sol {#UniswapV2ERC20}
 
-[This contract](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implements the ERC-20 liquidity token. It is similar to the [OpenWhisk ERC-20 contract](/developers/tutorials/erc20-annotated-code), so I will only explain the part that is different, the `permit` functionality.
+[This contract](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implements the ERC-20 liquidity token. It is similar to the [OpenZeppelin ERC-20 contract](/developers/tutorials/erc20-annotated-code), so I will only explain the part that is different, the `permit` functionality.
 
 Transactions on Ethereum cost ether (ETH), which is equivalent to real money. If you have ERC-20 tokens but not ETH, you can't send transactions, so you can't do anything with them. One solution to avoid this problem is [meta-transactions](https://docs.uniswap.org/protocol/V2/guides/smart-contract-integration/supporting-meta-transactions/).
 The owner of the tokens signs a transaction that allows somebody else to withdraw tokens off chain and sends it using the Internet to the recipient. The recipient, which does have ETH, then submits the permit on behalf of the owner.
@@ -1011,7 +1009,7 @@ For example, imagine a case where the exchange rate is one to one and the liquid
 
 As long as the exchange rate stays between 0.9 and 1.25, the transaction takes place. If the exchange rate gets out of that range, the transaction gets cancelled.
 
-The reason for this precaution is that transactions are not immediate, you submit them and eventually a miner is going to include them in a block (unless your gas price is very low, in which case you'll need to submit another transaction with the same nonce and a higher gas price to overwrite it). You cannot control what happens during the interval between submission and inclusion.
+The reason for this precaution is that transactions are not immediate, you submit them and eventually a validator is going to include them in a block (unless your gas price is very low, in which case you'll need to submit another transaction with the same nonce and a higher gas price to overwrite it). You cannot control what happens during the interval between submission and inclusion.
 
 ```solidity
     ) internal virtual returns (uint amountA, uint amountB) {

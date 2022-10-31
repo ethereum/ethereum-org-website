@@ -7,9 +7,8 @@ tags:
   - "智能合约"
   - "solidity"
   - "测试"
-skill: 中等难度
+skill: intermediate
 lang: zh
-sidebar: true
 published: 2020-10-16
 ---
 

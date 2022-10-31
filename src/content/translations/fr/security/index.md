@@ -2,7 +2,6 @@
 title: Sécurité d'Ethereum et prévention des arnaques
 description: Rester en toute sécurité sur Ethereum
 lang: fr
-sidebar: true
 ---
 
 # Sécurité d'Ethereum et prévention des arnaques {#introduction}
@@ -29,7 +28,7 @@ Une autre erreur courante est d'utiliser des mots de passe qui peuvent être fac
 
 #### Bonnes pratiques pour des mots de passe forts : {#good-password-practices}
 
-- Rendre les mots de passe aussi longtemps que autorisé par votre générateur de mot de passe ou par le formulaire que vous remplissez
+- Rendre les mots de passe aussi long que autorisé par votre générateur de mot de passe ou par le formulaire que vous remplissez
 - Utiliser un mélange de majuscules, minuscules, chiffres et symboles
 - Ne pas inclure d'informations personnelles, telles que les noms de famille, dans votre mot de passe
 - Éviter les mots courants du dictionnaire
@@ -38,7 +37,7 @@ Une autre erreur courante est d'utiliser des mots de passe qui peuvent être fac
 
 ### Utiliser un mot de passe unique pour chaque compte {#use-unique-passwords}
 
-Un mot de passe fort ne fournit pas autant de protection si le mot de passe est révélé dans une violation de données. Le site web[Ai-je été Pwned](https://haveibeenpwned.com)vous permet de vérifier si vos comptes ont été impliqués dans des violations de données stockées dans leur base de données. Si c'est le cas,**vous devriez changer immédiatement les mots de passe pwned**. L'utilisation de mots de passe uniques pour chaque compte réduit le risque que les pirates informatiques aient accès à tous vos comptes lorsque l'un de vos mots de passe est compromis.
+Un mot de passe fort ne fournit pas autant de protection si le mot de passe est révélé dans une violation de données. Le site web [Ai-je été Pwned](https://haveibeenpwned.com) vous permet de vérifier si vos comptes ont été impliqués dans des violations de données stockées dans leur base de données. Si c'est le cas,** vous devriez changer immédiatement les mots de passe pwned**. L'utilisation de mots de passe uniques pour chaque compte réduit le risque que les pirates informatiques aient accès à tous vos comptes lorsque l'un de vos mots de passe est compromis.
 
 ### Utiliser un gestionnaire de mots de passe {#use-password-manager}
 
@@ -78,7 +77,7 @@ L'utilisation de l'**authentification à deux facteurs (2FA)** fournit un* facte
 
 #### Clés de sécurité {#security-keys}
 
-Pour ceux qui veulent une 2FA encore plus securisée, pensez à utiliser une clé de sécurité. Les clés de sécurité sont des systèmes d'authentification matériels, qui fonctionnent de la même manière que les solutions d'authentification logicielles. Utiliser une clé de sécurité est la solution 2FA la plus sécurisée. Beaucoup de ces clés utilsent la norme universelle, d'authentification à deux facteurs (U2F), FIDO. [ A propos de FIDO U2F](https://www.yubico.com/authentication-standards/fido-u2f/).
+Pour ceux qui veulent une 2FA encore plus securisée, pensez à utiliser une clé de sécurité. Les clés de sécurité sont des systèmes d'authentification matériels, qui fonctionnent de la même manière que les solutions d'authentification logicielles. Utiliser une clé de sécurité est la solution 2FA la plus sécurisée. Beaucoup de ces clés utilisent la norme universelle d'authentification à deux facteurs (U2F), FIDO. [ A propos de FIDO U2F](https://www.yubico.com/authentication-standards/fido-u2f/).
 
 En savoir plus sur la 2FA :
 
@@ -91,10 +90,10 @@ Les extensions de navigateur comme les extensions Chrome ou les modules complém
 #### Bonnes pratiques : {#browser-extension-safety}
 
 - N'installer que des extensions d'éditeurs de confiance
-- Désinstaller les extensiosn de navigateur non-utilisées
-- Intaller les extensions Chrome localement en désactivant les mises à jours automatiques (Avancé)
+- Désinstaller les extensions de navigateur non-utilisées
+- Installez les extensions Chrome localement pour arrêter la mise à jour automatique (Avancé)
 
-[En savoir plus sur les risques des extensions des navigateurs](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
+[En savoir plus sur les risques liés aux extensions des navigateurs](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
 <Divider />
 
@@ -133,7 +132,7 @@ En faisant une une capture d'écran de vos phrases secrètes ou de vos clés pri
 
 Les portefeuilles matériels permettent le stockage hors-ligne de vos clés privées. Ils sont considérés comme l'option de portefeuille la plus sûre pour stocker vos clés privées.
 
-Garder vos clés privées hors-ligne réduit significativement le risque qu'elles soit compromises, même si un pirate venait à prendre le contrôle de votre ordinateur.
+Garder vos clés privées hors-ligne réduit significativement le risque qu'elles soient compromises, même si un pirate venait à prendre le contrôle de votre ordinateur.
 
 #### Essayez un portefeuille matériel : {#try-hardware-wallet}
 
@@ -161,18 +160,18 @@ De nombreux portefeuilles Ethereum offrent des limites de sécurité pour évite
 Les escrocs chercheront toujours des moyens de vous soutirer de l'argent. Il est impossible de les stopper complètement leurs activités, mais nous pouvons les rendre moins efficaces en étant conscients de la plupart des techniques utilisées. Il existe de nombreuses variantes de ces arnaques, mais elles suivent généralement les mêmes schémas de base. Quoi qu'il en soit, souvenez-vous :
 
 - soyez toujours sur vos gardes
-- personne ne vous donnera des ETH gratuits ou à prix réduit !
+- personne ne vous offrira des ETH gratuits ou en "promotion"
 - personne n'a besoin d'accéder à vos clés privées ni à vos informations personnelles
 
 ### Arnaques à la distribution de cadeaux {#giveaway}
 
-Une des arnaques les plus courantes dans les cryptomonnaies est l'anarque à la distribution de cadeaux. Cette arnaque peut prendre de nombreuse formes, mais le principe général est que si vous envoyez des ETH à l'adresse fournie, vous recevez le double de vos ETH envoyés en retour. *Pour cette raison, cette arnaque est aussi connue sous le nom d'anarque du 2 pour 1.*
+Une des arnaques les plus courantes dans les cryptomonnaies est l'anarque à la distribution de cadeaux. Cette arnaque peut prendre de nombreuses formes, mais le principe général est que si vous envoyez des ETH à l'adresse fournie, vous recevez le double de vos ETH envoyés en retour. *Pour cette raison, cette arnaque est aussi connue sous le nom d'anarque du 2 pour 1.*
 
-Ces arnaques indiquent généralement une durée limitée pour réclamer le cadeau, afin de favoriser la précipitation dans la prise de décision et de créer un sentiment de fausse urgence.
+En général, ces arnaques imposent une durée limitée pour recevoir les cadeaux afin de favoriser la précipitation et de créer un faux sentiment d'urgence.
 
 #### Piratage sur les réseaux sociaux {#social-media-hacks}
 
-Une telle situation s'est produite en juillet 2020, lorsque les comptes Twitter de célébrités et d'importantes sociétés ont été piratés. Le pirate a simultanément posté un évènement de distribution de Bitcoin sur les comptes piratés. Bien que les tweets trompeurs aient été rapidement signalés et retirés, les pirates ont quand-même réussi à disparaître avec 11 Bitcoin (soit 500 000 $ en septembre 2021)
+Une telle situation s'est produite en juillet 2020, lorsque les comptes Twitter de célébrités et d'importantes sociétés ont été piratés. Le pirate a simultanément posté un évènement de distribution de Bitcoin sur les comptes piratés. Bien que les tweets trompeurs aient été rapidement signalés et supprimés, les pirates ont quand-même réussi à disparaître avec 11 bitcoins (soit 500 000 $ en septembre 2021).
 
 ![Une arnaque sur Twitter](./appleTwitterScam.png)
 
@@ -206,11 +205,19 @@ En principe, l'équipe d'Ethereum ne communiquera jamais avec vous par le biais 
   </div>
 </InfoBanner>
 
+### Arnaque au jeton « Eth2 » {#eth2-token-scam}
+
+Dans la période précédant [La Fusion](/upgrades/merge/), les scammers ont profité de la confusion autour du terme « Eth2 » pour essayer d'obtenir que les utilisateurs rachètent leur ETH pour un jeton « ETH2 ». Il n'existe pas d'« ETH2 » et aucun autre jeton légitime n'a été introduit avec La Fusion. L'ETH que vous possédiez avant La Fusion reste aujourd'hui le même ETH. Il n'y a **pas besoin de prendre des mesures liées à votre ETH pour tenir compte du passage de la preuve de travail à la preuve d'enjeu**.
+
+Les escrocs peuvent apparaître sous la forme d'une « assistance » vous indiquant que si vous déposez votre ETH, vous recevrez en retour « ETH2 ». Il n'y a pas de [support Ethereum officiel](/community/support/), et il n'y a pas de nouveau jeton. Ne partagez jamais la phrase de récupération de votre portefeuille avec qui que ce soit.
+
+_Remarque : il existe des jetons/téléscripteurs dérivés qui peuvent représenter une mise en jeu ETH (ex. rETH de Rocket Pool, stETH de Lido, ETH2 de Coinbase), mais ce ne sont pas des éléments vers lesquels vous devriez « migrer. »_
+
 ### Arnaques par hameçonnage {#phishing-scams}
 
-Les arnaques par hameçonnage représentent un autre vecteur d'attaque fréquent que les escrocs utilisent pour essayer de vider votre portefeuille.
+Les arnaques par hameçonnage représentent un autre vecteur d'attaque de plus en plus fréquent que les escrocs utilisent pour essayer de vider votre portefeuille.
 
-Certains e-mails d'hameçonnage demandent aux utilisateurs de cliquer sur des liens qui les redirigeront vers des sites web factices, leur demandant de saisir leur phrase secrète, de réinitialiser leur mot de passe ou encore d'envoyer des ETH. D'autres peuvent vous demander d'installer un logiciel malveillant à votre insu, qui infectera votre ordinateur et donnera accès aux escrocs à vos fichiers.
+Certains e-mails d'hameçonnage demandent aux utilisateurs de cliquer sur des liens qui les redirigeront vers des sites web factices, leur demandant de saisir leur phrase de récupération, de réinitialiser leur mot de passe ou encore d'envoyer des ETH. D'autres peuvent vous demander d'installer un logiciel malveillant à votre insu, qui infectera votre ordinateur et donnera accès aux escrocs à vos fichiers.
 
 Si vous recevez un e-mail de la part d'un expéditeur inconnu, rappelez-vous :
 
@@ -230,11 +237,11 @@ Ces courtiers frauduleux trouvent leur cible en utilisant de faux comptes sur Yo
 
 ![Une arnaque au faux courtier sur YouTube](./brokerScam.png)
 
-### Arnaques au groupe de minage {#mining-pool-scams}
+### Arnaques au groupe de minage de cryptomonnaies {#mining-pool-scams}
 
-Les arnaques au liées groupe de minage impliquent que des personnes vous contactent sans que vous les ayez sollicitées et vous disent que vous pouvez gagner beaucoup d'argent en faisant partie d'un groupe de minage Ethereum. L'escroc vous fera des promesses et restera en contact avec vous le temps qu'il faudra. Concrètement, l'escroc va essayer de vous faire croire qu'en rejoignant un groupe de minage Ethereum, votre cryptomonnaie sera utilisée pour créer de l'ETH et que vous recevrez des dividendes sous la forme d'ETH. Ce qui finira par se produire, c'est que vous remarquerez que votre cryptomonnaie génère de petits profits. Il s'agit simplement d'un piège pour vous inciter à investir davantage. Au bout du compte, tous vos fonds investis seront envoyés à une adresse inconnue et l'escroc disparaîtra ou, dans certains cas, restera en contact avec vous, comme cela s'est produit dans une affaire récente.
+À compter de septembre 2022, le minage sur Ethereum n'est plus possible. Cependant, il existe toujours des escroqueries dans les pools de minage. Les arnaques liées aux pools de minage impliquent que des personnes vous contactent sans que vous les ayez sollicité et vous disent que vous pouvez gagner beaucoup d'argent en faisant partie d'un pool de minage Ethereum. L'escroc vous fera des promesses et restera en contact avec vous le temps qu'il faudra. Concrètement, l'escroc va essayer de vous faire croire qu'en rejoignant un pool de minage Ethereum, votre cryptomonnaie sera utilisée pour créer de l'ETH et que vous recevrez des dividendes sous la forme d'ETH. Ce qui finira par se produire, c'est que vous remarquerez que votre cryptomonnaie génère de petits profits. Il s'agit simplement d'un piège pour vous inciter à investir davantage. Au bout du compte, tous vos fonds investis seront envoyés à une adresse inconnue et l'escroc disparaîtra ou, dans certains cas, restera en contact avec vous, comme cela s'est produit dans une affaire récente.
 
-Pour résumer, méfiez-vous des personnes qui vous contactent sur les réseaux sociaux pour vous proposer de rejoindre un groupe de minage. Une fois que vous avez perdu votre cryptomonnaie, il est trop tard.
+Pour résumer, méfiez-vous des personnes qui vous contactent sur les réseaux sociaux pour vous proposer de rejoindre un pool de minage. Une fois que vous avez perdu votre cryptomonnaie, il est trop tard.
 
 Quelques points à retenir :
 
@@ -244,15 +251,9 @@ Quelques points à retenir :
 
 [Un individu perd 200 000 dollars dans une arnaque au groupe de minage](https://www.reddit.com/r/CoinBase/comments/r0qe0e/scam_or_possible_incredible_payout/)
 
-### Arnaque au jeton « Eth2 » {#eth2-token-scam}
-
-Avec l'approche de [la fusion](/upgrades/merge/), qui se produira en 2022, les escrocs ont profité de la confusion autour du terme « Eth2 » pour essayer de faire en sorte que les utilisateurs échangent leur ETH contre un jeton « ETH2 ». Il n'y a pas de jeton « ETH2 » ni d'autre jeton introduit par la fusion. L'ETH que vous possédez à l'heure actuelle va rester le même ETH après la fusion, et il n'est pas nécessaire de faire un quelconque échange avec votre ETH d'ici la fusion.
-
-Les escrocs peuvent apparaître sous la forme d'une « assistance » vous indiquant que si vous déposez votre ETH, vous recevrez en retour « ETH2 ». Il n'y a pas de [support Ethereum officiel](/community/support/), et il n'y a pas de nouveau jeton. Ne partagez jamais la phrase de départ de votre portefeuille avec qui que ce soit.
-
 ### Arnaques par Airdrop {#airdrop-scams}
 
-Les arnaques par Airdrop consistent en un projet factice qui envoie (airdrop) un actif (NFT, jeton) dans votre portefeuille et vous renvoie vers un faux site pour réclamer votre actif récupéré. Vous serez invité à vous connecter avec votre portefeuille Ethereum et à « approuver » une transaction lors d'une tentative de réclamation. Cette transaction compromet votre compte en envoyant vos clés publiques et privées à l'escroc. Une forme alternative de cette arnaque peut vous demander de confirmer une transaction qui envoie des fonds sur le compte de l'escroc.
+Les arnaques aux jetons airdrop consistent en un projet factice qui distribue un airdrop d'actif (NFT, jeton) dans votre portefeuille (wallet) et vous renvoie vers un faux site pour réclamer l'actif que vous avez récupéré. Vous serez invité à vous connecter avec votre portefeuille Ethereum et à « autoriser » une transaction lors d'une tentative de réclamation. Cette transaction compromet votre compte en envoyant vos clés publiques et privées à l'escroc. Une forme alternative de cette arnaque peut consister à vous demander de confirmer une transaction qui envoie des fonds sur le compte de l'escroc.
 
 [En savoir plus sur les arnaques par Airdrop](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
@@ -277,4 +278,5 @@ Les arnaques par Airdrop consistent en un projet factice qui envoie (airdrop) un
 ### Prévention des arnaques {#reading-scam-education}
 
 - [Staying Safe: Common Scams](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
-- [Avoiding Scams](https://bitcoin.org/en/scams) _Bitcoin.org_
+- [Avoiding Scams](https://bitcoin.org/en/scams) - _Bitcoin.org_
+- [Fil Twitter sur les courriels et messages communs de phishing en cryptomonnaies](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_

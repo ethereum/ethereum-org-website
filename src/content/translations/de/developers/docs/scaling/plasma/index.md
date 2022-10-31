@@ -2,7 +2,6 @@
 title: Plasma-Kette
 description: Eine Einführung in Plasma-Ketten als Skalierungslösung, die derzeit von der Ethereum-Community genutzt wird.
 lang: de
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---
@@ -15,7 +14,7 @@ Sie sollten ein gutes Verständnis aller grundlegenden Themen und ein umfassende
 
 ## Vor- und Nachteile {#pros-and-cons}
 
-| Vorteile                                                                                                                                | Nachteile                                                                                                                                                                                                                                                               |
+| Vorteile                                                                                                                                | Kontra                                                                                                                                                                                                                                                                  |
 | --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Hoher Durchsatz, niedrige Kosten pro Transaktion.                                                                                       | Unterstützt keine allgemeine Berechnung. Nur grundlegende Token-Transfers, Swaps und ein paar andere Transaktionstypen werden über Prädikatslogik unterstützt.                                                                                                          |
 | Gut für Transaktionen zwischen beliebigen Benutzern (kein Overhead pro Benutzer-Paar, wenn beide auf der Plasma-Kette festgelegt sind). | Benötigt ein regelmäßiges Beobachten des Netzwerks (Lebendigkeitserfordernis) oder das Delegieren dieser Verantwortung an andere, um die Sicherheit der eingesetzten Gelder zu gewährleisten.                                                                           |

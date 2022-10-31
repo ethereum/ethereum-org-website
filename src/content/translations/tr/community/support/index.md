@@ -1,7 +1,6 @@
 ---
 title: Ethereum destek
 description: Ethereum ekosisteminde destek alın.
-sidebar: true
 lang: tr
 ---
 
@@ -107,4 +106,4 @@ Ağ talebi nedeniyle gerekenden daha düşük bir işlem ücreti gönderdiyseniz
 
 #### Ethereum madenciliği nasıl yapılır? {#mining-ethereum}
 
-Halihazırda Ethereum madenciliği yapmıyorsanız madencilik ekipmanı satın almanızı önermiyoruz. 2022'nin 3./4. Çeyreğinde [Birleştirme](/upgrades/merge/) gerçekleşerek Ethereum'u iş ispatından hisse ispatına çevirecek. Bu değişiklik, Ethereum madenciliğinin artık mümkün olmayacağı anlamına geliyor. Hâlâ Ethereum madenciliği yapmakla ilgileniyorsanız, [/r/EtherMining](https://www.reddit.com/r/EtherMining/) gibi madencilik topluluklarından yardım isteyebilirsiniz.
+Halihazırda Ethereum madenciliği yapmıyorsanız madencilik ekipmanı satın almanızı önermiyoruz. 2022'nin 3./4. Çeyreğinde [Birleştirme](/upgrades/merge/) gerçekleşerek Ethereum'u iş ispatından hisse ispatına çevirecek. Bu değişiklik, Ethereum madenciliğinin artık mümkün olmayacağı anlamına geliyor.

@@ -3,7 +3,6 @@ title: A integração
 description: Saiba mais sobre a integração que ocorrerá quando a rede principal do Ethereum se unir ao sistema de prova de participação (proof-of-stake) coordenado pela Beacon Chain.
 lang: pt-br
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: Eventualmente, a principal rede atual do Ethereum se "integrará" ao sistema de prova de participação.
 summaryPoint2: Isso marcará o fim da prova de trabalho para Ethereum e a transição completa para a prova de participação.
@@ -59,7 +58,7 @@ No início, o plano era trabalhar em cadeias de fragmentos antes da fusão – p
 
 Essa será uma avaliação contínua da comunidade quanto à necessidade de rodadas potencialmente múltiplas de cadeias de fragmentos para permitir dimensionamento sem limites.
 
-<ButtonLink to="/upgrades/shard-chains/">
+<ButtonLink to="/upgrades/sharding/">
   Cadeias de fragmentos
 </ButtonLink>
 

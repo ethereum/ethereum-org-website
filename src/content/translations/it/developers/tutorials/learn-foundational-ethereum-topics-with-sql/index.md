@@ -11,9 +11,8 @@ tags:
   - "Blocchi"
   - "Transazioni"
   - "Carburante"
-skill: principiante
+skill: beginner
 lang: it
-sidebar: true
 published: 2021-05-11
 source: paulapivat.com
 sourceUrl: https://paulapivat.com/post/query_ethereum/

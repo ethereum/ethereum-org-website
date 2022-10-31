@@ -2,7 +2,6 @@
 title: Yan zincirler
 description: Şu anda Ethereum topluluğu tarafından kullanılan bir ölçeklendirme çözümü olarak yan zincirlere giriş.
 lang: tr
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---
@@ -11,7 +10,7 @@ Yan zincir, Ethereum Mainnet'e paralel olarak çalışan ve bağımsız olarak �
 
 Yan zincirlere dair özellikle heyecan verici olan şey, [EVM](/developers/docs/evm/)'yi temel aldığı için zincirin ana Ethereum zinciriyle aynı şekilde çalışmasıdır. Ethereum kullanmaz, bizzat Ethereum'dur. Bu, [dapp](/developers/docs/dapps/)'inizi bir yan zincirde kullanmak istiyorsanız, yalnızca kodunuzu bu yan zincire dağıtmanız gerektiği anlamına gelir. Tıpkı Mainnet gibi görünür, hissettirir ve hareket eder: Solidity'de sözleşmeler yazarsınız ve Web3 API aracılığıyla zincirle etkileşime girersiniz.
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
 Temeli oluşturan tüm konuları iyi anlamalı ve [Ethereum ölçeklendirilmesi](/developers/docs/scaling/) konusunda ileri düzeyde bilgiye sahip olmalısınız.
 

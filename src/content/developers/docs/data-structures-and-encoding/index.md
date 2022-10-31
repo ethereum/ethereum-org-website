@@ -2,7 +2,6 @@
 title: Data structures and encoding
 description: An overview of the fundamental Ethereum data structures.
 lang: en
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -24,10 +23,10 @@ Patricia Merkle Tries are structures that encode key-value pairs into a determin
 
 Recursive Length Prefix (RLP) is a serialization method used extensively across Ethereum's execution layer.
 
-[More on RLP](/developers/docs/data-structures-and-encoding/rlp).
+[More on RLP](/developers/docs/data-structures-and-encoding/rlp)
 
 ### Simple Serialize {#simple-serialize}
 
 Simple Serialize (SSZ) is the dominant serialization format on Ethereum's consensus layer because of its compatibility with merklelization.
 
-[More on SSZ](/developers/docs/data-structures-and-encoding/ssz).
+[More on SSZ](/developers/docs/data-structures-and-encoding/ssz)
