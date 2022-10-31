@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { ReactComponentElement, useState } from "react"
 import { Box, Container, Flex, Heading, Text } from "@chakra-ui/react"
 import { useIntl } from "react-intl"
 import Link, { navigate } from "./Link"
@@ -45,6 +45,89 @@ interface IPropsGridItem {
   pros?: Array<string>
   cons?: Array<string>
   links: Array<ILink>
+}
+
+const OpenTitle: React.FC<{ title: string }> = ({ title }) => {
+  return (
+    <Heading
+      as="h3"
+      fontSize={{ base: "2rem", sm: "2.5rem" }}
+      fontWeight={700}
+      marginTop={0}
+    >
+      {title}
+    </Heading>
+  )
+}
+
+const Title: React.FC<{ title: string }> = ({ title }) => {
+  return (
+    <Heading
+      as="h3"
+      fontSize={{ base: "2rem", sm: "2.5rem" }}
+      fontWeight={400}
+      marginTop={0}
+    >
+      {title}
+    </Heading>
+  )
+}
+
+const Subtitle: React.FC<{ children: any }> = ({ children }) => {
+  return (
+    <Heading
+      as="h4"
+      fontSize={{ base: "2xl", sm: "2rem" }}
+      fontWeight={600}
+      marginTop={0}
+      padding={2}
+      paddingBottom={4}
+      borderBottom="1px solid"
+      borderColor="black300"
+    >
+      {children}
+    </Heading>
+  )
+}
+
+const Body: React.FC<{ children: any }> = ({ children }) => {
+  return (
+    <Box fontSize="xl" lineHeight="140%" color="black300">
+      {children}
+    </Box>
+  )
+}
+
+const StyledEmoji: React.FC<{ emoji: string }> = ({ emoji }) => {
+  return (
+    <Emoji
+      fontSize="8xl"
+      text={emoji}
+      margin={2}
+      alignSelf="center"
+      order="2"
+      _hover={{
+        transition: "transform 50s",
+        transform: "rotate(10turn)",
+      }}
+    />
+  )
+}
+
+const Row: React.FC<{ children: any }> = ({ children }) => {
+  return (
+    <Flex
+      justify="space-between"
+      marginTop={8}
+      direction={{ base: "column", md: "row" }}
+    >
+      {children}
+    </Flex>
+  )
+}
+
+const Column: React.FC<{ children: any }> = ({ children }) => {
+  return <Box width="100%">{children}</Box>
 }
 
 const GridItem: React.FC<IPropsGridItem> = ({
@@ -95,108 +178,51 @@ const GridItem: React.FC<IPropsGridItem> = ({
         <Emoji mb={8} text={emoji} fontSize="8xl" w="100%" display="block" />
       ) : (
         <>
-          <Emoji
-            fontSize="8xl"
-            text={emoji}
-            margin={2}
-            alignSelf="center"
-            order="2"
-            _hover={{
-              transition: "transform 50s",
-              transform: "rotate(10turn)",
-            }}
-          />
-          <Heading
-            as="h3"
-            fontSize={{ base: "2rem", sm: "2.5rem" }}
-            fontWeight={400}
-            marginTop={0}
-          >
-            {title}
-          </Heading>
+          <StyledEmoji emoji={emoji} />
+          <Title title={title} />
         </>
       )}
       <div>
         {isOpen && (
           <div>
-            <Heading
-              as="h3"
-              fontSize={{ base: "2rem", sm: "2.5rem" }}
-              fontWeight={700}
-              marginTop={0}
-            >
-              {title}
-            </Heading>
-            <Box fontSize="xl" lineHeight="140%" color="black300">
-              {description}
-            </Box>
-            <Flex
-              justify="space-between"
-              marginTop={8}
-              direction={{ base: "column", md: "row" }}
-            >
+            <OpenTitle title={title} />
+            <Body>{description}</Body>
+            <Row>
               {pros && (
-                <Box w="100%">
-                  <Heading
-                    as="h4"
-                    fontSize={{ base: "2xl", sm: "2rem" }}
-                    fontWeight={600}
-                    marginTop={0}
-                    padding={2}
-                    paddingBottom={4}
-                    borderBottom="1px solid"
-                    borderColor="black300"
-                  >
+                <Column>
+                  <Subtitle>
                     <Translation id="pros" />
-                  </Heading>
+                  </Subtitle>
 
-                  <Box fontSize="xl" lineHeight="140%" color="black300">
+                  <Body>
                     <ul>
                       {pros.map((pro, idx) => (
                         <li key={idx}>{pro}</li>
                       ))}
                     </ul>
-                  </Box>
-                </Box>
+                  </Body>
+                </Column>
               )}
               {cons && (
-                <Box w="100%">
-                  <Heading
-                    as="h4"
-                    fontSize={{ base: "1.5rem", sm: "2rem" }}
-                    fontWeight={600}
-                    marginTop="0rem"
-                    padding="0.5rem"
-                    paddingBottom="1rem"
-                    borderBottom="1px solid"
-                    borderColor="black300"
-                  >
+                <Column>
+                  <Subtitle>
                     <Translation id="cons" />
-                  </Heading>
-                  <Box fontSize="xl" lineHeight="140%" color="black300">
+                  </Subtitle>
+                  <Body>
                     <ul>
                       {cons.map((con, idx) => (
                         <li key={idx}>{con}</li>
                       ))}
                     </ul>
-                  </Box>
-                </Box>
+                  </Body>
+                </Column>
               )}
-            </Flex>
+            </Row>
             <div>
-              <Heading
-                as="h4"
-                fontSize={{ base: "1.5rem", sm: "2rem" }}
-                fontWeight={600}
-                marginTop="0"
-                padding={2}
-                paddingBottom={4}
-                borderBottom="1px solid"
-                borderColor="black300"
-              >
+              <Subtitle>
                 <Translation id="example-projects" />
-              </Heading>
-              <Box fontSize="xl" lineHeight="140%" color="black300">
+              </Subtitle>
+              <Body>
                 <ul>
                   {links.map((link, idx) => (
                     <li key={idx}>
@@ -213,7 +239,7 @@ const GridItem: React.FC<IPropsGridItem> = ({
                     </li>
                   ))}
                 </ul>
-              </Box>
+              </Body>
             </div>
           </div>
         )}
