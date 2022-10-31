@@ -1491,6 +1491,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center"><a href="https://cyberacademy.dev"><img src="https://avatars.githubusercontent.com/u/61043916?v=4?s=100" width="100px;" alt="Dmitry Alexeev"/><br /><sub><b>Dmitry Alexeev</b></sub></a><br /><a href="#content-alexeevcc" title="Content">🖋</a></td>
+      <td align="center"><a href="https://github.com/af-afk"><img src="https://avatars.githubusercontent.com/u/71931113?v=4?s=100" width="100px;" alt="Alex"/><br /><sub><b>Alex</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=af-afk" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
