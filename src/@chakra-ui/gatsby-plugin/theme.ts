@@ -11,7 +11,7 @@ import styles from "./styles"
 import foundations from "./foundations"
 
 // Component style overrides
-import * as components from "./components"
+import components from "./components"
 
 import semanticTokens from "./semanticTokens"
 

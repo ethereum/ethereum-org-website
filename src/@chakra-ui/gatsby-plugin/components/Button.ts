@@ -1,5 +1,16 @@
 import type { ComponentStyleConfig } from "@chakra-ui/theme"
 
+const disabledStylesSolid = {
+  bg: "disabled",
+  opacity: 1,
+}
+
+const disabledStylesOutline = {
+  color: "disabled",
+  borderColor: "disabled",
+  opacity: 1,
+}
+
 const commonOutline = {
   border: "1px",
   color: "text",
@@ -9,6 +20,9 @@ const commonOutline = {
     color: "primary",
     bg: "background",
     borderColor: "primary",
+    _disabled: {
+      ...disabledStylesOutline,
+    },
   },
   _active: {
     color: "primary",
@@ -18,11 +32,12 @@ const commonOutline = {
   _focus: {
     color: "primary",
     borderColor: "background",
+    _disabled: {
+      ...disabledStylesOutline,
+    },
   },
   _disabled: {
-    color: "disabled",
-    borderColor: "disabled",
-    opacity: 1,
+    ...disabledStylesOutline,
   },
 }
 
@@ -33,6 +48,9 @@ export const Button: ComponentStyleConfig = {
     _hover: {
       textDecoration: "none",
       boxShadow: "primary",
+      _disabled: {
+        boxShadow: "none",
+      },
     },
     _focus: {
       boxShadow: "outline",
@@ -53,13 +71,15 @@ export const Button: ComponentStyleConfig = {
       _hover: {
         bg: "primary",
         opacity: 0.8,
+        _disabled: {
+          ...disabledStylesSolid,
+        },
       },
       _active: {
         bg: "primaryHover",
       },
       _disabled: {
-        bg: "disabled",
-        opacity: 1,
+        ...disabledStylesSolid,
       },
     },
     outline: {

@@ -1,25 +1,25 @@
+// Library imports
 import React, { useEffect, useState } from "react"
 import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 import { shuffle } from "lodash"
-import { translateMessageId, TranslationKey } from "../../utils/translations"
-import { getImage } from "../../utils/image"
+// Component imports
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import ButtonLink from "../../components/ButtonLink"
-import ProductCard from "../../components/ProductCard"
 import InfoBanner from "../../components/InfoBanner"
 import CalloutBanner from "../../components/CalloutBanner"
-import {
-  Content,
-  CardGrid,
-  Page,
-} from "../../components/SharedStyledComponents"
+import { Content, Page } from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
-import { Context } from "../../types"
-import { IGatsbyImageData } from "gatsby-plugin-image"
+import LearningToolsCardGrid from "../../components/LearningToolsCardGrid"
+// Util imports
+import { translateMessageId } from "../../utils/translations"
+import { getImage } from "../../utils/image"
+// Type imports
+import { Context, LearningTool } from "../../types"
 
+// Styled components
 const StyledPage = styled(Page)`
   margin-top: 4rem;
 `
@@ -75,35 +75,22 @@ const StackContainer = styled(Content)`
   }
 `
 
-const StyledCardGrid = styled(CardGrid)`
-  margin-bottom: 2rem;
-`
-
-interface ILearningTool {
-  name: string
-  description: TranslationKey
-  url: string
-  image?: IGatsbyImageData
-  alt: TranslationKey
-  background: string
-  subjects: Array<string>
-}
-
+// Page component
 const LearningToolsPage = ({
   data,
 }: PageProps<Queries.DevelopersLearningToolsPageQuery, Context>) => {
   const intl = useIntl()
   const [randomizedSandboxes, setRandomizedSandboxes] = useState<
-    Array<ILearningTool>
+    Array<LearningTool>
   >([])
 
   useEffect(() => {
-    const sandboxes: Array<ILearningTool> = [
+    const sandboxes: Array<LearningTool> = [
       {
         name: "Remix",
         description: "page-learning-tools-remix-description",
         url: "https://remix.ethereum.org",
-        image: getImage(data.remix),
+        image: getImage(data.remix)!,
         alt: "page-learning-tools-remix-logo-alt",
         background: "#5098d6",
         subjects: ["Solidity", "Vyper"],
@@ -112,7 +99,7 @@ const LearningToolsPage = ({
         name: "Eth.build",
         description: "page-learning-tools-eth-dot-build-description",
         url: "https://eth.build/",
-        image: getImage(data.ethdotbuild),
+        image: getImage(data.ethdotbuild)!,
         alt: "page-learning-tools-eth-dot-build-logo-alt",
         background: "#000000",
         subjects: ["web3"],
@@ -121,7 +108,7 @@ const LearningToolsPage = ({
         name: "Replit",
         description: "page-learning-tools-replit-description",
         url: "https://replit.com/@replit/Solidity-starter-beta",
-        image: getImage(data.replit),
+        image: getImage(data.replit)!,
         alt: "page-learning-tools-replit-logo-alt",
         background: "#0f1524",
         subjects: ["Solidity", "web3"],
@@ -131,12 +118,12 @@ const LearningToolsPage = ({
     setRandomizedSandboxes(randomizedSandboxes)
   }, [data])
 
-  const games: Array<ILearningTool> = [
+  const games: Array<LearningTool> = [
     {
       name: "CryptoZombies",
       description: "page-learning-tools-cryptozombies-description",
       url: "https://cryptozombies.io/",
-      image: getImage(data.cryptoZombie),
+      image: getImage(data.cryptoZombie)!,
       alt: "page-learning-tools-cryptozombies-logo-alt",
       background: "#2b2f48",
       subjects: ["Solidity"],
@@ -145,7 +132,7 @@ const LearningToolsPage = ({
       name: "Ethernauts",
       description: "page-learning-tools-ethernauts-description",
       url: "https://ethernaut.openzeppelin.com/",
-      image: getImage(data.oz),
+      image: getImage(data.oz)!,
       alt: "page-learning-tools-ethernauts-logo-alt",
       background: "#4f62dc",
       subjects: ["Solidity"],
@@ -154,19 +141,19 @@ const LearningToolsPage = ({
       name: "Capture The Ether",
       description: "page-learning-tools-capture-the-ether-description",
       url: "https://capturetheether.com/",
-      image: getImage(data.captureTheEther),
+      image: getImage(data.captureTheEther)!,
       alt: "page-learning-tools-capture-the-ether-logo-alt",
       background: "#1b9aaa",
       subjects: ["Solidity"],
     },
   ]
 
-  const bootcamps: Array<ILearningTool> = [
+  const bootcamps: Array<LearningTool> = [
     {
       name: "ChainShot",
       description: "page-learning-tools-chainshot-description",
       url: "https://www.chainshot.com",
-      image: getImage(data.chainshot),
+      image: getImage(data.chainshot)!,
       alt: "page-learning-tools-chainshot-logo-alt",
       background: "#111f29",
       subjects: ["Solidity", "Vyper", "web3"],
@@ -175,7 +162,7 @@ const LearningToolsPage = ({
       name: "ConsenSys Academy",
       description: "page-learning-tools-consensys-academy-description",
       url: "https://consensys.net/academy/bootcamp/",
-      image: getImage(data.consensys),
+      image: getImage(data.consensys)!,
       alt: "page-learning-tools-consensys-academy-logo-alt",
       background: "#f6f7f9",
       subjects: ["Solidity", "web3"],
@@ -184,7 +171,7 @@ const LearningToolsPage = ({
       name: "BloomTech",
       description: "page-learning-tools-bloomtech-description",
       url: "https://www.bloomtech.com/courses/web3",
-      image: getImage(data.bloomtech),
+      image: getImage(data.bloomtech)!,
       alt: "page-learning-tools-bloomtech-logo-alt",
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
@@ -193,7 +180,7 @@ const LearningToolsPage = ({
       name: "_buildspace",
       description: "page-learning-tools-buildspace-description",
       url: "https://buildspace.so",
-      image: getImage(data.buildspace),
+      image: getImage(data.buildspace)!,
       alt: "page-learning-tools-buildspace-logo-alt",
       background: "#f6f7f9",
       subjects: ["Solidity", "web3"],
@@ -202,7 +189,7 @@ const LearningToolsPage = ({
       name: "Questbook",
       description: "page-learning-tools-questbook-description",
       url: "https://learn.questbook.xyz/",
-      image: getImage(data.questbook),
+      image: getImage(data.questbook)!,
       alt: "page-learning-tools-questbook-logo-alt",
       background: "#141236",
       subjects: ["Solidity", "web3"],
@@ -211,7 +198,7 @@ const LearningToolsPage = ({
       name: "NFT School",
       description: "page-learning-tools-nftschool-description",
       url: "https://nftschool.dev/",
-      image: getImage(data.nftschool),
+      image: getImage(data.nftschool)!,
       alt: "page-learning-tools-nftschool-logo-alt",
       background: "#111f29",
       subjects: ["Solidity", "web3"],
@@ -220,7 +207,7 @@ const LearningToolsPage = ({
       name: "Pointer",
       description: "page-learning-tools-pointer-description",
       url: "https://pointer.gg/",
-      image: getImage(data.pointer),
+      image: getImage(data.pointer)!,
       alt: "page-learning-tools-pointer-logo-alt",
       background: "#171717",
       subjects: ["Solidity", "web3"],
@@ -233,12 +220,13 @@ const LearningToolsPage = ({
       alt: "page-learning-tools-platzi-logo-alt",
       background: "#121f3d",
       subjects: ["Solidity", "web3"],
+      locales: ["es"],
     },
     {
       name: "Speed Run Ethereum",
       description: "page-learning-tools-speed-run-ethereum-description",
       url: "https://speedrunethereum.com/",
-      image: getImage(data.speedRunEthereum),
+      image: getImage(data.speedRunEthereum)!,
       alt: "page-learning-tools-speed-run-ethereum-logo-alt",
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
@@ -266,21 +254,7 @@ const LearningToolsPage = ({
         <p>
           <Translation id="page-learning-tools-sandbox-desc" />
         </p>
-        <StyledCardGrid>
-          {randomizedSandboxes.map((sandbox, idx) => (
-            <ProductCard
-              key={idx}
-              background={sandbox.background}
-              url={sandbox.url}
-              alt={translateMessageId(sandbox.alt, intl)}
-              image={sandbox.image!}
-              name={sandbox.name}
-              subjects={sandbox.subjects}
-            >
-              <Translation id={sandbox.description} />
-            </ProductCard>
-          ))}
-        </StyledCardGrid>
+        <LearningToolsCardGrid category={randomizedSandboxes} />
         <InfoBanner emoji=":point_up:" shouldCenter={true}>
           <Translation id="page-learning-tools-remix-description-2" />
         </InfoBanner>
@@ -292,21 +266,7 @@ const LearningToolsPage = ({
         <p>
           <Translation id="page-learning-tools-game-tutorials-desc" />
         </p>
-        <StyledCardGrid>
-          {games.map((game, idx) => (
-            <ProductCard
-              key={idx}
-              background={game.background}
-              url={game.url}
-              alt={translateMessageId(game.alt, intl)}
-              image={game.image!}
-              name={game.name}
-              subjects={game.subjects}
-            >
-              <Translation id={game.description} />
-            </ProductCard>
-          ))}
-        </StyledCardGrid>
+        <LearningToolsCardGrid category={games} />
       </StackContainer>
       <StackContainer>
         <SubtitleTwo>
@@ -315,21 +275,7 @@ const LearningToolsPage = ({
         <p>
           <Translation id="page-learning-tools-bootcamps-desc" />
         </p>
-        <StyledCardGrid>
-          {bootcamps.map((bootcamp, idx) => (
-            <ProductCard
-              key={idx}
-              url={bootcamp.url}
-              background={bootcamp.background}
-              alt={translateMessageId(bootcamp.alt, intl)}
-              image={bootcamp.image!}
-              name={bootcamp.name}
-              subjects={bootcamp.subjects}
-            >
-              <Translation id={bootcamp.description} />
-            </ProductCard>
-          ))}
-        </StyledCardGrid>
+        <LearningToolsCardGrid category={bootcamps} />
       </StackContainer>
       <Content>
         <CalloutBanner

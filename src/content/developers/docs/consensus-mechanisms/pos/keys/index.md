@@ -2,7 +2,6 @@
 title: Keys in proof-of-stake Ethereum
 description: An explanation of keys used in Ethereum's proof-of-stake consensus mechanism
 lang: en
-sidebar: true
 ---
 
 Ethereum secures user's assets using public-private key cryptography. The public key is used as the basis for an Ethereum address—that is, it is visible to the general public and used as a unique identifier. The private (or 'secret') key should only ever be accessible to an account owner. The private key is used to 'sign' transactions and data so that cryptography can prove that the holder approves some action of a specific private key.
