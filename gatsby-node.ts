@@ -389,43 +389,35 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
 }) => {
   const { createPage, deletePage, createRedirect } = actions
 
-  // if (isDefaultLang) {
-  //   const path = page.path.slice(3)
-
-  //   if (IS_DEV) {
-  //     // create routes without the lang prefix e.g. `/{path}` as our i18n plugin
-  //     // only creates `/{lang}/{path}` routes. This is useful on dev env to avoid
-  //     // getting a 404 since we don't have server side redirects
-  //     createPage({ ...page, path })
-  //   }
-
-  //   if (!IS_DEV && !path.match(/^\/404(\/|.html)$/)) {
-  //     // on prod, indicate our servers to redirect the root paths to the
-  //     // `/{defaultLang}/{path}`
-  //     createRedirect({
-  //       ...commonRedirectProps,
-  //       fromPath: path,
-  //       toPath: page.path,
-  //     })
-  //   }
-  // }
-
   if (!page.context) {
     return
   }
 
-  const isMdxPage = page.context.isOutdated !== undefined
+  // these are the native Gatsby pages (those living under `/pages`)
+  // which do not pass through the `createPages` hook thus they don't have our
+  // custom context in them
+  const isPageWithoutCustomContext = page.context.isOutdated === undefined
 
-  if (!isMdxPage) {
+  if (isPageWithoutCustomContext) {
     const isDefaultLang = page.context.language === defaultLanguage
     const path = isDefaultLang ? `/${defaultLanguage}${page.path}` : page.path
 
+    // as we don't have our custom context for this page, we calculate & add it
+    // later to them
     const { isOutdated, isContentEnglish } = await checkIsPageOutdated(
       page.context.i18n.originalPath,
       page.context.language
     )
 
-    deletePage(page)
+    // on dev, we will have 2 pages for the default lang
+    // - 1 for the ones with the prefix `/{defaultLang}/learn/`
+    // - 1 for the ones without the prefix `/learn/`
+    //   we do this to avoid having a 404 on those without the prefix since in
+    //   dev we don't have the redirects from the server
+    if (!IS_DEV) {
+      deletePage(page)
+    }
+
     createPage<Context>({
       ...page,
       path,
@@ -437,7 +429,7 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
       },
     })
 
-    if (isDefaultLang) {
+    if (isDefaultLang && !path.match(/^\/404(\/|.html)$/)) {
       createRedirect({
         ...commonRedirectProps,
         fromPath: page.path,
