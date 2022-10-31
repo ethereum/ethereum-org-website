@@ -38,16 +38,15 @@ export interface DocsArrayProps {
 }
 
 const CardLink = (props: {
-  docData: DocsArrayProps & {
-    isPrev?: boolean
-    isNext?: boolean
-  }
+  docData: DocsArrayProps
+  isPrev?: boolean
+  isNext?: boolean
 }) => {
-  const { docData } = props
+  const { docData, isPrev, isNext } = props
 
   const xPadding = {
-    ...(docData.isPrev && { ps: "0" }),
-    ...(docData.isNext && { pe: "0" }),
+    ...(isPrev && { ps: "0" }),
+    ...(isNext && { pe: "0" }),
   }
   return (
     <LinkBox
@@ -60,23 +59,23 @@ const CardLink = (props: {
       border="1px"
       borderColor="border"
       borderRadius={1}
-      justify={docData.isPrev ? "flex-start" : "flex-end"}
+      justify={isPrev ? "flex-start" : "flex-end"}
     >
-      <Box textDecoration="none" p={4} h="100%" order={docData.isPrev ? 0 : 1}>
+      <Box textDecoration="none" p={4} h="100%" order={isPrev ? 0 : 1}>
         <Emoji
-          text={docData.isPrev ? ":point_left:" : ":point_right:"}
+          text={isPrev ? ":point_left:" : ":point_right:"}
           fontSize="5xl"
         />
       </Box>
-      <TextDiv {...xPadding} {...(docData.isNext && { textAlign: "right" })}>
+      <TextDiv {...xPadding} {...(isNext && { textAlign: "right" })}>
         <Text textTransform="uppercase" m="0">
-          <Translation id={docData.isPrev ? "previous" : "next"} />
+          <Translation id={isPrev ? "previous" : "next"} />
         </Text>
         <LinkOverlay
           as={Link}
           href={docData.to}
-          textAlign={docData.isPrev ? "start" : "end"}
-          rel={docData.isPrev ? "prev" : "next"}
+          textAlign={isPrev ? "start" : "end"}
+          rel={isPrev ? "prev" : "next"}
         >
           <Translation id={docData.id} />
         </LinkOverlay>
@@ -120,14 +119,9 @@ const DocsNav: React.FC<IProps> = ({ relativePath }) => {
   }
 
   // Extract previous and next doc based on current index +/- 1
-  const previousDoc =
-    currentIndex - 1 > 0
-      ? { isPrev: true, ...docsArray[currentIndex - 1] }
-      : null
+  const previousDoc = currentIndex - 1 > 0 ? docsArray[currentIndex - 1] : null
   const nextDoc =
-    currentIndex + 1 < docsArray.length
-      ? { isNext: true, ...docsArray[currentIndex + 1] }
-      : null
+    currentIndex + 1 < docsArray.length ? docsArray[currentIndex + 1] : null
 
   return (
     <Flex
@@ -137,8 +131,8 @@ const DocsNav: React.FC<IProps> = ({ relativePath }) => {
       justify="space-between"
       alignItems={{ base: "center", md: "flex-start" }}
     >
-      {previousDoc ? <CardLink docData={previousDoc} /> : <Spacer />}
-      {nextDoc ? <CardLink docData={nextDoc} /> : <Spacer />}
+      {previousDoc ? <CardLink docData={previousDoc} isPrev /> : <Spacer />}
+      {nextDoc ? <CardLink docData={nextDoc} isNext /> : <Spacer />}
     </Flex>
   )
 }
