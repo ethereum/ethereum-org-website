@@ -662,7 +662,7 @@ This is a sanity check to make sure we don't lose from the swap. There is no cir
 
 Update `reserve0` and `reserve1`, and if necessary the price accumulators and the timestamp and emit an event.
 
-##### Sync or Skim {#sync-or-skim}
+##### Sync or Skim
 
 It is possible for the real balances to get out of sync with the reserves that the pair exchange thinks it has.
 There is no way to withdraw tokens without the contract's consent, but deposits are a different matter. An account can transfer tokens to the exchange without calling either `mint` or `swap`.

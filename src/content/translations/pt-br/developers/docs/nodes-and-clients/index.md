@@ -173,7 +173,7 @@ Os modos de sincronização representam diferentes abordagens para este processo
 
 Visão geral das abordagens de sincronização usadas nos clientes preparados para o Mainnet:
 
-##### Sincronização completa {#full-sync}
+##### Sincronização completa
 
 A sincronização completa baixa todos os blocos (incluindo cabeçalhos, transações e recibos) e gera o estado da blockchain de maneira incremental ao executar todos os blocos a partir da gênesis.
 

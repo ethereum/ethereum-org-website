@@ -173,7 +173,7 @@ Die Synchronisationsmodi stellen verschiedene Ansätze für diesen Prozess mit u
 
 Allgemeiner Überblick über die Synchronisierungsansätze, die in Mainnet-Ready-Clients verwendet werden:
 
-##### Full sync {#full-sync}
+##### Full sync
 
 Bei full sync werden alle Blöcke (einschließlich Headern, Transaktionen und Quittungen) heruntergeladen und der Zustand der Blockchain inkrementell generiert, indem jeder Block ab Genesis ausgeführt wird.
 
