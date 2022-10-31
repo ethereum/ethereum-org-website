@@ -9408,6 +9408,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "vaishnav-mk",
+      "name": "wishee",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84540554?v=4",
+      "profile": "https://vaishnav.tech",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

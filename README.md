@@ -1483,6 +1483,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center"><a href="https://github.com/crypto8893"><img src="https://avatars.githubusercontent.com/u/115051650?v=4?s=100" width="100px;" alt="crypto8893"/><br /><sub><b>crypto8893</b></sub></a><br /><a href="#content-crypto8893" title="Content">🖋</a></td>
       <td align="center"><a href="http://victorpatru.xyz"><img src="https://avatars.githubusercontent.com/u/102596893?v=4?s=100" width="100px;" alt="Victor Patru"/><br /><sub><b>Victor Patru</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=victorpatru" title="Code">💻</a></td>
+      <td align="center"><a href="https://vaishnav.tech"><img src="https://avatars.githubusercontent.com/u/84540554?v=4?s=100" width="100px;" alt="wishee"/><br /><sub><b>wishee</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=vaishnav-mk" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
