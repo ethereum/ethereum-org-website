@@ -389,8 +389,6 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
 }) => {
   const { createPage, deletePage, createRedirect } = actions
 
-  const isDefaultLang = page.path.startsWith(`/${defaultLanguage}`)
-
   // if (isDefaultLang) {
   //   const path = page.path.slice(3)
 
@@ -427,14 +425,6 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
       page.context.language
     )
 
-    if (isDefaultLang) {
-      createRedirect({
-        ...commonRedirectProps,
-        fromPath: path,
-        toPath: page.path,
-      })
-    }
-
     deletePage(page)
     createPage<Context>({
       ...page,
@@ -446,6 +436,14 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
         isContentEnglish,
       },
     })
+
+    if (isDefaultLang) {
+      createRedirect({
+        ...commonRedirectProps,
+        fromPath: page.path,
+        toPath: path,
+      })
+    }
   }
 }
 
