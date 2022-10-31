@@ -1487,6 +1487,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/Harshil-Gupta"><img src="https://avatars.githubusercontent.com/u/53968071?v=4?s=100" width="100px;" alt="Harshil Gupta"/><br /><sub><b>Harshil Gupta</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Harshil-Gupta" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/vanshika-srivastava"><img src="https://avatars.githubusercontent.com/u/76511019?v=4?s=100" width="100px;" alt="Vanshika Srivastava"/><br /><sub><b>Vanshika Srivastava</b></sub></a><br /><a href="#ideas-vanshika-srivastava" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center"><a href="https://github.com/shariqanwar20"><img src="https://avatars.githubusercontent.com/u/61353122?v=4?s=100" width="100px;" alt="Shariq Anwar"/><br /><sub><b>Shariq Anwar</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=shariqanwar20" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/giorgionocera"><img src="https://avatars.githubusercontent.com/u/13519292?v=4?s=100" width="100px;" alt="Giorgio Nocera"/><br /><sub><b>Giorgio Nocera</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=giorgionocera" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
