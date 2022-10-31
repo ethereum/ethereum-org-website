@@ -34,6 +34,7 @@ These projects have created their own grants for projects aimed at developing an
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/) finance ecosystem_
 - [mStable Grants Program](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) community_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) ecosystem_
+- [UMA Grants Program](https://grants.umaproject.org/) - _[UMA](https://umaproject.org/) developer support_
 - [Uniswap Grants Program](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/) community_
 - [Web3 Grants](https://web3grants.net) - _An extensive list of web3/crypto related grant programs_
 
