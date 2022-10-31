@@ -35,7 +35,6 @@ import {
   Header4,
   ListItem,
 } from "../components/SharedStyledComponents"
-import PostMergeBanner from "../components/Banners/PostMergeBanner"
 
 import { ZenModeContext } from "../contexts/ZenModeContext"
 import { isLangRightToLeft } from "../utils/translations"
@@ -68,7 +67,8 @@ const DesktopTableOfContents = styled(TableOfContents)<{
 
 // Apply styles for classes within markdown here
 const Content = styled.article`
-  flex: 1 1 ${(props) => props.theme.breakpoints.m};
+  width: ${(props) => props.theme.breakpoints.s};
+  flex: 1 1;
   max-width: ${(props) => props.theme.breakpoints.m};
   padding: 3rem 4rem 4rem;
   margin: 0px auto;
