@@ -15,7 +15,13 @@ const BROKEN_LINK_REGEX = new RegExp(
   "\\[[^\\]]+\\]\\([^\\)\\s]+\\s[^\\)]+\\)",
   "g"
 )
-const HTML_TAGS = ["</code", "</p>"]
+
+// add <emoji
+// add /developers/docs/scaling/#layer-2-scaling
+// add ../../assets/ethereum-learn.png
+// ../../assets/eth-gif-cat.png
+
+const HTML_TAGS = ["</code", "</p>", "</ul>"]
 const SPELLING_MISTAKES = [
   "Ethreum",
   "Etherum",

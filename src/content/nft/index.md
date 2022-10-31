@@ -338,3 +338,5 @@ Most NFTs are built using a consistent standard known as [ERC-721](/developers/d
 - [No, CryptoArtists Aren’t Harming the Planet](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
 - [Ethereum's energy consumption](/energy-consumption/)
 - [A country's worth of power, no more](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, May 18 2021_
+
+<QuizWidget quizKey="nfts" />

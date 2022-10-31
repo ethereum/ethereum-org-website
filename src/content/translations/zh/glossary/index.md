@@ -55,7 +55,11 @@ sidebarDepth: 2
 
 ### 认证 {#attestation}
 
-验证者对[信标链](#beacon-chain)或[分片](#shard)[区块](#block)投票。 验证者必须为区块做证明，示意他们认同区块提议的状态。
+验证者为[区块](#block)投票。 验证者必须证明区块，表明他们同意区块提出的状态。
+
+<DocLink to="/developers/docs/consensus-mechanisms/pos/attestations/">
+  认证
+</DocLink>
 
 <Divider />
 
@@ -71,7 +75,7 @@ sidebarDepth: 2
 
 ### 信标链 {#beacon-chain}
 
-引入新共识层的网络升级，将成为整个以太坊网络的协调者。 信标链为以太坊引入[权益证明](#pos)和[验证者](#validator)， 最终将并入[主网](#mainnet)。
+信标链是为以太坊引入[权益证明](#pos)和[验证者](#validator)的区块链。 从 2020 年 11 月起，它和工作量证明模式下的以太坊主网并行运行，直到 2022 年 9 月两条链合并，形成现如今的以太坊。
 
 <DocLink to="/upgrades/beacon-chain/">
   信标链
@@ -83,7 +87,7 @@ sidebarDepth: 2
 
 ### 区块 {#block}
 
-一组关于所包含[交易](#transaction)的必要信息（区块头），以及一组称为[叔块](#ommer)的其他区块头。 区块由[矿工](#miner)添加到以太坊网络。
+区块是一个由[区块提议者](#block-proposer)创建并通过点对点网络发送至其它节点的信息单元。 区块包含了要执行的交易列表和供[验证者](#validator)检查区块内数据是否有效的共识相关信息。 这使得节点可以更新它们对于以太坊状态的态势感知。
 
 <DocLink to="/developers/docs/blocks/">
   区块
@@ -95,27 +99,40 @@ sidebarDepth: 2
 
 ### 区块头 {#block-header}
 
-区块中的数据。如果其内容不同，或者创建的环境不同，区块头也会不同。 区块头包含前一个区块头的哈希值、开采该区块所用软件的版本号、时间戳和该区块中内容的默克尔树根哈希值。
+区块头是一个包含区块本身以及区块内包含的交易摘要的元数据集合。
 
 ### 区块传播 {#block-propagation}
 
 将经确认的区块传递到网络中所有其他节点的过程。
 
+### 区块提议者 {#block-proposer}
+
+被选中在特定[时隙](#slot)内创建一个区块的特定验证者。
+
 ### 区块奖励 {#block-reward}
 
 奖励给新有效区块生产者的一定量以太币。
 
+### 区块状态 {#block-status}
+
+区块可以处于的状态。 可能的状态包括：
+
+- 被提议：区块被一个验证者提议
+- 被提上日程：验证者正在提交数据
+- 被错过/跳过：提议者没有在有效的时间范围内提议一个区块
+- 被抛弃：区块被分叉选择机制移出
+
 ### 区块时间 {#block-time}
 
-将区块加到区块链所用的平均时间。
+相邻两个区块被添加进区块链的时间间隔。
 
 ### 区块验证 {#block-validation}
 
-检查区块加密签名与整个区块链中存储的历史记录之间的一致性。
+检查一个新区块包含的交易是否合法以及区块是否处于最长合法链上的过程。
 
 ### 区块链 {#blockchain}
 
-以太坊中由[工作量证明](#pow)系统验证的[区块](#block)序列，每个区块与其父块相连，可一直追溯到[创世区块](#genesis-block)。 区块链没有区块大小限制，而是使用不同的[燃料限制](#gas-limit)。
+一个由许多[区块](#block)组成的序列，每个区块都链接至它的前一个区块，直至[创世区块](#genesis-block)。 区块链的完整性由基于权益证明共识机制通过经济的加密方式提供保证。
 
 <DocLink to="/developers/docs/intro-to-ethereum#what-is-a-blockchain">
   什么是区块链？
@@ -123,15 +140,15 @@ sidebarDepth: 2
 
 ### 引导节点 {#bootnode}
 
-在运行节点时可以用来启动发现过程的节点。 这些节点的端点记录在以太坊源代码中。
+可以在运行节点时用来启动发现过程的节点。 这些节点的端点记录在以太坊源代码中。
 
 ### 字节码 {#bytecode}
 
-为软件解释程序或虚拟机的高效执行而设计的抽象指令集。 与人类可读的源代码不同，字节码以数字格式表示。
+由软件解释程序或虚拟机为实现高效执行而设计的抽象指令集。 与人类可读源代码不同，字节码以数字格式表示。
 
 ### 拜占庭分叉 {#byzantium-fork}
 
-指[大都市](#hard-fork)开发阶段的头两次[硬分叉](#metropolis)。 拜占庭分叉包含了 EIP-649 大都会[难度炸弹](#difficulty-bomb)延迟和区块奖励减额，其中，[冰河世纪](#ice-age)被延迟 1 年，区块奖励从 5 个以太币减少为 3 个。
+[大都市](#hard-fork)开发阶段的头两次[硬分叉](#metropolis)。 拜占庭分叉包含了 EIP-649 大都市[难度炸弹](#difficulty-bomb)延迟和区块奖励减额，其中，[冰河世纪](#ice-age)被延迟了 1 年，区块奖励从 5 个以太币减少为 3 个。
 
 <Divider />
 
@@ -147,7 +164,7 @@ Casper-FFG 是一种权益证明共识协议，与 [LMD-GHOST](#lmd-ghost) 分�
 
 ### 编译 {#compiling}
 
-把用高级编程语言（例如，[Solidity](#solidity)）写的代码转换为低级语言（例如，以太坊虚拟机[字节码](#bytecode)）。
+将用高级编程语言（例如，[Solidity](#solidity)）编写的代码转换为低级语言（例如，以太坊虚拟机[字节码](#bytecode)）。
 
 <DocLink to="/developers/docs/smart-contracts/compiling/">
   编译智能合约
@@ -155,7 +172,7 @@ Casper-FFG 是一种权益证明共识协议，与 [LMD-GHOST](#lmd-ghost) 分�
 
 ### 委员会 {#committee}
 
-至少 128 个[验证者](#validator)组成的集合，由[信标链](#beacon-chain)随机分配到信标区块和分片区块。
+在每个时隙中被分配用于验证区块的一组[验证者](#validator)（至少 128 个）。 委员会中的验证者之一是聚合者，负责聚合委员会中所有其他同意某项认证的验证者的签名。
 
 ### 计算不可行性 {#computational-infeasibility}
 
@@ -163,7 +180,7 @@ Casper-FFG 是一种权益证明共识协议，与 [LMD-GHOST](#lmd-ghost) 分�
 
 ### 共识 {#consensus}
 
-当网络中的许多节点，通常是大部分节点，在其本地验证的最佳区块链中拥有相同的区块时，称为共识。 请勿与[共识机制](#consensus-rules)混淆。
+当网络中绝大多数节点经本地验证的最长区块链都具有相同的区块时，称为共识。 请勿与[共识机制](#consensus-rules)混淆。
 
 ### 共识客户端 {#consensus-client}
 
@@ -175,7 +192,7 @@ Casper-FFG 是一种权益证明共识协议，与 [LMD-GHOST](#lmd-ghost) 分�
 
 ### 共识机制 {#consensus-rules}
 
-全节点与其他节点保持共识的区块验证机制。 请勿与[共识](#consensus)混淆。
+全节点遵循的与其他节点保持共识的区块验证规则。 请勿与[共识](#consensus)混淆。
 
 ### 君士坦丁堡分叉 {#constantinople-fork}
 
@@ -189,16 +206,6 @@ Casper-FFG 是一种权益证明共识协议，与 [LMD-GHOST](#lmd-ghost) 分�
 
 一种特殊的[交易](#transaction)，用于注册[合约](#contract-account)并将其记录在以太坊区块链上，而交易的接收者为[零地址](#zero-address)。
 
-### 交叉链接 {#crosslink}
-
-交叉链接提供分片的状态汇总。 这是在实现分片的[权益证明系统](#proof-of-stake)里，[分片](#shard)链通过[信标链](#beacon-chain)互相通信的方式。
-
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
-  权益证明
-</DocLink>
-
-<Divider />
-
 ### 加密经济学 {#cryptoeconomics}
 
 加密货币经济学。
@@ -209,11 +216,11 @@ Casper-FFG 是一种权益证明共识协议，与 [LMD-GHOST](#lmd-ghost) 分�
 
 Đ（D 加一笔）在古英语、中世纪英语、冰岛语和法罗语中代表大写字母“Eth”。 Đ 用于 ĐEV 或 Đapp（去中心化应用程序）等词，其中 Đ 是古挪威语字母“eth”。 大写的 eth (Ð) 也用于表示加密货币 Dogecoin（狗狗币）。 这种用法在较早的以太坊文献中很常见，但如今很少使用。
 
-### DAG（有向无环图） {#DAG}
+### 有向无环图 {#DAG}
 
 DAG 代表有向无环图。 它是由节点和节点之间的链接组成的数据结构。 以太坊在其[工作量证明](#proof-of-work)算法 [Ethash](#ethash) 中使用了有向无环图。
 
-### Dapp（去中心化应用程序） {#dapp}
+### 去中心化应用程序 {#dapp}
 
 Dapp 是去中心化应用程序。 从狭义上来说，去中心化应用程序是一个[智能合约](#smart-contract)和一个网页用户界面。 从广义上来讲，它是建立在开放、去中心化、点对点基础设施服务之上的网页应用程序。 此外，许多去中心化应用程序包括去中心化存储和/或报文协议及平台。
 
@@ -249,9 +256,13 @@ Dapp 是去中心化应用程序。 从狭义上来说，去中心化应用程�
 
 请参见[非同质化代币 (NFT)](#nft)
 
-### 去中心化金融 (DeFi) {#defi}
+### 存款合约 {#deposit-contract}
 
-DeFi 是“decentralized finance”（去中心化金融）的缩写，是一种广义的[去中心化应用程序](#dapp)，旨在提供由区块链提供支持的金融服务，无需中介，任何人只需要联网就可以参与。
+在以太坊上的质押门户。 存款合约是以太坊上的智能合约，它接受以太币存款并管理验证者余额。 验证者如果不将以太币存入该合约，便无法激活。 合约需要提供以太币和输入数据。 该输入数据包括由验证者私钥签名的验证者公钥和提款公钥。 [权益证明](#pos)网络需要这些数据来识别和批准验证者。
+
+### 去中心化金融 {#defi}
+
+DeFi 是“去中心化金融”的缩写，是一种广义的[去中心化应用程序](#dapp)，旨在提供由区块链提供支持的金融服务，无需中介，任何人只需要互联网连接就可以参与。
 
 <DocLink to="/defi/">
   去中心化金融 (DeFi)
@@ -259,15 +270,15 @@ DeFi 是“decentralized finance”（去中心化金融）的缩写，是一种
 
 ### 难度 {#difficulty}
 
-一种涉及全网的设置，控制产生一个[工作量证明](#pow)所需的计算量。
+一项涉及全网的设置，用来控制在[工作量证明](#pow)网络中产生一个有效随机数所需的计算量。
 
 ### 难度炸弹 {#difficulty-bomb}
 
-在[工作量证明](#pow)[难度](#difficulty)环境中所计划的指数增长，旨在推动向[权益证明](#pos)的转变，减少[分叉](#hard-fork)的几率。
+计划的使[工作量证明](#pow)[难度](#difficulty)呈指数级别增长的设置，旨在促进向[权益证明](#pos)的过渡，并减少发生[分叉](#hard-fork)的几率。 难度炸弹在[合并](/upgrades/merge/)时被移除。
 
 ### 数字签名 {#digital-signatures}
 
-用户使用[私钥](#private-key)为文件生成的一串短数据，这样任何有对应[公钥](#public-key)、签名和文档的人都能验证 (1) 文档由该特定私钥的所有者“签名”，以及 (2) 文档签名后未作修改。
+用户使用[私钥](#private-key)为文档生成的一串短数据，这样任何有对应[公钥](#public-key)、签名和文档的人都能验证 (1) 文档由该特定私钥的所有者“签名”，以及 (2) 文档在签名后未作修改。
 
 <Divider />
 
@@ -295,11 +306,11 @@ DeFi 是“decentralized finance”（去中心化金融）的缩写，是一种
 
 ### 熵 {#entropy}
 
-在加密学里，缺乏可预测性或随机性。 在生成密钥信息时，例如[私钥](#private-key)，算法经常需要依赖于提供高熵的信源，以确保其输出具有不可预测性。
+在加密学里，是指缺乏可预测性或随机性水平。 在生成密钥信息，例如[私钥](#private-key)时，算法经常需要依赖于提供高熵的信源，以确保其输出具有不可预测性。
 
 ### 时段 {#epoch}
 
-在[信标链](#beacon-chain)坐标系中，每 32 个[时隙](#slot)（6.4 分钟）称为一个时段。 为了确保安全，每个时段会将[验证者](#validator)[委员会](#committee)打乱重组。 每个时段里都有一次[最终确定](#finality)区块链的机会。 该术语也用于[执行层](#execution-layer)，表示每次重新生成数据库（被工作量证明算法 [Ethash](#Ethash) 用作种子）之间的时间间隔。 时段指定为 30000 个区块。
+32 个[时隙](#slot)（6.4 分钟）的周期。 为了确保安全，每个时段会将[验证者](#validator)[委员会](#committee)打乱重组。 每个时段都有机会让链[最终确定](#finality)。
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
   权益证明
@@ -307,7 +318,7 @@ DeFi 是“decentralized finance”（去中心化金融）的缩写，是一种
 
 ### 模棱两可 {#equivocation}
 
-验证者发送两条相互矛盾的消息。 一个简单的例子是交易发送者发送两笔具有相同随机数的交易。 另一个示例是区块提议者在相同的区块高度（或为相同的时隙）提出两个区块。
+验证者发送两条相互矛盾的消息。 一个简单的例子是交易发送者发送两笔具有相同随机数的交易。 另一个示例是区块提议者在相同的区块高度（或为相同的时隙）提议两个区块。
 
 ### 以太坊 1 {#eth1}
 
@@ -319,15 +330,11 @@ DeFi 是“decentralized finance”（去中心化金融）的缩写，是一种
 
 ### 以太坊 2 {#eth2}
 
-“以太坊 2”指以太坊协议的一系列升级，包括以太坊过渡至权益证明。 该术语已弃用，取而代之的是“共识层”。 [详细了解此名称更改](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)。
+“以太坊 2”是指以太坊协议的一系列升级，包括以太坊到权益证明的过渡。 该术语已弃用，取而代之的是“共识层”。 [详细了解此名称更改](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)。
 
 <DocLink to="/upgrades/">
   有关以太坊升级的更多信息
 </DocLink>
-
-### 以太基 {#etherbase}
-
-以太坊客户端上主帐户的默认名称。 挖矿奖励会记入此帐户。 它是“比特币基地”的以太坊版本，适用于其他加密货币。
 
 ### 以太坊改进提案 (EIP) {#eip}
 
@@ -345,7 +352,7 @@ DeFi 是“decentralized finance”（去中心化金融）的缩写，是一种
 
 ### 执行客户端 {#execution-client}
 
-执行客户端（又称 “以太坊 1 客户端”），如 Besu、Erigon、go-ethereum、Nethermind，负责处理和广播交易，以及管理以太坊的状态。 执行客户端为[以太坊虚拟机](#evm)中的每笔交易运行计算，以确保遵守协议规则。 如今，它们还要处理[工作量证明](#pow)共识。 过渡到[权益证明](#pos)之后，执行客户端会将此委托给共识客户端。
+执行客户端（以前称为“以太坊 1 客户端”），例如 Besu、Erigon、go-ethereum、Nethermind，负责处理和广播交易以及管理以太坊的状态。 执行客户端为[以太坊虚拟机](#evm)中的每笔交易运行计算，以确保遵守协议规则。
 
 ### 执行层 {#execution-layer}
 
@@ -357,7 +364,7 @@ DeFi 是“decentralized finance”（去中心化金融）的缩写，是一种
 
 ### 以太坊征求意见 (ERC) {#erc}
 
-以太坊征求意见是一种标签，应用于一些试图定义以太坊具体使用标准的[以太坊改进提案](#eip)。
+一种标签，应用于一些试图定义以太坊具体使用标准的[以太坊改进提案](#eip)。
 
 <DocLink to="/eips/">
   以太坊改进提案介绍
@@ -365,9 +372,9 @@ DeFi 是“decentralized finance”（去中心化金融）的缩写，是一种
 
 ### Ethash {#ethash}
 
-以太坊 1.0 的[工作量证明](#pow)算法。
+一个在以太坊转换为[权益证明](#pos)之前应用于以太坊的[工作量证明](#pow)算法。
 
-[详情请见 eth.wiki](https://eth.wiki/en/concepts/ethash/ethash)
+[了解更多](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash)
 
 ### 以太币 {#ether}
 
@@ -417,28 +424,25 @@ DeFi 是“decentralized finance”（去中心化金融）的缩写，是一种
 
 最终确定性是在给定时间之前，一组交易不会变更且无法回滚的保证。
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/#finality">
-  工作量证明的最终确定性
-</DocLink>
 <DocLink to="/developers/docs/consensus-mechanisms/pos/#finality">
-  权益证明的最终确定性
+  权益证明最终确定性
 </DocLink>
 
-### finney {#finney}
+### Finney {#finney}
 
 [以太币](#ether)的一种计量单位。 1 finney = 10<sup>15</sup> [wei](#wei)。 10<sup>3</sup> finney = 1 个以太币。
 
 ### 分叉 {#fork}
 
-协议层面的一次变动，会产生一条竞争链，或在挖矿中造成两条潜在区块路径的暂时性分叉。
+由于协议更改而引发另一条链的生成，或由于时间差异而产生两条潜在的区块路径。
 
 ### 分叉选择算法 {#fork-choice-algorithm}
 
-用于识别区块链头的算法。 在执行层，链头为其后总难度最大的一条。 这意味着真正的链头需要最多工作才能开采。 在共识层，该算法观察来自验证者的累积认证 ([LMD_GHOST](#lmd-ghost))。
+用于识别区块链头的算法。 在执行层，链头为其后总难度最大的一条。 这意味着真正的链头需要最多工作才能开采。 在共识层，该算法会观察来自验证者的累积认证 ([LMD_GHOST](#lmd-ghost))。
 
 ### 欺诈证明 {#fraud-proof}
 
-特定[二层网络](#layer-2)解决方案的安全模型。为了加快交易速度，交易成批[卷叠](#rollups)，在单笔交易中提交给以太坊。 交易默认有效，但如果怀疑有欺诈行为，可以对它们提出质疑。 之后，欺诈证明会运行交易，以确定是否发生欺诈。 这种方法可增加交易量，同时保证安全性。 部分[卷叠](#rollups)采用的是[有效性证明](#validity-proof)。
+特定[二层网络](#layer-2)解决方案的安全模型。在此模型中，为了加快交易速度，交易成批[卷叠](#rollups)，并在单笔交易中提交给以太坊。 交易默认有效，但如果怀疑有欺诈行为，可以对它们提出质疑。 之后，欺诈证明会运行交易，以确定是否发生欺诈。 这种方法在保证安全性的同时可能增加交易量。 部分[卷叠](#rollups)采用的是[有效性证明](#validity-proof)。
 
 <DocLink to="/developers/docs/scaling/optimistic-rollups/">
   乐观卷叠
@@ -454,7 +458,7 @@ DeFi 是“decentralized finance”（去中心化金融）的缩写，是一种
 
 ### 燃料 {#gas}
 
-以太坊中为执行智能合约所消耗的虚拟“燃料”。 [以太坊虚拟机](#evm)使用一种记账方法来衡量燃料用量，以限制算力资源的消耗（参见[图灵完备](#turing-complete)）。
+以太坊中为执行智能合约所消耗的虚拟“燃料”。 [以太坊虚拟机](#evm)使用一种记账机制来衡量燃料用量，以限制算力资源的消耗（参见[图灵完备](#turing-complete)）。
 
 <DocLink to="/developers/docs/gas/">
   燃料和费用
@@ -472,11 +476,11 @@ DeFi 是“decentralized finance”（去中心化金融）的缩写，是一种
 
 [区块链](#blockchain)上第一个区块，用于初始化特定的网络及其加密货币。
 
-### geth {#geth}
+### Geth {#geth}
 
-Go Ethereum， 以太坊协议最好的实现之一，使用 Go 语言编写。
+Go Ethereum， 以太坊协议最重要的实现之一，使用 Go 语言编写。
 
-[更多信息请参考 geth.ethereum.org](https://geth.ethereum.org/)
+[更多信息请访问 geth.ethereum.org](https://geth.ethereum.org/)
 
 ### gwei {#gwei}
 
@@ -488,11 +492,11 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ### 硬分叉 {#hard-fork}
 
-[区块链](#blockchain)中的永久性分叉；硬分叉也叫硬分叉变化。 在未升级节点无法验证由遵循更新[共识机制](#consensus-rules)的已升级节点所创建的区块时，通常会发生硬分叉。 请勿与分叉、软分叉、软件分叉或 Git 分叉相混淆。
+[区块链](#blockchain)中的永久性分歧；也称为硬分叉变化。 当未升级节点无法验证由遵循更新[共识机制](#consensus-rules)的已升级节点所创建的区块时，通常会发生硬分叉。 请勿与分叉、软分叉、软件分叉或 Git 分叉相混淆。
 
 ### 哈希 {#hash}
 
-可变长度输入的固定长度数字指纹，由哈希函数生成。 (参见 [keccak-256](#keccak-256))。
+可变长度输入的固定长度数字指纹，由哈希函数生成。 （参见 [keccak-256](#keccak-256)）。
 
 ### 哈希率 {#hash-rate}
 
@@ -500,17 +504,17 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ### 身份钱包 {#hd-wallet}
 
-使用分层确定性密钥创建方式和转账协议的[钱包](#wallet)。
+使用分层确定性 (HD) 密钥创建和转账协议的[钱包](#wallet)。
 
 [更多信息请访问 github.com](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)
 
 ### 身份钱包种子 {#hd-wallet-seed}
 
-用来生成身份[钱包](#wallet)中主[私钥](#private-key)与主链码的值。 可以用助记词表示，以便大家复制、备份及恢复私钥。
+用来生成身份[钱包](#wallet)的主[私钥](#private-key)与主链代码的值。 钱包种子可以用助记词表示，方便大家复制、备份及恢复私钥。
 
 ### 家园 {#homestead}
 
-以太坊的第二个开发阶段，于 2016 年 3 月在第 1,150,000 个区块上启动。
+以太坊的第二个开发阶段，于 2016 年 3 月在区块 1,150,000 上启动。
 
 <Divider />
 
@@ -518,19 +522,19 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ### 索引 {#index}
 
-一种网络结构，旨在通过提供其存储资源的有效路径来优化跨[区块链](#blockchain)信息的查询。
+一种网络结构，旨在通过提供其存储源的高效路径来优化跨[区块链](#blockchain)的信息查询。
 
 ### 可交换客户端地址协议 (ICAP) {#icap}
 
-以太坊地址编码，与国际银行账号 (IBAN) 编码部分兼容，为以太坊地址提供经过校验、可互操作的多用途编码。 ICAP 地址使用一个新的 IBAN 伪国家代码-XE，全称是“eXended Ethereum”，如非管辖货币中的 X（如 XBT、XRP、XCP）。
+一种以太坊地址编码方式，与国际银行账号 (IBAN) 编码部分兼容，为以太坊地址提供经过校验和校验、可互操作的多用途编码。 ICAP 地址使用一个新的 IBAN 伪国家代码-XE（全称是“扩展以太坊”），如非管辖货币中的 XE（如 XBT、XRP、XCP）。
 
 ### 冰河世纪 {#ice-age}
 
-以太坊块高为 200,000 的 [硬分叉](#hard-fork)，带来了指数级[难度](#difficulty)增加（又称为[难度炸弹](#difficulty-bomb)），为过渡到[权益证明](#pos)做准备。
+以太坊在区块 200,000 的[硬分叉](#hard-fork)，此分叉引入了指数级[难度](#difficulty)增加（又称为[难度炸弹](#difficulty-bomb)），促进了到[权益证明](#pos)的过渡。
 
 ### 集成开发环境 (IDE) {#ide}
 
-将代码编辑器、编译器、运行时和调试器合并在一起的用户界面。
+通常将代码编辑器、编译器、运行时和调试器合并在一起的用户界面。
 
 <DocLink to="/developers/docs/ides/">
   集成开发环境
@@ -538,7 +542,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ### 部署代码不可改变问题 {#immutable-deployed-code-problem}
 
-[合约](#smart-contract)（或[库](#library)）的代码一经部署，便不可更改。 标准软件开发习惯于能够修复可能的缺陷并增加新的功能，但这对智能合约的开发而言是一个挑战。
+[合约](#smart-contract)（或[库](#library)）的代码一经部署，便不可更改。 标准软件开发实践依赖于能够修复可能的错误并增加新的功能，但这对智能合约的开发而言是一个挑战。
 
 <DocLink to="/developers/docs/smart-contracts/deploying/">
   部署智能合约
@@ -546,19 +550,19 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ### 内部交易 {#internal-transaction}
 
-[交易](#transaction)从一个[合约帐户](#contract-account)发送到另一个合约帐户或一个[外部帐户](#eoa)（请参阅[信息](#message)）。
+[交易](#transaction)从一个[合约帐户](#contract-account)发送到另一个合约帐户或一个[外部帐户](#eoa)（参见[消息](#message)）。
 
 <Divider />
 
 ### 发行
 
-铸造新的以太币以奖励区块提议、证明和举报。
+铸造新的以太币以奖励区块提议、认证和举报。
 
 ## K {#section-k}
 
 ### 密钥导出函数 (KDF) {#kdf}
 
-也称为“密码拉伸算法”。[密钥库](#keystore-file)格式使用该算法，通过反复散列密码短语，防止针对密码短语加密的暴力破解、字典和彩虹表攻击。
+也称为“密码拉伸算法”。[密钥库](#keystore-file)格式使用该算法，通过反复散列密码短语，防范针对密码短语加密的暴力破解、字典和彩虹表攻击。
 
 <DocLink to="/developers/docs/smart-contracts/security/">
   智能合约安全性
@@ -570,7 +574,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ### keccak-256 {#keccak-256}
 
-以太坊协议使用的加密[哈希](#hash)函数。 Keccak-256 是从 [SHA](#sha)-3 规范演化而来。
+以太坊中使用的加密[哈希](#hash)函数。 Keccak-256 是从 [SHA](#sha)-3 标准演化而来。
 
 <Divider />
 
@@ -586,19 +590,19 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ### LevelDB {#level-db}
 
-开源的轻量级单用途硬盘键值对[程序库](#library)，可以绑定到多个平台。
+实现为轻量级单用途[库](#library)的开源磁盘键值对存储库，可以绑定到多个平台。
 
-### 程序库 {#library}
+### 库 {#library}
 
-一种特殊类型的[合约](#smart-contract)，没有可支付函数，没有回退函数，也没有数据存储器。 因此，它不能接收或持有以太币，也不能存储数据。 程序库可用作之前部署的代码，其他合约只能进行只读调用，以用于计算。
+一种特殊类型的[合约](#smart-contract)，没有可支付函数，没有回退函数，也没有数据存储。 因此，它不能接收或持有以太币，也不能存储数据。 库可用作之前部署的代码，其他合约可以调用此代码以用于只读计算。
 
 <DocLink to="/developers/docs/smart-contracts/libraries/">
   智能合约库
 </DocLink>
 
-### 轻量级客户端 {#lightweight-client}
+### 轻量客户端 {#light-client}
 
-一种以太坊客户端，不存储[区块链](#blockchain)的本地副本，也不验证区块和[交易](#transaction)。 它提供[钱包](#wallet)的功能，可以创建和广播交易。
+一种以太坊客户端，不存储[区块链](#blockchain)的本地副本，也不验证区块和[交易](#transaction)。 它提供[钱包](#wallet)的功能，并可以创建和广播交易。
 
 <Divider />
 
@@ -608,7 +612,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ## M {#section-m}
 
-### 主网 (Mainnet) {#mainnet}
+### 主网 {#mainnet}
 
 "main network"（主网）的缩写，是主要的公共以太坊[区块链](#blockchain)。 它具有真正的以太币、真正的价值和真正的共识。 在讨论[二层网络](#layer-2)扩容解决方案时，主网也被称为一层网络。 （另请参见[测试网](#testnet)）
 
@@ -618,11 +622,11 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ### 内存困难 {#memory-hard}
 
-内存困难函数是当可用内存量略微减少时，速度或可行性急剧下降的过程， 是以太坊挖矿算法 [Ethash](#ethash) 的示例 id。
+内存困难函数是指当可用内存量略微减少时，速度或可行性便会急剧下降的进程。 以太坊挖矿算法 [Ethash](#ethash) 就是一个例子。
 
-### 默克尔前缀树 {#merkle-patricia-tree}
+### 默克尔帕特里夏树 {#merkle-patricia-tree}
 
-以太坊用于有效存储键值对的数据结构。
+以太坊用于高效存储键值对的数据结构。
 
 ### 消息 {#message}
 
@@ -630,7 +634,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ### 消息调用 {#message-call}
 
-将[消息](#message)从一个帐户传递到另一个帐户的行为。 如果目标帐户与[以太坊虚拟机](#evm)代码相关联，虚拟机将从该对象的状态和要依据其执行动作的消息开始。
+将[消息](#message)从一个帐户传递到另一个帐户的行为。 如果目标帐户与[以太坊虚拟机](#evm)代码相关联，则将根据该对象的状态和要处理的消息启动虚拟机。
 
 ### 大都市 {#metropolis}
 
@@ -638,15 +642,15 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ### 挖矿 {#mining}
 
-在以太坊区块链上验证交易和合同执行的过程，以换取开采每个区块的以太币奖励。
+在以太坊区块链上验证交易和合同执行的过程，以换取开采每个区块的以太币奖励。 这是以太坊在迁移到[权益证明](#pos)之前用来保障安全性的方法。
 
 ### 矿池 {#mining-pool}
 
-矿工共享处理能力并分配[区块奖励](#block-reward)的资源池。
+一个由[工作量证明](#pow)机制下的矿工组成的资源池，这些矿工共享他们的处理算力，并瓜分所获得的[区块奖励](#block-reward)。
 
 ### 矿工 {#miner}
 
-通过不断执行哈希算法，为新区块找到有效[工作量证明](#pow)的网络[节点](#node)（请参阅 [Ethash](#ethash)）。
+通过不断执行哈希算法，为新区块找到有效[工作量证明](#pow)的网络[节点](#node)（参见 [Ethash](#ethash)）。 矿工不再是以太坊的一部分，在以太坊迁移至[权益证明](#pos)后他们已被验证者所取代。
 
 <DocLink to="/developers/docs/consensus-mechanisms/pow/mining/">
   挖矿
@@ -654,7 +658,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ### 铸币 {#mint}
 
-铸币是创建新代币并将其投入流通以供使用的过程。 这是一种去中心化机制，可以在没有中心机构参与的情况下创建新代币。
+铸币是创建新代币并将其投入流通以供使用的过程。 这是一种去中心化机制，可以在没有中央机构参与的情况下创建新代币。
 
 <Divider />
 
@@ -662,7 +666,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ### 网络 {#network}
 
-指以太坊网络，一种向每个以太坊节点（网络参与者）推广交易和区块的对等网络。
+指以太坊网络，一种向每个以太坊节点（网络参与者）传播交易和区块的对等网络。
 
 <DocLink to="/developers/docs/networks/">
   网络
@@ -670,11 +674,11 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ### 网络哈希率 {#network-hashrate}
 
-整个以太坊挖矿网络产生的总[哈希率](#hashrate)。
+整个以太坊挖矿网络产生的总[哈希率](#hashrate)。 在以太坊迁移至[权益证明](#pos)后，以太坊上的挖矿活动也已被停止。
 
 ### 非同质化代币 (NFT) {#nft}
 
-也叫“契约”，是 ERC-721 提案提出的代币标准。 非同质化代币既能跟踪也可以交易，每个代币都是独一无二的，不可互换，这与以太币和 [ERC-20 代币](#token-standard)不同。 非同质化代币能够代表数字或物理资产的所有权。
+也叫“契约”，是由 ERC-721 提案提出的代币标准。 非同质化代币既能跟踪也可以交易，但每个代币都是独一无二的，不可互换，这与以太币和 [ERC-20 代币](#token-standard)不同。 非同质化代币能够代表数字或物理资产的所有权。
 
 <DocLink to="/nft/">
   非同质化代币 (NFT)
@@ -693,7 +697,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ### 随机数 {#nonce}
 
-在密码学中，随机数是指只能使用一次的值。 以太坊中有两类随机数：账户随机数，用来统计每个帐户的交易数，防止重放攻击；[工作量证明](#pow)随机数，即区块中用于满足[工作量证明](#pow)的随机值。
+在密码学中，是指只能使用一次的值。 帐户随机数是每个帐户中的交易计数器，用于防范重放攻击。
 
 <Divider />
 
@@ -701,19 +705,19 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ### 叔块 {#ommer}
 
-当一位[矿工](#miner)找到一个有效的[区块](#block)时，另一位矿工可能已经发布了一个存在竞争的区块，这个区块将首先添加到区块链顶端。 这个有效但已过时的区块可以被更新的区块归为*叔块*，可以领取部分区块奖励。 对于父区块的同级区块来说，“ommer”一词不分性别，因而为首选，但有时也被称为“uncle”（叔）。
+当工作量证明下的[矿工](#miner)找到一个合法的[区块](#block)时，其它矿工可能已经发布了一个竞争区块并首先添加到了区块链的末端。 这个有效但已过时的区块可以被更新的区块纳为*叔块*，并可以领取部分区块奖励。 对于父区块的同级区块来说，“ommer”一词不分性别，因而为首选，但有时也被称为“uncle”（叔）。 叔块仅在[工作量证明](pow)下的以太坊网络中有意义，在[权益证明](#pos)下的以太坊中不存在，因为后者在每个时隙中有且仅有一个区块提议者会被选中。
 
-### Optimistic Rollup {#optimistic-rollup}
+### 乐观卷叠 {#optimistic-rollup}
 
-使用 [“欺诈证明”](#rollups)的交易的 [“Rollup”](#fraud-proof)，在使用[主网](#layer-2)(一层网络) 提供的安全性的同时，提供了更高的[二层网络](#mainnet)的交易吞吐量。 与[以太坊 Plasma 扩容解决方案](#plasma)（一种相似的二层网络解决方案）不同，乐观卷叠可以处理更复杂的交易类型 -- [以太坊虚拟机](#evm)中任何可能的交易。 与 [Zero-knowledge rollups](#zk-rollups) 相比，Optimistic Rollup 确实存在延迟问题，因为可以通过欺诈证明质疑交易。
+使用[欺诈证明](#rollups)的交易的[卷叠](#fraud-proof)，在使用[主网](#layer-2)（一层网络）提供的安全性的同时，提供了更高的[二层网络](#mainnet)交易吞吐量。 与[以太坊 Plasma 扩容解决方案](#plasma)（一种相似的二层网络解决方案）不同，乐观卷叠可以处理更复杂的交易类型 -- [以太坊虚拟机](#evm)中任何可能的交易。 与[零知识卷叠](#zk-rollups)相比，乐观卷叠确实存在延迟问题，因为可以通过欺诈证明来质疑交易。
 
 <DocLink to="/developers/docs/scaling/optimistic-rollups/">
-  Optimistic Rollup
+  乐观卷叠
 </DocLink>
 
 ### 预言机 {#oracle}
 
-预言机是[区块链](#blockchain)与真实世界之间的桥梁。 预言机发挥链上[应用程序接口](#api)的作用，可以向其查询信息，也可在[智能合约](#smart-contract)中使用。
+预言机是[区块链](#blockchain)与真实世界之间的桥梁。 预言机起到链上[应用程序接口](#api)的作用，可以向其查询信息，也可在[智能合约](#smart-contract)中使用。
 
 <DocLink to="/developers/docs/oracles/">
   预言机
@@ -733,11 +737,11 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ### 对等网络 {#peer-to-peer-network}
 
-一个由计算机（[对等体](#peer)）组成的网络，无需基于服务器的中心服务即可共同执行功能。
+一个由计算机（[对等体](#peer)）组成，无需基于服务器的中心服务即可共同执行功能的网络。
 
 ### 以太坊 Plasma 扩容解决方案 {#plasma}
 
-使用[欺诈证明](#fraud-proof)的链下扩容解决方案，例如[乐观卷叠](#optimistic-rollups)。 Plasma 仅限于简单的交易，例如基本令牌传输和交换。
+使用[欺诈证明](#fraud-proof)的链下扩容解决方案，例如[乐观卷叠](#optimistic-rollups)。 以太坊 Plasma 扩容解决方案仅限于简单交易，例如基本的代币转账和交换。
 
 <DocLink to="/developers/docs/scaling/plasma">
   以太坊 Plasma 扩容解决方案
@@ -745,7 +749,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ### 私钥（密钥） {#private-key}
 
-一个密码，可使以太坊用户通过生成数字签名来证明对某个帐户或合约的所有权（请参见[公钥](#public-key)、[地址](#address)、[椭圆曲线数字签名算法](#ecdsa)）。
+一个密码，可使以太坊用户通过生成数字签名来证明对某个帐户或合约的所有权（参见[公钥](#public-key)、[地址](#address)、[椭圆曲线数字签名算法](#ecdsa)）。
 
 ### 私有链 {#private-chain}
 
@@ -753,7 +757,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ### 权益证明 (PoS) {#pos}
 
-加密货币区块链协议用以实现分布式[共识](#consensus)的方法。 权益证明要求用户证明自己拥有一定数量的加密货币（他们在网络中的“质押品”），以便能够参与交易的验证。
+加密货币区块链协议用以实现分布式[共识](#consensus)的方法。 权益证明要求用户证明自己拥有一定数量的加密货币（他们在网络中的“质押”），以便能够参与交易的验证。
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos/">
   权益证明
@@ -761,7 +765,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ### 工作量证明 (PoW) {#pow}
 
-需要大量计算才能得出的数据（证明）。 在以太坊中，[矿工](#miner)必须找到符合整个网络[难度](#difficulty)目标的 [Ethash](#ethash) 算法数值解。
+需要大量计算才能得出的数据（证明）。
 
 <DocLink to="/developers/docs/consensus-mechanisms/pow/">
   工作量证明
@@ -769,7 +773,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ### 公钥 {#public-key}
 
-通过[私钥](#private-key)的单向函数派生的数字，可以公开共享。对于使用私钥签署的数字签名，任何人都可以用对应的公钥来验证该数字签名。
+通过[私钥](#private-key)的单向函数派生的数字。公钥可以公开共享，并被任何人用于验证使用相应私钥签署的数字签名。
 
 <Divider />
 
@@ -777,7 +781,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ### 收据 {#receipt}
 
-收据是以太坊客户端返回的数据，用来表示特定[交易](#transaction)的结果，数据包含交易[哈希值](#hash)、交易的[区块](#block)号、实际[燃料](#gas)消耗量；如果部署了[智能合约](#smart-contract)，则还会返回该合约的[地址](#address)。
+收据是以太坊客户端返回的数据，用来表示特定[交易](#transaction)的结果，其中包含交易的[哈希](#hash)、交易的[区块](#block)号、实际[燃料](#gas)消耗量；如果部署了[智能合约](#smart-contract)，则还会返回该合约的[地址](#address)。
 
 ### 重入攻击 {#re-entrancy-attack}
 
@@ -797,7 +801,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ### 卷叠 {#rollups}
 
-一种[二层网络](#layer-2)扩容解决方案，将多笔交易分批提交到[以太坊主链](#mainnet)的单笔交易中。 这样可以降低[燃料](#gas)成本，增加[交易](#transaction)吞吐量。 部分乐观卷叠和零知识卷叠使用不同的安全方法来提供扩容能力。
+一种[二层网络](#layer-2)扩容解决方案，将多笔交易分批提交到[以太坊主链](#mainnet)的单笔交易中。 这样可以降低[燃料](#gas)成本，增加[交易](#transaction)吞吐量。 部分乐观卷叠和零知识卷叠使用不同的安全方法来提供这些扩容效益。
 
 <DocLink to="/developers/docs/scaling/#rollups">
   卷叠
@@ -813,11 +817,11 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ### 安全哈希算法 (SHA) {#sha}
 
-国家标准和技术研究所 (NIST) 推出的加密哈希函数库。
+由美国国家标准和技术研究所 (NIST) 推出的系列加密哈希函数。
 
 ### 宁静 {#serenity}
 
-指启动了一组扩容和可持续性升级的以太坊开发阶段，以前称为“以太坊 2.0”或“以太坊 2”。
+启动了一组扩容和可持续性升级的以太坊开发阶段，以前称为“以太坊 2.0”或“以太坊 2”。
 
 <DocLink to="/upgrades/">
   以太坊升级
@@ -829,7 +833,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ### 分片/分片链 {#shard}
 
-由[信标链](#beacon-chain)协调并由[验证者](#validator)保护的[权益证明](#pos)链。 在分片链升级中，会将 64 个分片链加入到网络中。 分片链将为[二层网络](#layer-2)解决方案提供额外的数据，例如[乐观卷叠](#optimistic-rollups)和[零知识卷叠](#zk-rollups)，从而增加交易吞吐量。
+分片链是整个区块链中验证者的子集可以负责的离散部分。 这将为以太坊提供更高的交易吞吐量，并提高[二层网络](#layer-2)解决方案（如[乐观卷叠](#optimistic-rollups)和[零知识卷叠](#zk-rollups)）的数据可用性。
 
 <DocLink to="/upgrades/shard-chains">
   分片链
@@ -837,13 +841,13 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 ### 侧链 {#sidechain}
 
-一种扩容解决方案，使用具有不同[共识机制](#consensus-rules)（通常更快）的单独链。 要将这些侧链连接到[主网](#mainnet)，则需要用到桥。 [卷叠](#rollups)也使用侧链，但是它们可以与[主网](#mainnet)协作运行。
+一种扩容解决方案，使用具有不同[共识机制](#consensus-rules)（通常速度更快）的单独链。 要将这些侧链连接到[主网](#mainnet)，需要用到链桥。 [卷叠](#rollups)也使用侧链，但是它们可以与[主网](#mainnet)协作运行。
 
 <DocLink to="/developers/docs/scaling/sidechains/">
   侧链
 </DocLink>
 
-### 签名 {#signing}
+### 签署 {#signing}
 
 以加密方式证明交易已获得特定私钥持有者的批准。
 
@@ -851,12 +855,16 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 
 一种计算机编程术语，描述只能存在一个实例的对象。
 
+### 惩罚者 {#slasher}
+
+惩罚者是一个实体，它会扫描认证以搜索可惩罚的罪行。 惩罚被广播到网络，下一个区块提议者将证明添加到区块中。 然后，区块提议者会因惩罚恶意验证者而获得奖励。
+
 ### 时隙 {#slot}
 
-一个时间段（12 秒），在这个时间段内，[验证者](#validator)可以在[权益证明](#pos)系统中提出一个新的[信标链](#beacon-chain)和[分片](#shard)链区块。 时隙有可能为空， 32 个时隙构成一个[时段](#epoch)。
+[权益证明](#pos)系统中的[验证者](#validator)可以提议新区块的时间段（12 秒）。 时隙有可能为空， 32 个时隙构成一个[时段](#epoch)。
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
-  权益证明 (PoS)
+  权益证明
 </DocLink>
 
 ### 智能合约 {#smart-contract}
@@ -864,7 +872,7 @@ Gigawei 的缩写，[以太币](#ether)的一种计量单位，通常用于[燃�
 在以太坊计算基础框架上执行的程序。
 
 <DocLink to="/developers/docs/smart-contracts/">
-  智能合约介绍
+  智能合约简介
 </DocLink>
 
 ### 简洁的非交互式知识论证 (SNARK) {#snark}
@@ -933,7 +941,7 @@ STARK 是“scalable transparent argument of knowledge”（可扩展的透明�
 
 ### 绝对多数 {#supermajority}
 
-绝对多数是指超过[信标链](#beacon-chain)上质押以太币总数的 2/3 (66%)。 要在信标链上[最终确定](#finality)区块，需要绝对多数投票。
+绝对多数是指超过 2/3 (66%) 的总质押以太币数量以保护以太坊的安全。 要在信标链上[最终确定](#finality)区块，需要绝对多数投票。
 
 ### 同步 {#syncing}
 
@@ -941,7 +949,7 @@ STARK 是“scalable transparent argument of knowledge”（可扩展的透明�
 
 ### 同步委员会 {#sync-committee}
 
-同步委员会是[信标链](#beacon-chain)上随机选择的一组[验证者](#validator)，约每 27 小时刷新一次。 同步委员会的目的是将他们的签名添加到有效的区块头中。 同步委员会允许[轻量级客户端](#lightweight-client)跟踪区块链的链头，无需访问整个验证者集。
+同步委员会是随机选择的一组[验证者](#validator)，每约 27 小时刷新一次。 同步委员会的目的是将他们的签名添加到有效的区块头中。 同步委员会允许[轻量客户端](#light-client)跟踪区块链头，而无需访问整个验证者集。
 
 ### Szabo {#szabo}
 
@@ -957,9 +965,9 @@ STARK 是“scalable transparent argument of knowledge”（可扩展的透明�
 
 ### 终端总难度 (TTD) {#terminal-total-difficulty}
 
-总难度是区块链中某个特定点之前所有区块的 Ethash 挖矿难度之和。 终端总难度是总难度的特定值，将用于触发执行客户端关闭他们的挖矿并阻止信息传播功能，以便网络可以过渡到权益证明。
+总难度是区块链中某个特定点之前所有区块的 Ethash 挖矿难度之和。 终端总难度是一个特定的总难度值，它被用来触发执行客户端关闭其挖矿和区块广播功能，使网络能够过渡到权益证明。
 
-### 测试网 (testnet) {#testnet}
+### 测试网 {#testnet}
 
 “测试网络”的简称，用于模拟以太坊主网行为的网络（请参阅[主网](#mainnet)）。
 
@@ -989,13 +997,13 @@ STARK 是“scalable transparent argument of knowledge”（可扩展的透明�
 
 ### 交易费 {#transaction-fee}
 
-每次使用以太坊网络时需要支付的费用。 包括从你的[钱包](#wallet)发送资金或与[去中心化应用程序](#dapp)交互，例如兑换代币或购买收藏品等。 交易费可以看作服务费， 具体取决于网络的使用率。 这是因为[矿工](#miner)，即负责处理交易的人，可能会优先考虑费用较高的交易——因此拥堵迫使价格上涨。
+每次使用以太坊网络时需要支付的费用。 示例包括从你的[钱包](#wallet)或[去中心化应用程序](#dapp)交互中发送资金，例如交换代币或购买收藏品。 交易费可以看作服务费， 具体取决于网络的使用率。 这是因为[验证者](#validator)，负责处理你的交易的人，可能会优先考虑费用较高的交易 — 因此拥堵会迫使价格上涨。
 
 从技术层面来讲，交易费用与相应交易需要的[燃料](#gas)消耗量有关。
 
 降低交易费用目前非常受关注。 请参阅[二层网络](#layer-2)
 
-### 无需信任 {#trustlessness}
+### 免信任 {#trustlessness}
 
 所涉任何关联方无需信任第三方即可进行交易调解的网络能力
 
@@ -1012,23 +1020,33 @@ STARK 是“scalable transparent argument of knowledge”（可扩展的透明�
 [权益证明](#pos)系统中的[节点](#node)，负责存储数据、处理交易并且在区块链中添加新区块。 要激活验证者软件，需要[质押](#staking) 32 个以太币。
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos">
-  权益证明 (PoS)
+  权益证明
 </DocLink>
 <DocLink to="/staking/">
   以太坊中的质押
 </DocLink>
 
+### 验证者的生命周期 {#validator-lifecycle}
+
+验证者可以处于的状态序列。 这包括：
+
+- 已存款：验证者已将至少 32 个以太币存入[存款合约](#deposit-contract)中
+- 待处理：验证者正在激活队列中等待已存在的验证者投票决定其能否进入网络
+- 活跃：当前正在证明和提议区块
+- 惩罚中：验证者存在不当行为并正在被惩罚
+- 退出中：验证者被标记为退出网络，无论他们是自愿的还是被强制驱逐的
+
 ### 有效性证明 {#validity-proof}
 
-特定[二层网络](#layer-2)解决方案的安全模型，用以提高速度，将交易[卷叠](/#rollups)为交易批，并作为单笔交易提交到以太坊。 交易计算在链下进行，然后提交给主链，并附带有效性证明。 这种方法提升了交易量，同时保证了安全性。 部分[卷叠](#rollups)使用[欺诈证明](#fraud-proof)。
+特定[二层网络](#layer-2)解决方案的安全模型。为了加快交易速度，交易成批[卷叠](/#rollups)，在单笔交易中提交给以太坊。 交易计算在链下进行，然后提交给主链，并附带有效性证明。 这种方法在保证安全性的同时可能增加交易量。 部分[卷叠](#rollups)使用[欺诈证明](#fraud-proof)。
 
 <DocLink to="/developers/docs/scaling/zk-rollups/">
   零知识卷叠
 </DocLink>
 
-### validium {#validium}
+### Validium {#validium}
 
-使用[有效性证明](#validity-proof)来提高交易吞吐量的链下解决方案。 与[零知识卷叠](#zk-rollup)不同，Validium 的数据没有存储在第一层[主网](#mainnet)中。
+使用[有效性证明](#validity-proof)来提高交易吞吐量的链下解决方案。 与[零知识卷叠](#zk-rollup)不同，Validium 的数据没有存储在一层网络[主网](#mainnet)中。
 
 <DocLink to="/developers/docs/scaling/validium/">
   Validium
@@ -1036,7 +1054,7 @@ STARK 是“scalable transparent argument of knowledge”（可扩展的透明�
 
 ### Vyper {#vyper}
 
-高级编程语言，语法与 Python 类似。 但 Vyper 更接近纯函数式语言， 其创造者为 Vitalik Buterin。
+一种高级编程语言，语法与 Python 类似。 但 Vyper 更接近纯函数式语言， 其创造者为 Vitalik Buterin。
 
 <DocLink to="/developers/docs/smart-contracts/languages/#vyper">
   Vyper
@@ -1048,7 +1066,7 @@ STARK 是“scalable transparent argument of knowledge”（可扩展的透明�
 
 ### 钱包 {#wallet}
 
-持有[私钥](#private-key)的软件。 钱包用来访问和管理以太坊[帐户](#account)，并与[智能合约](#smart-contract)交互。 密钥无需存储在钱包中，为了提高安全性，可以离线存储（如，存储卡或纸张）。 虽然称其为“钱包”，但它并不存储货币或代币。
+持有[私钥](#private-key)的软件。 钱包用来访问和管理以太坊[帐户](#account)，并与[智能合约](#smart-contract)交互。 密钥无需存储在钱包中，为了提高安全性，可以从离线存储（如，存储卡或纸张）检索。 虽然称其为“钱包”，但它并不存储货币或代币。
 
 <DocLink to="/wallets/">
   以太坊钱包
@@ -1056,10 +1074,10 @@ STARK 是“scalable transparent argument of knowledge”（可扩展的透明�
 
 ### Web3 {#web3}
 
-万维网的第三个版本。 Web3 最初由 Gavin Wood 博士提出，代表了网页应用程序的新愿景和关注点——从集中拥有和管理的应用程序到基于去中心化协议的应用程序（请参见[去中心化应用程序](#dapp)）。
+万维网的第三个版本。 Web3 最初由 Gavin Wood 博士提出，代表了网页应用程序的新愿景和关注点 — 从集中拥有和管理的应用程序转为基于去中心化协议的应用程序（参见[去中心化应用程序](#dapp)）。
 
 <DocLink to="/developers/docs/web2-vs-web3/">
-  Web2 对比 Web3
+  Web2 与 Web3 的对比
 </DocLink>
 
 ### wei {#wei}
@@ -1084,7 +1102,7 @@ STARK 是“scalable transparent argument of knowledge”（可扩展的透明�
 
 ### 零知识卷叠 {#zk-rollup}
 
-使用[有效性证明](#validity-proof)的交易[卷叠](#rollups)，在使用[主网](#mainnet)（第一层）安全性的同时，提高[二层网络](#layer-2)的交易吞吐量。 虽然无法处理复杂的交易类型，如[乐观卷叠](#optimistic-rollups)，但没有延迟问题，因为提交交易时就可以证明其有效性。
+使用[有效性证明](#validity-proof)的交易[卷叠](#rollups)，在使用[主网](#mainnet)（一层网络）安全性的同时，提高了[二层网络](#layer-2)的交易吞吐量。 虽然无法像[乐观卷叠](#optimistic-rollups)那样处理复杂的交易类型，但没有延迟问题，因为交易在提交时就可以证明其有效性。
 
 <DocLink to="/developers/docs/scaling/zk-rollups/">
   零知识卷叠

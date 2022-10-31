@@ -2,7 +2,6 @@
 title: How to translate
 lang: en
 description: Instructions for using Crowdin to translate ethereum.org
-sidebar: true
 ---
 
 # How to translate {#how-to-translate}

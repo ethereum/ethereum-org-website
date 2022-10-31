@@ -2,12 +2,17 @@
 title: Ethash
 description: Ethash 算法详细介绍。
 lang: zh
-sidebar: true
 ---
 
-**请注意，Ethash 是以太坊的工作量证明挖矿算法。 工作量证明挖矿将在[合并](/upgrades/merge)时完全关闭。届时，以太坊将转而使用[质押证明](/developers/docs/consensus-mechanisms/pos)机制获得保护。**
+<InfoBanner emoji=":wave:">
+   Ethash 是以太坊的工作量证明挖矿算法。 工作量证明现在已经被 **完全关闭**，取而代之，以太坊现在使用 [proof-of-stake](/developers/docs/consensus-mechanisms/pos) 来保证安全。 阅读更多关于<a href="/upgrades/merge/">合并</a>、<a href="/developers/docs/consensus-mechanisms/pos/">权益证明</a>和<a href="/staking/">质押</a>的信息。 此页面是为了满足对历史的兴趣！  
+</InfoBanner>
 
-[Ethash](https://github.com/ethereum/wiki/wiki/Ethash) 是 [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashamoto) 算法的修改版。 Ethash 工作量证明为[内存密集型](https://wikipedia.org/wiki/Memory-hard_function)，被认为可使算法抵抗专用集成电路，但专用集成电路 Ethash 挖矿已被证明可行。 内存硬度通过工作量证明算法实现，需要根据随机数和区块头选择固定资源子集。 该资源（大小为几 GB）称为有向无环图。 有向无环图每隔 30000 个区块更改一次，这个 125 小时的窗口称为一个时段（大约 5.2 天），需要一段时间才能生成。 由于有向无环图只依赖于区块高度，因此可以预先生成，但如果不是，客户端需要等待此过程结束才能生成一个区块。 如果客户端没有提前预生成和缓存有向无环图，网络可能会在每个时段过渡时遇到严重的区块延迟。 请注意，不需要生成有向无环图即可验证，工作量证明本质上允许使用低端中央处理器和小内存进行验证。
+[Ethash](https://github.com/ethereum/wiki/wiki/Ethash) 是 [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashamoto) 算法的修改版。 Ethash 工作量证明是[内存密集型](https://wikipedia.org/wiki/Memory-hard_function)算法，这被认为使算法可抵御专用集成电路。 Ethash 专用集成电路最终被开发出来，但在工作量证明被关闭之前，图形处理单元挖矿仍然是一个可行的选择。 Ethash 仍然用于在其他非以太坊工作量证明网络上挖掘其他币。
+
+## Ethash 是如何工作的？ {#how-does-ethash-work}
+
+内存硬度通过工作量证明算法实现，需要根据随机数和区块头选择固定资源子集。 该资源（大小为几 GB）称为有向无环图。 有向无环图每 30000 个区块更改一次（大约 125 小时的窗口，称为一个时段（大约 5.2 天）），需要一段时间才能生成。 由于有向无环图仅依赖于区块高度，因此可以预先生成，但如果没有，则客户端需要等到此过程结束才能生成区块。 如果客户端没有提前预生成和缓存有向无环图，网络可能会在每个时段过渡时遇到严重的区块延迟。 请注意，不需要生成有向无环图即可验证，工作量证明本质上允许使用低端中央处理器和小内存进行验证。
 
 该算法采取的一般路线如下：
 
@@ -16,7 +21,7 @@ sidebar: true
 3. 我们可以从缓存中生成一个 **1 GB 数据集**，数据集中每个项目仅依赖于一小部分缓存中的项目。 全客户端和矿工存储数据集。 数据集随着时间的流逝而呈线性增长。
 4. 采矿会抢走数据集的随机片段并将它们散列在一起。 可以通过使用缓存来重新生成您需要的数据集中的特定区块，以较低的内存进行验证，以使您只需要存储缓存。
 
-每隔 3000 个区块更新一次大数据集，因此，矿工的绝大部分工作都是读取数据集，而不是对其进行修改。
+每隔 30000 个区块更新一次大数据集，因此，矿工的绝大部分工作都是读取数据集，而不是对其进行修改。
 
 ## 定义 {#definitions}
 
@@ -201,7 +206,7 @@ def mine(full_size, dataset, header, difficulty):
 
 ## 延伸阅读 {#further-reading}
 
-_还有哪些社区资源对您有所帮助？ 请编辑并添加到本页面！_
+_还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_
 
 ## 附录 {#appendix}
 

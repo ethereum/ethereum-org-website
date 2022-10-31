@@ -27,7 +27,7 @@ lang: zh
 
 区块链的持久性存储机制会出现区块链过大，维护和存储所有数据十分困难的问题（比如[许多机构](https://healthit.com.au/how-big-is-the-internet-and-how-do-we-measure-it/)预测整个区块链网络需要 40ZB 的存储容量）。
 
-区块链还必须有某种类型的激励结构。 出于基于区块链的持久性原因，需要为矿工支付报酬。 当数据被添加到链中时，会为添加数据的节点付费。
+区块链还必须有某种类型的激励结构。 为获得基于区块链的持久性，需要向验证者付款。 数据被添加到链上后，向验证者付款以继续添加数据。
 
 基于区块链持久性的平台：
 
@@ -88,15 +88,14 @@ lang: zh
 
 这些工具大多有自己的 [共识机制](/developers/docs/consensus-mechanisms/) 版本，但一般都是基于[**工作量证明（PoW）**](/developers/docs/consensus-mechanisms/pow/) 或者[**权益证明（PoS）**](/developers/docs/consensus-mechanisms/pos/)。
 
-基于 PoW：
+基于工作量证明：
 
 - Skynet
 - Arweave
+
+基于权益证明：
+
 - 以太坊
-
-基于 PoS：
-
-- [信标链](/upgrades/beacon-chain/)
 - Filecoin
 - 0Chain
 
@@ -169,7 +168,7 @@ lang: zh
 
 ## 延伸阅读 {#further-reading}
 
-- [什么是去中心化存储？](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin)- _CoinMarketCAp_
+- [什么是去中心化存储？](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
 - [击破关于去中心化存储的五种谣传](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
 
 _还有哪些社区资源对您有所帮助？ 请编辑本页面并添加它！_

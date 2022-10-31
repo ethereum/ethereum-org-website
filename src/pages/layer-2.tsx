@@ -16,13 +16,14 @@ import FeedbackCard from "../components/FeedbackCard"
 import Icon from "../components/Icon"
 import InfoBanner from "../components/InfoBanner"
 import Layer2Onboard from "../components/Layer2/Layer2Onboard"
+import Layer2ProductCard from "../components/Layer2ProductCard"
 import Link from "../components/Link"
 import OrderedList from "../components/OrderedList"
 import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
-import Layer2ProductCard from "../components/Layer2ProductCard"
 import ProductList from "../components/ProductList"
+import QuizWidget from "../components/Quiz/QuizWidget"
 import Tooltip from "../components/Tooltip"
 import Translation from "../components/Translation"
 import { CardGrid, Content, Page } from "../components/SharedStyledComponents"
@@ -962,6 +963,9 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <i>- Barnabé Monnot</i>
           </li>
         </ul>
+      </PaddedContent>
+      <PaddedContent>
+        <QuizWidget quizKey="layer-2" />
       </PaddedContent>
       <PaddedContent>
         <FeedbackCard />

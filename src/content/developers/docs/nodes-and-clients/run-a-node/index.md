@@ -119,7 +119,7 @@ The easiest option for running a node with your own hardware is using plug-and-p
 
 An easy and cheap way of running an Ethereum node is to use a single board computer, even with an ARM architecture like the Raspberry Pi. [Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) provides easy-to-run images of multiple execution and consensus client for Raspberry Pi and other ARM boards.
 
-Small, affordable and efficient devices like these are ideal for running a node at home but keep in mind their limited performence.
+Small, affordable and efficient devices like these are ideal for running a node at home but keep in mind their limited performance.
 
 ## Spinning up the node {#spinning-up-node}
 
@@ -146,7 +146,7 @@ As explained before, setting up your own Ethereum node will require running a pa
 
 #### Getting the client software {#getting-the-client}
 
-First, you need to obtain your preferred [execution client](/developers/docs/nodes-and-clients/#execution-clients) and [consensus client](developers/docs/nodes-and-clients/#consensus-clients) software.
+First, you need to obtain your preferred [execution client](/developers/docs/nodes-and-clients/#execution-clients) and [consensus client](/developers/docs/nodes-and-clients/#consensus-clients) software.
 
 You can simply download an executable application or installation package that suits your operating system and architecture. Always verify the signatures and checksums of downloaded packages. Some clients also offer repositories or Docker images for easier installation and updates. All of the clients are open source, so you can also build them from source. This is a more advanced method, but in some cases, it might be required.
 
