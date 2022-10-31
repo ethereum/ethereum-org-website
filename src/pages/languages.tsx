@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { graphql } from "gatsby"
 import styled from "@emotion/styled"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
@@ -167,3 +168,17 @@ const LanguagesPage = () => {
 }
 
 export default LanguagesPage
+
+export const query = graphql`
+  query LanguagesPage($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`
