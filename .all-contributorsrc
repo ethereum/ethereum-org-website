@@ -9444,6 +9444,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "giorgionocera",
+      "name": "Giorgio Nocera",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13519292?v=4",
+      "profile": "https://github.com/giorgionocera",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
