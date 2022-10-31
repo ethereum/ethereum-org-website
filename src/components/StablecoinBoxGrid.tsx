@@ -1,5 +1,5 @@
-import React, { ReactComponentElement, useState } from "react"
-import { Box, Container, Flex, Heading, Text } from "@chakra-ui/react"
+import React, { useState } from "react"
+import { Box, Flex, Heading } from "@chakra-ui/react"
 import { useIntl } from "react-intl"
 import Link, { navigate } from "./Link"
 import Emoji from "./Emoji"
@@ -162,8 +162,11 @@ const GridItem: React.FC<IPropsGridItem> = ({
         sm: `${isOpen ? "column" : "row"}`,
         lg: "column",
       }}
-      justify={{ base: `${isOpen ? "flex-start" : "space-between"}` }}
-      align="center"
+      justify={{
+        base: `${isOpen ? "flex-start" : "space-between"}`,
+        lg: "flex-start",
+      }}
+      align={{ base: "center", lg: "flex-start" }}
       border="1px solid"
       borderColor="text"
       padding={6}
@@ -175,7 +178,7 @@ const GridItem: React.FC<IPropsGridItem> = ({
       }}
     >
       {isOpen ? (
-        <Emoji mb={8} text={emoji} fontSize="8xl" w="100%" display="block" />
+        <Emoji mb={8} text={emoji} fontSize="8xl" />
       ) : (
         <>
           <StyledEmoji emoji={emoji} />
@@ -274,12 +277,11 @@ const StablecoinBoxGrid: React.FC<IProps> = ({ items }) => {
   }
 
   return (
-    <Container
-      gridTemplateColumns={"3fr 1fr"}
-      gridTemplateRows={"3fr 3fr"}
+    <Box
+      gridTemplateColumns="3fr 1fr"
+      gridTemplateRows="3fr 3fr"
       borderRadius="sm"
       my={16}
-      paddingLeft={0}
       display={{ base: "flex", lg: "grid" }}
       flexDirection="column"
       maxW="100%"
@@ -307,7 +309,7 @@ const StablecoinBoxGrid: React.FC<IProps> = ({ items }) => {
           />
         )
       })}
-    </Container>
+    </Box>
   )
 }
 
