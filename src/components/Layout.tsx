@@ -90,7 +90,6 @@ const Layout: React.FC<IProps> = ({
 
   const [isZenMode, setIsZenMode] = useState<boolean>(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState<boolean>(false)
-  const locale = pageContext.i18n.language
 
   // Exit Zen Mode on 'esc' click
   useKeyPress(`Escape`, () => handleZenModeChange(false))

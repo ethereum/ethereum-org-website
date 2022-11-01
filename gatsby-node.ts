@@ -409,14 +409,7 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
       language
     )
 
-    // on dev, we will have 2 pages for the default lang
-    // - 1 for the ones with the prefix `/{defaultLang}/learn/`
-    // - 1 for the ones without the prefix `/learn/`
-    //   we do this to avoid having a 404 on those without the prefix since in
-    //   dev we don't have the redirects from the server
-
-    deletePage(page)
-    createPage<Context>({
+    let newPage = {
       ...page,
       context: {
         ...page.context,
@@ -424,17 +417,38 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
         //display TranslationBanner for translation-component pages that are still in English
         isContentEnglish,
       },
-    })
+    }
 
-    const rootPath = page.path.slice(3)
+    // there seems to be a bug in the i18n plugin where 404 pages get a
+    // duplicated `/lang` in their `matchPath`s
+    if (newPage.matchPath?.includes(`/${language}/${language}/*`)) {
+      newPage = { ...newPage, matchPath: `/${language}/*` }
+    }
+
+    // on dev, we will have 2 pages for the default lang
+    // - 1 for the ones with the prefix `/{defaultLang}/learn/`
+    // - 1 for the ones without the prefix `/learn/`
+    //   we do this to avoid having a 404 on those without the prefix since in
+    //   dev we don't have the redirects from the server
+    deletePage(page)
+
+    if (IS_DEV) {
+      createPage<Context>(newPage)
+    }
+
     // `routed` means that the page have the lang prefix on the url
     // e.g. `/en/learn` or `/en`
-    if (isDefaultLang && i18n.routed && !rootPath.match(/^\/404(\/|.html)$/)) {
-      createRedirect({
-        ...commonRedirectProps,
-        fromPath: rootPath,
-        toPath: page.path,
-      })
+    if (!IS_DEV && i18n.routed) {
+      createPage<Context>(newPage)
+
+      const rootPath = page.path.slice(3)
+      if (isDefaultLang && !rootPath.match(/^\/404(\/|.html)$/)) {
+        createRedirect({
+          ...commonRedirectProps,
+          fromPath: rootPath,
+          toPath: page.path,
+        })
+      }
     }
   }
 }
