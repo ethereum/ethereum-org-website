@@ -46,6 +46,8 @@ The `execution_payload` enables information about transactions to be passed betw
 
 All of these data are collected in a Beacon block, signed, and broadcast to the block proposer's peers, who propagate it on to their peers, etc.
 
+Read more about the [anatomy of blocks](/developers/docs/blocks).
+
 ## What happens to the block? {#what-happens-to-blocks}
 
 The block is added to the block proposer's local database and broadcast to peers over the consensus layer gossip network. When a validator receives the block, it verifies the data inside it, including checking that the block has the correct parent, corresponds to the correct slot, that the proposer index is the expected one, that the RANDAO reveal is valid and that the proposer is not slashed. The `execution_payload` is unbundled and the validator's execution client re-executes the transactions in the list to check the proposed state change. Assuming the block passes all these checks, each validator adds the block to its own canonical chain. The process then starts again in the next slot.
