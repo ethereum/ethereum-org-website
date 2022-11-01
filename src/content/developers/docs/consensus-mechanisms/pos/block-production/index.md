@@ -62,3 +62,4 @@ Read more about [rewards and penalties](/developers/docs/consensus-mechanisms/po
 [Introduction to proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 [Ethereum Consensus specs](www.github.com/ethereum/consensus-specs)
 [Introduction to Gasper](/developers/docs/consensus-mechanisms/pos/)
+[Upgrading Ethereum](https://eth2book.info/)
