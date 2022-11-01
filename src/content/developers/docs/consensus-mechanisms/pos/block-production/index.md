@@ -50,6 +50,12 @@ All of these data are collected in a Beacon block, signed, and broadcast to the 
 
 The block is added to the block proposer's local database and broadcast to peers over the consensus layer gossip network. When a validator receives the block, it verifies the data inside it, including checking that the block has the correct parent, corresponds to the correct slot, that the proposer index is the expected one, that the RANDAO reveal is valid and that the proposer is not slashed. The `execution_payload` is unbundled and the validator's execution client re-executes the transactions in the list to check the proposed state change. Assuming the block passes all these checks, each validator adds the block to its own canonical chain. The process then starts again in the next slot.
 
+## Block rewards {#block-rewards}
+
+The block proposer receives payment for their work. There is a `base_reward` calculated as a function of the number of active validators and their effective balances. The block proposer then receives a fraction of `base_reward` for every valid attestation included in the block. This means that the more validators attest to the block, the greater the block proposer's reward. There is also a reward for whistleblowing on validators that should be slashed, equal to the `1/512 * effective balance` for each slashed validator.
+
+Read more about [rewards and penalties](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)
+
 ## Further reading {#further-reading}
 
 [Introduction to Blocks](/developers/docs/blocks/)
