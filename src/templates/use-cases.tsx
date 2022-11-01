@@ -380,6 +380,15 @@ const UseCasePage = ({
           eventName: "desci",
         },
       },
+      {
+        text: "template-usecase-dropdown-refi",
+        to: "/refi/",
+        matomo: {
+          eventCategory: "use cases menu",
+          eventAction: "click",
+          eventName: "refi",
+        },
+      },
     ],
   }
 
