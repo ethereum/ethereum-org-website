@@ -6,11 +6,11 @@ lang: en
 
 Blocks are the fundamental units of the blockchain. This page explains how they are produced.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 Block production is part of the proof-of-stake protocol. To help understand this page, we recommend you read about [proof-of-stake](src/content/developers/docs/consensus-mechanisms/pos/) and [block architecture](src/content/developers/docs/blocks/).
 
-## Who produces blocks?
+## Who produces blocks? {#who-produces-blocks}
 
 Blocks are produced by validators. Validators are node operators that run validator software as well as their execution and consensus clients, and have deposited at least 32 ETH into the deposit contract. However, each individual validator is only occasionally responsible for producing a block. Time in Etheruem is broken into slots and epochs. Each slot is 12s in real-world time, and 32 slots (6.4 minutes) make up an epoch. Every slot is an opportunity for a block to be added to the blockchain.
 
@@ -20,7 +20,7 @@ Although validators add to RANDAO in each slot, the global RANDAO value is only 
 
 Only one block proposer is selected in each slot. Under normal conditions, a single block producer creates and releases a single block in their dedicated slot. Creating two blocks for the same slot is a slashable offence, often known as "equivocation".
 
-## How is the block created?
+## How is the block created? {#how-is-a-block-created}
 
 The block proposer is expected to broadcast a signed Beacon Block that builds on top of the most recent head of the chain according to the view of their own locally-run fork choice algorithm. The fork choice algorithm applies any queued attestations left over from the previous slot, then finds the block with the greatest accumulated weight of attestations in its history. That block is the parent of the new block the created by the block proposer.
 
@@ -46,8 +46,13 @@ The `execution_payload` enables information about transactions to be passed betw
 
 All of these data are collected in a Beacon block, signed, and broadcast to the block proposer's peers, who propagate it on to their peers, etc.
 
-## What happens to the block?
+## What happens to the block? {#what-happens-to-blocks}
 
-The block is added to the block proposer's local database and broadcast to peers over the consensus layer gossip network. When a validator receives the block, it verifies the data inside it, including checking that the block has the correct parent, corresponds to the correct slot, that the proposer index is the expected one, that the RANDAO reveal is valid and that the propsoer is not slashed. The `execution_payload` is unbundled and the validator's execution client re-executes the transactions in the list to check the proposed state change. Assuming the block passes all these checks, each validator adds the block to its own canonical chain. The process then starts again in the next slot.
+The block is added to the block proposer's local database and broadcast to peers over the consensus layer gossip network. When a validator receives the block, it verifies the data inside it, including checking that the block has the correct parent, corresponds to the correct slot, that the proposer index is the expected one, that the RANDAO reveal is valid and that the proposer is not slashed. The `execution_payload` is unbundled and the validator's execution client re-executes the transactions in the list to check the proposed state change. Assuming the block passes all these checks, each validator adds the block to its own canonical chain. The process then starts again in the next slot.
 
-## Further reading
+## Further reading {#further-reading}
+
+[Introduction to Blocks](/developers/docs/blocks/)
+[Introduction to proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
+[Ethereum Consensus specs](www.github.com/ethereum/consensus-specs)
+[Introduction to Gasper](/developers/docs/consensus-mechanisms/pos/)
