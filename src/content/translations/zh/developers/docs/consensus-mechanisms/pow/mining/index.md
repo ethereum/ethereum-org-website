@@ -64,7 +64,7 @@ lang: zh
 
 ## 挖矿算法 {#mining-algorithm}
 
-以太坊主网只使用过一种挖矿算法 - [“Ethash”](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash)。 Ethhash 是称为[“Dagger-Hashamoto”](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashamoto)的最初研发挖矿算法的继承者。
+以太坊主网只使用过一种挖矿算法 - [“Ethash”](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash)。 Ethhash 是称为[“Dagger-Hashimoto”](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto)的最初研发挖矿算法的继承者。
 
 [有关挖矿算法的更多信息](/developers/docs/consensus-mechanisms/pow/mining-algorithms/)。
 

@@ -103,7 +103,7 @@ sidebarDepth: 2
 - [客户端多样性的重要性](https://our.status.im/the-importance-of-client-diversity/)
 - [以太坊节点服务列表](https://ethereumnodes.com/)
 - [客户端多样性问题的“五个原因”](https://notes.ethereum.org/@afhGjrKfTKmksTOtqhB9RQ/BJGj7uh08)
-- [以太坊多样性及其解决方法 (Youtube)](https://www.youtube.com/watch?v=1hZgCaiqwfU)
+- [以太坊多样性及其解决方法 (YouTube)](https://www.youtube.com/watch?v=1hZgCaiqwfU)
 - [clientdiversity.org](https://clientdiversity.org/)
 
 ## 相关主题 {#related-topics}

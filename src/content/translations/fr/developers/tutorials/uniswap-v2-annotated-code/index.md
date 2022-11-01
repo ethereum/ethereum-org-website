@@ -654,7 +654,7 @@ Ceci est un test d'intégrité visant à s'assurer que nous ne perdons rien lors
 
 Mettre à jour `réserve0` et `réserve1`, et si nécessaire les accumulateurs de prix, l'horodatage et émettre un événement.
 
-##### Synchroniser ou ignorer {#sync-or-skim}
+##### Synchroniser ou ignorer
 
 Il est possible que les soldes réels se désynchronisent des réserves que l'échange de la paire aura généré. Il n'y a aucun moyen de retirer des jetons sans l'accord du contrat, mais pour les dépôts c'est une autre affaire. Un compte peut transférer des jetons à l'échange sans avoir appelé `mint` ou `swap`.
 

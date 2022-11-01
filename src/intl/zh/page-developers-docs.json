@@ -58,7 +58,7 @@
   "docs-nav-mev-description": "从除了区块奖励之外的以太坊区块链中提取价值",
   "docs-nav-mining": "矿工",
   "docs-nav-mining-algorithms": "挖矿算法",
-  "docs-nav-dagger-hashamoto": "Dagger-Hashamoto 算法",
+  "docs-nav-dagger-hashimoto": "Dagger-Hashimoto 算法",
   "docs-nav-ethash": "Ethash",
   "docs-nav-networks": "网络",
   "docs-nav-networks-description": "部署以太坊，包括测试网络",

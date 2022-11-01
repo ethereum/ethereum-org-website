@@ -9399,6 +9399,105 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "victorpatru",
+      "name": "Victor Patru",
+      "avatar_url": "https://avatars.githubusercontent.com/u/102596893?v=4",
+      "profile": "http://victorpatru.xyz",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "vaishnav-mk",
+      "name": "wishee",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84540554?v=4",
+      "profile": "https://vaishnav.tech",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Harshil-Gupta",
+      "name": "Harshil Gupta",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53968071?v=4",
+      "profile": "https://github.com/Harshil-Gupta",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "vanshika-srivastava",
+      "name": "Vanshika Srivastava",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76511019?v=4",
+      "profile": "https://github.com/vanshika-srivastava",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "shariqanwar20",
+      "name": "Shariq Anwar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61353122?v=4",
+      "profile": "https://github.com/shariqanwar20",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "giorgionocera",
+      "name": "Giorgio Nocera",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13519292?v=4",
+      "profile": "https://github.com/giorgionocera",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "alexeevcc",
+      "name": "Dmitry Alexeev",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61043916?v=4",
+      "profile": "https://cyberacademy.dev",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "af-afk",
+      "name": "Alex",
+      "avatar_url": "https://avatars.githubusercontent.com/u/71931113?v=4",
+      "profile": "https://github.com/af-afk",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "benlazzero",
+      "name": "benlazzero",
+      "avatar_url": "https://avatars.githubusercontent.com/u/85390423?v=4",
+      "profile": "https://github.com/benlazzero",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "ankitzm",
+      "name": "Ankit Singh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66105983?v=4",
+      "profile": "https://github.com/ankitzm",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "mhairimcalpine",
+      "name": "mhairimcalpine",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76955258?v=4",
+      "profile": "https://github.com/mhairimcalpine",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
