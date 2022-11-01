@@ -32,6 +32,7 @@
     "gatsby-plugin-emotion": "^7.19.0",
     "gatsby-plugin-gatsby-cloud": "^4.20.0",
     "gatsby-plugin-image": "^2.21.0",
+    "gatsby-plugin-layout": "^3.24.0",
     "gatsby-plugin-manifest": "^4.21.0",
     "gatsby-plugin-matomo": "^0.9.0",
     "gatsby-plugin-mdx": "^3.0.0",

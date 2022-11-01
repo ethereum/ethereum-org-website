@@ -255,6 +255,15 @@ const config: GatsbyConfig = {
         name: `locale`,
       },
     },
+    // Wraps the entire page with a custom layout component
+    // Note: keep this before the i18n plugin declaration in order to have the
+    // i18n provider wrapping the layout component
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: path.resolve(`./src/components/Layout`),
+      },
+    },
     {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
@@ -262,6 +271,7 @@ const config: GatsbyConfig = {
         languages: supportedLanguages,
         defaultLanguage: defaultLanguage,
         generateDefaultLanguagePage: true,
+        redirect: false,
         // if you are using Helmet, you must include siteUrl, and make sure you add http:https
         siteUrl,
         // if you are using trailingSlash gatsby config include it here, as well (the default is 'always')
