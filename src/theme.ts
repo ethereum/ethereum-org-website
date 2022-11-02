@@ -2,7 +2,7 @@ import { mix } from "polished"
 
 const white = "#ffffff"
 const black = "#000000"
-const primaryLight = "#1c1cff"
+const primaryLight = "#1718A5"
 const primaryDark = "#ff7324"
 const success = "#109e62"
 const fail = "#b80000"
