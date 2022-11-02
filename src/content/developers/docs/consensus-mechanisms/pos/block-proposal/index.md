@@ -1,6 +1,6 @@
 ---
-title: Block production
-description: Explanation of how blocks are produced in proof-of-stake Ethereum.
+title: Block proposal
+description: Explanation of how blocks are proposed in proof-of-stake Ethereum.
 lang: en
 ---
 
@@ -61,7 +61,11 @@ Read more about [rewards and penalties](/developers/docs/consensus-mechanisms/po
 ## Further reading {#further-reading}
 
 [Introduction to Blocks](/developers/docs/blocks/)
+
 [Introduction to proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
+
 [Ethereum Consensus specs](www.github.com/ethereum/consensus-specs)
+
 [Introduction to Gasper](/developers/docs/consensus-mechanisms/pos/)
+
 [Upgrading Ethereum](https://eth2book.info/)

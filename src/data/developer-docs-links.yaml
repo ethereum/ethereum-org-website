@@ -81,6 +81,8 @@
               to: /developers/docs/consensus-mechanisms/pos/rewards-and-penalties/
             - id: docs-nav-keys
               to: /developers/docs/consensus-mechanisms/pos/keys/
+            - id: docs-nav-block-proposal
+              to: /developers/docs/consensus-mechanisms/pos/block-proposal/
 - id: docs-nav-ethereum-stack
   path: /developers/docs/
   items:
