@@ -41,6 +41,8 @@ Once the new node receives a list of neighbours from the bootnode, it begins a P
 start client --> connect to bootnode --> bond to bootnode --> find neighbours --> bond to neighbours
 ```
 
+Execution clients are currently using the [Discv4](https://github.com/ethereum/devp2p/blob/master/discv4.md) discovery protocol and there is an active effort to migrate to the [Discv5](https://github.com/ethereum/devp2p/tree/master/discv5) protocol.
+
 #### ENR: Ethereum Node Records {#enr}
 
 The [Ethereum Node Record (ENR)](/developers/docs/networking-layer/network-addresses/) is an object that contains three basic elements: a signature (hash of record contents made according to some agreed identity scheme), a sequence number that tracks changes to the record, and an arbitrary list of key:value pairs. This is a future-proof format that allows easier exchange of identifying information between new peers and is the preferred [network address](/developers/docs/networking-layer/network-addresses) format for Ethereum nodes.
