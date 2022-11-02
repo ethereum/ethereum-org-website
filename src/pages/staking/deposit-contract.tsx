@@ -128,6 +128,7 @@ const Address = styled.div`
 
 const CopyButton = styled(ButtonSecondary)`
   margin-right: 1.5rem;
+  margin-bottom: 1rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin-right: 0rem;
     margin-top: 1rem;

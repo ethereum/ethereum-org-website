@@ -360,6 +360,7 @@ const randomizedWalletData = shuffle(walletData)
 
 const FindWalletPage = ({ data, location }) => {
   const { t } = useTranslation()
+  const resetWalletFilter = React.useRef(() => {})
   const wrapperRef = useRef<HTMLDivElement>(null)
 
   const [showFeatureFilters, setShowFeatureFilters] = useState(false)
@@ -492,6 +493,7 @@ const FindWalletPage = ({ data, location }) => {
             aria-labelledby="reset-filter"
             onClick={() => {
               resetFilters()
+              resetWalletFilter.current()
               trackCustomEvent({
                 eventCategory: "WalletFilterReset",
                 eventAction: `WalletFilterReset clicked`,
@@ -511,6 +513,7 @@ const FindWalletPage = ({ data, location }) => {
           <div>
             {showFeatureFilters ? (
               <WalletFilterSidebar
+                resetWalletFilter={resetWalletFilter}
                 filters={filters}
                 updateFilterOption={updateFilterOption}
                 updateFilterOptions={updateFilterOptions}
@@ -796,6 +799,11 @@ export const query = graphql`
       }
     }
     enkrypt: file(relativePath: { eq: "wallets/enkrypt.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    gridplus: file(relativePath: { eq: "wallets/gridplus.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }

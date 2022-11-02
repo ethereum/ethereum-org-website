@@ -654,7 +654,7 @@ Ini adalah pemeriksaan kewarasan untuk memastikan kita tidak mengalami kerugian 
 
 Perbarui `reserve0` dan `reserve1`, dan jika diperlukan pengumpul harga dan stempel waktu dan pancarkan aksi.
 
-##### Sync or Skim {#sync-or-skim}
+##### Sync or Skim
 
 Saldo asli yang tidak tersinkronisasi dengan cadangan yang dianggap bursa pasangan sebagai miliknya mungkin terjadi. Tidak ada cara untuk menarik token tanpa persetujuan kontrak, tetapi setoran adalah masalah yang berbeda. Suatu akun dapat mentransfer token ke bursa tanpa memanggil `cetak` atau `tukar`.
 

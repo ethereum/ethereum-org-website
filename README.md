@@ -1482,6 +1482,19 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center"><a href="https://github.com/crypto8893"><img src="https://avatars.githubusercontent.com/u/115051650?v=4?s=100" width="100px;" alt="crypto8893"/><br /><sub><b>crypto8893</b></sub></a><br /><a href="#content-crypto8893" title="Content">🖋</a></td>
+      <td align="center"><a href="http://victorpatru.xyz"><img src="https://avatars.githubusercontent.com/u/102596893?v=4?s=100" width="100px;" alt="Victor Patru"/><br /><sub><b>Victor Patru</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=victorpatru" title="Code">💻</a></td>
+      <td align="center"><a href="https://vaishnav.tech"><img src="https://avatars.githubusercontent.com/u/84540554?v=4?s=100" width="100px;" alt="wishee"/><br /><sub><b>wishee</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=vaishnav-mk" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/Harshil-Gupta"><img src="https://avatars.githubusercontent.com/u/53968071?v=4?s=100" width="100px;" alt="Harshil Gupta"/><br /><sub><b>Harshil Gupta</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Harshil-Gupta" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/vanshika-srivastava"><img src="https://avatars.githubusercontent.com/u/76511019?v=4?s=100" width="100px;" alt="Vanshika Srivastava"/><br /><sub><b>Vanshika Srivastava</b></sub></a><br /><a href="#ideas-vanshika-srivastava" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center"><a href="https://github.com/shariqanwar20"><img src="https://avatars.githubusercontent.com/u/61353122?v=4?s=100" width="100px;" alt="Shariq Anwar"/><br /><sub><b>Shariq Anwar</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=shariqanwar20" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/giorgionocera"><img src="https://avatars.githubusercontent.com/u/13519292?v=4?s=100" width="100px;" alt="Giorgio Nocera"/><br /><sub><b>Giorgio Nocera</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=giorgionocera" title="Documentation">📖</a></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="https://cyberacademy.dev"><img src="https://avatars.githubusercontent.com/u/61043916?v=4?s=100" width="100px;" alt="Dmitry Alexeev"/><br /><sub><b>Dmitry Alexeev</b></sub></a><br /><a href="#content-alexeevcc" title="Content">🖋</a></td>
+      <td align="center"><a href="https://github.com/af-afk"><img src="https://avatars.githubusercontent.com/u/71931113?v=4?s=100" width="100px;" alt="Alex"/><br /><sub><b>Alex</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=af-afk" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/benlazzero"><img src="https://avatars.githubusercontent.com/u/85390423?v=4?s=100" width="100px;" alt="benlazzero"/><br /><sub><b>benlazzero</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=benlazzero" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/ankitzm"><img src="https://avatars.githubusercontent.com/u/66105983?v=4?s=100" width="100px;" alt="Ankit Singh"/><br /><sub><b>Ankit Singh</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ankitzm" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/mhairimcalpine"><img src="https://avatars.githubusercontent.com/u/76955258?v=4?s=100" width="100px;" alt="mhairimcalpine"/><br /><sub><b>mhairimcalpine</b></sub></a><br /><a href="#content-mhairimcalpine" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>

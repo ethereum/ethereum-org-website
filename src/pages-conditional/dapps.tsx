@@ -555,6 +555,13 @@ const DappsPage = ({
       image: getImage(data.dai),
       alt: t("page-dapps-oasis-logo-alt"),
     },
+    {
+      title: "PWN",
+      description: translateMessageId("page-dapps-dapp-description-pwn", intl),
+      link: "https://pwn.xyz",
+      image: getImage(data.pwn),
+      alt: translateMessageId("page-dapps-pwn-image-alt", intl),
+    },
   ]
 
   const dex = [
@@ -1635,6 +1642,9 @@ export const query = graphql`
       ...dappImage
     }
     poap: file(relativePath: { eq: "dapps/poap.png" }) {
+      ...dappImage
+    }
+    pwn: file(relativePath: { eq: "dapps/pwn.png" }) {
       ...dappImage
     }
   }

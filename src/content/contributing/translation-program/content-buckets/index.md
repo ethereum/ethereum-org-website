@@ -182,7 +182,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Network adresses](/developers/docs/networking-layer/network-addresses/)
 - [Simple serialize](/developers/docs/data-structures-and-encoding/ssz/)
 - [Mining algorithms](/developers/docs/consensus-mechanisms/pow/mining-algorithms/)
-- [Dagger-Hashamoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashamoto/)
+- [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto/)
 - [Ethash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash/)
 - [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/)
 - [Weak subjectivity](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/)
