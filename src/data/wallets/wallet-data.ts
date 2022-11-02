@@ -2261,7 +2261,7 @@ const walletData: WalletData[] = [
     windows: false,
     macOS: false,
     firefox: false,
-    chromium: true,
+    chromium: false,
     hardware: true,
     open_source: false,
     repo_url: "https://github.com/GridPlus",
