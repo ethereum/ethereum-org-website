@@ -111,6 +111,7 @@ Explore projects and join the DeSci community.
 - [Cherubs DAO: NFT funded and DAO governed impact fund for mental health & brain wellness](https://cherubsdao.com/)
 - [CureDAO: Community-Owned Precision Health Platform](https://docs.curedao.org/)
 - [IdeaMarkets: enabling decentralized scientifc credibility](https://ideamarket.io/)
+- [Data Lake: the global movement of medical data donation](https://data-lake.co/)
 
 ## Further reading {#further-reading}
 
