@@ -414,7 +414,7 @@ const questionBank: QuestionBank = {
         explanation: "Sign-in with Twitter is not censorship resistant.",
       },
     ],
-    correctAnswerId: "c005-d",
+    correctAnswerId: "c005-c",
   },
   // Wallets
   d001: {
