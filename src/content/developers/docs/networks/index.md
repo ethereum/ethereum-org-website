@@ -34,7 +34,7 @@ ETH on testnets has no real value; therefore, there are no markets for testnet E
 
 #### Goerli {#goerli}
 
-Goerli is a proof-of-stake testnet. It is expected to be maintained long-term as a stable testnet for application developers. Before its testnet merge, Goerli was a proof-of-authority testnet.
+Goerli is a proof-of-stake testnet, and is the recommended default testnet for testing of validating and staking.
 
 - [Website](https://goerli.net/)
 - [GitHub](https://github.com/goerli/testnet)
@@ -47,9 +47,11 @@ Goerli is a proof-of-stake testnet. It is expected to be maintained long-term as
 - [Alchemy Goerli Faucet](https://goerlifaucet.com/)
 - [All That Node Goerli Faucet](https://www.allthatnode.com/faucet/ethereum.dsrv)
 
+To launch a Validator on Goerli testnet, use ethstaker's ["cheap goerli validator" launchpad](https://goerli.launchpad.ethstaker.cc/en/).
+
 #### Sepolia {#sepolia}
 
-Sepolia is a proof-of-stake testnet. Although Sepolia is still running, it is not currently planned to be maintained long-term. Before undergoing The Merge in June 2022, Sepolia was a proof-of-work testnet.
+Sepolia is a proof-of-stake testnet, and is the recommended default testnet for application development.
 
 - [Website](https://sepolia.dev/)
 - [GitHub](https://github.com/goerli/sepolia)
