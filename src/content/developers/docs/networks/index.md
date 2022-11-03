@@ -56,7 +56,7 @@ Goerli is a proof-of-stake testnet. Goerli will be maintained long term, and is 
 
 #### Sepolia {#sepolia}
 
-Sepolia is a proof-of-stake testnet. Sepolia will be maintained long term, and is recommended for users and developers who want a lighter weight chain to sync to and interact with.. Before undergoing The Merge in June 2022, Sepolia was a proof-of-work testnet.
+Sepolia is a proof-of-stake testnet. Sepolia will be maintained long-term, and is recommended for users and developers who want a lighter-weight chain to sync to and interact with. Before undergoing The Merge in June 2022, Sepolia was a proof-of-work testnet.
 
 [Notable properties](https://blog.ethereum.org/2022/06/21/testnet-deprecation):
 
