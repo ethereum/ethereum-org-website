@@ -135,10 +135,12 @@ _Typically used for decentralized development and governance of protocols and da
 
 - [Ethereum community DAOs](/community/get-involved/#decentralized-autonomous-organizations-daos)
 - [DAOHaus's list of DAOs](https://app.daohaus.club/explore)
+- [Tally.xyz list of DAOs](https://www.tally.xyz)
 
 ### Start a DAO {#start-a-dao}
 
 - [Summon a DAO with DAOHaus](https://app.daohaus.club/summon)
+- [Start a Governor DAO with Tally](https://www.tally.xyz/add-a-dao)
 - [Create an Aragon-powered DAO](https://aragon.org/product)
 - [Start a colony](https://colony.io/)
 - [Create a DAO with DAOstack's holographic consensus](https://alchemy.daostack.io/daos/create)

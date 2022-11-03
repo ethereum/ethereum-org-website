@@ -45,6 +45,7 @@ Goerli is a proof-of-stake testnet. It is expected to be maintained long-term as
 - [Goerli faucet](https://faucet.goerli.mudit.blog/)
 - [Chainlink faucet](https://faucets.chain.link/)
 - [Alchemy Goerli Faucet](https://goerlifaucet.com/)
+- [All That Node Goerli Faucet](https://www.allthatnode.com/faucet/ethereum.dsrv)
 
 #### Sepolia {#sepolia}
 

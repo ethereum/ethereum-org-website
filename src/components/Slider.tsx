@@ -1,101 +1,8 @@
-import React, { useCallback, useEffect, useState } from "react"
-import { useTheme } from "@emotion/react"
-import styled from "@emotion/styled"
+import React, { ReactNode, useCallback, useEffect, useState } from "react"
 import useEmblaCarousel from "embla-carousel-react"
 
-import Icon from "./Icon"
-
-const Embla = styled.div`
-  position: relative;
-  padding: 2rem;
-  background-color: ${({ theme }) => theme.colors.slider.bg};
-  border: 1px solid ${({ theme }) => theme.colors.slider.border};
-  border-radius: 0.3rem;
-`
-
-const EmblaViewport = styled.div`
-  overflow: hidden;
-  width: 100%;
-
-  .is-draggable {
-    cursor: move;
-    cursor: grab;
-  }
-
-  .is-dragging {
-    cursor: grabbing;
-  }
-`
-
-const EmblaContainer = styled.div`
-  display: flex;
-`
-
-export const EmblaSlide = styled.div`
-  position: relative;
-  min-width: 100%;
-
-  h2,
-  h3 {
-    margin-top: 0;
-  }
-`
-
-const Buttons = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-bottom: 1rem;
-  margin-left: 0;
-
-  @media (min-width: ${(props) => props.theme.breakpoints.s}) {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    justify-content: left;
-
-    margin-bottom: 2rem;
-    margin-left: 2rem;
-  }
-`
-
-const Button = styled.button`
-  background-color: ${({ theme, disabled }) =>
-    disabled ? theme.colors.slider.btnBgDisabled : theme.colors.slider.btnBg};
-  border: 0;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 0.8rem;
-  cursor: pointer;
-
-  &:last-child {
-    margin-right: 0;
-  }
-`
-
-const Dots = styled.div`
-  text-align: center;
-`
-
-const DotButton = styled.button<{ selected: boolean }>`
-  width: 5px;
-  height: 5px;
-  padding: 0;
-  border: 0;
-  border-radius: 50%;
-  background-color: ${({ theme, selected }) =>
-    selected ? theme.colors.slider.dotActive : theme.colors.slider.dot};
-  margin-right: 1rem;
-
-  &:last-child {
-    margin-right: 0;
-  }
-`
+import { Box, Center, Flex, IconButton } from "@chakra-ui/react"
+import { MdChevronLeft, MdChevronRight } from "react-icons/md"
 
 export interface IProps {
   children?: React.ReactNode
@@ -103,7 +10,6 @@ export interface IProps {
 }
 
 const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
-  const theme = useTheme()
   const [emblaRef, embla] = useEmblaCarousel()
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false)
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false)
@@ -113,7 +19,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
   const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla])
   const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla])
   const scrollTo = useCallback(
-    (index) => {
+    (index: number) => {
       if (embla) {
         embla.scrollTo(index)
       }
@@ -146,42 +52,93 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
   }, [embla, setScrollSnaps, onSelect])
 
   return (
-    <Embla>
-      <EmblaViewport ref={emblaRef}>
-        <EmblaContainer>{children}</EmblaContainer>
-      </EmblaViewport>
-      <Buttons>
-        <Button onClick={scrollPrev} disabled={!prevBtnEnabled}>
-          <Icon
-            name="arrowLeftIos"
-            color={
-              prevBtnEnabled
-                ? theme.colors.slider.btnColor
-                : theme.colors.slider.btnColorDisabled
-            }
-          />
-        </Button>
-        <Button onClick={scrollNext} disabled={!nextBtnEnabled}>
-          <Icon
-            name="arrowRightIos"
-            color={
-              nextBtnEnabled
-                ? theme.colors.slider.btnColor
-                : theme.colors.slider.btnColorDisabled
-            }
-          />
-        </Button>
-      </Buttons>
-      <Dots>
+    <Box
+      position="relative"
+      p={8}
+      borderWidth="1px"
+      borderStyle="solid"
+      borderRadius="base"
+      w="full"
+      bg="sliderBg"
+    >
+      <Box overflow="hidden" ref={emblaRef}>
+        <Flex>{children}</Flex>
+      </Box>
+      <Flex
+        justifyContent={{ sm: "left", base: "center" }}
+        mb={{ sm: 0, base: 4 }}
+      >
+        <IconButton
+          aria-label="MdChevronLeft"
+          onClick={scrollPrev}
+          icon={<MdChevronLeft fontSize={24} focusable={true} />}
+          isRound
+          mr="0.8rem"
+          _hover={{ boxShadow: "none" }}
+          _focus={{ boxShadow: "none" }}
+          bg={prevBtnEnabled ? "sliderBtnBg" : "sliderBtnBgDisabled"}
+          size="sm"
+          color={prevBtnEnabled ? "sliderBtnColor" : "sliderBtnColorDisabled"}
+        />
+        <IconButton
+          aria-label="MdChevronRight"
+          onClick={scrollNext}
+          icon={<MdChevronRight fontSize={24} focusable={true} />}
+          isRound
+          _hover={{ boxShadow: "none" }}
+          _focus={{ boxShadow: "none" }}
+          bg={nextBtnEnabled ? "sliderBtnBg" : "sliderBtnBgDisabled"}
+          size="sm"
+          color={nextBtnEnabled ? "sliderBtnColor" : "sliderBtnColorDisabled"}
+        />
+      </Flex>
+      <Center
+        position={{ sm: "absolute" }}
+        bottom={{ sm: "2.9rem" }}
+        left={{ sm: "calc((100% - 68px)/2)" }}
+      >
         {scrollSnaps.map((_, index) => (
-          <DotButton
+          <Box
             key={index}
-            selected={index === selectedIndex}
+            backgroundColor={
+              index === selectedIndex ? "sliderDotActive" : "sliderDot"
+            }
+            border={0}
+            borderRadius="50%"
+            width="5px"
+            height="5px"
+            padding={0}
+            cursor="pointer"
             onClick={() => scrollTo(index)}
+            sx={{
+              marginRight: "1rem",
+              "&:last-child": {
+                marginRight: 0,
+              },
+            }}
           />
         ))}
-      </Dots>
-    </Embla>
+      </Center>
+    </Box>
+  )
+}
+
+export const EmblaSlide: React.FC<{ children: ReactNode }> = ({ children }) => {
+  return (
+    <Box
+      position="relative"
+      minWidth="full"
+      sx={{
+        h2: {
+          marginTop: 0,
+        },
+        h3: {
+          marginTop: 0,
+        },
+      }}
+    >
+      {children}
+    </Box>
   )
 }
 

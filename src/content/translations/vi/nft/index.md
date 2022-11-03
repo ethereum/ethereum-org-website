@@ -4,7 +4,6 @@ description: Tổng quan về NFT trên Ethereum
 lang: vi
 template: use-cases
 emoji: ":frame_with_picture:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/infrastructure_transparent.png
 alt: Một biểu tượng Eth được hiển thị ở dạng ảnh ba chiều.

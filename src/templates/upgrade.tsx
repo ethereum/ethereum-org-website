@@ -43,6 +43,7 @@ import Emoji from "../components/OldEmoji"
 import YouTube from "../components/YouTube"
 import MergeInfographic from "../components/MergeInfographic"
 import FeedbackCard from "../components/FeedbackCard"
+import QuizWidget from "../components/Quiz/QuizWidget"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
@@ -183,6 +184,7 @@ const components = {
   YouTube,
   ExpandableCard,
   MergeInfographic,
+  QuizWidget,
 }
 
 const Title = styled.h1`
