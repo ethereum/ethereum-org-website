@@ -2,6 +2,7 @@
 import React, { ReactNode, useState } from "react"
 import { Icon } from "@chakra-ui/react"
 import styled from "@emotion/styled"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 // Component imports
 import Button from "./Button"
 import Translation from "./Translation"
@@ -51,6 +52,7 @@ const FeedbackCard: React.FC<IProps> = ({
   isArticle = false,
   className,
 }) => {
+  const { t } = useTranslation()
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   const surveyUrl = useSurvey(feedbackSubmitted)
 
@@ -88,10 +90,13 @@ const FeedbackCard: React.FC<IProps> = ({
       <Content>
         <Title>{getTitle(feedbackSubmitted)}</Title>
         {feedbackSubmitted && (
-          <p>
-            <Translation id="feedback-widget-thank-you-subtitle" />{" "}
-            <Translation id="feedback-widget-thank-you-subtitle-ext" />
-          </p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: `${t("feedback-widget-thank-you-subtitle")} ${t(
+                "feedback-widget-thank-you-subtitle-ext"
+              )}`,
+            }}
+          />
         )}
         <ButtonContainer>
           {!feedbackSubmitted ? (

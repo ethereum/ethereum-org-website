@@ -649,17 +649,21 @@ const WhatIsEthereumPage = ({
                   <p>
                     <Translation id="page-what-is-ethereum-slide-2-desc-1" />
                   </p>
-                  <p>
-                    <Translation id="page-what-is-ethereum-slide-2-desc-2" />
-                  </p>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: t("page-what-is-ethereum-slide-2-desc-2"),
+                    }}
+                  />
                 </EmblaSlide>
                 <EmblaSlide>
                   <h3>
                     <Translation id="page-what-is-ethereum-slide-3-title" />
                   </h3>
-                  <p>
-                    <Translation id="page-what-is-ethereum-slide-3-desc-1" />
-                  </p>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: t("page-what-is-ethereum-slide-3-desc-1"),
+                    }}
+                  />
                 </EmblaSlide>
                 <EmblaSlide>
                   <h3>

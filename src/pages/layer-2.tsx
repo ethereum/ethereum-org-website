@@ -552,12 +552,16 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <h2>
               <Translation id="layer-2-why-do-we-need-layer-2-title" />
             </h2>
-            <p>
-              <Translation id="layer-2-why-do-we-need-layer-2-1" />
-            </p>
-            <p>
-              <Translation id="layer-2-why-do-we-need-layer-2-2" />
-            </p>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: t("layer-2-why-do-we-need-layer-2-1"),
+              }}
+            />
+            <p
+              dangerouslySetInnerHTML={{
+                __html: t("layer-2-why-do-we-need-layer-2-2"),
+              }}
+            />
 
             <h3>
               <Translation id="layer-2-why-do-we-need-layer-2-scalability" />
@@ -565,9 +569,11 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <p>
               <Translation id="layer-2-why-do-we-need-layer-2-scalability-1" />
             </p>
-            <p>
-              <Translation id="layer-2-why-do-we-need-layer-2-scalability-2" />
-            </p>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: t("layer-2-why-do-we-need-layer-2-scalability-2"),
+              }}
+            />
             <Link to="/upgrades/vision/">
               <Translation id="layer-2-why-do-we-need-layer-2-scalability-3" />
             </Link>
@@ -603,9 +609,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <h3>
               <Translation id="layer-2-rollups-title" />
             </h3>
-            <p>
-              <Translation id="layer-2-rollups-1" />
-            </p>
+            <p dangerouslySetInnerHTML={{ __html: t("layer-2-rollups-1") }} />
             <p>
               <Translation id="layer-2-rollups-2" />
             </p>
@@ -673,9 +677,9 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
         <p>
           <Translation id="layer-2-use-layer-2-1" />
         </p>
-        <p>
-          <Translation id="layer-2-contract-accounts" />
-        </p>
+        <p
+          dangerouslySetInnerHTML={{ __html: t("layer-2-contract-accounts") }}
+        />
         <h3>
           <Translation id="layer-2-use-layer-2-generalized-title" />
         </h3>
@@ -843,12 +847,16 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
           <p>
             <Translation id="layer-2-faq-question-4-description-1" />
           </p>
-          <p>
-            <Translation id="layer-2-faq-question-4-description-2" />
-          </p>
-          <p>
-            <Translation id="layer-2-faq-question-4-description-3" />{" "}
-          </p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: t("layer-2-faq-question-4-description-2"),
+            }}
+          />
+          <p
+            dangerouslySetInnerHTML={{
+              __html: t("layer-2-faq-question-4-description-3"),
+            }}
+          />
           <p>
             <Link to="/bridges/">
               <Translation id="layer-2-more-on-bridges" />
@@ -862,9 +870,11 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
               <Translation id="layer-2-faq-question-5-view-listing-policy" />
             </Link>
           </p>
-          <p>
-            <Translation id="layer-2-faq-question-5-description-2" />
-          </p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: t("layer-2-faq-question-5-description-2"),
+            }}
+          />
         </ExpandableCard>
       </PaddedContent>
 
