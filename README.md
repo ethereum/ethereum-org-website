@@ -1498,6 +1498,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/itsthedoom"><img src="https://avatars.githubusercontent.com/u/32095408?v=4?s=100" width="100px;" alt="William Doom"/><br /><sub><b>William Doom</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=itsthedoom" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/AsheBarrett"><img src="https://avatars.githubusercontent.com/u/117123553?v=4?s=100" width="100px;" alt="AsheBarrett"/><br /><sub><b>AsheBarrett</b></sub></a><br /><a href="#translation-AsheBarrett" title="Translation">🌍</a></td>
     </tr>
+    <tr>
+      <td align="center"><a href="https://github.com/Hitisha-G"><img src="https://avatars.githubusercontent.com/u/89304585?v=4?s=100" width="100px;" alt="Hitishaa"/><br /><sub><b>Hitishaa</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Hitisha-G" title="Documentation">📖</a></td>
+    </tr>
   </tbody>
 </table>
 
