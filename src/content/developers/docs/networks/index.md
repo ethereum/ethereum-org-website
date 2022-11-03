@@ -34,7 +34,7 @@ ETH on testnets has no real value; therefore, there are no markets for testnet E
 
 #### Goerli {#goerli}
 
-Goerli is a proof-of-stake testnet. Goerli will be maintained long term, and is recommended for stakers to test protocol upgrades and developers who want to interact with a large existing state. Before its testnet merge, Goerli was a proof-of-authority testnet.
+Goerli is a proof-of-stake testnet. Goerli will be maintained long-term, and is recommended for stakers to test protocol upgrades and developers who want to interact with a large existing state. Before its testnet merge, Goerli was a proof-of-authority testnet.
 
 [Notable properties](https://blog.ethereum.org/2022/06/21/testnet-deprecation):
 
