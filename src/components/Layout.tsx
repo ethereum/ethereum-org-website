@@ -149,43 +149,41 @@ const Layout: React.FC<IProps> = ({
       <IntlProvider locale={locale!} key={locale} messages={messages}>
         <ApolloProvider client={client}>
           <ThemeProvider theme={theme}>
-            <SkipLink hrefId="#main-content" />
-            <TranslationBanner
-              shouldShow={shouldShowTranslationBanner}
-              isPageContentEnglish={isPageContentEnglish}
-              isPageRightToLeft={isPageRightToLeft}
-              originalPagePath={pageContext.originalPath!}
-            />
-            <TranslationBannerLegal
-              shouldShow={isLegal}
-              isPageRightToLeft={isPageRightToLeft}
-              originalPagePath={pageContext.originalPath!}
-            />
-            <ContentContainer>
-              <VisuallyHidden isHidden={isZenMode}>
-                <Nav path={path} />
-                {shouldShowSideNav && <SideNavMobile path={path} />}
-              </VisuallyHidden>
-              <SkipLinkAnchor id="main-content" />
-              <MainContainer>
-                {shouldShowSideNav && (
-                  <VisuallyHidden isHidden={isZenMode}>
-                    <SideNav path={path} />
-                  </VisuallyHidden>
-                )}
-                <MainContent>
-                  <ZenModeContext.Provider
-                    value={{ isZenMode, handleZenModeChange }}
-                  >
+            <ZenModeContext.Provider value={{ isZenMode, handleZenModeChange }}>
+              <SkipLink hrefId="#main-content" />
+              <TranslationBanner
+                shouldShow={shouldShowTranslationBanner}
+                isPageContentEnglish={isPageContentEnglish}
+                isPageRightToLeft={isPageRightToLeft}
+                originalPagePath={pageContext.originalPath!}
+              />
+              <TranslationBannerLegal
+                shouldShow={isLegal}
+                isPageRightToLeft={isPageRightToLeft}
+                originalPagePath={pageContext.originalPath!}
+              />
+              <ContentContainer>
+                <VisuallyHidden>
+                  <Nav path={path} />
+                  {shouldShowSideNav && <SideNavMobile path={path} />}
+                </VisuallyHidden>
+                <SkipLinkAnchor id="main-content" />
+                <MainContainer>
+                  {shouldShowSideNav && (
+                    <VisuallyHidden>
+                      <SideNav path={path} />
+                    </VisuallyHidden>
+                  )}
+                  <MainContent>
                     <Main>{children}</Main>
-                  </ZenModeContext.Provider>
-                </MainContent>
-              </MainContainer>
-              <VisuallyHidden isHidden={isZenMode}>
-                <Footer />
-              </VisuallyHidden>
-              <FeedbackWidget />
-            </ContentContainer>
+                  </MainContent>
+                </MainContainer>
+                <VisuallyHidden>
+                  <Footer />
+                </VisuallyHidden>
+                <FeedbackWidget />
+              </ContentContainer>
+            </ZenModeContext.Provider>
           </ThemeProvider>
         </ApolloProvider>
       </IntlProvider>
