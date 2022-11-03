@@ -1495,6 +1495,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/benlazzero"><img src="https://avatars.githubusercontent.com/u/85390423?v=4?s=100" width="100px;" alt="benlazzero"/><br /><sub><b>benlazzero</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=benlazzero" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/ankitzm"><img src="https://avatars.githubusercontent.com/u/66105983?v=4?s=100" width="100px;" alt="Ankit Singh"/><br /><sub><b>Ankit Singh</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ankitzm" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/mhairimcalpine"><img src="https://avatars.githubusercontent.com/u/76955258?v=4?s=100" width="100px;" alt="mhairimcalpine"/><br /><sub><b>mhairimcalpine</b></sub></a><br /><a href="#content-mhairimcalpine" title="Content">🖋</a></td>
+      <td align="center"><a href="https://github.com/itsthedoom"><img src="https://avatars.githubusercontent.com/u/32095408?v=4?s=100" width="100px;" alt="William Doom"/><br /><sub><b>William Doom</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=itsthedoom" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
