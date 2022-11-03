@@ -6,13 +6,13 @@ lang: en
 
 # Ethereum's energy expenditure {#proof-of-stake-energy}
 
-Ethereum is a green blockchain. It uses a [proof-of-stake](/developers/docs/consensus-mechanisms/pos) consensus mechanism that uses ETH rather than [energy](/developers/docs/consensus-mechanisms/pow) to secure the network. Ethereum's proof-of-stake mechanism uses just [~0.0026 TWh/yr](https://carbon-ratings.com/eth-report-2022) across the entire global network.
+Ethereum is a green blockchain. It uses a [proof-of-stake](/developers/docs/consensus-mechanisms/pos) consensus mechanism, using ETH instead of [energy to secure the network](/developers/docs/consensus-mechanisms/pow). Ethereum's proof-of-stake mechanism only uses [~0.0026 TWh/yr](https://carbon-ratings.com/eth-report-2022) across the entire global network.
 
-[CCRI](https://carbon-ratings.com) (Crypto Carbon Ratings Institute) generated bottom-up estimates of the electricity consumption and the carbon footprint of the Ethereum network (see [the report](https://carbon-ratings.com/eth-report-2022)). They measured the electricity consumption of different nodes with various hardware and client software configurations. This yielded an estimate of **2.601 MWh** (0.0026 TWh) for the network’s annual electricity consumption (September 2022), which corresponds to yearly carbon emissions of **870 tonnes CO2e** applying regional specific carbon intensity factors.
+[CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com) generated bottom-up estimates of the electricity consumption and the carbon footprint of the Ethereum network ([see the report](https://carbon-ratings.com/eth-report-2022)). They measured the electricity consumption of different nodes with various hardware and client software configurations. This yielded an estimate of **2.601 MWh** (0.0026 TWh) for the network’s annual electricity consumption (September 2022), which corresponds to yearly carbon emissions of **870 tonnes CO2e** applying regional-specific carbon intensity factors.
 
 <EnergyConsumptionChart />
 
-The figure above shows the estimated annual energy consumption in TWh/yr for various industries (retrieved in June 2022). Note that the estimates presented in the plot are from publicly available sources that have been linked to in the text below. CEBCI refers to the Cambridge Bitcoin Electricity Consumption index. The values are illustrative and do not represent an official estimate, promise or forecast.
+The chart above shows the estimated annual energy consumption in TWh/yr for various industries (retrieved in June 2022). Note that the estimates presented in the plot are from publicly available sources that have been linked to in the table below. CEBCI refers to the Cambridge Bitcoin Electricity Consumption index. The values are illustrative and do not represent an official estimate, promise, or forecast.
 
 To put Ethereum's energy consumption in context, we can compare annualized estimates for other industries - this allows us to better understand whether 0.0026 TWh is a lot or a little. The data is summarized in the bar chart above, but more detail is provided in the table below:
 
@@ -55,7 +55,7 @@ CCRI examined the impact of Ethereum’s merge from proof-of-work to proof-of-st
 
 While Ethereum's energy consumption is very low, there is also a substantial, growing, and highly active **regenerative finance (ReFi)** community building on Ethereum. ReFi applications use DeFi components to build financial applications that have positive externalities benefiting the environment. ReFi is part of a wider ["solarpunk"](https://en.wikipedia.org/wiki/Solarpunk) movement that is closely aligned with Ethereum and aims to couple technological advancement and environmental stewardship. The decentralized, permissionless, and composable nature of Ethereum makes it the ideal base layer for the ReFi and solarpunk communities.
 
-Web3 native public goods funding platforms such as [Gitcoin](https://gitcoin.co) run climate rounds specifically in order to stimulate environmentally conscious building on Ethereum's application layer. Through the development of these initiatives (and others, e.g. [DeSci](/desci/)), Ethereum is becoming an environmentally and socially net-positive technology.
+Web3 native public goods funding platforms such as [Gitcoin](https://gitcoin.co) run climate rounds to stimulate environmentally conscious building on Ethereum's application layer. Through the development of these initiatives (and others, e.g. [DeSci](/desci/)), Ethereum is becoming an environmentally and socially net-positive technology.
 
 <InfoBanner emoji=":evergreen_tree:">
   If you think this page can be made more accurate, please raise an issue or PR. The stats on this page are estimates based on publicly available data - they do not represent an official statement or promise from the ethereum.org team, or the Ethereum Foundation. 
@@ -63,7 +63,7 @@ Web3 native public goods funding platforms such as [Gitcoin](https://gitcoin.co)
 
 ## Further reading {#further-reading}
 
-- [White House report on PoW blockchains](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [White House report on proof-of-work blockchains](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
 - [Ethereum's energy consumption](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 - [Ethereum Emissions: A Bottom-up Estimate](https://kylemcdonald.github.io/ethereum-emissions/) _ Kyle McDonald_
 - [Ethereum Energy Consumption Index](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
