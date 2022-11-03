@@ -39,7 +39,6 @@ Looking for an Ethereum wallet? [Explore our full list of Ethereum wallets](/wal
 Building can be hard. Here are some development focused spaces with experienced Ethereum developers that are happy to help.
 
 - [Alchemy University](https://university.alchemy.com/#starter_code)
-- [Chainlink](https://blog.chain.link/learn-blockchain-full-stack-web3-javascript-smart-contract-development/)
 - [CryptoDevs discord](https://discord.gg/Z9TA39m8Yu)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
 - [Nader Dabit](https://naderdabit.notion.site/Nader-s-web3-Resources-for-Developers)
