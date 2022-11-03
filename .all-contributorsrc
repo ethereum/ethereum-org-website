@@ -9498,6 +9498,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "itsthedoom",
+      "name": "William Doom",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32095408?v=4",
+      "profile": "https://github.com/itsthedoom",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
