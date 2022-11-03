@@ -36,6 +36,13 @@ ETH on testnets has no real value; therefore, there are no markets for testnet E
 
 Goerli is a proof-of-stake testnet. Goerli will be maintained long term, and is recommended for stakers to test protocol upgrades and developers who want to interact with a large existing state. Before its testnet merge, Goerli was a proof-of-authority testnet.
 
+[Notable properties](https://blog.ethereum.org/2022/06/21/testnet-deprecation):
+
+- Open validator sets allowing stakers to test network upgrades and learn how to run a validator
+- Large state, useful for testing complex smart contract interactions
+- Longer to sync and requires more storage to run a node
+- More applications deployed
+
 - [Website](https://goerli.net/)
 - [GitHub](https://github.com/goerli/testnet)
 - [Etherscan](https://goerli.etherscan.io)
@@ -50,6 +57,12 @@ Goerli is a proof-of-stake testnet. Goerli will be maintained long term, and is 
 #### Sepolia {#sepolia}
 
 Sepolia is a proof-of-stake testnet. Sepolia will be maintained long term, and is recommended for users and developers who want a lighter weight chain to sync to and interact with.. Before undergoing The Merge in June 2022, Sepolia was a proof-of-work testnet.
+
+[Notable properties](https://blog.ethereum.org/2022/06/21/testnet-deprecation):
+
+- Closed validator set, controlled by client and testing teams
+- Newer testnet, which means less applications have been deployed on it compared to other testnets
+- Fast to sync and running a node requires minimal disk space
 
 - [Website](https://sepolia.dev/)
 - [GitHub](https://github.com/goerli/sepolia)
