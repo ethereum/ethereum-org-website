@@ -15,7 +15,7 @@ Looking for an interactive reference? Check out [evm.codes](https://www.evm.code
 
 For operations with dynamic gas costs, see [gas.md](https://github.com/wolflo/evm-opcodes/blob/main/gas.md).
 
-💡 Quick tip: To view entire lines, use `[shift] + scroll` to scroll horizontally.
+💡 Quick tip: To view entire lines, use `[shift] + scroll` to scroll horizontally on desktop.
 
 | Stack | Name           |                                               Gas                                               | Initial Stack                                                                             | Resulting Stack                 | Mem / Storage                                                                 | Notes                                                                                                                                                 |
 | :---: | :------------- | :---------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------- | :------------------------------ | :---------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
