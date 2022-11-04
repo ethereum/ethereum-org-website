@@ -598,7 +598,7 @@ const questionBank: QuestionBank = {
       },
       {
         id: "e003-d",
-        label: "Extremely likely a scam",
+        label: "Are very likely to be a scam",
         explanation:
           "ETH giveaways are always scams. Reporting and ignoring scammers is best.",
       },
