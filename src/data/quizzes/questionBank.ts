@@ -208,7 +208,7 @@ const questionBank: QuestionBank = {
         id: "b002-d",
         label: "Ethereum",
         explanation:
-          "Ethereum is the network, but Ethereum’s network fees are paid in the different.",
+          "Ethereum is the network, but Ethereum’s network fees are paid in ETH.",
       },
     ],
     correctAnswerId: "b002-b",
