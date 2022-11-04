@@ -557,10 +557,10 @@ const DappsPage = ({
     },
     {
       title: "PWN",
-      description: translateMessageId("page-dapps-dapp-description-pwn", intl),
+      description: t("page-dapps-dapp-description-pwn"),
       link: "https://pwn.xyz",
       image: getImage(data.pwn),
-      alt: translateMessageId("page-dapps-pwn-image-alt", intl),
+      alt: t("page-dapps-pwn-image-alt"),
     },
   ]
 
