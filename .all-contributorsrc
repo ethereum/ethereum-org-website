@@ -9536,6 +9536,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "douglasmakey",
+      "name": "Douglas Makey Mendez Molero",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8400576?v=4",
+      "profile": "https://www.kungfudev.com/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
