@@ -6853,7 +6853,8 @@
       "profile": "https://github.com/vdusart",
       "contributions": [
         "doc",
-        "code"
+        "code",
+        "translation"
       ]
     },
     {
@@ -9325,7 +9326,8 @@
       "profile": "https://sebastiansupreme.eth.link",
       "contributions": [
         "ideas",
-        "translation"
+        "translation",
+        "code"
       ]
     },
     {
@@ -9497,6 +9499,33 @@
       "profile": "https://github.com/mhairimcalpine",
       "contributions": [
         "content"
+      ]
+    },
+    {
+      "login": "itsthedoom",
+      "name": "William Doom",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32095408?v=4",
+      "profile": "https://github.com/itsthedoom",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "AsheBarrett",
+      "name": "AsheBarrett",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117123553?v=4",
+      "profile": "https://github.com/AsheBarrett",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "Hitisha-G",
+      "name": "Hitishaa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/89304585?v=4",
+      "profile": "https://github.com/Hitisha-G",
+      "contributions": [
+        "doc"
       ]
     }
   ],
