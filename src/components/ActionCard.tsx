@@ -1,6 +1,14 @@
 import React, { ReactNode } from "react"
 import styled from "@emotion/styled"
-import { Box, Flex, Text, Heading, BoxProps } from "@chakra-ui/react"
+import {
+  Box,
+  Flex,
+  Text,
+  Heading,
+  BoxProps,
+  LinkBox,
+  LinkOverlay,
+} from "@chakra-ui/react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
 import Link from "./Link"
@@ -17,13 +25,16 @@ const Image = styled(GatsbyImage)`
   }
 `
 
-const linkFocusStyles: BoxProps = {
-  textDecoration: "none",
+const linkBoxFocusStyles: BoxProps = {
   borderRadius: "4px",
   boxShadow: "0px 8px 17px rgba(0, 0, 0, 0.15)",
   bg: "tableBackgroundHover",
   transition: "transform 0.1s",
   transform: "scale(1.02)",
+}
+
+const linkFocusStyles: BoxProps = {
+  textDecoration: "none",
 }
 
 export interface IProps {
@@ -52,19 +63,16 @@ const ActionCard: React.FC<IProps> = ({
   const isImageURL = typeof image === "string"
 
   return (
-    <Link
+    <LinkBox
       boxShadow="
 	  0px 14px 66px rgba(0, 0, 0, 0.07),
     0px 10px 17px rgba(0, 0, 0, 0.03), 0px 4px 7px rgba(0, 0, 0, 0.05)"
       color="text"
       flex="1 1 372px"
-      _hover={linkFocusStyles}
-      _focus={linkFocusStyles}
-      to={to}
+      _hover={linkBoxFocusStyles}
+      _focus={linkBoxFocusStyles}
       className={className}
-      hideArrow={true}
       m={4}
-      textDecoration="none"
     >
       <Flex
         minH={"260px"}
@@ -82,14 +90,24 @@ const ActionCard: React.FC<IProps> = ({
       </Flex>
       <Box p={6} className="action-card-content">
         <Heading as="h3" fontSize="2xl" mt={2} mb={4}>
-          {title}
+          <LinkOverlay
+            as={Link}
+            color="text"
+            hideArrow
+            textDecoration="none"
+            to={to}
+            _hover={linkFocusStyles}
+            _focus={linkFocusStyles}
+          >
+            {title}
+          </LinkOverlay>
         </Heading>
         <Text mb={0} opacity={0.8}>
           {description}
         </Text>
         {children && <Box mt={8}>{children}</Box>}
       </Box>
-    </Link>
+    </LinkBox>
   )
 }
 
