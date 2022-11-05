@@ -14,7 +14,7 @@ import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import Link from "./Link"
 
 const linkBoxFocusStyles: BoxProps = {
-  borderRadius: "4px",
+  borderRadius: "base",
   boxShadow: "0px 8px 17px rgba(0, 0, 0, 0.15)",
   bg: "tableBackgroundHover",
   transition: "transform 0.1s",
@@ -63,9 +63,9 @@ const ActionCard: React.FC<IProps> = ({
       m={4}
     >
       <Flex
-        minH={"260px"}
-        bg={"cardGradient"}
-        direction={"row"}
+        minH="260px"
+        bg="cardGradient"
+        direction="row"
         justify={isRight ? "flex-end" : "center"}
         align={isBottom ? "flex-end" : "center"}
         className="action-card-image-wrapper"
