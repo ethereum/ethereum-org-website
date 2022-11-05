@@ -1,5 +1,4 @@
 import React, { ReactNode } from "react"
-import styled from "@emotion/styled"
 import {
   Box,
   Flex,
@@ -8,22 +7,11 @@ import {
   BoxProps,
   LinkBox,
   LinkOverlay,
+  Image,
 } from "@chakra-ui/react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
 import Link from "./Link"
-
-const Image = styled(GatsbyImage)`
-  width: 100%;
-  height: 100%;
-  min-width: 100px;
-  min-height: 100px;
-  max-width: 372px;
-  max-height: 257px;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    max-width: 311px;
-  }
-`
 
 const linkBoxFocusStyles: BoxProps = {
   borderRadius: "4px",
@@ -83,7 +71,18 @@ const ActionCard: React.FC<IProps> = ({
         className="action-card-image-wrapper"
         boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
       >
-        {!isImageURL && <Image image={image} alt={alt || ""} />}
+        {!isImageURL && (
+          <Image
+            alt={alt || ""}
+            as={GatsbyImage}
+            maxH="257px"
+            maxW={{ base: "372px", sm: "311px" }}
+            minW="100px"
+            minH="100px"
+            image={image}
+            sizes="full"
+          />
+        )}
         {isImageURL && (
           <img src={image} alt={alt} className="action-card-image" />
         )}
