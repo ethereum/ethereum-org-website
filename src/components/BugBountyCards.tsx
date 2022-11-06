@@ -1,16 +1,17 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { Flex } from "@chakra-ui/react"
+
 import { TranslationKey } from "../utils/translations"
 import ButtonLink from "./ButtonLink"
 
 import Translation from "./Translation"
 
-const CardRow = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin: 4rem 1rem;
-  flex-wrap: wrap;
-`
+const CardRow = ({ children }) => (
+  <Flex justifyContent="space-between" my={16} mx={4} flexWrap="wrap">
+    {children}
+  </Flex>
+)
 
 const StyledButton = styled(ButtonLink)`
   margin: 1rem;
