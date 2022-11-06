@@ -13,9 +13,11 @@ const CardRow = ({ children }) => (
   </Flex>
 )
 
-const StyledButton = styled(ButtonLink)`
-  margin: 1rem;
-`
+const StyledButton = ({ children, ...props }) => (
+  <ButtonLink m={4} {...props}>
+    {children}
+  </ButtonLink>
+)
 
 const Card = styled.div`
   flex: 1 1 260px;
@@ -184,7 +186,7 @@ const bugBountyCardsInfo: Array<BugBountyCardInfo> = [
 
 export interface IProps {}
 
-const BugBountyCards: React.FC<IProps> = () => (
+export const BugBountyCards: React.FC<IProps> = () => (
   <CardRow>
     {bugBountyCardsInfo.map((card, idx) => (
       <Card key={`bug-bounty-card-${idx}`}>
