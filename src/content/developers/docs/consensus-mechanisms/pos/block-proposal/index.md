@@ -12,7 +12,7 @@ Block production is part of the proof-of-stake protocol. To help understand this
 
 ## Who produces blocks? {#who-produces-blocks}
 
-Blocks are produced by validators. Validators are node operators that run validator software as well as their execution and consensus clients, and have deposited at least 32 ETH into the deposit contract. However, each individual validator is only occasionally responsible for producing a block. Time in Etheruem is broken into slots and epochs. Each slot is 12s in real-world time, and 32 slots (6.4 minutes) make up an epoch. Every slot is an opportunity for a block to be added to the blockchain.
+Blocks are produced by validators. Validators are node operators that run validator software as well as their execution and consensus clients, and have deposited at least 32 ETH into the deposit contract. However, each individual validator is only occasionally responsible for producing a block. Ethereum measures time in slots and epochs. Each slot is twelve seconds, and 32 slots (6.4 minutes) make up an epoch. Every slot is an opportunity to add a new block on Ethereum.
 
 In Ethereum's proof-of-stake mechanism, a single validator is chosen to propose a block in each slot. This works by accumulating randomness from block to block using an algorithm called RANDAO. The block proposer adds a random value to the block that is mixed with the 'accumulated' RANDAO value when the block is processed. The random value gets its entropy from the validator's private key, which itself is generated sufficiently randomly, the total number of active validators, missed blocks, and the validator's effective balance.
 
@@ -60,12 +60,8 @@ Read more about [rewards and penalties](/developers/docs/consensus-mechanisms/po
 
 ## Further reading {#further-reading}
 
-[Introduction to Blocks](/developers/docs/blocks/)
-
-[Introduction to proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
-
-[Ethereum Consensus specs](www.github.com/ethereum/consensus-specs)
-
-[Introduction to Gasper](/developers/docs/consensus-mechanisms/pos/)
-
-[Upgrading Ethereum](https://eth2book.info/)
+- [Introduction to blocks](/developers/docs/blocks/)
+- [Introduction to proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
+- [Ethereum consensus specs](www.github.com/ethereum/consensus-specs)
+- [Introduction to Gasper](/developers/docs/consensus-mechanisms/pos/)
+- [Upgrading Ethereum](https://eth2book.info/)
