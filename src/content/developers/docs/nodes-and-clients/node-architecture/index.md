@@ -40,7 +40,14 @@ The consensus client does not participate in attesting to or proposing blocks - 
 Node operators can add a validator to their consensus clients if 32 ETH is the deposit contract. The validator client comes bundled with the consensus client and can be added to a node at any time. The validator handles attestations and block proposals. They enable a node to accrue rewards or lose ETH via penalties or slashing. Running the validator software also makes a node eligible to be selected to propose a new block.
 
 Read more about [proof-of-stake](/developers/docs/consensus-mechanisms/pos/).
-
+| Execution Client                                   | Consensus Client                                                 | Validator                    |
+| -------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------- |
+| Gossips transactions over its p2p network          | Gossips blocks and attestations overs its p2p network            | Proposes blocks              |
+| Executes/re-executes transactions                  | Runs the fork choice algorithm                                   | Accrues rewards/penalties    |
+| Verifies incoming state changes                    | Keeps track of the head of the chain                             | Makes attestations           |
+| Manages state and receipts tries                   | Manages the Beacon state (contains consensus and execution info) | Requires 32 ETH to be staked |
+| Creates execution payload                          | Keeps track of accumulated randomness in RANDAO                  | Proposes blocks              |
+| Exposes JSON-RPC API for interacting with Ethereum | Keeps track of justification and finalization                    | Can be slashed  
 ## Further reading {#further-reading}
 
 - [Proof-of-stake](/developers/docs/consensus-mechanisms/pos)
