@@ -1505,6 +1505,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/ameeetgaikwad"><img src="https://avatars.githubusercontent.com/u/76063569?v=4?s=100" width="100px;" alt="Amit Gaikwad"/><br /><sub><b>Amit Gaikwad</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ameeetgaikwad" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/EridianAlpha"><img src="https://avatars.githubusercontent.com/u/86061486?v=4?s=100" width="100px;" alt="Eridian"/><br /><sub><b>Eridian</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=EridianAlpha" title="Documentation">📖</a></td>
       <td align="center"><a href="http://bobbyg603.com"><img src="https://avatars.githubusercontent.com/u/2646053?v=4?s=100" width="100px;" alt="Bobby Galli"/><br /><sub><b>Bobby Galli</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=bobbyg603" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/flanagansteve"><img src="https://avatars.githubusercontent.com/u/32844300?v=4?s=100" width="100px;" alt="flanagansteve"/><br /><sub><b>flanagansteve</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=flanagansteve" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
