@@ -1500,6 +1500,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center"><a href="https://github.com/Hitisha-G"><img src="https://avatars.githubusercontent.com/u/89304585?v=4?s=100" width="100px;" alt="Hitishaa"/><br /><sub><b>Hitishaa</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Hitisha-G" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/srustagi"><img src="https://avatars.githubusercontent.com/u/11203724?v=4?s=100" width="100px;" alt="Shiv Rustagi"/><br /><sub><b>Shiv Rustagi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=srustagi" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://www.kungfudev.com/"><img src="https://avatars.githubusercontent.com/u/8400576?v=4?s=100" width="100px;" alt="Douglas Makey Mendez Molero"/><br /><sub><b>Douglas Makey Mendez Molero</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=douglasmakey" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/ameeetgaikwad"><img src="https://avatars.githubusercontent.com/u/76063569?v=4?s=100" width="100px;" alt="Amit Gaikwad"/><br /><sub><b>Amit Gaikwad</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ameeetgaikwad" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/EridianAlpha"><img src="https://avatars.githubusercontent.com/u/86061486?v=4?s=100" width="100px;" alt="Eridian"/><br /><sub><b>Eridian</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=EridianAlpha" title="Documentation">📖</a></td>
+      <td align="center"><a href="http://bobbyg603.com"><img src="https://avatars.githubusercontent.com/u/2646053?v=4?s=100" width="100px;" alt="Bobby Galli"/><br /><sub><b>Bobby Galli</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=bobbyg603" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/flanagansteve"><img src="https://avatars.githubusercontent.com/u/32844300?v=4?s=100" width="100px;" alt="flanagansteve"/><br /><sub><b>flanagansteve</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=flanagansteve" title="Documentation">📖</a></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="https://github.com/owenHwang"><img src="https://avatars.githubusercontent.com/u/112543777?v=4?s=100" width="100px;" alt="Owen Hwang"/><br /><sub><b>Owen Hwang</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=owenHwang" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>

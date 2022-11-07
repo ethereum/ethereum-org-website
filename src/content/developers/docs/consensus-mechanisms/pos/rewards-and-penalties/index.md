@@ -58,7 +58,7 @@ Block proposers receive `8 / 64 * base_reward` for **each valid attestation** in
 
 So far we have considered perfectly well-behaved validators, but what about validators that do not make timely head, source and target votes or do so slowly?
 
-The penalties for missing the target and source votes are equal to the rewards the attestor would have received had they submitted them. This means that instead of having the reward added to their balance, they have an equal value removed from their balance. There is no penalty for missign the head vote (i.e. head votes are only rewarded, never penalized). There is no penalty associated with the `inclusion_delay` - the reward will simply not be added to the validator's balance. There is also no penalty for failing to propose a block.
+The penalties for missing the target and source votes are equal to the rewards the attestor would have received had they submitted them. This means that instead of having the reward added to their balance, they have an equal value removed from their balance. There is no penalty for missing the head vote (i.e. head votes are only rewarded, never penalized). There is no penalty associated with the `inclusion_delay` - the reward will simply not be added to the validator's balance. There is also no penalty for failing to propose a block.
 
 Read more about rewards and penalties in the [consensus specs](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/beacon-chain.md). Rewards and penalties were adjusted in the Bellatrix upgrade - watch Danny Ryan and Vitalik discuss this in this [Peep an EIP video](https://www.youtube.com/watch?v=iaAEGs1DMgQ).
 
