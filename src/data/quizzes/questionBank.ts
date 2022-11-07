@@ -250,19 +250,19 @@ const questionBank: QuestionBank = {
         id: "b004-a",
         label: "ETH is needed to do anything on Ethereum",
         explanation:
-          "This answer is correct, but there are also other correct answers.",
+          "This answer is partially correct, but it's only one of the reasons ETH is valuable.",
       },
       {
         id: "b004-b",
         label: "ETH is an un-censorable peer-to-peer money",
         explanation:
-          "This answer is correct, but there are also other correct answers.",
+          "This answer is partially correct, but it's only one of the reasons ETH is valuable.",
       },
       {
         id: "b004-c",
         label: "ETH is used as collateral for crypto loans",
         explanation:
-          "This answer is correct, but there are also other correct answers.",
+          "This answer is partially correct, but it's only one of the reasons ETH is valuable.",
       },
       {
         id: "b004-d",

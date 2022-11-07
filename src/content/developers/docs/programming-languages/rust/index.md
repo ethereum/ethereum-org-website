@@ -26,7 +26,6 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [The Rust Ethereum Client](https://openethereum.github.io/) \* **Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer being maintained.** Use it with caution and preferably switch to another client implementation.
 - [Sending Transaction to Ethereum Using Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [An Introduction to Smart Contracts with Parity Ethereum Client](https://wiki.parity.io/Smart-Contracts)
-- [Setting up your Oasis SDK dev environment](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [A step-by-step tutorial on how to write contracts in rust Wasm for Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Intermediate articles {#intermediate-articles}
@@ -41,7 +40,6 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Build a Decentralized Todo App Using Vue.js & Rust](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Getting Started with Enigma - In Rust Programming Language](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [An Intro to Secret Contracts](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
-- [Deploying Solidity Contracts on Oasis (Compound)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)
 - [Build a blockchain in Rust](https://blog.logrocket.com/how-to-build-a-blockchain-in-rust/)
 
 ## Rust projects and tools {#rust-projects-and-tools}

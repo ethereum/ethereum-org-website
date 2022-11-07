@@ -63,6 +63,19 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Dashboard with Request Explorer, Mempool Watcher, and Composer
     - Integrated testnet faucet access
     - Active Discord builder community with 18k users
+- [**All That Node**](https://allthatnode.com/)
+  - [Docs](https://docs.allthatnode.com/)
+  - Features
+    - Largest free tier with 150,000 requests daily
+    - Access to 24+ blockchain nodes
+    - RPC, HTTPS and WSS endpoints
+    - Unlimited access to archive data
+    - 24/7 support and uptime over 99.9% 
+    - Faucet available on multi chains
+    - Unlimited endpoint access with limitless number of API keys
+    - Trace/Debug namespace available
+    - Automated updates
+    - Technical support
 - [**Ankr**](https://www.ankr.com/)
   - [Docs](https://docs.ankr.com/)
   - Features
