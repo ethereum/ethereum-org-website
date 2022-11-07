@@ -9554,6 +9554,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "EridianAlpha",
+      "name": "Eridian",
+      "avatar_url": "https://avatars.githubusercontent.com/u/86061486?v=4",
+      "profile": "https://github.com/EridianAlpha",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
