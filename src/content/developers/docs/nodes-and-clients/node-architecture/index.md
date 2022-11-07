@@ -13,7 +13,7 @@ The execution client is responsible for transaction handling, transaction gossip
 
 The relationship between the two Ethereum clients is shown in the schematic below. The two clients each connect to their own respective peer-to-peer (P2P) networks. This is because the execution clients gossip transactions over their P2P network enabling them to manage their local transaction pool. The consensus clients gossip blocks over their P2P network, enabling consensus and chain growth.
 
-![node-architecture](node_architecture.png)
+![node-architecture](node-architecture-text-background.png)
 
 _This image is borrowed from geth.ethereum.org and uses the Geth logo to represent execution clients - there are other options for the execution client including Erigon, Nethermind, Akula and Besu_
 
