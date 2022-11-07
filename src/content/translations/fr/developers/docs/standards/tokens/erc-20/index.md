@@ -36,10 +36,10 @@ La demande de commentaires ERC-20, proposée par Fabian Vogelsteller en novembre
 
 Exemples de fonctionnalités fournies par ERC-20 :
 
-- transférer des jetons d'un compte à un autre
-- obtenir le solde actuel du jeton d'un compte
-- obtenir la quantité totale du jeton disponible sur le réseau
-- approuver si un montant de jeton d'un compte peut être dépensé par un compte tiers
+- Transférer des jetons d'un compte à un autre
+- Obtenir le solde actuel du jeton d'un compte
+- Obtenir la quantité totale du jeton disponible sur le réseau
+- Approuver si un montant de jeton d'un compte peut être dépensé par un compte tiers
 
 Si un contrat intelligent implémente les méthodes et les événements suivants, il peut être nommé Contrat de jeton ERC-20 et, une fois déployé, sera responsable d'effectuer un suivi des jetons créés sur Ethereum.
 
@@ -68,7 +68,7 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 
 ### Exemples {#web3py-example}
 
-Voyons comment une norme est si importante pour nous faciliter le contrôle de tout contrat de jeton ERC-20 sur Ethereum. Nous avons juste besoin de l'interface binaire-programme (ABI) du contrat pour créer une interface à n'importe quel jeton ERC-20. Comme vous pouvez le voir ci-dessous, nous utiliserons une ABI simplifiée, pour en faire un exemple de faible friction.
+Voyons pourquoi une norme est importante et pourquoi elle nous facilite le contrôle de tout contrat de jeton ERC-20 sur Ethereum. Nous avons juste besoin de l'interface binaire-programme (ABI) du contrat pour créer une interface à n'importe quel jeton ERC-20. Comme vous pouvez le voir ci-dessous, nous utiliserons une ABI simplifiée, pour en faire un exemple facile à comprendre.
 
 #### Exemple Web3.py {#web3py-example}
 
