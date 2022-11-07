@@ -26,7 +26,6 @@ incomplete: true
 - [Rust 以太坊客户端](https://openethereum.github.io/) \* **注意 OpenEthereum [已被废弃](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd)并已停止维护。** 请谨慎使用，最好切换至其他客户端实现。
 - [使用 Rust 向以太坊发送交易](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Parity 以太坊客户端智能合约简介](https://wiki.parity.io/Smart-Contracts)
-- [设置 Oasis SDK 开发环境](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [一步步教您如何用 Rust 为 Kovan 编写 Wasm 合约](https://github.com/paritytech/pwasm-tutorial)
 
 ## 面向中等程度用户的文章 {#intermediate-articles}
@@ -41,7 +40,6 @@ incomplete: true
 - [使用 Vue.js 和 Rust 构建一个去中心化待办事项应用程序](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [从 Enigma 开始 - 用 Rust 编程语言](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [Secret Contracts 介绍](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
-- [在 Oasis (Compound) 上部署 Solidity 合约](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)
 - [用 Rust 构建区块链。](https://blog.logrocket.com/how-to-build-a-blockchain-in-rust/)
 
 ## Rust 项目和工具 {#rust-projects-and-tools}
