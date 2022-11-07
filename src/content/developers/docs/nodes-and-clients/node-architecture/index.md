@@ -22,7 +22,7 @@ For this two-client structure to work, consensus clients must be able to pass bu
 
 The execution client is responsible for creating the execution payloads - the list of transactions, updated state trie, and other execution-related data. Consensus clients include the execution payload in every block. The execution client is also responsible for re-executing transactions in new blocks to ensure they are valid. Executing transactions is done on the execution client's embedded computer, known as the [Ethereum Virtual Machine (EVM)](/developers/docs/evm).
 
-The execution client also offers a user-interface to Ethereum by exposing a set of [RPC methods](/developers/docs/apis/json-rpc) that enable users to query the Ethereum blockchain, submit transactions and deploy smart contracts. Often, the RPC calls are abstracted by a library such as [Web3js](https://web3js.readthedocs.io/en/v1.8.0/) or [Web3py](https://web3py.readthedocs.io/en/v5/) or a user-interface such as a browser wallet.
+The execution client also offers a user interface to Ethereum through [RPC methods](/developers/docs/apis/json-rpc) that enable users to query the Ethereum blockchain, submit transactions and deploy smart contracts. It's common for RPC calls to be handled by a library like [Web3js](https://web3js.readthedocs.io/en/v1.8.0/), [Web3py](https://web3py.readthedocs.io/en/v5/), or by a user-interface such as a browser wallet.
 
 In summary, the execution client is:
 
