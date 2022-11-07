@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { Flex, useColorModeValue } from "@chakra-ui/react"
+import { Flex } from "@chakra-ui/react"
 
 import { TranslationKey } from "../utils/translations"
 import ButtonLink from "./ButtonLink"
@@ -20,8 +20,6 @@ const StyledButton = ({ children, ...props }) => (
 )
 
 const Card = ({ children, ...props }) => {
-  const boxShadow = useColorModeValue("tableBox.light", "tableBox.dark")
-
   return (
     <Flex
       flexDir="column"
@@ -29,13 +27,13 @@ const Card = ({ children, ...props }) => {
       justifyContent="space-between"
       bg="background"
       borderRadius="2px"
-      boxShadow={boxShadow}
+      boxShadow="var(--eth-colors-tableBoxShadow)"
       border="1px solid"
       borderColor="border"
       m={4}
       _hover={{
         "border-radius": "4px",
-        "box-shadow": "0px 8px 17px rgba(0, 0, 0, 0.15)",
+        "box-shadow": "var(--eth-shadows-tableBoxHover)",
         background: "tableBackgroundHover",
         transition: "transform 0.1s",
         transform: "scale(1.02)",
