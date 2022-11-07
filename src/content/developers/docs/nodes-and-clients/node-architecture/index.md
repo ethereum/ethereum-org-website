@@ -1,15 +1,14 @@
 ---
 title: Node architecture
-description: Introduction to how Ethereum nodes are organized and where Geth fits.
+description: Introduction to how Ethereum nodes are organized.
 lang: en
-sidebaDepth: 2
 ---
 
 An Ethereum node is composed of two clients: an [execution client](https://ethereum.org/en/developers/docs/nodes-and-clients/#execution-clients) and a [consensus client](https://ethereum.org/en/developers/docs/nodes-and-clients/#consensus-clients).
 
-Originally, an execution client alone was enough to run a full Ethereum node. However, ever since Ethereum turned off [proof-of-work](https://ethereum.org/en/developers/docs/consensus-mechanisms/pow/) and implemented [proof-of-stake](https://ethereum.org/en/developers/docs/consensus-mechanisms/pow/), the execution client has needed to be coupled to another piece of software called a [“consensus client”](https://ethereum.org/en/developers/docs/nodes-and-clients/#consensus-clients) in order to keep track of the Ethereum blockchain.
+When Ethereum was using [proof-of-work](/developers/docs/consensus-mechanisms/pow/), an execution client was enough to run a full Ethereum node. However, since implementing [proof-of-stake](/developers/docs/consensus-mechanisms/pow/), the execution client needs to be used alongside another piece of software called a [“consensus client”](/developers/docs/nodes-and-clients/#consensus-clients).
 
-The execution client is responsible for transaction handling, transaction gossip, state management and supporting the Ethereum Virtual Machine ([EVM])(https://ethereum.org/en/developers/docs/evm/). However, it is **not** responsible for block building, block gossiping or handling consensus logic. These are in the remit of the consensus client.
+The execution client is responsible for transaction handling, transaction gossip, state management and supporting the Ethereum Virtual Machine ([EVM](/developers/docs/evm/)). However, it is **not** responsible for block building, block gossiping or handling consensus logic. These are in the remit of the consensus client.
 
 The relationship between the two Ethereum clients is shown in the schematic below. The two clients each connect to their own respective peer-to-peer (P2P) networks. This is because the execution clients gossip transactions over their P2P network enabling them to manage their local transaction pool. The consensus clients gossip blocks over their P2P network, enabling consensus and chain growth.
 
@@ -21,7 +20,7 @@ For this two-client structure to work, consensus clients must be able to pass bu
 
 ## What does the execution client do? {#execution-client}
 
-The execution client is responsible for creating the execution payloads - the list of transactions, updated state trie plus other execution related data - that consensus clients include in their blocks. It is also responsible for re-executing transactions that arrive in new blocks to ensure they are valid. Executing transactions is done on the execution client's embedded computer, known as the [Ethereum Virtual Machine (EVM)](/developers/docs/evm).
+The execution client is responsible for creating the execution payloads - the list of transactions, updated state trie, and other execution-related data. Consensus clients include the execution payload in every block. The execution client is also responsible for re-executing transactions in new blocks to ensure they are valid. Executing transactions is done on the execution client's embedded computer, known as the [Ethereum Virtual Machine (EVM)](/developers/docs/evm).
 
 The execution client also offers a user-interface to Ethereum by exposing a set of [RPC methods](/developers/docs/apis/json-rpc) that enable users to query the Ethereum blockchain, submit transactions and deploy smart contracts. Often, the RPC calls are abstracted by a library such as [Web3js](https://web3js.readthedocs.io/en/v1.8.0/) or [Web3py](https://web3py.readthedocs.io/en/v5/) or a user-interface such as a browser wallet.
 
@@ -32,18 +31,18 @@ In summary, the execution client is:
 
 ## What does the consensus client do? {#consensus-client}
 
-The consensus client deals with all the logic that enables a node to stay in sync with the Ethereum network. This includes receiving blocks from peers and running a fork choice algorithm to ensure the node always follows the chain with the greatest accumulation of attestations (weighted by validator effective balances). The consensus client has its own peer-to-peer network, separate from the network that connects execution clients to each other. The consensus clients share blocks and attestations over their peer-to-peer network. The consensus client itself does not participate in attesting to or proposing blocks - this is done by a validator which is an optional add-on to a consensus client. A consensus client without a validator only keeps up with the head of the chain, allowing the node to stay synced. This enables a user to transact with Ethereum using their execution client, confident that they are on the right chain.
+The consensus client deals with all the logic that enables a node to stay in sync with the Ethereum network. This includes receiving blocks from peers and running a fork choice algorithm to ensure the node always follows the chain with the greatest accumulation of attestations (weighted by validator effective balances). Similar to the execution client, consensus clients have their own P2P network through which they share blocks and attestations. 
+
+The consensus client does not participate in attesting to or proposing blocks - this is done by a validator, an optional add-on to a consensus client. A consensus client without a validator only keeps up with the head of the chain, allowing the node to stay synced. This enables a user to transact with Ethereum using their execution client, confident that they are on the correct chain.
 
 ## Validators {#validators}
 
-Validators can be added to consensus clients if 32 ETH have been sent to the deposit contract. The validator client comes bundled with the consensus client and can be added to a node at any time. The validator handles attestations and block proposals. They enable a node to accrue rewards or lose ETH via penalties or slashing. Running the validator software also makes a node eligible to be selected to propose a new block.
+Node operators can add a validator to their consensus clients if 32 ETH is the deposit contract. The validator client comes bundled with the consensus client and can be added to a node at any time. The validator handles attestations and block proposals. They enable a node to accrue rewards or lose ETH via penalties or slashing. Running the validator software also makes a node eligible to be selected to propose a new block.
 
-Read more about [proof-of-stake](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/).
+Read more about [proof-of-stake](/developers/docs/consensus-mechanisms/pos/).
 
-## Further Reading
+## Further reading {#further-reading}
 
-[Proof-of-stake](src/content/developers/docs/consensus-mechanisms/pos)
-
-[Block proposal](src/content/developers/docs/consensus-mechanisms/pos/block-proposal)
-
-[Validator rewards and penalties](src/content/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)
+- [Proof-of-stake](/developers/docs/consensus-mechanisms/pos)
+- [Block proposal](/developers/docs/consensus-mechanisms/pos/block-proposal)
+- [Validator rewards and penalties](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)
