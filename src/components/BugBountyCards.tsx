@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { Flex } from "@chakra-ui/react"
+import { Flex, useColorModeValue } from "@chakra-ui/react"
 
 import { TranslationKey } from "../utils/translations"
 import ButtonLink from "./ButtonLink"
@@ -19,27 +19,33 @@ const StyledButton = ({ children, ...props }) => (
   </ButtonLink>
 )
 
-const Card = styled.div`
-  flex: 1 1 260px;
-  @media (max-width: 1228px) {
-    flex: 1 1 360px;
-  }
-  display: flex;
-  flex-direction: column;
-  background: ${(props) => props.theme.colors.Background};
-  border-radius: 2px;
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  border: 1px solid ${(props) => props.theme.colors.border};
-  margin: 1rem;
-  justify-content: space-between;
-  &:hover {
-    border-radius: 4px;
-    box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
-    transition: transform 0.1s;
-    transform: scale(1.02);
-  }
-`
+const Card = ({ children, ...props }) => {
+  const boxShadow = useColorModeValue("tableBox.light", "tableBox.dark")
+
+  return (
+    <Flex
+      flexDir="column"
+      flex={{ base: "1 1 412px", xl: "1 1 260px" }}
+      justifyContent="space-between"
+      bg="background"
+      borderRadius="2px"
+      boxShadow={boxShadow}
+      border="1px solid"
+      borderColor="border"
+      m={4}
+      _hover={{
+        "border-radius": "4px",
+        "box-shadow": "0px 8px 17px rgba(0, 0, 0, 0.15)",
+        background: "tableBackgroundHover",
+        transition: "transform 0.1s",
+        transform: "scale(1.02)",
+      }}
+      {...props}
+    >
+      {children}
+    </Flex>
+  )
+}
 
 const Label = styled.div`
   display: flex;
