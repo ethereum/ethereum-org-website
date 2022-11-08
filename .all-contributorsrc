@@ -9590,6 +9590,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "florath",
+      "name": "Andreas Florath",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11856543?v=4",
+      "profile": "https://github.com/florath",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
