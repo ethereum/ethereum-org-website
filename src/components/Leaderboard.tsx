@@ -3,9 +3,9 @@ import {
   Box,
   Avatar,
   Flex,
-  useColorMode,
   LinkOverlay,
   LinkBox,
+  useColorModeValue,
 } from "@chakra-ui/react"
 import Emoji from "./Emoji"
 import Link from "./Link"
@@ -26,12 +26,21 @@ export interface IProps {
 }
 
 const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
-  const { colorMode } = useColorMode()
+  const colorModeStyles = useColorModeValue(
+    {
+      listBoxShadow: "tableBox.light",
+      linkBoxShadow: "tableItemBox.light",
+    },
+    {
+      listBoxShadow: "tableBox.dark",
+      linkBoxShadow: "tableItemBox.dark",
+    }
+  )
 
   return (
     <Box
       bgColor="background"
-      boxShadow={colorMode === "dark" ? "tableBox.dark" : "tableBox.light"}
+      boxShadow={colorModeStyles.listBoxShadow}
       w="100%"
       mb={8}
     >
@@ -59,40 +68,36 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
               display="flex"
               justifyContent="space-between"
               alignItems="center"
-              boxShadow={
-                colorMode === "dark"
-                  ? "tableItemBox.dark"
-                  : "tableItemBox.light"
-              }
-              mb={0.25}
-              p={4}
-              w="100%"
-              _hover={{
-                textDecor: "none",
-                borderRadius: 0.5,
-                boxShadow: "0 0 1px primary",
-                background: "tableBackgroundHover",
-              }}
-            >
-              <Box mr={4} opacity="0.4">
-                {idx + 1}
-              </Box>
-              <Avatar
-                src={avatarImg}
-                name={avatarAlt}
-                mr={4}
-                h={10}
-                w={10}
-                display={{ base: "none", xs: "block" }}
-              />
-              <Flex flex="1 1 75%" direction="column" mr={8}>
-                <LinkOverlay
-                  as={Link}
-                  href={hasGitHub ? `${githubUrl}${username}` : "#"}
-                  textDecor="none"
-                  color="text"
-                  hideArrow
-                >
+                boxShadow={colorModeStyles.linkBoxShadow}
+                mb={0.25}
+                p={4}
+                w="100%"
+                _hover={{
+                  textDecor: "none",
+                  borderRadius: 0.5,
+                  boxShadow: "0 0 1px primary",
+                  background: "tableBackgroundHover",
+                }}
+              >
+                <Box mr={4} opacity="0.4">
+                  {idx + 1}
+                </Box>
+                <Avatar
+                  src={avatarImg}
+                  name={avatarAlt}
+                  mr={4}
+                  h={10}
+                  w={10}
+                  display={{ base: "none", xs: "block" }}
+                />
+                <Flex flex="1 1 75%" direction="column" mr={8}>
+                  <LinkOverlay
+                    as={Link}
+                    href={hasGitHub ? `${githubUrl}${username}` : "#"}
+                    textDecor="none"
+                    color="text"
+                    hideArrow
+                  >
                   {name}{" "}
                 </LinkOverlay>
 
