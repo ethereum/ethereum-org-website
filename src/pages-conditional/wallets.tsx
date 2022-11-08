@@ -209,7 +209,7 @@ const articles = [
   {
     title: <Translation id="page-wallets-keys-to-safety" />,
     description: <Translation id="page-wallets-blog" />,
-    link: "https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
+    link: "https://web.archive.org/web/20190716160333/https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf?gi=548619266f28",
   },
   {
     title: <Translation id="page-wallets-how-to-store" />,
