@@ -7,6 +7,8 @@ import {
   LinkBox,
   useColorModeValue,
   VisuallyHidden,
+  List,
+  ListItem,
 } from "@chakra-ui/react"
 import Emoji from "./Emoji"
 import Link from "./Link"
@@ -39,11 +41,12 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
   )
 
   return (
-    <Box
+    <List
       bgColor="background"
       boxShadow={colorModeStyles.listBoxShadow}
       w="100%"
       mb={8}
+      aria-label="Bug hunting leaderboard"
     >
       {content
         .filter((_, idx) => idx < limit)
@@ -72,11 +75,12 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
             "fifth",
           ] as const
           return (
-            <LinkBox
-              key={idx}
-              display="flex"
-              justifyContent="space-between"
-              alignItems="center"
+            <ListItem>
+              <LinkBox
+                key={idx}
+                display="flex"
+                justifyContent="space-between"
+                alignItems="center"
                 boxShadow={colorModeStyles.linkBoxShadow}
                 mb={0.25}
                 p={4}
@@ -114,24 +118,25 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
                     )}
                   </LinkOverlay>
 
-                <Box fontSize="sm" opacity="0.6">
-                  {score}{" "}
-                  <Translation id="page-upgrades-bug-bounty-leaderboard-points" />
-                </Box>
-              </Flex>
-              {emoji && <Emoji mr={8} fontSize="2xl" text={emoji} />}
-              <Box
-                as="span"
-                _after={{
-                  content: '"↗"',
-                  ml: 0.5,
-                  mr: 1.5,
-                }}
-              ></Box>
-            </LinkBox>
+                  <Box fontSize="sm" opacity="0.6">
+                    {score}{" "}
+                    <Translation id="page-upgrades-bug-bounty-leaderboard-points" />
+                  </Box>
+                </Flex>
+                {emoji && <Emoji mr={8} fontSize="2xl" text={emoji} />}
+                <Box
+                  as="span"
+                  _after={{
+                    content: '"↗"',
+                    ml: 0.5,
+                    mr: 1.5,
+                  }}
+                ></Box>
+              </LinkBox>
+            </ListItem>
           )
         })}
-    </Box>
+    </List>
   )
 }
 
