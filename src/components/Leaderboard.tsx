@@ -6,6 +6,7 @@ import {
   LinkOverlay,
   LinkBox,
   useColorModeValue,
+  VisuallyHidden,
 } from "@chakra-ui/react"
 import Emoji from "./Emoji"
 import Link from "./Link"
@@ -62,6 +63,14 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
           } else if (idx === 2) {
             emoji = ":3rd_place_medal:"
           }
+
+          const PLACE_WORDS = [
+            "first",
+            "second",
+            "third",
+            "fourth",
+            "fifth",
+          ] as const
           return (
             <LinkBox
               key={idx}
@@ -98,8 +107,12 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
                     color="text"
                     hideArrow
                   >
-                  {name}{" "}
-                </LinkOverlay>
+                    <VisuallyHidden>{`In ${PLACE_WORDS[idx]} place with ${score} points`}</VisuallyHidden>
+                    {name}{" "}
+                    {hasGitHub && (
+                      <VisuallyHidden>(See Github Profile)</VisuallyHidden>
+                    )}
+                  </LinkOverlay>
 
                 <Box fontSize="sm" opacity="0.6">
                   {score}{" "}
