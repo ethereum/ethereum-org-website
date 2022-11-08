@@ -3,7 +3,7 @@ const path = require("path")
 const matter = require("gray-matter")
 const argv = require("minimist")(process.argv.slice(2))
 
-const LANG_ARG = argv.lang || null
+const LANG_ARG: string | null = argv.lang || null
 const PATH_TO_INTL_MARKDOWN = "./src/content/translations/"
 const PATH_TO_ALL_CONTENT = "./src/content/"
 const TUTORIAL_DATE_REGEX = new RegExp("\\d{4}-\\d{2}-\\d{2}")
@@ -21,8 +21,8 @@ const BROKEN_LINK_REGEX = new RegExp(
 // add ../../assets/ethereum-learn.png
 // ../../assets/eth-gif-cat.png
 
-const HTML_TAGS = ["</code", "</p>", "</ul>"]
-const SPELLING_MISTAKES = [
+const HTML_TAGS: Array<string> = ["</code", "</p>", "</ul>"]
+const SPELLING_MISTAKES: Array<string> = [
   "Ethreum",
   "Etherum",
   "Etherium",
@@ -39,11 +39,18 @@ const CASE_SENSITVE_SPELLING_MISTAKES = ["Thereum", "Metamask", "Github"]
 // Regex for explicit lang path (e.g. /en/) && for glossary links (trailing slash breaks links e.g. /glossary/#pos/ doesn't work)
 // We should have case sensitive spelling mistakes && check they are not in links.
 
-const langsArray = fs.readdirSync(PATH_TO_INTL_MARKDOWN)
+interface Languages {
+  lang?: Array<string>
+}
+
+const langsArray: Array<string> = fs.readdirSync(PATH_TO_INTL_MARKDOWN)
 langsArray.push("en")
 
-function getAllMarkdownPaths(dirPath, arrayOfMarkdownPaths = []) {
-  let files = fs.readdirSync(dirPath)
+function getAllMarkdownPaths(
+  dirPath: string,
+  arrayOfMarkdownPaths: Array<string> = []
+): Array<string> {
+  let files: Array<string> = fs.readdirSync(dirPath)
 
   arrayOfMarkdownPaths = arrayOfMarkdownPaths || []
 
@@ -65,35 +72,35 @@ function getAllMarkdownPaths(dirPath, arrayOfMarkdownPaths = []) {
   return arrayOfMarkdownPaths
 }
 
-function sortMarkdownPathsIntoLanguages(files) {
-  const languages = langsArray.reduce((accumulator, value) => {
+function sortMarkdownPathsIntoLanguages(paths: Array<string>): Languages {
+  const languages: Languages = langsArray.reduce((accumulator, value) => {
     return { ...accumulator, [value]: [] }
   }, {})
 
-  for (const file of files) {
-    const isTranslation = file.includes("/translations/")
-    const langIndex = file.indexOf("/translations/") + 14
-    const isFourCharLang = file.includes("pt-br") || file.includes("zh-tw")
-    const charactersToSlice = isFourCharLang ? 5 : 2
+  for (const path of paths) {
+    const isTranslation = path.includes("/translations/")
+    const langIndex = path.indexOf("/translations/") + 14
+    const isFourCharLang = path.includes("pt-br") || path.includes("zh-tw")
+    const charactersToSlice: number = isFourCharLang ? 5 : 2
 
     const lang = isTranslation
-      ? file.slice(langIndex, langIndex + charactersToSlice)
+      ? path.slice(langIndex, langIndex + charactersToSlice)
       : "en"
 
     if (LANG_ARG) {
       if (LANG_ARG === lang) {
-        languages[lang].push(file)
+        languages[lang].push(path)
       }
     } else {
-      languages[lang].push(file)
+      languages[lang].push(path)
     }
   }
 
   return languages
 }
 
-function processFrontmatter(path, lang) {
-  const file = fs.readFileSync(path, "utf-8")
+function processFrontmatter(path: string, lang: string): void {
+  const file: Buffer = fs.readFileSync(path, "utf-8")
   const frontmatter = matter(file).data
 
   if (!frontmatter.title) {
@@ -216,9 +223,10 @@ function getLineNumber(file, index) {
   return lineNumber
 }
 
-function checkMarkdown() {
-  const markdownPaths = getAllMarkdownPaths(PATH_TO_ALL_CONTENT)
-  const markdownPathsByLang = sortMarkdownPathsIntoLanguages(markdownPaths)
+function checkMarkdown(): void {
+  const markdownPaths: Array<string> = getAllMarkdownPaths(PATH_TO_ALL_CONTENT)
+  const markdownPathsByLang: Languages =
+    sortMarkdownPathsIntoLanguages(markdownPaths)
 
   for (const lang in markdownPathsByLang) {
     for (const path of markdownPathsByLang[lang]) {
