@@ -70,7 +70,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Access to 24+ blockchain nodes
     - RPC, HTTPS and WSS endpoints
     - Unlimited access to archive data
-    - 24/7 support and uptime over 99.9% 
+    - 24/7 support and uptime over 99.9%
     - Faucet available on multi chains
     - Unlimited endpoint access with limitless number of API keys
     - Trace/Debug namespace available
@@ -180,6 +180,13 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Unique Ethereum SDK
     - Unique API endpoints
     - Direct, technical support
+- [**NodeReal MegaNode**](https://nodereal.io/)
+  - [Docs](https://docs.nodereal.io/nodereal/meganode/introduction)
+  - Features
+    - Reliable, fast and scalable RPC API services
+    - Enhanced API for web3 developers
+    - Multi-chain support
+    - Get started for free
 - [**NOWNodes**](https://nownodes.io/)
   - [Docs](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - Features
