@@ -33,10 +33,12 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
     {
       listBoxShadow: "tableBox.light",
       linkBoxShadow: "tableItemBox.light",
+      scoreColor: "blackAlpha.700",
     },
     {
       listBoxShadow: "tableBox.dark",
       linkBoxShadow: "tableItemBox.dark",
+      scoreColor: "whiteAlpha.600",
     }
   )
 
@@ -118,7 +120,7 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
                     )}
                   </LinkOverlay>
 
-                  <Box fontSize="sm" opacity="0.6">
+                  <Box fontSize="sm" color={colorModeStyles.scoreColor}>
                     {score}{" "}
                     <Translation id="page-upgrades-bug-bounty-leaderboard-points" />
                   </Box>
