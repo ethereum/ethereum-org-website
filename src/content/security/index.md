@@ -159,8 +159,6 @@ When interacting with smart contracts, do not allow unlimited spend limits. An u
 
 Many Ethereum wallets offer limits protection to safeguard against accounts being drained.
 
-[Explore wallets with limits protection](/wallets/find-wallet/?filters=has_limits_protection)
-
 <Divider />
 
 ## Common scams {#common-scams}

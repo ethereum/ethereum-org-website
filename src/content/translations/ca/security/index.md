@@ -158,8 +158,6 @@ Quan interactueu amb contractes intel·ligents, no permeteu límits de despesa i
 
 Algunes carteres d'Ethereum ofereixen protecció de límits per a salvaguardar els comptes contra el seu buidatge.
 
-[Exploreu carteres amb protecció de límits](/wallets/find-wallet/?filters=has_limits_protection)
-
 <Divider />
 
 ## Estafes habituals {#common-scams}
