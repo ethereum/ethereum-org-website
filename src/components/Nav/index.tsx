@@ -418,7 +418,11 @@ const Nav: React.FC<IProps> = ({ path }) => {
   }
 
   const shouldShowSubNav = path.includes("/developers/")
-
+  const splitPath = path.split("/")
+  const fromPageParameter =
+    splitPath.length > 3 && splitPath[2] !== "languages"
+      ? `?from=/${splitPath.slice(2).join("/")}`
+      : ""
   return (
     <NavContainer>
       <StyledNav aria-label={translateMessageId("nav-primary", intl)}>
@@ -441,7 +445,7 @@ const Nav: React.FC<IProps> = ({ path }) => {
               >
                 <NavIcon name={isDarkTheme ? "lightTheme" : "darkTheme"} />
               </ThemeToggle>
-              <RightNavLink to="/languages/">
+              <RightNavLink to={`/languages/${fromPageParameter}`}>
                 <NavIcon name="language" />
                 <Span>
                   <Translation id="languages" />
