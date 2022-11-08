@@ -211,9 +211,9 @@ Formal verification is considered important for smart contracts because it helps
 
 - [Website](https://www.certik.com/)
 
-**Techfund** - _One of Japan's foremost contract auditing companies, helping "Web3  companies" through security audit services._
+**Techfund`s HiAudit** - _One of Japan's foremost contract auditing companies, helping "Web3  companies" through security audit services._
 
-- [Website](https://techfund.jp/)
+- [Website](https://hiaudit.io/consulting)
 
 **Trail of Bits** - _Cybersecurity company that combines security research with an attacker mentality to reduce risk and fortify code._
 
