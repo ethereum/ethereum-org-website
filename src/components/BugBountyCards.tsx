@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { Center, Flex } from "@chakra-ui/react"
+import { Center, CenterProps, Flex } from "@chakra-ui/react"
 
 import { TranslationKey } from "../utils/translations"
 import ButtonLink from "./ButtonLink"
@@ -45,7 +45,34 @@ const Card = ({ children, ...props }) => {
   )
 }
 
-const Label = ({ children, ...props }) => {
+type LabelVariant = "low" | "medium" | "high" | "critical"
+
+type LabelProps = CenterProps & {
+  variant: LabelVariant
+}
+
+const stylePropsByVariant = {
+  low: {
+    bg: "lowBug",
+    color: "black300",
+  },
+  medium: {
+    bg: "mediumBug",
+    color: "black300",
+  },
+  high: {
+    bg: "fail400",
+    color: "white",
+  },
+  critical: {
+    bg: "fail600",
+    color: "white",
+  },
+}
+
+const Label = ({ children, variant = "medium", ...props }: LabelProps) => {
+  const variantStyleProps = stylePropsByVariant[variant]
+
   return (
     <Center
       borderTopRightRadius="1px"
@@ -58,6 +85,7 @@ const Label = ({ children, ...props }) => {
       px={0}
       py={1}
       textTransform="uppercase"
+      {...variantStyleProps}
       {...props}
     >
       {children}
@@ -67,7 +95,7 @@ const Label = ({ children, ...props }) => {
 
 const LowLabel = ({ children, ...props }) => {
   return (
-    <Label bg="lowBug" color="black300" {...props}>
+    <Label variant="low" {...props}>
       {children}
     </Label>
   )
@@ -75,7 +103,7 @@ const LowLabel = ({ children, ...props }) => {
 
 const MediumLabel = ({ children, ...props }) => {
   return (
-    <Label bg="mediumBug" color="black300" {...props}>
+    <Label variant="medium" {...props}>
       {children}
     </Label>
   )
@@ -83,7 +111,7 @@ const MediumLabel = ({ children, ...props }) => {
 
 const HighLabel = ({ children, ...props }) => {
   return (
-    <Label bg="fail400" color="white" {...props}>
+    <Label variant="high" {...props}>
       {children}
     </Label>
   )
@@ -91,7 +119,7 @@ const HighLabel = ({ children, ...props }) => {
 
 const CriticalLabel = ({ children, ...props }) => {
   return (
-    <Label bg="fail600" color="white" {...props}>
+    <Label variant="critical" {...props}>
       {children}
     </Label>
   )
