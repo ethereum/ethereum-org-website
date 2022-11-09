@@ -65,25 +65,37 @@ const Label = ({ children, ...props }) => {
   )
 }
 
-const LowLabel = styled(Label)`
-  background: ${(props) => props.theme.colors.lowBug};
-  color: ${(props) => props.theme.colors.black300};
-`
+const LowLabel = ({ children, ...props }) => {
+  return (
+    <Label bg="lowBug" color="black300" {...props}>
+      {children}
+    </Label>
+  )
+}
 
-const MediumLabel = styled(Label)`
-  background: ${(props) => props.theme.colors.mediumBug};
-  color: ${(props) => props.theme.colors.black300};
-`
+const MediumLabel = ({ children, ...props }) => {
+  return (
+    <Label bg="mediumBug" color="black300" {...props}>
+      {children}
+    </Label>
+  )
+}
 
-const HighLabel = styled(Label)`
-  background: ${(props) => props.theme.colors.fail400};
-  color: ${(props) => props.theme.colors.white};
-`
+const HighLabel = ({ children, ...props }) => {
+  return (
+    <Label bg="fail400" color="white" {...props}>
+      {children}
+    </Label>
+  )
+}
 
-const CriticalLabel = styled(Label)`
-  background: ${(props) => props.theme.colors.fail600};
-  color: ${(props) => props.theme.colors.white};
-`
+const CriticalLabel = ({ children, ...props }) => {
+  return (
+    <Label bg="fail600" color="white" {...props}>
+      {children}
+    </Label>
+  )
+}
 
 const H2 = styled.h2`
   font-size: 1.5rem;
