@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { Flex } from "@chakra-ui/react"
+import { Center, Flex } from "@chakra-ui/react"
 
 import { TranslationKey } from "../utils/translations"
 import ButtonLink from "./ButtonLink"
@@ -45,18 +45,25 @@ const Card = ({ children, ...props }) => {
   )
 }
 
-const Label = styled.div`
-  display: flex;
-  justify-content: center;
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  border-top-left-radius: 1px;
-  border-top-right-radius: 1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
-  padding: 0.25rem 0rem;
-`
+const Label = ({ children, ...props }) => {
+  return (
+    <Center
+      borderTopRightRadius="1px"
+      borderTopLeftRadius="1px"
+      borderBottomRightRadius={0}
+      borderBottomLeftRadius={0}
+      borderBottom="1px solid"
+      borderColor="border"
+      fontSize="sm"
+      px={0}
+      py={1}
+      textTransform="uppercase"
+      {...props}
+    >
+      {children}
+    </Center>
+  )
+}
 
 const LowLabel = styled(Label)`
   background: ${(props) => props.theme.colors.lowBug};
