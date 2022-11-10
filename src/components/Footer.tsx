@@ -57,7 +57,7 @@ const Footer: React.FC<IProps> = () => {
 
   const isPageRightToLeft = isLangRightToLeft(intl.locale as Lang)
 
-  const [smallBp] = useToken("breakpoints", ["sm"])
+  const [medBp] = useToken("breakpoints", ["md"])
 
   const linkSections: Array<LinkSection> = [
     {
@@ -329,7 +329,7 @@ const Footer: React.FC<IProps> = () => {
               "@media (max-width: 1300px)": {
                 gridTemplateColumns: "repeat(3, auto)",
               },
-              [`@media (max-width: ${smallBp})`]: {
+              [`@media (max-width: ${medBp})`]: {
                 gridTemplateColumns: "repeat(2, auto)",
               },
               "@media (max-width: 500px)": {
