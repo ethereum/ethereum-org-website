@@ -33,7 +33,7 @@ const Pill: React.FC<IProps> = ({
     </Flex>
   ) : (
     <Flex
-      backgroundColor={color ? color : "primary"}
+      backgroundColor={color ? color : "primary100"}
       display="inline-block"
       color="black300"
       textTransform="uppercase"
