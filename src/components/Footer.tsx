@@ -351,7 +351,6 @@ const Footer: React.FC<IProps> = () => {
                         dir={isPageRightToLeft ? "auto" : "ltr"}
                         textDecor="none"
                         color="text200"
-                        _after={{ color: "text200" }}
                         _hover={{
                           textDecor: "none",
                           color: "primary",
