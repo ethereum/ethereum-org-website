@@ -3,13 +3,11 @@ import { VisuallyHidden as ChakraVisuallyHidden } from "@chakra-ui/react"
 
 import { ZenModeContext } from "../contexts/ZenModeContext"
 
-// Todo: Refactor to from isHidden boolean
-
 export interface IProps {
   children?: React.ReactNode
 }
 
-const VisuallyHidden: React.FC<IProps> = ({ children }) => {
+const ZenMode: React.FC<IProps> = ({ children }) => {
   const { isZenMode } = useContext(ZenModeContext)
 
   return isZenMode ? (
@@ -19,4 +17,4 @@ const VisuallyHidden: React.FC<IProps> = ({ children }) => {
   )
 }
 
-export default VisuallyHidden
+export default ZenMode

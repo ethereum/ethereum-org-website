@@ -9,7 +9,7 @@ import { LocaleProvider } from "gatsby-theme-i18n"
 import { lightTheme, darkTheme } from "../theme"
 
 import Footer from "./Footer"
-import VisuallyHidden from "./VisuallyHidden"
+import ZenMode from "./ZenMode"
 import Nav from "./Nav"
 import SideNav from "./SideNav"
 import SideNavMobile from "./SideNavMobile"
@@ -163,24 +163,24 @@ const Layout: React.FC<IProps> = ({
                 originalPagePath={pageContext.originalPath!}
               />
               <ContentContainer>
-                <VisuallyHidden>
+                <ZenMode>
                   <Nav path={path} />
                   {shouldShowSideNav && <SideNavMobile path={path} />}
-                </VisuallyHidden>
+                </ZenMode>
                 <SkipLinkAnchor id="main-content" />
                 <MainContainer>
                   {shouldShowSideNav && (
-                    <VisuallyHidden>
+                    <ZenMode>
                       <SideNav path={path} />
-                    </VisuallyHidden>
+                    </ZenMode>
                   )}
                   <MainContent>
                     <Main>{children}</Main>
                   </MainContent>
                 </MainContainer>
-                <VisuallyHidden>
+                <ZenMode>
                   <Footer />
-                </VisuallyHidden>
+                </ZenMode>
                 <FeedbackWidget />
               </ContentContainer>
             </ZenModeContext.Provider>
