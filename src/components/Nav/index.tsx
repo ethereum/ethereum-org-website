@@ -430,7 +430,6 @@ const Nav: React.FC<IProps> = ({ path }) => {
                 onClick={toggleColorMode}
               />
               <ButtonLink to="/languages/" variant="icon">
-                <Flex flexWrap="nowrap" alignItems="center">
                   <Icon as={MdLanguage} fontSize="2xl" />
                   <Text as="span" pl={2}>
                     <Translation id="languages" />

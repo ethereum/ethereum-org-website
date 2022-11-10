@@ -212,7 +212,6 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
               <Flex flexWrap="nowrap" gap={6} width="full">
                 {feedbackSubmitted ? (
                   <Button
-                    variant="solid"
                     onClick={handleSurveyOpen}
                     aria-label={translateMessageId(
                       "feedback-widget-thank-you-cta",

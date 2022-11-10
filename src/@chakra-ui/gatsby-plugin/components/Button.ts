@@ -92,8 +92,6 @@ export const Button: ComponentStyleConfig = {
     },
     icon: {
       appearance: "none",
-      display: "grid",
-      placeItems: "center",
       background: "inherit",
       padding: "initial",
       border: 0,
