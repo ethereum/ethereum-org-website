@@ -83,6 +83,8 @@
               to: /developers/docs/consensus-mechanisms/pos/attack-and-defense/
             - id: docs-nav-keys
               to: /developers/docs/consensus-mechanisms/pos/keys/
+            - id: docs-nav-pos-faqs
+              to: /developers/docs/consensus-mechanisms/pos/faqs
 - id: docs-nav-ethereum-stack
   path: /developers/docs/
   items:
