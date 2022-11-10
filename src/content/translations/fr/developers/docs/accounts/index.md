@@ -34,7 +34,7 @@ Les deux types peuvent :
 
 - La création d'un contrat a un coût dû l'utilisation de stockage réseau
 - Vous pouvez seulement envoyer des transactions en réponse à la réception d'une transaction
-- Les transactions depuis un compte externe vers un compte de contrat peuvent déclencher un code pouvant exécutant plein d'actions différentes, comme transférer des tokens ou même créer un nouveau contrat
+- Les transactions depuis un compte externe vers un compte de contrat peuvent déclencher un code pouvant exécuter plein d'actions différentes, comme transférer des tokens ou même créer un nouveau contrat
 
 ## Description d'un compte {#an-account-examined}
 

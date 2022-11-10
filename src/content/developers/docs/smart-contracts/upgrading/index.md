@@ -86,7 +86,7 @@ By pointing the proxy contract to a new logic contract, the code executed when u
 
 Proxy patterns are a popular method for upgrading smart contracts because they eliminate the difficulties associated with contract migration. However, proxy patterns are more complicated to use and can introduce critical flaws, such as [function selector clashes](https://medium.com/nomic-foundation-blog/malicious-backdoors-in-ethereum-proxies-62629adf3357), if used improperly.
 
-[More on proxy patterns](blog.openzeppelin.com/proxy-patterns/).
+[More on proxy patterns](https://blog.openzeppelin.com/proxy-patterns/).
 
 ### Upgrade mechanism #4: Strategy pattern {#strategy-pattern}
 
@@ -102,7 +102,7 @@ The main drawback is that this pattern is mostly useful for rolling out minor up
 
 ### Upgrade mechanism #5: Diamond pattern {#diamond-pattern}
 
-The diamond pattern can be considered an improvement on the proxy pattern. Diamond patterns differ from proxy patterns because the diamond proxy contract can delegates function calls to more than one logic contract.
+The diamond pattern can be considered an improvement on the proxy pattern. Diamond patterns differ from proxy patterns because the diamond proxy contract can delegate function calls to more than one logic contract.
 
 The logic contracts in the diamond pattern are known as _facets_. To make the diamond pattern work, you need to create a mapping in the proxy contract that maps [function selectors](https://docs.soliditylang.org/en/v0.8.12/abi-spec.html#function-selector) to different facet addresses.
 

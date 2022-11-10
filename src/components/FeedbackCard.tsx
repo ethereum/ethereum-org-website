@@ -22,8 +22,7 @@ const FeedbackCard: React.FC<IProps> = ({
   ...props
 }) => {
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
-  const [isHelpful, setIsHelpful] = useState(false)
-  const surveyUrl = useSurvey(feedbackSubmitted, isHelpful)
+  const surveyUrl = useSurvey(feedbackSubmitted)
 
   const location = typeof window !== "undefined" ? window.location.href : ""
   const isTutorial = location.includes("tutorials")
@@ -44,7 +43,6 @@ const FeedbackCard: React.FC<IProps> = ({
       eventAction: `Clicked`,
       eventName: String(choice),
     })
-    setIsHelpful(choice)
     setFeedbackSubmitted(true)
   }
   const handleSurveyOpen = (): void => {
@@ -83,14 +81,16 @@ const FeedbackCard: React.FC<IProps> = ({
             <>
               <Button
                 variant="outline-color"
-                leftIcon={<Icon as={ThumbsUp} />}
+                leftIcon={<Icon as={ThumbsUp} w={6} h={6} />}
                 onClick={() => handleSubmit(true)}
               >
                 <Translation id="yes" />
               </Button>
               <Button
                 variant="outline-color"
-                leftIcon={<Icon as={ThumbsUp} transform="scaleY(-1)" />}
+                leftIcon={
+                  <Icon as={ThumbsUp} w={6} h={6} transform="scaleY(-1)" />
+                }
                 onClick={() => handleSubmit(false)}
               >
                 <Translation id="no" />

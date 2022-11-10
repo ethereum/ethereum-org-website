@@ -153,6 +153,7 @@ Here's more information of some of the better developed use-cases and visions fo
 - [Domain names](#nft-domains)
 - [Physical items](#nft-physical-items)
 - [Investments and collateral](#nfts-and-defi)
+- [Tokengating](#tokengating)
 
 <Divider />
 
@@ -273,6 +274,24 @@ Companies offering fake certificates for university degrees are reportedly a bil
 
 <Divider />
 
+### Tokengating {#tokengating}
+
+Tokengating is a way of restricting access to something and using NFTs as a way to unlock access. These things can vary hugely based on the platform but popular examples are gated content, private chat servers, and, in the world of ecommerce, exclusive products.
+
+A platform that does tokengating will typically ask you to connect your wallet to prove you own the required NFT. If you have the NFT you need, you'll get access. If not, the thing will remain gated. NFTs are a great way to do this because of their uniqueness – you can't fake ownership to get the thing.
+
+Since NFTs are on Ethereum, they can be used to unlock Ethereum tokengates on any platform that implements them. A single NFT you own could unlock gated content, private chat servers, and exclusive products across completely different websites and applications.
+
+If minting and distributing NFTs is about community-generation or community digitization, tokengating is about community nurturing. It sees NFTs used more as a tool for membership or loyalty – and a great way to reliably deliver the rewards that come with it.
+
+#### Examples
+
+- [Collab.land](https://collab.land/) tokengates Discord chat servers or Telegram groups
+- [Unlock protocol](https://unlock-protocol.com/) is a protocol for tokengating
+- [Shopify](https://help.shopify.com/en/manual/products/digital-service-product/nfts) have a growing roster of apps that let merchants tokengate access to products and discounts
+
+<Divider />
+
 ## Ethereum and NFTs {#ethereum-and-nfts}
 
 Ethereum makes it possible for NFTs to work for a number of reasons:
@@ -338,3 +357,5 @@ Most NFTs are built using a consistent standard known as [ERC-721](/developers/d
 - [No, CryptoArtists Aren’t Harming the Planet](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
 - [Ethereum's energy consumption](/energy-consumption/)
 - [A country's worth of power, no more](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, May 18 2021_
+
+<QuizWidget quizKey="nfts" />

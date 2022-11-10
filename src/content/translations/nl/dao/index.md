@@ -68,11 +68,21 @@ _Meestal gebruikt voor hechtere, mensgerichtere organisaties zoals liefdadigheid
 
 [MolochDAO](http://molochdao.com/) – MolochDAO is gericht op het financieren van Ethereum-projecten. Zij vereisen een voorstel voor lidmaatschap, zodat de groep kan beoordelen of u over de nodige expertise en het nodige kapitaal beschikt om weloverwogen beslissingen te nemen over potentiële begunstigden. U kunt niet zomaar toegang tot de DAO op de open markt kopen.
 
+### Op reputatie gebaseerd lidmaatschap {#reputation-based-membership}
+
+Reputatie is een bewijs van deelname en geeft stemrecht in de DAO. Anders dan een op tokens of aandelen gebaseerd lidmaatschap, dragen op reputatie gebaseerde DAO's geen eigendomsrechten over aan de bijdragers. Reputatie kan niet worden gekocht, overgedragen of gedelegeerd; DAO-leden moeten reputatie verdienen door deelname. On-chain stemmen is vrij voor iedereen en toekomstige leden kunnen vrij voorstellen indienen om toe te treden tot de DAO, kunnen verzoeken reputatie en tokens te ontvangen als beloning voor hun bijdragen.
+
+_Meestal gebruikt voor gedecentraliseerde ontwikkeling en governance van protocollen en dapps, maar ook goed geschikt voor een veelzijdige groep organisaties zoals liefdadigheidsinstellingen, arbeiderscollectieven, investeringsclubs, enz._
+
+#### Een goed voorbeeld {#reputation-example}
+
+[DXdao](https://DXdao.eth.link) – DXdao is een wereldwijd soeverein collectief dat sinds 2019 gedecentraliseerde protocollen en toepassingen bouwt en beheert. Het maakt gebruik van op reputatie gebaseerde governance en holografische consensus om fondsen te coördineren en te beheren, wat betekent dat niemand zomaar de toekomst ervan kan beïnvloeden door aankopen te doen.
+
 ## Hoe werken DAO's? {#how-daos-work}
 
-De basis van een DAO is het bijbehorende slimme contract. Het contract definieert de regels van de organisatie en houdt de schatkist van de groep. Zodra het contract live is op Ethereum, kan niemand meer de regels veranderen. De regels kunnen enkel veranderd worden door een stemming. Als iemand iets probeert te doen dat niet valt onder de regels en logica in de code, zal het mislukken. En omdat de schatkist ook in het slimme contract wordt gedefinieerd, betekent dat ook niemand het geld kan uitgeven zonder toestemming van de groep. Dit betekent dat DAO's geen centrale autoriteit nodig hebben. In plaats daarvan neemt de groep collectief besluiten en worden betalingen automatisch toegestaan wanneer er wordt gestemd.
+De basis van een DAO is het bijbehorende slimme contract. Het contract definieert de regels van de organisatie en houdt de schatkist van de groep. Zodra het contract live is op Ethereum, kan niemand meer de regels veranderen. De regels kunnen enkel veranderd worden door een stemming. Als iemand iets probeert te doen dat niet valt onder de regels en logica in de code, zal het mislukken. En omdat de schatkist ook in het slimme contract wordt gedefinieerd, betekent dat niemand het geld kan uitgeven zonder toestemming van de groep. Dit betekent dat DAO's geen centrale autoriteit nodig hebben. In plaats daarvan neemt de groep collectief besluiten en worden betalingen automatisch toegestaan wanneer er wordt ingestemd.
 
-Dit is mogelijk omdat slimme contracten fraudebestendig zijn zodra ze live op Ethereum gaan. U kunt de code (de regels van de DAO's) niet gewoon bewerken zonder dat mensen dat merken. Dit komt omdat alles openbaar is voor het publiek.
+Dit is mogelijk omdat slimme contracten fraudebestendig zijn zodra ze live op Ethereum gaan. U kunt de code (de regels van DAO's) niet gewoon bewerken zonder dat mensen dat merken, omdat alles openbaar is.
 
 <DocLink to="/smart-contracts/">
   Meer over slimme contracten
@@ -80,7 +90,7 @@ Dit is mogelijk omdat slimme contracten fraudebestendig zijn zodra ze live op Et
 
 ## Ethereum en DAO's {#ethereum-and-daos}
 
-Ethereum is de perfecte basis voor DAO's door een aantal redenen:
+Ethereum is de perfecte basis voor DAO's om een aantal redenen:
 
 - De eigen consensus van Ethereum is zo verdeeld en voldoende vastgesteld dat organisaties het netwerk kunnen vertrouwen.
 - De code van een slim contract kan niet aangepast worden zodra deze live is, zelfs niet door de eigenaren. Hierdoor kan de DAO functioneren volgens de regels waarmee ze oorspronkelijk was geprogrammeerd.
@@ -99,7 +109,7 @@ Ethereum is de perfecte basis voor DAO's door een aantal redenen:
 - [Roep een DAO op met DAOHaus](https://app.daohaus.club/summon)
 - [Creëer een door Aragon mogelijk gemaakte DAO](https://aragon.org/product)
 - [Start een kolonie](https://colony.io/)
-- [Maak een DAO met DAOstack](https://daostack.io/)
+- [Maak een DAO met de holografische consensus van DAOstack](https://alchemy.daostack.io/daos/create)
 
 ## Verder lezen {#further-reading}
 
@@ -110,6 +120,7 @@ Ethereum is de perfecte basis voor DAO's door een aantal redenen:
 - [Wat is een DAO en waar is het voor?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [Hoe een door een DAO mogelijk gemaakte digitale gemeenschap te starten](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) - [DAOhaus](https://daohaus.club/)
 - [Wat is een DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
+- [Wat is holografische consensus?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
 
 ### Video's {#videos}
 

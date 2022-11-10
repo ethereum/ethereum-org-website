@@ -26,7 +26,6 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 - [The Rust Ethereum Client](https://openethereum.github.io/) \* **Notare che OpenEthereum [è ormai superato](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) e non viene più mantenuto.** Usalo con cautela e preferibilmente passa a un'altra implementazione client.
 - [Sending Transaction to Ethereum Using Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [An Introduction to Smart Contracts with Parity Ethereum Client](https://wiki.parity.io/Smart-Contracts)
-- [Setting up your Oasis SDK dev environment](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [A step-by-step tutorial on how to write contracts in rust Wasm for Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Articoli di livello intermedio {#intermediate-articles}
@@ -41,18 +40,22 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 - [Build a Decentralized Todo App Using Vue.js & Rust](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Getting Started with Enigma - In Rust Programming Language](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [An Intro to Secret Contracts](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
-- [Deploying Solidity Contracts on Oasis (Compound)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)
+- [Crea una blockchain in Rust](https://blog.logrocket.com/how-to-build-a-blockchain-in-rust/)
 
 ## Progetti e strumenti di Rust {#rust-projects-and-tools}
 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Raccolta di risorse esterne per interagire con una rete di tipo Ethereum_
+- [Lighthouse](https://github.com/sigp/lighthouse) - _Client veloce del livello di consenso di Ethereum_
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/)
 - [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _Riferimento API di OASIS_
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Implementazione della macchina virtuale Ethereum in Rust_
-- [Parity](https://github.com/paritytech/parity-ethereum) - _Client Rust per Ethereum_
 - [rust-web3](https://github.com/tomusdrw/rust-web3) - _Implementazione della libreria di Web3.js in Rust_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Smart Contract Wavelet in Rust_
+- [Foundry](https://github.com/gakonst/foundry)- _Toolkit per lo sviluppo di applicazioni Ethereum_
+- [Ethers_rs](https://github.com/gakonst/ethers-rs)- _Libreria di Ethereum e implementazione di portafogli_
+- [evm_rs](https://github.com/rust-blockchain/evm)- _Implementazione della macchina virtuale di Ethereum in Rust_
+- [SewUp](https://github.com/second-state/SewUp) - _Una libreria per aiutarti a creare il tuo contratto webassembly di Ethereum con Rust e sviluppare in un backend comune_
 
 Cerchi altre risorse? Dai un'occhiata a [ethereum.org/developers.](/developers/)
 

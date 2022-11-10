@@ -149,7 +149,7 @@ First, let’s define a function named `mintNFT(tokenData)` and create our trans
 
 - `'to': contractAddress` — The contract we wish to interact with and send the transaction
 
-- `'nonce': nonce` — The account nonce with the number of transactions send from our address
+- `'nonce': nonce` — The account nonce with the number of transactions sent from our address
 
 - `'gas': estimatedGas` — The estimated gas needed to complete the transaction
 

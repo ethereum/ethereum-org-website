@@ -63,16 +63,14 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
   useOnClickOutside(containerRef, () => handleClose(), [`mousedown`])
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const [feedbackSubmitted, setFeedbackSubmitted] = useState<boolean>(false)
-  const [isHelpful, setIsHelpful] = useState<boolean | null>(null)
 
   useEffect(() => {
     // Reset component state when path (location) changes
     setIsOpen(false)
     setFeedbackSubmitted(false)
-    setIsHelpful(null)
   }, [location])
 
-  const surveyUrl = useSurvey(feedbackSubmitted, isHelpful)
+  const surveyUrl = useSurvey(feedbackSubmitted)
 
   const bottomOffset = useMemo(() => {
     const pathsWithBottomNav = ["/staking", "/dao", "/defi", "/nft"]
@@ -108,7 +106,6 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
       eventAction: `Clicked`,
       eventName: String(choice),
     })
-    setIsHelpful(choice)
     setFeedbackSubmitted(true)
   }
   const handleSurveyOpen = (): void => {

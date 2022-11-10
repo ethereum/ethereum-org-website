@@ -8,9 +8,6 @@ import { LocaleProvider } from "gatsby-theme-i18n"
 
 import { lightTheme, darkTheme } from "../theme"
 
-import BannerNotification from "./BannerNotification"
-import Link from "./Link"
-import Translation from "./Translation"
 import Footer from "./Footer"
 import VisuallyHidden from "./VisuallyHidden"
 import Nav from "./Nav"
@@ -24,7 +21,6 @@ import { SkipLink, SkipLinkAnchor } from "./SkipLink"
 import { ZenModeContext } from "../contexts/ZenModeContext"
 
 import { useKeyPress } from "../hooks/useKeyPress"
-import { useConfetti } from "../hooks/useConfetti"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { scrollIntoView } from "../utils/scrollIntoView"
@@ -68,11 +64,6 @@ const Main = styled.main`
   flex-grow: 1;
 `
 
-const Centered = styled.div`
-  display: flex;
-  justify-content: center;
-`
-
 export interface IProps {
   children?: React.ReactNode
   data?: {
@@ -101,8 +92,6 @@ const Layout: React.FC<IProps> = ({
 
   const [isZenMode, setIsZenMode] = useState<boolean>(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState<boolean>(false)
-  const [isHomepage, setIsHomepage] = useState<boolean>(false)
-  const [isMergePage, setIsMergePage] = useState<boolean>(false)
   const locale = pageContext.locale
   const messages = require(`../intl/${locale}.json`)
 
@@ -126,11 +115,7 @@ const Layout: React.FC<IProps> = ({
       const idTag = location.hash.split("#")
       scrollIntoView(idTag[1])
     }
-    setIsHomepage(path === `/${locale}/`)
-    setIsMergePage(path === `/${locale}/upgrades/merge/`)
   }, [path, location])
-
-  useConfetti("confetti-easter-egg")
 
   const handleZenModeChange = (val?: boolean): void => {
     // Use 'val' param if provided. Otherwise toggle
@@ -180,22 +165,7 @@ const Layout: React.FC<IProps> = ({
                 <Nav path={path} />
                 {shouldShowSideNav && <SideNavMobile path={path} />}
               </VisuallyHidden>
-              <BannerNotification
-                shouldShow={isHomepage}
-                justify="center"
-                zIndex="1"
-                textAlign="center"
-              >
-                <div>
-                  <Translation id="merge-complete" />
-                  &nbsp;
-                  <Link to="/upgrades/merge">
-                    <Translation id="learn-more" />
-                  </Link>
-                </div>
-              </BannerNotification>
               <SkipLinkAnchor id="main-content" />
-              {isMergePage && <Centered id="confetti-easter-egg" />}
               <MainContainer>
                 {shouldShowSideNav && (
                   <VisuallyHidden isHidden={isZenMode}>

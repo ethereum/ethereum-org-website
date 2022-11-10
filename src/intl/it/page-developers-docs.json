@@ -58,7 +58,7 @@
   "docs-nav-mev-description": "Come viene estratto il valore dalla blockchain Ethereum attraverso il blocco delle ricompense",
   "docs-nav-mining": "Mining",
   "docs-nav-mining-algorithms": "Algoritmi di mining",
-  "docs-nav-dagger-hashamoto": "Dagger-Hashamoto",
+  "docs-nav-dagger-hashimoto": "Dagger-Hashimoto",
   "docs-nav-ethash": "Ethash",
   "docs-nav-networks": "Reti",
   "docs-nav-networks-description": "Implementazioni di Ethereum compresi test di rete",

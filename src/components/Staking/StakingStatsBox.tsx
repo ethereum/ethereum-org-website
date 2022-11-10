@@ -1,14 +1,20 @@
+// Import libraries
 import React, { useState, useEffect } from "react"
 import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
-
+import { Spinner } from "@chakra-ui/react"
+// Import components
 import Translation from "../Translation"
-import StatErrorMessage from "../StatErrorMessage"
-import { getLocaleForNumberFormat } from "../../utils/translations"
-import { getData } from "../../utils/cache"
-import calculateStakingRewards from "../../utils/calculateStakingRewards"
+// Import utilities
 import { Lang } from "../../utils/languages"
+import { getData } from "../../utils/cache"
+import { getLocaleForNumberFormat } from "../../utils/translations"
 
+// Constants
+const NA_ERROR = "n/a"
+const ZERO = "0"
+
+// Styled components
 const Container = styled.div`
   display: flex;
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
@@ -49,14 +55,20 @@ const Label = styled.p`
   margin-top: 0.5rem;
 `
 
+// Interfaces
 export interface IProps {}
 
-const StatsBoxGrid: React.FC<IProps> = () => {
+// StatsBox component
+const StakingStatsBox: React.FC<IProps> = () => {
   const intl = useIntl()
-  const [totalEth, setTotalEth] = useState<string>("0")
-  const [totalValidators, setTotalValidators] = useState<string>("0")
-  const [currentApr, setCurrentApr] = useState<string>("0")
-  const [error, setError] = useState(false)
+  /**
+   * State variables:
+   * - ZERO is default string, "0", representing loading state
+   * - null is error state
+   */
+  const [totalEth, setTotalEth] = useState<string | null>(ZERO)
+  const [totalValidators, setTotalValidators] = useState<string | null>(ZERO)
+  const [currentApr, setCurrentApr] = useState<string | null>(ZERO)
 
   useEffect(() => {
     const localeForStatsBoxNumbers = getLocaleForNumberFormat(
@@ -80,47 +92,64 @@ const StatsBoxGrid: React.FC<IProps> = () => {
         } = await getData<{
           data: { totalvalidatorbalance: number; validatorscount: number }
         }>("https://mainnet.beaconcha.in/api/v1/epoch/latest")
-
         const valueTotalEth = formatInteger(
           Number((totalvalidatorbalance * 1e-9).toFixed(0))
         )
         const valueTotalValidators = formatInteger(validatorscount)
-        const currentAprDecimal = calculateStakingRewards(
-          totalvalidatorbalance * 1e-9
-        )
-        const valueCurrentApr = formatPercentage(currentAprDecimal)
         setTotalEth(valueTotalEth)
         setTotalValidators(valueTotalValidators)
-        setCurrentApr(`~${valueCurrentApr}`)
-        setError(false)
       } catch (error) {
-        setTotalEth("n/a")
-        setTotalValidators("n/a")
-        setCurrentApr("n/a")
-        setError(true)
+        setTotalEth(null)
+        setTotalValidators(null)
+      }
+    })()
+    ;(async () => {
+      try {
+        const {
+          data: { apr },
+        } = await getData<{
+          data: { apr: number }
+        }>("https://beaconcha.in/api/v1/ethstore/650")
+        const valueCurrentApr = formatPercentage(apr)
+        setCurrentApr(valueCurrentApr)
+      } catch (error) {
+        setCurrentApr(null)
       }
     })()
   }, [intl.locale])
 
-  // TODO: Improve error handling
-  if (error) return <StatErrorMessage />
-
   return (
     <Container>
       <Cell>
-        <Value>{totalEth}</Value>
+        {totalEth === ZERO ? (
+          <Spinner />
+        ) : (
+          <Value title={totalEth ? "" : NA_ERROR}>{totalEth || NA_ERROR}</Value>
+        )}
         <Label>
           <Translation id="page-staking-stats-box-metric-1" />
         </Label>
       </Cell>
       <Cell>
-        <Value>{totalValidators}</Value>
+        {totalValidators === ZERO ? (
+          <Spinner />
+        ) : (
+          <Value title={totalValidators ? "" : NA_ERROR}>
+            {totalValidators || NA_ERROR}
+          </Value>
+        )}
         <Label>
           <Translation id="page-staking-stats-box-metric-2" />
         </Label>
       </Cell>
       <Cell>
-        <Value>{currentApr}</Value>
+        {currentApr === ZERO ? (
+          <Spinner />
+        ) : (
+          <Value title={currentApr ? "" : NA_ERROR}>
+            {currentApr || NA_ERROR}
+          </Value>
+        )}
         <Label>
           <Translation id="page-staking-stats-box-metric-3" />
         </Label>
@@ -129,4 +158,4 @@ const StatsBoxGrid: React.FC<IProps> = () => {
   )
 }
 
-export default StatsBoxGrid
+export default StakingStatsBox

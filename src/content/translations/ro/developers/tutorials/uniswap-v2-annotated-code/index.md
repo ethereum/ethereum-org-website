@@ -654,7 +654,7 @@ Acesta este un control al sănătăţii, pentru a ne asigura că nu pierdem în 
 
 Actualizează `reserve0` și `reserve1`, iar dacă este necesar acumulatorii de preț și marca temporală, apoi emite un eveniment.
 
-##### Sync or Skim {#sync-or-skim}
+##### Sync or Skim
 
 Este posibil ca soldurile reale să fie desincronizate de rezervele pe care crede că le are schimbul în pereche. Nu există nicio posibilitate de a retrage tokenuri fără aprobarea contractului, însă depozitele sunt o cu totul altă problemă. Un cont poate transfera tokenuri către schimb fără să apeleze nici la `mint`, nici la `swap`.
 
