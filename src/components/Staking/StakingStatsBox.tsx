@@ -140,7 +140,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
           data: { apr },
         } = await getData<{
           data: { apr: number }
-        }>("https://beaconcha.in/api/v1/ethstore/650")
+        }>("https://beaconcha.in/api/v1/ethstore/latest")
         const valueCurrentApr = formatPercentage(apr)
         setCurrentApr(valueCurrentApr)
       } catch (error) {
