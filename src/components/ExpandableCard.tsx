@@ -36,6 +36,11 @@ const ExpandableCard: React.FC<IProps> = ({
   eventName = "",
 }) => {
   const [isVisible, setIsVisible] = useState(false)
+  const matomo = {
+    eventAction: `Clicked`,
+    eventCategory: `ExpandableCard${eventCategory}`,
+    eventName,
+  }
   const onClick = () => {
     // Card will not collapse if clicking on a link or selecting text
     if (
@@ -47,12 +52,6 @@ const ExpandableCard: React.FC<IProps> = ({
       !isVisible && trackCustomEvent(matomo)
       setIsVisible(!isVisible)
     }
-  }
-
-  const matomo = {
-    eventAction: `Clicked`,
-    eventCategory: `ExpandableCard${eventCategory}`,
-    eventName,
   }
 
   return (
