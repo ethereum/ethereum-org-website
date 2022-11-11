@@ -502,7 +502,7 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[HackerOne](https://www.hackerone.com/)** - _Vulnerability coordination and bug bounty platform that connects businesses with penetration testers and cybersecurity researchers._
 
-- **[HackenProof](https://hackenproof.com/)** - _Expert bug bounty platform where blockchain projects only pay for verified, relevant and in-scope bug reports._
+- **[HackenProof](https://hackenproof.com/)** - _Expert bug bounty platform for crypto projects (DeFi, Smart Contracts, Wallets, CEX and more), where security professionals provide triage services and researchers get paid for relevant, verified bug reports._
 
 ### Publications of known smart contract vulnerabilities and exploits {#common-smart-contract-vulnerabilities-and-exploits}
 
