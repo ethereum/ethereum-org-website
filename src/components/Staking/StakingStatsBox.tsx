@@ -5,6 +5,9 @@ import { useIntl } from "react-intl"
 import { Spinner } from "@chakra-ui/react"
 // Import components
 import Translation from "../Translation"
+import Tooltip from "../Tooltip"
+import Link from "../Link"
+import Icon from "../Icon"
 // Import utilities
 import { Lang } from "../../utils/languages"
 import { getData } from "../../utils/cache"
@@ -49,11 +52,39 @@ const Value = styled.code`
   color: ${({ theme }) => theme.colors.primary};
 `
 
-const Label = styled.p`
+const Label = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
   text-transform: uppercase;
   font-size: 0.875rem;
   margin-top: 0.5rem;
 `
+
+const StyledIcon = styled(Icon)`
+  fill: ${({ theme }) => theme.colors.text};
+  margin-inline-start: 0.5rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    fill: ${({ theme }) => theme.colors.primary};
+  }
+`
+
+const BeaconchainTooltip = () => (
+  <Tooltip
+    content={
+      <div>
+        <Translation id="data-provided-by" />{" "}
+        <Link to="https://beaconcha.in">Beaconcha.in</Link>
+      </div>
+    }
+  >
+    <StyledIcon name="info" size="16" />
+  </Tooltip>
+)
 
 // Interfaces
 export interface IProps {}
@@ -128,6 +159,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
         )}
         <Label>
           <Translation id="page-staking-stats-box-metric-1" />
+          <BeaconchainTooltip />
         </Label>
       </Cell>
       <Cell>
@@ -140,6 +172,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
         )}
         <Label>
           <Translation id="page-staking-stats-box-metric-2" />
+          <BeaconchainTooltip />
         </Label>
       </Cell>
       <Cell>
@@ -152,6 +185,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
         )}
         <Label>
           <Translation id="page-staking-stats-box-metric-3" />
+          <BeaconchainTooltip />
         </Label>
       </Cell>
     </Container>
