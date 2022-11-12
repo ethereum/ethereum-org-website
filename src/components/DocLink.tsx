@@ -1,5 +1,13 @@
 import React from "react"
-import { Icon, Box, Text, Flex, LinkBox, LinkOverlay } from "@chakra-ui/react"
+import {
+  Icon,
+  Box,
+  Text,
+  Flex,
+  LinkBox,
+  LinkOverlay,
+  useToken,
+} from "@chakra-ui/react"
 import { AiOutlineArrowRight } from "react-icons/ai"
 import Emoji from "./Emoji"
 import Link from "./Link"
@@ -11,6 +19,8 @@ export interface IProps {
 }
 
 const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
+  const linkBoxShadowColor = useToken("colors", "primary")
+
   return (
     <LinkBox
       padding={4}
@@ -22,7 +32,7 @@ const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
       _hover={{
         background: "tableBackgroundHover",
         borderRadius: "base",
-        boxShadow: "0 0 1px var(--eth-colors-primary)",
+        boxShadow: `0 0 1px ${linkBoxShadowColor}`,
       }}
     >
       <Flex
