@@ -133,13 +133,13 @@ const ExpandableCard: React.FC<IProps> = ({
           </Box>
         </AccordionButton>
         {isVisible ? (
-          <Fade in={isVisible}>
-            <AccordionPanel
-              paddingX="1.5rem"
-              paddingBottom="1.5rem"
-              paddingTop="0"
-              onClick={onClick}
-            >
+          <AccordionPanel
+            paddingX="1.5rem"
+            paddingBottom="1.5rem"
+            paddingTop="0"
+            onClick={onClick}
+          >
+            <Fade in={isVisible}>
               <Box
                 fontSize="md"
                 color="text"
@@ -150,8 +150,8 @@ const ExpandableCard: React.FC<IProps> = ({
               >
                 {children}
               </Box>
-            </AccordionPanel>
-          </Fade>
+            </Fade>
+          </AccordionPanel>
         ) : null}
       </AccordionItem>
     </Accordion>
