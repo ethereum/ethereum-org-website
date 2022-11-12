@@ -26,7 +26,6 @@ const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
       }}
     >
       <Flex
-        position="relative"
         zIndex={1}
         display="flex"
         flexDirection="row"
