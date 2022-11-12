@@ -62,7 +62,7 @@ const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
         <Icon
           as={AiOutlineArrowRight}
           alignSelf="center"
-          minWidth="2rem"
+          minWidth={8}
           boxSize={6}
           marginX={6}
           _groupHover={{
