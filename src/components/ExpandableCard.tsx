@@ -15,7 +15,7 @@ import {
   Button,
   Fade,
   Heading,
-  Text as ChakraText,
+  Text,
 } from "@chakra-ui/react"
 
 export interface IProps {
@@ -70,69 +70,66 @@ const ExpandableCard: React.FC<IProps> = ({
       index={isVisible ? [0] : []}
     >
       <AccordionItem borderTopWidth="0" flex="1">
-        <AccordionButton
-          width="100%"
-          padding={`1.5rem 1.5rem ${isVisible ? "0" : "1.5rem"}`}
-          flex="1"
-          onClick={onClick}
-          _hover={{
-            backgroundColor: "ednBackground",
-          }}
-        >
-          <Box
-            display="flex"
+        <h3 style={{ margin: 0 }}>
+          <AccordionButton
             width="100%"
-            alignItems="center"
-            flexDir={{ base: "column", sm: "row" }}
+            padding={`1.5rem 1.5rem ${isVisible ? "0" : "1.5rem"}`}
+            flex="1"
+            onClick={onClick}
+            _hover={{
+              backgroundColor: "ednBackground",
+            }}
           >
             <Box
-              marginBottom={{ base: "0.5rem", sm: 0 }}
-              marginRight={{ base: 0, sm: "1rem" }}
+              display="flex"
+              width="100%"
+              alignItems="center"
+              flexDir={{ base: "column", sm: "row" }}
             >
               <Box
-                display="flex"
-                alignItems="center"
-                sx={{
-                  svg: { marginRight: "1.5rem" },
-                }}
-                margin="1rem 0"
+                marginBottom={{ base: "0.5rem", sm: 0 }}
+                marginRight={{ base: 0, sm: "1rem" }}
               >
-                {!!Svg && <Svg />}
-                <Heading
-                  as="h3"
-                  size="md"
-                  fontWeight="semibold"
-                  flex="1"
-                  marginTop="0rem"
-                  marginBottom="0.5rem"
+                <Box
+                  display="flex"
+                  alignItems="center"
+                  sx={{
+                    svg: { marginRight: "1.5rem" },
+                  }}
+                  margin="1rem 0"
                 >
-                  {title}
-                </Heading>
+                  {!!Svg && <Svg />}
+                  <Text
+                    fontSize="xl"
+                    fontWeight="semibold"
+                    flex="1"
+                    marginTop="0rem"
+                    marginBottom="0.5rem"
+                  >
+                    {title}
+                  </Text>
+                </Box>
+                <Text
+                  fontSize="sm"
+                  color="text200"
+                  marginBottom="0"
+                  width="fit-content"
+                >
+                  {contentPreview}
+                </Text>
               </Box>
-              <ChakraText
-                fontSize="sm"
-                color="text200"
-                marginBottom="0"
-                width="fit-content"
+              <Text
+                fontSize="md"
+                color="primary"
+                ml={{ base: undefined, sm: "auto" }}
+                mt="auto"
+                mb="auto"
               >
-                {contentPreview}
-              </ChakraText>
+                <Translation id={isVisible ? "less" : "more"} />
+              </Text>
             </Box>
-            <Button
-              as="div" // we do not want to nest a button in a button
-              ml={{ base: undefined, sm: "auto" }}
-              onClick={onClick}
-              variant="link"
-              color="primary"
-              _hover={{
-                boxShadow: "none",
-                textDecoration: "none",
-              }}
-            >
-              <Translation id={isVisible ? "less" : "more"} />
-            </Button>
-          </Box>
-        </AccordionButton>
+          </AccordionButton>
+        </h3>
         <AccordionPanel
           paddingX="1.5rem"
           paddingBottom="1.5rem"
