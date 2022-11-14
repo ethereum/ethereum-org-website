@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef, useMemo } from "react"
 import { useIntl } from "react-intl"
 import styled from "@emotion/styled"
 import FocusTrap from "focus-trap-react"
+import { Text, ScaleFade, Box } from "@chakra-ui/react"
 // Component imports
 import Translation from "./Translation"
 import Button from "./Button"
@@ -20,9 +21,11 @@ import { useSurvey } from "../hooks/useSurvey"
 
 const FixedDot = styled(NakedButton)<{
   bottomOffset: number
+  isExpanded: boolean
 }>`
+  height: 3rem;
   width: 3rem;
-  aspect-ratio: 1;
+  padding: 11px;
   border-radius: 50%;
   background-color: ${({ theme }) => theme.colors.primary};
   box-shadow: 0px 4px 4px ${({ theme }) => theme.colors.tableItemBoxShadow};
@@ -32,6 +35,10 @@ const FixedDot = styled(NakedButton)<{
   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     bottom: ${({ bottomOffset }) => 1 + bottomOffset}rem;
     margin-top: 150vh;
+  }
+  @media (min-width: ${({ theme }) => theme.breakpoints.l}) {
+    width: ${({ isExpanded }) => (isExpanded ? "15rem" : "3rem")};
+    border-radius: ${({ isExpanded }) => (isExpanded ? "50px" : "50%")};
   }
   right: 1rem;
   z-index: 98; /* Below the mobile menu */
@@ -43,7 +50,9 @@ const FixedDot = styled(NakedButton)<{
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
   }
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, width 0.25s linear,
+    border-radius 0.25s linear;
+  overflow: hidden;
 `
 
 const ModalBackground = styled.div`
@@ -128,6 +137,9 @@ const ButtonContainer = styled.div`
 `
 
 const StyledFeedbackGlyph = styled(FeedbackGlyph)`
+  min-width: 26px;
+  min-height: 32px;
+  margin: 11px 0px;
   path {
     fill: ${({ theme }) => theme.colors.white};
   }
@@ -155,6 +167,7 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
   useOnClickOutside(containerRef, () => handleClose(), [`mousedown`])
   const [location, setLocation] = useState("")
   const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [isExpanded, setIsExpanded] = useState<boolean>(false)
   const [feedbackSubmitted, setFeedbackSubmitted] = useState<boolean>(false)
 
   useEffect(() => {
@@ -163,7 +176,12 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
       // Reset component state when path (location) changes
       setIsOpen(false)
       setFeedbackSubmitted(false)
+      setIsExpanded(false)
     }
+
+    let expandTimeout = setTimeout(() => setIsExpanded(true), 30000)
+
+    return () => clearTimeout(expandTimeout)
   }, [])
 
   const surveyUrl = useSurvey(feedbackSubmitted)
@@ -182,6 +200,7 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
 
   const handleClose = (): void => {
     setIsOpen(false)
+    setIsExpanded(false)
     trackCustomEvent({
       eventCategory: `FeedbackWidget toggled`,
       eventAction: `Clicked`,
@@ -212,6 +231,7 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
     })
     window && surveyUrl && window.open(surveyUrl, "_blank")
     setIsOpen(false) // Close widget without triggering redundant tracker event
+    setIsExpanded(false)
   }
 
   useKeyPress(`Escape`, handleClose)
@@ -220,8 +240,38 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
 
   return (
     <>
-      <FixedDot onClick={handleOpen} bottomOffset={bottomOffset} id="dot">
-        <StyledFeedbackGlyph />
+      <FixedDot
+        onClick={handleOpen}
+        bottomOffset={bottomOffset}
+        isExpanded={isExpanded}
+        id="dot"
+      >
+        <Box
+          display="flex"
+          justifyContent="space-evenly"
+          width={{ base: "3rem", lg: isExpanded ? "13.5rem" : "3rem" }}
+          position={{
+            base: "inherit",
+            lg: isExpanded ? "absolute" : "inherit",
+          }}
+        >
+          <StyledFeedbackGlyph />
+          {isExpanded && (
+            <ScaleFade in={isExpanded} delay={0.25}>
+              <Text
+                as="div"
+                color="white"
+                fontWeight="bold"
+                noOfLines={2}
+                height="100%"
+                alignItems="center"
+                display={{ base: "none", lg: isExpanded ? "flex" : "none" }}
+              >
+                <Translation id="feedback-card-prompt-page" />
+              </Text>
+            </ScaleFade>
+          )}
+        </Box>
       </FixedDot>
       {isOpen && (
         <ModalBackground>
