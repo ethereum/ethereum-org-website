@@ -1,6 +1,5 @@
 import React from "react"
-import { Flex, Image } from "@chakra-ui/react"
-import { useColorMode } from "@chakra-ui/react"
+import { Image, useColorModeValue } from "@chakra-ui/react"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { getImage } from "../utils/image"
@@ -8,9 +7,6 @@ import { getImage } from "../utils/image"
 export interface IProps {}
 
 const TranslationChartImage: React.FC<IProps> = () => {
-  const { colorMode } = useColorMode()
-  const isDarkTheme = colorMode === "dark"
-
   const data = useStaticQuery(graphql`
     {
       pageviewsLight: file(
@@ -40,7 +36,7 @@ const TranslationChartImage: React.FC<IProps> = () => {
     }
   `)
 
-  const ethImage = isDarkTheme ? data.pageviewsDark : data.pageviewsLight
+  const ethImage = useColorModeValue(data.pageviewsLight, data.pageviewsDark)
 
   return (
     <Flex justifyContent="center" objectFit="contain">
