@@ -39,13 +39,6 @@ const FixedDot = styled(NakedButton)<{
   @media (min-width: ${({ theme }) => theme.breakpoints.l}) {
     width: ${({ isExpanded }) => (isExpanded ? "15rem" : "3rem")};
     border-radius: ${({ isExpanded }) => (isExpanded ? "50px" : "50%")};
-    #feedback-wrapper {
-      width: ${({ isExpanded }) => (isExpanded ? "13.5rem" : "3rem")};
-      position: ${({ isExpanded }) => (isExpanded ? "absolute" : "flex")};
-    }
-    #expanded-prompt {
-      display: ${({ isExpanded }) => (isExpanded ? "flex" : "none")};
-    }
   }
   right: 1rem;
   z-index: 98; /* Below the mobile menu */
@@ -254,23 +247,25 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
         id="dot"
       >
         <Box
-          id="feedback-wrapper"
-          width="3rem"
           display="flex"
           justifyContent="space-evenly"
+          width={{ base: "3rem", lg: isExpanded ? "13.5rem" : "3rem" }}
+          position={{
+            base: "inherit",
+            lg: isExpanded ? "absolute" : "inherit",
+          }}
         >
           <StyledFeedbackGlyph />
           {isExpanded && (
             <ScaleFade in={isExpanded} delay={0.25}>
               <Text
-                id="expanded-prompt"
                 as="div"
                 color="white"
                 fontWeight="bold"
                 noOfLines={2}
                 height="100%"
                 alignItems="center"
-                display="none"
+                display={{ base: "none", lg: isExpanded ? "flex" : "none" }}
               >
                 <Translation id="feedback-card-prompt-page" />
               </Text>
