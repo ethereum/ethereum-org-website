@@ -80,7 +80,9 @@ const BeaconchainTooltip = ({ isEthStore }: { isEthStore?: boolean }) => (
     content={
       <div>
         <Translation id="data-provided-by" />{" "}
-        {isEthStore && <span>ETH.STORE </span>}
+        {isEthStore && (
+          <Link to="https://github.com/gobitfly/eth.store/">ETH.STORE, </Link>
+        )}
         <Link to="https://beaconcha.in">Beaconcha.in</Link>
       </div>
     }
