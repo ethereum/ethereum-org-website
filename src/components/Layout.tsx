@@ -7,7 +7,7 @@ import styled from "@emotion/styled"
 import { lightTheme, darkTheme } from "../theme"
 
 import Footer from "./Footer"
-import VisuallyHidden from "./VisuallyHidden"
+import ZenMode from "./ZenMode"
 import Nav from "./Nav"
 import SideNav from "./SideNav"
 import SideNavMobile from "./SideNavMobile"
@@ -139,43 +139,46 @@ const Layout: React.FC<IProps> = ({
   return (
     <ApolloProvider client={client}>
       <ThemeProvider theme={theme}>
-        <SkipLink hrefId="#main-content" />
-        <TranslationBanner
-          shouldShow={shouldShowTranslationBanner}
-          isPageContentEnglish={isPageContentEnglish}
-          isPageRightToLeft={isPageRightToLeft}
-          originalPagePath={pageContext.i18n.originalPath || ""}
-        />
-        <TranslationBannerLegal
-          shouldShow={isLegal}
-          isPageRightToLeft={isPageRightToLeft}
-          originalPagePath={pageContext.i18n.originalPath || ""}
-        />
-        <ContentContainer>
-          <VisuallyHidden isHidden={isZenMode}>
-            <Nav path={path} />
-            {shouldShowSideNav && <SideNavMobile path={path} />}
-          </VisuallyHidden>
-          <SkipLinkAnchor id="main-content" />
-          <MainContainer>
-            {shouldShowSideNav && (
-              <VisuallyHidden isHidden={isZenMode}>
-                <SideNav path={path} />
-              </VisuallyHidden>
-            )}
-            <MainContent>
-              <ZenModeContext.Provider
-                value={{ isZenMode, handleZenModeChange }}
-              >
-                <Main>{children}</Main>
-              </ZenModeContext.Provider>
-            </MainContent>
-          </MainContainer>
-          <VisuallyHidden isHidden={isZenMode}>
-            <Footer />
-          </VisuallyHidden>
-          <FeedbackWidget />
-        </ContentContainer>
+        <ZenModeContext.Provider value={{ isZenMode, handleZenModeChange }}>
+          <SkipLink hrefId="#main-content" />
+          <TranslationBanner
+            shouldShow={shouldShowTranslationBanner}
+            isPageContentEnglish={isPageContentEnglish}
+            isPageRightToLeft={isPageRightToLeft}
+            originalPagePath={pageContext.i18n.originalPath || ""}
+          />
+          <TranslationBannerLegal
+            shouldShow={isLegal}
+            isPageRightToLeft={isPageRightToLeft}
+            originalPagePath={pageContext.i18n.originalPath || ""}
+          />
+          <ContentContainer>
+            <ZenMode>
+              <Nav path={path} />
+              {shouldShowSideNav && <SideNavMobile path={path} />}
+            </ZenMode>
+            <SkipLinkAnchor id="main-content" />
+            <MainContainer>
+              {shouldShowSideNav && (
+                <ZenMode>
+                  <SideNav path={path} />
+                </ZenMode>
+              )}
+              <MainContent>
+                <ZenModeContext.Provider
+                  value={{ isZenMode, handleZenModeChange }}
+                >
+                  <Main>{children}</Main>
+                </ZenModeContext.Provider>
+              </MainContent>
+            </MainContainer>
+            <ZenMode>
+              <Footer />
+            </ZenMode>
+            <FeedbackWidget />
+          </ContentContainer>
+        </ZenModeContext.Provider>
+        ?
       </ThemeProvider>
     </ApolloProvider>
   )
