@@ -34,7 +34,7 @@ ETH on testnets has no real value; therefore, there are no markets for testnet E
 
 #### Which Testnet should I use?
 
-The two public proof-of-stake testnets (which client developers are maintaining post-merge) are Goerli and Sepolia. The Goerli network was merged with the Prater Beacon Chain testnet. The Sepolia network has been created to transition to proof-of-stake.
+The two public proof-of-stake testnets (which client developers are maintaining post-merge) are Goerli and Sepolia. The Goerli network was merged with the Prater Beacon Chain testnet. The Sepolia network was created to test the transition to proof-of-stake.
 
 **[Sepolia](#sepolia) is the recommended default testnet for application development**.
 The Sepolia network uses a permissioned validator set. It's fairly new, meaning its state and history are both quite small. This means the network is quick to sync to and that running a node on it requires less storage. This is useful for users who want to quickly spin up a node and interact with the network directly.
