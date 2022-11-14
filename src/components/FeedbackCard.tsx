@@ -1,7 +1,6 @@
 // Library imports
 import React, { ReactNode, useState } from "react"
 import { Flex, FlexProps, Heading, Icon } from "@chakra-ui/react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
 // Component imports
 import Button from "./Button"
 import Translation from "./Translation"
@@ -22,7 +21,6 @@ const FeedbackCard: React.FC<IProps> = ({
   isArticle = false,
   ...props
 }) => {
-  const { t } = useTranslation()
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   const surveyUrl = useSurvey(feedbackSubmitted)
 
@@ -73,13 +71,10 @@ const FeedbackCard: React.FC<IProps> = ({
           {getTitle(feedbackSubmitted)}
         </Heading>
         {feedbackSubmitted && (
-          <p
-            dangerouslySetInnerHTML={{
-              __html: `${t("feedback-widget-thank-you-subtitle")} ${t(
-                "feedback-widget-thank-you-subtitle-ext"
-              )}`,
-            }}
-          />
+          <p>
+            <Translation id="feedback-widget-thank-you-subtitle" />{" "}
+            <Translation id="feedback-widget-thank-you-subtitle-ext" />
+          </p>
         )}
         <Flex gap={4}>
           {!feedbackSubmitted ? (
