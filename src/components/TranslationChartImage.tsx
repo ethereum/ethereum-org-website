@@ -29,15 +29,13 @@ const TranslationChartImage: React.FC<IProps> = () => {
   const ethImage = useColorModeValue(data.pageviewsLight, data.pageviewsDark)
 
   return (
-    <Flex justifyContent="center" objectFit="contain">
-      <Image
-        as={GatsbyImage}
-        image={getImage(ethImage)!}
-        alt=""
-        fit="contain"
-        minW="263px"
-      />
-    </Flex>
+    <Image
+      as={GatsbyImage}
+      image={getImage(ethImage)!}
+      alt=""
+      fit="contain"
+      minW="263px"
+    />
   )
 }
 
