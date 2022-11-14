@@ -663,13 +663,10 @@ const DappsPage = ({
     },
     {
       title: "Balancer",
-      description: translateMessageId(
-        "page-dapps-dapp-description-balancer",
-        intl
-      ),
+      description: t("page-dapps-dapp-description-balancer"),
       link: "https://balancer.fi/",
       image: getImage(data.balancer),
-      alt: translateMessageId("page-dapps-balancer-logo-alt", intl),
+      alt: t("page-dapps-balancer-logo-alt"),
     },
   ]
 
