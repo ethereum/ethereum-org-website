@@ -470,13 +470,9 @@ const StakingPage = ({
                   <li>
                     <Translation id="page-staking-section-comparison-solo-requirements-li2" />
                   </li>
-                  <li
-                    dangerouslySetInnerHTML={{
-                      __html: t(
-                        "page-staking-section-comparison-solo-requirements-li3"
-                      ),
-                    }}
-                  />
+                  <li>
+                    <Translation id="page-staking-section-comparison-solo-requirements-li3" />
+                  </li>
                 </ul>
               </div>
               <div style={{ gridArea: "solo-cta" }}>
@@ -632,11 +628,9 @@ const StakingPage = ({
               <p>
                 <Translation id="page-staking-faq-3-answer-p1" />
               </p>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: t("page-staking-faq-3-answer-p2"),
-                }}
-              />
+              <p>
+                <Translation id="page-staking-faq-3-answer-p2" />
+              </p>
             </ExpandableCard>
           </Content>
           <Content>

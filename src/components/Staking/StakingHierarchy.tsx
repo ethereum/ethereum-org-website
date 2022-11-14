@@ -1,7 +1,6 @@
 // Libraries
 import React from "react"
 import styled from "@emotion/styled"
-import { useTranslation } from "gatsby-plugin-react-i18next"
 
 // Components
 import ButtonLink from "../ButtonLink"
@@ -255,8 +254,6 @@ const Line = styled.aside`
 export interface IProps {}
 
 const StakingHierarchy: React.FC<IProps> = () => {
-  const { t } = useTranslation()
-
   return (
     <Container>
       <Section number={1}>
@@ -290,11 +287,9 @@ const StakingHierarchy: React.FC<IProps> = () => {
           <SoloGlyph />
         </Glyph>
         <Content>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: t("page-staking-hierarchy-solo-p1"),
-            }}
-          />
+          <p>
+            <Translation id="page-staking-hierarchy-solo-p1" />
+          </p>
           <p>
             <Translation id="page-staking-hierarchy-solo-p2" />
           </p>
@@ -446,11 +441,9 @@ const StakingHierarchy: React.FC<IProps> = () => {
           <p>
             <Translation id="page-staking-hierarchy-cex-p2" />
           </p>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: t("page-staking-hierarchy-cex-p3"),
-            }}
-          />
+          <p>
+            <Translation id="page-staking-hierarchy-cex-p3" />
+          </p>
         </Content>
       </Section>
     </Container>
