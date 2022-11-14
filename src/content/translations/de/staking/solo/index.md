@@ -14,8 +14,7 @@ summaryPoints:
 
 ## Was ist Solo-Staking? {#what-is-solo-staking}
 
-Solo-Staking ist das [Betreiben eines Ethereum-Knotens](/run-a-node/), der mit dem Internet verbunden ist, und das Hinterlegen von 32 ETH, um einen
-Validator< zu aktivieren /a>, wodurch Sie direkt am Netzwerkkonsens teilnehmen können.
+Solo-Staking ist das [Betreiben eines Ethereum-Knotens](/run-a-node/), der mit dem Internet verbunden ist, und das Hinterlegen von 32 ETH, um einen Validator zu aktivieren, wodurch Sie direkt am Netzwerkkonsens teilnehmen können.
 
 Ein Ethereum-Knoten besteht sowohl aus einem Client der Ausführungsschicht (Execution Layer, EL) als auch aus einem Client der Konsensschicht (Client Layer, CL). Diese Clients sind Software, die mit einem gültigen Satz von Signaturschlüsseln zusammenarbeiten, um Transaktionen und Blöcke zu verifizieren, den korrekten Kopf der Kette zu bestätigen, Bestätigungen zu attestieren und Blöcke vorzuschlagen.
 
