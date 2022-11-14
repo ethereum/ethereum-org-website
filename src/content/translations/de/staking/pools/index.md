@@ -2,7 +2,7 @@
 title: Pool-Staking
 description: Eine Übersicht darüber, wie man mit ETH-Pool-Staking beginnen kann
 lang: de
-template: Staking
+template: staking
 emoji: ":money_with_wings:"
 image: ../../../../../assets/staking/leslie-pool.png
 alt: Leslie, das Nashorn, wie es im Pool schwimmt.

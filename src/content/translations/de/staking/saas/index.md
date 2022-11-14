@@ -2,7 +2,7 @@
 title: Staking als Service
 description: Eine Übersicht darüber, wie man mit gepooltem ETH-Staking beginnen kann
 lang: de
-template: Staking
+template: staking
 emoji: ":money_with_wings:"
 image: ../../../../../assets/staking/leslie-saas.png
 alt: Leslie, das in den Wolken schwebende Nashorn.

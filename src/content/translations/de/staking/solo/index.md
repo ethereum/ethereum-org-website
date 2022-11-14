@@ -2,7 +2,7 @@
 title: Solo-Staking Ihrer ETH
 description: Ein Überblick darüber, wie Sie mit dem Solo-Staking Ihrer ETH beginnen können
 lang: de
-template: Staking
+template: staking
 emoji: ":money_with_wings:"
 image: ../../../../../assets/staking/leslie-solo.png
 alt: Leslie das Nashorn auf ihrem eigenen Computerchip.
