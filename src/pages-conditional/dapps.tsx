@@ -661,6 +661,13 @@ const DappsPage = ({
       image: getImage(data.index),
       alt: t("page-dapps-index-coop-logo-alt"),
     },
+    {
+      title: "Balancer",
+      description: t("page-dapps-dapp-description-balancer"),
+      link: "https://balancer.fi/",
+      image: getImage(data.balancer),
+      alt: t("page-dapps-balancer-logo-alt"),
+    },
   ]
 
   const insurance = [
@@ -1645,6 +1652,9 @@ export const query = graphql`
       ...dappImage
     }
     pwn: file(relativePath: { eq: "dapps/pwn.png" }) {
+      ...dappImage
+    }
+    balancer: file(relativePath: { eq: "dapps/balancer.png" }) {
       ...dappImage
     }
   }

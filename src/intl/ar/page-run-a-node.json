@@ -109,7 +109,7 @@
   "page-run-a-node-staking-description": "Though not required, with a node up and running you're one step closer to staking your ETH to earn rewards and help contribute to a different component of Ethereum security.",
   "page-run-a-node-staking-link": "تجميد عملات إثير",
   "page-run-a-node-staking-plans-title": "Plan on staking?",
-  "page-run-a-node-staking-plans-description": "لتعظيم كفاءة المصادق من المفضل استخدام 16 جيجابايت من الذاكرة العشوائية، ولكن استخدام 32 جيجا يعتبر أفضل، مع استخدام وحدة معالجة مركزية بتقييم يزيد علي 6667 وفق ما يرد علي موقع <a </a>href=\"https://cpubenchmark.net\" target=\"_blank\">CPUBENCHMARK.NET. من الموصي به أيضاً أن يتمكن المراهن من الوصول إلي سرعة عالية وغير محدودة للانترنت ولكنه لا يعتبر خيار إجباري.",
+  "page-run-a-node-staking-plans-description": "لتعظيم كفاءة المصادق من المفضل استخدام 16 جيجابايت من الذاكرة العشوائية، ولكن استخدام 32 جيجا يعتبر أفضل، مع استخدام وحدة معالجة مركزية بتقييم يزيد علي 6667 وفق ما يرد علي موقع <a href=\"https://cpubenchmark.net\" target=\"_blank\">cpubenchmark.net</a>. من الموصي به أيضاً أن يتمكن المراهن من الوصول إلي سرعة عالية وغير محدودة للانترنت ولكنه لا يعتبر خيار إجباري.",
   "page-run-a-node-staking-plans-ethstaker-link-label": "How to shop for Ethereum validator hardware",
   "page-run-a-node-staking-plans-ethstaker-link-description": "EthStaker goes into more detail in this hour long special",
   "page-run-a-node-sovereignty-title": "Sovereignty",

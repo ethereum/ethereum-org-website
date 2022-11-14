@@ -61,9 +61,7 @@ const Grid = styled.div`
   }
 `
 
-const Box = styled.div<{
-  color?: string
-}>`
+const Box = styled.div`
   position: relative;
   color: ${({ theme }) => theme.colors.text};
   height: 20rem;
@@ -110,14 +108,12 @@ const Lines = styled.div`
 
 const ButtonContainer = styled.div<{ dir?: Direction }>`
   position: absolute;
-  ${({ dir }) => (dir === "rtl" ? "left:" : "right:")} 20px;
+  ${({ dir }) => (dir === "rtl" ? "left" : "right")}: 20px;
   bottom: 20px;
   font-family: ${(props) => props.theme.fonts.monospace};
 `
 
-const Button = styled.button<{
-  color: string
-}>`
+const Button = styled.button<{ color: string }>`
   background: ${(props) => props.theme.colors.background};
   font-family: ${(props) => props.theme.fonts.monospace};
   font-size: 1.25rem;
@@ -133,9 +129,7 @@ const Button = styled.button<{
   }
 `
 
-const ButtonToggle = styled(Button)<{
-  active: boolean
-}>`
+const ButtonToggle = styled(Button)<{ active: boolean }>`
   ${({ active, theme }) =>
     active &&
     `
