@@ -1,10 +1,17 @@
 // Library imports
 import React, { useState, useEffect, useRef, useMemo } from "react"
-import { Box, Button, ButtonProps, Flex, Icon, Text } from "@chakra-ui/react"
+import {
+  Box,
+  Button,
+  ButtonProps,
+  Flex,
+  Icon,
+  Text,
+  ScaleFade,
+} from "@chakra-ui/react"
 import { useIntl } from "react-intl"
 import { MdClose } from "react-icons/md"
 import FocusTrap from "focus-trap-react"
-import { Text, ScaleFade, Box } from "@chakra-ui/react"
 // Component imports
 import Translation from "./Translation"
 // SVG imports
@@ -44,6 +51,7 @@ const FixedDot: React.FC<FixedDotProps> = ({
       display="flex"
       justifyContent="center"
       alignItems="center"
+      whiteSpace="normal"
       _hover={{
         cursor: "pointer",
         transform: "scale(1.1)",
