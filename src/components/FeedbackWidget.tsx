@@ -4,6 +4,7 @@ import { Box, Button, ButtonProps, Flex, Icon, Text } from "@chakra-ui/react"
 import { useIntl } from "react-intl"
 import { MdClose } from "react-icons/md"
 import FocusTrap from "focus-trap-react"
+import { Text, ScaleFade, Box } from "@chakra-ui/react"
 // Component imports
 import Translation from "./Translation"
 // SVG imports
@@ -18,16 +19,18 @@ import { useSurvey } from "../hooks/useSurvey"
 
 interface FixedDotProps extends ButtonProps {
   bottomOffset: number
+  isExpanded: boolean
 }
 const FixedDot: React.FC<FixedDotProps> = ({
   children,
   bottomOffset,
+  isExpanded,
   ...props
 }) => {
   const size = "3rem"
   return (
     <Button
-      w={size}
+      w={{ base: size, lg: isExpanded ? "15rem" : size }}
       h={size}
       borderRadius="full"
       variant="solid"
@@ -46,7 +49,8 @@ const FixedDot: React.FC<FixedDotProps> = ({
         transform: "scale(1.1)",
         transition: "transform 0.2s ease-in-out",
       }}
-      transition="transform 0.2s ease-in-out"
+      transition="transform 0.2s ease-in-out, width 0.25s linear,
+      border-radius 0.25s linear"
       {...props}
     >
       {children}
@@ -62,12 +66,18 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
   const containerRef = useRef<HTMLInputElement>(null)
   useOnClickOutside(containerRef, () => handleClose(), [`mousedown`])
   const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [isExpanded, setIsExpanded] = useState<boolean>(false)
   const [feedbackSubmitted, setFeedbackSubmitted] = useState<boolean>(false)
 
   useEffect(() => {
     // Reset component state when path (location) changes
     setIsOpen(false)
     setFeedbackSubmitted(false)
+    setIsExpanded(false)
+
+    let expandTimeout = setTimeout(() => setIsExpanded(true), 30000)
+
+    return () => clearTimeout(expandTimeout)
   }, [location])
 
   const surveyUrl = useSurvey(feedbackSubmitted)
@@ -86,6 +96,7 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
 
   const handleClose = (): void => {
     setIsOpen(false)
+    setIsExpanded(false)
     trackCustomEvent({
       eventCategory: `FeedbackWidget toggled`,
       eventAction: `Clicked`,
@@ -116,6 +127,7 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
     })
     window && surveyUrl && window.open(surveyUrl, "_blank")
     setIsOpen(false) // Close widget without triggering redundant tracker event
+    setIsExpanded(false)
   }
 
   useKeyPress(`Escape`, handleClose)
@@ -124,8 +136,38 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
   const closeButtonSize = "24px"
   return (
     <>
-      <FixedDot onClick={handleOpen} bottomOffset={bottomOffset} id="dot">
-        <Icon as={FeedbackGlyph} color="white" h="32px" w="26px" />
+      <FixedDot
+        onClick={handleOpen}
+        bottomOffset={bottomOffset}
+        isExpanded={isExpanded}
+        id="dot"
+      >
+        <Box
+          display="flex"
+          justifyContent="space-evenly"
+          width={{ base: "3rem", lg: isExpanded ? "13.5rem" : "3rem" }}
+          position={{
+            base: "inherit",
+            lg: isExpanded ? "absolute" : "inherit",
+          }}
+        >
+          <Icon as={FeedbackGlyph} color="white" h="32px" w="26px" my="11px" />
+          {isExpanded && (
+            <ScaleFade in={isExpanded} delay={0.25}>
+              <Text
+                as="div"
+                color="white"
+                fontWeight="bold"
+                noOfLines={2}
+                height="100%"
+                alignItems="center"
+                display={{ base: "none", lg: isExpanded ? "flex" : "none" }}
+              >
+                <Translation id="feedback-card-prompt-page" />
+              </Text>
+            </ScaleFade>
+          )}
+        </Box>
       </FixedDot>
       {isOpen && (
         <Box
