@@ -392,7 +392,7 @@ const walletData: WalletData[] = [
     name: "Coinbase Wallet",
     image_name: "coinbase",
     brand_color: "#0052FF",
-    url: "https://www.coinbase.com/wallet/developers",
+    url: "https://www.coinbase.com/wallet",
     wallet_live_date: "2018",
     active_development_team: true,
     languages_supported: ["no response.."],
