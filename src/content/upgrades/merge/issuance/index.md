@@ -22,7 +22,7 @@ title="ETH issuance tldr">
 - Stakers are issued approximately 1,700 ETH/day, based on about 14 million total ETH staked
 - The exact staking issuance fluctuates based on the total amount of ETH staked
 - **Since The Merge, only the ~1,700 ETH/day remains, dropping total new ETH issuance by ~88%**
-- The burn: This fluctuate according to network demand. _If_ an average gas price of at least 17 gwei is observed for a given day, this effectively offsets the ~1,700 ETH that is issued to validators and brings net ETH inflation to zero or less for that day.
+- The burn: This fluctuate according to network demand. _If_ an average gas price of at least 16 gwei is observed for a given day, this effectively offsets the ~1,700 ETH that is issued to validators and brings net ETH inflation to zero or less for that day.
 
 </Card>
 
@@ -39,8 +39,6 @@ The [Beacon Chain](/history/#beacon-chain-genesis) went live in 2020. Instead of
 Validators on the Beacon Chain are rewarded with ETH for attesting to the state of the chain and proposing blocks. Rewards (or penalties) are calculated and distributed at each epoch (every 6.4 minutes) based on validator performance. Validator rewards are **significantly** less than the mining rewards that were previously issued under proof-of-work (2 ETH every ~13.5 seconds), as operating a validating node is not an economically intense activity and thus does not require or warrant as high a reward.
 
 ### Pre-merge issuance breakdown {#pre-merge-issuance-breakdown}
-
-<!-- Total ETH supply: **~119,300,000 ETH** (as of Q2 2022, prior to The Merge) -->
 
 Total ETH supply: **~120,520,000 ETH** (at time of The Merge in September 2022)
 
@@ -101,18 +99,19 @@ On top of the fee burn implemented by the London upgrade, validators can also in
 
 As discussed above, the amount of ETH issued in a given day is dependent upon the total ETH staked. At time of writing, this is approximately 1700 ETH/day.
 
-To determine the average gas price required to completely offset this issuance in a given 24-hour period, we'll start by calculating the total number of blocks in a day:
+To determine the average gas price required to completely offset this issuance in a given 24-hour period, we'll start by calculating the total number of blocks in a day, given a block time of 12 seconds:
 
-- `1 block / 12 seconds = 5 blocks/minute`
-- `(5 blocks/minute) * (60 minutes/hour) * (24 hours/day) = 7200 blocks/day`
+- `(1 block / 12 seconds) * (60 seconds/minute) = 5 blocks/minute`
+- `(5 blocks/minute) * (60 minutes/hour) = 300 blocks/hour`
+- `(300 blocks/hour) * (24 hours/day) = 7200 blocks/day`
 
 Each block targets `15x10^6 gas/block` ([more on gas](/developers/docs/gas/)). Using this, we can solve for the average gas price (in units of gwei/gas) required to offset issuance, given a total daily ETH issuance of 1700 ETH:
 
-- `7200 blocks/day * 15x10^6 gas/block * Y gwei/gas * 1 ETH/ 10^9 gwei = 1700 ETH/day`
+- `7200 blocks/day * 15x10^6 gas/block * `**`Y gwei/gas`**` * 1 ETH/ 10^9 gwei = 1700 ETH/day`
 
 Solving for `Y`:
 
-- `Y = (1700(10^9))/(7200 * 15(10^6)) = (1700(10^3)/(7200 * 15)) = 16 gwei` (rounding to only two significant digits)
+- `Y = (1700(10^9))/(7200 * 15(10^6)) = (17x10^3)/(72 * 15) = 16 gwei` (rounding to only two significant digits)
 
 Another way to rearrange this last step would be to replace `1700` with a variable `X` that represents the daily ETH issuance, and to simplify the rest to:
 
