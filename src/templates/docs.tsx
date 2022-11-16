@@ -15,7 +15,6 @@ import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
 import PageMetadata from "../components/PageMetadata"
-import Pill from "../components/Pill"
 import TableOfContents, {
   Item as ItemTableOfContents,
 } from "../components/TableOfContents"
@@ -41,6 +40,7 @@ import { ZenModeContext } from "../contexts/ZenModeContext"
 import { isLangRightToLeft } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
+import { Badge } from "@chakra-ui/react"
 
 const Page = styled.div`
   display: flex;
@@ -156,7 +156,7 @@ const components = {
   Card,
   Divider,
   SectionNav,
-  Pill,
+  Badge,
   CallToContribute,
   Emoji,
   DeveloperDocsLinks,

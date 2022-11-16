@@ -21,7 +21,6 @@ import Link from "../components/Link"
 import OrderedList from "../components/OrderedList"
 import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
-import Pill from "../components/Pill"
 import ProductList from "../components/ProductList"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import Tooltip from "../components/Tooltip"
@@ -40,6 +39,7 @@ import { getImage } from "../utils/image"
 
 // Constants
 import { GATSBY_FUNCTIONS_PATH } from "../constants"
+import { Badge } from "@chakra-ui/react"
 
 // Styles
 
@@ -773,7 +773,9 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                   tokenLists={l2.tokenLists}
                 >
                   {l2.purpose.map((purpose, index) => (
-                    <Pill key={index}>{purpose}</Pill>
+                    <Badge key={index} me={2}>
+                      {purpose}
+                    </Badge>
                   ))}
                 </Layer2ProductCard>
               )
