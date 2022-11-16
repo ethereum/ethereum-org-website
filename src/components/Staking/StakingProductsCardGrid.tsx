@@ -36,6 +36,7 @@ import Stakewise from "../../assets/staking/stakewise-glyph.svg"
 import Stereum from "../../assets/staking/stereum-glyph.svg"
 import Wagyu from "../../assets/staking/wagyu-glyph.svg"
 import { EventOptions } from "../../utils/matomo"
+import { Badge } from "@chakra-ui/react"
 // When adding a product svg, be sure to add to mapping below as well.
 
 const CardGrid = styled.div`
@@ -100,27 +101,6 @@ const Pills = styled(PaddedDiv)`
   /* padding-top: 1rem; */
 `
 
-const Pill = styled.div<{ type: string }>`
-  text-align: center;
-  padding: 0.25rem 0.75rem;
-  color: ${({ theme, type }) =>
-    type ? "rgba(0, 0, 0, 0.6)" : theme.colors.text200};
-  background: ${({ theme, type }) => {
-    if (!type) return "transparent"
-    switch (type.toLowerCase()) {
-      case "ui":
-        return theme.colors.stakingPillUI
-      case "platform":
-        return theme.colors.stakingPillPlatform
-      default:
-        return theme.colors.tagGray
-    }
-  }};
-  font-size: ${({ theme }) => theme.fontSizes.xs};
-  border: 1px solid ${({ theme }) => theme.colors.lightBorder};
-  border-radius: 0.25rem;
-`
-
 const Content = styled(PaddedDiv)`
   padding-top: 0;
   padding-bottom: 0;
@@ -152,6 +132,32 @@ const Cta = styled(PaddedDiv)`
     width: 100%;
   }
 `
+
+const StakingBadge: React.FC<{
+  type: "ui" | "platform"
+  children: React.ReactNode
+}> = ({ type, children }) => {
+  const uiTypeColor = type === "ui" && "stakingPillUI"
+  const platformTypeColor = type === "platform" && "stakingPillPlatform"
+
+  return (
+    <Badge
+      variant="secondary"
+      background={
+        (!type && "transparent") ||
+        uiTypeColor ||
+        platformTypeColor ||
+        "tagGray"
+      }
+      borderColor="lightBorder"
+      color={type ? "rgba(0,0,0,0.6)" : "text200"}
+      px={3}
+      textTransform="initial"
+    >
+      {children}
+    </Badge>
+  )
+}
 
 const Status: React.FC<{ status: FlagType }> = ({ status }) => {
   if (!status) return null
@@ -316,15 +322,15 @@ const StakingProductCard: React.FC<ICardProps> = ({
       <Pills>
         {platforms &&
           platforms.map((platform, idx) => (
-            <Pill type="platform" key={idx}>
+            <StakingBadge type="platform" key={idx}>
               {platform}
-            </Pill>
+            </StakingBadge>
           ))}
         {ui &&
           ui.map((_ui, idx) => (
-            <Pill type="ui" key={idx}>
+            <StakingBadge type="ui" key={idx}>
               {_ui}
-            </Pill>
+            </StakingBadge>
           ))}
       </Pills>
       <Spacer />

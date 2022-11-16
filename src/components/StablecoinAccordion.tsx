@@ -11,7 +11,6 @@ import Emoji from "./OldEmoji"
 import Link, { navigate } from "./Link"
 import Icon from "./Icon"
 import InfoBanner from "./InfoBanner"
-import Pill from "./Pill"
 import Translation from "./Translation"
 import {
   FakeLink,
@@ -22,6 +21,7 @@ import {
 
 import { translateMessageId } from "../utils/translations"
 import { isMobile } from "../utils/isMobile"
+import { Badge } from "@chakra-ui/react"
 
 const Card = styled.div`
   border-radius: 2px;
@@ -111,7 +111,7 @@ const Row = styled.div`
   margin-bottom: 0.5rem;
 `
 
-const StyledPill = styled(Pill)`
+const StyledPill = styled(Badge)`
   margin-left: 1rem;
 `
 
@@ -537,7 +537,7 @@ const StablecoinAccordion: React.FC<IProps> = () => {
               <Title>
                 <Translation id="page-stablecoins-accordion-swap-title" />
               </Title>
-              <StyledPill color="success100">
+              <StyledPill background="success100">
                 <Translation id="page-stablecoins-accordion-swap-pill" />
               </StyledPill>
             </Row>
@@ -724,7 +724,7 @@ const StablecoinAccordion: React.FC<IProps> = () => {
               <Title>
                 <Translation id="page-stablecoins-accordion-borrow-title" />
               </Title>
-              <StyledPill color="warning">
+              <StyledPill background="warning">
                 <Translation id="page-stablecoins-accordion-borrow-pill" />
               </StyledPill>
             </Row>

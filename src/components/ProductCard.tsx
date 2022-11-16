@@ -5,6 +5,7 @@ import { useQuery, gql } from "@apollo/client"
 
 import GitStars from "./GitStars"
 import ButtonLink from "./ButtonLink"
+import { Badge } from "@chakra-ui/react"
 
 const ImageWrapper = styled.div<{
   background: string
@@ -71,45 +72,6 @@ const SubjectContainer = styled.div`
   padding: 0 1.5rem;
 `
 
-const SubjectPill = styled.div<{
-  subject: string
-}>`
-  text-align: center;
-  padding: 0 0.5rem;
-  margin: 0 0.75rem 0.5rem 0;
-  color: ${(props) => props.theme.colors.black300};
-  float: left;
-  background: ${({ theme, subject }) => {
-    switch (subject) {
-      case "Solidity":
-        return theme.colors.tagYellow
-      case "Vyper":
-        return theme.colors.tagBlue
-      case "web3":
-        return theme.colors.tagTurquoise
-      case "JavaScript":
-        return theme.colors.tagRed
-      case "TypeScript":
-        return theme.colors.tagBlue
-      case "Go":
-        return theme.colors.tagTurquoise
-      case "Python":
-        return theme.colors.tagMint
-      case "Rust":
-        return theme.colors.tagOrange
-      case "C#":
-        return theme.colors.tagBlue
-      case "Java":
-        return theme.colors.tagPink
-      default:
-        return theme.colors.tagGray
-    }
-  }};
-  font-size: ${(props) => props.theme.fontSizes.xs};
-  border: 1px solid ${(props) => props.theme.colors.lightBorder};
-  border-radius: 4px;
-`
-
 const StyledButtonLink = styled(ButtonLink)`
   margin: 1rem;
 `
@@ -138,6 +100,49 @@ const REPO_DATA = gql`
     }
   }
 `
+
+const Subjectbadge: React.FC<{
+  subject: string
+  children: React.ReactNode
+}> = ({ subject, children }) => {
+  const backgroundProp = () => {
+    switch (subject) {
+      case "Solidity":
+        return "tagYellow"
+      case "Vyper":
+        return "tagBlue"
+      case "web3":
+        return "tagTurquoise"
+      case "JavaScript":
+        return "tagRed"
+      case "TypeScript":
+        return "tagBlue"
+      case "Go":
+        return "tagTurquoise"
+      case "Python":
+        return "tagMint"
+      case "Rust":
+        return "tagOrange"
+      case "C#":
+        return "tagBlue"
+      case "Java":
+        return "tagPink"
+      default:
+        return "tagGray"
+    }
+  }
+  return (
+    <Badge
+      background={backgroundProp()}
+      py={0}
+      me={3}
+      mb={2}
+      textTransform="initial"
+    >
+      {children}
+    </Badge>
+  )
+}
 
 export interface IProps {
   children?: React.ReactNode
@@ -209,16 +214,16 @@ const ProductCard: React.FC<IProps> = ({
       <SubjectContainer>
         {subjects &&
           subjects.map((subject, idx) => (
-            <SubjectPill key={idx} subject={subject}>
+            <Subjectbadge key={idx} subject={subject}>
               {subject}
-            </SubjectPill>
+            </Subjectbadge>
           ))}
         {hasRepoData &&
           data.repository.languages.nodes.map(
             ({ name }: { name: string }, idx: number) => (
-              <SubjectPill key={idx} subject={name}>
+              <Subjectbadge key={idx} subject={name}>
                 {name.toUpperCase()}
-              </SubjectPill>
+              </Subjectbadge>
             )
           )}
       </SubjectContainer>

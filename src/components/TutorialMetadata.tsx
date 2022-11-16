@@ -11,6 +11,7 @@ import Emoji from "./OldEmoji"
 import Translation from "./Translation"
 import { Lang } from "../utils/languages"
 import { TranslationKey } from "../utils/translations"
+import { Badge } from "@chakra-ui/react"
 
 const Container = styled.div`
   display: flex;
@@ -36,7 +37,7 @@ const PillContainer = styled.div`
   width: 100%;
 `
 
-const SkillPill = styled(Pill)`
+const SkillPill = styled(Badge)`
   align-self: flex-start;
   margin-bottom: 0.5rem;
   white-space: nowrap;
@@ -109,7 +110,7 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
         <PillContainer>
           <TutorialTags tags={frontmatter.tags} />
         </PillContainer>
-        <SkillPill isSecondary={true} className="" color="">
+        <SkillPill variant="secondary" className="">
           <Translation id={getSkillTranslationId(frontmatter.skill)} />
         </SkillPill>
       </TagsContainer>
