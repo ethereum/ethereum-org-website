@@ -1,32 +1,32 @@
 ---
 title: Patricia Merkle Trees
-description: Introduction to Patricia Merkle Tries.
+description: Introduction to Patricia Merkle Trees.
 lang: en
 sidebarDepth: 2
 ---
 
-A Patricia Merkle Trie provides a cryptographically authenticated data structure that can be used to store all `(key, value)` bindings.
+A Patricia Merkle Tree provides a cryptographically authenticated data structure that can be used to store all `(key, value)` bindings.
 
-Patricia Merkle Tries are fully deterministic, meaning that a trie with the same `(key, value)` bindings is guaranteed to be identical—down to the last byte. This means they have the same root hash, providing the holy grail of `O(log(n))` efficiency for inserts, lookups and deletes. Also, they are simpler to understand and code than more complex comparison-based alternatives, like red-black trees.
+Patricia Merkle Trees are fully deterministic, meaning that a tree with the same `(key, value)` bindings is guaranteed to be identical—down to the last byte. This means they have the same root hash, providing the holy grail of `O(log(n))` efficiency for inserts, lookups and deletes. Also, they are simpler to understand and code than more complex comparison-based alternatives, like red-black trees.
 
 ## Prerequisites {#prerequisites}
 
 It would be helpful to have basic knowledge of Merkle trees and serialization to understand this page.
 
-## Basic radix tries {#basic-radix-tries}
+## Basic radix trees {#basic-radix-trees}
 
-In a basic radix trie, every node looks as follows:
+In a basic radix tree, every node looks as follows:
 
 ```
     [i0, i1 ... in, value]
 
 ```
 
-Where `i0 ... in` represent the symbols of the alphabet (often binary or hex), `value` is the terminal value at the node, and the values in the `i0 ... in` slots are either `NULL` or pointers to (in our case, hashes of) other nodes. This forms a basic `(key, value)` store. For example, if you are interested in the value that is currently mapped to `dog` in the trie, you would first convert `dog` into letters of the alphabet (giving `64 6f 67`), and then descend the trie following that path until you find the value. That is, you would first look up the root hash in a flat key/value DB to find the root node of the trie (which is an array of keys to other nodes), use the value at index `6` as a key (and look it up in the flat key/value DB) to get the node one level down, then pick index `4` of that to look up the next value, then pick index `6` of that, and so on, until, once you followed the path: `root -> 6 -> 4 -> 6 -> 15 -> 6 -> 7`, you look up the value of the node that you have and return the result.
+Where `i0 ... in` represent the symbols of the alphabet (often binary or hex), `value` is the terminal value at the node, and the values in the `i0 ... in` slots are either `NULL` or pointers to (in our case, hashes of) other nodes. This forms a basic `(key, value)` store. For example, if you are interested in the value that is currently mapped to `dog` in the tree, you would first convert `dog` into letters of the alphabet (giving `64 6f 67`), and then descend the tree following that path until you find the value. That is, you would first look up the root hash in a flat key/value DB to find the root node of the tree (which is an array of keys to other nodes), use the value at index `6` as a key (and look it up in the flat key/value DB) to get the node one level down, then pick index `4` of that to look up the next value, then pick index `6` of that, and so on, until, once you followed the path: `root -> 6 -> 4 -> 6 -> 15 -> 6 -> 7`, you look up the value of the node that you have and return the result.
 
-There is a difference between looking something up in the 'trie' and the underlying flat key/value 'DB'. They both define key/values arrangements, but the underlying DB can do a traditional 1 step lookup of a key. Looking up a key in the trie requires multiple underlying DB lookups to get to the final value described above. Let's refer to the latter as a `path` to eliminate ambiguity.
+There is a difference between looking something up in the 'tree' and the underlying flat key/value 'DB'. They both define key/values arrangements, but the underlying DB can do a traditional 1 step lookup of a key. Looking up a key in the tree requires multiple underlying DB lookups to get to the final value described above. Let's refer to the latter as a `path` to eliminate ambiguity.
 
-The update and delete operations for radix tries are simple, and can be defined roughly as follows:
+The update and delete operations for radix trees are simple, and can be defined roughly as follows:
 
 ```
     def update(node,path,value):
@@ -61,24 +61,24 @@ The update and delete operations for radix tries are simple, and can be defined 
                 return hash(newnode)
 ```
 
-The "Merkle" part of the radix trie arises in the fact that a deterministic cryptographic hash of a node is used as the pointer to the node (for every lookup in the key/value DB `key == keccak256(rlp(value))`, rather than some 32-bit or 64-bit memory location as might happen in a more traditional trie implemented in C. This provides a form of cryptographic authentication to the data structure; if the root hash of a given trie is publicly known, then anyone can provide a proof that the trie has a given value at a specific path by providing the hashes of each node joining a specific value to the tree root. It is impossible for an attacker to provide a proof of a (path, value) pair that does not exist since the root hash is ultimately based on all hashes below it, so any modification would change the root hash.
+The "Merkle" part of the radix tree arises in the fact that a deterministic cryptographic hash of a node is used as the pointer to the node (for every lookup in the key/value DB `key == keccak256(rlp(value))`, rather than some 32-bit or 64-bit memory location as might happen in a more traditional tree implemented in C. This provides a form of cryptographic authentication to the data structure; if the root hash of a given tree is publicly known, then anyone can provide a proof that the tree has a given value at a specific path by providing the hashes of each node joining a specific value to the tree root. It is impossible for an attacker to provide a proof of a (path, value) pair that does not exist since the root hash is ultimately based on all hashes below it, so any modification would change the root hash.
 
 While traversing a path one nibble at a time, as described above, most nodes contain a 17-element array. One index for each possible value held by the next hex character (nibble) in the path, and one to hold the final target value if the path has been fully traversed. These 17-element array nodes are called `branch` nodes.
 
-## Merkle Patricia Trie {#merkle-patricia-trees}
+## Merkle Patricia Tree {#merkle-patricia-trees}
 
-However, radix tries have one major limitation: they are inefficient. If you want to store just one (path,value) binding where the path is (in the case of the ethereum state trie), 64 characters long (number of nibbles in `bytes32`), you will need over a kilobyte of extra space to store one level per character, and each lookup or delete will take the full 64 steps. The Patricia trie introduced here solves this issue.
+However, radix trees have one major limitation: they are inefficient. If you want to store just one (path,value) binding where the path is (in the case of the ethereum state tree), 64 characters long (number of nibbles in `bytes32`), you will need over a kilobyte of extra space to store one level per character, and each lookup or delete will take the full 64 steps. The Patricia tree introduced here solves this issue.
 
 ### Optimization {#optimization}
 
-Merkle Patricia tries solve the inefficiency issue by adding some extra complexity to the data structure. A node in a Merkle Patricia trie is one of the following:
+Merkle Patricia trees solve the inefficiency issue by adding some extra complexity to the data structure. A node in a Merkle Patricia tree is one of the following:
 
 1.  `NULL` (represented as the empty string)
 2.  `branch` A 17-item node `[ v0 ... v15, vt ]`
 3.  `leaf` A 2-item node `[ encodedPath, value ]`
 4.  `extension` A 2-item node `[ encodedPath, key ]`
 
-With 64 character paths it is inevitable that after traversing the first few layers of the trie, you will reach a node where no divergent path exists for at least part of the way down. It would be naive to require such a node to have empty values in every index (one for each of the 16 hex characters) besides the target index (next nibble in the path). Instead we shortcut the descent by setting up an `extension` node of the form `[ encodedPath, key ]`, where `encodedPath` contains the "partial path" to skip ahead (using compact encoding described below), and the `key` is for the next db lookup.
+With 64 character paths it is inevitable that after traversing the first few layers of the tree, you will reach a node where no divergent path exists for at least part of the way down. It would be naive to require such a node to have empty values in every index (one for each of the 16 hex characters) besides the target index (next nibble in the path). Instead we shortcut the descent by setting up an `extension` node of the form `[ encodedPath, key ]`, where `encodedPath` contains the "partial path" to skip ahead (using compact encoding described below), and the `key` is for the next db lookup.
 
 In the case of a `leaf` node, which can be determined by a flag in the first nibble of `encodedPath`, the situation above occurs and also the "partial path" to skip ahead completes the full remainder of a path. In this case `value` is the target value itself.
 
@@ -129,7 +129,7 @@ Examples:
     '3f 1c b8'
 ```
 
-Here is the extended code for getting a node in the Merkle Patricia trie:
+Here is the extended code for getting a node in the Merkle Patricia tree:
 
 ```
     def get_helper(node,path):
@@ -155,9 +155,9 @@ Here is the extended code for getting a node in the Merkle Patricia trie:
         return get_helper(node,path2)
 ```
 
-### Example Trie {#example-trie}
+### Example Tree {#example-tree}
 
-Suppose we want a trie containing four path/value pairs `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coin')`, `('horse', 'stallion')`.
+Suppose we want a tree containing four path/value pairs `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coin')`, `('horse', 'stallion')`.
 
 First, we convert both paths and values to `bytes`. Below, actual byte representations for _paths_ are denoted by `<>`, although _values_ are still shown as strings, denoted by `''`, for easier comprehension (they, too, would actually be `bytes`):
 
@@ -168,7 +168,7 @@ First, we convert both paths and values to `bytes`. Below, actual byte represent
     <68 6f 72 73 65> : 'stallion'
 ```
 
-Now, we build such a trie with the following key/value pairs in the underlying DB:
+Now, we build such a tree with the following key/value pairs in the underlying DB:
 
 ```
     rootHash: [ <16>, hashA ]
@@ -180,25 +180,25 @@ Now, we build such a trie with the following key/value pairs in the underlying D
 
 When one node is referenced inside another node, what is included is `H(rlp.encode(x))`, where `H(x) = keccak256(x) if len(x) >= 32 else x` and `rlp.encode` is the [RLP](/developers/docs/data-structures-and-encoding/rlp) encoding function.
 
-Note that when updating a trie, one needs to store the key/value pair `(keccak256(x), x)` in a persistent lookup table _if_ the newly-created node has length >= 32. However, if the node is shorter than that, one does not need to store anything, since the function f(x) = x is reversible.
+Note that when updating a tree, one needs to store the key/value pair `(keccak256(x), x)` in a persistent lookup table _if_ the newly-created node has length >= 32. However, if the node is shorter than that, one does not need to store anything, since the function f(x) = x is reversible.
 
-## Tries in Ethereum {#tries-in-ethereum}
+## Trees in Ethereum {#trees-in-ethereum}
 
-All of the merkle tries in Ethereum's execution layer use a Merkle Patricia Trie.
+All of the merkle trees in Ethereum's execution layer use a Merkle Patricia Tree.
 
-From a block header there are 3 roots from 3 of these tries.
+From a block header there are 3 roots from 3 of these trees.
 
 1.  stateRoot
 2.  transactionsRoot
 3.  receiptsRoot
 
-### State Trie {#state-trie}
+### State Tree {#state-tree}
 
-There is one global state trie, and it updates over time. In it, a `path` is always: `keccak256(ethereumAddress)` and a `value` is always: `rlp(ethereumAccount)`. More specifically an ethereum `account` is a 4 item array of `[nonce,balance,storageRoot,codeHash]`. At this point it's worth noting that this `storageRoot` is the root of another patricia trie:
+There is one global state tree, and it updates over time. In it, a `path` is always: `keccak256(ethereumAddress)` and a `value` is always: `rlp(ethereumAccount)`. More specifically an ethereum `account` is a 4 item array of `[nonce,balance,storageRoot,codeHash]`. At this point it's worth noting that this `storageRoot` is the root of another patricia tree:
 
-### Storage Trie {#storage-trie}
+### Storage Tree {#storage-tree}
 
-Storage trie is where _all_ contract data lives. There is a separate storage trie for each account. To retrieve values at specific storage positions at a given address the storage address, integer position of the stored data in the storage, and the block ID are required. These can then be pased as arguments to the `eth_getStorageAt` defined in the JSON-RPC API, e.g. to retrieve the data in storage slot 0 for address `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
+Storage tree is where _all_ contract data lives. There is a separate storage tree for each account. To retrieve values at specific storage positions at a given address the storage address, integer position of the stored data in the storage, and the block ID are required. These can then be pased as arguments to the `eth_getStorageAt` defined in the JSON-RPC API, e.g. to retrieve the data in storage slot 0 for address `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
 
 ```
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545
@@ -207,7 +207,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 ```
 
-Retrieving other elements in storage is slightly more involved because the position in the storage trie must first be calculated. The position is calculated as the `keccak256` hash of the address and the storage position, both left-padded with zeros to a length of 32 bytes. For example, the position for the data in storage slot 1 for address `0x391694e7e0b0cce554cb130d723a9d27458f9298` is:
+Retrieving other elements in storage is slightly more involved because the position in the storage tree must first be calculated. The position is calculated as the `keccak256` hash of the address and the storage position, both left-padded with zeros to a length of 32 bytes. For example, the position for the data in storage slot 1 for address `0x391694e7e0b0cce554cb130d723a9d27458f9298` is:
 
 ```keccak256(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
 
@@ -222,7 +222,7 @@ undefined
 "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9"
 ```
 
-The `path` is therefore `keccak256(<6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)`. This can now be used to retrieve the data from the storage trie as before:
+The `path` is therefore `keccak256(<6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)`. This can now be used to retrieve the data from the storage tree as before:
 
 ```
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"], "id": 1}' localhost:8545
@@ -230,9 +230,9 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
-### Transactions Trie {#transaction-trie}
+### Transactions Tree {#transaction-tree}
 
-There is a separate transactions trie for every block, again storing (key, value) pairs. A path here is: rlp(transactionIndex) which represents the key that corresponds to a value determined by:
+There is a separate transactions tree for every block, again storing (key, value) pairs. A path here is: rlp(transactionIndex) which represents the key that corresponds to a value determined by:
 
 ```
 if legacyTx:
@@ -243,14 +243,14 @@ else:
 
 More information on this can be found in the [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718) documentation.
 
-### Receipts Trie {#receipts-trie}
+### Receipts Tree {#receipts-tree}
 
-Every block has its own Receipts trie. A `path` here is: `rlp(transactionIndex)`. `transactionIndex` is its index within the block it's mined. The receipts trie never updates. Similarly to the Transactions trie, there are current and legacy receipts. To query a specific receipt in the Receipts trie the index of the transaction in its block, the receipt payload and the transaction type are required. The Returned receipt can be of type `Receipt` which is defined as the concentenation of `transaction type` and `transaction payload` or it can be of type `LegacyReceipt` which is defined as `rlp([status, cumulativeGasUsed, logsBloom, logs])`.
+Every block has its own Receipts tree. A `path` here is: `rlp(transactionIndex)`. `transactionIndex` is its index within the block it's mined. The receipts trie never updates. Similarly to the Transactions tree, there are current and legacy receipts. To query a specific receipt in the Receipts trie the index of the transaction in its block, the receipt payload and the transaction type are required. The Returned receipt can be of type `Receipt` which is defined as the concentenation of `transaction type` and `transaction payload` or it can be of type `LegacyReceipt` which is defined as `rlp([status, cumulativeGasUsed, logsBloom, logs])`.
 
 More information on this can be found in the [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718) documentation.
 
 ## Further Reading {#further-reading}
 
-[Modified Merkle Patricia Trie — How Ethereum saves a state](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
+[Modified Merkle Patricia Tree — How Ethereum saves a state](https://medium.com/codechain/modified-merkle-patricia-tree-how-ethereum-saves-a-state-e6d7555078dd)
 [Merkling in Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)
-[Understanding the Ethereum trie](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)
+[Understanding the Ethereum tree](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-tree/)
