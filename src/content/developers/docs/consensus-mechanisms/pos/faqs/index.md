@@ -12,13 +12,13 @@ Proof-of-stake is a class of algorithm that can provide security to blockchains 
 
 Both proof-of-work and proof-of-stake are mechanisms that economically disincentivize malicious actors from spamming or defrauding the network. In both cases, nodes that actively participate in consensus put some asset "into the network" that they will lose if they misbehave.
 
-In proof-of-work this asset is energy. The node, known as a miner, runs an algorithm that aims to compute a value with a specific format faster than any other node. If they manage, they have the right to propose a block to the chain. In order to change the history of the chain, or dominate the block proposal, a miner would have to have so much computing power that they always win the race. The energy required to "mine" using proof-of-work is a real world asset that miners pay for.
+In proof-of-work, this asset is energy. The node, known as a miner, runs an algorithm that aims to compute a value faster than any other node. The fastest node has the right to propose a block to the chain. To change the history of the chain or dominate the block proposal, a miner would have to have so much computing power that they always win the race. The energy required to "mine" using proof-of-work is a real-world asset that miners pay for.
 
-Proof-of-stake requires nodes, known as validators, to explicitly submit a crypto asset to a smart contract. If they misbehave then this crypto can be destroyed. This is a direct "staking" of assets directly into the chain, rather indirectly via energy expenditure.
+Proof-of-stake requires nodes, known as validators, to explicitly submit a crypto asset to a smart contract. If a validator misbehaves, this crypto can be destroyed because they are "staking" their assets directly into the chain instead of indirectly via energy expenditure.
 
-Proof-of-work is much more energy-hungry because electricity is burned in the mining process. Proof-of-stake, on the other hand, requires only a very small amount of energy - Ethereum validators cna even run on a low-powered device such as Raspberry Pi. Ethereum's proof-of-stake mechanism is thought to be more secure than proof-of-work because the cost to attack is greater, and the consequences to an attacker are more severe.
+Proof-of-work is much more energy-hungry because electricity is burned in the mining process. Proof-of-stake, on the other hand, requires only a very small amount of energy - Ethereum validators can even run on a low-powered device such as Raspberry Pi. Ethereum's proof-of-stake mechanism is thought to be more secure than proof-of-work because the cost to attack is greater, and the consequences to an attacker are more severe.
 
-Proof-of-work versus proof-of-stake has long been a hotly debated topic. A great summary of the arguments is provided in this [blog post](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) and this debate between Justin Drake and Lyn Alden:
+Proof-of-work versus proof-of-stake is a contentious topic. [Vitalik Buterin's blog](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) and the debate between Justin Drake and Lyn Alden give a good summary of the arguments.
 
 <iframe width="500" height="300" src="https://www.youtube.com/embed/1m12zgJ42dI" title="The PoW vs. PoS Debate | Lyn Alden & Justin Drake" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -26,11 +26,11 @@ Proof-of-work versus proof-of-stake has long been a hotly debated topic. A great
 
 Yes. Nodes on a proof-of-stake network do not use much energy at all. A recent third-party study concluded that the entire proof-of-stake Ethereum network consumes around 0.0026 TWh/yr - about 13,000x less than is consumed by gaming in the US alone.
 
-- Read more about Ethereum's [energy consumption](https://ethereum.org/en/energy-consumption/).
+- [More on Ethereum's energy consumption](/energy-consumption/).
 
 ## Is proof-of-stake secure? {#is-pos-secure}
 
-Ethereum's proof-of-stake is thought to be very secure, as well as being sustainable and scalable. The mechanism was researched and developed over eight years and tested rigorously before being deployed. The security guarantees are different from proof-of-work blockchains. In proof-of-stake malicious validators can be actively punished ("slashed") and ejected from the validator set, costing a substantial amount of ETH. Under proof-of-work, an attacker can keep repeating their attack while they have sufficient hashpower. It is also more costly to mount equivalent attacks on proof-of-stake Ethereum than it was under proof-of-work. To affect the liveness of the chain, at least 33% of the total staked ether on the network is required (except int he cases of very sophisticated attacks that have extremely low likelihood of success). To control the contents of future blocks, at least 51% of the total staked ETH is required, and to rewrite history >66% of the total stake is needed. These assets would necessarily be destroyed by the protocol in the 33 and 51% attack scenarios, and by social consensus in the 66% attack scenario.
+Ethereum's proof-of-stake is very secure. The mechanism was researched and developed over eight years and tested rigorously before implementation. The security guarantees are different from proof-of-work blockchains. In proof-of-stake, malicious validators can be actively punished ("slashed") and ejected from the validator set, costing a substantial amount of ETH. Under proof-of-work, an attacker can keep repeating their attack while they have sufficient hash power. It is also more costly to mount equivalent attacks on proof-of-stake Ethereum than it was under proof-of-work. To affect the liveness of the chain, at least 33% of the total staked ether on the network is required (except in the cases of very sophisticated attacks with an extremely low likelihood of success). To control the contents of future blocks, at least 51% of the total staked ETH is required, and to rewrite history, over 66% of the total stake is needed. The Ethereum protocol would destroy these assets in the 33% or 51% attack scenarios and by social consensus in the 66% attack scenario.
 
 - Read more about [defending Ethereum proof-of-stake from attackers](src/content/developers/docs/consensus-mechanisms/pos/attack-and-defense)
 - Read more about [proof-of-stake design](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51)
@@ -43,7 +43,7 @@ Read more about [gas](src/content/developers/docs/gas).
 
 ## What are nodes, clients and validators? {#what-are-nodes-clients-and-validators}
 
-Nodes are computers connected to the Ethereum network. Clients are the software they run that turns the computer into a node. There are two types of client: execution clients are consensus clients. Both are needed in order to create a node. A validator is an optional add-on to a consensus client that enables the node to participate in proof-of-stake consensus. This means creating and proposing blocks when they are selected, and attest to blocks they hear about on the network. In oorder to run a validator, the node operator must deposit 32 ETH into the deposit contract.
+Nodes are computers connected to the Ethereum network. Clients are the software they run that turns the computer into a node. There are two types of clients: execution clients are consensus clients. Both are needed to create a node. A validator is an optional add-on to a consensus client that enables the node to participate in proof-of-stake consensus. This means creating and proposing blocks when selected and attesting to blocks they hear about on the network. To run a validator, the node operator must deposit 32 ETH into the deposit contract.
 
 - Read more on [nodes and clients](src/content/developers/docs/nodes-and-clients)
 - Read more about [staking](src/content/staking)
@@ -52,18 +52,16 @@ Nodes are computers connected to the Ethereum network. Clients are the software 
 
 No. The basic idea of proof-of-stake was proposed on BitcoinTalk forum as an upgrade to Bitcoin. It was eleven years before it was ready to implement on Ethereum Mainnet. Some other chains implemented proof-of-stake earlier than Ethereum, but not Ethereum's specific mechanism (known as Gasper).
 
-- Read the [BitcoinTalk blogpost](https://bitcointalk.org/index.php?topic=27787.0)
-- Read more on [Gasper](src/content/developers/docs/consensus-mechanisms/pos/gasper)
 
 ## What is special about Ethereum's proof-of-stake? {#why-is-ethereum-pos-special}
 
-Ethereum's proof-of-stake mechanism is unique in its design. It was not the first proof-of-stake mechanism to be designed and implemented, but it is thought to be the most robust. The proof-of-stake mechanism is known as "Casper". Casper defines how validators are selected to propose blocks, how and when attestations are made, how attestations are counted, the rewards and penalties given to validators, slashing conditions, failsafe mechanisms such as the inactivity leak, and the conditions for "finality". Finality is the condition that for a block to be considered a permanent part of the canonical chain it must have been voted for by at least 66% of the total staked ETH on the network. Casper was developed specifically for Ethereum, and Ethereum is the first and only blockchain to have implemented it.
+Ethereum's proof-of-stake mechanism is unique in its design. It was not the first proof-of-stake mechanism to be designed and implemented, but it is the most robust. The proof-of-stake mechanism is known as "Casper". Casper defines how validators are selected to propose blocks, how and when attestations are made, how attestations are counted, the rewards and penalties given to validators, slashing conditions, failsafe mechanisms such as the inactivity leak, and the conditions for "finality". Finality is the condition that for a block to be considered a permanent part of the canonical chain it must have been voted for by at least 66% of the total staked ETH on the network. Casper was developed specifically for Ethereum, and Ethereum is the first and only blockchain to have implemented it.
 
 In addition to Casper, Ethereum's proof-of-stake uses a fork choice algorithm called LMD-GHOST. This is required in case a condition arises where two blocks exist for the same slot. This creates two forks of the blockchain. LMD-GHOST picks the one that have the greatest "weight" of attestations. The weight is the number of attestations weighted by the effective balance of the validators. LMD-GHOST is unique to Ethereum.
 
 The combination of Casper and LMD_GHOST is known as Gasper.
 
-- Read more about [Gasper](src/content/developers/docs/consensus-mechanisms/pos/gasper)
+- [More on Gasper](/developers/docs/consensus-mechanisms/pos/gasper/)
 
 ## What is slashing? {#what-is-slashing}
 
