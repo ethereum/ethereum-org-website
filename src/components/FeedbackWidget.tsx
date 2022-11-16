@@ -171,7 +171,7 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
                 alignItems="center"
                 display={{ base: "none", lg: isExpanded ? "flex" : "none" }}
               >
-                <Translation id="feedback-card-prompt-page" />
+                <Translation id="feedback-widget-prompt" />
               </Text>
             </ScaleFade>
           )}
