@@ -33,7 +33,7 @@ _Web3 は、L1 ブロックチェーンと L2 スケーリングソリューシ�
 - チェーンの垣根を超えた資産、情報の移動
 - 分散型アプリ(Dapp)を使用して、複数のブロックチェーンの強みを活用し、その結果、機能の向上(現在はプロトコルにイノベーションに利用できる設計スペースが増えたため)。
 - 新しいプラットフォームにアクセスし、異なるチェーンの利点を活用
-- 異なるブロックチェーンエコシステムからの開発者同士が協力し、新しいプラットフォームの開発
+- 異なるブロックチェーンエコシステムからのデベロッパー同士が協力し、新しいプラットフォームの開発
 
 <Divider />
 
@@ -113,14 +113,17 @@ USDT を貸し出すのにイーサリアムムメインネットの Aave を使
 - トラストブリッジで、ブリッジ運営側による悪意的な行動
 - ブリッジのハッキング
 
-最近のハッキングされた例として、Solana のワームホールブリッジで、[120k wETH (3 億 2500 万米ドル)が盗難](https://rekt.news/wormhole-rekt/)の被害に逢いました。
+最近のハッキングされた例として、Solana のワームホールブリッジで、[120k wETH (3 億 2500 万米ドル)が盗難](https://rekt.news/wormhole-rekt/)の被害に逢いました。 [規模の大きいブロックチェーンのハッキングの多くはブリッジに関連したもの](https://rekt.news/leaderboard/)でした。
 
-ブリッジは、イーサリアムの L2 を初めて利用するユーザー、またさまざまなエコシステムを探索したいユーザーにとっても重要なものです。 しかし、ブリッジ利用に伴うリスクを考慮し、ブリッジのトレードオフの理解が必要です。
+ブリッジは、イーサリアムの L2 を初めて利用するユーザー、またさまざまなエコシステムを探索したいユーザーにとっても重要なものです。 しかし、ブリッジ利用に伴うリスクを考慮し、ブリッジのトレードオフの理解が必要です。 これらは[クロスチェーンセキュリティの戦略](https://blog.debridge.finance/10-strategies-for-cross-chain-security-8ed5f5879946)です。
 
 <Divider />
 
 ## 参考文献 {#further-reading}
 
+- [EIP-5164: クロスチェーンの実行](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _2022 年 6 月 18 日 - Brendan Asselstine_
+- [L2 ブリッジ・リスク・フレームワーク](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _2022 年 7 月 5 日 - Bartek Kiepuszewski_
+- [「未来はマルチチェーンになるが、クロスチェーンにはならない理由」](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _2022 年 1 月 8 日 - Vitalik Buterin_
 - [ブロックチェーンブリッジとは何か、またこれらをどのように分類できるか](https://blog.li.finance/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa) _2021 年 2 月 18 日 - Arjun Chand_
 - [クロスチェーンブリッジとは](https://www.alchemy.com/overviews/cross-chain-bridges) _2022 年 5 月 10 日 - Alchemy_
 - [ブロックチェーン ブリッジ: 暗号ネットワークのネットワークの構築](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) _2021 年 9 月 8 日 - Dmitriy Berenzon_
