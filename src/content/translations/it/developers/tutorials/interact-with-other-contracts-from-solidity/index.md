@@ -3,11 +3,11 @@ title: Interazione con altri contratti da Solidity
 description: Come distribuire uno Smart Contract da uno esistente e interagirvi
 author: "jdourlens"
 tags:
-  - "Smart Contract"
+  - "smart contract"
   - "Solidity"
   - "remix"
   - "factory"
-  - "distribuzione"
+  - "rilascio"
   - "componibilità"
 skill: advanced
 lang: it
@@ -175,4 +175,4 @@ Dopo la compilazione, nella sezione di distribuzione di Remix si selezionerà la
 
 ![Selezione della factory da distribuire in Remix](./counterfactory-deploy.png)
 
-A questo punto puoi fare esperimenti la factory del contratto e controllare il valore che cambia. Per lo Smart Contract da un indirizzo diverso, è necessario cambiare l'indirizzo nella selezione Account di Remix.
+A questo punto puoi fare esperimenti la factory del contratto e controllare il valore che cambia. Se vorresti chiamare il contratto intelligente da un indirizzo differente, dovrai cambiare l'indirizzo nella selezione Conto di Remix.
