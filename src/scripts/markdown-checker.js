@@ -135,11 +135,7 @@ function processFrontmatter(path, lang) {
       }
     }
 
-    if (
-      frontmatter.skill !== "beginner" &&
-      frontmatter.skill !== "intermediate" &&
-      frontmatter.skill !== "advanced"
-    ) {
+    if (!["beginner", "intermediate", "advanced"].includes(frontmatter.skill)) {
       console.log(
         `Skill frontmatter '${frontmatter.skill}' must be: beginner, intermediate, or advanced at: ${path}:`
       )
