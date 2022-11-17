@@ -99,7 +99,7 @@ id="developers">
 - オンチェーンランダムネスのソース
 - *safe head*と*finalized blocks*コンセプト
 
-詳しくは、Tim Beiko 氏によるブログ記事【マージがイーサリアムのアプリケーションレイヤーに与える影響】(https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/)をご覧ください。
+詳しくは、Tim Beiko 氏によるブログ記事[マージがイーサリアムのアプリケーションレイヤーに与える影響](https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/)をご覧ください。
 </ExpandableCard>
 
 ## マージとエネルギー消費 {#merge-and-energy}
