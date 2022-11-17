@@ -8,13 +8,11 @@ tags:
     "hardhat",
     "alchemy",
     "smart contracts",
-    "getting started",
     "deploying",
     "etherscan",
     "verifying",
     "frontend",
     "transactions",
-    "web3js",
   ]
 skill: beginner
 lang: en

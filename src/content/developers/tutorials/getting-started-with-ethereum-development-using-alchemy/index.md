@@ -2,8 +2,7 @@
 title: Getting Started with Ethereum Development
 description: "This is a beginner's guide to getting started with Ethereum development. We’ll take you from spinning up an API endpoint, to making a command line request, to writing your first web3 script! No blockchain development experience necessary!"
 author: "Elan Halpern"
-tags:
-  ["getting started", "javascript", "ethers.js", "nodes", "querying", "alchemy"]
+tags: ["javascript", "ethers.js", "nodes", "querying", "alchemy"]
 skill: beginner
 lang: en
 published: 2020-10-30
