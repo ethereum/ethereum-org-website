@@ -9617,6 +9617,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Saksham010",
+      "name": "Saksham Thapa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56692835?v=4",
+      "profile": "https://github.com/Saksham010",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
