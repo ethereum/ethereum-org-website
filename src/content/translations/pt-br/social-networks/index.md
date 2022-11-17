@@ -37,7 +37,7 @@ Muitas plataformas sociais baseadas em blockchain possuem tokens nativos que pot
 
 2. As redes sociais descentralizadas são construídas em ideais de código aberto e disponibilizam, para inspeção pública, o código-fonte para aplicativos. Ao eliminar a implementação de algoritmos opacos comuns nas mídias sociais tradicionais, as redes sociais baseadas em blockchain podem alinhar os interesses de usuários e criadores de plataformas.
 
-3. As redes sociais descentralizadas eliminam o "intermediário". Os criadores de conteúdo têm propriedade direta sobre seu conteúdo e se envolvem diretamente com seguidores, fãs, compradores e outras partes, com nada além de um contrato inteligente entre eles.
+3. As redes sociais descentralizadas eliminam o “intermediário”. Os criadores de conteúdo têm propriedade direta sobre seu conteúdo e se envolvem diretamente com seguidores, fãs, compradores e outras partes, com nada além de um contrato inteligente entre eles.
 
 4. Como os dapps executados na rede Ethereum, que é sustentada por uma rede global de nós ponto a ponto, as redes sociais descentralizadas são menos suscetíveis ao tempo de inatividade e interrupções do servidor.
 
@@ -100,7 +100,7 @@ Em maio de 2022, o [Instagram anunciou suporte para NFTs](https://about.instagra
 ### Artigos {#articles}
 
 - [As redes sociais são a próxima grande oportunidade de descentralização](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
-- [A Web3 mantém a promessa de redes sociais descentralizadas e sustentadas pela comunidade.](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
+  - [A Web3 mantém a promessa de redes sociais descentralizadas e sustentadas pela comunidade.](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
 - [Uma visão geral do cenário de mídia social do Blockchain](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
 - [Como o Blockchain pode resolver a privacidade das mídias sociais](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
 - [As redes de mídia social estão chegando ao Blockchain](https://businesstechguides.co/what-are-decentralized-social-networks) — _Emmanuel Awosika_
