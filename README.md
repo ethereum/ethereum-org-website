@@ -1511,6 +1511,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/owenHwang"><img src="https://avatars.githubusercontent.com/u/112543777?v=4?s=100" width="100px;" alt="Owen Hwang"/><br /><sub><b>Owen Hwang</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=owenHwang" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/florath"><img src="https://avatars.githubusercontent.com/u/11856543?v=4?s=100" width="100px;" alt="Andreas Florath"/><br /><sub><b>Andreas Florath</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=florath" title="Documentation">📖</a></td>
       <td align="center"><a href="http://dancoffman.com"><img src="https://avatars.githubusercontent.com/u/1711204?v=4?s=100" width="100px;" alt="Daniel Coffman"/><br /><sub><b>Daniel Coffman</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=dgcoffman" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/Amit0617"><img src="https://avatars.githubusercontent.com/u/71893015?v=4?s=100" width="100px;" alt="AMIT KUMAR MISHRA"/><br /><sub><b>AMIT KUMAR MISHRA</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Amit0617" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
