@@ -37,7 +37,7 @@ Muitas plataformas sociais baseadas em blockchain possuem tokens nativos que pot
 
 2. As redes sociais descentralizadas são construídas em ideais de código aberto e disponibilizam, para inspeção pública, o código-fonte para aplicativos. Ao eliminar a implementação de algoritmos opacos comuns nas mídias sociais tradicionais, as redes sociais baseadas em blockchain podem alinhar os interesses de usuários e criadores de plataformas.
 
-3. As redes sociais descentralizadas eliminam o "intermediário". Os criadores de conteúdo têm propriedade direta sobre seu conteúdo e se envolvem diretamente com seguidores, fãs, compradores e outras partes, com nada além de um contrato inteligente entre eles.
+3. As redes sociais descentralizadas eliminam o “intermediário”. Os criadores de conteúdo têm propriedade direta sobre seu conteúdo e se envolvem diretamente com seguidores, fãs, compradores e outras partes, com nada além de um contrato inteligente entre eles.
 
 4. Como os dapps executados na rede Ethereum, que é sustentada por uma rede global de nós ponto a ponto, as redes sociais descentralizadas são menos suscetíveis ao tempo de inatividade e interrupções do servidor.
 
