@@ -9599,6 +9599,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "dgcoffman",
+      "name": "Daniel Coffman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1711204?v=4",
+      "profile": "http://dancoffman.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
