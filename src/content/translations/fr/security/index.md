@@ -151,8 +151,6 @@ Lorsque vous interagissez avec des contrats intelligents, n'autorisez pas des pl
 
 De nombreux portefeuilles Ethereum offrent des limites de sécurité pour éviter que vos comptes ne soient vidés.
 
-[Explorer les portefeuilles proposant des limites de sécurité](/wallets/find-wallet/?filters=has_limits_protection)
-
 <Divider />
 
 ## Arnaques courantes {#common-scams}

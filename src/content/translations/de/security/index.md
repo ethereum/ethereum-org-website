@@ -158,8 +158,6 @@ Wenn Sie mit Smart Contracts interagieren, sollten Sie keine unbegrenzten Ausgab
 
 Viele Ethereum-Wallets bieten Schutz gegen die komplette Entleerung durch Hackerangriffe an.
 
-[Mehr erfahren über Wallets mit einem Ausgabelimit-Schutz](/wallets/find-wallet/?filters=has_limits_protection)
-
 <Divider />
 
 ## Häufige Betrugsversuche {#common-scams}

@@ -33,6 +33,6 @@ Haluatko oppia lisää Ethereum-lompakoista englanniksi?
 Haluatko oppia lisää kuinka varastoida varoja ja hallinnoida yksityisavaimia turvallisesti (englanniksi)?
 
 - [Protecting Yourself and Your Funds](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) _päivitetään usein - MyCrypto_
-- [The keys to keeping your crypto safe](https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf) _16.1.2019 - Coinbase blog_
+- [The keys to keeping your crypto safe](https://web.archive.org/web/20190716160333/https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf?gi=548619266f28) _16.1.2019 - Coinbase blog_
 - [How to Store Digital Assets on Ethereum](https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0) _30.5.2018 - ConsenSys_
 - [Do you really need a hardware wallet?](https://medium.com/ledger-on-security-and-blockchain/ledger-101-part-1-do-you-really-need-a-hardware-wallet-7f5abbadd945) _24.9.2018 - Ledger_
