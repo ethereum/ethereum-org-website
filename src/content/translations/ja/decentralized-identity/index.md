@@ -180,5 +180,5 @@ summaryPoint3: 暗号技術により、今や再び自分自身のIDとアテス
 ### コミュニティ {#communities}
 
 - [GitHub 上の ERC-725 アライアンス](https://github.com/erc725alliance) — _イーサリアムのブロックチェーン上で ID を管理するための規格「ERC725」のサポーターコミュニティ_
-- [SpruceID Discord サーバー](https://discord.com/invite/Sf9tSFzrnt) — _「イーサリアムでサインイン」に取り組むファンや開発者のためのコミュニティ_
-- [Veramo Labs](https://discord.gg/sYBUXpACh4) — _アプリケーション向けの検証可能なデータのフレームワークの構築に貢献する開発者のコミュニティ_
+- [SpruceID Discord サーバー](https://discord.com/invite/Sf9tSFzrnt) — _「イーサリアムでサインイン」に取り組むファンやデベロッパーのためのコミュニティ_
+- [Veramo Labs](https://discord.gg/sYBUXpACh4) — _アプリケーション向けの検証可能なデータのフレームワークの構築に貢献するデベロッパーのコミュニティ_
