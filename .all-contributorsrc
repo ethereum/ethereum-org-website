@@ -9626,6 +9626,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "vjgaur",
+      "name": "Vijayendra Gaur",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1871257?v=4",
+      "profile": "https://github.com/vjgaur",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
