@@ -104,7 +104,6 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
 
   const handleClose = (): void => {
     setIsOpen(false)
-    setIsExpanded(false)
     trackCustomEvent({
       eventCategory: `FeedbackWidget toggled`,
       eventAction: `Clicked`,
@@ -113,6 +112,7 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
   }
   const handleOpen = (): void => {
     setIsOpen(true)
+    setIsExpanded(false)
     trackCustomEvent({
       eventCategory: `FeedbackWidget toggled`,
       eventAction: `Clicked`,
@@ -171,7 +171,7 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
                 alignItems="center"
                 display={{ base: "none", lg: isExpanded ? "flex" : "none" }}
               >
-                <Translation id="feedback-card-prompt-page" />
+                <Translation id="feedback-widget-prompt" />
               </Text>
             </ScaleFade>
           )}
