@@ -30,7 +30,7 @@ Translation pull requests are considered high priority. These are when the trans
 
 ### Feature and bug fixes
 
-Any new feature correlated to an approved issue or bug fix is high-priority. Similar to translators, code contributors dedicate a large amount of their time to improving [ethereum.org](http://ethereum.org) as a resource and addressing their efforts quickly is desirable. All bug fixes should be handled swiftly, but new features that were not discussed, requested or approved do fall under this timeline.
+Any new feature correlated to an approved issue or bug fix is high-priority. Similar to translators, code contributors dedicate a large amount of their time to improving [ethereum.org](http://ethereum.org) as a resource and addressing their efforts quickly is desirable. All bug fixes should be handled swiftly, but new features that were not discussed, requested or approved do not fall under this timeline.
 
 **Timeline:** Features or bug fixes should be reviewed within 1-12 days. In the case of bugs, more severe bugs will be reviewed more promptly.
 
