@@ -153,8 +153,6 @@ Chrome 拡張機能や Firefox のアドオンなどのブラウザ拡張機能�
 
 多くのイーサリアムウォレットは、アカウントの資産が空になってしまうことを防ぐため、利用限度額の設定ができます。
 
-[利用限度額の設定機能があるウォレットを探す](/wallets/find-wallet/?filters=has_limits_protection)
-
 <Divider />
 
 ## 代表的な詐欺 {#common-scams}
