@@ -104,7 +104,6 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
 
   const handleClose = (): void => {
     setIsOpen(false)
-    setIsExpanded(false)
     trackCustomEvent({
       eventCategory: `FeedbackWidget toggled`,
       eventAction: `Clicked`,
@@ -113,6 +112,7 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
   }
   const handleOpen = (): void => {
     setIsOpen(true)
+    setIsExpanded(false)
     trackCustomEvent({
       eventCategory: `FeedbackWidget toggled`,
       eventAction: `Clicked`,
