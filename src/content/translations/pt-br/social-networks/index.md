@@ -100,7 +100,7 @@ Em maio de 2022, o [Instagram anunciou suporte para NFTs](https://about.instagra
 ### Artigos {#articles}
 
 - [As redes sociais são a próxima grande oportunidade de descentralização](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
-  - [A Web3 mantém a promessa de redes sociais descentralizadas e sustentadas pela comunidade.](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
+- [A Web3 mantém a promessa de redes sociais descentralizadas e sustentadas pela comunidade.](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
 - [Uma visão geral do cenário de mídia social do Blockchain](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
 - [Como o Blockchain pode resolver a privacidade das mídias sociais](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
 - [As redes de mídia social estão chegando ao Blockchain](https://businesstechguides.co/what-are-decentralized-social-networks) — _Emmanuel Awosika_
