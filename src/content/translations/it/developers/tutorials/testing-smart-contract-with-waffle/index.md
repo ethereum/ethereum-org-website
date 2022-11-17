@@ -8,7 +8,7 @@ tags:
   - "Solidity"
   - "test"
   - "erc-20"
-skill: intermedio
+skill: intermediate
 lang: it
 published: 2020-10-16
 ---
