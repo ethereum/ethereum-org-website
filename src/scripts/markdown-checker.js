@@ -111,6 +111,10 @@ function processFrontmatter(path, lang) {
     )
   }
 
+  if (frontmatter.sidebar) {
+    console.error(`Unexpected 'sidebar' frontmatter at ${path}`)
+  }
+
   if (path.includes("/tutorials/")) {
     if (!frontmatter.published) {
       console.warn(`Missing 'published' frontmatter at ${path}:`)
@@ -129,6 +133,16 @@ function processFrontmatter(path, lang) {
           `Invalid 'published' frontmatter at ${path}: Expected: 'YYYY-MM-DD' Received: ${frontmatter.published}`
         )
       }
+    }
+
+    if (
+      frontmatter.skill !== "beginner" &&
+      frontmatter.skill !== "intermediate" &&
+      frontmatter.skill !== "advanced"
+    ) {
+      console.log(
+        `Skill frontmatter '${frontmatter.skill}' must be: beginner, intermediate, or advanced at: ${path}:`
+      )
     }
   }
 }
