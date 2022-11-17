@@ -34,17 +34,27 @@ En savoir plus sur [la mission et la vision](/contributing/translation-program/m
 
 ### Les progrès réalisés jusqu'à présent {#our-progress}
 
-- [**3 800 +** traducteurs](/contributing/translation-program/contributors/)
-- [**48** langues présentes sur le site](/languages/)
-- [**2,9 millions** de mots traduits en 2021](/contributing/translation-program/acknowledgements/)
-- [**1,9 million** de mots traduits en 2022 jusqu'ici](/contributing/translation-program/acknowledgements/)
+- [**4,100 +** traducteurs](/contributing/translation-program/contributors/)
+- [**50** langues présentes sur le site](/languages/)
+- [**2,5 millions** de mots traduits jusqu'à aujourd'hui en 2022](/contributing/translation-program/acknowledgements/)
 
-Si vous voulez participer et nous aider à développer la communauté mondiale d'Ethereum en traduisant le site dans votre langue, suivez les étapes ci-dessous !
+<TranslationChartImage />
 
-<InfoBanner emoji=":tada:">
-  Jetez un œil à notre page de <Link to="/contributing/translation-program/acknowledgements/">reconnaissance des traducteurs</Link> et demandez votre jeton POAP ! Si vous avez traduit ethereum.org en 2022, il y a un POAP unique qui vous attend.{" "}
-  <Link to="/contributing/translation-program/acknowledgements/#poap">En savoir plus sur les POAP</Link>
-</InfoBanner>
+### Remerciements {#acknowledgements}
+
+Ethereum.org est traduit par des milliers de membres de la Communauté et sont les éléments clés du programme de traduction. Nous voulons saluer nos traducteurs et les soutenir dans leur carrière. Voici quelques-uns de nos remerciements pour traducteur :
+
+#### Certificat {#certificate}
+
+Si vous avez contribué au programme de traduction et qu'au moins 5 000 de vos mots traduits ont été approuvés, vous avez droit à un certificat de traducteur ethereum.org. [En savoir plus sur les certificats](/contributing/translation-program/acknowledgements/#certificate)
+
+#### POAP {#poaps}
+
+Tous nos traducteurs peuvent obtenir un POAP (Protocole de Preuve de Présence) : un jeton NFT qui prouve leur contribution au programme de traduction d'ethereum.org. [En savoir plus sur les POAP](/contributing/translation-program/acknowledgements/#poap)
+
+#### Traducteurs mis à l'honneur {#translator-acknowledgements}
+
+Reconnaissances publiques de nos meilleurs traducteurs en utilisant [les classements](/contributing/translation-program/acknowledgements/) et une [liste de tous les contributeurs au programme de traduction](/contributing/translation-program/contributors/).
 
 ### Ce sur quoi nous travaillons {#our-projects}
 
@@ -64,9 +74,9 @@ Participer :
 
 ![](./launchpad-screenshot.png)
 
-La [plateforme de lancement](https://launchpad.ethereum.org/en/) permet aux utilisateurs d'Ethereum de devenir des validateurs et de sécuriser le futur d'Ethereum en immobilisant leur ETH.
+La [plateforme de lancement](https://launchpad.ethereum.org/en/) permet aux utilisateurs d'Ethereum de devenir des validateurs et de sécuriser le futur d'Ethereum en mettant en jeu leur ETH.
 
-S'impliquer:
+Participer :
 
 - Visitez la [page de traduction de la plateforme de lancement](/contributing/translation-program/launchpad-translations/)
 - Rejoignez le [projet de traduction de la plateforme de lancement dans Crowdin](https://crowdin.com/project/ethereum-staking-launchpad)
