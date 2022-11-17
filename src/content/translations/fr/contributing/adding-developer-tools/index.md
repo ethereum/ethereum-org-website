@@ -2,6 +2,7 @@
 title: Ajouter des outils de développement
 lang: fr
 description: Nos critères de référencement des outils de développement sur ethereum.org
+sidebar: true
 ---
 
 # Ajouter des outils de développement {#contributing-to-ethereumorg-}

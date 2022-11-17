@@ -126,7 +126,7 @@ La clé privée de votre portefeuille fait office de mot de passe pour votre por
 
 #### Ne faites pas de captures d'écran de vos phrases secrètes/clés privées {#screenshot-private-keys}
 
-En faisant une une capture d'écran de vos phrases secrètes ou de vos clés privées, vous risquez de les synchroniser sur le cloud et donc de les rendre potentiellement accessibles aux pirates informatiques. Récupérer les clés privées du cloud est un vecteur d'attaque prisé des pirates.
+En faisant une capture d'écran de vos phrases secrètes ou de vos clés privées, vous risquez de les synchroniser sur le cloud et donc de les rendre potentiellement accessibles aux pirates informatiques. Récupérer les clés privées du cloud est un vecteur d'attaque prisé des pirates.
 
 ### Utiliser un portefeuille matériel {#use-hardware-wallet}
 

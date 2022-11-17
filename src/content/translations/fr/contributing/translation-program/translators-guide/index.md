@@ -2,6 +2,7 @@
 title: Guide à l'intention des traducteurs
 lang: fr
 description: Instructions et conseils pour les traducteurs d'ethereum.org
+sidebar: true
 ---
 
 # Guide de style pour la traduction d'ethereum.org {#style-guide}

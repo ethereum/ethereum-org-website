@@ -2,6 +2,7 @@
 title: Ajout de produits ou services de mise en jeu
 description: Les conditions générales que nous appliquons pour ajouter des produits ou des services de mise en jeu sur ethereum.org
 lang: fr
+sidebar: true
 ---
 
 # Ajouter des produits ou services de mise en jeu {#adding-staking-products-or-services}

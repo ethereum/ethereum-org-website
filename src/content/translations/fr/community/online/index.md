@@ -27,15 +27,16 @@ Des centaines de milliers de passionnés d'Ethereum se rassemblent sur ces forum
 <SocialListItem socialIcon="discord"><Link to="https://discord.io/ethstaker">Discord EthStaker</Link> - Communauté orientée autour de l'offre de soutien à la gestion de projet concernant le développement d'Ethereum</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/CetY6Y4">Équipe du site web Ethereum.org</Link> - consultez et discutez du développement et du design du site web ethereum.org avec l'équipe et les membres de la communauté</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ZH5aXDgWEU">Université Web3</Link> - communauté axée sur l'apprentissage du développement Web3 </SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> - forum de discussion pour le développement Solidity (Gitter)</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - forum de discussion pour le développement Solidity (Matrix)</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Discord Matos</Link> - Communauté de créateurs Web3 où les bâtisseurs, les chefs de file industriels et les enthousiastes d'Ethereum se rencontrent. Nous sommes passionnés par le développement du Web3, sa conception et sa culture. Venez le bâtir avec nous.</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> - Forum de discussion pour le développement en Solidity (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - Forum de discussion pour le développement en Solidity (Matrix)</SocialListItem>
 
 ## YouTube et Twitter {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> - Tenez-vous au courant des dernières nouvelles de la fondation Ethereum</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> - Compte officiel de la Fondation Ethereum</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethdotorg">@ethdotorg</Link> - Le portail vers Ethereum, construit pour notre communauté mondiale grandissante</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://hive.one/c/Ethereum?page=1">Liste des comptes Twitter Ethereum influents</Link></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://hive.one/c/ethereum?page=1">Liste des comptes Twitter Ethereum influents</Link></SocialListItem>
 
 <Divider />
 

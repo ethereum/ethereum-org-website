@@ -2,6 +2,7 @@
 title: Principes de conception
 lang: fr
 description: Les principes derrière les décisions concernant la conception et le contenu d'ethereum.org
+sidebar: true
 ---
 
 # Nos principes de conception {#contributing-to-ethereumorg-}
