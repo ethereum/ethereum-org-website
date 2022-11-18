@@ -57,6 +57,10 @@ All of our translators are eligible for a POAP (Proof of Attendance Protocol) - 
 
 Public acknowledgements of our top translators using [leaderboards](/contributing/translation-program/acknowledgements/) and a [list of all contributors to the Translation Program](/contributing/translation-program/contributors/).
 
+#### Rewards {#rewards}
+
+In the past, we have rewarded our most active contributors with tickets to Ethereum conferences like [Devcon](https://devcon.org/en/) and [Devconnect](https://devconnect.org/), as well as exclusive ethereum.org merch.
+
 ### What we're working on {#our-projects}
 
 Our community of contributors is actively translating multiple high-impact websites and resources for the global Ethereum community.
