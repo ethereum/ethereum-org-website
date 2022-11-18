@@ -59,7 +59,7 @@ Public acknowledgements of our top translators using [leaderboards](/contributin
 
 #### Rewards {#rewards}
 
-In the past, we have rewarded our most active contributors with tickets to Ethereum conferences like [Devcon](https://devcon.org/en/) and [Devconnect](https://devconnect.org/), as well as exclusive ethereum.org merch.
+In the past, we have retroactively rewarded our most active contributors with tickets to Ethereum conferences like [Devcon](https://devcon.org/en/) and [Devconnect](https://devconnect.org/), as well as exclusive ethereum.org merch.
 
 ### What we're working on {#our-projects}
 
