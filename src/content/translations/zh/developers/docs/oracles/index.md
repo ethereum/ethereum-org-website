@@ -7,7 +7,7 @@ incomplete: true
 
 预言机是一个数据输入应用程序，它从区块链外部（链外）的数据源获取数据，并输入到区块链（链上），以供智能合约使用。预言机之所以需要，是由于在以太坊上运行的智能合约无法访问存储在区块链网络之外的信息。
 
-赋予智能合约使用链外数据输入的能力，扩展了去中心化应用程序的价值。例如，去中心化市场预测依靠预言机来提供有关结果的信息，从而可以验证用户的预测。假设Alice下注20ETH押注谁将成为下一任美国总统，市场预测去中心化应用dapp需要一个预言机来确认选举结果并决定Alice是否有资格获得付款。
+赋予智能合约使用链外数据输入的能力，扩展了去中心化应用程序的价值。例如，去中心化市场预测依靠预言机来提供有关结果的信息，从而可以验证用户的预测。假设 Alice 下注 20ETH 押注谁将成为下一任美国总统，市场预测去中心化应用 dapp 需要一个预言机来确认选举结果并决定 Alice 是否有资格获得付款。
 
 ## 先决条件 {#prerequisites}
 
@@ -15,7 +15,7 @@ This page assumes the reader is familiar with Ethereum fundamentals, including n
 
 本页假设读者熟悉以太坊基础知识，包括节点、共识机制和 EVM。 您还应该很好地掌握智能合约和智能合约解剖结构，尤其是事件。
 
-本页假设读者熟悉以太坊基础知识，包括[节点](/developers/docs/nodes-and-clients/)、[共识机制](/developers/docs/consensus-mechanisms/)和[以太虚拟机EVM](/developers/docs/evm/)。您还应该很好地掌握[智能合约](/developers/docs/smart-contracts/)和[智能合约结构](/developers/docs/smart-contracts/anatomy/)，尤其是[事件](/glossary/#events)。
+本页假设读者熟悉以太坊基础知识，包括[节点](/developers/docs/nodes-and-clients/)、[共识机制](/developers/docs/consensus-mechanisms/)和[以太虚拟机 EVM](/developers/docs/evm/)。您还应该很好地掌握[智能合约](/developers/docs/smart-contracts/)和[智能合约结构](/developers/docs/smart-contracts/anatomy/)，尤其是[事件](/glossary/#events)。
 
 ## 什么是预言机 {#what-is-an-oracle}
 

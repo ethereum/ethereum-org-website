@@ -13,9 +13,9 @@ summaryPoint3: Graças à criptografia, os usuários agora têm as ferramentas p
 
 A identidade sustenta virtualmente todos os aspectos da sua vida hoje. Usar serviços on-line, abrir uma conta bancária, votar em eleições, comprar propriedades, garantir um emprego – todas essas coisas exigem que você prove sua identidade.
 
-Entretanto, os sistemas tradicionais de gerenciamento de identidade há muito tempo dependem de intermediários centralizados que emitem, mantêm e controlam seus identificadores e [atestados](#what-are-attestations). Isso significa que você não pode controlar suas informações relacionadas à identidade ou decidir quem tem acesso às informações de identificação pessoal (PII) e quanto acesso essas partes têm.
+Entretanto, os sistemas tradicionais de gerenciamento de identidade há muito tempo dependem de intermediários centralizados que emitem, mantêm e controlam seus identificadores e [atestados](#what-are-attestations). Isso significa que você não pode controlar as informações relacionadas à sua identidade ou decidir quem tem acesso às informações de identificação pessoal (PII) e quanto acesso essas partes têm.
 
-Para resolver esses problemas, temos sistemas de identidade descentralizados construídos em blockchains públicos como o Ethereum. A identidade descentralizada permite que indivíduos gerenciem suas informações relacionadas à identidade. Com soluções de identidade descentralizadas, _você_ pode criar identificadores e reivindicar e manter seus atestados sem depender de autoridades centrais, como provedores de serviços ou governos.
+Para resolver esses problemas, temos sistemas de identidade descentralizados construídos em blockchains públicos como o Ethereum. A identidade descentralizada permite que indivíduos gerenciem informações relacionadas à sua identidade. Com soluções de identidade descentralizadas, _você_ pode criar identificadores e reivindicar e manter seus atestados sem depender de autoridades centrais, como provedores de serviços ou governos.
 
 ## O que é identidade {#what-is-identity}
 
@@ -26,7 +26,7 @@ Identidade significa o sentido de si próprio de um indivíduo, definido por car
 Um identificador é uma informação que atua como um ponteiro para uma identidade ou identidades específicas. Identificadores comuns incluem:
 
 - Nome
-- Número da segurança social/número de identificação fiscal
+- Número da seguro social/número de identificação fiscal
 - Número de celular
 - Data e local de nascimento
 - Credenciais de identificação digital, por exemplo, endereços de e-mail, nomes de usuário, avatares
@@ -57,13 +57,13 @@ Alguns identificadores descentralizados, como uma conta Ethereum, possuem chaves
 
 ### 2. Armazenamentos de dados descentralizados {#decentralized-datastores}
 
-Um blockchain serve como um registro de dados verificável: um repositório de informações aberto, sem confiança e descentralizado. A existência de blockchains públicos elimina a necessidade de armazenar identificadores em registros centralizados.
+Um blockchain serve como um registro de dados verificável: um repositório de informações aberto, com necessidade mínima de confiança e descentralizado. A existência de blockchains públicos elimina a necessidade de armazenar identificadores em registros centralizados.
 
 Se alguém precisar confirmar a validade de um identificador descentralizado, ele poderá procurar a chave pública associada no blockchain. Isso difere dos identificadores tradicionais que exigem autenticação de terceiros.
 
 ## Como os identificadores e atestados descentralizados permitem a identidade descentralizada? {#how-decentralized-identifiers-and-attestations-enable-decentralized-identity}
 
-A identidade descentralizada é a ideia de que as informações relacionadas à identidade devem ser autocontroladas, privadas e portáteis, com identificadores e atestados descentralizados sendo os principais blocos de construção.
+A identidade descentralizada é a ideia de que as informações relacionadas à identidade devem ser autocontroladas, privadas e portáteis, com identificadores descentralizados e atestações sendo os principais blocos de construção.
 
 No contexto da identidade descentralizada, os atestados (também conhecidos como [Credenciais verificáveis](https://www.w3.org/TR/vc-data-model/)) são declarações à prova de adulteração e criptograficamente verificáveis feitas pelo emissor. Cada atestado ou credencial verificável de uma entidade (por exemplo, uma organização) está associada ao seu DID.
 
@@ -115,7 +115,7 @@ Aqui está um exemplo para mostrar como os atestados on-chain podem funcionar na
 
 1. A identidade descentralizada aumenta o controle individual de identificação da informação. Identificadores e atestados descentralizados podem ser verificados sem depender de autoridades centralizadas e serviços de terceiros.
 
-2. As soluções de identidade descentralizadas facilitam um método sem confiança, sem interrupções e de proteção de privacidade para verificar e gerenciar a identidade do usuário.
+2. As soluções de identidade descentralizadas facilitam um método com necessidade mínima de confiança, sem interrupções e de proteção de privacidade para verificar e gerenciar a identidade do usuário.
 
 3. A identidade descentralizada aproveita a tecnologia blockchain, que cria confiança entre diferentes partes e fornece garantias criptográficas para provar a validade dos atestados.
 
@@ -155,7 +155,7 @@ Os ataques Sybil referem-se a humanos individuais enganando um sistema para pens
 
 Existem muitos projetos ambiciosos usando Ethereum como base para soluções de identidade descentralizadas:
 
-- **[Nomes de Serviço Ethereum (ENS)](https://ens.domains/)** - _ Um sistema de nomes descentralizado para identificadores legíveis por máquina on-chain, como endereços de carteira Ethereum, hashes de conteúdo e metadados._
+- **[Nomes de Serviço Ethereum (ENS)](https://ens.domains/)** - _Um sistema de nomes descentralizado para identificadores legíveis por máquina on-chain, como endereços de carteira Ethereum, hashes de conteúdo e metadados._
 - **[SpruceID](https://www.spruceid.com/)** - _Um projeto de identidade descentralizada que permite aos usuários controlar a identidade digital com contas Ethereum e perfis ENS em vez de depender de serviços de terceiros._
 - **[Prova de Humanidade](https://www.proofofhumanity.id)** - _Prova de Humanidade (ou PoH) é um sistema de verificação de identidade social construído no Ethereum._
 - **[BrightID](https://www.brightid.org/)** - _Uma descentralizada, rede de identidade social de código aberto que busca reformar a verificação de identidade por meio da criação e análise de um grafo social._
