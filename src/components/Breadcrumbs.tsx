@@ -5,7 +5,6 @@ import Link from "./Link"
 import { isLang, supportedLanguages } from "../utils/languages"
 import { isTranslationKey, translateMessageId } from "../utils/translations"
 import { Box, UnorderedList, ListItem } from "@chakra-ui/react"
-import ButtonLink from "./ButtonLink"
 
 export interface IProps {
   slug: string
@@ -75,7 +74,7 @@ const Breadcrumbs: React.FC<IProps> = ({
             lineHeight="140%"
             letterSpacing="wider"
           >
-            <ButtonLink
+            <Link
               as={Link}
               to={crumb.fullPath}
               isPartiallyActive={slug === crumb.fullPath}
@@ -85,7 +84,7 @@ const Breadcrumbs: React.FC<IProps> = ({
               _active={{ color: "primary" }}
             >
               {crumb.text}
-            </ButtonLink>
+            </Link>
             {idx < crumbs.length - 1 && (
               <Box as="span" marginLeft={2} color="textTableOfContents">
                 /
