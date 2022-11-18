@@ -52,6 +52,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 ### Products and services {#products-and-services}
 
 - [Alchemy](https://www.alchemy.com/) _provides API services and tools for building and monitoring applications on Ethereum_
+- [Blast](https://blastapi.io/) _a multichain, subscription-based, API platform, featuring the fastest and most reliable blockchain access to Ethereum Archive Mainnet and Tetnets._
 - [Blockapps](https://blockapps.net/) _implementation of the Enterprise Ethereum protocol, tooling and APIs that form the STRATO platform_
 - [Chainstack](https://chainstack.com/) _mainnet and testnet Ethereum infrastructure hosted in public & isolated customer clouds_
 - [ConsenSys](https://consensys.net/) _provides a range of products and tools for building on Ethereum, as well as consulting and custom development services_
@@ -63,6 +64,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 - [QuickNode](https://www.quicknode.com/) _provides reliable and fast nodes with high-level APIs like NFT API, Token API, etc., while delivering a unified product suite and enterprise-grade solutions_
 - [Unibright](https://unibright.io/) _a team of blockchain specialists, architects, developers and consultants with 20+ years of experience in business processes and integration_
 - [Zero Services GmbH](https://www.zeroservices.eu/) _provider of managed services spread across co-locations in Europe and Asia. Operates & monitors your nodes securely and reliably_
+
 
 ### Tooling and libraries {#tooling-and-libraries}
 
