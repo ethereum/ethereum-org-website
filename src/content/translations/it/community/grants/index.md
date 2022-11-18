@@ -31,7 +31,7 @@ Questi progetti hanno creato le proprie sovvenzioni per progetti volti a svilupp
 - [Compound Grants Program](https://compoundgrants.org/) – _Ecosistema finanziario [Compound](https://compound.finance/)_
 - [dYdX Grants Program](https://dydxgrants.com/) – _Scambio decentralizzato [dYdX](https://dydx.exchange/)_
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _Ecosistema finanziario [Lido](https://lido.fi/)_
-- [MetaMask Grants DAO](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) employee-led grants DAO_
+- [MetaMask Program](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) employee-led grants DAO_
 - [mStable Grants Program](https://docs.mstable.org/advanced/grants-program) - _Community [mStable](https://mstable.org/)_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _Ecosistema [The Graph](https://thegraph.com/)_
 - [Uniswap Grants Program](https://www.unigrants.org/) – _Community [Uniswap](https://uniswap.org/)_
