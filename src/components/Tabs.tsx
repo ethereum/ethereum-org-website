@@ -1,38 +1,11 @@
-import React, { ReactNode, useState } from "react"
-import styled from "@emotion/styled"
-
-const TabList = styled.ul`
-  display: flex;
-  margin: 0;
-  list-style-type: none;
-  list-style-image: none;
-`
-
-const Tab = styled.li`
-  border-bottom: 1px solid ${(props) => props.theme.colors.primary};
-  margin: 0;
-`
-
-const TabButton = styled.button<{ selected: boolean }>`
-  display: block;
-  cursor: pointer;
-  color: ${({ theme, selected }) =>
-    selected ? theme.colors.background : theme.colors.text};
-  background-color: ${({ selected, theme }) =>
-    selected ? theme.colors.primary : "transparent"};
-  border: 0;
-  border-top-left-radius: 0.3rem;
-  border-top-right-radius: 0.3rem;
-  padding: 0.3rem 1rem;
-`
-
-const TabPanel = styled.div`
-  background: ${(props) => props.theme.colors.ednBackground};
-  border-radius: 0.5rem;
-  border: 1px solid ${(props) => props.theme.colors.lightBorder};
-  margin-top: 1rem;
-  padding: 1.5rem;
-`
+import React, { ReactNode } from "react"
+import {
+  Tabs as ChakraTabs,
+  TabList,
+  Tab,
+  TabPanels,
+  TabPanel,
+} from "@chakra-ui/react"
 
 interface Tab {
   title: string
@@ -44,38 +17,46 @@ export interface IProps {
   onTabClick?: (tabIndex: number) => void
 }
 
-/**
- * Minimal & temp Tab component until we migrate over a UI lib
- */
 const Tabs: React.FC<IProps> = ({ tabs, onTabClick }) => {
-  const [selectedIndex, setSelectedIndex] = useState(0)
-  const selectedTab = tabs[selectedIndex]
-
   const handleTabClick = (index: number) => {
-    setSelectedIndex(index)
-
     if (onTabClick) {
       onTabClick(index)
     }
   }
 
   return (
-    <div>
-      <nav>
-        <TabList>
-          {tabs.map((tab, index) => (
-            <Tab key={index} onClick={() => handleTabClick(index)}>
-              <TabButton selected={index === selectedIndex}>
-                {tab.title}
-              </TabButton>
-            </Tab>
-          ))}
-        </TabList>
-      </nav>
-      <main>
-        <TabPanel>{selectedTab.content}</TabPanel>
-      </main>
-    </div>
+    <ChakraTabs as="nav" variant="unstyled">
+      <TabList>
+        {tabs.map((tab, index) => (
+          <Tab
+            key={index}
+            px={4}
+            py="0.3rem"
+            borderBottom="1px solid"
+            borderColor="primary"
+            borderTopRadius="0.3rem"
+            _selected={{ color: "background", bg: "primary" }}
+            onClick={() => handleTabClick(index)}
+          >
+            {tab.title}
+          </Tab>
+        ))}
+      </TabList>
+      <TabPanels as="main" mt={4}>
+        {tabs.map((tab, index) => (
+          <TabPanel
+            key={index}
+            p={6}
+            bg="ednBackground"
+            border="1px solid"
+            borderColor="lightBorder"
+            borderRadius="lg"
+          >
+            {tab.content}
+          </TabPanel>
+        ))}
+      </TabPanels>
+    </ChakraTabs>
   )
 }
 
