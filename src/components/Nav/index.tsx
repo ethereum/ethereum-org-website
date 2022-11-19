@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Flex, Icon, IconButton, Text, useColorMode } from "@chakra-ui/react"
+import { Icon, IconButton, Text, useColorMode } from "@chakra-ui/react"
 import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
 import styled from "@emotion/styled"
 import { cloneDeep } from "lodash"
@@ -8,7 +8,6 @@ import { useIntl } from "react-intl"
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
 import ButtonLink from "../ButtonLink"
-import NakedButton from "../NakedButton"
 import Link from "../Link"
 import Search from "../Search"
 import Translation from "../Translation"
@@ -95,25 +94,6 @@ const HomeLogo = styled(HomeIcon)`
   &:hover {
     opacity: 1;
   }
-`
-
-const Span = styled.span`
-  padding-left: 0.5rem;
-`
-
-const ThemeToggle = styled(NakedButton)`
-  margin-left: 1rem;
-  display: flex;
-  align-items: center;
-  &:hover {
-    svg {
-      fill: ${(props) => props.theme.colors.primary};
-    }
-  }
-`
-
-const NavIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
 `
 
 export interface IProps {
