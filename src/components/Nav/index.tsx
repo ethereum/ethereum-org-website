@@ -429,6 +429,7 @@ const Nav: React.FC<IProps> = ({ path }) => {
             toggleMenu={handleMenuToggle}
             toggleTheme={toggleColorMode}
             linkSections={mobileLinkSections}
+            fromPageParameter={fromPageParameter}
           />
         </NavContent>
       </StyledNav>
