@@ -15,8 +15,7 @@ summaryPoints:
 
 ## O que é staking individual? {#what-is-solo-staking}
 
-O staking individual é o ato de [executar um nó Ethereum](/run-a-node/) conectado à Internet e depositar 32 ETH para ativar um
-validador, dando a você a capacidade de participar diretamente do consenso da rede.
+O staking individual é o ato de [executar um nó Ethereum](/run-a-node/) conectado à Internet e depositar 32 ETH para ativar um [validador](#faq), dando a você a capacidade de participar diretamente do consenso da rede.
 
 Um nó Ethereum consiste em um cliente de camada de execução (EL) e em um cliente de camada de consenso (CL). Esses clientes são softwares que trabalham em conjunto, juntamente com um conjunto válido de chaves de assinatura, para verificar transações e blocos, atestar o bloco correto no topo da cadeia, agregar atestações e propor blocos.
 
@@ -184,6 +183,6 @@ As penalidades por ficar off-line são proporcionais a quantos outros estão off
 - [Ajudando a diversidade dos clientes](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Diversidade de clientes na camada de consenso do Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [Como comprar o hardware validador do Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [Passo a passo: Como ingressar na rede de testes da Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _ Butta_
-- [Dicas de prevenção de cortes Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020 _
+- [Passo a passo: Como ingressar na rede de testes da Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
+- [Dicas de prevenção de cortes Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 - [Recompensas e penalidades no Ethereum 2.0](https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/) - _James Beck, Maço de 2020_

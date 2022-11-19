@@ -175,7 +175,7 @@ const Layout: React.FC<IProps> = ({
             <ZenMode>
               <Footer />
             </ZenMode>
-            <FeedbackWidget />
+            <FeedbackWidget location={path} />
           </ContentContainer>
         </ZenModeContext.Provider>
         ?
