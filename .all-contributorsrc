@@ -9599,6 +9599,42 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "dgcoffman",
+      "name": "Daniel Coffman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1711204?v=4",
+      "profile": "http://dancoffman.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Amit0617",
+      "name": "AMIT KUMAR MISHRA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/71893015?v=4",
+      "profile": "https://github.com/Amit0617",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Saksham010",
+      "name": "Saksham Thapa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56692835?v=4",
+      "profile": "https://github.com/Saksham010",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "vjgaur",
+      "name": "Vijayendra Gaur",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1871257?v=4",
+      "profile": "https://github.com/vjgaur",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
