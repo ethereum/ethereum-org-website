@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, ReactNode, useState } from "react"
+import React, { ReactNode, useState } from "react"
 import styled from "@emotion/styled"
 import * as utils from "../utils/isMobile"
 
