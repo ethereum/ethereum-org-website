@@ -1,18 +1,6 @@
 import React, { ReactNode, useState } from "react"
-import styled from "@emotion/styled"
 import { Box } from "@chakra-ui/react"
 import * as utils from "../utils/isMobile"
-
-// Invisible full screen div "below" the clickable link
-// Added so clicking away anywhere will hide Tooltip
-const ModalReturn = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-`
 
 export interface IProps {
   content: ReactNode
@@ -21,13 +9,23 @@ export interface IProps {
 
 // TODO add `position` prop
 const Tooltip: React.FC<IProps> = ({ content, children }) => {
-  const [isVisible, setIsVisible] = useState<boolean>(true)
+  const [isVisible, setIsVisible] = useState<boolean>(false)
   const isMobile = utils.isMobile()
 
   return (
     <>
       {isVisible && isMobile && (
-        <ModalReturn onClick={() => setIsVisible(false)} />
+        // Invisible full screen div "below" the clickable link
+        // Added so clicking away anywhere will hide Tooltip
+        <Box
+          position="fixed"
+          top={0}
+          left={0}
+          w="full"
+          h="full"
+          zIndex={1}
+          onClick={() => setIsVisible(false)}
+        />
       )}
       <Box
         position="relative"
@@ -36,7 +34,7 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
         cursor="pointer"
         title="More info"
         onMouseEnter={!isMobile ? () => setIsVisible(true) : undefined}
-        onMouseLeave={!isMobile ? () => setIsVisible(true) : undefined}
+        onMouseLeave={!isMobile ? () => setIsVisible(false) : undefined}
         onClick={isMobile ? () => setIsVisible(!isVisible) : undefined}
       >
         {children}
