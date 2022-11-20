@@ -1,16 +1,7 @@
 import React, { ReactNode, useState } from "react"
 import styled from "@emotion/styled"
-import { Box, calc } from "@chakra-ui/react"
+import { Box } from "@chakra-ui/react"
 import * as utils from "../utils/isMobile"
-
-const Arrow = styled.span`
-  position: absolute;
-  bottom: -0.5rem;
-  left: calc(50% - 6px);
-  border-right: 10px solid transparent;
-  border-top: 10px solid ${({ theme }) => theme.colors.background};
-  border-left: 10px solid transparent;
-`
 
 // Invisible full screen div "below" the clickable link
 // Added so clicking away anywhere will hide Tooltip
@@ -30,7 +21,7 @@ export interface IProps {
 
 // TODO add `position` prop
 const Tooltip: React.FC<IProps> = ({ content, children }) => {
-  const [isVisible, setIsVisible] = useState<boolean>(false)
+  const [isVisible, setIsVisible] = useState<boolean>(true)
   const isMobile = utils.isMobile()
 
   return (
@@ -45,7 +36,7 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
         cursor="pointer"
         title="More info"
         onMouseEnter={!isMobile ? () => setIsVisible(true) : undefined}
-        onMouseLeave={!isMobile ? () => setIsVisible(false) : undefined}
+        onMouseLeave={!isMobile ? () => setIsVisible(true) : undefined}
         onClick={isMobile ? () => setIsVisible(!isVisible) : undefined}
       >
         {children}
@@ -70,7 +61,21 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
             left="25%"
             transform="translateX(-50%)"
           >
-            <Arrow />
+            <Box
+              as="span"
+              position="absolute"
+              bottom={-2}
+              left="calc(50% - 6px)"
+              borderRightWidth={10}
+              borderRightStyle="solid"
+              borderRightColor="transparent"
+              borderTopWidth={10}
+              borderTopStyle="solid"
+              borderTopColor="background"
+              borderLeftWidth={10}
+              borderLeftStyle="solid"
+              borderLeftColor="transparent"
+            />
             {content}
           </Box>
         )}
