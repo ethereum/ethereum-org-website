@@ -1,13 +1,7 @@
 import React, { ReactNode, useState } from "react"
 import styled from "@emotion/styled"
+import { Box } from "@chakra-ui/react"
 import * as utils from "../utils/isMobile"
-
-const Container = styled.div`
-  position: relative;
-  display: inline-flex;
-  user-select: none;
-  cursor: pointer;
-`
 
 const Content = styled.div`
   text-align: center;
@@ -68,7 +62,11 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
       {isVisible && isMobile && (
         <ModalReturn onClick={() => setIsVisible(false)} />
       )}
-      <Container
+      <Box
+        position="relative"
+        display="inline-flex"
+        userSelect="none"
+        cursor="pointer"
         title="More info"
         onMouseEnter={!isMobile ? () => setIsVisible(true) : undefined}
         onMouseLeave={!isMobile ? () => setIsVisible(false) : undefined}
@@ -81,7 +79,7 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
             {content}
           </Content>
         )}
-      </Container>
+      </Box>
     </>
   )
 }
