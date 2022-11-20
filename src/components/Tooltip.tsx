@@ -1,31 +1,7 @@
 import React, { ReactNode, useState } from "react"
 import styled from "@emotion/styled"
-import { Box } from "@chakra-ui/react"
+import { Box, calc } from "@chakra-ui/react"
 import * as utils from "../utils/isMobile"
-
-const Content = styled.div`
-  text-align: center;
-  white-space: normal;
-  width: 200px;
-  color: ${({ theme }) => theme.colors.text};
-  background-color: ${({ theme }) => theme.colors.background};
-  box-shadow: ${({ theme }) => theme.colors.tableBoxShadow};
-  position: absolute;
-  z-index: 10;
-  padding: 1rem 0.5rem;
-  text-transform: none;
-  font-size: ${({ theme }) => theme.fontSizes.s};
-  font-weight: 500;
-  cursor: default;
-  border-radius: 4px;
-  bottom: calc(100% + 1rem);
-  left: 25%;
-  bottom: 125%;
-  transform: translateX(-50%);
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    width: 140px;
-  }
-`
 
 const Arrow = styled.span`
   position: absolute;
@@ -74,10 +50,29 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
       >
         {children}
         {isVisible && (
-          <Content>
+          <Box
+            textAlign="center"
+            whiteSpace="normal"
+            w={{ base: "140px", md: "200px" }}
+            color="text"
+            bg="background"
+            boxShadow="tableBoxShadow"
+            position="absolute"
+            zIndex="docked"
+            py={4}
+            px={2}
+            textTransform="none"
+            fontSize="sm"
+            fontWeight="medium"
+            cursor="default"
+            borderRadius="base"
+            bottom="125%"
+            left="25%"
+            transform="translateX(-50%)"
+          >
             <Arrow />
             {content}
-          </Content>
+          </Box>
         )}
       </Box>
     </>
