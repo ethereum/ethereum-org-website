@@ -1,215 +1,34 @@
-import React, { useState, useContext } from "react"
-import { motion } from "framer-motion"
-import { Link } from "gatsby"
-import styled from "@emotion/styled"
+import React, { useContext } from "react"
+import { Link as GatsbyLink } from "gatsby"
 
 import ButtonLink from "./ButtonLink"
-import Icon from "./Icon"
 import Translation from "./Translation"
 import { useActiveHash } from "../hooks/useActiveHash"
-import { dropdownIconContainerVariant } from "./SharedStyledComponents"
 
 import { ZenModeContext } from "../contexts/ZenModeContext"
+import {
+  Box,
+  calc,
+  chakra,
+  ChakraProps,
+  cssVar,
+  Fade,
+  Flex,
+  Icon,
+  Link,
+  List,
+  ListItem,
+  ListProps,
+  Show,
+  Switch,
+  SystemStyleObject,
+  useDisclosure,
+} from "@chakra-ui/react"
+import { MdExpandMore } from "react-icons/md"
+import { FaGithub } from "react-icons/fa"
 
 const customIdRegEx = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/
 const emojiRegEx = /<Emoji [^/]+\/>/g
-
-const Aside = styled.aside`
-  position: sticky;
-  top: 7.25rem; /* account for navbar */
-  padding: 1rem 0 1rem 1rem;
-  max-width: 25%;
-  min-width: 12rem;
-  height: calc(100vh - 80px);
-  overflow-y: auto;
-  transition: all 0.2s ease-in-out;
-  transition: transform 0.2s ease;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
-
-const OuterList = styled(motion.ul)`
-  list-style-type: none;
-  list-style-image: none;
-  padding: 0;
-  margin: 5rem 0 3rem 0;
-  border-left: 1px solid ${(props) => props.theme.colors.dropdownBorder};
-  font-size: ${(props) => props.theme.fontSizes.s};
-  line-height: 1.6;
-  font-weight: 400;
-  padding-right: 0.25rem;
-  padding-left: 1rem;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    border-left: 0;
-    border-top: 1px solid ${(props) => props.theme.colors.primary300};
-    padding-top: 1rem;
-    padding-left: 0rem;
-  }
-`
-
-const InnerList = styled.ul`
-  list-style-type: none;
-  list-style-image: none;
-  padding: 0;
-  margin: 0;
-  font-size: ${(props) => props.theme.fontSizes.s};
-  line-height: 1.6;
-  font-weight: 400;
-  padding-right: 0.25rem;
-  padding-left: 1rem;
-`
-
-const ListItem = styled.li`
-  margin: 0;
-`
-
-const Header = styled(ListItem)`
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-`
-
-const StyledTableOfContentsLink = styled(Link)`
-  text-decoration: none;
-  position: relative;
-  display: inline-block;
-  color: ${(props) => props.theme.colors.textTableOfContents};
-  margin-bottom: 0.5rem !important;
-  /* Add left border bullet on hover */
-  &:hover {
-    text-decoration: none;
-    color: ${(props) => props.theme.colors.primary};
-    &:after {
-      content: "";
-      background-color: ${(props) => props.theme.colors.background};
-      border: 1px solid ${(props) => props.theme.colors.primary};
-      border-radius: 50%;
-      width: 0.5rem;
-      height: 0.5rem;
-      position: absolute;
-      left: -1.29rem;
-      top: 50%;
-      margin-top: -0.25rem;
-    }
-  }
-  /* Add left solid bullet when active */
-  &.active {
-    color: ${(props) => props.theme.colors.primary};
-    &:after {
-      content: "";
-      background-color: ${(props) => props.theme.colors.primary};
-      border: 1px solid ${(props) => props.theme.colors.primary};
-      border-radius: 50%;
-      width: 0.5rem;
-      height: 0.5rem;
-      position: absolute;
-      left: -1.29rem;
-      top: 50%;
-      margin-top: -0.25rem;
-    }
-  }
-  /* Extend bullet position when nested */
-  &.nested {
-    &:before {
-      content: "⌞";
-      opacity: 0.5;
-      display: inline-flex;
-      position: absolute;
-      left: -14px;
-      top: -4px;
-    }
-    &:hover {
-      &:after {
-        left: -2.29rem;
-      }
-    }
-    &.active {
-      &:after {
-        left: -2.29rem;
-      }
-    }
-  }
-  /* Mobile styles */
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 100%;
-  }
-`
-
-const ButtonContainer = styled(ListItem)`
-  margin-bottom: 0.5rem;
-`
-
-const ButtonContent = styled.div`
-  display: flex;
-  align-items: center;
-`
-
-const GithubIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
-  margin-right: 0.5rem;
-`
-
-const ZenModeContainer = styled.li`
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-  opacity: 0.8;
-  font-size: ${(props) => props.theme.fontSizes.s};
-`
-
-const ZenModeToggleContainer = styled.span`
-  cursor: pointer;
-  padding-top: 6px;
-`
-
-const ZenModeText = styled.span`
-  margin-right: 0.5rem;
-`
-
-// Mobile styles
-
-const AsideMobile = styled.aside`
-  padding: 0.5rem 1rem;
-  margin-top: 0rem;
-  border-radius: 4px;
-  background: ${(props) => props.theme.colors.background};
-  border: 1px solid ${(props) => props.theme.colors.border};
-  /* TODO find better way - this accounts for huge header margin top */
-  /* but if doc DOESN'T start w/ header, it overlaps, e.g. /docs/accounts/  */
-  /* margin-bottom: -10rem; */
-  display: none;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    display: block;
-  }
-`
-
-const HeaderMobile = styled.div`
-  color: ${(props) => props.theme.colors.text200};
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-`
-
-const HeaderText = styled.span`
-  width: 100%;
-  font-weight: 500;
-`
-
-const IconContainer = styled(motion.div)`
-  cursor: pointer;
-`
-
-const MobileIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text200};
-
-  &:hover {
-    fill: ${(props) => props.theme.colors.text200};
-  }
-`
 
 const slugify = (s: string): string =>
   encodeURIComponent(String(s).trim().toLowerCase().replace(/\s+/g, "-"))
@@ -258,14 +77,68 @@ const TableOfContentsLink: React.FC<IPropsTableOfContentsLink> = ({
   if (isNested) {
     classes += " nested"
   }
+
+  const $dotBg = cssVar("dot-bg")
+
+  const hoverOrActiveStyle: SystemStyleObject = {
+    color: "primary",
+    _after: {
+      content: `""`,
+      background: $dotBg.reference,
+      border: "1px",
+      borderColor: "primary",
+      borderRadius: "50%",
+      boxSize: 2,
+      position: "absolute",
+      left: "-1.29rem",
+      top: "50%",
+      mt: -1,
+    },
+  }
+
   return (
-    <StyledTableOfContentsLink to={url} className={classes}>
+    <Link
+      as={GatsbyLink}
+      to={url}
+      className={classes}
+      textDecoration="none"
+      display="inline-block"
+      position="relative"
+      color="textTableOfContents"
+      mb="0.5rem !important"
+      width={{ base: "100%", lg: "auto" }}
+      _hover={{
+        ...hoverOrActiveStyle,
+      }}
+      sx={{
+        [$dotBg.variable]: "colors.background",
+        "&.active": {
+          [$dotBg.variable]: "colors.primary",
+          ...hoverOrActiveStyle,
+        },
+        "&.nested": {
+          _before: {
+            content: `"⌞"`,
+            opacity: 0.5,
+            display: "inline-flex",
+            position: "absolute",
+            left: "-14px",
+            top: -1,
+          },
+          "&.active, &:hover": {
+            _after: {
+              left: "-2.29rem",
+            },
+          },
+        },
+      }}
+    >
       {trimmedTitle(item.title)}
-    </StyledTableOfContentsLink>
+    </Link>
   )
 }
 
-export interface IPropsItemsList {
+export interface IPropsItemsList extends ChakraProps {
   items?: Array<Item>
   depth: number
   maxDepth: number
@@ -277,6 +150,7 @@ const ItemsList: React.FC<IPropsItemsList> = ({
   depth,
   maxDepth,
   activeHash,
+  ...rest
 }) => {
   if (depth > maxDepth || !items) {
     return null
@@ -285,30 +159,61 @@ const ItemsList: React.FC<IPropsItemsList> = ({
   return (
     <>
       {items.map((item, index) => (
-        <ListItem key={index}>
-          <div>
-            {item.title && (
-              <TableOfContentsLink
-                depth={depth}
-                item={item}
+        <ListItem key={index} m={0} {...rest}>
+          {item.title && (
+            <TableOfContentsLink
+              depth={depth}
+              item={item}
+              activeHash={activeHash}
+            />
+          )}
+          {item.items && (
+            <List
+              key={item.title}
+              fontSize="sm"
+              lineHeight={1.6}
+              fontWeight={400}
+              ps={4}
+              pe={1}
+              m={0}
+            >
+              <ItemsList
+                items={item.items}
+                depth={depth + 1}
+                maxDepth={maxDepth}
                 activeHash={activeHash}
               />
-            )}
-            {item.items && (
-              <InnerList key={item.title}>
-                <ItemsList
-                  items={item.items}
-                  depth={depth + 1}
-                  maxDepth={maxDepth}
-                  activeHash={activeHash}
-                />
-              </InnerList>
-            )}
-          </div>
+            </List>
+          )}
         </ListItem>
       ))}
     </>
   )
+}
+
+const outerListProps: ListProps = {
+  borderStart: "1px solid",
+  borderStartColor: "dropdownBorder",
+  borderTop: 0,
+  fontSize: "sm",
+  lineHeight: 1.6,
+  fontWeight: 400,
+  m: 0,
+  mt: 20,
+  mb: 12,
+  ps: 4,
+  pe: 1,
+  pt: 0,
+  sx: {
+    // TODO: Flip to object syntax with `lg` token after completion of Chakra migration
+    "@media (max-width: 1024px)": {
+      borderStart: 0,
+      borderTop: "1px",
+      borderTopColor: "primary300",
+      ps: 0,
+      pt: 4,
+    },
+  },
 }
 
 export interface IPropsTableOfContentsMobile {
@@ -322,50 +227,63 @@ const TableOfContentsMobile: React.FC<IPropsTableOfContentsMobile> = ({
   maxDepth,
   className,
 }) => {
-  const [isOpen, setIsOpen] = useState<boolean>(false)
+  // const [isOpen, setIsOpen] = useState<boolean>(false)
+  const { getButtonProps, getDisclosureProps, isOpen } = useDisclosure({
+    defaultIsOpen: false,
+  })
   if (!items) {
     return null
   }
 
   return (
-    <AsideMobile className={className}>
-      <HeaderMobile onClick={() => setIsOpen(!isOpen)}>
-        <HeaderText>
-          <Translation id="on-this-page" />
-        </HeaderText>
-        <IconContainer
-          variants={dropdownIconContainerVariant}
-          animate={isOpen ? "open" : "closed"}
-        >
-          <MobileIcon name="chevronDown" />
-        </IconContainer>
-      </HeaderMobile>
-      <OuterList
-        animate={isOpen ? "open" : "closed"}
-        variants={{
-          open: {
-            opacity: 1,
-            display: "block",
-            transition: {
-              duration: 0.6,
-            },
-          },
-          closed: {
-            opacity: 0,
-            transitionEnd: {
-              display: "none",
-            },
-          },
-        }}
-        initial="closed"
+    <Box
+      as="aside"
+      background="background"
+      border="1px"
+      borderColor="border"
+      borderRadius="4px"
+      py={2}
+      px={4}
+      /* TODO find better way - this accounts for huge header margin top */
+      /* but if doc DOESN'T start w/ header, it overlaps, e.g. /docs/accounts/  */
+      /* margin-bottom: -10rem; */
+      className={className}
+    >
+      <Flex
+        color="text200"
+        cursor="pointer"
+        alignItems="center"
+        justify="space-between"
+        {...getButtonProps()}
       >
-        <ItemsList items={items} depth={0} maxDepth={maxDepth ? maxDepth : 1} />
-      </OuterList>
-    </AsideMobile>
+        <chakra.span flex={1} fontWeight={500}>
+          <Translation id="on-this-page" />
+        </chakra.span>
+        <Icon
+          as={MdExpandMore}
+          transform={isOpen ? "rotate(0)" : "rotate(-90deg)"}
+          boxSize={6}
+          transition="transform .4s"
+        />
+      </Flex>
+      <Fade
+        in={isOpen}
+        {...getDisclosureProps()}
+        transition={{ enter: { duration: 0.6 } }}
+      >
+        <List {...outerListProps}>
+          <ItemsList
+            items={items}
+            depth={0}
+            maxDepth={maxDepth ? maxDepth : 1}
+          />
+        </List>
+      </Fade>
+    </Box>
   )
 }
 
-export interface IProps {
+export interface IProps extends ChakraProps {
   items: Array<Item>
   maxDepth?: number
   className?: string
@@ -383,6 +301,7 @@ const TableOfContents: React.FC<IProps> = ({
   editPath,
   hideEditButton = false,
   isMobile = false,
+  ...rest
 }) => {
   const { isZenMode, handleZenModeChange } = useContext(ZenModeContext)
 
@@ -416,52 +335,96 @@ const TableOfContents: React.FC<IProps> = ({
   }
   if (isMobile) {
     return (
-      <TableOfContentsMobile
-        items={items}
-        maxDepth={maxDepth}
-        className={className}
-      />
+      // TODO: Switch to `below="lg"` after completion of Chakra Migration
+      <Show breakpoint="(max-width: 1024px)">
+        <TableOfContentsMobile
+          items={items}
+          maxDepth={maxDepth}
+          className={className}
+        />
+      </Show>
     )
   }
 
   const shouldShowZenModeToggle = slug?.includes("/docs/")
 
   return (
-    <Aside className={className}>
-      <OuterList>
-        {!hideEditButton && (
-          <ButtonContainer>
-            <ButtonLink to={editPath} variant="outline" hideArrow mt={0}>
-              <ButtonContent>
-                <GithubIcon name="github" />{" "}
-                <span>
+    // TODO: Switch to `above="lg"` after completion of Chakra Migration
+    <Show breakpoint="(min-width: 1025px)">
+      <Box
+        as="aside"
+        position="sticky"
+        top="7.25rem" // Account for navbar
+        p={4}
+        pe={0}
+        maxW="25%"
+        minW={48}
+        height={calc.subtract("100vh", "80px")}
+        overflowY="auto"
+        {...rest}
+      >
+        <List {...outerListProps}>
+          {!hideEditButton && (
+            <ListItem mb={2}>
+              <ButtonLink to={editPath} variant="outline" hideArrow mt={0}>
+                <Flex alignItems="center">
+                  <Icon as={FaGithub} color="text" boxSize={6} me={2} />
                   <Translation id="edit-page" />
-                </span>
-              </ButtonContent>
-            </ButtonLink>
-          </ButtonContainer>
-        )}
-        {shouldShowZenModeToggle && (
-          <ZenModeContainer>
-            <ZenModeText>
-              <Translation id="zen-mode" />
-            </ZenModeText>
-            <ZenModeToggleContainer onClick={(_e) => handleZenModeChange()}>
-              <Icon name={isZenMode ? "toggleOn" : "toggleOff"} size="1.6rem" />
-            </ZenModeToggleContainer>
-          </ZenModeContainer>
-        )}
-        <Header>
-          <Translation id="on-this-page" />
-        </Header>
-        <ItemsList
-          items={items}
-          depth={0}
-          maxDepth={maxDepth ? maxDepth : 1}
-          activeHash={activeHash}
-        />
-      </OuterList>
-    </Aside>
+                </Flex>
+              </ButtonLink>
+            </ListItem>
+          )}
+          {shouldShowZenModeToggle && (
+            <Flex
+              as={ListItem}
+              alignItems="center"
+              mb={2}
+              py="2px"
+              opacity={0.8}
+              fontSize="sm"
+            >
+              <Box as="span" me={2} id="zen-mode">
+                <Translation id="zen-mode" />
+              </Box>
+              <Switch
+                aria-labelledby="zen-mode"
+                sx={{
+                  "& .chakra-switch__track": {
+                    background: "transparent",
+                    border: "2px solid",
+                    borderColor: "secondary",
+                    p: 0,
+                    "&[data-checked]": {
+                      background: "secondary",
+                    },
+                  },
+                  "& .chakra-switch__thumb": {
+                    background: "ednBackground",
+                    outline: "2px solid",
+                    outlineColor: "secondary",
+                  },
+                }}
+                isChecked={isZenMode}
+                onChange={() => handleZenModeChange()}
+              />
+            </Flex>
+          )}
+          <ListItem>
+            <Box mb={2} textTransform="uppercase">
+              <Translation id="on-this-page" />
+            </Box>
+            <List m={0}>
+              <ItemsList
+                items={items}
+                depth={0}
+                maxDepth={maxDepth ? maxDepth : 1}
+                activeHash={activeHash}
+              />
+            </List>
+          </ListItem>
+        </List>
+      </Box>
+    </Show>
   )
 }
 
