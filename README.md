@@ -1514,6 +1514,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/Amit0617"><img src="https://avatars.githubusercontent.com/u/71893015?v=4?s=100" width="100px;" alt="AMIT KUMAR MISHRA"/><br /><sub><b>AMIT KUMAR MISHRA</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Amit0617" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/Saksham010"><img src="https://avatars.githubusercontent.com/u/56692835?v=4?s=100" width="100px;" alt="Saksham Thapa"/><br /><sub><b>Saksham Thapa</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ASaksham010" title="Bug reports">🐛</a></td>
       <td align="center"><a href="https://github.com/vjgaur"><img src="https://avatars.githubusercontent.com/u/1871257?v=4?s=100" width="100px;" alt="Vijayendra Gaur"/><br /><sub><b>Vijayendra Gaur</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=vjgaur" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://www.linkedin.com/in/andrasnovoszath/"><img src="https://avatars.githubusercontent.com/u/8539674?v=4?s=100" width="100px;" alt="András Novoszáth"/><br /><sub><b>András Novoszáth</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=nocibambi" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
