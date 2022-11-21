@@ -62,12 +62,6 @@ const styles = {
     "li > p": {
       "margin-bottom": "calc(1.45rem / 2)",
     },
-    // YouTube embeds
-    iframe: {
-      display: "block",
-      maxWidth: "560px",
-      margin: "32px 0",
-    },
     // should be replace by the usage of https://chakra-ui.com/docs/components/heading
     // also, the media queries defined on each of these heading tags are bearly used
     "h1,h2,h3,h4,h5,h6": {
