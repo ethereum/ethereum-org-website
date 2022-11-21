@@ -1,41 +1,12 @@
 import React, { useEffect, useState } from "react"
-import styled from "@emotion/styled"
 import { shuffle } from "lodash"
-
-import Link from "./Link"
 
 import { Box, Flex, Image, LinkBox, LinkOverlay, Text } from "@chakra-ui/react"
 
-import ActionCard from "./ActionCard"
 import data from "../data/contributors.json"
 import { borderRadius } from "polished"
 
-const Container = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-`
-
-const ContributorCard = styled(ActionCard)`
-  max-width: 132px;
-  margin: 0.5rem;
-
-  .action-card-image-wrapper {
-    min-height: 100px;
-  }
-  .action-card-image {
-    width: 132px;
-    height: 132px;
-  }
-  .action-card-content {
-    padding: 1rem;
-    h3 {
-      font-size: ${(props) => props.theme.fontSizes.m};
-    }
-    p {
-      margin-bottom: 0;
-    }
-  }
-`
+import Link from "./Link"
 
 export interface IProps {}
 
@@ -66,14 +37,6 @@ const Contributors: React.FC<IProps> = () => {
 
       <Flex flexWrap="wrap">
         {contributorsList.map((contributor, idx) => (
-          // <ActionCard
-          //   key={idx}
-          //   image={contributor.avatar_url}
-          //   to={contributor.profile}
-          //   title={contributor.name}
-          //   alt={contributor.name}
-          // />
-
           <LinkBox
             as="div"
             maxWidth="132px"
