@@ -228,7 +228,7 @@ openssl rand -hex 32 > jwtsecret
 This section will guide you through starting execution clients. It only serves as an example of a basic configuration, which will start the client with these settings:
 
 - Specifies network to connect to, mainnet in our examples
-  - You can instead choose [one of testnets](/developers/docs/networks/) for prelimenary testing of your setup
+  - You can instead choose [one of testnets](/developers/docs/networks/) for preliminary testing of your setup
 - Defines data directory, where all the data including blockchain will be stored
   - Make sure to subsitute the path with a real one, e.g. pointing to your external drive
 - Enables interfaces for communicating with the client
