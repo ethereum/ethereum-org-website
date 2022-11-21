@@ -175,7 +175,7 @@ Merkeziyetsiz kimlik çözümlerinin temeli olarak Ethereum'u kullanan çok say�
 - [Decentralized Identity (Bonus Livestream Session)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Andreas Antonopoulos'tan merkezi olmayan kimlik üzerine harika bir açıklayıcı video_
 - [Sign In with Ethereum and Decentralized Identity with Ceramic, IDX, React, and 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _Nader Dabit tarafından Ethereum cüzdanı kullanarak bir profili oluşturmak, okumak ve güncellemek için bir kimlik yönetim sistemi oluşturmaya yönelik YouTube eğitimi_
 - [BrightID - Decentralized Identity on Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Ethereum için merkeziyetsiz bir kimlik çözümü olan BrightID'yi tartışan Bankless podcast bölümü_
-- [The Off Chain Internet: Decentralized Identity & Verifiable Credentials](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — Evin McMullen tarafından yapılan EthDenver 2022 sunumu
+- [The Off Chain Internet: Decentralized Identity & Verifiable Credentials](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — _Evin McMullen tarafından yapılan EthDenver 2022 sunumu_
 
 ### Topluluklar {#communities}
 
