@@ -30,8 +30,8 @@ These projects have created their own grants for projects aimed at developing an
 - [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/) ecosystem fund_
 - [Chainlink Grants Program](https://chain.link/community/grants) - _[Chainlink](https://chain.link/) community grants_
 - [Compound Grants Program](https://compoundgrants.org/) – _[Compound](https://compound.finance/) finance ecosystem_
-- [Consensys Grants Program](https://consensys.net/grants/) – _[Consensys](https://consensys.net/) blockchain funding & Ethereum grants_
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/) finance ecosystem_
+- [MetaMask Program](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) employee-led grants DAO_
 - [mStable Grants Program](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) community_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) ecosystem_
 - [UMA Grants Program](https://grants.umaproject.org/) - _[UMA](https://umaproject.org/) developer support_
