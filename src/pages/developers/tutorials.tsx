@@ -260,9 +260,9 @@ const TutorialsPage = ({
       filterTutorialsByLang(
         data.allTutorials.nodes,
         externalTutorials,
-        pageContext.locale
+        pageContext.language
       ),
-    [pageContext.locale]
+    [pageContext.language]
   )
 
   const allTags = useMemo(
