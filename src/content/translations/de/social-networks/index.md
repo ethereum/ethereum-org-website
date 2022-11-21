@@ -37,7 +37,7 @@ Viele Blockchain-basierte soziale Plattformen haben einheimische Token, welche d
 
 2. Dezentralisierte soziale Netzwerke basieren auf Open-Source-Idealen und stellen Quellcode für Anwendungen zur öffentlichen Kontrolle zur Verfügung. Durch die Abschaffung der Implementation von nicht-transparenten Algorithmen, die bei traditionellen Social Media üblich sind, können Blockchain-basierte soziale Netzwerke die Interessen von Benutzern und Erstellern verbinden.
 
-3. Dezentralisierte soziale Netzwerke eliminieren somit den „Zwischenhändler." Content-Ersteller haben direkten Besitz an deren Inhalten und beteiligen sich direkt mit ihren Anhängern, Fans, Käufern, und anderen Parteien, mit nichts anderem als einem intelligenten Vertrag zwischen ihnen.
+3. Dezentralisierte soziale Netzwerke eliminieren somit den „Zwischenhändler". Content-Ersteller haben direkten Besitz an deren Inhalten und beteiligen sich direkt mit ihren Anhängern, Fans, Käufern, und anderen Parteien, mit nichts anderem als einem intelligenten Vertrag zwischen ihnen.
 
 4. Als dApps auf Ethereum, welches durch ein globales Peer-to-Peer Netzwerk von Nodes unterstützt wird, werden dezentralisierte soziale Netzwerke weniger durch Serverausfälle bedroht.
 
@@ -92,7 +92,7 @@ Im Mai 2022, [kündigte Instagram die Unterstützung für NFTs](https://about.in
 ## Nutzen Sie dezentralisierte soziale Netzwerke {#use-decentralized-social-networks}
 
 - **[Status.im](https://status.im/)** - _Status ist eine sichere Messaging-App, die quelloffen ist und Peer-to-Peer-Protokolle sowie Ende-zu-Ende-Verschlüsselung verwendet, um ihre Nachrichten vor Dritten zu schützen._
-- **[Mirror.xyz](https://mirror.xyz/)** - _Mirror ist eine dezentralisierte, eigene Publishing-Plattform basierend auf Ethereum, die hilft Ideen zu finanzieren, Inhalte zu monetarisieren und wertvolle Communities aufzubauen._
+- **[Mirror.xyz](https://mirror.xyz/)** - _Mirror ist eine dezentralisierte, eigene Publishing-Plattform basierend auf Ethereum, die hilft, Ideen zu finanzieren, Inhalte zu monetarisieren und wertvolle Communities aufzubauen._
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol ist ein zusammengesetztes und dezentralisiertes soziales Diagramm, welches Erstellern dabei hilft, das Eigentumsrecht ihres Inhalts zu behalten / zu übernehmen._
 
 ## Weiterführende Informationen {#further-reading}
