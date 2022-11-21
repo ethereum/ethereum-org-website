@@ -38,33 +38,18 @@ const ShardChainsList: React.FC<IProps> = () => {
       link: "https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum",
     },
     {
-      title: translateMessageId("page-upgrade-article-title-eip-4844", intl),
-      description: translateMessageId(
-        "page-upgrade-article-author-eip-4844",
-        intl
-      ),
+      title: t("page-upgrade-article-title-eip-4844"),
+      description: t("page-upgrade-article-author-eip-4844"),
       link: "https://eips.ethereum.org/EIPS/eip-4844",
     },
     {
-      title: translateMessageId(
-        "page-upgrade-article-title-proto-danksharding-faq",
-        intl
-      ),
-      description: translateMessageId(
-        "page-upgrade-article-author-vitalik-buterin",
-        intl
-      ),
+      title: t("page-upgrade-article-title-proto-danksharding-faq"),
+      description: t("page-upgrade-article-author-vitalik-buterin"),
       link: "https://notes.ethereum.org/@vbuterin/proto_danksharding_faq",
     },
     {
-      title: translateMessageId(
-        "page-upgrade-article-title-sharding-das",
-        intl
-      ),
-      description: translateMessageId(
-        "page-upgrade-article-author-vitalik-buterin",
-        intl
-      ),
+      title: t("page-upgrade-article-title-sharding-das"),
+      description: t("page-upgrade-article-author-vitalik-buterin"),
       link: "https://hackmd.io/@vbuterin/sharding_proposal",
     },
   ]
