@@ -1516,6 +1516,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/vjgaur"><img src="https://avatars.githubusercontent.com/u/1871257?v=4?s=100" width="100px;" alt="Vijayendra Gaur"/><br /><sub><b>Vijayendra Gaur</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=vjgaur" title="Documentation">📖</a></td>
       <td align="center"><a href="https://www.linkedin.com/in/andrasnovoszath/"><img src="https://avatars.githubusercontent.com/u/8539674?v=4?s=100" width="100px;" alt="András Novoszáth"/><br /><sub><b>András Novoszáth</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=nocibambi" title="Documentation">📖</a></td>
     </tr>
+    <tr>
+      <td align="center"><a href="http://sahilaujla.com"><img src="https://avatars.githubusercontent.com/u/83442423?v=4?s=100" width="100px;" alt="Sahil Aujla"/><br /><sub><b>Sahil Aujla</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=SahilAujla" title="Documentation">📖</a></td>
+    </tr>
   </tbody>
 </table>
 
