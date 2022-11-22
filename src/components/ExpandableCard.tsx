@@ -103,8 +103,7 @@ const ExpandableCard: React.FC<IProps> = ({
                     fontSize="xl"
                     fontWeight="semibold"
                     flex="1"
-                    marginTop="0rem"
-                    marginBottom="0.5rem"
+                    m="0"
                   >
                     {title}
                   </Text>
