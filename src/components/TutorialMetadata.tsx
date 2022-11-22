@@ -13,12 +13,6 @@ import { Lang } from "../utils/languages"
 import { TranslationKey } from "../utils/translations"
 import { Flex } from "@chakra-ui/react"
 
-const SkillPill = styled(Pill)`
-  align-self: flex-start;
-  margin-bottom: 0.5rem;
-  white-space: nowrap;
-`
-
 const HorizontalContainer = styled.div`
   display: flex;
   margin-bottom: 1.5rem;
@@ -92,9 +86,17 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
         <Flex flexWrap="wrap" w="full">
           <TutorialTags tags={frontmatter.tags} />
         </Flex>
-        <SkillPill isSecondary={true} className="" color="">
+        <Flex
+          as={Pill}
+          alignSelf="flex-start"
+          mb={2}
+          whiteSpace="nowrap"
+          isSecondary={true}
+          className=""
+          color=""
+        >
           <Translation id={getSkillTranslationId(frontmatter.skill)} />
-        </SkillPill>
+        </Flex>
       </Flex>
       <HorizontalContainer>
         {author && (
