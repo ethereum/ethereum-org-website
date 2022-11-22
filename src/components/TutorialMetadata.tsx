@@ -11,11 +11,7 @@ import Emoji from "./Emoji"
 import Translation from "./Translation"
 import { Lang } from "../utils/languages"
 import { TranslationKey } from "../utils/translations"
-import { Flex, Text } from "@chakra-ui/react"
-
-const DataContainer = styled.div`
-  margin-right: 1rem;
-`
+import { Box, Flex, Text } from "@chakra-ui/react"
 
 const AddressContainer = styled.div`
   display: flex;
@@ -93,28 +89,28 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
         justifyContent="flex-start"
       >
         {author && (
-          <DataContainer>
+          <Box mr={4}>
             <Emoji fontSize="sm" mr={2} text=":writing_hand:" />
             {author}
-          </DataContainer>
+          </Box>
         )}
         {hasSource && (
-          <DataContainer>
+          <Box mr={4}>
             <Emoji fontSize="sm" mr={2} text=":books:" />
             <Link to={frontmatter.sourceUrl}>{frontmatter.source}</Link>
-          </DataContainer>
+          </Box>
         )}
         {published && (
-          <DataContainer>
+          <Box mr={4}>
             <Emoji fontSize="sm" mr={2} text=":calendar:" />
             {getLocaleTimestamp(intl.locale as Lang, published)}
-          </DataContainer>
+          </Box>
         )}
-        <DataContainer>
+        <Box mr={4}>
           <Emoji fontSize="sm" mr={2} text=":stopwatch:" />
           {Math.round(tutorial.fields.readingTime.minutes)}{" "}
           <Translation id="comp-tutorial-metadata-minute-read" />
-        </DataContainer>
+        </Box>
       </Flex>
       <Flex
         mb={6}
