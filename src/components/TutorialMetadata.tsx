@@ -11,7 +11,7 @@ import Emoji from "./OldEmoji"
 import Translation from "./Translation"
 import { Lang } from "../utils/languages"
 import { TranslationKey } from "../utils/translations"
-import { Flex } from "@chakra-ui/react"
+import { Flex, Text } from "@chakra-ui/react"
 
 const HorizontalContainer = styled.div`
   display: flex;
@@ -46,10 +46,6 @@ const Code = styled.div`
   &:hover {
     background: ${(props) => props.theme.colors.primary100};
   }
-`
-
-const AllCapsTranslation = styled(Translation)`
-  text-transform: uppercase;
 `
 
 export interface IProps {
@@ -131,12 +127,20 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
                 <FakeLink>
                   {!isCopied ? (
                     <Code>
-                      <AllCapsTranslation id="comp-tutorial-metadata-tip-author" />{" "}
+                      <Text
+                        as={Translation}
+                        textTransform="uppercase"
+                        id="comp-tutorial-metadata-tip-author"
+                      />{" "}
                       {frontmatter.address}
                     </Code>
                   ) : (
                     <Code>
-                      <AllCapsTranslation id="comp-tutorial-metadata-tip-author" />{" "}
+                      <Text
+                        as={Translation}
+                        textTransform="uppercase"
+                        id="comp-tutorial-metadata-tip-author"
+                      />{" "}
                       {frontmatter.address} <Translation id="copied" />
                       <Emoji
                         size={1}
