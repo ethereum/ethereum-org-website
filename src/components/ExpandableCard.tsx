@@ -70,7 +70,7 @@ const ExpandableCard: React.FC<IProps> = ({
       index={isVisible ? [0] : []}
     >
       <AccordionItem borderTopWidth="0" flex="1">
-        <h3 style={{ margin: 0 }}>
+        <Heading as="h3" m={0}>
           <AccordionButton
             width="100%"
             padding={`1.5rem 1.5rem ${isVisible ? "0" : "1.5rem"}`}
