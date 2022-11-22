@@ -61,7 +61,7 @@ const ExpandableCard: React.FC<IProps> = ({
       borderRadius="sm"
       display="flex"
       flex-direction="column"
-      marginBottom="1rem"
+      marginBottom="4"
       cursor="pointer"
       _hover={{
         backgroundColor: "ednBackground",
