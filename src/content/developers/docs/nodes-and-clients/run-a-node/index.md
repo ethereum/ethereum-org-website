@@ -282,8 +282,9 @@ This example starts Geth on mainnet, stores blockchain data at `/data/ethereum`,
 ```
 geth --mainnet \
     --datadir "/data/ethereum" \
-    --http --http.api="eth,web3,net" \
+    --http --authrpc.addr localhost \
     --authrpc.vhosts="localhost" \
+    --authrpc.port 8551
     --authrpc.jwtsecret=/path/to/jwtsecret
 ```
 
