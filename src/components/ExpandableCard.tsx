@@ -58,7 +58,7 @@ const ExpandableCard: React.FC<IProps> = ({
     <Accordion
       border="1px solid"
       borderColor="border"
-      borderRadius="2px"
+      borderRadius="sm"
       display="flex"
       flex-direction="column"
       marginBottom="1rem"
