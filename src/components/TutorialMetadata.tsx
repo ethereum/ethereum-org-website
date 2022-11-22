@@ -7,7 +7,7 @@ import Link from "./Link"
 import TutorialTags from "./TutorialTags"
 import { getLocaleTimestamp } from "../utils/time"
 import { FakeLink } from "./SharedStyledComponents"
-import Emoji from "./OldEmoji"
+import Emoji from "./Emoji"
 import Translation from "./Translation"
 import { Lang } from "../utils/languages"
 import { TranslationKey } from "../utils/translations"
@@ -97,24 +97,24 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
       <HorizontalContainer>
         {author && (
           <DataContainer>
-            <Emoji size={1} mr={`0.5em`} text=":writing_hand:" />
+            <Emoji fontSize="sm" mr={2} text=":writing_hand:" />
             {author}
           </DataContainer>
         )}
         {hasSource && (
           <DataContainer>
-            <Emoji size={1} mr={`0.5em`} text=":books:" />
+            <Emoji fontSize="sm" mr={2} text=":books:" />
             <Link to={frontmatter.sourceUrl}>{frontmatter.source}</Link>
           </DataContainer>
         )}
         {published && (
           <DataContainer>
-            <Emoji size={1} mr={`0.5em`} text=":calendar:" />
+            <Emoji fontSize="sm" mr={2} text=":calendar:" />
             {getLocaleTimestamp(intl.locale as Lang, published)}
           </DataContainer>
         )}
         <DataContainer>
-          <Emoji size={1} mr={`0.5em`} text=":stopwatch:" />
+          <Emoji fontSize="sm" mr={2} text=":stopwatch:" />
           {Math.round(tutorial.fields.readingTime.minutes)}{" "}
           <Translation id="comp-tutorial-metadata-minute-read" />
         </DataContainer>
@@ -143,9 +143,9 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
                       />{" "}
                       {frontmatter.address} <Translation id="copied" />
                       <Emoji
-                        size={1}
-                        ml={`0.5em`}
-                        mr={`0.5em`}
+                        fontSize="sm"
+                        ml={2}
+                        mr={2}
                         text=":white_check_mark:"
                       />
                     </Code>
