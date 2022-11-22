@@ -1,17 +1,15 @@
 import React from "react"
-import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
+import { Box, Flex, Text } from "@chakra-ui/react"
 import CopyToClipboard from "./CopyToClipboard"
 import Pill from "./Pill"
 import Link from "./Link"
 import TutorialTags from "./TutorialTags"
 import { getLocaleTimestamp } from "../utils/time"
-import { FakeLink } from "./SharedStyledComponents"
 import Emoji from "./Emoji"
 import Translation from "./Translation"
 import { Lang } from "../utils/languages"
 import { TranslationKey } from "../utils/translations"
-import { Box, Flex, Text } from "@chakra-ui/react"
 
 export interface IProps {
   tutorial: any
@@ -103,7 +101,7 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
           <Flex flexWrap="wrap" w="full" mr={4}>
             <CopyToClipboard text={frontmatter.address}>
               {(isCopied) => (
-                <FakeLink>
+                <Text color="primary" cursor="pointer">
                   {!isCopied ? (
                     <Box
                       overflow="hidden"
@@ -149,7 +147,7 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
                       />
                     </Box>
                   )}
-                </FakeLink>
+                </Text>
               )}
             </CopyToClipboard>
           </Flex>
