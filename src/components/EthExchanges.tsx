@@ -161,6 +161,7 @@ type ExchangeName =
   | "kraken"
   | "kucoin"
   | "mtpelerin"
+  | "moonpay"
   | "okx"
   | "rain"
   | "wazirx"
@@ -334,6 +335,9 @@ const EthExchanges = () => {
       kucoin: file(relativePath: { eq: "exchanges/kucoin.png" }) {
         ...cardListImage
       }
+      moonpay: file(relativePath: { eq: "exchanges/moonpay.png" }) {
+        ...cardListImage
+      }
       mtpelerin: file(relativePath: { eq: "exchanges/mtpelerin.png" }) {
         ...cardListImage
       }
@@ -481,6 +485,12 @@ const EthExchanges = () => {
       url: "https://www.kucoin.com/",
       image: data.kucoin,
       usaExceptions: [],
+    },
+    moonpay: {
+      name: "Moonpay",
+      url: "https://www.moonpay.com/",
+      image: data.moonpay,
+      usaExceptions: ["VI"],
     },
     mtpelerin: {
       name: "Mt Pelerin",
