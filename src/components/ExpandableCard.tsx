@@ -73,7 +73,7 @@ const ExpandableCard: React.FC<IProps> = ({
         <Heading as="h3" m={0}>
           <AccordionButton
             width="100%"
-            padding={`1.5rem 1.5rem ${isVisible ? "0" : "1.5rem"}`}
+            p={6}
             flex="1"
             onClick={onClick}
             _hover={{
