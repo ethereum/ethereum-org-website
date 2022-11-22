@@ -257,7 +257,7 @@ const StakingProductCard: React.FC<ICardProps> = ({
         maxH={24}
       >
         {!!Svg && <Icon as={Svg} fontSize="2rem" />}
-        <Heading fontSize="2xl" color="white" fontWeight="normal">
+        <Heading fontSize="2xl" color="white">
           {name}
         </Heading>
       </HStack>
