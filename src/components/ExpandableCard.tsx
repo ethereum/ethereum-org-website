@@ -131,8 +131,8 @@ const ExpandableCard: React.FC<IProps> = ({
           </AccordionButton>
         </h3>
         <AccordionPanel
-          paddingX="1.5rem"
-          paddingBottom="1.5rem"
+          paddingX="2"
+          paddingBottom="2"
           paddingTop="0"
           onClick={onClick}
         >
