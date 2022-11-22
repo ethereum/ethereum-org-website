@@ -1,5 +1,13 @@
 {
+  "page-upgrades-merge-infographic-el": "Estado do Ethereum: transações, aplicativos, contratos e saldos",
+  "page-upgrades-merge-infographic-alt-text": "Infográfico ilustrando como a Beacon Chain se funde na camada de execução do Ethereum durante a transição da prova de trabalho para a prova de participação.",
   "page-upgrades-beacon-date": "Enviado!",
   "page-upgrades-merge-date": "Setembro de 2022",
-  "page-upgrades-shards-date": "Cerca de 2023"
+  "page-upgrades-shards-date": "Cerca de 2023",
+  "page-upgrades-merge-banner-intro": "A Fusão está chegando e vem com alterações no Ethereum.",
+  "page-upgrades-merge-banner-content-outdated": "Alguns conteúdos nesta página referentes a essas alterações estão desatualizados. As atualizações estão chegando em breve.",
+  "page-upgrades-merge-banner-developers-landing": "Alguns documentos têm um banner indicando que estão desatualizados. Atualizações em breve.",
+  "page-upgrades-post-merge-banner-tutorial-ood": "Este tutorial está desatualizado após a fusão e pode não funcionar. Por favor, faça um PR se você quiser contribuir.",
+  "page-upgrades-post-merge-banner-tutorial-light-node-ood": "Este tutorial está desatualizado após a fusão. No momento, os nós simplificados atualmente não funcionam na prova de participação, mas devem ser restituídos em breve.",
+  "page-upgrades-post-merge-banner-governance-ood": "Alguns conteúdos nesta página estão desatualizados após a fusão. Por favor, faça um PR se você deseja contribuir."
 }
