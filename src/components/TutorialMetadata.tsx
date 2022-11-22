@@ -11,16 +11,7 @@ import Emoji from "./OldEmoji"
 import Translation from "./Translation"
 import { Lang } from "../utils/languages"
 import { TranslationKey } from "../utils/translations"
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    border-bottom: 0px;
-  }
-`
+import { Flex } from "@chakra-ui/react"
 
 const TagsContainer = styled.div`
   display: flex;
@@ -104,7 +95,13 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
   const address = frontmatter.address
 
   return (
-    <Container>
+    <Flex
+      flexDirection="column"
+      justifyContent="space-between"
+      borderBottomWidth={{ base: 0, lg: "1px" }}
+      borderBottomStyle={{ lg: "solid" }}
+      borderBottomColor={{ lg: "border" }}
+    >
       <TagsContainer>
         <PillContainer>
           <TutorialTags tags={frontmatter.tags} />
@@ -167,7 +164,7 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
           </AddressContainer>
         )}
       </HorizontalContainer>
-    </Container>
+    </Flex>
   )
 }
 
