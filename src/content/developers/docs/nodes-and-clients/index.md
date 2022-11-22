@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 Ethereum is a distributed network of computers (known as nodes) running software that can verify blocks and transaction data. The software application, known as a client, must be run on your computer to turn it into an Ethereum node.
 
-**Note: it is not possible to run an execution client on its own anymore. After [The Merge](/upgrades/merge), both execution and consensus clients must be run together in order for a user to gain access to the Ethereum network. However, a consensus client can still run independently.**
+**Note: it is not possible to run an execution client on its own anymore. After [The Merge](/upgrades/merge), both execution and consensus clients must be run together in order for a user to gain access to the Ethereum network.**
 
 ## Prerequisites {#prerequisites}
 
