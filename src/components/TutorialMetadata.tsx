@@ -13,13 +13,6 @@ import { Lang } from "../utils/languages"
 import { TranslationKey } from "../utils/translations"
 import { Box, Flex, Text } from "@chakra-ui/react"
 
-const AddressContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-right: 1rem;
-`
-
 const Code = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
@@ -121,7 +114,7 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
         justifyContent="flex-start"
       >
         {address && (
-          <AddressContainer>
+          <Flex flexWrap="wrap" w="full" mr={4}>
             <CopyToClipboard text={frontmatter.address}>
               {(isCopied) => (
                 <FakeLink>
@@ -153,7 +146,7 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
                 </FakeLink>
               )}
             </CopyToClipboard>
-          </AddressContainer>
+          </Flex>
         )}
       </Flex>
     </Flex>
