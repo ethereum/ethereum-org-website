@@ -13,20 +13,6 @@ import { Lang } from "../utils/languages"
 import { TranslationKey } from "../utils/translations"
 import { Box, Flex, Text } from "@chakra-ui/react"
 
-const Code = styled.div`
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-family: ${(props) => props.theme.fonts.monospace};
-  background: ${(props) => props.theme.colors.ednBackground};
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-  font-size: 0.875rem;
-
-  &:hover {
-    background: ${(props) => props.theme.colors.primary100};
-  }
-`
-
 export interface IProps {
   tutorial: any
 }
@@ -119,16 +105,36 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
               {(isCopied) => (
                 <FakeLink>
                   {!isCopied ? (
-                    <Code>
+                    <Box
+                      overflow="hidden"
+                      textOverflow="ellipsis"
+                      fontFamily="monospace"
+                      bg="ednBackground"
+                      px={1}
+                      fontSize="sm"
+                      _hover={{
+                        bg: "primary100",
+                      }}
+                    >
                       <Text
                         as={Translation}
                         textTransform="uppercase"
                         id="comp-tutorial-metadata-tip-author"
                       />{" "}
                       {frontmatter.address}
-                    </Code>
+                    </Box>
                   ) : (
-                    <Code>
+                    <Box
+                      overflow="hidden"
+                      textOverflow="ellipsis"
+                      fontFamily="monospace"
+                      bg="ednBackground"
+                      px={1}
+                      fontSize="sm"
+                      _hover={{
+                        bg: "primary100",
+                      }}
+                    >
                       <Text
                         as={Translation}
                         textTransform="uppercase"
@@ -141,7 +147,7 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
                         mr={2}
                         text=":white_check_mark:"
                       />
-                    </Code>
+                    </Box>
                   )}
                 </FakeLink>
               )}
