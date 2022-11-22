@@ -136,7 +136,6 @@ const ExpandableCard: React.FC<IProps> = ({
           paddingTop="0"
           onClick={onClick}
         >
-          <Fade in={isVisible}>
             <Box
               fontSize="md"
               color="text"
