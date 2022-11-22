@@ -13,7 +13,6 @@ import {
   AccordionPanel,
   Box,
   Button,
-  Fade,
   Heading,
   Text,
 } from "@chakra-ui/react"
@@ -145,7 +144,6 @@ const ExpandableCard: React.FC<IProps> = ({
             >
               {children}
             </Box>
-          </Fade>
         </AccordionPanel>
       </AccordionItem>
     </Accordion>
