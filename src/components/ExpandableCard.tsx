@@ -139,8 +139,8 @@ const ExpandableCard: React.FC<IProps> = ({
             <Box
               fontSize="md"
               color="text"
-              marginTop="2rem"
-              paddingTop="1.5rem"
+              marginTop="8"
+              paddingTop="6"
               borderTop="1px solid"
               borderColor="border"
             >
