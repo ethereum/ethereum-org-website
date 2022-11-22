@@ -2,7 +2,7 @@ import { action } from "@storybook/addon-actions"
 import theme from "../src/@chakra-ui/gatsby-plugin/theme"
 import { theme as DefaultChakraTheme } from "@chakra-ui/react"
 
-const charkaBreakpointArray = Object.entries(DefaultChakraTheme.breakpoints)
+const chakraBreakpointArray = Object.entries(DefaultChakraTheme.breakpoints)
 
 // Gatsby's Link overrides:
 // Gatsby Link calls the `enqueue` & `hovering` methods on the global variable ___loader.
@@ -36,7 +36,7 @@ export const parameters = {
   },
   // Modify viewport selection to match Chakra breakpoints (or custom breakpoints)
   viewport: {
-    viewports: charkaBreakpointArray.reduce((prevVal, currVal) => {
+    viewports: chakraBreakpointArray.reduce((prevVal, currVal) => {
       const [token, key] = currVal
 
       // Unnecessary breakpoint
