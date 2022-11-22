@@ -158,8 +158,6 @@ Akıllı sözleşmelerle etkileşim kurarken sınırsız harcama limitlerine izi
 
 Birçok Ethereum cüzdanı, boşaltılan hesaplara karşı koruma sağlamak için limit koruması sunar.
 
-[Limit korumalı cüzdanları keşfedin](/wallets/find-wallet/?filters=has_limits_protection)
-
 <Divider />
 
 ## Yaygın dolandırıcılıklar {#common-scams}

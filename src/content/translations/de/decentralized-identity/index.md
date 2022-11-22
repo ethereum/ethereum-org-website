@@ -23,7 +23,7 @@ Identität bedeutet das Selbstempfinden eines Individuums, definiert durch einzi
 
 ## Was sind Identifikatoren? {#what-are-identifiers}
 
-Ein Identifikator ist eine Information, die als Attribut einer bestimmten Identität oder von Identitäten fungiert. Beispiele für allgemeine Attribute:
+Ein Identifikator ist eine Information, die als Attribut einer bestimmten Identität oder von Identitäten fungiert. Beispiele für allgemeine Identifikatoren:
 
 - Name
 - Sozialversicherungsnummer/Steuernummer
@@ -35,7 +35,7 @@ Diese traditionellen Beispiele von Identifikatoren werden von zentralen Stellen 
 
 ## Was ist eine Attestierung? {#what-are-attestations}
 
-Eine Attestierung ist ein Anspruch einer Entität gegenüber einer anderen Entität. Wenn Sie in den Vereinigten Staaten leben, der Führerschein des Fahrzeugministeriums (eine Entität) bestätigt, dass Sie (eine andere Entität) berechtigt sind, ein Auto zu fahren.
+Eine Attestierung ist ein Anspruch einer Entität gegenüber einer anderen Entität. Wenn Sie in den Vereinigten Staaten leben, bestätigt der Führerschein des Fahrzeugministeriums (eine Entität), dass Sie (eine andere Entität) berechtigt sind, ein Auto zu fahren.
 
 Attestierungen unterscheiden sich von Identifikatoren. Eine Attestierung _enthält_ Identifikatoren für den Verweis auf eine bestimmte Identität und stellt einen Anspruch gegenüber einem Attribut im Zusammenhang mit dieser Identität. Ihr Führerschein hat also Identifikatoren (Name, Geburtsdatum, Adresse), ist aber zugleich auch die Attestierung Ihres gesetzlichen Fahrrechts.
 

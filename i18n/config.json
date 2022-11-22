@@ -344,6 +344,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "ta",
+    "hrefLang": "ta",
+    "name": "Tamil",
+    "localName": "தமிழ்",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "th",
     "hrefLang": "th",
     "name": "Thai",
