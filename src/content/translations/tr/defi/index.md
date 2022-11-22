@@ -8,7 +8,7 @@ image: ../../../../assets/use-cases/defi.png
 alt: Lego parçalarından yapılmış bir Eth logosu.
 sidebarDepth: 2
 summaryPoint1: Mevcut finansal sisteme küresel ve açık bir alternatif.
-summaryPoint2: Ödünç almanıza, tasarruf etmenize, yatırım yapmanıza, ticaret yapmanıza ve daha pek çok şeye izin veren ürünler.
+summaryPoint2: Ödünç almanıza, tasarruf etmenize, yatırım yapmanıza, ticaret yapmanıza ve daha pek çok şeye olanak veren ürünler.
 summaryPoint3: Herkesin programlayabileceği açık kaynak teknolojisine dayalıdır.
 ---
 
@@ -335,6 +335,7 @@ DeFi, açık kaynaklı bir akımdır. DeFi protokolleri ve uygulamaları; incele
 - [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
+- [DeFi Oranı](https://defirate.com/)
 
 ### DeFi makaleleri {#defi-articles}
 

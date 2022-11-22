@@ -14,9 +14,10 @@ summaryPoints:
 
 ## Was ist Solo-Staking? {#what-is-solo-staking}
 
-Solo-Staking ist das [Betreiben eines Ethereum-Knotens](/run-a-node/), der mit dem Internet verbunden ist, und das Hinterlegen von 32 ETH, um einen Validator zu aktivieren, wodurch Sie direkt am Netzwerkkonsens teilnehmen können.
+Solo-Staking ist das [Betreiben eines Ethereum-Knotens](/run-a-node/), der mit dem Internet verbunden ist, und das Hinterlegen von 32 ETH, um einen
+Validator zu aktivieren, wodurch Sie direkt am Netzwerkkonsens teilnehmen können.
 
-Ein Ethereum-Knoten besteht sowohl aus einem Client der Ausführungsschicht (Execution Layer, EL) als auch aus einem Client der Konsensschicht (Client Layer, CL). Diese Clients sind Software, die mit einem gültigen Satz von Signaturschlüsseln zusammenarbeiten, um Transaktionen und Blöcke zu verifizieren, den korrekten Kopf der Kette zu bestätigen, Bestätigungen zu attestieren und Blöcke vorzuschlagen.
+Ein Ethereum-Knoten besteht sowohl aus einem Client der Ausführungsschicht (Execution Layer, EL) als auch aus einem Client der Konsensschicht (Client Layer, CL). Diese Kunden sind Software, die mit einem gültigen Satz von Signaturschlüsseln zusammenarbeiten, um Transaktionen und Blöcke zu verifizieren, den korrekten Kopf der Kette zu bestätigen, Bestätigungen zu attestieren und Blöcke vorzuschlagen.
 
 Solo-Staker sind für den Betrieb der Hardware verantwortlich, die zum Ausführen dieser Clients erforderlich ist. Es wird dringend empfohlen, dafür einen fest zugeordneten Computer zu verwenden, den Sie von zu Hause aus betreiben, denn dies ist für die Gesundheit des Netzwerks sehr vorteilhaft.
 
@@ -59,13 +60,13 @@ So sehr wir uns wünschen, dass das Solo-Staking für alle zugänglich und risik
     Das Abheben von gestakten ETH oder Belohnungen von einem Validator-Guthaben wird noch nicht unterstützt. Unterstützung für Auszahlungen ist für das bevorstehende Shanghai-Upgrade geplant. Sie sollten damit rechnen, dass Ihre ETH für mindestens ein bis zwei Jahre gesperrt sind. Nach dem Shanghai-Upgrade können Sie Teile oder Ihren gesamten Einsatz frei abheben, wenn Sie dies wünschen.
   </ExpandableCard>
   <ExpandableCard title="Wartung" eventCategory="SoloStaking" eventName="clicked maintenance">
-    Hardware fällt gelegentlich aus, Netzwerkverbindungen fallen aus und Client-Software muss gelegentlich aktualisiert werden. Die Node-Wartung ist unvermeidlich und erfordert gelegentlich Ihre Aufmerksamkeit. Sie sollten sicher sein, dass Sie über alle erwarteten Netzwerk-Upgrades oder andere wichtige Client-Upgrades informiert sind.
+    Hardware fällt gelegentlich aus, Netzwerkverbindungen fallen aus und Client-Software muss gelegentlich aktualisiert werden. Die Node-Wartung ist unvermeidlich und erfordert von Zeit zu Zeit Ihre Aufmerksamkeit. Sie sollten sicher sein, dass Sie über alle erwarteten Netzwerk-Upgrades oder andere wichtige Client-Upgrades informiert sind.
   </ExpandableCard>
   <ExpandableCard title="Zuverlässige Uptime" eventCategory="SoloStaking" eventName="clicked reliable uptime">
     Ihre Belohnungen sind proportional zu der Zeit, in der Ihr Validator online ist und ordnungsgemäß attestiert. Ausfallzeiten führen zu Strafen, die proportional dazu sind, wie viele andere Validierer gleichzeitig offline sind, aber <a href="#faq">führen nicht zum Slashing</a>. Auch die Bandbreite spielt eine Rolle, da die Belohnungen für Bescheinigungen, die nicht rechtzeitig eingehen, gekürzt werden. Die Anforderungen sind unterschiedlich, es wird jedoch ein Minimum von 10 Mb/s Upload und Download empfohlen.
   </ExpandableCard>
   <ExpandableCard title="Slashing-Risiko" eventCategory="SoloStaking" eventName="clicked slashing risk">
-    Im Gegensatz zu Strafen für Inaktivität in Offline-Zeiten ist <em>Slashing</em> eine viel schwerwiegendere Strafe, die auf böswillige Vergehen beschränkt ist. Indem Sie einen Minderheits-Client mit Ihren Schlüsseln ausführen, die jeweils nur auf einem Computer geladen sind, wird Ihr Risiko, geslashed zu werden, minimiert. Davon abgesehen müssen sich alle Staker der Risiken von Slashing bewusst sein.
+    Im Gegensatz zu Strafen für Inaktivität in Offline-Zeiten ist <em>Slashing</em> eine viel schwerwiegendere Strafe, die auf böswillige Vergehen beschränkt ist. Wenn Sie einen Minderheiten-Client mit Ihren Schlüsseln jeweils auf nur einer Maschine laden, wird das Risiko des Schrumpfens minimiert. Davon abgesehen müssen sich alle Staker der Risiken von Slashing bewusst sein.
     
     <p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">Mehr über Slashing und den Validator-Lebenszyklus</a></p>
   </ExpandableCard>
@@ -161,7 +162,7 @@ Das Ausführen eines Clients mit qualifizierter Mehrheit (jeder Client, der von 
 <ExpandableCard title="Welcher Client ist der Beste?">
 Einzelne Clients können in Bezug auf Leistung und Benutzeroberfläche leicht variieren, da jeder von verschiedenen Teams mit einer Vielzahl von Programmiersprachen entwickelt wird. Davon abgesehen ist keiner von ihnen „am besten" Bei allen Produktions-Clients handelt es sich um eine hervorragende Software, die alle die gleichen Kernfunktionen zur Synchronisierung und Interaktion mit der Blockchain ausführen.
 
-Da alle Produktions-Clients die gleiche Grundfunktionalität bieten, ist es sehr wichtig, dass Sie einen <strong>Minderheits-Client</strong> wählen, d. h. jeden Client, der derzeit NICHT von einer Mehrheit der Validatoren im Netzwerk verwendet wird. Dies mag kontraintuitiv klingen, aber wenn Sie einen Mehrheits- oder einen Client mit qualifizierter Mehrheit ausführen, besteht für Sie ein erhöhtes Risiko des Slashing im Falle eines Fehlers in diesem Client. Der Betrieb eines Minderheits-Client begrenzt diese Risiken drastisch.
+Da alle Produktions-Clients die gleiche Grundfunktionalität bieten, ist es sehr wichtig, dass Sie einen <strong>Minderheits-Client</strong> wählen, d. h. jeden Client, der derzeit NICHT von einer Mehrheit der Validatoren im Netzwerk verwendet wird. Dies mag kontraintuitiv klingen, aber wenn Sie einen Mehrheits- oder einen Client mit qualifizierter Mehrheit betreiben, besteht für Sie ein erhöhtes Risiko des Slashing im Falle eines Fehlers in diesem Client. Der Betrieb eines Minderheits-Client begrenzt diese Risiken drastisch.
 
 <a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Erfahren Sie mehr darüber, warum Client-Diversität entscheidend ist</a>
 </ExpandableCard>
