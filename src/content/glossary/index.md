@@ -1095,7 +1095,7 @@ The smallest denomination of [ether](#ether). 10<sup>18</sup> wei = 1 ether.
 
 ### zero address {#zero-address}
 
-An Ethereum address, composed entirely of zeros, that is frequently used as a burn address for unwated funds.
+An Ethereum address, composed entirely of zeros, that is frequently used as a burn address for unwanted funds.
 
 ### zero-knowledge proof {#zk-proof}
 
