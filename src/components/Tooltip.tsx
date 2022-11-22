@@ -1,5 +1,5 @@
 import React, { ReactNode, useState } from "react"
-import { Box } from "@chakra-ui/react"
+import { Box, useColorModeValue } from "@chakra-ui/react"
 import * as utils from "../utils/isMobile"
 
 export interface IProps {
@@ -11,6 +11,7 @@ export interface IProps {
 const Tooltip: React.FC<IProps> = ({ content, children }) => {
   const [isVisible, setIsVisible] = useState<boolean>(false)
   const isMobile = utils.isMobile()
+  const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
 
   return (
     <>
@@ -45,7 +46,7 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
             w={{ base: "140px", md: "200px" }}
             color="text"
             bg="background"
-            boxShadow="tableBoxShadow"
+            boxShadow={shadow}
             position="absolute"
             zIndex="docked"
             py={4}
