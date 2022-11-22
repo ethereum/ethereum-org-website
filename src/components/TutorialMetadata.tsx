@@ -13,16 +13,6 @@ import { Lang } from "../utils/languages"
 import { TranslationKey } from "../utils/translations"
 import { Flex, Text } from "@chakra-ui/react"
 
-const HorizontalContainer = styled.div`
-  display: flex;
-  margin-bottom: 1.5rem;
-  flex-wrap: wrap;
-  margin-top: -1rem;
-  font-size: 0.875rem;
-  color: ${(props) => props.theme.colors.text300};
-  justify-content: flex-start;
-`
-
 const DataContainer = styled.div`
   margin-right: 1rem;
 `
@@ -94,7 +84,14 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
           <Translation id={getSkillTranslationId(frontmatter.skill)} />
         </Flex>
       </Flex>
-      <HorizontalContainer>
+      <Flex
+        mb={6}
+        flexWrap="wrap"
+        mt={-4}
+        fontSize="sm"
+        color="text300"
+        justifyContent="flex-start"
+      >
         {author && (
           <DataContainer>
             <Emoji fontSize="sm" mr={2} text=":writing_hand:" />
@@ -118,8 +115,15 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
           {Math.round(tutorial.fields.readingTime.minutes)}{" "}
           <Translation id="comp-tutorial-metadata-minute-read" />
         </DataContainer>
-      </HorizontalContainer>
-      <HorizontalContainer>
+      </Flex>
+      <Flex
+        mb={6}
+        flexWrap="wrap"
+        mt={-4}
+        fontSize="sm"
+        color="text300"
+        justifyContent="flex-start"
+      >
         {address && (
           <AddressContainer>
             <CopyToClipboard text={frontmatter.address}>
@@ -155,7 +159,7 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
             </CopyToClipboard>
           </AddressContainer>
         )}
-      </HorizontalContainer>
+      </Flex>
     </Flex>
   )
 }
