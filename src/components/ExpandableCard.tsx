@@ -96,7 +96,7 @@ const ExpandableCard: React.FC<IProps> = ({
                   sx={{
                     svg: { marginRight: "1.5rem" },
                   }}
-                  margin="1rem 0"
+                  my="4"
                 >
                   {!!Svg && <Svg />}
                   <Text
