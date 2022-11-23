@@ -180,6 +180,17 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Unique Ethereum SDK
     - Unique API endpoints
     - Direct, technical support
+ - [**Nodereal**](https://nodereal.io/)
+  - [Docs](https://docs.nodereal.io/docs/introduction)
+  - Features
+    - Multichain support for BNB Chain, Ethereum, Polygon, Aptos, Optimism etc.
+    - Largest free tier with 350M compute units per month
+    - Reliability: Running on the latest network upgrades with a minimum 99.9% uptime guarantee.
+    - Developer Dashboard: Configure, monitor, and analyze your applications with NodeReal.
+    - Archive Data for selected chains
+    - Customized Enhanced APIs for your Defi, NFT applications
+    - GraphQL support
+    - RPC and WSS endpoints
 - [**NOWNodes**](https://nownodes.io/)
   - [Docs](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - Features
