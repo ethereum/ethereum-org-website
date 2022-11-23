@@ -12,7 +12,6 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
-  Button,
   Heading,
   Text,
 } from "@chakra-ui/react"
@@ -98,12 +97,7 @@ const ExpandableCard: React.FC<IProps> = ({
                   my="4"
                 >
                   {!!Svg && <Svg />}
-                  <Text
-                    fontSize="xl"
-                    fontWeight="semibold"
-                    flex="1"
-                    m="0"
-                  >
+                  <Text fontSize="xl" fontWeight="semibold" flex="1" m="0">
                     {title}
                   </Text>
                 </Box>
@@ -127,23 +121,23 @@ const ExpandableCard: React.FC<IProps> = ({
               </Text>
             </Box>
           </AccordionButton>
-        </h3>
+        </Heading>
         <AccordionPanel
           paddingX="2"
           paddingBottom="2"
           paddingTop="0"
           onClick={onClick}
         >
-            <Box
-              fontSize="md"
-              color="text"
-              marginTop="8"
-              paddingTop="6"
-              borderTop="1px solid"
-              borderColor="border"
-            >
-              {children}
-            </Box>
+          <Box
+            fontSize="md"
+            color="text"
+            marginTop="8"
+            paddingTop="6"
+            borderTop="1px solid"
+            borderColor="border"
+          >
+            {children}
+          </Box>
         </AccordionPanel>
       </AccordionItem>
     </Accordion>
