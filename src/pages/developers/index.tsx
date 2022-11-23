@@ -555,8 +555,8 @@ const DevelopersPage = ({
 export default DevelopersPage
 
 export const query = graphql`
-  query DevelopersIndexPage($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+  query DevelopersIndexPage($languagesToFetch: [String!]!) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
       edges {
         node {
           ns

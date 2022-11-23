@@ -1002,8 +1002,8 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
 export default RunANodePage
 
 export const query = graphql`
-  query RunANodePage($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+  query RunANodePage($languagesToFetch: [String!]!) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
       edges {
         node {
           ns

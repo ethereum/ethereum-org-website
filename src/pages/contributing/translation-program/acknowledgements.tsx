@@ -269,8 +269,8 @@ const TranslatorAcknowledgements = ({
 export default TranslatorAcknowledgements
 
 export const query = graphql`
-  query TranslatorAcknowledgementsPage($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+  query TranslatorAcknowledgementsPage($languagesToFetch: [String!]!) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
       edges {
         node {
           ns

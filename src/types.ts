@@ -29,6 +29,7 @@ export type Context = {
   slug: string
   relativePath?: string
   language: Lang
+  languagesToFetch?: Array<Lang>
   ignoreTranslationBanner?: boolean
   isOutdated: boolean
   isLegal?: boolean

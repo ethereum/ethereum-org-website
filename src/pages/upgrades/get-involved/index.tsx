@@ -538,7 +538,16 @@ export const Clients = graphql`
 `
 
 export const query = graphql`
-  query GetInvolvedPage {
+  query GetInvolvedPage($languagesToFetch: [String!]!) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     bountyHunters: allConsensusBountyHuntersCsv(
       sort: { order: DESC, fields: score }
     ) {

@@ -769,8 +769,8 @@ const HomePage = ({
 export default HomePage
 
 export const query = graphql`
-  query IndexPage($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+  query IndexPage($languagesToFetch: [String!]!) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
       edges {
         node {
           ns

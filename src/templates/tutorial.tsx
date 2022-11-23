@@ -220,8 +220,8 @@ const TutorialPage = ({
 export default TutorialPage
 
 export const query = graphql`
-  query TutorialPage($language: String!, $relativePath: String) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+  query TutorialPage($languagesToFetch: [String!]!, $relativePath: String) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
       edges {
         node {
           ns

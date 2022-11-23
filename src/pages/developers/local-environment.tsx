@@ -614,8 +614,8 @@ export const devtoolImage = graphql`
 `
 
 export const query = graphql`
-  query DevelopersLocalEnvironmentPage($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+  query DevelopersLocalEnvironmentPage($languagesToFetch: [String!]!) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
       edges {
         node {
           ns

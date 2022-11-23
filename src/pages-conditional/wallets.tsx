@@ -478,8 +478,8 @@ export const listImage = graphql`
 `
 
 export const query = graphql`
-  query WalletsPage($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+  query WalletsPage($languagesToFetch: [String!]!) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
       edges {
         node {
           ns

@@ -829,8 +829,8 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
 export default StablecoinsPage
 
 export const query = graphql`
-  query StablecoinsPage($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+  query StablecoinsPage($languagesToFetch: [String!]!) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
       edges {
         node {
           ns

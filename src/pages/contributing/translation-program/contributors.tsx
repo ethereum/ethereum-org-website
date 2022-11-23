@@ -150,8 +150,8 @@ const Contributors = ({
 export default Contributors
 
 export const query = graphql`
-  query ContributorsPage($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+  query ContributorsPage($languagesToFetch: [String!]!) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
       edges {
         node {
           ns

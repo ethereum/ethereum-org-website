@@ -493,8 +493,8 @@ export const assetItem = graphql`
 `
 
 export const query = graphql`
-  query AssetsPage($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+  query AssetsPage($languagesToFetch: [String!]!) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
       edges {
         node {
           ns

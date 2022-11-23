@@ -433,8 +433,8 @@ const UseCasePage = ({
 }
 
 export const useCasePageQuery = graphql`
-  query UseCasePage($language: String!, $relativePath: String) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+  query UseCasePage($languagesToFetch: [String!]!, $relativePath: String) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
       edges {
         node {
           ns

@@ -959,8 +959,8 @@ export const calloutImage = graphql`
 `
 
 export const query = graphql`
-  query WhatIsEthereum($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+  query WhatIsEthereum($languagesToFetch: [String!]!) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
       edges {
         node {
           ns

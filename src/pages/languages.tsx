@@ -170,8 +170,8 @@ const LanguagesPage = () => {
 export default LanguagesPage
 
 export const query = graphql`
-  query LanguagesPage($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+  query LanguagesPage($languagesToFetch: [String!]!) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
       edges {
         node {
           ns

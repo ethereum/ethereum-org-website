@@ -829,8 +829,8 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
 export default Eth2IndexPage
 
 export const query = graphql`
-  query UpgradesPage($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+  query UpgradesPage($languagesToFetch: [String!]!) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
       edges {
         node {
           ns

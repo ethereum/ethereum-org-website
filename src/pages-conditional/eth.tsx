@@ -521,8 +521,8 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
 export default EthPage
 
 export const query = graphql`
-  query EthPage($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+  query EthPage($languagesToFetch: [String!]!) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
       edges {
         node {
           ns

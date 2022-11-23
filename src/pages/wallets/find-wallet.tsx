@@ -568,8 +568,8 @@ const FindWalletPage = ({ data, location }) => {
 export default FindWalletPage
 
 export const query = graphql`
-  query FindWalletPage($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+  query FindWalletPage($languagesToFetch: [String!]!) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
       edges {
         node {
           ns

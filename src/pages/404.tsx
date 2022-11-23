@@ -31,8 +31,8 @@ const NotFoundPage = (props: PageProps) => (
 export default NotFoundPage
 
 export const query = graphql`
-  query NotFoundPage($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+  query NotFoundPage($languagesToFetch: [String!]!) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
       edges {
         node {
           ns

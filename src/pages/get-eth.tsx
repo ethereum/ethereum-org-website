@@ -446,8 +446,8 @@ export const listItemImage = graphql`
 `
 
 export const query = graphql`
-  query GetEthPage($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+  query GetEthPage($languagesToFetch: [String!]!) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
       edges {
         node {
           ns

@@ -323,7 +323,16 @@ const VisionPage = ({
 export default VisionPage
 
 export const query = graphql`
-  query UpgradesVisionPage {
+  query UpgradesVisionPage($languagesToFetch: [String!]!) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     oldship: file(relativePath: { eq: "upgrades/oldship.png" }) {
       childImageSharp {
         gatsbyImageData(

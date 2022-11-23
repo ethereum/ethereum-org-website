@@ -933,8 +933,8 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
 export default Layer2Page
 
 export const query = graphql`
-  query Layer2Page($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+  query Layer2Page($languagesToFetch: [String!]!) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
       edges {
         node {
           ns

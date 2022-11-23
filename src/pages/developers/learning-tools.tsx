@@ -313,8 +313,8 @@ export const learningToolImage = graphql`
 `
 
 export const query = graphql`
-  query DevelopersLearningToolsPage($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
+  query DevelopersLearningToolsPage($languagesToFetch: [String!]!) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
       edges {
         node {
           ns
