@@ -1,6 +1,6 @@
 import React from "react"
 import { useIntl } from "react-intl"
-import { Box, Flex, Text } from "@chakra-ui/react"
+import { Box, Flex, HStack, Text } from "@chakra-ui/react"
 import CopyToClipboard from "./CopyToClipboard"
 import Pill from "./Pill"
 import Link from "./Link"
@@ -38,8 +38,7 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
       flexDirection="column"
       justifyContent="space-between"
       borderBottomWidth={{ base: 0, lg: "1px" }}
-      borderBottomStyle={{ lg: "solid" }}
-      borderBottomColor={{ lg: "border" }}
+      borderBottomColor="border"
     >
       <Flex justifyContent="space-between" alignItems="center" w="full" mb={8}>
         <Flex flexWrap="wrap" w="full">
@@ -51,45 +50,44 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
           mb={2}
           whiteSpace="nowrap"
           isSecondary={true}
-          className=""
-          color=""
         >
           <Translation id={getSkillTranslationId(frontmatter.skill)} />
         </Flex>
       </Flex>
-      <Flex
+      <HStack
         mb={6}
         flexWrap="wrap"
         mt={-4}
         fontSize="sm"
         color="text300"
         justifyContent="flex-start"
+        spacing={4}
       >
         {author && (
-          <Box mr={4}>
+          <Box>
             <Emoji fontSize="sm" mr={2} text=":writing_hand:" />
             {author}
           </Box>
         )}
         {hasSource && (
-          <Box mr={4}>
+          <Box>
             <Emoji fontSize="sm" mr={2} text=":books:" />
             <Link to={frontmatter.sourceUrl}>{frontmatter.source}</Link>
           </Box>
         )}
         {published && (
-          <Box mr={4}>
+          <Box>
             <Emoji fontSize="sm" mr={2} text=":calendar:" />
             {getLocaleTimestamp(intl.locale as Lang, published)}
           </Box>
         )}
-        <Box mr={4}>
+        <Box>
           <Emoji fontSize="sm" mr={2} text=":stopwatch:" />
           {Math.round(tutorial.fields.readingTime.minutes)}{" "}
           <Translation id="comp-tutorial-metadata-minute-read" />
         </Box>
-      </Flex>
-      <Flex
+      </HStack>
+      <HStack
         mb={6}
         flexWrap="wrap"
         mt={-4}
@@ -152,7 +150,7 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
             </CopyToClipboard>
           </Flex>
         )}
-      </Flex>
+      </HStack>
     </Flex>
   )
 }
