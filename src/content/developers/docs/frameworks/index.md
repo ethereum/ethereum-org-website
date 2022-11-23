@@ -85,6 +85,12 @@ Before diving into frameworks, we recommend you first read through our introduct
 
 - [alchemy.com](https://www.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
+- [Discord](https://discord.gg/V5k5gsuE)
+
+**Nodereal -** **_Ethereum Development Platform._**
+
+- [Nodereal.io](https://nodereal.io/)
+- [GitHub](https://github.com/node-real)
 - [Discord](https://discord.com/invite/A39JVCM)
 
 **Foundry -** **_A blazing fast, portable and modular toolkit for Ethereum application development written in Rust._**
