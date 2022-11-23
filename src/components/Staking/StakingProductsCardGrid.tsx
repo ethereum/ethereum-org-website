@@ -1,13 +1,25 @@
 import React, {
   ComponentType,
+  ReactNode,
   SVGProps,
-  useContext,
   useEffect,
   useState,
 } from "react"
-import styled from "@emotion/styled"
-import { useTheme } from "@emotion/react"
 import { shuffle } from "lodash"
+import {
+  Box,
+  BoxProps,
+  Center,
+  Flex,
+  Heading,
+  HStack,
+  Icon,
+  List,
+  ListIcon,
+  ListItem,
+  SimpleGrid,
+  useColorModeValue,
+} from "@chakra-ui/react"
 // Data imports
 import stakingProducts from "../../data/staking-products.json"
 // Component imports
@@ -38,135 +50,17 @@ import Wagyu from "../../assets/staking/wagyu-glyph.svg"
 import { EventOptions } from "../../utils/matomo"
 // When adding a product svg, be sure to add to mapping below as well.
 
-const CardGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
-  gap: 2rem;
-  margin: 3rem 0;
-`
+const PADDED_DIV_STYLE: BoxProps = {
+  px: 8,
+  py: 6,
+}
 
-const Card = styled.div`
-  display: flex;
-  flex-direction: column;
-  background: ${({ theme }) => theme.colors.offBackground};
-  border-radius: 0.25rem;
-  &:hover {
-    transition: 0.1s;
-    transform: scale(1.01);
-  }
-`
-
-const PaddedDiv = styled.div`
-  padding: 1.5rem 2rem;
-`
-
-const Spacer = styled.div`
-  flex: 1;
-`
-
-const Banner = styled(PaddedDiv)`
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  background: ${({ color }) => color}
-    linear-gradient(0deg, rgba(0, 0, 0, 30%), rgba(0, 0, 0, 0));
-  border-radius: 0.25rem;
-  max-height: 6rem;
-  h2 {
-    margin: 0;
-    color: white;
-    font-size: 1.5rem;
-  }
-  svg {
-    height: 2rem;
-  }
-`
-
-const MinEthBar = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 700;
-  font-size: 1rem;
-  color: ${({ theme }) => theme.colors.textTableOfContents};
-  text-transform: uppercase;
-  padding-top: 1.5rem;
-`
-
-const Pills = styled(PaddedDiv)`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem;
-  /* padding-top: 1rem; */
-`
-
-const Pill = styled.div<{ type: string }>`
-  text-align: center;
-  padding: 0.25rem 0.75rem;
-  color: ${({ theme, type }) =>
-    type ? "rgba(0, 0, 0, 0.6)" : theme.colors.text200};
-  background: ${({ theme, type }) => {
-    if (!type) return "transparent"
-    switch (type.toLowerCase()) {
-      case "ui":
-        return theme.colors.stakingPillUI
-      case "platform":
-        return theme.colors.stakingPillPlatform
-      default:
-        return theme.colors.tagGray
-    }
-  }};
-  font-size: ${({ theme }) => theme.fontSizes.xs};
-  border: 1px solid ${({ theme }) => theme.colors.lightBorder};
-  border-radius: 0.25rem;
-`
-
-const Content = styled(PaddedDiv)`
-  padding-top: 0;
-  padding-bottom: 0;
-
-  ul {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-  }
-`
-
-const Item = styled.li`
-  display: flex;
-  align-items: center;
-  text-indent: 1em;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 0.875rem;
-  letter-spacing: 0.04em;
-
-  p {
-    margin: 1rem auto 1rem 0;
-  }
-`
-
-const Cta = styled(PaddedDiv)`
-  a {
-    width: 100%;
-  }
-`
-
-const Status: React.FC<{ status: FlagType }> = ({ status }) => {
-  if (!status) return null
-  const styles = { width: "24", height: "auto" }
-  switch (status) {
-    case "green-check":
-      return <GreenCheck style={styles} />
-    case "caution":
-      return <Caution style={styles} />
-    case "warning":
-    case "false":
-      return <Warning style={styles} />
-    default:
-      return <Unknown style={styles} />
-  }
+enum FlagType {
+  VALID = "green-check",
+  CAUTION = "caution",
+  WARNING = "warning",
+  FALSE = "false",
+  UNKNOWN = "unknown",
 }
 
 const getSvgFromPath = (
@@ -192,12 +86,54 @@ const getSvgFromPath = (
   }
   return mapping[svgPath]
 }
-enum FlagType {
-  VALID = "green-check",
-  CAUTION = "caution",
-  WARNING = "warning",
-  FALSE = "false",
-  UNKNOWN = "unknown",
+
+const Status: React.FC<{ status: FlagType }> = ({ status }) => {
+  if (!status) return null
+
+  const styles = { fontSize: "2xl", m: 0 }
+  switch (status) {
+    case "green-check":
+      return <ListIcon as={GreenCheck} {...styles} />
+    case "caution":
+      return <ListIcon as={Caution} {...styles} />
+    case "warning":
+    case "false":
+      return <ListIcon as={Warning} {...styles} />
+    default:
+      return <ListIcon as={Unknown} {...styles} />
+  }
+}
+
+const StakingPill: React.FC<{ type: string; children: ReactNode }> = ({
+  type,
+  children,
+}) => {
+  const backgroundColor = () => {
+    if (!type) return "transparent"
+    switch (type.toLowerCase()) {
+      case "ui":
+        return "stakingPillUI"
+      case "platform":
+        return "stakingPillPlatform"
+      default:
+        return "tagGray"
+    }
+  }
+  return (
+    <Box
+      background={backgroundColor()}
+      border="1px"
+      borderColor="lightBorder"
+      borderRadius="base"
+      color={type ? "rgba(0,0,0,0.6)" : "text200"}
+      fontSize="xs"
+      px={3}
+      py={1}
+      textAlign="center"
+    >
+      {children}
+    </Box>
+  )
 }
 
 type Product = {
@@ -303,48 +239,89 @@ const StakingProductCard: React.FC<ICardProps> = ({
   ].filter(({ status }) => !!status)
 
   return (
-    <Card>
-      <Banner color={color}>
-        {!!Svg && <Svg style={{ width: "32", height: "auto" }} />}
-        <h2>{name}</h2>
-      </Banner>
+    <Flex
+      direction="column"
+      background="offBackground"
+      borderRadius="base"
+      _hover={{
+        transition: "0.1s",
+        transform: "scale(1.01)",
+      }}
+    >
+      <HStack
+        {...PADDED_DIV_STYLE}
+        spacing={6}
+        background={color}
+        bgGradient="linear(0deg, rgba(0, 0, 0, 30%), rgba(0, 0, 0, 0))"
+        borderRadius="base"
+        maxH={24}
+      >
+        {!!Svg && <Icon as={Svg} fontSize="2rem" />}
+        <Heading fontSize="2xl" color="white">
+          {name}
+        </Heading>
+      </HStack>
       {typeof minEth !== "undefined" && (
-        <MinEthBar>
-          {minEth > 0 ? `From ${minEth} ETH` : "Any amount"}
-        </MinEthBar>
+        <Center
+          fontWeight={700}
+          fontSize="base"
+          color="textTableOfContents"
+          textTransform="uppercase"
+          pt={6}
+        >
+          {minEth > 0 ? `From ${minEth} ETH` : "Any amount"}
+        </Center>
       )}
-      <Pills>
+      <Flex
+        {...PADDED_DIV_STYLE}
+        flexWrap="wrap"
+        gap={1}
+        flex={1}
+        alignItems="flex-start"
+      >
         {platforms &&
           platforms.map((platform, idx) => (
-            <Pill type="platform" key={idx}>
+            <StakingPill type="platform" key={idx}>
               {platform}
-            </Pill>
+            </StakingPill>
           ))}
         {ui &&
           ui.map((_ui, idx) => (
-            <Pill type="ui" key={idx}>
+            <StakingPill type="ui" key={idx}>
               {_ui}
-            </Pill>
+            </StakingPill>
           ))}
-      </Pills>
-      <Spacer />
-      <Content>
-        <ul>
+      </Flex>
+      <Box {...PADDED_DIV_STYLE} py={0}>
+        <List m={0} gap={3}>
           {data &&
             data.map(({ label, status }, idx) => (
-              <Item key={idx}>
+              <ListItem
+                as={Flex}
+                key={idx}
+                textTransform="uppercase"
+                fontSize="xs"
+                lineHeight="0.875rem"
+                letterSpacing="wider"
+                my={4}
+                ms="auto"
+                me={0}
+                py={2}
+                gap="1em"
+                alignItems="center"
+              >
                 <Status status={status} />
-                <p>{label}</p>
-              </Item>
+                {label}
+              </ListItem>
             ))}
-        </ul>
-      </Content>
-      <Cta>
-        <ButtonLink to={url} customEventOptions={matomo}>
+        </List>
+      </Box>
+      <Box {...PADDED_DIV_STYLE}>
+        <ButtonLink to={url} customEventOptions={matomo} width="100%">
           <Translation id="page-staking-products-get-started" />
         </ButtonLink>
-      </Cta>
-    </Card>
+      </Box>
+    </Flex>
   )
 }
 
@@ -353,11 +330,8 @@ export interface IProps {
 }
 
 const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
-  const theme = useTheme()
   const [rankedProducts, updateRankedProducts] = useState<Array<Product>>([])
-  const isDarkTheme = theme.isDark
-
-  const [SAT, LUM] = isDarkTheme ? ["50%", "35%"] : ["75%", "60%"]
+  const [SAT, LUM] = useColorModeValue(["75%", "60%"], ["50%", "35%"])
 
   const scoreOpenSource = (product: Product): 1 | 0 => {
     return product.openSource === FlagType.VALID ? 1 : 0
@@ -564,11 +538,16 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
   if (!rankedProducts) return null
 
   return (
-    <CardGrid>
+    <SimpleGrid
+      templateColumns="repeat(auto-fill, minmax(min(100%, 280px), 1fr))"
+      gap={8}
+      my={12}
+      mx={0}
+    >
       {rankedProducts.map((product) => (
         <StakingProductCard key={product.name} product={product} />
       ))}
-    </CardGrid>
+    </SimpleGrid>
   )
 }
 
