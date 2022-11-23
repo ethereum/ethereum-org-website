@@ -487,7 +487,7 @@ const EthExchanges = () => {
       usaExceptions: [],
     },
     moonpay: {
-      name: "Moonpay",
+      name: "MoonPay",
       url: "https://www.moonpay.com/",
       image: data.moonpay,
       usaExceptions: ["VI"],
