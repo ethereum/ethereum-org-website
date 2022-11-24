@@ -281,7 +281,7 @@ const TableOfContentsMobile: React.FC<IPropsTableOfContentsMobile> = ({
   )
 }
 
-export interface IProps extends ChakraProps {
+export interface IProps extends BoxProps {
   items: Array<Item>
   maxDepth?: number
   className?: string
