@@ -15,7 +15,6 @@ import {
   Fade,
   Flex,
   Icon,
-  Link,
   List,
   ListItem,
   ListProps,
@@ -26,6 +25,7 @@ import {
 } from "@chakra-ui/react"
 import { MdExpandMore } from "react-icons/md"
 import { FaGithub } from "react-icons/fa"
+import Link from "./Link"
 
 const customIdRegEx = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/
 const emojiRegEx = /<Emoji [^/]+\/>/g
