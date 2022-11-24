@@ -1,6 +1,6 @@
 // Libraries
 import React, { useEffect, useState } from "react"
-import styled from "@emotion/styled"
+import { Box } from "@chakra-ui/react"
 
 // Components
 import EventCard from "./EventCard"
@@ -43,12 +43,6 @@ const EventList = styled.div`
   }
 `
 
-const ButtonLinkContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  max-width: 620px;
-  margin-top: 1.25rem;
-`
 
 interface ICommunityEventData {
   title: string
@@ -159,13 +153,18 @@ const UpcomingEventsList: React.FC<IProps> = () => {
             )
           })}
       </EventList>
-      <ButtonLinkContainer>
+      <Box
+        display: flex;
+        justifyContent: center;
+        maxWidth: 620px;
+        marginTop: 1.25rem;
+        >
         {isVisible && (
           <Button onClick={loadMoreEvents}>
             <Translation id="page-community-upcoming-events-load-more" />
           </Button>
         )}
-      </ButtonLinkContainer>
+      </Box>
     </>
   )
 }
