@@ -54,6 +54,7 @@
     "gatsby-transformer-json": "^4.11.0",
     "gatsby-transformer-remark": "^3.0.0",
     "gatsby-transformer-sharp": "^4.21.0",
+    "htmr": "^1.0.2",
     "i18next": "^21.9.2",
     "is-relative-url": "^3.0.0",
     "lodash": "^4.17.21",

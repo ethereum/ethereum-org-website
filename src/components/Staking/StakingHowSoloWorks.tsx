@@ -2,7 +2,6 @@ import React from "react"
 import styled from "@emotion/styled"
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import OrderedList from "../OrderedList"
 import Translation from "../Translation"
@@ -23,7 +22,6 @@ const Image = styled(GatsbyImage)``
 export interface IProps {}
 
 const StakingHowSoloWorks: React.FC<IProps> = () => {
-  const { t } = useTranslation()
   const { image } = useStaticQuery(graphql`
     {
       image: file(relativePath: { eq: "hackathon_transparent.png" }) {
@@ -40,11 +38,9 @@ const StakingHowSoloWorks: React.FC<IProps> = () => {
   `)
 
   const items = [
-    <p
-      dangerouslySetInnerHTML={{
-        __html: t("page-staking-how-solo-works-item-1"),
-      }}
-    />,
+    <p>
+      <Translation id="page-staking-how-solo-works-item-1" />
+    </p>,
     <p>
       <Translation id="page-staking-how-solo-works-item-2" />
     </p>,

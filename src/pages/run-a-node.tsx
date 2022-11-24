@@ -943,11 +943,9 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
           <StyledEmoji text=":cut_of_meat:" size={2} />
           <Translation id="page-run-a-node-staking-plans-title" />
         </h3>
-        <p
-          dangerouslySetInnerHTML={{
-            __html: t("page-run-a-node-staking-plans-description"),
-          }}
-        />
+        <p>
+          <Translation id="page-run-a-node-staking-plans-description" />
+        </p>
         <p>
           <Translation id="page-run-a-node-staking-plans-ethstaker-link-description" />{" "}
           -{" "}

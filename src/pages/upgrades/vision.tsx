@@ -218,11 +218,9 @@ const VisionPage = ({
           <p>
             <Translation id="page-upgrades-vision-scalability-desc" />
           </p>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: t("page-upgrades-vision-scalability-desc-3"),
-            }}
-          />
+          <p>
+            <Translation id="page-upgrades-vision-scalability-desc-3" />
+          </p>
           <p>
             <Translation id="page-upgrades-vision-scalability-desc-4" />{" "}
             <Link to="/upgrades/sharding/">
