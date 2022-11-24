@@ -244,9 +244,6 @@ const TableOfContentsMobile: React.FC<IPropsTableOfContentsMobile> = ({
       borderRadius="4px"
       py={2}
       px={4}
-      /* TODO find better way - this accounts for huge header margin top */
-      /* but if doc DOESN'T start w/ header, it overlaps, e.g. /docs/accounts/  */
-      /* margin-bottom: -10rem; */
       className={className}
     >
       <Flex
