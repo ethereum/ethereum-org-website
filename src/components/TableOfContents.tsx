@@ -227,7 +227,6 @@ const TableOfContentsMobile: React.FC<IPropsTableOfContentsMobile> = ({
   maxDepth,
   className,
 }) => {
-  // const [isOpen, setIsOpen] = useState<boolean>(false)
   const { getButtonProps, getDisclosureProps, isOpen } = useDisclosure({
     defaultIsOpen: false,
   })
