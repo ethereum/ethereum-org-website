@@ -12,37 +12,6 @@ import Button from "./Button"
 // Data
 import events from "../data/community-events.json"
 
-const EventList = styled.div`
-  /* Adding direction ltr as a temporary fix to styling bug */
-  /* https://github.com/ethereum/ethereum-org-website/issues/6221 */
-  direction: ltr;
-  width: 100%;
-  margin: 30px auto;
-  position: relative;
-  padding: 0 10px;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-
-  &:before {
-    content: "";
-    width: 3px;
-    height: 100%;
-    background: ${(props) => props.theme.colors.primary};
-    left: 50%;
-    top: 0;
-    position: absolute;
-  }
-
-  &:after {
-    content: "";
-    clear: both;
-    display: table;
-    width: 100%;
-  }
-`
-
 
 interface ICommunityEventData {
   title: string
@@ -136,7 +105,17 @@ const UpcomingEventsList: React.FC<IProps> = () => {
 
   return (
     <>
-      <EventList>
+      <Box
+        direction="ltr"
+        width="full"
+        margin="30px auto"
+        position="relative"
+        padding="0 10px"
+        transition="all 0.4s ease"
+        _before={{ content: '""', position: "absolute", width: "3px", height: "full", background: "primary", 
+          top: 0, left: "50%" }}
+        _after={{ content: '""', display: "table", width: "full", clear: "both" }}
+        >      
         {orderedUpcomingEvents
           ?.slice(0, maxRange)
           .map(({ title, to, formattedDetails, date, location }, idx) => {
@@ -154,10 +133,10 @@ const UpcomingEventsList: React.FC<IProps> = () => {
           })}
       </EventList>
       <Box
-        display: flex;
-        justifyContent: center;
-        maxWidth: 620px;
-        marginTop: 1.25rem;
+        display="flex"
+        justifyContent="center"
+        maxWidth="620px"
+        marginTop="1.25rem"
         >
         {isVisible && (
           <Button onClick={loadMoreEvents}>
