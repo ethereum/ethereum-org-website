@@ -120,7 +120,9 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
                     color="text"
                     hideArrow
                   >
-                    <VisuallyHidden>{`In ${PLACE_WORDS[idx]} place with ${score} points`}</VisuallyHidden>
+                    <VisuallyHidden>{`In place number ${
+                      idx + 1
+                    } with ${score} points`}</VisuallyHidden>
                     {name}{" "}
                     {hasGitHub && (
                       <VisuallyHidden>(See Github Profile)</VisuallyHidden>
