@@ -14,6 +14,8 @@ import Emoji from "./Emoji"
 import Link from "./Link"
 
 import Translation from "./Translation"
+import { translateMessageId } from "../utils/translations"
+import { useIntl } from "react-intl"
 
 const githubUrl = `https://github.com/`
 
@@ -42,13 +44,18 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
     }
   )
 
+  const intl = useIntl()
+
   return (
     <List
       bgColor="background"
       boxShadow={colorModeStyles.listBoxShadow}
       w="100%"
       mb={8}
-      aria-label="Bug hunting leaderboard"
+      aria-label={translateMessageId(
+        "page-upgrades-bug-bounty-leaderboard-list",
+        intl
+      )}
     >
       {content
         .filter((_, idx) => idx < limit)
