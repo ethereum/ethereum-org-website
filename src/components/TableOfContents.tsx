@@ -8,6 +8,7 @@ import { useActiveHash } from "../hooks/useActiveHash"
 import { ZenModeContext } from "../contexts/ZenModeContext"
 import {
   Box,
+  BoxProps,
   calc,
   chakra,
   ChakraProps,
@@ -333,14 +334,11 @@ const TableOfContents: React.FC<IProps> = ({
   }
   if (isMobile) {
     return (
-      // TODO: Switch to `below="lg"` after completion of Chakra Migration
-      <Show breakpoint="(max-width: 1024px)">
-        <TableOfContentsMobile
-          items={items}
-          maxDepth={maxDepth}
-          className={className}
-        />
-      </Show>
+      <TableOfContentsMobile
+        items={items}
+        maxDepth={maxDepth}
+        className={className}
+      />
     )
   }
 
