@@ -195,6 +195,10 @@ Ethereum's consensus layer is the network of [consensus clients](#consensus-clie
 
 The block validation rules that full nodes follow to stay in consensus with other nodes. Not to be confused with [consensus](#consensus).
 
+### Considered for Inclusion (CFI) {#cfi}
+
+A Core [EIP](#eip) which is not yet active on Mainnet, and client developers are generally positive towards the idea. Assuming it meets all the requirements for mainnet inclusion, it could potentially be included in a network upgrade (not necessarily the next one).
+
 ### Constantinople fork {#constantinople-fork}
 
 The second part of the [Metropolis](#metropolis) stage, originally planned for mid-2018. Expected to include a switch to a hybrid [proof-of-work](#pow)/[proof-of-stake](#pos) consensus algorithm, among other changes.
