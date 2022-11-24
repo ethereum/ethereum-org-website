@@ -106,15 +106,14 @@ const UpcomingEventsList: React.FC<IProps> = () => {
   return (
     <>
       <Box
-        direction="ltr"
-        width="full"
+        width="100%"
         margin="30px auto"
         position="relative"
         padding="0 10px"
         transition="all 0.4s ease"
         _before={{ content: '""', position: "absolute", width: "3px", height: "full", background: "primary", 
           top: 0, left: "50%" }}
-        _after={{ content: '""', display: "table", width: "full", clear: "both" }}
+        _after={{ content: '""', display: "table", width: "100%", clear: "both" }}
         >      
         {orderedUpcomingEvents
           ?.slice(0, maxRange)
@@ -131,12 +130,12 @@ const UpcomingEventsList: React.FC<IProps> = () => {
               />
             )
           })}
-      </EventList>
+      </Box>
       <Box
         display="flex"
         justifyContent="center"
         maxWidth="620px"
-        marginTop="1.25rem"
+        marginTop= "5"
         >
         {isVisible && (
           <Button onClick={loadMoreEvents}>
