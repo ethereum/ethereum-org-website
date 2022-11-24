@@ -26,7 +26,7 @@ Where `i0 ... in` represent the symbols of the alphabet (often binary or hex), `
 
 There is a difference between looking something up in the 'trie' and the underlying flat key/value 'DB'. They both define key/values arrangements, but the underlying DB can do a traditional 1 step lookup of a key. Looking up a key in the trie requires multiple underlying DB lookups to get to the final value described above. Let's refer to the latter as a `path` to eliminate ambiguity.
 
-The update and delete operations for radix tries are simple, and can be defined roughly as follows:
+The update and delete operations for radix tries can be defined roughly as follows:
 
 ```
     def update(node,path,value):
