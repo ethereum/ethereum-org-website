@@ -14,6 +14,8 @@ import {
   cssVar,
   Fade,
   Flex,
+  FormControl,
+  FormLabel,
   Icon,
   List,
   ListItem,
@@ -379,30 +381,32 @@ const TableOfContents: React.FC<IProps> = ({
               opacity={0.8}
               fontSize="sm"
             >
-              <Box as="span" me={2} id="zen-mode">
-                <Translation id="zen-mode" />
-              </Box>
-              <Switch
-                aria-labelledby="zen-mode"
-                sx={{
-                  "& .chakra-switch__track": {
-                    background: "transparent",
-                    border: "2px solid",
-                    borderColor: "secondary",
-                    p: 0,
-                    "&[data-checked]": {
-                      background: "secondary",
+              <FormControl as={Flex} alignItems="center">
+                <FormLabel htmlFor="zen-mode" mb={0} me={2}>
+                  <Translation id="zen-mode" />
+                </FormLabel>
+                <Switch
+                  id="zen-mode"
+                  sx={{
+                    "& .chakra-switch__track": {
+                      background: "transparent",
+                      border: "2px solid",
+                      borderColor: "secondary",
+                      p: 0,
+                      "&[data-checked]": {
+                        background: "secondary",
+                      },
                     },
-                  },
-                  "& .chakra-switch__thumb": {
-                    background: "ednBackground",
-                    outline: "2px solid",
-                    outlineColor: "secondary",
-                  },
-                }}
-                isChecked={isZenMode}
-                onChange={() => handleZenModeChange()}
-              />
+                    "& .chakra-switch__thumb": {
+                      background: "ednBackground",
+                      outline: "2px solid",
+                      outlineColor: "secondary",
+                    },
+                  }}
+                  isChecked={isZenMode}
+                  onChange={() => handleZenModeChange()}
+                />
+              </FormControl>
             </Flex>
           )}
           <ListItem>
