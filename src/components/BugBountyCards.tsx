@@ -230,7 +230,7 @@ const bugBountyCardsInfo: Array<BugBountyCardInfo> = [
 
 export interface IProps {}
 
-export const BugBountyCards: React.FC<IProps> = () => (
+const BugBountyCards: React.FC<IProps> = () => (
   <CardRow>
     {bugBountyCardsInfo.map((card, idx) => (
       <Card key={`bug-bounty-card-${idx}`}>
