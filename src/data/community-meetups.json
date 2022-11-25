@@ -328,5 +328,11 @@
     "emoji": ":us:",
     "location": "San Diego",
     "link": "http://cryptosandiego.org"
+  },
+  {
+    "title": "Ethereum and Web3 Copenhagen",
+    "emoji": "denmark",
+    "location": "Copenhagen",
+    "link": "https://www.meetup.com/copenhagen-ethereum-meetup/"
   }
 ]
