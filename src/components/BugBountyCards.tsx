@@ -6,6 +6,7 @@ import {
   Flex,
   Heading,
   Text as ChakraText,
+  Divider as ChakraDivider,
 } from "@chakra-ui/react"
 
 import { TranslationKey } from "../utils/translations"
@@ -157,9 +158,9 @@ const Description = ({ children }) => {
   )
 }
 
-const Divider = styled.div`
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
-`
+const Divider = () => {
+  return <ChakraDivider opacity="1" />
+}
 
 const SubHeader = styled.p`
   text-transform: uppercase;
