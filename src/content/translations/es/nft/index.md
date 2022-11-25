@@ -311,7 +311,7 @@ Cuando se minta un NFT, ocurren algunas cosas:
 - Debe ser confirmado como un activo en la cadena de bloques.
 - El saldo de la cuenta del propietario debe ser actualizada para incluir ese activo. Esto hace posible que luego sea intercambiado o verificablemente «poseído».
 - Las transacciones que confirman los pasos de arriba necesitan ser añadidas a un bloque e «inmortalizadas» en la cadena de bloques.
-- Todos en la red deben confirmar el bloque como «correcto». Este consenso elimina la necesidad de intermediarios debido a que la red acepta que su NFT existe y que usted es su propietario. Además, está en la cadena, por lo que todos pueden comprobarlo. Esta es una de las formas en que Ethereum ayuda a los creadores de NFT a maximizar sus ganancias.
+- El bloque debe ser confirmado por todos en la red como «correcto». Este consenso elimina la necesidad de intermediarios debido a que la red acepta que su NFT existe y que usted es su propietario. Además, está en la cadena, por lo que todos pueden comprobarlo. Esta es una de las formas en que Ethereum ayuda a los creadores de NFT a maximizar sus ganancias.
 
 Todas estas tareas son realizadas por productores y validadores de bloques. Los productores de bloques añaden su transacción NFT a un bloque y la transmiten al resto de la red. Los validadores comprueban que la transacción es válida y entonces la añaden a sus bases de datos. Existen muchos incentivos para garantizar que los mineros actúen con honestidad. De lo contrario, cualquiera podría afirmar que es dueño del TNF que acaba de acuñar y transferir fraudulentamente la propiedad.
 
