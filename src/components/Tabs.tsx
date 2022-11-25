@@ -25,35 +25,17 @@ const Tabs: React.FC<IProps> = ({ tabs, onTabClick }) => {
   }
 
   return (
-    <ChakraTabs as="nav" variant="unstyled">
+    <ChakraTabs as="nav">
       <TabList>
         {tabs.map((tab, index) => (
-          <Tab
-            key={index}
-            px={4}
-            py="0.3rem"
-            borderBottom="1px solid"
-            borderColor="primary"
-            borderTopRadius="0.3rem"
-            _selected={{ color: "background", bg: "primary" }}
-            onClick={() => handleTabClick(index)}
-          >
+          <Tab key={index} onClick={() => handleTabClick(index)}>
             {tab.title}
           </Tab>
         ))}
       </TabList>
-      <TabPanels as="main" mt={4}>
+      <TabPanels as="main">
         {tabs.map((tab, index) => (
-          <TabPanel
-            key={index}
-            p={6}
-            bg="ednBackground"
-            border="1px solid"
-            borderColor="lightBorder"
-            borderRadius="lg"
-          >
-            {tab.content}
-          </TabPanel>
+          <TabPanel key={index}>{tab.content}</TabPanel>
         ))}
       </TabPanels>
     </ChakraTabs>
