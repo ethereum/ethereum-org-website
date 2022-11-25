@@ -162,14 +162,21 @@ const Divider = () => {
   return <ChakraDivider opacity="1" />
 }
 
-const SubHeader = styled.p`
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  margin-left: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  opacity: 0.6;
-`
+const SubHeader = ({ children }) => {
+  return (
+    <ChakraText
+      as="p"
+      textTransform="uppercase"
+      fontSize="sm"
+      ml={4}
+      mt={4}
+      mb={2}
+      opacity="0.6"
+    >
+      {children}
+    </ChakraText>
+  )
+}
 
 const Text = styled.div`
   margin: 1rem;
