@@ -100,38 +100,6 @@ const Label = ({ children, variant = "medium", ...props }: LabelProps) => {
   )
 }
 
-const LowLabel = ({ children, ...props }) => {
-  return (
-    <Label variant="low" {...props}>
-      {children}
-    </Label>
-  )
-}
-
-const MediumLabel = ({ children, ...props }) => {
-  return (
-    <Label variant="medium" {...props}>
-      {children}
-    </Label>
-  )
-}
-
-const HighLabel = ({ children, ...props }) => {
-  return (
-    <Label variant="high" {...props}>
-      {children}
-    </Label>
-  )
-}
-
-const CriticalLabel = ({ children, ...props }) => {
-  return (
-    <Label variant="critical" {...props}>
-      {children}
-    </Label>
-  )
-}
-
 const H2 = ({ children }) => {
   return (
     <Heading
@@ -265,24 +233,24 @@ export const BugBountyCards: React.FC<IProps> = () => (
     {bugBountyCardsInfo.map((card, idx) => (
       <Card key={`bug-bounty-card-${idx}`}>
         {card.lowLabelTranslationId && (
-          <LowLabel>
+          <Label variant="low">
             <Translation id={card.lowLabelTranslationId} />
-          </LowLabel>
+          </Label>
         )}
         {card.mediumLabelTranslationId && (
-          <MediumLabel>
+          <Label variant="medium">
             <Translation id={card.mediumLabelTranslationId} />
-          </MediumLabel>
+          </Label>
         )}
         {card.highLabelTranslationId && (
-          <HighLabel>
+          <Label variant="high">
             <Translation id={card.highLabelTranslationId} />
-          </HighLabel>
+          </Label>
         )}
         {card.criticalLabelTranslationId && (
-          <CriticalLabel>
+          <Label variant="critical">
             <Translation id={card.criticalLabelTranslationId} />
-          </CriticalLabel>
+          </Label>
         )}
         <H2>
           <Translation id={card.h2TranslationId} />
