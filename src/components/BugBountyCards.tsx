@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "@emotion/styled"
 import {
   Center,
   CenterProps,
@@ -21,8 +20,8 @@ const CardRow = ({ children }) => (
   </Flex>
 )
 
-const StyledButton = ({ children, ...props }) => (
-  <ButtonLink m={4} {...props}>
+const SubmitBugBountyButton = ({ children, ...props }) => (
+  <ButtonLink m={4} to="https://forms.gle/Gnh4gzGh66Yc3V7G8" {...props}>
     {children}
   </ButtonLink>
 )
@@ -314,9 +313,9 @@ export const BugBountyCards: React.FC<IProps> = () => (
         <Text>
           <Translation id={card.textTranslationId} />
         </Text>
-        <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
+        <SubmitBugBountyButton>
           <Translation id={card.styledButtonTranslationId} />
-        </StyledButton>
+        </SubmitBugBountyButton>
       </Card>
     ))}
   </CardRow>
