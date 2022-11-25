@@ -7,6 +7,7 @@ import {
   Heading,
   Text as ChakraText,
   Divider as ChakraDivider,
+  Box,
 } from "@chakra-ui/react"
 
 import { TranslationKey } from "../utils/translations"
@@ -178,10 +179,13 @@ const SubHeader = ({ children }) => {
   )
 }
 
-const Text = styled.div`
-  margin: 1rem;
-  margin-top: 0.5rem;
-`
+const Text = ({ children }) => {
+  return (
+    <Box m={4} mt={2}>
+      {children}
+    </Box>
+  )
+}
 
 export interface BugBountyCardInfo {
   lowLabelTranslationId?: TranslationKey
