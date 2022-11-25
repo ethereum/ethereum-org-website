@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { Center, CenterProps, Flex } from "@chakra-ui/react"
+import { Center, CenterProps, Flex, Heading } from "@chakra-ui/react"
 
 import { TranslationKey } from "../utils/translations"
 import ButtonLink from "./ButtonLink"
@@ -125,17 +125,23 @@ const CriticalLabel = ({ children, ...props }) => {
   )
 }
 
-const H2 = styled.h2`
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0px;
-  padding: 1rem;
-  text-align: left;
-  margin-bottom: -0.5rem;
-  margin-top: 0.5rem;
-`
+const H2 = ({ children }) => {
+  return (
+    <Heading
+      fontSize="2xl"
+      fontStyle="normal"
+      fontWeight="bold"
+      lineHeight="22px"
+      letterSpacing={0}
+      p={4}
+      textAlign="left"
+      mb={-2}
+      mt={2}
+    >
+      {children}
+    </Heading>
+  )
+}
 
 const Description = styled.p`
   font-size: 1.25rem;
