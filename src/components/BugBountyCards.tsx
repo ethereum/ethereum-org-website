@@ -5,7 +5,7 @@ import {
   Flex,
   Heading,
   Text as ChakraText,
-  Divider as ChakraDivider,
+  Divider,
   Box,
 } from "@chakra-ui/react"
 
@@ -124,10 +124,6 @@ const Description = ({ children }) => {
       {children}
     </ChakraText>
   )
-}
-
-const Divider = () => {
-  return <ChakraDivider opacity="1" />
 }
 
 const SubHeader = ({ children }) => {
@@ -261,7 +257,7 @@ export const BugBountyCards: React.FC<IProps> = () => (
         <SubHeader>
           <Translation id={card.subDescriptionTranslationId} />
         </SubHeader>
-        <Divider />
+        <Divider opacity="1" />
         <SubHeader>
           <Translation id={card.subHeader1TranslationId} />
         </SubHeader>
@@ -274,7 +270,7 @@ export const BugBountyCards: React.FC<IProps> = () => (
             ))}
           </ul>
         </Text>
-        <Divider />
+        <Divider opacity="1" />
         <SubHeader>
           <Translation id={card.subHeader2TranslationId} />
         </SubHeader>
