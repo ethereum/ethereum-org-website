@@ -4,7 +4,7 @@ import {
   CenterProps,
   Flex,
   Heading,
-  Text as ChakraText,
+  Text,
   Divider,
   Box,
 } from "@chakra-ui/react"
@@ -142,7 +142,7 @@ const SubHeader = ({ children }) => {
   )
 }
 
-const Text = ({ children }) => {
+const TextBox = ({ children }) => {
   return (
     <Box m={4} mt={2}>
       {children}
@@ -261,7 +261,7 @@ export const BugBountyCards: React.FC<IProps> = () => (
         <SubHeader>
           <Translation id={card.subHeader1TranslationId} />
         </SubHeader>
-        <Text>
+        <TextBox>
           <ul>
             {card.severityList.map((listItemId) => (
               <li key={`${listItemId}`}>
@@ -269,14 +269,14 @@ export const BugBountyCards: React.FC<IProps> = () => (
               </li>
             ))}
           </ul>
-        </Text>
+        </TextBox>
         <Divider opacity="1" />
         <SubHeader>
           <Translation id={card.subHeader2TranslationId} />
         </SubHeader>
-        <Text>
+        <TextBox>
           <Translation id={card.textTranslationId} />
-        </Text>
+        </TextBox>
         <SubmitBugBountyButton>
           <Translation id={card.styledButtonTranslationId} />
         </SubmitBugBountyButton>
