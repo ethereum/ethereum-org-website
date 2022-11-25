@@ -1,6 +1,12 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { Center, CenterProps, Flex, Heading } from "@chakra-ui/react"
+import {
+  Center,
+  CenterProps,
+  Flex,
+  Heading,
+  Text as ChakraText,
+} from "@chakra-ui/react"
 
 import { TranslationKey } from "../utils/translations"
 import ButtonLink from "./ButtonLink"
@@ -143,13 +149,13 @@ const H2 = ({ children }) => {
   )
 }
 
-const Description = styled.p`
-  font-size: 1.25rem;
-  padding: 1rem;
-  padding-top: 0rem;
-  padding-bottom: 0rem;
-  opacity: 0.6;
-`
+const Description = ({ children }) => {
+  return (
+    <ChakraText as="p" fontSize="xl" px={4} py={0} opacity="0.6">
+      {children}
+    </ChakraText>
+  )
+}
 
 const Divider = styled.div`
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
