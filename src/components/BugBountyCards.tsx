@@ -3,10 +3,14 @@ import {
   Center,
   CenterProps,
   Flex,
+  FlexProps,
   Heading,
+  HeadingProps,
   Text,
+  TextProps,
   Divider,
   Box,
+  BoxProps,
 } from "@chakra-ui/react"
 
 import { TranslationKey } from "../utils/translations"
@@ -26,7 +30,7 @@ const SubmitBugBountyButton = ({ children, ...props }) => (
   </ButtonLink>
 )
 
-const Card = ({ children, ...props }) => {
+const Card = ({ children, ...props }: FlexProps) => {
   return (
     <Flex
       flexDir="column"
@@ -100,7 +104,7 @@ const Label = ({ children, variant = "medium", ...props }: LabelProps) => {
   )
 }
 
-const H2 = ({ children }) => {
+const H2 = ({ children, ...props }: HeadingProps) => {
   return (
     <Heading
       fontSize="2xl"
@@ -112,23 +116,24 @@ const H2 = ({ children }) => {
       textAlign="left"
       mb={-2}
       mt={2}
+      {...props}
     >
       {children}
     </Heading>
   )
 }
 
-const Description = ({ children }) => {
+const Description = ({ children, ...props }: TextProps) => {
   return (
-    <ChakraText as="p" fontSize="xl" px={4} py={0} opacity="0.6">
+    <Text as="p" fontSize="xl" px={4} py={0} opacity="0.6" {...props}>
       {children}
-    </ChakraText>
+    </Text>
   )
 }
 
-const SubHeader = ({ children }) => {
+const SubHeader = ({ children, ...props }: TextProps) => {
   return (
-    <ChakraText
+    <Text
       as="p"
       textTransform="uppercase"
       fontSize="sm"
@@ -136,15 +141,16 @@ const SubHeader = ({ children }) => {
       mt={4}
       mb={2}
       opacity="0.6"
+      {...props}
     >
       {children}
-    </ChakraText>
+    </Text>
   )
 }
 
-const TextBox = ({ children }) => {
+const TextBox = ({ children, ...props }: BoxProps) => {
   return (
-    <Box m={4} mt={2}>
+    <Box m={4} mt={2} {...props}>
       {children}
     </Box>
   )
