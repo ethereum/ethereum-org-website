@@ -13,7 +13,7 @@ const DeveloperDocsLinks: React.FC<IProps> = ({ headerId }) => (
     {docLinks
       .filter(({ id }) => id.includes(headerId))
       .map(({ items, id }) => (
-        <UnorderedList spacing={3} key={id}>
+        <UnorderedList ml={6} spacing={3} key={id}>
           {items &&
             items.map(({ id, to, path, description, items }) => (
               <ListItem key={id}>
