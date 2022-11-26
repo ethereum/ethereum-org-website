@@ -13,7 +13,7 @@ export const SkipLink: React.FC<IProps> = ({ hrefId }) => {
         href={hrefId}
         lineHeight="taller"
         position="absolute"
-        top="-3rem"
+        top="-12"
         ml="2"
         color="background"
         textDecorationLine="none"
