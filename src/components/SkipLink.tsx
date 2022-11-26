@@ -14,7 +14,7 @@ export const SkipLink: React.FC<IProps> = ({ hrefId }) => {
         lineHeight="2rem"
         position="absolute"
         top="-3rem"
-        ml=".5rem"
+        ml="2"
         color="background"
         textDecorationLine="none"
         _hover={{ textDecoration: "none" }}
