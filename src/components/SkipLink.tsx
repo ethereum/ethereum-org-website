@@ -11,7 +11,7 @@ export const SkipLink: React.FC<IProps> = ({ hrefId }) => {
     <Box bg="primary">
       <Link
         href={hrefId}
-        lineHeight="2rem"
+        lineHeight="taller"
         position="absolute"
         top="-3rem"
         ml="2"
