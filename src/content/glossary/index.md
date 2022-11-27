@@ -409,6 +409,10 @@ A stack-based virtual machine that executes [bytecode](#bytecode). In Ethereum, 
 
 A human-readable form of EVM [bytecode](#bytecode).
 
+### EVM Object Format (EOF) {#eof}
+
+A proposal ([EIP-3540](https://eips.ethereum.org/EIPS/eip-3540)) for an extensible and versioned container format for the EVM, with a once-off validation at deploy time. It brings the tangible benefit of code and data separation, and allows for easy introduction of a variety of changes in the future.
+
 <Divider />
 
 ## F {#section-f}
