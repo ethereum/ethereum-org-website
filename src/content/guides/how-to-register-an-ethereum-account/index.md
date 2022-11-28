@@ -30,7 +30,8 @@ Now you have your Ethereum account. Some apps will request you to save a recover
 
 This is extremely important as the person who knows this secret phrase can take control of your account. Never share this with anyone. This phrase should contain 12 randomly generated words. The order of the words matter!
 
-Once you have saved your recovery phrase you should see your wallet dashboard with your balance. Check out our Guide: How to use a wallet.
+Once you have saved your recovery phrase you should see your wallet dashboard with your balance. Check out our Guide: [How to use a wallet.](https://ethereum.org/en/guides/how-to-use-a-wallet)
+
 
 ### FAQ
 
