@@ -5,14 +5,18 @@ lang: fr
 template: upgrade
 image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: Le réseau principal Ethereum utilise la preuve d'enjeu, mais cela n'a pas toujours été le cas.
-summaryPoint2: La transition du mécanisme original de preuve de travail à celui de la preuve d'enjeu s'appelle La Fusion.
-summaryPoint3: La Fusion fait référence au réseau principal original Ethereum qui fait désormais partie d'une chaîne de blocs distincte de preuve d'enjeu appelée la Chaîne phare et qui existe maintenant sous la forme d'une chaîne unique.
+summaryPoint2: La mise à niveau du mécanisme original de preuve de travail à celui de la preuve d'enjeu s'appelle La Fusion.
+summaryPoint3: La Fusion fait référence à la fusion du réseau principal original Ethereum avec une blockchain distincte de preuve d'enjeu appelée la Chaîne phare, qui existe maintenant sous la forme d'une chaîne unique.
 summaryPoint4: La Fusion a réduit la consommation d'énergie d'Ethereum de ~99,95 %.
 ---
 
+<UpgradeStatus dateKey="page-upgrades-beacon-date">
+  La Fusion a été réalisée le 15 septembre 2022. Cette étape a permis à Ethereum de passer à un consensus de preuve d'enjeu, de rendre officiellement obsolète la preuve de travail et de réduire sa consommation d'énergie d'environ 99,95 %.
+</UpgradeStatus>
+
 ## Qu'est-ce que La Fusion ? {#what-is-the-merge}
 
-La Fusion est la réunion de la couche d'exécution originale d'Ethereum (le réseau principal qui existe depuis [genesis](/history/#frontier)) avec sa nouvelle couche de consensus de preuve d'enjeu ; la Chaîne phare. Cela a permis d'éliminer le besoin de minage, gros consommateur énergétique et de sécuriser le réseau via la mise en jeu d'ETH. Ce fut une étape vraiment passionnante dans la réalisation de la vision Ethereum - plus d'évolutivité, de sécurité et de durabilité.
+La Fusion est la réunion de la couche d'exécution originale d'Ethereum (le réseau principal qui existe depuis [genesis](/history/#frontier)) avec sa nouvelle couche de consensus de preuve d'enjeu ; la Chaîne phare. Elle a également permis d'éliminer la nécessité d'un minage gourmand en énergie et de sécuriser le réseau via la mise en jeu d'ETH. Ce fut une étape vraiment passionnante dans la réalisation de la vision Ethereum - plus d'évolutivité, de sécurité et de durabilité.
 
 <MergeInfographic />
 
@@ -42,7 +46,7 @@ Cette transition vers la preuve d'enjeu a modifié la façon dont l'éther est �
 
 _Ceci nécessite d'être répété _: en tant qu'utilisateur ou détenteur d'ETH ou de tout autre actif numérique sur Ethereum, ainsi que pour les stakers qui n'opèrent pas sur les nœuds, **vous n'avez pas besoin de faire quoi que ce soit avec vos fonds ou votre portefeuille pour vous rendre compte de La Fusion.**. L'ETH n'est que l'ETH. Il n'existe rien de tel que « les anciens ETH »/« les nouveaux ETH » ou « ETH1 »/« ETH2 » et les portefeuilles fonctionnent exactement de la même manière après La Fusion qu'auparavant — les personnes vous disant l'inverse sont probablement des escrocs.
 
-Malgré le passage de la preuve de travail vers la preuve d'enjeu, tout l'historique d'Ethereum depuis sa genèse reste intact et inaltéré depuis ladite transition. Tous les fonds détenus dans votre portefeuille avant La Fusion sont toujours accessibles après La Fusion. **Aucune action n'est requise pour mettre à jour de votre côté.**
+Malgré le passage de la preuve de travail vers la preuve d'enjeu, tout l'historique d'Ethereum depuis sa genèse reste intact et inaltéré depuis ladite transition. Tous les fonds détenus dans votre portefeuille avant La Fusion restent accessibles après La Fusion. **Aucune action n'est requise pour mettre à jour de votre côté.**
 
 [En savoir plus sur la sécurité et Ethereum](/security/#eth2-token-scam)
 
