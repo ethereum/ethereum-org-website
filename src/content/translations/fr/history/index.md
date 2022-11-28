@@ -27,7 +27,7 @@ Vous cherchez de prochaines mises à jour de protocole ? [En savoir plus sur les
 
 ### Gray Glacier {#gray-glacier}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Jun-30-2022 10:54:04 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Numéro de bloc : <a href="https://etherscan.io/block/15050000">15 050 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Cours ETH : 1 069 $ USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220630094629/https://ethereum.org/en/">ethereum.org sur waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Jun-30-2022 10:54:04 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Numéro de bloc : <a href="https://etherscan.io/block/15050000">15 050 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Cours ETH : 1 069 $ USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220630094629/https://ethereum.org/en/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#gray-glacier-summary}
 
@@ -47,7 +47,7 @@ La mise à niveau Gray Glacier a retardé le déclenchement de la [bombe de diff
 
 ### Arrow Glacier {#arrow-glacier}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Dec-09-2021 07:55:23 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Numéro de bloc : <a href="https://etherscan.io/block/13773000">13 773 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Cours ETH : 4 111 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211207064430/https://ethereum.org/en/">ethereum.org sur waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Dec-09-2021 07:55:23 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Numéro de bloc : <a href="https://etherscan.io/block/13773000">13 773 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Cours ETH : 4 111 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211207064430/https://ethereum.org/en/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#arrow-glacier-summary}
 
@@ -66,7 +66,7 @@ La mise à niveau Arrow Glacier a retardé le déclenchement de la [bombe de dif
 
 ### Altair {#altair}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Oct-27-2021 10:56:23 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Numéro de période : 74,240<br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Cours ETH : 4 024 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211026174951/https://ethereum.org/en/">ethereum.org sur waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Oct-27-2021 10:56:23 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Numéro de période : 74,240<br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Cours ETH : 4 024 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211026174951/https://ethereum.org/en/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#altair-summary}
 
@@ -74,7 +74,7 @@ La mise à niveau Altair était la première mise à niveau répertoriée pour l
 
 - [Lire les informations de mise à niveau Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <emoji text=":tada:" size={1} mr="0.5rem" />Anecdote ! {#altair-fun-fact}
+#### <Emoji text=":tada:" size={1} mr="0.5rem" />Anecdote ! {#altair-fun-fact}
 
 Altair a été la première mise à niveau majeure d'un réseau dont la date de déploiement était exacte. Toutes les mises à niveau antérieures étaient basées sur un numéro de bloc déclaré sur la chaîne de preuve de travail dans laquelle les temps de bloc varient. La chaîne phare ne nécessite pas de résolution de preuve de travail mais fonctionne sur la base d'un système d'époques composé de 32 « créneaux » de 12 secondes durant lesquels les validateurs peuvent proposer des blocs. C'est pourquoi nous savions exactement quand nous atteindrions l'époque 74 240 et la date de sortie d'Altaïr !
 
@@ -84,7 +84,7 @@ Altair a été la première mise à niveau majeure d'un réseau dont la date de 
 
 ### London {#london}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Aug-05-2021 12:33:42 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/12 965 000">12,965,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 2 621 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210805124609/https://ethereum.org/en/">ethereum.org sur waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Aug-05-2021 12:33:42 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/12 965 000">12,965,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 2 621 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210805124609/https://ethereum.org/en/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#london-summary}
 
@@ -108,7 +108,7 @@ La mise à niveau London a introduit [EIP-1559](https://eips.ethereum.org/EIPS/e
 
 ### Berlin {#berlin}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>15-avril-2021 10:07:03 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/12244000">12 244 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 2 454 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210415093618/https://ethereum.org/">ethereum.org sur waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>15-avril-2021 10:07:03 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/12244000">12 244 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 2 454 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210415093618/https://ethereum.org/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#berlin-summary}
 
@@ -132,7 +132,7 @@ La mise à niveau de Berlin a optimisé le coût du gaz pour certaines actions E
 
 ### Origine de la chaîne phare {#beacon-chain-genesis}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>01-Déc-2020 12:00:35 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc sur la chaîne phare : <a href="https://beaconscan.com/slot/1">1</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 586,23 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201207184633/https://www.ethereum.org/en/">ethereum.org sur waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>01-Déc-2020 12:00:35 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc sur la chaîne phare : <a href="https://beaconscan.com/slot/1">1</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 586,23 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201207184633/https://www.ethereum.org/en/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#beacon-chain-genesis-summary}
 
@@ -148,7 +148,7 @@ La [chaîne phare](/upgrades/beacon-chain/) avait besoin de 16 384 dépôts de 
 
 ### Contrat de dépôt de mise en jeu déployé {#staking-deposit-contract}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>14-oct-2020 09:22:52 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/11052984">11 052 984</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 379,04 USD <br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201104235727/https://ethereum.org/en/">ethereum.org sur waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>14-oct-2020 09:22:52 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/11052984">11 052 984</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 379,04 USD <br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201104235727/https://ethereum.org/en/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#deposit-contract-summary}
 
@@ -164,7 +164,7 @@ Le contrat de dépôt de mise en jeu a introduit la [mise en jeu](/glossary/#sta
 
 ### Muir Glacier {#muir-glacier}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>02-janv-2020 08:30:49 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/9200000">9200000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 127,18 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20200103093618/https://ethereum.org/">ethereum.org sur waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>02-janv-2020 08:30:49 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/9200000">9200000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 127,18 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20200103093618/https://ethereum.org/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#muir-glacier-summary}
 
@@ -185,7 +185,7 @@ La fourche Muir Glacier a généré un retard de la [bombe de difficulté](/glos
 
 ### Istanbul {#istanbul}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>08-déc-2019 12:25:09 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/9069000">9 069 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 151,06 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20191216101254if*/https://ethereum.org/">ethereum.org sur waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>08-déc-2019 12:25:09 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/9069000">9 069 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 151,06 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20191216101254if*/https://ethereum.org/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#istanbul-summary}
 
@@ -214,7 +214,7 @@ La fourche Istanbul a :
 
 ### Constantinople {#constantinople}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>28-fév-2019 07:52:04 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/7280000">7 280 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 136,29 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20190415163751/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>28-fév-2019 07:52:04 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/7280000">7 280 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 136,29 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20190415163751/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#constantinople-summary}
 
@@ -241,7 +241,7 @@ La fourche Constantinople a :
 
 ### Byzantium {#byzantium}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>16-oct-2017 05:22:11 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/4370000">4 370 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 334,23 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20171017201143/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>16-oct-2017 05:22:11 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/4370000">4 370 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 334,23 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20171017201143/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#byzantium-summary}
 
@@ -274,7 +274,7 @@ La fourche Byzantium a :
 
 ### Spurious Dragon {#spurious-dragon}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>22-nov-2016 04:15:44 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/2675000">2 675 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 9,84 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161127154654/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>22-nov-2016 04:15:44 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/2675000">2 675 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 9,84 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161127154654/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#spurious-dragon-summary}
 
@@ -299,7 +299,7 @@ La fourche Spurious Dragon est la deuxième réponse aux attaques par déni de s
 
 ### Tangerine Whistle {#tangerine-whistle}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>18-oct-2016 01:19:31 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/2463000">2 463 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 12,50 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161030043727/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>18-oct-2016 01:19:31 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/2463000">2 463 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 12,50 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161030043727/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#tangerine-whistle-summary}
 
@@ -320,7 +320,7 @@ La fourche Tangerine Whistle a été la deuxième réponse aux attaques par dén
 
 ### Fourche DAO {#dao-fork}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>20-juil-2016 01:20:40 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro du bloc : <a href="https://etherscan.io/block/1920000">1 920 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 12,54 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160803215306/https://ethereum.org/">ethereum.org sur waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>20-juil-2016 01:20:40 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro du bloc : <a href="https://etherscan.io/block/1920000">1 920 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 12,54 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160803215306/https://ethereum.org/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#dao-fork-summary}
 
@@ -336,7 +336,7 @@ Certains mineurs ont refusé la fourche car l'incident DAO ne résultait pas d'u
 
 ### Homestead {#homestead}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>14-mars-2016 06:49:53 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/1150000">1 150 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 12,50 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160313203843/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>14-mars-2016 06:49:53 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/1150000">1 150 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 12,50 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160313203843/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#homestead-summary}
 
@@ -358,7 +358,7 @@ La fourche Homestead tournée vers l'avenir. Elle comprenait plusieurs changemen
 
 ### Frontier Thawing {#frontier-thawing}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>7-sep-2015 09:33:09 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro du bloc : <a href="https://etherscan.io/block/200000">200 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 1,24 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150912193811/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>7-sep-2015 09:33:09 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro du bloc : <a href="https://etherscan.io/block/200000">200 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 1,24 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150912193811/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#frontier-thawing-summary}
 
@@ -371,7 +371,7 @@ La fourche Frontier Thawing a levé la [limite de gaz](/glossary/#gas) de 5 000
 
 ### Frontier {#frontier}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>30-juil-2015 03:26:13 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/0">0</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Cours ETH : N/A<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150802035735/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>30-juil-2015 03:26:13 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/0">0</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Cours ETH : N/A<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150802035735/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#frontier-summary}
 
@@ -385,7 +385,7 @@ Frontier était une implémentation vivante, mais sans structure, du projet Ethe
 
 ### Vente d'ETH {#ether-sale}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Du 02 au 22 septembre 2014<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140804235628/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Du 02 au 22 septembre 2014<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140804235628/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
 
 L'ETH est officiellement en vente pour 42 jours. Il était possible d'en acheter avec des BTC.
 
@@ -395,7 +395,7 @@ L'ETH est officiellement en vente pour 42 jours. Il était possible d'en acheter
 
 ### Publication du Livre jaune {#yellowpaper}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 1er avril 2014<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140509173418/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 1er avril 2014<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140509173418/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
 
 Le Livre jaune, rédigé par le Dr. Gavin Wood, est une définition technique du protocole Ethereum.
 
@@ -407,7 +407,7 @@ Le Livre jaune, rédigé par le Dr. Gavin Wood, est une définition technique du
 
 ### Publication du Livre blanc {#whitepaper}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 27 novembre 2013<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140208030136/http://www.ethereum.org/">ethereum.org sur waybackmachine</a>
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 27 novembre 2013<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140208030136/http://www.ethereum.org/">ethereum.org sur waybackmachine</a>
 
 Document d'introduction publié en 2013 par Vitalik Buterin, le fondateur d'Ethereum, précédant le lancement du projet en 2015.
 
