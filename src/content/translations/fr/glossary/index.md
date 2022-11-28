@@ -55,7 +55,7 @@ Dans [Solidity](#solidity), `assert(false)` compile en `0xfe`, un code d'opérat
 
 ### Attestation {#attestation}
 
-Un validateur vote pour un [ bloc](#block). Les validateurs doivent attester de la conformité des blocs, signalant qu'ils sont d'accord avec l'état proposé par le bloc.
+Un validateur vote pour un [bloc](#block). Les validateurs doivent attester de la conformité des blocs, signalant qu'ils sont d'accord avec l'état proposé par le bloc.
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos/attestations/">
   Attestations
