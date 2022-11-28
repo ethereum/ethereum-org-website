@@ -3,7 +3,7 @@ import { Flex, Icon, IconButton, Text, useColorMode } from "@chakra-ui/react"
 import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
 import styled from "@emotion/styled"
 import { cloneDeep } from "lodash"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
@@ -13,7 +13,6 @@ import Link from "../Link"
 import Search from "../Search"
 import Translation from "../Translation"
 import { NavLink } from "../SharedStyledComponents"
-import { translateMessageId } from "../../utils/translations"
 import HomeIcon from "../../assets/eth-home-icon.svg"
 import { IItem, ISections } from "./types"
 
@@ -125,7 +124,7 @@ const Nav: React.FC<IProps> = ({ path }) => {
   const { colorMode, toggleColorMode } = useColorMode()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   const isDarkTheme = colorMode === "dark"
 
@@ -403,9 +402,9 @@ const Nav: React.FC<IProps> = ({ path }) => {
 
   return (
     <NavContainer>
-      <StyledNav aria-label={translateMessageId("nav-primary", intl)}>
+      <StyledNav aria-label={t("nav-primary")}>
         <NavContent>
-          <HomeLogoNavLink to="/" aria-label={translateMessageId("home", intl)}>
+          <HomeLogoNavLink to="/" aria-label={t("home")}>
             <HomeLogo />
           </HomeLogoNavLink>
           {/* Desktop */}
@@ -449,7 +448,7 @@ const Nav: React.FC<IProps> = ({ path }) => {
         </NavContent>
       </StyledNav>
       {shouldShowSubNav && (
-        <SubNav aria-label={translateMessageId("nav-developers", intl)}>
+        <SubNav aria-label={t("nav-developers")}>
           {ednLinks.map((link, idx) => (
             <NavLink
               key={idx}

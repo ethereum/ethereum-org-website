@@ -11,7 +11,8 @@ import {
 import { graphql, StaticQuery } from "gatsby"
 import React from "react"
 import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa"
-import { useIntl } from "react-intl"
+import { useI18next } from "gatsby-plugin-react-i18next"
+
 import { Lang } from "../utils/languages"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
@@ -53,9 +54,9 @@ export interface LinkSection {
 export interface IProps {}
 
 const Footer: React.FC<IProps> = () => {
-  const intl = useIntl()
+  const { language } = useI18next()
 
-  const isPageRightToLeft = isLangRightToLeft(intl.locale as Lang)
+  const isPageRightToLeft = isLangRightToLeft(language as Lang)
 
   const [medBp] = useToken("breakpoints", ["md"])
 
@@ -301,7 +302,7 @@ const Footer: React.FC<IProps> = () => {
             <Box color="text200">
               <Translation id="website-last-updated" />:{" "}
               {getLocaleTimestamp(
-                intl.locale as Lang,
+                language as Lang,
                 data.allSiteBuildMetadata.edges[0].node.buildTime
               )}
             </Box>

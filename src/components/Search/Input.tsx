@@ -1,10 +1,9 @@
 import React, { ChangeEvent, FormEvent } from "react"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import styled from "@emotion/styled"
 import { connectSearchBox } from "react-instantsearch-dom"
 
 import Icon from "../Icon"
-import { translateMessageId } from "../../utils/translations"
 
 const Form = styled.form`
   margin: 0;
@@ -72,8 +71,8 @@ const Input: React.FC<IInputProps> = ({
   inputRef,
   ...rest
 }) => {
-  const intl = useIntl()
-  const searchString = translateMessageId("search", intl)
+  const { t } = useTranslation()
+  const searchString = t("search")
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>): void => {
     const value = event.target.value

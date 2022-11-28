@@ -3,8 +3,6 @@ import { ApolloProvider } from "@apollo/client"
 import { useColorModeValue } from "@chakra-ui/react"
 import { ThemeProvider } from "@emotion/react"
 import styled from "@emotion/styled"
-import { IntlProvider } from "react-intl"
-import { LocaleProvider } from "gatsby-theme-i18n"
 
 import { lightTheme, darkTheme } from "../theme"
 
@@ -92,8 +90,6 @@ const Layout: React.FC<IProps> = ({
 
   const [isZenMode, setIsZenMode] = useState<boolean>(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState<boolean>(false)
-  const locale = pageContext.locale
-  const messages = require(`../intl/${locale}.json`)
 
   // Exit Zen Mode on 'esc' click
   useKeyPress(`Escape`, () => handleZenModeChange(false))
@@ -141,52 +137,50 @@ const Layout: React.FC<IProps> = ({
     !isTranslationBannerIgnored
 
   return (
-    <LocaleProvider pageContext={pageContext}>
-      {/* our current react-intl types does not support react 18 */}
-      {/* TODO: once we upgrade react-intl to v6, remove this ts-ignore */}
-      {/* @ts-ignore */}
-      <IntlProvider locale={locale!} key={locale} messages={messages}>
-        <ApolloProvider client={client}>
-          <ThemeProvider theme={theme}>
-            <ZenModeContext.Provider value={{ isZenMode, handleZenModeChange }}>
-              <SkipLink hrefId="#main-content" />
-              <TranslationBanner
-                shouldShow={shouldShowTranslationBanner}
-                isPageContentEnglish={isPageContentEnglish}
-                isPageRightToLeft={isPageRightToLeft}
-                originalPagePath={pageContext.originalPath!}
-              />
-              <TranslationBannerLegal
-                shouldShow={isLegal}
-                isPageRightToLeft={isPageRightToLeft}
-                originalPagePath={pageContext.originalPath!}
-              />
-              <ContentContainer>
+    <ApolloProvider client={client}>
+      <ThemeProvider theme={theme}>
+        <ZenModeContext.Provider value={{ isZenMode, handleZenModeChange }}>
+          <SkipLink hrefId="#main-content" />
+          <TranslationBanner
+            shouldShow={shouldShowTranslationBanner}
+            isPageContentEnglish={isPageContentEnglish}
+            isPageRightToLeft={isPageRightToLeft}
+            originalPagePath={pageContext.i18n.originalPath || ""}
+          />
+          <TranslationBannerLegal
+            shouldShow={isLegal}
+            isPageRightToLeft={isPageRightToLeft}
+            originalPagePath={pageContext.i18n.originalPath || ""}
+          />
+          <ContentContainer>
+            <ZenMode>
+              <Nav path={path} />
+              {shouldShowSideNav && <SideNavMobile path={path} />}
+            </ZenMode>
+            <SkipLinkAnchor id="main-content" />
+            <MainContainer>
+              {shouldShowSideNav && (
                 <ZenMode>
-                  <Nav path={path} />
-                  {shouldShowSideNav && <SideNavMobile path={path} />}
+                  <SideNav path={path} />
                 </ZenMode>
-                <SkipLinkAnchor id="main-content" />
-                <MainContainer>
-                  {shouldShowSideNav && (
-                    <ZenMode>
-                      <SideNav path={path} />
-                    </ZenMode>
-                  )}
-                  <MainContent>
-                    <Main>{children}</Main>
-                  </MainContent>
-                </MainContainer>
-                <ZenMode>
-                  <Footer />
-                </ZenMode>
-                <FeedbackWidget location={path} />
-              </ContentContainer>
-            </ZenModeContext.Provider>
-          </ThemeProvider>
-        </ApolloProvider>
-      </IntlProvider>
-    </LocaleProvider>
+              )}
+              <MainContent>
+                <ZenModeContext.Provider
+                  value={{ isZenMode, handleZenModeChange }}
+                >
+                  <Main>{children}</Main>
+                </ZenModeContext.Provider>
+              </MainContent>
+            </MainContainer>
+            <ZenMode>
+              <Footer />
+            </ZenMode>
+            <FeedbackWidget location={path} />
+          </ContentContainer>
+        </ZenModeContext.Provider>
+        ?
+      </ThemeProvider>
+    </ApolloProvider>
   )
 }
 

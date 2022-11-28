@@ -2,7 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import ActionCard from "../components/ActionCard"
 import Callout from "../components/Callout"
@@ -20,7 +20,6 @@ import {
   GrayContainer,
   Page,
 } from "../components/SharedStyledComponents"
-import { translateMessageId } from "../utils/translations"
 import { getImage } from "../utils/image"
 import { Context } from "../types"
 
@@ -325,55 +324,43 @@ interface IGetInvolvedCard {
 const CommunityPage = ({
   data,
 }: PageProps<Queries.CommunityPageQuery, Context>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   const heroContent = {
-    title: translateMessageId("page-community-hero-title", intl),
-    header: translateMessageId("page-community-hero-header", intl),
-    subtitle: translateMessageId("page-community-hero-subtitle", intl),
+    title: t("page-community-hero-title"),
+    header: t("page-community-hero-header"),
+    subtitle: t("page-community-hero-subtitle"),
     image: getImage(data.enterprise)!,
-    alt: translateMessageId("page-community-hero-alt", intl),
+    alt: t("page-community-hero-alt"),
   }
 
   const cards: Array<ICard> = [
     {
       image: getImage(data.docking),
-      title: translateMessageId("page-community-card-1-title", intl),
-      description: translateMessageId(
-        "page-community-card-1-description",
-        intl
-      ),
-      alt: translateMessageId("page-index-get-started-wallet-image-alt", intl),
+      title: t("page-community-card-1-title"),
+      description: t("page-community-card-1-description"),
+      alt: t("page-index-get-started-wallet-image-alt"),
       to: "/community/online/",
     },
     {
       image: getImage(data.eth),
-      title: translateMessageId("page-community-card-2-title", intl),
-      description: translateMessageId(
-        "page-community-card-2-description",
-        intl
-      ),
-      alt: translateMessageId("page-index-get-started-eth-image-alt", intl),
+      title: t("page-community-card-2-title"),
+      description: t("page-community-card-2-description"),
+      alt: t("page-index-get-started-eth-image-alt"),
       to: "/community/events/",
     },
     {
       image: getImage(data.doge),
-      title: translateMessageId("page-community-card-3-title", intl),
-      description: translateMessageId(
-        "page-community-card-3-description",
-        intl
-      ),
-      alt: translateMessageId("page-index-get-started-dapps-image-alt", intl),
+      title: t("page-community-card-3-title"),
+      description: t("page-community-card-3-description"),
+      alt: t("page-index-get-started-dapps-image-alt"),
       to: "/community/get-involved/",
     },
     {
       image: getImage(data.future),
-      title: translateMessageId("page-community-card-4-title", intl),
-      description: translateMessageId(
-        "page-community-card-4-description",
-        intl
-      ),
-      alt: translateMessageId("page-index-get-started-dapps-image-alt", intl),
+      title: t("page-community-card-4-title"),
+      description: t("page-community-card-4-description"),
+      alt: t("page-index-get-started-dapps-image-alt"),
       to: "/community/grants/",
     },
   ]
@@ -381,47 +368,26 @@ const CommunityPage = ({
   const whyGetInvolvedCards: Array<IGetInvolvedCard> = [
     {
       emoji: ":mage:",
-      title: translateMessageId(
-        "page-community-why-get-involved-card-1-title",
-        intl
-      ),
-      description: translateMessageId(
-        "page-community-why-get-involved-card-1-description",
-        intl
-      ),
+      title: t("page-community-why-get-involved-card-1-title"),
+      description: t("page-community-why-get-involved-card-1-description"),
     },
     {
       emoji: ":dollar:",
-      title: translateMessageId(
-        "page-community-why-get-involved-card-2-title",
-        intl
-      ),
-      description: translateMessageId(
-        "page-community-why-get-involved-card-2-description",
-        intl
-      ),
+      title: t("page-community-why-get-involved-card-2-title"),
+      description: t("page-community-why-get-involved-card-2-description"),
     },
     {
       emoji: ":collision:",
-      title: translateMessageId(
-        "page-community-why-get-involved-card-3-title",
-        intl
-      ),
-      description: translateMessageId(
-        "page-community-why-get-involved-card-3-description",
-        intl
-      ),
+      title: t("page-community-why-get-involved-card-3-title"),
+      description: t("page-community-why-get-involved-card-3-description"),
     },
   ]
 
   return (
     <Page>
       <PageMetadata
-        title={translateMessageId("page-community-meta-title", intl)}
-        description={translateMessageId(
-          "page-community-meta-description",
-          intl
-        )}
+        title={t("page-community-meta-title")}
+        description={t("page-community-meta-description")}
       />
       <PageHero isReverse content={heroContent} />
       <Divider />
@@ -458,10 +424,7 @@ const CommunityPage = ({
             <ImageContainer>
               <IntroImage
                 image={getImage(data.developerBlocks)!}
-                alt={translateMessageId(
-                  "page-community-get-involved-image-alt",
-                  intl
-                )}
+                alt={t("page-community-get-involved-image-alt")}
               />
             </ImageContainer>
           </IntroRow>
@@ -500,10 +463,7 @@ const CommunityPage = ({
           <ImageContainer>
             <FeatureImage
               image={getImage(data.ethereum)!}
-              alt={translateMessageId(
-                "page-community-open-source-image-alt",
-                intl
-              )}
+              alt={t("page-community-open-source-image-alt")}
             />
           </ImageContainer>
         </RowReverse>
@@ -534,7 +494,7 @@ const CommunityPage = ({
           <ImageContainer>
             <FeatureImage
               image={getImage(data.finance)!}
-              alt={translateMessageId("page-index-internet-image-alt", intl)}
+              alt={t("page-index-internet-image-alt")}
             />
           </ImageContainer>
         </Row>
@@ -557,7 +517,7 @@ const CommunityPage = ({
           <ImageContainer>
             <FeatureImage
               image={getImage(data.hackathon)!}
-              alt={translateMessageId("page-community-support-alt", intl)}
+              alt={t("page-community-support-alt")}
             />
           </ImageContainer>
         </RowReverse>
@@ -575,7 +535,7 @@ const CommunityPage = ({
           <StyledCallout
             image={getImage(data.eth)}
             titleKey="page-community-get-eth-title"
-            alt={translateMessageId("page-community-get-eth-alt", intl)}
+            alt={t("page-community-get-eth-alt")}
             descriptionKey="page-community-get-eth-description"
           >
             <div>
@@ -587,7 +547,7 @@ const CommunityPage = ({
           <StyledCallout
             image={getImage(data.doge)}
             titleKey="page-community-explore-dapps-title"
-            alt={translateMessageId("page-community-explore-dapps-alt", intl)}
+            alt={t("page-community-explore-dapps-alt")}
             descriptionKey="page-community-explore-dapps-description"
           >
             <div>
@@ -606,7 +566,16 @@ const CommunityPage = ({
 export default CommunityPage
 
 export const query = graphql`
-  query CommunityPage {
+  query CommunityPage($languagesToFetch: [String!]!) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
         gatsbyImageData(
