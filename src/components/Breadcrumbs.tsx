@@ -1,10 +1,10 @@
 import React from "react"
 import { useIntl } from "react-intl"
+import { Box, UnorderedList, ListItem } from "@chakra-ui/react"
 
 import Link from "./Link"
-import { isLang, supportedLanguages } from "../utils/languages"
+import { isLang } from "../utils/languages"
 import { isTranslationKey, translateMessageId } from "../utils/translations"
-import { Box, UnorderedList, ListItem } from "@chakra-ui/react"
 
 export interface IProps {
   slug: string
@@ -75,7 +75,6 @@ const Breadcrumbs: React.FC<IProps> = ({
             letterSpacing="wider"
           >
             <Link
-              as={Link}
               to={crumb.fullPath}
               isPartiallyActive={slug === crumb.fullPath}
               textDecoration="none"
