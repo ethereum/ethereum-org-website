@@ -171,7 +171,7 @@ Mode sinkronisasi mewakili pendekatan berbeda terhadap proses ini dengan berbaga
 
 Tinjauan umum pendekatan sinkronisasi yang digunakan dalam klien untuk Jaringan Utama:
 
-##### Sinkonisasi penuh {#full-sync}
+##### Sinkonisasi penuh
 
 Sinkronisasi penuh mengunduh semua blok (termasuk header, transaksi, dan bukti pembayaran) dan menghasilkan state blockchain yang terus bertambah dengan mengeksekusi setiap blok dari blok genesis.
 

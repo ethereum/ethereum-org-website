@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "react-intl"
+import { useI18next } from "gatsby-plugin-react-i18next"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
@@ -43,6 +43,7 @@ import Emoji from "../components/OldEmoji"
 import YouTube from "../components/YouTube"
 import MergeInfographic from "../components/MergeInfographic"
 import FeedbackCard from "../components/FeedbackCard"
+import QuizWidget from "../components/Quiz/QuizWidget"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
@@ -183,6 +184,7 @@ const components = {
   YouTube,
   ExpandableCard,
   MergeInfographic,
+  QuizWidget,
 }
 
 const Title = styled.h1`
@@ -332,7 +334,7 @@ const dropdownLinks: ButtonDropdownList = {
 const UpgradePage = ({
   data: { mdx },
 }: PageProps<Queries.UpgradePageQuery, Context>) => {
-  const intl = useIntl()
+  const { language } = useI18next()
 
   if (!mdx?.frontmatter || !mdx.parent)
     throw new Error(
@@ -371,7 +373,7 @@ const UpgradePage = ({
           </SummaryBox>
           <LastUpdated>
             <Translation id="page-last-updated" />:{" "}
-            {getLocaleTimestamp(intl.locale as Lang, lastUpdatedDate)}
+            {getLocaleTimestamp(language as Lang, lastUpdatedDate)}
           </LastUpdated>
         </TitleCard>
         <Image image={getImage(mdx.frontmatter.image)!} alt="" />
@@ -411,7 +413,16 @@ const UpgradePage = ({
 }
 
 export const upgradePageQuery = graphql`
-  query UpgradePage($relativePath: String) {
+  query UpgradePage($languagesToFetch: [String!]!, $relativePath: String) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug

@@ -35,6 +35,7 @@ Diese Projekte haben ihre eigenen Zuschüsse für Projektvorhaben zur Entwicklun
 - [mStable-Zuschussprogram](https://docs.mstable.org/advanced/grants-program) – _[mStable](https://mstable.org/)-Gemeinschaft_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/)-Ökosystem_
 - [Uniswap-Zuschussprogramm](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/)-Gemeinschaft_
+- [Web3 Zuschüsse](https://web3grants.net) - _Eine umfangreiche Liste von Web3/Krypto verwandten Förderungsprogrammen_
 
 ## Quadratische Finanzierung {#quadratic-funding}
 

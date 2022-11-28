@@ -2,7 +2,6 @@
 title: Staking Launchpad translations
 lang: en
 description: How to contribute by translating the Ethereum Staking Launchpad
-sidebar: true
 ---
 
 # Staking Launchpad translations {#launchpad-translations}

@@ -1,20 +1,19 @@
 import React, { useState } from "react"
-import { useColorMode } from "@chakra-ui/react"
+import { Flex, Icon, IconButton, Text, useColorMode } from "@chakra-ui/react"
+import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
 import styled from "@emotion/styled"
 import { cloneDeep } from "lodash"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
+import ButtonLink from "../ButtonLink"
 import NakedButton from "../NakedButton"
 import Link from "../Link"
-import Icon from "../Icon"
 import Search from "../Search"
 import Translation from "../Translation"
 import { NavLink } from "../SharedStyledComponents"
-import { translateMessageId } from "../../utils/translations"
 import HomeIcon from "../../assets/eth-home-icon.svg"
-
 import { IItem, ISections } from "./types"
 
 const NavContainer = styled.div`
@@ -79,25 +78,7 @@ const RightItems = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-`
-
-const NavListItem = styled.li`
-  white-space: nowrap;
-  margin: 0;
-`
-
-const RightNavLink = styled(NavLink)`
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  margin-right: 0;
-  margin-left: 1rem;
-
-  &:hover {
-    svg {
-      fill: ${(props) => props.theme.colors.primary};
-    }
-  }
+  gap: 0.5rem;
 `
 
 const HomeLogoNavLink = styled(Link)`
@@ -143,7 +124,7 @@ const Nav: React.FC<IProps> = ({ path }) => {
   const { colorMode, toggleColorMode } = useColorMode()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   const isDarkTheme = colorMode === "dark"
 
@@ -421,9 +402,9 @@ const Nav: React.FC<IProps> = ({ path }) => {
 
   return (
     <NavContainer>
-      <StyledNav aria-label={translateMessageId("nav-primary", intl)}>
+      <StyledNav aria-label={t("nav-primary")}>
         <NavContent>
-          <HomeLogoNavLink to="/" aria-label={translateMessageId("home", intl)}>
+          <HomeLogoNavLink to="/" aria-label={t("home")}>
             <HomeLogo />
           </HomeLogoNavLink>
           {/* Desktop */}
@@ -433,20 +414,26 @@ const Nav: React.FC<IProps> = ({ path }) => {
             </LeftItems>
             <RightItems>
               <Search useKeyboardShortcut />
-              <ThemeToggle
-                onClick={toggleColorMode}
+              <IconButton
                 aria-label={
                   isDarkTheme ? "Switch to Light Theme" : "Switch to Dark Theme"
                 }
-              >
-                <NavIcon name={isDarkTheme ? "lightTheme" : "darkTheme"} />
-              </ThemeToggle>
-              <RightNavLink to="/languages/">
-                <NavIcon name="language" />
-                <Span>
+                icon={
+                  <Icon
+                    as={isDarkTheme ? MdWbSunny : MdBrightness2}
+                    fontSize="2xl"
+                  />
+                }
+                variant="icon"
+                _hover={{ color: "primary" }}
+                onClick={toggleColorMode}
+              />
+              <ButtonLink to="/languages/" variant="icon">
+                <Icon as={MdLanguage} fontSize="2xl" />
+                <Text as="span" pl={2}>
                   <Translation id="languages" />
-                </Span>
-              </RightNavLink>
+                </Text>
+              </ButtonLink>
             </RightItems>
           </InnerContent>
           {/* Mobile */}
@@ -461,7 +448,7 @@ const Nav: React.FC<IProps> = ({ path }) => {
         </NavContent>
       </StyledNav>
       {shouldShowSubNav && (
-        <SubNav aria-label={translateMessageId("nav-developers", intl)}>
+        <SubNav aria-label={t("nav-developers")}>
           {ednLinks.map((link, idx) => (
             <NavLink
               key={idx}

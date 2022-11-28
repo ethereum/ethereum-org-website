@@ -34,9 +34,9 @@ Read more about the ethereum.org Translation Program [mission and vision](/contr
 
 ### Our progress so far {#our-progress}
 
-- [**4,100 +** translators](/contributing/translation-program/contributors/)
+- [**4,200 +** translators](/contributing/translation-program/contributors/)
 - [**50** languages live on site](/languages/)
-- [**2.5 million** words translated in 2022 so far](/contributing/translation-program/acknowledgements/)
+- [**2.7 million** words translated in 2022](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 
@@ -50,11 +50,18 @@ We want to acknowledge our translators and support them on their career paths. H
 If you have contributed to the Translation Program and at least 5,000 of your translated words have been approved, you are eligible for an ethereum.org translator certificate. [More on certificates](/contributing/translation-program/acknowledgements/#certificate)
 
 #### POAPs {#poaps}
+
 All of our translators are eligible for a POAP (Proof of Attendance Protocol) - an NFT that proves their contribution to the ethereum.org Translation Program. [More on POAPs](/contributing/translation-program/acknowledgements/#poap)
 
 #### Translator acknowledgements {#translator-acknowledgements}
 
 Public acknowledgements of our top translators using [leaderboards](/contributing/translation-program/acknowledgements/) and a [list of all contributors to the Translation Program](/contributing/translation-program/contributors/).
+
+#### Rewards {#rewards}
+
+In the past, we have retroactively rewarded our most active contributors with tickets to Ethereum conferences like [Devcon](https://devcon.org/en/) and [Devconnect](https://devconnect.org/), as well as exclusive ethereum.org merch.
+
+We're constantly thinking of new and innovative ways to reward our contributors, so stay tuned!
 
 ### What we're working on {#our-projects}
 

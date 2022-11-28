@@ -95,7 +95,7 @@ id="developers">
 - 链上随机性的来源
 - _安全头_ 和 _最终区块_ 的概念
 
-更多信息，请查看 Tim Beiko 的这篇博客：【合并如何影响以太坊的应用层】(https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer)。
+更多信息，请查看 Tim Beiko 的这篇博客：[合并如何影响以太坊的应用层](https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer)。
 </ExpandableCard>
 
 ## 合并和能源消耗 {#merge-and-energy}

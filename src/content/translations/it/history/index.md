@@ -27,7 +27,7 @@ Cerchi i prossimi aggiornamenti di protocollo? [Maggiori informazioni sui prossi
 
 ### Gray Glacier {#gray-glacier}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Jun-30-2022 10:54:04 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Numero del blocco: <a href="https://etherscan.io/block/15050000">15,050,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Prezzo ETH: $1,069 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220630094629/https://ethereum.org/en/">ethereum.org sulla waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Jun-30-2022 10:54:04 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Numero del blocco: <a href="https://etherscan.io/block/15050000">15,050,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Prezzo ETH: $1,069 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220630094629/https://ethereum.org/en/">ethereum.org sulla waybackmachine</a>
 
 #### Riepilogo {#gray-glacier-summary}
 
@@ -47,7 +47,7 @@ L'aggiornamento della rete di Gray Glacier ha rimandato di tre mesi la [bomba di
 
 ### Arrow Glacier {#arrow-glacier}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Dec-09-2021 07:55:23 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Numero del blocco: <a href="https://etherscan.io/block/13773000">13.773.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Prezzo ETH: $4.111 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211207064430/https://ethereum.org/en/">ethereum.org sulla waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Dec-09-2021 07:55:23 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Numero del blocco: <a href="https://etherscan.io/block/13773000">13.773.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Prezzo ETH: $4.111 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211207064430/https://ethereum.org/en/">ethereum.org sulla waybackmachine</a>
 
 #### Riepilogo {#arrow-glacier-summary}
 
@@ -66,7 +66,7 @@ L'aggiornamento di rete Arrow Glacier ha rimandato la [bomba di difficoltà](/gl
 
 ### Altair {#altair}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Oct-27-2021 10:56:23 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Numero dell'epoch: 74.240<br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Prezzo ETH: $4.024 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211026174951/https://ethereum.org/en/">ethereum.org sulla waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Oct-27-2021 10:56:23 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Numero dell'epoch: 74.240<br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Prezzo ETH: $4.024 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211026174951/https://ethereum.org/en/">ethereum.org sulla waybackmachine</a>
 
 #### Riepilogo {#altair-summary}
 
@@ -74,7 +74,7 @@ L'aggiornamento Altair è stato il primo aggiornamento pianificato per la [Beaco
 
 - [Leggi le specifiche dell'aggiornamento di Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <Emoji text=":tada:" size={1} mr="0.5rem" />Curiosità! {#altair-fun-fact}
+#### <emoji text=":tada:" size={1} mr="0.5rem" />Curiosità! {#altair-fun-fact}
 
 Altair è stato il primo importante aggiornamento di rete che ha avuto un tempo di rollout esatto. Tutti gli aggiornamenti precedenti erano basati su un numero di blocco dichiarato su una catena Proof of Work, dove i tempi dei blocco variavano. La beacon chain non richiede la risoluzione del Proof of Work e funziona invece su un sistema di epoche basato sul tempo che consiste in 32 "slot" di dodici secondi in cui i validatori possono proporre blocchi. Questo è il motivo per cui sapevamo esattamente quando avremmo raggiunto l'epoca 74.240 e Altair sarebbe diventato operativo!
 
@@ -84,23 +84,23 @@ Altair è stato il primo importante aggiornamento di rete che ha avuto un tempo 
 
 ### London {#london}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>05-Ago-2021 12:33:42 +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero del blocco: <a href="https://etherscan.io/block/12965000">12,965,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $2621 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210805124609/https://ethereum.org/en/">ethereum.org sulla waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>05-Ago-2021 12:33:42 +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero del blocco: <a href="https://etherscan.io/block/12965000">12,965,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $2621 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210805124609/https://ethereum.org/en/">ethereum.org sulla waybackmachine</a>
 
 #### Riepilogo {#london-summary}
 
-L'aggiornamento London ha introdotto l'[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), che ha riformato il mercato delle commissioni di transazione, oltre a modificare le modalità di gestione dei rimborsi di carburante e la pianificazione dell'[Ice Age](/glossary/#ice-age).
+L'aggiornamento di Londra ha introdotto l'[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), che ha riformato il mercato delle commissioni di transazione, oltre a modificare come sono gestiti i rimborsi di gas e la pianificazione dell'[Era Glaciale](/glossary/#ice-age).
 
-- [Sei uno sviluppatore di dApp? Assicurati di aggiornare le tue librerie e strumentazioni.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
+- [Sei uno sviluppatore di dapp? Assicurati di aggiornare le tue librerie e strumentazioni.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
 - [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Leggi la spiegazione del Cat Herder di Ethereum](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
 <ExpandableCard title="EIP di London" contentPreview="Official improvements included in this upgrade.">
 
-- [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) – _migliora il mercato delle commissioni di transazione_
-- [EIP-3198](https://eips.ethereum.org/EIPS/eip-3198) – _restituisce `BASEFEE` da un blocco_
-- [EIP-3529](https://eips.ethereum.org/EIPS/eip-3529) - _riduce i rimborsi di gas per le operazioni EVM_
-- [EIP-3541](https://eips.ethereum.org/EIPS/eip-3541) - _impedisce la distribuzione di contratti che iniziano per `0xEF`_
-- [EIP-3554](https://eips.ethereum.org/EIPS/eip-3554) – _ritardo dell'Ice Age fino a dicembre 2021_
+- [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559): _migliora il mercato delle commissioni di transazione_
+- [EIP-3198](https://eips.ethereum.org/EIPS/eip-3198): _restituisce la `BASEFEE` da un blocco_
+- [EIP-3529](https://eips.ethereum.org/EIPS/eip-3529): _riduce i rimborsi di gas per le operazioni dell'EVM_
+- [EIP-3541](https://eips.ethereum.org/EIPS/eip-3541): _impedisce la distribuzione dei contratti che iniziano per `0xEF`_
+- [EIP-3554](https://eips.ethereum.org/EIPS/eip-3554): _ritarda l'Era Glaciale fino a dicembre 2021_
 
 </ExpandableCard>
 
@@ -108,21 +108,21 @@ L'aggiornamento London ha introdotto l'[EIP-1559](https://eips.ethereum.org/EIPS
 
 ### Berlin {#berlin}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>15 Apr 2021 10:07:03 +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero del blocco: <a href="https://etherscan.io/block/12244000">12.244.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $2454 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210415093618/https://ethereum.org/">ethereum.org sulla waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>15 Apr 2021 10:07:03 +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero del blocco: <a href="https://etherscan.io/block/12244000">12.244.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $2454 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210415093618/https://ethereum.org/">ethereum.org sulla waybackmachine</a>
 
 #### Riepilogo {#berlin-summary}
 
-L'aggiornamento Berlin ha ottimizzato i costi del gas per certe azioni dell'EVM e ha aumentato il supporto per tipi di transazione multipli.
+L'aggiornamento di Berlino ha ottimizzato i costi del gas per certe azioni dell'EVM e ha aumentato il supporto per numerosi tipi di transazione.
 
 - [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [Leggi la spiegazione del Cat Herder di Ethereum](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
 <ExpandableCard title="EIP di Berlin" contentPreview="Official improvements included in this upgrade.">
 
-- [EIP-2565](https://eips.ethereum.org/EIPS/eip-2565) – _riduce i costi del gas di ModExp_
-- [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) – _consente un più facile supporto per più tipi di transazione_
-- [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929) – _aumento del costo del gas per i codici operativi d'accesso di stato_
-- [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) – _aggiunge elenchi d'accesso opzionali_
+- [EIP-2565](https://eips.ethereum.org/EIPS/eip-2565): _riduce il costo del gas di ModExp_
+- [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718): _consente un più facile supporto per numerosi tipi di transazione_
+- [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929): _il costo del gas aumenta per gli opcode d'accesso di stato_
+- [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930): _aggiunge elenchi d'accesso facoltativi_
 
 </ExpandableCard>
 
@@ -132,7 +132,7 @@ L'aggiornamento Berlin ha ottimizzato i costi del gas per certe azioni dell'EVM 
 
 ### Genesi della beacon chain {#beacon-chain-genesis}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Dec-01-2020 12:00:35 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero di blocco della Beacon Chain: <a href="https://beaconscan.com/slot/1">1</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $586,23 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201207184633/https://www.ethereum.org/en/">ethereum.org sulla waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Dec-01-2020 12:00:35 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero di blocco della Beacon Chain: <a href="https://beaconscan.com/slot/1">1</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $586,23 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201207184633/https://www.ethereum.org/en/">ethereum.org sulla waybackmachine</a>
 
 #### Riepilogo {#beacon-chain-genesis-summary}
 
@@ -148,7 +148,7 @@ La [Beacon Chain](/upgrades/beacon-chain/) necessita di 16.384 depositi da 32 ET
 
 ### Distribuzione del contratto di deposito in staking {#staking-deposit-contract}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Oct-14-2020 09:22:52 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero del blocco: <a href="https://etherscan.io/block/11052984">11.052.984</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $379,04 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201104235727/https://ethereum.org/en/">ethereum.org sulla waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Oct-14-2020 09:22:52 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero del blocco: <a href="https://etherscan.io/block/11052984">11.052.984</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $379,04 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201104235727/https://ethereum.org/en/">ethereum.org sulla waybackmachine</a>
 
 #### Riepilogo {#deposit-contract-summary}
 
@@ -164,7 +164,7 @@ Il contratto di deposito in staking ha introdotto lo [staking](/glossary/#stakin
 
 ### Muir Glacier {#muir-glacier}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Jan-02-2020 08:30:49 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero del blocco: <a href="https://etherscan.io/block/9200000">9.200.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $127,18 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20200103093618/https://ethereum.org/">ethereum.org sulla waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Jan-02-2020 08:30:49 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero del blocco: <a href="https://etherscan.io/block/9200000">9.200.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $127,18 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20200103093618/https://ethereum.org/">ethereum.org sulla waybackmachine</a>
 
 #### Riepilogo {#muir-glacier-summary}
 
@@ -185,13 +185,13 @@ La diramazione di Muir Glacier ha introdotto un ritardo nella [bomba di difficol
 
 ### Istanbul {#istanbul}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Dec-08-2019 12:25:09 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero del blocco: <a href="https://etherscan.io/block/9069000">9.069.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $151,06 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20191216101254if*/https://ethereum.org/">ethereum.org sulla waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Dec-08-2019 12:25:09 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero del blocco: <a href="https://etherscan.io/block/9069000">9.069.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $151,06 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20191216101254if*/https://ethereum.org/">ethereum.org sulla waybackmachine</a>
 
 #### Riepilogo {#istanbul-summary}
 
 La diramazione Instanbul:
 
-- Ha ottimizzato i costi del [carburante](/glossary/#gas) di certe azioni nell'[EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
+- Ha ottimizzato il costo del [gas](/glossary/#gas) di certe azioni nell'[EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Ha migliorato la resilienza agli attacchi denial-of-service.
 - Ha reso più performanti le soluzioni di [ridimensionamento di Livello 2](/developers/docs/scaling/#layer-2-scaling) basate su SNARK e STARK.
 - Ha reso possibile l'interazione tra Ethereum e Zcash.
@@ -201,12 +201,12 @@ La diramazione Instanbul:
 
 <ExpandableCard title="EIP di Istanbul" contentPreview="Official improvements included in this fork.">
 
-- [EIP-152](https://eips.ethereum.org/EIPS/eip-152) – _consente a Ethereum di funzionare con valuta che preserva la privacy come Zcash._
-- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _crittografia più economica per migliorare i costi di [gas](/glossary/#gas)._
-- [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _protegge Ethereum dagli attacchi di riproduzione aggiungendo 'CHAINID' [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine)._
-- [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _ottimizzazione dei prezzi del gas opcode in base ai consumi._
-- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _riduce il costo di CallData per consentire più dati nei blocchi, utile per il [ridimensionamento di Layer 2](/developers/docs/scaling/#layer-2-scaling)._
-- [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _altre modifiche del prezzo del gas dell'opcode._
+- [EIP-152](https://eips.ethereum.org/EIPS/eip-152): _consente a Ethereum di operare con valute che tutelano la privacy come Zcash._
+- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108): _crittografia più economica per migliorare i costi del [gas](/glossary/#gas)._
+- [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344): _protegge Ethereum dagli attacchi di ripetizione, aggiungendo `CHAINID` [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine)._
+- [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884): _ottimizzare i prezzi del gas dell'opcode a seconda dei consumi._
+- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028): _riduce il costo di CallData per consentire più dati nei blocchi; ideale per il [ridimensionamento del Livello 2](/developers/docs/scaling/#layer-2-scaling)._
+- [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200): _altre alterazioni del prezzo del gas dell'opcode._
 
 </ExpandableCard>
 
@@ -214,14 +214,14 @@ La diramazione Instanbul:
 
 ### Constantinople {#constantinople}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Feb-28-2019 07:52:04 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero del blocco: <a href="https://etherscan.io/block/7280000">7.280.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $136,29 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20190415163751/https://www.ethereum.org/">ethereum.org sulla waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Feb-28-2019 07:52:04 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero del blocco: <a href="https://etherscan.io/block/7280000">7.280.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $136,29 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20190415163751/https://www.ethereum.org/">ethereum.org sulla waybackmachine</a>
 
 #### Riepilogo {#constantinople-summary}
 
 La diramazione Constantinople:
 
 - Ha assicurato che la blockchain non si bloccasse prima dell'[implementazione della Proof of Stake](#beacon-chain-genesis).
-- Ha ottimizzato i costi del [carburante](/glossary/#gas) di certe azioni nell'[EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
+- Ha ottimizzato i costi del [gas](/glossary/#gas) di certe azioni nell'[EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Ha aggiunto la capacità di interagire con gli indirizzi non ancora creati.
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
@@ -241,7 +241,7 @@ La diramazione Constantinople:
 
 ### Byzantium {#byzantium}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Oct-16-2017 05:22:11 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero del blocco: <a href="https://etherscan.io/block/4370000">4.370.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $334,23 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20171017201143/https://www.ethereum.org/">ethereum.org sulla waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Oct-16-2017 05:22:11 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero del blocco: <a href="https://etherscan.io/block/4370000">4.370.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $334,23 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20171017201143/https://www.ethereum.org/">ethereum.org sulla waybackmachine</a>
 
 #### Riepilogo {#byzantium-summary}
 
@@ -274,7 +274,7 @@ La diramazione Byzantium:
 
 ### Spurious Dragon {#spurious-dragon}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Nov-22-2016 04:15:44 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero del blocco: <a href="https://etherscan.io/block/2675000">2.675.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $9,84 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161127154654/https://www.ethereum.org/">ethereum.org sulla waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Nov-22-2016 04:15:44 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero del blocco: <a href="https://etherscan.io/block/2675000">2.675.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $9,84 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161127154654/https://www.ethereum.org/">ethereum.org sulla waybackmachine</a>
 
 #### Riepilogo {#spurious-dragon-summary}
 
@@ -288,10 +288,10 @@ La diramazione Spurious Dragon è stata la seconda risposta agli attacchi denial
 
 <ExpandableCard title="EIP di Spurious Dragon" contentPreview="Official improvements included in this fork.">
 
-- [EIP-155](https://eips.ethereum.org/EIPS/eip-155) – _evita che le transazioni da una catena di Ethereum vengano ritrasmesse su una catena alternativa, per esempio la replica di una transazione della testnet sulla catena principale di Ethereum._
-- [EIP-160](https://eips.ethereum.org/EIPS/eip-160) – _regola i prezzi del codice operativo `EXP`, rendendo più difficile rallentare la rete tramite operazioni di contratto onerose a livello di calcolo._
-- [EIP-161](https://eips.ethereum.org/EIPS/eip-161) – _consente la rimozione dei conti vuoti aggiunti tramite attacchi DOS._
-- [EIP-170](https://eips.ethereum.org/EIPS/eip-170) – _modifica la dimensione massima del codice che un contratto sulla blockchain può avere: fino a 24576 byte._
+- [EIP-155](https://eips.ethereum.org/EIPS/eip-155): _impedisce la ri-trasmissione delle transazioni da una catena di Ethereum a una catena alternativa, ad esempio, che una transazione della rete di prova sia riprodotta sulla catena principale di Ethereum._
+- [EIP-160](https://eips.ethereum.org/EIPS/eip-160): _regola i prezzi dell'opcode `EXP`, lo rende più difficile per rallentare la rete tramite operazioni computazionalmente costose del contratto._
+- [EIP-161](https://eips.ethereum.org/EIPS/eip-161): _consente la rimozione dei conti vuoti aggiunti tramite gli attacchi di DOS._
+- [EIP-170](https://eips.ethereum.org/EIPS/eip-170): _modifica le dimensioni massime del codice che un contratto sulla blockchain possa avere, a 24.576 byte._
 
 </ExpandableCard>
 
@@ -299,7 +299,7 @@ La diramazione Spurious Dragon è stata la seconda risposta agli attacchi denial
 
 ### Tangerine Whistle {#tangerine-whistle}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Oct-18-2016 01:19:31 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero del blocco: <a href="https://etherscan.io/block/2463000">2.463.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $12,50 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161030043727/https://www.ethereum.org/">ethereum.org sulla waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Oct-18-2016 01:19:31 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero del blocco: <a href="https://etherscan.io/block/2463000">2.463.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $12,50 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161030043727/https://www.ethereum.org/">ethereum.org sulla waybackmachine</a>
 
 #### Riepilogo {#tangerine-whistle-summary}
 
@@ -311,8 +311,8 @@ La diramazione Tangerine Whistle è stata la prima risposta agli attacchi denial
 
 <ExpandableCard title="EIP di Tangerine Whistle" contentPreview="Official improvements included in this fork.">
 
-- [EIP-150](https://eips.ethereum.org/EIPS/eip-150) – _aumenta i costi del carburante degli opcode utilizzabili negli attacchi di spam._
-- [EIP-158](https://eips.ethereum.org/EIPS/eip-158) – _riduce la dimensione dello stato rimuovendo un gran numero di account vuoti messi nello stato a costo molto basso a causa di bug nelle prime versioni del protocollo di Ethereum._
+- [EIP-150](https://eips.ethereum.org/EIPS/eip-150): _aumenta i costi del gas degli opcode utilizzabili negli attacchi di spam._
+- [EIP-158](https://eips.ethereum.org/EIPS/eip-158): _riduce la dimensione di stato rimuovendo un gran numero di conti vuoti, introdotti nello stato a un costo molto ridotto a causa di falle nelle versioni precedenti del protocollo di Ethereum._
 
 </ExpandableCard>
 
@@ -320,7 +320,7 @@ La diramazione Tangerine Whistle è stata la prima risposta agli attacchi denial
 
 ### Diramazione DAO {#dao-fork}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Jul-20-2016 01:20:40 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero del blocco: <a href="https://etherscan.io/block/1920000">1.920.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $12,54 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160803215306/https://ethereum.org/">ethereum.org sulla waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Jul-20-2016 01:20:40 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero del blocco: <a href="https://etherscan.io/block/1920000">1.920.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $12,54 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160803215306/https://ethereum.org/">ethereum.org sulla waybackmachine</a>
 
 #### Riepilogo {#dao-fork-summary}
 
@@ -336,7 +336,7 @@ Alcuni miner rifiutarono di creare la diramazione perché l'incidente DAO non er
 
 ### Homestead {#homestead}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Mar-14-2016 06:49:53 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero del blocco: <a href="https://etherscan.io/block/1150000">1.150.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $12,50 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160313203843/https://www.ethereum.org/">ethereum.org sulla waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Mar-14-2016 06:49:53 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero del blocco: <a href="https://etherscan.io/block/1150000">1.150.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $12,50 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160313203843/https://www.ethereum.org/">ethereum.org sulla waybackmachine</a>
 
 #### Riepilogo {#homestead-summary}
 
@@ -358,11 +358,11 @@ La diramazione Homestead guardava al futuro. Includeva diverse modifiche al prot
 
 ### Frontier thawing {#frontier-thawing}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Sep-07-2015 09:33:09 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero del blocco: <a href="https://etherscan.io/block/200000">200.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $1,24 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150912193811/https://www.ethereum.org/">ethereum.org sulla waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Sep-07-2015 09:33:09 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero del blocco: <a href="https://etherscan.io/block/200000">200.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: $1,24 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150912193811/https://www.ethereum.org/">ethereum.org sulla waybackmachine</a>
 
 #### Riepilogo {#frontier-thawing-summary}
 
-La diramazione frontier thawing ha introdotto il limite di 5.000 unità di [carburante](/glossary/#gas) per [blocco](/glossary/#block) e ha impostato il prezzo predefinito del carburante a 51 [gwei](/glossary/#gwei). Ciò ha reso possibili le transazioni, che richiedono 21.000 unità di carburante. La [bomba di difficoltà](/glossary/#difficulty-bomb) è stata introdotta per assicurare una hard-fork futura verso il [proof-of-stake](/glossary/#pos).
+La biforcazione disgelo di frontiera ha innalzato il limite di 5.000 [gas](/glossary/#gas) per [blocco](/glossary/#block) e ha impostato il prezzo predefinito del gas a 51 [gwei](/glossary/#gwei). Ciò ha reso possibili le transazioni, che richiedono 21.000 gas. La [bomba di difficoltà](/glossary/#difficulty-bomb) è stata introdotta per assicurare una hard-fork futura verso il [proof-of-stake](/glossary/#pos).
 
 - [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
 - [Leggi l'Aggiornamento 1 del Protocollo di Ethereum](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/)
@@ -371,11 +371,11 @@ La diramazione frontier thawing ha introdotto il limite di 5.000 unità di [carb
 
 ### Frontier {#frontier}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Jul-30-2015 03:26:13 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero edl blocco: <a href="https://etherscan.io/block/0">0</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: N/A<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150802035735/https://www.ethereum.org/">ethereum.org sulla waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Jul-30-2015 03:26:13 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numero edl blocco: <a href="https://etherscan.io/block/0">0</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Prezzo ETH: N/A<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150802035735/https://www.ethereum.org/">ethereum.org sulla waybackmachine</a>
 
 #### Riepilogo {#frontier-summary}
 
-Frontier è stata un'implementazione operativa ma rudimentale del progetto Ethereum. Seguì la fase di prova Olympic, con esito positivo. Era destinata agli utenti tecnici, in particolare agli sviluppatori. I [blocchi](/glossary/#block) avevano un limite di 5.000 unità di [carburante](/glossary/#gas). Questo periodo di ’disgelo’ (dall'inglese thawing) consentì ai miner di iniziare e ai primi utilizzatori di installare i client senza fretta.
+Frontier è stata un'implementazione operativa ma rudimentale del progetto Ethereum. Seguì la fase di prova Olympic, con esito positivo. Era destinata agli utenti tecnici, in particolare agli sviluppatori. I [blocchi](/glossary/#block) avevano un limite di 5.000 [gas](/glossary/#gas). Questo periodo di ’disgelo’ (dall'inglese thawing) consentì ai miner di iniziare e ai primi utilizzatori di installare i client senza fretta.
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 
@@ -385,7 +385,7 @@ Frontier è stata un'implementazione operativa ma rudimentale del progetto Ether
 
 ### Vendita di ether {#ether-sale}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 22 luglio 22 - 2 settembre 2014<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140804235628/https://www.ethereum.org/">ethereum.org sulla waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 22 luglio 22 - 2 settembre 2014<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140804235628/https://www.ethereum.org/">ethereum.org sulla waybackmachine</a>
 
 Ether è stato ufficialmente messo in vendita per 42 giorni. Era acquistabile con BTC.
 
@@ -395,7 +395,7 @@ Ether è stato ufficialmente messo in vendita per 42 giorni. Era acquistabile co
 
 ### Pubblicazione dello yellowpaper {#yellowpaper}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 1 aprile 2014<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140509173418/https://www.ethereum.org/">ethereum.org sulla waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 1 aprile 2014<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140509173418/https://www.ethereum.org/">ethereum.org sulla waybackmachine</a>
 
 Lo yellowpaper, redatto dal dott. Gavin Wood, è una definizione tecnica del protocollo Ethereum.
 
@@ -407,7 +407,7 @@ Lo yellowpaper, redatto dal dott. Gavin Wood, è una definizione tecnica del pro
 
 ### Pubblicazione del whitepaper {#whitepaper}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 27 novembre 2013<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140208030136/http://www.ethereum.org/">ethereum.org sulla waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 27 novembre 2013<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140208030136/http://www.ethereum.org/">ethereum.org sulla waybackmachine</a>
 
 Documento introduttivo, pubblicato nel 2013 da Vitalik Buterin, il fondatore di Ethereum, prima del lancio del progetto nel 2015.
 

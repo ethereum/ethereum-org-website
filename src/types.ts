@@ -14,21 +14,28 @@ export type Intl = {
   redirect: boolean
 }
 
+export type I18NextContext = {
+  language: string
+  routed: boolean
+  languages: string[]
+  defaultLanguage: string
+  generateDefaultLanguagePage: boolean
+  originalPath: string
+  path: string
+  siteUrl?: string
+}
+
 export type Context = {
   slug: string
   relativePath?: string
   language: Lang
+  languagesToFetch?: Array<Lang>
   ignoreTranslationBanner?: boolean
   isOutdated: boolean
   isLegal?: boolean
   isDefaultLang?: boolean
   isContentEnglish?: boolean
-
-  // gatsby i18n theme context
-  locale: Lang
-  hrefLang: string
-  originalPath: string
-  dateFormat: string
+  i18n: I18NextContext
 }
 
 export interface DeveloperDocsLink {
@@ -53,3 +60,62 @@ type OptionalImageProp = {
 type ForbidOptionalImageProp = ForbidOptional<OptionalImageProp>
 
 export type ImageProp = OptionalImageProp | ForbidOptionalImageProp
+
+export interface LearningTool {
+  name: string
+  description: TranslationKey
+  url: string
+  image: IGatsbyImageData | string
+  alt: TranslationKey
+  background: string
+  subjects: Array<string>
+  locales?: Array<Lang>
+}
+
+export interface LearningToolsCardGridProps {
+  category: Array<LearningTool>
+}
+
+/**
+ * Quiz data types
+ */
+export interface AnswerChoice {
+  answerId: string
+  isCorrect: boolean
+}
+
+export interface Answer {
+  id: string
+  label: string
+  explanation: string
+  moreInfoLabel?: string
+  moreInfoUrl?: string
+}
+
+export interface RawQuestion {
+  prompt: string
+  answers: Array<Answer>
+  correctAnswerId: string
+}
+
+export interface Question extends RawQuestion {
+  id: string
+}
+
+export interface QuestionBank {
+  [key: string]: RawQuestion
+}
+
+export interface RawQuiz {
+  title: string
+  questions: Array<string> // TODO: Force to be an array of questionID's
+}
+
+export interface Quiz {
+  title: string
+  questions: Array<Question>
+}
+
+export interface RawQuizzes {
+  [key: string]: RawQuiz
+}

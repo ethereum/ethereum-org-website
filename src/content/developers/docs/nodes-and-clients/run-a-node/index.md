@@ -27,7 +27,7 @@ Decide whether to run the software on your own [hardware or in the cloud](#local
 
 After preparing the environment, install the chosen clients either with [beginner-friendly interface](#automatized-setup) or [manually](#manual-setup) using a terminal with advanced options.
 
-When the node is running and syncing, you are ready to [use it](#using-the-node), but make sure to keep an eye on its [maintanance](#operating-the-node).
+When the node is running and syncing, you are ready to [use it](#using-the-node), but make sure to keep an eye on its [maintenance](#operating-the-node).
 
 ![Client setup](./diagram.png)
 
@@ -77,18 +77,18 @@ The size of the database and speed of the initial synchronization depends on the
 
 Also make sure your internet connection is not limited by a [bandwidth cap](https://wikipedia.org/wiki/Data_cap). It's recommended to use an unmetered connection since initial sync and data broadcasted to the network could exceed your limit.
 
-##### Operating system {#operating-system}
+##### Operating system
 
 All clients support major operating systems - Linux, MacOS, Windows. This means you can run nodes on regular desktop or server machines with the operating system (OS) that suits you the best. Make sure your OS is up to date to avoid potential issues and security vulnerabilities.
 
-##### Minimum requirements {#minimum-requirements}
+##### Minimum requirements
 
 - CPU with 2+ cores
 - 8 GB RAM
 - 700GB free disk space
 - 10+ MBit/s bandwidth
 
-##### Recommended specifications {#recommended-hardware}
+##### Recommended specifications
 
 - Fast CPU with 4+ cores
 - 16 GB+ RAM
@@ -119,7 +119,7 @@ The easiest option for running a node with your own hardware is using plug-and-p
 
 An easy and cheap way of running an Ethereum node is to use a single board computer, even with an ARM architecture like the Raspberry Pi. [Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) provides easy-to-run images of multiple execution and consensus client for Raspberry Pi and other ARM boards.
 
-Small, affordable and efficient devices like these are ideal for running a node at home but keep in mind their limited performence.
+Small, affordable and efficient devices like these are ideal for running a node at home but keep in mind their limited performance.
 
 ## Spinning up the node {#spinning-up-node}
 
@@ -134,7 +134,7 @@ Multiple user-friendly projects aim to improve the experience of setting up a cl
 Below are a few projects which can help you install and control clients just with a few clicks:
 
 - [DappNode](https://docs.dappnode.io/get-started/installation/custom-hardware/installation/overview/) - DappNode doesn't come only with a machine from a vendor. The software, the actual node launcher and control center with many features can be used on arbitrary hardware.
-- [eth-docker](https://eth-docker.net/docs/About/Overview/) - Automatized setup using Docker focused on easy and secure staking, requires basic terminal and Docker knowledge, recommended for a bit more advanced users.
+- [eth-docker](https://eth-docker.net/) - Automatized setup using Docker focused on easy and secure staking, requires basic terminal and Docker knowledge, recommended for a bit more advanced users.
 - [Stereum](https://stereum.net/ethereum-node-setup/) - Launcher for installing clients on a remote server via SSH connection with a GUI setup guide, control center, and many other features.
 - [NiceNode](https://www.nicenode.xyz/) - Launcher with a straightforward user experience to run a node on your computer. Just choose clients and start them with a few clicks. Still in development.
 
@@ -146,7 +146,7 @@ As explained before, setting up your own Ethereum node will require running a pa
 
 #### Getting the client software {#getting-the-client}
 
-First, you need to obtain your preferred [execution client](/developers/docs/nodes-and-clients/#execution-clients) and [consensus client](developers/docs/nodes-and-clients/#consensus-clients) software.
+First, you need to obtain your preferred [execution client](/developers/docs/nodes-and-clients/#execution-clients) and [consensus client](/developers/docs/nodes-and-clients/#consensus-clients) software.
 
 You can simply download an executable application or installation package that suits your operating system and architecture. Always verify the signatures and checksums of downloaded packages. Some clients also offer repositories or Docker images for easier installation and updates. All of the clients are open source, so you can also build them from source. This is a more advanced method, but in some cases, it might be required.
 
@@ -154,7 +154,7 @@ Instructions for installing each client are provided in the documentation linked
 
 Here are the release pages of clients where you can find their pre-built binaries or instructions on installation:
 
-##### Execution clients {#execution-clients}
+##### Execution clients
 
 - [Besu](https://github.com/hyperledger/besu/releases)
 - [Erigon](https://github.com/ledgerwatch/erigon#usage) (Doesn't provide a pre-built binary, has to be compiled)
@@ -163,7 +163,7 @@ Here are the release pages of clients where you can find their pre-built binarie
 
 It is also worth noting that client diversity is an [issue on the execution layer](/developers/docs/nodes-and-clients/client-diversity/#execution-layer). It is recommended that readers consider running a minority execution client.
 
-##### Consensus clients {#consensus-clients}
+##### Consensus clients
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
 - [Lodestar](https://chainsafe.github.io/lodestar/install/source/) (Doesn't provide a pre-built binary, only a Docker image or to be build from source)
@@ -175,7 +175,7 @@ It is also worth noting that client diversity is an [issue on the execution laye
 
 [See the latest network client usage](https://clientdiversity.org/) and learn more about [client diversity](/developers/docs/nodes-and-clients/client-diversity).
 
-##### Verifying the software {#verifying-the-software}
+##### Verifying the software
 
 When downloading software from the internet, it's recommended to verify its integrity. This step is optional but especially with crucial infrastracture piece like the Ethereum client, it's important to be aware of potential attack vectors and avoid them. If you downloaded a pre-built binary, you need to trust it and risk that an attacker could swap the executable for a malicious one.
 
@@ -222,7 +222,6 @@ This token is generated automatically by the client software, but in some cases,
 ```
 openssl rand -hex 32 > jwtsecret
 ```
-
 
 #### Running an execution client {#running-an-execution-client}
 
@@ -283,8 +282,9 @@ This example starts Geth on mainnet, stores blockchain data at `/data/ethereum`,
 ```
 geth --mainnet \
     --datadir "/data/ethereum" \
-    --http --http.api="eth,web3,net" \
+    --http --authrpc.addr localhost \
     --authrpc.vhosts="localhost" \
+    --authrpc.port 8551
     --authrpc.jwtsecret=/path/to/jwtsecret
 ```
 
@@ -311,7 +311,6 @@ The consensus client must be started with the right port configuration to establ
 The consensus client also needs the path to the execution client's `jwt-secret` in order to authenticate the RPC connection between them. Similar to execution examples above, each consensus client has a configuration flag which takes the jwt token file path as an argument. This must be consistent with the `jwtsecret` path provided to the execution client.
 
 If you plan to run a validator, make sure to add a configuration flag specifying the Ethereum address of the fee recipient. This is where ether rewards for your validator accumulate. Each consensus client has an option, e.g. `--suggested-fee-recipient=0xabcd1`, that takes an Ethereum address as an argument.
-
 
 When starting a Beacon Node on a testnet, you can save significant syncing time by using a public endpoint for [Checkpoint sync](https://notes.ethereum.org/@launchpad/checkpoint-sync).
 

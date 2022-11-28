@@ -2,7 +2,6 @@
 title: Mission and vision
 lang: en
 description: The ethereum.org Translation Program mission and vision
-sidebar: true
 ---
 
 # Mission and vision {#mission-and-vision}

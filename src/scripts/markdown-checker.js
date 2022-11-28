@@ -15,7 +15,13 @@ const BROKEN_LINK_REGEX = new RegExp(
   "\\[[^\\]]+\\]\\([^\\)\\s]+\\s[^\\)]+\\)",
   "g"
 )
-const HTML_TAGS = ["</code", "</p>"]
+
+// add <emoji
+// add /developers/docs/scaling/#layer-2-scaling
+// add ../../assets/ethereum-learn.png
+// ../../assets/eth-gif-cat.png
+
+const HTML_TAGS = ["</code", "</p>", "</ul>"]
 const SPELLING_MISTAKES = [
   "Ethreum",
   "Etherum",
@@ -105,6 +111,10 @@ function processFrontmatter(path, lang) {
     )
   }
 
+  if (frontmatter.sidebar) {
+    console.error(`Unexpected 'sidebar' frontmatter at ${path}`)
+  }
+
   if (path.includes("/tutorials/")) {
     if (!frontmatter.published) {
       console.warn(`Missing 'published' frontmatter at ${path}:`)
@@ -123,6 +133,12 @@ function processFrontmatter(path, lang) {
           `Invalid 'published' frontmatter at ${path}: Expected: 'YYYY-MM-DD' Received: ${frontmatter.published}`
         )
       }
+    }
+
+    if (!["beginner", "intermediate", "advanced"].includes(frontmatter.skill)) {
+      console.log(
+        `Skill frontmatter '${frontmatter.skill}' must be: beginner, intermediate, or advanced at: ${path}:`
+      )
     }
   }
 }

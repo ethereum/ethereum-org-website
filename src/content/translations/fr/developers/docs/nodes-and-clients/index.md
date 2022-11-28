@@ -173,7 +173,7 @@ Les modes de synchronisation offrent des approches différentes de ce processus,
 
 Aperçu général des approches de synchronisation utilisées dans les clients prêts pour le réseau principal :
 
-##### Synchronisation totale {#full-sync}
+##### Synchronisation totale
 
 La synchronisation complète permet de télécharger tous les blocs (y compris les en-têtes, les transactions et les reçus) et génère l'état de la blockchain de façon incrémentielle en exécutant chaque bloc depuis le début.
 
