@@ -9708,6 +9708,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Olshansk",
+      "name": "Daniel Olshansky",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1892194?v=4",
+      "profile": "http://olshansky.info",
+      "contributions": [
+        "doc",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
