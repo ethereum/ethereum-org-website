@@ -64,7 +64,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 ### Archived / No longer maintained: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _Ethereum Python client_
-- [Mamba](https://mamba.black) - _framework to write, compile, and deploy smart contracts written in Vyper language_
+- [Mamba](https://github.com/arjunaskykok/mamba) - _framework to write, compile, and deploy smart contracts written in Vyper language_
 
 Looking for more resources? Check out [ethereum.org/developers](/developers/).
 

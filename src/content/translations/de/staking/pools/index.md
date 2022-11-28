@@ -27,7 +27,7 @@ Zusätzlich zu den Vorteilen, die wir in unserer [Einführung zum Staking](/stak
     Kein Wal? Kein Problem. Bei den meisten Staking-Pools können Sie praktisch jede Menge ETH einsetzen, indem Sie sich mit anderen Stakern zusammenschließen, im Gegensatz zum Solo-Staking, für das 32 ETH erforderlich sind.
   </Card>
   <Card title="Staken Sie noch heute" emoji=":stopwatch:">
-    Mit einem Pool zu staken, ist so einfach, wie ein Token-Swap. Sie müssen sich keine Gedanken über die Einrichtung der Hardware und die Wartung der Nodes machen. Pools ermöglichen es Ihnen, Ihre ETH zu hinterlegen, wodurch Node-Betreiber Validatoren durchführen können. Die Belohnungen werden dann abzüglich einer Gebühr für den Node-Betrieb an die Mitwirkenden verteilt.
+    Mit einem Pool zu staken, ist so einfach wie ein Token-Swap. Sie müssen sich keine Gedanken über die Einrichtung der Hardware und die Wartung der Nodes machen. Pools ermöglichen es Ihnen, Ihre ETH zu hinterlegen, wodurch Node-Betreiber Validatoren ausführen können. Die Belohnungen werden dann abzüglich einer Gebühr für den Node-Betrieb an die Mitwirkenden verteilt.
   </Card>
   <Card title="Liquiditäts-Token" emoji=":droplet:">
     Viele Staking-Pools bieten einen Token, der einen Anspruch auf Ihre gestakten ETH und die daraus generierten Belohnungen darstellt. Dadurch können Sie Ihre eingesetzten ETH nutzen, z. B. als Sicherheit in DeFi-Anwendungen.
@@ -51,7 +51,7 @@ Attributindikatoren werden unten verwendet, um auf nennenswerte Stärken oder Sc
 Es gibt eine Vielzahl von Optionen, die Ihnen bei der Einrichtung helfen. Verwenden Sie die obigen Indikatoren, um Sie durch die folgenden Tools zu führen.
 
 <InfoBanner emoji="⚠️" isWarning>
-Bitte beachten Sie, wie wichtig es ist, einen Dienst zu wählen, der <a href="/developers/docs/nodes-and-clients/client-diversity/">Client-Diversität</a> ernst nimmt, da er die Sicherheit des Netzwerks verbessert und Ihr Risiko begrenzt. Dienstleistungen, die nachweislich die Mehrzahl der Kunden begrenzen, sind wie folgt markiert: <em style="text-transform: uppercase;">„Diverse Clients."</em>
+Bitte beachten Sie, wie wichtig es ist, einen Dienst zu wählen, der <a href="/developers/docs/nodes-and-clients/client-diversity/">Client-Diversität</a> ernst nimmt, da er die Sicherheit des Netzwerks verbessert und Ihr Risiko begrenzt. Dienstleistungen, die nachweislich die Mehrzahl der Kunden begrenzen, sind wie folgt markiert: <em style="text-transform: uppercase;">„Diverse Kunden."</em>
 </InfoBanner>
 
 <StakingProductsCardGrid category="pools" />
@@ -74,9 +74,9 @@ Alternativ erlauben manche Pools, die ERC-20 Liquiditäts-Token benutzen, dass d
 <ExpandableCard title="Ist dies anders als Staking auf meiner Börse?">
 Es gibt viele Ähnlichkeiten zwischen diesen gepoolten Staking-Optionen und zentralisierten Börsen, wie z. B. die Möglichkeit, kleine ETH-Beträge zu staken und sie zu bündeln, um Validatoren zu aktivieren.
 
-Im Gegensatz zu zentralisierten Börsen verwenden viele andere gepoolte Staking-Optionen Smart Contracts und/oder Liquiditäts-Token, bei denen es sich normalerweise um ERC-20-Token handelt, die in Ihrer eigenen Wallet aufbewahrt und wie alle anderen Token gekauft oder verkauft werden können. Dies bietet eine gewisse Souveränität und Sicherheit, indem Sie die Kontrolle über Ihre Token besitzen, aber Sie haben immer noch keine direkte Kontrolle über den Validator-Client, der in Ihrem Namen im Hintergrund Attestierungen ausgibt.
+Im Gegensatz zu zentralisierten Börsen verwenden viele andere gepoolte Staking-Optionen Smart Contracts und/oder Liquiditäts-Token, bei denen es sich normalerweise um ERC-20-Token handelt, die in Ihrer eigenen Wallet aufbewahrt und wie alle anderen Token gekauft oder verkauft werden können. Dies bietet eine gewisse Souveränität und Sicherheit, indem Sie die Kontrolle über Ihre Token besitzen, aber Sie haben immer noch keine direkte Kontrolle über den Validator-Kunden, der in Ihrem Namen im Hintergrund Attestierungen ausgibt.
 
-Einige Pooling-Optionen sind dezentralisierter als andere, wenn es um die Nodes geht, die sie unterstützen. Um die Gesundheit und Dezentralisierung des Netzwerks zu fördern, werden Staker immer dazu ermutigt, einen Pooling-Service auszuwählen, der eine genehmigungsfreie, dezentrale Gruppe von Knotenpunktbetreibern ermöglicht.
+Einige Pooling-Optionen sind dezentralisierter als andere, wenn es um die Nodes geht, die sie unterstützen. Um die Gesundheit und Dezentralisierung des Netzwerks zu fördern, werden Staker immer dazu ermutigt, einen Pooling-Service auszuwählen, der eine genehmigungsfreie, dezentrale Gruppe von Node-Betreibern ermöglicht.
 </ExpandableCard>
 
 ## Weiterführende Informationen {#further-reading}

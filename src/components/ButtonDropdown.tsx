@@ -1,7 +1,7 @@
 // Libraries
 import React, { useState, createRef } from "react"
 import styled from "@emotion/styled"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import { motion } from "framer-motion"
 import { MdMenu } from "react-icons/md"
 
@@ -12,7 +12,7 @@ import Translation from "./Translation"
 
 // Utils
 import { useOnClickOutside } from "../hooks/useOnClickOutside"
-import { translateMessageId, TranslationKey } from "../utils/translations"
+import { TranslationKey } from "../utils/translations"
 import { trackCustomEvent } from "../utils/matomo"
 
 const Container = styled.div`
@@ -120,7 +120,7 @@ export interface IProps {
 
 const ButtonDropdown: React.FC<IProps> = ({ list, className }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
-  const intl = useIntl()
+  const { t } = useTranslation()
   const ref = createRef<HTMLInputElement>()
 
   useOnClickOutside(ref, () => setIsOpen(false))
@@ -136,7 +136,7 @@ const ButtonDropdown: React.FC<IProps> = ({ list, className }) => {
     <Container
       className={className}
       ref={ref}
-      aria-label={`Select ${translateMessageId(list.text, intl)}`}
+      aria-label={`Select ${t(list.text)}`}
     >
       <Button
         variant="outline"

@@ -1,11 +1,11 @@
 // Library imports
 import React from "react"
 import { AspectRatio, Box, chakra, Icon } from "@chakra-ui/react"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 // Component imports
 import Translation from "./Translation"
 // Utility imports
-import { translateMessageId, TranslationKey } from "../utils/translations"
+import { TranslationKey } from "../utils/translations"
 // SVG imports
 import InfographicBg from "../assets/upgrades/merge-infographic-bg.svg"
 
@@ -61,18 +61,14 @@ export interface IProps {
 }
 
 const MergeInfographic: React.FC<IProps> = ({ className }) => {
-  const intl = useIntl()
-  const getString: StringGetter = (id: TranslationKey) =>
-    translateMessageId(id, intl)
+  const { t } = useTranslation()
+  const getString: StringGetter = (id: TranslationKey) => t(id)
 
   return (
     <AspectRatio
       className={className}
       role="img"
-      aria-label={translateMessageId(
-        "page-upgrades-merge-infographic-alt-text",
-        intl
-      )}
+      aria-label={t("page-upgrades-merge-infographic-alt-text")}
       position="relative"
       width="100%"
       ratio={25 / 11}

@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react"
-import { useIntl } from "react-intl"
+import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import styled from "@emotion/styled"
 import axios from "axios"
 
 import Translation from "./Translation"
 import Link from "./Link"
 import { FakeLinkExternal, CardItem as Item } from "./SharedStyledComponents"
-
-import { translateMessageId } from "../utils/translations"
 
 import { GATSBY_FUNCTIONS_PATH } from "../constants"
 
@@ -68,9 +66,10 @@ const IssueSection: React.FC<IPropsIssueSection> = ({ issues }) => {
 export interface IProps {}
 
 const Roadmap: React.FC<IProps> = () => {
-  const intl = useIntl()
+  const { t } = useTranslation()
+  const { language } = useI18next()
   const issue: Issue = {
-    title: translateMessageId("loading", intl),
+    title: t("loading"),
     labels: [],
   }
   const blankIssues: Array<Issue> = Array(6).fill(issue)
@@ -144,8 +143,8 @@ const Roadmap: React.FC<IProps> = () => {
       .catch((error) => {
         console.error(error)
         const errorIssue: Issue = {
-          title: translateMessageId("loading-error", intl),
-          errorMsg: translateMessageId("refresh", intl),
+          title: t("loading-error"),
+          errorMsg: t("refresh"),
           labels: [],
         }
         const errorIssues: Array<Issue> = Array(3).fill(errorIssue)
@@ -155,7 +154,7 @@ const Roadmap: React.FC<IProps> = () => {
           implemented: errorIssues,
         })
       })
-  }, [intl])
+  }, [language])
 
   return (
     <div>
