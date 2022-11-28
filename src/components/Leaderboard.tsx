@@ -51,6 +51,7 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
       boxShadow={colorModeStyles.listBoxShadow}
       w="100%"
       mb={8}
+      ml={0}
       aria-label={t("page-upgrades-bug-bounty-leaderboard-list")}
     >
       {content
@@ -80,7 +81,7 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
             "fifth",
           ] as const
           return (
-            <ListItem>
+            <ListItem mb={0}>
               <LinkBox
                 key={idx}
                 display="flex"
