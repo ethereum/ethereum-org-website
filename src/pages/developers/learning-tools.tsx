@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react"
 import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import { shuffle } from "lodash"
 // Component imports
 import PageMetadata from "../../components/PageMetadata"
@@ -14,7 +14,6 @@ import { Content, Page } from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
 import LearningToolsCardGrid from "../../components/LearningToolsCardGrid"
 // Util imports
-import { translateMessageId } from "../../utils/translations"
 import { getImage } from "../../utils/image"
 // Type imports
 import { Context, LearningTool } from "../../types"
@@ -79,7 +78,7 @@ const StackContainer = styled(Content)`
 const LearningToolsPage = ({
   data,
 }: PageProps<Queries.DevelopersLearningToolsPageQuery, Context>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const [randomizedSandboxes, setRandomizedSandboxes] = useState<
     Array<LearningTool>
   >([])
@@ -216,7 +215,7 @@ const LearningToolsPage = ({
       name: "Platzi",
       description: "page-learning-tools-platzi-description",
       url: "https://platzi.com/escuela/escuela-blockchain/",
-      image: getImage(data.platzi),
+      image: getImage(data.platzi)!,
       alt: "page-learning-tools-platzi-logo-alt",
       background: "#121f3d",
       subjects: ["Solidity", "web3"],
@@ -236,8 +235,8 @@ const LearningToolsPage = ({
   return (
     <StyledPage>
       <PageMetadata
-        title={translateMessageId("page-learning-tools-meta-title", intl)}
-        description={translateMessageId("page-learning-tools-meta-desc", intl)}
+        title={t("page-learning-tools-meta-title")}
+        description={t("page-learning-tools-meta-desc")}
       />
       <Header>
         <H1>
@@ -280,7 +279,7 @@ const LearningToolsPage = ({
       <Content>
         <CalloutBanner
           image={getImage(data.learn)!}
-          alt={translateMessageId("page-index-tout-enterprise-image-alt", intl)}
+          alt={t("page-index-tout-enterprise-image-alt")}
           titleKey={"page-learning-tools-documentation"}
           descriptionKey={"page-learning-tools-documentation-desc"}
         >
@@ -314,7 +313,16 @@ export const learningToolImage = graphql`
 `
 
 export const query = graphql`
-  query DevelopersLearningToolsPage {
+  query DevelopersLearningToolsPage($languagesToFetch: [String!]!) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     captureTheEther: file(
       relativePath: { eq: "dev-tools/capturetheether.png" }
     ) {

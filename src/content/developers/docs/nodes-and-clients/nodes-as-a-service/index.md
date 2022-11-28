@@ -70,7 +70,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Access to 24+ blockchain nodes
     - RPC, HTTPS and WSS endpoints
     - Unlimited access to archive data
-    - 24/7 support and uptime over 99.9% 
+    - 24/7 support and uptime over 99.9%
     - Faucet available on multi chains
     - Unlimited endpoint access with limitless number of API keys
     - Trace/Debug namespace available

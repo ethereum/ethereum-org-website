@@ -27,15 +27,16 @@ lang: fa
 <SocialListItem socialIcon="discord"><Link to="https://discord.io/ethstaker">EthStaker Discord</Link> - جامعه‌ای با محوریت ارائه‌ی کمک در بحث مدیریت پروژه برای توسعه‌ی اتریوم</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/CetY6Y4">تیم وب سایت Ethereum.org</Link> - با تیم و افراد جامعه توسعه و طراحی وب ethereum.org گفتگو کنید</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ZH5aXDgWEU">دانشگاه Web3</Link> - جامعه‌ای متمرکز بر یادگیری توسعه‌ی Web3 </SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> - فضای گفتگو برای توسعه‌ی solidity (Gitter)</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - فضای گفتگو برای توسعه‌ی solidity (Matrix)</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> - جامعه‌ی خالقان web3 که در آن سازندگان، چهره‌های مطرح صنعت و علاقه‌مندان به اتریوم دور هم جمع می‌شوند. ما دوستدار توسعه، طراحی و فرهنگ web3 هستیم. بیایید در ساختن، همراه ما شوید.</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> - تالار گفتگو برای توسعه‌ی solidity‏ (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - تالار گفتگو برای توسعه‌ی solidity‏ (Matrix)</SocialListItem>
 
 ## یوتیوب و توییتر {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">بنیاد اتریوم</Link> - از تازه‌ترین اخبار «بنیاد اتریوم» مطلع شوید</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> - حساب رسمی بنیاد اتریوم</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethdotorg">@ethdotorg</Link> - پایگاه اینترنتی اتریوم، ساخته‌شده برای جامعه‌ی جهانی در حال رشد ما</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://hive.one/c/Ethereum?page=1">فهرست حساب‌های تأثیرگذار اتریوم در توییتر</Link></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://hive.one/c/ethereum?page=1">فهرست حساب‌های تأثیرگذار اتریوم در توییتر</Link></SocialListItem>
 
 <Divider />
 

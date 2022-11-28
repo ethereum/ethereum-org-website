@@ -581,24 +581,24 @@ const questionBank: QuestionBank = {
     answers: [
       {
         id: "e003-a",
-        label: "a good way to get more ETH",
+        label: "A good way to get more ETH",
         explanation:
           "ETH giveaways are scams designed to steal your ETH and other tokens. They are never a good way to get more ETH.",
       },
       {
         id: "e003-b",
-        label: "always genuine",
+        label: "Always genuine",
         explanation: "ETH giveaways are never genuine.",
       },
       {
         id: "e003-c",
-        label: "commonly performed by prominent members of the community",
+        label: "Commonly performed by prominent members of the community",
         explanation:
           "Prominent community members do not do ETH giveaways. Scammers pretend well-know individuals, such as Elon Musk, are doing giveaways to give them the scam a sense of legitimacy.",
       },
       {
         id: "e003-d",
-        label: "always a scam",
+        label: "Are very likely to be a scam",
         explanation:
           "ETH giveaways are always scams. Reporting and ignoring scammers is best.",
       },

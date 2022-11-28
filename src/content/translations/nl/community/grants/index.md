@@ -30,8 +30,8 @@ Deze projecten hebben hun eigen beurzen gecreëerd voor projecten die gericht zi
 - [Aave Grants Program](https://aavegrants.org/) – _[Aave](https://aave.com/) grants DAO_
 - [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/) ecosysteem fonds_
 - [Compound Grants Program](https://compoundgrants.org/) – _[Compound](https://compound.finance/) finance ecosystem_
-- [Consensys Grants Program](https://consensys.net/grants/) – _[Consensys](https://consensys.net/) blockchain funding & Ethereum grants_
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/) finance ecosystem_
+- [MetaMask Program](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) employee-led grants DAO_
 - [mStable Grants Program](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) gemeenschap_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/)-ecosysteem_
 - [Uniswap-subsidieprogramma](https://www.unigrants.org/) - _[Uniswap](https://uniswap.org/)-gemeenschap_

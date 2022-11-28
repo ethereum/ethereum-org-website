@@ -565,5 +565,14 @@
     "description": "PyChain 2022 is an online blockchain developer conference targeting the Python ecosystem and Python devs.",
     "startDate": "2022-11-15",
     "endDate": "2022-11-15"
+  },
+  {
+    "title": "ETHMiami",
+    "to": "https://ethmiami.net/",
+    "sponsor": null,
+    "location": "Miami, USA",
+    "description": "Join ETHMiami during Art Basel Miami 2022.",
+    "startDate": "2022-11-28",
+    "endDate": "2022-12-4"
   }
 ]

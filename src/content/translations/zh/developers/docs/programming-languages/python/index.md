@@ -64,7 +64,7 @@ incomplete: true
 ### 已归档/不再维护： {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _以太坊的 Python 客户端_
-- [Mamba](https://mamba.black) - _一个用 Vyper 语言编写、编译和部署智能合约的框架_
+- [Mamba](https://github.com/arjunaskykok/mamba) - _一个用 Vyper 语言编写、编译和部署智能合约的框架_
 
 想要获取更多的资源？ 请查看 [ethereum.org/developers](/developers/)。
 

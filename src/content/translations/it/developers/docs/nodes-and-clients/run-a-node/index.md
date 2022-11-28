@@ -133,7 +133,7 @@ Diversi progetti intuitivi mirano a migliorare l'esperienza di configurazione di
 Di seguito trovi alcuni progetti che possono aiutarti a installare e controllare i client in pochi click:
 
 - [DappNode](https://docs.dappnode.io/get-started/installation/custom-hardware/installation/overview/) - DappNode non è fornito solo con una macchina da un fornitore. Il software, il launcher del nodo vero e proprio e il centro di controllo con molte funzionalità, sono utilizzabili su hardware arbitrario.
-- [eth-docker](https://eth-docker.net/docs/About/Overview/) - La configurazione automatizzata usando Docker, incentrata sullo staking facile e sicuro, richiede una conoscenza di base del terminale e di Docker, consigliata per gli utenti un po' più avanzati.
+- [eth-docker](https://eth-docker.net/) - La configurazione automatizzata usando Docker, incentrata sullo staking facile e sicuro, richiede una conoscenza di base del terminale e di Docker, consigliata per gli utenti un po' più avanzati.
 - [Stereum](https://stereum.net/ethereum-node-setup/) - Launcher per installare i client su un server remoto tramite connessione SSH con una guida di configurazione con GUI, un centro di controllo e molte altre funzionalità.
 - [NiceNode](https://www.nicenode.xyz/) - Launcher con un'esperienza utente semplice per eseguire un nodo sul tuo computer. Basta scegliere i client e avviarli in pochi clic. Ancora in fase di sviluppo.
 

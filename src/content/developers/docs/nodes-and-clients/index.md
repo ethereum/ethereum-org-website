@@ -74,11 +74,10 @@ If you want to [run your own node](/developers/docs/nodes-and-clients/run-a-node
 
 Instead of downloading every block, light nodes download block headers. These headers only contain summary information about the contents of the blocks. Any other information required by the light node gets requested from a full node. The light node can then independently verify the data they receive against the state roots in the block headers. Light nodes enable users to participate in the Ethereum network without the powerful hardware or high bandwidth required to run full nodes. Eventually, light nodes might run on mobile phones or embedded devices. The light nodes do not participate in consensus (i.e. they cannot be miners/validators), but they can access the Ethereum blockchain with the same functionality as a full node.
 
-The execution client Geth includes a [light sync](https://github.com/ethereum/devp2p/blob/master/caps/les.md) option. However, a light Geth node relies upon full nodes serving light node data. Few full nodes opt to serve light node data, meaning light nodes often fail to find peers. There are currently no production-ready light clients on the consensus layer; however, several are in development.
+Light nodes are not yet a feature of proof-of-stake Ethereum. There were light clients on the old proof-of-work network but they were rarely used because they relied on altruistic full-nodes opting in to serving them with data. Because not many nodes chose to serve light client data, those that did handled a lot of traffic.
 
+Light clients are an area of active development for Ethereum and we expect to see new light clients for the consensus layer and execution layer soon.
 There are also potential routes to providing light client data over the [gossip network](https://www.ethportal.net/). This is advantageous because the gossip network could support a network of light nodes without requiring full nodes to serve requests.
-
-Ethereum does not support a large population of light nodes yet, but light node support is an area expected to develop rapidly in the near future.
 
 ### Archive node {#archive-node}
 
@@ -145,7 +144,7 @@ This table summarizes the different clients. All of them pass [client tests](htt
 | [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux, Windows, macOS | Mainnet, Sepolia, Görli, Rinkeby, Ropsten, and more | Full                               | Archive, Pruned |
 | [Akula](https://akula.app)                      | Rust     | Linux                 | Mainnet, Sepolia, Görli, Rinkeby, Ropsten           | Full                               | Archive, Pruned |
 
-**Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer being maintained.** Use it with caution and preferably switch to another client implementation.
+**Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer being maintained.** Use another client implementation!
 
 For more on supported networks, read up on [Ethereum networks](/developers/docs/networks/).
 
@@ -155,7 +154,7 @@ Each client has unique use cases and advantages, so you should choose one based 
 
 Hyperledger Besu is an enterprise-grade Ethereum client for public and permissioned networks. It runs all of the Ethereum Mainnet features, from tracing to GraphQL, has extensive monitoring and is supported by ConsenSys, both in open community channels and through commercial SLAs for enterprises. It is written in Java and is Apache 2.0 licensed.
 
-Besu's extensive [documentation](https://besu.hyperledger.org/en/stable/) will guide you trough all details on its features and setups.
+Besu's extensive [documentation](https://besu.hyperledger.org/en/stable/) will guide you through all details on its features and setups.
 
 ### Erigon {#erigon}
 
@@ -257,6 +256,8 @@ Light client mode downloads all block headers, block data, and verifies some ran
 - Gets only the latest state while relying on trust in developers and consensus mechanism.
 - Client ready to use with current network state in a few minutes.
 
+**NB** Light sync does not yet work with proof-of-stake Ethereum - new versions of light sync should ship soon!
+
 [More on Light clients](https://www.parity.io/blog/what-is-a-light-client/)
 
 #### Snap sync {#snap-sync}
@@ -305,5 +306,4 @@ There is a lot of information about Ethereum clients on the internet. Here are f
 
 ## Related tutorials {#related-tutorials}
 
-- [Running a Node with Geth](/developers/tutorials/run-light-node-geth/) _– How to download, install and run Geth. Covering syncmodes, the JavaScript console, and more._
 - [Turn your Raspberry Pi 4 into a validator node just by flashing the MicroSD card – Installation guide](/developers/tutorials/run-node-raspberry-pi/) _– Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum node running the execution layer (Mainnet) and / or the consensus layer (Beacon Chain / validator)._

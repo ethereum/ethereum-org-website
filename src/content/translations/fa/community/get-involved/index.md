@@ -17,6 +17,7 @@ lang: fa
 - [تماس‌های Core Dev](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) را تماشا کنید و یا در آن شرکت کنید
 - [فهرست نیازمندی‌های برنامه پشتیبانی اکوسیستم](https://esp.ethereum.foundation/wishlist/) - ابزار، اسناد و مناطق زیرساختی که در آن برنامه حمایت از اکوسیستم اتوریوم فعالانه به دنبال کمک به برنامه‌های کمکی است
 - [Web3Bridge](https://www.web3bridge.com/) - برای شناسایی، آموزش و حمایت از صدها توسعه‌دهنده و اعضای انجمن در سراسر آفریقا به جامعه‌ی مشتاق web3 بپیوندید
+- به [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders) بپیوندید
 
 ## محققان و دانشگاهیان <Emoji text=":mag:" size={1} />‍ {#researchers-and-academics}
 

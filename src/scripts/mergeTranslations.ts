@@ -27,8 +27,12 @@ const mergeTranslations = (): void => {
         mergeObjects(result, obj)
       })
 
-      const outputFilename = `src/intl/${currentTranslation}.json`
+      const dir = `./i18n/locales/${currentTranslation}`
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true })
+      }
 
+      const outputFilename = `${dir}/index.json`
       fs.writeFileSync(
         outputFilename,
         JSON.stringify(result, null, 2).concat("\n")

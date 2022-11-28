@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
 import makeBlockie from "ethereum-blockies-base64"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
@@ -21,7 +21,7 @@ import {
   FakeLink,
 } from "../../components/SharedStyledComponents"
 import { DEPOSIT_CONTRACT_ADDRESS } from "../../data/addresses"
-import { translateMessageId, TranslationKey } from "../../utils/translations"
+import { TranslationKey } from "../../utils/translations"
 import type { Context } from "../../types"
 import FeedbackCard from "../../components/FeedbackCard"
 import { getImage } from "../../utils/image"
@@ -192,7 +192,7 @@ const DepositContractPage = ({
   data,
   location,
 }: PageProps<Queries.DepositContractPageQuery, Context>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   const [state, setState] = useState<{
     browserHasTextToSpeechSupport: boolean
@@ -302,8 +302,8 @@ const DepositContractPage = ({
     state.userWillCheckOtherSources
 
   const textToSpeechText = state.isSpeechActive
-    ? translateMessageId("page-staking-deposit-contract-stop-reading", intl)
-    : translateMessageId("page-staking-deposit-contract-read-aloud", intl)
+    ? t("page-staking-deposit-contract-stop-reading")
+    : t("page-staking-deposit-contract-read-aloud")
   const textToSpeechEmoji = state.isSpeechActive
     ? ":speaker_high_volume:"
     : ":speaker:"
@@ -311,14 +311,8 @@ const DepositContractPage = ({
     <Page>
       <Flex>
         <PageMetadata
-          title={translateMessageId(
-            "page-staking-deposit-contract-meta-title",
-            intl
-          )}
-          description={translateMessageId(
-            "page-staking-deposit-contract-meta-desc",
-            intl
-          )}
+          title={t("page-staking-deposit-contract-meta-title")}
+          description={t("page-staking-deposit-contract-meta-desc")}
         />
         <LeftColumn>
           <Breadcrumbs slug={location.pathname} startDepth={1} />
@@ -445,12 +439,7 @@ const DepositContractPage = ({
                       <Emoji text={textToSpeechEmoji} size={1} />
                     </TextToSpeech>
                   )}
-                  <Tooltip
-                    content={translateMessageId(
-                      "page-staking-deposit-contract-warning",
-                      intl
-                    )}
-                  >
+                  <Tooltip content={t("page-staking-deposit-contract-warning")}>
                     <Address>{CHUNKED_ADDRESS}</Address>
                   </Tooltip>
                   <ButtonRow>
@@ -512,7 +501,16 @@ export const sourceImage = graphql`
 `
 
 export const query = graphql`
-  query DepositContractPage {
+  query DepositContractPage($languagesToFetch: [String!]!) {
+    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     consensys: file(relativePath: { eq: "projects/consensys.png" }) {
       ...sourceImage
     }

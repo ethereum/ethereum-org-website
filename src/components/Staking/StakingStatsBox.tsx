@@ -1,10 +1,13 @@
 // Import libraries
 import React, { useState, useEffect } from "react"
 import styled from "@emotion/styled"
-import { useIntl } from "react-intl"
+import { useI18next } from "gatsby-plugin-react-i18next"
 import { Spinner } from "@chakra-ui/react"
 // Import components
 import Translation from "../Translation"
+import Tooltip from "../Tooltip"
+import Link from "../Link"
+import Icon from "../Icon"
 // Import utilities
 import { Lang } from "../../utils/languages"
 import { getData } from "../../utils/cache"
@@ -13,6 +16,7 @@ import { getLocaleForNumberFormat } from "../../utils/translations"
 // Constants
 const NA_ERROR = "n/a"
 const ZERO = "0"
+const MAX_EFFECTIVE_BALANCE = 32
 
 // Styled components
 const Container = styled.div`
@@ -49,18 +53,50 @@ const Value = styled.code`
   color: ${({ theme }) => theme.colors.primary};
 `
 
-const Label = styled.p`
+const Label = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
   text-transform: uppercase;
   font-size: 0.875rem;
   margin-top: 0.5rem;
 `
+
+const StyledIcon = styled(Icon)`
+  fill: ${({ theme }) => theme.colors.text};
+  margin-inline-start: 0.5rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    fill: ${({ theme }) => theme.colors.primary};
+  }
+`
+
+// BeaconchainTooltip component
+const BeaconchainTooltip = ({ isEthStore }: { isEthStore?: boolean }) => (
+  <Tooltip
+    content={
+      <div>
+        <Translation id="data-provided-by" />{" "}
+        {isEthStore && (
+          <Link to="https://github.com/gobitfly/eth.store/">ETH.STORE, </Link>
+        )}
+        <Link to="https://beaconcha.in">Beaconcha.in</Link>
+      </div>
+    }
+  >
+    <StyledIcon name="info" size="16" />
+  </Tooltip>
+)
 
 // Interfaces
 export interface IProps {}
 
 // StatsBox component
 const StakingStatsBox: React.FC<IProps> = () => {
-  const intl = useIntl()
+  const { language } = useI18next()
   /**
    * State variables:
    * - ZERO is default string, "0", representing loading state
@@ -71,10 +107,9 @@ const StakingStatsBox: React.FC<IProps> = () => {
   const [currentApr, setCurrentApr] = useState<string | null>(ZERO)
 
   useEffect(() => {
-    const localeForStatsBoxNumbers = getLocaleForNumberFormat(
-      intl.locale as Lang
-    )
+    const localeForStatsBoxNumbers = getLocaleForNumberFormat(language as Lang)
 
+    // Helper functions
     const formatInteger = (amount: number): string =>
       new Intl.NumberFormat(localeForStatsBoxNumbers).format(amount)
 
@@ -85,38 +120,30 @@ const StakingStatsBox: React.FC<IProps> = () => {
         maximumSignificantDigits: 2,
       }).format(amount)
 
+    // API call, data formatting, and state setting
     ;(async () => {
       try {
         const {
-          data: { totalvalidatorbalance, validatorscount },
+          data: { apr, effective_balances_sum_wei },
         } = await getData<{
-          data: { totalvalidatorbalance: number; validatorscount: number }
-        }>("https://mainnet.beaconcha.in/api/v1/epoch/latest")
-        const valueTotalEth = formatInteger(
-          Number((totalvalidatorbalance * 1e-9).toFixed(0))
+          data: { apr: number; effective_balances_sum_wei: number }
+        }>("https://beaconcha.in/api/v1/ethstore/latest")
+        const totalEffectiveBalance: number = effective_balances_sum_wei * 1e-18
+        const valueTotalEth = formatInteger(Math.floor(totalEffectiveBalance))
+        const valueTotalValidators = formatInteger(
+          totalEffectiveBalance / MAX_EFFECTIVE_BALANCE
         )
-        const valueTotalValidators = formatInteger(validatorscount)
+        const valueCurrentApr = formatPercentage(apr)
         setTotalEth(valueTotalEth)
         setTotalValidators(valueTotalValidators)
+        setCurrentApr(valueCurrentApr)
       } catch (error) {
         setTotalEth(null)
+        setCurrentApr(null)
         setTotalValidators(null)
       }
     })()
-    ;(async () => {
-      try {
-        const {
-          data: { apr },
-        } = await getData<{
-          data: { apr: number }
-        }>("https://beaconcha.in/api/v1/ethstore/650")
-        const valueCurrentApr = formatPercentage(apr)
-        setCurrentApr(valueCurrentApr)
-      } catch (error) {
-        setCurrentApr(null)
-      }
-    })()
-  }, [intl.locale])
+  }, [language])
 
   return (
     <Container>
@@ -128,6 +155,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
         )}
         <Label>
           <Translation id="page-staking-stats-box-metric-1" />
+          <BeaconchainTooltip />
         </Label>
       </Cell>
       <Cell>
@@ -140,6 +168,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
         )}
         <Label>
           <Translation id="page-staking-stats-box-metric-2" />
+          <BeaconchainTooltip />
         </Label>
       </Cell>
       <Cell>
@@ -152,6 +181,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
         )}
         <Label>
           <Translation id="page-staking-stats-box-metric-3" />
+          <BeaconchainTooltip isEthStore />
         </Label>
       </Cell>
     </Container>

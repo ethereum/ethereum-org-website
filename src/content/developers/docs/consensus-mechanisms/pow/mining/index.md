@@ -70,12 +70,6 @@ Ethereum Mainnet only ever used one mining algorithm - ['Ethash'](/developers/do
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
 
-## Related tools {#related-tools}
-
-- [Top Ethereum miners](https://etherscan.io/stat/miner?range=7&blocktype=blocks)
-- [Etherscan mining calculator](https://etherscan.io/ether-mining-calculator)
-- [Minerstat mining calculator](https://minerstat.com/coin/ETH)
-
 ## Related topics {#related-topics}
 
 - [Gas](/developers/docs/gas/)
