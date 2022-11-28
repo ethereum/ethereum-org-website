@@ -97,8 +97,7 @@ const BeaconChainActions: React.FC = () => {
   return (
     <Box mb={16}>
       <Flex flexDir={{ base: "column", md: "row" }} pt={4}>
-        <Box
-          as={Card}
+        <Card
           w="full"
           ml={0}
           mr={{ base: 0, md: 4 }}
@@ -113,9 +112,8 @@ const BeaconChainActions: React.FC = () => {
           <ButtonLink variant="outline" to="/staking/">
             <Translation id="page-upgrades-index-staking-learn" />
           </ButtonLink>
-        </Box>
-        <Box
-          as={Card}
+        </Card>
+        <Card
           w="full"
           mr={0}
           ml={{ base: 0, md: 4 }}
@@ -126,7 +124,7 @@ const BeaconChainActions: React.FC = () => {
           <ButtonLink variant="outline" to="/upgrades/get-involved/">
             <Translation id="consensus-run-beacon-chain" />
           </ButtonLink>
-        </Box>
+        </Card>
       </Flex>
       <H3>
         <Translation id="consensus-explore" />
