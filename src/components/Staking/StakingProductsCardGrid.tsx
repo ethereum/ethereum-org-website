@@ -306,7 +306,6 @@ const StakingProductCard: React.FC<ICardProps> = ({
                 my={4}
                 ms="auto"
                 me={0}
-                py={2}
                 gap="1em"
                 alignItems="center"
               >

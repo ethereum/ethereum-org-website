@@ -7313,7 +7313,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/70309026?v=4",
       "profile": "https://github.com/LuozhuZhang",
       "contributions": [
-        "doc"
+        "doc",
+        "ideas"
       ]
     },
     {
@@ -9659,6 +9660,51 @@
       "name": "Olaf Tomalka",
       "avatar_url": "https://avatars.githubusercontent.com/u/1614945?v=4",
       "profile": "https://github.com/ritave",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "armgp",
+      "name": "Abhiram G P",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49094298?v=4",
+      "profile": "https://github.com/armgp",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "aelmanaa",
+      "name": "Amine E.",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4503543?v=4",
+      "profile": "https://github.com/aelmanaa",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Roshan-R",
+      "name": "Roshan R Chandar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43182697?v=4",
+      "profile": "https://roshan.ml/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "mossow",
+      "name": "mossow",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9072132?v=4",
+      "profile": "https://github.com/mossow",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "OpenWJY",
+      "name": "yujingwei",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29328336?v=4",
+      "profile": "https://github.com/OpenWJY",
       "contributions": [
         "doc"
       ]
