@@ -123,7 +123,6 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Documentation](https://docs.zmok.io/)
 - [Discord](https://discord.gg/fAHeh3ka6s)
 
-
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
