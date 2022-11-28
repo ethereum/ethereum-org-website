@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { useIntl } from "react-intl"
+import { useI18next } from "gatsby-plugin-react-i18next"
 
 import NavDropdown from "./Dropdown"
 import Translation from "../Translation"
@@ -21,8 +21,8 @@ export interface IProps {
 }
 
 const Menu: React.FC<IProps> = ({ path, sections }) => {
-  const intl = useIntl()
-  const direction = getDirection(intl.locale as Lang)
+  const { language } = useI18next()
+  const direction = getDirection(language as Lang)
   const shouldShowSubNav = path.includes("/developers/")
 
   const { useEthereum, learn, ...restSections } = sections

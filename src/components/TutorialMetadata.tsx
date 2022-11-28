@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { useIntl } from "react-intl"
+import { useI18next } from "gatsby-plugin-react-i18next"
 import CopyToClipboard from "./CopyToClipboard"
 import Pill from "./Pill"
 import Link from "./Link"
@@ -95,7 +95,7 @@ export const getSkillTranslationId = (skill: Skill): TranslationKey =>
   `page-tutorial-${Skill[skill.toUpperCase() as keyof typeof Skill]}`
 
 const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
-  const intl = useIntl()
+  const { language } = useI18next()
 
   const frontmatter = tutorial.frontmatter
   const hasSource = frontmatter.source && frontmatter.sourceUrl
@@ -129,7 +129,7 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
         {published && (
           <DataContainer>
             <Emoji size={1} mr={`0.5em`} text=":calendar:" />
-            {getLocaleTimestamp(intl.locale as Lang, published)}
+            {getLocaleTimestamp(language as Lang, published)}
           </DataContainer>
         )}
         <DataContainer>

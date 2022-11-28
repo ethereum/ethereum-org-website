@@ -126,7 +126,7 @@ La clé privée de votre portefeuille fait office de mot de passe pour votre por
 
 #### Ne faites pas de captures d'écran de vos phrases secrètes/clés privées {#screenshot-private-keys}
 
-En faisant une une capture d'écran de vos phrases secrètes ou de vos clés privées, vous risquez de les synchroniser sur le cloud et donc de les rendre potentiellement accessibles aux pirates informatiques. Récupérer les clés privées du cloud est un vecteur d'attaque prisé des pirates.
+En faisant une capture d'écran de vos phrases secrètes ou de vos clés privées, vous risquez de les synchroniser sur le cloud et donc de les rendre potentiellement accessibles aux pirates informatiques. Récupérer les clés privées du cloud est un vecteur d'attaque prisé des pirates.
 
 ### Utiliser un portefeuille matériel {#use-hardware-wallet}
 
@@ -150,8 +150,6 @@ Assurez-vous toujours que l'adresse spécifiée correspond exactement à l'adres
 Lorsque vous interagissez avec des contrats intelligents, n'autorisez pas des plafonds de dépenses illimités. Une autorisation de dépenses illimitées peut permettre au contrat intelligent de vider votre portefeuille. Au lieu de cela, fixez plutôt des limites de dépenses correspondant uniquement au montant nécessaire à la transaction.
 
 De nombreux portefeuilles Ethereum offrent des limites de sécurité pour éviter que vos comptes ne soient vidés.
-
-[Explorer les portefeuilles proposant des limites de sécurité](/wallets/find-wallet/?filters=has_limits_protection)
 
 <Divider />
 

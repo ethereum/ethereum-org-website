@@ -478,7 +478,29 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/)** - _Contract libraries for implementing administrative features, including contract ownership, upgrades, access controls, governance, pauseability, and more._
 
-### Publications of known smart contract vulnerabilities and exploits {#common-smart contract-vulnerabilities-and-exploits}
+### Smart contract auditing services {#smart-contract-auditing-services}
+
+- **[ConsenSys Diligence](https://consensys.net/diligence/)** - _Smart contract auditing service helping projects across the blockchain ecosystem ensure their protocols are ready for launch and built to protect users._
+
+- **[CertiK](https://www.certik.com/)** - _Blockchain security firm pioneering the use of cutting-edge formal Verification technology on smart contracts and blockchain networks._
+
+- **[Trail of Bits](https://www.trailofbits.com/)** - _Cybersecurity company that combines security research with an attacker mentality to reduce risk and fortify code._
+
+- **[PeckShield](https://peckshield.com/)** - _Blockchain security company offering products and services for the security, privacy, and usability of the entire blockchain ecosystem._
+
+- **[QuantStamp](https://quantstamp.com/)** - _Auditing service facilitating the mainstream adoption of blockchain technology through security and risk assessment services._
+
+- **[OpenZeppelin](https://www.openzeppelin.com/security-audits)** - _Smart contract security company providing security audits for distributed systems._
+
+- **[Runtime Verification](https://runtimeverification.com/)** - _Security company specializing in formal modeling and verification of smart contracts._
+
+### Bug bounty platforms {#bug-bounty-platforms}
+
+- **[Immunefi](https://immunefi.com/)** - _Bug bounty platform for smart contracts and DeFi projects, where security researchers review code, disclose vulnerabilities, get paid, and make crypto safer._
+
+- **[HackerOne](https://www.hackerone.com/)** - _Vulnerability coordination and bug bounty platform that connects businesses with penetration testers and cybersecurity researchers._
+
+### Publications of known smart contract vulnerabilities and exploits {#common-smart-contract-vulnerabilities-and-exploits}
 
 - **[ConsenSys: Smart Contract Known Attacks](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _Beginner-friendly explanation of the most significant contract vulnerabilities, with sample code for most cases._
 
