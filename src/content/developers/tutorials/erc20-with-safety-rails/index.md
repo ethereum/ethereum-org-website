@@ -3,7 +3,6 @@ title: ERC-20 with Safety Rails
 description: How to help people avoid silly mistakes
 author: Ori Pomerantz
 lang: en
-sidebar: true
 tags: ["erc-20"]
 skill: beginner
 published: 2022-08-15

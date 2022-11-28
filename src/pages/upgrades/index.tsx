@@ -863,7 +863,7 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
             <Translation id="page-upgrades-take-part-desc" />
           </p>
           <ButtonLink to="https://ethresear.ch/">
-            <Translation id="page-upgrades-head-to" /> ethresear.ch
+            <Translation id="page-upgrades-head-to-ethresearch" />
           </ButtonLink>
         </ResearchContainer>
       </Content>

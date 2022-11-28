@@ -45,7 +45,7 @@ lang: zh
 - `codeHash` - 该哈希表示以太坊虚拟机 (EVM) 上的帐户*代码*。 合约帐户具有编程的代码片段，可以执行不同的操作。 如果帐户收到消息调用，则执行此 EVM 代码。 与其他帐户字段不同，不能更改。 所有代码片段都被保存在状态数据库的相应哈希下，供后续检索。 此哈希值称为 codeHash。 对于外部所有的帐户，codeHash 字段是空字符串的哈希。
 - `storageRoot` – 有时被称为存储哈希。 Merkle Patricia trie 根节点的 256 位哈希已编码了帐户的存储内容（256 位整数值映射），并编码为 Trie，作为来自 256 的 Keccak 256 位哈希的映射位整数键，用于 RLP 编码的 256 位整数值。 此 Trie 对此帐户存储内容的哈希进行编码，默认情况下为空。
 
-![显示帐户组成部分的图表](./accounts.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![显示帐户组成部分的图表](./accounts.png) _示意图节选自[以太坊虚拟机图解](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## 外部持有的帐户和密钥对 {#externally-owned-accounts-and-key-pairs}
 
@@ -79,7 +79,7 @@ Repeat passphrase:
 "0x3d80b31a78c30fc628f20b2c89d7ddbf6e53cedc"
 ```
 
-[GETH 文档](https://geth.ethereum.org/docs)
+[GETH 相关文档](https://geth.ethereum.org/docs)
 
 可以通过您的私钥获取公钥，但您不能通过公钥获取私钥。 这意味着保持私人密钥的安全至关重要，如同名称所建议的 **PRIVATE**。
 
@@ -95,11 +95,17 @@ Repeat passphrase:
 
 合约地址通常在将合约部署到以太坊区块链时给出。 地址产生自创建人的地址和从创建人地址发送的交易数量（“nonce”）。
 
+## 验证者密钥 {#validators-keys}
+
+以太坊还有一另种类型的密钥，它们是在以太坊从工作量证明过渡到权益证明共识时引入的。 它们是“BLS”密钥，用来识别验证者。 这些密钥可以有效地聚合，减少网络达成共识所需要的带宽。 没有这种密钥集合，验证者的最小质押金额将会高出许多。
+
+[更多关于验证者密钥的信息](/developers/docs/consensus-mechanisms/pos/keys/)。
+
 ## 关于钱包的说明 {#a-note-on-wallets}
 
-帐户和钱包不同。 账户是用户拥有的以太坊账户的密钥和地址对。 钱包是一个界面或者说应用程序，可以让您与以太坊账户交互。
+帐户和钱包不同。 帐户是用户拥有的以太坊帐户的密钥对。 钱包是界面或应用程序，可以让你与以太坊帐户交互。
 
-## 直观演示 {#a-visual-demo}
+## 视频演示 {#a-visual-demo}
 
 跟随 Austin 了解哈希函数和密钥对。
 
@@ -109,7 +115,7 @@ Repeat passphrase:
 
 ## 延伸阅读 {#further-reading}
 
-_还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_
+_还有哪些社区资源对你有所帮助？ 请编辑本页面以添加！_
 
 ## 相关主题 {#related-topics}
 

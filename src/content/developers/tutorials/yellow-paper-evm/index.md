@@ -32,19 +32,21 @@ The term [Turing-complete](https://en.wikipedia.org/wiki/Turing_completeness) me
 
 This section gives the basics of the EVM and how it compares with other computational models.
 
-A [stack machine](https://en.wikipedia.org/wiki/Stack_machine) is a computer that stores intermediate data not in registers, but in a [stack](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>). This is the preferred architecture for virtual machines because it is easy to implement meaning that bugs, and security vulnerabilities, are a lot less likely. The memory in the stack is divided into 256-bit words. This was chosen because it is convenient for Ethereum's core cryptographic operations such as Keccak-256 hashing and elliptic curve computations. The maximum size of the stack in 1024 bytes.
+A [stack machine](https://en.wikipedia.org/wiki/Stack_machine) is a computer that stores intermediate data not in registers, but in a [**stack**](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>). This is the preferred architecture for virtual machines because it is easy to implement meaning that bugs, and security vulnerabilities, are a lot less likely. The memory in the stack is divided into 256-bit words. This was chosen because it is convenient for Ethereum's core cryptographic operations such as Keccak-256 hashing and elliptic curve computations. The maximum size of the stack in 1024 bytes. When opcodes are executed they are usually getting their parameters from the stack. There are opcodes specifically for reorganizing elements in the stack such as `POP` (removes item from top of stack), `DUP_N` (duplicated N'th item in stack), etc.
 
-For example, if you execute this [Yul](https://docs.soliditylang.org/en/latest/yul.html) code:
+The EVM also has a volatile space called **memory** which is used to store data during execution. This memory is organized into 32-byte words. All memory locations are initialized to zero. If you execute this [Yul](https://docs.soliditylang.org/en/latest/yul.html) code to add a word to memory, it will fill 32 bytes of memory by padding the empty space in the word with zeros, i.e. it creates one word - with zeros in locations 0-29, 0x60 to 30, and 0xA7 to 31.
 
 ```yul
 mstore(0, 0x60A7)
 ```
 
-It fills 32 memory locations - i.e. one word - with zeros in locations 0-29, 0x60 to 30, and 0xA7 to 31.
+`mstore` is one of three opcodes the EVM provides for interacting with memory - it loads a word into memory. The other two are `mstore8` which loads a single byte into memory, and `mload` which moves a word from memory to stack.
 
-The EVM also has a separate non-volatile storage model that is maintained as part of the system state - this memory is organized into word arrays (as opposed to word-addressable byte arrays in the stack). The stack is referred to as "memory" while the non-volatile storage is referred to as "storage".
+The EVM also has a separate non-volatile **storage** model that is maintained as part of the system state - this memory is organized into word arrays (as opposed to word-addressable byte arrays in the stack). This storage is where contracts keep persistent data - a contract can only interact with its own storage. Storage is organized in key-value mappings.
 
-The standard [Von Neumann architecture](https://en.wikipedia.org/wiki/Von_Neumann_architecture) stores code and data in the same memory. The EVM diverges from this norm for security reasons - sharing volatile memory makes it possible to change program code. Instead, code is saved to storage.
+Although it is not mentioned in this section of the Yellow Paper, it is also useful to know there is a fourth type of memory. **Calldata** is byte-addressable read-only memory used to store the value passed with the `data` parameter of a transaction. The EVM has specific opcodes for managing `calldata`. `calldatasize` returns the size of the data. `calldataload` loads the data into the stack. `calldatacopy` copies the data into memory.
+
+The standard [Von Neumann architecture](https://en.wikipedia.org/wiki/Von_Neumann_architecture) stores code and data in the same memory. The EVM does not follow this standard for security reasons - sharing volatile memory makes it possible to change program code. Instead, code is saved to storage.
 
 There are only two cases in which code is executed from memory:
 

@@ -2,7 +2,6 @@
 title: Segurança e prevenção de fraude do Ethereum
 description: Como manter a segurança no Ethereum
 lang: pt-br
-sidebar: true
 ---
 
 # Segurança e prevenção de fraude do Ethereum {#introduction}
@@ -158,8 +157,6 @@ Certifique-se sempre de que o endereço de destino corresponde exatamente ao end
 Ao interagir com contratos inteligentes, não permita limites de gastos ilimitados. Uma despesa ilimitada poderia permitir que o contrato inteligente drenasse a sua carteira. Em vez disso, defina limites de gastos apenas na quantidade necessária para a transação.
 
 Muitas carteiras Ethereum oferecem proteção de limites para evitar que as contas sejam drenadas.
-
-[Veja as carteiras com proteção de limites](/wallets/find-wallet/?filters=has_limits_protection)
 
 <Divider />
 

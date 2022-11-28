@@ -30,7 +30,7 @@ If the rollup batch remains unchallenged (i.e., all transactions are correctly e
 
 Optimistic rollups are [off-chain scaling solutions](/developers/docs/scaling/#off-chain-scaling) built to operate on top of Ethereum. Each optimistic rollup is managed by a set of smart contracts deployed on the Ethereum network. Optimistic rollups process transactions off the main Ethereum chain, but post off-chain transactions (in batches) to an on-chain rollup contract. Like the Ethereum blockchain, this transaction record is immutable and forms the "optimistic rollup chain."
 
-The architecure of an optimistic rollup comprises the following parts:
+The architecture of an optimistic rollup comprises the following parts:
 
 **On-chain contracts**: The optimistic rollups's operation is controlled by smart contracts running on Ethereum. This includes contracts that store rollup blocks, monitor state updates on the rollup, and track user deposits. In this sense Ethereum serves as the base layer or "layer 1" for optimistic rollups.
 

@@ -76,18 +76,18 @@ Le dimensioni del database e la velocità della sincronizzazione iniziale dipend
 
 Assicurati anche che la tua connessione a internet non sia limitata da un [limite di larghezza di banda](https://wikipedia.org/wiki/Data_cap). Si consiglia di non usare una connessione a consumo poiché la sincronizzazione iniziale e i dati trasmessi alla rete potrebbero superare il limite di traffico.
 
-##### Sistema operativo {#operating-system}
+##### Sistema operativo
 
 Tutti i client supportano i principali sistemi operativi: Linux, MacOS, Windows. Questo significa che puoi eseguire i nodi su macchine desktop o server ordinarie, con il sistema operativo (OS) più adatto alle tue esigenze. Assicurati che il tuo OS sia aggiornato per evitare potenziali problemi e vulnerabilità di sicurezza.
 
-##### Requisiti minimi {#minimum-requirements}
+##### Requisiti minimi
 
 - CPU con 2+ core
 - 8 GB di RAM
 - 700GB di spazio libero su disco
 - Larghezza di banda 10+ MBit/s
 
-##### Specifiche raccomandate {#recommended-hardware}
+##### Specifiche raccomandate
 
 - CPU veloce con 4+ core
 - 16 GB+ RAM
@@ -153,7 +153,7 @@ Le istruzioni per installare ogni client sono fornite nella documentazione colle
 
 Ecco le pagine delle release dei client, in cui puoi trovare i loro binari precompilati o le istruzioni d'installazione:
 
-##### Client di esecuzione {#execution-clients}
+##### Client di esecuzione
 
 - [Besu](https://github.com/hyperledger/besu/releases)
 - [Erigon](https://github.com/ledgerwatch/erigon#usage) (Non fornisce un binario precompilato, dev'essere compilato)
@@ -162,7 +162,7 @@ Ecco le pagine delle release dei client, in cui puoi trovare i loro binari preco
 
 Vale anche la pena notare che la diversità del client è un [problema sul livello di esecuzione](/developers/docs/client-diversity/#execution-layer). Si consiglia ai lettori di considerare l'esecuzione di un client di esecuzione di minoranza.
 
-##### Client di consenso {#consensus-clients}
+##### Client di consenso
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
 - [Lodestar](https://chainsafe.github.io/lodestar/install/source/) (Non fornisce un binario precompilato, solo un'immagine Docker o da compilare da sorgente)
@@ -174,7 +174,7 @@ La [diversità del client](/developers/docs/nodes-and-clients/client-diversity/)
 
 [Visualizza l'utimo uso del client della rete](https://clientdiversity.org/) e scopri di più sulla [diversità del client](/developers/docs/client-diversity).
 
-##### Verificare il software {#verifying-the-software}
+##### Verificare il software
 
 Quando si scarica il software da Internet, si consiglia di verificarne l'integrità. Questo passaggio è facoltativo, ma specialmente con parti di infrastruttura essenziali come il client di Ethereum, è importante esser consapevoli dei potenziali vettori d'attacco ed evitarli. Se hai scaricato un binario precompilato, devi fidartene e rischiare che un utente malevolo possa scambiare l'eseguibile con un file malevolo.
 

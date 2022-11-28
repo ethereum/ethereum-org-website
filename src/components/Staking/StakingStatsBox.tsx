@@ -1,14 +1,24 @@
+// Import libraries
 import React, { useState, useEffect } from "react"
 import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
-
+import { Spinner } from "@chakra-ui/react"
+// Import components
 import Translation from "../Translation"
-import StatErrorMessage from "../StatErrorMessage"
-import { getLocaleForNumberFormat } from "../../utils/translations"
-import { getData } from "../../utils/cache"
-import calculateStakingRewards from "../../utils/calculateStakingRewards"
+import Tooltip from "../Tooltip"
+import Link from "../Link"
+import Icon from "../Icon"
+// Import utilities
 import { Lang } from "../../utils/languages"
+import { getData } from "../../utils/cache"
+import { getLocaleForNumberFormat } from "../../utils/translations"
 
+// Constants
+const NA_ERROR = "n/a"
+const ZERO = "0"
+const MAX_EFFECTIVE_BALANCE = 32
+
+// Styled components
 const Container = styled.div`
   display: flex;
   @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
@@ -43,26 +53,65 @@ const Value = styled.code`
   color: ${({ theme }) => theme.colors.primary};
 `
 
-const Label = styled.p`
+const Label = styled.div`
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
   text-transform: uppercase;
   font-size: 0.875rem;
   margin-top: 0.5rem;
 `
 
+const StyledIcon = styled(Icon)`
+  fill: ${({ theme }) => theme.colors.text};
+  margin-inline-start: 0.5rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    fill: ${({ theme }) => theme.colors.primary};
+  }
+`
+
+// BeaconchainTooltip component
+const BeaconchainTooltip = ({ isEthStore }: { isEthStore?: boolean }) => (
+  <Tooltip
+    content={
+      <div>
+        <Translation id="data-provided-by" />{" "}
+        {isEthStore && (
+          <Link to="https://github.com/gobitfly/eth.store/">ETH.STORE, </Link>
+        )}
+        <Link to="https://beaconcha.in">Beaconcha.in</Link>
+      </div>
+    }
+  >
+    <StyledIcon name="info" size="16" />
+  </Tooltip>
+)
+
+// Interfaces
 export interface IProps {}
 
-const StatsBoxGrid: React.FC<IProps> = () => {
+// StatsBox component
+const StakingStatsBox: React.FC<IProps> = () => {
   const intl = useIntl()
-  const [totalEth, setTotalEth] = useState<string>("0")
-  const [totalValidators, setTotalValidators] = useState<string>("0")
-  const [currentApr, setCurrentApr] = useState<string>("0")
-  const [error, setError] = useState(false)
+  /**
+   * State variables:
+   * - ZERO is default string, "0", representing loading state
+   * - null is error state
+   */
+  const [totalEth, setTotalEth] = useState<string | null>(ZERO)
+  const [totalValidators, setTotalValidators] = useState<string | null>(ZERO)
+  const [currentApr, setCurrentApr] = useState<string | null>(ZERO)
 
   useEffect(() => {
     const localeForStatsBoxNumbers = getLocaleForNumberFormat(
       intl.locale as Lang
     )
 
+    // Helper functions
     const formatInteger = (amount: number): string =>
       new Intl.NumberFormat(localeForStatsBoxNumbers).format(amount)
 
@@ -73,60 +122,72 @@ const StatsBoxGrid: React.FC<IProps> = () => {
         maximumSignificantDigits: 2,
       }).format(amount)
 
+    // API call, data formatting, and state setting
     ;(async () => {
       try {
         const {
-          data: { totalvalidatorbalance, validatorscount },
+          data: { apr, effective_balances_sum_wei },
         } = await getData<{
-          data: { totalvalidatorbalance: number; validatorscount: number }
-        }>("https://mainnet.beaconcha.in/api/v1/epoch/latest")
-
-        const valueTotalEth = formatInteger(
-          Number((totalvalidatorbalance * 1e-9).toFixed(0))
+          data: { apr: number; effective_balances_sum_wei: number }
+        }>("https://beaconcha.in/api/v1/ethstore/latest")
+        const totalEffectiveBalance: number = effective_balances_sum_wei * 1e-18
+        const valueTotalEth = formatInteger(Math.floor(totalEffectiveBalance))
+        const valueTotalValidators = formatInteger(
+          totalEffectiveBalance / MAX_EFFECTIVE_BALANCE
         )
-        const valueTotalValidators = formatInteger(validatorscount)
-        const currentAprDecimal = calculateStakingRewards(
-          totalvalidatorbalance * 1e-9
-        )
-        const valueCurrentApr = formatPercentage(currentAprDecimal)
+        const valueCurrentApr = formatPercentage(apr)
         setTotalEth(valueTotalEth)
         setTotalValidators(valueTotalValidators)
-        setCurrentApr(`~${valueCurrentApr}`)
-        setError(false)
+        setCurrentApr(valueCurrentApr)
       } catch (error) {
-        setTotalEth("n/a")
-        setTotalValidators("n/a")
-        setCurrentApr("n/a")
-        setError(true)
+        setTotalEth(null)
+        setCurrentApr(null)
+        setTotalValidators(null)
       }
     })()
   }, [intl.locale])
 
-  // TODO: Improve error handling
-  if (error) return <StatErrorMessage />
-
   return (
     <Container>
       <Cell>
-        <Value>{totalEth}</Value>
+        {totalEth === ZERO ? (
+          <Spinner />
+        ) : (
+          <Value title={totalEth ? "" : NA_ERROR}>{totalEth || NA_ERROR}</Value>
+        )}
         <Label>
           <Translation id="page-staking-stats-box-metric-1" />
+          <BeaconchainTooltip />
         </Label>
       </Cell>
       <Cell>
-        <Value>{totalValidators}</Value>
+        {totalValidators === ZERO ? (
+          <Spinner />
+        ) : (
+          <Value title={totalValidators ? "" : NA_ERROR}>
+            {totalValidators || NA_ERROR}
+          </Value>
+        )}
         <Label>
           <Translation id="page-staking-stats-box-metric-2" />
+          <BeaconchainTooltip />
         </Label>
       </Cell>
       <Cell>
-        <Value>{currentApr}</Value>
+        {currentApr === ZERO ? (
+          <Spinner />
+        ) : (
+          <Value title={currentApr ? "" : NA_ERROR}>
+            {currentApr || NA_ERROR}
+          </Value>
+        )}
         <Label>
           <Translation id="page-staking-stats-box-metric-3" />
+          <BeaconchainTooltip isEthStore />
         </Label>
       </Cell>
     </Container>
   )
 }
 
-export default StatsBoxGrid
+export default StakingStatsBox

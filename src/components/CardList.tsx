@@ -7,6 +7,7 @@ import {
   LinkBox,
   LinkOverlay,
   StackProps,
+  useColorModeValue,
 } from "@chakra-ui/react"
 
 import { ImageProp } from "../types"
@@ -50,6 +51,8 @@ const Card = (props: CardListItem & Omit<StackProps, "title" | "id">) => {
   const isLink = !!link
   const isExternal = url.isExternal(link || "")
 
+  const descriptionColor = useColorModeValue("gray.500", "gray.400")
+
   return (
     <CardContainer {...rest}>
       {image && <Box as={GatsbyImage} image={image} alt={alt} minW="20px" />}
@@ -69,7 +72,7 @@ const Card = (props: CardListItem & Omit<StackProps, "title" | "id">) => {
           <Box>{title}</Box>
         )}
 
-        <Box fontSize="sm" mb={0} opacity={0.6}>
+        <Box fontSize="sm" mb={0} color={descriptionColor}>
           {description}
         </Box>
       </Flex>

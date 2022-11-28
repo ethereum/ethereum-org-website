@@ -1,5 +1,5 @@
 ---
-title: イーサリアム財団とコミュニティの助成プログラム
+title: イーサリアム・ファウンデーションとコミュニティの助成プログラム
 description: イーサリアムエコシステム全体の助成プログラムリスト
 lang: ja
 ---
@@ -15,7 +15,7 @@ lang: ja
 これらのプログラムは、広範囲のプロジェクトに助成金を提供し、イーサリアムエコシステムを幅広くサポートするものです。 拡張性、コミュニティ構築、セキュリティ、プライバシーなどのソリューションが対象となり、 どれか 1 つのイーサリアムプラットフォームに固有の助成プログラムではありません。 不明な場合は、まずはこちらから始めてみてください。
 
 - [EF エコシステム・サポート・プログラム](https://esp.ethereum.foundation) - _ユニバーサルツール、インフラストラクチャ、研究、公共財を対象とした、イーサリアムにプラスとなるオープンソース・プロジェクトへの資金提供_
-- [イーサリアム RFP](https://github.com/ethereum/requests-for-proposals) - _イーサリアム財団によるイーサリアムエコシステムにおける作業とプロジェクトの提案依頼_
+- [イーサリアム RFP](https://github.com/ethereum/requests-for-proposals) - _イーサリアム・ファウンデーションによるイーサリアムエコシステムにおける作業とプロジェクトの提案依頼_
 - [MetaCartel](https://www.metacartel.org/grants/) - _分散型アプリ(Dapp)開発、分散型自律組織(DAO)作成_
 - [Moloch DAO](https://www.molochdao.com/) - _プライバシー、レイヤー 2 スケーリング、クライアントセキュリティなど_
 - [公開されている助成プログラム](https://opengrants.com/explore)
@@ -34,7 +34,8 @@ lang: ja
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/)金融エコシステム_
 - [mStable](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/)コミュニティ_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/)エコシステム_
-- [Uniswap Grants Program](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/)コミュニティ_
+- [Uniswap 助成プログラム](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/)コミュニティ_
+- [Web3 助成プログラム](https://web3grants.net) - _Web3/暗号資産関連の助成プログラムの広範なリスト_
 
 ## クオドラティック・ファンディング {#quadratic-funding}
 
