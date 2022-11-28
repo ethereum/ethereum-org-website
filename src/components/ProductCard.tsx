@@ -76,7 +76,6 @@ const SubjectPill: React.FC<{ subject: string; children: ReactNode }> = ({
       fontSize="xs"
       textAlign="center"
       px={2}
-      mb={2}
     >
       {children}
     </Box>
@@ -190,7 +189,7 @@ const ProductCard: React.FC<IProps> = ({
         {note.length > 0 && <Text {...DESCRIPTION_STYLES}>Note: {note}</Text>}
         {children && <Box mt={4}>{children}</Box>}
       </Flex>
-      <HStack mt={5} px={6} spacing={3}>
+      <HStack mt={5} mb={2} px={6} spacing={3}>
         {subjects &&
           subjects.map((subject, idx) => (
             <SubjectPill key={idx} subject={subject}>
