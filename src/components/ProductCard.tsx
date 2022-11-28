@@ -1,5 +1,4 @@
 import React, { ReactNode } from "react"
-import styled from "@emotion/styled"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import { useQuery, gql } from "@apollo/client"
 
@@ -11,7 +10,6 @@ import {
   Flex,
   Heading,
   HStack,
-  Image,
   Img,
   Text,
   TextProps,
