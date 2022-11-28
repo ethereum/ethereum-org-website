@@ -64,6 +64,7 @@ Directly communicating with InfluxDB in its shell, you can create database and u
 
 ```
 create database geth
+use geth
 create user geth with password choosepassword
 ```
 
