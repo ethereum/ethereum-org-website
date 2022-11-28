@@ -1,52 +1,10 @@
 import React from "react"
-import styled from "@emotion/styled"
 import { useTranslation } from "gatsby-plugin-react-i18next"
+import { Box, UnorderedList, ListItem } from "@chakra-ui/react"
 
 import Link from "./Link"
 import { isLang } from "../utils/languages"
 import { isTranslationKey } from "../utils/translations"
-
-const ListContainer = styled.nav`
-  margin-bottom: 2rem;
-  list-style-type: none;
-  /* Avoid header overlap: */
-  position: relative;
-  z-index: 1;
-`
-
-const List = styled.ol`
-  margin: 0;
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-`
-
-const ListItem = styled.li`
-  margin: 0;
-  margin-right: 0.5rem;
-  font-size: 0.875rem;
-  line-height: 140%;
-  letter-spacing: 0.04em;
-`
-
-const Slash = styled.span`
-  margin-left: 0.5rem;
-  color: ${(props) => props.theme.colors.textTableOfContents};
-`
-
-const CrumbLink = styled(Link)`
-  text-decoration: none;
-  color: ${(props) => props.theme.colors.textTableOfContents};
-
-  &:hover {
-    text-decoration: none;
-    color: ${(props) => props.theme.colors.primary};
-  }
-
-  &.active {
-    color: ${(props) => props.theme.colors.primary};
-  }
-`
 
 export interface IProps {
   slug: string
@@ -91,21 +49,50 @@ const Breadcrumbs: React.FC<IProps> = ({
   })
 
   return (
-    <ListContainer aria-label="Breadcrumb" dir="auto" {...restProps}>
-      <List>
+    <Box
+      aria-label="Breadcrumb"
+      dir="auto"
+      {...restProps}
+      as="nav"
+      marginBottom={8}
+      listStyleType="none"
+      position="relative"
+      zIndex={1}
+    >
+      <UnorderedList
+        display="flex"
+        flexWrap="wrap"
+        listStyleType="none"
+        margin={0}
+      >
         {crumbs.map((crumb, idx) => (
-          <ListItem key={idx}>
-            <CrumbLink
+          <ListItem
+            key={idx}
+            margin={0}
+            marginRight={2}
+            fontSize="sm"
+            lineHeight="140%"
+            letterSpacing="wider"
+          >
+            <Link
               to={crumb.fullPath}
               isPartiallyActive={slug === crumb.fullPath}
+              textDecoration="none"
+              color="textTableOfContents"
+              _hover={{ color: "primary", textDecor: "none" }}
+              _active={{ color: "primary" }}
             >
               {crumb.text}
-            </CrumbLink>
-            {idx < crumbs.length - 1 && <Slash>/</Slash>}
+            </Link>
+            {idx < crumbs.length - 1 && (
+              <Box as="span" marginLeft={2} color="textTableOfContents">
+                /
+              </Box>
+            )}
           </ListItem>
         ))}
-      </List>
-    </ListContainer>
+      </UnorderedList>
+    </Box>
   )
 }
 
