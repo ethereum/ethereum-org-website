@@ -150,8 +150,6 @@ Chrome 확장 프로그램 또는 Firefox 애드온과 같은 브라우저 확�
 
 많은 이더리움 지갑은 계정의 자금을 보호하기 위해 한도 설정 기능을 제공합니다.
 
-[한도 설정 기능이 포함된 지갑 살펴보기](/wallets/find-wallet/?filters=has_limits_protection)
-
 <Divider />
 
 ## 흔한 사기 방식 {#common-scams}

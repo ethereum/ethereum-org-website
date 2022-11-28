@@ -1,7 +1,7 @@
 import React from "react"
 import { TranslationKey } from "../utils/translations"
 import Translation from "./Translation"
-import { Heading, Text, useColorMode, VStack } from "@chakra-ui/react"
+import { Heading, Text, useColorModeValue, VStack } from "@chakra-ui/react"
 
 export interface IStyledContainer {
   isShipped: boolean
@@ -18,10 +18,10 @@ const UpgradeStatus: React.FC<IProps> = ({
   children,
   isShipped = false,
 }) => {
-  const { colorMode } = useColorMode()
-  const border = colorMode === "dark" ? "2px solid" : "none"
+  const border = useColorModeValue("none", "2px solid")
   const darkBorderColor = isShipped ? "#3fb181" : "#a4a4ff"
-  const borderColor = colorMode === "dark" ? darkBorderColor : undefined
+
+  const borderColor = useColorModeValue(undefined, darkBorderColor)
 
   return (
     <VStack

@@ -25,7 +25,7 @@ Per farlo ci basiamo su alcuni principi chiave.
 
 ## Principi fondamentali {#core-principles}
 
-### 1. ethereum.org è un portale per Ethereum {#core-principles-1}
+### 1. ethereum.org è un portale per Ethereum 🌏 {#core-principles-1}
 
 Vogliamo catturare l'interesse dei nostri utenti e rispondere alle loro domande Dunque il nostro portale deve combinare informazione, "momenti magici" e collegamenti alle preziose risorse della community. Il nostro contenuto è meramente introduttivo e non vuole sostituire risorse esaustive già esistenti. Il nostro desiderio è fornisce sostegno e integrare le informazioni con le risorse offerte dalla community, dando loro più visibilità e rendendole quindi più reperibili.
 
