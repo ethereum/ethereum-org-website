@@ -41,7 +41,7 @@ Your address represents you on all Ethereum projects. You will not need to regis
 2. Most of them will have a button in the menu to “Open the App”. 
 3. Once you are in the app simply click on “Connect” 
 
-![Button allowing user to connect to the website with a wallet](./connect.png)
+![Button allowing user to connect to the website with a wallet](./connect1.png)
 
 4. Select your wallet from the offered list. If you cant see your wallet, maybe it will be hidden under “WalletConnect” option.
 
