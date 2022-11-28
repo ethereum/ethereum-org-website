@@ -1522,6 +1522,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/armgp"><img src="https://avatars.githubusercontent.com/u/49094298?v=4?s=100" width="100px;" alt="Abhiram G P"/><br /><sub><b>Abhiram G P</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=armgp" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/aelmanaa"><img src="https://avatars.githubusercontent.com/u/4503543?v=4?s=100" width="100px;" alt="Amine E."/><br /><sub><b>Amine E.</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=aelmanaa" title="Documentation">📖</a></td>
       <td align="center"><a href="https://roshan.ml/"><img src="https://avatars.githubusercontent.com/u/43182697?v=4?s=100" width="100px;" alt="Roshan R Chandar"/><br /><sub><b>Roshan R Chandar</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Roshan-R" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://github.com/mossow"><img src="https://avatars.githubusercontent.com/u/9072132?v=4?s=100" width="100px;" alt="mossow"/><br /><sub><b>mossow</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=mossow" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
