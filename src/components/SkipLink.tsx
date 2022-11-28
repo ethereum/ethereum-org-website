@@ -1,6 +1,7 @@
 import React from "react"
-import Translation from "./Translation"
 import { Box } from "@chakra-ui/react"
+
+import Translation from "./Translation"
 import Link from "../components/Link"
 
 export interface IProps {
