@@ -37,7 +37,7 @@ Once deployed, your contract will have an Ethereum address like other [accounts]
 
 - [Remix](https://remix.ethereum.org)
 
-**Tenderly - _Simulate, debug and monitor anything on EVM-compatible chains, with real-time data_**
+**Tenderly - _Web3 development platform that provides debugging, observability, and infrastructure building blocks for developing, testing, monitoring, and operating smart contracts_**
 
 - [tenderly.co](https://tenderly.co/)
 - [Docs](https://docs.tenderly.co/)
