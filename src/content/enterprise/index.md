@@ -65,7 +65,6 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 - [Unibright](https://unibright.io/) _a team of blockchain specialists, architects, developers and consultants with 20+ years of experience in business processes and integration_
 - [Zero Services GmbH](https://www.zeroservices.eu/) _provider of managed services spread across co-locations in Europe and Asia. Operates & monitors your nodes securely and reliably_
 
-
 ### Tooling and libraries {#tooling-and-libraries}
 
 - [Alethio](https://explorer.aleth.io/) _Ethereum Data Analytics Platform_
