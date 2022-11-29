@@ -8,19 +8,19 @@ An Ethereum node is composed of two clients: an [execution client](https://ether
 
 When Ethereum was using [proof-of-work](/developers/docs/consensus-mechanisms/pow/), an execution client was enough to run a full Ethereum node. However, since implementing [proof-of-stake](/developers/docs/consensus-mechanisms/pow/), the execution client needs to be used alongside another piece of software called a [“consensus client”](/developers/docs/nodes-and-clients/#consensus-clients).
 
-The execution client is responsible for transaction handling, transaction gossip, state management and supporting the Ethereum Virtual Machine ([EVM](/developers/docs/evm/)). However, it is **not** responsible for block building, block gossiping or handling consensus logic. These are in the remit of the consensus client.
-
 The relationship between the two Ethereum clients is shown in the schematic below. The two clients each connect to their own respective peer-to-peer (P2P) networks. This is because the execution clients gossip transactions over their P2P network enabling them to manage their local transaction pool. The consensus clients gossip blocks over their P2P network, enabling consensus and chain growth.
 
 ![node-architecture](node-architecture-text-background.png)
 
-_This image is borrowed from geth.ethereum.org and uses the Geth logo to represent execution clients - there are other options for the execution client including Erigon, Nethermind, Akula and Besu_
+_This image is borrowed from geth.ethereum.org and uses the Geth logo to represent execution clients - there are other options for the execution client including Erigon, Nethermind and Besu_
 
 For this two-client structure to work, consensus clients must be able to pass bundles of transactions to the execution client. Executing the transactions locally is how the client validates that the transactions do not violate any Ethereum rules and that the proposed update to Ethereum’s state is correct. Likewise, when the node is selected to be a block producer the consensus client must be able to request bundles of transactions from Geth to include in the new block and execute them to update the global state. This inter-client communication is handled by a local RPC connection using the [engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md).
 
 ## What does the execution client do? {#execution-client}
 
-The execution client is responsible for creating the execution payloads - the list of transactions, updated state trie, and other execution-related data. Consensus clients include the execution payload in every block. The execution client is also responsible for re-executing transactions in new blocks to ensure they are valid. Executing transactions is done on the execution client's embedded computer, known as the [Ethereum Virtual Machine (EVM)](/developers/docs/evm).
+The execution client is responsible for transaction handling, transaction gossip, state management and supporting the Ethereum Virtual Machine ([EVM](/developers/docs/evm/)). However, it is **not** responsible for block building, block gossiping or handling consensus logic. These are in the remit of the consensus client.
+
+The execution client creates execution payloads - the list of transactions, updated state trie, and other execution-related data. Consensus clients include the execution payload in every block. The execution client is also responsible for re-executing transactions in new blocks to ensure they are valid. Executing transactions is done on the execution client's embedded computer, known as the [Ethereum Virtual Machine (EVM)](/developers/docs/evm).
 
 The execution client also offers a user interface to Ethereum through [RPC methods](/developers/docs/apis/json-rpc) that enable users to query the Ethereum blockchain, submit transactions and deploy smart contracts. It's common for RPC calls to be handled by a library like [Web3js](https://web3js.readthedocs.io/en/v1.8.0/), [Web3py](https://web3py.readthedocs.io/en/v5/), or by a user-interface such as a browser wallet.
 
