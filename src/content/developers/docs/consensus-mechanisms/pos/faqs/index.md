@@ -12,7 +12,7 @@ Proof-of-stake is a class of algorithm that can provide security to blockchains 
 
 Both proof-of-work and proof-of-stake are mechanisms that economically disincentivize malicious actors from spamming or defrauding the network. In both cases, nodes that actively participate in consensus put some asset "into the network" that they will lose if they misbehave.
 
-In proof-of-work, this asset is energy. The node, known as a miner, runs an algorithm that aims to compute a value faster than any other node. The fastest node has the right to propose a block to the chain. To change the history of the chain or dominate the block proposal, a miner would have to have so much computing power that they always win the race. The energy required to "mine" using proof-of-work is a real-world asset that miners pay for.
+In proof-of-work, this asset is energy. The node, known as a miner, runs an algorithm that aims to compute a value faster than any other node. The fastest node has the right to propose a block to the chain. To change the history of the chain or dominate the block proposal, a miner would have to have so much computing power that they always win the race. This is prohibitively expensive and difficult to execute, protecting the chain from attacks. The energy required to "mine" using proof-of-work is a real-world asset that miners pay for.
 
 Proof-of-stake requires nodes, known as validators, to explicitly submit a crypto asset to a smart contract. If a validator misbehaves, this crypto can be destroyed because they are "staking" their assets directly into the chain instead of indirectly via energy expenditure.
 
@@ -24,7 +24,7 @@ Proof-of-work versus proof-of-stake is a contentious topic. [Vitalik Buterin's b
 
 ## Is proof-of-stake energy efficient? {#is-pos-energy-efficient}
 
-Yes. Nodes on a proof-of-stake network do not use much energy at all. A recent third-party study concluded that the entire proof-of-stake Ethereum network consumes around 0.0026 TWh/yr - about 13,000x less than is consumed by gaming in the US alone.
+Yes. Nodes on a proof-of-stake network use a tiny amount of energy. A third-party study concluded that the entire proof-of-stake Ethereum network consumes around 0.0026 TWh/yr - about 13,000x less than gaming in the US alone.
 
 - [More on Ethereum's energy consumption](/energy-consumption/).
 
@@ -50,7 +50,7 @@ Nodes are computers connected to the Ethereum network. Clients are the software 
 
 ## Is proof-of-stake a new idea? {#is-pos-new}
 
-No. The basic idea of proof-of-stake was proposed on BitcoinTalk forum as an upgrade to Bitcoin. It was eleven years before it was ready to implement on Ethereum Mainnet. Some other chains implemented proof-of-stake earlier than Ethereum, but not Ethereum's specific mechanism (known as Gasper).
+No. A user on BitcoinTalk [proposed the basic idea of proof-of-stake](https://bitcointalk.org/index.php?topic=27787.0) as an upgrade to Bitcoin. It was eleven years before it was ready to implement on Ethereum Mainnet. Some other chains implemented proof-of-stake earlier than Ethereum, but not Ethereum's specific mechanism (known as Gasper).
 
 
 ## What is special about Ethereum's proof-of-stake? {#why-is-ethereum-pos-special}
