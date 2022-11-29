@@ -2,7 +2,7 @@
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import React, { useState } from "react"
 import styled from "@emotion/styled"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 // Components
 import ButtonLink from "../ButtonLink"
@@ -15,7 +15,6 @@ import cexSupport from "../../data/layer-2/cex-layer-2-support.json"
 
 //Utils
 import { trackCustomEvent } from "../../utils/matomo"
-import { translateMessageId } from "../../utils/translations"
 
 // Styles
 const Content = styled.div`
@@ -201,7 +200,7 @@ const Layer2Onboard: React.FC<IProps> = ({
   ethIcon,
   ethIconAlt,
 }) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   const [selectedExchange, setSelectedExchange] = useState<Exchange>()
   const [selectedL2, setSelectedL2] = useState<Layer2>()
@@ -262,30 +261,20 @@ const Layer2Onboard: React.FC<IProps> = ({
               })
               setSelectedL2(selectedOption.l2)
             }}
-            placeholder={translateMessageId(
-              "layer-2-onboard-wallet-input-placeholder",
-              intl
-            )}
+            placeholder={t("layer-2-onboard-wallet-input-placeholder")}
           />
         </LeftSelect>
         {selectedL2 && (
           <LeftSelected>
             <SelectedContainer>
               <p>
-                <b>{`${translateMessageId(
-                  "layer-2-onboard-wallet-selected-1",
-                  intl
-                )} ${selectedL2.name} ${translateMessageId(
-                  "layer-2-onboard-wallet-selected-2",
-                  intl
-                )}`}</b>
+                <b>{`${t("layer-2-onboard-wallet-selected-1")} ${
+                  selectedL2.name
+                } ${t("layer-2-onboard-wallet-selected-2")}`}</b>
               </p>
               <p>{selectedL2.bridgeWallets.join(", ")}</p>
               <ButtonLinkMargin to={selectedL2.bridge}>
-                {`${selectedL2.name} ${translateMessageId(
-                  "layer-2-bridge",
-                  intl
-                )}`}
+                {`${selectedL2.name} ${t("layer-2-bridge")}`}
               </ButtonLinkMargin>
             </SelectedContainer>
           </LeftSelected>
@@ -318,10 +307,7 @@ const Layer2Onboard: React.FC<IProps> = ({
               })
               setSelectedExchange(selectedOption.cex)
             }}
-            placeholder={translateMessageId(
-              "layer-2-onboard-exchange-input-placeholder",
-              intl
-            )}
+            placeholder={t("layer-2-onboard-exchange-input-placeholder")}
           />
         </RightSelect>
         <EthLogo>
@@ -353,9 +339,7 @@ const Layer2Onboard: React.FC<IProps> = ({
                 </Flex50>
               </TwoColumnContent>
               <ButtonLink to={selectedExchange.url}>
-                {`${translateMessageId("layer-2-go-to", intl)} ${
-                  selectedExchange.name
-                }`}
+                {`${t("layer-2-go-to")} ${selectedExchange.name}`}
               </ButtonLink>
             </SelectedContainer>
           </RightSelected>
