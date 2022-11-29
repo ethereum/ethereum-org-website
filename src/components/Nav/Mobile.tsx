@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 import { motion } from "framer-motion"
 
 import Emoji from "../OldEmoji"
@@ -10,6 +10,7 @@ import NakedButton from "../NakedButton"
 import Search from "../Search"
 import Translation from "../Translation"
 import { NavLink } from "../SharedStyledComponents"
+import { translateMessageId } from "../../utils/translations"
 
 import { ISections } from "./types"
 
@@ -278,7 +279,7 @@ const MobileNavMenu: React.FC<IProps> = ({
   toggleTheme,
   linkSections,
 }) => {
-  const { t } = useTranslation()
+  const intl = useIntl()
 
   const isOpen = isMenuOpen || isSearchOpen
 
@@ -290,13 +291,13 @@ const MobileNavMenu: React.FC<IProps> = ({
     <Container>
       <MenuButton
         onClick={() => toggleMenu("search")}
-        aria-label={t("aria-toggle-search-button")}
+        aria-label={translateMessageId("aria-toggle-search-button", intl)}
       >
         <OtherIcon name="search" />
       </MenuButton>
       <MenuButton
         onClick={() => toggleMenu("menu")}
-        aria-label={t("aria-toggle-menu-button")}
+        aria-label={translateMessageId("aria-toggle-menu-button", intl)}
       >
         <GlyphButton viewBox="0 0 24 40">
           <motion.path
@@ -322,7 +323,10 @@ const MobileNavMenu: React.FC<IProps> = ({
           {Object.keys(linkSections).map((sectionKey, idx) => {
             const section = linkSections[sectionKey]
             return section.items ? (
-              <NavListItem key={idx} aria-label={`Select ${t(section.text)}`}>
+              <NavListItem
+                key={idx}
+                aria-label={`Select ${translateMessageId(section.text, intl)}`}
+              >
                 <SectionTitle>
                   <Translation id={section.text} />
                 </SectionTitle>

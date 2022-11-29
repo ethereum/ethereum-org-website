@@ -14,28 +14,21 @@ export type Intl = {
   redirect: boolean
 }
 
-export type I18NextContext = {
-  language: string
-  routed: boolean
-  languages: string[]
-  defaultLanguage: string
-  generateDefaultLanguagePage: boolean
-  originalPath: string
-  path: string
-  siteUrl?: string
-}
-
 export type Context = {
   slug: string
   relativePath?: string
   language: Lang
-  languagesToFetch?: Array<Lang>
   ignoreTranslationBanner?: boolean
   isOutdated: boolean
   isLegal?: boolean
   isDefaultLang?: boolean
   isContentEnglish?: boolean
-  i18n: I18NextContext
+
+  // gatsby i18n theme context
+  locale: Lang
+  hrefLang: string
+  originalPath: string
+  dateFormat: string
 }
 
 export interface DeveloperDocsLink {

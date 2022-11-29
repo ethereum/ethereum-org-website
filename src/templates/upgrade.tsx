@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
-import { useI18next } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
@@ -334,7 +334,7 @@ const dropdownLinks: ButtonDropdownList = {
 const UpgradePage = ({
   data: { mdx },
 }: PageProps<Queries.UpgradePageQuery, Context>) => {
-  const { language } = useI18next()
+  const intl = useIntl()
 
   if (!mdx?.frontmatter || !mdx.parent)
     throw new Error(
@@ -373,7 +373,7 @@ const UpgradePage = ({
           </SummaryBox>
           <LastUpdated>
             <Translation id="page-last-updated" />:{" "}
-            {getLocaleTimestamp(language as Lang, lastUpdatedDate)}
+            {getLocaleTimestamp(intl.locale as Lang, lastUpdatedDate)}
           </LastUpdated>
         </TitleCard>
         <Image image={getImage(mdx.frontmatter.image)!} alt="" />
@@ -413,16 +413,7 @@ const UpgradePage = ({
 }
 
 export const upgradePageQuery = graphql`
-  query UpgradePage($languagesToFetch: [String!]!, $relativePath: String) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
+  query UpgradePage($relativePath: String) {
     mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug

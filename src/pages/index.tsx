@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "@emotion/styled"
@@ -23,7 +23,7 @@ import {
   GrayContainer,
   LeftColumn,
 } from "../components/SharedStyledComponents"
-import { isLangRightToLeft } from "../utils/translations"
+import { translateMessageId, isLangRightToLeft } from "../utils/translations"
 import { getImage } from "../utils/image"
 
 import SimpleWalletContent from "!!raw-loader!../data/SimpleWallet.sol"
@@ -414,7 +414,7 @@ const HomePage = ({
   data,
   pageContext: { language = "en" },
 }: PageProps<Queries.IndexPageQuery, Context>) => {
-  const { t } = useTranslation()
+  const intl = useIntl()
   const [isModalOpen, setModalOpen] = useState(false)
   const [activeCode, setActiveCode] = useState(0)
   const dir = isLangRightToLeft(language) ? "rtl" : "ltr"
@@ -429,30 +429,42 @@ const HomePage = ({
   const cards = [
     {
       image: getImage(data.robotfixed),
-      title: t("page-index-get-started-wallet-title"),
-      description: t("page-index-get-started-wallet-description"),
-      alt: t("page-index-get-started-wallet-image-alt"),
+      title: translateMessageId("page-index-get-started-wallet-title", intl),
+      description: translateMessageId(
+        "page-index-get-started-wallet-description",
+        intl
+      ),
+      alt: translateMessageId("page-index-get-started-wallet-image-alt", intl),
       to: "/wallets/find-wallet/",
     },
     {
       image: getImage(data.ethfixed),
-      title: t("page-index-get-started-eth-title"),
-      description: t("page-index-get-started-eth-description"),
-      alt: t("page-index-get-started-eth-image-alt"),
+      title: translateMessageId("page-index-get-started-eth-title", intl),
+      description: translateMessageId(
+        "page-index-get-started-eth-description",
+        intl
+      ),
+      alt: translateMessageId("page-index-get-started-eth-image-alt", intl),
       to: "/get-eth/",
     },
     {
       image: getImage(data.dogefixed),
-      title: t("page-index-get-started-dapps-title"),
-      description: t("page-index-get-started-dapps-description"),
-      alt: t("page-index-get-started-dapps-image-alt"),
+      title: translateMessageId("page-index-get-started-dapps-title", intl),
+      description: translateMessageId(
+        "page-index-get-started-dapps-description",
+        intl
+      ),
+      alt: translateMessageId("page-index-get-started-dapps-image-alt", intl),
       to: "/dapps/",
     },
     {
       image: getImage(data.devfixed),
-      title: t("page-index-get-started-devs-title"),
-      description: t("page-index-get-started-devs-description"),
-      alt: t("page-index-get-started-devs-image-alt"),
+      title: translateMessageId("page-index-get-started-devs-title", intl),
+      description: translateMessageId(
+        "page-index-get-started-devs-description",
+        intl
+      ),
+      alt: translateMessageId("page-index-get-started-devs-image-alt", intl),
       to: "/developers/",
     },
   ]
@@ -460,23 +472,32 @@ const HomePage = ({
   const touts = [
     {
       image: getImage(data.merge),
-      alt: t("page-index-tout-upgrades-image-alt"),
-      title: t("page-index-tout-upgrades-title"),
-      description: t("page-index-tout-upgrades-description"),
+      alt: translateMessageId("page-index-tout-upgrades-image-alt", intl),
+      title: translateMessageId("page-index-tout-upgrades-title", intl),
+      description: translateMessageId(
+        "page-index-tout-upgrades-description",
+        intl
+      ),
       to: "/upgrades/",
     },
     {
       image: getImage(data.infrastructurefixed),
-      alt: t("page-index-tout-enterprise-image-alt"),
-      title: t("page-index-tout-enterprise-title"),
-      description: t("page-index-tout-enterprise-description"),
+      alt: translateMessageId("page-index-tout-enterprise-image-alt", intl),
+      title: translateMessageId("page-index-tout-enterprise-title", intl),
+      description: translateMessageId(
+        "page-index-tout-enterprise-description",
+        intl
+      ),
       to: "/enterprise/",
     },
     {
       image: getImage(data.enterprise),
-      alt: t("page-index-tout-community-image-alt"),
-      title: t("page-index-tout-community-title"),
-      description: t("page-index-tout-community-description"),
+      alt: translateMessageId("page-index-tout-community-image-alt", intl),
+      title: translateMessageId("page-index-tout-community-title", intl),
+      description: translateMessageId(
+        "page-index-tout-community-description",
+        intl
+      ),
       to: "/community/",
     },
   ]
@@ -488,26 +509,50 @@ const HomePage = ({
 
   const codeExamples: Array<CodeExample> = [
     {
-      title: t("page-index-developers-code-example-title-0"),
-      description: t("page-index-developers-code-example-description-0"),
+      title: translateMessageId(
+        "page-index-developers-code-example-title-0",
+        intl
+      ),
+      description: translateMessageId(
+        "page-index-developers-code-example-description-0",
+        intl
+      ),
       codeLanguage: "language-solidity",
       code: SimpleWalletContent,
     },
     {
-      title: t("page-index-developers-code-example-title-1"),
-      description: t("page-index-developers-code-example-description-1"),
+      title: translateMessageId(
+        "page-index-developers-code-example-title-1",
+        intl
+      ),
+      description: translateMessageId(
+        "page-index-developers-code-example-description-1",
+        intl
+      ),
       codeLanguage: "language-solidity",
       code: SimpleTokenContent,
     },
     {
-      title: t("page-index-developers-code-example-title-2"),
-      description: t("page-index-developers-code-example-description-2"),
+      title: translateMessageId(
+        "page-index-developers-code-example-title-2",
+        intl
+      ),
+      description: translateMessageId(
+        "page-index-developers-code-example-description-2",
+        intl
+      ),
       codeLanguage: "language-javascript",
       code: CreateWalletContent,
     },
     {
-      title: t("page-index-developers-code-example-title-3"),
-      description: t("page-index-developers-code-example-description-3"),
+      title: translateMessageId(
+        "page-index-developers-code-example-title-3",
+        intl
+      ),
+      description: translateMessageId(
+        "page-index-developers-code-example-description-3",
+        intl
+      ),
       codeLanguage: "language-solidity",
       code: SimpleDomainRegistryContent,
     },
@@ -516,12 +561,12 @@ const HomePage = ({
   return (
     <Page dir={dir}>
       <PageMetadata
-        title={t("page-index-meta-title")}
-        description={t("page-index-meta-description")}
+        title={translateMessageId("page-index-meta-title", intl)}
+        description={translateMessageId("page-index-meta-description", intl)}
       />
       <Hero
         image={getImage(data.hero)!}
-        alt={t("page-index-hero-image-alt")}
+        alt={translateMessageId("page-index-hero-image-alt", intl)}
         loading="eager"
       />
       <Morpher />
@@ -550,7 +595,10 @@ const HomePage = ({
             <ImageContainer>
               <IntroImage
                 image={getImage(data.hackathon)!}
-                alt={t("page-index-get-started-image-alt")}
+                alt={translateMessageId(
+                  "page-index-get-started-image-alt",
+                  intl
+                )}
               />
             </ImageContainer>
           </IntroRow>
@@ -589,7 +637,10 @@ const HomePage = ({
           <ImageContainer>
             <FeatureImage
               image={getImage(data.ethereum)!}
-              alt={t("page-index-what-is-ethereum-image-alt")}
+              alt={translateMessageId(
+                "page-index-what-is-ethereum-image-alt",
+                intl
+              )}
             />
           </ImageContainer>
         </RowReverse>
@@ -614,7 +665,7 @@ const HomePage = ({
           <ImageContainer>
             <FeatureImage
               image={getImage(data.impact)!}
-              alt={t("page-index-defi-image-alt")}
+              alt={translateMessageId("page-index-defi-image-alt", intl)}
             />
           </ImageContainer>
         </Row>
@@ -624,7 +675,7 @@ const HomePage = ({
           <ImageContainer>
             <FeatureImage
               image={getImage(data.infrastructure)!}
-              alt={t("page-index-nft-alt")}
+              alt={translateMessageId("page-index-nft-alt", intl)}
             />
           </ImageContainer>
           <FeatureContent>
@@ -667,7 +718,7 @@ const HomePage = ({
           <ImageContainer>
             <FeatureImage
               image={getImage(data.future)!}
-              alt={t("page-index-internet-image-alt")}
+              alt={translateMessageId("page-index-internet-image-alt", intl)}
             />
           </ImageContainer>
         </Row>
@@ -747,7 +798,10 @@ const HomePage = ({
           descriptionKey={"page-index-contribution-banner-description"}
           image={getImage(data.finance)!}
           maxImageWidth={600}
-          alt={t("page-index-contribution-banner-image-alt")}
+          alt={translateMessageId(
+            "page-index-contribution-banner-image-alt",
+            intl
+          )}
         >
           <ButtonRow>
             <ButtonLink to="/contributing/">
@@ -769,16 +823,7 @@ const HomePage = ({
 export default HomePage
 
 export const query = graphql`
-  query IndexPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
+  query IndexPage {
     hero: file(relativePath: { eq: "home/hero.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)

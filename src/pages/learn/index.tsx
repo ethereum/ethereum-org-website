@@ -3,7 +3,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 
 // Components
 import { CardGrid as OriginalCardGrid } from "../../components/SharedStyledComponents"
@@ -19,7 +19,7 @@ import Translation from "../../components/Translation"
 
 // Utils
 import { Lang } from "../../utils/languages"
-import { isLangRightToLeft } from "../../utils/translations"
+import { translateMessageId, isLangRightToLeft } from "../../utils/translations"
 import { getImage } from "../../utils/image"
 
 // Types
@@ -190,50 +190,49 @@ const CardGrid = styled(OriginalCardGrid)`
 `
 
 const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
-  const { t } = useTranslation()
-  const { language } = useI18next()
-  const isRightToLeft = isLangRightToLeft(language as Lang)
+  const intl = useIntl()
+  const isRightToLeft = isLangRightToLeft(intl.locale as Lang)
 
   const tocItems = [
     {
       id: "what-is-crypto-ethereum",
-      title: t("toc-what-is-crypto-ethereum"),
+      title: translateMessageId("toc-what-is-crypto-ethereum", intl),
     },
     {
       id: "how-do-i-use-ethereum",
-      title: t("toc-how-do-i-use-ethereum"),
+      title: translateMessageId("toc-how-do-i-use-ethereum", intl),
     },
     {
       id: "what-is-ethereum-used-for",
-      title: t("toc-what-is-ethereum-used-for"),
+      title: translateMessageId("toc-what-is-ethereum-used-for", intl),
     },
     {
       id: "strengthen-the-ethereum-network",
-      title: t("toc-strengthen-the-ethereum-network"),
+      title: translateMessageId("toc-strengthen-the-ethereum-network", intl),
     },
     {
       id: "learn-about-the-ethereum-protocol",
-      title: t("toc-learn-about-the-ethereum-protocol"),
+      title: translateMessageId("toc-learn-about-the-ethereum-protocol", intl),
     },
     {
       id: "learn-about-the-ethereum-community",
-      title: t("toc-learn-about-the-ethereum-community"),
+      title: translateMessageId("toc-learn-about-the-ethereum-community", intl),
     },
     {
       id: "books-and-podcasts",
-      title: t("toc-books-and-podcasts"),
+      title: translateMessageId("toc-books-and-podcasts", intl),
     },
   ]
 
   const heroContent = {
-    title: t("hero-title"),
-    header: t("hero-header"),
-    subtitle: t("hero-subtitle"),
+    title: translateMessageId("hero-title", intl),
+    header: translateMessageId("hero-header", intl),
+    subtitle: translateMessageId("hero-subtitle", intl),
     image: getImage(data.heroImage)!,
     alt: "",
     buttons: [
       {
-        content: t("hero-button-lets-get-started"),
+        content: translateMessageId("hero-button-lets-get-started", intl),
         toId: tocItems[0].id,
       },
     ],
@@ -241,7 +240,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
 
   return (
     <Container>
-      <PageMetadata title={t("hero-title")} description={""} />
+      <PageMetadata
+        title={translateMessageId("hero-title", intl)}
+        description={""}
+      />
 
       <HeroBackground>
         <HeroContainer>
@@ -271,14 +273,20 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             </p>
             <CardGrid>
               <Card
-                title={t("what-is-ethereum-card-title")}
-                description={t("what-is-ethereum-card-description")}
+                title={translateMessageId("what-is-ethereum-card-title", intl)}
+                description={translateMessageId(
+                  "what-is-ethereum-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
                     <GatsbyImage
                       image={getImage(data.whatIsEth)!}
-                      alt={t("what-is-ethereum-card-image-alt")}
+                      alt={translateMessageId(
+                        "what-is-ethereum-card-image-alt",
+                        intl
+                      )}
                     />
                   </CardImage>
                   <ButtonLink to="/what-is-ethereum/">
@@ -287,8 +295,11 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </>
               </Card>
               <Card
-                title={t("what-is-eth-card-title")}
-                description={t("what-is-eth-description")}
+                title={translateMessageId("what-is-eth-card-title", intl)}
+                description={translateMessageId(
+                  "what-is-eth-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
@@ -300,8 +311,14 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </>
               </Card>
               <Card
-                title={t("where-can-i-get-eth-card-title")}
-                description={t("where-can-i-get-eth-card-description")}
+                title={translateMessageId(
+                  "where-can-i-get-eth-card-title",
+                  intl
+                )}
+                description={translateMessageId(
+                  "where-can-i-get-eth-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
@@ -343,14 +360,20 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             </p>
             <CardGrid>
               <Card
-                title={t("what-is-a-wallet-card-title")}
-                description={t("what-is-a-wallet-card-description")}
+                title={translateMessageId("what-is-a-wallet-card-title", intl)}
+                description={translateMessageId(
+                  "what-is-a-wallet-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
                     <GatsbyImage
                       image={getImage(data.wallet)!}
-                      alt={t("what-is-a-wallet-card-alt")}
+                      alt={translateMessageId(
+                        "what-is-a-wallet-card-alt",
+                        intl
+                      )}
                     />
                   </CardImage>
                   <ButtonLink to="/wallets/">
@@ -359,8 +382,11 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </>
               </Card>
               <Card
-                title={t("find-a-wallet-card-title")}
-                description={t("find-a-wallet-card-description")}
+                title={translateMessageId("find-a-wallet-card-title", intl)}
+                description={translateMessageId(
+                  "find-a-wallet-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
@@ -375,8 +401,14 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </>
               </Card>
               <Card
-                title={t("crypto-security-basics-card-title")}
-                description={t("crypto-security-basics-card-description")}
+                title={translateMessageId(
+                  "crypto-security-basics-card-title",
+                  intl
+                )}
+                description={translateMessageId(
+                  "crypto-security-basics-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
@@ -432,8 +464,8 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             </p>
             <CardGrid>
               <Card
-                title={t("defi-card-title")}
-                description={t("defi-card-description")}
+                title={translateMessageId("defi-card-title", intl)}
+                description={translateMessageId("defi-card-description", intl)}
               >
                 <>
                   <CardImage>
@@ -448,8 +480,11 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </>
               </Card>
               <Card
-                title={t("stablecoins-card-title")}
-                description={t("stablecoins-card-description")}
+                title={translateMessageId("stablecoins-card-title", intl)}
+                description={translateMessageId(
+                  "stablecoins-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
@@ -461,8 +496,8 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </>
               </Card>
               <Card
-                title={t("nft-card-title")}
-                description={t("nft-card-description")}
+                title={translateMessageId("nft-card-title", intl)}
+                description={translateMessageId("nft-card-description", intl)}
               >
                 <>
                   <CardImage>
@@ -477,8 +512,8 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </>
               </Card>
               <Card
-                title={t("dao-card-title")}
-                description={t("dao-card-description")}
+                title={translateMessageId("dao-card-title", intl)}
+                description={translateMessageId("dao-card-description", intl)}
               >
                 <>
                   <CardImage>
@@ -490,8 +525,8 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </>
               </Card>
               <Card
-                title={t("dapp-card-title")}
-                description={t("dapp-card-description")}
+                title={translateMessageId("dapp-card-title", intl)}
+                description={translateMessageId("dapp-card-description", intl)}
               >
                 <>
                   <CardImage>
@@ -506,8 +541,11 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </>
               </Card>
               <CardGradient
-                title={t("emerging-use-cases-title")}
-                description={t("emerging-use-cases-description")}
+                title={translateMessageId("emerging-use-cases-title", intl)}
+                description={translateMessageId(
+                  "emerging-use-cases-description",
+                  intl
+                )}
               >
                 <ul>
                   <li>
@@ -564,8 +602,11 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             </p>
             <CardGrid>
               <Card
-                title={t("staking-ethereum-card-title")}
-                description={t("staking-ethereum-card-description")}
+                title={translateMessageId("staking-ethereum-card-title", intl)}
+                description={translateMessageId(
+                  "staking-ethereum-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
@@ -577,8 +618,11 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </>
               </Card>
               <Card
-                title={t("run-a-node-card-title")}
-                description={t("run-a-node-card-description")}
+                title={translateMessageId("run-a-node-card-title", intl)}
+                description={translateMessageId(
+                  "run-a-node-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
@@ -602,8 +646,14 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             </p>
             <CardGrid>
               <Card
-                title={t("energy-consumption-card-title")}
-                description={t("energy-consumption-card-description")}
+                title={translateMessageId(
+                  "energy-consumption-card-title",
+                  intl
+                )}
+                description={translateMessageId(
+                  "energy-consumption-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
@@ -615,8 +665,11 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </>
               </Card>
               <Card
-                title={t("ethereum-upgrades-card-title")}
-                description={t("ethereum-upgrades-card-description")}
+                title={translateMessageId("ethereum-upgrades-card-title", intl)}
+                description={translateMessageId(
+                  "ethereum-upgrades-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
@@ -628,8 +681,14 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </>
               </Card>
               <Card
-                title={t("ethereum-whitepaper-card-title")}
-                description={t("ethereum-whitepaper-card-description")}
+                title={translateMessageId(
+                  "ethereum-whitepaper-card-title",
+                  intl
+                )}
+                description={translateMessageId(
+                  "ethereum-whitepaper-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
@@ -677,14 +736,17 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             </p>
             <CardGrid>
               <Card
-                title={t("community-hub-card-title")}
-                description={t("community-hub-card-description")}
+                title={translateMessageId("community-hub-card-title", intl)}
+                description={translateMessageId(
+                  "community-hub-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
                     <GatsbyImage
                       image={getImage(data.enterprise)!}
-                      alt={t("community-hub-card-alt")}
+                      alt={translateMessageId("community-hub-card-alt", intl)}
                     />
                   </CardImage>
                   <ButtonLink to="/community/">
@@ -693,8 +755,11 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </>
               </Card>
               <Card
-                title={t("get-involved-card-title")}
-                description={t("get-involved-card-description")}
+                title={translateMessageId("get-involved-card-title", intl)}
+                description={translateMessageId(
+                  "get-involved-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
@@ -706,8 +771,14 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </>
               </Card>
               <Card
-                title={t("online-communities-card-title")}
-                description={t("online-communities-card-description")}
+                title={translateMessageId(
+                  "online-communities-card-title",
+                  intl
+                )}
+                description={translateMessageId(
+                  "online-communities-card-description",
+                  intl
+                )}
               >
                 <>
                   <CardImage>
@@ -871,16 +942,7 @@ export const cardImageFragment = graphql`
 `
 
 export const query = graphql`
-  query LearnPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
+  query LearnPage {
     heroImage: file(relativePath: { eq: "eth.png" }) {
       childImageSharp {
         gatsbyImageData(

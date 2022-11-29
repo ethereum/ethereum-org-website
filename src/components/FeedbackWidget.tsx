@@ -9,7 +9,7 @@ import {
   Text,
   ScaleFade,
 } from "@chakra-ui/react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 import { MdClose } from "react-icons/md"
 import FocusTrap from "focus-trap-react"
 // Component imports
@@ -18,6 +18,7 @@ import Translation from "./Translation"
 import FeedbackGlyph from "../assets/feedback-glyph.svg"
 // Utility imports
 import { trackCustomEvent } from "../utils/matomo"
+import { translateMessageId } from "../utils/translations"
 // Hook imports
 import { useOnClickOutside } from "../hooks/useOnClickOutside"
 import { useKeyPress } from "../hooks/useKeyPress"
@@ -69,7 +70,7 @@ interface FeedbackWidgetProps {
   location: string
 }
 const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
-  const { t } = useTranslation()
+  const intl = useIntl()
   const containerRef = useRef<HTMLInputElement>(null)
   useOnClickOutside(containerRef, () => handleClose(), [`mousedown`])
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -217,7 +218,7 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
               <Button
                 variant="ghost"
                 onClick={handleClose}
-                aria-label={t("close")}
+                aria-label={translateMessageId("close", intl)}
                 position="absolute"
                 insetEnd={2}
                 top={2}
@@ -262,7 +263,10 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
                 {feedbackSubmitted ? (
                   <Button
                     onClick={handleSurveyOpen}
-                    aria-label={t("feedback-widget-thank-you-cta")}
+                    aria-label={translateMessageId(
+                      "feedback-widget-thank-you-cta",
+                      intl
+                    )}
                     flex={1}
                   >
                     <Translation id="feedback-widget-thank-you-cta" />
@@ -272,7 +276,7 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
                     <Button
                       variant="solid"
                       onClick={() => handleSubmit(true)}
-                      aria-label={t("yes")}
+                      aria-label={translateMessageId("yes", intl)}
                       flex={1}
                     >
                       <Translation id="yes" />
@@ -280,7 +284,7 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
                     <Button
                       variant="solid"
                       onClick={() => handleSubmit(false)}
-                      aria-label={t("no")}
+                      aria-label={translateMessageId("no", intl)}
                       flex={1}
                     >
                       <Translation id="no" />

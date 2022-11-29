@@ -1,10 +1,10 @@
 import React from "react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
 import { Box, UnorderedList, ListItem } from "@chakra-ui/react"
+import { useIntl } from "react-intl"
 
 import Link from "./Link"
-import { isLang } from "../utils/languages"
-import { isTranslationKey } from "../utils/translations"
+import { isLang, supportedLanguages } from "../utils/languages"
+import { isTranslationKey, translateMessageId } from "../utils/translations"
 
 export interface IProps {
   slug: string
@@ -29,7 +29,7 @@ const Breadcrumbs: React.FC<IProps> = ({
   startDepth = 0,
   ...restProps
 }) => {
-  const { t } = useTranslation()
+  const intl = useIntl()
 
   const slugChunk = slug.split("/")
   const sliced = slugChunk.filter((item) => !!item).slice(startDepth)
@@ -37,9 +37,9 @@ const Breadcrumbs: React.FC<IProps> = ({
   const crumbs = sliced.map((path, idx) => {
     // If homepage (e.g. "en"), set text to "home" translation
     const text = isLang(path)
-      ? t("page-index-meta-title")
+      ? translateMessageId("page-index-meta-title", intl)
       : isTranslationKey(path)
-      ? t(path)
+      ? translateMessageId(path, intl)
       : ""
 
     return {
