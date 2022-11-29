@@ -2286,14 +2286,12 @@ contract Multiply7 {
 The first thing to do is make sure the HTTP RPC interface is enabled. This means we supply Geth with the `--http` flag on startup. In this example we use the Geth node on a private development chain. Using this approach we don't need ether on the real network.
 
 ```bash
-
-geth --http --dev --mine --miner.threads 1 --unlock 0 console 2>>geth.log
-
+geth --http --dev console 2>>geth.log
 ```
 
 This will start the HTTP RPC interface on `http://localhost:8545`.
 
-We can verify that the interface is running by retrieving the Coinbase address and balance using [curl](https://curl.haxx.se/download.html). Please note that data in these examples will differ on your local node. If you want to try these commands, replace the request params in the second curl request with the result returned from the first.
+We can verify that the interface is running by retrieving the Coinbase address and balance using [curl](https://curl.se). Please note that data in these examples will differ on your local node. If you want to try these commands, replace the request params in the second curl request with the result returned from the first.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method":"eth_coinbase", "id":1}' -H "Content-Type: application/json" localhost:8545

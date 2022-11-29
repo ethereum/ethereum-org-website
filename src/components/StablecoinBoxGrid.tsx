@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Box, Flex, Heading } from "@chakra-ui/react"
+import { Box, Flex, Heading, useColorModeValue } from "@chakra-ui/react"
 import { useIntl } from "react-intl"
 import Link, { navigate } from "./Link"
 import Emoji from "./Emoji"
@@ -147,6 +147,8 @@ const GridItem: React.FC<IPropsGridItem> = ({
   const handleClick = (): void => {
     callback(index)
   }
+  const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
+
   return (
     <Flex
       id={`type-${index}`}
@@ -174,7 +176,7 @@ const GridItem: React.FC<IPropsGridItem> = ({
         background: isOpen ? color : "ednBackground",
         transition: isOpen ? "auto" : "transform 0.5s",
         transform: isOpen ? "auto" : "skewX(-5deg)",
-        boxShadow: "tableBoxShadow",
+        boxShadow: shadow,
       }}
     >
       {isOpen ? (
