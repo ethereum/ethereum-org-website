@@ -2,7 +2,7 @@ import React, { ReactNode } from "react"
 import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 
 import Card from "../../components/Card"
 import Callout from "../../components/Callout"
@@ -18,6 +18,7 @@ import {
 } from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
 
+import { translateMessageId } from "../../utils/translations"
 import { getImage } from "../../utils/image"
 
 import { Context } from "../../types"
@@ -241,13 +242,13 @@ const paths: Array<IDevelopersPath> = [
 const DevelopersPage = ({
   data,
 }: PageProps<Queries.DevelopersIndexPageQuery, Context>) => {
-  const { t } = useTranslation()
+  const intl = useIntl()
 
   return (
     <Page>
       <PageMetadata
-        title={t("page-developer-meta-title")}
-        description={t("page-developers-meta-desc")}
+        title={translateMessageId("page-developer-meta-title", intl)}
+        description={translateMessageId("page-developers-meta-desc", intl)}
       />
       <Content>
         <HeroContainer>
@@ -268,7 +269,7 @@ const DevelopersPage = ({
           </HeroCopyContainer>
           <Hero
             image={getImage(data.ednHero)!}
-            alt={t("alt-eth-blocks")}
+            alt={translateMessageId("alt-eth-blocks", intl)}
             loading="eager"
           />
         </HeroContainer>
@@ -309,7 +310,7 @@ const DevelopersPage = ({
             image={getImage(data.developers)}
             titleKey="page-developers-improve-ethereum"
             descriptionKey="page-developers-improve-ethereum-desc"
-            alt={t("alt-eth-blocks")}
+            alt={translateMessageId("alt-eth-blocks", intl)}
           >
             <div>
               <ButtonLink to="https://github.com/ethereum/ethereum-org-website">
@@ -373,7 +374,10 @@ const DevelopersPage = ({
               <Translation id="page-developers-language-desc" />
             </p>
             <ImageContainer>
-              <Image image={getImage(data.doge)!} alt={t("page-assets-doge")} />
+              <Image
+                image={getImage(data.doge)!}
+                alt={translateMessageId("page-assets-doge", intl)}
+              />
             </ImageContainer>
           </Column>
           <Column>
@@ -555,16 +559,7 @@ const DevelopersPage = ({
 export default DevelopersPage
 
 export const query = graphql`
-  query DevelopersIndexPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
+  query DevelopersIndexPage {
     ednHero: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
         gatsbyImageData(

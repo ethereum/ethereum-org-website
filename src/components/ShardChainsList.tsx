@@ -1,7 +1,9 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { useTranslation } from "gatsby-plugin-react-i18next"
 import CardList, { CardListItem } from "./CardList"
+import { useIntl } from "react-intl"
+
+import { translateMessageId } from "../utils/translations"
 
 const Container = styled.div`
   margin-bottom: 4rem;
@@ -10,46 +12,91 @@ const Container = styled.div`
 export interface IProps {}
 
 const ShardChainsList: React.FC<IProps> = () => {
-  const { t } = useTranslation()
+  const intl = useIntl()
   const reads: Array<CardListItem> = [
     {
-      title: t("page-upgrade-article-title-sharding-is-great"),
-      description: t("page-upgrade-article-author-vitalik-buterin"),
+      title: translateMessageId(
+        "page-upgrade-article-title-sharding-is-great",
+        intl
+      ),
+      description: translateMessageId(
+        "page-upgrade-article-author-vitalik-buterin",
+        intl
+      ),
       link: "https://vitalik.ca/general/2021/04/07/sharding.html",
     },
     {
-      title: t("page-upgrade-article-title-rollup-roadmap"),
-      description: t("page-upgrade-article-author-vitalik-buterin"),
+      title: translateMessageId(
+        "page-upgrade-article-title-rollup-roadmap",
+        intl
+      ),
+      description: translateMessageId(
+        "page-upgrade-article-author-vitalik-buterin",
+        intl
+      ),
       link: "https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698",
     },
     {
-      title: t("page-upgrade-article-title-two-point-oh"),
-      description: t("page-upgrade-article-author-ethos-dev"),
+      title: translateMessageId(
+        "page-upgrade-article-title-two-point-oh",
+        intl
+      ),
+      description: translateMessageId(
+        "page-upgrade-article-author-ethos-dev",
+        intl
+      ),
       link: "https://ethos.dev/beacon-chain/",
     },
     {
-      title: t("page-upgrade-article-title-sharding-consensus"),
-      description: t("page-upgrade-article-author-ethereum-foundation"),
+      title: translateMessageId(
+        "page-upgrade-article-title-sharding-consensus",
+        intl
+      ),
+      description: translateMessageId(
+        "page-upgrade-article-author-ethereum-foundation",
+        intl
+      ),
       link: "https://blog.ethereum.org/2020/03/27/sharding-consensus/",
     },
     {
-      title: t("page-upgrade-article-title-hitchhikers-guide-to-ethereum"),
-      description: t("page-upgrade-article-author-delphi-digital"),
+      title: translateMessageId(
+        "page-upgrade-article-title-hitchhikers-guide-to-ethereum",
+        intl
+      ),
+      description: translateMessageId(
+        "page-upgrade-article-author-delphi-digital",
+        intl
+      ),
       link: "https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum",
     },
     {
-      title: t("page-upgrade-article-title-eip-4844"),
-      description: t("page-upgrade-article-author-eip-4844"),
+      title: translateMessageId("page-upgrade-article-title-eip-4844", intl),
+      description: translateMessageId(
+        "page-upgrade-article-author-eip-4844",
+        intl
+      ),
       link: "https://eips.ethereum.org/EIPS/eip-4844",
     },
     {
-      title: t("page-upgrade-article-title-proto-danksharding-faq"),
-      description: t("page-upgrade-article-author-vitalik-buterin"),
+      title: translateMessageId(
+        "page-upgrade-article-title-proto-danksharding-faq",
+        intl
+      ),
+      description: translateMessageId(
+        "page-upgrade-article-author-vitalik-buterin",
+        intl
+      ),
       link: "https://notes.ethereum.org/@vbuterin/proto_danksharding_faq",
     },
     {
-      title: t("page-upgrade-article-title-sharding-das"),
-      description: t("page-upgrade-article-author-vitalik-buterin"),
+      title: translateMessageId(
+        "page-upgrade-article-title-sharding-das",
+        intl
+      ),
+      description: translateMessageId(
+        "page-upgrade-article-author-vitalik-buterin",
+        intl
+      ),
       link: "https://hackmd.io/@vbuterin/sharding_proposal",
     },
   ]

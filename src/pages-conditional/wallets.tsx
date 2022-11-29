@@ -2,7 +2,7 @@ import React from "react"
 import { Center } from "@chakra-ui/react"
 import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
 
 import PageHero from "../components/PageHero"
@@ -25,6 +25,7 @@ import {
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
 
+import { translateMessageId } from "../utils/translations"
 import { getImage, getSrc } from "../utils/image"
 import { Context } from "../types"
 
@@ -220,18 +221,18 @@ const articles = [
 const WalletsPage = ({
   data,
 }: PageProps<Queries.WalletsPageQuery, Context>) => {
-  const { t } = useTranslation()
+  const intl = useIntl()
 
   const heroContent = {
-    title: t("page-wallets-title"),
-    header: t("page-wallets-slogan"),
-    subtitle: t("page-wallets-subtitle"),
+    title: translateMessageId("page-wallets-title", intl),
+    header: translateMessageId("page-wallets-slogan", intl),
+    subtitle: translateMessageId("page-wallets-subtitle", intl),
     image: getImage(data.hero)!,
-    alt: t("page-wallets-alt"),
+    alt: translateMessageId("page-wallets-alt", intl),
     buttons: [
       {
         to: "/wallets/find-wallet/",
-        content: t("page-wallets-find-wallet-link"),
+        content: translateMessageId("page-wallets-find-wallet-link", intl),
       },
     ],
   }
@@ -239,8 +240,8 @@ const WalletsPage = ({
   return (
     <Page>
       <PageMetadata
-        title={t("page-wallets-meta-title")}
-        description={t("page-wallets-meta-description")}
+        title={translateMessageId("page-wallets-meta-title", intl)}
+        description={translateMessageId("page-wallets-meta-description", intl)}
         image={getSrc(data.ogImage)}
       />
       <PageHero content={heroContent} isReverse />
@@ -360,14 +361,23 @@ const WalletsPage = ({
             <ChecklistItem
               key="0"
               emoji=":white_check_mark:"
-              title={t("page-wallets-take-responsibility")}
-              description={t("page-wallets-take-responsibility-desc")}
+              title={translateMessageId(
+                "page-wallets-take-responsibility",
+                intl
+              )}
+              description={translateMessageId(
+                "page-wallets-take-responsibility-desc",
+                intl
+              )}
             />
             <ChecklistItem
               key="1"
               emoji=":white_check_mark:"
-              title={t("page-wallets-seed-phrase")}
-              description={t("page-wallets-seed-phrase-desc")}
+              title={translateMessageId("page-wallets-seed-phrase", intl)}
+              description={translateMessageId(
+                "page-wallets-seed-phrase-desc",
+                intl
+              )}
             >
               <p>
                 <Translation id="page-wallets-seed-phrase-example" />
@@ -384,14 +394,20 @@ const WalletsPage = ({
             <ChecklistItem
               key="2"
               emoji=":white_check_mark:"
-              title={t("page-wallets-bookmarking")}
-              description={t("page-wallets-bookmarking-desc")}
+              title={translateMessageId("page-wallets-bookmarking", intl)}
+              description={translateMessageId(
+                "page-wallets-bookmarking-desc",
+                intl
+              )}
             />
             <ChecklistItem
               key="3"
               emoji=":white_check_mark:"
-              title={t("page-wallets-triple-check")}
-              description={t("page-wallets-triple-check-desc")}
+              title={translateMessageId("page-wallets-triple-check", intl)}
+              description={translateMessageId(
+                "page-wallets-triple-check-desc",
+                intl
+              )}
             />
           </div>
         </LeftColumn>
@@ -414,7 +430,7 @@ const WalletsPage = ({
           <StyledCallout
             image={getImage(data.eth)}
             titleKey="page-wallets-get-some"
-            alt={t("page-wallets-get-some-alt")}
+            alt={translateMessageId("page-wallets-get-some-alt", intl)}
             descriptionKey="page-wallets-get-some-desc"
           >
             <div>
@@ -426,7 +442,7 @@ const WalletsPage = ({
           <StyledCallout
             image={getImage(data.dapps)}
             titleKey="page-wallets-try-dapps"
-            alt={t("page-wallets-try-dapps-alt")}
+            alt={translateMessageId("page-wallets-try-dapps-alt", intl)}
             descriptionKey="page-wallets-try-dapps-desc"
           >
             <div>
@@ -478,16 +494,7 @@ export const listImage = graphql`
 `
 
 export const query = graphql`
-  query WalletsPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
+  query WalletsPage {
     hero: file(relativePath: { eq: "wallet.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)

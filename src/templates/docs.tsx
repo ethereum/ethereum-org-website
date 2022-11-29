@@ -245,16 +245,7 @@ const DocsPage = ({
 }
 
 export const query = graphql`
-  query DocsPage($languagesToFetch: [String!]!, $relativePath: String) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
+  query DocsPage($relativePath: String) {
     siteData: site {
       siteMetadata {
         editContentUrl

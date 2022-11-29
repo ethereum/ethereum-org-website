@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 import styled from "@emotion/styled"
 
 import ButtonDropdown, {
@@ -24,7 +24,7 @@ import StakingHierarchy from "../../components/Staking/StakingHierarchy"
 import StakingHomeTableOfContents from "../../components/Staking/StakingHomeTableOfContents"
 import StakingCommunityCallout from "../../components/Staking/StakingCommunityCallout"
 
-import { TranslationKey } from "../../utils/translations"
+import { translateMessageId, TranslationKey } from "../../utils/translations"
 import { getImage } from "../../utils/image"
 import type { Context } from "../../types"
 
@@ -249,14 +249,14 @@ const benefits: Array<BenefitsType> = [
 const StakingPage = ({
   data,
 }: PageProps<Queries.StakingPageIndexQuery, Context>) => {
-  const { t } = useTranslation()
+  const intl = useIntl()
 
   const heroContent = {
-    title: t("page-staking-hero-title"),
-    header: t("page-staking-hero-header"),
-    subtitle: t("page-staking-hero-subtitle"),
+    title: translateMessageId("page-staking-hero-title", intl),
+    header: translateMessageId("page-staking-hero-header", intl),
+    subtitle: translateMessageId("page-staking-hero-subtitle", intl),
     image: getImage(data.rhino)!,
-    alt: t("page-staking-image-alt"),
+    alt: translateMessageId("page-staking-image-alt", intl),
     buttons: [],
   }
 
@@ -303,35 +303,35 @@ const StakingPage = ({
     ],
   }
 
-  // TODO: use t() for these strings
+  // TODO: use translateMessageId() for these strings
   const tocItems = {
     whatIsStaking: {
       id: "what-is-staking",
-      title: t("page-staking-section-what-title"),
+      title: translateMessageId("page-staking-section-what-title", intl),
     },
     whyStakeYourEth: {
       id: "why-stake-your-eth",
-      title: t("page-staking-section-why-title"),
+      title: translateMessageId("page-staking-section-why-title", intl),
     },
     howToStakeYourEth: {
       id: "how-to-stake-your-eth",
-      title: t("page-staking-toc-how-to-stake-your-eth"),
+      title: translateMessageId("page-staking-toc-how-to-stake-your-eth", intl),
     },
     comparisonOfOptions: {
       id: "comparison-of-options",
-      title: t("page-staking-toc-comparison-of-options"),
+      title: translateMessageId("page-staking-toc-comparison-of-options", intl),
     },
     joinTheCommunity: {
       id: "join-the-community",
-      title: t("page-staking-join-community"),
+      title: translateMessageId("page-staking-join-community", intl),
     },
     faq: {
       id: "faq",
-      title: t("page-staking-toc-faq"),
+      title: translateMessageId("page-staking-toc-faq", intl),
     },
     further: {
       id: "further",
-      title: t("page-staking-toc-further"),
+      title: translateMessageId("page-staking-toc-further", intl),
     },
   }
 
@@ -340,8 +340,8 @@ const StakingPage = ({
   return (
     <PageContainer>
       <PageMetadata
-        title={t("page-staking-meta-title")}
-        description={t("page-staking-meta-description")}
+        title={translateMessageId("page-staking-meta-title", intl)}
+        description={translateMessageId("page-staking-meta-description", intl)}
       />
       <HeroStatsWrapper>
         <PageHero content={heroContent} />
@@ -377,12 +377,14 @@ const StakingPage = ({
               {benefits.map(
                 ({ title, description, emoji, linkText, to }, idx) => (
                   <StyledCard
-                    title={t(title)}
+                    title={translateMessageId(title, intl)}
                     emoji={emoji}
                     key={idx}
-                    description={t(description)}
+                    description={translateMessageId(description, intl)}
                   >
-                    {to && linkText && <Link to={to}>{t(linkText)}</Link>}
+                    {to && linkText && (
+                      <Link to={to}>{translateMessageId(linkText, intl)}</Link>
+                    )}
                   </StyledCard>
                 )
               )}
@@ -607,7 +609,9 @@ const StakingPage = ({
           <StakingCommunityCallout id={tocItems.joinTheCommunity.id} />
           <Content>
             <h2 id={tocItems.faq.id}>{tocItems.faq.title}</h2>
-            <ExpandableCard title={t("page-staking-faq-4-question")}>
+            <ExpandableCard
+              title={translateMessageId("page-staking-faq-4-question", intl)}
+            >
               <p>
                 <Translation id="page-staking-faq-4-answer-p1" />
               </p>
@@ -618,13 +622,19 @@ const StakingPage = ({
                 <Translation id="page-upgrades-merge-btn" />
               </ButtonLink>
             </ExpandableCard>
-            <ExpandableCard title={t("page-staking-faq-1-question")}>
+            <ExpandableCard
+              title={translateMessageId("page-staking-faq-1-question", intl)}
+            >
               <Translation id="page-staking-faq-1-answer" />
             </ExpandableCard>
-            <ExpandableCard title={t("page-staking-faq-2-question")}>
+            <ExpandableCard
+              title={translateMessageId("page-staking-faq-2-question", intl)}
+            >
               <Translation id="page-staking-faq-2-answer" />
             </ExpandableCard>
-            <ExpandableCard title={t("page-staking-faq-3-question")}>
+            <ExpandableCard
+              title={translateMessageId("page-staking-faq-3-question", intl)}
+            >
               <p>
                 <Translation id="page-staking-faq-3-answer-p1" />
               </p>
@@ -718,16 +728,7 @@ const StakingPage = ({
 export default StakingPage
 
 export const query = graphql`
-  query StakingPageIndex($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
+  query StakingPageIndex {
     rhino: file(relativePath: { eq: "upgrades/upgrade_rhino.png" }) {
       childImageSharp {
         gatsbyImageData(

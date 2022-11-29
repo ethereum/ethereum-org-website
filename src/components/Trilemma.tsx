@@ -1,8 +1,9 @@
 import React, { useState } from "react"
 import styled from "@emotion/styled"
 import { motion } from "framer-motion"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 
+import { translateMessageId } from "../utils/translations"
 import Translation from "./Translation"
 import Icon from "./Icon"
 import Card from "./Card"
@@ -181,7 +182,7 @@ const CloseIconContainer = styled.span`
 export interface IProps {}
 
 const Trilemma: React.FC<IProps> = () => {
-  const { t } = useTranslation()
+  const intl = useIntl()
 
   const [state, setState] = useState({
     isDecentralizedAndSecure: false,
@@ -384,16 +385,16 @@ const Trilemma: React.FC<IProps> = () => {
           />
         </CircleSelect>
         <Text x="400" y="540" isActive={isEthereum}>
-          {t("ethereum")}
+          {translateMessageId("ethereum", intl)}
         </Text>
         <Text x="460" y="150" isActive={isDecentralized}>
-          {t("page-upgrades-vision-trilemma-text-1")}
+          {translateMessageId("page-upgrades-vision-trilemma-text-1", intl)}
         </Text>
         <Text x="-24" y="486" isActive={isSecure}>
-          {t("page-upgrades-vision-trilemma-text-2")}
+          {translateMessageId("page-upgrades-vision-trilemma-text-2", intl)}
         </Text>
         <Text x="540" y="835" isActive={isScalable}>
-          {t("page-upgrades-vision-trilemma-text-3")}
+          {translateMessageId("page-upgrades-vision-trilemma-text-3", intl)}
         </Text>
       </Triangle>
     </Container>

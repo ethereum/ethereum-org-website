@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 
 import Translation from "../../components/Translation"
 import Card from "../../components/Card"
@@ -24,6 +24,7 @@ import {
 } from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
 
+import { translateMessageId } from "../../utils/translations"
 import { getImage } from "../../utils/image"
 
 const ProblemCardContainer = styled(CardContainer)`
@@ -93,14 +94,14 @@ const VisionPage = ({
   data,
   location,
 }: PageProps<Queries.UpgradesVisionPageQuery>) => {
-  const { t } = useTranslation()
+  const intl = useIntl()
 
   const heroContent: IPageHeroContent = {
-    title: t("page-upgrades-vision-title"),
-    header: t("page-upgrades-vision-future"),
-    subtitle: t("page-upgrades-vision-subtitle"),
+    title: translateMessageId("page-upgrades-vision-title", intl),
+    header: translateMessageId("page-upgrades-vision-future", intl),
+    subtitle: translateMessageId("page-upgrades-vision-subtitle", intl),
     image: getImage(data.oldship)!,
-    alt: t("page-eth-whats-eth-hero-alt"),
+    alt: translateMessageId("page-eth-whats-eth-hero-alt", intl),
   }
 
   const upgrades = [
@@ -131,8 +132,8 @@ const VisionPage = ({
   return (
     <Page>
       <PageMetadata
-        title={t("page-upgrades-vision-meta-title")}
-        description={t("page-upgrades-vision-meta-desc")}
+        title={translateMessageId("page-upgrades-vision-meta-title", intl)}
+        description={translateMessageId("page-upgrades-vision-meta-desc", intl)}
       />
       <PageHero content={heroContent} />
       <Divider />
@@ -321,16 +322,7 @@ const VisionPage = ({
 export default VisionPage
 
 export const query = graphql`
-  query UpgradesVisionPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
+  query UpgradesVisionPage {
     oldship: file(relativePath: { eq: "upgrades/oldship.png" }) {
       childImageSharp {
         gatsbyImageData(

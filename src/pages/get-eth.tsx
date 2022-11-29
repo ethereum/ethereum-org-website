@@ -1,9 +1,10 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 
+import { translateMessageId, TranslationKey } from "../utils/translations"
 import Translation from "../components/Translation"
 import CardList from "../components/CardList"
 import EthExchanges from "../components/EthExchanges"
@@ -175,7 +176,7 @@ const StyledInfoBanner = styled(InfoBanner)<{
 `
 
 const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
-  const { t } = useTranslation()
+  const intl = useIntl()
   const decentralizedExchanges: Array<CardListItem> = [
     {
       title: "Localcryptos.com",
@@ -220,17 +221,26 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
 
   const safetyArticles: Array<CardListItem> = [
     {
-      title: t("page-get-eth-article-protecting-yourself"),
+      title: translateMessageId(
+        "page-get-eth-article-protecting-yourself",
+        intl
+      ),
       link: "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",
       description: "MyCrypto",
     },
     {
-      title: t("page-get-eth-article-keeping-crypto-safe"),
-      link: "https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
+      title: translateMessageId(
+        "page-get-eth-article-keeping-crypto-safe",
+        intl
+      ),
+      link: "https://web.archive.org/web/20190716160333/https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf?gi=548619266f28",
       description: "Coinbase",
     },
     {
-      title: t("page-get-eth-article-store-digital-assets"),
+      title: translateMessageId(
+        "page-get-eth-article-store-digital-assets",
+        intl
+      ),
       link: "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
       description: "ConsenSys",
     },
@@ -239,14 +249,14 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
   return (
     <Page>
       <PageMetadata
-        title={t("page-get-eth-meta-title")}
-        description={t("page-get-eth-meta-description")}
+        title={translateMessageId("page-get-eth-meta-title", intl)}
+        description={translateMessageId("page-get-eth-meta-description", intl)}
       />
 
       <HeroContainer>
         <Hero
           image={getImage(data.hero)!}
-          alt={t("page-get-eth-hero-image-alt")}
+          alt={translateMessageId("page-get-eth-hero-image-alt", intl)}
           loading="eager"
         />
         <Header>
@@ -268,13 +278,13 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
       <CardContainer>
         <StyledCard
           emoji=":office_building:"
-          title={t("page-get-eth-cex")}
-          description={t("page-get-eth-cex-desc")}
+          title={translateMessageId("page-get-eth-cex", intl)}
+          description={translateMessageId("page-get-eth-cex-desc", intl)}
         />
         <StyledCard
           emoji=":busts_in_silhouette:"
-          title={t("page-get-eth-dex")}
-          description={t("page-get-eth-dex-desc")}
+          title={translateMessageId("page-get-eth-dex", intl)}
+          description={translateMessageId("page-get-eth-dex-desc", intl)}
         >
           <Link to="#dex">
             <Translation id="page-get-eth-try-dex" />
@@ -282,8 +292,11 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
         </StyledCard>
         <StyledCard
           emoji=":robot:"
-          title={t("page-get-eth-wallets")}
-          description={t("page-get-eth-wallets-purchasing")}
+          title={translateMessageId("page-get-eth-wallets", intl)}
+          description={translateMessageId(
+            "page-get-eth-wallets-purchasing",
+            intl
+          )}
         >
           <Link to="/wallets/">
             <Translation id="page-get-eth-wallets-link" />
@@ -416,7 +429,10 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
         titleKey="page-get-eth-use-your-eth"
         descriptionKey="page-get-eth-use-your-eth-dapps"
         image={getImage(data.dapps)!}
-        alt={t("page-index-sections-individuals-image-alt")}
+        alt={translateMessageId(
+          "page-index-sections-individuals-image-alt" as TranslationKey,
+          intl
+        )}
         maxImageWidth={600}
       >
         <div>
@@ -446,16 +462,7 @@ export const listItemImage = graphql`
 `
 
 export const query = graphql`
-  query GetEthPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
+  query GetEthPage {
     hero: file(relativePath: { eq: "get-eth.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
