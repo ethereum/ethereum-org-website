@@ -8,8 +8,6 @@ Ethereum is a proof-of-stake blockchain. This has not always been the case. When
 
 This page aims to explain the rationale behind Ethereum's switch to proof-of-stake from proof-of-work and explain the trade-offs.
 
-We also recommend watching this proof-of-work vs proof-of-stake [debate](https://www.youtube.com/watch?v=1m12zgJ42dI&t=3410s) from Bankless.
-
 ## Security {#security}
 
 Overall, proof-of-stake is thought to be more secure than proof-of-work. However, it has only recently been implemented for the real Ethereum Mainnet and is not as "[Lindy](https://en.wikipedia.org/wiki/Lindy_effect)" as proof-of-work, meaning it has not been as time-proven. The following sections discuss the pro's and cons of proof-of-stake's security model compared to proof-of-work.
@@ -53,6 +51,10 @@ More on [Ethereum's energy consumption](/energy-consumption)
 ## Issuance {#issuance}
 
 Proof-of-stake Ethereum can pay for its security by issing far fewer coins than proof-of-work Ethereum because validators do not have to pay high electricity costs. This means ETH can be less inflationary, or even deflationary when large amounts of ETH are burned. This means proof-of-stake Ethereum's security is cheaper than under proof-of-work.
+
+We also recommend watching this proof-of-work vs proof-of-stake debate from Bankless:
+
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/1m12zgJ42dI" title="The PoW vs. PoS Debate | Lyn Alden & Justin Drake" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Further reading {#further-reading}
 
