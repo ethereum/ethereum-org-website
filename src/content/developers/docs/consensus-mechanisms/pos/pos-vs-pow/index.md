@@ -12,7 +12,7 @@ We also recommend watching this proof-of-work vs proof-of-stake [debate](https:/
 
 ## Security {#security}
 
-Overall, proof-of-stake is thought to be more secure than proof-of-work. However, it has only recently been implemented for the real Ethereum Mainnet and is not as "[Lindy](https://en.wikipedia.org/wiki/Lindy_effect)" as proof-of-work. The following sections discuss the pro's and cons of proof-of-stake's security model compared to proof-of-work.
+Overall, proof-of-stake is thought to be more secure than proof-of-work. However, it has only recently been implemented for the real Ethereum Mainnet and is not as "[Lindy](https://en.wikipedia.org/wiki/Lindy_effect)" as proof-of-work, meaning it has not been as time-proven. The following sections discuss the pro's and cons of proof-of-stake's security model compared to proof-of-work.
 
 ### Cost to attack {#cost-to-attack}
 
@@ -50,12 +50,12 @@ Proof-of-stake is a carbon-cheap way to secure the blockchain. Under proof-of-wo
 
 More on [Ethereum's energy consumption](/energy-consumption)
 
-## Issuance
+## Issuance {#issuance}
 
 Proof-of-stake Ethereum can pay for its security by issing far fewer coins than proof-of-work Ethereum because validators do not have to pay high electricity costs. This means ETH can be less inflationary, or even deflationary when large amounts of ETH are burned. This means proof-of-stake Ethereum's security is cheaper than under proof-of-work.
 
-## Further Reading {#further-reading}
+## Further reading {#further-reading}
 
-[Vitalik's Proof-of-stake design philosophy](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51)
-[Vitalik's proof-of-stake FAQs](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
-["Simply Explained" video on pos vs pow](https://www.youtube.com/watch?v=M3EFi_POhps)
+- [Vitalik's proof-of-stake design philosophy](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51)
+- [Vitalik's proof-of-stake FAQs](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
+- ["Simply Explained" video on pos vs pow](https://www.youtube.com/watch?v=M3EFi_POhps)
