@@ -26,8 +26,9 @@ Would you like to send ETH to another wallet?
 1. You need the receiving address and network of the recipient.
 2. Most wallets will have a “Send” button on dashboards that you need to click on.  
 3. Enter the receiving address or scan a QR code with your camera so that you don’t have to write the address manually.
-
-![Send field for crypto address](./send.png)
+<br/><br/>
+<img src="./send.png" width="400" alt="Send field for crypto address"/>
+<br/><br/>
 
 4. Many assets, like DAI or USDC, exist on multiple networks. When transferring crypto tokens, make sure that the other side is using the same network as you are. 
 5. Every transaction will require the sender to pay small fee, the exact amount changes depending on network congestion. 
@@ -39,22 +40,28 @@ Your address represents you on all Ethereum projects. You will not need to regis
 
 1. Visit any project’s website.
 2. Most of them will have a button in the menu to “Open the App”. 
-3. Once you are in the app simply click on “Connect” 
+3. Once you are in the app simply click on “Connect”
 
-![Button allowing user to connect to the website with a wallet](./connect1.png)
+<br/><br/>
+<img src="./connect1.png" width="400" alt="Button allowing user to connect to the website with a wallet"/>
+<br/><br/>
 
 4. Select your wallet from the offered list. If you cant see your wallet, maybe it will be hidden under “WalletConnect” option.
 
-![Selecting from a list of wallets to connect with](./connect2.png)
+&nbsp;
+<img src="./connect2.png" width="400" alt="Selecting from a list of wallets to connect with"/>
+&nbsp;
 
 5. You will have to confirm a signature request in your wallet to confirm the connection. It should not cost anything.
 6. Thats it! Start using the app. You can find some interesting projects on our [dApps page](https://ethereum.org/en/dapps/#explore).
 
+<br/><br/>
+
 ### FAQ
 
-**If I have own an ETH address, do I own the same address on other blockchains?**
+**If I own an ETH address, do I own the same address on other blockchains?**
 
-- All ERC-20 blockchains are issued on Ethereum which means you can use the same address on all of them. While there are many ERC-20 blockchains to choose from, its by no means the entirety of the crypto market. Other blockchains like Bitcoin are separate and you will need a different address.
+- You can use the same address on many popular blockchains (if you have the type of wallet with a recovery phrase). This [list](https://chainlist.org/)) will show you which blockchains you can use with the same address. Some blockchains like Bitcoin are completely separate and you will need a different address with a different format. If you have a smart contract wallet you should check its product website for more info on what blockchains are allowed.
 
 **Can I use the same address on multiple devices?**
 
