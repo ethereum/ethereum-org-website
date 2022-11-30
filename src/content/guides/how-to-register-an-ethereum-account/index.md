@@ -1,10 +1,10 @@
 ---
-title: How to "Register" an Ethereum account?
+title: How to Register an Ethereum account?
 description: A step-by-step guide on Ethereum account creation using a wallet.
 lang: en
 ---
 
-# How to: Register an Ethereum account
+# How to: "Register" an Ethereum account
 
 Creating an Ethereum account is very easy and anyone can do it for free with a specific type of app commonly referred to as a wallet. With a wallet you can then hold, send and receive crypto and connect to crypto projects that will enable you to trade NFTs, exchange coins, access play-to-earn games, unlock Defi and much more. 
 
