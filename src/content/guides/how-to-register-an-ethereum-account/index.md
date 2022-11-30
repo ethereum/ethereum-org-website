@@ -18,7 +18,7 @@ We have prepared a list of trusted wallets that you should not be afraid to use.
 
 ## Step 2: Choose a profile filter such as “New to crypto” to narrow down options
 
-If you are new, you can choose a filter “New to crypto” to only view those wallets that include all necessary features we think would be particularly good for beginners. There are also other profile filters as well if your needs are different.
+If you are new, you should choose a filter “New to crypto” to only view those wallets that include all necessary features we think would be particularly good for beginners. There are also other profile filters as well if your needs are different.
 
 ## Step 3: Download & Install a wallet
 
