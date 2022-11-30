@@ -46,4 +46,4 @@ Once you have saved your recovery phrase you should see your wallet dashboard wi
 
 **Is having my own wallet safer than keeping my funds on an exchange?**
 
-- Yes, this is much safer option because nobody else will have access to your funds. There are unfortunately many examples of failed exchanges that filed for bankrupcy and lost people's savings, hacks, freezing accounts or blocking withdrawals are a common risk. If you have your own wallet and are the only person that possesses the recovery phrase to it, you are truly the only person who can control your savings.
+- Yes, this is a much safer option because nobody else will have access to your funds. There are unfortunately many examples of failed exchanges that filed for bankrupcy and lost users' savings. Hacks, frozen accounts or blocked withdrawals are some other common risks. Owning a wallet (with a recovery phrase) is the best way to safeguard your assets. 
