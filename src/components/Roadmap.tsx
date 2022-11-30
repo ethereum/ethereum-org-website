@@ -16,7 +16,6 @@ import {
   Text,
   UnorderedList,
   useToken,
-  VStack,
 } from "@chakra-ui/react"
 
 export interface Label {
