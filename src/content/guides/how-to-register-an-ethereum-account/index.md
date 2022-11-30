@@ -22,7 +22,7 @@ If you are new, you should choose a filter “New to crypto” to only view thos
 
 ## Step 3: Download & Install a wallet
 
-Once you have decided on a specific wallet, download and install it. Most wallet products will automatically generate an Ethereum account so you don't need one before you download a wallet. 
+Once you have decided on a specific wallet, download and install it. All of them should be free. Most wallet products will automatically generate an Ethereum account so you don't need one before you download a wallet. 
 
 ## Step 4: Open the wallet app & store your recovery phrase
 
