@@ -35,10 +35,13 @@ Once you have saved your recovery phrase you should see your wallet dashboard wi
 
 ### FAQ
 
+**Are my wallet and my Ethereum account the same?**
+- No, wallets have the ability to create a new Ethereum account, but the account lives on Ethereum and wallets connect to it. So if you lose your wallet you can still recover your account with the recovery phrase.
+
 **Can I send Bitcoin to an Ethereum address and vice versa?**
 
-- No you cannot, you need two different addresses for that as bitcoin is not ethereum based blockchain.
+- No you cannot, you need two different accounts.
 
 **Is having my own wallet safer than keeping my funds on an exchange?**
 
-- Yes, nobody else will have access to your funds, not even the wallet creators can access your funds if you have a wallet with own recovery phrase. Only the person that possesses the recovery phrase can control the funds.
+- Yes, this is much safer option because nobody else will have access to your funds. There are unfortunately many examples of failed exchanges that filed for bankrupcy and lost people's savings, hacks, freezing accounts or blocking withdrawals are a common risk. If you have your own wallet and are the only person that possesses the recovery phrase to it, you are truly the only person who can control your savings.
