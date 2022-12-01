@@ -71,9 +71,9 @@ ZK-SNARK 是 Zero-Knowledge Succinct Non-Interactive Argument of Knowledge 的�
 
 - **非交互式**：证明是“非交互式”的，因为证明者和验证者只交互一次，不像交互式证明需要多轮通信。
 
-论证：证明满足“可靠性”要求，因此作弊的可能性极小。
+- **论证**：证明满足“可靠性”要求，因此作弊的可能性极小。
 
-(Of) Knowledge：如果不访问秘密信息（witness），则无法构建零知识证明。对于没有见证人的证明者来说，即使不是不可能，也很难计算出有效的零知识证明。
+- **(Of) Knowledge**：如果不访问秘密信息（witness），则无法构建零知识证明。对于没有见证人的证明者来说，即使不是不可能，也很难计算出有效的零知识证明。
 
 前面提到的“共享密钥”是指证明者和验证者同意在生成和验证证明时使用的公共参数。生成公共参数（统称为公共参考字符串 (CRS)）是一项敏感操作，因为它对协议的安全性很重要。如果用于生成 CRS 的熵（随机性）落入不诚实的证明者手中，他们就可以计算出错误证明。
 
@@ -81,7 +81,8 @@ ZK-SNARK 是 Zero-Knowledge Succinct Non-Interactive Argument of Knowledge 的�
 
 可信设置要求用户信任参数生成的参与者。然而，ZK-STARKs 的开发使得证明协议能够在不受信任的设置下工作。
 
-ZK-STARKs {#zk-starks}
+#### ZK-STARKs {#zk-starks}
+
 ZK-STARK 是 Zero-Knowledge Scalable Transparent Argument of Knowledge 的缩写。 ZK-STARKs 类似于 ZK-SNARKs，除了它们是：
 
 可扩展性：当见证规模较大时，ZK-STARK 在生成和验证证明方面比 ZK-SNARK 更快。使用 STARK 证明，证明者和验证者的时间只会随着见证的增长而略有增加（SNARK 证明者和验证者的时间随着见证者的规模线性增加）。
