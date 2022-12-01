@@ -46,7 +46,7 @@ lang: zh
 
 以上描述了“交互式零知识证明”的结构。早期的零知识协议使用交互式证明，其中验证语句的有效性需要证明者和验证者之间的来回通信。
 
-Jean-Jacques Quisquater 著名的阿里巴巴洞穴故事是说明交互式证明如何工作的一个很好的例子。在故事中，Peggy（证明者）想向 Victor（验证者）证明她知道打开魔法门的秘密短语而不泄露该短语。
+Jean-Jacques Quisquater 著名的[阿里巴巴洞穴故事](https://en.wikipedia.org/wiki/Zero-knowledge_proof#The_Ali_Baba_cave)是说明交互式证明如何工作的一个很好的例子。在故事中，Peggy（证明者）想向 Victor（验证者）证明她知道打开魔法门的秘密短语而不泄露该短语。
 
 ### 非交互式零知识证明 {#non-interactive-zero-knowledge-proofs}
 
