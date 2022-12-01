@@ -23,8 +23,8 @@ You need to provide the sender with your receiving address. Many wallet apps wil
 
 Would you like to send ETH to another wallet? 
 
-1. You need the receiving address and the network of the recipient.
-2. Most wallets will have a “Send” button on dashboards that you need to click on.  
+1. Prepare the receiving address and the network of the recipient.
+2. Click on a “Send” button on the dashboard of your wallet or similarly worded alternative.  
 3. Enter the receiving address or scan a QR code with your camera so that you don’t have to write the address manually.
 <br/><br/>
 <img src="./send.png" width="400" alt="Send field for crypto address"/>
@@ -39,8 +39,8 @@ Would you like to send ETH to another wallet?
 Your address represents you on all Ethereum projects. You will not need to register individually on any project. Once you have a wallet, you can connect to any Ethereum project without any additional information. No emails or any other personal information are needed.
 
 1. Visit any project’s website.
-2. Most of them will have a button in the menu to “Open the App”. 
-3. Once you are in the app simply click on “Connect”
+2. Click a button “Open the App” in the menu if the main page is a presentation of the project. 
+3. Once you are in the app click on “Connect”
 
 <br/><br/>
 <img src="./connect1.png" width="400" alt="Button allowing user to connect to the website with a wallet"/>
@@ -52,7 +52,7 @@ Your address represents you on all Ethereum projects. You will not need to regis
 <img src="./connect2.png" width="400" alt="Selecting from a list of wallets to connect with"/>
 &nbsp;
 
-5. You will have to confirm a signature request in your wallet to confirm the connection. It should not cost anything.
+5. Confirm a signature request in your wallet to start the connection. It should not cost anything.
 6. Thats it! Start using the app. You can find some interesting projects on our [dApps page](https://ethereum.org/en/dapps/#explore).
 
 <br/><br/>
