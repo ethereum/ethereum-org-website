@@ -1,7 +1,7 @@
 ---
 标题：零知识证明
 描述：针对初学者的零知识证明的非技术性介绍。
-郎：恩
+lang：zh
 ---
 
 ## 什么是零知识证明？ {#what-are-zk-proofs}
@@ -10,7 +10,7 @@
 
 零知识证明最早出现在 1985 年的一篇论文中，“[交互式证明系统的知识复杂性](http://people.csail.mit.edu/silvio/Selected%20Scientific%20Papers/Proof%20Systems/The_Knowledge_Complexity_Of_Interactive_Proof_Systems.pdf) ”，它提供了当今广泛使用的零知识证明的定义：
 
-> 零知识协议是一种方法，通过这种方法，一方（证明者）可以向另一方（验证者）证明某事是真实的，除了这个特定陈述是真实的事实之外，不会透露任何信息。
+> 零知识协议是一种通过一方（证明者）可以向另一方（验证者）证明某事是真实的，除了这个特定陈述是真实的事实之外，不会透露任何信息的方法。
 
 多年来，零知识证明得到了改进，现在它们被用于多个现实世界的应用程序中。
 
@@ -59,7 +59,7 @@ Jean-Jacques Quisquater 著名的阿里巴巴洞穴故事是说明交互式证�
 
 非交互式证明代表了零知识技术的突破，并推动了当今使用的证明系统的发展。我们在下面讨论这些证明类型：
 
-零知识证明的类型 {#types-of-zero-knowledge-proofs}
+### 零知识证明的类型 {#types-of-zero-knowledge-proofs}
 ZK-SNARKs {#zk-snarks}
 ZK-SNARK 是 Zero-Knowledge Succinct Non-Interactive Argument of Knowledge 的缩写。 ZK-SNARK 协议具有以下特点：
 
