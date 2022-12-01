@@ -23,7 +23,7 @@ You need to provide the sender with your receiving address. Many wallet apps wil
 
 Would you like to send ETH to another wallet? 
 
-1. You need the receiving address and network of the recipient.
+1. You need the receiving address and the network of the recipient.
 2. Most wallets will have a “Send” button on dashboards that you need to click on.  
 3. Enter the receiving address or scan a QR code with your camera so that you don’t have to write the address manually.
 <br/><br/>
