@@ -15,17 +15,28 @@ You should see a dashboard that will likely show your balance and contain button
 
 ## Receive cryptocurrency
 
+Do you want to receive crypto into your wallet?
+
 Each wallet has its own receiving Ethereum address which is a unique sequence of numbers and letters. The address functions like a bank account number. Ethereum address will always start with “0x”.
 
 You need to provide the sender with your receiving address. Many wallet apps will let you copy to clipboard the address or show a QR code to scan for an easier usage. 
+
+1. Open your wallet app.
+2. Click on "Receive" or similarly worded option on the dashboard
+3. Copy your Ethereum address to clipboard.
+4. Provide the sender with your receiving Ethereum address.
+
+If you are trying to send yourself your funds from an exchange it is in principle the same process.
+
 
 ## Send cryptocurrency
 
 Would you like to send ETH to another wallet? 
 
 1. Prepare the receiving address and the network of the recipient.
-2. Click on a “Send” button on the dashboard of your wallet or similarly worded alternative.  
-3. Enter the receiving address or scan a QR code with your camera so that you don’t have to write the address manually.
+2. Open your wallet app.
+3. Click on a “Send” button on the dashboard of your wallet or similarly worded alternative.  
+4. Enter the receiving address or scan a QR code with your camera so that you don’t have to write the address manually.
 <br/><br/>
 <img src="./send.png" width="400" alt="Send field for crypto address"/>
 <br/><br/>
