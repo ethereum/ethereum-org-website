@@ -69,7 +69,7 @@ Your address represents you on all Ethereum projects. You will not need to regis
 
 **I have not received the crypto, where can I check the status of a transaction?**
 
-- You can use [block explorers](https://ethereum.org/en/developers/docs/data-and-analytics/block-explorers/) to see the status of any transaction real time.
+- You can use [block explorers](https://ethereum.org/en/developers/docs/data-and-analytics/block-explorers/) to see the status of any transaction in real time. All you need to do is to search your wallet address or the ID of the transaction.
 
 **Can I cancel or return transactions?**
 
