@@ -1,7 +1,7 @@
 ---
-title：零知识证明
-description：针对初学者的零知识证明的非技术性介绍。
-lang：zh
+title: 零知识证明
+description: 针对初学者的零知识证明的非技术性介绍。
+lang: zh
 ---
 
 ## 什么是零知识证明？ {#what-are-zk-proofs}
