@@ -164,10 +164,10 @@ ZK-SNARK 使用椭圆曲线密码学 (ECDSA) 进行加密。虽然 ECDSA 算法�
 ZK-STARK 被认为不受量子计算的威胁，因为它使用抗碰撞哈希进行加密。与椭圆曲线密码学中使用的公私密钥对不同，抗碰撞散列更难被量子计算算法破解。
 
 ## 进一步阅读 {#further-reading}
-- 计算机科学家分5个难度解释一个概念| WIRED - 有线 YouTube 频道
-- SNARKs vs. STARKS vs. Recursive SNARKs — Alchemy Overviews
-- 零知识证明：改善区块链上的隐私 — Dmitry Lavrenov
-- zk-SNARKs——一个现实的零知识示例和深入研究——Adam Luciano
-- ZK-STARKs — 创建可验证的信任，即使是针对量子计算机 — Adam Luciano
-- zk-SNARKs 如何成为可能的大致介绍 — Vitalik Buterin
-- 什么是零知识证明及其在区块链中的作用？ — LeewayHertz
+- [计算机科学家分5个难度解释一个概念](https://www.youtube.com/watch?v=fOGdb1CTu5c) - WIRED - 有线 YouTube 频道
+- [SNARKs vs. STARKS vs. Recursive SNARKs](https://www.alchemy.com/overviews/snarks-vs-starks) — Alchemy Overviews
+- [零知识证明：改善区块链上的隐私](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — Dmitry Lavrenov
+- [zk-SNARKs——一个现实的零知识示例和深入研究](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) —— Adam Luciano
+- [ZK-STARKs — 创建可验证的信任，即使是针对量子计算机](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — Adam Luciano
+- [zk-SNARKs 如何成为可能的大致介绍](https://vitalik.ca/general/2021/01/26/snarks.html)  — Vitalik Buterin
+- [什么是零知识证明及其在区块链中的作用？](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/) — LeewayHertz
