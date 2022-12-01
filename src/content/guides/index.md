@@ -10,9 +10,9 @@ Do you want to start your crypto journey? It can be difficult to understand and 
 
 ## Getting started
 
-1. Guide: How to register an Ethereum account - You will learn that you need a wallet app and the guide will show you where to find one.
+1. How to: "Register" an Ethereum account - You will learn that you need a wallet app and the guide will show you where to find one.
 
-2. Guide: How to use a wallet - An introduction to basic features of any wallet and how to use them.
+2. How to: Use a wallet - An introduction to basic features of any wallet and how to use them.
 
 ## Security
-1. How to revoke smart contract access to your crypto funds - If you suddenly see a transaction in your wallet that you did not initiate, this guide will teach you how to prevent that from hapening again.
+1. How to: Revoke smart contract access to your crypto funds - If you suddenly see a transaction in your wallet that you did not initiate, this guide will teach you how to prevent that from hapening again.
