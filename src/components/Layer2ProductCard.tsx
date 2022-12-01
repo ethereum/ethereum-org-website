@@ -1,12 +1,15 @@
 // Libraries
 import React from "react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 import { Box, Center, Flex, Heading, Image, Text } from "@chakra-ui/react"
 
 // Components
 import ButtonLink from "./ButtonLink"
 import Link from "./Link"
+
+// Utils
+import { translateMessageId } from "../utils/translations"
 
 export interface IProps {
   children?: React.ReactNode
@@ -35,7 +38,7 @@ const Layer2ProductCard: React.FC<IProps> = ({
   tokenLists,
   ecosystemPortal,
 }) => {
-  const { t } = useTranslation()
+  const intl = useIntl()
 
   return (
     <Flex
@@ -80,29 +83,29 @@ const Layer2ProductCard: React.FC<IProps> = ({
           </Text>
           {note.length > 0 && (
             <Text opacity="0.8" fontSize="sm" mb={2} lineHeight="140%">
-              {t("layer-2-note")} {note}
+              {translateMessageId("layer-2-note", intl)} {note}
             </Text>
           )}
         </Box>
         {bridge && (
           <Link to={bridge}>
-            {name} {t("layer-2-bridge")}
+            {name} {translateMessageId("layer-2-bridge", intl)}
           </Link>
         )}
         {ecosystemPortal && (
           <Link to={ecosystemPortal}>
-            {name} {t("layer-2-ecosystem-portal")}
+            {name} {translateMessageId("layer-2-ecosystem-portal", intl)}
           </Link>
         )}
         {tokenLists && (
           <Link to={tokenLists}>
-            {name} {t("layer-2-token-lists")}
+            {name} {translateMessageId("layer-2-token-lists", intl)}
           </Link>
         )}
       </Flex>
       <Box>
         <ButtonLink m={2} to={url} display="flex">
-          {t("layer-2-explore")} {name}
+          {translateMessageId("layer-2-explore", intl)} {name}
         </ButtonLink>
       </Box>
     </Flex>

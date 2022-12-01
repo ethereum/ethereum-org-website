@@ -1,10 +1,11 @@
-import React, { ReactNode } from "react"
+import React, { ReactNode, useContext } from "react"
 import { useTheme } from "@emotion/react"
 import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 
+import { translateMessageId } from "../utils/translations"
 import Translation from "../components/Translation"
 import Card from "../components/Card"
 import Leaderboard from "../components/Leaderboard"
@@ -263,7 +264,7 @@ const BugBountiesPage = ({
   data,
   location,
 }: PageProps<Queries.BugBountyPageQuery, Context>) => {
-  const { t } = useTranslation()
+  const intl = useIntl()
   const theme = useTheme()
   const isDarkTheme = theme.isDark
 
@@ -391,8 +392,11 @@ const BugBountiesPage = ({
   return (
     <Page>
       <PageMetadata
-        title={t("page-upgrades-bug-bounty-meta-title")}
-        description={t("page-upgrades-bug-bounty-meta-description")}
+        title={translateMessageId("page-upgrades-bug-bounty-meta-title", intl)}
+        description={translateMessageId(
+          "page-upgrades-bug-bounty-meta-description",
+          intl
+        )}
       />
       <Content>
         <HeroCard>
@@ -455,8 +459,14 @@ const BugBountiesPage = ({
           <StyledCardContainer>
             <StyledCard
               emoji=":ledger:"
-              title={t("page-upgrades-bug-bounty-ledger-title")}
-              description={t("page-upgrades-bug-bounty-ledger-desc")}
+              title={translateMessageId(
+                "page-upgrades-bug-bounty-ledger-title",
+                intl
+              )}
+              description={translateMessageId(
+                "page-upgrades-bug-bounty-ledger-desc",
+                intl
+              )}
             >
               <Link to="https://github.com/ethereum/consensus-specs">
                 <Translation id="page-upgrades-bug-bounty-specs" />
@@ -513,8 +523,14 @@ const BugBountiesPage = ({
             </StyledCard>
             <StyledCard
               emoji=":computer:"
-              title={t("page-upgrades-bug-bounty-client-bugs")}
-              description={t("page-upgrades-bug-bounty-client-bugs-desc")}
+              title={translateMessageId(
+                "page-upgrades-bug-bounty-client-bugs",
+                intl
+              )}
+              description={translateMessageId(
+                "page-upgrades-bug-bounty-client-bugs-desc",
+                intl
+              )}
             >
               <div>
                 <p>
@@ -545,8 +561,14 @@ const BugBountiesPage = ({
             </StyledCard>
             <StyledCard
               emoji=":book:"
-              title={t("page-upgrades-bug-bounty-misc-bugs")}
-              description={t("page-upgrades-bug-bounty-misc-bugs-desc")}
+              title={translateMessageId(
+                "page-upgrades-bug-bounty-misc-bugs",
+                intl
+              )}
+              description={translateMessageId(
+                "page-upgrades-bug-bounty-misc-bugs-desc",
+                intl
+              )}
             >
               <div>
                 <p>
@@ -564,8 +586,14 @@ const BugBountiesPage = ({
             </StyledCard>
             <StyledCard
               emoji=":scroll:"
-              title={t("page-upgrades-bug-bounty-deposit-bugs")}
-              description={t("page-upgrades-bug-bounty-deposit-bugs-desc")}
+              title={translateMessageId(
+                "page-upgrades-bug-bounty-deposit-bugs",
+                intl
+              )}
+              description={translateMessageId(
+                "page-upgrades-bug-bounty-deposit-bugs-desc",
+                intl
+              )}
             >
               <div>
                 <h4>
@@ -859,16 +887,7 @@ export const ClientLogosSmall = graphql`
 `
 
 export const query = graphql`
-  query BugBountyPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
+  query BugBountyPage {
     consensusBountyHunters: allConsensusBountyHuntersCsv(
       sort: { order: DESC, fields: score }
     ) {

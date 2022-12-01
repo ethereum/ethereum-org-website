@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react"
 import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 
 import Translation from "../components/Translation"
 import Pill from "../components/Pill"
@@ -34,6 +34,7 @@ import {
 } from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
 
+import { translateMessageId } from "../utils/translations"
 import { getImage, getSrc } from "../utils/image"
 import { Context } from "../types"
 
@@ -346,8 +347,7 @@ const DappsPage = ({
   data,
   location,
 }: PageProps<Queries.DappsPageQuery, Context>) => {
-  const { t } = useTranslation()
-  const { language } = useI18next()
+  const intl = useIntl()
   const [selectedCategory, setCategory] = useState<CategoryType>(
     CategoryType.FINANCE
   )
@@ -392,7 +392,7 @@ const DappsPage = ({
     } else {
       // If within `window` and not in the bottom mobile selection...
       if (window) {
-        newPath = `/${language}${newPath}`
+        newPath = `/${intl.locale}${newPath}`
         // Apply new path without page refresh
         window.history.pushState(null, "", newPath)
       }
@@ -409,124 +409,220 @@ const DappsPage = ({
 
   const features = [
     {
-      title: t("page-dapps-features-1-title"),
-      description: t("page-dapps-features-1-description"),
+      title: translateMessageId("page-dapps-features-1-title", intl),
+      description: translateMessageId(
+        "page-dapps-features-1-description",
+        intl
+      ),
       emoji: ":bust_in_silhouette:",
     },
     {
-      title: t("page-dapps-features-2-title"),
-      description: t("page-dapps-features-2-description"),
+      title: translateMessageId("page-dapps-features-2-title", intl),
+      description: translateMessageId(
+        "page-dapps-features-2-description",
+        intl
+      ),
       emoji: ":megaphone:",
     },
     {
-      title: t("page-dapps-features-3-title"),
-      description: t("page-dapps-features-3-description"),
+      title: translateMessageId("page-dapps-features-3-title", intl),
+      description: translateMessageId(
+        "page-dapps-features-3-description",
+        intl
+      ),
       emoji: ":money-mouth_face:",
     },
     {
-      title: t("page-dapps-features-4-title"),
-      description: t("page-dapps-features-4-description"),
+      title: translateMessageId("page-dapps-features-4-title", intl),
+      description: translateMessageId(
+        "page-dapps-features-4-description",
+        intl
+      ),
       emoji: ":electric_plug:",
     },
     {
-      title: t("page-dapps-features-5-title"),
-      description: t("page-dapps-features-5-description"),
+      title: translateMessageId("page-dapps-features-5-title", intl),
+      description: translateMessageId(
+        "page-dapps-features-5-description",
+        intl
+      ),
       emoji: ":detective:",
     },
     {
-      title: t("page-dapps-features-6-title"),
-      description: t("page-dapps-features-6-description"),
+      title: translateMessageId("page-dapps-features-6-title", intl),
+      description: translateMessageId(
+        "page-dapps-features-6-description",
+        intl
+      ),
       emoji: ":key:",
     },
     {
-      title: t("page-dapps-features-7-title"),
-      description: t("page-dapps-features-7-description"),
+      title: translateMessageId("page-dapps-features-7-title", intl),
+      description: translateMessageId(
+        "page-dapps-features-7-description",
+        intl
+      ),
       emoji: ":antenna_with_bars:",
     },
   ]
 
   const categories: Categories = {
     [CategoryType.FINANCE]: {
-      title: t("page-dapps-finance-button"),
+      title: translateMessageId("page-dapps-finance-button", intl),
       emoji: ":money_with_wings:",
-      benefitsTitle: t("page-dapps-finance-benefits-title"),
-      benefitsDescription: t("page-dapps-finance-benefits-description"),
+      benefitsTitle: translateMessageId(
+        "page-dapps-finance-benefits-title",
+        intl
+      ),
+      benefitsDescription: translateMessageId(
+        "page-dapps-finance-benefits-description",
+        intl
+      ),
       benefits: [
         {
           emoji: ":open_lock:",
-          title: t("page-dapps-finance-benefits-1-title"),
-          description: t("page-dapps-finance-benefits-1-description"),
+          title: translateMessageId(
+            "page-dapps-finance-benefits-1-title",
+            intl
+          ),
+          description: translateMessageId(
+            "page-dapps-finance-benefits-1-description",
+            intl
+          ),
         },
         {
           emoji: ":bank:",
-          title: t("page-dapps-finance-benefits-2-title"),
-          description: t("page-dapps-finance-benefits-2-description"),
+          title: translateMessageId(
+            "page-dapps-finance-benefits-2-title",
+            intl
+          ),
+          description: translateMessageId(
+            "page-dapps-finance-benefits-2-description",
+            intl
+          ),
         },
         {
           emoji: ":scales:",
-          title: t("page-dapps-finance-benefits-3-title"),
-          description: t("page-dapps-finance-benefits-3-description"),
+          title: translateMessageId(
+            "page-dapps-finance-benefits-3-title",
+            intl
+          ),
+          description: translateMessageId(
+            "page-dapps-finance-benefits-3-description",
+            intl
+          ),
         },
         {
           emoji: ":chains:",
-          title: t("page-dapps-finance-benefits-4-title"),
-          description: t("page-dapps-finance-benefits-4-description"),
+          title: translateMessageId(
+            "page-dapps-finance-benefits-4-title",
+            intl
+          ),
+          description: translateMessageId(
+            "page-dapps-finance-benefits-4-description",
+            intl
+          ),
         },
       ],
     },
     [CategoryType.COLLECTIBLES]: {
-      title: t("page-dapps-collectibles-button"),
+      title: translateMessageId("page-dapps-collectibles-button", intl),
       emoji: ":frame_with_picture:",
-      benefitsTitle: t("page-dapps-collectibles-benefits-title"),
-      benefitsDescription: t("page-dapps-collectibles-benefits-description"),
+      benefitsTitle: translateMessageId(
+        "page-dapps-collectibles-benefits-title",
+        intl
+      ),
+      benefitsDescription: translateMessageId(
+        "page-dapps-collectibles-benefits-description",
+        intl
+      ),
       benefits: [
         {
           emoji: ":white_check_mark:",
-          title: t("page-dapps-collectibles-benefits-1-title"),
-          description: t("page-dapps-collectibles-benefits-1-description"),
+          title: translateMessageId(
+            "page-dapps-collectibles-benefits-1-title",
+            intl
+          ),
+          description: translateMessageId(
+            "page-dapps-collectibles-benefits-1-description",
+            intl
+          ),
         },
         {
           emoji: ":man_singer:",
-          title: t("page-dapps-collectibles-benefits-2-title"),
-          description: t("page-dapps-collectibles-benefits-2-description"),
+          title: translateMessageId(
+            "page-dapps-collectibles-benefits-2-title",
+            intl
+          ),
+          description: translateMessageId(
+            "page-dapps-collectibles-benefits-2-description",
+            intl
+          ),
         },
         {
           emoji: ":shopping_bags:",
-          title: t("page-dapps-collectibles-benefits-3-title"),
-          description: t("page-dapps-collectibles-benefits-3-description"),
+          title: translateMessageId(
+            "page-dapps-collectibles-benefits-3-title",
+            intl
+          ),
+          description: translateMessageId(
+            "page-dapps-collectibles-benefits-3-description",
+            intl
+          ),
         },
         {
           emoji: ":department_store:",
-          title: t("page-dapps-collectibles-benefits-4-title"),
-          description: t("page-dapps-collectibles-benefits-4-description"),
+          title: translateMessageId(
+            "page-dapps-collectibles-benefits-4-title",
+            intl
+          ),
+          description: translateMessageId(
+            "page-dapps-collectibles-benefits-4-description",
+            intl
+          ),
         },
       ],
     },
     [CategoryType.GAMING]: {
-      title: t("page-dapps-gaming-button"),
+      title: translateMessageId("page-dapps-gaming-button", intl),
       emoji: ":video_game:",
-      benefitsTitle: t("page-dapps-gaming-benefits-title"),
-      benefitsDescription: t("page-dapps-gaming-benefits-description"),
+      benefitsTitle: translateMessageId(
+        "page-dapps-gaming-benefits-title",
+        intl
+      ),
+      benefitsDescription: translateMessageId(
+        "page-dapps-gaming-benefits-description",
+        intl
+      ),
       benefits: [
         {
           emoji: ":crossed_swords:",
-          title: t("page-dapps-gaming-benefits-1-title"),
-          description: t("page-dapps-gaming-benefits-1-description"),
+          title: translateMessageId("page-dapps-gaming-benefits-1-title", intl),
+          description: translateMessageId(
+            "page-dapps-gaming-benefits-1-description",
+            intl
+          ),
         },
         {
           emoji: ":european_castle:",
-          title: t("page-dapps-gaming-benefits-2-title"),
-          description: t("page-dapps-gaming-benefits-2-description"),
+          title: translateMessageId("page-dapps-gaming-benefits-2-title", intl),
+          description: translateMessageId(
+            "page-dapps-gaming-benefits-2-description",
+            intl
+          ),
         },
         {
           emoji: ":handshake:",
-          title: t("page-dapps-gaming-benefits-3-title"),
-          description: t("page-dapps-gaming-benefits-3-description"),
+          title: translateMessageId("page-dapps-gaming-benefits-3-title", intl),
+          description: translateMessageId(
+            "page-dapps-gaming-benefits-3-description",
+            intl
+          ),
         },
       ],
     },
     [CategoryType.TECHNOLOGY]: {
-      title: t("page-dapps-technology-button"),
+      title: translateMessageId("page-dapps-technology-button", intl),
       emoji: ":keyboard:",
     },
   }
@@ -536,399 +632,531 @@ const DappsPage = ({
   const lending = [
     {
       title: "Aave",
-      description: t("page-dapps-dapp-description-aave"),
+      description: translateMessageId("page-dapps-dapp-description-aave", intl),
       link: "https://aave.com/",
       image: getImage(data.aave),
-      alt: t("page-dapps-aave-logo-alt"),
+      alt: translateMessageId("page-dapps-aave-logo-alt", intl),
     },
     {
       title: "Compound",
-      description: t("page-dapps-dapp-description-compound"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-compound",
+        intl
+      ),
       link: "https://compound.finance/",
       image: getImage(data.compound),
-      alt: t("page-dapps-compound-logo-alt"),
+      alt: translateMessageId("page-dapps-compound-logo-alt", intl),
     },
     {
       title: "Oasis",
-      description: t("page-dapps-dapp-description-oasis"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-oasis",
+        intl
+      ),
       link: "https://oasis.app/",
       image: getImage(data.dai),
-      alt: t("page-dapps-oasis-logo-alt"),
+      alt: translateMessageId("page-dapps-oasis-logo-alt", intl),
     },
     {
       title: "PWN",
-      description: t("page-dapps-dapp-description-pwn"),
+      description: translateMessageId("page-dapps-dapp-description-pwn", intl),
       link: "https://pwn.xyz",
       image: getImage(data.pwn),
-      alt: t("page-dapps-pwn-image-alt"),
+      alt: translateMessageId("page-dapps-pwn-image-alt", intl),
     },
   ]
 
   const dex = [
     {
       title: "Uniswap",
-      description: t("page-dapps-dapp-description-uniswap"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-uniswap",
+        intl
+      ),
       link: "https://uniswap.org/",
       image: getImage(data.uniswap),
-      alt: t("page-dapps-uniswap-logo-alt"),
+      alt: translateMessageId("page-dapps-uniswap-logo-alt", intl),
     },
     {
       title: "Matcha",
-      description: t("page-dapps-dapp-description-matcha"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-matcha",
+        intl
+      ),
       link: "https://matcha.xyz",
       image: getImage(data.matcha),
-      alt: t("page-dapps-matcha-logo-alt"),
+      alt: translateMessageId("page-dapps-matcha-logo-alt", intl),
     },
     {
       title: "1inch",
-      description: t("page-dapps-dapp-description-1inch"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-1inch",
+        intl
+      ),
       link: "https://1inch.exchange/",
       image: getImage(data.oneinch),
-      alt: t("page-dapps-1inch-logo-alt"),
+      alt: translateMessageId("page-dapps-1inch-logo-alt", intl),
     },
   ]
 
   const trading = [
     {
       title: "Polymarket",
-      description: t("page-dapps-dapp-description-polymarket"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-polymarket",
+        intl
+      ),
       link: "https://polymarket.com",
       image: getImage(data.polymarket),
-      alt: t("page-dapps-polymarket-logo-alt"),
+      alt: translateMessageId("page-dapps-polymarket-logo-alt", intl),
     },
     {
       title: "Augur",
-      description: t("page-dapps-dapp-description-augur"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-augur",
+        intl
+      ),
       link: "https://augur.net",
       image: getImage(data.augur),
-      alt: t("page-dapps-augur-logo-alt"),
+      alt: translateMessageId("page-dapps-augur-logo-alt", intl),
     },
     {
       title: "Loopring",
-      description: t("page-dapps-dapp-description-loopring"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-loopring",
+        intl
+      ),
       link: "https://loopring.org/#/",
       image: getImage(data.loopring),
-      alt: t("page-dapps-loopring-logo-alt"),
+      alt: translateMessageId("page-dapps-loopring-logo-alt", intl),
     },
   ]
 
   const lottery = [
     {
       title: "Gitcoin Grants",
-      description: t("page-dapps-dapp-description-gitcoin-grants"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-gitcoin-grants",
+        intl
+      ),
       link: "https://gitcoin.co/grants/?",
       image: getImage(data.gitcoin),
-      alt: t("page-dapps-gitcoin-grants-logo-alt"),
+      alt: translateMessageId("page-dapps-gitcoin-grants-logo-alt", intl),
     },
   ]
 
   const payments = [
     {
       title: "Tornado cash",
-      description: t("page-dapps-dapp-description-tornado-cash"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-tornado-cash",
+        intl
+      ),
       link: "https://tornado.cash/",
       image: getImage(data.tornado),
-      alt: t("page-dapps-tornado-cash-logo-alt"),
+      alt: translateMessageId("page-dapps-tornado-cash-logo-alt", intl),
     },
     {
       title: "Sablier",
-      description: t("page-dapps-dapp-description-sablier"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-sablier",
+        intl
+      ),
       link: "https://pay.sablier.finance/",
       image: getImage(data.sablier),
-      alt: t("page-dapps-sablier-logo-alt"),
+      alt: translateMessageId("page-dapps-sablier-logo-alt", intl),
     },
   ]
 
   const investments = [
     {
       title: "Token Sets",
-      description: t("page-dapps-dapp-description-token-sets"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-token-sets",
+        intl
+      ),
       link: "https://www.tokensets.com/",
       image: getImage(data.set),
-      alt: t("page-dapps-token-sets-logo-alt"),
+      alt: translateMessageId("page-dapps-token-sets-logo-alt", intl),
     },
     {
       title: "PoolTogether",
-      description: t("page-dapps-dapp-description-pooltogether"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-pooltogether",
+        intl
+      ),
       link: "https://pooltogether.com/",
       image: getImage(data.pooltogether),
-      alt: t("page-dapps-pooltogether-logo-alt"),
+      alt: translateMessageId("page-dapps-pooltogether-logo-alt", intl),
     },
     {
       title: "Index Coop",
-      description: t("page-dapps-dapp-description-index-coop"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-index-coop",
+        intl
+      ),
       link: "https://www.indexcoop.com/",
       image: getImage(data.index),
-      alt: t("page-dapps-index-coop-logo-alt"),
+      alt: translateMessageId("page-dapps-index-coop-logo-alt", intl),
     },
     {
       title: "Balancer",
-      description: t("page-dapps-dapp-description-balancer"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-balancer",
+        intl
+      ),
       link: "https://balancer.fi/",
       image: getImage(data.balancer),
-      alt: t("page-dapps-balancer-logo-alt"),
+      alt: translateMessageId("page-dapps-balancer-logo-alt", intl),
     },
   ]
 
   const insurance = [
     {
       title: "Nexus Mutual",
-      description: t("page-dapps-dapp-description-nexus-mutual"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-nexus-mutual",
+        intl
+      ),
       link: "https://nexusmutual.io/",
       image: getImage(data.nexus),
-      alt: t("page-dapps-nexus-mutual-logo-alt"),
+      alt: translateMessageId("page-dapps-nexus-mutual-logo-alt", intl),
     },
     {
       title: "Etherisc",
-      description: t("page-dapps-dapp-description-etherisc"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-etherisc",
+        intl
+      ),
       link: "https://etherisc.com/",
       image: getImage(data.etherisc),
-      alt: t("page-dapps-etherisc-logo-alt"),
+      alt: translateMessageId("page-dapps-etherisc-logo-alt", intl),
     },
   ]
 
   const portfolios = [
     {
       title: "Zapper",
-      description: t("page-dapps-dapp-description-zapper"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-zapper",
+        intl
+      ),
       link: "https://zapper.fi/",
       image: getImage(data.zapper),
-      alt: t("page-dapps-zapper-logo-alt"),
+      alt: translateMessageId("page-dapps-zapper-logo-alt", intl),
     },
     {
       title: "Zerion",
-      description: t("page-dapps-dapp-description-zerion"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-zerion",
+        intl
+      ),
       link: "https://app.zerion.io/",
       image: getImage(data.zerion),
-      alt: t("page-dapps-zerion-logo-alt"),
+      alt: translateMessageId("page-dapps-zerion-logo-alt", intl),
     },
     {
       title: "Rotki",
-      description: t("page-dapps-dapp-description-rotki"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-rotki",
+        intl
+      ),
       link: "https://rotki.com/",
       image: getImage(data.rotki),
-      alt: t("page-dapps-rotki-logo-alt"),
+      alt: translateMessageId("page-dapps-rotki-logo-alt", intl),
     },
     {
       title: "Krystal",
-      description: t("page-dapps-dapp-description-krystal"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-krystal",
+        intl
+      ),
       link: "https://defi.krystal.app/",
       image: getImage(data.krystal),
-      alt: t("page-dapps-krystal-logo-alt"),
+      alt: translateMessageId("page-dapps-krystal-logo-alt", intl),
     },
   ]
 
   const computing = [
     {
       title: "Golem",
-      description: t("page-dapps-dapp-description-golem"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-golem",
+        intl
+      ),
       link: "https://golem.network/",
       image: getImage(data.golem),
-      alt: t("page-dapps-golem-logo-alt"),
+      alt: translateMessageId("page-dapps-golem-logo-alt", intl),
     },
     {
       title: "radicle.xyz",
-      description: t("page-dapps-dapp-description-radicle"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-radicle",
+        intl
+      ),
       link: "https://radicle.xyz/",
       image: getImage(data.radicle),
-      alt: t("page-dapps-radicle-logo-alt"),
+      alt: translateMessageId("page-dapps-radicle-logo-alt", intl),
     },
   ]
 
   const marketplaces = [
     {
       title: "Gitcoin",
-      description: t("page-dapps-dapp-description-gitcoin"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-gitcoin",
+        intl
+      ),
       link: "https://gitcoin.co/",
       image: getImage(data.gitcoin),
-      alt: t("page-dapps-gitcoin-logo-alt"),
+      alt: translateMessageId("page-dapps-gitcoin-logo-alt", intl),
     },
   ]
 
   const utilities = [
     {
       title: "Ethereum Name Service (ENS)",
-      description: t("page-dapps-dapp-description-ens"),
+      description: translateMessageId("page-dapps-dapp-description-ens", intl),
       link: "http://ens.domains/",
       image: getImage(data.ens),
-      alt: t("page-dapps-ens-logo-alt"),
+      alt: translateMessageId("page-dapps-ens-logo-alt", intl),
     },
   ]
 
   const browsers = [
     {
       title: "Brave",
-      description: t("page-dapps-dapp-description-brave"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-brave",
+        intl
+      ),
       link: "https://brave.com/",
       image: getImage(data.brave),
-      alt: t("page-dapps-brave-logo-alt"),
+      alt: translateMessageId("page-dapps-brave-logo-alt", intl),
     },
     {
       title: "Opera",
-      description: t("page-dapps-dapp-description-opera"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-opera",
+        intl
+      ),
       link: "https://www.opera.com/crypto",
       image: getImage(data.opera),
-      alt: t("page-dapps-opera-logo-alt"),
+      alt: translateMessageId("page-dapps-opera-logo-alt", intl),
     },
   ]
 
   const arts = [
     {
       title: "Foundation",
-      description: t("page-dapps-dapp-description-foundation"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-foundation",
+        intl
+      ),
       link: "https://foundation.app/",
       image: getImage(data.foundation),
-      alt: t("page-dapps-foundation-logo-alt"),
+      alt: translateMessageId("page-dapps-foundation-logo-alt", intl),
     },
     {
       title: "SuperRare",
-      description: t("page-dapps-dapp-description-superrare"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-superrare",
+        intl
+      ),
       link: "https://www.superrare.co",
       image: getImage(data.superrare),
-      alt: t("page-dapps-superrare-logo-alt"),
+      alt: translateMessageId("page-dapps-superrare-logo-alt", intl),
     },
     {
       title: "Nifty Gateway",
-      description: t("page-dapps-dapp-description-nifty-gateway"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-nifty-gateway",
+        intl
+      ),
       link: "https://niftygateway.com/",
       image: getImage(data.nifty),
-      alt: t("page-dapps-nifty-gateway-logo-alt"),
+      alt: translateMessageId("page-dapps-nifty-gateway-logo-alt", intl),
     },
     {
       title: "Async Art",
-      description: t("page-dapps-dapp-description-async-art"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-async-art",
+        intl
+      ),
       link: "https://async.art/",
       image: getImage(data.asyncart),
-      alt: t("page-dapps-async-logo-alt"),
+      alt: translateMessageId("page-dapps-async-logo-alt", intl),
     },
   ]
 
   const music = [
     {
       title: "Audius",
-      description: t("page-dapps-dapp-description-audius"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-audius",
+        intl
+      ),
       link: "https://audius.co/",
       image: getImage(data.audius),
-      alt: t("page-dapps-audius-logo-alt"),
+      alt: translateMessageId("page-dapps-audius-logo-alt", intl),
     },
   ]
 
   const collectibles = [
     {
       title: "OpenSea",
-      description: t("page-dapps-dapp-description-opensea"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-opensea",
+        intl
+      ),
       link: "https://opensea.io/",
       image: getImage(data.opensea),
-      alt: t("page-dapps-opensea-logo-alt"),
+      alt: translateMessageId("page-dapps-opensea-logo-alt", intl),
     },
     {
       title: "marble.cards",
-      description: t("page-dapps-dapp-description-marble-cards"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-marble-cards",
+        intl
+      ),
       link: "https://marble.cards/",
       image: getImage(data.marble),
-      alt: t("page-dapps-marble-cards-logo-alt"),
+      alt: translateMessageId("page-dapps-marble-cards-logo-alt", intl),
     },
     {
       title: "Rarible",
-      description: t("page-dapps-dapp-description-rarible"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-rarible",
+        intl
+      ),
       link: "https://rarible.com/",
       image: getImage(data.rarible),
-      alt: t("page-dapps-rarible-logo-alt"),
+      alt: translateMessageId("page-dapps-rarible-logo-alt", intl),
     },
     {
       title: "CryptoPunks",
-      description: t("page-dapps-dapp-description-cryptopunks"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-cryptopunks",
+        intl
+      ),
       link: "https://www.larvalabs.com/cryptopunks",
       image: getImage(data.cryptopunks),
-      alt: t("page-dapps-cryptopunks-logo-alt"),
+      alt: translateMessageId("page-dapps-cryptopunks-logo-alt", intl),
     },
     {
       title: "POAP - Proof of Attendance Protocol",
-      description: t("page-dapps-dapp-description-poap"),
+      description: translateMessageId("page-dapps-dapp-description-poap", intl),
       link: "https://poap.xyz",
       image: getImage(data.poap),
-      alt: t("page-dapps-poap-logo-alt"),
+      alt: translateMessageId("page-dapps-poap-logo-alt", intl),
     },
   ]
 
   const worlds = [
     {
       title: "Cryptovoxels",
-      description: t("page-dapps-dapp-description-cryptovoxels"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-cryptovoxels",
+        intl
+      ),
       link: "https://www.cryptovoxels.com/",
       image: getImage(data.cryptovoxels),
-      alt: t("page-dapps-cryptovoxels-logo-alt"),
+      alt: translateMessageId("page-dapps-cryptovoxels-logo-alt", intl),
     },
     {
       title: "Decentraland",
-      description: t("page-dapps-dapp-description-decentraland"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-decentraland",
+        intl
+      ),
       link: "https://decentraland.org/",
       image: getImage(data.decentraland),
-      alt: t("page-dapps-decentraland-logo-alt"),
+      alt: translateMessageId("page-dapps-decentraland-logo-alt", intl),
     },
   ]
 
   const competitive = [
     {
       title: "Axie Infinity",
-      description: t("page-dapps-dapp-description-axie-infinity"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-axie-infinity",
+        intl
+      ),
       link: "https://axieinfinity.com/",
       image: getImage(data.axie),
-      alt: t("page-dapps-axie-infinity-logo-alt"),
+      alt: translateMessageId("page-dapps-axie-infinity-logo-alt", intl),
     },
     {
       title: "Gods Unchained",
-      description: t("page-dapps-dapp-description-gods-unchained"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-gods-unchained",
+        intl
+      ),
       link: "https://godsunchained.com/",
       image: getImage(data.gods),
-      alt: t("page-dapps-gods-unchained-logo-alt"),
+      alt: translateMessageId("page-dapps-gods-unchained-logo-alt", intl),
     },
     {
       title: "Dark Forest",
-      description: t("page-dapps-dapp-description-dark-forest"),
+      description: translateMessageId(
+        "page-dapps-dapp-description-dark-forest",
+        intl
+      ),
       link: "https://zkga.me/",
       image: getImage(data.darkforest),
-      alt: t("page-dapps-dark-forest-logo-alt"),
+      alt: translateMessageId("page-dapps-dark-forest-logo-alt", intl),
     },
   ]
 
   const editorChoices = [
     {
       name: "Uniswap",
-      description: t("page-dapps-editors-choice-uniswap"),
+      description: translateMessageId(
+        "page-dapps-editors-choice-uniswap",
+        intl
+      ),
       url: "https://uniswap.exchange/swap",
       image: getImage(data.uniswapec),
-      alt: t("page-dapps-uniswap-logo-alt"),
+      alt: translateMessageId("page-dapps-uniswap-logo-alt", intl),
       background: "#212f46",
       type: CategoryType.FINANCE,
       pillColor: "tagMint",
     },
     {
       name: "Dark Forest",
-      description: t("page-dapps-editors-choice-dark-forest"),
+      description: translateMessageId(
+        "page-dapps-editors-choice-dark-forest",
+        intl
+      ),
       url: "https://zkga.me",
       image: getImage(data.darkforestec),
-      alt: t("page-dapps-dark-forest-logo-alt"),
+      alt: translateMessageId("page-dapps-dark-forest-logo-alt", intl),
       background: "#080808",
       type: CategoryType.GAMING,
       pillColor: "tagOrange",
     },
     {
       name: "Foundation",
-      description: t("page-dapps-editors-choice-foundation"),
+      description: translateMessageId(
+        "page-dapps-editors-choice-foundation",
+        intl
+      ),
       url: "https://foundation.app",
       image: getImage(data.foundationec),
-      alt: t("page-dapps-foundation-logo-alt"),
+      alt: translateMessageId("page-dapps-foundation-logo-alt", intl),
       background: "#ffffff",
       type: CategoryType.COLLECTIBLES,
       pillColor: "tagBlue",
     },
     {
       name: "PoolTogether",
-      description: t("page-dapps-editors-choice-pooltogether"),
+      description: translateMessageId(
+        "page-dapps-editors-choice-pooltogether",
+        intl
+      ),
       url: "https://pooltogether.com",
       image: getImage(data.pooltogetherec),
-      alt: t("page-dapps-pooltogether-logo-alt"),
+      alt: translateMessageId("page-dapps-pooltogether-logo-alt", intl),
       background: "#7e4cf2",
       type: CategoryType.FINANCE,
       pillColor: "tagMint",
@@ -936,18 +1164,18 @@ const DappsPage = ({
   ]
 
   const heroContent = {
-    title: t("decentralized-applications-dapps"),
-    header: t("page-dapps-hero-header"),
-    subtitle: t("page-dapps-hero-subtitle"),
+    title: translateMessageId("decentralized-applications-dapps", intl),
+    header: translateMessageId("page-dapps-hero-header", intl),
+    subtitle: translateMessageId("page-dapps-hero-subtitle", intl),
     image: getImage(data.doge)!,
-    alt: t("page-dapps-doge-img-alt"),
+    alt: translateMessageId("page-dapps-doge-img-alt", intl),
     buttons: [
       {
-        content: t("page-dapps-explore-dapps-title"),
+        content: translateMessageId("page-dapps-explore-dapps-title", intl),
         to: "#explore",
       },
       {
-        content: t("page-dapps-what-are-dapps"),
+        content: translateMessageId("page-dapps-what-are-dapps", intl),
         to: "#what-are-dapps",
         variant: "outline",
       },
@@ -956,8 +1184,8 @@ const DappsPage = ({
   return (
     <Page>
       <PageMetadata
-        title={t("decentralized-applications-dapps")}
-        description={t("page-dapps-desc")}
+        title={translateMessageId("decentralized-applications-dapps", intl)}
+        description={translateMessageId("page-dapps-desc", intl)}
         image={getSrc(data.ogImage)}
       />
       <PageHero content={heroContent} />
@@ -1087,13 +1315,16 @@ const DappsPage = ({
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList
-                  category={t("page-dapps-category-lending")}
+                  category={translateMessageId(
+                    "page-dapps-category-lending",
+                    intl
+                  )}
                   content={lending}
                 />
               </LeftColumn>
               <RightColumn>
                 <ProductList
-                  category={t("page-dapps-category-dex")}
+                  category={translateMessageId("page-dapps-category-dex", intl)}
                   content={dex}
                 />
               </RightColumn>
@@ -1101,13 +1332,19 @@ const DappsPage = ({
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList
-                  category={t("page-dapps-category-trading")}
+                  category={translateMessageId(
+                    "page-dapps-category-trading",
+                    intl
+                  )}
                   content={trading}
                 />
               </LeftColumn>
               <RightColumn>
                 <ProductList
-                  category={t("page-dapps-category-investments")}
+                  category={translateMessageId(
+                    "page-dapps-category-investments",
+                    intl
+                  )}
                   content={investments}
                 />
               </RightColumn>
@@ -1115,13 +1352,19 @@ const DappsPage = ({
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList
-                  category={t("page-dapps-category-payments")}
+                  category={translateMessageId(
+                    "page-dapps-category-payments",
+                    intl
+                  )}
                   content={payments}
                 />
               </LeftColumn>
               <RightColumn>
                 <ProductList
-                  category={t("page-dapps-category-lottery")}
+                  category={translateMessageId(
+                    "page-dapps-category-lottery",
+                    intl
+                  )}
                   content={lottery}
                 />
               </RightColumn>
@@ -1129,13 +1372,19 @@ const DappsPage = ({
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList
-                  category={t("page-dapps-category-insurance")}
+                  category={translateMessageId(
+                    "page-dapps-category-insurance",
+                    intl
+                  )}
                   content={insurance}
                 />
               </LeftColumn>
               <RightColumn>
                 <ProductList
-                  category={t("page-dapps-category-portfolios")}
+                  category={translateMessageId(
+                    "page-dapps-category-portfolios",
+                    intl
+                  )}
                   content={portfolios}
                 />
               </RightColumn>
@@ -1145,7 +1394,10 @@ const DappsPage = ({
               descriptionKey={"page-dapps-wallet-callout-description"}
               image={getImage(data.wallet)!}
               maxImageWidth={300}
-              alt={t("page-dapps-wallet-callout-image-alt")}
+              alt={translateMessageId(
+                "page-dapps-wallet-callout-image-alt",
+                intl
+              )}
             >
               <div>
                 <ButtonLink to="/wallets/find-wallet/">
@@ -1177,13 +1429,19 @@ const DappsPage = ({
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList
-                  category={t("page-dapps-category-worlds")}
+                  category={translateMessageId(
+                    "page-dapps-category-worlds",
+                    intl
+                  )}
                   content={worlds}
                 />
               </LeftColumn>
               <RightColumn>
                 <ProductList
-                  category={t("page-dapps-category-competitive")}
+                  category={translateMessageId(
+                    "page-dapps-category-competitive",
+                    intl
+                  )}
                   content={competitive}
                 />
               </RightColumn>
@@ -1212,13 +1470,19 @@ const DappsPage = ({
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList
-                  category={t("page-dapps-category-utilities")}
+                  category={translateMessageId(
+                    "page-dapps-category-utilities",
+                    intl
+                  )}
                   content={utilities}
                 />
               </LeftColumn>
               <RightColumn>
                 <ProductList
-                  category={t("page-dapps-category-marketplaces")}
+                  category={translateMessageId(
+                    "page-dapps-category-marketplaces",
+                    intl
+                  )}
                   content={marketplaces}
                 />
               </RightColumn>
@@ -1226,13 +1490,19 @@ const DappsPage = ({
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList
-                  category={t("page-dapps-category-computing")}
+                  category={translateMessageId(
+                    "page-dapps-category-computing",
+                    intl
+                  )}
                   content={computing}
                 />
               </LeftColumn>
               <RightColumn>
                 <ProductList
-                  category={t("page-dapps-category-browsers")}
+                  category={translateMessageId(
+                    "page-dapps-category-browsers",
+                    intl
+                  )}
                   content={browsers}
                 />
               </RightColumn>
@@ -1261,18 +1531,27 @@ const DappsPage = ({
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList
-                  category={t("page-dapps-category-arts")}
+                  category={translateMessageId(
+                    "page-dapps-category-arts",
+                    intl
+                  )}
                   content={arts}
                 />
 
                 <ProductList
-                  category={t("page-dapps-category-music")}
+                  category={translateMessageId(
+                    "page-dapps-category-music",
+                    intl
+                  )}
                   content={music}
                 />
               </LeftColumn>
               <RightColumn>
                 <ProductList
-                  category={t("page-dapps-category-collectibles")}
+                  category={translateMessageId(
+                    "page-dapps-category-collectibles",
+                    intl
+                  )}
                   content={collectibles}
                 />
               </RightColumn>
@@ -1368,7 +1647,7 @@ const DappsPage = ({
           <StyledGhostCard>
             <MagiciansImage
               image={getImage(data.magicians)!}
-              alt={t("page-dapps-magician-img-alt")}
+              alt={translateMessageId("page-dapps-magician-img-alt", intl)}
             />
           </StyledGhostCard>
         </ImageContainer>
@@ -1410,7 +1689,10 @@ const DappsPage = ({
               titleKey="page-dapps-learn-callout-title"
               descriptionKey="page-dapps-learn-callout-description"
               image={getImage(data.developers)}
-              alt={t("page-dapps-learn-callout-image-alt")}
+              alt={translateMessageId(
+                "page-dapps-learn-callout-image-alt",
+                intl
+              )}
             >
               <div>
                 <ButtonLink to="/developers/">
@@ -1456,16 +1738,7 @@ export const editorImage = graphql`
 `
 
 export const query = graphql`
-  query DappsPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
+  query DappsPage {
     doge: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
         gatsbyImageData(

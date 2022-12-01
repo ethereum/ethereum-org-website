@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled from "@emotion/styled"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 
 import { StyledSelect as Select } from "../SharedStyledComponents"
 import ButtonLink from "../ButtonLink"
@@ -8,6 +8,7 @@ import Emoji from "../OldEmoji"
 import Translation from "../Translation"
 
 import { trackCustomEvent } from "../../utils/matomo"
+import { translateMessageId } from "../../utils/translations"
 
 const Container = styled.div`
   display: flex;
@@ -47,7 +48,7 @@ const ButtonContainer = styled.div`
 export interface IProps {}
 
 const StakingLaunchpadWidget: React.FC<IProps> = () => {
-  const { t } = useTranslation()
+  const intl = useIntl()
   const [selection, setSelection] = useState("testnet")
 
   const handleChange = (e) => {
@@ -100,8 +101,14 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
         <ButtonContainer style={{ marginBottom: "1rem" }}>
           <ButtonLink to={data[selection].url}>
             {selection === "mainnet"
-              ? t("page-staking-launchpad-widget-mainnet-start")
-              : t("page-staking-launchpad-widget-testnet-start")}
+              ? translateMessageId(
+                  "page-staking-launchpad-widget-mainnet-start",
+                  intl
+                )
+              : translateMessageId(
+                  "page-staking-launchpad-widget-testnet-start",
+                  intl
+                )}
           </ButtonLink>
         </ButtonContainer>
         <p>

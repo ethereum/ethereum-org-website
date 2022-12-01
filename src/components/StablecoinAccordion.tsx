@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 import styled from "@emotion/styled"
 // TODO add motion animation
 // import { motion } from "framer-motion"
@@ -20,8 +20,8 @@ import {
   RightColumn,
 } from "./SharedStyledComponents"
 
+import { translateMessageId } from "../utils/translations"
 import { isMobile } from "../utils/isMobile"
-import { Lang } from "../utils/languages"
 
 const Card = styled.div`
   border-radius: 2px;
@@ -219,8 +219,7 @@ export interface IProps {}
 
 const StablecoinAccordion: React.FC<IProps> = () => {
   const [openSection, setOpenSection] = useState<string>("") // default to all closed
-  const { language } = useI18next()
-  const { t } = useTranslation()
+  const intl = useIntl()
   const data = useStaticQuery(graphql`
     {
       uniswap: file(relativePath: { eq: "dapps/uni.png" }) {
@@ -391,25 +390,25 @@ const StablecoinAccordion: React.FC<IProps> = () => {
       title: "Uniswap",
       image: getImage(data.uniswap)!,
       link: "https://uniswap.org",
-      alt: t("uniswap-logo")!,
+      alt: translateMessageId("uniswap-logo", intl),
     },
     {
       title: "Loopring",
       image: getImage(data.loopring)!,
       link: "https://loopring.org",
-      alt: t("loopring-logo")!,
+      alt: translateMessageId("loopring-logo", intl),
     },
     {
       title: "1inch",
       image: getImage(data.oneinch)!,
       link: "https://app.1inch.io",
-      alt: t("1inch-logo")!,
+      alt: translateMessageId("1inch-logo", intl),
     },
     {
       title: "Matcha",
       image: getImage(data.matcha)!,
       link: "https://matcha.xyz",
-      alt: t("matcha-logo")!,
+      alt: translateMessageId("matcha-logo", intl),
     },
   ]
 
@@ -418,43 +417,61 @@ const StablecoinAccordion: React.FC<IProps> = () => {
       title: "Compound",
       image: getImage(data.compound)!,
       link: "https://compound.finance",
-      alt: t("compound-logo")!,
+      alt: translateMessageId("compound-logo", intl),
     },
     {
       title: "Aave",
       image: getImage(data.aave)!,
       link: "https://aave.com",
-      alt: t("aave-logo")!,
+      alt: translateMessageId("aave-logo", intl),
     },
     {
       title: "Oasis",
       image: getImage(data.oasis)!,
       link: "https://oasis.app",
-      alt: t("oasis-logo")!,
+      alt: translateMessageId("oasis-logo", intl),
     },
   ]
 
   const earn: Array<CardListItem> = [
     {
-      title: t("page-stablecoins-accordion-earn-project-bounties")!,
+      title: translateMessageId(
+        "page-stablecoins-accordion-earn-project-bounties",
+        intl
+      ),
       image: getImage(data.gitcoin)!,
       link: "https://gitcoin.co/explorer",
-      description: t("page-stablecoins-accordion-earn-project-1-description")!,
-      alt: t("gitcoin-logo")!,
+      description: translateMessageId(
+        "page-stablecoins-accordion-earn-project-1-description",
+        intl
+      ),
+      alt: translateMessageId("gitcoin-logo", intl),
     },
     {
-      title: t("page-stablecoins-accordion-earn-project-community")!,
+      title: translateMessageId(
+        "page-stablecoins-accordion-earn-project-community",
+        intl
+      ),
       image: getImage(data.maker)!,
       link: "https://makerdao.world/en/resources/",
-      description: t("page-stablecoins-accordion-earn-project-2-description")!,
-      alt: t("makerdao-logo")!,
+      description: translateMessageId(
+        "page-stablecoins-accordion-earn-project-2-description",
+        intl
+      ),
+      alt: translateMessageId("makerdao-logo", intl),
     },
     {
-      title: t("page-stablecoins-accordion-earn-project-bug-bounties")!,
+      title: translateMessageId(
+        "page-stablecoins-accordion-earn-project-bug-bounties",
+        intl
+      ),
       image: getImage(data.eth)!,
       link: "/bug-bounty/",
-      description: t("page-stablecoins-accordion-earn-project-3-description")!,
-      alt: t("ethereum-logo")!,
+      description: translateMessageId(
+        "page-stablecoins-accordion-earn-project-3-description",
+        intl
+      ),
+      alt: translateMessageId("ethereum-logo", intl),
     },
   ]
 
@@ -463,37 +480,37 @@ const StablecoinAccordion: React.FC<IProps> = () => {
       title: "Coinbase",
       image: getImage(data.coinbase)!,
       link: "https://coinbase.com",
-      alt: t("coinbase-logo")!,
+      alt: translateMessageId("coinbase-logo", intl),
     },
     {
       title: "Gemini",
       image: getImage(data.gemini)!,
       link: "https://gemini.com",
-      alt: t("gemini-logo")!,
+      alt: translateMessageId("gemini-logo", intl),
     },
     {
       title: "Kraken",
       image: getImage(data.kraken)!,
       link: "https://kraken.com",
-      alt: t("kraken-logo")!,
+      alt: translateMessageId("kraken-logo", intl),
     },
     {
       title: "Coinmama",
       image: getImage(data.coinmama)!,
       link: "https://coinmama.com",
-      alt: t("coinmama-logo")!,
+      alt: translateMessageId("coinmama-logo", intl),
     },
     {
       title: "Bittrex",
       image: getImage(data.bittrex)!,
       link: "https://global.bittrex.com",
-      alt: t("bittrex-logo")!,
+      alt: translateMessageId("bittrex-logo", intl),
     },
     {
       title: "Binance",
       image: getImage(data.binance)!,
       link: "https://binance.com",
-      alt: t("binance-logo")!,
+      alt: translateMessageId("binance-logo", intl),
     },
   ]
 
@@ -506,7 +523,7 @@ const StablecoinAccordion: React.FC<IProps> = () => {
       setOpenSection(selectedSection)
     }
     if (isMobile()) {
-      navigate(`/stablecoins/#${selectedSection}`, language as Lang)
+      navigate(`/stablecoins/#${selectedSection}`, intl)
     }
   }
 

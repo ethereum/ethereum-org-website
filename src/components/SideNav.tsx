@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import styled from "@emotion/styled"
 import { motion } from "framer-motion"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 
 import Icon from "./Icon"
 import Link from "./Link"
@@ -9,6 +9,7 @@ import Translation from "./Translation"
 import { dropdownIconContainerVariant } from "./SharedStyledComponents"
 
 import docLinks from "../data/developer-docs-links.yaml"
+import { translateMessageId } from "../utils/translations"
 import { DeveloperDocsLink } from "../types"
 
 const IconContainer = styled(motion.div)`
@@ -153,10 +154,10 @@ export interface IProps {
 // and they only collapse when clicked on.
 // e.g. solution: https://github.com/hasura/gatsby-gitbook-starter/blob/5c165af40e48fc55eb06b45b95c84eb64b17ed32/src/components/sidebar/tree.js
 const SideNav: React.FC<IProps> = ({ path }) => {
-  const { t } = useTranslation()
+  const intl = useIntl()
 
   return (
-    <Nav aria-label={t("nav-developers-docs")}>
+    <Nav aria-label={translateMessageId("nav-developers-docs", intl)}>
       {docLinks.map((item, idx) => (
         <NavLink item={item} path={path} key={idx} />
       ))}

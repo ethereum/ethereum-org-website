@@ -2,11 +2,12 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 import { useLocation } from "@reach/router"
 import { getSrc } from "gatsby-plugin-image"
 
 import { isLang } from "../utils/languages"
+import { translateMessageId } from "../utils/translations"
 
 type NameMeta = {
   name: string
@@ -99,12 +100,11 @@ const PageMetadata: React.FC<IProps> = ({
 
   const location = useLocation()
 
-  const { t } = useTranslation()
-  const { language } = useI18next()
+  const intl = useIntl()
 
-  const desc = description || t("site-description")
+  const desc = description || translateMessageId("site-description", intl)
 
-  const siteTitle = t("site-title")
+  const siteTitle = translateMessageId("site-title", intl)
 
   /* Set canonical URL w/ language path to avoid duplicate content */
   /* e.g. set ethereum.org/about/ to ethereum.org/en/about/ */
@@ -135,7 +135,7 @@ const PageMetadata: React.FC<IProps> = ({
 
   return (
     <Helmet
-      htmlAttributes={{ lang: language }}
+      htmlAttributes={{ lang: intl.locale }}
       title={title}
       titleTemplate={`%s | ${siteTitle}`}
       link={[{ rel: "canonical", key: canonical, href: canonical }]}

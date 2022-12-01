@@ -1525,6 +1525,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/mossow"><img src="https://avatars.githubusercontent.com/u/9072132?v=4?s=100" width="100px;" alt="mossow"/><br /><sub><b>mossow</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=mossow" title="Documentation">📖</a></td>
       <td align="center"><a href="https://github.com/OpenWJY"><img src="https://avatars.githubusercontent.com/u/29328336?v=4?s=100" width="100px;" alt="yujingwei"/><br /><sub><b>yujingwei</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=OpenWJY" title="Documentation">📖</a></td>
     </tr>
+    <tr>
+      <td align="center"><a href="http://olshansky.info"><img src="https://avatars.githubusercontent.com/u/1892194?v=4?s=100" width="100px;" alt="Daniel Olshansky"/><br /><sub><b>Daniel Olshansky</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Olshansk" title="Documentation">📖</a> <a href="#ideas-Olshansk" title="Ideas, Planning, & Feedback">🤔</a></td>
+    </tr>
   </tbody>
 </table>
 

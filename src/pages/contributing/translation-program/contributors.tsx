@@ -1,7 +1,7 @@
 // Libraries
 import React from "react"
 import styled from "@emotion/styled"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
 import type { Context } from "../../../types"
 
@@ -17,6 +17,7 @@ import {
 } from "../../../components/SharedStyledComponents"
 
 // Utils
+import { translateMessageId } from "../../../utils/translations"
 import FeedbackCard from "../../../components/FeedbackCard"
 
 // Styles
@@ -45,7 +46,7 @@ const Contributors = ({
   data,
   location,
 }: PageProps<Queries.ContributorsPageQuery, Context>) => {
-  const { t } = useTranslation()
+  const intl = useIntl()
   // TODO: Remove specific user checks once Acolad has updated their usernames
   const translatorData =
     data.allTimeData?.data?.flatMap(
@@ -84,11 +85,13 @@ const Contributors = ({
   return (
     <Page>
       <PageMetadata
-        title={t(
-          "page-contributing-translation-program-contributors-meta-title"
+        title={translateMessageId(
+          "page-contributing-translation-program-contributors-meta-title",
+          intl
         )}
-        description={t(
-          "page-contributing-translation-program-contributors-meta-description"
+        description={translateMessageId(
+          "page-contributing-translation-program-contributors-meta-description",
+          intl
         )}
       />
 
@@ -150,16 +153,7 @@ const Contributors = ({
 export default Contributors
 
 export const query = graphql`
-  query ContributorsPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
+  query ContributorsPage {
     allTimeData: alltimeJson {
       data {
         user {

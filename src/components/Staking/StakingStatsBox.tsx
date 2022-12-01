@@ -1,7 +1,7 @@
 // Import libraries
 import React, { useState, useEffect } from "react"
 import styled from "@emotion/styled"
-import { useI18next } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 import { Spinner } from "@chakra-ui/react"
 // Import components
 import Translation from "../Translation"
@@ -96,7 +96,7 @@ export interface IProps {}
 
 // StatsBox component
 const StakingStatsBox: React.FC<IProps> = () => {
-  const { language } = useI18next()
+  const intl = useIntl()
   /**
    * State variables:
    * - ZERO is default string, "0", representing loading state
@@ -107,7 +107,9 @@ const StakingStatsBox: React.FC<IProps> = () => {
   const [currentApr, setCurrentApr] = useState<string | null>(ZERO)
 
   useEffect(() => {
-    const localeForStatsBoxNumbers = getLocaleForNumberFormat(language as Lang)
+    const localeForStatsBoxNumbers = getLocaleForNumberFormat(
+      intl.locale as Lang
+    )
 
     // Helper functions
     const formatInteger = (amount: number): string =>
@@ -143,7 +145,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
         setTotalValidators(null)
       }
     })()
-  }, [language])
+  }, [intl.locale])
 
   return (
     <Container>
