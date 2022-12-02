@@ -135,7 +135,7 @@ const UpcomingEventsList: React.FC<IProps> = () => {
         display="flex"
         justifyContent="center"
         maxWidth="620px"
-        marginTop= "5"
+        marginTop="5"
         >
         {isVisible && (
           <Button onClick={loadMoreEvents}>
