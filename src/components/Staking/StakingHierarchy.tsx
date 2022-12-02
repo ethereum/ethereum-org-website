@@ -251,7 +251,7 @@ const StakingHierarchy: React.FC<IProps> = () => {
     <VStack
       bgGradient="linear(rgba(237, 194, 84, 0.1) 13.39%, rgba(75, 231, 156, 0.1) 44.21%, rgba(231, 202, 200, 0.1) 82.88%)"
       borderRadius={{ base: 0, md: "lg" }}
-      gap={{ base: 16, md: 0 }}
+      spacing={{ base: 16, md: 0 }}
       p={8}
       borderLeft={{ base: "4px", md: "none" }}
       borderRight={0}
