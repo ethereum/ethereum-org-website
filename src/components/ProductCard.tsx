@@ -197,7 +197,7 @@ const ProductCard: React.FC<IProps> = ({
             </SubjectPill>
           ))}
         {hasRepoData &&
-          data.repository.language.nodes.map(
+          data.repository.languages.nodes.map(
             ({ name }: { name: string }, idx: number) => (
               <SubjectPill key={idx} subject={name}>
                 {name.toUpperCase()}
