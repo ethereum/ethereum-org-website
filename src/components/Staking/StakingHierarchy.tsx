@@ -121,7 +121,7 @@ const SectionGrid: React.FC<{ number: number; children: ReactNode }> = ({
 }
 
 const StyledEtherSvg: React.FC<{ size: string }> = ({ size }) => (
-  <Center gridArea="ether" zIndex={2} maxW={20} mx="auto">
+  <Center gridArea="ether" zIndex={2} maxW={20} width="full" mx="auto">
     <Icon
       as={EtherSvg}
       boxSize={size}
