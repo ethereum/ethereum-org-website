@@ -231,6 +231,15 @@ const LearningToolsPage = ({
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
     },
+      {
+      name: "Alchemy University",
+      description: "page-learning-tools-alchemy-university-description",
+      url: "https://university.alchemycom/",
+      image: getImage(data.alchemyuniversity)!,
+      alt: "page-learning-tools-alchemy-university-logo-alt",
+      background: "#ffffff",
+      subjects: ["Solidity", "web3"],
+    },
   ]
 
   return (
