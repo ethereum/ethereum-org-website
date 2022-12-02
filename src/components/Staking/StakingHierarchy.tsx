@@ -234,7 +234,18 @@ const Glyph = ({
 )
 
 const Content = ({ children }: ChildOnlyType) => (
-  <Box gridArea="content" mt={{ md: 4 }} mb={{ md: 12 }}>
+  <Box
+    gridArea="content"
+    mt={{ md: 4 }}
+    mb={{ md: 12 }}
+    sx={{
+      // For use in markdown files
+      ".gold": {
+        color: "stakingGold",
+        fontWeight: 600,
+      },
+    }}
+  >
     {children}
   </Box>
 )
