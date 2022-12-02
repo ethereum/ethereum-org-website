@@ -61,6 +61,7 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
         fontSize="sm"
         color="text300"
         justifyContent="flex-start"
+        alignItems="flex-start"
         spacing={4}
       >
         {author && (
