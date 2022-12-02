@@ -1527,6 +1527,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center"><a href="http://olshansky.info"><img src="https://avatars.githubusercontent.com/u/1892194?v=4?s=100" width="100px;" alt="Daniel Olshansky"/><br /><sub><b>Daniel Olshansky</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Olshansk" title="Documentation">📖</a> <a href="#ideas-Olshansk" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center"><a href="https://github.com/aguzmant103"><img src="https://avatars.githubusercontent.com/u/67167307?v=4?s=100" width="100px;" alt="aguzmant103"/><br /><sub><b>aguzmant103</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=aguzmant103" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
