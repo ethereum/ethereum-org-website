@@ -1,13 +1,10 @@
-import type { GatsbyFunctionRequest, GatsbyFunctionResponse } from "gatsby"
+import type { GatsbyFunctionResponse } from "gatsby"
 
 import { lambda } from "../lambda/coinmetrics"
 
-async function handler(
-  __req: GatsbyFunctionRequest,
-  res: GatsbyFunctionResponse
-) {
+async function handler(res: GatsbyFunctionResponse) {
   const { statusCode, body } = await lambda()
-  res.status(statusCode).send(body)
+  res.status(statusCode).json(body)
 }
 
 export default handler
