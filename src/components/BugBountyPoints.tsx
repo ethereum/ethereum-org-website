@@ -2,16 +2,74 @@ import React, { useState, useEffect } from "react"
 import { useTheme } from "@emotion/react"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
+import styled from "@emotion/styled"
 import axios from "axios"
 
-import Emoji from "./Emoji"
+import Emoji from "./OldEmoji"
 import Translation from "./Translation"
+import Icon from "./Icon"
 import Link from "./Link"
 import Tooltip from "./Tooltip"
 
 import { getImage } from "../utils/image"
-import { Box, Flex, Heading, Icon, Text } from "@chakra-ui/react"
-import { MdInfoOutline } from "react-icons/md"
+
+const PointsExchange = styled.div`
+  flex: 1 1 560px;
+  padding: 1.5rem;
+  border: 1px solid ${(props) => props.theme.colors.border};
+  border-radius: 2px;
+  margin: 0 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin: 2rem 0;
+  }
+`
+
+const PointsExchangeLabel = styled.div`
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+`
+
+const PointsExchangeTitle = styled.h2`
+  font-family: ${(props) => props.theme.fonts.monospace};
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0rem;
+`
+
+const InfoIcon = styled(Icon)`
+  margin-left: 0.5rem;
+  fill: ${(props) => props.theme.colors.text200};
+`
+
+const TextNoMargin = styled.p`
+  margin-bottom: 0rem;
+`
+
+const Token = styled(GatsbyImage)`
+  margin-right: 0.5rem;
+`
+
+const TokenValue = styled.p`
+  font-size: 1.25rem;
+  margin: 0rem;
+  margin-right: 1rem;
+`
+
+const Row = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+`
+
+const ValueRow = styled(Row)`
+  margin-bottom: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`
 
 export const TokenLogo = graphql`
   fragment TokenLogo on File {
@@ -85,10 +143,10 @@ const BugBountyPoints: React.FC<IProps> = () => {
     : 0
 
   const tooltipContent = (
-    <Box>
+    <div>
       <Translation id="data-provided-by" />{" "}
       <Link to="https://www.coingecko.com/en/api">coingecko.com</Link>
-    </Box>
+    </div>
   )
 
   const data = useStaticQuery(graphql`
@@ -107,100 +165,57 @@ const BugBountyPoints: React.FC<IProps> = () => {
   const ethImage = isDarkTheme ? data.ethDark : data.ethLight
 
   return (
-    <Box
-      flex="1 1 560px"
-      mx={{ base: 0, lg: 8 }}
-      my={{ base: 8, lg: 0 }}
-      p={6}
-      border="1px solid"
-      borderColor="border"
-      borderRadius="2px"
-      textTransform="uppercase"
-    >
-      <Box mb={4} fontSize="sm">
+    <PointsExchange>
+      <PointsExchangeLabel>
         <Translation id="page-upgrades-bug-bounty-points-exchange" />{" "}
         <Tooltip content={tooltipContent}>
-          <Icon as={MdInfoOutline} fill="text200" boxSize="4" />
+          <InfoIcon name="info" size="14" />
         </Tooltip>
-      </Box>
-      <Heading
-        as="h2"
-        mt={0}
-        fontFamily="monospace"
-        fontSize="2xl"
-        fontWeight="bold"
-      >
+      </PointsExchangeLabel>
+      <PointsExchangeTitle>
         <Translation id="page-upgrades-bug-bounty-points-point" />
-      </Heading>
+      </PointsExchangeTitle>
       {state.hasError && (
-        <Flex
-          align={{ base: "start", sm: "center" }}
-          direction={{ base: "column", sm: "row" }}
-          wrap="wrap"
-          mb={8}
-        >
-          <Text fontSize="xl" m={0} mr={4}>
+        <ValueRow>
+          <TokenValue>
             <Translation id="page-upgrades-bug-bounty-points-error" />
-          </Text>
-        </Flex>
+          </TokenValue>
+        </ValueRow>
       )}
       {isLoading && !state.hasError && (
-        <Flex
-          align={{ base: "start", sm: "center" }}
-          direction={{ base: "column", sm: "row" }}
-          wrap="wrap"
-          mb={8}
-        >
-          <Text fontSize="xl" m={0} mr={4}>
+        <ValueRow>
+          <TokenValue>
             <Translation id="page-upgrades-bug-bounty-points-loading" />
-          </Text>
-        </Flex>
+          </TokenValue>
+        </ValueRow>
       )}
       {!isLoading && !state.hasError && (
-        <Flex
-          align={{ base: "start", sm: "center" }}
-          direction={{ base: "column", sm: "row" }}
-          wrap="wrap"
-          mb={8}
-          gap={2}
-        >
-          <Flex align="center" wrap="wrap">
-            <Emoji fontSize="xl" mr={2} text=":dollar:" />
-            <Text fontSize="xl" m={0} mr={4}>
+        <ValueRow>
+          <Row>
+            <Emoji mr={`0.5rem`} text=":dollar:" />
+            <TokenValue>
               <Translation id="page-upgrades-bug-bounty-points-usd" />
-            </Text>
-          </Flex>
-          <Flex align="center" wrap="wrap">
-            <GatsbyImage
-              image={getImage(data.dai)!}
-              style={{ marginRight: "0.5rem" }}
-              alt=""
-            />
-            <Text fontSize="xl" m={0} mr={4}>
-              {pointsInDAI} DAI
-            </Text>
-          </Flex>
-          <Flex align="center" wrap="wrap">
-            <GatsbyImage
-              image={getImage(ethImage)!}
-              style={{ marginRight: "0.5rem" }}
-              alt=""
-            />
-            <Text fontSize="xl" m={0} mr={4}>
-              {pointsInETH} ETH
-            </Text>
-          </Flex>
-        </Flex>
+            </TokenValue>
+          </Row>
+          <Row>
+            <Token image={getImage(data.dai)!} alt="" />
+            <TokenValue>{pointsInDAI} DAI</TokenValue>
+          </Row>
+          <Row>
+            <Token image={getImage(ethImage)!} alt="" />
+            <TokenValue>{pointsInETH} ETH</TokenValue>
+          </Row>
+        </ValueRow>
       )}
-      <Text>
+      <p>
         <Translation id="page-upgrades-bug-bounty-points-payout-desc" />
-      </Text>
-      <Text mb={0}>
-        <Text as="em">
+      </p>
+      <TextNoMargin>
+        <em>
           <Translation id="page-upgrades-bug-bounty-points-rights-desc" />
-        </Text>
-      </Text>
-    </Box>
+        </em>
+      </TextNoMargin>
+    </PointsExchange>
   )
 }
 
