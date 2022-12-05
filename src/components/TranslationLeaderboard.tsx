@@ -9,21 +9,6 @@ import { Option, OptionContainer, OptionText } from "./SharedStyledComponents"
 import Translation from "./Translation"
 import { Box, Flex, useColorModeValue } from "@chakra-ui/react"
 
-const TextContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-right: 2rem;
-  overflow-wrap: anywhere;
-`
-
-const WordsContainer = styled.div`
-  min-width: 20%;
-  display: flex;
-  flex-direction: row;
-  align-items: left;
-`
-
 const Avatar = styled.img`
   margin-right: 1rem;
   height: 40px;
@@ -144,13 +129,18 @@ const TranslationLeaderboard: React.FC<IProps> = ({
         >
           <Flex>
             <ItemNumber>#</ItemNumber>
-            <TextContainer>
+            <Flex
+              flexDirection="row"
+              alignItems="center"
+              mr={8}
+              overflowWrap="anywhere"
+            >
               <Translation id="page-contributing-translation-program-acknowledgements-translator" />
-            </TextContainer>
+            </Flex>
           </Flex>
-          <WordsContainer>
+          <Flex minW="20%" flexDirection="row" alignItems="left">
             <Translation id="page-contributing-translation-program-acknowledgements-total-words" />
-          </WordsContainer>
+          </Flex>
         </Flex>
         {/* // TODO: Remove specific user checks once Acolad has updated their usernames */}
         {leaderboardData[dateRangeType]
@@ -208,18 +198,23 @@ const TranslationLeaderboard: React.FC<IProps> = ({
                   ) : (
                     <ItemNumber>{idx + 1}</ItemNumber>
                   )}
-                  <TextContainer>
+                  <Flex
+                    flexDirection="row"
+                    alignItems="center"
+                    mr={8}
+                    overflowWrap="anywhere"
+                  >
                     <Avatar src={user.avatarUrl} />
                     <NameContainer>
                       {user.username}
                       <Language>{sortedLanguages[0].language.name}</Language>
                     </NameContainer>
-                  </TextContainer>
+                  </Flex>
                 </Flex>
-                <WordsContainer>
+                <Flex minW="20%" flexDirection="row" alignItems="left">
                   <StyledEmoji mr={"0.5rem"} size={1.5} text={":writing:"} />
                   {user.totalCosts}
-                </WordsContainer>
+                </Flex>
               </Flex>
             )
           })}
