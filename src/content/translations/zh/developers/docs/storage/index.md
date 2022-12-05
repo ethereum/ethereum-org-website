@@ -55,6 +55,7 @@ lang: zh
 - [Pinata](https://www.pinata.cloud/)_（星际文件系统固定服务）_
 - [web3.storage](https://web3.storage/)_（星际文件系统/菲乐币固定服务）_
 - [Infura](https://infura.io/product/ipfs)_（星际文件系统固定服务）_
+- [4EVERLAND](https://www.4everland.org/)_（星际文件系统固定服务）_
 
 ## 数据留存 {#data-retention}
 
@@ -165,6 +166,12 @@ lang: zh
 - [Filebase.com](https://filebase.com/)
 - [相关文档](https://docs.filebase.com/)
 - [GitHub](https://github.com/filebase)
+
+**4EVERLAND - _集存储、计算、网络核心能力为一体的 Web 3.0 云计算平台，兼容 S3并保障数据在星际文件系统，Arweave等去中心化存储网络同步存储 。_**
+
+- [4everland.org](https://www.4everland.org/)
+- [相关文档](https://docs.4everland.org/)
+- [GitHub](https://github.com/4everland)
 
 ## 延伸阅读 {#further-reading}
 
