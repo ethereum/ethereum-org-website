@@ -1529,6 +1529,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="http://olshansky.info"><img src="https://avatars.githubusercontent.com/u/1892194?v=4?s=100" width="100px;" alt="Daniel Olshansky"/><br /><sub><b>Daniel Olshansky</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Olshansk" title="Documentation">📖</a> <a href="#ideas-Olshansk" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center"><a href="https://github.com/aguzmant103"><img src="https://avatars.githubusercontent.com/u/67167307?v=4?s=100" width="100px;" alt="aguzmant103"/><br /><sub><b>aguzmant103</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=aguzmant103" title="Documentation">📖</a></td>
       <td align="center"><a href="https://soheil.vercel.app/"><img src="https://avatars.githubusercontent.com/u/22212139?v=4?s=100" width="100px;" alt="Soheil"/><br /><sub><b>Soheil</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=soheil555" title="Code">💻</a></td>
+      <td align="center"><a href="http://linktr.ee/metadiver"><img src="https://avatars.githubusercontent.com/u/75746881?v=4?s=100" width="100px;" alt="metadiver.eth"/><br /><sub><b>metadiver.eth</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=metadiver" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
