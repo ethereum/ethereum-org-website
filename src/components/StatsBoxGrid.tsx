@@ -5,7 +5,7 @@ import axios from "axios"
 import { kebabCase } from "lodash"
 import { AreaChart, ResponsiveContainer, Area, XAxis } from "recharts"
 
-import { Grid, Icon } from "@chakra-ui/react"
+import { Grid, Icon, VStack, Box as ChakraBox } from "@chakra-ui/react"
 import { MdInfoOutline } from "react-icons/md"
 
 import Translation from "./Translation"
@@ -157,22 +157,22 @@ const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
   ) : isLoading ? (
     <StatLoadingMessage />
   ) : (
-    // @TODO: Convert StatRow to Chakra
-    <StatRow>
-      <span>
+    <VStack>
+      <ChakraBox>
         {state.value}{" "}
         <Tooltip content={tooltipContent(metric)}>
-          {/* @TODO: continue migrate Icon 
-          
-            https://github.com/chakra-ui/chakra-ui/issues/363
-          */}
           <Icon
             as={MdInfoOutline}
-            sx={{ "svg:hover": { fill: "text" } }}
+            width="24px"
+            height="24px"
+            _hover={{ fill: "primary" }}
+            _active={{ fill: "primary" }}
+            _focus={{ fill: "primary" }}
+            mr="0.5rem"
           ></Icon>
         </Tooltip>
-      </span>
-    </StatRow>
+      </ChakraBox>
+    </VStack>
   )
 
   // Returns either 90 or 30-day data range depending on `range` selection
