@@ -1,21 +1,12 @@
 // Libraries
 import React, { useState } from "react"
-import styled from "@emotion/styled"
 import { reverse, sortBy } from "lodash"
 
 // Components
-import Emoji from "./OldEmoji"
+import Emoji from "./Emoji"
 import { Option, OptionContainer, OptionText } from "./SharedStyledComponents"
 import Translation from "./Translation"
 import { Box, Flex, Img, Text, useColorModeValue } from "@chakra-ui/react"
-
-const StyledEmoji = styled(Emoji)`
-  display: block;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    display: none;
-  }
-`
 
 export interface IProps {
   monthData: any
@@ -160,7 +151,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
                 <Flex>
                   {emoji ? (
                     <Box w={10}>
-                      <Emoji mr={"1rem"} size={2} text={emoji} />
+                      <Emoji mr={4} fontSize="2rem" text={emoji} />
                     </Box>
                   ) : (
                     <Box w={10} opacity="0.4">
@@ -178,7 +169,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
                       h={{ base: "30px", sm: 10 }}
                       w={{ base: "30px", sm: 10 }}
                       borderRadius="50%"
-                      display={{ base: "none", sm: "block" }}
+                      display={{ base: "none", s: "block" }}
                       src={user.avatarUrl}
                     />
                     <Box maxW={{ base: "100px", sm: "none" }}>
@@ -190,7 +181,12 @@ const TranslationLeaderboard: React.FC<IProps> = ({
                   </Flex>
                 </Flex>
                 <Flex minW="20%" flexDirection="row" alignItems="left">
-                  <StyledEmoji mr={"0.5rem"} size={1.5} text={":writing:"} />
+                  <Emoji
+                    display={{ base: "none", sm: "block" }}
+                    mr={2}
+                    fontSize="2xl"
+                    text={":writing:"}
+                  />
                   {user.totalCosts}
                 </Flex>
               </Flex>
