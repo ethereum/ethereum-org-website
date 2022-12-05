@@ -9,24 +9,6 @@ import { Option, OptionContainer, OptionText } from "./SharedStyledComponents"
 import Translation from "./Translation"
 import { Box, Flex, useColorModeValue } from "@chakra-ui/react"
 
-const Item = styled.div`
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: ${(props) => props.theme.colors.text} !important;
-  box-shadow: 0 1px 1px ${(props) => props.theme.colors.tableItemBoxShadow};
-  margin-bottom: 1px;
-  padding: 0.5rem 1rem;
-  width: 100%;
-  color: #000000;
-  &:hover {
-    border-radius: 4px;
-    box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
-  }
-`
-
 const TextContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -96,7 +78,11 @@ const TranslationLeaderboard: React.FC<IProps> = ({
   quarterData,
   allTimeData,
 }) => {
-  const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
+  const tableBoxShadow = useColorModeValue("tableBox.light", "tableBox.dark")
+  const tableItemBoxShadow = useColorModeValue(
+    "tableItemBox.light",
+    "tableItemBox.dark"
+  )
   const leaderboardData = {
     monthData: reverse(sortBy(monthData.data, ({ user }) => user.totalCosts)),
     quarterData: reverse(
@@ -145,7 +131,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
           </OptionText>
         </Option>
       </OptionContainer>
-      <Box bg="background" boxShadow={shadow} w="full" mb={8}>
+      <Box bg="background" boxShadow={tableBoxShadow} w="full" mb={8}>
         <Flex
           bg="grayBackground"
           textDecoration="none"
@@ -197,7 +183,23 @@ const TranslationLeaderboard: React.FC<IProps> = ({
               emoji = ":3rd_place_medal:"
             }
             return (
-              <Item key={idx}>
+              <Flex
+                textDecoration="none"
+                justifyContent="space-between"
+                alignItems="center"
+                color="text"
+                boxShadow={tableItemBoxShadow}
+                mb="px"
+                py={2}
+                px={4}
+                w="full"
+                _hover={{
+                  borderRadius: "base",
+                  boxShadow: "tableItemBoxHover",
+                  bg: "tableBackgroundHover",
+                }}
+                key={idx}
+              >
                 <Flex>
                   {emoji ? (
                     <Width40>
@@ -218,7 +220,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
                   <StyledEmoji mr={"0.5rem"} size={1.5} text={":writing:"} />
                   {user.totalCosts}
                 </WordsContainer>
-              </Item>
+              </Flex>
             )
           })}
       </Box>
