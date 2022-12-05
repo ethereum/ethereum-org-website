@@ -7,22 +7,7 @@ import { reverse, sortBy } from "lodash"
 import Emoji from "./OldEmoji"
 import { Option, OptionContainer, OptionText } from "./SharedStyledComponents"
 import Translation from "./Translation"
-import { Box, Flex, Img, useColorModeValue } from "@chakra-ui/react"
-
-const Width40 = styled.div`
-  width: 40px;
-`
-
-const ItemNumber = styled(Width40)`
-  opacity: 0.4;
-`
-
-const Language = styled.p`
-  margin: 0;
-  display: block;
-  font-size: ${(props) => props.theme.fontSizes.s};
-  opacity: 0.6;
-`
+import { Box, Flex, Img, Text, useColorModeValue } from "@chakra-ui/react"
 
 const StyledEmoji = styled(Emoji)`
   display: block;
@@ -108,7 +93,9 @@ const TranslationLeaderboard: React.FC<IProps> = ({
           w="full"
         >
           <Flex>
-            <ItemNumber>#</ItemNumber>
+            <Box w={10} opacity="0.4">
+              #
+            </Box>
             <Flex
               flexDirection="row"
               alignItems="center"
@@ -172,11 +159,13 @@ const TranslationLeaderboard: React.FC<IProps> = ({
               >
                 <Flex>
                   {emoji ? (
-                    <Width40>
+                    <Box w={10}>
                       <Emoji mr={"1rem"} size={2} text={emoji} />
-                    </Width40>
+                    </Box>
                   ) : (
-                    <ItemNumber>{idx + 1}</ItemNumber>
+                    <Box w={10} opacity="0.4">
+                      {idx + 1}
+                    </Box>
                   )}
                   <Flex
                     flexDirection="row"
@@ -194,7 +183,9 @@ const TranslationLeaderboard: React.FC<IProps> = ({
                     />
                     <Box maxW={{ base: "100px", sm: "none" }}>
                       {user.username}
-                      <Language>{sortedLanguages[0].language.name}</Language>
+                      <Text m={0} display="block" fontSize="sm" opacity="0.6">
+                        {sortedLanguages[0].language.name}
+                      </Text>
                     </Box>
                   </Flex>
                 </Flex>
