@@ -7,20 +7,7 @@ import { reverse, sortBy } from "lodash"
 import Emoji from "./OldEmoji"
 import { Option, OptionContainer, OptionText } from "./SharedStyledComponents"
 import Translation from "./Translation"
-import { Box, useColorModeValue } from "@chakra-ui/react"
-
-const Header = styled.div`
-  background-color: ${(props) => props.theme.colors.grayBackground};
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: ${(props) => props.theme.colors.text} !important;
-  margin-bottom: 1px;
-  padding: 1rem;
-  width: 100%;
-  color: #000000;
-`
+import { Box, Flex, useColorModeValue } from "@chakra-ui/react"
 
 const Item = styled.div`
   text-decoration: none;
@@ -98,10 +85,6 @@ const StyledEmoji = styled(Emoji)`
   }
 `
 
-const Flex = styled.div`
-  display: flex;
-`
-
 export interface IProps {
   monthData: any
   quarterData: any
@@ -163,7 +146,16 @@ const TranslationLeaderboard: React.FC<IProps> = ({
         </Option>
       </OptionContainer>
       <Box bg="background" boxShadow={shadow} w="full" mb={8}>
-        <Header>
+        <Flex
+          bg="grayBackground"
+          textDecoration="none"
+          justifyContent="space-between"
+          alignItems="center"
+          color="text"
+          mb="px"
+          p={4}
+          w="full"
+        >
           <Flex>
             <ItemNumber>#</ItemNumber>
             <TextContainer>
@@ -173,7 +165,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
           <WordsContainer>
             <Translation id="page-contributing-translation-program-acknowledgements-total-words" />
           </WordsContainer>
-        </Header>
+        </Flex>
         {/* // TODO: Remove specific user checks once Acolad has updated their usernames */}
         {leaderboardData[dateRangeType]
           .filter(
