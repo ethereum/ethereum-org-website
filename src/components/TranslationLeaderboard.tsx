@@ -7,17 +7,7 @@ import { reverse, sortBy } from "lodash"
 import Emoji from "./OldEmoji"
 import { Option, OptionContainer, OptionText } from "./SharedStyledComponents"
 import Translation from "./Translation"
-
-const Content = styled.div`
-  margin-bottom: 2rem;
-`
-
-const Table = styled.div`
-  background-color: ${(props) => props.theme.colors.background};
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  width: 100%;
-  margin-bottom: 2rem;
-`
+import { Box, useColorModeValue } from "@chakra-ui/react"
 
 const Header = styled.div`
   background-color: ${(props) => props.theme.colors.grayBackground};
@@ -123,6 +113,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
   quarterData,
   allTimeData,
 }) => {
+  const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
   const leaderboardData = {
     monthData: reverse(sortBy(monthData.data, ({ user }) => user.totalCosts)),
     quarterData: reverse(
@@ -144,7 +135,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
   }
 
   return (
-    <Content>
+    <Box>
       <OptionContainer>
         <Option
           onClick={() => updateDateRangeType("monthData")}
@@ -171,7 +162,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
           </OptionText>
         </Option>
       </OptionContainer>
-      <Table>
+      <Box bg="background" boxShadow={shadow} w="full" mb={8}>
         <Header>
           <Flex>
             <ItemNumber>#</ItemNumber>
@@ -238,7 +229,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
               </Item>
             )
           })}
-      </Table>
+      </Box>
       <OptionContainer>
         <Option onClick={filterAmount === 10 ? showMore : showLess}>
           <OptionText fontSize={"18px"}>
@@ -252,7 +243,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
           </OptionText>
         </Option>
       </OptionContainer>
-    </Content>
+    </Box>
   )
 }
 
