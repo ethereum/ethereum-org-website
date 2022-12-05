@@ -5,10 +5,13 @@ import axios from "axios"
 import { kebabCase } from "lodash"
 import { AreaChart, ResponsiveContainer, Area, XAxis } from "recharts"
 
+import { Grid, Icon } from "@chakra-ui/react"
+import { MdInfoOutline } from "react-icons/md"
+
 import Translation from "./Translation"
 import Tooltip from "./Tooltip"
 import Link from "./Link"
-import Icon from "./Icon"
+// import Icon from "./Icon"
 import StatErrorMessage from "./StatErrorMessage"
 import StatLoadingMessage from "./StatLoadingMessage"
 
@@ -46,22 +49,6 @@ const Title = styled.p`
   font-family: ${(props) => props.theme.fonts.monospace};
 `
 
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 2rem 2rem 0;
-  border-radius: 2px;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 2rem 0 0;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
-    margin: 0;
-  }
-`
-
 const Box = styled.div`
   position: relative;
   color: ${({ theme }) => theme.colors.text};
@@ -87,17 +74,17 @@ const StatRow = styled.div`
   flex-direction: column;
 `
 
-const StyledIcon = styled(Icon)`
-  fill: ${({ theme }) => theme.colors.text};
-  margin-right: 0.5rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-  }
-  &:hover,
-  &:active,
-  &:focus {
-    fill: ${({ theme }) => theme.colors.primary};
-  }
-`
+// const StyledIcon = styled(Icon)`
+//   fill: ${({ theme }) => theme.colors.text};
+//   margin-right: 0.5rem;
+//   @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
+//   }
+//   &:hover,
+//   &:active,
+//   &:focus {
+//     fill: ${({ theme }) => theme.colors.primary};
+//   }
+// `
 
 const Lines = styled.div`
   position: absolute;
@@ -170,11 +157,19 @@ const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
   ) : isLoading ? (
     <StatLoadingMessage />
   ) : (
+    // @TODO: Convert StatRow to Chakra
     <StatRow>
       <span>
         {state.value}{" "}
         <Tooltip content={tooltipContent(metric)}>
-          <StyledIcon name="info" />
+          {/* @TODO: continue migrate Icon 
+          
+            https://github.com/chakra-ui/chakra-ui/issues/363
+          */}
+          <Icon
+            as={MdInfoOutline}
+            sx={{ "svg:hover": { fill: "text" } }}
+          ></Icon>
         </Tooltip>
       </span>
     </StatRow>
@@ -563,7 +558,23 @@ const StatsBoxGrid: React.FC<IProps> = () => {
   ]
   const dir = isLangRightToLeft(intl.locale as Lang) ? "rtl" : "ltr"
   return (
-    <Grid>
+    <Grid
+      display={{
+        base: "flex",
+        lg: "grid",
+      }}
+      gridTemplateColumns="repeat(2, 1fr)"
+      margin={{
+        base: "0",
+        md: "2rem 0 0",
+        lg: "2rem 2rem 0",
+      }}
+      borderRadius="2px"
+      flexDirection={{
+        base: "column",
+        lg: "column",
+      }}
+    >
       {metrics.map((metric, idx) => (
         <GridItem key={idx} metric={metric} dir={dir} />
       ))}
