@@ -7,27 +7,7 @@ import { reverse, sortBy } from "lodash"
 import Emoji from "./OldEmoji"
 import { Option, OptionContainer, OptionText } from "./SharedStyledComponents"
 import Translation from "./Translation"
-import { Box, Flex, useColorModeValue } from "@chakra-ui/react"
-
-const Avatar = styled.img`
-  margin-right: 1rem;
-  height: 40px;
-  width: 40px;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    height: 30px;
-    width: 30px;
-  }
-  border-radius: 50%;
-  @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
-    display: none;
-  }
-`
-
-const NameContainer = styled.div`
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    max-width: 100px;
-  }
-`
+import { Box, Flex, Img, useColorModeValue } from "@chakra-ui/react"
 
 const Width40 = styled.div`
   width: 40px;
@@ -204,11 +184,18 @@ const TranslationLeaderboard: React.FC<IProps> = ({
                     mr={8}
                     overflowWrap="anywhere"
                   >
-                    <Avatar src={user.avatarUrl} />
-                    <NameContainer>
+                    <Img
+                      mr={4}
+                      h={{ base: "30px", sm: 10 }}
+                      w={{ base: "30px", sm: 10 }}
+                      borderRadius="50%"
+                      display={{ base: "none", sm: "block" }}
+                      src={user.avatarUrl}
+                    />
+                    <Box maxW={{ base: "100px", sm: "none" }}>
                       {user.username}
                       <Language>{sortedLanguages[0].language.name}</Language>
-                    </NameContainer>
+                    </Box>
                   </Flex>
                 </Flex>
                 <Flex minW="20%" flexDirection="row" alignItems="left">
