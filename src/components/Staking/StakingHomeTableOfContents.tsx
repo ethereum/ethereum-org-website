@@ -1,6 +1,7 @@
 import React from "react"
 import { Link as GatsbyLink } from "gatsby"
-import { Box, Link, List, ListItem } from "@chakra-ui/react"
+import { Box, List, ListItem } from "@chakra-ui/react"
+import Link from "../Link"
 
 interface Item {
   id: string
