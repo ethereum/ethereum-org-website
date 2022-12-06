@@ -21,7 +21,7 @@ import Translation from "../Translation"
 
 import TableOfContentsMobile from "./TableOfContentsMobile"
 import ItemsList from "./ItemsList"
-import { getCustomId, Item, outerListProps } from "./tableOfContents.utils"
+import { getCustomId, Item, outerListProps } from "./utils"
 
 // For use in pages and templates
 export { Item }

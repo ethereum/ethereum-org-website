@@ -2,7 +2,7 @@ import React from "react"
 import { Link as GatsbyLink } from "gatsby"
 import { SystemStyleObject, cssVar } from "@chakra-ui/react"
 import Link from "../Link"
-import { getCustomId, Item, trimmedTitle } from "./tableOfContents.utils"
+import { getCustomId, Item, trimmedTitle } from "./utils"
 
 export interface IPropsTableOfContentsLink {
   depth: number

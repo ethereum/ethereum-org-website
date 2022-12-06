@@ -1,6 +1,6 @@
 import React from "react"
 import { ChakraProps, List, ListItem } from "@chakra-ui/react"
-import { Item } from "./tableOfContents.utils"
+import { Item } from "./utils"
 import TableOfContentsLink from "./TableOfContentsLink"
 
 export interface IPropsItemsList extends ChakraProps {
