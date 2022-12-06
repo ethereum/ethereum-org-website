@@ -19,7 +19,7 @@ import { ZenModeContext } from "../../contexts/ZenModeContext"
 import ButtonLink from "../ButtonLink"
 import Translation from "../Translation"
 
-import TableOfContentsMobile from "./TableOfContentsMobile"
+import Mobile from "./TableOfContentsMobile"
 import ItemsList from "./ItemsList"
 import { getCustomId, Item, outerListProps } from "./utils"
 
@@ -77,13 +77,7 @@ const TableOfContents: React.FC<IProps> = ({
     return null
   }
   if (isMobile) {
-    return (
-      <TableOfContentsMobile
-        items={items}
-        maxDepth={maxDepth}
-        className={className}
-      />
-    )
+    return <Mobile items={items} maxDepth={maxDepth} className={className} />
   }
 
   const shouldShowZenModeToggle = slug?.includes("/docs/")

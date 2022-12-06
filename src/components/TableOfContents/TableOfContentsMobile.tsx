@@ -19,7 +19,7 @@ export interface IPropsTableOfContentsMobile {
   className?: string
 }
 
-const TableOfContentsMobile: React.FC<IPropsTableOfContentsMobile> = ({
+const Mobile: React.FC<IPropsTableOfContentsMobile> = ({
   items,
   maxDepth,
   className,
@@ -76,4 +76,4 @@ const TableOfContentsMobile: React.FC<IPropsTableOfContentsMobile> = ({
   )
 }
 
-export default TableOfContentsMobile
+export default Mobile
