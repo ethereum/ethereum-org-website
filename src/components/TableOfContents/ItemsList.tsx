@@ -1,7 +1,7 @@
 import React from "react"
 import { ChakraProps, List, ListItem } from "@chakra-ui/react"
 import { Item } from "./utils"
-import TableOfContentsLink from "./TableOfContentsLink"
+import Link from "./TableOfContentsLink"
 
 export interface IPropsItemsList extends ChakraProps {
   items?: Array<Item>
@@ -26,11 +26,7 @@ const ItemsList: React.FC<IPropsItemsList> = ({
       {items.map((item, index) => (
         <ListItem key={index} m={0} {...rest}>
           {item.title && (
-            <TableOfContentsLink
-              depth={depth}
-              item={item}
-              activeHash={activeHash}
-            />
+            <Link depth={depth} item={item} activeHash={activeHash} />
           )}
           {item.items && (
             <List
