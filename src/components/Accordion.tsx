@@ -91,16 +91,20 @@ export interface IProps {
 
 const StablecoinAccordion: React.FC<IProps> = ({
   children,
+  
   contentPreview,
   title,
+  
   emoji,
 }) => {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, 
+         setIsVisible] = useState(false)
   return (
     <Card>
       <Content>
         <TitleContainer>
-          <StyledEmoji text={emoji} size={4} />
+          <StyledEmoji 
+            text={emoji} size={4} />
           <Question>
             <Title>{title}</Title>
             <TextPreview>{contentPreview}</TextPreview>
