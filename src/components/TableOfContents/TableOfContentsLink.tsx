@@ -5,26 +5,12 @@ import CustomLink from "../Link"
 import { getCustomId, Item, trimmedTitle } from "./utils"
 
 export interface IPropsTableOfContentsLink {
-  depth: number
   item: Item
   activeHash?: string
 }
 
-const Link: React.FC<IPropsTableOfContentsLink> = ({
-  depth,
-  item,
-  activeHash,
-}) => {
+const Link: React.FC<IPropsTableOfContentsLink> = ({ item }) => {
   const url = `#${getCustomId(item.title)}`
-  const isActive = activeHash === url
-  const isNested = depth === 2
-  let classes = ""
-  if (isActive) {
-    classes += " active"
-  }
-  if (isNested) {
-    classes += " nested"
-  }
 
   const $dotBg = cssVar("dot-bg")
 
@@ -48,7 +34,6 @@ const Link: React.FC<IPropsTableOfContentsLink> = ({
     <CustomLink
       as={GatsbyLink}
       to={url}
-      className={classes}
       textDecoration="none"
       display="inline-block"
       position="relative"
