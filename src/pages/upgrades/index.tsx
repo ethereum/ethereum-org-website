@@ -830,7 +830,12 @@ export default Eth2IndexPage
 
 export const query = graphql`
   query UpgradesPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["src-pages-upgrades-index", "components"] }
+      }
+    ) {
       edges {
         node {
           ns

@@ -322,7 +322,12 @@ export default VisionPage
 
 export const query = graphql`
   query UpgradesVisionPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["src-pages-upgrades-vision", "components"] }
+      }
+    ) {
       edges {
         node {
           ns

@@ -539,7 +539,12 @@ export const Clients = graphql`
 
 export const query = graphql`
   query GetInvolvedPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["src-pages-upgrades-get-involved-index", "components"] }
+      }
+    ) {
       edges {
         node {
           ns

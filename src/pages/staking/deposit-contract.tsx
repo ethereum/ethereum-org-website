@@ -502,7 +502,12 @@ export const sourceImage = graphql`
 
 export const query = graphql`
   query DepositContractPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["src-pages-staking-deposit-contract", "components"] }
+      }
+    ) {
       edges {
         node {
           ns

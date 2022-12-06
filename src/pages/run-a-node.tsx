@@ -1001,7 +1001,12 @@ export default RunANodePage
 
 export const query = graphql`
   query RunANodePage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["src-pages-run-a-node", "components"] }
+      }
+    ) {
       edges {
         node {
           ns

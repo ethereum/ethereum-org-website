@@ -924,7 +924,12 @@ export default Layer2Page
 
 export const query = graphql`
   query Layer2Page($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["src-pages-layer-2", "components"] }
+      }
+    ) {
       edges {
         node {
           ns

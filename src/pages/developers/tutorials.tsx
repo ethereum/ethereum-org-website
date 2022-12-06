@@ -461,7 +461,12 @@ export default TutorialsPage
 
 export const query = graphql`
   query DevelopersTutorialsPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["src-pages-developers-tutorials", "components"] }
+      }
+    ) {
       edges {
         node {
           ns

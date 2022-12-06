@@ -721,7 +721,12 @@ export default StakingPage
 
 export const query = graphql`
   query StakingPageIndex($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["src-pages-staking-index", "components"] }
+      }
+    ) {
       edges {
         node {
           ns

@@ -447,7 +447,12 @@ export const listItemImage = graphql`
 
 export const query = graphql`
   query GetEthPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["src-pages-get-eth", "components"] }
+      }
+    ) {
       edges {
         node {
           ns

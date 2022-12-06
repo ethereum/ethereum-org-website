@@ -860,7 +860,12 @@ export const ClientLogosSmall = graphql`
 
 export const query = graphql`
   query BugBountyPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["src-pages-bug-bounty", "components"] }
+      }
+    ) {
       edges {
         node {
           ns

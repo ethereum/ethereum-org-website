@@ -567,7 +567,12 @@ export default CommunityPage
 
 export const query = graphql`
   query CommunityPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["src-pages-community", "components"] }
+      }
+    ) {
       edges {
         node {
           ns

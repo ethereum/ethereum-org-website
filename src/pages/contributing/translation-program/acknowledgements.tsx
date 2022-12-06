@@ -270,7 +270,17 @@ export default TranslatorAcknowledgements
 
 export const query = graphql`
   query TranslatorAcknowledgementsPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: {
+          in: [
+            "src-pages-contributing-translation-program-acknowledgements"
+            "components"
+          ]
+        }
+      }
+    ) {
       edges {
         node {
           ns

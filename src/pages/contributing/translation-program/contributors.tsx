@@ -151,7 +151,17 @@ export default Contributors
 
 export const query = graphql`
   query ContributorsPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: {
+          in: [
+            "src-pages-contributing-translation-program-contributors"
+            "components"
+          ]
+        }
+      }
+    ) {
       edges {
         node {
           ns

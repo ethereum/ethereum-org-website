@@ -770,7 +770,12 @@ export default HomePage
 
 export const query = graphql`
   query IndexPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["src-pages-index", "components"] }
+      }
+    ) {
       edges {
         node {
           ns

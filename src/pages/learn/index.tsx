@@ -872,7 +872,12 @@ export const cardImageFragment = graphql`
 
 export const query = graphql`
   query LearnPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["src-pages-learn-index", "components"] }
+      }
+    ) {
       edges {
         node {
           ns

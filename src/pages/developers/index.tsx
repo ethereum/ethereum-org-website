@@ -556,7 +556,12 @@ export default DevelopersPage
 
 export const query = graphql`
   query DevelopersIndexPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["src-pages-developers-index", "components"] }
+      }
+    ) {
       edges {
         node {
           ns
