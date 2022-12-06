@@ -16,20 +16,11 @@ const TableOfContentsLink: React.FC<ITableOfContentsLinkProps> = ({
   item: { id, title },
 }) => {
   const url = `#${id}`
-  let isActive = false
-  if (typeof window !== `undefined`) {
-    isActive = window.location.hash === url
-  }
-  // const isNested = depth === 2
-  let classes = "nested"
-  if (isActive) {
-    classes += " active"
-  }
+
   return (
     <Link
       as={GatsbyLink}
       to={url}
-      className={classes}
       position="relative"
       display="inline-block"
       color="text300"
