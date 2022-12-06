@@ -123,6 +123,7 @@ const TableOfContents: React.FC<IProps> = ({
                 </FormLabel>
                 <Switch
                   id="zen-mode"
+                  size="sm"
                   sx={{
                     "& .chakra-switch__track": {
                       background: "transparent",
