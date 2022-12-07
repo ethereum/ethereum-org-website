@@ -16,7 +16,7 @@ The only protection is not to use untested new projects or regularly revoke acce
 
 ## Step 1: Use revoke access tools
 
-There are several websites that let you view and revoke smart contracts connected to your address. Visit the website and connect your wallet:
+Several websites let you view and revoke smart contracts connected to your address. Visit the website and connect your wallet:
 
 - [Ethallowance](https://ethallowance.com/) (Ethereum)
 - [Etherscan](https://etherscan.io/tokenapprovalchecker) (Ethereum)
