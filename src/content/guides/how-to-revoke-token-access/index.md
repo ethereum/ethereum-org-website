@@ -35,7 +35,7 @@ Make sure you use the same network in your wallet and website. You will only see
 
 Now you should see all the contracts that are allowed access to your tokens and their potential spending limit.  Locate the one you wish to terminate.
 
-If you do not know which contract to choose, you can revoke all of them. This should not create any major issues for you. It will just mean that the next time you visit any project and wish to interact with it, you will have to grant a new set of permissions. 
+If you do not know which contract to choose, you can revoke all of them. It won't create any problems for you, but you will have to grant a new set of permissions the next time you interact with any of these contracts.
 
 ## Step 4: Revoke access to your funds
 
