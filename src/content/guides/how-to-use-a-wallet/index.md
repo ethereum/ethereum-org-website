@@ -28,7 +28,6 @@ You need to provide the sender with your receiving address. Many wallet apps let
 
 It is the same process if you are trying to send your funds from an exchange.
 
-
 ## Send cryptocurrency
 
 Would you like to send ETH to another wallet? 
