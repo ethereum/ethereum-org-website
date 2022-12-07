@@ -49,7 +49,7 @@ We advise to refresh the revoking tool after few minutes and connect your wallet
 
 **Does revoking token access also terminate staking, pooling, lending etc?**
 
-- No it will not affect any of your DEFI strategies. You will remain your positions and keep getting rewards etc.
+No, it will not affect any of your DeFi strategies. You will remain in your positions and keep getting rewards etc.
 
 **Is disconnecting a wallet from a project the same as removing permission to use my funds?**
 
