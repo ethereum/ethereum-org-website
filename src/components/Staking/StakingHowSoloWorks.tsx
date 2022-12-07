@@ -46,7 +46,7 @@ const StakingHowSoloWorks: React.FC<IProps> = () => {
 
   return (
     <Center
-      flexDirection={{ sm: "column", md: "row" }}
+      flexDirection={{ base: "column", md: "row" }}
       justifyContent="space-between"
     >
       <OrderedList listData={items} />
