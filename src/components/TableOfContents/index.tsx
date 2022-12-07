@@ -116,7 +116,7 @@ const TableOfContents: React.FC<IProps> = ({
               fontSize="sm"
             >
               <FormControl as={Flex} alignItems="center">
-                <FormLabel htmlFor="zen-mode" mb={0} me={2}>
+                <FormLabel htmlFor="zen-mode" mb={0} me={2} fontSize="sm">
                   <Translation id="zen-mode" />
                 </FormLabel>
                 <Switch
