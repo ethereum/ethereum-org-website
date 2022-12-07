@@ -17,7 +17,7 @@ summaryPoints:
 
 Solo staking is the act of [running an Ethereum node](/run-a-node/) connected to the internet and depositing 32 ETH to activate a [validator](#faq), giving you the ability to participate directly in network consensus.
 
-**Solo staking increases the decentralization of the Ethereum network**, making Ethereum more censorship-resistant and robust against attacks. Other staking methods may not help the network in the same ways. This is why solo staking is the gold standard for securing Ethereum.
+**Solo staking increases the decentralization of the Ethereum network**, making Ethereum more censorship-resistant and robust against attacks. Other staking methods may not help the network in the same ways. Solo staking is the best staking option for securing Ethereum.
 
 An Ethereum node consists of both an execution layer (EL) client, as well as a consensus layer (CL) client. These clients are software that work together, along with a valid set of signing keys, to verify transactions and blocks, attest to the correct head of the chain, aggregate attestations, and propose blocks.
 
