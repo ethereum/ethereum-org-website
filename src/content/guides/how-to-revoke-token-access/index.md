@@ -57,7 +57,7 @@ No, it will not affect any of your DeFi strategies. You will remain in your posi
 
 **When will the contract permission expire?**
 
-- There are no expiration deadlines. As long as the permission is active it can be used, even years afterwards.
+- There are no expiration dates on contract permissions. If you grant contract permissions, they can be used, even years after they're granted.
 
 **Why do projects set unlimited token allowance?**
 
