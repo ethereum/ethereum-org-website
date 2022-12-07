@@ -84,5 +84,5 @@ Your address represents you on all Ethereum projects. You will not need to regis
 
 **Can I cancel or return transactions?**
 
-- No, once transaction is initiated it cannot be canceled.
+- No, once a transaction is initiated, you can not cancel the transaction.
 ****
