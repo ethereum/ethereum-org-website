@@ -150,7 +150,7 @@ The more ETH someone has to stake, the more validators they can run, and the mor
 
 No, proof-of-work tends towards centralization because mining costs increase and price out individuals, then price out small companies, and so on. The current problem with proof-of-stake is the influence of liquid staking derivatives (LSDs). These are tokens representing ETH staked by some provider that anyone can swap on secondary markets without the actual ETH being unstaked. LSDs allow users to stake with less than 32 ETH, but they also create a centralization risk where a few big organizations can end up controlling much of the stake. This is why [solo staking](/staking/solo) is the best option for Ethereum.
 
-- Read more about [stake centralization in LSDs](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
+- [More on stake centralization in LSDs](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
 
 ## Why can I only stake ETH? {#why-can-i-only-stake-eth}
 
