@@ -19,7 +19,7 @@ Do you want to receive crypto into your wallet?
 
 Each wallet has its own receiving Ethereum address which is a unique sequence of numbers and letters. The address functions like a bank account number. Ethereum address will always start with “0x”.
 
-You need to provide the sender with your receiving address. Many wallet apps will let you copy to clipboard the address or show a QR code to scan for an easier usage. 
+You need to provide the sender with your receiving address. Many wallet apps let you copy to clipboard the address or show a QR code to scan for easier usage. 
 
 1. Open your wallet app.
 2. Click on "Receive" or similarly worded option on the dashboard
