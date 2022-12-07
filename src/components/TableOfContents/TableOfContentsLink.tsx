@@ -55,7 +55,7 @@ const Link: React.FC<IPropsTableOfContentsLink> = ({ item }) => {
             opacity: 0.5,
             display: "inline-flex",
             position: "absolute",
-            left: "-14px",
+            left: -3.5,
             top: -1,
           },
           "&.active, &:hover": {
