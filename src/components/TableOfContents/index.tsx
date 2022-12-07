@@ -124,6 +124,7 @@ const TableOfContents: React.FC<IProps> = ({
                 <Switch
                   id="zen-mode"
                   size="sm"
+                  // TODO: Consider moving the below styling to the custom Chakra Theme
                   sx={{
                     "& .chakra-switch__track": {
                       background: "transparent",
