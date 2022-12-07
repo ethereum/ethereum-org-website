@@ -29,7 +29,7 @@ Several websites let you view and revoke smart contracts connected to your addre
 
 Once you are on the website, click on “Connect wallet”. The website should prompt you to connect your wallet.  
 
-Make sure you are using the right network in your wallet and on the website. You will only see smart contracts related to the network selected. For example: if you are connected to Ethereum, you will only see Ethereum contracts and not contracts from other chains like Layer 2s.
+Make sure you use the same network in your wallet and website. You will only see smart contracts related to the network selected. For example, if you connect to Ethereum Mainnet, you will only see Ethereum contracts, not contracts from other chains such as Polygon.
 
 ## Step 3: Select a smart contract you wish to revoke
 
