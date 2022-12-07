@@ -33,7 +33,7 @@ Make sure you use the same network in your wallet and website. You will only see
 
 ## Step 3: Select a smart contract you wish to revoke
 
-Now you should see all the contracts that are allowed access to your tokens and their potential spending limit.  Locate the one you wish to terminate.
+You should see all the contracts that are allowed access to your tokens and their spending limit. Find the one you wish to terminate.
 
 If you do not know which contract to choose, you can revoke all of them. It won't create any problems for you, but you will have to grant a new set of permissions the next time you interact with any of these contracts.
 
