@@ -33,7 +33,7 @@ The first time you open your new wallet you might be asked to choose between cre
 
 Some apps will request you to save a recovery phrase. This is extremely important as the person who knows this secret phrase can take control of your account. Never share this with anyone. This phrase should contain 12 randomly generated words (the order of the words matter).
 
-Once you have saved your recovery phrase you should see your wallet dashboard with your balance. Check out our Guide: [How to use a wallet.](https://ethereum.org/en/guides/how-to-use-a-wallet)
+Once you have saved your recovery phrase you should see your wallet dashboard with your balance. Check out our guide: [how to use a wallet.](/guides/how-to-use-a-wallet)
 
 
 ### Frequently asked questions
