@@ -26,7 +26,7 @@ Proof-of-work versus proof-of-stake is a contentious topic. [Vitalik Buterin's b
 
 Yes. Nodes on a proof-of-stake network use a tiny amount of energy. A third-party study concluded that the entire proof-of-stake Ethereum network consumes around 0.0026 TWh/yr - about 13,000x less than gaming in the US alone.
 
-- [More on Ethereum's energy consumption](/energy-consumption/).
+[More on Ethereum's energy consumption](/energy-consumption/).
 
 ## Is proof-of-stake secure? {#is-pos-secure}
 
@@ -61,13 +61,13 @@ In addition to Casper, Ethereum's proof-of-stake uses a fork choice algorithm ca
 
 The combination of Casper and LMD_GHOST is known as Gasper.
 
-- [More on Gasper](/developers/docs/consensus-mechanisms/pos/gasper/)
+[More on Gasper](/developers/docs/consensus-mechanisms/pos/gasper/)
 
 ## What is slashing? {#what-is-slashing}
 
 Slashing is the term given to the destruction of some of a validator's stake and the ejection of the validator from the network. The amount of ETH lost in a slashing scales with the number of validators being slashed - this means colluding validators get punished more severely than individuals.
 
-- [More on slashing](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties#slashing)
+[More on slashing](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties#slashing)
 
 ## Why do validators need 32 ETH? {#why-32-eth}
 
@@ -77,13 +77,13 @@ Validators have to stake ETH so that they have something to lose if they misbeha
 
 A single validator is pseudo-randomly chosen to propose a block in each slot using an algorithm called RANDAO that mixes a hash from the block proposer with a seed that gets updated every block. This value is used to select a specific validator from the total validator set. The validator selection is fixed four epochs in advance.
 
-- [More on validator selection](/developers/docs/consensus-mechanisms/pos/block_proposal)
+[More on validator selection](/developers/docs/consensus-mechanisms/pos/block_proposal)
 
 ## What is stake grinding? {#what-is-stake-grinding}
 
 Stake grinding is a category of attack on proof-of-stake networks where the attacker tries to bias the validator selection algorithm in favour of their own validators. Stake grinding attacks on RANDAO require about half the total staked ETH.
 
-- [More on stake grinding](https://eth2book.info/altair/part2/building_blocks/randomness/#randao-biasability)
+[More on stake grinding](https://eth2book.info/altair/part2/building_blocks/randomness/#randao-biasability)
 
 ## What is social slashing? {#what-is-social-slashing}
 
@@ -96,13 +96,13 @@ Social slashing is the ability of the community to coordinate a fork of the bloc
 
 As a validator, it is very difficult to get slashed unless you deliberately engage in malicious behaviour. Slashing is only implemented in very specific scenarios where validators propose multiple blocks for the same slot or contradict themselves with their attestations - these are very unlikely to arise accidentally.
 
-- [More on slashing conditions](https://eth2book.info/altair/part2/incentives/slashing)
+[More on slashing conditions](https://eth2book.info/altair/part2/incentives/slashing)
 
 ## What is the nothing-at-stake problem? {#what-is-nothing-at-stake-problem}
 
 The nothing-at-stake problem is a conceptual issue with some proof-of-stake mechanisms where there are only rewards and no penalties. If there is nothing at stake, a pragmatic validator is equally happy to attest to any, or even multiple, forks of the blockchain, as this increases their rewards. Ethereum gets around this using finality conditions and slashing to ensure one canonical chain.
 
-- [More on the nothing-at-stake problem](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
+[More on the nothing-at-stake problem](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
 
 ## What is a fork choice algorithm? {#what-is-a-fork-choice-algorithm}
 
@@ -110,37 +110,37 @@ A fork choice algorithm implements rules determining which chain is the canonica
 
 Ethereum's fork-choice algorithm is called LMD-GHOST. It picks the fork with the greatest weight of attestations, meaning the one that most staked ETH has voted for.
 
-- [More on LMD-GHOST](/developers/docs/consensus-mechanisms/pos/gasper/#fork-choice)
+[More on LMD-GHOST](/developers/docs/consensus-mechanisms/pos/gasper/#fork-choice)
 
 ## What is finality in proof-of-stake? {#what-is-finality}
 
 Finality in proof-of-stake is the guarantee that a given block is a permanent part of the canonical chain and cannot be reverted unless there is a consensus failure in which an attacker burns 33% of the total staked ether. This is "crypto-economic" finality, as opposed to "probabilistic finality" which is relevant to proof-of-work blockchains. In probabilistic finality, there are no explicit finalized/non-finalized states for blocks - it simply becomes less and less likely that a block could be removed from the chain as it gets older, and users determine for themselves when they are sufficiently confident that a block is "safe". With crypto-economic finality, pairs of checkpoint blocks have to be voted for by 66% of the staked ether. If this condition is satisfied, blocks between those checkpoints are explicitly "finalized".
 
-- [More on finality](/developers/docs/consensus-mechanisms/pos/#finality)
+[More on finality](/developers/docs/consensus-mechanisms/pos/#finality)
 
 ## What is "weak subjectivity"? {#what-is-weak-subjectivity}
 
 Weak subjectivity is a feature of proof-of-stake networks where social information is used to confirm the current state of the blockchain. New nodes or nodes rejoining the network after being offline for a long time can be given a recent state so that the node can see immediately whether they are on the correct chain. These states are known as "weak subjectivity checkpoints" and they can be obtained from other node operators out-of-band, or from block explorers, or from several public endpoints.
 
-- [More on weak subjectivity](/developers/docs/consensus-mechanisms/pos/weak-subjectivity)
+[More on weak subjectivity](/developers/docs/consensus-mechanisms/pos/weak-subjectivity)
 
 ## Is proof-of-stake censorship resistant? {#is-pos-censorship-resistant}
 
 Censorship resistance is currently hard to prove. However, unlike proof-of-work, proof-of-stake offers the option to coordinate slashings to punish censoring validators. There are upcoming changes to the protocol that separate block builders from block proposers and implement lists of transactions that builders must include in each block. This proposal is known as proper-builder separation and helps to prevent validators from censoring transactions.
 
-- [More on proposer-builder separation](https://notes.ethereum.org/@fradamt/H1TsYRfJc#Original-basic-scheme)
+[More on proposer-builder separation](https://notes.ethereum.org/@fradamt/H1TsYRfJc#Original-basic-scheme)
 
 ## Can Ethereum's proof-of-stake system be 51% attacked? {#pos-51-attack}
 
 Yes. Proof-of-stake is vulnerable to 51% attacks, just like proof-of-work. Instead of the attack requiring 51% of the network's hash power, the attack requires 51% of the total staked ETH. An attacker that accumulates 51% of the total stake gets to control the fork-choice algorithm. This enables the attacker to censor certain transactions, do short-range reorgs and extract MEV by reordering blocks in their favor.
 
-- [More on attacks on proof-of-stake](/developers/docs/consensus-mechanisms/pos/attack-and-defense)
+[More on attacks on proof-of-stake](/developers/docs/consensus-mechanisms/pos/attack-and-defense)
 
 ## What is social coordination, and why is it needed? {#what-is-social-coordination}
 
 Social coordination is a last line of defense for Ethereum that would allow an honest chain to be recovered from an attack that finalized dishonest blocks. In this case, the Ethereum community would have to coordinate "out-of-band" and agree to use an honest minority fork, slashing the attacker's validators in the process. This would require apps and exchanges to recognize the honest fork too.
 
-- [Read more on social coordination](/developers/docs/consensus-mechanisms/pos/attack-and-defense#people-the-last-line-of-defense)
+[Read more on social coordination](/developers/docs/consensus-mechanisms/pos/attack-and-defense#people-the-last-line-of-defense)
 
 ## Do the rich get richer in proof-of-stake? {#do-rich-get-richer}
 
@@ -150,7 +150,7 @@ The more ETH someone has to stake, the more validators they can run, and the mor
 
 No, proof-of-work tends towards centralization because mining costs increase and price out individuals, then price out small companies, and so on. The current problem with proof-of-stake is the influence of liquid staking derivatives (LSDs). These are tokens representing ETH staked by some provider that anyone can swap on secondary markets without the actual ETH being unstaked. LSDs allow users to stake with less than 32 ETH, but they also create a centralization risk where a few big organizations can end up controlling much of the stake. This is why [solo staking](/staking/solo) is the best option for Ethereum.
 
-- [More on stake centralization in LSDs](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
+[More on stake centralization in LSDs](https://notes.ethereum.org/@djrtwo/risks-of-lsd)
 
 ## Why can I only stake ETH? {#why-can-i-only-stake-eth}
 
@@ -164,10 +164,10 @@ No, there are several proof-of-stake blockchains. None are identical to Ethereum
 
 The Merge was the moment when Ethereum switched off its proof-of-work-based consensus mechanism and switched on its proof-of-stake-based consensus mechanism. The Merge happened on September 15, 2022.
 
-- [More on The Merge](/upgrades/merge)
+[More on The Merge](/upgrades/merge)
 
 ## What are liveness and safety? {#what-are-liveness-and-safety}
 
 Liveness and safety are the two fundamental security concerns for a blockchain. Liveness is the availability of a finalizing chain. If the chain stops finalizing or users are not able to access it easily, those are liveness failures. Extremely high cost of access could also be considered a liveness failure. Safety refers to how difficult it is to attack the chain - i.e. finalize conflicting checkpoints.
 
-- Read more in the [Casper paper](https://arxiv.org/pdf/1710.09437.pdf)
+[Read more in the Casper paper](https://arxiv.org/pdf/1710.09437.pdf)
