@@ -4,7 +4,7 @@ description: A collection of practical guides explaining the basics of using cry
 lang: en
 ---
 
-# Ethereum Guides
+# Ethereum guides
 
 Do you want to start your Ethereum journey? It can be confusing to use and understand new technology. Our guides will teach you how to get started step-by-step.
 
