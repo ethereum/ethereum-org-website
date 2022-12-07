@@ -10,7 +10,7 @@ Creating an Ethereum account is very easy, and anyone can do it for free with a 
 
 ## Step 1: Browse our curated list of wallets
 
-A wallet is like an online bank account for Ethereum. There are dozens of different wallets to choose from: mobile, desktop or even browser extensions. We have prepared a list of trusted wallets that may be a good place to start. 
+A wallet is like an online bank account for Ethereum. There are dozens of different wallets to choose from—mobile, desktop, or even browser extensions. Our curated list of trusted wallets is a good place to start. 
 
 <ButtonLink to="/wallets/find-wallet/">
   Find a wallet
