@@ -47,3 +47,7 @@ Once you have saved your recovery phrase you should see your wallet dashboard wi
 **Is having my own wallet safer than keeping my funds on an exchange?**
 
 - Yes, this is a much safer option because nobody else will have access to your funds. There are unfortunately many examples of failed exchanges that filed for bankrupcy and lost users' savings. Hacks, frozen accounts or blocked withdrawals are some other common risks. Owning a wallet (with a recovery phrase) is the best way to safeguard your assets. 
+
+**If I own an ETH address, do I own the same address on other blockchains?**
+
+- You can use the same address on many popular blockchains (if you have the type of wallet with a recovery phrase). This [list](https://chainlist.org/) will show you which blockchains you can use with the same address. Some blockchains like Bitcoin are completely separate and you will need a different address with a different format. If you have a smart contract wallet you should check its product website for more info on what blockchains are allowed.
