@@ -1,5 +1,5 @@
 ---
-title: Ethereum Guides
+title: Ethereum guides
 description: A collection of practical guides explaining the basics of using crypto for beginners.
 lang: en
 ---
