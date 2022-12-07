@@ -6,7 +6,7 @@ lang: en
 
 # How to: Revoke smart contract access to your crypto funds
 
-With this guide you will learn how to view a list of all smart contracts you have allowed access to your funds and also how to cancel them. 
+This guide will teach you how to view a list of all smart contracts you have allowed access to your funds and how to cancel them.
 
 Sometimes malicious developers build backdoors into smart contracts that will allow access to the funds of unaware users who interact with their projects. What often happens is that such platforms ask the user for permission to spend an **unlimited number of tokens**.
 
