@@ -20,7 +20,7 @@ Proof-of-work is much more energy-hungry because electricity is burned in the mi
 
 Proof-of-work versus proof-of-stake is a contentious topic. [Vitalik Buterin's blog](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) and the debate between Justin Drake and Lyn Alden give a good summary of the arguments.
 
-<iframe width="500" height="300" src="https://www.youtube.com/embed/1m12zgJ42dI" title="The PoW vs. PoS Debate | Lyn Alden & Justin Drake" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YouTube id="1m12zgJ42dI" />
 
 ## Is proof-of-stake energy efficient? {#is-pos-energy-efficient}
 
