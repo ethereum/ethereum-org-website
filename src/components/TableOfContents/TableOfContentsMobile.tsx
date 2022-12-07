@@ -16,14 +16,9 @@ import { Item, outerListProps } from "./utils"
 export interface IPropsTableOfContentsMobile {
   items?: Array<Item>
   maxDepth?: number
-  className?: string
 }
 
-const Mobile: React.FC<IPropsTableOfContentsMobile> = ({
-  items,
-  maxDepth,
-  className,
-}) => {
+const Mobile: React.FC<IPropsTableOfContentsMobile> = ({ items, maxDepth }) => {
   const { getButtonProps, getDisclosureProps, isOpen } = useDisclosure({
     defaultIsOpen: false,
   })
@@ -40,7 +35,6 @@ const Mobile: React.FC<IPropsTableOfContentsMobile> = ({
       borderRadius="4px"
       py={2}
       px={4}
-      className={className}
     >
       <Flex
         color="text200"

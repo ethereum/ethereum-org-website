@@ -29,7 +29,6 @@ export { Item }
 export interface IProps extends BoxProps {
   items: Array<Item>
   maxDepth?: number
-  className?: string
   slug?: string
   editPath?: string
   hideEditButton?: boolean
@@ -39,7 +38,6 @@ export interface IProps extends BoxProps {
 const TableOfContents: React.FC<IProps> = ({
   items,
   maxDepth = 1,
-  className,
   slug,
   editPath,
   hideEditButton = false,
@@ -77,7 +75,7 @@ const TableOfContents: React.FC<IProps> = ({
     return null
   }
   if (isMobile) {
-    return <Mobile items={items} maxDepth={maxDepth} className={className} />
+    return <Mobile items={items} maxDepth={maxDepth} />
   }
 
   const shouldShowZenModeToggle = slug?.includes("/docs/")
