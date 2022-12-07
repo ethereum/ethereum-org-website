@@ -31,7 +31,7 @@ The first time you open your new wallet you might be asked to choose between cre
 
 ## Step 5: Store your recovery phrase
 
-Some apps will request you to save a recovery phrase. This is extremely important as the person who knows this secret phrase can take control of your account. Never share this with anyone. This phrase should contain 12 randomly generated words (the order of the words matter).
+Some apps will request you to save a secret recovery phrase. Keeping this secret recovery phrase safe is extremely important! Any person who knows this secret recovery phrase can take control of your account. Never share this with anyone. This phrase should contain 12 randomly generated words (the order of the words matters).
 
 Once you have saved your recovery phrase you should see your wallet dashboard with your balance. Check out our guide: [how to use a wallet.](/guides/how-to-use-a-wallet)
 
