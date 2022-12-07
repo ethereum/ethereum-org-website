@@ -22,7 +22,7 @@ If you are new, you can activate the “New to crypto” filter to view only tho
 
 ## Step 3: Download and install your wallet app
 
-Once you have decided on a specific wallet, visit their website, download and install it. All of them should be free. 
+Once you have decided on a specific wallet, visit their website or app store, download and install it. All of them should be free. 
 
 ## Step 4: Open the app and generate or import your Ethereum account
 The first time you open your new wallet you might be asked to choose between creating a new account or importing an existing one. Click on the new account creation. 
