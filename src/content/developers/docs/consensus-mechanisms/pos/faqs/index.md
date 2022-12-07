@@ -134,7 +134,7 @@ Censorship resistance is currently hard to prove. However, unlike proof-of-work,
 
 Yes. Proof-of-stake is vulnerable to 51% attacks, just like proof-of-work. Instead of the attack requiring 51% of the network's hash power, the attack requires 51% of the total staked ETH. An attacker that accumulates 51% of the total stake gets to control the fork-choice algorithm. This enables the attacker to censor certain transactions, do short-range reorgs and extract MEV by reordering blocks in their favor.
 
-- Read more on [attacks on proof-of-stake](src/content/developers/docs/consensus-mechanisms/pos/attack-and-defense)
+- [More on attacks on proof-of-stake](/developers/docs/consensus-mechanisms/pos/attack-and-defense)
 
 ## What is social coordination, and why is it needed? {#what-is-social-coordination}
 
