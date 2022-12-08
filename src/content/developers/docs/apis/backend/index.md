@@ -20,6 +20,14 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 ## Available libraries {#available-libraries}
 
+**Moralis -** **_Enterprise-Grade EVM API Provider._**
+
+- [moralis.io](http://moralis.io)
+- [Documentation](https://docs.moralis.io/)
+- [GitHub](https://github.com/MoralisWeb3)
+- [Discord](https://discord.com/invite/KYswaxwEtg)
+- [Forum](https://forum.moralis.io/)
+
 **Alchemy -** **_Ethereum Development Platform._**
 
 - [alchemy.com](https://www.alchemy.com/)
