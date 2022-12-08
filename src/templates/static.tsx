@@ -238,7 +238,12 @@ const StaticPage = ({
 
 export const staticPageQuery = graphql`
   query StaticPage($languagesToFetch: [String!]!, $relativePath: String) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["components", "common"] }
+      }
+    ) {
       edges {
         node {
           ns

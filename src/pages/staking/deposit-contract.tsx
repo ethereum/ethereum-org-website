@@ -505,7 +505,9 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["src-pages-staking-deposit-contract", "components"] }
+        ns: {
+          in: ["src-pages-staking-deposit-contract", "components", "common"]
+        }
       }
     ) {
       edges {

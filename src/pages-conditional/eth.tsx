@@ -522,7 +522,12 @@ export default EthPage
 
 export const query = graphql`
   query EthPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["src-pages-conditional-eth", "components", "common"] }
+      }
+    ) {
       edges {
         node {
           ns

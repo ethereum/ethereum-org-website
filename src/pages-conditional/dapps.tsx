@@ -1457,7 +1457,12 @@ export const editorImage = graphql`
 
 export const query = graphql`
   query DappsPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["src-pages-conditional-dapps", "components", "common"] }
+      }
+    ) {
       edges {
         node {
           ns

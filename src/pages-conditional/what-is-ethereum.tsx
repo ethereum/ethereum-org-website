@@ -956,7 +956,14 @@ export const calloutImage = graphql`
 
 export const query = graphql`
   query WhatIsEthereum($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: {
+          in: ["src-pages-conditional-what-is-ethereum", "components", "common"]
+        }
+      }
+    ) {
       edges {
         node {
           ns

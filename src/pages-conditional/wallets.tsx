@@ -479,7 +479,12 @@ export const listImage = graphql`
 
 export const query = graphql`
   query WalletsPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["src-pages-conditional-wallets", "components", "common"] }
+      }
+    ) {
       edges {
         node {
           ns

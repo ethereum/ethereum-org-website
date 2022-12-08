@@ -158,6 +158,7 @@ export const query = graphql`
           in: [
             "src-pages-contributing-translation-program-contributors"
             "components"
+            "common"
           ]
         }
       }
