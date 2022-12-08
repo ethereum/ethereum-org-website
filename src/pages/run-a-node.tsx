@@ -397,10 +397,10 @@ const StrongParagraph = styled.p`
 
 interface RunANodeCard {
   image: ComponentType<SVGProps<SVGElement>>
-  title: TranslationKey
-  preview: TranslationKey
-  body: Array<TranslationKey>
-  alt: TranslationKey
+  title: string
+  preview: string
+  body: Array<string>
+  alt: string
 }
 
 const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
@@ -427,58 +427,64 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
   const whyRunANodeCards: Array<RunANodeCard> = [
     {
       image: PrivacyGlyph,
-      title: "page-run-a-node-privacy-title",
-      preview: "page-run-a-node-privacy-preview",
+      title: t("page-run-a-node-privacy-title"),
+      preview: t("page-run-a-node-privacy-preview"),
       body: [
-        "page-run-a-node-privacy-1",
-        "page-run-a-node-privacy-2",
-        "page-run-a-node-privacy-3",
+        t("page-run-a-node-privacy-1"),
+        t("page-run-a-node-privacy-2"),
+        t("page-run-a-node-privacy-3"),
       ],
-      alt: "page-run-a-node-glyph-alt-privacy",
+      alt: t("page-run-a-node-glyph-alt-privacy"),
     },
     {
       image: MegaphoneGlyph,
-      title: "page-run-a-node-censorship-resistance-title",
-      preview: "page-run-a-node-censorship-resistance-preview",
+      title: t("page-run-a-node-censorship-resistance-title"),
+      preview: t("page-run-a-node-censorship-resistance-preview"),
       body: [
-        "page-run-a-node-censorship-resistance-1",
-        "page-run-a-node-censorship-resistance-2",
+        t("page-run-a-node-censorship-resistance-1"),
+        t("page-run-a-node-censorship-resistance-2"),
       ],
-      alt: "page-run-a-node-glyph-alt-censorship-resistance",
+      alt: t("page-run-a-node-glyph-alt-censorship-resistance"),
     },
     {
       image: EarthGlyph,
-      title: "page-run-a-node-participate-title",
-      preview: "page-run-a-node-participate-preview",
-      body: ["page-run-a-node-participate-1", "page-run-a-node-participate-2"],
-      alt: "page-run-a-node-glyph-alt-earth",
+      title: t("page-run-a-node-participate-title"),
+      preview: t("page-run-a-node-participate-preview"),
+      body: [
+        t("page-run-a-node-participate-1"),
+        t("page-run-a-node-participate-2"),
+      ],
+      alt: t("page-run-a-node-glyph-alt-earth"),
     },
     {
       image: DecentralizationGlyph,
-      title: "page-run-a-node-decentralized-title",
-      preview: "page-run-a-node-decentralized-preview",
+      title: t("page-run-a-node-decentralized-title"),
+      preview: t("page-run-a-node-decentralized-preview"),
       body: [
-        "page-run-a-node-decentralized-1",
-        "page-run-a-node-decentralized-2",
+        t("page-run-a-node-decentralized-1"),
+        t("page-run-a-node-decentralized-2"),
       ],
-      alt: "page-run-a-node-glyph-alt-decentralization",
+      alt: t("page-run-a-node-glyph-alt-decentralization"),
     },
     {
       image: VoteGlyph,
-      title: "page-run-a-node-voice-your-choice-title",
-      preview: "page-run-a-node-voice-your-choice-preview",
+      title: t("page-run-a-node-voice-your-choice-title"),
+      preview: t("page-run-a-node-voice-your-choice-preview"),
       body: [
-        "page-run-a-node-voice-your-choice-1",
-        "page-run-a-node-voice-your-choice-2",
+        t("page-run-a-node-voice-your-choice-1"),
+        t("page-run-a-node-voice-your-choice-2"),
       ],
-      alt: "page-run-a-node-glyph-alt-vote",
+      alt: t("page-run-a-node-glyph-alt-vote"),
     },
     {
       image: SovereigntyGlyph,
-      title: "page-run-a-node-sovereignty-title",
-      preview: "page-run-a-node-sovereignty-preview",
-      body: ["page-run-a-node-sovereignty-1", "page-run-a-node-sovereignty-2"],
-      alt: "page-run-a-node-glyph-alt-sovereignty",
+      title: t("page-run-a-node-sovereignty-title"),
+      preview: t("page-run-a-node-sovereignty-preview"),
+      body: [
+        t("page-run-a-node-sovereignty-1"),
+        t("page-run-a-node-sovereignty-2"),
+      ],
+      alt: t("page-run-a-node-glyph-alt-sovereignty"),
     },
   ]
 
@@ -557,16 +563,16 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
           {whyRunANodeCards.map(({ image, title, preview, body, alt }, idx) => {
             return (
               <ExpandableCard
-                contentPreview={<Translation id={preview} />}
-                title={t(title)}
+                contentPreview={preview}
+                title={title}
                 // TODO: make a11y svgs (using <title>)
                 // @ts-ignore
-                alt={t(alt)}
+                alt={alt}
                 svg={image}
                 key={idx}
               >
                 {body.map((item, idx) => (
-                  <p key={idx}>{<Translation id={item} />}</p>
+                  <p key={idx}>{item}</p>
                 ))}
               </ExpandableCard>
             )

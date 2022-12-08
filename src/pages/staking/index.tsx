@@ -25,7 +25,6 @@ import StakingHierarchy from "../../components/Staking/StakingHierarchy"
 import StakingHomeTableOfContents from "../../components/Staking/StakingHomeTableOfContents"
 import StakingCommunityCallout from "../../components/Staking/StakingCommunityCallout"
 
-import { TranslationKey } from "../../utils/translations"
 import { getImage } from "../../utils/image"
 import type { Context } from "../../types"
 
@@ -220,32 +219,12 @@ const StyledCard = styled(Card)`
 `
 
 type BenefitsType = {
-  title: TranslationKey
+  title: string
   emoji: string
-  description: TranslationKey
-  linkText?: TranslationKey
+  description: string
+  linkText?: string
   to?: string
 }
-
-const benefits: Array<BenefitsType> = [
-  {
-    title: "page-staking-benefits-1-title",
-    emoji: "💰",
-    description: "page-staking-benefits-1-description",
-  },
-  {
-    title: "page-staking-benefits-2-title",
-    emoji: ":shield:",
-    description: "page-staking-benefits-2-description",
-  },
-  {
-    title: "page-staking-benefits-3-title",
-    emoji: "🍃",
-    description: "page-staking-benefits-3-description",
-    linkText: "page-staking-benefits-3-link",
-    to: "/energy-consumption",
-  },
-]
 
 const StakingPage = ({
   data,
@@ -261,12 +240,32 @@ const StakingPage = ({
     buttons: [],
   }
 
+  const benefits: Array<BenefitsType> = [
+    {
+      title: t("page-staking-benefits-1-title"),
+      emoji: "💰",
+      description: t("page-staking-benefits-1-description"),
+    },
+    {
+      title: t("page-staking-benefits-2-title"),
+      emoji: ":shield:",
+      description: t("page-staking-benefits-2-description"),
+    },
+    {
+      title: t("page-staking-benefits-3-title"),
+      emoji: "🍃",
+      description: t("page-staking-benefits-3-description"),
+      linkText: t("page-staking-benefits-3-link"),
+      to: "/energy-consumption",
+    },
+  ]
+
   const dropdownLinks: ButtonDropdownList = {
-    text: "Staking Options" as TranslationKey,
+    text: "Staking Options",
     ariaLabel: "Staking options dropdown menu",
     items: [
       {
-        text: "page-staking-dropdown-home",
+        text: t("page-staking-dropdown-home"),
         to: "/staking/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -275,7 +274,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "page-staking-dropdown-solo",
+        text: t("page-staking-dropdown-solo"),
         to: "/staking/solo/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -284,7 +283,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "page-staking-dropdown-saas",
+        text: t("page-staking-dropdown-saas"),
         to: "/staking/saas/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -293,7 +292,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "page-staking-dropdown-pools",
+        text: t("page-staking-dropdown-pools"),
         to: "/staking/pools/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -304,7 +303,6 @@ const StakingPage = ({
     ],
   }
 
-  // TODO: use t() for these strings
   const tocItems = {
     whatIsStaking: {
       id: "what-is-staking",
@@ -379,12 +377,12 @@ const StakingPage = ({
               {benefits.map(
                 ({ title, description, emoji, linkText, to }, idx) => (
                   <StyledCard
-                    title={t(title)}
+                    title={title}
                     emoji={emoji}
                     key={idx}
-                    description={t(description)}
+                    description={description}
                   >
-                    {to && linkText && <Link to={to}>{t(linkText)}</Link>}
+                    {to && linkText && <Link to={to}>{linkText}</Link>}
                   </StyledCard>
                 )
               )}

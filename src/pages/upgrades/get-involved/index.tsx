@@ -4,7 +4,6 @@ import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { shuffle } from "lodash"
-import { TranslationKey } from "../../../utils/translations"
 import Card from "../../../components/Card"
 import Leaderboard, { Person } from "../../../components/Leaderboard"
 import CalloutBanner from "../../../components/CalloutBanner"
@@ -169,7 +168,7 @@ type Client = {
   name: string
   background: string
   description: ReactNode
-  alt: TranslationKey
+  alt: string
   url: string
   image: (isDarkTheme?: boolean) => ImageDataLike | null
   githubUrl: string
@@ -210,7 +209,7 @@ const GetInvolvedPage = ({
         description: (
           <Translation id="page-upgrades-get-involved-written-java" />
         ),
-        alt: "consensus-client-besu-logo-alt",
+        alt: t("consensus-client-besu-logo-alt"),
         url: "https://besu.hyperledger.org/en/stable/HowTo/Get-Started/Install-Binaries/",
         image: () => data.besu,
         githubUrl: "https://github.com/hyperledger/besu",
@@ -219,7 +218,7 @@ const GetInvolvedPage = ({
         name: "Erigon",
         background: "#3A4B56",
         description: <Translation id="page-upgrades-get-involved-written-go" />,
-        alt: "consensus-client-erigon-logo-alt",
+        alt: t("consensus-client-erigon-logo-alt"),
         url: "https://github.com/ledgerwatch/erigon#erigon",
         image: () => data.erigon,
         githubUrl: "https://github.com/ledgerwatch/erigon",
@@ -228,7 +227,7 @@ const GetInvolvedPage = ({
         name: "Geth",
         background: "#303D4E",
         description: <Translation id="page-upgrades-get-involved-written-go" />,
-        alt: "consensus-client-geth-logo-alt",
+        alt: t("consensus-client-geth-logo-alt"),
         url: "https://geth.ethereum.org/docs/getting-started",
         image: () => data.geth,
         githubUrl: "https://github.com/ethereum/go-ethereum",
@@ -239,7 +238,7 @@ const GetInvolvedPage = ({
         description: (
           <Translation id="page-upgrades-get-involved-written-c-sharp" />
         ),
-        alt: "consensus-client-lodestar-logo-alt",
+        alt: t("consensus-client-lodestar-logo-alt"),
         url: "https://docs.nethermind.io/nethermind/",
         image: () => data.nethermind,
         githubUrl: "https://github.com/NethermindEth/nethermind",
@@ -251,7 +250,7 @@ const GetInvolvedPage = ({
         name: "Prysm",
         background: "#23292e",
         description: <Translation id="page-upgrades-get-involved-written-go" />,
-        alt: "consensus-client-prysm-logo-alt",
+        alt: t("consensus-client-prysm-logo-alt"),
         url: "https://docs.prylabs.network/docs/getting-started/",
         image: () => data.prysm,
         githubUrl: "https://github.com/prysmaticlabs/prysm",
@@ -262,7 +261,7 @@ const GetInvolvedPage = ({
         description: (
           <Translation id="page-upgrades-get-involved-written-rust" />
         ),
-        alt: "consensus-client-lighthouse-logo-alt",
+        alt: t("consensus-client-lighthouse-logo-alt"),
         url: "https://lighthouse-book.sigmaprime.io/",
         image: (isDarkTheme) =>
           isDarkTheme ? data.lighthouseDark : data.lighthouseLight,
@@ -274,7 +273,7 @@ const GetInvolvedPage = ({
         description: (
           <Translation id="page-upgrades-get-involved-written-java" />
         ),
-        alt: "consensus-client-teku-logo-alt",
+        alt: t("consensus-client-teku-logo-alt"),
         url: "https://pegasys.tech/teku",
         image: (isDarkTheme) => (isDarkTheme ? data.tekuLight : data.tekuDark),
         githubUrl: "https://github.com/ConsenSys/teku",
@@ -285,7 +284,7 @@ const GetInvolvedPage = ({
         description: (
           <Translation id="page-upgrades-get-involved-written-javascript" />
         ),
-        alt: "consensus-client-lodestar-logo-alt",
+        alt: t("consensus-client-lodestar-logo-alt"),
         url: "https://lodestar.chainsafe.io/",
         image: () => data.lodestar,
         githubUrl: "https://github.com/ChainSafe/lodestar",
@@ -298,7 +297,7 @@ const GetInvolvedPage = ({
         description: (
           <Translation id="page-upgrades-get-involved-written-nim" />
         ),
-        alt: "consensus-client-nimbus-logo-alt",
+        alt: t("consensus-client-nimbus-logo-alt"),
         url: "https://nimbus.team/",
         image: () => data.nimbus,
         githubUrl: "https://github.com/status-im/nimbus-eth2",
@@ -376,7 +375,7 @@ const GetInvolvedPage = ({
             image={getImage(client.image(isDarkTheme))!}
             name={client.name}
             description={client.description}
-            alt={t(client.alt)}
+            alt={client.alt}
             githubUrl={client.githubUrl}
             hideStars={true}
           >

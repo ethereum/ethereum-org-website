@@ -4,6 +4,7 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
@@ -28,7 +29,7 @@ import Roadmap from "../components/Roadmap"
 import UpgradeTableOfContents, {
   Item as ItemTableOfContents,
 } from "../components/UpgradeTableOfContents"
-import TableOfContents from "../components/TableOfContents"
+import TableOfContents, { Item } from "../components/TableOfContents"
 import Translation from "../components/Translation"
 import SectionNav from "../components/SectionNav"
 import {
@@ -307,6 +308,8 @@ const UseCasePage = ({
   data: { siteData, pageData: mdx },
   pageContext,
 }: PageProps<Queries.UseCasePageQuery, Context>) => {
+  const { t } = useTranslation()
+
   if (!siteData || !mdx?.frontmatter)
     throw new Error(
       "UseCases page template query does not return expected values"
@@ -315,7 +318,7 @@ const UseCasePage = ({
     throw new Error("Required `title` property missing for use-cases template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
-  const tocItems = mdx.tableOfContents?.items
+  const tocItems = mdx.tableOfContents?.items as Array<Item>
   const summaryPoints = getSummaryPoints(mdx.frontmatter)
 
   const { editContentUrl } = siteData.siteMetadata || {}
@@ -339,27 +342,27 @@ const UseCasePage = ({
   }
 
   const dropdownLinks: ButtonDropdownList = {
-    text: "template-usecase-dropdown",
-    ariaLabel: "template-usecase-dropdown-aria",
+    text: t("template-usecase-dropdown"),
+    ariaLabel: t("template-usecase-dropdown-aria"),
     items: [
       {
-        text: "template-usecase-dropdown-defi",
+        text: t("template-usecase-dropdown-defi"),
         to: "/defi/",
       },
       {
-        text: "template-usecase-dropdown-nft",
+        text: t("template-usecase-dropdown-nft"),
         to: "/nft/",
       },
       {
-        text: "template-usecase-dropdown-dao",
+        text: t("template-usecase-dropdown-dao"),
         to: "/dao/",
       },
       {
-        text: "template-usecase-dropdown-social-networks",
+        text: t("template-usecase-dropdown-social-networks"),
         to: "/social-networks/",
       },
       {
-        text: "template-usecase-dropdown-identity",
+        text: t("template-usecase-dropdown-identity"),
         to: "/decentralized-identity/",
       },
     ],

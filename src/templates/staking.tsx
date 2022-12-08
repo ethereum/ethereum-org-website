@@ -360,11 +360,11 @@ const StakingPage = ({
   const { summaryPoints } = mdx.frontmatter
 
   const dropdownLinks: ButtonDropdownList = {
-    text: "Staking Options" as TranslationKey,
+    text: "Staking Options",
     ariaLabel: "Staking options dropdown menu",
     items: [
       {
-        text: "Staking home" as TranslationKey,
+        text: "Staking home",
         to: "/staking/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -373,7 +373,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "Solo staking" as TranslationKey,
+        text: "Solo staking",
         to: "/staking/solo/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -382,7 +382,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "Staking as a service" as TranslationKey,
+        text: "Staking as a service",
         to: "/staking/saas/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -391,7 +391,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "Pooled staking" as TranslationKey,
+        text: "Pooled staking",
         to: "/staking/pools/",
         matomo: {
           eventCategory: `Staking dropdown`,

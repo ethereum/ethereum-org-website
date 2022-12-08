@@ -12,7 +12,6 @@ import Translation from "./Translation"
 
 // Utils
 import { useOnClickOutside } from "../hooks/useOnClickOutside"
-import { TranslationKey } from "../utils/translations"
 import { trackCustomEvent } from "../utils/matomo"
 
 const Container = styled.div`
@@ -97,7 +96,7 @@ const NakedNavLink = styled.div`
 `
 
 export interface ListItem {
-  text: TranslationKey
+  text: string
   to?: string
   matomo?: {
     eventCategory: string
@@ -108,7 +107,7 @@ export interface ListItem {
 }
 
 export interface List {
-  text: TranslationKey
+  text: string
   ariaLabel: string
   items: Array<ListItem>
 }
@@ -136,7 +135,7 @@ const ButtonDropdown: React.FC<IProps> = ({ list, className }) => {
     <Container
       className={className}
       ref={ref}
-      aria-label={`Select ${t(list.text)}`}
+      aria-label={`Select ${list.text}`}
     >
       <Button
         variant="outline"

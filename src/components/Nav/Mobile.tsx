@@ -322,10 +322,8 @@ const MobileNavMenu: React.FC<IProps> = ({
           {Object.keys(linkSections).map((sectionKey, idx) => {
             const section = linkSections[sectionKey]
             return section.items ? (
-              <NavListItem key={idx} aria-label={`Select ${t(section.text)}`}>
-                <SectionTitle>
-                  <Translation id={section.text} />
-                </SectionTitle>
+              <NavListItem key={idx} aria-label={`Select ${section.text}`}>
+                <SectionTitle>{section.text}</SectionTitle>
                 <SectionItems>
                   {section.items.map((item, idx) =>
                     item.items ? (
@@ -337,7 +335,7 @@ const MobileNavMenu: React.FC<IProps> = ({
                               to={item.to}
                               isPartiallyActive={item.isPartiallyActive}
                             >
-                              <Translation id={item.text} />
+                              {item.text}
                             </StyledNavLink>
                           </SectionItem>
                         ))}
@@ -348,7 +346,7 @@ const MobileNavMenu: React.FC<IProps> = ({
                           to={item.to}
                           isPartiallyActive={item.isPartiallyActive}
                         >
-                          <Translation id={item.text} />
+                          {item.text}
                         </StyledNavLink>
                       </SectionItem>
                     )
@@ -361,7 +359,7 @@ const MobileNavMenu: React.FC<IProps> = ({
                   to={section.to}
                   isPartiallyActive={section.isPartiallyActive}
                 >
-                  <Translation id={section.text} />
+                  {section.text}
                 </NavLink>
               </NavListItem>
             )

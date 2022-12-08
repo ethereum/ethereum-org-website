@@ -1,7 +1,6 @@
 // Library imports
 import React from "react"
 import { Grid } from "@chakra-ui/react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
 // Component imports
 import ProductCard from "./ProductCard"
 import Translation from "./Translation"
@@ -12,7 +11,6 @@ import { LearningToolsCardGridProps } from "../types"
 const LearningToolsCardGrid: React.FC<LearningToolsCardGridProps> = ({
   category,
 }) => {
-  const { t } = useTranslation()
   return (
     <Grid
       templateColumns="repeat(auto-fill, minmax(min(100%, 280px), 1fr))"
@@ -26,7 +24,7 @@ const LearningToolsCardGrid: React.FC<LearningToolsCardGridProps> = ({
             key={name}
             background={background}
             url={url}
-            alt={t(alt)}
+            alt={alt}
             image={image}
             name={name}
             subjects={subjects}

@@ -63,10 +63,10 @@ export type ImageProp = OptionalImageProp | ForbidOptionalImageProp
 
 export interface LearningTool {
   name: string
-  description: TranslationKey
+  description: string
   url: string
   image: IGatsbyImageData | string
-  alt: TranslationKey
+  alt: string
   background: string
   subjects: Array<string>
   locales?: Array<Lang>

@@ -1,9 +1,8 @@
 import React, { useState, createRef, useContext } from "react"
 import styled from "@emotion/styled"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import { useI18next } from "gatsby-plugin-react-i18next"
 import { motion } from "framer-motion"
 
-import Translation from "../Translation"
 import Icon from "../Icon"
 import Link from "../Link"
 
@@ -140,7 +139,6 @@ const NavDropdown: React.FC<IProps> & {
   Title: typeof Title
 } = ({ children, section, hasSubNav }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const { t } = useTranslation()
   const { language } = useI18next()
   const ref = createRef<HTMLLIElement>()
 
@@ -175,7 +173,7 @@ const NavDropdown: React.FC<IProps> & {
     <DropdownContext.Provider
       value={{ isOpen, toggle, close, tabInteractionHandler }}
     >
-      <NavListItem ref={ref} aria-label={t(ariaLabel)}>
+      <NavListItem ref={ref} aria-label={ariaLabel}>
         <DropdownTitle
           dir={direction}
           onClick={() => toggle()}
@@ -184,7 +182,7 @@ const NavDropdown: React.FC<IProps> & {
           role="button"
           aria-expanded={isOpen ? "true" : "false"}
         >
-          <Translation id={section.text} />
+          {section.text}
           <StyledIcon isOpen={isOpen} name="chevronDown" />
         </DropdownTitle>
 

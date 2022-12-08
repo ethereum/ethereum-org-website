@@ -3,7 +3,6 @@ import styled from "@emotion/styled"
 import { useI18next } from "gatsby-plugin-react-i18next"
 
 import NavDropdown from "./Dropdown"
-import Translation from "../Translation"
 import { getDirection } from "../../utils/translations"
 
 import { Lang } from "../../utils/languages"
@@ -38,7 +37,7 @@ const Menu: React.FC<IProps> = ({ path, sections }) => {
             isLast={index === useEthereum.items.length - 1}
           >
             <NavDropdown.Link to={item.to} isPartiallyActive={false}>
-              <Translation id={item.text} />
+              {item.text}
             </NavDropdown.Link>
           </NavDropdown.Item>
         ))}
@@ -53,7 +52,7 @@ const Menu: React.FC<IProps> = ({ path, sections }) => {
                 {(section.items || []).map((item, index) => (
                   <NavDropdown.Item key={index}>
                     <NavDropdown.Link to={item.to} isPartiallyActive={false}>
-                      <Translation id={item.text} />
+                      {item.text}
                     </NavDropdown.Link>
                   </NavDropdown.Item>
                 ))}
@@ -68,7 +67,7 @@ const Menu: React.FC<IProps> = ({ path, sections }) => {
                 isLast={index === (protocol.items || []).length - 1}
               >
                 <NavDropdown.Link to={item.to} isPartiallyActive={false}>
-                  <Translation id={item.text} />
+                  {item.text}
                 </NavDropdown.Link>
               </NavDropdown.Item>
             ))}
@@ -91,7 +90,7 @@ const Menu: React.FC<IProps> = ({ path, sections }) => {
                 isLast={index === section.items.length - 1}
               >
                 <NavDropdown.Link to={item.to} isPartiallyActive={false}>
-                  <Translation id={item.text} />
+                  {item.text}
                 </NavDropdown.Link>
               </NavDropdown.Item>
             ))}

@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
-import { useI18next } from "gatsby-plugin-react-i18next"
+import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
@@ -312,28 +312,10 @@ const TitleCard = styled.div`
   }
 `
 
-const dropdownLinks: ButtonDropdownList = {
-  text: "page-upgrades-upgrades-guide",
-  ariaLabel: "page-upgrades-upgrades-aria-label",
-  items: [
-    {
-      text: "page-upgrades-upgrades-beacon-chain",
-      to: "/upgrades/beacon-chain/",
-    },
-    {
-      text: "page-upgrades-upgrades-docking",
-      to: "/upgrades/merge/",
-    },
-    {
-      text: "page-upgrades-shard-title",
-      to: "/upgrades/sharding/",
-    },
-  ],
-}
-
 const UpgradePage = ({
   data: { mdx },
 }: PageProps<Queries.UpgradePageQuery, Context>) => {
+  const { t } = useTranslation()
   const { language } = useI18next()
 
   if (!mdx?.frontmatter || !mdx.parent)
@@ -356,6 +338,25 @@ const UpgradePage = ({
   const summaryPoints = getSummaryPoints(mdx.frontmatter)
 
   const slug = mdx.fields?.slug || ""
+
+  const dropdownLinks: ButtonDropdownList = {
+    text: t("page-upgrades-upgrades-guide"),
+    ariaLabel: t("page-upgrades-upgrades-aria-label"),
+    items: [
+      {
+        text: t("page-upgrades-upgrades-beacon-chain"),
+        to: "/upgrades/beacon-chain/",
+      },
+      {
+        text: t("page-upgrades-upgrades-docking"),
+        to: "/upgrades/merge/",
+      },
+      {
+        text: t("page-upgrades-shard-title"),
+        to: "/upgrades/sharding/",
+      },
+    ],
+  }
 
   return (
     <Container>

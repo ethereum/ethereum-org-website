@@ -4,8 +4,6 @@ import { AspectRatio, Box, chakra, Icon } from "@chakra-ui/react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 // Component imports
 import Translation from "./Translation"
-// Utility imports
-import { TranslationKey } from "../utils/translations"
 // SVG imports
 import InfographicBg from "../assets/upgrades/merge-infographic-bg.svg"
 
@@ -17,14 +15,12 @@ const Text = chakra("text", {
   },
 })
 
-export type StringGetter = (key: TranslationKey) => string
+export interface SvgProps {}
 
-export interface SvgProps {
-  getString: StringGetter
-}
-
-const SvgText: React.FC<SvgProps> = ({ getString }) => {
+const SvgText: React.FC<SvgProps> = () => {
+  const { t } = useTranslation()
   const [sm, lg] = ["7px", "8px"]
+
   return (
     <Icon
       position="absolute"
@@ -38,19 +34,19 @@ const SvgText: React.FC<SvgProps> = ({ getString }) => {
       aria-hidden="true"
     >
       <Text x="2%" y="35%" fontSize={lg}>
-        ⛏ {getString("docs-nav-proof-of-work")}
+        ⛏ {t("docs-nav-proof-of-work")}
       </Text>
       <Text x="47%" y="35%" fontSize={lg}>
-        🌱 {getString("docs-nav-proof-of-stake")}
+        🌱 {t("docs-nav-proof-of-stake")}
       </Text>
       <Text x="11%" y="70%" fontSize={sm}>
-        🚀 {getString("beacon-chain")}
+        🚀 {t("beacon-chain")}
       </Text>
       <Text x="43%" y="12.5%" fontSize={sm}>
-        🐼 {getString("page-upgrades-get-involved-ethresearch-2")}
+        🐼 {t("page-upgrades-get-involved-ethresearch-2")}
       </Text>
       <Text x="63%" y="95%" fontSize={sm}>
-        🌳 {getString("page-upgrades-get-involved-ethresearch-1")}
+        🌳 {t("page-upgrades-get-involved-ethresearch-1")}
       </Text>
     </Icon>
   )
@@ -62,7 +58,6 @@ export interface IProps {
 
 const MergeInfographic: React.FC<IProps> = ({ className }) => {
   const { t } = useTranslation()
-  const getString: StringGetter = (id: TranslationKey) => t(id)
 
   return (
     <AspectRatio
@@ -103,7 +98,7 @@ const MergeInfographic: React.FC<IProps> = ({ className }) => {
         >
           <Translation id="page-upgrades-merge-infographic-el" />
         </Box>
-        <SvgText getString={getString} />
+        <SvgText />
         <Background
           aria-hidden="true"
           position="absolute"
