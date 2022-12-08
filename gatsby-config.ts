@@ -251,7 +251,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: path.resolve(`./i18n/locales`),
+        path: path.resolve(`./i18n/namespaces`),
         name: `locale`,
       },
     },

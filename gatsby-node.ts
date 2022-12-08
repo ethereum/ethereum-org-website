@@ -284,7 +284,7 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
             component: path.resolve(`src/templates/${template}.tsx`),
             context: {
               language: lang,
-              languagesToFetch: [lang, defaultLanguage],
+              languagesToFetch: [lang],
               slug: langSlug,
               ignoreTranslationBanner: isLegal,
               isLegal: isLegal,
@@ -312,7 +312,7 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
       component: path.resolve(`src/templates/${template}.tsx`),
       context: {
         language,
-        languagesToFetch: [language, defaultLanguage],
+        languagesToFetch: [language],
         slug,
         isOutdated: !!node.fields.isOutdated,
         isDefaultLang: language === defaultLanguage,
@@ -362,7 +362,7 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
           component: path.resolve(`src/pages-conditional/${page}.tsx`),
           context: {
             language: lang,
-            languagesToFetch: [lang, defaultLanguage],
+            languagesToFetch: [lang],
             slug,
             isContentEnglish,
             isOutdated,
@@ -416,7 +416,7 @@ export const onCreatePage: GatsbyNode<any, Context>["onCreatePage"] = async ({
       ...page,
       context: {
         ...page.context,
-        languagesToFetch: [language, defaultLanguage],
+        languagesToFetch: [language],
         isOutdated,
         //display TranslationBanner for translation-component pages that are still in English
         isContentEnglish,
