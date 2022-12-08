@@ -46,7 +46,7 @@ As mentioned, anyone can call public functions in your smart contract once it is
 
 **`require()`**: `require` are defined at the start of functions and ensures predefined conditions are met before the called function is executed. A `require` statement can be used to validate user inputs, check state variables, or authenticate the identity of the calling account before progressing with a function.
 
-**`assert()`**: `assert()` is used to detect internal errors and check for violations of “invariants” in your code. An invariant is a logical assertion about a contract’s state that should hold true for all function executions. An example invariant is the maximium total supply or balance of a token contract. Using `assert()` ensures that your contract never reaches a vulnerable state, and if it does, all changes to state variables are rolled back.
+**`assert()`**: `assert()` is used to detect internal errors and check for violations of “invariants” in your code. An invariant is a logical assertion about a contract’s state that should hold true for all function executions. An example invariant is the maximum total supply or balance of a token contract. Using `assert()` ensures that your contract never reaches a vulnerable state, and if it does, all changes to state variables are rolled back.
 
 **`revert()`**: `revert()` can be used in an if-else statement that triggers an exception if the required condition is not satisfied. The sample contract below uses `revert()` to guard the execution of functions:
 

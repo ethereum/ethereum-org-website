@@ -9718,6 +9718,33 @@
         "doc",
         "ideas"
       ]
+    },
+    {
+      "login": "aguzmant103",
+      "name": "aguzmant103",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67167307?v=4",
+      "profile": "https://github.com/aguzmant103",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "soheil555",
+      "name": "Soheil",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22212139?v=4",
+      "profile": "https://soheil.vercel.app/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "metadiver",
+      "name": "metadiver.eth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75746881?v=4",
+      "profile": "http://linktr.ee/metadiver",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
