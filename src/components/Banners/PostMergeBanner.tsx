@@ -14,7 +14,6 @@ const PostMergeBanner: React.FC<IProps> = ({ translationString }) => (
     as={BannerNotification}
     shouldShow={true}
     zIndex={1}
-    justifyContent="center"
     textAlign="center"
     sx={{
       a: {
