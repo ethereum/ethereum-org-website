@@ -75,7 +75,7 @@ Your address represents you on all Ethereum projects. You will not need to regis
 
 **Can I use the same address on multiple devices?**
 
-- Yes you can use the same address on multiple devices. Wallets are technically only an interface to show you your balance and to make transactions, your wallets are not store inside the wallet, but on the blockchain.
+- Yes you can use the same address on multiple devices. Wallets are technically only an interface to show you your balance and to make transactions, your account isn't stored inside the wallet, but on the blockchain.
 
 **I have not received the crypto, where can I check the status of a transaction?**
 
