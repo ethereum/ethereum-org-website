@@ -45,7 +45,7 @@ We advise to refresh the revoking tool after few minutes and connect your wallet
 
 <mark>We recommend you never allow projects unlimited access to your tokens and revoke all token allowance access regularly.</mark>
 
-### FAQ:
+### Frequently asked questions
 
 **Does revoking token access also terminate staking, pooling, lending etc?**
 
