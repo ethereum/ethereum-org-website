@@ -67,7 +67,7 @@ Your address represents you on all Ethereum projects. You will not need to regis
 
 <br/><br/>
 
-### FAQ
+### Frequently asked questions
 
 **If I own an ETH address, do I own the same address on other blockchains?**
 
