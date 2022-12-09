@@ -1,4 +1,5 @@
 import React from "react"
+import { Center } from "@chakra-ui/react"
 import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
@@ -28,6 +29,7 @@ import {
   StyledCard,
 } from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
+import QuizWidget from "../components/Quiz/QuizWidget"
 
 import { translateMessageId } from "../utils/translations"
 import { getImage, getSrc } from "../utils/image"
@@ -511,6 +513,11 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
           ))}
         </RightColumn>
       </StyledTwoColumnContent>
+      <Content>
+        <Center w="100%">
+          <QuizWidget quizKey="what-is-ether" />
+        </Center>
+      </Content>
       <Content>
         <FeedbackCard />
       </Content>

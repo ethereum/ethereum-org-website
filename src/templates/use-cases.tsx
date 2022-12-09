@@ -42,6 +42,7 @@ import {
 import Emoji from "../components/OldEmoji"
 import YouTube from "../components/YouTube"
 import FeedbackCard from "../components/FeedbackCard"
+import QuizWidget from "../components/Quiz/QuizWidget"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
@@ -171,6 +172,7 @@ const components = {
   DocLink,
   ExpandableCard,
   YouTube,
+  QuizWidget,
 }
 
 const Title = styled.h1`

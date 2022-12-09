@@ -158,8 +158,6 @@ Atunci când interacționați cu contractele inteligente, nu permiteți limite d
 
 Multe portofele Ethereum oferă „protecție a limitelor” pentru a vă apăra împotriva golirii conturilor.
 
-[Explorați portofelele cu „protecție a limitelor”](/wallets/find-wallet/?filters=has_limits_protection)
-
 <Divider />
 
 ## Escrocherii comune {#common-scams}

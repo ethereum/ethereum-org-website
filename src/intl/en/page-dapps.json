@@ -6,6 +6,7 @@
   "page-dapps-audius-logo-alt": "Audius logo",
   "page-dapps-augur-logo-alt": "Augur logo",
   "page-dapps-axie-infinity-logo-alt": "Axie Infinity logo",
+  "page-dapps-balancer-logo-alt": "Balancer logo",
   "page-dapps-brave-logo-alt": "Brave logo",
   "page-dapps-category-arts": "Art and fashion",
   "page-dapps-category-browsers": "Browsers",
@@ -47,6 +48,7 @@
   "page-dapps-dapp-description-audius": "Decentralized streaming platform. Listens = money for creators, not labels.",
   "page-dapps-dapp-description-augur": "Bet on outcomes of sports, economics, and more world events.",
   "page-dapps-dapp-description-axie-infinity": "Trade and battle creatures called Axies. And earn as you play – available on mobile",
+  "page-dapps-dapp-description-balancer": "Balancer is an automated portfolio manager and trading platform.",
   "page-dapps-dapp-description-brave": "Earn tokens for browsing and support your favorite creators with them.",
   "page-dapps-dapp-description-cent": "A social network where you earn money by posting NFTs.",
   "page-dapps-dapp-description-compound": "Lend your tokens to earn interest and withdraw any time.",
@@ -205,5 +207,7 @@
   "page-dapps-what-are-dapps": "What are dapps?",
   "page-dapps-more-on-defi-button": "More on decentralized finance",
   "page-dapps-more-on-nft-button": "More on tokenised collectibles",
-  "page-dapps-more-on-nft-gaming-button": "More on tokenised in-game items"
+  "page-dapps-more-on-nft-gaming-button": "More on tokenised in-game items",
+  "page-dapps-dapp-description-pwn": "Easy loans backed by any token or NFTs on Ethereum.",
+  "page-dapps-pwn-image-alt": "PWN logo"
 }

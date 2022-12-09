@@ -90,7 +90,7 @@ For the ZK-SNARK protocol to work, creating a Common Reference String (CRS) is n
 
 Some ZK-rollups attempt to solve this problem by using a [multi-party computation ceremony (MPC)](https://zkproof.org/2021/06/30/setup-ceremonies/amp/), involving trusted individuals, to generate public parameters for the ZK-SNARK circuit. Each party contributes some randomness (called "toxic waste") to the construct the CRS, which they must destroy immediately.
 
-Trusted setups are used because they increase the security of the CRS setup. As long as one honest participant destroys their input, the security of the ZK-SNARK system is guaranteed. Still, this approach still requires trusting those involved to delete their sampled randomness and not undermine the system's security guarantees.
+Trusted setups are used because they increase the security of the CRS setup. As long as one honest participant destroys their input, the security of the ZK-SNARK system is guaranteed. Still, this approach requires trusting those involved to delete their sampled randomness and not undermine the system's security guarantees.
 
 Trust assumptions aside, ZK-SNARKs are popular for their small proof sizes and constant-time verification. As proof verification on L1 constitutes the larger cost of operating a ZK-rollup, L2s use ZK-SNARKs to generate proofs that can be verified quickly and cheaply on Mainnet.
 

@@ -10,7 +10,7 @@ lang: zh
 - [钱包问题 #2 - 3 亿美金锁定](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
 - [去中心化自治组织被黑，360 万以太币被盗！ 目前价值超过 10 亿美元](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)
 
-## 先决条件 {#prerequisites}
+## 前置要求 {#prerequisites}
 
 这个章节将介绍智能合约安全问题，以确保您在处理安全问题之前熟悉[智能合约](/developers/docs/smart-contracts/)。
 
@@ -34,7 +34,7 @@ lang: zh
 - Solidity 代码编辑器不会发出任何警告
 - 您的代码有据可查
 
-上面的这些条目是编写智能合约的一个良好的开始，但是在编写代码过程中还有很多要值得注意。 关于更多条目及其详细解释，请参阅[DeFiSafety 提供的过程质量检查清单](https://docs.defisafety.com/review-process-documentation/process-quality-audit-process)。 [DefiSafety](https://defisafety.com/) 是一个对各种大型的公开以太坊去中心化应用程序进行评论的非官方公共服务提供者。 DeFiSafete 对项目的安全评级等级的一部分包括该项目是否遵守了质量检查表。 遵循这些审核过程：
+上面的这些条目是编写智能合约的一个良好的开始，但是在编写代码过程中还有很多要值得注意。 关于更多条目及其详细解释，请参阅[DeFiSafety 提供的过程质量检查清单](https://docs.defisafety.com/review-process-documentation/process-quality-audit-process)。 [DefiSafety](https://defisafety.com/) 是一个非官方的公共服务，发布对各种大型公共以太坊去中心化应用程序的评论。 DeFiSafete 对项目的安全评级等级的一部分包括该项目是否遵守了质量检查表。 遵循这些审核过程：
 
 - 通过可复现的自动化测试，产生更安全的代码
 - 审查员将能够更有效地审查您的项目
@@ -258,14 +258,14 @@ contract NoLongerAVictim {
 
 **有关形式验证的信息**
 
-- [智能合约的形式验证如何工作](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) _July 20, 2018 - Brian Marick_
+- [智能合约的形式验证如何工作](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) _2018 年 7 月 20 日 - Brian Marick_
 - [形式验证如何确保智能合约无懈可击](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1) _2018 年 1 月 29 日 - Bernard Mueller_
 
 ### 使用工具 {#using-tools}
 
 智能合约安全分析最受欢迎的两个工具是：
 
-- [Slither](https://github.com/crytic/slither) by [Trail of Bits](https://www.trailofbits.com/)（托管版本：[Crytic](https://crytic.io/)）
+- [Slither](https://github.com/crytic/slither) 来自 [Trail of Bits](https://www.trailofbits.com/)（托管版本：[Crytic](https://crytic.io/)）
 - [Mythril](https://github.com/ConsenSys/mythril) 来自 [ConsenSys](https://consensys.net/)（托管版本：[MythX](https://mythx.io/)）
 
 两者都是分析代码和报告问题的实用工具。 每个人都有一个 [commercial] 托管版本，但也可以免费在本地运行。 下面是如何运行 Slither 的一个快速示例，这个示例是在方便的 Docker 映像 `trailofbits/eth-security-toolbox` 中提供的。 如果您还没有安装 ，您将需要 [安装 Docker](https://docs.docker.com/get-docker/)。
@@ -302,7 +302,7 @@ Slither 已经在这里确定了重新进入的可能性。确定问题可能出
 
 > 参考：https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities
 
-允许您快速了解代码的潜在问题。 像所有自动化测试工具一样，Slither 并不完美，它在报告一侧出现了太多错误。 即使在不存在可开发的脆弱性的情况下，它也可以就潜在的重返提出警告。 在代码更改之间在 Slither 输出中查看 DIFERENER 常常非常有启发性，可以帮助发现比等待您的项目代码完成早得多的漏洞。
+允许您快速了解代码的潜在问题。 像所有自动化测试工具一样，Slither 并不完美，它在报告一侧出现了太多错误。 即使在不存在可开发的脆弱性的情况下，它也可以就潜在的重返提出警告。 在代码更改之间在 Slither 输出中查看 DIFFERENCE 常常非常有启发性，可以帮助发现比等待您的项目代码完成早得多的漏洞。
 
 ## 延伸阅读 {#further-reading}
 

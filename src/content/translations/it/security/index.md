@@ -158,8 +158,6 @@ Quando si interagisce con gli smart contract, non permettere limiti di spesa ill
 
 Molti portafogli Ethereum offrono una protezione dei limiti per salvaguardare l'utente dal prosciugamento dei conti.
 
-[Esplora portafogli con protezione dei limiti](/wallets/find-wallet/?filters=has_limits_protection)
-
 <Divider />
 
 ## Truffe comuni {#common-scams}

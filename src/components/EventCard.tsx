@@ -88,12 +88,7 @@ const EventCard: React.FC<IProps> = ({
         </Text>
         <Emoji text=":round_pushpin:" fontSize="md" marginLeft={2} />
       </Text>
-      <Heading
-        as="h3"
-        marginTop={0}
-        fontWeight="semibold"
-        lineHeight={1.4}
-      >
+      <Heading as="h3" marginTop={0} fontWeight="semibold" lineHeight={1.4}>
         {title}
       </Heading>
       <Text opacity={0.8}>{description}</Text>

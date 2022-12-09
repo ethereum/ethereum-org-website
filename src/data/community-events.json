@@ -14,8 +14,8 @@
     "sponsor": null,
     "location": "Denver, USA",
     "description": "ETHDenver is a member-owned Community Innovation Festival. With the genesis of SporkDAO in June of 2021, ETHDenver is the first event based DAO in the world.",
-    "startDate": "2022-02-11",
-    "endDate": "2022-02-20"
+    "startDate": "2023-02-24",
+    "endDate": "2023-03-05"
   },
   {
     "title": "Schelling Point",
@@ -522,15 +522,6 @@
     "endDate": "2023-04-30"
   },
   {
-    "title": "ETHMiami",
-    "to": "https://ethmiami.net/",
-    "sponsor": null,
-    "location": "Miami, USA",
-    "description": "Web3 IRL Hackathon & Ethereum Cultural Fest of the Year.",
-    "startDate": "2022-11-26",
-    "endDate": "2022-11-30"
-  },
-  {
     "title": "ETHBrno",
     "to": "https://ethbrno.cz",
     "sponsor": null,
@@ -571,8 +562,17 @@
     "to": "https://www.pychain.org",
     "sponsor": null,
     "location": "Online event",
-    "description": "The  PyChain 2022 is th virtual blockchain developer conference targeting the Python ecosystem and Python devs.",
+    "description": "PyChain 2022 is an online blockchain developer conference targeting the Python ecosystem and Python devs.",
     "startDate": "2022-11-15",
     "endDate": "2022-11-15"
+  },
+  {
+    "title": "ETHMiami",
+    "to": "https://ethmiami.net/",
+    "sponsor": null,
+    "location": "Miami, USA",
+    "description": "Join ETHMiami during Art Basel Miami 2022.",
+    "startDate": "2022-11-28",
+    "endDate": "2022-12-4"
   }
 ]
