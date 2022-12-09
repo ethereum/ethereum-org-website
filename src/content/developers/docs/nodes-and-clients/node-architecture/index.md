@@ -43,7 +43,6 @@ Node operators can add a validator to their consensus clients if 32 ETH is the d
 
 ## Components of a node comparison {#node-comparison}
 
-
 | Execution Client                                   | Consensus Client                                                 | Validator                    |
 | -------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------- |
 | Gossips transactions over its p2p network          | Gossips blocks and attestations overs its p2p network            | Proposes blocks              |
