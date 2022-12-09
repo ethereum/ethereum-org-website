@@ -3,7 +3,8 @@ import React from "react"
 import Translation from "./Translation"
 import {
   Image,
-  Link,
+  LinkBox,
+  LinkOverlay,
   Table,
   Tbody,
   Td,
@@ -12,6 +13,7 @@ import {
   Tr,
   useToken,
 } from "@chakra-ui/react"
+import Link from "./Link"
 
 export interface TableRow {
   name: string
@@ -80,7 +82,7 @@ const SimpleTable: React.FC<IProps> = ({ columns, content, hasError }) => {
 
         {content.map(({ name, marketCap, image, type, url }, idx) => (
           <Tr
-            as={url ? Link : Tr}
+            as={url ? LinkBox : undefined}
             display="table-row"
             href={url}
             key={idx}
@@ -102,7 +104,22 @@ const SimpleTable: React.FC<IProps> = ({ columns, content, hasError }) => {
           >
             <Td display="flex" alignItems="center">
               {image && <Image src={image} alt="" mr={4} boxSize={6} />}
-              {name}
+              {url ? (
+                <LinkOverlay
+                  as={Link}
+                  hideArrow
+                  to={url}
+                  color="inherit"
+                  textDecoration="inherit"
+                  _hover={{
+                    textDecoration: "inherit",
+                  }}
+                >
+                  {name}
+                </LinkOverlay>
+              ) : (
+                <>{name}</>
+              )}
             </Td>
             <Td>{marketCap}</Td>
             <Td>{type}</Td>
