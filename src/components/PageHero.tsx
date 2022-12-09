@@ -54,7 +54,7 @@ const PageHero: React.FC<IProps> = ({
         className={className}
       >
         <Box
-          maxW={{ base: "full", lg: "640px" }}
+          maxW={{ base: "full", lg: "container.sm" }}
           py={{ base: 16, lg: 32 }}
           pl={{ base: 0, lg: 8 }}
           pr={0}
