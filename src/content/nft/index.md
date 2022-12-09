@@ -14,7 +14,7 @@ summaryPoint3: Powered by smart contracts on the Ethereum blockchain.
 
 NFTs are currently taking the digital art and collectibles world by storm. Digital artists are seeing their lives change thanks to huge sales to a new crypto-audience. And celebrities are joining in as they spot a new opportunity to connect with fans. But digital art is only one way to use NFTs. Really they can be used to represent ownership of any unique asset, like a deed for an item in the digital or physical realm.
 
-If Andy Warhol had been born in the late 90s, he probably would have minted Campbell's Soup as an NFT. It's only a matter of time before Kanye puts a run of Yeezys on Ethereum. And one day owning your car might be proved with an NFT.
+If Andy Warhol had been born in the late 90s, he probably would have minted Campbell's Soup as an NFT. It's only a matter of time before Nike puts a run of Jordans on Ethereum. And one day owning your car might be proved with an NFT.
 
 ## What's an NFT? {#what-are-nfts}
 
@@ -304,14 +304,9 @@ Ethereum makes it possible for NFTs to work for a number of reasons:
 
 ## The environmental impact of NFTs {#environmental-impact-nfts}
 
-NFTs are growing in popularity which means they're also coming under increased scrutiny – especially over their carbon footprint.
+Creating and transferring NFTs are just Ethereum transactions - minting, buying, swapping or interacting with NFTs does not directly consume energy. Since [The Merge](/upgrades/merge), Ethereum is a low-energy blockchain, meaning the environmental impact of using NFTs is negligible.
 
-To clarify a few things:
-
-- Creating and transferring NFTs are just Ethereum transactions - they have no direct impact on the energy expended by Ethereum, nor do they independently expend their own energy.
-- Ethereum is a low-energy blockchain, meaning the environmental impact of creating, buying and transferring NFTs is very small.
-
-The next sections explain further with a little more technical detail...
+[More on Ethereum's energy consumption](/energy-consumption/).
 
 ### Don't blame it on the NFTs {#nft-qualities}
 
@@ -356,6 +351,5 @@ Most NFTs are built using a consistent standard known as [ERC-721](/developers/d
 - [Everything you need to know about the metaverse](https://foundation.app/blog/enter-the-metaverse) – _Foundation team, foundation.app_
 - [No, CryptoArtists Aren’t Harming the Planet](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
 - [Ethereum's energy consumption](/energy-consumption/)
-- [A country's worth of power, no more](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, May 18 2021_
 
 <QuizWidget quizKey="nfts" />

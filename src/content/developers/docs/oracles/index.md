@@ -66,7 +66,7 @@ Different oracles differ in their approach to solving the oracle problem, and we
 
 Users are entities (i.e., smart contracts) that need information external to the blockchain to complete specific actions. The basic workflow of an oracle service starts with the user sending a data request to the oracle contract. Data requests will usually answer some or all of the following questions:
 
-1. What sources can off-chain nodes can consult for the requested information?
+1. What sources can off-chain nodes consult for the requested information?
 
 2. How do reporters process information from data sources and extract useful data points?
 

@@ -77,7 +77,7 @@ Existem muitas semelhanças entre essas opções de staking em pools agrupadas e
 
 Ao contrário das trocas centralizadas, muitas outras opções de staking em pools usam contratos inteligentes e/ou tokens de liquidez, que normalmente são tokens ERC-20 que podem ser mantidos em sua própria carteira, comprados ou vendidos como qualquer outro token. Isso oferece uma camada de soberania e segurança, dando-lhe controle sobre seus tokens, mas ainda não lhe dá controle direto sobre o cliente validador atestando em seu nome em segundo plano.
 
-Algumas opções de pooling são mais descentralizadas do que outras quando se trata dos nós que os sustentam. Para promover o bom funcionamento e a descentralização da rede, stakers (participantes) são sempre incentivados a selecionar um serviço de pool que permite um conjunto de operadores de nó sem permissão e descentralizado.
+Algumas opções de pooling são mais descentralizadas do que outras quando se trata dos nós que os sustentam. Para promover a saúde e a descentralização da rede, os participantes são sempre encorajados a selecionar um serviço de pooling (compartilhamento) que ofereça um conjunto descentralizado de operadores de nós sem permissão.
 </ExpandableCard>
 
 ## Leitura adicional {#further-reading}

@@ -208,7 +208,7 @@ const questionBank: QuestionBank = {
         id: "b002-d",
         label: "Ethereum",
         explanation:
-          "Ethereum is the network, but Ethereum’s network fees are paid in the different.",
+          "Ethereum is the network, but Ethereum’s network fees are paid in ETH.",
       },
     ],
     correctAnswerId: "b002-b",
@@ -250,19 +250,19 @@ const questionBank: QuestionBank = {
         id: "b004-a",
         label: "ETH is needed to do anything on Ethereum",
         explanation:
-          "This answer is correct, but there are also other correct answers.",
+          "This answer is partially correct, but it's only one of the reasons ETH is valuable.",
       },
       {
         id: "b004-b",
         label: "ETH is an un-censorable peer-to-peer money",
         explanation:
-          "This answer is correct, but there are also other correct answers.",
+          "This answer is partially correct, but it's only one of the reasons ETH is valuable.",
       },
       {
         id: "b004-c",
         label: "ETH is used as collateral for crypto loans",
         explanation:
-          "This answer is correct, but there are also other correct answers.",
+          "This answer is partially correct, but it's only one of the reasons ETH is valuable.",
       },
       {
         id: "b004-d",
@@ -414,7 +414,7 @@ const questionBank: QuestionBank = {
         explanation: "Sign-in with Twitter is not censorship resistant.",
       },
     ],
-    correctAnswerId: "c005-d",
+    correctAnswerId: "c005-c",
   },
   // Wallets
   d001: {
@@ -581,24 +581,24 @@ const questionBank: QuestionBank = {
     answers: [
       {
         id: "e003-a",
-        label: "a good way to get more ETH",
+        label: "A good way to get more ETH",
         explanation:
           "ETH giveaways are scams designed to steal your ETH and other tokens. They are never a good way to get more ETH.",
       },
       {
         id: "e003-b",
-        label: "always genuine",
+        label: "Always genuine",
         explanation: "ETH giveaways are never genuine.",
       },
       {
         id: "e003-c",
-        label: "commonly performed by prominent members of the community",
+        label: "Commonly performed by prominent members of the community",
         explanation:
           "Prominent community members do not do ETH giveaways. Scammers pretend well-know individuals, such as Elon Musk, are doing giveaways to give them the scam a sense of legitimacy.",
       },
       {
         id: "e003-d",
-        label: "always a scam",
+        label: "Are very likely to be a scam",
         explanation:
           "ETH giveaways are always scams. Reporting and ignoring scammers is best.",
       },

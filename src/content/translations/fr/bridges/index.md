@@ -113,17 +113,20 @@ Les fonds de l'utilisateur sont en danger si :
 - les opérateurs du pont ont des intentions malveillantes sur un pont sans risque
 - le pont est hacké
 
-Un piratage a récemment eu lieu sur le pont Wormhole de Solana, [où 120k wETH (325 millions d'USD) ont été volé](https://rekt.news/wormhole-rekt/).
+Un piratage a récemment eu lieu sur le pont Wormhole de Solana, [où 120k wETH (325 millions d'USD) ont été volé](https://rekt.news/wormhole-rekt/). La plupart des [meilleurs hacks dans les blockchains impliquaient des ponts](https://rekt.news/leaderboard/).
 
-Les ponts sont essentiels pour l'accueil des utilisateurs sur les L2 d'Ethereum, et même pour les utilisateurs qui veulent explorer différents écosystèmes. Cependant, étant donné les risques liés à l'interaction avec les ponts, les utilisateurs doivent comprendre les compromis que font les ponts.
+Les ponts sont essentiels pour l'accueil des utilisateurs sur les L2 d'Ethereum, et même pour les utilisateurs qui veulent explorer différents écosystèmes. Cependant, étant donné les risques liés à l'interaction avec les ponts, les utilisateurs doivent comprendre les compromis que font les ponts. Voici [des stratégies pour la sécurité transversale](https://blog.debridge.finance/10-strategies-for-cross-chain-security-8ed5f5879946).
 
 <Divider />
 
 ## En savoir plus {#further-reading}
 
+- [EIP-5164 : Exécution en chaines croisées](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _18 juin 2022 - Brendan Asselstine_
+- [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _5 juillet 2022 - Bartek Kiepuszewski_
+- ["Pourquoi le futur sera multi-chaîne, mais ne sera pas celui des chaînes croisées.](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _8 janvier 2022 - Vitalik Buterin_
 - [Que sont les ponts de la blockchain et comment les classer ?](https://blog.li.finance/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa) _18 février 2021 - Arjun Chand_
 - [Qu'est-ce que les ponts à chaînes croisées ?](https://www.alchemy.com/overviews/cross-chain-bridges) _10 mai 2022 - Alchimie_
 - [Ponts Blockchain : Construire des réseaux de crypto-réseaux](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) _8 septembre 2021 - Dmitriy Berenzon_
 - [Ponts dans l'espace crypto](https://medium.com/chainsafe-systems/bridges-in-crypto-space-12e158f5fd1e) _23 août 2021 - Ben Adar Hyman_
-- [Le Trilemme d'interopérabilité](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17) _1er octobre 2021 - Arjun Bhuptani_
+- [Le Trilemme d'interopérabilité](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17) _1er octobre 2021 Arjun Bhuptani_
 - [Sécurisez le pont : La communication inter-chaînes bien faite](https://medium.com/dragonfly-research/secure-the-bridge-cross-chain-communication-done-right-part-i-993f76ffed5d) _23 août 2021 - Celia Wan_

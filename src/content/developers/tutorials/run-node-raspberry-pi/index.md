@@ -8,7 +8,6 @@ skill: intermediate
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
-postMergeBannerTranslation: page-upgrades-post-merge-banner-tutorial-ood
 ---
 
 **Ethereum on Arm is a custom Linux image that can turn a Raspberry Pi into an Ethereum node.**

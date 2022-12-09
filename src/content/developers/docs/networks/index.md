@@ -32,9 +32,41 @@ Most testnets started by using a proof-of-authority consensus mechanism. This me
 
 ETH on testnets has no real value; therefore, there are no markets for testnet ETH. Since you need ETH to actually interact with Ethereum, most people get testnet ETH from faucets. Most faucets are webapps where you can input an address which you request ETH to be sent to.
 
+#### Which Testnet should I use?
+
+The two public proof-of-stake testnets (which client developers are maintaining post-merge) are Goerli and Sepolia. The Goerli network was merged with the Prater Beacon Chain testnet. The Sepolia network was created to test the transition to proof-of-stake.
+
+**[Sepolia](#sepolia) is the recommended default testnet for application development**.
+The Sepolia network uses a permissioned validator set. It's fairly new, meaning its state and history are both quite small. This means the network is quick to sync to and that running a node on it requires less storage. This is useful for users who want to quickly spin up a node and interact with the network directly.
+
+- Closed validator set, controlled by client & testing teams
+- New testnet, less applications deployed than other testnets
+- Fast to sync and running a node requires minimal disk space
+
+**[Goerli](#goerli) is the recommended default testnet for testing of validating and staking**.
+The Goerli network is open for users wanting to run a testnet validator. Stakers wanting to test protocol upgrades before they are deployed to mainnet should therefore use Goerli.
+
+- Open validator set, stakers can test network upgrades
+- Large state, useful for testing complex smart contract interactions
+- Longer to sync and requires more storage to run a node
+
+#### Sepolia {#sepolia}
+
+Sepolia is a proof-of-stake testnet, and is the recommended default testnet for application development.
+
+- [Website](https://sepolia.dev/)
+- [GitHub](https://github.com/goerli/sepolia)
+- [Otterscan](https://sepolia.otterscan.io/)
+- [Etherscan](https://sepolia.etherscan.io)
+
+##### Sepolia faucets
+
+- [Sepolia faucet](https://faucet.sepolia.dev/)
+- [FaucETH](https://fauceth.komputing.org)
+
 #### Goerli {#goerli}
 
-Goerli is a proof-of-stake testnet. It is expected to be maintained long-term as a stable testnet for application developers. Before its testnet merge, Goerli was a proof-of-authority testnet.
+Goerli is a proof-of-stake testnet, and is the recommended default testnet for testing of validating and staking.
 
 - [Website](https://goerli.net/)
 - [GitHub](https://github.com/goerli/testnet)
@@ -47,19 +79,7 @@ Goerli is a proof-of-stake testnet. It is expected to be maintained long-term as
 - [Alchemy Goerli Faucet](https://goerlifaucet.com/)
 - [All That Node Goerli Faucet](https://www.allthatnode.com/faucet/ethereum.dsrv)
 
-#### Sepolia {#sepolia}
-
-Sepolia is a proof-of-stake testnet. Although Sepolia is still running, it is not currently planned to be maintained long-term. Before undergoing The Merge in June 2022, Sepolia was a proof-of-work testnet.
-
-- [Website](https://sepolia.dev/)
-- [GitHub](https://github.com/goerli/sepolia)
-- [Otterscan](https://sepolia.otterscan.io/)
-- [Etherscan](https://sepolia.etherscan.io)
-
-##### Sepolia faucets
-
-- [Sepolia faucet](https://faucet.sepolia.dev/)
-- [FaucETH](https://fauceth.komputing.org)
+To launch a Validator on Goerli testnet, use ethstaker's ["cheap goerli validator" launchpad](https://goerli.launchpad.ethstaker.cc/en/).
 
 #### Ropsten _(deprecated)_ {#ropsten}
 
