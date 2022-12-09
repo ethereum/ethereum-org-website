@@ -224,7 +224,7 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["components", "common"] }
+        ns: { in: ["src-templates-tutorial", "components", "common"] }
       }
     ) {
       edges {

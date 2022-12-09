@@ -440,7 +440,7 @@ export const useCasePageQuery = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["components", "common"] }
+        ns: { in: ["src-templates-use-cases", "components", "common"] }
       }
     ) {
       edges {

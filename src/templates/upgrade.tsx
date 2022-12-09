@@ -418,7 +418,7 @@ export const upgradePageQuery = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["components", "common"] }
+        ns: { in: ["src-templates-upgrade", "components", "common"] }
       }
     ) {
       edges {
