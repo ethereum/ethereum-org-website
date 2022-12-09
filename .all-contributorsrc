@@ -9755,6 +9755,15 @@
         "ideas",
         "doc"
       ]
+    },
+    {
+      "login": "theSamPadilla",
+      "name": "Sam Padilla",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35386211?v=4",
+      "profile": "https://github.com/theSamPadilla",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
