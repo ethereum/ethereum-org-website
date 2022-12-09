@@ -27,7 +27,7 @@ const mergeTranslations = (): void => {
         mergeObjects(result, obj)
       })
 
-      const dir = `./i18n/locales/${currentTranslation}`
+      const dir = `./i18n/merged/${currentTranslation}`
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true })
       }

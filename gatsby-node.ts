@@ -11,6 +11,7 @@ import type { Context } from "./src/types"
 import * as Schema from "./src/schema"
 
 import mergeTranslations from "./src/scripts/mergeTranslations"
+import scanTranslations from "./src/scripts/scanTranslations"
 import copyContributors from "./src/scripts/copyContributors"
 
 import {
@@ -479,9 +480,13 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
     createTypes([...Object.keys(sdls).map((sdlKey) => sdls[sdlKey])])
   }
 
-export const onPreBootstrap: GatsbyNode["onPreBootstrap"] = ({ reporter }) => {
+export const onPreBootstrap: GatsbyNode["onPreBootstrap"] = async ({
+  reporter,
+}) => {
   mergeTranslations()
   reporter.info(`Merged translations saved`)
+  await scanTranslations()
+  reporter.info(`Scanned & extracted translations`)
   copyContributors()
   reporter.info(`Contributors copied`)
 }

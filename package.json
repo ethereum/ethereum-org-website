@@ -114,8 +114,7 @@
     "start:lambda": "netlify-lambda serve src/lambda",
     "start:static": "gatsby build && gatsby serve",
     "serve": "gatsby serve",
-    "type-check": "tsc --noEmit",
-    "extract": "i18next-scanner"
+    "type-check": "tsc --noEmit"
   },
   "husky": {
     "hooks": {

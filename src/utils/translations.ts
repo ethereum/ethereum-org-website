@@ -1,7 +1,7 @@
 import type { Lang } from "./languages"
 import type { Direction } from "../types"
 
-import defaultStrings from "../../i18n/locales/en/index.json"
+import defaultStrings from "../../i18n/merged/en/index.json"
 
 export type TranslationKey = keyof typeof defaultStrings
 
