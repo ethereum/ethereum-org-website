@@ -4,13 +4,13 @@ description: Introduction to how Ethereum nodes are organized.
 lang: en
 ---
 
-An Ethereum node is composed of two clients: an [execution client](https://ethereum.org/en/developers/docs/nodes-and-clients/#execution-clients) and a [consensus client](https://ethereum.org/en/developers/docs/nodes-and-clients/#consensus-clients).
+An Ethereum node is composed of two clients: an [execution client](/developers/docs/nodes-and-clients/#execution-clients) and a [consensus client](/developers/docs/nodes-and-clients/#consensus-clients).
 
 When Ethereum was using [proof-of-work](/developers/docs/consensus-mechanisms/pow/), an execution client was enough to run a full Ethereum node. However, since implementing [proof-of-stake](/developers/docs/consensus-mechanisms/pow/), the execution client needs to be used alongside another piece of software called a [“consensus client”](/developers/docs/nodes-and-clients/#consensus-clients).
 
-The relationship between the two Ethereum clients is shown in the schematic below. The two clients each connect to their own respective peer-to-peer (P2P) networks. This is because the execution clients gossip transactions over their P2P network enabling them to manage their local transaction pool. The consensus clients gossip blocks over their P2P network, enabling consensus and chain growth.
+The diagram below shows the relationship between the two Ethereum clients. The two clients connect to their own respective peer-to-peer (P2P) networks. Separate P2P networks are needed as the execution clients gossip transactions over their P2P network, enabling them to manage their local transaction pool, whilst the consensus clients gossip blocks over their P2P network, enabling consensus and chain growth.
 
-![node-architecture](node-architecture-text-background.png)
+![](node-architecture-text-background.png)
 
 _This image is borrowed from geth.ethereum.org and uses the Geth logo to represent execution clients - there are other options for the execution client including Erigon, Nethermind and Besu_
 
@@ -39,7 +39,11 @@ The consensus client does not participate in attesting to or proposing blocks - 
 
 Node operators can add a validator to their consensus clients if 32 ETH is the deposit contract. The validator client comes bundled with the consensus client and can be added to a node at any time. The validator handles attestations and block proposals. They enable a node to accrue rewards or lose ETH via penalties or slashing. Running the validator software also makes a node eligible to be selected to propose a new block.
 
-Read more about [staking](/staking).
+[More on staking](/staking/).
+
+## Components of a node comparison {#node-comparison}
+
+
 | Execution Client                                   | Consensus Client                                                 | Validator                    |
 | -------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------- |
 | Gossips transactions over its p2p network          | Gossips blocks and attestations overs its p2p network            | Proposes blocks              |
@@ -48,6 +52,7 @@ Read more about [staking](/staking).
 | Manages state and receipts tries                   | Manages the Beacon state (contains consensus and execution info) | Requires 32 ETH to be staked |
 | Creates execution payload                          | Keeps track of accumulated randomness in RANDAO                  | Proposes blocks              |
 | Exposes JSON-RPC API for interacting with Ethereum | Keeps track of justification and finalization                    | Can be slashed  
+
 ## Further reading {#further-reading}
 
 - [Proof-of-stake](/developers/docs/consensus-mechanisms/pos)
