@@ -1,5 +1,5 @@
 import React from "react"
-import { useIntl } from "react-intl"
+import { useI18next } from "gatsby-plugin-react-i18next"
 import { Box, Flex, HStack, Text } from "@chakra-ui/react"
 import CopyToClipboard from "./CopyToClipboard"
 import Pill from "./Pill"
@@ -25,7 +25,7 @@ export const getSkillTranslationId = (skill: Skill): TranslationKey =>
   `page-tutorial-${Skill[skill.toUpperCase() as keyof typeof Skill]}`
 
 const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
-  const intl = useIntl()
+  const { language } = useI18next()
 
   const frontmatter = tutorial.frontmatter
   const hasSource = frontmatter.source && frontmatter.sourceUrl
@@ -79,7 +79,7 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
         {published && (
           <Box>
             <Emoji fontSize="sm" mr={2} text=":calendar:" />
-            {getLocaleTimestamp(intl.locale as Lang, published)}
+            {getLocaleTimestamp(language as Lang, published)}
           </Box>
         )}
         <Box>

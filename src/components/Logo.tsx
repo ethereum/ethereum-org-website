@@ -2,15 +2,14 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { useColorMode } from "@chakra-ui/react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import { translateMessageId } from "../utils/translations"
 import { getImage } from "../utils/image"
 
 export interface IProps {}
 
 const Logo: React.FC<IProps> = () => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const { colorMode } = useColorMode()
   const isDarkTheme = colorMode === "dark"
   const data = useStaticQuery(graphql`
@@ -40,10 +39,7 @@ const Logo: React.FC<IProps> = () => {
 
   const image = isDarkTheme ? data.light : data.dark
   return (
-    <GatsbyImage
-      image={getImage(image)!}
-      alt={translateMessageId("ethereum-foundation-logo", intl)}
-    />
+    <GatsbyImage image={getImage(image)!} alt={t("ethereum-foundation-logo")} />
   )
 }
 

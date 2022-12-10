@@ -10,12 +10,11 @@ import {
   List,
   ListItem,
 } from "@chakra-ui/react"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import Emoji from "./Emoji"
 import Link from "./Link"
 import Translation from "./Translation"
-import { translateMessageId } from "../utils/translations"
 
 const githubUrl = `https://github.com/`
 
@@ -44,7 +43,7 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
     }
   )
 
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   return (
     <List
@@ -53,10 +52,7 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
       w="100%"
       mb={8}
       ml={0}
-      aria-label={translateMessageId(
-        "page-upgrades-bug-bounty-leaderboard-list",
-        intl
-      )}
+      aria-label={t("page-upgrades-bug-bounty-leaderboard-list")}
     >
       {content
         .filter((_, idx) => idx < limit)

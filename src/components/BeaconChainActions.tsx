@@ -1,11 +1,8 @@
 import React from "react"
 import { Box, Flex, Heading } from "@chakra-ui/react"
-
 import { useStaticQuery, graphql } from "gatsby"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import { useIntl } from "react-intl"
-
-import { translateMessageId } from "../utils/translations"
 import { getImage, ImageDataLike } from "../utils/image"
 
 import CardList from "./CardList"
@@ -57,7 +54,7 @@ type BeaconQueryTypes = {
 }
 
 const BeaconChainActions: React.FC = () => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const data = useStaticQuery<BeaconQueryTypes>(BeaconStaticQuery)
 
   const datapoints: Array<CardListItem> = [
@@ -66,44 +63,32 @@ const BeaconChainActions: React.FC = () => {
       image: getImage(data.beaconscan)!,
       alt: "",
       link: "https://beaconscan.com",
-      description: translateMessageId("consensus-beaconscan-desc", intl),
+      description: t("consensus-beaconscan-desc"),
     },
     {
       title: "beaconcha.in",
       image: getImage(data.beaconchain)!,
       alt: "",
       link: "https://beaconcha.in",
-      description: translateMessageId("consensus-beaconcha-in-desc", intl),
+      description: t("consensus-beaconcha-in-desc"),
     },
   ]
 
   //TODO: we should refactor the naming here instead of using authors into the description field
   const reads: Array<CardListItem> = [
     {
-      title: translateMessageId(
-        "page-upgrade-article-title-two-point-oh",
-        intl
-      ),
+      title: t("page-upgrade-article-title-two-point-oh"),
       description: "Status",
       link: "https://our.status.im/two-point-oh-the-beacon-chain/",
     },
     {
-      title: translateMessageId(
-        "page-upgrade-article-title-beacon-chain-explainer",
-        intl
-      ),
+      title: t("page-upgrade-article-title-beacon-chain-explainer"),
       description: "Ethos.dev",
       link: "https://ethos.dev/beacon-chain/",
     },
     {
-      title: translateMessageId(
-        "page-upgrade-article-title-sharding-consensus",
-        intl
-      ),
-      description: translateMessageId(
-        "page-upgrade-article-author-ethereum-foundation",
-        intl
-      ),
+      title: t("page-upgrade-article-title-sharding-consensus"),
+      description: t("page-upgrade-article-author-ethereum-foundation"),
       link: "https://blog.ethereum.org/2020/03/27/sharding-consensus/",
     },
   ]
@@ -117,8 +102,8 @@ const BeaconChainActions: React.FC = () => {
           mr={{ base: 0, md: 4 }}
           mb={{ base: 8, md: 0 }}
           emoji=":money_with_wings:"
-          title={translateMessageId("consensus-become-staker", intl)}
-          description={translateMessageId("consensus-become-staker-desc", intl)}
+          title={t("consensus-become-staker")}
+          description={t("consensus-become-staker-desc")}
         >
           <ButtonLink mb={3} to="https://launchpad.ethereum.org">
             <Translation id="get-started" />
@@ -132,11 +117,8 @@ const BeaconChainActions: React.FC = () => {
           mr={0}
           ml={{ base: 0, md: 4 }}
           emoji=":computer:"
-          title={translateMessageId("consensus-run-beacon-chain", intl)}
-          description={translateMessageId(
-            "consensus-run-beacon-chain-desc",
-            intl
-          )}
+          title={t("consensus-run-beacon-chain")}
+          description={t("consensus-run-beacon-chain-desc")}
         >
           <ButtonLink variant="outline" to="/upgrades/get-involved/">
             <Translation id="consensus-run-beacon-chain" />
