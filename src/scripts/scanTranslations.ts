@@ -14,7 +14,6 @@ const input = ["./src/**/*.{ts,tsx}"]
 const output = "./i18n"
 
 function getNamespaceFromFilename(filename: string) {
-  console.log({ filename })
   const file = path.parse(filename)
   const dir = file.dir.slice(filename.lastIndexOf("src/"))
   const namespace = dir.replace(/\//g, "-") + "-" + file.name
