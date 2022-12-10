@@ -14,13 +14,10 @@ const input = ["./src/**/*.{ts,tsx}"]
 const output = "./i18n"
 
 function getNamespaceFromFilename(filename: string) {
-  const cwd = process.cwd()
-  const dirname = path.dirname(filename)
-  const dir = dirname.replace(cwd + "/", "")
-  const basename = path.basename(filename, ".tsx")
-  const namespace = dir + "/" + basename
-
-  return namespace.replaceAll("/", "-")
+  const file = path.parse(filename)
+  const dir = file.dir.slice(filename.indexOf("src/"))
+  const namespace = dir.replaceAll("/", "-") + "-" + file.name
+  return namespace
 }
 
 function customTransform(file, enc, done) {
