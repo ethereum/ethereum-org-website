@@ -25,7 +25,9 @@ const ItemsList: React.FC<IPropsItemsList> = ({
     <>
       {items.map((item, index) => (
         <ListItem key={index} m={0} {...rest}>
-          {item.title && <Link item={item} activeHash={activeHash} />}
+          {item.title && (
+            <Link depth={depth} item={item} activeHash={activeHash} />
+          )}
           {item.items && (
             <List
               key={item.title}
