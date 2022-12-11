@@ -226,7 +226,7 @@ const RangeSelector: React.FC<IRangeSelectorProps> = ({ state, setState }) => (
         color={""}
         background="background"
         fontFamily="monospace"
-        fontSize="1.25rem"
+        fontSize="xl"
         padding="2px 15px"
         borderRadius="1px"
         border="1px solid"
