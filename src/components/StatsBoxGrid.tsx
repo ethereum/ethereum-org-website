@@ -4,7 +4,7 @@ import axios from "axios"
 import { kebabCase } from "lodash"
 import { AreaChart, ResponsiveContainer, Area, XAxis } from "recharts"
 
-import { VStack, Grid, Box, Icon, Button, Text } from "@chakra-ui/react"
+import { VStack, Grid, Box, Icon, Button, Text, Flex } from "@chakra-ui/react"
 import { MdInfoOutline } from "react-icons/md"
 
 import Translation from "./Translation"
@@ -61,8 +61,7 @@ const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
         <Tooltip content={tooltipContent(metric)}>
           <Icon
             as={MdInfoOutline}
-            width="24px"
-            height="24px"
+            boxSize={6}
             fill="text"
             mr="0.5rem"
             _hover={{ fill: "primary" }}
@@ -127,12 +126,10 @@ const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
   )
 
   return (
-    <Box
+    <Flex
       position="relative"
       color="text"
       height="20rem"
-      background={""}
-      display="flex"
       flexDirection="column"
       justifyContent="space-between"
       alignItems="flex-start"
@@ -145,18 +142,11 @@ const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
         base: "-1px",
         lg: "0",
       }}
-      padding={{
-        base: "1rem",
-        lg: "1.5rem",
-      }}
-      paddingTop={{
-        base: "2rem",
-        lg: "0",
-      }}
+      padding={{ base: "2rem 1rem 1rem", lg: "1.5rem" }}
     >
       <div>
         <Text
-          fontSize="1.25rem"
+          fontSize="xl"
           mb="0.5rem"
           color="text"
           textTransform="uppercase"
@@ -211,7 +201,7 @@ const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
       >
         {value}
       </Text>
-    </Box>
+    </Flex>
   )
 }
 
