@@ -1,6 +1,6 @@
 import React, { useState, useRef, MouseEventHandler } from "react"
 import { Link as GatsbyLink } from "gatsby"
-import { useI18next } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 import {
   Configure,
   InstantSearch,
@@ -217,7 +217,7 @@ const Search: React.FC<ISearchProps> = ({
   handleSearchSelect,
   useKeyboardShortcut = false,
 }) => {
-  const { language } = useI18next()
+  const intl = useIntl()
   const containerRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
   const [query, setQuery] = useState(``)
@@ -275,7 +275,7 @@ const Search: React.FC<ISearchProps> = ({
         indexName={indices[0].name}
         onSearchStateChange={({ query }) => setQuery(query)}
       >
-        <Configure filters={`lang:${language}`} hitsPerPage={8} />
+        <Configure filters={`lang:${intl.locale}`} hitsPerPage={8} />
         <Input
           inputRef={inputRef}
           query={query}

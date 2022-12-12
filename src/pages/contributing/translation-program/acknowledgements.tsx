@@ -2,7 +2,7 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 import styled from "@emotion/styled"
 import { useTheme } from "@emotion/react"
 import type { Context } from "../../../types"
@@ -18,6 +18,7 @@ import { Content, Page } from "../../../components/SharedStyledComponents"
 import FeedbackCard from "../../../components/FeedbackCard"
 
 // Utils
+import { translateMessageId } from "../../../utils/translations"
 import { getImage } from "../../../utils/image"
 
 // Styles
@@ -109,7 +110,7 @@ const TranslatorAcknowledgements = ({
   data,
   location,
 }: PageProps<Queries.TranslatorAcknowledgementsPageQuery, Context>) => {
-  const { t } = useTranslation()
+  const intl = useIntl()
   const theme = useTheme()
   const isDarkTheme = theme.isDark
   const themedCertificateImage = isDarkTheme
@@ -119,11 +120,13 @@ const TranslatorAcknowledgements = ({
   return (
     <Page>
       <PageMetadata
-        title={t(
-          "page-contributing-translation-program-acknowledgements-meta-title"
+        title={translateMessageId(
+          "page-contributing-translation-program-acknowledgements-meta-title",
+          intl
         )}
-        description={t(
-          "page-contributing-translation-program-acknowledgements-meta-description"
+        description={translateMessageId(
+          "page-contributing-translation-program-acknowledgements-meta-description",
+          intl
         )}
       />
 
@@ -158,8 +161,9 @@ const TranslatorAcknowledgements = ({
           <RightColumn>
             <Image
               image={getImage(data.dogeComputer)!}
-              alt={t(
-                "page-contributing-translation-program-acknowledgements-hero-image-alt"
+              alt={translateMessageId(
+                "page-contributing-translation-program-acknowledgements-hero-image-alt",
+                intl
               )}
               objectFit="contain"
             />
@@ -190,11 +194,13 @@ const TranslatorAcknowledgements = ({
         </p>
         <CentralActionCard
           to="/contributing/translation-program/contributors/"
-          title={t(
-            "page-contributing-translation-program-acknowledgements-our-translators-view-all"
+          title={translateMessageId(
+            "page-contributing-translation-program-acknowledgements-our-translators-view-all",
+            intl
           )}
-          description={t(
-            "page-contributing-translation-program-acknowledgements-our-translators-cta"
+          description={translateMessageId(
+            "page-contributing-translation-program-acknowledgements-our-translators-cta",
+            intl
           )}
           image={getImage(data.ethereum)!}
         />
@@ -269,16 +275,7 @@ const TranslatorAcknowledgements = ({
 export default TranslatorAcknowledgements
 
 export const query = graphql`
-  query TranslatorAcknowledgementsPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
+  query TranslatorAcknowledgementsPage {
     dogeComputer: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
         gatsbyImageData(

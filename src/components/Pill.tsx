@@ -1,7 +1,7 @@
 import React from "react"
-import { Flex } from "@chakra-ui/react"
+import { Flex, FlexProps } from "@chakra-ui/react"
 
-export interface IProps {
+export interface IProps extends FlexProps {
   children?: React.ReactNode
   className?: string
   isSecondary?: boolean
@@ -12,7 +12,8 @@ const Pill: React.FC<IProps> = ({
   children,
   className,
   isSecondary,
-  color,
+  background,
+  ...rest
 }) => {
   return isSecondary ? (
     <Flex
@@ -28,12 +29,13 @@ const Pill: React.FC<IProps> = ({
       borderRadius="base"
       fontSize="xs"
       className={className}
+      {...rest}
     >
       {children}
     </Flex>
   ) : (
     <Flex
-      backgroundColor={color ? color : "primary100"}
+      background={background ?? "primary100"}
       display="inline-block"
       color="black300"
       textTransform="uppercase"
@@ -44,6 +46,7 @@ const Pill: React.FC<IProps> = ({
       fontSize="xs"
       borderRadius="base"
       className={className}
+      {...rest}
     >
       {children}
     </Flex>

@@ -2,7 +2,7 @@ import React from "react"
 import { Center } from "@chakra-ui/react"
 import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
 
 import Translation from "../components/Translation"
@@ -31,6 +31,7 @@ import {
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
 
+import { translateMessageId } from "../utils/translations"
 import { getImage, getSrc } from "../utils/image"
 import { Context } from "../types"
 
@@ -273,13 +274,13 @@ const cardListContent = [
 ]
 
 const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
-  const { t } = useTranslation()
+  const intl = useIntl()
   const data = props.data
   return (
     <Page>
       <PageMetadata
-        title={t("page-eth-whats-eth-meta-title")}
-        description={t("page-eth-whats-eth-meta-desc")}
+        title={translateMessageId("page-eth-whats-eth-meta-title", intl)}
+        description={translateMessageId("page-eth-whats-eth-meta-desc", intl)}
         image={getSrc(data.ogImage)}
       />
       <Content>
@@ -304,7 +305,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
           </Header>
           <Hero
             image={getImage(data.eth)!}
-            alt={t("page-eth-whats-eth-hero-alt")}
+            alt={translateMessageId("page-eth-whats-eth-hero-alt", intl)}
             loading="eager"
           />
         </HeroContainer>
@@ -373,8 +374,11 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
           </div>
           <CentralActionCard
             to="/what-is-ethereum/"
-            title={t("page-eth-whats-ethereum")}
-            description={t("page-eth-whats-ethereum-desc")}
+            title={translateMessageId("page-eth-whats-ethereum", intl)}
+            description={translateMessageId(
+              "page-eth-whats-ethereum-desc",
+              intl
+            )}
             image={getImage(data.ethereum)!}
           />
           <TextDivider />
@@ -390,8 +394,11 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
             </p>
             <CentralActionCard
               to="/defi/"
-              title={t("page-eth-whats-defi")}
-              description={t("page-eth-whats-defi-description")}
+              title={translateMessageId("page-eth-whats-defi", intl)}
+              description={translateMessageId(
+                "page-eth-whats-defi-description",
+                intl
+              )}
               image={getImage(data.defi)!}
             />
           </div>
@@ -439,7 +446,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
           titleKey={"page-eth-where-to-buy"}
           descriptionKey={"page-eth-where-to-buy-desc"}
           image={getImage(data.ethCat)!}
-          alt={t("page-eth-cat-img-alt")}
+          alt={translateMessageId("page-eth-cat-img-alt", intl)}
           maxImageWidth={300}
         >
           <div>
@@ -521,16 +528,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
 export default EthPage
 
 export const query = graphql`
-  query EthPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
+  query EthPage {
     eth: file(relativePath: { eq: "eth.png" }) {
       childImageSharp {
         gatsbyImageData(

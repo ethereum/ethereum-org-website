@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 import axios from "axios"
 
 import Translation from "./Translation"
 import Link from "./Link"
+
+import { translateMessageId } from "../utils/translations"
 
 import { GATSBY_FUNCTIONS_PATH } from "../constants"
 import {
@@ -93,10 +95,9 @@ const IssueSection: React.FC<IPropsIssueSection> = ({ issues }) => {
 export interface IProps {}
 
 const Roadmap: React.FC<IProps> = () => {
-  const { t } = useTranslation()
-  const { language } = useI18next()
+  const intl = useIntl()
   const issue: Issue = {
-    title: t("loading"),
+    title: translateMessageId("loading", intl),
     labels: [],
   }
   const blankIssues: Array<Issue> = Array(6).fill(issue)
@@ -170,8 +171,8 @@ const Roadmap: React.FC<IProps> = () => {
       .catch((error) => {
         console.error(error)
         const errorIssue: Issue = {
-          title: t("loading-error"),
-          errorMsg: t("refresh"),
+          title: translateMessageId("loading-error", intl),
+          errorMsg: translateMessageId("refresh", intl),
           labels: [],
         }
         const errorIssues: Array<Issue> = Array(3).fill(errorIssue)
@@ -181,7 +182,7 @@ const Roadmap: React.FC<IProps> = () => {
           implemented: errorIssues,
         })
       })
-  }, [language])
+  }, [intl])
 
   return (
     <Box>

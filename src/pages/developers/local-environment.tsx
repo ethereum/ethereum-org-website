@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import styled from "@emotion/styled"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 import { shuffle } from "lodash"
 
 // import ActionCard from "../../components/ActionCard"
@@ -23,7 +23,7 @@ import {
 } from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
 
-import { TranslationKey } from "../../utils/translations"
+import { translateMessageId, TranslationKey } from "../../utils/translations"
 import { getImage } from "../../utils/image"
 
 import { Context } from "../../types"
@@ -382,7 +382,7 @@ const frameworksList: Array<IFramework> = [
 const ChooseStackPage = ({
   data,
 }: PageProps<Queries.DevelopersLocalEnvironmentPageQuery, Context>) => {
-  const { t } = useTranslation()
+  const intl = useIntl()
   const [frameworks, setFrameworks] = useState<Array<IFramework>>([])
 
   useEffect(() => {
@@ -399,8 +399,14 @@ const ChooseStackPage = ({
   return (
     <StyledPage>
       <PageMetadata
-        title={t("page-local-environment-setup-meta-title")}
-        description={t("page-local-environment-setup-meta-desc")}
+        title={translateMessageId(
+          "page-local-environment-setup-meta-title",
+          intl
+        )}
+        description={translateMessageId(
+          "page-local-environment-setup-meta-desc",
+          intl
+        )}
       />
       <HeroContent>
         <Slogan>
@@ -445,7 +451,7 @@ const ChooseStackPage = ({
           <Column>
             <Hero
               image={getImage(data.hero)!}
-              alt={t("alt-eth-blocks")}
+              alt={translateMessageId("alt-eth-blocks", intl)}
               loading="eager"
             />
           </Column>
@@ -460,7 +466,7 @@ const ChooseStackPage = ({
               name={framework.name}
               githubUrl={framework.githubUrl}
               repoLangCount={2}
-              alt={t(framework.alt)}
+              alt={translateMessageId(framework.alt, intl)}
             >
               <Translation id={framework.description} />
             </ProductCard>
@@ -614,16 +620,7 @@ export const devtoolImage = graphql`
 `
 
 export const query = graphql`
-  query DevelopersLocalEnvironmentPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
+  query DevelopersLocalEnvironmentPage {
     hero: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
         gatsbyImageData(

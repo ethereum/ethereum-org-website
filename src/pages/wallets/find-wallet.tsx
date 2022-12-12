@@ -2,7 +2,7 @@
 import React, { useState, useRef } from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 import styled from "@emotion/styled"
 import { shuffle } from "lodash"
 
@@ -24,6 +24,7 @@ import walletData from "../../data/wallets/wallet-data"
 import FilterBurger from "../../assets/wallets/filter_burger.svg"
 
 // Utils
+import { translateMessageId } from "../../utils/translations"
 import { trackCustomEvent } from "../../utils/matomo"
 import { getImage } from "../../utils/image"
 import { useOnClickOutside } from "../../hooks/useOnClickOutside"
@@ -359,7 +360,7 @@ const filterDefault = {
 const randomizedWalletData = shuffle(walletData)
 
 const FindWalletPage = ({ data, location }) => {
-  const { t } = useTranslation()
+  const intl = useIntl()
   const resetWalletFilter = React.useRef(() => {})
   const wrapperRef = useRef<HTMLDivElement>(null)
 
@@ -394,8 +395,11 @@ const FindWalletPage = ({ data, location }) => {
   return (
     <PageStyled showMobileSidebar={showMobileSidebar}>
       <PageMetadata
-        title={t("page-find-wallet-meta-title")}
-        description={t("page-find-wallet-meta-description")}
+        title={translateMessageId("page-find-wallet-meta-title", intl)}
+        description={translateMessageId(
+          "page-find-wallet-meta-description",
+          intl
+        )}
       />
 
       <HeroContainer>
@@ -568,16 +572,7 @@ const FindWalletPage = ({ data, location }) => {
 export default FindWalletPage
 
 export const query = graphql`
-  query FindWalletPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
+  {
     hero: file(relativePath: { eq: "wallets/find-wallet-hero.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)

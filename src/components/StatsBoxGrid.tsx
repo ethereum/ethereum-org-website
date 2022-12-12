@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import styled from "@emotion/styled"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 import axios from "axios"
 import { kebabCase } from "lodash"
 import { AreaChart, ResponsiveContainer, Area, XAxis } from "recharts"
@@ -14,6 +14,7 @@ import StatLoadingMessage from "./StatLoadingMessage"
 
 import {
   isLangRightToLeft,
+  translateMessageId,
   getLocaleForNumberFormat,
 } from "../utils/translations"
 import { getData } from "../utils/cache"
@@ -298,8 +299,7 @@ interface IFetchTxResponse {
 export interface IProps {}
 
 const StatsBoxGrid: React.FC<IProps> = () => {
-  const { t } = useTranslation()
-  const { language } = useI18next()
+  const intl = useIntl()
 
   const [ethPrices, setEthPrices] = useState<State>({
     data: [],
@@ -331,7 +331,9 @@ const StatsBoxGrid: React.FC<IProps> = () => {
   const [selectedRangeTxs, setSelectedRangeTxs] = useState<string>(ranges[0])
 
   useEffect(() => {
-    const localeForStatsBoxNumbers = getLocaleForNumberFormat(language as Lang)
+    const localeForStatsBoxNumbers = getLocaleForNumberFormat(
+      intl.locale as Lang
+    )
 
     const formatPrice = (price: number): string => {
       return new Intl.NumberFormat(localeForStatsBoxNumbers, {
@@ -475,14 +477,20 @@ const StatsBoxGrid: React.FC<IProps> = () => {
       }
     }
     fetchTxCount()
-  }, [language])
+  }, [intl.locale])
 
   const metrics: Array<Metric> = [
     {
       apiProvider: "CoinGecko",
       apiUrl: "https://www.coingecko.com/en/coins/ethereum",
-      title: t("page-index-network-stats-eth-price-description"),
-      description: t("page-index-network-stats-eth-price-explainer"),
+      title: translateMessageId(
+        "page-index-network-stats-eth-price-description",
+        intl
+      ),
+      description: translateMessageId(
+        "page-index-network-stats-eth-price-explainer",
+        intl
+      ),
       buttonContainer: (
         <RangeSelector
           state={selectedRangePrice}
@@ -495,8 +503,14 @@ const StatsBoxGrid: React.FC<IProps> = () => {
     {
       apiProvider: "Etherscan",
       apiUrl: "https://etherscan.io/",
-      title: t("page-index-network-stats-tx-day-description"),
-      description: t("page-index-network-stats-tx-day-explainer"),
+      title: translateMessageId(
+        "page-index-network-stats-tx-day-description",
+        intl
+      ),
+      description: translateMessageId(
+        "page-index-network-stats-tx-day-explainer",
+        intl
+      ),
       buttonContainer: (
         <RangeSelector
           state={selectedRangeTxs}
@@ -509,8 +523,14 @@ const StatsBoxGrid: React.FC<IProps> = () => {
     {
       apiProvider: "DeFi Llama",
       apiUrl: "https://defillama.com/",
-      title: t("page-index-network-stats-value-defi-description"),
-      description: t("page-index-network-stats-value-defi-explainer"),
+      title: translateMessageId(
+        "page-index-network-stats-value-defi-description",
+        intl
+      ),
+      description: translateMessageId(
+        "page-index-network-stats-value-defi-explainer",
+        intl
+      ),
       buttonContainer: (
         <RangeSelector
           state={selectedRangeTvl}
@@ -523,8 +543,14 @@ const StatsBoxGrid: React.FC<IProps> = () => {
     {
       apiProvider: "Etherscan",
       apiUrl: "https://etherscan.io/nodetracker",
-      title: t("page-index-network-stats-nodes-description"),
-      description: t("page-index-network-stats-nodes-explainer"),
+      title: translateMessageId(
+        "page-index-network-stats-nodes-description",
+        intl
+      ),
+      description: translateMessageId(
+        "page-index-network-stats-nodes-explainer",
+        intl
+      ),
       buttonContainer: (
         <RangeSelector
           state={selectedRangeNodes}
@@ -535,7 +561,7 @@ const StatsBoxGrid: React.FC<IProps> = () => {
       range: selectedRangeNodes,
     },
   ]
-  const dir = isLangRightToLeft(language as Lang) ? "rtl" : "ltr"
+  const dir = isLangRightToLeft(intl.locale as Lang) ? "rtl" : "ltr"
   return (
     <Grid>
       {metrics.map((metric, idx) => (
