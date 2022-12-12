@@ -171,9 +171,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
       eventCategory: "Quiz widget",
       eventAction: "Question answered",
       eventName: `QID: ${questionId}`,
-      eventValue: answer.isCorrect
-        ? `Correct answer`
-        : `AID: ${answer.answerId}`,
+      eventValue: answer.isCorrect ? "1" : "0",
     })
     setShowAnswer(true)
   }

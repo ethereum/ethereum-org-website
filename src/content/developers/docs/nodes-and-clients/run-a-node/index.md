@@ -134,7 +134,7 @@ Multiple user-friendly projects aim to improve the experience of setting up a cl
 Below are a few projects which can help you install and control clients just with a few clicks:
 
 - [DappNode](https://docs.dappnode.io/get-started/installation/custom-hardware/installation/overview/) - DappNode doesn't come only with a machine from a vendor. The software, the actual node launcher and control center with many features can be used on arbitrary hardware.
-- [eth-docker](https://eth-docker.net/docs/About/Overview/) - Automatized setup using Docker focused on easy and secure staking, requires basic terminal and Docker knowledge, recommended for a bit more advanced users.
+- [eth-docker](https://eth-docker.net/) - Automatized setup using Docker focused on easy and secure staking, requires basic terminal and Docker knowledge, recommended for a bit more advanced users.
 - [Stereum](https://stereum.net/ethereum-node-setup/) - Launcher for installing clients on a remote server via SSH connection with a GUI setup guide, control center, and many other features.
 - [NiceNode](https://www.nicenode.xyz/) - Launcher with a straightforward user experience to run a node on your computer. Just choose clients and start them with a few clicks. Still in development.
 
@@ -228,7 +228,7 @@ openssl rand -hex 32 > jwtsecret
 This section will guide you through starting execution clients. It only serves as an example of a basic configuration, which will start the client with these settings:
 
 - Specifies network to connect to, mainnet in our examples
-  - You can instead choose [one of testnets](/developers/docs/networks/) for prelimenary testing of your setup
+  - You can instead choose [one of testnets](/developers/docs/networks/) for preliminary testing of your setup
 - Defines data directory, where all the data including blockchain will be stored
   - Make sure to subsitute the path with a real one, e.g. pointing to your external drive
 - Enables interfaces for communicating with the client
@@ -282,8 +282,9 @@ This example starts Geth on mainnet, stores blockchain data at `/data/ethereum`,
 ```
 geth --mainnet \
     --datadir "/data/ethereum" \
-    --http --http.api="eth,web3,net" \
+    --http --authrpc.addr localhost \
     --authrpc.vhosts="localhost" \
+    --authrpc.port 8551
     --authrpc.jwtsecret=/path/to/jwtsecret
 ```
 

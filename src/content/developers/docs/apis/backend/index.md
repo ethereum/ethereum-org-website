@@ -52,6 +52,13 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [DataHub](https://www.figment.io/datahub)
 - [Documentation](https://docs.figment.io/introduction/what-is-datahub)
 
+**NFTPort -** **_Ethereum Data and Mint APIs._**
+
+- [nftport.xyz](https://www.nftport.xyz/)
+- [Documentation](https://docs.nftport.xyz/)
+- [GitHub](https://github.com/nftport/)
+- [Discord](https://discord.com/invite/K8nNrEgqhE)
+
 **Nodesmith -** **_JSON-RPC API access to Ethereum Mainnet and testnets._**
 
 - [nodesmith.io](https://nodesmith.io/network/ethereum/)

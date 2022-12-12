@@ -1,105 +1,22 @@
+import {
+  Box,
+  Flex,
+  Heading,
+  Icon,
+  List,
+  ListItem,
+  SimpleGrid,
+  useToken,
+} from "@chakra-ui/react"
+import { graphql, StaticQuery } from "gatsby"
 import React from "react"
-import styled from "@emotion/styled"
+import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa"
 import { useIntl } from "react-intl"
-import { StaticQuery, graphql } from "gatsby"
-import { Icon } from "@chakra-ui/react"
-import { FaDiscord, FaGithub, FaTwitter, FaYoutube } from "react-icons/fa"
-
-import { getLocaleTimestamp } from "../utils/time"
-import Translation from "./Translation"
-import Link from "./Link"
-import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
-
-const StyledFooter = styled.footer`
-  padding-top: 3rem;
-  padding-bottom: 4rem;
-  padding: 1rem 2rem;
-`
-
-const FooterTop = styled.div`
-  font-size: ${(props) => props.theme.fontSizes.s};
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-`
-
-const LastUpdated = styled.div`
-  color: ${(props) => props.theme.colors.text200};
-`
-
-const LinkGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(6, auto);
-  grid-gap: 1rem;
-  justify-content: space-between;
-  @media (max-width: 1300px) {
-    grid-template-columns: repeat(3, auto);
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-template-columns: repeat(2, auto);
-  }
-  @media (max-width: 500px) {
-    grid-template-columns: auto;
-  }
-`
-
-const LinkSection = styled.div``
-
-const SectionHeader = styled.h3`
-  font-size: 0.875rem;
-  line-height: 1.6;
-  margin: 1.14em 0;
-  font-weight: bold;
-`
-
-const List = styled.ul`
-  font-size: 0.875rem;
-  line-height: 1.6;
-  font-weight: 400;
-  margin: 0;
-  list-style-type: none;
-  list-style-image: none;
-`
-
-const ListItem = styled.li`
-  margin-bottom: 1rem;
-`
-
-const FooterLink = styled(Link)`
-  text-decoration: none;
-  color: ${(props) => props.theme.colors.text200};
-  svg {
-    fill: ${(props) => props.theme.colors.text200};
-  }
-  &:after {
-    color: ${(props) => props.theme.colors.text200};
-  }
-  &:hover {
-    text-decoration: none;
-    color: ${(props) => props.theme.colors.primary};
-    &:after {
-      color: ${(props) => props.theme.colors.primary};
-    }
-    svg {
-      fill: ${(props) => props.theme.colors.primary};
-    }
-  }
-`
-
-const SocialIcons = styled.div`
-  margin: 1rem 0;
-`
-const SocialIcon = styled(Icon)`
-  margin-left: 1rem;
-  width: 2rem;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-left: 0;
-    margin-right: 0.5rem;
-  }
-`
+import { getLocaleTimestamp } from "../utils/time"
+import { isLangRightToLeft, TranslationKey } from "../utils/translations"
+import Link from "./Link"
+import Translation from "./Translation"
 
 const socialLinks = [
   {
@@ -139,6 +56,8 @@ const Footer: React.FC<IProps> = () => {
   const intl = useIntl()
 
   const isPageRightToLeft = isLangRightToLeft(intl.locale as Lang)
+
+  const [medBp] = useToken("breakpoints", ["md"])
 
   const linkSections: Array<LinkSection> = [
     {
@@ -372,22 +291,27 @@ const Footer: React.FC<IProps> = () => {
         }
       `}
       render={(data) => (
-        <StyledFooter>
-          <FooterTop>
-            <LastUpdated>
+        <Box as="footer" p="1rem 2rem">
+          <Flex
+            fontSize="sm"
+            justify="space-between"
+            alignItems="center"
+            flexWrap="wrap"
+          >
+            <Box color="text200">
               <Translation id="website-last-updated" />:{" "}
               {getLocaleTimestamp(
                 intl.locale as Lang,
                 data.allSiteBuildMetadata.edges[0].node.buildTime
               )}
-            </LastUpdated>
-            <SocialIcons>
-              {socialLinks.map((link, idx) => {
+            </Box>
+            <Box my={4}>
+              {socialLinks.map((link, idk) => {
                 return (
                   <Link
-                    key={idx}
+                    key={idk}
                     to={link.to}
-                    hideArrow={true}
+                    hideArrow
                     color="secondary"
                     aria-label={link.ariaLabel}
                   >
@@ -395,31 +319,63 @@ const Footer: React.FC<IProps> = () => {
                   </Link>
                 )
               })}
-            </SocialIcons>
-          </FooterTop>
-          <LinkGrid>
+            </Box>
+          </Flex>
+          <SimpleGrid
+            gap={4}
+            justifyContent="space-between"
+            gridTemplateColumns="repeat(6, auto)"
+            sx={{
+              "@media (max-width: 1300px)": {
+                gridTemplateColumns: "repeat(3, auto)",
+              },
+              [`@media (max-width: ${medBp})`]: {
+                gridTemplateColumns: "repeat(2, auto)",
+              },
+              "@media (max-width: 500px)": {
+                gridTemplateColumns: "auto",
+              },
+            }}
+          >
             {linkSections.map((section: LinkSection, idx) => (
-              <LinkSection key={idx}>
-                <SectionHeader>
+              <Box key={idx}>
+                <Heading as="h3" fontSize="sm" lineHeight="1.6" my="1.14em">
                   <Translation id={section.title} />
-                </SectionHeader>
-                <List>
+                </Heading>
+                <List fontSize="sm" lineHeight="1.6" fontWeight="400" m={0}>
                   {section.links.map((link, linkIdx) => (
-                    <ListItem key={linkIdx}>
-                      <FooterLink
-                        dir={isPageRightToLeft ? "auto" : "ltr"}
+                    <ListItem key={linkIdx} mb={4}>
+                      <Link
                         to={link.to}
                         isPartiallyActive={false}
+                        dir={isPageRightToLeft ? "auto" : "ltr"}
+                        textDecor="none"
+                        color="text200"
+                        _hover={{
+                          textDecor: "none",
+                          color: "primary",
+                          _after: {
+                            color: "primary",
+                          },
+                          "& svg": {
+                            fill: "primary",
+                          },
+                        }}
+                        sx={{
+                          "& svg": {
+                            fill: "text200",
+                          },
+                        }}
                       >
                         <Translation id={link.text} />
-                      </FooterLink>
+                      </Link>
                     </ListItem>
                   ))}
                 </List>
-              </LinkSection>
+              </Box>
             ))}
-          </LinkGrid>
-        </StyledFooter>
+          </SimpleGrid>
+        </Box>
       )}
     />
   )

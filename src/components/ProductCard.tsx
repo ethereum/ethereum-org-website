@@ -1,84 +1,20 @@
 import React, { ReactNode } from "react"
-import styled from "@emotion/styled"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import { useQuery, gql } from "@apollo/client"
+import {
+  Badge,
+  Box,
+  Center,
+  Flex,
+  Heading,
+  HStack,
+  Img,
+  Text,
+  TextProps,
+} from "@chakra-ui/react"
 
 import GitStars from "./GitStars"
 import ButtonLink from "./ButtonLink"
-import { Badge } from "@chakra-ui/react"
-
-const ImageWrapper = styled.div<{
-  background: string
-}>`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background: ${(props) => props.background};
-  box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
-  min-height: 200px;
-`
-
-const Image = styled(GatsbyImage)`
-  width: 100%;
-  align-self: center;
-  max-width: 372px;
-  max-height: 257px;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    max-width: 311px;
-  }
-`
-
-const Card = styled.div`
-  color: ${(props) => props.theme.colors.text};
-  box-shadow: 0px 14px 66px rgba(0, 0, 0, 0.07);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: ${(props) => props.theme.colors.searchBackground};
-  border-radius: 4px;
-  border: 1px solid ${(props) => props.theme.colors.lightBorder};
-  text-decoration: none;
-  &:hover {
-    transition: transform 0.1s;
-    transform: scale(1.02);
-  }
-`
-
-const Content = styled.div`
-  padding: 1.5rem;
-  text-align: left;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-`
-
-const Title = styled.h3<{
-  gitHidden: boolean
-}>`
-  margin-top: ${(props) => (props.gitHidden ? "2rem" : "3rem")};
-  margin-bottom: 0.75rem;
-`
-
-const Description = styled.p`
-  opacity: 0.8;
-  font-size: ${(props) => props.theme.fontSizes.s};
-  margin-bottom: 0.5rem;
-  line-height: 140%;
-`
-
-const SubjectContainer = styled.div`
-  margin-top: 1.25rem;
-  padding: 0 1.5rem;
-`
-
-const StyledButtonLink = styled(ButtonLink)`
-  margin: 1rem;
-`
-
-const Children = styled.div`
-  margin-top: 1rem;
-`
 
 const REPO_DATA = gql`
   query RepoData(
@@ -133,7 +69,9 @@ const Subjectbadge: React.FC<{
   }
   return (
     <Badge
+    variant="secondary"
       background={backgroundProp()}
+      borderColor="lightBorder"
       py={0}
       me={3}
       mb={2}
@@ -161,7 +99,7 @@ export interface IProps {
 
 const ProductCard: React.FC<IProps> = ({
   url,
-  background,
+  background: bgProp,
   image,
   name,
   description,
@@ -191,46 +129,86 @@ const ProductCard: React.FC<IProps> = ({
 
   const isImgSrc = typeof image === "string"
 
+  const DESCRIPTION_STYLES: TextProps = {
+    opacity: 0.8,
+    fontSize: "sm",
+    mb: 2,
+    lineHeight: "140%",
+  }
+
   return (
-    <Card>
-      <ImageWrapper background={background}>
+    <Flex
+      flexDirection="column"
+      justifyContent="space-between"
+      color="text"
+      background="searchBackground"
+      boxShadow="0px 14px 66px rgba(0, 0, 0, 0.07)"
+      borderRadius="base"
+      border="1px"
+      borderColor="lightBorder"
+      textDecoration="none"
+      _hover={{
+        transition: "transform 0.1s",
+        transform: "scale(1.02)",
+      }}
+    >
+      <Center
+        background={bgProp}
+        boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
+        minH="200px"
+      >
         {isImgSrc ? (
           <img src={image} alt={alt} />
         ) : (
-          <Image image={image} alt={alt} objectFit="contain" />
+          <Img
+            as={GatsbyImage}
+            image={image}
+            alt={alt}
+            objectFit="contain"
+            width="100%"
+            alignSelf="center"
+            maxW={{ base: "311px", sm: "372px" }}
+            maxH="257px"
+          />
         )}
-      </ImageWrapper>
-      <Content className="hover">
-        <div>
-          {hasRepoData && (
-            <GitStars gitHubRepo={data.repository} hideStars={hideStars} />
-          )}
-          <Title gitHidden={!hasRepoData}>{name}</Title>
-          <Description>{description}</Description>
-          {note.length > 0 && <Description>Note: {note}</Description>}
-        </div>
-        {children && <Children>{children}</Children>}
-      </Content>
-      <SubjectContainer>
+      </Center>
+      <Flex flexDirection="column" p={6} textAlign="left" height="100%">
+        {hasRepoData && (
+          <GitStars gitHubRepo={data.repository} hideStars={hideStars} />
+        )}
+        <Heading
+          as="h3"
+          fontSize="2xl"
+          fontWeight={600}
+          mt={!hasRepoData ? 8 : 12}
+          mb={3}
+        >
+          {name}
+        </Heading>
+        {description && <Text {...DESCRIPTION_STYLES}>{description}</Text>}
+        {note.length > 0 && <Text {...DESCRIPTION_STYLES}>Note: {note}</Text>}
+        {children && <Box mt={4}>{children}</Box>}
+      </Flex>
+      <HStack mt={5} mb={2} px={6} spacing={3}>
         {subjects &&
           subjects.map((subject, idx) => (
-            <Subjectbadge key={idx} subject={subject}>
+            <SubjectPill key={idx} subject={subject}>
               {subject}
-            </Subjectbadge>
+            </SubjectPill>
           ))}
         {hasRepoData &&
           data.repository.languages.nodes.map(
             ({ name }: { name: string }, idx: number) => (
-              <Subjectbadge key={idx} subject={name}>
+              <SubjectPill key={idx} subject={name}>
                 {name.toUpperCase()}
-              </Subjectbadge>
+              </SubjectPill>
             )
           )}
-      </SubjectContainer>
-      <StyledButtonLink h={20} to={url}>
+      </HStack>
+      <ButtonLink to={url} m={4} height={20}>
         Open {name}
-      </StyledButtonLink>
-    </Card>
+      </ButtonLink>
+    </Flex>
   )
 }
 
