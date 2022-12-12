@@ -8,6 +8,9 @@ import _ from "lodash"
 import scanner from "i18next-scanner"
 import vfs from "vinyl-fs"
 
+import type { Scanner } from "i18next-scanner"
+import type File from "vinyl"
+
 import { supportedLanguages } from "../utils/languages"
 
 const input = ["./src/**/*.{ts,tsx}"]
@@ -20,7 +23,12 @@ function getNamespaceFromFilename(filename: string) {
   return namespace
 }
 
-function customTransform(file, enc, done) {
+function customTransform(
+  this: Scanner,
+  file: File,
+  enc: BufferEncoding,
+  done: () => void
+) {
   const { base, ext } = path.parse(file.path)
   const extensions = [".ts", ".tsx"]
   const target = ScriptTarget.ES2018
@@ -35,7 +43,7 @@ function customTransform(file, enc, done) {
 
     const namespace = getNamespaceFromFilename(file.path)
 
-    const customHandler = (key, options) => {
+    const customHandler = (key: string, options: any) => {
       const ns = file.path.includes("components") ? "components" : namespace
 
       const defaultLng = this.parser.options.defaultLng
@@ -61,7 +69,7 @@ function customTransform(file, enc, done) {
   done()
 }
 
-function customFlush(done) {
+function customFlush(this: Scanner, done: () => void) {
   const parser = this.parser
   const resStore = parser.resStore
   const resScan = parser.resScan
@@ -84,9 +92,6 @@ function customFlush(done) {
       for (let i = 0; i < resScanKeys.length; ++i) {
         _.unset(commonNs, resScanKeys[i])
       }
-
-      // Omit empty object
-      // obj = omitEmptyObject(resMerged[lng][ns])
 
       const obj = resMerged[lng][ns]
 
@@ -130,7 +135,6 @@ async function scanTranslations() {
   })
 
   const options = {
-    // debug: true,
     sort: true,
     lngs: supportedLanguages,
     ns,
