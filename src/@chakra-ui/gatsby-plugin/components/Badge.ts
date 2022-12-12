@@ -17,6 +17,7 @@ export const Badge: ComponentStyleConfig = {
     fontWeight: "initial",
     py: 1,
     px: 2,
+    textTransform: "uppercase",
   },
   variants: {
     primary: variantPrimary,
