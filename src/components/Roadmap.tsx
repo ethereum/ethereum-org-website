@@ -69,18 +69,14 @@ const IssueSection: React.FC<IPropsIssueSection> = ({ issues }) => {
             }}
           >
             <Box>{issue.title}</Box>
-            {issue.errorMsg && <Text color="fail">{issue.errorMsg}</Text>}
+            {issue.errorMsg && (
+              <Text color="fail" mb={0}>
+                {issue.errorMsg}
+              </Text>
+            )}
             <Box>
               {issue.html_url && (
-                <LinkOverlay
-                  href={url}
-                  textDecoration="none"
-                  _after={{
-                    content: '"↗"',
-                    ml: 0.5,
-                  }}
-                  isExternal
-                >
+                <LinkOverlay as={Link} href={url}>
                   Discuss
                 </LinkOverlay>
               )}
