@@ -4,7 +4,7 @@ description: A guide on how to swap tokens on Ethereum.
 lang: en
 ---
 
-# How to: swap tokens
+# How to: Swap tokens
 
 A token swap involves the exchange of two different ERC-20 tokens, for example swapping ETH for DAI. You can swap most of the tokens using decentralized exchanges. You will need to have a crypto wallet to swap tokens. If you do not have one already, you can follow this tutorial: How to “register” Ethereum account.
 
