@@ -86,6 +86,7 @@ The reward, penalty and slashing design of the Beacon Chain encourages individua
 - [Vitalik's annotated spec](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#rewards-and-penalties-1)
 - [Eth2 Slashing Prevention Tips](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50)
 
-_Sources_  
+_Sources_
+
 - _[https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/](https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/)_
 - _[https://benjaminion.xyz/eth2-annotated-spec/phase0/beacon-chain/](https://benjaminion.xyz/eth2-annotated-spec/phase0/beacon-chain/)_

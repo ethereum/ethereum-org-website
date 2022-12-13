@@ -40,14 +40,14 @@ The two public proof-of-stake testnets (which client developers are maintaining 
 The Sepolia network uses a permissioned validator set. It's fairly new, meaning its state and history are both quite small. This means the network is quick to sync to and that running a node on it requires less storage. This is useful for users who want to quickly spin up a node and interact with the network directly.
 
 - Closed validator set, controlled by client & testing teams
-- New testnet, less applications deployed than other testnets 
+- New testnet, less applications deployed than other testnets
 - Fast to sync and running a node requires minimal disk space
 
-**[Goerli](#goerli) is the recommended default testnet for testing of validating and staking**. 
+**[Goerli](#goerli) is the recommended default testnet for testing of validating and staking**.
 The Goerli network is open for users wanting to run a testnet validator. Stakers wanting to test protocol upgrades before they are deployed to mainnet should therefore use Goerli.
 
 - Open validator set, stakers can test network upgrades
-- Large state, useful for testing complex smart contract interactions 
+- Large state, useful for testing complex smart contract interactions
 - Longer to sync and requires more storage to run a node
 
 #### Sepolia {#sepolia}

@@ -158,8 +158,6 @@ Sta bij interactie met slimme contracten geen onbeperkte bestedingslimieten toe.
 
 Veel Ethereum-portemonnees bieden limieten aan bescherming tegen het leeglopen van rekeningen.
 
-[Onderzoek portemonnees met limietbescherming](/wallets/find-wallet/?filters=has_limits_protection)
-
 <Divider />
 
 ## Veelvoorkomende scams {#common-scams}

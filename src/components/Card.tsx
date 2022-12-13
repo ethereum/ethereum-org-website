@@ -1,8 +1,8 @@
 import React, { ReactNode } from "react"
-import { Flex, Heading, Text } from "@chakra-ui/react"
+import { ChakraProps, Flex, Heading, Text } from "@chakra-ui/react"
 import Emoji from "./Emoji"
 
-export interface IProps {
+export interface IProps extends ChakraProps {
   children?: React.ReactNode
   emoji?: string
   title?: ReactNode
@@ -16,6 +16,7 @@ const Card: React.FC<IProps> = ({
   description,
   children,
   className,
+  ...props
 }) => (
   <Flex
     direction="column"
@@ -28,6 +29,7 @@ const Card: React.FC<IProps> = ({
     borderColor="lightBorder"
     p={6}
     className={className}
+    {...props}
   >
     <div>
       {emoji && <Emoji fontSize="5xl" text={emoji} mb={4} />}
