@@ -16,13 +16,13 @@ A token swap involves the exchange of two different ERC-20 tokens, for example s
 
 **2. Select the pair of tokens you wish to swap**, for example, ETH and DAI. Make sure you have funds in one of the two tokens.
 
-3. **Enter the amount of tokens you want to trade** and review the details of the transaction. Check the exchange rate and any other fees to prevent ugly surprises.
+**3. Enter the amount of tokens you want to trade** and review the details of the transaction. Check the exchange rate and any other fees to prevent ugly surprises.
 
-1. **Confirm the transaction.** The exchange will automatically calculate how many tokens you will get.
+**4. Confirm the transaction.** The exchange will automatically calculate how many tokens you will get.
 
-5. **Wait for the transaction to be processed**. You can view the progress of the transaction on any blockchain explorer. This process should not take longer than 10 minutes. 
+**5. Wait for the transaction to be processed**. You can view the progress of the transaction on any blockchain explorer. This process should not take longer than 10 minutes. 
 
-6. **You will automatically receive the swapped tokens in your wallet** once the transaction is processed.
+**6. You will automatically receive the swapped tokens in your wallet** once the transaction is processed.
 
 ### Frequently asked questions
 
