@@ -19,4 +19,4 @@ Do you want to start your Ethereum journey? It can be confusing to use and under
 
 ## Efficiency
 1. [How to: Bridge tokens to layer 2](/guides/how-to-use-a-bridge/) - Are Ethereum transactions too costly? Consider moving to Ethereum scaling solutions called layer 2s. 
-2. [How to: Swap tokens](/guides/how-to-swap-tokens/) - Do you want to exchange your tokens for a different one? A simple guide how to di that.
+2. [How to: Swap tokens](/guides/how-to-swap-tokens/) - Do you want to exchange your tokens for a different one? A simple guide how to do that.
