@@ -85,6 +85,8 @@
               to: /developers/docs/consensus-mechanisms/pos/attack-and-defense/
             - id: docs-nav-keys
               to: /developers/docs/consensus-mechanisms/pos/keys/
+            - id: docs-nav-pos-vs-pow
+              to: /developers/docs/consensus-mechanisms/pos/pos-vs-pow
             - id: docs-nav-block-proposal
               to: /developers/docs/consensus-mechanisms/pos/block-proposal/
             - id: docs-nav-pos-faqs
