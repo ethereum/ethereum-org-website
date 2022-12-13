@@ -1,4 +1,4 @@
-import { Box, Flex, Grid } from "@chakra-ui/react"
+import { Box, Flex, Grid, useToken } from "@chakra-ui/react"
 import React from "react"
 
 export type Props = {
@@ -63,6 +63,8 @@ export const BannerGrid: React.FC<Props> = ({ children }) => {
 }
 
 export const BannerGridCell: React.FC<Props> = ({ children }) => {
+  const [medBp, lgBp] = useToken("breakpoints", ["md", "lg"])
+
   return (
     <Flex
       px={12}
@@ -70,49 +72,43 @@ export const BannerGridCell: React.FC<Props> = ({ children }) => {
       direction="column"
       borderTop="1px solid"
       borderTopColor="searchBackground"
-      borderLeft={{ base: "none", md: "1px solid" }}
+      borderLeft={{ base: 0, md: "1px solid" }}
       borderLeftColor={{ md: "searchBackground" }}
       sx={{
         "&:first-child": {
-          borderTop: "none",
-          lg: {
-            paddingLeft: 0,
-            borderLeft: "none",
+          borderTop: 0,
+        },
+        [`@media (min-width: ${medBp})`]: {
+          "&:nth-child(-n + 2)": {
+            borderTop: 0,
+          },
+          "&:nth-child(2n + 1)": {
+            borderLeft: 0,
           },
         },
-        "&:nth-child(-n + 2)": {
-          md: {
-            borderTop: "none",
+        [`@media (min-width: ${lgBp})`]: {
+          "&:first-child": {
+            paddingLeft: 0,
+            borderLeft: 0,
           },
-          lg: {
+          "&:nth-child(-n + 2)": {
             borderTop: "1px solid",
             borderTopColor: "searchBackground",
           },
-        },
-        "&:nth-child(2n + 1)": {
-          md: {
-            borderLeft: "none",
-          },
-          lg: {
+          "&:nth-child(2n + 1)": {
             borderLeft: "1px solid",
             borderLeftColor: "searchBackground",
           },
-        },
-        "&:nth-child(-n + 3)": {
-          lg: {
-            borderTop: "none",
+          "&:nth-child(-n + 3)": {
+            borderTop: 0,
             justifyContent: "start",
             paddingTop: 0,
           },
-        },
-        "&:nth-child(3n + 1)": {
-          lg: {
+          "&:nth-child(3n + 1)": {
             paddingLeft: 0,
-            borderLeft: "none",
+            borderLeft: 0,
           },
-        },
-        "&:nth-child(n + 4)": {
-          lg: {
+          "&:nth-child(n + 4)": {
             justifyContent: "start",
             paddingBottom: 0,
           },
