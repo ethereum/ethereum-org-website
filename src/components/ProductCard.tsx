@@ -72,10 +72,8 @@ const SubjectBadge: React.FC<{
       variant="secondary"
       background={backgroundProp()}
       borderColor="lightBorder"
+      color="black300"
       py={0}
-      me={3}
-      mb={2}
-      textTransform="initial"
     >
       {children}
     </Badge>
