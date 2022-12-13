@@ -37,4 +37,4 @@ You can use [chainlist.org](http://chainlist.org) to find the network details. O
 ### Frequently asked questions
 
 **What if I have funds on an exchange?**
-You might be able to withdraw to some layer 2s directly from an exchange. Check out “Move to layer 2” section of our  [Layer 2 page](https://ethereum.org/en/layer-2/) for more information.
+- You might be able to withdraw to some layer 2s directly from an exchange. Check out “Move to layer 2” section of our  [Layer 2 page](https://ethereum.org/en/layer-2/) for more information.
