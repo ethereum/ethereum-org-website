@@ -37,7 +37,7 @@ const REPO_DATA = gql`
   }
 `
 
-const Subjectbadge: React.FC<{
+const SubjectBadge: React.FC<{
   subject: string
   children: React.ReactNode
 }> = ({ subject, children }) => {
@@ -69,7 +69,7 @@ const Subjectbadge: React.FC<{
   }
   return (
     <Badge
-    variant="secondary"
+      variant="secondary"
       background={backgroundProp()}
       borderColor="lightBorder"
       py={0}
@@ -192,16 +192,16 @@ const ProductCard: React.FC<IProps> = ({
       <HStack mt={5} mb={2} px={6} spacing={3}>
         {subjects &&
           subjects.map((subject, idx) => (
-            <SubjectPill key={idx} subject={subject}>
+            <SubjectBadge key={idx} subject={subject}>
               {subject}
-            </SubjectPill>
+            </SubjectBadge>
           ))}
         {hasRepoData &&
           data.repository.languages.nodes.map(
             ({ name }: { name: string }, idx: number) => (
-              <SubjectPill key={idx} subject={name}>
+              <SubjectBadge key={idx} subject={name}>
                 {name.toUpperCase()}
-              </SubjectPill>
+              </SubjectBadge>
             )
           )}
       </HStack>
