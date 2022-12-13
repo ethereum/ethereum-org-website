@@ -22,7 +22,7 @@ A token swap involves the exchange of two different ERC-20 tokens, for example s
 
 **5. Wait for the transaction to be processed**. You can view the progress of the transaction on any blockchain explorer. This process should not take longer than 10 minutes. 
 
-**6. You will automatically receive the swapped tokens in your wallet** once the transaction is processed.
+**You will automatically receive the swapped tokens in your wallet** once the transaction is processed.
 
 ### Frequently asked questions
 
