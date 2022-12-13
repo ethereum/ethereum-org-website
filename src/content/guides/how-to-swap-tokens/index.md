@@ -14,9 +14,9 @@ A token swap involves the exchange of two different ERC-20 tokens, for example s
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
 - [Curve](https://curve.fi/#/ethereum/swap)
 
-**2. Select the pair of tokens you wish to swap, f**or example, ETH and DAI. Make sure you have funds in one of the two tokens.
-****
-3. **Enter the amoun**t **of tokens you want to trade** and review the details of the transaction. Check the exchange rate and any other fees to prevent ugly surprises.
+**2. Select the pair of tokens you wish to swap**, for example, ETH and DAI. Make sure you have funds in one of the two tokens.
+
+3. **Enter the amount of tokens you want to trade** and review the details of the transaction. Check the exchange rate and any other fees to prevent ugly surprises.
 
 1. **Confirm the transaction.** The exchange will automatically calculate how many tokens you will get.
 
