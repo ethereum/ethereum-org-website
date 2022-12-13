@@ -16,9 +16,10 @@ If you have your funds in a wallet, follow these steps:
 You can learn more about different projects on our [layer 2 page](https://ethereum.org/en/layer-2/).
 
 ## 2. Go to the selected bridge:
-    1. [Arbitrum bridge](https://bridge.arbitrum.io/?l2ChainId=42161)
-    2. [Optimism bridge](https://app.optimism.io/bridge/deposit)
-    3. [Boba network bridge](https://gateway.boba.network/)
+Some popular layer 2s are:
+- [Arbitrum bridge](https://bridge.arbitrum.io/?l2ChainId=42161)
+- [Optimism bridge](https://app.optimism.io/bridge/deposit)
+- [Boba network bridge](https://gateway.boba.network/)
 
 ## 3. Connect to the bridge with your wallet.
 Make sure you are connected to the Ethereum mainnet network. 
