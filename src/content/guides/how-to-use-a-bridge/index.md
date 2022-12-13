@@ -21,4 +21,4 @@ If you have your funds in a wallet, follow these steps:
 4. **Specify the amount and move the funds** by clicking on the button.
 5. **Confirm the transaction in your wallet** and pay the ETH fee.
 6. **Wait for your funds to be moved** onto the selected layer 2 network. This process should not take more than a few minutes.
-7. **Add the selected layer 2 network to your wallet** if needed. You can use [chainlist.org](http://chainlist.org) to find the network details.
+7. **Add the selected layer 2 network to your wallet** if needed. You can use [chainlist.org](http://chainlist.org) to find the network details. Once the network is added and transaction finished, you should see the tokens in your wallet.
