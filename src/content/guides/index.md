@@ -6,13 +6,17 @@ lang: en
 
 # Ethereum guides
 
-Do you want to start your Ethereum journey? It can be confusing to use and understand new technology. Our guides will teach you how to get started step-by-step.
+Do you want to start your Ethereum journey? It can be confusing to use and understand new technology. Our practical guides will teach you how to get started step-by-step.
 
 ## Getting started
 
-1. How to: "Register" an Ethereum account - You will learn that you need a wallet app and the guide will show you where to find one.
+1. [How to: "Register" an Ethereum account](how-to-register-an-ethereum-account/) - You will learn that you need a wallet app and the guide will show you where to find one.
 
-2. How to: Use a wallet - An introduction to basic features of any wallet and how to use them.
+2. [How to: Use a wallet](/guides/how-to-use-a-wallet/) - An introduction to basic features of any wallet and how to use them.
 
-## Security
-1. How to: Revoke smart contract access to your crypto funds - If you suddenly see a transaction in your wallet that you did not initiate, this guide will teach you how to prevent that from hapening again.
+## Security basics
+1. [How to: Revoke smart contract access to your crypto funds](how-to-revoke-token-access/)
+ - If you suddenly see a transaction in your wallet that you did not initiate, this guide will teach you how to prevent that from hapening again.
+
+## Efficiency
+1. [How to: Bridge tokens to layer 2](how-to-use-a-bridge/) - Are Ethereum transactions too costly? Consider moving to Ethereum scaling solutions called layer 2s. 
