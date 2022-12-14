@@ -41,7 +41,7 @@ Once you have saved your recovery phrase you should see your wallet dashboard wi
 **Are my wallet and my Ethereum account the same?**
 - No, wallets have the ability to create a new Ethereum account, but the account lives on Ethereum and wallets connect to it. So if you lose your wallet you can still recover your account with the recovery phrase.
 
-**Can I send Bitcoin to an Ethereum address and vice versa?**
+**Can I send bitcoin to an Ethereum address, or ether to a Bitcoin address?**
 
 - No you cannot, you need two different accounts.
 
