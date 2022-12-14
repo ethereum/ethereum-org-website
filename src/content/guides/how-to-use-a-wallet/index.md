@@ -39,7 +39,7 @@ Would you like to send ETH to another wallet?
 <img src="./send.png" width="400" alt="Send field for crypto address"/>
 <br/><br/>
 
-4. Many assets, like DAI or USDC, exist on multiple networks. When transferring crypto tokens, make sure that the other side is using the same network as you are. 
+5. Many assets, like DAI or USDC, exist on multiple networks. When transferring crypto tokens, make sure that the other side is using the same network as you are, since these are not interchangeable.
 6. Confirm the transaction and have prepared a small amount of ETH to pay for a transaction fee, the exact amount of the fee changes depending on network congestion. 
 7. Once your transaction is processed, the crypto will show up in the recipient’s account. This might take anywhere from few seconds to few minutes.
 
