@@ -65,8 +65,6 @@ Your address represents you on all Ethereum projects. You will not need to regis
 5. Confirm a signature request in your wallet to start the connection. It should not cost anything.
 6. Thats it! Start using the app. You can find some interesting projects on our [dApps page](https://ethereum.org/en/dapps/#explore).
 
-<br/><br/>
-
 ### Frequently asked questions
 
 **If I own an ETH address, do I own the same address on other blockchains?**
