@@ -64,20 +64,20 @@ Your address represents you on all Ethereum projects. You will not need to regis
 5. Confirm a signature request in your wallet to start the connection. It should not cost anything.
 6. That's it! Start using the app. You can find some interesting projects on our [dApps page](/dapps/#explore).
 
-### Frequently asked questions
+## Frequently asked questions
 
-**If I own an ETH address, do I own the same address on other blockchains?**
+### If I own an ETH address, do I own the same address on other blockchains?
 
-- You can use the same address on all EVM compatible blockchains (if you have the type of wallet with a recovery phrase). This [list](https://chainlist.org/) will show you which blockchains you can use with the same address. Some blockchains like Bitcoin are completely separate and you will need a different address with a different format. If you have a smart contract wallet you should check its product website for more info on what blockchains are allowed.
+You can use the same address on all EVM compatible blockchains (if you have the type of wallet with a recovery phrase). This [list](https://chainlist.org/) will show you which blockchains you can use with the same address. Some blockchains like Bitcoin are completely separate and you will need a different address with a different format. If you have a smart contract wallet you should check its product website for more info on what blockchains are allowed.
 
-**Can I use the same address on multiple devices?**
+### Can I use the same address on multiple devices?
 
-- Yes you can use the same address on multiple devices. Wallets are technically only an interface to show you your balance and to make transactions, your account isn't stored inside the wallet, but on the blockchain.
+Yes you can use the same address on multiple devices. Wallets are technically only an interface to show you your balance and to make transactions, your account isn't stored inside the wallet, but on the blockchain.
 
-**I have not received the crypto, where can I check the status of a transaction?**
+### I have not received the crypto, where can I check the status of a transaction?
 
-- You can use [block explorers](https://ethereum.org/en/developers/docs/data-and-analytics/block-explorers/) to see the status of any transaction in real time. All you need to do is to search your wallet address or the ID of the transaction.
+You can use [block explorers](https://ethereum.org/en/developers/docs/data-and-analytics/block-explorers/) to see the status of any transaction in real time. All you need to do is to search your wallet address or the ID of the transaction.
 
-**Can I cancel or return transactions?**
+### Can I cancel or return transactions?
 
-- No, once a transaction is initiated, you can not cancel the transaction.
+No, once a transaction is initiated, you can not cancel the transaction.
