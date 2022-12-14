@@ -41,8 +41,8 @@ This process should not take more than a 10-20 minutes.
 
 You can use [chainlist.org](http://chainlist.org) to find the network details. Once the network is added and transaction finished, you should see the tokens in your wallet.
 
-### Frequently asked questions
+## Frequently asked questions
 
-**What if I have funds on an exchange?**
+### What if I have funds on an exchange?
 
 You might be able to withdraw to some layer 2s directly from an exchange. Check out “Move to layer 2” section of our [Layer 2 page](/layer-2/) for more information.
