@@ -25,7 +25,8 @@ Some popular layer 2s are:
 
 Make sure you are connected to the Ethereum Mainnet network. 
 
-## 4. Specify the amount and move the funds.
+## 4. Specify the amount and move the funds
+
 Review the amount that you will get in return on the layer 2 network and the fees to avoid unpleasant surprises.
 
 ## 5. Confirm the transaction in your wallet.
