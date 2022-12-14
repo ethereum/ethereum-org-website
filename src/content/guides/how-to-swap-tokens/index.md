@@ -23,6 +23,7 @@ For example, ETH and DAI. Make sure you have funds in one of the two tokens.
 Also review the details of the transaction. Check the exchange rate and any other fees to prevent ugly surprises.
 
 ## 4. Confirm the transaction.
+
 The exchange will automatically calculate how many tokens you will get.
 
 ## 5. Wait for the transaction to be processed.
