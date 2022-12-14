@@ -10,7 +10,8 @@ Layer 2s are scaling solutions for Ethereum which allow users to transact with i
 
 If you have your funds in a wallet, follow these steps:
 
-## 1. Determine which layer 2 network you want to use.
+## 1. Determine which layer 2 network you want to use
+
 You can learn more about the different projects and important links on our [layer 2 page](https://ethereum.org/en/layer-2/).
 
 ## 2. Go to the selected bridge:
