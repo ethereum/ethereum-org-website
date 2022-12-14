@@ -35,7 +35,7 @@ You will have to pay a fee in form of ETH for processing the transaction.
 
 ## 6. Wait for your funds to be moved
 
-This process should not take more than a 10-20 minutes.
+This process should not take more than 10 minutes.
 
 ## 7. Add the selected layer 2 network to your wallet
 
