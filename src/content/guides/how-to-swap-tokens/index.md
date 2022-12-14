@@ -33,12 +33,12 @@ You can view the progress of the transaction on any blockchain explorer. This pr
 
 You will automatically receive the swapped tokens in your wallet once the transaction is processed.
 
-### Frequently asked questions
+## Frequently asked questions
 
-**Can I swap ETH for BTC from my wallet?**
+### Can I swap ETH for BTC from my wallet?
 
-- No, you can only swap tokens that are native to the Ethereum network, such as ETH, ERC-20 tokens or NFTs. You can only swap "wrapped" forms of Bitcoin that live on Ethereum.
+No, you can only swap tokens that are native to the Ethereum network, such as ETH, ERC-20 tokens or NFTs. You can only swap "wrapped" forms of Bitcoin that live on Ethereum.
 
-**What is slippage?**
+### What is slippage?
 
-- It is the difference between your expected exchange rate and the actual rate.
+It is the difference between your expected exchange rate and the actual rate.
