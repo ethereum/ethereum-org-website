@@ -1,8 +1,4 @@
----
-title: How to: Revoke smart contract access to your crypto funds
-description: A how to guide on revoking exploitative smart contract token access
-lang: en
----
+
 
 # How to: Revoke smart contract access to your crypto funds
 
