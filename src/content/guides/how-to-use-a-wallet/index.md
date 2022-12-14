@@ -10,7 +10,7 @@ Learn how to operate all the basic functions of a wallet. If you don’t have on
 
 ## Open your wallet
 
-You should see a dashboard that will likely show your balance and contain buttons to Send and Receive tokens. 
+You should see a dashboard that will likely show your balance and contain buttons to send and receive tokens. 
 
 ## Receive cryptocurrency
 
