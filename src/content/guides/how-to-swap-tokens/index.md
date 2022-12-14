@@ -37,7 +37,7 @@ You will automatically receive the swapped tokens in your wallet once the transa
 
 **Can I swap ETH for BTC from my wallet?**
 
-- No, you can only swap tokens that are ERC-20. You can only swap wrapped Bitcoin.
+- No, you can only swap tokens that are native to the Ethereum network, such as ETH, ERC-20 tokens or NFTs. You can only swap "wrapped" forms of Bitcoin that live on Ethereum.
 
 **What is a slippage?**
 - It is the difference between your expected exchange rate and the actual rate.
