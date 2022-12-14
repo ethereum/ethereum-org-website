@@ -19,6 +19,7 @@ Some popular exchanges are:
 For example, ETH and DAI. Make sure you have funds in one of the two tokens.
 
 ## 3. Enter the amount of tokens you want to trade. 
+
 Also review the details of the transaction. Check the exchange rate and any other fees to prevent ugly surprises.
 
 ## 4. Confirm the transaction.
