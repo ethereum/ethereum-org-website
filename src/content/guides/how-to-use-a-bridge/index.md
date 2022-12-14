@@ -29,7 +29,8 @@ Make sure you are connected to the Ethereum Mainnet network.
 
 Review the amount that you will get in return on the layer 2 network and the fees to avoid unpleasant surprises.
 
-## 5. Confirm the transaction in your wallet.
+## 5. Confirm the transaction in your wallet
+
 You will have to pay a fee in form of ETH for processing the transaction.
 
 ## 6. Wait for your funds to be moved.
