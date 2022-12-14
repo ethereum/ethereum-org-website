@@ -9,6 +9,7 @@ lang: en
 A token swap involved the exchange of two different assets that exist on the Ethereum network, for example swapping ETH for DAI (an ERC-20 token). You can swap most of the tokens using decentralized exchanges. You will need to have a crypto wallet to swap tokens. If you do not have one already, you can follow this tutorial: How to "register" an Ethereum account.
 
 ## 1. Connect your wallet to the decentralized exchange (DEX) of your choice.
+
 Some popular exchanges are:
 
 - [Uniswap](https://app.uniswap.org/#/swap)
