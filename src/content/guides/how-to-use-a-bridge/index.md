@@ -14,7 +14,8 @@ If you have your funds in a wallet, follow these steps:
 
 You can learn more about the different projects and important links on our [layer 2 page](https://ethereum.org/en/layer-2/).
 
-## 2. Go to the selected bridge:
+## 2. Go to the selected bridge
+
 Some popular layer 2s are:
 - [Arbitrum bridge](https://bridge.arbitrum.io/?l2ChainId=42161)
 - [Optimism bridge](https://app.optimism.io/bridge/deposit)
