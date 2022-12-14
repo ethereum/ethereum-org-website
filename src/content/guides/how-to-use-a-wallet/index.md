@@ -68,7 +68,7 @@ Your address represents you on all Ethereum projects. You will not need to regis
 
 **If I own an ETH address, do I own the same address on other blockchains?**
 
-- You can use the same address on many popular blockchains (if you have the type of wallet with a recovery phrase). This [list](https://chainlist.org/) will show you which blockchains you can use with the same address. Some blockchains like Bitcoin are completely separate and you will need a different address with a different format. If you have a smart contract wallet you should check its product website for more info on what blockchains are allowed.
+- You can use the same address on all EVM compatible blockchains (if you have the type of wallet with a recovery phrase). This [list](https://chainlist.org/) will show you which blockchains you can use with the same address. Some blockchains like Bitcoin are completely separate and you will need a different address with a different format. If you have a smart contract wallet you should check its product website for more info on what blockchains are allowed.
 
 **Can I use the same address on multiple devices?**
 
