@@ -21,7 +21,8 @@ Some popular layer 2s are:
 - [Optimism bridge](https://app.optimism.io/bridge/deposit)
 - [Boba network bridge](https://gateway.boba.network/)
 
-## 3. Connect to the bridge with your wallet.
+## 3. Connect to the bridge with your wallet
+
 Make sure you are connected to the Ethereum mainnet network. 
 
 ## 4. Specify the amount and move the funds.
