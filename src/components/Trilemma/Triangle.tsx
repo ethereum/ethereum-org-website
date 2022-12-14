@@ -1,6 +1,6 @@
-import { chakra, HTMLChakraProps } from "@chakra-ui/react"
 import React, { ReactNode } from "react"
 import { useIntl } from "react-intl"
+import { chakra, HTMLChakraProps } from "@chakra-ui/react"
 import { translateMessageId } from "../../utils/translations"
 import { HandleClickParam } from "./use-trilemma"
 

@@ -1,3 +1,4 @@
+import React from "react"
 import {
   Drawer,
   DrawerCloseButton,
@@ -9,7 +10,6 @@ import {
   Show,
   Text,
 } from "@chakra-ui/react"
-import React from "react"
 import Card from "../Card"
 import Translation from "../Translation"
 import { TriangleSVG, IProps as TriangleSVGProps } from "./Triangle"
