@@ -8,7 +8,7 @@ lang: en
 
 This guide will teach you how to view a list of all smart contracts you have allowed access to your funds and how to cancel them.
 
-Sometimes malicious developers build backdoors into smart contracts that will allow access to the funds of unaware users who interact with their projects. What often happens is that such platforms ask the user for permission to spend an **unlimited number of tokens**.
+Sometimes malicious developers build backdoors into smart contracts that allow access to the funds of unaware users who interact with the smart contract. What often happens is that such platforms ask the user for permission to spend an **unlimited number of tokens** in an attempt to save small amounts of gas in the future, but this comes with increased risk.
 
 Once a platform has unlimited access rights to a token on your wallet, they can spend all those tokens even if you have withdrawn your funds from their platform into your wallet. Malicious actors can still access your funds and withdraw them into their wallets with no recovery option left for you.
 
