@@ -25,7 +25,7 @@ You need to provide the sender with your receiving address. Many wallet apps let
 3. Copy your Ethereum address to clipboard.
 4. Provide the sender with your receiving Ethereum address.
 
-It is the same process if you are trying to send your funds from an exchange.
+This is a general pattern, and different apps may vary or use different language. It should also be similar process if you are trying to send your funds from an exchange. 
 
 ## Send cryptocurrency
 
