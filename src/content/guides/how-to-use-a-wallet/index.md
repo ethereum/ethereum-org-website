@@ -8,7 +8,6 @@ lang: en
 
 Learn how to operate all the basic functions of a wallet. If you don’t have one yet, check out our How to: "Register" an Ethereum account.
 
-
 ## Open your wallet
 
 You should see a dashboard that will likely show your balance and contain buttons to Send and Receive tokens. 
