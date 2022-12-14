@@ -15,8 +15,11 @@ Do you want to start your Ethereum journey? It can be confusing to use and under
 2. [How to: Use a wallet](/guides/how-to-use-a-wallet/) - An introduction to basic features of any wallet and how to use them.
 
 ## Security basics
+
 1. [How to: Revoke smart contract access to your crypto funds](/guides/how-to-revoke-token-access/) - If you suddenly see a transaction in your wallet that you did not initiate, this guide will teach you how to prevent that from hapening again.
 
 ## Using Ethereum
+
 1. [How to: Bridge tokens to layer 2](/guides/how-to-use-a-bridge/) - Are Ethereum transactions too costly? Consider moving to Ethereum scaling solutions called layer 2s. 
+
 2. [How to: Swap tokens](/guides/how-to-swap-tokens/) - Do you want to exchange your tokens for a different one? A simple guide how to do that.
