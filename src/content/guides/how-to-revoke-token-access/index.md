@@ -53,7 +53,7 @@ No, it will not affect any of your DeFi strategies. You will remain in your posi
 
 **Is disconnecting a wallet from a project the same as removing permission to use my funds?**
 
-- No—if you disconnect your wallet from the project, you've granted token allowance permissions, they can still use those tokens. You need to revoke that access.
+- No—if you disconnect your wallet from the project, but you've granted token allowance permissions, they can still use those tokens. You need to revoke that access.
 
 **When will the contract permission expire?**
 
