@@ -1,7 +1,19 @@
 // Libraries
 import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { Box, Flex, Img, Center, Heading, Text } from "@chakra-ui/react"
+import { useEffect, useState } from "react"
+import * as ReactDOMServer from "react-dom/server"
+import Button from "./Button"
+import {
+  Box,
+  Flex,
+  Img,
+  Center,
+  Heading,
+  Text,
+  Wrap,
+  WrapItem,
+} from "@chakra-ui/react"
 
 // Components
 import Translation from "../components/Translation"
@@ -11,6 +23,7 @@ import Link from "./Link"
 
 // Utils
 import { getImage, getSrc, ImageDataLike } from "../utils/image"
+import theme from "../@chakra-ui/gatsby-plugin/theme"
 import { trackCustomEvent } from "../utils/matomo"
 
 export interface IHide {
@@ -35,10 +48,13 @@ interface IPropsWithImage extends IPropsBase {
   svg?: never
   image: ImageDataLike | null
 }
+interface IPropsWithImageAndSVG extends IPropsBase {
+  svg: React.FC<React.SVGProps<SVGSVGElement> & { alt: string }>
+  image: ImageDataLike | null
+}
 
-export type IProps = IPropsWithImage | IPropsWithSVG
+export type IProps = IPropsWithImage | IPropsWithSVG | IPropsWithImageAndSVG
 
-// TODO add ability to download SVGs
 const AssetDownload: React.FC<IProps> = ({
   alt,
   artistName,
@@ -54,6 +70,40 @@ const AssetDownload: React.FC<IProps> = ({
   const downloadUri = src ? src : image ? getSrc(image) : ""
   const downloadUrl = `${baseUrl}${downloadUri}`
   const Svg = svg
+  const [svgUrl, setSvgUrl] = useState<string>("")
+  const SvgImage = () => {
+    return <>{Svg && <Svg alt={alt} />}</>
+  }
+
+  const getSvgRendered = () => {
+    const svgRendered = ReactDOMServer.renderToString(<SvgImage></SvgImage>)
+
+    const addingSizeText = 'height="64" width="64" '
+    const index = svgRendered.indexOf("<svg ") + 5
+
+    if (svgRendered.includes("width=") && svgRendered.includes("height=")) {
+      const svgRenderedReplaced = svgRendered
+        .replace(/(width\s*=\s*["'](.*?)["'])/g, 'width="64"')
+        .replace(/(height\s*=\s*["'](.*?)["'])/g, 'height="64"')
+
+      return svgRenderedReplaced
+    } else {
+      const svgRenderedWithSize = [
+        svgRendered.slice(0, index),
+        addingSizeText,
+        svgRendered.slice(index),
+      ].join("")
+      return svgRenderedWithSize
+    }
+  }
+
+  useEffect(() => {
+    const svgFile = new File([getSvgRendered()], "filename.svg", {
+      type: "image/svg+xml",
+    })
+    const svgUrl = URL.createObjectURL(svgFile)
+    setSvgUrl(svgUrl)
+  }, [])
 
   return (
     <Box
@@ -88,7 +138,7 @@ const AssetDownload: React.FC<IProps> = ({
         )}
         {!children && (
           <Center border="1px" borderColor="white700" p={8} w="100%">
-            {Svg && <Svg alt={alt} />}
+            {!image && Svg && <Svg alt={alt} />}
             {image && (
               <Img
                 as={GatsbyImage}
@@ -119,8 +169,8 @@ const AssetDownload: React.FC<IProps> = ({
           </Flex>
         )}
       </Box>
-      <Box mt={4} p={0}>
-        {!Svg && (
+      {!Svg && (
+        <Box mt={4} p={0}>
           <ButtonLink
             to={downloadUrl}
             onClick={() => {
@@ -133,8 +183,36 @@ const AssetDownload: React.FC<IProps> = ({
           >
             <Translation id="page-assets-download-download" />
           </ButtonLink>
-        )}
-      </Box>
+        </Box>
+      )}
+      {Svg && image && svgUrl && (
+        <Box mt={4} p={0}>
+          <Flex gap={5}>
+            <Button>
+              <Link
+                to={downloadUrl}
+                color="white"
+                style={{ textDecoration: "none" }}
+                download
+              >
+                <Translation id="page-assets-download-download" />
+                <>&nbsp;(PNG)</>
+              </Link>
+            </Button>
+            <Button>
+              <Link
+                to={svgUrl}
+                color="white"
+                style={{ textDecoration: "none" }}
+                download={alt}
+              >
+                <Translation id="page-assets-download-download" />
+                <>&nbsp;(SVG)</>
+              </Link>
+            </Button>
+          </Flex>
+        </Box>
+      )}
     </Box>
   )
 }

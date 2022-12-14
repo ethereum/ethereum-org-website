@@ -11,12 +11,33 @@ import {
   HeadingProps,
   Img,
   useTheme,
-  VStack,
 } from "@chakra-ui/react"
 
 // Assets
-import EthGlyphColoredSvg from "../assets/assets/eth-glyph-colored.svg"
 import MergePandaSvg from "../assets/home/merge-panda.svg"
+import EthDiamondGlyph from "../assets/assets/eth-diamond-glyph.svg"
+import EthDiamondBlack from "../assets/assets/eth-diamond-black.svg"
+import EthDiamondRainbow from "../assets/assets/eth-diamond-rainbow.svg"
+import EthDiamondPurple from "../assets/assets/eth-diamond-purple.svg"
+import EthGlyphColored from "../assets/assets/eth-glyph-colored.svg"
+import EthPortraitBlack from "../assets/assets/ethereum-logo-portrait-black.svg"
+import EthLandscapeBlack from "../assets/assets/ethereum-logo-landscape-black.svg"
+import EthWordmarkBlack from "../assets/assets/ethereum-wordmark-black.svg"
+import EthPortraitPurple from "../assets/assets/ethereum-logo-portrait-purple-purple.svg"
+import EthLandscapePurple from "../assets/assets/ethereum-logo-landscape-purple.svg"
+import EthWordmarkPurple from "../assets/assets/ethereum-wordmark-purple-purple.svg"
+import EthDiamondBlackWhite from "../assets/assets/eth-diamond-black-white.svg"
+import EthDiamondBlackGrey from "../assets/assets/eth-diamond-black-gray.svg"
+import EthDiamondPurplePurple from "../assets/assets/eth-diamond-purple-purple.svg"
+import EthDiamondPurpleWhite from "../assets/assets/eth-diamond-purple-white.svg"
+import EthPortraitBlackGray from "../assets/assets/ethereum-logo-portrait-black-gray.svg"
+import EthLandscapeBlackGray from "../assets/assets/ethereum-logo-landscape-black-gray.svg"
+import EthWordmarkBlackGray from "../assets/assets/ethereum-wordmark-black-gray.svg"
+import EthPortraitPurplePurple from "../assets/assets/ethereum-logo-portrait-purple-purple.svg"
+import EthLandscapePurplePurple from "../assets/assets/ethereum-logo-landscape-purple-purple.svg"
+import EthWordmarkPurplePurple from "../assets/assets/ethereum-wordmark-purple-purple.svg"
+import EthLandscapePurpleWhite from "../assets/assets/ethereum-logo-landscape-purple-white.svg"
+import EthWordmarkPurpleWhite from "../assets/assets/ethereum-wordmark-purple-white.svg"
 
 // Components
 import AssetDownload from "../components/AssetDownload"
@@ -309,16 +330,19 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             title={t("page-assets-eth-diamond-glyph")}
             alt={t("page-assets-eth-diamond-glyph")}
             image={data.ethDiamondGlyph}
+            svg={EthDiamondGlyph}
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-gray")}
             alt={t("page-assets-eth-diamond-gray")}
             image={data.ethDiamondBlack}
+            svg={EthDiamondBlack}
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-color")}
             alt={t("page-assets-eth-diamond-color")}
             image={data.ethDiamondColor}
+            svg={EthDiamondRainbow}
           />
         </Row>
         <Row>
@@ -326,16 +350,13 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             title={t("page-assets-eth-diamond-purple")}
             alt={t("page-assets-eth-diamond-purple")}
             image={data.ethDiamondPurple}
+            svg={EthDiamondPurple}
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-colored")}
             alt={t("page-assets-eth-diamond-colored")}
             image={data.ethGlyphColored}
-          />
-          <AssetDownload
-            title={t("page-assets-eth-diamond-colored-svg")}
-            alt={t("page-assets-eth-diamond-colored-svg")}
-            svg={EthGlyphColoredSvg}
+            svg={EthGlyphColored}
           />
         </Row>
         <Row>
@@ -343,16 +364,19 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             title={t("page-assets-eth-logo-portrait-gray")}
             alt={t("page-assets-eth-logo-portrait-gray")}
             image={data.ethPortraitBlack}
+            svg={EthPortraitBlack}
           />
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-gray")}
             alt={t("page-assets-eth-logo-landscape-gray")}
             image={data.ethLandscapeBlack}
+            svg={EthLandscapeBlack}
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-gray")}
             alt={t("page-assets-eth-wordmark-gray")}
             image={data.ethWordmarkBlack}
+            svg={EthWordmarkBlack}
           />
         </Row>
         <Row>
@@ -360,16 +384,19 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             title={t("page-assets-eth-logo-portrait-purple")}
             alt={t("page-assets-eth-logo-portrait-purple")}
             image={data.ethPortraitPurple}
+            svg={EthPortraitPurple}
           />
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-purple")}
             alt={t("page-assets-eth-logo-landscape-purple")}
             image={data.ethLandscapePurple}
+            svg={EthLandscapePurple}
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-purple")}
             alt={t("page-assets-eth-wordmark-purple")}
             image={data.ethWordmarkPurple}
+            svg={EthWordmarkPurple}
           />
         </Row>
         <H3>
@@ -380,21 +407,48 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             title={t("page-assets-eth-diamond-white")}
             alt={t("page-assets-eth-diamond-white")}
             image={data.ethDiamondBlackWhite}
+            svg={EthDiamondBlackWhite}
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-gray")}
             alt={t("page-assets-eth-diamond-gray")}
             image={data.ethDiamondBlackGray}
+            svg={EthDiamondBlackGrey}
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-purple")}
             alt={t("page-assets-eth-diamond-purple")}
             image={data.ethDiamondPurplePurple}
+            svg={EthDiamondPurplePurple}
+          />
+        </Row>
+
+        <Row>
+          <AssetDownload
+            title={t("page-assets-eth-diamond-white")}
+            alt={t("page-assets-eth-diamond-white")}
+            image={data.ethDiamondPurpleWhite}
+            svg={EthDiamondPurpleWhite}
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-white")}
             alt={t("page-assets-eth-diamond-white")}
             image={data.ethDiamondPurpleWhite}
+            svg={EthDiamondPurpleWhite}
+          />
+          <AssetDownload
+            title={t("page-assets-eth-diamond-white")}
+            alt={t("page-assets-eth-diamond-white")}
+            image={data.ethDiamondPurpleWhite}
+            svg={EthDiamondPurpleWhite}
+            shouldHide={true}
+          />
+          <AssetDownload
+            title={t("page-assets-eth-diamond-white")}
+            alt={t("page-assets-eth-diamond-white")}
+            image={data.ethDiamondPurpleWhite}
+            svg={EthDiamondPurpleWhite}
+            shouldHide={true}
           />
         </Row>
         <Row>
@@ -402,16 +456,19 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             title={t("page-assets-eth-logo-portrait-gray")}
             alt={t("page-assets-eth-logo-portrait-gray")}
             image={data.ethPortraitBlackGray}
+            svg={EthPortraitBlackGray}
           />
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-gray")}
             alt={t("page-assets-eth-logo-landscape-gray")}
             image={data.ethLandscapeBlackGray}
+            svg={EthLandscapeBlackGray}
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-gray")}
             alt={t("page-assets-eth-wordmark-gray")}
             image={data.ethWordmarkBlackGray}
+            svg={EthWordmarkBlackGray}
           />
         </Row>
         <Row>
@@ -419,16 +476,19 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             title={t("page-assets-eth-logo-portrait-purple")}
             alt={t("page-assets-eth-logo-portrait-purple")}
             image={data.ethPortraitPurplePurple}
+            svg={EthPortraitPurplePurple}
           />
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-purple")}
             alt={t("page-assets-eth-logo-landscape-purple")}
             image={data.ethLandscapePurplePurple}
+            svg={EthLandscapePurplePurple}
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-purple")}
             alt={t("page-assets-eth-wordmark-purple")}
             image={data.ethWordmarkPurplePurple}
+            svg={EthWordmarkPurplePurple}
           />
         </Row>
         <Row>
@@ -436,16 +496,19 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             title={t("page-assets-eth-logo-portrait-white")}
             alt={t("page-assets-eth-logo-portrait-white")}
             image={data.ethPortraitPurpleWhite}
+            svg={EthWordmarkPurplePurple}
           />
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-white")}
             alt={t("page-assets-eth-logo-landscape-white")}
             image={data.ethLandscapePurpleWhite}
+            svg={EthLandscapePurpleWhite}
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-white")}
             alt={t("page-assets-eth-wordmark-white")}
             image={data.ethWordmarkPurpleWhite}
+            svg={EthWordmarkPurpleWhite}
           />
         </Row>
       </Box>
