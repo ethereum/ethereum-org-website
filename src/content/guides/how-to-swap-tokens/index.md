@@ -28,6 +28,7 @@ Also review the details of the transaction. Check the exchange rate and any othe
 The exchange will automatically calculate how many tokens you will get.
 
 ## 5. Wait for the transaction to be processed.
+
 You can view the progress of the transaction on any blockchain explorer. This process should not take longer than 10 minutes. 
 
 You will automatically receive the swapped tokens in your wallet once the transaction is processed.
