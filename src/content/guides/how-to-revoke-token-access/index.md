@@ -61,4 +61,4 @@ No, it will not affect any of your DeFi strategies. You will remain in your posi
 
 **Why do projects set unlimited token allowance?**
 
-- Projects often do this to minimize the number of requests required, meaning the user only has to approve once and pay the transaction fee only once.  While convenient, this can be dangerous for users to approve carelessly, on sites that are not proven with time or audited.
+- Projects often do this to minimize the number of requests required, meaning the user only has to approve once and pay the transaction fee only once.  While convenient, this can be dangerous for users to approve carelessly, on sites that are not proven with time or audited. Some wallets allow you to manually restrict the amount of tokens being approved to limit your risk. Check with your wallet provider for more information.
