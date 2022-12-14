@@ -43,7 +43,7 @@ Once you have saved your recovery phrase you should see your wallet dashboard wi
 
 ### Can I send bitcoin to an Ethereum address, or ether to a Bitcoin address?
 
-No you cannot, you need two different accounts and receiving addresse with a different format altogether.
+No you cannot, you need two different accounts and receiving addresses with a different format altogether. This is because bitcoin uses a completely different technology. There are many EVM (Ethereum Virtual Machine) compatible tokens & blockchains that you can use with your Ethereum address.
 
 ### Is having my own wallet safer than keeping my funds on an exchange?
 
