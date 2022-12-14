@@ -45,20 +45,20 @@ We advise to refresh the revoking tool after few minutes and connect your wallet
 
 <mark>We recommend you never allow projects unlimited access to your tokens and revoke all token allowance access regularly.</mark>
 
-### Frequently asked questions
+## Frequently asked questions
 
-**Does revoking token access also terminate staking, pooling, lending etc?**
+### Does revoking token access also terminate staking, pooling, lending etc?
 
 No, it will not affect any of your DeFi strategies. You will remain in your positions and keep getting rewards etc.
 
-**Is disconnecting a wallet from a project the same as removing permission to use my funds?**
+### Is disconnecting a wallet from a project the same as removing permission to use my funds?
 
-- No—if you disconnect your wallet from the project, but you've granted token allowance permissions, they can still use those tokens. You need to revoke that access.
+No, if you disconnect your wallet from the project, but you've granted token allowance permissions, they can still use those tokens. You need to revoke that access.
 
-**When will the contract permission expire?**
+### When will the contract permission expire?
 
 - There are no expiration dates on contract permissions. If you grant contract permissions, they can be used, even years after they're granted.
 
-**Why do projects set unlimited token allowance?**
+### Why do projects set unlimited token allowance?
 
 - Projects often do this to minimize the number of requests required, meaning the user only has to approve once and pay the transaction fee only once.  While convenient, this can be dangerous for users to approve carelessly, on sites that are not proven with time or audited. Some wallets allow you to manually restrict the amount of tokens being approved to limit your risk. Check with your wallet provider for more information.
