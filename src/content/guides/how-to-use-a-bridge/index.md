@@ -37,7 +37,8 @@ You will have to pay a fee in form of ETH for processing the transaction.
 
 This process should not take more than a 10-20 minutes.
 
-## 7. Add the selected layer 2 network to your wallet.
+## 7. Add the selected layer 2 network to your wallet
+
 You can use [chainlist.org](http://chainlist.org) to find the network details. Once the network is added and transaction finished, you should see the tokens in your wallet.
 
 ### Frequently asked questions
