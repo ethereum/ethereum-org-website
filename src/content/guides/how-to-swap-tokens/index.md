@@ -41,6 +41,13 @@ You can view the progress of the transaction on any blockchain explorer. This pr
 
 You will automatically receive the swapped tokens in your wallet once the transaction is processed.
 
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
+  <div>Want to learn more?</div>
+  <ButtonLink to="/guides/">
+    See our other guides
+  </ButtonLink>
+</InfoBanner>
+
 ## Frequently asked questions
 
 ### Can I swap ETH for BTC from my wallet?
