@@ -537,7 +537,7 @@ const StablecoinAccordion: React.FC<IProps> = () => {
               <Title>
                 <Translation id="page-stablecoins-accordion-swap-title" />
               </Title>
-              <StyledPill color="success100">
+              <StyledPill background="success100">
                 <Translation id="page-stablecoins-accordion-swap-pill" />
               </StyledPill>
             </Row>
@@ -724,7 +724,7 @@ const StablecoinAccordion: React.FC<IProps> = () => {
               <Title>
                 <Translation id="page-stablecoins-accordion-borrow-title" />
               </Title>
-              <StyledPill color="warning">
+              <StyledPill background="warning">
                 <Translation id="page-stablecoins-accordion-borrow-pill" />
               </StyledPill>
             </Row>
