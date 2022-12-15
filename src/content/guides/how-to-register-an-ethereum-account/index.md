@@ -39,20 +39,20 @@ Once you have saved your recovery phrase you should see your wallet dashboard wi
 ### Frequently asked questions
 
 ### Are my wallet and my Ethereum account the same?
-- No, wallets have the ability to create a new Ethereum account, but the account lives on Ethereum and wallets connect to it. So if you lose your wallet you can still recover your account with the recovery phrase.
+No, wallets have the ability to create a new Ethereum account, but the account lives on Ethereum and wallets connect to it. So if you lose your wallet you can still recover your account with the recovery phrase.
 
 ### Can I send bitcoin to an Ethereum address, or ether to a Bitcoin address?
 
-No you cannot, you need two different accounts and receiving addresses with a different format altogether. This is because bitcoin uses a completely different technology. There are many EVM (Ethereum Virtual Machine) compatible tokens & blockchains that you can use with your Ethereum address.
-
-### Is having my own wallet safer than keeping my funds on an exchange?
-
-- Yes, this is a much safer option because nobody else will have access to your funds. There are unfortunately many examples of failed exchanges that filed for bankrupcy and lost users' savings. Hacks, frozen accounts or blocked withdrawals are some other common risks. Owning a wallet (with a recovery phrase) is the best way to safeguard your assets. If you have a poorly backed up recovery phrase, you're potentially at higher risk than if you had left your money on the exchange though. Make sure to store your recovery phrase well.
+No you cannot, you need two different accounts and receiving addresses with a different format altogether. There are many EVM (Ethereum Virtual Machine) compatible tokens & blockchains that you can use with your Ethereum address.
 
 ### If I own an ETH address, do I own the same address on other blockchains?
 
-- You can use the same address on all EVM compatible blockchains (if you have the type of wallet with a recovery phrase). This [list](https://chainlist.org/) will show you which blockchains you can use with the same address. Some blockchains like Bitcoin are completely separate and you will need a different address with a different format. If you have a smart contract wallet you should check its product website for more info on what blockchains are allowed.
+You can use the same address on all EVM compatible blockchains (if you have the type of wallet with a recovery phrase). This [list](https://chainlist.org/) will show you which blockchains you can use with the same address. Some blockchains like Bitcoin are completely separate and you will need a different address with a different format. If you have a smart contract wallet you should check its product website for more info on what blockchains are allowed.
+
+### Is having my own wallet safer than keeping my funds on an exchange?
+
+Yes, this is a much safer option because nobody else will have access to your funds. There are unfortunately many examples of failed exchanges that filed for bankrupcy and lost users' savings. Hacks, frozen accounts or blocked withdrawals are some other common risks. Owning a wallet (with a recovery phrase) is the best way to safeguard your assets. If you have a poorly backed up recovery phrase, you're potentially at higher risk than if you had left your money on the exchange though. Make sure to store your recovery phrase well.
 
 ### If I lose my phone/hardware wallet, do I need to use the same wallet app again to recover the lost funds?
 
-- No, you can use almost any wallet as the recovery process is standardized. You will have to enter the recovery phrase into any new wallet app, it can be different app from the one you used before. It is almost impossible to recover lost funds without recovery phrase.
+No, you can use almost any wallet as the recovery process is standardized. You will have to enter the recovery phrase into any new wallet app, it can be different app from the one you used before. It is almost impossible to recover lost funds without recovery phrase.
