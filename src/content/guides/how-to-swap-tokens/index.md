@@ -17,6 +17,7 @@ Some popular exchanges are:
 - [Curve](https://curve.fi/#/ethereum/swap)
 
 ## 2. Select the pair of tokens you wish to swap. 
+
 For example, ETH and DAI. Make sure you have funds in one of the two tokens.
 
 ## 3. Enter the amount of tokens you want to trade. 
