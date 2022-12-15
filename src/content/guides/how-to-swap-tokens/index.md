@@ -15,6 +15,7 @@ A token swap involves the exchange of two different assets that exist on the Eth
 Some popular exchanges are:
 
 - [Uniswap](https://app.uniswap.org/#/swap)
+- [Sushiswap](https://www.sushi.com/swap)
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
 - [Curve](https://curve.fi/#/ethereum/swap)
 
