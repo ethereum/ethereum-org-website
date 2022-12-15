@@ -12,7 +12,7 @@ Sometimes malicious developers build backdoors into smart contracts that allow a
 
 Once a platform has unlimited access rights to a token on your wallet, they can spend all those tokens even if you have withdrawn your funds from their platform into your wallet. Malicious actors can still access your funds and withdraw them into their wallets with no recovery option left for you.
 
-The only protections are to refrain from using untested new projects or regularly revoke access. So, how do you do that?
+The only protections are to refrain from using untested new projects, only approve what you need, or regularly revoke access. So, how do you do that?
 
 ## Step 1: Use revoke access tools
 
