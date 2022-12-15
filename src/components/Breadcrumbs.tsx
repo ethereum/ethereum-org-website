@@ -1,12 +1,17 @@
 import React from "react"
-import { Box, UnorderedList, ListItem } from "@chakra-ui/react"
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbProps,
+} from "@chakra-ui/react"
 import { useIntl } from "react-intl"
 
 import Link from "./Link"
-import { isLang, supportedLanguages } from "../utils/languages"
+import { isLang } from "../utils/languages"
 import { isTranslationKey, translateMessageId } from "../utils/translations"
 
-export interface IProps {
+export interface IProps extends BreadcrumbProps {
   slug: string
   startDepth?: number
 }
@@ -49,50 +54,46 @@ const Breadcrumbs: React.FC<IProps> = ({
   })
 
   return (
-    <Box
-      aria-label="Breadcrumb"
+    <Breadcrumb
       dir="auto"
-      {...restProps}
-      as="nav"
-      marginBottom={8}
-      listStyleType="none"
       position="relative"
-      zIndex={1}
+      zIndex="1"
+      mb={8}
+      sx={{
+        // TODO: Move this to `listProps` upon upgrading `@chakra-ui/react`
+        // to at least v2.4.2
+        ol: {
+          m: 0,
+          lineHeight: 1,
+        },
+      }}
+      {...restProps}
     >
-      <UnorderedList
-        display="flex"
-        flexWrap="wrap"
-        listStyleType="none"
-        margin={0}
-      >
-        {crumbs.map((crumb, idx) => (
-          <ListItem
+      {crumbs.map((crumb, idx) => {
+        const isCurrentPage = slug === crumb.fullPath
+        return (
+          <BreadcrumbItem
             key={idx}
-            margin={0}
-            marginRight={2}
+            isCurrentPage={isCurrentPage}
+            color="textTableOfContents"
             fontSize="sm"
-            lineHeight="140%"
             letterSpacing="wider"
+            lineHeight="140%"
+            m={0}
           >
-            <Link
+            <BreadcrumbLink
+              as={Link}
               to={crumb.fullPath}
-              isPartiallyActive={slug === crumb.fullPath}
-              textDecoration="none"
-              color="textTableOfContents"
+              isPartiallyActive={isCurrentPage}
               _hover={{ color: "primary", textDecor: "none" }}
               _active={{ color: "primary" }}
             >
               {crumb.text}
-            </Link>
-            {idx < crumbs.length - 1 && (
-              <Box as="span" marginLeft={2} color="textTableOfContents">
-                /
-              </Box>
-            )}
-          </ListItem>
-        ))}
-      </UnorderedList>
-    </Box>
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+        )
+      })}
+    </Breadcrumb>
   )
 }
 
