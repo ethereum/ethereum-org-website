@@ -6,9 +6,11 @@ lang: en
 
 # How to: Swap tokens
 
-A token swap involves the exchange of two different assets that exist on the Ethereum network, for example swapping ETH for DAI (an ERC-20 token). You can swap most of the tokens using decentralized exchanges. You will need to have a crypto wallet to swap tokens. If you do not have one already, you can follow this tutorial: [How to: "Register" an Ethereum account](/guides/how-to-register-an-ethereum-account/).
+Tired of searching for an exchange that lists your favorite tokens? You can swap most of the tokens using decentralized exchanges. 
 
-## 1. Connect your wallet to the decentralized exchange (DEX) of your choice.
+A token swap involves the exchange of two different assets that exist on the Ethereum network, for example swapping ETH for DAI (an ERC-20 token). The process is very fast and cheap. You will need to have a crypto wallet to swap tokens. If you do not have one already, you can follow this tutorial: [How to: "Register" an Ethereum account](/guides/how-to-register-an-ethereum-account/).
+
+## 1. Connect your wallet to the decentralized exchange (DEX) of your choice
 
 Some popular exchanges are:
 
@@ -16,19 +18,23 @@ Some popular exchanges are:
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
 - [Curve](https://curve.fi/#/ethereum/swap)
 
-## 2. Select the pair of tokens you wish to swap. 
+## 2. Select the pair of tokens you wish to swap
 
 For example, ETH and DAI. Make sure you have funds in one of the two tokens.
+![Common interface for swapping](./swap1.png)
 
-## 3. Enter the amount of tokens you want to trade. 
-
-Also review the details of the transaction. Check the exchange rate and any other fees to prevent ugly surprises.
-
-## 4. Confirm the transaction.
+## 3. Enter the amount of tokens you want to trade and click swap
 
 The exchange will automatically calculate how many tokens you will get.
 
-## 5. Wait for the transaction to be processed.
+![Common interface for swapping](./swap2.png)
+
+## 4. Confirm the transaction.
+Review the details of the transaction. Check the exchange rate and any other fees to prevent ugly surprises.
+
+![Common interface for swapping](./swap3.png)
+
+## 5. Wait for the transaction to be processed
 
 You can view the progress of the transaction on any blockchain explorer. This process should not take longer than 10 minutes. 
 
