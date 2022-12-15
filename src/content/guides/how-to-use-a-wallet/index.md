@@ -6,7 +6,7 @@ lang: en
 
 # How to: Use a wallet
 
-Learn how to operate all the basic functions of a wallet. If you don’t have one yet, check out our How to: "Register" an Ethereum account.
+Learn how to operate all the basic functions of a wallet. If you don’t have one yet, check out our [How to: "Register" an Ethereum account](/guides/how-to-register-an-ethereum-account/).
 
 ## Open your wallet
 
