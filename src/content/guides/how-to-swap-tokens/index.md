@@ -1,4 +1,4 @@
----
+ ---
 title: How to swap tokens
 description: A guide on how to swap tokens on Ethereum.
 lang: en
@@ -29,7 +29,7 @@ The exchange will automatically calculate how many tokens you will get.
 
 ![Common interface for swapping](./swap2.png)
 
-## 4. Confirm the transaction.
+## 4. Confirm the transaction
 Review the details of the transaction. Check the exchange rate and any other fees to prevent ugly surprises.
 
 ![Common interface for swapping](./swap3.png)
