@@ -23,23 +23,36 @@ Some popular layer 2s are:
 
 ## 3. Connect to the bridge with your wallet
 
-Make sure you are connected to the Ethereum Mainnet network. 
+Make sure your wallet is connected to the Ethereum Mainnet network. If it is not, the website will automatically prompt you to switch networks.
+
+![Common interface for bridging tokens](./bridge1.png)
 
 ## 4. Specify the amount and move the funds
 
 Review the amount that you will get in return on the layer 2 network and the fees to avoid unpleasant surprises.
 
+![Common interface for bridging tokens](./bridge2.png)
+
 ## 5. Confirm the transaction in your wallet
 
 You will have to pay a fee in form of ETH for processing the transaction.
+
+![Common interface for bridging tokens](./bridge3.png)
 
 ## 6. Wait for your funds to be moved
 
 This process should not take more than 10 minutes.
 
-## 7. Add the selected layer 2 network to your wallet
+## 7. Add the selected layer 2 network to your wallet (optional)
 
 You can use [chainlist.org](http://chainlist.org) to find the network's RPC details. Once the network is added and transaction finished, you should see the tokens in your wallet.
+
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
+  <div>Want to learn more?</div>
+  <ButtonLink to="/guides/">
+    See our other guides
+  </ButtonLink>
+</InfoBanner>
 
 ## Frequently asked questions
 
