@@ -48,7 +48,7 @@ const Breadcrumbs: React.FC<IProps> = ({
       : ""
 
     return {
-      fullPath: slugChunk.slice(0, idx + 2 + startDepth).join("/"),
+      fullPath: slugChunk.slice(0, idx + 2 + startDepth).join("/") + "/",
       text: text.toUpperCase(),
     }
   })
