@@ -36,7 +36,7 @@ Would you like to send ETH to another wallet?
 3. Click on a “Send” button on the dashboard of your wallet or similarly worded alternative.  
 4. Enter the receiving address or scan a QR code with your camera so that you don’t have to write the address manually.
 <br/><br/>
-<img src="./send.png" width="400" alt="Send field for crypto address"/>
+![Send field for crypto address](./send.png)
 <br/><br/>
 
 5. Many assets, like DAI or USDC, exist on multiple networks. When transferring crypto tokens, make sure that the other side is using the same network as you are, since these are not interchangeable.
