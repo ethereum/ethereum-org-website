@@ -33,7 +33,7 @@ The exchange will automatically calculate how many tokens you will get.
 ## 4. Confirm the transaction
 Review the details of the transaction. Check the exchange rate and any other fees to prevent ugly surprises.
 
-![Common interface for swapping](./swap3.png)
+![Common interface for reviewing the transaction](./swap3.png)
 
 ## 5. Wait for the transaction to be processed
 
