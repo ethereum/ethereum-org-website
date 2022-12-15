@@ -35,6 +35,12 @@ Some apps will request you to save a secret recovery phrase. Keeping this secret
 
 Once you have saved your recovery phrase you should see your wallet dashboard with your balance. Check out our guide: [how to use a wallet.](/guides/how-to-use-a-wallet)
 
+<InfoBanner shouldSpaceBetween emoji=":eyes:">
+  <div>Want to learn more?</div>
+  <ButtonLink to="/guides/">
+    See our other guides
+  </ButtonLink>
+</InfoBanner>
 
 ### Frequently asked questions
 
