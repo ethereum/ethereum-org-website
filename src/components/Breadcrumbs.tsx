@@ -56,6 +56,9 @@ const Breadcrumbs: React.FC<IProps> = ({
   return (
     <Breadcrumb
       dir="auto"
+      position="relative"
+      zIndex="1"
+      mb={8}
       sx={{
         // TODO: Move this to `listProps` upon upgrading `@chakra-ui/react`
         // to at least v2.4.2
