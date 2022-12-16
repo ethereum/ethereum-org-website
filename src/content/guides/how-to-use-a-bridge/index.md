@@ -61,3 +61,6 @@ You can use [chainlist.org](http://chainlist.org) to find the network's RPC deta
 ### What if I have funds on an exchange?
 
 You might be able to withdraw to some layer 2s directly from an exchange. Check out “Move to layer 2” section of our [Layer 2 page](/layer-2/) for more information.
+
+### Can I go back to Ethereum mainnet after I bridge my tokens to L2?
+Yes, you can always move your funds back to the mainnet using the same bridge.
