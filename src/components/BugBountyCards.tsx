@@ -43,7 +43,7 @@ const Card = ({ children, ...props }: FlexProps) => {
       borderColor="border"
       m={4}
       _hover={{
-        "border-radius": "4px",
+        borderRadius: "base",
         "box-shadow": "var(--eth-shadows-tableBoxHover)",
         background: "tableBackgroundHover",
         transition: "transform 0.1s",
