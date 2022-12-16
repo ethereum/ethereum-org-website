@@ -64,8 +64,8 @@ No, if you disconnect your wallet from the project, but you've granted token all
 
 ### When will the contract permission expire?
 
-- There are no expiration dates on contract permissions. If you grant contract permissions, they can be used, even years after they're granted.
+There are no expiration dates on contract permissions. If you grant contract permissions, they can be used, even years after they're granted.
 
 ### Why do projects set unlimited token allowance?
 
-- Projects often do this to minimize the number of requests required, meaning the user only has to approve once and pay the transaction fee only once.  While convenient, this can be dangerous for users to approve carelessly, on sites that are not proven with time or audited. Some wallets allow you to manually restrict the amount of tokens being approved to limit your risk. Check with your wallet provider for more information.
+Projects often do this to minimize the number of requests required, meaning the user only has to approve once and pay the transaction fee only once.  While convenient, this can be dangerous for users to approve carelessly, on sites that are not proven with time or audited. Some wallets allow you to manually restrict the amount of tokens being approved to limit your risk. Check with your wallet provider for more information.
