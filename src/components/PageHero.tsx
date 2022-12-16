@@ -3,7 +3,6 @@ import { Box, Flex, Heading, Wrap, WrapItem } from "@chakra-ui/react"
 
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
-import { Content } from "./SharedStyledComponents"
 import ButtonLink, { IProps as IButtonLinkProps } from "./ButtonLink"
 import Button, { IProps as IButtonProps } from "./Button"
 
@@ -43,12 +42,10 @@ const PageHero: React.FC<IProps> = ({
 }) => {
   const { buttons, title, header, subtitle, image, alt } = content
   return (
-    <Content>
+    <Box py={4} px={8} width="full">
       <Flex
         justifyContent="space-between"
         mt={8}
-        mb={0}
-        py={0}
         px={{ base: 0, lg: 16 }}
         direction={{ base: isReverse ? "column" : "column-reverse", lg: "row" }}
         className={className}
@@ -57,7 +54,6 @@ const PageHero: React.FC<IProps> = ({
           maxW={{ base: "full", lg: "container.sm" }}
           py={{ base: 16, lg: 32 }}
           pl={{ base: 0, lg: 8 }}
-          pr={0}
           mr={4}
         >
           <Heading
@@ -140,7 +136,7 @@ const PageHero: React.FC<IProps> = ({
           loading="eager"
         />
       </Flex>
-    </Content>
+    </Box>
   )
 }
 
