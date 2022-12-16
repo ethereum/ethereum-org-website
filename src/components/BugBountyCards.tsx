@@ -11,6 +11,7 @@ import {
   Divider,
   Box,
   BoxProps,
+  useToken,
 } from "@chakra-ui/react"
 
 import { TranslationKey } from "../utils/translations"
@@ -31,6 +32,8 @@ const SubmitBugBountyButton = ({ children, ...props }) => (
 )
 
 const Card = ({ children, ...props }: FlexProps) => {
+  const tableBoxShadow = useToken("colors", "tableBoxShadow")
+
   return (
     <Flex
       flexDir="column"
@@ -38,7 +41,7 @@ const Card = ({ children, ...props }: FlexProps) => {
       justifyContent="space-between"
       bg="background"
       borderRadius="2px"
-      boxShadow="var(--eth-colors-tableBoxShadow)"
+      boxShadow={tableBoxShadow}
       border="1px solid"
       borderColor="border"
       m={4}
