@@ -133,7 +133,7 @@ sidebarDepth: 2
 以下是一些可以帮助你安装和控制客户端的项目，只需单击几下即可：
 
 - [DappNode](https://docs.dappnode.io/get-started/installation/custom-hardware/installation/overview/) - DappNode 不仅仅可以在供应商提供的机器上安装。 该软件、实际的节点启动器和具有许多功能的控制中心可以在任意硬件上使用。
-- [eth-docker](https://eth-docker.net/docs/About/Overview/) - 使用 Docker 进行的自动化设置，专注于简便和安全的质押，需要基本的终端和 Docker 知识，向更高级的用户推荐。
+- [eth-docker](https://eth-docker.net/) - 使用 Docker 进行的自动化设置，专注于简便和安全的质押，需要基本的终端和 Docker 知识，向更高级的用户推荐。
 - [Stereum](https://stereum.net/ethereum-node-setup/) - 通过 SSH 连接在远程服务器上安装客户端的启动器，配备 GUI 设置指南、控制中心和许多其他特征。
 - [NiceNode](https://www.nicenode.xyz/) - 提供简便用户体验的启动器，可在你的计算机上运行节点。 只需选择客户端并单击几下即可启动它们。 仍在开发中。
 

@@ -46,6 +46,7 @@ import StakingHowSoloWorks from "../components/Staking/StakingHowSoloWorks"
 import StakingConsiderations from "../components/Staking/StakingConsiderations"
 import StakingCommunityCallout from "../components/Staking/StakingCommunityCallout"
 import StakingGuides from "../components/Staking/StakingGuides"
+import StakingSurveyBanner from "../components/Staking/StakingSurveyBanner"
 
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Context } from "../types"
@@ -403,6 +404,7 @@ const StakingPage = ({
 
   return (
     <Container>
+      <StakingSurveyBanner />
       <HeroContainer>
         <TitleCard>
           <Breadcrumbs slug={location.pathname} />

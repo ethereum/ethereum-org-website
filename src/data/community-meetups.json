@@ -329,4 +329,11 @@
     "location": "San Diego",
     "link": "http://cryptosandiego.org"
   }
+  ,
+  {
+    "title": "Ethereum Costa Rica",
+    "emoji": ":cr:",
+    "location": "Costa Rica",
+    "link": "https://twitter.com/EthereumCR"
+  }
 ]
