@@ -56,7 +56,7 @@ The block is added to the block proposer's local database and broadcast to peers
 
 ## Block rewards {#block-rewards}
 
-The block proposer receives payment for their work. There is a `base_reward` calculated as a function of the number of active validators and their effective balances. The block proposer then receives a fraction of `base_reward` for every valid attestation included in the block; the more validators attest to the block, the greater the block proposer's reward. There is also a reward for reporting validators that should be slashed, equal to the `1/512 * effective balance` for each slashed validator.
+The block proposer receives payment for their work. There is a `base_reward` calculated as a function of the number of active validators and their effective balances. The block proposer then receives a fraction of `base_reward` for every valid attestation included in the block; the more validators attest to the block, the greater the block proposer's reward. There is also a reward for reporting validators that should be slashed, equal to `1/512 * effective balance` for each slashed validator.
 
 [More on rewards and penalties](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)
 
