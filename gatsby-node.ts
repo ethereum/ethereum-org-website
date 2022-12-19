@@ -11,7 +11,7 @@ import type { Context } from "./src/types"
 import * as Schema from "./src/schema"
 
 import mergeTranslations from "./src/scripts/mergeTranslations"
-import scanTranslations from "./src/scripts/scanTranslations"
+import createLocales from "./src/scripts/createLocales"
 import copyContributors from "./src/scripts/copyContributors"
 
 import {
@@ -485,8 +485,8 @@ export const onPreBootstrap: GatsbyNode["onPreBootstrap"] = async ({
 }) => {
   mergeTranslations()
   reporter.info(`Merged translations saved`)
-  await scanTranslations()
-  reporter.info(`Scanned & extracted translations`)
+  await createLocales()
+  reporter.info(`Extracted translations and created locales`)
   copyContributors()
   reporter.info(`Contributors copied`)
 }

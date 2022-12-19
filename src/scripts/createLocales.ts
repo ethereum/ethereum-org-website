@@ -13,16 +13,49 @@ import type File from "vinyl"
 
 import { supportedLanguages } from "../utils/languages"
 
+/**
+ * What does this script?
+ *
+ * - First, it grabs all the existing translations under `i18n/merged/{lang}/index.json`
+ *  (the resource file)
+ *
+ * - Then it collects all the translation keys used in each file
+ *    1. Scans all the files under the `src/` folder
+ *    2. Looks for the translation keys used by calling `t({key})` or by using `<Translation id="{key}">`
+ *
+ * - Finally, under `i18n/locales`, it creates new json files with just the
+ *   translations needed for each specific namespace
+ */
+
 const input = ["./src/**/*.{ts,tsx}"]
 const output = "./i18n"
 
-function getNamespaceFromFilename(filename: string) {
+/**
+ * Creates a namespace given a filename.
+ *
+ * E.g. for `usr/www/src/pages/get-eth.tsx` it returns `src-pages-get-eth`
+ *
+ * Namespaces generation logic:
+ *
+ * 1. One namespace per page is created. E.g. `src-pages-get-eth` or `src-templates-static`
+ *
+ * 2. A namespace to group all the translations under the `components/` folder.
+ *    These are going to be shared between multiple pages
+ *
+ * 3. A `common` namespace for the rest of the translations that are not included
+ *    either in a page or the components folder
+ */
+function createNamespaceFromFilename(filename: string) {
   const file = path.parse(filename)
   const dir = file.dir.slice(filename.lastIndexOf("src/"))
   const namespace = dir.replace(/\//g, "-") + "-" + file.name
   return namespace
 }
 
+/**
+ * Custom transform function that is going to allocate each translation to the
+ * corresponding namespace
+ */
 function customTransform(
   this: Scanner,
   file: File,
@@ -41,7 +74,7 @@ function customTransform(
       fileName: path.basename(file.path),
     })
 
-    const namespace = getNamespaceFromFilename(file.path)
+    const namespace = createNamespaceFromFilename(file.path)
 
     const customHandler = (key: string, options: any) => {
       const ns = file.path.includes("components") ? "components" : namespace
@@ -58,17 +91,23 @@ function customTransform(
       }
     }
 
+    // Look for translation keys in `<Translation id="key">` calls
     this.parser.parseTransFromString(
       outputText,
       { component: "Translation", i18nKey: "id" },
       customHandler
     )
+    // Look for translation keys in `t(key)` calls
     this.parser.parseFuncFromString(outputText, { list: ["t"] }, customHandler)
   }
 
   done()
 }
 
+/**
+ * Custom flush function that is going to create all the necessary json files
+ * under `i18n/locales`
+ */
 function customFlush(this: Scanner, done: () => void) {
   const parser = this.parser
   const resStore = parser.resStore
@@ -117,20 +156,24 @@ function customFlush(this: Scanner, done: () => void) {
   done()
 }
 
-async function scanTranslations() {
+/**
+ * Main script function
+ */
+async function createLocales() {
+  // create all the necessary namespaces
   const ns = ["components", "common"]
   walkdir.sync("./src/pages", (file) => {
-    const namespace = getNamespaceFromFilename(file)
+    const namespace = createNamespaceFromFilename(file)
     ns.push(namespace)
   })
 
   walkdir.sync("./src/templates", (file) => {
-    const namespace = getNamespaceFromFilename(file)
+    const namespace = createNamespaceFromFilename(file)
     ns.push(namespace)
   })
 
   walkdir.sync("./src/pages-conditional", (file) => {
-    const namespace = getNamespaceFromFilename(file)
+    const namespace = createNamespaceFromFilename(file)
     ns.push(namespace)
   })
 
@@ -150,11 +193,13 @@ async function scanTranslations() {
     removeUnusedKeys: true,
   }
 
+  // scan all the files & find all the used translation keys
   const stream = scanner(options, customTransform, customFlush)
 
+  // output the results in different json files
   return new Promise(function (resolve) {
     vfs.src(input).pipe(stream).pipe(vfs.dest(output)).on("end", resolve)
   })
 }
 
-export default scanTranslations
+export default createLocales
