@@ -1,0 +1,23 @@
+name: Lint Markdown Files
+
+on: [push]
+
+jobs:
+  lint-markdown:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "14"
+      - run: npm install markdownlint-cli -g
+      - run: markdownlint -f "src/content/" -i "src/content/translations/"
+        name: Now commit fix
+      - run: | 
+          git config --global user.email "github-actions@users.noreply.github.com"
+          git config --global user.name "Amit0617"
+          git diff
+          git add .
+          git commit -m "Fix lint errors in markdown files"
+          git push --set-upstream origin dev
