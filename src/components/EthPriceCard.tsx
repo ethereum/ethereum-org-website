@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import styled from "@emotion/styled"
 import axios from "axios"
 
 import Translation from "./Translation"
