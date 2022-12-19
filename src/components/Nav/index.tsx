@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Flex, Icon, IconButton, Text, useColorMode } from "@chakra-ui/react"
+import { Icon, IconButton, Text, useColorMode } from "@chakra-ui/react"
 import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
 import styled from "@emotion/styled"
 import { cloneDeep } from "lodash"
@@ -8,7 +8,6 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
 import ButtonLink from "../ButtonLink"
-import NakedButton from "../NakedButton"
 import Link from "../Link"
 import Search from "../Search"
 import Translation from "../Translation"
@@ -94,25 +93,6 @@ const HomeLogo = styled(HomeIcon)`
   &:hover {
     opacity: 1;
   }
-`
-
-const Span = styled.span`
-  padding-left: 0.5rem;
-`
-
-const ThemeToggle = styled(NakedButton)`
-  margin-left: 1rem;
-  display: flex;
-  align-items: center;
-  &:hover {
-    svg {
-      fill: ${(props) => props.theme.colors.primary};
-    }
-  }
-`
-
-const NavIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
 `
 
 export interface IProps {
@@ -395,7 +375,11 @@ const Nav: React.FC<IProps> = ({ path }) => {
   }
 
   const shouldShowSubNav = path.includes("/developers/")
-
+  const splitPath = path.split("/")
+  const fromPageParameter =
+    splitPath.length > 3 && splitPath[2] !== "languages"
+      ? `?from=/${splitPath.slice(2).join("/")}`
+      : ""
   return (
     <NavContainer>
       <StyledNav aria-label={t("nav-primary")}>
@@ -424,7 +408,7 @@ const Nav: React.FC<IProps> = ({ path }) => {
                 _hover={{ color: "primary" }}
                 onClick={toggleColorMode}
               />
-              <ButtonLink to="/languages/" variant="icon">
+              <ButtonLink to={`/languages/${fromPageParameter}`} variant="icon">
                 <Icon as={MdLanguage} fontSize="2xl" />
                 <Text as="span" pl={2}>
                   <Translation id="languages" />
@@ -440,6 +424,7 @@ const Nav: React.FC<IProps> = ({ path }) => {
             toggleMenu={handleMenuToggle}
             toggleTheme={toggleColorMode}
             linkSections={mobileLinkSections}
+            fromPageParameter={fromPageParameter}
           />
         </NavContent>
       </StyledNav>

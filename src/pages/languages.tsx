@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
 import styled from "@emotion/styled"
+import { useLocation } from "@reach/router"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import PageMetadata from "../components/PageMetadata"
@@ -69,23 +70,23 @@ const ResetIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
 `
 
-interface TranslatedLanguage extends Language {
-  path: string
-}
-
 const LanguagesPage = () => {
   const { t } = useTranslation()
+  const location = useLocation()
+  const redirectTo =
+    location.search.split("from=").length > 1
+      ? location.search.split("from=")[1]
+      : "/"
   const [keyword, setKeyword] = useState<string>("")
   const resetKeyword = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
     setKeyword("")
   }
   const searchString = t("page-languages-filter-placeholder")
-  let translationsCompleted: Array<TranslatedLanguage> = []
+  let translationsCompleted: Array<Language> = []
   for (const lang in languageMetadata) {
     const langMetadata = {
       ...languageMetadata[lang],
-      path: "/",
       name: t(`language-${lang}` as TranslationKey),
     }
 
@@ -145,7 +146,7 @@ const LanguagesPage = () => {
           </Form>
           <LangContainer>
             {translationsCompleted.map((lang) => (
-              <LangItem to={lang.path} language={lang.code} key={lang["name"]}>
+              <LangItem to={redirectTo} language={lang.code} key={lang["name"]}>
                 <LangTitle>{lang["name"]}</LangTitle>
                 <h4>{lang.localName}</h4>
               </LangItem>
