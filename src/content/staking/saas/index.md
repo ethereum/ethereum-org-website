@@ -38,7 +38,7 @@ The Ethereum protocol does not natively support delegation of stake, so these se
 
 ## What to consider {#what-to-consider}
 
-There are a growing number of staking-as-a-service providers to help you stake your ETH, but each come with different risks and benefits.
+There are a growing number of SaaS providers to help you stake your ETH, but each comes with different benefits and risks. You should consider that all SaaS options require additional trust assumptions compared to home-staking. Saas options may have additional code wrapping the Ethereum clients that is not open or auditable. SaaS also has a detrimental effect on network decentralization. Depending on the setup, you may not control your validator - the operator could act dishonestly using your ETH.
 
 Attribute indicators are used below to signal notable strengths or weaknesses a listed SaaS provider may have. Use this section as a reference for how we define these attributes while you're choosing a service to help with your staking journey.
 
