@@ -68,7 +68,7 @@
   "page-upgrades-bug-bounty-type-4": "Incohérences de calcul ou de paramètre",
   "page-upgrades-bug-bounty-types": "Types de bogues",
   "page-upgrades-bug-bounty-validity": "Dans le champ d'application",
-  "page-upgrades-bug-bounty-validity-desc": "Notre programme de traitement des bugs s'intéresse à tous les domaines : de la solidité des protocoles (comme le modèle de consensus de la blockchain, les relations entre les protocoles p2p, la preuve de travail, la preuve d'enjeu, etc.), comme à la conformité des protocoles/implémentations, ou encore la sécurité du réseau et l'intégrité du consensus. La sécurité classique des clients ainsi que la sécurité des cryptographies primitives font également partie du programme. En cas de doute, envoyez un e-mail à bounty@ethereum.org et demandez-nous.",
+  "page-upgrades-bug-bounty-validity-desc": "Notre programme de traitement des bogues s'intéresse à tous les domaines : de la solidité des protocoles (comme le modèle de consensus de la blockchain, les relations entre les protocoles p2p, la preuve de travail, la preuve d'enjeu, etc.), comme à la conformité des protocoles/implémentations, ou encore la sécurité du réseau et l'intégrité du consensus. La sécurité classique des clients ainsi que la sécurité des cryptographies primitives font également partie du programme. En cas de doute, envoyez un e-mail à bounty@ethereum.org et demandez-nous.",
   "page-upgrades-bug-bounty-card-critical": "Critique",
   "page-upgrades-bug-bounty-card-critical-risk": "Soumettre un bogue à risque critique",
   "page-upgrades-bug-bounty-card-h2": "Modéré",
@@ -97,6 +97,6 @@
   "page-upgrades-bug-bounty-card-subheader-2": "Exemple",
   "page-upgrades-bug-bounty-card-text": "Les attaquants peuvent parfois mettre un nœud dans un état qui l'amène à ne pas traiter une attestation sur cent faite par un validateur",
   "page-upgrades-bug-bounty-card-text-1": "L'attaquant peut mener avec succès des attaques éclairs sur des nœuds avec des identifiants de pairs commençant par 4 octets zéros",
-  "page-upgrades-bug-bounty-card-text-2": "Il existe un bogue dans le consensus entre 2 clients, mais c'est difficile ou presque impossible pour un attaquant de le déclencher.",
-  "page-upgrades-bug-bounty-card-text-3": "Il existe une exécution de code à distance pour un client majoritaire, et il est trivial pour un attaquant de déclencher la vulnérabilité."
+  "page-upgrades-bug-bounty-card-text-2": "L'attaquant peut partitionner avec succès de grandes parties du réseau, et il est trivial pour un attaquant de déclencher la vulnérabilité",
+  "page-upgrades-bug-bounty-card-text-3": "L'attaquant peut exécuter du code à distance pour un client majoritaire, et il est trivial pour un attaquant de déclencher la vulnérabilité"
 }

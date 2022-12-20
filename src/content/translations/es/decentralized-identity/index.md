@@ -1,6 +1,6 @@
 ---
 title: Identidad descentralizada
-description: "¿Qué es la identidad descentralizada y por qué és importante?"
+description: "¿Qué es la identidad descentralizada y por qué es importante?"
 lang: es
 template: use-cases
 emoji: ":id:"
@@ -91,11 +91,11 @@ Este es un escenario hipotético para explicar los certificados fuera de la cade
 
 ### Certificaciones fuera de cadena con acceso permanente {#offchain-attestations-with-persistent-access}
 
-Bajo este sistema, los cerficados se transforman en un archivo JSON y se almacenan fuera de la cadena (idealmente en una [plataforma de cloud descentralizada](/developers/docs/storage/) como IPFS o Swarm). Sin embargo, un hash [](/glossary/#hash) del archivo JSON se almacena en cadena y se enlaza con un CPI mediante un registro en la cadena. El CPI asociado podría ser el del emisor del certificado o el destinatario.
+Bajo este sistema, los cerficados se transforman en un archivo JSON y son almacenados off-chain (idealmente en una [plataforma de cloud descentralizada](/developers/docs/storage/) como IPFS o Swarm). Sin embargo, un hash [](/glossary/#hash) del archivo JSON se almacena en cadena y se enlaza con un CPI mediante un registro en la cadena. El CPI asociado podría ser el del emisor del certificado o el destinatario.
 
-Este enfoque permite que las certificaciones obtengan permanencia basada en la cadena de bloques, manteniendo la información de claims cifrada y verificable. También permite la divulgación selectiva, ya que el titular de la clave privada puede descifrar la información.
+Este enfoque permite que las certificaciones obtengan permanencia basada en la cadena de bloques, manteniendo la información de reclamaciones cifrada y verificable. También permite la divulgación selectiva, ya que el titular de la clave privada puede descifrar la información.
 
-### Certificados on-chain {#onchain-attestations}
+### Certificados en la cadena {#onchain-attestations}
 
 Los certificados en la cadena se mantienen en [contratos inteligentes](/developers/docs/smart-contracts/) en la cadena de bloques de Ethereum. El contrato inteligente (actuando como un registro) enlazará un certificado a un identificador descentralizado correspondiente en la cadena (una clave pública).
 
@@ -123,7 +123,7 @@ He aquí un ejemplo que ilustra cómo podrían funcionar en la práctica los cer
 
 5. La identidad descentralizada debería funcionar bien con las tecnologías emergentes de conocimiento cero que permitan a los individuos demostrar que tienen o han hecho algo sin revelar lo que es esa cosa. Esta podría convertirse en una manera poderosa de combinar confianza y privacidad para aplicaciones como la votación.
 
-6. La identidad descentralizada permite aplicar mecanismos anti-Sybil que detecten cuando un humano individual pretende ser varios humanos diferentes para jugar o hacer spam en algún sistema.
+6. La identidad descentralizada permite aplicar mecanismos AntiSybil que detecten cuando un humano individual pretende ser varios humanos diferentes para jugar o hacer spam en algún sistema.
 
 ## Casos de uso de identidad descentralizada {#decentralized-identity-use-cases}
 
@@ -158,7 +158,7 @@ Hay muchos proyectos ambiciosos que utilizan Ethereum como base para soluciones 
 - **[Ethereum Name Service (ENS)](https://ens.domains/)** - _Un sistema de nomenclatura descentralizado en la cadena, identificadores legibles por máquinas, como direcciones del cartera Ethereum, hashes de contenido y metadatos._
 - **[SpruceID](https://www.spruceid.com/)** - _Un proyecto de identidad descentralizado que permite a los usuarios controlar la identidad digital con cuentas de Ethereum y perfiles ENS en lugar de depender de servicios de terceros._
 - **[Proof of Humanity](https://www.proofofhumanity.id)** - _Proof of Humanity (o PoH) es un sistema de verificación de identidad social construido en Ethereum._
-- **[Brillo](https://www.brightid.org/)** - _Una red de identidad social descentralizada y open-source que busca reformar la verificación de identidad a través de la creación y el análisis de un gráfico social._
+- **[Brillo](https://www.brightid.org/)** - _Una red de identidad social descentralizada y de código abierto que busca reformar la verificación de identidad a través de la creación y el análisis de un gráfico social._
 - **[Proof-of-personhood Passport](https://proofofpersonhood.com/)** - _Un agregador de identidad digital descentralizado._
 
 ## Para profundizar sobre el tema {#further-reading}
@@ -175,7 +175,7 @@ Hay muchos proyectos ambiciosos que utilizan Ethereum como base para soluciones 
 - [Identidad descentralizada (bonificación de sesión Livestream)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Un vídeo muy aclarador de la identidad descentralizada explicado por Andreas_
 - [Iniciar sesión con Ethereum e Identity descentralizada con Ceramic, IDX, React, y 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _tutorial de YouTube sobre la construcción de un sistema de gestión de identidad para crear, leer, y actualizar el perfil de un usuario usando su cartera Ethereum por Nader Dabit_
 - [BrightID - Identidad descentralizada en Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _episodio de pódcast Bankless abordando BrightID, una solución de identidad descentralizada para Ethereum_
-- [Internet fuera de la cadena: Credenciales descentralizadas y verufucables](https://www. youtube. com/watch? v=Ez_Bb6j87mg) — EthDenver 2022 presentación de Evin McMullen
+- [Internet fuera de la cadena: Credenciales descentralizadas y verificables](https://www.youtube.com/watch?v=Ez_Bb6j87mg) — _EthDenver 2022 presentación de Evin McMullen_
 
 ### Comunidades {#communities}
 
