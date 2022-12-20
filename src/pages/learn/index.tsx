@@ -800,6 +800,14 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               </h3>
               <ul>
                 <li>
+                  <Link to="https://www.goodreads.com/en/book/show/59892281-proof-of-stake">
+                    Proof of Stake
+                  </Link>{" "}
+                  <i>
+                    <Translation id="proof-of-stake-description" />
+                  </i>
+                </li>
+                <li>
                   <Link to="https://www.goodreads.com/book/show/57356067-the-cryptopians">
                     The Cryptopians
                   </Link>{" "}
