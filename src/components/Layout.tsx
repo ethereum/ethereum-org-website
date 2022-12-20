@@ -145,11 +145,7 @@ const Layout: React.FC<IProps> = ({
                 </ZenMode>
                 <SkipLinkAnchor id="main-content" />
                 <Flex
-                  sx={{
-                    "@media (max-width: 1024px": {
-                      flexDirection: "column",
-                    },
-                  }}
+                  flexDirection={{ base: 'column', lg: 'row' }}
                 >
                   {shouldShowSideNav && (
                     <ZenMode>
