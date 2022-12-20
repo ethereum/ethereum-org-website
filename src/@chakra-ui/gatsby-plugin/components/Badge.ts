@@ -1,7 +1,6 @@
 import { ComponentStyleConfig, SystemStyleObject } from "@chakra-ui/react"
 
 const variantSecondary: SystemStyleObject = {
-  border: "1px solid",
   borderColor: "primary100",
   color: "text",
 }
@@ -10,6 +9,7 @@ export const Badge: ComponentStyleConfig = {
   baseStyle: {
     borderRadius: "base",
     border: "1px solid",
+    borderColor: "transparent",
     color: "black300",
     fontWeight: "initial",
     py: 1,
