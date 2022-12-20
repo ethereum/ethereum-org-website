@@ -135,11 +135,8 @@ const Layout: React.FC<IProps> = ({
                 margin="0px auto"
                 minHeight="100vh"
                 flexFlow="column"
-                sx={{
-                  "@media": {
-                    minWidth: "1024px",
-                    maxWidth: "1504px",
-                  },
+                maxW={{ 
+                  lg: lightTheme.variables.maxPageWidth 
                 }}
               >
                 <ZenMode>
