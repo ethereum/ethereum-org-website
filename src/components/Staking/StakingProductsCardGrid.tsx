@@ -114,11 +114,8 @@ const StakingBadge: React.FC<{
 
   return (
     <Badge
-      variant="secondary"
+      size="lg"
       background={uiTypeColor || platformTypeColor || undefined}
-      borderColor="lightBorder"
-      color={type ? "rgba(0,0,0,0.6)" : "text200"}
-      px={3}
       textTransform="initial"
     >
       {children}
