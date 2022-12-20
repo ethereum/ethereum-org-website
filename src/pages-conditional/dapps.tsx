@@ -1261,7 +1261,9 @@ const DappsPage = ({
               image={choice.image!}
               name={choice.name}
             >
-              <Badge background={choice.pillColor}>{choice.type}</Badge>
+              <Badge size="sm" background={choice.pillColor}>
+                {choice.type}
+              </Badge>
             </ProductCard>
           ))}
         </StyledCardGrid>
