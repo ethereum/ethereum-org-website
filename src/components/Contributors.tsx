@@ -4,7 +4,6 @@ import { shuffle } from "lodash"
 import { Box, Flex, Image, LinkBox, LinkOverlay, Text } from "@chakra-ui/react"
 
 import data from "../data/contributors.json"
-import { borderRadius } from "polished"
 
 import Link from "./Link"
 
@@ -40,11 +39,11 @@ const Contributors: React.FC<IProps> = () => {
           <LinkBox
             as="div"
             maxWidth="132px"
-            margin="0.5rem"
+            margin="2"
             boxShadow="0px 14px 66px rgba(0, 0, 0, 0.07), 0px 10px 17px rgba(0, 0, 0, 0.03), 0px 4px 7px rgba(0, 0, 0, 0.05)"
             _hover={{
               textDecoration: "none",
-              borderRadius: "4px",
+              borderRadius: "base",
               boxShadow: "0px 8px 17px rgba(0, 0, 0, 0.15)",
               background: "tableBackgroundHover",
               transition: "transform 0.1s",
@@ -52,28 +51,21 @@ const Contributors: React.FC<IProps> = () => {
             }}
             _focus={{
               textDecoration: "none",
-              borderRadius: "4px",
+              borderRadius: "base",
               boxShadow: "0px 8px 17px rgba(0, 0, 0, 0.15)",
               background: "tableBackgroundHover",
               transition: "transform 0.1s",
               transform: "scale(1.02)",
             }}
           >
-            <Box display="flex" flexDirection="row" minHeight="100px">
-              <Image
-                width="132px"
-                height="132px"
-                src={contributor.avatar_url}
-                alt={contributor.name}
-              />
-            </Box>
+            <Image
+              width="132px"
+              height="132px"
+              src={contributor.avatar_url}
+              alt={contributor.name}
+            />
             <Box padding="1rem">
-              <Text
-                as="h3"
-                fontSize="md"
-                marginTop="0.5rem"
-                marginBottom="1rem"
-              >
+              <Text as="h3" fontSize="md" marginTop="2" marginBottom="4">
                 <LinkOverlay
                   as={Link}
                   href={contributor.profile}
