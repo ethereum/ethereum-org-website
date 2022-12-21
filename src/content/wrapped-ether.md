@@ -104,7 +104,7 @@ WETH was created primarily because the ETH token doesn't comply with the ERC-20 
 
 **Is WETH safe?**
 
-ETH is the safest asset because it is part of the Ethereum protocol, whereas WETH is defined in a smart contract which could feasibly be hacked. WETH is generally considered a very safe asset because the contract is small, simple, well-tested and it has been around for a long time.
+ETH is the safest asset because it is part of the Ethereum protocol, whereas WETH is defined in a smart contract which could feasibly be hacked. WETH is generally considered a very safe asset because the contract is small, simple, well-tested and it has been around for a long time. Furthermore, [formal verification of the WETH contract](https://www.zellic.io/blog/formal-verification-weth) has proved its safety (formal verification reasons about correctness of code using logical rules and is considered more rigorous than testing). 
 
 **What can I do with WETH?**
 
@@ -114,6 +114,6 @@ WETH can be used with any decentralized application built on the ERC-20 standard
 
 - [WTF is WETH?](https://weth.io/)
 - [What Is Wrapped Ether (WETH) and How to Wrap It?](https://academy.binance.com/en/articles/what-is-wrapped-ether-weth-and-how-to-wrap-it)
-- [What is Wrapped Ether (wETH) and how does it work?](https://cointelegraph.com/news/what-is-wrapped-ethereum-weth-and-how-does-it-work/amp)
 - [What are the cheapest ways to wrap ETH into WETH?](https://medium.com/@therugpush/cheapest-way-to-wrap-eth-into-weth-446cf1ddccf7) 
 - [WETH token information on Etherscan](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
+- [Formal Verification of WETH](https://zellic.io/blog/formal-verification-weth)
