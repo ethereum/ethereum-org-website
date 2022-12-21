@@ -33,7 +33,7 @@ As an ERC-20 token, WETH has more versatile use-cases, unlike ETH which is limit
 
 To wrap ETH, you need to send it to a [smart contract](/smart-contracts/) that mints an equivalent amount of Wrapped ETH (WETH) for you. This smart contract acts as a custodian as it holds your ETH until you decide to unwrap WETH. You can also swap ETH for WETH directly on a [decentralized exchange](/get-eth/#dex) without needing to interact with a smart contract. 
 
-The process of unwrapping ETH is similar: send WETH to the smart contract and have an equivalent amount of ETH sent to your address. Whenever you redeem WETH for ETH, those tokens are [burned](https://decrypt.co/resources/what-is-a-token-burn-how-crypto-is-removed-from-circulation), which keeps the supply of WETH and ETH equal and enforces parity in prices. You can also unwrap ETH by swapping WETH for ETH directly using a decentralized exchange.  
+The process of unwrapping ETH is similar: send WETH to the smart contract and have an equivalent amount of ETH sent to your address. Whenever you redeem WETH for ETH, the WETH tokens are [burned](https://decrypt.co/resources/what-is-a-token-burn-how-crypto-is-removed-from-circulation), which keeps the supply of WETH and ETH equal and enforces parity in prices. You can also unwrap ETH by swapping WETH for ETH directly using a decentralized exchange.  
 
 Wrapping ETH to to WETH doesn't incur additional costs, as both assets are converted at a 1:1 ratio. Nevertheless, you'll need to have some extra ETH in your wallet to pay for gas fees when interacting with the WETH token contract. Gas fees on the Ethereum network—paid for performing computation—are paid solely in Ether (demoninated in gwei). 
 
@@ -59,15 +59,15 @@ Unlike ETH, the ownership and transfer of WETH tokens is handled by the [WETH to
 
 Sending WETH tokens also requires a different approach: you'll have to create a transaction with the WETH token contract's address (not the recipient's address) as the destination. This transaction calls the smart contract's `transfer` function with the recipient's address and amount of tokens to transfer supplied as transaction parameters. While this transaction is recorded on the blockchain, the actual transfer of WETH tokens from one address to another occurs inside the token contract and isn't recorded directly on the blockchain (hence, it is described as an [internal transaction](https://coinmarketcap.com/alexandria/glossary/internal-transaction)). 
 
-We should also mention that you cannot pay gas for a transaction transferring WETH using WETH tokens. This may sound confusing, but less so once you understand that the Ethereum protocol specifies Ether (ETH) as the only currency for paying for computation on the Ethereum network. This is why you are advised to have some ETH in your wallet when wrapping/unwrapping ETH or sending WETH to another address. 
+You cannot pay gas for a transaction using WETH tokens. Only Ethereum's native token, ETH, can be used to pay gas. This is why you must have some ETH in your wallet when wrapping/unwrapping ETH or sending WETH to another address. 
 
 ### Uses of ETH vs WETH {#eth-vs-weth-use-cases} 
 
-Ether is primarily used for transferring value between users and compensating [nodes](/glossary/#node providing computational resources on the network. ETH is also used to secure the Ethereum network: validators processing transactions and producing new blocks must [deposit a bond paid in ETH](/staking/) before assuming this role. If a validator acts maliciously and attempts to subvert protocol rules, their ETH deposit will be [slashed](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/#slashing) (destroyed) as punishment. 
+Ether is primarily used for transferring value between users and compensating validators securing the network. ETH is also used as collateral by validators. They stake ETH into a smart contract so that it can be destroyed if they act maliciously. 
 
-As an ERC-20 representation of Ether, WETH has a completely different use-case: making it easier to use ETH in dapps. Because ETH isn’t ERC-20 compatible, developers would need to create separate interfaces (one for Ether and another for ERC-20 tokens) in a smart contract. Wrapping ETH in ERC-20 standards removes this obstacle and enables developers to handle ETH and other fungible tokens within the same contract. 
+The main use case for WETH is making it easier to use ETH in dapps. Because ETH isn’t ERC-20 compatible, developers would need to create separate interfaces (one for Ether and another for ERC-20 tokens) in smart contracts. Wrapping ETH in ERC-20 standards removes this obstacle and enables developers to handle ETH and other fungible tokens within the same contract. 
 
-With the ERC-compatible WETH, you can access more functionalities than is possible with regular ETH tokens. WETH is particularly popular for users interacting with [decentralized finance](/defi/) (DeFi) applications. At its core, DeFi is a collection of primitives that allow for trading, borrowing, and exchanging assets with others without intermediaries. 
+With the ERC-compatible WETH, you can access more functions than with regular ETH. WETH is particularly popular for users interacting with [decentralized finance](/defi/) (DeFi) applications. At its core, DeFi is a collection of primitives that allow for trading, borrowing, and exchanging assets with others without intermediaries. 
 
 DeFi enables even more complex use-cases, such as [yield farms](https://blockworks.co/what-is-yield-farming-what-you-need-to-know/) and [automated market makers](https://www.gemini.com/cryptopedia/amm-what-are-automated-market-makers) (AMMs) that can make investment decisions—like depositing into a lending pool or executing trades—for users. But these applications need access to your funds to work, which is why ERC-20 tokens like WETH define an `approve` function (used in combination with `transfer`) that allows you to approve other accounts (mostly contract accounts) to deduct a specific amount of tokens from your balance up to a predefined limit (`allowance`). 
 
@@ -102,11 +102,11 @@ WETH is pegged 1:1 to the price of ETH, so the value of both assets are usually 
 
 **Why do people use WETH instead of ETH?**
 
-WETH was created primarily because the ETH token doesn't comply with the ERC-20 technical standard. This made Ether infeasible for use in decentralized applications (dapps) that only support ERC-20 tokens. Unlike Ether, WETH follows the [ERC-20 fungible token standard](/developers/docs/standards/tokens/erc-20/) —so it can be exchanged for other ERC-20 tokens and used on applications (e.g., decentralized exchanges and wallets) that support ERC-20 interfaces.
+WETH was created primarily because the ETH token doesn't comply with the ERC-20 technical standard. This made Ether difficult to use in decentralized applications (dapps). Unlike Ether, WETH follows the [ERC-20 fungible token standard](/developers/docs/standards/tokens/erc-20/) —so it can be exchanged for other ERC-20 tokens and used on applications (e.g., decentralized exchanges and wallets) that support ERC-20 interfaces.
 
 **Is WETH safe?**
 
-While WETH is safe, it isn’t as safe as holding ETH in your wallet. For example, If ETH locked in the WETH contract is stolen, the value of WETH tokens would plummet as they would have no backing assets.
+ETH is the safest asset because it is part of the Ethereum protocol, whereas WETH is defined in a smart contract which could feasibly be hacked. WETH is generally considered a very safe asset because the contract is small, simple, well-tested and it has been around for a long time.
 
 **What can I do with WETH?**
 
