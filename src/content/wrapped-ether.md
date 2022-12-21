@@ -73,7 +73,7 @@ DeFi enables even more complex use-cases, such as [yield farms](https://blockwor
 
 As an asset native to Ethereum, the security of ETH is guaranteed by the Ethereum network—no one can steal your funds unless they have access to your private keys. Even in a [51% attack](https://academy.binance.com/en/glossary/51-percent-attack), attackers cannot create forged transactions to transfer ETH from your address without approval. In other words, your ETH remains safe as long as your private keys are safe. 
 
-Wrapped Ether (WETH) is not issued and secured by the Ethereum network, so using WETH comes with different layers of risks. The security of your WETH largely depends on the smart contract holding ETH deposits and minting WETH tokens for users. Possible attack scenarios include:
+Wrapped Ether (WETH) is not issued and secured by the Ethereum network, so using WETH has smart contract risk that ETH does not. The WETH contract is very well battle-tested and is a relatively simple contract that is considered very secure. However, hypothetical attack scenarios might include:
 
 1. An attacker could exploit the WETH contract and mint WETH tokens without depositing Ether (the equivalent of printing money out of thin air). If the attacker successfully redeems these tokens for actual ETH, other owners will be unable to access their Ether deposits. 
 
