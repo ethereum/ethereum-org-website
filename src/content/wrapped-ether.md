@@ -8,8 +8,6 @@ description: An introduction to Wrapped Ether (WETH)—an ERC-20 compatible vers
 Wrapped Ether (WETH) is an ERC-20 token representing [Ether](/eth/), Ethereum’s native cryptocurrency. [Wrapped tokens](https://academy.binance.com/en/articles/what-are-wrapped-tokens) are so-called because the original cryptocurrency is deposited into a wrapper—similar to a digital bank vault—before a wrapped version of the cryptocurrency is created. For example, wrapping Ether involves depositing ETH into a smart contract that creates an amount of WETH equal to the original deposit; you can also “unwrap” Ether by sending WETH to a smart contract and receiving ETH in return. 
 
 Locking up ETH before minting new WETH tokens ensures every amount of WETH in circulation is backed by an equal amount of ETH held in reserves. This keeps the values of  WETH and ETH equal, such that you can convert WETH to ETH (and vice-versa) at a 1:1 ratio.
-
-Wrapped Ether (WETH) and other wrapped tokens are similar to [stablecoins](/stablecoins/), as their value is pegged to the value of other assets. But while stablecoins are backed by US dollars held in off-chain reserves, WETH is collateralized by ETH issued on the Ethereum blockchain.
   
 ## Why do we need to wrap ETH? {#why-do-we-need-to-wrap-eth} 
 
