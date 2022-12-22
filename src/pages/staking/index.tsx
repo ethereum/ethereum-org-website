@@ -620,9 +620,22 @@ const StakingPage = ({
               <p>
                 <Translation id="page-staking-faq-4-answer-p2" />
               </p>
+              <p>
+                <Translation id="page-staking-faq-4-answer-p3" />
+              </p>
               <ButtonLink to="/upgrades/merge/">
                 <Translation id="page-upgrades-merge-btn" />
               </ButtonLink>
+            </ExpandableCard>
+            <ExpandableCard
+              title={translateMessageId("page-staking-faq-5-question", intl)}
+            >
+              <p>
+                <Translation id="page-staking-faq-5-answer-p1" />
+              </p>
+              <p>
+                <Translation id="page-staking-faq-5-answer-p2" />
+              </p>
             </ExpandableCard>
             <ExpandableCard
               title={translateMessageId("page-staking-faq-1-question", intl)}
