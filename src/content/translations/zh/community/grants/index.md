@@ -35,10 +35,11 @@ lang: zh
 - [mStable 资助方案](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) 社区_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) 生态系统_
 - [Uniswap 资助计划](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/) 社区_
+- [Web3 Grants](https://web3grants.net) - _Web3/加密货币相关资助方案详尽列表_
 
 ## 二次方融资 {#quadratic-funding}
 
-以太坊的开源属性催生了一种有趣的新型募资模式：二次方融资。 这有可能改善我们在未来为各种公共产品募资的方式。 二次方募资确保获得最多资金的项目是那些具有最独特需求的项目。 换句话说，就是那些能够改善大多数人生活的项目。 [关于二次方融资的更多信息。](/defi/#quadratic-funding)
+以太坊的开源属性催生了一种有趣的新型募资模式：二次方融资。 这有可能改进我们在未来为各种公共产品募资的方式。 二次方募资确保获得最多资金的项目是那些具有最独特需求的项目。 换句话说，就是那些能够改善大多数人生活的项目。 [关于二次方融资的更多信息。](/defi/#quadratic-funding)
 
 - [Gitcoin](https://gitcoin.co/grants)
 - [clr.fund](https://clr.fund/)

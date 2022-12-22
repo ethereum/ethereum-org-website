@@ -2,6 +2,7 @@
 title: 以太坊治理
 description: 简介：如何做出关于以太坊的决策。
 lang: zh
+postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # 以太坊治理简介 {#introduction}
@@ -160,7 +161,7 @@ _注：任何个人都可以属于多个组（如：协议开发者可以支持�
 
 <Divider />
 
-## 如何参与其中？ {#get-involved}
+## 如何加入？ {#get-involved}
 
 - [提出以太坊改进提议](/eips/#participate)
 - [讨论目前的提案](https://ethereum-magicians.org/)
