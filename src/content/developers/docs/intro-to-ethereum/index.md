@@ -48,7 +48,7 @@ In practice, participants don't write new code every time they want to request a
 
 At a very basic level, you can think of a smart contract like a sort of vending machine: a script that, when called with certain parameters, performs some actions or computation if certain conditions are satisfied. For example, a simple vendor smart contract could create and assign ownership of a digital asset if the caller sends ETH to a specific recipient.
 
-Any developer can create a smart contract and make it public to the network, using the blockchain as its data layer, for a fee paid to the network. Any user can then call the smart contract to execute its code, again for a fee paid to the network.
+By paying a network fee to use the blockchain as its data layer, any developer can deploy a publicly accessible smart contract with repeatable arbitrary logic. Network participants are then able to call the smart contract code by paying a network fee that incentivises the network to execute the smart contract logic.
 
 Thus, with smart contracts, developers can build and deploy arbitrarily complex user-facing apps and services such as: marketplaces, financial instruments, games, etc.
 
