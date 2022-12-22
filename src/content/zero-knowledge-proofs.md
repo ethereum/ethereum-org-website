@@ -149,7 +149,7 @@ Blockchain-based voting schemes promise to remedy some of the problems associate
 
 However, on-chain voting systems are still susceptible to one of the biggest problems affecting traditional voting: collusion. [Collusion](https://en.m.wikipedia.org/wiki/Collusion) is the act of coordinating to "limit open competition by deceiving, defrauding, misleading others." When participants in an on-chain vote [collude to swing results](https://vitalik.ca/general/2019/04/03/collusion.html), it ceases to be an effective mechanism for measuring public preferences for some specified outcomes.
 
-For example, imagine there are two options up for voting on a ballot (`option A` and `option B`). Alice prefers `option A`, but votes for `option B` after receiving a bribe from Bob. Here, Alice and Bob have colluded to mislead others about the popularity of `option A` to the detriment of `option B`. 
+For example, imagine there are two options up for voting on a ballot (`option A` and `option B`). Alice prefers `option A`, but votes for `option B` after receiving a bribe from Bob. Here, Alice and Bob have colluded to mislead others about the popularity of `option B` to the detriment of `option A`. 
 
 Bribery and collusion limit the effectiveness of certain use-cases enabled by blockchain voting, especially [quadratic funding](https://www.radicalxchange.org/concepts/plural-funding/). Fortunately, newer solutions, such as MACI (Minimum Anti-Collusion Infrastructure), are using zero-knowledge proofs to mitigate this problem and increase the integrity of on-chain voting. 
 
