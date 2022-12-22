@@ -713,6 +713,11 @@ const StakingPage = ({
                   <Translation id="page-staking-further-reading-9-link" />
                 </Link>
               </li>
+              <li>
+                <Link to="https://ethstaker.gitbook.io/ethstaker-knowledge-base/">
+                  <Translation id="page-staking-further-reading-10-link" />
+                </Link>
+              </li>
             </ul>
           </Content>
           <Content>
