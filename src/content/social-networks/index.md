@@ -79,7 +79,7 @@ Reddit has [touted Community Points](https://cointelegraph.com/news/reddit-to-re
 
 The program is already live, with the r/CryptoCurrency subreddit [running its version of Community Points called "Moons"](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki). Per the official description, Moons "reward posters, commenters, and moderators for their contributions to the subreddit." Because these tokens are on the blockchain (users receive them in wallets), they are independent of Reddit and cannot be taken away.
 
-After concluding a beta phase on the Rinkeby testnet, Reddit Community Points are now on [Arbitrum Nova](https://nova.arbitrum.io/), a blockchain that combines properties of a [validium](/developers/docs/scaling/validium/) and an [optimistic rollup](/developers/docs/scaling/optimistic-rollups/). Besides using Community Points to unlock special features, users can also trade them for fiat on exchanges. Also, the amount of Community Points a user owns determines their influence on the decision-making process within the community.
+After concluding a beta phase on the Rinkeby testnet, Reddit Community Points are now on [Arbitrum Nova](https://nova.arbitrum.io/), a blockchain that combines properties of a [sidechain](/developers/docs/scaling/sidechains/) and an [optimistic rollup](/developers/docs/scaling/optimistic-rollups/). Besides using Community Points to unlock special features, users can also trade them for fiat on exchanges. Also, the amount of Community Points a user owns determines their influence on the decision-making process within the community.
 
 ### Twitter {#twitter}
 
@@ -99,6 +99,7 @@ In May 2022, [Instagram announced support for NFTs](https://about.instagram.com/
 
 ### Articles {#articles}
 
+- [Decentralizing social media: a guide to the web3 social stack](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) -  — _Coinbase Ventures_
 - [Social Networks Are the Next Big Decentralization Opportunity](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
 - [Web3 holds the promise of decentralized, community-powered social networks](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
 - [An Overview of the Blockchain Social Media Landscape](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
