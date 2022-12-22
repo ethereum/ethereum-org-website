@@ -27,9 +27,8 @@ import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import Roadmap from "../components/Roadmap"
-import UpgradeTableOfContents, {
-  Item as ItemTableOfContents,
-} from "../components/UpgradeTableOfContents"
+import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
+import { type Item as ItemTableOfContents } from "../components/TableOfContents"
 import Translation from "../components/Translation"
 import SectionNav from "../components/SectionNav"
 import ExpandableCard from "../components/ExpandableCard"
@@ -344,7 +343,7 @@ const UpgradePage = ({
     throw new Error("Required `title` property missing for upgrade template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
-  const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
+  const tocItems = mdx.tableOfContents?.items as ItemTableOfContents[]
 
   // FIXME: remove this any, currently not sure how to fix the ts error
   const parent: any = mdx.parent

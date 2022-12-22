@@ -14,8 +14,8 @@ import Link from "../../components/Link"
 import OriginalCard from "../../components/Card"
 import PageHero from "../../components/PageHero"
 import PageMetadata from "../../components/PageMetadata"
-import StakingHomeTableOfContents from "../../components/Staking/StakingHomeTableOfContents"
 import Translation from "../../components/Translation"
+import UpgradeTableOfContents from "../../components/UpgradeTableOfContents"
 
 // Utils
 import { Lang } from "../../utils/languages"
@@ -256,7 +256,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           <InfoTitle>
             <Translation id="toc-learn-hub" />
           </InfoTitle>
-          <StakingHomeTableOfContents items={tocItems} />
+          <UpgradeTableOfContents items={tocItems} />
         </InfoColumn>
 
         <ContentContainer id="content">

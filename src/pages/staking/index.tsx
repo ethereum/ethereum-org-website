@@ -22,8 +22,8 @@ import ExpandableCard from "../../components/ExpandableCard"
 import StakingStatsBox from "../../components/Staking/StakingStatsBox"
 import StakingSurveyBanner from "../../components/Staking/StakingSurveyBanner"
 import StakingHierarchy from "../../components/Staking/StakingHierarchy"
-import StakingHomeTableOfContents from "../../components/Staking/StakingHomeTableOfContents"
 import StakingCommunityCallout from "../../components/Staking/StakingCommunityCallout"
+import UpgradeTableOfContents from "../../components/UpgradeTableOfContents"
 
 import { translateMessageId, TranslationKey } from "../../utils/translations"
 import { getImage } from "../../utils/image"
@@ -355,7 +355,7 @@ const StakingPage = ({
           <InfoTitle>
             <Translation id="page-staking-dom-info-title" />
           </InfoTitle>
-          <StakingHomeTableOfContents items={tocArray} />
+          <UpgradeTableOfContents items={tocArray} />
         </InfoColumn>
         <ContentContainer id="content">
           <Content>
