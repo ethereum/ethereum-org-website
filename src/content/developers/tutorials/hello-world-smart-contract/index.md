@@ -2,15 +2,7 @@
 title: Hello World Smart Contract for Beginners
 description: Introductory tutorial on writing and deploying a simple smart contract on Ethereum.
 author: "elanh"
-tags:
-  [
-    "solidity",
-    "hardhat",
-    "alchemy",
-    "smart contracts",
-    "getting started",
-    "deploying",
-  ]
+tags: ["solidity", "hardhat", "alchemy", "smart contracts", "deploying"]
 skill: beginner
 lang: en
 published: 2021-03-31

@@ -6,6 +6,7 @@ import {
   Flex,
   Icon,
   List,
+  Show,
 } from "@chakra-ui/react"
 import React from "react"
 import { MdExpandMore } from "react-icons/md"
@@ -27,46 +28,49 @@ const Mobile: React.FC<IPropsTableOfContentsMobile> = ({ items, maxDepth }) => {
   }
 
   return (
-    <Box
-      as="aside"
-      background="background"
-      border="1px"
-      borderColor="border"
-      borderRadius="4px"
-      py={2}
-      px={4}
-    >
-      <Flex
-        color="text200"
-        cursor="pointer"
-        alignItems="center"
-        justify="space-between"
-        {...getButtonProps()}
+    <Show below="l">
+      {/* TODO: switch `l` to `lg` after UI migration */}
+      <Box
+        as="aside"
+        background="background"
+        border="1px"
+        borderColor="border"
+        borderRadius="4px"
+        py={2}
+        px={4}
       >
-        <chakra.span flex={1} fontWeight={500}>
-          <Translation id="on-this-page" />
-        </chakra.span>
-        <Icon
-          as={MdExpandMore}
-          transform={isOpen ? "rotate(0)" : "rotate(-90deg)"}
-          boxSize={6}
-          transition="transform .4s"
-        />
-      </Flex>
-      <Fade
-        in={isOpen}
-        {...getDisclosureProps()}
-        transition={{ enter: { duration: 0.6 } }}
-      >
-        <List {...outerListProps}>
-          <ItemsList
-            items={items}
-            depth={0}
-            maxDepth={maxDepth ? maxDepth : 1}
+        <Flex
+          color="text200"
+          cursor="pointer"
+          alignItems="center"
+          justify="space-between"
+          {...getButtonProps()}
+        >
+          <chakra.span flex={1} fontWeight={500}>
+            <Translation id="on-this-page" />
+          </chakra.span>
+          <Icon
+            as={MdExpandMore}
+            transform={isOpen ? "rotate(0)" : "rotate(-90deg)"}
+            boxSize={6}
+            transition="transform .4s"
           />
-        </List>
-      </Fade>
-    </Box>
+        </Flex>
+        <Fade
+          in={isOpen}
+          {...getDisclosureProps()}
+          transition={{ enter: { duration: 0.6 } }}
+        >
+          <List {...outerListProps}>
+            <ItemsList
+              items={items}
+              depth={0}
+              maxDepth={maxDepth ? maxDepth : 1}
+            />
+          </List>
+        </Fade>
+      </Box>
+    </Show>
   )
 }
 
