@@ -37,6 +37,7 @@ These projects have created their own grants for projects aimed at developing an
 - [UMA Grants Program](https://grants.umaproject.org/) - _[UMA](https://umaproject.org/) developer support_
 - [Uniswap Grants Program](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/) community_
 - [Web3 Grants](https://web3grants.net) - _An extensive list of web3/crypto related grant programs_
+- [Verse Community Grants](https://getverse.com/grants) - _[Bitcoin.com](https://bitcoin.com) Verse community fund_
 
 ## Quadratic funding {#quadratic-funding}
 
