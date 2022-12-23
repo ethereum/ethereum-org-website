@@ -2,6 +2,7 @@ import React from "react"
 
 import Translation from "./Translation"
 import {
+  Flex,
   Image,
   LinkBox,
   LinkOverlay,
@@ -86,7 +87,7 @@ const SimpleTable: React.FC<IProps> = ({ columns, content, hasError }) => {
             display="table-row"
             href={url}
             key={idx}
-            color="white"
+            color="text"
             textDecoration="none"
             boxShadow={`0 1px 1px ${textColor}`}
             _hover={{
@@ -102,33 +103,36 @@ const SimpleTable: React.FC<IProps> = ({ columns, content, hasError }) => {
               color: "black300",
             }}
           >
-            <Td display="flex" alignItems="center">
-              {image && <Image src={image} alt="" mr={4} boxSize={6} />}
-              {url ? (
-                <LinkOverlay
-                  as={Link}
-                  hideArrow
-                  to={url}
-                  color="inherit"
-                  textDecoration="inherit"
-                  _hover={{
-                    textDecoration: "inherit",
-                  }}
-                >
-                  {name}
-                </LinkOverlay>
-              ) : (
-                <>{name}</>
-              )}
+            <Td>
+              <Flex align='center'>
+                {image && <Image src={image} alt="" mr={4} boxSize={6} />}
+                {url ? (
+                  <LinkOverlay
+                    as={Link}
+                    hideArrow
+                    to={url}
+                    color="inherit"
+                    textDecoration="inherit"
+                    _hover={{
+                      textDecoration: "inherit",
+                    }}
+                    isExternal
+                  >
+                    {name}
+                  </LinkOverlay>
+                ) : (
+                  <>{name}</>
+                )}
+              </Flex>
             </Td>
-            <Td>{marketCap}</Td>
-            <Td>{type}</Td>
+            <Td><Flex align='center'>{marketCap}</Flex></Td>
+            <Td><Flex align='center'>{type}</Flex></Td>
             {url && (
-              <Td color="primary" textAlign="end">
-                ↗
+              <Td color="primary">
+                <Flex align='center' justify='flex-end'>↗</Flex>
               </Td>
             )}
-          </Tr>
+          </LinkBox>
         ))}
       </Tbody>
     </Table>
