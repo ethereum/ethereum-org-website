@@ -63,6 +63,7 @@ const PageHero: React.FC<IProps> = ({
             fontWeight="normal"
             mb={4}
             color="text300"
+            lineHeight={1.4}
           >
             {title}
           </Heading>
@@ -73,6 +74,7 @@ const PageHero: React.FC<IProps> = ({
             maxW="full"
             mb={0}
             color="text00"
+            lineHeight={1.4}
           >
             {header}
           </Heading>
@@ -123,15 +125,14 @@ const PageHero: React.FC<IProps> = ({
         <Box
           as={GatsbyImage}
           flex="1 1 50%"
-          backgroundSize="cover"
-          backgroundRepeat="no-repeat"
           alignSelf="center"
           mt={{ base: 0, lg: 12 }}
           ml={{ base: 0, lg: 12 }}
-          w="full"
           maxWidth={{ base: "560px", lg: "624px" }}
           image={image}
-          objectFit="contain"
+          imgStyle={{
+            objectFit: "contain",
+          }}
           alt={alt}
           loading="eager"
         />
