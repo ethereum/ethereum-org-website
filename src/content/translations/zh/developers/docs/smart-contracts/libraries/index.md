@@ -20,7 +20,7 @@ lang: zh
 
 智能合约库通常提供这些行为的可复用实现方式为[标准库](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries)或在 solidity 中通过[继承](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance)的方式实现。
 
-例如，以下是[`不可拥有的`合约的简化版本](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol)来自 [OpenZeppelin 合约库](https://github.com/OpenZeppelin/openzeppelin-contracts)，它设计了一个作为合约所有者的地址，并且提供了一个修饰者来限制该所有者获得一种方法。
+例如，以下是[OpenZeppelin 合约库](https://github.com/OpenZeppelin/openzeppelin-contracts)中[`Ownable`合约](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol)的简化版本，该合约指定一个地址为合约所有者，并提供了一个修饰符，用于将方法的访问权限限制在该所有者。
 
 ```solidity
 contract Ownable {
@@ -37,7 +37,7 @@ contract Ownable {
 }
 ```
 
-在您的合约中使用这个构建模块，您需要先导入它，然后在您自己的合约中扩展它。 这个将会允许您使用 `Ownable` 合约提供的修饰符来保护您的函数。
+在合约中使用时，您需要先导入该模块，然后在您自己的合约中进行扩展。 这样您即可以使用 `Ownable` 合约提供的修饰符来保护您的函数。
 
 ```solidity
 import ".../Ownable.sol"; // Path to the imported library
