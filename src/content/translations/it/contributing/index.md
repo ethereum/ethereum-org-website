@@ -33,7 +33,7 @@ _Hai domande?_ Consulta il nostro [server Discord](https://discord.gg/CetY6Y4)
 
 ## Come lavorare su ethereum.org {#how-to-update-content}
 
-Che tu stia contribuendo al sito, creando contenuti o lavorando su ticket aperti, avrai bisogno di un profilo [GitHub](https://github.com).
+Che tu stia contribuendo al sito, creando contenuti o lavorando su ticket aperti, avrai bisogno di un profilo di [GitHub](https://github.com).
 
 Tutti gli aggiornamenti sono effettuati tramite il processo PR di GitHub. Questo significa che crei una copia locale del sito web, effettui le modifiche e richiedi di unire le tue modifiche. Se non lo hai mai fatto prima, segui le istruzioni in fondo al nostro [repository di GitHub](https://github.com/ethereum/ethereum-org-website).
 
@@ -77,7 +77,7 @@ Se il tuo contributo viene inserito su ethereum.org, conieremo per te un POAP di
 3. Attendi che un membro del nostro team ti invii un link al tuo POAP.
 4. Richiedi il tuo POAP!
 
-Dovresti usare solo portafogli autosufficienti per rivendicare i POAP. Non usare conti di scambio o altri conti per i quali non possiedi le chiavi private, poiché non ti consentiranno di accedere e gestire i tuoi POAP.
+Dovresti usare solo portafogli autosufficienti per rivendicare i POAP. Non usare conti di scambio o altri conti di cui non possiedi le chiavi private, poiché non ti consentiranno di accedere a e di gestire i tuoi POAP.
 
 ## Collaboratori {#contributors}
 

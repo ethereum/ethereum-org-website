@@ -80,7 +80,7 @@
   "page-upgrades-question-1-desc": "Ethereum is being upgraded progressively; the upgrades are distinct with different ship dates.",
   "page-upgrades-question-2-title": "Is the Beacon Chain a separate blockchain?",
   "page-upgrades-question-2-desc": "Yes. The Beacon Chain was the name given to a parallel proof-of-stake blockchain used to upgrade Ethereum's Mainnet. There is now only one blockchain, formed by merging the original Ethereum blockchain and the Beacon Chain together.",
-  "page-upgrades-question-3-answer-2a": "The Merge had minimal impact on dapp developers - they still interact with Etheruem in the same ways.",
+  "page-upgrades-question-3-answer-2a": "The Merge had minimal impact on dapp developers - they still interact with Ethereum in the same ways.",
   "page-upgrades-question-3-answer-2a-link": "The Merge and dapp developers",
   "page-upgrades-question-3-answer-2b": "Sharding plans are still being developed, but will be designed with layer 2 rollups in mind.",
   "page-upgrades-layer-2-rollups": "More on layer 2 rollups",

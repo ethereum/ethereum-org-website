@@ -331,7 +331,7 @@ summaryPoint3: 由以太坊區塊鏈的智能合約提供支援。
 
 ## 延伸閱讀 {#further-reading}
 
-- [藝術資料加密貨幣](https://cryptoart.io/data) – Richard Chen，自動更新
+- [藝術資料加密貨幣](https://cryptoart.io/data) – _Richard Chen，自動更新_
 - [OpenSea：非同質化代幣聖經](https://opensea.io/blog/guides/non-fungible-tokens/) – _Devin Fizner，2020 年 1 月 10 日_
 - [初學者的非同質化代幣指南](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie，2020 年 1 月_
 - [關於元宇宙，你所需要知道的一切](https://foundation.app/blog/enter-the-metaverse) – _Foundation 團隊，foundation.app_

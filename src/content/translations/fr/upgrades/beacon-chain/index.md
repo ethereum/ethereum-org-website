@@ -4,14 +4,13 @@ description: En savoir plus sur la chaîne phare - la mise à niveau qui a intro
 lang: fr
 template: upgrade
 image: ../../../../../assets/upgrades/core.png
-summaryPoint1: La chaîne phare ne change rien à la manière actuelle d'utiliser Ethereum.
-summaryPoint2: Elle a introduit la preuve d'enjeu dans l'écosystème Ethereum.
-summaryPoint3: Elle a été fusionnée avec la chaîne originale de preuve de travail Ethereum en 2022.
-summaryPoint4: Le protocole de logique de consensus et de bloc des commérages introduits par la chaîne phare sécurisent désormais Ethereum.
+summaryPoint1: La Chaîne phare a introduit la preuve d'enjeu dans l'écosystème Ethereum.
+summaryPoint2: Elle a été fusionnée avec la chaîne originale de preuve de travail Ethereum en septembre 2022.
+summaryPoint3: La Chaîne phare a introduit la logique de consensus et le protocole de commutation de bloc qui sécurise désormais Ethereum.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
-  La Chaîne phare a été mise en service le 1er décembre 2020. À l'époque, il s'agissait d'une chaîne séparée du réseau principal Ethereum. Elle utilisait la preuve d'enjeu sans gérer de transactions. La Chaîne phare a été fusionnée avec le réseau principal original Ethereum en 2022 pour reprendre la logique de consensus et la propagation de blocs pour Ethereum. Depuis la fusion, il n'y a eu qu'une seule chaîne Ethereum.
+  La Chaîne phare a été présentée le 1er décembre 2020 et a formalisé la preuve d'enjeu comme mécanisme de consensus d'Ethereum avec La Fusion du 15 septembre 2022.
 </UpgradeStatus>
 
 ## Qu'est-ce que fut la Chaîne phare ? {#what-is-the-beacon-chain}
@@ -72,4 +71,5 @@ La fragmentation ne peut s'ajouter en toute sécurité dans l'écosystème Ether
 
 ## Complément d'information
 
-[En apprendre plus sur les futures mises à niveau d'Ethereum](/upgrades/vision) [En apprendre plus sur la preuve d'enjeu](/develoeprs/docs/consensus-mechanisms/pos)
+- [En savoir plus sur les futures mises à jour d'Ethereum](/upgrades/vision)
+- [En savoir plus sur la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos)

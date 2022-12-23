@@ -7,7 +7,7 @@ lang: it
 La rete Ethereum venne avviata usando un meccanismo di consenso che utilizzava il **[Proof of Work (PoW)](/developers/docs/consensus-mechanisms/pow)** che consentiva ai nodi della rete Ethereum di concordare sullo stato di tutte le informazioni registrate sulla blockchain Ethereum e impediva alcuni tipi di attacchi economici. Tuttavia, Ethereum ha disattivato il Proof of Work nel 2022 e ha iniziato, invece, a usare il [Proof of Stake](/developers/docs/consensus-mechanisms/pos).
 
 <InfoBanner emoji=":wave:">
-    Il Proof of Work è diventato ormai obsoleto. Ethereum non usa più il Proof of Work come parte del suo meccanismo di consenso, e usa invece il Proof of Stake. Leggi di più sul <a href="/developers/docs/consensus-mechanisms/pos/">Proof of Stake</a> e sullo <a href="/staking/">staking</a>.    
+    Il Proof of Work è diventato ormai obsoleto. Ethereum non usa più il Proof of Work come parte del suo meccanismo di consenso, e usa invece il Proof of Stake. Leggi di più sul <a href="/developers/docs/consensus-mechanisms/pos/">Proof of Stake</a> e sullo <a href="/staking/">staking</a>.
 </InfoBanner>
 
 ## Prerequisiti {#prerequisites}
@@ -16,7 +16,7 @@ Per comprendere meglio questa pagina, consigliamo innanzi tutto di leggere il ma
 
 ## Cos'è la Proof of Work (PoW)? {#what-is-pow}
 
-Il consenso di Nakamoto, che utilizza il Proof of Work, è il meccanismo che un tempo consentiva di raggiungere il consenso nella rete decentralizzata Ethereum (ossia l'accordo di tutti i nodi) su alcuni aspetti come il saldo degli account e l'ordine delle transazioni. Questo impediva che gli utenti spendessero due volte le loro monete e assicurava che la catena Ethereum fosse estremamente difficile da attaccare o manipolare. Ora queste proprietà di sicurezza provengono invece dal Proof of Stake, usando il meccanismo di consenso noto come [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/).
+Il consenso di Nakamoto, che utilizza il proof-of-work, è il meccanismo che un tempo consentiva alla rete decentralizzata di Ethereum di raggiungere il consenso (ossia, l'accordo di tutti i nodi) su aspetti come i saldi dei conti e l'ordine delle transazioni. Questo impediva che gli utenti spendessero due volte le loro monete e assicurava che la catena Ethereum fosse estremamente difficile da attaccare o manipolare. Ora, invece, queste proprietà di sicurezza provengono dal proof-of-stake, usando il meccanismo di consenso noto come [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/).
 
 ## Proof of Work e mining {#pow-and-mining}
 

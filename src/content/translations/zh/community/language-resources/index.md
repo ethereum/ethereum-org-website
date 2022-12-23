@@ -26,8 +26,8 @@ Ethereum.org 被地道地翻译成 40 多种语言，请参阅我们的[语言�
 
 **新闻**
 
-- [BeinCrypto](http://www.beincrypto.com.br) - 提供有关加密货币的新闻和文章，包括一个巴西交易所列表
-- [Cointegraph](http://cointelegraph.com.br/category/analysis) - 巴西版 Cointelegraph，一个主要的加密货币新闻机构
+- [BeInCrypto](http://www.beincrypto.com.br) - 提供有关加密货币的新闻和文章，包括一个巴西交易所列表
+- [Cointelegraph](http://cointelegraph.com.br/category/analysis) - 巴西版 Cointelegraph，一个主要的加密货币新闻机构
 - [Livecoins](http://www.livecoins.com.br/ethereum) - 提供有关加密货币的新闻和工具
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - 提供有关加密货币的新闻和报告
 
@@ -99,7 +99,7 @@ Ethereum.org 被地道地翻译成 40 多种语言，请参阅我们的[语言�
 ### 西班牙语 {#es}
 
 - [Ethereum Madrid](https://ethereummadrid.com/) - 区块链、去中心化金融与治理课程、活动和博客
-- [Cointegraph](https://es.cointelegraph.com/ethereum-for-beginners) - 以太坊初学者指南（西班牙语）
+- [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) - 以太坊初学者指南（西班牙语）
 - [在线教程](https://tutoriales.online/curso/solidity) - 在以太坊上学习 Solidity 和编程
 - [以太坊开发课程介绍](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) - Solidity 基础知识以及测试和部署你的首个智能合约
 - [Curso Introducción a Seguridad y Hacking en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) - 了解真实智能合约中常见的漏洞和安全问题

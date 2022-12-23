@@ -269,6 +269,7 @@ export interface IProps {
   toggleMenu: (item?: "search" | "menu") => void
   toggleTheme: () => void
   linkSections: ISections
+  fromPageParameter: string
 }
 
 const MobileNavMenu: React.FC<IProps> = ({
@@ -278,6 +279,7 @@ const MobileNavMenu: React.FC<IProps> = ({
   toggleMenu,
   toggleTheme,
   linkSections,
+  fromPageParameter,
 }) => {
   const intl = useIntl()
 
@@ -391,7 +393,7 @@ const MobileNavMenu: React.FC<IProps> = ({
           </BottomItemText>
         </BottomItem>
         <BottomItem onClick={handleClick}>
-          <BottomLink to="/languages/">
+          <BottomLink to={`/languages/${fromPageParameter}`}>
             <MenuIcon name="language" />
             <BottomItemText>
               <Translation id="languages" />
