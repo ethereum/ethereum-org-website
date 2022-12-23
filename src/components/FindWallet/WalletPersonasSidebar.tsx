@@ -7,10 +7,8 @@ import {
   ListItem,
   UnorderedList,
   useColorMode,
+  Icon,
 } from "@chakra-ui/react"
-
-// Components
-import Icon from "../Icon"
 
 // Icons
 import BuyCrypto from "../../assets/wallets/buy_crypto.svg"
@@ -32,6 +30,7 @@ import Multisig from "../../assets/wallets/multisig.svg"
 import SocialRecover from "../../assets/wallets/social_recover.svg"
 import Swap from "../../assets/wallets/swap.svg"
 import Eip1559 from "../../assets/wallets/eip1559.svg"
+import { MdCircle } from "react-icons/md"
 
 // Utils
 import { trackCustomEvent } from "../../utils/matomo"
@@ -385,23 +384,18 @@ const WalletPersonasSidebar = ({
                 ? "black400"
                 : "primary100"
             }
-            borderRadius={1}
+            borderRadius="base"
             cursor="pointer"
             transition="0.5s all"
-            sx={{
-              h3: {
-                color: "text",
-              },
-              "&:hover": {
-                background:
-                  selectedPersona === idx
-                    ? isDark
-                      ? "primary900"
-                      : "primary200"
-                    : isDark
-                    ? "black500"
-                    : "primary200",
-              },
+            _hover={{
+              background:
+                selectedPersona === idx
+                  ? isDark
+                    ? "primary900"
+                    : "primary200"
+                  : isDark
+                  ? "black500"
+                  : "primary200",
             }}
             onClick={() => {
               if (idx === selectedPersona) {
@@ -424,16 +418,14 @@ const WalletPersonasSidebar = ({
           >
             <Flex alignItems="center" gap={2} mb="0.6rem" pt={2} pb={0} px={2}>
               <Box
-                w="1.3rem"
-                h="1.3rem"
+                boxSize="1.3rem"
                 role="checkbox"
                 aria-label={`${persona.title} filter`}
               >
-                <Box
-                  as={Icon}
+                <Icon
+                  as={MdCircle}
                   borderRadius="full"
-                  w={4}
-                  h={4}
+                  boxSize={4}
                   my={0}
                   mx={1}
                   fill={
@@ -445,8 +437,7 @@ const WalletPersonasSidebar = ({
                   outline="1.5px solid"
                   outlineColor={selectedPersona === idx ? "primary" : "text"}
                   outlineOffset="3px"
-                  name="circle"
-                  size="2rem"
+                  fontSize={8}
                 />
               </Box>
               <Heading
@@ -458,6 +449,7 @@ const WalletPersonasSidebar = ({
                 pr={1}
                 pl={0}
                 lineHeight="1.7rem"
+                color="text"
               >
                 {persona.title}
               </Heading>
