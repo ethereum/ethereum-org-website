@@ -37,7 +37,7 @@ const SimpleTable: React.FC<IProps> = ({ columns, content, hasError }) => {
     <Table
       variant="unstyled"
       my={8}
-      borderRadius="2px"
+      borderRadius="sm"
       border={`1px solid ${textColor}`}
       bg="background"
       mb={8}
