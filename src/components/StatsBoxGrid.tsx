@@ -63,7 +63,7 @@ const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
             as={MdInfoOutline}
             boxSize={6}
             fill="text"
-            mr="0.5rem"
+            mr={2}
             _hover={{ fill: "primary" }}
             _active={{ fill: "primary" }}
             _focus={{ fill: "primary" }}
@@ -129,7 +129,7 @@ const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
     <Flex
       position="relative"
       color="text"
-      height="20rem"
+      height={80}
       flexDirection="column"
       justifyContent="space-between"
       alignItems="flex-start"
@@ -147,7 +147,7 @@ const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
       <div>
         <Text
           fontSize="xl"
-          mb="0.5rem"
+          mb={2}
           color="text"
           textTransform="uppercase"
           fontFamily="monospace"
@@ -193,8 +193,8 @@ const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
         bottom="8%"
         fontSize={{ base: "max(8.8vw, 48px)", lg: "min(4.4vw, 4rem)" }}
         fontWeight={600}
-        marginTop="0rem"
-        marginBottom="1rem"
+        marginTop={0}
+        marginBottom={4}
         color="text"
         flexWrap="wrap"
         textOverflow="ellipsis"
@@ -543,7 +543,7 @@ const StatsBoxGrid: React.FC<IProps> = () => {
         sm: "2rem 0 0",
         lg: "2rem 2rem 0",
       }}
-      borderRadius="2px"
+      borderRadius="sm"
       flexDirection={{
         base: "column",
         lg: "column",
