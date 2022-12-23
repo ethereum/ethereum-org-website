@@ -9,6 +9,7 @@ import {
   Hide,
   Show,
   Text,
+  useToken,
 } from "@chakra-ui/react"
 import Card from "../Card"
 import Translation from "../Translation"
@@ -30,6 +31,9 @@ const Trilemma: React.FC<IProps> = () => {
     handleClick,
     ...trilemmaChecks,
   }
+
+  // TODO: Replace with direct token implementation after UI migration is completed
+  const lgBp = useToken("breakpoints", "lg")
 
   return (
     <Flex
@@ -59,19 +63,16 @@ const Trilemma: React.FC<IProps> = () => {
         <Text>
           <Translation id="page-upgrades-vision-trilemma-p-2" />
         </Text>
-        {/* TODO: replace `l` with `lg` after UI migration */}
-        <Show below="l">
+        <Show below={lgBp}>
           <Text fontWeight={600}>
             <Translation id="page-upgrades-vision-trilemma-modal-tip" />:
           </Text>
         </Show>
-        {/* TODO: replace `l` with `lg` after UI migration */}
-        <Hide below="l">
+        <Hide below={lgBp}>
           <Card {...cardDetail} mt={8} minH="300px" />
         </Hide>
       </Flex>
-      {/* TODO: replace `l` with `lg` after UI migration */}
-      <Hide above="l">
+      <Hide above={lgBp}>
         <Drawer
           isOpen={mobileModalOpen}
           onClose={handleModalClose}
