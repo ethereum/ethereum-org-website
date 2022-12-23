@@ -81,8 +81,8 @@ const SimpleTable: React.FC<IProps> = ({ columns, content, hasError }) => {
         )}
 
         {content.map(({ name, marketCap, image, type, url }, idx) => (
-          <Tr
-            as={url ? LinkBox : undefined}
+          <LinkBox
+            as={url ? Tr : undefined}
             display="table-row"
             href={url}
             key={idx}
