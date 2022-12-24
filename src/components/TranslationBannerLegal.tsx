@@ -98,18 +98,6 @@ const TranslationBannerLegal: React.FC<IProps> = ({
             flexDirection={{ base: "column", sm: "row" }}
           >
             <Button
-              py={2}
-              px={3}
-              bgColor="primary"
-              color="buttonColor"
-              border="1px solid transparent"
-              _hover={{
-                bgColor: "primaryHover",
-                boxShadow: cardBoxShadow,
-              }}
-              _active={{
-                bgColor: "primaryActive",
-              }}
               onClick={() => {
                 localStorage.setItem(
                   `dont-show-translation-legal-banner-${originalPagePath}`,
