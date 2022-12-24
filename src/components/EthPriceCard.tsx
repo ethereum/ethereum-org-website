@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react"
+import { Box, Flex, Heading, Icon } from "@chakra-ui/react"
+import { MdInfoOutline } from "react-icons/md"
 import axios from "axios"
 
 import Translation from "./Translation"
 import Link from "./Link"
 import Tooltip from "./Tooltip"
-import { Box, Flex, Heading, Icon } from "@chakra-ui/react"
-import { MdInfoOutline } from "react-icons/md"
 
 export interface IProps {
   className?: string
