@@ -92,7 +92,7 @@ const EthPriceCard: React.FC<IProps> = ({ className, isLeftAlign = false }) => {
       w="full"
       maxW="420px"
       maxH="192px"
-      borderRadius="4px"
+      borderRadius="base"
     >
       <Heading
         as="h4"
