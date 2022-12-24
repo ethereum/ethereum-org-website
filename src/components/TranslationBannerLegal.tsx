@@ -1,9 +1,5 @@
 // Libraries
 import React, { useEffect, useState } from "react"
-
-// Component
-import Emoji from "./Emoji"
-import Translation from "./Translation"
 import {
   Box,
   Button,
@@ -13,6 +9,10 @@ import {
   Text,
   useToken,
 } from "@chakra-ui/react"
+
+// Component
+import Emoji from "./Emoji"
+import Translation from "./Translation"
 
 export interface IProps {
   shouldShow: boolean
