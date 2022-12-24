@@ -56,7 +56,7 @@ const TranslationBannerLegal: React.FC<IProps> = ({
         maxW={{ base: "full", md: "600px" }}
         maxH="full"
         p={4}
-        borderRadius="2px"
+        borderRadius="sm"
         boxShadow={{
           base: `-4px 10px 0px ${text} 10%`,
           md: "rgba(0, 0, 0, 0.16) 0px 2px 4px 0px",
