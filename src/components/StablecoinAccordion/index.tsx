@@ -9,15 +9,15 @@ import {
   LinkOverlay,
   Text,
 } from "@chakra-ui/react"
-import { useStablecoinAccordion } from "./use-stablecoin-accordion"
-import Translation from "../Translation"
-import Link from "../Link"
 import { MdArrowForward } from "react-icons/md"
-import { TranslationKey } from "../../utils/translations"
-import InfoBanner from "../InfoBanner"
 import ButtonLink from "../ButtonLink"
 import CardList from "../CardList"
+import InfoBanner from "../InfoBanner"
+import Link from "../Link"
+import Translation from "../Translation"
 import { AccordionCustomItem } from "./AccordionCustomItem"
+import { useStablecoinAccordion } from "./use-stablecoin-accordion"
+import { TranslationKey } from "../../utils/translations"
 
 export type ChildOnlyType = {
   children: ReactNode
