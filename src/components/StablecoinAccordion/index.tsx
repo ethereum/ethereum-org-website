@@ -1,10 +1,7 @@
 import React, { ReactNode } from "react"
 import {
   Accordion,
-  AccordionItemProps,
-  AccordionPanelProps,
   Box,
-  BoxProps,
   Flex,
   Heading,
   Icon,
