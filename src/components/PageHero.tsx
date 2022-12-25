@@ -128,6 +128,7 @@ const PageHero: React.FC<IProps> = ({
           alignSelf="center"
           mt={{ base: 0, lg: 12 }}
           ml={{ base: 0, lg: 12 }}
+          w="full"
           maxWidth={{ base: "560px", lg: "624px" }}
           image={image}
           imgStyle={{
