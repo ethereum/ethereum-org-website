@@ -2,7 +2,6 @@
 title: 简单序列化
 description: 以太坊简单序列化 (SSZ) 格式的说明。
 lang: zh
-sidebar: true
 sidebarDepth: 2
 ---
 

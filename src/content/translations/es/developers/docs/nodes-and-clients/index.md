@@ -173,7 +173,7 @@ Los modos de sincronización representan diferentes enfoques de este proceso con
 
 Resumen general de los enfoques de sincronización utilizados en clientes listos para la red principal:
 
-##### Sincronización total {#full-sync}
+##### Sincronización total
 
 La sincronización total descarga todos los bloques (incluidos los encabezados, las transacciones y los recibos) y va generando de manera creciente el estado del la cadena de bloques al ejecutar cada bloque desde el principio.
 

@@ -173,7 +173,7 @@ Senkronizasyon modları, çeşitli değiş tokuşlarla bu sürece farklı yakla�
 
 Mainnet'e hazır istemcilerde kullanılan senkronizasyon yaklaşımlarına genel bakış:
 
-##### Full senkronizasyon {#full-sync}
+##### Full senkronizasyon
 
 Full senkronizasyon, tüm blokları (başlıklar, işlemler ve makbuzlar dahil) indirir ve her bloğu başlangıçtan yürüterek aşamalı olarak blok zincirinin durumunu oluşturur.
 

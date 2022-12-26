@@ -8,7 +8,7 @@ lang: zh
 
 以太坊帐户可在不同的网络上使用，但是帐户余额和交易历史记录不会结转到以太坊主网以外。 进行测试时，了解哪些网络可用以及如何获取可以试用的测试网以太币是很有用的。
 
-## 前置要求 {#prerequisites}
+## 前提条件 {#prerequisites}
 
 你应该先了解[以太坊基础知识](/developers/docs/intro-to-ethereum/)，然后再深入研究不同的网络，因为测试网络将提供一种低廉、安全的以太坊供你试用。
 
@@ -28,29 +28,13 @@ lang: zh
 
 在部署到主网之前，你应该在测试网测试编写的任何合约代码。 在与现有智能合约集成的去中心化应用程序中，大多数项目将副本部署到测试网。
 
-大多数测试网使用权威证明的共识机制。 这意味着会选择少量节点来验证交易并创建新区块——在此过程中将他们的身份进行抵押。 测试网不鼓励工作量证明挖矿，这种挖矿可能会使它们容易受到攻击。
+大多数测试网最初都是使用权威证明共识机制。 这意味着会选择少量节点来验证交易并创建新区块——在此过程中将他们的身份进行抵押。 然而，一些测试网在启动时采用工作量证明共识机制，网络内只有少数获得许可的矿工。 然而，为了准备[合并](/upgrades/merge)，这些测试网各自都经历了向权益证明的过渡，在开发者合并以太坊主网之前提供了多次“彩排”机会。 目前，以太坊测试网在权益证明机制下运行，和以太坊主网相同。
 
-随着[合并](/upgrades/merge)临近，更多工作量证明和权威证明公共测试网正在向权益证明转变。 转换它们的共识机制可作为以太坊主网合并的预演。 Ropsten、Sepolia 和 Goerli 测试网预计将在 2022 年夏末成为权益证明网络，而 Goerli 测试网将得到长期维护。
-
-测试网上的以太币没有实际价值；因此没有测试网以太币市场。 由于与以太坊进行实际交互需要使用以太币，因此大多数人从水龙头获取测试网以太币。 大多数水龙头是网络应用程序，你可以向其中输入一个地址并要求向该地址发送以太币。
-
-#### Sepolia {#sepolia}
-
-一个工作量证明测试网；这意味着它是以太坊最好的相似代表。 预计 Sepolia 将在 2022 年夏天进行合并，并转变为权益证明测试网。 目前还不能确定该测试网是否会得到长期维护。
-
-- [网站](https://sepolia.dev/)
-- [GitHub](https://github.com/goerli/sepolia)
-- [Otterscan](https://sepolia.otterscan.io/)
-- [Etherscan](https://sepolia.etherscan.io)
-
-##### Sepolia 水龙头
-
-- [Sepolia 水龙头](https://faucet.sepolia.dev/)
-- [FaucETH](https://fauceth.komputing.org)
+测试网上的以太币没有实际价值；因此测试网以太币没有市场。 由于实际中与以太坊进行交互时需要以太币，所以大多数人从水龙头获取测试网以太币。 大多数水龙头是网络应用程序，你可以给它输入一个请求发送以太币的地址。
 
 #### Goerli {#goerli}
 
-一个可以跨客户端使用的权威证明测试网，是应用程序开发者的理想测试网。 Goerli 将是以太坊主网合并前最后一个合并且过渡到权益证明共识机制的测试网。 预计 Goerli 合并将在 2022 年夏天进行。 Goerli 有望作为权益证明测试网得到长期维护。
+Goerli 是一个权益证明测试网。 它有望得到长期维护，作为面向应用程序开发者的稳定测试网。 在其测试网合并之前，Goerli 是一个权威证明测试网。
 
 - [网站](https://goerli.net/)
 - [GitHub](https://github.com/goerli/testnet)
@@ -62,11 +46,25 @@ lang: zh
 - [Chainlink 水龙头](https://faucets.chain.link/)
 - [Alchemy Goerli 水龙头](https://goerlifaucet.com/)
 
+#### Sepolia {#sepolia}
+
+Sepolia 是一个权益证明测试网。 尽管 Sepolia 仍在运行，但目前不打算长期维护。 在 2022 年 6 月进行合并之前，Sepolia 是一个工作量证明测试网。
+
+- [网站](https://sepolia.dev/)
+- [GitHub](https://github.com/goerli/sepolia)
+- [Otterscan](https://sepolia.otterscan.io/)
+- [Etherscan](https://sepolia.etherscan.io)
+
+##### Sepolia 水龙头
+
+- [Sepolia 水龙头](https://faucet.sepolia.dev/)
+- [FaucETH](https://fauceth.komputing.org)
+
 #### Ropsten*（已弃用）* {#ropsten}
 
 _注意，[Ropsten 测试网已弃用](https://github.com/ethereum/pm/issues/460)并且将不再获得协议升级。 请考虑将你的应用程序迁移到 Sepolia 或 Goerli。_
 
-Ropsten 是一个工作量证明测试网，它在 2022 年 5 月经历了合并，过渡到权益证明共识机制。 可通过 Ropsten 在合并后网络上测试应用程序，但预计它不会得到长期维护并且可能在 2023 年夏季之前弃用。
+Ropsten 是一个权益证明测试网。 Ropsten 将于 2022 年晚些时候弃用。 在 2022 年 5 月进行合并之前，Ropsten 是一个工作量证明测试网。
 
 ##### Ropsten 水龙头
 
@@ -105,7 +103,7 @@ _注意：[Kovan 测试网已弃用](https://github.com/ethereum/pm/issues/460)�
 
 #### Arbitrum Rinkeby {#arbitrum-rinkeby}
 
-[Arbitrum ](https://arbitrum.io/)测试网。
+[Arbitrum](https://arbitrum.io/) 测试网。
 
 Arbitrum Rinkeby 水龙头：
 
@@ -124,7 +122,7 @@ Optimistic Kovan 水龙头：
 
 ## 私有网络 {#private-networks}
 
-如果以太坊网络的节点未连接到公共网络（即 主网或测试网），则以太坊网络就是私有网络。 在这种情况下，私有仅指保留或隔离，而不是保护或安全。
+如果以太坊网络的节点未连接到公共网络（即， 主网或测试网），则以太坊网络就是私有网络。 在这种情况下，私有仅指保留或隔离，而不是保护或安全。
 
 ### 开发网络 {#development-networks}
 
@@ -145,4 +143,4 @@ Optimistic Kovan 水龙头：
 
 ## 延伸阅读 {#further-reading}
 
-_还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
+- [以太坊测试网的演变](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

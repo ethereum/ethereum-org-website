@@ -92,6 +92,20 @@ Voici un exemple d'avertissement Crowdin lorsque vous oubliez d'ajouter une bali
 
 Une grande partie du contenu de la source contient des balises et des variables, surlignées en jaune dans l'éditeur Crowdin. Elles remplissent différentes fonctions et doivent être utilisées correctement.
 
+**Paramètres de Crowdin**
+
+Pour faciliter la gestion des tags et les copier directement à partir de la source, nous vous recommandons de modifier vos paramètres dans l'éditeur Crowdin.
+
+1. Ouvrez les paramètres de l'éditeur ![Comment ouvrir les paramètres de l'éditeur](./editor-settings.png)
+
+2. Allez à la section 'Affichage des tags HTML'
+
+3. Sélectionnez 'Masquer' ![Veuillez sélectionner 'Masquer'](./hide-tags.png)
+
+4. Cliquez sur 'Enregistrer'
+
+En sélectionnant cette option, le texte du tag complet ne sera plus affiché et sera remplacé par un nombre. Lors de la traduction, cliquer sur ce tag copiera automatiquement le tag exact dans le champ de traduction.
+
 **Liens**
 
 Vous pouvez remarquer des liens complets vers des pages d'ethereum.org ou d'autres sites web.
@@ -106,7 +120,7 @@ Les liens apparaissent également dans le texte source sous la forme de balises 
 
 Il est très important de copier les liens depuis le texte source et de ne pas modifier l'ordre des balises.
 
-Si l'ordre est changé, le lien qu'elles remplacent sera cassé.
+Si l'ordre des balises est changé, le lien qu'elles représentent sera cassé.
 
 ![Exemple de liens à l'intérieur de balises.png](./example-of-links-inside-tags.png)
 
@@ -132,7 +146,7 @@ Exemple : `<code>`nonce`</code>`
 
 `<code>` - _Balise ouvrante, qui contient un extrait de code_
 
-nonce - _Text non traduisible_
+nonce - _Texte non traduisible_
 
 `</code>` - _Balise fermante_
 

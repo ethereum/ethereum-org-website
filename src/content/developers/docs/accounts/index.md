@@ -70,19 +70,22 @@ Example:
 
 The public key is generated from the private key using the [Elliptic Curve Digital Signature Algorithm](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm). You get a public address for your account by taking the last 20 bytes of the Keccak-256 hash of the public key and adding `0x` to the beginning.
 
-Here's an example of creating an account in the console using GETH's `personal_newAccount`
+The following example shows how to use a signing tool called [Clef](https://geth.ethereum.org/docs/clef/introduction) to generate a new account. Clef is an account management and signing tool that comes bundled with the Ethereum client, [Geth](https://geth.ethereum.org). The `clef newaccount` command creates a new key pair and saves them in an encrypted keystore.
 
-```go
-> personal.newAccount()
-Passphrase:
-Repeat passphrase:
-"0x5e97870f263700f46aa00d967821199b9bc5a120"
+```
+> clef newaccount --keystore <path>
 
-> personal.newAccount("h4ck3r")
-"0x3d80b31a78c30fc628f20b2c89d7ddbf6e53cedc"
+Please enter a password for the new account to be created:
+> <password>
+
+------------
+INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please remember your password!
+Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
-[GETH documentation](https://geth.ethereum.org/docs)
+[Geth documentation](https://geth.ethereum.org/docs)
 
 It is possible to derive new public keys from your private key but you cannot derive a private key from public keys. This means it's vital to keep a private key safe and, as the name suggests, **PRIVATE**.
 

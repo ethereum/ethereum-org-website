@@ -45,7 +45,7 @@
   "page-upgrades-vision-trilemma-cardtext-4": "Increasing the size and power of Ethereum's nodes could increase transactions per second in a secure way, but the hardware requirement would restrict who could do it - this threatens decentralization. It's hoped that sharding and proof-of-stake will allow Ethereum to scale by increasing the amount of nodes, not node size.",
   "page-upgrades-vision-trilemma-h2": "The challenge of decentralized scaling",
   "page-upgrades-vision-trilemma-modal-tip": "Tap the circles below to better understand the problems of decentralized scaling",
-  "page-upgrades-vision-trilemma-p": "A naive way to solve Ethereum's problems would be to make it more centralized. But decentralization is too important. It's decentralization that gives Ethereum censorship resistance, openness, data privacy and near-unbreakable security.",
+  "page-upgrades-vision-trilemma-p": "A naive way to solve Ethereum's problems would be to make it more centralized. But decentralization is too important. It's decentralization that gives Ethereum neutrality, censorship resistance, openness, data ownership and near-unbreakable security.",
   "page-upgrades-vision-trilemma-p-1": "Ethereum's vision is to be more scalable and secure, but also to remain decentralized. Achieving these 3 qualities is a problem known as the scalability trilemma.",
   "page-upgrades-vision-trilemma-p-2": "Ethereum upgrades aim to solve the trilemma but there are significant challenges.",
   "page-upgrades-vision-trilemma-press-button": "Press the buttons on the triangle to better understand the problems of decentralized scaling.",

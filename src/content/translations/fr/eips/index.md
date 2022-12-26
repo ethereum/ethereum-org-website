@@ -24,18 +24,29 @@ En plus de fournir les spécifications techniques des modifications, les EIP rep
 
 Le dépôt [GitHub des EIP](https://github.com/ethereum/EIPs) a été créé en octobre 2015. Le processus des EIP est basé sur celui des [propositions d'amélioration de Bitcoin (BIP)](https://github.com/bitcoin/bips), lui-même basé sur celui des [propositions d'amélioration de Python (PEP)](https://www.python.org/dev/peps/).
 
-Des éditeurs sont chargés de vérifier la solidité technique, l'orthographe/la grammaire et le style du code des EIP. Martin Becze, Vitalik Buterin, Gavin Wood et quelques autres ont été les éditeurs d'origine des EIP de 2015 à fin 2016. Les éditeurs d'EIP actuels sont :
+Des éditeurs sont chargés de vérifier la solidité technique, l'orthographe/la grammaire et le style du code des EIP. Martin Becze, Vitalik Buterin, Gavin Wood et quelques autres ont été les éditeurs d'origine des EIP de 2015 à fin 2016.
 
-- Alex Beregszaszi (EWASM/Ethereum Foundation)
-- Greg Colvin (Communauté)
-- Casey Detrio (EWASM/Ethereum Foundation)
-- Matt Garnett (Quilt)
-- James Hudson (Ethereum Foundation)
-- Nick Johnson (ENS)
-- Nick Savers (Communauté)
-- Micah Zoltu (Communauté)
+Les éditeurs actuels EIP sont
 
-Les éditeurs d'EIP, avec les membres de la communauté des [Ethereum Cat Herders](https://ethereumcatherders.com/) et des [Ethereum Magicians](https://ethereum-magicians.org/), décident des EIP qui seront implémentées et sont responsables de la facilitation des EIP ainsi que du passage des EIP au stade "Final" ou "Retiré".
+- Alex Beregszaszi (@axic)
+- Gavin John (@Pandapip1)
+- Greg Colvin (@gcolvin)
+- Matt Garnett (@lightclient)
+- Sam Wilson (@SamWilsn)
+
+Les éditeurs Emeritus EIP sont
+
+- Casey Detrio (@cdetrio)
+- Hudson Jameson (@Souptacular)
+- Martin Becze (@wanderer)
+- Micah Zoltu (@MicahZoltu)
+- Nick Johnson (@arachnid)
+- Nick Savers (@nicksavers)
+- Vitalik Buterin (@vbuterin)
+
+Si vous souhaitez devenir un éditeur EIP, veuillez consulter [EIP-5069](https://eips.ethereum.org/EIPS/eip-5069).
+
+Les éditeurs d'EIP, avec les membres de la communauté des [Ethereum Cat Herders](https://ethereumcatherders.com/) et des [Ethereum Magicians](https://ethereum-magicians.org/), décident des EIP qui seront implémentées et sont responsables de la facilitation des EIP ainsi que du passage des EIP au stade « Final » ou « Retiré ».
 
 Le processus complet de normalisation ainsi que la charte sont détaillés dans le document [EIP-1](https://eips.ethereum.org/EIPS/eip-1)
 
@@ -49,7 +60,7 @@ Si vous souhaitez en savoir plus, consultez le [site dédié aux EIP](https://ei
 
 ## Participer {#participate}
 
-Tout le monde peut créer une EIP ou une ERC, mais il est conseillé de lire [EIP-1](https://eips.ethereum.org/EIPS/eip-1), qui décrit le processus d'EIP, ce qu'est une EIP, les différents types d'EIP, ce que le document EIP doit contenir, le format et le modèle EIP, la liste des éditeurs d'EIP et tout ce que vous devez savoir sur les EIP avant d'en créer une. Votre nouvelle EIP doit définir une nouvelle fonctionnalité qui n'est pas vraiment complexe mais pas super niche et peut être utilisée par des projets dans l'écosystème Ethereum. L'élément le plus difficile est la facilitation : en tant qu'auteur, vous devez rassembler la communauté autour de votre EIP, collecter des commentaires, écrire des articles décrivant les problèmes que votre EIP résout, et collaborer avec des projets pour implémenter votre EIP.
+Tout le monde peut créer une EIP ou une ERC, mais il est conseillé de lire [EIP-1](https://eips.ethereum.org/EIPS/eip-1), qui décrit le processus d'EIP, ce qu'est une EIP, les différents types d'EIP, ce que le document EIP doit contenir, le format et le modèle EIP, la liste des éditeurs d'EIP et tout ce que vous devez savoir sur les EIP avant d'en créer une. Votre nouvelle EIP doit définir une nouvelle fonctionnalité qui n'est pas vraiment complexe mais pas une super niche et peut être utilisée par des projets dans l'écosystème Ethereum. L'élément le plus compliqué est la facilitation : en tant qu'auteur, vous devez rassembler la communauté autour de votre EIP, collecter des commentaires, écrire des articles décrivant les problèmes que votre EIP résout, et collaborer avec des projets pour implémenter votre EIP.
 
 Si vous souhaitez suivre la discussion sur les EIP ou faire part de vos commentaires, consultez le [forum Ethereum Magicians](https://ethereum-magicians.org/), où la communauté discute des EIP.
 

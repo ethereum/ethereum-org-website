@@ -64,26 +64,38 @@ const EnergyConsumptionChart: React.FC = () => {
       color: "#FF0000",
     },
     {
-      name: "Gold mining",
+      name: "Gold mining (Galaxy Digital)",
       amount: 240,
       color: "#D7B14A",
       breakpoint: mediumBreakpoint,
     },
     {
-      name: "BTC PoW",
+      name: "Global data centers",
       amount: 200,
-      color: "#F2A900",
+      color: "#D7B14A",
+      breakpoint: mediumBreakpoint,
     },
     {
-      name: "ETH PoW",
-      amount: 112,
-      color: "#C1B6F5",
+      name: "Gold mining (CBECI)",
+      amount: 130,
+      color: "#D7B14A",
+      breakpoint: mediumBreakpoint,
+    },
+    {
+      name: "BTC PoW",
+      amount: 100,
+      color: "#F2A900",
     },
     {
       name: "Netflix",
       amount: 94,
       color: "#E50914",
       breakpoint: smallBreakpoint,
+    },
+    {
+      name: "ETH PoW",
+      amount: 78,
+      color: "#C1B6F5",
     },
     {
       name: "Gaming in the US",
@@ -99,7 +111,7 @@ const EnergyConsumptionChart: React.FC = () => {
     },
     {
       name: "ETH PoS",
-      amount: 0.01,
+      amount: 0.0026,
       color: "#C1B6F5",
     },
   ]
