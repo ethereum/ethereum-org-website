@@ -22,7 +22,7 @@ Decentralized science allows for more diverse funding sources (from [DAOs](/dao/
 
 ### Juan Benet - DeSci, Independent Labs, & Large Scale Data Science
 
-<YouTube id="zkXM9H90g_E" />
+<YouTube id="5ORvbCIW39o" />
 
 ## How DeSci improves science {#desci-improves-science}
 
@@ -132,6 +132,7 @@ Explore projects and join the DeSci community.
 
 - [What's Decentralized Science?](https://www.youtube.com/watch?v=-DeMklVWNdA)
 - [Conversation between Vitalik Buterin and the scientist Aubrey de Grey about the intersection of longevity research and crypto](https://www.youtube.com/watch?v=x9TSJK1widA)
+- [The DeSci Movement with Juan Benet](https://www.youtube.com/watch?v=5ORvbCIW39o)
 - [Scientific Publishing Is Broken. Can Web3 Fix It?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
 - [Juan Benet - DeSci, Independent Labs, & Large Scale Data Science](https://www.youtube.com/watch?v=zkXM9H90g_E)
 - [Sebastian Brunemeier - How DeSci Can Transform Biomedical Research & Venture Capital](https://www.youtube.com/watch?v=qB4Tc3FcVbM)
