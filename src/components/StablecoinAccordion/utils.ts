@@ -2,20 +2,19 @@ import { TranslationKey } from "../../utils/translations"
 
 export type CategoryNameType = "dapps" | "buy" | "earn" | "generate"
 
-type AccordionButtonContentType = Record<
-  CategoryNameType,
-  {
-    emoji: string
-    title: TranslationKey
-    pill?: {
-      color: string
-      name: TranslationKey
-    }
-    textPreview: TranslationKey
+type AccordionButtonContentType = {
+  emoji: string
+  title: TranslationKey
+  pill?: {
+    color: string
+    name: TranslationKey
   }
->
+  textPreview: TranslationKey
+}
 
-export const accordionButtonContent: AccordionButtonContentType = {
+export const accordionButtonContent: {
+  [key in CategoryNameType]: AccordionButtonContentType
+} = {
   dapps: {
     emoji: ":twisted_rightwards_arrows:",
     title: "page-stablecoins-accordion-swap-title",
