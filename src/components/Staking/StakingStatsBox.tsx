@@ -17,7 +17,6 @@ const NA_ERROR = "n/a"
 const ZERO = "0"
 const MAX_EFFECTIVE_BALANCE = 32
 
-//TODO: check out borderLeftColor
 const Cell: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <Flex
@@ -40,7 +39,6 @@ const Cell: React.FC<{ children: ReactNode }> = ({ children }) => {
   )
 }
 
-//TODO: code and title
 const Value: React.FC<{ children: ReactNode; title: string }> = ({
   children,
   title,
@@ -76,7 +74,6 @@ const Label: React.FC<{ children: ReactNode }> = ({ children }) => {
   )
 }
 
-//TODO: size="16" hover, active and focus
 // BeaconchainTooltip component
 const BeaconchainTooltip = ({ isEthStore }: { isEthStore?: boolean }) => (
   <Tooltip
