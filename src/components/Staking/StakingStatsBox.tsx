@@ -1,7 +1,15 @@
 // Import libraries
 import React, { useState, useEffect, ReactNode } from "react"
 import { useIntl } from "react-intl"
-import { Code, Flex, Icon, Spinner } from "@chakra-ui/react"
+import {
+  Code,
+  Divider,
+  Flex,
+  Icon,
+  Spinner,
+  useBreakpointValue,
+  VStack,
+} from "@chakra-ui/react"
 // Import components
 import Translation from "../Translation"
 import Tooltip from "../Tooltip"
@@ -19,24 +27,19 @@ const MAX_EFFECTIVE_BALANCE = 32
 
 const Cell: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
-    <Flex
-      direction="column"
-      alignItems="center"
-      py={4}
-      px={8}
-      borderLeft={{ base: "none", md: "1px solid" }}
-      borderLeftColor={{ md: "preBorder" }}
-      borderTop={{ base: "1px solid #33333355", md: "none" }}
-      sx={{
-        "&:first-child": {
-          borderLeft: "none",
-          borderTop: "none",
-        },
-      }}
-    >
+    <VStack spacing={2} py={4} px={8}>
       {children}
-    </Flex>
+    </VStack>
   )
+}
+
+const CellDivider = () => {
+  // Hook needed because the `orientation` prop does not directly accept responsive values
+  const orientation = useBreakpointValue<"horizontal" | "vertical">({
+    base: "horizontal",
+    md: "vertical",
+  })
+  return <Divider borderColor="preBorder" orientation={orientation} />
 }
 
 const Value: React.FC<{ children: ReactNode; title: string }> = ({
@@ -49,10 +52,6 @@ const Value: React.FC<{ children: ReactNode; title: string }> = ({
       fontWeight="bold"
       fontSize="2rem"
       background="none"
-      display="flex"
-      alignItems="center"
-      textAlign="center"
-      textTransform="uppercase"
       color="primary"
     >
       {children}
@@ -62,13 +61,7 @@ const Value: React.FC<{ children: ReactNode; title: string }> = ({
 
 const Label: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
-    <Flex
-      wrap="nowrap"
-      alignItems="center"
-      textTransform="uppercase"
-      fontSize="sm"
-      mt={2}
-    >
+    <Flex alignItems="center" textTransform="uppercase" fontSize="sm">
       {children}
     </Flex>
   )
@@ -168,6 +161,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
           <BeaconchainTooltip />
         </Label>
       </Cell>
+      <CellDivider />
       <Cell>
         {totalValidators === ZERO ? (
           <Spinner />
@@ -181,6 +175,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
           <BeaconchainTooltip />
         </Label>
       </Cell>
+      <CellDivider />
       <Cell>
         {currentApr === ZERO ? (
           <Spinner />
