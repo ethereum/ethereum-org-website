@@ -3,15 +3,7 @@ title: "Solidity and Truffle continuous integration setup"
 description: How to setup Travis or Circle CI for Truffle testing along with useful plugins
 author: Markus Waas
 lang: en
-tags:
-  [
-    "solidity",
-    "smart contracts",
-    "testing",
-    "truffle",
-    "continuous integration",
-    "ganache",
-  ]
+tags: ["solidity", "smart contracts", "testing", "truffle", "ganache"]
 skill: intermediate
 published: 2020-06-05
 source: soliditydeveloper.com

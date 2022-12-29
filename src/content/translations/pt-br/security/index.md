@@ -158,6 +158,8 @@ Ao interagir com contratos inteligentes, não permita limites de gastos ilimitad
 
 Muitas carteiras Ethereum oferecem proteção de limites para evitar que as contas sejam drenadas.
 
+[Veja as carteiras com proteção de limites](/wallets/find-wallet/?filters=has_limits_protection)
+
 <Divider />
 
 ## Fraudes comuns {#common-scams}

@@ -2,7 +2,7 @@
 title: How to Mint an NFT (Part 2/3 of NFT Tutorial Series)
 description: This tutorial describes how to mint an NFT on the Ethereum blockchain using our smart contract and Web3.
 author: "Sumi Mudgil"
-tags: ["NFTs", "ERC-721", "alchemy", "solidity", "smart contracts"]
+tags: ["ERC-721", "alchemy", "solidity", "smart contracts"]
 skill: beginner
 lang: en
 published: 2021-04-22

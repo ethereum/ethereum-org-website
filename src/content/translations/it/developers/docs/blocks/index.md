@@ -8,7 +8,7 @@ I blocchi sono un insieme di transazioni che contengono un hash del blocco prece
 
 ## Prerequisiti {#prerequisites}
 
-Quello dei blocchi è un argomento piuttosto basico. Ad ogni modo, per comprendere meglio questa pagina, consigliamo innanzi tutto di leggere [Account](/developers/docs/accounts/), [Transazioni](/developers/docs/transactions/) e la nostra [introduzione a Ethereum](/developers/docs/intro-to-ethereum/).
+Quello dei blocchi è un argomento piuttosto basico. Ma, per aiutarti a comprendere meglio questa pagina, ti consigliamo innanzitutto di leggere sui [Conti](/developers/docs/accounts/), sulle [Transazioni](/developers/docs/transactions/) e la nostra [introduzione a Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Perché i blocchi? {#why-blocks}
 
@@ -86,7 +86,7 @@ L'`execution_payload_header` contiene i seguenti campi:
 
 ```
 parent_hash: hash del blocco padre
-fee_recipient: indirizzo dell'account a cui pagare le commissioni sulla transazione
+fee_recipient: indirizzo del conto a cui pagare le commissioni sulla transazione
 state_root: hash radice per lo stato globale dopo l'applicazione delle modifiche in questo blocco
 receipts_root: hash del trie delle ricevute delle transazioni
 logs_bloom: struttura di dati contenente i registri dell'evento
@@ -96,7 +96,7 @@ gas_limit: il carburante massimo consentito in questo blocco
 gas_used: la quantità effettiva di carburante usata in questo blocco
 timestamp: il tempo di blocco
 extra_data: dati aggiuntivi arbitrari come byte grezzi
-base_fee_per_gas: il valore della commissione base
+base_fee_per_gas: il valore della commissione di base
 block_hash: hash del blocco di esecuzione
 transactions_root: hash radice delle transazioni nel payload
 ```
@@ -105,7 +105,7 @@ Lo stesso `execution_payload` contiene quanto segue (si noti che è identico all
 
 ```
 parent_hash: hash del blocco padre
-fee_recipient: indirizzo dell'account a cui pagare le commissioni sulla transazione
+fee_recipient: indirizzo del conto a cui pagare le commissioni sulla transazione
 state_root: hash radice per lo stato globale dopo l'applicazione delle modifiche in questo blocco
 receipts_root: hash del trie delle ricevute delle transazioni
 logs_bloom: struttura di dati contenente i registri dell'evento
@@ -115,7 +115,7 @@ gas_limit: il carburante massimo consentito in questo blocco
 gas_used: la quantità effettiva di carburante usata in questo blocco
 timestamp: il tempo di blocco
 extra_data: dati aggiuntivi arbitrari come byte grezzi
-base_fee_per_gas: il valore della commissione base
+base_fee_per_gas: il valore della commissione di base
 block_hash: hash del blocco di esecuzione
 transactions: elenco delle transazioni da eseguire
 ```
@@ -126,7 +126,7 @@ Il tempo di blocco si riferisce al tempo che separa i blocchi. In Ethereum, il t
 
 ## Dimensioni del blocco {#block-size}
 
-Un'ultima nota importante: i blocchi stessi sono limitati in termini di dimensioni. Ogni blocco ha una dimensione prevista di 15 milioni di carburante, ma la dimensione dei blocchi aumenta o diminuisce in base alla domanda della rete, fino al limite massimo di 30 milioni di carburante del blocco (2 volte la dimensione previste del blocco). La quantità totale di carburante usato da tutte le transazioni nel blocco deve essere inferiore al limite di carburante del blocco. Ciò è importante perché evita che i blocchi siano arbitrariamente grandi. Se i blocchi potessero essere arbitrariamente grandi, i nodi completi meno performanti, gradualmente, non riuscirebbero più stare al passo con la rete per via dei requisiti di spazio e velocità. Più grande è il blocco, maggiore sarà la potenza di calcolo richiesta per elaborarlo in tempo per il prossimo slot. Questa è una forza centralizzante, a cui si resiste limitando le dimensioni dei blocchi.
+Un'ultima nota importante: i blocchi stessi sono limitati in termini di dimensioni. Ogni blocco ha una dimensione prevista di 15 milioni di gas, ma la dimensione dei blocchi aumenterà o diminuirà a seconda della domanda della rete, fino al limite del blocco di 30 milioni di gas (2 volte la dimensione prevista del blocco). L'importo totale di gas consumato da tutte le transazioni nel blocco dev'essere inferiore al limite di gas del blocco. Ciò è importante perché evita che i blocchi siano arbitrariamente grandi. Se i blocchi potessero essere arbitrariamente grandi, i nodi completi meno performanti, gradualmente, non riuscirebbero più stare al passo con la rete per via dei requisiti di spazio e velocità. Più grande è il blocco, maggiore sarà la potenza di calcolo richiesta per elaborarlo in tempo per il prossimo slot. Questa è una forza centralizzante, a cui si resiste limitando le dimensioni dei blocchi.
 
 ## Letture consigliate {#further-reading}
 
@@ -135,5 +135,5 @@ _Conosci una risorsa della community che ti è stata utile? Modifica questa pagi
 ## Argomenti correlati {#related-topics}
 
 - [Transazioni](/developers/docs/transactions/)
-- [Carburante](/developers/docs/gas/)
+- [Gas](/developers/docs/gas/)
 - [Proof of Stake](/developers/docs/consensus-mechanisms/pos)

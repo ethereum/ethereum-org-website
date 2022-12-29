@@ -20,6 +20,7 @@ import {
 import FeedbackCard from "../../components/FeedbackCard"
 import ExpandableCard from "../../components/ExpandableCard"
 import StakingStatsBox from "../../components/Staking/StakingStatsBox"
+import StakingSurveyBanner from "../../components/Staking/StakingSurveyBanner"
 import StakingHierarchy from "../../components/Staking/StakingHierarchy"
 import StakingHomeTableOfContents from "../../components/Staking/StakingHomeTableOfContents"
 import StakingCommunityCallout from "../../components/Staking/StakingCommunityCallout"
@@ -344,6 +345,7 @@ const StakingPage = ({
         description={translateMessageId("page-staking-meta-description", intl)}
       />
       <HeroStatsWrapper>
+        <StakingSurveyBanner />
         <PageHero content={heroContent} />
         <StakingStatsBox />
       </HeroStatsWrapper>
@@ -618,9 +620,22 @@ const StakingPage = ({
               <p>
                 <Translation id="page-staking-faq-4-answer-p2" />
               </p>
+              <p>
+                <Translation id="page-staking-faq-4-answer-p3" />
+              </p>
               <ButtonLink to="/upgrades/merge/">
                 <Translation id="page-upgrades-merge-btn" />
               </ButtonLink>
+            </ExpandableCard>
+            <ExpandableCard
+              title={translateMessageId("page-staking-faq-5-question", intl)}
+            >
+              <p>
+                <Translation id="page-staking-faq-5-answer-p1" />
+              </p>
+              <p>
+                <Translation id="page-staking-faq-5-answer-p2" />
+              </p>
             </ExpandableCard>
             <ExpandableCard
               title={translateMessageId("page-staking-faq-1-question", intl)}
@@ -709,6 +724,11 @@ const StakingPage = ({
               <li>
                 <Link to="https://launchpad.ethereum.org/en/faq">
                   <Translation id="page-staking-further-reading-9-link" />
+                </Link>
+              </li>
+              <li>
+                <Link to="https://ethstaker.gitbook.io/ethstaker-knowledge-base/">
+                  <Translation id="page-staking-further-reading-10-link" />
                 </Link>
               </li>
             </ul>
