@@ -129,7 +129,7 @@ En Ethereum hay algunos tipos diferentes de transacciones:
 
 - Transacciones regulares: una transacción desde una cartera a otra.
 - Transacciones de despliegue de contratos: una transacción sin la dirección «a», donde el campo de datos se usa para el código de contrato.
-- Execution of a contract: a transaction that interacts with a deployed smart contract. In this case, 'to' address is the smart contract address.
+- Ejecución de un contrato: una transacción que interactúa con un contrato desplegado. En este caso, la dirección «a» es la dirección del contrato.
 
 ### Sobre el gas {#on-gas}
 
