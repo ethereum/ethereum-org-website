@@ -15,7 +15,7 @@ You should have read and understood our page on [Ethereum scaling](/developers/d
 
 Validiums are scaling solutions that use off-chain data availability and computation designed to improve throughput by processing transactions off the Ethereum Mainnet. Like zero-knowledge rollups (ZK-rollups), validiums publish [zero-knowledge proofs](/glossary/#zk-proof) to verify off-chain transactions on Ethereum. This prevents invalid state transitions and enhances the security guarantees of a validium chain.
 
-These "validity proofs" can come in the form of ZK-SNARKs (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge) or ZK-STARKs (Zero-Knowledge Scalable Transparent ARgument of Knowledge). More on [zero-knowledge proofs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/).
+These "validity proofs" can come in the form of ZK-SNARKs (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge) or ZK-STARKs (Zero-Knowledge Scalable Transparent Argument of Knowledge). More on [zero-knowledge proofs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/).
 
 Funds belonging to validium users are controlled by a smart contract on Ethereum. Validiums offer near-instant withdrawals, much like ZK-rollups do; once the validity proof for a withdrawal request has been verified on Mainnet, users can withdraw funds by providing [Merkle proofs](/developers/tutorials/merkle-proofs-for-offline-data-integrity/). The Merkle proof validates the inclusion of the user’s withdrawal transaction in a verified transaction batch, allowing the on-chain contract to process the withdrawal.
 
