@@ -3,11 +3,9 @@ import React, { useState, useEffect, ReactNode } from "react"
 import { useIntl } from "react-intl"
 import {
   Code,
-  Divider,
   Flex,
   Icon,
   Spinner,
-  useBreakpointValue,
   VStack,
 } from "@chakra-ui/react"
 // Import components
@@ -27,20 +25,24 @@ const MAX_EFFECTIVE_BALANCE = 32
 
 const Cell: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
-    <VStack spacing={2} py={4} px={8}>
+    <VStack 
+      spacing={2} 
+      py={4} 
+      px={8}
+      borderLeft={{ md: "1px" }}
+      borderTop={{ base: "1px", md: "none" }}
+      // `!important` needed to force an override of the user-agent
+      borderColor="preBorder !important"
+      _first={{
+        borderLeft: "none",
+        borderTop: "none",
+      }}
+    >
       {children}
     </VStack>
   )
 }
 
-const CellDivider = () => {
-  // Hook needed because the `orientation` prop does not directly accept responsive values
-  const orientation = useBreakpointValue<"horizontal" | "vertical">({
-    base: "horizontal",
-    md: "vertical",
-  })
-  return <Divider borderColor="preBorder" orientation={orientation} />
-}
 
 const Value: React.FC<{ children: ReactNode; title: string }> = ({
   children,
@@ -161,7 +163,6 @@ const StakingStatsBox: React.FC<IProps> = () => {
           <BeaconchainTooltip />
         </Label>
       </Cell>
-      <CellDivider />
       <Cell>
         {totalValidators === ZERO ? (
           <Spinner />
@@ -175,7 +176,6 @@ const StakingStatsBox: React.FC<IProps> = () => {
           <BeaconchainTooltip />
         </Label>
       </Cell>
-      <CellDivider />
       <Cell>
         {currentApr === ZERO ? (
           <Spinner />
