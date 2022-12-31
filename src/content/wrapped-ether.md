@@ -104,7 +104,7 @@ WETH was created primarily because the ETH token doesn't comply with the ERC-20 
 
 **Is WETH safe?**
 
-ETH is the safest asset because it is part of the Ethereum protocol, whereas WETH is defined in a smart contract which could feasibly be hacked. WETH is generally considered a very safe asset because the contract is small, simple, well-tested and it has been around for a long time. Furthermore, [formal verification of the WETH contract](https://www.zellic.io/blog/formal-verification-weth) has proved its safety (formal verification reasons about correctness of code using logical rules and is considered more rigorous than testing). 
+ETH is the safest asset because it is part of the Ethereum protocol, whereas WETH is defined in a smart contract which could feasibly be hacked. However, WETH is generally considered a very safe asset because the token contract is small, simple, well-tested and it has been around for a long time. Furthermore, [formal verification of the WETH contract](https://www.zellic.io/blog/formal-verification-weth) has proved its safety (formal verification reasons about correctness of code using logical rules and is considered more rigorous than testing). 
 
 **What can I do with WETH?**
 
