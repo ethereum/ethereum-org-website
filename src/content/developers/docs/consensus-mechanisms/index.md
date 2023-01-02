@@ -36,7 +36,7 @@ Like Bitcoin, Ethereum once used a **proof-of-work (PoW)** based consensus proto
 
 #### Block creation {#pow-block-creation}
 
-Miners compete to create new blocks filled with processed transactions. The winner shares the new block with the rest of the network and earns some freshly minted ETH. The race is won by the computer which is able to solve a math puzzle fastest. This produces the cryptographic link between the current block and the block that went before. Solving this puzzle is the work in "proof-of-work". The the canonical chain is then determined by a fork-choice rule that selects the set of blocks that have had the most work done to mine them.
+Miners compete to create new blocks filled with processed transactions. The winner shares the new block with the rest of the network and earns some freshly minted ETH. The race is won by the computer which is able to solve a math puzzle fastest. This produces the cryptographic link between the current block and the block that went before. Solving this puzzle is the work in "proof-of-work". The canonical chain is then determined by a fork-choice rule that selects the set of blocks that have had the most work done to mine them.
 
 #### Security {#pow-security}
 
