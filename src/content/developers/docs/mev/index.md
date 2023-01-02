@@ -148,7 +148,7 @@ The combination of block producer and block proposer roles is what introduces mo
 
 Under PBS, a block builder creates a transaction bundle and places a bid for its inclusion in a Beacon Chain block (as the “execution payload”). The validator selected to propose the next block then checks the different bids and chooses the bundle with the highest fee. PBS essentially creates an auction market, where builders negotiate with validators selling blockspace.
 
-Current PBS designs use a [commit-reveal scheme](https://gitcoin.co/blog/commit-reveal-scheme-on-ethereum/) in which builders only publish a cryptographic commitment to a block’s contents (block header) along with their bids. After accepting the winning bid, the proposer creates a signed block proposal that includes the block header. The block builder is expected to publish the full block body after seeing the signed block proposal, and it must also receive receive enough [attestations](/glossary/#attestation) from validators before it is finalized.
+Current PBS designs use a [commit-reveal scheme](https://gitcoin.co/blog/commit-reveal-scheme-on-ethereum/) in which builders only publish a cryptographic commitment to a block’s contents (block header) along with their bids. After accepting the winning bid, the proposer creates a signed block proposal that includes the block header. The block builder is expected to publish the full block body after seeing the signed block proposal, and it must also receive enough [attestations](/glossary/#attestation) from validators before it is finalized.
 
 #### How does proposer-builder separation mitigate MEV’s impact? {#how-does-pbs-curb-mev-impact}
 
