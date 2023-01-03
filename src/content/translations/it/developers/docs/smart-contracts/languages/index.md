@@ -312,7 +312,7 @@ Ecco alcune cose da considerare se non hai ancora provato i vari linguaggi:
 ### Quali vantaggi offrono Yul e Yul+? {#yul-advantages}
 
 - Linguaggio di basso livello, semplicistico e funzionale.
-- Consente di avvicinarsi all'EVM grezza, aiutando a ottimizzare l'uso di gas dai tuoi contratti.
+- Consente di avvicinarsi all'EVM grezza, aiutando a ottimizzare l'uso di gas dei tuoi contratti.
 
 ## Confronti tra linguaggi {#language-comparisons}
 

@@ -1534,6 +1534,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/theSamPadilla"><img src="https://avatars.githubusercontent.com/u/35386211?v=4?s=100" width="100px;" alt="Sam Padilla"/><br /><sub><b>Sam Padilla</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=theSamPadilla" title="Documentation">📖</a></td>
       <td align="center"><a href="https://chenquan.me"><img src="https://avatars.githubusercontent.com/u/20042193?v=4?s=100" width="100px;" alt="Chen Quan"/><br /><sub><b>Chen Quan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=terasum" title="Documentation">📖</a> <a href="#translation-terasum" title="Translation">🌍</a></td>
     </tr>
+    <tr>
+      <td align="center"><a href="http://marcelixoo.com"><img src="https://avatars.githubusercontent.com/u/29285152?v=4?s=100" width="100px;" alt="Marcelo T. dos Santos"/><br /><sub><b>Marcelo T. dos Santos</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Marcelixoo" title="Code">💻</a></td>
+    </tr>
   </tbody>
 </table>
 

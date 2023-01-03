@@ -12,7 +12,7 @@ Per capire meglio questa pagina ti consigliamo di leggere i [meccanismi di conse
 
 ## Cos'è la proof-of-stake (PoS)? {#what-is-pos}
 
-La Proof of Stake è alla base di certi [meccanismi di consenso](/developers/docs/consensus-mechanisms/) usati dalle blockchain per ottenere il consenso distribuito. Nel proof-of-work, i miner provano di avere del capitale a rischio consumando energia. Ethereum usa il Proof of Stake, in cui i validatori mettono esplicitamente in stakaing il capitale sotto forma di ETH, in uno smart contract su Ethereum. Questi ETH in staking, poi, fungono da garanzia che può essere distrutta se il validatore si comporta in modo disonesto o pigro. Il validatore è poi responsabile di verificare che i nuovi blocchi propagati sulla rete siano validi e, occasionalmente, di creare e propagare nuovi blocchi.
+La Proof of Stake è alla base di certi [meccanismi di consenso](/developers/docs/consensus-mechanisms/) usati dalle blockchain per ottenere il consenso distribuito. Nel proof-of-work, i miner provano di avere del capitale a rischio consumando energia. Ethereum usa il proof-of-stake, in cui i validatori mettono esplicitamente in staking il capitale in forma di ETH, in un contratto intelligente su Ethereum. Questi ETH in staking, poi, fungono da garanzia che può essere distrutta se il validatore si comporta in modo disonesto o pigro. Il validatore è poi responsabile di verificare che i nuovi blocchi propagati sulla rete siano validi e, occasionalmente, di creare e propagare nuovi blocchi.
 
 La Proof of Stake porta con sé una serie di miglioramenti rispetto all'ormai obsoleto sistema Proof of Work:
 
@@ -58,12 +58,16 @@ In generale è stato dimostrato che il proof-of-stake, come implementato su Ethe
 | Il proof-of-stake offre una maggiore sicurezza cripto-economica rispetto al proof-of-work                                                                                                                                                                                   | Gli utenti devono far funzionare tre parti di software per partecipare al proof-of-stake di Ethereum. |
 | È richiesta una minore emissione di nuovi ETH per incentivare i partecipanti alla rete                                                                                                                                                                                      |                                                                                                       |
 
+## Preferisci un approccio visivo all'apprendimento? {#visual-learner}
+
+<YouTube id="psKDXvXdr7k" />
+
 ## Letture consigliate {#further-reading}
 
 - [FAQ Proof of Stake](https://vitalik.ca/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
 - [Cos'è il Proof of Stake](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
 - [Cos'è il Proof of Stake e perché è importante](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) _Vitalik Buterin_
-- [La spiegazione della Beacon Chain Ethereum 2.0 da leggere per prima](https://ethos.dev/beacon-chain/) _Ethos.dev_
+- [La spiegazione della Beacon Chain di Ethereum 2.0, da leggere per prima](https://ethos.dev/beacon-chain) _Ethos.dev_
 - [Perché il Proof of Stake (Nov 2020)](https://vitalik.ca/general/2020/11/06/pos2020.html) _Vitalik Buterin_
 - [Proof of Stake: come ho imparato ad amare la soggettività debole](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
 - [Attacco e difesa del Proof of Stake di Ethereum](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
@@ -71,4 +75,4 @@ In generale è stato dimostrato che il proof-of-stake, come implementato su Ethe
 
 ## Argomenti correlati {#related-topics}
 
-- [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)
+- [Proof of Work](/developers/docs/consensus-mechanisms/pow/)
