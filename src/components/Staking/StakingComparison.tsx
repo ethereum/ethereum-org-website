@@ -61,7 +61,7 @@ const StakingComparison: React.FC<IProps> = ({ page, className }) => {
       eventName: "clicked staking as a service",
     },
     color: stakingGreen,
-    glyph: <Icon as={SaasGlyph} color="stakingGreen" boxSize="50px" />,
+    glyph: <Icon as={SaasGlyph} color="stakingGreen" w="50px" h="28px" />,
   }
   const pools: DataType = {
     title: "page-staking-dropdown-pools",
@@ -73,7 +73,7 @@ const StakingComparison: React.FC<IProps> = ({ page, className }) => {
       eventName: "clicked pooled staking",
     },
     color: stakingBlue,
-    glyph: <Icon as={PoolGlyph} color="stakingBlue" boxSize="50px" />,
+    glyph: <Icon as={PoolGlyph} color="stakingBlue" w="50px" h="39px" />,
   }
   const data: {
     [key in StakingTypePage]: (DataType & {
