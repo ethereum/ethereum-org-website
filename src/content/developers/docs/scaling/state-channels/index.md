@@ -15,7 +15,7 @@ You should have read and understood our pages on [Ethereum scaling](/developers/
 
 Public blockchains, such as Ethereum, face scalability challenges due to their distributed architecture: on-chain transactions must be executed by all nodes. Nodes have to be able to handle the volume of transactions in a block using modest hardware, imposing a limit on the transaction throughput to keep the network decentralized. Blockchain channels solve this problem by allowing users to interact off the main blockchain.
 
-Channels are simple peer-to-peer protocols that allow two parties to make many transactions between themselves and then only post the final results to the blockchain. The channel uses cryptography to demonstrate that the summary data they generate is truly the result of a valid set of intermediate transactions. A ["multisig"](developers/docs/smart-contracts/#multisig) smart contract ensures the transactions are signed by the correct parties.
+Channels are simple peer-to-peer protocols that allow two parties to make many transactions between themselves and then only post the final results to the blockchain. The channel uses cryptography to demonstrate that the summary data they generate is truly the result of a valid set of intermediate transactions. A ["multisig"](/developers/docs/smart-contracts/#multisig) smart contract ensures the transactions are signed by the correct parties.
 
 With channels, state changes are executed and validated by interested parties, minimizing computation on Ethereum's execution layer. This decreases congestion on Ethereum and also increases transaction processing speeds for users.
 
