@@ -129,7 +129,7 @@ const StakingComparison: React.FC<IProps> = ({ page, className }) => {
       mt={16}
       className={className}
     >
-      <Heading>Comparison with other options</Heading>
+      <Heading fontSize="2rem">Comparison with other options</Heading>
       {selectedData.map(
         ({ title, linkText, to, color, content, glyph, matomo }, idx) => (
           <Flex gap={6} direction={{ base: "column", md: "row" }} key={idx}>
@@ -139,7 +139,7 @@ const StakingComparison: React.FC<IProps> = ({ page, className }) => {
               </VStack>
             )}
             <Box>
-              <Heading as="h3" color={color} mt={0} mb={2}>
+              <Heading as="h3" fontSize="2xl" color={color} mt={0} mb={2}>
                 <Translation id={title} />
               </Heading>
               <Text>
