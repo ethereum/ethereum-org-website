@@ -232,18 +232,20 @@ Multiple implementations of ZK-rollups exist that you can integrate into your da
 
 Projects working on zkEVMs include:
 
-- **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync 2.0 is an EVM-compatible ZK Rollup being built by Matter Labs, powered by its own zkEVM._
-
 - **[Applied ZKP](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _Applied ZKP is a project funded by the Ethereum Foundation to develop an EVM-compatible ZK-rollup and a mechanism for generating validity proofs for Ethereum blocks._
+
+- **[Polygon Hermez](https://docs.hermez.io/zkEVM/architecture/introduction/)** - _Hermez 2.0 is a decentralized ZK-rollup on the Ethereum mainnet working on a zero-knowledge Ethereum Virtual Machine (zkEVM) that executes Ethereum transactions in a transparent way, including smart contracts with zero-knowledge-proof validations._
 
 - **[Scroll](https://scroll.io/blog/zkEVM)** - _Scroll is a tech-driven company working on building a native zkEVM Layer 2 Solution for Ethereum._
 
-- **[Polygon Hermez](https://docs.hermez.io/zkEVM/architecture/introduction/)** - _Hermez 2.0 is a decentralized ZK Rollup on the Ethereum mainnet working on a zero-knowledge Ethereum Virtual Machine (zkEVM) that executes Ethereum transactions in a transparent way, including smart contracts with zero-knowledge-proof validations._
+- **[Taiko](https://taiko.xyz)** - _Taiko is building a fully decentralized, Ethereum-equivalent ZK-rollup._
+
+- **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync 2.0 is an EVM-compatible ZK-rollup being built by Matter Labs, powered by its own zkEVM._
 
 ## Further reading on ZK-rollups reading {#further-reading-on-zk-rollups}
 
-- [What Are Zero-Knowledge Rollups?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
-- [What are zero-knowledge rollups?](https://alchemy.com/blog/zero-knowledge-rollups)
+- [What are Zero-Knowledge Rollups? (CoinMarketCap)](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
+- [What are Zero-Knowledge Rollups? (Alchemy)](https://alchemy.com/blog/zero-knowledge-rollups)
 - [EthHub on ZK-rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 - [STARKs vs SNARKs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
 - [What is a zkEVM?](https://www.alchemy.com/overviews/zkevm)
