@@ -1,13 +1,5 @@
 import React from "react"
-import {
-  Box,
-  Flex,
-  Heading,
-  Icon,
-  Text,
-  useTheme,
-  VStack,
-} from "@chakra-ui/react"
+import { Box, Flex, Heading, Icon, Text, useTheme } from "@chakra-ui/react"
 
 import Link from "../Link"
 import Translation from "../Translation"
@@ -134,9 +126,15 @@ const StakingComparison: React.FC<IProps> = ({ page, className }) => {
         ({ title, linkText, to, color, content, glyph, matomo }, idx) => (
           <Flex gap={6} direction={{ base: "column", md: "row" }} key={idx}>
             {!!glyph && (
-              <VStack w={12} maxH={12}>
+              <Flex
+                direction="column"
+                justify="flex-start"
+                align="center"
+                w={12}
+                maxH={12}
+              >
                 {glyph}
-              </VStack>
+              </Flex>
             )}
             <Box>
               <Heading as="h3" fontSize="2xl" color={color} mt={0} mb={2}>
