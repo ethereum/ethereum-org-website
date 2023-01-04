@@ -1,13 +1,7 @@
 // Import libraries
 import React, { useState, useEffect, ReactNode } from "react"
 import { useIntl } from "react-intl"
-import {
-  Code,
-  Flex,
-  Icon,
-  Spinner,
-  VStack,
-} from "@chakra-ui/react"
+import { Code, Flex, Icon, Spinner, VStack } from "@chakra-ui/react"
 // Import components
 import Translation from "../Translation"
 import Tooltip from "../Tooltip"
@@ -25,9 +19,9 @@ const MAX_EFFECTIVE_BALANCE = 32
 
 const Cell: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
-    <VStack 
-      spacing={2} 
-      py={4} 
+    <VStack
+      spacing={2}
+      py={4}
       px={8}
       borderLeft={{ md: "1px" }}
       borderTop={{ base: "1px", md: "none" }}
@@ -42,7 +36,6 @@ const Cell: React.FC<{ children: ReactNode }> = ({ children }) => {
     </VStack>
   )
 }
-
 
 const Value: React.FC<{ children: ReactNode; title: string }> = ({
   children,
@@ -84,11 +77,11 @@ const BeaconchainTooltip = ({ isEthStore }: { isEthStore?: boolean }) => (
   >
     <Icon
       as={MdInfoOutline}
-      fill="text"
+      color="text"
       marginInlineStart={2}
-      _hover={{ fill: "primary" }}
-      _active={{ fill: "primary" }}
-      _focus={{ fill: "primary" }}
+      _hover={{ color: "primary" }}
+      _active={{ color: "primary" }}
+      _focus={{ color: "primary" }}
       boxSize={4}
     />
   </Tooltip>
