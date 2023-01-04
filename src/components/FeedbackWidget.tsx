@@ -9,7 +9,7 @@ import {
   Text,
   ScaleFade,
 } from "@chakra-ui/react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation, useI18next } from "gatsby-plugin-react-i18next"
 import { MdClose } from "react-icons/md"
 import FocusTrap from "focus-trap-react"
 // Component imports
@@ -70,6 +70,8 @@ interface FeedbackWidgetProps {
 }
 const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
   const { t } = useTranslation()
+  const { language } = useI18next()
+
   const containerRef = useRef<HTMLInputElement>(null)
   useOnClickOutside(containerRef, () => handleClose(), [`mousedown`])
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -139,7 +141,7 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
 
   useKeyPress(`Escape`, handleClose)
 
-  if (intl.locale !== "en") return null
+  if (language !== "en") return null
   const closeButtonSize = "24px"
   return (
     <>
