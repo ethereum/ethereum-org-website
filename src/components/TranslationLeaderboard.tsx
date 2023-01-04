@@ -4,7 +4,6 @@ import { reverse, sortBy } from "lodash"
 
 // Components
 import Emoji from "./Emoji"
-import { Option, OptionText } from "./SharedStyledComponents"
 import Translation from "./Translation"
 import {
   Box,
