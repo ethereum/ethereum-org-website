@@ -79,6 +79,8 @@ function customTransform(
     const customHandler = (key: string, options: any) => {
       const ns = file.path.includes("components") ? "components" : namespace
 
+      // if the key is not found in the current lng then we store the
+      // defaultLng value instead
       const defaultLng = this.parser.options.defaultLng
       const defaultValue = this.parser.resStore[defaultLng][ns][key]
 
@@ -106,7 +108,7 @@ function customTransform(
 
 /**
  * Custom flush function that is going to create all the necessary json files
- * under `i18n/locales`
+ * for each corresponding namespace and put them in `i18n/locales`
  */
 function customFlush(this: Scanner, done: () => void) {
   const parser = this.parser
@@ -124,10 +126,14 @@ function customFlush(this: Scanner, done: () => void) {
       const resScanKeys = Object.keys(_.get(resScan, [lng, ns], {}))
       const unusedKeys = _.differenceWith(resStoreKeys, resScanKeys, _.isEqual)
 
+      // remove all unused keys from the current namespace
       for (let i = 0; i < unusedKeys.length; ++i) {
         _.unset(resMerged[lng][ns], unusedKeys[i])
       }
 
+      // in the common namespace, we want to keep only those keys that weren't
+      // detected for some reason by the scanner. We don't want to lose any
+      // translation from the resource file
       for (let i = 0; i < resScanKeys.length; ++i) {
         _.unset(commonNs, resScanKeys[i])
       }
@@ -160,7 +166,13 @@ function customFlush(this: Scanner, done: () => void) {
  * Main script function
  */
 async function createLocales() {
-  // create all the necessary namespaces
+  // cleanup any previous generated locales
+  const localesPath = path.join(output, "locales")
+  if (fs.existsSync(localesPath)) {
+    fs.rmSync(localesPath, { recursive: true })
+  }
+
+  // create all the necessary namespaces to be used by the scanner
   const ns = ["components", "common"]
   walkdir.sync("./src/pages", (file) => {
     const namespace = createNamespaceFromFilename(file)
