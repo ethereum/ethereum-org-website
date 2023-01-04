@@ -4,7 +4,7 @@ import { reverse, sortBy } from "lodash"
 
 // Components
 import Emoji from "./Emoji"
-import { Option, OptionContainer, OptionText } from "./SharedStyledComponents"
+import { Option, OptionText } from "./SharedStyledComponents"
 import Translation from "./Translation"
 import { Box, Flex, Img, Text, useColorModeValue } from "@chakra-ui/react"
 
@@ -46,7 +46,14 @@ const TranslationLeaderboard: React.FC<IProps> = ({
 
   return (
     <Box>
-      <OptionContainer>
+      <Flex
+        justifyContent="center"
+        py={0}
+        px={8}
+        mb={8}
+        flexDirection={{ base: "column", lg: "inherit" }}
+        w="full"
+      >
         <Option
           onClick={() => updateDateRangeType("monthData")}
           isActive={dateRangeType === "monthData"}
@@ -71,7 +78,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
             <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-all-time-view" />
           </OptionText>
         </Option>
-      </OptionContainer>
+      </Flex>
       <Box bg="background" boxShadow={tableBoxShadow} w="full" mb={8}>
         <Flex
           bg="grayBackground"
@@ -193,7 +200,14 @@ const TranslationLeaderboard: React.FC<IProps> = ({
             )
           })}
       </Box>
-      <OptionContainer>
+      <Flex
+        justifyContent="center"
+        py={0}
+        px={8}
+        mb={8}
+        flexDirection={{ base: "column", lg: "inherit" }}
+        w="full"
+      >
         <Option onClick={filterAmount === 10 ? showMore : showLess}>
           <OptionText fontSize={"18px"}>
             <Translation
@@ -205,7 +219,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
             />
           </OptionText>
         </Option>
-      </OptionContainer>
+      </Flex>
     </Box>
   )
 }
