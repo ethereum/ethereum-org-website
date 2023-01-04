@@ -6,12 +6,70 @@ import { reverse, sortBy } from "lodash"
 import Emoji from "./Emoji"
 import { Option, OptionText } from "./SharedStyledComponents"
 import Translation from "./Translation"
-import { Box, Flex, Img, Text, useColorModeValue } from "@chakra-ui/react"
+import {
+  Box,
+  Flex,
+  Img,
+  Text,
+  useColorModeValue,
+  useRadio,
+  useRadioGroup,
+} from "@chakra-ui/react"
 
 export interface IProps {
   monthData: any
   quarterData: any
   allTimeData: any
+}
+
+const RadioCard = (props) => {
+  const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
+  const { getInputProps, getCheckboxProps } = useRadio(props)
+
+  const input = getInputProps()
+  const checkbox = getCheckboxProps()
+
+  return (
+    <Flex
+      as="label"
+      {...checkbox}
+      borderRadius="2rem"
+      borderWidth="1px"
+      borderStyle="solid"
+      borderColor="text"
+      color="text"
+      alignItems="center"
+      py={4}
+      px={6}
+      m={2}
+      cursor="pointer"
+      bg="transparent"
+      w={{ base: "full", lg: "initial" }}
+      justifyContent="center"
+      ml={{ base: "0", lg: "2" }}
+      mr={{ base: "0", lg: "2" }}
+      _hover={{
+        color: "primary",
+        borderColor: "primary",
+      }}
+      _checked={{
+        borderColor: "primary",
+        color: "primary",
+        boxShadow: shadow,
+      }}
+    >
+      <input {...input} />
+      <Text
+        as="span"
+        fontSize={{ base: "md", md: "lg" }}
+        lineHeight="100%"
+        textAlign="center"
+        fontWeight={{ base: "semibold", md: "normal" }}
+      >
+        {props.children}
+      </Text>
+    </Flex>
+  )
 }
 
 const TranslationLeaderboard: React.FC<IProps> = ({
@@ -44,6 +102,13 @@ const TranslationLeaderboard: React.FC<IProps> = ({
     updateFilterAmount(50)
   }
 
+  const { getRootProps, getRadioProps } = useRadioGroup({
+    name: "framework",
+    defaultValue: "monthData",
+    onChange: updateDateRangeType,
+  })
+  const group = getRootProps()
+
   return (
     <Box>
       <Flex
@@ -54,30 +119,21 @@ const TranslationLeaderboard: React.FC<IProps> = ({
         flexDirection={{ base: "column", lg: "inherit" }}
         w="full"
       >
-        <Option
-          onClick={() => updateDateRangeType("monthData")}
-          isActive={dateRangeType === "monthData"}
+        <RadioCard key={"monthData"} {...getRadioProps({ value: "monthData" })}>
+          <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-month-view" />
+        </RadioCard>
+        <RadioCard
+          key={"quarterData"}
+          {...getRadioProps({ value: "quarterData" })}
         >
-          <OptionText fontSize={"18px"}>
-            <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-month-view" />
-          </OptionText>
-        </Option>
-        <Option
-          onClick={() => updateDateRangeType("quarterData")}
-          isActive={dateRangeType === "quarterData"}
+          <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-quarter-view" />
+        </RadioCard>
+        <RadioCard
+          key={"allTimeData"}
+          {...getRadioProps({ value: "allTimeData" })}
         >
-          <OptionText fontSize={"18px"}>
-            <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-quarter-view" />
-          </OptionText>
-        </Option>
-        <Option
-          onClick={() => updateDateRangeType("allTimeData")}
-          isActive={dateRangeType === "allTimeData"}
-        >
-          <OptionText fontSize={"18px"}>
-            <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-all-time-view" />
-          </OptionText>
-        </Option>
+          <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-all-time-view" />
+        </RadioCard>
       </Flex>
       <Box bg="background" boxShadow={tableBoxShadow} w="full" mb={8}>
         <Flex
