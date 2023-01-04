@@ -102,12 +102,11 @@ const TranslationLeaderboard: React.FC<IProps> = ({
     updateFilterAmount(50)
   }
 
-  const { getRootProps, getRadioProps } = useRadioGroup({
-    name: "framework",
+  const { getRadioProps } = useRadioGroup({
+    name: "period selection",
     defaultValue: "monthData",
     onChange: updateDateRangeType,
   })
-  const group = getRootProps()
 
   return (
     <Box>
@@ -264,8 +263,35 @@ const TranslationLeaderboard: React.FC<IProps> = ({
         flexDirection={{ base: "column", lg: "inherit" }}
         w="full"
       >
-        <Option onClick={filterAmount === 10 ? showMore : showLess}>
-          <OptionText fontSize={"18px"}>
+        <Flex
+          borderRadius="2rem"
+          borderWidth="1px"
+          borderStyle="solid"
+          borderColor="text"
+          color="text"
+          alignItems="center"
+          py={4}
+          px={6}
+          m={2}
+          cursor="pointer"
+          bg="transparent"
+          w={{ base: "full", lg: "initial" }}
+          justifyContent="center"
+          ml={{ base: "0", lg: "2" }}
+          mr={{ base: "0", lg: "2" }}
+          _hover={{
+            color: "primary",
+            borderColor: "primary",
+          }}
+          onClick={filterAmount === 10 ? showMore : showLess}
+        >
+          <Text
+            as="span"
+            fontSize={{ base: "md", md: "lg" }}
+            lineHeight="100%"
+            textAlign="center"
+            fontWeight={{ base: "semibold", md: "normal" }}
+          >
             <Translation
               id={
                 filterAmount === 10
@@ -273,8 +299,8 @@ const TranslationLeaderboard: React.FC<IProps> = ({
                   : "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-less"
               }
             />
-          </OptionText>
-        </Option>
+          </Text>
+        </Flex>
       </Flex>
     </Box>
   )
