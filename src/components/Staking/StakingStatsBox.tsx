@@ -1,5 +1,6 @@
 // Import libraries
 import React, { useState, useEffect, ReactNode } from "react"
+import { MdInfoOutline } from "react-icons/md"
 import { useIntl } from "react-intl"
 import { Code, Flex, Icon, Spinner, VStack } from "@chakra-ui/react"
 // Import components
@@ -10,7 +11,6 @@ import Link from "../Link"
 import { Lang } from "../../utils/languages"
 import { getData } from "../../utils/cache"
 import { getLocaleForNumberFormat } from "../../utils/translations"
-import { MdInfoOutline } from "react-icons/md"
 
 // Constants
 const NA_ERROR = "n/a"
