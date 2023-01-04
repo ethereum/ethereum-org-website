@@ -2,6 +2,7 @@ import React, { useState, useEffect, ReactNode } from "react"
 import { Box, HStack, Icon } from "@chakra-ui/react"
 
 import { motion } from "framer-motion"
+import { MdExpandMore } from "react-icons/md"
 import { useIntl } from "react-intl"
 
 import Link, { IProps as ILinkProps } from "./Link"
@@ -11,7 +12,6 @@ import { dropdownIconContainerVariant } from "./SharedStyledComponents"
 import docLinks from "../data/developer-docs-links.yaml"
 import { translateMessageId } from "../utils/translations"
 import { DeveloperDocsLink } from "../types"
-import { MdExpandMore } from "react-icons/md"
 
 const innerLinksVariants = {
   open: {
@@ -93,7 +93,7 @@ const NavLink: React.FC<IPropsNavLink> = ({ item, path }) => {
             animate={isOpen ? "open" : "closed"}
             cursor="pointer"
           >
-            <Icon as={MdExpandMore} boxSize={6} />
+            <Icon as={MdExpandMore} boxSize={6} color="secondary" />
           </Box>
         </LinkContainer>
         <Box
