@@ -1,24 +1,23 @@
 import fs from "fs"
 import path from "path"
 
-import { supportedLanguages } from "../utils/languages"
+import { supportedLanguages, defaultLanguage } from "../utils/languages"
 import mergeObjects from "../utils/mergeObjects"
 
 // Iterate over each supported language and generate /intl/${lang}.json
-// by merging all /intl/${lang}/${page}.json files
+// by merging all /intl/${lang}/${namespace}.json files
 const mergeTranslations = (): void => {
-  for (const lang of supportedLanguages) {
+  // make sure `defaultLang` is the first item in order to populate `defaultLangObj`
+  const rest = supportedLanguages.filter((lng) => lng !== defaultLanguage)
+  const languages = [defaultLanguage, ...rest]
+
+  let defaultLangObj = {}
+  for (const lang of languages) {
     try {
-      const currentTranslation = lang
       const pathToProjectSrc = path.resolve("src")
-      const pathToTranslations = path.join(
-        pathToProjectSrc,
-        "intl",
-        currentTranslation
-      )
+      const pathToTranslations = path.join(pathToProjectSrc, "intl", lang)
 
-      const result = {}
-
+      let result = {}
       fs.readdirSync(pathToTranslations).forEach((file) => {
         const pathToFile = `${pathToTranslations}/${file}`
         const json = fs.readFileSync(pathToFile, "utf-8")
@@ -27,7 +26,17 @@ const mergeTranslations = (): void => {
         mergeObjects(result, obj)
       })
 
-      const dir = `./i18n/merged/${currentTranslation}`
+      if (lang === defaultLanguage) {
+        defaultLangObj = result
+      } else {
+        // keep the untranslated strings with the `defaultLang` value
+        // this will help on the `locales` creation in the `createLocales`
+        // script as we want to fallback to the `defaultLang` in case the key
+        // isn't translated
+        result = { ...defaultLangObj, ...result }
+      }
+
+      const dir = `./i18n/merged/${lang}`
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true })
       }
