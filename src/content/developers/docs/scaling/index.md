@@ -92,11 +92,6 @@ Learn more about [Validium](/developers/docs/scaling/validium/).
 - Not all solutions require utilizing the Ethereum consensus algorithm directly, and alternatives can offer benefits that would otherwise be difficult to obtain.
 - No one scaling solution is enough to fulfill the [Ethereum vision](/upgrades/vision/).
 
-## Why not just stack scaling solutions? {#why-not-stack-scaling}
-Blockchains have two distinct resource bottlenecks, computation and data. Stacking scaling, for example rollups on rollups, can only trivially scale computation. Data scaling genrally does not compose. Any data scaling optimizations from stacking can likely be combined in a single rollup.
-
-A "layer 3" architecture can make sense when the secondary scaling solution serves a distinct purpose, for example privacy, lower trust scaling (e.g. Validium on a zk-Rollup), or custom scaling (e.g. an app-specific chain). In these scenarios, the custom benefits of the "layer 3" can combine with the enhanced scaling of the underlying layer 2. However, this type of architecture also inherits more complexity. The tradeoffs of anchoring into layer 2 vs anchoring into layer 1 need to be carefully evaluated in each instance.
-
 ## More of a visual learner? {#visual-learner}
 
 <YouTube id="BgCgauWVTs0" />
