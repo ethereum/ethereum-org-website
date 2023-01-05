@@ -20,12 +20,12 @@ Each Ethereum account has its own receiving address which is a unique sequence o
 
 You need to provide the sender with your receiving address. Many wallet apps let you copy to clipboard the address or show a QR code to scan for easier usage. Avoid typing any Ethereum address manually. This is unsafe, and can easily lead to clerical errors and lost funds.
 
+This is a general pattern, and different apps may vary or use different language. It should also be similar process if you are trying to send your funds from an exchange. 
+
 1. Open your wallet app.
 2. Click on "Receive" or similarly worded option on the dashboard
 3. Copy your Ethereum address to clipboard.
 4. Provide the sender with your receiving Ethereum address.
-
-This is a general pattern, and different apps may vary or use different language. It should also be similar process if you are trying to send your funds from an exchange. 
 
 ## Send cryptocurrency
 
@@ -83,4 +83,4 @@ You can use [block explorers](https://ethereum.org/en/developers/docs/data-and-a
 
 ### Can I cancel or return transactions?
 
-No, once a transaction is initiated, you can not cancel the transaction.
+No, once a transaction is confirmed, you can not cancel the transaction.
