@@ -136,7 +136,7 @@ Symbolic execution represents an execution trace as a mathematical formula over 
 
 Suppose a smart contract's function takes as input a `uint` value (`x`) and reverts when `x` is greater than `5` but lower than `10`. Finding a value for `x` that triggers the error using a normal testing procedure would require running through dozens of test cases (or more) without the assurance of actually finding an error-triggering input. 
 
-Conversely, a symbolic execution tool would execute the function with the symbolic value: `X > 5 ∧ X < 10` (i.e., `x` is greater than 5 but lower than 10). The associated path predicate `x = X > 5 ∧ X < 10` would then be given to an SMT solver to solve. If a particular value satisfies the formula `x = X > 5 ∧ X < 10`, the SMT solver will calculate it—for example, the solver might produce `7` as a value for `x`.  
+Conversely, a symbolic execution tool would execute the function with the symbolic value: `X > 5 ∧ X < 10` (i.e., `x` is greater than 5 AND `x` is less than 10). The associated path predicate `x = X > 5 ∧ X < 10` would then be given to an SMT solver to solve. If a particular value satisfies the formula `x = X > 5 ∧ X < 10`, the SMT solver will calculate it—for example, the solver might produce `7` as a value for `x`.  
 
 Because symbolic execution relies on inputs to a program, and the set of inputs to explore all reachable states is potentially infinite, it is still a form of testing. However, as shown in the example, symbolic execution is more efficient than regular testing for finding inputs that trigger property violations. 
 
