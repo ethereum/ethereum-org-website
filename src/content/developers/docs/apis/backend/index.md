@@ -117,11 +117,10 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Documentation](https://docs.zmok.io/)
 - [Discord](https://discord.gg/fAHeh3ka6s)
 
-**NOWNodes -** **_Blockchain Infrastructure._**
+**NOWNodes - _Full Nodes and Block Explorers._**
 
-- [NOWNodes.io](http://bit.do/nownodes-io)
-- [Documentation](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
-- [Support](https://t.me/nownodesnews)
+- [NOWNodes.io](https://nownodes.io/)
+- [Documentation](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
 
 ## Further reading {#further-reading}
 
