@@ -155,7 +155,7 @@ ETH のソロステーキングを支援するツールやサービスは増え�
 
 <em>マイノリティのクライアントにおける同じようなバグでは、決してファイナライズされません。</em>そのため、サラウンド投票(surrond vote)に至ることはなく、非稼働のペナルティは課されますが、スラッシングされることはありません。
 
-<p><a href="https://hackernoon.com/ethereums-client-diversity-problem">マイノリティのクライアントを実行する重要性についてもっと知る</a></p>
+<p><a href="https://hackernoon.com/ethereums-client-diversity-problem">マイノリティのクライアントを実行する重要性についてもっと詳しく</a></p>
 <p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">スラッシング防止についてもっと知る</a></p>
 </ExpandableCard>
 

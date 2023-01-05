@@ -10,7 +10,7 @@ Ethereum.org 网站，像开放的以太坊一样，也是一个开源项目。 
 
 <InfoBanner shouldCenter emoji=":tada:">
   领取您的 POAP 代币！ 如果您在 2022 年为 ethereum.org 做出了贡献，我们会给您发放一个独特的 POAP 徽章。{" "}
-<a href="#poap">有关 POAP 徽章的更多信息</a>
+<a href="#poap">关于 POAP 徽章的更多信息</a>
 </InfoBanner>
 
 ## 如何做出贡献 {#ways-to-contribute}

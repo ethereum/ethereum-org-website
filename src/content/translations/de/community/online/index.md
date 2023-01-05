@@ -27,6 +27,7 @@ Hunderttausende von Ethereum-Enthusiasten treffen sich in diesen Online-Foren, u
 <SocialListItem socialIcon="discord"><Link to="https://discord.io/ethstaker">EthStaker Discord</Link> - Gemeinschaft orientiert am Angebot von Projekt-Management-Unterstützung für Ethereum-Entwickler</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/CetY6Y4">Ethereum.org Website-Team</Link> - Kommen Sie vorbei and schreiben Sie mit dem Team und anderen aus der Gemeinschaft über Ethereum.org Web-Entwicklung und Design</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ZH5aXDgWEU">Web3 Universität</Link> - Gemeinschaft fokussiert auf das Erlernen von Web3-Entwicklung </SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> - Web3-Creator-Community, wo Entwickler, industrielle Führer, und Ethereum Enthusiasten abhängen. Wir sind begeistert von Web3-Entwicklung, Design und Kultur. Kommen Sie mit uns bauen.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity-Gitter</Link> - Unterhaltungen über Solidity-Entwicklung (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity-Matrix</Link> - Unterhaltungen über Solidity-Entwicklung (Matrix)</SocialListItem>
 
@@ -35,7 +36,7 @@ Hunderttausende von Ethereum-Enthusiasten treffen sich in diesen Online-Foren, u
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> - Bleiben Sie auf dem Laufenden mit den neuesten Informationen der Ethereum Foundation</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> - Offizielles Konto der Ethereum Foundation</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethdotorg">@ethdotorg</Link> - Das Portal zu Ethereum, für unsere wachsende globale Gemeinschaft geschaffen</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://hive.one/c/Ethereum?page=1">Liste von einflussreichen Ethereum Twitter-Accounts</Link></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://hive.one/c/ethereum?page=1">Liste von einflussreichen Ethereum Twitter-Accounts</Link></SocialListItem>
 
 <Divider />
 

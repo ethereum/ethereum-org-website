@@ -30,7 +30,7 @@ Nell'universo di Ethereum c'è un unico computer canonico (chiamato macchina vir
 
 Le richieste di calcolo sono dette richieste di transazione; il registro di tutte le transazioni e dello stato presente dell'EVM viene memorizzato sulla blockchain, che a sua volta è memorizzata e concordata da tutti i nodi.
 
-I meccanismi crittografici assicurano che una volta verificate come valide e aggiunte alla blockchain, le transazioni non possano essere successivamente manomesse. Gli stessi meccanismi assicurano inoltre che tutte le transazioni siano firmate ed eseguite con "permessi" appropriati (nessuno a parte Alice stessa dovrebbe essere in grado di inviare attivi digitali dal suo account).
+I meccanismi crittografici assicurano che una volta verificate come valide e aggiunte alla blockchain, le transazioni non possano essere successivamente manomesse. Inoltre, gli stessi meccanismi assicurano che tutte le transazioni siano firmate ed eseguite con "permessi" appropriati (nessuno dovrebbe poter inviare risorse digitali dal conto di Alice, tranne la stessa Alice).
 
 ## Cos'è un ether? {#what-is-ether}
 
@@ -38,19 +38,19 @@ I meccanismi crittografici assicurano che una volta verificate come valide e agg
 
 Ogni partecipante che trasmette una richiesta di transazione deve anche offrire un certo importo di ETH alla rete a titolo di ricompensa. La rete elargirà tale ricompensa a chiunque svolga il lavoro effettivo verificando la transazione, eseguendola, inviandola alla blockchain e trasmettendola alla rete.
 
-L'importo di ETH pagato corrisponde al tempo necessario per eseguire il calcolo. Queste ricompense impediscono inoltre ai partecipanti malevoli di intasare intenzionalmente la rete richiedendo l'esecuzione di calcoli infiniti o altri script ad alta intensità di risorse, poiché tali partecipanti devono pagare per il tempo di calcolo.
+L'importo di ETH pagato corrisponde alle risorse necessarie a eseguire il calcolo. Queste ricompense impediscono ai partecipanti malevoli di intasare intenzionalmente la rete, richiedendo l'esecuzione di calcoli infiniti o di altri script ad alta intensità di risorse, poiché tali partecipanti devono pagare per le risorse di calcolo.
 
 L'ETH è inoltre usato per fornire sicurezza cripto-economica alla rete in tre modi principali: 1) è usato come un mezzo per ricompensare i validatori che propongono i blocchi o segnalano i comportamenti disonesti degli altri validatori; 2) è messo in staking dai validatori, fungendo da garanzia contro i comportamenti disonesti: se i validatori tentano di comportarsi in modo malevolo, i loro ETH possono esser distrutti; 3) è usato per ponderare i 'voti' per i blocchi appena proposti, alimentando la parte di scelta della diramazione del meccanismo di consenso.
 
-## Cosa sono gli Smart Contract? {#what-are-smart-contracts}
+## Cosa sono i contratti intelligenti? {#what-are-smart-contracts}
 
-In pratica, i partecipanti non scrivono nuovo codice ogni volta che desiderano richiedere un calcolo sull'EVM. Piuttosto, gli sviluppatori dell'applicazione caricano i programmi (frammenti di codice riutilizzabili) nello stato EVM e gli utenti richiedono di eseguire questi frammenti di codice con parametri variabili. Smart contract è il nome con il quale chiamiamo questi programmi caricati ed eseguiti dalla rete.
+In pratica, i partecipanti non scrivono nuovo codice ogni volta che desiderano richiedere un calcolo sull'EVM. Piuttosto, gli sviluppatori dell'applicazione caricano i programmi (frammenti di codice riutilizzabili) nello stato EVM e gli utenti richiedono di eseguire questi frammenti di codice con parametri variabili. Chiamiamo i programmi caricati a ed eseguiti dai contratti intelligenti della rete.
 
-A un livello molto basilare, puoi pensare a uno smart contract come una sorta di distributore automatico: uno script che, quando viene chiamato con certi parametri, esegue delle azioni o dei calcoli se sono soddisfatte determinate condizioni. Per esempio, un semplice smart contract del fornitore potrebbe creare e assegnare la proprietà di un asset digitale se il richiedente invia ETH a un destinatario specifico.
+A un livello molto basilare, puoi pensare a un contratto intelligente come una sorta di distributore automatico: uno script che, quando chiamato entro certi parametri, esegue delle azioni o dei calcoli, se certe condizioni sono soddisfatte. Ad esempio, il semplice contratto intelligente del fornitore potrebbe creare e assegnare la proprietà di una risorsa digitale se il chiamante invia ETH a un destinatario specifico.
 
-Qualunque sviluppatore può creare uno smart contract e renderlo pubblico alla rete, usando la blockchain come proprio livello dati, in cambio di una commissione pagata alla rete. Qualunque utente può quindi chiamare questo smart contract per eseguire il suo codice, anche in questo caso pagando una commissione alla rete.
+Qualsiasi sviluppatore può creare un contratto intelligente e renderlo pubblico sulla rete, usando la blockchain come suo livello dei dati, per una commissione pagata alla rete. Qualsiasi utente può, quindi, chiamare il contratto intelligente a eseguire il proprio codice, anche in questo caso per una commissione pagata alla rete.
 
-Dunque, con gli smart contract, gli sviluppatori possono creare e distribuire app rivolte agli utenti arbitrariamente complesse e servizi come marketplace, strumenti finanziari, giochi, ecc.
+Dunque, con i contratti intelligenti, gli sviluppatori possono creare e distribuire arbitrariamente app e servizi rivolti agli utenti, come: mercati, strumenti finanziari, giochi, etc.
 
 ## Terminologia {#terminology}
 
@@ -76,19 +76,19 @@ Le macchine fisiche reali che conservano lo stato dell'EVM. I nodi comunicano tr
 
 [Maggiori informazioni sui nodi](/developers/docs/nodes-and-clients/)
 
-### Account {#accounts}
+### Conti {#accounts}
 
-Dove sono conservati gli ETH. Gli utenti possono inizializzare account, depositare ETH negli account e trasferire ETH dai loro account ad altri utenti. Account e saldi degli account sono memorizzati in una grande tabella nell'EVM, fanno parte dello stato complessivo dell'EVM.
+Dove sono conservati gli ETH. Gli utenti possono inizializzare i conti, depositare ETH nei conti e trasferire ETH dai propri conti ad altri utenti. I conti e i loro saldi sono archiviati in una grande tabella nell'EVM; sono parte dello stato complessivo dell'EVM.
 
-[Maggiori informazioni sugli account](/developers/docs/accounts/)
+[Di più sui conti](/developers/docs/accounts/)
 
 ### Transazioni {#transactions}
 
 "Richiesta di transazione" è il termine formale per indicare una richiesta di esecuzione del codice sull'EVM, mentre una "transazione" è una richiesta di transazione portata a termine e il cambiamento associato nello stato dell'EVM. Qualunque utente può trasmettere una richiesta di transazione alla rete da un nodo. Affinché la richiesta di transazione influenzi lo stato dell'EVM concordato, deve essere convalidata, eseguita e "inviata alla rete" da un altro nodo. L'esecuzione di codice innesca un cambiamento di stato dell'EVM; al salvataggio della transazione, questo cambiamento di stato viene trasmesso a tutti i nodi della rete. Alcuni esempi di transazione:
 
-- Inviare X ETH dal mio account a quello di Alice.
-- Pubblicare il codice di uno Smart Contract nello stato dell'EVM.
-- Eseguire il codice dello Smart Contract all'indirizzo X dell'EVM, con argomenti Y.
+- Inviare X ETH dal mio conto a quello di Alice.
+- Pubblicare il codice di un contratto intelligente nello stato dell'EVM.
+- Eseguire il codice del contratto intelligente all'indirizzo X nell'EVM, con gli argomenti Y.
 
 [Maggiori informazioni sulle transazioni](/developers/docs/transactions/)
 
@@ -98,11 +98,11 @@ Il volume di transazioni è molto alto, quindi le transazioni sono "salvate" in 
 
 [Maggiori informazioni sui blocchi](/developers/docs/blocks/)
 
-### Smart Contract {#smart-contracts}
+### Contratti intelligenti {#smart-contracts}
 
-Uno snippet di codice riutilizzabile (programma) che uno sviluppatore pubblica nello stato dell'EVM. Chiunque può richiedere che il codice dello smart contract venga eseguito facendo una richiesta di transazione. Siccome gli sviluppatori possono scrivere applicazioni arbitrarie eseguibili nell'EVM (giochi, marketplace, strumenti finanziari, ecc) pubblicando smart contract, queste spesso sono chiamate [dapp o app decentralizzate](/developers/docs/dapps/).
+Uno snippet di codice riutilizzabile (programma) che uno sviluppatore pubblica nello stato dell'EVM. Chiunque può richiedere che il codice del contratto intelligente sia eseguito effettuando una richiesta di transazione. Poiché gli sviluppatori possono scrivere applicazioni arbitrarie eseguibili nell'EVM (giochi, mercati, strumenti finanziari, etc.) pubblicando i contratti intelligenti, questi sono anche spesso detti [dapp, o App Decentralizzate](/developers/docs/dapps/).
 
-[Maggiori informazioni sugli smart contract](/developers/docs/smart-contracts/)
+[Di più sui contratti intelligenti](/developers/docs/smart-contracts/)
 
 ## Letture consigliate {#further-reading}
 

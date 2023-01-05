@@ -27,6 +27,7 @@
   "page-upgrades-bug-bounty-hunting-li-3": "Employees and contractors of the Ethereum Foundation or client teams in scope of the bounty program may participate in the program only in the accrual of points and will not receive monetary rewards.",
   "page-upgrades-bug-bounty-hunting-li-4": "Ethereum bounty program considers a number of variables in determining rewards. Determinations of eligibility, score and all terms related to an award are at the sole and final discretion of the Ethereum Foundation bug bounty panel.",
   "page-upgrades-bug-bounty-leaderboard": "See full leaderboards",
+  "page-upgrades-bug-bounty-leaderboard-list": "Bug bounty leaderboard",
   "page-upgrades-bug-bounty-leaderboard-points": "points",
   "page-upgrades-bug-bounty-ledger-desc": "The Ethereum Specifications detail the design rationale for the Execution Layer and Consensus Layer.",
   "page-upgrades-bug-bounty-ledger-title": "Specification bugs",

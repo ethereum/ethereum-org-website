@@ -59,7 +59,7 @@ lang: ru
 
 **Для разработчиков**
 
-- [DappLearning](https://github.com/Dapp-Learning-DAO/Dapp-Learning) — учебная группа для изучения основных проектов децентрализованных приложений (dApp) и еженедельного обмена мыслями и комментариями
+- [DappLearning](https://github.com/Dapp-Learning-DAO/Dapp-Learning) — учебная группа для изучения основных проектов децентрализованных приложений и еженедельного обмена мыслями и комментариями
 - [LearnBlockchain](https://learnblockchain.cn/) — сообщество разработчиков, где можно обмениваться информацией о технологии блокчейн
 
 **Для исследователей криптографии**
@@ -67,36 +67,44 @@ lang: ru
 - [SecbitLabs](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw) — учетная запись в WeChat, где объясняются вопросы криптографии, безопасности и т. д.
 - [Sparkbyte](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ) — учетная запись в WeChat, рассказывающая о технологии zk
 
+### Чешский {#cs}
+
+- [Gwei.cz](https://gwei.cz) — локальное сообщество на тему Web3, создает образовательный контент, организует очные и онлайн-мероприятия
+- [Gwei.cz Příručka](https://prirucka.gwei.cz/) — руководство по Ethereum для начинающих
+- [DAO Příručka](https://dao.gwei.cz/) — руководство для начинающих по DAO
+- [Mastering Ethereum](https://ipfs.infura-ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) — о тонкостях работы Ethereum на чешском языке
+
 ### Французский {#fr}
 
 - [Ethereum France](https://www.ethereum-france.com/) — Ethereum France организует мероприятия, создает контент и способствует обсуждениям по вопросам Ethereum
 - [Ethereum.fr](https://ethereum.fr/) — новости и образование в сфере Ethereum
 - [BanklessFR](https://banklessfr.substack.com/) — новостная рассылка Bankless на французском языке
-- [CryptoFR](https://cryptofr.com/category/44/ethereum-general) — форум криптовалют, в том числе с обсуждением Ethereum
+- [CryptoFR](https://cryptofr.com/category/44/ethereum-general) — форум о криптовалютах, в том числе с обсуждением Ethereum
 
 ### Немецкий {#de}
 
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/de-de/learn/modules/blockchain-learning-solidity/) — использование Solidity
-- [Microsoft Learn (смарт-контракты)](https://docs.microsoft.com/de-de/learn/modules/blockchain-solidity-ethereum-smart-contracts/) — написание смарт-контрактов Ethereum с Solidity
+- [Microsoft Learn (умные контракты)](https://docs.microsoft.com/de-de/learn/modules/blockchain-solidity-ethereum-smart-contracts/) — написание умных контрактов Ethereum с помощью Solidity
 - [Microsoft Learn (сети Ethereum)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) — подключение и развертывание сетей Ethereum
 - [Microsoft Learn (блокчейны)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) — введение в блокчейн-разработку
 
 ### Итальянский {#it}
 
-- [Ethereum Italia](https://www.ethereum-italia.it/) — обучение, мероприятия и новости Ethereum, посвященные смарт-контрактам и технологии блокчейн
+- [Ethereum Italia](https://www.ethereum-italia.it/) — обучение, мероприятия и новости Ethereum, посвященные умным контрактам и блокчейн-технологиям
 - [Подкаст Ethereum Italia](https://www.ethereum-italia.it/podcast/) — подкаст Ethereum на итальянском языке
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/it-it/learn/modules/blockchain-learning-solidity/) — научитесь использовать Solidity
-- [Microsoft Learn (смарт-контракты)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) — узнайте, как писать смарт-контракты с использованием Solidity
-- [Microsoft Learn (dApps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) — создание пользовательского интерфейса с децентрализованными приложениями
+- [Microsoft Learn (смарт-контракты)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) — узнайте, как писать умные контракты с использованием Solidity
+- [Microsoft Learn (децентрализованные приложения)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) — создание пользовательского интерфейса с децентрализованными приложениями
 
 ### Испанский {#es}
 
 - [Ethereum Madrid](https://ethereummadrid.com/) — курсы, мероприятия и блог по блокчейну, децентрализованным финансам (DeFi) и управлению
 - [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) — руководство по Ethereum для начинающих на испанском языке
 - [Tutoriales online](https://tutoriales.online/curso/solidity) — изучите Solidity и программирование на Ethereum
-- [Curso Introducción a Ethereum Development](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) — основы Solidity, тестирование и развертывание вашего первого смарт-контракта
-- [Curso Introducción a Seguridad y Hacking en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) — понимание распространенных уязвимостей и проблем безопасности в реальных смарт-контрактах
-- [Curso Introducción a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) — узнайте, как смарт-контракты по децентрализованным финансам (DeFi) работают в Solidity, и создайте собственного автоматизированного маркет-мейкера
+- [Curso Introducción a Ethereum Development](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) — основы Solidity, тестирование и развертывание вашего первого умного контракта
+- [Curso Introducción a Seguridad y Hacking en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) — понимание распространенных уязвимостей и проблем безопасности в реальных умных контрактах
+- [Curso Introducción a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) — узнайте, как умные контракты с децентрализованными финансами (DeFi) работают в Solidity, и создайте собственного автоматизированного маркет-мейкера
+- [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) — нетехнические учебные материалы по блокчейну, от начинающих до продвинутых. Узнайте все о криптовалютах и Ethereum.
 
 ### Турецкий {#tr}
 
@@ -105,7 +113,7 @@ lang: ru
 
 ### Вьетнамский {#vi}
 
-- [Tino Group](https://wiki.tino.org/ethereum-la-gi/) — обзор Ethereum, децентрализованных приложений (dApp) и кошельков, а также часто задаваемые вопросы
+- [Tino Group](https://wiki.tino.org/ethereum-la-gi/) — обзор Ethereum, децентрализованных приложений, кошельков, а также часто задаваемых вопросов
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) — веб-платформа, на которой есть образовательные и новостные подстраницы по Ethereum
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) — криптовалютный портал с новостями и образовательным контентом по Ethereum
 

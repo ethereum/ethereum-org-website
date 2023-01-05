@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "@emotion/styled"
 
 import Pill from "./Pill"
 
@@ -27,12 +26,6 @@ const colors = [
   "tagPink",
 ] as const
 
-const TagPill = styled(Pill)`
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
-  background-color: ${(props) => props.theme.colors[props.color!]};
-`
-
 export interface IProps {
   tags: Array<string>
 }
@@ -44,9 +37,9 @@ const TutorialTags: React.FC<IProps> = ({ tags }) => {
         const tagColorIdx = hashCode(tag) % colors.length
         const tagColor = colors[tagColorIdx]
         return (
-          <TagPill key={idx} color={tagColor}>
+          <Pill key={idx} me={2} mb={2} background={tagColor}>
             {tag}
-          </TagPill>
+          </Pill>
         )
       })}
     </>

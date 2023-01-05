@@ -74,12 +74,13 @@ const USER_SELECTION: UserSelectionObject = {
   sl: [],
   sr: [],
   sw: [],
+  ta: [],
   th: [],
   tr: [],
   uk: [],
   uz: [],
   vi: [],
-  zh: [],
+  zh: [3, 4, 5, 6, 7, 8, 9, 10, 13, 16, 18, 19],
   "zh-tw": [],
 }
 
