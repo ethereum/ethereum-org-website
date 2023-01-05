@@ -40,7 +40,7 @@ Would you like to send ETH to another wallet?
 <br/><br/>
 
 5. Many assets, like DAI or USDC, exist on multiple networks. When transferring crypto tokens, make sure that the recipient is using the same network as you are, since these are not interchangeable.
-6. Confirm the transaction and have prepared a small amount of ETH to pay for a transaction fee, the exact amount of the fee changes depending on network congestion. 
+6. Ensure that your wallet has sufficient ETH to cover the transaction fee which varies depending on network conditions. Most wallets will automatically add the suggested fee to the transaction which you can then confirm.
 7. Once your transaction is processed, the crypto will show up in the recipient’s account. This might take anywhere from few seconds to few minutes.
 
 ## Connecting to projects
