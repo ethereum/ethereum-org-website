@@ -1537,6 +1537,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center"><a href="http://marcelixoo.com"><img src="https://avatars.githubusercontent.com/u/29285152?v=4?s=100" width="100px;" alt="Marcelo T. dos Santos"/><br /><sub><b>Marcelo T. dos Santos</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Marcelixoo" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/NoahSchick"><img src="https://avatars.githubusercontent.com/u/43729013?v=4?s=100" width="100px;" alt="NoahSchick"/><br /><sub><b>NoahSchick</b></sub></a><br /><a href="#ideas-NoahSchick" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center"><a href="https://github.com/Joeysantoro"><img src="https://avatars.githubusercontent.com/u/31974730?v=4?s=100" width="100px;" alt="Joey"/><br /><sub><b>Joey</b></sub></a><br /><a href="#content-Joeysantoro" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
