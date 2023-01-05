@@ -53,7 +53,7 @@ Your address represents you on all Ethereum projects. You will not need to regis
 
 ![Button allowing user to connect to the website with a wallet](./connect1.png)
 
-4. Select your wallet from the offered list. If you can't see your wallet, it may be hidden under “WalletConnect” option.
+4. Select your wallet from the provided options list. If you can't see your wallet, it may be hidden under the “WalletConnect” option.
 
 ![Selecting from a list of wallets to connect with](./connect2.png)
 
