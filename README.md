@@ -1540,6 +1540,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/Joeysantoro"><img src="https://avatars.githubusercontent.com/u/31974730?v=4?s=100" width="100px;" alt="Joey"/><br /><sub><b>Joey</b></sub></a><br /><a href="#content-Joeysantoro" title="Content">🖋</a></td>
       <td align="center"><a href="https://github.com/AnnaNodes"><img src="https://avatars.githubusercontent.com/u/117726964?v=4?s=100" width="100px;" alt="AnnaNodes"/><br /><sub><b>AnnaNodes</b></sub></a><br /><a href="#content-AnnaNodes" title="Content">🖋</a></td>
       <td align="center"><a href="https://yashjagtap.netlify.app"><img src="https://avatars.githubusercontent.com/u/47234407?v=4?s=100" width="100px;" alt="Yash Jagtap"/><br /><sub><b>Yash Jagtap</b></sub></a><br /><a href="#content-yash251" title="Content">🖋</a></td>
+      <td align="center"><a href="https://github.com/gzanitti"><img src="https://avatars.githubusercontent.com/u/1610461?v=4?s=100" width="100px;" alt="Gastón Zanitti"/><br /><sub><b>Gastón Zanitti</b></sub></a><br /><a href="#content-gzanitti" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
