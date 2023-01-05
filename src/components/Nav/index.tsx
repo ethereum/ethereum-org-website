@@ -436,7 +436,7 @@ const Nav: React.FC<IProps> = ({ path }) => {
               to={link.to}
               isPartiallyActive={link.isPartiallyActive}
             >
-              <Translation id={link.text} />
+              {link.text}
             </NavLink>
           ))}
         </SubNav>

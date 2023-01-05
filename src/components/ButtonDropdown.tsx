@@ -1,7 +1,6 @@
 // Libraries
 import React, { useState, createRef } from "react"
 import styled from "@emotion/styled"
-import { useTranslation } from "gatsby-plugin-react-i18next"
 import { motion } from "framer-motion"
 import { MdMenu } from "react-icons/md"
 
@@ -119,7 +118,6 @@ export interface IProps {
 
 const ButtonDropdown: React.FC<IProps> = ({ list, className }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
-  const { t } = useTranslation()
   const ref = createRef<HTMLInputElement>()
 
   useOnClickOutside(ref, () => setIsOpen(false))

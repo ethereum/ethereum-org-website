@@ -342,7 +342,7 @@ const Footer: React.FC<IProps> = () => {
             {linkSections.map((section: LinkSection, idx) => (
               <Box key={idx}>
                 <Heading as="h3" fontSize="sm" lineHeight="1.6" my="1.14em">
-                  <Translation id={section.title} />
+                  {section.title}
                 </Heading>
                 <List fontSize="sm" lineHeight="1.6" fontWeight="400" m={0}>
                   {section.links.map((link, linkIdx) => (
@@ -369,7 +369,7 @@ const Footer: React.FC<IProps> = () => {
                           },
                         }}
                       >
-                        <Translation id={link.text} />
+                        {link.text}
                       </Link>
                     </ListItem>
                   ))}
