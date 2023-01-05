@@ -61,4 +61,4 @@ Yes, this is a much safer option because nobody else will have access to your fu
 
 ### If I lose my phone/hardware wallet, do I need to use the same wallet app again to recover the lost funds?
 
-No, you can use almost any wallet as the recovery process is standardized. You will have to enter the recovery phrase into any new wallet app, it can be different app from the one you used before. It is almost impossible to recover lost funds without recovery phrase.
+No, you can use almost any wallet as the recovery process is largely standardized whereby only knowledge of the recovery phrase is required. You will have to enter the recovery phrase into any new wallet app, it can be a different app from the one you used before. It is almost impossible to recover lost funds without the recovery phrase.
