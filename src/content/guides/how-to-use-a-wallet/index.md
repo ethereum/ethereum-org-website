@@ -48,7 +48,7 @@ Would you like to send ETH to another wallet?
 Your address represents you on all Ethereum projects. You will not need to register individually on any project. Once you have a wallet, you can connect to any Ethereum project without any additional information. No emails or any other personal information are needed.
 
 1. Visit any project’s website.
-2. Click a button “Open the App” in the menu if the main page is a presentation of the project. 
+2. If the project's landing page is just a static description of the project, you should be able to click on an "Open the App" button in the menu which will navigate you to the actual web app.
 3. Once you are in the app click on “Connect”
 
 ![Button allowing user to connect to the website with a wallet](./connect1.png)
