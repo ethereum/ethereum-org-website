@@ -61,7 +61,7 @@ function getAllMarkdownPaths(
         arrayOfMarkdownPaths
       )
     } else {
-      const filePath = path.join(dirPath, "/", file)
+      const filePath: string = path.join(dirPath, "/", file)
 
       if (filePath.includes(".md")) {
         arrayOfMarkdownPaths.push(filePath)
@@ -99,9 +99,16 @@ function sortMarkdownPathsIntoLanguages(paths: Array<string>): Languages {
   return languages
 }
 
+interface MatterData {
+  title: string
+  description: string
+  lang: string
+  published: Date
+}
+
 function processFrontmatter(path: string, lang: string): void {
   const file: Buffer = fs.readFileSync(path, "utf-8")
-  const frontmatter = matter(file).data
+  const frontmatter: MatterData = matter(file).data
 
   if (!frontmatter.title) {
     console.warn(`Missing 'title' frontmatter at ${path}:`)
@@ -140,9 +147,9 @@ function processFrontmatter(path: string, lang: string): void {
   }
 }
 
-function processMarkdown(path) {
-  const markdownFile = fs.readFileSync(path, "utf-8")
-  let brokenLinkMatch
+function processMarkdown(path: string) {
+  const markdownFile: string = fs.readFileSync(path, "utf-8")
+  let brokenLinkMatch: RegExpExecArray | null
 
   while ((brokenLinkMatch = BROKEN_LINK_REGEX.exec(markdownFile))) {
     const lineNumber = getLineNumber(markdownFile, brokenLinkMatch.index)
@@ -161,7 +168,7 @@ function processMarkdown(path) {
   ) {
     for (const tag of HTML_TAGS) {
       const htmlTagRegex = new RegExp(tag, "g")
-      let htmlTagMatch
+      let htmlTagMatch: RegExpExecArray | null
 
       while ((htmlTagMatch = htmlTagRegex.exec(markdownFile))) {
         const lineNumber = getLineNumber(markdownFile, htmlTagMatch.index)
@@ -173,7 +180,7 @@ function processMarkdown(path) {
   }
 
   // Commented out as 296 instances of whitespace in link texts
-  let whiteSpaceInLinkTextMatch
+  let whiteSpaceInLinkTextMatch: RegExpExecArray | null
 
   while (
     (whiteSpaceInLinkTextMatch = WHITE_SPACE_IN_LINK_TEXT.exec(markdownFile))
@@ -182,7 +189,7 @@ function processMarkdown(path) {
       markdownFile,
       whiteSpaceInLinkTextMatch.index
     )
-    console.warn(`White space in link found: ${path}:${lineNumber}`)
+    console.warn(`Warning: White space in link found: ${path}:${lineNumber}`)
   }
 
   checkMarkdownSpellingMistakes(path, markdownFile, SPELLING_MISTAKES)
@@ -191,16 +198,16 @@ function processMarkdown(path) {
 }
 
 function checkMarkdownSpellingMistakes(
-  path,
-  file,
-  spellingMistakes,
+  path: string,
+  file: string,
+  spellingMistakes: Array<string>,
   caseSensitive = false
-) {
+): void {
   for (const mistake of spellingMistakes) {
     const mistakeRegex = caseSensitive
       ? new RegExp(mistake, "g")
       : new RegExp(mistake, "gi")
-    let spellingMistakeMatch
+    let spellingMistakeMatch: RegExpExecArray | null
 
     while ((spellingMistakeMatch = mistakeRegex.exec(file))) {
       const lineNumber = getLineNumber(file, spellingMistakeMatch.index)
@@ -213,7 +220,7 @@ function checkMarkdownSpellingMistakes(
   }
 }
 
-function getLineNumber(file, index) {
+function getLineNumber(file: string, index: number): string {
   const fileSubstring = file.substring(0, index)
   const lines = fileSubstring.split("\n")
   const linePosition = lines.length
