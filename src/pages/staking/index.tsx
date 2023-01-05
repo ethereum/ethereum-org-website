@@ -20,7 +20,6 @@ import {
 import FeedbackCard from "../../components/FeedbackCard"
 import ExpandableCard from "../../components/ExpandableCard"
 import StakingStatsBox from "../../components/Staking/StakingStatsBox"
-import StakingSurveyBanner from "../../components/Staking/StakingSurveyBanner"
 import StakingHierarchy from "../../components/Staking/StakingHierarchy"
 import StakingHomeTableOfContents from "../../components/Staking/StakingHomeTableOfContents"
 import StakingCommunityCallout from "../../components/Staking/StakingCommunityCallout"
@@ -345,7 +344,6 @@ const StakingPage = ({
         description={translateMessageId("page-staking-meta-description", intl)}
       />
       <HeroStatsWrapper>
-        <StakingSurveyBanner />
         <PageHero content={heroContent} />
         <StakingStatsBox />
       </HeroStatsWrapper>

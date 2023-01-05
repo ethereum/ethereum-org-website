@@ -9783,6 +9783,51 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "NoahSchick",
+      "name": "NoahSchick",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43729013?v=4",
+      "profile": "https://github.com/NoahSchick",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "Joeysantoro",
+      "name": "Joey",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31974730?v=4",
+      "profile": "https://github.com/Joeysantoro",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "AnnaNodes",
+      "name": "AnnaNodes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117726964?v=4",
+      "profile": "https://github.com/AnnaNodes",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "yash251",
+      "name": "Yash Jagtap",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47234407?v=4",
+      "profile": "https://yashjagtap.netlify.app",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "gzanitti",
+      "name": "Gastón Zanitti",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1610461?v=4",
+      "profile": "https://github.com/gzanitti",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
