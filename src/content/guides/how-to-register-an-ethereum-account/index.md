@@ -57,7 +57,7 @@ You can use the same address on all EVM compatible blockchains (if you have the 
 
 ### Is having my own wallet safer than keeping my funds on an exchange?
 
-Yes, this is a much safer option because nobody else will have access to your funds. There are unfortunately many examples of failed exchanges that filed for bankrupcy and lost users' savings. Hacks, frozen accounts or blocked withdrawals are some other common risks. Owning a wallet (with a recovery phrase) is the best way to safeguard your assets. If you have a poorly backed up recovery phrase, you're potentially at higher risk than if you had left your money on the exchange though. Make sure to store your recovery phrase well.
+Yes, this is a much safer option because nobody else will have access to your funds. There are unfortunately many examples of failed exchanges that filed for bankruptcy resulting in users' losing their savings which were being held in custody. Hacks, frozen accounts or blocked withdrawals are some other common risks. Owning a wallet (with a recovery phrase) is the best way to safeguard your assets. Nonetheless, a poorly backed up recovery phrase potentially exposes you to more risks as compared to having your keys managed by an exchange. Make sure to store your recovery phrase well.
 
 ### If I lose my phone/hardware wallet, do I need to use the same wallet app again to recover the lost funds?
 
