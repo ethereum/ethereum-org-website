@@ -55,8 +55,8 @@ Remembering strong, unique passwords for every account you have isn't ideal. A p
 
 - [Bitwarden](https://bitwarden.com/)
 - [KeePass](https://keepass.info/)
-- [LastPass](https://www.lastpass.com/)
 - [1Password](https://1password.com/)
+- Or check out other [recommended password managers](https://www.privacytools.io/secure-password-manager)
 
 ### Use Two-Factor Authentication {#two-factor-authentication}
 
