@@ -26,7 +26,7 @@ Once you’ve created an Alchemy account, you can generate an API key by creatin
 
 ![Hello world create app](./hello-world-create-app.png)
 
-2. Name your app “Hello World”, offer a short description, select “Staging” for the Environment (used for your app bookkeeping), and choose “Goerli” for your network. (the below shows the former o
+2. Name your app “Hello World”, offer a short description, select “Staging” for the Environment (used for your app bookkeeping), and choose “Goerli” for your network.
 
 ![create app view hello world](./create-app-view-hello-world.png)
 
