@@ -104,6 +104,8 @@ interface MatterData {
   description: string
   lang: string
   published: Date
+  sidebar: string
+  skill: string
 }
 
 function processFrontmatter(path: string, lang: string): void {
