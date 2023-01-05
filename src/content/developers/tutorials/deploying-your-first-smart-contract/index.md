@@ -2,7 +2,7 @@
 title: Deploying your first smart contract
 description: An introduction to deploying your first smart contract on an Ethereum test network
 author: "jdourlens"
-tags: ["smart contracts", "remix", "solidity", "getting started", "deploying"]
+tags: ["smart contracts", "remix", "solidity", "deploying"]
 skill: beginner
 lang: en
 published: 2020-04-03

@@ -1,19 +1,18 @@
 ---
 title: Oracoli
-description: Gli oracoli aiutano a inserire dati del mondo reale in un'applicazione Ethereum perché gli Smart Contract non possono interrogare autonomamente i dati del mondo reale.
+description: Gli oracoli aiutano a inserire i dati del mondo reale nella tua applicazione di Ethereum, poiché i contratti intelligenti non possono interrogare autonomamente i dati del mondo reale.
 lang: it
-incomplete: true
 ---
 
-Gli oracoli sono feed di dati che collegano Ethereum a informazioni del mondo reale esternamente alla catena, in modo da poter interrogare i dati negli Smart Contract. Ad esempio, le dapp dei mercati predittivi utilizzano gli oracoli per effettuare i pagamenti in base a eventi. Un mercato predittivo potrebbe chiedere di puntare ETH sul prossimo presidente degli Stati Uniti. Userà un oracolo per confermare l'esito e pagare i vincitori.
+Gli oracoli sono feed di dati che connettono Ethereum all'esterno della catena, informazioni del mondo reale, così che tu possa interrogare i dati nei tuoi contratti intelligenti. Ad esempio, le dapp dei mercati predittivi utilizzano gli oracoli per effettuare i pagamenti in base a eventi. Un mercato predittivo potrebbe chiedere di puntare ETH sul prossimo presidente degli Stati Uniti. Userà un oracolo per confermare l'esito e pagare i vincitori.
 
 ## Prerequisiti {#prerequisites}
 
-È necessario avere familiarità con [nodi](/developers/docs/nodes-and-clients/), [meccanismi di consenso](/developers/docs/consensus-mechanisms/) e [anatomia degli Smart Contract](/developers/docs/smart-contracts/anatomy/), in particolare eventi.
+Assicurati di esser familiare con i [nodi](/developers/docs/nodes-and-clients/), i [meccanismi di consenso](/developers/docs/consensus-mechanisms/) e l'[anatomia dei contratti intelligenti](/developers/docs/smart-contracts/anatomy/) e, nello specifico, con gli eventi.
 
 ## Cos'è un oracolo {#what-is-an-oracle}
 
-Un oracolo è un ponte tra la blockchain e il mondo reale. Agisce come API sulla catena, che è possibile interrogare per ottenere informazioni da inserire negli Smart Contract. Si può trattare di qualsiasi cosa, da informazioni sui prezzi a previsioni meteo. Gli oracoli possono anche essere bidirezionali ed essere usati per "inviare" i dati al mondo reale.
+Un oracolo è un ponte tra la blockchain e il mondo reale. Agiscono come API sulla catena che puoi interrogare per ottenere informazioni nei tuoi contratti intelligenti. Si può trattare di qualsiasi cosa, da informazioni sui prezzi a previsioni meteo. Gli oracoli possono anche essere bidirezionali ed essere usati per "inviare" i dati al mondo reale.
 
 Guarda Patrick spiegare gli oracoli:
 
@@ -23,13 +22,13 @@ Guarda Patrick spiegare gli oracoli:
 
 Con una blockchain come Ethereum, necessiti di ogni nodo nella rete per riprodurre ogni transazione e terminare con lo stesso risultato, garantito. Le API introducono dati potenzialmente variabili. Se stavi inviando ETH in base a un valore stabilito in $USD usando un'API per i prezzi, la query restituirà un risultato diverso da un giorno all'altro. Per non parlare del fatto che l'API potrebbe essere oggetto di attacchi o diventare obsoleta. In tal caso, i nodi della rete non sarebbero in grado di combaciare con lo stato corrente di Ethereum e, di fatto, verrebbe meno il [consenso](/developers/docs/consensus-mechanisms/).
 
-Gli oracoli risolvono questo problema pubblicando i dati sulla blockchain. Quindi ogni nodo che riproduce la transazione utilizzerà gli stessi dati immutabili che vengono pubblicati affinché siano visibili a tutti. A questo scopo, un oracolo in genere è costituito da uno smart contract e da alcuni componenti esterni alla catena che possono interrogare le API e poi inviare periodicamente transazioni per aggiornare i dati dello smart contract.
+Gli oracoli risolvono questo problema pubblicando i dati sulla blockchain. Quindi ogni nodo che riproduce la transazione utilizzerà gli stessi dati immutabili che vengono pubblicati affinché siano visibili a tutti. Per farlo, un oracolo è tipicamente composto da un contratto intelligente e alcuni componenti esterni alla catena che possono interrogare le API e che, periodicamente, inviano transazioni per aggiornare i dati del contratto intelligente.
 
 ### Il problema dell'oracolo {#oracle-problem}
 
-Come menzionato, le transazioni di Ethereum non possono accedere direttamente ai dati esterni alla catena. Allo stesso tempo, basarsi su una singola fonte di verità per fornire i dati è insicuro e invalida la decentralizzazione di uno smart contract. Questo è noto come il problema dell'oracolo.
+Come menzionato, le transazioni di Ethereum non possono accedere direttamente ai dati esterni alla catena. Al contempo, affidarsi a una singola fonte di verità per fornire dati non è sicuro e invalida la decentralizzazione di un contratto intelligente. Questo è noto come il problema dell'oracolo.
 
-Possiamo evitarlo usando un oracolo decentralizzato che attinge da più fonti di dati; se una fonte di dati viene hackerata o non funziona, lo smart contract funzionerà comunque come previsto.
+Possiamo evitarlo, usando un oracolo decentralizzato che preleva da più fonti di dati; se una fonte di dati è violata o si guasta, il contratto intelligente continuerà a funzionare come previsto.
 
 ### Sicurezza {#security}
 
@@ -39,16 +38,16 @@ La sicurezza di un oracolo è pari a quella della sua o delle sue fonti di dati.
 
 Questo è un esempio di un'architettura semplice di un oracolo, ma esistono altri modi per innescare il calcolo esterno alla catena.
 
-1. Emetti un registro con il tuo [evento di smart contract](/developers/docs/smart-contracts/anatomy/#events-and-logs)
+1. Emetti un registro con l'[evento del tuo contratto intelligente](/developers/docs/smart-contracts/anatomy/#events-and-logs)
 2. Un servizio esterno alla catena si è iscritto (solitamente usando qualcosa come il comando `eth_subscribe` di JSON-RPC) a questi registri specifici.
 3. Il servizio esterno alla catena procede con l'esecuzione di alcune attività come definito dal registro.
-4. Il servizio esterno alla catena risponde coi dati richiesti in una transazione secondaria allo smart contract.
+4. Il servizio esterno alla catena risponde coi dati richiesti in una transazione secondaria al contratto intelligente.
 
 È così che si ottengono dati in un rapporto 1 a 1, tuttavia, per migliorare la sicurezza è possibile decentralizzare la raccolta dei dati esterni alla catena.
 
 Il prossimo passaggio potrebbe consistere nel far sì che una rete di questi nodi effettuino le chiamate ad API e fonti diverse e aggreghino i dati nella catena.
 
-Il [Chainlink Off-Chain Reporting](https://blog.chain.link/off-chain-reporting-live-on-mainnet/) (Chainlink OCR) ha migliorato questo metodo facendo comunicare tra loro le reti dell'oracolo esterne alla catena, firmando crittograficamente le loro risposte, aggregandole all'esterno della catena e inviando solo una transazione con il risultato sulla catena. In questo modo si consuma meno carburante ma si ottiene comunque la garanzia di dati decentralizzati, poiché ogni nodo ha firmato la propria parte della transazione, redendola immutabile dal nodo che invia la transazione. La politica di escalation subentra se il nodo non effettua la transazione e quello successivo la invia.
+Il [Chainlink Off-Chain Reporting](https://blog.chain.link/off-chain-reporting-live-on-mainnet/) (Chainlink OCR) ha migliorato questo metodo facendo comunicare tra loro le reti dell'oracolo esterne alla catena, firmando crittograficamente le loro risposte, aggregandole all'esterno della catena e inviando solo una transazione con il risultato sulla catena. Così, si consuma meno gas, ma si può comunque garantire che i dati siano decentralizzati, poiché ogni nodo ha firmato la propria parte della transazione, rendendola immutabile dal nodo che la sta inviando. La politica di escalation subentra se il nodo non effettua la transazione e quello successivo la invia.
 
 ## Utilizzo {#usage}
 
@@ -58,7 +57,7 @@ Usando servizi come Chainlink, è possibile fare riferimento ai dati decentraliz
 - [generare numeri casuali verificabili (utili per il gioco)](https://chain.link/solutions/chainlink-vrf)
 - [chiamare API esterne](https://docs.chain.link/docs/request-and-receive-data) – Un nuovo utilizzo riguarda il [Controllo delle riserve di wBTC](https://cointelegraph.com/news/1b-in-wrapped-bitcoin-now-being-audited-using-chainlink-s-proof-of-reserve)
 
-Ecco un esempio di come ottenere l'ultimo prezzo di ETH nel proprio smart contract usando il feed del prezzo di Chainlink:
+Ecco un esempio di come ottenere l'ultimo prezzo di ETH nel tuo contratto intelligente, usando il feed dei prezzi di Chainlink:
 
 ### Feed di dati di Chainlink {#chainlink-data-feeds}
 
@@ -102,7 +101,7 @@ contract PriceConsumerV3 {
 
 ### Chainlink VRF {#chainlink-vrf}
 
-Chainlink VRF (Funzione Casuale Verificabile) è una fonte di casualità provatamente equa e verificabile, progettata per gli smart contract. Gli sviluppatori degli smart contract possono usare Chainlink VRF come generazione di numeri casuali a prova di manomissione (RNG) per creare contratti intelligenti affidabili basati su risultati imprevedibili:
+Chainlink VRF (Funzione Casuale Verificabile) è una fonte di casualità provatamente equa e verificabile progettata per i contratti intelligenti. Gli sviluppatori dei contratti intelligenti possono usare Chainlink VRF come generazione di numeri casuali a prova di manomissione (RNG) per creare contratti intelligenti affidabili basati su risultati imprevedibili:
 
 - Giochi e NFT della blockchain
 - Assegnazione casuale di doveri e risorse (es. assegnazione casuale di giudici ai casi)
@@ -110,7 +109,7 @@ Chainlink VRF (Funzione Casuale Verificabile) è una fonte di casualità provata
 
 I numeri casuali sono difficili perché le blockchain sono deterministiche.
 
-Lavorare con gli oracoli di Chainlink al di fuori dei feed di dati segue il [ciclo di richiesta e ricezione](https://docs.chain.link/docs/architecture-request-model) di lavoro con Chainlink. Viene utilizzato il token LINK per inviare carburante dell'oracolo ai suoi fornitori per restituire le risposte. Il token LINK è progettato specificamente per funzionare con gli oracoli e si basa sul token ERC-677 aggiornato, retrocompatibile con l'[ERC-20](/developers/docs/standards/tokens/erc-20/). Il seguente codice, se sviluppato sulla testnet di Kovan recupererà un numero casuale provato crittograficamente. Per effettuare la richiesta, finanzia il contratto con token LINK della testnet che puoi ottenere da [Kovan LINK Faucet](https://kovan.chain.link/).
+Lavorare con gli oracoli di Chainlink al di fuori dei feed di dati segue il [ciclo di richiesta e ricezione](https://docs.chain.link/docs/architecture-request-model) di lavoro con Chainlink. Usano il token LINK per inviare il gas ai fornitori dell'oracolo per restituire le risposte. Il token LINK è progettato specificamente per funzionare con gli oracoli e si basa sul token ERC-677 aggiornato, retrocompatibile con l'[ERC-20](/developers/docs/standards/tokens/erc-20/). Il seguente codice, se sviluppato sulla testnet di Kovan recupererà un numero casuale provato crittograficamente. Per effettuare la richiesta, finanzia il contratto con token LINK della testnet che puoi ottenere da [Kovan LINK Faucet](https://kovan.chain.link/).
 
 ```javascript
 
@@ -162,9 +161,9 @@ contract RandomNumberConsumer is VRFConsumerBase {
 
 ### Chainlink Keeper {#chainlink-keepers}
 
-Gli smart contract non possono attivare o avviare le proprie funzioni in momenti arbitrari o in condizioni arbitrarie. I cambiamenti di stato avvengono solo quando un altro account inizia una transazione (come un utente, un oracolo o un contratto). La [Rete di Chainlink Keeper](https://docs.chain.link/docs/chainlink-keepers/introduction/) fornisce opzioni per gli smart contract per esternalizzare le regolari attività di manutenzione in modo minimizzato e decentralizzato.
+I contratti intelligenti non possono innescare o avviare le proprie funzioni in momenti o in condizioni arbitrari. I cambiamenti di stato si verificheranno soltanto quando un altro conto avvia una transazione (come un utente, un oracolo o un contratto). La [Rete Keeper di Chainlink](https://docs.chain.link/docs/chainlink-keepers/introduction/) fornisce opzioni per i contratti intelligenti, per esternalizzare le regolari attività di manutenzione in modo minimizzato e decentralizzato.
 
-Per usare i Chainlink Keeper, uno smart contract deve implementare [KeeperCompatibleInterface](https://docs.chain.link/docs/chainlink-keepers/compatible-contracts/), che consiste di due funzioni:
+Per usare i Keeper di Chainlink, un contratto intelligente deve implementare [KeeperCompatibleInterface](https://docs.chain.link/docs/chainlink-keepers/compatible-contracts/), che consiste in due funzioni:
 
 - `checkUpkeep` - Controlla se il contratto richiede l'esecuzione di un lavoro.
 - `performUpkeep` - Esegue il lavoro sul contratto, se indicato da checkUpkeep.
@@ -220,11 +219,11 @@ Dopo aver distribuito un contratto compatibile con Keeper, è necessario registr
 
 ### Chiamata all'API di Chainlink {#chainlink-api-call}
 
-Le [Chiamate all'API di Chainlink](https://docs.chain.link/docs/make-a-http-get-request) sono il metodo più facile per ottenere dati dal mondo esterno alla catena con il metodo tradizionale in cui funziona il web: le chiamate API. Eseguire una sola istanza e utilizzare un solo oracolo lo rende centralizzato per natura. Per mantenerlo veramente decentralizzato, una piattaforma di smart contract dovrebbe usare numerosi nodi trovati in un [mercato di dati esterni](https://market.link/).
+Le [Chiamate all'API di Chainlink](https://docs.chain.link/docs/make-a-http-get-request) sono il metodo più facile per ottenere dati dal mondo esterno alla catena con il metodo tradizionale in cui funziona il web: le chiamate API. Eseguire una sola istanza e utilizzare un solo oracolo lo rende centralizzato per natura. Per mantenerlo veramente decentralizzato, una piattaforma di contratti intelligenti dovrebbe usare numerosi nodi trovati in un [mercato di dati esterni](https://market.link/).
 
 [Distribuisci il seguente codice nel remix sulla rete di kovan per testarlo](https://remix.ethereum.org/#version=soljson-v0.6.7+commit.b8d736ae.js&optimize=false&evmVersion=null&gist=8a173a65099261582a652ba18b7d96c1)
 
-Questo segue anche il ciclo di richiesta e ricezione degli oracoli e necessita del finanziamento del contratto con Kovan LINK (il carburante dell'oracolo) per funzionare.
+Ciò segue anche il ciclo di richiesta e ricezione degli oracoli e necessita che il contratto sia finanziato con Kovan LINK (il gas dell'oracolo) per funzionare.
 
 ```javascript
 pragma solidity ^0.6.0;
@@ -303,7 +302,7 @@ Puoi scoprire di più sulle applicazioni di Chainlink leggendo il [blog degli sv
 - [Paralink](https://paralink.network/)
 - [Dos.Network](https://dos.network/)
 
-### Creare uno smart contract oracolo {#build-an-oracle-smart-contract}
+### Creare un contratto intelligente dell'oracolo {#build-an-oracle-smart-contract}
 
 Ecco un esempio di contratto oracolo di Pedro Costa. Puoi trovare ulteriori commenti nel suo articolo: [Implementing a Blockchain Oracle on Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e).
 
@@ -419,7 +418,7 @@ contract Oracle {
 }
 ```
 
-_Ci piacerebbe avere più documentazione sulla creazione di uno smart contract oracolo. Se vuoi contribuire, crea una PR!_
+_Ci piacerebbe avere più documentazione sulla creazione di contratto intelligente dell'oracolo. Se vuoi contribuire, crea una PR!_
 
 ## Letture consigliate {#further-reading}
 
@@ -430,7 +429,7 @@ _Ci piacerebbe avere più documentazione sulla creazione di uno smart contract o
 - [What is a Blockchain Oracle?](https://betterprogramming.pub/what-is-a-blockchain-oracle-f5ccab8dbd72) - _Patrick Collins_
 - [Decentralised Oracles: a comprehensive overview](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) – _Julien Thevenard_
 - [Implementing a Blockchain Oracle on Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_
-- [Why can't smart contracts make API calls?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) - _StackExchange_
+- [Perché i contratti intelligenti non possono effettuare le chiamate all'API?](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) - _StackExchange_
 - [Why we need decentralized oracles](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles) - _Bankless_
 - [So you want to use a price oracle](https://samczsun.com/so-you-want-to-use-a-price-oracle/) -_samczsun_
 
@@ -441,3 +440,7 @@ _Ci piacerebbe avere più documentazione sulla creazione di uno smart contract o
 **Tutorial**
 
 - [Come recuperare il prezzo corrente di Ethereum in Solidity](https://blog.chain.link/fetch-current-crypto-price-data-solidity/) - _Chainlink_
+
+**Progetti di esempio**
+
+- [Progetto iniziale e completo di Chainlink per Ethereum in Solidity](https://github.com/hackbg/chainlink-fullstack) - _HackBG_

@@ -158,8 +158,6 @@ Cuando firme contratos inteligentes, no permita un techo ilimitado de gasto. Un 
 
 Muchas carteras de Ethereum ofrecen una protección de límites para evitar que las cuentas se vacíen.
 
-[Explore las carteras con protección de límites.](/wallets/find-wallet/?filters=has_limits_protection)
-
 <Divider />
 
 ## Estafas comunes {#common-scams}

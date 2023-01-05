@@ -13,7 +13,7 @@ import PageMetadata from "../../components/PageMetadata"
 import Pill from "../../components/Pill"
 import Tag from "../../components/Tag"
 import TutorialTags from "../../components/TutorialTags"
-import Emoji from "../../components/OldEmoji"
+import Emoji from "../../components/Emoji"
 import {
   ButtonSecondary,
   FakeLink,
@@ -215,8 +215,7 @@ const published = (locale: string, published: string) => {
   const localeTimestamp = getLocaleTimestamp(locale as Lang, published)
   return localeTimestamp !== INVALID_DATETIME ? (
     <span>
-      <Emoji text=":calendar:" size={1} ml={`0.5em`} mr={`0.5em`} />{" "}
-      {localeTimestamp}
+      <Emoji text=":calendar:" fontSize="sm" ml={2} mr={2} /> {localeTimestamp}
     </span>
   ) : null
 }
@@ -403,7 +402,7 @@ const TutorialsPage = ({
         </TagsContainer>
         {filteredTutorials.length === 0 && (
           <ResultsContainer>
-            <Emoji text=":crying_face:" size={3} mb={`2em`} mt={`2em`} />
+            <Emoji text=":crying_face:" fontSize="5xl" mb={8} mt={8} />
             <h2>
               <Translation id="page-tutorial-tags-error" />
             </h2>
@@ -427,19 +426,14 @@ const TutorialsPage = ({
               </TitleContainer>
               <Author>
                 {/* TODO: Refactor each tutorial tag as a component */}
-                <Emoji text=":writing_hand:" size={1} mr={`0.5em`} />
+                <Emoji text=":writing_hand:" fontSize="sm" mr={2} />
                 {tutorial.author} •
                 {published(intl.locale, tutorial.published ?? "")}
                 {tutorial.timeToRead && (
                   <>
                     {" "}
                     •
-                    <Emoji
-                      text=":stopwatch:"
-                      size={1}
-                      ml={`0.5em`}
-                      mr={`0.5em`}
-                    />
+                    <Emoji text=":stopwatch:" fontSize="sm" ml={2} mr={2} />
                     {tutorial.timeToRead}{" "}
                     <Translation id="page-tutorial-read-time" />
                   </>
@@ -447,7 +441,7 @@ const TutorialsPage = ({
                 {tutorial.isExternal && (
                   <>
                     {" "}
-                    •<Emoji text=":link:" size={1} ml={`0.5em`} mr={`0.5em`} />
+                    •<Emoji text=":link:" fontSize="sm" ml={2} mr={2} />
                     <FakeLink>
                       <Translation id="page-tutorial-external-link" />
                     </FakeLink>

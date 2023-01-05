@@ -35,6 +35,7 @@ Ces projets ont crée leurs propres subventions pour encourager d'autres projets
 - [Programme de subventions mStable](https://docs.mstable.org/advanced/grants-program) - _Communauté [mStable](https://mstable.org/)_
 - [TheGraph](https://airtable.com/shrdfvnFvVch3IOVm) – _Écosystème [TheGraph](https://thegraph.com/)_
 - [Programme de subventions Uniswap](https://www.unigrants.org/) – _Communauté [Uniswap](https://uniswap.org/)_
+- [Web3 Grants](https://web3grants.net) - _Une liste complète de programmes de subvention liés au web3/crypto_
 
 ## Financement quadratique {#quadratic-funding}
 

@@ -91,6 +91,7 @@ Flexible Web3 data solutions support the scenarios above and provide the foundat
 
 Explore projects and join the DeSci community.
 
+- [DeSci.Global: global events and meetup calendar](https://desci.global)
 - [Blockchain for Science Telegram](https://t.me/BlockchainForScience)
 - [Molecule: Fund and get funded for your research projects](https://discover.molecule.to/)
 - [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)

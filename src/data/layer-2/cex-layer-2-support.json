@@ -18,12 +18,6 @@
     "url": "https://www.okx.com/"
   },
   {
-    "name": "FTX",
-    "supports_withdrawals": ["Arbitrum"],
-    "supports_deposits": ["Arbitrum"],
-    "url": "https://ftx.com/"
-  },
-  {
     "name": "Huobi",
     "supports_withdrawals": ["Arbitrum", "Optimism"],
     "supports_deposits": ["Arbitrum", "Optimism"],
