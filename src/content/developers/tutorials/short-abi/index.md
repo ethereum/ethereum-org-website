@@ -82,7 +82,7 @@ The total cost is therefore `109*16+576+160=2480`, and we are wasting about 6.5%
 Assuming that you do not have control over the destination contract, you can still use a solution similar to [this one](https://github.com/qbzzt/ethereum.org-20220330-shortABI).
 Let's go over the relevant files.
 
-### Token.sol {#token.sol}
+### Token.sol {#token-sol}
 
 [This is the destination contract](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/Token.sol).
 It is a standard ERC-20 contract, with one additional feature.
@@ -100,7 +100,7 @@ It would make a production ERC-20 contract useless, but it makes life easier whe
 
 [You can see an example of this contract being deployed here](https://kovan-optimistic.etherscan.io/address/0x950c753c0edbde44a74d3793db738a318e9c8ce8).
 
-### CalldataInterpreter.sol {#calldatainterpreter.sol}
+### CalldataInterpreter.sol {#calldatainterpreter-sol}
 
 [This is the contract that transactions are supposed to call with shorter calldata](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/CalldataInterpreter.sol).
 Let's go over it line by line.
@@ -275,7 +275,7 @@ Overall, a transfer takes 35 bytes of calldata:
 }       // contract CalldataInterpreter
 ```
 
-### test.js {#test.js}
+### test.js {#test-js}
 
 [This JavaScript unit test](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js) shows us how to use this mechanism (and how to verify it works correctly).
 I am going to assume you understand [chai](https://www.chaijs.com/) and [ethers](https://docs.ethers.io/v5/) and only explain the parts that specifically apply to the contract.
@@ -388,7 +388,7 @@ If the contract were responding only to external transactions, we could get by w
 However, that would break [composability](/developers/docs/smart-contracts/composability/).
 It is much better to have a contract that responds to normal ERC-20 calls, and another contract that responds to transactions with short call data.
 
-### Token.sol {#token.sol-2}
+### Token.sol {#token-sol-2}
 
 In this example we can modify `Token.sol`.
 This lets us have a number of functions that only the proxy may call.
@@ -494,7 +494,7 @@ Here we have a proxy version these operations which:
 1. Is modified by `onlyProxy()` so nobody else is allowed to control them.
 2. Gets the address that would normally be `msg.sender` as an extra parameter.
 
-### CalldataInterpreter.sol {#calldatainterpreter.sol-2}
+### CalldataInterpreter.sol {#calldatainterpreter-sol-2}
 
 The calldata interpreter is nearly identical to the one above, except that the proxied functions receive a `msg.sender` parameter and there is no need for an allowance for `transfer`.
 
@@ -528,7 +528,7 @@ The calldata interpreter is nearly identical to the one above, except that the p
         }
 ```
 
-### Test.js {#test.js-2}
+### Test.js {#test-js-2}
 
 There are a few changes between the previous testing code and this one.
 
