@@ -322,7 +322,7 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
         i18n: {
           language,
           languages: supportedLanguages,
-          defaultLanguage: defaultLanguage,
+          defaultLanguage,
           generateDefaultLanguagePage: false,
           routed: true,
           originalPath: slug.slice(3),
@@ -371,7 +371,7 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
             i18n: {
               language: lang,
               languages: supportedLanguages,
-              defaultLanguage: defaultLanguage,
+              defaultLanguage,
               generateDefaultLanguagePage: false,
               routed: true,
               originalPath,

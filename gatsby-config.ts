@@ -269,7 +269,7 @@ const config: GatsbyConfig = {
       options: {
         localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
         languages: supportedLanguages,
-        defaultLanguage: defaultLanguage,
+        defaultLanguage,
         generateDefaultLanguagePage: true,
         redirect: false,
         siteUrl,

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
-import styled from "@emotion/styled"
 import axios from "axios"
 
 import Translation from "./Translation"
