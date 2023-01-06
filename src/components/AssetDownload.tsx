@@ -6,7 +6,7 @@ import Translation from "../components/Translation"
 import ButtonLink from "./ButtonLink"
 import Emoji from "./OldEmoji"
 import Link from "./Link"
-import { Box, Flex } from "@chakra-ui/react"
+import { Box, Container } from "@chakra-ui/react"
 
 import { getImage, getSrc, ImageDataLike } from "../utils/image"
 
@@ -105,11 +105,15 @@ const AssetDownload: React.FC<IProps> = ({
   const Svg = svg
 
   return (
-    <Flex
-      display={{ l: (props) => (props.shouldHide ? `none` : `flex`) }}
+    <Container
+      display={{
+        base: "flex",
+        lg: `${(props) => (props.shouldHide ? `none` : `flex`)}`,
+      }}
+      maxWidth="100%"
       flex="1 1 45%"
-      direction="column"
-      justify="space-between"
+      flexDirection="column"
+      justifyContent="space-between"
       margin="4"
       opacity={(props) => (props.shouldHide ? 0 : 1)}
       shouldHide={shouldHide}
@@ -141,7 +145,7 @@ const AssetDownload: React.FC<IProps> = ({
           </ButtonLink>
         )}
       </ButtonContainer>
-    </Flex>
+    </Container>
   )
 }
 
