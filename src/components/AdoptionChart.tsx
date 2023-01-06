@@ -1,6 +1,7 @@
 import React from "react"
 import { useTheme } from "@emotion/react"
 import styled from "@emotion/styled"
+import Translation from "./Translation"
 
 const Container = styled.div`
   display: flex;
@@ -58,27 +59,57 @@ const AdoptionChart: React.FC<IProps> = () => {
   return (
     <Container>
       <Column>
-        <ColumnName>2010</ColumnName>
-        <Cell color={isDark ? "#FBF9A5" : "#95935B"}>Investors</Cell>
+        <ColumnName>
+          <Translation id="adoption-chart-column-2010-label" />
+        </ColumnName>
+        <Cell color={isDark ? "#FBF9A5" : "#95935B"}>
+          <Translation id="adoption-chart-investors-label" />
+        </Cell>
       </Column>
 
       <Column>
-        <ColumnName>2014</ColumnName>
-        <Cell color={isDark ? "#FBF9A5" : "#95935B"}>Investors</Cell>
-        <Cell color={isDark ? "#9EC885" : "#67954C"}>Developers</Cell>
-        <Cell color={isDark ? "#E78F6E" : "#CB7C5E"}>Companies</Cell>
+        <ColumnName>
+          <Translation id="adoption-chart-column-2014-label" />
+        </ColumnName>
+        <Cell color={isDark ? "#FBF9A5" : "#95935B"}>
+          <Translation id="adoption-chart-investors-label" />
+        </Cell>
+        <Cell color={isDark ? "#9EC885" : "#67954C"}>
+          <Translation id="adoption-chart-developers-label" />
+        </Cell>
+        <Cell color={isDark ? "#E78F6E" : "#CB7C5E"}>
+          <Translation id="adoption-chart-companies-label" />
+        </Cell>
       </Column>
 
       <Column>
-        <ColumnName>Now</ColumnName>
-        <Cell color={isDark ? "#FBF9A5" : "#95935B"}>Investors</Cell>
-        <Cell color={isDark ? "#9EC885" : "#67954C"}>Developers</Cell>
-        <Cell color={isDark ? "#E78F6E" : "#CB7C5E"}>Companies</Cell>
-        <Cell color={isDark ? "#8EA8CA" : "#5E7492"}>Artists</Cell>
-        <Cell color={isDark ? "#AC85C2" : "#88669B"}>Musicians</Cell>
-        <Cell color={isDark ? "#CA928E" : "#985955"}>Writers</Cell>
-        <Cell color={isDark ? "#B9B9B9" : "#9E9E9E"}>Gamers</Cell>
-        <Cell color={isDark ? "#E2B79E" : "#E78A54"}>Refugees</Cell>
+        <ColumnName>
+          <Translation id="adoption-chart-column-now-label" />
+        </ColumnName>
+        <Cell color={isDark ? "#FBF9A5" : "#95935B"}>
+          <Translation id="adoption-chart-investors-label" />
+        </Cell>
+        <Cell color={isDark ? "#9EC885" : "#67954C"}>
+          <Translation id="adoption-chart-developers-label" />
+        </Cell>
+        <Cell color={isDark ? "#E78F6E" : "#CB7C5E"}>
+          <Translation id="adoption-chart-companies-label" />
+        </Cell>
+        <Cell color={isDark ? "#8EA8CA" : "#5E7492"}>
+          <Translation id="adoption-chart-artists-label" />
+        </Cell>
+        <Cell color={isDark ? "#AC85C2" : "#88669B"}>
+          <Translation id="adoption-chart-musicians-label" />
+        </Cell>
+        <Cell color={isDark ? "#CA928E" : "#985955"}>
+          <Translation id="adoption-chart-writers-label" />
+        </Cell>
+        <Cell color={isDark ? "#B9B9B9" : "#9E9E9E"}>
+          <Translation id="adoption-chart-gamers-label" />
+        </Cell>
+        <Cell color={isDark ? "#E2B79E" : "#E78A54"}>
+          <Translation id="adoption-chart-refugees-label" />
+        </Cell>
       </Column>
     </Container>
   )
