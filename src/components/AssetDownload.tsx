@@ -6,7 +6,7 @@ import Translation from "../components/Translation"
 import ButtonLink from "./ButtonLink"
 import Emoji from "./OldEmoji"
 import Link from "./Link"
-import { Box, Container } from "@chakra-ui/react"
+import { Box, Container, Img } from "@chakra-ui/react"
 
 import { getImage, getSrc, ImageDataLike } from "../utils/image"
 
@@ -34,25 +34,6 @@ interface IPropsWithImage extends IPropsBase {
 }
 
 export type IProps = IPropsWithImage | IPropsWithSVG
-
-/*
-const Container = styled.div<IHide>`
-  flex: 1 1 45%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 1rem;
-  opacity: ${(props) => (props.shouldHide ? 0 : 1)};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: ${(props) => (props.shouldHide ? `none` : `flex`)};
-  }
-`
-*/
-
-const Image = styled(GatsbyImage)`
-  align-self: center;
-  width: 100%;
-`
 
 const ImageContainer = styled.div`
   border: 1px solid ${(props) => props.theme.colors.white700};
@@ -115,6 +96,7 @@ const AssetDownload: React.FC<IProps> = ({
       flexDirection="column"
       justifyContent="space-between"
       margin="4"
+      padding="0"
       opacity={(props) => (props.shouldHide ? 0 : 1)}
       shouldHide={shouldHide}
     >
@@ -124,7 +106,15 @@ const AssetDownload: React.FC<IProps> = ({
         {!children && (
           <ImageContainer>
             {Svg && <Svg alt={alt} />}
-            {image && <Image image={getImage(image)!} alt={alt} />}
+            {image && (
+              <Img
+                as={GatsbyImage}
+                image={getImage(image)!}
+                alt={alt}
+                width="100%"
+                alignSelf="center"
+              />
+            )}
           </ImageContainer>
         )}
         {artistName && (
