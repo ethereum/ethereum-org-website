@@ -40,9 +40,6 @@ interface AccordionCustomItemProps {
    * The category name of each accordion section
    */
   category: CategoryNameType
-  /**
-   * The wrapper components surrounding each column of panel content
-   */
   children: ReactNode
 }
 
