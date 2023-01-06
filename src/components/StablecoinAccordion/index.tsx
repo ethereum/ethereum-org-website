@@ -20,7 +20,7 @@ import {
   LeftColumnPanel,
   RightColumnPanel,
 } from "./AccordionCustomItem"
-import { useStablecoinAccordion } from "./use-stablecoin-accordion"
+import { useStablecoinAccordion } from "./useStablecoinAccordion"
 import { TranslationKey } from "../../utils/translations"
 
 export type ChildOnlyType = {
