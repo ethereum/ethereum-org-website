@@ -15,11 +15,11 @@ import Translation from "../Translation"
 import { ChildOnlyType } from "."
 import { accordionButtonContent, CategoryNameType } from "./utils"
 
-const LeftColumnPanel = (props: ChildOnlyType & Partial<BoxProps>) => (
+export const LeftColumnPanel = (props: ChildOnlyType & Partial<BoxProps>) => (
   <Box flex="0 0 50%" maxW={{ lg: "75%" }} mr={{ lg: 16 }} {...props} />
 )
 
-const RightColumnPanel = (props: ChildOnlyType) => (
+export const RightColumnPanel = (props: ChildOnlyType) => (
   <LeftColumnPanel mr={0} flex="0 1 50%" mt={{ base: 12, lg: 0 }} {...props} />
 )
 
@@ -43,10 +43,7 @@ interface AccordionCustomItemProps {
   /**
    * The wrapper components surrounding each column of panel content
    */
-  children: (props: {
-    LeftColumnPanel: typeof LeftColumnPanel
-    RightColumnPanel: typeof RightColumnPanel
-  }) => ReactNode
+  children: ReactNode
 }
 
 export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
@@ -113,10 +110,7 @@ export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
               justifyContent="space-between"
               flexDirection={{ base: "column", lg: "row" }}
             >
-              {children({
-                LeftColumnPanel,
-                RightColumnPanel,
-              })}
+              {children}
             </Flex>
           </AccordionPanel>
         </>

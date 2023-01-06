@@ -15,7 +15,11 @@ import CardList from "../CardList"
 import InfoBanner from "../InfoBanner"
 import Link from "../Link"
 import Translation from "../Translation"
-import { AccordionCustomItem } from "./AccordionCustomItem"
+import {
+  AccordionCustomItem,
+  LeftColumnPanel,
+  RightColumnPanel,
+} from "./AccordionCustomItem"
 import { useStablecoinAccordion } from "./use-stablecoin-accordion"
 import { TranslationKey } from "../../utils/translations"
 
@@ -104,168 +108,152 @@ const StablecoinAccordion: React.FC<IProps> = () => {
       reduceMotion
     >
       <AccordionCustomItem category="dapps">
-        {({ LeftColumnPanel, RightColumnPanel }) => (
-          <>
-            <LeftColumnPanel>
-              <SectionTitle>
-                <Translation id="page-stablecoins-accordion-requirements" />
-              </SectionTitle>
-              <StepBoxContainer>
-                <StepBox
-                  to="/wallets/"
-                  titleId="page-stablecoins-accordion-swap-requirement-1"
-                  descId="page-stablecoins-accordion-swap-requirement-1-description"
-                />
-                <StepBox
-                  to="/get-eth/"
-                  titleId="page-stablecoins-accordion-swap-requirement-2"
-                  descId="page-stablecoins-accordion-swap-requirement-2-description"
-                />
-              </StepBoxContainer>
-              <InfoBanner emoji=":light_bulb:">
-                <H4>
-                  <Translation id="page-stablecoins-accordion-swap-editors-tip" />
-                </H4>
-                <Text>
-                  <Translation id="page-stablecoins-accordion-swap-editors-tip-copy" />
-                </Text>
-                <ButtonLink to="/wallets/find-wallet/?filters=has_card_deposits,has_dex_integrations">
-                  <Translation id="page-stablecoins-accordion-swap-editors-tip-button" />
-                </ButtonLink>
-              </InfoBanner>
-            </LeftColumnPanel>
-            <RightColumnPanel>
-              <SectionTitle>
-                <Translation id="page-stablecoins-accordion-swap-dapp-title" />
-              </SectionTitle>
-              <p>
-                <Translation id="page-stablecoins-accordion-swap-dapp-intro" />{" "}
-                <Link to="/get-eth/#dex">
-                  <Translation id="page-stablecoins-accordion-swap-dapp-link" />
-                </Link>
-              </p>
-              <CardList content={cardListGroups.dapps} />
-            </RightColumnPanel>
-          </>
-        )}
+        <LeftColumnPanel>
+          <SectionTitle>
+            <Translation id="page-stablecoins-accordion-requirements" />
+          </SectionTitle>
+          <StepBoxContainer>
+            <StepBox
+              to="/wallets/"
+              titleId="page-stablecoins-accordion-swap-requirement-1"
+              descId="page-stablecoins-accordion-swap-requirement-1-description"
+            />
+            <StepBox
+              to="/get-eth/"
+              titleId="page-stablecoins-accordion-swap-requirement-2"
+              descId="page-stablecoins-accordion-swap-requirement-2-description"
+            />
+          </StepBoxContainer>
+          <InfoBanner emoji=":light_bulb:">
+            <H4>
+              <Translation id="page-stablecoins-accordion-swap-editors-tip" />
+            </H4>
+            <Text>
+              <Translation id="page-stablecoins-accordion-swap-editors-tip-copy" />
+            </Text>
+            <ButtonLink to="/wallets/find-wallet/?filters=has_card_deposits,has_dex_integrations">
+              <Translation id="page-stablecoins-accordion-swap-editors-tip-button" />
+            </ButtonLink>
+          </InfoBanner>
+        </LeftColumnPanel>
+        <RightColumnPanel>
+          <SectionTitle>
+            <Translation id="page-stablecoins-accordion-swap-dapp-title" />
+          </SectionTitle>
+          <p>
+            <Translation id="page-stablecoins-accordion-swap-dapp-intro" />{" "}
+            <Link to="/get-eth/#dex">
+              <Translation id="page-stablecoins-accordion-swap-dapp-link" />
+            </Link>
+          </p>
+          <CardList content={cardListGroups.dapps} />
+        </RightColumnPanel>
       </AccordionCustomItem>
       <AccordionCustomItem category="buy">
-        {({ LeftColumnPanel, RightColumnPanel }) => (
-          <>
-            <LeftColumnPanel>
-              <SectionTitle>
-                <Translation id="page-stablecoins-accordion-requirements" />
-              </SectionTitle>
-              <Text>
-                <Translation id="page-stablecoins-accordion-buy-requirements-description" />
-              </Text>
-              <StepBoxContainer>
-                <StepBox
-                  to="/get-eth/"
-                  titleId="page-stablecoins-accordion-buy-requirement-1"
-                  descId="page-stablecoins-accordion-buy-requirement-1-description"
-                />
-              </StepBoxContainer>
-              <InfoBanner isWarning={true}>
-                <Translation id="page-stablecoins-accordion-buy-warning" />
-              </InfoBanner>
-            </LeftColumnPanel>
-            <RightColumnPanel>
-              <SectionTitle>
-                <Translation id="page-stablecoins-accordion-buy-exchanges-title" />
-              </SectionTitle>
-              <CardList content={cardListGroups.exchanges} />
-            </RightColumnPanel>
-          </>
-        )}
+        <LeftColumnPanel>
+          <SectionTitle>
+            <Translation id="page-stablecoins-accordion-requirements" />
+          </SectionTitle>
+          <Text>
+            <Translation id="page-stablecoins-accordion-buy-requirements-description" />
+          </Text>
+          <StepBoxContainer>
+            <StepBox
+              to="/get-eth/"
+              titleId="page-stablecoins-accordion-buy-requirement-1"
+              descId="page-stablecoins-accordion-buy-requirement-1-description"
+            />
+          </StepBoxContainer>
+          <InfoBanner isWarning={true}>
+            <Translation id="page-stablecoins-accordion-buy-warning" />
+          </InfoBanner>
+        </LeftColumnPanel>
+        <RightColumnPanel>
+          <SectionTitle>
+            <Translation id="page-stablecoins-accordion-buy-exchanges-title" />
+          </SectionTitle>
+          <CardList content={cardListGroups.exchanges} />
+        </RightColumnPanel>
       </AccordionCustomItem>
       <AccordionCustomItem category="earn">
-        {({ LeftColumnPanel, RightColumnPanel }) => (
-          <>
-            <LeftColumnPanel>
-              <SectionTitle>
-                <Translation id="page-stablecoins-accordion-requirements" />
-              </SectionTitle>
-              <p>
-                <Translation id="page-stablecoins-accordion-earn-requirements-description" />
-              </p>
-              <StepBoxContainer>
-                <StepBox
-                  to="/wallets/"
-                  titleId="page-stablecoins-accordion-earn-requirement-1"
-                  descId="page-stablecoins-accordion-earn-requirement-1-description"
-                />
-              </StepBoxContainer>
-            </LeftColumnPanel>
-            <RightColumnPanel>
-              <SectionTitle>
-                <Translation id="page-stablecoins-accordion-earn-projects-title" />
-              </SectionTitle>
-              <p>
-                <Translation id="page-stablecoins-accordion-earn-projects-copy" />
-              </p>
-              <CardList content={cardListGroups.earn} />
-            </RightColumnPanel>
-          </>
-        )}
+        <LeftColumnPanel>
+          <SectionTitle>
+            <Translation id="page-stablecoins-accordion-requirements" />
+          </SectionTitle>
+          <p>
+            <Translation id="page-stablecoins-accordion-earn-requirements-description" />
+          </p>
+          <StepBoxContainer>
+            <StepBox
+              to="/wallets/"
+              titleId="page-stablecoins-accordion-earn-requirement-1"
+              descId="page-stablecoins-accordion-earn-requirement-1-description"
+            />
+          </StepBoxContainer>
+        </LeftColumnPanel>
+        <RightColumnPanel>
+          <SectionTitle>
+            <Translation id="page-stablecoins-accordion-earn-projects-title" />
+          </SectionTitle>
+          <p>
+            <Translation id="page-stablecoins-accordion-earn-projects-copy" />
+          </p>
+          <CardList content={cardListGroups.earn} />
+        </RightColumnPanel>
       </AccordionCustomItem>
       <AccordionCustomItem category="generate">
-        {({ LeftColumnPanel, RightColumnPanel }) => (
-          <>
-            <LeftColumnPanel>
-              <SectionTitle>
-                <Translation id="page-stablecoins-accordion-requirements" />
-              </SectionTitle>
-              <p>
-                <Translation id="page-stablecoins-accordion-borrow-requirements-description" />
-              </p>
-              <StepBoxContainer>
-                <StepBox
-                  to="/wallets/"
-                  titleId="page-stablecoins-accordion-borrow-requirement-1"
-                  descId="page-stablecoins-accordion-borrow-requirement-1-description"
-                />
-                <StepBox
-                  to="/get-eth/"
-                  titleId="page-stablecoins-accordion-borrow-requirement-2"
-                  descId="page-stablecoins-accordion-borrow-requirement-2-description"
-                />
-              </StepBoxContainer>
-              <SectionTitle>
-                <Translation id="page-stablecoins-accordion-borrow-crypto-collateral" />
-              </SectionTitle>
-              <p>
-                <Translation id="page-stablecoins-accordion-borrow-crypto-collateral-copy" />{" "}
-                <Link to="#how">
-                  <Translation id="page-stablecoins-accordion-borrow-crypto-collateral-link" />
-                </Link>
-              </p>
-              <p>
-                <Translation id="page-stablecoins-accordion-borrow-crypto-collateral-copy-p2" />
-              </p>
-            </LeftColumnPanel>
-            <RightColumnPanel>
-              <SectionTitle>
-                <Translation id="page-stablecoins-accordion-borrow-places-title" />
-              </SectionTitle>
-              <p>
-                <Translation id="page-stablecoins-accordion-borrow-places-intro" />
-              </p>
-              <Box mb={8}>
-                <CardList content={cardListGroups.borrow} />
-              </Box>
-              <SectionTitle>
-                <Translation id="page-stablecoins-accordion-borrow-risks-title" />
-              </SectionTitle>
-              <p>
-                <Translation id="page-stablecoins-accordion-borrow-risks-copy" />{" "}
-                <Link to="/eth/">
-                  <Translation id="page-stablecoins-accordion-borrow-risks-link" />
-                </Link>
-              </p>
-            </RightColumnPanel>
-          </>
-        )}
+        <LeftColumnPanel>
+          <SectionTitle>
+            <Translation id="page-stablecoins-accordion-requirements" />
+          </SectionTitle>
+          <p>
+            <Translation id="page-stablecoins-accordion-borrow-requirements-description" />
+          </p>
+          <StepBoxContainer>
+            <StepBox
+              to="/wallets/"
+              titleId="page-stablecoins-accordion-borrow-requirement-1"
+              descId="page-stablecoins-accordion-borrow-requirement-1-description"
+            />
+            <StepBox
+              to="/get-eth/"
+              titleId="page-stablecoins-accordion-borrow-requirement-2"
+              descId="page-stablecoins-accordion-borrow-requirement-2-description"
+            />
+          </StepBoxContainer>
+          <SectionTitle>
+            <Translation id="page-stablecoins-accordion-borrow-crypto-collateral" />
+          </SectionTitle>
+          <p>
+            <Translation id="page-stablecoins-accordion-borrow-crypto-collateral-copy" />{" "}
+            <Link to="#how">
+              <Translation id="page-stablecoins-accordion-borrow-crypto-collateral-link" />
+            </Link>
+          </p>
+          <p>
+            <Translation id="page-stablecoins-accordion-borrow-crypto-collateral-copy-p2" />
+          </p>
+        </LeftColumnPanel>
+        <RightColumnPanel>
+          <SectionTitle>
+            <Translation id="page-stablecoins-accordion-borrow-places-title" />
+          </SectionTitle>
+          <p>
+            <Translation id="page-stablecoins-accordion-borrow-places-intro" />
+          </p>
+          <Box mb={8}>
+            <CardList content={cardListGroups.borrow} />
+          </Box>
+          <SectionTitle>
+            <Translation id="page-stablecoins-accordion-borrow-risks-title" />
+          </SectionTitle>
+          <p>
+            <Translation id="page-stablecoins-accordion-borrow-risks-copy" />{" "}
+            <Link to="/eth/">
+              <Translation id="page-stablecoins-accordion-borrow-risks-link" />
+            </Link>
+          </p>
+        </RightColumnPanel>
       </AccordionCustomItem>
     </Accordion>
   )
