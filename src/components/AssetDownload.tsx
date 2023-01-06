@@ -6,7 +6,7 @@ import Translation from "../components/Translation"
 import ButtonLink from "./ButtonLink"
 import Emoji from "./OldEmoji"
 import Link from "./Link"
-import { Box, Container, Img } from "@chakra-ui/react"
+import { Box, Container, Img, Center } from "@chakra-ui/react"
 
 import { getImage, getSrc, ImageDataLike } from "../utils/image"
 
@@ -34,15 +34,6 @@ interface IPropsWithImage extends IPropsBase {
 }
 
 export type IProps = IPropsWithImage | IPropsWithSVG
-
-const ImageContainer = styled.div`
-  border: 1px solid ${(props) => props.theme.colors.white700};
-  width: 100%;
-  padding: 2rem;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-`
 
 const ArtistSubtitle = styled.div`
   display: flex;
@@ -104,7 +95,7 @@ const AssetDownload: React.FC<IProps> = ({
       <Box>
         {children && <ImageContainer>{children}</ImageContainer>}
         {!children && (
-          <ImageContainer>
+          <Center border="1px" borderColor="white.700" padding={8}>
             {Svg && <Svg alt={alt} />}
             {image && (
               <Img
@@ -115,7 +106,7 @@ const AssetDownload: React.FC<IProps> = ({
                 alignSelf="center"
               />
             )}
-          </ImageContainer>
+          </Center>
         )}
         {artistName && (
           <Caption>
