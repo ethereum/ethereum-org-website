@@ -6,7 +6,7 @@ import Translation from "../components/Translation"
 import ButtonLink from "./ButtonLink"
 import Emoji from "./OldEmoji"
 import Link from "./Link"
-import { Box, Container, Img, Center } from "@chakra-ui/react"
+import { Box, Container, Img, Center, Heading } from "@chakra-ui/react"
 
 import { getImage, getSrc, ImageDataLike } from "../utils/image"
 
@@ -91,7 +91,9 @@ const AssetDownload: React.FC<IProps> = ({
       opacity={(props) => (props.shouldHide ? 0 : 1)}
       shouldHide={shouldHide}
     >
-      <h4>{title}</h4>
+      <Heading as="h4" size="md" fontWeight="500">
+        {title}
+      </Heading>
       <Box>
         {children && <ImageContainer>{children}</ImageContainer>}
         {!children && (
