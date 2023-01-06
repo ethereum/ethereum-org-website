@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React from "react"
 import styled from "@emotion/styled"
 import { useTheme } from "@emotion/react"
 
@@ -7,10 +7,11 @@ import Translation from "../Translation"
 
 import { EventOptions, trackCustomEvent } from "../../utils/matomo"
 import { TranslationKey } from "../../utils/translations"
-
-import SoloGlyph from "../../assets/staking/staking-glyph-cpu.svg"
-import SaasGlyph from "../../assets/staking/staking-glyph-cloud.svg"
-import PoolGlyph from "../../assets/staking/staking-glyph-token-wallet.svg"
+import {
+  StakingGlyphCloudIcon,
+  StakingGlyphCPUIcon,
+  StakingGlyphTokenWalletIcon,
+} from "../icons/staking"
 
 const GradientContainer = styled.div`
   display: flex;
@@ -50,17 +51,17 @@ const Glyph = styled.div`
   max-height: 3rem;
 `
 
-const StyledSoloGlyph = styled(SoloGlyph)`
+const StyledSoloGlyph = styled(StakingGlyphCPUIcon)`
   path {
     fill: ${({ theme }) => theme.colors.stakingGold};
   }
 `
-const StyledSaasGlyph = styled(SaasGlyph)`
+const StyledSaasGlyph = styled(StakingGlyphCloudIcon)`
   path {
     fill: ${({ theme }) => theme.colors.stakingGreen};
   }
 `
-const StyledPoolGlyph = styled(PoolGlyph)`
+const StyledPoolGlyph = styled(StakingGlyphTokenWalletIcon)`
   path {
     fill: ${({ theme }) => theme.colors.stakingBlue};
   }

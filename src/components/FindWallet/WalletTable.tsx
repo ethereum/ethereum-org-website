@@ -1,8 +1,9 @@
 // Libraries
-import React, { useState, SVGProps } from "react"
+import React, { ReactNode, useState } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { keyframes } from "@emotion/react"
 import styled from "@emotion/styled"
+import { Icon as ChakraIcon } from "@chakra-ui/react"
 
 // Components
 import ButtonLink from "../ButtonLink"
@@ -15,26 +16,30 @@ import Tooltip from "../Tooltip"
 import walletFilterData from "../../data/wallets/wallet-filters"
 
 // Icons
-import BuyCrypto from "../../assets/wallets/buy_crypto.svg"
-import ENSSupport from "../../assets/wallets/ens_support.svg"
-import ERC20Support from "../../assets/wallets/erc_20_support.svg"
-import GasFeeCustomization from "../../assets/wallets/gas_fee_customization.svg"
-import HardwareSupport from "../../assets/wallets/hardware_support.svg"
-import Layer2 from "../../assets/wallets/layer_2.svg"
-import NFTSupport from "../../assets/wallets/nft_support.svg"
-import NonCustodial from "../../assets/wallets/non_custodial.svg"
-import OpenSource from "../../assets/wallets/open_source.svg"
-import RPCImporting from "../../assets/wallets/rpc_importing.svg"
-import Staking from "../../assets/wallets/staking.svg"
-import WalletConnect from "../../assets/wallets/walletconnect.svg"
-import ConnectDapps from "../../assets/wallets/connect_dapps.svg"
-import WithdrawCrypto from "../../assets/wallets/withdraw_crypto.svg"
-import Multisig from "../../assets/wallets/multisig.svg"
-import SocialRecover from "../../assets/wallets/social_recover.svg"
-import Swap from "../../assets/wallets/swap.svg"
-import Eip1559 from "../../assets/wallets/eip1559.svg"
-import Warning from "../../assets/staking/warning-product-glyph.svg"
-import GreenCheck from "../../assets/staking/green-check-product-glyph.svg"
+import {
+  GreenCheckProductGlyphIcon,
+  WarningProductGlyphIcon,
+} from "../icons/staking"
+import {
+  BuyCryptoIcon,
+  ConnectDappsIcon,
+  EIP1559Icon,
+  ENSSupportIcon,
+  ERC20SupportIcon,
+  GasFeeCustomizationIcon,
+  HardwareSupportIcon,
+  Layer2Icon,
+  MultisigIcon,
+  NFTSupportIcon,
+  NonCustodialIcon,
+  OpenSourceWalletIcon,
+  RPCImportingIcon,
+  SocialRecoverIcon,
+  StakingIcon,
+  SwapIcon,
+  WalletConnectIcon,
+  WithdrawCryptoIcon,
+} from "../icons/wallets"
 
 // Utils
 import { trackCustomEvent } from "../../utils/matomo"
@@ -461,7 +466,7 @@ export interface DropdownOption {
   value: string
   filterKey: string
   category: string
-  icon: SVGProps<SVGElement>
+  icon: ReactNode
 }
 
 type ColumnClassName = "firstCol" | "secondCol" | "thirdCol"
@@ -473,126 +478,126 @@ const featureDropdownItems: Array<DropdownOption> = [
     value: "Open source",
     filterKey: "open_source",
     category: "security",
-    icon: <OpenSource />,
+    icon: <OpenSourceWalletIcon />,
   },
   {
     label: "Self custody",
     value: "Self custody",
     filterKey: "non_custodial",
     category: "security",
-    icon: <NonCustodial />,
+    icon: <NonCustodialIcon />,
   },
   {
     label: "Hardware wallet support",
     value: "Hardware wallet support",
     filterKey: "hardware_support",
     category: "feature",
-    icon: <HardwareSupport />,
+    icon: <HardwareSupportIcon />,
   },
   {
     label: "WalletConnect",
     value: "WalletConnect",
     filterKey: "walletconnect",
     category: "feature",
-    icon: <WalletConnect />,
+    icon: <WalletConnectIcon />,
   },
   {
     label: "RPC importing",
     value: "RPC importing",
     filterKey: "rpc_importing",
     category: "feature",
-    icon: <RPCImporting />,
+    icon: <RPCImportingIcon />,
   },
   {
     label: "NFT support",
     value: "NFT support",
     filterKey: "nft_support",
     category: "feature",
-    icon: <NFTSupport />,
+    icon: <NFTSupportIcon />,
   },
   {
     label: "Connect to dapps",
     value: "Connect to dapps",
     filterKey: "connect_to_dapps",
     category: "feature",
-    icon: <ConnectDapps />,
+    icon: <ConnectDappsIcon />,
   },
   {
     label: "Staking",
     value: "Staking",
     filterKey: "staking",
     category: "feature",
-    icon: <Staking />,
+    icon: <StakingIcon />,
   },
   {
     label: "Swaps",
     value: "Swaps",
     filterKey: "swaps",
     category: "feature",
-    icon: <Swap />,
+    icon: <SwapIcon />,
   },
   {
     label: "Layer 2",
     value: "Layer 2",
     filterKey: "layer_2",
     category: "feature",
-    icon: <Layer2 />,
+    icon: <Layer2Icon />,
   },
   {
     label: "Gas fee customization",
     value: "Gas fee customization",
     filterKey: "gas_fee_customization",
     category: "feature",
-    icon: <GasFeeCustomization />,
+    icon: <GasFeeCustomizationIcon />,
   },
   {
     label: "ENS support",
     value: "ENS support",
     filterKey: "ens_support",
     category: "feature",
-    icon: <ENSSupport />,
+    icon: <ENSSupportIcon />,
   },
   {
     label: "Token importing",
     value: "Token importing",
     filterKey: "erc_20_support",
     category: "feature",
-    icon: <ERC20Support />,
+    icon: <ERC20SupportIcon />,
   },
   {
     label: "Fee optimization",
     value: "Fee optimization",
     filterKey: "eip_1559_support",
     category: "feature",
-    icon: <Eip1559 />,
+    icon: <EIP1559Icon />,
   },
   {
     label: "Buy crypto",
     value: "Buy crypto",
     filterKey: "buy_crypto",
     category: "trade_and_buy",
-    icon: <BuyCrypto />,
+    icon: <BuyCryptoIcon />,
   },
   {
     label: "Sell for fiat",
     value: "Sell for fiat",
     filterKey: "withdraw_crypto",
     category: "trade_and_buy",
-    icon: <WithdrawCrypto />,
+    icon: <WithdrawCryptoIcon />,
   },
   {
     label: "Multisig",
     value: "Multisig",
     filterKey: "multisig",
     category: "smart_contract",
-    icon: <Multisig />,
+    icon: <MultisigIcon />,
   },
   {
     label: "Social recovery",
     value: "Social recovery",
     filterKey: "social_recovery",
     category: "smart_contract",
-    icon: <SocialRecover />,
+    icon: <SocialRecoverIcon />,
   },
 ]
 
@@ -908,27 +913,27 @@ const WalletTable = ({ data, filters, walletData }) => {
               <td>
                 <FlexInfoCenter className={firstCol}>
                   {wallet[firstFeatureSelect.filterKey!] ? (
-                    <GreenCheck />
+                    <GreenCheckProductGlyphIcon />
                   ) : (
-                    <Warning />
+                    <WarningProductGlyphIcon />
                   )}
                 </FlexInfoCenter>
               </td>
               <td>
                 <FlexInfoCenter className={secondCol}>
                   {wallet[secondFeatureSelect.filterKey!] ? (
-                    <GreenCheck />
+                    <GreenCheckProductGlyphIcon />
                   ) : (
-                    <Warning />
+                    <WarningProductGlyphIcon />
                   )}
                 </FlexInfoCenter>
               </td>
               <td>
                 <FlexInfoCenter className={thirdCol}>
                   {wallet[thirdFeatureSelect.filterKey!] ? (
-                    <GreenCheck />
+                    <GreenCheckProductGlyphIcon />
                   ) : (
-                    <Warning />
+                    <WarningProductGlyphIcon />
                   )}
                 </FlexInfoCenter>
               </td>

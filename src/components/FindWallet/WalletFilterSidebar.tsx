@@ -5,34 +5,36 @@ import styled from "@emotion/styled"
 // Components
 import Checkbox from "../Checkbox"
 import Icon from "../Icon"
-import { Text } from "@chakra-ui/react"
+import { Text, Icon as ChakraIcon } from "@chakra-ui/react"
 
 // Data
 import walletFilterData from "../../data/wallets/wallet-filters"
 
 // Icons
-import Browser from "../../assets/wallets/browser.svg"
-import BuyCrypto from "../../assets/wallets/buy_crypto.svg"
-import Desktop from "../../assets/wallets/desktop.svg"
-import ENSSupport from "../../assets/wallets/ens_support.svg"
-import ERC20Support from "../../assets/wallets/erc_20_support.svg"
-import GasFeeCustomization from "../../assets/wallets/gas_fee_customization.svg"
-import HardwareSupport from "../../assets/wallets/hardware_support.svg"
-import Hardware from "../../assets/wallets/hardware.svg"
-import Layer2 from "../../assets/wallets/layer_2.svg"
-import Mobile from "../../assets/wallets/mobile.svg"
-import NFTSupport from "../../assets/wallets/nft_support.svg"
-import NonCustodial from "../../assets/wallets/non_custodial.svg"
-import OpenSource from "../../assets/wallets/open_source.svg"
-import RPCImporting from "../../assets/wallets/rpc_importing.svg"
-import Staking from "../../assets/wallets/staking.svg"
-import WalletConnect from "../../assets/wallets/walletconnect.svg"
-import ConnectDapps from "../../assets/wallets/connect_dapps.svg"
-import WithdrawCrypto from "../../assets/wallets/withdraw_crypto.svg"
-import Multisig from "../../assets/wallets/multisig.svg"
-import SocialRecover from "../../assets/wallets/social_recover.svg"
-import Swap from "../../assets/wallets/swap.svg"
-import Eip1559 from "../../assets/wallets/eip1559.svg"
+import {
+  BrowserIcon,
+  BuyCryptoIcon,
+  ConnectDappsIcon,
+  DesktopIcon,
+  EIP1559Icon,
+  ENSSupportIcon,
+  ERC20SupportIcon,
+  GasFeeCustomizationIcon,
+  HardwareIcon,
+  HardwareSupportIcon,
+  Layer2Icon,
+  MobileIcon,
+  MultisigIcon,
+  NFTSupportIcon,
+  NonCustodialIcon,
+  OpenSourceWalletIcon,
+  RPCImportingIcon,
+  SocialRecoverIcon,
+  StakingIcon,
+  SwapIcon,
+  WalletConnectIcon,
+  WithdrawCryptoIcon,
+} from "../icons/wallets"
 
 // Utils
 import { trackCustomEvent } from "../../utils/matomo"
@@ -101,18 +103,6 @@ const OptionGrid = styled.div`
   }
 `
 
-const IconContainer = styled.div`
-  svg {
-    width: 28px;
-    height: 28px;
-    margin-top: 8px;
-
-    path {
-      fill: ${(props) => props.theme.colors.text};
-    }
-  }
-`
-
 const OptionDescription = styled.p`
   font-size: 0.9rem;
   line-height: 1.1rem;
@@ -133,6 +123,24 @@ const ToggleIcon = styled(Icon)`
 `
 
 // Types
+type FilterOptionType = {
+  title: string
+  open: boolean
+  items: Array<{
+    title: string
+    icon: typeof ChakraIcon
+    description: string
+    filterKey: string | undefined
+    showOptions: boolean | undefined
+    options:
+      | Array<{
+          name: string
+          filterKey?: string
+          inputType: "checkbox"
+        }>
+      | []
+  }>
+}
 
 const WalletFilterSidebar = ({
   resetWalletFilter,
@@ -140,14 +148,14 @@ const WalletFilterSidebar = ({
   updateFilterOption,
   updateFilterOptions,
 }) => {
-  const [filterOptions, setFilterOptions] = useState([
+  const [filterOptions, setFilterOptions] = useState<FilterOptionType[]>([
     {
       title: "Device",
       open: true,
       items: [
         {
           title: walletFilterData.mobile.title,
-          icon: <Mobile />,
+          icon: MobileIcon,
           description: walletFilterData.mobile.description,
           filterKey: walletFilterData.mobile.filterKey,
           showOptions: filters.android || filters.ios ? true : false,
@@ -166,7 +174,7 @@ const WalletFilterSidebar = ({
         },
         {
           title: walletFilterData.desktop.title,
-          icon: <Desktop />,
+          icon: DesktopIcon,
           description: walletFilterData.desktop.description,
           filterKey: walletFilterData.desktop.filterKey,
           showOptions:
@@ -191,7 +199,7 @@ const WalletFilterSidebar = ({
         },
         {
           title: walletFilterData.browser.title,
-          icon: <Browser />,
+          icon: BrowserIcon,
           description: walletFilterData.browser.description,
           filterKey: walletFilterData.browser.filterKey,
           showOptions: filters.firefox || filters.chrome ? true : false,
@@ -210,7 +218,7 @@ const WalletFilterSidebar = ({
         },
         {
           title: walletFilterData.hardware.title,
-          icon: <Hardware />,
+          icon: HardwareIcon,
           description: walletFilterData.hardware.description,
           filterKey: walletFilterData.hardware.filterKey,
           showOptions: undefined,
@@ -224,7 +232,7 @@ const WalletFilterSidebar = ({
       items: [
         {
           title: walletFilterData.open_source.title,
-          icon: <OpenSource />,
+          icon: OpenSourceWalletIcon,
           description: walletFilterData.open_source.description,
           filterKey: walletFilterData.open_source.filterKey,
           showOptions: undefined,
@@ -232,7 +240,7 @@ const WalletFilterSidebar = ({
         },
         {
           title: walletFilterData.non_custodial.title,
-          icon: <NonCustodial />,
+          icon: NonCustodialIcon,
           description: walletFilterData.non_custodial.description,
           filterKey: walletFilterData.non_custodial.filterKey,
           showOptions: undefined,
@@ -246,7 +254,7 @@ const WalletFilterSidebar = ({
       items: [
         {
           title: walletFilterData.hardware_support.title,
-          icon: <HardwareSupport />,
+          icon: HardwareSupportIcon,
           description: walletFilterData.hardware_support.description,
           filterKey: walletFilterData.hardware_support.filterKey,
           showOptions: undefined,
@@ -254,7 +262,7 @@ const WalletFilterSidebar = ({
         },
         {
           title: walletFilterData.walletconnect.title,
-          icon: <WalletConnect />,
+          icon: WalletConnectIcon,
           description: walletFilterData.walletconnect.description,
           filterKey: walletFilterData.walletconnect.filterKey,
           showOptions: undefined,
@@ -262,7 +270,7 @@ const WalletFilterSidebar = ({
         },
         {
           title: walletFilterData.rpc_importing.title,
-          icon: <RPCImporting />,
+          icon: RPCImportingIcon,
           description: walletFilterData.rpc_importing.description,
           filterKey: walletFilterData.rpc_importing.filterKey,
           showOptions: undefined,
@@ -270,7 +278,7 @@ const WalletFilterSidebar = ({
         },
         {
           title: walletFilterData.nft_support.title,
-          icon: <NFTSupport />,
+          icon: NFTSupportIcon,
           description: walletFilterData.nft_support.description,
           filterKey: walletFilterData.nft_support.filterKey,
           showOptions: undefined,
@@ -278,7 +286,7 @@ const WalletFilterSidebar = ({
         },
         {
           title: walletFilterData.connect_to_dapps.title,
-          icon: <ConnectDapps />,
+          icon: ConnectDappsIcon,
           description: walletFilterData.connect_to_dapps.description,
           filterKey: walletFilterData.connect_to_dapps.filterKey,
           showOptions: undefined,
@@ -286,7 +294,7 @@ const WalletFilterSidebar = ({
         },
         {
           title: walletFilterData.staking.title,
-          icon: <Staking />,
+          icon: StakingIcon,
           description: walletFilterData.staking.description,
           filterKey: walletFilterData.staking.filterKey,
           showOptions: undefined,
@@ -294,7 +302,7 @@ const WalletFilterSidebar = ({
         },
         {
           title: walletFilterData.swaps.title,
-          icon: <Swap />,
+          icon: SwapIcon,
           description: walletFilterData.swaps.description,
           filterKey: walletFilterData.swaps.filterKey,
           showOptions: undefined,
@@ -302,7 +310,7 @@ const WalletFilterSidebar = ({
         },
         {
           title: walletFilterData.layer_2.title,
-          icon: <Layer2 />,
+          icon: Layer2Icon,
           description: walletFilterData.layer_2.description,
           filterKey: walletFilterData.layer_2.filterKey,
           showOptions: undefined,
@@ -310,7 +318,7 @@ const WalletFilterSidebar = ({
         },
         {
           title: walletFilterData.gas_fee_customization.title,
-          icon: <GasFeeCustomization />,
+          icon: GasFeeCustomizationIcon,
           description: walletFilterData.gas_fee_customization.description,
           filterKey: walletFilterData.gas_fee_customization.filterKey,
           showOptions: undefined,
@@ -318,7 +326,7 @@ const WalletFilterSidebar = ({
         },
         {
           title: walletFilterData.ens_support.title,
-          icon: <ENSSupport />,
+          icon: ENSSupportIcon,
           description: walletFilterData.ens_support.description,
           filterKey: walletFilterData.ens_support.filterKey,
           showOptions: undefined,
@@ -326,7 +334,7 @@ const WalletFilterSidebar = ({
         },
         {
           title: walletFilterData.erc_20_support.title,
-          icon: <ERC20Support />,
+          icon: ERC20SupportIcon,
           description: walletFilterData.erc_20_support.description,
           filterKey: walletFilterData.erc_20_support.filterKey,
           showOptions: undefined,
@@ -334,7 +342,7 @@ const WalletFilterSidebar = ({
         },
         {
           title: walletFilterData.eip_1559_support.title,
-          icon: <Eip1559 />,
+          icon: EIP1559Icon,
           description: walletFilterData.eip_1559_support.description,
           filterKey: walletFilterData.eip_1559_support.filterKey,
           showOptions: undefined,
@@ -348,7 +356,7 @@ const WalletFilterSidebar = ({
       items: [
         {
           title: walletFilterData.buy_crypto.title,
-          icon: <BuyCrypto />,
+          icon: BuyCryptoIcon,
           description: walletFilterData.buy_crypto.description,
           filterKey: walletFilterData.buy_crypto.filterKey,
           showOptions: undefined,
@@ -356,7 +364,7 @@ const WalletFilterSidebar = ({
         },
         {
           title: walletFilterData.withdraw_crypto.title,
-          icon: <WithdrawCrypto />,
+          icon: WithdrawCryptoIcon,
           description: walletFilterData.withdraw_crypto.description,
           filterKey: walletFilterData.withdraw_crypto.filterKey,
           showOptions: undefined,
@@ -370,7 +378,7 @@ const WalletFilterSidebar = ({
       items: [
         {
           title: walletFilterData.multisig.title,
-          icon: <Multisig />,
+          icon: MultisigIcon,
           description: walletFilterData.multisig.description,
           filterKey: walletFilterData.multisig.filterKey,
           showOptions: undefined,
@@ -378,7 +386,7 @@ const WalletFilterSidebar = ({
         },
         {
           title: walletFilterData.social_recovery.title,
-          icon: <SocialRecover />,
+          icon: SocialRecoverIcon,
           description: walletFilterData.social_recovery.description,
           filterKey: walletFilterData.social_recovery.filterKey,
           showOptions: undefined,
@@ -443,6 +451,7 @@ const WalletFilterSidebar = ({
             </Header>
             {filterOption.open &&
               filterOption.items.map((item, itemidx) => {
+                const LabelIcon = item.icon
                 return (
                   <FilterOption>
                     <OptionGrid
@@ -470,9 +479,12 @@ const WalletFilterSidebar = ({
                             }
                       }
                     >
-                      <IconContainer aria-hidden="true">
-                        {item.icon}
-                      </IconContainer>
+                      <LabelIcon
+                        boxSize={7}
+                        mt={0.5}
+                        color="text"
+                        aria-hidden
+                      />
                       <p>{item.title}</p>
                       <div>
                         {item.filterKey && (
