@@ -869,7 +869,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               </h3>
               <ul>
                 <li>
-                  <Link to="https://podcast.ethhub.io/">Into the Ether</Link>{" "}
+                  <Link to="https://open.spotify.com/show/2CNyWXgKVxTqTlmLhc8A5m?si=810b2aed1666408e">Into the Ether</Link>{" "}
                   <i>
                     <Translation id="ethhub-description" />
                   </i>
