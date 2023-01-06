@@ -6,6 +6,7 @@ import Translation from "../components/Translation"
 import ButtonLink from "./ButtonLink"
 import Emoji from "./OldEmoji"
 import Link from "./Link"
+import { Box, Flex } from "@chakra-ui/react"
 
 import { getImage, getSrc, ImageDataLike } from "../utils/image"
 
@@ -34,6 +35,7 @@ interface IPropsWithImage extends IPropsBase {
 
 export type IProps = IPropsWithImage | IPropsWithSVG
 
+/*
 const Container = styled.div<IHide>`
   flex: 1 1 45%;
   display: flex;
@@ -45,6 +47,7 @@ const Container = styled.div<IHide>`
     display: ${(props) => (props.shouldHide ? `none` : `flex`)};
   }
 `
+*/
 
 const Image = styled(GatsbyImage)`
   align-self: center;
@@ -102,9 +105,17 @@ const AssetDownload: React.FC<IProps> = ({
   const Svg = svg
 
   return (
-    <Container shouldHide={shouldHide}>
+    <Flex
+      display={{ l: (props) => (props.shouldHide ? `none` : `flex`) }}
+      flex="1 1 45%"
+      direction="column"
+      justify="space-between"
+      margin="4"
+      opacity={(props) => (props.shouldHide ? 0 : 1)}
+      shouldHide={shouldHide}
+    >
       <h4>{title}</h4>
-      <div>
+      <Box>
         {children && <ImageContainer>{children}</ImageContainer>}
         {!children && (
           <ImageContainer>
@@ -122,7 +133,7 @@ const AssetDownload: React.FC<IProps> = ({
             {!artistUrl && <span>{artistName}</span>}
           </Caption>
         )}
-      </div>
+      </Box>
       <ButtonContainer>
         {!Svg && (
           <ButtonLink to={downloadUrl}>
@@ -130,7 +141,7 @@ const AssetDownload: React.FC<IProps> = ({
           </ButtonLink>
         )}
       </ButtonContainer>
-    </Container>
+    </Flex>
   )
 }
 
