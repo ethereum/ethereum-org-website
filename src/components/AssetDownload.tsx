@@ -4,9 +4,9 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 import Translation from "../components/Translation"
 import ButtonLink from "./ButtonLink"
-import Emoji from "./OldEmoji"
+import Emoji from "./Emoji"
 import Link from "./Link"
-import { Box, Container, Img, Center, Heading } from "@chakra-ui/react"
+import { Box, Flex, Container, Img, Center, Heading } from "@chakra-ui/react"
 
 import { getImage, getSrc, ImageDataLike } from "../utils/image"
 
@@ -40,19 +40,6 @@ const ArtistSubtitle = styled.div`
   font-size: ${(props) => props.theme.fontSizes.m};
   color: ${(props) => props.theme.colors.text300};
   margin-right: 0.5rem;
-`
-
-const Caption = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 1rem;
-  width: 100%;
-  background: ${(props) => props.theme.colors.background};
-  border-left: 1px solid ${(props) => props.theme.colors.white700};
-  border-bottom: 1px solid ${(props) => props.theme.colors.white700};
-  border-right: 1px solid ${(props) => props.theme.colors.white700};
-  border-radius: 0px 0px 4px 4px;
-  padding: 0.5rem 1rem;
 `
 
 const ButtonContainer = styled.div`
@@ -111,14 +98,21 @@ const AssetDownload: React.FC<IProps> = ({
           </Center>
         )}
         {artistName && (
-          <Caption>
+          <Flex
+            marginBottom={4}
+            border="1px"
+            borderTop="none"
+            borderColor="white.700"
+            padding="0.5rem 1rem"
+            borderRadius="0 0 4px 4px"
+          >
             <ArtistSubtitle>
-              <Emoji text=":artist_palette:" mr={`0.5em`} />
+              <Emoji text=":artist_palette:" mr={2} />
               <Translation id="page-assets-download-artist" />
             </ArtistSubtitle>
             {artistUrl && <Link to={artistUrl}>{artistName}</Link>}
             {!artistUrl && <span>{artistName}</span>}
-          </Caption>
+          </Flex>
         )}
       </Box>
       <ButtonContainer>
