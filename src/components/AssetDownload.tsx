@@ -35,13 +35,6 @@ interface IPropsWithImage extends IPropsBase {
 
 export type IProps = IPropsWithImage | IPropsWithSVG
 
-const ArtistSubtitle = styled.div`
-  display: flex;
-  font-size: ${(props) => props.theme.fontSizes.m};
-  color: ${(props) => props.theme.colors.text300};
-  margin-right: 0.5rem;
-`
-
 const ButtonContainer = styled.div`
   margin-top: 1rem;
 `
@@ -76,7 +69,7 @@ const AssetDownload: React.FC<IProps> = ({
       margin="4"
       padding="0"
       opacity={(props) => (props.shouldHide ? 0 : 1)}
-      shouldHide={shouldHide}
+      shouldhide={shouldHide}
     >
       <Heading as="h4" size="md" fontWeight="500">
         {title}
@@ -106,10 +99,10 @@ const AssetDownload: React.FC<IProps> = ({
             padding="0.5rem 1rem"
             borderRadius="0 0 4px 4px"
           >
-            <ArtistSubtitle>
-              <Emoji text=":artist_palette:" mr={2} />
+            <Flex mr={2} fontSize="md" textColor="gray.300">
+              <Emoji text=":artist_palette:" mr={2} fontSize="2xl" />
               <Translation id="page-assets-download-artist" />
-            </ArtistSubtitle>
+            </Flex>
             {artistUrl && <Link to={artistUrl}>{artistName}</Link>}
             {!artistUrl && <span>{artistName}</span>}
           </Flex>
