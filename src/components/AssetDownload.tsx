@@ -1,12 +1,20 @@
 import React from "react"
 import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
+import {
+  Box,
+  Flex,
+  Container,
+  Img,
+  Center,
+  Heading,
+  Text,
+} from "@chakra-ui/react"
 
 import Translation from "../components/Translation"
 import ButtonLink from "./ButtonLink"
 import Emoji from "./Emoji"
 import Link from "./Link"
-import { Box, Flex, Container, Img, Center, Heading } from "@chakra-ui/react"
 
 import { getImage, getSrc, ImageDataLike } from "../utils/image"
 
@@ -34,10 +42,6 @@ interface IPropsWithImage extends IPropsBase {
 }
 
 export type IProps = IPropsWithImage | IPropsWithSVG
-
-const ButtonContainer = styled.div`
-  margin-top: 1rem;
-`
 
 // TODO add ability to download SVGs
 const AssetDownload: React.FC<IProps> = ({
@@ -104,17 +108,17 @@ const AssetDownload: React.FC<IProps> = ({
               <Translation id="page-assets-download-artist" />
             </Flex>
             {artistUrl && <Link to={artistUrl}>{artistName}</Link>}
-            {!artistUrl && <span>{artistName}</span>}
+            {!artistUrl && <Text m={0}>{artistName}</Text>}
           </Flex>
         )}
       </Box>
-      <ButtonContainer>
+      <Container mt={4} p={0} maxW="none">
         {!Svg && (
           <ButtonLink to={downloadUrl}>
             <Translation id="page-assets-download-download" />
           </ButtonLink>
         )}
-      </ButtonContainer>
+      </Container>
     </Container>
   )
 }
