@@ -82,7 +82,18 @@ const AssetDownload: React.FC<IProps> = ({
         {title}
       </Heading>
       <Box>
-        {children && <ImageContainer>{children}</ImageContainer>}
+        {children && (
+          <Flex
+            border="1px"
+            borderColor="white700"
+            w="100%"
+            p={8}
+            textAlign="center"
+            justifyContent="center"
+          >
+            {children}
+          </Flex>
+        )}
         {!children && (
           <Center border="1px" borderColor="white700" p={8} w="100%">
             {Svg && <Svg alt={alt} />}
