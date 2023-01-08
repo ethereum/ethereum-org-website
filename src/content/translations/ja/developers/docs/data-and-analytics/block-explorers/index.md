@@ -127,7 +127,7 @@ sidebarDepth: 3
 
 一部のブロックデータは、イーサリアムのより包括的な健全性に関連します。
 
-- Total transations (合計トランザクション数) - イーサリアムの誕生以降のトランザクションの数
+- Total transactions (合計トランザクション数) - イーサリアムの誕生以降のトランザクションの数
 - Transactions per second (1 秒あたりのトランザクション数) - 1 秒以内に処理可能なトランザクションの数
 - ETH price (ETH 価格) - 1ETH の現在評価額
 - Total ETH supply (総 ETH 供給量) - 流通している ETH の数。ETH は、ブロックが作成されるごとにブロック報酬というかたちで新規に作成される
