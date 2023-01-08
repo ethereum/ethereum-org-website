@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 import {
   Box,
@@ -63,32 +62,36 @@ const AssetDownload: React.FC<IProps> = ({
   return (
     <Container
       display={{
-        base: "flex",
-        lg: `${(props) => (props.shouldHide ? `none` : `flex`)}`,
+        base: shouldHide ? "none" : "flex",
+        lg: "flex",
       }}
-      maxWidth="100%"
+      maxW="100%"
+      minW="170px"
       flex="1 1 45%"
       flexDirection="column"
       justifyContent="space-between"
       margin="4"
-      padding="0"
-      opacity={(props) => (props.shouldHide ? 0 : 1)}
-      shouldhide={shouldHide}
+      p={0}
+      opacity={shouldHide ? 0 : 1}
     >
-      <Heading as="h4" size="md" fontWeight="500">
+      <Heading
+        as="h4"
+        fontSize={{ base: "1rem", md: "1.25rem" }}
+        fontWeight="500"
+      >
         {title}
       </Heading>
       <Box>
         {children && <ImageContainer>{children}</ImageContainer>}
         {!children && (
-          <Center border="1px" borderColor="white.700" padding={8}>
+          <Center border="1px" borderColor="white700" p={8} w="100%">
             {Svg && <Svg alt={alt} />}
             {image && (
               <Img
                 as={GatsbyImage}
                 image={getImage(image)!}
                 alt={alt}
-                width="100%"
+                w="100%"
                 alignSelf="center"
               />
             )}
@@ -99,11 +102,11 @@ const AssetDownload: React.FC<IProps> = ({
             marginBottom={4}
             border="1px"
             borderTop="none"
-            borderColor="white.700"
-            padding="0.5rem 1rem"
+            borderColor="white700"
+            p="0.5rem 1rem"
             borderRadius="0 0 4px 4px"
           >
-            <Flex mr={2} fontSize="md" textColor="gray.300">
+            <Flex mr={2} fontSize="md" textColor="text300">
               <Emoji text=":artist_palette:" mr={2} fontSize="2xl" />
               <Translation id="page-assets-download-artist" />
             </Flex>
