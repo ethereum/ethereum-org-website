@@ -476,35 +476,55 @@ DEX の価格は正確であることが多く、これは市場の均衡を取�
 
 - **[OpenZeppelin コントラクト](https://docs.openzeppelin.com/contracts/4.x/)** - _コントラクトの所有権、アップグレード、アクセス制御、ガバナンス、一時停止機能など、管理機能を実装するためのコントラクトライブラリ。_
 
-### スマートコントラクトの既知の脆弱性・悪用事例の公開情報
+### スマートコントラクト監査サービス {#smart-contract-auditing-services}
 
-{#common-smart contract-vulnerabilities-and-exploits}
+- **[ConsenSys Diligence](https://consensys.net/diligence/)** - _ブロックチェーンエコシステム全体のプロジェクトについて、プロトコルがローンチに適した状態にあり、ユーザーを保護するように構築されていることを確認するスマートコントラクト監査サービス_
 
-- **[ConsenSys: スマートコントラクトの既知の攻撃](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _コントラクトの最重要な脆弱性を、ほとんどのケースでサンプルコード付きで初心者にもわかりやすく解説。_
+- **[CertiK](https://www.certik.com/)** - _スマートコントラクトとブロックチェーンネットワークに最先端の形式検証技術を使用する先駆的なブロックチェーンセキュリティ企業_
 
-- **[SWC レジストリ](https://swcregistry.io/)** - _イーサリアムスマートコントラクトに適用される共通脆弱性タイプ一覧 (CWE) アイテムの厳選リスト。_
+- **[Trail of Bits](https://www.trailofbits.com/)** - _セキュリティ研究と攻撃者のメンタリティを融合させ、リスクの低減とコードの堅牢化を図るサイバーセキュリティ企業_
 
-- **[Rekt](https://rekt.news/)** - _注目の暗号ハッキングやエクスプロイトを、詳細な事後分析レポートとともに定期的に更新して公開。_
+- **[PeckShield](https://peckshield.com/)** - _ブロックチェーンエコシステム全体のセキュリティ、プライバシー、ユーザビリティのための製品やサービスを提供するブロックチェーンセキュリティ企業_
+
+- **[QuantStamp](https://quantstamp.com/)** - _セキュリティおよびリスク評価サービスを通じて、ブロックチェーン技術の主流化を促進する監査サービス_
+
+- **[OpenZeppelin](https://www.openzeppelin.com/security-audits)** - _分散型システムのセキュリティ監査を提供するスマートコントラクトセキュリティ企業_
+
+- **[Runtime Verification](https://runtimeverification.com/)** - _スマートコントラクトと形式モデルを専門としたセキュリティ企業_
+
+### バグ報奨プログラムプラットフォーム {#bug-bounty-platforms}
+
+- **[Immunefi](https://immunefi.com/)** - _スマートコントラクトと DeFi プロジェクトのバグ報奨プログラムのプラットフォーム。セキュリティ研究者がコードをレビューし、脆弱性を開示し、報酬を得て、暗号資産の安全化を図る。_
+
+- **[HackerOne](https://www.hackerone.com/)** - _企業とペネトレーションテスターやサイバーセキュリティ研究者をつなぐ、脆弱性調整とバグ報奨プログラムのプラットフォーム_
+
+### 既知のスマートコントラクトの脆弱性とエクスプロイトの公開 {#common-smart-contract-vulnerabilities-and-exploits}
+
+- **[ConsenSys: スマートコントラクトの既知の攻撃](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _コントラクトの最も重要な脆弱性を、ほとんどのケースでサンプルコード付きで初心者にもわかりやすく解説_
+
+- **[SWC レジストリ](https://swcregistry.io/)** - _イーサリアムスマートコントラクトに該当する共通の脆弱性(CWE)項目の厳選リスト_
+
+- **[Rekt](https://rekt.news/)** - _注目の暗号ハッキングやエクスプロイトを、詳細な事後分析レポートとともに定期的に更新して公開_
 
 ### スマートコントラクトのセキュリティ学習課題 {#challenges-for-learning-smart-contract-security}
 
-- **[Awesome BlockSec CTF](https://github.com/blockthreat/blocksec-ctfs)** - _ブロックチェーンセキュリティの机上演習、課題、[Capture The Flag](https://www.webopedia.com/definitions/ctf-event/amp/)コンペやソリューション記事の厳選リスト。_
+- **[Awesome BlockSec CTF](https://github.com/blockthreat/blocksec-ctfs)** - _ブロックチェーンセキュリティの机上演習、課題、[Capture The Flag](https://www.webopedia.com/definitions/ctf-event/amp/)コンペやソリューション記事の厳選リスト_
 
-- **[Damn Vulnerable DeFi](https://www.damnvulnerabledefi.xyz/)** - _DeFi スマートコントラクトの攻撃的なセキュリティを学び、バグハンティングやセキュリティ監査のスキルを身につけるための机上演習。_
+- **[Damn Vulnerable DeFi](https://www.damnvulnerabledefi.xyz/)** - _DeFi スマートコントラクトの攻撃的なセキュリティを学び、バグハンティングやセキュリティ監査のスキルを身につけるための机上演習_
 
-- **[Ethernaut](https://ethernaut.openzeppelin.com/)** - _各レベルが「ハッキング」する必要のあるスマートコントラクトになっている、Web3/Solidity ベースの机上演習。_
+- **[Ethernaut](https://ethernaut.openzeppelin.com/)** - _各レベルでスマートコントラクトのハッキングが必要な Web3/Solidity ベースの机上演習_
 
-### スマートコントラクトのセキュリティを確保する最善の方法 {#smart-contract-security-best-practices}
+### スマートコントラクトのセキュリティのベストプラクティス {#smart-contract-security-best-practices}
 
-- **[ConsenSys: イーサリアムスマートコントラクトのセキュリティの最善の方法](https://consensys.github.io/smart-contract-best-practices/)** - _イーサリアムスマートコントラクトのセキュリティを確保するためのガイドラインの包括的なリスト。_
+- **[ConsenSys: イーサリアムスマートコントラクトのセキュリティのベストプラクティス](https://consensys.github.io/smart-contract-best-practices/)** - _イーサリアムスマートコントラクトのセキュリティのガイドラインの包括的リスト_
 
-- **[Nascent: シンプルセキュリティツールキット](https://github.com/nascentxyz/simple-security-toolkit)** - _スマートコントラクト開発のための、セキュリティに特化した実践的なガイドとチェックリストのコレクション。_
+- **[Nascent: シンプルセキュリティツールキット](https://github.com/nascentxyz/simple-security-toolkit)** - _スマートコントラクト開発のための、セキュリティを重視した実践的なガイドとチェックリスト集_
 
-- **[Solidity パターン](https://fravoll.github.io/solidity-patterns/)** - _スマート コントラクトプログラミング言語「Solidity」の安全なパターンと最善の方法に関して役立つ情報をまとめたもの。_
+- **[Solidity パターン](https://fravoll.github.io/solidity-patterns/)** - _スマート コントラクトプログラミング言語「Solidity」の安全なパターンとベストプラクティスの有用情報のまとめ_
 
-- **[Solidity ドキュメント: セキュリティ考慮事項](https://docs.soliditylang.org/en/v0.8.16/security-considerations.html)** - _Solidity で安全なスマートコントラクトを記述するためのガイドライン。_
+- **[Solidity ドキュメント: セキュリティ考慮事項](https://docs.soliditylang.org/en/v0.8.16/security-considerations.html)** - _Solidity で安全なスマートコントラクトを記述するためのガイドライン_
 
-- **[スマートコントラクトセキュリティ検証標準](https://github.com/securing/SCSVS)** - _デベロッパー、アーキテクト、セキュリティ評価者、ベンダー向けにスマートコントラクトのセキュリティを標準化するために作成された 14 部構成のチェックリスト。_
+- **[スマートコントラクトセキュリティ検証スタンダード](https://github.com/securing/SCSVS)** - _デベロッパー、アーキテクト、セキュリティ評価者、ベンダー向けにスマートコントラクトのセキュリティを標準化するために作成された 14 部構成のチェックリスト_
 
 ### スマートコントラクトのセキュリティに関するチュートリアル {#tutorials-on-smart-contract-security}
 
