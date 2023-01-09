@@ -70,7 +70,7 @@ const AssetDownload: React.FC<IProps> = ({
       flex="1 1 45%"
       flexDirection="column"
       justifyContent="space-between"
-      margin="4"
+      m="4"
       p={0}
       opacity={shouldHide ? 0 : 1}
     >
@@ -89,7 +89,7 @@ const AssetDownload: React.FC<IProps> = ({
             w="100%"
             p={8}
             textAlign="center"
-            justifyContent="center"
+            justify="center"
           >
             {children}
           </Flex>
@@ -110,7 +110,7 @@ const AssetDownload: React.FC<IProps> = ({
         )}
         {artistName && (
           <Flex
-            marginBottom={4}
+            mb={4}
             border="1px"
             borderTop="none"
             borderColor="white700"
