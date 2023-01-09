@@ -1,54 +1,59 @@
 ---
-title: Lanci djelića
-description: Saznajte više o lancima djelića – particijama mreže koje Ethereumu daju veći kapacitet transakcija i olakšavaju rad.
+title: Razdjeljivanje
+description: Saznajte više o razdjeljivanju – razbijanju i distribuciji podatkovnog opterećenja koje je potrebno kako bi Ethereum povećao kapacitet za transakcije i kako bi mu se olakšao rad.
 lang: hr
 template: upgrade
 image: ../../../../../assets/upgrades/newrings.png
-summaryPoint1: Razdjeljivanje je nadogradnja u više faza za poboljšanje skalabilnosti i kapaciteta Ethereuma.
-summaryPoint2: Lanci djelića šire opterećenje mreže na 64 nova lanca.
-summaryPoint3: Olakšavaju pokretanje čvora održavajući niske hardverske zahtjeve.
-summaryPoint4: Tehnički planovi uključuju rad na lancima djelića u „fazi 1” i potencijalno u „fazi 2”.
+summaryPoint1: Razdjeljivanje je nadogradnja u više faza s ciljem poboljašnja skalabilnosti i kapaciteta Ethereuma.
+summaryPoint2: Razdjeljivanje pruža sigurnu distribuciju zahtjeva za pohranu podataka kako bi objedinjavanje transakcija postalo još jeftinije i kako bi čvorovi lakše funkcionirali.
+summaryPoint3: Te faze omogućuju rješenja sloja 2 kako bi se ponudile niže cijene transakcija uz ulaganje sigurnosti Ethereuma.
+summaryPoint4: Ova je nadogradnja postala zanimljivija nakon što je Ethereum prešao na koncept dokaza uloga.
 ---
 
 <UpgradeStatus dateKey="page-upgrades-shards-date">
-    Lanci djelića trebali bi se isporučiti u 2023. godini, ovisno o tome koliko će brzo napredovati radovi nakon pokretanja nadogradnje <a href="/upgrades/beacon-chain/"> Beacon Chain </a>. Ti će djelići Ethereumu dati veći kapacitet za pohranu i pristup podacima, ali neće se upotrebljavati za izvršavanje koda. Pojedinosti o tome još se otkrivaju.
+    Razdjeljivanje se očekuje negdje u 2023. Djelići će Ethereumu dati veći kapacitet za pohranu i pristup podacima, ali se neće upotrebljavati za izvršavanje koda.
 </UpgradeStatus>
 
 ## Što je razdjeljivanje? {#what-is-sharding}
 
-Razdjeljivanje je postupak horizontalnog razdvajanja baze podataka radi raspodjele opterećenja – to je uobičajena koncepcija u računalnoj znanosti. U kontekstu Ethereuma, razdjeljivanje će smanjiti zagušenje mreže i povećati broj transakcija u sekundi stvaranjem novih lanaca, poznatih kao „djelići”.
+Razdjeljivanje je postupak horizontalnog razdvajanja baze podataka radi raspodjele opterećenja – to je uobičajena koncepcija u računalnoj znanosti. U kontekstu Ethereuma razdjeljivanje će djelovati u sinergiji s [objedinjavanjem transakcija sloja 2](/layer-2/) tako što će dijeliti opterećenje obrade velike količine podataka koji su potrebni za objedinjavanje transakcija cijele mreže. Tako će se nastaviti smanjivati zagušenje mreže i povećavati broj transakcija u sekundi.
 
-To je važno iz razloga koji nisu nadogradivost.
+To je važno iz razloga koji nisu skalabilnost.
 
 ## Značajke razdjeljivanja {#features-of-sharding}
 
 ### Svatko može pokrenuti čvor {#everyone-can-run-a-node}
 
-Razdjeljivanje je dobar način za skaliranje ako želite da stvari ne budu centralizirane jer je alternativa skaliranju povećanje veličine postojeće baze podataka. To bi Ethereum učinilo manje dostupnim mrežnim validatorima jer bi im trebala snažna i skupa računala. S lancima djelića, validatori trebaju pohraniti/pokrenuti podatke samo za djelić koji provjeravaju, a ne za cijelu mrežu (kao što se događa danas). To ubrzava stvari i drastično smanjuje hardverske zahtjeve.
+Razdjeljivanje je dobar način za skaliranje ako želite da stvari ne budu centralizirane jer je alternativa skaliranju povećanje veličine postojeće baze podataka. To bi Ethereum učinilo manje dostupnim mrežnim validatorima jer bi im trebala snažna i skupa računala. Uz razdjeljivanje validatori više neće morati pohranjivati sve te podatke, već će moći upotrebljavati podatkovne tehnike kojima će provjeriti jesu li podaci koje je mreža učinila dostupnim potpuni. To drastično smanjuje troškove pohrane podataka na sloju 1 jer smanjuje hardverske zahtjeve.
 
 ### Više mrežnog sudjelovanja {#more-network-participation}
 
-Razdjeljivanje će vam na kraju omogućiti pokretanje Ethereuma na osobnom prijenosnom računalu ili telefonu. Tako bi više ljudi trebalo biti u mogućnosti sudjelovati ili pokretati [klijente](/developers/docs/nodes-and-clients/) u razdijeljenom Ethereumu. To će povećati sigurnost, jer što je više mreža decentralizirana, to je manja površina napada.
+Razdjeljivanje će vam na kraju omogućiti pokretanje Ethereuma na osobnom prijenosnom računalu ili telefonu. Tako bi više ljudi trebalo biti u mogućnosti sudjelovati ili pokretati [ klijente](/developers/docs/nodes-and-clients/) u razdijeljenom Ethereumu. To će povećati sigurnost jer što je mreža decentralizirana, to je manja površina napada.
 
-S nižim hardverskim zahtjevima, razdjeljivanje će olakšati samostalno pokretanje [klijenata](/developers/docs/nodes-and-clients/), bez oslanjanja na bilo kakve posredničke usluge. A ako možete, razmislite o pokretanju više klijenata. To može pomoći zdravlju mreže daljnjim smanjenjem točaka kvara. [ Pokretanje Eth2 klijenta](/upgrades/get-involved/)
+S nižim hardverskim zahtjevima, razdjeljivanje će olakšati samostalno pokretanje [klijenata](/developers/docs/nodes-and-clients/), bez oslanjanja na bilo kakve posredničke usluge. A ako možete, razmotrite mogućnost pokretanja više klijenata. To može pomoći zdravlju mreže daljnjim smanjenjem točaka kvara.
 
 <br />
 
-<InfoBanner isWarning={true}>
-  Isprva ćete trebati pokretati klijent glavne mreže istovremeno sa svojim Eth2 klijentom. <a href="https://launchpad.ethereum.org" target="_blank"> Lansirna rampa </a> će vas provesti kroz hardverske zahtjeve i postupak. Možete upotrijebiti i <a href="/developers/docs/apis/backend/#available-libraries"> pozadinski API </a>.
+<InfoBanner isWarning>
+  Morat ćete istodobno pokrenuti klijent za izvršenje kao i klijenta za konsenzus. <a href="https://launchpad.ethereum.org" target="_blank">Lansirna rampa</a> provest će vas kroz hardverske zahtjeve i postupak.
 </InfoBanner>
 
 ## Lanci djelića, verzija 1: dostupnost podataka {#data-availability}
 
-Kada se isporuče prvi lanci djelića, oni će samo pružiti dodatne podatke mreži. Neće se baviti transakcijama ili pametnim ugovorima. Ali i dalje će nuditi nevjerojatna poboljšanja broja transakcija u sekundi u kombinaciji s rollup tehnologijom.
+<InfoBanner emoji=":construction:" isWarning>
+  <strong>Napomena:</strong> planovi za razdjeljivanje neprestano se razvijaju kako se pronalaze bolji načini skaliranja. „Dank-razdjeljivanje” novi je pristup razdjeljivanja. On ne primjenjuje koncept razbijenih „lanaca”, već upotrebljava razbijene „kapljica” kojim se dijelje podaci zajedno s „uzorkovanjem dostupnosti podataka” kako bi se potvrdilo da su dostupni svi podaci. Ta promjena rješava isti izvorni problem.<br/><br/>
+  <strong>Pojedinosti u nastavku možda su zastarjele u odnosu na najnovije planove o razvoju.</strong> Dok radimo na ažuriranju, pogledajte <a href="https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum">Hitchhikerov vodič za Ethereum</a> u kojemu je sjajno prikazan plan razvoja Ethereuma.
+</InfoBanner>
 
-Rollup je tehnologija „sloja 2” koja postoji danas. Omogućuju aplikacijama dapp da grupiraju ili skupe transakcije u jednu transakciju izvan lanca, generiraju kriptografski dokaz i zatim ga predaju lancu. To smanjuje podatke potrebne za transakciju. Kombinirajući to s dodatnom dostupnošću podataka koju pružaju djelić dobivate 100 000 transakcija u sekundi.
+Kada se isporuče prvi lanci djelića, oni će samo pružiti dodatne podatke mreži. Neće se baviti transakcijama ili pametnim ugovorima. Ali i dalje će nuditi nevjerojatna poboljšanja broja transakcija u sekundi u kombinaciji s objedinjavanjem transakcija.
 
-[Više o tehnologiji rollup](/developers/docs/scaling/#rollups)
+Objedinjavanje transakcija tehnologija je „sloja 2” koja postoji danas. Omogućuju decentraliziranim aplikacijama (dapp) da grupiraju ili skupe transakcije u jednu transakciju izvan lanca, generiraju kriptografski dokaz i zatim ga predaju lancu. To smanjuje podatke potrebne za transakciju. Kombinirajući to s dodatnom dostupnošću podataka koju pružaju djelić dobivate 100 000 transakcija u sekundi.
 
 ## Lanci djelića, verzija 2: izvršavanje koda {#code-execution}
 
-Plan je uvijek bio dodati dodatnu funkcionalnost djelićima, kako bi postali sličniji današnjoj [glavnoj mreži Ethereum](/glossary/#mainnet). To bi omogućilo pohranu i izvršavanje pametnih ugovora i upravljanje računima. No, s obzirom na pojačanje u broju transakcija u sekundi koje pružaju djelići verzije 1, je li to potrebno? O tome se još uvijek raspravlja u zajednici i čini se da postoji nekoliko mogućnosti.
+Plan je uvijek bio dodati dodatnu funkcionalnost djelićima kako bi ih učinili sličnijima [glavnoj mreži Ethereuma](/glossary/#mainnet) danas. To će im omogućiti pohranu i izvršavanje koda i obradu transakcija jer svaki djelić sadrži jedinstveni skup pametnih ugovora i bilanci računa. Komunikacija između djelića omogućit će transakcije između djelića.
+
+Uzimajući u obzir pojačanje u broju transakcija u sekundi koje pružaju djelići verzije 1, je li nam to potrebno? O tome se još uvijek raspravlja u zajednici i čini se da postoji nekoliko mogućnosti.
 
 ### Trebaju li djelići izvršenje koda? {#do-shards-need-code-execution}
 
@@ -62,7 +67,7 @@ To bi značilo da djelićima ne pružamo mogućnost upravljanja pametnim ugovori
 
 #### 2. Pogledajmo nekoliko izvršnih djelića {#some-execution-shards}
 
-Možda postoji kompromis gdje nam ne trebaju svi djelići (sada ih je planirano 64) da bismo bili pametniji. Mogli bismo samo dodati tu funkcionalnost nekolicini, a ostale ostaviti. To bi moglo ubrzati isporuku.
+Možda postoji kompromis gdje nam ne trebaju svi pametni djelići. Mogli bismo samo dodati tu funkcionalnost nekolicini, a ostale ostaviti. To bi moglo ubrzati isporuku.
 
 #### 3. Pričekajte dok ne uspijemo napraviti SNARK-ove s protokolom Zero Knowledge (ZK) {#wait-for-zk-snarks}
 
@@ -78,21 +83,11 @@ Ovo je još uvijek aktivna točka rasprave. Ažurirat ćemo ove stranice kad saz
 
 ## Odnos između nadogradnji {#relationship-between-upgrades}
 
-Sve su nadogradnje Eth2 donekle međusobno povezane. Dakle, ponovimo ukratko kako se lanci djelića odnose na ostale nadogradnje.
+Sve nadogradnje Ethereuma donekle su međusobno povezane. Dakle, ponovimo ukratko kako se lanci djelića odnose na ostale nadogradnje.
 
-### Djelići i Beacon Chain {#shards-and-beacon-chain}
+### Djelići i lanac blokova Ethereuma {#shards-and-blockchain}
 
-Beacon Chain sadrži svu logiku za održavanje djelića na sigurnom i sinkroniziranim. Beacon Chain koordinirat će učesnike u mreži, dodjeljujući ih djelićima na kojima trebaju raditi. Također će olakšati komunikaciju između djelića primanjem i pohranom podataka o transakcijama djelića kojima mogu pristupiti drugi djelići. To će djelićima dati snimak stanja Ethereuma kako bi sve bilo ažurno.
-
-<ButtonLink to="/upgrades/beacon-chain/">Beacon Chain</ButtonLink>
-
-### Djelići i spajanje {#shards-and-docking}
-
-Glavna mreža Ethereum postojat će kao i danas čak i nakon uvođenja djelića. Međutim, u jednom će trenutku glavna mreža morati postati djelić kako bi mogla prijeći na ulaganje. Vidjet ćemo hoće li glavna mreža postojati kao jedini „pametni” djelić koji se može nositi s izvršavanjem koda – u svakom slučaju, morat će se donijeti odluka u drugoj fazi razdjeljivanja.
-
-<ButtonLink to="/upgrades/merge/">Spajanje</ButtonLink>
-
-<Divider />
+Logika koja održava sve djeliće zaštićenim i sinkroniziranim integrirana je u Ethereumove klijente koji grade lanac blokova. Ulagači u mreži dodjeljuju se djelićima na kojima rade. Djelići će imati pristup snimkama stanja ostalih djelića kako bi mogli izgraditi pregled Ethereumovog stanja i održavati ga ažurnim.
 
 ### Pročitaj više {#read-more}
 
