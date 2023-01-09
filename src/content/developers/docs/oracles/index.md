@@ -82,7 +82,7 @@ The oracle contract is the on-chain component for the oracle service: it listens
 
 The oracle contract exposes some functions which client contracts call when making a data request. Upon receiving a new query, the smart contract will emit a [log event](/developers/docs/smart-contracts/anatomy/#events-and-logs) with details of the data request. This notifies off-chain nodes subscribed to the log (usually using something like the JSON-RPC `eth_subscribe` command), who proceed to retrieve data defined in the log event.
 
-Below is an [example oracle contract](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) by Pedro Costa. This is a simple oracle service that can query off-chain APIs upon request by other smart contracts and store the requsted information on the blockchain:
+Below is an [example oracle contract](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) by Pedro Costa. This is a simple oracle service that can query off-chain APIs upon request by other smart contracts and store the requested information on the blockchain:
 
 ```solidity
 pragma solidity >=0.4.21 <0.6.0;
@@ -99,7 +99,7 @@ contract Oracle {
     string urlToQuery;                  //API url
     string attributeToFetch;            //json attribute (key) to retrieve in the response
     string agreedValue;                 //value from key
-    mapping(uint => string) anwers;     //answers provided by the oracles
+    mapping(uint => string) answers;     //answers provided by the oracles
     mapping(address => uint) quorum;    //oracles which will query the answer (1=oracle hasn't voted, 2=oracle has voted)
   }
 
@@ -163,9 +163,9 @@ contract Oracle {
       bool found = false;
       while(!found) {
         //find first empty slot
-        if(bytes(currRequest.anwers[tmpI]).length == 0){
+        if(bytes(currRequest.answers[tmpI]).length == 0){
           found = true;
-          currRequest.anwers[tmpI] = _valueRetrieved;
+          currRequest.answers[tmpI] = _valueRetrieved;
         }
         tmpI++;
       }
@@ -175,7 +175,7 @@ contract Oracle {
       //iterate through oracle list and check if enough oracles(minimum quorum)
       //have voted the same answer has the current one
       for(uint i = 0; i < totalOracleCount; i++){
-        bytes memory a = bytes(currRequest.anwers[i]);
+        bytes memory a = bytes(currRequest.answers[i]);
         bytes memory b = bytes(_valueRetrieved);
 
         if(keccak256(a) == keccak256(b)){
@@ -246,7 +246,7 @@ Centralized oracles often have poorly designed or non-existent incentives for th
 
 Decentralized oracles are designed to overcome the limitations of centralized oracles by eliminating single points of failure. A decentralized oracle service comprises multiple participants in a peer-to-peer network that form consensus on off-chain data before sending it to a smart contract.
 
-A decentralized oracle should (ideally) be permissionless, trustless, and free from administration by a central party; in reality, decentralization among oracles is a spectrum. There are semi-decentralized oracle networks where anyone can particpate, but with an “owner” that approves and removes nodes based on historical performance. Fully decentralized oracle networks also exist: these usually run as standalone blockchains and have defined consensus mechanisms for coordinating nodes and punishing misbehavior.
+A decentralized oracle should (ideally) be permissionless, trustless, and free from administration by a central party; in reality, decentralization among oracles is a spectrum. There are semi-decentralized oracle networks where anyone can participate, but with an “owner” that approves and removes nodes based on historical performance. Fully decentralized oracle networks also exist: these usually run as standalone blockchains and have defined consensus mechanisms for coordinating nodes and punishing misbehavior.
 
 Using decentralized oracles comes with the following benefits:
 
