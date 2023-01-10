@@ -8,6 +8,8 @@ lang: en
 
 Anyone can create an Ethereum account for free with a specific type of app commonly known as a wallet. Wallets hold the keys that let you hold, send and receive crypto. You can also connect to projects on Ethereum that will let you trade NFTs, exchange coins, access play-to-earn games, unlock Defi and much more.
 
+Unlike traditional account registrations you may be used to, creating an Ethereum account is done privately and without asking permission. Accounts are controlled by keys that your wallet software helps you create, and are not issued by a third party, nor stored in a central registry.
+
 ## Step 1: Browse our list of wallets
 
 A wallet is like an online bank account for Ethereum. There are dozens of different wallets to choose from—mobile, desktop, or even browser extensions. Our curated list of trusted wallets is a good place to start. 
