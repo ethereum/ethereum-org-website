@@ -49,7 +49,7 @@ No, wallets have the ability to create a new Ethereum account, but the account l
 
 ### Can I send bitcoin to an Ethereum address, or ether to a Bitcoin address?
 
-No you cannot, you need two different accounts and receiving addresses with a different format altogether. There are many EVM (Ethereum Virtual Machine) compatible tokens & blockchains that you can use with your Ethereum address.
+No you cannot as bitcoin and ether exists on two separate networks (i.e. different blockchains), each with their own bookkeeping models and address formats. There are many EVM (Ethereum Virtual Machine) compatible tokens & blockchains that you can use with your Ethereum address.
 
 ### If I own an ETH address, do I own the same address on other blockchains?
 
