@@ -22,7 +22,7 @@ A Storybook "story" is an instance of a component in a certain state or with cer
 
 Each component will only need one file containing all the stories, and should follow the naming convention of the component.
 
-So for the component `ExpandableCard.tsx`, the stories file will be names `ExpandableCard.stories.tsx`.
+So for the component `ExpandableCard.tsx`, the stories file will be named `ExpandableCard.stories.tsx`.
 
 The stories file will reside with each component. So the base folder structure in `src` will look like this:
 
