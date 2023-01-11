@@ -1,4 +1,4 @@
-import React, { ReactNode, useContext } from "react"
+import React, { ReactNode } from "react"
 import { useTheme } from "@emotion/react"
 import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
