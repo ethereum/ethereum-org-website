@@ -1543,6 +1543,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/gzanitti"><img src="https://avatars.githubusercontent.com/u/1610461?v=4?s=100" width="100px;" alt="Gastón Zanitti"/><br /><sub><b>Gastón Zanitti</b></sub></a><br /><a href="#content-gzanitti" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/danceratopz"><img src="https://avatars.githubusercontent.com/u/91727015?v=4?s=100" width="100px;" alt="Dan"/><br /><sub><b>Dan</b></sub></a><br /><a href="#content-danceratopz" title="Content">🖋</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://dribbble.com/Liz-B"><img src="https://avatars.githubusercontent.com/u/40176275?v=4?s=100" width="100px;" alt="Elizabeth Bassey"/><br /><sub><b>Elizabeth Bassey</b></sub></a><br /><a href="#content-Dev-Liz" title="Content">🖋</a></td>
+    </tr>
   </tbody>
 </table>
 
