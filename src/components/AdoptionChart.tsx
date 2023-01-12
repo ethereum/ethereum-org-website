@@ -59,18 +59,14 @@ const AdoptionChart: React.FC<IProps> = () => {
   return (
     <Container>
       <Column>
-        <ColumnName>
-          <Translation id="adoption-chart-column-2010-label" />
-        </ColumnName>
+        <ColumnName>2010</ColumnName>
         <Cell color={isDark ? "#FBF9A5" : "#95935B"}>
           <Translation id="adoption-chart-investors-label" />
         </Cell>
       </Column>
 
       <Column>
-        <ColumnName>
-          <Translation id="adoption-chart-column-2014-label" />
-        </ColumnName>
+        <ColumnName>2014</ColumnName>
         <Cell color={isDark ? "#FBF9A5" : "#95935B"}>
           <Translation id="adoption-chart-investors-label" />
         </Cell>
