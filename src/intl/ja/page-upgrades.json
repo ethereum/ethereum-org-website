@@ -1,5 +1,13 @@
 {
+  "page-upgrades-merge-infographic-el": "イーサリアムの状態: トランザクション、アプリ、コントラクト、残高",
+  "page-upgrades-merge-infographic-alt-text": "プルーフ・オブ・ワークからプルーフ・オブ・ステークへの移行時に、ビーコンチェーンがイーサリアムの実行レイヤーにどのようにマージされるかを示すインフォグラフィックです。",
   "page-upgrades-beacon-date": "リリース!",
   "page-upgrades-merge-date": "2022年9月",
-  "page-upgrades-shards-date": "～2023年"
+  "page-upgrades-shards-date": "～2023年",
+  "page-upgrades-merge-banner-intro": "マージが近づいきており、イーサリアムに変更が加えられます。",
+  "page-upgrades-merge-banner-content-outdated": "変更に伴い、本ページの一部のコンテンツの情報が古くなっています。アップデートは近日中に行われる予定です。",
+  "page-upgrades-merge-banner-developers-landing": "一部のドキュメントには、古いコンテンツであることを示すバナーが表示されています。アップデートは近日中に行われる予定です。",
+  "page-upgrades-post-merge-banner-tutorial-ood": "マージ後、本チュートリアルの情報は古くなったため、動作しない可能性があります。ご貢献いただける場合はPRを上げてください。",
+  "page-upgrades-post-merge-banner-tutorial-light-node-ood": "マージ後、本チュートリアルの情報は古くなっています。ライトノードは現在プルーフ・オブ・ステークでは動作しませんが、まもなくリリースされる予定です。",
+  "page-upgrades-post-merge-banner-governance-ood": "マージ後、本ページの一部のコンテンツの情報が古くなっています。ご貢献いただける場合はPRを上げてください。"
 }

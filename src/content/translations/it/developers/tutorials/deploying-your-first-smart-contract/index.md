@@ -1,12 +1,12 @@
 ---
 title: Distribuzione del primo Smart Contract
-description: Introduzione alla distribuzione del primo Smart Contract su una rete di test Ethereum
+description: Introduzione alla distribuzione del primo Smart Contract su una rete di prova Ethereum
 author: "jdourlens"
 tags:
-  - "Smart Contract"
+  - "smart contract"
   - "remix"
-  - "solidity"
-  - "primi passi"
+  - "Solidity"
+  - "per cominciare"
   - "distribuzione"
 skill: beginner
 lang: it

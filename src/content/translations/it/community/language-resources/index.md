@@ -64,8 +64,8 @@ Se sei bilingue e vuoi aiutarci a raggiungere più persone, puoi anche essere co
 
 **Per i ricercatori di crittografia**
 
-- [SecbitLabs](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw) - un account WeChat, che spiega la crittografia, la sicurezza, ecc.
-- [Sparkbyte](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ) - un account WeChat, che spiega la tecnologia zk
+- [SecbitLabs](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw): un profilo di WeChat, che spiega la crittografia, la sicurezza, etc.
+- [Sparkbyte](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ): un profilo di WeChat, che spiega la tecnologia zk
 
 ### Ceco {#cs}
 
@@ -84,16 +84,16 @@ Se sei bilingue e vuoi aiutarci a raggiungere più persone, puoi anche essere co
 ### Tedesco {#de}
 
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/de-de/learn/modules/blockchain-learning-solidity/) - utilizzo di Solidity
-- [Microsoft Learn (contratti intelligenti)](https://docs.microsoft.com/de-de/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - scrivere gli smart contract di Ethereum con Solidity
+- [Microsoft Learn (contratti intelligenti)](https://docs.microsoft.com/de-de/learn/modules/blockchain-solidity-ethereum-smart-contracts/): scrivere i contratti intelligenti di Ethereum con Solidity
 - [Microsoft Learn (reti di Ethereum)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) - distribuisci e connettiti alle reti di Ethereum
 - [Microsoft Learn (blockchain)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) - introduzione allo sviluppo della blockchain
 
 ### Italiano {#it}
 
-- [Ethereum Italia](https://www.ethereum-italia.it/) - istruzione, eventi e notizie di Ethereum, concentrandosi su smart contract e tecnologia blockchain
+- [Ethereum Italia](https://www.ethereum-italia.it/): istruzione, eventi e notizie su Ethereum, incentrati sui contratti intelligenti e la tecnologia della blockchain
 - [Ethereum Italia Podcast](https://www.ethereum-italia.it/podcast/) - podcast di Ethereum in italiano
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/it-it/learn/modules/blockchain-learning-solidity/) - imparare a utilizzare Solidity
-- [Microsoft Learn (Smart contracts)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - impara a scrivere gli smart contract utilizzando Solidity
+- [Microsoft Learn (contratti intelligenti)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/): impara a scrivere i contratti intelligenti usando Solidity
 - [Microsoft Learn (dApp)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - crea un'interfaccia utente con le applicazioni decentralizzate
 
 ### Spagnolo {#es}
@@ -101,9 +101,9 @@ Se sei bilingue e vuoi aiutarci a raggiungere più persone, puoi anche essere co
 - [Ethereum Madrid](https://ethereummadrid.com/) - blockchain, DeFi, e corsi di governance, eventi e blog
 - [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) - guida di Ethereum per principianti in spagnolo
 - [Tutoriales online](https://tutoriales.online/curso/solidity) - impara Solidity e la programmazione su Ethereum
-- [Curso Introducción a Ethereum Development](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) - fondamenti di Solidity, test e distribuzione del tuo primo smart contract
-- [Curso Introducción a Seguridad y Hacking en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) - comprendere le vulnerabilità comuni e i problemi di sicurezza negli smart contract reali
-- [Curso Introducción a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - scopri come funzionano gli smart contract DeFi in Solidity e crea il tuo Automated Market Maker
+- [Corso Introduttivo allo Sviluppo su Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU): fondamenti di Solidity, test e distribuzione del tuo primo contratto intelligente
+- [Corso Introduttivo alla Sicurezza e l'Hacking su Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci): comprendedre le vulnerabilità comuni e i problemi di sicurezza nei contratti intelligenti reali
+- [Corso Introduttivo allo Sviluppo della DeFi](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS): impara come funzionano i contratti intelligenti della DeFi in Solidity e crea il tuo Creatore di Mercati Automatizzati personale
 - [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) - Istruzione non tecnica sulla blockchain da principiante ad avanzata. Impara tutto sulle cripto ed Ethereum.
 
 ### Turco {#tr}
@@ -123,4 +123,4 @@ Se sei bilingue e vuoi aiutarci a raggiungere più persone, puoi anche essere co
 - [Japan Cryptoasset Business Association](https://cryptocurrency-association.org/)
 - [Get started with blockchain development - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - Questo percorso d'apprendimento introduce alla blockchain e allo sviluppo sulla piattaforma di Ethereum
 - [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) - Padroneggiare Ethereum in giapponese
-- [Hands-On Smart Contract Development with Solidity and Ethereum](https://www.oreilly.co.jp/books/9784873119342/) - Sviluppo pratico di smart contract con Solidity ed Ethereum in giapponese
+- [Sviluppo Pratico di Contratti Intelligenti con Solidity ed Ethereum](https://www.oreilly.co.jp/books/9784873119342/): Sviluppo Pratico di Contratti Intelligenti con Solidity ed Ethereum in giapponese

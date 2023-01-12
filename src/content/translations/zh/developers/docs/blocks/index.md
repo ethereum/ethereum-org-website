@@ -6,7 +6,7 @@ lang: zh
 
 区块是指一批交易的组合，并且包含链中上一个区块的哈希。 这将区块连接在一起（成为一个链），因为哈希是从区块数据中加密得出的。 这可以防止欺诈，因为以前的任何区块中的任何改变都会使后续所有区块无效，而且所有哈希都会改变，所有运行区块链的人都会注意到。
 
-## 前置要求 {#prerequisites}
+## 前提条件 {#prerequisites}
 
 区块是一个对初学者非常友好的主题。 为了帮助您更好地理解这个页面，我们建议您先阅读[帐户](/developers/docs/accounts/)、[交易](/developers/docs/transactions/)和我们的[以太坊简介](/developers/docs/intro-to-ethereum/)。
 
@@ -14,7 +14,7 @@ lang: zh
 
 为了确保以太坊网络上的所有参与者保持同步状态并就交易的确切历史达成共识，我们将交易分为多个区块。 这意味着同时有数十个（甚至数百个）交易被提交、达成一致并同步。
 
-![区块中的交易导致状态变化的图表](./tx-block.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![区块中的交易导致状态变化的图表](./tx-block.png) _示意图节选自[以太坊虚拟机图解](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 通过间隔提交，所有网络参与者有足够时间达成共识：即使交易请求每秒发生数十次，但以太坊上的区块仅仅大约每十二秒创建并提交一次。
 
@@ -86,38 +86,38 @@ target：最新的时段边界区块
 
 ```
 parent_hash：父块的哈希
-fee_recipient：向其中支付交易费的帐户地址
-state_root：在此区块中应用更改后全局状态的根哈希
+fee_recipient：接收交易费的帐户地址
+state_root：应用此区块中的变化后全局状态的根哈希
 receipts_root：交易收据树的哈希
 logs_bloom：包含事件日志的数据结构
 prev_randao：随机选择验证者时使用的值
 block_number：当前区块的编号
-gas_limit：此区块中允许使用的最大燃料量
-gas_used：此区块中实际使用的燃料量
-timestamp:：出块时间
+gas_limit：此区块允许使用的最大燃料量
+gas_used：此区块实际使用的燃料量
+timestamp：出块时间
 extra_data：作为原始字节的任意附加数据
-base_fee_per_gas：基础费值
+base_fee_per_gas：基础费的值
 block_hash：执行区块的哈希
 transactions_root：有效载荷中交易的根哈希
 ```
 
-`execution_payload` 本身包含以下内容（请注意这与区块头相同，只是它包含实际的交易列表而不是交易的根哈希）：
+`execution_payload` 本身包含以下字段（这些与 header 字段相同，只是它包含的不是交易的根哈希，而是实际的交易列表）：
 
 ```
 parent_hash：父块的哈希
-fee_recipient：向其中支付交易费的帐户地址
-state_root：在此区块中应用更改后全局状态的根哈希
+fee_recipient：接收交易费的帐户地址
+state_root：应用此区块中的变化后全局状态的根哈希
 receipts_root：交易收据树的哈希
 logs_bloom：包含事件日志的数据结构
 prev_randao：随机选择验证者时使用的值
 block_number：当前区块的编号
-gas_limit：此区块中允许使用的最大燃料量
-gas_used：此区块中实际使用的燃料量
+gas_limit：此区块允许使用的最大燃料量
+gas_used：此区块实际使用的燃料量
 timestamp：出块时间
 extra_data：作为原始字节的任意附加数据
-base_fee_per_gas：基础费值
+base_fee_per_gas：基础费的值
 block_hash：执行区块的哈希
-transactions：要执行的交易的列表
+transactions：要执行交易的列表
 ```
 
 ## 出块时间 {#block-time}
@@ -130,7 +130,7 @@ transactions：要执行的交易的列表
 
 ## 延伸阅读 {#further-reading}
 
-_还有哪些社区资源对你有所帮助？ 请编辑本页面以添加！_
+_还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
 
 ## 相关主题 {#related-topics}
 

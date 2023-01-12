@@ -5,9 +5,9 @@ lang: fr
 template: upgrade
 image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: La fragmentation est une mise à niveau en plusieurs phases visant à améliorer l'évolutivité et la capacité d'Ethereum.
-summaryPoint2: La fragmentation assure la distribution sécurisée comme exigée en matière de stockage des données, permettant la création de rollups encore moins chers et ainsi de faciliter le fonctionnement des nœuds.
-summaryPoint3: Elles permettent aux solutions de couche 2 de faibles frais de transaction tout en profitant de la sécurité d'Ethereum.
-summaryPoint4: Cette mise à niveau a pris une place plus importante depuis qu'Ethereum est passé à la preuve d'enjeu.
+summaryPoint2: La fragmentation assure une distribution sécurisée des besoins en matière de stockage des données, rendant les rollups encore plus économiques et les nœuds plus faciles à exploiter.
+summaryPoint3: Elles permettent aux solutions de couche 2 de proposer de faibles frais de transaction tout en profitant de la sécurité d'Ethereum.
+summaryPoint4: Cette mise à niveau est devenue plus importante depuis qu'Ethereum est passé à la preuve d'enjeu.
 ---
 
 <UpgradeStatus dateKey="page-upgrades-shards-date">

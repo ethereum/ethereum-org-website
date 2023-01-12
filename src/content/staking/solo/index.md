@@ -17,6 +17,8 @@ summaryPoints:
 
 Solo staking is the act of [running an Ethereum node](/run-a-node/) connected to the internet and depositing 32 ETH to activate a [validator](#faq), giving you the ability to participate directly in network consensus.
 
+**Solo staking increases the decentralization of the Ethereum network**, making Ethereum more censorship-resistant and robust against attacks. Other staking methods may not help the network in the same ways. Solo staking is the best staking option for securing Ethereum.
+
 An Ethereum node consists of both an execution layer (EL) client, as well as a consensus layer (CL) client. These clients are software that work together, along with a valid set of signing keys, to verify transactions and blocks, attest to the correct head of the chain, aggregate attestations, and propose blocks.
 
 Solo stakers are responsible for operating the hardware needed to run these clients. It is highly recommended to use a dedicated machine for this that you operate from home–this is extremely beneficial to the health of the network.
@@ -25,7 +27,7 @@ A solo staker receives rewards directly from the protocol for keeping their vali
 
 ## Why stake solo? {#why-stake-solo}
 
-Solo staking comes with more responsibility, but provides you with maximum control over your funds and staking setup.
+Solo staking comes with more responsibility but provides you with maximum control over your funds and staking setup.
 
 <CardGrid>
   <Card title="Earn fresh ETH" emoji="💸">
