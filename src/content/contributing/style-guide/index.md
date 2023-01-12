@@ -315,12 +315,12 @@ When citing articles from a specific author or organization, use the article's n
 <--- Good --->
 
 - [A rollup-centric ethereum roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) — _Vitalik Buterin_
-- [Oracles](https://docs.ethhub.io/built-on-ethereum/oracles/what-are-oracles/) – _EthHub_
+- [The History of Ethereum Testnets](https://consensys.net/blog/news/the-history-of-ethereum-testnets/) – _Consensys_
 
 <--- Bad--->
 
 - [A rollup-centric ethereum roadmap by Vitalik Buterin](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
-- [EthHub on Oracles](https://docs.ethhub.io/built-on-ethereum/oracles/what-are-oracles/) – _EthHub_
+- [Consensys on The History of Ethereum Testnets](https://consensys.net/blog/news/the-history-of-ethereum-testnets/) – _Consensys_
 ```
 
 ## Anything else? {#anything-else}
