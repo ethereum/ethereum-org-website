@@ -28,13 +28,10 @@ lang: fa
 
 - [برنامه‌ی کمک‌های مالی Aave](https://aavegrants.org/) - _[Aave](https://aave.com/) DAO_ را اعطا می‌کند
 - [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _صندوق اکوسیستم [Balancer](https://balancer.fi/)_
-- [Chainlink Grants Program](https://chain.link/community/grants) - _ کمک‌های مالی اجتماعی _[Chainlink](https://chain.link/)\_
+- [Chainlink Grants Program](https://chain.link/community/grants) - _ کمک‌های مالی اجتماعی [Chainlink](https://chain.link/)_
 - [برنامه‌ی کمک‌های مالی Compound](https://compoundgrants.org/) - اکوسیستم مالی _[Compound](https://compound.finance/)_
 - [سازمان کمک‌های مالی اکوسیستم Lido‏ (LEGO)](https://lego.lido.fi/) – _[اکوسیستم تأمین مالی Lido](https://lido.fi/)_
 - [برنامه‌ی MetaMask‏](https://metamaskgrants.org/) - _سازمان مستقل غیرمتمرکز کمک‌های مالی کارمندمحور_
-
-MetaMask</em></li>
-
 - [برنامه‌ی کمک هزینه mStable](https://docs.mstable.org/advanced/grants-program) - _انجمن [mStable](https://mstable.org/)_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _اکوسیستم [The Graph](https://thegraph.com/)_
 - [برنامه‌ی کمک‌های مالی UMA](https://grants.umaproject.org/) - _[حمایت مالی از برنامه‌نویسان UMA](https://umaproject.org/)_
