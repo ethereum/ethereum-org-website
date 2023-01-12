@@ -41,7 +41,7 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 ### Write content about Ethereum {#write-content}
 
 - Ethereum needs good writers who can explain its value in plain language
-- Not ready to publish your own articles? Consider contributing to the existing content on community resources like [EthHub](https://docs.ethhub.io/), or propose new content for ethereum.org!
+- Not ready to publish your own articles? Consider contributing to the existing content on community resources, or propose new content for ethereum.org!
 
 ### Offer to take notes for community calls {#take-notes}
 
