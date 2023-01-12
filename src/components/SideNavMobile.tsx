@@ -9,7 +9,7 @@ import { isLang } from "../utils/languages"
 import { dropdownIconContainerVariant } from "./SharedStyledComponents"
 import { IPropsNavLink as INavLinkProps } from "./SideNav"
 
-import docLinks from "../data/developer-docs-links.yaml"
+import docLinks from "../data/developerDocsLinks.json"
 import { DeveloperDocsLink } from "../types"
 import { TranslationKey } from "../utils/translations"
 
@@ -182,7 +182,10 @@ const SideNavMobile: React.FC<IProps> = ({ path }) => {
   if (isLang(pagePath.split("/")[1])) {
     pagePath = pagePath.substring(3)
   }
-  let pageTitleId = getPageTitleId(pagePath, docLinks)
+  let pageTitleId = getPageTitleId(
+    pagePath,
+    docLinks as Array<DeveloperDocsLink>
+  )
   if (!pageTitleId) {
     console.warn(`No id found for "pagePath": `, pagePath)
     pageTitleId = `Change page` as TranslationKey
@@ -219,7 +222,7 @@ const SideNavMobile: React.FC<IProps> = ({ path }) => {
               },
             }}
           >
-            {docLinks.map((item, idx) => (
+            {(docLinks as Array<DeveloperDocsLink>).map((item, idx) => (
               <NavLink
                 item={item}
                 path={path}

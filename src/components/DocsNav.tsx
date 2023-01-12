@@ -13,7 +13,7 @@ import Link from "./Link"
 import Emoji from "./Emoji"
 import Translation from "./Translation"
 
-import docLinks from "../data/developer-docs-links.yaml"
+import docLinks from "../data/developerDocsLinks.json"
 import { DeveloperDocsLink } from "../types"
 import { TranslationKey } from "../utils/translations"
 
@@ -102,13 +102,13 @@ const DocsNav: React.FC<IProps> = ({ relativePath }) => {
         getDocs(item.items)
       } else {
         // If object has no further 'items', add and continue
-        docsArray.push({ to: item.to, id: item.id })
+        docsArray.push({ to: item.to!, id: item.id })
       }
     }
   }
 
-  // Initiate recursive loop with full docLinks yaml
-  getDocs(docLinks)
+  // Initiate recursive loop with full docLinks json
+  getDocs(docLinks as Array<DeveloperDocsLink>)
 
   // Find index that matches current page
   let currentIndex = 0

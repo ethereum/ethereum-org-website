@@ -8,7 +8,7 @@ import Link from "./Link"
 import Translation from "./Translation"
 import { dropdownIconContainerVariant } from "./SharedStyledComponents"
 
-import docLinks from "../data/developer-docs-links.yaml"
+import docLinks from "../data/developerDocsLinks.json"
 import { translateMessageId } from "../utils/translations"
 import { DeveloperDocsLink } from "../types"
 
@@ -87,7 +87,7 @@ export interface IPropsNavLink {
 }
 
 const NavLink: React.FC<IPropsNavLink> = ({ item, path }) => {
-  const isLinkInPath = path.includes(item.to) || path.includes(item.path)
+  const isLinkInPath = path.includes(item.to!) || path.includes(item.path)
   const [isOpen, setIsOpen] = useState<boolean>(isLinkInPath)
 
   useEffect(() => {
@@ -158,7 +158,7 @@ const SideNav: React.FC<IProps> = ({ path }) => {
 
   return (
     <Nav aria-label={translateMessageId("nav-developers-docs", intl)}>
-      {docLinks.map((item, idx) => (
+      {(docLinks as Array<DeveloperDocsLink>).map((item, idx) => (
         <NavLink item={item} path={path} key={idx} />
       ))}
     </Nav>
