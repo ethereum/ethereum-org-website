@@ -155,7 +155,7 @@ Each client has unique use cases and advantages, so you should choose one based 
 
 Hyperledger Besu is an enterprise-grade Ethereum client for public and permissioned networks. It runs all of the Ethereum Mainnet features, from tracing to GraphQL, has extensive monitoring and is supported by ConsenSys, both in open community channels and through commercial SLAs for enterprises. It is written in Java and is Apache 2.0 licensed.
 
-Besu's extensive [documentation](https://besu.hyperledger.org/en/stable/) will guide you trough all details on its features and setups.
+Besu's extensive [documentation](https://besu.hyperledger.org/en/stable/) will guide you through all details on its features and setups.
 
 ### Erigon {#erigon}
 
