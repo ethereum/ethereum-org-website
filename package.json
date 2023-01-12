@@ -98,7 +98,7 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "build:lambda": "netlify-lambda build src/lambda --config=./webpack.lambda.js",
+    "build:lambda": "NODE_OPTIONS=--openssl-legacy-provider netlify-lambda build src/lambda --config=./webpack.lambda.js",
     "build:10gb": "NODE_OPTIONS=--max-old-space-size=10240 gatsby build",
     "clean": "gatsby clean",
     "crowdin-clean": "rm -rf .crowdin && mkdir .crowdin",
