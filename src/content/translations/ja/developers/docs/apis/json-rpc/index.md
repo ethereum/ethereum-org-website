@@ -1191,7 +1191,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberA
 1. `DATA`、32 バイト - トランザクションのハッシュ
 
 ```js
-params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"]
+params: ["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"]
 ```
 
 **戻り値** `Object` - トランザクションレシートのオブジェクト、またはレシートが見つからなかった場合は`null`
@@ -1202,36 +1202,44 @@ params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"]
 - `blockNumber`: `QUANTITY` - このトランザクションが組み込まれていたブロックの番号
 - `from`: `DATA`、20 バイト - 送信者のアドレス
 - `to`: `DATA`、20 バイト - 受信者のアドレス。 コントラクト作成時のトランザクションは null
-- `cumulativeGasUsed`：`QUANTITY` - ブロック内でこのトランザクションを実行する際に使用されたガスの総量
+- `cumulativeGasUsed`：`QUANTITY` - ブロック内でこのトランザクションの実行時に使用されたガスの総量
+- `effectiveGasPrice` : `QUANTITY` - ガスユニットごとに支払われるベースフィーとチップの合計
 - `gasUsed`: `QUANTITY` - この特定のトランザクションのみで使用されたガスの量
-- `contractAddress`: `DATA`、20 バイト - コントラクト作成時のトランザクションの場合は作成されたコントラクトのアドレス、その他の場合は`null`
-- `logs`: `Array` - このトランザクションによって生成されたログオブジェクトの配列
-- `logsBloom`: `DATA`、256 バイト - 関連ログを迅速に取得するためのライトクライアント用のブルームフィルター。 また、以下の*いずれか*も返します
-- `root` : `DATA`、32 バイト - トランザクション後の状態ルート (Byzantium より前)
+- `contractAddress`: `DATA`、20 バイト - コントラクト作成のトランザクションの場合は作成されたコントラクトのアドレス、その他の場合は`null`
+- `logs`: `Array` - このトランザクションが生成したログオブジェクトの配列
+- `logsBloom`: `DATA`、256 バイト - 関連ログを迅速に取得するためのライトクライアント用のブルームフィルター。
+- `type`: `DATA` - トランザクションタイプの整数、`0x00`でレガシートランザクション、 `0x01`でアクセスリストタイプ, `0x02`で動的フィー。 また、以下の*いずれか*も返します
+- `root` : `DATA`、32 バイト - トランザクション後の状態ルート(ビザンチウム以前)
 - `status`: `QUANTITY` - `1` (成功)、または`0` (失敗)
 
 **例**
 
 ```js
-// Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","params":["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"],"id":1}'
-// Result
+// リクエスト
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","params":["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"],"id":1}'
+// 結果
 {
-"id":1,
-"jsonrpc":"2.0",
-"result": {
-     transactionHash: '0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238',
-     transactionIndex:  '0x1', // 1
-     blockNumber: '0xb', // 11
-     blockHash: '0xc6ef2fc5426d6ad6fd9e2a26abeab0aa2411b7ab17f30a99d3cb96aed1d1055b',
-     cumulativeGasUsed: '0x33bc', // 13244
-     gasUsed: '0x4dc', // 1244
-     contractAddress: '0xb60e8dd61c5d32be8058bb8eb970870f07233155', // or null, if none was created
-     logs: [{
-         // logs as returned by getFilterLogs, etc.
-     }, ...],
-     logsBloom: "0x00...0", // 256 byte bloom filter
-     status: '0x1'
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "blockHash":
+      "0xa957d47df264a31badc3ae823e10ac1d444b098d9b73d204c40426e57f47e8c3",
+    "blockNumber": "0xeff35f",
+    "contractAddress": null, // 作成された場合はアドレスの文字列
+    "cumulativeGasUsed": "0xa12515",
+    "effectiveGasPrice": "0x5a9c688d4",
+    "from": "0x6221a9c005f6e47eb398fd867784cacfdcfff4e7",
+    "gasUsed": "0xb4c8",
+    "logs": [{
+      // getFilterLogsなどによって返されるログ
+    }],
+    "logsBloom": "0x00...0", // 256 byte bloom filter
+    "status": "0x1",
+    "to": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+    "transactionHash":
+      "0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5",
+    "transactionIndex": "0x66",
+    "type": "0x2"
   }
 }
 ```
@@ -1643,7 +1651,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x
 - `toBlock`: `QUANTITY|TAG` - (オプション、デフォルト: `"latest"`) ブロック番号 (整数) 。 `"latest"` (最後にマイニングされたブロック)。`"pending"`、`"earliest"` (まだマイニングされていないトランザクション) のいずれか
 - `address`: `DATA|Array`、20 バイト - (オプション) ログの生成元となるコントラクトアドレス、またはアドレスのリスト
 - `topics`: `Array of DATA`、- (オプション) 32 バイトの`DATA`トピックの配列。 トピックは順序に依存します。 各トピックは「or」オプションの DATA 配列にすることも可能
-- `blockhash`: `DATA`、32 バイト - (オプション、**実装予定**) EIP-234 が追加されたことにより、`blockHash`が新たなフィルターオプションになります。これは、返されるログを 32 バイトのハッシュ`blockHash`を持つ単一のブロックに制限します。 `blockHash`を使用することは、`fromBlock`と`toBlock`に`blockHash`のハッシュのブロック番号を指定することと同等です。 `blockHash`がフィルター条件にある場合、`fromBlock`と`toBlock`は使用できません
+- `blockhash`: `DATA`、32 バイト - (オプション、**実装予定**) EIP-234 が追加されたことにより、`blockHash`が新たなフィルターオプションになります。これは、返されるログを 32 バイトのハッシュ`blockHash`を持つ単一のブロックに制限します。 `blockHash`を使用することは、`fromBlock`と`toBlock`に`blockHash`のハッシュのブロック番号を指定することと同等です。 `blockHash`がフィルター条件にある場合、`fromBlock`と`toBlock`は使用できません。
 
 ```js
 params: [
@@ -2216,14 +2224,12 @@ contract Multiply7 {
 まず、HTTP RPC インターフェースが有効になっていることを確認します。 つまり、Geth の起動時に`--http`フラグを設定します。 この例では、プライベート開発チェーン上の Geth ノードを使用します。 このアプローチを使用する際には、本物のネットワーク上の Ether は必要ありません。
 
 ```bash
-
-geth --http --dev --mine --miner.threads 1 --unlock 0 console 2>>geth.log
-
+geth --http --dev console 2>>geth.log
 ```
 
 これにより、HTTP RPC インターフェースが`http://localhost:8545`で開始します。
 
-[curl](https://curl.haxx.se/download.html)を使用してコインベースアドレスと残高を取得することにより、インターフェースが実行されていることを確認できます。 例で示されているデータは、ローカルノードによって異なります。ご注意ください。 これらのコマンドを試す場合は、2 番目の curl リクエストの request パラメータの値を、1 番目の curl リクエストから返された result パラメータに置き換えてください。
+[curl](https://curl.se)を使用して Coinbase アドレスと残高を取得することにより、インターフェースが実行されていることを確認できます。 例で示されているデータは、ローカルノードによって異なります。ご注意ください。 これらのコマンドを試す場合は、2 番目の curl リクエストの request パラメータの値を、1 番目の curl リクエストから返された result パラメータに置き換えてください。
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method":"eth_coinbase", "id":1}' -H "Content-Type: application/json" localhost:8545
