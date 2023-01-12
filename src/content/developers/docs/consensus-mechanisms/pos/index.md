@@ -31,7 +31,7 @@ Whereas under proof-of-work, the timing of blocks is determined by the mining di
 
 ## How a Transaction Gets Executed in Ethereum PoS {#transaction-execution-ethereum-pos}
 
-The following provides an end-to-end explanation of how a transaction gets executed in Ethereum Proof of Stake.
+The following provides an end-to-end explanation of how a transaction gets executed in Ethereum proof-of-stake.
 
 1. A user creates and signs a [transaction](/developers/docs/transactions/) with their private key. This is usually handled by a wallet or a library such as [ether.js](https://docs.ethers.io/v5/), [web3js](https://web3js.readthedocs.io/en/v1.8.1/), [web3py](https://web3py.readthedocs.io/en/v5/) etc but under the hood the user is making a request to a node using the Ethereum [JSON-RPC API](/developers/docs/apis/json-rpc/). The user defines the amount of gas that they are prepared to pay as a tip to a validator to encourage them to include the transaction in a block. The [tips](/developers/docs/gas/#priority-fee) get paid to the validator while the [base fee](/developers/docs/gas/#base-fee) gets burned.
 2. The transaction is submitted to an Ethereum [execution client](/developers/docs/nodes-and-clients/) which verifies its validity. This means ensuring that the sender has enough ETH to fulfil the transaction and they have signed it with the correct key.
