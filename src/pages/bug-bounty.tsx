@@ -889,7 +889,7 @@ export const ClientLogosSmall = graphql`
 export const query = graphql`
   query BugBountyPage {
     consensusBountyHunters: allConsensusBountyHuntersCsv(
-      sort: { order: DESC, fields: score }
+      sort: { score: DESC }
     ) {
       nodes {
         username
@@ -898,7 +898,7 @@ export const query = graphql`
       }
     }
     executionBountyHunters: allExecutionBountyHuntersCsv(
-      sort: { order: DESC, fields: score }
+      sort: { score: DESC }
     ) {
       nodes {
         username
