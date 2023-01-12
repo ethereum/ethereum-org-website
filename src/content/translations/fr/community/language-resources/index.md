@@ -28,7 +28,7 @@ Si vous êtes bilingue et que vous souhaitez nous aider à toucher davantage de 
 
 - [BeInCrypto](http://www.beincrypto.com.br) - articles sur l'actualité des cryptomonnaies, avec une liste de plateformes d'échange disponibles au Brésil
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) - version brésilienne de Cointelegraph, un des principaux médias sur les cryptomonnaies
-- <0">Livecoins</a> - actualités et outils de cryptomonnaies
+- [Livecoins](http://www.livecoins.com.br/ethereum) - actualités et outils de cryptomonnaies
 - [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - actualités et informations sur les cryptomonnaies
 
 **Formation**
