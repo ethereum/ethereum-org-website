@@ -33,10 +33,10 @@ export type Context = {
 
 export interface DeveloperDocsLink {
   id: TranslationKey
+  to: string
   path: string
+  description: TranslationKey
   items: Array<DeveloperDocsLink>
-  to?: string
-  description?: TranslationKey
 }
 
 export type Direction = "rtl" | "ltr" | "auto"
