@@ -25,7 +25,8 @@ lang: zh
 
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) - 一系列高额研究奖金，您可以从中赚取 >100,000 美元
 - [Ethresear.ch](https://ethresear.ch) - 以太坊的主要研究论坛，也是世界上最具影响力的加密经济学论坛
-- [生态系统支持计划的愿望清单](https://esp.ethereum.foundation/wishlist/) - 适用于多个研究领域，以太坊生态系统支持计划正在积极寻求这些研究领域的资助申请
+- [以太坊基金会研究团队 AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - 正在进行中的研究人员问答系列。 下一部分开放时，任何人都可以提出问题。
+- [生态系统支持计划愿望清单](https://esp.ethereum.foundation/wishlist/) - 介绍以太坊生态系统支持计划正在积极征询资助申请的研究领域
 
 [探索更多活跃研究领域](/community/research/)。
 

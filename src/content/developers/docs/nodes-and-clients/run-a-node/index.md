@@ -54,6 +54,7 @@ Both options have different advantages summed up above. If you are looking for a
 - [QuikNode](https://www.quiknode.io/)
 - [Blockdaemon](https://blockdaemon.com)
 - [Alchemy](https://www.alchemy.com/)
+- [Blast](https://blastapi.io/)
 
 Check out also [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/) for more options on hosted nodes.
 
