@@ -226,7 +226,7 @@ sidebarDepth: 3
 
 ## ブロックエクスプローラー {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) - イーサリアムメインネット、Ropsten テストネット、Kovan テストネット、Rinkby テストネット、Goerli テストネットのデータを取得するために使用できるブロックエクスプローラー
+- [Etherscan](https://etherscan.io/) - イーサリアムメインネット、Goerli テストネットのデータを取得するために使用できるブロックエクスプローラー
 - [Etherchain](https://www.etherchain.org/) - イーサリアムメインネットのブロックエクスプローラー
 - [Ethplorer](https://ethplorer.io/) - イーサリアムメインネットと Kovan テストネットのトークンを中心としたブロックエクスプローラー
 - [Blockchair](https://blockchair.com/ethereum) - 最もプライベートなイーサリアムエクスプローラー。 データのソートやフィルタリング (メンプール) も可能

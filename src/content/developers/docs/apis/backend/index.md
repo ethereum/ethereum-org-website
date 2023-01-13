@@ -32,6 +32,12 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [blockcypher.com](https://www.blockcypher.com/)
 - [Documentation](https://www.blockcypher.com/dev/ethereum/)
 
+**Blast by Bware Labs -** **_Decentralized APIs for Ethereum Mainnet ant Testnets._**
+
+- [blastapi.io](https://blastapi.io/)
+- [Documentation](https://docs.blastapi.io)
+- [Discord](https://discord.com/invite/VPkWESgtvV)
+
 **Infura -** **_The Ethereum API as a service._**
 
 - [infura.io](https://infura.io)

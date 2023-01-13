@@ -1,4 +1,4 @@
-import React, { ReactNode, useContext } from "react"
+import React, { ReactNode } from "react"
 import { useTheme } from "@emotion/react"
 import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -707,134 +707,117 @@ const BugBountiesPage = ({
         <Faq>
           <LeftColumn>
             <ExpandableCard
-              title="What should a good vulnerability submission look like?"
-              contentPreview="See a real example of a quality vulnerability submission."
+              title={translateMessageId("bug-bounty-faq-q1-title", intl)}
+              contentPreview={translateMessageId(
+                "bug-bounty-faq-q1-contentPreview",
+                intl
+              )}
             >
               <p>
-                <b>Description:</b> Remote Denial-of-service using non-validated
-                blocks
+                <Translation id="bug-bounty-faq-q1-content-1" />
               </p>
               <p>
-                <b>Attack scenario:</b> An attacker can send blocks that may
-                require a high amount of computation (the maximum gasLimit) but
-                has no proof-of-work. If the attacker sends blocks continuously,
-                the attacker may force the victim node to 100% CPU utilization.
+                <Translation id="bug-bounty-faq-q1-content-2" />
               </p>
               <p>
-                <b>Impact:</b> An attacker can abuse CPU utilization on remote
-                nodes, possibly causing full DoS.
+                <Translation id="bug-bounty-faq-q1-content-3" />
               </p>
               <p>
-                <b>Components:</b> Go client version v0.6.8
+                <Translation id="bug-bounty-faq-q1-content-4" />
               </p>
               <p>
-                <b>Reproduction:</b> Send a block to a Go node that contains
-                many txs but no valid PoW.
+                <Translation id="bug-bounty-faq-q1-content-5" />
               </p>
               <p>
-                <b>Details:</b> Blocks are validated in the method{" "}
-                <code>Process(Block, dontReact)</code>. This method performs
-                expensive CPU-intensive tasks, such as executing transactions (
-                <code>sm.ApplyDiff</code>) and afterward it verifies the
-                proof-of-work (<code>sm.ValidateBlock()</code>). This allows an
-                attacker to send blocks that may require a high amount of
-                computation (the maximum <code>gasLimit</code>) but has no
-                proof-of-work. If the attacker sends blocks continuously, the
-                attacker may force the victim node to 100% CPU utilization.
+                <Translation id="bug-bounty-faq-q1-content-6" />
               </p>
               <p>
-                <b>Fix:</b> Invert the order of the checks.
+                <Translation id="bug-bounty-faq-q1-content-7" />
               </p>
             </ExpandableCard>
             <ExpandableCard
-              title="Is the bug bounty program is time limited?"
-              contentPreview="No."
+              title={translateMessageId("bug-bounty-faq-q2-title", intl)}
+              contentPreview={translateMessageId(
+                "bug-bounty-faq-q2-contentPreview",
+                intl
+              )}
             >
               <p>
-                No end date is currently set. See{" "}
-                <a
-                  href="https://blog.ethereum.org/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  the Ethereum Foundation blog
-                </a>{" "}
-                for the latest news.
+                <Translation id="bug-bounty-faq-q2-content-1" />
               </p>
             </ExpandableCard>
             <ExpandableCard
-              title="How are bounties paid out?"
-              contentPreview="Rewards are paid out in ETH or DAI."
+              title={translateMessageId("bug-bounty-faq-q3-title", intl)}
+              contentPreview={translateMessageId(
+                "bug-bounty-faq-q3-contentPreview",
+                intl
+              )}
             >
               <p>
-                Rewards are paid out in ETH or DAI after the submission has been
-                validated, usually a few days later. Local laws require us to
-                ask for <b>proof of your identity</b>. In addition, we will need
-                your ETH address.
+                <Translation id="bug-bounty-faq-q3-content-1" />
               </p>
             </ExpandableCard>
             <ExpandableCard
-              title="Can I donate my reward to charity?"
-              contentPreview="Yes!"
+              title={translateMessageId("bug-bounty-faq-q4-title", intl)}
+              contentPreview={translateMessageId(
+                "bug-bounty-faq-q4-contentPreview",
+                intl
+              )}
             >
               <p>
-                We can donate your reward to an established charitable
-                organization of your choice.
+                <Translation id="bug-bounty-faq-q4-content-1" />
               </p>
             </ExpandableCard>
           </LeftColumn>
           <RightColumn>
             <ExpandableCard
-              title="I reported an issue / vulnerability but have not received a response!"
-              contentPreview="Please allow a few days for someone to respond to your submission."
+              title={translateMessageId("bug-bounty-faq-q5-title", intl)}
+              contentPreview={translateMessageId(
+                "bug-bounty-faq-q5-contentPreview",
+                intl
+              )}
             >
               <p>
-                We aim to respond to submissions as fast as possible. Feel free
-                to email us at{" "}
-                <a
-                  href="mailto:bounty@ethereum.org"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  bounty@ethereum.org
-                </a>{" "}
-                if you have not received a response within a day or two.
+                <Translation id="bug-bounty-faq-q5-content-1" />
               </p>
             </ExpandableCard>
             <ExpandableCard
-              title="I want to be anonymous / I do not want my name on the leader board."
-              contentPreview="You can do this, but it might make you ineligble for rewards."
+              title={translateMessageId("bug-bounty-faq-q6-title", intl)}
+              contentPreview={translateMessageId(
+                "bug-bounty-faq-q6-contentPreview",
+                intl
+              )}
             >
               <p>
-                Submitting anonymously or with a pseudonym is OK, but will make
-                you ineligible for ETH/DAI rewards. To be eligible for ETH/DAI
-                rewards, we require your real name and a proof of your identity.
-                Donating your bounty to a charity doesn’t require your identity.
+                <Translation id="bug-bounty-faq-q6-content-1" />
               </p>
               <p>
-                Please let us know if you do not want your name/nick displayed
-                on the leader board.
-              </p>
-            </ExpandableCard>
-            <ExpandableCard
-              title="What are the points in the leaderboard?"
-              contentPreview="Every found vulnerability / issue is assigned a score"
-            >
-              <p>
-                Every found vulnerability / issue is assigned a score. Bounty
-                hunters are ranked on our leaderboard by total points.
+                <Translation id="bug-bounty-faq-q6-content-2" />
               </p>
             </ExpandableCard>
             <ExpandableCard
-              title="Do you have a PGP key?"
-              contentPreview="Yes. Expand for details."
+              title={translateMessageId("bug-bounty-faq-q7-title", intl)}
+              contentPreview={translateMessageId(
+                "bug-bounty-faq-q7-contentPreview",
+                intl
+              )}
             >
               <p>
-                Please use{" "}
-                <code>AE96 ED96 9E47 9B00 84F3 E17F E88D 3334 FA5F 6A0A</code>
+                <Translation id="bug-bounty-faq-q7-content-1" />
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              title={translateMessageId("bug-bounty-faq-q8-title", intl)}
+              contentPreview={translateMessageId(
+                "bug-bounty-faq-q8-contentPreview",
+                intl
+              )}
+            >
+              <p>
+                <Translation id="bug-bounty-faq-q8-content-1" />
               </p>
               <Link to="https://ethereum.org/security_at_ethereum.org.asc">
-                PGP Key
+                <Translation id="bug-bounty-faq-q8-PGP-key" />
               </Link>
             </ExpandableCard>
           </RightColumn>

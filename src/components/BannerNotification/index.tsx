@@ -1,6 +1,6 @@
 import React from "react"
 import { Flex, FlexProps, useMediaQuery } from "@chakra-ui/react"
-import { lightTheme as oldTheme } from "../theme"
+import { lightTheme as oldTheme } from "../../theme"
 
 export interface IProps extends FlexProps {
   shouldShow?: boolean
