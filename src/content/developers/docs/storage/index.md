@@ -42,6 +42,7 @@ In most cases, instead of storing all data on-chain, the hash of where the data 
 
 Platforms with contract-based persistence:
 
+- [[Swarm] ]([url](https://www.ethswarm.org/))
 - [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
 - [Skynet](https://siasky.net/)
 - [Storj](https://storj.io/)
@@ -49,6 +50,7 @@ Platforms with contract-based persistence:
 - [Crust Network](https://crust.network)
 
 ### Additional considerations {#additional-consideration}
+SWARM is a decentralised data storage and distribution technology with a storage incentive system and a storage rent price oracle. 
 
 IPFS is a distributed system for storing and accessing files, websites, applications, and data. It doesn't have a built-in incentive scheme, but can instead be used with any of the contract-based incentive solutions above for longer-term persistence. Another way to persist data on IPFS is to work with a pinning service, which will "pin" your data for you. You can even run your own IPFS node and contribute to the network to persist your and/or other's data for free!
 
