@@ -64,7 +64,7 @@
     "react": "^18.0.0",
     "react-countdown": "^2.3.2",
     "react-dom": "^18.0.0",
-    "react-emoji-render": "^1.2.4",
+    "react-emoji-render": "^2.0.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.3.1",
     "react-instantsearch-dom": "^6.32.0",
