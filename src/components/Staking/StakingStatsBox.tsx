@@ -48,6 +48,7 @@ const Value: React.FC<{ children: ReactNode; title: string }> = ({
       fontSize="2rem"
       background="none"
       color="primary"
+      p={0}
     >
       {children}
     </Code>
