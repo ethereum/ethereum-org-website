@@ -332,7 +332,6 @@ DeFi est un mouvement open source. Les protocoles et applications DeFi sont ouve
 
 ### Données DeFi {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 
