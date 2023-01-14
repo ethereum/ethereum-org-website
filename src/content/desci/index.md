@@ -112,6 +112,7 @@ Explore projects and join the DeSci community.
 - [Cherubs DAO: NFT funded and DAO governed impact fund for mental health & brain wellness](https://cherubsdao.com/)
 - [CureDAO: Community-Owned Precision Health Platform](https://docs.curedao.org/)
 - [IdeaMarkets: enabling decentralized scientifc credibility](https://ideamarket.io/)
+- [Decentralized Climate Foundation](https://decentralizedclimate.org)
 
 ## Further reading {#further-reading}
 
