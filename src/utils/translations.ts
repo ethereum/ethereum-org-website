@@ -1,12 +1,7 @@
 import type { Lang } from "./languages"
 import type { Direction } from "../types"
 
-import defaultStrings from "../../i18n/merged/en/index.json"
-
-export type TranslationKey = keyof typeof defaultStrings
-
-export const isTranslationKey = (key: string): key is TranslationKey =>
-  Object.keys(defaultStrings).includes(key as TranslationKey)
+export type TranslationKey = string
 
 export const isLangRightToLeft = (lang: Lang): boolean => {
   return lang === "ar" || lang === "fa"

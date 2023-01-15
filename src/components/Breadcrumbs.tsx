@@ -9,7 +9,6 @@ import {
 
 import Link from "./Link"
 import { isLang } from "../utils/languages"
-import { isTranslationKey } from "../utils/translations"
 
 export interface IProps extends BreadcrumbProps {
   slug: string
@@ -41,11 +40,7 @@ const Breadcrumbs: React.FC<IProps> = ({
 
   const crumbs = sliced.map((path, idx) => {
     // If homepage (e.g. "en"), set text to "home" translation
-    const text = isLang(path)
-      ? t("page-index-meta-title")
-      : isTranslationKey(path)
-      ? t(path)
-      : ""
+    const text = t(isLang(path) ? "page-index-meta-title" : path)
 
     return {
       fullPath: slugChunk.slice(0, idx + 2 + startDepth).join("/") + "/",
