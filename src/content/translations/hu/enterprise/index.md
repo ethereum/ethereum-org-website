@@ -2,7 +2,6 @@
 title: Vállalatok az Ethereum főhálózaton
 description: Útmutatók, cikkek és eszközök a nyilvános Ethereum blokkláncon lévő vállalati alkalmazásokról
 lang: hu
-sidebar: true
 ---
 
 # Ethereum főhálózat vállalatoknak {#ethereum-for-enterprise}

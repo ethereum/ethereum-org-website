@@ -2,8 +2,6 @@
 title: Gas and fees
 description:
 lang: en
-sidebar: true
-preMergeBanner: true
 ---
 
 Gas is essential to the Ethereum network. It is the fuel that allows it to operate, in the same way that a car needs gasoline to run.
@@ -33,30 +31,18 @@ In the transaction, the gas limit is 21,000 units, and the gas price is 200 gwei
 Total fee would have been: `Gas units (limit) * Gas price per unit`
 i.e `21,000 * 200 = 4,200,000 gwei` or 0.0042 ETH
 
-When Alice sent the money, 1.0042 ETH would be deducted from Alice's account.
-Bob would be credited 1.0000 ETH.
-Miner would receive 0.0042 ETH.
-
-This video offers a concise overview of gas and why it exists:
-
-<YouTube id="AJvzNICwcwc" />
-
 ## After the London upgrade {#post-london}
 
-[The London Upgrade](/history/#london) was implemented on August 5th, 2021, to make transacting on Ethereum more predictable for users by overhauling Ethereum's transaction-fee-mechanism. The high-level benefits introduced by this change include better transaction fee estimation, generally quicker transaction inclusion, and offsetting the ETH issuance by burning a percentage of transaction fees.
+Let's say Jordan has to pay Taylor 1 ETH. In the transaction, the gas limit is 21,000 units and the base fee is 10 gwei. Jordan includes a tip of 2 gwei.
 
-Starting with the London network upgrade, every block has a base fee, the minimum price per unit of gas for inclusion in this block, calculated by the network based on demand for block space. As the base fee of the transaction fee is burnt, users are also expected to set a tip (priority fee) in their transactions. The tip compensates miners for executing and propagating user transactions in blocks and is expected to be set automatically by most wallets.
+The total fee would now be: `units of gas used * (base fee + priority fee)` where the `base fee` is a value set by the protocol and the `priority fee` is a value set by the user as a tip to the validator.
 
-Calculating the total transaction fee works as follows: `Gas units (limit) * (Base fee + Tip)`
+i.e `21,000 * (10 + 2) = 252,000 gwei` or 0.000252 ETH.
 
-Let's say Jordan has to pay Taylor 1 ETH. In the transaction, the gas limit is 21,000 units and the base fee is 100 gwei. Jordan includes a tip of 10 gwei.
-
-Using the formula above we can calculate this as `21,000 * (100 + 10) = 2,310,000 gwei` or 0.00231 ETH.
-
-When Jordan sends the money, 1.00231 ETH will be deducted from Jordan's account.
+When Jordan sends the money, 1.000252 ETH will be deducted from Jordan's account.
 Taylor will be credited 1.0000 ETH.
-Miner receives the tip of 0.00021 ETH.
-Base fee of 0.0021 ETH is burned.
+Validator receives the tip of 0.000042 ETH.
+Base fee of 0.00021 ETH is burned.
 
 Additionally, Jordan can also set a max fee (`maxFeePerGas`) for the transaction. The difference between the max fee and the actual fee is refunded to Jordan, i.e. `refund = max fee - (base fee + priority fee)`. Jordan can set a maximum amount to pay for the transaction to execute and not worry about overpaying "beyond" the base fee when the transaction is executed.
 
@@ -83,7 +69,7 @@ The base fee is calculated by a formula that compares the size of the previous b
 | 7            |          30M |        12.5% |       180.2 gwei |
 | 8            |          30M |        12.5% |       202.7 gwei |
 
-Relative to the pre-London gas auction market, this transaction-fee-mechanism change causes fee prediction to be more reliable. Following the table above - to create a transaction on block number 9, a wallet will let the user know with certainty that the **maximum base fee** to be added to the next block is `current base fee * 112.5%` or `202.8 gwei * 112.5% = 228.1 gwei`.
+Relative to the pre-London gas auction market, this transaction-fee-mechanism change causes fee prediction to be more reliable. Following the table above - to create a transaction on block number 9, a wallet will let the user know with certainty that the **maximum base fee** to be added to the next block is `current base fee * 112.5%` or `202.7 gwei * 112.5% = 228.1 gwei`.
 
 It's also important to note it is unlikely we will see extended spikes of full blocks because of the speed at which the base fee increases proceeding a full block.
 

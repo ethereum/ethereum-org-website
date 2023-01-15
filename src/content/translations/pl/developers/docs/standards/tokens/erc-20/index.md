@@ -2,7 +2,6 @@
 title: Standard tokena ERC-20
 description:
 lang: pl
-sidebar: true
 ---
 
 ## Wprowadzenie {#introduction}

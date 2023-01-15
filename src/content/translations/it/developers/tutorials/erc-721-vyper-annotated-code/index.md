@@ -3,7 +3,6 @@ title: "Guisa sul Contratto ERC-721 Vyper"
 description: Il contratto ERC-721 di Ryuya Nakamura e come funziona
 author: Ori Pomerantz
 lang: it
-sidebar: true
 tags:
   - "vyper"
   - "erc-721"
@@ -130,7 +129,7 @@ event ApprovalForAll:
     approved: bool
 ```
 
-Talvolta è utile avere un _operatore_ che possa gestire tutti i token di un account di un tipo specifico (quelli gestiti da un contratto specifico), similmente a una delega. Ad esempio, potrei voler dare a un contratto una delega per verificare se non l'ho contattato per sei mesi e, in questo caso, distribuisce le mie risorse ai miei eredi (se uno di loro lo richiede, i contratti non possono fare niente senza esser chiamati da una transazione). In ERC-20 possiamo solo dare un'indennità elevata a un contratto di ereditarietà, ma questo non funziona per ERC-721 perché i token non sono fungibili. Questo è l'equivalente.
+Talvolta, è utile avere un _operatore_, che possa gestire tutti i token di un conto di un tipo specifico (quelli gestiti da un contratto specifico), similmente a una delega. Ad esempio, potrei voler dare a un contratto una delega per verificare se non l'ho contattato per sei mesi e, in questo caso, distribuisce le mie risorse ai miei eredi (se uno di loro lo richiede, i contratti non possono fare niente senza esser chiamati da una transazione). In ERC-20 possiamo solo dare un'indennità elevata a un contratto di ereditarietà, ma questo non funziona per ERC-721 perché i token non sono fungibili. Questo è l'equivalente.
 
 Il valore `approved` ci comunica se l'evento è per un'approvazione, o la revoca di un'approvazione.
 
@@ -162,7 +161,7 @@ Questo algoritmo funziona solo per le interfacce utente e i server esterni. Il c
 ownerToOperators: HashMap[address, HashMap[address, bool]]
 ```
 
-Un account potrebbe avere più di un singolo operatore. Un semplice `HashMap` è insufficiente per tenerne traccia, perché ogni chiave conduce a un valore singolo. Invece, puoi usare `HashMap[address, bool]` come valore. Di default, il valore per ogni indirizzo è `False`, che significa che non è un operatore. Puoi impostare i valori a `True` se necessario.
+Un conto potrebbe avere più di un singolo operatore. Un semplice `HashMap` è insufficiente per tenerne traccia, perché ogni chiave conduce a un valore singolo. Invece, puoi usare `HashMap[address, bool]` come valore. Di default, il valore per ogni indirizzo è `False`, che significa che non è un operatore. Puoi impostare i valori a `True` se necessario.
 
 ```python
 # @dev Address of minter, who can mint a token
@@ -215,7 +214,7 @@ Per accedere alle variabili di stato, si usa `self.<variable name>` (di nuovo, c
 
 #### Funzioni di visualizzazione {#views}
 
-Sono funzioni che non modificano lo stato della blockchain e dunque sono eseguibili liberamente se chiamate esternamente. Se le funzioni di visualizzazione sono chiamate da un contratto, devono comunque essere eseguite su ogni nodo e dunque costano del carburante.
+Sono funzioni che non modificano lo stato della blockchain e dunque sono eseguibili liberamente se chiamate esternamente. Se le funzioni di visualizzazione sono chiamate da un contratto, devono comunque esser eseguite su ogni nodo e, dunque, costano gas.
 
 ```python
 @view
@@ -395,7 +394,7 @@ def _clearApproval(_owner: address, _tokenId: uint256):
         self.idToApprovals[_tokenId] = ZERO_ADDRESS
 ```
 
-Cambia il valore solo se necessario. Le variabili di stato risiedono nella memoria. Scrivere alla memoria è una delle operazioni più costose che l'EVM (Macchina Virtuale di Ethereum) effettua (in termini di [carburante](/developers/docs/gas/)). Dunque, è bene mantenerla al minimo, anche scrivere il valore esistente ha un costo elevato.
+Cambia il valore solo se necessario. Le variabili di stato risiedono nella memoria. La scrittura all'archiviazione è una delle operazioni più costose che l'EVM (Macchina Virtuale di Ethereum) effettua (in termini di [gas](/developers/docs/gas/)). Dunque, è bene mantenerla al minimo, anche scrivere il valore esistente ha un costo elevato.
 
 ```python
 @internal
@@ -554,7 +553,7 @@ def setApprovalForAll(_operator: address, _approved: bool):
 
 #### Conia nuovi token e distruggi token esistenti {#mint-burn}
 
-L'account che ha creato il contratto è il `coniatore`, il super utente autorizzato a coniare nuovi NFT. Tuttavia, nemmeno lui è autorizzato a bruciare i token esistenti. Può farlo solo il proprietario, o un'entità da autorizzata dal proprietario.
+Il conto che ha creato il contratto è il `minter`, il super utente autorizzato a coniare nuovi NFT. Tuttavia, nemmeno lui è autorizzato a bruciare i token esistenti. Può farlo solo il proprietario, o un'entità da autorizzata dal proprietario.
 
 ```python
 ### MINT & BURN FUNCTIONS ###
@@ -579,7 +578,7 @@ Questa funzione restituisce sempre `True`, perché se l'operazione fallisce è r
     assert msg.sender == self.minter
 ```
 
-Solo il coniatore (l'account che ha creato il contratto ERC-721) può coniare nuovi token. Questo può essere un problema in futuro se si vuole cambiare l'identità del coniatore. In un contratto di produzione, potresti volere una funzione che consenta al coniatore di trasferire i propri privilegi a qualcun altro.
+Solo il coniatore (il conto che ha creato il contratto ERC-721) può coniare nuovi token. Questo può essere un problema in futuro se si vuole cambiare l'identità del coniatore. In un contratto di produzione, potresti volere una funzione che consenta al coniatore di trasferire i propri privilegi a qualcun altro.
 
 ```python
     # Throws if `_to` is zero address
@@ -613,7 +612,7 @@ def burn(_tokenId: uint256):
     log Transfer(owner, ZERO_ADDRESS, _tokenId)
 ```
 
-Chiunque è autorizzato a trasferire un token, può bruciarlo. Anche se bruciare un token appare equivalente a trasferirlo all'indirizzo zero, l'indirizzo zero non riceve realmente il token. Questo ci consente di liberare tutta la memoria usata per il token, potendo così ridurre il costo del carburante della transazione.
+Chiunque è autorizzato a trasferire un token, può bruciarlo. Anche se bruciare un token appare equivalente a trasferirlo all'indirizzo zero, l'indirizzo zero non riceve realmente il token. Ciò ci consente di liberare tutta l'archiviazione usata per il token, riducendo il costo del gas della transazione.
 
 # Usare questo contratto {#using-contract}
 

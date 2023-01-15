@@ -1,7 +1,6 @@
 ---
 title: چطور می‌توانم مشارکت کنم؟
 description: چگونه در انجمن اتریوم شرکت کنیم؟
-sidebar: true
 lang: fa
 ---
 
@@ -18,6 +17,7 @@ lang: fa
 - [تماس‌های Core Dev](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) را تماشا کنید و یا در آن شرکت کنید
 - [فهرست نیازمندی‌های برنامه پشتیبانی اکوسیستم](https://esp.ethereum.foundation/wishlist/) - ابزار، اسناد و مناطق زیرساختی که در آن برنامه حمایت از اکوسیستم اتوریوم فعالانه به دنبال کمک به برنامه‌های کمکی است
 - [Web3Bridge](https://www.web3bridge.com/) - برای شناسایی، آموزش و حمایت از صدها توسعه‌دهنده و اعضای انجمن در سراسر آفریقا به جامعه‌ی مشتاق web3 بپیوندید
+- به [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders) بپیوندید
 
 ## محققان و دانشگاهیان <Emoji text=":mag:" size={1} />‍ {#researchers-and-academics}
 
@@ -25,7 +25,8 @@ lang: fa
 
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) - مجموعه‌ای از جایزه‌های تحقیقاتی با ارزش، که در آن می‌توانید تا 100,000 دلار آمریکا کسب کنید
 - [Ethresear.ch](https://ethresear.ch) - انجمن اصلی اتریوم برای تحقیقات، و تأثیرگذارترین انجمن جهان برای اقتصاد رمزنگاری
-- [فهرست نیازمندی‌های برنامه‌ی پشتیبانی اکوسیستم](https://esp.ethereum.foundation/wishlist/) - در زمینه‌های تحقیقاتی که برنامه‌ی پشتیبانی اکوسیستم اتریوم فعالانه به دنبال درخواست‌های کمک مالی است
+- [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - مجموعه‌ای ادامه‌دار از پرسش و پاسخ با پژوهشگران. با باز شدن هر قسمت جدید، هر کسی می‌تواند سؤالاتش را ارسال کند.
+- [فهرست نیازمندی‌های برنامه‌ی پشتیبانی اکوسیستم](https://esp.ethereum.foundation/wishlist/) - زمینه‌های تحقیقاتی که برنامه‌ی پشتیبانی اکوسیستم اتریوم فعالانه به دنبال درخواست‌های کمک مالی است
 
 [حیطه‌های پژوهشی فعال بیشتری را مشاهده کنید](/community/research/).
 

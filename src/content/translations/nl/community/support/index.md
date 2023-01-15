@@ -1,7 +1,6 @@
 ---
 title: Ethereum-ondersteuning
 description: Krijg ondersteuning in het Ethereum-ecosysteem.
-sidebar: true
 lang: nl
 ---
 

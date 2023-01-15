@@ -1,9 +1,8 @@
 ---
 title: "ERC-20 合约概览"
-description: OpenZepelin 的 ERC-20 合约内容和解读
+description: OpenZeppelin 的 ERC-20 合约内容和解读
 author: Ori Pomerantz
 lang: zh
-sidebar: true
 tags:
   - "solidity"
   - "erc-20"
@@ -13,7 +12,7 @@ published: 2021-03-09
 
 ## 简介 {#introduction}
 
-以太坊最常见的用途之一是由一个团队来打造一种可以交易的代币，在某种意义上是他们自己的货币。 这些代币通常遵循一个标准， [ERC-20](/developers/docs/standards/tokens/erc-20/)。 此标准使得人们能够以此来开发可以用于所有 ERC-20 代币的工具，如流动资金池和钱包。 在这篇文章中，我们将带领大家分析 [OpenZepelin Solidity ERC20 实现](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)以及 [ ERC20 接口定义](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)。
+以太坊最常见的用途之一是由一个团队来打造一种可以交易的代币，在某种意义上是他们自己的货币。 这些代币通常遵循一个标准， [ERC-20](/developers/docs/standards/tokens/erc-20/)。 此标准使得人们能够以此来开发可以用于所有 ERC-20 代币的工具，如流动资金池和钱包。 在这篇文章中，我们将带领大家分析 [OpenZeppelin Solidity ERC20 实现](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)以及 [ ERC20 接口定义](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)。
 
 这里使用的是附加说明的源代码。 如果想要实现 ERC-20， [请阅读此教程](https://docs.openzeppelin.com/contracts/2.x/erc20-supply)。
 
@@ -25,12 +24,12 @@ published: 2021-03-09
 
 如果您是一位经验丰富的程序员，您可能记得在 [Java](https://www.w3schools.com/java/java_interface.asp) 中，甚至在 [C 头文件](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html) 中看到过类似的构造。
 
-这是来自 OpenZepelin 的 [ERC-20 接口](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) 的定义。 这是将[人类可读标准](https://eips.ethereum.org/EIPS/eip-20)转换为 Solidity 代码。 当然， 接口本身并不定义*如何*做事。 这一点在下文合约的源代码中作了解释。
+这是来自 OpenZeppelin 的 [ERC-20 接口](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) 的定义。 这是将[人类可读标准](https://eips.ethereum.org/EIPS/eip-20)转换为 Solidity 代码。 当然， 接口本身并不定义*如何*做事。 这一点在下文合约的源代码中作了解释。
 
 &nbsp;
 
 ```solidity
-/ SPDX-许可标识符： MIT
+// SPDX-License-Identifier: MIT
 ```
 
 Solidity 文件中一般需要标识软件许可证。 [您可以在这里看到许可证列表](https://spdx.org/licenses/)。 如果需要不同的 许可证，只需在注释中加以说明。
@@ -431,7 +430,7 @@ contract ERC20 is Context, IERC20 {
 
 ### 许可额度函数 {#allowance-functions}
 
-这些是实现许可额度功能的函数：`allowance`、`approve`、`transferFrom` 和 `_approve`。 此外，除基本标准外，OpenZepelin 实现还包含了一些能够提高 安全性的功能：`increaseallance` 和 `decreaseAllowance`。
+这些是实现许可额度功能的函数：`allowance`、`approve`、`transferFrom` 和 `_approve`。 此外，除基本标准外，OpenZeppelin 实现还包含了一些能够提高 安全性的功能：`increaseAllowance` 和 `decreaseAllowance`。
 
 #### 许可额度函数 {#allowance}
 
@@ -461,7 +460,7 @@ contract ERC20 is Context, IERC20 {
 
 调用此函数以创建许可额度。 它与上述 `transfer` 函数相似：
 
-- 该函数仅调用一个完成真正工作的内部函数（本例中为 `_approval`）。
+- 该函数仅调用一个完成真正工作的内部函数（本例中为 `_approve`）。
 - 函数要么返回 `true`（如果成功），要么撤销（如果失败）。
 
 &nbsp;
@@ -508,7 +507,7 @@ contract ERC20 is Context, IERC20 {
     }
 ```
 
-#### OpenZepelin 安全加法 {#openzeppelin-safety-additions}
+#### OpenZeppelin 安全加法 {#openzeppelin-safety-additions}
 
 将许可额度从一个非零值设定为另一个非零值是有危险的， 因为您只能控制自己的交易顺序，而无法控制其他人的交易顺序。 假设现在有两个用户，天真的 Alice 和不诚实的 Bill。 Alice 想要从 Bill 处获取一些服务， 她认为值五个代币，所以她给了 Bill 五个代币的许可额度。
 
@@ -586,7 +585,7 @@ B：
 
 ### 修改代币信息的函数 {#functions-that-modify-token-information}
 
-这些是完成实际工作的四个函数：`_transfer`、`_mint`、`_burn` 和 `_approval`。
+这些是完成实际工作的四个函数：`_transfer`、`_mint`、`_burn` 和 `_approve`。
 
 #### \_transfer 函数 {#\_transfer}
 
@@ -631,7 +630,7 @@ B：
 1. 将其作为模板，编写自己的代码
 1. [从它继承](https://www.bitdegree.org/learn/solidity-inheritance)一个合约，并且重写您需要修改的函数
 
-第二种方法要好得多，因为 OpenZepelin ERC-20 代码已经过审核，其安全性也已得到证实。 当您的合约继承它时， 可以清楚地表明修改了哪些函数，只需要审核这些特定的函数，人们就会信任您的合约。
+第二种方法要好得多，因为 OpenZeppelin ERC-20 代码已经过审核，其安全性也已得到证实。 当您的合约继承它时， 可以清楚地表明修改了哪些函数，只需要审核这些特定的函数，人们就会信任您的合约。
 
 代币每次易手时，通常都需要调用一个函数。 然而，`_transfer` 是一个非常重要的函数， 重新编写可能会不安全（见下文），所以最好不要重写。 解决方案是重写 `_beforeTokenTransfer` 函数，这是一个[挂钩函数](https://wikipedia.org/wiki/Hooking)。 您可以重写此函数，之后每次转账都会调用它。
 
@@ -785,14 +784,14 @@ B：
 
 这是转账过程中要调用的挂钩函数。 该函数是空的，但如果你需要 它做一些事情，只需覆盖它即可。
 
-# 结论 {#conclusion}
+# 总结 {#conclusion}
 
 复习一下，这些是我认为此合约中最重要的概念（你们的看法可能与我不同）
 
 - _区块链上没有秘密_ 智能合约可以访问的任何信息 都可以提供给全世界。
 - 您可以控制自己交易的订单，但在其他人的交易发生时， 则不能控制。 这就是为什么更改许可额度时会有风险，因为它 允许消费者花掉这两个许可额度的总和。
 - `uint256` 类型值的溢出。 换言之，_0-1=2^256-1_。 如果这不是预期的 行为，您必须自行检查（或使用 SafeMath 库执行该服务）。 请注意， [Solidity 0.8.0](https://docs.soliditylang.org/en/breaking/080-breaking-changes.html) 中对此进行了更改。
-- 将特定类型变量的状态改变放在一个特定的地方，这样可以使审核更容易。 这就是我们使用以下等函数的原因，例如 `_approval` 函数，它可以被`approve`、`transferFrom`、 `increaseAllowance` 和 `decreaseAllowance` 调用。
+- 将特定类型变量的状态改变放在一个特定的地方，这样可以使审核更容易。 这就是我们使用以下等函数的原因，例如 `_approve` 函数，它可以被`approve`、`transferFrom`、 `increaseAllowance` 和 `decreaseAllowance` 调用。
 - 状态更改应为最小操作单元，其中没有任何其他动作 （如在 `_transfer` 中所见）。 这是因为在状态更改期间，会出现不一致的情况。 例如， 在减少发送人的余额，和增加接收人的余额之间， 代币总量会小于应有总量。 如果在这两个时刻之间有任何操作， 特别是调用不同的合约，则可能出现滥用。
 
 现在您已经了解了 OpenZeppelin ERC-20 合约是怎么编写的， 尤其是如何使之更加安全，您即可编写自己的安全合约和应用程序。

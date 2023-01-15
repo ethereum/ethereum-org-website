@@ -1,7 +1,6 @@
 ---
 title: Language resources
 description: Non-english resources to learn about Ethereum
-sidebar: true
 lang: en
 ---
 
@@ -96,6 +95,10 @@ If you are bilingual and want to help us reach more people, you can also get inv
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/it-it/learn/modules/blockchain-learning-solidity/) - learn how to use Solidity
 - [Microsoft Learn (Smart contracts)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - learn about writing smart contracts using Solidity
 - [Microsoft Learn (dapps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - create a user interface with decentralized applications
+
+### Russian {#ru}
+
+- [Cyber Academy](https://cyberacademy.dev) - educational space for web3 builders
 
 ### Spanish {#es}
 

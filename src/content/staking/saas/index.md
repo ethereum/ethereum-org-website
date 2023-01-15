@@ -4,7 +4,6 @@ description: An overview of how to get started with pooled ETH staking
 lang: en
 template: staking
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../assets/staking/leslie-saas.png
 alt: Leslie the rhino floating in the clouds.
 sidebarDepth: 2
@@ -39,7 +38,7 @@ The Ethereum protocol does not natively support delegation of stake, so these se
 
 ## What to consider {#what-to-consider}
 
-There are a growing number of staking-as-a-service providers to help you stake your ETH, but each come with different risks and benefits.
+There are a growing number of SaaS providers to help you stake your ETH, but each comes with different benefits and risks. You should consider that all SaaS options require additional trust assumptions compared to home-staking. Saas options may have additional code wrapping the Ethereum clients that is not open or auditable. SaaS also has a detrimental effect on network decentralization. Depending on the setup, you may not control your validator - the operator could act dishonestly using your ETH.
 
 Attribute indicators are used below to signal notable strengths or weaknesses a listed SaaS provider may have. Use this section as a reference for how we define these attributes while you're choosing a service to help with your staking journey.
 
@@ -76,21 +75,7 @@ All of these keys can always be regenerated in a reproducible manner using your 
 </ExpandableCard>
 
 <ExpandableCard title="When can I withdraw?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-  When you stake 32 ETH with a SaaS provider, that ETH is still deposited to the official staking deposit contract. As such, SaaS stakers are currently limited by the same withdrawal restrictions as solo stakers. This means that staking your ETH is currently a one-way deposit. This will be the case until the Shanghai upgrade planned to follow the Merge.
-</ExpandableCard>
-
-<ExpandableCard title="What will change with the Merge?" eventCategory="SaasStaking" eventName="clicked what will change with the Merge">
-  After the Merge, SaaS stakers will begin to receive unburnt transaction fees/tips. Check with your provider to determine how to update your settings to include an Ethereum address you control where these funds will be sent when the time comes.
-
-The Merge will <em>not</em> enable the ability to withdraw your stake or protocol rewards; this feature is planned for the Shanghai upgrade, which will follow the Merge by an estimated six months to a year.
-</ExpandableCard>
-
-<ExpandableCard title="Do SaaS stakers need to do anything for The Merge?">
-SaaS stakers <strong>do not need to do anything to prepare for The Merge</strong>.
-
-There are a few things node operators must attend to for this upgrade. Check with your staking provider for assurance their systems are ready to go.
-
-Learn more about [The Merge](/upgrades/merge/)
+  When you stake 32 ETH with a SaaS provider, that ETH is still deposited to the official staking deposit contract. As such, SaaS stakers are currently limited by the same withdrawal restrictions as solo stakers. This means that staking your ETH is currently a one-way deposit. This will be the case until the Shanghai upgrade.
 </ExpandableCard>
 
 <ExpandableCard title="What happens if I get slashed?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">

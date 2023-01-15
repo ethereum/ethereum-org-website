@@ -3,10 +3,9 @@ title: Come usare Manticore per trovare bug negli Smart Contract
 description: Come usare Manticore per trovare automaticamente bug negli Smart Contract
 author: Trailofbits
 lang: it
-sidebar: true
 tags:
   - "Solidity"
-  - "Smart Contract"
+  - "smart contract"
   - "sicurezza"
   - "test"
   - "verifica formale"
@@ -172,7 +171,7 @@ Senza altre informazioni, Manticore esplorerà il contratto con nuove transazion
 Manticore restituirà le informazioni un una directory `mcore_*`. In questa directory troverai, tra altre cose:
 
 - `global.summary`: copertura e avvisi del compilatore
-- `test_XXXXX.summary`: copertura, ultima istruzione, saldi dell'account per test case
+- `test_XXXXX.summary`: copertura, ultima istruzione, saldi del conto per casi di prova
 - `test_XXXXX.tx`: elenco dettagliato delle transazioni per test case
 
 Qui Manticore trova 7 test case che corrispondono a (l'ordine dei nomi dei file potrebbe variare):
@@ -191,13 +190,13 @@ _Il riepilogo dell'esplorazione f(!=65) denota f chiamata con ogni valore divers
 
 Come puoi notare, Manticore genera un test case univoco per ogni transazione riuscita o ripristinata.
 
-Usa il flag `--quick-mode` se desideri un'esplorazione veloce del codice (disabilita rilevatori di bug, calcolo del carburante, ecc.)
+Usa il flag `--quick-mode` se desideri un'esplorazione veloce del codice (disabilita rilevatori di bug, calcolo del carburante, etc.)
 
 ### Manipolazione di uno Smart Contract tramite l'API {#manipulate-a-smart-contract-through-the-api}
 
 Questa sezione contiene informazioni su come manipolare uno Smart Contract tramite l'API Python di Manticore. Puoi creare un nuovo file con l'estensione di Python `*.py` e scrivere il codice necessario aggiungendo i comandi dell'API (le basi saranno descritte di seguito) in questo file e poi eseguirlo con il comando `$ python3 *.py`. Puoi anche eseguire i comandi qui sotto direttamente nella console Python. Per eseguirla usa il comando `$ python3`.
 
-### Creazione di account {#creating-accounts}
+### Creare i Conti {#creating-accounts}
 
 La prima da fare è inizializzare una nuova blockchain con i comandi seguenti:
 
@@ -207,7 +206,7 @@ from manticore.ethereum import ManticoreEVM
 m = ManticoreEVM()
 ```
 
-Un account senza contratto viene creato usando [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account):
+Un conto privo di contratto è creato usando [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account):
 
 ```python
 user_account = m.create_account(balance=1000)
@@ -232,7 +231,7 @@ contract_account = m.solidity_create_contract(source_code, owner=user_account)
 
 #### Riepilogo {#summary}
 
-- Puoi creare account utente e di contratto con [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account) e [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract).
+- Puoi creare conti dell'utente e del contratto con [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account) e [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract).
 
 ### Esecuzione di transazioni {#executing-transactions}
 
@@ -353,7 +352,7 @@ for state in m.all_states:
 
 Puoi accedere alle informazioni sullo stato. Per esempio:
 
-- `state.platform.get_balance(account.address)`: il saldo dell'account
+- `state.platform.get_balance(account.address)`: il saldo del conto
 - `state.platform.transactions`: l'elenco delle transazioni
 - `state.platform.transactions[-1].return_data`: i dati restituiti dall'ultima transazione
 

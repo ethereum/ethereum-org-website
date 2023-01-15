@@ -4,13 +4,12 @@ description: Scopri come testare gli smart contract di Solidity e usare gli abbi
 author: Vladislav Starostenko
 tags:
   - "waffle"
-  - "Smart Contract"
+  - "smart contract"
   - "Solidity"
   - "test"
   - "erc-20"
-skill: intermedio
+skill: intermediate
 lang: it
-sidebar: true
 published: 2020-10-16
 ---
 
@@ -1012,7 +1011,7 @@ Dovresti vedere che Waffle ha compilato il tuo contratto e posizionato l'output 
 
 ### Fase #4.1 Installa le dipendenze necessarie [Link alla documentazione](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) {#step-4-1}
 
-Dopo aver autorizzato con successo un contratto intelligente, possiamo testarlo. Useremo `Waffle` per farlo.
+Dopo aver autorizzato con successo uno smart contract, possiamo testarlo. Useremo `Waffle` per farlo.
 
 I test con `Waffle` sono scritti usando `Mocha` insieme a `Chai`. Possiamo usare un ambiente di test diverso, ma gli abbinatori di `Waffle` funzionano solo con `Chai`.
 
@@ -1024,7 +1023,7 @@ Quindi, dobbiamo aggiungere `Chai` alle nostre dipendenze:
 
 ### Fase #4.2 Crea il file di test [Link alla documentazione](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) {#step-4-2}
 
-Per scrivere il nostro test dobbiamo creare il file `BasicToken.test.ts` nella nostra cartella di prova.
+Per scrivere il test dobbiamo creare il file `BasicToken.test.ts` nella nostra cartella di prova.
 
 ```ts
 import { expect, use } from "chai"
@@ -1050,7 +1049,7 @@ Quindi, usiamo il metodo `deployContract` di `Waffle` per distribuire il nostro 
 
 Puoi leggere di più sul `wallet` [qui](https://ethereum-waffle.readthedocs.io/en/latest/basic-testing.html?highlight=wallet#getting-wallets) e puoi leggere di più sulla funzione di distribuzione [qui](https://ethereum-waffle.readthedocs.io/en/latest/basic-testing.html?highlight=wallet#deploying-contracts).
 
-Scriviamo un test semplice per controllare il saldo del nostro portafoglio. Poiché abbiamo inviato il valore 1000 durante la distribuzione del nostro contratto, il saldo del nostro portafoglio dev'essere 1000 token, che possiamo verificare nel primo test.
+Scriviamo un test semplice per controllare il saldo del nostro portafoglio. Poiché abbiamo inviato il valore 1000 durante la distribuzione del nostro contratto, il saldo del portafoglio dev'essere 1000 token, che possiamo verificare nel primo test.
 
 ```ts
 it("Assigns initial balance", async () => {

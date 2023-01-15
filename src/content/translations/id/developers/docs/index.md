@@ -2,7 +2,6 @@
 title: Dokumentasi pengembangan Ethereum
 description: Mengenalkan dokumentasi pengembang ethereum.org.
 lang: id
-sidebar: true
 ---
 
 Dokumentasi ini didesain untuk menolong Anda membangun dengan Ethereum. Dokumen ini membahas Ethereum sebagai sebuah konsep, menjelaskan tumpukan teknologi Ethereum, dan mendokumentasikan topik tingkat lanjut untuk aplikasi dan kasus penggunaan yang lebih rumit.

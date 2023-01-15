@@ -43,6 +43,7 @@ import Emoji from "../components/OldEmoji"
 import YouTube from "../components/YouTube"
 import MergeInfographic from "../components/MergeInfographic"
 import FeedbackCard from "../components/FeedbackCard"
+import QuizWidget from "../components/Quiz/QuizWidget"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
@@ -183,6 +184,7 @@ const components = {
   YouTube,
   ExpandableCard,
   MergeInfographic,
+  QuizWidget,
 }
 
 const Title = styled.h1`
@@ -388,7 +390,7 @@ const UpgradePage = ({
           <StyledButtonDropdown list={dropdownLinks} />
           <H1>{mdx.frontmatter.title}</H1>
 
-          {mdx.frontmatter.sidebar && tocItems && (
+          {tocItems && (
             <UpgradeTableOfContents
               items={tocItems}
               maxDepth={mdx.frontmatter.sidebarDepth!}
@@ -420,7 +422,6 @@ export const upgradePageQuery = graphql`
         title
         description
         lang
-        sidebar
         sidebarDepth
         summaryPoint1
         summaryPoint2

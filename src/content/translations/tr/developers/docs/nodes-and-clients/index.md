@@ -2,7 +2,6 @@
 title: Düğümler ve istemciler
 description: Ethereum düğümlerine ve istemci yazılımına genel bakış, ayrıca bir düğümün nasıl kurulacağı ve bunu neden yapmanız gerektiğine dair bilgi.
 lang: tr
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -174,7 +173,7 @@ Senkronizasyon modları, çeşitli değiş tokuşlarla bu sürece farklı yakla�
 
 Mainnet'e hazır istemcilerde kullanılan senkronizasyon yaklaşımlarına genel bakış:
 
-##### Full senkronizasyon {#full-sync}
+##### Full senkronizasyon
 
 Full senkronizasyon, tüm blokları (başlıklar, işlemler ve makbuzlar dahil) indirir ve her bloğu başlangıçtan yürüterek aşamalı olarak blok zincirinin durumunu oluşturur.
 

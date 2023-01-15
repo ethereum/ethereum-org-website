@@ -2,7 +2,6 @@
 title: Standardul de tokenuri ERC-777
 description:
 lang: ro
-sidebar: true
 ---
 
 ## Introducere? {#introduction}

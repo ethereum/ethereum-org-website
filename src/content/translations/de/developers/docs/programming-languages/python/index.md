@@ -2,7 +2,6 @@
 title: Ethereum für Python-Entwickler
 description: Erfahre, wie du mit Python-basierten Projekten und Werkzeugen für Ethereum entwickeln kannst
 lang: de
-sidebar: true
 incomplete: true
 ---
 
@@ -65,7 +64,7 @@ Sind Sie an einigen grundlegenden Informationen interessiert? Dann sehen Sie sic
 ### Archiviert/Nicht mehr verwaltet: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) – _Ethereum-Python-Client_
-- [Mamba](https://mamba.black) – _Framework zum Schreiben, Kompilieren und Bereitstellen von Smart Contracts in der Sprache Vyper_
+- [Mamba](https://github.com/arjunaskykok/mamba) – _Framework zum Schreiben, Kompilieren und Bereitstellen von Smart Contracts in der Sprache Vyper_
 
 Sind Sie an weiteren Informationen interessiert? Sehen Sie sich [ethereum.org/developers](/developers/) an.
 

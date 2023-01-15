@@ -2,7 +2,6 @@
 title: Validium
 description: Une introduction au Validium en tant que solution de mise à l'échelle actuellement utilisée par la communauté Ethereum.
 lang: fr
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---

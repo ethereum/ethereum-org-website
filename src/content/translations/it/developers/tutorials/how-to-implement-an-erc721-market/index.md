@@ -3,13 +3,12 @@ title: Come implementare un market ERC-721
 description: Come mettere in vendita oggetti tokenizzati su bacheche di annunci decentralizzate
 author: "Alberto Cuesta Cañada"
 tags:
-  - "Smart Contract"
+  - "smart contract"
   - "erc-721"
-  - "solidity"
+  - "Solidity"
   - "token"
 skill: intermediate
 lang: it
-sidebar: true
 published: 2020-03-19
 source: Hackernoon
 sourceUrl: https://hackernoon.com/how-to-implement-an-erc721-market-1e1a32j9

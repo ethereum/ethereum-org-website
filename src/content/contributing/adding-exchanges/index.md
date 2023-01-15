@@ -2,7 +2,6 @@
 title: Adding exchanges
 description: The policy we use when adding exchanges to ethereum.org
 lang: en
-sidebar: true
 ---
 
 # Adding Ethereum exchanges {#adding-ethereum-exchanges}

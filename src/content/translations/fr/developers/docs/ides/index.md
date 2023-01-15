@@ -2,7 +2,6 @@
 title: Environnements de développement intégrés (IDE)
 description:
 lang: fr
-sidebar: true
 ---
 
 Lorsqu'il s'agit de configurer un [environnement de développement intégré (IDE)](https://wikipedia.org/wiki/Integrated_development_environment), la programmation d'applications sur Ethereum est similaire à la programmation de tout autre projet logiciel. Il existe de nombreuses options parmi lesquelles choisir, donc en fin de compte, choisissez l'IDE ou l'éditeur de code qui correspond le mieux à vos préférences. Le meilleur choix d'IDE pour votre développement Ethereum est probablement l'IDE que vous utilisez déjà pour le développement de logiciels traditionnels.

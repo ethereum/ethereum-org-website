@@ -86,13 +86,12 @@ const Paragraph = styled.p`
 We will use [the Chakra default breakpoints](https://chakra-ui.com/docs/styled-system/theme#breakpoints) from now on. Check the following table to do the conversion:
 | old breakpoints | new breakpoints |
 |-----------------|-----------------|
-| xs              | -               |
-| s               | sm              |
-| m               | md              |
-| l               | lg              |
-| xl              | xl              |
-| -               | 2xl             |
-
+| xs | - |
+| s | sm |
+| m | md |
+| l | lg |
+| xl | xl |
+| - | 2xl |
 
 ```tsx
 // before

@@ -2,10 +2,9 @@
 title: Merkle proofs for offline data integrity
 description: Ensuring data integrity on chain for data that is stored, mostly, off chain
 author: Ori Pomerantz
-tags: ["merkle", "integrity", "storage"]
+tags: ["storage"]
 skill: advanced
 lang: en
-sidebar: true
 published: 2021-12-30
 ---
 

@@ -1,5 +1,5 @@
 // Libraries
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
@@ -27,8 +27,17 @@ import FilterBurger from "../../assets/wallets/filter_burger.svg"
 import { translateMessageId } from "../../utils/translations"
 import { trackCustomEvent } from "../../utils/matomo"
 import { getImage } from "../../utils/image"
+import { useOnClickOutside } from "../../hooks/useOnClickOutside"
 
 // Styles
+const PageStyled = styled(Page)<{ showMobileSidebar: boolean }>`
+  ${({ showMobileSidebar }) =>
+    showMobileSidebar &&
+    `
+    pointer-events: none;
+  `}
+`
+
 const HeroContainer = styled.div`
   position: relative;
   width: 100%;
@@ -139,6 +148,11 @@ const StyledIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.primary};
   width: 24;
   height: 24;
+  pointer-events: none;
+`
+
+const FilterBurgerStyled = styled(FilterBurger)`
+  pointer-events: none;
 `
 
 const SecondaryText = styled.p`
@@ -159,6 +173,7 @@ const FilterSidebar = styled.div<{ showMobileSidebar: boolean }>`
   z-index: 20;
   border-radius: 0px 8px 0px 0px;
   scrollbar-width: thin;
+  pointer-events: auto;
   scrollbar-color: ${(props) => props.theme.colors.lightBorder}
     ${(props) => props.theme.colors.background};
   ::-webkit-scrollbar {
@@ -346,6 +361,8 @@ const randomizedWalletData = shuffle(walletData)
 
 const FindWalletPage = ({ data, location }) => {
   const intl = useIntl()
+  const resetWalletFilter = React.useRef(() => {})
+  const wrapperRef = useRef<HTMLDivElement>(null)
 
   const [showFeatureFilters, setShowFeatureFilters] = useState(false)
   const [showMobileSidebar, setShowMobileSidebar] = useState(false)
@@ -373,8 +390,10 @@ const FindWalletPage = ({ data, location }) => {
     setFilters(filterDefault)
   }
 
+  useOnClickOutside(wrapperRef, () => setShowMobileSidebar(false), ["mouseup"])
+
   return (
-    <Page>
+    <PageStyled showMobileSidebar={showMobileSidebar}>
       <PageMetadata
         title={translateMessageId("page-find-wallet-meta-title", intl)}
         description={translateMessageId(
@@ -427,11 +446,15 @@ const FindWalletPage = ({ data, location }) => {
               active
             </SecondaryText>
           </div>
-          {showMobileSidebar ? <StyledIcon name="cancel" /> : <FilterBurger />}
+          {showMobileSidebar ? (
+            <StyledIcon name="cancel" />
+          ) : (
+            <FilterBurgerStyled />
+          )}
         </MobileFilterToggle>
       </MobileFilterToggleContainer>
       <TableContent>
-        <FilterSidebar showMobileSidebar={showMobileSidebar}>
+        <FilterSidebar showMobileSidebar={showMobileSidebar} ref={wrapperRef}>
           <FilterTabs>
             <FilterTab
               active={!showFeatureFilters}
@@ -474,6 +497,7 @@ const FindWalletPage = ({ data, location }) => {
             aria-labelledby="reset-filter"
             onClick={() => {
               resetFilters()
+              resetWalletFilter.current()
               trackCustomEvent({
                 eventCategory: "WalletFilterReset",
                 eventAction: `WalletFilterReset clicked`,
@@ -493,6 +517,7 @@ const FindWalletPage = ({ data, location }) => {
           <div>
             {showFeatureFilters ? (
               <WalletFilterSidebar
+                resetWalletFilter={resetWalletFilter}
                 filters={filters}
                 updateFilterOption={updateFilterOption}
                 updateFilterOptions={updateFilterOptions}
@@ -540,7 +565,7 @@ const FindWalletPage = ({ data, location }) => {
           </i>
         </p>
       </Note>
-    </Page>
+    </PageStyled>
   )
 }
 
@@ -769,6 +794,11 @@ export const query = graphql`
       }
     }
     enkrypt: file(relativePath: { eq: "wallets/enkrypt.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    gridplus: file(relativePath: { eq: "wallets/gridplus.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }

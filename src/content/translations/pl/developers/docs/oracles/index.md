@@ -2,7 +2,6 @@
 title: Wyrocznie
 description: Wyrocznie umożliwiają uzyskanie danych ze świata rzeczywistego dla aplikacji Ethereum, ponieważ inteligentne kontrakty nie mogą same ich wyszukiwać.
 lang: pl
-sidebar: true
 incomplete: true
 isOutdated: true
 ---

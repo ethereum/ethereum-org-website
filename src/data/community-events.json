@@ -14,8 +14,17 @@
     "sponsor": null,
     "location": "Denver, USA",
     "description": "ETHDenver is a member-owned Community Innovation Festival. With the genesis of SporkDAO in June of 2021, ETHDenver is the first event based DAO in the world.",
-    "startDate": "2022-02-11",
-    "endDate": "2022-02-20"
+    "startDate": "2023-02-24",
+    "endDate": "2023-03-05"
+  },
+  {
+    "title": "ETH Porto",
+    "to": "https://ethporto.org/",
+    "sponsor": null,
+    "location": "Porto, Portugal",
+    "description": "Bringing the first ETH event to the beautiful city of Porto. A 48h hackthon and 2-days Conference to hear and learn about use-cases on Agriculture and Fishery, Public Goods and Governance, Decentralized Science and many more.",
+    "startDate": "2023-03-16",
+    "endDate": "2023-03-18"
   },
   {
     "title": "Schelling Point",
@@ -522,15 +531,6 @@
     "endDate": "2023-04-30"
   },
   {
-    "title": "ETHMiami",
-    "to": "https://ethmiami.net/",
-    "sponsor": null,
-    "location": "Miami, USA",
-    "description": "Web3 IRL Hackathon & Ethereum Cultural Fest of the Year.",
-    "startDate": "2022-11-26",
-    "endDate": "2022-11-30"
-  },
-  {    
     "title": "ETHBrno",
     "to": "https://ethbrno.cz",
     "sponsor": null,
@@ -539,7 +539,7 @@
     "startDate": "2022-11-11",
     "endDate": "2022-11-13"
   },
-  {    
+  {
     "title": "Web3SD",
     "to": "http://web3.sd",
     "sponsor": null,
@@ -547,5 +547,41 @@
     "description": "A Web3 conference for everyone!",
     "startDate": "2022-10-22",
     "endDate": "2022-10-22"
+  },
+  {
+    "title": "ETHLisbon",
+    "to": "https://www.ethlisbon.org",
+    "sponsor": null,
+    "location": "Lisbon, Portugal",
+    "description": "ETHLisbon is an Ethereum-focused hackathon bringing together the best Web 3.0 builders to the crypto capital of Europe.",
+    "startDate": "2022-10-28",
+    "endDate": "2022-10-30"
+  },
+  {
+    "title": "Ghana Crypto & DeFi Summit",
+    "to": "https://afrideficon.live/",
+    "sponsor": " Uniswap Foundation",
+    "location": "Ghana, Accra",
+    "description": "The Ghana Crypto & DeFi Summit 2022 (GCDSummit2022), is the first Organic, Inclusive and Grassroots DeFi summit of its kind to happen in Ghana, Africa.",
+    "startDate": "2022-11-3",
+    "endDate": "2022-11-4"
+  },
+  {
+    "title": "PyChain 2022",
+    "to": "https://www.pychain.org",
+    "sponsor": null,
+    "location": "Online event",
+    "description": "PyChain 2022 is an online blockchain developer conference targeting the Python ecosystem and Python devs.",
+    "startDate": "2022-11-15",
+    "endDate": "2022-11-15"
+  },
+  {
+    "title": "ETHMiami",
+    "to": "https://ethmiami.net/",
+    "sponsor": null,
+    "location": "Miami, USA",
+    "description": "Join ETHMiami during Art Basel Miami 2022.",
+    "startDate": "2022-11-28",
+    "endDate": "2022-12-4"
   }
 ]

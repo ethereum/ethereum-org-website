@@ -14,7 +14,7 @@
   "layer-2-statsbox-2": "Average layer 2 ETH transfer fee (USD)",
   "layer-2-statsbox-3": "Layer 2 TVL change (30 days)",
   "layer-2-what-is-layer-2-title": "What is layer 2?",
-  "layer-2-what-is-layer-2-1": "Layer 2 (L2) is a collective term to describe a specific set of Ethereum scaling solutions. <strong>A layer 2 is separate blockchain that extends Ethereum and inherits the security guarantees of Ethereum</strong>.",
+  "layer-2-what-is-layer-2-1": "Layer 2 (L2) is a collective term to describe a specific set of Ethereum scaling solutions. <strong>A layer 2 is a separate blockchain that extends Ethereum and inherits the security guarantees of Ethereum</strong>.",
   "layer-2-what-is-layer-2-2": "Now let’s dig into it a bit more, and to do this we need to explain layer 1 (L1).",
   "layer-2-what-is-layer-1-title": "What is layer 1?",
   "layer-2-what-is-layer-1-1": "Layer 1 is the base blockchain. Ethereum and Bitcoin are both layer 1 blockchains because they are the <strong>underlying foundation that various layer 2 networks build on top of</strong>. Examples of layer 2 projects include \"rollups\" on Ethereum and the Lightning Network on top of Bitcoin. All user transaction activity on these layer 2 projects can ultimately settle back to the layer 1 blockchain.",

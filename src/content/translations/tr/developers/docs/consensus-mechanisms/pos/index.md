@@ -2,7 +2,6 @@
 title: Hisse ispatı (PoS)
 description: Hisse ispatı mutabakatı protokolünün ve Ethereum'daki rolünün açıklaması.
 lang: tr
-sidebar: true
 incomplete: true
 ---
 

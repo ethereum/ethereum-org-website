@@ -171,15 +171,6 @@ const Highlight = styled(Content)<{ backgroundColor: string }>`
 
 const SoftwareHighlight = styled(Highlight)``
 
-const StyledExpandableInfo = styled(ExpandableInfo)`
-  width: 90%;
-  align-self: center;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    margin: 0;
-    width: 100%;
-  }
-`
-
 const ColumnFill = styled.div`
   line-height: 2;
   box-sizing: border-box;
@@ -536,7 +527,10 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
       </Content>
 
       <FlexContent>
-        <StyledExpandableInfo
+        <ExpandableInfo
+          alignSelf="center"
+          width={{ base: "full", md: "90%" }}
+          mb={{ base: 0, md: 4 }}
           image={getImage(data.impact)!}
           title={<Translation id="page-run-a-node-who-title" />}
           contentPreview={<Translation id="page-run-a-node-who-preview" />}
@@ -555,7 +549,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
           <StrongParagraph>
             <Translation id="page-run-a-node-who-copy-bold" />
           </StrongParagraph>
-        </StyledExpandableInfo>
+        </ExpandableInfo>
       </FlexContent>
 
       <Content>

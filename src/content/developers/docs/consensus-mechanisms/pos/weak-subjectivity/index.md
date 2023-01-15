@@ -2,7 +2,6 @@
 title: Weak subjectivity
 description: An explanation of weak subjectivity and its role in PoS Ethereum.
 lang: en
-sidebar: true
 ---
 
 Subjectivity in blockchains refers to reliance upon social information to agree on the current state. There may be multiple valid forks that are chosen from according to information gathered from other peers on the network. The converse is objectivity which refers to chains where there is only one possible valid chain that all nodes will necessarily agree upon by applying their coded rules. There is also a third state, known as weak subjectivity. This refers to a chain that can progress objectively after some initial seed of information is retrieved socially.
@@ -37,4 +36,4 @@ Finally, checkpoints can be requested from other nodes; perhaps another Ethereum
 - [Vitalik: How I learned to love weak subjectivity](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)
 - [Weak subjectivity (Teku docs)](https://docs.teku.consensys.net/en/latest/Concepts/Weak-Subjectivity/)
 - [Phase-0 Weak subjectivity guide](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/weak-subjectivity.md)
-- [Analysis n weak subjectivity in Ethereum 2.0](https://github.com/runtimeverification/beacon-chain-verification/blob/master/weak-subjectivity/weak-subjectivity-analysis.pdf)
+- [Analysis of weak subjectivity in Ethereum 2.0](https://github.com/runtimeverification/beacon-chain-verification/blob/master/weak-subjectivity/weak-subjectivity-analysis.pdf)

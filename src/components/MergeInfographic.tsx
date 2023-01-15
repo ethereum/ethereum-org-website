@@ -1,6 +1,6 @@
 // Library imports
 import React from "react"
-import styled from "@emotion/styled"
+import { AspectRatio, Box, chakra, Icon } from "@chakra-ui/react"
 import { useIntl } from "react-intl"
 // Component imports
 import Translation from "./Translation"
@@ -9,60 +9,13 @@ import { translateMessageId, TranslationKey } from "../utils/translations"
 // SVG imports
 import InfographicBg from "../assets/upgrades/merge-infographic-bg.svg"
 
-const Container = styled.div`
-  position: relative;
-  width: 100%;
-  aspect-ratio: 25 / 11;
-  isolation: isolate;
-`
-
-const ExecutionLayer = styled.div`
-  position: absolute;
-  top: 40%;
-  left: 2%;
-  width: 81%;
-  height: 18%;
-  margin: 0;
-  padding: 0;
-  z-index: 2;
-
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-
-  line-height: 1em;
-  max-height: 2em;
-  color: ${({ theme }) => theme.colors.background};
-
-  font-size: 1.375em;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    font-size: 1.125em;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    font-size: 0.875em;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
-    font-size: 0.625em;
-  }
-`
-
-const Background = styled(InfographicBg)`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-`
-
-const StyledSvg = styled.svg`
-  position: absolute;
-  z-index: 1;
-`
-
-const Text = styled.text`
-  text-anchor: start;
-  fill: currentColor;
-`
+const Background = chakra(InfographicBg)
+const Text = chakra("text", {
+  baseStyle: {
+    textAnchor: "start",
+    fill: "currentColor",
+  },
+})
 
 export type StringGetter = (key: TranslationKey) => string
 
@@ -73,7 +26,9 @@ export interface SvgProps {
 const SvgText: React.FC<SvgProps> = ({ getString }) => {
   const [sm, lg] = ["7px", "8px"]
   return (
-    <StyledSvg
+    <Icon
+      position="absolute"
+      zIndex={1}
       width="100%"
       height="100%"
       viewBox="0 0 250 110"
@@ -97,7 +52,7 @@ const SvgText: React.FC<SvgProps> = ({ getString }) => {
       <Text x="63%" y="95%" fontSize={sm}>
         🌳 {getString("page-upgrades-get-involved-ethresearch-1")}
       </Text>
-    </StyledSvg>
+    </Icon>
   )
 }
 
@@ -111,20 +66,57 @@ const MergeInfographic: React.FC<IProps> = ({ className }) => {
     translateMessageId(id, intl)
 
   return (
-    <Container
+    <AspectRatio
       className={className}
       role="img"
       aria-label={translateMessageId(
         "page-upgrades-merge-infographic-alt-text",
         intl
       )}
+      position="relative"
+      width="100%"
+      ratio={25 / 11}
+      sx={{
+        isolation: "isolate",
+      }}
     >
-      <ExecutionLayer aria-hidden="true">
-        <Translation id="page-upgrades-merge-infographic-el" />
-      </ExecutionLayer>
-      <SvgText getString={getString} />
-      <Background aria-hidden="true" />
-    </Container>
+      <Box>
+        <Box
+          position="absolute"
+          top="40%"
+          left="2%"
+          width="81%"
+          height="18%"
+          margin={0}
+          padding={0}
+          zIndex={2}
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          lineHeight="1em"
+          textAlign="center"
+          maxHeight="2em"
+          color="background"
+          fontSize={{
+            base: "0.625em",
+            sm: "0.875em",
+            md: "1.125em",
+            lg: "1.375em",
+          }}
+          aria-hidden="true"
+        >
+          <Translation id="page-upgrades-merge-infographic-el" />
+        </Box>
+        <SvgText getString={getString} />
+        <Background
+          aria-hidden="true"
+          position="absolute"
+          width="100%"
+          height="100%"
+          zIndex={0}
+        />
+      </Box>
+    </AspectRatio>
   )
 }
 

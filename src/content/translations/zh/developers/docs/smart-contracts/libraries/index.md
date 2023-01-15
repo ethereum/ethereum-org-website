@@ -2,12 +2,11 @@
 title: 智能合约库
 description:
 lang: zh
-sidebar: true
 ---
 
 您无需从头开始编写项目中的每一个智能合约 我们有许多开源代码的智能合约库可为您的项目提供可重复利用的构建块，从而使您不必重新开始。
 
-## 先决条件 {#prerequisites}
+## 前置要求 {#prerequisites}
 
 在我们跳转到智能合约库之前，清楚地了解一个智能合约的构成是一个不错的主意。 如果尚未进行智能合约的了解，请直接点击[智能合约](/developers/docs/smart-contracts/anatomy/)。
 
@@ -21,7 +20,7 @@ sidebar: true
 
 智能合约库通常提供这些行为的可复用实现方式为[标准库](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries)或在 solidity 中通过[继承](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance)的方式实现。
 
-例如，以下是[`不可拥有的`合约的简化版本](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol)来自 [OpenZepelin 合约库](https://github.com/OpenZeppelin/openzeppelin-contracts)，它设计了一个作为合约所有者的地址，并且提供了一个修饰者来限制该所有者获得一种方法。
+例如，以下是[`不可拥有的`合约的简化版本](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol)来自 [OpenZeppelin 合约库](https://github.com/OpenZeppelin/openzeppelin-contracts)，它设计了一个作为合约所有者的地址，并且提供了一个修饰者来限制该所有者获得一种方法。
 
 ```solidity
 contract Ownable {
@@ -57,7 +56,7 @@ contract MyContract is Ownable {
 
 为了促进[可组合性和互操作性](/developers/docs/smart-contracts/composability/)，以太坊社区已经以**以太坊意见征求**的形式定义了几个标准。 您可以在[标准](/developers/docs/standards/)部分阅读更多关于他们的信息。
 
-当将以太坊意见征求作为您的合约的一部分时，更好的做法是寻找已有的标准去实现而不是试图推出您自己的方式。 许多智能合约库包含了最流行的以太坊意见征求标准的实现。 例如，普遍存在的 [ERC20 同质化通证标准](/developers/tutorials/understand-the-erc-20-token-smart-contract/)可在 [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md) [DappSys](https://github.com/dapphub/ds-token/) 和 [OpenZepelin](https://docs.openzeppelin.com/contracts/3.x/erc20) 中找到。 此外，一些以太坊意见征求还提供规范实现作为以太坊意见征求本身的一部分。
+当将以太坊意见征求作为您的合约的一部分时，更好的做法是寻找已有的标准去实现而不是试图推出您自己的方式。 许多智能合约库包含了最流行的以太坊意见征求标准的实现。 例如，普遍存在的 [ERC20 同质化通证标准](/developers/tutorials/understand-the-erc-20-token-smart-contract/)可在 [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md) [DappSys](https://github.com/dapphub/ds-token/) 和 [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20) 中找到。 此外，一些以太坊意见征求还提供规范实现作为以太坊意见征求本身的一部分。
 
 值得一提的是，一些以太坊意见征求不是独立的，而是对其他以太坊意见征求的补充。 例如， [ERC2612](https://eips.ethereum.org/EIPS/eip-2612) 为 ERC20 添加了一个扩展，以提高其可用性。
 
@@ -94,7 +93,7 @@ contract MyNFT is ERC721 {
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [社区论坛](https://forum.openzeppelin.com/c/general/16)
 
-**DappSys -** **_安全、简单、灵活的智能合约构建块。_**
+**DappSys -** **_安全、简单、灵活的智能合约构建模块。_**
 
 - [相关文档](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
@@ -103,11 +102,11 @@ contract MyNFT is ERC721 {
 
 - [GitHub](https://github.com/HQ20/contracts)
 
-## 相关参考 {#related-tutorials}
+## 相关教程 {#related-tutorials}
 
-- [以太坊开发者的安全考虑](/developers/docs/smart-contracts/security/) _- 构建智能合约时的安全考虑教程，包括库的使用。_
+- [以太坊开发者的安全考虑](/developers/docs/smart-contracts/security/) _- 构建智能合约时的安全考虑教程，包括库的使用_。
 - [了解 ERC-20 代币智能合约](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _-关于 ERC20 标准的教程，由多个库提供。_
 
 ## 延伸阅读 {#further-reading}
 
-_还有哪些社区资源对您有所帮助？ 请编辑并添加到本页面！_
+_还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_

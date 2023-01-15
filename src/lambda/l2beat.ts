@@ -4,7 +4,7 @@ import type { HandlerResponse } from "@netlify/functions"
 
 export const lambda = async (): Promise<HandlerResponse> => {
   try {
-    const response = await axios.get(`https://l2beat.com/api/tvl.json`)
+    const response = await axios.get(`https://api.l2beat.com/api/tvl`)
     if (response.status < 200 || response.status >= 300) {
       return { statusCode: response.status, body: response.statusText }
     }

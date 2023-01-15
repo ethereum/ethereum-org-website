@@ -2,7 +2,6 @@
 title: Style Guide
 description: Style guide for ethereum.org
 lang: en
-sidebar: true
 ---
 
 # Ethereum.org style guide {#style-guide}
@@ -159,6 +158,55 @@ When referring to The Merge, treat it as a proper noun. Always capitalize the fi
 
 - The merge
 - the Merge
+
+### Zero-knowledge {#zero-knowledge}
+
+Zero-knowledge should be capitalized at the beginning of a sentence. In any other instance, all letters should be lower case. In either case, zero-knowledge should be hyphenated between each word.
+
+**Correct usage:**
+
+- Zero-knowledge
+- zero-knowledge
+
+**Incorrect usage:**
+
+- Zero-Knowledge
+- Zero knowledge
+- zero knowledge
+
+### ZK-proof {#ZK-proof}
+
+When using the abbreviated form of zero-knowledge proof you should shorten zero-knowledge to ZK, and hyphenate the abbreviation.
+
+**Correct usage:**
+
+- ZK-proof
+
+**Incorrect usage:**
+
+- Zk-proof
+- zK-proof
+- zk-proof
+- Zk proof
+- zK proof
+- zk proof
+
+### ZK-rollup {#ZK-rollup}
+
+When using the abbreviated form of zero-knowledge rollup you should shorten zero-knowledge to ZK, and hyphenate the abbreviation.
+
+**Correct usage:**
+
+- ZK-rollup
+
+**Incorrect usage:**
+
+- Zk-rollup
+- zK-rollup
+- zk-rollup
+- Zk rollup
+- zK rollup
+- zk rollup
 
 ### Use active voice {#use-active-voice}
 

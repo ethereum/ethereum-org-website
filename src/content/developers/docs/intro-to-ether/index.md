@@ -2,8 +2,6 @@
 title: Intro to ether
 description: A developer's introduction to the ether cryptocurrency.
 lang: en
-sidebar: true
-preMergeBanner: true
 ---
 
 ## Prerequisites {#prerequisites}
@@ -20,7 +18,7 @@ The first cryptocurrency was Bitcoin, created by Satoshi Nakamoto. Since Bitcoin
 
 ## What is ether? {#what-is-ether}
 
-**Ether (ETH)** is the cryptocurrency used for many things on the Ethereum network. Fundamentally, it is the only acceptable form of payment for transaction fees, and after [The Merge](/upgrades/merge), ether will be required to validate and propose blocks on Mainnet. Ether is also used as a primary form of collateral in the [DeFi](/defi) lending markets, as a unit of account in NFT marketplaces, as payment earned for performing services or selling real-world goods, and more.
+**Ether (ETH)** is the cryptocurrency used for many things on the Ethereum network. Fundamentally, it is the only acceptable form of payment for transaction fees, and after [The Merge](/upgrades/merge), ether is required to validate and propose blocks on Mainnet. Ether is also used as a primary form of collateral in the [DeFi](/defi) lending markets, as a unit of account in NFT marketplaces, as payment earned for performing services or selling real-world goods, and more.
 
 Ethereum allows developers to create [**decentralized applications (dapps)**](/developers/docs/dapps), which all share a pool of computing power. This shared pool is finite, so Ethereum needs a mechanism to determine who gets to use it. Otherwise, a dapp could accidentally or maliciously consume all network resources, which would block others from accessing it.
 
@@ -34,7 +32,7 @@ It is [common](https://www.reuters.com/article/us-crypto-currencies-lending-insi
 
 Minting is the process in which new ether gets created on the Ethereum ledger. The underlying Ethereum protocol creates the new ether, and it is not possible for a user to create ether.
 
-Ether is minted when a new block is created on the Ethereum blockchain. As an incentive to build blocks, the protocol grants a reward in each block, incrementing the balance of an address set by the block producer. The block reward has changed over time, and today it is 2 ETH per block. After the merge issuance to each validator depends upon the amount of ether they have staked and their performance.
+Ether is minted as a reward for each block proposed and at every epoch checkpoint for other validator activity related to reaching consensus. The total amount issued depends on the number of validators and how much ether they have staked. This total issuance is divided equally among validators in the ideal case that all validators are honest and online, but in reality, it varies based on validator performance. About 1/8 of the total issuance goes to the block proposer; the remainder is distributed across the other validators. Block proposers also receive tips from transaction fees and MEV-related income, but these come from recycled ether, not new issuance.
 
 ## Burning ether {#burning-ether}
 

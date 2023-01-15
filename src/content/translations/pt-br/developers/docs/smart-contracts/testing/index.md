@@ -2,7 +2,6 @@
 title: Testes de contratos inteligentes
 description:
 lang: pt-br
-sidebar: true
 incomplete: true
 ---
 

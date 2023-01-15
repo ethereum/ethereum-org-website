@@ -234,6 +234,12 @@
     "link": "https://www.meetup.com/blockchain-wallstreet-tech/"
   },
   {
+    "title": "EthPDX",
+    "emoji": ":us:",
+    "location": "Portland",
+    "link": "https://www.meetup.com/ethpdx/"
+  },
+  {
     "title": "Blockchain and Brews (San Diego)",
     "emoji": ":us:",
     "location": "San Diego",
@@ -294,14 +300,20 @@
     "link": "https://www.meetup.com/Chicago-Ethereum-Meetup/"
   },
   {
+    "title": "Matos Cryptobar",
+    "emoji": ":sweden:",
+    "location": "Stockholm",
+    "link": "https://matos.club/"
+  },
+  {
     "title": "Web3Dubai",
-    "emoji": ":uae:",
+    "emoji": ":flag_united_arab_emirates:",
     "location": "Dubai",
     "link": "https://www.meetup.com/web3dubai/"
   },
   {
     "title": "DeFi Dubai",
-    "emoji": ":uae:",
+    "emoji": ":flag_united_arab_emirates:",
     "location": "Dubai",
     "link": "https://www.meetup.com/defi-dubai/"
   },
@@ -316,5 +328,11 @@
     "emoji": ":us:",
     "location": "San Diego",
     "link": "http://cryptosandiego.org"
+  },
+  {
+    "title": "Ethereum Costa Rica",
+    "emoji": ":cr:",
+    "location": "Costa Rica",
+    "link": "https://twitter.com/EthereumCR"
   }
 ]

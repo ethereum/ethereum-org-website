@@ -3,10 +3,9 @@ title: Elenco di controllo per l'integrazione dei token
 description: Elenco di controllo degli aspetti da tenere presente quando si interagisce con i token
 author: "Trailofbits"
 lang: it
-sidebar: true
 tags:
   - "Solidity"
-  - "Smart Contract"
+  - "smart contract"
   - "sicurezza"
   - "token"
 skill: intermediate
@@ -57,7 +56,7 @@ Slither include una utility, [slither.prop](https://github.com/crytic/slither/wi
 Infine, ci sono alcune caratteristiche che sono difficili da identificare automaticamente. Riesamina manualmente queste condizioni:
 
 - **Transfer e transferFrom non devono richiedere commissioni.** I token deflazionistici possono condurre a comportamenti imprevisti.
-- **Vengono presi in considerazione gli interessi potenziali guadagnati dal token.** Alcuni token distribuiscono interessi ai possessori di token. Questo interesse potrebbe rimanere intrappolato nel contratto se non preso in considerazione.
+- **I potenziali interessi guadagnati dal token sono considerati.** Alcuni token distribuiscono interessi ai possessori di token. Questo interesse potrebbe rimanere intrappolato nel contratto se non preso in considerazione.
 
 ## Composizione del contratto {#contract-composition}
 

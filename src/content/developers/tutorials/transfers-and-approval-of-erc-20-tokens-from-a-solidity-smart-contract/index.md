@@ -2,10 +2,9 @@
 title: Transfers and approval of ERC-20 tokens from a solidity smart contract
 description: How to use a smart contract to interact with a token using the Solidity language
 author: "jdourlens"
-tags: ["smart contracts", "tokens", "solidity", "getting started", "erc-20"]
+tags: ["smart contracts", "tokens", "solidity", "erc-20"]
 skill: intermediate
 lang: en
-sidebar: true
 published: 2020-04-07
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/transfers-and-approval-or-erc20-tokens-from-a-solidity-smart-contract/

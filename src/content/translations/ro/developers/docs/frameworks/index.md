@@ -2,7 +2,6 @@
 title: Framework-uri de dezvoltare a aplicațiilor dapp
 description: Exploraţi avantajele framework-urilor și comparaţi opțiunile disponibile.
 lang: ro
-sidebar: true
 ---
 
 ## Introducere despre framework-uri {#introduction-to-frameworks}

@@ -2,7 +2,6 @@
 title: Noduri și clienți
 description: O prezentare generală a nodurilor Ethereum și a software-ului client plus cum să configurați un nod și de ce ar trebui să faceți acest lucru.
 lang: ro
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -174,7 +173,7 @@ Synchronization modes represent different approaches to this process with variou
 
 Prezentare generală a metodelor de sincronizare utilizate în cazul clienților pregătiți pentru Mainnet:
 
-##### Sincronizare completă {#full-sync}
+##### Sincronizare completă
 
 Sincronizarea completă descarcă toate blocurile (inclusiv anteturile, tranzacțiile și chitanțele) și generează incremental starea blockchain-ului, executând fiecare bloc de la geneză.
 

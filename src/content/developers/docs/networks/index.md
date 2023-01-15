@@ -2,8 +2,6 @@
 title: Networks
 description: An overview of Ethereum's networks and where to get testnet ether (ETH) for testing your application.
 lang: en
-sidebar: true
-preMergeBanner: true
 ---
 
 Networks are different Ethereum environments you can access for development, testing, or production use cases. Since Ethereum is a protocol, there can be multiple independent "networks" that conform to the protocol without interacting with each other.
@@ -30,15 +28,31 @@ In addition to Mainnet, there are public testnets. These are networks used by pr
 
 You should test any contract code you write on a testnet before deploying to Mainnet. Among dapps that integrate with existing smart contracts, most projects have copies deployed to testnets.
 
-Most testnets use a proof-of-authority consensus mechanism. This means a small number of nodes are chosen to validate transactions and create new blocks – staking their identity in the process. Testnets do not incentivize proof-of-work mining, which can leave them vulnerable.
+Most testnets started by using a proof-of-authority consensus mechanism. This means a small number of nodes are chosen to validate transactions and create new blocks – staking their identity in the process. Alternatively, some testnets started off using a proof-of-work consensus mechanism with just a few permissioned miners. However, in preparation for [The Merge](/upgrades/merge), these testnets underwent their own transitions to proof-of-stake, offering the opportunity for multiple 'dress-rehearsals' before developers merged Ethereum Mainnet. The Ethereum testnets are now proof-of-stake, just like Ethereum Mainnet.
 
-As [The Merge](/upgrades/merge) gets closer, more of the public proof-of-work and proof-of-authority testnets are upgrading to proof-of-stake. Swapping their consensus mechanisms acts as a rehearsal for the Ethereum Mainnet merge. Ropsten, Sepolia and Goerli are all expected to be proof-of-stake networks by the end of summer 2022, with Goerli being maintained long term.
+ETH on testnets has no real value; therefore, there are no markets for testnet ETH. Since you need ETH to actually interact with Ethereum, most people get testnet ETH from faucets. Most faucets are webapps where you can input an address which you request ETH to be sent to.
 
-ETH on testnets has no real value; therefore, there are no markets for testnet ETH. Since you need ETH to actually interact with the Ethereum network, most people get testnet ETH from faucets. Most faucets are web-apps where you can input an address and request ETH to be sent.
+#### Which Testnet should I use?
+
+The two public proof-of-stake testnets (which client developers are maintaining post-merge) are Goerli and Sepolia. The Goerli network was merged with the Prater Beacon Chain testnet. The Sepolia network was created to test the transition to proof-of-stake.
+
+**[Sepolia](#sepolia) is the recommended default testnet for application development**.
+The Sepolia network uses a permissioned validator set. It's fairly new, meaning its state and history are both quite small. This means the network is quick to sync to and that running a node on it requires less storage. This is useful for users who want to quickly spin up a node and interact with the network directly.
+
+- Closed validator set, controlled by client & testing teams
+- New testnet, less applications deployed than other testnets
+- Fast to sync and running a node requires minimal disk space
+
+**[Goerli](#goerli) is the recommended default testnet for testing of validating and staking**.
+The Goerli network is open for users wanting to run a testnet validator. Stakers wanting to test protocol upgrades before they are deployed to mainnet should therefore use Goerli.
+
+- Open validator set, stakers can test network upgrades
+- Large state, useful for testing complex smart contract interactions
+- Longer to sync and requires more storage to run a node
 
 #### Sepolia {#sepolia}
 
-A proof-of-work testnet; this means it's the best like-for-like representation of Ethereum. Sepolia is expected to undergo The Merge to proof-of-stake in summer 2022. It is not yet certain whether it will then be maintained long term.
+Sepolia is a proof-of-stake testnet, and is the recommended default testnet for application development.
 
 - [Website](https://sepolia.dev/)
 - [GitHub](https://github.com/goerli/sepolia)
@@ -52,7 +66,7 @@ A proof-of-work testnet; this means it's the best like-for-like representation o
 
 #### Goerli {#goerli}
 
-A proof-of-authority testnet that works across clients; an ideal testnet for application developers. Goerli will be the final testnet merged to proof-of-stake before Ethereum Mainnet is merged. This is expected to happen in summer 2022. Goerli is expected to be maintained long term as a proof-of-stake testnet.
+Goerli is a proof-of-stake testnet, and is the recommended default testnet for testing of validating and staking.
 
 - [Website](https://goerli.net/)
 - [GitHub](https://github.com/goerli/testnet)
@@ -63,12 +77,15 @@ A proof-of-authority testnet that works across clients; an ideal testnet for app
 - [Goerli faucet](https://faucet.goerli.mudit.blog/)
 - [Chainlink faucet](https://faucets.chain.link/)
 - [Alchemy Goerli Faucet](https://goerlifaucet.com/)
+- [All That Node Goerli Faucet](https://www.allthatnode.com/faucet/ethereum.dsrv)
+
+To launch a Validator on Goerli testnet, use ethstaker's ["cheap goerli validator" launchpad](https://goerli.launchpad.ethstaker.cc/en/).
 
 #### Ropsten _(deprecated)_ {#ropsten}
 
 _Note, [the Ropsten testnet is deprecated](https://github.com/ethereum/pm/issues/460) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia or Goerli._
 
-Ropsten was a proof-of-work testnet that went through The Merge to proof-of-stake in May 2022. It can be used to test applications on a merged network, but it is not expected to be maintained long term and is likely to deprecated before summer 2023.
+Ropsten is a proof-of-stake testnet. Ropsten will be deprecated in late 2022. Before undergoing The Merge in May 2022, Ropsten was a proof-of-work testnet.
 
 ##### Ropsten faucets
 
