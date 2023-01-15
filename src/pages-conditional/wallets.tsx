@@ -482,7 +482,7 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["src-pages-conditional-wallets", "components", "common"] }
+        ns: { in: ["page-wallets", "common"] }
       }
     ) {
       edges {

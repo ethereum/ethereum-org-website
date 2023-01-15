@@ -155,11 +155,7 @@ export const query = graphql`
       filter: {
         language: { in: $languagesToFetch }
         ns: {
-          in: [
-            "src-pages-contributing-translation-program-contributors"
-            "components"
-            "common"
-          ]
+          in: ["page-contributing-translation-program-contributors", "common"]
         }
       }
     ) {
