@@ -18,6 +18,15 @@
     "endDate": "2023-03-05"
   },
   {
+    "title": "ETH Porto",
+    "to": "https://ethporto.org/",
+    "sponsor": null,
+    "location": "Porto, Portugal",
+    "description": "Bringing the first ETH event to the beautiful city of Porto. A 48h hackthon and 2-days Conference to hear and learn about use-cases on Agriculture and Fishery, Public Goods and Governance, Decentralized Science and many more.",
+    "startDate": "2023-03-16",
+    "endDate": "2023-03-18"
+  },
+  {
     "title": "Schelling Point",
     "to": "https://schellingpoint.gitcoin.co/",
     "sponsor": "GitcoinDAO",

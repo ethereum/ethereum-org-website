@@ -22,7 +22,7 @@ While you may choose to interact directly with Ethereum clients via the JSON-RPC
 
 This page deals mainly with the JSON-RPC API used by Ethereum execution clients. However, consensus clients also have an RPC API that allows users to query information about the node, request Beacon blocks, Beacon state, and other consensus-related information directly from a node. This API is documented on the [Beacon API webpage](https://ethereum.github.io/beacon-APIs/#/).
 
-An internal API is also used for inter-client communication within a node - that is, it enables the consensus client and execution client to swap data. This is called the 'Engine API' and the specs are available on [Github](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md).
+An internal API is also used for inter-client communication within a node - that is, it enables the consensus client and execution client to swap data. This is called the 'Engine API' and the specs are available on [Github](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
 ## Execution client spec {#spec}
 
@@ -2286,14 +2286,12 @@ contract Multiply7 {
 The first thing to do is make sure the HTTP RPC interface is enabled. This means we supply Geth with the `--http` flag on startup. In this example we use the Geth node on a private development chain. Using this approach we don't need ether on the real network.
 
 ```bash
-
-geth --http --dev --mine --miner.threads 1 --unlock 0 console 2>>geth.log
-
+geth --http --dev console 2>>geth.log
 ```
 
 This will start the HTTP RPC interface on `http://localhost:8545`.
 
-We can verify that the interface is running by retrieving the Coinbase address and balance using [curl](https://curl.haxx.se/download.html). Please note that data in these examples will differ on your local node. If you want to try these commands, replace the request params in the second curl request with the result returned from the first.
+We can verify that the interface is running by retrieving the Coinbase address and balance using [curl](https://curl.se). Please note that data in these examples will differ on your local node. If you want to try these commands, replace the request params in the second curl request with the result returned from the first.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method":"eth_coinbase", "id":1}' -H "Content-Type: application/json" localhost:8545

@@ -3,7 +3,7 @@ title: Elenco di controllo di sicurezza per gli smart contract
 description: Un flusso di lavoro suggerito per scrivere smart contract sicuri
 author: "Trailofbits"
 tags:
-  - "smart contract"
+  - "smart Contract"
   - "sicurezza"
   - "Solidity"
 skill: intermediate

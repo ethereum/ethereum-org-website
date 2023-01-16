@@ -1,5 +1,5 @@
 ---
-title: Fundação Ethereum e programas de recompensas da comunidade
+title: Fundação Ethereum & Programa de Recompensas da Comunidade
 description: Uma listagem dos programas de recompensas por meio do ecossistema Ethereum.
 lang: pt-br
 ---
@@ -14,21 +14,28 @@ Esta página é administrada por nossa comunidade. Se houver algo faltando ou er
 
 Esses programas abrangem um amplo ecossistema Ethereum ao oferecer recompensas a um grande escopo de projetos. Eles incluem soluções de dimensionamento, formação de comunidades, segurança, privacidade e muito mais. Essas recompensas não são específicas de nenhuma plataforma Ethereum e são um bom lugar para começar se você não tiver certeza.
 
-- [Programa de suporte ao ecossistema EF](https://esp.ethereum.foundation)-_ Financiar projetos de código aberto que beneficiam a Ethereum, com foco particular em ferramentas universais, infraestrutura, pesquisa e bens públicos _
+- [Programa de suporte ao ecossistema EF](https://esp.ethereum.foundation)-_ Financiar projetos de código aberto que beneficiam o Ethereum, com foco particular em ferramentas universais, infraestrutura, pesquisa e bens públicos _
 - [Ethereum RFP](https://github.com/ethereum/requests-for-proposals)-_ Solicitações de propostas da Fundação Ethereum para trabalho e projetos no seu ecossistema_
-- [MetaCartel](https://www.metacartel.org/grants/)-_Desenvolvimento de aplicativos descentralizados, criação de DAO_  
-  Recompensas variando entre $1K e $8.000 dólares.
-- [Moloch DAO](https://www.molochdao.com/)-_Privacidade, dimensionamento da camada 2, segurança do cliente e mais_
+- [MetaCartel](https://www.metacartel.org/grants/) – _Desenvolvimento de Dapp, criação de DAO_
+- [Moloch DAO](https://www.molochdao.com/) – _Privacidade, dimensionamento da camada 2, segurança do cliente e mais_
 - [Recompensas abertas](https://opengrants.com/explore)
+- [Concessões DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) – _Planilha Google de organizações que oferecem concessões_
+- [Desafio de mesclagem de dados](https://esp.ethereum.foundation/merge-data-challenge) – _Convocando todos os Ethereanos, cientistas de dados, engenheiros de dados, visualizadores de dados, desenvolvedores e qualquer pessoa interessada em explorar os dados do Ethereum!_
 
 ## Especificidades do projeto {#project-specific}
 
 Estes projetos criaram seus próprios programas de recompensas destinados a desenvolvimento e experimentação de suas tecnologias.
 
-- [TheGraph](https://airtable.com/shrdfvnFvVch3IOVm) – _O ecossistema [The Graph](https://thegraph.com/)_
-- [Programa de fundos Uniswap](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/) comunidade_
-- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/) Fundo do ecossistema_
-- [mStable](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) comunidade_
+- [Programa de concessões Aave](https://aavegrants.org/) – _[Aave](https://aave.com/) concede DAO_
+- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _Fundo do ecossistema [Balancer](https://balancer.fi/)_
+- [Programa de concessões da Chainlink](https://chain.link/community/grants) – _Concessões da comunidade da [Chainlink](https://chain.link/)_
+- [Programa de concessões Compound](https://compoundgrants.org/) – _Ecossistema financeiro [Compound](https://compound.finance/)_
+- [Programa de concessões da Consensys](https://consensys.net/grants/) – _Concessões do Ethereum e financiamento de cadeia de blocos [Consensys](https://consensys.net/)_
+- [Organização de concessões do ecossistema Lido (LEGO)](https://lego.lido.fi/) – _Ecossistema financeiro [Lido](https://lido.fi/)_
+- [Programa de concessões mStable](https://docs.mstable.org/advanced/grants-program) – _Comunidade [mStable](https://mstable.org/)_
+- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _Ecossistema [The Graph](https://thegraph.com/)_
+- [Programa de fundos Uniswap](https://www.unigrants.org/) – _Comunidade [Uniswap](https://uniswap.org/)_
+- [Web3 Grants](https://web3grants.net) – _Uma extensa lista de programas de concessão web3/crypto relacionados_
 
 ## Financiamento quadrático {#quadratic-funding}
 
