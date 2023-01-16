@@ -146,7 +146,7 @@ Proof-of-work should be capitalized at the beginning of a sentence. In any other
 
 The same rules we apply to proof-of-work are applicable to proof-of-stake, proof-of-authority, proof-of-humanity, proof-of-individuality, etc.
 
-### Smart Contract {#smart-contract}
+### Smart contract {#smart-contract}
 
 Smart contract is a common noun and should only be capitalized at the beginning of a sentence. In any other instance, all letters should be lowercase.
 
