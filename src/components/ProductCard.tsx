@@ -68,7 +68,7 @@ const SubjectBadge: React.FC<{
     }
   }
   return (
-    <Badge size="sm" background={backgroundProp()}>
+    <Badge size="sm" textTransform="unset" background={backgroundProp()}>
       {children}
     </Badge>
   )
