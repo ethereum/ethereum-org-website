@@ -64,7 +64,7 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 ### Arhivate/Neîntreținute: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _client Python Ethereum_
-- [Mamba](https://mamba.black) - _framework pentru a scrie, compila și implementa contractele inteligente scrise în limbajul Vyper_
+- [Mamba](https://github.com/arjunaskykok/mamba) - _framework pentru a scrie, compila și implementa contractele inteligente scrise în limbajul Vyper_
 
 Căutaţi şi alte resurse? Accesaţi [ethereum.org/developers.](/developers/).
 

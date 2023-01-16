@@ -61,7 +61,7 @@ Gwei（giga-wei 的缩写），常用于描述以太坊上的燃料费用。
 
 当接收者地址是[智能合约](/developers/docs/smart-contracts/)时，在智能合约执行其代码后，这些转账的以太币可用于支付燃料费用。
 
-[关于交易的更多信息](/developers/docs/transactions/)
+[有关交易的更多信息](/developers/docs/transactions/)
 
 ## 查询 ETH {#querying-ether}
 
@@ -75,4 +75,4 @@ Gwei（giga-wei 的缩写），常用于描述以太坊上的燃料费用。
 - [以太坊白皮书](/whitepaper/)：以太坊原始提案 这份资料包括了对 ETH 及其创建动机的整体描述。
 - [Gwei 计算器](https://www.alchemy.com/gwei-calculator)：使用这个 Gwei 计算器可以轻松地换算 wei、Gwei 和 ETH。 只需输入任何数量的 wei、Gwei 或 ETH，就能够自动换算。
 
-_还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_
+_还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_

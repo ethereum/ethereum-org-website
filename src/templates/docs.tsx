@@ -60,12 +60,6 @@ const ContentContainer = styled.div<{ isZenMode: boolean }>`
   background-color: ${(props) => props.theme.colors.ednBackground};
 `
 
-const DesktopTableOfContents = styled(TableOfContents)<{
-  isPageIncomplete: boolean
-}>`
-  padding-top: ${(props) => (props.isPageIncomplete ? `5rem` : `3rem`)};
-`
-
 // Apply styles for classes within markdown here
 const Content = styled.article`
   flex: 1 1 ${(props) => props.theme.breakpoints.m};
@@ -230,13 +224,13 @@ const DocsPage = ({
           <DocsNav relativePath={relativePath}></DocsNav>
         </Content>
         {tocItems && (
-          <DesktopTableOfContents
+          <TableOfContents
             slug={slug}
             editPath={absoluteEditPath}
             items={tocItems}
-            isPageIncomplete={isPageIncomplete}
             maxDepth={mdx.frontmatter.sidebarDepth!}
             hideEditButton={!!mdx.frontmatter.hideEditButton}
+            pt={isPageIncomplete ? "5rem" : "3rem"}
           />
         )}
       </ContentContainer>
