@@ -96,6 +96,10 @@ Si vous êtes bilingue et que vous souhaitez nous aider à toucher davantage de 
 - [Microsoft Learn (Smart contracts)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - écrire des contrats intelligents Ethereum avec Solidity
 - [Microsoft Learn (dApps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - créer une interface utilisateur avec des applications décentralisées
 
+### Russe {#ru}
+
+- [Cyber Academy](https://cyberacademy.dev) - espace éducatif pour les constructeurs web3
+
 ### Espagnol {#es}
 
 - [Ethereum Madrid](https://ethereummadrid.com/) - cours, événements et blog sur la gouvernance, la DeFi et la blockchain
@@ -103,24 +107,24 @@ Si vous êtes bilingue et que vous souhaitez nous aider à toucher davantage de 
 - [Tutoriales online](https://tutoriales.online/curso/solidity) - apprendre Solidity et programmer sur Ethereum
 - [Curso Introducción a Ethereum Development](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) - Les bases de Solidity, le test et le deploiement de votre premier contrat intelligent
 - [Curso Introducción a Seguridad y Hacking en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) - comprendre les vulnérabilités communes et les failles de sécurité dans les contrats intelligents réels
-- [Curso Introducción a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - apprendre comment les contrats intelligents DeFi fonctionnent en Solidity et créer votre propre Automated Market Maker
-- [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) - ressources d'éducation non-technique sur la blockchain pour niveau débutant à confirmé. Tout savoir sur les crypto-monnaies et Ethereum.
+- [Curso Introducción a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - apprendre comment les contrats intelligents DeFi fonctionnent avec Solidity et créer votre propre Automated Market Maker
+- [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) - ressources d'éducation non-technique sur la blockchain, de débutant à confirmé. Tout savoir sur les crypto-monnaies et Ethereum.
 
 ### Turc {#tr}
 
 - [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) - cours axés sur la cryptomonnaie et la blockchain
-- [Le grand renommage : qu'est-il arrivé à Eth2 ?](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) - traduction turque du grand blog de renommage, expliquant l'éloignement de la terminologie « Eth2 »
+- [The great renaming: what happened to Eth2?](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) - traduction turque du grand blog de renommage, expliquant l'abandon de la terminologie « Eth2 »
 
 ### Vietnamien {#vi}
 
 - [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - aperçu d'Ethereum, des dApps, portefeuilles et FAQ
-- [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - plateforme Web avec des rubriques consacrées à l'actualité et aux ressources éducatives sur Ethereum
-- [Coin68](https://coin68.com/ethereum-tieu-diem/) - portail sur les cryptomonnaies avec des ressources éducatives et l'actualité relative à Ethereum
+- [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - plateforme Web comportant des rubriques consacrées à l'actualité et aux ressources éducatives sur Ethereum
+- [Coin68](https://coin68.com/ethereum-tieu-diem/) - portail sur les cryptomonnaies comportant des ressources éducatives et l'actualité relative à Ethereum
 
 ### Japonais {#ja}
 
 - [Association japonaise d'échange d'actifs virtuels et de cryptomonnaies (JVCEA)](https://jvcea.or.jp/)
 - [Association des entreprises de cryptoactifs du Japon (JCBA)](https://cryptocurrency-association.org/)
 - [Get started with blockchain development - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - Ce parcours vous initie à la blockchain et au développement sur la plateforme Ethereum
-- [Maîtriser Ethereum](https://www.oreilly.co.jp/books/9784873118963/) - Livre « Mastering Ethereum » en japonais
-- [Développement de contrats intelligents avec Solidity et Ethereum](https://www.oreilly.co.jp/books/9784873119342/) - Livre « Hands-On Smart Contract Development with Solidity and Ethereum » en japonais
+- [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) - Livre « Mastering Ethereum » en japonais
+- [Hands-On Smart Contract Development with Solidity and Ethereum](https://www.oreilly.co.jp/books/9784873119342/) - Livre « Hands-On Smart Contract Development with Solidity and Ethereum » en japonais

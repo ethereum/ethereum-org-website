@@ -3,7 +3,7 @@ title: "Reverse Engineering a Contract"
 description: How to understand a contract when you don't have the source code
 author: Ori Pomerantz
 lang: en
-tags: ["evm", "opcodes", "reverse engineering", "decompiler"]
+tags: ["evm", "opcodes"]
 skill: advanced
 published: 2021-12-30
 ---
@@ -312,7 +312,7 @@ If no match is found, the code jumps to [the proxy handler at 0x7C](#the-handler
 |    10D | DUP1         | 0x00 0x00 CALLVALUE           |
 |    10E | REVERT       |
 
-The first thing this function does is check that the call did not send any ETH. This function is not [`payable`](https://solidity-by-example.org/payable/). If somebody sent us ETH that much be a mistake and we want to `REVERT` to avoid having that ETH where they can't get it back.
+The first thing this function does is check that the call did not send any ETH. This function is not [`payable`](https://solidity-by-example.org/payable/). If somebody sent us ETH that must be a mistake and we want to `REVERT` to avoid having that ETH where they can't get it back.
 
 | Offset | Opcode                                            | Stack                                                                       |
 | -----: | ------------------------------------------------- | --------------------------------------------------------------------------- |

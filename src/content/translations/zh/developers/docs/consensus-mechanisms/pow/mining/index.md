@@ -10,7 +10,7 @@ lang: zh
 
 </InfoBanner>
 
-## 前置要求 {#prerequisites}
+## 前提条件 {#prerequisites}
 
 为了更好地了解此页面，推荐先阅读[交易](/developers/docs/transactions/)、[区块](/developers/docs/blocks/)和[工作量证明](/developers/docs/consensus-mechanisms/pow/)。
 
@@ -64,7 +64,7 @@ lang: zh
 
 ## 挖矿算法 {#mining-algorithm}
 
-以太坊主网只使用过一种挖矿算法 - [“Ethash”](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash)。 Ethhash 是称为[“Dagger-Hashimoto”](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto)的最初研发挖矿算法的继承者。
+以太坊主网只使用过一种挖矿算法 - [“Ethash”](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash)。 Ethhash 是一种称为[“Dagger-Hashimoto”](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto)的最初研发挖矿算法的后续版本。
 
 [有关挖矿算法的更多信息](/developers/docs/consensus-mechanisms/pow/mining-algorithms/)。
 
