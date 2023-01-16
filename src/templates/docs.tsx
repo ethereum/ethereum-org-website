@@ -3,6 +3,7 @@ import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
+import { Badge } from "@chakra-ui/react"
 
 import BannerNotification from "../components/BannerNotification"
 import ButtonLink from "../components/ButtonLink"
@@ -40,7 +41,6 @@ import { ZenModeContext } from "../contexts/ZenModeContext"
 import { isLangRightToLeft } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { Context } from "../types"
-import { Badge } from "@chakra-ui/react"
 
 const Page = styled.div`
   display: flex;
