@@ -38,7 +38,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [pwasm_ethereum externs library to interact with Ethereum-like network](https://github.com/openethereum/pwasm-ethereum)
 - [Build A Decentralized Chat Using JavaScript and Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Build a Decentralized Todo App Using Vue.js & Rust](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
-- [Getting Started with Enigma - In Rust Programming Language](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
+
 - [An Intro to Secret Contracts](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 - [Build a blockchain in Rust](https://blog.logrocket.com/how-to-build-a-blockchain-in-rust/)
 
@@ -49,12 +49,11 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/)
 - [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS API reference_
 - [Solaris](https://github.com/paritytech/sol-rs)
-- [SputnikVM](https://github.com/sorpaas/rust-evm) - _Rust Ethereum Virtual Machine Implementation_
+- [SputnikVM](https://github.com/rust-blockchain/evm) - _Rust Ethereum Virtual Machine Implementation_
 - [rust-web3](https://github.com/tomusdrw/rust-web3) - _Rust implementation of Web3.js library_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Wavelet smart contract in Rust_
 - [Foundry](https://github.com/gakonst/foundry)- _Toolkit for Ethereum application development_
 - [Ethers_rs](https://github.com/gakonst/ethers-rs)- _Ethereum library and wallet implementation_
-- [evm_rs](https://github.com/rust-blockchain/evm)- _Ethereum virtual machine implementation in rust_
 - [SewUp](https://github.com/second-state/SewUp) - _A library to help you build your Ethereum webassembly contract with Rust and just like develop in a common backend_
 
 Looking for more resources? Check out [ethereum.org/developers.](/developers/)

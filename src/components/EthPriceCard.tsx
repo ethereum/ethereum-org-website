@@ -1,90 +1,11 @@
 import React, { useState, useEffect } from "react"
-import styled from "@emotion/styled"
+import { Box, Flex, Heading, Icon } from "@chakra-ui/react"
+import { MdInfoOutline } from "react-icons/md"
 import axios from "axios"
 
 import Translation from "./Translation"
-import Icon from "./Icon"
 import Link from "./Link"
 import Tooltip from "./Tooltip"
-
-const InfoIcon = styled(Icon)`
-  margin-left: 0.5rem;
-  fill: ${(props) => props.theme.colors.text200};
-`
-
-const Card = styled.div<{
-  isLeftAlign: boolean
-  isNegativeChange: boolean
-}>`
-  display: flex;
-  flex-direction: column;
-  align-items: ${(props) => (props.isLeftAlign ? `flex-start` : `center`)};
-  justify-content: space-between;
-  width: 100%;
-  max-width: 420px;
-  max-height: 192px;
-  background: ${(props) =>
-    props.isNegativeChange
-      ? props.theme.colors.priceCardBackgroundNegative
-      : props.theme.colors.priceCardBackgroundPositive};
-  border-radius: 4px;
-  border: 1px solid
-    ${(props) =>
-      props.isNegativeChange
-        ? props.theme.colors.priceCardBorderNegative
-        : props.theme.colors.priceCardBorder};
-  padding: 1.5rem;
-`
-
-const Title = styled.h4`
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 140%;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: ${(props) => props.theme.colors.text200};
-`
-
-const Price = styled.div<{
-  hasError: boolean
-}>`
-  line-height: 1.4;
-  font-weight: 400;
-  margin: ${(props) => (props.hasError ? `1rem 0` : 0)};
-  font-size: ${(props) => (props.hasError ? props.theme.fontSizes.m : `3rem`)};
-  color: ${(props) =>
-    props.hasError ? props.theme.colors.fail : props.theme.colors.text};
-`
-
-const ChangeContainer = styled.div<{
-  isLeftAlign: boolean
-}>`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: ${(props) => (props.isLeftAlign ? `flex-start` : `center`)};
-  min-height: 33px; /* prevents jump when price loads*/
-`
-
-const Change = styled.div<{
-  isNegativeChange: boolean
-}>`
-  font-size: 1.5rem;
-  line-height: 140%;
-  margin-right: 1rem;
-  color: ${(props) =>
-    props.isNegativeChange
-      ? props.theme.colors.fail300
-      : props.theme.colors.success};
-`
-
-const ChangeTime = styled.div`
-  font-size: 0.875rem;
-  line-height: 140%;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: ${(props) => props.theme.colors.text300};
-`
 
 export interface IProps {
   className?: string
@@ -146,32 +67,82 @@ const EthPriceCard: React.FC<IProps> = ({ className, isLeftAlign = false }) => {
     : ``
 
   const tooltipContent = (
-    <div>
+    <Box>
       <Translation id="data-provided-by" />{" "}
       <Link to="https://www.coingecko.com/en/api">coingecko.com</Link>
-    </div>
+    </Box>
   )
 
   return (
-    <Card
+    <Flex
       className={className}
-      isLeftAlign={isLeftAlign}
-      isNegativeChange={isNegativeChange}
+      direction="column"
+      align={isLeftAlign ? "flex-start" : "center"}
+      justify="space-between"
+      background={
+        isNegativeChange
+          ? "priceCardBackgroundNegative"
+          : "priceCardBackgroundPositive"
+      }
+      border="1px solid"
+      borderColor={
+        isNegativeChange ? "priceCardBorderNegative" : "priceCardBorder"
+      }
+      p={6}
+      w="full"
+      maxW="420px"
+      maxH="192px"
+      borderRadius="base"
     >
-      <Title>
+      <Heading
+        as="h4"
+        color="text200"
+        m={0}
+        fontSize="sm"
+        fontWeight="medium"
+        lineHeight="140%"
+        letterSpacing="0.04em"
+        textTransform="uppercase"
+      >
         <Translation id="eth-current-price" />
         <Tooltip content={tooltipContent}>
-          <InfoIcon name="info" size="14" />
+          <Icon as={MdInfoOutline} boxSize="14px" ml={2} />
         </Tooltip>
-      </Title>
-      <Price hasError={state.hasError}>{price}</Price>
-      <ChangeContainer isLeftAlign={isLeftAlign}>
-        <Change isNegativeChange={isNegativeChange}>{change}</Change>
-        <ChangeTime>
+      </Heading>
+
+      <Box
+        m={state.hasError ? "1rem 0" : 0}
+        lineHeight="1.4"
+        fontSize={state.hasError ? "md" : "5xl"}
+        color={state.hasError ? "fail" : "text"}
+      >
+        {price}
+      </Box>
+      <Flex
+        w="full"
+        align="center"
+        justify={isLeftAlign ? "flex-start" : "center"}
+        minH="33px" /* prevents jump when price loads*/
+      >
+        <Box
+          fontSize="2xl"
+          lineHeight="140%"
+          mr={4}
+          color={isNegativeChange ? "fail300" : "success"}
+        >
+          {change}
+        </Box>
+        <Box
+          fontSize="sm"
+          lineHeight="140%"
+          letterSpacing="0.04em"
+          textTransform="uppercase"
+          color="text300"
+        >
           (<Translation id="last-24-hrs" />)
-        </ChangeTime>
-      </ChangeContainer>
-    </Card>
+        </Box>
+      </Flex>
+    </Flex>
   )
 }
 

@@ -205,7 +205,7 @@ An account containing code that executes whenever it receives a [transaction](#t
 
 ### contract creation transaction {#contract-creation-transaction}
 
-A special [transaction](#transaction), with the [zero address](#zero-address) as the recipient, that is used to register a [contract](#contract-account) and record it on the Ethereum blockchain.
+A special [transaction](#transaction) that includes a contract's initiation code. The recipient is set to `null` and the contract is deployed to an address generated from the user address and `nonce`. that is used to register a [contract](#contract-account) and record it on the Ethereum blockchain.
 
 ### cryptoeconomics {#cryptoeconomics}
 
@@ -1095,7 +1095,7 @@ The smallest denomination of [ether](#ether). 10<sup>18</sup> wei = 1 ether.
 
 ### zero address {#zero-address}
 
-A special Ethereum address, composed entirely of zeros, that is specified as the destination address of a [contract creation transaction](#contract-creation-transaction).
+An Ethereum address, composed entirely of zeros, that is frequently used as a burn address for unwanted funds.
 
 ### zero-knowledge proof {#zk-proof}
 

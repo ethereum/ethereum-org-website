@@ -1,10 +1,12 @@
 // Import libraries
-import React, { useState, useEffect } from "react"
-import styled from "@emotion/styled"
+import React, { useState, useEffect, ReactNode } from "react"
+import { MdInfoOutline } from "react-icons/md"
 import { useIntl } from "react-intl"
-import { Spinner } from "@chakra-ui/react"
+import { Code, Flex, Icon, Spinner, VStack } from "@chakra-ui/react"
 // Import components
 import Translation from "../Translation"
+import Tooltip from "../Tooltip"
+import Link from "../Link"
 // Import utilities
 import { Lang } from "../../utils/languages"
 import { getData } from "../../utils/cache"
@@ -13,47 +15,78 @@ import { getLocaleForNumberFormat } from "../../utils/translations"
 // Constants
 const NA_ERROR = "n/a"
 const ZERO = "0"
+const MAX_EFFECTIVE_BALANCE = 32
 
-// Styled components
-const Container = styled.div`
-  display: flex;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex-direction: column;
-  }
-`
+const Cell: React.FC<{ children: ReactNode }> = ({ children }) => {
+  return (
+    <VStack
+      spacing={2}
+      py={4}
+      px={8}
+      borderLeft={{ md: "1px" }}
+      borderTop={{ base: "1px", md: "none" }}
+      // `!important` needed to force an override of the user-agent
+      borderColor="preBorder !important"
+      _first={{
+        borderLeft: "none",
+        borderTop: "none",
+      }}
+    >
+      {children}
+    </VStack>
+  )
+}
 
-const Cell = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem 2rem;
-  border-left: 1px solid ${({ theme }) => theme.colors.preBorder};
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    border-left: none;
-    border-top: 1px solid #33333355;
-  }
-  &:first-child {
-    border-left: none;
-    border-top: none;
-  }
-`
+const Value: React.FC<{ children: ReactNode; title: string }> = ({
+  children,
+  title,
+}) => {
+  return (
+    <Code
+      title={title}
+      fontWeight="bold"
+      fontSize="2rem"
+      background="none"
+      color="primary"
+      p={0}
+    >
+      {children}
+    </Code>
+  )
+}
 
-const Value = styled.code`
-  font-weight: 700;
-  font-size: 2rem;
-  background: none;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.primary};
-`
+const Label: React.FC<{ children: ReactNode }> = ({ children }) => {
+  return (
+    <Flex alignItems="center" textTransform="uppercase" fontSize="sm">
+      {children}
+    </Flex>
+  )
+}
 
-const Label = styled.p`
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  margin-top: 0.5rem;
-`
+// BeaconchainTooltip component
+const BeaconchainTooltip = ({ isEthStore }: { isEthStore?: boolean }) => (
+  <Tooltip
+    content={
+      <div>
+        <Translation id="data-provided-by" />{" "}
+        {isEthStore && (
+          <Link to="https://github.com/gobitfly/eth.store/">ETH.STORE, </Link>
+        )}
+        <Link to="https://beaconcha.in">Beaconcha.in</Link>
+      </div>
+    }
+  >
+    <Icon
+      as={MdInfoOutline}
+      color="text"
+      marginInlineStart={2}
+      _hover={{ color: "primary" }}
+      _active={{ color: "primary" }}
+      _focus={{ color: "primary" }}
+      boxSize={4}
+    />
+  </Tooltip>
+)
 
 // Interfaces
 export interface IProps {}
@@ -75,6 +108,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
       intl.locale as Lang
     )
 
+    // Helper functions
     const formatInteger = (amount: number): string =>
       new Intl.NumberFormat(localeForStatsBoxNumbers).format(amount)
 
@@ -85,41 +119,33 @@ const StakingStatsBox: React.FC<IProps> = () => {
         maximumSignificantDigits: 2,
       }).format(amount)
 
+    // API call, data formatting, and state setting
     ;(async () => {
       try {
         const {
-          data: { totalvalidatorbalance, validatorscount },
+          data: { apr, effective_balances_sum_wei },
         } = await getData<{
-          data: { totalvalidatorbalance: number; validatorscount: number }
-        }>("https://mainnet.beaconcha.in/api/v1/epoch/latest")
-        const valueTotalEth = formatInteger(
-          Number((totalvalidatorbalance * 1e-9).toFixed(0))
+          data: { apr: number; effective_balances_sum_wei: number }
+        }>("https://beaconcha.in/api/v1/ethstore/latest")
+        const totalEffectiveBalance: number = effective_balances_sum_wei * 1e-18
+        const valueTotalEth = formatInteger(Math.floor(totalEffectiveBalance))
+        const valueTotalValidators = formatInteger(
+          totalEffectiveBalance / MAX_EFFECTIVE_BALANCE
         )
-        const valueTotalValidators = formatInteger(validatorscount)
+        const valueCurrentApr = formatPercentage(apr)
         setTotalEth(valueTotalEth)
         setTotalValidators(valueTotalValidators)
-      } catch (error) {
-        setTotalEth(null)
-        setTotalValidators(null)
-      }
-    })()
-    ;(async () => {
-      try {
-        const {
-          data: { apr },
-        } = await getData<{
-          data: { apr: number }
-        }>("https://beaconcha.in/api/v1/ethstore/650")
-        const valueCurrentApr = formatPercentage(apr)
         setCurrentApr(valueCurrentApr)
       } catch (error) {
+        setTotalEth(null)
         setCurrentApr(null)
+        setTotalValidators(null)
       }
     })()
   }, [intl.locale])
 
   return (
-    <Container>
+    <Flex direction={{ base: "column", md: "row" }}>
       <Cell>
         {totalEth === ZERO ? (
           <Spinner />
@@ -128,6 +154,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
         )}
         <Label>
           <Translation id="page-staking-stats-box-metric-1" />
+          <BeaconchainTooltip />
         </Label>
       </Cell>
       <Cell>
@@ -140,6 +167,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
         )}
         <Label>
           <Translation id="page-staking-stats-box-metric-2" />
+          <BeaconchainTooltip />
         </Label>
       </Cell>
       <Cell>
@@ -152,9 +180,10 @@ const StakingStatsBox: React.FC<IProps> = () => {
         )}
         <Label>
           <Translation id="page-staking-stats-box-metric-3" />
+          <BeaconchainTooltip isEthStore />
         </Label>
       </Cell>
-    </Container>
+    </Flex>
   )
 }
 

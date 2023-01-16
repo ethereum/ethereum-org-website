@@ -129,9 +129,9 @@
   "page-run-a-node-what-3-subtitle": "En ligne",
   "page-run-a-node-what-3-text": "L'exécution d'un nœud Ethereum peut sembler compliquée au premier coup d'œil, mais il s'agit simplement d'exécuter en permanence un logiciel sur un ordinateur connecté à Internet. Lorsqu'il est hors ligne, votre nœud sera simplement inactif jusqu'à ce qu'il se reconnecte et se mette à jour avec les derniers changements.",
   "page-run-a-node-who-title": "<i>Qui</i> devrait exécuter un nœud ?",
-  "page-run-a-node-who-preview": "Tout le monde ! Les nœuds ne sont pas réservés aux mineurs et aux validateurs. <i>N'importe qui</i> peut exécuter un nœud, vous n'avez même pas besoin d'ETH.",
-  "page-run-a-node-who-copy-1": "Nul besoin de mettre vos ETH en jeu ou d'être un mineur pour exécuter un nœud. Ce sont en fait tous les autres nœuds sur Ethereum qui tiennent les mineurs et les validateurs responsables.",
-  "page-run-a-node-who-copy-2": "Vous n'obtiendrez peut-être pas les récompenses financières que gagnent les validateurs et les mineurs, mais il existe de nombreux autres avantages à gérer un nœud pour tout utilisateur d'Ethereum, notamment la confidentialité, la sécurité, la dépendance réduite aux serveurs tiers, la résistance à la censure et l'amélioration de l'intégrité et de la décentralisation du réseau.",
+  "page-run-a-node-who-preview": "Tout le monde ! Les nœuds ne sont pas réservés aux validateurs de la preuve d'enjeu. <i>N'importe qui</i> peut exécuter un nœud, vous n'avez même pas besoin d'ETH.",
+  "page-run-a-node-who-copy-1": "Nul besoin de mettre vos ETH en jeu pour faire tourner un nœud. Dans les faits, ce sont tous les autres nœuds d'Ethereum qui rendent les validateurs responsables.",
+  "page-run-a-node-who-copy-2": "Vous n'obtiendrez peut-être pas les récompenses financières que gagnent les validateurs, mais il existe de nombreux autres avantages à gérer un nœud pour tout utilisateur d'Ethereum, notamment la confidentialité, la sécurité, la dépendance réduite aux serveurs tiers, la résistance à la censure et l'amélioration de l'intégrité et de la décentralisation du réseau.",
   "page-run-a-node-who-copy-3": "Avoir votre propre nœud signifie que vous n'avez pas besoin de faire confiance aux informations sur l'état du réseau fournies par un tiers.",
   "page-run-a-node-who-copy-bold": "Ne faites pas confiance, vérifiez.",
   "page-run-a-node-why-title": "<i>Pourquoi</i> exécuter un nœud ?"

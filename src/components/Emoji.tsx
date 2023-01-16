@@ -1,10 +1,10 @@
 import React from "react"
 import { Box, HTMLChakraProps } from "@chakra-ui/react"
-import { Twemoji, Props } from "react-emoji-render"
+import { Twemoji, BaseProps } from "react-emoji-render"
 
 import { IS_DEV } from "../utils/env"
 
-export interface IProps extends HTMLChakraProps<"span">, Props {}
+export interface IProps extends HTMLChakraProps<"span">, BaseProps {}
 
 const Emoji = (props: IProps) => {
   return (
@@ -21,6 +21,7 @@ const Emoji = (props: IProps) => {
       sx={{
         "& > img": {
           margin: "0 !important",
+          display: "initial",
         },
       }}
       {...props}

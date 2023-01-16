@@ -154,8 +154,6 @@ type ExchangeName =
   | "coinspot"
   | "cryptocom"
   | "easycrypto"
-  | "ftx"
-  | "ftxus"
   | "gateio"
   | "gemini"
   | "huobiglobal"
@@ -242,8 +240,6 @@ const EthExchanges = () => {
           country
           cryptocom
           easycrypto
-          ftx
-          ftxus
           gateio
           gemini
           huobiglobal
@@ -317,12 +313,6 @@ const EthExchanges = () => {
         ...cardListImage
       }
       easycrypto: file(relativePath: { eq: "exchanges/easycrypto.png" }) {
-        ...cardListImage
-      }
-      ftx: file(relativePath: { eq: "exchanges/ftx.png" }) {
-        ...cardListImage
-      }
-      ftxus: file(relativePath: { eq: "exchanges/ftx.png" }) {
         ...cardListImage
       }
       gateio: file(relativePath: { eq: "exchanges/gateio.png" }) {
@@ -466,18 +456,6 @@ const EthExchanges = () => {
       url: "https://easycrypto.com/",
       image: data.easycrypto,
       usaExceptions: [],
-    },
-    ftx: {
-      name: "FTX",
-      url: "https://ftx.com/",
-      image: data.ftx,
-      usaExceptions: [],
-    },
-    ftxus: {
-      name: "FTX US",
-      url: "https://ftx.us/",
-      image: data.ftx,
-      usaExceptions: ["NY"],
     },
     gateio: {
       name: "Gate.io",

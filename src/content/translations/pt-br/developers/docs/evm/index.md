@@ -6,15 +6,15 @@ lang: pt-br
 
 O contexto físico da Máquina Virtual do Ethereum (EVM, na sigla em inglês) não pode ser descrito da mesma maneira que é descrita uma nuvem no céu ou uma onda no meio do oceano, se não que deve ser _entendido_ como uma entidade singular mantida por milhares de computadores conectados operando um cliente de Ethereum.
 
-O protocolo do Ethereum existe única e exclusivamente para manter a operação contínua, ininterrupta e imutável desta máquina de estado especial; é o ambiente onde residem todas as contas de Ethereum e os contratos inteligentes. Para qualquer bloco da cadeia, o Ethereum tem um estado "canônico", e a EVM é a responsável por definir as regras para registrar um novo estado válido de um bloco para o seguinte.
+O próprio protocolo Ethereum existe apenas com o propósito de manter a operação contínua, ininterrupta e imutável dessa máquina de estado especial. É o ambiente em que todas as contas Ethereum e contratos inteligentes vivem. Para qualquer bloco na cadeia, o Ethereum tem um estado "canônico", e a EVM é a responsável por definir as regras para registrar um novo estado válido de um bloco para o seguinte.
 
 ## Pré-requisitos {#prerequisites}
 
-Alguma familiaridade básica com a terminologia comum em ciência da computação, como [bytes](https://wikipedia.org/wiki/Byte), [memória](https://wikipedia.org/wiki/Computer_memory) e [pilha](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) é necessária para entender a EVM. Também seria ótimo estar familiarizado com conceitos de criptografia/blockchain como [funções hash](https://wikipedia.org/wiki/Cryptographic_hash_function), [prova de trabalho](https://wikipedia.org/wiki/Proof_of_work) e [árvore de Merkle](https://wikipedia.org/wiki/Merkle_tree).
+Alguma familiaridade básica com a terminologia comum em ciência da computação, como [bytes](https://wikipedia.org/wiki/Byte), [memória](https://wikipedia.org/wiki/Computer_memory) e [pilha](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) é necessária para entender a EVM. Também recomendamos se familiarizar com conceitos de criptografia/cadeia de blocos, como [funções hash](https://wikipedia.org/wiki/Cryptographic_hash_function) e a [árvore Merkle](https://wikipedia.org/wiki/Merkle_tree).
 
 ## Do livro-razão para a máquina de estado {#from-ledger-to-state-machine}
 
-A analogia de um 'livro-razão distribuído' é muitas vezes usada para descrever blockchains como o Bitcoin, que permite uma moeda descentralizada usando ferramentas fundamentais de criptografia. Uma criptomoeda comporta-se como uma moeda "normal" devido às regras que regem o que pode e não pode se fazer para modificar o livro-razão. Por exemplo, um endereço de Bitcoin não pode gastar mais Bitcoin do que o recebido previamente. Essas regras sustentam todas as transações em Bitcoin e em muitas outras blockchains.
+A analogia de um 'livro-razão distribuído' é muitas vezes usada para descrever blockchains como o Bitcoin, que permite uma moeda descentralizada usando ferramentas fundamentais de criptografia. O livro-razão mantém um registro de atividades que deve aderir a um conjunto de regras que regem o que alguém pode e não pode fazer para modificar o livro-razão. Por exemplo, um endereço de Bitcoin não pode gastar mais Bitcoin do que o recebido previamente. Essas regras sustentam todas as transações em Bitcoin e em muitas outras blockchains.
 
 Embora Ethereum tenha sua própria criptomoeda nativa (Ether), que segue quase exatamente as mesmas regras intuitivas, ele também permite dispor de uma função muito mais poderosa: [os contratos inteligentes](/developers/docs/smart-contracts/). Para este recurso mais complexo, uma analogia mais sofisticada é necessária. Em vez de um livro-razão distribuído, Ethereum é uma [máquina de estado distribuída](https://wikipedia.org/wiki/Finite-state_machine). O estado do Ethereum é uma grande estrutura de dados que contém não apenas todas as contas e saldos, mas também um _estado da máquina_, que pode mudar de bloco para bloco de acordo com um conjunto predefinido de regras, as quais podem executar código de máquina arbitrário. As regras específicas para mudar o estado de bloco em bloco são definidas pela EVM.
 
@@ -32,7 +32,7 @@ Dado um antigo estado `(S)` e um novo conjunto de transações válidas `(T)`, a
 
 ### Estado {#state}
 
-No contexto do Ethereum, o estado é uma enorme estrutura de dados chamada [Merkle Patricia Trie](https://eth.wiki/en/fundamentals/patricia-tree)modificada, que mantém todas as [contas](/developers/docs/accounts/) vinculadas por hashes e redutíveis a um único hash raiz armazenado na blockchain.
+No contexto do Ethereum, o estado é uma enorme estrutura de dados chamada [árvore de Merkle Patricia modificada](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/), que mantém todas as [contas](/developers/docs/accounts/) vinculadas por hashes e redutíveis a um único hash raiz armazenado na cadeia de blocos.
 
 ### Transações {#transactions}
 
@@ -56,7 +56,7 @@ O bytecode compilado do contrato inteligente executa como um número de [opcodes
 
 Todas as implementações da EVM devem aderir à especificação descrita no Ethereum Yellowpaper.
 
-Durante o histórico de 5 anos do Ethereum, a EVM passou por várias revisões e existem várias implementações da EVM em várias linguagens de programação.
+Durante o histórico de 7 anos do Ethereum, a EVM passou por várias revisões e existem várias implementações da EVM em várias linguagens de programação.
 
 Todos os [clientes Ethereum](/developers/docs/nodes-and-clients/#execution-clients) incluem uma implementação de EVM. Além disso, existem várias implementações independentes, incluindo:
 

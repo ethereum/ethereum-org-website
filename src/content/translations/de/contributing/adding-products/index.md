@@ -107,6 +107,6 @@ _Wir untersuchen auch Optionen für Abstimmungen, damit die Community ihre Präf
 
 Wenn Sie eine Wallet oder dApp zu ethereum.org hinzufügen möchten und das Produkt die Kriterien erfüllt, erstellen Sie einen Eintrag auf GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
   Eintrag erstellen
 </ButtonLink>
