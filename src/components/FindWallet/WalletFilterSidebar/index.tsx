@@ -121,7 +121,6 @@ const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
                           onClick={
                             item.filterKey
                               ? () => {
-                                  console.log(item.filterKey)
                                   trackCustomEvent({
                                     eventCategory: "WalletFilterSidebar",
                                     eventAction: `${filterOption.title}`,
@@ -131,7 +130,6 @@ const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
                                   updateFilterOption(item.filterKey)
                                 }
                               : () => {
-                                  console.log(item.filterKey)
                                   setShowOptions(
                                     idx,
                                     itemIdx,
