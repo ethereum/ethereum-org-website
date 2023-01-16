@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react"
-import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 import axios from "axios"
 import { kebabCase } from "lodash"
 import { AreaChart, ResponsiveContainer, Area, XAxis } from "recharts"
 
+import { VStack, Grid, Box, Icon, Button, Text, Flex } from "@chakra-ui/react"
+import { MdInfoOutline } from "react-icons/md"
+
 import Translation from "./Translation"
 import Tooltip from "./Tooltip"
 import Link from "./Link"
-import Icon from "./Icon"
 import StatErrorMessage from "./StatErrorMessage"
 import StatLoadingMessage from "./StatLoadingMessage"
 
@@ -22,122 +23,6 @@ import { getData } from "../utils/cache"
 import { GATSBY_FUNCTIONS_PATH } from "../constants"
 import { Lang } from "../utils/languages"
 import { Direction } from "../types"
-
-const Value = styled.span`
-  position: absolute;
-  bottom: 8%;
-  font-size: min(4.4vw, 4rem);
-  font-weight: 600;
-  margin-top: 0rem;
-  margin-bottom: 1rem;
-  color: ${({ theme }) => theme.colors.text};
-  flex-wrap: wrap;
-  text-overflow: ellipsis;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    font-size: max(8.8vw, 48px);
-  }
-`
-
-const Title = styled.p`
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-  color: ${({ theme }) => theme.colors.text};
-  text-transform: uppercase;
-  font-family: ${(props) => props.theme.fonts.monospace};
-`
-
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 2rem 2rem 0;
-  border-radius: 2px;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 2rem 0 0;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
-    margin: 0;
-  }
-`
-
-const Box = styled.div`
-  position: relative;
-  color: ${({ theme }) => theme.colors.text};
-  height: 20rem;
-  background: ${({ theme, color = "" }) => theme.colors[color]};
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  border: 1px solid ${({ theme }) => theme.colors.color};
-  padding: 1.5rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    border-left: 0px solid #000000;
-    border-right: 0px solid #000000;
-    margin-top: -1px;
-    padding: 1rem;
-    padding-top: 2rem;
-  }
-`
-
-const StatRow = styled.div`
-  display: flex;
-  flex-direction: column;
-`
-
-const StyledIcon = styled(Icon)`
-  fill: ${({ theme }) => theme.colors.text};
-  margin-right: 0.5rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-  }
-  &:hover,
-  &:active,
-  &:focus {
-    fill: ${({ theme }) => theme.colors.primary};
-  }
-`
-
-const Lines = styled.div`
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 65%;
-`
-
-const ButtonContainer = styled.div<{ dir?: Direction }>`
-  position: absolute;
-  ${({ dir }) => (dir === "rtl" ? "left" : "right")}: 20px;
-  bottom: 20px;
-  font-family: ${(props) => props.theme.fonts.monospace};
-`
-
-const Button = styled.button<{ color: string }>`
-  background: ${(props) => props.theme.colors.background};
-  font-family: ${(props) => props.theme.fonts.monospace};
-  font-size: 1.25rem;
-  color: ${({ theme }) => theme.colors.text};
-  padding: 2px 15px;
-  border-radius: 1px;
-  border: 1px solid ${({ theme, color }) => theme.colors[color]};
-  cursor: pointer;
-
-  &:disabled {
-    cursor: default;
-    opacity: 0.7;
-  }
-`
-
-const ButtonToggle = styled(Button)<{ active: boolean }>`
-  ${({ active, theme }) =>
-    active &&
-    `
-    background-color: ${theme.colors.homeBoxPurple};
-    opacity: 1;
-  `}
-`
 
 const ranges = ["30d", "90d"] as const
 
@@ -170,14 +55,22 @@ const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
   ) : isLoading ? (
     <StatLoadingMessage />
   ) : (
-    <StatRow>
-      <span>
+    <VStack>
+      <Box>
         {state.value}{" "}
         <Tooltip content={tooltipContent(metric)}>
-          <StyledIcon name="info" />
+          <Icon
+            as={MdInfoOutline}
+            boxSize={6}
+            fill="text"
+            mr={2}
+            _hover={{ fill: "primary" }}
+            _active={{ fill: "primary" }}
+            _focus={{ fill: "primary" }}
+          ></Icon>
         </Tooltip>
-      </span>
-    </StatRow>
+      </Box>
+    </VStack>
   )
 
   // Returns either 90 or 30-day data range depending on `range` selection
@@ -233,19 +126,82 @@ const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
   )
 
   return (
-    <Box>
+    <Flex
+      position="relative"
+      color="text"
+      height={80}
+      flexDirection="column"
+      justifyContent="space-between"
+      alignItems="flex-start"
+      borderX={{
+        base: "0px solid #000000",
+        lg: "1px solid",
+      }}
+      borderY="1px solid"
+      marginTop={{
+        base: "-1px",
+        lg: "0",
+      }}
+      padding={{ base: "2rem 1rem 1rem", lg: "1.5rem" }}
+    >
       <div>
-        <Title>{title}</Title>
+        <Text
+          fontSize="xl"
+          mb={2}
+          color="text"
+          textTransform="uppercase"
+          fontFamily="monospace"
+        >
+          {title}
+        </Text>
         <p>{description}</p>
       </div>
       {!state.hasError && !isLoading && (
         <>
-          <Lines>{chart}</Lines>
-          <ButtonContainer dir={dir}>{buttonContainer}</ButtonContainer>
+          <Box
+            position="absolute"
+            left={0}
+            bottom={0}
+            width="100%"
+            height="65%"
+          >
+            {chart}
+          </Box>
+          {dir === "rtl" ? (
+            <Box
+              position="absolute"
+              bottom="20px"
+              fontFamily="monospace"
+              left="20px"
+            >
+              {buttonContainer}
+            </Box>
+          ) : (
+            <Box
+              position="absolute"
+              bottom="20px"
+              fontFamily="monospace"
+              right="20px"
+            >
+              {buttonContainer}
+            </Box>
+          )}
         </>
       )}
-      <Value>{value}</Value>
-    </Box>
+      <Text
+        position="absolute"
+        bottom="8%"
+        fontSize={{ base: "max(8.8vw, 48px)", lg: "min(4.4vw, 4rem)" }}
+        fontWeight={600}
+        marginTop={0}
+        marginBottom={4}
+        color="text"
+        flexWrap="wrap"
+        textOverflow="ellipsis"
+      >
+        {value}
+      </Text>
+    </Flex>
   )
 }
 
@@ -264,16 +220,29 @@ interface IRangeSelectorProps {
 const RangeSelector: React.FC<IRangeSelectorProps> = ({ state, setState }) => (
   <div>
     {ranges.map((range, idx) => (
-      <ButtonToggle
-        active={state === range}
-        onClick={() => {
-          setState(ranges[idx])
-        }}
+      <Button
+        onClick={() => setState(ranges[idx])}
         key={idx}
         color={""}
+        background="background"
+        fontFamily="monospace"
+        fontSize="xl"
+        padding="2px 15px"
+        borderRadius="1px"
+        border="1px solid"
+        cursor="pointer"
+        _focus={{ outline: "none" }}
+        _hover={{ color: "" }}
+        _active={{ color: "" }}
+        _disabled={{
+          cursor: "default",
+          opacity: "0.7",
+        }}
+        size="sm"
+        backgroundColor={state === ranges[idx] ? "homeBoxPurple" : ""}
       >
         {range}
-      </ButtonToggle>
+      </Button>
     ))}
   </div>
 )
@@ -563,7 +532,23 @@ const StatsBoxGrid: React.FC<IProps> = () => {
   ]
   const dir = isLangRightToLeft(intl.locale as Lang) ? "rtl" : "ltr"
   return (
-    <Grid>
+    <Grid
+      display={{
+        base: "flex",
+        lg: "grid",
+      }}
+      gridTemplateColumns="repeat(2, 1fr)"
+      margin={{
+        base: "0",
+        sm: "2rem 0 0",
+        lg: "2rem 2rem 0",
+      }}
+      borderRadius="sm"
+      flexDirection={{
+        base: "column",
+        lg: "column",
+      }}
+    >
       {metrics.map((metric, idx) => (
         <GridItem key={idx} metric={metric} dir={dir} />
       ))}

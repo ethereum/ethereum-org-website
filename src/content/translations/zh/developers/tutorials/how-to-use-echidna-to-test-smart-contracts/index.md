@@ -15,8 +15,6 @@ source: 构建安全的合约
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 
-<!-- Probably turn into a serialised tutorial -->
-
 ## 安装 {#installation}
 
 Echidna 可以通过 docker 或使用预编译的二进制程序安装。
@@ -39,7 +37,7 @@ cd /home/training
 
 ### 通过二进制程序安装 {#binary}
 
-[https://github.com/crytic/echidna/releases/tag/1.4.0.0](https://github.com/crytic/echidna/releases/tag/1.4.0.0)
+[https://github.com/crytic/echidna/releases/tag/v1.4.0.0](https://github.com/crytic/echidna/releases/tag/v1.4.0.0)
 
 ## 基于属性的模糊测试简介 {#introduction-to-property-based-fuzzing}
 
@@ -47,7 +45,7 @@ Echidna 是一个模糊测试工具，我们在之前的博客中描述过（[1]
 
 ### 模糊测试 {#fuzzing}
 
-[模糊测试](https://en.wikipedia.org/wiki/Fuzzing)是一个在安全技术领域广为人知的技术。 它依靠生成或多或少数量的随机输入值来测试程序中的错误。 传统软件中的模糊测试工具（例如 [AFL](http://lcamtuf.coredump.cx/afl/) 或 [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)）是发现错误的有效工具。
+[模糊测试](https://wikipedia.org/wiki/Fuzzing)是一项在安全技术领域广为人知的技术。 它依靠生成或多或少数量的随机输入值来测试程序中的错误。 传统软件中的模糊测试工具（例如 [AFL](http://lcamtuf.coredump.cx/afl/) 或 [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)）是发现错误的有效工具。
 
 除了完全随机生成输入值外，还有很多其他的技巧和策略来生成足够好的输入，包括：
 
@@ -57,7 +55,7 @@ Echidna 是一个模糊测试工具，我们在之前的博客中描述过（[1]
 
 ### 基于属性的模糊测试 {#property-based-fuzzing}
 
-Echidna 属于一个特定的模糊测试工具系列：基于属性的模糊测试，很大程度上受到了 [QuickCheck](https://en.wikipedia.org/wiki/QuickCheck) 的启发。 与尝试查找崩溃的经典模糊测试工具不同，Echedna 会视图去改变用户定义的不变量。
+Echidna 属于一种特定的模糊测试工具系列：基于属性的模糊测试，很大程度上受到了 [QuickCheck](https://wikipedia.org/wiki/QuickCheck) 的启发。 与尝试查找崩溃的经典模糊测试工具不同，Echedna 会试图去改变用户定义的不变量。
 
 在智能合约中，不变量是 Solidity 函数，可以表示合约可能达到的任何错误或无效状态，包括：
 
@@ -131,7 +129,7 @@ Echidna 需要一个无参 [构造函数](/developers/docs/smart-contracts/anato
 Echidna 中有一些特定的地址：
 
 - `0x00a329c0648769A73afAc7F9381E08FB43dBEA72` 用于调用构造函数。
-- `0x10000`、`0x2000` 和 `0x00a329C0648769a73afAC7F9381e08fb43DBEA70` 用于随机调用其他函数。
+- `0x10000`、`0x20000` 和 `0x00a329C0648769a73afAC7F9381e08fb43DBEA70` 用于随机调用其他函数。
 
 在当前的示例中，我们不需要进行任何特定的初始化，因为我们的构造函数是空的。
 
@@ -151,7 +149,7 @@ $ echidna-test contract.sol --contract MyContract
 
 ### 总结：测试属性 {#summary-testing-a-property}
 
-下面总结了在我们的示例中运行 Echidna 的情况：
+下面总结了我们示例中 Echidna 的运行情况：
 
 ```solidity
 contract TestToken is Token{
@@ -229,7 +227,7 @@ contract C {
 }
 ```
 
-这个小例子迫使 Echidna 找到特定的交易序列来改变一个状态变量。 这对一个模糊测试工具来说很困难（建议使用符号执行工具，比如 [Manticore](https://github.com/trailofbits/manticore)）。 我们可以运行 Echidna 来验证：
+这个小例子迫使 Echidna 找到特定的交易序列来改变一个状态变量。 这对一个模糊测试工具来说很困难（建议使用符号执行工具，比如 [Manticore](https://github.com/trailofbits/manticore)）。 我们可以运行 Echidna 对此进行验证：
 
 ```bash
 $ echidna-test multi.sol
@@ -352,7 +350,7 @@ Seed: 1806480648350826486
 
 ### 使用断言的时机和方式 {#when-and-how-use-assertions}
 
-断言可以用作显示属性的替代项，特别是如果要检查的条件与某些操作 `f` 的正确使用直接相关。 在某些代码之后添加断言，将强制在代码执行后立即执行检查：
+断言可以用作显示属性的替代项，特别是如果要检查的条件与某些操作 `f` 的正确使用直接相关。 在某些代码之后添加断言将强制在代码执行后立即进行检查：
 
 ```solidity
 function f(..) public {
@@ -377,14 +375,14 @@ function echidna_assert_after_f() public returns (bool) {
 
 - 如果 `f` 被声明为 `internal` 或 `external` 则失败.
 - 不清楚应该使用哪些参数来调用 `f`。
-- 如果 `f` 恢复，属性将会失败。
+- 如果 `f` 回滚，属性将会失败。
 
 一般来说，我们建议遵循 [John Regehr 关于如何使用断言的建议](https://blog.regehr.org/archives/1091)：
 
 - 在进行断言检查时不要强制任何负面影响。 例如： `assert(ChangeStateAndReturn() == 1)`
 - 不要断言明显的语句。 例如， 在 `assert(var >= 0)` 中，`var` 被声明为 `uint`。
 
-最后，请**不要使用** `require` 代替 `assert`，因为 Echidna 将无法检测到它（但合约仍将恢复）。
+最后，请**不要使用** `require` 代替 `assert`，因为 Echidna 将无法检测到它（但合约仍将回滚）。
 
 ### 总结：断言检查 {#summary-assertion-checking}
 
@@ -439,7 +437,7 @@ contract C {
 }
 ```
 
-这个小例子迫使 Echidna 找到一系列交易来改变一个状态变量。 这对一个模糊测试工具来说很困难（建议使用一个符号执行工具，比如 [Manticore](https://github.com/trailofbits/manticore)）。 我们可以运行 Echidna 对此进行验证：
+这个小例子迫使 Echidna 找到一系列交易来改变一个状态变量。 这对一个模糊测试工具来说很困难（建议使用符号执行工具，比如 [Manticore](https://github.com/trailofbits/manticore)）。 我们可以运行 Echidna 对此进行验证：
 
 ```bash
 $ echidna-test magic.sol
@@ -544,11 +542,11 @@ Seed: -7293830866560616537
 
 ```
 
-这一次，我们立刻就能发现该属性发生了冲突。
+这一次，它立即发现与该属性发生了冲突。
 
 ## 查找消耗大量 gas 的交易 {#finding-transactions-with-high-gas-consumption}
 
-我们来了解如何用 Echidna 查找有 gas 消耗的交易。 目标是以下智能合约：
+我们来看看如何使用 Echidna 查找燃料消耗大的交易。 目标是以下智能合约：
 
 ```solidity
 contract C {
@@ -587,7 +585,7 @@ Seed: 2320549945714142710
 
 ### 测量 gas 消耗 {#measuring-gas-consumption}
 
-要使用 Echidna 计算 gas 消耗，请创建一个配置文件 `config.yaml`：
+要使用 Echidna 测量燃料消耗，请创建配置文件 `config.yaml`：
 
 ```yaml
 estimateGas: true
@@ -664,7 +662,7 @@ clear used a maximum of 35916 gas
 push used a maximum of 40839 gas
 ```
 
-这是因为成本取决于 `addrers` 的大小，而随机调用往往会使数组几乎为空。 将 `pop` 和 `clear` 加入黑名单却给我们带来了更好的结果:
+这是因为成本取决于 `addrs` 的大小，而随机调用往往会使数组几乎为空。 将 `pop` 和 `clear` 加入黑名单却给我们带来了更好的结果:
 
 ```yaml
 filterBlacklist: true

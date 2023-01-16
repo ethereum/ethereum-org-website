@@ -46,6 +46,7 @@ const USER_SELECTION: UserSelectionObject = {
   fi: [],
   fr: [],
   gl: [],
+  gu: [],
   hi: [],
   hr: [],
   hu: [],
@@ -80,7 +81,7 @@ const USER_SELECTION: UserSelectionObject = {
   uk: [],
   uz: [],
   vi: [],
-  zh: [],
+  zh: [3, 4, 5, 6, 7, 8, 9, 10, 13, 16, 18, 19],
   "zh-tw": [],
 }
 
@@ -140,6 +141,7 @@ const repoToCrowdinCode: { [key: string]: string } = {
   ml: "ml-IN",
   sr: "sr-CS",
   se: "sv-SE",
+  gu: "gu-IN",
 }
 /**
  * Names for each bucket in order, zero indexed.

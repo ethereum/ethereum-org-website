@@ -106,4 +106,8 @@ Le transazioni su Ethereum a volte possono bloccarsi se hai inviato una commissi
 
 #### Come posso fare mining in Ethereum? {#mining-ethereum}
 
-Non consigliamo di acquistare attrezzature per mining se non si sta già facendo mining in Ethereum. Circa tra il terzo e il quarto trimestre del 2022, avrà luogo [La Fusione](/upgrades/merge/), con il passaggio dal proof-of-work al proof-of-stake. Questo cambiamento significa che fare mining in Ethereum non sarà più possibile.
+Il mining su Ethereum non è più possibile. Il mining è stato disattivato quando Ethereum è passato dal proof-of-work al proof-of-stake. Ora, invece dei miner, Ethereum ha i validatori. I validatori mettono ETH in staking e ricevono ricompense per proteggere la rete.
+
+#### Come divento uno staker/validatore? {#become-validator}
+
+Per diventare un validatore, devi mettere in staking 32 ETH nel contratto di deposito di Ethereum e configurare un nodo del validatore. Ulteriori informazioni sono disponibili sulle nostre [pagine di staking](/staking) e al [launchpad di staking](https://launchpad.ethereum.org/).

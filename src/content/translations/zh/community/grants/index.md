@@ -20,7 +20,7 @@ lang: zh
 - [Moloch 去中心化自治组织](https://www.molochdao.com/) - _隐私、二层网络扩容、客户端安全性等_
 - [开放资助](https://opengrants.com/explore)
 - [DAO 资助](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Google 资助组织电子表格_
-- [“合并”之数据挑战](https://esp.ethereum.foundation/merge-data-challenge) - _召集所有以太坊人、数据科学家、数据工程师、数据可视化人员、开发者以及有兴趣深入研究以太坊数据的任何人！_
+- [二层网络资助](https://esp.ethereum.foundation/layer-2-grants)-_以太坊基金会资助者为支持二层网络应用、分析和教育提供资助_
 
 ## 特定项目 {#project-specific}
 
@@ -30,15 +30,17 @@ lang: zh
 - [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/) 生态系统基金_
 - [Chainlink 资助方案](https://chain.link/community/grants) - _[Chainlink](https://chain.link/) 社区资助_
 - [Compound 资助计划](https://compoundgrants.org/) – _[Compound](https://compound.finance/) 金融生态系统_
-- [Consensys 资助方案](https://consensys.net/grants/) – _[Consensys](https://consensys.net/) 区块链融资与以太坊资助_
 - [Lido 生态系统资助组织 (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/) 金融生态系统_
+- [MetaMask 方案](https://metamaskgrants.org/) - _-[MetaMask](https://metamask.io/) 员工主导的资助去中心化自助组织_
 - [mStable 资助方案](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) 社区_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) 生态系统_
-- [Uniswap 资助计划](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/) 社区_
+- [UMA 资助方案](https://grants.umaproject.org/) - _[UMA](https://umaproject.org/) 开发者支持_
+- [Uniswap 资助方案](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/) 社区_
+- [Web3 Grants](https://web3grants.net) - _Web3/加密货币相关资助方案详尽列表_
 
 ## 二次方融资 {#quadratic-funding}
 
-以太坊的开源属性催生了一种有趣的新型募资模式：二次方融资。 这有可能改善我们在未来为各种公共产品募资的方式。 二次方募资确保获得最多资金的项目是那些具有最独特需求的项目。 换句话说，就是那些能够改善大多数人生活的项目。 [关于二次方融资的更多信息。](/defi/#quadratic-funding)
+以太坊的开源属性催生了一种有趣的新型募资模式：二次方融资。 这有可能改进我们在未来为各种公共产品募资的方式。 二次方募资确保获得最多资金的项目是那些具有最独特需求的项目。 换句话说，就是那些能够改善大多数人生活的项目。 [关于二次方融资的更多信息。](/defi/#quadratic-funding)
 
 - [Gitcoin](https://gitcoin.co/grants)
 - [clr.fund](https://clr.fund/)
