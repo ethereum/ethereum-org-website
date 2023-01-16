@@ -4,6 +4,7 @@ import { graphql, PageProps } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
+import { Badge } from "@chakra-ui/react"
 
 // Data
 import layer2Data from "../data/layer-2/layer-2.json"
@@ -39,7 +40,6 @@ import { getImage } from "../utils/image"
 
 // Constants
 import { GATSBY_FUNCTIONS_PATH } from "../constants"
-import { Badge } from "@chakra-ui/react"
 
 // Styles
 
