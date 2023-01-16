@@ -9,6 +9,7 @@ import {
   Box,
   chakra,
   GridItem,
+  Heading,
   HStack,
   Icon,
   List,
@@ -80,10 +81,14 @@ const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
           >
             {({ isExpanded }) => (
               <>
-                <chakra.h3
+                <Heading
+                  as="h3"
                   color="primary"
                   borderBottom={isExpanded ? "1px" : "none"}
                   borderColor="currentColor"
+                  fontSize="2xl"
+                  fontWeight={600}
+                  lineHeight={1.4}
                   m={0}
                   pb={isExpanded ? 3 : 0}
                   px={4}
@@ -100,7 +105,7 @@ const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
                     </Box>
                     <AccordionIcon color="primary" boxSize={9} />
                   </AccordionButton>
-                </chakra.h3>
+                </Heading>
                 <AccordionPanel as={List} p={0} m={0}>
                   {filterOption.items.map((item, itemIdx) => {
                     return (
