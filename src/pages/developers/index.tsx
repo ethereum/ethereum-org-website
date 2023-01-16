@@ -175,7 +175,6 @@ const StyledCard = styled(Card)`
   min-width: 240px;
   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
   margin: 1rem;
-  margin-top: auto;
   padding: 1.5rem;
   @media (max-width: 1120px) {
     flex: 1 1 40%;
