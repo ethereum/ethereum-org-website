@@ -70,7 +70,7 @@ We'll refer to an atomic unit of a radix tree (e.g. a single hex character, or 4
 
 ## Merkle Patricia Trie {#merkle-patricia-trees}
 
-But radix tries have one major limitation: they are inefficient. If you want to store one `(path, value)` binding where the path, like in Ethereum, is 64 characters long (the number of nibbles in `bytes32`), we will need over a kilobyte of extra space to store one level per character, and each lookup or delete will take the full 64 steps. The Patricia trie introduced in the following solves this issue.
+Radix tries have one major limitation: they are inefficient. If you want to store one `(path, value)` binding where the path, like in Ethereum, is 64 characters long (the number of nibbles in `bytes32`), we will need over a kilobyte of extra space to store one level per character, and each lookup or delete will take the full 64 steps. The Patricia trie introduced in the following solves this issue.
 
 ### Optimization {#optimization}
 
