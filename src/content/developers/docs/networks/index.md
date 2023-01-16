@@ -45,15 +45,17 @@ The Sepolia network uses a permissioned validator set. It's fairly new, meaning 
 - New testnet, less applications deployed than other testnets
 - Fast to sync and running a node requires minimal disk space
 
-Resources:
+**Resources**:
 
 - [Website](https://sepolia.dev/)
-- [GitHub](https://github.com/goerli/sepolia)
+- [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
 
-Faucets:
+**Faucets**:
 
+- [Grabteeth](https://grabteeth.xyz/)
+- [PoW faucet](https://sepolia-faucet.pk910.de/)
 - [Sepolia faucet](https://faucet.sepolia.dev/)
 - [FaucETH](https://fauceth.komputing.org)
 
@@ -62,23 +64,25 @@ Faucets:
 
 _Note: [the Goerli testnet is deprecated](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) and will be replaced by [Holesovice](https://github.com/eth-clients/holesovice) in 2023. Please consider migrating your applications to Sepolia._
 
-**[Goerli](#goerli) is the recommended default testnet for testing of validating and staking**.
+[Goerli](#goerli) is testnet for testing of validating and staking  .
 The Goerli network is open for users wanting to run a testnet validator. Stakers wanting to test protocol upgrades before they are deployed to mainnet should therefore use Goerli.
 
 - Open validator set, stakers can test network upgrades
 - Large state, useful for testing complex smart contract interactions
 - Longer to sync and requires more storage to run a node
 
-Resources:
+**Resources**:
 
 - [Website](https://goerli.net/)
-- [GitHub](https://github.com/goerli/testnet)
+- [GitHub](https://github.com/eth-clients/goerli)
 - [Etherscan](https://goerli.etherscan.io)
 
-Faucets:
+**Faucets**:
 
+- [Grabteeth](https://grabteeth.xyz/)
+- [PoW faucet](https://goerli-faucet.pk910.de/)
 - [Goerli faucet](https://faucet.goerli.mudit.blog/)
-- [Chainlink faucet](https://faucets.chain.link/)
+- [Paradigm faucet](https://faucet.paradigm.xyz/)
 - [Alchemy Goerli Faucet](https://goerlifaucet.com/)
 - [All That Node Goerli Faucet](https://www.allthatnode.com/faucet/ethereum.dsrv)
 
@@ -90,10 +94,9 @@ _Note: [the Rinkeby testnet is deprecated](https://blog.ethereum.org/2022/11/30/
 
 A proof-of-authority testnet for those running old versions of the Geth client.
 
-Faucets:
+**Faucets**:
 
 - [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
-- [Alchemy faucet](https://RinkebyFaucet.com)
 - [Chainlink faucet](https://faucets.chain.link/)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
 - [Rinkeby faucet](https://faucet.rinkeby.io/)
@@ -106,7 +109,7 @@ Faucets:
 
 A testnet for [Arbitrum](https://arbitrum.io/).
 
-Arbitrum Goerli faucets:
+**Faucets**:
 
 - [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
 - [Chainlink faucet](https://faucets.chain.link/)
@@ -116,7 +119,7 @@ Arbitrum Goerli faucets:
 
 A testnet for [Optimism](https://www.optimism.io/).
 
-Optimistic Goerli faucets:
+**Faucets**:
 
 - [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
