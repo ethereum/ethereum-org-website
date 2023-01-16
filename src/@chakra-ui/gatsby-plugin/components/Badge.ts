@@ -5,18 +5,23 @@ const variantSecondary: SystemStyleObject = {
   color: "text",
 }
 
+const variantSolid: SystemStyleObject = {
+  color: "black300",
+  background: "primary100",
+}
+
 export const Badge: ComponentStyleConfig = {
   baseStyle: {
     borderRadius: "base",
     border: "1px solid",
     borderColor: "transparent",
-    color: "black300",
     fontWeight: "initial",
     py: 1,
     px: 2,
     textTransform: "uppercase",
   },
   variants: {
+    solid: variantSolid,
     secondary: variantSecondary,
   },
   sizes: {
@@ -29,6 +34,6 @@ export const Badge: ComponentStyleConfig = {
   },
   defaultProps: {
     // Remove the default from Chakra
-    variant: "",
+    variant: "solid",
   },
 }
