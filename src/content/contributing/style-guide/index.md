@@ -174,7 +174,7 @@ When referring to The Merge, treat it as a proper noun. Always capitalize the fi
 
 ### Zero-knowledge {#zero-knowledge}
 
-Zero-knowledge should be capitalized at the beginning of a sentence. In any other instance, all letters should be lower case. In either case, zero-knowledge should be hyphenated between each word.
+Zero-knowledge is a common noun and should only be capitalized at the beginning of a sentence. In any other instance, all letters should be lowercase. In either case, zero-knowledge should be hyphenated between each word.
 
 **Correct usage:**
 
