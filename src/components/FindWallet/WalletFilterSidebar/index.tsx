@@ -19,7 +19,7 @@ import {
 } from "@chakra-ui/react"
 import { uniqueId } from "lodash"
 import Checkbox from "../../Checkbox"
-import { useWalletFilterSidebar } from "./use-wallet-filter-sidebar"
+import { useWalletFilterSidebar } from "./useWalletFilterSidebar"
 import { trackCustomEvent } from "../../../utils/matomo"
 
 const FilterToggle = ({
