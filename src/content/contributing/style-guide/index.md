@@ -148,7 +148,7 @@ The same rules we apply to proof-of-work are applicable to proof-of-stake, proof
 
 ### Smart Contract {#smart-contract}
 
-Smart contract should be capitalized at the beginning of a sentence. In any other instance, all letters should be lower case.
+Smart contract is a common noun and should only be capitalized at the beginning of a sentence. In any other instance, all letters should be lowercase.
 
 **Correct usage:**
 
