@@ -5,7 +5,7 @@ lang: en
 ---
 
 
-When a new node joins the Ethereum network it needs to connect to nodes that are already on the network in order to discover new nodes. These entrypoints into the Ethereum network are called bootnodes. Clients usually have a list of bootnodes hardcoded into them. These bootnodes are typically run by the Ethereum Foundation's devops team or client teams themselves.
+When a new node joins the Ethereum network it needs to connect to nodes that are already on the network in order to then discover new peers. These entrypoints into the Ethereum network are called bootnodes. Clients usually have a list of bootnodes hardcoded into them. These bootnodes are typically run by the Ethereum Foundation's devops team or client teams themselves. Note that bootnodes are not the same as static nodes. Static nodes are called over and over again, whereas bootnodes are only called upon if there are not enough peers to connect to and a node needs to bootstrap some new connections.
 
 ## Connect to a bootnode {#connect-to-bootnode}
 
