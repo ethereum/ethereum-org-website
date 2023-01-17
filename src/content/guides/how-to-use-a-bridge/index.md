@@ -4,7 +4,7 @@ description: A guide explaining how to move tokens from Ethereum to layer 2 usin
 lang: en
 ---
 
-# How to: Bridge tokens to layer 2
+# How to bridge tokens to layer 2
 
 Layer 2s are scaling solutions for Ethereum which allow users to transact with increased speed and decreased costs. Many popular crypto projects are moving to layer 2s because of these benefits. The simplest way to move tokens from Ethereum to layer 2 is to use a bridge project.
 
