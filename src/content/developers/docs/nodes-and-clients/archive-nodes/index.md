@@ -24,7 +24,7 @@ To interact with the network, verify and produce new blocks, Ethereum clients ha
 
 > You can imagine the state as a momentary network snapshot at a given block and the archive as a history replay 
 
-Historical states can be safely pruned because they are not necessary for the network to operate and it would be uselessly redundant for client to keep all out-of-date data. States that existed before recent block with all of their history are effectively thrown away. Only historical blockchain data are kept by a full node but they can be executed to generate a historical state. 
+Historical states can be safely pruned because they are not necessary for the network to operate and it would be uselessly redundant for client to keep all out-of-date data. States that existed before some recent block (e.g. 128 blocks before the head) are effectively thrown away. Full nodes only keep historical blockchain data (blocks and transactions) and occasional historical snapshots they can use to regenerate older states on request. They do this by re-executing past transactions in the EVM, which can be computationally demanding when the desired state is far from the nearest snapshot.
 
 However, this means that accessing a historical state on a full node consumes a lot of computation. The client might need to execute all past transactions and compute one historical state from genesis. Archive nodes solve this by storing not only the most recent states but every historical state created after each block. It basically makes a trade-off with bigger disk space requirement. 
 
@@ -65,7 +65,7 @@ The biggest requirement which comes with archive node is the disk space. Dependi
 
 All of the data needs to be fit in one volume, therfore disks have to be joined, e.g. with [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) or [LVM](https://web.mit.edu/rhel-doc/5/RHEL-5-manual/Deployment_Guide-en-US/ch-lvm.html). It might be also worth considering using [ZFS](https://en.wikipedia.org/wiki/ZFS) as it supports "Copy-on-write" which ensures data is correctly written to the disk without any low level errors. 
 
-For more stability and security in preventing accidental database corruption, especially in a professional setup, consider using ECC memory if your system supports it. The size of RAM is generally adviced the same as for a full node but more can help speed up the synchronization. 
+For more stability and security in preventing accidental database corruption, especially in a professional setup, consider using [ECC memory](https://en.wikipedia.org/wiki/ECC_memory) if your system supports it. The size of RAM is generally advised to be the same as for a full node but more RAM can help speed up the synchronization. 
 
 During initial sync, client in archive mode will execute every transaction since genesis. Execution speed is mostly limited by the CPU, faster CPU can help with the initial sync time. On an average consumer computer, the initial sync can take up to a month. 
 
