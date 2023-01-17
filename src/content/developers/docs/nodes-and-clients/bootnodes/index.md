@@ -1,12 +1,9 @@
 ---
-title: Bootnodes
+title: Introduction to Ethereum Bootnodes {#bootnodes}
 description: The basic information you need to understand bootnodes
 lang: en
 ---
 
-# Introduction to Ethereum Bootnodes {#bootnodes}
-
-## What are bootnodes? {#what-are-bootnodes}
 
 When a new node joins the Ethereum network it needs to connect to nodes that are already on the network in order to discover new nodes. These entrypoints into the Ethereum network are called bootnodes. Clients usually have a list of bootnodes hardcoded into them. These bootnodes are typically run by the Ethereum Foundation's devops team or client teams themselves.
 
