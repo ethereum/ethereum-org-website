@@ -1,5 +1,5 @@
 ---
-title: How to: Bridge tokens to layer 2
+title: How to bridge tokens to layer 2
 description: A guide explaining how to move tokens from Ethereum to layer 2 using a bridge.
 lang: en
 ---
