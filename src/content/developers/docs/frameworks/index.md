@@ -87,17 +87,17 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
 
-**Nodereal -** **_Ethereum Development Platform._**
-
-- [Nodereal.io](https://nodereal.io/)
-- [GitHub](https://github.com/node-real)
-- [Discord](https://discord.gg/V5k5gsuE)
-
 **Foundry -** **_A blazing fast, portable and modular toolkit for Ethereum application development written in Rust._**
 
 - [Documentation](https://book.getfoundry.sh/)
 - [GitHub](https://github.com/gakonst/foundry/)
 - [Tools for Foundry](https://github.com/crisgarner/awesome-foundry)
+
+**NodeReal -** **_Ethereum Development Platform._**
+
+- [Nodereal.io](https://nodereal.io/)
+- [GitHub](https://github.com/node-real)
+- [Discord](https://discord.gg/V5k5gsuE)
 
 ## Further reading {#further-reading}
 
