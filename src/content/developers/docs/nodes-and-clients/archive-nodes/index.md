@@ -6,11 +6,11 @@ sidebar: true
 sidebarDepth: 2
 ---
 
-An archive node is an instance of an Ethereum client with configuration to build an archive of all historical states. It is a useful tool for certain use cases but might be more tricky to run than a full node. 
+An archive node is an instance of an Ethereum client configured to build an archive of all historical states. It is a useful tool for certain use cases but might be more tricky to run than a full node. 
 
 ## Prerequisites {#prerequisites}
 
-You should understand concept of [Ethereum node](/developers/docs/nodes-and-clients/), [its architecture](/developers/docs/nodes-and-clients/node-architecture/). [sync strategies](https://ethereum.org/en/developers/docs/nodes-and-clients/#sync-modes).   practices of [running](/developers/docs/nodes-and-clients/run-a-node/) and [using them](/developers/docs/apis/json-rpc/).
+You should understand the concept of an [Ethereum node](/developers/docs/nodes-and-clients/), [its architecture](/developers/docs/nodes-and-clients/node-architecture/), [sync strategies](https://ethereum.org/en/developers/docs/nodes-and-clients/#sync-modes), practices of [running](/developers/docs/nodes-and-clients/run-a-node/) and [using them](/developers/docs/apis/json-rpc/).
 
 ## What is an archive node
 
@@ -20,13 +20,13 @@ Ethereum can be referred to as *transaction-based state machine*. It consists of
 * Contract code and storage
 * Consensus-related data, e.g. Staking Deposit Contract
 
-To interact with the network, verify and produce new blocks, Ethereum clients have to keep up with chain tip and therfore the current state. EL client configured as a full node verifies and follows the latest state of the network. A full node temporarily caches only past few states, e.g. for last 128 blocks, for case of a chain reorg. But the recent state is all what client needs to verify incoming transactions and use the network.  
+To interact with the network, verify and produce new blocks, Ethereum clients have to keep up with the most recent changes (the tip of the chain) and therefore the current state. An EL client configured as a full node verifies and follows the latest state of the network but only caches the past few states, e.g. the state associated with the last 128 blocks, so it can handle chain reorgs and provide fast access to recent data. The recent state is all what client needs to verify incoming transactions and use the network.  
 
 > You can imagine the state as a momentary network snapshot at a given block and the archive as a history replay 
 
 Historical states can be safely pruned because they are not necessary for the network to operate and it would be uselessly redundant for client to keep all out-of-date data. States that existed before recent block with all of their history are effectively thrown away. Only historical blockchain data are kept by a full node but they can be executed to generate a historical state. 
 
-However, this means that accessing a historical state on a full node consumes a lot of computation. The client might need to execute all past transactions and compute one historical state from genesis. Archive node solves this by storing not only the most recent states but every historical state created after each block. It basically makes a trade-off with bigger disk space requirement. 
+However, this means that accessing a historical state on a full node consumes a lot of computation. The client might need to execute all past transactions and compute one historical state from genesis. Archive nodes solve this by storing not only the most recent states but every historical state created after each block. It basically makes a trade-off with bigger disk space requirement. 
 
 It's important to note that the network does not depend on archive nodes to keep and provide all historical data. As mentioned above, all historical interim states can be derived on a full node. Transactions are stored by any full node (currently less than 400G) and can be replayed to build the whole archive. 
 
@@ -61,10 +61,9 @@ Apart from general [recommendations for running](developers/docs/nodes-and-clien
 ### Hardware 
 
 Always make sure to verify hardware requirements in given mode in client's documentation. 
-et
-The biggest requirement which comes with archive node is the disk space. Depending on client, it varies from 3 to 12TB. Even if HDD might be considered a better solution for large amounts of data, syncing it and constantly updating the head of the chain will require SSD drives. SATA drives are good enough but it should be a reliable quality, at least TLC. Disks can be fitted into a desktop computer or a server with enough slots. Such dedicated devices are ideal for running high uptime node. It's totally possible to run it on a laptop but the portability will come at an aditional cost.  
+The biggest requirement which comes with archive node is the disk space. Depending on client, it varies from 3 to 12TB. Even if HDD might be considered a better solution for large amounts of data, syncing it and constantly updating the head of the chain will require SSD drives. [SATA](https://www.cleverfiles.com/help/sata-hard-drive.html) drives are good enough but it should be a reliable quality, at least [TLC](https://blog.synology.com/tlc-vs-qlc-ssds-what-are-the-differences). Disks can be fitted into a desktop computer or a server with enough slots. Such dedicated devices are ideal for running high uptime node. It's totally possible to run it on a laptop but the portability will come at an additional cost.  
 
-All of the data needs to be fit in one volume, therfore disks has to be joint, e.g. with RAID0 or LVM. It might be also worth considering using [ZFS](https://en.wikipedia.org/wiki/ZFS) as it supports "Copy-on-write" which ensures data is correctly written to the disk without any low level errors. 
+All of the data needs to be fit in one volume, therfore disks have to be joined, e.g. with [RAID0](https://en.wikipedia.org/wiki/Standard_RAID_levels#RAID_0) or [LVM](https://web.mit.edu/rhel-doc/5/RHEL-5-manual/Deployment_Guide-en-US/ch-lvm.html). It might be also worth considering using [ZFS](https://en.wikipedia.org/wiki/ZFS) as it supports "Copy-on-write" which ensures data is correctly written to the disk without any low level errors. 
 
 For more stability and security in preventing accidental database corruption, especially in a professional setup, consider using ECC memory if your system supports it. The size of RAM is generally adviced the same as for a full node but more can help speed up the synchronization. 
 
