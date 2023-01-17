@@ -8,11 +8,11 @@ lang: en
 
 ## What are bootnodes? {#what-are-bootnodes}
 
-When a new node joins the Ethereum network it needs to connect to nodes that are already on the network in order to discover new nodes. These entrypoints into the Ethereum network are called bootnodes. Clients usually have a list of bootnodes built in that are run by the Ethereum Foundation or the client teams themselves.
+When a new node joins the Ethereum network it needs to connect to nodes that are already on the network in order to discover new nodes. These entrypoints into the Ethereum network are called bootnodes. Clients usually have a list of bootnodes hardcoded into them. These bootnodes are typically run by the Ethereum Foundation's devops team or client teams themselves.
 
 ## Connect to a bootnode {#connect-to-bootnode}
 
-Most clients have a list of bootnodes build in, but you might want to connect to other bootnodes to connect by specifiying them when starting your client:
+Most clients have a list of bootnodes build in, but you might also want to run your own bootnode, or use one that is not part of the client's hardcoded list. In this case, you can specify them when starting your client, as follows (example is for Geth, please check your client's documentation):
 ```
 geth --bootnodes "enode://<node ID>@<IP address>:<port>"
 ```
