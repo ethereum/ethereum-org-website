@@ -56,6 +56,12 @@ The following provides an overview of how transactions were mined in Ethereum pr
 
 Every transaction is mined (included in a new block and propagated for the first time) once, but executed and verified by every participant in the process of advancing the canonical EVM state. This highlights one of the central mantras of blockchain: **Don’t trust, verify**.
 
+## Ommer (Uncle) Blocks
+
+As block mining under proof-of-work was probabilistic, there exists a non-zero chance that two valid blocks may have been published at the same time due to network latency. In this case, the protocol still has to determine the longest (and hence most "valid") chain while still ensuring fairness towards the miners by partially rewarding the unincluded valid block proposed by the miner. This encourages further decentralization of the network as smaller miners, who might face greater latency, are still able to generate a return via [ommer](https://ethereum.org/en/glossary/#ommer) block rewards.
+
+The term "ommer" is the preferred gender-neutral term for the sibling of a parent block, but this is also sometimes referred to as an "uncle". **Since Ethereum's move to proof-of-stake, ommer blocks are no longer mined** as only one proposer is elected in each slot. You can see this change by viewing the [historical chart](https://ycharts.com/indicators/ethereum_uncle_rate) of the ommer blocks mined.
+
 ## A visual demo {#a-visual-demo}
 
 Watch Austin walk you through mining and the proof-of-work blockchain.
@@ -70,7 +76,7 @@ Ethereum Mainnet only ever used one mining algorithm - ['Ethash'](/developers/do
 
 ## Further reading {#further-reading}
 
-- [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
+- [What does it mean to mine Ethereum?](https://web.archive.org/web/20220917012350/https://docs.ethhub.io/using-ethereum/mining/) _EthHub (Archived)_
 
 ## Related topics {#related-topics}
 
