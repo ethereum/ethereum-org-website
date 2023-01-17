@@ -19,9 +19,9 @@ geth --bootnodes "enode://<node ID>@<IP address>:<port>"
 
 ## Run a bootnode {#run-a-bootnode}
 
-Bootnodes are full nodes that are not behind a NAT. Every full node can act as a bootnode as long as it is publicly available.
-When you start up a node it should log your enode, which is a public identifier that others can use to connect to your node.
-The enode is usually regenerated on every restart, so make sure to look at your clients documentation on how to generate a persistent enode for your bootnode. 
+Bootnodes are full nodes that are not behind a NAT ([Network Address Translation](https://www.geeksforgeeks.org/network-address-translation-nat/)). Every full node can act as a bootnode as long as it is publicly available.
+When you start up a node it should log your [enode](/developers/docs/networking-layer/network-addresses/#enode), which is a public identifier that others can use to connect to your node.
+The enode is usually regenerated on every restart, so make sure to look at your client's documentation on how to generate a persistent enode for your bootnode. 
 
 In order to be a good bootnode it's a good idea to increase the maximum number of peers that can connect to it. Running a bootnode with many peers will increase the bandwith requirement significantly.
 
