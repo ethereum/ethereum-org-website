@@ -4,7 +4,7 @@ description: A guide on how to swap tokens on Ethereum.
 lang: en
 ---
 
-# How to: Swap tokens
+# How to swap tokens
 
 Tired of searching for an exchange that lists all your favorite tokens? You can swap most of the tokens using decentralized exchanges. 
 
