@@ -4,7 +4,7 @@ description: A guide explaining how to send, receive tokens and connect to web3 
 lang: en
 ---
 
-# How to: Use a wallet
+# How to use a wallet
 
 Learn how to operate all the basic functions of a wallet. If you don’t have one yet, check out our [How to: "Register" an Ethereum account](/guides/how-to-register-an-ethereum-account/).
 
