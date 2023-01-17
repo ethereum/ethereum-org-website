@@ -1546,6 +1546,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://dribbble.com/Liz-B"><img src="https://avatars.githubusercontent.com/u/40176275?v=4?s=100" width="100px;" alt="Elizabeth Bassey"/><br /><sub><b>Elizabeth Bassey</b></sub></a><br /><a href="#content-Dev-Liz" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/mihaic01"><img src="https://avatars.githubusercontent.com/u/108999659?v=4?s=100" width="100px;" alt="mihaic01"/><br /><sub><b>mihaic01</b></sub></a><br /><a href="#content-mihaic01" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/qiuhaohao"><img src="https://avatars.githubusercontent.com/u/22148367?v=4?s=100" width="100px;" alt="qiuhaohao"/><br /><sub><b>qiuhaohao</b></sub></a><br /><a href="#content-qiuhaohao" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>

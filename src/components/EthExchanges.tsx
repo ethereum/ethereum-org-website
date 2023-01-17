@@ -163,6 +163,7 @@ type ExchangeName =
   | "mtpelerin"
   | "okx"
   | "rain"
+  | "shakepay"
   | "wazirx"
 
 type WalletProviderName = "simplex" | "moonpay" | "wyre"
@@ -249,6 +250,7 @@ const EthExchanges = () => {
           mtpelerin
           okx
           rain
+          shakepay
           simplex
           wazirx
           wyre
@@ -347,6 +349,9 @@ const EthExchanges = () => {
         ...cardListImage
       }
       rain: file(relativePath: { eq: "exchanges/rain.png" }) {
+        ...cardListImage
+      }
+      shakepay: file(relativePath: { eq: "exchanges/shakepay.png" }) {
         ...cardListImage
       }
       squarelink: file(relativePath: { eq: "wallets/squarelink.png" }) {
@@ -504,6 +509,12 @@ const EthExchanges = () => {
       name: "Rain",
       url: "https://rain.bh",
       image: data.rain,
+      usaExceptions: [],
+    },
+    shakepay: {
+      name: "Shakepay",
+      url: "https://shakepay.com",
+      image: data.shakepay,
       usaExceptions: [],
     },
     wazirx: {
