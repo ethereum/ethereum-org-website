@@ -20,14 +20,6 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 ## Available libraries {#available-libraries}
 
-**Moralis -** **_Enterprise-Grade EVM API Provider._**
-
-- [moralis.io](http://moralis.io)
-- [Documentation](https://docs.moralis.io/)
-- [GitHub](https://github.com/MoralisWeb3)
-- [Discord](https://discord.com/invite/KYswaxwEtg)
-- [Forum](https://forum.moralis.io/)
-
 **Alchemy -** **_Ethereum Development Platform._**
 
 - [alchemy.com](https://www.alchemy.com/)
@@ -131,6 +123,14 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [GitHub](https://github.com/zmok-io)
 - [Documentation](https://docs.zmok.io/)
 - [Discord](https://discord.gg/fAHeh3ka6s)
+
+**Moralis -** **_Enterprise-Grade EVM API Provider._**
+
+- [moralis.io](http://moralis.io)
+- [Documentation](https://docs.moralis.io/)
+- [GitHub](https://github.com/MoralisWeb3)
+- [Discord](https://discord.com/invite/KYswaxwEtg)
+- [Forum](https://forum.moralis.io/)
 
 ## Further reading {#further-reading}
 
