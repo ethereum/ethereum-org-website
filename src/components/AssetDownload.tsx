@@ -127,7 +127,7 @@ const AssetDownload: React.FC<IProps> = ({
           </Flex>
         )}
       </Box>
-      <Container mt={4} p={0} maxW="none">
+      <Box mt={4} p={0}>
         {!Svg && (
           <ButtonLink to={downloadUrl}>
             <Translation id="page-assets-download-download" />
