@@ -93,6 +93,12 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [GitHub](https://github.com/gakonst/foundry/)
 - [Tools for Foundry](https://github.com/crisgarner/awesome-foundry)
 
+**NodeReal -** **_Ethereum Development Platform._**
+
+- [Nodereal.io](https://nodereal.io/)
+- [GitHub](https://github.com/node-real)
+- [Discord](https://discord.gg/V5k5gsuE)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_

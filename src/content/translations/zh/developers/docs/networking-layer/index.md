@@ -119,7 +119,7 @@ SSZ 代表简单序列化。 它使用固定偏移量，可以轻松解码编码
 
 ## 连接执行客户端和共识客户端 {#connecting-clients}
 
-共识客户端和执行客户端同时运行。 它们需要彼此连接，这样共识客户端才能向执行客户端提供指令，后者也才能向前者传送需要纳入信标区块的交易捆绑包。 两个客户端之间的通信可通过本地远程过程调用连接实现。 名为[“引擎-API”](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md)的应用程序接口(Application Program Interface, API) 定义了两个客户端之间发送的指令。 由于两个客户端共用同一个网络身份，因此它们也共享同一个以太坊节点记录 (ENR)，其中包含了每个客户端单独的密钥（eth1 密钥和 eth2 密钥）。
+共识客户端和执行客户端同时运行。 它们需要彼此连接，这样共识客户端才能向执行客户端提供指令，后者也才能向前者传送需要纳入信标区块的交易捆绑包。 两个客户端之间的通信可通过本地远程过程调用连接实现。 名为[“引擎-API”](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)的应用程序接口(Application Program Interface, API) 定义了两个客户端之间发送的指令。 由于两个客户端共用同一个网络身份，因此它们也共享同一个以太坊节点记录 (ENR)，其中包含了每个客户端单独的密钥（eth1 密钥和 eth2 密钥）。
 
 下面显示了控制流摘要，括号中是相关的网络堆栈。
 

@@ -14,7 +14,7 @@ lang: zh
 
 [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155) 中对 ERC-1155 代币进行了全面的描述。
 
-## 前体条件 {#prerequisites}
+## 前提条件 {#prerequisites}
 
 为了更好地理解这一页面的内容，我们建议您先阅读[代币标准](/developers/docs/standards/tokens/)、[ERC-20](/developers/docs/standards/tokens/erc-20/) 和 [ERC-721](/developers/docs/standards/tokens/erc-721/)。
 
@@ -95,9 +95,9 @@ function isApprovedForAll(
 ) external view returns (bool);
 ```
 
-审批过程与 ERC-20 略有不同。 这里不是批准特定金额，而是通过 `setApprovalForall` 函数设置操作帐户为已批准或未批准。
+审批过程与 ERC-20 略有不同。 这里不是批准特定金额，而是通过 `setApprovalForAll` 函数设置操作帐户为已批准或未批准。
 
-查看当前的审批状态可以通过 `isApprovedForall` 完成。 如您所见，要么全部批准，要么不批准。 不能定义要批准代币的数量，甚至代币类型。
+查看当前的审批状态可以通过 `isApprovedForAll` 完成。 如您所见，要么全部批准，要么不批准。 不能定义要批准代币的数量，甚至代币类型。
 
 这是考虑到简洁性而故意设计的。 您只能批准一个地址的所有代币。
 
@@ -141,6 +141,6 @@ _注意_：包括钩子在内的所有批处理函数也均作为非批处理的
 ## 延伸阅读 {#further-reading}
 
 - [EIP-1155：多代币标准](https://eips.ethereum.org/EIPS/eip-1155)
-- [ERC-1155：Openzepelin 文档](https://docs.openzeppelin.com/contracts/3.x/erc1155)
-- [ERC-1155：GitHub 代码库](https://github.com/enjin/erc-1155)
+- [ERC-1155：OpenZeppelin 文档](https://docs.openzeppelin.com/contracts/3.x/erc1155)
+- [ERC-1155: GitHub Repo](https://github.com/enjin/erc-1155)
 - [Alchemy NFT API](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)

@@ -17,7 +17,7 @@ summaryPoints:
 
 I pool di staking sono un approccio collaborativo per consentire a molti, con quantità minori di ETH, di ottenere i 32 ETH necessari per attivare un insieme di chiavi di validazione. La funzionalità di pooling non è supportata nativamente all'interno del protocollo, quindi le soluzioni sono state sviluppate separatamente per rispondere a questa esigenza.
 
-Alcuni pool operano utilizzando contratti intelligenti, dove i fondi possono essere depositati in un contratto, che gestisce e traccia in modo affidabile il tuo stake, e ti emette un token che rappresenta questo valore. Altri pool non possono coinvolgere smart contract e sono invece mediati fuori dalla catena.
+Alcuni pool operano utilizzando i contratti intelligenti, dove i fondi possono essere depositati in un contratto, che gestisce e traccia in modo affidabile il tuo stake, e ti emette un token che rappresenta questo valore. Altri pool potrebbero non coinvolgere i contratti intelligenti ed essere invece mediati al di fuori dalla catena.
 
 ## Perché mettere in stake con un pool? {#why-stake-with-a-pool}
 
@@ -66,17 +66,10 @@ Tipicamente, i token di liquidità ERC-20 sono emessi agli staker che rappresent
 </ExpandableCard>
 
 <ExpandableCard title="Quando posso prelevare il mio stake?">
-Attualmente, il prelievo di fondi da un validatore sulla Beacon Chain non è possibile, il che limita la possibilità di <em>riscattare</em> effettivamente il tuo token di liquidità per le ricompense in ETH bloccate nel livello del consenso.
 
-Altrimenti, i pool che usano un token di liquidità ERC-20 consentono agli utenti di scambiare questo token nel mercato aperto, consentendoti efficientemente di "prelevare" senza rimuovere realmente gli ETH dalla Beacon Chain.
-</ExpandableCard>
+Al momento, è impossibile prelevare fondi da un validatore di Ethereum, il che limita l'abilità di _riscattare_ effettivamente il tuo token di liquidità per le ricompense in ETH bloccate nel livello del consenso.
 
-<ExpandableCard title="Gli staker in pool devono fare qualcosa per La Fusione?">
-Gli staker in pool <strong>non devono fare nulla per prepararsi alla Fusione</strong>.
-
-Tuttavia, all'avvicinarsi della Fusione, state attenti ai truffatori. **Non devi aggiornare i tuoi ETH o token ETH in staking** per la transizione al proof-of-stake.
-
-Scopri di più su [La Fusione](/upgrades/merge/)
+Altrimenti, i pool che usano un token di liquidità ERC-20 consentono agli utenti di scambiarlo nel mercato aperto, consentendoti di vendere la tua posizione di staking, "prelevando" effettivamente senza rimuovere realmente ETH dal contratto di staking.
 </ExpandableCard>
 
 <ExpandableCard title="È diverso dallo staking con la mia borsa?">
