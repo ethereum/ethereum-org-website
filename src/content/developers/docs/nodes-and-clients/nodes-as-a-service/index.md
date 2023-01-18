@@ -93,7 +93,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
   - Features
     - RPC and WSS support
     - Multi-region node hosting
-    - Decentralized infrastructure    - 
+    - Decentralized infrastructure
     - Public API
     - Dedicated Free Plan
     - Multichain support (17+ blockchains)
