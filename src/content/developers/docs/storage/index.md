@@ -116,6 +116,7 @@ Proof-of-stake based:
 
 - [Storj.io](https://storj.io/)
 - [Documentation](https://docs.storj.io/)
+- [GitHub](https://github.com/storj/storj)
 
 **Skynet - _Skynet is a decentralized PoW chain dedicated to a decentralized web._**
 
