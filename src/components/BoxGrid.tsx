@@ -39,13 +39,7 @@ const BoxGrid: React.FC<IProps> = ({ items }) => {
   const [indexOpen, setOpenIndex] = useState(0)
 
   return (
-    <Box
-      display={{ base: "flex", lg: "grid" }}
-      gridTemplateColumns="repeat(4, 1fr)"
-      flexDirection="column"
-      my={16}
-      borderRadius="2px"
-    >
+    <SimpleGrid columns={{ base: 1, lg: 4 }} my={16} borderRadius="2px">
       {items.map((item, idx: number) => {
         let columnNumber = idx + 1
         if (columnNumber > 4) {
@@ -56,10 +50,11 @@ const BoxGrid: React.FC<IProps> = ({ items }) => {
         const isOpen = idx === indexOpen
 
         return (
-          <Flex
-            gridRowStart={isOpen ? 1 : "auto"}
-            gridRowEnd={isOpen ? "span 2" : "auto"}
-            gridColumnStart={isOpen ? columnNumber : "auto"}
+          <GridItem
+            as={Flex}
+            rowStart={{...(isOpen && { lg: 1 })}}
+            rowEnd={{...(isOpen && { lg: 3 })}}
+            colStart={{...(isOpen && { lg: columnNumber })}}
             color={isOpen ? "black300" : "text"}
             cursor="pointer"
             bg={isOpen ? color : "background"}
@@ -82,22 +77,20 @@ const BoxGrid: React.FC<IProps> = ({ items }) => {
             onClick={() => setOpenIndex(idx)}
             key={idx}
           >
-            {isOpen ? (
-              <Emoji mb={8} text={item.emoji} fontSize="8xl" />
-            ) : (
-              <Emoji
-                m={2}
-                alignSelf="center"
-                _hover={{
+            <Emoji
+              m={2}
+              text={item.emoji}
+              fontSize="8xl"
+              {...(isOpen && {
+                alignSelf: "center",
+                _hover: {
                   transition: "transform 50s",
                   transform: "rotate(10turn)",
-                }}
-                text={item.emoji}
-                fontSize="8xl"
-              />
-            )}
+                },
+              })}
+            />
             <Box>
-              <Heading as="h3" fontSize="2.5rem" fontWeight="normal" mt={0}>
+              <Heading as="h3" fontSize="2.5rem" fontWeight="normal" mt={0} lineHeight={1.4}>
                 {item.title}
               </Heading>
               {isOpen && (
