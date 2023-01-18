@@ -9910,6 +9910,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "chocolatesuit",
+      "name": "chocolatesuit",
+      "avatar_url": "https://avatars.githubusercontent.com/u/120116662?v=4",
+      "profile": "https://github.com/chocolatesuit",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
