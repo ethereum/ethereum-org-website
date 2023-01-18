@@ -74,11 +74,7 @@ const AssetDownload: React.FC<IProps> = ({
       p={0}
       opacity={shouldHide ? 0 : 1}
     >
-      <Heading
-        as="h4"
-        fontSize={{ base: "md", md: "xl" }}
-        fontWeight="500"
-      >
+      <Heading as="h4" fontSize={{ base: "md", md: "xl" }} fontWeight="500">
         {title}
       </Heading>
       <Box>
@@ -133,8 +129,8 @@ const AssetDownload: React.FC<IProps> = ({
             <Translation id="page-assets-download-download" />
           </ButtonLink>
         )}
-      </Container>
-    </Container>
+      </Box>
+    </Box>
   )
 }
 
