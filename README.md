@@ -1554,6 +1554,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/jithil"><img src="https://avatars.githubusercontent.com/u/26359740?v=4?s=100" width="100px;" alt="Jithil P Ponnan"/><br /><sub><b>Jithil P Ponnan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=MrJithil" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/chocolatesuit"><img src="https://avatars.githubusercontent.com/u/120116662?v=4?s=100" width="100px;" alt="chocolatesuit"/><br /><sub><b>chocolatesuit</b></sub></a><br /><a href="#content-chocolatesuit" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
