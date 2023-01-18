@@ -72,6 +72,12 @@
     "link": "https://www.meetup.com/fr-FR/ethereum-france/"
   },
   {
+    "title": "Ethereum Paris",
+    "emoji": ":fr:",
+    "location": "Paris",
+    "link": "https://www.meetup.com/Ethereum-Paris/"
+  },
+  {
     "title": "Berlin Ethereum Meetup",
     "emoji": ":de:",
     "location": "Berlin",
@@ -322,8 +328,7 @@
     "emoji": ":us:",
     "location": "San Diego",
     "link": "http://cryptosandiego.org"
-  }
-  ,
+  },
   {
     "title": "Ethereum Costa Rica",
     "emoji": ":cr:",
