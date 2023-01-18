@@ -1550,6 +1550,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/debeldami"><img src="https://avatars.githubusercontent.com/u/44111962?v=4?s=100" width="100px;" alt="damilola debel"/><br /><sub><b>damilola debel</b></sub></a><br /><a href="#content-debeldami" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Questions"><img src="https://avatars.githubusercontent.com/u/3233328?v=4?s=100" width="100px;" alt="questions"/><br /><sub><b>questions</b></sub></a><br /><a href="#projectManagement-questions" title="Project Management">📆</a> <a href="#question-questions" title="Answering Questions">💬</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/machin3boy"><img src="https://avatars.githubusercontent.com/u/78896694?v=4?s=100" width="100px;" alt="machin3boy"/><br /><sub><b>machin3boy</b></sub></a><br /><a href="#content-machin3boy" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/nsexer"><img src="https://avatars.githubusercontent.com/u/30265113?v=4?s=100" width="100px;" alt="nethan"/><br /><sub><b>nethan</b></sub></a><br /><a href="#content-nsexer" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
