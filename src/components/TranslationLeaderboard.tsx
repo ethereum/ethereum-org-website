@@ -3,6 +3,7 @@ import React, { useState } from "react"
 import { reverse, sortBy } from "lodash"
 import {
   Box,
+  Button as ChakraButton,
   Flex,
   Img,
   Text,
@@ -21,17 +22,10 @@ export interface IProps {
   allTimeData: any
 }
 
-const RadioCard = (props) => {
-  const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
-  const { getInputProps, getCheckboxProps } = useRadio(props)
-
-  const input = getInputProps()
-  const checkbox = getCheckboxProps()
-
+const Button = (props) => {
   return (
-    <Flex
-      as="label"
-      {...checkbox}
+    <ChakraButton
+      display="flex"
       borderRadius="2rem"
       borderWidth="1px"
       borderStyle="solid"
@@ -41,6 +35,7 @@ const RadioCard = (props) => {
       py={4}
       px={6}
       m={2}
+      h="full"
       cursor="pointer"
       bg="transparent"
       w={{ base: "full", lg: "initial" }}
@@ -51,6 +46,22 @@ const RadioCard = (props) => {
         color: "primary",
         borderColor: "primary",
       }}
+      {...props}
+    />
+  )
+}
+
+const RadioCard = (props) => {
+  const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
+  const { getInputProps, getCheckboxProps } = useRadio(props)
+
+  const input = getInputProps()
+  const checkbox = getCheckboxProps()
+
+  return (
+    <Button
+      as="label"
+      {...checkbox}
       _checked={{
         borderColor: "primary",
         color: "primary",
@@ -67,7 +78,7 @@ const RadioCard = (props) => {
       >
         {props.children}
       </Text>
-    </Flex>
+    </Button>
   )
 }
 
@@ -262,28 +273,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
         flexDirection={{ base: "column", lg: "inherit" }}
         w="full"
       >
-        <Flex
-          borderRadius="2rem"
-          borderWidth="1px"
-          borderStyle="solid"
-          borderColor="text"
-          color="text"
-          alignItems="center"
-          py={4}
-          px={6}
-          m={2}
-          cursor="pointer"
-          bg="transparent"
-          w={{ base: "full", lg: "initial" }}
-          justifyContent="center"
-          ml={{ base: "0", lg: "2" }}
-          mr={{ base: "0", lg: "2" }}
-          _hover={{
-            color: "primary",
-            borderColor: "primary",
-          }}
-          onClick={filterAmount === 10 ? showMore : showLess}
-        >
+        <Button onClick={filterAmount === 10 ? showMore : showLess}>
           <Text
             as="span"
             fontSize={{ base: "md", md: "lg" }}
@@ -299,7 +289,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
               }
             />
           </Text>
-        </Flex>
+        </Button>
       </Flex>
     </Box>
   )
