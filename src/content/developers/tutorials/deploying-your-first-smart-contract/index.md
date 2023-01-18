@@ -74,7 +74,6 @@ Then navigate to the deploy and run transactions screen:
 
 ![The deploy icon in the Remix toolbar](https://user-images.githubusercontent.com/1228667/204576317-10491b6e-c9a9-44bf-adae-9d74a815fefe.png)
 
-
 Once you are on the "deploy and run" transactions screen, double check that your contract name appears and click on Deploy. As you can see on the top of the page, the current environment is “Remix VM (London)” that means that we’ll deploy and interact with our smart contract on a local test blockchain to be able to test faster and without any fees.
 
 ![The deploy button in the Remix solidity compiler](./remix-deploy-button.png)
