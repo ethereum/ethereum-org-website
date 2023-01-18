@@ -1,5 +1,12 @@
 import React, { useState } from "react"
-import { Box, Flex, Heading, Text } from "@chakra-ui/react"
+import {
+  Box,
+  Flex,
+  GridItem,
+  Heading,
+  SimpleGrid,
+  Text,
+} from "@chakra-ui/react"
 
 import Emoji from "./Emoji"
 
@@ -39,7 +46,7 @@ const BoxGrid: React.FC<IProps> = ({ items }) => {
   const [indexOpen, setOpenIndex] = useState(0)
 
   return (
-    <SimpleGrid columns={{ base: 1, lg: 4 }} my={16} borderRadius="2px">
+    <SimpleGrid columns={{ base: 1, lg: 4 }} my={16} borderRadius="sm">
       {items.map((item, idx: number) => {
         let columnNumber = idx + 1
         if (columnNumber > 4) {
@@ -52,9 +59,9 @@ const BoxGrid: React.FC<IProps> = ({ items }) => {
         return (
           <GridItem
             as={Flex}
-            rowStart={{...(isOpen && { lg: 1 })}}
-            rowEnd={{...(isOpen && { lg: 3 })}}
-            colStart={{...(isOpen && { lg: columnNumber })}}
+            rowStart={{ ...(isOpen && { lg: 1 }) }}
+            rowEnd={{ ...(isOpen && { lg: 3 }) }}
+            colStart={{ ...(isOpen && { lg: columnNumber }) }}
             color={isOpen ? "black300" : "text"}
             cursor="pointer"
             bg={isOpen ? color : "background"}
@@ -81,16 +88,24 @@ const BoxGrid: React.FC<IProps> = ({ items }) => {
               m={2}
               text={item.emoji}
               fontSize="8xl"
-              {...(isOpen && {
-                alignSelf: "center",
-                _hover: {
-                  transition: "transform 50s",
-                  transform: "rotate(10turn)",
-                },
-              })}
+              {...(isOpen
+                ? { mb: 8 }
+                : {
+                    alignSelf: "center",
+                    _hover: {
+                      transition: "transform 50s",
+                      transform: "rotate(10turn)",
+                    },
+                  })}
             />
             <Box>
-              <Heading as="h3" fontSize="2.5rem" fontWeight="normal" mt={0} lineHeight={1.4}>
+              <Heading
+                as="h3"
+                fontSize="2.5rem"
+                fontWeight="normal"
+                mt={0}
+                lineHeight={1.4}
+              >
                 {item.title}
               </Heading>
               {isOpen && (
@@ -99,10 +114,10 @@ const BoxGrid: React.FC<IProps> = ({ items }) => {
                 </Text>
               )}
             </Box>
-          </Flex>
+          </GridItem>
         )
       })}
-    </Box>
+    </SimpleGrid>
   )
 }
 
