@@ -270,6 +270,20 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Dashboard
     - Pay-per-hour pricing
     - Direct support
+- [**Tenderly**](https://tenderly.co/web3-gateway)
+  - [Docs](https://docs.tenderly.co/web3-gateway/web3-gateway)
+  - Features
+    - Free tier including 25 million Tenderly Units per month
+    - Free access to historical data
+    - Up to 8x faster read-heavy workloads
+    - 100% consistent read access
+    - JSON RPC endpoints
+    - UI-based RPC request builder and request preview
+    - Tightly integrated with Tenderly’s development, debugging, and testing tools
+    - Transaction simulations
+    - Usage analytics and filtering
+    - Easy access key management
+    - Dedicated engineering support via chat, email, and Discord
 - [**Watchdata**](https://watchdata.io/)
   - [Docs](https://docs.watchdata.io/)
   - Features

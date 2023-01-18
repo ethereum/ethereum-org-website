@@ -63,6 +63,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 - [Kaleido](https://kaleido.io/) _an enterprise-focused development platform that offers simplified blockchain and digital asset applications_
 - [Provide](https://provide.services/) _infrastructure and APIs for Enterprise Web3 applications_
 - [QuickNode](https://www.quicknode.com/) _provides reliable and fast nodes with high-level APIs like NFT API, Token API, etc., while delivering a unified product suite and enterprise-grade solutions_
+- [Tenderly](https://tenderly.co) _a Web3 development platform that provides debugging, observability, and infrastructure building blocks for developing, testing, monitoring, and operating smart contracts_
 - [Unibright](https://unibright.io/) _a team of blockchain specialists, architects, developers and consultants with 20+ years of experience in business processes and integration_
 - [Zero Services GmbH](https://www.zeroservices.eu/) _provider of managed services spread across co-locations in Europe and Asia. Operates & monitors your nodes securely and reliably_
 

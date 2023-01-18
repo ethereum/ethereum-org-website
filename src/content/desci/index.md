@@ -129,7 +129,6 @@ Explore projects and join the DeSci community.
 - [Science Funding (Epilogue: DeSci and new crypto primitives) by Nadia](https://nadia.xyz/science-funding)
 - [Decentralisation is Disrupting Drug Development](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
 
-
 ### Videos {#videos}
 
 - [What's Decentralized Science?](https://www.youtube.com/watch?v=-DeMklVWNdA)

@@ -66,7 +66,7 @@ A "Merkle" Radix tree is built by linking nodes using deterministically-generate
 
 It is impossible for an attacker to provide a proof of a `(path, value)` pair that does not exist since the root hash is ultimately based on all hashes below it. Any underlying modification would change the root hash.
 
-We'll refer to an atomic unit of a radix tree (e.g. a single hex character, or 4 bit binary number) as a "nibble".  While traversing a path one nibble at a time, as described above, nodes can maximally refer to 16 children but include a `value` element. We, hence, represent them as array with length. We call these 17-element arrays "branch nodes".
+We'll refer to an atomic unit of a radix tree (e.g. a single hex character, or 4 bit binary number) as a "nibble". While traversing a path one nibble at a time, as described above, nodes can maximally refer to 16 children but include a `value` element. We, hence, represent them as array with length. We call these 17-element arrays "branch nodes".
 
 ## Merkle Patricia Trie {#merkle-patricia-trees}
 
