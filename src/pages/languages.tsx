@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import { graphql } from "gatsby"
 import styled from "@emotion/styled"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useLocation } from "@reach/router"
+import { useIntl } from "react-intl"
 
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
@@ -9,7 +9,7 @@ import Link from "../components/Link"
 import { Page, Content } from "../components/SharedStyledComponents"
 
 import { Language, languageMetadata } from "../utils/languages"
-import { TranslationKey } from "../utils/translations"
+import { translateMessageId, TranslationKey } from "../utils/translations"
 import { CardItem as LangItem } from "../components/SharedStyledComponents"
 import Icon from "../components/Icon"
 import NakedButton from "../components/NakedButton"
@@ -69,24 +69,27 @@ const ResetIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
 `
 
-interface TranslatedLanguage extends Language {
-  path: string
-}
-
 const LanguagesPage = () => {
-  const { t } = useTranslation()
+  const intl = useIntl()
+  const location = useLocation()
+  const redirectTo =
+    location.search.split("from=").length > 1
+      ? location.search.split("from=")[1]
+      : "/"
   const [keyword, setKeyword] = useState<string>("")
   const resetKeyword = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
     setKeyword("")
   }
-  const searchString = t("page-languages-filter-placeholder")
-  let translationsCompleted: Array<TranslatedLanguage> = []
+  const searchString = translateMessageId(
+    "page-languages-filter-placeholder",
+    intl
+  )
+  let translationsCompleted: Array<Language> = []
   for (const lang in languageMetadata) {
     const langMetadata = {
       ...languageMetadata[lang],
-      path: "/",
-      name: t(`language-${lang}` as TranslationKey),
+      name: translateMessageId(`language-${lang}` as TranslationKey, intl),
     }
 
     const nativeLangTitle = langMetadata.localName
@@ -103,8 +106,8 @@ const LanguagesPage = () => {
   return (
     <StyledPage>
       <PageMetadata
-        title={t("page-languages-meta-title")}
-        description={t("page-languages-meta-desc")}
+        title={translateMessageId("page-languages-meta-title", intl)}
+        description={translateMessageId("page-languages-meta-desc", intl)}
       />
       <Content>
         <ContentContainer>
@@ -145,7 +148,7 @@ const LanguagesPage = () => {
           </Form>
           <LangContainer>
             {translationsCompleted.map((lang) => (
-              <LangItem to={lang.path} language={lang.code} key={lang["name"]}>
+              <LangItem to={redirectTo} language={lang.code} key={lang["name"]}>
                 <LangTitle>{lang["name"]}</LangTitle>
                 <h4>{lang.localName}</h4>
               </LangItem>
@@ -168,17 +171,3 @@ const LanguagesPage = () => {
 }
 
 export default LanguagesPage
-
-export const query = graphql`
-  query LanguagesPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-  }
-`

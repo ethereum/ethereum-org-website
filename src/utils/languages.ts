@@ -17,6 +17,7 @@ export type Lang =
   | "fi"
   | "fr"
   | "gl"
+  | "gu"
   | "hi"
   | "hr"
   | "hu"

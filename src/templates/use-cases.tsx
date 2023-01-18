@@ -1,9 +1,11 @@
 import React from "react"
+import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { Badge } from "@chakra-ui/react"
 
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
@@ -22,7 +24,6 @@ import MarkdownTable from "../components/MarkdownTable"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
-import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import Roadmap from "../components/Roadmap"
 import UpgradeTableOfContents, {
@@ -165,7 +166,7 @@ const components = {
   Card,
   Divider,
   SectionNav,
-  Pill,
+  Badge,
   Emoji,
   UpgradeStatus,
   DocLink,
@@ -307,6 +308,7 @@ const UseCasePage = ({
   data: { siteData, pageData: mdx },
   pageContext,
 }: PageProps<Queries.UseCasePageQuery, Context>) => {
+  const intl = useIntl()
   if (!siteData || !mdx?.frontmatter)
     throw new Error(
       "UseCases page template query does not return expected values"
@@ -433,16 +435,7 @@ const UseCasePage = ({
 }
 
 export const useCasePageQuery = graphql`
-  query UseCasePage($languagesToFetch: [String!]!, $relativePath: String) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
+  query UseCasePage($relativePath: String) {
     siteData: site {
       siteMetadata {
         editContentUrl

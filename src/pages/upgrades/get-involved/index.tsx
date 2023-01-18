@@ -2,9 +2,9 @@ import React, { useState, useEffect, ReactNode } from "react"
 import { useTheme } from "@emotion/react"
 import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 import { shuffle } from "lodash"
-import { TranslationKey } from "../../../utils/translations"
+import { translateMessageId, TranslationKey } from "../../../utils/translations"
 import Card from "../../../components/Card"
 import Leaderboard, { Person } from "../../../components/Leaderboard"
 import CalloutBanner from "../../../components/CalloutBanner"
@@ -185,7 +185,7 @@ const GetInvolvedPage = ({
   data,
   location,
 }: PageProps<Queries.GetInvolvedPageQuery>) => {
-  const { t } = useTranslation()
+  const intl = useIntl()
   const theme = useTheme()
   const isDarkTheme = theme.isDark
 
@@ -376,7 +376,7 @@ const GetInvolvedPage = ({
             image={getImage(client.image(isDarkTheme))!}
             name={client.name}
             description={client.description}
-            alt={t(client.alt)}
+            alt={translateMessageId(client.alt, intl)}
             githubUrl={client.githubUrl}
             hideStars={true}
           >
@@ -390,8 +390,11 @@ const GetInvolvedPage = ({
   return (
     <Page>
       <PageMetadata
-        title={t("page-upgrades-get-involved")}
-        description={t("page-upgrades-get-involved-meta-description")}
+        title={translateMessageId("page-upgrades-get-involved", intl)}
+        description={translateMessageId(
+          "page-upgrades-get-involved-meta-description",
+          intl
+        )}
       />
       <Content>
         <HeroCard>
@@ -454,7 +457,7 @@ const GetInvolvedPage = ({
       <Staking>
         <StyledCalloutBanner
           image={getImage(data.rhino)!}
-          alt={t("page-staking-image-alt")}
+          alt={translateMessageId("page-staking-image-alt", intl)}
           titleKey={"page-upgrades-get-involved-stake"}
           descriptionKey={"page-upgrades-get-involved-stake-desc"}
         >
@@ -538,16 +541,7 @@ export const Clients = graphql`
 `
 
 export const query = graphql`
-  query GetInvolvedPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
+  query GetInvolvedPage {
     bountyHunters: allConsensusBountyHuntersCsv(
       sort: { order: DESC, fields: score }
     ) {

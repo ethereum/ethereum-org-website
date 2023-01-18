@@ -1,6 +1,6 @@
 import React, { useState, createRef, useContext } from "react"
 import styled from "@emotion/styled"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 import { motion } from "framer-motion"
 
 import Translation from "../Translation"
@@ -8,7 +8,7 @@ import Icon from "../Icon"
 import Link from "../Link"
 
 import { useOnClickOutside } from "../../hooks/useOnClickOutside"
-import { getDirection } from "../../utils/translations"
+import { getDirection, translateMessageId } from "../../utils/translations"
 import { Lang } from "../../utils/languages"
 
 import { ISection } from "./types"
@@ -140,11 +140,10 @@ const NavDropdown: React.FC<IProps> & {
   Title: typeof Title
 } = ({ children, section, hasSubNav }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const { t } = useTranslation()
-  const { language } = useI18next()
+  const intl = useIntl()
   const ref = createRef<HTMLLIElement>()
 
-  const direction = getDirection(language as Lang)
+  const direction = getDirection(intl.locale as Lang)
 
   const toggle = () => setIsOpen((isOpen) => !isOpen)
   const close = () => setIsOpen(false)
@@ -175,7 +174,7 @@ const NavDropdown: React.FC<IProps> & {
     <DropdownContext.Provider
       value={{ isOpen, toggle, close, tabInteractionHandler }}
     >
-      <NavListItem ref={ref} aria-label={t(ariaLabel)}>
+      <NavListItem ref={ref} aria-label={translateMessageId(ariaLabel, intl)}>
         <DropdownTitle
           dir={direction}
           onClick={() => toggle()}

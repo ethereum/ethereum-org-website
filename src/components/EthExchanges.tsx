@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { IGatsbyImageData } from "gatsby-plugin-image"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 import styled from "@emotion/styled"
 
 import CardList from "./CardList"
@@ -12,6 +12,7 @@ import { StyledSelect as Select } from "./SharedStyledComponents"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { trackCustomEvent } from "../utils/matomo"
+import { translateMessageId } from "../utils/translations"
 import { getImage, ImageDataLike } from "../utils/image"
 import { Lang } from "../utils/languages"
 
@@ -162,6 +163,7 @@ type ExchangeName =
   | "mtpelerin"
   | "okx"
   | "rain"
+  | "shakepay"
   | "wazirx"
 
 type WalletProviderName = "simplex" | "moonpay" | "wyre"
@@ -211,11 +213,13 @@ interface State {
 
 // TODO move component into get-eth.js page?
 const EthExchanges = () => {
-  const { language } = useI18next()
-  const { t } = useTranslation()
+  const intl = useIntl()
   const [state, setState] = useState<State>()
 
-  const placeholderString = t("page-get-eth-exchanges-search")
+  const placeholderString = translateMessageId(
+    "page-get-eth-exchanges-search",
+    intl
+  )
   const data = useStaticQuery(graphql`
     query EthExchanges {
       exchangesByCountry: allExchangesByCountryCsv {
@@ -246,6 +250,7 @@ const EthExchanges = () => {
           mtpelerin
           okx
           rain
+          shakepay
           simplex
           wazirx
           wyre
@@ -344,6 +349,9 @@ const EthExchanges = () => {
         ...cardListImage
       }
       rain: file(relativePath: { eq: "exchanges/rain.png" }) {
+        ...cardListImage
+      }
+      shakepay: file(relativePath: { eq: "exchanges/shakepay.png" }) {
         ...cardListImage
       }
       squarelink: file(relativePath: { eq: "wallets/squarelink.png" }) {
@@ -503,6 +511,12 @@ const EthExchanges = () => {
       image: data.rain,
       usaExceptions: [],
     },
+    shakepay: {
+      name: "Shakepay",
+      url: "https://shakepay.com",
+      image: data.shakepay,
+      usaExceptions: [],
+    },
     wazirx: {
       name: "WazirX",
       url: "https://wazirx.com/",
@@ -572,7 +586,7 @@ const EthExchanges = () => {
   }
 
   const lastUpdated = getLocaleTimestamp(
-    language as Lang,
+    intl.locale as Lang,
     data.timestamp.parent.fields.gitLogLatestDate
   )
 
@@ -618,11 +632,15 @@ const EthExchanges = () => {
       .map((exchange) => {
         // Add state exceptions if Country is USA
         let description: string | null = null
-        if (state?.selectedCountry?.value === t("page-get-eth-exchanges-usa")) {
+        if (
+          state?.selectedCountry?.value ===
+          translateMessageId("page-get-eth-exchanges-usa", intl)
+        ) {
           const exceptions = exchanges[exchange].usaExceptions
           if (exceptions.length > 0) {
-            description = `${t(
-              "page-get-eth-exchanges-except"
+            description = `${translateMessageId(
+              "page-get-eth-exchanges-except",
+              intl
             )} ${exceptions.join(", ")}`
           }
         }
@@ -654,12 +672,14 @@ const EthExchanges = () => {
             // Add state exceptions if Country is USA
             let description: string | null = null
             if (
-              state?.selectedCountry?.value === t("page-get-eth-exchanges-usa")
+              state?.selectedCountry?.value ===
+              translateMessageId("page-get-eth-exchanges-usa", intl)
             ) {
               const exceptions = walletProviders[currentProvider].usaExceptions
               if (exceptions.length > 0) {
-                description = `${t(
-                  "page-get-eth-exchanges-except"
+                description = `${translateMessageId(
+                  "page-get-eth-exchanges-except",
+                  intl
                 )} ${exceptions.join(", ")}`
               }
               // Filter out wallets that only service USA
@@ -694,7 +714,7 @@ const EthExchanges = () => {
         <Translation id="page-get-eth-exchanges-intro" />
       </Intro>
       <StyledSelect
-        aria-label={t("page-get-eth-exchanges-header")}
+        aria-label={translateMessageId("page-get-eth-exchanges-header", intl)}
         className="react-select-container"
         classNamePrefix="react-select"
         options={exchangesByCountry}

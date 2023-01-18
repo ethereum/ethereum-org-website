@@ -1,9 +1,10 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
-import { useI18next } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
+import { Badge } from "@chakra-ui/react"
 
 import ButtonLink from "../components/ButtonLink"
 import Breadcrumbs from "../components/Breadcrumbs"
@@ -17,7 +18,6 @@ import MarkdownTable from "../components/MarkdownTable"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
-import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import ExpandableCard from "../components/ExpandableCard"
 import Roadmap from "../components/Roadmap"
@@ -141,7 +141,7 @@ const components = {
   Card,
   Divider,
   SectionNav,
-  Pill,
+  Badge,
   Emoji,
   DocLink,
   ExpandableCard,
@@ -162,7 +162,7 @@ const StaticPage = ({
   data: { siteData, pageData: mdx },
   pageContext: { relativePath },
 }: PageProps<Queries.StaticPageQuery, Context>) => {
-  const { language } = useI18next()
+  const intl = useIntl()
 
   if (!siteData || !mdx?.frontmatter || !mdx.parent)
     throw new Error(
@@ -206,10 +206,10 @@ const StaticPage = ({
         <ContentContainer>
           <Breadcrumbs slug={slug} />
           <LastUpdated
-            dir={isLangRightToLeft(language as Lang) ? "rtl" : "ltr"}
+            dir={isLangRightToLeft(intl.locale as Lang) ? "rtl" : "ltr"}
           >
             <Translation id="page-last-updated" />:{" "}
-            {getLocaleTimestamp(language as Lang, lastUpdatedDate)}
+            {getLocaleTimestamp(intl.locale as Lang, lastUpdatedDate)}
           </LastUpdated>
           <MobileTableOfContents
             editPath={absoluteEditPath}
@@ -237,16 +237,7 @@ const StaticPage = ({
 }
 
 export const staticPageQuery = graphql`
-  query StaticPage($languagesToFetch: [String!]!, $relativePath: String) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
+  query StaticPage($relativePath: String) {
     siteData: site {
       siteMetadata {
         editContentUrl

@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 import { useTheme } from "@emotion/react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 
 import Translation from "../components/Translation"
 import Callout from "../components/Callout"
@@ -37,7 +37,10 @@ import Slider, { EmblaSlide } from "../components/Slider"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
 
-import { getLocaleForNumberFormat } from "../utils/translations"
+import {
+  getLocaleForNumberFormat,
+  translateMessageId,
+} from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { trackCustomEvent } from "../utils/matomo"
 import { getImage, getSrc } from "../utils/image"
@@ -238,11 +241,10 @@ const Stat: React.FC<{ stat: IFetchStat }> = ({ stat }) => {
 const WhatIsEthereumPage = ({
   data,
 }: PageProps<Queries.WhatIsEthereumQuery, Context>) => {
-  const { t } = useTranslation()
-  const { language } = useI18next()
+  const intl = useIntl()
   const theme = useTheme()
 
-  const localeForStatsBoxNumbers = getLocaleForNumberFormat(language as Lang)
+  const localeForStatsBoxNumbers = getLocaleForNumberFormat(intl.locale as Lang)
 
   const txCount = useFetchStat<
     Array<{ unixTimeStamp: string; transactionCount: number }>
@@ -262,40 +264,61 @@ const WhatIsEthereumPage = ({
   const cards = [
     {
       emoji: ":bank:",
-      title: t("page-what-is-ethereum-banking-card"),
-      description: t("page-what-is-ethereum-banking-card-desc"),
+      title: translateMessageId("page-what-is-ethereum-banking-card", intl),
+      description: translateMessageId(
+        "page-what-is-ethereum-banking-card-desc",
+        intl
+      ),
     },
 
     {
       emoji: ":detective:",
-      title: t("page-what-is-ethereum-internet-card"),
-      description: t("page-what-is-ethereum-internet-card-desc"),
+      title: translateMessageId("page-what-is-ethereum-internet-card", intl),
+      description: translateMessageId(
+        "page-what-is-ethereum-internet-card-desc",
+        intl
+      ),
     },
     {
       emoji: ":busts_in_silhouette:",
-      title: t("page-what-is-ethereum-p2p-card"),
-      description: t("page-what-is-ethereum-p2p-card-desc"),
+      title: translateMessageId("page-what-is-ethereum-p2p-card", intl),
+      description: translateMessageId(
+        "page-what-is-ethereum-p2p-card-desc",
+        intl
+      ),
     },
     {
       emoji: ":shield:",
-      title: t("page-what-is-ethereum-censorless-card"),
-      description: t("page-what-is-ethereum-censorless-card-desc"),
+      title: translateMessageId("page-what-is-ethereum-censorless-card", intl),
+      description: translateMessageId(
+        "page-what-is-ethereum-censorless-card-desc",
+        intl
+      ),
     },
     {
       emoji: ":shopping_bags:",
-      title: t("page-what-is-ethereum-commerce-card"),
-      description: t("page-what-is-ethereum-commerce-card-desc"),
+      title: translateMessageId("page-what-is-ethereum-commerce-card", intl),
+      description: translateMessageId(
+        "page-what-is-ethereum-commerce-card-desc",
+        intl
+      ),
     },
     {
       emoji: ":handshake:",
-      title: t("page-what-is-ethereum-composable-card"),
-      description: t("page-what-is-ethereum-composable-card-desc"),
+      title: translateMessageId("page-what-is-ethereum-composable-card", intl),
+      description: translateMessageId(
+        "page-what-is-ethereum-composable-card-desc",
+        intl
+      ),
     },
   ]
 
   const tabs = [
     {
-      title: t("page-what-is-ethereum-blockchain-tab-title"),
+      title: translateMessageId(
+        "page-what-is-ethereum-blockchain-tab-title",
+        intl
+      ),
       eventName: "Blockchain tab",
       content: (
         <TabContent>
@@ -304,7 +327,10 @@ const WhatIsEthereumPage = ({
       ),
     },
     {
-      title: t("page-what-is-ethereum-cryptocurrency-tab-title"),
+      title: translateMessageId(
+        "page-what-is-ethereum-cryptocurrency-tab-title",
+        intl
+      ),
       eventName: "Cryptocurrency tab",
       content: (
         <TabContent>
@@ -341,8 +367,11 @@ const WhatIsEthereumPage = ({
   return (
     <Page>
       <PageMetadata
-        title={t("page-what-is-ethereum-meta-title")}
-        description={t("page-what-is-ethereum-meta-description")}
+        title={translateMessageId("page-what-is-ethereum-meta-title", intl)}
+        description={translateMessageId(
+          "page-what-is-ethereum-meta-description",
+          intl
+        )}
         image={getSrc(data.ogImage)}
       />
       <Content>
@@ -365,7 +394,10 @@ const WhatIsEthereumPage = ({
           </Header>
           <Hero
             image={getImage(data.hero)!}
-            alt={t("page-what-is-ethereum-alt-img-bazaar")}
+            alt={translateMessageId(
+              "page-what-is-ethereum-alt-img-bazaar",
+              intl
+            )}
             loading="eager"
           />
         </HeroContainer>
@@ -889,7 +921,7 @@ const WhatIsEthereumPage = ({
           <StyledCallout
             image={getImage(data.developers)!}
             titleKey="page-what-is-ethereum-build"
-            alt={t("page-what-is-ethereum-alt-img-lego")}
+            alt={translateMessageId("page-what-is-ethereum-alt-img-lego", intl)}
             descriptionKey="page-what-is-ethereum-build-desc"
           >
             <div>
@@ -901,7 +933,7 @@ const WhatIsEthereumPage = ({
           <StyledCallout
             image={getImage(data.community)!}
             titleKey="page-what-is-ethereum-community"
-            alt={t("page-what-is-ethereum-alt-img-comm")}
+            alt={translateMessageId("page-what-is-ethereum-alt-img-comm", intl)}
             descriptionKey="page-what-is-ethereum-comm-desc"
           >
             <div>
@@ -955,16 +987,7 @@ export const calloutImage = graphql`
 `
 
 export const query = graphql`
-  query WhatIsEthereum($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
+  query WhatIsEthereum {
     hero: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)

@@ -2,7 +2,7 @@
 import React, { ComponentType, SVGProps } from "react"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 import styled from "@emotion/styled"
 
 // Assets
@@ -40,7 +40,7 @@ import Icon from "../components/Icon"
 import NakedButton from "../components/NakedButton"
 
 // Utils
-import { TranslationKey } from "../utils/translations"
+import { translateMessageId, TranslationKey } from "../utils/translations"
 import { scrollIntoView } from "../utils/scrollIntoView"
 import { getImage } from "../utils/image"
 
@@ -404,13 +404,13 @@ interface RunANodeCard {
 }
 
 const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
-  const { t } = useTranslation()
+  const intl = useIntl()
   const heroContent = {
     title: <Translation id="page-run-a-node-title" />,
     header: <Translation id="page-run-a-node-hero-header" />,
     subtitle: <Translation id="page-run-a-node-hero-subtitle" />,
     image: getImage(data.ethereumInside)!,
-    alt: t("page-run-a-node-hero-alt"),
+    alt: translateMessageId("page-run-a-node-hero-alt", intl),
     buttons: [
       {
         content: <Translation id="page-run-a-node-hero-cta-1" />,
@@ -485,8 +485,11 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
   return (
     <GappedPage>
       <PageMetadata
-        title={t("page-run-a-node-title")}
-        description={t("page-run-a-node-meta-description")}
+        title={translateMessageId("page-run-a-node-title", intl)}
+        description={translateMessageId(
+          "page-run-a-node-meta-description",
+          intl
+        )}
       />
       <HeroContainer>
         <Hero content={heroContent} isReverse />
@@ -558,10 +561,10 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
             return (
               <ExpandableCard
                 contentPreview={<Translation id={preview} />}
-                title={t(title)}
+                title={translateMessageId(title, intl)}
                 // TODO: make a11y svgs (using <title>)
                 // @ts-ignore
-                alt={t(alt)}
+                alt={translateMessageId(alt, intl)}
                 svg={image}
                 key={idx}
               >
@@ -600,7 +603,10 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
               <Terminal
                 // TODO: make a11y svgs (using <title>)
                 // @ts-ignore
-                alt={t("page-run-a-node-glyph-alt-terminal")}
+                alt={translateMessageId(
+                  "page-run-a-node-glyph-alt-terminal",
+                  intl
+                )}
               />
             </ColumnNarrow>
           </SoftwareHighlight>
@@ -615,7 +621,10 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
               <Dappnode
                 // TODO: make a11y svgs (using <title>)
                 // @ts-ignore
-                alt={t("page-run-a-node-glyph-alt-dappnode")}
+                alt={translateMessageId(
+                  "page-run-a-node-glyph-alt-dappnode",
+                  intl
+                )}
               />
             </ColumnNarrow>
           </SoftwareHighlight>
@@ -633,7 +642,10 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
               <Dapptap
                 // TODO: make a11y svgs (using <title>)
                 // @ts-ignore
-                alt={t("page-run-a-node-glyph-alt-phone")}
+                alt={translateMessageId(
+                  "page-run-a-node-glyph-alt-phone",
+                  intl
+                )}
               />
             </ColumnNarrow>
           </SoftwareHighlight>
@@ -724,7 +736,10 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
             <HardwareGlyph
               // TODO: make a11y svgs (using <title>)
               // @ts-ignore
-              alt={t("page-run-a-node-glyph-alt-hardware")}
+              alt={translateMessageId(
+                "page-run-a-node-glyph-alt-hardware",
+                intl
+              )}
             />
             <h3>
               <Translation id="page-run-a-node-build-your-own-hardware-title" />
@@ -808,7 +823,10 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
             <DownloadGlyph
               // TODO: make a11y svgs (using <title>)
               // @ts-ignore
-              alt={t("page-run-a-node-glyph-alt-software")}
+              alt={translateMessageId(
+                "page-run-a-node-glyph-alt-software",
+                intl
+              )}
             />
             <h3>
               <Translation id="page-run-a-node-build-your-own-software" />
@@ -1000,16 +1018,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
 export default RunANodePage
 
 export const query = graphql`
-  query RunANodePage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
+  query RunANodePage {
     ethereumInside: file(
       relativePath: { eq: "run-a-node/ethereum-inside.png" }
     ) {

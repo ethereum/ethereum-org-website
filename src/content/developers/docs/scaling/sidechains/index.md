@@ -64,6 +64,7 @@ Multiple projects provide implementations of sidechains that you can integrate i
 - [Skale](https://skale.network/)
 - [Gnosis Chain (formerly xDai)](https://www.gnosischain.com/)
 - [Loom Network](https://loomx.io/)
+- [Metis Andromeda](https://www.metis.io/)
 
 ## Further reading {#further-reading}
 

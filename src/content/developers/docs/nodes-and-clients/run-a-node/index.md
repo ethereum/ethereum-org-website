@@ -54,6 +54,7 @@ Both options have different advantages summed up above. If you are looking for a
 - [QuikNode](https://www.quiknode.io/)
 - [Blockdaemon](https://blockdaemon.com)
 - [Alchemy](https://www.alchemy.com/)
+- [Blast](https://blastapi.io/)
 
 Check out also [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/) for more options on hosted nodes.
 
@@ -228,7 +229,7 @@ openssl rand -hex 32 > jwtsecret
 This section will guide you through starting execution clients. It only serves as an example of a basic configuration, which will start the client with these settings:
 
 - Specifies network to connect to, mainnet in our examples
-  - You can instead choose [one of testnets](/developers/docs/networks/) for prelimenary testing of your setup
+  - You can instead choose [one of testnets](/developers/docs/networks/) for preliminary testing of your setup
 - Defines data directory, where all the data including blockchain will be stored
   - Make sure to subsitute the path with a real one, e.g. pointing to your external drive
 - Enables interfaces for communicating with the client
@@ -321,7 +322,7 @@ When starting a Beacon Node on a testnet, you can save significant syncing time 
 Before running Lighthouse, learn more on how to install and configure it in [Lighthouse Book](https://lighthouse-book.sigmaprime.io/installation.html).
 
 ```
-lighthouse beacon_node
+lighthouse beacon_node \
     --network mainnet \
     --datadir /data/ethereum \
     --http \

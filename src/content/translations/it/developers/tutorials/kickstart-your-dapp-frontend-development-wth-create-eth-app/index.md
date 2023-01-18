@@ -60,15 +60,15 @@ Mentre [Web3](https://web3js.readthedocs.io/en/v1.2.7/) è ancora molto usato, n
 
 [GraphQL](https://graphql.org/) è un metodo alternativo per gestire i dati rispetto a un'[API di Restful](https://restfulapi.net/). Ha diversi vantaggi rispetto alle Api di Restful, specialmente per i dati della blockchain decentralizzata. Se sei interessato al ragionamento dietro questo metodo, dai un'occhiata a [GraphQL Will Power the Decentralized Web](https://medium.com/graphprotocol/graphql-will-power-the-decentralized-web-d7443a69c69a).
 
-Solitamente recupereresti i dati direttamente dal tuo smart contract. Vuoi leggere l'ora dell'ultima operazione? Basta chiamare `MyContract.methods.latestTradeTime().call()` per recuperare i dati da un nodo di Ethereum come Infura nella tua Dapp. E se ci fossero centinaia di punti di dati diversi? Ne deriverebbero centinaia di recuperi di dati al nodo, richiedendo ogni volta un [RTT](https://wikipedia.org/wiki/Round-trip_delay_time) e rendendo lenta e inefficiente la tua Dapp. Una scappatoia potrebbe essere una funzione di chiamata del recuperatore nel tuo contratto, in modo da restituire più dati in una volta. Questa soluzione però non è sempre ideale.
+Solitamente recupereresti i dati direttamente dal tuo smart contract. Vuoi leggere l'ora dell'ultima operazione? Basta chiamare `MyContract.methods.latestTradeTime().call()`, che recupera i dati da un nodo di Ethereum come Infura, nella tua dapp. E se ci fossero centinaia di punti di dati diversi? Ciò risulterebbe in centinaia di recuperi di dati al nodo, richiedendo ogni volta un [RTT](https://wikipedia.org/wiki/Round-trip_delay_time) e rendendo la tua dapp lenta e inefficace. Una scappatoia potrebbe essere una funzione di chiamata del recuperatore nel tuo contratto, in modo da restituire più dati in una volta. Questa soluzione però non è sempre ideale.
 
 E poi potresti essere interessato anche ai dati storici. Vuoi sapere non solo l'orario dell'ultima operazione, ma gli orari per tutte le operazioni che tu stesso hai mai eseguito? Usa il pacchetto subgraph _create-eth-app_, leggi la [documentazione](https://thegraph.com/docs/define-a-subgraph) e adattalo ai tuoi contratti. Se stai cercando degli smart contract popolari, potrebbe anche esistere già un subgraph. Dai un'occhiata al [subgraph explorer](https://thegraph.com/explorer/).
 
-Una volta che hai un subgraph, ti consente di scrivere una semplice query nella tua Dapp che recuperi tutti i dati importanti della blockchain, inclusi quelli storici di cui hai bisogno, in un solo recupero.
+Una volta che hai un grafico secondario, ti consente di scrivere una semplice richiesta nella tua dapp che recuperi tutti i dati importanti della blockchain, inclusi quelli storici che necessiti, tramite un solo recupero necessario.
 
 ### Apollo {#apollo}
 
-Grazie all'integrazione di [Apollo Boost](https://www.apollographql.com/docs/react/get-started/), puoi facilmente integrare il grafico nella tua Dapp di React. Specialmente quando si utilizzano gli [hook di React e Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2), recuperare i dati è tanto facile quanto scrivere una singola query di GraphQL nel tuo componente:
+Grazie all'integrazione di [Apollo Boost](https://www.apollographql.com/docs/react/get-started/), puoi integrare facilmente il grafico nella tua dapp di React. Specialmente quando si utilizzano gli [hook di React e Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2), recuperare i dati è tanto facile quanto scrivere una singola query di GraphQL nel tuo componente:
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)
@@ -100,7 +100,7 @@ Quando scegli di integrare Aave con _create-eth-app_, otterrai un'[integrazione 
 
 ### Uniswap {#uniswap}
 
-[Uniswap](https://uniswap.exchange/) è uno scambio decentralizzato (DEX). I fornitori di liquidità possono guadagnare commissioni fornendo i token richiesti o ether per ambe le parti di uno scambio. È ampiamente usato e dunque ha una delle liquidità più elevate per una gamma davvero ampia di token. Puoi integrarla facilmente nella tua Dapp, ad esempio per consentire agli utenti di scambiare i loro ETH per DAI.
+[Uniswap](https://uniswap.exchange/) è uno scambio decentralizzato (DEX). I fornitori di liquidità possono guadagnare commissioni fornendo i token richiesti o ether per ambe le parti di uno scambio. È ampiamente usato e dunque ha una delle liquidità più elevate per una gamma davvero ampia di token. Puoi integrarla facilmente nella tua dapp, ad esempio, per consentire agli utenti di scambiare i propri ETH per DAI.
 
 Sfortunatamente, al momento della redazione del del presente articolo, l'integrazione è solo per Uniswap v1 e non per [la recente v2](https://uniswap.org/blog/uniswap-v2/).
 

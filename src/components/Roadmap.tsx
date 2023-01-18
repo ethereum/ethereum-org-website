@@ -1,25 +1,24 @@
 import React, { useState, useEffect } from "react"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
-import styled from "@emotion/styled"
+import { useIntl } from "react-intl"
 import axios from "axios"
 
 import Translation from "./Translation"
 import Link from "./Link"
-import { FakeLinkExternal, CardItem as Item } from "./SharedStyledComponents"
+
+import { translateMessageId } from "../utils/translations"
 
 import { GATSBY_FUNCTIONS_PATH } from "../constants"
-
-const Section = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  width: 100%;
-`
-
-const ErrorMsg = styled.div`
-  color: ${(props) => props.theme.colors.fail};
-`
+import {
+  Box,
+  Flex,
+  Heading,
+  LinkBox,
+  LinkOverlay,
+  ListItem,
+  Text,
+  UnorderedList,
+  useToken,
+} from "@chakra-ui/react"
 
 export interface Label {
   name: string
@@ -42,34 +41,59 @@ export interface IPropsIssueSection {
 }
 
 const IssueSection: React.FC<IPropsIssueSection> = ({ issues }) => {
+  const [cardBoxShadow] = useToken("colors", ["cardBoxShadow"])
+
   if (!issues) {
     return null
   }
   return (
-    <Section>
+    <Flex flexWrap="wrap" my={8} width="full" gap={4}>
       {issues.map((issue, idx) => {
         const url = issue.html_url ? issue.html_url : "#"
         return (
-          <Item to={url} key={idx} hideArrow={true}>
-            <div>{issue.title}</div>
-            {issue.errorMsg && <ErrorMsg>{issue.errorMsg}</ErrorMsg>}
-            <div>
-              {issue.html_url && <FakeLinkExternal>Discuss</FakeLinkExternal>}
-            </div>
-          </Item>
+          <LinkBox
+            key={idx}
+            flex={{ base: "1 1 240px", sm: "0 1 240px" }}
+            w="100%"
+            p={4}
+            color="text"
+            borderRadius="2px"
+            border="1px solid"
+            borderColor="lightBorder"
+            transition="all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1)"
+            cursor="pointer"
+            _hover={{
+              boxShadow: cardBoxShadow,
+              border: "1px solid",
+              borderColor: "black300",
+            }}
+          >
+            <Box>{issue.title}</Box>
+            {issue.errorMsg && (
+              <Text color="fail" mb={0}>
+                {issue.errorMsg}
+              </Text>
+            )}
+            <Box>
+              {issue.html_url && (
+                <LinkOverlay as={Link} href={url}>
+                  Discuss
+                </LinkOverlay>
+              )}
+            </Box>
+          </LinkBox>
         )
       })}
-    </Section>
+    </Flex>
   )
 }
 
 export interface IProps {}
 
 const Roadmap: React.FC<IProps> = () => {
-  const { t } = useTranslation()
-  const { language } = useI18next()
+  const intl = useIntl()
   const issue: Issue = {
-    title: t("loading"),
+    title: translateMessageId("loading", intl),
     labels: [],
   }
   const blankIssues: Array<Issue> = Array(6).fill(issue)
@@ -143,8 +167,8 @@ const Roadmap: React.FC<IProps> = () => {
       .catch((error) => {
         console.error(error)
         const errorIssue: Issue = {
-          title: t("loading-error"),
-          errorMsg: t("refresh"),
+          title: translateMessageId("loading-error", intl),
+          errorMsg: translateMessageId("refresh", intl),
           labels: [],
         }
         const errorIssues: Array<Issue> = Array(3).fill(errorIssue)
@@ -154,97 +178,97 @@ const Roadmap: React.FC<IProps> = () => {
           implemented: errorIssues,
         })
       })
-  }, [language])
+  }, [intl])
 
   return (
-    <div>
-      <p>
+    <Box>
+      <Text>
         <Translation id="page-about-p-1" />
-      </p>
-      <p>
+      </Text>
+      <Text>
         <Link to="https://github.com/ethereum/ethereum-org-website/blob/master/LICENSE">
           <Translation id="page-about-link-1" />
         </Link>
         .
-      </p>
-      <p>
+      </Text>
+      <Text>
         <Translation id="page-about-p-2" />{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website">
           <Translation id="page-about-link-2" />
         </Link>
         <Translation id="page-about-p-3" />
-      </p>
-      <ul>
-        <li>
+      </Text>
+      <UnorderedList>
+        <ListItem>
           <Translation id="page-about-li-1" />
-        </li>
-        <li>
+        </ListItem>
+        <ListItem>
           <Translation id="page-about-li-2" />
-        </li>
-        <li>
+        </ListItem>
+        <ListItem>
           <Translation id="page-about-li-3" />
-        </li>
-      </ul>
-      <p>
+        </ListItem>
+      </UnorderedList>
+      <Text>
         <Translation id="page-about-p-4" />
-      </p>
-      <h3>
+      </Text>
+      <Heading as="h3">
         <Translation id="page-about-h3" />
-      </h3>
-      <p>
+      </Heading>
+      <Text>
         <Translation id="page-about-p-5" />{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website/labels/Status%3A%20In%20Progress">
           <Translation id="page-about-link-3" />{" "}
         </Link>
         .
-      </p>
+      </Text>
       <IssueSection issues={issues.inProgress} />
-      <h3>
+      <Heading as="h3">
         <Translation id="page-about-h3-2" />
-      </h3>
-      <p>
+      </Heading>
+      <Text>
         <Translation id="page-about-p-6" />{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aissue+is%3Aopen+label%3A%22Status%3A+Up+Next%22">
           <Translation id="page-about-link-3" />
         </Link>
         .
-      </p>
+      </Text>
       <IssueSection issues={issues.planned} />
-      <h3>
+      <Heading as="h3">
         <Translation id="page-about-h3-1" />
-      </h3>
-      <p>
+      </Heading>
+      <Text>
         <Translation id="page-about-p-7" />{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aissue+is%3Aclosed">
           <Translation id="page-about-link-6" />{" "}
         </Link>
         .
-      </p>
+      </Text>
       <IssueSection issues={issues.implemented} />
-      <h2>
+      <Heading as="h2">
         <Translation id="page-about-h2" />
-      </h2>
-      <p>
+      </Heading>
+      <Text>
         <Translation id="page-about-p-8" />
-      </p>
-      <ul>
-        <li>
+      </Text>
+      <UnorderedList>
+        <ListItem>
           <Link to="https://discord.gg/bTCfS8C">
             <Translation id="page-about-link-4" />
           </Link>
-        </li>
-        <li>
+        </ListItem>
+        <ListItem>
           <Link to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
             <Translation id="page-about-link-7" />
           </Link>
-        </li>
-        <li>
+        </ListItem>
+        <ListItem>
           <Link to="https://twitter.com/ethdotorg">
             <Translation id="page-about-link-5" />
           </Link>
-        </li>
-      </ul>
-    </div>
+        </ListItem>
+      </UnorderedList>
+    </Box>
   )
 }
 

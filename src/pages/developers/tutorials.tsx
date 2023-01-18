@@ -1,18 +1,18 @@
 import React, { useEffect, useMemo, useState } from "react"
 import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import { useIntl } from "react-intl"
 
 import Translation from "../../components/Translation"
+import { translateMessageId } from "../../utils/translations"
 import Icon from "../../components/Icon"
 import ButtonLink from "../../components/ButtonLink"
 import Link from "../../components/Link"
 import Modal from "../../components/Modal"
 import PageMetadata from "../../components/PageMetadata"
-import Pill from "../../components/Pill"
 import Tag from "../../components/Tag"
 import TutorialTags from "../../components/TutorialTags"
-import Emoji from "../../components/OldEmoji"
+import Emoji from "../../components/Emoji"
 import {
   ButtonSecondary,
   FakeLink,
@@ -30,6 +30,7 @@ import {
   filterTutorialsByLang,
   getSortedTutorialTagsForLang,
 } from "../../utils/tutorials"
+import { Badge } from "@chakra-ui/react"
 
 const SubSlogan = styled.p`
   font-size: 1.25rem;
@@ -214,8 +215,7 @@ const published = (locale: string, published: string) => {
   const localeTimestamp = getLocaleTimestamp(locale as Lang, published)
   return localeTimestamp !== INVALID_DATETIME ? (
     <span>
-      <Emoji text=":calendar:" size={1} ml={`0.5em`} mr={`0.5em`} />{" "}
-      {localeTimestamp}
+      <Emoji text=":calendar:" fontSize="sm" ml={2} mr={2} /> {localeTimestamp}
     </span>
   ) : null
 }
@@ -260,9 +260,9 @@ const TutorialsPage = ({
       filterTutorialsByLang(
         data.allTutorials.nodes,
         externalTutorials,
-        pageContext.language
+        pageContext.locale
       ),
-    [pageContext.language]
+    [pageContext.locale]
   )
 
   const allTags = useMemo(
@@ -270,8 +270,7 @@ const TutorialsPage = ({
     [filteredTutorialsByLang]
   )
 
-  const { t } = useTranslation()
-  const { language } = useI18next()
+  const intl = useIntl()
   const [isModalOpen, setModalOpen] = useState(false)
   const [filteredTutorials, setFilteredTutorials] = useState(
     filteredTutorialsByLang
@@ -306,8 +305,11 @@ const TutorialsPage = ({
   return (
     <StyledPage>
       <PageMetadata
-        title={t("page-tutorials-meta-title")}
-        description={t("page-tutorials-meta-description")}
+        title={translateMessageId("page-tutorials-meta-title", intl)}
+        description={translateMessageId(
+          "page-tutorials-meta-description",
+          intl
+        )}
       />
       <PageTitle>
         <Translation id="page-tutorial-title" />
@@ -400,7 +402,7 @@ const TutorialsPage = ({
         </TagsContainer>
         {filteredTutorials.length === 0 && (
           <ResultsContainer>
-            <Emoji text=":crying_face:" size={3} mb={`2em`} mt={`2em`} />
+            <Emoji text=":crying_face:" fontSize="5xl" mb={8} mt={8} />
             <h2>
               <Translation id="page-tutorial-tags-error" />
             </h2>
@@ -418,25 +420,20 @@ const TutorialsPage = ({
             >
               <TitleContainer>
                 <Title isExternal={tutorial.isExternal}>{tutorial.title}</Title>
-                <Pill isSecondary={true}>
+                <Badge variant="secondary">
                   <Translation id={getSkillTranslationId(tutorial.skill!)} />
-                </Pill>
+                </Badge>
               </TitleContainer>
               <Author>
                 {/* TODO: Refactor each tutorial tag as a component */}
-                <Emoji text=":writing_hand:" size={1} mr={`0.5em`} />
+                <Emoji text=":writing_hand:" fontSize="sm" mr={2} />
                 {tutorial.author} •
-                {published(language, tutorial.published ?? "")}
+                {published(intl.locale, tutorial.published ?? "")}
                 {tutorial.timeToRead && (
                   <>
                     {" "}
                     •
-                    <Emoji
-                      text=":stopwatch:"
-                      size={1}
-                      ml={`0.5em`}
-                      mr={`0.5em`}
-                    />
+                    <Emoji text=":stopwatch:" fontSize="sm" ml={2} mr={2} />
                     {tutorial.timeToRead}{" "}
                     <Translation id="page-tutorial-read-time" />
                   </>
@@ -444,7 +441,7 @@ const TutorialsPage = ({
                 {tutorial.isExternal && (
                   <>
                     {" "}
-                    •<Emoji text=":link:" size={1} ml={`0.5em`} mr={`0.5em`} />
+                    •<Emoji text=":link:" fontSize="sm" ml={2} mr={2} />
                     <FakeLink>
                       <Translation id="page-tutorial-external-link" />
                     </FakeLink>
@@ -466,16 +463,7 @@ const TutorialsPage = ({
 export default TutorialsPage
 
 export const query = graphql`
-  query DevelopersTutorialsPage($languagesToFetch: [String!]!) {
-    locales: allLocale(filter: { language: { in: $languagesToFetch } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
+  query DevelopersTutorialsPage {
     allTutorials: allMdx(
       filter: { slug: { regex: "/tutorials/" } }
       sort: { fields: frontmatter___published, order: DESC }
