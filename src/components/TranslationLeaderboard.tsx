@@ -46,6 +46,8 @@ const Button = (props) => {
         color: "primary",
         borderColor: "primary",
       }}
+      _focus={{}}
+      _active={{}}
       {...props}
     />
   )
