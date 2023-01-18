@@ -55,27 +55,27 @@ import "usingtellor/contracts/UsingTellor.sol";
 
 contract PriceContract is UsingTellor {
   uint256 public btcPrice;
- 
+
  //This Contract now has access to all functions in UsingTellor
-  
+
 constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) public {}
- 
+
 function setBtcPrice() public {
     bytes memory _b = abi.encode("SpotPrice",abi.encode("btc","usd"));
     bytes32 _queryID = keccak256(_b);
-    
+
     uint256 _timestamp;
     bytes _value;
-    
+
     (_value, _timestamp) = getDataBefore(_queryId, block.timestamp - 15 minutes);
-    
+
     btcPrice = abi.decode(_value,(uint256));
   }
 }
 ```
-#### For a complete list of contract addresses refer [here].(https://docs.tellor.io/tellor/the-basics/contracts-reference)  {#addresses} 
 
+For a complete list of contract addresses refer [here](https://docs.tellor.io/tellor/the-basics/contracts-reference).
 
-#### For ease of use, the  UsingTellor  repo comes with a version of the [Tellor Playground](https://github.com/tellor-io/TellorPlayground) contract for easier integration. See [here](https://github.com/tellor-io/sampleUsingTellor#tellor-playground) for a list of helpful functions.
+For ease of use, the UsingTellor repo comes with a version of the [Tellor Playground](https://github.com/tellor-io/TellorPlayground) contract for easier integration. See [here](https://github.com/tellor-io/sampleUsingTellor#tellor-playground) for a list of helpful functions.
 
-#### For a more robust implementation of the Tellor oracle, check out the full list of available functions [here.](https://github.com/tellor-io/usingtellor/blob/master/README.md) {#for-a-more-robust-implementation-of-the-tellor-oracle-check-out-the-full-list-of-available-functions-here}
+For a more robust implementation of the Tellor oracle, check out the full list of available functions [here](https://github.com/tellor-io/usingtellor/blob/master/README.md).
