@@ -1548,6 +1548,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/mihaic01"><img src="https://avatars.githubusercontent.com/u/108999659?v=4?s=100" width="100px;" alt="mihaic01"/><br /><sub><b>mihaic01</b></sub></a><br /><a href="#content-mihaic01" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/qiuhaohao"><img src="https://avatars.githubusercontent.com/u/22148367?v=4?s=100" width="100px;" alt="qiuhaohao"/><br /><sub><b>qiuhaohao</b></sub></a><br /><a href="#content-qiuhaohao" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/debeldami"><img src="https://avatars.githubusercontent.com/u/44111962?v=4?s=100" width="100px;" alt="damilola debel"/><br /><sub><b>damilola debel</b></sub></a><br /><a href="#content-debeldami" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/SaratAngajalaoffl"><img src="https://avatars.githubusercontent.com/u/60383339?v=4?s=100" width="100px;" alt="Sarat Angajala"/><br /><sub><b>Sarat Angajala</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=SaratAngajalaoffl" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
