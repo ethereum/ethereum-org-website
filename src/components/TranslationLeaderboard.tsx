@@ -1,10 +1,6 @@
 // Libraries
 import React, { useState } from "react"
 import { reverse, sortBy } from "lodash"
-
-// Components
-import Emoji from "./Emoji"
-import Translation from "./Translation"
 import {
   Box,
   Flex,
@@ -14,6 +10,10 @@ import {
   useRadio,
   useRadioGroup,
 } from "@chakra-ui/react"
+
+// Components
+import Emoji from "./Emoji"
+import Translation from "./Translation"
 
 export interface IProps {
   monthData: any
@@ -117,17 +117,17 @@ const TranslationLeaderboard: React.FC<IProps> = ({
         flexDirection={{ base: "column", lg: "inherit" }}
         w="full"
       >
-        <RadioCard key={"monthData"} {...getRadioProps({ value: "monthData" })}>
+        <RadioCard key="monthData" {...getRadioProps({ value: "monthData" })}>
           <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-month-view" />
         </RadioCard>
         <RadioCard
-          key={"quarterData"}
+          key="quarterData"
           {...getRadioProps({ value: "quarterData" })}
         >
           <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-quarter-view" />
         </RadioCard>
         <RadioCard
-          key={"allTimeData"}
+          key="allTimeData"
           {...getRadioProps({ value: "allTimeData" })}
         >
           <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-all-time-view" />
@@ -140,7 +140,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
           justifyContent="space-between"
           alignItems="center"
           color="text"
-          mb="px"
+          mb="1px"
           p={4}
           w="full"
         >
@@ -198,7 +198,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
                 alignItems="center"
                 color="text"
                 boxShadow={tableItemBoxShadow}
-                mb="px"
+                mb="1px"
                 py={2}
                 px={4}
                 w="full"
