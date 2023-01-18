@@ -13,6 +13,7 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 
 ## Services {#services}
 
+- [Beaconcha.in](https://beaconcha.in/)
 - [Etherscan](https://etherscan.io/) -_Also available in Chinese, Korean, Russian, and Japanese_
 - [Etherchain](https://www.etherchain.org/)
 - [Ethplorer](https://ethplorer.io/) -_Also available in Chinese, Spanish, French, Turkish, Russian, Korean and Vietnamese_
@@ -226,6 +227,7 @@ The consensus layer top-level data includes the following:
 
 ## Block explorers {#block-explorers}
 
+- [Beaconcha.in](https://beaconcha.in/) - an open source block explorer for Ethereum Mainnet and Goerli Testnet
 - [Etherscan](https://etherscan.io/) - a block explorer you can use to fetch data for Ethereum Mainnet and Goerli Testnet
 - [Etherchain](https://www.etherchain.org/) - a block explorer for the Ethereum Mainnet
 - [Ethplorer](https://ethplorer.io/) - a block explorer with a focus on tokens for the Ethereum Mainnet and the Kovan testnet
