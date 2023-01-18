@@ -70,7 +70,7 @@ const AssetDownload: React.FC<IProps> = ({
       flex="1 1 45%"
       flexDirection="column"
       justifyContent="space-between"
-      m="4"
+      m={4}
       p={0}
       opacity={shouldHide ? 0 : 1}
     >
