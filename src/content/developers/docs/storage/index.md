@@ -177,6 +177,12 @@ Proof-of-stake based:
 - [Documentation](https://docs.filebase.com/)
 - [GitHub](https://github.com/filebase)
 
+**Kaleido - _A blockchain-as-a-service platform with click-button IPFS Nodes_**
+
+- [Kaleido](https://kaleido.io/)
+- [Documentation](https://docs.kaleido.io/kaleido-services/ipfs/)
+- [GitHub](https://github.com/kaleido-io)
+
 ## Further reading {#further-reading}
 
 - [What Is Decentralized Storage?](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
