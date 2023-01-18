@@ -9964,6 +9964,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "danierod",
+      "name": "danierod",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12255235?v=4",
+      "profile": "https://github.com/danierod",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
