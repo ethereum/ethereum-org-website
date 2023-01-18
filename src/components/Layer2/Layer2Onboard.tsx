@@ -11,6 +11,10 @@ import Translation from "../Translation"
 import { StyledSelect as Select } from "../SharedStyledComponents"
 
 // Data
+import {
+  cexOnboardData,
+  CexOnboard,
+} from "../../data/layer-2/cex-layer-2-onboard"
 import cexSupport from "../../data/layer-2/cex-layer-2-support.json"
 
 //Utils
@@ -190,6 +194,10 @@ interface ExchangeOption extends Option {
   cex: Exchange
 }
 
+interface CexOnboardOption extends Option {
+  cexOnboard: CexOnboard
+}
+
 export interface IProps {
   layer2DataCombined: Array<Layer2>
   ethIcon: IGatsbyImageData
@@ -203,6 +211,7 @@ const Layer2Onboard: React.FC<IProps> = ({
 }) => {
   const intl = useIntl()
 
+  const [selectedCexOnboard, setSelectedCexOnboard] = useState<CexOnboard>()
   const [selectedExchange, setSelectedExchange] = useState<Exchange>()
   const [selectedL2, setSelectedL2] = useState<Layer2>()
 
@@ -220,6 +229,16 @@ const Layer2Onboard: React.FC<IProps> = ({
         label: cex.name,
         value: cex.name,
         cex,
+      }
+    }
+  )
+
+  const cexOnboardOptions: Array<CexOnboardOption> = cexOnboardData.map(
+    (cexOnboard: CexOnboard) => {
+      return {
+        label: cexOnboard.name,
+        value: cexOnboard.name,
+        cexOnboard: cexOnboard,
       }
     }
   )
@@ -306,9 +325,19 @@ const Layer2Onboard: React.FC<IProps> = ({
         </RightDescription>
         <RightSelect>
           <StyledSelect
+            // TODO: style this label
             className="react-select-container"
             classNamePrefix="react-select"
-            options={cexSupportOptions}
+            options={[
+              {
+                options: [...cexSupportOptions],
+              },
+              {
+                // TODO: Add cex onboard label here
+                label: "Test",
+                options: [...cexOnboardOptions],
+              },
+            ]}
             onChange={(selectedOption: ExchangeOption) => {
               trackCustomEvent({
                 eventCategory: `Selected cex to onboard`,
@@ -316,6 +345,7 @@ const Layer2Onboard: React.FC<IProps> = ({
                 eventName: `${selectedOption.cex.name} selected`,
                 eventValue: `${selectedOption.cex.name}`,
               })
+              // TODO: refactor this to use both selected exchange and selected cex onboard
               setSelectedExchange(selectedOption.cex)
             }}
             placeholder={translateMessageId(
@@ -327,6 +357,7 @@ const Layer2Onboard: React.FC<IProps> = ({
         <EthLogo>
           <Image image={ethIcon} objectFit="contain" alt={ethIconAlt} />
         </EthLogo>
+        {/* TODO: Add markdown for rendering cex onboard content */}
         {selectedExchange && (
           <RightSelected>
             <SelectedContainer>
