@@ -46,7 +46,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Collection of externs to interact with ethereum-like network_
 - [Lighthouse](https://github.com/sigp/lighthouse) - _Fast Ethereum consensus layer client_
-- [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _Proposed redesign of the Ethereum smart contract execution layer_
+- [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _Proposed redesign of the Ethereum smart contract execution layer using a deterministic subset of WebAssembly_
 - [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS API reference_
 - [Solaris](https://github.com/paritytech/sol-rs) - _Solidity Smart Contracts unit test harness_
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Rust Ethereum Virtual Machine Implementation_
