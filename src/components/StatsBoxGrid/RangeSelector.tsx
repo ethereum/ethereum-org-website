@@ -1,6 +1,6 @@
 import React from "react"
 import { Button } from "@chakra-ui/react"
-import { ranges } from "./use-stats-box-grid"
+import { ranges } from "./useStatsBoxGrid"
 
 interface IRangeSelectorProps {
   state: string

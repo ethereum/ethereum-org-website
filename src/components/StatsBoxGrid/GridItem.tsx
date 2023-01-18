@@ -8,7 +8,7 @@ import Translation from "../Translation"
 import Link from "../Link"
 import StatErrorMessage from "../StatErrorMessage"
 import StatLoadingMessage from "../StatLoadingMessage"
-import { Metric, ranges } from "./use-stats-box-grid"
+import { Metric, ranges } from "./useStatsBoxGrid"
 import { Direction } from "../../types"
 
 const tooltipContent = (metric: Metric) => (

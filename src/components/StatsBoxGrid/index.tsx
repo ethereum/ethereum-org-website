@@ -2,7 +2,7 @@ import React from "react"
 import { SimpleGrid } from "@chakra-ui/react"
 
 import { GridItem } from "./GridItem"
-import { useStatsBoxGrid } from "./use-stats-box-grid"
+import { useStatsBoxGrid } from "./useStatsBoxGrid"
 
 export interface IProps {}
 
