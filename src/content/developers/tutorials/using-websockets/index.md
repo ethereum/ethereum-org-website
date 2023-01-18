@@ -3,15 +3,7 @@ title: Using WebSockets
 description: Guide to using WebSockets and Alchemy to make JSON-RPC requests and subscribe to events.
 author: "Elan Halpern"
 lang: en
-tags:
-  [
-    "alchemy",
-    "websockets",
-    "querying",
-    "getting started",
-    "subscription",
-    "javascript",
-  ]
+tags: ["alchemy", "websockets", "querying", "javascript"]
 skill: beginner
 source: Alchemy docs
 sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
