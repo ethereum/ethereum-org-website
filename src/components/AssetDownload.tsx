@@ -60,7 +60,7 @@ const AssetDownload: React.FC<IProps> = ({
   const Svg = svg
 
   return (
-    <Container
+    <Box
       display={{
         base: shouldHide ? "none" : "flex",
         lg: "flex",
