@@ -114,7 +114,8 @@ const AssetDownload: React.FC<IProps> = ({
             border="1px"
             borderTop="none"
             borderColor="white700"
-            p="0.5rem 1rem"
+            py={2}
+            px={4}
             borderRadius="0 0 4px 4px"
           >
             <Flex mr={2} fontSize="md" textColor="text300">
