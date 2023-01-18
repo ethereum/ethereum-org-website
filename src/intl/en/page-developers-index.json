@@ -52,7 +52,7 @@
   "page-developers-meta-desc": "Documentation, tutorials, and tools for developers building on Ethereum.",
   "page-developers-mev-desc": "An introduction to maximal extractable value (MEV)",
   "page-developers-mev-link": "Maximal extractable value (MEV)",
-  "page-developers-mining-desc": "How new blocks are created and consensus is reached",
+  "page-developers-mining-desc": "How new blocks are created and consensus was reached using proof-of-work",
   "page-developers-mining-link": "Mining",
   "page-developers-mining-algorithms-desc": "Information on Ethereum's mining algorithms",
   "page-developers-mining-algorithms-link": "Mining algorithms",

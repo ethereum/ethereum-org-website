@@ -66,16 +66,16 @@
     "link": "https://www.meetup.com/ethvancouver-meetup-group/"
   },
   {
+    "title": "Ethereum-France",
+    "emoji": ":fr:",
+    "location": "France",
+    "link": "https://www.meetup.com/fr-FR/ethereum-france/"
+  },
+  {
     "title": "Ethereum Paris",
     "emoji": ":fr:",
     "location": "Paris",
     "link": "https://www.meetup.com/Ethereum-Paris/"
-  },
-  {
-    "title": "Ethereum Toulouse",
-    "emoji": ":fr:",
-    "location": "Toulouse",
-    "link": "https://www.meetup.com/Ethereum-Toulouse/"
   },
   {
     "title": "Berlin Ethereum Meetup",
@@ -328,8 +328,13 @@
     "emoji": ":us:",
     "location": "San Diego",
     "link": "http://cryptosandiego.org"
-  }
-  ,
+  },
+  {
+    "title": "Ethereum and Web3 Copenhagen",
+    "emoji": ":denmark:",
+    "location": "Copenhagen",
+    "link": "https://www.meetup.com/copenhagen-ethereum-meetup/"
+  },
   {
     "title": "Ethereum Costa Rica",
     "emoji": ":cr:",

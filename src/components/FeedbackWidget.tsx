@@ -140,7 +140,7 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
 
   useKeyPress(`Escape`, handleClose)
 
-  if (!location.includes("/en/")) return null
+  if (intl.locale !== "en") return null
   const closeButtonSize = "24px"
   return (
     <>

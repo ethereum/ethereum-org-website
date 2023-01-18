@@ -9,15 +9,15 @@ incomplete: true
 
 Usa Ethereum per creare applicazioni decentralizzate (o "dapp"). Queste dapp sono attendibili perché, una volta "caricate" su Ethereum, vengono eseguite sempre come sono state programmate. Sono decentralizzate, significa che sono eseguite su una rete peer-to-peer e non esiste un punto di errore singolo. Nessun ente o persona le controlla e sono quasi impossibili da censurare. Possono controllare risorse digitali in modo da creare nuovi tipi di applicazioni.
 
-## Primi passi con gli Smart Contract e il linguaggio Solidity {#getting-started-with-smart-contracts-and-solidity}
+## Primi passi con i contratti intelligenti e il linguaggio Solidity {#getting-started-with-smart-contracts-and-solidity}
 
 **Operazioni di base per integrare Go con Ethereum**
 
 Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/learn/) o [ethereum.org/developers](/developers/).
 
 - [Blockchain Explained](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
-- [Understanding Smart Contracts](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
-- [Write your First Smart Contract](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
+- [Comprendere i Contratti Intelligenti](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
+- [Scrivi il tuo Primo Contratto Intelligente](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Learn How to Compile and Deploy Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 - [Contract Tutorial](https://github.com/ethereum/go-ethereum/wiki/Contract-Tutorial)
 
@@ -26,8 +26,8 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 - [Choosing an Ethereum Client](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Getting Started with Geth](https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458)
 - [Use Golang to Connect to Ethereum](https://www.youtube.com/watch?v=-7uChuO_VzM)
-- [Deploy Ethereum Smart Contracts Using Golang](https://www.youtube.com/watch?v=pytGqQmDslE)
-- [A Step By Step Guide To Testing and Deploying Ethereum Smart Contracts in Go](https://hackernoon.com/a-step-by-step-guide-to-testing-and-deploying-ethereum-smart-contracts-in-go-9fc34b178d78)
+- [Distribuisci i Contratti Intelligenti di Ethereum Usando Golang](https://www.youtube.com/watch?v=pytGqQmDslE)
+- [Una Guida Passo dopo Passo per Testare e Distribuire i Contratti Intelligenti di Ethereum in Go](https://hackernoon.com/a-step-by-step-guide-to-testing-and-deploying-ethereum-smart-contracts-in-go-9fc34b178d78)
 - [eBook: Ethereum Development with Go](https://goethereumbook.org/) - _Sviluppare applicazioni Ethereum con Go_
 
 ## Articoli e documentazione di livello intermedio {#intermediate-articles-and-docs}

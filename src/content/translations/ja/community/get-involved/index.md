@@ -25,6 +25,7 @@ lang: ja
 
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) - 10 万米ドルまでの高額報酬を獲得できる研究
 - [Ethresear.ch](https://ethresear.ch) - イーサリアム研究の主要なフォーラムであり、暗号経済学の世界で最も影響力のあるフォーラム
+- [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - 研究者との Q&A シリーズ。 次のパートが始まるたびに、誰でも質問を投稿可能
 - [エコシステム・サポート・プログラムのウィッシュリスト](https://esp.ethereum.foundation/wishlist/) - イーサリアムのエコシステム・サポート・プログラムが助成金の申請を募集している研究分野
 
 [研究が活発な領域を探索](/community/research/)
@@ -51,11 +52,11 @@ lang: ja
 - ethereum.org では、ウェブサイトやその他のリソースをさまざまな言語に翻訳する翻訳プログラムがあります。
 - 参加方法は[こちら](/contributing/translation-program)をご確認ください。
 
-### ノードの実行 {#run-a-node}
+### ノードの運用 {#run-a-node}
 
 何千人ものノードオペレーターの一員に加わり、イーサリアムの分散化にご協力ください。
 
-- [ノードの実行方法の詳細](/developers/docs/nodes-and-clients/run-a-node/)
+- [ノードの運用方法の詳細](/developers/docs/nodes-and-clients/run-a-node/)
 
 ### ETH のステーキング {#staking}
 
