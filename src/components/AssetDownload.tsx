@@ -76,7 +76,7 @@ const AssetDownload: React.FC<IProps> = ({
     >
       <Heading
         as="h4"
-        fontSize={{ base: "1rem", md: "1.25rem" }}
+        fontSize={{ base: "md", md: "xl" }}
         fontWeight="500"
       >
         {title}
