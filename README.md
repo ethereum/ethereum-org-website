@@ -51,7 +51,7 @@ If you're ready to contribute and create your PR, it will help to set up a local
 If this is your first time forking our repo, this is all you need to do for this step:
 
 ```sh
-$ git clone git@github.com:[your_github_handle]/ethereum-org-website.git && cd ethereum-org-website
+git clone git@github.com:[your_github_handle]/ethereum-org-website.git && cd ethereum-org-website
 ```
 
 If you've already forked the repo, you'll want to ensure your fork is configured and that it's up to date. This will save you the headache of potential merge conflicts.
@@ -59,15 +59,15 @@ If you've already forked the repo, you'll want to ensure your fork is configured
 To [configure your fork](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork):
 
 ```sh
-$ git remote add upstream https://github.com/ethereum/ethereum-org-website.git
+git remote add upstream https://github.com/ethereum/ethereum-org-website.git
 ```
 
 To [sync your fork with the latest changes](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork):
 
 ```sh
-$ git checkout dev
-$ git fetch upstream
-$ git merge upstream/dev
+git checkout dev
+git fetch upstream
+git merge upstream/dev
 ```
 
 3. Install dependencies
@@ -75,7 +75,7 @@ $ git merge upstream/dev
 We recommend using a node manager to use multiple node versions in your system. We use [Volta](https://volta.sh/). In case you don't use a manager or you use `nvm`, you can check the currently supported versions under the `"volta"` section on our `package.json` file.
 
 ```sh
-$ yarn
+yarn
 ```
 
 ### 4. Make awesome changes!
@@ -83,13 +83,13 @@ $ yarn
 1. Create new branch for your changes
 
 ```sh
-$ git checkout -b new_branch_name
+git checkout -b new_branch_name
 ```
 
 2. Start developing!
 
 ```sh
-$ yarn start
+yarn start
 ```
 
 - Open this directory in your favorite text editor / IDE, and see your changes live by visiting `localhost:8000` from your browser
@@ -102,13 +102,13 @@ By default the script will build all the languages (complete list in `data/trans
 3. Commit and prepare for pull request (PR). In your PR commit message, reference the issue it resolves (see [how to link a commit message to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)).
 
 ```sh
-$ git commit -m "brief description of changes [Fixes #1234]"
+git commit -m "brief description of changes [Fixes #1234]"
 ```
 
 4. Push to your GitHub account
 
 ```sh
-$ git push
+git push
 ```
 
 ### 5. Local development with lambda functions
@@ -1549,6 +1549,16 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/qiuhaohao"><img src="https://avatars.githubusercontent.com/u/22148367?v=4?s=100" width="100px;" alt="qiuhaohao"/><br /><sub><b>qiuhaohao</b></sub></a><br /><a href="#content-qiuhaohao" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/debeldami"><img src="https://avatars.githubusercontent.com/u/44111962?v=4?s=100" width="100px;" alt="damilola debel"/><br /><sub><b>damilola debel</b></sub></a><br /><a href="#content-debeldami" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/SaratAngajalaoffl"><img src="https://avatars.githubusercontent.com/u/60383339?v=4?s=100" width="100px;" alt="Sarat Angajala"/><br /><sub><b>Sarat Angajala</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=SaratAngajalaoffl" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Questions"><img src="https://avatars.githubusercontent.com/u/3233328?v=4?s=100" width="100px;" alt="questions"/><br /><sub><b>questions</b></sub></a><br /><a href="#projectManagement-questions" title="Project Management">📆</a> <a href="#question-questions" title="Answering Questions">💬</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/machin3boy"><img src="https://avatars.githubusercontent.com/u/78896694?v=4?s=100" width="100px;" alt="machin3boy"/><br /><sub><b>machin3boy</b></sub></a><br /><a href="#content-machin3boy" title="Content">🖋</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/nsexer"><img src="https://avatars.githubusercontent.com/u/30265113?v=4?s=100" width="100px;" alt="nethan"/><br /><sub><b>nethan</b></sub></a><br /><a href="#content-nsexer" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/jithil"><img src="https://avatars.githubusercontent.com/u/26359740?v=4?s=100" width="100px;" alt="Jithil P Ponnan"/><br /><sub><b>Jithil P Ponnan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=MrJithil" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/chocolatesuit"><img src="https://avatars.githubusercontent.com/u/120116662?v=4?s=100" width="100px;" alt="chocolatesuit"/><br /><sub><b>chocolatesuit</b></sub></a><br /><a href="#content-chocolatesuit" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://apinanyogaratnam.github.io/my-personal-website-v2.0/"><img src="https://avatars.githubusercontent.com/u/72412733?v=4?s=100" width="100px;" alt="Apinan Yogaratnam"/><br /><sub><b>Apinan Yogaratnam</b></sub></a><br /><a href="#content-apinanyogaratnam" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://trevorscanlon.eth.xyz"><img src="https://avatars.githubusercontent.com/u/30576577?v=4?s=100" width="100px;" alt="trevorsc19"/><br /><sub><b>trevorsc19</b></sub></a><br /><a href="#content-trevorsc19" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/thouravi"><img src="https://avatars.githubusercontent.com/u/15676184?v=4?s=100" width="100px;" alt="ImThour"/><br /><sub><b>ImThour</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=thouravi" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

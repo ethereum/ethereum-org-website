@@ -88,6 +88,20 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Dashboard
     - RPC, HTTPS and WSS endpoints
     - Direct support
+- [**Blast**](https://blastapi.io/)
+  - [Docs](https://docs.blastapi.io/)
+  - Features
+    - RPC and WSS support
+    - Multi-region node hosting
+    - Decentralized infrastructure
+    - Public API
+    - Dedicated Free Plan
+    - Multichain support (17+ blockchains)
+    - Archive Nodes
+    - 24/7 Discord Support
+    - 24/7 Monitoring and alerts
+    - An overall SLA of 99.9%
+    - Pay in crypto
 - [**BlockDaemon**](https://blockdaemon.com/)
   - [Docs](https://ubiquity.docs.blockdaemon.com/)
   - Benefits

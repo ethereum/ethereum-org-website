@@ -583,5 +583,14 @@
     "description": "Join ETHMiami during Art Basel Miami 2022.",
     "startDate": "2022-11-28",
     "endDate": "2022-12-4"
+  },
+  {
+    "title": "ETHMalaysia 2023",
+    "to": "http://ethmalaysia.com",
+    "sponsor": null,
+    "location": "Kuala Lumpur Convention Centre, Malaysia",
+    "description": "ETHMalaysia is the first Ethereum Innovation Festival in Southeast Asia that consists of a conference, a hackathon and fun Web3 themed activities.",
+    "startDate": "2023-5-5",
+    "endDate": "2023-5-7"
   }
 ]
