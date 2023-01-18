@@ -2,7 +2,7 @@
 title: How to Write & Deploy an NFT (Part 1/3 of NFT Tutorial Series)
 description: This tutorial is Part 1 of a series on NFTs that will take you step by step on how to write and deploy a Non Fungible Token (ERC-721 token) smart contract using Ethereum and Inter Planetary File System (IPFS).
 author: "Sumi Mudgil"
-tags: ["NFTs", "ERC-721", "Alchemy", "Solidity", "smart contracts"]
+tags: ["ERC-721", "Alchemy", "Solidity", "smart contracts"]
 skill: beginner
 lang: en
 published: 2021-04-22

@@ -41,6 +41,8 @@ To further explore mining profitability, use a mining calculator, such as the on
 
 ## How Ethereum transactions were mined {#how-ethereum-transactions-were-mined}
 
+The following provides an overview of how transactions were mined in Ethereum proof-of-work. An analogous description of this process for Ethereum proof-of-stake can be found [here](/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos).
+
 1. A user writes and signs a [transaction](/developers/docs/transactions/) request with the private key of some [account](/developers/docs/accounts/).
 2. The user broadcasts the transaction request to the entire Ethereum network from some [node](/developers/docs/nodes-and-clients/).
 3. Upon hearing about the new transaction request, each node in the Ethereum network adds the request to their local mempool, a list of all transaction requests they’ve heard about that have not yet been committed to the blockchain in a block.
@@ -69,12 +71,6 @@ Ethereum Mainnet only ever used one mining algorithm - ['Ethash'](/developers/do
 ## Further reading {#further-reading}
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
-
-## Related tools {#related-tools}
-
-- [Top Ethereum miners](https://etherscan.io/stat/miner?range=7&blocktype=blocks)
-- [Etherscan mining calculator](https://etherscan.io/ether-mining-calculator)
-- [Minerstat mining calculator](https://minerstat.com/coin/ETH)
 
 ## Related topics {#related-topics}
 

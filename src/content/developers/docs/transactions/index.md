@@ -52,7 +52,7 @@ But a transaction object needs to be signed using the sender's private key. This
 
 An Ethereum client like Geth will handle this signing process.
 
-Example [JSON-RPC](https://eth.wiki/json-rpc/API) call:
+Example [JSON-RPC](/developers/docs/apis/json-rpc) call:
 
 ```json
 {

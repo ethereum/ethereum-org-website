@@ -96,26 +96,30 @@ Ethereum.org به بیش از 40 زبان بومی ترجمه شده است که
 - [Microsoft Learn (قراردادهای هوشمند)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - با نوشتن قراردادهای هوشمند با استفاده از Solidity آشنا شوید
 - [Microsoft Learn (dappها)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - یک رابط کاربری با برنامه‌های غیرمتمرکز بسازید
 
+### روسی {#ru}
+
+- [آکادمی سایبر](https://cyberacademy.dev) - فضای آموزشی برای سازندگان وب 3
+
 ### اسپانیایی {#es}
 
-- [اتریوم مادرید](https://ethereummadrid.com/) - دوره‌ها، رویدادها و وبلاگ در مورد زنجیره بلوکی، دیفای و حاکمیت
+- [اتریوم مادرید](https://ethereummadrid.com/) - دوره‌ها، رویدادها و وبلاگ در مورد زنجیره‌ی بلوکی، DeFi و حاکمیت
 - [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) - راهنمای اتریوم برای مبتدیان به زبان اسپانیایی
 - [Tutoriales online](https://tutoriales.online/curso/solidity) - Solidity و برنامه‌نویسی در اتریوم را بیاموزید
 - [دوره‌ی معرفی توسعه‌ی اتریوم](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) - اصول Solidity، تست کردن و ساختن اولین قرارداد هوشمند خود
 - [دوره مقدماتی امنیت و هک در اتریوم](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) - آسیب‌پذیری‌ها و مشکلات امنیتی رایج در قراردادهای هوشمند واقعی را متوجه شوید
-- [مقدمه ای بر دوره توسعه DeFi](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - یاد بگیرید که قراردادهای هوشمند دیفای چگونه با Solidity کار می‌کنند و بازارساز خودکار (Automated Market Maker) خود را بسازید
+- [مقدمه ای بر دوره‌ی توسعه DeFi](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - یاد بگیرید که قراردادهای هوشمند دیفای چگونه با Solidity کار می‌کنند و بازارساز خودکار (Automated Market Maker) خود را بسازید
 - [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) - آموزش زنجیره‌‌ی بلوکی به زبان غیرفنی از سطح مقدماتی تا سطح پیشرفته. همه‌چیز را درباره‌ی رمزارز و اتریوم یاد بگیرید.
 
-### ترکی {#tr}
+### ترکی استانبولی {#tr}
 
-- [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) - دوره‌ی آموزشی با تمرکز بر زنجیره‌ی بلوکی و ارزهای رمزنگاری‌شده
+- [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) - دوره‌ی آموزشی با تمرکز بر زنجیره‌ی بلوکی و رمزارزها
 - [تغییر نام عالی: چه اتفاقی برای Eth2 افتاد؟](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) - ترجمه‌ی ترکی پست وبلاگی تغییر نام عالی که فاصله گرفتن از اصطلاح «Eth2» را توضیح می‌دهد
 
 ### ویتنامی {#vi}
 
 - [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - مرور کلی اتریوم، dAppها، کیف پول‌ها و سؤالات متداول
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - پلتفرم وب با زیرصفحاتی در مورد اخبار و آموزش اتریوم
-- [Coin68](https://coin68.com/ethereum-tieu-diem/) - درگاه ارزهای رمزنگاری‌شده با اخبار و محتوای آموزشی اتریومی
+- [Coin68](https://coin68.com/ethereum-tieu-diem/) - درگاه رمزارزها با اخبار و محتوای آموزشی اتریومی
 
 ### ژاپنی {#ja}
 

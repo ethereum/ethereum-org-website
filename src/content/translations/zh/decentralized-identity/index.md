@@ -141,7 +141,7 @@ summaryPoint3: 多亏了加密技术，用户现在拥有了再次发布、持�
 
 去中心化身份使公司能够跳过传统的[了解你的客户 (KYC)](https://en.wikipedia.org/wiki/Know_your_customer) 流程，通过可验证凭据验证用户身份。 这降低了身份管理的成本，并防止使用伪造证件。
 
-### 3. 投票和线上社区 {#voting-and-online-communities}
+### 3. 投票和在线社区 {#voting-and-online-communities}
 
 在线投票和社交媒体是去中心化身份的两个新应用。 在线投票方案容易受到操控，尤其当恶意行为者创建虚假身份进行投票时。 要求个人提供链上身份证明可以提高在线投票流程的公平性。
 
@@ -181,4 +181,4 @@ summaryPoint3: 多亏了加密技术，用户现在拥有了再次发布、持�
 
 - [GitHub 上的 ERC-725 联盟](https://github.com/erc725alliance) — _支持 ERC725 标准管理以太坊区块链上的身份_
 - [SpruceID Discord 服务器](https://discord.com/invite/Sf9tSFzrnt) — _使用以太坊登录的爱好者和开发者社区_
-- [Veramo Labs](https://discord.gg/sYBUXpACh4) - _开发者社区，致力于为应用构建可验证数据框架_
+- [Veramo Labs](https://discord.gg/sYBUXpACh4) - _开发者社区，帮助为应用程序构建可验证数据框架_
