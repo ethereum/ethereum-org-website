@@ -1557,6 +1557,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/chocolatesuit"><img src="https://avatars.githubusercontent.com/u/120116662?v=4?s=100" width="100px;" alt="chocolatesuit"/><br /><sub><b>chocolatesuit</b></sub></a><br /><a href="#content-chocolatesuit" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://apinanyogaratnam.github.io/my-personal-website-v2.0/"><img src="https://avatars.githubusercontent.com/u/72412733?v=4?s=100" width="100px;" alt="Apinan Yogaratnam"/><br /><sub><b>Apinan Yogaratnam</b></sub></a><br /><a href="#content-apinanyogaratnam" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://trevorscanlon.eth.xyz"><img src="https://avatars.githubusercontent.com/u/30576577?v=4?s=100" width="100px;" alt="trevorsc19"/><br /><sub><b>trevorsc19</b></sub></a><br /><a href="#content-trevorsc19" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/thouravi"><img src="https://avatars.githubusercontent.com/u/15676184?v=4?s=100" width="100px;" alt="ImThour"/><br /><sub><b>ImThour</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=thouravi" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
