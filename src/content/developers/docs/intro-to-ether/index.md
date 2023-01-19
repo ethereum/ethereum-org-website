@@ -44,7 +44,7 @@ Burning the base fee hinders a block producers ability to manipulate transaction
 
 ## Denominations of ether {#denominations}
 
-Since the absolute value of many transactions on Ethereum are small, ether has several denominations which may be referenced as smaller units of account. Of these denominations, Wei and gwei are particularly important.
+Since the value of many transactions on Ethereum are small, ether has several denominations which may be referenced as smaller units of account. Of these denominations, Wei and gwei are particularly important.
 
 Wei is the smallest possible amount of ether, and as a result, many technical implementations, such as the [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf), will base all calculations in Wei.
 
