@@ -53,6 +53,26 @@ The roadmap is mostly the result of years of work by researchers and developers 
 
 ### What is ETH2?
 
+The term 'Eth2' was commonly used before Ethereum switched to proof-of-stake but it was phased out in favor of more precise terminology. It was originally used to differentiate the Ethereum network before the switch to proof-of-stake and the network after, or sometimes to refer to the different Ethereum clients (execution clients were sometimes referred to as ETH1 clients and consensus clients were sometimes referred to as ETH2 clients).
+
+#### Why can't we just use Eth2?
+
+##### Mental models
+
+One major problem with the Eth2 branding is that it creates a broken mental model for new users of Ethereum. They intuitively think that Eth1 comes first and Eth2 comes after. Or that Eth1 ceases to exist once Eth2 exists. Neither of these is true. By removing Eth2 terminology, we save all future users from navigating this confusing mental model.
+
+##### Inclusivity
+
+As the roadmap for Ethereum has evolved, Ethereum 2.0 has become an inaccurate representation of Ethereum’s roadmap. Being careful and accurate in our word choice allows content on Ethereum to be understood by the broadest audience possible.
+
+##### Scam prevention
+
+Unfortunately, malicious actors have attempted to use the Eth2 misnomer to scam users by telling them to swap their ETH for ‘ETH2’ tokens or that they must somehow migrate their ETH before the Eth2 upgrade. We hope this updated terminology will bring clarity to eliminate this scam vector and help make the ecosystem safer.
+
+##### Staking clarity
+
+Some staking operators have also represented ETH staked on the Beacon Chain with the ‘ETH2’ ticker. This creates potential confusion, given that users of these services are not actually receiving an ‘ETH2’ token. No ‘ETH2’ token exists; it simply represents their share in that specific providers’ stake.
+
 ### How do I benefit from the upgrades?
 
 ### How can I give feedback on the roadmap?
