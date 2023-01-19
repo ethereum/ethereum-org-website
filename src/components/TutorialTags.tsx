@@ -1,6 +1,5 @@
+import { Badge } from "@chakra-ui/react"
 import React from "react"
-
-import Pill from "./Pill"
 
 // Represent string as 32-bit integer
 const hashCode = (string) => {
@@ -37,9 +36,9 @@ const TutorialTags: React.FC<IProps> = ({ tags }) => {
         const tagColorIdx = hashCode(tag) % colors.length
         const tagColor = colors[tagColorIdx]
         return (
-          <Pill key={idx} me={2} mb={2} background={tagColor}>
+          <Badge key={idx} me={2} mb={2} background={tagColor}>
             {tag}
-          </Pill>
+          </Badge>
         )
       })}
     </>

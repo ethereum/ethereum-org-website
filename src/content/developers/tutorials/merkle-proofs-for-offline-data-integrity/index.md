@@ -81,7 +81,7 @@ const hash = (x) =>
 The ethers hash function expects to get a JavaScript string with a hexadecimal number, such as `0x60A7`, and responds with another string with the same structure. However, for the rest of the code it's easier to use `BigInt`, so we convert to a hexadecimal string and back again.
 
 ```javascript
-// Symetrical hash of a pair so we won't care if the order is reversed.
+// Symmetrical hash of a pair so we won't care if the order is reversed.
 const pairHash = (a, b) => hash(hash(a) ^ hash(b))
 ```
 
@@ -214,7 +214,7 @@ Set and get functions for the Merkle root. Letting everybody update the Merkle r
     }
 ```
 
-This function generates a pair hash. It is just the Solidity transalation of the JavaScript code for `hash` and `pairHash`.
+This function generates a pair hash. It is just the Solidity translation of the JavaScript code for `hash` and `pairHash`.
 
 **Note:** This is another case of optimization for readability. Based on [the function definition](https://www.tutorialspoint.com/solidity/solidity_cryptographic_functions.htm), it might be possible to store the data as a [`bytes32`](https://docs.soliditylang.org/en/v0.5.3/types.html#fixed-size-byte-arrays) value and avoid the conversions.
 
