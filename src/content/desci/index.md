@@ -113,7 +113,7 @@ Explore projects and join the DeSci community.
 - [CureDAO: Community-Owned Precision Health Platform](https://docs.curedao.org/)
 - [IdeaMarkets: enabling decentralized scientifc credibility](https://ideamarket.io/)
 
-We welcome suggestions for new projects to list - please take a look at our [listing policy](https://ethereum.org/en/contributing/adding-desci-projects/) to get started!
+We welcome suggestions for new projects to list - please look at our [listing policy](/contributing/adding-desci-projects/) to get started!
 
 ## Further reading {#further-reading}
 
