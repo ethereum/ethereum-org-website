@@ -25,6 +25,7 @@ lang: ja
 
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) - 10 万米ドルまでの高額報酬を獲得できる研究
 - [Ethresear.ch](https://ethresear.ch) - イーサリアム研究の主要なフォーラムであり、暗号経済学の世界で最も影響力のあるフォーラム
+- [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - 研究者との Q&A シリーズ。 次のパートが始まるたびに、誰でも質問を投稿可能
 - [エコシステム・サポート・プログラムのウィッシュリスト](https://esp.ethereum.foundation/wishlist/) - イーサリアムのエコシステム・サポート・プログラムが助成金の申請を募集している研究分野
 
 [研究が活発な領域を探索](/community/research/)
@@ -51,11 +52,11 @@ lang: ja
 - ethereum.org では、ウェブサイトやその他のリソースをさまざまな言語に翻訳する翻訳プログラムがあります。
 - 参加方法は[こちら](/contributing/translation-program)をご確認ください。
 
-### ノードの実行 {#run-a-node}
+### ノードの運用 {#run-a-node}
 
 何千人ものノードオペレーターの一員に加わり、イーサリアムの分散化にご協力ください。
 
-- [ノードの実行方法の詳細](/developers/docs/nodes-and-clients/run-a-node/)
+- [ノードの運用方法の詳細](/developers/docs/nodes-and-clients/run-a-node/)
 
 ### ETH のステーキング {#staking}
 
@@ -72,7 +73,7 @@ ETH をステーキングすると、イーサリアムネットワークの保�
 
 ## 金融専門家および会計士 <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
 
-- イーサリアムは、代替金融システムを提供するプロトコルとアプリケーションのネットワークである「分散型金融 (DeFi) 」エコシステムの本拠地です。 金融業界の方は、[DeFi Pulse](https://defipulse.com/) または [DeFiPrime](https://defiprime.com)で分散型金融(DeFi)アプリをご確認ください。
+- イーサリアムは、代替金融システムを提供するプロトコルとアプリケーションのネットワークである「分散型金融 (DeFi) 」エコシステムの本拠地です。 金融業界の方は、[DeFi Llama](https://defillama.com/) または [DeFiPrime](https://defiprime.com)で分散型金融(DeFi)アプリをご確認ください。
 - ETH、トークン、分散型金融(DeFi)など、イーサリアムのアセットは、新しい会計上の問題を数多くもたらします。 会計士の方は、[Rotki](https://rotki.com/)のような、暗号通貨ユーザーの簿記や会計に関する問題解決を目指しているプロジェクトをぜひ一度ご確認ください。
 
 ## プロダクトマネージャー <Emoji text=":fountain_pen:" size={1} /> {#product-managers}

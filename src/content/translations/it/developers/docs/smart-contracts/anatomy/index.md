@@ -1,18 +1,18 @@
 ---
-title: Anatomia degli Smart Contract
-description: "Uno sguardo più da vicino agli Smart Contract: funzioni, dati e variabili."
+title: Anatomia dei contratti intelligenti
+description: "Uno sguardo approfondito all'anatomia di un contratto intelligente: le funzioni, i dati e le variabili."
 lang: it
 ---
 
-Uno Smart Contract è un programma che viene eseguito a un indirizzo di Ethereum. È composto di dati e funzioni che entrano in esecuzione appena si riceve una transazione. Ecco una panoramica di cosa costituisce uno Smart Contract.
+Un contratto intelligente è un programma eseguito a un indirizzo su Ethereum. È composto di dati e funzioni che entrano in esecuzione appena si riceve una transazione. Ecco una panoramica di cosa compone un contratto intelligente.
 
 ### Prerequisiti {#prerequisites}
 
-È necessario avere famigliarità con gli [Smart Contract](/developers/docs/smart-contracts/). Questa pagina presuppone che si conoscano i linguaggi di programmazione come JavaScript o Python.
+Prima, assicurati di aver letto a riguardo dei [contratti intelligenti](/developers/docs/smart-contracts/). Questa pagina presuppone che si conoscano i linguaggi di programmazione come JavaScript o Python.
 
 ## Dati {#data}
 
-Tutti i dati del contratto devono essere assegnati a una posizione: `storage` oppure ` memory`. Modificare lo storage in uno Smart Contract è dispendioso, perciò è opportuno valutare in anticipo dove devono essere posizionati i dati.
+Tutti i dati del contratto devono essere assegnati a una posizione: `storage` oppure ` memory`. Modificare l'archiviazione in un contratto intelligente è dispendioso, devi quindi considerare dove dovrebbero risiedere i tuoi dati.
 
 ### Storage {#storage}
 
@@ -56,7 +56,7 @@ Per ulteriori spiegazioni, consulta la documentazione:
 
 I valori che vengono memorizzati solo per la durata di esecuzione di una funzione di contratto sono detti variabili di memoria. Dal momento che non sono memorizzati in modo permanente sulla blockchain, sono molto più economici da usare.
 
-Scopri di più su come l'EVM memorizza i dati (storage, memory e stack) in [Solidity docs](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
+Scopri di più su come l'EVM memorizza i dati (Archiviazione, Memoria e lo Stack), nella [documentazione di Solidity](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
 
 ### Variabili d'ambiente {#environment-variables}
 
@@ -165,7 +165,7 @@ Oltre alle variabili che vengono definite nel contratto, sono presenti alcune fu
 - `address.send()` – Solidity
 - `send(address)` – Vyper
 
-Queste permettono ai contratti di inviare ETH ad altri account.
+Queste, consentono ai contratti di inviare ETH agli altri conti.
 
 ## Scrivere funzioni {#writing-functions}
 
@@ -203,7 +203,7 @@ Un contratto completo potrebbe avere questa forma. Qui la funzione `constructor`
 
 ## Eventi e log {#events-and-logs}
 
-Gli eventi consentono di comunicare con uno Smart Contract dal frontend o da altre applicazioni che prevedono un'iscrizione. In seguito al mining di una transazione, gli Smart Contract possono emettere eventi e scrivere log sulla blockchain che il frontend può quindi elaborare.
+Gli eventi ti consentono di comunicare con il tuo contratto intelligente dal tuo frontend o da altre applicazioni che prevedono un'iscrizione. Quando una transazione è minata, i contratti intelligenti possono emettere eventi e scrivere registri alla blockchain, che il frontend può poi elaborare.
 
 ## Esempi commentati {#annotated-examples}
 
@@ -641,7 +641,7 @@ contract CryptoPizza is IERC721, ERC165 {
 
 ## Letture consigliate {#further-reading}
 
-Consulta la documentazione di Solidity e Vyper per una panoramica più completa degli Smart Contract:
+Dai un'occhiata alla documentazione di Solidity e Vyper per una panoramica più complessa dei contratti intelligenti:
 
 - [Solidity](https://solidity.readthedocs.io/)
 - [Vyper](https://vyper.readthedocs.io/)
@@ -653,6 +653,6 @@ Consulta la documentazione di Solidity e Vyper per una panoramica più completa 
 
 ## Tutorial correlati {#related-tutorials}
 
-- [Downsizing contracts to fight the contract size limit](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– Alcuni consigli pratici per ridurre la dimensione degli Smart Contract._
-- [Logging data from Smart Contract with events](/developers/tutorials/logging-events-smart-contracts/) _– Introduzione agli eventi degli Smart Contract e come utilizzarli per registrare dati._
-- [Interact with other contracts from Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– Come distribuire uno Smart Contract da un contratto esistente e interagirvi._
+- [Ridimensionare i contratti per contrastare il limite di dimensioni del contratto](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/): _Alcuni consigli pratici per ridurre le dimensioni del tuo contratto intelligente._
+- [Registrare dati dai contratti intelligenti con gli eventi](/developers/tutorials/logging-events-smart-contracts/): _Un'introduzione agli eventi dei contratti intelligenti e a come puoi usarli per registrare i dati._
+- [Interagire con gli altri contratti da Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/): _Come distribuire un contratto intelligente da un contratto esistente e interagirvi._

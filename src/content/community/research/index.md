@@ -106,7 +106,6 @@ There are now several Layer 2 protocols that scale Ethereum using different tech
 #### Background reading {#background-reading-2}
 
 - [Introduction to layer 2](/layer-2/)
-- [EthHub Layer 2](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 - [Polynya: Rollups, DA and modular chains](https://polynya.medium.com/rollups-data-availability-layers-modular-blockchains-introductory-meta-post-5a1e7a60119d)
 
 #### Recent research {#recent-research-2}

@@ -4,7 +4,7 @@ description: A description of attestations on proof-of-stake Ethereum.
 lang: en
 ---
 
-A validator is expected to create, sign and broadcast an attestation during every epoch. This page outlines what these attestations look like and how they are processed and communciated between consensus clients.
+A validator is expected to create, sign and broadcast an attestation during every epoch. This page outlines what these attestations look like and how they are processed and communicated between consensus clients.
 
 ## What is an attestation? {#what-is-an-attestation}
 
@@ -46,7 +46,7 @@ When a validator is selected to be a block proposer they package aggregate attes
 
 The attestation lifecycle is outlined in the schematic below:
 
-![attestation lifecyle](./attestation_schematic.png)
+![attestation lifecycle](./attestation_schematic.png)
 
 ## Rewards {#rewards}
 

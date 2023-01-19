@@ -2,7 +2,7 @@
 title: "All you can cache"
 description: Learn how to create and use a caching contract for cheaper rollup transactions
 author: Ori Pomerantz
-tags: ["layer-2", "caching", "storage"]
+tags: ["layer 2", "caching", "storage"]
 skill: intermediate
 published: 2022-09-15
 lang: en
@@ -543,7 +543,7 @@ The only additional test in `testEncodeVal()` is to verify that the length of `_
     // too long.
     function testEncodeValBig() public {
         // Put a number of values in the cache.
-        // To keep things simnple, use key n for value n.
+        // To keep things simple, use key n for value n.
         for(uint i=1; i<0x1FFF; i++) {
             cache.cacheWrite(i);
         }
@@ -795,7 +795,7 @@ One thing you don't get with Solidity tests is JavaScript code you can cut and p
 
    This sample application first writes an entry to WORM, displaying the calldata and a link to the transaction on Etherscan. Then it reads back that entry, and displays the key it uses and the values in the entry (value, block number, and author).
 
-Most of the client is normall Dapp JavaScript. so again we'll only go over the interesting parts.
+Most of the client is normal Dapp JavaScript. So again we'll only go over the interesting parts.
 
 ```javascript
 .

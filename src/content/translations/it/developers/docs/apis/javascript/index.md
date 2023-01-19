@@ -6,7 +6,7 @@ lang: it
 
 Per interagire con la blockchain Ethereum (ad esempio leggere i dati della blockchain e/o inviare transazioni alla rete), una web app deve connettersi a un nodo Ethereum.
 
-Per questo scopo, ogni client di Ethereum implementa la specifica [JSON-RPC](/developers/docs/apis/json-rpc/), quindi esiste una serie uniforme di [endpoint](/developers/docs/apis/json-rpc/endpoints/) su cui possono basarsi le applicazioni.
+Per questo scopo, ogni client di Ethereum implementa la specifica [JSON-RPC](/developers/docs/apis/json-rpc/), quindi esiste una serie uniforme di [metodi](/developers/docs/apis/json-rpc/#json-rpc-methods) su cui possono basarsi le applicazioni.
 
 Se desideri utilizzare JavaScript per connetterti a un nodo Ethereum, puoi usare Javascript vanilla, ma tieni presente che ci sono già molte librerie all'interno dell'ecosistema che possono facilitarti la vita. Con queste librerie, gli sviluppatori possono scrivere metodi a una riga intuitivi per inizializzare le richieste RPC JSON (under the hood) che interagiscono con Ethereum.
 
@@ -65,8 +65,8 @@ var web3 = new Web3(
 Una volta eseguita la configurazione, sarà possibile interrogare la blockchain per avere:
 
 - numeri di blocco
-- stime del carburante
-- eventi Smart Contract
+- stime del gas
+- eventi del contratto intelligenti
 - ID di rete
 - e molto altro...
 
@@ -147,14 +147,14 @@ CONTEXTREQUEST
 
 Una volta eseguita la configurazione, sarà possibile:
 
-- creare account
+- creare conti
 - inviare transazioni
 - firmare transazioni
 - e molto altro...
 
-### Interagire con le funzioni degli Smart Contract {#interact-with-smart-contract-functions}
+### Interagire con le funzioni dei contratti intelligenti {#interact-with-smart-contract-functions}
 
-Le librerie client JavaScript consentono a un'applicazione di chiamare le funzioni degli Smart Contract leggendo l'ABI (Application Binary Interface) di un contratto compilato.
+Le librerie del client di JavaScript consentono alla tua applicazione di chiamare le funzioni dei contratti intelligenti, leggendo l'Interfaccia Binaria dell'Applicazione (ABI) di un contratto compilato.
 
 L'ABI spiega essenzialmente le funzioni del contratto in un formato JSON e consente di utilizzarlo come un normale oggetto JavaScript.
 
@@ -209,8 +209,8 @@ Si tradurrebbe nel seguente JSON:
 
 Ciò significa che è possibile:
 
-- Inviare una transazione allo Smart Contract ed eseguirne il metodo
-- Eseguire una chiamata per stimare quanto carburante servirà per eseguire un metodo nell'EVM
+- Invia una transazione al contratto intelligente ed eseguine il metodo
+- Chiamarla per stimare il gas che l'esecuzione di un metodo richiederà, all'esecuzione nell'EVM
 - Distribuire un contratto
 - E molto altro...
 
@@ -287,5 +287,5 @@ _Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e ag
 ## Tutorial correlati {#related-tutorials}
 
 - [Set up Web3js to use the Ethereum blockchain in JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Istruzioni per impostare web3.js in un progetto._
-- [Calling a Smart Contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Usando il token Dai, impara a chiamare le funzioni dei contratti con JavaScript_
+- [Chiamare un contratto intelligente da JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _- Usando il token DAI, impara come chiamare la funzione dei contratti usando JavaScript._
 - [Sending transactions using web3 and Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Istruzioni passo passo per l'invio di transazioni dal backend._

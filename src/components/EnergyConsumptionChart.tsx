@@ -7,13 +7,14 @@ import {
   Cell,
   XAxis,
   Text,
-  CartesianGrid,
   LabelList,
   ResponsiveContainer,
   Legend,
 } from "recharts"
+import { useIntl } from "react-intl"
 import Translation from "./Translation"
 import { useWindowSize } from "../hooks/useWindowSize"
+import { translateMessageId } from "../utils/translations"
 
 interface ITickProps {
   x: number
@@ -43,6 +44,7 @@ const CustomTick: React.FC<ITickProps> = ({ x, y, payload }) => {
 }
 
 const EnergyConsumptionChart: React.FC = () => {
+  const intl = useIntl()
   const theme = useTheme()
   const [width] = useWindowSize()
 
@@ -59,58 +61,70 @@ const EnergyConsumptionChart: React.FC = () => {
   // TODO: Extract translatable strings
   const energyConsumptionChartData: Data = [
     {
-      name: "YouTube",
+      name: translateMessageId("energy-consumption-chart-youtube-label", intl),
       amount: 244,
       color: "#FF0000",
     },
     {
-      name: "Gold mining (Galaxy Digital)",
+      name: translateMessageId(
+        "energy-consumption-chart-gold-mining-galaxy-label",
+        intl
+      ),
       amount: 240,
       color: "#D7B14A",
       breakpoint: mediumBreakpoint,
     },
     {
-      name: "Global data centers",
+      name: translateMessageId(
+        "energy-consumption-chart-global-data-centers-label",
+        intl
+      ),
       amount: 200,
       color: "#D7B14A",
       breakpoint: mediumBreakpoint,
     },
     {
-      name: "Gold mining (CBECI)",
+      name: translateMessageId(
+        "energy-consumption-chart-gold-mining-cbeci-label",
+        intl
+      ),
       amount: 130,
       color: "#D7B14A",
       breakpoint: mediumBreakpoint,
     },
     {
-      name: "BTC PoW",
+      name: translateMessageId("energy-consumption-chart-btc-pow-label", intl),
       amount: 100,
       color: "#F2A900",
     },
     {
-      name: "Netflix",
+      name: translateMessageId("energy-consumption-chart-netflix-label", intl),
       amount: 94,
       color: "#E50914",
       breakpoint: smallBreakpoint,
     },
     {
-      name: "ETH PoW",
+      name: translateMessageId("energy-consumption-chart-eth-pow-label", intl),
       amount: 78,
       color: "#C1B6F5",
     },
     {
-      name: "Gaming in the US",
+      name: translateMessageId(
+        "energy-consumption-chart-gaming-us-label",
+        intl
+      ),
       amount: 34,
       color: "#71BB8A",
       breakpoint: mediumBreakpoint,
     },
     {
-      name: "PayPal",
+      name: translateMessageId("energy-consumption-chart-paypal-label", intl),
       amount: 0.26,
       color: "#C1B6F5",
       breakpoint: smallBreakpoint,
     },
     {
-      name: "ETH PoS",
+      name: translateMessageId("energy-consumption-chart-eth-pos-label", intl),
       amount: 0.0026,
       color: "#C1B6F5",
     },
