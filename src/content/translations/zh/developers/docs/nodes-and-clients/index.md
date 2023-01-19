@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 以太坊是一个由计算机组成的分布式网络，这些计算机运行可验证区块和交易数据的软件，称为节点。 软件应用程序（客户端）必须在电脑上运行，将你的电脑变成一个以太坊节点。
 
-**注意：仍然可以仅运行执行客户端。 然而，在[合并](/upgrades/merge)之后，将不再可以继续这样做。 合并后，执行客户端和共识客户端必须一起运行，以使用户能够访问以太坊网络。 一些测试网（例如 Kiln、Ropsten）已经完成了它们自己的合并，这意味着仅运行执行客户端已经不足以访问这些网络，除非执行客户端与可以跟踪链头的共识客户端连接在一起。**
+**注意：现在再也不能仅运行执行客户端了。 [合并](/upgrades/merge)后，执行客户端和共识客户端必须一起运行，用户才能够访问以太坊网络。**
 
 ## 前提条件 {#prerequisites}
 
@@ -108,7 +108,7 @@ sidebarDepth: 2
 - 全节点强制执行共识规则，因此无法欺骗它们接受不遵循规则的区块。 这在网络中提供了额外的安全性，因为如果所有节点都是轻节点，不进行完整验证，验证者可能会攻击网络。
 - 如果遇到攻击并且攻破了[权益证明](/developers/docs/consensus-mechanisms/pos/#what-is-pos)加密经济防御，全节点可以执行社交恢复以选择跟随最诚实的链。
 - 网络中的节点越多，网络就更加多样化和更加健壮，这是去中心化的最终目标，可实现一个抗审查的可靠系统。
-- 这些节点让依赖它们的轻量级客户端能够访问区块链数据。 在使用高峰期，需要有足够多的全节点帮助轻节点同步。 轻节点不存储整条区块链，而是通过[区块头中的状态根](/developers/docs/blocks/#block-anatomy)验证数据。 如果需要，它们可以请求区块提供更多信息。
+- 这些节点让依赖它们的轻客户端能够访问区块链数据。 在使用高峰期，需要有足够多的全节点帮助轻节点同步。 轻节点不存储整条区块链，而是通过[区块头中的状态根](/developers/docs/blocks/#block-anatomy)验证数据。 如果需要，它们可以请求区块提供更多信息。
 
 如果你运行一个全节点，整个以太坊网络将从中受益。
 
@@ -122,7 +122,7 @@ sidebarDepth: 2
 
 ## 替代方法 {#alternatives}
 
-设置自己的节点会耗费你的时间和资源，而且你并非总是需要运行自己的实例。 在这种情况下，可以使用第三方应用程序接口提供商，如 [Infura](https://infura.io)、[Alchemy](https://alchemyapi.io) 或 [QuikNode](https://www.quiknode.io)。 另外，[ArchiveNode](https://archivenode.io/) 是一个社区资助的归档节点，旨在将以太坊区块链上的存档数据提供给无法负担它的独立开发者。 有关使用这些服务的概述，请查看[节点即服务](/developers/docs/nodes-and-clients/nodes-as-a-service/)。
+设置自己的节点会耗费你的时间和资源，而且你并非总是需要运行自己的实例。 在这种情况下，可以使用第三方应用程序接口提供商，比如 [Infura](https://infura.io)、[Alchemy](https://alchemyapi.io)、[Chainstack](https://chainstack.com) 或 [QuikNode](https://www.quiknode.io)。 另外，[ArchiveNode](https://archivenode.io/) 是一个社区资助的归档节点，旨在将以太坊区块链上的存档数据提供给无法负担它的独立开发者。 有关使用这些服务的概述，请查看[节点即服务](/developers/docs/nodes-and-clients/nodes-as-a-service/)。
 
 如果有人在社区运行一个具有公共应用程序接口的以太坊节点，你可以[通过自定义远程过程调用](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node)将轻量级钱包（如 Metamask）指向社区节点，并获得比一些随机受信任的第三方更强的隐私性。
 
@@ -130,41 +130,43 @@ sidebarDepth: 2
 
 ## 执行客户端（原“Eth1 客户端”） {#execution-clients}
 
-以太坊社区维护着多种开放源代码的执行客户端（以前称为“以太坊 1 客户端”，或仅称为“以太坊客户端”），它们由不同的团队使用不同的编程语言开发。 这使得网络更加强大并且更加多样性。 理想的目标是实现多样性，即没有任何客户端占据主导地位，从而减少任何单点故障。
+以太坊社区维护着多种开放源代码的执行客户端（以前称为“以太坊 1 客户端”，或仅称为“以太坊客户端”），它们由不同的团队使用不同的编程语言开发。 这使得网络更加健壮，更加[多样化](/developers/docs/nodes-and-clients/client-diversity/)。 理想的目标是实现多样性，即没有任何客户端占据主导地位，从而减少任何单点故障。
 
-下表按字母顺序汇总了不同的客户端。 所有这些客户端都得到积极维护，以便与网络升级保持同步、遵循当前规范并通过[客户端测试](https://github.com/ethereum/tests)。
+下表汇总了不同的客户端。 这些客户端均通过[客户端测试](https://github.com/ethereum/tests)，并得到积极维护以保持与网络升级同步。
 
-| 客户端                                                   | 语言     | 操作系统：            | 网络                                | 同步策略                 | 状态缓冲        |
-| -------------------------------------------------------- | -------- | --------------------- | ----------------------------------- | ------------------------ | --------------- |
-| [Akula](https://akula.app)                               | Rust     | Linux                 | 主网、Görli、Rinkeby、Ropsten 等    | 完全                     | Archive、Pruned |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/) | Java     | Linux、Windows、macOS | Mainnet、Rinkeby、Ropsten、Görli 等 | 快速、完整、快照、检查点 | Archive、Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon)          | Go       | Linux、Windows、macOS | Mainnet、Görli、Rinkeby、Ropsten    | 完全、快照               | Archive、Pruned |
-| [Geth](https://geth.ethereum.org/)                       | Go       | Linux、Windows、macOS | Mainnet、Görli、Rinkeby、Ropsten    | 快照、完全               | Archive、Pruned |
-| [Nethermind](http://nethermind.io/)                      | C#、.NET | Linux、Windows、macOS | Mainnet、Görli、Ropsten、Rinkeby 等 | 快照，快速               | Archive、Pruned |
+| 客户端                                          | 语言     | 操作系统：            | 网络                                      | 同步策略                       | 状态缓冲        |
+| ----------------------------------------------- | -------- | --------------------- | ----------------------------------------- | ------------------------------ | --------------- |
+| [Geth](https://geth.ethereum.org/)              | Go       | Linux、Windows、macOS | 主网、Sepolia、Görli、Ropsten、Rinkeby    | 快照、完全                     | Archive、Pruned |
+| [Nethermind](http://nethermind.io/)             | C#、.NET | Linux、Windows、macOS | 主网、Sepolia、Görli、Ropsten、Rinkeby 等 | 快照（不提供服务）、快速、完全 | Archive、Pruned |
+| [Besu](https://besu.hyperledger.org/en/stable/) | Java     | Linux、Windows、macOS | 主网、Sepolia、Görli、Ropsten、Rinkeby 等 | 快速、完全                     | Archive、Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux、Windows、macOS | 主网、Sepolia、Görli、Rinkeby、Ropsten 等 | 完全                           | Archive、Pruned |
+| [Akula](https://akula.app)                      | Rust     | Linux                 | 主网、Sepolia、Görli、Rinkeby、Ropsten    | 完全                           | Archive、Pruned |
 
-有关支持网络的更多信息，请阅读[以太坊网络](/developers/docs/networks/)。
+**注意，OpenEthereum [已废弃](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd)并已停止维护。**请谨慎使用，最好改用其他客户端实现。
 
-每种客户端都有独特的用例和优势，所以你应该根据自己的偏好来选择。 多样性使得实现方式能够侧重于不同的功能和用户群。 你可能想根据功能、支持、编程语言或许可证选择一种客户端。
+有关受支持网络的更多信息，请仔细阅读[以太坊网络](/developers/docs/networks/)。
+
+每种客户端都有独特的用例和优势，所以你应该根据自己的偏好来选择。 多样性使得实现能够侧重于不同的功能和用户群。 你可能想根据功能、支持、编程语言或许可证选择一种客户端。
 
 ### Besu {#besu}
 
-Hyperledger Besu 是一种企业级以太坊客户端，面向公共和许可网络。 它运行包括追踪到 GraphQL 在内的所有以太坊主网功能，可进行广泛的监控，并通过开放的社区渠道以及面向企业的商业服务等级协议获得 ConsenSys 支持。 Besu 用 Java 语言编写，并依照 Apache 2.0 获得许可。
+Hyperledger Besu 是一种企业级以太坊客户端，面向公共网络和许可网络。 它运行包括追踪到 GraphQL 在内的所有以太坊主网功能，可进行广泛的监控，并通过开放的社区渠道以及面向企业的商业服务等级协议获得 ConsenSys 支持。 Besu 用 Java 语言编写，并依照 Apache 2.0 获得许可。
 
-Besu 广泛的[文档](https://besu.hyperledger.org/en/stable/)将指导你了解有关其功能和设置的所有详细信息。
+Besu 提供大量[相关文档](https://besu.hyperledger.org/en/stable/)，将指导你了解有关其功能和设置的所有详细信息。
 
 ### Erigon {#erigon}
 
-Erigon 以前称为 Turbo‐Geth，最初是 Go Ethereum 的一个分叉，注重速度和磁盘空间效率。 Erigon 是以太坊的一个完全重新架构的实现，目前用 Go 编写，但正在开发其他语言的实现，例如 [Akula](https://medium.com/@vorot93/meet-akula-the-fastest-ethereum-implementation-ever-built-58eaca244c39)。 Erigon 的目标是成为更快、模块化程度更高和更优化的以太坊实现。 它可以在 3 天内使用大约 2TB 的磁盘空间执行完整的存档节点同步。
+Erigon 以前称为 Turbo‐Geth，最初是 Go Ethereum 的一个分叉，注重速度和磁盘空间效率。 Erigon 是一个完全重新架构的以太坊实现，目前用 Go 语言编写，但正在开发其他语言的实现，例如 [Akula](https://medium.com/@vorot93/meet-akula-the-fastest-ethereum-implementation-ever-built-58eaca244c39)。 Erigon 的目标是成为更快、模块化程度更高和更优化的以太坊实现。 它可以在 3 天内使用大约 2TB 的磁盘空间执行完整的存档节点同步。
 
 ### Go Ethereum {#geth}
 
 Go Ethereum（简称 Geth）是最早实现的以太坊协议之一。 目前，它是使用最为广泛的客户端，拥有最大的用户群，为用户和开发者提供各种工具。 它用 Go 语言编写，完全开源，并依照 GNU LGPL v3 获得许可。
 
-在其[相差文档](https://geth.ethereum.org/docs/)中了解有关 Geth 的更多信息。
+在[相关文档](https://geth.ethereum.org/docs/)中了解有关 Geth 的更多信息。
 
 ### Nethermind {#nethermind}
 
-Nethermind 是使用 C# .NET 技术栈创建的以太坊实现，获得 LGPL-3.0 许可，可在包括 ARM 在内的所有主要平台上运行。 它在以下方面表现出了优越性能：
+Nethermind 是使用 C# .NET 技术栈创建的以太坊实现，依照 LGPL-3.0 获得许可，可在包括 ARM 在内的所有主要平台上运行。 它在以下方面表现出了优越性能：
 
 - 优化虚拟机
 - 状态访问
@@ -174,53 +176,58 @@ Nethermind 也有[详细的相关文档](https://docs.nethermind.io)、强大的
 
 ## 共识客户端（原“Eth2”客户端） {#consensus-clients}
 
-有多种共识客户端（以前称为“以太坊 2”客户端）支持[共识升级](/upgrades/beacon-chain/)。 在[合并](/upgrades/merge/)之后，它们运行信标链并向执行客户端提供权益证明共识机制。
+有多种共识客户端（以前称为“以太坊 2”客户端）支持[共识升级](/upgrades/beacon-chain/)。 它们运行信标链，并且将在[合并](/upgrades/merge/)后向执行客户端提供权益证明共识机制。
 
 [查看共识客户端](/upgrades/get-involved/#clients)。
 
-| 客户端                                                        | 语言       | 操作系统：            | 网络                                  |
-| ------------------------------------------------------------- | ---------- | --------------------- | ------------------------------------- |
-| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux、Windows、macOS | Beacon Chain、Goerli、Pyrmont         |
-| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux、Windows、macOS | Beacon Chain、Goerli                  |
-| [Nimbus](https://nimbus.team/)                                | Nim        | Linux、Windows、macOS | Beacon Chain、Goerli                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux、Windows、macOS | Beacon Chain、Gnosis、Goerli、Pyrmont |
-| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux、Windows、macOS | Beacon Chain、Gnosis、Goerli、Sepolia |
+| 客户端                                                        | 语言       | 操作系统：            | 网络                                                 |
+| ------------------------------------------------------------- | ---------- | --------------------- | ---------------------------------------------------- |
+| [Lighthouse](https://lighthouse.sigmaprime.io/)               | Rust       | Linux、Windows、macOS | 信标链、Goerli、Pyrmont、Sepolia、Ropsten 等         |
+| [Lodestar](https://lodestar.chainsafe.io/)                    | TypeScript | Linux、Windows、macOS | 信标链、Goerli、Sepolia、Ropsten 等                  |
+| [Nimbus](https://nimbus.team/)                                | Nim        | Linux、Windows、macOS | 信标链、Goerli、Sepolia、Ropsten 等                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/)   | Go         | Linux、Windows、macOS | 信标链、Gnosis、Goerli、Pyrmont、Sepolia、Ropsten 等 |
+| [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/) | Java       | Linux、Windows、macOS | 信标链、Gnosis、Goerli、Sepolia、Ropsten 等          |
 
 ### Lighthouse {#lighthouse}
 
-Lighthouse 是依据 Apache-2.0 许可协议用 Rust 语言编写的共识客户端实现。 它由 Sigma Prime 维护，自信标链创世以来一直保持稳定且可投入生产。 各种企业、质押池和个人都依赖它。 从台式电脑到复杂的自动化部署，它的目标是在各种环境中实现安全、高性能和互操作性。
+Lighthouse 是一种共识客户端实现，它用 Rust 语言编写，并依照 Apache-2.0 获得许可。 它由 Sigma Prime 维护，自信标链创世以来一直保持稳定且可直接投入生产。 各类企业、质押池和个人都依赖它。 从台式电脑到复杂的自动化部署，Lighthouse 的目标是在各种环境中实现安全、高性能和互操作性。
 
-相关文档可以在 [Lighthouse Book](https://lighthouse-book.sigmaprime.io/) 中找到。
+相关文档可以在 [Lighthouse 手册](https://lighthouse-book.sigmaprime.io/)中找到。
 
 ### Lodestar {#lodestar}
 
-Lodestar 是依据 LGPL-3.0 许可协议用 Typescript 语言编写的生产就绪共识客户端实现。 它由 ChainSafe Systems 维护，是面向独立质押人、开发者和研究人员的最新共识客户端。 Lodestar 由信标节点和验证者客户端组成，由以太坊协议的 JavaScript 实现提供支持。 Lodestar 旨在通过轻量级客户端提高以太坊的可用性，让更多开发者获得可访问性，并进一步促进生态系统多样性。
+Lodestar 是一种生产就绪共识客户端实现，它用 Typescript 语言编写，并依照 LGPL-3.0 获得许可。 它由 ChainSafe Systems 维护，是面向单独质押人、开发者和研究人员的最新共识客户端。 Lodestar 由信标节点和验证者客户端组成，由以太坊协议的 JavaScript 实现提供支持。 Lodestar 旨在通过轻客户端提高以太坊的可用性，让更多开发者获得可访问性，并进一步促进生态系统多样性。
 
-更多信息可以在我们的 [Lodestar 网站](https://lodestar.chainsafe.io/)上找到。
+更多信息可以在 [Lodestar 网站](https://lodestar.chainsafe.io/)找到。
 
 ### Nimbus {#nimbus}
 
-Nimbus 是依据 Apache-2.0 许可协议用 Nim 语言编写的共识客户端实现。 它是一种可供独立质押人和质押池使用的生产就绪客户端。 Nimbus 专为提高资源效率而设计，可同样轻松地在资源有限的设备和企业级基础设施上运行，而不会影响稳定性或奖励性能。 更少的资源占用意味着客户端在网络处于压力下时具有更大的安全边际。
+Nimbus 是一种共识客户端实现，它用 Nim 语言编写，并依照 Apache-2.0 获得许可。 它是一种供单独质押人和质押池使用的生产就绪客户端。 Nimbus 专为提高资源效率而设计，可同样轻松地在资源有限的设备和企业级基础设施上运行，并且不会影响稳定性或奖励性能。 更少的资源占用意味着客户端在网络处于压力下时具有更大的安全边际。
 
-相关文档可以在 [Nimbus 指南](https://nimbus.guide/)中找到。
+它由 Trinity 实现。 其原理类似于快速同步，但是还会下载执行最新区块所需的数据，这样用户可以在开始后的最初几分钟内查询链上信息。
+
+- 首先同步状态，并让你可以在几分钟内查询远程过程调用。
+- 仍处于开发阶段，所以并不完全可靠，后台同步速度较慢，远程过程调用响应可能失败。
+
+在 [Nimbus 相关文档中了解更多信息](https://nimbus.guide/)
 
 ### Prysm {#prysm}
 
-Prysm 是一种功能齐全的开源共识客户端，它依据 GPL-3.0 许可协议用 Go 语言编写。 它具有可选的 Web 应用程序用户界面，并将家庭用户和机构用户的用户体验、相关文档和可配置性放在首位。
+Prysm 是一种功能齐全的开源共识客户端，它用 Go 语言编写，并依照 GPL-3.0 获得许可。 它具有可选的 Web 应用程序用户界面，并将个人用户和机构用户的用户体验、相关文档和可配置性放在首位。
 
 访问 [Prysm 相关文档](https://docs.prylabs.network/docs/getting-started/)了解更多信息。
 
 ### Teku {#teku}
 
-Teku 是最初的信标链初始客户端之一。 除了常规目标（安全性、稳健性、稳定性、可用性、性能）外，Teku 还特别致力于恪守全部各类共识客户端标准。
+Teku 是最早的信标链初始客户端之一。 除了常规目标（安全性、稳健性、稳定性、可用性、性能）外，Teku 还特别致力于恪守全部各类共识客户端标准。
 
-Teku 提供了非常灵活的部署选项。 信标节点和验证者客户端可以作为单个进程一起运行，这对于独立质押人来说非常方便，或者可以单独运行节点以进行复杂的质押操作。 此外，Teku 与 [Web3Signer](https://github.com/ConsenSys/web3signer/) 完全可互操作，用于为密钥安全性签名并提供罚没防范措施。
+Teku 提供了非常灵活的部署选项。 信标节点和验证者客户端可以作为单个进程一起运行，这对于单独质押人来说非常方便，或者在处理复杂的质押操作时节点可以各自运行。 此外，Teku 实现了与 [Web3Signer](https://github.com/ConsenSys/web3signer/) 的完全互操作性，用于为密钥安全性签名并提供罚没防范措施。
 
-Teku 是用 Java 语言编写的，并获得 Apache 2.0 许可。 它由 ConsenSys 的 Protocols 团队开发，该团队还负责 Besu 和 Web3Signer。 在 [Teku 相关文档](https://docs.teku.consensys.net/en/latest/)中了解更多信息。
+Teku 用 Java 语言编写，并依照 Apache 2.0 获得许可。 它由 ConsenSys 的 Protocols 团队开发，该团队还负责 Besu 和 Web3Signer。 在 [Teku 相关文档](https://docs.teku.consensys.net/en/latest/)中了解更多信息。
 
 ## 同步模式 {#sync-modes}
 
-为了关注和验证网络中的最新数据，以太坊客户端需要与最新的网络状态同步。 同步方法如下：从对等节点下载数据，用加密方法验证其完整性，并构建一个本地区块链数据库。
+为了关注和验证网络中的最新数据，以太坊客户端需要与最新网络状态同步。 同步方法如下：从对等节点下载数据，用加密方法验证其完整性，并构建一个本地区块链数据库。
 
 同步模式代表了这个过程的不同方法，并进行了不同的折衷。 客户端在实现同步算法方面也各不相同。 有关部署的具体细节，请参考你所选客户端的官方文档。
 
@@ -238,33 +245,39 @@ Teku 是用 Java 语言编写的，并获得 Apache 2.0 许可。 它由 ConsenS
 快速同步下载所有区块（包括区块头、交易和收据），验证所有区块头，下载区块状态并对照区块头进行验证。
 
 - 依赖共识机制的安全性。
-- 同步只需要几个小时。
+- 完成同步只需要几个小时。
 
 #### 轻量同步 {#light-sync}
 
-轻客户端同步模式下载所有区块头、区块数据并对其中一些进行随机验证。 仅从信任的检查点开始同步区块链信息。
+轻客户端同步模式下载所有区块头和区块数据，并对其中一些进行随机验证。 仅从信任的检查点开始同步区块链信息。
 
 - 仅获取最新状态，同时依赖于对开发者和共识机制的信任。
-- 客户端在几分钟内便可以使用当前网络状态。
+- 几分钟内客户端便可以使用并且具有当前网络状态。
 
-[有关轻客户端的更多信息](https://www.parity.io/blog/what-is-a-light-client/)
+[更多关于轻客户端的信息](https://www.parity.io/blog/what-is-a-light-client/)
 
 #### 快照同步 {#snap-sync}
 
-快照同步是同步客户端的最新方法，由 Geth 团队首创。 使用对等节点提供的动态快照，检索所有帐户和存储数据但不下载中间字典树节点，然后在本地重建默克尔树。
+快照同步是最新的客户端同步方法，由 Geth 团队首创。 使用对等节点提供的动态快照，可以检索所有帐户和存储数据但不下载中间前缀树节点，然后在本地重建默克尔树。
 
-- 最快同步策略，目前是以太坊主网默认设置
+- 最快的同步策略，目前是以太坊主网默认设置
 - 节省大量磁盘使用和网络带宽，同时不影响安全
 
-[有关快照同步的更多信息](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
+[更多关于快照同步的信息](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
 
-### 共识层同步模式 {#consensus-layer-sync-modes}
+| 客户端       | 磁盘大小（快速同步） | 磁盘大小（完整存档） |
+| ------------ | -------------------- | -------------------- |
+| Geth         | 400GB+               | 6TB+                 |
+| OpenEthereum | 280GB+               | 6TB+                 |
+| Nethermind   | 500GB+               | 12TB+                |
+| Besu         | 750GB+               | 5TB+                 |
+| Erigon       | 未提供               | 1TB+                 |
 
 #### 乐观同步 {#optimistic-sync}
 
-乐观同步是一种合并后同步策略，旨在选择加入和向后兼容，允许执行节点通过已建立的方法进行同步。 执行引擎可以在不进行完全验证的情况下*乐观地*导入信标区块，找到最新的区块头，然后使用上述方法开始同步链。 然后，在执行客户端更新之后，它将通知共识客户端信标链中交易的有效性。
+乐观同步是一种合并后同步策略，旨在选择加入和向后兼容，允许执行节点通过已建立的方法进行同步。 执行引擎可以在不进行完全验证的情况下*乐观地*导入信标区块，找到最新区块头，然后使用上述方法开始同步链。 然后，在执行客户端更新之后，它将通知共识客户端信标链中交易的有效性。
 
-[有关乐观同步的更多信息](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
+[更多关于乐观同步的信息](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
 
 #### 检查点同步 {#checkpoint-sync}
 
@@ -272,15 +285,15 @@ Teku 是用 Java 语言编写的，并获得 Apache 2.0 许可。 它由 ConsenS
 
 实际上，这意味着你的节点连接到远程服务，以下载最近的最终确定状态并从该点继续验证数据。 提供数据的第三方要受到信任，应谨慎选择。
 
-有关[检查点同步](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)的更多信息
+更多关于[检查点同步](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)的信息
 
 ## 延伸阅读 {#further-reading}
 
-互联网上有许多关于以太坊客户端的信息。 以下是一些可能有用的资源。
+互联网上充斥着大量关于以太坊客户端的信息。 以下是一些可能有用的资源。
 
-- [以太坊 101 - 第二部分 - 了解节点](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _- Wil Barnes，2019 年 2 月 13 日_
-- [运行以太坊全节点：勉励者指南](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _- Justin Leroux，2019 年 11 月 7 日_
-- [运行以太坊节点](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _- ETHHub，经常更新_
+- [以太坊 101 - 第二部分 - 了解节点](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes，2019 年 2 月 13 日_
+- [运行以太坊全节点：勉励者指南](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux，2019 年 11 月 7 日_
+- [运行以太坊节点](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub，定期更新_
 
 ## 相关主题 {#related-topics}
 
@@ -290,4 +303,4 @@ Teku 是用 Java 语言编写的，并获得 Apache 2.0 许可。 它由 ConsenS
 ## 相关教程 {#related-tutorials}
 
 - [运行 Geth 节点](/developers/tutorials/run-light-node-geth/) _– 如何下载、安装和运行 Geth。 涵盖同步模式、JavaScript 控制台等等。_
-- [通过写入 MicroSD 卡将 Raspberry Pi 4 变成验证者节点 - 安装指南](/developers/tutorials/run-node-raspberry-pi/) _- 写入你的 Raspberry Pi 4，插入网线，连接固态磁盘并给设备供电，将 Raspberry Pi 4 变成运行执行层（主网）和/或共识层（信标链/验证者）的以太坊全节点。_
+- [通过写入 MicroSD 卡将树莓派 4 变成验证者节点 – 安装指南](/developers/tutorials/run-node-raspberry-pi/) _– 写入你的树莓派 4，插入网线，连接固态硬盘并给设备供电，将树莓派 4 变成运行执行层（主网）和/或共识层（信标链/验证者）的以太坊全节点。_

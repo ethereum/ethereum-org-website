@@ -20,7 +20,7 @@ Zero-knowledge proofs represented a breakthrough in applied cryptography, as the
 
 But there are problems with this approach, chiefly the lack of privacy. Personally Identifiable Information (PII) shared with third-party services is stored in central databases, which are vulnerable to hacks. With identity theft becoming a critical issue, there are calls for more privacy-protecting means of sharing sensitive information.
 
-Zero-knowledge proofs solve this problem by eliminating the need to reveal information to prove validity of claims. The zero-knowledge protocol uses the statement (called a ‘witness’) as input to generate a succint proof of its validity. This proof provides strong guarantees that a statement is true without exposing the information used in creating it.
+Zero-knowledge proofs solve this problem by eliminating the need to reveal information to prove validity of claims. The zero-knowledge protocol uses the statement (called a ‘witness’) as input to generate a succinct proof of its validity. This proof provides strong guarantees that a statement is true without exposing the information used in creating it.
 
 Going back to our earlier example, the only evidence you need to prove your citizenship claim is a zero-knowledge proof. The verifier only has to check if certain properties of the proof hold true to be convinced that the underlying statement holds true as well.
 
@@ -100,7 +100,7 @@ Credit card payments are often visible to multiple parties, including the paymen
 
 Cryptocurrencies were intended to provide a means for users to conduct private, peer-to-peer transactions. But most cryptocurrency transactions are openly visible on public blockchains. User identities are often pseudonymous and either wilfully linked to real-world identities (e.g. by including ETH addresses on Twitter or GitHub profiles) or can be associated with real-world identities using basic on and off-chain data analysis.
 
-There are specific “privacy coins” designed for completely anonymous transactions. Privacy-focused blockchains, such as ZCash and Monero, shield transaction details, including sender/receiver addresses, asset type, quantity, and the transaction timeline.
+There are specific “privacy coins” designed for completely anonymous transactions. Privacy-focused blockchains, such as Zcash and Monero, shield transaction details, including sender/receiver addresses, asset type, quantity, and the transaction timeline.
 
 By baking in zero-knowledge technology into the protocol, privacy-focused blockchain networks allow nodes to validate transactions without needing to access transaction data.
 

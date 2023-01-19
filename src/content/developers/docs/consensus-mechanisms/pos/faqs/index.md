@@ -52,7 +52,6 @@ Nodes are computers connected to the Ethereum network. Clients are the software 
 
 No. A user on BitcoinTalk [proposed the basic idea of proof-of-stake](https://bitcointalk.org/index.php?topic=27787.0) as an upgrade to Bitcoin in 2011. It was eleven years before it was ready to implement on Ethereum Mainnet. Some other chains implemented proof-of-stake earlier than Ethereum, but not Ethereum's specific mechanism (known as Gasper).
 
-
 ## What is special about Ethereum's proof-of-stake? {#why-is-ethereum-pos-special}
 
 Ethereum's proof-of-stake mechanism is unique in its design. It was not the first proof-of-stake mechanism to be designed and implemented, but it is the most robust. The proof-of-stake mechanism is known as "Casper". Casper defines how validators are selected to propose blocks, how and when attestations are made, how attestations are counted, the rewards and penalties given to validators, slashing conditions, failsafe mechanisms such as the inactivity leak, and the conditions for "finality". Finality is the condition that for a block to be considered a permanent part of the canonical chain it must have been voted for by at least 66% of the total staked ETH on the network. Researchers developed Casper specifically for Ethereum, and Ethereum is the first and only blockchain to have implemented it.
@@ -106,7 +105,7 @@ The nothing-at-stake problem is a conceptual issue with some proof-of-stake mech
 
 ## What is a fork choice algorithm? {#what-is-a-fork-choice-algorithm}
 
-A fork choice algorithm implements rules determining which chain is the canonical one. Under optimal conditions, there is no need for a fork choice rule because there is only one block proposer per slot and one block to choose from. Occasionally, though, multiple blocks for the same slot or late-arriving information leads to multiple options for how blocks near the head of the chain are organized. In these cases, all clients must implement some rules identically to make sure they all pick the correct sequence of blocks. The fork-choice algorithm encodes these rules. 
+A fork choice algorithm implements rules determining which chain is the canonical one. Under optimal conditions, there is no need for a fork choice rule because there is only one block proposer per slot and one block to choose from. Occasionally, though, multiple blocks for the same slot or late-arriving information leads to multiple options for how blocks near the head of the chain are organized. In these cases, all clients must implement some rules identically to make sure they all pick the correct sequence of blocks. The fork-choice algorithm encodes these rules.
 
 Ethereum's fork-choice algorithm is called LMD-GHOST. It picks the fork with the greatest weight of attestations, meaning the one that most staked ETH has voted for.
 

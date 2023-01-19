@@ -18,6 +18,24 @@
     "endDate": "2023-03-05"
   },
   {
+    "title": "ETH Porto",
+    "to": "https://ethporto.org/",
+    "sponsor": null,
+    "location": "Porto, Portugal",
+    "description": "Bringing the first ETH event to the beautiful city of Porto. A 48h hackthon and 2-days Conference to hear and learn about use-cases on Agriculture and Fishery, Public Goods and Governance, Decentralized Science and many more.",
+    "startDate": "2023-03-16",
+    "endDate": "2023-03-18"
+  },
+  {
+    "title": "Ethereum Zürich",
+    "to": "https://ethereumzuri.ch/",
+    "sponsor": null,
+    "location": "Zurich, Switzerland",
+    "description": "Ethereum Zürich is a development and research-focused conference and hackathon, bringing the Ethereum community to one of the most crypto-friendly countries, and the cradle of blockchain research.",
+    "startDate": "2023-04-14",
+    "endDate": "2023-04-16"
+  },
+  {
     "title": "Schelling Point",
     "to": "https://schellingpoint.gitcoin.co/",
     "sponsor": "GitcoinDAO",
@@ -574,5 +592,14 @@
     "description": "Join ETHMiami during Art Basel Miami 2022.",
     "startDate": "2022-11-28",
     "endDate": "2022-12-4"
+  },
+  {
+    "title": "ETHMalaysia 2023",
+    "to": "http://ethmalaysia.com",
+    "sponsor": null,
+    "location": "Kuala Lumpur Convention Centre, Malaysia",
+    "description": "ETHMalaysia is the first Ethereum Innovation Festival in Southeast Asia that consists of a conference, a hackathon and fun Web3 themed activities.",
+    "startDate": "2023-5-5",
+    "endDate": "2023-5-7"
   }
 ]

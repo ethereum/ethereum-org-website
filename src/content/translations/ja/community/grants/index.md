@@ -20,7 +20,7 @@ lang: ja
 - [Moloch DAO](https://www.molochdao.com/) - _プライバシー、レイヤー 2 スケーリング、クライアントセキュリティなど_
 - [公開されている助成プログラム](https://opengrants.com/explore)
 - [分散型自律組織(DAO)の助成](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _助成プログラムを提供する組織の Google スプレッドシート_
-- [マージ・データチャレンジ](https://esp.ethereum.foundation/merge-data-challenge) - _すべてのイーサリアン、データ科学者、データエンジニア、データビジュアライザー、デベロッパー、およびイーサリアムデータを徹底的に研究することにご興味がある人を募集中_
+- [レイヤー 2 助成](https://esp.ethereum.foundation/layer-2-grants) - _ レイヤー 2 アプリケーション、分析、教育をサポートするイーサリアム・ファウンデーションがスポンサーの女性プログラム_
 
 ## 固有のプロジェクト {#project-specific}
 
@@ -30,11 +30,12 @@ lang: ja
 - [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/)エコシステムファンド_
 - [Chainlink 助成プログラム](https://chain.link/community/grants) - _[Chainlink](https://chain.link/) コミュニティ助成プログラム_
 - [Compound 助成プログラム](https://compoundgrants.org/) – _[Compound](https://compound.finance/)金融エコシステム_
-- [Consensys 助成プログラム](https://consensys.net/grants/) – _[Consensys](https://consensys.net/)ブロックチェーン資金調達およびイーサリアム助成プログラム_
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/)金融エコシステム_
+- [MetaMask プログラム](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/)従業員主導の DAO 助成プログラム_
 - [mStable](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/)コミュニティ_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/)エコシステム_
-- [Uniswap 助成プログラム](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/)コミュニティ_
+- [UMA 助成プログラム](https://grants.umaproject.org/) - _[UMA](https://umaproject.org/)デベロッパーサポート_
+- [Uniswap Grants Program](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/)コミュニティ_
 - [Web3 助成プログラム](https://web3grants.net) - _Web3/暗号資産関連の助成プログラムの広範なリスト_
 
 ## クオドラティック・ファンディング {#quadratic-funding}

@@ -6,6 +6,8 @@ import styled from "@emotion/styled"
 import { IntlProvider } from "react-intl"
 import { LocaleProvider } from "gatsby-theme-i18n"
 
+import { Flex } from "@chakra-ui/react"
+
 import { lightTheme, darkTheme } from "../theme"
 
 import Footer from "./Footer"
@@ -29,40 +31,6 @@ import { isMobile } from "../utils/isMobile"
 import type { Context } from "../types"
 
 import client from "../apollo"
-
-const ContentContainer = styled.div`
-  position: relative;
-  margin: 0px auto;
-  min-height: 100vh;
-  display: flex;
-  flex-flow: column;
-
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    max-width: ${(props) => props.theme.variables.maxPageWidth};
-  }
-`
-
-const MainContainer = styled.div`
-  display: flex;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
-
-const MainContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-`
-
-const Main = styled.main`
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  overflow: visible;
-  width: 100%;
-  flex-grow: 1;
-`
 
 export interface IProps {
   children?: React.ReactNode
@@ -161,27 +129,44 @@ const Layout: React.FC<IProps> = ({
                 isPageRightToLeft={isPageRightToLeft}
                 originalPagePath={pageContext.originalPath!}
               />
-              <ContentContainer>
+
+              <Flex
+                position="relative"
+                margin="0px auto"
+                minHeight="100vh"
+                flexFlow="column"
+                maxW={{
+                  lg: lightTheme.variables.maxPageWidth,
+                }}
+              >
                 <ZenMode>
                   <Nav path={path} />
                   {shouldShowSideNav && <SideNavMobile path={path} />}
                 </ZenMode>
                 <SkipLinkAnchor id="main-content" />
-                <MainContainer>
+                <Flex flexDirection={{ base: "column", lg: "row" }}>
                   {shouldShowSideNav && (
                     <ZenMode>
                       <SideNav path={path} />
                     </ZenMode>
                   )}
-                  <MainContent>
-                    <Main>{children}</Main>
-                  </MainContent>
-                </MainContainer>
+                  <Flex flexDirection="column" width="100%">
+                    <Flex
+                      justifyContent="space-around"
+                      alignItems="flex-start"
+                      overflow="visible"
+                      width="100%"
+                      flexGrow="1"
+                    >
+                      {children}
+                    </Flex>
+                  </Flex>
+                </Flex>
                 <ZenMode>
                   <Footer />
                 </ZenMode>
                 <FeedbackWidget location={path} />
-              </ContentContainer>
+              </Flex>
             </ZenModeContext.Provider>
           </ThemeProvider>
         </ApolloProvider>
