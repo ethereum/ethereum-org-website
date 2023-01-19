@@ -228,7 +228,7 @@ Users initiating data queries must cover the cost of retrieving information from
 
 ### Centralized oracles {#centralized-oracles}
 
-As the name suggests, a centralized oracle is one controlled by a single entity responsible for aggregating off-chain information and updating the oracle contract's data as requested. Centralized oracles are efficient since they rely on a single source of truth and might even be preferable in cases where proprietary datasets are published directly by the owner with a widely accepted signature. However, using a centralized oracle comes with various problems:
+A centralized oracle is controlled by a single entity responsible for aggregating off-chain information and updating the oracle contract's data as requested. Centralized oracles are efficient since they rely on a single source of truth. They might even be preferable in cases where proprietary datasets are published directly by the owner with a widely accepted signature. However, using a centralized oracle comes with various problems.
 
 #### Low correctness guarantees {#low-correctness-guarantees}
 
@@ -246,7 +246,7 @@ Centralized oracles often have poorly designed or non-existent incentives for th
 
 Decentralized oracles are designed to overcome the limitations of centralized oracles by eliminating single points of failure. A decentralized oracle service comprises multiple participants in a peer-to-peer network that form consensus on off-chain data before sending it to a smart contract.
 
-A decentralized oracle should (ideally) be permissionless, trustless, and free from administration by a central party; in reality, decentralization among oracles lies on a spectrum. There are semi-decentralized oracle networks where anyone can particpate, but with an “owner” that approves and removes nodes based on historical performance. Fully decentralized oracle networks also exist: these usually run as standalone blockchains and have defined consensus mechanisms for coordinating nodes and punishing misbehavior.
+A decentralized oracle should (ideally) be permissionless, trustless, and free from administration by a central party; in reality, decentralization among oracles is on a spectrum. There are semi-decentralized oracle networks where anyone can participate, but with an “owner” that approves and removes nodes based on historical performance. Fully decentralized oracle networks also exist: these usually run as standalone blockchains and have defined consensus mechanisms for coordinating nodes and punishing misbehavior.
 
 Using decentralized oracles comes with the following benefits:
 
