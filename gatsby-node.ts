@@ -10,7 +10,6 @@ import type { Context } from "./src/types"
 
 import * as Schema from "./src/schema"
 
-import mergeTranslations from "./src/scripts/mergeTranslations"
 import createLocales from "./src/scripts/createLocales"
 import copyContributors from "./src/scripts/copyContributors"
 
