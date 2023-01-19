@@ -117,8 +117,6 @@
   "mastering-ethereum-title": "Mastering Ethereum",
   "mastering-ethereum-description": "December 23, 2018 – Andreas M. Antonopoulos, Gavin Wood Ph.D.",
   "podcasts-about-ethereum": "Podcasts about Ethereum and Cryptocurrencies",
-  "into-the-ether-title": "Into the Ether",
-  "ethhub-description": "A podcast focusing on all things Ethereum and DeFi",
   "bankless-title": "Bankless",
   "bankless-description": "A guide to Crypto finance",
   "uncommon-core-title": "Uncommon Core",
@@ -130,5 +128,7 @@
   "unchained-title": "Unchained",
   "unchained-description": "Dives deep into the people building the decentralized internet, the details of this technology that could underpin our future, and some of the thorniest topics in crypto, such as regulation, security and privacy",
   "into-the-bytecode-title": "Into the Bytecode",
-  "into-the-bytecode-description": "A podcast about the ideas shaping crypto"
+  "into-the-bytecode-description": "A podcast about the ideas shaping crypto",
+  "the-daily-gwei-title": "The Daily Gwei",
+  "the-daily-gwei-description": "Ethereum news recaps, updates and analysis"
 }
