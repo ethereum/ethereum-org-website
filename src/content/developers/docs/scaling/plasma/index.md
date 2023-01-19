@@ -72,7 +72,7 @@ If the challenge period elapses without anyone providing a fraud-proof, Alice's 
 
 ### Dispute arbitration {#dispute-arbitration}
 
-Like any blockchain, plasma chains need a mechanism for enforcing the integrity of transactions in case participants start to act maliciously (e.g., double-spending funds). To this end, plasma chains use fraud proofs to arbitrate disputes concerning the validity of state transitions and penalize bad behavior. Fraud proofs are used as a mechanism through which a Plasma child chain files a complaint to its parent chain or to the root chain.
+Like any blockchain, plasma chains need a mechanism for enforcing the integrity of transactions in case participants act maliciously (e.g. double-spending funds). To this end, plasma chains use fraud proofs to arbitrate disputes concerning the validity of state transitions and penalize bad behavior. Fraud proofs are used as a mechanism through which a Plasma child chain files a complaint to its parent chain or to the root chain.
 
 A fraud-proof is simply a claim that a particular state transition is invalid. An example is if a user (Alice) tries to spend the same funds twice. Perhaps she spent the UTXO in a transaction with Bob and wants to spend the same UTXO (which is now Bob's) in another transaction.
 
@@ -94,7 +94,7 @@ Plasma chains primarily store transaction data with the operator and **do not pu
 
 The problem starts when the operator, not just any user, is the party acting maliciously. Because the operator is in sole control of the blockchain, they have more incentive to advance invalid state transitions on a larger scale, such as stealing funds belonging to users on the plasma chain.
 
-In this case, using the classic fraud-proof system does not work. The operator could easily make an invalid transaction transferring Alice and Bob's funds to their wallet and hide the data necessary for creating the fraud-proof. This is possible because the operator isn't required to make data available to users or the Mainnet.
+In this case, using the classic fraud-proof system does not work. The operator could easily make an invalid transaction transferring Alice and Bob's funds to their wallet and hide the data necessary for creating the fraud-proof. This is possible because the operator isn't required to make data available to users or Mainnet.
 
 Therefore, the most optimistic solution is to attempt a "mass exit" of users from the plasma chain. The mass exit slows down the malicious operator's plan to steal funds and provides some measure of protection for users. Withdrawal requests are ordered based on when each UTXO (or token) was created, preventing malicious operators from front-running honest users.
 
