@@ -52,7 +52,7 @@
     "gatsby-transformer-csv": "^4.0.0",
     "gatsby-transformer-gitinfo": "^1.1.0",
     "gatsby-transformer-json": "^4.11.0",
-    "gatsby-transformer-remark": "^3.0.0",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^4.21.0",
     "is-relative-url": "^3.0.0",
     "lodash": "^4.17.21",
