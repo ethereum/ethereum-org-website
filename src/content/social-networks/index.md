@@ -99,7 +99,7 @@ In May 2022, [Instagram announced support for NFTs](https://about.instagram.com/
 
 ### Articles {#articles}
 
-- [Decentralizing social media: a guide to the web3 social stack](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) -  — _Coinbase Ventures_
+- [Decentralizing social media: a guide to the web3 social stack](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) - _Coinbase Ventures_
 - [Social Networks Are the Next Big Decentralization Opportunity](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
 - [Web3 holds the promise of decentralized, community-powered social networks](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
 - [An Overview of the Blockchain Social Media Landscape](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
