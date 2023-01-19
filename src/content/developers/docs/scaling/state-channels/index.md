@@ -31,7 +31,7 @@ A payment channel is best described as a "two-way ledger" collectively maintaine
 
 Updates to the ledger's balance (i.e., the payment channel's state) require the approval of all parties in the channel. A channel update, signed by all channel participants, is considered finalized, much like a transaction on Ethereum.
 
-Payment channels were among the earliest scaling solutions designed to minimize expensive on-chain activity of simple user interactions (e.g., ETH transfers, atomic swaps, micropayments). Channel participants can conduct an unlimited amount of instant, feeless transactions between each other as long as the net sum of their transfers does not exceed the deposited tokens. [Raiden](https://linktr.ee/RaidenNetwork) is an example of a payment channel on Ethereum.
+Payment channels were among the earliest scaling solutions designed to minimize expensive on-chain activity of simple user interactions (e.g. ETH transfers, atomic swaps, micropayments). Channel participants can conduct an unlimited amount of instant, feeless transactions between each other as long as the net sum of their transfers does not exceed the deposited tokens.
 
 ## State channels {#state-channels}
 
@@ -165,7 +165,7 @@ Channel-based payments have the following advantages:
 
 3. **Latency**: Off-chain transactions conducted between channel participants can be settled instantly, if both parties cooperate, reducing delays. In contrast, sending a transaction on Mainnet requires waiting for nodes to process the transaction, produce a new block with the transaction, and reach consensus. Users may also need to wait for more block confirmations before considering a transaction finalized.
 
-4. **Cost**: State channels are particularly useful in situations where a set of participants will be exchanging many state updates over a long period of time. This is because the only cost incurred by the channel is the initial setup and closure of the state channel smart contract. Consequently, every additional intermediary state change in the channel will be cheaper than the last as the settlement cost is distributed accordingly.
+4. **Cost**: State channels are particularly useful in situations where a set of participants will exchange many state updates over a long period. The only costs incurred are the opening and closing of the state channel smart contract; every state change between opening and closing the channel will be cheaper than the last as the settlement cost is distributed accordingly.
 
 Implementing state channels on layer 2 solutions, such as [rollups](/developers/docs/scaling/#rollups), could make them even more attractive for payments. While channels offer cheap payments, the costs of setting up the on-chain contract on Mainnet during the opening phase can be get expensive—especially when gas fees spike. Ethereum-based rollups offer [lower transaction fees](https://l2fees.info/) and can reduce overhead for channel participants by bringing down setup fees.
 
