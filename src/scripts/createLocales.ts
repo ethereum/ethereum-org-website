@@ -2,8 +2,9 @@ import fs from "fs"
 import path from "path"
 import walkdir from "walkdir"
 import _ from "lodash"
+import rimraf from "rimraf"
 
-import { defaultLanguage } from "../utils/languages"
+import { defaultLanguage, supportedLanguages } from "../utils/languages"
 
 const input = "src/intl"
 const output = "i18n/locales"
@@ -13,10 +14,7 @@ const output = "i18n/locales"
  */
 async function createLocales() {
   // cleanup any previous generated locales
-  const localesPath = output
-  if (fs.existsSync(localesPath)) {
-    fs.rmSync(localesPath, { recursive: true })
-  }
+  await rimraf(output)
 
   const defaultLangLocales: Record<string, Record<string, string>> = {}
   walkdir.sync(`${input}/${defaultLanguage}/`, (filepath) => {
@@ -30,18 +28,12 @@ async function createLocales() {
     defaultLangLocales[namespace] = translations
   })
 
-  walkdir.sync(input, { no_recurse: true }, function (folderpath) {
-    const languageFolder = path.basename(folderpath)
-
-    if (languageFolder === defaultLanguage) {
-      this.ignore(folderpath)
-    }
-
+  supportedLanguages.forEach((language) => {
     //create language folder in `output`
-    fs.mkdirSync(path.join(output, languageFolder), { recursive: true })
+    fs.mkdirSync(path.join(output, language), { recursive: true })
 
     const nsInLanguage: Array<string> = []
-    walkdir.sync(folderpath, (filepath) => {
+    walkdir.sync(path.join(input, language), (filepath) => {
       const ns = path.basename(filepath)
 
       nsInLanguage.push(ns)
@@ -54,7 +46,7 @@ async function createLocales() {
       const completeSet = { ...defaultLangContent, ...translations }
 
       fs.writeFileSync(
-        path.join(output, languageFolder, ns),
+        path.join(output, language, ns),
         JSON.stringify(completeSet, null, 2)
       )
     })
@@ -68,7 +60,7 @@ async function createLocales() {
       const defaultLangContent = defaultLangLocales[ns]
 
       fs.writeFileSync(
-        path.join(output, languageFolder, ns),
+        path.join(output, language, ns),
         JSON.stringify(defaultLangContent, null, 2)
       )
     })

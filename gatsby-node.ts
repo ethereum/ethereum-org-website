@@ -483,8 +483,6 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
 export const onPreBootstrap: GatsbyNode["onPreBootstrap"] = async ({
   reporter,
 }) => {
-  mergeTranslations()
-  reporter.info(`Merged translations saved`)
   await createLocales()
   reporter.info(`Extracted translations and created locales`)
   copyContributors()
