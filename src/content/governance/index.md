@@ -48,7 +48,7 @@ There are various stakeholders in the [Ethereum community](/community/), each pl
 - **Application/Tooling Developers**: these people write applications that run on the Ethereum blockchain (e.g. DeFi, NFTs, etc.) or build tooling to interact with Ethereum (e.g. wallets, test suites, etc.). [More on dapps](/dapps/).
 - **Node Operators**: these people run nodes that propagate blocks and transactions, rejecting any invalid transaction or block that they come across. [More on nodes](/developers/docs/nodes-and-clients/).
 - **EIP Authors**: these people propose changes to the Ethereum protocol, in the form of Ethereum Improvement Proposals (EIPs). [More on EIPs](/eips/).
-- **Miners/Validators**: these people run nodes that can add new blocks to the Ethereum blockchain.
+- **Validators**: these people run nodes that can add new blocks to the Ethereum blockchain.
 - **Protocol Developers** (a.k.a. "Core Developers" ): these people maintain the various Ethereum implementations (e.g. go-ethereum, Nethermind, Besu, Erigon at the execution layer or Prysm, Lighthouse, Nimbus, Teku, Lodestar at the consensus layer). [More on Ethereum clients](/developers/docs/nodes-and-clients/).
 
 _Note: any individual can be part of multiple of these groups (e.g. a protocol developer could champion an EIP, and run a beacon chain validator, and use DeFi applications). For conceptual clarity, it is easiest to distinguish between them, though._
@@ -99,9 +99,9 @@ The initial draft of an EIP is unlikely to be implemented on the Ethereum Mainne
 
 ### Community consensus {#community-consensus}
 
-While some EIPs are straightforward technical improvements with minimal nuance, some are more complex and come with tradeoffs which will affect different stakeholders in different ways. This means some EIPs end up being more contentious within the community than others. In such cases, there will always be various interest groups attempting to control the network through a series of coordination games where widespread support across stakeholder groups is crucial.
+While some EIPs are straightforward technical improvements with minimal nuance, some are more complex and come with tradeoffs which will affect different stakeholders in different ways. This means some EIPs are more contentious within the community than others. In such cases, there will always be various interest groups attempting to control the network through a series of coordination games where widespread support across stakeholder groups is crucial.
 
-There is no clear playbook on how to handle contentious proposals. This is a result of Ethereum's decentralized design whereby no single stakeholder group is able to coerce the other through brute force: Protocol Developers can choose not to implement code changes; Node Operators can choose not to run the latest Ethereum client; Application teams and users can choose not to transact on the chain. Since Protocol Developers have no way to force people to adopt network upgrades, they will generally avoid implementing EIPs where the contentiousness outweighs the benefits to the broader community.
+There is no clear playbook on how to handle contentious proposals. This is a result of Ethereum's decentralized design whereby no single stakeholder group can coerce the other through brute force: protocol developers can choose not to implement code changes; node operators can choose not to run the latest Ethereum client; application teams and users can choose not to transact on the chain. Since Protocol Developers have no way to force people to adopt network upgrades, they will generally avoid implementing EIPs where the contentiousness outweighs the benefits to the broader community.
 
 EIP Champions are expected to solicit feedback from all relevant stakeholders. If you find yourself the champion of a contentious EIP, you should try and address objections to build consensus around your EIP. Given the size and diversity of the Ethereum community, there isn't a single metric (e.g. a coin vote) that can be used to gauge community consensus, and EIP Champions are expected to adapt to the circumstances of their proposal.
 
