@@ -1068,12 +1068,6 @@ Putting it all together we get this graph. Assume you're trying to deposit a tho
 
 ![Graph](liquidityProviderDeposit.png)
 
-```solidity
-            }
-        }
-    }
-```
-
 You could deposit liquidity directly into the core contract (using [UniswapV2Pair::mint](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol#L110)), but the core contract only checks that it is not getting cheated itself, so you run the risk of losing value if the exchange rate changes between the time you submit your transaction and the time it is executed. If you use the periphery contract, it figures the amount you should deposit and deposits it immediately, so the exchange rate doesn't change and you don't lose anything.
 
 ```solidity
