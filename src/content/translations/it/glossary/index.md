@@ -27,7 +27,7 @@ Oggetto contenente un [indirizzo](#address), saldo, [nonce](#nonce), e facoltati
 
 ### indirizzo {#address}
 
-In generale, rappresenta un [EOA](#eoa) o un [contratto](#contract-accouint) che può ricevere (indirizzo di destinazione) o inviare (indirizzo di origine) [transazioni](#transaction) sulla blockchain. Più nello specifico, si tratta dei 160 bit più a destra di un [hash di Keccak](#keccak-256) di una [chiave pubblica](#public-key) [ECDSA](#ecdsa).
+In generale, rappresenta un [EOA](#eoa) o un [contratto](#contract-account) che può ricevere (indirizzo di destinazione) o inviare (indirizzo di origine) [transazioni](#transaction) sulla blockchain. Più nello specifico, si tratta dei 160 bit più a destra di un [hash di Keccak](#keccak-256) di una [chiave pubblica](#public-key) [ECDSA](#ecdsa).
 
 ### interfaccia binaria dell'applicazione (ABI) {#abi}
 
