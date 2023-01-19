@@ -94,6 +94,7 @@ In May 2022, [Instagram announced support for NFTs](https://about.instagram.com/
 - **[Status.im](https://status.im/)** - _Status is a secure messaging app that uses an open-source, peer-to-peer protocol, and end-to-end encryption to protect your messages from third parties._
 - **[Mirror.xyz](https://mirror.xyz/)** - _Mirror is a decentralized, user-owned publishing platform built on Ethereum for users to crowdfund ideas, monetize content, and build high-value communities._
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol is a composable and decentralized social graph helping creators take ownership of their content wherever they go in the digital garden of the decentralized internet._
+- **[Farcaster](https://farcaster.xyz/)** - _Farcaster is a sufficiently decentralized social network. It is an open protocol that can support many clients, just like email._
 
 ## Further reading {#further-reading}
 
@@ -104,6 +105,7 @@ In May 2022, [Instagram announced support for NFTs](https://about.instagram.com/
 - [An Overview of the Blockchain Social Media Landscape](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
 - [How Blockchain Can Solve Social Media Privacy](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
 - [Social Media Networks Are Coming To The Blockchain](https://businesstechguides.co/what-are-decentralized-social-networks) — _Emmanuel Awosika_
+- [Sufficient Decentralization for Social Networks](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
 
 ### Videos {#videos}
 
