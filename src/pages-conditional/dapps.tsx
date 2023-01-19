@@ -1039,7 +1039,7 @@ const DappsPage = ({
         "page-dapps-dapp-description-cryptopunks",
         intl
       ),
-      link: "https://www.larvalabs.com/cryptopunks",
+      link: "https://cryptopunks.app/",
       image: getImage(data.cryptopunks),
       alt: translateMessageId("page-dapps-cryptopunks-logo-alt", intl),
     },

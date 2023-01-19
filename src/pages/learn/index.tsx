@@ -863,19 +863,19 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                     <Translation id="mastering-ethereum-description" />{" "}
                   </i>
                 </li>
+                <li>
+                  <Link to="https://www.goodreads.com/en/book/show/59892281-proof-of-stake">
+                    <Translation id="proof-of-stake-title" />
+                  </Link>{" "}
+                  <i>
+                    <Translation id="proof-of-stake-description" />
+                  </i>
+                </li>
               </ul>
               <h3>
                 <Translation id="podcasts-about-ethereum" />
               </h3>
               <ul>
-                <li>
-                  <Link to="https://podcast.ethhub.io/">
-                    <Translation id="into-the-ether-title" />
-                  </Link>{" "}
-                  <i>
-                    <Translation id="ethhub-description" />
-                  </i>
-                </li>
                 <li>
                   <Link to="http://podcast.banklesshq.com/">
                     <Translation id="bankless-title" />
@@ -922,6 +922,14 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   </Link>{" "}
                   <i>
                     <Translation id="into-the-bytecode-description" />
+                  </i>
+                </li>
+                <li>
+                  <Link to="https://www.youtube.com/@TheDailyGwei/">
+                    <Translation id="the-daily-gwei-title" />
+                  </Link>{" "}
+                  <i>
+                    <Translation id="the-daily-gwei-description" />
                   </i>
                 </li>
               </ul>

@@ -27,7 +27,7 @@ Un objeto que contiene una [dirección](#address), balance, [nonce](#nonce) y, o
 
 ### dirección {#address}
 
-Generalmente, representa una [EOA](#eoa) o un [contrato](#contract-accouint) que puede recibir (cuenta destino) o enviar (dirección original) [transacciones](#transaction) en la cadena de bloques. En concreto, son 160 bits del [Keccak hash](#keccak-256) de una [clave pública](#ecdsa) [ECDSA](#public-key).
+Generalmente, representa una [EOA](#eoa) o un [contrato](#contract-account) que puede recibir (cuenta destino) o enviar (dirección original) [transacciones](#transaction) en la cadena de bloques. En concreto, son 160 bits del [Keccak hash](#keccak-256) de una [clave pública](#ecdsa) [ECDSA](#public-key).
 
 ### interfaz binaria de la aplicación (ABI) {#abi}
 
