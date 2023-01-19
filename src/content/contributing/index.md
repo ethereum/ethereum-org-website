@@ -39,6 +39,7 @@ The ethereum.org website, like Ethereum more broadly, is an open-source project.
   _- Add a layer 2 to a relevant page_
 - [Add a staking product or service](/contributing/adding-staking-products/) - _Add a project that helps facilitate solo staking, pooled staking, or staking as a service_
 - [Add a wallet](/contributing/adding-wallets/) _- Add a wallet for the [find wallets page](/wallets/find-wallet/)._
+- [Suggest a project for our DeSci page](/contributing/adding-desci-projects/) - _Add a project built on Ethereum that contributes to decentralized science_
 
 _Any questions?_ 🤔 Reach out on our [Discord server](https://discord.gg/CetY6Y4)
 

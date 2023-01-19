@@ -27,7 +27,7 @@ Un obiect care conține o [adresă](#address), un sold, un [nonce](#nonce) și, 
 
 ### address (adresă) {#address}
 
-Cel mai adesea, aceasta reprezintă un [EOA](#eoa) sau [contract](#contract-accouint) care poate primi (adresă de destinație) sau trimite (adresă sursă) [tranzacții](#transaction) pe blockchain. Mai precis, sunt cei mai din dreapta 160 de biți ai unui [hash Keccak](#keccak-256) al unei [chei publice](#public-key) [ECDSA](#ecdsa).
+Cel mai adesea, aceasta reprezintă un [EOA](#eoa) sau [contract](#contract-account) care poate primi (adresă de destinație) sau trimite (adresă sursă) [tranzacții](#transaction) pe blockchain. Mai precis, sunt cei mai din dreapta 160 de biți ai unui [hash Keccak](#keccak-256) al unei [chei publice](#public-key) [ECDSA](#ecdsa).
 
 ### interfață binară a aplicației (ABI) {#abi}
 

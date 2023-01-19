@@ -54,6 +54,7 @@ Both options have different advantages summed up above. If you are looking for a
 - [QuikNode](https://www.quiknode.io/)
 - [Blockdaemon](https://blockdaemon.com)
 - [Alchemy](https://www.alchemy.com/)
+- [Blast](https://blastapi.io/)
 
 Check out also [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/) for more options on hosted nodes.
 
@@ -321,7 +322,7 @@ When starting a Beacon Node on a testnet, you can save significant syncing time 
 Before running Lighthouse, learn more on how to install and configure it in [Lighthouse Book](https://lighthouse-book.sigmaprime.io/installation.html).
 
 ```
-lighthouse beacon_node
+lighthouse beacon_node \
     --network mainnet \
     --datadir /data/ethereum \
     --http \
@@ -463,7 +464,6 @@ As part of your monitoring, make sure to keep an eye on your machine's performan
 - [The Merge FAQ for node operators](https://notes.ethereum.org/@launchpad/node-faq-merge) - _July 2022_
 - [Analyzing the hardware requirements to be an Ethereum full validated node](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 September 2018_
 - [Running Ethereum Full Nodes: A Guide for the Barely Motivated](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 November 2019_
-- [Running an Ethereum Node](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub, updated often_
 - [Running a Hyperledger Besu Node on the Ethereum Mainnet: Benefits, Requirements, and Setup](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 May 2020_
 - [Deploying Nethermind Ethereum Client with Monitoring Stack](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8 July 2020_
 

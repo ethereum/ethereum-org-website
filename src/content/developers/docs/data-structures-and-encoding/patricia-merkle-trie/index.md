@@ -7,26 +7,27 @@ sidebarDepth: 2
 
 A Patricia Merkle Trie provides a cryptographically authenticated data structure that can be used to store all `(key, value)` bindings.
 
-Patricia Merkle Tries are fully deterministic, meaning that a trie with the same `(key, value)` bindings is guaranteed to be identical—down to the last byte. This means they have the same root hash, providing the holy grail of `O(log(n))` efficiency for inserts, lookups and deletes. Also, they are simpler to understand and code than more complex comparison-based alternatives, like red-black trees.
+Patricia Merkle Tries are deterministic, meaning that a trie with the same `(key, value)` bindings is guaranteed to be identical—down to the last byte. They have the same root hash, providing `O(log(n))` efficiency for inserts, lookups and deletes. They are simpler to understand and implement than more complex comparison-based alternatives, like red-black trees.
 
 ## Prerequisites {#prerequisites}
 
-It would be helpful to have basic knowledge of Merkle trees and serialization to understand this page.
+It's helpful to have basic knowledge of Merkle trees and serialization to understand this page.
 
 ## Basic radix tries {#basic-radix-tries}
 
 In a basic radix trie, every node looks as follows:
 
 ```
-    [i0, i1 ... in, value]
-
+    [i_0, i_1 ... i_n, value]
 ```
 
-Where `i0 ... in` represent the symbols of the alphabet (often binary or hex), `value` is the terminal value at the node, and the values in the `i0 ... in` slots are either `NULL` or pointers to (in our case, hashes of) other nodes. This forms a basic `(key, value)` store. For example, if you are interested in the value that is currently mapped to `dog` in the trie, you would first convert `dog` into letters of the alphabet (giving `64 6f 67`), and then descend the trie following that path until you find the value. That is, you would first look up the root hash in a flat key/value DB to find the root node of the trie (which is an array of keys to other nodes), use the value at index `6` as a key (and look it up in the flat key/value DB) to get the node one level down, then pick index `4` of that to look up the next value, then pick index `6` of that, and so on, until, once you followed the path: `root -> 6 -> 4 -> 6 -> 15 -> 6 -> 7`, you look up the value of the node that you have and return the result.
+Where `i_0 ... i_n` represent the symbols of the alphabet (often binary or hex), `value` is the terminal value at the node, and the values in the `i_0, i_1 ... i_n` slots are either `NULL` or pointers to (in our case, hashes of) other nodes. This forms a basic `(key, value)` store.
+
+Say you wanted to use a radix tree data structure for persisting an order over a set of key value pairs. To find the value currently mapped to the key `dog` in the trie, you would first convert `dog` into letters of the alphabet (giving `64 6f 67`), and then descend the trie following that path until you find the value. That is, you start by look up the root hash in a flat key/value DB to find the root node of the trie. It is represented as an array of keys pointing to other nodes. You would use the value at index `6` as a key and look it up in the flat key/value DB to get the node one level down. Then pick index `4` to look up the next value, then pick index `6`, and so on, until, once you followed the path: `root -> 6 -> 4 -> 6 -> 15 -> 6 -> 7`, you look would up the value of the node and return the result.
 
 There is a difference between looking something up in the 'trie' and the underlying flat key/value 'DB'. They both define key/values arrangements, but the underlying DB can do a traditional 1 step lookup of a key. Looking up a key in the trie requires multiple underlying DB lookups to get to the final value described above. Let's refer to the latter as a `path` to eliminate ambiguity.
 
-The update and delete operations for radix tries are simple, and can be defined roughly as follows:
+The update and delete operations for radix tries can be defined as follows:
 
 ```
     def update(node,path,value):
@@ -61,30 +62,32 @@ The update and delete operations for radix tries are simple, and can be defined 
                 return hash(newnode)
 ```
 
-The "Merkle" part of the radix trie arises in the fact that a deterministic cryptographic hash of a node is used as the pointer to the node (for every lookup in the key/value DB `key == keccak256(rlp(value))`, rather than some 32-bit or 64-bit memory location as might happen in a more traditional trie implemented in C. This provides a form of cryptographic authentication to the data structure; if the root hash of a given trie is publicly known, then anyone can provide a proof that the trie has a given value at a specific path by providing the hashes of each node joining a specific value to the tree root. It is impossible for an attacker to provide a proof of a (path, value) pair that does not exist since the root hash is ultimately based on all hashes below it, so any modification would change the root hash.
+A "Merkle" Radix tree is built by linking nodes using deterministically-generated cryptographic hash digests. This content-addressing (in the key/value DB `key == keccak256(rlp(value))`) provides cryptographic authentication of the stored data. If the root hash of a given trie is publicly known, then anyone can provide a proof that the trie includes a given value at a specific path by providing the hashes of each node joining a specific value to the tree root.
 
-While traversing a path one nibble at a time, as described above, most nodes contain a 17-element array. One index for each possible value held by the next hex character (nibble) in the path, and one to hold the final target value if the path has been fully traversed. These 17-element array nodes are called `branch` nodes.
+It is impossible for an attacker to provide a proof of a `(path, value)` pair that does not exist since the root hash is ultimately based on all hashes below it. Any underlying modification would change the root hash.
+
+We'll refer to an atomic unit of a radix tree (e.g. a single hex character, or 4 bit binary number) as a "nibble". While traversing a path one nibble at a time, as described above, nodes can maximally refer to 16 children but include a `value` element. We, hence, represent them as array with length. We call these 17-element arrays "branch nodes".
 
 ## Merkle Patricia Trie {#merkle-patricia-trees}
 
-However, radix tries have one major limitation: they are inefficient. If you want to store just one (path,value) binding where the path is (in the case of the ethereum state trie), 64 characters long (number of nibbles in `bytes32`), you will need over a kilobyte of extra space to store one level per character, and each lookup or delete will take the full 64 steps. The Patricia trie introduced here solves this issue.
+Radix tries have one major limitation: they are inefficient. If you want to store one `(path, value)` binding where the path, like in Ethereum, is 64 characters long (the number of nibbles in `bytes32`), we will need over a kilobyte of extra space to store one level per character, and each lookup or delete will take the full 64 steps. The Patricia trie introduced in the following solves this issue.
 
 ### Optimization {#optimization}
 
-Merkle Patricia tries solve the inefficiency issue by adding some extra complexity to the data structure. A node in a Merkle Patricia trie is one of the following:
+A node in a Merkle Patricia trie is one of the following:
 
 1.  `NULL` (represented as the empty string)
 2.  `branch` A 17-item node `[ v0 ... v15, vt ]`
 3.  `leaf` A 2-item node `[ encodedPath, value ]`
 4.  `extension` A 2-item node `[ encodedPath, key ]`
 
-With 64 character paths it is inevitable that after traversing the first few layers of the trie, you will reach a node where no divergent path exists for at least part of the way down. It would be naive to require such a node to have empty values in every index (one for each of the 16 hex characters) besides the target index (next nibble in the path). Instead we shortcut the descent by setting up an `extension` node of the form `[ encodedPath, key ]`, where `encodedPath` contains the "partial path" to skip ahead (using compact encoding described below), and the `key` is for the next db lookup.
+With 64 character paths it is inevitable that after traversing the first few layers of the trie, you will reach a node where no divergent path exists for at least part of the way down. To avoid having to create up to 15 sparse `NULL` nodes along the path, we shortcut the descent by setting up an `extension` node of the form `[ encodedPath, key ]`, where `encodedPath` contains the "partial path" to skip ahead (using a compact encoding described below), and the `key` is for the next DB lookup.
 
-In the case of a `leaf` node, which can be determined by a flag in the first nibble of `encodedPath`, the situation above occurs and also the "partial path" to skip ahead completes the full remainder of a path. In this case `value` is the target value itself.
+For a `leaf` node, which can be marked by a flag in the first nibble of the `encodedPath`, the path encodes all prior node's path fragments and we can look up the `value` directly.
 
-The optimization above however introduces some ambiguity.
+This above optimization, however, introduces ambiguity.
 
-When traversing paths in nibbles, we may end up with an odd number of nibbles to traverse, but because all data is stored in `bytes` format, it is not possible to differentiate between, for instance, the nibble `1`, and the nibbles `01` (both must be stored as `<01>`). To specify odd length, the partial path is prefixed with a flag.
+When traversing paths in nibbles, we may end up with an odd number of nibbles to traverse, but because all data is stored in `bytes` format. It is not possible to differentiate between, for instance, the nibble `1`, and the nibbles `01` (both must be stored as `<01>`). To specify odd length, the partial path is prefixed with a flag.
 
 ### Specification: Compact encoding of hex sequence with optional terminator {#specification}
 

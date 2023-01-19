@@ -101,7 +101,7 @@ const SimpleTable: React.FC<IProps> = ({ columns, content, hasError }) => {
             }}
           >
             <Td>
-              <Flex align='center'>
+              <Flex align="center">
                 {image && <Image src={image} alt="" mr={4} boxSize={6} />}
                 {url ? (
                   <LinkOverlay
@@ -122,11 +122,17 @@ const SimpleTable: React.FC<IProps> = ({ columns, content, hasError }) => {
                 )}
               </Flex>
             </Td>
-            <Td><Flex align='center'>{marketCap}</Flex></Td>
-            <Td><Flex align='center'>{type}</Flex></Td>
+            <Td>
+              <Flex align="center">{marketCap}</Flex>
+            </Td>
+            <Td>
+              <Flex align="center">{type}</Flex>
+            </Td>
             {url && (
               <Td color="primary">
-                <Flex align='center' justify='flex-end'>↗</Flex>
+                <Flex align="center" justify="flex-end">
+                  ↗
+                </Flex>
               </Td>
             )}
           </LinkBox>
