@@ -36,7 +36,7 @@ If blockchains received information from external sources (i.e., from the real w
 
 For a public blockchain, like Ethereum, with thousands of nodes around the world processing transactions, determinism is critical. With no central authority serving as a source of truth, it is expected that nodes should arrive at the same state after applying the same transactions. A case whereby node A executes a smart contract’s code and gets "3" as a result, while node B gets "7" after running the same transaction would cause consensus to break down and eliminate Ethereum’s value as a decentralized computing platform.
 
-The scenario described earlier also highlights the problem with designing blockchains to pull information from external sources. Oracles, however, solve this problem by taking information from off-chain sources and storing it on the blockchain for smart contracts to consume. Since information stored on-chain is unalterable and publicly available, Ethereum nodes can safely use off-chain data to compute state changes without breaking consensus.
+The scenario described earlier also highlights the problem with designing blockchains to pull information from external sources. Oracles, however, solve this problem by taking information from off-chain sources and storing it on the blockchain for smart contracts to consume. Since information stored on-chain is unalterable and publicly available, Ethereum nodes can safely use the oracle imported off-chain data to compute state changes without breaking consensus.
 
 To do this, an oracle is typically made up of a smart contract running on-chain and some off-chain components. The on-chain contract receives requests for data from other smart contracts, which it passes to the off-chain component (called an oracle node). This oracle node can query data sources—using application programming interfaces (APIs), for example—and send transactions to store the requested data in the smart contract's storage.
 
@@ -228,7 +228,7 @@ Users initiating data queries must cover the cost of retrieving information from
 
 ### Centralized oracles {#centralized-oracles}
 
-As the name suggests, a centralized oracle is one controlled by a single entity responsible for aggregating off-chain information and updating the oracle contract's data as requested. Centralized oracles are efficient since they rely on a single source of truth. However, using a centralized oracle comes with various problems:
+A centralized oracle is controlled by a single entity responsible for aggregating off-chain information and updating the oracle contract's data as requested. Centralized oracles are efficient since they rely on a single source of truth. They might even be preferable in cases where proprietary datasets are published directly by the owner with a widely accepted signature. However, using a centralized oracle comes with various problems.
 
 #### Low correctness guarantees {#low-correctness-guarantees}
 
@@ -246,7 +246,7 @@ Centralized oracles often have poorly designed or non-existent incentives for th
 
 Decentralized oracles are designed to overcome the limitations of centralized oracles by eliminating single points of failure. A decentralized oracle service comprises multiple participants in a peer-to-peer network that form consensus on off-chain data before sending it to a smart contract.
 
-A decentralized oracle should (ideally) be permissionless, trustless, and free from administration by a central party; in reality, decentralization among oracles is a spectrum. There are semi-decentralized oracle networks where anyone can particpate, but with an “owner” that approves and removes nodes based on historical performance. Fully decentralized oracle networks also exist: these usually run as standalone blockchains and have defined consensus mechanisms for coordinating nodes and punishing misbehavior.
+A decentralized oracle should (ideally) be permissionless, trustless, and free from administration by a central party; in reality, decentralization among oracles is on a spectrum. There are semi-decentralized oracle networks where anyone can participate, but with an “owner” that approves and removes nodes based on historical performance. Fully decentralized oracle networks also exist: these usually run as standalone blockchains and have defined consensus mechanisms for coordinating nodes and punishing misbehavior.
 
 Using decentralized oracles comes with the following benefits:
 
@@ -302,7 +302,7 @@ It is also possible for stake-based oracles can slash node operators who fail to
 
 ### Good incentive compatibility {#good-incentive-compatibility}
 
-Decentralized oracles implement various incentive designs to prevent Byzantine behavior among oracle nodes. Specifically, they achieve _attributability_ and _accountability_:
+Decentralized oracles implement various incentive designs to prevent [Byzantine](https://en.wikipedia.org/wiki/Byzantine_fault) behavior among oracle nodes. Specifically, they achieve _attributability_ and _accountability_:
 
 1. Decentralized oracle nodes are often required to sign the data they provide in response to data requests. This information helps with evaluating the historical performance of oracle nodes, such that users can filter out unreliable oracle nodes when making data requests. An example is Chainlink’s [Oracle Reputation](https://oracle.reputation.link/) or Witnet’s [Algorithmic Reputation System](https://docs.witnet.io/intro/about/architecture#algorithmic-reputation-system).
 
@@ -318,7 +318,7 @@ The following are common use-cases for oracles in Ethereum:
 
 If you plan to build a DeFi lending protocol, for example, you’ll need to query current market prices for assets (e.g., ETH) deposited as collateral. This is so your smart contract can determine the value of collateral assets and determine how much they can borrow from the system.
 
-Popular “price oracles” (as they are often called) in DeFi include Chainlink Price Feeds, Compound Protocol’s [Open Price Feed](https://compound.finance/docs/prices), Uniswap’s [Time-Weighted Average Prices (TWAPs)](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/oracles), and Maker Oracles. It is advisable to understand the caveats that come with these price oracles before integrating them into your project. This [article](https://blog.openzeppelin.com/secure-smart-contract-guidelines-the-dangers-of-price-oracles/) provides a detailed analysis of what to consider when planning to use any of the price oracles mentioned.
+Popular “price oracles” (as they are often called) in DeFi include Chainlink Price Feeds, Compound Protocol’s [Open Price Feed](https://compound.finance/docs/prices), Uniswap’s [Time-Weighted Average Prices (TWAPs)](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/oracles), and [Maker Oracles](https://docs.makerdao.com/smart-contract-modules/oracle-module). It is advisable to understand the caveats that come with these price oracles before integrating them into your project. This [article](https://blog.openzeppelin.com/secure-smart-contract-guidelines-the-dangers-of-price-oracles/) provides a detailed analysis of what to consider when planning to use any of the price oracles mentioned.
 
 Below is an example of how you can retrieve the latest ETH price in your smart contract using a Chainlink price feed:
 
@@ -409,7 +409,6 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 **Articles**
 
 - [What Is a Blockchain Oracle?](https://chain.link/education/blockchain-oracles) — _Chainlink_
-- [Oracles](https://docs.ethhub.io/built-on-ethereum/oracles/what-are-oracles/) — _EthHub_
 - [What is a Blockchain Oracle?](https://betterprogramming.pub/what-is-a-blockchain-oracle-f5ccab8dbd72) — _Patrick Collins_
 - [Decentralised Oracles: a comprehensive overview](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) — _Julien Thevenard_
 - [Implementing a Blockchain Oracle on Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_
