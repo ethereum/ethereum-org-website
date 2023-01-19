@@ -67,4 +67,12 @@ The roadmap is mostly the result of years of work by researchers and developers 
 
 ### What is a fork?
 
+Forks are when major technical upgrades or changes need to be made to the network – they typically stem from [Ethereum Improvement Proposals (EIPs)](https://ethereum.org/en/eips/) and change the "rules" of the protocol.
+
+When upgrades are needed in traditional, centrally-controlled software, the company will just publish a new version for the end-user. Blockchains work differently because there is no central ownership. Ethereum [clients](https://ethereum.org/en/developers/docs/nodes-and-clients/) must update their software to implement the new fork rules. Plus block creators (miners in a proof-of-work world, validators in a proof-of-stake world) and nodes must create blocks and validate against the new rules.
+
+Read more on [consensus mechanisms](https://ethereum.org/en/developers/docs/consensus-mechanisms/)
+
+These rule changes may create a temporary split in the network. New blocks could be produced according to the new rules or the old ones. Forks are usually agreed upon ahead of time so that clients adopt the changes in unison and the fork with the upgrades becomes the main chain. However, in rare cases, disagreements over forks can cause the network to permanently split – most notably the creation of Ethereum Classic with the [DAO fork](https://ethereum.org/en/history/#dao-fork).
+
 ### How decentralized is the roadmap?
