@@ -34,7 +34,7 @@ ETH on testnets has no real value; therefore, there are no markets for testnet E
 
 #### Which Testnet should I use?
 
-The two public testnets which client developers are maintaining post-merge are Goerli and Sepolia. The Goerli network is targeting protocol developers to test network upgrades and stakers to test running validators. Sepolia, on the other hand, is a permissioned network targeting contract and application developers.
+The two public testnets that client developers are currently maintaining are Sepolia and Goerli. Sepolia is a network for contract and application developers to test their applications. The Goerli network lets protocol developers test network upgrades, and lets stakers test running validators.
 
 #### Sepolia {#sepolia}
 
@@ -45,14 +45,14 @@ The Sepolia network uses a permissioned validator set. It's fairly new, meaning 
 - New testnet, less applications deployed than other testnets
 - Fast to sync and running a node requires minimal disk space
 
-**Resources**:
+##### Resources
 
 - [Website](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
 
-**Faucets**:
+##### Faucets
 
 - [Grabteeth](https://grabteeth.xyz/)
 - [PoW faucet](https://sepolia-faucet.pk910.de/)
@@ -71,13 +71,13 @@ The Goerli network is open for users wanting to run a testnet validator. Stakers
 - Large state, useful for testing complex smart contract interactions
 - Longer to sync and requires more storage to run a node
 
-**Resources**:
+##### Resources
 
 - [Website](https://goerli.net/)
 - [GitHub](https://github.com/eth-clients/goerli)
 - [Etherscan](https://goerli.etherscan.io)
 
-**Faucets**:
+##### Faucets
 
 - [Grabteeth](https://grabteeth.xyz/)
 - [PoW faucet](https://goerli-faucet.pk910.de/)
@@ -94,7 +94,7 @@ _Note: [the Rinkeby testnet is deprecated](https://blog.ethereum.org/2022/11/30/
 
 A proof-of-authority testnet for those running old versions of the Geth client.
 
-**Faucets**:
+##### Faucets
 
 - [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
 - [Chainlink faucet](https://faucets.chain.link/)
@@ -109,7 +109,7 @@ A proof-of-authority testnet for those running old versions of the Geth client.
 
 A testnet for [Arbitrum](https://arbitrum.io/).
 
-**Faucets**:
+##### Faucets
 
 - [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
 - [Chainlink faucet](https://faucets.chain.link/)
@@ -119,7 +119,7 @@ A testnet for [Arbitrum](https://arbitrum.io/).
 
 A testnet for [Optimism](https://www.optimism.io/).
 
-**Faucets**:
+##### Faucets
 
 - [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
