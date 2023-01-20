@@ -20,7 +20,7 @@ The [ethereum.org](/) team is a small collaborative team building various web pr
 
 ## Your mission {#your-mission}
 
-**Tap into a rich open-source community and support their creating impactful Ethereum resources.** As ethereum.org's Community Lead, you'll engage our wide network of contributors and stakeholders to help us consistently improve ethereum.org. You’ll be the face of our community, gathering feedback, and advocating for related improvements. You'll collaborate with product, design, and research teammates to shape the design and features of our products. You'll empower the next generation of Ethereum users and builders to change our world for the better.
+**Tap into a rich open-source community and support their creation of impactful Ethereum resources.** As ethereum.org's Community Lead, you'll engage our wide network of contributors and stakeholders to help us consistently improve ethereum.org. You’ll be the face of our community, gathering feedback, and advocating for related improvements. You'll collaborate with product, design, and research teammates to shape the design and features of our products. You'll empower the next generation of Ethereum users and builders to change our world for the better.
 
 ## Core responsibilities {#core-responsibilities}
 
