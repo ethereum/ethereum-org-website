@@ -1,9 +1,10 @@
 // Import libraries
-import React, { FC, useState, useMemo } from "react"
+import React, { FC, useEffect, useState, useMemo } from "react"
 import {
   Box,
   Button,
   Flex,
+  FormControl,
   FormLabel,
   NumberDecrementStepper,
   NumberIncrementStepper,
@@ -11,19 +12,20 @@ import {
   NumberInputField,
   NumberInputStepper,
   Spinner,
+  Switch,
   Text,
 } from "@chakra-ui/react"
 // Components
 import CopyToClipboard from "../CopyToClipboard"
-import Link from "../Link"
 import Emoji from "../Emoji"
+import Link from "../Link"
 import Translation from "../../components/Translation"
 
 interface Validator {
   validatorIndex: number
-  pubKey: string
   withdrawalCredentials: string
   isUpgraded: boolean
+  isTestnet?: boolean
 }
 
 interface IProps {}
@@ -32,21 +34,24 @@ const WithdrawalCredentials: FC<IProps> = () => {
   const [hasError, setHasError] = useState<boolean>(false)
   const [inputValue, setInputValue] = useState<number>(1)
   const [validator, setValidator] = useState<Validator | null>(null)
+  const [isTestnet, setIsTestnet] = useState<boolean>(false)
 
   const checkWithdrawalCredentials = async () => {
     setHasError(false)
     setIsLoading(true)
     try {
       const response = await fetch(
-        `https://beaconcha.in/api/v1/validator/${inputValue}`
+        `https://${
+          isTestnet ? "goerli." : ""
+        }beaconcha.in/api/v1/validator/${inputValue}`
       )
       const { data } = await response.json()
       const withdrawalCredentials = data.withdrawalcredentials
       setValidator({
         validatorIndex: inputValue,
-        pubKey: data.pubkey,
         withdrawalCredentials,
         isUpgraded: withdrawalCredentials.startsWith("0x01"),
+        isTestnet,
       })
     } catch (error) {
       console.error(error)
@@ -95,17 +100,20 @@ const WithdrawalCredentials: FC<IProps> = () => {
     return (
       <Text as="span">
         <Emoji text="⚠️" mr={1} />
-        This validator has not been upgraded. Instructions on how to upgrade can
-        be found at{" "}
+        This {validator.isTestnet ? "Goerli testnet" : ""} validator has not
+        been upgraded. Instructions on how to upgrade can be found at{" "}
         <Link to="https://launchpad.ethereum.org/withdrawals">
           Staking Launchpad Withdrawals
         </Link>
       </Text>
     )
   }, [isLoading, hasError, validator, longAddress, shortAddress])
+
+  const handleNetworkToggle = () => setIsTestnet((prev) => !prev)
+
   return (
     <Box>
-      <Flex alignItems="center" gap={4}>
+      <Flex alignItems="center" gap={4} mb={4}>
         <FormLabel htmlFor="validatorIndex">Your validator index:</FormLabel>
         <NumberInput
           size="lg"
@@ -142,6 +150,15 @@ const WithdrawalCredentials: FC<IProps> = () => {
           </CopyToClipboard>
         )}
       </Flex>
+      <FormControl display="flex" alignItems="center">
+        <FormLabel htmlFor="mainnet-testnet" mb={0} me={2}>
+          Mainnet
+        </FormLabel>
+        <Switch id="mainnet-testnet" onChange={handleNetworkToggle} />
+        <FormLabel htmlFor="mainnet-testnet" mb={0} ms={2}>
+          Goerli testnet
+        </FormLabel>
+      </FormControl>
       <Text mt={4}>{resultText}</Text>
     </Box>
   )
