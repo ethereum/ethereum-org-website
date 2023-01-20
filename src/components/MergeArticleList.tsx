@@ -98,7 +98,7 @@ const MergeArticleList: React.FC<IProps> = () => {
   ]
 
   return (
-    <Box as="div" mb="4rem">
+    <Box mb="4rem">
       <CardList content={reads} />
     </Box>
   )
