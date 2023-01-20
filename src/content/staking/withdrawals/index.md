@@ -130,7 +130,7 @@ Push withdrawals will be enabled in the upcoming Shanghai upgrade planned for Q1
 
 Over the past few years Ethereum has undergone several network upgrades transitioning to a network secured by ETH itself, instead of energy-intensive mining as it once was. Participating in consensus on Ethereum is now known as "staking", as participants have voluntarily locked up ETH, placing it "at stake" for the ability to participate in the network. Following the rules rewards users, while attempts to cheat can be penalized.
 
-Since the launch of the staking deposit contract and Beacon Chain in late 2020, some brave Ethereum pioneers have voluntarily locked funds up to enable "validators", or accounts that have the right to formally attest to and propose blocks, following network rules.
+Since the launch of the staking deposit contract in November 2020, some brave Ethereum pioneers have voluntarily locked funds up to enable "validators", or accounts that have the right to formally attest to and propose blocks, following network rules.
 
 Before the enabling of staking withdrawals, none of the funds staked had any ability to be unlocked and used elsewhere. With the addition of staking withdrawals, any funds that are not actively being staked, including rewards over 32 ETH and exited funds, will be automatically transferred into a withdrawal address.
 
