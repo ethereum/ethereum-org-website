@@ -96,11 +96,6 @@ You can enter your validator index number here to see if you still need to updat
 
 <WithdrawalCredentials />
 
-<!-- - You're all set! No further action required\*
-- [Head over to the Launchpad to get started!](https://launchpad.ethereum.org/withdrawals)
-
-\* Node operators must still remain up-to-date with all client upgrades to be prepared for the upcoming Shanghai network upgrade. -->
-
 ## Exiting staking entirely {#exiting-staking-entirely}
 
 Providing a withdrawal address is required before _any_ funds can be transferred out of a validator account balance.
