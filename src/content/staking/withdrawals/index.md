@@ -29,6 +29,8 @@ There are two types of staking withdrawals: reward payments and full staking exi
 
 A **rewards payment** is for active validator accounts with a maxed out effective balance of 32 ETH, who are accumulating rewards. Any balance above 32 ETH earned through rewards does not actually contribute to principle, or increase the sway of this validator on the network, and is thus automatically withdrawn as a rewards payment.
 
+Rewards payments may also be referred to as "partial withdrawals", as they leave your 32 ETH principle untouched.
+
 ### Full withdrawal (staking exit) {#full-staking-exit}
 
 A **full withdrawal** is enabled once a validator has fully **exited** as a validator, and is no longer active.
@@ -74,14 +76,12 @@ Withdrawals can be enabled by assigning a withdrawal address to your validator a
 - The [Staking Launchpad](https://launchpad.ethereum.org/) will guide you through staking onboarding
 
 <Callout emoji="🚨" titleKey="Important notices" descriptionKey="Providing a withdrawal address is a required step for any validator account before it will be eligible to have ETH withdrawn from its balance.">
-  <div>
-    <p>
-      <Emoji text="⚠️" mr={2} /> <strong>Caution</strong>: Once set, the withdrawal address cannot be undone or changed. Double-check ownership and accuracy of the address provided before submitting.
-    </p>
-    <p>
-      <Emoji text="🧘‍♀️" mr={2} /> <strong>Keep calm</strong>: Failure to update withdrawal credentials will simply leave the ETH locked in the validator account as it has been until a withdrawal address is provided. There is no threat to your funds in the meantime for not providing this—only the loss of opportunity.
-    </p>
-  </div>
+  <p>
+    <Emoji text="⚠️" mr={2} /> <strong>Caution</strong>: Once set, the withdrawal address cannot be undone or changed. Double-check ownership and accuracy of the address provided before submitting.
+  </p>
+  <p>
+    <Emoji text="🧘‍♀️" mr={2} /> <strong>Keep calm</strong>: Failure to update withdrawal credentials will simply leave the ETH locked in the validator account as it has been until a withdrawal address is provided. There is no threat to your funds in the meantime for not providing this—only the loss of opportunity.
+  </p>
 </Callout>
 
 ### Check your validator index {#check-your-validator-index}

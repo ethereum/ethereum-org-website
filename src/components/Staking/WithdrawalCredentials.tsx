@@ -1,6 +1,5 @@
 // Import libraries
 import React, { FC, useState, useMemo } from "react"
-import { useIntl } from "react-intl"
 import {
   Box,
   Button,
@@ -13,12 +12,12 @@ import {
   NumberInputStepper,
   Spinner,
   Text,
-  useMediaQuery,
 } from "@chakra-ui/react"
 // Components
+import CopyToClipboard from "../CopyToClipboard"
 import Link from "../Link"
 import Emoji from "../Emoji"
-import { ReactJSXElement } from "@emotion/react/types/jsx-namespace"
+import Translation from "../../components/Translation"
 
 interface Validator {
   validatorIndex: number
@@ -68,22 +67,30 @@ const WithdrawalCredentials: FC<IProps> = () => {
       longAddress ? `${longAddress.slice(0, 6)}…${longAddress.slice(-4)}` : "",
     [longAddress]
   )
-  const resultText = useMemo<string | ReactJSXElement>(() => {
+  const resultText = useMemo<string | JSX.Element>(() => {
     if (isLoading) return <Spinner />
     if (hasError)
       return "Error fetching. Double check validator index number and try again."
     if (!validator) return " "
     if (validator.isUpgraded)
       return (
-        <Text as="span">
-          <Emoji text=":tada:" mr={1} />
-          Congrats! This validator has been upgraded and will automatically
-          receive rewards to{" "}
-          <Text as="span" title={longAddress} fontWeight="bold">
-            {shortAddress}
-          </Text>{" "}
-          when the Shanghai upgrade is complete.
-        </Text>
+        <>
+          <Text>
+            Withdrawal address:{" "}
+            <Text as="span" title={longAddress} fontWeight="bold">
+              {longAddress}
+            </Text>
+          </Text>
+          <Text>
+            <Emoji text=":tada:" mr={1} />
+            Congrats! This validator has been upgraded and will automatically
+            receive rewards to{" "}
+            <Text as="span" title={longAddress} fontWeight="bold">
+              {shortAddress}
+            </Text>{" "}
+            when the Shanghai upgrade is complete.
+          </Text>
+        </>
       )
     return (
       <Text as="span">
@@ -105,7 +112,7 @@ const WithdrawalCredentials: FC<IProps> = () => {
           id="validatorIndex"
           value={inputValue}
           onChange={handleChange}
-          min={1}
+          min={0}
           maxW="20ch"
         >
           <NumberInputField />
@@ -114,7 +121,26 @@ const WithdrawalCredentials: FC<IProps> = () => {
             <NumberDecrementStepper />
           </NumberInputStepper>
         </NumberInput>
-        <Button onClick={checkWithdrawalCredentials}>Ready?</Button>
+        <Button onClick={checkWithdrawalCredentials}>Check account</Button>
+        {validator?.isUpgraded && (
+          <CopyToClipboard text={longAddress}>
+            {(isCopied) => (
+              <Button variant="outline">
+                {!isCopied ? (
+                  <div>
+                    <Emoji text=":clipboard:" />{" "}
+                    <Translation id="page-staking-deposit-contract-copy" />
+                  </div>
+                ) : (
+                  <div>
+                    <Emoji text=":white_check_mark:" />{" "}
+                    <Translation id="page-staking-deposit-contract-copied" />
+                  </div>
+                )}
+              </Button>
+            )}
+          </CopyToClipboard>
+        )}
       </Flex>
       <Text mt={4}>{resultText}</Text>
     </Box>
