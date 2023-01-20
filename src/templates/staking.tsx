@@ -46,6 +46,8 @@ import StakingHowSoloWorks from "../components/Staking/StakingHowSoloWorks"
 import StakingConsiderations from "../components/Staking/StakingConsiderations"
 import StakingCommunityCallout from "../components/Staking/StakingCommunityCallout"
 import StakingGuides from "../components/Staking/StakingGuides"
+import WithdrawalCredentials from "../components/Staking/WithdrawalCredentials"
+import Callout from "../components/Callout"
 
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Context } from "../types"
@@ -326,6 +328,7 @@ const components = {
   InfoBanner,
   Card,
   CardGrid,
+  Callout,
   InfoGrid,
   Divider,
   SectionNav,
@@ -341,6 +344,7 @@ const components = {
   StakingHowSoloWorks,
   StakingConsiderations,
   StakingGuides,
+  WithdrawalCredentials,
 }
 
 const StakingPage = ({
