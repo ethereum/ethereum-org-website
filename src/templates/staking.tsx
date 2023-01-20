@@ -402,6 +402,15 @@ const StakingPage = ({
           eventName: "clicked pooled staking",
         },
       },
+      {
+        text: "About withdrawals" as TranslationKey,
+        to: "/staking/withdrawals/",
+        matomo: {
+          eventCategory: `Staking dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked about withdrawals",
+        },
+      },
     ],
   }
 
