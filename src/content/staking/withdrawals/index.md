@@ -73,13 +73,7 @@ Withdrawals can be enabled by assigning a withdrawal address to your validator a
 - This will enable withdrawals by default for any new stakers joining the network
 - The [Staking Launchpad](https://launchpad.ethereum.org/) will guide you through staking onboarding
 
-<Callout
-emoji="🚨"
-titleKey="Important notices"
-descriptionKey="Providing a withdrawal address is a required step for any validator account before it will be eligible to have ETH withdrawn from its balance."
-
->
-
+<Callout emoji="🚨" titleKey="Important notices" descriptionKey="Providing a withdrawal address is a required step for any validator account before it will be eligible to have ETH withdrawn from its balance.">
   <div>
     <p>
       <Emoji text="⚠️" mr={2} /> <strong>Caution</strong>: Once set, the withdrawal address cannot be undone or changed. Double-check ownership and accuracy of the address provided before submitting.
