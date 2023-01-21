@@ -496,6 +496,8 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[Hacken](https://hacken.io)** - _Web3 cybersecurity auditor bringing the 360-degree approach to blockchain security._
 
+- **[Pessimistic](https://pessimistic.io)** - Blockchain security audits and tools since 2016.
+
 ### Bug bounty platforms {#bug-bounty-platforms}
 
 - **[Immunefi](https://immunefi.com/)** - _Bug bounty platform for smart contracts and DeFi projects, where security researchers review code, disclose vulnerabilities, get paid, and make crypto safer._
