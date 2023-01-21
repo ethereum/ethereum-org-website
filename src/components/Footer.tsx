@@ -87,11 +87,11 @@ const Footer: React.FC<IProps> = () => {
         },
         {
           to: `/stablecoins/`,
-          text: t("page-stablecoins-title"),
+          text: t("stablecoins"),
         },
         {
           to: `/staking/`,
-          text: t("page-upgrades-get-involved-stake-eth"),
+          text: t("stake-eth"),
         },
       ],
     },

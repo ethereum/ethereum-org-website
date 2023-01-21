@@ -236,6 +236,7 @@
   "skip-to-main-content": "Skip to main content",
   "smart-contracts": "Smart contracts",
   "stablecoins": "Stablecoins",
+  "stake-eth": "Stake ETH",
   "staking": "Staking",
   "solo": "Solo staking",
   "saas": "Staking as a service",
@@ -279,5 +280,6 @@
   "decentralized-social-networks": "Decentralized social networks",
   "decentralized-identity": "Decentralized identity",
   "yes": "Yes",
-  "zero-knowledge-proofs": "Zero-knowledge proofs"
+  "zero-knowledge-proofs": "Zero-knowledge proofs",
+  "page-index-meta-title": "Home"
 }
