@@ -157,9 +157,9 @@ Cu plugin-ul „solidity-coverage” puteți să verificați la câte dintre că
 ### Etapa 1: Creați un proiect „metacoin” și instalați instrumentele „coverage” {#step-1-create-a-metacoin-project-and-install-coverage-tools}
 
 ```bash
-$ npm install --save-dev truffle
-$ npm install --save-dev coveralls
-$ npm install --save-dev solidity-coverage
+npm install --save-dev truffle
+npm install --save-dev coveralls
+npm install --save-dev solidity-coverage
 ```
 
 ### Etapa 2: Adăugați „solidity-coverage” la matricea plugin-urilor din truffle-config.js {#step-2-add-solidity-coverage-to-the-plugins-array-in-truffle-configjs}

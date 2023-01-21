@@ -75,7 +75,7 @@ Vediamo perché uno standard è così importante per semplificare l'ispezione de
 Prima di tutto, controlla di avere installato la libreria Python [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation):
 
 ```
-$ pip install web3
+pip install web3
 ```
 
 ```python
