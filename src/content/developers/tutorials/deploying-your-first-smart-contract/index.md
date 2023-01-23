@@ -2,7 +2,7 @@
 title: Deploying your first smart contract
 description: An introduction to deploying your first smart contract on an Ethereum test network
 author: "jdourlens"
-tags: ["smart contracts", "remix", "solidity", "getting started", "deploying"]
+tags: ["smart contracts", "remix", "solidity", "deploying"]
 skill: beginner
 lang: en
 published: 2020-04-03
@@ -45,7 +45,7 @@ contract Counter {
 }
 ```
 
-If you’re used to programing you can easily guess what this program does. Here is an explainer line by line:
+If you’re used to programming you can easily guess what this program does. Here is an explainer line by line:
 
 - Line 3: We define a contract with the name `Counter`.
 - Line 6: Our contract stores one unsigned integer named `count` starting at 0.

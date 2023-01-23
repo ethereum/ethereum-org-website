@@ -69,7 +69,7 @@ L'ecosistema Ethereum té com a missió aportar fons a béns públics i projecte
 
 ## Professionals financers i comptables <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
 
-- Ethereum és la llar de l'ecosistema de «Finances descentralitzades», una xarxa de protocols i aplicacions que ofereixen un sistema financer alternatiu. Si sou professionals financers, doneu una ullada a algunes aplicacions DeFi en [DeFi Pulse](https://defipulse.com/) o [DeFiPrime](https://defiprime.com)
+- Ethereum és la llar de l'ecosistema de «Finances descentralitzades», una xarxa de protocols i aplicacions que ofereixen un sistema financer alternatiu. Si sou professionals financers, doneu una ullada a algunes aplicacions DeFi en [DeFi Llama](https://defillama.com/) o [DeFiPrime](https://defiprime.com)
 - Comptable? Els actius d'Ethereum (ETH, tokens, DeFi, etc.) presenten molts problemes de comptabilitat per a novells. Podríeu començar per donar una ullada a alguns projectes que busquen ajudar els usuaris de criptomonedes a solucionar els seus reptes comptables, com ara [Rotki](https://rotki.com/)
 
 ## Gestors de producte <Emoji text=":fountain_pen:" size={1} /> {#product-managers}

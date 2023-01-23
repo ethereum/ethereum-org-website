@@ -8,7 +8,7 @@ image: ../../../../../assets/staking/leslie-solo.png
 alt: Leslie il rinoceronte sul suo chip informatico.
 sidebarDepth: 2
 summaryPoints:
-  - Ricevi ricompense massime direttamente dal protocollo (incluse le commissioni non bruciate dopo La Fusione) per mantenere il tuo validatore propriamente funzionante e online
+  - Ricevi le ricompense massime direttamente dal protocollo per mantenere il tuo validatore propriamente in funzione e online
   - Opera hardware domestico e aggiungi personalmente alla sicurezza e decentralizzazione della rete di Ethereum
   - Rimuovi la fiducia e non lasciar mai perdere il controllo delle chiavi dei tuoi fondi
 ---
@@ -57,7 +57,7 @@ Per quanto vorremmo che lo staking in solo fosse accessibile e privo di rischi p
     <p style={{marginTop: "1rem"}}><a href="/security">Sicurezza di Ethereum e prevenzione delle truffe</a></p>
   </ExpandableCard>
   <ExpandableCard title="Nessun prelievo (per ora)" eventCategory="SoloStaking" eventName="clicked no withdrawing">
-    Il prelievo degli ETH in staking o delle ricompense dal saldo di un validatore non è ancora supportato. Il supporto per i prelievi è pianificato per l'aggiornamento Shanghai, consecutivo alla Fusione. Dovresti anticipare che i tuoi ETH resteranno bloccati per almeno uno o due anni. Dopo l'aggiornamento Shanghai potrai prelevare liberamente porzioni o tutto il tuo stake se lo desideri.
+    Il prelievo degli ETH in staking o delle ricompense dal saldo di un validatore non è ancora supportato. Il supporto per i prelievi è pianificato per il prossimo aggiornamento Shanghai. Dovresti anticipare che i tuoi ETH resteranno bloccati per almeno uno o due anni. Dopo l'aggiornamento Shanghai potrai prelevare liberamente porzioni o tutto il tuo stake se lo desideri.
   </ExpandableCard>
   <ExpandableCard title="Manutenzione" eventCategory="SoloStaking" eventName="clicked maintenance">
     L'hardware, talvolta, si guasta, le connessioni di rete generano errori e il software del client a volte necessita di aggiornamenti. La manutenzione del nodo è inevitabile e richiederà occasionalmente la tua attenzione. Vorrai assicurarti di esser consapevole di qualsiasi aggiornamento di rete anticipato o di altri aggiornamenti critici del client.
@@ -87,10 +87,6 @@ Dopo Shanghai, gli utenti potranno prelevare le proprie ricompense nonché il pr
 Il Launchpad di Staking è un'applicazione open source che ti aiuterà a diventare uno staker. Ti guiderà per la scelta dei tuoi client, la generazione delle tue chiavi e il deposito dei tuoi ETH al contratto di deposito di staking. Una lista di controllo è fornita per assicurarsi che tu abbia coperto tutto per configurare in sicurezza il tuo validatore.
 
 <StakingLaunchpadWidget />
-
-<InfoBanner emoji=":panda:" isWarning>
-<strong>Nota per gli staker esistenti:</strong> La Fusione si avvicina, il che porta qualche modifica rispetto al lancio dello staking. Assicurati di conoscere bene con la <a href="https://launchpad.ethereum.org/en/merge-readiness">Lista di controllo di preparazione alla Fusione</a> sul Launchpad di Staking.
-</InfoBanner>
 
 ## Cosa considerare con il nodo e gli strumenti di configurazione del client {#node-tool-considerations}
 
@@ -129,7 +125,9 @@ Hai un suggerimento per uno strumento di staking che abbiamo dimenticato? Dai un
 Esistono alcune domande molto comuni sullo staking che meritano di essere affrontate.
 
 <ExpandableCard title="Cos'è un validatore?">
-Un <em>validatore</em> è un'entità virtuale che risiede sulla Beacon Chain e partecipa al consenso del protocollo di Ethereum. I validatori sono rappresentati da un saldo, una chiave pubblica e altre proprietà. Un <em>client del validatore</em> è il software che agisce per conto del validatore detenendone e usandone la chiave privata. Un singolo client del validatore può detenere molte coppie di chiavi, controllando molti validatori.
+
+Un _validatore_ è un'entità virtuale che risiede su Ethereum e partecipa al consenso del protocollo di Ethereum. I validatori sono rappresentati da un saldo, una chiave pubblica e altre proprietà. Un _client del validatore_ è il software che agisce per conto del validatore, detenendone e usandone la chiave privata. Un singolo client del validatore può detenere molte coppie di chiavi, controllando molti validatori.
+
 </ExpandableCard>
 
 <ExpandableCard title="Posso depositare più di 32 ETH?">
@@ -145,7 +143,7 @@ Andare offline quando la rete sta finalizzando correttamente NON comporterà alc
 
 Nota che le sanzioni per inattività sono proporzionali a quanti validatori sono offline contemporaneamente. Nei casi in cui una grande porzione della rete è offline in una volta sola, le sanzioni per ciascuno di questi validatori saranno maggiori rispetto a quando non è disponibile un singolo validatore.
 
-In casi estremi, se la rete interrompe la finalizzazione a causa del fatto che più di un terzo dei validatori è offline, questi utenti subiranno quella che è nota come una <em>fuga d'inattività quadratica</em>, una perdita esponenziale di ETH dai conti del validatore offline. Questo consente alla rete, eventualmente, di auto-curarsi bruciando gli ETH dei validatori inattivi finché il loro saldo non raggiunge i 16 ETH, e a quel punto saranno automaticamente espulsi dal pool del validatore. I validatori online rimanenti alla fine comprenderanno ancora oltre i 2/3 della rete, soddisfacendo la super maggioranza necessaria per finalizzare nuovamente la catena.
+In casi estremi, se la rete interrompe la finalizzazione poiché più di un terzo dei validatori è offline, questi utenti subiranno quella che è nota come <em>fuga d'inattività quadratica</em>, una riduzione esponenziale di ETH dai conti offline dei validatori. Questo consente alla rete, eventualmente, di auto-curarsi bruciando gli ETH dei validatori inattivi finché il loro saldo non raggiunge i 16 ETH, e a quel punto saranno automaticamente espulsi dal pool del validatore. I validatori online rimanenti alla fine comprenderanno ancora oltre i 2/3 della rete, soddisfacendo la super maggioranza necessaria per finalizzare nuovamente la catena.
 </ExpandableCard>
 
 <ExpandableCard title="Come mi assicuro di non esser tagliato?">
@@ -157,7 +155,7 @@ Operare un client di super maggioranza (ogni client usato da oltre 2/3 della ret
 
 I bug equivalenti in un <em>client di minoranza non sarebbero mai finalizzati</em> e, ciò risulterebbe in un voto di contorno, con la semplice conseguenza di sanzioni d'inattività, <em>non tagli</em>.
 
-<p><a href="https://hackernoon.com/ethereums-client-diversity-problem">Scopri di più sull'importanza di operare un client di minoranza.</a></p>
+<p><a href="https://hackernoon.com/ethereums-client-diversity-problem">Scopri di più sull'importanza di eseguire un client di minoranza.</a></p>
 <p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Scopri di più sulla prevenzione dei tagli</a></p>
 </ExpandableCard>
 
@@ -177,18 +175,6 @@ Più client del validatore operano su una soluzione d'archiviazione su cloud cen
 Le sanzioni offline sono proporzionali a quanti altri sono offline contemporaneamente. Usare un VPS aumenta notevolmente il rischio che le sanzioni offline saranno più severe e aumenta il rischio di fughe quadratiche o tagli nel caso in cui il guasto sia abbastanza grande. Per minimizzare i tuoi rischi e i rischi alla rete, gli utenti sono vivamente incoraggiati a procurarsi e utilizzare il proprio hardware.
 
 <a href="https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/">Ulteriori informazioni su ricompense e sanzioni</a>
-</ExpandableCard>
-
-<ExpandableCard title="Devo fare qualcosa prima della Fusione?">
-Gli staker che operano correntemente sul client del livello di consenso (Beacon Chain) dovranno anche eseguire un client del livello di esecuzione dopo La Fusione. La nuova API di Engine sarà usata per interfacciarsi tra i due livelli, richiedendo un codice segreto JWT. Se attualmente utilizzi una Beacon Chain senza un client del livello di esecuzione, dovrai sincronizzare il livello di esecuzione prima della Fusione per restare sincronizzato con la rete.
-
-La Fusione porterà anche le commissioni di transazione non bruciate ai validatori. Queste commissioni non si accumulano nel saldo associato alle chiavi del validatore ma possono essere dirette a un regolare indirizzo di Ethereum di tua scelta. Per ricevere le tue mance (commissioni prioritarie) dai blocchi proposti, dovresti aggiornare le impostazioni del tuo client con l'indirizzo verso cui desideri siano inviate.
-
-I collegamenti alla documentazione del singolo client e le informazioni aggiuntive si possono trovare sulla lista di controllo di preparazione alla Fusione sul Launchpad.
-
-<ButtonLink to="https://launchpad.ethereum.org/merge-readiness/">
-Lista di controllo di preparazione alla Fusione
-</ButtonLink>
 </ExpandableCard>
 
 ## Approfondimenti {#further-reading}

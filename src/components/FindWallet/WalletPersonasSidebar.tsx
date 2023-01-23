@@ -1,10 +1,14 @@
 // Libraries
 import React from "react"
-import { useTheme } from "@emotion/react"
-import styled from "@emotion/styled"
-
-// Components
-import Icon from "../Icon"
+import {
+  Box,
+  Flex,
+  Heading,
+  ListItem,
+  UnorderedList,
+  useColorMode,
+  Icon,
+} from "@chakra-ui/react"
 
 // Icons
 import BuyCrypto from "../../assets/wallets/buy_crypto.svg"
@@ -26,160 +30,10 @@ import Multisig from "../../assets/wallets/multisig.svg"
 import SocialRecover from "../../assets/wallets/social_recover.svg"
 import Swap from "../../assets/wallets/swap.svg"
 import Eip1559 from "../../assets/wallets/eip1559.svg"
+import { MdCircle } from "react-icons/md"
 
 // Utils
 import { trackCustomEvent } from "../../utils/matomo"
-
-// Styles
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    padding: 1rem 1rem;
-  }
-`
-
-const FeatureListItem = styled.li<{
-  selected: boolean
-}>`
-  display: flex;
-  gap: 0.2rem;
-  font-size: 0.85rem;
-  line-height: 0.95rem;
-  margin: 0.1rem;
-  align-items: center;
-  p {
-    margin-bottom: 0;
-    color: ${(props) =>
-      props.selected === true
-        ? props.theme.colors.primary
-        : props.theme.colors.text};
-  }
-
-  svg {
-    width: 28px;
-    height: 28px;
-    path {
-      fill: ${(props) => props.theme.colors.text};
-      stroke: ${(props) => props.theme.colors.text};
-    }
-  }
-`
-
-const Persona = styled.div<{
-  selected: boolean
-  isDark: boolean
-}>`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 1.5rem;
-  background: ${({ selected, isDark, theme }) =>
-    selected
-      ? isDark
-        ? theme.colors.primary900
-        : theme.colors.primary200
-      : isDark
-      ? theme.colors.black400
-      : theme.colors.primary100};
-  border-radius: 4px;
-  cursor: pointer;
-  transition: 0.5s all;
-
-  h3 {
-    color: ${(props) => props.theme.colors.text};
-  }
-
-  &:hover {
-    background: ${(props) =>
-      props.selected === true
-        ? props.isDark === true
-          ? props.theme.colors.primary900
-          : props.theme.colors.primary200
-        : props.isDark === true
-        ? props.theme.colors.black500
-        : props.theme.colors.primary200};
-    transition: 0.5s all;
-  }
-`
-
-const PersonaDescription = styled.span<{
-  selected: boolean
-}>`
-  margin: 0.5rem 0 0.8rem 0;
-  padding: 0.7rem 0.6rem 0;
-  color: ${(props) =>
-    props.selected === true
-      ? props.theme.colors.text
-      : props.theme.colors.text200};
-  font-size: 0.9rem;
-  font-weight: normal;
-  transition: 0.5s all;
-  line-height: 1.3;
-  border-top: 1px solid ${(props) => props.theme.colors.lightBorder};
-`
-
-const Title = styled.div`
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  gap: "1rem";
-  margin-bottom: 0.6rem;
-  padding: 0.5rem 0.5rem 0 0.5rem;
-`
-
-const H3 = styled.h3`
-  margin-left: 0.5rem;
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 1.3rem;
-  padding: 0 0.25rem 0 0;
-  line-height: 1.7rem;
-`
-const ProfileFilterPrompt = styled.span`
-  margin: 0;
-  font-weight: normal;
-  font-size: 0.875rem;
-  padding: 0 1.2rem;
-  line-height: 1.3rem;
-  text-align: center;
-  color: ${(props) => props.theme.colors.secondary};
-`
-
-const FeatureGridList = styled.ul`
-  margin: 0;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  width: 100%;
-  column-gap: 0.2rem;
-  row-gap: 0.5rem;
-`
-
-const IconContainer = styled.div`
-  width: 1.3rem;
-  height: 1.3rem;
-`
-
-const StyledIcon = styled(Icon)<{ selected: boolean }>`
-  border-radius: 100%;
-  width: 1rem;
-  height: 1rem;
-  margin: 0 0.25rem;
-  fill: ${(props) =>
-    props.selected === true ? props.theme.colors.primary : "rgba(0, 0, 0, 0)"};
-  background: ${(props) =>
-    props.selected === true
-      ? props.theme.colors.primary
-      : props.theme.colors.priceCardBackground};
-  outline: 1.5px solid
-    ${(props) =>
-      props.selected === true
-        ? props.theme.colors.primary
-        : props.theme.colors.text};
-  outline-offset: 3px;
-`
 
 // Types
 interface Personas {
@@ -301,7 +155,9 @@ const WalletPersonasSidebar = ({
   selectedPersona,
   setSelectedPersona,
 }) => {
-  const theme = useTheme()
+  const { colorMode } = useColorMode()
+  const isDark = colorMode === "dark"
+
   const personas: Personas[] = [
     {
       title: "New to crypto",
@@ -499,16 +355,48 @@ const WalletPersonasSidebar = ({
   ]
 
   return (
-    <Container>
-      <ProfileFilterPrompt>
+    <Flex direction="column" gap={4} p={{ base: 4, sm: 0 }}>
+      <Box
+        as="span"
+        m={0}
+        fontWeight="normal"
+        fontSize="sm"
+        p="0 1.2rem"
+        lineHeight="1.3rem"
+        textAlign="center"
+        color="secondary"
+      >
         Choose the profile that matches your type of user and filter the wallet
         list
-      </ProfileFilterPrompt>
+      </Box>
       {personas.map((persona, idx) => {
         return (
-          <Persona
-            isDark={theme.isDark}
-            selected={selectedPersona === idx}
+          <Flex
+            direction="column"
+            alignItems="flex-start"
+            padding={6}
+            background={
+              selectedPersona === idx
+                ? isDark
+                  ? "primary900"
+                  : "primary200"
+                : isDark
+                ? "black400"
+                : "primary100"
+            }
+            borderRadius="base"
+            cursor="pointer"
+            transition="0.5s all"
+            _hover={{
+              background:
+                selectedPersona === idx
+                  ? isDark
+                    ? "primary900"
+                    : "primary200"
+                  : isDark
+                  ? "black500"
+                  : "primary200",
+            }}
             onClick={() => {
               if (idx === selectedPersona) {
                 resetFilters()
@@ -528,34 +416,99 @@ const WalletPersonasSidebar = ({
               }
             }}
           >
-            <Title>
-              <IconContainer
+            <Flex alignItems="center" gap={2} mb="0.6rem" pt={2} pb={0} px={2}>
+              <Box
+                boxSize="1.3rem"
                 role="checkbox"
                 aria-label={`${persona.title} filter`}
               >
-                <StyledIcon
-                  name="circle"
-                  selected={selectedPersona === idx}
-                  size="2rem"
+                <Icon
+                  as={MdCircle}
+                  borderRadius="full"
+                  boxSize={4}
+                  my={0}
+                  mx={1}
+                  fill={
+                    selectedPersona === idx ? "primary" : "rgba(0, 0, 0, 0)"
+                  }
+                  background={
+                    selectedPersona === idx ? "primary" : "priceCardBackground"
+                  }
+                  outline="1.5px solid"
+                  outlineColor={selectedPersona === idx ? "primary" : "text"}
+                  outlineOffset="3px"
+                  fontSize={8}
                 />
-              </IconContainer>
-              <H3>{persona.title}</H3>
-            </Title>
-            <PersonaDescription selected={selectedPersona === idx}>
+              </Box>
+              <Heading
+                as="h3"
+                ml={2}
+                my={0}
+                fontSize="1.3rem"
+                py={0}
+                pr={1}
+                pl={0}
+                lineHeight="1.7rem"
+                color="text"
+              >
+                {persona.title}
+              </Heading>
+            </Flex>
+            <Box
+              as="span"
+              m="0.5rem 0 0.8rem 0"
+              p="0.7rem 0.6rem 0"
+              color={selectedPersona === idx ? "text" : "text200"}
+              fontSize="0.9rem"
+              fontWeight="normal"
+              transition="0.5s all"
+              lineHeight={1.3}
+              borderTop="1px solid"
+              borderTopColor="lightBorder"
+            >
               {persona.description}
-            </PersonaDescription>
-            <FeatureGridList aria-label={`${persona.title} filters`}>
+            </Box>
+            <UnorderedList
+              m={0}
+              display="grid"
+              gridTemplateColumns="50% 50%"
+              width="full"
+              columnGap="0.2rem"
+              rowGap={2}
+              aria-label={`${persona.title} filters`}
+            >
               {persona.featureHighlight.map((feature) => (
-                <FeatureListItem selected={selectedPersona === idx}>
+                <ListItem
+                  display="flex"
+                  gap="0.2rem"
+                  fontSize="0.85rem"
+                  lineHeight="0.95rem"
+                  margin="0.1rem"
+                  alignItems="center"
+                  sx={{
+                    p: {
+                      mb: 0,
+                      color: selectedPersona === idx ? "primary" : "text",
+                    },
+                    svg: {
+                      width: 7,
+                      height: 7,
+                      path: {
+                        fill: "text",
+                        stroke: "text",
+                      },
+                    },
+                  }}
+                >
                   <span aria-hidden="true">{feature.icon}</span>
                   <span>{feature.label}</span>
-                </FeatureListItem>
+                </ListItem>
               ))}
-            </FeatureGridList>
-          </Persona>
+            </UnorderedList>
+          </Flex>
         )
       })}
-    </Container>
+    </Flex>
   )
 }
 

@@ -3,7 +3,7 @@ title: "Guida del ponte standard di Optimism per contratti"
 description: Come funziona il ponte standard per Optimism? Perché funziona così?
 author: Ori Pomerantz
 tags:
-  - "Solidity"
+  - "solidity"
   - "optimism"
   - "ponte"
   - "livello 2"
@@ -160,7 +160,7 @@ Questa funzione non è davvero necessaria, perché sul L2 è un contratto pre-di
     ) external;
 ```
 
-Il parametro `_l2Gas` è la quantità di gas di L2 che la transazione può spendere. [Fino a un certo limite (elevato), è gratuito](https://community.optimism.io/docs/developers/bridge/messaging/#for-l1-%E2%87%92-l2-transactions-2), quindi, a meno che il contratto ERC-20 non faccia qualcosa di davvero strano durante il conio, non dovrebbe essere un problema. Questa funzione si occupa dello scenario comune, in cui un utente collega le risorse allo stesso indirizzo su una blockchain differente.
+Il parametro `_l2Gas` è l'importo di gas del L2 che la transazione può spendere. [Fino a un certo limite (elevato), è gratuito](https://community.optimism.io/docs/developers/bridge/messaging/#for-l1-%E2%87%92-l2-transactions-2), quindi, a meno che il contratto ERC-20 non faccia qualcosa di davvero strano durante il conio, non dovrebbe essere un problema. Questa funzione si occupa dello scenario comune, in cui un utente collega le risorse allo stesso indirizzo su una blockchain differente.
 
 ```solidity
     /**
@@ -319,16 +319,16 @@ import { ICrossDomainMessenger } from "./ICrossDomainMessenger.sol";
 ```solidity
 /**
  * @title CrossDomainEnabled
- * @dev Helper contract for contracts performing cross-domain communications
+ * @dev Contratto di supporto per contratti che eseguono comunicazioni tra domini
  *
- * Compiler used: defined by inheriting contract
+ * Compiler usato: definito dal contratto ereditario
  */
 contract CrossDomainEnabled {
     /*************
-     * Variables *
+     * Variabili *
      *************/
 
-    // Messenger contract used to send and receive messages from the other domain.
+    // Il contratto di Messaggistica usato per inviare e ricevere messaggi dall'altro dominio.
     address public messenger;
 
     /***************
@@ -436,7 +436,7 @@ Infine, la funzione che invia un messaggio all'altro livello.
 }
 ```
 
-In questo caso, non ci interessiamo della rientranza: sappiamo che `getCrossDomainMessenger()` restituisce un indirizzo attendibile, anche se Slither non ha modo di saperlo.
+In questo caso, non ci preoccupiamo della rientranza, sappiamo che `getCrossDomainMessenger()` restituisce un indirizzo affidabile, anche se Slither non ha modo di saperlo.
 
 ### Il contratto del ponte di L1 {#the-l1-bridge-contract}
 
@@ -486,7 +486,7 @@ import { Lib_PredeployAddresses } from "../../libraries/constants/Lib_PredeployA
 import { Address } from "@openzeppelin/contracts/utils/Address.sol";
 ```
 
-[Utility per indirizzi di OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Address.sol). Serve per distinguere tra gli indirizzi del contratto e quelli appartenenti ai conti posseduti esternamente (EOA).
+[Utility per indirizzi di OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Address.sol). Serve a distinguere tra gli indirizzi del contratto e quelli appartenenti a conti posseduti esternamente (EOA).
 
 Non è una soluzione perfetta, perché non esiste modo di distinguere tra chiamate dirette e chiamate effettuate dal costruttore di un contratto ma, quantomeno, ci consente di identificare ed evitare alcuni errori comuni dell'utente.
 
@@ -546,7 +546,7 @@ Una doppia [mappatura](https://www.tutorialspoint.com/solidity/solidity_mappings
 
 Per poter aggiornare questo contratto senza dover copiare tutte le variabili in memoria. Per farlo, usiamo un [`Proxy`](https://docs.openzeppelin.com/contracts/3.x/api/proxy), un contratto che usa [`delegatecall`](https://solidity-by-example.org/delegatecall/) per trasferire le chiamate a un contratto distinto, il cui indirizzo è memorizzato dal contratto del proxy (quando aggiorni, dici al proxy di modificare tale indirizzo). Quando usi `delegatecall`, la memoria rimane quella del contratto _chiamante_, quindi non sono influenzati i valori di tutte le variabili di stato del contratto.
 
-Un effetto di questo schema è che non viene usata la memoria del contratto _chiamato_ di `delegatecall` e, dunque, i valori del costruttore passati a esso non sono rilevanti. Questo è il motivo per cui possiamo fornire un valore senza senso al costruttore di `CrossDomainEnabled`. È anche il motivo per cui l'inizializzazione di seguito è separata dal costruttore.
+Un effetto di questo schema è che l'archiviazione del contratto, ovvero la _chiamata_ di `delegatecall`, non è usata e dunque i valori del costruttore a esso passati non importano. Questo è il motivo per cui possiamo fornire un valore senza senso al costruttore di `CrossDomainEnabled`. È anche il motivo per cui l'inizializzazione di seguito è separata dal costruttore.
 
 ```solidity
     /******************
@@ -560,7 +560,7 @@ Un effetto di questo schema è che non viene usata la memoria del contratto _chi
     // slither-disable-next-line external-function
 ```
 
-Questo [test di Slither](https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external), identifica le funzioni non chiamate dal codice del contratto e che potrebbero dunque esser dichiarate `external` invece che `public`. Il costo del gas delle funzioni `external` può esser inferiore, perché possono ricevere dei parametri nei dati della chiamata. Le funzioni dichiarate come `public` devono esser accessibili dall'interno del contratto. I contratti non possono modificare i propri dati di chiamata, quindi, i parametri devono essere in memoria. Quando una simile funzione è chiamata esternamente, è necessario copiare i dati di chiamata in memoria, e questa operazione costa del gas. In questo caso la funzione è chiamata solo una volta, quindi, non siamo interessati alla sua inefficienza.
+Questo [test di Slither](https://github.com/crytic/slither/wiki/Detector-Documentation#public-function-that-could-be-declared-external), identifica le funzioni non chiamate dal codice del contratto e che potrebbero dunque esser dichiarate `external` invece che `public`. Il costo del gas delle funzioni `external` può essere inferiore, perché possono contenere dei parametri nei dati della chiamata. Le funzioni dichiarate come `public` devono esser accessibili dall'interno del contratto. I contratti non possono modificare i propri dati di chiamata, quindi, i parametri devono essere in memoria. Quando una funzione simile è chiamata esternamente, è necessario copiare i dati della chiamata alla memoria, il che costa gas. In questo caso la funzione è chiamata solo una volta, quindi, non siamo interessati alla sua inefficienza.
 
 ```solidity
     function initialize(address _l1messenger, address _l2TokenBridge) public {
@@ -749,7 +749,7 @@ Queste due funzioni sono wrapper intorno a `_initiateERC20Deposit`, la funzione 
     ) internal {
 ```
 
-Questa funzione è simile a `_initiateETHDeposit` di cui sopra, con alcune importanti differenze. La prima differenza è che questa funzione riceve come parametri gli indirizzi del token e l'importo da trasferire. Nel caso di ETH, la chiamata al ponte include già il trasferimento della risorsa al conto del ponte (`msg.value`).
+Questa funzione è simile a `_initiateETHDeposit` di cui sopra, con alcune importanti differenze. La prima differenza è che questa funzione riceve come parametri gli indirizzi del token e l'importo da trasferire. Nel caso degli ETH, la chiamata al ponte include il trasferimento della risorsa al conto del ponte (`msg.value`).
 
 ```solidity
         // When a deposit is initiated on L1, the L1 Bridge transfers the funds to itself for future
@@ -1269,10 +1269,10 @@ Se un utente ha commesso un errore rilevabile usando l'indirizzo del token L2 er
 }
 ```
 
-## Conclusione {#conclusion}
+## Conclusioni {#conclusion}
 
 Il ponte standard è il meccanismo più flessibile per i trasferimenti di risorse. Tuttavia, essendo così generico, non è sempre il metodo più facile da usare. Specialmente per i prelievi, gran parte degli utenti preferisce usare [ponti di terze parti](https://www.optimism.io/apps/bridges) che non attendono il periodo di contestazione dell'errore e non richiedono una prova di Merkle per finalizzare il prelievo.
 
-Questi ponti funzionano tipicamente avendo delle risorse su L1, che forniscono immediatamente a fronte di una piccola commissione (spesso inferiore al costo di gas per un prelievo del ponte standard). Quando il ponte (o le persone che lo gestiscono) prevede di avere poche risorse su L1, trasferisce delle sufficienti risorse da L2. Poiché questi sono prelievi molto grandi, il costo di prelievo è ammortizzato su un grande importo e ha un'incidenza minore.
+Questi ponti funzionano tipicamente avendo delle risorse sul L1, che forniscono immediatamente per una ridotta commissione (spesso inferiore al costo del gas per un prelievo del ponte standard). Quando il ponte (o le persone che lo gestiscono) prevede di avere poche risorse su L1, trasferisce delle sufficienti risorse da L2. Poiché questi sono prelievi molto grandi, il costo di prelievo è ammortizzato su un grande importo e ha un'incidenza minore.
 
 Spero che questo articolo ti abbia aiutato a comprendere meglio come funziona il livello 2 e come scrivere un codice chiaro e sicuro in Solidity.

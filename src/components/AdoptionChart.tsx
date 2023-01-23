@@ -1,62 +1,63 @@
-import React from "react"
-import { useTheme } from "@emotion/react"
-import styled from "@emotion/styled"
+import React, { ReactNode } from "react"
+import { Box, BoxProps, Flex, useColorMode } from "@chakra-ui/react"
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-`
+const Column: React.FC<{ children: ReactNode }> = ({ children }) => {
+  return (
+    <Flex
+      flexDirection="column-reverse"
+      ml={{ base: 2, md: 4 }}
+      _first={{ ml: 0 }}
+    >
+      {children}
+    </Flex>
+  )
+}
 
-const Column = styled.div`
-  display: flex;
-  flex-direction: column-reverse;
-  margin-left: 0.5rem;
+const Cell: React.FC<BoxProps> = ({ children, color, ...props }) => {
+  return (
+    <Box
+      border="1px solid"
+      borderColor={color || "text"}
+      color={color || "text"}
+      py="0.8rem"
+      px={{ base: 2, md: "1.2rem" }}
+      fontSize="0.9rem"
+      fontWeight="bold"
+      lineHeight="none"
+      textAlign="center"
+      _last={{
+        borderTopLeftRadius: "2xl",
+        borderTopRightRadius: "2xl",
+      }}
+      sx={{
+        "&:nth-child(-n + 2)": {
+          borderBottomLeftRadius: "2xl",
+          borderBottomRightRadius: "2xl",
+        },
+      }}
+      {...props}
+    >
+      {children}
+    </Box>
+  )
+}
 
-  &:first-child {
-    margin-left: 0;
-  }
-
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-left: 1rem;
-  }
-`
-
-const Cell = styled.div<{ color?: string }>`
-  border: 1px solid ${({ theme, color }) => (color ? color : theme.colors.text)};
-  color: ${({ theme, color }) => (color ? color : theme.colors.text)};
-  padding: 0.8rem 0.5rem;
-  font-size: 0.9rem;
-  font-weight: 700;
-  line-height: 1;
-  text-align: center;
-
-  &:last-child {
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-  }
-
-  &:nth-child(-n + 2) {
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-  }
-
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    padding: 0.8rem 1.2rem;
-  }
-`
-
-const ColumnName = styled(Cell)`
-  border: 0;
-  padding-top: 1.5rem;
-`
+const ColumnName: React.FC<{ children: ReactNode }> = ({ children }) => {
+  return (
+    <Cell border="none" pt={6}>
+      {children}
+    </Cell>
+  )
+}
 
 interface IProps {}
 
 const AdoptionChart: React.FC<IProps> = () => {
-  const { isDark } = useTheme()
+  const { colorMode } = useColorMode()
+  const isDark = colorMode === "dark"
 
   return (
-    <Container>
+    <Flex>
       <Column>
         <ColumnName>2010</ColumnName>
         <Cell color={isDark ? "#FBF9A5" : "#95935B"}>Investors</Cell>
@@ -80,7 +81,7 @@ const AdoptionChart: React.FC<IProps> = () => {
         <Cell color={isDark ? "#B9B9B9" : "#9E9E9E"}>Gamers</Cell>
         <Cell color={isDark ? "#E2B79E" : "#E78A54"}>Refugees</Cell>
       </Column>
-    </Container>
+    </Flex>
   )
 }
 
