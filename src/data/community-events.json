@@ -18,6 +18,69 @@
     "endDate": "2023-03-05"
   },
   {
+    "title": "FVM Space Warp Hackathon",
+    "to": "https://ethglobal.com/events/spacewarp",
+    "sponsor": null,
+    "location": "Remote",
+    "description": "Apply to Space Warp today, and join hundreds of developers and creatives from around the world online to explore the frontier of web3.",
+    "startDate": "2023-01-20",
+    "endDate": "2023-02-10"
+  },
+  {
+    "title": "Scaling Ethereum",
+    "to": "https://ethglobal.com/events/scaling2023",
+    "sponsor": null,
+    "location": "Remote",
+    "description": "Strap in for three weeks of hacking and summits devoted to pushing the envelope and building the future infrastructure of our ecosystem.",
+    "startDate": "2023-03-10",
+    "endDate": "2023-03-29"
+  },
+  {
+    "title": "ETHGlobal Tokyo",
+    "to": "https://tokyo.ethglobal.com/",
+    "sponsor": null,
+    "location": "Tokyo, Japan",
+    "description": "ETHGlobal is coming to Tokyo, as the Ethereum community converges in Asia for an unforgettable weekend of hacking, summits, and side events celebrating a new year in our ecosystem.",
+    "startDate": "2023-04-14",
+    "endDate": "2023-04-16"
+  },
+  {
+    "title": "ETHGlobal Istanbul",
+    "to": "https://ethglobal.com/events/istanbul",
+    "sponsor": null,
+    "location": "Istanbul, Turkey",
+    "description": "Get hype to build the future of web3 with thousands of developers and creatives in one of the oldest cities in the world, let's hack in Istanbul.",
+    "startDate": "2023-05-26",
+    "endDate": "2023-05-28"
+  },
+  {
+    "title": "ETHGlobal Toronto",
+    "to": "https://ethglobal.com/events/toronto",
+    "sponsor": null,
+    "location": "Toronto, Canada",
+    "description": "Join us and explore the frontier of web3 in one of the most vibrant cities in Canada.",
+    "startDate": "2023-06-23",
+    "endDate": "2023-06-25"
+  },
+  {
+    "title": "ETHGlobal Paris",
+    "to": "https://ethglobal.com/events/paris2023",
+    "sponsor": null,
+    "location": "Paris, France",
+    "description": "ETHGlobal is coming to Paris this summer! Join thousands of developers and creatives in one of the coolest cities in Europe this July, paired with ETHCC.",
+    "startDate": "2023-07-21",
+    "endDate": "2023-07-23"
+  },
+  {
+    "title": "ETHGlobal New York",
+    "to": "https://ethglobal.com/events/newyork2023",
+    "sponsor": null,
+    "location": "New York City, USA",
+    "description": "ETHGlobal returns to New York City for the first time since 2019.",
+    "startDate": "2023-09-22",
+    "endDate": "2023-09-24"
+  },
+  {
     "title": "ETH Porto",
     "to": "https://ethporto.org/",
     "sponsor": null,
@@ -388,12 +451,12 @@
   },
   {
     "title": "ETHOnline",
-    "to": "https://online.ethglobal.com/",
+    "to": "https://ethglobal.com/events/ethonline2023",
     "sponsor": null,
     "location": "Remote",
-    "description": "ETHGlobal's biggest global online event will happen again this September with hundreds of projects and weekly summits!",
-    "startDate": "2022-09-01",
-    "endDate": "2022-09-30"
+    "description": "ETHGlobal's biggest global online event will happen again this October with hundreds of projects and weekly summits!",
+    "startDate": "2023-10-06",
+    "endDate": "2023-10-25"
   },
   {
     "title": "EthereumSP",
@@ -531,12 +594,12 @@
     "endDate": "2023-03-16"
   },
   {
-    "title": "The First Hackathon around Privacy",
+    "title": "ETH Privacy – The First Hackathon around Privacy",
     "to": "https://www.leadingprivacy.com/istanbul",
     "sponsor": null,
     "location": "Turkey, Istanbul",
-    "description": "We will celebrate privacy and discuss latest findings & development, as well as must haves and upcoming opportunities of the Ethereum Ecosystem.",
-    "startDate": "2023-04-29",
+    "description": "Buidl on the future of privacy for crypto wallets and more.",
+    "startDate": "2023-04-27",
     "endDate": "2023-04-30"
   },
   {
