@@ -980,7 +980,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
         </p>
         <ul>
           <li>
-            <Link to="https://docs.dappnode.io/get-started/installation/arm-hardware/installation">
+            <Link to="https://docs.dappnode.io/user/quick-start/Core/installation#arm">
               <Translation id="page-run-a-node-rasp-pi-note-1-link" />
             </Link>{" "}
             -{" "}
