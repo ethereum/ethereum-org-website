@@ -1,7 +1,6 @@
 // Import libraries
-import React, { FC, useEffect, useState, useMemo } from "react"
+import React, { FC, useState, useMemo } from "react"
 import {
-  Box,
   Button,
   Flex,
   FormControl,
@@ -32,7 +31,7 @@ interface IProps {}
 const WithdrawalCredentials: FC<IProps> = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [hasError, setHasError] = useState<boolean>(false)
-  const [inputValue, setInputValue] = useState<number>(1)
+  const [inputValue, setInputValue] = useState<number>(0)
   const [validator, setValidator] = useState<Validator | null>(null)
   const [isTestnet, setIsTestnet] = useState<boolean>(false)
 
@@ -61,7 +60,9 @@ const WithdrawalCredentials: FC<IProps> = () => {
     }
   }
 
-  const handleChange = (value) => setInputValue(value.replace(/\D/g, ""))
+  const handleChange = (value: string) =>
+    setInputValue(parseInt(value.replace(/\D/g, "")))
+  const handleNetworkToggle = () => setIsTestnet((prev) => !prev)
 
   const longAddress = useMemo<string>(
     () => (validator ? `0x${validator.withdrawalCredentials.slice(-40)}` : ""),
@@ -109,11 +110,26 @@ const WithdrawalCredentials: FC<IProps> = () => {
     )
   }, [isLoading, hasError, validator, longAddress, shortAddress])
 
-  const handleNetworkToggle = () => setIsTestnet((prev) => !prev)
-
   return (
-    <Box>
-      <Flex alignItems="center" gap={4} mb={4}>
+    <Flex direction="column" gap={4}>
+      <FormControl display="flex" alignItems="center">
+        <FormLabel htmlFor="mainnet-testnet" mb={0} me={2}>
+          Mainnet
+        </FormLabel>
+        <Switch
+          id="mainnet-testnet"
+          onChange={handleNetworkToggle}
+          sx={{
+            "&>[data-checked]": {
+              background: "switchBackground !important",
+            },
+          }}
+        />
+        <FormLabel htmlFor="mainnet-testnet" mb={0} ms={2}>
+          Goerli testnet
+        </FormLabel>
+      </FormControl>
+      <Flex alignItems="center" gap={4}>
         <FormLabel htmlFor="validatorIndex">Your validator index:</FormLabel>
         <NumberInput
           size="lg"
@@ -150,17 +166,8 @@ const WithdrawalCredentials: FC<IProps> = () => {
           </CopyToClipboard>
         )}
       </Flex>
-      <FormControl display="flex" alignItems="center">
-        <FormLabel htmlFor="mainnet-testnet" mb={0} me={2}>
-          Mainnet
-        </FormLabel>
-        <Switch id="mainnet-testnet" onChange={handleNetworkToggle} />
-        <FormLabel htmlFor="mainnet-testnet" mb={0} ms={2}>
-          Goerli testnet
-        </FormLabel>
-      </FormControl>
       <Text mt={4}>{resultText}</Text>
-    </Box>
+    </Flex>
   )
 }
 
