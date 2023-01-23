@@ -3,6 +3,7 @@ title: Whitepaper Ethereum
 description: Documento introduttivo a Ethereum, pubblicato nel 2013 prima del lancio.
 lang: it
 sidebarDepth: 2
+hideEditButton: true
 ---
 
 # Whitepaper Ethereum {#ethereum-whitepaper}
@@ -314,7 +315,7 @@ Segue una descrizione di massima di come programmare una DAO. Il design più sem
 - `[1,i]` per registrare un voto a favore della proposta `i`
 - `[2,i]` per finalizzare la proposta `i` se sono stati espressi abbastanza voti
 
-Il contratto avrebbe poi clausole per ognuno dei punti. Manterrebbe un registro di tutte le modifiche aperte nell'archivio, insieme a una lista di chi le ha votate. Avrebbe anche un elenco di tutti i membri. Quando un cambiamento dell'archivio arriva ai due terzi dei membri che lo votano, una transazione finalizzante potrebbe eseguire la modifica. Una struttura più sofisticata avrebbe anche una capacità di voto integrata per caratteristiche come l'invio di una transazione, l'aggiunta e la rimozione di membri e potrebbe persino assicurare la delega del voto in stile [democrazia liquida](https://wikipedia.org/wiki/Delegative_democracy) (cioè chiunque può delegare qualcuno a votare per conto suo, e la delega è transitiva, quindi se A delega B e B delega C, allora C determina il voto di A). Questo design consentirebbe alla DAO di crescere organicamente come comunità decentralizzata, consentendo alle persone di delegare eventualmente il compito di filtrare chi è un membro a specialisti, sebbene, a differenza del "sistema attuale", gli specialisti possano facilmente entrare e uscire dall'esistenza nel tempo man mano che i singoli membri della comunità cambiano i loro allineamenti.
+Il contratto avrebbe poi clausole per ognuno dei punti. Manterrebbe un registro di tutte le modifiche aperte nell'archivio, insieme a una lista di chi le ha votate. Avrebbe anche un elenco di tutti i membri. Quando un cambiamento dell'archivio arriva ai due terzi dei membri che lo votano, una transazione finalizzante potrebbe eseguire la modifica. Una struttura più sofisticata avrebbe anche una capacità di voto integrata per funzionalità quali l'invio di una transazione, l'aggiunta e la rimozione di membri, e potrebbe persino assicurare la delega del voto in stile [democrazia liquida](https://wikipedia.org/wiki/Liquid_democracy) (ossia chiunque può delegare qualcuno a votare per conto suo e la delega è transitiva, quindi se A delega B e B delega C, allora C determina il voto di A). Questo design consentirebbe alla DAO di crescere organicamente come comunità decentralizzata, consentendo alle persone di delegare eventualmente il compito di filtrare chi è un membro a specialisti, sebbene, a differenza del "sistema attuale", gli specialisti possano facilmente entrare e uscire dall'esistenza nel tempo man mano che i singoli membri della comunità cambiano i loro allineamenti.
 
 Un modello alternativo è per una società decentralizzata, dove ogni conto può avere zero o più quote e sono necessarie più di due terzi di quote per prendere una decisione. Una struttura completa comporterebbe la funzionalità di gestione delle risorse, la capacità di fare un'offerta per l'acquisto o la vendita di azioni e la capacità di accettare offerte (preferibilmente con un meccanismo di corrispondenza degli ordini all'interno del contratto). Esiste anche una delega in stile "democrazia liquida", generalizzando il concetto di "consiglio di amministrazione".
 
@@ -501,7 +502,7 @@ Il concetto di funzione di transizione arbitraria tra stati implementato dal pro
 10. [Whitepaper Colored coins](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)
 11. [Whitepaper Mastercoin](https://github.com/mastercoin-MSC/spec)
 12. [Aziende autonome decentralizzate, Bitcoin Magazine](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)
-13. [Verifica del pagamento semplificata](https://en.bitcoin.it/wiki/Scalability#Simplifiedpaymentverification)
+13. [Verifica del pagamento semplificata](https://en.bitcoin.it/wiki/Scalability#Simplified_payment_verification)
 14. [Albero di Merkle](https://wikipedia.org/wiki/Merkle_tree)
 15. [Patricia tree](https://wikipedia.org/wiki/Patricia_tree)
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
@@ -509,7 +510,7 @@ Il concetto di funzione di transizione arbitraria tra stati implementato dal pro
 18. [Mike Hearn sulla proprietà intelligente al Turing Festival](http://www.youtube.com/watch?v=Pu4PAMFPo5Y)
 19. [Ethereum RLP](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
 20. [Alberi di Merkle e Patricia di Ethereum](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
-21. [Peter Todd sugli alberi della somma Merkle](http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
+21. [Peter Todd sugli alberi della somma Merkle](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
 _Per la storia del whitepaper, vedere [questo wiki](https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
 

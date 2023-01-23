@@ -1,6 +1,6 @@
 import React from "react"
-import { Flex, FlexProps, useMediaQuery } from "@chakra-ui/react"
-import { lightTheme as oldTheme } from "../theme"
+import { Center, FlexProps, useMediaQuery } from "@chakra-ui/react"
+import { lightTheme as oldTheme } from "../../theme"
 
 export interface IProps extends FlexProps {
   shouldShow?: boolean
@@ -15,7 +15,7 @@ const BannerNotification: React.FC<IProps> = ({
   return (
     <>
       {shouldShow && (
-        <Flex
+        <Center
           maxW={isLGScreen ? oldTheme.variables.maxPageWidth : "100%"}
           w="100%"
           py="4"
@@ -30,7 +30,7 @@ const BannerNotification: React.FC<IProps> = ({
           {...props}
         >
           {children}
-        </Flex>
+        </Center>
       )}
     </>
   )

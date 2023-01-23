@@ -1,7 +1,7 @@
 import React from "react"
 import { Button as ChakraButton, ButtonProps } from "@chakra-ui/react"
 
-import { scrollIntoView } from "../utils/scrollIntoView"
+import { scrollIntoView } from "../../utils/scrollIntoView"
 
 export interface IProps extends ButtonProps {
   toId?: string

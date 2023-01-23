@@ -478,4 +478,4 @@ _withdrawMyTokenFromTokenFarm.js çıktısı_
 
 [DeFi nedir? Başlangıç Rehberi (2021 Güncellendi) (99bitcoins.com)](https://99bitcoins.com/what-is-defi/)
 
-[DeFi - DeFi Pulse'da Merkeziyetsiz Finans Lider Tablosu](https://defipulse.com/)
+[DeFi - DeFi Llama'da Merkeziyetsiz Finans Lider Tablosu](https://defillama.com/)

@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
 import { ChakraProps, Flex, Heading, Text } from "@chakra-ui/react"
-import Emoji from "./Emoji"
+import Emoji from "../Emoji"
 
 export interface IProps extends ChakraProps {
   children?: React.ReactNode

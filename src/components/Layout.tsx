@@ -135,8 +135,8 @@ const Layout: React.FC<IProps> = ({
                 margin="0px auto"
                 minHeight="100vh"
                 flexFlow="column"
-                maxW={{ 
-                  lg: lightTheme.variables.maxPageWidth 
+                maxW={{
+                  lg: lightTheme.variables.maxPageWidth,
                 }}
               >
                 <ZenMode>
@@ -144,9 +144,7 @@ const Layout: React.FC<IProps> = ({
                   {shouldShowSideNav && <SideNavMobile path={path} />}
                 </ZenMode>
                 <SkipLinkAnchor id="main-content" />
-                <Flex
-                  flexDirection={{ base: 'column', lg: 'row' }}
-                >
+                <Flex flexDirection={{ base: "column", lg: "row" }}>
                   {shouldShowSideNav && (
                     <ZenMode>
                       <SideNav path={path} />
