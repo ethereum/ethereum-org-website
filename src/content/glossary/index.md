@@ -27,7 +27,7 @@ An object containing an [address](#address), balance, [nonce](#nonce), and optio
 
 ### address {#address}
 
-Most generally, this represents an [EOA](#eoa) or [contract](#contract-accouint) that can receive (destination address) or send (source address) [transactions](#transaction) on the blockchain. More specifically, it is the rightmost 160 bits of a [Keccak hash](#keccak-256) of an [ECDSA](#ecdsa) [public key](#public-key).
+Most generally, this represents an [EOA](#eoa) or [contract](#contract-account) that can receive (destination address) or send (source address) [transactions](#transaction) on the blockchain. More specifically, it is the rightmost 160 bits of a [Keccak hash](#keccak-256) of an [ECDSA](#ecdsa) [public key](#public-key).
 
 ### application binary interface (ABI) {#abi}
 
@@ -194,6 +194,10 @@ Ethereum's consensus layer is the network of [consensus clients](#consensus-clie
 ### consensus rules {#consensus-rules}
 
 The block validation rules that full nodes follow to stay in consensus with other nodes. Not to be confused with [consensus](#consensus).
+
+### Considered for Inclusion (CFI) {#cfi}
+
+A Core [EIP](#eip) which is not yet active on Mainnet, and client developers are generally positive towards the idea. Assuming it meets all the requirements for mainnet inclusion, it could potentially be included in a network upgrade (not necessarily the next one).
 
 ### Constantinople fork {#constantinople-fork}
 

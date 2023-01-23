@@ -5,7 +5,6 @@ import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 
 import Translation from "../components/Translation"
-import Pill from "../components/Pill"
 import BoxGrid from "../components/BoxGrid"
 import Card from "../components/Card"
 import Callout from "../components/Callout"
@@ -37,6 +36,7 @@ import FeedbackCard from "../components/FeedbackCard"
 import { translateMessageId } from "../utils/translations"
 import { getImage, getSrc } from "../utils/image"
 import { Context } from "../types"
+import { Badge } from "@chakra-ui/react"
 
 const MagiciansImage = styled(GatsbyImage)`
   background-size: cover;
@@ -1039,7 +1039,7 @@ const DappsPage = ({
         "page-dapps-dapp-description-cryptopunks",
         intl
       ),
-      link: "https://www.larvalabs.com/cryptopunks",
+      link: "https://cryptopunks.app/",
       image: getImage(data.cryptopunks),
       alt: translateMessageId("page-dapps-cryptopunks-logo-alt", intl),
     },
@@ -1261,7 +1261,9 @@ const DappsPage = ({
               image={choice.image!}
               name={choice.name}
             >
-              <Pill color={choice.pillColor}>{choice.type}</Pill>
+              <Badge size="sm" background={choice.pillColor}>
+                {choice.type}
+              </Badge>
             </ProductCard>
           ))}
         </StyledCardGrid>

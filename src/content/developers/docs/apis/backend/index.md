@@ -32,6 +32,12 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [blockcypher.com](https://www.blockcypher.com/)
 - [Documentation](https://www.blockcypher.com/dev/ethereum/)
 
+**Blast by Bware Labs -** **_Decentralized APIs for Ethereum Mainnet ant Testnets._**
+
+- [blastapi.io](https://blastapi.io/)
+- [Documentation](https://docs.blastapi.io)
+- [Discord](https://discord.com/invite/VPkWESgtvV)
+
 **Infura -** **_The Ethereum API as a service._**
 
 - [infura.io](https://infura.io)
@@ -123,6 +129,19 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [GitHub](https://github.com/zmok-io)
 - [Documentation](https://docs.zmok.io/)
 - [Discord](https://discord.gg/fAHeh3ka6s)
+
+**NOWNodes - _Full Nodes and Block Explorers._**
+
+- [NOWNodes.io](https://nownodes.io/)
+- [Documentation](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
+
+**Moralis -** **_Enterprise-Grade EVM API Provider._**
+
+- [moralis.io](http://moralis.io)
+- [Documentation](https://docs.moralis.io/)
+- [GitHub](https://github.com/MoralisWeb3)
+- [Discord](https://discord.com/invite/KYswaxwEtg)
+- [Forum](https://forum.moralis.io/)
 
 ## Further reading {#further-reading}
 

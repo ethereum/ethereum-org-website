@@ -331,7 +331,6 @@ summaryPoint3: 누구나 프로그래밍할 수 있는 오픈 소스 기술을 �
 
 ### 디파이 데이터 {#defi-data}
 
-- [디파이 펄스](https://defipulse.com/)
 - [디파이 프라임](https://defiprime.com/)
 - [디파이 라마](https://defillama.com/)
 

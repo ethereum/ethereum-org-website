@@ -155,7 +155,7 @@ De nombreux portefeuilles Ethereum offrent des limites de sécurité pour évite
 
 ## Arnaques courantes {#common-scams}
 
-Les escrocs chercheront toujours des moyens de vous soutirer de l'argent. Il est impossible de les stopper complètement leurs activités, mais nous pouvons les rendre moins efficaces en étant conscients de la plupart des techniques utilisées. Il existe de nombreuses variantes de ces arnaques, mais elles suivent généralement les mêmes schémas de base. Quoi qu'il en soit, souvenez-vous :
+Les escrocs chercheront toujours des moyens de vous soutirer de l'argent. Il est impossible de stopper complètement leurs activités, mais nous pouvons les rendre moins efficaces en étant conscients de la plupart des techniques utilisées. Il existe de nombreuses variantes de ces escroqueries, mais elles suivent généralement les mêmes schémas de base. Quoi qu'il en soit, souvenez-vous :
 
 - soyez toujours sur vos gardes
 - personne ne vous offrira des ETH gratuits ou en "promotion"
@@ -163,35 +163,35 @@ Les escrocs chercheront toujours des moyens de vous soutirer de l'argent. Il est
 
 ### Arnaques à la distribution de cadeaux {#giveaway}
 
-Une des arnaques les plus courantes dans les cryptomonnaies est l'anarque à la distribution de cadeaux. Cette arnaque peut prendre de nombreuses formes, mais le principe général est que si vous envoyez des ETH à l'adresse fournie, vous recevez le double de vos ETH envoyés en retour. *Pour cette raison, cette arnaque est aussi connue sous le nom d'anarque du 2 pour 1.*
+L'une des escroqueries les plus courantes dans le domaine des cryptomonnaies est celle des offres cadeaux frauduleuses. Cette escroquerie peut prendre de nombreuses formes, mais le principe général est que si vous envoyez des ETH à l'adresse de portefeuille fournie, vous recevez le double d'ETH envoyés en retour. *Pour cette raison, cette escroquerie est aussi connue sous le nom d'escroquerie du 2 pour 1.*
 
-En général, ces arnaques imposent une durée limitée pour recevoir les cadeaux afin de favoriser la précipitation et de créer un faux sentiment d'urgence.
+En général, ces escroqueries prévoient générallement une durée limitée pour réclamer les cadeaux afin d'encourager les mauvaises décisions et de créer un faux sentiment d'urgence.
 
 #### Piratage sur les réseaux sociaux {#social-media-hacks}
 
-Une telle situation s'est produite en juillet 2020, lorsque les comptes Twitter de célébrités et d'importantes sociétés ont été piratés. Le pirate a simultanément posté un évènement de distribution de Bitcoin sur les comptes piratés. Bien que les tweets trompeurs aient été rapidement signalés et supprimés, les pirates ont quand-même réussi à disparaître avec 11 bitcoins (soit 500 000 $ en septembre 2021).
+C'est ce qui s'est produit en juillet 2020, lorsque les comptes Twitter de célébrités et d'importantes sociétés ont été piratés. Le pirate a simultanément posté une offre de distribution de Bitcoin sur les comptes piratés. Bien que les tweets trompeurs aient été rapidement signalés et supprimés, les pirates ont quand-même réussi à soutirer 11 bitcoins (soit 500 000 $ en septembre 2021).
 
-![Une arnaque sur Twitter](./appleTwitterScam.png)
+![Une escroquerie sur Twitter](./appleTwitterScam.png)
 
 #### Distribution de cadeaux par une célébrité {#celebrity-giveaway}
 
-La distribution de cadeaux par une célébrité est une variante courante de l'arnaque à la distribution de cadeaux. Les escrocs récupèrent une interview vidéo ou une conférence donnée par une célébrité et la diffusent en direct sur YouTube - en faisant croire que la célébrité en question donnait une interview vidéo en direct pour faire la promotion d'un évènement de distribution de cryptomonnaies.
+La distribution de cadeaux par une célébrité est une variante courante de l'escroquerie à l'offre cadeaux. Les escrocs récupèrent une interview vidéo ou une conférence donnée par une célébrité et la diffusent en direct sur YouTube - en faisant croire que la célébrité en question donne une interview vidéo en direct pour faire la promotion d'un évènement de distribution de cryptomonnaies.
 
-Vitalik Buterin est le plus souvent utilisé dans cette arnaque, mais de nombreuses autres personnalités impliquées dans l'univers des cryptomonnaies le sont aussi (ex : Elon Musk et Charles Hoskinson). Le fait de montrer une personne connue donne à la diffusion en direct un semblant de légitimité (c'est un peu louche, mais Vitalik est de la partie, alors ça doit être bon !).
+Vitalik Buterin est la personne la plus souvent utilisée dans cette escroquerie, mais de nombreuses autres personnalités impliquées dans l'univers des cryptomonnaies le sont aussi (ex : Elon Musk et Charles Hoskinson). Le fait de montrer une personne connue donne à la diffusion en direct un semblant de légitimité (c'est un peu louche, mais Vitalik est de la partie, alors ça doit être bon !).
 
-**Les distributions de cadeaux sont toujours des arnaques. Si vous envoyez de l'argent sur ces comptes, vous les perdrez pour toujours.**
+**Les offres cadeaux sont toujours des arnaques. Si vous envoyez de l'argent sur ces comptes, vous ne le reverrez jamais.**
 
-![Une arnaque sur YouTube](./youtubeScam.png)
+![Une escroquerie sur YouTube](./youtubeScam.png)
 
-### Arnaques à la fausse assistance {#support-scams}
+### Arnaques à l'assistance {#support-scams}
 
-Les cryptomonnaies sont une technologie relativement jeune et mal comprise. Une arnaque fréquente qui en profite est l'arnaque à la fausse assistance, dans laquelle les escrocs vont se faire passer pour un agent d'assistance de portefeuilles, de plateformes d'échange ou de blockchains.
+Les cryptomonnaies sont une technologie relativement jeune et mal comprise. Une fraude répandue qui tire parti de cette situation est l'escroquerie à l'assistance, dans laquelle les escrocs vont se faire passer pour un agent d'assistance de portefeuilles, de plateformes d'échange ou de blockchains.
 
-La majorité des discussions autour d'Ethereum ont lieu sur Discord. Les escrocs à la fausse assistance trouveront généralement leur cible en cherchant des demandes d'assistance dans les salons Discord publics, pour ensuite envoyer une proposition d'assistance à leur proie par message privé. En instaurant un climat de confiance, les escrocs vont tenter de vous pousser à divulguer vos clés privées ou à envoyer votre argent vers leurs portefeuilles.
+La majorité des discussions autour d'Ethereum ont lieu sur Discord. Les escrocs à l'assistance trouveront généralement leur cible en cherchant des demandes d'assistance dans les salons Discord publics, pour ensuite envoyer une proposition d'assistance à leur proie par message privé. En instaurant un climat de confiance, les escrocs vont tenter de vous pousser à divulguer vos clés privées ou à envoyer votre argent vers leurs portefeuilles.
 
-![Une arnaque à la fausse assistance sur Discord](./discordScam.png)
+![Une arnaque à l'assistance sur Discord](./discordScam.png)
 
-En principe, l'équipe d'Ethereum ne communiquera jamais avec vous par le biais de canaux privés non officiels. Quelques choses simples à garder en tête lorsque vous obtenez de l'aide :
+En principe, l'équipe d'Ethereum ne communiquera jamais avec vous par le biais de canaux privés non officiels. Des éléments simples à garder en tête en matière d'assistance :
 
 - Ne partagez jamais vos clés privées, vos phrases secrètes ou vos mots de passe
 - Ne donnez à personne un accès à distance à votre ordinateur
@@ -199,23 +199,23 @@ En principe, l'équipe d'Ethereum ne communiquera jamais avec vous par le biais 
 
 <InfoBanner emoji=":lock:">
   <div>
-    Attention : Bien que les arnaques à la fausse assistance se produisent généralement sur Discord, elles peuvent aussi vous arriver sur toutes les plateformes où des discussions autour de la cryptomonnaie ont lieu, y compris par e-mail.
+    Attention : Bien que les arnaques à l'assistance se produisent généralement sur Discord, elles peuvent aussi vous arriver sur toutes les plateformes où des discussions autour de la cryptomonnaie ont lieu, y compris par e-mail.
   </div>
 </InfoBanner>
 
 ### Arnaque au jeton « Eth2 » {#eth2-token-scam}
 
-Dans la période précédant [La Fusion](/upgrades/merge/), les scammers ont profité de la confusion autour du terme « Eth2 » pour essayer d'obtenir que les utilisateurs rachètent leur ETH pour un jeton « ETH2 ». Il n'existe pas d'« ETH2 » et aucun autre jeton légitime n'a été introduit avec La Fusion. L'ETH que vous possédiez avant La Fusion reste aujourd'hui le même ETH. Il n'y a **pas besoin de prendre des mesures liées à votre ETH pour tenir compte du passage de la preuve de travail à la preuve d'enjeu**.
+Dans la période précédant [La Fusion](/upgrades/merge/), les fraudeurs ont profité de la confusion autour du terme « Eth2 » pour essayer d'obtenir que les utilisateurs rachètent leur ETH pour un jeton « ETH2 ». Il n'existe pas d'« ETH2 » et aucun autre jeton légitime n'a été introduit avec La Fusion. L'ETH que vous possédiez avant La Fusion reste aujourd'hui le même ETH. Vous n'avez **pas besoin de prendre des mesures relatives à votre ETH pour tenir compte du passage de la preuve de travail à la preuve d'enjeu**.
 
-Les escrocs peuvent apparaître sous la forme d'une « assistance » vous indiquant que si vous déposez votre ETH, vous recevrez en retour « ETH2 ». Il n'y a pas de [support Ethereum officiel](/community/support/), et il n'y a pas de nouveau jeton. Ne partagez jamais la phrase de récupération de votre portefeuille avec qui que ce soit.
+Les escrocs peuvent apparaître sous la forme d'agents d'« assistance » vous indiquant que si vous déposez votre ETH, vous recevrez en retour un « ETH2 ». Il n'y a pas de [support Ethereum officiel](/community/support/), et il n'y a pas de nouveau jeton. Ne partagez jamais la phrase de récupération de votre portefeuille avec qui que ce soit.
 
-_Remarque : il existe des jetons/téléscripteurs dérivés qui peuvent représenter une mise en jeu ETH (ex. rETH de Rocket Pool, stETH de Lido, ETH2 de Coinbase), mais ce ne sont pas des éléments vers lesquels vous devriez « migrer. »_
+_Remarque : il existe des jetons/téléscripteurs dérivés qui peuvent représenter une mise en jeu ETH (ex. rETH de Rocket Pool, stETH de Lido, ETH2 de Coinbase), mais vous n'avez pas besoin de « migrer » vers ces jetons._
 
 ### Arnaques par hameçonnage {#phishing-scams}
 
-Les arnaques par hameçonnage représentent un autre vecteur d'attaque de plus en plus fréquent que les escrocs utilisent pour essayer de vider votre portefeuille.
+Les escroqueries par hameçonnage représentent un autre vecteur d'attaque de plus en plus fréquent que les escrocs utilisent pour essayer de vider votre portefeuille.
 
-Certains e-mails d'hameçonnage demandent aux utilisateurs de cliquer sur des liens qui les redirigeront vers des sites web factices, leur demandant de saisir leur phrase de récupération, de réinitialiser leur mot de passe ou encore d'envoyer des ETH. D'autres peuvent vous demander d'installer un logiciel malveillant à votre insu, qui infectera votre ordinateur et donnera accès aux escrocs à vos fichiers.
+Certains e-mails d'hameçonnage demandent aux utilisateurs de cliquer sur des liens qui les redirigeront vers des sites web factices, de saisir leur phrase de récupération, de réinitialiser leur mot de passe ou encore d'envoyer des ETH. D'autres peuvent vous demander d'installer un logiciel malveillant à votre insu, qui infectera votre ordinateur et permettra aux escrocs d'accéder aux fichiers de votre ordinateur.
 
 Si vous recevez un e-mail de la part d'un expéditeur inconnu, rappelez-vous :
 
@@ -223,23 +223,23 @@ Si vous recevez un e-mail de la part d'un expéditeur inconnu, rappelez-vous :
 - Ne partagez vos informations personnelles ou vos mots de passe à personne
 - Supprimez les e-mails qui viennent d'expéditeurs inconnus
 
-[En savoir plus sur comment éviter les arnaques par hameçonnage](https://support.mycrypto.com/staying-safe/mycrypto-protips-how-not-to-get-scammed-during-ico)
+[En savoir plus sur comment éviter les escroqueries par hameçonnage](https://support.mycrypto.com/staying-safe/mycrypto-protips-how-not-to-get-scammed-during-ico)
 
 ### Arnaques au faux courtier en cryptomonnaie {#broker-scams}
 
-Les faux courtiers d'échange de cryptomonnaie prétendent être des courtiers spécialisés en cryptomonnaie et vous proposeront de prendre la vôtre en charge pour l'investir en votre nom. Des garanties de rendements irréalistes accompagnent généralement leur offre. Une fois que l'escroc aura reçu vos fonds, il pourra vous inciter à en envoyer d'autres, afin que vous ne manquiez pas d'autres gains d'investissement, ou il pourra disparaître complètement.
+Les faux courtiers d'échange de cryptomonnaie prétendent être des courtiers spécialisés en cryptomonnaie et vous proposeront de prendre votre argent et de l'investir en votre nom. Des garanties de rendements irréalistes accompagnent généralement cette offre. Une fois que l'escroc aura reçu vos fonds, il pourra vous inciter à en envoyer d'autres, afin que vous ne manquiez pas d'autres gains d'investissement, ou bien disparaître complètement.
 
-Ces courtiers frauduleux trouvent leur cible en utilisant de faux comptes sur YouTube afin d'engager une discussion d'apparence normale sur le courtier. Ces discussions reçoivent souvent un nombre important de votes positifs pour en accroître la légitimité, mais ces votes proviennent tous de robots.
+Ces courtiers frauduleux trouvent leur cible en utilisant de faux comptes sur YouTube afin d'engager une discussion en apparence naturelle sur le courtier. Ces discussions reçoivent souvent un nombre important de votes positifs pour en accroître la légitimité, mais ces votes proviennent tous de robots.
 
 **Ne faites pas confiance à des inconnus sur Internet pour investir en votre nom. Vous allez perdre votre argent.**
 
-![Une arnaque au faux courtier sur YouTube](./brokerScam.png)
+![Une escroquerie au faux courtier sur YouTube](./brokerScam.png)
 
 ### Arnaques au groupe de minage de cryptomonnaies {#mining-pool-scams}
 
-À compter de septembre 2022, le minage sur Ethereum n'est plus possible. Cependant, il existe toujours des escroqueries dans les pools de minage. Les arnaques liées aux pools de minage impliquent que des personnes vous contactent sans que vous les ayez sollicité et vous disent que vous pouvez gagner beaucoup d'argent en faisant partie d'un pool de minage Ethereum. L'escroc vous fera des promesses et restera en contact avec vous le temps qu'il faudra. Concrètement, l'escroc va essayer de vous faire croire qu'en rejoignant un pool de minage Ethereum, votre cryptomonnaie sera utilisée pour créer de l'ETH et que vous recevrez des dividendes sous la forme d'ETH. Ce qui finira par se produire, c'est que vous remarquerez que votre cryptomonnaie génère de petits profits. Il s'agit simplement d'un piège pour vous inciter à investir davantage. Au bout du compte, tous vos fonds investis seront envoyés à une adresse inconnue et l'escroc disparaîtra ou, dans certains cas, restera en contact avec vous, comme cela s'est produit dans une affaire récente.
+À compter de septembre 2022, le minage n'est plus possible sur Ethereum. Cependant, il existe toujours des escroqueries liées aux pools de minage. Les escroqueries liées aux pools de minage impliquent que des personnes vous contactent sans sollicitation de votre part et prétendent que vous pouvez gagner d'importantes sommes d'argent en rejoignant un pool de minage d'Ethereum. L'escroc vous fera des promesses et restera en contact avec vous le temps qu'il faudra. Concrètement, l'escroc va essayer de vous faire croire qu'en rejoignant un pool de minage Ethereum, votre cryptomonnaie sera utilisée pour créer de l'ETH et que vous recevrez des dividendes sous la forme d'ETH. Ce qui finira par se produire, c'est que vous remarquerez que votre cryptomonnaie génère de petits profits. Il s'agit simplement d'un piège pour vous inciter à investir davantage. Au bout du compte, tous vos fonds investis seront envoyés à une adresse inconnue et l'escroc disparaîtra ou, dans certains cas, restera en contact avec vous, comme cela s'est produit dans une affaire récente.
 
-Pour résumer, méfiez-vous des personnes qui vous contactent sur les réseaux sociaux pour vous proposer de rejoindre un pool de minage. Une fois que vous avez perdu votre cryptomonnaie, il est trop tard.
+Pour résumer, méfiez-vous des personnes qui vous contactent sur les réseaux sociaux pour vous proposer de rejoindre un pool de minage. Une fois votre cryptomonnai perdue, il est trop tard.
 
 Quelques points à retenir :
 
@@ -247,13 +247,13 @@ Quelques points à retenir :
 - Faites des recherches sur la mise en jeu, les pools de liquidités et autres moyens d'investir votre cryptomonnaie
 - De telles démarches sont rarement, voire jamais légitimes. Si elles l'étaient, elles seraient probablement grand public et vous en auriez entendu parler.
 
-[Un individu perd 200 000 dollars dans une arnaque au groupe de minage](https://www.reddit.com/r/CoinBase/comments/r0qe0e/scam_or_possible_incredible_payout/)
+[Une personne perd 200 000 dollars dans une escroquerie au groupe de minage](https://www.reddit.com/r/CoinBase/comments/r0qe0e/scam_or_possible_incredible_payout/)
 
 ### Arnaques par Airdrop {#airdrop-scams}
 
-Les arnaques aux jetons airdrop consistent en un projet factice qui distribue un airdrop d'actif (NFT, jeton) dans votre portefeuille (wallet) et vous renvoie vers un faux site pour réclamer l'actif que vous avez récupéré. Vous serez invité à vous connecter avec votre portefeuille Ethereum et à « autoriser » une transaction lors d'une tentative de réclamation. Cette transaction compromet votre compte en envoyant vos clés publiques et privées à l'escroc. Une forme alternative de cette arnaque peut consister à vous demander de confirmer une transaction qui envoie des fonds sur le compte de l'escroc.
+Les escroqueries par Airdrop consistent en un projet factice qui envoie (airdrop) un actif (NFT, jeton) dans votre portefeuille et vous renvoie vers un faux site pour réclamer l'actif déposé. Vous serez invité à vous connecter avec votre portefeuille Ethereum et à « approuver » une transaction lors d'une tentative de réclamation. Cette transaction compromet votre compte en envoyant vos clés publiques et privées à l'escroc. Une variante de cette escroquerie peut vous demander de confirmer une transaction qui envoie des fonds sur le compte de l'escroc.
 
-[En savoir plus sur les arnaques par Airdrop](https://www.youtube.com/watch?v=LLL_nQp1lGk)
+[En savoir plus sur les escroqueries par Airdrop](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
 <Divider />
 
@@ -278,3 +278,5 @@ Les arnaques aux jetons airdrop consistent en un projet factice qui distribue un
 - [Staying Safe: Common Scams](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Avoiding Scams](https://bitcoin.org/en/scams) - _Bitcoin.org_
 - [Fil Twitter sur les courriels et messages communs de phishing en cryptomonnaies](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+
+<QuizWidget quizKey="security" />

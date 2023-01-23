@@ -1,3 +1,13 @@
 {
-  "page-upgrades-beacon-date": "Odpremljeno!"
+  "page-upgrades-merge-infographic-el": "Stanje Ethereuma: transakcije, aplikacije, pogodbe, stanja",
+  "page-upgrades-merge-infographic-alt-text": "Infografika, ki prikazuje, kako se je oddajniška veriga pri prehodu z mehanizma dokaza o delu na mehanizem dokaza o deležu spojila z Ethereumovo izvajalno plastjo.",
+  "page-upgrades-beacon-date": "Uvedeno!",
+  "page-upgrades-merge-date": "September 2022",
+  "page-upgrades-shards-date": "~2023",
+  "page-upgrades-merge-banner-intro": "Približuje se spojitev in z njo spremembe Ethereuma.",
+  "page-upgrades-merge-banner-content-outdated": "Del vsebine na tej strani, povezan s temi spremembami, ni več aktualen. Vsebina bo kmalu posodobljena.",
+  "page-upgrades-merge-banner-developers-landing": "V nekaterih dokumentih so pasice, ki označujejo, da dokumenti niso več aktualni. Kmalu bodo posodobljeni.",
+  "page-upgrades-post-merge-banner-tutorial-ood": "Ta vadnica po spojitvi ni več aktualna in postopek, opisan v njej, morda ne bo deloval. Če želite prispevati, ustvarite PR.",
+  "page-upgrades-post-merge-banner-tutorial-light-node-ood": "Ta vadnica po spojitvi ni več aktualna. Lahka vozlišča z mehanizmom dokaza o deležu trenutno ne delujejo. Pričakujemo, da bodo kmalu na voljo.",
+  "page-upgrades-post-merge-banner-governance-ood": "Del vsebine na tej strani po spojitvi ni več aktualen. Če želite prispevati, ustvarite PR."
 }
