@@ -19,7 +19,7 @@ summaryPoints:
 
 The Shanghai/Capella upgrade enables **staking withdrawals** on Ethereum, allowing people to unlock rewards and optionally fully withdrawal funds from staking. Rewards payments will automatically and regularly be sent to a provided withdrawal address linked to each validator. Users can also exit staking entirely, unlocking their full validator balance.
 
-Validator operators who did not provide a withdrawal address on initial deposit will need to upgrade withdrawal credentials before any withdrawals will be enabled for their account. The [Staking Launchpad](https://launchpad.ethereum.org/withdrawals) has instructions on when and how to do this.
+**Note to validator operators**: If you did not provide a withdrawal address on initial deposit, you will need to upgrade withdrawal credentials before any withdrawals will be enabled for your validator account. The [Staking Launchpad](https://launchpad.ethereum.org/withdrawals) has more details on when and how to do this.
 
 ## Staking rewards {#staking-rewards}
 
