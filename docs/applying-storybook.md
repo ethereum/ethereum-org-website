@@ -91,4 +91,4 @@ export const Variants = () => (
 )
 ```
 
-As you go and make adjustments to the component itself or it's variant styles, Storybook will hot reload and those changes will appear in the stories that emphazise them.
+As you go and make adjustments to the component itself or it's variant styles, Storybook will hot reload and those changes will appear in the stories that emphasize them.
