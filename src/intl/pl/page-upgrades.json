@@ -1,3 +1,13 @@
 {
-  "page-upgrades-beacon-date": "Wysłane!"
+  "page-upgrades-merge-infographic-el": "Stan Ethereum: transakcje, aplikacje, kontrakty, salda",
+  "page-upgrades-merge-infographic-alt-text": "Infografika ilustrująca sposób, w jaki łańcuch śledzący łączy się w warstwę wykonania Ethereum podczas przejścia z proof-of-work na proof-of-stake.",
+  "page-upgrades-beacon-date": "Wdrożono!",
+  "page-upgrades-merge-date": "Wrzesień 2022 r.",
+  "page-upgrades-shards-date": "~2023",
+  "page-upgrades-merge-banner-intro": "Zbliża się Połączenie i wiąże się ono ze zmianami w Ethereum.",
+  "page-upgrades-merge-banner-content-outdated": "Niektóre związane z tymi zmianami treści na tej stronie są nieaktualne. Wkrótce pojawią się aktualizacje.",
+  "page-upgrades-merge-banner-developers-landing": "Niektóre dokumenty mają baner wskazujący, że są nieaktualne. Aktualizacje będą dostępne już wkrótce.",
+  "page-upgrades-post-merge-banner-tutorial-ood": "Ten samouczek jest nieaktualny po Połączeniu i może nie działać. Jeśli chcesz wnieść wkład, zgłoś PR.",
+  "page-upgrades-post-merge-banner-tutorial-light-node-ood": "Ten samouczek jest nieaktualny po Połączeniu. Lekkie węzły nie pracują obecnie nad proof-of-stake, ale oczekuje się, że wkrótce zostaną wdrożone.",
+  "page-upgrades-post-merge-banner-governance-ood": "Niektóre treści na tej stronie są nieaktualne po Połączeniu. Jeśli chcesz wnieść swój wkład, zgłoś PR."
 }

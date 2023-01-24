@@ -52,6 +52,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 ### Products and services {#products-and-services}
 
 - [Alchemy](https://www.alchemy.com/) _provides API services and tools for building and monitoring applications on Ethereum_
+- [Blast](https://blastapi.io/) _an API platform that provides RPC/WSS APIs for Ethereum Archive Mainnet and Testnets._
 - [Blockapps](https://blockapps.net/) _implementation of the Enterprise Ethereum protocol, tooling and APIs that form the STRATO platform_
 - [Chainstack](https://chainstack.com/) _mainnet and testnet Ethereum infrastructure hosted in public & isolated customer clouds_
 - [ConsenSys](https://consensys.net/) _provides a range of products and tools for building on Ethereum, as well as consulting and custom development services_
@@ -59,8 +60,10 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _provides a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across your network of trusted business partners_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _an enterprise focused open-source Ethereum client developed under the Apache 2.0 license and written in Java_
 - [Infura](https://infura.io/) _scalable API access to the Ethereum and IPFS networks_
+- [Kaleido](https://kaleido.io/) _an enterprise-focused development platform that offers simplified blockchain and digital asset applications_
 - [Provide](https://provide.services/) _infrastructure and APIs for Enterprise Web3 applications_
 - [QuickNode](https://www.quicknode.com/) _provides reliable and fast nodes with high-level APIs like NFT API, Token API, etc., while delivering a unified product suite and enterprise-grade solutions_
+- [Tenderly](https://tenderly.co) _a Web3 development platform that provides debugging, observability, and infrastructure building blocks for developing, testing, monitoring, and operating smart contracts_
 - [Unibright](https://unibright.io/) _a team of blockchain specialists, architects, developers and consultants with 20+ years of experience in business processes and integration_
 - [Zero Services GmbH](https://www.zeroservices.eu/) _provider of managed services spread across co-locations in Europe and Asia. Operates & monitors your nodes securely and reliably_
 

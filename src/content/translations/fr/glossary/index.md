@@ -27,7 +27,7 @@ Objet contenant une [adresse](#address), un solde, un [nonce](#nonce), ainsi qu'
 
 ### Adresse {#address}
 
-De manière générale, il s'agit d'un [compte externe (EOA)](#eoa) ou d'un [compte de contrat](#contract-accouint) qui peut recevoir (adresse de destination) ou envoyer (adresse source) des [transactions](#transaction) sur la blockchain. Plus spécifiquement, il s'agit des 160 bits de droite de l'[empreinte numérique Keccak](#keccak-256) d'une [clé publique](#public-key) [ECDSA](#ecdsa).
+De manière générale, il s'agit d'un [compte externe (EOA)](#eoa) ou d'un [compte de contrat](#contract-account) qui peut recevoir (adresse de destination) ou envoyer (adresse source) des [transactions](#transaction) sur la blockchain. Plus spécifiquement, il s'agit des 160 bits de droite de l'[empreinte numérique Keccak](#keccak-256) d'une [clé publique](#public-key) [ECDSA](#ecdsa).
 
 ### Interface binaire d'application (ABI) {#abi}
 

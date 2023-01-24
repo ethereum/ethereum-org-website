@@ -20,7 +20,7 @@ summaryPoint4: 合并将使以太坊的能源消耗减少大约 99.95%。
 
 <MergeInfographic />
 
-[信标链](/upgrades/beacon-chain/)最初是与[主网](/glossary/#mainnet)分开上线的。 以太坊主网（所有账户、余额、智能合约和区块链状态继续）一直通过[工作量证明](/developers/docs/consensus-mechanisms/pow/)保护，即便与使用[权益证明](/developers/docs/consensus-mechanisms/pos/)的信标链一起运行时也是如此。 合并是指这两个系统最终整合在一起之时，而工作量证明被权益证明永久取代。
+[信标链](/upgrades/beacon-chain/)最初是与[主网](/glossary/#mainnet)分开上线的。 以太坊主网（所有帐户、余额、智能合约和区块链状态）仍继续由[工作量证明](/developers/docs/consensus-mechanisms/pow/)保护，即便与此同时，与之一起运行的信标链采用[权益证明](/developers/docs/consensus-mechanisms/pos/)。 合并是指这两个系统最终整合在一起之时，而工作量证明被权益证明永久取代。
 
 想象一下，以太坊是一艘还没有完全准备好进行星际航行的就已经起飞的宇宙飞船。 借助信标链，社区构建了新的引擎和坚固的外壳。 经过大量测试，是时候在飞行途中通过“热插拔”用新引擎更换旧引擎了。 将新的、更高效引擎装入现有飞船后，飞船就能够开始许多光年的航行并占领整个宇宙。
 
@@ -220,3 +220,5 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 ## 延伸阅读 {#further-reading}
 
 <MergeArticleList />
+
+<QuizWidget quizKey="merge" />
