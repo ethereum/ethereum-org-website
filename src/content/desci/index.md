@@ -93,30 +93,38 @@ Explore projects and join the DeSci community.
 
 - [DeSci.Global: global events and meetup calendar](https://desci.global)
 - [Blockchain for Science Telegram](https://t.me/BlockchainForScience)
+
 - [Molecule: Fund and get funded for your research projects](https://discover.molecule.to/)
 - [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
 - [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
 - [LabDAO: fold a protein in-silico](https://alphafodl.vercel.app/)
-- [dClimate API: query climate data collected by a decentralized community](https://api.dclimate.net/)
-- [DeSci Foundation: DeSci publishing tool builder](https://descifoundation.org/)
+- [Bio.xyz: get funded for your biotech DAO or desci project](https://www.bio.xyz/)
+- [ValleyDAO: A DAO focused on climate impact through advancing synthetic biology research](https://www.valleydao.bio/)
+- [DeSci Labs: Building tools to grow open science through publishing](https://desci.com/)
+- [DeSci Foundation: advancing the field](https://descifoundation.org/)
+- [Opscientia: open decentralized science workflows](https://opsci.io/research/)
+- [AthenaDAO: A DAO focused on funding and advancing womens health research](https://www.athenadao.co/)
 - [DeSci.World: one-stop shop for users to view, engage with decentralized science](https://desci.world)
 - [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
 - [OceanDAO: DAO governed funding for data-related science](https://oceanprotocol.com/dao)
-- [Opscientia: open decentralized science workflows](https://opsci.io/research/)
+- [Scholar: Reproducible and Permanently Open-Access Research](https://usescholar.org/)
 - [LabDAO: fold a protein in-silico](https://alphafodl.vercel.app/)
-- [Bio.xyz: get funded for your biotech DAO or desci project](https://www.molecule.to/)
-- [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
-- [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
 - [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
 - [Active Inference Lab](https://www.activeinference.org/)
+- [HairDAO: advancing hair loss research](https://www.hairdao.xyz/)
 - [Cherubs DAO: NFT funded and DAO governed impact fund for mental health & brain wellness](https://cherubsdao.com/)
+- [NewAtlantis: Focused on the interesection of solving climate climate and loss of biodiversity](https://newatlantis.io/)
 - [CureDAO: Community-Owned Precision Health Platform](https://docs.curedao.org/)
+- [VibeBio: A community funding rare disease research and giving patients a voice](https://vibebio.com/)
+- [dClimate API: query climate data collected by a decentralized community](https://api.dclimate.net/)
 - [IdeaMarkets: enabling decentralized scientific credibility](https://ideamarket.io/)
+- [CryoDAO: funding and advancing cryopreservation research](https://www.cryodao.org/)
+- [BeakerDAO: DeSci Venture DAO](https://beakerdao.xyz/)
+
 
 We welcome suggestions for new projects to list - please look at our [listing policy](/contributing/adding-desci-projects/) to get started!
 
 ## Further reading {#further-reading}
-
 - [DeSci Wiki by Jocelynn Pearl and Ultrarare](https://docs.google.com/document/d/1aQC6zn-eXflSmpts0XGE7CawbUEHwnL6o-OFXO52PTc/edit#)
 - [A guide to decentralized biotech by Jocelynn Pearl for a16z future](https://future.a16z.com/a-guide-to-decentralized-biotech/)
 - [The case for DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
@@ -130,11 +138,15 @@ We welcome suggestions for new projects to list - please look at our [listing po
 - [DeSci: The Future of Research by Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Science Funding (Epilogue: DeSci and new crypto primitives) by Nadia](https://nadia.xyz/science-funding)
 - [Decentralisation is Disrupting Drug Development](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
+- [Decentralized science (DeSci): Web3-mediated future of science](https://medium.com/paradigm-research/decentralized-science-desci-web3-mediated-future-of-science-2547f9a88c40)
+
 
 ### Videos {#videos}
-
 - [What's Decentralized Science?](https://www.youtube.com/watch?v=-DeMklVWNdA)
 - [Conversation between Vitalik Buterin and the scientist Aubrey de Grey about the intersection of longevity research and crypto](https://www.youtube.com/watch?v=x9TSJK1widA)
+- [Exploring Decentralized Science with Balaji Srinivasan](https://www.youtube.com/watch?v=xrcRI_hYDtQ&)
 - [Scientific Publishing Is Broken. Can Web3 Fix It?](https://www.youtube.com/watch?v=WkvzYgCvWj8)
 - [Juan Benet - DeSci, Independent Labs, & Large Scale Data Science](https://www.youtube.com/watch?v=zkXM9H90g_E)
 - [Sebastian Brunemeier - How DeSci Can Transform Biomedical Research & Venture Capital](https://www.youtube.com/watch?v=qB4Tc3FcVbM)
+- [Vitalik Buterin on Decentralized Science, Aging, AI and Scientific Progress](https://www.youtube.com/watch?v=qtBsL90-J_4&)
+- [The DeSci Movement with Juan Benet](https://www.youtube.com/watch?v=5ORvbCIW39o&)
