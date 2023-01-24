@@ -39,6 +39,7 @@ import {
 import Emoji from "../components/OldEmoji"
 import YouTube from "../components/YouTube"
 import Breadcrumbs from "../components/Breadcrumbs"
+import ShanghaiCapella from "../components/Staking/ShanghaiCapella"
 import StakingLaunchpadWidget from "../components/Staking/StakingLaunchpadWidget"
 import StakingProductsCardGrid from "../components/Staking/StakingProductsCardGrid"
 import StakingComparison from "../components/Staking/StakingComparison"
@@ -347,6 +348,7 @@ const components = {
   StakingGuides,
   WithdrawalCredentials,
   WithdrawalsTabComparison,
+  ShanghaiCapella,
 }
 
 const StakingPage = ({
