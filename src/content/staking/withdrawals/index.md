@@ -97,21 +97,38 @@ With each block, the proposing validator must include a list of withdrawals to p
 | 2. Is the validator still active?            | Proceed to #3                         | **Full** withdrawal will be processed                  |
 | 3. Is the effective balance maxed out at 32? | **Rewards payment** will be processed | **No** withdrawal will be processed, validator skipped |
 
-A maximum of 16 withdrawals can be processed in a single block. At that rate, 115,200 validator withdrawals can be processed per day (assumig no missed blocks).
+A maximum of 16 withdrawals can be processed in a single block. At that rate, 115,200 validator withdrawals can be processed per day (assuming no missed blocks). As noted above, validators without eligible withdrawals will be skipped, decreasing the time to finish the sweep.
 
 ## Frequently asked questions {#faq}
 
-<ExpandableCard title="How can I withdrawal a custom amount?">
-Withdrawals are designed to be pushed automatically, transferring any ETH that is not actively contributing to stake.
-<p>It is not possible to manually request specific amounts of ETH to be withdrawn.</p>
+<ExpandableCard title="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?">
+No, the process to provide withdrawal credentials is a one-time process, and cannot be changed once submitted.
 </ExpandableCard>
 
+<ExpandableCard title="What if I participate in liquid staking derivatives or pooled staking">
 <p>If you are part of a staking pool or hold liquid staking derivatives, you should check with your provider for more details about how staking withdrawals will affect your arrangement, as each service operates differently.</p>
 <p>In general, users will likely have nothing they need to do, and these services will no longer be limited by the inability to withdrawal rewards or exit validator funds after this upgrade.</p>
 <p>This means that users can now decide to redeem their underlying staked ETH, or change which staking provider they utilize. If a particular pool is getting too large, funds can be exited and redeemed, and re-staked with a <a href="https://pools.invis.cloud">smaller provider</a>. Or, if you’ve accumulated enough ETH you could <a href="/staking/solo/">stake from home</a>.</p>
 </ExpandableCard>
 
 <ExpandableCard title="Do rewards payments (partial withdrawals) happen automatically?">
+<p>Yes, as long as your validator has provided a withdrawal address. This must be provided once to enable any withdrawals, then rewards payments will be automatically triggered every few days with each validator sweep.</p>
+</ExpandableCard>
+
+<ExpandableCard title="Do full withdrawals happen automatically?">
+<p>No, if your validator is still active on the network, a full withdrawal will not happen automatically. This requires manually initiating a voluntary exit.</p>
+<p>Once a validator has completed the exiting process, and assuming the account has withdrawal credentials, the remaining balance will <em>then</em> be withdrawal during the next validator sweep.</p>
+</ExpandableCard>
+
+<ExpandableCard title="How can I withdrawal a custom amount?">
+<p>Withdrawals are designed to be pushed automatically, transferring any ETH that is not actively contributing to stake.</p>
+<p>It is not possible to manually request specific amounts of ETH to be withdrawn.</p>
+</ExpandableCard>
+
+<ExpandableCard title="I operate a validator, where can I find more information on preparing?">
+<p>Validator operators are recommended to visit the <a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals</a> page where you'll find more details about how to be prepared, timing of events, and more details about how withdrawals function.</p>
+</ExpandableCard>
+
 ## Further reading {#further-reading}
 
 - [Staking Launchpad Withdrawals](https://launchpad.ethereum.org/withdrawals)
