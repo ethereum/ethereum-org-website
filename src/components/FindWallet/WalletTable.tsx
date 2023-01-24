@@ -796,7 +796,10 @@ const WalletTable = ({ data, filters, walletData }) => {
                         <Tooltip
                           content={
                             <p>
-                              {walletFilterData[feature.filterKey].description}
+                              {translateMessageId(
+                                walletFilterData[feature.filterKey].description,
+                                intl
+                              )}
                             </p>
                           }
                         >
@@ -829,7 +832,10 @@ const WalletTable = ({ data, filters, walletData }) => {
                         <Tooltip
                           content={
                             <p>
-                              {walletFilterData[feature.filterKey].description}
+                              {translateMessageId(
+                                walletFilterData[feature.filterKey].description,
+                                intl
+                              )}
                             </p>
                           }
                         >
@@ -868,7 +874,10 @@ const WalletTable = ({ data, filters, walletData }) => {
                         <Tooltip
                           content={
                             <p>
-                              {walletFilterData[feature.filterKey].description}
+                              {translateMessageId(
+                                walletFilterData[feature.filterKey].description,
+                                intl
+                              )}
                             </p>
                           }
                         >
@@ -901,7 +910,10 @@ const WalletTable = ({ data, filters, walletData }) => {
                         <Tooltip
                           content={
                             <p>
-                              {walletFilterData[feature.filterKey].description}
+                              {translateMessageId(
+                                walletFilterData[feature.filterKey].description,
+                                intl
+                              )}
                             </p>
                           }
                         >
