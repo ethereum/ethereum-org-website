@@ -5,7 +5,6 @@ import { Button, Flex, Input, Spinner, Text } from "@chakra-ui/react"
 import CopyToClipboard from "../CopyToClipboard"
 import Emoji from "../Emoji"
 import Link from "../Link"
-import Translation from "../Translation"
 import InfoBanner from "../InfoBanner"
 
 interface Validator {
@@ -110,22 +109,30 @@ const WithdrawalCredentials: FC<IProps> = () => {
           id="validatorIndex"
           value={inputValue}
           onChange={handleChange}
-          maxW="30ch"
+          w={{ base: "full", sm: "18ch" }}
           placeholder="Validator index"
         />
-        <Button
-          onClick={() => checkWithdrawalCredentials()}
-          disabled={!inputValue.length}
+        <Flex
+          w={{ base: "full", sm: "fit-content" }}
+          direction={{ base: "column", sm: "row" }}
+          gap={4}
         >
-          Mainnet
-        </Button>
-        <Button
-          onClick={() => checkWithdrawalCredentials(true)}
-          disabled={!inputValue.length}
-          variant="outline"
-        >
-          Goerli
-        </Button>
+          <Button
+            onClick={() => checkWithdrawalCredentials()}
+            disabled={!inputValue.length}
+            // flex={{ base: 1, md: "unset" }}
+          >
+            Mainnet
+          </Button>
+          <Button
+            onClick={() => checkWithdrawalCredentials(true)}
+            disabled={!inputValue.length}
+            variant="outline"
+            // flex={{ base: 1, md: "unset" }}
+          >
+            Goerli
+          </Button>
+        </Flex>
       </Flex>
       <Text mt={4}>{resultText}</Text>
     </Flex>
