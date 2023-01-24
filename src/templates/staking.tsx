@@ -47,6 +47,7 @@ import StakingConsiderations from "../components/Staking/StakingConsiderations"
 import StakingCommunityCallout from "../components/Staking/StakingCommunityCallout"
 import StakingGuides from "../components/Staking/StakingGuides"
 import WithdrawalCredentials from "../components/Staking/WithdrawalCredentials"
+import WithdrawalsTabComparison from "../components/Staking/WithdrawalsTabComparison"
 import Callout from "../components/Callout"
 
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
@@ -345,6 +346,7 @@ const components = {
   StakingConsiderations,
   StakingGuides,
   WithdrawalCredentials,
+  WithdrawalsTabComparison,
 }
 
 const StakingPage = ({
