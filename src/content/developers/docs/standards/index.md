@@ -24,16 +24,13 @@ Typically standards are introduced as [Ethereum Improvement Proposals](/eips/) (
 
 There are 3 types of EIPs:
 
-- Standards Track: describes any change that affects most or all Ethereum implementations
+- Standards Track: describes any change that affects most or all Ethereum implementations. Furthermore, the Standard Track is subdivided into 4 categories:
+  - [Core](https://eips.ethereum.org/core): improvements requiring a consensus fork
+  - [Networking](https://eips.ethereum.org/networking): improvements around devp2p and Light Ethereum Subprotocol, as well as proposed improvements to network protocol specifications of whisper and swarm.
+  - [Interface](https://eips.ethereum.org/interface): improvements around client API/RPC specifications and standards, and certain language-level standards like method names and contract ABIs.
+  - [ERC](https://eips.ethereum.org/erc): application-level standards and conventions
 - [Meta Track](https://eips.ethereum.org/meta): describes a process surrounding Ethereum or proposes a change to a process
 - [Informational Track](https://eips.ethereum.org/informational): describes an Ethereum design issue or provides general guidelines or information to the Ethereum community
-
-Furthermore, the Standard Track is subdivided into 4 categories:
-
-- [Core](https://eips.ethereum.org/core): improvements requiring a consensus fork
-- [Networking](https://eips.ethereum.org/networking): improvements around devp2p and Light Ethereum Subprotocol, as well as proposed improvements to network protocol specifications of whisper and swarm.
-- [Interface](https://eips.ethereum.org/interface): improvements around client API/RPC specifications and standards, and certain language-level standards like method names and contract ABIs.
-- [ERC](https://eips.ethereum.org/erc): application-level standards and conventions
 
 More detailed information on these different types and categories can be found in [EIP-1](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 
