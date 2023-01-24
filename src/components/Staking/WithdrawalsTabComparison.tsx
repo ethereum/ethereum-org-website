@@ -18,13 +18,13 @@ interface IProps {}
 const WithdrawalsTabComparison: React.FC<IProps> = () => (
   <Tabs>
     <TabList>
-      <Tab>Existing stakers</Tab>
+      <Tab>Current stakers</Tab>
       <Tab>New stakers (not yet deposited)</Tab>
     </TabList>
 
     <TabPanels>
       <TabPanel>
-        <Heading as="h3">Existing stakers</Heading>
+        <Heading as="h3">Current stakers</Heading>
         <UnorderedList>
           <ListItem>
             Some users may have provided a withdrawal address when initially
