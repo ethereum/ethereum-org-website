@@ -1,20 +1,12 @@
 // Import libraries
 import React, { FC, useState, useMemo, ChangeEvent } from "react"
-import {
-  Button,
-  Flex,
-  FormControl,
-  FormLabel,
-  Input,
-  Spinner,
-  Switch,
-  Text,
-} from "@chakra-ui/react"
+import { Button, Flex, Input, Spinner, Text } from "@chakra-ui/react"
 // Components
 import CopyToClipboard from "../CopyToClipboard"
 import Emoji from "../Emoji"
 import Link from "../Link"
-import Translation from "../../components/Translation"
+import Translation from "../Translation"
+import InfoBanner from "../InfoBanner"
 
 interface Validator {
   validatorIndex: number
@@ -29,17 +21,15 @@ const WithdrawalCredentials: FC<IProps> = () => {
   const [hasError, setHasError] = useState<boolean>(false)
   const [inputValue, setInputValue] = useState<string>("")
   const [validator, setValidator] = useState<Validator | null>(null)
-  const [isTestnet, setIsTestnet] = useState<boolean>(false)
 
-  const checkWithdrawalCredentials = async () => {
+  const checkWithdrawalCredentials = async (isTestnet: boolean = false) => {
     setHasError(false)
     setIsLoading(true)
+    const endpoint = `https://${
+      isTestnet ? "goerli." : ""
+    }beaconcha.in/api/v1/validator/${inputValue}`
     try {
-      const response = await fetch(
-        `https://${
-          isTestnet ? "goerli." : ""
-        }beaconcha.in/api/v1/validator/${inputValue}`
-      )
+      const response = await fetch(endpoint)
       const { data } = await response.json()
       const withdrawalCredentials = data.withdrawalcredentials
       setValidator({
@@ -59,8 +49,6 @@ const WithdrawalCredentials: FC<IProps> = () => {
   const handleChange = (e: ChangeEvent<HTMLInputElement>) =>
     setInputValue(e.target.value.replace(/\D/g, ""))
 
-  const handleNetworkToggle = () => setIsTestnet((prev) => !prev)
-
   const longAddress = useMemo<string>(
     () => (validator ? `0x${validator.withdrawalCredentials.slice(-40)}` : ""),
     [validator]
@@ -73,60 +61,50 @@ const WithdrawalCredentials: FC<IProps> = () => {
   const resultText = useMemo<string | JSX.Element>(() => {
     if (isLoading) return <Spinner />
     if (hasError)
-      return "Error fetching. Double check validator index number and try again."
+      return "Oops! Double check validator index number and try again."
     if (!validator) return " "
     if (validator.isUpgraded)
       return (
         <>
-          <Text display={["none", null, "block"]}>
-            Withdrawal address:{" "}
-            <Text as="span" title={longAddress} fontWeight="bold">
-              {longAddress}
-            </Text>
-          </Text>
-          <Text>
-            <Emoji text=":tada:" mr={1} />
-            Congrats! This validator has been upgraded and will automatically
-            receive rewards to{" "}
-            <Text as="span" title={longAddress} fontWeight="bold">
-              {shortAddress}
-            </Text>{" "}
-            when the Shanghai upgrade is complete.
-          </Text>
+          <InfoBanner emoji="🎉">
+            Validator index {validator.validatorIndex} has upgraded withdrawal
+            credentials, linked to execution address{" "}
+            <CopyToClipboard text={longAddress} inline>
+              {(isCopied) => (
+                <>
+                  <Text as="span" title={longAddress} fontWeight="bold">
+                    {shortAddress}
+                  </Text>
+                  {isCopied ? (
+                    <>
+                      <Emoji text="✅" fontSize="lg" mr={2} ml={2} />
+                      <Text as="span" title={longAddress}>
+                        Copied!
+                      </Text>
+                    </>
+                  ) : (
+                    <Emoji text="📋" fontSize="lg" mr={2} ml={2} />
+                  )}
+                </>
+              )}
+            </CopyToClipboard>
+          </InfoBanner>
         </>
       )
     return (
-      <Text as="span">
-        <Emoji text="⚠️" mr={1} />
+      <InfoBanner emoji="⚠️">
         This {validator.isTestnet ? "Goerli testnet" : ""} validator has not
         been upgraded. Instructions on how to upgrade can be found at{" "}
         <Link to="https://launchpad.ethereum.org/withdrawals">
           Staking Launchpad Withdrawals
         </Link>
-      </Text>
+      </InfoBanner>
     )
   }, [isLoading, hasError, validator, longAddress, shortAddress])
 
   return (
     <Flex direction="column" gap={4}>
-      <FormControl display="flex" alignItems="center">
-        <FormLabel htmlFor="mainnet-testnet" mb={0} me={2}>
-          Mainnet
-        </FormLabel>
-        <Switch
-          id="mainnet-testnet"
-          onChange={handleNetworkToggle}
-          sx={{
-            "&>[data-checked]": {
-              background: "switchBackground !important",
-            },
-          }}
-        />
-        <FormLabel htmlFor="mainnet-testnet" mb={0} ms={2}>
-          Goerli testnet
-        </FormLabel>
-      </FormControl>
-      <Flex alignItems="center" gap={8} flexWrap="wrap">
+      <Flex alignItems="center" gap={4} flexWrap="wrap">
         <Input
           size="lg"
           id="validatorIndex"
@@ -136,30 +114,18 @@ const WithdrawalCredentials: FC<IProps> = () => {
           placeholder="Validator index"
         />
         <Button
-          onClick={checkWithdrawalCredentials}
+          onClick={() => checkWithdrawalCredentials()}
           disabled={!inputValue.length}
         >
-          Check account
+          Mainnet
         </Button>
-        {validator?.isUpgraded && (
-          <CopyToClipboard text={longAddress}>
-            {(isCopied) => (
-              <Button variant="outline">
-                {!isCopied ? (
-                  <div>
-                    <Emoji text=":clipboard:" />{" "}
-                    <Translation id="page-staking-deposit-contract-copy" />
-                  </div>
-                ) : (
-                  <div>
-                    <Emoji text=":white_check_mark:" />{" "}
-                    <Translation id="page-staking-deposit-contract-copied" />
-                  </div>
-                )}
-              </Button>
-            )}
-          </CopyToClipboard>
-        )}
+        <Button
+          onClick={() => checkWithdrawalCredentials(true)}
+          disabled={!inputValue.length}
+          variant="outline"
+        >
+          Goerli
+        </Button>
       </Flex>
       <Text mt={4}>{resultText}</Text>
     </Flex>

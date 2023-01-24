@@ -4,10 +4,15 @@ import { Box } from "@chakra-ui/react"
 
 export interface IProps {
   text: string
+  inline?: boolean
   children: (isCopied: boolean) => React.ReactNode
 }
 
-const CopyToClipboard: React.FC<IProps> = ({ children, text }) => {
+const CopyToClipboard: React.FC<IProps> = ({
+  children,
+  text,
+  inline = false,
+}) => {
   const [isCopied, setIsCopied] = useState<boolean>(false)
   const targetEl = useRef<HTMLDivElement>(null)
   const timer = useRef(0)
@@ -37,7 +42,11 @@ const CopyToClipboard: React.FC<IProps> = ({ children, text }) => {
     }
   }, [text])
 
-  return <Box ref={targetEl}>{children(isCopied)}</Box>
+  return (
+    <Box ref={targetEl} display={inline ? "inline" : "block"} cursor="pointer">
+      {children(isCopied)}
+    </Box>
+  )
 }
 
 export default CopyToClipboard
