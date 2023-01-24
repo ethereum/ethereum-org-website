@@ -1,15 +1,11 @@
 // Import libraries
-import React, { FC, useState, useMemo } from "react"
+import React, { FC, useState, useMemo, ChangeEvent } from "react"
 import {
   Button,
   Flex,
   FormControl,
   FormLabel,
-  NumberDecrementStepper,
-  NumberIncrementStepper,
-  NumberInput,
-  NumberInputField,
-  NumberInputStepper,
+  Input,
   Spinner,
   Switch,
   Text,
@@ -31,7 +27,7 @@ interface IProps {}
 const WithdrawalCredentials: FC<IProps> = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [hasError, setHasError] = useState<boolean>(false)
-  const [inputValue, setInputValue] = useState<number>(0)
+  const [inputValue, setInputValue] = useState<string>("")
   const [validator, setValidator] = useState<Validator | null>(null)
   const [isTestnet, setIsTestnet] = useState<boolean>(false)
 
@@ -47,7 +43,7 @@ const WithdrawalCredentials: FC<IProps> = () => {
       const { data } = await response.json()
       const withdrawalCredentials = data.withdrawalcredentials
       setValidator({
-        validatorIndex: inputValue,
+        validatorIndex: parseInt(inputValue),
         withdrawalCredentials,
         isUpgraded: withdrawalCredentials.startsWith("0x01"),
         isTestnet,
@@ -60,8 +56,9 @@ const WithdrawalCredentials: FC<IProps> = () => {
     }
   }
 
-  const handleChange = (value: string) =>
-    setInputValue(parseInt(value.replace(/\D/g, "")))
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) =>
+    setInputValue(e.target.value.replace(/\D/g, ""))
+
   const handleNetworkToggle = () => setIsTestnet((prev) => !prev)
 
   const longAddress = useMemo<string>(
@@ -81,7 +78,7 @@ const WithdrawalCredentials: FC<IProps> = () => {
     if (validator.isUpgraded)
       return (
         <>
-          <Text>
+          <Text display={["none", null, "block"]}>
             Withdrawal address:{" "}
             <Text as="span" title={longAddress} fontWeight="bold">
               {longAddress}
@@ -129,23 +126,21 @@ const WithdrawalCredentials: FC<IProps> = () => {
           Goerli testnet
         </FormLabel>
       </FormControl>
-      <Flex alignItems="center" gap={4}>
-        <FormLabel htmlFor="validatorIndex">Your validator index:</FormLabel>
-        <NumberInput
+      <Flex alignItems="center" gap={8} flexWrap="wrap">
+        <Input
           size="lg"
           id="validatorIndex"
           value={inputValue}
           onChange={handleChange}
-          min={0}
-          maxW="20ch"
+          maxW="30ch"
+          placeholder="Validator index"
+        />
+        <Button
+          onClick={checkWithdrawalCredentials}
+          disabled={!inputValue.length}
         >
-          <NumberInputField />
-          <NumberInputStepper>
-            <NumberIncrementStepper />
-            <NumberDecrementStepper />
-          </NumberInputStepper>
-        </NumberInput>
-        <Button onClick={checkWithdrawalCredentials}>Check account</Button>
+          Check account
+        </Button>
         {validator?.isUpgraded && (
           <CopyToClipboard text={longAddress}>
             {(isCopied) => (
