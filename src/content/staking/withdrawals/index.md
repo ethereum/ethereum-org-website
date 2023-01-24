@@ -61,25 +61,9 @@ Once an account is flagged as "withdrawable", and withdrawal credentials have be
 
 ## When are staking withdrawals enabled? {#when}
 
-Withdrawals will be enabled through a two-part network upgrade: Shanghai + Capella (occurring simultaneously)
+Withdrawals will be enabled through a two-part simultaneous network upgrade, **Shanghai + Capella**.
 
-<div style='display: flex; gap: 1rem; @media(max-width: 1000px){flex-direction: column;}'>
-<Callout emoji="📘" titleKey="Capella" descriptionKey="Consensus layer upgrade" flex={1}>
-<p>Before the Shanghai upgrade can take effect, an upgrade to the Beacon Chain will take place named Capella. Node operating stakers should stay tuned to client communication channels to be alerted of upcoming client updates.</p>
-<p>Stakers who need to update their validator withdrawal keys can broadcast this message once the Capella upgrade has taken place.</p>
-</Callout>
-
-<Callout emoji="📙" titleKey="Shanghai" descriptionKey="Execution layer upgrade" flex={1}>
-<p>Push withdrawals will be enabled in the upcoming Shanghai upgrade planned for Q1/Q2 2023 (as with any upgrade, timing subject to change). This closes the loop on staking liquidity, and takes one more step on Ethereum’s journey towards building a sustainable, scalable, secure decentralized ecosystem.</p>
-<p>Users will be free to:</p>
-<ul>
-  <li>stakes their ETH</li>
-  <li>earn ETH rewards that will be distributed automatically</li>
-  <li>un-stake their ETH to regain full access to their entire balance</li>
-  <li>and of course, re-stake to sign back up and start earning more rewards</li>
-</ul>
-</Callout>
-</div>
+<ShanghaiCapella />
 
 ## How do withdrawal payments work? {#how-do-withdrawals-work}
 
