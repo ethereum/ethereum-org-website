@@ -1,40 +1,15 @@
 // Import libraries
-import React, { FC, ReactNode } from "react"
+import React, { FC } from "react"
 import {
   Flex,
   Text,
-  Heading,
   UnorderedList,
   ListItem,
   FlexProps,
 } from "@chakra-ui/react"
 // Components
 import ButtonLink from "../ButtonLink"
-import Emoji from "../Emoji"
-
-// Custom emoji card component
-interface CardProps extends FlexProps {
-  emoji: string
-  heading: string
-  children: ReactNode | string
-}
-const Card: FC<CardProps> = ({ emoji, heading, children, ...flexProps }) => (
-  <Flex
-    bg="bodyInverted"
-    border="1px"
-    borderColor="gray.300"
-    borderRadius="base"
-    p={6}
-    direction="column"
-    {...flexProps}
-  >
-    <Emoji text={emoji} fontSize="5xl" />
-    <Heading as="h3" size="lg" mt={4}>
-      {heading}
-    </Heading>
-    {children}
-  </Flex>
-)
+import Card from "../Card"
 
 interface IProps extends FlexProps {}
 const ShanghaiCapella: FC<IProps> = (props) => {
@@ -109,7 +84,7 @@ const ShanghaiCapella: FC<IProps> = (props) => {
       {upgrades.map(({ heading, emoji, content, cardProps }) => (
         <Card
           key={heading}
-          heading={heading}
+          title={heading}
           emoji={emoji}
           children={content}
           {...cardProps}
