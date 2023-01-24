@@ -1,6 +1,6 @@
 ---
-title: Sharding
-description: Learn about sharding - breaking up and distributing the data load needed to give Ethereum more transaction capacity and make it easier to run.
+title: Danksharding
+description: Learn about Proto-Danksharding and Danksharding - two sequentialk upgrades for scaling Ethereum.
 lang: en
 template: upgrade
 image: ../../../assets/upgrades/newrings.png

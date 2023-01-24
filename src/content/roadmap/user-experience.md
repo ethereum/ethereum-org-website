@@ -1,5 +1,5 @@
 ---
-title: Breaking down barriers
+title: Improving user experience
 description: High level overview of how Ethereumwill scale in the future
 ---
 
