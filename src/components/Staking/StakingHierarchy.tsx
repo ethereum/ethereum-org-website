@@ -219,16 +219,18 @@ const Pills = ({ children }: ChildOnlyType) => (
   </Flex>
 )
 
-const Glyph = ({ glyphIcon }: { glyphIcon: typeof Icon }) => (
-  <Center gridArea={{ base: "content", md: "glyph" }}>
-    <Icon
-      as={glyphIcon}
-      boxSize={{ base: "50%", md: "initial" }}
-      color={$colorVar.reference}
-      opacity={{ base: 0.1, md: "initial" }}
-    />
-  </Center>
-)
+const Glyph = ({ glyphIcon }: { glyphIcon: typeof Icon }) => {
+  const Icon = glyphIcon
+  return (
+    <Center gridArea={{ base: "content", md: "glyph" }}>
+      <Icon
+        boxSize={{ base: "50%", md: "50px" }}
+        color={$colorVar.reference}
+        opacity={{ base: 0.1, md: "initial" }}
+      />
+    </Center>
+  )
+}
 
 const Content = ({ children }: ChildOnlyType) => (
   <Box
