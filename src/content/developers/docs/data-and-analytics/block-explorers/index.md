@@ -20,6 +20,7 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 - [Blockscout](https://blockscout.com/)
 - [OKLink](https://www.oklink.com/eth)
 - [Otterscan](https://otterscan.io/)
+- [Sirato](https://www.web3labs.com/sirato)
 
 ## Data {#data}
 
@@ -230,10 +231,13 @@ The consensus layer top-level data includes the following:
 - [Etherchain](https://www.etherchain.org/) - a block explorer for the Ethereum Mainnet
 - [Ethplorer](https://ethplorer.io/) - a block explorer with a focus on tokens for the Ethereum Mainnet and the Kovan testnet
 - [Blockchair](https://blockchair.com/ethereum) - the most private Ethereum explorer. Also for sorting and filtering (mempool) data
+- [Sirato](https://goerli.sirato.xyz/) - the Goerli Testnet instance of Sirato
 
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
+
+[An overview of blockchain data concepts for less technical and business users](https://docs.sirato.io/key-concepts/blockchains).
 
 ## Related topics {#related-topics}
 
