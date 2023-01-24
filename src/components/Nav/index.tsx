@@ -176,7 +176,7 @@ const Nav: React.FC<IProps> = ({ path }) => {
           items: [
             {
               // @ts-ignore: until we add the translations
-              text: "Learn hub",
+              text: "hero-title",
               to: "/learn/",
             },
           ],

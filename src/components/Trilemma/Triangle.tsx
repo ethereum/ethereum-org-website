@@ -2,7 +2,7 @@ import React, { ReactNode } from "react"
 import { useIntl } from "react-intl"
 import { chakra, HTMLChakraProps } from "@chakra-ui/react"
 import { translateMessageId } from "../../utils/translations"
-import { HandleClickParam } from "./use-trilemma"
+import { HandleClickParam } from "./useTrilemma"
 
 export interface IProps {
   handleClick: (selection: HandleClickParam) => void

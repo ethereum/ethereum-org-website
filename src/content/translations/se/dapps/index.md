@@ -26,7 +26,7 @@ Intresserad av att titta på fler appar som är byggda på Ethereum?
 - [90+ Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) _24 april 2019 - ConsenSys_
 - [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) _Uppdateras ofta - State of the Dapps_
 - [Ethereum DeFi Ecosystem](https://defiprime.com/ethereum) _Uppdaterad ofta - Defiprime_
-- [DeFi Pulse](https://defipulse.com/) _Analys + ranking av DeFi-protokoll - Defi Pulse_
+- [DeFi Llama](https://defillama.com/) _Analys + ranking av DeFi-protokoll - Defi Llama_
 
 Vissa Ethereum-appar kräver en plånbok - [lär dig mer om Ethereum-plånböcker här](/se/wallets/).
 

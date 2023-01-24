@@ -130,31 +130,31 @@ As a result, human assistance is often required to guide the theorem prover in d
 
 ### Symbolic execution {#symbolic-execution}
 
-Symbolic execution is a method of analyzing a smart contract by executing functions using *symbolic values* (e.g., `x > 5`) instead of *concrete values* (e.g., `x == 5`). As a formal verification technique, symbolic execution is used to formally reason about trace-level properties in a contract's code. 
+Symbolic execution is a method of analyzing a smart contract by executing functions using _symbolic values_ (e.g., `x > 5`) instead of _concrete values_ (e.g., `x == 5`). As a formal verification technique, symbolic execution is used to formally reason about trace-level properties in a contract's code.
 
-Symbolic execution represents an execution trace as a mathematical formula over symbolic input values, otherwise called a *path predicate*. An [SMT solver](https://en.wikipedia.org/wiki/Satisfiability_modulo_theories) is used to check if a path predicate is "satisfiable" (i.e., there exists a value that can satisfy the formula). If a vulnerable path is satisfiable, the SMT solver will generate a concrete value that triggers steers execution toward that path. 
+Symbolic execution represents an execution trace as a mathematical formula over symbolic input values, otherwise called a _path predicate_. An [SMT solver](https://en.wikipedia.org/wiki/Satisfiability_modulo_theories) is used to check if a path predicate is "satisfiable" (i.e., there exists a value that can satisfy the formula). If a vulnerable path is satisfiable, the SMT solver will generate a concrete value that triggers steers execution toward that path.
 
-Suppose a smart contract's function takes as input a `uint` value (`x`) and reverts when `x` is greater than `5` but lower than `10`. Finding a value for `x` that triggers the error using a normal testing procedure would require running through dozens of test cases (or more) without the assurance of actually finding an error-triggering input. 
+Suppose a smart contract's function takes as input a `uint` value (`x`) and reverts when `x` is greater than `5` but lower than `10`. Finding a value for `x` that triggers the error using a normal testing procedure would require running through dozens of test cases (or more) without the assurance of actually finding an error-triggering input.
 
-Conversely, a symbolic execution tool would execute the function with the symbolic value: `X > 5 ∧ X < 10` (i.e., `x` is greater than 5 AND `x` is less than 10). The associated path predicate `x = X > 5 ∧ X < 10` would then be given to an SMT solver to solve. If a particular value satisfies the formula `x = X > 5 ∧ X < 10`, the SMT solver will calculate it—for example, the solver might produce `7` as a value for `x`.  
+Conversely, a symbolic execution tool would execute the function with the symbolic value: `X > 5 ∧ X < 10` (i.e., `x` is greater than 5 AND `x` is less than 10). The associated path predicate `x = X > 5 ∧ X < 10` would then be given to an SMT solver to solve. If a particular value satisfies the formula `x = X > 5 ∧ X < 10`, the SMT solver will calculate it—for example, the solver might produce `7` as a value for `x`.
 
-Because symbolic execution relies on inputs to a program, and the set of inputs to explore all reachable states is potentially infinite, it is still a form of testing. However, as shown in the example, symbolic execution is more efficient than regular testing for finding inputs that trigger property violations. 
+Because symbolic execution relies on inputs to a program, and the set of inputs to explore all reachable states is potentially infinite, it is still a form of testing. However, as shown in the example, symbolic execution is more efficient than regular testing for finding inputs that trigger property violations.
 
-Moreover, symbolic execution produces fewer false positives than other property-based techniques (e.g., fuzzing) that randomly generate inputs to a function. If an error state is triggered during symbolic execution, then it is possible to generate a concrete value that triggers the error and reproduce the issue. 
+Moreover, symbolic execution produces fewer false positives than other property-based techniques (e.g., fuzzing) that randomly generate inputs to a function. If an error state is triggered during symbolic execution, then it is possible to generate a concrete value that triggers the error and reproduce the issue.
 
 Symbolic execution can also provide some degree of mathematical proof of correctness. Consider the following example of a contract function with overflow protection:
 
 ```
 function safe_add(uint x, uint y) returns(uint z){
-  
-  z = x + y; 
+
+  z = x + y;
   require(z>=x);
   require(z>=y);
-  
+
   return z;
 ```
 
-An execution trace that results in an integer overflow would need to satisfy the formula: `z = x + y AND (z >= x) AND (z=>y) AND (z < x OR z < y)` Such a formula is unlikely to be solved, hence it serves a mathematical proof that the function `safe_add` never overflows. 
+An execution trace that results in an integer overflow would need to satisfy the formula: `z = x + y AND (z >= x) AND (z=>y) AND (z < x OR z < y)` Such a formula is unlikely to be solved, hence it serves a mathematical proof that the function `safe_add` never overflows.
 
 ### Why use formal verification for smart contracts? {#benefits-of-formal-verification}
 
@@ -227,7 +227,7 @@ Also, it is not always possible for program verifiers to determine if a property
 
 ### Program verifiers for checking correctness {#program-verifiers}
 
-**Certora Prover** - *Certora Prover is an automatic formal verification tool for checking code correctness in smart contracts. Specifications are written in CVL (Certora Verification Language), with property violations detected using a comibination of static analysis and constraint-solving.*
+**Certora Prover** - _Certora Prover is an automatic formal verification tool for checking code correctness in smart contracts. Specifications are written in CVL (Certora Verification Language), with property violations detected using a comibination of static analysis and constraint-solving._
 
 - [Website](https://www.certora.com/)
 - [Documentation](https://docs.certora.com/en/latest/index.html)
@@ -268,7 +268,8 @@ Also, it is not always possible for program verifiers to determine if a property
 
 - [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 
-**Mythril** - *A symbolic execution tool for detecting vulnerabilities in Ethereum smart contracts*
+**Mythril** - _A symbolic execution tool for detecting vulnerabilities in Ethereum smart contracts_
+
 - [GitHub](https://github.com/ConsenSys/mythril-classic)
 - [Documentation](https://mythril-classic.readthedocs.io/en/develop/)
 
