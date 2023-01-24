@@ -1,8 +1,7 @@
 import React from "react"
 import { useIntl } from "react-intl"
-import { Box, Flex, HStack, Text } from "@chakra-ui/react"
+import { Badge, Box, Flex, HStack, Text } from "@chakra-ui/react"
 import CopyToClipboard from "./CopyToClipboard"
-import Pill from "./Pill"
 import Link from "./Link"
 import TutorialTags from "./TutorialTags"
 import { getLocaleTimestamp } from "../utils/time"
@@ -45,11 +44,11 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
           <TutorialTags tags={frontmatter.tags} />
         </Flex>
         <Flex
-          as={Pill}
+          as={Badge}
+          variant="secondary"
           alignSelf="flex-start"
           mb={2}
           whiteSpace="nowrap"
-          isSecondary={true}
         >
           <Translation id={getSkillTranslationId(frontmatter.skill)} />
         </Flex>

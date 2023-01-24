@@ -32,7 +32,7 @@ The next step is to get the correct code locations so we'll be able to understan
 
 First this function adds one byte for the opcode itself, and then looks for `PUSH`. Push opcodes are special because they need to have additional bytes for the value being pushed. If the opcode is a `PUSH`, we extract the number of bytes and add that.
 
-In `A1` put the first offest, zero. Then, in `A2`, put this function and again copy and paste it for the rest of column A:
+In `A1` put the first offset, zero. Then, in `A2`, put this function and again copy and paste it for the rest of column A:
 
 ```
 =dec2hex(hex2dec(A1)+B1)
@@ -574,7 +574,7 @@ And that the methods it supports are:
 | ???                                                                                                             | [0x81e580d3](#0x81e580d3)    | 0x0122              |
 | ???                                                                                                             | [0x1f135823](#0x1f135823)    | 0x00D8              |
 
-We can ignore the bottom four methods because we will never get to them. Their signatures are such that our original contract takes care of them by itself (you can click the signatures to see the details above), so they must be [methods that are overriden](https://medium.com/upstate-interactive/solidity-override-vs-virtual-functions-c0a5dfb83aaf).
+We can ignore the bottom four methods because we will never get to them. Their signatures are such that our original contract takes care of them by itself (you can click the signatures to see the details above), so they must be [methods that are overridden](https://medium.com/upstate-interactive/solidity-override-vs-virtual-functions-c0a5dfb83aaf).
 
 One of the remaining methods is `claim(<params>)`, and another is `isClaimed(<params>)`, so it looks like an airdrop contract. Instead of going through the rest opcode by opcode, we can [try the decompiler](https://etherscan.io/bytecode-decompiler?a=0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761), which produces usable results for three functions from this contract. Reverse engineering the other ones is left as an exercise to the reader.
 
@@ -648,7 +648,7 @@ We know that `unknown2eb4a7ab` is actually the function `merkleRoot()`, so this 
        gas 30000 wei
 ```
 
-This is how a contract transfers its own ETH to another address (contract or externally owned). It calls it with a value that is the amount to be transfered. So it looks like this is an airdrop of ETH.
+This is how a contract transfers its own ETH to another address (contract or externally owned). It calls it with a value that is the amount to be transferred. So it looks like this is an airdrop of ETH.
 
 ```python
   if not return_data.size:
