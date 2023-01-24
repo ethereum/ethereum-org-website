@@ -15,8 +15,15 @@ const whitelist = [
   "src/content",
 ]
 
-async function unusedTranslations() {
-  const files = await loadFiles()
+/**
+ * Look for unsed translations keys in the provided `paths`.
+ *
+ * - For each file found in `src/intl/{defaultLang}/`
+ * - Reads all the translation keys
+ * - Looks for each translation key on the different `paths` provided
+ */
+async function unusedTranslations(paths = whitelist) {
+  const files = await loadFiles(paths)
 
   let totalCount = 0
 
@@ -48,16 +55,20 @@ async function unusedTranslations() {
   console.log(`total keys not used: ${totalCount}`)
 }
 
-async function loadFiles() {
-  const files: string[] = []
+/**
+ * Reads and loads all the files found in `paths`.
+ */
+async function loadFiles(paths: Array<string>): Promise<Array<string>> {
+  const files: Array<string> = []
 
-  const promises = whitelist.map(async (path) => {
-    const result = await walkdir.async(path, { return_object: true })
+  const promises = paths.map(async (path) => {
+    const result = await walkdir.async(path, {
+      return_object: true,
+    })
 
     const promises = Object.entries(result).map(async ([filepath, stats]) => {
       // @ts-ignore
       if (!stats.isDirectory()) {
-        // console.log(`loading ${filepath}`)
         try {
           const data = await fs.promises.readFile(filepath, "utf8")
           files.push(data)
