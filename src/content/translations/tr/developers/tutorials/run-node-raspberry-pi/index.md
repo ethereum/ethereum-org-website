@@ -134,7 +134,7 @@ Ubuntu İşletim Sistemi bir dakikadan daha kısa sürede açılacaktır ancak *
 Sürücüye bağlı olarak şunları çalıştıracaksınız:
 
 - Yürütüm istemcisi: Blok zincirini senkronize eden varsayılan istemci olarak Geth
-- Mutabakat istemcisi: İşaret zincirini senkronize eden varsayılan istemci olarak Prysm (Prater testnet)
+- Mutabakat istemcisi: İşaret zincirini senkronize eden varsayılan istemci olarak Prysm (Goerli testnet)
 
 ### 5. Giriş yapın {#5-log-in}
 
@@ -163,7 +163,7 @@ sudo tail -f /var/log/syslog
 
 Şimdi blok zincirinin senkronize edilmesini beklemeniz gerekiyor. Yürütüm katmanı söz konusu olduğunda, bu birkaç faktöre bağlı olarak birkaç gün sürebilir, ancak yaklaşık 5-7 güne kadar bekleyebilirsiniz.
 
-Mutabakat katmanı Prater test ağını çalıştırıyorsanız, 1-2 günlük İşaret zinciri senkronizasyon süresi bekleyebilirsiniz. Stake sürecini başlatmak için doğrulayıcıyı daha sonra kurmanız gerekeceğini unutmayın. [Mutabakat katmanı doğrulayıcı nasıl çalıştırılır](/developers/tutorials/run-node-raspberry-pi/#validator)
+Mutabakat katmanı Goerli test ağını çalıştırıyorsanız, 1-2 günlük İşaret zinciri senkronizasyon süresi bekleyebilirsiniz. Stake sürecini başlatmak için doğrulayıcıyı daha sonra kurmanız gerekeceğini unutmayın. [Mutabakat katmanı doğrulayıcı nasıl çalıştırılır](/developers/tutorials/run-node-raspberry-pi/#validator)
 
 ## İzleme gösterge panoları {#monitoring-dashboards}
 
@@ -235,7 +235,7 @@ Her ikisinin de daha fazla teste ihtiyacı var, bu yüzden onlarla deney yapmakt
 
 ## Mutabakat doğrulayıcı nasıl çalıştırılır (stake etmek) {#validator}
 
-Prater test ağı işaret zinciri senkronize edildikten sonra aynı cihazda bir doğrulayıcı çalıştırabilirsiniz. [Bu katılım adımlarını](https://prylabs.net/participate) takip etmeniz gerekecek.
+Goerli test ağı işaret zinciri senkronize edildikten sonra aynı cihazda bir doğrulayıcı çalıştırabilirsiniz. [Bu katılım adımlarını](https://prylabs.net/participate) takip etmeniz gerekecek.
 
 İlk sefer için, “doğrulayıcı” ikili dosyasını çalıştırarak manuel olarak bir hesap oluşturmanız ve bir şifre belirlemeniz gerekir. Bu adımı tamamladıktan sonra parolayı `/etc/ethereum/prysm-validator.conf` dizinine ekleyebilir ve doğrulayıcıyı bir systemd hizmeti olarak başlatabilirsiniz.
 
