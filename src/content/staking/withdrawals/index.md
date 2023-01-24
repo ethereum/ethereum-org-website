@@ -37,24 +37,7 @@ Before the enabling of staking withdrawals, none of the funds staked had any abi
 
 ### How do I prepare? {#how-do-i-prepare}
 
-<!-- TODO: User "tab" component to show these two as individual tabs, only one shown at a time -->
-
-**Existing stakers**
-
-- Some users may have provided a withdrawal address when initially setting up their staking deposit—these users have nothing more they need to do (you can [double-check your validator](#check-your-validator-index) below)
-- The majority of stakers did not provide a withdrawal address on initial deposit, and these users need to update their withdrawal credentials—the [Staking Launchpad](https://launchpad.ethereum.org/withdrawals) has instructions on when and how to do this
-
-You can enter your validator index number here to see if you still need to update your credentials (this can be found in your client logs):
-
-<WithdrawalCredentials />
-
----
-
-**New stakers (not yet deposited)**
-
-- By default, new stakers should now be providing a withdrawal address to an Ethereum address they control when generating their validator keys using the Staking Deposit CLI tool
-- This will enable withdrawals by default for any new stakers joining the network
-- The [Staking Launchpad](https://launchpad.ethereum.org/) will guide you through staking onboarding
+<WithdrawalsTabComparison />
 
 ### Important notices {#important-notices}
 
@@ -123,12 +106,12 @@ Withdrawals are designed to be pushed automatically, transferring any ETH that i
 <p>It is not possible to manually request specific amounts of ETH to be withdrawn.</p>
 </ExpandableCard>
 
-<ExpandableCard title="Liquid staking derivatives / pooled staking">
 <p>If you are part of a staking pool or hold liquid staking derivatives, you should check with your provider for more details about how staking withdrawals will affect your arrangement, as each service operates differently.</p>
 <p>In general, users will likely have nothing they need to do, and these services will no longer be limited by the inability to withdrawal rewards or exit validator funds after this upgrade.</p>
 <p>This means that users can now decide to redeem their underlying staked ETH, or change which staking provider they utilize. If a particular pool is getting too large, funds can be exited and redeemed, and re-staked with a <a href="https://pools.invis.cloud">smaller provider</a>. Or, if you’ve accumulated enough ETH you could <a href="/staking/solo/">stake from home</a>.</p>
 </ExpandableCard>
 
+<ExpandableCard title="Do rewards payments (partial withdrawals) happen automatically?">
 ## Further reading {#further-reading}
 
 - [Staking Launchpad Withdrawals](https://launchpad.ethereum.org/withdrawals)
