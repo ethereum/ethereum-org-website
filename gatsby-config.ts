@@ -280,6 +280,9 @@ const config: GatsbyConfig = {
           interpolation: {
             escapeValue: false,
           },
+          load: "currentOnly",
+          lowerCaseLng: true,
+          cleanCode: true,
           react: {
             transSupportBasicHtmlNodes: true,
             transKeepBasicHtmlNodesFor: [
