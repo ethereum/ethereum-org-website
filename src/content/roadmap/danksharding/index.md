@@ -1,94 +1,62 @@
 ---
 title: Danksharding
-description: Learn about Proto-Danksharding and Danksharding - two sequentialk upgrades for scaling Ethereum.
+description: Learn about Proto-Danksharding and Danksharding - two sequential upgrades for scaling Ethereum.
 lang: en
 template: upgrade
 image: ../../../assets/upgrades/newrings.png
-summaryPoint1: Sharding is a multi-phase upgrade to improve Ethereum’s scalability and capacity.
-summaryPoint2: Sharding provides secure distribution of data storage requirements, enabling rollups to be even cheaper, and making nodes easier to operate.
-summaryPoint3: They enable layer 2 solutions to offer low transaction fees while leveraging the security of Ethereum.
-summaryPoint4: This upgrade has become more of a focus since Ethereum moved to proof-of-stake.
+summaryPoint1: Danksharding is a multi-phase upgrade to improve Ethereum’s scalability and capacity.
+summaryPoint2: The first stage - ProtoDanksharding - adds data blobs to blocks
+summaryPoint3: Data blobs offer a cheaper way for rollups to post data to Ethereum and those costs can be passed on to users in the form of lower transaction fees.
+summaryPoint4: Later, full Danksharding will spread responsibility for verifying data blobs across subsets of nodes.
 ---
 
-<UpgradeStatus dateKey="page-upgrades-shards-date">
-    Sharding could ship sometime in 2023. Shards will give Ethereum more capacity to store and access data, but they won’t be used for executing code.
+<UpgradeStatus dateKey="Stage 1 in ~2023">
+    ProtoDanksharding could ship sometime in 2023. Full Danksharding is likely to ship much later, possibly several years from now. 
 </UpgradeStatus>
 
-## What is sharding? {#what-is-sharding}
+## What is Proto-Danksharding? {#what-is-protodanksharding}
 
-Sharding is the process of splitting a database horizontally to spread the load – it’s a common concept in computer science. In an Ethereum context, sharding will work synergistically with [layer 2 rollups](/layer-2/) by splitting up the burden of handling the large amount of data needed by rollups over the entire network. This will continue to reduce network congestion and increase transactions per second.
+Proto-Danksharding, also known as EIP4844, is a way for rollups to add cheaper data to blocks. Right now, rollups are limited in how cheap they can make user transactions by the fact that they post their transactions in `CALLDATA`. This is expensive because it is processed by all Ethereum nodes and lives on chain forever, even though rollups only need the data for a short time. Proto-Danksharding introduces data blobs that can be sent attached to blocks. These blobs are ignored by normal Ethereum nodes and are automatically deleted after a fixed time period (1-3 months). This means rollups can send their data much more cheaply and pass the savings on to end users in the form of cheaper transactions.
 
-This is important for reasons other than scalability.
+[Read more on Proto-Danksharding](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq)
 
-## Features of sharding {#features-of-sharding}
+<ExpandableCard title="Why do blobs make rollups cheaper?">
+Rollups are a way to scale Ethereum by batching transactions off-chain and then posting the results to Ethereum. A rollup is essentially composed of two parts: data and execution check. The data is the full sequence of transactions that is being processed by a rollup to produce the state change being posted to Ethereum. The execution check is the re-execution of those transactions by some honest actor (a "prover") to ensure that the proposed state change is correct. In order for the execution check, the transaction data has to be available for long enough for anyone to download and check. This means any dishonest behaviour by the rollup sequencer can be identified and challenged by the prover. However, it does not need to be available forever.
+</ExpandableCard>
 
-### Everyone can run a node {#everyone-can-run-a-node}
+<ExpandableCard title="Why is it OK to delete the blob data?">
+Rollups post commitments to their transaction data on-chain and also make the actual data available in data blobs. This means provers cna check the commitments are valid or challenge data they think is wrong. At the node-level, the blobs of data are held in the consensus client. The consensus clients attest that they have seen the data and that it has been propagated around the network. If the data was kept forever, these clients would bloat and lead to large hardware requirements for running nodes. Instead, the data is automatically pruned from the node every 1-3 months.The consensus client attestations demonstrate that there was a sufficient opportunity for provers to verify the data. The actual data can be stored offchain by rollup operators, users or others. 
+</ExpandableCard>
 
-Sharding is a good way to scale if you want to keep things decentralized as the alternative is to scale by increasing the size of the existing database. This would make Ethereum less accessible for network validators because they'd need powerful and expensive computers. With sharding, validators will no longer be required to store all of this data themselves, but instead can use data techniques to confirm that the data has been made available by the network as a whole. This drastically reduces the cost of storing data on layer 1 by reducing hardware requirements.
+### How is blob data verified {#how-are-blobs-verified}?
 
-### More network participation {#more-network-participation}
+Rollups post the transactions they execute in data blobs. They also post a "commitment" to the data. They do this by fitting a function to the data. This function can then be evaluated at various points. For example, if we define an extremely simply function `f(x) = 2x-1` then we can evaluate this function for `x = 1`, `x=2`, `x=3` giving the results `1, 3, 5`. A prover applies the same function to the data and evaluates it at the same points. If the original data is changed, the function will not be identical, and therefore neither are the values evaluated at each point. In reality, the commitment and proof are more complicated because they are wrapped in cryptographic functions.
 
-Sharding will eventually let you run Ethereum on a personal laptop or phone. So more people should be able to participate, or run [clients](/developers/docs/nodes-and-clients/), in a sharded Ethereum. This will increase security because the more decentralized the network, the smaller the attack surface area.
+### What is KZG? {#what-is-kzg}
 
-With lower hardware requirements, sharding will make it easier to run [clients](/developers/docs/nodes-and-clients/) on your own, without relying on any intermediary services at all. And if you can, consider running multiple clients. This can help network health by further reducing points of failure.
+KZG stands for Kate-Zaverucha-Goldberg - the names of the three [original authors](https://link.springer.com/chapter/10.1007/978-3-642-17373-8_11) of a scheme that reduces a blob of data down to a small [cryptographic "commitment"](https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html). The blob of data submitted by a rollup has to be verified to ensure the rollup is not misbehaving. This involves a prover re-executing the transactions in the blob to check that the commitment was valid. This is conceptually the same as the way execution clients check the validity of Ethereum transactions on layer 1 using Merkle proofs. KZG is an alternative proof that fits a polynomial equation to the data. The commitment evaluates the polynomial at some secret data points. A prover would fit the same polynomial over the data and evaluate it at the same values, checking that the result is the same. This is a way to verify the data that is compatible with zero-knowledge techniques used by some rollups and eventually other parts of the Ethereum protocol.
 
-<br />
+### What is the KZG Ceremony? {#what-is-a-kzg-ceremony}
 
-<InfoBanner isWarning>
-  You'll need to run an execution client at the same time as your consensus client. <a href="https://launchpad.ethereum.org" target="_blank">The launchpad</a> will walk you through the hardware requirements and process.
-</InfoBanner>
+A KZG ceremony is a way for many people from across the Ethereum community to generate a secret random string of numbers together that can be used to verify some data. It is very important that this string of numbers is not known and cannot be recreated by anyone. To ensure this, each person that participates in the ceremony receives a string from the previous participant. They then create some new random values (e.g. by allowing their browser to measure the movement of their mouse) and mix it in with the previous value. They then send the value on to the next participant and destroy it from their local machine. As long as one person in the ceremony does this honestly, the final value will be unknowable to an attacker.
 
-## Shard chains version 1: data availability {#data-availability}
+[Read more about the KZG ceremony](https://ceremony.ethereum.org/)
+[Watch Carl Beekhuizen's Devcon talk on trusted setups](https://archive.devcon.org/archive/watch/6/the-kzg-ceremony-or-how-i-learnt-to-stop-worrying-and-love-trusted-setups/?tab=YouTube)
 
-<InfoBanner emoji=":construction:" isWarning>
-  <strong>Note:</strong> The plans for sharding have been evolving as more efficient paths to scaling have been developed. "Danksharding" is a new approach to sharding, which does not utilize the concept of shard "chains" but instead uses shard "blobs" to split up the data, along with "data availability sampling" to confirm all data has been made available. This change in plan solves the same original problem.<br/><br/>
-  <strong>Details below may be out of date with the latest development plans.</strong> While we update things, check out <a href="https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum">The Hitchhiker's Guide to the Ethereum</a> for an excellent breakdown of Ethereum roadmap.
-</InfoBanner>
+<ExpandableCard title="What is the random number from the KZG ceremony used for?">
+When a rollup posts data in a blob, they provide a "commitment" that they post on chain. This commitment is the result of evaluating a polynomial fit to the data at certain points. These points are defined by the random numbers generated in the KZG ceremony. Provers can then evaluate the polynomial at the same points in order to verify the data - if they arrive at the same values then the data is correct.
 
-When the first shard chains are shipped they will just provide extra data to the network. They won’t handle transactions or smart contracts. But they’ll still offer incredible improvements to transactions per second when combined with rollups.
+[Read about KZG polynomial commitments](https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html)
+</ExpandableCard>
 
-Rollups are a "layer 2" technology that exists today. They allow dapps to bundle or “roll up” transactions into a single transaction off-chain, generate a cryptographic proof and then submit it to the chain. This reduces the data needed for a transaction. Combine this with all the extra data availability provided by shards and you get 100,000 transactions per second.
+<ExpandableCard title="Why does the KZG random data have to stay secret?">
+If someone knows the random locations used for the commitment, it is easy for them to generate a new polynomial that fits at those specific points (i.e. a "collision"). This means they could add or remove data froim the blob and still provide a valid proof. To prevent this, instead of giving provers the actual secret locations, they actually receive the locations wrapped in a cryptographic "black box" using elliptic curves. These effectively scramble the values in such a way that the original values cannot be reverse-engineered, but with some clever algebra provers and verifiers can still evaluate polynomials at the points they represent.
 
-## Shard chains version 2: code execution {#code-execution}
+[Watch Dankrad explain the KZG commitments and proofs in detail](https://youtu.be/8L2C6RDMV9Q)
+</ExpandableCard>
 
-The plan was always to add extra functionality to shards, to make them more like the [Ethereum Mainnet](/glossary/#mainnet) today. This would allow them to store and execute code and handle transactions, as each shard would contain its unique set of smart contracts and account balances. Cross-shard communication would allow for transactions between shards.
+## What is Danksharding? {#what-is-danksharding}
 
-Considering the transactions per second boost that version 1 shards provide though, does this still need to happen? This is still being debated in the community and it seems like there are a few options.
-
-### Do shards need code execution? {#do-shards-need-code-execution}
-
-Vitalik Buterin, when talking to Bankless podcast, presented 3 potential options that are worth discussing.
-
-<YouTube id="-R0j5AMUSzA" start="5841" />
-
-#### 1. State execution not needed {#state-execution-not-needed}
-
-This would mean we don’t give shards the capability to handle smart contracts and leave them as data depots.
-
-#### 2. Have some execution shards {#some-execution-shards}
-
-Perhaps there’s a compromise where we don’t need all shards to be smarter. We could just add this functionality to a few and leave the rest. This could speed the delivery up.
-
-#### 3. Wait until we can do Zero Knowledge (ZK) snarks {#wait-for-zk-snarks}
-
-Finally, perhaps we should revisit this debate when ZK snarks are firmed up. This is a technology that could help bring truly private transactions to the network. It’s likely that they’ll require smarter shards, but they’re still in research and development.
-
-#### Other sources {#other-sources}
-
-Here's some more thinking along the same lines:
-
-- [Phase One and Done: Eth2 as a data availability engine](https://ethresear.ch/t/phase-one-and-done-eth2-as-a-data-availability-engine/5269/8) – _cdetrio, ethresear.ch_
-
-This is still an active discussion point. We’ll update these pages once we know more.
-
-## Relationship between upgrades {#relationship-between-upgrades}
-
-The Ethereum upgrades are all somewhat interrelated. So let’s recap how the shard chains relate the other upgrades.
-
-### Shards and the Ethereum blockchain {#shards-and-blockchain}
-
-The logic for keeping shards secure and synced up is all integrated into the Ethereum clients that build the blockchain. Stakers in the network will be assigned to shards to work on. Shards will have access to snapshots of other shards so they can build a view of Ethereum’s state to keep everything up-to-date.
+Danksharding is the full realization of the rollup scaling that began with Proto-Danksharding.
 
 ### Read more {#read-more}
-
-<ShardChainsList />
