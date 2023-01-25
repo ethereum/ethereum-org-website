@@ -1565,6 +1565,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/danierod"><img src="https://avatars.githubusercontent.com/u/12255235?v=4?s=100" width="100px;" alt="danierod"/><br /><sub><b>danierod</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=danierod" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/siddtheone"><img src="https://avatars.githubusercontent.com/u/45398971?v=4?s=100" width="100px;" alt="siddtheone"/><br /><sub><b>siddtheone</b></sub></a><br /><a href="#content-siddtheone" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://shawkisukkar.com/"><img src="https://avatars.githubusercontent.com/u/57439827?v=4?s=100" width="100px;" alt="Shawki Sukkar"/><br /><sub><b>Shawki Sukkar</b></sub></a><br /><a href="#content-ShawkiS" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/therealharpaljadeja"><img src="https://avatars.githubusercontent.com/u/38040789?v=4?s=100" width="100px;" alt="Harpal Jadeja"/><br /><sub><b>Harpal Jadeja</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=therealharpaljadeja" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
