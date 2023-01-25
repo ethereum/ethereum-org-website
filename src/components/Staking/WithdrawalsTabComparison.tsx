@@ -33,7 +33,7 @@ const WithdrawalsTabComparison: React.FC<IProps> = () => (
           </ListItem>
           <ListItem>
             The majority of stakers did not provide a withdrawal address on
-            initial deposit, and these users need to update their withdrawal
+            initial deposit, and will need to update their withdrawal
             credentials—the{" "}
             <a href="https://launchpad.ethereum.org/withdrawals">
               Staking Launchpad
