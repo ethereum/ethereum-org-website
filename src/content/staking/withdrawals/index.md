@@ -53,7 +53,7 @@ Failure to update withdrawal credentials will simply leave the ETH locked in the
 
 Providing a withdrawal address is required before _any_ funds can be transferred out of a validator account balance.
 
-Users looking to exit staking entirely and withdrawal their full balance back must also sign and broadcast a "voluntary exit" message with validator keys which will start the process of exiting from staking.
+Users looking to exit staking entirely and withdraw their full balance back must also sign and broadcast a "voluntary exit" message with validator keys which will start the process of exiting from staking.
 
 The process of a validator exiting from staking takes variable amounts of time, depending how many others are exiting at the same time. Once complete, this account will no longer be responsible for performing validator network duties, is no longer eligible for rewards, and no longer has their ETH "at stake". At this time the account with be marked as fully “withdrawable”.
 
