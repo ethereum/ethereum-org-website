@@ -23,9 +23,9 @@ Note to validator operators: If a withdrawal address was not set during the init
 
 ## Staking rewards {#staking-rewards}
 
-Rewards payments are automatically processed for active validator accounts with a maxed out effective balance of 32 ETH, who are accumulating rewards.
+Reward payments are automatically processed for active validator accounts with a maxed out effective balance of 32 ETH, who are accumulating rewards.
 
-Any balance above 32 ETH earned through rewards does not actually contribute to principle, or increase the weight of this validator on the network, and is thus automatically withdrawn as a rewards payment every few days. Aside from providing a withdrawal address one time, these rewards do not require any action from the validator operator. This is all initiated on the consensus layer, thus no gas (transaction fee) is required at any step, nor do withdrawals compete for existing block space.
+Any balance above 32 ETH earned through rewards does not actually contribute to principle, or increase the weight of this validator on the network, and is thus automatically withdrawn as a reward payment every few days. Aside from providing a withdrawal address one time, these rewards do not require any action from the validator operator. This is all initiated on the consensus layer, thus no gas (transaction fee) is required at any step, nor do withdrawals compete for existing block space.
 
 ### How did we get here? {#how-did-we-get-here}
 
@@ -67,7 +67,7 @@ Withdrawal functionality will be enabled through a two-part simultaneous network
 
 ## How do withdrawal payments work? {#how-do-withdrawals-work}
 
-Once a validator account has a withdrawal address registered, rewards payments for eligible ETH will happen automatically.
+Once a validator account has a withdrawal address registered, reward payments for eligible ETH will start happening automatically.
 
 Instead of requiring stakers to manually submit a transaction requesting a particular amount of ETH to be withdrawn, withdrawals are designed to automatically transfer out any amount of ETH that is not actively at stake—**no gas required**.
 
@@ -75,11 +75,11 @@ Instead of requiring stakers to manually submit a transaction requesting a parti
 
 With each block, the proposing validator must include a list of withdrawals to process. Each validator is evaluated for possible withdrawals in order, evaluated as follows:
 
-| Decision                                     | Yes                                   | No                                                     |
-| -------------------------------------------- | ------------------------------------- | ------------------------------------------------------ |
-| 1. Has a withdrawal address been provided?   | Proceed to #2                         | **No** withdrawal will be processed, validator skipped |
-| 2. Is the validator still active?            | Proceed to #3                         | **Full** withdrawal will be processed                  |
-| 3. Is the effective balance maxed out at 32? | **Rewards payment** will be processed | **No** withdrawal will be processed, validator skipped |
+| Decision                                     | Yes                                  | No                                                     |
+| -------------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| 1. Has a withdrawal address been provided?   | Proceed to #2                        | **No** withdrawal will be processed, validator skipped |
+| 2. Is the validator still active?            | Proceed to #3                        | **Full withdrawal** will be processed                  |
+| 3. Is the effective balance maxed out at 32? | **Reward payment** will be processed | **No** withdrawal will be processed, validator skipped |
 
 A maximum of 16 withdrawals can be processed in a single block. At that rate, 115,200 validator withdrawals can be processed per day (assuming no missed blocks). As noted above, validators without eligible withdrawals will be skipped, decreasing the time to finish the sweep.
 
@@ -95,8 +95,8 @@ No, the process to provide withdrawal credentials is a one-time process, and can
 <p>This means that users can now decide to redeem their underlying staked ETH, or change which staking provider they utilize. If a particular pool is getting too large, funds can be exited and redeemed, and re-staked with a <a href="https://pools.invis.cloud">smaller provider</a>. Or, if you’ve accumulated enough ETH you could <a href="/staking/solo/">stake from home</a>.</p>
 </ExpandableCard>
 
-<ExpandableCard title="Do rewards payments (partial withdrawals) happen automatically?">
-<p>Yes, as long as your validator has provided a withdrawal address. This must be provided once to enable any withdrawals, then rewards payments will be automatically triggered every few days with each validator sweep.</p>
+<ExpandableCard title="Do reward payments (partial withdrawals) happen automatically?">
+<p>Yes, as long as your validator has provided a withdrawal address. This must be provided once to enable any withdrawals, then reward payments will be automatically triggered every few days with each validator sweep.</p>
 </ExpandableCard>
 
 <ExpandableCard title="Do full withdrawals happen automatically?">
