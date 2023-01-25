@@ -14,6 +14,10 @@ summaryPoint4: Later, full Danksharding will spread responsibility for verifying
     ProtoDanksharding could ship sometime in 2023. Full Danksharding is likely to ship much later, possibly several years from now. 
 </UpgradeStatus>
 
+<InfoBanner isWarning>
+  Danksharding is how Ethereum becomes fully scaled, but there are several protocl upgrades required to get there. Proto-Danksharding is an intermediate step along the way. Both aim to make transactions on Layer 2 as cheap as possible for users and should scale Ethereum to >100,000 transactions per second.
+</InfoBanner>
+
 ## What is Proto-Danksharding? {#what-is-protodanksharding}
 
 Proto-Danksharding, also known as EIP4844, is a way for rollups to add cheaper data to blocks. Right now, rollups are limited in how cheap they can make user transactions by the fact that they post their transactions in `CALLDATA`. This is expensive because it is processed by all Ethereum nodes and lives on chain forever, even though rollups only need the data for a short time. Proto-Danksharding introduces data blobs that can be sent attached to blocks. These blobs are ignored by normal Ethereum nodes and are automatically deleted after a fixed time period (1-3 months). This means rollups can send their data much more cheaply and pass the savings on to end users in the form of cheaper transactions.
@@ -55,8 +59,27 @@ If someone knows the random locations used for the commitment, it is easy for th
 [Watch Dankrad explain the KZG commitments and proofs in detail](https://youtu.be/8L2C6RDMV9Q)
 </ExpandableCard>
 
+<InfoBanner isWarning>
+  Neither Danksharding nor Proto-Danksharding follow the traditional "sharding" model that aimed to split the blockchain into multiple parts. Instead, Danksharding uses distributed data sampling across blobs to scale Ethereum. This is much simpler to implement.  
+</InfoBanner>
+
 ## What is Danksharding? {#what-is-danksharding}
 
-Danksharding is the full realization of the rollup scaling that began with Proto-Danksharding.
+Danksharding is the full realization of the rollup scaling that began with Proto-Danksharding. Danksharding will bring massive amounts of space on Ethereum for rollups to dump their compressed transaction data. This means Ethereum will be able to support hundeds of individual rollups with ease and make millions of transactions per second a reality.
+
+The way this works is by expanding the blobs attached to blocks from 1 in Proto-Danksharding to 64 in full Danksharding. The rest of the changes required are all updated to the way consensus clients operate to enable them to handle the new large blobs. Several of these changes are already on the roadmap for other purposes idnependent of Danksharding. For example, Danksharding requires proposer-builder separation to have been implemented. This is an uprgade that separates the tasks of building blocks and proposign blocks across different validators. Similarly, data availability sampling is required for Danksharding, but it is also required for the development of very lightweight clients that do not store much historical data ("stateless clients").
+
+<ExpandableCard title="Why does Danksharding require proposer-builder separation?">
+Proposer-builder separation is required to prevent individual validators from having to generate expensive commitments and proofs for 32MB of blob data. This would put too much strain on home stakers and require them to invest in more powerful hardware, which hurts decentralization. Instead, specialized block builders take responsibility for this expensive computational work. Then, they make their blocks available to block proposers to broadcast. The block proposer simply chooses the block that is most profitable. Anyone can verify the blobs cheaply and quickly, meaning any normal validator can check that the block builders are behaving honestly. This allows the large blobs to be processes without sacrificing decentralization. Misbehaving block builders culd simply be ejected from the network and slashed - others will step into their place because block building is a profitable activity.
+</ExpandableCard>
+
+<ExpandableCard title="Why does Danksharding require data availability sampling?">
+Data availability sampling is required for validators to quickly and efficiently verify blob data. Using data availability sampling, the validators can be very certain that the blob data was available and correctly committed. Every validator can randomly sample just a few data points and create a proof, meaning no validator has to check the entire blob. If any data is missing, it will be identified quickly and the blob rejected.
+
+[Read more on data availability sampling for blobs](https://hackmd.io/@vbuterin/sharding_proposal#ELI5-data-availability-sampling)
+</ExpandableCard>
+
+[Read more about Danksharding](https://notes.ethereum.org/@dankrad/new_sharding)
+[Watch Dakrad, Proto and Vitalik discuss Danksharding](https://www.youtube.com/watch?v=N5p0TB77flM)
 
 ### Read more {#read-more}
