@@ -25,7 +25,7 @@ The Shanghai/Capella upgrade enables **staking withdrawals** on Ethereum, allowi
 
 **Rewards payments** are automatically processed for active validator accounts with a maxed out effective balance of 32 ETH, who are accumulating rewards.
 
-Any balance above 32 ETH earned through rewards does not actually contribute to principle, or increase the weight of this validator on the network, and is thus automatically withdrawn as a rewards payment every few days. Aside from providing a withdrawal address one time, these rewards do not require any action from the validator operator, nor do they consume gas (no associated transaction fee) or take up existing block space.
+Any balance above 32 ETH earned through rewards does not actually contribute to principle, or increase the weight of this validator on the network, and is thus automatically withdrawn as a rewards payment every few days. Aside from providing a withdrawal address one time, these rewards do not require any action from the validator operator. This is all initiated on the consensus layer, thus no gas (transaction fee) is required at any step, nor do withdrawals compete for existing block space.
 
 ### How did we get here? {#how-did-we-get-here}
 
@@ -53,11 +53,11 @@ There is <strong>no threat to your funds in the meantime</strong> for not provid
 
 Providing a withdrawal address is required before _any_ funds can be transferred out of a validator account balance.
 
-Users looking to exit staking entirely and withdraw their full balance back must also sign and broadcast a "voluntary exit" message with validator keys which will start the process of exiting from staking.
+Users looking to exit staking entirely and withdraw their full balance back must also sign and broadcast a "voluntary exit" message with validator keys which will start the process of exiting from staking. This is done with your validator client and submitted to your beacon node, and does not require gas.
 
 The process of a validator exiting from staking takes variable amounts of time, depending how many others are exiting at the same time. Once complete, this account will no longer be responsible for performing validator network duties, is no longer eligible for rewards, and no longer has their ETH "at stake". At this time the account with be marked as fully “withdrawable”.
 
-Once an account is flagged as "withdrawable", and withdrawal credentials have been provided, there is nothing more a user needs to do aside from wait. Accounts are automatically and continuously swept for eligible exits, and your account balance will be transferred in full during the next sweep (also known as a "full withdrawal").
+Once an account is flagged as "withdrawable", and withdrawal credentials have been provided, there is nothing more a user needs to do aside from wait. Accounts are automatically and continuously swept by block proposers for eligible exited funds, and your account balance will be transferred in full during the next sweep (also known as a "full withdrawal").
 
 ## When are staking withdrawals enabled? {#when}
 
@@ -90,7 +90,7 @@ No, the process to provide withdrawal credentials is a one-time process, and can
 </ExpandableCard>
 
 <ExpandableCard title="What if I participate in liquid staking derivatives or pooled staking">
-<p>If you are part of a staking pool or hold liquid staking derivatives, you should check with your provider for more details about how staking withdrawals will affect your arrangement, as each service operates differently.</p>
+<p>If you are part of a <a href="/staking/pools/">staking pool</a> or hold liquid staking derivatives, you should check with your provider for more details about how staking withdrawals will affect your arrangement, as each service operates differently.</p>
 <p>In general, users will likely have nothing they need to do, and these services will no longer be limited by the inability to withdrawal rewards or exit validator funds after this upgrade.</p>
 <p>This means that users can now decide to redeem their underlying staked ETH, or change which staking provider they utilize. If a particular pool is getting too large, funds can be exited and redeemed, and re-staked with a <a href="https://pools.invis.cloud">smaller provider</a>. Or, if you’ve accumulated enough ETH you could <a href="/staking/solo/">stake from home</a>.</p>
 </ExpandableCard>
@@ -105,7 +105,7 @@ No, the process to provide withdrawal credentials is a one-time process, and can
 </ExpandableCard>
 
 <ExpandableCard title="How can I withdrawal a custom amount?">
-<p>Withdrawals are designed to be pushed automatically, transferring any ETH that is not actively contributing to stake.</p>
+<p>Withdrawals are designed to be pushed automatically, transferring any ETH that is not actively contributing to stake. This includes full balances for accounts </p>
 <p>It is not possible to manually request specific amounts of ETH to be withdrawn.</p>
 </ExpandableCard>
 
@@ -120,51 +120,3 @@ No, the process to provide withdrawal credentials is a one-time process, and can
 - [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Staked ETH Withdrawal (Testing) with Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Beacon chain push withdrawals as operations with Alex stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
-
-<!-- ## To prepare {#to-prepare}
-
-**Validator operators**
-- All validators **must** have valid withdrawal credentials to enable withdrawals of any kind—use the [widget above](#check-your-validator-index) to make sure you have valid withdrawal credentials
-- Those looking to withdrawal entirely from staking will need to sign a voluntary exit message with your validator keys.
-- The [Staking Launchpad Withdrawals](https://launchpad.ethereum.org) page will guide you through how to exit
-
-**New stakers (not yet deposited)**
-- New stakers activating a validator account (not yet deposited) should set a withdrawal address when generating their keys and deposit data
-- The [Staking Launchpad Withdrawals](https://launchpad.ethereum.org) page will guide you through how to join
- -->
-
-<!-- any funds that are not actively being staked, including rewards over 32 ETH and exited funds, will be automatically transferred into a withdrawal address.
-
-No longer is there an ill-defined lock-up period for staked ETH. Users will be free to:
-
-- stake their ETH
-- earn ETH rewards that will be distributed automatically
-- un-stake their ETH to regain full access to their entire balance
-- and of course, re-stake to sign back up and start earning more rewards -->
-
-<!-- ### Full withdrawal (staking exit) {#full-staking-exit}
-
-A **full withdrawal** is enabled once a validator has fully **exited** as a validator, and is no longer active.
-Validator operators wishing to stop staking entirely must broadcast their request to exit from staking. Once processed, their entire staking balance will be unlocked.
-
-Once unlocked, _any non-zero balance_ of ETH at these addresses will be transferred to the withdrawal address provided. -->
-
-<!-- ### Rewards payments {#rewards-payments}
-
-A **rewards payment** is for active validator accounts with a maxed out effective balance of 32 ETH, who are accumulating rewards. Any balance above 32 ETH earned through rewards does not actually contribute to principle, or increase the sway of this validator on the network, and is thus automatically withdrawn as a rewards payment.
-
-Rewards payments may also be referred to as "partial withdrawals", as they leave your 32 ETH principle untouched. -->
-
-<!-- ## Withdrawal types {#withdrawal-types} -->
-<!-- There are two types of staking withdrawals: reward payments and full staking exits. Both types of transfers are processed automatically once a withdrawal address is provided, and depend on the state of the validator account. -->
-
-<!-- ## Enabling withdrawals {#enabling-withdrawals}
-
-Withdrawals can be enabled by assigning a withdrawal address to your validator account. Once assigned, withdrawals will be enabled, and this address cannot be changed. -->
-
-<!-- The following decision tree is used within the software to determine if a rewards payment or full withdrawal should be processed for any given validator: -->
-
-<!-- A maximum of 16 withdrawals can be processed per block -->
-<!-- For any active validator account, this means any rewards over 32 ETH. If the validator account has exited from staking entirely, then _any_ remaining balance will be swept into the address provided. -->
-
-<!-- Each validator is evaluated for possible withdrawals in order, evaluated as follows: -->
