@@ -20,7 +20,7 @@ const ShanghaiCapella: FC<IProps> = (props) => {
       content: (
         <>
           <Text>
-            Push withdrawals will be enabled in the upcoming Shanghai upgrade
+            Withdrawal functionality will be enabled in the upcoming Shanghai upgrade
             planned for Q1/Q2 2023 (as with any upgrade, timing subject to
             change). This enables previously staked ETH to be deposited into
             execution layer accounts, closing the loop on staking liquidity, and
@@ -32,7 +32,7 @@ const ShanghaiCapella: FC<IProps> = (props) => {
             staking. Users will be free to:
           </Text>
           <UnorderedList mb={0}>
-            <ListItem>stakes their ETH</ListItem>
+            <ListItem>stake their ETH</ListItem>
             <ListItem>
               earn ETH rewards that will be distributed automatically
             </ListItem>

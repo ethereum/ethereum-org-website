@@ -9,15 +9,15 @@ sidebarDepth: 2
 summaryPoints:
   - The Shanghai upgrade brings staking withdrawals to Ethereum
   - Validator operators must provide a withdrawal address to enable
-  - Rewards payments are automatically sent to the address provided every few days
-  - Fully exited validators will automatically receive their remaining balance
+  - Rewards are automatically distributed every few days
+  - Validators who fully exit staking will receive their remaining balance
 ---
 
 <UpgradeStatus dateKey="page-upgrades-withdrawals">
-  Staking withdrawals will be enabled through the Shanghai/Capella upgrade. This upgrade is expected to take place in the first half of 2023. <a href="#when">More below</a>
+  Staking withdrawals will be enabled through the Shanghai/Capella upgrade. This Ethereum network upgrade is expected to take place in the first half of 2023. <a href="#when">More below</a>
 </UpgradeStatus>
 
-The Shanghai/Capella upgrade enables **staking withdrawals** on Ethereum, allowing people to unlock rewards and optionally fully withdrawal funds from staking. Rewards payments will automatically and regularly be sent to a provided withdrawal address linked to each validator. Users can also exit staking entirely, unlocking their full validator balance.
+The Shanghai/Capella upgrade enables **staking withdrawals** on Ethereum, allowing people to unlock ETH staking rewards. Reward payments will automatically and regularly be sent to a provided withdrawal address linked to each validator. Users can also exit staking entirely, unlocking their full validator balance.
 
 **Note to validator operators**: If you did not provide a withdrawal address on initial deposit, you will need to upgrade withdrawal credentials before any withdrawals will be enabled for your validator account. The [Staking Launchpad](https://launchpad.ethereum.org/withdrawals) has more details on when and how to do this.
 
@@ -25,7 +25,7 @@ The Shanghai/Capella upgrade enables **staking withdrawals** on Ethereum, allowi
 
 **Rewards payments** are automatically processed for active validator accounts with a maxed out effective balance of 32 ETH, who are accumulating rewards.
 
-Any balance above 32 ETH earned through rewards does not actually contribute to principle, or increase the sway of this validator on the network, and is thus automatically withdrawn as a rewards payment every few days. Aside from providing a withdrawal address one time, these rewards do not require any action from the validator operator, nor do they consume gas (no associated transaction fee) or take up existing block space.
+Any balance above 32 ETH earned through rewards does not actually contribute to principle, or increase the weight of this validator on the network, and is thus automatically withdrawn as a rewards payment every few days. Aside from providing a withdrawal address one time, these rewards do not require any action from the validator operator, nor do they consume gas (no associated transaction fee) or take up existing block space.
 
 ### How did we get here? {#how-did-we-get-here}
 
@@ -47,7 +47,7 @@ Providing a withdrawal address is a required step for any validator account befo
   <strong>Each validator account can only be assigned a single withdrawal address, one time.</strong> Once an address is chosen and submitted to the Beacon Chain, this cannot be undone or changed again. Double-check ownership and accuracy of the address provided before submitting.
 </InfoBanner>
 
-Failure to update withdrawal credentials will simply leave the ETH locked in the validator account as it has been until a withdrawal address is provided. There is <strong>no threat to your funds in the meantime</strong> for not providing this—only the loss of opportunity.
+There is <strong>no threat to your funds in the meantime</strong> for not providing this—only the loss of opportunity. Failure to add withdrawal credentials will simply leave the ETH locked in the validator account as it has been until a withdrawal address is provided.
 
 ## Exiting staking entirely {#exiting-staking-entirely}
 
@@ -61,7 +61,7 @@ Once an account is flagged as "withdrawable", and withdrawal credentials have be
 
 ## When are staking withdrawals enabled? {#when}
 
-Withdrawals will be enabled through a two-part simultaneous network upgrade, **Shanghai + Capella**.
+Withdrawal functionality will be enabled through a two-part simultaneous network upgrade, **Shanghai + Capella**.
 
 <ShanghaiCapella />
 
@@ -69,7 +69,7 @@ Withdrawals will be enabled through a two-part simultaneous network upgrade, **S
 
 Once a validator account has a withdrawal address registered, rewards payments for eligible ETH will happen automatically.
 
-Instead of requiring stakers to manually submit a transaction requesting a particular amount of ETH to be withdrawn, withdraws are designed to automatically transfer out any amount of ETH that is not actively at stake—**no gas required**.
+Instead of requiring stakers to manually submit a transaction requesting a particular amount of ETH to be withdrawn, withdrawals are designed to automatically transfer out any amount of ETH that is not actively at stake—**no gas required**.
 
 ### Validator "sweeping"
 
