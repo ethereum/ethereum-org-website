@@ -94,3 +94,5 @@ One way to think about Ethereum development is by analogy to biological evolutio
 Upgrades tend not to impact end-users except by providing better user-experiences and a more secure protocol and perhaps more _options_ for how to interact with Ethereum. End uses are not requires to actively participate in an upgrade, nor are they required to do anything to secure their assets.Node operators may need to update their clients to prepare for an upgrade. Some upgrades may lead to changes for application developers. For example, history expiry upgrades may lead application developers to grab historical data from new sources.
 
 ## Further reading {#further-reading}
+
+TBC
