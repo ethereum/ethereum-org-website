@@ -58,7 +58,7 @@
   "layer-2-dyor-3": "前往 L2BEAT",
   "layer-2-use-layer-2-title": "使用二層網路",
   "layer-2-use-layer-2-1": "現在你知道了為什麼二層網路會存在和它是如何工作的，讓我們開始行動吧！",
-  "layer-2-contract-accounts": "<strong>注意：</strong>在橋接和使用二層網路時，請務必注意，你將控制你的外部帳戶（一個只由一組私鑰控制的帳戶），就像在以太坊主網上一樣。然而當你使用合約帳戶，例如 <a href=\"https://gnosis-safe.io/\"  target=”_blank”>Gnosis Safe</a> 或 <a href=\"https://www.argent.xyz/\"  target=”_blank”>Argent</a>，你將無法在二層網路上控制此地址，直到你將你的合約帳戶重新部署到二層網路上的該地址。如果你正在橋接或發送資金到合約帳戶，並且你沒有辦法控制該合約帳戶的地址，你的資金可能會遺失。",
+  "layer-2-contract-accounts": "<strong>注意：</strong>在橋接和使用二層網路時，請務必注意，你將控制你的外部帳戶（一個只由一組私鑰控制的帳戶），就像在以太坊主網上一樣。然而當你使用合約帳戶，例如 <a href=\"https://safe.global/\"  target=”_blank”>Safe</a> 或 <a href=\"https://www.argent.xyz/\"  target=”_blank”>Argent</a>，你將無法在二層網路上控制此地址，直到你將你的合約帳戶重新部署到二層網路上的該地址。如果你正在橋接或發送資金到合約帳戶，並且你沒有辦法控制該合約帳戶的地址，你的資金可能會遺失。",
   "layer-2-use-layer-2-generalized-title": "廣義二層網路",
   "layer-2-use-layer-2-generalized-1": "廣義二層網路的行為和以太坊並無區別，但更便宜。你在以太坊一層網路上能夠做到的任何事情，在二層網路同樣能做到。許多去中心化應用程式已經開始遷移到這些二層網路上，或是直接跳過主網，直接部署在二層網路上。",
   "layer-2-use-layer-2-application-specific-title": "應用程式特定的二層網路",
