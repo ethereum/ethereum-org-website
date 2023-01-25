@@ -2312,7 +2312,7 @@ const walletData: WalletData[] = [
     open_source: true,
     repo_url: "https://github.com/block-wallet/extension",
     non_custodial: true,
-    security_audit: ["none"],
+    security_audit: ["https://github.com/block-wallet/block-wallet/blob/main/audits/Least%20Authority%201.pdf", "https://github.com/block-wallet/block-wallet/blob/main/audits/BLW-01-report.v3.pdf", "https://immunefi.com/bounty/blockwallet/", "https://blockwallet.io/security-audits.html"],
     scam_protection: true,
     hardware_support: true,
     walletconnect: false,
