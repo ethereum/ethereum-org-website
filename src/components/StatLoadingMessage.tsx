@@ -1,19 +1,14 @@
 import React from "react"
-import styled from "@emotion/styled"
-import { typography, TypographyProps } from "styled-system"
+import { Text, TextProps } from "@chakra-ui/react"
 
 import Translation from "./Translation"
 
-export interface IProps extends TypographyProps {}
-
-export const IndicatorSpan = styled.span<IProps>`
-  ${typography}
-`
+export interface IProps extends TextProps {}
 
 const StatLoadingMessage: React.FC<IProps> = (props) => (
-  <IndicatorSpan fontSize="2rem" {...props}>
+  <Text as="span" fontSize="2rem" {...props}>
     <Translation id="loading" />
-  </IndicatorSpan>
+  </Text>
 )
 
 export default StatLoadingMessage
