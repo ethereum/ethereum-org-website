@@ -104,7 +104,7 @@ const TranslationBanner: React.FC<IProps> = ({
                   color="#333333"
                   language="en"
                 >
-                  <Translation id="translation-banner-button-see-english" />
+                  See English
                 </ButtonLink>
               </Box>
             )}
