@@ -60,12 +60,18 @@ const WithdrawalCredentials: FC<IProps> = () => {
   const resultText = useMemo<string | JSX.Element>(() => {
     if (isLoading) return <Spinner />
     if (hasError)
-      return "Oops! Double check validator index number and try again."
+      return (
+        <Flex bg="errorNeutral" p={4}>
+          <Text m={0} color="error">
+            Oops! Double check validator index number and try again.
+          </Text>
+        </Flex>
+      )
     if (!validator) return " "
     if (validator.isUpgraded)
       return (
-        <>
-          <InfoBanner emoji="🎉">
+        <Flex bg="successNeutral" p={4}>
+          <Text m={0} color="success">
             Validator index {validator.validatorIndex} is ready to start
             receiving rewards! Withdrawal credentials linked to execution
             address{" "}
@@ -88,17 +94,19 @@ const WithdrawalCredentials: FC<IProps> = () => {
                 </>
               )}
             </CopyToClipboard>
-          </InfoBanner>
-        </>
+          </Text>
+        </Flex>
       )
     return (
-      <InfoBanner emoji="⚠️">
-        This {validator.isTestnet ? "Goerli testnet" : ""} validator needs to be
-        upgraded. Instructions on how to upgrade can be found at{" "}
-        <Link to="https://launchpad.ethereum.org/withdrawals">
-          Staking Launchpad Withdrawals
-        </Link>
-      </InfoBanner>
+      <Flex bg="errorNeutral" p={4}>
+        <Text m={0} color="error">
+          This {validator.isTestnet ? "Goerli testnet" : ""} validator needs to
+          be upgraded. Instructions on how to upgrade can be found at{" "}
+          <Link to="https://launchpad.ethereum.org/withdrawals">
+            Staking Launchpad Withdrawals
+          </Link>
+        </Text>
+      </Flex>
     )
   }, [isLoading, hasError, validator, longAddress, shortAddress])
 
@@ -133,7 +141,7 @@ const WithdrawalCredentials: FC<IProps> = () => {
           </Button>
         </Flex>
       </Flex>
-      <Text mt={4}>{resultText}</Text>
+      {resultText}
     </Flex>
   )
 }
