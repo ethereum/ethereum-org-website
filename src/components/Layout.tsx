@@ -137,6 +137,7 @@ const Layout: React.FC<IProps> = ({
                 flexFlow="column"
                 maxW={{
                   lg: lightTheme.variables.maxPageWidth,
+                  xl: "100%",
                 }}
               >
                 <ZenMode>
