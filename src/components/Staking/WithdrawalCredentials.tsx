@@ -121,7 +121,6 @@ const WithdrawalCredentials: FC<IProps> = () => {
           <Button
             onClick={() => checkWithdrawalCredentials()}
             disabled={!inputValue.length}
-            // flex={{ base: 1, md: "unset" }}
           >
             Mainnet
           </Button>
@@ -129,7 +128,6 @@ const WithdrawalCredentials: FC<IProps> = () => {
             onClick={() => checkWithdrawalCredentials(true)}
             disabled={!inputValue.length}
             variant="outline"
-            // flex={{ base: 1, md: "unset" }}
           >
             Goerli
           </Button>
