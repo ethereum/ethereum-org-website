@@ -18,7 +18,7 @@ It's as easy as running `yarn storybook` to boot up a dedicated localhost to see
 
 ## Setting up a component's stories
 
-A Storybook "story" is an instance of a component in a certain state or with certain paramaters applied to show an alternative version of the component.
+A Storybook "story" is an instance of a component in a certain state or with certain parameters applied to show an alternative version of the component.
 
 Each component will only need one file containing all the stories, and should follow the naming convention of the component.
 
