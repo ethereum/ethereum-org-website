@@ -10,7 +10,7 @@ Learn how to operate all the basic functions of a wallet. If you don’t have on
 
 ## Open your wallet
 
-You should see a dashboard that will likely show your balance and contain buttons to send and receive tokens. 
+You should see a dashboard that will likely show your balance and contain buttons to send and receive tokens.
 
 ## Receive cryptocurrency
 
@@ -20,7 +20,7 @@ Each Ethereum account has its own receiving address which is a unique sequence o
 
 You need to provide the sender with your receiving address. Many wallet apps let you copy to clipboard the address or show a QR code to scan for easier usage. Avoid typing any Ethereum address manually. This is unsafe, and can easily lead to clerical errors and lost funds.
 
-This is a general pattern, and different apps may vary or use different language. It should also be similar process if you are trying to send your funds from an exchange. 
+This is a general pattern, and different apps may vary or use different language. It should also be similar process if you are trying to send your funds from an exchange.
 
 1. Open your wallet app.
 2. Click on "Receive" or similarly worded option on the dashboard
@@ -29,15 +29,15 @@ This is a general pattern, and different apps may vary or use different language
 
 ## Send cryptocurrency
 
-Would you like to send ETH to another wallet? 
+Would you like to send ETH to another wallet?
 
 1. Prepare the receiving address and the network of the recipient.
 2. Open your wallet app.
-3. Click on a “Send” button on the dashboard of your wallet or similarly worded alternative.  
+3. Click on a “Send” button on the dashboard of your wallet or similarly worded alternative.
 4. Enter the receiving address or scan a QR code with your camera so that you don’t have to write the address manually.
-<br/><br/>
+
 ![Send field for crypto address](./send.png)
-<br/><br/>
+<br/>
 
 5. Many assets, like DAI or USDC, exist on multiple networks. When transferring crypto tokens, make sure that the recipient is using the same network as you are, since these are not interchangeable.
 6. Ensure that your wallet has sufficient ETH to cover the transaction fee which varies depending on network conditions. Most wallets will automatically add the suggested fee to the transaction which you can then confirm.
