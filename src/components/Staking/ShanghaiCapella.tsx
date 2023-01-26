@@ -1,6 +1,7 @@
 // Import libraries
 import React, { FC } from "react"
 import {
+  Box,
   Flex,
   Text,
   UnorderedList,
@@ -80,6 +81,16 @@ const ShanghaiCapella: FC<IProps> = (props) => {
           </>
         }
         flex={3}
+      />
+      {/* Decorative connector line */}
+      <Box
+        w={{ base: 0, md: "full" }}
+        h={{ base: "full", md: 0 }}
+        position="absolute"
+        inset={{ base: "0 50% auto auto", md: "50% 0 auto auto" }}
+        border="1px"
+        borderColor="lightBorder"
+        zIndex={-1}
       />
     </Flex>
   )
