@@ -4,7 +4,7 @@ description: A detailed look at the Dagger-Hashimoto algorithm.
 lang: en
 ---
 
-Dagger-Hashimoto was the original research implementation and specification for Ethereum's mining algorithm. Dagger-Hashimoto was superseded by [Ethash](#ethash). Mining will be switched off completely after [The Merge](/updates/merge), at which point Ethereum will be secured using a [proof-of-stake](/developers/docs/consensus-mechanisms/pos) mechanism instead.
+Dagger-Hashimoto was the original research implementation and specification for Ethereum's mining algorithm. Dagger-Hashimoto was superseded by [Ethash](#ethash). Mining was switched off completely at [The Merge](/updates/merge) on 15th September 2022. Since then, Ethereum has been secured using a [proof-of-stake](/developers/docs/consensus-mechanisms/pos) mechanism instead. This page is for historical interest - the information here is no longer relevant for post-Merge Ethereum.
 
 ## Prerequisites {#prerequisites}
 
@@ -283,7 +283,7 @@ The order of `x` cannot be `2` unless `x = P-1`, since this would violate that `
 
 From the above proposition, we can recognize that iterating `(picker * init) % P` will have a cycle length of at least `(P-1)/2`. This is because we selected `P` to be a safe prime approximately equal to be a higher power of two, and `init` is in the interval `[2,2**256+1]`. Given the magnitude fo `P`, we should never expect a cycle from modular exponentiation.
 
-When we are assigning the first cell in the DAG (the variable labeled `init`), we compute `pow(sha3(seed) + 2, 3, P)`. At first glance, this does not guarantee that the result is neither `1` nor `P-1`. However, since `P-1` is a safe prime, we have the following additional assuance, which is a corollary of Observation 1:
+When we are assigning the first cell in the DAG (the variable labeled `init`), we compute `pow(sha3(seed) + 2, 3, P)`. At first glance, this does not guarantee that the result is neither `1` nor `P-1`. However, since `P-1` is a safe prime, we have the following additional assurance, which is a corollary of Observation 1:
 
 > Observation 2. Let `x` be a member of the multiplicative group `ℤ/Pℤ` for a safe prime `P`, and let `w` be a natural number. If `x mod P ≠ 1 mod P` and `x mod P ≠ P-1 mod P`, as well as `w mod P ≠ P-1 mod P` and `w mod P ≠ 0 mod P`, then `xʷ mod P ≠ 1 mod P` and `xʷ mod P ≠ P-1 mod P`
 
@@ -291,7 +291,7 @@ When we are assigning the first cell in the DAG (the variable labeled `init`), w
 
 For certain values of `P` and `w`, the function `pow(x, w, P)` may have many collisions. For instance, `pow(x,9,19)` only takes on values `{1,18}`.
 
-Given that `P` is prime, then an appropriate `w` for a modular exponentation hashing function can be chosen using the following result:
+Given that `P` is prime, then an appropriate `w` for a modular exponentiation hashing function can be chosen using the following result:
 
 > Observation 3. Let `P` be a prime; `w` and `P-1` are relatively prime if and only if for all `a` and `b` in `ℤ/Pℤ`:<center>`aʷ mod P ≡ bʷ mod P` if and only if `a mod P ≡ b mod P`</center>
 

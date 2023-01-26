@@ -180,7 +180,7 @@ const BannerImage = styled.div`
 
 const Section = styled.section`
   margin-top: 6rem;
-  &:first-child {
+  &:first-of-type {
     margin-top: 0;
   }
 `
@@ -242,7 +242,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
     <Container>
       <PageMetadata
         title={translateMessageId("hero-title", intl)}
-        description={""}
+        description={translateMessageId("hero-subtitle", intl)}
       />
 
       <HeroBackground>
@@ -810,7 +810,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               <ul>
                 <li>
                   <Link to="https://www.goodreads.com/book/show/57356067-the-cryptopians">
-                    The Cryptopians
+                    <Translation id="cryptopians-title" />
                   </Link>{" "}
                   <i>
                     <Translation id="cryptopians-description" />
@@ -818,7 +818,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/book/show/55360267-out-of-the-ether">
-                    Out of the Ether
+                    <Translation id="out-of-the-ether-title" />
                   </Link>{" "}
                   <i>
                     <Translation id="out-of-the-ether-description" />
@@ -826,7 +826,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/en/book/show/50175330-the-infinite-machine">
-                    The Infinite Machine
+                    <Translation id="the-infinite-machine-title" />
                   </Link>{" "}
                   <i>
                     <Translation id="the-infinite-machine-description" />
@@ -834,7 +834,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/en/book/show/22174460-the-age-of-cryptocurrency">
-                    The Age of Cryptocurrency
+                    <Translation id="the-age-of-cryptocurrency-title" />
                   </Link>{" "}
                   <i>
                     <Translation id="the-age-of-cryptocurrency-description" />
@@ -842,7 +842,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/en/book/show/34964890-the-truth-machine">
-                    The Truth Machine
+                    <Translation id="the-truth-machine-title" />
                   </Link>{" "}
                   <i>
                     <Translation id="the-truth-machine-description" />
@@ -850,7 +850,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/book/show/23546676-digital-gold">
-                    Digital Gold
+                    <Translation id="digital-gold-title" />
                   </Link>{" "}
                   <i>
                     <Translation id="digital-gold-description" />
@@ -858,7 +858,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/en/book/show/56274031-kings-of-crypto">
-                    Kings of Crypto
+                    <Translation id="kings-of-crypto-title" />
                   </Link>{" "}
                   <i>
                     <Translation id="kings-of-crypto-description" />
@@ -866,10 +866,18 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </li>
                 <li>
                   <Link to="https://github.com/ethereumbook/ethereumbook">
-                    Mastering Ethereum
+                    <Translation id="mastering-ethereum-title" />
                   </Link>{" "}
                   <i>
                     <Translation id="mastering-ethereum-description" />{" "}
+                  </i>
+                </li>
+                <li>
+                  <Link to="https://www.goodreads.com/en/book/show/59892281-proof-of-stake">
+                    <Translation id="proof-of-stake-title" />
+                  </Link>{" "}
+                  <i>
+                    <Translation id="proof-of-stake-description" />
                   </i>
                 </li>
               </ul>
@@ -878,49 +886,59 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               </h3>
               <ul>
                 <li>
-                  <Link to="https://podcast.ethhub.io/">Into the Ether</Link>{" "}
-                  <i>
-                    <Translation id="ethhub-description" />
-                  </i>
-                </li>
-                <li>
-                  <Link to="http://podcast.banklesshq.com/">Bankless</Link>{" "}
+                  <Link to="http://podcast.banklesshq.com/">
+                    <Translation id="bankless-title" />
+                  </Link>{" "}
                   <i>
                     <Translation id="bankless-description" />
                   </i>
                 </li>
                 <li>
                   <Link to="https://uncommoncore.co/podcast/">
-                    Uncommon Core
+                    <Translation id="uncommon-core-title" />
                   </Link>{" "}
                   <i>
                     <Translation id="uncommon-core-description" />
                   </i>
                 </li>
                 <li>
-                  <Link to="https://www.zeroknowledge.fm/">Zero Knowledge</Link>{" "}
+                  <Link to="https://www.zeroknowledge.fm/">
+                    <Translation id="zeroknowledge-title" />
+                  </Link>{" "}
                   <i>
                     <Translation id="zeroknowledge-description" />
                   </i>
                 </li>
                 <li>
-                  <Link to="https://epicenter.tv/">Epicenter</Link>{" "}
+                  <Link to="https://epicenter.tv/">
+                    <Translation id="epicenter-title" />
+                  </Link>{" "}
                   <i>
                     <Translation id="epicenter-description" />
                   </i>
                 </li>
                 <li>
-                  <Link to="https://unchainedpodcast.com/">Unchained</Link>{" "}
+                  <Link to="https://unchainedpodcast.com/">
+                    <Translation id="unchained-title" />
+                  </Link>{" "}
                   <i>
                     <Translation id="unchained-description" />
                   </i>
                 </li>
                 <li>
                   <Link to="https://www.intothebytecode.xyz/">
-                    Into the Bytecode
+                    <Translation id="into-the-bytecode-title" />
                   </Link>{" "}
                   <i>
                     <Translation id="into-the-bytecode-description" />
+                  </i>
+                </li>
+                <li>
+                  <Link to="https://www.youtube.com/@TheDailyGwei/">
+                    <Translation id="the-daily-gwei-title" />
+                  </Link>{" "}
+                  <i>
+                    <Translation id="the-daily-gwei-description" />
                   </i>
                 </li>
               </ul>

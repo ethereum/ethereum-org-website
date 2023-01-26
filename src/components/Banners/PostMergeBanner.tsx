@@ -1,35 +1,29 @@
 import React from "react"
-import styled from "@emotion/styled"
 import BannerNotification from "../BannerNotification"
 import Translation from "../Translation"
 
 import { TranslationKey } from "../../utils/translations"
-
-const StyledBannerNotification = styled(BannerNotification)`
-  display: flex;
-  z-index: 1;
-  justify-content: center;
-  p {
-    max-width: 100ch;
-    margin: 0;
-    padding: 0;
-  }
-  a {
-    text-decoration: underline;
-  }
-  text-align: center;
-`
+import { Text } from "@chakra-ui/react"
 
 export interface IProps {
   translationString: TranslationKey
 }
 
 const PostMergeBanner: React.FC<IProps> = ({ translationString }) => (
-  <StyledBannerNotification shouldShow={true}>
-    <p>
+  <BannerNotification
+    shouldShow={true}
+    zIndex={1}
+    textAlign="center"
+    sx={{
+      a: {
+        "text-decoration": "underline",
+      },
+    }}
+  >
+    <Text maxW="100ch" m={0} p={0}>
       <Translation id={translationString} />
-    </p>
-  </StyledBannerNotification>
+    </Text>
+  </BannerNotification>
 )
 
 export default PostMergeBanner

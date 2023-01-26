@@ -2,6 +2,7 @@
 title: Eventi Ethereum
 description: Come partecipare alla community Ethereum.
 lang: it
+hideEditButton: true
 ---
 
 ## Eventi in arrivo {#events}

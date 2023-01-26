@@ -9,8 +9,6 @@ tags:
   - "alchemy"
   - "kontrak pintar"
   - "frontend"
-  - "UI"
-  - "wallet"
   - "Pinata"
 skill: intermediate
 lang: id
