@@ -201,6 +201,10 @@ const Nav: React.FC<IProps> = ({ path }) => {
               text: "Learn hub",
               to: "/learn/",
             },
+            {
+              text: "guides-hub",
+              to: "/guides/",
+            },
           ],
         },
         {
