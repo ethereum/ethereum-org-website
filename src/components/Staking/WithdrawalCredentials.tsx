@@ -66,8 +66,9 @@ const WithdrawalCredentials: FC<IProps> = () => {
       return (
         <>
           <InfoBanner emoji="🎉">
-            Validator index {validator.validatorIndex} has upgraded withdrawal
-            credentials, linked to execution address{" "}
+            Validator index {validator.validatorIndex} is ready to start
+            receiving rewards! Withdrawal credentials linked to execution
+            address{" "}
             <CopyToClipboard text={longAddress} inline>
               {(isCopied) => (
                 <>
@@ -92,8 +93,8 @@ const WithdrawalCredentials: FC<IProps> = () => {
       )
     return (
       <InfoBanner emoji="⚠️">
-        This {validator.isTestnet ? "Goerli testnet" : ""} validator has not
-        been upgraded. Instructions on how to upgrade can be found at{" "}
+        This {validator.isTestnet ? "Goerli testnet" : ""} validator needs to be
+        upgraded. Instructions on how to upgrade can be found at{" "}
         <Link to="https://launchpad.ethereum.org/withdrawals">
           Staking Launchpad Withdrawals
         </Link>
