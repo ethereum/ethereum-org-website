@@ -43,7 +43,7 @@ Once you have saved your recovery phrase you should see your wallet dashboard wi
   </ButtonLink>
 </InfoBanner>
 
-### Frequently asked questions
+## Frequently asked questions
 
 ### Are my wallet and my Ethereum account the same?
 
