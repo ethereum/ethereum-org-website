@@ -638,7 +638,7 @@ export const query = graphql`
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
-    gnosis: file(relativePath: { eq: "wallets/gnosis.png" }) {
+    safe: file(relativePath: { eq: "wallets/safe.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
@@ -799,6 +799,16 @@ export const query = graphql`
       }
     }
     gridplus: file(relativePath: { eq: "wallets/gridplus.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    bitkeep: file(relativePath: { eq: "wallets/bitkeep.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    blockwallet: file(relativePath: { eq: "wallets/blockwallet.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
