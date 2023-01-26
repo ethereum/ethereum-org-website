@@ -15,6 +15,7 @@ const shadows = {
     light: "0 1px 1px rgba(0, 0, 0, 0.1)",
     dark: "0 1px 1px hsla(0,0%,100%,.1)",
   },
+  tableItemBoxHover: "0 0 1px var(--eth-colors-primary)",
 }
 
 export default shadows
