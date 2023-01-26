@@ -1,10 +1,10 @@
 ---
-title: How to "register" an Ethereum account?
+title: How to "register" an Ethereum account
 description: A step-by-step guide on Ethereum account creation using a wallet.
 lang: en
 ---
 
-# How to "register" an Ethereum account?
+# How to "register" an Ethereum account
 
 Anyone can create an Ethereum account for free with a specific type of app commonly known as a wallet. Wallets hold the keys that let you hold, send and receive crypto. You can also connect to projects on Ethereum that will let you trade NFTs, exchange coins, access play-to-earn games, unlock Defi and much more.
 
@@ -12,7 +12,7 @@ Unlike traditional account registrations you may be used to, creating an Ethereu
 
 ## Step 1: Browse our list of wallets
 
-A wallet is like an online bank account for Ethereum. There are dozens of different wallets to choose from—mobile, desktop, or even browser extensions. Our curated list of trusted wallets is a good place to start. 
+A wallet is like an online bank account for Ethereum. There are dozens of different wallets to choose from—mobile, desktop, or even browser extensions. Our curated list of trusted wallets is a good place to start.
 
 <ButtonLink to="/wallets/find-wallet/">
   Find a wallet
@@ -24,12 +24,11 @@ If you are new, you can activate the “New to crypto” filter to view only tho
 
 ## Step 3: Download and install your wallet app
 
-Once you have decided on a specific wallet, visit their official website or app store, download and install it. All of them should be free. 
+Once you have decided on a specific wallet, visit their official website or app store, download and install it. All of them should be free.
 
 ## Step 4: Open the app and generate or import your Ethereum account
 
-The first time you open your new wallet you might be asked to choose between creating a new account or importing an existing one. Click on the new account creation. 
-
+The first time you open your new wallet you might be asked to choose between creating a new account or importing an existing one. Click on the new account creation.
 
 ## Step 5: Store your recovery phrase
 
@@ -47,6 +46,7 @@ Once you have saved your recovery phrase you should see your wallet dashboard wi
 ### Frequently asked questions
 
 ### Are my wallet and my Ethereum account the same?
+
 No, wallets have the ability to create a new Ethereum account, but the account lives on Ethereum and wallets connect to it. So if you lose your wallet you can still recover your account with the recovery phrase.
 
 ### Can I send bitcoin to an Ethereum address, or ether to a Bitcoin address?
