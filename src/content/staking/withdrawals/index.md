@@ -150,3 +150,4 @@ No, the process to provide withdrawal credentials is a one-time process, and can
 - [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Staked ETH Withdrawal (Testing) with Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Beacon chain push withdrawals as operations with Alex stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
+- [Understaning Validator Effective Balance](https://www.attestant.io/posts/understanding-validator-effective-balance/)
