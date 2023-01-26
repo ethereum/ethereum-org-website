@@ -54,6 +54,15 @@
     "endDate": "2023-05-28"
   },
   {
+    "title": "ETH Belgrade",
+    "to": "https://belgradeblockchainweek.com/",
+    "sponsor": null,
+    "location": "Belgrade, Serbia",
+    "description": "The CEE region's premier ETH conference dedicated to the Ethereum and the Ethereum ecosystem.",
+    "startDate": "2023-06-02",
+    "endDate": "2023-06-4"
+  },
+  {
     "title": "ETHGlobal Toronto",
     "to": "https://ethglobal.com/events/toronto",
     "sponsor": null,
