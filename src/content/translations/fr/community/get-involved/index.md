@@ -73,7 +73,7 @@ L'écosystème Ethereum a pour mission de financer des biens publics et des proj
 
 ## Professionnels de la finance et comptables <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
 
-- Ethereum abrite l'écosystème « Finance décentralisée » - un réseau de protocoles et d'applications qui offrent un système financier alternatif. Si vous êtes un professionnel de la finance, consultez certaines applications DeFi sur [DeFi Pulse](https://defipulse.com/) ou [ DeFiPrime](https://defiprime.com).
+- Ethereum abrite l'écosystème « Finance décentralisée » - un réseau de protocoles et d'applications qui offrent un système financier alternatif. Si vous êtes un professionnel de la finance, consultez certaines applications DeFi sur [DeFi Llama](https://defillama.com/) ou [ DeFiPrime](https://defiprime.com).
 - Comptable? Les actifs sur Ethereum - ETH, jetons, DeFi, etc. - introduisent de nombreux nouveaux problèmes comptables. Vous pouvez commencer par consulter certains projets qui visent à aider les utilisateurs de cryptomonnaie à résoudre leur comptabilité & défis comptables, comme [Rotki](https://rotki.com/)
 
 ## Chefs de produit <Emoji text=":fountain_pen:" size={1} /> {#product-managers}

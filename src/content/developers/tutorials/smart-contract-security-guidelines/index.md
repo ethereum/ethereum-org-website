@@ -47,7 +47,7 @@ We discussed the different upgradeability solutions in [our blogpost](https://bl
 
 The architecture of your codebase should make your code easy to review. Avoid architectural choices that decrease the ability to reason about its correctness.
 
-- **Split the logic of your system**, either through multiple contracts or by grouping similar functions together (for example, authentification, arithmetic, ...).
+- **Split the logic of your system**, either through multiple contracts or by grouping similar functions together (for example, authentication, arithmetic, ...).
 - **Write small functions, with a clear purpose.** This will facilitate easier review and allow the testing of individual components.
 
 ### Inheritance {#inheritance}

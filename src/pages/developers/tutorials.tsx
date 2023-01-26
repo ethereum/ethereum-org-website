@@ -10,7 +10,6 @@ import ButtonLink from "../../components/ButtonLink"
 import Link from "../../components/Link"
 import Modal from "../../components/Modal"
 import PageMetadata from "../../components/PageMetadata"
-import Pill from "../../components/Pill"
 import Tag from "../../components/Tag"
 import TutorialTags from "../../components/TutorialTags"
 import Emoji from "../../components/Emoji"
@@ -31,6 +30,7 @@ import {
   filterTutorialsByLang,
   getSortedTutorialTagsForLang,
 } from "../../utils/tutorials"
+import { Badge } from "@chakra-ui/react"
 
 const SubSlogan = styled.p`
   font-size: 1.25rem;
@@ -420,9 +420,9 @@ const TutorialsPage = ({
             >
               <TitleContainer>
                 <Title isExternal={tutorial.isExternal}>{tutorial.title}</Title>
-                <Pill isSecondary={true}>
+                <Badge variant="secondary">
                   <Translation id={getSkillTranslationId(tutorial.skill!)} />
-                </Pill>
+                </Badge>
               </TitleContainer>
               <Author>
                 {/* TODO: Refactor each tutorial tag as a component */}

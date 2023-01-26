@@ -332,7 +332,6 @@ DeFi, açık kaynaklı bir akımdır. DeFi protokolleri ve uygulamaları; incele
 
 ### DeFi verisi {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 - [DeFi Oranı](https://defirate.com/)

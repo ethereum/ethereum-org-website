@@ -7,6 +7,7 @@ import React, {
 } from "react"
 import { shuffle } from "lodash"
 import {
+  Badge,
   Box,
   BoxProps,
   Center,
@@ -104,35 +105,21 @@ const Status: React.FC<{ status: FlagType }> = ({ status }) => {
   }
 }
 
-const StakingPill: React.FC<{ type: string; children: ReactNode }> = ({
-  type,
-  children,
-}) => {
-  const backgroundColor = () => {
-    if (!type) return "transparent"
-    switch (type.toLowerCase()) {
-      case "ui":
-        return "stakingPillUI"
-      case "platform":
-        return "stakingPillPlatform"
-      default:
-        return "tagGray"
-    }
-  }
+const StakingBadge: React.FC<{
+  type: "ui" | "platform"
+  children: React.ReactNode
+}> = ({ type, children }) => {
+  const uiTypeColor = type === "ui" && "stakingPillUI"
+  const platformTypeColor = type === "platform" && "stakingPillPlatform"
+
   return (
-    <Box
-      background={backgroundColor()}
-      border="1px"
-      borderColor="lightBorder"
-      borderRadius="base"
-      color={type ? "rgba(0,0,0,0.6)" : "text200"}
-      fontSize="xs"
-      px={3}
-      py={1}
-      textAlign="center"
+    <Badge
+      size="lg"
+      background={uiTypeColor || platformTypeColor || undefined}
+      textTransform="initial"
     >
       {children}
-    </Box>
+    </Badge>
   )
 }
 
@@ -281,15 +268,15 @@ const StakingProductCard: React.FC<ICardProps> = ({
       >
         {platforms &&
           platforms.map((platform, idx) => (
-            <StakingPill type="platform" key={idx}>
+            <StakingBadge type="platform" key={idx}>
               {platform}
-            </StakingPill>
+            </StakingBadge>
           ))}
         {ui &&
           ui.map((_ui, idx) => (
-            <StakingPill type="ui" key={idx}>
+            <StakingBadge type="ui" key={idx}>
               {_ui}
-            </StakingPill>
+            </StakingBadge>
           ))}
       </Flex>
       <Box {...PADDED_DIV_STYLE} py={0}>
