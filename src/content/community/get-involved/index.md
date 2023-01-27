@@ -41,7 +41,7 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 ### Write content about Ethereum {#write-content}
 
 - Ethereum needs good writers who can explain its value in plain language
-- Not ready to publish your own articles? Consider contributing to the existing content on community resources like [EthHub](https://docs.ethhub.io/), or propose new content for ethereum.org!
+- Not ready to publish your own articles? Consider contributing to the existing content on community resources, or [propose new content for ethereum.org](/contributing/)!
 
 ### Offer to take notes for community calls {#take-notes}
 
@@ -73,7 +73,7 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 
 ## Financial professionals & Accountants <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}
 
-- Ethereum is home to the “Decentralized Finance” ecosystem - a network of protocols and applications that offer an alternative financial system. If you’re a financial professional, check out some DeFi apps at [DeFi Pulse](https://defipulse.com/) or [DeFiPrime](https://defiprime.com)
+- Ethereum is home to the “Decentralized Finance” ecosystem - a network of protocols and applications that offer an alternative financial system. If you’re a financial professional, check out some DeFi apps at [DeFi Llama](https://defillama.com/) or [DeFiPrime](https://defiprime.com)
 - Accountant? Assets on Ethereum - ETH, tokens, DeFi, etc - introduce many novel accounting issues. You could start by checking out some projects that aim to help users of cryptocurrency solve their bookkeeping & accounting challenges, like [Rotki](https://rotki.com/)
 
 ## Product Managers <Emoji text=":fountain_pen:" size={1} />‍ {#product-managers}
@@ -100,6 +100,8 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 - [Web3 Jobs](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)
+- [Ethereum Jobs](https://startup.jobs/ethereum-jobs)
+- [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## Join a DAO {#decentralized-autonomous-organizations-daos}
 

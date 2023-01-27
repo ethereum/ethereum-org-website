@@ -7,11 +7,11 @@ import {
   Cell,
   XAxis,
   Text,
-  CartesianGrid,
   LabelList,
   ResponsiveContainer,
   Legend,
 } from "recharts"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import Translation from "./Translation"
 import { useWindowSize } from "../hooks/useWindowSize"
 
@@ -43,6 +43,7 @@ const CustomTick: React.FC<ITickProps> = ({ x, y, payload }) => {
 }
 
 const EnergyConsumptionChart: React.FC = () => {
+  const { t } = useTranslation()
   const theme = useTheme()
   const [width] = useWindowSize()
 
@@ -59,58 +60,58 @@ const EnergyConsumptionChart: React.FC = () => {
   // TODO: Extract translatable strings
   const energyConsumptionChartData: Data = [
     {
-      name: "YouTube",
+      name: t("energy-consumption-chart-youtube-label"),
       amount: 244,
       color: "#FF0000",
     },
     {
-      name: "Gold mining (Galaxy Digital)",
+      name: t("energy-consumption-chart-gold-mining-galaxy-label"),
       amount: 240,
       color: "#D7B14A",
       breakpoint: mediumBreakpoint,
     },
     {
-      name: "Global data centers",
+      name: t("energy-consumption-chart-global-data-centers-label"),
       amount: 200,
       color: "#D7B14A",
       breakpoint: mediumBreakpoint,
     },
     {
-      name: "Gold mining (CBECI)",
+      name: t("energy-consumption-chart-gold-mining-cbeci-label"),
       amount: 130,
       color: "#D7B14A",
       breakpoint: mediumBreakpoint,
     },
     {
-      name: "BTC PoW",
+      name: t("energy-consumption-chart-btc-pow-label"),
       amount: 100,
       color: "#F2A900",
     },
     {
-      name: "Netflix",
+      name: t("energy-consumption-chart-netflix-label"),
       amount: 94,
       color: "#E50914",
       breakpoint: smallBreakpoint,
     },
     {
-      name: "ETH PoW",
+      name: t("energy-consumption-chart-eth-pow-label"),
       amount: 78,
       color: "#C1B6F5",
     },
     {
-      name: "Gaming in the US",
+      name: t("energy-consumption-chart-gaming-us-label"),
       amount: 34,
       color: "#71BB8A",
       breakpoint: mediumBreakpoint,
     },
     {
-      name: "PayPal",
+      name: t("energy-consumption-chart-paypal-label"),
       amount: 0.26,
       color: "#C1B6F5",
       breakpoint: smallBreakpoint,
     },
     {
-      name: "ETH PoS",
+      name: t("energy-consumption-chart-eth-pos-label"),
       amount: 0.0026,
       color: "#C1B6F5",
     },

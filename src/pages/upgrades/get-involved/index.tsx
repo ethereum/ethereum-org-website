@@ -552,9 +552,7 @@ export const query = graphql`
         }
       }
     }
-    bountyHunters: allConsensusBountyHuntersCsv(
-      sort: { order: DESC, fields: score }
-    ) {
+    bountyHunters: allConsensusBountyHuntersCsv(sort: { score: DESC }) {
       nodes {
         username
         name

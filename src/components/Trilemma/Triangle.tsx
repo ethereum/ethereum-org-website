@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import { chakra, HTMLChakraProps } from "@chakra-ui/react"
-import { HandleClickParam } from "./use-trilemma"
+import { HandleClickParam } from "./useTrilemma"
 
 export interface IProps {
   handleClick: (selection: HandleClickParam) => void
