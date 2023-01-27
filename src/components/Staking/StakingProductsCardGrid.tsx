@@ -320,7 +320,6 @@ export interface IProps {
 const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
   const [rankedProducts, updateRankedProducts] = useState<Array<Product>>([])
   const [SAT, LUM] = useColorModeValue(["75%", "60%"], ["50%", "35%"])
-  const isLight = useColorModeValue(true, false)
 
   const scoreOpenSource = (product: Product): 1 | 0 => {
     return product.openSource === FlagType.VALID ? 1 : 0
@@ -424,9 +423,10 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
   }) => ({
     name,
     svgPath,
-    color: hue
-      ? `hsla(${hue}, ${SAT}, ${LUM}, 1)`
-      : `hsla(0, 0%, ${isLight ? grayscaleLum : 10 + grayscaleLum}%, 1)`,
+    color:
+      hue || hue === 0
+        ? `hsla(${hue}, ${SAT}, ${LUM}, 1)`
+        : `hsla(0, 0%, ${grayscaleLum}%, 1)`,
     url,
     socials,
     matomo,
