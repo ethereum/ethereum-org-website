@@ -6,11 +6,11 @@ lang: en
 
 # How The Merge impacted ETH supply {#how-the-merge-impacts-ETH-supply}
 
-The Merge represented the Ethereum networks transition from proof-of-work to proof-of-stake which occurred in September 2022. The way ETH is issued underwent changes at time of that transition. Previously, new ETH was issued from two sources: the execution layer (i.e. Mainnet) and the consensus layer (i.e. Beacon Chain). Since The Merge, issuance on the execution layer is now zero. Let's break this down.
+The Merge represented the Ethereum networks transition from proof-of-work to proof-of-stake which occurred in September 2022. The way ETH was issued underwent changes at time of that transition. Previously, new ETH was issued from two sources: the execution layer (i.e. Mainnet) and the consensus layer (i.e. Beacon Chain). Since The Merge, issuance on the execution layer is now zero. Let's break this down.
 
 ## Components of ETH issuance {#components-of-eth-issuance}
 
-We can break the supply of ETH into two primary forces: issuance, and burn.
+We can break the supply of ETH into two primary forces: issuance and burn.
 
 The **issuance** of ETH is the process of creating ETH that did not previously exist. The **burning** of ETH is when existing ETH gets destroyed, removing it from circulation. The rate of issuance and burning gets calculated on several parameters, and the balance between them determines the resulting inflation/deflation rate of ether.
 
@@ -22,7 +22,7 @@ title="ETH issuance tldr">
 - Stakers are issued approximately 1,700 ETH/day, based on about 14 million total ETH staked
 - The exact staking issuance fluctuates based on the total amount of ETH staked
 - **Since The Merge, only the ~1,700 ETH/day remains, dropping total new ETH issuance by ~88%**
-- The burn: This fluctuate according to network demand. _If_ an average gas price of at least 16 gwei is observed for a given day, this effectively offsets the ~1,700 ETH that is issued to validators and brings net ETH inflation to zero or less for that day.
+- The burn: This fluctuates according to network demand. _If_ an average gas price of at least 16 gwei is observed for a given day, this effectively offsets the ~1,700 ETH that is issued to validators and brings net ETH inflation to zero or less for that day.
 
 </Card>
 
@@ -30,13 +30,13 @@ title="ETH issuance tldr">
 
 ### Execution layer issuance {#el-issuance-pre-merge}
 
-Under proof-of-work, miners only interacted with the execution layer and were rewarded with block rewards if they were the first miner to solve the next block. Since the [Constantinople upgrade](/history/#constantinople) in 2019 this reward had been 2 ETH per block. Miners were also rewarded for publishing [ommer](/glossary/#ommer) blocks, which were valid blocks that didn't end up in the longest/canonical chain. These rewards maxed out at 1.75 ETH per ommer, and were _in addition to_ the reward issued from the canonical block. The process of mining was an economically intensive activity, which historically required high levels of ETH issuance to sustain.
+Under proof-of-work, miners only interacted with the execution layer and were rewarded with block rewards if they were the first miner to solve the next block. Since the [Constantinople upgrade](/history/#constantinople) in 2019 this reward was 2 ETH per block. Miners were also rewarded for publishing [ommer](/glossary/#ommer) blocks, which were valid blocks that didn't end up in the longest/canonical chain. These rewards maxed out at 1.75 ETH per ommer, and were _in addition to_ the reward issued from the canonical block. The process of mining was an economically intensive activity, which historically required high levels of ETH issuance to sustain.
 
 ### Consensus layer issuance {#cl-issuance-pre-merge}
 
 The [Beacon Chain](/history/#beacon-chain-genesis) went live in 2020. Instead of miners, it is secured by validators using proof-of-stake. This chain was bootstrapped by Ethereum users depositing ETH one-way into a smart contract on Mainnet (the execution layer), which the Beacon Chain listens to, crediting the user with an equal amount of ETH on the new chain. Until The Merge happened, the Beacon Chain's validators were not processing transactions and were essentially coming to consensus on the state of the validator pool itself.
 
-Validators on the Beacon Chain are rewarded with ETH for attesting to the state of the chain and proposing blocks. Rewards (or penalties) are calculated and distributed at each epoch (every 6.4 minutes) based on validator performance. Validator rewards are **significantly** less than the mining rewards that were previously issued under proof-of-work (2 ETH every ~13.5 seconds), as operating a validating node is not an economically intense activity and thus does not require or warrant as high a reward.
+Validators on the Beacon Chain are rewarded with ETH for attesting to the state of the chain and proposing blocks. Rewards (or penalties) are calculated and distributed at each epoch (every 6.4 minutes) based on validator performance. Validator rewards are **significantly** less than the mining rewards that were previously issued under proof-of-work (2 ETH every ~13.5 seconds), as operating a validating node is not as economically intense and thus does not require or warrant as high a reward.
 
 ### Pre-merge issuance breakdown {#pre-merge-issuance-breakdown}
 
@@ -68,11 +68,11 @@ Execution layer issuance since The Merge is zero. Proof-of-work is no longer a v
 
 ### Consensus layer issuance {#cl-issuance-post-merge}
 
-Consensus layer issuance continues today as it did prior to The Merge, with small rewards for validators who attest to and propose blocks. Validator rewards continue to accrue to _validator balances_ that are managed within the consensus layer. These are separate Ethereum accounts to the accounts we're used to on Mainnet, and until the upcoming Shanghai upgrade funds from validator accounts will not be withdrawable/transferrable. This means that although new ETH is still being issued, 100% remains locked from the market until this upgrade occurs. When the Shanghai upgrade is rolled out, this ETH will become available.
+Consensus layer issuance continues today as before The Merge, with small rewards for validators who attest to and propose blocks. Validator rewards continue to accrue to _validator balances_ that are managed within the consensus layer. Unlike the current accounts, which can transact on Mainnet, these are separate Ethereum accounts where validator funds will not be withdrawable/transferrable until the upcoming Shanghai upgrade. This means that although new ETH is still being issued, 100% of consensus layer funds remain locked and unavailable to the market until this upgrade occurs.
 
 When validator withdrawals are enabled, stakers will be incentivized to remove their _earnings/rewards (balance over 32 ETH)_ as these funds are otherwise not contributing to their stake weight (which maxes at 32).
 
-After withdraw functionality is enabled, stakers may also choose to exit and withdraw their entire validator balance. To ensure Ethereum is stable, the number of validators leaving simultaneously is capped. Only six validators may exit in a given epoch (6.4 minute period) depending on the total ETH staked at the time. This decreases to as low as four as more validators withdraw to intentionally prevent large destabilizing amounts of staked ETH from leaving at once.
+After withdraw functionality is enabled, stakers may also choose to exit and withdraw their entire validator balance. To ensure Ethereum is stable, the number of validators leaving simultaneously is capped. Only six validators may exit in a given epoch (6.4 minute period) depending on the total ETH staked at the time. As more validators withdraw, the maximum number of exiting validators will gradually be reduced to four to intentionally prevent large destabilizing amounts of staked ETH from being withdrawed concurrently.
 
 ### Post-merge inflation breakdown {#post-merge-inflation-breakdown}
 

@@ -29,6 +29,7 @@ Plusieurs projets fournissent des implémentations de chaînes latérales que vo
 - [Polygon PoS](https://polygon.technology/solutions/polygon-pos)
 - [Skale](https://skale.network/)
 - [Gnosis Chain (anciennement xDai)](https://www.xdaichain.com/)
+- [Metis Andromeda](https://www.metis.io/)
 
 ## Complément d'information {#further-reading}
 

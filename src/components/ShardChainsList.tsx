@@ -1,11 +1,8 @@
 import React from "react"
-import styled from "@emotion/styled"
+import { Box } from "@chakra-ui/react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import CardList, { CardListItem } from "./CardList"
 
-const Container = styled.div`
-  margin-bottom: 4rem;
-`
+import CardList, { CardListItem } from "./CardList"
 
 export interface IProps {}
 
@@ -55,9 +52,9 @@ const ShardChainsList: React.FC<IProps> = () => {
   ]
 
   return (
-    <Container>
+    <Box mb="4rem">
       <CardList content={reads} />
-    </Container>
+    </Box>
   )
 }
 

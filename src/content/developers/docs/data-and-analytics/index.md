@@ -20,7 +20,7 @@ In terms of architectural fundamentals, understanding what an [API](https://www.
 
 Many [Block Explorers](/developers/docs/data-and-analytics/block-explorers/) offer [RESTful](https://www.wikipedia.org/wiki/Representational_state_transfer) [API](https://www.wikipedia.org/wiki/API) gateways that will provide developers visibility into real-time data on blocks, transactions, miners, accounts, and other on-chain activity.
 
-Developers can then process and transform this data to give their users unique insights and interactions with the [blockchain](/glossary/#blockchain). For example, [Etherscan](etherscan.io) provides execution and consensus data for every 12s slot.
+Developers can then process and transform this data to give their users unique insights and interactions with the [blockchain](/glossary/#blockchain). For example, [Etherscan](https://etherscan.io) provides execution and consensus data for every 12s slot.
 
 ## The Graph {#the-graph}
 

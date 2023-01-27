@@ -332,7 +332,6 @@ PoolTogether のような損失のない宝くじは、楽しく革新的な新�
 
 ### 分散型金融(DeFi)データ {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 - [DeFi Rate](https://defirate.com/)

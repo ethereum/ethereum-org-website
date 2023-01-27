@@ -332,7 +332,6 @@ DeFi es un proyecto de código abierto. Puede inspeccionar, copiar e innovar tod
 
 ### Datos sobre DeFi {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 - [Tasa DeFi](https://defirate.com/)

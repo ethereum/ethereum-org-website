@@ -431,7 +431,9 @@ const FindWalletPage = ({ data, location }) => {
           }}
         >
           <div>
-            <p>FILTERS</p>
+            <p>
+              <Translation id="page-find-wallet-filters" />
+            </p>
             <SecondaryText>
               {Object.values(filters).reduce((acc, filter) => {
                 if (filter) {
@@ -439,7 +441,7 @@ const FindWalletPage = ({ data, location }) => {
                 }
                 return acc
               }, 0)}{" "}
-              active
+              {translateMessageId("page-find-wallet-active", intl)}
             </SecondaryText>
           </div>
           {showMobileSidebar ? (
@@ -463,7 +465,9 @@ const FindWalletPage = ({ data, location }) => {
                 })
               }}
             >
-              <p>Profile Filters</p>
+              <p>
+                <Translation id="page-find-wallet-profile-filters" />
+              </p>
             </FilterTab>
             <FilterTab
               active={showFeatureFilters}
@@ -477,7 +481,7 @@ const FindWalletPage = ({ data, location }) => {
               }}
             >
               <p>
-                Feature Filters (
+                {translateMessageId("page-find-wallet-feature-filters", intl)} (
                 {Object.values(filters).reduce((acc, filter) => {
                   if (filter) {
                     acc += 1
@@ -539,25 +543,17 @@ const FindWalletPage = ({ data, location }) => {
       <Note>
         <p>
           <i>
-            Wallets listed on this page are not official endorsements, and are
-            provided for informational purposes only.{" "}
+            <Translation id="page-find-wallet-footnote-1" />
           </i>
         </p>
         <p>
           <i>
-            Their descriptions have been provided by the wallet projects
-            themselves.{" "}
+            <Translation id="page-find-wallet-footnote-2" />
           </i>
         </p>
         <p>
           <i>
-            We add products to this page based on criteria in our{" "}
-            <Link to="/contributing/adding-products/">listing policy</Link>. If
-            you'd like us to add a wallet,{" "}
-            <Link to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet">
-              raise an issue in GitHub
-            </Link>
-            .
+            <Translation id="page-find-wallet-footnote-3" />
           </i>
         </p>
       </Note>
@@ -648,7 +644,7 @@ export const query = graphql`
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
-    gnosis: file(relativePath: { eq: "wallets/gnosis.png" }) {
+    safe: file(relativePath: { eq: "wallets/safe.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
@@ -809,6 +805,31 @@ export const query = graphql`
       }
     }
     gridplus: file(relativePath: { eq: "wallets/gridplus.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    bitkeep: file(relativePath: { eq: "wallets/bitkeep.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    blockwallet: file(relativePath: { eq: "wallets/blockwallet.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    okx: file(relativePath: { eq: "wallets/okx.jpeg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    onekey: file(relativePath: { eq: "wallets/onekey.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    apex: file(relativePath: { eq: "wallets/apex.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
