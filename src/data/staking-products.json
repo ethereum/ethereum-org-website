@@ -443,6 +443,45 @@
         "eventAction": "Clicked",
         "eventName": "Clicked Abyss Finance go to link"
       }
+    },
+    {
+      "name": "P2P.ORG",
+      "svgPath": "p2p-glyph.svg",
+      "hue": null,
+      "grayscaleLum": 0,
+      "launchDate": "2020-12-15",
+      "url": "https://p2p.org/networks/ethereum-staking-service",
+      "audits": [
+        {
+          "name": "MixBytes",
+          "url": "https://p2p.org/networks/ethereum/staking/audit.pdf"
+        }
+      ],
+      "minEth": 32,
+      "additionalStake": null,
+      "additionalStakeUnit": null,
+      "monthlyFee": 10,
+      "monthlyFeeUnit": "%",
+      "isFoss": false,
+      "hasBugBounty": false,
+      "isTrustless": false,
+      "isPermissionless": true,
+      "pctMajorityClient": 25,
+      "isSelfCustody": true,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "twitter": "https://twitter.com/p2pvalidator",
+        "telegram": "https://t.me/P2Pstaking",
+        "github": "https://github.com/p2p-org",
+        "youtube": "https://www.youtube.com/channel/UC9pRzyJx5YrUNfmg1vLZ-bQ/featured",
+        "linkedin": "https://www.linkedin.com/company/p2p-org/"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked P2P.ORG go to link"
+      }
     }
   ],
   "pools": [

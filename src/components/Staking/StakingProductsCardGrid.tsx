@@ -32,6 +32,7 @@ import Caution from "../../assets/staking/caution-product-glyph.svg"
 import Warning from "../../assets/staking/warning-product-glyph.svg"
 import Unknown from "../../assets/staking/unknown-product-glyph.svg"
 // Product SVGs
+import P2P from "../../assets/staking/p2p-glyph.svg"
 import Abyss from "../../assets/staking/abyss-glyph.svg"
 import Allnodes from "../../assets/staking/allnodes-glyph.svg"
 import Ankr from "../../assets/staking/ankr-glyph.svg"
@@ -68,6 +69,7 @@ const getSvgFromPath = (
   svgPath: string
 ): ComponentType<SVGProps<SVGElement>> => {
   const mapping = {
+    "p2p-glyph.svg": P2P,
     "abyss-glyph.svg": Abyss,
     "allnodes-glyph.svg": Allnodes,
     "ankr-glyph.svg": Ankr,
@@ -243,7 +245,7 @@ const StakingProductCard: React.FC<ICardProps> = ({
         borderRadius="base"
         maxH={24}
       >
-        {!!Svg && <Icon as={Svg} fontSize="2rem" />}
+        {!!Svg && <Icon as={Svg} fontSize="2rem" style={{ width: "auto" }} />}
         <Heading fontSize="2xl" color="white">
           {name}
         </Heading>
@@ -318,6 +320,7 @@ export interface IProps {
 const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
   const [rankedProducts, updateRankedProducts] = useState<Array<Product>>([])
   const [SAT, LUM] = useColorModeValue(["75%", "60%"], ["50%", "35%"])
+  const isLight = useColorModeValue(true, false)
 
   const scoreOpenSource = (product: Product): 1 | 0 => {
     return product.openSource === FlagType.VALID ? 1 : 0
@@ -414,13 +417,16 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
     name,
     svgPath,
     hue,
+    grayscaleLum,
     url,
     socials,
     matomo,
   }) => ({
     name,
     svgPath,
-    color: `hsla(${hue}, ${SAT}, ${LUM}, 1)`,
+    color: hue
+      ? `hsla(${hue}, ${SAT}, ${LUM}, 1)`
+      : `hsla(0, 0%, ${isLight ? grayscaleLum : 10 + grayscaleLum}%, 1)`,
     url,
     socials,
     matomo,
