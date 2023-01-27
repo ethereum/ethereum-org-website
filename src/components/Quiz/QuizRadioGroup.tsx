@@ -10,7 +10,7 @@ import {
   useRadio,
   useRadioGroup,
 } from "@chakra-ui/react"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 // Components
 import Translation from "../Translation"
@@ -19,7 +19,7 @@ import Translation from "../Translation"
 import { Question } from "../../types"
 
 // Utils
-import { translateMessageId, TranslationKey } from "../../utils/translations"
+import { TranslationKey } from "../../utils/translations"
 
 // Interfaces
 export interface CustomRadioProps extends RadioProps {
@@ -40,7 +40,7 @@ const QuizRadioGroup: React.FC<IProps> = ({
   handleSelection,
   selectedAnswer,
 }) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const { getRadioProps, getRootProps } = useRadioGroup({
     onChange: handleSelection,
   })
@@ -129,7 +129,7 @@ const QuizRadioGroup: React.FC<IProps> = ({
   return (
     <Flex {...getRootProps()} direction="column" w="100%">
       <Text fontWeight="700" fontSize="2xl" mb={6}>
-        {translateMessageId(prompt, intl)}
+        {t(prompt)}
       </Text>
       <Flex direction="column" gap={4}>
         {answers.map(({ id, label }, index) => {
@@ -140,7 +140,7 @@ const QuizRadioGroup: React.FC<IProps> = ({
               key={id}
               display={display}
               index={index}
-              label={translateMessageId(label, intl)}
+              label={t(label)}
               {...getRadioProps({ value: id })}
             />
           )
@@ -151,7 +151,7 @@ const QuizRadioGroup: React.FC<IProps> = ({
           <Text fontWeight="bold" mt={0} mb={2}>
             <Translation id="explanation" />
           </Text>
-          <Text m={0}>{translateMessageId(explanation, intl)}</Text>
+          <Text m={0}>{t(explanation)}</Text>
         </Box>
       )}
     </Flex>

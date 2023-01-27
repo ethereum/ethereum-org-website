@@ -679,11 +679,8 @@ const BugBountiesPage = ({
         <Faq>
           <LeftColumn>
             <ExpandableCard
-              title={translateMessageId("bug-bounty-faq-q1-title", intl)}
-              contentPreview={translateMessageId(
-                "bug-bounty-faq-q1-contentPreview",
-                intl
-              )}
+              title={t("bug-bounty-faq-q1-title")}
+              contentPreview={t("bug-bounty-faq-q1-contentPreview")}
             >
               <p>
                 <Translation id="bug-bounty-faq-q1-content-1" />
@@ -708,33 +705,24 @@ const BugBountiesPage = ({
               </p>
             </ExpandableCard>
             <ExpandableCard
-              title={translateMessageId("bug-bounty-faq-q2-title", intl)}
-              contentPreview={translateMessageId(
-                "bug-bounty-faq-q2-contentPreview",
-                intl
-              )}
+              title={t("bug-bounty-faq-q2-title")}
+              contentPreview={t("bug-bounty-faq-q2-contentPreview")}
             >
               <p>
                 <Translation id="bug-bounty-faq-q2-content-1" />
               </p>
             </ExpandableCard>
             <ExpandableCard
-              title={translateMessageId("bug-bounty-faq-q3-title", intl)}
-              contentPreview={translateMessageId(
-                "bug-bounty-faq-q3-contentPreview",
-                intl
-              )}
+              title={t("bug-bounty-faq-q3-title")}
+              contentPreview={t("bug-bounty-faq-q3-contentPreview")}
             >
               <p>
                 <Translation id="bug-bounty-faq-q3-content-1" />
               </p>
             </ExpandableCard>
             <ExpandableCard
-              title={translateMessageId("bug-bounty-faq-q4-title", intl)}
-              contentPreview={translateMessageId(
-                "bug-bounty-faq-q4-contentPreview",
-                intl
-              )}
+              title={t("bug-bounty-faq-q4-title")}
+              contentPreview={t("bug-bounty-faq-q4-contentPreview")}
             >
               <p>
                 <Translation id="bug-bounty-faq-q4-content-1" />
@@ -743,22 +731,16 @@ const BugBountiesPage = ({
           </LeftColumn>
           <RightColumn>
             <ExpandableCard
-              title={translateMessageId("bug-bounty-faq-q5-title", intl)}
-              contentPreview={translateMessageId(
-                "bug-bounty-faq-q5-contentPreview",
-                intl
-              )}
+              title={t("bug-bounty-faq-q5-title")}
+              contentPreview={t("bug-bounty-faq-q5-contentPreview")}
             >
               <p>
                 <Translation id="bug-bounty-faq-q5-content-1" />
               </p>
             </ExpandableCard>
             <ExpandableCard
-              title={translateMessageId("bug-bounty-faq-q6-title", intl)}
-              contentPreview={translateMessageId(
-                "bug-bounty-faq-q6-contentPreview",
-                intl
-              )}
+              title={t("bug-bounty-faq-q6-title")}
+              contentPreview={t("bug-bounty-faq-q6-contentPreview")}
             >
               <p>
                 <Translation id="bug-bounty-faq-q6-content-1" />
@@ -768,22 +750,16 @@ const BugBountiesPage = ({
               </p>
             </ExpandableCard>
             <ExpandableCard
-              title={translateMessageId("bug-bounty-faq-q7-title", intl)}
-              contentPreview={translateMessageId(
-                "bug-bounty-faq-q7-contentPreview",
-                intl
-              )}
+              title={t("bug-bounty-faq-q7-title")}
+              contentPreview={t("bug-bounty-faq-q7-contentPreview")}
             >
               <p>
                 <Translation id="bug-bounty-faq-q7-content-1" />
               </p>
             </ExpandableCard>
             <ExpandableCard
-              title={translateMessageId("bug-bounty-faq-q8-title", intl)}
-              contentPreview={translateMessageId(
-                "bug-bounty-faq-q8-contentPreview",
-                intl
-              )}
+              title={t("bug-bounty-faq-q8-title")}
+              contentPreview={t("bug-bounty-faq-q8-contentPreview")}
             >
               <p>
                 <Translation id="bug-bounty-faq-q8-content-1" />

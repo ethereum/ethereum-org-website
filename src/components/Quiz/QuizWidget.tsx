@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react"
 import { shuffle } from "lodash"
 import { FaTwitter } from "react-icons/fa"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 // Import components
 import Button from "../Button"
@@ -33,7 +33,6 @@ import questionBank from "../../data/quizzes/questionBank"
 
 // Import utilities
 import { trackCustomEvent } from "../../utils/matomo"
-import { translateMessageId } from "../../utils/translations"
 
 // Import types
 import { AnswerChoice, RawQuiz, Quiz, RawQuestion, Question } from "../../types"
@@ -52,7 +51,7 @@ export interface IProps {
 
 // Component
 const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const [quizData, setQuizData] = useState<Quiz | null>(null)
   const [userQuizProgress, setUserQuizProgress] = useState<Array<AnswerChoice>>(
     []
@@ -91,7 +90,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
       ? shuffledQuestions.slice(0, maxQuestions)
       : shuffledQuestions
     const quiz: Quiz = {
-      title: translateMessageId(rawQuiz.title, intl),
+      title: t(rawQuiz.title),
       questions: trimmedQuestions,
     }
     setQuizData(quiz)
@@ -388,8 +387,8 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
                 ) : showAnswer ? (
                   <Button onClick={handleContinue}>
                     {userQuizProgress.length === quizData.questions.length - 1
-                      ? translateMessageId("see-results", intl)
-                      : translateMessageId("next-question", intl)}
+                      ? t("see-results")
+                      : t("next-question")}
                   </Button>
                 ) : (
                   <Button

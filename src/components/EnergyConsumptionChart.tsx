@@ -11,10 +11,9 @@ import {
   ResponsiveContainer,
   Legend,
 } from "recharts"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import Translation from "./Translation"
 import { useWindowSize } from "../hooks/useWindowSize"
-import { translateMessageId } from "../utils/translations"
 
 interface ITickProps {
   x: number
@@ -44,7 +43,7 @@ const CustomTick: React.FC<ITickProps> = ({ x, y, payload }) => {
 }
 
 const EnergyConsumptionChart: React.FC = () => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const theme = useTheme()
   const [width] = useWindowSize()
 
@@ -61,70 +60,58 @@ const EnergyConsumptionChart: React.FC = () => {
   // TODO: Extract translatable strings
   const energyConsumptionChartData: Data = [
     {
-      name: translateMessageId("energy-consumption-chart-youtube-label", intl),
+      name: t("energy-consumption-chart-youtube-label"),
       amount: 244,
       color: "#FF0000",
     },
     {
-      name: translateMessageId(
-        "energy-consumption-chart-gold-mining-galaxy-label",
-        intl
-      ),
+      name: t("energy-consumption-chart-gold-mining-galaxy-label"),
       amount: 240,
       color: "#D7B14A",
       breakpoint: mediumBreakpoint,
     },
     {
-      name: translateMessageId(
-        "energy-consumption-chart-global-data-centers-label",
-        intl
-      ),
+      name: t("energy-consumption-chart-global-data-centers-label"),
       amount: 200,
       color: "#D7B14A",
       breakpoint: mediumBreakpoint,
     },
     {
-      name: translateMessageId(
-        "energy-consumption-chart-gold-mining-cbeci-label",
-        intl
-      ),
+      name: t("energy-consumption-chart-gold-mining-cbeci-label"),
       amount: 130,
       color: "#D7B14A",
       breakpoint: mediumBreakpoint,
     },
     {
-      name: translateMessageId("energy-consumption-chart-btc-pow-label", intl),
+      name: t("energy-consumption-chart-btc-pow-label"),
       amount: 100,
       color: "#F2A900",
     },
     {
-      name: translateMessageId("energy-consumption-chart-netflix-label", intl),
+      name: t("energy-consumption-chart-netflix-label"),
       amount: 94,
       color: "#E50914",
       breakpoint: smallBreakpoint,
     },
     {
-      name: translateMessageId("energy-consumption-chart-eth-pow-label", intl),
+      name: t("energy-consumption-chart-eth-pow-label"),
       amount: 78,
       color: "#C1B6F5",
     },
     {
-      name: translateMessageId(
-        "energy-consumption-chart-gaming-us-label",
-        intl
-      ),
+      name: t("energy-consumption-chart-gaming-us-label"),
       amount: 34,
       color: "#71BB8A",
       breakpoint: mediumBreakpoint,
     },
     {
-      name: translateMessageId("energy-consumption-chart-paypal-label", intl),
+      name: t("energy-consumption-chart-paypal-label"),
       amount: 0.26,
       color: "#C1B6F5",
       breakpoint: smallBreakpoint,
     },
     {
-      name: translateMessageId("energy-consumption-chart-eth-pos-label", intl),
+      name: t("energy-consumption-chart-eth-pos-label"),
       amount: 0.0026,
       color: "#C1B6F5",
     },

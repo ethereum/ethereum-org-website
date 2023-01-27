@@ -441,7 +441,7 @@ const FindWalletPage = ({ data, location }) => {
                 }
                 return acc
               }, 0)}{" "}
-              {translateMessageId("page-find-wallet-active", intl)}
+              {t("page-find-wallet-active")}
             </SecondaryText>
           </div>
           {showMobileSidebar ? (
@@ -481,7 +481,7 @@ const FindWalletPage = ({ data, location }) => {
               }}
             >
               <p>
-                {translateMessageId("page-find-wallet-feature-filters", intl)} (
+                {t("page-find-wallet-feature-filters")} (
                 {Object.values(filters).reduce((acc, filter) => {
                   if (filter) {
                     acc += 1
