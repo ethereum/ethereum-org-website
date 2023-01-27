@@ -1,5 +1,6 @@
 // Libraries
 import React, { useEffect, useState } from "react"
+import { useIntl } from "react-intl"
 
 // Data
 import walletFilterData from "../../../data/wallets/wallet-filters"
@@ -29,82 +30,98 @@ import Swap from "../../../assets/wallets/swap.svg"
 import Eip1559 from "../../../assets/wallets/eip1559.svg"
 import { WalletFilterSidebarProps } from "."
 
+// Utils
+import { translateMessageId } from "../../../utils/translations"
+
 export const useWalletFilterSidebar = ({
   resetWalletFilter,
   filters,
   updateFilterOptions,
 }: Omit<WalletFilterSidebarProps, "updateFilterOption">) => {
+  const intl = useIntl()
   const [filterOptions, setFilterOptions] = useState([
     {
-      title: "Device",
+      title: translateMessageId("page-find-wallet-device", intl),
       items: [
         {
-          title: walletFilterData.mobile.title,
+          title: translateMessageId(walletFilterData.mobile.title, intl),
           icon: <Mobile />,
-          description: walletFilterData.mobile.description,
+          description: translateMessageId(
+            walletFilterData.mobile.description,
+            intl
+          ),
           filterKey: walletFilterData.mobile.filterKey,
           showOptions: filters.android || filters.ios ? true : false,
           options: [
             {
-              name: walletFilterData.android.title,
+              name: translateMessageId(walletFilterData.android.title, intl),
               filterKey: walletFilterData.android.filterKey,
               inputType: "checkbox",
             },
             {
-              name: walletFilterData.ios.title,
+              name: translateMessageId(walletFilterData.ios.title, intl),
               filterKey: walletFilterData.ios.filterKey,
               inputType: "checkbox",
             },
           ],
         },
         {
-          title: walletFilterData.desktop.title,
+          title: translateMessageId(walletFilterData.desktop.title, intl),
           icon: <Desktop />,
-          description: walletFilterData.desktop.description,
+          description: translateMessageId(
+            walletFilterData.desktop.description,
+            intl
+          ),
           filterKey: walletFilterData.desktop.filterKey,
           showOptions:
             filters.linux || filters.windows || filters.macOS ? true : false,
           options: [
             {
-              name: walletFilterData.linux.title,
+              name: translateMessageId(walletFilterData.linux.title, intl),
               filterKey: walletFilterData.linux.filterKey,
               inputType: "checkbox",
             },
             {
-              name: walletFilterData.windows.title,
+              name: translateMessageId(walletFilterData.windows.title, intl),
               filterKey: walletFilterData.windows.filterKey,
               inputType: "checkbox",
             },
             {
-              name: walletFilterData.macos.title,
+              name: translateMessageId(walletFilterData.macos.title, intl),
               filterKey: walletFilterData.macos.filterKey,
               inputType: "checkbox",
             },
           ],
         },
         {
-          title: walletFilterData.browser.title,
+          title: translateMessageId(walletFilterData.browser.title, intl),
           icon: <Browser />,
-          description: walletFilterData.browser.description,
+          description: translateMessageId(
+            walletFilterData.browser.description,
+            intl
+          ),
           filterKey: walletFilterData.browser.filterKey,
           showOptions: filters.firefox || filters.chrome ? true : false,
           options: [
             {
-              name: walletFilterData.firefox.title,
+              name: translateMessageId(walletFilterData.firefox.title, intl),
               filterKey: walletFilterData.firefox.filterKey,
               inputType: "checkbox",
             },
             {
-              name: walletFilterData.chromium.title,
+              name: translateMessageId(walletFilterData.chromium.title, intl),
               filterKey: walletFilterData.chromium.filterKey,
               inputType: "checkbox",
             },
           ],
         },
         {
-          title: walletFilterData.hardware.title,
+          title: translateMessageId(walletFilterData.hardware.title, intl),
           icon: <Hardware />,
-          description: walletFilterData.hardware.description,
+          description: translateMessageId(
+            walletFilterData.hardware.description,
+            intl
+          ),
           filterKey: walletFilterData.hardware.filterKey,
           showOptions: undefined,
           options: [],
@@ -112,20 +129,26 @@ export const useWalletFilterSidebar = ({
       ],
     },
     {
-      title: "Security",
+      title: translateMessageId("page-find-wallet-security", intl),
       items: [
         {
-          title: walletFilterData.open_source.title,
+          title: translateMessageId(walletFilterData.open_source.title, intl),
           icon: <OpenSource />,
-          description: walletFilterData.open_source.description,
+          description: translateMessageId(
+            walletFilterData.open_source.description,
+            intl
+          ),
           filterKey: walletFilterData.open_source.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: walletFilterData.non_custodial.title,
+          title: translateMessageId(walletFilterData.non_custodial.title, intl),
           icon: <NonCustodial />,
-          description: walletFilterData.non_custodial.description,
+          description: translateMessageId(
+            walletFilterData.non_custodial.description,
+            intl
+          ),
           filterKey: walletFilterData.non_custodial.filterKey,
           showOptions: undefined,
           options: [],
@@ -133,100 +156,151 @@ export const useWalletFilterSidebar = ({
       ],
     },
     {
-      title: "Features",
+      title: translateMessageId("page-find-wallet-features", intl),
       items: [
         {
-          title: walletFilterData.hardware_support.title,
+          title: translateMessageId(
+            walletFilterData.hardware_support.title,
+            intl
+          ),
           icon: <HardwareSupport />,
-          description: walletFilterData.hardware_support.description,
+          description: translateMessageId(
+            walletFilterData.hardware_support.description,
+            intl
+          ),
           filterKey: walletFilterData.hardware_support.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: walletFilterData.walletconnect.title,
+          title: translateMessageId(walletFilterData.walletconnect.title, intl),
           icon: <WalletConnect />,
-          description: walletFilterData.walletconnect.description,
+          description: translateMessageId(
+            walletFilterData.walletconnect.description,
+            intl
+          ),
           filterKey: walletFilterData.walletconnect.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: walletFilterData.rpc_importing.title,
+          title: translateMessageId(walletFilterData.rpc_importing.title, intl),
           icon: <RPCImporting />,
-          description: walletFilterData.rpc_importing.description,
+          description: translateMessageId(
+            walletFilterData.rpc_importing.description,
+            intl
+          ),
           filterKey: walletFilterData.rpc_importing.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: walletFilterData.nft_support.title,
+          title: translateMessageId(walletFilterData.nft_support.title, intl),
           icon: <NFTSupport />,
-          description: walletFilterData.nft_support.description,
+          description: translateMessageId(
+            walletFilterData.nft_support.description,
+            intl
+          ),
           filterKey: walletFilterData.nft_support.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: walletFilterData.connect_to_dapps.title,
+          title: translateMessageId(
+            walletFilterData.connect_to_dapps.title,
+            intl
+          ),
           icon: <ConnectDapps />,
-          description: walletFilterData.connect_to_dapps.description,
+          description: translateMessageId(
+            walletFilterData.connect_to_dapps.description,
+            intl
+          ),
           filterKey: walletFilterData.connect_to_dapps.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: walletFilterData.staking.title,
+          title: translateMessageId(walletFilterData.staking.title, intl),
           icon: <Staking />,
-          description: walletFilterData.staking.description,
+          description: translateMessageId(
+            walletFilterData.staking.description,
+            intl
+          ),
           filterKey: walletFilterData.staking.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: walletFilterData.swaps.title,
+          title: translateMessageId(walletFilterData.swaps.title, intl),
           icon: <Swap />,
-          description: walletFilterData.swaps.description,
+          description: translateMessageId(
+            walletFilterData.swaps.description,
+            intl
+          ),
           filterKey: walletFilterData.swaps.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: walletFilterData.layer_2.title,
+          title: translateMessageId(walletFilterData.layer_2.title, intl),
           icon: <Layer2 />,
-          description: walletFilterData.layer_2.description,
+          description: translateMessageId(
+            walletFilterData.layer_2.description,
+            intl
+          ),
           filterKey: walletFilterData.layer_2.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: walletFilterData.gas_fee_customization.title,
+          title: translateMessageId(
+            walletFilterData.gas_fee_customization.title,
+            intl
+          ),
           icon: <GasFeeCustomization />,
-          description: walletFilterData.gas_fee_customization.description,
+          description: translateMessageId(
+            walletFilterData.gas_fee_customization.description,
+            intl
+          ),
           filterKey: walletFilterData.gas_fee_customization.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: walletFilterData.ens_support.title,
+          title: translateMessageId(walletFilterData.ens_support.title, intl),
           icon: <ENSSupport />,
-          description: walletFilterData.ens_support.description,
+          description: translateMessageId(
+            walletFilterData.ens_support.description,
+            intl
+          ),
           filterKey: walletFilterData.ens_support.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: walletFilterData.erc_20_support.title,
+          title: translateMessageId(
+            walletFilterData.erc_20_support.title,
+            intl
+          ),
           icon: <ERC20Support />,
-          description: walletFilterData.erc_20_support.description,
+          description: translateMessageId(
+            walletFilterData.erc_20_support.description,
+            intl
+          ),
           filterKey: walletFilterData.erc_20_support.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: walletFilterData.eip_1559_support.title,
+          title: translateMessageId(
+            walletFilterData.eip_1559_support.title,
+            intl
+          ),
           icon: <Eip1559 />,
-          description: walletFilterData.eip_1559_support.description,
+          description: translateMessageId(
+            walletFilterData.eip_1559_support.description,
+            intl
+          ),
           filterKey: walletFilterData.eip_1559_support.filterKey,
           showOptions: undefined,
           options: [],
@@ -234,20 +308,32 @@ export const useWalletFilterSidebar = ({
       ],
     },
     {
-      title: "Buy crypto / Sell for fiat",
+      title: `${translateMessageId(
+        "page-find-wallet-buy-crypto",
+        intl
+      )} / ${translateMessageId("page-find-wallet-sell-for-fiat", intl)}`,
       items: [
         {
-          title: walletFilterData.buy_crypto.title,
+          title: translateMessageId(walletFilterData.buy_crypto.title, intl),
           icon: <BuyCrypto />,
-          description: walletFilterData.buy_crypto.description,
+          description: translateMessageId(
+            walletFilterData.buy_crypto.description,
+            intl
+          ),
           filterKey: walletFilterData.buy_crypto.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: walletFilterData.withdraw_crypto.title,
+          title: translateMessageId(
+            walletFilterData.withdraw_crypto.title,
+            intl
+          ),
           icon: <WithdrawCrypto />,
-          description: walletFilterData.withdraw_crypto.description,
+          description: translateMessageId(
+            walletFilterData.withdraw_crypto.description,
+            intl
+          ),
           filterKey: walletFilterData.withdraw_crypto.filterKey,
           showOptions: undefined,
           options: [],
@@ -255,20 +341,29 @@ export const useWalletFilterSidebar = ({
       ],
     },
     {
-      title: "Smart contracts",
+      title: translateMessageId("page-find-wallet-smart-contract", intl),
       items: [
         {
-          title: walletFilterData.multisig.title,
+          title: translateMessageId(walletFilterData.multisig.title, intl),
           icon: <Multisig />,
-          description: walletFilterData.multisig.description,
+          description: translateMessageId(
+            walletFilterData.multisig.description,
+            intl
+          ),
           filterKey: walletFilterData.multisig.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: walletFilterData.social_recovery.title,
+          title: translateMessageId(
+            walletFilterData.social_recovery.title,
+            intl
+          ),
           icon: <SocialRecover />,
-          description: walletFilterData.social_recovery.description,
+          description: translateMessageId(
+            walletFilterData.social_recovery.description,
+            intl
+          ),
           filterKey: walletFilterData.social_recovery.filterKey,
           showOptions: undefined,
           options: [],
