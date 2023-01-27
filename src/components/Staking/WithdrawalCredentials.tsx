@@ -112,7 +112,7 @@ const WithdrawalCredentials: FC<IProps> = () => {
 
   return (
     <Flex direction="column" gap={4}>
-      <Flex alignItems="center" gap={4} flexWrap="wrap">
+      <Flex alignItems="center" gap={2} flexWrap="wrap">
         <Input
           size="lg"
           id="validatorIndex"
@@ -120,11 +120,12 @@ const WithdrawalCredentials: FC<IProps> = () => {
           onChange={handleChange}
           w={{ base: "full", sm: "18ch" }}
           placeholder="Validator index"
+          bg="background"
         />
         <Flex
           w={{ base: "full", sm: "fit-content" }}
           direction={{ base: "column", sm: "row" }}
-          gap={4}
+          gap={2}
         >
           <Button
             onClick={() => checkWithdrawalCredentials()}
