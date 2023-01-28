@@ -8,6 +8,7 @@ import {
   LinkBox,
   LinkOverlay,
   Image,
+  useColorModeValue,
 } from "@chakra-ui/react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
@@ -49,6 +50,7 @@ const ActionCard: React.FC<IProps> = ({
   isBottom = true,
 }) => {
   const isImageURL = typeof image === "string"
+  const descriptionColor = useColorModeValue("blackAlpha.700", "whiteAlpha.800")
 
   return (
     <LinkBox
@@ -101,7 +103,7 @@ const ActionCard: React.FC<IProps> = ({
             {title}
           </LinkOverlay>
         </Heading>
-        <Text mb={0} opacity={0.8}>
+        <Text mb={0} color={descriptionColor}>
           {description}
         </Text>
         {children && <Box mt={8}>{children}</Box>}
