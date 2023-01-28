@@ -314,6 +314,7 @@ const TitleCard = styled.div`
 
 const UpgradePage = ({
   data: { mdx },
+  pageContext: { slug },
 }: PageProps<Queries.UpgradePageQuery, Context>) => {
   const { t } = useTranslation()
   const { language } = useI18next()
@@ -336,8 +337,6 @@ const UpgradePage = ({
     : parent.mtime
 
   const summaryPoints = getSummaryPoints(mdx.frontmatter)
-
-  const slug = mdx.fields?.slug || ""
 
   const dropdownLinks: ButtonDropdownList = {
     text: t("page-upgrades-upgrades-guide"),

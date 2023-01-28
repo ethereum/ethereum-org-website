@@ -483,7 +483,7 @@ export const onPreBootstrap: GatsbyNode["onPreBootstrap"] = async ({
   reporter,
 }) => {
   await createLocales()
-  reporter.info(`Extracted translations and created locales`)
+  reporter.info(`Created locales`)
   copyContributors()
   reporter.info(`Contributors copied`)
 }
