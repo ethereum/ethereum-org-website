@@ -63,6 +63,7 @@ Sepolia is a proof-of-stake testnet, and is the recommended default testnet for 
 
 - [Sepolia faucet](https://faucet.sepolia.dev/)
 - [FaucETH](https://fauceth.komputing.org)
+- [Sepolia PoW Faucet](https://sepolia-faucet.pk910.de/)
 
 #### Goerli {#goerli}
 
@@ -77,6 +78,7 @@ Goerli is a proof-of-stake testnet, and is the recommended default testnet for t
 - [Goerli faucet](https://faucet.goerli.mudit.blog/)
 - [Alchemy Goerli Faucet](https://goerlifaucet.com/)
 - [All That Node Goerli Faucet](https://www.allthatnode.com/faucet/ethereum.dsrv)
+- [Goerli PoW Faucet](https://goerli-faucet.pk910.de/)
 
 To launch a Validator on Goerli testnet, use ethstaker's ["cheap goerli validator" launchpad](https://goerli.launchpad.ethstaker.cc/en/).
 
