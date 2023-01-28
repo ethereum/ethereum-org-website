@@ -51,6 +51,7 @@ lang: fa
 - [فاست Görli](https://faucet.goerli.mudit.blog/)
 - [فاست Chainlink](https://faucets.chain.link/)
 - [Alchemy Goerli Faucet](https://goerlifaucet.com/)
+- [Goerli PoW Faucet](https://goerli-faucet.pk910.de/)
 
 #### Kintsugi {#kintsugi}
 

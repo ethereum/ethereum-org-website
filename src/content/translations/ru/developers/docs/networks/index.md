@@ -51,6 +51,7 @@ ETH в тестовых сетях не имеет реальной стоимо
 - [Görli кран](https://faucet.goerli.mudit.blog/)
 - [Кран Chainlink](https://faucets.chain.link/)
 - [Кран Alchemy Goerli](https://goerlifaucet.com/)
+- [Кран PoW Goerli](https://goerli-faucet.pk910.de/)
 
 #### Kintsugi {#kintsugi}
 

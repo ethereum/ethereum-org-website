@@ -45,6 +45,7 @@ Goerli 是一个权益证明测试网。 它有望得到长期维护，作为面
 - [Goerli 水龙头](https://faucet.goerli.mudit.blog/)
 - [Chainlink 水龙头](https://faucets.chain.link/)
 - [Alchemy Goerli 水龙头](https://goerlifaucet.com/)
+- [PoW Goerli 水龙头](https://goerli-faucet.pk910.de/)
 
 #### Sepolia {#sepolia}
 
@@ -59,6 +60,7 @@ Sepolia 是一个权益证明测试网。 尽管 Sepolia 仍在运行，但目�
 
 - [Sepolia 水龙头](https://faucet.sepolia.dev/)
 - [FaucETH](https://fauceth.komputing.org)
+- [PoW Sepolia 水龙头](https://sepolia-faucet.pk910.de/)
 
 #### Ropsten*（已弃用）* {#ropsten}
 

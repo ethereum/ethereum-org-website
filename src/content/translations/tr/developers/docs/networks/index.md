@@ -51,6 +51,7 @@ Test ağlarındaki ETH'nin gerçek bir değeri yoktur; bu nedenle, test ağı ET
 - [Görli musluk](https://faucet.goerli.mudit.blog/)
 - [Chainlink musluğu](https://faucets.chain.link/)
 - [Alchemy Goerli Musluğu](https://goerlifaucet.com/)
+- [PoW Goerli Musluğu](https://goerli-faucet.pk910.de/)
 
 #### Kintsugi {#kintsugi}
 

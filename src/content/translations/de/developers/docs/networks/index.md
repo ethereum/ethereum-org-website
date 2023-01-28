@@ -51,6 +51,7 @@ Ein Proof-of-Authority-Testnetz, das über verschiedene Clients hinweg funktioni
 - [Görli faucet](https://faucet.goerli.mudit.blog/)
 - [Chainlink faucet](https://faucets.chain.link/)
 - [Alchemy Goerli Faucet](https://goerlifaucet.com/)
+- [Goerli PoW Faucet](https://goerli-faucet.pk910.de/)
 
 #### Kintsugi {#kintsugi}
 

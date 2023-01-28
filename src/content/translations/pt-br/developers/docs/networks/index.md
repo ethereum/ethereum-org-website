@@ -45,6 +45,7 @@ Goerli é uma rede de testes de prova de participação. É esperado que ela sej
 - [Torneira Goerli](https://faucet.goerli.mudit.blog/)
 - [Torneira Chainlink](https://faucets.chain.link/)
 - [Torneira Alchemy Goerli](https://goerlifaucet.com/)
+- [Torneira PoW Goerli](https://goerli-faucet.pk910.de/)
 
 #### Sepolia {#sepolia}
 
@@ -59,6 +60,7 @@ Sepolia é uma rede de teste de prova de participação. Embora a Sepolia ainda 
 
 - [Torneira Sepolia](https://faucet.sepolia.dev/)
 - [FaucETH](https://fauceth.komputing.org)
+- [Torneira PoW Faucet](https://sepolia-faucet.pk910.de/)
 
 #### Ropsten _(obsoleta)_ {#ropsten}
 

@@ -51,6 +51,7 @@ Una red de prueba con prueba de autoridad que funciona entre los clientes.
 - [Faucet Görli](https://faucet.goerli.mudit.blog/)
 - [Faucet Chainlink](https://faucets.chain.link/)
 - [Alchemy Goerli Faucet](https://goerlifaucet.com/)
+- [Goerli PoW Faucet](https://goerli-faucet.pk910.de/)
 
 #### Kintsugi {#kintsugi}
 

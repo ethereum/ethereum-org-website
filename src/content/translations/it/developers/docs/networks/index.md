@@ -45,6 +45,7 @@ Goerli è una rete di prova Proof of Stake. Si prevede che sarà mantenuta a lun
 - [Faucet Goerli](https://faucet.goerli.mudit.blog/)
 - [Faucet Chainlink](https://faucets.chain.link/)
 - [Faucet Alchemy Goerli](https://goerlifaucet.com/)
+- [Goerli PoW Faucet](https://goerli-faucet.pk910.de/)
 
 #### Sepolia {#sepolia}
 
@@ -59,6 +60,7 @@ Sepolia è una rete di prova Proof of Stake. Sebbene Sepolia sia ancora in funzi
 
 - [Faucet Sepolia](https://faucet.sepolia.dev/)
 - [FaucETH](https://fauceth.komputing.org)
+- [Sepolia PoW Faucet](https://sepolia-faucet.pk910.de/)
 
 #### Ropsten _(deprecata)_ {#ropsten}
 

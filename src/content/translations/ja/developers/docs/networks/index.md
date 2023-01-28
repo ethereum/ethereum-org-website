@@ -45,6 +45,7 @@ Goerli (ゴエリ)はプルーフ・オブ・ステークのテストネット�
 - [Goerli faucet](https://faucet.goerli.mudit.blog/)
 - [Chainlink faucet](https://faucets.chain.link/)
 - [Alchemy Goerli Faucet](https://goerlifaucet.com/)
+- [Goerli PoW Faucet](https://goerli-faucet.pk910.de/)
 
 #### Sepolia (セポリア) {#sepolia}
 
@@ -59,6 +60,7 @@ Sepolia (セポリア)は、プルーフ・オブ・ステークのテストネ�
 
 - [Sepolia faucet](https://faucet.sepolia.dev/)
 - [FaucETH](https://fauceth.komputing.org)
+- [Sepolia PoW Faucet](https://sepolia-faucet.pk910.de/)
 
 #### Ropsten (ロプステン) _(非推奨)_ {#ropsten}
 
