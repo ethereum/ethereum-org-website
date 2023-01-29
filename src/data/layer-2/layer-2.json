@@ -120,11 +120,11 @@
     {
       "name": "Aztec",
       "website": "https://aztec.network/",
-      "developerDocs": "https://developers.aztec.network/",
+      "developerDocs": "https://docs.aztec.network/",
       "l2beat": "https://l2beat.com/projects/aztec",
       "bridge": "https://zk.money/",
       "bridgeWallets": ["MetaMask", "WalletConnect"],
-      "blockExplorer": "https://explorer.aztec.network/",
+      "blockExplorer": "https://aztec-connect-prod-explorer.aztec.network/",
       "ecosystemPortal": "",
       "tokenLists": "",
       "noteKey": "",
