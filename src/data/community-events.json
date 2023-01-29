@@ -664,5 +664,14 @@
     "description": "ETHMalaysia is the first Ethereum Innovation Festival in Southeast Asia that consists of a conference, a hackathon and fun Web3 themed activities.",
     "startDate": "2023-5-5",
     "endDate": "2023-5-7"
+  },
+  {
+    "title": "Hash House Web3 and Blockchain Community at Medellín",
+    "to": "https://www.meetup.com/hash-house-medellin",
+    "sponsor": null,
+    "location": "Colombia",
+    "description": "The Hash House Medellín community is a group of people based in the city of Medellín, Colombia, who are interested in blockchain technology and its potential.",
+    "startDate": "2022-01-31",
+    "endDate": "2022-02-1"
   }
 ]
