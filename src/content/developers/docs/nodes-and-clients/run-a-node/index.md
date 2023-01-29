@@ -362,7 +362,7 @@ Prysm comes with script which allows easy automatic installation. Details can be
 
 ```
 ./prysm.sh beacon-chain \
-    --mainnet
+    --mainnet \
     --datadir /data/ethereum  \
     --execution-endpoint=http://localhost:8551  \
     --jwt-secret=/path/to/jwtsecret
