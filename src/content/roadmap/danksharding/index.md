@@ -7,7 +7,7 @@ image: ../../../assets/upgrades/newrings.png
 summaryPoint1: Danksharding is a multi-phase upgrade to improve Ethereum’s scalability and capacity.
 summaryPoint2: The first stage, Proto-Danksharding, adds data blobs to blocks
 summaryPoint3: Data blobs offer a cheaper way for rollups to post data to Ethereum and those costs can be passed on to users in the form of lower transaction fees.
-summaryPoint4: Later, full Danksharding will spread responsibility for verifying data blobs across subsets of nodes.
+summaryPoint4: Later, full Danksharding will spread responsibility for verifying data blobs across subsets of nodes, further scaling Ethereum to more than 100,000 transactions per second.
 ---
 
 <UpgradeStatus dateKey="Stage 1 in ~2023">
@@ -42,7 +42,7 @@ KZG stands for Kate-Zaverucha-Goldberg - the names of the three [original author
 
 ### What is the KZG Ceremony? {#what-is-a-kzg-ceremony}
 
-A KZG ceremony is a way for many people from across the Ethereum community to generate a secret random string of numbers together that can be used to verify some data. It is very important that this string of numbers is not known and cannot be recreated by anyone. To ensure this, each person that participates in the ceremony receives a string from the previous participant. They then create some new random values (e.g. by allowing their browser to measure the movement of their mouse) and mix it in with the previous value. They then send the value on to the next participant and destroy it from their local machine. As long as one person in the ceremony does this honestly, the final value will be unknowable to an attacker.
+A KZG ceremony is a way for many people from across the Ethereum community to generate a secret random string of numbers together that can be used to verify some data. It is very important that this string of numbers is not known and cannot be recreated by anyone. To ensure this, each person that participates in the ceremony receives a string from the previous participant. They then create some new random values (e.g. by allowing their browser to measure the movement of their mouse) and mix it in with the previous value. They then send the value on to the next participant and destroy it from their local machine. As long as one person in the ceremony does this honestly, the final value will be unknowable to an attacker. The EIP-4844 KZG ceremony was open to the public and tens of thousands of people participated to add their own entropy. For the ceremony to be undermined, 100% of those participants would have to be actively dishonest. From the perspective of the participants, if they know they were honest, there is no need to trust anyone else because they know that they secured the ceremony (they individually satisfied the 1-out-of-N honest participant requirement).
 
 [Read more about the KZG ceremony](https://ceremony.ethereum.org/)
 [Watch Carl Beekhuizen's Devcon talk on trusted setups](https://archive.devcon.org/archive/watch/6/the-kzg-ceremony-or-how-i-learnt-to-stop-worrying-and-love-trusted-setups/?tab=YouTube)
@@ -60,7 +60,7 @@ If someone knows the random locations used for the commitment, it is easy for th
 </ExpandableCard>
 
 <InfoBanner isWarning>
-  Neither Danksharding nor Proto-Danksharding follow the traditional "sharding" model that aimed to split the blockchain into multiple parts. Instead, Danksharding uses distributed data sampling across blobs to scale Ethereum. This is much simpler to implement.  
+  Neither Danksharding nor Proto-Danksharding follow the traditional "sharding" model that aimed to split the blockchain into multiple parts. Shard chains are no longer part of the roadmap. Instead, Danksharding uses distributed data sampling across blobs to scale Ethereum. This is much simpler to implement.  
 </InfoBanner>
 
 ## What is Danksharding? {#what-is-danksharding}
@@ -83,4 +83,3 @@ Data availability sampling is required for validators to quickly and efficiently
 
 - [Read more about Danksharding](https://notes.ethereum.org/@dankrad/new_sharding)
 - [Watch Dankrad, Proto and Vitalik discuss Danksharding](https://www.youtube.com/watch?v=N5p0TB77flM)
-

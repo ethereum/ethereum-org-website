@@ -11,7 +11,7 @@ Some of the cryptography securing present-day Ethereum will be compromised when 
 
 ## Simpler and more efficient Ethereum
 
-Part of security and sustainability is having a manageable codebase- complexity creates opportunities for bugs or vulnerabilities that can be exploited by attackers. Therefore, part of the roadmap is simplifying Ethereum and removing technical debt - small inefficiencies that have hung around through various upgrades that are no longer needed or can now be improved upon.
+Part of security and sustainability is having a manageable codebase- complexity creates opportunities for bugs or vulnerabilities that can be exploited by attackers. Therefore, part of the roadmap is simplifying Ethereum and removing small inefficiencies that have hung around through various upgrades that are no longer needed or can now be improved upon. These leftover inefficiencies are known as "technical debt".
 
 There are several updates that will be made to the Ethereum Virtual Machine (EVM) to make it simpler and more efficient. These include removing the SELFDESTRUCT opcode - a rarely used command that is no longer needed and in some circumstances can be dangerous to use, especially when combined with other future upgrades to Ethereum’s storage model. Ethereum clients also still support some old transaction types that can now be completely removed. The way gas is calculated can also be improved and more efficient methods for the arithmetic underpinning some cryptographic operations can be brought in.
 

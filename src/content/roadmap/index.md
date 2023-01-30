@@ -31,7 +31,7 @@ The Ethereum roadmap outlines the specific improvements that will be made to pro
   </Card>
   <Card title="Better user experience" emoji=":stopwatch:">
 
-    Extremely lightweight nodes and more intuitive ways to manage accounts will make interacting with Ethereum in a permissionless, censorship-resistant way as straightforward as using any of today's familiar web2 apps.
+    Extremely lightweight nodes and more intuitive ways to manage accounts will make interacting with Ethereum in a permissionless, censorship-resistant way as straightforward as using any of today's familiar web2 apps. Changes to the way users use accounts will also bring simpler and safer access to Ethereum.
 
     [Read how the user experience will improve](/roadmap/user-experience/)
 
