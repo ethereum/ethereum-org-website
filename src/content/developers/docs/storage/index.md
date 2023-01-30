@@ -42,7 +42,7 @@ In most cases, instead of storing all data on-chain, the hash of where the data 
 
 Platforms with contract-based persistence:
 
-- [[Swarm] ]([url](https://www.ethswarm.org/))
+- [Swarm](https://www.ethswarm.org/)
 - [Filecoin](https://docs.filecoin.io/about-filecoin/what-is-filecoin/)
 - [Skynet](https://siasky.net/)
 - [Storj](https://storj.io/)
