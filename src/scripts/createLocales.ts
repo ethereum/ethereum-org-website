@@ -10,9 +10,14 @@ const input = "src/intl"
 const output = "i18n/locales"
 
 /**
- * Main script function
+ * Creates the locales used later by the app.
+ *
+ * 1. Loads all the `defaultLang` translations under `input`
+ * 2. For each language and namespace, it will create a locale under `output`
+ * 3. For any missing translation, it will fill that string with the
+ *    `defaultLang` version of it
  */
-async function createLocales() {
+async function createLocales(): Promise<void> {
   // cleanup any previous generated locales
   await rimraf(output)
 
