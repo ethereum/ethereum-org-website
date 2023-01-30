@@ -26,8 +26,7 @@ incomplete: true
 - [Rust イーサリアムクライアント](https://openethereum.github.io/) \* **OpenEthereum は[すでに廃止されており](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd)、現在は維持されていません。** ご利用には注意が必要です。できれば、他のクライアント実装に切り替えてください。
 - [Rust を使用してイーサリアムにトランザクションを送信する](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Parity イーサリアムクライアントを使用するスマートコントラクトの入門](https://wiki.parity.io/Smart-Contracts)
-- [Oasis SDK 開発環境のセットアップ](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
-- [Kovan のための Rust Wasm でのコントラクトの記述方法についての段階的なチュートリアル](https://github.com/paritytech/pwasm-tutorial)
+- [Kovan 向け Rust Wasm でのコントラクトの記述方法についての段階的なチュートリアル](https://github.com/paritytech/pwasm-tutorial)
 
 ## 中級者向けの記事 {#intermediate-articles}
 
@@ -37,12 +36,11 @@ incomplete: true
 ## 発展的なユースケース {#advanced-use-patterns}
 
 - [pwasm_ethereum: イーサリアムライクなネットワークとやり取りするための extern ライブラリ](https://github.com/openethereum/pwasm-ethereum)
-- [JavaScript と Rust を使用して分散型チャットを構築する](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
-- [Vue.js と Rust を使用して分散化 Todo アプリケーションを構築する](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
-- [Enigma 入門 - Rust プログラミング言語を使用](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
+- [JavaScript と Rust を使用して分散型チャットの構築](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
+- [Vue.js と Rust を使用して分散化 Todo アプリケーションの構築](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
+
 - [シークレットコントラクト入門](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
-- [Oasis (Compound) に Solidity コントラクトをデプロイする](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)
-- [Rust でブロックチェーンを構築する](https://blog.logrocket.com/how-to-build-a-blockchain-in-rust/)
+- [Rust でのブロックチェーンの構築](https://blog.logrocket.com/how-to-build-a-blockchain-in-rust/)
 
 ## Rust のプロジェクトとツール {#rust-projects-and-tools}
 

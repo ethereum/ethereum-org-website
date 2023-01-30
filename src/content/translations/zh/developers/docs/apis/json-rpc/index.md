@@ -22,7 +22,7 @@ lang: zh
 
 本页主要处理以太坊执行客户端使用的 JSON-RPC 应用程序接口。 但是，共识客户端也有一个远程过程调用应用程序接口，允许用户直接从节点查询有关节点的信息、请求信标区块、信标状态和其他与共识相关的信息。 此应用程序接口记录在[信标应用程序接口网页](https://ethereum.github.io/beacon-APIs/#/)上。
 
-内部应用程序接口还用于节点内的客户端间通信——也就是说，它使共识客户端和执行客户端能够交换数据。 这被称为“引擎应用程序接口”，该规范可在 [Github](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md) 上找到。
+内部应用程序接口还用于节点内的客户端间通信——也就是说，它使共识客户端和执行客户端能够交换数据。 这被称为“引擎应用程序接口”，该规范可在 [Github](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) 上找到。
 
 ## 执行客户端规范 {#spec}
 

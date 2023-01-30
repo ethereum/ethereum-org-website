@@ -13,11 +13,13 @@ import {
 } from "@chakra-ui/react"
 import { shuffle } from "lodash"
 import { FaTwitter } from "react-icons/fa"
+import { useIntl } from "react-intl"
 
 // Import components
 import Button from "../Button"
 import QuizRadioGroup from "./QuizRadioGroup"
 import QuizSummary from "./QuizSummary"
+import Translation from "../Translation"
 
 // Import SVGs
 import Trophy from "../../assets/quiz/trophy.svg"
@@ -31,6 +33,7 @@ import questionBank from "../../data/quizzes/questionBank"
 
 // Import utilities
 import { trackCustomEvent } from "../../utils/matomo"
+import { translateMessageId } from "../../utils/translations"
 
 // Import types
 import { AnswerChoice, RawQuiz, Quiz, RawQuestion, Question } from "../../types"
@@ -49,6 +52,7 @@ export interface IProps {
 
 // Component
 const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
+  const intl = useIntl()
   const [quizData, setQuizData] = useState<Quiz | null>(null)
   const [userQuizProgress, setUserQuizProgress] = useState<Array<AnswerChoice>>(
     []
@@ -86,7 +90,10 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
     const trimmedQuestions = maxQuestions
       ? shuffledQuestions.slice(0, maxQuestions)
       : shuffledQuestions
-    const quiz: Quiz = { title: rawQuiz.title, questions: trimmedQuestions }
+    const quiz: Quiz = {
+      title: translateMessageId(rawQuiz.title, intl),
+      questions: trimmedQuestions,
+    }
     setQuizData(quiz)
   }
   useEffect(initialize, [quizKey])
@@ -233,7 +240,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
         scrollMarginTop={24}
         id="quiz"
       >
-        Test your knowledge
+        <Translation id="test-your-knowledge" />
       </Heading>
       <Box
         w="full"
@@ -361,7 +368,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
                       onClick={handleRetryQuestion}
                       variant="outline-color"
                     >
-                      Try again
+                      <Translation id="try-again" />
                     </Button>
                   )}
                 {showResults ? (
@@ -370,17 +377,19 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
                       leftIcon={<Icon as={FaTwitter} />}
                       onClick={handleShare}
                     >
-                      Share results
+                      <Translation id="share-results" />
                     </Button>
                     {score < 100 && (
-                      <Button onClick={initialize}>Try again</Button>
+                      <Button onClick={initialize}>
+                        <Translation id="try-again" />
+                      </Button>
                     )}
                   </>
                 ) : showAnswer ? (
                   <Button onClick={handleContinue}>
                     {userQuizProgress.length === quizData.questions.length - 1
-                      ? "See results"
-                      : "Next question"}
+                      ? translateMessageId("see-results", intl)
+                      : translateMessageId("next-question", intl)}
                   </Button>
                 ) : (
                   <Button
@@ -392,7 +401,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
                     }
                     disabled={!currentQuestionAnswerChoice}
                   >
-                    Submit answer
+                    <Translation id="submit-answer" />
                   </Button>
                 )}
               </Flex>

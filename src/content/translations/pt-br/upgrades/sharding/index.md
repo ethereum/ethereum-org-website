@@ -3,7 +3,7 @@ title: Fragmentação
 description: Saiba mais sobre como fragmentar e distribuir a carga de dados necessária para dar ao Ethereum mais capacidade de transação e facilitar a execução.
 lang: pt-br
 template: upgrade
-image: ../../../../../assets/upgrades/newrings.png
+image: ../../../assets/upgrades/newrings.png
 summaryPoint1: A fragmentação é uma atualização para melhorar o dimensionamento e a capacidade do Ethereum.
 summaryPoint2: A fragmentação fornece distribuição segura dos requisitos de armazenamento de dados, permitindo que os rollups sejam ainda mais baratos, e tornando os nós mais fáceis de operar.
 summaryPoint3: Eles permitem soluções de camada 2 para oferecer taxas de transação baixas, ao mesmo tempo que aproveitam a segurança do Ethereum.
