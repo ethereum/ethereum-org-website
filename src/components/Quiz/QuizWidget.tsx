@@ -22,10 +22,12 @@ import QuizSummary from "./QuizSummary"
 import Translation from "../Translation"
 
 // Import SVGs
-import Trophy from "../../assets/quiz/trophy.svg"
-import Correct from "../../assets/quiz/correct.svg"
-import Incorrect from "../../assets/quiz/incorrect.svg"
-import StarConfetti from "../../assets/quiz/star-confetti.svg"
+import {
+  CorrectIcon,
+  IncorrectIcon,
+  StarConfettiIcon,
+  TrophyIcon,
+} from "../icons/quiz"
 
 // Import data
 import allQuizData from "../../data/quizzes"
@@ -226,6 +228,22 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
     )
   }
 
+  const AnswerIcon = () => {
+    const commonProps = {
+      color: "neutral",
+    }
+
+    if (!showAnswer) {
+      return <TrophyIcon {...commonProps} />
+    }
+
+    return currentQuestionAnswerChoice?.isCorrect ? (
+      <CorrectIcon {...commonProps} />
+    ) : (
+      <IncorrectIcon {...commonProps} />
+    )
+  }
+
   // TODO: Allow user to submit quiz for storage
   // TODO: Fix a11y keyboard tab stops
 
@@ -262,16 +280,14 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
       >
         {showConfetti && (
           <>
-            <Icon
-              as={StarConfetti}
+            <StarConfettiIcon
               fontSize="184px"
               position="absolute"
               zIndex={-1}
               top={-8}
               left={0}
             />
-            <Icon
-              as={StarConfetti}
+            <StarConfettiIcon
               fontSize="184px"
               position="absolute"
               zIndex={-1}
@@ -281,7 +297,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
             />
           </>
         )}
-        {/* Trophy icon */}
+        {/* Answer Icon - defaults to TrophyIcon */}
         <Circle
           size="50px"
           bg={
@@ -296,17 +312,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
           left="50%"
           transform="translateX(-50%) translateY(-50%)"
         >
-          <Icon
-            as={
-              !showAnswer
-                ? Trophy
-                : currentQuestionAnswerChoice?.isCorrect
-                ? Correct
-                : Incorrect
-            }
-            fontSize="1.75rem"
-            color="neutral"
-          />
+          <AnswerIcon />
         </Circle>
         {quizData ? (
           <>
