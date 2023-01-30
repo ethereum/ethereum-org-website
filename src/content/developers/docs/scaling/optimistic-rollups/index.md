@@ -32,9 +32,9 @@ Optimistic rollups are [off-chain scaling solutions](/developers/docs/scaling/#o
 
 The architecture of an optimistic rollup comprises the following parts:
 
-**On-chain contracts**: The optimistic rollups's operation is controlled by smart contracts running on Ethereum. This includes contracts that store rollup blocks, monitor state updates on the rollup, and track user deposits. In this sense Ethereum serves as the base layer or "layer 1" for optimistic rollups.
+**On-chain contracts**: The optimistic rollups's operation is controlled by smart contracts running on Ethereum. This includes contracts that store rollup blocks, monitor state updates on the rollup, and track user deposits. In this sense, Ethereum serves as the base layer or "layer 1" for optimistic rollups.
 
-**Off-chain virtual machine (VM)**: Although contracts managing the optimistic rollup protocol run on Ethereum, the rollup protocol performs computation and state storage on another virtual machine separate from the [Ethereum Virtual Machine](/developers/docs/evm/). The off-chain VM is where applications live and state changes executed; it serves as the upper layer or "layer 2" for an optimistic rollup.
+**Off-chain virtual machine (VM)**: Although contracts managing the optimistic rollup protocol run on Ethereum, the rollup protocol performs computation and state storage on another virtual machine separate from the [Ethereum Virtual Machine](/developers/docs/evm/). The off-chain VM is where applications live and state changes are executed; it serves as the upper layer or "layer 2" for an optimistic rollup.
 
 As optimistic rollups are designed to run programs either written or compiled for the EVM, the off-chain VM incorporates many EVM design specs. Additionally, fraud proofs computed on-chain allows the Ethereum network to enforce the validity of state changes computed in the off-chain VM.
 
@@ -114,7 +114,7 @@ If someone disputes an assertion, then the rollup protocol will initiate the fra
 
 Single-round interactive proving schemes replay disputed transactions on L1 to detect invalid assertions. The rollup protocol emulates the re-execution of the disputed transaction on L1 (Ethereum) using a verifier contract, with the computed state root determining who wins the challenge. If the challenger's claim about the rollup’s correct state is correct, the operator is penalized by having their bond slashed.
 
-However, re-executing transactions on L1 to detect fraud requires publishing state commitments for individual transactions and increases the data rollups must publish on-chain. Replaying transactions also incurs significant gas costs. For these reasons, optimistic rollups are switching to multi-round interactive proving, which achieves the same objective (i.e., detecting invalid rollup operations) with more efficiency.
+However, re-executing transactions on L1 to detect fraud requires publishing state commitments for individual transactions and increases the data rollups must publish on-chain. Replaying transactions also incur significant gas costs. For these reasons, optimistic rollups are switching to multi-round interactive proving, which achieves the same objective (i.e., detecting invalid rollup operations) with more efficiency.
 
 #### Multi-round interactive proving {#multi-round-interactive-proving}
 
@@ -227,7 +227,7 @@ Doing some rough calculations on these figures can help show the scalability imp
 2. If a basic rollup transaction uses 12 bytes, then the average Ethereum block can process **78,125 rollup transactions** (937,5000/12) or **39 rollup batches** (if each batch holds an average of 2,000 transactions).
 3. If a new block is produced on Ethereum every 15 seconds, then the rollup's processing speeds would amount to roughly **5,208 transactions per second**. This is done by dividing the number of basic rollup transactions an Ethereum block can hold (**78,125**) by the average block time (**15 seconds**).
 
-This is a fairly optimistic estimate, given that optimistic rollup transactions cannot possibly comprise an entire block on Ethereum. However, it can give give a rough idea of how much scalability gains that optimistic rollups can afford Ethereum users (current implementations offer up to 2,000 TPS).
+This is a fairly optimistic estimate, given that optimistic rollup transactions cannot possibly comprise an entire block on Ethereum. However, it can give a rough idea of how much scalability gains that optimistic rollups can afford Ethereum users (current implementations offer up to 2,000 TPS).
 
 The introduction of [data sharding](/upgrades/shard-chains/) on Ethereum is expected to improve scalability in optimistic rollups. Because rollup transactions must share blockspace with other non-rollup transactions, their processing capacity is limited by data throughput on the main Ethereum chain. Sharding will increase the space available to L2 chains to publish data per block, further boosting throughput on rollups.
 
@@ -240,7 +240,7 @@ The introduction of [data sharding](/upgrades/shard-chains/) on Ethereum is expe
 | Fraud proving guarantees trustless finality and allows honest minorities to secure the chain.                                                         | If there are no honest nodes a malicious operator can steal funds by posting invalid blocks and state commitments.                                  |
 | Computing fraud proofs is open to regular L2 node, unlike validity proofs (used in ZK-rollups) that require special hardware.                         | Security model relies on at least one honest node executing rollup transactions and submitting fraud proofs to challenge invalid state transitions. |
 | Rollups benefit from "trustless liveness" (anyone can force the chain to advance by executing transactions and posting assertions)                    | Users must wait for the one-week challenge period to expire before withdrawing funds back to Ethereum.                                              |
-| Optimistic rollups rely on well-designed cryptoeconomic incentives to increase security on the chain.                                                 | Rollups must post all transaction data on-chain, which can increase costs.                                                                          |
+| Optimistic rollups rely on well-designed crypto economic incentives to increase security on the chain.                                                 | Rollups must post all transaction data on-chain, which can increase costs.                                                                          |
 | Compatibility with EVM and Solidity allows developers to port Ethereum-native smart contracts to rollups or use existing tooling to create new dapps. |
 
 ### A visual explanation of optimistic rollups {#optimistic-video}
