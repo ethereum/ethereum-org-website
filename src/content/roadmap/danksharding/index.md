@@ -5,7 +5,7 @@ lang: en
 template: upgrade
 image: ../../../assets/upgrades/newrings.png
 summaryPoint1: Danksharding is a multi-phase upgrade to improve Ethereum’s scalability and capacity.
-summaryPoint2: The first stage - ProtoDanksharding - adds data blobs to blocks
+summaryPoint2: The first stage, Proto-Danksharding, adds data blobs to blocks
 summaryPoint3: Data blobs offer a cheaper way for rollups to post data to Ethereum and those costs can be passed on to users in the form of lower transaction fees.
 summaryPoint4: Later, full Danksharding will spread responsibility for verifying data blobs across subsets of nodes.
 ---
@@ -15,26 +15,26 @@ summaryPoint4: Later, full Danksharding will spread responsibility for verifying
 </UpgradeStatus>
 
 <InfoBanner isWarning>
-  Danksharding is how Ethereum becomes fully scaled, but there are several protocl upgrades required to get there. Proto-Danksharding is an intermediate step along the way. Both aim to make transactions on Layer 2 as cheap as possible for users and should scale Ethereum to >100,000 transactions per second.
+  Danksharding is how Ethereum becomes fully scaled, but there are several protocol upgrades required to get there. Proto-Danksharding is an intermediate step along the way. Both aim to make transactions on Layer 2 as cheap as possible for users and should scale Ethereum to >100,000 transactions per second.
 </InfoBanner>
 
 ## What is Proto-Danksharding? {#what-is-protodanksharding}
 
-Proto-Danksharding, also known as EIP4844, is a way for rollups to add cheaper data to blocks. Right now, rollups are limited in how cheap they can make user transactions by the fact that they post their transactions in `CALLDATA`. This is expensive because it is processed by all Ethereum nodes and lives on chain forever, even though rollups only need the data for a short time. Proto-Danksharding introduces data blobs that can be sent attached to blocks. These blobs are ignored by normal Ethereum nodes and are automatically deleted after a fixed time period (1-3 months). This means rollups can send their data much more cheaply and pass the savings on to end users in the form of cheaper transactions.
+Proto-Danksharding, also known as EIP-4844, is a way for rollups to add cheaper data to blocks. Right now, rollups are limited in how cheap they can make user transactions by the fact that they post their transactions in `CALLDATA`. This is expensive because it is processed by all Ethereum nodes and lives on chain forever, even though rollups only need the data for a short time. Proto-Danksharding introduces data blobs that can be sent attached to blocks. These blobs are ignored by normal Ethereum nodes and are automatically deleted after a fixed time period (1-3 months). This means rollups can send their data much more cheaply and pass the savings on to end users in the form of cheaper transactions.
 
 [Read more on Proto-Danksharding](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq)
 
 <ExpandableCard title="Why do blobs make rollups cheaper?">
-Rollups are a way to scale Ethereum by batching transactions off-chain and then posting the results to Ethereum. A rollup is essentially composed of two parts: data and execution check. The data is the full sequence of transactions that is being processed by a rollup to produce the state change being posted to Ethereum. The execution check is the re-execution of those transactions by some honest actor (a "prover") to ensure that the proposed state change is correct. In order for the execution check, the transaction data has to be available for long enough for anyone to download and check. This means any dishonest behaviour by the rollup sequencer can be identified and challenged by the prover. However, it does not need to be available forever.
+Rollups are a way to scale Ethereum by batching transactions off-chain and then posting the results to Ethereum. A rollup is essentially composed of two parts: data and execution check. The data is the full sequence of transactions that is being processed by a rollup to produce the state change being posted to Ethereum. The execution check is the re-execution of those transactions by some honest actor (a "prover") to ensure that the proposed state change is correct. In order for the execution check, the transaction data has to be available for long enough for anyone to download and check. This means any dishonest behavior by the rollup sequencer can be identified and challenged by the prover. However, it does not need to be available forever.
 </ExpandableCard>
 
 <ExpandableCard title="Why is it OK to delete the blob data?">
-Rollups post commitments to their transaction data on-chain and also make the actual data available in data blobs. This means provers cna check the commitments are valid or challenge data they think is wrong. At the node-level, the blobs of data are held in the consensus client. The consensus clients attest that they have seen the data and that it has been propagated around the network. If the data was kept forever, these clients would bloat and lead to large hardware requirements for running nodes. Instead, the data is automatically pruned from the node every 1-3 months.The consensus client attestations demonstrate that there was a sufficient opportunity for provers to verify the data. The actual data can be stored offchain by rollup operators, users or others. 
+Rollups post commitments to their transaction data on-chain and also make the actual data available in data blobs. This means provers can check the commitments are valid or challenge data they think is wrong. At the node-level, the blobs of data are held in the consensus client. The consensus clients attest that they have seen the data and that it has been propagated around the network. If the data was kept forever, these clients would bloat and lead to large hardware requirements for running nodes. Instead, the data is automatically pruned from the node every 1-3 months. The consensus client attestations demonstrate that there was a sufficient opportunity for provers to verify the data. The actual data can be stored off-chain by rollup operators, users or others. 
 </ExpandableCard>
 
 ### How is blob data verified {#how-are-blobs-verified}?
 
-Rollups post the transactions they execute in data blobs. They also post a "commitment" to the data. They do this by fitting a function to the data. This function can then be evaluated at various points. For example, if we define an extremely simply function `f(x) = 2x-1` then we can evaluate this function for `x = 1`, `x=2`, `x=3` giving the results `1, 3, 5`. A prover applies the same function to the data and evaluates it at the same points. If the original data is changed, the function will not be identical, and therefore neither are the values evaluated at each point. In reality, the commitment and proof are more complicated because they are wrapped in cryptographic functions.
+Rollups post the transactions they execute in data blobs. They also post a "commitment" to the data. They do this by fitting a polynomial function to the data. This function can then be evaluated at various points. For example, if we define an extremely simply function `f(x) = 2x-1` then we can evaluate this function for `x = 1`, `x=2`, `x=3` giving the results `1, 3, 5`. A prover applies the same function to the data and evaluates it at the same points. If the original data is changed, the function will not be identical, and therefore neither are the values evaluated at each point. In reality, the commitment and proof are more complicated because they are wrapped in cryptographic functions.
 
 ### What is KZG? {#what-is-kzg}
 
@@ -54,7 +54,7 @@ When a rollup posts data in a blob, they provide a "commitment" that they post o
 </ExpandableCard>
 
 <ExpandableCard title="Why does the KZG random data have to stay secret?">
-If someone knows the random locations used for the commitment, it is easy for them to generate a new polynomial that fits at those specific points (i.e. a "collision"). This means they could add or remove data froim the blob and still provide a valid proof. To prevent this, instead of giving provers the actual secret locations, they actually receive the locations wrapped in a cryptographic "black box" using elliptic curves. These effectively scramble the values in such a way that the original values cannot be reverse-engineered, but with some clever algebra provers and verifiers can still evaluate polynomials at the points they represent.
+If someone knows the random locations used for the commitment, it is easy for them to generate a new polynomial that fits at those specific points (i.e. a "collision"). This means they could add or remove data from the blob and still provide a valid proof. To prevent this, instead of giving provers the actual secret locations, they actually receive the locations wrapped in a cryptographic "black box" using elliptic curves. These effectively scramble the values in such a way that the original values cannot be reverse-engineered, but with some clever algebra provers and verifiers can still evaluate polynomials at the points they represent.
 
 [Watch Dankrad explain the KZG commitments and proofs in detail](https://youtu.be/8L2C6RDMV9Q)
 </ExpandableCard>
@@ -65,12 +65,12 @@ If someone knows the random locations used for the commitment, it is easy for th
 
 ## What is Danksharding? {#what-is-danksharding}
 
-Danksharding is the full realization of the rollup scaling that began with Proto-Danksharding. Danksharding will bring massive amounts of space on Ethereum for rollups to dump their compressed transaction data. This means Ethereum will be able to support hundeds of individual rollups with ease and make millions of transactions per second a reality.
+Danksharding is the full realization of the rollup scaling that began with Proto-Danksharding. Danksharding will bring massive amounts of space on Ethereum for rollups to dump their compressed transaction data. This means Ethereum will be able to support hundreds of individual rollups with ease and make millions of transactions per second a reality.
 
-The way this works is by expanding the blobs attached to blocks from 1 in Proto-Danksharding to 64 in full Danksharding. The rest of the changes required are all updated to the way consensus clients operate to enable them to handle the new large blobs. Several of these changes are already on the roadmap for other purposes idnependent of Danksharding. For example, Danksharding requires proposer-builder separation to have been implemented. This is an uprgade that separates the tasks of building blocks and proposign blocks across different validators. Similarly, data availability sampling is required for Danksharding, but it is also required for the development of very lightweight clients that do not store much historical data ("stateless clients").
+The way this works is by expanding the blobs attached to blocks from 1 in Proto-Danksharding to 64 in full Danksharding. The rest of the changes required are all updates to the way consensus clients operate to enable them to handle the new large blobs. Several of these changes are already on the roadmap for other purposes independent of Danksharding. For example, Danksharding requires proposer-builder separation to have been implemented. This is an uprgade that separates the tasks of building blocks and proposing blocks across different validators. Similarly, data availability sampling is required for Danksharding, but it is also required for the development of very lightweight clients that do not store much historical data ("stateless clients").
 
 <ExpandableCard title="Why does Danksharding require proposer-builder separation?">
-Proposer-builder separation is required to prevent individual validators from having to generate expensive commitments and proofs for 32MB of blob data. This would put too much strain on home stakers and require them to invest in more powerful hardware, which hurts decentralization. Instead, specialized block builders take responsibility for this expensive computational work. Then, they make their blocks available to block proposers to broadcast. The block proposer simply chooses the block that is most profitable. Anyone can verify the blobs cheaply and quickly, meaning any normal validator can check that the block builders are behaving honestly. This allows the large blobs to be processes without sacrificing decentralization. Misbehaving block builders culd simply be ejected from the network and slashed - others will step into their place because block building is a profitable activity.
+Proposer-builder separation is required to prevent individual validators from having to generate expensive commitments and proofs for 32MB of blob data. This would put too much strain on home stakers and require them to invest in more powerful hardware, which hurts decentralization. Instead, specialized block builders take responsibility for this expensive computational work. Then, they make their blocks available to block proposers to broadcast. The block proposer simply chooses the block that is most profitable. Anyone can verify the blobs cheaply and quickly, meaning any normal validator can check that the block builders are behaving honestly. This allows the large blobs to be processes without sacrificing decentralization. Misbehaving block builders could simply be ejected from the network and slashed - others will step into their place because block building is a profitable activity.
 </ExpandableCard>
 
 <ExpandableCard title="Why does Danksharding require data availability sampling?">
@@ -79,7 +79,8 @@ Data availability sampling is required for validators to quickly and efficiently
 [Read more on data availability sampling for blobs](https://hackmd.io/@vbuterin/sharding_proposal#ELI5-data-availability-sampling)
 </ExpandableCard>
 
-[Read more about Danksharding](https://notes.ethereum.org/@dankrad/new_sharding)
-[Watch Dakrad, Proto and Vitalik discuss Danksharding](https://www.youtube.com/watch?v=N5p0TB77flM)
+### Further reading {#further-reading}
 
-### Read more {#read-more}
+- [Read more about Danksharding](https://notes.ethereum.org/@dankrad/new_sharding)
+- [Watch Dankrad, Proto and Vitalik discuss Danksharding](https://www.youtube.com/watch?v=N5p0TB77flM)
+
