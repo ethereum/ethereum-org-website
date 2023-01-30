@@ -9,6 +9,10 @@ import {
   useColorMode,
   Icon,
 } from "@chakra-ui/react"
+import { useIntl } from "react-intl"
+
+// Components
+import Translation from "../Translation"
 
 // Icons
 import { MdCircle } from "react-icons/md"
@@ -36,6 +40,7 @@ import {
 
 // Utils
 import { trackCustomEvent } from "../../utils/matomo"
+import { translateMessageId } from "../../utils/translations"
 
 // Types
 interface Personas {
@@ -72,98 +77,104 @@ interface Personas {
   }
 }
 
-const filterLabels = {
-  hardware: {
-    label: "Hardware",
-    icon: <HardwareIcon />,
-  },
-  open_source: {
-    label: "Open source",
-    icon: <OpenSourceWalletIcon />,
-  },
-  non_custodial: {
-    label: "Non-custodial",
-    icon: <NonCustodialIcon />,
-  },
-  hardware_support: {
-    label: "Hardware support",
-    icon: <HardwareSupportIcon />,
-  },
-  walletconnect: {
-    label: "WalletConnect",
-    icon: <WalletConnectIcon />,
-  },
-  rpc_importing: {
-    label: "RPC importing",
-    icon: <RPCImportingIcon />,
-  },
-  nft_support: {
-    label: "NFT support",
-    icon: <NFTSupportIcon />,
-  },
-  connect_to_dapps: {
-    label: "Connect to apps",
-    icon: <ConnectDappsIcon />,
-  },
-  staking: {
-    label: "Staking",
-    icon: <StakingIcon />,
-  },
-  swaps: {
-    label: "Swaps",
-    icon: <SwapIcon />,
-  },
-  layer_2: {
-    label: "Layer 2",
-    icon: <Layer2Icon />,
-  },
-  gas_fee_customization: {
-    label: "Gas fee customization",
-    icon: <GasFeeCustomizationIcon />,
-  },
-  ens_support: {
-    label: "ENS support",
-    icon: <ENSSupportIcon />,
-  },
-  buy_crypto: {
-    label: "Buy crypto",
-    icon: <BuyCryptoIcon />,
-  },
-  withdraw_crypto: {
-    label: "Sell for fiat",
-    icon: <WithdrawCryptoIcon />,
-  },
-  multisig: {
-    label: "Multisig",
-    icon: <MultisigIcon />,
-  },
-  social_recovery: {
-    label: "Social recovery",
-    icon: <SocialRecoverIcon />,
-  },
-  erc_20_support: {
-    label: "Token support",
-    icon: <ERC20SupportIcon />,
-  },
-  eip_1559_support: {
-    label: "Fee optimization",
-    icon: <EIP1559Icon />,
-  },
-}
-
 const WalletPersonasSidebar = ({
   resetFilters,
   setFilters,
   selectedPersona,
   setSelectedPersona,
 }) => {
+  const intl = useIntl()
   const { colorMode } = useColorMode()
   const isDark = colorMode === "dark"
 
+  const filterLabels = {
+    hardware: {
+      label: translateMessageId("page-find-wallet-hardware", intl),
+      icon: <HardwareIcon />,
+    },
+    open_source: {
+      label: translateMessageId("page-find-wallet-open-source", intl),
+      icon: <OpenSourceWalletIcon />,
+    },
+    non_custodial: {
+      label: translateMessageId("page-find-wallet-non-custodial", intl),
+      icon: <NonCustodialIcon />,
+    },
+    hardware_support: {
+      label: translateMessageId(
+        "page-find-wallet-hardware-wallet-support",
+        intl
+      ),
+      icon: <HardwareSupportIcon />,
+    },
+    walletconnect: {
+      label: translateMessageId("page-find-wallet-walletconnect", intl),
+      icon: <WalletConnectIcon />,
+    },
+    rpc_importing: {
+      label: translateMessageId("page-find-wallet-rpc-importing", intl),
+      icon: <RPCImportingIcon />,
+    },
+    nft_support: {
+      label: translateMessageId("page-find-wallet-nft-support", intl),
+      icon: <NFTSupportIcon />,
+    },
+    connect_to_dapps: {
+      label: translateMessageId("page-find-wallet-connect-to-dapps", intl),
+      icon: <ConnectDappsIcon />,
+    },
+    staking: {
+      label: translateMessageId("page-find-wallet-staking", intl),
+      icon: <StakingIcon />,
+    },
+    swaps: {
+      label: translateMessageId("page-find-wallet-swaps", intl),
+      icon: <SwapIcon />,
+    },
+    layer_2: {
+      label: translateMessageId("page-find-wallet-layer-2", intl),
+      icon: <Layer2Icon />,
+    },
+    gas_fee_customization: {
+      label: translateMessageId("page-find-wallet-gas-fee-customization", intl),
+      icon: <GasFeeCustomizationIcon />,
+    },
+    ens_support: {
+      label: translateMessageId("page-find-wallet-ens-support", intl),
+      icon: <ENSSupportIcon />,
+    },
+    buy_crypto: {
+      label: translateMessageId("page-find-wallet-buy-crypto", intl),
+      icon: <BuyCryptoIcon />,
+    },
+    withdraw_crypto: {
+      label: translateMessageId("page-find-wallet-sell-for-fiat", intl),
+      icon: <WithdrawCryptoIcon />,
+    },
+    multisig: {
+      label: translateMessageId("page-find-wallet-multisig", intl),
+      icon: <MultisigIcon />,
+    },
+    social_recovery: {
+      label: translateMessageId("page-find-wallet-social-recovery", intl),
+      icon: <SocialRecoverIcon />,
+    },
+    erc_20_support: {
+      label: translateMessageId("page-find-wallet-token-support", intl),
+      icon: <ERC20SupportIcon />,
+    },
+    eip_1559_support: {
+      label: translateMessageId("page-find-wallet-fee-optimization", intl),
+      icon: <EIP1559Icon />,
+    },
+  }
   const personas: Personas[] = [
     {
-      title: "New to crypto",
-      description: "You are a first time user looking for your first wallet",
+      title: translateMessageId("page-find-wallet-new-to-crypto-title", intl),
+      description: translateMessageId(
+        "page-find-wallet-new-to-crypto-desc",
+        intl
+      ),
       featureHighlight: [
         filterLabels.connect_to_dapps,
         filterLabels.layer_2,
@@ -202,9 +213,8 @@ const WalletPersonasSidebar = ({
       },
     },
     {
-      title: "NFTs",
-      description:
-        "You are someone that is all about NFTs and want a wallet with NFT support",
+      title: translateMessageId("page-find-wallet-nfts-title", intl),
+      description: translateMessageId("page-find-wallet-nfts-desc", intl),
       featureHighlight: [
         filterLabels.nft_support,
         filterLabels.layer_2,
@@ -240,9 +250,8 @@ const WalletPersonasSidebar = ({
       },
     },
     {
-      title: "Hodler",
-      description:
-        "You are someone that has tokens and don’t want to touch them",
+      title: translateMessageId("page-find-wallet-hodler-title", intl),
+      description: translateMessageId("page-find-wallet-hodler-desc", intl),
       featureHighlight: [filterLabels.hardware, filterLabels.non_custodial],
       presetFilters: {
         android: false,
@@ -274,9 +283,8 @@ const WalletPersonasSidebar = ({
       },
     },
     {
-      title: "Finance",
-      description:
-        "You are someone that uses DeFi and want a wallet that allows you to connect to DeFi applications",
+      title: translateMessageId("page-find-wallet-finance-title", intl),
+      description: translateMessageId("page-find-wallet-finance-desc", intl),
       featureHighlight: [
         filterLabels.hardware_support,
         filterLabels.connect_to_dapps,
@@ -314,9 +322,8 @@ const WalletPersonasSidebar = ({
       },
     },
     {
-      title: "Developer",
-      description:
-        "You are developer and need a wallet to help develop and test dapps",
+      title: translateMessageId("page-find-wallet-developer-title", intl),
+      description: translateMessageId("page-find-wallet-developer-desc", intl),
       featureHighlight: [
         filterLabels.open_source,
         filterLabels.walletconnect,
@@ -368,12 +375,12 @@ const WalletPersonasSidebar = ({
         textAlign="center"
         color="secondary"
       >
-        Choose the profile that matches your type of user and filter the wallet
-        list
+        <Translation id="page-find-wallet-persona-desc" />
       </Box>
       {personas.map((persona, idx) => {
         return (
           <Flex
+            key={persona.title}
             direction="column"
             alignItems="flex-start"
             padding={6}

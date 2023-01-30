@@ -7,7 +7,6 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
-  chakra,
   GridItem,
   Heading,
   HStack,

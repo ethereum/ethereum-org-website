@@ -106,5 +106,14 @@
   "page-what-is-ethereum-the-year-in-ethereum-2021-desc": "Jan 17, 2022 - Josh Stark and Evan Van Ness",
   "page-what-is-ethereum-atoms-institutions-blockchains": "Atoms, Institutions, Blockchains",
   "page-what-is-ethereum-atoms-institutions-blockchains-desc": "- Why blockchains matter?",
-  "page-what-is-ethereum-ethereum-in-numbers-title": "Ethereum in numbers"
+  "page-what-is-ethereum-ethereum-in-numbers-title": "Ethereum in numbers",
+  "adoption-chart-column-now-label": "Now",
+  "adoption-chart-investors-label": "Investors",
+  "adoption-chart-developers-label": "Developers",
+  "adoption-chart-companies-label": "Companies",
+  "adoption-chart-artists-label": "Artists",
+  "adoption-chart-musicians-label": "Musicians",
+  "adoption-chart-writers-label": "Writers",
+  "adoption-chart-gamers-label": "Gamers",
+  "adoption-chart-refugees-label": "Refugees"
 }

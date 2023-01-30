@@ -474,7 +474,7 @@ Se prevedi di interrogare un oracolo sulla catena per conoscere i prezzi dei ben
 
 - **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/admin)**: _interfaccia per gestire l'amministrazione dei contratti intelligenti, inclusi i controlli di accesso, gli aggiornamenti e l'interruzione._
 
-- **[Gnosis Safe](https://gnosis.io/safe/)**: _portafoglio del contratto intelligente eseguito su Ethereum, che richiede un numero minimo di persone per approvare una transazione prima che possa verificarsi (M di N)._
+- **[Safe](https://safe.global/)**: _portafoglio del contratto intelligente eseguito su Ethereum, che richiede un numero minimo di persone per approvare una transazione prima che possa verificarsi (M di N)._
 
 - **[Contratti OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/)**: _librerie dei contratti per implementare funzionalità amministrative, inclusa la proprietà del contratto, aggiornamenti, controlli di accesso, governance, interruzioni e altro._
 
