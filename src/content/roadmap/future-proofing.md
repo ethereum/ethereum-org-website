@@ -7,9 +7,7 @@ Some parts of the roadmap are not necessarily required for scaling or securing E
 
 ## Quantum resistance
 
-Some of the cryptography securing present-day Ethereum will be compromised when quantum computing becomes a reality. Although quantum computers are probably decades away from being a genuine threat to modern cryptography, we are building Ethereum to be secure for centuries to come. This means making Ethereum quantum resistant now. The challenge facing Ethereum developers is that the current proof-of-stake protocol relies upon a very efficient signature scheme known as BLS to aggregate votes on valid blocks. This signature scheme is broken by quantum computers, but the quantum resistant alternatives are not as efficient. Similarly, the “KZG” commitment schemes used in many places to generate cryptographic secrets is known to be quantum-vulnerable. Currently, this is circumvented using “trusted setups” where many users generate randomness that cannot be reverse-engineered by a quantum computer. However, the ideal solution would simply be to incorporate quantum safe cryptography instead. There are two leading approaches that could become efficient replacements for the BLS scheme: STARK-based and Lattice-based signing. These are still being researched and prototyped.
-
-Read more on [quantum resistance](comingsoon)
+Some of the cryptography securing present-day Ethereum will be compromised when quantum computing becomes a reality. Although quantum computers are probably decades away from being a genuine threat to modern cryptography, Ethereum is being built to be secure for centuries to come. This means making Ethereum quantum resistant now. The challenge facing Ethereum developers is that the current proof-of-stake protocol relies upon a very efficient signature scheme known as BLS to aggregate votes on valid blocks. This signature scheme is broken by quantum computers, but the quantum resistant alternatives are not as efficient. Similarly, the “KZG” commitment schemes used in many places to generate cryptographic secrets is known to be quantum-vulnerable. Currently, this is circumvented using “trusted setups” where many users generate randomness that cannot be reverse-engineered by a quantum computer. However, the ideal solution would simply be to incorporate quantum safe cryptography instead. There are two leading approaches that could become efficient replacements for the BLS scheme: STARK-based and Lattice-based signing. These are still being researched and prototyped.
 
 ## Simpler and more efficient Ethereum
 
@@ -19,4 +17,4 @@ There are several updates that will be made to the Ethereum Virtual Machine (EVM
 
 Similarly, there are updates that can be made to other parts of present-day Ethereum clients. One example is that current execution and consensus clients use a different type of data compression. It will be much easier and more intuitive to share data between clients when the compression scheme is unified across the whole network.
 
-Read more on [gas](/developers/docs/gas/index.md), the [EVM](/developers/docs/evm/index.md) and [data structures](/developers/docs/data-structures-and-encoding/index.md).
+Read more on [gas](/developers/docs/gas/), the [EVM](/developers/docs/evm/) and [data structures](/developers/docs/data-structures-and-encoding/).
