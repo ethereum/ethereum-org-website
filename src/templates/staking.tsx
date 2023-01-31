@@ -22,7 +22,6 @@ import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
 import RandomAppList from "../components/RandomAppList"
-import Roadmap from "../components/Roadmap"
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents, {
   Item as ItemTableOfContents,
@@ -319,7 +318,6 @@ const components = {
   table: MarkdownTable,
   MeetupList,
   RandomAppList,
-  Roadmap,
   Logo,
   ButtonLink,
   Contributors,

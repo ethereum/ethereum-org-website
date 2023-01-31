@@ -57,10 +57,6 @@ Apprezziamo feedback sia sui principi di design che sulla guida di stile. Ricord
 
 Assicurati di leggere [i nostri principi](/contributing/design-principles/) e [la nostra guida di stile](/contributing/style-guide/) se desideri [contribuire al sito](/contributing/).
 
-## Roadmap {#roadmap}
-
-<Roadmap />
-
 ## Posizioni aperte {#open-jobs}
 
 Sebbene questo sito web sia open source e tutti possano lavorarci, abbiamo un team dedicato a ethereum.org e un altro ai progetti web della Ethereum Foundation.

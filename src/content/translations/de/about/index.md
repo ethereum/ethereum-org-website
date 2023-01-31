@@ -57,10 +57,6 @@ Wir freuen uns über Feedback sowohl zu den Designprinzipien als auch zum Styleg
 
 Stelle sicher, dass du [unsere Prinzipien](/contributing/design-principles/) und [unseren Styleguide](/contributing/style-guide/) durchgehst, wenn du [zur Website](/contributing/) beitragen möchten.
 
-## Roadmap {#roadmap}
-
-<Roadmap />
-
 ## Offene Stellen {#open-jobs}
 
 Auch wenn dies eine Open-Source-Website ist und jeder daran arbeiten kann, haben wir ein Team, das sich speziell mit ethereum.org und anderen Ethereum-Foundation-Webprojekten befasst.

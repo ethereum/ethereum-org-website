@@ -57,10 +57,6 @@ ethereum.org 是一个为以太坊社区打造的公共且开源的网站，任�
 
 如果您想要[对官网做贡献](/contributing/)，请先阅读[我们的宗旨](/contributing/design-principles/)，以及[我们的风格指南](/contributing/style-guide/)。
 
-## 愿景与计划 {#roadmap}
-
-<Roadmap />
-
 ## 正在招聘 {#open-jobs}
 
 虽然这个网站是开源的，任何人都可以在上面协作，但我们确实有一个团队专门负责 ethereum.org 和其他以太坊基金会的项目。

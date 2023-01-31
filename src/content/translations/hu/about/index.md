@@ -52,7 +52,3 @@ Tervezési elveket alkalmazunk a webhely tartalmi és tervezési döntéseink ir
 Szívesen fogadunk róluk visszajelzéseket. Ne feledd, az ethereum.org a közösségért van a közösség által.
 
 Olvasd el az elveket, ha szeretnél [közreműködni az oldalhoz](/contributing/).
-
-## Ütemterv {#roadmap}
-
-<Roadmap />
