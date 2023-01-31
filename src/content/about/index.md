@@ -83,9 +83,19 @@ We have a [style guide](/contributing/style-guide/) to standardize certain aspec
 We welcome feedback on both the design principles and the style guide. Remember, ethereum.org is for the community, by the community.
 Make sure you read [our principles](/contributing/design-principles/) and [our style guide](/contributing/style-guide/) if you'd like to [contribute to the site](/contributing/).
 
-## Roadmap {#roadmap}
+## Product roadmap {#roadmap}
 
-<Roadmap />
+To make our work more accessible and to foster more community collaboration, the ethereum.org core team publishes an overview of our quarterly roadmap goals.
+
+[View our 2023 Q1 product roadmap](https://github.com/ethereum/ethereum-org-website/issues/9090)
+
+**How's that sound?**
+
+We always appreciate feedback on our roadmap - if there's something you think we should work on, please let us know! We welcome ideas and PRs from anyone in the community.
+
+**Want to get involved?**
+
+[Learn more about contributing](/contributing/), [hit us up on Twitter](https://twitter.com/ethdotorg), or join the community discussions in [our Discord server](https://discord.gg/CetY6Y4).
 
 ## Open jobs {#open-jobs}
 
