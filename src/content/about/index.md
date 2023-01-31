@@ -6,7 +6,7 @@ lang: en
 
 # About ethereum.org {#about-ethereumorg}
 
-ethereum.org is a public, open-source resource for the Ethereum community that anyone can contribute to. We have a small team dedicated to maintaining and developing the site which is funded by the [Ethereum Foundation](/foundation/).
+ethereum.org is a public, open-source resource for the Ethereum community that anyone can contribute to. We have a small core team dedicated to maintaining and developing the site with contributions from thousands of community members across the globe.
 
 ## A note on names {#a-note-on-names}
 
@@ -38,13 +38,13 @@ A non-profit organization, funded initially by the crowdsale of ETH, dedicated t
 
 A public, open-source website and educational resource for the Ethereum community. ethereum.org is led by a small core team, funded by the Ethereum Foundation, with contributions from thousands of community members across the globe.
 
-This page covers more information on ethereum.org.
+This page covers more information about ethereum.org.
 
-## Our vision {#our-vision}
+## Our mission {#our-mission}
 
-### ethereum.org's mission is to be the best portal for Ethereum's growing community {#mission}
+**ethereum.org's mission is to be the best portal for Ethereum's growing community**
 
-We're an educational resource, designed to help new users become familiar with Ethereum and its key concepts. We want to:
+We strive to build an easy-to-understand educational resource for all topics relating to Ethereum, designed to help new users become familiar with Ethereum and its key concepts. We want to:
 
 - explain Ethereum to anyone new to the technology
 - help new users get started with ETH and Ethereum
@@ -52,9 +52,27 @@ We're an educational resource, designed to help new users become familiar with E
 - cover updates in the Ethereum world
 - showcase resources created by the community
 - bring Ethereum education to as many languages as possible
-  We have some core principles that help us do this.
+
+To achieve this mission, our team focuses on two primary goals on ethereum.org:
+
+### 1. Improve user experience for ethereum.org visitors {#visitors}
+
+- Extend, improve, and keep content up-to-date
+- Improve usability and accessibility via localization and web development best practices
+- Increase user engagement via features like surveys, quizzes, and web3 integrations
+- Keep the website lightweight and performant
+
+### 2. Grow, strengthen, and empower our community of contributors {#community}
+
+- Grow total number of contributors to the website
+- Improve contributor retention through engagement, acknowledgments, and rewards
+- Empower community members to make increasingly significant contributions
+- Facilitate greater diversity of contributions: code, content, design, translation, moderation
+- Keep the codebase modern, clean, and well-documented
 
 ## Core principles {#core-principles}
+
+We have some core principles that help guide us to accomplish our mission.
 
 ### 1. ethereum.org is a portal to Ethereum 🌏 {#core-principles-1}
 
