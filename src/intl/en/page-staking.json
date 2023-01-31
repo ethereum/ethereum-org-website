@@ -118,7 +118,7 @@
   "page-staking-considerations-pools-8-description": "Offers tradable liquidity token representing your staked ETH, held in your own wallet",
   "page-staking-considerations-pools-8-valid": "Liquidity token(s)",
   "page-staking-considerations-pools-8-warning": "No liquidity token",
-  "page-staking-how-solo-works-item-1": "Get some hardware: You need to <a href=\"/run-a-node/\">run a node</a> to stake.",
+  "page-staking-how-solo-works-item-1": "Get some hardware: You need to <a href=\"/run-a-node/\">run a node</a> to stake",
   "page-staking-how-solo-works-item-2": "Sync an execution layer client",
   "page-staking-how-solo-works-item-3": "Sync a consensus layer client",
   "page-staking-how-solo-works-item-4": "Generate your keys and load them into your validator client",
