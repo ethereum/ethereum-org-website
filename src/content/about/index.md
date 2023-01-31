@@ -20,9 +20,9 @@ Ethereum is a public network, a blockchain, and an open-source protocol -- opera
 
 [More on Ethereum governance](/governance/)
 
-### Ether (or ETH) {#ether-or-eth}
+### Ether (ETH) {#ether-or-eth}
 
-The native currency transacted on Ethereum, used to pay for usage of the Ethereum network (in the form of transaction fees). ETH is also used to secure the network with staking. When people talk about the price of Ethereum, they're referring to ETH the asset.
+Ether (also known by its ticker symbol, ETH) is the native currency transacted on Ethereum. ETH is needed to pay for usage of the Ethereum network (in the form of transaction fees). ETH is also used to secure the network with staking. When people talk about the price of Ethereum, they're referring to ETH the asset.
 
 [More about ETH](/eth/)
 
@@ -34,7 +34,7 @@ A non-profit organization, funded initially by the crowdsale of ETH, dedicated t
 
 [More about the Ethereum Foundation](/foundation/)
 
-### ethereum.org {#ethereumorg}
+### ethereum.org {#ethereum-org}
 
 A public, open-source website and educational resource for the Ethereum community. ethereum.org is led by a small core team, funded by the Ethereum Foundation, with contributions from thousands of community members across the globe.
 
@@ -97,13 +97,9 @@ To make our work more accessible and to foster more community collaboration, the
 
 [View our 2023 Q1 product roadmap](https://github.com/ethereum/ethereum-org-website/issues/9090)
 
-**How's that sound?**
+**How's that sound?** We always appreciate feedback on our roadmap - if there's something you think we should work on, please let us know! We welcome ideas and PRs from anyone in the community.
 
-We always appreciate feedback on our roadmap - if there's something you think we should work on, please let us know! We welcome ideas and PRs from anyone in the community.
-
-**Want to get involved?**
-
-[Learn more about contributing](/contributing/), [hit us up on Twitter](https://twitter.com/ethdotorg), or join the community discussions in [our Discord server](https://discord.gg/CetY6Y4).
+**Want to get involved?** [Learn more about contributing](/contributing/), [hit us up on Twitter](https://twitter.com/ethdotorg), or join the community discussions in [our Discord server](https://discord.gg/CetY6Y4).
 
 ## Design principles {#design-principles}
 
