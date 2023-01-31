@@ -177,6 +177,7 @@
   "page-staking-faq-5-question": "When can I withdraw my staked ETH?",
   "page-staking-faq-5-answer-p1": "Withdraw functionality is expected to be included in the next network upgrade, named Shanghai. This network upgrade is estimated for the first half of 2023, subject to change until completed. After the Shanghai update, stakers will then be able to withdraw their rewards and/or principle deposit from their validator balance if they choose.",
   "page-staking-faq-5-answer-p2": "In the meantime, stakers will still earn rewards in the form of fees and MEV when proposing blocks, which are made available immediately via the set fee recipient address.",
+  "page-staking-faq-5-answer-link": "More on staking withdrawals",
   "page-staking-further-reading-1-link": "Why Proof of Stake (Nov 2020)",
   "page-staking-further-reading-author-vitalik-buterin": "Vitalik Buterin",
   "page-staking-further-reading-2-link": "Serenity Design Rationale",

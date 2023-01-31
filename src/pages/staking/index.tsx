@@ -643,6 +643,9 @@ const StakingPage = ({
               <p>
                 <Translation id="page-staking-faq-5-answer-p2" />
               </p>
+              <ButtonLink to="/staking/withdrawals/">
+                <Translation id="page-staking-faq-5-answer-link" />
+              </ButtonLink>
             </ExpandableCard>
             <ExpandableCard
               title={translateMessageId("page-staking-faq-1-question", intl)}
