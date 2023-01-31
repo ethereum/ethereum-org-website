@@ -76,6 +76,11 @@ Before diving into frameworks, we recommend you first read through our introduct
 
 - [GitHub](https://github.com/austintgriffith/scaffold-eth)
 
+**Tenderly -** **_Web3 development platform that enables blockchain developers to build, test, debug, monitor, and operate smart contracts and improve dapp UX._**
+
+- [Website](https://tenderly.co/)
+- [Documentation](https://docs.tenderly.co/ethereum-development-practices)
+
 **The Graph -** **_The Graph for querying blockchain data efficiently._**
 
 - [Website](https://thegraph.com/)

@@ -73,7 +73,7 @@ ETH をステーキングすると、イーサリアムネットワークの保�
 
 ## 金融専門家および会計士 <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
 
-- イーサリアムは、代替金融システムを提供するプロトコルとアプリケーションのネットワークである「分散型金融 (DeFi) 」エコシステムの本拠地です。 金融業界の方は、[DeFi Pulse](https://defipulse.com/) または [DeFiPrime](https://defiprime.com)で分散型金融(DeFi)アプリをご確認ください。
+- イーサリアムは、代替金融システムを提供するプロトコルとアプリケーションのネットワークである「分散型金融 (DeFi) 」エコシステムの本拠地です。 金融業界の方は、[DeFi Llama](https://defillama.com/) または [DeFiPrime](https://defiprime.com)で分散型金融(DeFi)アプリをご確認ください。
 - ETH、トークン、分散型金融(DeFi)など、イーサリアムのアセットは、新しい会計上の問題を数多くもたらします。 会計士の方は、[Rotki](https://rotki.com/)のような、暗号通貨ユーザーの簿記や会計に関する問題解決を目指しているプロジェクトをぜひ一度ご確認ください。
 
 ## プロダクトマネージャー <Emoji text=":fountain_pen:" size={1} /> {#product-managers}

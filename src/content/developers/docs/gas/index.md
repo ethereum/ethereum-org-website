@@ -154,7 +154,6 @@ If you want to monitor gas prices, so you can send your ETH for less, you can us
 ## Further reading {#further-reading}
 
 - [Ethereum Gas Explained](https://defiprime.com/gas)
-- [Is Ethereum more expensive to use as price rises?](https://docs.ethhub.io/questions-about-ethereum/is-ethereum-more-expensive-to-use-as-price-rises/)
 - [Reducing the gas consumption of your Smart Contracts](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [Proof of Stake versus Proof of Work](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 

@@ -272,7 +272,7 @@ echidna_state4: failed!💥
     i()
 ```
 
-Echidna will find the sequence of transactions to falsify the property almost inmmediately.
+Echidna will find the sequence of transactions to falsify the property almost immediately.
 
 ### Summary: Filtering functions {#summary-filtering-functions}
 
