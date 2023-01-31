@@ -1,37 +1,58 @@
 // Libraries
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
+import { Icon } from "@chakra-ui/react"
 import { useIntl } from "react-intl"
 
 // Data
 import walletFilterData from "../../../data/wallets/wallet-filters"
 
-// Icons
-import Browser from "../../../assets/wallets/browser.svg"
-import BuyCrypto from "../../../assets/wallets/buy_crypto.svg"
-import Desktop from "../../../assets/wallets/desktop.svg"
-import ENSSupport from "../../../assets/wallets/ens_support.svg"
-import ERC20Support from "../../../assets/wallets/erc_20_support.svg"
-import GasFeeCustomization from "../../../assets/wallets/gas_fee_customization.svg"
-import HardwareSupport from "../../../assets/wallets/hardware_support.svg"
-import Hardware from "../../../assets/wallets/hardware.svg"
-import Layer2 from "../../../assets/wallets/layer_2.svg"
-import Mobile from "../../../assets/wallets/mobile.svg"
-import NFTSupport from "../../../assets/wallets/nft_support.svg"
-import NonCustodial from "../../../assets/wallets/non_custodial.svg"
-import OpenSource from "../../../assets/wallets/open_source.svg"
-import RPCImporting from "../../../assets/wallets/rpc_importing.svg"
-import Staking from "../../../assets/wallets/staking.svg"
-import WalletConnect from "../../../assets/wallets/walletconnect.svg"
-import ConnectDapps from "../../../assets/wallets/connect_dapps.svg"
-import WithdrawCrypto from "../../../assets/wallets/withdraw_crypto.svg"
-import Multisig from "../../../assets/wallets/multisig.svg"
-import SocialRecover from "../../../assets/wallets/social_recover.svg"
-import Swap from "../../../assets/wallets/swap.svg"
-import Eip1559 from "../../../assets/wallets/eip1559.svg"
+import {
+  BrowserIcon,
+  BuyCryptoIcon,
+  ConnectDappsIcon,
+  DesktopIcon,
+  EIP1559Icon,
+  ENSSupportIcon,
+  ERC20SupportIcon,
+  GasFeeCustomizationIcon,
+  HardwareIcon,
+  HardwareSupportIcon,
+  Layer2Icon,
+  MobileIcon,
+  MultisigIcon,
+  NFTSupportIcon,
+  NonCustodialIcon,
+  OpenSourceWalletIcon,
+  RPCImportingIcon,
+  SocialRecoverIcon,
+  StakingIcon,
+  SwapIcon,
+  WalletConnectIcon,
+  WithdrawCryptoIcon,
+} from "../../icons/wallets"
+
 import { WalletFilterSidebarProps } from "."
 
 // Utils
 import { translateMessageId } from "../../../utils/translations"
+
+type FilterOptionType = {
+  title: string
+  items: Array<{
+    title: string
+    icon: typeof Icon
+    description: string
+    filterKey: string | undefined
+    showOptions: boolean | undefined
+    options:
+      | Array<{
+          name: string
+          filterKey?: string
+          inputType: "checkbox"
+        }>
+      | []
+  }>
+}
 
 export const useWalletFilterSidebar = ({
   resetWalletFilter,
@@ -39,13 +60,13 @@ export const useWalletFilterSidebar = ({
   updateFilterOptions,
 }: Omit<WalletFilterSidebarProps, "updateFilterOption">) => {
   const intl = useIntl()
-  const [filterOptions, setFilterOptions] = useState([
+  const [filterOptions, setFilterOptions] = useState<FilterOptionType[]>([
     {
       title: translateMessageId("page-find-wallet-device", intl),
       items: [
         {
           title: translateMessageId(walletFilterData.mobile.title, intl),
-          icon: <Mobile />,
+          icon: MobileIcon,
           description: translateMessageId(
             walletFilterData.mobile.description,
             intl
@@ -67,7 +88,7 @@ export const useWalletFilterSidebar = ({
         },
         {
           title: translateMessageId(walletFilterData.desktop.title, intl),
-          icon: <Desktop />,
+          icon: DesktopIcon,
           description: translateMessageId(
             walletFilterData.desktop.description,
             intl
@@ -95,7 +116,7 @@ export const useWalletFilterSidebar = ({
         },
         {
           title: translateMessageId(walletFilterData.browser.title, intl),
-          icon: <Browser />,
+          icon: BrowserIcon,
           description: translateMessageId(
             walletFilterData.browser.description,
             intl
@@ -117,7 +138,7 @@ export const useWalletFilterSidebar = ({
         },
         {
           title: translateMessageId(walletFilterData.hardware.title, intl),
-          icon: <Hardware />,
+          icon: HardwareIcon,
           description: translateMessageId(
             walletFilterData.hardware.description,
             intl
@@ -133,7 +154,7 @@ export const useWalletFilterSidebar = ({
       items: [
         {
           title: translateMessageId(walletFilterData.open_source.title, intl),
-          icon: <OpenSource />,
+          icon: OpenSourceWalletIcon,
           description: translateMessageId(
             walletFilterData.open_source.description,
             intl
@@ -144,7 +165,7 @@ export const useWalletFilterSidebar = ({
         },
         {
           title: translateMessageId(walletFilterData.non_custodial.title, intl),
-          icon: <NonCustodial />,
+          icon: NonCustodialIcon,
           description: translateMessageId(
             walletFilterData.non_custodial.description,
             intl
@@ -163,7 +184,7 @@ export const useWalletFilterSidebar = ({
             walletFilterData.hardware_support.title,
             intl
           ),
-          icon: <HardwareSupport />,
+          icon: HardwareSupportIcon,
           description: translateMessageId(
             walletFilterData.hardware_support.description,
             intl
@@ -174,7 +195,7 @@ export const useWalletFilterSidebar = ({
         },
         {
           title: translateMessageId(walletFilterData.walletconnect.title, intl),
-          icon: <WalletConnect />,
+          icon: WalletConnectIcon,
           description: translateMessageId(
             walletFilterData.walletconnect.description,
             intl
@@ -185,7 +206,7 @@ export const useWalletFilterSidebar = ({
         },
         {
           title: translateMessageId(walletFilterData.rpc_importing.title, intl),
-          icon: <RPCImporting />,
+          icon: RPCImportingIcon,
           description: translateMessageId(
             walletFilterData.rpc_importing.description,
             intl
@@ -196,7 +217,7 @@ export const useWalletFilterSidebar = ({
         },
         {
           title: translateMessageId(walletFilterData.nft_support.title, intl),
-          icon: <NFTSupport />,
+          icon: NFTSupportIcon,
           description: translateMessageId(
             walletFilterData.nft_support.description,
             intl
@@ -210,7 +231,7 @@ export const useWalletFilterSidebar = ({
             walletFilterData.connect_to_dapps.title,
             intl
           ),
-          icon: <ConnectDapps />,
+          icon: ConnectDappsIcon,
           description: translateMessageId(
             walletFilterData.connect_to_dapps.description,
             intl
@@ -221,7 +242,7 @@ export const useWalletFilterSidebar = ({
         },
         {
           title: translateMessageId(walletFilterData.staking.title, intl),
-          icon: <Staking />,
+          icon: StakingIcon,
           description: translateMessageId(
             walletFilterData.staking.description,
             intl
@@ -232,7 +253,7 @@ export const useWalletFilterSidebar = ({
         },
         {
           title: translateMessageId(walletFilterData.swaps.title, intl),
-          icon: <Swap />,
+          icon: SwapIcon,
           description: translateMessageId(
             walletFilterData.swaps.description,
             intl
@@ -243,7 +264,7 @@ export const useWalletFilterSidebar = ({
         },
         {
           title: translateMessageId(walletFilterData.layer_2.title, intl),
-          icon: <Layer2 />,
+          icon: Layer2Icon,
           description: translateMessageId(
             walletFilterData.layer_2.description,
             intl
@@ -257,7 +278,7 @@ export const useWalletFilterSidebar = ({
             walletFilterData.gas_fee_customization.title,
             intl
           ),
-          icon: <GasFeeCustomization />,
+          icon: GasFeeCustomizationIcon,
           description: translateMessageId(
             walletFilterData.gas_fee_customization.description,
             intl
@@ -268,7 +289,7 @@ export const useWalletFilterSidebar = ({
         },
         {
           title: translateMessageId(walletFilterData.ens_support.title, intl),
-          icon: <ENSSupport />,
+          icon: ENSSupportIcon,
           description: translateMessageId(
             walletFilterData.ens_support.description,
             intl
@@ -282,7 +303,7 @@ export const useWalletFilterSidebar = ({
             walletFilterData.erc_20_support.title,
             intl
           ),
-          icon: <ERC20Support />,
+          icon: ERC20SupportIcon,
           description: translateMessageId(
             walletFilterData.erc_20_support.description,
             intl
@@ -296,7 +317,7 @@ export const useWalletFilterSidebar = ({
             walletFilterData.eip_1559_support.title,
             intl
           ),
-          icon: <Eip1559 />,
+          icon: EIP1559Icon,
           description: translateMessageId(
             walletFilterData.eip_1559_support.description,
             intl
@@ -315,7 +336,7 @@ export const useWalletFilterSidebar = ({
       items: [
         {
           title: translateMessageId(walletFilterData.buy_crypto.title, intl),
-          icon: <BuyCrypto />,
+          icon: BuyCryptoIcon,
           description: translateMessageId(
             walletFilterData.buy_crypto.description,
             intl
@@ -329,7 +350,7 @@ export const useWalletFilterSidebar = ({
             walletFilterData.withdraw_crypto.title,
             intl
           ),
-          icon: <WithdrawCrypto />,
+          icon: WithdrawCryptoIcon,
           description: translateMessageId(
             walletFilterData.withdraw_crypto.description,
             intl
@@ -345,7 +366,7 @@ export const useWalletFilterSidebar = ({
       items: [
         {
           title: translateMessageId(walletFilterData.multisig.title, intl),
-          icon: <Multisig />,
+          icon: MultisigIcon,
           description: translateMessageId(
             walletFilterData.multisig.description,
             intl
@@ -359,7 +380,7 @@ export const useWalletFilterSidebar = ({
             walletFilterData.social_recovery.title,
             intl
           ),
-          icon: <SocialRecover />,
+          icon: SocialRecoverIcon,
           description: translateMessageId(
             walletFilterData.social_recovery.description,
             intl
