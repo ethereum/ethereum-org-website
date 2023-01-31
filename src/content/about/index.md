@@ -15,24 +15,30 @@ It's common for people to confuse names within the Ethereum landscape, which can
 ### Ethereum {#ethereum}
 
 Ethereum is a public network, a blockchain, and an open-source protocol -- operated, governed, managed, and owned by a global community of tens of thousands of developers, node operators, ETH holders and users.
+
 [More about Ethereum](/what-is-ethereum/)
+
 [More on Ethereum governance](/governance/)
 
 ### Ether (or ETH) {#ether-or-eth}
 
 The native currency transacted on Ethereum, used to pay for usage of the Ethereum network (in the form of transaction fees). ETH is also used to secure the network with staking. When people talk about the price of Ethereum, they're referring to ETH the asset.
+
 [More about ETH](/eth/)
+
 [More on staking ETH](/staking/)
 
 ### Ethereum Foundation {#ethereum-foundation}
 
 A non-profit organization, funded initially by the crowdsale of ETH, dedicated to the support of the Ethereum network and ecosystem.
+
 [More about the Ethereum Foundation](/foundation/)
 
 ### ethereum.org {#ethereumorg}
 
 A public, open-source website and educational resource for the Ethereum community. ethereum.org is led by a small core team, funded by the Ethereum Foundation, with contributions from thousands of community members across the globe.
-Continue reading to learn more on ethereum.org.
+
+This page covers more information on ethereum.org.
 
 ## Our vision {#our-vision}
 
@@ -80,8 +86,13 @@ Make sure you read [our principles](/contributing/design-principles/) and [our s
 ## Roadmap {#roadmap}
 
 <Roadmap />
+
 ## Open jobs {#open-jobs}
+
 Although this website is open-source and anyone can work on it, we do have a team dedicated to ethereum.org and other Ethereum Foundation web projects.
-We'll post any job openings here. If you don't see a role here for you, head over to [Discord](https://discord.gg/CetY6Y4) and let us know how you'd like to work with us!
+
+We'll post any job openings here. If you don't see a role here for you, head over to [our Discord server](https://discord.gg/CetY6Y4) and let us know how you'd like to work with us!
+
 - [Community Lead](/about/community-lead/)
+
 Looking beyond the ethereum.org team? [Check out other Ethereum related jobs](/community/get-involved/#ethereum-jobs/).
