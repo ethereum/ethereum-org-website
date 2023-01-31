@@ -91,16 +91,6 @@ Ethereum is a big thing: it includes a community, a technology, a set of ideas a
 This means the website needs to handle many different user journeys, from “a developer who wants a specific tool” and “a newcomer who just bought some ETH and doesn’t know what a wallet is"
 "What is the best website for a blockchain platform?" remains an open question - we are pioneers. Building this requires experimentation.
 
-## Design principles {#design-principles}
-
-We use a set of [design principles](/contributing/design-principles/) to guide our content and design decisions on the site.
-
-## Style guide {#style-guide}
-
-We have a [style guide](/contributing/style-guide/) to standardize certain aspects of writing content to make the contribution process smoother.
-We welcome feedback on both the design principles and the style guide. Remember, ethereum.org is for the community, by the community.
-Make sure you read [our principles](/contributing/design-principles/) and [our style guide](/contributing/style-guide/) if you'd like to [contribute to the site](/contributing/).
-
 ## Product roadmap {#roadmap}
 
 To make our work more accessible and to foster more community collaboration, the ethereum.org core team publishes an overview of our quarterly roadmap goals.
@@ -114,6 +104,24 @@ We always appreciate feedback on our roadmap - if there's something you think we
 **Want to get involved?**
 
 [Learn more about contributing](/contributing/), [hit us up on Twitter](https://twitter.com/ethdotorg), or join the community discussions in [our Discord server](https://discord.gg/CetY6Y4).
+
+## Design principles {#design-principles}
+
+We use a set of [design principles](/contributing/design-principles/) to guide our content and design decisions on the site.
+
+## Design system {#design-system}
+
+We built and released a [design system](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) to ship features more quickly and let community members participate in the open design of ethereum.org.
+
+Want to get involved? [Follow along in Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), the [GitHub issue](https://github.com/ethereum/ethereum-org-website/issues/6284) and join the conversation in our [#design Discord channel](https://discord.gg/bKycYhVUwV).
+
+## Style guide {#style-guide}
+
+We have a [style guide](/contributing/style-guide/) to standardize certain aspects of writing content to make the contribution process smoother.
+
+Make sure you read [our principles](/contributing/design-principles/) and [our style guide](/contributing/style-guide/) if you'd like to [contribute to the site](/contributing/).
+
+We welcome feedback on our design principles, design system and the style guide. Remember, ethereum.org is for the community, by the community.
 
 ## Open jobs {#open-jobs}
 
