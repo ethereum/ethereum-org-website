@@ -8,6 +8,38 @@ lang: en
 
 ethereum.org is a public, open-source resource for the Ethereum community that anyone can contribute to. We have a small team dedicated to maintaining and developing the site which is funded by the [Ethereum Foundation](/foundation/).
 
+## A note on names
+
+It's common for people to confuse names within the Ethereum landscape, which can lead to poor mental models about how Ethereum works. Here's a quick explainer to clear things up:
+
+### Ethereum
+
+Ethereum is a public network, a blockchain, and an open-source protocol -- operated, governed, managed, and owned by a global community of tens of thousands of developers, node operators, ETH holders and users.
+
+[More about Ethereum](/what-is-ethereum/)
+
+[More on Ethereum governance](/governance/)
+
+### Ether (or ETH)
+
+The native currency transacted on Ethereum, used to pay for usage of the Ethereum network (in the form of transaction fees). ETH is also used to secure the network with staking. When people talk about the price of Ethereum, they're referring to ETH the asset.
+
+[More about ETH](/eth/)
+
+[More on staking ETH](/staking/)
+
+### Ethereum Foundation
+
+A non-profit organization, funded initially by the crowdsale of ETH, dedicated to the support of the Ethereum network and ecosystem.
+
+[More about the Ethereum Foundation](/foundation/)
+
+### ethereum.org
+
+A public, open-source website and educational resource for the Ethereum community. ethereum.org is led by a small core team, funded by the Ethereum Foundation, with contributions from thousands of community members across the globe.
+
+Continue reading to learn more on ethereum.org.
+
 ## Our vision {#our-vision}
 
 ### ethereum.org's mission is to be the best portal for Ethereum's growing community {#mission}
