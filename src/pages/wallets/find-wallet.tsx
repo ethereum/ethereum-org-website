@@ -21,7 +21,7 @@ import WalletTable from "../../components/FindWallet/WalletTable"
 import walletData from "../../data/wallets/wallet-data"
 
 // Icons
-import FilterBurger from "../../assets/wallets/filter_burger.svg"
+import { FilterBurgerIcon } from "../../components/icons/wallets"
 
 // Utils
 import { translateMessageId } from "../../utils/translations"
@@ -151,7 +151,7 @@ const StyledIcon = styled(Icon)`
   pointer-events: none;
 `
 
-const FilterBurgerStyled = styled(FilterBurger)`
+const FilterBurgerStyled = styled(FilterBurgerIcon)`
   pointer-events: none;
 `
 

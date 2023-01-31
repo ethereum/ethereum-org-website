@@ -9917,7 +9917,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/26359740?v=4",
       "profile": "https://www.linkedin.com/in/jithil",
       "contributions": [
-        "doc"
+        "doc",
+        "code"
       ]
     },
     {
@@ -9999,6 +10000,15 @@
       "profile": "https://github.com/therealharpaljadeja",
       "contributions": [
         "code"
+      ]
+    },
+    {
+      "login": "zlog-in",
+      "name": "Zion",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67903793?v=4",
+      "profile": "http://www.zlog.in",
+      "contributions": [
+        "content"
       ]
     }
   ],
