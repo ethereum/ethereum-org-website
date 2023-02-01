@@ -1,6 +1,13 @@
 // Libraries
 import React from "react"
-import styled from "@emotion/styled"
+import {
+  Box,
+  Flex,
+  Heading,
+  ListItem,
+  Text,
+  UnorderedList,
+} from "@chakra-ui/react"
 import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
 import type { Context } from "../../../types"
@@ -10,37 +17,10 @@ import Breadcrumbs from "../../../components/Breadcrumbs"
 import Link from "../../../components/Link"
 import Translation from "../../../components/Translation"
 import PageMetadata from "../../../components/PageMetadata"
-import {
-  Content,
-  ListItem,
-  Page,
-} from "../../../components/SharedStyledComponents"
 
 // Utils
 import { translateMessageId } from "../../../utils/translations"
 import FeedbackCard from "../../../components/FeedbackCard"
-
-// Styles
-const HorizontalUl = styled.ul`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    grid-template-columns: 1fr;
-  }
-`
 
 const Contributors = ({
   data,
@@ -83,7 +63,7 @@ const Contributors = ({
     ) ?? []
 
   return (
-    <Page>
+    <Flex direction="column" align="center" w="full" m="0 auto">
       <PageMetadata
         title={translateMessageId(
           "page-contributing-translation-program-contributors-meta-title",
@@ -95,58 +75,75 @@ const Contributors = ({
         )}
       />
 
-      <Content>
+      <Box py={4} px={8} w="full">
         <Breadcrumbs slug={location.pathname} />
-        <h1>
+        <Heading as="h1" fontSize={{ base: "2.5rem", md: "5xl" }}>
           <Translation id="page-contributing-translation-program-contributors-title" />
-        </h1>
-        <h4>
-          <strong>
+        </Heading>
+        <Heading as="h4" fontSize={{ base: "md", md: "xl" }}>
+          <Text as="strong">
             <Translation id="page-contributing-translation-program-contributors-number-of-contributors" />{" "}
             {translatorData.length}
-          </strong>
-        </h4>
-        <p>
+          </Text>
+        </Heading>
+        <Text>
           <Translation id="page-contributing-translation-program-contributors-our-translators-1" />
-        </p>
-        <p>
+        </Text>
+        <Text>
           <Translation id="page-contributing-translation-program-contributors-our-translators-2" />
-        </p>
-        <p>
+        </Text>
+        <Text>
           <Translation id="page-contributing-translation-program-contributors-our-translators-3" />
-        </p>
-        <p>
+        </Text>
+        <Text>
           <Translation id="page-languages-interested" />{" "}
           <Link to="/contributing/translation-program/">
             <Translation id="page-languages-learn-more" />
           </Link>
           .
-        </p>
-        <h2>
+        </Text>
+        <Heading
+          as="h2"
+          fontSize={{ base: "2xl", md: "2rem" }}
+          fontWeight="semibold"
+        >
           <Translation id="page-contributing-translation-program-contributors-thank-you" />
-        </h2>
-        <HorizontalUl>
+        </Heading>
+        <UnorderedList
+          display="grid"
+          gridTemplateColumns={{
+            base: "1fr",
+            sm: "repeat(2, 1fr)",
+            md: "repeat(3, 1fr)",
+            lg: "repeat(4, 1fr)",
+            xl: "repeat(6, 1fr)",
+          }}
+        >
           {translatorData
             .map(({ user }) => user.username)
             .sort((user1, user2) =>
               user1.toLowerCase().localeCompare(user2.toLowerCase())
             )
             .map((user) => {
-              return <ListItem key={user}>{user}</ListItem>
+              return (
+                <ListItem key={user} color="text300">
+                  {user}
+                </ListItem>
+              )
             })}
-        </HorizontalUl>
-        <p>
+        </UnorderedList>
+        <Text>
           <Translation id="page-languages-interested" />{" "}
           <Link to="/contributing/translation-program/">
             <Translation id="page-languages-learn-more" />
           </Link>
           .
-        </p>
-      </Content>
-      <Content>
+        </Text>
+      </Box>
+      <Box py={4} px={8} w="full">
         <FeedbackCard />
-      </Content>
-    </Page>
+      </Box>
+    </Flex>
   )
 }
 
