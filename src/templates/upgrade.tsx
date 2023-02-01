@@ -417,7 +417,14 @@ export const upgradePageQuery = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-upgrades", "page-upgrades-index", "common"] }
+        ns: {
+          in: [
+            "page-upgrades"
+            "page-upgrades-index"
+            "learn-quizzes"
+            "common"
+          ]
+        }
       }
     ) {
       edges {

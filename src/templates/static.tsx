@@ -239,7 +239,7 @@ export const staticPageQuery = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-about", "page-community", "common"] }
+        ns: { in: ["page-about", "page-community", "learn-quizzes", "common"] }
       }
     ) {
       edges {

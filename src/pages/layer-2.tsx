@@ -929,7 +929,7 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-layer-2", "common"] }
+        ns: { in: ["page-layer-2", "learn-quizzes", "common"] }
       }
     ) {
       edges {
