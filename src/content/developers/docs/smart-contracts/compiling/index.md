@@ -35,7 +35,9 @@ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x41 JUMPI PUSH1 0x
 
 ## Web applications {#web-applications}
 
-The compiler will also produce the **Application Binary Interface (ABI)** which you need in order for your application to understand the contract and call the contract's functions.
+When the smart contracts are deployed and executed it porduces two outputs the opcode and the compiler will also produce the **Application Binary Interface (ABI)** which you need in order for your application(front-end) to understand the contract and call the contract's functions.
+
+When smart contracts are deployed all the functions inside the contrac are in opcodes now and our application(front-end) needs a way to look for the contract and communicate with it using the function name. **ABI** acts as an interface for communication between our application and the smart contract in binaries.
 
 The ABI is a JSON file that describes the deployed contract and its smart contract functions. This helps bridge the gap between web2 and web3
 
