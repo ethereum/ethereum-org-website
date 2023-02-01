@@ -1,6 +1,6 @@
 ---
 title: Account abstraction
-description: An overview of Ethereum's plans t make user-accounts simpler and safer
+description: An overview of Ethereum's plans to make user-accounts simpler and safer
 lang: en
 template: staking
 emoji: ":money_with_wings:"
