@@ -72,9 +72,11 @@ const WithdrawalCredentials: FC<IProps> = () => {
       return (
         <Flex bg="successNeutral" p={4}>
           <Text m={0} color="success">
-            Validator index {validator.validatorIndex} is ready to start
-            receiving rewards! Withdrawal credentials linked to execution
-            address{" "}
+            <Text as="span" fontWeight="bold">
+              Validator index {validator.validatorIndex} is ready to start
+              receiving rewards!
+            </Text>{" "}
+            Withdrawal credentials linked to execution address{" "}
             <CopyToClipboard text={longAddress} inline>
               {(isCopied) => (
                 <>
@@ -100,8 +102,11 @@ const WithdrawalCredentials: FC<IProps> = () => {
     return (
       <Flex bg="errorNeutral" p={4}>
         <Text m={0} color="error">
-          This {validator.isTestnet ? "Goerli testnet" : ""} validator needs to
-          be upgraded. Instructions on how to upgrade can be found at{" "}
+          <Text as="span" fontWeight="bold">
+            This {validator.isTestnet ? "Goerli testnet" : ""} validator needs
+            to be upgraded.
+          </Text>{" "}
+          Instructions on how to upgrade can be found at{" "}
           <Link to="https://launchpad.ethereum.org/withdrawals">
             Staking Launchpad Withdrawals
           </Link>
