@@ -119,6 +119,14 @@ As you see this slows down as more validators are on the network. An increase in
 No, the process to provide withdrawal credentials is a one-time process, and cannot be changed once submitted.
 </ExpandableCard>
 
+<ExpandableCard title="Why can a withdrawal address only be set once?">
+By setting an execution layer withdrawal address the withdrawal credentials for that validator account (on the consensus layer) have permanently be changed. This means the old credentials will no longer work, and the new credentials direct to an execution layer account.
+
+Withdrawal addresses can be either a smart control (controlled by its code), or an externally owned account (EOA, controlled by its private key). Currently these accounts have no way to communicate a message back to the consensus layer that would signal a change of validator credentials, and adding this functionality would add unnecessary complexity to the protocol.
+
+As an alternative to changing the withdrawal address for a particular validator, users may choose to set a smart contract as their withdrawal address which could handle key rotating, such as a Safe. Users who set their funds to their own EOA can perform a full exit to withdrawal all of their staked funds, and then re-stake using new credentials.
+</ExpandableCard>
+
 <ExpandableCard title="What if I participate in liquid staking derivatives or pooled staking">
 <p>If you are part of a <a href="/staking/pools/">staking pool</a> or hold liquid staking derivatives, you should check with your provider for more details about how staking withdrawals will affect your arrangement, as each service operates differently.</p>
 <p>In general, users will likely have nothing they need to do, and these services will no longer be limited by the inability to withdrawal rewards or exit validator funds after this upgrade.</p>
