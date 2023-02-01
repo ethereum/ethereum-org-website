@@ -343,11 +343,6 @@ export const query = graphql`
         )
       }
     }
-    merge: file(relativePath: { eq: "upgrades/merge.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
     beaconchain: file(relativePath: { eq: "upgrades/core.png" }) {
       childImageSharp {
         gatsbyImageData(
