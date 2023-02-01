@@ -118,6 +118,7 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "markdown-checker": "node src/scripts/markdown-checker.js",
     "generate-heading-ids": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/generateHeadingIds.ts",
+    "optimize-images": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/optimizeImages.ts",
     "start": "gatsby develop",
     "start:lambda": "netlify-lambda serve src/lambda",
     "start:static": "gatsby build && gatsby serve",
