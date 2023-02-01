@@ -1,13 +1,21 @@
-import React, {
-  ComponentProps,
-  ComponentPropsWithoutRef,
-  ReactNode,
-  useState,
-} from "react"
+import React, { ReactNode, useState } from "react"
 import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import styled from "@emotion/styled"
+import {
+  Box,
+  Flex,
+  FlexProps,
+  Heading,
+  HeadingProps,
+  Icon,
+  Img,
+  SimpleGridProps,
+  Stack,
+  Text,
+  useToken,
+} from "@chakra-ui/react"
+import { FaGithub } from "react-icons/fa"
 
 import type { Context } from "../types"
 
@@ -21,7 +29,6 @@ import PageMetadata from "../components/PageMetadata"
 import StatsBoxGrid from "../components/StatsBoxGrid"
 import Translation from "../components/Translation"
 import TitleCardList, { ITitleCardItem } from "../components/TitleCardList"
-import { Content, LeftColumn } from "../components/SharedStyledComponents"
 import { translateMessageId, isLangRightToLeft } from "../utils/translations"
 import { getImage } from "../utils/image"
 
@@ -30,21 +37,6 @@ import SimpleTokenContent from "!!raw-loader!../data/SimpleToken.sol"
 import CreateWalletContent from "!!raw-loader!../data/CreateWallet.js"
 import SimpleDomainRegistryContent from "!!raw-loader!../data/SimpleDomainRegistry.sol"
 import { useConsoleEasterEgg } from "../hooks/useConsoleEasterEgg"
-import {
-  Box,
-  Flex,
-  FlexProps,
-  Heading,
-  HeadingProps,
-  Icon,
-  Img,
-  SimpleGrid,
-  SimpleGridProps,
-  Stack,
-  Text,
-  useToken,
-} from "@chakra-ui/react"
-import { FaGithub } from "react-icons/fa"
 
 type ChildOnlyProp = { children: ReactNode }
 
