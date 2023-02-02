@@ -200,5 +200,9 @@
   "page-upgrades-whats-ethereum": "Wait, what's Ethereum?",
   "page-upgrades-whats-new": "What's next for Ethereum?",
   "page-upgrades-security-link": "More on security and scam prevention",
-  "page-staking-deposit-contract-staking-more-link": "More on staking"
+  "page-staking-deposit-contract-staking-more-link": "More on staking",
+  "docs-nav-proof-of-stake": "Proof-of-stake",
+  "docs-nav-proof-of-work": "Proof-of-work",
+  "page-upgrades-get-involved-ethresearch-1": "Sharding",
+  "page-upgrades-get-involved-ethresearch-2": "The Merge"
 }

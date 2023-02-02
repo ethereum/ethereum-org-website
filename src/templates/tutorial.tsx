@@ -222,7 +222,10 @@ export default TutorialPage
 export const query = graphql`
   query TutorialPage($languagesToFetch: [String!]!, $relativePath: String) {
     locales: allLocale(
-      filter: { language: { in: $languagesToFetch }, ns: { in: ["common"] } }
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-developers-tutorials", "common"] }
+      }
     ) {
       edges {
         node {

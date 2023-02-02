@@ -156,5 +156,6 @@
   "decentralized-identity": "Decentralized identity",
   "yes": "Yes",
   "zero-knowledge-proofs": "Zero-knowledge proofs",
-  "page-index-meta-title": "Home"
+  "page-index-meta-title": "Home",
+  "page-developers-aria-label": "Developers' Menu"
 }
