@@ -167,7 +167,7 @@ Thus, even without sharing a breakdown of votes per user (as is usually the case
 
 - Alice agrees to vote for `option B` in exchange for a bribe from Bob
 - Alice secretly sends an encrypted transaction to change the public key associated with her identity. 
-- Alice votes for `option B` using the now-replaced public key and shows the trasnaction hash to Bob. 
+- Alice votes for `option B` using the now-replaced public key and shows the transaction hash to Bob. 
 - Alice sends another (encrypted) message to the smart contract voting for `option A` using the new public key. 
 - Alice shows Bob a transaction which shows she voted for `option B` (which is invalid since the public key is no longer associated with Alice's identity in the system)
 - While processing messages, the coordinator skips Alice's vote for `option B` and counts only the vote for `option A`. Hence, Bob's attempt to collude with Alice and manipulate the on-chain vote fails. 
