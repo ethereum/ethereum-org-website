@@ -7,6 +7,7 @@ import React, {
 } from "react"
 import { shuffle } from "lodash"
 import {
+  Badge,
   Box,
   BoxProps,
   Center,
@@ -26,27 +27,29 @@ import stakingProducts from "../../data/staking-products.json"
 import ButtonLink from "../ButtonLink"
 import Translation from "../Translation"
 // SVG imports
-import GreenCheck from "../../assets/staking/green-check-product-glyph.svg"
-import Caution from "../../assets/staking/caution-product-glyph.svg"
-import Warning from "../../assets/staking/warning-product-glyph.svg"
-import Unknown from "../../assets/staking/unknown-product-glyph.svg"
-// Product SVGs
-import Abyss from "../../assets/staking/abyss-glyph.svg"
-import Allnodes from "../../assets/staking/allnodes-glyph.svg"
-import Ankr from "../../assets/staking/ankr-glyph.svg"
-import Avado from "../../assets/staking/avado-glyph.svg"
-import Bloxstaking from "../../assets/staking/bloxstaking-glyph.svg"
-import Dappnode from "../../assets/staking/dappnode-glyph.svg"
-import DefaultOpenSource from "../../assets/staking/default-open-source-glyph.svg"
-import Docker from "../../assets/staking/docker-icon.svg"
-import Kiln from "../../assets/staking/kiln-glyph.svg"
-import Lido from "../../assets/staking/lido-glyph.svg"
-import RocketPool from "../../assets/staking/rocket-pool-glyph.svg"
-import Stafi from "../../assets/staking/stafi-glyph.svg"
-import Stakefish from "../../assets/staking/stakefish-glyph.svg"
-import Stakewise from "../../assets/staking/stakewise-glyph.svg"
-import Stereum from "../../assets/staking/stereum-glyph.svg"
-import Wagyu from "../../assets/staking/wagyu-glyph.svg"
+import {
+  AbyssGlyphIcon,
+  AllnodesGlyphIcon,
+  AnkrGlyphIcon,
+  AvadoGlyphIcon,
+  BloxstakingGlyphIcon,
+  CautionProductGlyphIcon,
+  DefaultOpenSourceGlyphIcon,
+  DockerIcon,
+  GreenCheckProductGlyphIcon,
+  KilnGlyphIcon,
+  LidoGlyphIcon,
+  RocketPoolGlyphIcon,
+  StafiGlyphIcon,
+  StakefishGlyphIcon,
+  StakewiseGlyphIcon,
+  StakingDappnodeGlyphIcon,
+  StereumGlyphIcon,
+  UnknownProductGlyphIcon,
+  WagyuGlyphIcon,
+  WarningProductGlyphIcon,
+} from "../icons/staking"
+
 import { EventOptions } from "../../utils/matomo"
 // When adding a product svg, be sure to add to mapping below as well.
 
@@ -67,22 +70,22 @@ const getSvgFromPath = (
   svgPath: string
 ): ComponentType<SVGProps<SVGElement>> => {
   const mapping = {
-    "abyss-glyph.svg": Abyss,
-    "allnodes-glyph.svg": Allnodes,
-    "ankr-glyph.svg": Ankr,
-    "avado-glyph.svg": Avado,
-    "bloxstaking-glyph.svg": Bloxstaking,
-    "dappnode-glyph.svg": Dappnode,
-    "docker-icon.svg": Docker,
-    "default-open-source-glyph.svg": DefaultOpenSource,
-    "kiln-glyph.svg": Kiln,
-    "lido-glyph.svg": Lido,
-    "rocket-pool-glyph.svg": RocketPool,
-    "stafi-glyph.svg": Stafi,
-    "stakewise-glyph.svg": Stakewise,
-    "stereum-glyph.svg": Stereum,
-    "wagyu-glyph.svg": Wagyu,
-    "stakefish-glyph.svg": Stakefish,
+    "abyss-glyph.svg": AbyssGlyphIcon,
+    "allnodes-glyph.svg": AllnodesGlyphIcon,
+    "ankr-glyph.svg": AnkrGlyphIcon,
+    "avado-glyph.svg": AvadoGlyphIcon,
+    "bloxstaking-glyph.svg": BloxstakingGlyphIcon,
+    "dappnode-glyph.svg": StakingDappnodeGlyphIcon,
+    "docker-icon.svg": DockerIcon,
+    "default-open-source-glyph.svg": DefaultOpenSourceGlyphIcon,
+    "kiln-glyph.svg": KilnGlyphIcon,
+    "lido-glyph.svg": LidoGlyphIcon,
+    "rocket-pool-glyph.svg": RocketPoolGlyphIcon,
+    "stafi-glyph.svg": StafiGlyphIcon,
+    "stakewise-glyph.svg": StakewiseGlyphIcon,
+    "stereum-glyph.svg": StereumGlyphIcon,
+    "wagyu-glyph.svg": WagyuGlyphIcon,
+    "stakefish-glyph.svg": StakefishGlyphIcon,
   }
   return mapping[svgPath]
 }
@@ -93,46 +96,32 @@ const Status: React.FC<{ status: FlagType }> = ({ status }) => {
   const styles = { fontSize: "2xl", m: 0 }
   switch (status) {
     case "green-check":
-      return <ListIcon as={GreenCheck} {...styles} />
+      return <ListIcon as={GreenCheckProductGlyphIcon} {...styles} />
     case "caution":
-      return <ListIcon as={Caution} {...styles} />
+      return <ListIcon as={CautionProductGlyphIcon} {...styles} />
     case "warning":
     case "false":
-      return <ListIcon as={Warning} {...styles} />
+      return <ListIcon as={WarningProductGlyphIcon} {...styles} />
     default:
-      return <ListIcon as={Unknown} {...styles} />
+      return <ListIcon as={UnknownProductGlyphIcon} {...styles} />
   }
 }
 
-const StakingPill: React.FC<{ type: string; children: ReactNode }> = ({
-  type,
-  children,
-}) => {
-  const backgroundColor = () => {
-    if (!type) return "transparent"
-    switch (type.toLowerCase()) {
-      case "ui":
-        return "stakingPillUI"
-      case "platform":
-        return "stakingPillPlatform"
-      default:
-        return "tagGray"
-    }
-  }
+const StakingBadge: React.FC<{
+  type: "ui" | "platform"
+  children: React.ReactNode
+}> = ({ type, children }) => {
+  const uiTypeColor = type === "ui" && "stakingPillUI"
+  const platformTypeColor = type === "platform" && "stakingPillPlatform"
+
   return (
-    <Box
-      background={backgroundColor()}
-      border="1px"
-      borderColor="lightBorder"
-      borderRadius="base"
-      color={type ? "rgba(0,0,0,0.6)" : "text200"}
-      fontSize="xs"
-      px={3}
-      py={1}
-      textAlign="center"
+    <Badge
+      size="lg"
+      background={uiTypeColor || platformTypeColor || undefined}
+      textTransform="initial"
     >
       {children}
-    </Box>
+    </Badge>
   )
 }
 
@@ -281,15 +270,15 @@ const StakingProductCard: React.FC<ICardProps> = ({
       >
         {platforms &&
           platforms.map((platform, idx) => (
-            <StakingPill type="platform" key={idx}>
+            <StakingBadge type="platform" key={idx}>
               {platform}
-            </StakingPill>
+            </StakingBadge>
           ))}
         {ui &&
           ui.map((_ui, idx) => (
-            <StakingPill type="ui" key={idx}>
+            <StakingBadge type="ui" key={idx}>
               {_ui}
-            </StakingPill>
+            </StakingBadge>
           ))}
       </Flex>
       <Box {...PADDED_DIV_STYLE} py={0}>

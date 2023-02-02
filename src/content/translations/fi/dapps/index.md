@@ -26,7 +26,7 @@ Oletko kiinnostunut lukemaan lisää muista Ethereumilla tehdyistä sovelluksist
 - [90+ Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) _24.4.2019 - ConsenSys_
 - [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) _päivitetään usein - State of the Dapps_
 - [Ethereum DeFi Ecosystem](https://defiprime.com/ethereum) _päivitetään usein - Defiprime_
-- [DeFi Pulse](https://defipulse.com/) _Analytics + rankings of DeFi protocols - Defi Pulse_
+- [DeFi Llama](https://defillama.com/) _Analytics + rankings of DeFi protocols - Defi Llama_
 
 Jotkut Ethereumin sovellukset vaativat lompakkoa - [opi lisää Ethereumin lompakoista täältä](/fi/wallets/).
 

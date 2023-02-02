@@ -20,7 +20,7 @@ La Fusion est la réunion de la couche d'exécution originale d'Ethereum (le ré
 
 <MergeInfographic />
 
-Initialement, la [Chaîne phare](/upgrades/beacon-chain/) était envoyée séparément du [réseau principal](/glossary/#mainnet). Le réseau principal Ethereum - avec tous ses comptes, ses soldes, ses contrats intelligents et l'état de la blockchain - continue d'être sécurisé par [la preuve de travail](/developers/docs/consensus-mechanisms/pow/), même si la Chaîne phare fonctionne en parallèle en utilisant [la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/). La Fusion a été le moment où ces deux systèmes se sont finalement combinés, et la preuve de travail a été remplacée de façon permanente par la preuve d'enjeu.
+Initialement, la [Chaîne phare](/upgrades/beacon-chain/) était envoyée séparément du [réseau principal](/glossary/#mainnet). Le réseau principal Ethereum - avec tous ses comptes, ses soldes, ses contrats intelligents et l'état de la blockchain - continuait d'être sécurisé par [la preuve de travail](/developers/docs/consensus-mechanisms/pow/), même si la Chaîne Phare fonctionnait en parallèle en utilisant [la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/). La Fusion a été le moment où ces deux systèmes se sont finalement combinés, et la preuve de travail a été remplacée de façon permanente par la preuve d'enjeu.
 
 Imaginez qu'Ethereum est un vaisseau spatial qui a été lancé avant qu'il ne soit prêt pour un voyage interstellaire. Avec la Chaîne phare, la communauté a construit un nouveau moteur et un fuselage renforcé. Après de nombreux tests, il a été temps de remplacer à chaud le nouveau moteur par l'ancien en plein vol. Cela a permis de fusionner le nouveau moteur, plus efficace, avec le vaisseau existant, prêt à franchir plusieurs années-lumière et à conquérir l'univers.
 
@@ -220,3 +220,5 @@ Les plans liés à la fragmentation évoluent rapidement, mais compte tenu du d�
 ## Complément d'information {#further-reading}
 
 <MergeArticleList />
+
+<QuizWidget quizKey="merge" />

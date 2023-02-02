@@ -332,7 +332,6 @@ DeFi — это движение с открытым исходным кодом
 
 ### Данные о DeFi {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 
