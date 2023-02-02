@@ -143,17 +143,19 @@ This is where verifiable computation comes into play. When a node executes a tra
 
 [Zero-knowledge rollups](/developers/docs/scaling/zk-rollups) and [validiums](/developers/docs/scaling/validium/) are two off-chain scaling solutions that use validity proofs to provide secure scalability. These protocols execute thousands of transactions off-chain and submit proofs for verification on Ethereum. Those results can be applied immediately once the proof is verified, allowing Ethereum to process more transactions without increasing computation on the base layer.
 
-### Secure online voting {#secure-online-voting} 
+### Reducing bribery and collusion in on-chain voting {#secure-blockchain-voting} 
 
-Blockchain-based voting schemes promise to remedy some of the problems associated with traditional online voting. For example, unlike regular databases, information stored on-chain is fully public and auditable and mostly resistant to tampering. Blockchains are also decentralized and resistant to censorship, which ensures no one is prevented from voting for any reason. 
+Unlike traditional voting, blockchain voting schemes are ideal for many reasons: they are fully auditable, secure against attacks, resistant to censorship, and free of geographical constraints. But even on-chain voting schemes aren't immune to the problem of **collusion** plaguing traditional voting. 
 
-However, on-chain voting systems are still susceptible to one of the biggest problems affecting traditional voting: collusion. [Collusion](https://en.m.wikipedia.org/wiki/Collusion) is the act of coordinating to "limit open competition by deceiving, defrauding, misleading others." When participants in an on-chain vote [collude to swing results](https://vitalik.ca/general/2019/04/03/collusion.html), it ceases to be an effective mechanism for measuring public preferences for some specified outcomes.
+Defined as “coordinating to limit open competition by deceiving, defrauding, and misleading others,” collusion may take the form of a malicious actor influencing voting by offering bribes. For example, Alice might receive a bribe from Bob to vote for `option B` on a ballot even if she prefers `option A`. 
 
-For example, imagine there are two options up for voting on a ballot (`option A` and `option B`). Alice prefers `option A`, but votes for `option B` after receiving a bribe from Bob. Here, Alice and Bob have colluded to mislead others about the popularity of `option B` to the detriment of `option A`. 
+Bribery and collusion limit the effectiveness of any process that uses voting as a signaling mechanism (especially where users can prove how they voted). This can have significant consequences, especially where the votes are responsible for allocating scarce resources. 
 
-Bribery and collusion limit the effectiveness of certain use-cases enabled by blockchain voting, especially [quadratic funding](https://www.radicalxchange.org/concepts/plural-funding/). Fortunately, newer solutions, such as MACI (Minimum Anti-Collusion Infrastructure), are using zero-knowledge proofs to mitigate this problem and increase the integrity of on-chain voting. 
+For example, [quadratic funding mechanisms](https://www.radicalxchange.org/concepts/plural-funding/) rely on donations to measure preference for certain options among different public good projects vying for funding. Each donation counts as a "vote" for a specific project, with projects that receive more votes getting more funds from the matching pool. 
 
-At its core, MACI is a system of smart contracts and scripts that allow a central administrator (called a "coordinator") to aggregate votes and tally results *without* revealing specifics on how each individual voted. Even so, it is still possible to verify that the votes were counted properly, or confirm that a particular individual participated in the voting round. 
+Using on-chain voting makes quadratic funding susceptible to collusion: blockchain transactions are public, so bribers can inspect a bribee’s on-chain activity to see how they “voted”. This way quadratic funding ceases to be an effective means for allocating funds based on the aggregated preferences of the community. 
+
+Fortunately, newer solutions such as MACI (Minimum Anti-Collusion Infrastructure) are using zero-knowledge proofs to make on-chain voting (eg., quadratic funding mechanisms) resistant to bribery and collusion. MACI is a set of smart contracts and scripts that allow a central administrator (called a "coordinator") to aggregate votes and tally results *without* revealing specifics on how each individual voted. Even so, it is still possible to verify that the votes were counted properly, or confirm that a particular individual participated in the voting round. 
 
 #### How does MACI work with zero-knowledge proofs? {#how-maci-works-with-zk-proofs}
 
@@ -164,13 +166,13 @@ In MACI, zero-knowledge proofs are used to ensure correctness of computation by 
 Thus, even without sharing a breakdown of votes per user (as is usually the case), MACI guarantees the integrity of results calculated during the tallying process. This feature is useful in reducing the effectiveness of basic collusion schemes. We can explore this possibility by using the previous example of Bob bribing Alice to vote for an option: 
 
 - Alice agrees to vote for `option B` in exchange for a bribe from Bob
-- Alice secretly sends a transaction to change the public key associated with her identity. 
-- Alice votes for `option B` using the now-replaced public key and shows the tx hash to Bob. 
-- Alice sends another message to the smart contract voting for `option A` using the new public key. 
+- Alice secretly sends an encrypted transaction to change the public key associated with her identity. 
+- Alice votes for `option B` using the now-replaced public key and shows the trasnaction hash to Bob. 
+- Alice sends another (encrypted) message to the smart contract voting for `option A` using the new public key. 
 - Alice shows Bob a transaction which shows she voted for `option B` (which is invalid since the public key is no longer associated with Alice's identity in the system)
 - While processing messages, the coordinator skips Alice's vote for `option B` and counts only the vote for `option A`. Hence, Bob's attempt to collude with Alice and manipulate the on-chain vote fails. 
 
-Using MACI requires trusting the coordinator not to collude with bribers or attempt to bribe voters themself. The coordinator can decrypt user messages (necessary for creating the proof), so they can accurately verify how each person voted. 
+Using MACI requires *does* trusting the coordinator not to collude with bribers or attempt to bribe voters themself. The coordinator can decrypt user messages (necessary for creating the proof), so they can accurately verify how each person voted. 
 
 But in cases where the coordinator remains honest, MACI represents a powerful tool for guaranteeing the sanctity of on-chain voting. This explains its popularity among quadratic funding applications (e.g., [clr.fund](https://clr.fund/#/about/maci)) that rely heavily on the integrity of each individual's voting choices.
 
