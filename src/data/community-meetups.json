@@ -346,5 +346,11 @@
     "emoji": ":cr:",
     "location": "Costa Rica",
     "link": "https://twitter.com/EthereumCR"
+  },
+  {
+    "title": "ETHMiami",
+    "emoji": ":us:",
+    "location": "Miami",
+    "link": "https://ethmiami.net/"
   }
 ]
