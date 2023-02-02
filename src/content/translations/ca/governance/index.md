@@ -152,7 +152,7 @@ El procés de governança d'Ethereum sovint sacrifica velocitat i eficiència pe
 
 Mentre que el desenvolupament de les especificacions i les implementacions ha estat sempre en programari lliure, no s'utlitzaven els antics processos utilitzats per a proposar les actualitzacions descrites anteriorment. Això va permetre que els investigadors i els implementadors poguessin especificar i posar-se d'acord amb els canvis més ràpidament.
 
-Quan la cadena de balisa es fusioni amb la capa d'execució d'Ethereum, el procés de governança per proposar canvis estarà harmonitzat. Aquest procés d'implementar la fusió ja es troba [en marxa](https://github.com/ethereum/EIPs/pull/3675).
+Quan la cadena de balisa es fusioni amb la capa d'execució d'Ethereum, el procés de governança per proposar canvis estarà harmonitzat. Aquest procés d'implementar la fusió ja es troba [en marxa](https://eips.ethereum.org/EIPS/eip-3675).
 
 <ButtonLink to="/upgrades/merge/">
   Més informació sobre La Fusió

@@ -450,7 +450,7 @@ Folosește funcția `UniswapV2ERC20._mint` pentru a crea efectiv tokenurile de l
     }
 ```
 
-În caz că nu există nicio taxă, setează `kLast` la zero (dacă nu este deja setat astfel). Când a fost scris acest contract, exista o [funcție de rambursare a gazului](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3298.md) care încuraja contractele să reducă dimensiunea totală a stării Ethereum, prin reducerea la zero a stocării de care nu aveau nevoie. Acest cod obține această rambursare atunci când este posibil.
+În caz că nu există nicio taxă, setează `kLast` la zero (dacă nu este deja setat astfel). Când a fost scris acest contract, exista o [funcție de rambursare a gazului](https://eips.ethereum.org/EIPS/eip-3298) care încuraja contractele să reducă dimensiunea totală a stării Ethereum, prin reducerea la zero a stocării de care nu aveau nevoie. Acest cod obține această rambursare atunci când este posibil.
 
 #### Funcții accesibile din exterior {#pair-external}
 
