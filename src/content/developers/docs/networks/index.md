@@ -59,13 +59,11 @@ The Sepolia network uses a permissioned validator set. It's fairly new, meaning 
 - [Sepolia faucet](https://faucet.sepolia.dev/)
 - [FaucETH](https://fauceth.komputing.org)
 
-
 #### Goerli _(long-term support)_ {#goerli}
 
 _Note: [the Goerli testnet is deprecated](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) and will be replaced by [Holesovice](https://github.com/eth-clients/holesovice) in 2023. Please consider migrating your applications to Sepolia._
 
-[Goerli](#goerli) is testnet for testing of validating and staking  .
-The Goerli network is open for users wanting to run a testnet validator. Stakers wanting to test protocol upgrades before they are deployed to mainnet should therefore use Goerli.
+[Goerli](#goerli) is testnet for testing of validating and staking. The Goerli network is open for users wanting to run a testnet validator. Stakers wanting to test protocol upgrades before they are deployed to mainnet should therefore use Goerli.
 
 - Open validator set, stakers can test network upgrades
 - Large state, useful for testing complex smart contract interactions
