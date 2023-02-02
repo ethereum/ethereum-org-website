@@ -1,163 +1,155 @@
+import { TranslationKey } from "../../utils/translations"
+
 interface WalletFilter {
-  title: string
+  title: TranslationKey
   filterKey: string | undefined
-  description: string
+  description: TranslationKey | ""
 }
 
 const walletFilterData: { [key: string]: WalletFilter } = {
   mobile: {
-    title: "Mobile",
-    description: "Wallets with mobile apps",
+    title: "page-find-wallet-mobile",
+    description: "page-find-wallet-mobile-desc",
     filterKey: undefined,
   },
   android: {
-    title: "Android",
+    title: "page-find-wallet-android",
     description: "",
     filterKey: "android",
   },
   ios: {
-    title: "iOS",
+    title: "page-find-wallet-iOS",
     description: "",
     filterKey: "ios",
   },
   desktop: {
-    title: "Desktop",
-    description: "Wallets with desktop apps",
+    title: "page-find-wallet-desktop",
+    description: "page-find-wallet-desktop-desc",
     filterKey: undefined,
   },
   linux: {
-    title: "Linux",
+    title: "page-find-wallet-linux",
     description: "",
     filterKey: "linux",
   },
   windows: {
-    title: "Windows",
+    title: "page-find-wallet-windows",
     description: "",
     filterKey: "windows",
   },
   macos: {
-    title: "macOS",
+    title: "page-find-wallet-macOS",
     description: "",
     filterKey: "macOS",
   },
   browser: {
-    title: "Browser",
-    description: "Wallets with browser extensions",
+    title: "page-find-wallet-browser",
+    description: "page-find-wallet-browser-desc",
     filterKey: undefined,
   },
   firefox: {
-    title: "Firefox",
+    title: "page-find-wallet-firefox",
     description: "",
     filterKey: "firefox",
   },
   chromium: {
-    title: "Chromium",
+    title: "page-find-wallet-chromium",
     description: "",
     filterKey: "chromium",
   },
   hardware: {
-    title: "Hardware",
-    description: "Hardware wallets",
+    title: "page-find-wallet-hardware",
+    description: "page-find-wallet-hardware-desc",
     filterKey: "hardware",
   },
   open_source: {
-    title: "Open-source",
-    description:
-      "Open-source software lets anyone audit the integrity and security of the application",
+    title: "page-find-wallet-open-source",
+    description: "page-find-wallet-open-source-desc",
     filterKey: "open_source",
   },
   non_custodial: {
-    title: "Non-custodial",
-    description: "Wallets that do not control your private keys",
+    title: "page-find-wallet-non-custodial",
+    description: "page-find-wallet-non-custodial-desc",
     filterKey: "non_custodial",
   },
   hardware_support: {
-    title: "Hardware support",
-    description:
-      "Wallets that can connect to hardware wallet for better security",
+    title: "page-find-wallet-hardware-wallet-support",
+    description: "page-find-wallet-hardware-wallet-support-desc",
     filterKey: "hardware_support",
   },
   walletconnect: {
-    title: "WalletConnect",
-    description: "Wallets that support WalletConnect for connecting to dapps",
+    title: "page-find-wallet-walletconnect",
+    description: "page-find-wallet-walletconnect-desc",
     filterKey: "walletconnect",
   },
   rpc_importing: {
-    title: "RPC importing",
-    description:
-      "Wallets supporting custom RPC endpoints to connect to different nodes or networks",
+    title: "page-find-wallet-rpc-importing",
+    description: "page-find-wallet-rpc-importing-desc",
     filterKey: "rpc_importing",
   },
   nft_support: {
-    title: "NFT support",
-    description: "Wallets that support viewing and interacting with your NFTs",
+    title: "page-find-wallet-nft-support",
+    description: "page-find-wallet-nft-support-desc",
     filterKey: "nft_support",
   },
   connect_to_dapps: {
-    title: "Connect to decentralized apps",
-    description:
-      "Wallets that connect to applications built on the Ethereum network",
+    title: "page-find-wallet-connect-to-dapps",
+    description: "page-find-wallet-connect-to-dapps-desc",
     filterKey: "connect_to_dapps",
   },
   staking: {
-    title: "Staking",
-    description: "Stake ETH directly from the wallet",
+    title: "page-find-wallet-staking",
+    description: "page-find-wallet-staking-desc",
     filterKey: "staking",
   },
   swaps: {
-    title: "Swaps",
-    description: "Swap ERC-20 tokens directly in the wallet",
+    title: "page-find-wallet-swaps",
+    description: "page-find-wallet-swaps-desc",
     filterKey: "swaps",
   },
   layer_2: {
-    title: "Layer 2",
-    description: "Wallets supporting Ethereum layer 2s",
+    title: "page-find-wallet-layer-2",
+    description: "page-find-wallet-layer-2-desc",
     filterKey: "layer_2",
   },
   gas_fee_customization: {
-    title: "Gas fee customization",
-    description:
-      "Customize your gas amounts (base fee, priority fee, and max fee)",
+    title: "page-find-wallet-gas-fee-customization",
+    description: "page-find-wallet-gas-fee-customization-desc",
     filterKey: "gas_fee_customization",
   },
   ens_support: {
-    title: "ENS support",
-    description: "Send transactions to ENS addresses",
+    title: "page-find-wallet-ens-support",
+    description: "page-find-wallet-ens-support-desc",
     filterKey: "ens_support",
   },
   erc_20_support: {
-    title: "Token importing",
-    description: "Import any ERC-20 token to use in the wallet",
+    title: "page-find-wallet-token-importing",
+    description: "page-find-wallet-token-importing-desc",
     filterKey: "erc_20_support",
   },
   eip_1559_support: {
-    title: "Fee optimization",
-    description:
-      "Support type 2 transactions for optimized gas fees, and fee refunds for unused gas",
+    title: "page-find-wallet-fee-optimization",
+    description: "page-find-wallet-fee-optimization-desc",
     filterKey: "eip_1559_support",
   },
   buy_crypto: {
-    title: "Buy crypto",
-    description:
-      "Buy crypto with fiat directly in the wallet \n *Note: buying crypto may be region specific",
+    title: "page-find-wallet-buy-crypto",
+    description: "page-find-wallet-buy-crypto-desc",
     filterKey: "buy_crypto",
   },
   withdraw_crypto: {
-    title: "Sell for fiat",
-    description:
-      "Sell crypto to fiat directly in the wallet \n *Note: withdrawing crypto may be region specific",
+    title: "page-find-wallet-sell-for-fiat",
+    description: "page-find-wallet-sell-for-fiat-desc",
     filterKey: "withdraw_crypto",
   },
   multisig: {
-    title: "Multisig",
-    description:
-      "Wallets that require multiple signatures to authorize a transaction",
+    title: "page-find-wallet-multisig",
+    description: "page-find-wallet-multisig-desc",
     filterKey: "multisig",
   },
   social_recovery: {
-    title: "Social recovery",
-    description:
-      "Wallets that allow guardians to change the signing key for smart contract wallets",
+    title: "page-find-wallet-social-recovery",
+    description: "page-find-wallet-social-recovery-desc",
     filterKey: "social_recovery",
   },
 }

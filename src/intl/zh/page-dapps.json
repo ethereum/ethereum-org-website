@@ -6,6 +6,7 @@
   "page-dapps-audius-logo-alt": "Audius徽标",
   "page-dapps-augur-logo-alt": "Augur徽标",
   "page-dapps-axie-infinity-logo-alt": "Axie Infinity徽标",
+  "page-dapps-balancer-logo-alt": "Balancer 徽标",
   "page-dapps-brave-logo-alt": "Brave徽标",
   "page-dapps-category-arts": "艺术与时尚",
   "page-dapps-category-browsers": "浏览器",
@@ -47,6 +48,7 @@
   "page-dapps-dapp-description-audius": "去中心化的流媒体平台。听众=创作者的钱，而不是标签。",
   "page-dapps-dapp-description-augur": "投注体育、经济和更多世界事件的结果。",
   "page-dapps-dapp-description-axie-infinity": "交易和战斗的生物称为Axies。边玩边赚 - 可在手机上使用",
+  "page-dapps-dapp-description-balancer": "Balancer 是一个自动化投资组合管理和交易平台。",
   "page-dapps-dapp-description-brave": "通过浏览赚取代币，用代币支持您喜欢的创作者。",
   "page-dapps-dapp-description-cent": "通过发布 NFT 赚钱的社交网络。",
   "page-dapps-dapp-description-compound": "借出您的代币赚取利息，并可随时提取。",
@@ -205,5 +207,7 @@
   "page-dapps-what-are-dapps": "什么是Dapp？",
   "page-dapps-more-on-defi-button": "关于去中心化金融的更多信息",
   "page-dapps-more-on-nft-button": "关于代币化收藏品的更多信息",
-  "page-dapps-more-on-nft-gaming-button": "关于代币化游戏物品的更多信息"
+  "page-dapps-more-on-nft-gaming-button": "关于代币化游戏物品的更多信息",
+  "page-dapps-dapp-description-pwn": "轻松贷由以太坊上的任意代币或非同质化代币提供支持。",
+  "page-dapps-pwn-image-alt": "PWN 徽标"
 }

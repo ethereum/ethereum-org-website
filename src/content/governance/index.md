@@ -147,6 +147,20 @@ The ability to fork in the face of significant political, philosophical or econo
 
 <Divider />
 
+## Beacon Chain development {#beacon-chain}
+
+The Ethereum governance process often trades off speed and efficiency for openness and inclusivity. In order to accelerate the development of the Beacon Chain, it was launched separately from the proof-of-work Ethereum network and followed its own governance practices.
+
+While the specification and implementations development has always been fully open source, the formal processes used to propose updates described above weren't used. This allowed changes to be specified and agreed upon quicker by researchers and implementers.
+
+When the Beacon Chain merged with the Ethereum execution layer on September 15th, 2022 The Merge was complete as part of the [Paris network upgrade](https://ethereum.org/en/history/#paris). The proposal [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) was changed from 'Last Call' to 'Final', completing the transition to proof-of-stake.
+
+<ButtonLink to="/upgrades/merge/">
+  More on The Merge
+</ButtonLink>
+
+<Divider />
+
 ## How can I get involved? {#get-involved}
 
 - [Propose an EIP](/eips/#participate)

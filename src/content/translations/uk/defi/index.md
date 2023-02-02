@@ -332,7 +332,6 @@ DeFi — це ініціатива з відкритим вихідним код
 
 ### Інформація про DeFi {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 

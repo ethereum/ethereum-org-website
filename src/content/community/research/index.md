@@ -81,7 +81,7 @@ Ethereum clients are implementations of the Ethereum protocol. Client developmen
 An Ethereum node is required to run two pieces of software:
 
 1. a consensus client to keep track of the head of the blockchain, gossip blocks and handle consensus logic
-2. an execution client to support the Ethereum Virtual Machine and execute transactions.
+2. an execution client to support the Ethereum Virtual Machine and execute transactions and smart contracts
 
 See the [nodes and clients page](/developers/docs/nodes-and-clients/) for more detail on nodes and clients and for a list of all current client implementations. You can also find a history of all Ethereum upgrades on the [history page](/history/).
 
@@ -106,7 +106,6 @@ There are now several Layer 2 protocols that scale Ethereum using different tech
 #### Background reading {#background-reading-2}
 
 - [Introduction to layer 2](/layer-2/)
-- [EthHub Layer 2](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 - [Polynya: Rollups, DA and modular chains](https://polynya.medium.com/rollups-data-availability-layers-modular-blockchains-introductory-meta-post-5a1e7a60119d)
 
 #### Recent research {#recent-research-2}
