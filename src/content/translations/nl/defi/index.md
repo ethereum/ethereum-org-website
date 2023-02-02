@@ -332,7 +332,6 @@ DeFi is een open-source beweging. De DeFi-protocollen en -applicaties staan alle
 
 ### DeFi-data {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 - [DeFi Rate](https://defirate.com/)

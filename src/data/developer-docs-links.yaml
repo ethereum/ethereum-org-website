@@ -50,6 +50,8 @@
           to: /developers/docs/nodes-and-clients/nodes-as-a-service/
         - id: docs-nav-node-architecture
           to: /developers/docs/nodes-and-clients/node-architecture/
+        - id: docs-nav-bootnodes
+          to: /developers/docs/nodes-and-clients/bootnodes
     - id: docs-nav-networks
       to: /developers/docs/networks/
       description: docs-nav-networks-description

@@ -14,7 +14,7 @@ import {
 import Card from "../Card"
 import Translation from "../Translation"
 import { TriangleSVG, IProps as TriangleSVGProps } from "./Triangle"
-import { useTrilemma } from "./use-trilemma"
+import { useTrilemma } from "./useTrilemma"
 
 export interface IProps {}
 

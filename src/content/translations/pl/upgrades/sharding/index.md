@@ -1,22 +1,22 @@
 ---
-title: Łańcuchy odłamkowe
-description: Dowiedz się więcej na temat łańcuchów odłamkowych – podział sieci na drobne kawałki zwiększa transakcyjną pojemność Ethereum i sprawia, że łatwiej ją uruchamiać.
+title: Sharding
+description: Poznaj sharding — rozkładanie i rozdzielanie obciążenia danymi niezbędne, aby zapewnić sieci Ethereum większą przepustowość transakcji i ułatwić jej działanie.
 lang: pl
 template: upgrade
 image: ../../../../../assets/upgrades/newrings.png
-summaryPoint1: Sharding jest wieloetapowym uaktualnieniem, które polega na zwiększeniu skalowalności i pojemności.
-summaryPoint2: Łańcuchy odłamkowe rozkładają obciążenie sieci na 64 nowe łańcuchy.
-summaryPoint3: Sprawiają że łatwiej uruchamiać węzły przez zmniejszenie wymagań sprzętowych
-summaryPoint4: Techniczne wytyczne zawierają pracę nad łańcuchami szczątkowymi podczas „Fazy 1” i potencjalnie „Fazy 2”
+summaryPoint1: Sharding to wieloetapowe uaktualnienie, mające na celu zwiększenie skalowalności i przepustowości sieci Ethereum.
+summaryPoint2: Sharding zapewnia bezpieczną dystrybucję wymagań dotyczących przechowywania danych, dzięki czemu pakiety zbiorcze mogą być jeszcze tańsze, a węzły łatwiejsze w obsłudze.
+summaryPoint3: Dzięki nim rozwiązania warstwy 2 mogą oferować niskie opłaty za transakcje, wykorzystując jednocześnie zabezpieczenia sieci Ethereum.
+summaryPoint4: To uaktualnienie stało się istotniejsze, odkąd Ethereum przeszło na proof-of-stake.
 ---
 
 <UpgradeStatus dateKey="page-upgrades-shards-date">
-    Łańcuchy odłamkowe powinny być dostarczone około 2023 r., w zależności od tego, jak będą postępowały prace po wdrożeniu <a href="/upgrades/beacon-chain/">łańcucha śledzącego</a>. Te fragmentacje dadzą Ethereum większą pojemność przechowywania i dostępu do danych, ale nie będzie można ich używać do wykonywania kodu. Szczegóły tego są wciąż opracowywane.
+    Sharding może zostać wdrożony w roku 2023. Sharding da Ethereum więcej możliwości przechowywania i dostępu do danych, ale powstałe sieci nie będą używane do wykonywania kodu.
 </UpgradeStatus>
 
 ## Czym jest sharding? {#what-is-sharding}
 
-Sharding jest procesem horyzontalnego dzielenia bazy danych, aby rozkładać obciążenie – to powszechnie stosowana koncepcja w informatyce. W kontekście Ethereum sharding zredukuje przeciążenie sieci i zwiększy liczbę transakcji wykonywanych w ciągu sekundy przez utworzenie nowych łańcuchów zwanych „odłamkami” (dosł. „szczątkami”).
+Sharding jest procesem horyzontalnego dzielenia bazy danych, aby rozkładać obciążenie – to powszechnie stosowana koncepcja w informatyce. W kontekście Ethereum sharding będzie działać synergicznie z [pakietami zbiorczymi warstwy 2](/layer-2/), rozdzielając ciężar obsługi dużej ilości danych potrzebnych do pakietów zbiorczych na całą sieć. Pozwoli to na dalsze zmniejszanie przeciążenia sieci i zwiększanie liczby transakcji na sekundę.
 
 Jest to istotne z innych niż skalowalność powodów.
 
@@ -24,49 +24,54 @@ Jest to istotne z innych niż skalowalność powodów.
 
 ### Każdy może uruchomić węzeł {#everyone-can-run-a-node}
 
-Sharding jest dobrym sposobem na skalowanie, jeżeli chcemy zachować decentralizację jako alternatywę do skalowania przez zwiększanie rozmiaru istniejącej bazy danych. Uczyniłoby to sieć Ethereum mniej dostępną dla walidatorów, ponieważ potrzebowaliby mocnych i drogich komputerów. W przypadku standardowych łańcuchów odłamkowych walidatorzy muszą jedynie przechowywać/przetwarzać dane dla odłamka, który sprawdzają, a nie całej sieci (jak to dzieje się dziś). Przyspiesza to sprawy i drastycznie ogranicza wymagania sprzętowe.
+Sharding jest dobrym sposobem na skalowanie, jeżeli chcemy zachować decentralizację jako alternatywę do skalowania przez zwiększanie rozmiaru istniejącej bazy danych. Uczyniłoby to sieć Ethereum mniej dostępną dla walidatorów, ponieważ potrzebowaliby mocnych i drogich komputerów. Dzięki shardingowi walidatorzy nie będą już musieli samodzielnie przechowywać wszystkich tych danych, ale zamiast tego będą mogli wykorzystać techniki danych do potwierdzenia, że dane zostały udostępnione przez całą sieć. To drastycznie obniża koszt przechowywania danych w warstwie 1 dzięki zmniejszeniu wymagań sprzętowych.
 
 ### Większy udział w sieci {#more-network-participation}
 
 Sharding pozwoli Ci w końcu uruchamiać Ethereum na osobistym laptopie bądź telefonie. Wobec tego więcej osób powinno mieć możliwość partycypacji lub uruchamiania [klientów](/developers/docs/nodes-and-clients/) w podzielonym na odłamki Ethereum. Zwiększy to bezpieczeństwo, ponieważ im bardziej sieć jest zdecentralizowana, tym mniejsza przestrzeń płaszczyzny ataku.
 
-Dzięki zmniejszonym wymaganiom sprzętowym fragmentacja ułatwi samodzielne uruchamianie [klientów](/developers/docs/nodes-and-clients/), bez polegania na usługach pośredniczących. Jeśli masz taką możliwość, rozważ uruchamianie wielu klientów. Może to pomóc poprawić pracę sieci przez zmniejszenie liczby punktów awarii. [Uruchom klienta Eth2](/upgrades/get-involved/)
+Dzięki zmniejszonym wymaganiom sprzętowym fragmentacja ułatwi samodzielne uruchamianie [klientów](/developers/docs/nodes-and-clients/), bez polegania na usługach pośredniczących. Jeśli masz taką możliwość, rozważ uruchamianie wielu klientów. Może to pomóc poprawić pracę sieci przez zmniejszenie liczby punktów awarii.
 
 <br />
 
-<InfoBanner isWarning={true}>
-  Na początku musisz uruchomić klienta sieci głównej w tym samym czasie co klienta Eth2. <a href="https://launchpad.ethereum.org" target="_blank">Launchpad</a> poprowadzi Cię przez wymagania sprzętowe oraz proces. Jako alternatywnego rozwiązania możesz też użyć <a href="/developers/docs/apis/backend/#available-libraries">backendowego API</a>.
+<InfoBanner isWarning>
+  Klient wykonania musi działać jednocześnie z klientem konsensusu. <a href="https://launchpad.ethereum.org" target="_blank">Launchpad</a> poprowadzi Cię przez wymagania sprzętowe oraz proces.
 </InfoBanner>
 
 ## Wersja 1 łańcucha odłamkowego: dostępność danych {#data-availability}
+
+<InfoBanner emoji=":construction:" isWarning>
+  <strong>Uwaga:</strong> plany dotyczące shardingu ewoluowały wraz z rozwojem wydajniejszych metod skalowania. „Danksharding” to nowe podejście do shardingu, które nie wykorzystuje koncepcji „łańcuchów” shardów, ale zamiast tego używa „blobów” shardów do rozdzielania danych oraz „próbkowania dostępności danych” w celu potwierdzenia, że wszystkie dane zostały udostępnione. Ta zmiana planu rozwiązuje ten sam początkowy problem.<br/><br/>
+  <strong>Szczegóły poniżej mogą być nieaktualne w stosunku do najnowszych planów rozwoju.</strong> W czasie gdy będziemy aktualizować te rzeczy, sprawdź <a href="https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum">Przewodnik autostopowicza po Ethereum</a>, aby zapoznać się z doskonałą analizą planu działania Ethereum.
+</InfoBanner>
 
 Kiedy pierwsze łańcuchy odłamkowe zostaną wysłane, dostarczą dodatkowe dane do sieci. Nie będą obsługiwać transakcji ani inteligentnych kontraktów. Ale nadal w połączeniu z wartościami zbiorczymi oferują niesamowitą poprawę liczby transakcji na sekundę.
 
 Wartości zbiorcze to technologia „warstwy 2”, która istnieje obecnie. Pozwalają one zdecentralizowanym aplikacjom (dapps) na łączenie lub „zbieranie” transakcji w jedną transakcję poza łańcuchem, generowanie dowodów kryptograficznych, a następnie przesyłanie ich do łańcucha. Ogranicza to dane potrzebne do transakcji. Połącz to ze wszystkimi dodatkowymi danymi dostarczonymi przez odłamki i otrzymujesz 100 000 transakcji na sekundę.
 
-[Więcej o wartościach zbiorczych](/developers/docs/layer-2-scaling/)
-
 ## Wersja 2 łańcucha odłamkowego: wykonywanie kodu {#code-execution}
 
-Plan zawsze zakładał dodanie dodatkowej funkcjonalności do odłamków, aby uczynić je bardziej podobnymi do dzisiejszej [sieci głównej Ethereum](/glossary/#mainnet). Umożliwiłoby to im przechowywanie i wykonywanie inteligentnych kontraktów oraz obsługę kont. Ale biorąc pod uwagę wzrost liczby transakcji na sekundę, jaki zapewniają odłamki w wersji 1, czy jest to jeszcze potrzebne? Kwestia ta jest nadal przedmiotem debaty we wspólnocie i wydaje się, że istnieje kilka opcji.
+Zawsze planowano, aby do odłamków dodać dodatkowe funkcje, upodobniające je do dzisiejszej [sieci głównej Ethereum](/glossary/#mainnet). Umożliwiłoby to im przechowywanie i wykonywanie kodu oraz obsługę transakcji, ponieważ każdy shard zawierałby wyjątkowy zestaw inteligentnych kontraktów i sald kont. Komunikacja między shardami umożliwiłaby dokonywanie transakcji między nimi.
+
+Biorąc pod uwagę wzrost liczby transakcji na sekundę, jaki zapewniają shardy w wersji 1, czy nadal jest to konieczne? Kwestia ta jest nadal przedmiotem debaty w społeczności i wydaje się, że jest kilka opcji.
 
 ### Czy odłamki wymagają wykonania kodu? {#do-shards-need-code-execution}
 
-Vitalik Buterin, podczas rozmowy w ramach podcastu Bankless, przedstawił 3 potencjalne opcje, które warto przedyskutować.
+Vitalik Buterin podczas rozmowy w podcaście Bankless przedstawił 3 potencjalne opcje, które warto przedyskutować.
 
 <YouTube id="-R0j5AMUSzA" start="5841" />
 
 #### 1. Wykonywanie stanu nie jest wymagane {#state-execution-not-needed}
 
-Oznaczałoby to, że nie dajemy odłamkom możliwości obsługi inteligentnych kontraktów i zostawimy je jako magazyny danych.
+To znaczy, że nie dajemy odłamkom możliwości obsługi inteligentnych kontraktów i zostawiamy je jako magazyny danych.
 
 #### 2. Miej kilka odłamków wykonawczych {#some-execution-shards}
 
-Być może istnieje kompromis, w którym nie potrzebujemy wszystkich odłamków (64 są obecnie planowane), aby być mądrzejszymi. Moglibyśmy po prostu dodać tę funkcjonalność do kilku z nich, a resztę zostawić. Mogłoby to przyspieszyć realizację.
+Być może istnieje kompromis, który nie wymaga, aby wszystkie shardy były inteligentniejsze. Moglibyśmy po prostu dodać tę funkcjonalność do kilku z nich, a resztę zostawić. Mogłoby to przyspieszyć realizację.
 
 #### 3. Poczekaj, aż będziemy w stanie uzyskać dowody ZK-Snarks {#wait-for-zk-snarks}
 
-Na koniec, być może powinniśmy ponownie przyjrzeć się tej debacie, gdy dowody ZK-Snarks będą bardziej zdecydowane. Jest to technologia, która mogłaby przyczynić się do wprowadzenia do sieci prawdziwie prywatnych transakcji. Prawdopodobnie będą potrzebować inteligentniejszych odłamków, ale są one wciąż w fazie badań i rozwoju.
+Na koniec, być może powinniśmy ponownie przyjrzeć się tej debacie, gdy dowody ZK-Snarks będą bardziej zdecydowane. Jest to technologia, która mogłaby przyczynić się do wprowadzenia do sieci prawdziwie prywatnych transakcji. Prawdopodobnie będą potrzebować inteligentniejszych shardów, ale są one wciąż w fazie badań i rozwoju.
 
 #### Inne źródła {#other-sources}
 
@@ -78,21 +83,11 @@ Jest to wciąż aktywny punkt dyskusji. Zaktualizujemy te strony, gdy dowiemy si
 
 ## Związek pomiędzy ulepszeniami {#relationship-between-upgrades}
 
-Ulepszenia Eth2 są ze sobą w pewien sposób powiązane. Podsumujmy więc, jak łańcuchy odłamków odnoszą się do innych ulepszeń.
+Wszystkie uaktualnienia Ethereum są poniekąd wzajemnie powiązane. Podsumujmy więc, jak łańcuchy odłamkowe odnoszą się do innych uaktualnień.
 
-### Odłamki i łańcuch śledzący {#shards-and-beacon-chain}
+### Shardy i blockchain Ethereum {#shards-and-blockchain}
 
-Łańcuch śledzący zawiera całą logikę zabezpieczania i synchronizacji odłamków. Łańcuch śledzący będzie koordynował pracę stakerów w sieci, przydzielając ich do odłamków, nad którymi muszą pracować. Ułatwi to również komunikację między odłamkami poprzez odbieranie i przechowywanie odłamków danych transakcyjnych, które są dostępne dla innych odłamków. To zapewni odłamkom migawkę stanu Ethereum, aby wszystko było aktualne.
-
-<ButtonLink to="/upgrades/beacon-chain/">Łańcuch śledzący</ButtonLink>
-
-### Odłamki i dokowanie {#shards-and-docking}
-
-Sieć główna Ethereum będzie istnieć tak jak obecnie, nawet po wprowadzeniu odłamków. Jednak w pewnym momencie sieć główna będzie musiała stać się odłamkiem, aby mogła przejść na stakowanie. Nie wiadomo jeszcze, czy sieć główna będzie istniała jako jedyny „inteligentny” odłamek, który może wykonywać kody — ale tak czy inaczej, trzeba będzie podjąć decyzję w sprawie fazy 2 shardingu.
-
-<ButtonLink to="/upgrades/merge/">Dokowanie</ButtonLink>
-
-<Divider />
+Logika zapewniająca bezpieczeństwo i synchronizację shardów jest zintegrowana z klientami Ethereum, którzy budują sieć blockchain. Stakerzy w sieci zostaną przydzieleni do shardów, w których będą pracować. Shardy będą miały dostęp do migawek z innych shardów, dzięki czemu będą mogły budować widok stanu Ethereum, aby wszystko było aktualne.
 
 ### Czytaj więcej {#read-more}
 

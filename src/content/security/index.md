@@ -55,8 +55,8 @@ Remembering strong, unique passwords for every account you have isn't ideal. A p
 
 - [Bitwarden](https://bitwarden.com/)
 - [KeePass](https://keepass.info/)
-- [LastPass](https://www.lastpass.com/)
 - [1Password](https://1password.com/)
+- Or check out other [recommended password managers](https://www.privacytools.io/secure-password-manager)
 
 ### Use Two-Factor Authentication {#two-factor-authentication}
 
@@ -137,7 +137,7 @@ By screenshotting your seed phrases or private keys, you risk syncing them to th
 
 ### Use a hardware wallet {#use-hardware-wallet}
 
-A hardware wallet provides offline storage for private keys. They are considered the most secure wallet option for storing your private keys.
+A hardware wallet provides offline storage for private keys. They are considered the most secure wallet option for storing your private keys: your private key touches the internet and stays completely local on your device.
 
 Keeping private keys offline massively reduces the risk of being hacked, even if a hacker gets control of your computer.
 
@@ -158,6 +158,8 @@ It is also recommended when interacting with a smart contract to read the transa
 When interacting with smart contracts, do not allow unlimited spend limits. An unlimited spend could enable the smart contract to drain your wallet. Instead, set spending limits to only the amount necessary for the transaction.
 
 Many Ethereum wallets offer limits protection to safeguard against accounts being drained.
+
+[How to revoke smart contract access to your crypto funds](/guides/how-to-revoke-token-access/)
 
 <Divider />
 
