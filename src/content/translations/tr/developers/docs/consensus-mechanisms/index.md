@@ -33,7 +33,7 @@ Bir kriptoekonomik sistemdeki mutabakat mekanizması, belirli ekonomik saldırı
 
 ### İş ispatı {#proof-of-work}
 
-Ethereum, Bitcoin gibi şu anda bir **iş ispatı (PoW)** mutabakat protokolünü kullanıyor.
+Ethereum, geçmişte Bitcoin gibi bir **iş ispatı (PoW)** mutabakat protokolünü kullanıyordu. Ancak aldığı yeni güncelleme ile Ethereum, **Hisse ispatı (PoS)** sistemine geçiş yaptı.
 
 #### Blok oluşturma {#pow-block-creation}
 
@@ -47,7 +47,7 @@ Ağ, zincir üzerinde dolandırıcılık yapılabilmesi için ağın bilgi işle
 
 ### Hisse ispatı {#proof-of-stake}
 
-Ethereum, bir **hisse ispatı (PoS)** mutabakat protokolüne geçmeyi planlamaktadır.
+Ethereum, daha önce kullandığı **İş ispatı (PoW)** sisteminden **hisse ispatı (PoS)** mutabakat protokolüne geçiş yapmıştır.
 
 #### Blok oluşturma {#pos-block-creation}
 
