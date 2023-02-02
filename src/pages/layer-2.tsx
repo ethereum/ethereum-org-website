@@ -1,10 +1,23 @@
 // Libraries
-import React, { useEffect, useState } from "react"
+import React, { HTMLAttributes, ReactNode, useEffect, useState } from "react"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
-import { Badge } from "@chakra-ui/react"
+import {
+  Badge,
+  Box,
+  Center,
+  Divider,
+  DividerProps,
+  Flex,
+  GridItem,
+  Icon,
+  ListItem,
+  SimpleGrid,
+  Text,
+  UnorderedList,
+  useBreakpointValue,
+} from "@chakra-ui/react"
 
 // Data
 import layer2Data from "../data/layer-2/layer-2.json"
@@ -14,7 +27,6 @@ import ButtonLink from "../components/ButtonLink"
 import Card from "../components/Card"
 import ExpandableCard from "../components/ExpandableCard"
 import FeedbackCard from "../components/FeedbackCard"
-import Icon from "../components/Icon"
 import InfoBanner from "../components/InfoBanner"
 import Layer2Onboard from "../components/Layer2/Layer2Onboard"
 import Layer2ProductCard from "../components/Layer2ProductCard"
@@ -26,7 +38,6 @@ import ProductList from "../components/ProductList"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import Tooltip from "../components/Tooltip"
 import Translation from "../components/Translation"
-import { CardGrid, Content, Page } from "../components/SharedStyledComponents"
 
 // Utils
 import { getData } from "../utils/cache"
@@ -40,153 +51,92 @@ import { getImage } from "../utils/image"
 
 // Constants
 import { GATSBY_FUNCTIONS_PATH } from "../constants"
+import { MdInfoOutline } from "react-icons/md"
 
-// Styles
+type ChildOnlyType = {
+  children: ReactNode
+}
 
-const HeroBackground = styled.div`
-  width: 100%;
-  background: ${(props) => props.theme.colors.layer2Gradient};
-`
-
-const HeroContainer = styled.div`
-  width: 100%;
-`
-
-const Hero = styled(PageHero)`
-  padding-bottom: 2rem;
-`
-
-const PaddedContent = styled(Content)`
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-`
-
-const LightGrayContent = styled(PaddedContent)`
-  background: ${(props) => props.theme.colors.layer2ContentSecondary};
-`
-
-const FlexContainer = styled.div<{ flexPercent: string | number }>`
-  flex: ${(props) => props.flexPercent}%;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex: 100%;
+const ContentBox = (
+  props: HTMLAttributes<"div"> & {
+    children: ReactNode
+    isLightGrayBg?: boolean
   }
-`
+) => (
+  <Box
+    px={8}
+    py={12}
+    width="full"
+    {...(props.isLightGrayBg && { background: "layer2ContentSecondary" })}
+  >
+    {props.children}
+  </Box>
+)
 
-const Flex50 = styled.div`
-  flex: 50%;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex: 100%;
-  }
-`
+const StyledInfoIcon = () => (
+  <Icon
+    as={MdInfoOutline}
+    color="text"
+    mr={2}
+    opacity={0.8}
+    _hover={{ color: "primary" }}
+    _active={{ color: "primary" }}
+    _focus={{ color: "primary" }}
+  />
+)
 
-const StyledIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
-  margin-right: 0.5rem;
-  opacity: 0.8;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-  }
-  &:hover,
-  &:active,
-  &:focus {
-    fill: ${({ theme }) => theme.colors.primary};
-  }
-`
+const TwoColumnContent = (props: ChildOnlyType) => (
+  <Flex
+    justifyContent="space-between"
+    gap={16}
+    flexDirection={{ base: "column", lg: "row" }}
+    alignItems={{ base: "flex-start", lg: "normal" }}
+    {...props}
+  />
+)
 
-const TwoColumnContent = styled.div`
-  display: flex;
-  justify-content: space-between;
-  gap: 4rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 0rem;
-    margin-right: 0rem;
-  }
-`
+const StatDivider = () => {
+  const responsiveOrientation = useBreakpointValue<DividerProps["orientation"]>(
+    { base: "horizontal", md: "vertical" }
+  )
+  return (
+    <Divider
+      orientation={responsiveOrientation}
+      borderColor="homeDivider"
+      my={{ base: 8, md: 0 }}
+    />
+  )
+}
 
-const InfoGrid = styled(CardGrid)`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
-  gap: 1rem 2rem;
-  & > div {
-    height: fit-content;
-    &:hover {
-      transition: 0.1s;
-      transform: scale(1.01);
-      img {
-        transition: 0.1s;
-        transform: scale(1.1);
-      }
-    }
-  }
-`
+const StatBox = (props: ChildOnlyType) => (
+  <Center
+    flexDirection="column"
+    flex={{ base: "100%", md: "33%" }}
+    textAlign="center"
+    px={5}
+    {...props}
+  />
+)
 
-const RollupCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: ${(props) => props.theme.colors.ednBackground};
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.lightBorder};
-  padding: 1.5rem;
-  flex: 50%;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex: 100%;
-  }
-`
+const StatPrimary = (props: { content: string }) => (
+  <Text
+    color="primary"
+    fontFamily="monospace"
+    fontWeight="bold"
+    fontSize="2rem"
+  >
+    {props.content}
+  </Text>
+)
 
-const StatsContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  margin-bottom: 4rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex-direction: column;
-  }
-`
+const StatSpan = (props: ChildOnlyType) => (
+  <Flex justifyContent="center" gap={2} {...props} />
+)
 
-const StatBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex: 33%;
-  padding: 0 20px;
-  text-align: center;
-  align-content: center;
-  justify-content: center;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex: 100%;
-  }
-`
+const StatDescription = (props: ChildOnlyType) => (
+  <Text opacity={0.8} m={0} {...props} />
+)
 
-const StatPrimary = styled.p`
-  font-weight: bold;
-  font-size: ${(props) => props.theme.fontSizes.xl};
-  color: ${(props) => props.theme.colors.primary};
-  font-family: monospace;
-`
-
-const StatSpan = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-`
-
-const StatDescription = styled.p`
-  opacity: 0.8;
-  margin: 0;
-`
-
-const StatDivider = styled.div`
-  border-left: 1px solid ${({ theme }) => theme.colors.homeDivider};
-  max-height: 100px;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    border-left: none;
-    border-bottom: 1px solid ${({ theme }) => theme.colors.homeDivider};
-    width: 100%;
-    height: 0%;
-    margin: 2rem 0;
-  }
-`
 interface L2DataResponseItem {
   daily: {
     data: Array<[string, number, number]>
@@ -436,21 +386,22 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
   )
 
   return (
-    <Page>
+    <Flex flexDirection="column" alignItems="center">
       <PageMetadata
         title={"Layer 2"}
         description={"Introduction page to layer 2"}
       />
 
-      <HeroBackground>
-        <HeroContainer>
-          <Hero content={heroContent} isReverse />
-        </HeroContainer>
+      {/* Hero Section */}
+      <Box background="layer2Gradient" width="full">
+        <Box pb={8}>
+          <PageHero content={heroContent} isReverse />
+        </Box>
 
-        <PaddedContent>
-          <StatsContainer>
+        <ContentBox>
+          <Center flexDirection={{ base: "column", md: "row" }} mb={16}>
             <StatBox>
-              <StatPrimary>{tvl}</StatPrimary>
+              <StatPrimary content={tvl} />
               <StatSpan>
                 <StatDescription>
                   <Translation id="layer-2-statsbox-1" />
@@ -461,13 +412,13 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                     apiProvider: "L2BEAT",
                   })}
                 >
-                  <StyledIcon name="info" />
+                  <StyledInfoIcon />
                 </Tooltip>
               </StatSpan>
             </StatBox>
             <StatDivider />
             <StatBox>
-              <StatPrimary>{averageFee}</StatPrimary>
+              <StatPrimary content={averageFee} />
               <StatSpan>
                 <StatDescription>
                   <Translation id="layer-2-statsbox-2" />
@@ -478,13 +429,13 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                     apiProvider: "CryptoStats",
                   })}
                 >
-                  <StyledIcon name="info" />
+                  <StyledInfoIcon />
                 </Tooltip>
               </StatSpan>
             </StatBox>
             <StatDivider />
             <StatBox>
-              <StatPrimary>{percentChangeL2}</StatPrimary>
+              <StatPrimary content={percentChangeL2} />
               <StatSpan>
                 <StatDescription>
                   <Translation id="layer-2-statsbox-3" />
@@ -495,17 +446,17 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                     apiProvider: "L2BEAT",
                   })}
                 >
-                  <StyledIcon name="info" />
+                  <StyledInfoIcon />
                 </Tooltip>
               </StatSpan>
             </StatBox>
-          </StatsContainer>
-        </PaddedContent>
-      </HeroBackground>
-
-      <PaddedContent id="what-is-layer-2">
+          </Center>
+        </ContentBox>
+      </Box>
+      {/* What is Layer 2 Section */}
+      <ContentBox id="what-is-layer-2">
         <TwoColumnContent>
-          <Flex50>
+          <Box flex="50%">
             <h2>
               <Translation id="layer-2-what-is-layer-2-title" />
             </h2>
@@ -515,31 +466,32 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <p>
               <Translation id="layer-2-what-is-layer-2-2" />
             </p>
-          </Flex50>
-          <Flex50>
+          </Box>
+          <Box flex="50%">
             <GatsbyImage
               image={getImage(data.whatIsEthereum)!}
               alt=""
               style={{ maxHeight: "400px" }}
               objectFit="contain"
             />
-          </Flex50>
+          </Box>
         </TwoColumnContent>
-      </PaddedContent>
-      <LightGrayContent>
+      </ContentBox>
+      {/* What is Layer 1 Section */}
+      <ContentBox isLightGrayBg>
         <h2>
           <Translation id="layer-2-what-is-layer-1-title" />
         </h2>
         <TwoColumnContent>
-          <Flex50>
+          <Box flex="50%">
             <p>
               <Translation id="layer-2-what-is-layer-1-1" />
             </p>
             <p>
               <Translation id="layer-2-what-is-layer-1-2" />
             </p>
-          </Flex50>
-          <Flex50>
+          </Box>
+          <Box flex="50%">
             <p>
               <Translation id="layer-2-what-is-layer-1-list-title" />
             </p>
@@ -565,28 +517,21 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                 <Translation id="layer-2-what-is-layer-1-list-link-2" />
               </Link>
             </p>
-          </Flex50>
+          </Box>
         </TwoColumnContent>
-      </LightGrayContent>
-
-      <PaddedContent>
+      </ContentBox>
+      {/* Why Layer 2 Section */}
+      <ContentBox>
         <TwoColumnContent>
-          <FlexContainer
-            flexPercent="50"
-            style={{
-              display: "flex",
-              alignContent: "center",
-              justifyContent: "center",
-            }}
-          >
+          <Center flex="50%">
             <GatsbyImage
               image={getImage(data.dao)!}
               alt=""
               style={{ width: "100%" }}
               objectFit="contain"
             />
-          </FlexContainer>
-          <FlexContainer flexPercent="50">
+          </Center>
+          <Box flex="50%">
             <h2>
               <Translation id="layer-2-why-do-we-need-layer-2-title" />
             </h2>
@@ -609,26 +554,39 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <Link to="/upgrades/vision/">
               <Translation id="layer-2-why-do-we-need-layer-2-scalability-3" />
             </Link>
-          </FlexContainer>
+          </Box>
         </TwoColumnContent>
         <h3>
           <Translation id="layer-2-benefits-of-layer-2-title" />
         </h3>
-        <InfoGrid>
+        <SimpleGrid
+          columnGap={8}
+          rowGap={4}
+          templateColumns="repeat(auto-fill, minmax(340px, 1fr))"
+        >
           {layer2Cards.map(({ emoji, title, description }, idx) => (
-            <Card
+            <GridItem
+              as={Card}
               description={description}
               title={title}
               emoji={emoji}
               key={idx}
+              _hover={{
+                transition: "0.1s",
+                transform: "scale(1.01)",
+                img: {
+                  transition: "0.1s",
+                  transform: "scale(1.1)",
+                },
+              }}
             />
           ))}
-        </InfoGrid>
-      </PaddedContent>
-
-      <PaddedContent>
+        </SimpleGrid>
+      </ContentBox>
+      {/* How does Layer 2 Work Section */}
+      <ContentBox>
         <TwoColumnContent>
-          <FlexContainer flexPercent="50">
+          <Box flex="50%">
             <h2>
               <Translation id="layer-2-how-does-layer-2-work-title" />
             </h2>
@@ -647,27 +605,30 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <p>
               <Translation id="layer-2-rollups-2" />
             </p>
-          </FlexContainer>
-          <FlexContainer
-            flexPercent="50"
-            style={{
-              display: "flex",
-              alignContent: "center",
-              justifyContent: "center",
-            }}
-          >
+          </Box>
+          <Center flex="50%">
             <GatsbyImage
               image={getImage(data.rollup)!}
               alt=""
               style={{ width: "100%" }}
               objectFit="contain"
             />
-          </FlexContainer>
+          </Center>
         </TwoColumnContent>
         <TwoColumnContent>
           {rollupCards.map(
             ({ image, title, description, childSentence, childLink }) => (
-              <RollupCard key={title}>
+              <Flex
+                key={title}
+                background="ednBackground"
+                borderRadius="sm"
+                border="1px"
+                borderColor="lightBorder"
+                p={6}
+                flex={{ base: "100%", md: "50%" }}
+                flexDirection="column"
+                justifyContent="space-between"
+              >
                 <GatsbyImage
                   image={image!}
                   alt=""
@@ -679,13 +640,13 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                 <p>
                   <Link to={childLink}>{childSentence}</Link>
                 </p>
-              </RollupCard>
+              </Flex>
             )
           )}
         </TwoColumnContent>
-      </PaddedContent>
-
-      <PaddedContent>
+      </ContentBox>
+      {/* DYOR Section */}
+      <ContentBox>
         <InfoBanner isWarning={true}>
           <h2>
             <Translation id="layer-2-dyor-title" />
@@ -702,9 +663,9 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             </ButtonLink>
           </p>
         </InfoBanner>
-      </PaddedContent>
-
-      <PaddedContent id="use-layer-2">
+      </ContentBox>
+      {/* Use Layer 2 Section */}
+      <ContentBox id="use-layer-2">
         <h2>
           <Translation id="layer-2-use-layer-2-title" />
         </h2>
@@ -720,39 +681,10 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
         <p>
           <Translation id="layer-2-use-layer-2-generalized-1" />
         </p>
-        <CardGrid>
-          {layer2DataCombined
-            .filter((l2) => !l2.purpose.indexOf("universal"))
-            .map((l2, idx) => {
-              return (
-                <Layer2ProductCard
-                  key={idx}
-                  background={l2.background}
-                  image={getImage(data[l2.imageKey])!}
-                  description={translateMessageId(
-                    l2.descriptionKey as TranslationKey,
-                    intl
-                  )}
-                  url={l2.website}
-                  note={translateMessageId(l2.noteKey as TranslationKey, intl)}
-                  name={l2.name}
-                  bridge={l2.bridge}
-                  ecosystemPortal={l2.ecosystemPortal}
-                  tokenLists={l2.tokenLists}
-                />
-              )
-            })}
-        </CardGrid>
-      </PaddedContent>
-
-      <PaddedContent>
-        <h3>
-          <Translation id="layer-2-use-layer-2-application-specific-title" />
-        </h3>
-        <p>
-          <Translation id="layer-2-use-layer-2-application-specific-1" />
-        </p>
-        <CardGrid>
+        <SimpleGrid
+          templateColumns="repeat(auto-fit, minmax(280px, 1fr))"
+          gap={8}
+        >
           {layer2DataCombined
             .filter((l2) => l2.purpose.indexOf("universal"))
             .map((l2, idx) => {
@@ -780,15 +712,15 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                 </Layer2ProductCard>
               )
             })}
-        </CardGrid>
-      </PaddedContent>
-
-      <PaddedContent>
+        </SimpleGrid>
+      </ContentBox>
+      {/* Layer 2 Sidechain Section */}
+      <ContentBox>
         <h2>
           <Translation id="layer-2-sidechains-title" />
         </h2>
         <TwoColumnContent>
-          <Flex50>
+          <Box flex="50%">
             <p>
               <Translation id="layer-2-sidechains-1" />
             </p>
@@ -805,47 +737,47 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                 <Translation id="layer-2-more-on-validiums" />
               </Link>
             </p>
-          </Flex50>
-          <Flex50>
+          </Box>
+          <Box flex="50%">
             <p>
               <Translation id="layer-2-sidechains-4" />
             </p>
             <p>
               <Translation id="layer-2-sidechains-5" />
             </p>
-          </Flex50>
+          </Box>
         </TwoColumnContent>
-      </PaddedContent>
-
-      <PaddedContent id="how-to-get-onto-layer-2">
+      </ContentBox>
+      {/* Layer 2 Onboard Section */}
+      <ContentBox id="how-to-get-onto-layer-2">
         <Layer2Onboard
           layer2DataCombined={layer2DataCombined}
           ethIcon={getImage(data.ethHome)!}
           ethIconAlt={translateMessageId("ethereum-logo", intl)}
         />
-      </PaddedContent>
-
-      <PaddedContent>
+      </ContentBox>
+      {/* Layer 2 Tools Section */}
+      <ContentBox>
         <h2>
           <Translation id="layer-2-tools-title" />
         </h2>
         <TwoColumnContent>
-          <Flex50>
+          <Box flex="50%">
             <ProductList
               category="Information"
               content={toolsData.information}
             />
-          </Flex50>
-          <Flex50>
+          </Box>
+          <Box flex="50%">
             <ProductList
               category="Wallet managers"
               content={toolsData.walletManagers}
             />
-          </Flex50>
+          </Box>
         </TwoColumnContent>
-      </PaddedContent>
-
-      <PaddedContent>
+      </ContentBox>
+      {/* Layer 2 FAQ Section */}
+      <ContentBox>
         <h2>
           <Translation id="layer-2-faq-title" />
         </h2>
@@ -922,57 +854,59 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <Translation id="layer-2-faq-question-5-description-2" />
           </p>
         </ExpandableCard>
-      </PaddedContent>
-
-      <PaddedContent>
+      </ContentBox>
+      {/* Layer 2 Further Reading Section */}
+      <ContentBox>
         <h2>
           <Translation id="layer-2-further-reading-title" />
         </h2>
-        <ul>
-          <li>
+        <UnorderedList ms="1.45rem" mb="1.45rem">
+          <ListItem>
             <Link to="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">
               <Translation id="a-rollup-centric-ethereum-roadmap" />
             </Link>{" "}
             <i>- Vitalik Buterin </i>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <Link to="https://vitalik.ca/general/2021/01/05/rollup.html">
               <Translation id="an-incomplete-guide-to-rollups" />
             </Link>{" "}
             <i>- Vitalik Buterin</i>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <Link to="https://www.youtube.com/watch?v=DyNbmgkyxJI">
               <Translation id="polygon-sidechain-vs-ethereum-rollups" />
             </Link>{" "}
             <i>- Lex Clips</i>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <Link to="https://www.youtube.com/watch?v=7pWxCklcNsU">
               <Translation id="rollups-the-ultimate-ethereum-scaling-strategy" />
             </Link>{" "}
             <i>- Finematics</i>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <Link to="/upgrades/sharding/">
               <Translation id="scaling-layer-1-with-shard-chains" />
             </Link>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <Link to="https://barnabe.substack.com/p/understanding-rollup-economics-from?s=r">
               <Translation id="understanding-rollup-economics-from-first-principals" />
             </Link>{" "}
             <i>- Barnabé Monnot</i>
-          </li>
-        </ul>
-      </PaddedContent>
-      <PaddedContent>
+          </ListItem>
+        </UnorderedList>
+      </ContentBox>
+      {/* Layer 2 Quiz Section */}
+      <ContentBox>
         <QuizWidget quizKey="layer-2" />
-      </PaddedContent>
-      <PaddedContent>
+      </ContentBox>
+      {/* Layer 2 Feedback Section */}
+      <ContentBox>
         <FeedbackCard />
-      </PaddedContent>
-    </Page>
+      </ContentBox>
+    </Flex>
   )
 }
 
