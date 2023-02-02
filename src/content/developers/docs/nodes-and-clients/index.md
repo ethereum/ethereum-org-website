@@ -271,13 +271,12 @@ Snap sync is the latest approach to syncing a client, pioneered by the Geth team
 
 [More on snap sync](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
 
-| Client       | Disk size (fast sync) | Disk size (full archive) |
-| ------------ | --------------------- | ------------------------ |
-| Geth         | 400GB+                | 6TB+                     |
-| OpenEthereum | 280GB+                | 6TB+                     |
-| Nethermind   | 500GB+                | 12TB+                    |
-| Besu         | 750GB+                | 5TB+                     |
-| Erigon       | N/A                   | 1TB+                     |
+| Client     | Disk size (fast sync) | Disk size (full archive) |
+| ---------- | --------------------- | ------------------------ |
+| Geth       | 400GB+                | 6TB+                     |
+| Nethermind | 500GB+                | 12TB+                    |
+| Besu       | 750GB+                | 5TB+                     |
+| Erigon     | N/A                   | 1TB+                     |
 
 #### Optimistic sync {#optimistic-sync}
 
