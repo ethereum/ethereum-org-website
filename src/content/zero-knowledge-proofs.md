@@ -145,7 +145,7 @@ This is where verifiable computation comes into play. When a node executes a tra
 
 ### Reducing bribery and collusion in on-chain voting {#secure-blockchain-voting} 
 
-Unlike traditional voting, blockchain voting schemes are ideal for many reasons: they are fully auditable, secure against attacks, resistant to censorship, and free of geographical constraints. But even on-chain voting schemes aren't immune to the problem of **collusion** plaguing traditional voting. 
+Blockchain voting schemes have many favorable characteristics: they are fully auditable, secure against attacks, resistant to censorship, and free of geographical constraints. But even on-chain voting schemes aren't immune to the problem of **collusion**. 
 
 Defined as “coordinating to limit open competition by deceiving, defrauding, and misleading others,” collusion may take the form of a malicious actor influencing voting by offering bribes. For example, Alice might receive a bribe from Bob to vote for `option B` on a ballot even if she prefers `option A`. 
 
