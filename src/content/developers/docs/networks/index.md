@@ -38,7 +38,7 @@ The two public testnets that client developers are currently maintaining are Sep
 
 #### Sepolia {#sepolia}
 
-**[Sepolia](#sepolia) is the recommended default testnet for application development**.
+**Sepolia is the recommended default testnet for application development**.
 The Sepolia network uses a permissioned validator set. It's fairly new, meaning its state and history are both quite small. This means the network is quick to sync to and that running a node on it requires less storage. This is useful for users who want to quickly spin up a node and interact with the network directly.
 
 - Closed validator set, controlled by client & testing teams
@@ -63,7 +63,7 @@ The Sepolia network uses a permissioned validator set. It's fairly new, meaning 
 
 _Note: [the Goerli testnet is deprecated](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) and will be replaced by [Holesovice](https://github.com/eth-clients/holesovice) in 2023. Please consider migrating your applications to Sepolia._
 
-[Goerli](#goerli) is testnet for testing of validating and staking. The Goerli network is open for users wanting to run a testnet validator. Stakers wanting to test protocol upgrades before they are deployed to mainnet should therefore use Goerli.
+Goerli is testnet for testing of validating and staking. The Goerli network is open for users wanting to run a testnet validator. Stakers wanting to test protocol upgrades before they are deployed to mainnet should therefore use Goerli.
 
 - Open validator set, stakers can test network upgrades
 - Large state, useful for testing complex smart contract interactions
