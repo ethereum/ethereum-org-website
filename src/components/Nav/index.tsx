@@ -1,20 +1,19 @@
 import React, { useState } from "react"
-import { useColorMode } from "@chakra-ui/react"
+import { Icon, IconButton, Text, useColorMode } from "@chakra-ui/react"
+import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
 import styled from "@emotion/styled"
 import { cloneDeep } from "lodash"
 import { useIntl } from "react-intl"
 
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
-import NakedButton from "../NakedButton"
+import ButtonLink from "../ButtonLink"
 import Link from "../Link"
-import Icon from "../Icon"
 import Search from "../Search"
 import Translation from "../Translation"
 import { NavLink } from "../SharedStyledComponents"
+import { EthHomeIcon } from "../icons"
 import { translateMessageId } from "../../utils/translations"
-import HomeIcon from "../../assets/eth-home-icon.svg"
-
 import { IItem, ISections } from "./types"
 
 const NavContainer = styled.div`
@@ -79,25 +78,7 @@ const RightItems = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-`
-
-const NavListItem = styled.li`
-  white-space: nowrap;
-  margin: 0;
-`
-
-const RightNavLink = styled(NavLink)`
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  margin-right: 0;
-  margin-left: 1rem;
-
-  &:hover {
-    svg {
-      fill: ${(props) => props.theme.colors.primary};
-    }
-  }
+  gap: 0.5rem;
 `
 
 const HomeLogoNavLink = styled(Link)`
@@ -106,32 +87,11 @@ const HomeLogoNavLink = styled(Link)`
   align-items: center;
 `
 
-const HomeLogo = styled(HomeIcon)`
-  width: 22px;
-  height: 35px;
+const HomeLogo = styled(EthHomeIcon)`
   opacity: 0.85;
   &:hover {
     opacity: 1;
   }
-`
-
-const Span = styled.span`
-  padding-left: 0.5rem;
-`
-
-const ThemeToggle = styled(NakedButton)`
-  margin-left: 1rem;
-  display: flex;
-  align-items: center;
-  &:hover {
-    svg {
-      fill: ${(props) => props.theme.colors.primary};
-    }
-  }
-`
-
-const NavIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
 `
 
 export interface IProps {
@@ -216,8 +176,12 @@ const Nav: React.FC<IProps> = ({ path }) => {
           items: [
             {
               // @ts-ignore: until we add the translations
-              text: "Learn hub",
+              text: "hero-title",
               to: "/learn/",
+            },
+            {
+              text: "guides-hub",
+              to: "/guides/",
             },
           ],
         },
@@ -418,12 +382,16 @@ const Nav: React.FC<IProps> = ({ path }) => {
   }
 
   const shouldShowSubNav = path.includes("/developers/")
-
+  const splitPath = path.split("/")
+  const fromPageParameter =
+    splitPath.length > 3 && splitPath[2] !== "languages"
+      ? `?from=/${splitPath.slice(2).join("/")}`
+      : ""
   return (
     <NavContainer>
       <StyledNav aria-label={translateMessageId("nav-primary", intl)}>
         <NavContent>
-          <HomeLogoNavLink to="/">
+          <HomeLogoNavLink to="/" aria-label={translateMessageId("home", intl)}>
             <HomeLogo />
           </HomeLogoNavLink>
           {/* Desktop */}
@@ -433,20 +401,26 @@ const Nav: React.FC<IProps> = ({ path }) => {
             </LeftItems>
             <RightItems>
               <Search useKeyboardShortcut />
-              <ThemeToggle
-                onClick={toggleColorMode}
+              <IconButton
                 aria-label={
                   isDarkTheme ? "Switch to Light Theme" : "Switch to Dark Theme"
                 }
-              >
-                <NavIcon name={isDarkTheme ? "lightTheme" : "darkTheme"} />
-              </ThemeToggle>
-              <RightNavLink to="/languages/">
-                <NavIcon name="language" />
-                <Span>
+                icon={
+                  <Icon
+                    as={isDarkTheme ? MdWbSunny : MdBrightness2}
+                    fontSize="2xl"
+                  />
+                }
+                variant="icon"
+                _hover={{ color: "primary" }}
+                onClick={toggleColorMode}
+              />
+              <ButtonLink to={`/languages/${fromPageParameter}`} variant="icon">
+                <Icon as={MdLanguage} fontSize="2xl" />
+                <Text as="span" pl={2}>
                   <Translation id="languages" />
-                </Span>
-              </RightNavLink>
+                </Text>
+              </ButtonLink>
             </RightItems>
           </InnerContent>
           {/* Mobile */}
@@ -457,6 +431,7 @@ const Nav: React.FC<IProps> = ({ path }) => {
             toggleMenu={handleMenuToggle}
             toggleTheme={toggleColorMode}
             linkSections={mobileLinkSections}
+            fromPageParameter={fromPageParameter}
           />
         </NavContent>
       </StyledNav>

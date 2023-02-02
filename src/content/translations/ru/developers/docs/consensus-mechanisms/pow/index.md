@@ -2,7 +2,6 @@
 title: Доказательство работы (PoW)
 description: Объяснение протокола доказательства работы и его роли в Ethereum.
 lang: ru
-sidebar: true
 incomplete: true
 ---
 

@@ -3,7 +3,6 @@ title: How to use Echidna to test smart contracts
 description: How to use Echidna to automatically test smart contracts
 author: "Trailofbits"
 lang: en
-sidebar: true
 tags: ["solidity", "smart contracts", "security", "testing", "fuzzing"]
 skill: advanced
 published: 2020-04-10
@@ -273,7 +272,7 @@ echidna_state4: failed!💥
     i()
 ```
 
-Echidna will find the sequence of transactions to falsify the property almost inmmediately.
+Echidna will find the sequence of transactions to falsify the property almost immediately.
 
 ### Summary: Filtering functions {#summary-filtering-functions}
 

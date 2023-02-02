@@ -1,3 +1,13 @@
 {
-  "page-upgrades-beacon-date": "Expediat!"
+  "page-upgrades-merge-infographic-el": "Starea Ethereum: tranzacții, aplicații, contracte, solduri",
+  "page-upgrades-merge-infographic-alt-text": "Infografic ilustrând felul în care Lanțul Beacon fuzionează în stratul de execuție Ethereum în timpul tranziției de la dovada muncii la dovada mizei.",
+  "page-upgrades-beacon-date": "Expediat!",
+  "page-upgrades-merge-date": "Septembrie 2022",
+  "page-upgrades-shards-date": "~2023",
+  "page-upgrades-merge-banner-intro": "Fuziunea se apropie și aduce modificările la Ethereum.",
+  "page-upgrades-merge-banner-content-outdated": "În ceea ce privește aceste modificări, o parte din conținutul paginii nu este actualizat. Actualizările vor fi disponibile curând.",
+  "page-upgrades-merge-banner-developers-landing": "Unele documente au un banner care indică faptul că nu sunt actualizate. Actualizări vor fi disponibile curând.",
+  "page-upgrades-post-merge-banner-tutorial-ood": "Acest tutorial nu este actualizat după fuziune și este posibil să nu funcționeze. Creează un PR dacă dorești să contribui.",
+  "page-upgrades-post-merge-banner-tutorial-light-node-ood": "Acest tutorial nu este actualizat după fuziune. Nodurile ușoare nu funcționează în prezent în dovada mizei, dar urmează a fi lansate curând.",
+  "page-upgrades-post-merge-banner-governance-ood": "O parte din conținutul acestei pagini nu este actualizat după fuziune. Creează un PR dacă dorești să contribui."
 }

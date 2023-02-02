@@ -2,7 +2,6 @@
 title: Hálózatok
 description: Egy áttekintő az Ethereum hálózatairól és hogy hol lehet tesztnet ethert (ETH) szerezni, hogy teszteld az alkalmazásaidat.
 lang: hu
-sidebar: true
 ---
 
 Mivel az Ethereum egy protokoll, ami azt jelenti, hogy több, a protokollnak megfelelő "hálózat" létezhet, amelyek nem lépnek kölcsönhatásba egymással.

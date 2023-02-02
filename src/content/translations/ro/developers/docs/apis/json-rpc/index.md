@@ -2,7 +2,6 @@
 title: API-ul JSON-RPC
 description: Un protocol de apelare de la distanță fără prevalidare (RPC) pentru clienții Ethereum.
 lang: ro
-sidebar: true
 ---
 
 Pentru ca o aplicație software să interacționeze cu blockchain-ul Ethereum (adică să citească date blockchain și/sau să trimită tranzacții către rețea), trebuie să se conecteze la un nod Ethereum.

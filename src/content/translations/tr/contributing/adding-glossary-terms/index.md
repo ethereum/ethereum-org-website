@@ -2,7 +2,6 @@
 title: Sözlük terimleri ekleme
 lang: tr
 description: Ethereum.org sözlüğüne yeni terimler ekleme kriterlerimiz
-sidebar: true
 ---
 
 # Sözlük terimleri ekleme {#contributing-to-ethereumorg-}

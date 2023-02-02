@@ -2,7 +2,6 @@
 title: Ethereum para desenvolvedores Go
 description: Aprenda a desenvolver para Ethereum usando projetos e ferramentas baseados no Go
 lang: pt-br
-sidebar: true
 incomplete: true
 ---
 
@@ -34,7 +33,7 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 ## Artigos e documentos de nível Intermediário {#intermediate-articles-and-docs}
 
 - [Documentação Ethereum em Go](https://geth.ethereum.org/docs/) - _A documentação da implementação oficial da Ethereum em Go_
-- [Guia do Programador Erigon](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) - \_Guia ilustrado, incluindo a árvore de estado, múltiplas provas e processamento de transações*
+- [Guia do Programador Erigon](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) - \_Guia ilustrado, incluindo a árvore de estado, múltiplas provas e processamento de transações\*
 - [Ethereum](https://youtu.be/3-Mn7OckSus?t=394) - _Conferência Comunitária da Ethereum da Erigon e sem estado, (EthCC 3)_
 - [Erigon: otimização de clientes Ethereum](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _2018 Devcon 4_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)

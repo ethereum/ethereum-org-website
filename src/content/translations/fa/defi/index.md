@@ -4,7 +4,6 @@ description: نگاهی کلی بر امور مالی غیرمتمرکز بر پ
 lang: fa
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../assets/use-cases/defi.png
 alt: لوگوی اتر ساخته‌شده از آجرهای لگو.
 sidebarDepth: 2
@@ -333,7 +332,6 @@ DeFi یک جنبش متن‌باز است. پروتکل‌ها و برنامه�
 
 ### داده‌های DeFi {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 

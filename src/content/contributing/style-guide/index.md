@@ -2,7 +2,6 @@
 title: Style Guide
 description: Style guide for ethereum.org
 lang: en
-sidebar: true
 ---
 
 # Ethereum.org style guide {#style-guide}
@@ -147,6 +146,19 @@ Proof-of-work should be capitalized at the beginning of a sentence. In any other
 
 The same rules we apply to proof-of-work are applicable to proof-of-stake, proof-of-authority, proof-of-humanity, proof-of-individuality, etc.
 
+### Smart contract {#smart-contract}
+
+Smart contract is a common noun and should only be capitalized at the beginning of a sentence. In any other instance, all letters should be lowercase.
+
+**Correct usage:**
+
+- Smart contract
+- smart contract
+
+** Incorrect usage:**
+
+- Smart Contract
+
 ### The Merge {#the-merge}
 
 When referring to The Merge, treat it as a proper noun. Always capitalize the first letter in each word.
@@ -159,6 +171,55 @@ When referring to The Merge, treat it as a proper noun. Always capitalize the fi
 
 - The merge
 - the Merge
+
+### Zero-knowledge {#zero-knowledge}
+
+Zero-knowledge is a common noun and should only be capitalized at the beginning of a sentence. In any other instance, all letters should be lowercase. In either case, zero-knowledge should be hyphenated between each word.
+
+**Correct usage:**
+
+- Zero-knowledge
+- zero-knowledge
+
+**Incorrect usage:**
+
+- Zero-Knowledge
+- Zero knowledge
+- zero knowledge
+
+### ZK-proof {#ZK-proof}
+
+When using the abbreviated form of zero-knowledge proof you should shorten zero-knowledge to ZK, and hyphenate the abbreviation.
+
+**Correct usage:**
+
+- ZK-proof
+
+**Incorrect usage:**
+
+- Zk-proof
+- zK-proof
+- zk-proof
+- Zk proof
+- zK proof
+- zk proof
+
+### ZK-rollup {#ZK-rollup}
+
+When using the abbreviated form of zero-knowledge rollup you should shorten zero-knowledge to ZK, and hyphenate the abbreviation.
+
+**Correct usage:**
+
+- ZK-rollup
+
+**Incorrect usage:**
+
+- Zk-rollup
+- zK-rollup
+- zk-rollup
+- Zk rollup
+- zK rollup
+- zk rollup
 
 ### Use active voice {#use-active-voice}
 
@@ -267,12 +328,12 @@ When citing articles from a specific author or organization, use the article's n
 <--- Good --->
 
 - [A rollup-centric ethereum roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) — _Vitalik Buterin_
-- [Oracles](https://docs.ethhub.io/built-on-ethereum/oracles/what-are-oracles/) – _EthHub_
+- [The History of Ethereum Testnets](https://consensys.net/blog/news/the-history-of-ethereum-testnets/) – _ConsenSys_
 
 <--- Bad--->
 
 - [A rollup-centric ethereum roadmap by Vitalik Buterin](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
-- [EthHub on Oracles](https://docs.ethhub.io/built-on-ethereum/oracles/what-are-oracles/) – _EthHub_
+- [ConsenSys on The History of Ethereum Testnets](https://consensys.net/blog/news/the-history-of-ethereum-testnets/) – _ConsenSys_
 ```
 
 ## Anything else? {#anything-else}

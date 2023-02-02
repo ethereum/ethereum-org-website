@@ -11,7 +11,6 @@ tags:
   - "contracte inteligente"
 skill: intermediate
 lang: ro
-sidebar: true
 published: 2020-12-31
 source: github.com
 sourceUrl: https://github.com/strykerin/DeFi-Token-Farm
@@ -479,4 +478,4 @@ _rezultatul comenzii „withdrawMyTokenFromTokenFarm.js”_
 
 [Ce este DeFi? Un ghid pentru începători (actualizat în 2021) (99bitcoins.com)](https://99bitcoins.com/what-is-defi/)
 
-[DeFi - Clasamentul finanțelor descentralizate la DeFi Pulse](https://defipulse.com/)
+[DeFi - Clasamentul finanțelor descentralizate la DeFi Llama](https://defillama.com/)

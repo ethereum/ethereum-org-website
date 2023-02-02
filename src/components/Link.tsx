@@ -9,11 +9,8 @@ import { BsQuestionSquareFill } from "react-icons/bs"
 
 import { Lang } from "../utils/languages"
 import { trackCustomEvent, EventOptions } from "../utils/matomo"
+import * as url from "../utils/url"
 import { Direction } from "../types"
-
-const HASH_PATTERN = /^#.*/
-
-const isHashLink = (to: string): boolean => HASH_PATTERN.test(to)
 
 export interface IBaseProps {
   to?: string
@@ -22,6 +19,7 @@ export interface IBaseProps {
   hideArrow?: boolean
   isPartiallyActive?: boolean
   customEventOptions?: EventOptions
+  activeStyle?: object
 }
 
 export interface IProps extends IBaseProps, LinkProps {
@@ -52,6 +50,7 @@ const Link: React.FC<IProps> = ({
   hideArrow = false,
   isPartiallyActive = true,
   customEventOptions,
+  activeStyle = null,
   ...restProps
 }) => {
   const theme = useTheme()
@@ -60,11 +59,11 @@ const Link: React.FC<IProps> = ({
   // this is to support the ButtonLink component which uses the `to` prop
   const to = (toProp || href)!
 
-  const isExternal = to.includes("http") || to.includes("mailto:")
-  const isHash = isHashLink(to)
-  const isGlossary = to.includes("glossary") && to.includes("#")
-  const isStatic = to.includes("static")
-  const isPdf = to.includes(".pdf")
+  const isExternal = url.isExternal(to)
+  const isHash = url.isHash(to)
+  const isGlossary = url.isGlossary(to)
+  const isStatic = url.isStatic(to)
+  const isPdf = url.isPdf(to)
 
   const eventOptions: EventOptions = {
     eventCategory: `External link`,
@@ -125,7 +124,7 @@ const Link: React.FC<IProps> = ({
       as={IntlLink}
       language={language}
       partiallyActive={isPartiallyActive}
-      activeStyle={{ color: theme.colors.primary }}
+      activeStyle={activeStyle ? activeStyle : { color: theme.colors.primary }}
       whiteSpace={isGlossary ? "nowrap" : "normal"}
       {...commonProps}
     >

@@ -1,45 +1,44 @@
 ---
 title: Testare i token ERC-20 con Waffle
-description: Scopri come testare gli smart contract di Solidity e usare gli abbinatori di smart contract con Waffle.
+description: Scopri come testare i contratti intelligenti di Solidity e usa gli abbinatori di contratti intelligenti con Waffle.
 author: Vladislav Starostenko
 tags:
   - "waffle"
-  - "smart contract"
+  - "Smart Contract"
   - "Solidity"
   - "test"
   - "erc-20"
 skill: intermediate
 lang: it
-sidebar: true
 published: 2020-10-16
 ---
 
 In questo tutorial imparerai come:
 
-- Scrivere test per gli smart contract con Waffle
-- Usare alcuni abbinatori popolari per testare gli smart contract con Waffle
+- Scrivere test per i contratti intelligenti con Waffle
+- Usare alcuni abbinatori popolari per testare i contratti intelligenti con Waffle
 
 Premesse:
 
-- Sai muoverti in un terminale
-- Sai creare un nuovo progetto `JavaScript`
-- Hai già scritto qualche riga di codice in `Solidity`
-- Hai già scritto qualche test in `JavaScript`
-- Hai già usato `yarn` o `npm`, l'installatore di pacchetti di JavaScript
+- sai muoverti in un terminale,
+- sai creare un nuovo progetto `JavaScript`,
+- hai scritto alcune righe di codice in `Solidity`,
+- hai scritto qualche test in `JavaScript`,
+- hai usato `yarn` o `npm`, installatore di pacchetti di JavaScript.
 
-Ancora una volta, se alcune di queste premesse non sono vere o se non desideri riprodurre il codice in questo articolo, probabilmente puoi comunque seguirlo senza problemi.
+Ancora, se alcune di queste premesse sono false o non desideri riprodurre il codice in questo articolo, puoi probabilmente seguirlo ancora e senza problemi.
 
 ## Qualche parola su Waffle {#a-few-words-about-waffle}
 
-[Waffle](https://getwaffle.io) è la libreria più avanzata per scrivere e testare gli smart contract.
+[Waffle](https://getwaffle.io) è la libreria più avanzata per scrivere e testare i contratti intelligenti.
 
-Lavora con ethers-js dell'[API di JavaScript](/developers/docs/apis/javascript/).
+Opera con ethers-js dell'[API di JavaScript](/developers/docs/apis/javascript/).
 
 Puoi leggere maggiori dettagli nella [documentazione di Waffle](https://ethereum-waffle.readthedocs.io/en/latest/#waffle-documentation)!
 
 ## Tutorial rapido {#the-quick-tutorial}
 
-Per prima cosa, crea un nuovo progetto `JavaScript` o `TypeScript` (qui userò `TS`, ma se usi `JS` non è un problema ):
+Per prima cosa, crea un nuovo progetto `JavaScript` o `TypeScript` (Userò `TS`, ma se usi `JS` non è un problema ):
 
 Qualcosa del genere:
 
@@ -650,7 +649,7 @@ Per iniziare, installa `ethereum-waffle`. In questo tutorial userò `yarn`, quin
  yarn add --dev ethereum-waffle
 ```
 
-## Fase #2: Scrivi uno smart contract [Link alla documentazione](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-a-contract) {#step-2-write-a-smart-contract}
+## Fase #2: Scrivere un contratto intelligente [Link alla documentazione](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-a-contract) {#step-2-write-a-smart-contract}
 
 In questo tutorial, userò un token [ERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/ded2b0a55c9c13731963ab7b85a70c8e73504bab/contracts/token/ERC20/ERC20.sol) da [OpenZeppelin](https://openzeppelin.com).
 
@@ -660,7 +659,7 @@ Quindi, aggiungi `OpenZeppelin` installandolo con `yarn`:
  yarn add @openzeppelin/contracts -D
 ```
 
-A questo punto, crea il contratto `BasicToken.sol` nella cartella `src`:
+Poi, crea il contratto `BasicToken.sol` nella cartella `src`:
 
 ```solidity
 pragma solidity ^0.6.0;
@@ -676,9 +675,9 @@ contract BasicToken is ERC20 {
 
 ```
 
-## Fase #3: Compila il tuo smart contract [Link alla documentazione](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#compiling-the-contract) {#step-3-compile-your-smart-contract}
+## Fase #3: Compila il tuo contratto intelligente [Link alla documentazione](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#compiling-the-contract) {#step-3-compile-your-smart-contract}
 
-Per compilare il tuo smart contract, aggiungi la seguente voce nel `package.json` del tuo progetto:
+Per compilare il tuo contratto intelligente, aggiungi la seguente voce nel `package.json` del tuo progetto:
 
 ```json
 {
@@ -703,7 +702,7 @@ Un esempio della configurazione di `waffle.json`:
 
 Puoi leggere di più sulla configurazione di Waffle [qui](https://ethereum-waffle.readthedocs.io/en/latest/configuration.html#configuration).
 
-Quindi basta eseguire `yarn build` per compilare il tuo smart contract.
+Poi basta eseguire `yarn build` per compilare il tuo contratto intelligente.
 
 Dovresti vedere che Waffle ha compilato il tuo contratto e posizionato l'output JSON risultante nella cartella `build`.
 
@@ -1008,13 +1007,13 @@ Dovresti vedere che Waffle ha compilato il tuo contratto e posizionato l'output 
 
 </details>
 
-## Fase #4: Testa il tuo smart contract [Link alla documentazione](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) {#step-4-test-your-smart-contract}
+## Fase #4: Testa il tuo contratto intelligente [Link alla documentazione](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) {#step-4-test-your-smart-contract}
 
-### Fase #4.1 Installa le dipendenze necessarie [Link alla documentazione](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) {#step-4-1}
+### Fase #4.1 Installa le dipendenze necessaria [Link alla documentazione](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) {#step-4-1}
 
-Dopo aver autorizzato con successo uno smart contract, possiamo testarlo. Useremo `Waffle` per farlo.
+Dopo aver autorizzato con successo un contratto intelligente, possiamo testarlo. Useremo `Waffle` per farlo.
 
-I test con `Waffle` sono scritti usando `Mocha` insieme a `Chai`. Possiamo usare un diverso ambiente di test, ma gli abbinatori di `Waffle` funzionano solo con `Chai`.
+I test con `Waffle` sono scritti usando `Mocha` insieme a `Chai`. Possiamo usare un ambiente di test diverso, ma gli abbinatori di `Waffle` funzionano solo con `Chai`.
 
 Quindi, dobbiamo aggiungere `Chai` alle nostre dipendenze:
 
@@ -1024,7 +1023,7 @@ Quindi, dobbiamo aggiungere `Chai` alle nostre dipendenze:
 
 ### Fase #4.2 Crea il file di test [Link alla documentazione](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) {#step-4-2}
 
-Per scrivere il test dobbiamo creare il file `BasicToken.test.ts` nella nostra cartella di prova.
+Per scrivere il nostro test dobbiamo creare il file `BasicToken.test.ts` nella nostra cartella di prova.
 
 ```ts
 import { expect, use } from "chai"
@@ -1044,13 +1043,13 @@ describe("BasicToken", () => {
 })
 ```
 
-Quindi, usiamo il metodo `deployContract` da `Waffle` per distribuire il nostro token. A livello di argomenti, dovremmo passare `wallet`, il file json compilato del nostro contratto e il saldo predefinito.
+Quindi, usiamo il metodo `deployContract` di `Waffle` per distribuire il nostro token. Come argomenti dovremmo passare `wallet`, il file json compilato del nostro contratto e il saldo predefinito.
 
-`Waffle` ci consente inoltre di creare un `wallet`, che rende davvero semplice la distribuzione di un contratto.
+`Waffle` ci consente inoltre di creare un `wallet`, il che rende davvero semplice la distribuzione di un contratto.
 
 Puoi leggere di più sul `wallet` [qui](https://ethereum-waffle.readthedocs.io/en/latest/basic-testing.html?highlight=wallet#getting-wallets) e puoi leggere di più sulla funzione di distribuzione [qui](https://ethereum-waffle.readthedocs.io/en/latest/basic-testing.html?highlight=wallet#deploying-contracts).
 
-Scriviamo un test semplice per controllare il saldo del nostro portafoglio. Poiché abbiamo inviato il valore 1000 durante la distribuzione del nostro contratto, il saldo del portafoglio dev'essere 1000 token, che possiamo verificare nel primo test.
+Scriviamo un test semplice per controllare il saldo del nostro portafoglio. Poiché abbiamo inviato il valore 1000 durante la distribuzione del nostro contratto, il saldo del nostro portafoglio dev'essere 1000 token, che possiamo verificare nel primo test.
 
 ```ts
 it("Assigns initial balance", async () => {
@@ -1058,13 +1057,13 @@ it("Assigns initial balance", async () => {
 })
 ```
 
-Per eseguire il test usa `yarn test`
+Per eseguire il test, usa `yarn test`
 
 ### Fase #4.3 Emettere eventi [Link alla documentazione](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#emitting-events) {#step-4-3}
 
-In questo tutorial, voglio mostrarti gli abbinatori di `Waffle` più utili. Iniziamo con il primo.
+In questo tutorial, voglio mostrarti gli abbinatori di `Waffle` più utili, iniziamo con il primo.
 
-`Waffle` ci consente di testare quali eventi sono stati emessi.
+`Waffle` ci consente di testare che eventi sono emessi.
 
 In questo tutorial, testerò il metodo `transfer` del nostro contratto.
 
@@ -1080,15 +1079,15 @@ it("Transfer emits event", async () => {
 
 Inoltre, un grande vantaggio di questo abbinatore è che possiamo controllare quali argomenti sono stati chiamati da quest'evento aggiungendo `withArgs` al nostro test.
 
-Questo ci consentirà di esser sicuri che la funzione venga chiamata correttamente!
+Questo ci consentirà di esser sicuri che la nostra funzione stia venendo chiamata correttamente!
 
 ### Fase #4.4 Ripristino con il messaggio [Link alla documentazione](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#revert-with-message) {#step-4-4}
 
-`Waffle` ci consente di testare con quale messaggio ha avuto luogo il ripristino.
+`Waffle` ci consente di testare con che messaggio è stato ripristinato.
 
-Per questa verifica useremo l'abbinatore `revertedWith` nel nostro test.
+Useremo l'abbinatore `revertedWith` nel nostro test per controllarlo.
 
-Possiamo scrivere un test in cui eseguiremo un trasferimento per un importo maggiore di quello presente nel nostro portafoglio. Dopodiché controlleremo se la transazione è stata invertita con il messaggio corretto!
+Possiamo scrivere un test in cui eseguiremo un trasferimento per un importo maggiore di quanto abbiamo nel nostro portafoglio. E poi controlleremo se la transazione è tornata con il messaggio esatto!
 
 ```ts
 it("Impossibile trasferire oltre l'importo", async () => {
@@ -1098,13 +1097,13 @@ it("Impossibile trasferire oltre l'importo", async () => {
 })
 ```
 
-### Fase #4.5 Saldo di cambio del token [Link alla documentazione](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#change-balance) {#step-4-5}
+### Fase #4.5 Cambiamento del saldo dei token [Link alla documentazione](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#change-balance) {#step-4-5}
 
 `Waffle` ci consente di verificare le modifiche ai saldi dei portafogli!
 
 Possiamo usare l'abbinatore `changeTokenBalance` per controllare il cambiamento del saldo o `changeTokenBalances` per un conto multiplo.
 
-L'abbinatore può accettare `numbers`, `strings` e `BigNumbers` come cambiamento del saldo, mentre l'indirizzo dovrebbe essere specificato come portafoglio o contratto.
+L'abbinatore può accettare `numbers`, `strings` e `BigNumbers` come cambiamento di un saldo, mentre l'indirizzo dovrebbe esser specificato come un portafoglio o un contratto.
 
 Scriviamo il prossimo test:
 
@@ -1116,7 +1115,7 @@ it("Invia cambiamenti della transazione del saldo del destinatario", async () =>
 })
 ```
 
-Quanto sopra è un test per un solo portafoglio.
+Quanto sopra è un test per un singolo portafoglio.
 
 E il successivo per più portafogli:
 
@@ -1128,12 +1127,12 @@ it("Invia cambiamenti della transazione saldi mittente e destinatario", async ()
 })
 ```
 
-La transazione dovrebbe passare come callback (dobbiamo controllare il saldo prima della chiamata) o come risposta della transazione.
+La transazione dovrebbe passare come callback (dobbiamo controllare il saldo prima della chiamata) o come una risposta della transazione.
 
 ## Congratulazioni {#congratulations}
 
-**Congratulazioni! Sei arrivato in fondo al tutorial. Hai fatto il tuo primo grande passo verso la verifica degli smart contract con Waffle.**
+**Congratulazioni! Hai concluso il mio tutorial. Hai fatto il tuo primo grande passo verso i contratti intelligenti con Waffle.**
 
-**Il codice relativo a questo tutorial è disponibile [qui](https://github.com/VladStarostenko/tutorial-for-ethereum-org-website).**
+**Il codice da questo tutorial si può trovare [qui](https://github.com/VladStarostenko/tutorial-for-ethereum-org-website).**
 
-**Altra documentazione su `Waffle` disponibile [qui](https://getwaffle.io).**
+**Altra documentazione su `Waffle` è disponibile [qui](https://getwaffle.io).**

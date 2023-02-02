@@ -1,7 +1,6 @@
 ---
 title: Обучение
 lang: ru
-sidebar: true
 ---
 
 # Узнайте больше о Ethereum {#learn-about-ethereum}

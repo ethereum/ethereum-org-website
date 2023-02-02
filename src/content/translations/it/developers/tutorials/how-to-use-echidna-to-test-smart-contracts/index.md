@@ -3,7 +3,6 @@ title: Come usare Echidna per testare gli smart contract
 description: Come usare Echidna per testare automaticamente gli smart contract
 author: "Trailofbits"
 lang: it
-sidebar: true
 tags:
   - "Solidity"
   - "smart contract"
@@ -547,7 +546,7 @@ Questa volta, ha scoperto che la proprietà è immediatamente violata.
 
 ## Individuare le transazioni ad alto consumo di gas {#finding-transactions-with-high-gas-consumption}
 
-Vedremo come individuare le transazioni con un alto consumo di carburante con Echidna. L'obiettivo è il seguente smart contract:
+Vedremo come individuare le transazioni con un alto consumo di gas con Echidna. L'obiettivo è il seguente smart contract:
 
 ```solidity
 contract C {
@@ -584,9 +583,9 @@ echidna_test: passed! 🎉
 Seed: 2320549945714142710
 ```
 
-### Misurare il consumo di carburante {#measuring-gas-consumption}
+### Misurare il Consumo di Gas {#measuring-gas-consumption}
 
-Per abilitare il consumo di carburante con Echidna, crea un file di configurazione `config.yaml`:
+Per abilitare il consumo di gas con Echidna, crea un file di configurazione `config.yaml`:
 
 ```yaml
 estimateGas: true
@@ -620,7 +619,7 @@ Seed: -325611019680165325
 
 - Il gas mostrato è una stima fornita da [HEVM](https://github.com/dapphub/dapptools/tree/master/src/hevm#hevm-).
 
-### Filtrare le chiamate di riduzione del carburante {#filtering-out-gas-reducing-calls}
+### Filtrare le Chiamate di Riduzione del Gas {#filtering-out-gas-reducing-calls}
 
 Il tutorial precedente sulle **funzioni di filtraggio da chiamare durante una campagna di fuzzing**, mostra come rimuovere alcune funzioni dal tuo test.  
 Questo può esser critico per ottenere una stima accurata del gas. Considera l'esempio seguente:
@@ -678,7 +677,7 @@ push used a maximum of 40839 gas
 check used a maximum of 1484472 gas
 ```
 
-### Sommario: Trovare transazioni ad alto consumo di gas {#summary-finding-transactions-with-high-gas-consumption}
+### Sommario: Individuare le transazioni ad alto consumo di gas {#summary-finding-transactions-with-high-gas-consumption}
 
 Echidna può trovare le transazioni ad alto consumo di gas usando l'opzione di configurazione `estimateGas`:
 

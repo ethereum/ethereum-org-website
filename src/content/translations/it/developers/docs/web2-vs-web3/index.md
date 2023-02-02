@@ -2,12 +2,11 @@
 title: Web2 e Web3
 description:
 lang: it
-sidebar: true
 ---
 
 Web2 si riferisce alla versione di Internet che la maggior parte di noi conosce attualmente. Una rete dominata da aziende che offrono servizi in cambio dei dati personali. Il Web3, nel contesto di Ethereum, si riferisce alle app decentralizzate che vengono eseguite sulla blockchain. Queste app consentono a chiunque di partecipare senza monetizzare i propri dati personali.
 
-Stai cercando una risorsa più adatta ai principianti? Consulta la nostra [introduzione al web3](/web3/).
+Stai cercando una risorsa più adatta ai principianti? Visualizza la nostra [introduzione al web3](/web3/).
 
 ## Vantaggi del Web3 {#web3-benefits}
 
@@ -16,13 +15,13 @@ Molti sviluppatori Web3 hanno deciso di sviluppare dApp per via della decentrali
 - Chiunque sia in rete ha il permesso di utilizzare il servizio. In altre parole, non serve chiedere un permesso.
 - Nessuno può bloccare un utente o impedirgli l'accesso al servizio.
 - I pagamenti sono incorporati tramite il token nativo, ether (ETH).
-- Ethereum è Turing completa, significa che puoi programmare praticamente qualsiasi cosa.
+- Ethereum è Turing completa, a significare che puoi programmare praticamente qualsiasi cosa.
 
 ## Confronti pratici {#practical-comparisons}
 
 | Web2                                                                                                                           | Web3                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Twitter può censurare qualsiasi account o tweet                                                                                | I tweet Web3 sarebbero incensurabili perché il controllo è decentralizzato                                                                                              |
+| Twitter può censurare qualsiasi conto o tweet                                                                                  | I tweet Web3 sarebbero incensurabili perché il controllo è decentralizzato                                                                                              |
 | Il servizio di pagamento potrebbe decidere di non consentire determinati tipi di lavoro                                        | Le app di pagamento Web3 non richiedono dati personali e non possono impedire pagamenti                                                                                 |
 | I server delle app della gig-economy potrebbero non essere disponibili temporaneamente e influenzare il reddito dei lavoratori | Su Web3 non si può verificare una situazione di non disponibilità dei server: usano Ethereum, una rete decentralizzata con migliaia di computer che agiscono da backend |
 
@@ -32,7 +31,7 @@ Questo non significa che tutti i servizi debbano essere trasformati in dApp. Que
 
 Al momento, il Web3 presenta alcune limitazioni:
 
-- Scalabilità - Le transazioni sono più lente sul web3 perché sono decentralizzate. Cambiamenti dello stato, come i pagamenti, devono essere elaborati da un miner e propagati a tutta la rete.
+- Scalabilità - Le transazioni sono più lente sul web3 perché sono decentralizzate. Le modifiche allo stato, come un pagamento, devono esser elaborate da un nodo e propagate per la rete.
 - UX - L'interazione con applicazioni web3 può richiedere passaggi, software e formazione aggiuntivi. Questo può essere un ostacolo all'adozione.
 - Accessibilità: la mancanza di integrazione nei browser web moderni rende web3 meno accessibile a gran parte degli utenti.
 - Costo - Per via del costo elevato, le dapp di maggior successo mettono porzioni piccole del loro codice sulla blockchain.

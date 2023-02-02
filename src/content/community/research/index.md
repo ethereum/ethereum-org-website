@@ -1,7 +1,6 @@
 ---
 title: Active areas of Ethereum research
 description: Explore different areas of open research and learn how to get involved.
-sidebar: true
 lang: en
 ---
 
@@ -15,7 +14,7 @@ Ethereum research is open and transparent, embodying principles of [Decentralize
 
 ## General research resources {#general-research-resources}
 
-Regardless of the specific topic, there is a wealth of information on Ethereum research to be found at [ethresear.ch](https://ethresear.ch) and the [Eth R&D Discord channel](https://discord.gg/n7JxAeRu). These are the primary places where Ethereum researchers discuss the latest ideas and development opportunities.
+Regardless of the specific topic, there is a wealth of information on Ethereum research to be found at [ethresear.ch](https://ethresear.ch) and the [Eth R&D Discord channel](https://discord.gg/qGpsxSA). These are the primary places where Ethereum researchers discuss the latest ideas and development opportunities.
 
 This report published in May 2022 by [DelphiDigital](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum) provides a good overview of the Ethereum roadmap.
 
@@ -54,7 +53,7 @@ As well as forward-looking research, some fundamental redesigns of the protocol,
 
 ### Execution {#execution}
 
-The execution layer is concerned with executing transactions, running the [Ethereum virtual machine (EVM)](/developers/docs/evm/) and generating execution payloads to pass to the consensus layer. There are many active areas of research, especially as execution clients are getting updated in anticipation of [The Merge](/upgrades/merge/). Active areas of research include:
+The execution layer is concerned with executing transactions, running the [Ethereum virtual machine (EVM)](/developers/docs/evm/) and generating execution payloads to pass to the consensus layer. There are many active areas of research, including:
 
 - building out light client support;
 - researching gas limits;
@@ -82,7 +81,7 @@ Ethereum clients are implementations of the Ethereum protocol. Client developmen
 An Ethereum node is required to run two pieces of software:
 
 1. a consensus client to keep track of the head of the blockchain, gossip blocks and handle consensus logic
-2. an execution client to support the Ethereum Virtual Machine and execute transactions.
+2. an execution client to support the Ethereum Virtual Machine and execute transactions and smart contracts
 
 See the [nodes and clients page](/developers/docs/nodes-and-clients/) for more detail on nodes and clients and for a list of all current client implementations. You can also find a history of all Ethereum upgrades on the [history page](/history/).
 
@@ -107,7 +106,6 @@ There are now several Layer 2 protocols that scale Ethereum using different tech
 #### Background reading {#background-reading-2}
 
 - [Introduction to layer 2](/layer-2/)
-- [EthHub Layer 2](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 - [Polynya: Rollups, DA and modular chains](https://polynya.medium.com/rollups-data-availability-layers-modular-blockchains-introductory-meta-post-5a1e7a60119d)
 
 #### Recent research {#recent-research-2}
@@ -254,7 +252,7 @@ Blockspace markets govern the inclusion of end-user transactions, either directl
 
 ### Proof-of-stake incentives {#proof-of-stake-incentives}
 
-When Ethereum transitions to proof-of-stake, validators will use its native asset (ether) as collateral. The cryptoeconomics of this determines the security of the network. Sophisticated validators may be able to exploit the nuances of the incentive layer to launch explicit attacks.
+Validators use Ethereum's native asset (ether) as collateral against dishonest behaviour. The cryptoeconomics of this determines the security of the network. Sophisticated validators may be able to exploit the nuances of the incentive layer to launch explicit attacks.
 
 #### Background reading {#background-reading-11}
 

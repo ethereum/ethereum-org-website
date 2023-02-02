@@ -2,7 +2,6 @@
 title: Introduction à Ethereum
 description: Introduction aux concepts fondamentaux d'Ethereum pour les développeurs de DApp.
 lang: fr
-sidebar: true
 ---
 
 ## Qu'est-ce qu'une blockchain ? {#what-is-a-blockchain}

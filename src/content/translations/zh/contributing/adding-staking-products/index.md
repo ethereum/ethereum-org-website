@@ -2,7 +2,6 @@
 title: 添加质押产品或服务
 description: 将质押产品或服务添加到 ethereum.org 时适用的政策
 lang: zh
-sidebar: true
 ---
 
 # 添加质押产品或服务 {#adding-staking-products-or-services}
@@ -147,7 +146,7 @@ sidebar: true
 
 **支持哪些用户界面？**
 
-- 例如： 浏览器应用程序、桌面应用程序、移动应用程序、CLI
+- 例如 浏览器应用程序、桌面应用程序、移动应用程序、CLI
 
 **对于节点工具，软件是否提供了在客户端之间轻松切换的方法？**
 

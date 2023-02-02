@@ -2,7 +2,6 @@
 title: ERC-721 Nicht-fungibler Token-Standard
 description:
 lang: de
-sidebar: true
 ---
 
 ## Einführung {#introduction}

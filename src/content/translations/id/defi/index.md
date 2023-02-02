@@ -4,7 +4,6 @@ description: Gambaran umum tentang DeFi di Ethereum
 lang: id
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../assets/use-cases/defi.png
 alt: Logo Eth yang terbuat dari batu bata lego.
 sidebarDepth: 2
@@ -333,7 +332,6 @@ DeFi adalah gerakan sumber terbuka. Anda bisa memeriksa, melakukan fork, dan ber
 
 ### Data DeFi {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 

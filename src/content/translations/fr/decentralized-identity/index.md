@@ -4,7 +4,6 @@ description: Qu’est-ce que l’identité décentralisée et pourquoi est-ce im
 lang: fr
 template: use-cases
 emoji: ":id:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/eth-gif-cat.png
 summaryPoint1: Les systèmes traditionnels d'identité centralisent l'émission, le maintien et le contrôle de vos identifiants.
@@ -176,7 +175,7 @@ Il existe de nombreux projets ambitieux utilisant Ethereum comme base pour des s
 - [Identité décentralisée (Bonus Session Livestream)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Une formidable vidéo explicative sur l'identité décentralisée par Andreas Antonopolous_
 - [Connexion avec Ethereum et Decentralized Identity avec Ceramic, IDX, React, et 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _tutoriel YouTube sur la création d'un système de gestion d'identité pour créer, lire et mettre à jour un profil d'utilisateur en utilisant son portefeuille Ethereum par Nader Dabit_
 - [BrightID - Identité décentralisée sur Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Épisode de podcast non bancaire parlant de BrightID, une solution d'identité décentralisée pour Ethereum_
-- [The Off Chain Internet : Identités décentralisées & Références vérifiables](https://www.youtube.com/watch?v=Ez_Bb6j87mg) — _Présentation EthDenver 2022 par Evin McMullen_
+- [The Off Chain Internet : Identités décentralisées & Références vérifiables](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — _Présentation EthDenver 2022 par Evin McMullen_
 
 ### Communautés {#communities}
 

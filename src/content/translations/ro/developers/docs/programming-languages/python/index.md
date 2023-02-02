@@ -2,7 +2,6 @@
 title: Ethereum pentru dezvoltatorii Python
 description: Învățați cum să faceţi dezvoltare pentru Ethereum folosind proiecte şi instrumente bazate pe pzthon
 lang: ro
-sidebar: true
 incomplete: true
 ---
 
@@ -65,7 +64,7 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 ### Arhivate/Neîntreținute: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _client Python Ethereum_
-- [Mamba](https://mamba.black) - _framework pentru a scrie, compila și implementa contractele inteligente scrise în limbajul Vyper_
+- [Mamba](https://github.com/arjunaskykok/mamba) - _framework pentru a scrie, compila și implementa contractele inteligente scrise în limbajul Vyper_
 
 Căutaţi şi alte resurse? Accesaţi [ethereum.org/developers.](/developers/).
 

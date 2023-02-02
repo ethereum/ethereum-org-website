@@ -2,7 +2,6 @@
 title: 翻译计划常见问题 (FAQ)
 lang: zh
 description: 关于 ethereum.org 翻译计划的常见问题
-sidebar: true
 ---
 
 # ethereum.org 翻译指南 {#translating-ethereum-guide}

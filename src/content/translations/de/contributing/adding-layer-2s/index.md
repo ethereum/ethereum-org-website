@@ -2,7 +2,6 @@
 title: Layer 2s hinzufügen
 description: Regeln zum Hinzufügen einer Ebene 2 zu ethereum.org
 lang: de
-sidebar: true
 ---
 
 # Ebene 2s hinzufügen {#adding-layer-2}
@@ -13,10 +12,9 @@ Jeder kann vorschlagen, eine Ebene 2 auf ethereum.org hinzuzufügen. Wenn es ein
 
 Wir listen derzeit L2s auf den folgenden Seiten auf:
 
-- [Optimistic Rollups](/developers/docs/scaling/optimistic-rollups/)
+- [Optimistische Rollups](/developers/docs/scaling/optimistic-rollups/)
 - [Zero-Knowledge Rollups](/developers/docs/scaling/zk-rollups/)
-- [Statuskanäle](/developers/docs/scaling/state-channels/)
-<!-- TODO: Add layer-2 page -->
+- [Ebene 2](/layer-2/)
 
 Ebene 2 ist ein relativ neues Thema für Ethereum und bietet eine spannende Entwicklung. Wir haben versucht, ein gerechtes Framework für Überlegungen auf ethereum.org zu schaffen. Allerdings werden sich die Kriterien für die Auflistung im Laufe der Zeit verändern und weiterentwickeln.
 
@@ -37,11 +35,14 @@ Ebene 2 ist ein relativ neues Thema für Ethereum und bietet eine spannende Entw
 
 Derzeit berücksichtigen wir Folgendes für Ebene-2-Lösungen:
 
-- Optimistic Rollup
+- Optimistische Rollups
 - Zero-Knowledge Rollup
-- Statuskanäle
 
-_Andere Skalierungslösungen betrachten wird nicht als Ebene 2._
+_Wir betrachten andere Skalierungslösungen, die nicht Ethereum für Datenverfügbarkeit oder -sicherheit nutzen, nicht als Ebene 2._
+
+**Ethereum für Datenverfügbarkeit**
+
+- Datenverfügbarkeit ist ein wichtiger Differenzierungsfaktor zwischen anderen Skalierungslösungen und Ebene 2. Ein Projekt **muss** das Ethereum Mainnet für Datenverfügbarkeit nutzen, um für ein Listing berücksichtigt zu werden.
 
 **Bridges**
 
@@ -53,15 +54,15 @@ _Andere Skalierungslösungen betrachten wird nicht als Ebene 2._
 
 **Externes Sicherheitsaudit**
 
-- Die Sicherheit Ihres Produkts muss zuverlässig gestestet werden, ob durch ein Audit, internes Sicherheitsteam oder eine andere Methode. So lässt sich das Risiko für unsere Nutzerinnen und Nutzer verringern. Zudem ist das ein Zeichen für die Ernsthaftigkeit eines Produkts.
+- Die Sicherheit Ihres Produkts muss zuverlässig getestet werden, ob durch ein Audit, ein internes Sicherheitsteam oder eine andere Methode. So lässt sich das Risiko für unsere Nutzerinnen und Nutzer verringern. Zudem ist das ein Zeichen dafür, dass Sie Sicherheit ernst nehmen.
 
 **Dauerhafte Nutzerbasis**
 
-- Wir berücksichtigen Kennzahlen wie den TVL-Verlauf, Transaktionsstatistiken und die Frage, ob eine Nutzung durch bekannte Unternehmen oder Projekte erfolgt.
+- Wir berücksichtigen Kennzahlen wie den TVL-Verlauf, Transaktionsstatistiken und die Frage, ob eine Nutzung durch bekannte Unternehmen oder Projekte erfolgt
 
 **Aktives Entwicklungsteam**
 
-- Es werden keine Ebenen 2 aufgelistet, für die kein Team aktiv am Projekt arbeitet.
+- Es wird keine Ebene 2 aufgelistet, für die kein Team aktiv am Projekt arbeitet.
 
 **Block Explorer**
 

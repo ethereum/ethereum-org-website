@@ -4,7 +4,6 @@ description: Обзор DeFi на Ethereum
 lang: ru
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../assets/use-cases/defi.png
 alt: Логотип Eth, сложенный из деталей Лего.
 sidebarDepth: 2
@@ -333,7 +332,6 @@ DeFi — это движение с открытым исходным кодом
 
 ### Данные о DeFi {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 

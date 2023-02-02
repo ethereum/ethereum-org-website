@@ -3,20 +3,19 @@ title: Registrare dati dagli Smart Contract con gli eventi
 description: Introduzione agli eventi degli Smart Contract e come usarli per registrare dati
 author: "jdourlens"
 tags:
-  - "Smart Contract"
+  - "smart contract"
   - "remix"
-  - "Solidity"
+  - "solidity"
   - "eventi"
 skill: intermediate
 lang: it
-sidebar: true
 published: 2020-04-03
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/logging-data-with-events/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-In Solidity, gli [eventi](/developers/docs/smart-contracts/anatomy/#events-and-logs) sono segnali inviati che possono essere attivati dagli Smart Contract. Le dapp, o altri elementi connessi all'API JSON-RPC di Ethereum, possono attendere questi eventi e agire di conseguenza. Gli eventi sono anche indicizzabili così che la cronologia dell'evento sia ricercabile in seguito.
+In Solidity, gli [eventi](/developers/docs/smart-contracts/anatomy/#events-and-logs) sono segnali inviati che possono essere attivati dagli Smart Contract. Le dapp, o qualsiasi cosa sia connessa all'API di JSON-RPC di Ethereum, possono ascoltare questi eventi e agire di conseguenza. Gli eventi sono anche indicizzabili così che la cronologia dell'evento sia ricercabile in seguito.
 
 ## Eventi {#events}
 

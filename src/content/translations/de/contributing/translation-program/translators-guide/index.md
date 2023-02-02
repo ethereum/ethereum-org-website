@@ -2,7 +2,6 @@
 title: Übersetzungsleitfaden
 lang: de
 description: Anweisungen und Tipps für ethereum.org-Übersetzer
-sidebar: true
 ---
 
 # Übersetzungsleitfaden von ethereum.org {#style-guide}
@@ -83,27 +82,41 @@ Im Folgenden finden Sie einige Beispiele dafür, wie diese Zeichenfolgen für Ü
 
 ### Crowdin-Warnungen {#crowdin-warnings}
 
-Crowdin verfügt über eine eingebaute Funktion, die Übersetzer warnt, wenn sie im Begriff sind, einen Fehler zu machen. Wenn Sie eine Übersetzung vorschlagen und vergessen, ein Tag aus dem Quelltext einzufügen, Sie Elemente übersetzen, die nicht übersetzt werden sollten, mehrere aufeinanderfolgende Leerzeichen einfügen, die Zeichensetzung am Ende vergessen usw., weist Crowdin Sie automatisch vor dem Speichern der Übersetzung auf den Fehler hin. Wenn Sie eine solche Warnung sehen, gehen Sie zurück und überprüfen Sie die vorgeschlagene Übersetzung nochmals.
+Crowdin verfügt über eine eingebaute Funktion, die Übersetzer warnt, wenn sie im Begriff sind, einen Fehler zu machen. Crowdin warnt Sie automatisch, bevor Sie Ihre Übersetzung speichern, wenn Sie vergessen, ein Tag aus der Quelle einzubinden, Elemente übersetzen, die nicht übersetzt werden sollten, mehrere aufeinander folgende Leerzeichen hinzufügen, Ende-Satzzeichen vergessen usw. Wenn Sie eine solche Warnung sehen, gehen Sie zurück und überprüfen Sie die vorgeschlagene Übersetzung nochmals.
 
 **Ignorieren Sie diese Warnungen nicht, denn sie bedeuten in der Regel, dass etwas falsch ist oder dass in der Übersetzung ein wichtiger Teil des Ausgangstextes fehlt.**
 
-Ein Beispiel für eine Crowdin-Warnung, wenn Sie vergessen, ein Tag zur Übersetzung hinzuzufügen: ![Beispiel für eine Crowdin-Warnung.png](./crowdin-warning-example.png)
+Ein Beispiel für eine Crowdin-Warnung, wenn Sie vergessen, ein Tag zur Übersetzung hinzuzufügen: ![Beispiel für eine Crowdin-Warnung](./crowdin-warning-example.png)
 
 ### Umgang mit Tags und Codeausschnitten {#dealing-with-tags}
 
 Ein großer Teil des Quellinhalts enthält Tags und Variablen, die im Crowdin-Editor gelb hervorgehoben sind. Diese haben unterschiedliche Funktionen und sollten richtig angegangen werden.
 
+**Crowdin-Einstellungen**
+
+Um die Verwaltung von Tags zu erleichtern und diese direkt aus der Quelle zu kopieren, empfehlen wir Ihnen, Ihre Einstellungen im Crowdin-Editor zu ändern.
+
+1. Einstellungen öffnen ![Einstellungen im Editor öffnen](./editor-settings.png)
+
+2. Scrollen Sie nach unten zum Abschnitt „HTML-Tags Anzeige"
+
+3. Wählen Sie „Verstecken" ![Bitte „Verstecken" auswählen](./hide-tags.png)
+
+4. Klicken Sie auf „Speichern"
+
+Durch Auswahl dieser Option wird der vollständige Tag-Text nicht mehr angezeigt und durch eine Zahl ersetzt. Beim Übersetzen wird der exakte Tag automatisch in das Übersetzungsfeld kopiert, wenn der Tag angeklickt wird.
+
 **Links**
 
 Sie finden möglicherweise vollständige Links zu Seiten auf ethereum.org oder anderen Websites.
 
-Sie sollten mit der Quelle identisch sein und nicht verändert oder übersetzt werden. Wenn Sie einen Link übersetzen oder ihn in irgendeiner Weise verändern, selbst wenn Sie nur einen Teil davon entfernen, wie z. B. einen Backslash (/), führt das zu fehlerhaften und unbrauchbaren Links.
+Diese sollten mit der Quelle identisch sein und nicht verändert oder übersetzt werden. Wenn Sie einen Link übersetzen oder ihn in irgendeiner Weise verändern, selbst wenn Sie nur einen Teil davon entfernen, wie z. B. einen Schrägstrich (/), führt das zu fehlerhaften und unbrauchbaren Links.
 
-Am besten ist es, Links direkt aus der Quelle zu kopieren, entweder durch Anklicken oder mit der Schaltfläche "Copy Source" (Quelle kopieren) (Alt+C).
+Am besten ist es, Links direkt aus der Quelle zu kopieren, entweder durch Anklicken oder mit der Schaltfläche „Copy Source" (Quelle kopieren) (Alt+C).
 
 ![Beispiel für einen Link.png](./example-of-link.png)
 
-Links erscheinen im Quelltext auch in Form von Tags (z. B. <0> </0>). Wenn Sie mit dem Mauszeiger über das Tag fahren, zeigt der Editor den vollständigen Inhalt an. Manchmal stellen diese Tags auch Links dar.
+Links erscheinen im Quelltext auch in Form von Tags (z. B. <0> </0>). Wenn Sie mit dem Mauszeiger über den Tag fahren, zeigt der Editor den vollständigen Inhalt an. Manchmal stellen diese Tags auch Links dar.
 
 Es ist sehr wichtig, die Links aus der Quelle zu kopieren und die Reihenfolge nicht zu verändern.
 
@@ -119,29 +132,29 @@ Tags enthalten immer einen öffnenden und einen schließenden Tag. In den meiste
 
 Beispiel: `<strong x-id="1">`Dezentralisiert`</strong>`
 
-`<strong x-id="1">` - _Eröffnungstag, das eine Fettformatierung bedingt_
+`<strong x-id="1">` - _Öffnender Tag, der eine Fettformatierung bedingt_
 
-Dezentralisiert – _übersetzbarer Text_
+Dezentralisiert – _Übersetzbarer Text_
 
-`</strong>` – _schließendes Tag_
+`</strong>` – _Schließender Tag_
 
-![Beispiel für 'starke' Tags.png](./example-of-strong-tags.png)
+![Beispiel für „starke" Tags.png](./example-of-strong-tags.png)
 
-Codeausschnitte sollten etwas anders behandelt werden als die anderen Tags, da sie Code enthalten, der nicht übersetzt werden sollte.
+CodeAusschnitte sollten etwas anders behandelt werden als die anderen Tags, da sie Code enthalten, der nicht übersetzt werden sollte.
 
-Beispiel: `<code>`nonce`</code>`
+Beispiel: `<code>`Nonce`</code>`
 
-`<code>` – _Eröffnungs-Tag, das einen Codeausschnitt enthält_
+`<code>` – _Öffnender Tag, der einen Code-Ausschnitt enthält_
 
-nonce – _nicht übersetzbarer Text_
+Nonce – _Nicht übersetzbarer Text_
 
-`</code>` – _schließendes Tag_
+`</code>` – _Schließender Tag_
 
-![Beispiel für Codeausschnitte.png](./example-of-code-snippets.png)
+![Beispiel für Code-Ausschnitte.png](./example-of-code-snippets.png)
 
 Der Quelltext enthält auch verkürzte Tags, die nur Zahlen enthalten. Ihre Funktion ist dadurch nicht direkt ersichtlich. Sie können mit dem Mauszeiger über diese Tags fahren, um genau zu sehen, welche Funktion sie haben.
 
-Im folgenden Beispiel können Sie sehen, dass der Mauszeiger über dem <0> Tag zeigt, dass es `<code>` darstellt und einen Codeausschnitt enthält. Daher sollte der Inhalt innerhalb dieser Tags nicht übersetzt werden.
+Im folgenden Beispiel können Sie sehen, dass der Mauszeiger über dem <0> Tag zeigt, dass er `<code>` darstellt und einen Code-Ausschnitt enthält. Daher sollte der Inhalt innerhalb dieser Tags nicht übersetzt werden.
 
 ![Beispiel für mehrdeutige Tags.png](./example-of-ambiguous-tags.png)
 
@@ -155,17 +168,17 @@ Da es für diese und ähnliche Begriffe in der Regel keine etablierten Übersetz
 
 Beispiel für die Übersetzung von dApps:
 
-- Dezentrale Anwendungen (dApps) → _übersetzte Vollform (englische Abkürzung in Klammern)_
+- Dezentrale Anwendungen (dApps) → _Übersetzte Vollform (englische Abkürzung in Klammern)_
 
 ### Begriffe ohne etablierte Übersetzungen {#terms-without-established-translations}
 
-Für einige Begriffe gibt es möglicherweise keine etablierten Übersetzungen in anderen Sprachen und sie sind weithin unter dem englischen Originalbegriff bekannt. Diese Begriffe umfassen meist neuere Konzepte wie Proof ofWork, Proof of Stake, Beacon Chain, Staking usw.
+Für einige Begriffe gibt es möglicherweise keine etablierten Übersetzungen in anderen Sprachen und sie sind weithin unter dem englischen Originalbegriff bekannt. Diese Begriffe umfassen meist neuere Konzepte wie Proof-of-Work, Proof-of-Stake, Beacon Chain, Staking usw.
 
 Die Übersetzung dieser Begriffe kann zwar unnatürlich klingen, da aber die englische Version auch in anderen Sprachen häufig verwendet wird, ist es sehr empfehlenswert, sie zu übersetzen.
 
 Wenn Sie sie übersetzen, können Sie kreativ sein, beschreibende Übersetzungen verwenden oder einfach wörtlich übersetzen.
 
-**Die meisten Begriffe zu übersetzen anstatt sie auf Englisch zu belassen ist sinnvoll, da diese neue Terminologie sich zukünftig stärker verbreitet, wenn mehr Menschen Ethereum und zugehörige Technologien nutzen. Wenn wir mehr Menschen aus der ganzen Welt für diesen Bereich gewinnen wollen, müssen wir eine verständliche Terminologie in so vielen Sprachen wie möglich anbieten, auch wenn wir sie selbst erstellen müssen.**
+**Es ist sinnvoll, die meisten Begriffe zu übersetzen, anstatt sie auf Englisch zu belassen, da diese neue Terminologie sich zukünftig stärker verbreitet, wenn mehr Menschen Ethereum und zugehörige Technologien nutzen. Wenn wir mehr Menschen aus der ganzen Welt für diesen Bereich gewinnen wollen, müssen wir eine verständliche Terminologie in so vielen Sprachen wie möglich anbieten, auch wenn wir sie selbst erstellen müssen.**
 
 ### Schaltflächen und CTAs (Call to Action) {#buttons-and-ctas}
 
@@ -175,7 +188,7 @@ Schaltflächentext kann identifiziert werden, indem Sie sich die zugehörigen Ko
 
 Die Übersetzungen für Schaltflächen sollten so kurz wie möglich sein, um Formatierungsfehler zu vermeiden. Außerdem sollten die Schaltflächenübersetzungen als Anweisung formuliert sein, d. h. einen Befehl oder eine Aufforderung darstellen.
 
-![Wie man eine Schaltfläche findet.png](./how-to-find-a-button.png)
+![Wie man eine Schaltfläche.png findet](./how-to-find-a-button.png)
 
 ### Übersetzen für Inklusion {#translating-for-inclusivity}
 
@@ -183,7 +196,7 @@ Die Besucher von ethereum.org kommen aus der ganzen Welt und haben ganz untersch
 
 Ein wichtiger Aspekt dabei ist die Geschlechterneutralität. Das lässt sich leicht erreichen, indem die formale Anrede benutzt und geschlechtsspezifische Wörter in den Übersetzungen vermieden werden.
 
-Eine andere Möglichkeit, Inklusion zu schaffen, ist der Versuch, für ein globales Publikum zu übersetzen, das nicht auf ein Land, eine Rasse oder eine Region festgelegt ist.
+Eine andere Möglichkeit der Inklusion ist der Versuch, für ein globales Publikum zu übersetzen, das nicht auf ein Land, eine Rasse oder eine Region festgelegt ist.
 
 Schließlich sollte die Sprache für jedes Publikum und Alter geeignet sein.
 
@@ -199,13 +212,13 @@ Einige Beispiele dafür, worauf besonders zu achten ist:
 
 **Groß-/Kleinschreibung**
 
-- Es gibt große Unterschiede in der Großschreibung in verschiedenen Sprachen.
+- Es gibt große Unterschiede in der Groß- und Kleinschreibung in verschiedenen Sprachen.
 - Im Englischen ist es üblich, alle Wörter in Titeln und Namen, Monaten und Tagen, Sprachnamen, Feiertagen usw. groß zu schreiben. In vielen anderen Sprachen ist das grammatikalisch nicht korrekt, da es abweichende Regeln für die Groß- und Kleinschreibung gibt.
 - Einige Sprachen haben auch Regeln für die Großschreibung von Personalpronomen, Substantiven und bestimmten Adjektiven, die im Englischen nicht großgeschrieben werden.
 
 **Abstände**
 
-- Die Rechtschreibregeln legen die Verwendung von Leerzeichen für jede Sprache fest. Da Leerzeichen überall verwendet werden, gehören diese Regeln zu den ausgeprägtesten, denn Leerzeichen gehören zu den am häufigsten falsch übersetzten Elementen.
+- Die Rechtschreibregeln legen die Verwendung von Leerzeichen für jede Sprache fest. Leerzeichen werden überall verwendet und folgen in jeder Sprache anderen Regeln. Leerzeichen gehören zu den am häufigsten falsch übersetzten Elementen.
 - Einige häufige Unterschiede in den Abständen zwischen dem Englischen und anderen Sprachen:
   - Leerzeichen vor Maßeinheiten und Währungen (z. B. USD, EUR, kB, MB)
   - Leerzeichen vor Gradzeichen (z. B. °C, ℉)
@@ -214,7 +227,7 @@ Einige Beispiele dafür, worauf besonders zu achten ist:
 
 **Listen**
 
-- Jede Sprache verfügt über vielfältige und komplexe Regeln für die Erstellung von Listen. Diese können sich erheblich vom Englischen unterscheiden.
+- Jede Sprache hat vielfältige und komplexe Regeln für die Erstellung von Listen. Diese können sich erheblich vom Englischen unterscheiden.
 - In einigen Sprachen muss das erste Wort jeder neuen Zeile groß geschrieben werden, während in anderen Sprachen neue Zeilen mit Kleinbuchstaben beginnen sollten. Viele Sprachen haben auch unterschiedliche Regeln für die Groß- und Kleinschreibung in Listen, je nach Länge der einzelnen Zeilen.
 - Das Gleiche gilt für die Interpunktion von Zeilenelementen. Das Endzeichen in Listen kann, je nach Sprache, ein Punkt (**.**), ein Komma (**,**) oder ein Semikolon (**;**) sein.
 
@@ -231,14 +244,14 @@ Einige Beispiele dafür, worauf besonders zu achten ist:
 
 **Bindestriche und Gedankenstriche**
 
-- Im Englischen wird ein Bindestrich (-) verwendet, um Wörter oder verschiedene Teile eines Wortes zu verbinden, während ein Gedankenstrich (-) verwendet wird, um einen Bereich oder eine Pause anzugeben.
+- Im Englischen wird ein Bindestrich (-) verwendet, um Wörter oder verschiedene Teile eines Wortes zu verbinden, während ein Gedankenstrich (–) verwendet wird, um einen Bereich abzugrenzen oder eine Pause zu signalisieren.
 - Viele Sprachen haben unterschiedliche Regeln für die Verwendung von Bindestrichen und Gedankenstrichen, die es zu beachten gilt.
 
 ### Formate {#formats}
 
 **Zahlen**
 
-- Der Hauptunterschied bei der Schreibweise von Zahlen in verschiedenen Sprachen ist das Trennzeichen für Dezimalstellen und Tausender. Bei Tausenden kann dies ein Punkt, ein Komma oder ein Leerzeichen sein. Ebenso verwenden einige Sprachen einen Dezimalpunkt, andere ein Dezimalkomma.
+- Der Hauptunterschied bei der Schreibweise von Zahlen in verschiedenen Sprachen ist das Trennzeichen für Dezimalstellen und Tausender. Als Tausendertrennzeichen kann das ein Punkt, ein Komma oder ein Leerzeichen verwendet werden. Ebenso verwenden einige Sprachen einen Dezimalpunkt, andere ein Dezimalkomma.
   - Einige Beispiele für große Zahlen:
     - Englisch – **1,000.50**
     - Spanisch – **1.000,50**
@@ -250,8 +263,8 @@ Einige Beispiele dafür, worauf besonders zu achten ist:
 
 - Bei der Übersetzung von Datumsangaben gibt es eine Reihe von Unterschieden und Überlegungen, die von der jeweiligen Sprache abhängen. Dazu gehören das Datumsformat, das Trennzeichen, die Großschreibung und führende Nullen. Es gibt auch Unterschiede zwischen den Datumsangaben in voller Länge und den numerischen Daten.
   - Einige Beispiele für verschiedene Datumsformate:
-    - Englisch UK (mm/dd/yyyy) – 1st January, 2022
-    - Englisch US (dd/mm/yyyy) – January 1, 2022
+    - Englisch UK (dd/mm/yyyy) – 1st January, 2022
+    - Englisch US (mm/dd/yyyy) – January 1st, 2022
     - Chinesisch (yyyy-mm-dd) – 2022 年 1 月 1 日
     - Französisch (dd/mm/yyyy) – 1er janvier 2022
     - Italienisch (dd/mm/yyyy) – 1º gennaio 2022
@@ -259,7 +272,7 @@ Einige Beispiele dafür, worauf besonders zu achten ist:
 
 **Währungen**
 
-- Die Übersetzung von Währungen kann aufgrund der unterschiedlichen Formate, Konventionen und Umrechnungen eine Herausforderung darstellen. In der Regel sollten die Währungen mit der Quelle übereinstimmen. Du kannst deine Landeswährung und die Umrechnung in Klammern hinzufügen, damit der Leser davon profitiert.
+- Die Übersetzung von Währungen kann aufgrund der unterschiedlichen Formate, Konventionen und Umrechnungen eine Herausforderung darstellen. In der Regel sollten die Währungen mit der Quelle übereinstimmen. Sie können Ihre Landeswährung und die Umrechnung in Klammern hinzufügen, um dem Leser mehr Informationen zu bieten.
 - Zu den wichtigsten Unterschieden bei der Schreibweise von Währungen in verschiedenen Sprachen gehören die Platzierung von Symbolen, Kommas und Dezimalpunkten, Abstände und Abkürzungen oder die Verwendung von Symbolen.
   - Symbolplatzierung: $100 oder 100$
   - Dezimal-Kommas vs. Dezimal-Punkte: 100,50$ oder 100.50$
@@ -268,7 +281,7 @@ Einige Beispiele dafür, worauf besonders zu achten ist:
 
 **Maßeinheiten**
 
-- Als allgemeine Regel gilt, dass die Maßeinheiten in der Quelle angegeben werden sollten. Wenn dein Land ein anderes System verwendet, kannst du die Umrechnung in Klammern angeben.
+- Als allgemeine Regel gilt, dass die Maßeinheiten aus der Quelle beibehalten werden sollten. Wenn in Ihrem Land ein anderes System verwendet wird, können Sie die Umrechnung in Klammern angeben.
 - Abgesehen von der Lokalisierung von Maßeinheiten sollte ebenfalls beachtet werden, wie unterschiedlich die Herangehensweise bei diesen Einheiten in den verschiedenen Sprachen ist. Der Hauptunterschied ist der Abstand zwischen der Zahl und der Einheit, der je nach Sprache unterschiedlich sein kann. Beispiele hierfür sind 100kB vs. 100 kB oder 50ºF vs. 50 ºF.
 
 ### Zusammenfassung {#conclusion}

@@ -2,7 +2,6 @@
 title: "Guida dettagliata al contratto Uniswap-v2"
 description: Come funziona il contratto Uniswap-v2? Perché è scritto così?
 author: Ori Pomerantz
-sidebar: true
 tags:
   - "solidity"
   - "uniswap"
@@ -655,7 +654,7 @@ Questo è un controllo di sicurezza, per assicurarsi di non perdere in seguito a
 
 Aggiorna `reserve0` e `reserve1` e, se necessario, gli accumulatori di prezzo e la marca oraria ed emetti un evento.
 
-##### Sincronizzazione o Skim {#sync-or-skim}
+##### Sincronizzazione o Skim
 
 È possibile che i saldi reali si desincronizzino rispetto alle riserve considerate dallo scambio in pari. Non c'è modo di prelevare i token senza il consenso del contratto, ma i depositi sono una questione diversa. Un conto può trasferire i token allo scambio senza chiamare `mint` o `swap`.
 

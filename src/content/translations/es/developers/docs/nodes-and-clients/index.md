@@ -2,7 +2,6 @@
 title: Nodos y clientes
 description: Una visión general de los nodos de Ethereum y del software del cliente, además de cómo configurar un nodo y por qué deberías hacerlo.
 lang: es
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -174,7 +173,7 @@ Los modos de sincronización representan diferentes enfoques de este proceso con
 
 Resumen general de los enfoques de sincronización utilizados en clientes listos para la red principal:
 
-##### Sincronización total {#full-sync}
+##### Sincronización total
 
 La sincronización total descarga todos los bloques (incluidos los encabezados, las transacciones y los recibos) y va generando de manera creciente el estado del la cadena de bloques al ejecutar cada bloque desde el principio.
 

@@ -2,7 +2,6 @@
 title: Chaines latérales ou sidechains
 description: Une introduction aux chaînes latérales en tant que solution de mise à l'échelle actuellement utilisée par la communauté Ethereum.
 lang: fr
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---
@@ -30,6 +29,7 @@ Plusieurs projets fournissent des implémentations de chaînes latérales que vo
 - [Polygon PoS](https://polygon.technology/solutions/polygon-pos)
 - [Skale](https://skale.network/)
 - [Gnosis Chain (anciennement xDai)](https://www.xdaichain.com/)
+- [Metis Andromeda](https://www.metis.io/)
 
 ## Complément d'information {#further-reading}
 

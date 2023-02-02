@@ -23,7 +23,6 @@ import {
   GrayContainer,
   LeftColumn,
 } from "../components/SharedStyledComponents"
-import PreMergeBanner from "../components/PreMergeBanner"
 import { translateMessageId, isLangRightToLeft } from "../utils/translations"
 import { getImage } from "../utils/image"
 
@@ -31,6 +30,7 @@ import SimpleWalletContent from "!!raw-loader!../data/SimpleWallet.sol"
 import SimpleTokenContent from "!!raw-loader!../data/SimpleToken.sol"
 import CreateWalletContent from "!!raw-loader!../data/CreateWallet.js"
 import SimpleDomainRegistryContent from "!!raw-loader!../data/SimpleDomainRegistry.sol"
+import { useConsoleEasterEgg } from "../hooks/useConsoleEasterEgg"
 
 const Hero = styled(GatsbyImage)`
   width: 100%;
@@ -423,6 +423,9 @@ const HomePage = ({
     setActiveCode(id)
     setModalOpen(true)
   }
+
+  useConsoleEasterEgg()
+
   const cards = [
     {
       image: getImage(data.robotfixed),
@@ -561,7 +564,6 @@ const HomePage = ({
         title={translateMessageId("page-index-meta-title", intl)}
         description={translateMessageId("page-index-meta-description", intl)}
       />
-      <PreMergeBanner announcementOnly />
       <Hero
         image={getImage(data.hero)!}
         alt={translateMessageId("page-index-hero-image-alt", intl)}

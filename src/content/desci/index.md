@@ -4,7 +4,6 @@ description: An overview of decentralized science on Ethereum
 lang: en
 template: use-cases
 emoji: ":microscope:"
-sidebar: true
 sidebarDepth: 2
 image: ../../assets/future_transparent.png
 alt: ""
@@ -23,7 +22,7 @@ Decentralized science allows for more diverse funding sources (from [DAOs](/dao/
 
 ### Juan Benet - DeSci, Independent Labs, & Large Scale Data Science
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zkXM9H90g_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YouTube id="zkXM9H90g_E" />
 
 ## How DeSci improves science {#desci-improves-science}
 
@@ -82,7 +81,7 @@ The advent of non-transferable ["soulbound" tokens](https://vitalik.ca/general/2
 
 ### Data storage, access and architecture {#data-storage}
 
-Scientific data can be made vastly more accessible using Web3 patterns, and distributed storage will enable research to survive cataclysmic events.
+Scientific data can be made vastly more accessible using Web3 patterns, and distributed storage enables research to survive cataclysmic events.
 
 The starting point must be a system accessible by any decentralized identity holding the proper verifiable credentials. This allows sensitive data to be securely replicated by trusted parties, enabling redundancy and censorship resistance, reproduction of results, and even the ability for multiple parties to collaborate and add new data to the dataset. Confidential computing methods like [compute-to-data](https://7wdata.be/predictive-analytics/compute-to-data-using-blockchain-to-decentralize-data-science-and-ai-with-the-ocean-protocol) provide alternative access mechanisms to raw data replication, creating Trusted Research Environments for the most sensitive data. Trusted Research Environments have been [cited by the NHS](https://medium.com/weavechain/whats-in-store-for-the-future-of-healthcare-data-b6398745fbbb) as a future-facing solution to data privacy and collaboration by creating an ecosystem where researchers can securely work with data on-site using standardized environments for sharing code and practices.
 
@@ -92,6 +91,8 @@ Flexible Web3 data solutions support the scenarios above and provide the foundat
 
 Explore projects and join the DeSci community.
 
+- [DeSci.Global: global events and meetup calendar](https://desci.global)
+- [Blockchain for Science Telegram](https://t.me/BlockchainForScience)
 - [Molecule: Fund and get funded for your research projects](https://discover.molecule.to/)
 - [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
 - [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
@@ -102,7 +103,17 @@ Explore projects and join the DeSci community.
 - [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
 - [OceanDAO: DAO governed funding for data-related science](https://oceanprotocol.com/dao)
 - [Opscientia: open decentralized science workflows](https://opsci.io/research/)
-- [IdeaMarkets: enabling decentralized scientifc credibility](https://ideamarket.io/)
+- [LabDAO: fold a protein in-silico](https://alphafodl.vercel.app/)
+- [Bio.xyz: get funded for your biotech DAO or desci project](https://www.molecule.to/)
+- [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
+- [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
+- [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
+- [Active Inference Lab](https://www.activeinference.org/)
+- [Cherubs DAO: NFT funded and DAO governed impact fund for mental health & brain wellness](https://cherubsdao.com/)
+- [CureDAO: Community-Owned Precision Health Platform](https://docs.curedao.org/)
+- [IdeaMarkets: enabling decentralized scientific credibility](https://ideamarket.io/)
+
+We welcome suggestions for new projects to list - please look at our [listing policy](/contributing/adding-desci-projects/) to get started!
 
 ## Further reading {#further-reading}
 
@@ -117,6 +128,8 @@ Explore projects and join the DeSci community.
 - [Paul Kohlhaas - DeSci: The Future of Decentralized Science (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
 - [An Active Inference Ontology for Decentralized Science: from Situated Sensemaking to the Epistemic Commons](https://zenodo.org/record/6320575)
 - [DeSci: The Future of Research by Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
+- [Science Funding (Epilogue: DeSci and new crypto primitives) by Nadia](https://nadia.xyz/science-funding)
+- [Decentralisation is Disrupting Drug Development](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
 
 ### Videos {#videos}
 

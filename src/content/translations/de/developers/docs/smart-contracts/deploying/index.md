@@ -2,7 +2,6 @@
 title: Einsetzen von Smart Contracts
 description:
 lang: de
-sidebar: true
 ---
 
 Sie müssen Ihren Smart Contract auf die Blockchain hochladen, damit er Benutzern eines Ethereum-Netzwerks zur Verfügung steht.

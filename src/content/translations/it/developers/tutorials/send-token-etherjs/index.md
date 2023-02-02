@@ -8,7 +8,6 @@ tags:
   - "TOKEN"
 skill: beginner
 lang: it
-sidebar: true
 published: 2021-04-06
 ---
 
@@ -18,7 +17,7 @@ published: 2021-04-06
 
 - Importare ethers.js
 - Trasferire token
-- Impostare il prezzo del gas in base alla situazione del traffico di rete
+- Imposta il prezzo del gas a seconda della situazione del traffico di rete
 
 ### Per iniziare {#to-get-started}
 
@@ -96,7 +95,7 @@ Queste variabili definite di seguito dipendono da `send_token()`
 
 ### Parametri della transazione {#transaction-params}
 
-1. **`send_account`**: indirizzo del mittente del token
+1. **`send_account`**: L'indirizzo del mittente del token
 2. **`to_address`**: indirizzo del destinatario del token
 3. **`send_token_amount`**: l'importo di token da inviare
 4. **`gas_limit`**: limite di gas

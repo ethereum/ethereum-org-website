@@ -2,7 +2,6 @@
 title: Ethereum Python fejlesztőknek
 description: Tanulj meg Ethereumra fejleszteni Python alapú projektek és eszközök használatával
 lang: hu
-sidebar: true
 incomplete: true
 ---
 
@@ -49,7 +48,7 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 - [py-wasm](https://github.com/ethereum/py-wasm) - _a web assembly interpreter Python implementációja_
 - [pydevp2p](https://github.com/ethereum/pydevp2p) - _Az Ethereum P2P stack implementációjak_
 - [pymaker](https://github.com/makerdao/pymaker) - _Python API Maker szerződésekre_
-- [Mamba](https://mamba.black) - _keretrendszer Vyper nyelven írt okos szerződések írására, fordítására és telepítésére_
+- [Mamba](https://github.com/arjunaskykok/mamba) - _keretrendszer Vyper nyelven írt okos szerződések írására, fordítására és telepítésére_
 - [Trinity](https://github.com/ethereum/trinity) - _Ethereum Python kliens_
 - [Vyper](https://github.com/ethereum/vyper/) - _Pythonikus okosszerződés nyelv az EVM-re_
 - [Web3.py](https://github.com/ethereum/web3.py) - _Python library Ethereummal történő interakciókra_

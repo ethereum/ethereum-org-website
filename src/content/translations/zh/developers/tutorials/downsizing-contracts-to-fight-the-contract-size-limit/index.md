@@ -3,7 +3,6 @@ title: "如何缩减合约以规避合约大小限制"
 description: 您可以做些什么避免智能合约变得太大？
 author: Markus Waas
 lang: zh
-sidebar: true
 tags:
   - "solidity"
   - "智能合约"
@@ -17,17 +16,17 @@ sourceUrl: https://soliditydeveloper.com/max-contract-size
 
 ## 为什么会有限制？ {#why-is-there-a-limit}
 
-在 2016 年 [11 月 22 日](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)， Spilious Dragon 硬分叉引入了 [EIP-170](https://eips.ethereum.org/EIPS/eip-170)，增加了 24.576 kb 的智能合约大小限制。 对于作为 Solidity 开发者的您来说，这意味着当您向合约中添加越来越多的功能时，在某个时候您会达到极限，并且在部署时会看到错误：
+在 [2016 年 11 月 22 日](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)，伪龙硬分叉引入了 [EIP-170](https://eips.ethereum.org/EIPS/eip-170)，将智能合约的大小限制在 24.576 kb。 对于作为 Solidity 开发者的您来说，这意味着当您向合约中添加越来越多的功能时，在某个时候您会达到极限，并且在部署时会看到错误：
 
-`警告：合约代码大小超过 24576 字节（Spurious Dragon 分叉中引入的限制）。 这个合约可能无法在主网上部署。 请考虑启用优化器（其“运行”值较低！），关闭 revert 字符串，或使用库。`
+`警告：合约代码大小超过 24576 字节（Spurious Dragon 分叉中引入的限制）。 该合约可能无法在主网上部署。 请考虑启用优化器（其“运行”值较低！），关闭 revert 字符串，或使用库。`
 
 引入这一限制是为了防止拒绝服务 (DOS) 攻击。 任何对合约的调用从矿工费上来说都是相对便宜的。 然而，根据被调用合约代码的大小（从磁盘读取代码、预处理代码、将数据添加到 Merkle 证明），合约调用对以太坊节点的影响会不成比例地增加。 每当您出现这样的情况，攻击者只需要很少的资源就能给别人造成大量的工作，您就有可能遭受 DOS 攻击。
 
-最初，这不是什么大问题，因为一个自然合约大小限制是区块 Gas 限制。 很明显，一个合约需要被部署在一个交易中，这个交易持有合约的所有字节码。 如果您只将一个交易纳入一个区块，您可以用完所有的 Gas，但 gas 不是无限的。 但这种情况下的问题是，区块 Gas 限制随时间发生变化，理论上是无限制的。 在引入 EIP-170 的时候，区块 Gas 的限制仅为 470 万。 现在区块 gas 上限在上个月[再次提高](https://etherscan.io/chart/gaslimit)至 1,190 万。
+最初，这不是什么大问题，因为一个自然合约大小限制是区块燃料限制。 显然，合约必须和其所有字节码一起部署在交易内。 如果只将单个交易添加到区块中，可能会用完所有燃料，而燃料并非无限。 [伦敦升级](/history/#london)后，区块燃料限制已能够根据网络需求在 15M 和 30M 单位之间变动。
 
 ## 开始战斗吧！ {#taking-on-the-fight}
 
-不幸的是，没有简单的方法来获得合约的字节码大小。 如果您使用 Truffle ，有一个很好的工具可以帮助您：那就是 [truffle-contract-size](https://github.com/IoBuilders/truffle-contract-size) 插件。
+不幸的是，没有简单的方法来获得合约的字节码大小。 如果您使用 Truffle，有一个很好的工具可以帮助您：那就是 [truffle-contract-size](https://github.com/IoBuilders/truffle-contract-size) 插件。
 
 1. `npm install truffle-contract-size`
 2. 将插件添加到 _truffle-config.js_：`plugins: ["truffle-contract-size"]`
@@ -150,9 +149,3 @@ function doSomething() { checkStuff(); }
 ```
 
 这些提示应有助您大幅度减少合约的大小。 我要再次强调的是，如果可能的话，务必将重点放在拆分合约上，以获得最大的效果。
-
-## 合约大小限制的未来 {#the-future-for-the-contract-size-limits}
-
-有一个[公开提议](https://github.com/ethereum/EIPs/issues/1662)，要取消合约大小限制。 这个设想实际上是为了让大型合约的调用更加昂贵。 这个实现起来不会太困难，具有简单的向后兼容性（将所有以前部署的合约都归入最便宜的类别），但是[并不是每个人都认同这个提议](https://ethereum-magicians.org/t/removing-or-increasing-the-contract-size-limit/3045/24)。
-
-只有时间才能证明这些限制将来是否会改变，大家的反应（见右图）无疑表明了对我们开发人员的明确要求。 不幸的是，这不是您可以指望很快会发生的事情。

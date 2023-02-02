@@ -2,7 +2,6 @@
 title: Ethereum-beveiliging en -scampreventie
 description: Veilig blijven op Ethereum
 lang: nl
-sidebar: true
 ---
 
 # Ethereum-beveiliging en -scampreventie {#introduction}
@@ -158,8 +157,6 @@ Zorg er altijd voor dat het adres waarheen u stuurt precies overeenkomt met het 
 Sta bij interactie met slimme contracten geen onbeperkte bestedingslimieten toe. In geval van onbeperkte uitgaven, kan het slimme contract uw portemonnee leegmaken. Stel in plaats daarvan uitgavenlimieten in op het bedrag dat nodig is voor de transactie.
 
 Veel Ethereum-portemonnees bieden limieten aan bescherming tegen het leeglopen van rekeningen.
-
-[Onderzoek portemonnees met limietbescherming](/wallets/find-wallet/?filters=has_limits_protection)
 
 <Divider />
 

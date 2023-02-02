@@ -2,7 +2,6 @@
 title: Optimistic Rollups
 description: An introduction to optimistic rollups—a scaling solution used by the Ethereum community.
 lang: en
-sidebar: true
 ---
 
 Optimistic rollups are layer 2 (L2) protocols designed to extend the throughput of Ethereum's base layer. They reduce computation on the main Ethereum chain by processing transactions off-chain, offering significant improvements in processing speeds. Unlike other scaling solutions, such as [sidechains](/developers/docs/scaling/sidechains/), optimistic rollups derive security from Mainnet by publishing transaction results on-chain, or [plasma chains](/developers/docs/scaling/plasma/), which also verify transactions on Ethereum with fraud proofs, but store transaction data elsewhere.
@@ -31,7 +30,7 @@ If the rollup batch remains unchallenged (i.e., all transactions are correctly e
 
 Optimistic rollups are [off-chain scaling solutions](/developers/docs/scaling/#off-chain-scaling) built to operate on top of Ethereum. Each optimistic rollup is managed by a set of smart contracts deployed on the Ethereum network. Optimistic rollups process transactions off the main Ethereum chain, but post off-chain transactions (in batches) to an on-chain rollup contract. Like the Ethereum blockchain, this transaction record is immutable and forms the "optimistic rollup chain."
 
-The architecure of an optimistic rollup comprises the following parts:
+The architecture of an optimistic rollup comprises the following parts:
 
 **On-chain contracts**: The optimistic rollups's operation is controlled by smart contracts running on Ethereum. This includes contracts that store rollup blocks, monitor state updates on the rollup, and track user deposits. In this sense Ethereum serves as the base layer or "layer 1" for optimistic rollups.
 
@@ -47,7 +46,7 @@ Optimistic rollups rely on the main Ethereum protocol for the following:
 
 As mentioned, optimistic rollups post transaction data to Ethereum as `calldata`. Since the rollup chain's execution is based on submitted transactions, anyone can use this information—anchored on Ethereum’s base layer—to execute the rollup’s state and verify the correctness of state transitions.
 
-Data availability is critical because without access to state data, challengers cannot construct fraud proofs to dispute invalid rollup operations. With Ethereum providing data availability, the risk of rollup operators getting away with malicious acts (e.g., submitting invalid blocks) is reduced.
+[Data availability](https://ethereum.org/en/developers/docs/data-availability/) is critical because without access to state data, challengers cannot construct fraud proofs to dispute invalid rollup operations. With Ethereum providing data availability, the risk of rollup operators getting away with malicious acts (e.g., submitting invalid blocks) is reduced.
 
 ### Censorship resistance {#censorship-resistance}
 
@@ -197,7 +196,7 @@ Optimistic rollups use a gas fee scheme, much like Ethereum, to denote how much 
 
 1. **State write**: Optimistic rollups publish transaction data and block headers (consisting of the previous block header hash, state root, batch root) to Ethereum as `calldata`. The minimum cost of an Ethereum transaction is 21,000 gas. Optimistic rollups can reduce the cost of writing the transaction to L1 by batching multiple transactions in a single block (which amortizes the 21k gas over multiple user transactions).
 
-2. **`calldata`**: Beyond the base transaction fee, the cost of each state write depends on the size of `calldata` posted to L1. `calldata` costs are currently governed by [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which stipulates a cost of 16 gas for non-zero bytes and 4 gas for zero bytes of `calldata`, respectively. To reduce user fees, rollup operators compresss transactions to reduce the number of `calldata` bytes published on Ethereum.
+2. **`calldata`**: Beyond the base transaction fee, the cost of each state write depends on the size of `calldata` posted to L1. `calldata` costs are currently governed by [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which stipulates a cost of 16 gas for non-zero bytes and 4 gas for zero bytes of `calldata`, respectively. To reduce user fees, rollup operators compress transactions to reduce the number of `calldata` bytes published on Ethereum.
 
 3. **L2 operator fees**: This is the amount paid to the rollup nodes as compensation for computational costs incurred in processing transactions, much like miner fees on Ethereum. Rollup nodes charge lower transaction fees since L2s have higher processing capacities and aren't faced with the network congestions that force miners on Ethereum to prioritize transactions with higher fees.
 
@@ -258,11 +257,9 @@ Multiple implementations of Optimistic rollups exist that you can integrate into
 
 ## Further reading on optimistic rollups
 
-- [How do optimistic rollups work (The complete guide)](https://www.alchemy.com/overviews/optimistic-rollups)
+- [How do optimistic rollups work (The Complete guide)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [Everything you need to know about Optimistic Rollup](https://research.paradigm.xyz/rollups)
-- [EthHub on optimistic rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
 - [The Essential Guide to Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [How does Optimism's Rollup really work?](https://research.paradigm.xyz/optimism)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [What is the Optimistic Virtual Machine?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
-- [How Do Optimistic Rollups Work? (The Complete Guide)](https://www.alchemy.com/overviews/optimistic-rollups)

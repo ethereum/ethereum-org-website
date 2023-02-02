@@ -2,7 +2,6 @@
 title: Token Standards
 description:
 lang: en
-sidebar: true
 incomplete: true
 ---
 

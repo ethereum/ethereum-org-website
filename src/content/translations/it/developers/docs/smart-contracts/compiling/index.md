@@ -1,8 +1,7 @@
 ---
-title: Compilazione di Smart Contract
-description: Spiegazione del motivo per cui è necessario compilare Smart Contract e cosa succede durante la compilazione.
+title: Compilazione dei contratti intelligenti
+description: Una spiegazione del perché devi compilare i contratti intelligenti e di cosa succede effettivamente durante la compilazione.
 lang: it
-sidebar: true
 incomplete: true
 ---
 
@@ -10,7 +9,7 @@ incomplete: true
 
 ## Prerequisiti {#prerequisites}
 
-Potresti trovare utile la nostra introduzione agli [Smart Contract](/developers/docs/smart-contracts/) e alla [macchina virtuale Ethereum](/developers/docs/evm/) prima di passare alla compilazione.
+Potresti trovare utile leggere la nostra introduzione ai [Contratti Intelligenti](/developers/docs/smart-contracts/) e alla [Macchina Virtuale Ethereum](/developers/docs/evm/) prima di passare alla compilazione.
 
 ## L'EVM {#the-evm}
 
@@ -38,9 +37,9 @@ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x41 JUMPI PUSH1 0x
 
 Il compilatore produce anche l'**Application Binary Interface (ABI)** che serve all'applicazione per capire il contratto e per chiamarne le funzioni.
 
-L'ABI è un file JSON che descrive il contratto distribuito e le sue funzioni di Smart Contract. Contribuisce a colmare il divario tra web2 e web3
+L'ABI è un file JSON che descrive il contratto distribuito e le funzioni del suo contratto intelligente. Contribuisce a colmare il divario tra web2 e web3
 
-Una [libreria client JavaScript](/developers/docs/apis/javascript/) leggerà l'**ABI** per poter chiamare lo Smart Contract nell'interfaccia dell'applicazione web.
+Una [libreria del client JavaScript](/developers/docs/apis/javascript/) leggerà l'**ABI** per poter chiamare il tuo contratto intelligente nell'interfaccia della tua app web.
 
 Di seguito è riportato l'ABI per il contratto token ERC-20. Un ERC-20 è un token che puoi scambiare su Ethereum.
 

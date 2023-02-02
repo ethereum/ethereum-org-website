@@ -2,7 +2,6 @@
 title: Ethereum dla deweloperów Phyton
 description: Dowiedz się, jak programować dla Ethereum przy użyciu projektów i narzędzi opartych na języku Python
 lang: pl
-sidebar: true
 incomplete: true
 ---
 
@@ -49,7 +48,7 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na stronach [ethereum.or
 - [py-wasm](https://github.com/ethereum/py-wasm) - _Implementacja webowego interpretera asemblera przy użyciu języka Python _
 - [pydevp2p](https://github.com/ethereum/pydevp2p) - _Implementacja stosu Ethereum P2P _
 - [pymaker](https://github.com/makerdao/pymaker) - <em x-id="4">API Python dla kontraktów Maker</em>
-- [Mamba](https://mamba.black) - _Framework do tworzenia, kompilowania i wdrażania inteligentnych kontraktów napisanych przy użyciu języka Viper_
+- [Mamba](https://github.com/arjunaskykok/mamba) - _Framework do tworzenia, kompilowania i wdrażania inteligentnych kontraktów napisanych przy użyciu języka Viper_
 - [Trinity](https://github.com/ethereum/trinity) - _Klient Python Ethereum_
 - [Vyper](https://github.com/ethereum/vyper/) - <em x-id="4">Język inteligentnych kontraktów oparty na Pythonie dla EVM</em>
 - [Web3.py](https://github.com/ethereum/web3.py) - _Biblioteka Python do interakcji z Ethereum_

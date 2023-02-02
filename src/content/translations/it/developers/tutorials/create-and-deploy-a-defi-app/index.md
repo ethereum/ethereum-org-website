@@ -3,7 +3,7 @@ title: Creare e distribuire un'App DeFi
 description: Deposita i token ERC20 sullo smart contract e conia token Farm
 author: "strykerin"
 tags:
-  - "Solidity"
+  - "solidity"
   - "defi"
   - "web3.js"
   - "truffle"
@@ -11,7 +11,6 @@ tags:
   - "Smart Contract"
 skill: intermediate
 lang: it
-sidebar: true
 published: 2020-12-31
 source: github.com
 sourceUrl: https://github.com/strykerin/DeFi-Token-Farm
@@ -23,7 +22,7 @@ In questo tutorial creeremo un'applicazione DeFi con Solidity in cui gli utenti 
 
 Se questa è la prima volta che scrivi uno smart contract, dovrai configurare il tuo ambiente. Useremo due strumenti: [Truffle](https://www.trufflesuite.com/) e [Ganache](https://www.trufflesuite.com/ganache).
 
-Truffle è un ambiente di sviluppo e framework di verifica per lo sviluppo di smart contract per Ethereum. Con Truffle è facile costruire e distribuire gli smart contract alla blockchain. Ganache consente di creare una blockchain locale di Ethereum per poter testare gli smart contract. Simula le funzionalità della rete reale e i primi 10 conti sono finanziati con 100 ether di prova, rendendo la distribuzione e la verifica dello smart contract gratuita e facile. Ganache è disponibile come applicazione desktop e strumento di riga di comando. Per questo articolo useremo l'applicazione desktop dell'UI.
+Truffle è un ambiente di sviluppo e framework di verifica per lo sviluppo di smart contract per Ethereum. Con Truffle è facile costruire e distribuire gli smart contract alla blockchain. Ganache consente di creare una blockchain locale di Ethereum per poter testare gli smart contract. Simula le funzionalità della rete reale e, i primi 10 conti, sono finanziati con 100 ether di prova, rendendo la distribuzione e i test del contratto intelligente, gratuiti e facili. Ganache è disponibile come applicazione desktop e strumento di riga di comando. Per questo articolo useremo l'applicazione desktop dell'UI.
 
 ![Applicazione desktop dell'UI di Ganache](https://cdn-images-1.medium.com/max/2360/1*V1iQ5onbLbT5Ib2QaiOSyg.png)_Applicazione desktop dell'UI di Ganache_
 
@@ -75,7 +74,7 @@ Nel codice seguente alla:
 
 - Riga 6: Chiamiamo il costruttore di ERC20.sol e passiamo per il nome e i parametri del simbolo come `"MyToken"` e `"MTKN"` rispettivamente.
 
-- Riga 7: Coniamo e trasferiamo 1 milione di token per il conto che sta distribuendo lo smart contract (usiamo i 18 decimali predefiniti per il token ERC20, il che significa che se vogliamo coniare 1 token, lo rappresenteremo come 1000000000000000000, 1 con 18 zeri).
+- Riga 7: Coniamo e trasferiamo 1 milione di token per il conto che sta distribuendo il contratto intelligente (usiamo i 18 decimali predefiniti per il token ERC20, il che significa che se vogliamo coniare 1 token, lo rappresenterai come 1000000000000000000, 1 con 18 zeri).
 
 Possiamo vedere di seguito l'implementazione del costruttore di ERC20.sol, dove il campo `_decimals` è impostato a 18:
 
@@ -146,7 +145,7 @@ Apri Ganache e seleziona l'opzione "Avvio Rapido" per avviare una blockchain loc
 truffle migrate
 ```
 
-L'indirizzo usato per distribuire i nostri contratti è il primo dall'elenco di indirizzi che Ganache ci mostra. Per verificarlo, possiamo aprire l'applicazione desktop di Ganache e possiamo verificare che il saldo di ether per il primo conto è stato ridotto a causa del costo di ether per distribuire gli smart contract:
+L'indirizzo usato per distribuire i nostri contratti è il primo dall'elenco di indirizzi che Ganache ci mostra. Per verificarlo, possiamo aprire l'applicazione desktop di Ganache e possiamo verificare che il saldo di ether per il primo conto sia stato ridotto a causa del costo di ether per distribuire i nostri contratti intelligenti:
 
 ![Applicazione desktop di Ganache](https://cdn-images-1.medium.com/max/2346/1*1iJ9VRlyLuza58HL3DLfpg.png)_Applicazione desktop di Ganache_
 
@@ -392,7 +391,7 @@ Per eseguire questo script: `truffle exec .\scripts\transferMyTokenToFarmToken.j
 
 _output di transferMyTokenToFarmToken.js_
 
-Come possiamo vedere, abbiamo depositato correttamente i MyToken sullo smart contract, poiché il primo conto ha ora dei FarmToken.
+Come possiamo vedere, abbiamo depositato correttamente i MyToken al contratto intelligente, poiché il primo conto ha ora dei FarmToken.
 
 Per poter prelevare:
 
@@ -479,4 +478,4 @@ _output di withdrawMyTokenFromTokenFarm.js_
 
 [Cos'è la DeFi? Una Guida per Principianti (Aggiornata al 2021) (99bitcoins.com)](https://99bitcoins.com/what-is-defi/)
 
-[DeFi - La classifica della finanza decentralizzata su DeFi Pulse](https://defipulse.com/)
+[DeFi - La classifica della finanza decentralizzata su DeFi LLama](https://defillama.com/)

@@ -1,67 +1,71 @@
 ---
 title: イーサリアム改善提案 (EIP)
-description: イーサリアム改善提案(EIP)を理解するために必要な基本的な情報
+description: EIPを理解するために必要な基本情報
 lang: ja
-sidebar: true
 ---
 
-# イーサリアム改善提案 (EIP)入門 {#introduction-to-ethereum-improvement-proposals-eips}
+# イーサリアム改善提案(EIP)入門 {#introduction-to-ethereum-improvement-proposals}
 
 ## EIP とは {#what-are-eips}
 
-[イーサリアム改善提案(EIP)](https://eips.ethereum.org/)は、イーサリアムに関する新しい機能案やプロセス案を規定する標準規格です。 EIP には、技術仕様の変更案が含まれており、コミュニティの 「信頼できる情報源」として機能します。 イーサリアムのネットワークアップグレードとアプリケーションの標準規格は、EIP プロセスでの議論を通じて開発されます。
+[イーサリアム改善提案(EIP)](https://eips.ethereum.org/)は、イーサリアムの新しい機能やプロセスに関する提案を規定する標準規格です。 EIP には、技術仕様の変更案が含まれており、コミュニティの 「信頼できる情報源」として機能します。 イーサリアムのネットワークアップグレードとアプリケーションの標準規格は、EIP プロセスでの議論を通じて開発されます。
 
-イーサリアムコミュニティ内の誰でも EIP を作成することができます。 EIP を書くためのガイドラインは [EIP 1](https://eips.ethereum.org/EIPS/eip-1) に含まれています。 EIP は、機能の簡潔な技術仕様、その根拠を記載する必要があります。 EIP の著者は、コミュニティ内でコンセンサスを構築し、反対意見を文書化します。 適格な EIP を提出するにあたり、技術的な基準が高いため、EIP 著者のほとんどはアプリケーション開発者またはプロトコル開発者でした。
+イーサリアムコミュニティ内の誰でも EIP を作成することができます。 EIP を書くためのガイドラインは [EIP-1](https://eips.ethereum.org/EIPS/eip-1)に記載されています。 EIP には、主に簡潔な技術仕様と提案の背景を提出する必要があります。 EIP の作成者は、コミュニティ内でコンセンサスを得て、提案に対する別の意見を文書化します。 適格な EIP を提出する上での技術的な障壁が高いため、これまでは通常アプリケーションまたはプロトコルのデベロッパーが EIP を提案しています。
 
 ## EIP の重要性 {#why-do-eips-matter}
 
-EIP は、イーサリアムで変更がどのように行われ、文書化されるかにおいて、中心的な役割を果たします。 EIP は変更を提案・議論し、採用する方法です。 [EIP](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1.md#eip-types)にはコンセンサスに影響を与え、ネットワークのアップグレードを必要とする下位レベルのプロトコル変更のコア EIP やアプリケーション標準の変更の ERC など、さまざまな種類があります。 例えば、トークンを作成するための標準[ERC20](https://eips.ethereum.org/EIPS/eip-20)や[ERC721](https://eips.ethereum.org/EIPS/eip-721)のように、これらのトークンと相互作用するアプリケーションはすべて、同じルールを使用してトークンを扱うため、相互運用可能なアプリケーションを簡単に開発することができます。
+EIP は、イーサリアムで変更がどのように行われ、文書化されるかにおいて、中心的な役割を果たします。 EIP は変更を提案・議論し、採用する方法です。 [EIP には異なるタイプ](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1.md#eip-types)があります。[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)のようなコンセンサスやネットワークアップグレードに影響する下位レベルのプロトコルを変更するコア EIP を含め、 [EIP-20](https://eips.ethereum.org/EIPS/eip-20)や[EIP-721](https://eips.ethereum.org/EIPS/eip-721)などのアプリケーション標準の ERC などがあります。
 
-すべてのネットワークアップグレードは、ネットワーク上の各[イーサリアムクライアント](/learn/#clients-and-nodes) によって実装される必要がある一連の EIP で構成されます。 これは、イーサリアムメインネット上の他のクライアントとコンセンサス状態を維持するには、クライアント開発者は必ず必要な EIP をすべて実装しなければならないということを意味します。
+すべてのネットワークアップグレードは、複数の EIP で構成され、これらはネットワーク上の各[イーサリアムクライアント](/learn/#clients-and-nodes)に実装される必要があります。 これは、イーサリアムメインネット上の他のクライアントとコンセンサス状態を維持するには、クライアントデベロッパーは必ず必要な EIP をすべて実装しなければならないということを意味します。
 
-変更のための技術仕様を提供することに加えて、EIP はイーサリアムでガバナンスが見られる場所です。誰でも自由に提案でき、コミュニティの様々な利害関係者が議論しそれが標準として採用されるべきか、ネットワークアップグレードに含まれるべきかを判断します。 コア以外の EIP はすべてのアプリケーションで採用される必要はないため、例えば、非[ERC20 トークン](https://eips.ethereum.org/EIPS/eip-20)は作成可能です。ですが、コア EIP は広く採用されなければならず(この理由はすべてのノードが同じネットワークの一部を維持するため)、コア EIP は非コア EIP よりもコミュニティ内でのより広範なコンセンサスを必要とします。
+変更の技術仕様の提供に加えて、EIP ではイーサリアムでガバナンスが行われます。誰でも自由に提案でき、コミュニティの様々な利害関係者が議論し、提案を標準規格として採用するべきか、ネットワークアップグレードに含めるべきかを判断します。 コア以外の EIP はすべてのアプリケーションで導入される必要はない一方で(例えば EIP-20 を実装していない代替トークンを作成可能など)、コア EIP は広く導入されなければならず(同一ネットワークを構成するには、全ノードをアップグレードする必要があるため) 、コア EIP は非コア EIP よりもコミュニティでの広範なコンセンサスを必要とします。
 
 ## EIP の歴史 {#history-of-eips}
 
-[イーサリアム改善提案改善提案(EIP) GitHub リポジトリ](https://github.com/ethereum/EIPs) は 2015 年 10 月に作成されました。 EIP のプロセスは、[Bitcoin 改善提案(BIP)](https://github.com/bitcoin/bips) に基づいており、この BIP 自体[Python 改善提案 (PEP)](https://www.python.org/dev/peps/)に準じています。
+[イーサリアム改善提案改善提案(EIP) Github リポジトリ](https://github.com/ethereum/EIPs)は 2015 年 10 月に作成されました。 EIP プロセスは、[Bitcoin 改善提案(BIP)](https://github.com/bitcoin/bips)に基づいており、この BIP 自体[Python 改善提案 (PEP)](https://www.python.org/dev/peps/)に準じています。
 
-EIP 編集者は、技術的な健全性、正しいスペル/文法、およびコードスタイルについての EIP のレビューを担当します。 Martin Becze、Vitalik Buterin、Gavin Wood、および他数名が、2015 年から 2016 年まで初代の EIP 編集者でした。 現在の EIP 編集者は次のとおりです:
+EIP 編集者は、技術的な健全性、フォーマットの問題、正しいスペル、文法、およびコードスタイルについての EIP のレビューを担当します。 Martin Becze、Vitalik Buterin、Gavin Wood など数名が、2015 年から 2016 年まで初代の EIP 編集者でした。
 
-- Alex Beregszaszi (EWASM/イーサリアム財団)
-- Greg Colvin (コミュニティ)
-- Casey Detrio (EWASM/イーサリアム財団)
-- Matt Garnett (Quilt)
-- Hudson James (Ethereum 財団)
-- Nick Johnson (ENS)
-- Nick Savers (コミュニティ)
-- Micah Zoltu (コミュニティ)
+現在の EIP 編集者は次のとおりです
 
-EIP 編集者は、[Ethereum Cat Herders](https://ethereumcatherders.com/)や[イーサリアム Magicians](https://ethereum-magicians.org/)のコミュニティメンバーとともに、どの EIP を実装するかを決定し、EIP の円滑化に責任を持ち、EIP を「Final(最終)」または「Withdrawn(却下)」ステージに移行させます。
+- Alex Beregszaszi (@axic)
+- Gavin John (@Pandapip1)
+- Greg Colvin (@gcolvin)
+- Matt Garnett (@lightclient)
+- Sam Wilson (@SamWilsn)
+
+EIP 名誉編集者は次のとおりです
+
+- Casey Detrio (@cdetrio)
+- Hudson Jameson (@Souptacular)
+- Martin Becze (@wanderer)
+- Micah Zoltu (@MicahZoltu)
+- Nick Johnson (@arachnid)
+- Nick Savers (@nicksavers)
+- Vitalik Buterin (@vbuterin)
+
+EIP 編集者になりたい方は、[EIP-5069](https://eips.ethereum.org/EIPS/eip-5069)をご確認ください。
+
+EIP 編集者は、提案が EIP になる準備ができているかを決定し、EIP 作成者が提案を進めるのを支援します。 [Ethereum Cat Herders](https://ethereumcatherders.com/)は、EIP 編集者とコミュニティ間のミーティングの開催を支援します([EIPIP](https://github.com/ethereum-cat-herders/EIPIP)を参照)。
 
 図表を含む完全な標準化プロセスは、[EIP-1](https://eips.ethereum.org/EIPS/eip-1)に記載されています。
 
 ## 詳細 {#learn-more}
 
-下記などの EIP の詳細については、[EIP](https://eips.ethereum.org/)ウェブサイトをご覧ください:
+EIP の詳細についてご興味がある場合は、 [EIP ウェブサイト](https://eips.ethereum.org/)や[EIP-1](https://eips.ethereum.org/EIPS/eip-1)をご覧ください。 下記は役立つ情報のリンクです。
 
-- [様々な EIP の種類](https://eips.ethereum.org/)
-- [作成されたすべての EIP 一覧](https://eips.ethereum.org/all)
-- [EIP のステータスとその意味](https://eips.ethereum.org/)
+- [全 EIP リスト](https://eips.ethereum.org/all)
+- [全 EIP タイプの説明](https://eips.ethereum.org/EIPS/eip-1#eip-types)
+- [全 EIP ステータスの説明](https://eips.ethereum.org/EIPS/eip-1#eip-process)
 
 ## EIP への参加 {#participate}
 
-EIP や ERC は誰でも作成することができますが、EIP の作成前に、[EIP-1](https://eips.ethereum.org/EIPS/eip-1)をお読みください。プロセス、EIP とは、EIP の種類、文書に含まれるべき内容、フォーマットとテンプレート、EIP 編集者のリストなど、EIP について知っておくべきことが記載されています。 新しい EIP は、それほど複雑ではなく、超ニッチでもなく、イーサリアムのエコシステムのプロジェクトで使用できる新機能を定義するものである必要があります。 最も難しいのは円滑な進行です。著者は、提案する EIP に関して、円滑に進め、フィードバックを集め、EIP が解決する問題を説明する記事を書き、EIP を実行するために複数のプロジェクトとコラボレーションする必要があります。
-
-議論のプロセスや EIP について意見を交わしたりすることにご興味がある方は、[イーサリアム・マジシャンズ・フォーラム](https://ethereum-magicians.org/)をご覧ください。
-
-また、以下も参照してください:
-
-- [EIP の作成方法](https://eips.ethereum.org/EIPS/eip-1)
+誰でも EIP を作成できます。 提案を提出する前に、EIP のプロセスと書き方を概説した[EIP-1](https://eips.ethereum.org/EIPS/eip-1)をお読みください。また、草案を提出する前に、まずコミュニティと議論する場所である[イーサリアム・マジシャンズ](https://ethereum-magicians.org/) でフィードバックを募ってください。
 
 ## 参考文献 {#references}
 
 <cite class="citation">
 
-本ページの内容の一部は、Hudson Jameson[イーサリアムプロトコル開発ガバナンスおよびネットワークアップグレードのコーディネーション](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) より提供
+本ページの内容の一部は、Hudson Jameson[イーサリアムプロトコル開発ガバナンスおよびネットワークアップグレードのコーディネーション](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/)より提供されています
 
 </cite>

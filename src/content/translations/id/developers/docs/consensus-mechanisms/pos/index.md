@@ -2,7 +2,6 @@
 title: Bukti Taruhan (PoS)
 description: Penjelasan tentang protokol konsensus proof-of-stake dan perannya dalam Ethereum.
 lang: id
-sidebar: true
 incomplete: true
 ---
 

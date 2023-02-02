@@ -2,7 +2,6 @@
 title: Decentralized Tárhely
 description: Áttekintő arról, hogy mi is az a decentralizált tárhely és az elérhető eszközökről, amivel integrálhatod a dappodba.
 lang: hu
-sidebar: true
 incomplete: true
 isOutdated: true
 ---

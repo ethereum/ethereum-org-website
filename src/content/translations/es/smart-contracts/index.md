@@ -2,7 +2,6 @@
 title: Contratos inteligentes
 description: Una introducción sin tecnicismos a los contratos inteligentes
 lang: es
-sidebar: true
 ---
 
 # Introducción a los contratos inteligentes {#introduction-to-smart-contracts}
@@ -57,7 +56,7 @@ El factor humano es uno de las mayores causas de fracaso de los contratos tradic
 
 ### Registro público {#public-record}
 
-Los contratos inteligentes son también útilies para auditorías y seguimiento. Dado que los contratos inteligentes de Ethereum están en una cadena de bloques pública, cualquier persona puede realizar un seguimiento instantáneo de las transferencias de activos y de otra información relacionada. Puede comprobar que alguien le ha enviado dinero a su dirección, por ejemplo.
+Los contratos inteligentes son también útiles para auditorías y seguimiento. Dado que los contratos inteligentes de Ethereum están en una cadena de bloques pública, cualquier persona puede realizar un seguimiento instantáneo de las transferencias de activos y de otra información relacionada. Puede comprobar que alguien le ha enviado dinero a su dirección, por ejemplo.
 
 ### Protección de la privacidad {#privacy-protection}
 

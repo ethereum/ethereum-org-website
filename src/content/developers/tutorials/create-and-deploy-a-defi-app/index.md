@@ -5,7 +5,6 @@ author: "strykerin"
 tags: ["solidity", "defi", "web3.js", "truffle", "ganache", "smart contracts"]
 skill: intermediate
 lang: en
-sidebar: true
 published: 2020-12-31
 source: github.com
 sourceUrl: https://github.com/strykerin/DeFi-Token-Farm
@@ -473,4 +472,4 @@ _output of withdrawMyTokenFromTokenFarm.js_
 
 [What is DeFi? A Beginner's Guide (2021 Updated) (99bitcoins.com)](https://99bitcoins.com/what-is-defi/)
 
-[DeFi - The Decentralized Finance Leaderboard at DeFi Pulse](https://defipulse.com/)
+[DeFi - The Decentralized Finance Leaderboard at DeFi Llama](https://defillama.com/)

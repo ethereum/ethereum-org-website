@@ -4,7 +4,6 @@ description: An overview of decentralized social networks on Ethereum
 lang: en
 template: use-cases
 emoji: ":mega:"
-sidebar: true
 sidebarDepth: 2
 image: ../../assets/ethereum-learn.png
 summaryPoint1: Blockchain-based platforms for social interaction and content creation and distribution.
@@ -38,7 +37,7 @@ Many blockchain-based social platforms have native tokens that power monetizatio
 
 2. Decentralized social networks are built on open-source ideals and make source code for applications available for public inspection. By eliminating the implementation of opaque algorithms common in traditional social media, blockchain-based social networks can align the interests of users and platform creators.
 
-3. Decentralized social networks eliminate the "middle-man." Content creators have direct ownership over their content, and they engage directly with followers, fans, buyers, and other parties, with nothing but a smart contract in between.
+3. Decentralized social networks eliminate the "middle-man". Content creators have direct ownership over their content, and they engage directly with followers, fans, buyers, and other parties, with nothing but a smart contract in between.
 
 4. As dapps running on the Ethereum network, which is sustained by a global, peer-to-peer network of nodes, decentralized social networks are less susceptible to server downtime and outages.
 
@@ -95,16 +94,19 @@ In May 2022, [Instagram announced support for NFTs](https://about.instagram.com/
 - **[Status.im](https://status.im/)** - _Status is a secure messaging app that uses an open-source, peer-to-peer protocol, and end-to-end encryption to protect your messages from third parties._
 - **[Mirror.xyz](https://mirror.xyz/)** - _Mirror is a decentralized, user-owned publishing platform built on Ethereum for users to crowdfund ideas, monetize content, and build high-value communities._
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol is a composable and decentralized social graph helping creators take ownership of their content wherever they go in the digital garden of the decentralized internet._
+- **[Farcaster](https://farcaster.xyz/)** - _Farcaster is a sufficiently decentralized social network. It is an open protocol that can support many clients, just like email._
 
 ## Further reading {#further-reading}
 
 ### Articles {#articles}
 
+- [Decentralizing social media: a guide to the web3 social stack](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) - _Coinbase Ventures_
 - [Social Networks Are the Next Big Decentralization Opportunity](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
 - [Web3 holds the promise of decentralized, community-powered social networks](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
 - [An Overview of the Blockchain Social Media Landscape](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
 - [How Blockchain Can Solve Social Media Privacy](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
 - [Social Media Networks Are Coming To The Blockchain](https://businesstechguides.co/what-are-decentralized-social-networks) — _Emmanuel Awosika_
+- [Sufficient Decentralization for Social Networks](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
 
 ### Videos {#videos}
 
