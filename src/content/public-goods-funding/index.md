@@ -299,6 +299,6 @@ There are many projects using Ethereum infrastructure to create better ways of f
 ### Communities {#communities}
 
 - [Gitcoin on Discord](https://discord.com/invite/gitcoin)
-- [Clr.fund on Discord](https://discord.gg/ZnsYPV6dCvhttps://discord.gg/ZnsYPV6dCv)
+- [Clr.fund on Discord](https://discord.gg/ZnsYPV6dCv)
 - [MolochDAO on Discord](https://discord.com/invite/PxrnEUsbef)
 - [Green Pill Party on Telegram](https://t.me/+g9TM8i7GpxAzMGUx)
