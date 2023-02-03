@@ -2,10 +2,11 @@
 import React from "react"
 import {
   Box,
+  BoxProps,
   Flex,
-  Heading,
   ListItem,
   Text,
+  TextProps,
   UnorderedList,
 } from "@chakra-ui/react"
 import { useIntl } from "react-intl"
@@ -21,6 +22,9 @@ import PageMetadata from "../../../components/PageMetadata"
 // Utils
 import { translateMessageId } from "../../../utils/translations"
 import FeedbackCard from "../../../components/FeedbackCard"
+
+const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />
+const ContentHeading = (props: TextProps) => <Text as="h2" {...props} />
 
 const Contributors = ({
   data,
@@ -63,7 +67,7 @@ const Contributors = ({
     ) ?? []
 
   return (
-    <Flex direction="column" align="center" w="full" m="0 auto">
+    <Flex direction="column" align="center" w="full">
       <PageMetadata
         title={translateMessageId(
           "page-contributing-translation-program-contributors-meta-title",
@@ -75,17 +79,17 @@ const Contributors = ({
         )}
       />
 
-      <Box py={4} px={8} w="full">
+      <Content>
         <Breadcrumbs slug={location.pathname} />
-        <Heading as="h1" fontSize={{ base: "2.5rem", md: "5xl" }}>
+        <ContentHeading as="h1">
           <Translation id="page-contributing-translation-program-contributors-title" />
-        </Heading>
-        <Heading as="h4" fontSize={{ base: "md", md: "xl" }}>
+        </ContentHeading>
+        <ContentHeading as="h4">
           <Text as="strong">
             <Translation id="page-contributing-translation-program-contributors-number-of-contributors" />{" "}
             {translatorData.length}
           </Text>
-        </Heading>
+        </ContentHeading>
         <Text>
           <Translation id="page-contributing-translation-program-contributors-our-translators-1" />
         </Text>
@@ -102,13 +106,9 @@ const Contributors = ({
           </Link>
           .
         </Text>
-        <Heading
-          as="h2"
-          fontSize={{ base: "2xl", md: "2rem" }}
-          fontWeight="semibold"
-        >
+        <ContentHeading as="h2">
           <Translation id="page-contributing-translation-program-contributors-thank-you" />
-        </Heading>
+        </ContentHeading>
         <UnorderedList
           display="grid"
           gridTemplateColumns={{
@@ -139,10 +139,10 @@ const Contributors = ({
           </Link>
           .
         </Text>
-      </Box>
-      <Box py={4} px={8} w="full">
+      </Content>
+      <Content>
         <FeedbackCard />
-      </Box>
+      </Content>
     </Flex>
   )
 }
