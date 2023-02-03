@@ -97,14 +97,13 @@ One of the main benefits of the London upgrade is improving the user's experienc
 
 ## EIP-1559 {#eip-1559}
 
-The implementation of [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) in the London Upgrade made the transaction fee mechanism more complex than the previous gas price auction, but it has the advantage of making gas fees more predictable, resulting in a more efficient transaction fee market. Users can submit transactions with a `maxFeePerGas` corresponding to how much they are willing to pay for the transaction to be executing, knowing that they will not pay more than the market price for gas (`baseFeePerGas`), and get any extra, minus their tip, refunded.
+The implementation of [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) in the London Upgrade made the transaction fee mechanism more complex than the previous gas price auction, but it has the advantage of making gas fees more predictable, resulting in a more efficient transaction fee market. Users can submit transactions with a `maxFeePerGas` corresponding to how much they are willing to pay for the transaction to be executing, knowing that they will not pay more than the market price for gas (`baseFeePerGas`), and get any extra, minus their tip, refunded.
 
 This video explains EIP-1559 and the benefits it brings:
 
 <YouTube id="MGemhK9t44Q" />
 
-If you are interested, you can read the exact
-[EIP-1559 specifications](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md).
+If you are interested, you can read [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
 
 Continue down the rabbit hole with these [EIP-1559 Resources](https://hackmd.io/@timbeiko/1559-resources).
 
@@ -154,7 +153,6 @@ If you want to monitor gas prices, so you can send your ETH for less, you can us
 ## Further reading {#further-reading}
 
 - [Ethereum Gas Explained](https://defiprime.com/gas)
-- [Is Ethereum more expensive to use as price rises?](https://docs.ethhub.io/questions-about-ethereum/is-ethereum-more-expensive-to-use-as-price-rises/)
 - [Reducing the gas consumption of your Smart Contracts](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [Proof of Stake versus Proof of Work](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 

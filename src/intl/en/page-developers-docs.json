@@ -69,6 +69,7 @@
   "docs-nav-opcodes": "Opcodes",
   "docs-nav-run-a-node": "Run a node",
   "docs-nav-client-diversity": "Client diversity",
+  "docs-nav-bootnodes": "Bootnodes",
   "docs-nav-nodes-as-a-service": "Nodes as a service",
   "docs-nav-oracles": "Oracles",
   "docs-nav-oracles-description": "How information is injected into the Ethereum blockchain",
