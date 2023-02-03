@@ -65,30 +65,30 @@ Withdrawal functionality will be enabled through a two-part simultaneous network
 
 ## How do withdrawal payments work? {#how-do-withdrawals-work}
 
-Whether a given validator is eligible for a withdrawal or not is determined by the state of the validator account itself. The factors that determine this are:
-
-| Validator status                             | Yes                                  | No                                                     |
-| -------------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
-| 1. Has a withdrawal address been provided?   | Proceed to #2                        | **No** withdrawal will be processed, validator skipped |
-| 2. Is the validator still active?            | Proceed to #3                        | **Full withdrawal** will be processed                  |
-| 3. Is the effective balance maxed out at 32? | **Reward payment** will be processed | **No** withdrawal will be processed, validator skipped |
-
-Since no user input is needed at any given time to determine weather an account should have a withdrawal initiated or not, the entire process is done automatically by the consensus layer on a continuous loop.
-
-There are only two actions that are taken by a validator operator during the course of a validator's life cycle that influence this directly:
-
-1. Provide withdrawal credentials to enable any form of withdrawal
-2. Exit, which will trigger a full withdrawal
+Whether a given validator is eligible for a withdrawal or not is determined by the state of the validator account itself. No user input is needed at any given time to determine weather an account should have a withdrawal initiated or not—the entire process is done automatically by the consensus layer on a continuous loop.
 
 ### Validator "sweeping" {#validator-sweeping}
 
-When a validator is scheduled to propose the next block, it is required to build a withdrawal queue, of up to 16 eligible withdrawals. This is done by originally starting with validator index 0, determining if there is an eligible withdrawal for this account per the rules of the protocol, and adding it the queue if there is. The validator set to propose the following block will pick up where the last one left off, progressing in order indefinitely.
+When a validator is scheduled to propose the next block, it is required to build a withdrawal queue, of up to 16 eligible withdrawals. This is done by originally starting with validator index 0, determining if there is an eligible withdrawal for this account per the rules of the protocol, and adding it to the queue if there is. The validator set to propose the following block will pick up where the last one left off, progressing in order indefinitely.
 
 <InfoBanner emoji="🕛">
-<p>Think about an analogue clock. The hand on the clock points to the hour, progresses in one direction, doesn’t skip any hours, and eventually wraps around to the beginning again after the last number is reached.</p>
-<p>Now instead of 1 through 12, imagine the clock has 0 through N <em>(the total number of validator accounts that have ever been registered on the Beacon Chain, over 500,000 as of Jan 2023).</em></p>
-<p>The hand on the clock points to the next validator that needs to be checked for eligible withdrawals. It starts at 0, and progresses all the way around without skipping any accounts. When the last validator is reached, the cycle continues back at the beginning.</p>
+Think about an analogue clock. The hand on the clock points to the hour, progresses in one direction, doesn’t skip any hours, and eventually wraps around to the beginning again after the last number is reached.<br/><br/>
+Now instead of 1 through 12, imagine the clock has 0 through N <em>(the total number of validator accounts that have ever been registered on the Beacon Chain, over 500,000 as of Jan 2023).</em><br/><br/>
+The hand on the clock points to the next validator that needs to be checked for eligible withdrawals. It starts at 0, and progresses all the way around without skipping any accounts. When the last validator is reached, the cycle continues back at the beginning.
 </InfoBanner>
+
+#### Checking an account for withdrawals {#checking-an-account-for-withdrawals}
+
+While a proposer is sweeping through validators for possible withdrawals, each validator being checked is evaluated against a short series of questions to determine if a withdrawal should be triggered, and if so, how much ETH should be withdrawn.
+
+1. **Has a withdrawal address been provided?** If no withdrawal address has been provided, the account is skipped and no withdrawal initiated.
+2. **Is the validator exited and withdrawable?** If the validator has fully exited, and we have reached the epoch where their account is considered to be "withdrawable", then a full withdrawal will be processed. This will transfer the entire remaining balance to the withdrawal address.
+3. **Is the effective balance maxed out at 32?** If the account has withdrawal credentials, is not fully exited, and has rewards above 32 waiting, a partial withdrawal will be processed which transfers only the rewards above 32 to the user's withdrawal address.
+
+There are only two actions that are taken by validator operators during the course of a validator's life cycle that influence this flow directly:
+
+- Provide withdrawal credentials to enable any form of withdrawal
+- Exit from the network, which will trigger a full withdrawal
 
 ### Gas free {#gas-free}
 
@@ -100,6 +100,8 @@ A maximum of 16 withdrawals can be processed in a single block. At that rate, 11
 
 Expanding this calculation, we can estimate the time it will take to process a given number of withdrawals:
 
+<div style="max-width:50ch;margin-inline:auto;">
+
 | Number of withdrawals | Time to complete |
 | :-------------------: | :--------------: |
 |        100,000        |     0.9 days     |
@@ -110,6 +112,8 @@ Expanding this calculation, we can estimate the time it will take to process a g
 |        600,000        |     5.2 days     |
 |        700,000        |     6.1 days     |
 |        800,000        |     7.0 days     |
+
+</div>
 
 As you see this slows down as more validators are on the network. An increase in missed blocks could slow this down proportionally, but this will generally represent the slower side of possible outcomes.
 
