@@ -56,13 +56,14 @@ const WithdrawalsTabComparison: React.FC<IProps> = () => (
         <Heading as="h3">New stakers (not yet deposited)</Heading>
         <UnorderedList>
           <ListItem>
-            By default, new stakers should now be providing a withdrawal address
-            to an Ethereum address they control when generating their validator
-            keys using the Staking Deposit CLI tool
+            By default, new stakers looking to automatically enable reward
+            payments and withdrawal functionality should provide an Ethereum
+            withdrawal address they control when generating their validator keys
+            using the Staking Deposit CLI tool
           </ListItem>
           <ListItem>
-            This will enable withdrawals by default for any new stakers joining
-            the network
+            This is not required at time deposit, but will prevent the need to
+            update these keys at a later date to unlock your funds
           </ListItem>
         </UnorderedList>
         <Text fontWeight="bold">
