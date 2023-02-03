@@ -88,6 +88,8 @@ Ethereum does not support a large population of light nodes yet, but light node 
 
 Syncing clients in any mode other than archive will result in pruned blockchain data. This means, there is no archive of all historical states but the full node is able to build them on demand.
 
+Learn more about [Archive nodes](/developers/docs/archive-nodes).
+
 ## Why should I run an Ethereum node? {#why-should-i-run-an-ethereum-node}
 
 Running a node allows you to directly, trustlessly and privately use Ethereum while supporting the network by keeping it more robust and decentralized.
@@ -271,12 +273,7 @@ Snap sync is the latest approach to syncing a client, pioneered by the Geth team
 
 [More on snap sync](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
 
-| Client     | Disk size (fast sync) | Disk size (full archive) |
-| ---------- | --------------------- | ------------------------ |
-| Geth       | 400GB+                | 6TB+                     |
-| Nethermind | 500GB+                | 12TB+                    |
-| Besu       | 750GB+                | 5TB+                     |
-| Erigon     | N/A                   | 1TB+                     |
+### Consensus layer sync modes {#consensus-layer-sync-modes}
 
 #### Optimistic sync {#optimistic-sync}
 
