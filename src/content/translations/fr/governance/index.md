@@ -153,7 +153,7 @@ Le processus de gouvernance Ethereum négocie souvent la vitesse et l'efficacit�
 
 Bien que le développement des spécifications et des implémentations ait toujours été entièrement open source, les processus formels utilisés pour proposer des mises à jour décrites ci-dessus n'ont pas été utilisés. Cela a permis de préciser les changements et de parvenir plus rapidmement à un accord entre chercheurs et développeurs.
 
-Lorsque la chaîne phare fusionnera avec la couche d'exécution Ethereum, le processus de gouvernance pour proposer des changements sera harmonisé. Ce processus d'implémentation de la fusion est [déjà en cours](https://github.com/ethereum/EIPs/pull/3675).
+Lorsque la chaîne phare fusionnera avec la couche d'exécution Ethereum, le processus de gouvernance pour proposer des changements sera harmonisé. Ce processus d'implémentation de la fusion est [déjà en cours](https://eips.ethereum.org/EIPS/eip-3675).
 
 <ButtonLink to="/upgrades/merge/">
   Plus d'infos sur la fusion
