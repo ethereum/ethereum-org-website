@@ -335,6 +335,9 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               <Translation id="additional-reading-more-on-ethereum-basics" />
             </AdditionalReadingHeader>
             <DocsContainer>
+              <DocLink to="/guides/">
+                <Translation id="guides-hub" />
+              </DocLink>
               <DocLink to="/smart-contracts/">
                 <Translation id="additional-reading-what-are-smart-contracts" />
               </DocLink>
@@ -448,6 +451,12 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               <Translation id="additional-reading-more-on-using-ethereum" />
             </AdditionalReadingHeader>
             <DocsContainer>
+              <DocLink to="/guides/how-to-register-an-ethereum-account/">
+                <Translation id="additional-reading-how-to-register-an-ethereum-account" />
+              </DocLink>
+              <DocLink to="/guides/how-to-use-a-wallet/">
+                <Translation id="additional-reading-how-to-use-a-wallet" />
+              </DocLink>
               <DocLink to="/community/support/">
                 <Translation id="additional-reading-support-for-ethereum-and-wallets" />
               </DocLink>
@@ -861,6 +870,14 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   </Link>{" "}
                   <i>
                     <Translation id="mastering-ethereum-description" />{" "}
+                  </i>
+                </li>
+                <li>
+                  <Link to="https://www.goodreads.com/en/book/show/59892281-proof-of-stake">
+                    <Translation id="proof-of-stake-title" />
+                  </Link>{" "}
+                  <i>
+                    <Translation id="proof-of-stake-description" />
                   </i>
                 </li>
               </ul>

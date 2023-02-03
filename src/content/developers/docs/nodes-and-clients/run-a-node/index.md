@@ -55,6 +55,7 @@ Both options have different advantages summed up above. If you are looking for a
 - [Blockdaemon](https://blockdaemon.com)
 - [Alchemy](https://www.alchemy.com/)
 - [Blast](https://blastapi.io/)
+- [Getblock](https://getblock.io/)
 
 Check out also [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/) for more options on hosted nodes.
 

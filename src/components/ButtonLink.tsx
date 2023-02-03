@@ -7,7 +7,7 @@ export interface IProps extends ILinkProps, ButtonProps {}
 
 const ButtonLink: React.FC<IProps> = ({ children, ...props }) => {
   return (
-    <Button as={Link} textDecoration="none" {...props}>
+    <Button as={Link} textDecoration="none" activeStyle={{}} {...props}>
       {children}
     </Button>
   )
