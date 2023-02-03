@@ -48,6 +48,7 @@ Platforms with contract-based persistence:
 - [0Chain](https://0chain.net/)
 - [Crust Network](https://crust.network)
 - [Swarm](https://www.ethswarm.org/)
+- [4EVERLAND](https://www.4everland.org/)
 
 ### Additional considerations {#additional-consideration}
 
@@ -58,7 +59,7 @@ IPFS is a distributed system for storing and accessing files, websites, applicat
 - [web3.storage](https://web3.storage/) _(IPFS/Filecoin pinning service)_
 - [Infura](https://infura.io/product/ipfs) _(IPFS pinning service)_
 - [IPFS Scan](https://ipfs-scan.io) _(IPFS pinning explorer)_
-- [4EVERLAND](https://www.4everland.org/)_（IPFS pinning service）_
+- [4EVERLAND](https://www.4everland.org/)_（IPFS pinning service/IPFS S3）_
 
 SWARM is a decentralised data storage and distribution technology with a storage incentive system and a storage rent price oracle.
 
@@ -77,6 +78,7 @@ Types of dStorage with a challenge mechanism:
 - Arweave
 - Filecoin
 - Crust Network
+- 4EVERLAND
 
 ### Decentrality {#decentrality}
 
@@ -91,6 +93,7 @@ Decentralized tools without KYC:
 - IPFS
 - Ethereum
 - Crust Network
+- 4EVERLAND
 
 ### Consensus {#consensus}
 
