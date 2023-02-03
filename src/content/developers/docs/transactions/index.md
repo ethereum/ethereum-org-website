@@ -190,11 +190,9 @@ Ethereum originally had one format for transactions. Each transaction contained 
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
-Ethereum has evolved to support multiple types of transactions to allow for new features such as access lists and [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) to be implemented without affecting legacy transaction formats.
+Ethereum has evolved to support multiple types of transactions to allow for new features such as access lists and [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) to be implemented without affecting legacy transaction formats.
 
-[EIP-2718: Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718) defines a transaction type that is an envelope for future transaction types.
-
-EIP-2718 is a new generalised envelope for typed transactions. In the new standard, transactions are interpreted as:
+[EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) is what allows for this behaviour. Transactions are interpreted as:
 
 `TransactionType || TransactionPayload`
 

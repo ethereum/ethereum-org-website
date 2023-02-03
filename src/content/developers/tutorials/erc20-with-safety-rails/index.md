@@ -184,7 +184,7 @@ Freezing and thawing contracts requires several changes:
 
 ### Asset cleanup {#asset-cleanup}
 
-To release ERC-20 tokens held by this contract we need to call a function on the token contract to which they belong, either [`transfer`](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md#transfer) or [`approve`](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md#approve). There's no point wasting gas in this case on allowances, we might as well transfer directly.
+To release ERC-20 tokens held by this contract we need to call a function on the token contract to which they belong, either [`transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer) or [`approve`](https://eips.ethereum.org/EIPS/eip-20#approve). There's no point wasting gas in this case on allowances, we might as well transfer directly.
 
 ```solidity
     function cleanupERC20(

@@ -153,7 +153,7 @@ Beim Ethereum-Governance-Prozess geht es oft darum, Geschwindigkeit und Effizien
 
 Während die Entwicklung der Spezifikation und Implementierungen immer vollständig quelloffen erfolgte, wurden die oben beschriebenen formalen Verfahren zur Vorlage von Aktualisierungen nicht angewandt. So konnten Veränderungen schneller spezifiziert werden und die Experten und Implementatoren kamen schneller zu einer Einigung.
 
-Wenn die Beacon Chain mit dem Ethereum-Ausführungslayer verschmilzt, erfolgt die Harmonisierung des Governance-Prozesses zum Vorschlagen von Änderungen. Dieser Prozess des Zusammenschlusses ist [bereits im Gange](https://github.com/ethereum/EIPs/pull/3675).
+Wenn die Beacon Chain mit dem Ethereum-Ausführungslayer verschmilzt, erfolgt die Harmonisierung des Governance-Prozesses zum Vorschlagen von Änderungen. Dieser Prozess des Zusammenschlusses ist [bereits im Gange](https://eips.ethereum.org/EIPS/eip-3675).
 
 <ButtonLink to="/upgrades/merge/">
   Mehr zum Zusammenschluss
