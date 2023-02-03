@@ -144,7 +144,7 @@ Sharding Ethereum's blockchain has long been part of the development roadmap. Ho
 
 #### Recent research {#recent-research-4}
 
-- [EIP-4844: Proto-Danksharding](https://github.com/ethereum/EIPs/pull/5088)
+- [EIP-4844: Proto-Danksharding](https://eips.ethereum.org/EIPS/eip-4844)
 - [Vitalik on sharding and data availability sampling](https://hackmd.io/@vbuterin/sharding_proposal)
 
 ### Hardware {#hardware}
@@ -170,15 +170,12 @@ Zero-knowledge proofs (ZKP) and cryptography are critical for building privacy a
 #### Background reading {#background-reading-6}
 
 - [0xparc blog](https://0xparc.org/blog)
-
 - [zkp.science](https://zkp.science/)
-
 - [Zero Knowledge podcast](https://zeroknowledge.fm/)
 
 #### Recent research {#recent-research-6}
 
 - [Recent advance in elliptic curve cryptography](https://ethresear.ch/t/the-ec-fft-algorithm-without-elliptic-curve-and-isogenies/11346)
-
 - [Ethresear.ch ZK](https://ethresear.ch/c/zk-s-nt-arks/13)
 
 ### Wallets {#wallets}
@@ -198,7 +195,7 @@ Ethereum wallets can be browser extensions, desktop and mobile apps or smart con
 - [Validation focused smart contract wallets](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
 - [The future of accounts](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
 - [EIP-3074 AUTH and AUTHCALL Opcodes](https://eips.ethereum.org/EIPS/eip-3074)
-- [Publishing code at an EOA address](https://github.com/ethereum/EIPs/pull/5003)
+- [Publishing code at an EOA address](https://eips.ethereum.org/EIPS/eip-5003)
 
 ## Community, education and outreach {#community-education-and-outreach}
 
@@ -218,7 +215,7 @@ To onboard more people onto Ethereum, the ecosystem must improve the UX/UI. This
 - [Web3 Design Principles](https://www.web3designprinciples.com/)
 - [Ethereum Magicians UX discussion](https://ethereum-magicians.org/t/og-council-ux-follow-up/9032/3)
 
-## Economics {#economics}
+### Economics {#economics}
 
 Economics research in Ethereum broadly follows two approaches: validate the security of mechanisms relying on economic incentives ("microeconomics") and analyse the flows of value between protocols, applications and users ("macroeconomics"). There are complex crypto-economic factors relating to Ethereum's native asset (ether) and the tokens built on top of it (for example NFTs and ERC20 tokens).
 

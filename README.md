@@ -1567,6 +1567,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://shawkisukkar.com/"><img src="https://avatars.githubusercontent.com/u/57439827?v=4?s=100" width="100px;" alt="Shawki Sukkar"/><br /><sub><b>Shawki Sukkar</b></sub></a><br /><a href="#content-ShawkiS" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/therealharpaljadeja"><img src="https://avatars.githubusercontent.com/u/38040789?v=4?s=100" width="100px;" alt="Harpal Jadeja"/><br /><sub><b>Harpal Jadeja</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=therealharpaljadeja" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://www.zlog.in"><img src="https://avatars.githubusercontent.com/u/67903793?v=4?s=100" width="100px;" alt="Zion"/><br /><sub><b>Zion</b></sub></a><br /><a href="#content-zlog-in" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/azpwnz"><img src="https://avatars.githubusercontent.com/u/6987007?v=4?s=100" width="100px;" alt="Andriy Zhuk"/><br /><sub><b>Andriy Zhuk</b></sub></a><br /><a href="#content-azpwnz" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://etherscan.io/address/gooser.eth"><img src="https://avatars.githubusercontent.com/u/121782105?v=4?s=100" width="100px;" alt="gooser.eth"/><br /><sub><b>gooser.eth</b></sub></a><br /><a href="#content-gooseri" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>

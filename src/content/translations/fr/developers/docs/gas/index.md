@@ -101,13 +101,13 @@ L'un des principaux avantages de la mise à niveau de Londres est l'amélioratio
 
 ## EIP-1559 {#eip-1559}
 
-La mise en œuvre de [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) dans la mise à niveau de Londres a rendu le mécanisme des frais de transaction plus complexe que les précédentes enchères du prix du gaz, mais il a l'avantage de rendre les frais de gaz plus prévisibles, ce qui donne lieu à un marché des frais de transaction plus efficace. Les utilisateurs peuvent soumettre des transactions avec un `maxFeePerGas` correspondant au montant qu'ils sont prêts à payer pour l'exécution de la transaction, sachant qu'ils ne paieront pas plus que le prix du marché pour le gaz (`baseFeePerGas`), et obtenir un remboursement du supplément, moins leur pourboire.
+La mise en œuvre de [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) dans la mise à niveau de Londres a rendu le mécanisme des frais de transaction plus complexe que les précédentes enchères du prix du gaz, mais il a l'avantage de rendre les frais de gaz plus prévisibles, ce qui donne lieu à un marché des frais de transaction plus efficace. Les utilisateurs peuvent soumettre des transactions avec un `maxFeePerGas` correspondant au montant qu'ils sont prêts à payer pour l'exécution de la transaction, sachant qu'ils ne paieront pas plus que le prix du marché pour le gaz (`baseFeePerGas`), et obtenir un remboursement du supplément, moins leur pourboire.
 
 Cette vidéo explique l'EIP-1559 et les avantages qu'il apporte :
 
 <YouTube id="MGemhK9t44Q" />
 
-Si cela vous intéresse, vous pouvez lire les spécifications exactes [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md).
+Si cela vous intéresse, vous pouvez lire les spécifications exactes [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
 
 Continuez à suivre le lapin avec ces [Ressources EIP-1559](https://hackmd.io/@timbeiko/1559-resources).
 

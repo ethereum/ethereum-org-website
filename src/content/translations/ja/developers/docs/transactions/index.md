@@ -179,7 +179,7 @@ Alice のアカウントに **+1.0 ETH**振り込み
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
-イーサリアムは、アクセスリストや[EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md)などの新機能を、レガシーなトランザクション形式に影響を与えずに実装できるよう、複数の種類のトランザクションをサポートするように進化してきました。
+イーサリアムは、アクセスリストや[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)などの新機能を、レガシーなトランザクション形式に影響を与えずに実装できるよう、複数の種類のトランザクションをサポートするように進化してきました。
 
 [EIP-2718: 型付トランザクションエンベロープ(Typed Transaction Envelope)](https://eips.ethereum.org/EIPS/eip-2718)では、将来のトランザクション形式のためのエンベロープ(外包)となるトランザクション種類を定義します。
 

@@ -14,7 +14,7 @@ Anyone within the Ethereum community has the ability to create an EIP. Guideline
 
 ## Why do EIPs matter? {#why-do-eips-matter}
 
-EIPs play a central role in how changes happen and are documented on Ethereum. They are the way for people to propose, debate and adopt changes. There are [different types of EIPs](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1.md#eip-types), including core EIPs for low-level protocol changes that affect consensus and require a network upgrade like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), and ERCs for application standards like [EIP-20](https://eips.ethereum.org/EIPS/eip-20) and [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
+EIPs play a central role in how changes happen and are documented on Ethereum. They are the way for people to propose, debate, and adopt changes. There are [different types of EIPs](https://eips.ethereum.org/EIPS/eip-1#eip-types), including core EIPs for low-level protocol changes that affect consensus and require a network upgrade like [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), and ERCs for application standards like [EIP-20](https://eips.ethereum.org/EIPS/eip-20) and [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
 
 Every network upgrade consists of a set of EIPs that need to be implemented by each [Ethereum client](/learn/#clients-and-nodes) on the network. This means that to stay in consensus with other clients on the Ethereum Mainnet, client developers need to make sure they have all implemented the required EIPs.
 

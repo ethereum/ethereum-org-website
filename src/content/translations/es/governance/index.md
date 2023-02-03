@@ -152,7 +152,7 @@ El proceso de gobernanza de Ethereum usualmente cambia velocidad y eficiencia po
 
 Mientras que la especificación e implementaciones siempre han sido totalmente abiertas, no se utilizaron los procesos formales arriba descritos para proponer actualizaciones. Esto permitió que los investigadores y los implementadores especificaran los cambios y los acordaran más rápidamente.
 
-Cuando la cadena de baliza se fusione con la capa de ejecución de Ethereum, el proceso de gobernanza para proponer cambios será uniforme. Este proceso para implementar la fusión ya está [en marcha](https://github.com/ethereum/EIPs/pull/3675).
+Cuando la cadena de baliza se fusione con la capa de ejecución de Ethereum, el proceso de gobernanza para proponer cambios será uniforme. Este proceso para implementar la fusión ya está [en marcha](https://eips.ethereum.org/EIPS/eip-3675).
 
 <ButtonLink to="/upgrades/merge/">
   Más sobre la fusión

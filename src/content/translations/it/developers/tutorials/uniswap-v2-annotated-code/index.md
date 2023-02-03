@@ -450,7 +450,7 @@ Usa la funzione `UniswapV2ERC20._mint` per creare realmente i token aggiuntivi d
     }
 ```
 
-Se non c'è alcuna commissione con `kLast` impostato a zero (se non è già così). Alla scrittura di questo contratto, esisteva una [funzionalità di rimborso del carburante](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3298.md) che incoraggiava i contratti a ridurre la dimensione generale dello stato di Ethereum azzerando l'archiviazione non necessaria. Questo codice ottiene quel rimborso, se possibile.
+Se non c'è alcuna commissione con `kLast` impostato a zero (se non è già così). Alla scrittura di questo contratto, esisteva una [funzionalità di rimborso del carburante](https://eips.ethereum.org/EIPS/eip-3298) che incoraggiava i contratti a ridurre la dimensione generale dello stato di Ethereum azzerando l'archiviazione non necessaria. Questo codice ottiene quel rimborso, se possibile.
 
 #### Funzioni accessibili esternamente {#pair-external}
 
