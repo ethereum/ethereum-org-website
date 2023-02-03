@@ -4,7 +4,7 @@
 
 StorybookJS is a UI tool for isolating UI components to visually test their styles and states.
 
-This is great for checking the various iterations of a component in a sandbox versus scowering all the pages in a large scale project it is used to verify that the component is rendering properly.
+This is great for checking the various iterations of a component in a sandbox versus scouring all the pages in a large scale project it is used to verify that the component is rendering properly.
 
 You can also render pages if you need that level of visual testing.
 
@@ -18,7 +18,7 @@ It's as easy as running `yarn storybook` to boot up a dedicated localhost to see
 
 ## Setting up a component's stories
 
-A Storybook "story" is an instance of a component in a certain state or with certain paramaters applied to show an alternative version of the component.
+A Storybook "story" is an instance of a component in a certain state or with certain parameters applied to show an alternative version of the component.
 
 Each component will only need one file containing all the stories, and should follow the naming convention of the component.
 
@@ -91,4 +91,4 @@ export const Variants = () => (
 )
 ```
 
-As you go and make adjustments to the component itself or it's variant styles, Storybook will hot reload and those changes will appear in the stories that emphazise them.
+As you go and make adjustments to the component itself or it's variant styles, Storybook will hot reload and those changes will appear in the stories that emphasize them.

@@ -27,7 +27,7 @@ Objek yang berisi [alamat](#address), saldo, [nonce](#nonce), serta penyimpanan 
 
 ### alamat {#address}
 
-Pada umumnya, akun ini mewakili [EOA](#eoa) atau [kontrak](#contract-accouint) yang dapat menerima (alamat tujuan) atau mengirim (alamat sumber) [transaksi](#transaction) di blockchain. Lebih khusus lagi, ini adalah 160 bit paling kanan dari [hash Keccak](#keccak-256) dari [kunci publik](#public-key) [ECDSA](#ecdsa).
+Pada umumnya, akun ini mewakili [EOA](#eoa) atau [kontrak](#contract-account) yang dapat menerima (alamat tujuan) atau mengirim (alamat sumber) [transaksi](#transaction) di blockchain. Lebih khusus lagi, ini adalah 160 bit paling kanan dari [hash Keccak](#keccak-256) dari [kunci publik](#public-key) [ECDSA](#ecdsa).
 
 ### application binary interface (ABI) {#abi}
 

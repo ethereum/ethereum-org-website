@@ -38,6 +38,13 @@ The Paris upgrade was triggered by the proof-of-work blockchain passing a [termi
 
 - [Read the Paris upgrade specification](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
+<ExpandableCard title="Paris EIPs" contentPreview="Official improvements included in this upgrade.">
+
+- [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) – _Upgrade consensus to Proof-of-Stake_
+- [EIP-4399](https://eips.ethereum.org/EIPS/eip-4399) – _Supplant DIFFICULTY opcode with PREVRANDAO_
+
+</ExpandableCard>
+
 ---
 
 ### Bellatrix {#bellatrix}

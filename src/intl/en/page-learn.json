@@ -41,6 +41,8 @@
   "things-to-consider-banner-2": "Fees can be high depending on the number of people trying to use Ethereum, so we recommend using",
   "things-to-consider-banner-layer-2": "Layer 2s",
   "additional-reading-more-on-using-ethereum": "More on using Ethereum",
+  "additional-reading-how-to-register-an-ethereum-account": "How to \"register\" an Ethereum account",
+  "additional-reading-how-to-use-a-wallet": "How to use a wallet",
   "additional-reading-support-for-ethereum-and-wallets": "Support for Ethereum and wallets",
   "additional-reading-layer-2": "Layer 2: reducing transaction fees",
   "what-is-ethereum-used-for-1": "Ethereum has led to the creation of new products and services that can improve different areas of our lives. We're still in the early stages but there's a lot to be excited about.",
@@ -100,6 +102,8 @@
   "online-communities-card-description": "Online communities provide a great opportunity to ask more specific questions or get involved.",
   "online-communities-card-button": "Explore communities",
   "books-about-ethereum": "Books about Ethereum and Cryptocurrencies",
+  "proof-of-stake-title": "Proof of Stake",
+  "proof-of-stake-description": "September 13, 2022 - Vitalik Buterin, Nathan Schneider",
   "cryptopians-title": "The Cryptopians",
   "cryptopians-description": "February 22, 2022 - Laura Shin",
   "out-of-the-ether-title": "Out of the Ether",
@@ -117,8 +121,6 @@
   "mastering-ethereum-title": "Mastering Ethereum",
   "mastering-ethereum-description": "December 23, 2018 – Andreas M. Antonopoulos, Gavin Wood Ph.D.",
   "podcasts-about-ethereum": "Podcasts about Ethereum and Cryptocurrencies",
-  "into-the-ether-title": "Into the Ether",
-  "ethhub-description": "A podcast focusing on all things Ethereum and DeFi",
   "bankless-title": "Bankless",
   "bankless-description": "A guide to Crypto finance",
   "uncommon-core-title": "Uncommon Core",
@@ -130,5 +132,7 @@
   "unchained-title": "Unchained",
   "unchained-description": "Dives deep into the people building the decentralized internet, the details of this technology that could underpin our future, and some of the thorniest topics in crypto, such as regulation, security and privacy",
   "into-the-bytecode-title": "Into the Bytecode",
-  "into-the-bytecode-description": "A podcast about the ideas shaping crypto"
+  "into-the-bytecode-description": "A podcast about the ideas shaping crypto",
+  "the-daily-gwei-title": "The Daily Gwei",
+  "the-daily-gwei-description": "Ethereum news recaps, updates and analysis"
 }

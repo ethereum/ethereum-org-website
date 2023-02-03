@@ -91,13 +91,13 @@ Gas 是指在以太坊网络上执行特定操作所需的计算工作量。
 
 ## EIP-1559 {#eip-1559}
 
-在伦敦升级中实现的 [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) 使得交易费机制比以前的燃料价格竞拍更加复杂，但优点是提高了燃料费用的可预测性，使交易费市场更加高效。 用户可以在提交交易时设定 `maxFeePerGas`（对应于他们愿意为执行交易支付多少费用），他们清楚支付金额将不会超过燃料的市场价格 (`baseFeePerGas`)，并且多支付的金额将在减去小费后退还。
+在伦敦升级中实现的 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) 使得交易费机制比以前的燃料价格竞拍更加复杂，但优点是提高了燃料费用的可预测性，使交易费市场更加高效。 用户可以在提交交易时设定 `maxFeePerGas`（对应于他们愿意为执行交易支付多少费用），他们清楚支付金额将不会超过燃料的市场价格 (`baseFeePerGas`)，并且多支付的金额将在减去小费后退还。
 
 下面的视频解释了 EIP-1559 及其带来的好处：
 
 <YouTube id="MGemhK9t44Q" />
 
-如果感兴趣，你可以阅读 [EIP-1559 规范](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md)。
+如果感兴趣，你可以阅读 [EIP-1559 规范](https://eips.ethereum.org/EIPS/eip-1559)。
 
 如欲进一步深入，请参考 [EIP-1559 资源](https://hackmd.io/@timbeiko/1559-resources)。
 
