@@ -20,9 +20,9 @@ Reflecting on the financial crisis of 2008, Fullerton joined many in questioning
 
 Drawing on the theory of [biomimicry](https://biomimicry.org/what-is-biomimicry/) and applying systems thinking to economics, Fullerton identified eight interconnected principles that would underlie systemic health:
 
-![Eight interconnected principles](https://www.klimadao.finance/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fdk34t4vc%2Fproduction%2F87d1b87811fdcbac191eac96f12132408f62324c-4096x3072.jpg&w=3840&q=75)
+![Eight interconnected principles](../../assets/use-cases/refi-regenerative-economy-diagram.png)
 
-Fullerton’s eight principles have influenced many of the most prominent thinkers in contemporary economics, including Kate Raworth and her vision of Doughnut Economics, as well as forming the theoretical foundation for ReFi, which in many ways can be seen as a practical method to realize that vision, as explored [here](https://www.klimadao.finance/de/blog/refi-and-the-realization-of-a-regenerative-economy).
+[Fullerton’s eight principles](https://capitalinstitute.org/8-principles-regenerative-economy) have influenced many of the most prominent thinkers in contemporary economics, including Kate Raworth and her vision of Doughnut Economics, as well as forming the theoretical foundation for ReFi, which in many ways can be seen as a practical method to realize that vision, as explored [here](https://www.klimadao.finance/de/blog/refi-and-the-realization-of-a-regenerative-economy).
 
 In parallel to Fullerton’s reforming vision of traditional economics, the Cypherpunk movement, which began in the 1970s, evolved to encompass cryptocurrencies such as Bitcoin and the early smart contracts of [Nick Szabo](https://en.wikipedia.org/wiki/Nick_Szabo). By the late 2010s and early 2020s, Ethereum and other blockchains that facilitate strong cryptography and coordination-enhancing technologies had become a reality, offering the possibility of globally coordinated social and political change across the borders of nation states.
 
