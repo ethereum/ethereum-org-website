@@ -123,6 +123,7 @@
     "markdown-checker": "node src/scripts/markdown-checker.js",
     "generate-heading-ids": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/generateHeadingIds.ts",
     "unused-translations": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/unusedTranslations.ts",
+    "reorg-intl": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/reorgIntlFiles.ts",
     "start": "gatsby develop",
     "start:lambda": "netlify-lambda serve src/lambda",
     "start:static": "gatsby build && gatsby serve",
