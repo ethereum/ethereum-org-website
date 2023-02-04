@@ -21,7 +21,7 @@ The Shanghai/Capella upgrade enables **staking withdrawals** on Ethereum, allowi
 
 ## Staking rewards {#staking-rewards}
 
-Reward payments are automatically processed for active validator accounts with a maxed out effective balance of 32 ETH, who are accumulating rewards.
+Reward payments are automatically processed for active validator accounts with a maxed out effective balance of 32 ETH.
 
 Any balance above 32 ETH earned through rewards does not actually contribute to principle, or increase the weight of this validator on the network, and is thus automatically withdrawn as a reward payment every few days. Aside from providing a withdrawal address one time, these rewards do not require any action from the validator operator. This is all initiated on the consensus layer, thus no gas (transaction fee) is required at any step.
 
@@ -45,7 +45,7 @@ Providing a withdrawal address is a required step for any validator account befo
   <strong>Each validator account can only be assigned a single withdrawal address, one time.</strong> Once an address is chosen and submitted to the Beacon Chain, this cannot be undone or changed again. Double-check ownership and accuracy of the address provided before submitting.
 </InfoBanner>
 
-There is <strong>no threat to your funds in the meantime</strong> for not providing this—only the loss of opportunity. Failure to add withdrawal credentials will simply leave the ETH locked in the validator account as it has been until a withdrawal address is provided.
+There is <strong>no threat to your funds in the meantime</strong> for not providing this. Failure to add withdrawal credentials will simply leave the ETH locked in the validator account as it has been until a withdrawal address is provided.
 
 ## Exiting staking entirely {#exiting-staking-entirely}
 
@@ -53,7 +53,7 @@ Providing a withdrawal address is required before _any_ funds can be transferred
 
 Users looking to exit staking entirely and withdraw their full balance back must also sign and broadcast a "voluntary exit" message with validator keys which will start the process of exiting from staking. This is done with your validator client and submitted to your beacon node, and does not require gas.
 
-The process of a validator exiting from staking takes variable amounts of time, depending how many others are exiting at the same time. Once complete, this account will no longer be responsible for performing validator network duties, is no longer eligible for rewards, and no longer has their ETH "at stake". At this time the account with be marked as fully “withdrawable”.
+The process of a validator exiting from staking takes variable amounts of time, depending on how many others are exiting at the same time. Once complete, this account will no longer be responsible for performing validator network duties, is no longer eligible for rewards, and no longer has their ETH "at stake". At this time the account with be marked as fully “withdrawable”.
 
 Once an account is flagged as "withdrawable", and withdrawal credentials have been provided, there is nothing more a user needs to do aside from wait. Accounts are automatically and continuously swept by block proposers for eligible exited funds, and your account balance will be transferred in full (also known as a "full withdrawal") during the next sweep (more on this [below](#validator-sweeping)).
 
@@ -94,7 +94,7 @@ There are only two actions that are taken by validator operators during the cour
 
 This approach to staking withdrawals avoids requiring stakers to manually submit a transaction requesting a particular amount of ETH to be withdrawn. This also means there is **no gas (transaction fee) required**, and withdrawals also do not compete for existing execution layer block space.
 
-### How soon will I get my rewards payments? {#how-soon}
+### How frequently will I get my staking rewards? {#how-soon}
 
 A maximum of 16 withdrawals can be processed in a single block. At that rate, 115,200 validator withdrawals can be processed per day (assuming no missed blocks). As noted above, validators without eligible withdrawals will be skipped, decreasing the time to finish the sweep.
 
