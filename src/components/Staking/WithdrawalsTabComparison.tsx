@@ -62,8 +62,8 @@ const WithdrawalsTabComparison: React.FC<IProps> = () => (
             using the Staking Deposit CLI tool
           </ListItem>
           <ListItem>
-            This is not required at time deposit, but will prevent the need to
-            update these keys at a later date to unlock your funds
+            This is not required at time of deposit, but will prevent the need
+            to update these keys at a later date to unlock your funds
           </ListItem>
         </UnorderedList>
         <Text fontWeight="bold">

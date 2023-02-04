@@ -7,7 +7,7 @@ image: ../../../assets/staking/leslie-withdrawal.png
 alt: Leslie the rhino with her staking rewards
 sidebarDepth: 2
 summaryPoints:
-  - The Shanghai upgrade brings staking withdrawals to Ethereum
+  - The Shanghai upgrade enables staking withdrawals on Ethereum
   - Validator operators must provide a withdrawal address to enable
   - Rewards are automatically distributed every few days
   - Validators who fully exit staking will receive their remaining balance
@@ -31,7 +31,7 @@ Over the past few years Ethereum has undergone several network upgrades transiti
 
 Since the launch of the staking deposit contract in November 2020, some brave Ethereum pioneers have voluntarily locked funds up to activate "validators", the accounts that have the right to formally attest to and propose blocks, following network rules.
 
-Before the Shanghai update, you couldn't use or get your money out if you staked ETH. But now, you can opt-in to automatically receive your rewards into a provided account, and you can also take out all your money whenever you want. 
+Before the Shanghai update, you couldn't use or get your money out if you staked ETH. But now, you can opt-in to automatically receive your rewards into a provided account, and you can also take out all your money whenever you want.
 
 ### How do I prepare? {#how-do-i-prepare}
 
