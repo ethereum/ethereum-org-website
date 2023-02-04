@@ -1,5 +1,5 @@
 import React from "react"
-import { Center } from "@chakra-ui/react"
+import { Center, Heading } from "@chakra-ui/react"
 import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
@@ -28,6 +28,7 @@ import QuizWidget from "../components/Quiz/QuizWidget"
 import { translateMessageId } from "../utils/translations"
 import { getImage, getSrc } from "../utils/image"
 import { Context } from "../types"
+import { Box } from "@chakra-ui/react"
 
 const StyledTwoColumnContent = styled(TwoColumnContent)`
   margin-bottom: -2rem;
@@ -155,9 +156,9 @@ const CalloutCardContainer = styled(CardContainer)`
   margin-top: 4rem;
 `
 
-const H2 = styled.h2`
-  /* margin: 0; */
-`
+// const H2 = styled.h2`
+//   /* margin: 0; */
+// `
 
 const cards = [
   {
@@ -260,9 +261,9 @@ const WalletsPage = ({
       <PageHero content={heroContent} isReverse />
       <StyledGrayContainer>
         <Intro>
-          <H2>
+          <Heading m="0">
             <Translation id="page-wallets-whats-a-wallet" />
-          </H2>
+          </Heading>
         </Intro>
         <IntroTwoColumnContent>
           <LeftColumn>
@@ -297,10 +298,12 @@ const WalletsPage = ({
         </Content>
       </StyledGrayContainer>
       <StyledTwoColumnContent>
-        <LeftColumn>
-          <H2>
+        <Box flexGrow="0" flexShrink="1" flexBasis="50%" mr="8">
+          {" "}
+          //leftcolumn
+          <Heading m="0">
             <Translation id="page-wallets-accounts-addresses" />
-          </H2>
+          </Heading>
           <p>
             <Translation id="page-wallets-accounts-addresses-desc" />
           </p>
@@ -324,11 +327,11 @@ const WalletsPage = ({
           <p>
             <Translation id="page-wallets-most-wallets" />
           </p>
-        </LeftColumn>
+        </Box>
         <RightColumn>
-          <H2>
+          <Heading m="0">
             <Translation id="page-wallets-types" />
-          </H2>
+          </Heading>
           <p>
             <Translation id="page-wallets-types-desc" />
           </p>
@@ -347,9 +350,9 @@ const WalletsPage = ({
       <GradientContainer>
         <Content>
           <CentralColumn>
-            <H2>
+            <Heading m="0">
               <Translation id="page-wallets-features-title" />
-            </H2>
+            </Heading>
             <SubtitleThree>
               <Translation id="page-wallets-features-desc" />
             </SubtitleThree>
@@ -362,9 +365,9 @@ const WalletsPage = ({
       </GradientContainer>
       <TwoColumnContent>
         <LeftColumn>
-          <H2>
+          <Heading m="0">
             <Translation id="page-wallets-stay-safe" />
-          </H2>
+          </Heading>
           <SubtitleTwo>
             <Translation id="page-wallets-stay-safe-desc" />
           </SubtitleTwo>
@@ -423,9 +426,9 @@ const WalletsPage = ({
           </div>
         </LeftColumn>
         <RightColumn>
-          <H2>
+          <Heading m="0">
             <Translation id="page-wallets-tips" />
-          </H2>
+          </Heading>
           <SubtitleTwo>
             <Translation id="page-wallets-tips-community" />
           </SubtitleTwo>
@@ -434,9 +437,9 @@ const WalletsPage = ({
       </TwoColumnContent>
       <Content>
         <Divider />
-        <H2>
+        <Heading m="0">
           <Translation id="page-wallets-explore" />
-        </H2>
+        </Heading>
         <CalloutCardContainer>
           <StyledCallout
             image={getImage(data.eth)}
