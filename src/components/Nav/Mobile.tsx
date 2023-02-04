@@ -72,6 +72,7 @@ const GlyphButton = styled.svg`
   position: relative;
   stroke-width: 2px;
   z-index: 100;
+  pointer-events: ${(props) => props.pointerEvents};
   & > path {
     stroke: ${(props) => props.theme.colors.text};
     fill: none;
@@ -301,11 +302,14 @@ const MobileNavMenu: React.FC<IProps> = ({
         onClick={() => toggleMenu("menu")}
         aria-label={translateMessageId("aria-toggle-menu-button", intl)}
       >
-        <GlyphButton viewBox="0 0 24 40">
+        <GlyphButton
+          viewBox="0 0 24 40"
+          pointerEvents={isSearchOpen ? "none" : "auto"}
+        >
           <motion.path
             variants={glyphPathVariants}
             initial={false}
-            animate={isOpen ? "open" : "closed"}
+            animate={isMenuOpen ? "open" : "closed"}
           />
         </GlyphButton>
       </MenuButton>
