@@ -27,11 +27,11 @@ Any balance above 32 ETH earned through rewards does not actually contribute to 
 
 ### How did we get here? {#how-did-we-get-here}
 
-Over the past few years Ethereum has undergone several network upgrades transitioning to a network secured by ETH itself, instead of energy-intensive mining as it once was. Participating in consensus on Ethereum is now known as "staking", as participants have voluntarily locked up ETH, placing it "at stake" for the ability to participate in the network. Following the rules rewards users, while attempts to cheat can be penalized.
+Over the past few years Ethereum has undergone several network upgrades transitioning to a network secured by ETH itself, instead of energy-intensive mining as it once was. Participating in consensus on Ethereum is now known as "staking", as participants have voluntarily locked up ETH, placing it "at stake" for the ability to participate in the network. Users who follow the rules will be rewarded, while attempts to cheat can be penalized.
 
-Since the launch of the staking deposit contract in November 2020, some brave Ethereum pioneers have voluntarily locked funds up to enable "validators", or accounts that have the right to formally attest to and propose blocks, following network rules.
+Since the launch of the staking deposit contract in November 2020, some brave Ethereum pioneers have voluntarily locked funds up to activate "validators", the accounts that have the right to formally attest to and propose blocks, following network rules.
 
-Before the enabling of staking withdrawals, none of the funds staked had any ability to be unlocked and used elsewhere. With the addition of staking withdrawals, staked ETH no longer requires an unknown lock-up period. Liquid rewards will automatically be deposited into the provided account, and stakers can unlock and withdrawn their entire balance at any time.
+Before the Shanghai update, you couldn't use or get your money out if you staked ETH. But now, you can opt-in to automatically receive your rewards into a provided account, and you can also take out all your money whenever you want. 
 
 ### How do I prepare? {#how-do-i-prepare}
 
@@ -104,9 +104,6 @@ Expanding this calculation, we can estimate the time it will take to process a g
 
 | Number of withdrawals | Time to complete |
 | :-------------------: | :--------------: |
-|        100,000        |     0.9 days     |
-|        200,000        |     1.7 days     |
-|        300,000        |     2.6 days     |
 |        400,000        |     3.5 days     |
 |        500,000        |     4.3 days     |
 |        600,000        |     5.2 days     |
