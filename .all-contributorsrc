@@ -10010,6 +10010,24 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "azpwnz",
+      "name": "Andriy Zhuk",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6987007?v=4",
+      "profile": "https://github.com/azpwnz",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "gooseri",
+      "name": "gooser.eth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/121782105?v=4",
+      "profile": "https://etherscan.io/address/gooser.eth",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

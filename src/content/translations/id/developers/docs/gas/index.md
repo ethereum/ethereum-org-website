@@ -101,13 +101,13 @@ Salah satu keuntungan utama yang dicapai dengan peningkatan London adalah pengal
 
 ## EIP-1559 {#eip-1559}
 
-Implementasi dari [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) dalam Peningkatan London membuat mekanisme biaya transaksi lebih kompleks dari pada pelelangan harga gas sebelumnya, tetapi memberi keuntungan harga gas yang lebih terprediksi, yang menyebabkan pasar biaya transaksi yang lebih efisien. Pengguna dapat mengirimkan transaksi dengan `maxFeePerGas` yang sesuai dengan jumlah biaya yang rela mereka bayarkan agar transaksinya dieksekusi, dengan mengetahui bahwa mereka tidak akan membayar lebih dari harga gas pasar (`baseFeePerGas`), dan mendapatkan tambahan, dikurangi tips mereka, yang dikembalikan dananya.
+Implementasi dari [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) dalam Peningkatan London membuat mekanisme biaya transaksi lebih kompleks dari pada pelelangan harga gas sebelumnya, tetapi memberi keuntungan harga gas yang lebih terprediksi, yang menyebabkan pasar biaya transaksi yang lebih efisien. Pengguna dapat mengirimkan transaksi dengan `maxFeePerGas` yang sesuai dengan jumlah biaya yang rela mereka bayarkan agar transaksinya dieksekusi, dengan mengetahui bahwa mereka tidak akan membayar lebih dari harga gas pasar (`baseFeePerGas`), dan mendapatkan tambahan, dikurangi tips mereka, yang dikembalikan dananya.
 
 Video ini menjelaskan EIP-1559 dan keuntungan yang diberikannya:
 
 <YouTube id="MGemhK9t44Q" />
 
-Jika Anda tertarik, Anda dapat membaca [spesifikasi EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) yang pasti.
+Jika Anda tertarik, Anda dapat membaca [spesifikasi EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) yang pasti.
 
 Lanjutkan perjalanan menakjubkan ini dengan [EIP-1559 Resources](https://hackmd.io/@timbeiko/1559-resources) ini.
 
