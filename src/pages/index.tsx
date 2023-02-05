@@ -4,6 +4,7 @@ import { graphql, PageProps } from "gatsby"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import {
   Box,
+  chakra,
   Flex,
   FlexProps,
   Heading,
@@ -82,27 +83,21 @@ const ContentBox = (props: ChildOnlyProp) => (
   <Box py={4} px={{ base: 4, lg: 8 }} {...props} />
 )
 
-const HomeActionCard = (props: {
-  cardItem: Record<"title" | "description" | "alt" | "to", string> & {
-    image: IGatsbyImageData | undefined
-  }
-  cardBoxShadow: string
-}) => (
-  <Box
-    as={ActionCard}
-    background="background"
-    borderRadius="sm"
-    border="1px"
-    borderColor="text"
-    boxShadow={props.cardBoxShadow}
-    m={0}
-    title={props.cardItem.title}
-    description={props.cardItem.description}
-    alt={props.cardItem.alt}
-    to={props.cardItem.to}
-    image={props.cardItem.image!}
-  />
-)
+const StyledActionCard = chakra(ActionCard, {
+  baseStyle: {
+    background: "background",
+    borderRadius: "sm",
+    border: "1px",
+    borderColor: "text",
+    margin: 0,
+  },
+})
+
+const StyledCodeModal = chakra(CodeModal)
+
+const StyledCalloutBanner = chakra(CalloutBanner)
+
+const StyledTitleCardList = chakra(TitleCardList)
 
 const GrayContainer = (props: ChildOnlyProp) => (
   <Box width="full" pb={16} background="grayBackground" {...props} />
@@ -398,10 +393,15 @@ const HomePage = ({
           </Flex>
           <CardContainer minChildWidth={{ lg: "480px" }}>
             {cards.map((card, idx) => (
-              <HomeActionCard
+              <StyledActionCard
                 key={idx}
-                cardItem={card}
-                cardBoxShadow={cardBoxShadow}
+                boxShadow={cardBoxShadow}
+                m={0}
+                title={card.title}
+                description={card.description}
+                alt={card.alt}
+                to={card.to}
+                image={card.image!}
               />
             ))}
           </CardContainer>
@@ -528,8 +528,7 @@ const HomePage = ({
       <MainSectionContainer containerBg="homeBoxPurple">
         <Row>
           <Box py={4} px={{ base: 4, sm: 8 }} width="full">
-            <Box
-              as={TitleCardList}
+            <StyledTitleCardList
               content={codeExamples}
               clickHandler={toggleCodeExample}
               headerKey="page-index-developers-code-examples"
@@ -556,8 +555,7 @@ const HomePage = ({
               }}
             />
           </FeatureContent>
-          <Box
-            as={CodeModal}
+          <StyledCodeModal
             isOpen={isModalOpen}
             setIsOpen={setModalOpen}
             title={codeExamples[activeCode].title}
@@ -588,7 +586,7 @@ const HomePage = ({
             >
               {codeExamples[activeCode].code}
             </Codeblock>
-          </Box>
+          </StyledCodeModal>
         </Row>
       </MainSectionContainer>
       {/* Eth Today Section */}
@@ -613,16 +611,19 @@ const HomePage = ({
         <CardContainer minChildWidth={{ lg: "400px" }}>
           {touts.map((tout, idx) => {
             return (
-              <HomeActionCard
+              <StyledActionCard
                 key={idx}
-                cardItem={tout}
-                cardBoxShadow={cardBoxShadow}
+                title={tout.title}
+                description={tout.description}
+                alt={tout.alt}
+                to={tout.to}
+                image={tout.image!}
+                boxShadow={cardBoxShadow}
               />
             )
           })}
         </CardContainer>
-        <Box
-          as={CalloutBanner}
+        <StyledCalloutBanner
           titleKey={"page-index-contribution-banner-title"}
           descriptionKey={"page-index-contribution-banner-description"}
           image={getImage(data.finance)!}
@@ -657,7 +658,7 @@ const HomePage = ({
               ),
             }}
           />
-        </Box>
+        </StyledCalloutBanner>
       </ContentBox>
     </Flex>
   )
