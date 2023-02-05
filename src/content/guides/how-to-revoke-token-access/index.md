@@ -39,7 +39,7 @@ If you do not know which contract to choose, you can revoke all of them. It won'
 
 ## Step 4: Revoke access to your funds
 
-Once you click on revoke, you should see a new transaction suggestion in your wallet. This is to be expected. You will have to pay the fee for the cancelation to be successful. Depending on the network this can take from a minute to several to be processed.
+Once you click on revoke, you should see a new transaction suggestion in your wallet. This is to be expected. You will have to pay the fee for the cancellation to be successful. Depending on the network this can take from a minute to several to be processed.
 
 We advise to refresh the revoking tool after few minutes and connect your wallet again to double check if revoked contract has disappeared from the list.
 
