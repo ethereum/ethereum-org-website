@@ -21,7 +21,7 @@ Assumptions:
 - you can get around in a terminal,
 - you've written a few lines of Python code,
 - Python version 3.6 or greater is installed on your machine (use of a [virtual environment](https://realpython.com/effective-python-environment/#virtual-environments) is strongly encouraged), and
-- you’ve used `pip`, Python’s package installer.
+- you’ve used `pip`[https://pip.pypa.io/en/stable/], Python’s package installer.
   Again, if any of these are untrue, or you don’t plan to reproduce the code in this article, you can likely still follow along just fine.
 
 ## Blockchains, briefly {#blockchains-briefly}
@@ -89,13 +89,12 @@ $ pip install ipython
 Web3.py is published under the name `web3`. Install it like so:
 
 ```bash
-$ pip install web3
+$ python -m pip install web3
 ```
-
 One more thing – we're going to simulate a blockchain later, which requires a couple more dependencies. You can install those via:
 
 ```bash
-$ pip install web3[tester]
+$ python -m pip install web3[tester]
 ```
 
 You’re all set up to go!
