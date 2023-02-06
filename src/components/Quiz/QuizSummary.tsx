@@ -1,7 +1,10 @@
 // Import libraries
-import React, { useMemo } from "react"
+import React from "react"
 import { Box, Flex, Text, useMediaQuery } from "@chakra-ui/react"
 import { useIntl } from "react-intl"
+
+// Components
+import Translation from "../Translation"
 
 // Import utilities
 import { numberToPercent } from "../../utils/numberToPercent"
@@ -55,16 +58,22 @@ const QuizSummary: React.FC<IProps> = ({
       >
         <Flex>
           <Text {...valueStyles}>{numberToPercent(ratioCorrect, locale)}</Text>
-          <Text {...labelStyles}>Score</Text>
+          <Text {...labelStyles}>
+            <Translation id="score" />
+          </Text>
         </Flex>
         <Flex>
           <Text {...valueStyles}>+{correctCount}</Text>
-          <Text {...labelStyles}>Correct</Text>
+          <Text {...labelStyles}>
+            <Translation id="correct" />
+          </Text>
         </Flex>
         {largerThanMobile && (
           <Flex>
             <Text {...valueStyles}>{questionCount}</Text>
-            <Text {...labelStyles}>Total</Text>
+            <Text {...labelStyles}>
+              <Translation id="total" />
+            </Text>
           </Flex>
         )}
       </Flex>

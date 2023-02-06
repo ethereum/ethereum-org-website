@@ -9917,7 +9917,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/26359740?v=4",
       "profile": "https://www.linkedin.com/in/jithil",
       "contributions": [
-        "doc"
+        "doc",
+        "code"
       ]
     },
     {
@@ -9988,6 +9989,42 @@
       "name": "Shawki Sukkar",
       "avatar_url": "https://avatars.githubusercontent.com/u/57439827?v=4",
       "profile": "http://shawkisukkar.com/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "therealharpaljadeja",
+      "name": "Harpal Jadeja",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38040789?v=4",
+      "profile": "https://github.com/therealharpaljadeja",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "zlog-in",
+      "name": "Zion",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67903793?v=4",
+      "profile": "http://www.zlog.in",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "azpwnz",
+      "name": "Andriy Zhuk",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6987007?v=4",
+      "profile": "https://github.com/azpwnz",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "gooseri",
+      "name": "gooser.eth",
+      "avatar_url": "https://avatars.githubusercontent.com/u/121782105?v=4",
+      "profile": "https://etherscan.io/address/gooser.eth",
       "contributions": [
         "content"
       ]
