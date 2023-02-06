@@ -29,9 +29,21 @@ import {
 import FeedbackCard from "../components/FeedbackCard"
 import { Context } from "../types"
 import { getImage } from "../utils/image"
-import { Accordion, Box, Center, Heading } from "@chakra-ui/react"
+import { Accordion, Box, Center, Heading, Text } from "@chakra-ui/react"
 
-const H2Heading = ({ children }) => (
+const Title = ({ children }) => (
+  <Text
+    textTransform={"uppercase"}
+    fontSize={"0.875rem"}
+    color="text"
+    marginBottom={"0rem"}
+    marginLeft={"0.5rem"}
+  >
+    {children}
+  </Text>
+)
+
+const H2 = ({ children }) => (
   <Heading
     as="h2"
     fontSize={"1.5rem"}
@@ -43,6 +55,90 @@ const H2Heading = ({ children }) => (
   >
     {children}
   </Heading>
+)
+
+const Subtitle = ({ children }) => (
+  <Box
+    fontSize={"1.5rem"}
+    lineHeight={"140%"}
+    color="text200"
+    maxWidth={"480px"}
+    marginTop={"1rem"}
+  >
+    {children}
+  </Box>
+)
+
+const Rules = ({ children }) => (
+  <Box
+    margin={"0 auto"}
+    maxWidth="3xl"
+    display={"flex"}
+    flexDirection={"column"}
+    alignItems={"center"}
+  >
+    {children}
+  </Box>
+)
+
+const SubmitInstructions = ({ children }) => (
+  <Box flex={"1 1 600px"} marginRight={"2rem"} maxWidth={"100ch"}>
+    {children}
+  </Box>
+)
+
+const LeaderboardContainer = ({ children }) => (
+  <Box
+    flex={"1 1 50%"}
+    paddingLeft={"0rem"}
+    paddingRight={"2rem"}
+    paddingTop={"6rem"}
+    paddingBottom={"8rem"}
+    display={"flex"}
+    flexDirection={"column"}
+    alignItems={"center"}
+  >
+    {children}
+  </Box>
+)
+
+const FullLeaderboardContainer = ({ children }) => (
+  <Box
+    margin={"2rem auto"}
+    padding={"0 2rem"}
+    maxWidth="3xl"
+    display={"flex"}
+    flexDirection={"column"}
+    alignItems={"center"}
+  >
+    {children}
+  </Box>
+)
+
+const On = () => (
+  <Box
+    width={"8px"}
+    height={"8px"}
+    background="success400"
+    borderRadius={"64px"}
+  ></Box>
+)
+
+const Contact = ({ children }) => (
+  <Box
+    borderRadius={"2px"}
+    border={"1px"}
+    borderStyle={"solid"}
+    borderColor="border"
+    padding={"1.5rem"}
+    display={"flex"}
+    justifyContent={"space-between"}
+    alignItems={"center"}
+    margin={"3rem 8rem"}
+    width={"80%"}
+  >
+    {children}
+  </Box>
 )
 
 const HeroCard = styled.div`
@@ -68,36 +164,6 @@ const HeroContainer = styled.div`
     padding-left: 0;
     padding-right: 0;
   }
-`
-
-const LeaderboardContainer = styled.div`
-  flex: 1 1 50%;
-  padding-left: 0rem;
-  padding-right: 2rem;
-  padding-top: 6rem;
-  padding-bottom: 8rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding: 0;
-  }
-`
-
-const Title = styled.p`
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  color: ${(props) => props.theme.colors.text};
-  margin-bottom: 0rem;
-  margin-left: 0.5rem;
-`
-
-const Subtitle = styled.div`
-  font-size: 1.5rem;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-  max-width: 480px;
-  margin-top: 1rem;
 `
 
 const Row = styled.div`
@@ -142,25 +208,9 @@ const StyledCard = styled(Card)`
   justify-content: flex-start;
 `
 
-const On = styled.div`
-  width: 8px;
-  height: 8px;
-  background: ${(props) => props.theme.colors.success400};
-  border-radius: 64px;
-`
-
 const StyledGrayContainer = styled(GrayContainer)`
   margin-bottom: 3rem;
   padding-bottom: 2rem;
-`
-
-const FullLeaderboardContainer = styled.div`
-  margin: 2rem auto;
-  padding: 0 2rem;
-  max-width: ${(props) => props.theme.breakpoints.m};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 `
 
 const Client = styled(GatsbyImage)`
@@ -177,37 +227,6 @@ const ClientIntro = styled.p`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-top: 3rem;
   }
-`
-
-const Rules = styled.div`
-  margin: 0 auto;
-  max-width: ${(props) => props.theme.breakpoints.m};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
-
-const SubmitInstructions = styled.div`
-  flex: 1 1 600px;
-  margin-right: 2rem;
-  max-width: 100ch;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-right: 0;
-  }
-`
-
-const TextNoMargin = styled.p`
-  margin-bottom: 0rem;
-`
-const Contact = styled.div`
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  padding: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 3rem 8rem;
-  width: 80%;
 `
 
 type BountyHuntersArg = {
@@ -429,9 +448,9 @@ const BugBountiesPage = ({
       </ClientRow>
       <StyledGrayContainer id="rules">
         <Content>
-          <H2Heading>
+          <H2>
             <Translation id="page-upgrades-bug-bounty-validity" />
-          </H2Heading>
+          </H2>
           <p>
             <Translation id="page-upgrades-bug-bounty-validity-desc" />
           </p>
@@ -588,9 +607,9 @@ const BugBountiesPage = ({
               </div>
             </StyledCard>
           </StyledCardContainer>
-          <H2Heading>
+          <H2>
             <Translation id="page-upgrades-bug-bounty-not-included" />
-          </H2Heading>
+          </H2>
           <p>
             <Translation id="page-upgrades-bug-bounty-not-included-desc" />
           </p>
@@ -599,9 +618,9 @@ const BugBountiesPage = ({
       <Content>
         <Row>
           <SubmitInstructions>
-            <H2Heading>
+            <H2>
               <Translation id="page-upgrades-bug-bounty-submit" />
-            </H2Heading>
+            </H2>
             <p>
               <Translation id="page-upgrades-bug-bounty-submit-desc" />{" "}
               <Link to="https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology">
@@ -633,9 +652,9 @@ const BugBountiesPage = ({
       <BugBountyCards />
       <Content>
         <Rules>
-          <H2Heading>
+          <H2>
             <Translation id="page-upgrades-bug-bounty-hunting" />
-          </H2Heading>
+          </H2>
           <p>
             <em>
               <Translation id="page-upgrades-bug-bounty-hunting-desc" />
@@ -659,9 +678,9 @@ const BugBountiesPage = ({
       </Content>
       <GradientContainer>
         <FullLeaderboardContainer>
-          <H2Heading>
+          <H2>
             <Translation id="page-upgrades-bug-bounty-hunting-execution-leaderboard" />
-          </H2Heading>
+          </H2>
           <p>
             <Translation id="page-upgrades-bug-bounty-hunting-execution-leaderboard-subtitle" />
           </p>
@@ -669,9 +688,9 @@ const BugBountiesPage = ({
         </FullLeaderboardContainer>
 
         <FullLeaderboardContainer>
-          <H2Heading>
+          <H2>
             <Translation id="page-upgrades-bug-bounty-hunting-leaderboard" />
-          </H2Heading>
+          </H2>
           <p>
             <Translation id="page-upgrades-bug-bounty-hunting-leaderboard-subtitle" />
           </p>
@@ -681,11 +700,16 @@ const BugBountiesPage = ({
       <Divider />
       <Content>
         <Center>
-          <H2Heading>
+          <H2>
             <Translation id="page-upgrades-question-title" />
-          </H2Heading>
+          </H2>
         </Center>
-        <Accordion defaultIndex={[0]} allowMultiple display={"flex"}>
+        <Accordion
+          defaultIndex={[0]}
+          allowMultiple
+          display={"flex"}
+          marginTop={"2rem"}
+        >
           <Box w={"50%"}>
             <ExpandableCard
               title={translateMessageId("bug-bounty-faq-q1-title", intl)}
@@ -807,13 +831,13 @@ const BugBountiesPage = ({
       <Divider />
       <Contact>
         <div>
-          <H2Heading>
+          <H2>
             <Translation id="page-upgrades-bug-bounty-questions" />
-          </H2Heading>
-          <TextNoMargin>
+          </H2>
+          <Text marginBottom={"0rem"}>
             <Translation id="page-upgrades-bug-bounty-email-us" />{" "}
             <Link to="mailto:bounty@ethereum.org">bounty@ethereum.org</Link>
-          </TextNoMargin>
+          </Text>
         </div>
         <Emoji size={3} text=":email:" />
       </Contact>
