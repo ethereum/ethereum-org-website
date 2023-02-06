@@ -1,11 +1,10 @@
-import React from "react"
+import React, { FC } from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { MDXProvider } from "@mdx-js/react"
 import styled from "@emotion/styled"
-import { Badge } from "@chakra-ui/react"
-
+import { Badge, Box, BoxProps } from "@chakra-ui/react"
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
   List as ButtonDropdownList,
@@ -313,6 +312,20 @@ const InfoBanner = styled(SharedInfoBanner)`
   margin: 2rem 0;
 `
 
+const TableContainer: FC<BoxProps> = (props) => (
+  <Box
+    w="fit-content"
+    mx={["auto", null, null, 0]}
+    sx={{
+      table: {
+        borderCollapse: "separate",
+        borderSpacing: "1rem 0",
+      },
+    }}
+    {...props}
+  />
+)
+
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
@@ -324,34 +337,36 @@ const components = {
   p: Paragraph,
   pre: Pre,
   table: MarkdownTable,
+  div: Box,
+  Badge,
+  ButtonLink,
+  Callout,
+  Card,
+  CardGrid,
+  Contributors,
+  Divider,
+  DocLink,
+  Emoji,
+  ExpandableCard,
+  InfoBanner,
+  InfoGrid,
+  Logo,
   MeetupList,
   RandomAppList,
   Roadmap,
-  Logo,
-  ButtonLink,
-  Contributors,
-  InfoBanner,
-  Card,
-  CardGrid,
-  Callout,
-  InfoGrid,
-  Divider,
   SectionNav,
-  Badge,
-  Emoji,
-  UpgradeStatus,
-  DocLink,
-  ExpandableCard,
-  YouTube,
-  StakingLaunchpadWidget,
-  StakingProductsCardGrid,
+  ShanghaiCapella,
   StakingComparison,
-  StakingHowSoloWorks,
   StakingConsiderations,
   StakingGuides,
+  StakingHowSoloWorks,
+  StakingLaunchpadWidget,
+  StakingProductsCardGrid,
+  TableContainer,
+  UpgradeStatus,
   WithdrawalCredentials,
   WithdrawalsTabComparison,
-  ShanghaiCapella,
+  YouTube,
 }
 
 const StakingPage = ({

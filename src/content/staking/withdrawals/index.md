@@ -100,7 +100,7 @@ A maximum of 16 withdrawals can be processed in a single block. At that rate, 11
 
 Expanding this calculation, we can estimate the time it will take to process a given number of withdrawals:
 
-<div style="max-width:50ch;margin-inline:auto;">
+<TableContainer>
 
 | Number of withdrawals | Time to complete |
 | :-------------------: | :--------------: |
@@ -110,7 +110,7 @@ Expanding this calculation, we can estimate the time it will take to process a g
 |        700,000        |     6.1 days     |
 |        800,000        |     7.0 days     |
 
-</div>
+</TableContainer>
 
 As you see this slows down as more validators are on the network. An increase in missed blocks could slow this down proportionally, but this will generally represent the slower side of possible outcomes.
 
