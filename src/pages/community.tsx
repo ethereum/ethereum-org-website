@@ -61,7 +61,7 @@ const Page: React.FC<IProps> = ({ children }) => {
 
 const ButtonRow: React.FC<IProps> = ({ children }) => {
   return (
-    <Flex alignItems="flex-end" direction={{ base: "column", md: "row" }}>
+    <Flex alignItems="flex-start" direction={{ base: "column", md: "row" }}>
       {children}
     </Flex>
   )
