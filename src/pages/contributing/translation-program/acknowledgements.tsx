@@ -7,12 +7,13 @@ import {
   Box,
   BoxProps,
   Flex,
+  Heading,
+  HeadingProps,
   Img,
   ImgProps,
   List,
   ListItem,
   Text,
-  TextProps,
   useColorModeValue,
 } from "@chakra-ui/react"
 import type { Context } from "../../../types"
@@ -32,7 +33,9 @@ import { getImage } from "../../../utils/image"
 
 const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />
 
-const ContentHeading = (props: TextProps) => <Text as="h2" {...props} />
+const ContentHeading = (props: HeadingProps) => (
+  <Heading lineHeight={1.4} {...props} />
+)
 
 const Image = (props: ImgProps & { image: IGatsbyImageData }) => {
   return (
@@ -128,7 +131,12 @@ const TranslatorAcknowledgements = ({
       </Content>
 
       <Content maxW="800px">
-        <ContentHeading textAlign="center">
+        <ContentHeading
+          as="h2"
+          textAlign="center"
+          fontSize={{ base: "2xl", md: "2rem" }}
+          fontWeight={600}
+        >
           <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-title" />
         </ContentHeading>
         <TranslationLeaderboard
@@ -142,7 +150,11 @@ const TranslatorAcknowledgements = ({
       </Content>
 
       <Content>
-        <ContentHeading>
+        <ContentHeading
+          as="h2"
+          fontSize={{ base: "2xl", md: "2rem" }}
+          fontWeight={600}
+        >
           <Translation id="page-contributing-translation-program-acknowledgements-our-translators-title" />
         </ContentHeading>
         <Text>
@@ -183,7 +195,11 @@ const TranslatorAcknowledgements = ({
       </Content>
 
       <Content id="certificate">
-        <ContentHeading>
+        <ContentHeading
+          as="h2"
+          fontSize={{ base: "2xl", md: "2rem" }}
+          fontWeight={600}
+        >
           <Translation id="page-contributing-translation-program-acknowledgements-cert-title" />
         </ContentHeading>
         <Text>
@@ -204,7 +220,11 @@ const TranslatorAcknowledgements = ({
       </Content>
 
       <Content id="poap">
-        <ContentHeading>
+        <ContentHeading
+          as="h2"
+          fontSize={{ base: "2xl", md: "2rem" }}
+          fontWeight={600}
+        >
           <Translation id="page-contributing-translation-program-acknowledgements-poaps-title" />
         </ContentHeading>
         <Text>
@@ -216,9 +236,14 @@ const TranslatorAcknowledgements = ({
         <Text>
           <Translation id="page-contributing-translation-program-acknowledgements-3" />
         </Text>
-        <ContentHeading as="h3">
+        <ContentHeading
+          as="h3"
+          fontSize={{ base: "xl", md: "2xl" }}
+          fontWeight={600}
+        >
           <Translation id="page-contributing-translation-program-acknowledgements-how-to-claim-title" />
         </ContentHeading>
+
         <List as="ol" styleType="decimal">
           <ListItem>
             <Translation id="page-contributing-translation-program-acknowledgements-how-to-claim-1" />{" "}
