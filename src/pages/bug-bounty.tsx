@@ -29,6 +29,21 @@ import {
 import FeedbackCard from "../components/FeedbackCard"
 import { Context } from "../types"
 import { getImage } from "../utils/image"
+import { Accordion, Box, Center, Heading } from "@chakra-ui/react"
+
+const H2Heading = ({ children }) => (
+  <Heading
+    as="h2"
+    fontSize={"1.5rem"}
+    fontStyle={"normal"}
+    fontWeight={"700"}
+    lineHeight={"22px"}
+    letterSpacing={"0px"}
+    textAlign={"left"}
+  >
+    {children}
+  </Heading>
+)
 
 const HeroCard = styled.div`
   display: flex;
@@ -120,19 +135,6 @@ const StyledCardContainer = styled(CardContainer)`
   margin-bottom: 3rem;
 `
 
-const H2 = styled.h2`
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0px;
-  text-align: left;
-`
-
-const CenterH2 = styled(H2)`
-  text-align: center;
-`
-
 const StyledCard = styled(Card)`
   flex: 1 1 464px;
   margin: 1rem;
@@ -206,29 +208,6 @@ const Contact = styled.div`
   align-items: center;
   margin: 3rem 8rem;
   width: 80%;
-`
-
-const LeftColumn = styled.div`
-  width: 100%;
-`
-
-const RightColumn = styled.div`
-  width: 100%;
-  margin-left: 2rem;
-  flex-direction: column;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-left: 0rem;
-    flex-direction: column;
-  }
-`
-
-const Faq = styled.div`
-  display: flex;
-  margin-top: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 `
 
 type BountyHuntersArg = {
@@ -450,9 +429,9 @@ const BugBountiesPage = ({
       </ClientRow>
       <StyledGrayContainer id="rules">
         <Content>
-          <H2>
+          <H2Heading>
             <Translation id="page-upgrades-bug-bounty-validity" />
-          </H2>
+          </H2Heading>
           <p>
             <Translation id="page-upgrades-bug-bounty-validity-desc" />
           </p>
@@ -609,9 +588,9 @@ const BugBountiesPage = ({
               </div>
             </StyledCard>
           </StyledCardContainer>
-          <H2>
+          <H2Heading>
             <Translation id="page-upgrades-bug-bounty-not-included" />
-          </H2>
+          </H2Heading>
           <p>
             <Translation id="page-upgrades-bug-bounty-not-included-desc" />
           </p>
@@ -620,9 +599,9 @@ const BugBountiesPage = ({
       <Content>
         <Row>
           <SubmitInstructions>
-            <H2>
+            <H2Heading>
               <Translation id="page-upgrades-bug-bounty-submit" />
-            </H2>
+            </H2Heading>
             <p>
               <Translation id="page-upgrades-bug-bounty-submit-desc" />{" "}
               <Link to="https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology">
@@ -654,9 +633,9 @@ const BugBountiesPage = ({
       <BugBountyCards />
       <Content>
         <Rules>
-          <H2>
+          <H2Heading>
             <Translation id="page-upgrades-bug-bounty-hunting" />
-          </H2>
+          </H2Heading>
           <p>
             <em>
               <Translation id="page-upgrades-bug-bounty-hunting-desc" />
@@ -680,9 +659,9 @@ const BugBountiesPage = ({
       </Content>
       <GradientContainer>
         <FullLeaderboardContainer>
-          <H2>
+          <H2Heading>
             <Translation id="page-upgrades-bug-bounty-hunting-execution-leaderboard" />
-          </H2>
+          </H2Heading>
           <p>
             <Translation id="page-upgrades-bug-bounty-hunting-execution-leaderboard-subtitle" />
           </p>
@@ -690,9 +669,9 @@ const BugBountiesPage = ({
         </FullLeaderboardContainer>
 
         <FullLeaderboardContainer>
-          <H2>
+          <H2Heading>
             <Translation id="page-upgrades-bug-bounty-hunting-leaderboard" />
-          </H2>
+          </H2Heading>
           <p>
             <Translation id="page-upgrades-bug-bounty-hunting-leaderboard-subtitle" />
           </p>
@@ -701,11 +680,13 @@ const BugBountiesPage = ({
       </GradientContainer>
       <Divider />
       <Content>
-        <CenterH2>
-          <Translation id="page-upgrades-question-title" />
-        </CenterH2>
-        <Faq>
-          <LeftColumn>
+        <Center>
+          <H2Heading>
+            <Translation id="page-upgrades-question-title" />
+          </H2Heading>
+        </Center>
+        <Accordion defaultIndex={[0]} allowMultiple display={"flex"}>
+          <Box w={"50%"}>
             <ExpandableCard
               title={translateMessageId("bug-bounty-faq-q1-title", intl)}
               contentPreview={translateMessageId(
@@ -768,8 +749,8 @@ const BugBountiesPage = ({
                 <Translation id="bug-bounty-faq-q4-content-1" />
               </p>
             </ExpandableCard>
-          </LeftColumn>
-          <RightColumn>
+          </Box>
+          <Box w={"50%"} marginLeft={"2rem"} flexDirection={"column"}>
             <ExpandableCard
               title={translateMessageId("bug-bounty-faq-q5-title", intl)}
               contentPreview={translateMessageId(
@@ -820,15 +801,15 @@ const BugBountiesPage = ({
                 <Translation id="bug-bounty-faq-q8-PGP-key" />
               </Link>
             </ExpandableCard>
-          </RightColumn>
-        </Faq>
+          </Box>
+        </Accordion>
       </Content>
       <Divider />
       <Contact>
         <div>
-          <H2>
+          <H2Heading>
             <Translation id="page-upgrades-bug-bounty-questions" />
-          </H2>
+          </H2Heading>
           <TextNoMargin>
             <Translation id="page-upgrades-bug-bounty-email-us" />{" "}
             <Link to="mailto:bounty@ethereum.org">bounty@ethereum.org</Link>
