@@ -71,6 +71,8 @@ The Shanghai network upgrade will introduce withdrawal functionality which is pl
 After this upgrade, the validator accounts that back staking pool will have the ability to exit and withdrawal ETH to their designated withdrawal address. This will enable the ability to redeem your portion of stake for the underlying ETH. Check with your provider to see how they support this functionality.
 
 Alternatively, pools that utilize an ERC-20 liquidity token allow users to trade this token in the open market, allowing you to sell your staking position, effectively "withdrawing" without actually removing ETH from the staking contract.
+
+<ButtonLink to="/staking/withdrawals/">More on staking withdrawals</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="Is this different from staking with my exchange?">

@@ -106,9 +106,9 @@ const WithdrawalCredentials: FC<IProps> = () => {
             This {validator.isTestnet ? "Goerli testnet" : ""} validator needs
             to be upgraded.
           </Text>{" "}
-          Instructions on how to upgrade can be found at{" "}
-          <Link to="https://launchpad.ethereum.org/withdrawals">
-            Staking Launchpad Withdrawals
+          Instructions on how to upgrade can currently be found at{" "}
+          <Link to="https://zhejiang.launchpad.ethereum.org/withdrawals">
+            Zhejiang Testnet Staking Launchpad
           </Link>
         </Text>
       </Flex>

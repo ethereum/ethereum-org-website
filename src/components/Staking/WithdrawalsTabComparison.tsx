@@ -1,7 +1,7 @@
 import React from "react"
 import {
-  Button,
   Heading,
+  Link,
   ListItem,
   Tab,
   TabList,
@@ -34,10 +34,11 @@ const WithdrawalsTabComparison: React.FC<IProps> = () => (
           <ListItem>
             The majority of stakers did not provide a withdrawal address on
             initial deposit, and will need to update their withdrawal
-            credentials—the{" "}
-            <a href="https://launchpad.ethereum.org/withdrawals">
-              Staking Launchpad
-            </a>{" "}
+            credentials. The{" "}
+            <Link href="https://zhejiang.launchpad.ethereum.org/withdrawals">
+              Zhejiang Testnet Launchpad{" "}
+              {/* TODO: Update once Withdrawals content merged to Goerli/Mainnet branches */}
+            </Link>{" "}
             has instructions on when and how to do this
           </ListItem>
         </UnorderedList>

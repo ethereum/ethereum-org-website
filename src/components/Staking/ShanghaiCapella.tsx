@@ -65,18 +65,19 @@ const ShanghaiCapella: FC<IProps> = (props) => {
               For the Shanghai upgrade to take effect, a simultaneous upgrade to
               the Beacon Chain must take place named Capella. Node operating
               stakers should stay tuned to client communication channels to be
-              alerted of upcoming client updates planned for Q1 2023.
+              alerted of upcoming client updates planned for Q1/Q2 2023.
             </Text>
             <Text>
               Stakers who need to update their validator withdrawal keys can
               broadcast this message once the Capella upgrade has taken place.
             </Text>
             <ButtonLink
-              to="https://launchpad.ethereum.org/withdrawals"
+              to="https://zhejiang.launchpad.ethereum.org/withdrawals"
               mt="auto"
               hideArrow
             >
-              Visit Launchpad
+              Test your setup on Zhejiang{" "}
+              {/* TODO: Update once Withdrawals page merged to Goerli/Mainnet branches */}
             </ButtonLink>
           </>
         }
