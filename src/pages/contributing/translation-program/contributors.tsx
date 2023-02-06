@@ -4,9 +4,11 @@ import {
   Box,
   BoxProps,
   Flex,
+  Heading,
+  HeadingProps,
   ListItem,
+  SimpleGrid,
   Text,
-  TextProps,
   UnorderedList,
 } from "@chakra-ui/react"
 import { useIntl } from "react-intl"
@@ -24,7 +26,9 @@ import { translateMessageId } from "../../../utils/translations"
 import FeedbackCard from "../../../components/FeedbackCard"
 
 const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />
-const ContentHeading = (props: TextProps) => <Text as="h2" {...props} />
+const ContentHeading = (props: HeadingProps) => (
+  <Heading lineHeight={1.4} {...props} />
+)
 
 const Contributors = ({
   data,
@@ -81,10 +85,18 @@ const Contributors = ({
 
       <Content>
         <Breadcrumbs slug={location.pathname} />
-        <ContentHeading as="h1">
+        <ContentHeading
+          as="h1"
+          fontSize={{ base: "2.5rem", md: "5xl" }}
+          fontWeight={700}
+        >
           <Translation id="page-contributing-translation-program-contributors-title" />
         </ContentHeading>
-        <ContentHeading as="h4">
+        <ContentHeading
+          as="h4"
+          fontSize={{ base: "md", md: "xl" }}
+          fontWeight={500}
+        >
           <Text as="strong">
             <Translation id="page-contributing-translation-program-contributors-number-of-contributors" />{" "}
             {translatorData.length}
@@ -106,19 +118,14 @@ const Contributors = ({
           </Link>
           .
         </Text>
-        <ContentHeading as="h2">
+        <ContentHeading
+          as="h2"
+          fontSize={{ base: "2xl", md: "2rem" }}
+          fontWeight={600}
+        >
           <Translation id="page-contributing-translation-program-contributors-thank-you" />
         </ContentHeading>
-        <UnorderedList
-          display="grid"
-          gridTemplateColumns={{
-            base: "1fr",
-            sm: "repeat(2, 1fr)",
-            md: "repeat(3, 1fr)",
-            lg: "repeat(4, 1fr)",
-            xl: "repeat(6, 1fr)",
-          }}
-        >
+        <SimpleGrid as={UnorderedList} columns={[1, 2, 3, 4, 6]} ms="1.45rem">
           {translatorData
             .map(({ user }) => user.username)
             .sort((user1, user2) =>
@@ -131,7 +138,7 @@ const Contributors = ({
                 </ListItem>
               )
             })}
-        </UnorderedList>
+        </SimpleGrid>
         <Text>
           <Translation id="page-languages-interested" />{" "}
           <Link to="/contributing/translation-program/">
