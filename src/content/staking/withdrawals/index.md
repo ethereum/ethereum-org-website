@@ -65,7 +65,7 @@ Withdrawal functionality will be enabled through a two-part simultaneous network
 
 ## How do withdrawal payments work? {#how-do-withdrawals-work}
 
-Whether a given validator is eligible for a withdrawal or not is determined by the state of the validator account itself. No user input is needed at any given time to determine weather an account should have a withdrawal initiated or not—the entire process is done automatically by the consensus layer on a continuous loop.
+Whether a given validator is eligible for a withdrawal or not is determined by the state of the validator account itself. No user input is needed at any given time to determine whether an account should have a withdrawal initiated or not—the entire process is done automatically by the consensus layer on a continuous loop.
 
 ### Validator "sweeping" {#validator-sweeping}
 
@@ -121,9 +121,9 @@ No, the process to provide withdrawal credentials is a one-time process, and can
 </ExpandableCard>
 
 <ExpandableCard title="Why can a withdrawal address only be set once?">
-By setting an execution layer withdrawal address the withdrawal credentials for that validator account (on the consensus layer) have permanently be changed. This means the old credentials will no longer work, and the new credentials direct to an execution layer account.
+By setting an execution layer withdrawal address the withdrawal credentials for that validator have permanently been changed. This means the old credentials will no longer work, and the new credentials direct to an execution layer account.
 
-Withdrawal addresses can be either a smart control (controlled by its code), or an externally owned account (EOA, controlled by its private key). Currently these accounts have no way to communicate a message back to the consensus layer that would signal a change of validator credentials, and adding this functionality would add unnecessary complexity to the protocol.
+Withdrawal addresses can be either a smart contract (controlled by its code), or an externally owned account (EOA, controlled by its private key). Currently these accounts have no way to communicate a message back to the consensus layer that would signal a change of validator credentials, and adding this functionality would add unnecessary complexity to the protocol.
 
 As an alternative to changing the withdrawal address for a particular validator, users may choose to set a smart contract as their withdrawal address which could handle key rotating, such as a Safe. Users who set their funds to their own EOA can perform a full exit to withdrawal all of their staked funds, and then re-stake using new credentials.
 </ExpandableCard>
@@ -140,7 +140,7 @@ As an alternative to changing the withdrawal address for a particular validator,
 
 <ExpandableCard title="Do full withdrawals happen automatically?">
 <p>No, if your validator is still active on the network, a full withdrawal will not happen automatically. This requires manually initiating a voluntary exit.</p>
-<p>Once a validator has completed the exiting process, and assuming the account has withdrawal credentials, the remaining balance will <em>then</em> be withdrawal during the next validator sweep.</p>
+<p>Once a validator has completed the exiting process, and assuming the account has withdrawal credentials, the remaining balance will <em>then</em> be withdrawn during the next validator sweep.</p>
 </ExpandableCard>
 
 <ExpandableCard title="How can I withdrawal a custom amount?">
