@@ -90,13 +90,10 @@ const SubmitInstructions = ({ children }) => (
 const LeaderboardContainer = ({ children }) => (
   <Box
     flex={"1 1 50%"}
-    paddingLeft={"0rem"}
-    paddingRight={"2rem"}
-    paddingTop={"6rem"}
-    paddingBottom={"8rem"}
     display={"flex"}
     flexDirection={"column"}
     alignItems={"center"}
+    padding={{ lg: "6rem 2rem 8rem 0rem", base: "0" }}
   >
     {children}
   </Box>
@@ -141,6 +138,25 @@ const Contact = ({ children }) => (
   </Box>
 )
 
+const ButtonRow = ({ children }) => (
+  <Box
+    display={"flex"}
+    alignItems={"center"}
+    marginTop={"1rem"}
+    flexWrap={"wrap"}
+  >
+    {children}
+  </Box>
+)
+
+const StyledButton = ({ children, ...props }) => {
+  return (
+    <ButtonLink marginRight={"1rem"} marginBottom={"0rem"} {...props}>
+      {children}
+    </ButtonLink>
+  )
+}
+
 const HeroCard = styled.div`
   display: flex;
   justify-content: space-between;
@@ -179,20 +195,6 @@ const ClientRow = styled.div`
   align-items: center;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
-  }
-`
-
-const ButtonRow = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-`
-
-const StyledButton = styled(ButtonLink)`
-  margin-right: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 1rem;
   }
 `
 
