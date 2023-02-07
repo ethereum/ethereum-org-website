@@ -174,7 +174,7 @@ const FindWalletPage = ({ data, location }) => {
       >
         <Box w={{ base: "full", sm: "50%" }} mt={{ base: 8, sm: 0 }}>
           <Breadcrumbs slug={location.pathname} />
-          <Heading as="h1">
+          <Heading as="h1" fontSize={{ base: "2.5rem", md: "5xl" }}>
             <Translation id="page-find-wallet-title" />
           </Heading>
           <Subtitle>
