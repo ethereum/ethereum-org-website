@@ -146,5 +146,5 @@ The hash of (8,9) should equal hash (4), which hashes with 5 to produce 2, which
 - [Upgrading Ethereum: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
 - [Upgrading Ethereum: Merkleization](https://eth2book.info/altair/part2/building_blocks/merkleization)
 - [SSZ implementations](https://github.com/ethereum/consensus-specs/issues/2138)
-- [SSZ calcuator](https://simpleserialize.com/)
+- [SSZ calculator](https://simpleserialize.com/)
 - [SSZ.dev](https://www.ssz.dev/)

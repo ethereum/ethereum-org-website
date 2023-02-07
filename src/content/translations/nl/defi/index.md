@@ -5,11 +5,11 @@ lang: nl
 template: use-cases
 emoji: ":money_with_wings:"
 image: ../../../../assets/use-cases/defi.png
-alt: Een Ethereum-logo gemaakt van legostenen.
+alt: Een Eth-logo gemaakt van legostenen.
 sidebarDepth: 2
 summaryPoint1: Een wereldwijd, open alternatief voor ons huidige financiële systeem.
-summaryPoint2: Producten waarmee u kunt lenen, sparen, investeren, handelen en veel meer.
-summaryPoint3: Gebaseerd op open-source-technologien die iedereen kan gebruiken.
+summaryPoint2: Producten waarmee u kunt lenen, sparen, investeren, handelen en meer.
+summaryPoint3: Gebaseerd op open-source-technologieën die iedereen kan gebruiken.
 ---
 
 DeFi is een open en globaal financieel systeem gemaakt voor het internettijdperk. Het is een alternatief voor het huidige financiële systeem dat streng gecontrolleerd is en dat op een oude infrastructuur gebouwd is. Het geeft u volledige controlle en inzicht in uw geld. Het geeft u blootstelling aan de mondiale markten en alternatieven voor uw lokale valuta of bankopties. DeFi-producten stellen diensten open voor iedereen met een internetverbinding en zijn grotendeels het eigendom van en worden onderhouden door de gebruikers. Tot dusver zijn er al miljarden dollars aan crypto door DeFi-applicaties gestroomd en dit groeit nog elke dag.
@@ -332,9 +332,9 @@ DeFi is een open-source beweging. De DeFi-protocollen en -applicaties staan alle
 
 ### DeFi-data {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
+- [DeFi Rate](https://defirate.com/)
 
 ### DeFi-artikelen {#defi-articles}
 

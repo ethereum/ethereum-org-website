@@ -181,7 +181,7 @@ Ethereum avait à l'origine un unique format pour les transactions. Chaque trans
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
-Ethereum a évolué pour prendre en charge plusieurs types de transactions afin de permettre l'implémentation de nouvelles fonctionnalités telles que les listes d'accès [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) sans affecter les formats de transactions existants.
+Ethereum a évolué pour prendre en charge plusieurs types de transactions afin de permettre l'implémentation de nouvelles fonctionnalités telles que les listes d'accès [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) sans affecter les formats de transactions existants.
 
 [EIP-2718 : Enveloppe de transaction saisie](https://eips.ethereum.org/EIPS/eip-2718) définit un type de transaction qui sert d'enveloppe à de futurs types de transaction.
 

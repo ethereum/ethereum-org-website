@@ -46,7 +46,7 @@ As mentioned, anyone can call public functions in your smart contract once it is
 
 **`require()`**: `require` are defined at the start of functions and ensures predefined conditions are met before the called function is executed. A `require` statement can be used to validate user inputs, check state variables, or authenticate the identity of the calling account before progressing with a function.
 
-**`assert()`**: `assert()` is used to detect internal errors and check for violations of “invariants” in your code. An invariant is a logical assertion about a contract’s state that should hold true for all function executions. An example invariant is the maximium total supply or balance of a token contract. Using `assert()` ensures that your contract never reaches a vulnerable state, and if it does, all changes to state variables are rolled back.
+**`assert()`**: `assert()` is used to detect internal errors and check for violations of “invariants” in your code. An invariant is a logical assertion about a contract’s state that should hold true for all function executions. An example invariant is the maximum total supply or balance of a token contract. Using `assert()` ensures that your contract never reaches a vulnerable state, and if it does, all changes to state variables are rolled back.
 
 **`revert()`**: `revert()` can be used in an if-else statement that triggers an exception if the required condition is not satisfied. The sample contract below uses `revert()` to guard the execution of functions:
 
@@ -365,7 +365,7 @@ Both integer overflows and underflows can lead to unexpected changes to a contra
 pragma solidity ^0.7.6;
 
 // This contract is designed to act as a time vault.
-// User can deposit into this contract but cannot withdraw for atleast a week.
+// User can deposit into this contract but cannot withdraw for at least a week.
 // User can also extend the wait time beyond the 1 week waiting period.
 
 /*
@@ -474,7 +474,7 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/admin)** - _Interface for managing smart contract administration, including access controls, upgrades, and pausing._
 
-- **[Gnosis Safe](https://gnosis.io/safe/)** - _Smart contract wallet running on Ethereum that requires a minimum number of people to approve a transaction before it can occur (M-of-N)._
+- **[Safe](https://safe.global/)** - _Smart contract wallet running on Ethereum that requires a minimum number of people to approve a transaction before it can occur (M-of-N)._
 
 - **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/)** - _Contract libraries for implementing administrative features, including contract ownership, upgrades, access controls, governance, pauseability, and more._
 
@@ -494,11 +494,15 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[Runtime Verification](https://runtimeverification.com/)** - _Security company specializing in formal modeling and verification of smart contracts._
 
+- **[Hacken](https://hacken.io)** - _Web3 cybersecurity auditor bringing the 360-degree approach to blockchain security._
+
 ### Bug bounty platforms {#bug-bounty-platforms}
 
 - **[Immunefi](https://immunefi.com/)** - _Bug bounty platform for smart contracts and DeFi projects, where security researchers review code, disclose vulnerabilities, get paid, and make crypto safer._
 
 - **[HackerOne](https://www.hackerone.com/)** - _Vulnerability coordination and bug bounty platform that connects businesses with penetration testers and cybersecurity researchers._
+
+- **[HackenProof](https://hackenproof.com/)** - _Expert bug bounty platform for crypto projects (DeFi, Smart Contracts, Wallets, CEX and more), where security professionals provide triage services and researchers get paid for relevant, verified bug reports._
 
 ### Publications of known smart contract vulnerabilities and exploits {#common-smart-contract-vulnerabilities-and-exploits}
 

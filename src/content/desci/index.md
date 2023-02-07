@@ -91,6 +91,7 @@ Flexible Web3 data solutions support the scenarios above and provide the foundat
 
 Explore projects and join the DeSci community.
 
+- [DeSci.Global: global events and meetup calendar](https://desci.global)
 - [Blockchain for Science Telegram](https://t.me/BlockchainForScience)
 - [Molecule: Fund and get funded for your research projects](https://discover.molecule.to/)
 - [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
@@ -110,7 +111,9 @@ Explore projects and join the DeSci community.
 - [Active Inference Lab](https://www.activeinference.org/)
 - [Cherubs DAO: NFT funded and DAO governed impact fund for mental health & brain wellness](https://cherubsdao.com/)
 - [CureDAO: Community-Owned Precision Health Platform](https://docs.curedao.org/)
-- [IdeaMarkets: enabling decentralized scientifc credibility](https://ideamarket.io/)
+- [IdeaMarkets: enabling decentralized scientific credibility](https://ideamarket.io/)
+
+We welcome suggestions for new projects to list - please look at our [listing policy](/contributing/adding-desci-projects/) to get started!
 
 ## Further reading {#further-reading}
 
@@ -126,6 +129,7 @@ Explore projects and join the DeSci community.
 - [An Active Inference Ontology for Decentralized Science: from Situated Sensemaking to the Epistemic Commons](https://zenodo.org/record/6320575)
 - [DeSci: The Future of Research by Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)
 - [Science Funding (Epilogue: DeSci and new crypto primitives) by Nadia](https://nadia.xyz/science-funding)
+- [Decentralisation is Disrupting Drug Development](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
 
 ### Videos {#videos}
 

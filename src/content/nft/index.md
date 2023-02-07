@@ -14,7 +14,7 @@ summaryPoint3: Powered by smart contracts on the Ethereum blockchain.
 
 NFTs are currently taking the digital art and collectibles world by storm. Digital artists are seeing their lives change thanks to huge sales to a new crypto-audience. And celebrities are joining in as they spot a new opportunity to connect with fans. But digital art is only one way to use NFTs. Really they can be used to represent ownership of any unique asset, like a deed for an item in the digital or physical realm.
 
-If Andy Warhol had been born in the late 90s, he probably would have minted Campbell's Soup as an NFT. It's only a matter of time before Kanye puts a run of Yeezys on Ethereum. And one day owning your car might be proved with an NFT.
+If Andy Warhol had been born in the late 90s, he probably would have minted Campbell's Soup as an NFT. It's only a matter of time before Nike puts a run of Jordans on Ethereum. And one day owning your car might be proved with an NFT.
 
 ## What's an NFT? {#what-are-nfts}
 
@@ -288,7 +288,7 @@ If minting and distributing NFTs is about community-generation or community digi
 
 - [Collab.land](https://collab.land/) tokengates Discord chat servers or Telegram groups
 - [Unlock protocol](https://unlock-protocol.com/) is a protocol for tokengating
-- [Shopify](https://help.shopify.com/en/manual/products/digital-service-product/nfts) have a growing roster of apps that let merchants tokengate access to products and discounts
+- [Shopify](https://help.shopify.com/en/manual/products/digital-service-product/nfts) has a growing roster of apps that let merchants tokengate access to products and discounts
 
 <Divider />
 
