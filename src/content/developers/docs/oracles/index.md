@@ -404,6 +404,8 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 
 **[Dos.Network](https://dos.network/)** - _DOS Network is a decentralized oracle service network to boost blockchain usability with real-world data and computation power._
 
+**[Scry Protocol](https://docs.scry.finance/)** - _Scry allows for developers to self-deploy high-scale oracles using custom signer sets for arbitrary APIs to any EVM without any code needed. Fully decentralized and permissionless including nodes, front end and contracts._
+
 ## Further reading {#further-reading}
 
 **Articles**
