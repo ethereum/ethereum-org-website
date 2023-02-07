@@ -9,8 +9,7 @@ tags:
     "alchemy",
     "smart contracts",
     "deploying",
-    "etherscan",
-    "verifying",
+    "blockexplorer",
     "frontend",
     "transactions",
   ]
