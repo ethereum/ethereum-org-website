@@ -29,6 +29,7 @@ const config: ThemeConfig = {
  */
 const theme: ThemeOverride = {
   config,
+  // TODO: fonts object to be removed (it'll now be in the 'foundation' directory)
   fonts: {
     // old fonts from the previous theme
     // TODO: update the fonts when we transition to the Design System
