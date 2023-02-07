@@ -102,8 +102,6 @@ const Intro = styled(Content)`
   }
 `
 
-// const Intro = chakra(Content)
-
 // const IntroTwoColumnContent = styled(TwoColumnContent)`
 //   margin-bottom: 0;
 //   padding-bottom: 0;
