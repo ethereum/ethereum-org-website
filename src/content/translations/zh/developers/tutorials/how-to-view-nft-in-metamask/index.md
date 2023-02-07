@@ -6,7 +6,6 @@ tags:
   - "NFT"
   - "ERC-721"
   - "Alchemy"
-  - "MetaMask"
   - "非同质化代币"
   - "Solidity"
 skill: beginner

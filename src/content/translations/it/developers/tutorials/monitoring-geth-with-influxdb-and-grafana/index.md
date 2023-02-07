@@ -4,7 +4,6 @@ description:
 author: "Mario Havel"
 tags:
   - "client"
-  - "geth"
   - "nodi"
 skill: intermediate
 lang: it

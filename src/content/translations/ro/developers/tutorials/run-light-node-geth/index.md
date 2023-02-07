@@ -4,7 +4,6 @@ description: How to download, install and run a lightclient with Geth.
 author: "Brian Gu"
 tags:
   - "clienți"
-  - "geth"
   - "noduri"
 skill: beginner
 lang: ro

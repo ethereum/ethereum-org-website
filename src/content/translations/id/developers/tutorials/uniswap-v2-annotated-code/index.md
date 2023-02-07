@@ -4,7 +4,6 @@ description: Bagaimana cara kerja kontrak Uniswap-v2? Mengapa ditulis dengan car
 author: Ori Pomerantz
 tags:
   - "solidity"
-  - "uniswap"
 skill: intermediate
 published: 2021-05-01
 lang: id

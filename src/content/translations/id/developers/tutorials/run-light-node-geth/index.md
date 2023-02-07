@@ -4,7 +4,6 @@ description: How to download, install and run a lightclient with Geth.
 author: "Brain Gu"
 tags:
   - "klien"
-  - "geth"
   - "node"
 skill: beginner
 lang: id

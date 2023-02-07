@@ -4,7 +4,6 @@ description:
 author: "Mario Havel"
 tags:
   - "客户端"
-  - "geth"
   - "节点"
 skill: intermediate
 lang: zh

@@ -4,7 +4,6 @@ description: Come funziona il contratto Uniswap-v2? Perché è scritto così?
 author: Ori Pomerantz
 tags:
   - "solidity"
-  - "uniswap"
 skill: intermediate
 published: 2021-05-01
 lang: it

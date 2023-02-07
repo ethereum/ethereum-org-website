@@ -4,7 +4,6 @@ description: Cum funcționează contractul Uniswap-v2? De ce este scris în aces
 author: Ori Pomerantz
 tags:
   - "solidity"
-  - "uniswap"
 skill: intermediate
 published: 2021-05-01
 lang: ro

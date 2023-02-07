@@ -4,7 +4,6 @@ description: How does the standard bridge for Optimism work? Why does it work th
 author: Ori Pomerantz
 tags:
   - "solidity"
-  - "optimism"
   - "bridge"
   - "layer 2 (nivel 2)"
 skill: intermediate

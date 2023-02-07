@@ -2,7 +2,7 @@
 title: How to View Your NFT in Your Wallet (Part 3/3 of NFT Tutorial Series)
 description: This tutorial describes how to view an existing an NFT on MetaMask!
 author: "Sumi Mudgil"
-tags: ["ERC-721", "Alchemy", "MetaMask", "Solidity"]
+tags: ["ERC-721", "Alchemy", "Solidity"]
 skill: beginner
 lang: en
 published: 2021-04-22

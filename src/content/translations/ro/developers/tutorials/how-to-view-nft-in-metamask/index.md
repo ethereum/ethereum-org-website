@@ -6,7 +6,6 @@ tags:
   - "NFT-uri"
   - "ERC-721"
   - "Alchemy"
-  - "MetaMask"
   - "tokenuri nefungibile"
   - "Solidity"
 skill: beginner

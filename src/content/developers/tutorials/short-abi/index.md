@@ -3,7 +3,7 @@ title: "Short ABIs for Calldata Optimization"
 description: Optimizing smart contracts for Optimistic Rollups
 author: Ori Pomerantz
 lang: en
-tags: ["layer 2", "optimism"]
+tags: ["layer 2"]
 skill: intermediate
 published: 2022-04-01
 ---

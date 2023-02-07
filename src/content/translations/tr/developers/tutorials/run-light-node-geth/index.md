@@ -4,7 +4,6 @@ description: Geth ile bir lightclient nasıl indirilir, kurulur ve çalıştır�
 author: "Brian Gu"
 tags:
   - "istemciler"
-  - "geth"
   - "düğümler"
 skill: beginner
 lang: tr

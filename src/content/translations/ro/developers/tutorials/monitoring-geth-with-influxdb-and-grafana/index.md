@@ -4,7 +4,6 @@ description:
 author: "Mario Havel"
 tags:
   - "clienți"
-  - "geth"
   - "noduri"
 skill: intermediate
 lang: ro
