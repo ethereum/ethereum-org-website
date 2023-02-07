@@ -16,7 +16,7 @@ Even after withdrawals there are improvements that can be made to Ethereum's pro
 Today, it takes about 15 minutes to finalize a block. This is because a sufficient number of attestations has to be collected. The shorter the time frame for collecting attestations, the more powerful each node has to be to process them all. However, the relatively long time window does not provide a great user experience and creates opportunities for sophisticated "reorg" attacks. This problem can be solved using **single slot finality (SSF)**. SSF works by doing more signature aggregation so that many more validators can attest in each slot. This will allow exchanges, dapps and users to see their transactions finalized in 12 seconds instead of 15 minutes and close the attack window.
 
 Read more on [proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
-Read more on [single slot finality](/roadmap/single-slot-finality)
+Read more on [single slot finality](single-slot-finality/)
 
 ## Defending against censorship
 
@@ -24,7 +24,7 @@ Another facet of security is preventing certain individuals or small groups of v
 
 Implementing proposer-builder separation (PBS) will drastically improve Ethereum's built-in defenses against censorship. PBS allows one validator to create a block and another to broadcast it across the Ethereum network. In this system, the proposer could be blind to the actual transactions included, selecting blocks based on their economic value only. There are several add-ons to PBS that improve Ethereum's censsorship resistance even further, such as encrypted transactions and inclusion lists.
 
-[Read more on PBS](/roadmap/pbs/)
+[Read more on PBS](pbs/)
 
 ## Protecting validators
 
