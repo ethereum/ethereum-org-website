@@ -8,7 +8,7 @@ EVM 的物理实例不能像人们指向云或海浪那样描述，它是真实*
 
 以太坊协议本身的存在仅仅是为了让这个特殊状态机保持连续、不间断和不可变的运行。 以太坊虚拟机是所有以太坊帐户和智能合约依存的环境。 在链上任何给定的区块处，以太坊有且只有一个“规范”状态，而以太坊虚拟机定义从一个区块到另一个区块计算新的有效状态的规则。
 
-## 前置要求 {#prerequisites}
+## 前提条件 {#prerequisites}
 
 对计算机科学中常见术语的基本了解，如[字节](https://wikipedia.org/wiki/Byte)、[内存](https://wikipedia.org/wiki/Computer_memory)和[堆栈](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>)是理解 EVM 的前提。 熟悉[哈希函数](https://wikipedia.org/wiki/Cryptographic_hash_function)和[默克尔树](https://wikipedia.org/wiki/Merkle_tree)等密码学/区块链概念也会很有帮助。
 
@@ -18,7 +18,7 @@ EVM 的物理实例不能像人们指向云或海浪那样描述，它是真实*
 
 虽然以太坊有自己的本机加密货币 (ETH)，遵循几乎完全相同的直观规则，但它也支持更强大的功能：[智能合约](/developers/docs/smart-contracts/)。 对于此更复杂的功能，需要一个更复杂的类比。 以太坊不是分布式账本，而是分布式[状态机器](https://wikipedia.org/wiki/Finite-state_machine)。 以太坊的状态是一个大型数据结构，它不仅保存所有帐户和余额，而且还保存一个*机器状态*，它可以根据预定义的一组规则在不同的区块之间进行更改，并且可以执行任意的机器代码。 在区块中更改状态的具体规则由 EVM 定义。
 
-![EVM 组成结构图](./evm.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![EVM 组成结构图](./evm.png) _示意图节选自[以太坊虚拟机图解](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## 以太坊状态转换函数 {#the-ethereum-state-transition-function}
 

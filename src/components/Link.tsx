@@ -19,6 +19,7 @@ export interface IBaseProps {
   hideArrow?: boolean
   isPartiallyActive?: boolean
   customEventOptions?: EventOptions
+  activeStyle?: object
 }
 
 export interface IProps extends IBaseProps, LinkProps {
@@ -49,6 +50,7 @@ const Link: React.FC<IProps> = ({
   hideArrow = false,
   isPartiallyActive = true,
   customEventOptions,
+  activeStyle = null,
   ...restProps
 }) => {
   const theme = useTheme()
@@ -122,7 +124,7 @@ const Link: React.FC<IProps> = ({
       as={IntlLink}
       language={language}
       partiallyActive={isPartiallyActive}
-      activeStyle={{ color: theme.colors.primary }}
+      activeStyle={activeStyle ? activeStyle : { color: theme.colors.primary }}
       whiteSpace={isGlossary ? "nowrap" : "normal"}
       {...commonProps}
     >

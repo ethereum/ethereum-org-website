@@ -152,7 +152,7 @@ Ethereum yönetişim süreci, genellikle açıklık ve kapsayıcılık için hı
 
 Şartname ve uygulama geliştirme her zaman tamamen açık kaynak olsa da, yukarıda açıklanan güncellemeleri önermek için kullanılan resmi süreçler kullanılmadı. Bu, değişikliklerin araştırmacılar ve uygulayıcılar tarafından daha hızlı belirlenmesine ve üzerinde anlaşmaya varılmasına izin verdi.
 
-İşaret Zinciri, Ethereum yürütüm katmanıyla birleştiğinde, değişiklikleri önermek için yönetişim süreci uyumlu hâle getirilecektir. Birleştirmeyi uygulamaya yönelik bu süreç [çoktan başladı](https://github.com/ethereum/EIPs/pull/3675).
+İşaret Zinciri, Ethereum yürütüm katmanıyla birleştiğinde, değişiklikleri önermek için yönetişim süreci uyumlu hâle getirilecektir. Birleştirmeyi uygulamaya yönelik bu süreç [çoktan başladı](https://eips.ethereum.org/EIPS/eip-3675).
 
 <ButtonLink to="/upgrades/merge/">
   Birleştirme hakkında ek bilgi

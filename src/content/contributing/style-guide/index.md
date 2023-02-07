@@ -146,6 +146,19 @@ Proof-of-work should be capitalized at the beginning of a sentence. In any other
 
 The same rules we apply to proof-of-work are applicable to proof-of-stake, proof-of-authority, proof-of-humanity, proof-of-individuality, etc.
 
+### Smart contract {#smart-contract}
+
+Smart contract is a common noun and should only be capitalized at the beginning of a sentence. In any other instance, all letters should be lowercase.
+
+**Correct usage:**
+
+- Smart contract
+- smart contract
+
+** Incorrect usage:**
+
+- Smart Contract
+
 ### The Merge {#the-merge}
 
 When referring to The Merge, treat it as a proper noun. Always capitalize the first letter in each word.
@@ -161,7 +174,7 @@ When referring to The Merge, treat it as a proper noun. Always capitalize the fi
 
 ### Zero-knowledge {#zero-knowledge}
 
-Zero-knowledge should be capitalized at the beginning of a sentence. In any other instance, all letters should be lower case. In either case, zero-knowledge should be hyphenated between each word.
+Zero-knowledge is a common noun and should only be capitalized at the beginning of a sentence. In any other instance, all letters should be lowercase. In either case, zero-knowledge should be hyphenated between each word.
 
 **Correct usage:**
 
@@ -315,12 +328,12 @@ When citing articles from a specific author or organization, use the article's n
 <--- Good --->
 
 - [A rollup-centric ethereum roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) — _Vitalik Buterin_
-- [Oracles](https://docs.ethhub.io/built-on-ethereum/oracles/what-are-oracles/) – _EthHub_
+- [The History of Ethereum Testnets](https://consensys.net/blog/news/the-history-of-ethereum-testnets/) – _ConsenSys_
 
 <--- Bad--->
 
 - [A rollup-centric ethereum roadmap by Vitalik Buterin](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)
-- [EthHub on Oracles](https://docs.ethhub.io/built-on-ethereum/oracles/what-are-oracles/) – _EthHub_
+- [ConsenSys on The History of Ethereum Testnets](https://consensys.net/blog/news/the-history-of-ethereum-testnets/) – _ConsenSys_
 ```
 
 ## Anything else? {#anything-else}

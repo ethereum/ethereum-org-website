@@ -1,19 +1,5 @@
 // Libraries
-import React, { ReactElement, ReactNode, SVGProps } from "react"
-
-// Components
-import ButtonLink from "../ButtonLink"
-import Translation from "../Translation"
-
-// Assets
-import EtherSvg from "../../assets/staking/staking-glyph-ether-circle.svg"
-import SoloGlyph from "../../assets/staking/staking-glyph-cpu.svg"
-import SaasGlyph from "../../assets/staking/staking-glyph-cloud.svg"
-import PoolGlyph from "../../assets/staking/staking-glyph-token-wallet.svg"
-import CexGlyph from "../../assets/staking/staking-glyph-centralized.svg"
-
-// Utils
-import { trackCustomEvent } from "../../utils/matomo"
+import React, { ReactNode } from "react"
 import {
   Box,
   calc,
@@ -27,6 +13,22 @@ import {
   useToken,
   VStack,
 } from "@chakra-ui/react"
+
+// Components
+import ButtonLink from "../ButtonLink"
+import Translation from "../Translation"
+
+// SVG icons
+import {
+  StakingGlyphCentralizedIcon,
+  StakingGlyphCloudIcon,
+  StakingGlyphCPUIcon,
+  StakingGlyphEtherCircleIcon,
+  StakingGlyphTokenWalletIcon,
+} from "../icons/staking"
+
+// Utils
+import { trackCustomEvent } from "../../utils/matomo"
 
 type ChildOnlyType = {
   children: ReactNode
@@ -122,8 +124,7 @@ const SectionGrid: React.FC<{ number: number; children: ReactNode }> = ({
 
 const StyledEtherSvg: React.FC<{ size: string }> = ({ size }) => (
   <Center gridArea="ether" zIndex={2} maxW={20} width="full" mx="auto">
-    <Icon
-      as={EtherSvg}
+    <StakingGlyphEtherCircleIcon
       boxSize={size}
       color={$colorVar.reference}
       sx={{
@@ -218,20 +219,18 @@ const Pills = ({ children }: ChildOnlyType) => (
   </Flex>
 )
 
-const Glyph = ({
-  glyphIcon,
-}: {
-  glyphIcon: (props: SVGProps<SVGElement>) => ReactElement
-}) => (
-  <Center gridArea={{ base: "content", md: "glyph" }}>
-    <Icon
-      as={glyphIcon}
-      boxSize={{ base: "50%", md: "initial" }}
-      color={$colorVar.reference}
-      opacity={{ base: 0.1, md: "initial" }}
-    />
-  </Center>
-)
+const Glyph = ({ glyphIcon }: { glyphIcon: typeof Icon }) => {
+  const Icon = glyphIcon
+  return (
+    <Center gridArea={{ base: "content", md: "glyph" }}>
+      <Icon
+        boxSize={{ base: "50%", md: "50px" }}
+        color={$colorVar.reference}
+        opacity={{ base: 0.1, md: "initial" }}
+      />
+    </Center>
+  )
+}
 
 const Content = ({ children }: ChildOnlyType) => (
   <Box
@@ -294,7 +293,7 @@ const StakingHierarchy: React.FC<IProps> = () => {
             </p>
           </Pills>
         </Header>
-        <Glyph glyphIcon={SoloGlyph} />
+        <Glyph glyphIcon={StakingGlyphCPUIcon} />
         <Content>
           <p>
             <Translation id="page-staking-hierarchy-solo-p1" />
@@ -336,7 +335,7 @@ const StakingHierarchy: React.FC<IProps> = () => {
             </p>
           </Pills>
         </Header>
-        <Glyph glyphIcon={SaasGlyph} />
+        <Glyph glyphIcon={StakingGlyphCloudIcon} />
         <Content>
           <p>
             <Translation id="page-staking-hierarchy-saas-p1" />
@@ -386,7 +385,7 @@ const StakingHierarchy: React.FC<IProps> = () => {
             </p>
           </Pills>
         </Header>
-        <Glyph glyphIcon={PoolGlyph} />
+        <Glyph glyphIcon={StakingGlyphTokenWalletIcon} />
         <Content>
           <p>
             <Translation id="page-staking-hierarchy-pools-p1" />
@@ -433,7 +432,7 @@ const StakingHierarchy: React.FC<IProps> = () => {
             </p>
           </Pills>
         </Header>
-        <Glyph glyphIcon={CexGlyph} />
+        <Glyph glyphIcon={StakingGlyphCentralizedIcon} />
         <Content>
           <p>
             <Translation id="page-staking-hierarchy-cex-p1" />

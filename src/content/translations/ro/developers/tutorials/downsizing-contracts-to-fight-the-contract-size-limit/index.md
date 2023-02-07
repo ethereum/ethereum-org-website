@@ -152,6 +152,6 @@ Aceste sugestii ar trebui să vă ajute să reduceți semnificativ dimensiunea c
 
 ## Viitorul privind limitele dimensiunii contractelor {#the-future-for-the-contract-size-limits}
 
-Există o [propunere deschisă](https://github.com/ethereum/EIPs/issues/1662) de eliminare a limitelor dimensiunii contractelor. Ideea de bază este de a scumpi apelurile de contract pentru contractele mari. Nu ar fi prea greu de implementat, însă are o compatibilitate retroactivă simplă (pune toate contractele implementate anterior în cea mai ieftină categorie), dar [nu toată lumea este convinsă](https://ethereum-magicians.org/t/removing-or-increasing-the-contract-size-limit/3045/24).
+Există o [propunere deschisă](https://eips.ethereum.org/EIPS/eip-1662) de eliminare a limitelor dimensiunii contractelor. Ideea de bază este de a scumpi apelurile de contract pentru contractele mari. Nu ar fi prea greu de implementat, însă are o compatibilitate retroactivă simplă (pune toate contractele implementate anterior în cea mai ieftină categorie), dar [nu toată lumea este convinsă](https://ethereum-magicians.org/t/removing-or-increasing-the-contract-size-limit/3045/24).
 
 Doar timpul va spune dacă aceste limite se vor schimba în viitor, reacțiile (priviți imaginea din dreapta) arată absolut clar această necesitate pentru noi ca dezvoltatori. Din nefericire, nu vă puteți aștepta să se întâmple prea curând.
