@@ -46,7 +46,6 @@
       "mocking",
       "testing",
       "defi",
-      "chainlink",
       "openzeppelin",
       "slither",
       "filecoin",
@@ -82,7 +81,6 @@
       "python",
       "mocking",
       "testing",
-      "chainlink",
       "ganache"
     ],
     "skillLevel": "beginner",
@@ -225,7 +223,6 @@
       "NFT",
       "smart contracts",
       "javascript",
-      "chainlink",
       "video"
     ],
     "skillLevel": "beginner",
@@ -307,7 +304,6 @@
       "smart contracts",
       "python",
       "openzeppelin",
-      "chainlink",
       "video"
     ],
     "skillLevel": "beginner",
