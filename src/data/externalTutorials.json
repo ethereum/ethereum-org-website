@@ -45,7 +45,7 @@
       "javascript",
       "mocking",
       "testing",
-      "Aave",
+      "defi",
       "chainlink",
       "openzeppelin",
       "slither",
@@ -82,7 +82,6 @@
       "python",
       "mocking",
       "testing",
-      "Aave",
       "chainlink",
       "ganache"
     ],
@@ -244,7 +243,7 @@
       "solidity",
       "web3.py",
       "brownie",
-      "Aave",
+      "defi",
       "smart contracts",
       "python",
       "video"
@@ -264,7 +263,6 @@
       "solidity",
       "web3.py",
       "brownie",
-      "Aave",
       "smart contracts",
       "python",
       "video",

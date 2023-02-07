@@ -8,10 +8,7 @@ tags:
   - "javascript"
   - "ethers.js"
   - "the graph"
-  - "aave"
-  - "compound"
-  - "uniswap"
-  - "sablier"
+  - "defi"
 skill: beginner
 lang: ro
 published: 2020-04-27

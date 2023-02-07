@@ -8,10 +8,7 @@ tags:
   - "javascript"
   - "ethers.js"
   - "图表"
-  - "aave"
-  - "compound"
-  - "uniswap"
-  - "sablier"
+  - "defi"
 skill: beginner
 lang: zh
 published: 2020-04-27
