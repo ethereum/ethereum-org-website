@@ -31,7 +31,7 @@ Over the past few years Ethereum has undergone several network upgrades transiti
 
 Since the launch of the staking deposit contract in November 2020, some brave Ethereum pioneers have voluntarily locked funds up to activate "validators", the accounts that have the right to formally attest to and propose blocks, following network rules.
 
-Before the Shanghai update, you couldn't use or get your money out if you staked ETH. But now, you can opt-in to automatically receive your rewards into a provided account, and you can also take out all your money whenever you want.
+Before the Shanghai update, you couldn't use or access your staked ETH. But now, you can opt-in to automatically receive your rewards into a provided account, and you can also withdraw your staked ETH whenever you want.
 
 ### How do I prepare? {#how-do-i-prepare}
 
@@ -55,7 +55,7 @@ Users looking to exit staking entirely and withdraw their full balance back must
 
 The process of a validator exiting from staking takes variable amounts of time, depending on how many others are exiting at the same time. Once complete, this account will no longer be responsible for performing validator network duties, is no longer eligible for rewards, and no longer has their ETH "at stake". At this time the account with be marked as fully “withdrawable”.
 
-Once an account is flagged as "withdrawable", and withdrawal credentials have been provided, there is nothing more a user needs to do aside from wait. Accounts are automatically and continuously swept by block proposers for eligible exited funds, and your account balance will be transferred in full (also known as a "full withdrawal") during the next sweep (more on this [below](#validator-sweeping)).
+Once an account is flagged as "withdrawable", and withdrawal credentials have been provided, there is nothing more a user needs to do aside from wait. Accounts are automatically and continuously swept by block proposers for eligible exited funds, and your account balance will be transferred in full (also known as a "full withdrawal") during the next [sweep](#validator-sweeping).
 
 ## When are staking withdrawals enabled? {#when}
 

@@ -76,7 +76,7 @@ As much as we wish that solo staking was accessible and risk free to everyone, t
 
 While active you will earn ETH rewards, which will be periodically deposited into your withdrawal address.
 
-If ever desired, you can exit as a validator which eliminates the requirement to be online, and stops any further rewards. Your remaining balance will then be withdrawn an Ethereum account that you designate during setup.
+If ever desired, you can exit as a validator which eliminates the requirement to be online, and stops any further rewards. Your remaining balance will then be withdrawn to the withdrawal address that you designate during setup.
 
 _Shanghai upgrade required to enable reward payments and full withdrawals of exited validators._
 
