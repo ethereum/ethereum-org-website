@@ -126,7 +126,7 @@ const FeatureContent: React.FC<IProps> = ({ children }) => {
 
 const H2: React.FC<HeadingProps> = ({ children, ...props }) => {
   return (
-    <Heading mt={0} {...props}>
+    <Heading fontSize={{ base: "2xl", md: "2rem" }} mt={0} {...props}>
       {children}
     </Heading>
   )
@@ -476,7 +476,7 @@ const CommunityPage = ({
         px={8}
       >
         <Box flex="0 0 50%" maxW={{ base: "full", md: "75%" }} mb={6}>
-          <Heading>
+          <Heading fontSize={{ base: "2xl", md: "2rem" }}>
             <Translation id="page-community-try-ethereum" />
           </Heading>
         </Box>
