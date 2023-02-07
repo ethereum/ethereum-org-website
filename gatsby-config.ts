@@ -70,6 +70,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
+        output: "/sitemap",
         query: `{
           site {
             siteMetadata {
