@@ -7,7 +7,6 @@ tags:
   - "Interrogazioni"
   - "Analisi"
   - "Primi passi"
-  - "Dune Analytics"
   - "Blocchi"
   - "Transazioni"
   - "Gas"

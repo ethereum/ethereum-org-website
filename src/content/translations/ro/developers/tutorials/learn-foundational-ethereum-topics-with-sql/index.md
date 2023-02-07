@@ -7,7 +7,6 @@ tags:
   - "Interogarea"
   - "Date analitice"
   - "Noțiuni de bază"
-  - "Dune Analytics"
   - "Blocuri"
   - "Tranzacții"
   - "Gaz"
