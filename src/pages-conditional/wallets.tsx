@@ -28,12 +28,15 @@ import QuizWidget from "../components/Quiz/QuizWidget"
 import { translateMessageId } from "../utils/translations"
 import { getImage, getSrc } from "../utils/image"
 import { Context } from "../types"
-import { Box } from "@chakra-ui/react"
+import { Box, Flex, chakra } from "@chakra-ui/react"
+import { cover } from "polished"
 
-const StyledTwoColumnContent = styled(TwoColumnContent)`
-  margin-bottom: -2rem;
-  margin-top: 2rem;
-`
+// const StyledTwoColumnContent = styled(TwoColumnContent)`
+//   margin-bottom: -2rem;
+//   margin-top: 2rem;
+// `
+
+const StyledTwoColumnContent = chakra(TwoColumnContent)
 
 const LeftColumn = styled.div`
   flex: 0 1 50%;
@@ -82,13 +85,15 @@ const SubtitleThree = styled.div`
   text-align: center;
 `
 
-const FindWallet = styled(GatsbyImage)`
-  margin-top: 2rem;
-  max-width: 800px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-`
+// const FindWallet = styled(GatsbyImage)`
+//   margin-top: 2rem;
+//   max-width: 800px;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   width: 100%;
+// `
+
+const FindWallet = chakra(GatsbyImage)
 
 const Intro = styled(Content)`
   padding-bottom: 0;
@@ -97,64 +102,78 @@ const Intro = styled(Content)`
   }
 `
 
-const IntroTwoColumnContent = styled(TwoColumnContent)`
-  margin-bottom: 0;
-  padding-bottom: 0;
-`
+// const Intro = chakra(Content)
 
-const GradientContainer = styled(GrayContainer)`
-  background: linear-gradient(
-    49.21deg,
-    rgba(127, 127, 213, 0.2) 19.87%,
-    rgba(134, 168, 231, 0.2) 58.46%,
-    rgba(145, 234, 228, 0.2) 97.05%
-  );
-  margin: 3rem 0rem;
-  width: 100%;
-`
+// const IntroTwoColumnContent = styled(TwoColumnContent)`
+//   margin-bottom: 0;
+//   padding-bottom: 0;
+// `
 
-const CodeBox = styled.div`
-  background: #000000;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border-radius: 4px;
-`
+const IntroTwoColumnContent = chakra(TwoColumnContent)
 
-const Code = styled.p`
-  font-family: monospace;
-  color: #ffffff;
-  margin-bottom: 0rem;
-`
+// const GradientContainer = styled(GrayContainer)`
+//   background: linear-gradient(
+//     49.21deg,
+// rgba(127, 127, 213, 0.2) 19.87%,
+// rgba(134, 168, 231, 0.2) 58.46%,
+// rgba(145, 234, 228, 0.2) 97.05%
+//   );
+//   margin: 3rem 0rem;
+//   width: 100%;
+// `
 
-const ChecklistItem = styled(HorizontalCard)`
-  border: 0px;
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 1rem;
-`
+const GradientContainer = chakra(GrayContainer)
 
-const WalletType = styled(HorizontalCard)`
-  min-width: 100%;
-  margin: 0.5rem 0rem;
-  border-radius: 0px;
-  align-items: center;
-`
+// const CodeBox = styled.div`
+//   background: #000000;
+//   padding: 0.5rem;
+//   margin-bottom: 1rem;
+//   border-radius: 4px;
+// `
 
-const StyledCallout = styled(Callout)`
-  flex: 1 1 424px;
-  min-height: 100%;
-`
+// const Code = styled.p`
+//   font-family: monospace;
+//   color: #ffffff;
+//   margin-bottom: 0rem;
+// `
 
-const CentralColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2rem;
-`
+// const ChecklistItem = styled(HorizontalCard)`
+//   border: 0px;
+//   display: flex;
+//   align-items: flex-start;
+//   margin-bottom: 1rem;
+// `
 
-const CalloutCardContainer = styled(CardContainer)`
-  margin-top: 4rem;
-`
+const ChecklistItem = chakra(HorizontalCard)
+
+// const WalletType = styled(HorizontalCard)`
+//   min-width: 100%;
+//   margin: 0.5rem 0rem;
+//   border-radius: 0px;
+//   align-items: center;
+// `
+
+const WalletType = chakra(HorizontalCard)
+
+// const StyledCallout = styled(Callout)`
+//   flex: 1 1 424px;
+//   min-height: 100%;
+// `
+
+const StyledCallout = chakra(Callout)
+
+// const CentralColumn = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   margin-bottom: 2rem;
+// `
+
+// const CalloutCardContainer = styled(CardContainer)`
+//   margin-top: 4rem;
+// `
+
+const CalloutCardContainer = chakra(CardContainer)
 
 // const H2 = styled.h2`
 //   /* margin: 0; */
@@ -265,7 +284,7 @@ const WalletsPage = ({
             <Translation id="page-wallets-whats-a-wallet" />
           </Heading>
         </Intro>
-        <IntroTwoColumnContent>
+        <IntroTwoColumnContent marginBottom={0} paddingBottom={0}>
           <LeftColumn>
             <p>
               <Translation id="page-wallets-description" />
@@ -297,9 +316,8 @@ const WalletsPage = ({
           </CardContainer>
         </Content>
       </StyledGrayContainer>
-      <StyledTwoColumnContent>
+      <StyledTwoColumnContent marginBottom={-8} marginTop={8}>
         <Box flexGrow="0" flexShrink="1" flexBasis="50%" mr="8">
-          {" "}
           //leftcolumn
           <Heading m="0">
             <Translation id="page-wallets-accounts-addresses" />
@@ -338,6 +356,11 @@ const WalletsPage = ({
           <div>
             {types.map((type, idx) => (
               <WalletType
+                minWidth="100%"
+                marginTop={2}
+                marginBottom={2}
+                marginLeft={0}
+                marginRight={0}
                 key={idx}
                 emoji={type.emoji}
                 description={type.description}
@@ -347,9 +370,14 @@ const WalletsPage = ({
           </div>
         </RightColumn>
       </StyledTwoColumnContent>
-      <GradientContainer>
+      <GradientContainer
+        bgGradient="linear(49.21deg, rgba(127, 127, 213, 0.2) 19.87%,
+    rgba(134, 168, 231, 0.2) 58.46%,
+    rgba(145, 234, 228, 0.2) 97.05%)"
+      >
         <Content>
-          <CentralColumn>
+          <Flex flexDirection="column" alignItems="center" mb="8">
+            //central column
             <Heading m="0">
               <Translation id="page-wallets-features-title" />
             </Heading>
@@ -359,8 +387,16 @@ const WalletsPage = ({
             <ButtonLink to="/wallets/find-wallet/">
               <Translation id="page-wallets-find-wallet-btn" />
             </ButtonLink>
-            <FindWallet image={getImage(data.findWallet)!} alt="" />
-          </CentralColumn>
+            <FindWallet
+              image={getImage(data.findWallet)!}
+              alt=""
+              marginTop={8}
+              maxWidth="800px"
+              backgroundSize="cover"
+              backgroundRepeat="no-repeat"
+              width="100%"
+            />
+          </Flex>
         </Content>
       </GradientContainer>
       <TwoColumnContent>
@@ -373,6 +409,10 @@ const WalletsPage = ({
           </SubtitleTwo>
           <div>
             <ChecklistItem
+              border={0}
+              display="flex"
+              alignItems="flex-start"
+              marginBottom={4}
               key="0"
               emoji=":white_check_mark:"
               title={translateMessageId(
@@ -385,6 +425,10 @@ const WalletsPage = ({
               )}
             />
             <ChecklistItem
+              border={0}
+              display="flex"
+              alignItems="flex-start"
+              marginBottom={4}
               key="1"
               emoji=":white_check_mark:"
               title={translateMessageId("page-wallets-seed-phrase", intl)}
@@ -396,16 +440,20 @@ const WalletsPage = ({
               <p>
                 <Translation id="page-wallets-seed-phrase-example" />
               </p>
-              <CodeBox>
-                <Code>
+              <Box bg="black" p="2" mb="4" borderRadius="base">
+                <Box fontFamily="monospace" color="white" mb="0">
                   <Translation id="page-wallets-seed-phrase-snippet" />
-                </Code>
-              </CodeBox>
+                </Box>
+              </Box>
               <p>
                 <Translation id="page-wallets-seed-phrase-write-down" />
               </p>
             </ChecklistItem>
             <ChecklistItem
+              border={0}
+              display="flex"
+              alignItems="flex-start"
+              marginBottom={4}
               key="2"
               emoji=":white_check_mark:"
               title={translateMessageId("page-wallets-bookmarking", intl)}
@@ -415,6 +463,10 @@ const WalletsPage = ({
               )}
             />
             <ChecklistItem
+              border={0}
+              display="flex"
+              alignItems="flex-start"
+              marginBottom={4}
               key="3"
               emoji=":white_check_mark:"
               title={translateMessageId("page-wallets-triple-check", intl)}
@@ -440,8 +492,10 @@ const WalletsPage = ({
         <Heading m="0">
           <Translation id="page-wallets-explore" />
         </Heading>
-        <CalloutCardContainer>
+        <CalloutCardContainer marginTop={16}>
           <StyledCallout
+            flex="1 1 424px"
+            minH="full"
             image={getImage(data.eth)}
             titleKey="page-wallets-get-some"
             alt={translateMessageId("page-wallets-get-some-alt", intl)}
@@ -454,6 +508,8 @@ const WalletsPage = ({
             </div>
           </StyledCallout>
           <StyledCallout
+            flex="1 1 424px"
+            minH="full"
             image={getImage(data.dapps)}
             titleKey="page-wallets-try-dapps"
             alt={translateMessageId("page-wallets-try-dapps-alt", intl)}
