@@ -10,11 +10,11 @@ There are, however, core components of Ethereum that help provide a mental model
 
 ## Level 1: Ethereum Virtual Machine {#ethereum-virtual-machine}
 
-The [Ethereum Virtual Machine (EVM)](/developers/docs/evm/) is the runtime environment for smart contracts in Ethereum. All smart contracts and state changes on the Ethereum blockchain are executed by [transactions](/developers/docs/transactions/). The EVM handles all of the transaction processing on the Ethereum network.
+The [Ethereum Virtual Machine (EVM)](/developers/docs/evm/) is the runtime environment for smart contracts on Ethereum. All smart contracts and state changes on the Ethereum blockchain are executed by [transactions](/developers/docs/transactions/). The EVM handles all of the transaction processing on the Ethereum network.
 
-As with any virtual machine, the EVM creates a level of abstraction between the executing code and the executing machine (an Ethereum node). Currently the EVM is running on thousands of nodes distributed across the world.
+As with any virtual machine, the EVM creates a level of abstraction between the executing code and the executing machine (an Ethereum node). Currently, the EVM is running on thousands of nodes distributed across the world.
 
-Under the hood, the EVM uses a set of opcode instructions to execute specific tasks. These (140 unique) opcodes allow the EVM to be Turing-complete, which means the EVM is able to compute just about anything, given enough resources.
+Under the hood, the EVM uses a set of opcode instructions to execute specific tasks. These (140 unique) opcodes allow the EVM to be [Turing-complete](https://en.wikipedia.org/wiki/Turing_completeness), which means the EVM is able to compute just about anything, given enough resources.
 
 As a dapp developer, you don't need to know much about the EVM other than it exists and that it reliably powers all applications on Ethereum without downtime.
 
@@ -22,17 +22,20 @@ As a dapp developer, you don't need to know much about the EVM other than it exi
 
 [Smart contracts](/developers/docs/smart-contracts/) are the executable programs that run on the Ethereum blockchain.
 
-Smart contracts are written using specific [programming languages](/developers/docs/smart-contracts/languages/) that compile to EVM bytecode (low-level machine instructions called opcodes).
+Smart contracts are written using specific [programming languages](/developers/docs/smart-contracts/languages/) that compile to EVM bytecode (low-level machine instructions called opcodes). The most commonly used language is [Solidity](/developers/docs/smart-contracts/languages/#solidity).
 
 Not only do smart contracts serve as open source libraries, they are essentially open API services that are always running and can't be taken down. Smart contracts provide public functions which users and applications ([dapps](/developers/docs/dapps/)) may interact with, without needing permission. Any application may integrate with deployed smart contracts to compose functionality, such as adding [data feeds](/developers/docs/oracles/) or to support token swaps. Additionally, anyone can deploy new smart contracts to Ethereum in order to add custom functionality to meet their application's needs.
 
 As a dapp developer, you'll need to write smart contracts only if you want to add custom functionality on the Ethereum blockchain. You may find you can achieve most or all of your project's needs by merely integrating with existing smart contracts, for instance if you want to support payments in stablecoins or enable decentralized exchange of tokens.
 
+Note that simply calling a `view` or `pure` function of a smart contract does not require a transaction because the state of Ethereum remains unchanged and thus no gas fee has be be paid.
+
 ## Level 3: Ethereum nodes {#ethereum-nodes}
 
 In order for an application to interact with the Ethereum blockchain, it must connect to an [Ethereum node](/developers/docs/nodes-and-clients/). Connecting to a node allows you to read blockchain data and/or send transactions to the network.
 
-Ethereum nodes are computers running software - an Ethereum client. A client is an implementation of Ethereum that verifies all transactions in each block, keeping the network secure and the data accurate. **Ethereum nodes are the Ethereum blockchain**. They collectively store the state of the Ethereum blockchain and reach consensus on transactions to mutate the blockchain state.
+Ethereum nodes are computers running software - an Ethereum client. A client is an implementation of Ethereum that verifies all transactions in each block, keeping the network secure and the data accurate. **Ethereum nodes are the Ethereum blockchain**. They collectively store the state of the Ethereum blockchain and reach consensus on transactions to mutate the blockchain state. Keep it mind that Ethereum clients are split into two groups: execution clients and consensus clients.
+This becomes important when talking about a crucial subset of nodes called [validators](/developers/docs/consensus-mechanisms/pos/#validators) as they require one of each client type to function properly and secure the Ethereum network.
 
 By connecting your application to an Ethereum node (via the [JSON-RPC API](/developers/docs/apis/json-rpc/)), your application is able to read data from the blockchain (such as user account balances) as well as broadcast new transactions to the network (such as transferring ETH between user accounts or executing functions of smart contracts).
 
