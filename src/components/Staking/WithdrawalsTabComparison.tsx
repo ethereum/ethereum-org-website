@@ -1,7 +1,6 @@
 import React from "react"
 import {
   Heading,
-  Link,
   ListItem,
   Tab,
   TabList,
@@ -13,6 +12,7 @@ import {
 } from "@chakra-ui/react"
 import WithdrawalCredentials from "./WithdrawalCredentials"
 import ButtonLink from "../ButtonLink"
+import Link from "../Link"
 
 interface IProps {}
 const WithdrawalsTabComparison: React.FC<IProps> = () => (
@@ -36,8 +36,7 @@ const WithdrawalsTabComparison: React.FC<IProps> = () => (
             initial deposit, and will need to update their withdrawal
             credentials. The{" "}
             <Link href="https://zhejiang.launchpad.ethereum.org/withdrawals">
-              Zhejiang Testnet Launchpad{" "}
-              {/* TODO: Update once Withdrawals content merged to Goerli/Mainnet branches */}
+              Zhejiang Testnet Launchpad
             </Link>{" "}
             has instructions on when and how to do this
           </ListItem>

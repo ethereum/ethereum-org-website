@@ -40,15 +40,15 @@ const ShanghaiCapella: FC<IProps> = (props) => {
               staking. Users will be free to:
             </Text>
             <UnorderedList mb={0}>
-              <ListItem>stake their ETH</ListItem>
+              <ListItem>Stake their ETH</ListItem>
               <ListItem>
-                earn ETH rewards that will be distributed automatically
+                Earn ETH rewards that will be distributed automatically
               </ListItem>
               <ListItem>
-                un-stake their ETH to regain full access to their entire balance
+                Un-stake their ETH to regain full access to their entire balance
               </ListItem>
               <ListItem>
-                and of course, re-stake to sign back up and start earning more
+                And of course, re-stake to sign back up and start earning more
                 rewards
               </ListItem>
             </UnorderedList>
