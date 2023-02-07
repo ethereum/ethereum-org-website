@@ -249,11 +249,11 @@ Erigon که قبلاً به عنوان Erigon شناخته می‌شد، یک ف
 
 | کلاینت                                                      | زبان       | سیستم‌عامل              | شبکه‌ها                                  |
 | ----------------------------------------------------------- | ---------- | ----------------------- | ---------------------------------------- |
-| [Teku](https://pegasys.tech/teku)                           | جاوا       | لینوکس، ویندوز، مک‌اواس | زنجیره‌ی بیکن، Prater                    |
-| [Nimbus](https://nimbus.team/)                              | Nim        | لینوکس، ویندوز، مک‌اواس | زنجیره‌ی بیکن، Prater                    |
-| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | لینوکس، ویندوز، مک‌اواس | زنجیره‌ی بیکن، Prater،‏ Pyrmont          |
-| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | لینوکس، ویندوز، مک‌اواس | زنجیره‌ی بیکن، Prater                    |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | لینوکس، ویندوز، مک‌اواس | زنجیره‌ی بیکن، Gnosis،‏ Prater،‏ Pyrmont |
+| [Teku](https://pegasys.tech/teku)                           | جاوا       | لینوکس، ویندوز، مک‌اواس | زنجیره‌ی بیکن، Goerli                    |
+| [Nimbus](https://nimbus.team/)                              | Nim        | لینوکس، ویندوز، مک‌اواس | زنجیره‌ی بیکن، Goerli                    |
+| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | لینوکس، ویندوز، مک‌اواس | زنجیره‌ی بیکن، Goerli،‏ Pyrmont          |
+| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | لینوکس، ویندوز، مک‌اواس | زنجیره‌ی بیکن، Goerli                    |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | لینوکس، ویندوز، مک‌اواس | زنجیره‌ی بیکن، Gnosis،‏ Goerli،‏ Pyrmont |
 
 ## سخت‌افزار {#hardware}
 

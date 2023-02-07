@@ -134,7 +134,7 @@ Sistemul de operare Ubuntu va porni în mai puțin de un minut, dar **va trebui 
 În funcție de imaginea folosită, veţi rula:
 
 - Clientul de execuție: Geth ca şi client implicit de sincronizare a blockchain-ului
-- Clientul de consens: Prysm ca şi client implicit de sincronizare a lanțului Beacon (testnetul Prater)
+- Clientul de consens: Prysm ca şi client implicit de sincronizare a lanțului Beacon (testnetul Goerli)
 
 ### 5. Logare {#5-log-in}
 
@@ -163,7 +163,7 @@ sudo tail -f /var/log/syslog
 
 Acum trebuie să așteptaţi sincronizarea blockchain-ului. În cazul nivelului de execuție, aceasta va dura câteva zile, în funcție de diferiți factori, dar puteţi anticipa până la circa 5-7 zile.
 
-Dacă rulați nivelul de consens testnet Prater, puteţi anticipa o durată de 1-2 zile de sincronizare a lanțului Beacon. Amintiţi-vă că mai târziu va trebui să configuraţi validatorul pentru a începe procesul de mizare. [Cum se rulează validatorul nivelului de consens](/developers/tutorials/run-node-raspberry-pi/#validator)
+Dacă rulați nivelul de consens testnet Goerli, puteţi anticipa o durată de 1-2 zile de sincronizare a lanțului Beacon. Amintiţi-vă că mai târziu va trebui să configuraţi validatorul pentru a începe procesul de mizare. [Cum se rulează validatorul nivelului de consens](/developers/tutorials/run-node-raspberry-pi/#validator)
 
 ## Monitorizarea tablourilor de bord {#monitoring-dashboards}
 
@@ -235,7 +235,7 @@ Ambele au nevoie să mai fie testate, așa că nu ezitaţi să vă jucaţi cu el
 
 ## Cum se execută validatorul de consens (mizarea) {#validator}
 
-Odată ce lanțul Beacon testnet Prater este sincronizat, puteți să rulați un validator pe același dispozitiv. Va trebui să urmaţi [acești pași de participare](https://prylabs.net/participate).
+Odată ce lanțul Beacon testnet Goerli este sincronizat, puteți să rulați un validator pe același dispozitiv. Va trebui să urmaţi [acești pași de participare](https://prylabs.net/participate).
 
 Prima dată trebuie să creaţi manual un cont rulând „validatorul” binar și să setaţi o parolă. După ce aţi finalizat acest pas, puteți adăuga parola în fișierul `/etc/ehereum/prysm-validator.conf` și poți porni validatorul ca serviciu systemd.
 
