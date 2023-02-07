@@ -62,7 +62,7 @@ Verkle tree testnets are already up and running, but there are still substantial
 
 ## Further Reading {#further-reading}
 
-- [Watch Dankrad feist explain Verkle trees on PEEPanEIP](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
+- [Watch Dankrad Feist explain Verkle trees on PEEPanEIP](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
 - [Watch Guillame Ballet explain verkle trees at ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - [Watch "How Verkle trees make Ethereum lean and mean" by Guillame Ballet at Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Watch Piper Merriam on stateless clients from ETHDenver 2020](https://www.youtube.com/watch?v=0yiZJNciIJ4)

@@ -22,28 +22,28 @@ Ethereum is a powerful platform for global coordination, but it is not finished!
 The Ethereum roadmap outlines the specific improvements that will be made to protocol in the future. Overall, the roadmap will bring the following benefits to Ethereum users:
 
 <CardGrid>
-  <Card title="Faster, cheaper transactions" emoji="🐟">
+  <Card title="Faster, cheaper transactions">
 
-    Today's rollups are still in their "training wheels" phase where critical components are run by centralized operators. Decentralizing the rollup infrastructure is a critical part of scaling Ethereum without compromising on Ethereum's core ethos of decentralization. At the same time, it is too expensive for rollups to post their data to Ethereum and this limits how cheaply users can transact. Adding data-blobs to blocks and sharding data across nodes will solve this problem, leading to near-instant, <$0.001 transactions for users.
+    Today's scaling solutions, known as rollups, are too centralized, meaning users have to trust small groups of operators to behave honestly. Also, the way rollups send data to Ethereum is too expensive, limiting how cheap transactions can be for end users. The roadmap includes fixes for both of these problems.
 
     [Read how Ethereum will scale](/roadmap/faster-transactions/)
 
   </Card>
-  <Card title="Better user experience" emoji=":stopwatch:">
+  <Card title="Improved user experience">
 
-    Extremely lightweight nodes and more intuitive ways to manage accounts will make interacting with Ethereum in a permissionless, censorship-resistant way as straightforward as using any of today's familiar web2 apps. Changes to the way users use accounts will also bring simpler and safer access to Ethereum.
+    Using Ethereum will soon be as intuitive as the rest of the web. Ethereum nodes will run on mobile phones, giving every user trustless access to their data and assets. Changes to the way users use accounts will also make using Ethereum simpler and safer.
 
     [Read how the user experience will improve](/roadmap/user-experience/)
 
   </Card>
-  <Card title="More security" emoji=":droplet:">
+  <Card title="More security">
 
     Ethereum is the most secure and decentralized smart-contract platform in existence. However, there are still improvements that can be made so that Ethereum stays resilient to any level of attack far into the future.
 
     [Read how Ethereum will become even more secure](./more-secure-ethereum.md)
 
   </Card>
-    <Card title="Future proofing" emoji=":droplet:">
+    <Card title="Future proofing">
 
     Today's Ethereum researchers and developers are building a protocol for future generations. This means anticipating problems that could arise in decades to centuries and solving them now, such as quantum computers that break current crypotography.
 
@@ -52,16 +52,18 @@ The Ethereum roadmap outlines the specific improvements that will be made to pro
   </Card>
 </CardGrid>
 
-### Why does Ethereum need a roadmap? {#why-does-ethereum-need-a-roadmap}
+### Why Ethereum needs a roadmap {#why-ethereum-needs-a-roadmap}
 
 Ethereum is a network that undergoes periodic upgrades that enhance its scalability, security or sustainability. One of the core strengths of Ethereum is that it is not fixed forever in its current form - as new ideas arise from research and development they can be implemented to make sure Ethereum is ever-improving. This gives Ethereum the flexibility to tackle emerging challenges and keep up with the most advanced technological breakthroughs in cryptography, computing and cryptoeconomics.
 
 ### Who decides the roadmap? {#who-decides-the-roadmap}
 
-The roadmap is mostly the result of years of work by researchers and developers - because the protocol is very technical - but any motivated person can participate. Ideas usually start off as discussions on a forum such as [ethresear.ch](ethresear.ch), [Ethereum magicians](https://ethereum-magicians.org/) or the Eth R&D discord server. They may be responses to new vulnerabilities that are discovered, suggestions from organizations working in the application layer (such as dapps and exchanges) or from known frictions for end users (such as costs or transaction speeds). When these ideas mature, they can be proposed as **Ethereum Improvement Proposals (EIPs)**. EIPS undergo intense investigation and simulation before being scheduled for client teams to implement. Then, they are prototyped and tested extensively before eventually being scheduled for release. This is all done in public so that anyone from the community can weigh in at any time.
+The roadmap is mostly the result of years of work by researchers and developers - because the protocol is very technical - but any motivated person can participate. Ideas usually start off as discussions on a forum such as [ethresear.ch](https://github.com/ethereum/ethereum-org-website/blob/1c5502a0abaa746512323bbce0fbf1093387a724/src/content/roadmap/ethresear.ch), [Ethereum magicians](https://www.figma.com/exit?url=https%3A%2F%2Fethereum-magicians.org%2F) or the Eth R&D discord server. They may be responses to new vulnerabilities that are discovered, suggestions from organizations working in the application layer (such as dapps and exchanges) or from known frictions for end users (such as costs or transaction speeds).
+
+When these ideas mature, they can be proposed as [Ethereum Improvement Proposals](https://eips.ethereum.org/). Client developers then create prototypes that get investigated intensely and simulated on private and then public testnets before being scheduled for releasing on Ethereum Mainnet. There are nine independent Ethereum client teams (four execution clients and five consensus clients) that all do this independently in different languages. This is all done in public so that anyone from the community can weigh in at any time.
 
 <ExpandableCard title="What is ETH2?">
-The term 'Eth2' was commonly used before Ethereum switched to proof-of-stake but it was phased out in favor of more precise terminology. It was originally used to differentiate the Ethereum network before the switch to proof-of-stake and the network after, or sometimes to refer to the different Ethereum clients (execution clients were sometimes referred to as ETH1 clients and consensus clients were sometimes referred to as ETH2 clients).
+The term 'Eth2' was commonly used to describe the future of Ethereum before the switch to proof-of-stake but it was phased out in favor of more precise terminology. It was originally used to differentiate the Ethereum network before the switch to proof-of-stake and the network after, or sometimes to refer to the different Ethereum clients (execution clients were sometimes referred to as ETH1 clients and consensus clients were sometimes referred to as ETH2 clients).
 
 Some staking operators have also represented ETH staked on the Beacon Chain with the ‘ETH2’ ticker. This creates potential confusion, given that users of these services are not actually receiving an ‘ETH2’ token. No ‘ETH2’ token exists; it simply represents their share in that specific providers’ stake.
 </ExpandableCard>
