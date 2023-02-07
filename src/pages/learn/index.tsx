@@ -6,6 +6,7 @@ import {
   Flex,
   Grid,
   Heading,
+  HeadingProps,
   ListItem,
   Text,
   UnorderedList,
@@ -95,6 +96,22 @@ const CardGrid: React.FC<{ children: ReactNode }> = ({ children }) => {
     >
       {children}
     </Grid>
+  )
+}
+
+const H2: React.FC<HeadingProps> = ({ children, ...props }) => {
+  return (
+    <Heading fontSize={{ base: "2xl", md: "2rem" }} {...props}>
+      {children}
+    </Heading>
+  )
+}
+
+const H3: React.FC<HeadingProps> = ({ children, ...props }) => {
+  return (
+    <Heading fontSize={{ base: "xl", md: "2xl" }} {...props}>
+      {children}
+    </Heading>
   )
 }
 
@@ -213,9 +230,9 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           }}
         >
           <Section>
-            <Heading mt={{ lg: 0 }} id={tocItems[0].id}>
+            <H2 mt={{ lg: 0 }} id={tocItems[0].id}>
               {tocItems[0].title}
-            </Heading>
+            </H2>
             <Text>
               <Translation id="what-is-crypto-1" />{" "}
               <Link to="/what-is-ethereum/">
@@ -311,7 +328,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           </Section>
 
           <Section>
-            <Heading id={tocItems[1].id}>{tocItems[1].title}</Heading>
+            <H2 id={tocItems[1].id}>{tocItems[1].title}</H2>
             <Text>
               <Translation id="how-do-i-use-ethereum-1" />
             </Text>
@@ -386,9 +403,9 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               direction={{ base: "column", lg: "row" }}
             >
               <Box p={12}>
-                <Heading as="h3" mt={0}>
+                <H3 mt={0}>
                   <Translation id="things-to-consider-banner-title" />
-                </Heading>
+                </H3>
                 <UnorderedList mb={0}>
                   <ListItem>
                     <Translation id="things-to-consider-banner-1" />
@@ -427,7 +444,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           </Section>
 
           <Section>
-            <Heading id={tocItems[2].id}>{tocItems[2].title}</Heading>
+            <H2 id={tocItems[2].id}>{tocItems[2].title}</H2>
             <Text>
               <Translation id="what-is-ethereum-used-for-1" />
             </Text>
@@ -573,7 +590,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           </Section>
 
           <Section>
-            <Heading id={tocItems[3].id}>{tocItems[3].title}</Heading>
+            <H2 id={tocItems[3].id}>{tocItems[3].title}</H2>
             <Text>
               <Translation id="strengthening-the-ethereum-network-description" />
             </Text>
@@ -617,7 +634,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           </Section>
 
           <Section>
-            <Heading id={tocItems[4].id}>{tocItems[4].title}</Heading>
+            <H2 id={tocItems[4].id}>{tocItems[4].title}</H2>
             <Text>
               <Translation id="learn-about-ethereum-protocol-description" />
             </Text>
@@ -707,7 +724,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           </Section>
 
           <Section>
-            <Heading id={tocItems[5].id}>{tocItems[5].title}</Heading>
+            <H2 id={tocItems[5].id}>{tocItems[5].title}</H2>
             <Text>
               <Translation id="ethereum-community-description" />
             </Text>
@@ -770,11 +787,11 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           </Section>
 
           <Section>
-            <Heading id={tocItems[6].id}>{tocItems[6].title}</Heading>
+            <H2 id={tocItems[6].id}>{tocItems[6].title}</H2>
             <Box>
-              <Heading as="h3">
+              <H3>
                 <Translation id="books-about-ethereum" />
-              </Heading>
+              </H3>
               <UnorderedList>
                 <ListItem>
                   <Link to="https://www.goodreads.com/book/show/57356067-the-cryptopians">
@@ -849,9 +866,9 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   </Text>
                 </ListItem>
               </UnorderedList>
-              <Heading as="h3">
+              <H3>
                 <Translation id="podcasts-about-ethereum" />
-              </Heading>
+              </H3>
               <UnorderedList>
                 <ListItem>
                   <Link to="http://podcast.banklesshq.com/">
