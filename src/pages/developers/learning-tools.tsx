@@ -231,7 +231,7 @@ const LearningToolsPage = ({
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
     },
-      {
+    {
       name: "Alchemy University",
       description: "page-learning-tools-alchemy-university-description",
       url: "https://university.alchemycom/",
@@ -373,7 +373,11 @@ export const query = graphql`
     platzi: file(relativePath: { eq: "dev-tools/platzi.png" }) {
       ...learningToolImage
     }
-
+    alchemyuniversity: file(
+      relativePath: { eq: "dev-tools/alchemyuniversity.png" }
+    ) {
+      ...learningToolImage
+    }
     learn: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
         gatsbyImageData(
