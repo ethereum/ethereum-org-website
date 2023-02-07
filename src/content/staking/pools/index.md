@@ -68,7 +68,7 @@ Currently, withdrawing funds from an Ethereum validator is not possible, which l
 
 The Shanghai network upgrade will introduce withdrawal functionality which is planned for Q1/Q2 2023. All staked ETH will remain locked until then.
 
-After this upgrade, the validator accounts that back staking pool will have the ability to exit and withdrawal ETH to their designated withdrawal address. This will enable the ability to redeem your portion of stake for the underlying ETH. Check with your provider to see how they support this functionality.
+After this upgrade, the validator accounts that back staking pools will have the ability to exit and withdraw ETH to their designated withdrawal address. This will enable the ability to redeem your portion of stake for the underlying ETH. Check with your provider to see how they support this functionality.
 
 Alternatively, pools that utilize an ERC-20 liquidity token allow users to trade this token in the open market, allowing you to sell your staking position, effectively "withdrawing" without actually removing ETH from the staking contract.
 
