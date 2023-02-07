@@ -16,14 +16,20 @@ interface Validator {
 
 interface IProps {}
 const WithdrawalCredentials: FC<IProps> = () => {
-  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const [isLoading, setIsLoading] = useState<{
+    mainnet: boolean
+    testnet: boolean
+  }>({ mainnet: false, testnet: false })
   const [hasError, setHasError] = useState<boolean>(false)
   const [inputValue, setInputValue] = useState<string>("")
   const [validator, setValidator] = useState<Validator | null>(null)
 
   const checkWithdrawalCredentials = async (isTestnet: boolean = false) => {
     setHasError(false)
-    setIsLoading(true)
+    setIsLoading((prev) => ({
+      ...prev,
+      [isTestnet ? "testnet" : "mainnet"]: true,
+    }))
     const endpoint = `https://${
       isTestnet ? "goerli." : ""
     }beaconcha.in/api/v1/validator/${inputValue}`
@@ -41,7 +47,10 @@ const WithdrawalCredentials: FC<IProps> = () => {
       console.error(error)
       setHasError(true)
     } finally {
-      setIsLoading(false)
+      setIsLoading((prev) => ({
+        ...prev,
+        [isTestnet ? "testnet" : "mainnet"]: false,
+      }))
     }
   }
 
@@ -58,7 +67,6 @@ const WithdrawalCredentials: FC<IProps> = () => {
     [longAddress]
   )
   const resultText = useMemo<string | JSX.Element>(() => {
-    if (isLoading) return <Spinner />
     if (hasError)
       return (
         <Flex bg="errorNeutral" p={4}>
@@ -135,6 +143,7 @@ const WithdrawalCredentials: FC<IProps> = () => {
           <Button
             onClick={() => checkWithdrawalCredentials()}
             disabled={!inputValue.length}
+            isLoading={isLoading.mainnet}
           >
             Verify on Mainnet
           </Button>
@@ -142,6 +151,7 @@ const WithdrawalCredentials: FC<IProps> = () => {
             onClick={() => checkWithdrawalCredentials(true)}
             disabled={!inputValue.length}
             variant="outline"
+            isLoading={isLoading.testnet}
           >
             Verify on Goerli
           </Button>
