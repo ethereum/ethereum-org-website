@@ -76,7 +76,7 @@ Validators have to stake ETH so that they have something to lose if they misbeha
 
 A single validator is pseudo-randomly chosen to propose a block in each slot using an algorithm called RANDAO that mixes a hash from the block proposer with a seed that gets updated every block. This value is used to select a specific validator from the total validator set. The validator selection is fixed four epochs in advance.
 
-[More on validator selection](/developers/docs/consensus-mechanisms/pos/block_proposal)
+[More on validator selection](/developers/docs/consensus-mechanisms/pos/block-proposal)
 
 ## What is stake grinding? {#what-is-stake-grinding}
 
