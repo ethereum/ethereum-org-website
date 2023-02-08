@@ -224,7 +224,7 @@ i. Those who wanted `park A` donated what they could afford without losing the p
 
 ii. Other donors who wanted `park B` were able to express the strength of their preferences for that public good by contributing more money to its development. Perhaps, unknown to most people, `park B` has more long-term benefits for the community than `park A`. In this scenario, quadratic voting/funding prevents widespread ignorance from canceling out the wisdom of informed citizens.
 
-#### Reducing negative externalities
+#### Reducing negative externalities {#reducing-negative-externalities}
 
 Under a regular free-market democratic system, everyone would be forced to pay equally for a public good—whether they wanted it or not. But, as demonstrated in the example, quadratic voting/funding ensures individual pay for a public if and only if they want it.
 
