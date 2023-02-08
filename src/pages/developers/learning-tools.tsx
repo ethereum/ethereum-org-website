@@ -113,6 +113,15 @@ const LearningToolsPage = ({
         background: "#0f1524",
         subjects: ["Solidity", "web3"],
       },
+      {
+        name: "ChainIDE",
+        description: "page-learning-tools-chainIDE-description",
+        url: "https://chainide.com/",
+        image: getImage(data.chainIDE)!,
+        alt: "page-learning-tools-chainIDE-logo-alt",
+        background: "#2C60A3",
+        subjects: ["Solidity", "web3"],
+      },
     ]
     const randomizedSandboxes = shuffle(sandboxes)
     setRandomizedSandboxes(randomizedSandboxes)
@@ -362,6 +371,9 @@ export const query = graphql`
       ...learningToolImage
     }
     ethdotbuild: file(relativePath: { eq: "dev-tools/eth-dot-build.png" }) {
+      ...learningToolImage
+    }
+    chainIDE: file(relativePath: { eq: "dev-tools/chainIDE.png" }) {
       ...learningToolImage
     }
     nftschool: file(relativePath: { eq: "dev-tools/nftschool.png" }) {
