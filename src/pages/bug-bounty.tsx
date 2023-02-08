@@ -157,6 +157,34 @@ const StyledButton = ({ children, ...props }) => {
   )
 }
 
+const ClientIntro = ({ children }) => (
+  <Text
+    textTransform={"uppercase"}
+    fontSize={"0.875rem"}
+    color="text300"
+    fontWeight={"600"}
+    marginTop={{ base: "3rem", lg: "0" }}
+  >
+    {children}
+  </Text>
+)
+
+const ClientRow = ({ children }) => (
+  <Box
+    display={"flex"}
+    alignItems={"center"}
+    flexDirection={{ base: "column", lg: "row" }}
+  >
+    {children}
+  </Box>
+)
+
+const Client = ({ children }) => (
+  <Box margin={"4rem"} marginTop={"1rem"} marginBottom={"3rem"}>
+    {children}
+  </Box>
+)
+
 const HeroCard = styled.div`
   display: flex;
   justify-content: space-between;
@@ -190,14 +218,6 @@ const Row = styled.div`
   }
 `
 
-const ClientRow = styled.div`
-  display: flex;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
-
 const StyledCardContainer = styled(CardContainer)`
   margin-top: 2rem;
   margin-bottom: 3rem;
@@ -213,22 +233,6 @@ const StyledCard = styled(Card)`
 const StyledGrayContainer = styled(GrayContainer)`
   margin-bottom: 3rem;
   padding-bottom: 2rem;
-`
-
-const Client = styled(GatsbyImage)`
-  margin: 4rem;
-  margin-top: 1rem;
-  margin-bottom: 3rem;
-`
-
-const ClientIntro = styled.p`
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  color: ${(props) => props.theme.colors.text300};
-  font-weight: 600;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 3rem;
-  }
 `
 
 type BountyHuntersArg = {
@@ -436,17 +440,35 @@ const BugBountiesPage = ({
         <Translation id="page-upgrades-bug-bounty-clients" />
       </ClientIntro>
       <ClientRow>
-        <Client image={getImage(data.besu)!} alt="" />
-        <Client image={getImage(data.erigon)!} alt="" />
-        <Client image={getImage(data.geth)!} alt="" />
-        <Client image={getImage(data.nethermind)!} alt="" />
+        <Client>
+          <GatsbyImage image={getImage(data.besu)!} alt=""></GatsbyImage>
+        </Client>
+        <Client>
+          <GatsbyImage image={getImage(data.erigon)!} alt=""></GatsbyImage>
+        </Client>
+        <Client>
+          <GatsbyImage image={getImage(data.geth)!} alt=""></GatsbyImage>
+        </Client>
+        <Client>
+          <GatsbyImage image={getImage(data.nethermind)!} alt=""></GatsbyImage>
+        </Client>
       </ClientRow>
       <ClientRow>
-        <Client image={lighthouseImage!} alt="" />
-        <Client image={getImage(data.lodestar)!} alt="" />
-        <Client image={getImage(data.nimbus)!} alt="" />
-        <Client image={getImage(data.prysm)!} alt="" />
-        <Client image={tekuImage!} alt="" />
+        <Client>
+          <GatsbyImage image={lighthouseImage!} alt=""></GatsbyImage>
+        </Client>
+        <Client>
+          <GatsbyImage image={getImage(data.lodestar)!} alt=""></GatsbyImage>
+        </Client>
+        <Client>
+          <GatsbyImage image={getImage(data.nimbus)!} alt=""></GatsbyImage>
+        </Client>
+        <Client>
+          <GatsbyImage image={getImage(data.prysm)!} alt=""></GatsbyImage>
+        </Client>
+        <Client>
+          <GatsbyImage image={tekuImage!} alt=""></GatsbyImage>
+        </Client>
       </ClientRow>
       <StyledGrayContainer id="rules">
         <Content>
