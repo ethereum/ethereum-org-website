@@ -152,7 +152,7 @@ Procesul de guvernanță în Ethereum sacrifică adesea viteza și eficiența î
 
 Deși dezvoltarea specificațiilor și implementărilor a fost întotdeauna complet deschisă, procesele formale utilizate pentru a propune actualizările descrise mai sus nu au fost folosite. Acest lucru a permis ca modificările să fie specificate și convenite mai rapid de către cercetători și promotori.
 
-Când Lanțul Beacon se va uni cu nivelul execuției în Ethereum, procesul de guvernanță pentru a propune modificări va fi armonizat. Acest proces de implementare a fuziunii este [deja în curs de desfășurare](https://github.com/ethereum/EIPs/pull/3675).
+Când Lanțul Beacon se va uni cu nivelul execuției în Ethereum, procesul de guvernanță pentru a propune modificări va fi armonizat. Acest proces de implementare a fuziunii este [deja în curs de desfășurare](https://eips.ethereum.org/EIPS/eip-3675).
 
 <ButtonLink to="/upgrades/merge/">
   Mai multe despre fuziune

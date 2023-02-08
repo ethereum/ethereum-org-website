@@ -30,15 +30,9 @@ A solo staker receives rewards directly from the protocol for keeping their vali
 Solo staking comes with more responsibility but provides you with maximum control over your funds and staking setup.
 
 <CardGrid>
-  <Card title="Earn fresh ETH" emoji="💸">
-    Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut.
-  </Card>
-  <Card title="Full control" emoji="🎛️">
-    Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices.
-  </Card>
-  <Card title="Network security" emoji="🔐">
-    Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol.
-  </Card>
+  <Card title="Earn fresh ETH" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
+  <Card title="Full control" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
+  <Card title="Network security" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
 ## Considerations before staking solo {#considerations-before-staking-solo}
@@ -59,7 +53,7 @@ As much as we wish that solo staking was accessible and risk free to everyone, t
     <p style={{marginTop: "1rem"}}><a href="/security">Ethereum security and scam prevention</a></p>
   </ExpandableCard>
   <ExpandableCard title="No withdrawing (for now)" eventCategory="SoloStaking" eventName="clicked no withdrawing">
-    Withdrawing staked ETH or rewards from a validator balance is not yet supported. Support for withdrawals are planned for the upcoming Shanghai upgrade. You should anticipate your ETH being locked for at least one-to-two years. After the Shanghai upgrade you will be able to freely withdraw portions or all of your stake if you wish.
+    Withdrawing staked ETH or rewards from a validator balance is not yet supported. Support for withdrawals is planned for the upcoming Shanghai upgrade. After this, users can opt-in to receive reward payments automatically, and can withdrawal their entire balance to receive their funds back.
   </ExpandableCard>
   <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
     Hardware occasionally fails, network connections error out, and client software occasionally needs upgrading. Node maintenance is inevitable and will occasionally require your attention. You'll want to be sure you stay aware of any anticipated network upgrades, or other critical client upgrades.
@@ -80,9 +74,13 @@ As much as we wish that solo staking was accessible and risk free to everyone, t
 
 <StakingHowSoloWorks />
 
-If ever desired, you can exit as a validator which eliminates the requirement to be online, and stops any further rewards. Be aware that until the planned Shanghai upgrade _withdrawing_ those funds will not be possible.
+While active you will earn ETH rewards, which will be periodically deposited into your withdrawal address.
 
-After Shanghai, users will be able to withdraw their rewards as well as their stake if they choose.
+If ever desired, you can exit as a validator which eliminates the requirement to be online, and stops any further rewards. Your remaining balance will then be withdrawn to the withdrawal address that you designate during setup.
+
+_Shanghai upgrade required to enable reward payments and full withdrawals of exited validators._
+
+[More on staking withdrawals](/staking/withdrawals/)
 
 ## Get started on the Staking Launchpad {#get-started-on-the-staking-launchpad}
 
@@ -122,7 +120,7 @@ Have a suggestion for a staking tool we missed? Check out our [product listing p
 
 <StakingGuides />
 
-## FAQ {#faq}
+## Frequently asked questions {#faq}
 
 These are a few of the most common questions about staking that are worth knowing about.
 
@@ -177,6 +175,18 @@ The more validator clients running on a single centralized cloud storage solutio
 Offline penalties are proportional to how many others are offline at the same time. Using a VPS greatly increases the risk that offline penalties will be more severe, and increases your risk of quadratic leaking or slashing in the event the outage is large enough. To minimize your own risk, and the risk to the network, users are strongly encouraged to obtain and operate their own hardware.
 
 <a href="https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/">More on rewards and penalties</a>
+</ExpandableCard>
+
+<ExpandableCard title="How do I unlock my rewards or get my ETH back?">
+At time of the Shanghai upgrade, reward payments and full withdrawals for exited validators will begin. Withdrawals of any kind from the Beacon Chain require withdrawal credentials to be set.
+
+New stakers set this at time of key generation and deposit. Existing stakers who did not already set this can upgrade their keys to support this functionality after the Shanghai upgrade.
+
+Once withdrawal credentials are set, reward payments (accumulated ETH over the initial 32) will be periodically distributed to the withdrawal address automatically.
+
+To unlock and receive your entire balance back you must also complete the process of exiting your validator.
+
+<ButtonLink to="/staking/withdrawals/">More on staking withdrawals</ButtonLink>
 </ExpandableCard>
 
 ## Further reading {#further-reading}

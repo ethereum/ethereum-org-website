@@ -132,13 +132,13 @@ The diamond upgrade pattern has some advantages over traditional proxy upgrade p
 
 1. Use secure access control/authorization mechanisms to prevent unauthorized smart contract upgrades, especially if using proxy patterns, strategy patterns, or data separation. An example is restricting access to the upgrade function, such that only the contract's owner can call it.
 
-2. Upgrading smart contracts is a complex activity and requires a high level of dilligence to prevent the introduction of vulnerabilities.
+2. Upgrading smart contracts is a complex activity and requires a high level of diligence to prevent the introduction of vulnerabilities.
 
 3. Reduce trust assumptions by decentralizing the process of implementing upgrades. Possible strategies include using a [multi-sig wallet contract](/developers/docs/smart-contracts/#multisig) to control upgrades, or requiring [members of a DAO](/dao/) to vote on approving the upgrade.
 
 4. Be aware of the costs involved in upgrading contracts. For instance, copying state (e.g., user balances) from an old contract to a new contract during contract migration may require more than one transaction, meaning more gas fees.
 
-5. Consider implementing **timelocks** to protect users. A timelock refers to a delay enforced on changes to a system. Timelocks can be combined with a multi-sig governance system to control upgrades: if a proposed action reaches the required approval threshhold, it doesn't execute until the predefined delay period elapses.
+5. Consider implementing **timelocks** to protect users. A timelock refers to a delay enforced on changes to a system. Timelocks can be combined with a multi-sig governance system to control upgrades: if a proposed action reaches the required approval threshold, it doesn't execute until the predefined delay period elapses.
 
 Timelocks give users some time to exit the system if they disagree with a proposed change (e.g., logic upgrade or new fee schemes). Without timelocks, users need to trust developers not to implement arbitrary changes in a smart contract without prior notice. The drawback here is that timelocks restrict the ability to quickly patch vulnerabilities.
 

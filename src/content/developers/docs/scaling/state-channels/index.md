@@ -13,9 +13,9 @@ You should have read and understood our pages on [Ethereum scaling](/developers/
 
 ## What are channels? {#what-are-channels}
 
-Public blockchains, such as Ethereum, face scalability challenges due to their distributed architecture: on-chain transactions must be executed by all nodes. Nodes have to be able to handle the volume of transactions in a block using modest hardware, imposing a limit on the transaction throughput to keep the network decentralized. Blockchain channels solve this problem by allowing users to interact off the main blockchain.
+Public blockchains, such as Ethereum, face scalability challenges due to their distributed architecture: on-chain transactions must be executed by all nodes. Nodes have to be able to handle the volume of transactions in a block using modest hardware, imposing a limit on the transaction throughput to keep the network decentralized. Blockchain channels solve this problem by allowing users to interact off-chain while still relying on the security of the main chain for final settlement.
 
-Channels are simple peer-to-peer protocols that allow two parties to make many transactions between themselves and then only post the final results to the blockchain. The channel uses cryptography to demonstrate that the summary data they generate is truly the result of a valid set of intermediate transactions. A ["multisig"](developers/docs/smart-contracts/#multisig) smart contract ensures the transactions are signed by the correct parties.
+Channels are simple peer-to-peer protocols that allow two parties to make many transactions between themselves and then only post the final results to the blockchain. The channel uses cryptography to demonstrate that the summary data they generate is truly the result of a valid set of intermediate transactions. A ["multisig"](/developers/docs/smart-contracts/#multisig) smart contract ensures the transactions are signed by the correct parties.
 
 With channels, state changes are executed and validated by interested parties, minimizing computation on Ethereum's execution layer. This decreases congestion on Ethereum and also increases transaction processing speeds for users.
 
@@ -27,17 +27,17 @@ Peer-to-peer channels are particularly useful for situations where some predefin
 
 ## Payment channels {#payment-channels}
 
-A payment channel is best described as a "two-way ledger" collectively maintained by two users. The ledger's initial balance is the sum of deposits locked into the on-chain contract during the channel opening phase.
+A payment channel is best described as a "two-way ledger" collectively maintained by two users. The ledger's initial balance is the sum of deposits locked into the on-chain contract during the channel opening phase. Payment channel transfers can be performed instantaneously and without the involvement of the actual blockchain itself, except for an initial one-time on-chain creation and an eventual closing of the channel.
 
 Updates to the ledger's balance (i.e., the payment channel's state) require the approval of all parties in the channel. A channel update, signed by all channel participants, is considered finalized, much like a transaction on Ethereum.
 
-Payment channels were among the earliest scaling solutions designed to minimize expensive on-chain activity in simple user interactions (e.g., ETH transfers, atomic swaps, micropayments). Channel participants can conduct an unlimited amount of instant, feeless transactions between each other as long as the net sum of their transfers does not exceed the deposited tokens.
+Payment channels were among the earliest scaling solutions designed to minimize expensive on-chain activity of simple user interactions (e.g. ETH transfers, atomic swaps, micropayments). Channel participants can conduct an unlimited amount of instant, feeless transactions between each other as long as the net sum of their transfers does not exceed the deposited tokens.
 
 ## State channels {#state-channels}
 
 Apart from supporting off-chain payments, payment channels have not proven useful for handling general state transition logic. State channels were created to solve this problem and make channels useful for scaling general-purpose computation.
 
-State channels still have a lot in common with payment channels. For example, users interact by exchanging cryptographically signed messages (transactions), which the other must also sign. If a proposed state update isn't signed by all participants, it is not valid.
+State channels still have a lot in common with payment channels. For example, users interact by exchanging cryptographically signed messages (transactions), which the other channel participants must also sign. If a proposed state update isn't signed by all participants, it is considered invalid.
 
 However, in addition to holding the user's balances, the channel also tracks the current state of the contract's storage (i.e., values of contract variables).
 
@@ -165,6 +165,8 @@ Channel-based payments have the following advantages:
 
 3. **Latency**: Off-chain transactions conducted between channel participants can be settled instantly, if both parties cooperate, reducing delays. In contrast, sending a transaction on Mainnet requires waiting for nodes to process the transaction, produce a new block with the transaction, and reach consensus. Users may also need to wait for more block confirmations before considering a transaction finalized.
 
+4. **Cost**: State channels are particularly useful in situations where a set of participants will exchange many state updates over a long period. The only costs incurred are the opening and closing of the state channel smart contract; every state change between opening and closing the channel will be cheaper than the last as the settlement cost is distributed accordingly.
+
 Implementing state channels on layer 2 solutions, such as [rollups](/developers/docs/scaling/#rollups), could make them even more attractive for payments. While channels offer cheap payments, the costs of setting up the on-chain contract on Mainnet during the opening phase can be get expensive—especially when gas fees spike. Ethereum-based rollups offer [lower transaction fees](https://l2fees.info/) and can reduce overhead for channel participants by bringing down setup fees.
 
 ### Microtransactions {#microtransactions}
@@ -251,14 +253,9 @@ Multiple projects provide implementations of state channels that you can integra
 
 **State channels**
 
-- [EthHub on state channels](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/)
 - [Making Sense of Ethereum’s Layer 2 Scaling Solutions: State Channels, Plasma, and Truebit](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _– Josh Stark, Feb 12 2018_
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _Nov 6, 2015 - Jeff Coleman_
 - [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
 - [Blockchain State Channels: A State of the Art](https://ieeexplore.ieee.org/document/9627997)
-
-**Payment channels**
-
-- [EthHub on payment channels](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/payment-channels/)
 
 _Know of a community resource that helped you? Edit this page and add it!_

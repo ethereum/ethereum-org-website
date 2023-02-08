@@ -72,7 +72,7 @@ Das Ethereum-Ökosystem hat es sich zur Aufgabe gemacht, das Allgemeinwohl und w
 
 ## Finanzfachleute und Buchhalter:innen <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
 
-- Ethereum beherbergt das Ökosystem „Decentralized Finance“ – ein Netzwerk aus Protokollen und Anwendungen, die ein alternatives Finanzsystem bieten. Finanzexperten legen wir einige DeFi-Apps ans Herz: [DeFi Pulse](https://defipulse.com/) oder [DeFiPrime](https://defiprime.com)
+- Ethereum beherbergt das Ökosystem „Decentralized Finance“ – ein Netzwerk aus Protokollen und Anwendungen, die ein alternatives Finanzsystem bieten. Finanzexperten legen wir einige DeFi-Apps ans Herz: [DeFi Llama](https://defillama.com/) oder [DeFiPrime](https://defiprime.com)
 - Fit in Buchhaltung? Ethereum-Vermögenswerte – ETH, Token, DeFi usw. – bringen viele neue Buchhaltungsprobleme mit sich. Sie könnten sich einige Projekte anzusehen, die darauf abzielen, den Nutzern von Kryptowährungen bei der Lösung ihrer Buchhaltungs- und Rechnungslegungsprobleme zu helfen, wie [Rotki](https://rotki.com/).
 
 ## Produktmanager <Emoji text=":fountain_pen:" size={1} /> {#product-managers}

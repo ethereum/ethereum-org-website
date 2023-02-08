@@ -306,8 +306,8 @@ DeFi je odprtokodno gibanje. DeFi protokoli in aplikacije so vam vse odprte za p
 
 ### DeFi podatki {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
+- [DeFi Llama](https://defillama.com/)
 
 ### DeFi članki {#defi-articles}
 

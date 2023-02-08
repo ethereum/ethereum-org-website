@@ -88,12 +88,37 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Dashboard
     - RPC, HTTPS and WSS endpoints
     - Direct support
+- [**Blast**](https://blastapi.io/)
+  - [Docs](https://docs.blastapi.io/)
+  - Features
+    - RPC and WSS support
+    - Multi-region node hosting
+    - Decentralized infrastructure
+    - Public API
+    - Dedicated Free Plan
+    - Multichain support (17+ blockchains)
+    - Archive Nodes
+    - 24/7 Discord Support
+    - 24/7 Monitoring and alerts
+    - An overall SLA of 99.9%
+    - Pay in crypto
 - [**BlockDaemon**](https://blockdaemon.com/)
   - [Docs](https://ubiquity.docs.blockdaemon.com/)
   - Benefits
     - Dashboard
     - Per node basis
     - Analytics
+- [**BlockPI**](https://blockpi.io/)
+  - [Docs](https://docs.blockpi.io/)
+  - Fetures
+    - Robust & distributed node structure
+    - Up to 40 HTTPS and WSS endpoints
+    - Free signup package and monthly package
+    - Trace method + Archive data support
+    - Packages up to 90 days validity
+    - Custom plan and pay as you go payment
+    - Pay in crypto
+    - Direct support & Technical support
 - [**Chainstack**](https://chainstack.com/)
   - [Docs](https://docs.chainstack.com/)
   - Features
@@ -180,6 +205,13 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Unique Ethereum SDK
     - Unique API endpoints
     - Direct, technical support
+- [**NodeReal MegaNode**](https://nodereal.io/)
+  - [Docs](https://docs.nodereal.io/nodereal/meganode/introduction)
+  - Features
+    - Reliable, fast and scalable RPC API services
+    - Enhanced API for web3 developers
+    - Multi-chain support
+    - Get started for free
 - [**NOWNodes**](https://nownodes.io/)
   - [Docs](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
   - Features
@@ -249,6 +281,20 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Dashboard
     - Pay-per-hour pricing
     - Direct support
+- [**Tenderly**](https://tenderly.co/web3-gateway)
+  - [Docs](https://docs.tenderly.co/web3-gateway/web3-gateway)
+  - Features
+    - Free tier including 25 million Tenderly Units per month
+    - Free access to historical data
+    - Up to 8x faster read-heavy workloads
+    - 100% consistent read access
+    - JSON RPC endpoints
+    - UI-based RPC request builder and request preview
+    - Tightly integrated with Tenderly’s development, debugging, and testing tools
+    - Transaction simulations
+    - Usage analytics and filtering
+    - Easy access key management
+    - Dedicated engineering support via chat, email, and Discord
 - [**Watchdata**](https://watchdata.io/)
   - [Docs](https://docs.watchdata.io/)
   - Features

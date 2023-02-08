@@ -6,7 +6,7 @@ lang: it
 
 Per interagire con la blockchain Ethereum (ad esempio leggere i dati della blockchain e/o inviare transazioni alla rete), un'applicazione software deve connettersi a un nodo Ethereum.
 
-Per questo scopo, ogni client di Ethereum implementa la specifica [JSON-RPC](/developers/docs/apis/json-rpc/), quindi esiste una serie uniforme di [endpoint](/developers/docs/apis/json-rpc/#json-rpc-methods) su cui possono basarsi le applicazioni.
+Per questo scopo, ogni client di Ethereum implementa la specifica [JSON-RPC](/developers/docs/apis/json-rpc/), quindi esiste una serie uniforme di [metodi](/developers/docs/apis/json-rpc/#json-rpc-methods) su cui possono basarsi le applicazioni.
 
 Se desideri utilizzare un linguaggio di programmazione specifico per connetterti a un nodo Ethereum, sviluppa una soluzione personalizzata, ma tieni presente che ci sono già molte librerie all'interno dell'ecosistema che possono facilitarti la vita. Con queste librerie, gli sviluppatori possono scrivere metodi a una riga intuitivi per inizializzare le richieste RPC JSON (under the hood) che interagiscono con Ethereum.
 
@@ -56,10 +56,11 @@ Queste librerie eliminano buona parte della complessità legata al dover interag
 
 - [ethercluster.com](https://www.ethercluster.com/)
 
-**Catainstack -** **_Nodi Ethereum condivisi e dedicati come servizio_**
+**Catainstack -** **_Nodi Ethereum elastici e dedicati come servizio_**
 
 - [chainstack.com](https://chainstack.com)
 - [Documentazione](https://docs.chainstack.com)
+- [Riferimento all'API di Ethereum](https://docs.chainstack.com/api/ethereum/ethereum-api-reference)
 
 **QuickNode -** **_Infrastruttura della Blockchain come servizio._**
 
@@ -123,4 +124,4 @@ _Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e ag
 ## Tutorial correlati {#related-tutorials}
 
 - [Set up Web3js to use the Ethereum blockchain in JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Istruzioni per impostare web3.js in un progetto._
-- [Calling a Smart Contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Usando il token Dai, impara a chiamare le funzioni dei contratti con JavaScript_
+- [Chiamare un contratto intelligente da JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _- Usando il token Dai, impara come chiamare le funzioni dei contratti usando JavaScript_

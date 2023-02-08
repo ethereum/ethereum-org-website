@@ -4,15 +4,15 @@ description: "Panoramica sulle transazioni Ethereum: come funzionano, struttura 
 lang: it
 ---
 
-Le transazioni sono istruzioni firmate crittograficamente da account. Un account avvia una transazione per aggiornare lo stato della rete Ethereum. La transazione più semplice è il trasferimento di ETH da un account ad un altro.
+Le transazioni sono istruzioni firmate crittograficamente dai conti. Un conto avvierà una transazione per aggiornare lo stato della rete di Ethereum. La transazione più semplice è il trasferimento di ETH da un conto all'altro.
 
 ## Prerequisiti {#prerequisites}
 
-Per comprendere meglio questa pagina, consigliamo di leggere innanzitutto la sezione [Account](/developers/docs/accounts/) e la nostra [introduzione ad Ethereum](/developers/docs/intro-to-ethereum/).
+Per aiutarti a comprendere meglio questa pagina, ti consigliamo di leggere, innanzitutto, sui [Conti](/developers/docs/accounts/) e la nostra [introduzione a Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Cos'è una transazione? {#whats-a-transaction}
 
-Per transazione Ethereum si intende un'azione iniziata da un account controllato dall'esterno (externally-owned), in altre parole gestito dall'uomo e non da un contratto. Per esempio, se Bob manda ad Alice 1 ETH, l'importo verrà addebitato sull'account di Bob e accreditato su quello di Alice. Questa azione che modifica lo stato avviene all'interno di una transazione.
+Una transazione di Ethereum si riferisce a un'azione avviata da un conto esterno, in altre parole, da un conto gestito da un umano, non da un contratto. Ad esempio, se Bob invia 1 ETH ad Alice, il conto di Bob sarà addebitato e quello di Alice sarà accreditato. Questa azione che modifica lo stato avviene all'interno di una transazione.
 
 ![Diagramma che mostra un cambiamento di stato causato da una transazione](./tx.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
@@ -22,16 +22,16 @@ Le transazioni richiedono una commissione e devono essere incluse in un blocco v
 
 Una transazione inviata contiene le seguenti informazioni:
 
-- `recipient` – L'indirizzo ricevente (se si tratta di un account di proprietà esterna, la transazione trasferirà valore. Se si tratta di un contratto, la transazione eseguirà il codice del contratto)
+- `recipient`: L'indirizzo ricevente (se è un conto esterno, la transazione trasferirà del valore. Se è il conto di un contratto, la transazione eseguirà il codice del contratto)
 - `signature` – Identificatore del mittente. Viene generata quando la chiave privata del mittente firma la transazione e conferma che il mittente ha autorizzato la transazione
-- `nonce` - Un contatore con incremento sequenziale, che indica il numero della transazione dall'account
+- `nonce` - Un contatore con incremento sequenziale, che indica il numero della transazione dal conto
 - `value` – Quantità di ETH da trasferire dal mittente al destinatario (in WEI, un taglio dell'ETH)
 - `data` – Campo opzionale per includere dati arbitrari
-- `gasLimit` – Importo massimo di unità di carburante che possono essere consumate dalla transazione. Le unità di carburante rappresentano fasi di calcolo
-- `maxPriorityFeePerGas` - La quantità massima di carburante da includere come mancia al validatore
-- `maxFeePerGas` - La quantità massima di carburante che si è disposti a pagare per la transazione (comprensiva di `baseFeePerGas` e `maxPriorityFeePerGas`)
+- `gasLimit`: l'importo massimo di unità di gas consumabili dalla transazione. Le unità di gas rappresentano le fasi di calcolo
+- `maxPriorityFeePerGas`: la quantità massima di gas da includere come mancia al validatore
+- `maxFeePerGas`: la quantità massima di gas che si è disposti a pagare per la transazione (comprensiva di `baseFeePerGas` e `maxPriorityFeePerGas`)
 
-Il carburante è un riferimento per il calcolo necessario perché un validatore elabori la transazione. Gli utenti devono pagare una commissione per questo calcolo. Il `gasLimit` e il `maxPriorityFeePerGas` determinano la commissione massima sulla transazione pagata al validatore. [Maggiori informazioni sul carburante](/developers/docs/gas/).
+Il gas è un riferimento al calcolo necessario perché un validatore elabori la transazione. Gli utenti devono pagare una commissione per questo calcolo. Il `gasLimit` e il `maxPriorityFeePerGas` determinano la commissione massima sulla transazione pagata al validatore. [Di più sul Gas](/developers/docs/gas/).
 
 L'oggetto della transazione sarà qualcosa del genere:
 
@@ -105,7 +105,7 @@ Con l'hash di firma, la transazione può provare crittograficamente che proviene
 
 ### Il campo di dati {#the-data-field}
 
-La grande maggioranza delle transazioni accede a un contratto da un conto controllato dall'esterno (externally-owned). Gran parte dei contratti è scritta in Solidity e interpreta il proprio campo dei dati secondo l'[interfaccia binaria dell'applicazione (Application Binary Interface – ABI)](/glossary/#abi/).
+La grande maggioranza delle transazioni accede a un contratto da un conto esterno. Gran parte dei contratti è scritta in Solidity e interpreta il proprio campo dei dati secondo l'[interfaccia binaria dell'applicazione (Application Binary Interface – ABI)](/glossary/#abi/).
 
 I primi quattro byte specificano quale funzione chiamare, usando l'hash del nome e degli argomenti della funzione. Talvolta si può identificare la funzione dal selettore, usando [questo database](https://www.4byte.directory/signatures/).
 
@@ -130,13 +130,13 @@ Su Ethereum esistono diversi tipi di transazioni:
 
 - Transazioni regolari: una transazione da un conto a un altro.
 - Transazioni di distribuzione del contratto: una transazione senza un indirizzo 'to', in cui il campo dei dati è usato per il codice del contratto.
-- Esecuzione di un contratto: una transazione che interagisce con uno smart contract distribuito. In questo caso, l'indirizzo 'a' è l'indirizzo dello smart contract.
+- Esecuzione di un contratto: una transazione che interagisce con un contratto intelligente distribuito. In questo caso, l'indirizzo 'a' è l'indirizzo del contratto intelligente.
 
-### Carburante {#on-gas}
+### Sul gas {#on-gas}
 
-Come accennato, le transazioni hanno un costo in [carburante](/developers/docs/gas/) per essere eseguite. Semplici transazioni di trasferimento richiedono 21000 unità di carburante.
+Come accennato, le transazioni hanno un costo di [gas](/developers/docs/gas/) per essere eseguite. Semplici transazioni di trasferimento richiedono 21.000 unità di Gas.
 
-Quindi per poter inviare 1 ETH ad Alice con una `baseFeePerGas` di 190 gwei e una `maxPriorityFeePerGas` di 10 gwei, Bob dovrà pagare la seguente commissione:
+Quindi, perché Bob possa inviare 1 ETH ad Alice a una `baseFeePerGas` di 190 gwei e una `maxPriorityFeePerGas` di 10 gwei, Bob dovrà pagare la seguente commissione:
 
 ```
 (190 + 10) * 21000 = 4,200,000 gwei
@@ -144,19 +144,19 @@ Quindi per poter inviare 1 ETH ad Alice con una `baseFeePerGas` di 190 gwei e un
 0.0042 ETH
 ```
 
-Sull'account di Bob verranno addebitati **-1,0042 ETH**
+Sul conto di Bob sarà addebitato **-1,0042 ETH** (1 ETH per Alice + 0,0042 ETH di commissioni del gas)
 
-Sull'account di Alice verranno accreditati **+1,0 ETH**
+Il conto di Alice sarà accreditato di **+1,0 ETH**
 
 La commissione base brucerà **-0,00399 ETH**
 
 Il validatore riceve la mancia di **oltre 0,000210 ETH**
 
-Il carburante è richiesto anche per ogni interazione con Smart Contract.
+Il gas è anche necessario per qualsiasi interazione del contratto intelligente.
 
-![Diagramma che mostra come viene rimborsato il carburante inutilizzato](./gas-tx.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramma che mostra come è rimborsato il gas inutilizzato](./gas-tx.png) _Diagramma adattato da [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-Il carburante non utilizzato viene rimborsato sull'account dell'utente.
+Il gas non utilizzato, viene rimborsato al conto dell'utente.
 
 ## Ciclo di vita delle transazioni {#transaction-lifecycle}
 
@@ -169,17 +169,17 @@ Una volta inviata una transazione, succede quanto segue:
 
 ## Dimostrazione visiva {#a-visual-demo}
 
-Austin ci illustra transazioni, carburante e mining.
+Guarda Austin mentre ti illustra transazioni, gas e mining.
 
 <YouTube id="er-0ihqFQB0" />
 
 ## Typed Transaction Envelope {#typed-transaction-envelope}
 
-In origine Ethereum aveva un solo formato per le transazioni. Ogni transazione conteneva nonce, prezzo del carburante, limite del carburante, indirizzo di destinazione, valore, dati, v, r e s. Questi campi sono codificati in RLP e somigliano a qualcosa del genere:
+In origine Ethereum aveva un solo formato per le transazioni. Ogni transazione conteneva un nonce, il prezzo del gas, il limite del gass, l'indirizzo di destinazione, il valore, i dati, v, r e s. Questi campi sono codificati in RLP e somigliano a qualcosa del genere:
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
-Ethereum si è evoluto per supportare diversi tipi di transazioni e consentire l'implementazione di nuove funzionalità, come gli elenchi d'accesso, [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md), senza interferire sui precedenti formati di transazione.
+Ethereum si è evoluto per supportare diversi tipi di transazioni e consentire l'implementazione di nuove funzionalità, come gli elenchi d'accesso, [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), senza interferire sui precedenti formati di transazione.
 
 [EIP-2718: Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718) definisce un tipo di transazione che rappresenta una busta (envelope) per i tipi di transazione futuri.
 
@@ -200,6 +200,6 @@ _Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e ag
 
 ## Argomenti correlati {#related-topics}
 
-- [Account](/developers/docs/accounts/)
+- [Conti](/developers/docs/accounts/)
 - [Macchina virtuale Ethereum (EVM)](/developers/docs/evm/)
-- [Carburante](/developers/docs/gas/)
+- [Gas](/developers/docs/gas/)
