@@ -1570,6 +1570,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/azpwnz"><img src="https://avatars.githubusercontent.com/u/6987007?v=4?s=100" width="100px;" alt="Andriy Zhuk"/><br /><sub><b>Andriy Zhuk</b></sub></a><br /><a href="#content-azpwnz" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://etherscan.io/address/gooser.eth"><img src="https://avatars.githubusercontent.com/u/121782105?v=4?s=100" width="100px;" alt="gooser.eth"/><br /><sub><b>gooser.eth</b></sub></a><br /><a href="#content-gooseri" title="Content">🖋</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/feibowei"><img src="https://avatars.githubusercontent.com/u/69777448?v=4?s=100" width="100px;" alt="feibowei"/><br /><sub><b>feibowei</b></sub></a><br /><a href="#content-feibowei" title="Content">🖋</a></td>
+    </tr>
   </tbody>
 </table>
 
