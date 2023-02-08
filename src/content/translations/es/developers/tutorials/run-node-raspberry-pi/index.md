@@ -134,7 +134,7 @@ El sistema operativo Ubuntu arrancará en menos de un minuto, pero **tendrá que
 Dependiendo de la imagen que use, se ejecutará:
 
 - Cliente de ejecución: Geth como cliente predeterminado de sincronización de la cadena de bloques
-- Cliente de consenso: Prysm como cliente predeterminado de sincronización de la cadena de baliza (red de prueba Prater)
+- Cliente de consenso: Prysm como cliente predeterminado de sincronización de la cadena de baliza (red de prueba Goerli)
 
 ### 5. Inicio de sesión {#5-log-in}
 
@@ -163,7 +163,7 @@ sudo tail -f /var/log/syslog
 
 Seguidamente tendrá que esperar a que la cadena de bloques se sincronice por completo. En el caso de la capa de ejecución, llevará varios días en función de factores concretos, pero puede esperar aproximadamente 5-7 días.
 
-Si está ejecutando la capa de consenso en la red de prueba Prater la sincronización con la cadena de la baliza puede llevar entre 1 y 2 días. Recuerde que necesitará configurar el validador más adelante para poder iniciar el proceso de apuesta. [Cómo ejecutar el validador de la capa de consenso](/developers/tutorials/run-node-raspberry-pi/#validator)
+Si está ejecutando la capa de consenso en la red de prueba Goerli la sincronización con la cadena de la baliza puede llevar entre 1 y 2 días. Recuerde que necesitará configurar el validador más adelante para poder iniciar el proceso de apuesta. [Cómo ejecutar el validador de la capa de consenso](/developers/tutorials/run-node-raspberry-pi/#validator)
 
 ## Paneles de control {#monitoring-dashboards}
 
@@ -235,7 +235,7 @@ Ambos necesitan más pruebas, así que experimente a sus anchas con ellos e info
 
 ## Cómo ejecutar el validador de consenso (apuestas) {#validator}
 
-Una vez que la cadena de baliza de la red de pruebas Prater está sincronizada, puede ejecutar un validador en el mismo dispositivo. Necesitará seguir [estos pasos de participación](https://prylabs.net/participate).
+Una vez que la cadena de baliza de la red de pruebas Goerli está sincronizada, puede ejecutar un validador en el mismo dispositivo. Necesitará seguir [estos pasos de participación](https://prylabs.net/participate).
 
 La primera vez, necesita crear manualmente una cuenta ejecutando el binario «validador» y configurando una contraseña. Una vez que haya completado este paso, puede agregar la contraseña a `/etc/ethereum/prysm-validator.conf` e iniciar el validador como un servicio systemd.
 

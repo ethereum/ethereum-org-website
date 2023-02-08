@@ -274,5 +274,13 @@
   {
     "fromPath": "/*/developers/docs/smart-contracts/upgrading-smart-contracts/",
     "toPath": "/:splat/developers/docs/smart-contracts/upgrading/"
+  },
+  {
+    "fromPath": "/staking/withdraws",
+    "toPath": "/en/staking/withdrawals/"
+  },
+  {
+    "fromPath": "/*/staking/withdraws",
+    "toPath": "/:splat/staking/withdrawals/"
   }
 ]

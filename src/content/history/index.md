@@ -23,6 +23,55 @@ Looking for future protocol upgrades? [Learn about upcoming upgrades to Ethereum
 
 <Divider />
 
+## 2023 {#2023}
+
+### Shanghai (_planned_) {#shanghai}
+
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Timestamp: TBD<br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Block number: TBD<br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: TBD<br />
+
+<!-- <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/{}/https://ethereum.org/">ethereum.org on waybackmachine</a> -->
+
+#### Summary {#shanghai-summary}
+
+The Shanghai upgrade brings staking withdrawals to the execution layer. In tandem with the Capella upgrade, this enables blocks to accept withdrawal operations, which allow stakers to withdraw their ETH from the Beacon Chain to the execution layer.
+
+<ExpandableCard title="Shanghai EIPs" contentPreview="Official improvements included in this upgrade.">
+
+- [EIP-3651](https://eips.ethereum.org/EIPS/eip-3651) – _Starts the `COINBASE` address warm_
+- [EIP-3855](https://eips.ethereum.org/EIPS/eip-3855) – _New `PUSH0` instruction_
+- [EIP-3860](https://eips.ethereum.org/EIPS/eip-3860) – _Limit and meter initcode_
+- [EIP-4895](https://eips.ethereum.org/EIPS/eip-4895) – _Beacon chain push withdrawals as operations_
+
+</ExpandableCard>
+
+- [Read the Shanghai upgrade specification](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
+
+---
+
+### Capella (_planned_) {#capella}
+
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Timestamp: TBD<br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Epoch number: TBD<br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: TBD<br />
+
+<!-- <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/{}/https://ethereum.org/en/">ethereum.org on waybackmachine</a> -->
+
+#### Summary {#capella-summary}
+
+The Capella upgrade is the third major upgrade to the consensus layer (Beacon Chain), which enables staking withdrawals. Capella is to occur simultaneous to the Shanghai upgrade occurring on the execution layer to enable withdrawal functionality in sync with one another.
+
+This consensus layer upgrade brings the ability for stakers who did not provide withdrawal credentials with their initial deposit to do so, thereby enabling withdrawals.
+
+The upgrade also provides automatic account sweeping functionality, which continuously processes validator accounts for any available rewards payments or full withdrawals.
+
+<!-- - [More on staking withdrawals](/staking/withdrawals/). -->
+
+- [Read the Capella upgrade specifications](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+
+<Divider />
+
 ## 2022 {#2022}
 
 ### Paris (The Merge) {#paris}
