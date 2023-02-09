@@ -414,5 +414,37 @@
     "localName": "繁體中文",
     "langDir": "ltr",
     "dateFormat": "YYYY-MM-DD"
+  },
+  {
+    "code": "af",
+    "hrefLang": "af",
+    "name": "af",
+    "localName": "العربية",
+    "langDir": "rtl",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
+    "code": "am",
+    "hrefLang": "am",
+    "name": "am",
+    "localName": "العربية",
+    "langDir": "rtl",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
+    "code": "arn",
+    "hrefLang": "arn",
+    "name": "arn",
+    "localName": "العربية",
+    "langDir": "rtl",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
+    "code": "as",
+    "hrefLang": "as",
+    "name": "as",
+    "localName": "العربية",
+    "langDir": "rtl",
+    "dateFormat": "MM/DD/YYYY"
   }
 ]
