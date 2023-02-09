@@ -33,7 +33,7 @@ published: 2020-12-01
 _注意：如果您有 Alchemy 帐户，则可以将`demo`替换成自己的 API 密钥。 [点击此处注册免费 Alchemy 帐户！](https://auth.alchemyapi.io/signup)_
 
 ```
-$ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
+wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 >  {"jsonrpc":  "2.0", "id": 0, "method":  "eth_gasPrice"}
 

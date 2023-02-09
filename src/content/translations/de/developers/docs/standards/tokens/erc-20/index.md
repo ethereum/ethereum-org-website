@@ -75,7 +75,7 @@ Sehen wir uns an, wie wichtig ein Standard ist, um uns die Überprüfung jedes E
 Stellen Sie zuerst sicher, dass Sie [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python-Bibliothek installiert haben:
 
 ```
-$ pip install web3
+pip install web3
 ```
 
 ```python
