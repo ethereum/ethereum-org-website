@@ -101,13 +101,13 @@ Londra yükseltmesinin ana faydalarından biri, işlem ücretlerini belirlerken 
 
 ## EIP-1559 {#eip-1559}
 
-[EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md)'un Londra Yükseltmesinde uygulanması, işlem ücreti mekanizmasını önceki gaz fiyatı ihalesinden daha karmaşık hâle getirdi ancak gaz ücretlerini daha öngörülebilir hâle getirme avantajına sahip; bu da daha verimli bir işlem ücreti piyasası sağlıyor. Kullanıcılar, gaz için piyasa fiyatından (`baseFeePerGas`) fazlasını ödemeyeceklerini bilerek, işlemin gerçekleşmesi için ne kadar ödemeye razı olduklarına karşılık gelen bir `maxFeePerGas` ile işlem gönderebilirler ve herhangi bir fazlalığı ve verdikleri bahşiş hariç geri alırlar.
+[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)'un Londra Yükseltmesinde uygulanması, işlem ücreti mekanizmasını önceki gaz fiyatı ihalesinden daha karmaşık hâle getirdi ancak gaz ücretlerini daha öngörülebilir hâle getirme avantajına sahip; bu da daha verimli bir işlem ücreti piyasası sağlıyor. Kullanıcılar, gaz için piyasa fiyatından (`baseFeePerGas`) fazlasını ödemeyeceklerini bilerek, işlemin gerçekleşmesi için ne kadar ödemeye razı olduklarına karşılık gelen bir `maxFeePerGas` ile işlem gönderebilirler ve herhangi bir fazlalığı ve verdikleri bahşiş hariç geri alırlar.
 
 Bu video, EIP-1559'u ve getirdiği faydaları açıklıyor:
 
 <YouTube id="MGemhK9t44Q" />
 
-İlgileniyorsanız, [EIP-1559 şartnamesini](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) tam olarak okuyabilirsiniz.
+İlgileniyorsanız, [EIP-1559 şartnamesini](https://eips.ethereum.org/EIPS/eip-1559) tam olarak okuyabilirsiniz.
 
 Bu [EIP-1559 Kaynakları](https://hackmd.io/@timbeiko/1559-resources) ile daha derine inmeye devam edin.
 

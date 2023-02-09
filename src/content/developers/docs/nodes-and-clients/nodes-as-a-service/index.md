@@ -108,6 +108,17 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Dashboard
     - Per node basis
     - Analytics
+- [**BlockPI**](https://blockpi.io/)
+  - [Docs](https://docs.blockpi.io/)
+  - Fetures
+    - Robust & distributed node structure
+    - Up to 40 HTTPS and WSS endpoints
+    - Free signup package and monthly package
+    - Trace method + Archive data support
+    - Packages up to 90 days validity
+    - Custom plan and pay as you go payment
+    - Pay in crypto
+    - Direct support & Technical support
 - [**Chainstack**](https://chainstack.com/)
   - [Docs](https://docs.chainstack.com/)
   - Features

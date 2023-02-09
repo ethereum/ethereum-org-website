@@ -113,6 +113,15 @@ const LearningToolsPage = ({
         background: "#0f1524",
         subjects: ["Solidity", "web3"],
       },
+      {
+        name: "ChainIDE",
+        description: "page-learning-tools-chainIDE-description",
+        url: "https://chainide.com/",
+        image: getImage(data.chainIDE)!,
+        alt: "page-learning-tools-chainIDE-logo-alt",
+        background: "#2C60A3",
+        subjects: ["Solidity", "web3"],
+      },
     ]
     const randomizedSandboxes = shuffle(sandboxes)
     setRandomizedSandboxes(randomizedSandboxes)
@@ -228,6 +237,15 @@ const LearningToolsPage = ({
       url: "https://speedrunethereum.com/",
       image: getImage(data.speedRunEthereum)!,
       alt: "page-learning-tools-speed-run-ethereum-logo-alt",
+      background: "#ffffff",
+      subjects: ["Solidity", "web3"],
+    },
+    {
+      name: "Alchemy University",
+      description: "page-learning-tools-alchemy-university-description",
+      url: "https://university.alchemycom/",
+      image: getImage(data.alchemyuniversity)!,
+      alt: "page-learning-tools-alchemy-university-logo-alt",
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
     },
@@ -355,6 +373,9 @@ export const query = graphql`
     ethdotbuild: file(relativePath: { eq: "dev-tools/eth-dot-build.png" }) {
       ...learningToolImage
     }
+    chainIDE: file(relativePath: { eq: "dev-tools/chainIDE.png" }) {
+      ...learningToolImage
+    }
     nftschool: file(relativePath: { eq: "dev-tools/nftschool.png" }) {
       ...learningToolImage
     }
@@ -364,7 +385,11 @@ export const query = graphql`
     platzi: file(relativePath: { eq: "dev-tools/platzi.png" }) {
       ...learningToolImage
     }
-
+    alchemyuniversity: file(
+      relativePath: { eq: "dev-tools/alchemyuniversity.png" }
+    ) {
+      ...learningToolImage
+    }
     learn: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
         gatsbyImageData(
