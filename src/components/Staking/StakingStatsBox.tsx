@@ -159,7 +159,6 @@ const StakingStatsBox: React.FC<IProps> = () => {
           data: { validatorscount },
         } = epochResponse
         const valueTotalValidators = formatInteger(validatorscount)
-        // Set state
         setTotalValidators(valueTotalValidators)
       } catch (error) {
         setTotalValidators(null)
