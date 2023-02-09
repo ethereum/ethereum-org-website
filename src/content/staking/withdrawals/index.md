@@ -23,7 +23,7 @@ The Shanghai/Capella upgrade enables **staking withdrawals** on Ethereum, allowi
 
 Reward payments are automatically processed for active validator accounts with a maxed out effective balance of 32 ETH.
 
-Any balance above 32 ETH earned through rewards does not actually contribute to principle, or increase the weight of this validator on the network, and is thus automatically withdrawn as a reward payment every few days. Aside from providing a withdrawal address one time, these rewards do not require any action from the validator operator. This is all initiated on the consensus layer, thus no gas (transaction fee) is required at any step.
+Any balance above 32 ETH earned through rewards does not actually contribute to principal, or increase the weight of this validator on the network, and is thus automatically withdrawn as a reward payment every few days. Aside from providing a withdrawal address one time, these rewards do not require any action from the validator operator. This is all initiated on the consensus layer, thus no gas (transaction fee) is required at any step.
 
 ### How did we get here? {#how-did-we-get-here}
 
