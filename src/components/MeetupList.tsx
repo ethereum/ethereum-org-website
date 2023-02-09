@@ -8,7 +8,7 @@ import {
   LinkBox,
   LinkOverlay,
   Text,
-  useColorMode,
+  useColorModeValue,
 } from "@chakra-ui/react"
 
 // Components
@@ -50,7 +50,11 @@ export interface IProps {}
 const MeetupList: React.FC<IProps> = () => {
   const [searchField, setSearchField] = useState<string>("")
   const filteredMeetups = filterMeetups(searchField)
-  const { colorMode } = useColorMode()
+  const listBoxShadow = useColorModeValue("tableBox.light", "tableBox.dark")
+  const listItemBoxShadow = useColorModeValue(
+    "tableItemBox.light",
+    "tableItemBox.dark"
+  )
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>): void =>
     setSearchField(event.target.value)
@@ -74,20 +78,14 @@ const MeetupList: React.FC<IProps> = () => {
         _focus={{ outline: "auto 1px" }}
         _placeholder={{ color: "text200" }}
       />
-      <Box
-        boxShadow={colorMode === "dark" ? "tableBox.dark" : "tableBox.light"}
-      >
+      <Box boxShadow={listBoxShadow}>
         {filteredMeetups.length ? (
           filteredMeetups.map((meetup, idx) => (
             <LinkBox
               key={idx}
               display="flex"
               justifyContent="space-between"
-              boxShadow={
-                colorMode === "dark"
-                  ? "tableItemBox.dark"
-                  : "tableItemBox.light"
-              }
+              boxShadow={listItemBoxShadow}
               mb={0.25}
               p={4}
               w="100%"
