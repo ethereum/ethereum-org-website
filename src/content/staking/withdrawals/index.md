@@ -143,7 +143,7 @@ As an alternative to changing the withdrawal address for a particular validator,
 <p>Once a validator has completed the exiting process, and assuming the account has withdrawal credentials, the remaining balance will <em>then</em> be withdrawn during the next validator sweep.</p>
 </ExpandableCard>
 
-<ExpandableCard title="How can I withdraw a custom amount?">
+<ExpandableCard title="Can I withdraw a custom amount?">
 <p>Withdrawals are designed to be pushed automatically, transferring any ETH that is not actively contributing to stake. This includes full balances for accounts </p>
 <p>It is not possible to manually request specific amounts of ETH to be withdrawn.</p>
 </ExpandableCard>
