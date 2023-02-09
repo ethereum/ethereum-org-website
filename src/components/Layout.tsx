@@ -154,13 +154,14 @@ const Layout: React.FC<IProps> = ({
                   <Flex flexDirection="column" width="100%">
                     <DismissableBanner storageKey="kzgCeremony">
                       <Text m={0} p={0}>
-                        Contribute to the{" "}
+                        Ethereum needs help summoning a shared secret to
+                        continue to scale. Make your contribution at the{" "}
                         {
                           <Link to="https://ceremony.ethereum.org/">
                             KZG ceremony
                           </Link>
-                        }{" "}
-                        and help scale the future of Ethereum
+                        }
+                        !
                       </Text>
                     </DismissableBanner>
 
