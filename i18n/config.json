@@ -446,5 +446,37 @@
     "localName": "العربية",
     "langDir": "rtl",
     "dateFormat": "MM/DD/YYYY"
+  },
+  {
+    "code": "ba",
+    "hrefLang": "ba",
+    "name": "ba",
+    "localName": "العربية",
+    "langDir": "rtl",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
+    "code": "be",
+    "hrefLang": "be",
+    "name": "be",
+    "localName": "العربية",
+    "langDir": "rtl",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
+    "code": "dsb",
+    "hrefLang": "dsb",
+    "name": "dsb",
+    "localName": "العربية",
+    "langDir": "rtl",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
+    "code": "dv",
+    "hrefLang": "dv",
+    "name": "dv",
+    "localName": "العربية",
+    "langDir": "rtl",
+    "dateFormat": "MM/DD/YYYY"
   }
 ]
