@@ -1,34 +1,34 @@
 ---
-title: Single slot finality (SSF)
+title: Single slot finality
 description: Explanation of single slot finality
 ---
 
-Today it takes about 15 minutes for an Ethereum block to finalize. This time is the result of optimizing a trade-off between decentralization, finality time and overhead for each node. However, new signature aggregation schemes will make validatign block smuch more efficient and allow the time-to-finality to decrease dramatically.
+Today it takes about 15 minutes for an Ethereum block to finalize. However, there are several improvements that can be made to the consensus mechanism that will make validating blocks much more efficient and allow the time-to-finality to decrease dramatically. Instead of waiting for fifteen minutes, blocks could be finalized in the same slot in which it is proposed. This is known as 'single slot finality' (SSF).
 
 ## Finality {#finality}
 
 In Ethereum's proof-of-stake based consensus mechanism, finality refers to the guarantee that a block cannot be altered or removed from the blockchain without burning at least 33% of the total staked ETH. This is 'crypto-economic' security because confidence comes from the extremely high cost associated with changing the order or content of the chain that would prevent any rational economic actor from trying it.
 
+## Why aim for quicker finality? {#why-aim-for-quicker-finality}
+
+The current time to finality has turned out to be too long. Most users do not want to wait 15 minutes for finality, and it is inconvenient for apps and exchanges that might want high transaction throughput to have to wait that long to be certain their transactions are permanent. Having a delay between a block's proposal and finalization also creates an opportunity for short reorgs that an attacker could use to censor certain blocks or extract MEV. The mechanism that deals with upgrading blocks in stages is also quite complex and has been patched several times to close security vulnerabilities, making it one of the parts of the Ethereum codebase where subtle bugs are more to arise. These issues could all be eliminated by reducing the time to finality to a single slot.
+
 ## The decentralization / time / overhead tradeoff {#the-decentralization-time-overhead-tradeoff}
 
-The finality guarantee is not an immediate property of a new block; it takes time for a new block to finalize. The reason for this is that at validators representing at least 2/3 of the total staked ETH on the network has to vote ("attest") to the block in order for it to be considered finalized. Each validating node on the network has to process attestations from other nodes in order to know that a block has, or has not, achieved that 2/3 threshold.
+The finality guarantee is not an immediate property of a new block; it takes time for a new block to finalize. The reason for this is that validators representing at least 2/3 of the total staked ETH on the network has to vote for the block ("attest") in order for it to be considered finalized. Each validating node on the network has to process attestations from other nodes in order to know that a block has, or has not, achieved that 2/3 threshold.
 
-The shorter the time allowed to reach finalization, the more computing power is required at each node because the attestation processing has to be done faster. Also, the more validating nodes exist on the network, the more attestations have to be processed for each block, also adding to the processing power required by each node. The more processing power required, the fewer people can participate because more expensive hardware is needed to run each validating node. Increasing the time between blocks lessens the computing power required at each node but also lengthens the time to finality, because attestation are coutned more slowly.
+The shorter the time allowed to reach finalization, the more computing power is required at each node because the attestation processing has to be done faster. Also, the more validating nodes exist on the network, the more attestations have to be processed for each block, also adding to the processing power required. The more processing power required, the fewer people can participate because more expensive hardware is needed to run each validating node. Increasing the time between blocks lessens the computing power required at each node but also lengthens the time to finality, because attestations are processed more slowly.
 
-Therefore, there is a trade-off between the overhead (computing power), decentralization (number of nodes that can participate in validating the chain) and time to finality. The ideal system is optimized for minimum computing power, maximum decentralization and minimum time to finality.
+Therefore, there is a trade-off between the overhead (computing power), decentralization (number of nodes that can participate in validating the chain) and time to finality. The ideal system balances minimum computing power, maximum decentralization and minimum time to finality.
 
-Ethereum's current consensus mechanism optimized these three parameters by:
+Ethereum's current consensus mechanism balanced these three parameters by:
 
 - **Setting the minimum stake to 32 ETH**. This sets an upper limit on the number of validators' attestations that have to be processed by individual nodes, and therefore an upper limit on computational requirements for each node.
 - **Setting the time to finality at ~15 minutes**. This gives sufficient time for validators run on normal home computers to safely process attestations for each block.
 
-With the current mechanism design, in order to reduce the time to finality, it is necessary to reduce the number of validators on the network or increase the hardware requirements for each node. However, there are improvements that can be made to the way attestations are processed that can allow more attestations to be counted without adding to the overhead at each node. The key to this is batching individual validator's attestations together more efficiently during the process known as 'signature aggregation'.
+With the current mechanism design, in order to reduce the time to finality, it is necessary to reduce the number of validators on the network or increase the hardware requirements for each node. However, there are improvements that can be made to the way attestations are processed that can allow more attestations to be counted without adding to the overhead at each node.
 
-## Why aim for quicker finality? {#why-aim-for-quicker-finality}
-
-The current time to finality has turned out to be too long. Most users do not want to wait 15 minutes for finality, and it is inconvenient for apps and exchanges that might want high transaction throughput to have to wait that long to be certain their transactions are permanent. Having a delay between a block's proposal and finalization also creates an opportunity for short reorgs that an attacker could use to censor certain blocks or extract MEV. The mechanism that deals with upgrading blocks in stages is also quite complex and has been patched several times to close security vulnerabilities, making it one of the more risky parts of the Ethereum codebase for subtle bugs to arise. These issues could all be eliminated by reducing the time to finality to a single slot.
-
-## Routes to single slot finality {#routes-to-single-slot-finality}
+## Routes to SSF {#routes-to-single-slot-finality}
 
 The current consensus mechanism combines together attestations from multiple validators, known as committees, to reduce the number of messages each validator has to process in order to validate a block. Every validator has an opportunity to attest in each epoch (32 slots) but in each slot, only a subset of validators, known as a 'committee' attest. They do so by dividing up into subnets in which a few validators are selected to be 'aggregators'. Those aggregators each combine all the signatures they see from other validators in their subnet into a single aggregate signature. The aggregator that includes the greatest number of individual contributions passes their aggregate signature to the block proposer, who includes it in the block along with the aggregate signature from the other committees.
 
@@ -44,7 +44,7 @@ However, verification is not the true bottleneck - it is signature aggregation t
 
 ## What is the role of the fork-choice rule in SSF? {#role-of-the-fork-choice-rule}
 
-Today's consensus mechanism relies on a tight coupling between the finality gadget (the algorithm that determiens whether 2/3 of validators have attested to a certain chain) and the fork choice rule (the algorithm that decides which chain is the correct one when there are multiple options). The fork choice algorithm only considers blocks _since_ the last finalized block. Under SSF there wouldn't be any blocks for the fork choice rulew to consider, because finality occurs in the same slot as the block is proposed. This measn that udner SSF _either_ the fork choice algorithm _or_ the finality gadget would be active at any time. The finality gadget would finalize blocks where 2/3 of validators were online and attesting honestly. If a block is not able to exceed the 2/3 threshold, the fork choice rule would kick in to determine which chain to follow. This also creates an opportunity to maintain the inactivity leak mechanism that recovers a chain where >1/3 validators go offline, albeit with some additional nuances.
+Today's consensus mechanism relies on a tight coupling between the finality gadget (the algorithm that determiens whether 2/3 of validators have attested to a certain chain) and the fork choice rule (the algorithm that decides which chain is the correct one when there are multiple options). The fork choice algorithm only considers blocks _since_ the last finalized block. Under SSF there wouldn't be any blocks for the fork choice rulew to consider, because finality occurs in the same slot as the block is proposed. This means that under SSF _either_ the fork choice algorithm _or_ the finality gadget would be active at any time. The finality gadget would finalize blocks where 2/3 of validators were online and attesting honestly. If a block is not able to exceed the 2/3 threshold, the fork choice rule would kick in to determine which chain to follow. This also creates an opportunity to maintain the inactivity leak mechanism that recovers a chain where >1/3 validators go offline, albeit with some additional nuances.
 
 ## Outstanding issues {#outstanding-issues}
 
@@ -52,7 +52,7 @@ The problem with scaling aggregation by growing the number of validators per sub
 
 ## When will SSF ship? {#when-will-ssf-ship}
 
-Single slot finality is still in the research phase and is not expected to ship for several years, likely after other substantial upgrades such as Verkle trees and Danksharding.
+SSF is still in the research phase and is not expected to ship for several years, likely after other substantial upgrades such as Verkle trees and Danksharding.
 
 ## Further Reading {#further-reading}
 
