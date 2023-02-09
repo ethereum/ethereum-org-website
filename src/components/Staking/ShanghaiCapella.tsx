@@ -76,7 +76,7 @@ const ShanghaiCapella: FC<IProps> = (props) => {
               mt="auto"
               hideArrow
             >
-              Test your setup on Zhejiang{" "}
+              Test your setup on Zhejiang launchpad
               {/* TODO: Update once Withdrawals page merged to Goerli/Mainnet branches */}
             </ButtonLink>
           </>
