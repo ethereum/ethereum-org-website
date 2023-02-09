@@ -20,7 +20,6 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Write your First Smart Contract](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Learn How to Compile and Deploy Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-
 ## Beginner articles {#beginner-articles}
 
 - [A (Python) Developer's Guide to Ethereum](https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/)
