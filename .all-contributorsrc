@@ -10037,6 +10037,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "mesquitaoliveira",
+      "name": "Mesquita Oliveira",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92008139?v=4",
+      "profile": "https://github.com/mesquitaoliveira",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
