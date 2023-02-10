@@ -10073,6 +10073,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "chawyehsu",
+      "name": "Chawye Hsu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5764917?v=4",
+      "profile": "http://chawyehsu.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
