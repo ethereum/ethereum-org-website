@@ -1,5 +1,11 @@
 import React from "react"
-import { Icon, Link as ChakraLink, LinkProps, useTheme } from "@chakra-ui/react"
+import {
+  Box,
+  Icon,
+  Link as ChakraLink,
+  LinkProps,
+  useTheme,
+} from "@chakra-ui/react"
 import { navigate as gatsbyNavigate } from "gatsby"
 import { LocalizedLink as IntlLink } from "gatsby-theme-i18n"
 import { NavigateOptions } from "@reach/router"
@@ -94,11 +100,6 @@ const Link: React.FC<IProps> = ({
       <ChakraLink
         href={to}
         isExternal
-        _after={{
-          content: !hideArrow ? '"↗"' : undefined,
-          ml: 0.5,
-          mr: 1.5,
-        }}
         onClick={(e) => {
           // only track events on external links
           if (!isExternal) {
@@ -113,6 +114,11 @@ const Link: React.FC<IProps> = ({
         {...commonProps}
       >
         {children}
+        {!hideArrow && (
+          <Box as="span" ml={0.5} mr={1.5} aria-hidden>
+            ↗
+          </Box>
+        )}
       </ChakraLink>
     )
   }
