@@ -1573,6 +1573,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/feibowei"><img src="https://avatars.githubusercontent.com/u/69777448?v=4?s=100" width="100px;" alt="feibowei"/><br /><sub><b>feibowei</b></sub></a><br /><a href="#content-feibowei" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/mesquitaoliveira"><img src="https://avatars.githubusercontent.com/u/92008139?v=4?s=100" width="100px;" alt="Mesquita Oliveira"/><br /><sub><b>Mesquita Oliveira</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=mesquitaoliveira" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.juanjosegiraldo.com"><img src="https://avatars.githubusercontent.com/u/91024217?v=4?s=100" width="100px;" alt="Juan José Giraldo"/><br /><sub><b>Juan José Giraldo</b></sub></a><br /><a href="#content-Juancamp1987" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
