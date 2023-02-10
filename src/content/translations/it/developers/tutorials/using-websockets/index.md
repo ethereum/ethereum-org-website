@@ -33,7 +33,7 @@ Il modo più facile per testare i WebSocket è installare uno strumento da riga 
 _Nota: se hai un conto di Alchemy, puoi sostituire `demo` con la tua chiave API. [Registrati qui per avere un conto gratuito di Alchemy!](https://auth.alchemyapi.io/signup)_
 
 ```
-$ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
+wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 >  {"jsonrpc":  "2.0", "id": 0, "method":  "eth_gasPrice"}
 

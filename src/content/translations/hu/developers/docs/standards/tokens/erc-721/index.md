@@ -63,7 +63,7 @@ Nézzük meg, miért olyan fontos egy szabvány, hogy egyszerűbbé tegye számu
 Először győződj meg arról, hogy a [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python könyvtár telepítve van:
 
 ```
-$ pip install web3
+pip install web3
 ```
 
 ```python

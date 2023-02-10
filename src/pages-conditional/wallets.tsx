@@ -506,7 +506,7 @@ export const listImage = graphql`
 
 export const query = graphql`
   query WalletsPage {
-    hero: file(relativePath: { eq: "wallet.png" }) {
+    hero: file(relativePath: { eq: "wallets/find-wallet-hero.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }

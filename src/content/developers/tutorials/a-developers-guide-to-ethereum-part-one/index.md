@@ -83,19 +83,19 @@ In this walkthrough, we’ll just be working within a Python interpreter. We won
 First, install [IPython](https://ipython.org/) for a user-friendly environment to explore in. IPython offers tab completion, among other features, making it much easier to see what’s possible within Web3.py.
 
 ```bash
-$ pip install ipython
+pip install ipython
 ```
 
 Web3.py is published under the name `web3`. Install it like so:
 
 ```bash
-$ pip install web3
+pip install web3
 ```
 
 One more thing – we're going to simulate a blockchain later, which requires a couple more dependencies. You can install those via:
 
 ```bash
-$ pip install 'web3[tester]'
+pip install 'web3[tester]'
 ```
 
 You’re all set up to go!
@@ -105,7 +105,7 @@ You’re all set up to go!
 Open up a new Python environment by running `ipython` in your terminal. This is comparable to running `python`, but comes with more bells and whistles.
 
 ```bash
-$ ipython
+ipython
 ```
 
 This will print out some information about the versions of Python and IPython you’re running, then you should see a prompt waiting for input:

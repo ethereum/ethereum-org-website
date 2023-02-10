@@ -32,8 +32,8 @@ Cel mai simplu mod de a testa WebSockets este de a instala un instrument de lini
 
 _Observație: dacă aveți un cont Alchemy, puteți înlocui `demo` cu propria dvs. cheie API. [Înscrieți-vă pentru un cont gratuit Alchemy aici!](https://auth.alchemyapi.io/signup)_
 
-```
-$ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
+```bash
+wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 >  {"jsonrpc":  "2.0", "id": 0, "method":  "eth_gasPrice"}
 

@@ -113,6 +113,15 @@ const LearningToolsPage = ({
         background: "#0f1524",
         subjects: ["Solidity", "web3"],
       },
+      {
+        name: "ChainIDE",
+        description: "page-learning-tools-chainIDE-description",
+        url: "https://chainide.com/",
+        image: getImage(data.chainIDE)!,
+        alt: "page-learning-tools-chainIDE-logo-alt",
+        background: "#2C60A3",
+        subjects: ["Solidity", "web3"],
+      },
     ]
     const randomizedSandboxes = shuffle(sandboxes)
     setRandomizedSandboxes(randomizedSandboxes)
@@ -192,6 +201,15 @@ const LearningToolsPage = ({
       image: getImage(data.questbook)!,
       alt: "page-learning-tools-questbook-logo-alt",
       background: "#141236",
+      subjects: ["Solidity", "web3"],
+    },
+    {
+      name: "Metaschool",
+      description: "page-learning-tools-metaschool-description",
+      url: "https://metaschool.so",
+      image: getImage(data.metaschool)!,
+      alt: "page-learning-tools-metaschool-logo-alt",
+      background: "#f6f7f9",
       subjects: ["Solidity", "web3"],
     },
     {
@@ -347,6 +365,9 @@ export const query = graphql`
     oz: file(relativePath: { eq: "dev-tools/oz.png" }) {
       ...learningToolImage
     }
+    metaschool: file(relativePath: { eq: "dev-tools/metaschool.png" }) {
+      ...learningToolImage
+    }
     questbook: file(relativePath: { eq: "dev-tools/questbook.png" }) {
       ...learningToolImage
     }
@@ -362,6 +383,9 @@ export const query = graphql`
       ...learningToolImage
     }
     ethdotbuild: file(relativePath: { eq: "dev-tools/eth-dot-build.png" }) {
+      ...learningToolImage
+    }
+    chainIDE: file(relativePath: { eq: "dev-tools/chainIDE.png" }) {
       ...learningToolImage
     }
     nftschool: file(relativePath: { eq: "dev-tools/nftschool.png" }) {

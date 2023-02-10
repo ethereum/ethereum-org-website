@@ -63,7 +63,7 @@ Lassen Sie uns sehen, wie wichtig ein Standard ist, um es uns einfach zu machen,
 Stellen Sie zuerst sicher, dass Sie [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python-Bibliothek installiert haben:
 
 ```
-$ pip install web3
+pip install web3
 ```
 
 ```python

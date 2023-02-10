@@ -294,13 +294,13 @@ const ButtonContainer = styled.div`
 `
 
 const DappNodeButtonLink = styled(ResponsiveButtonLink)`
-  background-color: #187d76;
+  background-color: #007dfc;
   span {
     color: ${({ theme }) => theme.colors.white};
   }
   &:hover {
-    background-color: #0f5f5f;
-    box-shadow: 4px 4px 0 0 rgba(#187d76, 0.47);
+    background-color: #0077be;
+    box-shadow: 4px 4px 0 0 rgba(#007dfc, 0.47);
   }
 `
 
