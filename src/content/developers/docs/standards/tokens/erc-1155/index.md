@@ -10,7 +10,7 @@ A standard interface for contracts that manage multiple token types. A single de
 
 **What is meant by Multi-Token Standard?**
 
-The idea is simple and seeks to create a smart contract interface that can represent and control any number of fungible and non-fungible token types. In this way, the ERC-1155 token can do the same functions as an [ERC-20](/developers/docs/standards/tokens/erc-20/) and [ERC-721](/developers/docs/standards/tokens/erc-721/) token, and even both at the same time. Moreoever, it improves the functionality of both the ERC-20 and ERC-721 standards, making it more efficient and correcting obvious implementation errors.
+The idea is simple and seeks to create a smart contract interface that can represent and control any number of fungible and non-fungible token types. In this way, the ERC-1155 token can do the same functions as an [ERC-20](/developers/docs/standards/tokens/erc-20/) and [ERC-721](/developers/docs/standards/tokens/erc-721/) token, and even both at the same time. It improves the functionality of both the ERC-20 and ERC-721 standards, making it more efficient and correcting obvious implementation errors.
 
 The ERC-1155 token is described fully in [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155).
 
