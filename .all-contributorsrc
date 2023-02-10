@@ -10064,6 +10064,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "t-rutten",
+      "name": "Tom Rutten",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1389793?v=4",
+      "profile": "https://github.com/t-rutten",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
