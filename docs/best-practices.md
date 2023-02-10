@@ -163,7 +163,7 @@ import Emoji from "./Emoji"
 // Example of how to add new icon not listed
 import { ZzIconName } from "react-icons/zz"
 
-// Then add to IconContect.Provider children:
+// Then add to IconContext.Provider children:
 {
   name === "alias" && <ZzIconName />
 }
