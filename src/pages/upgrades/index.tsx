@@ -1,19 +1,22 @@
 import React, { ReactNode } from "react"
-import styled from "@emotion/styled"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 import {
   Box,
   BoxProps,
+  Center,
   Divider,
   Flex,
   FlexProps,
   Heading,
   HeadingProps,
+  Img,
+  ImgProps,
   List,
   ListItem,
   Text,
+  useToken,
 } from "@chakra-ui/react"
 
 import ButtonLink from "../../components/ButtonLink"
@@ -33,8 +36,11 @@ import PageHero, {
 } from "../../components/PageHero"
 import FeedbackCard from "../../components/FeedbackCard"
 
-import { translateMessageId } from "../../utils/translations"
+import { TranslationKey, translateMessageId } from "../../utils/translations"
 import { getImage } from "../../utils/image"
+import Button from "../../components/Button"
+
+type ChildOnlyProp = { children: ReactNode }
 
 const PageDivider = () => (
   <Divider
@@ -115,148 +121,135 @@ const StyledInfoBanner = (props: {
   )
 }
 
-const CenterCard = styled(Card)`
-  flex: 1 1 30%;
-  min-width: 240px;
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex: 1 1 30%;
-  }
-`
+const PageCard = (props) => (
+  <Box as={Card} flex="1 1 30%" minW="240px" m={4} p={6} {...props} />
+)
 
-const StyledCard = styled(Card)`
-  flex: 1 1 30%;
-  min-width: 240px;
-  margin: 1rem;
-  padding: 1.5rem;
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex: 1 1 30%;
-  }
+const CentreCard = (props) => <PageCard textAlign="center" {...props} />
 
-  &:hover {
-    border-radius: 4px;
-    box-shadow: 0px 8px 17px rgba(#000000, 0.15);
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
-    transition: transform 0.1s;
-    transform: scale(1.02);
-  }
-`
+const StyledCard = (props) => {
+  const tableBoxShadow = useToken("colors", "tableBoxShadow")
 
-const StakingCard = styled(StyledCard)`
-  margin: 0;
-`
+  return (
+    <PageCard
+      boxShadow={tableBoxShadow}
+      transition="transform 0.1s"
+      _hover={{
+        borderRadius: "4px",
+        boxShadow: "0px 8px 17px rgba(0, 0, 0, 0.15)",
+        background: "tableBackgroundHover",
+        transform: "scale(1.02)",
+      }}
+      {...props}
+    />
+  )
+}
 
-const Disclaimer = styled.div`
-  margin: 0rem 12rem;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 0rem 2rem;
-  }
-`
+const Disclaimer = (props: ChildOnlyProp) => (
+  <Center textAlign="center" my={0} mx={{ base: 8, lg: 4 * 12 }} {...props} />
+)
 
-const ContributeCard = styled.div`
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0rem auto;
-  margin-bottom: 2rem;
-  max-width: 100ch;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-left: 0rem;
-    margin-right: 0rem;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`
+const ContributeCard = (props: ChildOnlyProp) => (
+  <Flex
+    direction={{ base: "column", lg: "row" }}
+    align={{ base: "flex-start", lg: "center" }}
+    justify="space-between"
+    borderRadius="2px"
+    border="1px solid"
+    borderColor="border"
+    p={8}
+    mt={0}
+    mb={8}
+    mx={{ base: 0, lg: "auto" }}
+    maxW="100ch"
+    {...props}
+  />
+)
 
-const StyledCallout = styled(CalloutBanner)`
-  margin-left: 0rem;
-  margin-right: 0rem;
-`
+interface IStyledCalloutProps {
+  image: IGatsbyImageData
+  alt: string
+  titleKey: TranslationKey
+  descriptionKey: TranslationKey
+  children: ReactNode
+}
 
-const ContributeButton = styled(ButtonLink)`
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 100%;
-    margin-top: 1.5rem;
-  }
-`
+const StyledCallout = (props: IStyledCalloutProps) => (
+  <Img as={CalloutBanner} mx={0} {...props} />
+)
 
-const Staking = styled.div`
-  padding: 4rem;
-  background: ${(props) => props.theme.colors.cardGradient};
-  width: 100%;
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding: 2rem;
-  }
-`
+const ContributeButton = (props) => (
+  <Button
+    as={ButtonLink}
+    w={{ base: "full", lg: "auto" }}
+    mt={{ base: 6, lg: 0 }}
+    {...props}
+  />
+)
 
-const StakingColumns = styled.div`
-  display: flex;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
+const Staking = (props: ChildOnlyProp) => (
+  <Flex
+    w="full"
+    mt={8}
+    p={{ base: 8, lg: 16 }}
+    direction="column"
+    background="cardGradient"
+    {...props}
+  />
+)
 
-const StakingLeftColumn = styled.div``
+const StakingCard = (props) => <StyledCard m={0} {...props} />
 
-const StakingRightColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0rem 2rem;
-  margin-left: 8rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    align-items: flex-start;
-    flex-direction: column-reverse;
-    margin: 0rem;
-    margin-top: 2rem;
-  }
-`
+const StakingColumns = (props: ChildOnlyProp) => (
+  <Flex direction={{ base: "column", lg: "row" }} {...props} />
+)
 
-const StakingImage = styled(GatsbyImage)`
-  margin: 3rem 0;
-  align-self: center;
-  width: 100%;
-  max-width: 320px;
-`
+const StakingLeftColumn = (props: ChildOnlyProp) => <Box {...props} />
 
-const LeftColumn = styled.div`
-  width: 100%;
-`
+const StakingRightColumn = (props: ChildOnlyProp) => (
+  <Flex
+    align={{ basae: "flex-start", lg: "center" }}
+    direction={{ base: "column-reverse", lg: "column" }}
+    m={{ base: 0, lg: "0 2rem" }}
+    mt={{ base: 8, lg: 0 }}
+    ml={{ base: 0, lg: 32 }}
+    {...props}
+  />
+)
 
-const RightColumn = styled.div`
-  width: 100%;
-  margin-left: 2rem;
-  flex-direction: column;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-left: 0rem;
-    flex-direction: column;
-  }
-`
+interface IStakingImageProps extends ImgProps {
+  image: IGatsbyImageData
+  alt: string
+}
 
-const Faq = styled.div`
-  display: flex;
-  margin-top: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`
+const StakingImage = (props: IStakingImageProps) => (
+  <Img
+    as={GatsbyImage}
+    my={12}
+    mx={0}
+    alignSelf="center"
+    w="full"
+    maxW="320px"
+    {...props}
+  />
+)
 
-const ResearchContainer = styled.div`
-  margin-top: 2rem;
-`
+const LeftColumn = (props: ChildOnlyProp) => <Box w="full" {...props} />
+
+const RightColumn = (props: ChildOnlyProp) => (
+  <Box w="full" ml={{ base: 0, lg: 8 }} {...props} />
+)
+
+const Faq = (props: ChildOnlyProp) => (
+  <Flex
+    align={{ base: "flex-start", lg: "normal" }}
+    direction={{ base: "column", lg: "row" }}
+    mt={16}
+    {...props}
+  />
+)
+
+const ResearchContainer = (props: ChildOnlyProp) => <Box mt={8} {...props} />
 
 const paths = [
   {
@@ -361,7 +354,7 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
           </Text>
           <CardContainer>
             {paths.map((path, idx) => (
-              <CenterCard
+              <CentreCard
                 key={idx}
                 emoji={path.emoji}
                 title={path.title}
