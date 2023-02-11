@@ -8,7 +8,7 @@ import { Badge, Box, BoxProps } from "@chakra-ui/react"
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
   List as ButtonDropdownList,
-} from "../components/ButtonDropdown"
+} from "../components/OldButtonDropdown"
 import Card from "../components/Card"
 import ExpandableCard from "../components/ExpandableCard"
 import DocLink from "../components/DocLink"

@@ -1,100 +1,19 @@
-// Libraries
-import React, { useState, createRef } from "react"
-import styled from "@emotion/styled"
-import { useIntl } from "react-intl"
-import { motion } from "framer-motion"
-import { MdMenu } from "react-icons/md"
-
-// Components
-import Link from "./Link"
+import { Menu, MenuButton, MenuList, MenuItem, Box } from "@chakra-ui/react"
+import React, { useState } from "react"
+import { translateMessageId, TranslationKey } from "../utils/translations"
 import Button from "./Button"
 import Translation from "./Translation"
-
-// Utils
-import { useOnClickOutside } from "../hooks/useOnClickOutside"
-import { translateMessageId, TranslationKey } from "../utils/translations"
 import { trackCustomEvent } from "../utils/matomo"
+import { useIntl } from "react-intl"
+import Link, { IProps as LinkProps } from "./Link"
+import { Icon } from "@chakra-ui/react"
+import { MdMenu } from "react-icons/md"
 
-const Container = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 100%;
-    flex-direction: column-reverse;
-  }
-`
-
-const DropdownList = styled(motion.ul)`
-  min-width: 240px;
-  z-index: 2;
-  margin: 0;
-  margin-top: 0.25rem;
-  position: absolute;
-  list-style-type: none;
-  list-style-image: none;
-  top: 100%;
-  width: auto;
-  border-radius: 0.5em;
-  background: ${(props) => props.theme.colors.dropdownBackground};
-  border: 1px solid ${(props) => props.theme.colors.text};
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 100%;
-    text-align: center;
-    position: initial;
-  }
-`
-
-const listVariants = {
-  open: {
-    opacity: 1,
-    rotateX: 0,
-    display: "block",
-    transition: {
-      duration: 0.2,
-    },
-  },
-  closed: {
-    opacity: 0,
-    rotateX: -15,
-    transitionEnd: {
-      display: "none",
-    },
-  },
+export interface List {
+  text: TranslationKey
+  ariaLabel: string
+  items: Array<ListItem>
 }
-
-const DropdownItem = styled.li`
-  margin: 0;
-  color: ${(props) => props.theme.colors.text};
-  &:hover {
-    color: ${(props) => props.theme.colors.primary};
-    background: ${(props) => props.theme.colors.dropdownBackgroundHover};
-  }
-`
-
-const NavLink = styled(Link)`
-  text-decoration: none;
-  display: block;
-  padding: 0.5rem;
-  color: ${(props) => props.theme.colors.text};
-  &:hover {
-    text-decoration: none;
-    color: ${(props) => props.theme.colors.primary};
-  }
-`
-
-const NakedNavLink = styled.div`
-  text-decoration: none;
-  display: block;
-  padding: 0.5rem;
-  color: ${(props) => props.theme.colors.text};
-  cursor: pointer;
-  &:hover {
-    color: ${(props) => props.theme.colors.primary};
-  }
-`
 
 export interface ListItem {
   text: TranslationKey
@@ -107,79 +26,108 @@ export interface ListItem {
   callback?: (idx: number) => void
 }
 
-export interface List {
-  text: TranslationKey
-  ariaLabel: string
-  items: Array<ListItem>
-}
-
 export interface IProps {
   list: List
-  className?: string
 }
 
-const ButtonDropdown: React.FC<IProps> = ({ list, className }) => {
-  const [isOpen, setIsOpen] = useState<boolean>(false)
+const MenuItemLink = ({ children, ...props }) => {
+  return (
+    <Link
+      {...props}
+      // color="text"
+      color="inherit"
+      textDecoration="none"
+      _hover={{ textDecoration: "none", color: { undefined } }}
+    >
+      {children}
+    </Link>
+  )
+}
+
+const ButtonDropdown: React.FC<IProps> = ({ list }) => {
   const intl = useIntl()
-  const ref = createRef<HTMLInputElement>()
 
-  useOnClickOutside(ref, () => setIsOpen(false))
-
-  // Toggle on `enter` key
-  const onKeyDownHandler = (e: React.KeyboardEvent<HTMLElement>): void => {
-    if (e.key === "13") {
-      setIsOpen(!isOpen)
-    }
-  }
+  const [isActive, setIsActive] = useState<boolean>(false)
 
   return (
-    <Container
-      className={className}
-      ref={ref}
+    <Menu
       aria-label={`Select ${translateMessageId(list.text, intl)}`}
+      matchWidth={true}
+      offset={[0, 4]}
     >
-      <Button
-        variant="outline"
-        minW={{ base: "100%", lg: "240" }}
-        leftIcon={<MdMenu />}
-        onClick={() => setIsOpen(!isOpen)}
-        onKeyDown={onKeyDownHandler}
-        tabIndex={0}
-      >
-        <Translation id={list.text} />
-      </Button>
-      <DropdownList
-        animate={isOpen ? "open" : "closed"}
-        variants={listVariants}
-        initial="closed"
-      >
-        {list.items.map(({ text, to, matomo, callback }, idx) => (
-          <DropdownItem key={idx} onClick={() => setIsOpen(false)}>
-            {!!to && !!matomo && (
-              <NavLink
-                isPartiallyActive={false}
-                onClick={() => {
-                  trackCustomEvent(matomo)
+      {({ isOpen }) => (
+        <Box
+          position="relative"
+          display="flex"
+          flexDir={{ base: "column-reverse", lg: "column" }}
+          width={{ base: "100%", lg: "auto" }}
+        >
+          <MenuButton
+            as={Button}
+            variant="outline"
+            minW={{ base: "100%", lg: "240" }}
+            marginBottom={8}
+            paddingTop={2}
+            paddingBottom={2}
+            tabIndex={0}
+            alignSelf="flex-end"
+            onMouseDown={() => setIsActive(true)}
+            onMouseUp={() => setIsActive(false)}
+            bg={isOpen && !isActive ? "transparent !important" : undefined}
+            boxShadow={isOpen && !isActive ? "outline !important" : undefined}
+            border={isOpen && !isActive ? "none" : undefined}
+            display="flex"
+          >
+            <Box display="flex" alignItems="center" justifyContent="center">
+              <Icon as={MdMenu} marginInlineEnd={2}></Icon>
+              <Translation id={list.text} />
+            </Box>
+          </MenuButton>
+          <MenuList
+            border="1px solid"
+            borderColor="text"
+            backgroundColor="dropdownBackground"
+            color="text"
+          >
+            {list.items.map(({ text, to, matomo, callback }, idx) => (
+              <MenuItem
+                key={idx}
+                justifyContent="center"
+                margin={0}
+                paddingTop="0.5rem"
+                paddingBottom="0.5rem"
+                _hover={{
+                  backgroundColor: "dropdownBackgroundHover",
+                  color: "primary",
                 }}
-                to={to}
               >
-                <Translation id={text} />
-              </NavLink>
-            )}
-            {!!to && !matomo && (
-              <NavLink isPartiallyActive={false} to={to}>
-                <Translation id={text} />
-              </NavLink>
-            )}
-            {!!callback && (
-              <NakedNavLink onClick={() => callback(idx)}>
-                <Translation id={text} />
-              </NakedNavLink>
-            )}
-          </DropdownItem>
-        ))}
-      </DropdownList>
-    </Container>
+                {!!to && !!matomo && (
+                  <MenuItemLink
+                    isPartiallyActive={false}
+                    onClick={() => {
+                      trackCustomEvent(matomo)
+                    }}
+                    to={to}
+                  >
+                    <Translation id={text} />
+                  </MenuItemLink>
+                )}
+                {!!to && !matomo && (
+                  <MenuItemLink isPartiallyActive={false} to={to}>
+                    <Translation id={text} />
+                  </MenuItemLink>
+                )}
+                {!!callback && (
+                  <Box onClick={() => callback(idx)}>
+                    <Translation id={text} />
+                  </Box>
+                )}
+              </MenuItem>
+            ))}
+          </MenuList>
+        </Box>
+      )}
+    </Menu>
   )
 }
 

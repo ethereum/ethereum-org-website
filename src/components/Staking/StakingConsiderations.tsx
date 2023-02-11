@@ -17,7 +17,9 @@ import {
   WarningProductGlyphIcon,
 } from "../icons/staking"
 // Component imports
-import ButtonDropdown, { List as ButtonDropdownList } from "../ButtonDropdown"
+import ButtonDropdown, {
+  List as ButtonDropdownList,
+} from "../OldButtonDropdown"
 import Translation from "../Translation"
 import { EventOptions, trackCustomEvent } from "../../utils/matomo"
 import { TranslationKey } from "../../utils/translations"
