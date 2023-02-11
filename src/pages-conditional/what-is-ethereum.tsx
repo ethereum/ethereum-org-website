@@ -524,7 +524,7 @@ const WhatIsEthereumPage = ({
                       <Tooltip
                         content={tooltipContent({
                           apiUrl:
-                            "https://www.stateofthedapps.com/stats/platform/ethereum#new",
+                            "#",
                           apiProvider: "State of the dapps",
                           ariaLabel: "Read more about Ethereum projects stats",
                         })}
