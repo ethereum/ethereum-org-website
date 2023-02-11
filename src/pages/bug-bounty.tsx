@@ -10,7 +10,7 @@ import Card from "../components/Card"
 import Leaderboard from "../components/Leaderboard"
 import BugBountyCards from "../components/BugBountyCards"
 import Link from "../components/Link"
-import Emoji from "../components/OldEmoji"
+import Emoji from "../components/Emoji"
 import CardList from "../components/CardList"
 import Breadcrumbs from "../components/Breadcrumbs"
 import ButtonLink from "../components/ButtonLink"
@@ -19,7 +19,7 @@ import ExpandableCard from "../components/ExpandableCard"
 import FeedbackCard from "../components/FeedbackCard"
 import { Context } from "../types"
 import { getImage } from "../utils/image"
-import { Accordion, Box, Center, Heading, Text } from "@chakra-ui/react"
+import { Box, Center, Heading, Text } from "@chakra-ui/react"
 
 const Page = ({ children }) => (
   <Box
@@ -77,22 +77,6 @@ const Subtitle = ({ children }) => (
   </Box>
 )
 
-// export const SloganGradient = styled.div`
-//   font-weight: 800;
-//   font-size: 3rem;
-//   line-height: 140%;
-//   max-width: 720px;
-//   margin-top: 1rem;
-//   background-clip: text;
-//   background-image: ${(props) => props.theme.colors.upgradesGradient};
-//   -webkit-background-clip: text;
-//   -webkit-text-fill-color: transparent;
-//   margin-bottom: 0rem;
-//   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-//     font-size: 2.5rem;
-//   }
-// `
-
 const SloganGradient = ({ children }) => (
   <Box
     fontWeight={"800"}
@@ -102,11 +86,10 @@ const SloganGradient = ({ children }) => (
     marginTop={"1rem"}
     marginBottom={"0"}
     backgroundClip={"text"}
-    textColor={"transparent"}
-    backgroundImage={"upgradesGradient"}
-    // sx={{ "-webkit-text-fill-color": "transparent" }}
+    sx={{ WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}
+    background="upgradesGradient"
   >
-    {children}
+    <Text>{children}</Text>
   </Box>
 )
 
@@ -312,6 +295,26 @@ const StyledGrayContainer = ({ children, ...props }) => (
   </Box>
 )
 
+const Faq = ({ children }) => (
+  <Box
+    display={"flex"}
+    marginTop={"4rem"}
+    flexDirection={{ base: "column", lg: "row" }}
+  >
+    {children}
+  </Box>
+)
+const LeftColumn = ({ children }) => <Box width={"100%"}>{children}</Box>
+const RightColumn = ({ children }) => (
+  <Box
+    width={"100%"}
+    marginLeft={{ base: "0rem", lg: "2rem" }}
+    flexDirection={{ base: "column", lg: "column" }}
+  >
+    {children}
+  </Box>
+)
+
 type BountyHuntersArg = {
   score?: number | null
 }
@@ -491,7 +494,7 @@ const BugBountiesPage = ({
             </Row>
             <SloganGradient>
               <Translation id="page-upgrades-bug-bounty-slogan" />{" "}
-              <Emoji size={1} text=":bug:" />
+              <Emoji text=":bug:" />
             </SloganGradient>
             <Subtitle>
               <Translation id="page-upgrades-bug-bounty-subtitle" />
@@ -804,13 +807,8 @@ const BugBountiesPage = ({
             <Translation id="page-upgrades-question-title" />
           </H2>
         </Center>
-        <Accordion
-          defaultIndex={[0]}
-          allowMultiple
-          display={"flex"}
-          marginTop={"2rem"}
-        >
-          <Box w={"50%"}>
+        <Faq>
+          <LeftColumn>
             <ExpandableCard
               title={translateMessageId("bug-bounty-faq-q1-title", intl)}
               contentPreview={translateMessageId(
@@ -873,8 +871,8 @@ const BugBountiesPage = ({
                 <Translation id="bug-bounty-faq-q4-content-1" />
               </p>
             </ExpandableCard>
-          </Box>
-          <Box w={"50%"} marginLeft={"2rem"} flexDirection={"column"}>
+          </LeftColumn>
+          <RightColumn>
             <ExpandableCard
               title={translateMessageId("bug-bounty-faq-q5-title", intl)}
               contentPreview={translateMessageId(
@@ -925,8 +923,8 @@ const BugBountiesPage = ({
                 <Translation id="bug-bounty-faq-q8-PGP-key" />
               </Link>
             </ExpandableCard>
-          </Box>
-        </Accordion>
+          </RightColumn>
+        </Faq>
       </Content>
       <Divider />
       <Contact>
@@ -939,7 +937,7 @@ const BugBountiesPage = ({
             <Link to="mailto:bounty@ethereum.org">bounty@ethereum.org</Link>
           </Text>
         </div>
-        <Emoji size={3} text=":email:" />
+        <Emoji fontSize={"5xl"} text=":email:" />
       </Contact>
       <FeedbackCard />
     </Page>
