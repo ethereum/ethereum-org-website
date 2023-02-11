@@ -18,11 +18,9 @@ import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import ExpandableCard from "../components/ExpandableCard"
 import {
-  CardContainer,
   Content,
   Divider,
   Page,
-  GrayContainer,
   GradientContainer,
   SloganGradient,
 } from "../components/SharedStyledComponents"
@@ -185,55 +183,70 @@ const Client = ({ children }) => (
   </Box>
 )
 
-const HeroCard = styled.div`
-  display: flex;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    padding-left: 0;
-    padding-right: 0;
-    margin-top: -2rem;
-  }
-`
+const HeroCard = ({ children }) => (
+  <Box
+    display={"flex"}
+    justifyContent={"space-between"}
+    flexDirection={{ base: "column", lg: "row" }}
+    paddingLeft={{ lg: "0" }}
+    marginTop={{ base: "-2rem", lg: "0" }}
+  >
+    {children}
+  </Box>
+)
 
-const HeroContainer = styled.div`
-  flex: 1 1 50%;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 6rem;
-    padding-bottom: 4rem;
-    padding-left: 0;
-    padding-right: 0;
-  }
-`
+const HeroContainer = ({ children }) => (
+  <Box
+    flex={"1 1 50%"}
+    padding={{ base: "8rem 2rem 8rem 2rem", lg: "6rem 0 4rem 0" }}
+  >
+    {children}
+  </Box>
+)
 
-const Row = styled.div`
-  display: flex;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-wrap: wrap;
-  }
-`
+const Row = ({ children }) => (
+  <Box
+    display={"flex"}
+    alignItems={"center"}
+    flexWrap={{ base: "nowrap", lg: "wrap" }}
+  >
+    {children}
+  </Box>
+)
 
-const StyledCardContainer = styled(CardContainer)`
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-`
+const StyledCardContainer = ({ children }) => (
+  <Box display={"flex"} flexWrap={"wrap"} marginLeft={"2rem -1rem 3rem -1rem"}>
+    {children}
+  </Box>
+)
 
-const StyledCard = styled(Card)`
-  flex: 1 1 464px;
-  margin: 1rem;
-  padding: 1.5rem;
-  justify-content: flex-start;
-`
+const StyledCard = ({ children, ...props }) => {
+  return (
+    <Card
+      flex={"1 1 464px"}
+      margin={"1rem"}
+      padding={"1.5rem"}
+      justifyContent={"flex-start"}
+      {...props}
+    >
+      {children}
+    </Card>
+  )
+}
 
-const StyledGrayContainer = styled(GrayContainer)`
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
-`
+const StyledGrayContainer = ({ children, ...props }) => (
+  <Box
+    width={"100%"}
+    padding={"4rem 0"}
+    marginTop={"2rem"}
+    marginBottom={"3rem"}
+    background={"grayBackground"}
+    boxShadow={"inset 0px 1px 0px tableItemBoxShadow"}
+    {...props}
+  >
+    {children}
+  </Box>
+)
 
 type BountyHuntersArg = {
   score?: number | null
