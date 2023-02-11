@@ -1,6 +1,5 @@
 import React, { ReactNode } from "react"
 import { useTheme } from "@emotion/react"
-import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
@@ -17,17 +16,28 @@ import Breadcrumbs from "../components/Breadcrumbs"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import ExpandableCard from "../components/ExpandableCard"
-import {
-  Content,
-  Divider,
-  Page,
-  GradientContainer,
-  SloganGradient,
-} from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
 import { Context } from "../types"
 import { getImage } from "../utils/image"
 import { Accordion, Box, Center, Heading, Text } from "@chakra-ui/react"
+
+const Page = ({ children }) => (
+  <Box
+    display={"flex"}
+    flexDirection={"column"}
+    alignItems={"center"}
+    width={"100%"}
+    margin={"0 auto"}
+  >
+    {children}
+  </Box>
+)
+
+const Content = ({ children }) => (
+  <Box padding={"1rem 2rem"} width={"100%"}>
+    {children}
+  </Box>
+)
 
 const Title = ({ children }) => (
   <Text
@@ -67,6 +77,39 @@ const Subtitle = ({ children }) => (
   </Box>
 )
 
+// export const SloganGradient = styled.div`
+//   font-weight: 800;
+//   font-size: 3rem;
+//   line-height: 140%;
+//   max-width: 720px;
+//   margin-top: 1rem;
+//   background-clip: text;
+//   background-image: ${(props) => props.theme.colors.upgradesGradient};
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   margin-bottom: 0rem;
+//   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+//     font-size: 2.5rem;
+//   }
+// `
+
+const SloganGradient = ({ children }) => (
+  <Box
+    fontWeight={"800"}
+    fontSize={{ base: "2.5rem", lg: "3rem" }}
+    lineHeight={"140%"}
+    maxWidth={"720px"}
+    marginTop={"1rem"}
+    marginBottom={"0"}
+    backgroundClip={"text"}
+    textColor={"transparent"}
+    backgroundImage={"upgradesGradient"}
+    // sx={{ "-webkit-text-fill-color": "transparent" }}
+  >
+    {children}
+  </Box>
+)
+
 const Rules = ({ children }) => (
   <Box
     margin={"0 auto"}
@@ -81,6 +124,18 @@ const Rules = ({ children }) => (
 
 const SubmitInstructions = ({ children }) => (
   <Box flex={"1 1 600px"} marginRight={"2rem"} maxWidth={"100ch"}>
+    {children}
+  </Box>
+)
+
+const GradientContainer = ({ children }) => (
+  <Box
+    width={"100%"}
+    padding={"4rem 0rem"}
+    marginTop={"2rem"}
+    background={"cardGradient"}
+    boxShadow={"inset 0px 1px 0px tableItemBoxShadow"}
+  >
     {children}
   </Box>
 )
@@ -116,6 +171,15 @@ const On = () => (
     height={"8px"}
     background="success400"
     borderRadius={"64px"}
+  ></Box>
+)
+
+const Divider = () => (
+  <Box
+    margin={"4rem 0 4rem 0"}
+    width={"10%"}
+    height={"0.25rem"}
+    backgroundColor={"homeDivider"}
   ></Box>
 )
 
@@ -198,7 +262,7 @@ const HeroCard = ({ children }) => (
 const HeroContainer = ({ children }) => (
   <Box
     flex={"1 1 50%"}
-    padding={{ base: "8rem 2rem 8rem 2rem", lg: "6rem 0 4rem 0" }}
+    padding={{ lg: "8rem 2rem 8rem 2rem", base: "6rem 0 4rem 0" }}
   >
     {children}
   </Box>
@@ -723,7 +787,6 @@ const BugBountiesPage = ({
           </p>
           <Leaderboard content={executionBountyHunters} />
         </FullLeaderboardContainer>
-
         <FullLeaderboardContainer>
           <H2>
             <Translation id="page-upgrades-bug-bounty-hunting-leaderboard" />
