@@ -3,9 +3,7 @@ import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 import styled from "@emotion/styled"
 
-import ButtonDropdown, {
-  List as ButtonDropdownList,
-} from "../../components/ButtonDropdown"
+import ButtonDropdown from "../../components/ButtonDropdown"
 import ButtonLink from "../../components/ButtonLink"
 import Card from "../../components/Card"
 import Link from "../../components/Link"
@@ -61,15 +59,15 @@ const InfoTitle = styled.h2`
   }
 `
 
-const StyledButtonDropdown = styled(ButtonDropdown)`
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: flex-end;
-  text-align: center;
-  @media (min-width: ${(props) => props.theme.breakpoints.s}) {
-    align-self: flex-end;
-  }
-`
+// const StyledButtonDropdown = styled(ButtonDropdown)`
+//   margin-bottom: 2rem;
+//   display: flex;
+//   justify-content: flex-end;
+//   text-align: center;
+//   @media (min-width: ${(props) => props.theme.breakpoints.s}) {
+//     align-self: flex-end;
+//   }
+// `
 
 const InfoColumn = styled.aside`
   display: flex;
@@ -97,13 +95,13 @@ const MobileButton = styled.div`
   }
 `
 
-const MobileButtonDropdown = styled(StyledButtonDropdown)`
-  margin-bottom: 0rem;
-  display: none;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: block;
-  }
-`
+// const MobileButtonDropdown = styled(StyledButtonDropdown)`
+//   margin-bottom: 0rem;
+//   display: none;
+//   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+//     display: block;
+//   }
+// `
 
 // Apply styles for classes within markdown here
 const ContentContainer = styled.article`
@@ -359,7 +357,7 @@ const StakingPage = ({
       </HeroStatsWrapper>
       <Page>
         <InfoColumn>
-          <StyledButtonDropdown list={dropdownLinks} />
+          <ButtonDropdown list={dropdownLinks} />
           <InfoTitle>
             <Translation id="page-staking-dom-info-title" />
           </InfoTitle>
@@ -749,7 +747,7 @@ const StakingPage = ({
           </Content>
         </ContentContainer>
         <MobileButton>
-          <MobileButtonDropdown list={dropdownLinks} />
+          {/* <MobileButtonDropdown list={dropdownLinks} /> */}
         </MobileButton>
       </Page>
     </PageContainer>
