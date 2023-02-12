@@ -19,7 +19,7 @@ import { IItem, ISections } from "./types"
 const NavContainer = styled.div`
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
   width: 100%;
 `
 
