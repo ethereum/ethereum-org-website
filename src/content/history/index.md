@@ -66,8 +66,7 @@ This consensus layer upgrade brings the ability for stakers who did not provide 
 
 The upgrade also provides automatic account sweeping functionality, which continuously processes validator accounts for any available rewards payments or full withdrawals.
 
-<!-- - [More on staking withdrawals](/staking/withdrawals/). -->
-
+- [More on staking withdrawals](/staking/withdrawals/).
 - [Read the Capella upgrade specifications](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
 
 <Divider />
