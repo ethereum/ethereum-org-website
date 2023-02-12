@@ -40,7 +40,7 @@ Smart contracts often deal with high-value financial assets, especially in indus
 
 Smart contracts deployed in the [Ethereum Virtual Machine (EVM)](/developers/docs/evm/) are immutable by default. While traditional developers may be used to fixing software bugs after launching, Ethereum development leaves little room for patching security flaws once a smart contract is live on the blockchain.
 
-While upgradeability mechanisms for smart contracts, such as proxy patterns, these can be difficult to implement. Besides reducing immutability and introducing complexity, upgrades often demand complex governance processes.
+While upgradeability mechanisms for smart contracts exist, such as proxy patterns, these can be difficult to implement. Besides reducing immutability and introducing complexity, upgrades often demand complex governance processes.
 
 For the most part, upgrades should be considered a last resort and avoided unless necessary. Detecting potential vulnerabilities and flaws in your smart contract during the pre-launch phase reduces the need for a logic upgrade.
 
