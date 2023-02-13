@@ -3,7 +3,9 @@ import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 import styled from "@emotion/styled"
 
-import ButtonDropdown from "../../components/ButtonDropdown"
+import ButtonDropdown, {
+  List as ButtonDropdownList,
+} from "../../components/ButtonDropdown"
 import ButtonLink from "../../components/ButtonLink"
 import Card from "../../components/Card"
 import Link from "../../components/Link"
@@ -357,7 +359,13 @@ const StakingPage = ({
       </HeroStatsWrapper>
       <Page>
         <InfoColumn>
-          <ButtonDropdown list={dropdownLinks} />
+          <ButtonDropdown
+            list={dropdownLinks}
+            marginBottom={8}
+            justifyContent="flex-end"
+            textAlign="center"
+            alignSelf={{ base: "flex-end", s: undefined }}
+          />
           <InfoTitle>
             <Translation id="page-staking-dom-info-title" />
           </InfoTitle>
@@ -749,10 +757,8 @@ const StakingPage = ({
         <MobileButton>
           <ButtonDropdown
             list={dropdownLinks}
-            marginBottom={8}
-            justifyContent="flex-end"
-            textAlign="center"
-            alignSelf={{ base: "flex-end", s: undefined }}
+            marginBottom={0}
+            display={{ base: "block", l: "none" }}
           />
         </MobileButton>
       </Page>
