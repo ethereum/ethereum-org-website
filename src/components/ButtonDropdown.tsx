@@ -61,6 +61,7 @@ const ButtonDropdown: React.FC<IProps> = ({ list, ...props }) => {
       aria-label={`Select ${translateMessageId(list.text, intl)}`}
       matchWidth={true}
       offset={[0, 4]}
+      flip={false}
     >
       {({ isOpen }) => (
         <Box
@@ -74,7 +75,6 @@ const ButtonDropdown: React.FC<IProps> = ({ list, ...props }) => {
             as={Button}
             variant="outline"
             minW={{ base: "100%", lg: "240" }}
-            marginBottom={8}
             paddingTop={2}
             paddingBottom={2}
             tabIndex={0}
