@@ -747,7 +747,13 @@ const StakingPage = ({
           </Content>
         </ContentContainer>
         <MobileButton>
-          {/* <MobileButtonDropdown list={dropdownLinks} /> */}
+          <ButtonDropdown
+            list={dropdownLinks}
+            marginBottom={8}
+            justifyContent="flex-end"
+            textAlign="center"
+            alignSelf={{ base: "flex-end", s: undefined }}
+          />
         </MobileButton>
       </Page>
     </PageContainer>

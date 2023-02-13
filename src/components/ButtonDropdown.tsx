@@ -1,4 +1,11 @@
-import { Menu, MenuButton, MenuList, MenuItem, Box } from "@chakra-ui/react"
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  Box,
+  BoxProps,
+} from "@chakra-ui/react"
 import React, { useState } from "react"
 import { translateMessageId, TranslationKey } from "../utils/translations"
 import Button from "./Button"
@@ -26,7 +33,7 @@ export interface ListItem {
   callback?: (idx: number) => void
 }
 
-export interface IProps {
+export interface IProps extends BoxProps {
   list: List
 }
 
@@ -44,7 +51,7 @@ const MenuItemLink = ({ children, ...props }) => {
   )
 }
 
-const ButtonDropdown: React.FC<IProps> = ({ list }) => {
+const ButtonDropdown: React.FC<IProps> = ({ list, ...props }) => {
   const intl = useIntl()
 
   const [isActive, setIsActive] = useState<boolean>(false)
@@ -61,6 +68,7 @@ const ButtonDropdown: React.FC<IProps> = ({ list }) => {
           display="flex"
           flexDir={{ base: "column-reverse", lg: "column" }}
           width={{ base: "100%", lg: "auto" }}
+          {...props}
         >
           <MenuButton
             as={Button}
@@ -88,6 +96,7 @@ const ButtonDropdown: React.FC<IProps> = ({ list }) => {
             borderColor="text"
             backgroundColor="dropdownBackground"
             color="text"
+            width={{ base: "100%", lg: "auto" }}
           >
             {list.items.map(({ text, to, matomo, callback }, idx) => (
               <MenuItem
