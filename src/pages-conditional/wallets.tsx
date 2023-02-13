@@ -95,12 +95,14 @@ const SubtitleThree = styled.div`
 
 const FindWallet = chakra(GatsbyImage)
 
-const Intro = styled(Content)`
-  padding-bottom: 0;
-  h2 {
-    margin-bottom: 0;
-  }
-`
+// const Intro = styled(Content)`
+//   padding-bottom: 0;
+//   h2 {
+//     margin-bottom: 0;
+//   }
+// `
+
+const Intro = chakra(Content)
 
 // const IntroTwoColumnContent = styled(TwoColumnContent)`
 //   margin-bottom: 0;
@@ -277,7 +279,7 @@ const WalletsPage = ({
       />
       <PageHero content={heroContent} isReverse />
       <StyledGrayContainer>
-        <Intro>
+        <Intro paddingBottom={0} sx={{ h2: { mb: 0 } }}>
           <Heading m="0">
             <Translation id="page-wallets-whats-a-wallet" />
           </Heading>
@@ -369,7 +371,7 @@ const WalletsPage = ({
         </RightColumn>
       </StyledTwoColumnContent>
       <GradientContainer
-        bgGradient="linear(49.21deg, rgba(127, 127, 213, 0.2) 19.87%,
+        bgGradient="linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%,
     rgba(134, 168, 231, 0.2) 58.46%,
     rgba(145, 234, 228, 0.2) 97.05%)"
       >
