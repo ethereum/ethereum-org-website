@@ -86,19 +86,19 @@ Dalam panduan ini, kita hanya akan berkerja di dalam penerjemah Python. Kita tid
 Pertama, instal [IPython](https://ipython.org/) untuk lingkungan ramah pengguna yang dapat dijelajahi. IPython menawarkan penyelesaian tab, di antara fitur lainnya, yang memudahkan untuk melihat apa yang dimungkinkan di Web3.py.
 
 ```bash
-$ pip install ipython
+pip install ipython
 ```
 
 Web3.py dipublikasikan dengan nama `web3`. Instal seperti ini:
 
 ```bash
-$ pip install web3
+pip install web3
 ```
 
 Satu hal lagi – kita akan mensimulasikan sebuah blockchain nanti, yang memerlukan beberapa dependensi lagi. Anda dapat menginstal itu melalui:
 
 ```bash
-$ pip install 'web3[tester]'
+pip install 'web3[tester]'
 ```
 
 Anda siap untuk langkah berikutnya!
@@ -108,7 +108,7 @@ Anda siap untuk langkah berikutnya!
 Buka lingkungan Python yang baru dengan menjalankan `ipython` di terminal Anda. Ini dapat dibandingkan dengan menjalankan `python`, tetapi hadir dengan lebih banyak fitur spesial.
 
 ```bash
-$ ipython
+ipython
 ```
 
 Ini akan mencetak beberapa informasi tentang versi Python dan IPython yang Anda jalankan, maka Anda akan melihat permintaan yang menunggu untuk menerima input:

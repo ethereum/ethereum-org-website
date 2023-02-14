@@ -75,7 +75,7 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 首先，请确保您已安装 [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python 库：
 
 ```
-$ pip install web3
+pip install web3
 ```
 
 ```python

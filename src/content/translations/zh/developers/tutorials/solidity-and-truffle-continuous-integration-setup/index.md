@@ -105,8 +105,8 @@ Eth-gas-reporter 插件对于记录您的智能合约函数的 gas 成本相当�
 ### 第 1 步：安装 eth-gas-reporter 插件和 {#step-1-install-the-eth-gas-reporter-plugin-and-codechecks}
 
 ```bash
-$ npm install --save-dev eth-gas-reporter
-$ npm install --save-dev @codechecks/client
+npm install --save-dev eth-gas-reporter
+npm install --save-dev @codechecks/client
 ```
 
 ### 第 2 步：在您的 truffle-config.js 内的 mocha 设置中加入该插件 {#step-2-add-the-plugin-to-the-mocha-settings-inside-your-truffle-configjs}
@@ -157,9 +157,9 @@ checks:
 ### 第 1 步：创建一个 metacoin 项目并安装覆盖工具 {#step-1-create-a-metacoin-project-and-install-coverage-tools}
 
 ```bash
-$ npm install --save-dev truffle
-$ npm install --save-dev coveralls
-$ npm install --save-dev solidity-coverage
+npm install --save-dev truffle
+npm install --save-dev coveralls
+npm install --save-dev solidity-coverage
 ```
 
 ### 第 2 步：将 solidity-coverage 添加到 truffle-config.js 的插件数组中。 {#step-2-add-solidity-coverage-to-the-plugins-array-in-truffle-configjs}

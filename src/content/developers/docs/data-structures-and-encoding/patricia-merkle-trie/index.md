@@ -1,17 +1,17 @@
 ---
-title: Patricia Merkle Trees
-description: Introduction to Patricia Merkle Tries.
+title: Merkle Patricia Trie
+description: Introduction to Merkle Patricia Trie.
 lang: en
 sidebarDepth: 2
 ---
 
-A Patricia Merkle Trie provides a cryptographically authenticated data structure that can be used to store all `(key, value)` bindings.
+A Merkle Patricia Trie provides a cryptographically authenticated data structure that can be used to store all `(key, value)` bindings.
 
-Patricia Merkle Tries are deterministic, meaning that a trie with the same `(key, value)` bindings is guaranteed to be identical—down to the last byte. They have the same root hash, providing `O(log(n))` efficiency for inserts, lookups and deletes. They are simpler to understand and implement than more complex comparison-based alternatives, like red-black trees.
+Merkle Patricia Tries are fully deterministic, meaning that tries with the same `(key, value)` bindings is guaranteed to be identical—down to the last byte. This means that they have the same root hash, providing the holy grail of `O(log(n))` efficiency for inserts, lookups and deletes. Moreover, they are simpler to understand and code than more complex comparison-based alternatives, like red-black trees.
 
 ## Prerequisites {#prerequisites}
 
-It's helpful to have basic knowledge of Merkle trees and serialization to understand this page.
+To better understand this page, it would be helpful to have basic knowledge of [hashes](https://en.wikipedia.org/wiki/Hash_function), [Merkle trees](https://en.wikipedia.org/wiki/Merkle_tree), [tries](https://en.wikipedia.org/wiki/Trie) and [serialization](https://en.wikipedia.org/wiki/Serialization).
 
 ## Basic radix tries {#basic-radix-tries}
 
@@ -197,7 +197,7 @@ From a block header there are 3 roots from 3 of these tries.
 
 ### State Trie {#state-trie}
 
-There is one global state trie, and it updates over time. In it, a `path` is always: `keccak256(ethereumAddress)` and a `value` is always: `rlp(ethereumAccount)`. More specifically an ethereum `account` is a 4 item array of `[nonce,balance,storageRoot,codeHash]`. At this point it's worth noting that this `storageRoot` is the root of another patricia trie:
+There is one global state trie, and it is updated every time a client processes a block. In it, a `path` is always: `keccak256(ethereumAddress)` and a `value` is always: `rlp(ethereumAccount)`. More specifically an ethereum `account` is a 4 item array of `[nonce,balance,storageRoot,codeHash]`. At this point, it's worth noting that this `storageRoot` is the root of another patricia trie:
 
 ### Storage Trie {#storage-trie}
 
@@ -212,8 +212,8 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 Retrieving other elements in storage is slightly more involved because the position in the storage trie must first be calculated. The position is calculated as the `keccak256` hash of the address and the storage position, both left-padded with zeros to a length of 32 bytes. For example, the position for the data in storage slot 1 for address `0x391694e7e0b0cce554cb130d723a9d27458f9298` is:
 
-```keccak256(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
-
+```
+keccak256(decodeHex("000000000000000000000000391694e7e0b0cce554cb130d723a9d27458f9298" + "0000000000000000000000000000000000000000000000000000000000000001"))
 ```
 
 In a Geth console, this can be calculated as follows:
@@ -235,7 +235,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 ### Transactions Trie {#transaction-trie}
 
-There is a separate transactions trie for every block, again storing (key, value) pairs. A path here is: rlp(transactionIndex) which represents the key that corresponds to a value determined by:
+There is a separate transactions trie for every block, again storing `(key, value)` pairs. A path here is: `rlp(transactionIndex)` which represents the key that corresponds to a value determined by:
 
 ```
 if legacyTx:
@@ -248,12 +248,12 @@ More information on this can be found in the [EIP 2718](https://eips.ethereum.or
 
 ### Receipts Trie {#receipts-trie}
 
-Every block has its own Receipts trie. A `path` here is: `rlp(transactionIndex)`. `transactionIndex` is its index within the block it's mined. The receipts trie never updates. Similarly to the Transactions trie, there are current and legacy receipts. To query a specific receipt in the Receipts trie the index of the transaction in its block, the receipt payload and the transaction type are required. The Returned receipt can be of type `Receipt` which is defined as the concatenation of `transaction type` and `transaction payload` or it can be of type `LegacyReceipt` which is defined as `rlp([status, cumulativeGasUsed, logsBloom, logs])`.
+Every block has its own Receipts trie. A `path` here is: `rlp(transactionIndex)`. `transactionIndex` is its index within the block it's mined. The receipts trie is never updated. Similar to the Transactions trie, there are current and legacy receipts. To query a specific receipt in the Receipts trie, the index of the transaction in its block, the receipt payload and the transaction type are required. The Returned receipt can be of type `Receipt` which is defined as the concentenation of `transaction type` and `transaction payload` or it can be of type `LegacyReceipt` which is defined as `rlp([status, cumulativeGasUsed, logsBloom, logs])`.
 
 More information on this can be found in the [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718) documentation.
 
 ## Further Reading {#further-reading}
 
-[Modified Merkle Patricia Trie — How Ethereum saves a state](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
-[Merkling in Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)
-[Understanding the Ethereum trie](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)
+- [Modified Merkle Patricia Trie — How Ethereum saves a state](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
+- [Merkling in Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)
+- [Understanding the Ethereum trie](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)

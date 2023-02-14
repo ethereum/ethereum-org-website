@@ -4,8 +4,6 @@ import Translation from "./Translation"
 import {
   Flex,
   Image,
-  LinkBox,
-  LinkOverlay,
   Table,
   Tbody,
   Td,
@@ -14,7 +12,7 @@ import {
   Tr,
   useToken,
 } from "@chakra-ui/react"
-import Link from "./Link"
+import ButtonLink from "./ButtonLink"
 
 export interface TableRow {
   name: string
@@ -45,7 +43,7 @@ const SimpleTable: React.FC<IProps> = ({ columns, content, hasError }) => {
       minW="720px"
     >
       <Thead bg="ednBackground" color="text200">
-        <Tr boxShadow={`0 1px 1px ${textColor}`} mb="1px">
+        <Tr borderBottom={`1px solid ${textColor}`} mb="1px">
           {columns.map((column, idx) => (
             <Th
               key={idx}
@@ -82,20 +80,18 @@ const SimpleTable: React.FC<IProps> = ({ columns, content, hasError }) => {
         )}
 
         {content.map(({ name, marketCap, image, type, url }, idx) => (
-          <LinkBox
-            as={Tr}
+          <Tr
             key={idx}
             color="text"
-            boxShadow={`0 1px 1px ${textColor}`}
+            borderBottom={`1px solid ${textColor}`}
             _hover={{
               textDecoration: "none",
-              boxShadow: `0 0 1px ${textColor}`,
+              borderBottom: `1px solid ${textColor}`,
               bg: "primary200",
               color: "black300",
-              cursor: url ? "pointer" : "default",
             }}
             _focus={{
-              boxShadow: `0 0 1px ${textColor}`,
+              borderBottom: `1px solid ${textColor}`,
               bg: "primary200",
               color: "black300",
             }}
@@ -103,23 +99,7 @@ const SimpleTable: React.FC<IProps> = ({ columns, content, hasError }) => {
             <Td>
               <Flex align="center">
                 {image && <Image src={image} alt="" mr={4} boxSize={6} />}
-                {url ? (
-                  <LinkOverlay
-                    as={Link}
-                    hideArrow
-                    to={url}
-                    color="inherit"
-                    textDecoration="inherit"
-                    _hover={{
-                      textDecoration: "inherit",
-                    }}
-                    isExternal
-                  >
-                    {name}
-                  </LinkOverlay>
-                ) : (
-                  <>{name}</>
-                )}
+                <>{name}</>
               </Flex>
             </Td>
             <Td>
@@ -129,13 +109,13 @@ const SimpleTable: React.FC<IProps> = ({ columns, content, hasError }) => {
               <Flex align="center">{type}</Flex>
             </Td>
             {url && (
-              <Td color="primary">
-                <Flex align="center" justify="flex-end">
-                  ↗
-                </Flex>
+              <Td textAlign="end">
+                <ButtonLink to={url} size="sm">
+                  Go to {name}
+                </ButtonLink>
               </Td>
             )}
-          </LinkBox>
+          </Tr>
         ))}
       </Tbody>
     </Table>

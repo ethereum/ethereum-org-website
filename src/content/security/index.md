@@ -159,6 +159,8 @@ When interacting with smart contracts, do not allow unlimited spend limits. An u
 
 Many Ethereum wallets offer limits protection to safeguard against accounts being drained.
 
+[How to revoke smart contract access to your crypto funds](/guides/how-to-revoke-token-access/)
+
 <Divider />
 
 ## Common scams {#common-scams}

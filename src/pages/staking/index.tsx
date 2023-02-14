@@ -34,6 +34,7 @@ const HeroStatsWrapper = styled.div`
   align-items: center;
   background: ${({ theme }) => theme.colors.layer2Gradient};
   padding-bottom: 2rem;
+  width: 100%;
 `
 
 const Page = styled.div`
@@ -298,6 +299,15 @@ const StakingPage = ({
           eventCategory: `Staking dropdown`,
           eventAction: `Clicked`,
           eventName: "clicked pooled staking",
+        },
+      },
+      {
+        text: "page-staking-dropdown-withdrawals",
+        to: "/staking/withdrawals/",
+        matomo: {
+          eventCategory: `Staking dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked about withdrawals",
         },
       },
     ],
@@ -634,6 +644,9 @@ const StakingPage = ({
               <p>
                 <Translation id="page-staking-faq-5-answer-p2" />
               </p>
+              <ButtonLink to="/staking/withdrawals/">
+                <Translation id="page-staking-faq-5-answer-link" />
+              </ButtonLink>
             </ExpandableCard>
             <ExpandableCard
               title={translateMessageId("page-staking-faq-1-question", intl)}

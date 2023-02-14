@@ -134,7 +134,7 @@ OS Ubuntu akan melakukan boot up dalam waktu kurang dari satu menit tapi **Anda 
 Tergantung pada gambarnya, Anda akan menjalankan:
 
 - Klien eksekusi: Geth sebagai klien bawaan menyinkronkan ke rantai blok
-- Klien konsensus: Prysm sebagai klien bawaan menyinkronkan rantai suar (jaringan percobaan Prater)
+- Klien konsensus: Prysm sebagai klien bawaan menyinkronkan rantai suar (jaringan percobaan Goerli)
 
 ### 5. Masuk {#5-log-in}
 
@@ -163,7 +163,7 @@ sudo tail -f /var/log/syslog
 
 Sekarang Anda perlu menunggu blockchain disinkronkan. Pada kasus lapisan eksekusi, ini dapat memakan waktu beberapa hari tergantung dari beberapa faktor, tetapi Anda dapat berharap dalam 5-7 hari.
 
-Jika Anda menjalankan lapisan konsensus jaringan percobaan Prater Anda dapat mengharapkan 1-2 hari waktu sinkronisasi Rantai suar. Ingatlah bahwa Anda harus menyiapkan validatornya nanti untuk memulai proses penaruhan. [Cara menjalankan validator lapisan konsensus](/developers/tutorials/run-node-raspberry-pi/#validator)
+Jika Anda menjalankan lapisan konsensus jaringan percobaan Goerli Anda dapat mengharapkan 1-2 hari waktu sinkronisasi Rantai suar. Ingatlah bahwa Anda harus menyiapkan validatornya nanti untuk memulai proses penaruhan. [Cara menjalankan validator lapisan konsensus](/developers/tutorials/run-node-raspberry-pi/#validator)
 
 ## Dasbor pengawasan {#monitoring-dashboards}
 
@@ -235,7 +235,7 @@ Keduanya memerlukan pengujian lebih lanjut, silakan dicoba dan laporkan umpan ba
 
 ## Cara menjalankan validator konsensus (penaruhan) {#validator}
 
-Setelah jaringan percobaan rantai suar Prater disinkronkan, Anda dapat menjalankan validator dalam perangkat yang sama. Anda perlu mengikuti [langkah partisipasi ini](https://prylabs.net/participate).
+Setelah jaringan percobaan rantai suar Goerli disinkronkan, Anda dapat menjalankan validator dalam perangkat yang sama. Anda perlu mengikuti [langkah partisipasi ini](https://prylabs.net/participate).
 
 Pertama-tama, Anda perlu membuat akun secara manual dengan menjalankan binari "validator" dan menyiapkan kata sandi. Setelah Anda telah menyelesaikan langkah ini, Anda bisa menambahkan kata sandi ke `/etc/ethereum/prysm-validator.conf` dan memulai validator sebagai layanan systemd.
 

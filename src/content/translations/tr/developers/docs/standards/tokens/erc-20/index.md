@@ -75,7 +75,7 @@ Ethereum'daki herhangi bir ERC-20 Token Sözleşmesini incelememizi basitleştir
 İlk olarak, [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python kütüphanesini kurduğunuzdan emin olun:
 
 ```
-$ pip install web3
+pip install web3
 ```
 
 ```python

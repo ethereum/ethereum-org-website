@@ -148,7 +148,7 @@ contract Simple {
 Anda bisa menjalankan Manticore secara langsung pada kontrak pintar dengan mengikuti perintah berikut (`proyek` bisa berupa File Solidity, atau direktori proyek):
 
 ```bash
-$ manticore project
+manticore project
 ```
 
 Anda akan mendapatkan output kasus percobaan seperti yang satu ini (urutannya bisa berubah):
@@ -194,7 +194,7 @@ Gunakan bendera `--quick-mode` jika Anda mau penjelajahan kode yang cepat (ini m
 
 ### Memanipulasi kontrak pintar lewat API {#manipulate-a-smart-contract-through-the-api}
 
-Bagian ini menjelaskan detail cara memanipulasi kontrak pintar lewat API Python Manticore. Anda bisa membuat file baru dengan ekstensi python `*.py` dan menulis kode yang diperlukan dengan menambahkan perintah API (dasar-dasarnya akan dijelaskan di bawah) ke dalam file lalu menjalankannya dengan perintah `$ python3 *.py`. Anda juga bisa mengeksekui perintah di bawah ini, langsung ke dalam konsol python; untuk menjalankan konsol gunakan perintah `$ python3`.
+Bagian ini menjelaskan detail cara memanipulasi kontrak pintar lewat API Python Manticore. Anda bisa membuat file baru dengan ekstensi python `*.py` dan menulis kode yang diperlukan dengan menambahkan perintah API (dasar-dasarnya akan dijelaskan di bawah) ke dalam file lalu menjalankannya dengan perintah `python3 *.py`. Anda juga bisa mengeksekui perintah di bawah ini, langsung ke dalam konsol python; untuk menjalankan konsol gunakan perintah `python3`.
 
 ### Membuat Akun {#creating-accounts}
 
