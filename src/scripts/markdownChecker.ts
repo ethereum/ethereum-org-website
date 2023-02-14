@@ -1,3 +1,5 @@
+import { Lang } from "../utils/languages"
+
 const fs = require("fs")
 const path = require("path")
 const matter = require("gray-matter")
@@ -40,7 +42,7 @@ const CASE_SENSITVE_SPELLING_MISTAKES = ["Thereum", "Metamask", "Github"]
 // We should have case sensitive spelling mistakes && check they are not in links.
 
 interface Languages {
-  lang?: Array<string>
+  lang?: Array<Lang>
 }
 
 const langsArray: Array<string> = fs.readdirSync(PATH_TO_INTL_MARKDOWN)
