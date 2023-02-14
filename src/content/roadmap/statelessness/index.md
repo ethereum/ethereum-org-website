@@ -3,7 +3,7 @@ title: Statelessness, state expiry and history expiry
 description: Explanation of history expiry and stateless Ethereum
 ---
 
-The ability to run Ethereum nodes on modest hardware is critical for true decentralization. This is because running a node gives users the ability to verify information by performing cryptographic checks on their own local copy of the Ethereum blockchain rather than trusting a third party to feed them data. Running a node allows users to submit transactions directly to the Ethereum peer-to-peer network rather than having to trust an intermediary. Decentralization is not possible if these benefits are only available to users with expensive hardware. Instead, nodes should be able to run with extremely modest processing and memory requirements so that they can run on mobile phones, micro-computers or unnoticeably on a home computer.
+The ability to run Ethereum nodes on modest hardware is critical for true decentralization. This is because running a node gives users the ability to verify information by performing cryptographic checks independently rather than trusting a third party to feed them data. Running a node allows users to submit transactions directly to the Ethereum peer-to-peer network rather than having to trust an intermediary. Decentralization is not possible if these benefits are only available to users with expensive hardware. Instead, nodes should be able to run with extremely modest processing and memory requirements so that they can run on mobile phones, micro-computers or unnoticeably on a home computer.
 
 Today, high disk space requirements is the main barrier preventing universal access to nodes. This is primarily due to the need to store large chunks of Ethereum's state data. This state data contains critical information required to correctly process new blocks and transactions. At the time of writing, a fast 2TB SD is recommended for running a full Ethereum node. For a node that does not prune any older data, the storage requirement grows at around 14GB/week, and archive nodes that store all data since genesis are approaching 12 TB.
 
@@ -44,9 +44,7 @@ State expiry refers to removing state from individual nodes if it hasn't been ac
 
 Expiry by rent could be a direct rent charged to accounts to keep them in the active state database. Expiry by time could be by countdown from the last account interaction, or it could be periodic expiry of all accounts. There could also be mechanisms that combine elements of both the time and rent based-models, for example individual accounts persist in the active state if they pay some small fee prior to time based expiry. With state expiry it is important to note that inactive state is **not deleted**, it is just stored separately from the active state. The inactive state can be resurrected into the active state.
 
-The way this would work is probably to have a state tree for specific time periods (perhaps ~1 year). Whenever a new period begins, so does a completely fresh state tree. Only the current state tree can be modified, all others are immutable. Ethereum nodes are only expected to hold the current state tree and the next most recent one. This requires a way to time-stamp an address with the period it exists in. This requires [addresses to be lengthened](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485) to accomodate the additional information with the added benefit that longer addresses are much more secure.
-
-There are also several other roadmap items that have to be addressed before state expiry could be implemented, including [Proposer-builder separation](./pbs). [Verkle Trees](./verkle-trees) and [address space extension](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485).
+The way this would work is probably to have a state tree for specific time periods (perhaps ~1 year). Whenever a new period begins, so does a completely fresh state tree. Only the current state tree can be modified, all others are immutable. Ethereum nodes are only expected to hold the current state tree and the next most recent one. This requires a way to time-stamp an address with the period it exists in. This requires [addresses to be lengthened](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485) to accommodate the additional information with the added benefit that longer addresses are much more secure. The roadmap item that does this is called [address space extension](https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485).
 
 Similarly to history expiry, under state expiry responsibility for storing old state data is removed from individual users and pushed onto other entities such as centralized providers, altruistic community members or more futuristic decentralized solutions such as the Portal Network.
 
@@ -62,7 +60,7 @@ Statelessness is a bit of a misnomer because it does not mean the concept of "st
 - nearly instant syncing
 - ability to validate blocks out-of-order
 - nodes able to run with very low hardware requirements (e.g. on phones)
-- nodes can run on top of cheap hard drives because there is no disk reading/writign required
+- nodes can run on top of cheap hard drives because there is no disk reading/writing required
 - compatible with future upgrades to Ethereum's cryptography
 
 ### Weak Statelessness {#weak-statelessness}
@@ -73,11 +71,25 @@ Weak statelessness does involve changes to the way Ethereum nodes verify state c
 
 For this to happen, [Verkle trees](../verkle-trees) must already have been implemented in Ethereum clients. Verkle trees are a replacement data structure for storing Ethereum state data that allow small, fixed size "witnesses" to the data to be passed between peers and used to verify blocks instead of verifying blocks against local databases. [Proposer-builder separation](../pbs) is also required because this allows block builders to be specialized nodes with more powerful hardware, and those are the ones that require access to the full state data.
 
-Block proposers use the state data to create "witnesses" that prove the values of the state that are being changed by the transactions in a block. Other validators do not hold the state, they only store the state root (a hash of the entire state). They receive a block and a witness and use them to update their state root. This makes a validating node extremely lightweight.
+<ExpandableCard title="Why is it OK to rely on fewer block proposers?">
+
+Statelessness relies oin block builders maintaining a copy of the full state data so that they can generate witnesses that can be used to verify the block. Other nodes do not need access to the state data, all the information required to verify the block is available in the witness. This creates a situation where proposing a block is expensive, but verifying the block is cheap, which implies fewer operators will run a block proposing node. However, decentralization of block proposers is not critical as long as as many participants as possible can independently verify that the blocks they propose are valid.
+
+Read more on [Dankrad's notes](https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers)
+
+</ExpandableCard>
+
+Block proposers use the state data to create "witnesses" - the minimal set of data that prove the values of the state that are being changed by the transactions in a block. Other validators do not hold the state, they only store the state root (a hash of the entire state). They receive a block and a witness and use them to update their state root. This makes a validating node extremely lightweight.
 
 Weak statelessness is in an advanced state of research, but it relies upon [Proposer-builder separation](../pbs) and Verkle Trees to have been implemented so that small witnesses can be passed between peers. This means weak statelessness is probably a few years away from Ethereum Mainnet.
 
 ### Strong statelessness {#strong-statelessness}
+
+Strong statelessness removes the need for any blocks to store state data. Instead, transactions are sent with witnesses that can be aggregated by block producers. The block producers are then responsible for storing only that state that are needed for generating witnesses for relevant accounts. The responsibility for state is almost entirely moved to users, as they send witnesses and 'access lists' to declare which accounts and storage keys they are interacting with.
+
+Strong statelessness is the most elegant solution to reducign the disk requirements for nodes but it requires some susbantial updates to the Ethereum protocol. It is still in the resarch phase and probably won't ship for several years.
+
+## Further reading {#further-reading}
 
 - [Vitalik statelessness AMA](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)
 - [The Stateless Client Concept ethresear.ch post](https://ethresear.ch/t/the-stateless-client-concept/172)
