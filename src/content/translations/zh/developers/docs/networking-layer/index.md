@@ -27,19 +27,21 @@ sidebarDepth: 2
 
 ### 发现 {#discovery}
 
-发现是在网络中寻找其他节点的过程。 该过程使用一小组引导节点（即地址[硬编码](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go)为客户端的节点，以便它们能被立即找到，并将客户端连接至对等点）进行引导。 这些引导节点旨在将新节点引入一组对等点，这是它们唯一的目的。它们不参与普通的客户端任务，例如同步链，仅在第一次使用客户端时使用。
+发现是在网络中寻找其他节点的过程。 该过程使用一小组引导节点（即地址被[硬编码](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go)到客户端中的一组节点，以便它们能被立即被客户端找到，并与对等节点进行连接）进行引导。 这些引导节点为了将新节点引入一组对等点而生，这是它们唯一的目的。它们不参与普通的客户端任务，例如链同步，并且仅在第一次使用客户端时使用。
 
-节点与引导节点交互所使用的协议是 [Kademlia](https://medium.com/coinmonks/a-brief-overview-of-kademlia-and-its-use-in-various-decentralized-platforms-da08a7f72b8f) 的修改版，它使用[分布式散列表](https://en.wikipedia.org/wiki/Distributed_hash_table)共享节点列表。 每个节点都有一版此表格，其中包含连接到最近节点所需的信息。 这个“最近”不是指地理距离，而是由节点 ID 的相似性来界定的。 每个节点的表格都会定期刷新，作为一种安全特性。 例如，在 [Discv5](https://github.com/ethereum/devp2p/tree/master/discv5) 中，发现协议节点也可以发送显示客户端支持的子协议的聚合发现服务，以便对等点协调通信所用的协议。
+节点与引导节点交互所使用的协议是 [Kademlia](https://medium.com/coinmonks/a-brief-overview-of-kademlia-and-its-use-in-various-decentralized-platforms-da08a7f72b8f) 的修改版，它使用[分布式散列表](https://en.wikipedia.org/wiki/Distributed_hash_table)共享节点列表。 每个节点都有一版此表格，其中包含连接到最临近近节点所需的信息。 这个“最近”不是指地理距离，而是由节点 ID 的相似性来界定的。 出于安全性考虑，每个节点的表格都会定期刷新。 例如，在 [Discv5](https://github.com/ethereum/devp2p/tree/master/discv5) 中，发现协议节点也可以发送显示客户端支持的子协议的聚合发现服务，以便对等点协调通信所用的协议。
 
 发现过程从 PING-PONG 游戏开始。 一个成功的 PING-PONG 将新节点“连接”到一个启动节点。 提醒引导节点有新节点进入网络的初始消息为 `PING`。 此 `PING` 包括关于新节点、引导节点和过期时间戳的哈希信息。 引导节点收到 PING 并返回一个包含 `PING` 哈希值的 `PONG`。 如果 `PING` 和 `PONG` 的哈希值相匹配，新节点和引导节点之间的连接就会得到验证，然后就认为它们已经“绑定”。
 
 绑定之后，新节点即可向引导节点发送 `FIND-NEIGHBOURS` 请求。 引导节点返回的数据包含一个新节点可以连接的节点列表。 如果这两个节点没有绑定，`FIND-NEIGHBOURS` 请求将失败，新节点将无法进入网络。
 
-新节点从引导节点收到邻居节点列表后，就会开始与每个邻居节点交换 PING-PONG。 成功的 PING-PONG 将新节点与邻居节点绑定在一起，以实现消息交换。
+新节点从引导节点收到邻居节点列表后，就会开始与每个邻居节点交换 PING-PONG。 成功的 PING-PONG 将新节点与邻居节点绑定在一起，以支持消息交换。
 
 ```
 启动客户端 --> 连接到 bootnode --> 绑定到 bootnode --> 寻找邻居--> 绑定到邻居。
 ```
+
+执行客户端当前使用的是[Discv4](https://github.com/ethereum/devp2p/blob/master/discv4.md)发现协议，正在积极尝试迁移到[Discv5](https://github.com/ethereum/devp2p/tree/master/discv5)协议。
 
 #### ENR：以太坊节点记录 {#enr}
 
