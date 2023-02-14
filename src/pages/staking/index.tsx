@@ -27,6 +27,7 @@ import StakingCommunityCallout from "../../components/Staking/StakingCommunityCa
 import { translateMessageId, TranslationKey } from "../../utils/translations"
 import { getImage } from "../../utils/image"
 import type { Context } from "../../types"
+import { Box } from "@chakra-ui/react"
 
 const HeroStatsWrapper = styled.div`
   display: flex;
@@ -84,18 +85,19 @@ const InfoColumn = styled.aside`
   }
 `
 
-const MobileButton = styled.div`
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    background: ${(props) => props.theme.colors.background};
-    box-shadow: 0 -1px 0px ${(props) => props.theme.colors.border};
-    width: 100%;
-    bottom: 0;
-    position: sticky;
-    padding: 2rem;
-    z-index: 99;
-    margin-bottom: 0rem;
-  }
-`
+// const MobileButton = styled.div`
+//   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+//     background: ${(props) => props.theme.colors.background};
+//     box-shadow: 0 -1px 0px ${(props) => props.theme.colors.border};
+//     width: 100%;
+//     bottom: 0;
+//     position: sticky;
+//     padding: 2rem;
+//     z-index: 99;
+//     margin-bottom: 0rem;
+//     height: fit-content;
+//   }
+// `
 
 // const MobileButtonDropdown = styled(StyledButtonDropdown)`
 //   margin-bottom: 0rem;
@@ -754,13 +756,26 @@ const StakingPage = ({
             <FeedbackCard />
           </Content>
         </ContentContainer>
-        <MobileButton>
+        {/* Mobile Button */}
+        <Box
+          display={{ base: "block", lg: "none" }}
+          backgroundColor="background"
+          boxShadow="0 -1px 0px border"
+          width="100%"
+          bottom={0}
+          position="sticky"
+          padding={8}
+          zIndex={99}
+          marginBottom={0}
+          height="fit-content"
+        >
           <ButtonDropdown
             list={dropdownLinks}
             marginBottom={0}
             display={{ base: "block", l: "none" }}
+            height="fit-content"
           />
-        </MobileButton>
+        </Box>
       </Page>
     </PageContainer>
   )

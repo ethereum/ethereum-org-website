@@ -62,6 +62,7 @@ const ButtonDropdown: React.FC<IProps> = ({ list, ...props }) => {
       matchWidth={true}
       offset={[0, 4]}
       flip={false}
+      placement="bottom-end"
     >
       {({ isOpen }) => (
         <Box
@@ -97,6 +98,11 @@ const ButtonDropdown: React.FC<IProps> = ({ list, ...props }) => {
             backgroundColor="dropdownBackground"
             color="text"
             width={{ base: "100%", lg: "auto" }}
+            display={{ base: isOpen ? "block" : "none", lg: "none" }}
+            position="initial"
+            rootProps={{
+              position: "initial",
+            }}
           >
             {list.items.map(({ text, to, matomo, callback }, idx) => (
               <MenuItem
