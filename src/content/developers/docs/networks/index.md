@@ -47,7 +47,6 @@ The Sepolia network uses a permissioned validator set. It's fairly new, meaning 
 
 ##### Resources
 
-- [QuickNode Sepolia Faucet](https://faucet.quicknode.com/drip)
 - [Website](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
@@ -55,6 +54,7 @@ The Sepolia network uses a permissioned validator set. It's fairly new, meaning 
 
 ##### Faucets
 
+- [QuickNode Sepolia Faucet](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [PoW faucet](https://sepolia-faucet.pk910.de/)
 - [Sepolia faucet](https://faucet.sepolia.dev/)
