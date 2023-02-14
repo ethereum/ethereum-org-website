@@ -15,7 +15,7 @@ Deze lijst is samengesteld door onze gemeenschap. Als er iets ontbreekt of niet 
 Deze programma's ondersteunen het brede Ethereum-ecosysteem door subsidies aan te bieden voor een breed scala aan projecten. Deze omvatten oplossingen voor schaalbaarheid, gemeenschapsgebouw, veiligheid, privacy en meer. Deze subsidies zijn niet specifiek voor één Ethereum-platform en zijn een goede plek om te beginnen als u niet zeker bent.
 
 - [EF Ecosystem Support Programma](https://esp.ethereum.foundation) - _Het financieren van open-source projecten waar Ethereum van profiteert, met een bijzondere nadruk op universele instrumenten, infrastructuur, onderzoek en publieke goederen_
-  - [Academic Grants Round](/community/grants/academic-grants-round/) - _De Ethereum Foundation sponsort een golf van subsidies ter ondersteuning van academisch werk gerelateerd aan Ethereum_
+  - [Academic Grants Round](https://esp.ethereum.foundation/academic-grants) - _De Ethereum Foundation sponsort een golf van subsidies ter ondersteuning van academisch werk gerelateerd aan Ethereum_
 - [Ethereum RFPs](https://github.com/ethereum/requests-for-proposals) - _Verzoeken om voorstellen door de Ethereum Foundation voor werk en projecten in het Ethereum-ecosysteem_
 - [MetaCartel](https://www.metacartel.org/grants/) - _Dapp-ontwikkeling, DAO-creatie_  
   Subsidies variërend van $ 1K - $ 8K USD.
