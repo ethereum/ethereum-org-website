@@ -10,17 +10,13 @@ summaryPoint3: Data blobs offer a cheaper way for rollups to post data to Ethere
 summaryPoint4: Later, full Danksharding will spread responsibility for verifying data blobs across subsets of nodes, further scaling Ethereum to more than 100,000 transactions per second.
 ---
 
-<UpgradeStatus dateKey="Stage 1 in ~2023">
-    ProtoDanksharding could ship sometime in 2023. Full Danksharding is likely to ship much later, possibly several years from now. 
-</UpgradeStatus>
-
 <InfoBanner isWarning>
   Danksharding is how Ethereum becomes a truly scalable blockchain, but there are several protocol upgrades required to get there. Proto-Danksharding is an intermediate step along the way. Both aim to make transactions on Layer 2 as cheap as possible for users and should scale Ethereum to >100,000 transactions per second.
 </InfoBanner>
 
 ## What is Proto-Danksharding? {#what-is-protodanksharding}
 
-Proto-Danksharding, also known as EIP-4844, is a way for rollups to add cheaper data to blocks. Right now, rollups are limited in how cheap they can make user transactions by the fact that they post their transactions in `CALLDATA`. This is expensive because it is processed by all Ethereum nodes and lives on chain forever, even though rollups only need the data for a short time. Proto-Danksharding introduces data blobs that can be sent attached to blocks. These blobs are ignored by normal Ethereum nodes and are automatically deleted after a fixed time period (1-3 months). This means rollups can send their data much more cheaply and pass the savings on to end users in the form of cheaper transactions.
+Proto-Danksharding, also known as EIP-4844, is a way for rollups to add cheaper data to blocks. Right now, rollups are limited in how cheap they can make user transactions by the fact that they post their transactions in `CALLDATA`. This is expensive because it is processed by all Ethereum nodes and lives on chain forever, even though rollups only need the data for a short time. Proto-Danksharding introduces data blobs that can be sent attached to blocks. The data in these blobs is not accessible to the EVM and is automatically deleted after a fixed time period (1-3 months). This means rollups can send their data much more cheaply and pass the savings on to end users in the form of cheaper transactions.
 
 [Read more on Proto-Danksharding](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq)
 
