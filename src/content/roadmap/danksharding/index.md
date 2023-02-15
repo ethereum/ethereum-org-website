@@ -15,7 +15,7 @@ summaryPoint4: Later, full Danksharding will spread responsibility for verifying
 </UpgradeStatus>
 
 <InfoBanner isWarning>
-  Danksharding is how Ethereum becomes fully scaled, but there are several protocol upgrades required to get there. Proto-Danksharding is an intermediate step along the way. Both aim to make transactions on Layer 2 as cheap as possible for users and should scale Ethereum to >100,000 transactions per second.
+  Danksharding is how Ethereum becomes a truly scalable blockchain, but there are several protocol upgrades required to get there. Proto-Danksharding is an intermediate step along the way. Both aim to make transactions on Layer 2 as cheap as possible for users and should scale Ethereum to >100,000 transactions per second.
 </InfoBanner>
 
 ## What is Proto-Danksharding? {#what-is-protodanksharding}

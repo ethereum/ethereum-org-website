@@ -87,7 +87,7 @@ Weak statelessness is in an advanced state of research, but it relies upon [Prop
 
 Strong statelessness removes the need for any blocks to store state data. Instead, transactions are sent with witnesses that can be aggregated by block producers. The block producers are then responsible for storing only that state that are needed for generating witnesses for relevant accounts. The responsibility for state is almost entirely moved to users, as they send witnesses and 'access lists' to declare which accounts and storage keys they are interacting with.
 
-Strong statelessness is the most elegant solution to reducign the disk requirements for nodes but it requires some susbantial updates to the Ethereum protocol. It is still in the resarch phase and probably won't ship for several years.
+Strong statelessness is the most elegant solution to reducing the disk requirements for nodes but it requires some substantial updates to the Ethereum protocol. It is still in the research phase and probably won't ship for several years.
 
 ## Further reading {#further-reading}
 
