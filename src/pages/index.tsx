@@ -593,9 +593,9 @@ const HomePage = ({
       {/* Eth Today Section */}
       <GrayContainer>
         <ContentBox>
-          <h2>
+          <SectionHeading mt={undefined} mb={undefined} fontFamily={undefined}>
             <Translation id="page-index-network-stats-title" />
-          </h2>
+          </SectionHeading>
           <SectionDecription>
             <Translation id="page-index-network-stats-subtitle" />
           </SectionDecription>
@@ -604,11 +604,11 @@ const HomePage = ({
       </GrayContainer>
       {/* Explore Section */}
       <ContentBox>
-        <h2>
-          <Translation id="page-index-touts-header" />
-        </h2>
-      </ContentBox>
-      <ContentBox>
+        <Box pb={4}>
+          <SectionHeading mt={undefined} mb={undefined} fontFamily={undefined}>
+            <Translation id="page-index-touts-header" />
+          </SectionHeading>
+        </Box>
         <CardContainer minChildWidth={{ lg: "400px" }}>
           {touts.map((tout, idx) => {
             return (
