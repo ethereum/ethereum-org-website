@@ -322,7 +322,7 @@ const TableContainer: FC<BoxProps> = (props) => (
         borderSpacing: "1rem 0",
       },
       th: {
-        whiteSpace: "normal",
+        whiteSpace: "break-spaces",
         textAlign: "center",
       },
     }}
