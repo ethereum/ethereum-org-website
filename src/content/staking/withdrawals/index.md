@@ -102,13 +102,13 @@ Expanding this calculation, we can estimate the time it will take to process a g
 
 <TableContainer>
 
-| Number of withdrawals | Time to complete |
-| :-------------------: | :--------------: |
-|        400,000        |     3.5 days     |
-|        500,000        |     4.3 days     |
-|        600,000        |     5.2 days     |
-|        700,000        |     6.1 days     |
-|        800,000        |     7.0 days     |
+| Withdrawals |   Time   |
+| :---------: | :------: |
+|   400,000   | 3.5 days |
+|   500,000   | 4.3 days |
+|   600,000   | 5.2 days |
+|   700,000   | 6.1 days |
+|   800,000   | 7.0 days |
 
 </TableContainer>
 
