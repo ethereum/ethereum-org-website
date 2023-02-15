@@ -500,6 +500,7 @@ const HomePage = ({
       </MainSectionContainer>
       {/* Internet Section */}
       <MainSectionContainer containerBg="homeBoxPink">
+        <Box pl={{ lg: 8 }}>
         <Row>
           <FeatureContent>
             <SectionHeading>
@@ -524,6 +525,7 @@ const HomePage = ({
             />
           </ImageContainer>
         </Row>
+        </Box>
       </MainSectionContainer>
       {/* Developer Section */}
       <MainSectionContainer containerBg="homeBoxPurple">
