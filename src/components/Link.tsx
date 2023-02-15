@@ -65,8 +65,14 @@ const Link: React.FC<IProps> = ({
   const isStatic = url.isStatic(to)
   const isPdf = url.isPdf(to)
 
-  const eventOptions: EventOptions = {
+  const externalLinkEvent: EventOptions = {
     eventCategory: `External link`,
+    eventAction: `Clicked`,
+    eventName: to,
+  }
+
+  const hashLinkEvent: EventOptions = {
+    eventCategory: `Hash link`,
     eventAction: `Clicked`,
     eventName: to,
   }
@@ -81,7 +87,21 @@ const Link: React.FC<IProps> = ({
   // See https://github.com/gatsbyjs/gatsby/issues/21909
   if (isHash) {
     return (
-      <ChakraLink href={to} {...commonProps}>
+      <ChakraLink
+        href={to}
+        onClick={(e) => {
+          // only track events on external links and hash links
+          if (!isHash) {
+            return
+          }
+
+          e.stopPropagation()
+          trackCustomEvent(
+            customEventOptions ? customEventOptions : hashLinkEvent
+          )
+        }}
+        {...commonProps}
+      >
         {children}
       </ChakraLink>
     )
@@ -100,14 +120,14 @@ const Link: React.FC<IProps> = ({
           mr: 1.5,
         }}
         onClick={(e) => {
-          // only track events on external links
+          // only track events on external links and hash links
           if (!isExternal) {
             return
           }
 
           e.stopPropagation()
           trackCustomEvent(
-            customEventOptions ? customEventOptions : eventOptions
+            customEventOptions ? customEventOptions : externalLinkEvent
           )
         }}
         {...commonProps}
