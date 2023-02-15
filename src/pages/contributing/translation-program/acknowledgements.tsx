@@ -83,9 +83,9 @@ const TranslatorAcknowledgements = ({
         </ContentHeading>
         <Flex
           direction={{ base: "column", lg: "row" }}
-          align={{ base: "flex-start", lg: undefined }}
+          align={{ base: "flex-start", lg: "normal" }}
           w="full"
-          ml={{ base: 0, lg: undefined }}
+          ml={0}
           mr={{ base: 0, lg: 8 }}
         >
           {/* LEFT COLUMN */}
