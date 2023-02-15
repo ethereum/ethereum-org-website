@@ -501,36 +501,36 @@ const HomePage = ({
       {/* Internet Section */}
       <MainSectionContainer containerBg="homeBoxPink">
         <Box pl={{ lg: 8 }}>
-        <Row>
-          <FeatureContent>
-            <SectionHeading>
-              <Translation id="page-index-internet" />
-            </SectionHeading>
-            <SectionDecription>
-              <Translation id="page-index-internet-description" />
-            </SectionDecription>
-            <ButtonLinkRow
-              firstButton={{
-                to: "/dapps/?category=technology",
-                child: <Translation id="page-index-internet-button" />,
-              }}
+          <Row>
+            <FeatureContent>
+              <SectionHeading>
+                <Translation id="page-index-internet" />
+              </SectionHeading>
+              <SectionDecription>
+                <Translation id="page-index-internet-description" />
+              </SectionDecription>
+              <ButtonLinkRow
+                firstButton={{
+                  to: "/dapps/?category=technology",
+                  child: <Translation id="page-index-internet-button" />,
+                }}
                 secondButton={{
                   to: "/wallets/",
                   child: (
                     <Translation id="page-index-internet-secondary-button" />
                   ),
                 }}
-            />
-          </FeatureContent>
-          <ImageContainer pl={{ lg: 8 }}>
-            <Img
-              as={GatsbyImage}
-              width="full"
-              image={getImage(data.future)!}
-              alt={translateMessageId("page-index-internet-image-alt", intl)}
-            />
-          </ImageContainer>
-        </Row>
+              />
+            </FeatureContent>
+            <ImageContainer>
+              <Img
+                as={GatsbyImage}
+                width="full"
+                image={getImage(data.future)!}
+                alt={translateMessageId("page-index-internet-image-alt", intl)}
+              />
+            </ImageContainer>
+          </Row>
         </Box>
       </MainSectionContainer>
       {/* Developer Section */}
