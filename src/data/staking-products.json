@@ -651,7 +651,7 @@
           "url": "https://assets.ankr.com/staking/smart_contract_security_audit_aeth_beosin.pdf"
         }
       ],
-      "minEth": 0.5,
+      "minEth": 0,
       "feePercentage": 15,
       "tokens": [
         {
@@ -660,8 +660,8 @@
           "address": "0xD01ef7C0A5d8c432fc2d1a85c66cF2327362E5C6"
         },
         {
-          "name": "Ankr Eth2 Reward Bearing Certificate",
-          "symbol": "aETHc",
+          "name": "Ankr Staked ETH",
+          "symbol": "ankrETH",
           "address": "0xE95A203B1a91a908F9B9CE46459d101078c2c3cb"
         }
       ],
@@ -670,7 +670,7 @@
       "isTrustless": false,
       "hasPermissionlessNodes": false,
       "pctMajorityClient": 67.94,
-      "platforms": ["Browser"],
+      "platforms": ["Browser", "Wallet"],
       "ui": ["GUI"],
       "socials": {
         "telegram": "https://t.me/stkrsupport",

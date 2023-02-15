@@ -20,7 +20,7 @@ This report published in May 2022 by [DelphiDigital](https://members.delphidigit
 
 ## Sources of Funding {#sources-of-funding}
 
-You can get involved with Ethereum research and get paid for it! For example, [the Ethereum Foundation](/foundation/) recently ran an [Academic Grants funding round](/community/grants/academic-grants-round/). You can find information on active and upcoming funding opportunities on [the Ethereum grants page](/community/grants/).
+You can get involved with Ethereum research and get paid for it! For example, [the Ethereum Foundation](/foundation/) recently ran an [Academic Grants funding round](https://esp.ethereum.foundation/academic-grants). You can find information on active and upcoming funding opportunities on [the Ethereum grants page](/community/grants/).
 
 ## Protocol research {#protocol-research}
 
