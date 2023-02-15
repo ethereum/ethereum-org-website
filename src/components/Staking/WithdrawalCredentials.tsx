@@ -5,7 +5,7 @@ import { Button, Flex, Input, Spinner, Text } from "@chakra-ui/react"
 import CopyToClipboard from "../CopyToClipboard"
 import Emoji from "../Emoji"
 import Link from "../Link"
-import InfoBanner from "../InfoBanner"
+import { trackCustomEvent } from "../../utils/matomo"
 
 interface Validator {
   validatorIndex: number
@@ -25,6 +25,11 @@ const WithdrawalCredentials: FC<IProps> = () => {
   const [validator, setValidator] = useState<Validator | null>(null)
 
   const checkWithdrawalCredentials = async (isTestnet: boolean = false) => {
+    trackCustomEvent({
+      eventCategory: `Validator index`,
+      eventAction: `Verify on ${isTestnet ? "Goerli" : "Mainnet"}`,
+      eventName: `click`,
+    })
     setHasError(false)
     setIsLoading((prev) => ({
       ...prev,

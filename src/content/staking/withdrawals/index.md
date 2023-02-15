@@ -116,40 +116,86 @@ As you see this slows down as more validators are on the network. An increase in
 
 ## Frequently asked questions {#faq}
 
-<ExpandableCard title="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?">
-No, the process to provide withdrawal credentials is a one-time process, and cannot be changed once submitted.
-</ExpandableCard>
+<ExpandableCard
+title="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
+eventCategory="FAQ"
+eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
+eventName="read more"
 
-<ExpandableCard title="Why can a withdrawal address only be set once?">
-By setting an execution layer withdrawal address the withdrawal credentials for that validator have permanently been changed. This means the old credentials will no longer work, and the new credentials direct to an execution layer account.
+> No, the process to provide withdrawal credentials is a one-time process, and cannot be changed once submitted.
+> </ExpandableCard>
+
+<ExpandableCard
+title="Why can a withdrawal address only be set once?"
+eventCategory="FAQ"
+eventAction="Why can a withdrawal address only be set once?"
+eventName="read more"
+
+> By setting an execution layer withdrawal address the withdrawal credentials for that validator have permanently been changed. This means the old credentials will no longer work, and the new credentials direct to an execution layer account.
 
 Withdrawal addresses can be either a smart contract (controlled by its code), or an externally owned account (EOA, controlled by its private key). Currently these accounts have no way to communicate a message back to the consensus layer that would signal a change of validator credentials, and adding this functionality would add unnecessary complexity to the protocol.
 
 As an alternative to changing the withdrawal address for a particular validator, users may choose to set a smart contract as their withdrawal address which could handle key rotating, such as a Safe. Users who set their funds to their own EOA can perform a full exit to withdrawal all of their staked funds, and then re-stake using new credentials.
 </ExpandableCard>
 
-<ExpandableCard title="What if I participate in liquid staking derivatives or pooled staking">
+<ExpandableCard
+title="What if I participate in liquid staking derivatives or pooled staking"
+eventCategory="FAQ"
+eventAction="What if I participate in liquid staking derivatives or pooled staking"
+eventName="read more"
+
+>
+
 <p>If you are part of a <a href="/staking/pools/">staking pool</a> or hold liquid staking derivatives, you should check with your provider for more details about how staking withdrawals will affect your arrangement, as each service operates differently.</p>
 <p>In general, users will likely have nothing they need to do, and these services will no longer be limited by the inability to withdrawal rewards or exit validator funds after this upgrade.</p>
 <p>This means that users can now decide to redeem their underlying staked ETH, or change which staking provider they utilize. If a particular pool is getting too large, funds can be exited and redeemed, and re-staked with a <a href="https://pools.invis.cloud">smaller provider</a>. Or, if you’ve accumulated enough ETH you could <a href="/staking/solo/">stake from home</a>.</p>
 </ExpandableCard>
 
-<ExpandableCard title="Do reward payments (partial withdrawals) happen automatically?">
+<ExpandableCard
+title="Do reward payments (partial withdrawals) happen automatically?"
+eventCategory="FAQ"
+eventAction="Do reward payments (partial withdrawals) happen automatically?"
+eventName="read more"
+
+>
+
 <p>Yes, as long as your validator has provided a withdrawal address. This must be provided once to enable any withdrawals, then reward payments will be automatically triggered every few days with each validator sweep.</p>
 </ExpandableCard>
 
-<ExpandableCard title="Do full withdrawals happen automatically?">
+<ExpandableCard
+title="Do full withdrawals happen automatically?"
+eventCategory="FAQ"
+eventAction="Do full withdrawals happen automatically?"
+eventName="read more"
+
+>
+
 <p>No, if your validator is still active on the network, a full withdrawal will not happen automatically. This requires manually initiating a voluntary exit.</p>
 <p>Once a validator has completed the exiting process, and assuming the account has withdrawal credentials, the remaining balance will <em>then</em> be withdrawn during the next validator sweep.</p>
 </ExpandableCard>
 
-<ExpandableCard title="How can I withdrawal a custom amount?">
+<ExpandableCard
+title="How can I withdrawal a custom amount?"
+eventCategory="FAQ"
+eventAction="How can I withdrawal a custom amount?"
+eventName="read more"
+
+>
+
 <p>Withdrawals are designed to be pushed automatically, transferring any ETH that is not actively contributing to stake. This includes full balances for accounts </p>
 <p>It is not possible to manually request specific amounts of ETH to be withdrawn.</p>
 </ExpandableCard>
 
 <!-- TODO: Switch link to Mainnet once available -->
-<ExpandableCard title="I operate a validator, where can I find more information on preparing?">
+
+<ExpandableCard
+title="I operate a validator, where can I find more information on preparing?"
+eventCategory="FAQ"
+eventAction="I operate a validator, where can I find more information on preparing?"
+eventName="read more"
+
+>
+
 <p>Validator operators are recommended to visit the <a href="https://zhejiang.launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals (Zhejiang Testnet)</a> page where you'll find more details about how to be prepared, timing of events, and more details about how withdrawals function.</p>
 </ExpandableCard>
 

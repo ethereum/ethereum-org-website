@@ -22,6 +22,7 @@ export interface IProps {
   contentPreview?: ReactNode
   title: ReactNode
   svg?: typeof Icon
+  eventAction?: string
   eventCategory?: string
   eventName?: string
 }
@@ -31,12 +32,13 @@ const ExpandableCard: React.FC<IProps> = ({
   contentPreview,
   title,
   svg: Svg,
+  eventAction = "Clicked",
   eventCategory = "",
   eventName = "",
 }) => {
   const [isVisible, setIsVisible] = useState(false)
   const matomo = {
-    eventAction: `Clicked`,
+    eventAction,
     eventCategory: `ExpandableCard${eventCategory}`,
     eventName,
   }
