@@ -47,6 +47,7 @@ const SectionHeading = (props: HeadingProps) => (
     fontFamily="sans-serif"
     fontSize={{ base: "2xl", sm: "2rem" }}
     fontWeight={600}
+    mt={0}
     mb={2}
     {...props}
   />
