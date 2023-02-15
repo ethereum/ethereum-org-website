@@ -1,6 +1,6 @@
 // Libraries
 import React, { useEffect, useState } from "react"
-import { Box, Center, CloseButton } from "@chakra-ui/react"
+import { Center, CloseButton } from "@chakra-ui/react"
 
 // Components
 import BannerNotification from "../BannerNotification"
@@ -27,11 +27,11 @@ const DismissableBanner: React.FC<IProps> = ({ children, storageKey }) => {
 
   return (
     <BannerNotification shouldShow={show}>
-      <Center paddingRight={8} flexWrap="wrap">
-        <Emoji marginRight={4} flexShrink={0} text=":tada:" w={4} h={4} />
-        <Box paddingLeft="5px">{children}</Box>
+      <Center paddingEnd={8}>
+        <Emoji marginEnd={4} flexShrink={0} text=":tada:" />
+        {children}
       </Center>
-      <CloseButton onClick={onClose} aria-label="Close Banner" float="right" />
+      <CloseButton onClick={onClose} aria-label="Close Banner" />
     </BannerNotification>
   )
 }
