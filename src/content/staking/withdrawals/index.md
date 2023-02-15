@@ -120,18 +120,16 @@ As you see this slows down as more validators are on the network. An increase in
 title="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventCategory="FAQ"
 eventAction="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
-eventName="read more"
-
-> No, the process to provide withdrawal credentials is a one-time process, and cannot be changed once submitted.
-> </ExpandableCard>
+eventName="read more">
+No, the process to provide withdrawal credentials is a one-time process, and cannot be changed once submitted.
+</ExpandableCard>
 
 <ExpandableCard
 title="Why can a withdrawal address only be set once?"
 eventCategory="FAQ"
 eventAction="Why can a withdrawal address only be set once?"
-eventName="read more"
-
-> By setting an execution layer withdrawal address the withdrawal credentials for that validator have permanently been changed. This means the old credentials will no longer work, and the new credentials direct to an execution layer account.
+eventName="read more">
+By setting an execution layer withdrawal address the withdrawal credentials for that validator have permanently been changed. This means the old credentials will no longer work, and the new credentials direct to an execution layer account.
 
 Withdrawal addresses can be either a smart contract (controlled by its code), or an externally owned account (EOA, controlled by its private key). Currently these accounts have no way to communicate a message back to the consensus layer that would signal a change of validator credentials, and adding this functionality would add unnecessary complexity to the protocol.
 
@@ -142,9 +140,7 @@ As an alternative to changing the withdrawal address for a particular validator,
 title="What if I participate in liquid staking derivatives or pooled staking"
 eventCategory="FAQ"
 eventAction="What if I participate in liquid staking derivatives or pooled staking"
-eventName="read more"
-
->
+eventName="read more">
 
 <p>If you are part of a <a href="/staking/pools/">staking pool</a> or hold liquid staking derivatives, you should check with your provider for more details about how staking withdrawals will affect your arrangement, as each service operates differently.</p>
 <p>In general, users will likely have nothing they need to do, and these services will no longer be limited by the inability to withdrawal rewards or exit validator funds after this upgrade.</p>
@@ -155,9 +151,7 @@ eventName="read more"
 title="Do reward payments (partial withdrawals) happen automatically?"
 eventCategory="FAQ"
 eventAction="Do reward payments (partial withdrawals) happen automatically?"
-eventName="read more"
-
->
+eventName="read more">
 
 <p>Yes, as long as your validator has provided a withdrawal address. This must be provided once to enable any withdrawals, then reward payments will be automatically triggered every few days with each validator sweep.</p>
 </ExpandableCard>
@@ -166,9 +160,7 @@ eventName="read more"
 title="Do full withdrawals happen automatically?"
 eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
-eventName="read more"
-
->
+eventName="read more">
 
 <p>No, if your validator is still active on the network, a full withdrawal will not happen automatically. This requires manually initiating a voluntary exit.</p>
 <p>Once a validator has completed the exiting process, and assuming the account has withdrawal credentials, the remaining balance will <em>then</em> be withdrawn during the next validator sweep.</p>
@@ -178,9 +170,7 @@ eventName="read more"
 title="How can I withdrawal a custom amount?"
 eventCategory="FAQ"
 eventAction="How can I withdrawal a custom amount?"
-eventName="read more"
-
->
+eventName="read more">
 
 <p>Withdrawals are designed to be pushed automatically, transferring any ETH that is not actively contributing to stake. This includes full balances for accounts </p>
 <p>It is not possible to manually request specific amounts of ETH to be withdrawn.</p>
@@ -192,9 +182,7 @@ eventName="read more"
 title="I operate a validator, where can I find more information on preparing?"
 eventCategory="FAQ"
 eventAction="I operate a validator, where can I find more information on preparing?"
-eventName="read more"
-
->
+eventName="read more">
 
 <p>Validator operators are recommended to visit the <a href="https://zhejiang.launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals (Zhejiang Testnet)</a> page where you'll find more details about how to be prepared, timing of events, and more details about how withdrawals function.</p>
 </ExpandableCard>
