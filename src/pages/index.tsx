@@ -514,6 +514,12 @@ const HomePage = ({
                 to: "/dapps/?category=technology",
                 child: <Translation id="page-index-internet-button" />,
               }}
+                secondButton={{
+                  to: "/wallets/",
+                  child: (
+                    <Translation id="page-index-internet-secondary-button" />
+                  ),
+                }}
             />
           </FeatureContent>
           <ImageContainer pl={{ lg: 8 }}>
