@@ -30,7 +30,6 @@ import { translateMessageId } from "../utils/translations"
 import { getImage, getSrc } from "../utils/image"
 import { Context } from "../types"
 import { Box, Flex, chakra } from "@chakra-ui/react"
-import { cover } from "polished"
 
 const StyledTwoColumnContent = chakra(TwoColumnContent)
 
