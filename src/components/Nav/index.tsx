@@ -12,8 +12,8 @@ import Link from "../Link"
 import Search from "../Search"
 import Translation from "../Translation"
 import { NavLink } from "../SharedStyledComponents"
+import { EthHomeIcon } from "../icons"
 import { translateMessageId } from "../../utils/translations"
-import HomeIcon from "../../assets/eth-home-icon.svg"
 import { IItem, ISections } from "./types"
 
 const NavContainer = styled.div`
@@ -87,9 +87,7 @@ const HomeLogoNavLink = styled(Link)`
   align-items: center;
 `
 
-const HomeLogo = styled(HomeIcon)`
-  width: 22px;
-  height: 35px;
+const HomeLogo = styled(EthHomeIcon)`
   opacity: 0.85;
   &:hover {
     opacity: 1;
@@ -178,8 +176,12 @@ const Nav: React.FC<IProps> = ({ path }) => {
           items: [
             {
               // @ts-ignore: until we add the translations
-              text: "Learn hub",
+              text: "hero-title",
               to: "/learn/",
+            },
+            {
+              text: "guides-hub",
+              to: "/guides/",
             },
           ],
         },

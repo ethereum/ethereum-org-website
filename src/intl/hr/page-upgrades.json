@@ -1,3 +1,13 @@
 {
-  "page-upgrades-beacon-date": "Dostavljeno!"
+  "page-upgrades-merge-infographic-el": "Stanje Ethereuma: transakcije, aplikacije, ugovori, bilance",
+  "page-upgrades-merge-infographic-alt-text": "Informativni dijagram koji prikazuje kako je Beacon Chain objedinjen u sloj za izvršavanje Ethereuma tijekom prijelaza s koncepta dokaza rada na koncept dokaza uloga.",
+  "page-upgrades-beacon-date": "Otpremljen!",
+  "page-upgrades-merge-date": "Rujan 2022.",
+  "page-upgrades-shards-date": "~2023.",
+  "page-upgrades-merge-banner-intro": "Spajanje se približava i donosi promjene u Ethereum.",
+  "page-upgrades-merge-banner-content-outdated": "Neki je sadržaj ove stranice u vezi s tim promjenama zastarjeo. Uskoro ćemo ga ažurirati.",
+  "page-upgrades-merge-banner-developers-landing": "Neki dokumenti imaju zaglavlje s informacijom da su zastarjeli. Uskoro ćemo ih osvježiti.",
+  "page-upgrades-post-merge-banner-tutorial-ood": "Nakon spajanja ovaj je vodič zastarjeo i možda neće biti koristan. Pošaljite PR ako želite dati svoj doprinos.",
+  "page-upgrades-post-merge-banner-tutorial-light-node-ood": "Nakon spajanja ovaj je vodič zastarjeo. Blagi čvorovi trenutačno ne funkcioniraju u konceptu dokaza uloga ali će se i to uskoro implementirati.",
+  "page-upgrades-post-merge-banner-governance-ood": "Nakon spajanja neki je sadržaj ove stranice zastario. Pošaljite PR ako želite dati svoj doprinos."
 }

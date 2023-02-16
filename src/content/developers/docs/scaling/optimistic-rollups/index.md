@@ -196,7 +196,7 @@ Optimistic rollups use a gas fee scheme, much like Ethereum, to denote how much 
 
 1. **State write**: Optimistic rollups publish transaction data and block headers (consisting of the previous block header hash, state root, batch root) to Ethereum as `calldata`. The minimum cost of an Ethereum transaction is 21,000 gas. Optimistic rollups can reduce the cost of writing the transaction to L1 by batching multiple transactions in a single block (which amortizes the 21k gas over multiple user transactions).
 
-2. **`calldata`**: Beyond the base transaction fee, the cost of each state write depends on the size of `calldata` posted to L1. `calldata` costs are currently governed by [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which stipulates a cost of 16 gas for non-zero bytes and 4 gas for zero bytes of `calldata`, respectively. To reduce user fees, rollup operators compresss transactions to reduce the number of `calldata` bytes published on Ethereum.
+2. **`calldata`**: Beyond the base transaction fee, the cost of each state write depends on the size of `calldata` posted to L1. `calldata` costs are currently governed by [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which stipulates a cost of 16 gas for non-zero bytes and 4 gas for zero bytes of `calldata`, respectively. To reduce user fees, rollup operators compress transactions to reduce the number of `calldata` bytes published on Ethereum.
 
 3. **L2 operator fees**: This is the amount paid to the rollup nodes as compensation for computational costs incurred in processing transactions, much like miner fees on Ethereum. Rollup nodes charge lower transaction fees since L2s have higher processing capacities and aren't faced with the network congestions that force miners on Ethereum to prioritize transactions with higher fees.
 
@@ -259,7 +259,6 @@ Multiple implementations of Optimistic rollups exist that you can integrate into
 
 - [How do optimistic rollups work (The Complete guide)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [Everything you need to know about Optimistic Rollup](https://research.paradigm.xyz/rollups)
-- [EthHub on optimistic rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
 - [The Essential Guide to Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [How does Optimism's Rollup really work?](https://research.paradigm.xyz/optimism)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)

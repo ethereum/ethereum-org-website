@@ -20,7 +20,6 @@ import {
 import FeedbackCard from "../../components/FeedbackCard"
 import ExpandableCard from "../../components/ExpandableCard"
 import StakingStatsBox from "../../components/Staking/StakingStatsBox"
-import StakingSurveyBanner from "../../components/Staking/StakingSurveyBanner"
 import StakingHierarchy from "../../components/Staking/StakingHierarchy"
 import StakingHomeTableOfContents from "../../components/Staking/StakingHomeTableOfContents"
 import StakingCommunityCallout from "../../components/Staking/StakingCommunityCallout"
@@ -35,6 +34,7 @@ const HeroStatsWrapper = styled.div`
   align-items: center;
   background: ${({ theme }) => theme.colors.layer2Gradient};
   padding-bottom: 2rem;
+  width: 100%;
 `
 
 const Page = styled.div`
@@ -301,6 +301,15 @@ const StakingPage = ({
           eventName: "clicked pooled staking",
         },
       },
+      {
+        text: "page-staking-dropdown-withdrawals",
+        to: "/staking/withdrawals/",
+        matomo: {
+          eventCategory: `Staking dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked about withdrawals",
+        },
+      },
     ],
   }
 
@@ -345,7 +354,6 @@ const StakingPage = ({
         description={translateMessageId("page-staking-meta-description", intl)}
       />
       <HeroStatsWrapper>
-        <StakingSurveyBanner />
         <PageHero content={heroContent} />
         <StakingStatsBox />
       </HeroStatsWrapper>
@@ -636,6 +644,9 @@ const StakingPage = ({
               <p>
                 <Translation id="page-staking-faq-5-answer-p2" />
               </p>
+              <ButtonLink to="/staking/withdrawals/">
+                <Translation id="page-staking-faq-5-answer-link" />
+              </ButtonLink>
             </ExpandableCard>
             <ExpandableCard
               title={translateMessageId("page-staking-faq-1-question", intl)}

@@ -23,14 +23,15 @@ Transactions require a fee and must be included in a validated block. To make th
 
 A submitted transaction includes the following information:
 
+- `from` – the address of the sender, that will be signing the transaction. This will be an externally-owned account as contract accounts cannot send transactions.
 - `recipient` – the receiving address (if an externally-owned account, the transaction will transfer value. If a contract account, the transaction will execute the contract code)
 - `signature` – the identifier of the sender. This is generated when the sender's private key signs the transaction and confirms the sender has authorized this transaction
 - `nonce` - a sequencially incrementing counter which indicates the transaction number from the account
 - `value` – amount of ETH to transfer from sender to recipient (denominated in WEI, where 1ETH equals 1e+18wei)
 - `data` – optional field to include arbitrary data
 - `gasLimit` – the maximum amount of gas units that can be consumed by the transaction. The [EVM](https://ethereum.org/en/developers/docs/evm/opcodes) specifies the units of gas required by each computational step
-- `maxPriorityFeePerGas` - the maximum amount of gas to be included as a tip to the validator
-- `maxFeePerGas` - the maximum amount of gas willing to be paid for the transaction (inclusive of `baseFeePerGas` and `maxPriorityFeePerGas`)
+- `maxPriorityFeePerGas` - the maximum price of the consumed gas to be included as a tip to the validator
+- `maxFeePerGas` - the maximum fee per unit of gas willing to be paid for the transaction (inclusive of `baseFeePerGas` and `maxPriorityFeePerGas`)
 
 Gas is a reference to the computation required to process the transaction by a validator. Users have to pay a fee for this computation. The `gasLimit`, and `maxPriorityFeePerGas` determine the maximum transaction fee paid to the validator. [More on Gas](/developers/docs/gas/).
 
@@ -190,11 +191,9 @@ Ethereum originally had one format for transactions. Each transaction contained 
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
-Ethereum has evolved to support multiple types of transactions to allow for new features such as access lists and [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) to be implemented without affecting legacy transaction formats.
+Ethereum has evolved to support multiple types of transactions to allow for new features such as access lists and [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) to be implemented without affecting legacy transaction formats.
 
-[EIP-2718: Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718) defines a transaction type that is an envelope for future transaction types.
-
-EIP-2718 is a new generalised envelope for typed transactions. In the new standard, transactions are interpreted as:
+[EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) is what allows for this behaviour. Transactions are interpreted as:
 
 `TransactionType || TransactionPayload`
 

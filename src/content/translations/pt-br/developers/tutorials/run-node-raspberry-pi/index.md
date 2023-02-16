@@ -133,7 +133,7 @@ O sistema operacional Ubuntu se iniciará em menos de um minuto, mas **você pre
 Dependendo da imagem, você estará executando:
 
 - Cliente de execução: Geth como o cliente padrão que sincroniza a blockchain
-- Cliente de consenso: Prysm como cliente padrão que sincroniza a Beacon Chain (rede de teste Prater)
+- Cliente de consenso: Prysm como cliente padrão que sincroniza a Beacon Chain (rede de teste Goerli)
 
 ### 5. Iniciar sessão {#5-log-in}
 
@@ -162,7 +162,7 @@ sudo tail -f /var/log/syslog
 
 Agora você precisa esperar que a blockchain seja sincronizada. No caso da camada de execução, esse processo levará alguns dias dependendo de vários fatores, mas você pode esperar algo entre 5 – 7 dias.
 
-Se está executando a rede de teste Prater para a camada de consenso, você pode esperar entre 1–2 dias para a sincronização da Beacon Chain. Lembre-se de que precisará configurar o validador mais tarde para iniciar o processo de apostas. [Como executar o validador da camada de consenso](/developers/tutorials/run-node-raspberry-pi/#validator)
+Se está executando a rede de teste Goerli para a camada de consenso, você pode esperar entre 1–2 dias para a sincronização da Beacon Chain. Lembre-se de que precisará configurar o validador mais tarde para iniciar o processo de apostas. [Como executar o validador da camada de consenso](/developers/tutorials/run-node-raspberry-pi/#validator)
 
 ## Painéis de monitoramento {#monitoring-dashboards}
 
@@ -234,7 +234,7 @@ Ambos precisam de mais testes, por isso sinta-se livre para testá-los e compart
 
 ## Como gerenciar o validador do consenso (staking) {#validator}
 
-Uma vez que a Beacon Chain da rede de teste Prater for sincronizada, você vai poder executar um validador no mesmo dispositivo. Você precisará seguir [essas etapas de participação](https://prylabs.net/participate).
+Uma vez que a Beacon Chain da rede de teste Goerli for sincronizada, você vai poder executar um validador no mesmo dispositivo. Você precisará seguir [essas etapas de participação](https://prylabs.net/participate).
 
 Na primeira vez, você precisa criar uma conta manualmente executando o binário "validador" e configurando uma senha. Depois de concluir esta etapa, você pode adicionar a senha a `/etc/ethereum/prysm-validator.conf` e iniciar o validador como um serviço systemd.
 

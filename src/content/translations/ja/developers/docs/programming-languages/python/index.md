@@ -64,7 +64,7 @@ incomplete: true
 ### アーカイブ済み・メンテナンスされていないもの {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _イーサリアム Python クライアント_
-- [Mamba](https://mamba.black) - _Vyper 言語で記述された、スマートコントラクトの記述、コンパイル、デプロイのためのフレームワーク_
+- [Mamba](https://github.com/arjunaskykok/mamba) - _Vyper 言語で記述された、スマートコントラクトの記述、コンパイル、デプロイのためのフレームワーク_
 
 もっとリソースをお探しですか？ [ethereum.org/developers](/developers/)をご確認ください。
 

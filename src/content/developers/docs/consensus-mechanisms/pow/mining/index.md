@@ -41,6 +41,8 @@ To further explore mining profitability, use a mining calculator, such as the on
 
 ## How Ethereum transactions were mined {#how-ethereum-transactions-were-mined}
 
+The following provides an overview of how transactions were mined in Ethereum proof-of-work. An analogous description of this process for Ethereum proof-of-stake can be found [here](/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos).
+
 1. A user writes and signs a [transaction](/developers/docs/transactions/) request with the private key of some [account](/developers/docs/accounts/).
 2. The user broadcasts the transaction request to the entire Ethereum network from some [node](/developers/docs/nodes-and-clients/).
 3. Upon hearing about the new transaction request, each node in the Ethereum network adds the request to their local mempool, a list of all transaction requests they’ve heard about that have not yet been committed to the blockchain in a block.
@@ -53,6 +55,12 @@ To further explore mining profitability, use a mining calculator, such as the on
 8. New nodes joining the network download all blocks in sequence, including the block containing our transaction of interest. They initialize a local EVM copy (which starts as a blank-state EVM), and then go through the process of executing every transaction in every block on top of their local EVM copy, verifying state checksums at each block along the way.
 
 Every transaction is mined (included in a new block and propagated for the first time) once, but executed and verified by every participant in the process of advancing the canonical EVM state. This highlights one of the central mantras of blockchain: **Don’t trust, verify**.
+
+## Ommer (uncle) blocks {#ommer-blocks}
+
+Block mining on proof-of-work was probabilistic, meaning sometimes two valid blocks were published simultaneously due to network latency. In this case, the protocol had to determine the longest (and therefore most "valid") chain while ensuring fairness towards miners by partially rewarding the unincluded valid block proposed. This encouraged further decentralization of the network as smaller miners, who might face greater latency, could still generate returns via [ommer](/glossary/#ommer) block rewards.
+
+The term "ommer" is the preferred gender-neutral term for the sibling of a parent block, but this is also sometimes referred to as an "uncle". **Since Ethereum's move to proof-of-stake, ommer blocks are no longer mined** as only one proposer is elected in each slot. You can see this change by viewing the [historical chart](https://ycharts.com/indicators/ethereum_uncle_rate) of the ommer blocks mined.
 
 ## A visual demo {#a-visual-demo}
 
@@ -68,7 +76,7 @@ Ethereum Mainnet only ever used one mining algorithm - ['Ethash'](/developers/do
 
 ## Further reading {#further-reading}
 
-- [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
+- [What does it mean to mine Ethereum?](https://web.archive.org/web/20220917012350/https://docs.ethhub.io/using-ethereum/mining/) _EthHub (Archived)_
 
 ## Related topics {#related-topics}
 

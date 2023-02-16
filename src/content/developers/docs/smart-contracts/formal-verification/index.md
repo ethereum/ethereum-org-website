@@ -130,15 +130,31 @@ As a result, human assistance is often required to guide the theorem prover in d
 
 ### Symbolic execution {#symbolic-execution}
 
-Symbolic execution involves executing a program (often statically) using _symbolic input values_ instead of _concrete values_. Because symbolic values can represent multiple concrete values, it is possible to explore multiple execution paths of a smart contract without needing to go through them one by one.
+Symbolic execution is a method of analyzing a smart contract by executing functions using _symbolic values_ (e.g., `x > 5`) instead of _concrete values_ (e.g., `x == 5`). As a formal verification technique, symbolic execution is used to formally reason about trace-level properties in a contract's code.
 
-In formal verification, symbolic execution is used to reason about the _trace-level properties_ of smart contracts. As explained earlier, a trace refers to some path of execution taken by a smart contract whenever a user triggers its code to run. Thus, the goal of symbolic execution is to discover execution paths that violate a smart contract’s properties.
+Symbolic execution represents an execution trace as a mathematical formula over symbolic input values, otherwise called a _path predicate_. An [SMT solver](https://en.wikipedia.org/wiki/Satisfiability_modulo_theories) is used to check if a path predicate is "satisfiable" (i.e., there exists a value that can satisfy the formula). If a vulnerable path is satisfiable, the SMT solver will generate a concrete value that triggers steers execution toward that path.
 
-The idea behind symbolic execution is to represent each trace as a mathematical formula over symbolic input values that steer execution toward that path. A symbolic execution engine (sometimes called an [SMT solver](https://en.wikipedia.org/wiki/Satisfiability_modulo_theories)) is used to determine if a particular path is satisfiable or not. The SMT solver can also be combined with a model checking algorithm to improve the effectiveness of formal verification.
+Suppose a smart contract's function takes as input a `uint` value (`x`) and reverts when `x` is greater than `5` but lower than `10`. Finding a value for `x` that triggers the error using a normal testing procedure would require running through dozens of test cases (or more) without the assurance of actually finding an error-triggering input.
 
-If a path that violates property assertions is satisfiable, the SMT solver can be used to calculate the concrete input values (called _path constraints_) that steer execution towards a vulnerable code path. This makes symbolic execution useful for test-case generation. By solving path constraints with SMT solvers, users can derive specific input values that exercise all interesting behaviors of a contract (which is useful for unit testing).
+Conversely, a symbolic execution tool would execute the function with the symbolic value: `X > 5 ∧ X < 10` (i.e., `x` is greater than 5 AND `x` is less than 10). The associated path predicate `x = X > 5 ∧ X < 10` would then be given to an SMT solver to solve. If a particular value satisfies the formula `x = X > 5 ∧ X < 10`, the SMT solver will calculate it—for example, the solver might produce `7` as a value for `x`.
 
-SMT solvers can be combined with model-checking algorithms to determine correctness of smart contracts with respect to a specification. However, many formal verification tools based on symbolic execution are mostly used to detect vulnerable code paths by executing smart contracts statically or dynamically. For example, fuzzing techniques rely on symbolic execution for detecting input values to a smart contract program that can lead to property violations.
+Because symbolic execution relies on inputs to a program, and the set of inputs to explore all reachable states is potentially infinite, it is still a form of testing. However, as shown in the example, symbolic execution is more efficient than regular testing for finding inputs that trigger property violations.
+
+Moreover, symbolic execution produces fewer false positives than other property-based techniques (e.g., fuzzing) that randomly generate inputs to a function. If an error state is triggered during symbolic execution, then it is possible to generate a concrete value that triggers the error and reproduce the issue.
+
+Symbolic execution can also provide some degree of mathematical proof of correctness. Consider the following example of a contract function with overflow protection:
+
+```
+function safe_add(uint x, uint y) returns(uint z){
+
+  z = x + y;
+  require(z>=x);
+  require(z>=y);
+
+  return z;
+```
+
+An execution trace that results in an integer overflow would need to satisfy the formula: `z = x + y AND (z >= x) AND (z=>y) AND (z < x OR z < y)` Such a formula is unlikely to be solved, hence it serves a mathematical proof that the function `safe_add` never overflows.
 
 ### Why use formal verification for smart contracts? {#benefits-of-formal-verification}
 
@@ -211,6 +227,11 @@ Also, it is not always possible for program verifiers to determine if a property
 
 ### Program verifiers for checking correctness {#program-verifiers}
 
+**Certora Prover** - _Certora Prover is an automatic formal verification tool for checking code correctness in smart contracts. Specifications are written in CVL (Certora Verification Language), with property violations detected using a comibination of static analysis and constraint-solving._
+
+- [Website](https://www.certora.com/)
+- [Documentation](https://docs.certora.com/en/latest/index.html)
+
 **Solidity SMTChecker** - _*Solidity’s SMTChecker is a built-in model checker based on SMT (Satisfiability Modulo Theories) and Horn solving. It confirms if a contract’s source code matches specifications during compilation and statically checks for violations of safety properties.*_
 
 - [GitHub](https://github.com/ethereum/solidity)
@@ -247,10 +268,16 @@ Also, it is not always possible for program verifiers to determine if a property
 
 - [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 
+**Mythril** - _A symbolic execution tool for detecting vulnerabilities in Ethereum smart contracts_
+
+- [GitHub](https://github.com/ConsenSys/mythril-classic)
+- [Documentation](https://mythril-classic.readthedocs.io/en/develop/)
+
 ## Further reading {#further-reading}
 
 - [How Formal Verification of Smart Contracts Works](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/)
 - [How Formal Verification Can Ensure Flawless Smart Contracts](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)
 - [An Overview of Formal Verification Projects in the Ethereum Ecosystem](https://github.com/leonardoalt/ethereum_formal_verification_overview)
 - [End-to-End Formal Verification of Ethereum 2.0 Deposit Smart Contract](https://runtimeverification.com/blog/end-to-end-formal-verification-of-ethereum-2-0-deposit-smart-contract/)
+- [Formally Verifying The World's Most Popular Smart Contract](https://www.zellic.io/blog/formal-verification-weth)
 - [SMTChecker and Formal Verification](https://docs.soliditylang.org/en/v0.8.15/smtchecker.html)

@@ -120,6 +120,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "gu",
+    "hrefLang": "gu",
+    "name": "Gujarati",
+    "localName": "ગુજરાતી",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "hi",
     "hrefLang": "hi",
     "name": "Hindi",

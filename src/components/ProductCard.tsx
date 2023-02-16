@@ -2,6 +2,7 @@ import React, { ReactNode } from "react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import { useQuery, gql } from "@apollo/client"
 import {
+  Badge,
   Box,
   Center,
   Flex,
@@ -36,11 +37,11 @@ const REPO_DATA = gql`
   }
 `
 
-const SubjectPill: React.FC<{ subject: string; children: ReactNode }> = ({
-  subject,
-  children,
-}) => {
-  const bgColor = () => {
+const SubjectBadge: React.FC<{
+  subject: string
+  children: React.ReactNode
+}> = ({ subject, children }) => {
+  const backgroundProp = () => {
     switch (subject) {
       case "Solidity":
         return "tagYellow"
@@ -67,18 +68,9 @@ const SubjectPill: React.FC<{ subject: string; children: ReactNode }> = ({
     }
   }
   return (
-    <Box
-      background={bgColor()}
-      border="1px"
-      borderColor="lightBorder"
-      borderRadius="base"
-      color="black300"
-      fontSize="xs"
-      textAlign="center"
-      px={2}
-    >
+    <Badge size="sm" textTransform="unset" background={backgroundProp()}>
       {children}
-    </Box>
+    </Badge>
   )
 }
 
@@ -192,16 +184,16 @@ const ProductCard: React.FC<IProps> = ({
       <HStack mt={5} mb={2} px={6} spacing={3}>
         {subjects &&
           subjects.map((subject, idx) => (
-            <SubjectPill key={idx} subject={subject}>
+            <SubjectBadge key={idx} subject={subject}>
               {subject}
-            </SubjectPill>
+            </SubjectBadge>
           ))}
         {hasRepoData &&
           data.repository.languages.nodes.map(
             ({ name }: { name: string }, idx: number) => (
-              <SubjectPill key={idx} subject={name}>
+              <SubjectBadge key={idx} subject={name}>
                 {name.toUpperCase()}
-              </SubjectPill>
+              </SubjectBadge>
             )
           )}
       </HStack>

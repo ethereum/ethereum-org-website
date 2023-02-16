@@ -289,6 +289,8 @@ const darkColors = {
   primary200: primaryDark200,
   primary100: primaryDark100,
   lightBorder: "#404040",
+  priceCardBackgroundPositive: "transparent",
+  priceCardBackgroundNegative: "transparent",
   priceCardBackground: "transparent",
   priceCardBorder: success700,
   priceCardBorderNegative: fail300,

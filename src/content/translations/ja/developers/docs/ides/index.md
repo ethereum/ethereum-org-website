@@ -12,9 +12,17 @@ lang: ja
 
 **[Remix](https://remix.ethereum.org/) ** - **_組み込みの静的解析とテストブロックチェーンの仮想マシンを備えた、ウェブベースの IDE_**
 
+- [ドキュメント](https://remix-ide.readthedocs.io/en/latest/#)
+- [Gitter](https://gitter.im/ethereum/remix)
+
 **[ChainIDE](https://chainide.com/)** - **_クラウドベースのマルチチェーン IDE_**
 
-**[Replit (Solidity スターター)](https://replit.com/@replit/Solidity-starter-beta)** - **_ホットリロード、エラーチェック、最高級のテストネットサポートを提供する、イーサリアムのためのカスタマイズ可能な開発環境_**
+- [ドキュメント](https://chainide.gitbook.io/chainide-english-1/)
+- [ヘルプフォーラム](https://forum.chainide.com/)
+
+**[Replit (Solidity スターター - ベータ版)](https://replit.com/@replit/Solidity-starter-beta)** - **_ホットリロード、エラーチェック、最高級のテストネットサポートを提供する、イーサリアムのためのカスタマイズ可能な開発環境_**
+
+- [ドキュメント](https://docs.replit.com/)
 
 **[Tenderly Sandbox](https://sandbox.tenderly.co/)** - **_Solidity と JavaScript を使用してブラウザ上でスマートコントラクトを記述、実行、デバッグできる高速プロトタイピング環境_**
 
@@ -53,6 +61,7 @@ lang: ja
 ## プラグインと拡張機能 {#plugins-extensions}
 
 - [Solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Visual Studio Code のためのイーサリアムの Solidity 言語
+- [VS Code のための Solidity と Hardhat](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - Hardhat チームによる Solidity と Hardhat のサポート
 - [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Prettier を使用するコードフォーマッター
 
 ## 参考文献 {#further-reading}

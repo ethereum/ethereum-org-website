@@ -110,5 +110,6 @@ _Note the explanation in the video uses the term "Layer 2" to refer to all off-c
 - [Optimistic Rollups vs ZK Rollups](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
 - [Zero-Knowledge Blockchain Scalability](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Why rollups + data shards are the only sustainable solution for high scalability](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
+- [What kind of Layer 3s make sense?](https://vitalik.ca/general/2022/09/17/layer_3.html)
 
 _Know of a community resource that helped you? Edit this page and add it!_

@@ -1,13 +1,12 @@
 // Import libraries
-import React, { useState, useEffect } from "react"
-import styled from "@emotion/styled"
+import React, { useState, useEffect, ReactNode } from "react"
+import { MdInfoOutline } from "react-icons/md"
 import { useIntl } from "react-intl"
-import { Spinner } from "@chakra-ui/react"
+import { Code, Flex, Icon, Spinner, VStack } from "@chakra-ui/react"
 // Import components
 import Translation from "../Translation"
 import Tooltip from "../Tooltip"
 import Link from "../Link"
-import Icon from "../Icon"
 // Import utilities
 import { Lang } from "../../utils/languages"
 import { getData } from "../../utils/cache"
@@ -18,61 +17,51 @@ const NA_ERROR = "n/a"
 const ZERO = "0"
 const MAX_EFFECTIVE_BALANCE = 32
 
-// Styled components
-const Container = styled.div`
-  display: flex;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex-direction: column;
-  }
-`
+const Cell: React.FC<{ children: ReactNode }> = ({ children }) => {
+  return (
+    <VStack
+      spacing={2}
+      py={4}
+      px={8}
+      borderLeft={{ md: "1px" }}
+      borderTop={{ base: "1px", md: "none" }}
+      // `!important` needed to force an override of the user-agent
+      borderColor="preBorder !important"
+      _first={{
+        borderLeft: "none",
+        borderTop: "none",
+      }}
+    >
+      {children}
+    </VStack>
+  )
+}
 
-const Cell = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem 2rem;
-  border-left: 1px solid ${({ theme }) => theme.colors.preBorder};
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    border-left: none;
-    border-top: 1px solid #33333355;
-  }
-  &:first-child {
-    border-left: none;
-    border-top: none;
-  }
-`
+const Value: React.FC<{ children: ReactNode; title: string }> = ({
+  children,
+  title,
+}) => {
+  return (
+    <Code
+      title={title}
+      fontWeight="bold"
+      fontSize="2rem"
+      background="none"
+      color="primary"
+      p={0}
+    >
+      {children}
+    </Code>
+  )
+}
 
-const Value = styled.code`
-  font-weight: 700;
-  font-size: 2rem;
-  background: none;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.primary};
-`
-
-const Label = styled.div`
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  margin-top: 0.5rem;
-`
-
-const StyledIcon = styled(Icon)`
-  fill: ${({ theme }) => theme.colors.text};
-  margin-inline-start: 0.5rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-  }
-  &:hover,
-  &:active,
-  &:focus {
-    fill: ${({ theme }) => theme.colors.primary};
-  }
-`
+const Label: React.FC<{ children: ReactNode }> = ({ children }) => {
+  return (
+    <Flex alignItems="center" textTransform="uppercase" fontSize="sm">
+      {children}
+    </Flex>
+  )
+}
 
 // BeaconchainTooltip component
 const BeaconchainTooltip = ({ isEthStore }: { isEthStore?: boolean }) => (
@@ -87,7 +76,15 @@ const BeaconchainTooltip = ({ isEthStore }: { isEthStore?: boolean }) => (
       </div>
     }
   >
-    <StyledIcon name="info" size="16" />
+    <Icon
+      as={MdInfoOutline}
+      color="text"
+      marginInlineStart={2}
+      _hover={{ color: "primary" }}
+      _active={{ color: "primary" }}
+      _focus={{ color: "primary" }}
+      boxSize={4}
+    />
   </Tooltip>
 )
 
@@ -148,7 +145,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
   }, [intl.locale])
 
   return (
-    <Container>
+    <Flex direction={{ base: "column", md: "row" }}>
       <Cell>
         {totalEth === ZERO ? (
           <Spinner />
@@ -186,7 +183,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
           <BeaconchainTooltip isEthStore />
         </Label>
       </Cell>
-    </Container>
+    </Flex>
   )
 }
 

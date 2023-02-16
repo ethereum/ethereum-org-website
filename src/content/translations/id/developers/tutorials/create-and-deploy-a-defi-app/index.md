@@ -478,4 +478,4 @@ _output dari withdrawMyTokenFromTokenFarm.js_
 
 [Apa yang Dimaksud dengan DeFi? Panduan bagi Pemula (Diperbarui Tahun 2021) (99bitcoins.com)](https://99bitcoins.com/what-is-defi/)
 
-[DeFi - Papan Peringkat Keuangan Terdesentralisasi di DeFi Pulse](https://defipulse.com/)
+[DeFi - Papan Peringkat Keuangan Terdesentralisasi di DeFi Llama](https://defillama.com/)

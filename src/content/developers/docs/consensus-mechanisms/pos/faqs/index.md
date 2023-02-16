@@ -43,7 +43,7 @@ No. The cost to send a transaction (gas fee) is determined by a dynamic fee mark
 
 ## What are nodes, clients and validators? {#what-are-nodes-clients-and-validators}
 
-Nodes are computers connected to the Ethereum network. Clients are the software they run that turns the computer into a node. There are two types of clients: execution clients are consensus clients. Both are needed to create a node. A validator is an optional add-on to a consensus client that enables the node to participate in proof-of-stake consensus. This means creating and proposing blocks when selected and attesting to blocks they hear about on the network. To run a validator, the node operator must deposit 32 ETH into the deposit contract.
+Nodes are computers connected to the Ethereum network. Clients are the software they run that turns the computer into a node. There are two types of clients: execution clients and consensus clients. Both are needed to create a node. A validator is an optional add-on to a consensus client that enables the node to participate in proof-of-stake consensus. This means creating and proposing blocks when selected and attesting to blocks they hear about on the network. To run a validator, the node operator must deposit 32 ETH into the deposit contract.
 
 - [More on nodes and clients](/developers/docs/nodes-and-clients)
 - [More on staking](/staking)
@@ -51,7 +51,6 @@ Nodes are computers connected to the Ethereum network. Clients are the software 
 ## Is proof-of-stake a new idea? {#is-pos-new}
 
 No. A user on BitcoinTalk [proposed the basic idea of proof-of-stake](https://bitcointalk.org/index.php?topic=27787.0) as an upgrade to Bitcoin in 2011. It was eleven years before it was ready to implement on Ethereum Mainnet. Some other chains implemented proof-of-stake earlier than Ethereum, but not Ethereum's specific mechanism (known as Gasper).
-
 
 ## What is special about Ethereum's proof-of-stake? {#why-is-ethereum-pos-special}
 
@@ -106,7 +105,7 @@ The nothing-at-stake problem is a conceptual issue with some proof-of-stake mech
 
 ## What is a fork choice algorithm? {#what-is-a-fork-choice-algorithm}
 
-A fork choice algorithm implements rules determining which chain is the canonical one. Under optimal conditions, there is no need for a fork choice rule because there is only one block proposer per slot and one block to choose from. Occasionally, though, multiple blocks for the same slot or late-arriving information leads to multiple options for how blocks near the head of the chain are organized. In these cases, all clients must implement some rules identically to make sure they all pick the correct sequence of blocks. The fork-choice algorithm encodes these rules. 
+A fork choice algorithm implements rules determining which chain is the canonical one. Under optimal conditions, there is no need for a fork choice rule because there is only one block proposer per slot and one block to choose from. Occasionally, though, multiple blocks for the same slot or late-arriving information leads to multiple options for how blocks near the head of the chain are organized. In these cases, all clients must implement some rules identically to make sure they all pick the correct sequence of blocks. The fork-choice algorithm encodes these rules.
 
 Ethereum's fork-choice algorithm is called LMD-GHOST. It picks the fork with the greatest weight of attestations, meaning the one that most staked ETH has voted for.
 

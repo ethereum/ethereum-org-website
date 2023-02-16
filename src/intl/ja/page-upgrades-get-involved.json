@@ -23,7 +23,7 @@
   "page-upgrades-get-involved-how-desc": "クライアントの実行、ステーキング、バグハンティングを行う人が増えることで、イーサリアムコミュニティは恩恵を受けます。",
   "page-upgrades-get-involved-join": "研究に参加",
   "page-upgrades-get-involved-join-desc": "ほとんどのイーサリアムに関するものと同様に、研究に関しても多く公開されています。議論に参加することもでき、また単にイーサリアムの研究者の発言を読むこともできます。ethresear.chでは、コンセンサスのアップグレード、シャーディング、ロールアップなど、多くのトピックをカバーしています。",
-  "page-upgrades-get-involved-meta-description": "イーサリアムのアップグレードへの参加方法: ノードの実行、ステーキング、バグハンティングなど。",
+  "page-upgrades-get-involved-meta-description": "イーサリアムのアップグレードへの参加方法: ノードの運用、ステーキング、バグハンティングなど。",
   "page-upgrades-get-involved-more": "詳細",
   "page-upgrades-get-involved-run-clients": "クライアントペアの実行",
   "page-upgrades-get-involved-run-clients-desc": "「クライアント」とは、ブロックチェーンを実行するソフトウェアであり、イーサリアムの場合、フルノードは、実行レイヤーとコンセンサスレイヤーの両方のクライアントをペアで実行する必要があります。フルノードはトランザクションを確認でき、ETHをステーキングしている場合は、新しいブロックを生成することもできます。 各クライアントには独自の機能がありますが、全体として同じ機能が実行されるので、多様性と安全性のためにマイナーなクライアントを選ぶことをお勧めします。",

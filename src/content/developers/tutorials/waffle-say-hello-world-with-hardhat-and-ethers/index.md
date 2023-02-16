@@ -76,7 +76,7 @@ MyWaffleProject
 
 ### Now let's talk about some of these files: {#now-lets-talk}
 
-- Greeter.sol - our smart contract writen in solidity;
+- Greeter.sol - our smart contract written in solidity;
 
 ```solidity
 contract Greeter {

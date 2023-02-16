@@ -148,7 +148,7 @@ Proces Ethereum upravljanja pogosto zapostavi hitrost in učinkovitost za odprto
 
 Medtem ko je bil razvoj specifikacij in implementacij vedno povsem odprtokoden, uradni procesi za predlaganje nadgradenj opisani zgoraj niso bili uporabljeni. To je omogočilo, da so bile spremembe s strani raziskovalcev in implementatorjev določene in dogovorjene hitreje.
 
-Ko se bo Oddajniška veriga združila z Ethereumovo izvršilno plastjo, se bo upravljavski proces za predlaganje sprememb poenotil. Proces za implementacijo združitve je [že na poti](https://github.com/ethereum/EIPs/pull/3675).
+Ko se bo Oddajniška veriga združila z Ethereumovo izvršilno plastjo, se bo upravljavski proces za predlaganje sprememb poenotil. Proces za implementacijo združitve je [že na poti](https://eips.ethereum.org/EIPS/eip-3675).
 
 <ButtonLink to="/upgrades/merge/">Več o združitvi</ButtonLink>
 
