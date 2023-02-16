@@ -14,7 +14,7 @@ To better understand this page, we recommend you first read up on [transactions]
 
 Gas refers to the unit that measures the amount of computational effort required to execute specific operations on the Ethereum network.
 
-Since each Ethereum transaction requires computational resources to execute, each transaction requires a fee. Gas refers to the fee required to finalise a transaction on Ethereum, regardless of transaction success or failure.
+Since each Ethereum transaction requires computational resources to execute, each transaction requires a fee. Gas refers to the fee required to execute a transaction on Ethereum, regardless of transaction success or failure.
 
 ![A diagram showing where gas is needed in EVM operations](./gas.png)
 _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
