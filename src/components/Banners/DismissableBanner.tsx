@@ -13,7 +13,7 @@ export interface IProps {
 }
 
 const DismissableBanner: React.FC<IProps> = ({ children, storageKey }) => {
-  const [show, setShow] = useState<boolean>(true)
+  const [show, setShow] = useState<boolean>(false)
 
   useEffect(() => {
     const isDismissed = localStorage.getItem(storageKey) === "true"
