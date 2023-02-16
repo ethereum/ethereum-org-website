@@ -315,15 +315,6 @@ const frameworksList: Array<IFramework> = [
     alt: "page-local-environment-truffle-logo-alt",
   },
   {
-    id: "embark",
-    url: "https://framework.embarklabs.io/",
-    githubUrl: "https://github.com/embarklabs/embark",
-    background: "#1b3e5f",
-    name: "Embark",
-    description: "page-local-environment-embark-desc",
-    alt: "page-local-environment-embark-logo-alt",
-  },
-  {
     id: "brownie",
     url: "https://github.com/eth-brownie/brownie",
     githubUrl: "https://github.com/eth-brownie/brownie",
@@ -649,9 +640,6 @@ export const query = graphql`
     }
 
     truffle: file(relativePath: { eq: "dev-tools/truffle.png" }) {
-      ...devtoolImage
-    }
-    embark: file(relativePath: { eq: "dev-tools/embark.png" }) {
       ...devtoolImage
     }
     brownie: file(relativePath: { eq: "assets/eth-diamond-black.png" }) {
