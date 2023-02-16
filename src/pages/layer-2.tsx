@@ -11,6 +11,8 @@ import {
   DividerProps,
   Flex,
   GridItem,
+  Heading,
+  HeadingProps,
   Icon,
   ListItem,
   SimpleGrid,
@@ -52,9 +54,26 @@ import { getImage } from "../utils/image"
 // Constants
 import { GATSBY_FUNCTIONS_PATH } from "../constants"
 import { MdInfoOutline } from "react-icons/md"
+import { merge } from "lodash"
 
 type ChildOnlyType = {
   children: ReactNode
+}
+
+const SectionHeading = (props: HeadingProps) => {
+  const headingSpecificProps = {
+    fontSize: { base: "2xl", md: "2rem" },
+    fontWeight: 600,
+    lineHeight: 1.4,
+  }
+
+  if (props.as === "h3") {
+    headingSpecificProps.fontSize = { base: "xl", md: "2xl" }
+  }
+
+  const mergeProps = merge(headingSpecificProps, props)
+
+  return <Heading {...mergeProps} />
 }
 
 const ContentBox = (
@@ -457,15 +476,15 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
       <ContentBox id="what-is-layer-2">
         <TwoColumnContent>
           <Box flex="50%">
-            <h2>
+            <SectionHeading>
               <Translation id="layer-2-what-is-layer-2-title" />
-            </h2>
-            <p>
+            </SectionHeading>
+            <Text>
               <Translation id="layer-2-what-is-layer-2-1" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="layer-2-what-is-layer-2-2" />
-            </p>
+            </Text>
           </Box>
           <Box flex="50%">
             <GatsbyImage
@@ -479,44 +498,44 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
       </ContentBox>
       {/* What is Layer 1 Section */}
       <ContentBox isLightGrayBg>
-        <h2>
+        <SectionHeading>
           <Translation id="layer-2-what-is-layer-1-title" />
-        </h2>
+        </SectionHeading>
         <TwoColumnContent>
           <Box flex="50%">
-            <p>
+            <Text>
               <Translation id="layer-2-what-is-layer-1-1" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="layer-2-what-is-layer-1-2" />
-            </p>
+            </Text>
           </Box>
           <Box flex="50%">
-            <p>
+            <Text>
               <Translation id="layer-2-what-is-layer-1-list-title" />
-            </p>
+            </Text>
             <OrderedList
               listData={[
-                <p>
+                <Text>
                   <Translation id="layer-2-what-is-layer-1-list-1" />
-                </p>,
-                <p>
+                </Text>,
+                <Text>
                   <Translation id="layer-2-what-is-layer-1-list-2" />
-                </p>,
-                <p>
+                </Text>,
+                <Text>
                   <Translation id="layer-2-what-is-layer-1-list-3" />
-                </p>,
-                <p>
+                </Text>,
+                <Text>
                   <Translation id="layer-2-what-is-layer-1-list-4" />
-                </p>,
+                </Text>,
               ]}
             />
-            <p>
+            <Text>
               <Translation id="layer-2-what-is-layer-1-list-link-1" />{" "}
               <Link to="/what-is-ethereum/">
                 <Translation id="layer-2-what-is-layer-1-list-link-2" />
               </Link>
-            </p>
+            </Text>
           </Box>
         </TwoColumnContent>
       </ContentBox>
@@ -532,33 +551,33 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             />
           </Center>
           <Box flex="50%">
-            <h2>
+            <SectionHeading>
               <Translation id="layer-2-why-do-we-need-layer-2-title" />
-            </h2>
-            <p>
+            </SectionHeading>
+            <Text>
               <Translation id="layer-2-why-do-we-need-layer-2-1" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="layer-2-why-do-we-need-layer-2-2" />
-            </p>
+            </Text>
 
-            <h3>
+            <SectionHeading as="h3">
               <Translation id="layer-2-why-do-we-need-layer-2-scalability" />
-            </h3>
-            <p>
+            </SectionHeading>
+            <Text>
               <Translation id="layer-2-why-do-we-need-layer-2-scalability-1" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="layer-2-why-do-we-need-layer-2-scalability-2" />
-            </p>
+            </Text>
             <Link to="/upgrades/vision/">
               <Translation id="layer-2-why-do-we-need-layer-2-scalability-3" />
             </Link>
           </Box>
         </TwoColumnContent>
-        <h3>
+        <SectionHeading as="h3">
           <Translation id="layer-2-benefits-of-layer-2-title" />
-        </h3>
+        </SectionHeading>
         <SimpleGrid
           columnGap={8}
           rowGap={4}
@@ -587,24 +606,24 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
       <ContentBox>
         <TwoColumnContent>
           <Box flex="50%">
-            <h2>
+            <SectionHeading>
               <Translation id="layer-2-how-does-layer-2-work-title" />
-            </h2>
-            <p>
+            </SectionHeading>
+            <Text>
               <Translation id="layer-2-how-does-layer-2-work-1" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="layer-2-how-does-layer-2-work-2" />
-            </p>
-            <h3>
+            </Text>
+            <SectionHeading as="h3">
               <Translation id="layer-2-rollups-title" />
-            </h3>
-            <p>
+            </SectionHeading>
+            <Text>
               <Translation id="layer-2-rollups-1" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="layer-2-rollups-2" />
-            </p>
+            </Text>
           </Box>
           <Center flex="50%">
             <GatsbyImage
@@ -635,11 +654,11 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                   objectPosition="0"
                   objectFit="contain"
                 />
-                <h3>{title}</h3>
-                <p>{description}</p>
-                <p>
+                <SectionHeading as="h3">{title}</SectionHeading>
+                <Text>{description}</Text>
+                <Text>
                   <Link to={childLink}>{childSentence}</Link>
-                </p>
+                </Text>
               </Flex>
             )
           )}
@@ -648,39 +667,39 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
       {/* DYOR Section */}
       <ContentBox>
         <InfoBanner isWarning={true}>
-          <h2>
+          <SectionHeading>
             <Translation id="layer-2-dyor-title" />
-          </h2>
-          <p>
+          </SectionHeading>
+          <Text>
             <Translation id="layer-2-dyor-1" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="layer-2-dyor-2" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <ButtonLink to="https://l2beat.com/?view=risk">
               <Translation id="layer-2-dyor-3" />
             </ButtonLink>
-          </p>
+          </Text>
         </InfoBanner>
       </ContentBox>
       {/* Use Layer 2 Section */}
       <ContentBox id="use-layer-2">
-        <h2>
+        <SectionHeading>
           <Translation id="layer-2-use-layer-2-title" />
-        </h2>
-        <p>
+        </SectionHeading>
+        <Text>
           <Translation id="layer-2-use-layer-2-1" />
-        </p>
-        <p>
+        </Text>
+        <Text>
           <Translation id="layer-2-contract-accounts" />
-        </p>
-        <h3>
+        </Text>
+        <SectionHeading as="h3">
           <Translation id="layer-2-use-layer-2-generalized-title" />
-        </h3>
-        <p>
+        </SectionHeading>
+        <Text>
           <Translation id="layer-2-use-layer-2-generalized-1" />
-        </p>
+        </Text>
         <SimpleGrid
           templateColumns="repeat(auto-fit, minmax(280px, 1fr))"
           gap={8}
@@ -716,12 +735,12 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
       </ContentBox>
       {/* Layer 2 App Specific Section */}
       <ContentBox id="use-layer-2">
-        <h3>
+        <SectionHeading as="h3">
           <Translation id="layer-2-use-layer-2-application-specific-title" />
-        </h3>
-        <p>
+        </SectionHeading>
+        <Text>
           <Translation id="layer-2-use-layer-2-application-specific-1" />
-        </p>
+        </Text>
         <SimpleGrid
           templateColumns="repeat(auto-fit, minmax(280px, 1fr))"
           gap={8}
@@ -757,35 +776,35 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
       </ContentBox>
       {/* Layer 2 Sidechain Section */}
       <ContentBox>
-        <h2>
+        <SectionHeading>
           <Translation id="layer-2-sidechains-title" />
-        </h2>
+        </SectionHeading>
         <TwoColumnContent>
           <Box flex="50%">
-            <p>
+            <Text>
               <Translation id="layer-2-sidechains-1" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="layer-2-sidechains-2" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Link to="/developers/docs/scaling/sidechains/">
                 <Translation id="layer-2-more-on-sidechains" />
               </Link>
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Link to="/developers/docs/scaling/validium/">
                 <Translation id="layer-2-more-on-validiums" />
               </Link>
-            </p>
+            </Text>
           </Box>
           <Box flex="50%">
-            <p>
+            <Text>
               <Translation id="layer-2-sidechains-4" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="layer-2-sidechains-5" />
-            </p>
+            </Text>
           </Box>
         </TwoColumnContent>
       </ContentBox>
@@ -799,9 +818,9 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
       </ContentBox>
       {/* Layer 2 Tools Section */}
       <ContentBox>
-        <h2>
+        <SectionHeading>
           <Translation id="layer-2-tools-title" />
-        </h2>
+        </SectionHeading>
         <TwoColumnContent>
           <Box flex="50%">
             <ProductList
@@ -819,88 +838,88 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
       </ContentBox>
       {/* Layer 2 FAQ Section */}
       <ContentBox>
-        <h2>
+        <SectionHeading>
           <Translation id="layer-2-faq-title" />
-        </h2>
+        </SectionHeading>
         <ExpandableCard
           title={`${translateMessageId("layer-2-faq-question-1-title", intl)}`}
         >
-          <p>
+          <Text>
             <Translation id="layer-2-faq-question-1-description-1" />
-          </p>
+          </Text>
         </ExpandableCard>
         <ExpandableCard
           title={`${translateMessageId("layer-2-faq-question-2-title", intl)}`}
         >
-          <p>
+          <Text>
             <Translation id="layer-2-faq-question-2-description-1" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="layer-2-faq-question-2-description-2" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="layer-2-faq-question-2-description-3" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Link to="/developers/docs/scaling/optimistic-rollups/">
               <Translation id="layer-2-more-info-on-optimistic-rollups" />
             </Link>
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Link to="/developers/docs/scaling/zk-rollups/">
               <Translation id="layer-2-more-info-on-zk-rollups" />
             </Link>
-          </p>
+          </Text>
         </ExpandableCard>
         <ExpandableCard
           title={`${translateMessageId("layer-2-faq-question-3-title", intl)}`}
         >
-          <p>
+          <Text>
             <Translation id="layer-2-faq-question-3-description-1" />{" "}
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Link to="/upgrades/sharding/">
               <Translation id="layer-2-more-on-sharding" />
             </Link>
-          </p>
+          </Text>
         </ExpandableCard>
         <ExpandableCard
           title={`${translateMessageId("layer-2-faq-question-4-title", intl)}`}
         >
-          <p>
+          <Text>
             <Translation id="layer-2-faq-question-4-description-1" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="layer-2-faq-question-4-description-2" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="layer-2-faq-question-4-description-3" />{" "}
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Link to="/bridges/">
               <Translation id="layer-2-more-on-bridges" />
             </Link>
-          </p>
+          </Text>
         </ExpandableCard>
         <ExpandableCard
           title={`${translateMessageId("layer-2-faq-question-5-title", intl)}`}
         >
-          <p>
+          <Text>
             <Translation id="layer-2-faq-question-5-description-1" />{" "}
             <Link to="/contributing/adding-layer-2s/">
               <Translation id="layer-2-faq-question-5-view-listing-policy" />
             </Link>
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="layer-2-faq-question-5-description-2" />
-          </p>
+          </Text>
         </ExpandableCard>
       </ContentBox>
       {/* Layer 2 Further Reading Section */}
       <ContentBox>
-        <h2>
+        <SectionHeading>
           <Translation id="layer-2-further-reading-title" />
-        </h2>
+        </SectionHeading>
         <UnorderedList ms="1.45rem" mb="1.45rem">
           <ListItem>
             <Link to="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">
