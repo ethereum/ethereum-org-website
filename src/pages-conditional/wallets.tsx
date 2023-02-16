@@ -32,157 +32,27 @@ import { Context } from "../types"
 import { Box, Flex, chakra } from "@chakra-ui/react"
 import { cover } from "polished"
 
-// const StyledTwoColumnContent = styled(TwoColumnContent)`
-//   margin-bottom: -2rem;
-//   margin-top: 2rem;
-// `
-
 const StyledTwoColumnContent = chakra(TwoColumnContent)
-
-// const LeftColumn = styled.div`
-//   flex: 0 1 50%;
-//   margin-right: 2rem;
-//   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-//     max-width: 100%;
-//     margin-right: 0;
-//     margin-top: 0;
-//   }
-// `
-
-// const RightColumn = styled.div`
-//   flex: 0 1 50%;
-//   margin-left: 2rem;
-//   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-//     margin-top: 3rem;
-//     max-width: 100%;
-//     margin-left: 0;
-//   }
-// `
-
-// const StyledRightColumn = styled(RightColumn)`
-//   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-//       margin-top: 0rem;
-//     }
-//   `
 
 const StyledRightColumn = chakra(RightColumn)
 
-// const StyledGrayContainer = styled(GrayContainer)`
-//   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-//     margin-top: 1rem;
-//   }
-// `
-
 const StyledGrayContainer = chakra(GrayContainer)
-
-// const SubtitleTwo = styled.div`
-//   font-size: 1.25rem;
-//   line-height: 140%;
-//   margin-bottom: 1.5rem;
-//   color: ${(props) => props.theme.colors.text300};
-// `
-
-// const SubtitleThree = styled.div`
-//   font-size: 1.25rem;
-//   line-height: 140%;
-//   color: ${(props) => props.theme.colors.text};
-//   margin-bottom: 1.5rem;
-//   text-align: center;
-// `
-
-// const FindWallet = styled(GatsbyImage)`
-//   margin-top: 2rem;
-//   max-width: 800px;
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   width: 100%;
-// `
 
 const FindWallet = chakra(GatsbyImage)
 
-// const Intro = styled(Content)`
-//   padding-bottom: 0;
-//   h2 {
-//     margin-bottom: 0;
-//   }
-// `
-
 const Intro = chakra(Content)
-
-// const IntroTwoColumnContent = styled(TwoColumnContent)`
-//   margin-bottom: 0;
-//   padding-bottom: 0;
-// `
 
 const IntroTwoColumnContent = chakra(TwoColumnContent)
 
-// const GradientContainer = styled(GrayContainer)`
-//   background: linear-gradient(
-//     49.21deg,
-// rgba(127, 127, 213, 0.2) 19.87%,
-// rgba(134, 168, 231, 0.2) 58.46%,
-// rgba(145, 234, 228, 0.2) 97.05%
-//   );
-//   margin: 3rem 0rem;
-//   width: 100%;
-// `
-
 const GradientContainer = chakra(GrayContainer)
-
-// const CodeBox = styled.div`
-//   background: #000000;
-//   padding: 0.5rem;
-//   margin-bottom: 1rem;
-//   border-radius: 4px;
-// `
-
-// const Code = styled.p`
-//   font-family: monospace;
-//   color: #ffffff;
-//   margin-bottom: 0rem;
-// `
-
-// const ChecklistItem = styled(HorizontalCard)`
-//   border: 0px;
-//   display: flex;
-//   align-items: flex-start;
-//   margin-bottom: 1rem;
-// `
 
 const ChecklistItem = chakra(HorizontalCard)
 
-// const WalletType = styled(HorizontalCard)`
-//   min-width: 100%;
-//   margin: 0.5rem 0rem;
-//   border-radius: 0px;
-//   align-items: center;
-// `
-
 const WalletType = chakra(HorizontalCard)
-
-// const StyledCallout = styled(Callout)`
-//   flex: 1 1 424px;
-//   min-height: 100%;
-// `
 
 const StyledCallout = chakra(Callout)
 
-// const CentralColumn = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   margin-bottom: 2rem;
-// `
-
-// const CalloutCardContainer = styled(CardContainer)`
-//   margin-top: 4rem;
-// `
-
 const CalloutCardContainer = chakra(CardContainer)
-
-// const H2 = styled.h2`
-//   /* margin: 0; */
-// `
 
 const cards = [
   {
