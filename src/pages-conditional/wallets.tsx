@@ -19,6 +19,7 @@ import {
   Divider,
   GrayContainer,
   Page,
+  RightColumn,
   StyledCard,
   TwoColumnContent,
 } from "../components/SharedStyledComponents"
@@ -38,52 +39,56 @@ import { cover } from "polished"
 
 const StyledTwoColumnContent = chakra(TwoColumnContent)
 
-const LeftColumn = styled.div`
-  flex: 0 1 50%;
-  margin-right: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    max-width: 100%;
-    margin-right: 0;
-    margin-top: 0;
-  }
-`
+// const LeftColumn = styled.div`
+//   flex: 0 1 50%;
+//   margin-right: 2rem;
+//   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+//     max-width: 100%;
+//     margin-right: 0;
+//     margin-top: 0;
+//   }
+// `
 
-const RightColumn = styled.div`
-  flex: 0 1 50%;
-  margin-left: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 3rem;
-    max-width: 100%;
-    margin-left: 0;
-  }
-`
+// const RightColumn = styled.div`
+//   flex: 0 1 50%;
+//   margin-left: 2rem;
+//   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+//     margin-top: 3rem;
+//     max-width: 100%;
+//     margin-left: 0;
+//   }
+// `
 
-const StyledRightColumn = styled(RightColumn)`
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 0rem;
-  }
-`
+// const StyledRightColumn = styled(RightColumn)`
+//   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+//       margin-top: 0rem;
+//     }
+//   `
 
-const StyledGrayContainer = styled(GrayContainer)`
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 1rem;
-  }
-`
+const StyledRightColumn = chakra(RightColumn)
 
-const SubtitleTwo = styled.div`
-  font-size: 1.25rem;
-  line-height: 140%;
-  margin-bottom: 1.5rem;
-  color: ${(props) => props.theme.colors.text300};
-`
+// const StyledGrayContainer = styled(GrayContainer)`
+//   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+//     margin-top: 1rem;
+//   }
+// `
 
-const SubtitleThree = styled.div`
-  font-size: 1.25rem;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text};
-  margin-bottom: 1.5rem;
-  text-align: center;
-`
+const StyledGrayContainer = chakra(GrayContainer)
+
+// const SubtitleTwo = styled.div`
+//   font-size: 1.25rem;
+//   line-height: 140%;
+//   margin-bottom: 1.5rem;
+//   color: ${(props) => props.theme.colors.text300};
+// `
+
+// const SubtitleThree = styled.div`
+//   font-size: 1.25rem;
+//   line-height: 140%;
+//   color: ${(props) => props.theme.colors.text};
+//   margin-bottom: 1.5rem;
+//   text-align: center;
+// `
 
 // const FindWallet = styled(GatsbyImage)`
 //   margin-top: 2rem;
@@ -278,14 +283,21 @@ const WalletsPage = ({
         image={getSrc(data.ogImage)}
       />
       <PageHero content={heroContent} isReverse />
-      <StyledGrayContainer>
+      <StyledGrayContainer marginTop={{ lg: 4 }}>
         <Intro paddingBottom={0} sx={{ h2: { mb: 0 } }}>
           <Heading m="0">
             <Translation id="page-wallets-whats-a-wallet" />
           </Heading>
         </Intro>
         <IntroTwoColumnContent marginBottom={0} paddingBottom={0}>
-          <LeftColumn>
+          <Box
+            flexGrow="0"
+            flexShrink="1"
+            flexBasis="50%"
+            mr={{ base: 0, lg: 8 }}
+            mt={{ lg: 0 }}
+            maxWidth={{ lg: "100%" }}
+          >
             <p>
               <Translation id="page-wallets-description" />
             </p>
@@ -293,8 +305,8 @@ const WalletsPage = ({
               <Translation id="page-wallets-desc-2" />{" "}
             </p>
             <CardList content={guides} />
-          </LeftColumn>
-          <StyledRightColumn>
+          </Box>
+          <StyledRightColumn marginTop={{ lg: 0 }}>
             <p>
               <Translation id="page-wallets-desc-3" />
             </p>
@@ -317,8 +329,14 @@ const WalletsPage = ({
         </Content>
       </StyledGrayContainer>
       <StyledTwoColumnContent marginBottom={-8} marginTop={8}>
-        <Box flexGrow="0" flexShrink="1" flexBasis="50%" mr="8">
-          //leftcolumn
+        <Box
+          flexGrow="0"
+          flexShrink="1"
+          flexBasis="50%"
+          mr={{ base: 0, lg: 8 }}
+          mt={{ lg: 0 }}
+          maxWidth={{ lg: "100%" }}
+        >
           <Heading m="0">
             <Translation id="page-wallets-accounts-addresses" />
           </Heading>
@@ -346,7 +364,14 @@ const WalletsPage = ({
             <Translation id="page-wallets-most-wallets" />
           </p>
         </Box>
-        <RightColumn>
+        <Box
+          flexGrow="0"
+          flexShrink="1"
+          flexBasis="50%"
+          marginTop={{ lg: 0 }}
+          maxWidth={{ lg: "100%" }}
+          marginLeft={{ base: 8, lg: 0 }}
+        >
           <Heading m="0">
             <Translation id="page-wallets-types" />
           </Heading>
@@ -368,7 +393,7 @@ const WalletsPage = ({
               />
             ))}
           </div>
-        </RightColumn>
+        </Box>
       </StyledTwoColumnContent>
       <GradientContainer
         bgGradient="linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%,
@@ -381,9 +406,15 @@ const WalletsPage = ({
             <Heading m="0">
               <Translation id="page-wallets-features-title" />
             </Heading>
-            <SubtitleThree>
+            <Box
+              fontSize={"xl"}
+              lineHeight={"140%"}
+              color="text"
+              marginBottom={6}
+              textAlign={"center"}
+            >
               <Translation id="page-wallets-features-desc" />
-            </SubtitleThree>
+            </Box>
             <ButtonLink to="/wallets/find-wallet/">
               <Translation id="page-wallets-find-wallet-btn" />
             </ButtonLink>
@@ -400,13 +431,25 @@ const WalletsPage = ({
         </Content>
       </GradientContainer>
       <TwoColumnContent>
-        <LeftColumn>
+        <Box
+          flexGrow="0"
+          flexShrink="1"
+          flexBasis="50%"
+          mr={{ base: 0, lg: 8 }}
+          mt={{ lg: 0 }}
+          maxWidth={{ lg: "100%" }}
+        >
           <Heading m="0">
             <Translation id="page-wallets-stay-safe" />
           </Heading>
-          <SubtitleTwo>
+          <Box
+            fontSize={"xl"}
+            lineHeight={"140%"}
+            marginBottom={6}
+            color="text300"
+          >
             <Translation id="page-wallets-stay-safe-desc" />
-          </SubtitleTwo>
+          </Box>
           <div>
             <ChecklistItem
               border={0}
@@ -476,16 +519,28 @@ const WalletsPage = ({
               )}
             />
           </div>
-        </LeftColumn>
-        <RightColumn>
+        </Box>
+        <Box
+          flexGrow="0"
+          flexShrink="1"
+          flexBasis="50%"
+          marginTop={{ lg: 0 }}
+          maxWidth={{ lg: "100%" }}
+          marginLeft={{ base: 8, lg: 0 }}
+        >
           <Heading m="0">
             <Translation id="page-wallets-tips" />
           </Heading>
-          <SubtitleTwo>
+          <Box
+            fontSize={"xl"}
+            lineHeight={"140%"}
+            marginBottom={6}
+            color="text300"
+          >
             <Translation id="page-wallets-tips-community" />
-          </SubtitleTwo>
+          </Box>
           <CardList content={articles} />
-        </RightColumn>
+        </Box>
       </TwoColumnContent>
       <Content>
         <Divider />
