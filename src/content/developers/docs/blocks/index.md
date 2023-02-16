@@ -4,7 +4,7 @@ description: An overview of blocks in the Ethereum blockchain – their data str
 lang: en
 ---
 
-Blockchain data is grouped, processed and stored in blocks. To create a block, transactions are batched and combined with the hash of a previous block in the chain. This previous block hash reference links blocks together (in a chain) because hashes are cryptographically derived from the existing block data. As changes to any previously confirmed blocks will alter the derived hashes in subsequent blocks, network participants are easily able to invalidate blocks which diverge from actual network history.
+Blocks are batches of transactions with a hash of the previous block in the chain. This links blocks together (in a chain) because hashes are cryptographically derived from the block data. This prevents fraud, because one change in any block in history would invalidate all the following blocks as all subsequent hashes would change and everyone running the blockchain would notice.
 
 ## Prerequisites {#prerequisites}
 
