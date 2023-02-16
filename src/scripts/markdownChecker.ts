@@ -45,7 +45,7 @@ interface Languages {
   lang?: Array<Lang>
 }
 
-const langsArray: Array<string> = fs.readdirSync(PATH_TO_INTL_MARKDOWN)
+const langsArray: Array<Lang> = fs.readdirSync(PATH_TO_INTL_MARKDOWN)
 langsArray.push("en")
 
 function getAllMarkdownPaths(
