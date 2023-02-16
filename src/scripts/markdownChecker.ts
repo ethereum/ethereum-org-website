@@ -104,7 +104,7 @@ function sortMarkdownPathsIntoLanguages(paths: Array<string>): Languages {
 interface MatterData {
   title: string
   description: string
-  lang: string
+  lang: Lang
   published: Date
   sidebar: string
   skill: string
