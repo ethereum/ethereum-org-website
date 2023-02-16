@@ -686,6 +686,47 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
           gap={8}
         >
           {layer2DataCombined
+            .filter((l2) => !l2.purpose.indexOf("universal"))
+            .map((l2, idx) => {
+              return (
+                <Layer2ProductCard
+                  key={idx}
+                  background={l2.background}
+                  image={getImage(data[l2.imageKey])!}
+                  description={translateMessageId(
+                    l2.descriptionKey as TranslationKey,
+                    intl
+                  )}
+                  url={l2.website}
+                  note={translateMessageId(l2.noteKey as TranslationKey, intl)}
+                  name={l2.name}
+                  bridge={l2.bridge}
+                  ecosystemPortal={l2.ecosystemPortal}
+                  tokenLists={l2.tokenLists}
+                >
+                  {l2.purpose.map((purpose, index) => (
+                    <Badge key={index} me={2}>
+                      {purpose}
+                    </Badge>
+                  ))}
+                </Layer2ProductCard>
+              )
+            })}
+        </SimpleGrid>
+      </ContentBox>
+      {/* Layer 2 App Specific Section */}
+      <ContentBox id="use-layer-2">
+        <h3>
+          <Translation id="layer-2-use-layer-2-application-specific-title" />
+        </h3>
+        <p>
+          <Translation id="layer-2-use-layer-2-application-specific-1" />
+        </p>
+        <SimpleGrid
+          templateColumns="repeat(auto-fit, minmax(280px, 1fr))"
+          gap={8}
+        >
+          {layer2DataCombined
             .filter((l2) => l2.purpose.indexOf("universal"))
             .map((l2, idx) => {
               return (
