@@ -48,7 +48,7 @@ Additionally, Jordan can also set a max fee (`maxFeePerGas`) for the transaction
 
 ### Block size {#block-size}
 
-Before the London Upgrade, Ethereum had fixed-sized blocks. In times of high network demand, these blocks operated at full capacity. As a result, users often had to wait for demand to drop to get included in a block, which led to a poor user experience.
+Before the London Upgrade, Ethereum had fixed-sized blocks. In times of high network demand, these blocks operated at full capacity. As a result, users often had to wait for demand to reduce to get included in a block, which led to a poor user experience.
 
 The London Upgrade introduced variable-sized blocks to Ethereum. Each block has a target size of 15 million gas, but its size will increase or decrease in accordance with network demand, up until the block limit of 30 million gas (2x the target block size). The protocol achieves an equilibrium block size of 15 million on average through the process of _tâtonnement_. This means if the block size is greater than the target block size, the protocol will increase the base fee for the following block. Similarly, the protocol will decrease the base fee if the block size is less than the target block size. The amount by which the base fee is adjusted is proportional to the difference between the current block size and the target. [More on blocks](/developers/docs/blocks/).
 
