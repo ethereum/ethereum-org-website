@@ -418,7 +418,12 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
         </Box>
 
         <ContentBox>
-          <Center flexDirection={{ base: "column", md: "row" }} mb={16}>
+          <Center
+            flexDirection={{ base: "column", md: "row" }}
+            mb={16}
+            // To allow the content divider to expand vertically above the breakpoint
+            height={{ md: "100px" }}
+          >
             <StatBox>
               <StatPrimary content={tvl} />
               <StatSpan>
