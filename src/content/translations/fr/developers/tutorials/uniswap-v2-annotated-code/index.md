@@ -450,7 +450,7 @@ Utilisez la fonction `UniswapV2ERC20._mint` pour créer les jetons de liquidité
     }
 ```
 
-S'il n'existe pas de frais, réglez `kLast` à zéro (si ce n'est pas déjà le cas). Lorsque ce contrat a été rédigé, il existait une [fonctionnalité de remboursement de gaz](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3298.md) qui encourageait les contrats à réduire la taille globale de l'état Ethereum en mettant à zéro le stockage dont ils n'avaient pas besoin. Ce code récupère ce remboursement lorsque c'est possible.
+S'il n'existe pas de frais, réglez `kLast` à zéro (si ce n'est pas déjà le cas). Lorsque ce contrat a été rédigé, il existait une [fonctionnalité de remboursement de gaz](https://eips.ethereum.org/EIPS/eip-3298) qui encourageait les contrats à réduire la taille globale de l'état Ethereum en mettant à zéro le stockage dont ils n'avaient pas besoin. Ce code récupère ce remboursement lorsque c'est possible.
 
 #### Fonctions accessibles en externe {#pair-external}
 

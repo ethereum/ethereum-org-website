@@ -46,6 +46,7 @@ const semanticTokens = {
     error: "red.500",
     errorNeutral: { _light: "red.100", _dark: "red.900" },
     attention: "yellow.200",
+    switchBackground: { _light: "gray.300", _dark: "whiteAlpha.400" },
   },
 }
 

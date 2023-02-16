@@ -23,6 +23,7 @@ Transactions require a fee and must be included in a validated block. To make th
 
 A submitted transaction includes the following information:
 
+- `from` – the address of the sender, that will be signing the transaction. This will be an externally-owned account as contract accounts cannot send transactions.
 - `recipient` – the receiving address (if an externally-owned account, the transaction will transfer value. If a contract account, the transaction will execute the contract code)
 - `signature` – the identifier of the sender. This is generated when the sender's private key signs the transaction and confirms the sender has authorized this transaction
 - `nonce` - a sequentially incrementing counter which indicates the transaction number from the account
@@ -190,11 +191,9 @@ Ethereum originally had one format for transactions. Each transaction contained 
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
-Ethereum has evolved to support multiple types of transactions to allow for new features such as access lists and [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) to be implemented without affecting legacy transaction formats.
+Ethereum has evolved to support multiple types of transactions to allow for new features such as access lists and [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) to be implemented without affecting legacy transaction formats.
 
-[EIP-2718: Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718) defines a transaction type that is an envelope for future transaction types.
-
-EIP-2718 is a new generalised envelope for typed transactions. In the new standard, transactions are interpreted as:
+[EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) is what allows for this behaviour. Transactions are interpreted as:
 
 `TransactionType || TransactionPayload`
 

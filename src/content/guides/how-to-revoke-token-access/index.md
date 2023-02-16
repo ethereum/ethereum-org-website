@@ -27,7 +27,7 @@ Several websites let you view and revoke smart contracts connected to your addre
 
 ## Step 2: Connect your wallet
 
-Once you are on the website, click on “Connect wallet”. The website should prompt you to connect your wallet.  
+Once you are on the website, click on “Connect wallet”. The website should prompt you to connect your wallet.
 
 Make sure you use the same network in your wallet and website. You will only see smart contracts related to the network selected. For example, if you connect to Ethereum Mainnet, you will only see Ethereum contracts, not contracts from other chains such as Polygon.
 
@@ -41,7 +41,7 @@ If you do not know which contract to choose, you can revoke all of them. It won'
 
 Once you click on revoke, you should see a new transaction suggestion in your wallet. This is to be expected. You will have to pay the fee for the cancelation to be successful. Depending on the network this can take from a minute to several to be processed.
 
-We advise to refresh the revoking tool after few minutes and connect your wallet again to double check if revoked contract has disappeared from the list. 
+We advise to refresh the revoking tool after few minutes and connect your wallet again to double check if revoked contract has disappeared from the list.
 
 <mark>We recommend you never allow projects unlimited access to your tokens and revoke all token allowance access regularly. Revoking token access will never result in loss of funds.</mark>
 
@@ -68,4 +68,4 @@ There are no expiration dates on contract permissions. If you grant contract per
 
 ### Why do projects set unlimited token allowance?
 
-Projects often do this to minimize the number of requests required, meaning the user only has to approve once and pay the transaction fee only once.  While convenient, this can be dangerous for users to approve carelessly, on sites that are not proven with time or audited. Some wallets allow you to manually restrict the amount of tokens being approved to limit your risk. Check with your wallet provider for more information.
+Projects often do this to minimize the number of requests required, meaning the user only has to approve once and pay the transaction fee only once. While convenient, this can be dangerous for users to approve carelessly, on sites that are not proven with time or audited. Some wallets allow you to manually restrict the amount of tokens being approved to limit your risk. Check with your wallet provider for more information.

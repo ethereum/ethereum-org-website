@@ -84,6 +84,7 @@ const ExpandableCard: React.FC<IProps> = ({
               width="100%"
               alignItems="center"
               flexDir={{ base: "column", sm: "row" }}
+              textAlign="start"
             >
               <Box
                 marginBottom={{ base: 2, sm: 0 }}
