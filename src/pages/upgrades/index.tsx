@@ -111,7 +111,7 @@ const PageCard = (props: ComponentPropsWithRef<typeof Card>) => (
   <Card flex="1 1 30%" minW="240px" m={4} p={6} {...props} />
 )
 
-const CentreCard = (props) => <PageCard textAlign="center" {...props} />
+const CentreCard = (props: ComponentPropsWithRef<typeof PageCard>) => <PageCard textAlign="center" {...props} />
 
 const StyledCard = (props) => {
   const tableBoxShadow = useToken("colors", "tableBoxShadow")
