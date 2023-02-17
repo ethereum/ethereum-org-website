@@ -28,7 +28,7 @@ Una transacción enviada incluye la siguiente información:
 - `datos`: Campo opcional en el que se incluyen datos arbitrarios.
 - `LímiteDeGas`: Cantidad máxima de unidades de gas que puede consumir la transacción. Las unidades de gas representan pasos computacionales
 - `maxPriorityFeePerGas`: la cantidad máxima de gas que se incluirá como recompensa para el minero
-- `maxFeePerGas`: la cantidad mínima de gas que se quiere pagar por la transacción (incluidas `baseFeePerGas` y `maxPriorityFeePerGas`)
+- `maxFeePerGas`: la cantidad máxima de gas que se quiere pagar por la transacción (incluidas `baseFeePerGas` y `maxPriorityFeePerGas`)
 
 El gas es una referencia al cálculo necesario para que el minero procese la transacción. Los usuarios tienen que pagar una comisión por ese cálculo. Los valores `gasLimit` y `maxPriorityFeePerGas` determinan la comisión por transacción máxima que se le paga al minero. [Mas información sobre el gas](/developers/docs/gas/).
 
@@ -102,26 +102,26 @@ Ejemplo de respuesta:
 
 Mediante el hash de la firma, se puede demostrar criptográficamente que la transacción proviene del emisor y que se envió a la red.
 
-### The data field {#the-data-field}
+### Campo: data {#the-data-field}
 
-The vast majority of transactions access a contract from an externally-owned account. Most contracts are written in Solidity and interpret their data field in accordance with the [application binary interface (ABI)](/glossary/#abi).
+La gran mayoría de las transacciones que acceden a un contrato se realizan desde cuentas de usuarios externos. La mayoría de los contratos están escritos en Solidity e interpretan su campo de datos de acuerdo con la [application binary interface (ABI)](/glossary/#abi).
 
-The first four bytes specify which function to call, using the hash of the function's name and arguments. You can sometimes identify the function from the selector using [this database](https://www.4byte.directory/signatures/).
+Los primeros cuatro bytes de la data representa el selector de una funcion, y especifica a qué función llamar, el cual es obtenido a partir del hash del nombre y los argumentos de dicha función. A veces puede identificar la función con el selector usando [esta database](https://www.4byte.directory/signatures/).
 
-The rest of the calldata is the arguments, [encoded as specified in the ABI specs](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
+Los bytes restantes de la data son los argumentos, [codificado como se especifica en las especificaciones ABI](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
 
-For example, lets look at [this transaction](https://etherscan.io/tx/0xd0dcbe007569fcfa1902dae0ab8b4e078efe42e231786312289b1eee5590f6a1). Use **Click to see More** to see the calldata.
+Por ejemplo, veamos [esta transacción](https://etherscan.io/tx/0xd0dcbe007569fcfa1902dae0ab8b4e078efe42e231786312289b1eee5590f6a1). Use **Click to Show More** para ver los datos de la llamada.
 
-The function selector is `0xa9059cbb`. There are several [known functions with this signature](https://www.4byte.directory/signatures/?bytes4_signature=0xa9059cbb). In this case [the contract source code](https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48#code) has been uploaded to Etherscan, so we know the function is `transfer(address,uint256)`.
+El selector de funciones es `0xa9059cbb`. Hay varias [funciones conocidas con esta firma](https://www.4byte.directory/signatures/?bytes4_signature=0xa9059cbb). En este caso [el código fuente del contrato](https://etherscan.io/address/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48#code) se ha subido a Etherscan, por lo que sabemos que la función es `transfer(address,uint256)`.
 
-The rest of the data is:
+El resto de los datos son:
 
 ```
 0000000000000000000000004f6742badb049791cd9a37ea913f2bac38d01279
 000000000000000000000000000000000000000000000000000000003b0559f4
 ```
 
-According to the ABI specifications, integer values (such as addresses, which are 20-byte integers) appear in the ABI as 32-byte words, padded with zeros in the front. So we know that the `to` address is [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279). The `value` is 0x3b0559f4 = 990206452.
+De acuerdo con las especificaciones de ABI, los valores con un tamaño conocido (como direcciones, que son números enteros de 20 bytes) aparecen en el ABI con una representación de 32 bytes, rellenadas con ceros al frente. Entonces sabemos que `to` es la dirección [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279). Y `value` es 0x3b0559f4 = 990206452.
 
 ## Tipos de transacciones {#types-of-transactions}
 
