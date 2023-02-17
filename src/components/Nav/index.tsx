@@ -9,7 +9,8 @@ import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
 import ButtonLink from "../ButtonLink"
 import Link from "../Link"
-import Search from "../Search"
+// import Search from "../Search"
+import { Search } from "../Search/search"
 import Translation from "../Translation"
 import { NavLink } from "../SharedStyledComponents"
 import { EthHomeIcon } from "../icons"
@@ -400,7 +401,8 @@ const Nav: React.FC<IProps> = ({ path }) => {
               <Menu path={path} sections={linkSections} />
             </LeftItems>
             <RightItems>
-              <Search useKeyboardShortcut />
+              {/* <Search useKeyboardShortcut /> */}
+              <Search />
               <IconButton
                 aria-label={
                   isDarkTheme ? "Switch to Light Theme" : "Switch to Dark Theme"

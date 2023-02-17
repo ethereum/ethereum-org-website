@@ -1,0 +1,69 @@
+/* Search field on desktop nav bar */
+.DocSearch-Button {
+  border-radius: 0.25rem;
+  border: 1px solid;
+  border-color: var(--eth-colors-bodyLight);
+  height: 30px;
+  background: none;
+  margin: 0;
+  padding-inline: 0.25rem;
+  gap: 1rem;
+  align-items: center;
+  /* --docsearch-searchbox-shadow: transparent; */
+  /* --docsearch-searchbox-focus-background: transparent; */
+}
+
+.DocSearch-Button-Container {
+}
+
+.DocSearch-Button-Keys {
+  min-width: unset;
+  gap: 0.25rem;
+  display: flex;
+  align-items: center !important;
+  margin: 0;
+  margin-top: 2px;
+  padding: 0;
+  height: 100%;
+}
+
+.DocSearch-Button-Container svg {
+  --icon-size: 0.875rem;
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+.DocSearch-Button:hover svg path,
+.DocSearch-Button:hover kbd,
+.DocSearch-Button:hover span {
+  color: var(--eth-colors-bg);
+  border-color: var(--eth-colors-bg);
+}
+
+.DocSearch-Button-Keys kbd {
+  background: none;
+  border: 1px solid;
+  border-color: var(--eth-colors-disabled);
+  color: var(--eth-colors-disabled);
+  box-shadow: none;
+  padding: var(--eth-space-0-5);
+  margin: 0;
+  height: var(--eth-space-5);
+  width: var(--eth-space-5);
+  font-size: var(--eth-fontSizes-sm);
+  text-transform: lowercase;
+}
+.DocSearch-Button-Keys kbd:first-of-type {
+  font-size: var(--eth-fontSizes-md);
+  padding-top: var(--eth-space-1);
+}
+
+.DocSearch-Button-Placeholder {
+  text-align: start;
+  text-transform: lowercase;
+  font-style: italic;
+  color: var(--eth-colors-body);
+  font-weight: 400;
+  width: 100%;
+  flex: 1;
+}
