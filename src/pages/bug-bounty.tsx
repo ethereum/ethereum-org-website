@@ -3,6 +3,7 @@ import { useTheme } from "@emotion/react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
+import { Box, Center, Heading, Text } from "@chakra-ui/react"
 
 import { translateMessageId } from "../utils/translations"
 import Translation from "../components/Translation"
@@ -19,33 +20,33 @@ import ExpandableCard from "../components/ExpandableCard"
 import FeedbackCard from "../components/FeedbackCard"
 import { Context } from "../types"
 import { getImage } from "../utils/image"
-import { Box, Center, Heading, Text } from "@chakra-ui/react"
 
 const Page = ({ children }) => (
   <Box
-    display={"flex"}
-    flexDirection={"column"}
-    alignItems={"center"}
-    width={"100%"}
-    margin={"0 auto"}
+    display="flex"
+    flexDirection="column"
+    alignItems="center"
+    w="full"
+    my={0}
+    mx="auto"
   >
     {children}
   </Box>
 )
 
 const Content = ({ children }) => (
-  <Box padding={"1rem 2rem"} width={"100%"}>
+  <Box py={4} px={8} w="full">
     {children}
   </Box>
 )
 
 const Title = ({ children }) => (
   <Text
-    textTransform={"uppercase"}
-    fontSize={"0.875rem"}
+    textTransform="uppercase"
+    fontSize="0.875rem"
     color="text"
-    marginBottom={"0rem"}
-    marginLeft={"0.5rem"}
+    mb={0}
+    ml={2}
   >
     {children}
   </Text>
@@ -54,40 +55,34 @@ const Title = ({ children }) => (
 const H2 = ({ children }) => (
   <Heading
     as="h2"
-    fontSize={"1.5rem"}
-    fontStyle={"normal"}
-    fontWeight={"700"}
-    lineHeight={"22px"}
-    letterSpacing={"0px"}
-    textAlign={"left"}
+    fontSize="1.5rem"
+    fontStyle="normal"
+    fontWeight="700"
+    lineHeight="22px"
+    letterSpacing="0rem"
+    textAlign="left"
   >
     {children}
   </Heading>
 )
 
 const Subtitle = ({ children }) => (
-  <Box
-    fontSize={"1.5rem"}
-    lineHeight={"140%"}
-    color="text200"
-    maxWidth={"480px"}
-    marginTop={"1rem"}
-  >
+  <Box fontSize="1.5rem" lineHeight="140%" color="text200" maxW="480px" mt={4}>
     {children}
   </Box>
 )
 
 const SloganGradient = ({ children }) => (
   <Box
-    fontWeight={"800"}
+    fontWeight="800"
     fontSize={{ base: "2.5rem", lg: "3rem" }}
-    lineHeight={"140%"}
-    maxWidth={"720px"}
-    marginTop={"1rem"}
-    marginBottom={"0"}
-    backgroundClip={"text"}
+    lineHeight="140%"
+    maxW="720px"
+    mt={4}
+    mb={0}
+    bgClip="text"
     sx={{ WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}
-    background="upgradesGradient"
+    bg="upgradesGradient"
   >
     <Text>{children}</Text>
   </Box>
@@ -95,29 +90,31 @@ const SloganGradient = ({ children }) => (
 
 const Rules = ({ children }) => (
   <Box
-    margin={"0 auto"}
-    maxWidth="3xl"
-    display={"flex"}
-    flexDirection={"column"}
-    alignItems={"center"}
+    my={0}
+    mx="auto"
+    maxW="3xl"
+    display="flex"
+    flexDirection="column"
+    alignItems="center"
   >
     {children}
   </Box>
 )
 
 const SubmitInstructions = ({ children }) => (
-  <Box flex={"1 1 600px"} marginRight={"2rem"} maxWidth={"100ch"}>
+  <Box flex="1 1 600px" mr={8} maxW="100ch">
     {children}
   </Box>
 )
 
 const GradientContainer = ({ children }) => (
   <Box
-    width={"100%"}
-    padding={"4rem 0rem"}
-    marginTop={"2rem"}
-    background={"cardGradient"}
-    boxShadow={"inset 0px 1px 0px tableItemBoxShadow"}
+    w="full"
+    py={16}
+    px={0}
+    mt={8}
+    bg="cardGradient"
+    boxShadow="inset 0px 1px 0px tableItemBoxShadow"
   >
     {children}
   </Box>
@@ -125,11 +122,11 @@ const GradientContainer = ({ children }) => (
 
 const LeaderboardContainer = ({ children }) => (
   <Box
-    flex={"1 1 50%"}
-    display={"flex"}
-    flexDirection={"column"}
-    alignItems={"center"}
-    padding={{ lg: "6rem 2rem 8rem 0rem", base: "0" }}
+    flex="1 1 50%"
+    display="flex"
+    flexDirection="column"
+    alignItems="center"
+    p={{ lg: "6rem 2rem 8rem 0rem", base: "0" }}
   >
     {children}
   </Box>
@@ -137,66 +134,52 @@ const LeaderboardContainer = ({ children }) => (
 
 const FullLeaderboardContainer = ({ children }) => (
   <Box
-    margin={"2rem auto"}
-    padding={"0 2rem"}
-    maxWidth="3xl"
-    display={"flex"}
-    flexDirection={"column"}
-    alignItems={"center"}
+    my={8}
+    mx="auto"
+    py={0}
+    px={8}
+    maxW="3xl"
+    display="flex"
+    flexDirection="column"
+    alignItems="center"
   >
     {children}
   </Box>
 )
 
-const On = () => (
-  <Box
-    width={"8px"}
-    height={"8px"}
-    background="success400"
-    borderRadius={"64px"}
-  ></Box>
-)
+const On = () => <Box w="8px" h="8px" bg="success400" borderRadius="64px"></Box>
 
 const Divider = () => (
-  <Box
-    margin={"4rem 0 4rem 0"}
-    width={"10%"}
-    height={"0.25rem"}
-    backgroundColor={"homeDivider"}
-  ></Box>
+  <Box my={16} mx={0} w="10%" h={1} backgroundColor="homeDivider"></Box>
 )
 
 const Contact = ({ children }) => (
   <Box
-    borderRadius={"2px"}
-    border={"1px"}
-    borderStyle={"solid"}
+    borderRadius="2px"
+    border="1px"
+    borderStyle="solid"
     borderColor="border"
-    padding={"1.5rem"}
-    display={"flex"}
-    justifyContent={"space-between"}
-    alignItems={"center"}
-    margin={"3rem 8rem"}
-    width={"80%"}
+    display="flex"
+    justifyContent="space-between"
+    alignItems="center"
+    p={6}
+    my={12}
+    mx={32}
+    w="80%"
   >
     {children}
   </Box>
 )
 
 const ButtonRow = ({ children }) => (
-  <Box
-    display={"flex"}
-    alignItems={"center"}
-    marginTop={"1rem"}
-    flexWrap={"wrap"}
-  >
+  <Box display="flex" alignItems="center" mt={4} flexWrap="wrap">
     {children}
   </Box>
 )
 
 const StyledButton = ({ children, ...props }) => {
   return (
-    <ButtonLink marginRight={"1rem"} marginBottom={"0rem"} {...props}>
+    <ButtonLink mr={4} mb={0} {...props}>
       {children}
     </ButtonLink>
   )
@@ -204,11 +187,11 @@ const StyledButton = ({ children, ...props }) => {
 
 const ClientIntro = ({ children }) => (
   <Text
-    textTransform={"uppercase"}
-    fontSize={"0.875rem"}
+    textTransform="uppercase"
+    fontSize="0.875rem"
     color="text300"
-    fontWeight={"600"}
-    marginTop={{ base: "3rem", lg: "0" }}
+    fontWeight="600"
+    mt={{ base: "3rem", lg: "0" }}
   >
     {children}
   </Text>
@@ -216,8 +199,8 @@ const ClientIntro = ({ children }) => (
 
 const ClientRow = ({ children }) => (
   <Box
-    display={"flex"}
-    alignItems={"center"}
+    display="flex"
+    alignItems="center"
     flexDirection={{ base: "column", lg: "row" }}
   >
     {children}
@@ -225,36 +208,33 @@ const ClientRow = ({ children }) => (
 )
 
 const Client = ({ children }) => (
-  <Box margin={"4rem"} marginTop={"1rem"} marginBottom={"3rem"}>
+  <Box m={16} mt={4} mb={12}>
     {children}
   </Box>
 )
 
 const HeroCard = ({ children }) => (
   <Box
-    display={"flex"}
-    justifyContent={"space-between"}
+    display="flex"
+    justifyContent="space-between"
     flexDirection={{ base: "column", lg: "row" }}
-    paddingLeft={{ lg: "0" }}
-    marginTop={{ base: "-2rem", lg: "0" }}
+    pl={{ lg: "0" }}
+    mt={{ base: "-2rem", lg: "0" }}
   >
     {children}
   </Box>
 )
 
 const HeroContainer = ({ children }) => (
-  <Box
-    flex={"1 1 50%"}
-    padding={{ lg: "8rem 2rem 8rem 2rem", base: "6rem 0 4rem 0" }}
-  >
+  <Box flex="1 1 50%" p={{ lg: "8rem 2rem 8rem 2rem", base: "6rem 0 4rem 0" }}>
     {children}
   </Box>
 )
 
 const Row = ({ children }) => (
   <Box
-    display={"flex"}
-    alignItems={"center"}
+    display="flex"
+    alignItems="center"
     flexWrap={{ base: "nowrap", lg: "wrap" }}
   >
     {children}
@@ -262,20 +242,14 @@ const Row = ({ children }) => (
 )
 
 const StyledCardContainer = ({ children }) => (
-  <Box display={"flex"} flexWrap={"wrap"} marginLeft={"2rem -1rem 3rem -1rem"}>
+  <Box display="flex" flexWrap="wrap" m="2rem -1rem 3rem -1rem">
     {children}
   </Box>
 )
 
 const StyledCard = ({ children, ...props }) => {
   return (
-    <Card
-      flex={"1 1 464px"}
-      margin={"1rem"}
-      padding={"1.5rem"}
-      justifyContent={"flex-start"}
-      {...props}
-    >
+    <Card flex="1 1 464px" m={4} p={6} justifyContent="flex-start" {...props}>
       {children}
     </Card>
   )
@@ -283,12 +257,13 @@ const StyledCard = ({ children, ...props }) => {
 
 const StyledGrayContainer = ({ children, ...props }) => (
   <Box
-    width={"100%"}
-    padding={"4rem 0"}
-    marginTop={"2rem"}
-    marginBottom={"3rem"}
-    background={"grayBackground"}
-    boxShadow={"inset 0px 1px 0px tableItemBoxShadow"}
+    w="full"
+    py={16}
+    px={0}
+    mt={8}
+    mb={12}
+    bg="grayBackground"
+    boxShadow="inset 0px 1px 0px tableItemBoxShadow"
     {...props}
   >
     {children}
@@ -296,19 +271,15 @@ const StyledGrayContainer = ({ children, ...props }) => (
 )
 
 const Faq = ({ children }) => (
-  <Box
-    display={"flex"}
-    marginTop={"4rem"}
-    flexDirection={{ base: "column", lg: "row" }}
-  >
+  <Box display="flex" mt={16} flexDirection={{ base: "column", lg: "row" }}>
     {children}
   </Box>
 )
-const LeftColumn = ({ children }) => <Box width={"100%"}>{children}</Box>
+const LeftColumn = ({ children }) => <Box w="full">{children}</Box>
 const RightColumn = ({ children }) => (
   <Box
-    width={"100%"}
-    marginLeft={{ base: "0rem", lg: "2rem" }}
+    w="full"
+    ml={{ base: "0rem", lg: "2rem" }}
     flexDirection={{ base: "column", lg: "column" }}
   >
     {children}
@@ -932,12 +903,12 @@ const BugBountiesPage = ({
           <H2>
             <Translation id="page-upgrades-bug-bounty-questions" />
           </H2>
-          <Text marginBottom={"0rem"}>
+          <Text mb="0rem">
             <Translation id="page-upgrades-bug-bounty-email-us" />{" "}
             <Link to="mailto:bounty@ethereum.org">bounty@ethereum.org</Link>
           </Text>
         </div>
-        <Emoji fontSize={"5xl"} text=":email:" />
+        <Emoji fontSize="5xl" text=":email:" />
       </Contact>
       <FeedbackCard />
     </Page>
