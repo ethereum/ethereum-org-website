@@ -6,6 +6,7 @@ import { DocSearchHit } from "@docsearch/react/dist/esm/types"
 import { translateMessageId } from "../../utils/translations"
 // Styles
 import "@docsearch/css"
+import "./styles.css"
 
 const Search: FC = () => {
   const intl = useIntl()

@@ -32,9 +32,6 @@ import type { Context } from "../types"
 
 import client from "../apollo"
 
-// Algolia search css styling
-import "../search.css"
-
 export interface IProps {
   children?: React.ReactNode
   data?: {
