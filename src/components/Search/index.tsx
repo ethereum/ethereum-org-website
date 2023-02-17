@@ -2,8 +2,8 @@
 import React, { FC } from "react"
 import { useIntl } from "react-intl"
 import { DocSearch } from "@docsearch/react"
+import { DocSearchHit } from "@docsearch/react/dist/esm/types"
 import { translateMessageId } from "../../utils/translations"
-
 // Styles
 import "@docsearch/css"
 
@@ -20,13 +20,20 @@ const Search: FC = () => {
       apiKey={apiKey}
       indexName={indexName}
       transformItems={(items) =>
-        items.map((item) => ({
-          ...item,
-          url: item.url
+        items.map((item: DocSearchHit) => {
+          const newItem: DocSearchHit = structuredClone(item)
+          ;(newItem.url = item.url
             .replace(/^https?:\/\/[^\/]+(?=\/)/, "")
             .replace("#main-content", "")
-            .replace("#content", ""),
-        }))
+            .replace("#content", "")
+            .replace("#top", "")),
+            (newItem._highlightResult.hierarchy.lvl0.value =
+              item._highlightResult.hierarchy.lvl0.value.replace(
+                " | ethereum.org",
+                ""
+              ))
+          return newItem
+        })
       }
       searchParameters={{
         facetFilters: [`lang:${intl.locale}`],

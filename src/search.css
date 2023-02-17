@@ -79,6 +79,7 @@
   --docsearch-modal-background: var(--eth-colors-background);
   --docsearch-searchbox-height: fit-content;
   --docsearch-highlight-color: var(--eth-colors-primaryHover);
+  --docsearch-modal-width: 650px;
 }
 
 .DocSearch-SearchBar {
@@ -115,7 +116,7 @@
 
 .DocSearch-Dropdown {
   padding-inline: var(--eth-space-8);
-  max-height: 70vh;
+  max-height: calc(100vh - var(--eth-space-64));
   overflow-y: scroll;
 }
 .DocSearch-Hit-source {
@@ -178,6 +179,7 @@
 
 .DocSearch-Logo a span {
   color: var(--eth-colors-bodyLight);
+  text-transform: uppercase;
 }
 svg[aria-label="Algolia"] * {
   fill: var(--eth-colors-bodyLight);
