@@ -175,6 +175,7 @@
 }
 .DocSearch-Footer span {
   color: var(--eth-colors-body);
+  text-transform: lowercase;
 }
 
 .DocSearch-Logo a span {

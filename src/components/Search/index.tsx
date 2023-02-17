@@ -43,6 +43,25 @@ const Search: FC = () => {
       translations={{
         button: {
           buttonText: translateMessageId("search", intl),
+          buttonAriaLabel: translateMessageId("search", intl),
+        },
+        modal: {
+          searchBox: {
+            resetButtonTitle: translateMessageId("clear", intl),
+            resetButtonAriaLabel: translateMessageId("clear", intl),
+            cancelButtonText: translateMessageId("close", intl),
+            cancelButtonAriaLabel: translateMessageId("close", intl),
+          },
+          footer: {
+            selectText: translateMessageId("docsearch-to-select", intl),
+            selectKeyAriaLabel: translateMessageId("docsearch-to-select", intl),
+            navigateText: translateMessageId("docsearch-to-navigate", intl),
+            navigateUpKeyAriaLabel: translateMessageId("up", intl),
+            navigateDownKeyAriaLabel: translateMessageId("down", intl),
+            closeText: translateMessageId("docsearch-to-close", intl),
+            closeKeyAriaLabel: translateMessageId("docsearch-to-close", intl),
+            searchByText: translateMessageId("docsearch-search-by", intl),
+          },
         },
         /* TODO: Setup remainder of translations */
       }}
