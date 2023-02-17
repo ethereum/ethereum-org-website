@@ -19,12 +19,16 @@ const Search: FC = () => {
       transformItems={(items) =>
         items.map((item) => ({
           ...item,
-          url: item.url.replace(/^https?:\/\/[^\/]+(?=\/)/, ""),
+          url: item.url
+            .replace(/^https?:\/\/[^\/]+(?=\/)/, "")
+            .replace("#main-content", ""),
         }))
       }
       searchParameters={{
         facetFilters: [`lang:${locale}`],
+        hitsPerPage: 5,
       }}
+      placeholder="Search ethereum.org"
     />
   )
 }
