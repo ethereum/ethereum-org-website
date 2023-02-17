@@ -91,7 +91,7 @@ const H4 = (props: HeadingProps) => (
   <Heading
     as="h4"
     fontSize={{ base: "md", md: "xl" }}
-    fontWeight="semibold"
+    fontWeight="medium"
     lineHeight={1.4}
     {...props}
   />
@@ -106,20 +106,6 @@ const H6 = (props: HeadingProps) => (
     {...props}
   />
 )
-
-const StyledInfoBanner = (props: {
-  isWarning: boolean
-  children: ReactNode[]
-}) => {
-  return (
-    <Box
-      as={InfoBanner}
-      ml={8}
-      m={{ base: "2rem 0", lg: undefined }}
-      {...props}
-    />
-  )
-}
 
 const PageCard = (props) => (
   <Box as={Card} flex="1 1 30%" minW="240px" m={4} p={6} {...props} />
@@ -334,7 +320,7 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
               <Translation id="page-upgrades-whats-next-history" />
             </Link>
           </GhostCard>
-          <StyledInfoBanner isWarning={true}>
+          <InfoBanner isWarning={true}>
             <H2>
               <Translation id="page-upgrades-what-to-do" />
             </H2>
@@ -342,7 +328,7 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
             <Link to="/upgrades/get-involved/">
               <Translation id="page-upgrades-get-involved" />
             </Link>
-          </StyledInfoBanner>
+          </InfoBanner>
         </Row>
         <Box mt={16}>
           <H2>
