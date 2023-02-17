@@ -114,7 +114,7 @@ If someone disputes an assertion, then the rollup protocol will initiate the fra
 
 Single-round interactive proving schemes replay disputed transactions on L1 to detect invalid assertions. The rollup protocol emulates the re-execution of the disputed transaction on L1 (Ethereum) using a verifier contract, with the computed state root determining who wins the challenge. If the challenger's claim about the rollup’s correct state is correct, the operator is penalized by having their bond slashed.
 
-However, re-executing transactions on L1 to detect fraud requires publishing state commitments for individual transactions and increases the data rollups must publish on-chain. Replaying transactions also incur significant gas costs. For these reasons, optimistic rollups are switching to multi-round interactive proving, which achieves the same objective (i.e., detecting invalid rollup operations) with more efficiency.
+However, re-executing transactions on L1 to detect fraud requires publishing state commitments for individual transactions and increases the data rollups must publish on-chain. Replaying transactions also incurs significant gas costs. For these reasons, optimistic rollups are switching to multi-round interactive proving, which achieves the same objective (i.e., detecting invalid rollup operations) with more efficiency.
 
 #### Multi-round interactive proving {#multi-round-interactive-proving}
 
