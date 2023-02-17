@@ -9,6 +9,8 @@
   padding-inline: 0.25rem;
   gap: 1rem;
   align-items: center;
+  --docsearch-searchbox-shadow: inset 0 0 0 1px
+    var(--eth-colors-primaryHighlight);
 }
 
 .DocSearch-Button-Container {
@@ -65,11 +67,12 @@
   width: 100%;
   flex: 1;
 }
+
 /* Algolia search modal styling */
 .DocSearch-Modal {
   --docsearch-modal-background: var(--eth-colors-background);
   --docsearch-searchbox-height: fit-content;
-  /* --docsearch-highlight-color: var(--eth-colors-body); */
+  --docsearch-highlight-color: var(--eth-colors-primaryHover);
 }
 
 .DocSearch-SearchBar {
@@ -96,6 +99,12 @@
   color: var(--eth-colors-primaryHighlight);
 }
 .DocSearch-SearchBar button:hover {
+  color: var(--eth-colors-primary);
+}
+
+.DocSearch-Container--Stalled .DocSearch-MagnifierLabel,
+.DocSearch-Container--Stalled .DocSearch-LoadingIndicator {
+  color: var(--chakra-colors-primaryHighlight);
 }
 
 .DocSearch-Dropdown {
@@ -115,4 +124,54 @@
   background: var(--eth-colors-primaryHover);
   box-shadow: 4px 4px 0 0 var(--eth-colors-primaryLight);
   --docsearch-hit-active-color: var(--eth-colors-background);
+}
+.DocSearch-Hit-action-button:focus path,
+.DocSearch-Hit-action-button:hover path {
+  fill: var(--eth-colors-switchBackground);
+}
+.DocSearch-Hit-icon {
+  /* --docsearch-muted-color:  */
+  color: var(--eth-colors-body);
+}
+
+.DocSearch-Footer {
+  --docsearch-footer-height: var(--eth-space-10);
+}
+
+/* Modal footer */
+.DocSearch-Commands kbd {
+  background: var(--eth-colors-button-background);
+  border: 1px solid var(--eth-colors-primary);
+  color: var(--eth-colors-primary);
+  box-shadow: none;
+  --size: 1rem;
+  height: var(--size);
+  width: var(--size);
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border-radius: var(--eth-radii-base);
+}
+
+.DocSearch-Footer {
+  background: var(--eth-colors-primaryBackground);
+  --docsearch-logo-colors: var(--eth-colors-bodyLight);
+  --docsearch-footer-shadow: none;
+  border-top: 2px solid var(--eth-colors-primary);
+}
+.DocSearch-Footer ul {
+  gap: var(--eth-space-4);
+}
+.DocSearch-Footer ul li {
+  margin: 0 !important;
+}
+.DocSearch-Footer span {
+  color: var(--eth-colors-body);
+}
+
+.DocSearch-Logo a span {
+  color: var(--eth-colors-bodyLight);
+}
+svg[aria-label="Algolia"] * {
+  fill: var(--eth-colors-bodyLight);
 }

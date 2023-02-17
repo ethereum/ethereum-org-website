@@ -36,6 +36,7 @@ const semanticTokens = {
     primaryHover: { _light: "blue.300", _dark: "orange.300" },
     primaryPressed: { _light: "blue.300", _dark: "orange.800" },
     primaryHighlight: { _light: "blue.700", _dark: "orange.100" },
+    primaryBackground: { _light: "blue.100", _dark: "orange.800" },
     body: { _light: "gray.700", _dark: "gray.100" },
     bodyInverted: { _light: "gray.100", _dark: "gray.700" },
     bodyLight: { _light: "gray.500", _dark: "gray.100" },
