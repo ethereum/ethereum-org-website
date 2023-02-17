@@ -21,7 +21,6 @@ These programs support the broad Ethereum ecosystem by offering grants to a wide
 - [Open Grants](https://opengrants.com/explore)
 - [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Google spreadsheet of organizations offering grants_
 - [Crunchbase for Web3 Grants](https://www.cryptoneur.xyz/web3-grants) - _Find complete and up-to-date database of web3 grants. Filter and search for grants by category, use case, amount, and more. Contribute to help other founders find the right grant._
-- [Layer 2 Grants](https://esp.ethereum.foundation/layer-2-grants) - _The Ethereum Foundation sponsors grants to support layer 2 applications, analytics, and education_
 - [Academic Grants](https://esp.ethereum.foundation/academic-grants-2023) - _Grants to support Ethereum-related academic work_
 
 ## Project specific {#project-specific}
