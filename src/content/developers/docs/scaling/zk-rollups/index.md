@@ -238,7 +238,7 @@ Projects working on zkEVMs include:
 
 - **[Scroll](https://scroll.io/blog/zkEVM)** - _Scroll is a tech-driven company working on building a native zkEVM Layer 2 Solution for Ethereum._
 
-- **[Polygon Hermez](https://docs.hermez.io/zkEVM/architecture/introduction/)** - _Hermez 2.0 is a decentralized ZK Rollup on the Ethereum mainnet working on a zero-knowledge Ethereum Virtual Machine (zkEVM) that executes Ethereum transactions in a transparent way, including smart contracts with zero-knowledge-proof validations._
+- **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)** - _is a decentralized ZK Rollup on the Ethereum mainnet working on a zero-knowledge Ethereum Virtual Machine (zkEVM) that executes Ethereum transactions in a transparent way, including smart contracts with zero-knowledge-proof validations._
 
 ## Further reading on ZK-rollups reading {#further-reading-on-zk-rollups}
 

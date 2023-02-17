@@ -1,11 +1,10 @@
-import React from "react"
+import React, { FC } from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { MDXProvider } from "@mdx-js/react"
 import styled from "@emotion/styled"
-import { Badge } from "@chakra-ui/react"
-
+import { Badge, Box, BoxProps } from "@chakra-ui/react"
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
   List as ButtonDropdownList,
@@ -38,6 +37,7 @@ import {
 import Emoji from "../components/OldEmoji"
 import YouTube from "../components/YouTube"
 import Breadcrumbs from "../components/Breadcrumbs"
+import ShanghaiCapella from "../components/Staking/ShanghaiCapella"
 import StakingLaunchpadWidget from "../components/Staking/StakingLaunchpadWidget"
 import StakingProductsCardGrid from "../components/Staking/StakingProductsCardGrid"
 import StakingComparison from "../components/Staking/StakingComparison"
@@ -45,6 +45,9 @@ import StakingHowSoloWorks from "../components/Staking/StakingHowSoloWorks"
 import StakingConsiderations from "../components/Staking/StakingConsiderations"
 import StakingCommunityCallout from "../components/Staking/StakingCommunityCallout"
 import StakingGuides from "../components/Staking/StakingGuides"
+import WithdrawalCredentials from "../components/Staking/WithdrawalCredentials"
+import WithdrawalsTabComparison from "../components/Staking/WithdrawalsTabComparison"
+import Callout from "../components/Callout"
 
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Context } from "../types"
@@ -253,6 +256,9 @@ const MobileButtonDropdown = styled(StyledButtonDropdown)`
 
 const Container = styled.div`
   position: relative;
+  * {
+    scroll-margin-top: 5.5rem;
+  }
 `
 
 const HeroContainer = styled.div`
@@ -305,6 +311,24 @@ const InfoBanner = styled(SharedInfoBanner)`
   margin: 2rem 0;
 `
 
+const TableContainer: FC<BoxProps> = (props) => (
+  <Box
+    w="fit-content"
+    mx={["auto", null, null, 0]}
+    sx={{
+      table: {
+        borderCollapse: "separate",
+        borderSpacing: "1rem 0",
+      },
+      th: {
+        whiteSpace: "break-spaces !important",
+        textAlign: "center",
+      },
+    }}
+    {...props}
+  />
+)
+
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
@@ -316,29 +340,36 @@ const components = {
   p: Paragraph,
   pre: Pre,
   table: MarkdownTable,
-  MeetupList,
-  RandomAppList,
-  Logo,
+  div: Box,
+  Badge,
   ButtonLink,
-  Contributors,
-  InfoBanner,
+  Callout,
   Card,
   CardGrid,
-  InfoGrid,
+  Contributors,
   Divider,
-  SectionNav,
-  Badge,
-  Emoji,
-  UpgradeStatus,
   DocLink,
+  Emoji,
   ExpandableCard,
-  YouTube,
-  StakingLaunchpadWidget,
-  StakingProductsCardGrid,
+  InfoBanner,
+  InfoGrid,
+  Logo,
+  MeetupList,
+  RandomAppList,
+  Roadmap,
+  SectionNav,
+  ShanghaiCapella,
   StakingComparison,
-  StakingHowSoloWorks,
   StakingConsiderations,
   StakingGuides,
+  StakingHowSoloWorks,
+  StakingLaunchpadWidget,
+  StakingProductsCardGrid,
+  TableContainer,
+  UpgradeStatus,
+  WithdrawalCredentials,
+  WithdrawalsTabComparison,
+  YouTube,
 }
 
 const StakingPage = ({
@@ -394,6 +425,15 @@ const StakingPage = ({
           eventCategory: `Staking dropdown`,
           eventAction: `Clicked`,
           eventName: "clicked pooled staking",
+        },
+      },
+      {
+        text: "About withdrawals" as TranslationKey,
+        to: "/staking/withdrawals/",
+        matomo: {
+          eventCategory: `Staking dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked about withdrawals",
         },
       },
     ],

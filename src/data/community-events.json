@@ -54,6 +54,15 @@
     "endDate": "2023-05-28"
   },
   {
+    "title": "ETH Belgrade 2023",
+    "to": "https://belgradeblockchainweek.com/#eth-belgrade",
+    "sponsor": null,
+    "location": "Belgrade, Serbia",
+    "description": "Belgrade Blockchain Week is week-long in-person gathering of the greatest Web3 minds and professionals",
+    "startDate": "2023-06-02",
+    "endDate": "2023-06-4"
+  },
+  {
     "title": "ETHGlobal Toronto",
     "to": "https://ethglobal.com/events/toronto",
     "sponsor": null,

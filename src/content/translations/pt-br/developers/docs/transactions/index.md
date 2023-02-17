@@ -179,7 +179,7 @@ O Ethereum originalmente tinha um formato para transações. Cada transação po
 
 `RLP ([emissor, taxa de "queima", parâmetros de "queima", destino, valor, dados, v, r, s])`
 
-O Ethereum evoluiu para apoiar vários tipos de transações, permitindo que novos recursos, como listas de acesso e [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) sejam implementados sem que isso afete os modelos transacionais precursores.
+O Ethereum evoluiu para apoiar vários tipos de transações, permitindo que novos recursos, como listas de acesso e [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) sejam implementados sem que isso afete os modelos transacionais precursores.
 
 [EIP-2718: Carta de Transações Redigidas](https://eips.ethereum.org/EIPS/eip-2718) trata-se de um tipo de transação que é um "envelope" para os tipos de transações futuras.
 

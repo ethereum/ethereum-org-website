@@ -454,7 +454,7 @@ Use the `UniswapV2ERC20._mint` function to actually create the additional liquid
     }
 ```
 
-If there is no fee set `kLast` to zero (if it isn't that already). When this contract was written there was a [gas refund feature](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3298.md) that encouraged contracts to reduce the overall size of the Ethereum state by zeroing out storage they did not need.
+If there is no fee set `kLast` to zero (if it isn't that already). When this contract was written there was a [gas refund feature](https://eips.ethereum.org/EIPS/eip-3298) that encouraged contracts to reduce the overall size of the Ethereum state by zeroing out storage they did not need.
 This code gets that refund when possible.
 
 #### Externally Accessible Functions {#pair-external}
