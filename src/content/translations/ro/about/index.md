@@ -57,10 +57,6 @@ Primim cu plăcere feedback atât despre principiile de concepţie, cât și des
 
 Aveţi grijă să citiţi [principiile noastre](/contributing/design-principles/) și [ghidul nostru de stil](/contributing/style-guide/) dacă doriți să [vă aduceţi contribuţia la site](/contributing/).
 
-## Foaie de parcurs {#roadmap}
-
-<Roadmap />
-
 ## Posturi vacante {#open-jobs}
 
 În ciuda faptului că acest site este open-source și poate lucra oricine la el, avem o echipă dedicată site-ului ethereum.org și altor proiecte web ale Fundației Ethereum.
