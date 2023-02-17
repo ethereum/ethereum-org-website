@@ -107,8 +107,8 @@ const H6 = (props: HeadingProps) => (
   />
 )
 
-const PageCard = (props) => (
-  <Box as={Card} flex="1 1 30%" minW="240px" m={4} p={6} {...props} />
+const PageCard = (props: ComponentPropsWithRef<typeof Card>) => (
+  <Card flex="1 1 30%" minW="240px" m={4} p={6} {...props} />
 )
 
 const CentreCard = (props) => <PageCard textAlign="center" {...props} />
