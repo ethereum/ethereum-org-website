@@ -136,7 +136,7 @@ Layer 2 scaling is a primary initiative to greatly improve gas costs, user exper
 
 ## Strategies for you to reduce gas costs {#strategies-for-you-to-reduce-gas-costs}
 
-If you are looking to reduce gas costs for your ETH transactions, you can set a tip to indicate the priority level of your transaction. Miners will 'work on' and execute transactions that offer a higher tip per gas, as they get to keep the tips that you pay and will be less inclined to execute transactions with lower tips set.
+If you are looking to reduce gas costs for your transactions, you can set a tip to indicate the priority level of your transaction. Miners will 'work on' and execute transactions that offer a higher tip per gas, as they get to keep the tips that you pay and will be less inclined to execute transactions with lower tips set.
 
 If you want to monitor gas prices, so you can send your ETH for less, you can use many different tools such as:
 
