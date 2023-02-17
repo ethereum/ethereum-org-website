@@ -335,6 +335,9 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               <Translation id="additional-reading-more-on-ethereum-basics" />
             </AdditionalReadingHeader>
             <DocsContainer>
+              <DocLink to="/guides/">
+                <Translation id="guides-hub" />
+              </DocLink>
               <DocLink to="/smart-contracts/">
                 <Translation id="additional-reading-what-are-smart-contracts" />
               </DocLink>
@@ -448,6 +451,12 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               <Translation id="additional-reading-more-on-using-ethereum" />
             </AdditionalReadingHeader>
             <DocsContainer>
+              <DocLink to="/guides/how-to-register-an-ethereum-account/">
+                <Translation id="additional-reading-how-to-register-an-ethereum-account" />
+              </DocLink>
+              <DocLink to="/guides/how-to-use-a-wallet/">
+                <Translation id="additional-reading-how-to-use-a-wallet" />
+              </DocLink>
               <DocLink to="/community/support/">
                 <Translation id="additional-reading-support-for-ethereum-and-wallets" />
               </DocLink>

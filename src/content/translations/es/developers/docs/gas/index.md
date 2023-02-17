@@ -101,13 +101,13 @@ Uno de los principales beneficios de la actualización de Londres es la mejora d
 
 ## EIP-1559 {#eip-1559}
 
-La implementación de [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) en la actualización de Londres hizo que el mecanismo de comisiones de transacción fuera más complejo que el anterior de subasta del precio del gas, pero tiene la ventaja de hacer más predecibles las comisiones de gas, lo cual genera un mercado de comisiones de transacción más eficiente. Los usuarios pueden enviar transacciones con una `maxFeePerGas` correspondiente a la cantidad que están dispuestos a pagar por transacción para que esta se ejecute, sabiendo que no pagarán más que el precio de mercado por el gas (`comisión base por gas`), y que se les reembolsará la cantidad adicional menos su propina.
+La implementación de [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) en la actualización de Londres hizo que el mecanismo de comisiones de transacción fuera más complejo que el anterior de subasta del precio del gas, pero tiene la ventaja de hacer más predecibles las comisiones de gas, lo cual genera un mercado de comisiones de transacción más eficiente. Los usuarios pueden enviar transacciones con una `maxFeePerGas` correspondiente a la cantidad que están dispuestos a pagar por transacción para que esta se ejecute, sabiendo que no pagarán más que el precio de mercado por el gas (`comisión base por gas`), y que se les reembolsará la cantidad adicional menos su propina.
 
 En este vídeo se explica el EIP-1559 y los beneficios que brinda:
 
 <YouTube id="MGemhK9t44Q" />
 
-Si está interesado/a, puede leer las [especificaciones exactas de EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md).
+Si está interesado/a, puede leer las [especificaciones exactas de EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
 
 Continúe aprendiendo más con estos [recursos de EIP-1559](https://hackmd.io/@timbeiko/1559-resources).
 

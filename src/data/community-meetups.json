@@ -108,6 +108,12 @@
     "link": "https://t.me/ethereumitalia"
   },
   {
+    "title": "Ethereum Venezia Meetup",
+    "emoji": ":it:",
+    "location": "Venice",
+    "link": "https://discord.gg/VMzVjCHN8k"
+  },
+  {
     "title": "Ethereum Japan",
     "emoji": ":jp:",
     "location": "Multiple locations",
@@ -340,5 +346,11 @@
     "emoji": ":cr:",
     "location": "Costa Rica",
     "link": "https://twitter.com/EthereumCR"
+  },
+  {
+    "title": "Hash House Medellín",
+    "emoji": ":co:",
+    "location": "Colombia",
+    "link": "https://www.meetup.com/hash-house-medellin/"
   }
 ]

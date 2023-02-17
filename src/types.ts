@@ -79,14 +79,14 @@ export interface AnswerChoice {
 
 export interface Answer {
   id: string
-  label: string
-  explanation: string
+  label: TranslationKey
+  explanation: TranslationKey
   moreInfoLabel?: string
   moreInfoUrl?: string
 }
 
 export interface RawQuestion {
-  prompt: string
+  prompt: TranslationKey
   answers: Array<Answer>
   correctAnswerId: string
 }
@@ -100,7 +100,7 @@ export interface QuestionBank {
 }
 
 export interface RawQuiz {
-  title: string
+  title: TranslationKey
   questions: Array<string> // TODO: Force to be an array of questionID's
 }
 

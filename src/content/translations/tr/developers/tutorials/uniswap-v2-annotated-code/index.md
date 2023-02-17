@@ -450,7 +450,7 @@ Ek likidite token'larını gerçekten oluşturmak ve bunları `feeTo` öğesine 
     }
 ```
 
-Herhangi bir ücret yoksa `kLast` öğesini sıfıra ayarlayın (zaten değilse). Bu sözleşme yazıldığında, ihtiyaç duymadıkları depolama alanını sıfırlayarak sözleşmeleri Ethereum durumunun genel boyutunu küçültmeye teşvik eden bir [gaz iadesi özelliği](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3298.md) bulunuyordu. Bu kod, mümkün olduğunda o iadeyi alır.
+Herhangi bir ücret yoksa `kLast` öğesini sıfıra ayarlayın (zaten değilse). Bu sözleşme yazıldığında, ihtiyaç duymadıkları depolama alanını sıfırlayarak sözleşmeleri Ethereum durumunun genel boyutunu küçültmeye teşvik eden bir [gaz iadesi özelliği](https://eips.ethereum.org/EIPS/eip-3298) bulunuyordu. Bu kod, mümkün olduğunda o iadeyi alır.
 
 #### Harici Erişilebilir Fonksiyonlar {#pair-external}
 

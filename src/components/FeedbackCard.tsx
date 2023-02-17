@@ -1,11 +1,11 @@
 // Library imports
 import React, { ReactNode, useState } from "react"
-import { Flex, FlexProps, Heading, Icon } from "@chakra-ui/react"
+import { Flex, FlexProps, Heading } from "@chakra-ui/react"
 // Component imports
 import Button from "./Button"
 import Translation from "./Translation"
 // SVG imports
-import ThumbsUp from "../assets/feedback-thumbs-up.svg"
+import { FeedbackThumbsUpIcon } from "./icons"
 // Utility imports
 import { trackCustomEvent } from "../utils/matomo"
 // Hook imports
@@ -81,16 +81,14 @@ const FeedbackCard: React.FC<IProps> = ({
             <>
               <Button
                 variant="outline-color"
-                leftIcon={<Icon as={ThumbsUp} w={6} h={6} />}
+                leftIcon={<FeedbackThumbsUpIcon />}
                 onClick={() => handleSubmit(true)}
               >
                 <Translation id="yes" />
               </Button>
               <Button
                 variant="outline-color"
-                leftIcon={
-                  <Icon as={ThumbsUp} w={6} h={6} transform="scaleY(-1)" />
-                }
+                leftIcon={<FeedbackThumbsUpIcon transform="scaleY(-1)" />}
                 onClick={() => handleSubmit(false)}
               >
                 <Translation id="no" />
