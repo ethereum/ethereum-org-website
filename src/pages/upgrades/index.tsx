@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react"
+import React, { ComponentPropsWithRef, ReactNode } from "react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
@@ -57,11 +57,11 @@ const CardContainer = (props: FlexProps) => (
   <Flex flexWrap="wrap" mx={-4} {...props} />
 )
 
-const Row = ({ children }) => (
+const Row = (props: ChildOnlyProp) => (
   <Flex
     align="flex-start"
     direction={{ base: "column", lg: "row" }}
-    children={children}
+    {...props}
   />
 )
 
@@ -111,7 +111,9 @@ const PageCard = (props: ComponentPropsWithRef<typeof Card>) => (
   <Card flex="1 1 30%" minW="240px" m={4} p={6} {...props} />
 )
 
-const CentreCard = (props: ComponentPropsWithRef<typeof PageCard>) => <PageCard textAlign="center" {...props} />
+const CentreCard = (props: ComponentPropsWithRef<typeof PageCard>) => (
+  <PageCard textAlign="center" {...props} />
+)
 
 const StyledCard = (props: ComponentPropsWithRef<typeof PageCard>) => {
   const tableBoxShadow = useToken("colors", "tableBoxShadow")
@@ -184,7 +186,9 @@ const Staking = (props: ChildOnlyProp) => (
   />
 )
 
-const StakingCard = (props) => <StyledCard m={0} {...props} />
+const StakingCard = (props: ComponentPropsWithRef<typeof StyledCard>) => (
+  <StyledCard m={0} {...props} />
+)
 
 const StakingColumns = (props: ChildOnlyProp) => (
   <Flex direction={{ base: "column", lg: "row" }} {...props} />
