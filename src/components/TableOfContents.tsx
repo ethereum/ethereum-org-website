@@ -18,7 +18,7 @@ const Aside = styled.aside`
   position: sticky;
   top: 7.25rem; /* account for navbar */
   padding: 1rem 0 1rem 1rem;
-  max-width: 25%;
+  max-width: 16rem;
   min-width: 12rem;
   height: calc(100vh - 80px);
   overflow-y: auto;

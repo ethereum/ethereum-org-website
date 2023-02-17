@@ -67,11 +67,9 @@ const DesktopTableOfContents = styled(TableOfContents)<{
 
 // Apply styles for classes within markdown here
 const Content = styled.article`
-  width: ${(props) => props.theme.breakpoints.s};
-  flex: 1 1;
-  max-width: ${(props) => props.theme.breakpoints.m};
+  flex: 1 1 ${(props) => props.theme.breakpoints.m};
+  max-width: 756px;
   padding: 3rem 4rem 4rem;
-  margin: 0px auto;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     max-width: 100%;
   }
