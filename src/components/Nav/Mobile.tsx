@@ -3,11 +3,9 @@ import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 import { motion } from "framer-motion"
 
-import Emoji from "../OldEmoji"
 import Icon from "../Icon"
 import Link from "../Link"
 import NakedButton from "../NakedButton"
-import Search from "../Search"
 import Translation from "../Translation"
 import { NavLink } from "../SharedStyledComponents"
 import { translateMessageId } from "../../utils/translations"
@@ -101,32 +99,6 @@ const glyphPathVariants = {
     transition: { duration: 1.2 },
   },
 }
-
-const SearchContainer = styled(MenuContainer)`
-  z-index: 101;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-`
-
-const SearchHeader = styled.h3`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  & > svg {
-    fill: ${(props) => props.theme.colors.text};
-  }
-`
-
-const CloseIconContainer = styled.span`
-  z-index: 102;
-  cursor: pointer;
-
-  & > svg {
-    fill: ${(props) => props.theme.colors.text};
-  }
-`
 
 const MenuItems = styled.ul`
   margin: 0;
@@ -244,22 +216,6 @@ const BottomItemText = styled.div`
   &:hover {
     opacity: 1;
   }
-`
-
-const BlankSearchState = styled.div`
-  color: ${(props) => props.theme.colors.text};
-  background: ${(props) => props.theme.colors.searchBackgroundEmpty};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10vw;
-  align-self: center;
-  width: 280px;
-  width: min(60vw, 280px);
-  height: 280px;
-  height: min(60vw, 280px);
-  border-radius: 100%;
 `
 
 export interface IProps {
@@ -401,23 +357,6 @@ const MobileNavMenu: React.FC<IProps> = ({
           </BottomLink>
         </BottomItem>
       </BottomMenu>
-      <SearchContainer
-        animate={isSearchOpen ? "open" : "closed"}
-        variants={mobileMenuVariants}
-        initial="closed"
-      >
-        <SearchHeader>
-          <Translation id="search" />
-          <CloseIconContainer onClick={() => toggleMenu("search")}>
-            <Icon name="close" />
-          </CloseIconContainer>
-        </SearchHeader>
-        <Search handleSearchSelect={toggleMenu} />
-        <BlankSearchState>
-          <Emoji text=":sailboat:" size={3} />
-          <Translation id="search-box-blank-state-text" />
-        </BlankSearchState>
-      </SearchContainer>
     </Container>
   )
 }

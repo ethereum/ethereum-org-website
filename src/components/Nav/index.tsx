@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { FC, useState, useEffect } from "react"
 import { Icon, IconButton, Text, useColorMode } from "@chakra-ui/react"
 import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
 import styled from "@emotion/styled"
@@ -100,7 +100,7 @@ export interface IProps {
 }
 
 // TODO display page title on mobile
-const Nav: React.FC<IProps> = ({ path }) => {
+const Nav: FC<IProps> = ({ path }) => {
   const { colorMode, toggleColorMode } = useColorMode()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
@@ -363,12 +363,30 @@ const Nav: React.FC<IProps> = ({ path }) => {
       to: "/developers/local-environment/",
     },
   ]
-
+  useEffect(() => {
+    // Event listener for when user clicks on .DocSearch-Container div, to toggle isSearchOpen to false
+    const closeSearchListener = (e) => {
+      if (
+        e.target &&
+        (e.target.className === "DocSearch-Container" ||
+          e.target.className === "DocSearch-Cancel")
+      ) {
+        setIsSearchOpen(false)
+        setIsMenuOpen(false)
+      }
+    }
+    document.addEventListener("click", closeSearchListener)
+    // remove event listener on dismount
+    return () => {
+      document.removeEventListener("click", closeSearchListener)
+    }
+  }, [])
   let mobileLinkSections = cloneDeep(linkSections)
   const handleMenuToggle = (item?: "search" | "menu"): void => {
     if (item === "menu") {
       setIsMenuOpen(!isMenuOpen)
     } else if (item === "search") {
+      document.getElementsByClassName("DocSearch-Button")[0].click()
       setIsSearchOpen(!isSearchOpen)
     } else {
       setIsMenuOpen(false)
