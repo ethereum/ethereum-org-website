@@ -2,11 +2,13 @@
 import React, { FC } from "react"
 import { useIntl } from "react-intl"
 import { DocSearch } from "@docsearch/react"
+import { translateMessageId } from "../../utils/translations"
+
 // Styles
 import "@docsearch/css"
 
 const Search: FC = () => {
-  const { locale } = useIntl()
+  const intl = useIntl()
   const appId = process.env.GATSBY_ALGOLIA_APP_ID || ""
   const apiKey = process.env.GATSBY_ALGOLIA_SEARCH_KEY || ""
   const indexName = process.env.GATSBY_ALGOLIA_BASE_SEARCH_INDEX_NAME || ""
@@ -25,10 +27,15 @@ const Search: FC = () => {
         }))
       }
       searchParameters={{
-        facetFilters: [`lang:${locale}`],
+        facetFilters: [`lang:${intl.locale}`],
         hitsPerPage: 5,
       }}
-      placeholder="Search ethereum.org"
+      placeholder={translateMessageId("search-ethereum-org", intl)}
+      translations={{
+        button: {
+          buttonText: translateMessageId("search", intl),
+        },
+      }}
     />
   )
 }

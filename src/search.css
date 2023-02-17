@@ -32,6 +32,12 @@
   width: var(--icon-size);
   height: var(--icon-size);
 }
+.DocSearch-Button:active,
+.DocSearch-Button:focus,
+.DocSearch-Button:hover {
+  box-shadow: none;
+  outline: 2px solid var(--eth-colors-primary);
+}
 
 .DocSearch-Button:hover svg path,
 .DocSearch-Button:hover kbd,
