@@ -356,7 +356,6 @@ const components = {
   Logo,
   MeetupList,
   RandomAppList,
-  Roadmap,
   SectionNav,
   ShanghaiCapella,
   StakingComparison,
