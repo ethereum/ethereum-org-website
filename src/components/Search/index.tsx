@@ -11,7 +11,8 @@ const Search: FC = () => {
   const intl = useIntl()
   const appId = process.env.GATSBY_ALGOLIA_APP_ID || ""
   const apiKey = process.env.GATSBY_ALGOLIA_SEARCH_KEY || ""
-  const indexName = process.env.GATSBY_ALGOLIA_BASE_SEARCH_INDEX_NAME || ""
+  const indexName =
+    process.env.GATSBY_ALGOLIA_BASE_SEARCH_INDEX_NAME || "prod-ethereum-org"
 
   return (
     <DocSearch
@@ -23,18 +24,19 @@ const Search: FC = () => {
           ...item,
           url: item.url
             .replace(/^https?:\/\/[^\/]+(?=\/)/, "")
-            .replace("#main-content", ""),
+            .replace("#main-content", "")
+            .replace("#content", ""),
         }))
       }
       searchParameters={{
         facetFilters: [`lang:${intl.locale}`],
-        hitsPerPage: 5,
       }}
       placeholder={translateMessageId("search-ethereum-org", intl)}
       translations={{
         button: {
           buttonText: translateMessageId("search", intl),
         },
+        /* TODO: Setup remainder of translations */
       }}
     />
   )

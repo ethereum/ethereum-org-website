@@ -115,6 +115,7 @@
 
 .DocSearch-Dropdown {
   padding-inline: var(--eth-space-8);
+  max-height: 70vh;
   overflow-y: scroll;
 }
 .DocSearch-Hit-source {
@@ -202,5 +203,11 @@ svg[aria-label="Algolia"] * {
 
   .DocSearch-Cancel {
     color: var(--chakra-colors-primary);
+  }
+
+  .DocSearch-Dropdown {
+    padding-inline: var(--eth-space-8);
+    max-height: 100%;
+    overflow-y: scroll;
   }
 }
