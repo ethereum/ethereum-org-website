@@ -1,42 +1,31 @@
 import React from "react"
-import styled from "@emotion/styled"
-
 import Link from "../components/Link"
-import Emoji from "../components/OldEmoji"
+import Emoji from "../components/Emoji"
 import ButtonLink from "../components/ButtonLink"
-import { Page, Content, Divider } from "../components/SharedStyledComponents"
-
-const StyledPage = styled(Page)`
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-  max-width: ${(props) => props.theme.breakpoints.l};
-  align-self: flex-start;
-`
-
-const H1 = styled.h1`
-  font-size: 64px;
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: 0px;
-  text-align: left;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 3rem;
-  }
-`
-
-const H2 = styled.h2`
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: 0px;
-  text-align: left;
-`
+import { Box, Container, Divider, Heading, Text } from "@chakra-ui/react"
 
 const StudioRedirectPage = () => (
-  <StyledPage>
-    <Content>
-      <Emoji size={6} mb={"2rem"} text=":sunset_over_buildings:" />
-      <H1>We've sunset Studio</H1>
+  <Container
+    w="100%"
+    display="flex"
+    maxWidth="5xl"
+    flexDirection="column"
+    alignItems="center"
+    alignSelf="flex-start"
+    marginY="16"
+  >
+    <Box paddingX="8" paddingY="4" width="100%">
+      <Emoji fontSize="8xl" mb="10" text=":sunset_over_buildings:" />
+      <Heading
+        fontSize={{ base: "5xl", lg: "6xl" }}
+        fontStyle="normal"
+        fontWeight="bold"
+        letterSpacing="normal"
+        as="h1"
+        textAlign="left"
+      >
+        We've sunset Studio
+      </Heading>
       <p>
         Ethereum Studio is no longer actively maintained. We'd like to thank the{" "}
         <Link to="https://superblocks.com/">Superblocks</Link>
@@ -58,8 +47,23 @@ const StudioRedirectPage = () => (
           </li>
         </ul>
       </p>
-      <Divider />
-      <H2>What to use instead</H2>
+      <Divider
+        marginY="16"
+        width="10%"
+        height="1"
+        opacity="1"
+        backgroundColor="homeDivider"
+      />
+      <Heading
+        fontSize="3xl"
+        fontStyle="normal"
+        fontWeight="bold"
+        letterSpacing="normal"
+        textAlign="left"
+        as="h2"
+      >
+        What to use instead
+      </Heading>
       <p>
         We recommend using Remix as an alternative web IDE for your Solidity
         development. Additionally, we encourage you to consider{" "}
@@ -74,8 +78,8 @@ const StudioRedirectPage = () => (
       <ButtonLink variant="outline" to="/developers/">
         Developer portal
       </ButtonLink>
-    </Content>
-  </StyledPage>
+    </Box>
+  </Container>
 )
 
 export default StudioRedirectPage
