@@ -1,119 +1,111 @@
 ---
 title: Wrapped Ether (WETH)
-description: An introduction to Wrapped Ether (WETH)—an ERC-20 compatible version of Ether (ETH). 
+description: An introduction to Wrapped Ether (WETH)—an ERC20-compatible version of Ether (ETH). 
 ---
 
 # What Is Wrapped Ether (WETH)? {#what-is-wrapped-ether-weth}    
+Wrapped Ether (WETH) is an ERC-20 token representing Ether, Ethereum’s native coin. If you use Ethereum dapps, you've likely seen tokens built using the ERC-20 standard. The ERC-20 standard offers many benefits to developers and users, especially **flexibility** (tokens can be customized for different use cases) and **fungibility** (tokens are identical and interchangeable). 
 
-Wrapped Ether (WETH) is an ERC-20 token representing [Ether](/eth/), Ethereum’s native cryptocurrency. [Wrapped tokens](https://academy.binance.com/en/articles/what-are-wrapped-tokens) are so-called because the original cryptocurrency is deposited into a wrapper—similar to a digital bank vault—before a wrapped version of the cryptocurrency is created. For example, wrapping Ether involves depositing ETH into a smart contract that creates an amount of WETH equal to the original deposit; you can also “unwrap” Ether by sending WETH to a smart contract and receiving ETH in return. 
+Ether (ETH) doesn't comply with the ERC-20 standard, but there's significant demand to use it in ERC20-compatible wallets and dapps. Wrapped Ether (WETH) solves the problem by providing an ERC20-compliant version of ETH to use in dapps or swap with other ERC-20 tokens. As WETH is pegged to the price of ETH, using it will feel very similar to using native ETH. 
 
-Locking up ETH before minting new WETH tokens ensures every amount of WETH in circulation is backed by an equal amount of ETH held in reserves. This keeps the values of  WETH and ETH equal, such that you can convert WETH to ETH (and vice-versa) at a 1:1 ratio.
-  
+Wrapping Ether requires depositing ETH into a smart contract that creates an amount of WETH tokens equal to the original deposit; you can also “unwrap” Ether by sending WETH to the contract and receiving ETH in return. By locking up ETH before minting new WETH tokens, the WETH contract ensures the value of WETH tokens in circulation is backed by ETH held in reserves. This keeps the prices WETH and ETH relatively equal, such that you can convert WETH to ETH (and vice-versa) at a 1:1 ratio
+
+Today, **nearly 3% of the circulating ETH supply is locked in the WETH token contract**—inspiring its description as the "World's Most Popular Smart Contract". WETH is also one of the most used ERC-20 tokens, especially among users interacting with Ethereum applications in the Decentralized Finance (DeFi) ecosystem. 
+
 ## Why do we need to wrap ETH? {#why-do-we-need-to-wrap-eth} 
+The [ERC-20 token standard](https://www.gemini.com/cryptopedia/erc20-token-standard-ethereum) was introduced to ensure greater interoperability between products and services on Ethereum. ERC-20 defines a standard interface for fungible tokens, making it easier for developers to build tokens that seamlessly integrate with applications and other tokens in the Ethereum ecosystem. 
 
-The [ERC-20 token standard](/developers/docs/standards/tokens/erc-20/) was introduced to ensure greater interoperability and compatibility between products and services in the Ethereum ecosystem. ERC-20 defines a standard interface for [fungible](https://www.investopedia.com/terms/f/fungibility.asp) tokens on Ethereum, making it easier for developers to build [decentralized applications](/dapps/) that can interact with tokens conforming to this standard. 
+But the creation of Ether predates the introduction of the ERC-20 standard, which means ETH tokens don’t conform to the ERC-20 specification. Wrapped Ether (WETH) was thus created to [make ETH compatible with applications](https://blog.0xproject.com/canonical-weth-a9aa7d0279dd) implementing ERC-20 interfaces. Compared to ETH, WETH is based on the ERC-20 standard and offers similar functionalities as other ERC-20 tokens (eg. the ability to approve token spends by third-party accounts). 
 
-But the creation of Ether predates the [introduction of the ERC-20 standard](https://eips.ethereum.org/EIPS/eip-20), so ETH tokens don’t conform to the ERC-20 token interface. This means users cannot exchange ETH directly for other ERC-20 tokens (not without introducing trusted third parties or complex technical processes), which limits the functionality of ETH tokens for users.
+### What are the use cases for WETH? {#weth-use-cases} 
+As an ERC-20 token, WETH has more versatile use-cases, unlike ETH which is limited to making payments and paying for computation on the Ethereum network. Benefits of using WETH include: 
 
-Wrapped Ether (WETH) was created to [make Ether compatible with applications](https://blog.0xproject.com/canonical-weth-a9aa7d0279dd) implementing ERC-20 token interfaces. The WETH token is a representation of Ether that complies with the ERC-20 token standard whose value is backed by ETH locked up during the wrapping process. 
+1. **Exchange ETH for ERC-20 tokens**
 
-As an ERC-20 token, WETH has more versatile use-cases, unlike ETH which is limited to making payments and [paying for computation](/developers/docs/gas/) on the Ethereum network. Some of the things you can do with WETH include: 
+You  cannot exchange ETH directly for other ERC-20 tokens (not without introducing trusted third parties or complex technical processes). WETH is a representation of Ether that complies with the ERC-20 fungible token standard and can be exchanged 1:1 for other ERC20 tokens. 
 
-- Make payments in dapps
+2. **Use ETH in dapps**
 
-- [Exchange WETH for other tokens](/defi/#swaps) 
+Because ETH isn’t ERC20-compatible, developers would need to create separate interfaces (one for ETH and another for ERC-20 tokens) in dapps. Wrapping ETH in ERC-20 standards using WETH removes this obstacle and enables developers to handle ETH and other tokens within the same dapp. 
 
-- Use WETH as collateral to [borrow funds](/defi/#borrowing-privacy)
+3. **Interact with DeFi applications**
 
-- Supply liquidity to [lending platforms](/defi/#lending)
+Besides borrowing and lending, DeFi enables complex use-cases like [yield farms](https://blockworks.co/what-is-yield-farming-what-you-need-to-know/) and [automated market makers](https://www.gemini.com/cryptopedia/amm-what-are-automated-market-makers) (AMMs). These applications can make investment decisions on your behalf, such as automatically supplying liquidity to a lending pool or executing trades. 
 
-## How does Wrapped Ether (WETH) work? {#how-does-wrapped-ether-weth-work} 
-
-To wrap ETH, you need to send it to a [smart contract](/smart-contracts/) that mints an equivalent amount of Wrapped ETH (WETH) for you. This smart contract acts as a custodian as it holds your ETH until you decide to unwrap WETH. You can also swap ETH for WETH directly on a [decentralized exchange](/get-eth/#dex) without needing to interact with a smart contract. 
-
-The process of unwrapping ETH is similar: send WETH to the smart contract and have an equivalent amount of ETH sent to your address. Whenever you redeem WETH for ETH, the WETH tokens are [burned](https://decrypt.co/resources/what-is-a-token-burn-how-crypto-is-removed-from-circulation), which keeps the supply of WETH and ETH equal and enforces parity in prices. You can also unwrap ETH by swapping WETH for ETH directly using a decentralized exchange.  
-
-Wrapping ETH to to WETH doesn't incur additional costs, as both assets are converted at a 1:1 ratio. Nevertheless, you'll need to have some extra ETH in your wallet to pay for gas fees when interacting with the WETH token contract. Gas fees on the Ethereum network—paid for performing computation—are paid solely in Ether (demoninated in gwei). 
+That said, these applications can only work if they have access to funds in your wallet. With ERC-20 tokens like WETH, you can approve a smart contract to deduct WETH tokens from your balance up to a predefined limit. This feature is, however, unavailable when using native ETH. 
 
 ## Wrapped Ether (WETH) vs Ether (ETH): What is the difference? {#weth-vs-eth-differences}
+Although they look similar, Wrapped Ether (WETH) and Ether (ETH) have subtle differences you should be aware of. For example, the Ethereum protocol recognizes Ether—but it has no native knowledge of WETH (and ERC-20 tokens), causing both assets to behave differently. We have listed other important distinctions between ETH and WETH tokens below: 
 
-Although they look similar, Wrapped Ether (WETH) and Ether (ETH) have subtle differences you should be aware of. For example, Ether is recognized by the Ethereum protocol, but the blockchain has no native knowledge of ERC-20 tokens like WETH—which causes differences in how both tokens behave. Below are some of the major distinctions between ETH and WETH tokens: 
- 
-### Control of supply, ownership, and transfer {#control-of-supply-ownership-transfer} 
+|            | **Ether (ETH)**                                                                                                                                                                                                                 | **Wrapped Ether (WETH)**                                                                                                                                                                                                                                                                                    |
+|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Supply     | **As Ethereum’s native token, the supply of ETH is managed by the  protocol.** The supply of ETH increases when Ethereum validators earn rewards for processing transactions and creating blocks.                           | **WETH is an ERC-20 token whose supply is managed by a smart contract.** New units of WETH are issued by the contract after it receives ETH deposits from users.                                                                                                                                        |
+| Ownership  | **Ownership of ETH is defined and guaranteed by the Ethereum blockchain.** For example, protocol rules ensure you can always spend from an account’s ETH balance if you control the [private key](/glossary/#private-key).  | **Ownership of WETH depends on the WETH token contract.** For example, if nothing happens to the smart contract, you always have access to your WETH tokens.                                                                                                                                            |
+| Transfer   | The transfer of ETH is intrinsic to the Ethereum protocol. Transfers are recorded on-chain and publicly verifiable.                                                                                                         | **The transfer of WETH tokens occurs inside the WETH token contract and [isn’t directly recorded on-chain](https://coinmarketcap.com/alexandria/glossary/internal-transaction).** The blockchain only records the transaction authorizing the smart contract to deduct from the sender’s WETH balance.  |
+| Gas        | Ether (ETH) is the accepted unit of payment for computation on the Ethereum network. Gas fees are denominated in gwei (a unit of Ether).                                                                                    | You cannot pay gas for a transaction using WETH tokens (except when using a third-party relayers service).                                                                                                                                                                                              |
+### Security considerations for using WETH {#weth-security-considerations}
+As an asset native to Ethereum, the security of ETH is guaranteed by the Ethereum network—no one can steal your funds unless they have access to your private keys. Even in a [51% attack](https://academy.binance.com/en/glossary/51-percent-attack), attackers cannot create forged transactions to transfer ETH from your address without approval. 
 
-#### Supply of ETH vs WETH {#eth-vs-weth-supply}
+Wrapped Ether (WETH) is not issued and secured by the Ethereum network; and being a token, WETH exposes you to smart contract risks that ETH does not have. The WETH contract is considered very secure, but some hypothetical attack scenarios exist including:
 
-As Ethereum's native token, the supply of Ether is managed at the protocol level. New units of ETH are produced as a result of the Ethereum protocol [issuing rewards](/glossary/#issuance) to validators processing transactions and adding new blocks to the chain. Also, a portion of Ether paid for gas (the [base fee](/glossary/#base-fee)) is also burned during every transaction, removing those ETH tokens from circulation. 
+- **An attacker mints WETH tokens without depositing ETH (the equivalent of printing money out of thin air)**. If the attacker successfully redeems these tokens for ETH, other owners may be unable to withdraw their ETH deposits. 
 
-As an ERC-20 token, the supply of WETH is managed at the smart contract level. New units of WETH are issued by a token contract deployed on the Ethereum network. The contract monitors the supply of WETH and has mechanisms for increasing or reducing the amount of WETH tokens in circulation through [minting](/glossary/#mint) and burning, respectively. 
+- **An attacker exploits a vulnerability that allows them to drain the WETH contract of ETH deposited by users**. This would leave users with valueless WETH tokens without any backing. 
 
-#### Ownership and transfer of ETH vs WETH {#eth-vs-weth-ownership-transfer}
+- **A smart contract bug prevents users from unwrapping WETH and withdrawing ETH deposits.** While the chances of this happening are low, it is still a feasible scenario that could affect the safety of WETH assets. 
 
-The Ethereum protocol defines and handles the ownership of Ether on the Ethereum network. Ether balances associated with [Ethereum accounts](/developers/docs/accounts/) are stored in the blockchain's [state](/glossary/#state) as [key-value pairs](https://www.techtarget.com/searchenterprisedesktop/definition/key-value-pair) where each *key* (an address) maps to a *value* (the amount of Ether owned by an account). Since Ether balances are stored in-protocol, [wallet applications](/wallets/) with access to the blockchain's state can automatically track ETH balances associated with any address.  
+Note that these security considerations apply **only if you’re using WETH issued on Ethereum**. [Blockchain bridges](/bridges/) allow you to use ETH on non-Ethereum blockchains by issuing a variant of WETH compatible with another blockchain’s technical standards.
 
-Transferring ETH to another account requires creating a `send` transaction with the recipient's address as the destination (after signing with your [private key](/glossary/#private-key) to prove ownership of funds). As with any other Ethereum transaction, sending ETH demands paying a gas fee which is demoninated in [gwei](/glossary/#gwei) (a unit of Ether).
+But this introduces additional security issues other than those described previously. For example, you must also believe the bridge is secure against attacks, the bridge operator(s) won’t freeze or steal your funds, etc.  
 
-Unlike ETH, the ownership and transfer of WETH tokens is handled by the [WETH token contract](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2). Balances of WETH token owners are stored **inside the contract** as key-value pairs where a key (an address) maps to a value (the total tokens owned by an account). As such, a wallet application cannot automatically track changes in your WETH balance unless you explictly ask the wallet application to "watch" the WETH token contract (i.e., read the contract's state).  
-
-Sending WETH tokens also requires a different approach: you'll have to create a transaction with the WETH token contract's address (not the recipient's address) as the destination. This transaction calls the smart contract's `transfer` function with the recipient's address and amount of tokens to transfer supplied as transaction parameters. While this transaction is recorded on the blockchain, the actual transfer of WETH tokens from one address to another occurs inside the token contract and isn't recorded directly on the blockchain (hence, it is described as an [internal transaction](https://coinmarketcap.com/alexandria/glossary/internal-transaction)). 
-
-You cannot pay gas for a transaction using WETH tokens. Only Ethereum's native token, ETH, can be used to pay gas. This is why you must have some ETH in your wallet when wrapping/unwrapping ETH or sending WETH to another address. 
-
-### Uses of ETH vs WETH {#eth-vs-weth-use-cases} 
-
-Ether is primarily used for transferring value between users and compensating validators securing the network. ETH is also used as collateral by validators. They stake ETH into a smart contract so that it can be destroyed if they act maliciously. 
-
-The main use case for WETH is making it easier to use ETH in dapps. Because ETH isn’t ERC-20 compatible, developers would need to create separate interfaces (one for Ether and another for ERC-20 tokens) in smart contracts. Wrapping ETH in ERC-20 standards removes this obstacle and enables developers to handle ETH and other fungible tokens within the same contract. 
-
-With the ERC-compatible WETH, you can access more functions than with regular ETH. WETH is particularly popular for users interacting with [decentralized finance](/defi/) (DeFi) applications. At its core, DeFi is a collection of primitives that allow for trading, borrowing, and exchanging assets with others without intermediaries. 
-
-DeFi enables even more complex use-cases, such as [yield farms](https://blockworks.co/what-is-yield-farming-what-you-need-to-know/) and [automated market makers](https://www.gemini.com/cryptopedia/amm-what-are-automated-market-makers) (AMMs) that can make investment decisions—like depositing into a lending pool or executing trades—for users. But these applications need access to your funds to work, which is why ERC-20 tokens like WETH define an `approve` function (used in combination with `transfer`) that allows you to approve other accounts (mostly contract accounts) to deduct a specific amount of tokens from your balance up to a predefined limit (`allowance`). 
-
-### Security properties of ETH vs WETH {#eth-vs-weth-security-properties}
-
-As an asset native to Ethereum, the security of ETH is guaranteed by the Ethereum network—no one can steal your funds unless they have access to your private keys. Even in a [51% attack](https://academy.binance.com/en/glossary/51-percent-attack), attackers cannot create forged transactions to transfer ETH from your address without approval. In other words, your ETH remains safe as long as your private keys are safe. 
-
-Wrapped Ether (WETH) is not issued and secured by the Ethereum network, so using WETH has smart contract risk that ETH does not. The WETH contract is very well battle-tested and is a relatively simple contract that is considered very secure. However, hypothetical attack scenarios might include:
-
-1. An attacker could exploit the WETH contract and mint WETH tokens without depositing Ether (the equivalent of printing money out of thin air). If the attacker successfully redeems these tokens for actual ETH, other owners will be unable to access their Ether deposits. 
-
-2. An attacker could exploit a vulnerability in the contract and drain the funds of users who deposited ETH during the wrapping process. This would leave users with valueless WETH tokens without any backing. 
-
-3. Beyond scenarios involving malicious actors, a bug in the smart contract could prevent you from unwrapping ETH and withdrawing your locked-up assets.
- 
 ## Frequently Asked Questions about Wrapped Ether (WETH) {#weth-frequently-asked-questions} 
 
 **Are ETH and WETH the same?**
 
-No. Ether (ETH) is the native coin of the Ethereum blockchain, used as a unit of payment on the Ethereum network (including paying for transaction fees). Wrapped Ether (WETH) is an ERC-20-compatible version of ETH primarily designed to make ETH tokens compatible with applications built on the ERC-20 standard. 
+No. Ether (ETH) is the native coin of the Ethereum blockchain, used as a unit of payment on the Ethereum network (including paying for transaction fees). Wrapped Ether (WETH) is an ERC20-compatible version of ETH primarily designed to make ETH tokens compatible with applications built on the ERC-20 standard. 
 
-**Do you pay to wrap ETH?**
+**How does Wrapped Ether (WETH) work?**  
 
-No, you don’t pay to wrap ETH into WETH, as the assets are converted at a 1:1 ratio. However, interacting with the WETH contract to wrap ETH involves sending an on-chain transaction—and this requires paying a gas fee. You'll also pay gas when unwrapping ETH through a smart contract. 
+Users wrap ETH by sending it to a smart that mints an equivalent amount of Wrapped ETH (WETH) in return. Another way to get wrapped ETH is to swap ETH for WETH tokens on a decentralized exchange (DEX). 
+Unwrapping ETH requires a similar workflow: send WETH to the smart contract and have an equivalent amount of ETH sent to your address. You can also unwrap ETH by swapping WETH for ETH directly using a decentralized exchange.  
+
+**Do you pay to wrap/unwrap ETH?**
+
+No. You don’t pay to wrap ETH into WETH, as the assets are converted at a 1:1 ratio. However, interacting with the WETH contract to wrap/unwrap ETH involves sending an on-chain transaction—and this requires paying a gas fee. DEX platforms also charge for gas when executing swaps between ETH and WETH (or vice-versa).
+
+**Can I pay for gas with WETH?**
+
+No. Ethereum nodes only accept ETH as payment for gas fees. You can only pay for gas in WETH only if using a third-party relayer that accepts the (signed) transaction off-chain and broadcasts it on-chain on your behalf. Typically, [relayers](https://blog.kyros.ventures/2022/07/24/meta-transaction-relayer-an-overview/) pay the gas fee for a relayed transactions from their ETH balance and accept payment for the service in ERC-20 tokens like WETH. 
 
 **Are WETH and ETH the same price?**
 
 WETH is pegged 1:1 to the price of ETH, so the value of both assets are usually equal at any time. This peg is maintained by ensuring that every unit of WETH is backed by ETH held in reserves. Forces of supply and demand also keep the prices of ETH and WETH relatively equal: 
 
 - If WETH were cheaper, more people would buy it and convert it to the more expensive ETH at a 1:1 ratio to make profit. This would drive up demand for WETH and increase the price of WETH tokens. 
+
 - If WETH is more expensive, more people would buy ETH and convert it to WETH to sell at a profit. As the supply of WETH increases, the value of WETH tokens would drop—keeping the peg relatively stable. 
 
 **Why do people use WETH instead of ETH?**
 
-WETH was created primarily because the ETH token doesn't comply with the ERC-20 technical standard. This made Ether difficult to use in decentralized applications (dapps). Unlike Ether, WETH follows the [ERC-20 fungible token standard](/developers/docs/standards/tokens/erc-20/) —so it can be exchanged for other ERC-20 tokens and used on applications (e.g., decentralized exchanges and wallets) that support ERC-20 interfaces.
+WETH was created because the ETH token doesn't follow with the ERC-20 technical specification, making it difficult to use in decentralized applications (dapps). Unlike Ether, WETH follows the ERC-20 standard and is compatible with applications, such as decentralized exchanges and wallets, that support ERC-20 interfaces. WETH is also tradeable for other ERC-20 tokens while directly exchanging ETH for ERC-20 tokens requires complex accounting. 
 
 **Is WETH safe?**
 
-ETH is the safest asset because it is part of the Ethereum protocol, whereas WETH is defined in a smart contract which could feasibly be hacked. However, WETH is generally considered a very safe asset because the token contract is small, simple, well-tested and it has been around for a long time. Furthermore, [formal verification of the WETH contract](https://www.zellic.io/blog/formal-verification-weth) has proved its safety (formal verification reasons about correctness of code using logical rules and is considered more rigorous than testing). 
+ETH is the safest asset because it is part of the Ethereum protocol, whereas WETH is defined in a smart contract which could feasibly be hacked. Nevertheless, WETH is generally considered safe because it is based on a simple, well-tested  smart contract with a limited attack surface. The WETH contract has also passed formal verification, which is considered the highest security standard for Ethereum-based applications. 
+
+**Can I use WETH on other blockchains?**
+
+Yes. If using a bridge, it is possible to get WETH tokens compatible with other blockchain protocols aside from Ethereum. These variants of WETH have different security properties from Ethereum-native WETH, however. For example, you must believe the bridge is well-secured and will let you redeem your WETH tokens for ETH. 
 
 **What can I do with WETH?**
 
-WETH can be used with any decentralized application built on the ERC-20 standard. WETH is particularly useful for decentralized finance (DeFi) applications—you can [exchange WETH for other tokens](/defi/#swaps) on a decentralized exchange, use it as collateral to [borrow funds](/defi/#borrowing-privacy), or supply liquidity to [lending platforms](/defi/#lending) in order to earn interest. 
+WETH can be used with any decentralized application built on the ERC-20 standard. WETH is particularly useful for decentralized finance (DeFi) applications—you can [exchange WETH for other tokens](/defi/#swaps) on a DEX, use it as collateral to [borrow funds](/defi/#borrowing-privacy), or supply liquidity to [lending platforms](/defi/#lending) in order to earn interest. 
 
 ## Further reading {#further-reading}
-
 - [WTF is WETH?](https://weth.io/)
 - [What Is Wrapped Ether (WETH) and How to Wrap It?](https://academy.binance.com/en/articles/what-is-wrapped-ether-weth-and-how-to-wrap-it)
 - [What are the cheapest ways to wrap ETH into WETH?](https://medium.com/@therugpush/cheapest-way-to-wrap-eth-into-weth-446cf1ddccf7) 
 - [WETH token information on Etherscan](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
 - [Formal Verification of WETH](https://zellic.io/blog/formal-verification-weth)
+
+
