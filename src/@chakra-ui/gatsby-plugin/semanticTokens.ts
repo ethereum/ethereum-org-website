@@ -61,6 +61,10 @@ const semanticTokens = {
     errorNeutral: { _light: "red.100", _dark: "red.900" },
     attention: "yellow.500",
     attentionLight: "yellow.200",
+    tooltipShadow: {
+      _light: "blackAlpha.400",
+      _dark: "whiteAlpha.400",
+    },
   },
 }
 
