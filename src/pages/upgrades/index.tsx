@@ -91,7 +91,7 @@ const H4 = (props: HeadingProps) => (
   <Heading
     as="h4"
     fontSize={{ base: "md", md: "xl" }}
-    fontWeight="semibold"
+    fontWeight="medium"
     lineHeight={1.4}
     {...props}
   />
