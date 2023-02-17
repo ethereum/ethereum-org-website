@@ -109,7 +109,7 @@ Continue down the rabbit hole with these [EIP-1559 Resources](https://hackmd.io/
 
 ## Why do gas fees exist? {#why-do-gas-fees-exist}
 
-In short, gas fees help keep the Ethereum network secure. By requiring a fee for every computation executed on the network, we prevent bad actors from spamming the network. In order to avoid accidental or hostile infinite loops or other computational wastage in code, each transaction is required to set a limit on how many computational steps of code execution it can use. The fundamental unit of computation is "gas".
+In short, gas fees help keep the Ethereum network secure. By requiring a fee for every computation executed on the network, we prevent bad actors from spamming the network. In order to avoid accidental or hostile infinite loops or other computational wastage in code, each transaction is required to set a limit to how many computational steps of code execution it can use. The fundamental unit of computation is "gas".
 
 Although a transaction includes a limit, any gas not used in a transaction is returned to the user (i.e. `max fee - (base fee + tip)` is returned).
 
