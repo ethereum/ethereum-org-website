@@ -8,6 +8,9 @@ import {
   FlexProps,
   Heading,
   HeadingProps,
+  List,
+  ListItem,
+  Text,
   useToken,
 } from "@chakra-ui/react"
 
@@ -185,48 +188,48 @@ const VisionPage = ({
           <CenterH2>
             <Translation id="page-upgrades-vision-upgrade-needs" />
           </CenterH2>
-          <p>
+          <Text>
             <Translation id="page-upgrades-vision-upgrade-needs-desc" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-upgrade-needs-desc-2" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-upgrade-needs-desc-3" />{" "}
-          </p>
-          <ul>
-            <li>
+          </Text>
+          <List listStyleType="disc">
+            <ListItem>
               <Link to="https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum">
                 <Translation id="page-upgrades-vision-2022" />
               </Link>
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               <Link to="https://trent.mirror.xyz/82eyq_NXZzzqFmCNXiKJgSdayf6omCW7BgDQIneyPoA">
                 <Translation id="page-upgrades-vision-2021-updates" />
               </Link>
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               <Link to="https://tim.mirror.xyz/CHQtTJb1NDxCK41JpULL-zAJe7YOtw-m4UDw6KDju6c">
                 <Translation id="page-upgrades-vision-2021" />
               </Link>
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               <Link to="https://blog.ethereum.org/2015/03/03/ethereum-launch-process/">
                 <Translation id="page-upgrades-vision-upgrade-needs-serenity" />
               </Link>
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               <Link to="https://blog.ethereum.org/2014/01/15/slasher-a-punitive-proof-of-stake-algorithm/">
                 <Translation id="page-upgrades-vision-2014" />
               </Link>
-            </li>
-          </ul>
-          <p>
+            </ListItem>
+          </List>
+          <Text>
             <Translation id="page-upgrades-vision-upgrade-needs-desc-5" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-upgrade-needs-desc-6" />
-          </p>
+          </Text>
         </CentralContent>
       </PageContent>
       <PageDivider />
@@ -254,82 +257,82 @@ const VisionPage = ({
           <CenterH2>
             <Translation id="page-upgrades-vision-understanding" />
           </CenterH2>
-          <h3>
+          <H3>
             <Translation id="page-upgrades-vision-scalability" />{" "}
             <Emoji text=":rocket:" />
-          </h3>
-          <p>
+          </H3>
+          <Text>
             <Translation id="page-upgrades-vision-scalability-desc" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-scalability-desc-3" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-scalability-desc-4" />{" "}
             <Link to="/upgrades/sharding/">
               <Translation id="page-upgrades-vision-shard-upgrade" />
             </Link>{" "}
-          </p>
-          <h3>
+          </Text>
+          <H3>
             <Translation id="page-upgrades-vision-security" />{" "}
             <Emoji text=":shield:" />
-          </h3>
-          <p>
+          </H3>
+          <Text>
             <Translation id="page-upgrades-vision-security-desc" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-security-desc-3" />{" "}
             <Link to="/developers/docs/consensus-mechanisms/pos/">
               <Translation id="page-upgrades-proof-stake-link" />
             </Link>{" "}
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-security-desc-5" />{" "}
             <Link to="/developers/docs/consensus-mechanisms/pow/">
               <Translation id="page-upgrades-vision-security-desc-5-link" />
             </Link>
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-security-desc-8" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-security-desc-10" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-security-validator" />{" "}
             <Link to="/run-a-node/">
               <Translation id="page-upgrades-vision-ethereum-node" />
             </Link>
-          </p>
+          </Text>
           <ButtonLink to="/staking/">
             <Translation id="page-upgrades-vision-security-staking" />
           </ButtonLink>
-          <h3>
+          <H3>
             <Translation id="page-upgrades-vision-sustainability" />{" "}
             <Emoji text=":evergreen_tree:" />
-          </h3>
-          <p>
+          </H3>
+          <Text>
             <Translation id="page-upgrades-vision-sustainability-subtitle" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-sustainability-desc-1" />{" "}
             <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
               <Translation id="page-upgrades-vision-mining" />
             </Link>
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-sustainability-desc-2" />{" "}
             <Link to="/staking/">
               <Translation id="page-upgrades-vision-staking-lower" />
             </Link>
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-sustainability-desc-3" />
-          </p>
+          </Text>
           <InfoBanner>
-            <p>
+            <Text>
               <Translation id="page-upgrades-vision-sustainability-desc-8" />
-            </p>
+            </Text>
             <ButtonLink to="/upgrades/merge/">
               <Translation id="page-upgrades-merge-btn" />
             </ButtonLink>
@@ -351,7 +354,7 @@ const VisionPage = ({
               description={upgrade.description}
               to={upgrade.to}
             >
-              <h6>{upgrade.date}</h6>
+              <H6>{upgrade.date}</H6>
             </ActionCard>
           ))}
         </StyledCardContainer>
