@@ -18,11 +18,11 @@ Regenerative Finance (ReFi) is a set of tools and ideas facilitated by Ethereum 
 
 Instead, ReFi aims to solve large-scale issues like [climate change](https://www.un.org/en/climatechange/what-is-climate-change) as well as more regionally concentrated crises—environmental, communal, or social—by creating regenerative cycles. These systems create value for participants while simultaneously benefitting our ecosystem and/or communities. In economic parlance, regenerative financial systems incentivize the production of [positive externalities](https://www.economicshelp.org/micro-economic-essays/marketfailure/positive-externality/).
 
-ReFi leverages one of capitalism’s strong suits—its ability to rapidly deploy capital toward activities that offer a return to stakeholders—in the best interests of said stakeholders, our planet, and future generations. It draws on the theory of [Regenerative Economics] (https://www.klimadao.finance/de/blog/refi-and-the-realization-of-a-regenerative-economy) pioneered by John Fullerton of the [Capital Institute]( https://capitalinstitute.org) to work toward the realization of eight interconnected principles that underlie systemic health:
+ReFi leverages one of capitalism’s strong suits—its ability to rapidly deploy capital toward activities that offer a return to stakeholders—in the best interests of said stakeholders, our planet, and future generations. It draws on the theory of [Regenerative Economics](https://www.klimadao.finance/de/blog/refi-and-the-realization-of-a-regenerative-economy) pioneered by John Fullerton of the [Capital Institute]( https://capitalinstitute.org) to work toward the realization of eight interconnected principles that underlie systemic health:
 
 ![Eight interconnected principles](../../assets/use-cases/refi-regenerative-economy-diagram.png)
 
-To do this, ReFi projects utilize [smart contracts] (https://ethereum.org/en/developers/docs/smart-contracts/#top) and tools pioneered in the [Decentralized Finance (DeFi)] (https://ethereum.org/en/defi/#main-content) space to incentivize regenerative behaviors and facilitate large-scale collaboration.
+To do this, ReFi projects utilize [smart contracts](https://ethereum.org/en/developers/docs/smart-contracts/#top) and tools pioneered in the [Decentralized Finance (DeFi)](https://ethereum.org/en/defi/#main-content) space to incentivize regenerative behaviors and facilitate large-scale collaboration.
 
 ReFi also overlaps with the [Decentralized Science (DeSci)](https://ethereum.org/en/desci/) movement, which uses Ethereum as a platform to finance, create, review, credit, store, and disseminate scientific knowledge. Such processes for distributed knowledge generation play a critical role in developing verifiable standards and practices for implementing and monitoring regenerative activities like planting trees, removing plastic from the ocean, or restoring a degraded ecosystem.
 
@@ -82,4 +82,4 @@ By shifting the direction of capital away from extractive practices toward a reg
 - [A high-level overview of carbon currencies and their place in the economy](https://www.klimadao.finance/blog/the-vision-of-a-carbon-currency)
 - [The Ministry for the Future, a novel depicting the role of a carbon-backed currency in fighting climate change](https://en.wikipedia.org/wiki/The_Ministry_for_the_Future)
 - [A detailed report by the Taskforce for Scaling Voluntary Carbon Markets](https://www.iif.com/Portals/1/Files/TSVCM_Report.pdf)
-- [Kevin Owocki and Evan Miyazono’s CoinMarketCap Glossary entry on ReFi] (https://coinmarketcap.com/alexandria/glossary/regenerative-finance-refi)
+- [Kevin Owocki and Evan Miyazono’s CoinMarketCap Glossary entry on ReFi](https://coinmarketcap.com/alexandria/glossary/regenerative-finance-refi)
