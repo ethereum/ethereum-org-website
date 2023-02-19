@@ -37,7 +37,9 @@ import { getImage } from "../../utils/image"
 // Types
 import type { Context } from "../../types"
 
-const Card: React.FC<IOriginalCardProps> = ({ children, ...props }) => {
+type ChildOnlyProp = { children: ReactNode }
+
+const Card = ({ children, ...props }: IOriginalCardProps) => {
   return (
     <OriginalCard
       justifyContent="space-between"
@@ -53,7 +55,7 @@ const Card: React.FC<IOriginalCardProps> = ({ children, ...props }) => {
   )
 }
 
-const CardImage: React.FC<{ children: ReactNode }> = ({ children }) => {
+const CardImage = ({ children }: ChildOnlyProp) => {
   return (
     <Center textAlign="center" mb={4}>
       {children}
@@ -61,7 +63,7 @@ const CardImage: React.FC<{ children: ReactNode }> = ({ children }) => {
   )
 }
 
-const DocsContainer: React.FC<{ children: ReactNode }> = ({ children }) => {
+const DocsContainer = ({ children }: ChildOnlyProp) => {
   return (
     <Flex mx={{ base: 0, xl: 36 }} direction="column" gap="0.8rem">
       {children}
@@ -69,9 +71,7 @@ const DocsContainer: React.FC<{ children: ReactNode }> = ({ children }) => {
   )
 }
 
-const AdditionalReadingHeader: React.FC<{ children: ReactNode }> = ({
-  children,
-}) => {
+const AdditionalReadingHeader = ({ children }: ChildOnlyProp) => {
   return (
     <Heading as="h3" mt={16} fontSize="xl" fontWeight="bold" textAlign="center">
       {children}
@@ -79,7 +79,7 @@ const AdditionalReadingHeader: React.FC<{ children: ReactNode }> = ({
   )
 }
 
-const Section: React.FC<{ children: ReactNode }> = ({ children }) => {
+const Section = ({ children }: ChildOnlyProp) => {
   return (
     <Box as="section" mt={24} _first={{ mt: 0 }}>
       {children}
@@ -87,7 +87,7 @@ const Section: React.FC<{ children: ReactNode }> = ({ children }) => {
   )
 }
 
-const CardGrid: React.FC<{ children: ReactNode }> = ({ children }) => {
+const CardGrid = ({ children }: ChildOnlyProp) => {
   return (
     <Grid
       templateColumns="repeat(auto-fill, minmax(min(100%, 280px), 1fr))"
@@ -99,7 +99,7 @@ const CardGrid: React.FC<{ children: ReactNode }> = ({ children }) => {
   )
 }
 
-const H2: React.FC<HeadingProps> = ({ children, ...props }) => {
+const H2 = ({ children, ...props }: HeadingProps) => {
   return (
     <Heading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4} {...props}>
       {children}
@@ -107,7 +107,7 @@ const H2: React.FC<HeadingProps> = ({ children, ...props }) => {
   )
 }
 
-const H3: React.FC<HeadingProps> = ({ children, ...props }) => {
+const H3 = ({ children, ...props }: HeadingProps) => {
   return (
     <Heading as="h3" fontSize={{ base: "xl", md: "2xl" }} {...props}>
       {children}
