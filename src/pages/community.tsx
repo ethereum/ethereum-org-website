@@ -97,7 +97,7 @@ const RowReverse: React.FC<IProps> = ({ children }) => {
 
 const ImageContainer: React.FC<IProps> = ({ children }) => {
   return (
-    <Flex bg="#f1fffd" h="full" w={{ base: "75%", lg: "full" }}>
+    <Flex h="full" w={{ base: "75%", lg: "full" }}>
       {children}
     </Flex>
   )
