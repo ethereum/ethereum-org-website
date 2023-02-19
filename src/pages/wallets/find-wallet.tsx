@@ -190,7 +190,9 @@ const FindWalletPage = ({ data, location }) => {
           image={getImage(data.hero)!}
           alt=""
           loading="eager"
-          objectFit="contain"
+          imgStyle={{
+            objectFit: "contain",
+          }}
         />
       </Flex>
       <Box
@@ -455,8 +457,8 @@ const FindWalletPage = ({ data, location }) => {
             },
           }}
           display={{
-            base: showMobileSidebar ? "none" : "",
-            sm: "",
+            base: showMobileSidebar ? "none" : "block",
+            sm: "block",
           }}
         >
           <WalletTable
