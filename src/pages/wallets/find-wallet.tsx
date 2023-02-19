@@ -37,7 +37,9 @@ import { trackCustomEvent } from "../../utils/matomo"
 import { getImage } from "../../utils/image"
 import { useOnClickOutside } from "../../hooks/useOnClickOutside"
 
-const Subtitle: React.FC<{ children: ReactNode }> = ({ children }) => {
+type ChildOnlyProp = { children: ReactNode }
+
+const Subtitle = ({ children }: ChildOnlyProp) => {
   return (
     <Box
       fontSize="xl"
@@ -52,11 +54,13 @@ const Subtitle: React.FC<{ children: ReactNode }> = ({ children }) => {
   )
 }
 
-const FilterTab: React.FC<{
+interface IFilterTabProps {
   children: ReactNode
   active: boolean
-  onClick: React.MouseEventHandler<HTMLDivElement> | undefined
-}> = ({ children, active, onClick }) => {
+  onClick?: React.MouseEventHandler<HTMLDivElement>
+}
+
+const FilterTab = ({ children, active, onClick }: IFilterTabProps) => {
   return (
     <Flex
       justifyContent="center"
