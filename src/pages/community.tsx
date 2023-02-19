@@ -27,11 +27,9 @@ import { translateMessageId } from "../utils/translations"
 import { getImage } from "../utils/image"
 import { Context } from "../types"
 
-interface IProps {
-  children: ReactNode
-}
+type ChildOnlyProp = { children: ReactNode }
 
-const CardContainer: React.FC<IProps> = ({ children }) => {
+const CardContainer = ({ children }: ChildOnlyProp) => {
   return (
     <Flex wrap="wrap" mx={-4}>
       {children}
@@ -39,7 +37,7 @@ const CardContainer: React.FC<IProps> = ({ children }) => {
   )
 }
 
-const Content: React.FC<IProps> = ({ children }) => {
+const Content = ({ children }: ChildOnlyProp) => {
   return (
     <Box py={4} px={8} w="full">
       {children}
@@ -47,11 +45,11 @@ const Content: React.FC<IProps> = ({ children }) => {
   )
 }
 
-const Divider: React.FC = () => {
+const Divider = () => {
   return <Box my={16} w="10%" h={1} bgColor="homeDivider" />
 }
 
-const Page: React.FC<IProps> = ({ children }) => {
+const Page = ({ children }: ChildOnlyProp) => {
   return (
     <Flex direction="column" alignItems="center" w="full" mx="auto">
       {children}
@@ -59,7 +57,7 @@ const Page: React.FC<IProps> = ({ children }) => {
   )
 }
 
-const ButtonRow: React.FC<IProps> = ({ children }) => {
+const ButtonRow = ({ children }: ChildOnlyProp) => {
   return (
     <Flex alignItems="flex-start" direction={{ base: "column", md: "row" }}>
       {children}
@@ -67,10 +65,7 @@ const ButtonRow: React.FC<IProps> = ({ children }) => {
   )
 }
 
-const StyledButtonLink: React.FC<IButtonLinkProps> = ({
-  children,
-  ...props
-}) => {
+const StyledButtonLink = ({ children, ...props }: IButtonLinkProps) => {
   return (
     <ButtonLink
       mt={{ base: 4, md: 0 }}
@@ -84,7 +79,7 @@ const StyledButtonLink: React.FC<IButtonLinkProps> = ({
   )
 }
 
-const RowReverse: React.FC<IProps> = ({ children }) => {
+const RowReverse = ({ children }: ChildOnlyProp) => {
   return (
     <Flex
       direction={{ base: "column-reverse", lg: "row-reverse" }}
@@ -95,7 +90,7 @@ const RowReverse: React.FC<IProps> = ({ children }) => {
   )
 }
 
-const ImageContainer: React.FC<IProps> = ({ children }) => {
+const ImageContainer = ({ children }: ChildOnlyProp) => {
   return (
     <Flex h="full" w={{ base: "75%", lg: "full" }}>
       {children}
@@ -103,7 +98,7 @@ const ImageContainer: React.FC<IProps> = ({ children }) => {
   )
 }
 
-const Subtitle: React.FC<IProps> = ({ children }) => {
+const Subtitle = ({ children }: ChildOnlyProp) => {
   return (
     <Box mb={8} fontSize={{ base: "md", sm: "xl" }} lineHeight={1.4}>
       {children}
@@ -111,7 +106,7 @@ const Subtitle: React.FC<IProps> = ({ children }) => {
   )
 }
 
-const FeatureContent: React.FC<IProps> = ({ children }) => {
+const FeatureContent = ({ children }: ChildOnlyProp) => {
   return (
     <Flex
       direction="column"
@@ -124,7 +119,7 @@ const FeatureContent: React.FC<IProps> = ({ children }) => {
   )
 }
 
-const H2: React.FC<HeadingProps> = ({ children, ...props }) => {
+const H2 = ({ children, ...props }: HeadingProps) => {
   return (
     <Heading fontSize={{ base: "2xl", md: "2rem" }} mt={0} {...props}>
       {children}
