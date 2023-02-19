@@ -73,7 +73,7 @@ const AdditionalReadingHeader: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   return (
-    <Heading as="h3" mt={12} fontSize="xl" fontWeight="bold" textAlign="center">
+    <Heading as="h3" mt={16} fontSize="xl" fontWeight="bold" textAlign="center">
       {children}
     </Heading>
   )
@@ -101,7 +101,7 @@ const CardGrid: React.FC<{ children: ReactNode }> = ({ children }) => {
 
 const H2: React.FC<HeadingProps> = ({ children, ...props }) => {
   return (
-    <Heading fontSize={{ base: "2xl", md: "2rem" }} {...props}>
+    <Heading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4} {...props}>
       {children}
     </Heading>
   )
@@ -109,7 +109,7 @@ const H2: React.FC<HeadingProps> = ({ children, ...props }) => {
 
 const H3: React.FC<HeadingProps> = ({ children, ...props }) => {
   return (
-    <Heading fontSize={{ base: "xl", md: "2xl" }} {...props}>
+    <Heading as="h3" fontSize={{ base: "xl", md: "2xl" }} {...props}>
       {children}
     </Heading>
   )
@@ -198,6 +198,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           mx={8}
         >
           <Heading
+            lineHeight={1.4}
             fontSize={{ base: "2.5rem", lg: "5xl" }}
             fontWeight="bold"
             textAlign={{ base: "left", lg: "right" }}
@@ -215,19 +216,6 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           pb={8}
           px={8}
           id="content"
-          sx={{
-            ".featured": {
-              pl: 4,
-              ml: -4,
-              borderLeft: "1px dotted",
-              borderLeftColor: "primary",
-            },
-            ".citation": {
-              p: {
-                color: "text200",
-              },
-            },
-          }}
         >
           <Section>
             <H2 mt={{ lg: 0 }} id={tocItems[0].id}>
