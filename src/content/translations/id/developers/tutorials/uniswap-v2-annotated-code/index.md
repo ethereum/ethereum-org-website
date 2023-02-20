@@ -891,7 +891,7 @@ Kontrak perifer adalah API (antarmuka program aplikasi) untuk Uniswap. Kontrak i
 
 ### UniswapV2Router01.sol {#UniswapV2Router01}
 
-[Kontrak ini](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) memiliki masalah, dan [seharusnya tidak lagi digunakan](https://docs.uniswap.org/protocol/V2/reference/smart-contracts/router-01/). Untungnya, kontrak perifer bersifat tanpa status dan tidak menampung aset apa pun, sehingga mudah untuk mengusangkannya dan menyarankan orang-orang menggunakan penggantinya, `UniswapV2Router02`, sebagai gantinya.
+[Kontrak ini](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) memiliki masalah, dan [seharusnya tidak lagi digunakan](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Untungnya, kontrak perifer bersifat tanpa status dan tidak menampung aset apa pun, sehingga mudah untuk mengusangkannya dan menyarankan orang-orang menggunakan penggantinya, `UniswapV2Router02`, sebagai gantinya.
 
 ### UniswapV2Router02.sol {#UniswapV2Router02}
 

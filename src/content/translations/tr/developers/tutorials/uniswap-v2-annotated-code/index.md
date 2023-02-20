@@ -891,7 +891,7 @@ Her şey tamamsa bunu bir [ERC-20 onayı](https://eips.ethereum.org/EIPS/eip-20#
 
 ### UniswapV2Router01.sol {#UniswapV2Router01}
 
-[Bu sözleşmenin](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) sorunları vardır ve [artık kullanılmamalıdır](https://docs.uniswap.org/protocol/V2/reference/smart-contracts/router-01/). Neyse ki çevre sözleşmeler durumsuz olduğu ve herhangi bir varlık tutmadıkları için onları kullanımdan kaldırmak ve insanlara bunun yerine `UniswapV2Router02` kullanmayı önermek kolaydır.
+[Bu sözleşmenin](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) sorunları vardır ve [artık kullanılmamalıdır](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Neyse ki çevre sözleşmeler durumsuz olduğu ve herhangi bir varlık tutmadıkları için onları kullanımdan kaldırmak ve insanlara bunun yerine `UniswapV2Router02` kullanmayı önermek kolaydır.
 
 ### UniswapV2Router02.sol {#UniswapV2Router02}
 
