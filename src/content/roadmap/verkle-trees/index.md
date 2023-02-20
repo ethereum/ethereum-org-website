@@ -14,10 +14,6 @@ summaryPoints:
 
 Verkle tries (a portmanteau of "Vector commitment" and "Merkle Tries") are a data structure that be used to upgrade Ethereum nodes so that they can stop storing large amounts of state data without losing the ability to validate blocks.
 
-## Prerequisites {#prerequisites}
-
-To understand this page, it would be useful to understand about [nodes and clients](/src/content/developers/docs/nodes-and-clients) and[Patricia Merkle Tries](/src/content/developers/docs/data-structures-and-encoding/patricia-merkle-trie).
-
 ## Statelessness {#statelessness}
 
 Verkle trees are a critical step on the path to stateless Ethereum clients. Stateless clients are ones that do not have to store the entire state database in order to validate incoming blocks. Instead of using their own local copy of Ethereum's state to verify blocks, stateless clients use a "witness" to the state data that arrives with the block. A witness is a collection of individual pieces of the state data that are required to execute a particular set of transactions, and a cryptographic proof that the witness is part of the full state trie. The witness is used _instead_ of the state database. For this to work, the witnesses need to be very small, so that they can be safely broadcast across the network in time for validators to process them within a 12 second slot. The current state data structure is not suitable because witnesses are too large. Verkle trees solve this problem by enabling small witnesses, removing one of the main barriers to stateless clients.

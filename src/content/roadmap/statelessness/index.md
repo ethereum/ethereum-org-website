@@ -14,7 +14,7 @@ Cheaper hard drives can be used to store older data but those are too slow to ke
 There are several ways to reduce the amount of data each node has to store, each requiring Ethereums' core protocol to be updates to a different extent:
 
 - **History expiry**: enable nodes to discard state data older than X blocks, but does not change how Ethereum client's handle state data
-- **State expiry**: alow state data that is not used frequently to become inactive. Inactive data can be ignored by clients until it is resurrected.
+- **State expiry**: allow state data that is not used frequently to become inactive. Inactive data can be ignored by clients until it is resurrected.
 - **Weak statelessness**: only block producers need access to full state data, other nodes can verify blocks without a local state database.
 - **Strong statelessness**: no nodes need access to the full state data.
 
@@ -63,6 +63,9 @@ Statelessness is a bit of a misnomer because it does not mean the concept of "st
 - nodes can run on top of cheap hard drives because there is no disk reading/writing required
 - compatible with future upgrades to Ethereum's cryptography
 
+Read more on [why it's so important to go stateless](https://dankradfeist.de/ethereum/2021/02/14/why-stateless.html)
+Read the original [stateless client concept notes](https://ethresear.ch/t/the-stateless-client-concept/172)
+
 ### Weak Statelessness {#weak-statelessness}
 
 Weak statelessness does involve changes to the way Ethereum nodes verify state changes, but it does not completely eliminate the need for state storage in all nodes on the network. Instead, weak statelessness puts the responsibility for state storage onto block proposers, while all other nodes on the network verify blocks without storing the full state data.
@@ -92,7 +95,6 @@ Strong statelessness is the most elegant solution to reducing the disk requireme
 ## Further reading {#further-reading}
 
 - [Vitalik statelessness AMA](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)
-- [The Stateless Client Concept ethresear.ch post](https://ethresear.ch/t/the-stateless-client-concept/172)
 - [A theory of state size management](https://hackmd.io/@vbuterin/state_size_management)
 - [Resurrection-conflict-minimized state bounding](https://ethresear.ch/t/resurrection-conflict-minimized-state-bounding-take-2/8739)
 - [Paths to statelessness and state expiry](https://hackmd.io/@vbuterin/state_expiry_paths)
