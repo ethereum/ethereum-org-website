@@ -601,7 +601,7 @@ const HomePage = ({
       {/* Eth Today Section */}
       <GrayContainer>
         <ContentBox>
-          <SectionHeading mt={undefined} mb={undefined} fontFamily={undefined}>
+          <SectionHeading mt={12} mb={8} fontFamily="heading">
             <Translation id="page-index-network-stats-title" />
           </SectionHeading>
           <SectionDecription>
@@ -613,7 +613,7 @@ const HomePage = ({
       {/* Explore Section */}
       <ContentBox>
         <Box pb={4}>
-          <SectionHeading mt={undefined} mb={undefined} fontFamily={undefined}>
+          <SectionHeading mt={12} mb={8} fontFamily="heading">
             <Translation id="page-index-touts-header" />
           </SectionHeading>
         </Box>
