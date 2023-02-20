@@ -803,7 +803,7 @@ Aceste două funcții permit `feeToSetter` să controleze destinatarul taxei (î
 
 [Acest contract](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implementează tokenul de lichidităţi ERC-20. Este similar cu [contractul OpenWhisk ERC-20](/developers/tutorials/erc20-annotated-code), așa că voi explica numai partea care este diferită, funcționalitatea `permit`.
 
-Tranzacțiile pe Ethereum costă ether (ETH), care este echivalent cu banii reali. Dacă aveți tokenuri ERC-20, şi nu ETH, nu puteți trimite tranzacții, deci nu puteți face nimic cu ele. O soluție pentru a evita această problemă constă în [meta-tranzacții](https://docs.uniswap.org/protocol/V2/guides/smart-contract-integration/supporting-meta-transactions/). Proprietarul tokenurilor semnează o tranzacție care permite altcuiva să retragă jetoanele din lanț și să le trimită prin internet destinatarului. Destinatarul, care posedă ETH, transmite apoi autorizația în numele proprietarului.
+Tranzacțiile pe Ethereum costă ether (ETH), care este echivalent cu banii reali. Dacă aveți tokenuri ERC-20, şi nu ETH, nu puteți trimite tranzacții, deci nu puteți face nimic cu ele. O soluție pentru a evita această problemă constă în [meta-tranzacții](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions). Proprietarul tokenurilor semnează o tranzacție care permite altcuiva să retragă jetoanele din lanț și să le trimită prin internet destinatarului. Destinatarul, care posedă ETH, transmite apoi autorizația în numele proprietarului.
 
 ```solidity
     bytes32 public DOMAIN_SEPARATOR;

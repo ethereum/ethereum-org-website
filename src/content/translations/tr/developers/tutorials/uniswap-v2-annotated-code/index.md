@@ -803,7 +803,7 @@ Bu iki fonksiyon, `feeSetter` öğesinin ücret alıcısını (varsa) kontrol et
 
 [Bu sözleşme](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol), ERC-20 likidite token'ını uygular. [OpenWhisk ERC-20 sözleşmesine](/developers/tutorials/erc20-annotated-code) benzer, bu yüzden sadece `permit` işlevselliği olan farklı kısmı açıklayacağım.
 
-Ethereum'daki işlemler, gerçek paraya eş değer olan ether'a (ETH) mal olur. ERC-20 token'larınız varsa ancak ETH'niz yoksa işlem gönderemezsiniz, bu nedenle onlarla hiçbir şey yapamazsınız. Bu sorundan kaçınmanın bir yolu [meta-işlemlerdir](https://docs.uniswap.org/protocol/V2/guides/smart-contract-integration/supporting-meta-transactions/). Token'ların sahibi, bir başkasının jetonları zincirden çekmesine ve interneti kullanarak alıcıya göndermesine izin veren bir işlem imzalar. Daha sonra ETH'ye sahip olan alıcı, token sahibi adına izni gönderir.
+Ethereum'daki işlemler, gerçek paraya eş değer olan ether'a (ETH) mal olur. ERC-20 token'larınız varsa ancak ETH'niz yoksa işlem gönderemezsiniz, bu nedenle onlarla hiçbir şey yapamazsınız. Bu sorundan kaçınmanın bir yolu [meta-işlemlerdir](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions). Token'ların sahibi, bir başkasının jetonları zincirden çekmesine ve interneti kullanarak alıcıya göndermesine izin veren bir işlem imzalar. Daha sonra ETH'ye sahip olan alıcı, token sahibi adına izni gönderir.
 
 ```solidity
     bytes32 public DOMAIN_SEPARATOR;

@@ -803,7 +803,7 @@ Kedua fungsi ini membuat `feeSetter` dapat mengendalikan penerima biaya (jika ad
 
 [Kontrak ini](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) menerapkan token likuiditas ERC-20. Sama dengan kontrak [ERC-20 OpenWhisk](/developers/tutorials/erc20-annotated-code), sehingga saya hanya akan menjelaskan perbedaannya, fungsionalitas `izin`.
 
-Transaksi di Ethereum membutuhkan ether (ETH), yang sama dengan uang sebenarnya. Jika Anda memiliki token ERC-20, tetapi bukan ETH, Anda tidak dapat mengirim transaksi, sehingga Anda tidak dapat melakukan apa pun dengannya. Satu solusi untuk menghindari masalah ini adalah [transaksi meta](https://docs.uniswap.org/protocol/V2/guides/smart-contract-integration/supporting-meta-transactions/). Pemilik token menandatangani transaksi yang membuat seseorang lainnya menarik token di luar rantai dan mengirimnya menggunakan Internet kepada penerima. Penerima, yang memiliki ETH, kemudian mengirim izin atas nama pemilik.
+Transaksi di Ethereum membutuhkan ether (ETH), yang sama dengan uang sebenarnya. Jika Anda memiliki token ERC-20, tetapi bukan ETH, Anda tidak dapat mengirim transaksi, sehingga Anda tidak dapat melakukan apa pun dengannya. Satu solusi untuk menghindari masalah ini adalah [transaksi meta](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions). Pemilik token menandatangani transaksi yang membuat seseorang lainnya menarik token di luar rantai dan mengirimnya menggunakan Internet kepada penerima. Penerima, yang memiliki ETH, kemudian mengirim izin atas nama pemilik.
 
 ```solidity
     bytes32 public DOMAIN_SEPARATOR;
