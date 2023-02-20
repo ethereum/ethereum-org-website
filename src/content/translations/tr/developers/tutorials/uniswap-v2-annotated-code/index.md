@@ -895,7 +895,7 @@ Her şey tamamsa bunu bir [ERC-20 onayı](https://eips.ethereum.org/EIPS/eip-20#
 
 ### UniswapV2Router02.sol {#UniswapV2Router02}
 
-Çoğu durumda Uniswap'i [bu sözleşme](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol) aracılığıyla kullanırsınız. Nasıl kullanacağınızı [burada](https://docs.uniswap.org/protocol/V2/reference/smart-contracts/router-02/) görebilirsiniz.
+Çoğu durumda Uniswap'i [bu sözleşme](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol) aracılığıyla kullanırsınız. Nasıl kullanacağınızı [burada](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02) görebilirsiniz.
 
 ```solidity
 pragma solidity =0.6.6;

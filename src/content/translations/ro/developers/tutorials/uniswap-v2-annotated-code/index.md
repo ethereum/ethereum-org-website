@@ -895,7 +895,7 @@ Contractele periferice sunt API-uri (interfață de program de aplicație) pentr
 
 ### UniswapV2Router02.sol {#UniswapV2Router02}
 
-În cele mai multe cazuri, veți utiliza Uniswap prin intermediul [acestui contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). Puteți vedea cum să îl utilizați [aici](https://docs.uniswap.org/protocol/V2/reference/smart-contracts/router-02/).
+În cele mai multe cazuri, veți utiliza Uniswap prin intermediul [acestui contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). Puteți vedea cum să îl utilizați [aici](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02).
 
 ```solidity
 pragma solidity =0.6.6;

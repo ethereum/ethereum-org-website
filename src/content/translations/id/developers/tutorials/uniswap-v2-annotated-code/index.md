@@ -895,7 +895,7 @@ Kontrak perifer adalah API (antarmuka program aplikasi) untuk Uniswap. Kontrak i
 
 ### UniswapV2Router02.sol {#UniswapV2Router02}
 
-Dalam kebanyakan kasus, Anda akan menggunakan Uniswap melalui [kontrak ini](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). Anda dapat melihat cara menggunakannya [di sini](https://docs.uniswap.org/protocol/V2/reference/smart-contracts/router-02/).
+Dalam kebanyakan kasus, Anda akan menggunakan Uniswap melalui [kontrak ini](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). Anda dapat melihat cara menggunakannya [di sini](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02).
 
 ```solidity
 pragma solidity =0.6.6;
