@@ -24,7 +24,7 @@ Les _traders_ envoient un type de jeton au pool et reçoivent l'autre (par exemp
 
 Lorsque les fournisseurs de liquidités veulent récupérer leurs actifs, ils peuvent brûler les jetons du pool et récupérer leurs jetons, y compris leur part des récompenses.
 
-[Cliquez ici pour une description plus complète](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/swaps/).
+[Cliquez ici pour une description plus complète](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/).
 
 ### Pourquoi v2 ? Pourquoi pas v3 ? {#why-v2}
 

@@ -24,7 +24,7 @@ lang: zh
 
 当流动性提供者想要收回他们的代币资产时，他们可以销毁资金池代币并收回他们的代币，其中包括属于他们的奖励。
 
-[点击此处查看更完整的描述](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/swaps/)。
+[点击此处查看更完整的描述](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/)。
 
 ### 为什么选择 v2？ 而不是 v3？ {#why-v2}
 

@@ -24,7 +24,7 @@ _Pedagang_ mengirimkan satu jenis token ke pool dan menerima token lainnya (cont
 
 Ketika penyedia likuiditas menginginkan kembali aset mereka, mereka dapat membakar token pool dan menerima kembali token mereka, termasuk bagian imbalan mereka.
 
-[Klik di sini untuk deskripsi lengkapnya](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/swaps/).
+[Klik di sini untuk deskripsi lengkapnya](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/).
 
 ### Mengapa v2? Mengapa bukan v3? {#why-v2}
 
