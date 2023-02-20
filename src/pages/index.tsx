@@ -18,7 +18,7 @@ import {
 } from "@chakra-ui/react"
 import { FaGithub } from "react-icons/fa"
 
-import type { Context } from "../types"
+import type { ChildOnlyProp, Context } from "../types"
 
 import ActionCard from "../components/ActionCard"
 import ButtonLink from "../components/ButtonLink"
@@ -38,8 +38,6 @@ import SimpleTokenContent from "!!raw-loader!../data/SimpleToken.sol"
 import CreateWalletContent from "!!raw-loader!../data/CreateWallet.js"
 import SimpleDomainRegistryContent from "!!raw-loader!../data/SimpleDomainRegistry.sol"
 import { useConsoleEasterEgg } from "../hooks/useConsoleEasterEgg"
-
-type ChildOnlyProp = { children: ReactNode }
 
 const SectionHeading = (props: HeadingProps) => (
   <Heading
