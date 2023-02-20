@@ -2,7 +2,6 @@
 title: Environnements de développement intégrés (IDE)
 description:
 lang: fr
-sidebar: true
 ---
 
 Lorsqu'il s'agit de configurer un [environnement de développement intégré (IDE)](https://wikipedia.org/wiki/Integrated_development_environment), la programmation d'applications sur Ethereum est similaire à la programmation de tout autre projet logiciel. Il existe de nombreuses options parmi lesquelles choisir, donc en fin de compte, choisissez l'IDE ou l'éditeur de code qui correspond le mieux à vos préférences. Le meilleur choix d'IDE pour votre développement Ethereum est probablement l'IDE que vous utilisez déjà pour le développement de logiciels traditionnels.
@@ -35,7 +34,6 @@ La plupart des IDE ont construit des plugins pour améliorer l'expérience de d�
 **Visual Studio Code -** **_IDE professionnel multiplateforme avec support officiel Ethereum._**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Kit de développement blockchain pour Ethereum](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain)
 - [Plan de travail blockchain Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
 - [Exemples de code](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)

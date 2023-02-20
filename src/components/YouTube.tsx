@@ -1,10 +1,5 @@
 import React from "react"
-import styled from "styled-components"
-
-const Figure = styled.figure`
-  display: block;
-  margin: 1rem 0;
-`
+import { AspectRatio } from "@chakra-ui/react"
 
 /**
  * @param {id} ID of the YouTube video
@@ -27,10 +22,8 @@ const YouTube: React.FC<IProps> = ({ id, start = "0", title = "YouTube" }) => {
   const baseUrl = "https://www.youtube.com/embed/"
   const src = baseUrl + id + startQuery
   return (
-    <Figure>
+    <AspectRatio as="figure" maxW="560px" ratio={16 / 9} my={8}>
       <iframe
-        width="100%"
-        height="315"
         src={src}
         frameBorder="0"
         title={title}
@@ -42,8 +35,8 @@ const YouTube: React.FC<IProps> = ({ id, start = "0", title = "YouTube" }) => {
       gyroscope;
       picture-in-picture"
         allowFullScreen
-      ></iframe>
-    </Figure>
+      />
+    </AspectRatio>
   )
 }
 

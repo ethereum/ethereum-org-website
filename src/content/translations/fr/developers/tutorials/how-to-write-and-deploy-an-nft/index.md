@@ -5,12 +5,11 @@ author: "Sumi Mudgil"
 tags:
   - "NFTs"
   - "ERC-721"
-  - "Alchemy"
-  - "Solidity"
+  - "alchemy"
+  - "solidity"
   - "contrats intelligents"
 skill: beginner
 lang: fr
-sidebar: true
 published: 2021-04-22
 ---
 
@@ -42,7 +41,7 @@ Une fois que vous avez créé un compte Alchemy, vous pouvez générer une clé 
 
 ![Configurez et publiez votre application](./configure-and-publish-your-app.png)
 
-3. Cliquez sur « Créer l'application » et voilà ! Votre application devrait apparaître dans le tableau.
+3. Cliquez sur « Create App » et voilà ! Votre application devrait apparaître dans le tableau ci-dessous.
 
 ## Étape 3 : Créer un compte Ethereum (une adresse) {#create-eth-address}
 
@@ -106,7 +105,7 @@ Approuvez le package.json, et nous sommes prêts à démarrer !
 
 ## Étape 7 : Installer [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
 
-Hardat est un environnement de développement qui permet de compiler, déployer, tester et débugger vos logiciels Ethereum. Il aide les développeurs à constuire des contrats intelligents et des dApps localement avant de les déployer sur la chaîne principale.
+Hardat est un environnement de développement qui permet de compiler, déployer, tester et débugger vos logiciels Ethereum. Il aide les développeurs à construire des contrats intelligents et des dapps localement avant de les déployer sur la chaîne en production.
 
 Dans notre projet my-nft, exécutez :
 
@@ -345,7 +344,7 @@ L'adresse « From » doit correspondre à l'adresse de votre compte MetaMask et 
 
 Super ! Vous venez de déployer votre contrat intelligent NFT sur la chaîne Ethereum !
 
-Pour comprendre ce qui se passe sous le capot, naviguons vers l'onglet Explorateur dans notre [tableau de bord d'Alchemy](https://dashboard.alchemyapi.io/explorer). Si vous avez plusieurs applications Alchemy, veillez à filtrer par application et à sélectionner « MyNFT ».
+Pour comprendre ce qui se passe sous le capot, naviguons dans l'onglet Explorer de notre [tableau de bord Alchemy](https://dashboard.alchemyapi.io/explorer). Si vous avez plusieurs applications Alchemy, veillez à filtrer par application et à sélectionner « MyNFT ».
 
 ![Visualisez les appels effectués « sous le capot » avec le tableau de bord Explorer d'Alchemy](./alchemy-explorer.png)
 

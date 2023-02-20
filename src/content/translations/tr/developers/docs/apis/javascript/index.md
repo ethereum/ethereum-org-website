@@ -2,7 +2,6 @@
 title: JavaScript API kütüphaneleri
 description: Uygulamanızdan blok zinciri ile etkileşime girmenizi sağlayan JavaScript istemci kütüphanelerine giriş.
 lang: tr
-sidebar: true
 ---
 
 Bir web uygulamasının Ethereum blok zinciri ile etkileşime girebilmesi için (yani blok zinciri verilerini okuması ve/veya ağa işlem gönderebilmesi) bir Ethereum düğümüne bağlanması gerekir.
@@ -265,7 +264,7 @@ ethers.utils.formatEther(balance)
 
 **Alchemyweb3 -** **_Otomatik yeniden denemeler ve geliştirilmiş API'ler ile Web3.js odaklı paketleyici._**
 
-- [Belgeler](https://docs.alchemyapi.io/documentation/alchemy-web3)
+- [Belgeler](https://docs.alchemy.com/reference/api-overview)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
 **Alchemy NFT API -** **_Sahiplik, meta veri özellikleri ve daha fazlası dahil olmak üzere NFT verilerini almak için API._**

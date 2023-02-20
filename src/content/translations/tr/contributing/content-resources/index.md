@@ -2,7 +2,6 @@
 title: İçerik kaynakları ekleme
 lang: tr
 description: Ethereum.org'da içerik kaynaklarını listeleme kriterlerimiz
-sidebar: true
 ---
 
 # İçerik kaynakları ekleme {#adding-content-resources}

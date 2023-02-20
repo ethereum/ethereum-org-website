@@ -1,8 +1,8 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import Link from "../components/Link"
-import Emoji from "../components/Emoji"
+import Emoji from "../components/OldEmoji"
 import ButtonLink from "../components/ButtonLink"
 import { Page, Content, Divider } from "../components/SharedStyledComponents"
 
@@ -68,10 +68,10 @@ const StudioRedirectPage = () => (
         </Link>
         . Check out our developer portal for tools, documentation, and more.
       </p>
-      <ButtonLink mr={"1rem"} isSecondary to="https://remix.ethereum.org">
+      <ButtonLink mr={1} variant="outline" to="https://remix.ethereum.org">
         Use Remix
       </ButtonLink>
-      <ButtonLink isSecondary to="/developers/">
+      <ButtonLink variant="outline" to="/developers/">
         Developer portal
       </ButtonLink>
     </Content>

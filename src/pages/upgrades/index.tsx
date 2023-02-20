@@ -1,6 +1,6 @@
 import React from "react"
-import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import styled from "@emotion/styled"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 
@@ -8,7 +8,7 @@ import ButtonLink from "../../components/ButtonLink"
 import Card from "../../components/Card"
 import ActionCard from "../../components/ActionCard"
 import CalloutBanner from "../../components/CalloutBanner"
-import Emoji from "../../components/Emoji"
+import Emoji from "../../components/OldEmoji"
 import UpgradeArticles from "../../components/UpgradeArticles"
 import ExpandableCard from "../../components/ExpandableCard"
 import GhostCard from "../../components/GhostCard"
@@ -25,8 +25,10 @@ import {
   Page,
   Divider,
 } from "../../components/SharedStyledComponents"
-import { translateMessageId } from "../../utils/translations"
 import FeedbackCard from "../../components/FeedbackCard"
+
+import { translateMessageId } from "../../utils/translations"
+import { getImage } from "../../utils/image"
 
 const Row = styled.div`
   display: flex;
@@ -230,7 +232,7 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
     title: translateMessageId("page-upgrades-upgrades", intl),
     header: translateMessageId("page-upgrades-upgrading", intl),
     subtitle: translateMessageId("page-upgrades-upgrade-desc", intl),
-    image: getImage(data.merge),
+    image: getImage(data.merge)!,
     alt: translateMessageId("page-dapps-doge-img-alt", intl),
     buttons: [
       {
@@ -240,7 +242,7 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
       {
         content: translateMessageId("page-upgrades-whats-ethereum", intl),
         to: "/what-is-ethereum/",
-        isSecondary: true,
+        variant: "outline",
       },
     ],
   }
@@ -319,7 +321,7 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
         </Vision>
       </Content>
       <StyledCallout
-        image={getImage(data.oldship)}
+        image={getImage(data.oldship)!}
         alt={translateMessageId("page-eth-whats-eth-hero-alt", intl)}
         titleKey={"page-upgrades-dive"}
         descriptionKey={"page-upgrades-dive-desc"}
@@ -342,7 +344,7 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
             <ActionCard
               isRight
               key={idx}
-              image={upgrade.image}
+              image={upgrade.image!}
               title={upgrade.title}
               description={upgrade.description}
               to={upgrade.to}
@@ -422,7 +424,7 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
             </H2>
             <Translation id="page-upgrades-help-desc" />
           </div>
-          <ContributeButton isSecondary to="/upgrades/get-involved/">
+          <ContributeButton variant="outline" to="/upgrades/get-involved/">
             <Translation id="page-upgrades-get-involved-2" />
           </ContributeButton>
         </ContributeCard>
@@ -477,7 +479,7 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
                 <Translation id="page-staking-deposit-contract-staking-more-link" />
               </ButtonLink>
             </StakingCard>
-            <StakingImage image={getImage(data.rhino)} />
+            <StakingImage image={getImage(data.rhino)!} alt="" />
           </StakingRightColumn>
         </StakingColumns>
       </Staking>
@@ -595,12 +597,6 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
                 </Link>
               </p>
               <p>
-                <Translation id="page-upgrades-question-4-answer-2" />{" "}
-                <Link to="/upgrades/merge/">
-                  <Translation id="page-upgrades-merge-btn" />
-                </Link>
-              </p>
-              <p>
                 <Translation id="page-upgrades-question-4-answer-3" />{" "}
                 <Link to="/developers/docs/consensus-mechanisms/pos/">
                   <Translation id="page-upgrades-proof-stake-link" />
@@ -611,9 +607,6 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
                 <Link to="/staking/">
                   <Translation id="page-upgrades-question-4-answer-7" />
                 </Link>
-              </p>
-              <p>
-                <Translation id="page-upgrades-question-4-answer-8" />
               </p>
             </ExpandableCard>
             <ExpandableCard
@@ -870,7 +863,7 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
             <Translation id="page-upgrades-take-part-desc" />
           </p>
           <ButtonLink to="https://ethresear.ch/">
-            <Translation id="page-upgrades-head-to" /> ethresear.ch
+            <Translation id="page-upgrades-head-to-ethresearch" />
           </ButtonLink>
         </ResearchContainer>
       </Content>

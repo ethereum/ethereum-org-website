@@ -1,15 +1,14 @@
-import React, { useContext, useState, useEffect, ReactNode } from "react"
-import { ThemeContext } from "styled-components"
-import styled from "styled-components"
+import React, { useState, useEffect, ReactNode } from "react"
+import { useTheme } from "@emotion/react"
+import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 import { shuffle } from "lodash"
-import { getImage } from "gatsby-plugin-image"
 import { translateMessageId, TranslationKey } from "../../../utils/translations"
 import Card from "../../../components/Card"
 import Leaderboard, { Person } from "../../../components/Leaderboard"
 import CalloutBanner from "../../../components/CalloutBanner"
-import Emoji from "../../../components/Emoji"
+import Emoji from "../../../components/OldEmoji"
 import ProductCard from "../../../components/ProductCard"
 import ButtonLink from "../../../components/ButtonLink"
 import PageMetadata from "../../../components/PageMetadata"
@@ -28,6 +27,7 @@ import {
 } from "../../../components/SharedStyledComponents"
 import Breadcrumbs from "../../../components/Breadcrumbs"
 import FeedbackCard from "../../../components/FeedbackCard"
+import { getImage, ImageDataLike } from "../../../utils/image"
 
 const HeroContainer = styled.div`
   padding-left: 0rem;
@@ -171,7 +171,7 @@ type Client = {
   description: ReactNode
   alt: TranslationKey
   url: string
-  image: (isDarkTheme?: boolean) => typeof getImage
+  image: (isDarkTheme?: boolean) => ImageDataLike | null
   githubUrl: string
   isBeta?: boolean
   children?: ReactNode
@@ -186,8 +186,8 @@ const GetInvolvedPage = ({
   location,
 }: PageProps<Queries.GetInvolvedPageQuery>) => {
   const intl = useIntl()
-  const themeContext = useContext(ThemeContext)
-  const isDarkTheme = themeContext.isDark
+  const theme = useTheme()
+  const isDarkTheme = theme.isDark
 
   // TODO sort query isn't working :(
   const bountyHunters: Array<Person> = [...data.bountyHunters.nodes].sort(
@@ -373,7 +373,7 @@ const GetInvolvedPage = ({
             key={idx}
             url={client.url}
             background={client.background}
-            image={getImage(client.image(isDarkTheme))}
+            image={getImage(client.image(isDarkTheme))!}
             name={client.name}
             description={client.description}
             alt={translateMessageId(client.alt, intl)}
@@ -456,7 +456,7 @@ const GetInvolvedPage = ({
       </Content>
       <Staking>
         <StyledCalloutBanner
-          image={getImage(data.rhino)}
+          image={getImage(data.rhino)!}
           alt={translateMessageId("page-staking-image-alt", intl)}
           titleKey={"page-upgrades-get-involved-stake"}
           descriptionKey={"page-upgrades-get-involved-stake-desc"}
@@ -542,9 +542,7 @@ export const Clients = graphql`
 
 export const query = graphql`
   query GetInvolvedPage {
-    bountyHunters: allConsensusBountyHuntersCsv(
-      sort: { order: DESC, fields: score }
-    ) {
+    bountyHunters: allConsensusBountyHuntersCsv(sort: { score: DESC }) {
       nodes {
         username
         name

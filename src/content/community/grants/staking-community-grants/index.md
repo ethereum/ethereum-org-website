@@ -2,7 +2,6 @@
 title: Eth2 staking community grants
 description: Instructions, deadlines, and information for the Eth2 staking grants
 lang: en
-sidebar: true
 sidebarDepth: 2
 ---
 

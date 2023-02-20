@@ -2,7 +2,6 @@
 title: Akıllı sözleşme birleştirilebilirliği
 description:
 lang: tr
-sidebar: true
 incomplete: true
 ---
 

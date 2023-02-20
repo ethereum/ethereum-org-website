@@ -2,12 +2,11 @@
 title: 智能合约
 description: 智能合约的非技术性介绍
 lang: zh
-sidebar: true
 ---
 
 # 智能合约简介 {#introduction-to-smart-contracts}
 
-智能合约是[以太坊应用程序](/dapps/)的基石。 它们是存储在区块链上的计算机程序，让我们能够将传统合约转换成对应的数字化合约。 智能合约完全符合逻辑 — 遵循 IFTTT 逻辑结构。 这意味着它们完全按照程序设定执行并且不能更改。
+智能合约是[以太坊应用程序](/dapps/)的基石。 它们是存储在区块链上的计算机程序，让我们能够将传统合约转换成数字化合约。 智能合约完全符合逻辑 — 遵循 IFTTT （if this then that）逻辑结构。 这意味着它们完全按照程序设定执行并且不能更改。
 
 Nick Szabo 创造了“智能合约”这一术语。 1994 年，他撰写了[概念简介](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html)，1996 年又撰写了[探索智能合约的功能](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html)。
 
@@ -61,7 +60,7 @@ Alice 和 Bob 在参加一场自行车比赛。 假设 Alice 和 Bob 打赌 $10 
 
 ### 隐私保护 {#privacy-protection}
 
-智能合约还可以保护我们的隐私。 由于以太坊是匿名网络（您的交易公开绑定到唯一的加密地址，而不是您的身份），您可以保护您的隐私不受观察者窥探。
+智能合约还可以保护你的隐私。 由于以太坊是匿名网络（您的交易公开绑定到唯一的加密地址，而不是您的身份），您可以保护您的隐私不受观察者窥探。
 
 ### 可查看的条款 {#visible-terms}
 
@@ -75,7 +74,7 @@ Alice 和 Bob 在参加一场自行车比赛。 假设 Alice 和 Bob 打赌 $10 
 
 - [稳定币](/stablecoins/)
 - [创建和分发独特的数字资产](/nft/)
-- [自动、开放的货币交易所](/get-eth/#dex/)
+- [自动、开放的货币交易所](/get-eth/#dex)
 - [去中心化游戏](/dapps/?category=gaming)
 - [自动赔付的保单](https://etherisc.com/)
 - [允许创建定制、可互操作货币的标准](/developers/docs/standards/tokens/)

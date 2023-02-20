@@ -5,7 +5,6 @@ author: Vladislav Starostenko
 tags: ["waffle", "smart contracts", "solidity", "testing", "erc-20"]
 skill: intermediate
 lang: en
-sidebar: true
 published: 2020-10-16
 ---
 
@@ -1044,7 +1043,7 @@ describe("BasicToken", () => {
 })
 ```
 
-So, we use `deployContract` method from `Waffle`to deploy our token. As arguments, we should pass `wallet`, the compiled json file of our contract and default balance.
+So, we use `deployContract` method from `Waffle` to deploy our token. As arguments, we should pass `wallet`, the compiled json file of our contract and default balance.
 
 `Waffle` also allows us to create a `wallet`, which makes it very easy to deploy a contract.
 

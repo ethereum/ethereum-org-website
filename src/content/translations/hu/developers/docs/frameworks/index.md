@@ -2,7 +2,6 @@
 title: Dapp Fejlesztői Keretrendszerek
 description: Fedezd fel a keretrendszerek tulajdonságait és hasonlítsd össze az elérhető lehetőségeket.
 lang: hu
-sidebar: true
 ---
 
 ## Bevezetés a keretrendszerekbe {#introduction-to-frameworks}

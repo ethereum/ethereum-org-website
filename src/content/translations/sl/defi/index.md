@@ -4,7 +4,6 @@ description: Pregled DeFi na Ethereumu
 lang: sl
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../assets/use-cases/defi.png
 alt: Logotip Ethereum narejen iz lego kock.
 sidebarDepth: 2
@@ -307,8 +306,8 @@ DeFi je odprtokodno gibanje. DeFi protokoli in aplikacije so vam vse odprte za p
 
 ### DeFi podatki {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
+- [DeFi Llama](https://defillama.com/)
 
 ### DeFi članki {#defi-articles}
 

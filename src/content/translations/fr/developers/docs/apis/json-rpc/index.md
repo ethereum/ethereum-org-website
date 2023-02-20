@@ -2,7 +2,6 @@
 title: API JSON-RPC
 description: Un protocole allégé de procédure à distance (RPC) pour les clients Ethereum.
 lang: fr
-sidebar: true
 ---
 
 Afin qu'une application logicielle interagisse avec la blockchain Ethereum (en lisant les données de la blockchain et/ou en envoyant des transactions au réseau), il doit se connecter à un nœud Ethereum.

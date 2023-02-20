@@ -1,15 +1,13 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
-import { getImage } from "gatsby-plugin-image"
 
-import { translateMessageId } from "../../utils/translations"
 import Translation from "../../components/Translation"
 import Card from "../../components/Card"
 import ActionCard from "../../components/ActionCard"
 import Link from "../../components/Link"
-import Emoji from "../../components/Emoji"
+import Emoji from "../../components/OldEmoji"
 import Trilemma from "../../components/Trilemma"
 import PageHero, {
   IContent as IPageHeroContent,
@@ -25,6 +23,14 @@ import {
   Divider,
 } from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
+
+import { translateMessageId } from "../../utils/translations"
+import { getImage } from "../../utils/image"
+
+const ProblemCardContainer = styled(CardContainer)`
+  max-width: ${(props) => props.theme.breakpoints.l};
+  margin: 0 auto;
+`
 
 const StyledCardContainer = styled(CardContainer)`
   margin-top: 2rem;
@@ -82,11 +88,6 @@ const paths = [
     title: <Translation id="page-upgrades-vision-title-2" />,
     description: <Translation id="page-upgrades-vision-desc-2" />,
   },
-  {
-    emoji: ":high_voltage_sign:",
-    title: <Translation id="page-upgrades-vision-title-3" />,
-    description: <Translation id="page-upgrades-vision-desc-3" />,
-  },
 ]
 
 const VisionPage = ({
@@ -99,7 +100,7 @@ const VisionPage = ({
     title: translateMessageId("page-upgrades-vision-title", intl),
     header: translateMessageId("page-upgrades-vision-future", intl),
     subtitle: translateMessageId("page-upgrades-vision-subtitle", intl),
-    image: getImage(data.oldship),
+    image: getImage(data.oldship)!,
     alt: translateMessageId("page-eth-whats-eth-hero-alt", intl),
   }
 
@@ -191,7 +192,7 @@ const VisionPage = ({
         <CenterH2>
           <Translation id="page-upgrades-vision-problems" />
         </CenterH2>
-        <CardContainer>
+        <ProblemCardContainer>
           {paths.map((path, idx) => (
             <CentreCard
               key={idx}
@@ -200,7 +201,7 @@ const VisionPage = ({
               description={path.description}
             />
           ))}
-        </CardContainer>
+        </ProblemCardContainer>
       </Content>
       <TrilemmaContent>
         <Trilemma />
@@ -303,7 +304,7 @@ const VisionPage = ({
             <ActionCard
               isRight
               key={idx}
-              image={upgrade.image}
+              image={upgrade.image!}
               title={upgrade.title}
               description={upgrade.description}
               to={upgrade.to}

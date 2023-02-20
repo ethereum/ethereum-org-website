@@ -2,7 +2,6 @@
 title: Węzły jako usługa
 description: Podstawowy przegląd usług węzłów, zalet i wad oraz popularnych dostawców.
 lang: pl
-sidebar: true
 sidebarDepth: 2
 isOutdated: true
 ---

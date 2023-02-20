@@ -2,7 +2,6 @@
 title: Minage
 description: Une explication du fonctionnement du minage sur Ethereum et de la façon dont il aide à garder Ethereum sécurisé et décentralisé.
 lang: fr
-sidebar: true
 incomplete: true
 ---
 

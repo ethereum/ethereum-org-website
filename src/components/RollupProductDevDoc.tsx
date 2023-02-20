@@ -1,6 +1,13 @@
 // Libraries
 import React from "react"
-import styled from "styled-components"
+import {
+  Box,
+  Flex,
+  Heading,
+  ListItem,
+  Text,
+  UnorderedList,
+} from "@chakra-ui/react"
 
 // Components
 import Link from "./Link"
@@ -34,65 +41,57 @@ type Rollups = { [type in RollupType]: Array<Rollup> }
 
 const rollups = _rollups as Rollups
 
-// Styles
-const H4 = styled.h4`
-  margin: 1rem 0;
-`
-
-const ProductCard = styled.div`
-  margin: 1rem 0;
-  background: ${(props) => props.theme.colors.rollupDevDocList};
-  display: flex;
-  flex-direction: row;
-`
-
-const Content = styled.div`
-  padding: 1rem 1rem 0 1rem;
-`
-
 export interface IProps {
   rollupType: RollupType
 }
 
 const RollupProductDevDoc: React.FC<IProps> = ({ rollupType }) => {
   return (
-    <div>
+    <Box>
       {rollups[rollupType].map(
         ({ name, noteKey, website, developerDocs, l2beat }) => {
           return (
-            <ProductCard>
-              <Content>
-                <div>
-                  <H4>{name}</H4>
+            <Flex my={4} background="rollupDevDocList">
+              <Box p={4} pb={0}>
+                <Box>
+                  <Heading
+                    as="h4"
+                    fontSize={{ base: "md", md: "xl" }}
+                    fontWeight="500"
+                    lineHeight="1.4"
+                    my={4}
+                  >
+                    {name}
+                  </Heading>
                   {noteKey.length > 0 && (
-                    <p>
+                    <Text>
                       * <Translation id={noteKey} />
-                    </p>
+                    </Text>
                   )}
-                  <ul>
-                    <li>
+                  <UnorderedList>
+                    <ListItem>
                       <Link to={website}>
                         <Translation id="rollup-component-website" />
                       </Link>
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                       <Link to={developerDocs}>
                         <Translation id="rollup-component-developer-docs" />
                       </Link>
-                    </li>
-                    <li>
+                    </ListItem>
+                    <ListItem>
                       <Link to={l2beat}>
                         <Translation id="rollup-component-technology-and-risk-summary" />
                       </Link>
-                    </li>
-                  </ul>
-                </div>
-              </Content>
-            </ProductCard>
+                    </ListItem>
+                  </UnorderedList>
+                </Box>
+              </Box>
+            </Flex>
           )
         }
       )}
-    </div>
+    </Box>
   )
 }
 

@@ -3,7 +3,6 @@ title: La fusió
 description: "Més informació sobre la fusió: quan la xarxa principal d'Ethereum s'integri al sistema coordinat de prova de participació de la cadena de balisa."
 lang: ca
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: Està previst que l'actual xarxa principal d'Ethereum es "fusioni" amb la cadena de balisa basada en el sistema de prova de participació.
 summaryPoint2: Això marcarà el final del sistema de prova de treball per Ethereum i significarà la transició completa al sistema de prova de participació.

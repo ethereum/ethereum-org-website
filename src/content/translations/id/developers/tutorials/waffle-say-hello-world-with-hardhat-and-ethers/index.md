@@ -11,7 +11,6 @@ tags:
   - "ethers.js"
 skill: beginner
 lang: id
-sidebar: true
 published: 2020-10-16
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Dil kaynakları
 description: Ethereum hakkında bilgi edinmek için İngilizce olmayan kaynaklar
-sidebar: true
 lang: tr
 ---
 
@@ -17,7 +16,7 @@ Kendi dilinizde bir eğitim kaynağı mı biliyorsunuz? [Listeye eklemek için](
 
 ## Ethereum.org kaynakları {#ethereum-org}
 
-Ethereum.org, [diller sayfasında](/languages) bulabileceğiniz 40'tan fazla dile yerel olarak çevrilmiştir.
+Ethereum.org, [diller sayfamızda](/languages) bulabileceğiniz 40'tan fazla dile yerel olarak çevrilmiştir.
 
 İki dilliyseniz ve daha fazla kişiye ulaşmamıza yardımcı olmak istiyorsanız, [ethereum.org Çeviri Programı](/contributing/translation-program/#translation-program)na da katılarak web sitesini tercüme etmemize yardımcı olabilirsiniz.
 
@@ -30,7 +29,7 @@ Ethereum.org, [diller sayfasında](/languages) bulabileceğiniz 40'tan fazla dil
 - [BeInCrypto](http://www.beincrypto.com.br) - kripto para haberleri ve makaleleri, bir borsa listesi ile beraber, Brezilya'da mevcuttur
 - [Cointelegraph](http://cointelegraph.com.br/category/analysis) - Büyük bir kripto para haber merkezi olan Cointelegraph'ın Brezilya versiyonu
 - [Livecoins](http://www.livecoins.com.br/ethereum) - kripto para birimi haberleri ve araçları
-- [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - kriptopara haber ve raporları
+- [Seudinheiro](http://www.seudinheiro.com/criptomoedas/) - kripto para haberleri ve raporları
 
 **Eğitim**
 
@@ -46,7 +45,7 @@ Ethereum.org, [diller sayfasında](/languages) bulabileceğiniz 40'tan fazla dil
 **Genel kaynaklar**
 
 - [Ethereum.cn](https://www.ethereum.cn/) - konsensüs katmanı yükseltmesini, tüm çekirdek geliştirme toplantı notlarını, katman 2'yi vb. kapsayan topluluk tarafından sağlanan içerik.
-- [EthFans](https://ethfans.org/) - temel konulardan gelişmiş Ethereum konularına kadar her şeyi öğrenin
+- [EthFans](https://github.com/editor-Ajian/EthFans.org-annual-collected-works/) - temel konulardan gelişmiş Ethereum konularına kadar her şeyi öğrenin
 - [Unitimes](https://mp.weixin.qq.com/s/tvloZSDBSOQN9zDQj_91kA) - Ethereum, DeFi, NFT, Web3 ile ilgili bilgileri kapsayan topluluk tarafından sürdürülen içerikler
 - [123ETH](https://123eth.org/) - Ethereum ekosistemine bir geçit
 - [Zhen Xiao](http://zhenxiao.com/blockchain/) - kripto para ve kullanımları hakkında ücretsiz çevrimiçi kurslar
@@ -60,13 +59,20 @@ Ethereum.org, [diller sayfasında](/languages) bulabileceğiniz 40'tan fazla dil
 
 **Geliştiriciler için**
 
-- [DappLearning](https://github.com/Dapp-Learning-DAO/Dapp-Learning) - ana akım dApp projelerini incelemek ve her hafta düşünce ve yorumların paylaşımı için bir öğrenim grubu
+- [DappLearning](https://github.com/Dapp-Learning-DAO/Dapp-Learning) - ana akım dapp projelerini incelemek ve her hafta düşünce ve yorumları paylaşmak için bir öğrenme grubu
 - [LearnBlockchain](https://learnblockchain.cn/) - geliştiricilerin blok zincir teknolojileri hakkında bilgi paylaşımı için bir topluluk
 
 **Kriptografi araştırmacıları için**
 
 - [SecbitLabs](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw) - kriptografi, güvenlik vb. açıklayan bir WeChat hesabı
 - [Sparkbyte](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ) - zk teknolojisini açıklayan bir WeChat hesabı
+
+### Çekçe {#cs}
+
+- [Gwei.cz](https://gwei.cz) - Web3 etrafında yerel topluluk, eğitim içeriği oluşturur, çevrimiçi ve yüz yüze etkinlikler düzenler
+- [Gwei.cz Příručka](https://prirucka.gwei.cz/) - yeni başlayanlar için Ethereum rehberi
+- [DAO Příručka](https://dao.gwei.cz/) - DAO'lara yeni başlayanlar için rehber
+- [Ethereum'da Uzmanlaşma](https://ipfs.infura-ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - Çekçe Ethereum'da Uzmanlaşmak
 
 ### Fransızca {#fr}
 
@@ -78,42 +84,43 @@ Ethereum.org, [diller sayfasında](/languages) bulabileceğiniz 40'tan fazla dil
 ### Almanca {#de}
 
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/de-de/learn/modules/blockchain-learning-solidity/) - Solidity kullanarak
-- [Microsoft Learn (akıllı sözleşmeler)](https://docs.microsoft.com/de-de/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - Solidity ile Ethereum akıllı sözleşmeleri yazmak
-- [Microsoft Learn (Ethereum ağları)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) - Ethereum ağlarına bağlanmak ve ağları kurmak
-- [Microsoft Learn (blok zincirleri)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) - blok zinciri geliştirmeye giriş
+- [Microsoft Learn (akıllı sözleşmeler)](https://docs.microsoft.com/de-de/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - Solidity ile Ethereum akıllı sözleşmeleri yazın
+- [Microsoft Learn (Ethereum ağları)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) - Ethereum ağlarına bağlanın ve ağları dağıtın
+- [Microsoft Learn (blok zincirler)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) - blok zincir geliştirmeye giriş
 
 ### İtalyanca {#it}
 
-- [Ethereum Italia](https://www.ethereum-italia.it/) - Akıllı sözleşmeler ve blok zinciri teknolojilerine odaklı Ethereum eğitim, organizasyon ve haberleri
-- [Ethereum Italia Podcast](https://www.ethereum-italia.it/podcast/) - İtalyanca Ethereum podcast
+- [Ethereum Italia](https://www.ethereum-italia.it/) - Akıllı sözleşmeler ve blok zincir teknolojilerine odaklı Ethereum eğitim, organizasyon ve haberleri
+- [Ethereum Italia Podcast](https://www.ethereum-italia.it/podcast/) - İtalyanca Ethereum podcast'i
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/it-it/learn/modules/blockchain-learning-solidity/) - Solidity kullanmayı öğrenin
 - [Microsoft Learn (Akıllı sözleşmeler)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - Solidity ile Ethereum akıllı sözleşmeleri yazmayı öğrenin
-- [Microsoft Learn (dApps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - merkeziyetsiz uygulamalarla bir kullanıcı arayüzü oluşturun
+- [Microsoft Learn (dapps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - merkeziyetsiz uygulamalar ile bir kullanıcı arayüzü oluşturun
 
 ### İspanyolca {#es}
 
-- [Ethereum Madrid](https://ethereummadrid.com/) - blok zinciri, DeFi ve yönetişim kursları, etkinlikleri ve blogu
-- [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) - Acemiler için İspanyolca Ethereum rehberi
+- [Ethereum Madrid](https://ethereummadrid.com/) - blok zincir, DeFi ve yönetişim kursları, etkinlikleri ve blogu
+- [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) - Yeni başlayanlar için İspanyolca Ethereum rehberi
 - [Tutoriales online](https://tutoriales.online/curso/solidity) - Solidity ve Ethereum'da programlamayı öğrenin
-- [Curso Introducción a Ethereum Development](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) - Solidity temelleri, ilk akıllı sözleşmenizin test edilmesi ve devreye alınması
+- [Curso Introducción a Ethereum Development](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) - Solidity temelleri, ilk akıllı sözleşmenizin test edilmesi ve dağıtılması
 - [Curso Introducción a Seguridad y Hacking en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) - Gerçek akıllı sözleşmelerdeki yaygın güvenlik açıklarını ve güvenlik sorunlarını öğrenin
 - [Curso Introducción a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - Solidity'de DeFi akıllı sözleşmelerinin nasıl çalıştığını öğrenin ve kendi Otomatik Piyasa Yapıcınızı oluşturun
+- [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) - Başlangıçtan ileri seviyeye kadar teknik olmayan blok zincir eğitimi. Kripto ve Ethereum hakkında her şeyi öğrenin.
 
 ### Türkçe {#tr}
 
-- [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) - blok zinciri ve kripto para odaklı kurs
+- [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) - blok zincir ve kripto para odaklı kurs
 - [Büyük yeniden adlandırma: Eth2'ye ne oldu?](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) - Büyük yeniden adlandırma blog gönderisinin Türkçe çevirisi, "Eth2" terminolojisinden uzaklaşmayı açıklıyor
 
 ### Vietnamca {#vi}
 
-- [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - dApp, Ethereum ve cüzdanlara genel bir bakış
+- [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - Ethereum, dapps, cüzdanlar ve SSS'lere genel bakış
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - Ethereum haberleri ve eğitimi için alt sayfalar içeren bir web platformu
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) - Ethereum haberleri ve eğitimsel içerik içeren bir kripto para portalı
 
 ### Japonca {#ja}
 
-- [Japonya Sanal ve Kripto varlık Takas Birliği](https://jvcea.or.jp/)
-- [Japonya Kriptovarlık İş Birliği](https://cryptocurrency-association.org/)
-- [Blok zinciri geliştirmeye başlayın - Öğren | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - Bu öğrenim yolu, sizi blok zinciri ve Ethereum platformu üzerinde geliştirme ile tanıştırır
-- [Ethereum'da Ustalaşmak](https://www.oreilly.co.jp/books/9784873118963/) - Japonca Ethereum'da Ustalaşmak
+- [Japonya Sanal ve Kripto Varlıklar Borsası Birliği](https://jvcea.or.jp/)
+- [Japonya Kripto Varlık İş Birliği](https://cryptocurrency-association.org/)
+- [Blok zincir geliştirmeye başlayın - Öğren | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - Bu öğrenim yolu, sizi blok zincir ve Ethereum platformu üzerinde geliştirme ile tanıştırır
+- [Ethereum'da Uzmanlaşma](https://www.oreilly.co.jp/books/9784873118963/) - Japonca Ethereum'da Uzmanlaşmak
 - [Solidity ve Ethereum ile Uygulamalı Akıllı Sözleşme Geliştirme](https://www.oreilly.co.jp/books/9784873119342/) - Japonca Solidity ve Ethereum ile Uygulamalı Akıllı Sözleşme Geliştirme

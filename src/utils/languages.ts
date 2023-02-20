@@ -17,6 +17,7 @@ export type Lang =
   | "fi"
   | "fr"
   | "gl"
+  | "gu"
   | "hi"
   | "hr"
   | "hu"
@@ -26,6 +27,7 @@ export type Lang =
   | "ja"
   | "ka"
   | "kk"
+  | "km"
   | "ko"
   | "lt"
   | "ml"
@@ -44,15 +46,17 @@ export type Lang =
   | "sl"
   | "sr"
   | "sw"
+  | "ta"
   | "th"
   | "tr"
   | "uk"
+  | "uz"
   | "vi"
   | "zh"
   | "zh-tw"
 
 export interface Language {
-  code: string
+  code: Lang
   hrefLang: string
   name: string
   localName: string
@@ -68,7 +72,7 @@ export const defaultLanguage: Lang = "en"
 
 // same data as in the `config.json` but indexed by language code
 const languages: Languages = i18nConfigs.reduce((result, config) => {
-  return { ...result, [config.code as Lang]: config }
+  return { ...result, [config.code]: config }
 }, {} as Languages)
 
 const buildLangs = (process.env.GATSBY_BUILD_LANGS || "")

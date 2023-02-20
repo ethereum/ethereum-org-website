@@ -2,7 +2,7 @@
 title: Gouvernance d'Ethereum
 description: Une introduction à la façon dont les décisions concernant Ethereum sont prises.
 lang: fr
-sidebar: true
+postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # Introduction à la gouvernance d'Ethereum {#introduction}
@@ -99,7 +99,7 @@ Il est peu probable que le projet initial d'une EIP soit implémenté sur le ré
 
 ### Consensus de la communauté {#community-consensus}
 
-Bien que certaines EIP soient des améliorations techniques simples avec une nuance minimale, certaines sont plus complexes et intrinsèquement compromise qui affecteront différentes parties prenantes. Cela signifie que certaines EIP finissent par être plus controversées au sein de la communauté que d'autres.
+Bien que certaines EIP soient des améliorations techniques simples offrant une nuance minimale, certaines sont plus complexes que d'autres et s'accompagnent de compromis qui affecteront les différentes parties prenantes de différentes manières. Cela signifie que certaines EIP finissent par être plus controversées au sein de la communauté que d'autres.
 
 Il n'y a pas de livre de lecture clair sur la manière de gérer les propositions litigieuses. Puisque les développeurs de protocoles n'ont aucun moyen de forcer les gens à adopter des mises à jour de réseau, ils éviteront généralement de mettre en œuvre des EIP là où le contentieux l'emporte sur les avantages pour l'ensemble de la communauté.
 
@@ -123,13 +123,13 @@ La fourche DAO est la réponse à l'attaque [DAO de 2016](https://www.coindesk.c
 
 Ce plan d'action a été voté par la communauté Ethereum. Tout détenteur d'ETH a pu voter via une transaction sur [une plateforme de vote](http://v1.carbonvote.com/). Plus de 85 % des votes étaient favorables à la fourche.
 
-Il est important de noter que alors que le protocole a fait un fork pour annuler le hack, le poids du vote lors de la décision de la fourche est discutable pour quelques raisons :
+Il est important de noter qu'alors que le protocole a fait une fourche pour annuler le hack, le poids du vote lors de la décision de la fourche est discutable pour quelques raisons :
 
 - Le taux de participation au vote était incroyablement faible
 - La plupart des gens ne savaient pas que le vote se passait
 - Le vote ne représentait que les détenteurs de ETH, et non aucun des autres participants au système
 
-Un sous-ensemble de la communauté a refusé de se forcer, en grande partie parce qu'ils ont estimé que l'incident de DAO n'était pas un défaut dans le protocole. Ils ont ensuite formé [Ethereum Classic](https://ethereumclassic.org/).
+Un sous-ensemble de la communauté a refusé de suivre la fourche, en grande partie parce qu'ils ont estimé que l'incident de DAO n'était pas un défaut dans le protocole. Ils ont ensuite formé [Ethereum Classic](https://ethereumclassic.org/).
 
 Aujourd'hui, la communauté Ethereum a adopté une politique de non-intervention en cas de bugs de contrat ou de perte de fonds pour maintenir la neutralité crédible du système.
 
@@ -143,7 +143,7 @@ Regardez-en plus sur le piratage DAO :
 
 La fourche Ethereum/Ethereum Classic est un excellent exemple de fourche saine. Nous avons eu deux groupes qui étaient assez en désaccord les uns avec les autres sur certaines valeurs fondamentales pour considérer qu'il valait la peine de prendre les risques que comporte la poursuite de leurs actions spécifiques.
 
-La capacité à faire face à des différences politiques, philosophiques ou économiques significatives joue un rôle important dans le succès de la gouvernance d'Ethereum. Sans la capacité de fork l'alternative était en cours de combat, a forcé une participation réticente pour ceux qui ont finalement formé Ethereum Classic et une vision de plus en plus différente de ce que donne le succès d'Ethereum.
+La capacité à faire face à des différences politiques, philosophiques ou économiques significatives joue un rôle important dans le succès de la gouvernance d'Ethereum. Sans la fourche, il y aurait eu des luttes incessantes, une réticence à participer pour ceux qui ont finalement formé Ethereum Classic et une vision de plus en plus divergente de ce qui ferait le succès d'Ethereum.
 
 <Divider />
 
@@ -153,10 +153,10 @@ Le processus de gouvernance Ethereum négocie souvent la vitesse et l'efficacit�
 
 Bien que le développement des spécifications et des implémentations ait toujours été entièrement open source, les processus formels utilisés pour proposer des mises à jour décrites ci-dessus n'ont pas été utilisés. Cela a permis de préciser les changements et de parvenir plus rapidmement à un accord entre chercheurs et développeurs.
 
-Lorsque la chaîne phare fusionnera avec la couche d'exécution Ethereum, le processus de gouvernance pour proposer des changements sera harmonisé. Ce processus d'implémentation de la fusion est [déjà en cours](https://github.com/ethereum/EIPs/pull/3675).
+Lorsque la chaîne phare fusionnera avec la couche d'exécution Ethereum, le processus de gouvernance pour proposer des changements sera harmonisé. Ce processus d'implémentation de la fusion est [déjà en cours](https://eips.ethereum.org/EIPS/eip-3675).
 
 <ButtonLink to="/upgrades/merge/">
-  Plus d'informations sur la fusion
+  Plus d'infos sur la fusion
 </ButtonLink>
 
 <Divider />

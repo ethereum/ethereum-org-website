@@ -2,7 +2,6 @@
 title: Ether'a giriş
 description: Ether kripto parasına yönelik bir geliştirici tanıtımı.
 lang: tr
-sidebar: true
 ---
 
 ## Ön koşullar {#prerequisites}

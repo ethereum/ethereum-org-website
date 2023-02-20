@@ -1,17 +1,19 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { getImage } from "gatsby-plugin-image"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 import CardList from "./CardList"
 import Link from "./Link"
-import { getLocaleTimestamp } from "../utils/time"
-import { trackCustomEvent } from "../utils/matomo"
-import Emoji from "./Emoji"
+import Emoji from "./OldEmoji"
 import Translation from "./Translation"
 import { StyledSelect as Select } from "./SharedStyledComponents"
+
+import { getLocaleTimestamp } from "../utils/time"
+import { trackCustomEvent } from "../utils/matomo"
 import { translateMessageId } from "../utils/translations"
+import { getImage, ImageDataLike } from "../utils/image"
 import { Lang } from "../utils/languages"
 
 const Container = styled.div`
@@ -152,8 +154,6 @@ type ExchangeName =
   | "coinspot"
   | "cryptocom"
   | "easycrypto"
-  | "ftx"
-  | "ftxus"
   | "gateio"
   | "gemini"
   | "huobiglobal"
@@ -161,8 +161,10 @@ type ExchangeName =
   | "kraken"
   | "kucoin"
   | "mtpelerin"
+  | "moonpay"
   | "okx"
   | "rain"
+  | "shakepay"
   | "wazirx"
 
 type WalletProviderName = "simplex" | "moonpay" | "wyre"
@@ -176,7 +178,7 @@ type ExchangeByCountry = {
 interface Exchange {
   name: string
   url: string
-  image: string
+  image: ImageDataLike | null
   usaExceptions: Array<string>
 }
 
@@ -185,7 +187,7 @@ type Exchanges = Record<ExchangeName, Exchange>
 interface Wallet {
   url: string
   platform: string
-  image: string
+  image: ImageDataLike | null
   isUsaOnly?: boolean
 }
 
@@ -202,7 +204,7 @@ interface FilteredData {
   title: string
   description: string | null
   link: string
-  image: string
+  image: IGatsbyImageData
   alt: string
 }
 
@@ -239,8 +241,6 @@ const EthExchanges = () => {
           country
           cryptocom
           easycrypto
-          ftx
-          ftxus
           gateio
           gemini
           huobiglobal
@@ -251,6 +251,7 @@ const EthExchanges = () => {
           mtpelerin
           okx
           rain
+          shakepay
           simplex
           wazirx
           wyre
@@ -315,12 +316,6 @@ const EthExchanges = () => {
       easycrypto: file(relativePath: { eq: "exchanges/easycrypto.png" }) {
         ...cardListImage
       }
-      ftx: file(relativePath: { eq: "exchanges/ftx.png" }) {
-        ...cardListImage
-      }
-      ftxus: file(relativePath: { eq: "exchanges/ftx.png" }) {
-        ...cardListImage
-      }
       gateio: file(relativePath: { eq: "exchanges/gateio.png" }) {
         ...cardListImage
       }
@@ -342,6 +337,9 @@ const EthExchanges = () => {
       kucoin: file(relativePath: { eq: "exchanges/kucoin.png" }) {
         ...cardListImage
       }
+      moonpay: file(relativePath: { eq: "exchanges/moonpay.png" }) {
+        ...cardListImage
+      }
       mtpelerin: file(relativePath: { eq: "exchanges/mtpelerin.png" }) {
         ...cardListImage
       }
@@ -355,6 +353,9 @@ const EthExchanges = () => {
         ...cardListImage
       }
       rain: file(relativePath: { eq: "exchanges/rain.png" }) {
+        ...cardListImage
+      }
+      shakepay: file(relativePath: { eq: "exchanges/shakepay.png" }) {
         ...cardListImage
       }
       squarelink: file(relativePath: { eq: "wallets/squarelink.png" }) {
@@ -460,18 +461,6 @@ const EthExchanges = () => {
       image: data.easycrypto,
       usaExceptions: [],
     },
-    ftx: {
-      name: "FTX",
-      url: "https://ftx.com/",
-      image: data.ftx,
-      usaExceptions: [],
-    },
-    ftxus: {
-      name: "FTX US",
-      url: "https://ftx.us/",
-      image: data.ftx,
-      usaExceptions: ["NY"],
-    },
     gateio: {
       name: "Gate.io",
       url: "https://www.gate.io/",
@@ -502,6 +491,12 @@ const EthExchanges = () => {
       image: data.kucoin,
       usaExceptions: [],
     },
+    moonpay: {
+      name: "MoonPay",
+      url: "https://www.moonpay.com/",
+      image: data.moonpay,
+      usaExceptions: ["VI"],
+    },
     mtpelerin: {
       name: "Mt Pelerin",
       url: "https://www.mtpelerin.com/",
@@ -524,6 +519,12 @@ const EthExchanges = () => {
       name: "Rain",
       url: "https://rain.bh",
       image: data.rain,
+      usaExceptions: [],
+    },
+    shakepay: {
+      name: "Shakepay",
+      url: "https://shakepay.com",
+      image: data.shakepay,
       usaExceptions: [],
     },
     wazirx: {
@@ -657,7 +658,7 @@ const EthExchanges = () => {
           title: exchanges[exchange].name,
           description,
           link: exchanges[exchange].url,
-          image: getImage(exchanges[exchange].image),
+          image: getImage(exchanges[exchange].image)!,
           alt: "",
         }
       })
@@ -699,7 +700,7 @@ const EthExchanges = () => {
               title: currentWallet,
               description,
               link: walletObject.url,
-              image: getImage(walletObject.image),
+              image: getImage(walletObject.image)!,
               alt: "",
             })
           },

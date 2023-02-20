@@ -1,9 +1,9 @@
 // Libraries
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import { graphql } from "gatsby"
-import { getImage, GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { shuffle } from "lodash"
 
 // Components
@@ -21,13 +21,23 @@ import WalletTable from "../../components/FindWallet/WalletTable"
 import walletData from "../../data/wallets/wallet-data"
 
 // Icons
-import FilterBurger from "../../assets/wallets/filter_burger.svg"
+import { FilterBurgerIcon } from "../../components/icons/wallets"
 
 // Utils
 import { translateMessageId } from "../../utils/translations"
 import { trackCustomEvent } from "../../utils/matomo"
+import { getImage } from "../../utils/image"
+import { useOnClickOutside } from "../../hooks/useOnClickOutside"
 
 // Styles
+const PageStyled = styled(Page)<{ showMobileSidebar: boolean }>`
+  ${({ showMobileSidebar }) =>
+    showMobileSidebar &&
+    `
+    pointer-events: none;
+  `}
+`
+
 const HeroContainer = styled.div`
   position: relative;
   width: 100%;
@@ -138,6 +148,11 @@ const StyledIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.primary};
   width: 24;
   height: 24;
+  pointer-events: none;
+`
+
+const FilterBurgerStyled = styled(FilterBurgerIcon)`
+  pointer-events: none;
 `
 
 const SecondaryText = styled.p`
@@ -158,6 +173,7 @@ const FilterSidebar = styled.div<{ showMobileSidebar: boolean }>`
   z-index: 20;
   border-radius: 0px 8px 0px 0px;
   scrollbar-width: thin;
+  pointer-events: auto;
   scrollbar-color: ${(props) => props.theme.colors.lightBorder}
     ${(props) => props.theme.colors.background};
   ::-webkit-scrollbar {
@@ -345,6 +361,8 @@ const randomizedWalletData = shuffle(walletData)
 
 const FindWalletPage = ({ data, location }) => {
   const intl = useIntl()
+  const resetWalletFilter = React.useRef(() => {})
+  const wrapperRef = useRef<HTMLDivElement>(null)
 
   const [showFeatureFilters, setShowFeatureFilters] = useState(false)
   const [showMobileSidebar, setShowMobileSidebar] = useState(false)
@@ -372,8 +390,10 @@ const FindWalletPage = ({ data, location }) => {
     setFilters(filterDefault)
   }
 
+  useOnClickOutside(wrapperRef, () => setShowMobileSidebar(false), ["mouseup"])
+
   return (
-    <Page>
+    <PageStyled showMobileSidebar={showMobileSidebar}>
       <PageMetadata
         title={translateMessageId("page-find-wallet-meta-title", intl)}
         description={translateMessageId(
@@ -415,7 +435,9 @@ const FindWalletPage = ({ data, location }) => {
           }}
         >
           <div>
-            <p>FILTERS</p>
+            <p>
+              <Translation id="page-find-wallet-filters" />
+            </p>
             <SecondaryText>
               {Object.values(filters).reduce((acc, filter) => {
                 if (filter) {
@@ -423,14 +445,18 @@ const FindWalletPage = ({ data, location }) => {
                 }
                 return acc
               }, 0)}{" "}
-              active
+              {translateMessageId("page-find-wallet-active", intl)}
             </SecondaryText>
           </div>
-          {showMobileSidebar ? <StyledIcon name="cancel" /> : <FilterBurger />}
+          {showMobileSidebar ? (
+            <StyledIcon name="cancel" />
+          ) : (
+            <FilterBurgerStyled />
+          )}
         </MobileFilterToggle>
       </MobileFilterToggleContainer>
       <TableContent>
-        <FilterSidebar showMobileSidebar={showMobileSidebar}>
+        <FilterSidebar showMobileSidebar={showMobileSidebar} ref={wrapperRef}>
           <FilterTabs>
             <FilterTab
               active={!showFeatureFilters}
@@ -443,7 +469,9 @@ const FindWalletPage = ({ data, location }) => {
                 })
               }}
             >
-              <p>Profile Filters</p>
+              <p>
+                <Translation id="page-find-wallet-profile-filters" />
+              </p>
             </FilterTab>
             <FilterTab
               active={showFeatureFilters}
@@ -457,7 +485,7 @@ const FindWalletPage = ({ data, location }) => {
               }}
             >
               <p>
-                Feature Filters (
+                {translateMessageId("page-find-wallet-feature-filters", intl)} (
                 {Object.values(filters).reduce((acc, filter) => {
                   if (filter) {
                     acc += 1
@@ -473,6 +501,7 @@ const FindWalletPage = ({ data, location }) => {
             aria-labelledby="reset-filter"
             onClick={() => {
               resetFilters()
+              resetWalletFilter.current()
               trackCustomEvent({
                 eventCategory: "WalletFilterReset",
                 eventAction: `WalletFilterReset clicked`,
@@ -492,6 +521,7 @@ const FindWalletPage = ({ data, location }) => {
           <div>
             {showFeatureFilters ? (
               <WalletFilterSidebar
+                resetWalletFilter={resetWalletFilter}
                 filters={filters}
                 updateFilterOption={updateFilterOption}
                 updateFilterOptions={updateFilterOptions}
@@ -517,29 +547,21 @@ const FindWalletPage = ({ data, location }) => {
       <Note>
         <p>
           <i>
-            Wallets listed on this page are not official endorsements, and are
-            provided for informational purposes only.{" "}
+            <Translation id="page-find-wallet-footnote-1" />
           </i>
         </p>
         <p>
           <i>
-            Their descriptions have been provided by the wallet projects
-            themselves.{" "}
+            <Translation id="page-find-wallet-footnote-2" />
           </i>
         </p>
         <p>
           <i>
-            We add products to this page based on criteria in our{" "}
-            <Link to="/contributing/adding-products/">listing policy</Link>. If
-            you'd like us to add a wallet,{" "}
-            <Link to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet">
-              raise an issue in GitHub
-            </Link>
-            .
+            <Translation id="page-find-wallet-footnote-3" />
           </i>
         </p>
       </Note>
-    </Page>
+    </PageStyled>
   )
 }
 
@@ -612,7 +634,7 @@ export const query = graphql`
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
-    gnosis: file(relativePath: { eq: "wallets/gnosis.png" }) {
+    safe: file(relativePath: { eq: "wallets/safe.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
@@ -723,6 +745,81 @@ export const query = graphql`
       }
     }
     aktionariat: file(relativePath: { eq: "wallets/aktionariat.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    sequence: file(relativePath: { eq: "wallets/sequence.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    trezor: file(relativePath: { eq: "wallets/trezor.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    ledger: file(relativePath: { eq: "wallets/ledger.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    infinity_wallet: file(relativePath: { eq: "wallets/infinity_wallet.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    exodus: file(relativePath: { eq: "wallets/exodus.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    rabbywallet: file(relativePath: { eq: "wallets/rabbywallet.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    bitcoindotcom: file(relativePath: { eq: "wallets/bitcoindotcom.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    zerion: file(relativePath: { eq: "wallets/zerion.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    enkrypt: file(relativePath: { eq: "wallets/enkrypt.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    gridplus: file(relativePath: { eq: "wallets/gridplus.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    bitkeep: file(relativePath: { eq: "wallets/bitkeep.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    blockwallet: file(relativePath: { eq: "wallets/blockwallet.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    okx: file(relativePath: { eq: "wallets/okx.jpeg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    onekey: file(relativePath: { eq: "wallets/onekey.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    apex: file(relativePath: { eq: "wallets/apex.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }

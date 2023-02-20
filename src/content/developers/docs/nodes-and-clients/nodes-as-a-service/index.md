@@ -2,20 +2,24 @@
 title: Nodes as a service
 description: An entry-level overview of node services, the pros and cons, and popular providers.
 lang: en
-sidebar: true
 sidebarDepth: 2
-preMergeBanner: true
 ---
 
 ## Introduction {#Introduction}
 
 Running your own [Ethereum node](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) can be challenging, especially when getting started or while scaling fast. There are a [number of services](#popular-node-services) that run optimized node infrastructures for you, so you can focus on developing your application or product instead. We'll explain how node services work, the pros and cons for using them and list providers if you are interested in getting started.
 
-**Note: it has been common for users to run consensus clients locally and use a node-as-a-service provider in place of a local execution client. This will not be possible at The Merge - users will be required to run BOTH clients locally. Users relying on node-as-a-service providers for their consensus clients will not merge correctly and will not be able to follow the Ethereum chain. Now is the time to install a local execution client!**
-
 ## Prerequisites {#prerequisites}
 
 If you don't already have an understanding of what nodes and clients are, check out [Nodes and clients](/developers/docs/nodes-and-clients/).
+
+## Stakers {#stakoooooooooooooors}
+
+Solo stakers must run their own infrastructure rather than relying on third-party providers. This means running an execution client coupled with a consensus client. Before [The Merge](/upgrades/merge), it was possible to run a consensus client only and use a centralized provider for execution data; this is no longer possible - a solo staker must run both clients. However, there are services available to ease this process.
+
+[Read more on running a node](/developers/docs/nodes-and-clients/run-a-node/).
+
+The services described on this page are for non-staking nodes.
 
 ## How do node services work? {#how-do-node-services-work}
 
@@ -59,6 +63,19 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Dashboard with Request Explorer, Mempool Watcher, and Composer
     - Integrated testnet faucet access
     - Active Discord builder community with 18k users
+- [**All That Node**](https://allthatnode.com/)
+  - [Docs](https://docs.allthatnode.com/)
+  - Features
+    - Largest free tier with 150,000 requests daily
+    - Access to 24+ blockchain nodes
+    - RPC, HTTPS and WSS endpoints
+    - Unlimited access to archive data
+    - 24/7 support and uptime over 99.9%
+    - Faucet available on multi chains
+    - Unlimited endpoint access with limitless number of API keys
+    - Trace/Debug namespace available
+    - Automated updates
+    - Technical support
 - [**Ankr**](https://www.ankr.com/)
   - [Docs](https://docs.ankr.com/)
   - Features
@@ -71,12 +88,37 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Dashboard
     - RPC, HTTPS and WSS endpoints
     - Direct support
+- [**Blast**](https://blastapi.io/)
+  - [Docs](https://docs.blastapi.io/)
+  - Features
+    - RPC and WSS support
+    - Multi-region node hosting
+    - Decentralized infrastructure
+    - Public API
+    - Dedicated Free Plan
+    - Multichain support (17+ blockchains)
+    - Archive Nodes
+    - 24/7 Discord Support
+    - 24/7 Monitoring and alerts
+    - An overall SLA of 99.9%
+    - Pay in crypto
 - [**BlockDaemon**](https://blockdaemon.com/)
   - [Docs](https://ubiquity.docs.blockdaemon.com/)
   - Benefits
     - Dashboard
     - Per node basis
     - Analytics
+- [**BlockPI**](https://blockpi.io/)
+  - [Docs](https://docs.blockpi.io/)
+  - Fetures
+    - Robust & distributed node structure
+    - Up to 40 HTTPS and WSS endpoints
+    - Free signup package and monthly package
+    - Trace method + Archive data support
+    - Packages up to 90 days validity
+    - Custom plan and pay as you go payment
+    - Pay in crypto
+    - Direct support & Technical support
 - [**Chainstack**](https://chainstack.com/)
   - [Docs](https://docs.chainstack.com/)
   - Features
@@ -163,6 +205,23 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Unique Ethereum SDK
     - Unique API endpoints
     - Direct, technical support
+- [**NodeReal MegaNode**](https://nodereal.io/)
+  - [Docs](https://docs.nodereal.io/nodereal/meganode/introduction)
+  - Features
+    - Reliable, fast and scalable RPC API services
+    - Enhanced API for web3 developers
+    - Multi-chain support
+    - Get started for free
+- [**NOWNodes**](https://nownodes.io/)
+  - [Docs](https://documenter.getpostman.com/view/13630829/TVmFkLwy)
+  - Features
+    - Access to 50+ blockchain nodes
+    - Free API Key
+    - Block Explorers
+    - API Response Time ⩽ 1 sec
+    - 24/7 Support Team
+    - Personal Account Manager
+    - Shared, archive, backup and dedicated nodes
 - [**Pocket Network**](https://www.pokt.network/)
   - [Docs](https://docs.pokt.network/home/)
   - Features
@@ -199,13 +258,16 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Suitable for Developers to Enterprises
 - [**Rivet**](https://rivet.cloud/)
   - [Docs](https://rivet.readthedocs.io/en/latest/)
-  - Features - Free tier option - Scale as you go -[**SenseiNode**](https://senseinode.com)
+  - Features
+    - Free tier option
+    - Scale as you go
+- [**SenseiNode**](https://senseinode.com)
   - [Docs](https://docs.senseinode.com/)
   - Features
-  - Dedicated and Share nodes
-  - Dashboard
-  - Hosting off AWS on multiple hosting providers accross different locations in Latin America
-  - Prysm and Lighthouse clients
+    - Dedicated and Share nodes
+    - Dashboard
+    - Hosting off AWS on multiple hosting providers across different locations in Latin America
+    - Prysm and Lighthouse clients
 - [**SettleMint**](https://console.settlemint.com/)
   - [Docs](https://docs.settlemint.com/)
   - Features
@@ -219,6 +281,20 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Dashboard
     - Pay-per-hour pricing
     - Direct support
+- [**Tenderly**](https://tenderly.co/web3-gateway)
+  - [Docs](https://docs.tenderly.co/web3-gateway/web3-gateway)
+  - Features
+    - Free tier including 25 million Tenderly Units per month
+    - Free access to historical data
+    - Up to 8x faster read-heavy workloads
+    - 100% consistent read access
+    - JSON RPC endpoints
+    - UI-based RPC request builder and request preview
+    - Tightly integrated with Tenderly’s development, debugging, and testing tools
+    - Transaction simulations
+    - Usage analytics and filtering
+    - Easy access key management
+    - Dedicated engineering support via chat, email, and Discord
 - [**Watchdata**](https://watchdata.io/)
   - [Docs](https://docs.watchdata.io/)
   - Features

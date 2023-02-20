@@ -2,7 +2,6 @@
 title: Escalado
 description: Introducción a las diferentes opciones de escalado que desarrolla actualmente la comunidad de Ethereum.
 lang: es
-sidebar: true
 sidebarDepth: 3
 ---
 

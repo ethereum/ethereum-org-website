@@ -2,7 +2,6 @@
 title: Preuve d'enjeu (PoS)
 description: Explication du protocole de consensus « Preuve d'enjeu » et de son rôle dans Ethereum.
 lang: fr
-sidebar: true
 incomplete: true
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Fundația Ethereum & programe de granturi comunitare
 description: O listă a programelor de granturi din tot ecosistemul Ethereum.
-sidebar: true
 lang: ro
 ---
 
@@ -16,7 +15,7 @@ Această listă este întreținută de comunitatea noastră. Dacă lipsește cev
 Aceste programe sprijină ecosistemul Ethereum extins oferind granturi pentru o gamă largă de proiecte. Printre acestea se numără soluțiile pentru scalabilitate, construirea comunității, securitatea, confidențialitatea și multe altele. Aceste granturi nu sunt specifice niciuneia dintre platformele Ethereum și constituie un bun punct de plecare dacă nu sunteți sigur.
 
 - [EF Ecosystem Support Program](https://esp.ethereum.foundation) - _Finanțarea proiectelor open source de care beneficiază Ethereum, vizând în special instrumentele universale, infrastructura, cercetarea și bunurile publice_
-  - [Academic Grants Round](/community/grants/academic-grants-round/) - _The Ethereum Foundation is sponsoring a wave of grants to support academic work related to Ethereum_
+  - [Academic Grants Round](https://esp.ethereum.foundation/academic-grants) - _The Ethereum Foundation is sponsoring a wave of grants to support academic work related to Ethereum_
 - [Ethereum RFPs](https://github.com/ethereum/requests-for-proposals) - _Cereri de propuneri ale Fundației Ethereum pentru lucrări și proiecte în ecosistemul Ethereum_
 - [MetaCartel](https://www.metacartel.org/grants/) - _Dezvoltarea de aplicații dapp, crearea de organizații DAO_  
   Subvenții între 1.000 - 8.000 USD.
@@ -29,11 +28,10 @@ Aceste programe sprijină ecosistemul Ethereum extins oferind granturi pentru o 
 Aceste proiecte și-au creat propriile granturi pentru proiecte care vizează dezvoltarea și experimentarea propriei tehnologii.
 
 - [Aave Grants Program](https://aavegrants.org/) – _[Aave](https://aave.com/) grants DAO_
-- [Balancer](https://forms.gle/c68e4fM7JHCQkPkN7) – _[Balancer](https://balancer.fi/) ecosystem fund_
+- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/) ecosystem fund_
 - [Compound Grants Program](https://compoundgrants.org/) – _[Compound](https://compound.finance/) finance ecosystem_
-- [Consensys Grants Program](https://consensys.net/grants/) – _[Consensys](https://consensys.net/) blockchain funding & Ethereum grants_
-- [dYdX Grants Program](https://dydxgrants.com/) – _[dYdX](https://dydx.exchange/) decentralized exchange_
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/) finance ecosystem_
+- [MetaMask Program](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) employee-led grants DAO_
 - [mStable Grants Program](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) community_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) ecosystem_
 - [Uniswap Grants Program](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/) community_

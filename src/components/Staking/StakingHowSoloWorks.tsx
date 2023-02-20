@@ -1,21 +1,12 @@
 import React from "react"
-import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import OrderedList from "../OrderedList"
 import Translation from "../Translation"
 
-const Flex = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex-direction: column;
-  }
-`
-
-const Image = styled(GatsbyImage)``
+import { getImage } from "../../utils/image"
+import { Center, Image } from "@chakra-ui/react"
 
 export interface IProps {}
 
@@ -54,10 +45,13 @@ const StakingHowSoloWorks: React.FC<IProps> = () => {
   ]
 
   return (
-    <Flex>
+    <Center
+      flexDirection={{ base: "column", md: "row" }}
+      justifyContent="space-between"
+    >
       <OrderedList listData={items} />
-      <Image image={getImage(image)} />
-    </Flex>
+      <Image as={GatsbyImage} image={getImage(image)!} alt="" />
+    </Center>
   )
 }
 

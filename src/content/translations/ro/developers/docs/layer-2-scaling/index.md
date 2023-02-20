@@ -2,7 +2,6 @@
 title: Scalare Nivel 2
 description: Prezentarea diferitelor opțiuni de scalare care sunt dezvoltate în prezent de comunitatea Ethereum.
 lang: ro
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 isOutdated: true
@@ -159,7 +158,7 @@ Canal de stare tic tac toe:
 
 ## Plasma {#plasma}
 
-Un lanț „plasma” este un blockchain separat care este ancorat pe lanțul principal Ethereum și utilizează dovezi de fraudă (cum ar fi rollup-urile [Optimisic](#optimistic-rollups)) pentru a arbitra disputele.
+Un lanț „plasma” este un blockchain separat care este ancorat pe lanțul principal Ethereum și utilizează dovezi de fraudă (cum ar fi rollup-urile [Optimistic](#optimistic-rollups)) pentru a arbitra disputele.
 
 | Avantaje                                                                                                                                                             | Dezavantaje                                                                                                                                                                                        |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -2,7 +2,6 @@
 title: Razvojni standardi Ethereum
 description:
 lang: sl
-sidebar: true
 incomplete: true
 ---
 

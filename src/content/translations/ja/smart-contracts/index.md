@@ -2,12 +2,11 @@
 title: スマートコントラクト
 description: スマートコントラクトの紹介(非テクニカル面)
 lang: ja
-sidebar: true
 ---
 
 # スマートコントラクト入門 {#introduction-to-smart-contracts}
 
-スマートコントラクトは、[イーサリアムアプリケーション](/dapps/) の基本的な構成要素です。 これらは、従来の契約をデジタルに変換できる、ブロックチェーンに保存されたコンピュータープログラムです。 スマートコントラクトは非常に論理的で、イフト(IF This Then That:もし「これ」ならば、「あれ」をする)の構造に従っています。 また、プログラムされた通りに正確に動作し、変更できません。
+スマートコントラクトは、[イーサリアムアプリケーション](/dapps/) の基本的な構成要素です。 これらは、従来の契約をデジタルに変換できる、ブロックチェーンに保存されたコンピュータプログラムです。 スマートコントラクトは非常に論理的で、イフト(IF This Then That:もし「これ」ならば、「あれ」をする)の構造に従っています。 また、プログラムされた通りに正確に動作し、変更できません。
 
 Nick Szabo は「スマートコントラクト」という用語を作りました。 1994 年、彼は[概念の紹介](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html)を書き、1996 年には[スマートコントラクトの可能性の探求](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html)を執筆しました。
 
@@ -31,7 +30,7 @@ Nick Szabo は、自動的で暗号的に安全なプロセスに基づいて構
 
 ## スマートコントラクト {#smart-contracts}
 
-スマートコントラクトは、契約条件が満たされたときに自動的に実行するコンピューターコードに契約をデジタル化します。
+スマートコントラクトは、契約条件が満たされたときに自動的に実行するコンピュータコードに契約をデジタル化します。
 
 ### デジタル自動販売機 {#vending-machine}
 
@@ -69,13 +68,13 @@ Nick Szabo は、自動的で暗号的に安全なプロセスに基づいて構
 
 ## スマートコントラクトのユースケース {#use-cases}
 
-スマートコントラクトはブロックチェーン上にあるコンピュータープログラムです。 自動的に実行されます。 トランザクションを追跡し、それらの動きを予測し、匿名で使用することもできます。 素晴らしいですよね。 しかし、スマートコントラクトを何に使えるのでしょうか。 スマートコントラクトは、基本的に他のコンピュータープログラムと同じように何でも実行することができます。
+スマートコントラクトはブロックチェーン上にあるコンピュータプログラムです。 自動的に実行されます。 トランザクションを追跡し、それらの動きを予測し、匿名で使用することもできます。 素晴らしいですよね。 しかし、スマートコントラクトを何に使えるのでしょうか。 スマートコントラクトは、基本的に他のコンピュータプログラムと同じように何でも実行することができます。
 
 計算を実行し、通貨を作成し、データを保存し、NFT をミントし、通信を送信し、画像を生成することさえできます。 以下に、よく使われているスマートコントラクトの実例を示します。
 
 - [ステーブルコイン](/stablecoins/)
 - [唯一無二なデジタルアセットの作成と配布](/nft/)
-- [自動で開かれた為替](/get-eth/#dex/)
+- [自動で開かれた為替](/get-eth/#dex)
 - [分散型ゲーム](/dapps/?category=gaming)
 - [自動的に支払いを行う保険契約](https://etherisc.com/)
 - [カスタマイズされ、相互運用可能な通貨を作成するための標準](/developers/docs/standards/tokens/)
@@ -86,10 +85,10 @@ Finematics によるスマートコントラクトの説明:
 
 <YouTube id="pWGLtjG-F5c" />
 
-## さらに学びたい方へ {#further-reading}
+## 参考文献 {#further-reading}
 
 - [スマートコントラクトが世界をどのように変えるか](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
 - [スマートコントラクト: 弁護士を不要にするブロックチェーンテクノロジー](https://blockgeeks.com/guides/smart-contracts/)
-- [開発者向けスマートコントラクト](/developers/docs/smart-contracts/)
+- [デベロッパー向けスマートコントラクト](/developers/docs/smart-contracts/)
 - [スマートコントラクトの作成方法を学ぶ](/developers/learning-tools/)
 - [イーサリアムをマスター - スマートコントラクトとは](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract)

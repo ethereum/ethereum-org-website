@@ -2,7 +2,6 @@
 title: Häufig gestellte Fragen zum Übersetzungsprogramm (FAQ)
 lang: de
 description: Häufig gestellte Fragen zum Übersetzungprogramm von ethereum.org
-sidebar: true
 ---
 
 # Übersetzungsanleitung für ethereum.org {#translating-ethereum-guide}

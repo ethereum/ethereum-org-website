@@ -2,7 +2,6 @@
 title: Rollup Lapisan 2
 description: Pengantar untuk berbagai solusi penskalaan rollup lapisan 2 yang saat ini sedang dikembangkan oleh komunitas Ethereum.
 lang: id
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---

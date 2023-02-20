@@ -2,7 +2,6 @@
 title: JavaScript-API-Bibliotheken
 description: Eine Einführung in die JavaScript-Client-Bibliotheken, über die Sie von Ihrer Anwendung aus mit der Blockchain interagieren können.
 lang: de
-sidebar: true
 ---
 
 Damit eine Web-Anwendung mit der Ethereum-Blockchain interagieren kann (z. B. Auslesen von Blockchain-Daten und/oder Senden von Transaktionen an das Netzwerk), muss sie sich mit einem Ethereum-Node verbinden.
@@ -267,7 +266,7 @@ ethers.utils.formatEther(balance)
 
 **Alchemyweb3 –** **_Wrapper um Web3.js mit automatischen Wiederholungen und erweiterten APIs_**
 
-- [Dokumentation](https://docs.alchemyapi.io/documentation/alchemy-web3)
+- [Dokumentation](https://docs.alchemy.com/reference/api-overview)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
 **Alchemy NFT API –** **_API für den Abruf von NFT-Daten, einschließlich Eigentumsrechten, Metadatenattributen und mehr_**

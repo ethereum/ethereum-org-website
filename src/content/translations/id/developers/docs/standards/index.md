@@ -2,7 +2,6 @@
 title: Standar Pengembangan Ethereum
 description:
 lang: id
-sidebar: true
 incomplete: true
 ---
 

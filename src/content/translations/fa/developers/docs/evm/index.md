@@ -2,7 +2,6 @@
 title: ماشین مجازی اتریوم (EVM)
 description: مقدمه‌ای بر ماشین مجازی اتریوم و نحوه ارتباط آن با حالات متناهی، تراکنش‌ها و قراردادهای هوشمند.
 lang: fa
-sidebar: true
 ---
 
 نمونه‌سازی فیزیکی EVM را نمی‌توان مانند اشاره کردن به یک ابر یا یک موج اقیانوس توصیف کرد، اما به‌عنوان یک موجودیت واحد _وجود دارد_ که توسط هزاران رایانه متصل که یک کلاینت اتریوم را اجرا می‌کنند نگهداری می‌شود.
@@ -65,8 +64,6 @@ EVM به صورت یک [ماشین پشته‌ای](https://wikipedia.org/wiki/S
 - [evmone](https://github.com/ethereum/evmone) - _سی‌پلاس‌پلاس_
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _جاوا اسکریپت_
 - [eEVM](https://github.com/microsoft/eevm) - _سی‌پلاس‌پلاس_
-- [Hyperledger Burrow](https://github.com/hyperledger/burrow) - _گو_
-- [hevm](https://github.com/dapphub/dapptools/tree/master/src/hevm) - _هسکل_
 
 ## اطلاعات بیشتر {#further-reading}
 

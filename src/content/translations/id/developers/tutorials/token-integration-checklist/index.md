@@ -3,7 +3,6 @@ title: Daftar periksa integrasi token
 description: Daftar periksa hal-hal yang perlu diperhatikan saat berinteraksi dengan token
 author: "Trailofbits"
 lang: id
-sidebar: true
 tags:
   - "solidity"
   - "kontrak pintar"

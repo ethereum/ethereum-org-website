@@ -2,7 +2,6 @@
 title: Canalele de stare
 description: Introducere despre canalele de stare și canalele de plată ca soluție de scalare utilizată actualmente de comunitatea Ethereum.
 lang: ro
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---

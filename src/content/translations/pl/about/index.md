@@ -2,7 +2,6 @@
 title: O nas
 description: O zespole, społeczności i misji ethereum.org
 lang: pl
-sidebar: true
 ---
 
 # O ethereum.org {#about-ethereumorg}
@@ -53,7 +52,3 @@ Używamy zasad projektowania by kierować naszymi treściami i decyzjami projekt
 Z zadowoleniem przyjmujemy opinie na ich temat. Pamiętaj, strona ethereum.org jest tworzona dla społeczności przez społeczność.
 
 Jeśli chcesz [współtworzyć stronę](/contributing/) upewnij się, że zapoznałeś się z zasadami.
-
-## Plan działania {#roadmap}
-
-<Roadmap />

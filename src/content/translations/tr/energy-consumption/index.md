@@ -2,7 +2,6 @@
 title: Ethereum Enerji Tüketimi
 description: Ethereum'un enerji tüketimini anlamak için ihtiyacınız olan temel bilgiler.
 lang: tr
-sidebar: true
 ---
 
 # Ethereum enerji tüketimi {#introduction}

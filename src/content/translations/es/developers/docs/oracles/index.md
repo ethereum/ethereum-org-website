@@ -2,7 +2,6 @@
 title: Oráculos
 description: Los oráculos ayudan a proporcionar datos del mundo real a tu aplicación de Ethereum, ya que los contratos inteligentes, por sí solos, no pueden consultar información del mundo real.
 lang: es
-sidebar: true
 incomplete: true
 ---
 

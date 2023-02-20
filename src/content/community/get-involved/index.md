@@ -1,7 +1,6 @@
 ---
 title: How can I get involved?
 description: How to get involved in the Ethereum community.
-sidebar: true
 lang: en
 ---
 
@@ -18,6 +17,7 @@ The Ethereum community includes people of many different backgrounds and skillse
 - Watch or participate in the [Core Dev calls](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - tooling, documentation, and infrastructure areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
 - [Web3Bridge](https://www.web3bridge.com/) - join the aspiring web3 community in their initiative to identify, train, and support hundreds of developers and community members throughout Africa
+- Join the [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders)
 
 ## Researchers & Academics <Emoji text=":mag:" size={1} />‍ {#researchers-and-academics}
 
@@ -25,6 +25,7 @@ Do you have a background in mathematics, cryptography, or economics? You might b
 
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) - a series of high-value research bounties, where you can earn >$100,000 USD
 - [Ethresear.ch](https://ethresear.ch) - Ethereum’s primary forum for research, and the world’s most influential forum for cryptoeconomics
+- [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - An ongoing Q&A series with researchers. As each next part opens, anyone can post questions.
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - research areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
 
 [Explore more active areas of research](/community/research/).
@@ -40,7 +41,7 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 ### Write content about Ethereum {#write-content}
 
 - Ethereum needs good writers who can explain its value in plain language
-- Not ready to publish your own articles? Consider contributing to the existing content on community resources like [EthHub](https://docs.ethhub.io/), or propose new content for ethereum.org!
+- Not ready to publish your own articles? Consider contributing to the existing content on community resources, or [propose new content for ethereum.org](/contributing/)!
 
 ### Offer to take notes for community calls {#take-notes}
 
@@ -72,7 +73,7 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 
 ## Financial professionals & Accountants <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}
 
-- Ethereum is home to the “Decentralized Finance” ecosystem - a network of protocols and applications that offer an alternative financial system. If you’re a financial professional, check out some DeFi apps at [DeFi Pulse](https://defipulse.com/) or [DeFiPrime](https://defiprime.com)
+- Ethereum is home to the “Decentralized Finance” ecosystem - a network of protocols and applications that offer an alternative financial system. If you’re a financial professional, check out some DeFi apps at [DeFi Llama](https://defillama.com/) or [DeFiPrime](https://defiprime.com)
 - Accountant? Assets on Ethereum - ETH, tokens, DeFi, etc - introduce many novel accounting issues. You could start by checking out some projects that aim to help users of cryptocurrency solve their bookkeeping & accounting challenges, like [Rotki](https://rotki.com/)
 
 ## Product Managers <Emoji text=":fountain_pen:" size={1} />‍ {#product-managers}
@@ -98,6 +99,9 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 - [useWeb3 Jobs](https://www.useweb3.xyz/jobs)
 - [Web3 Jobs](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
+- [Crypto Valley Jobs](https://cryptovalley.jobs/)
+- [Ethereum Jobs](https://startup.jobs/ethereum-jobs)
+- [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## Join a DAO {#decentralized-autonomous-organizations-daos}
 

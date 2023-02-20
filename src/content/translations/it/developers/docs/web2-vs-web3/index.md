@@ -2,35 +2,36 @@
 title: Web2 e Web3
 description:
 lang: it
-sidebar: true
 ---
 
 Web2 si riferisce alla versione di Internet che la maggior parte di noi conosce attualmente. Una rete dominata da aziende che offrono servizi in cambio dei dati personali. Il Web3, nel contesto di Ethereum, si riferisce alle app decentralizzate che vengono eseguite sulla blockchain. Queste app consentono a chiunque di partecipare senza monetizzare i propri dati personali.
 
+Stai cercando una risorsa più adatta ai principianti? Visualizza la nostra [introduzione al web3](/web3/).
+
 ## Vantaggi del Web3 {#web3-benefits}
 
-Molti sviluppatori Web3 hanno deciso di sviluppare dapp per via delle decentralizzazione intrinseca di Ethereum:
+Molti sviluppatori Web3 hanno deciso di sviluppare dApp per via della decentralizzazione intrinseca di Ethereum:
 
 - Chiunque sia in rete ha il permesso di utilizzare il servizio. In altre parole, non serve chiedere un permesso.
 - Nessuno può bloccare un utente o impedirgli l'accesso al servizio.
 - I pagamenti sono incorporati tramite il token nativo, ether (ETH).
-- Ethereum è Turing completa, significa che puoi programmare praticamente qualsiasi cosa.
+- Ethereum è Turing completa, a significare che puoi programmare praticamente qualsiasi cosa.
 
 ## Confronti pratici {#practical-comparisons}
 
 | Web2                                                                                                                           | Web3                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Twitter può censurare qualsiasi account o tweet                                                                                | I tweet Web3 sarebbero incensurabili perché il controllo è decentralizzato                                                                                              |
+| Twitter può censurare qualsiasi conto o tweet                                                                                  | I tweet Web3 sarebbero incensurabili perché il controllo è decentralizzato                                                                                              |
 | Il servizio di pagamento potrebbe decidere di non consentire determinati tipi di lavoro                                        | Le app di pagamento Web3 non richiedono dati personali e non possono impedire pagamenti                                                                                 |
 | I server delle app della gig-economy potrebbero non essere disponibili temporaneamente e influenzare il reddito dei lavoratori | Su Web3 non si può verificare una situazione di non disponibilità dei server: usano Ethereum, una rete decentralizzata con migliaia di computer che agiscono da backend |
 
-Questo non significa che tutti i servizi debbano essere trasformati in dapp. Questi esempi mostrano le maggiori differenze tra i servizi web2 e web3.
+Questo non significa che tutti i servizi debbano essere trasformati in dApp. Questi esempi sono illustrativi delle differenze principali tra i servizi web2 e web3.
 
 ## Limitazioni del Web3 {#web3-limitations}
 
-Al momento, il Web3 ha alcune limitazioni:
+Al momento, il Web3 presenta alcune limitazioni:
 
-- Scalabilità - Le transazioni sono più lente sul web3 perché sono decentralizzate. Cambiamenti dello stato, come i pagamenti, devono essere elaborati da un miner e propagati a tutta la rete.
+- Scalabilità - Le transazioni sono più lente sul web3 perché sono decentralizzate. Le modifiche allo stato, come un pagamento, devono esser elaborate da un nodo e propagate per la rete.
 - UX - L'interazione con applicazioni web3 può richiedere passaggi, software e formazione aggiuntivi. Questo può essere un ostacolo all'adozione.
 - Accessibilità: la mancanza di integrazione nei browser web moderni rende web3 meno accessibile a gran parte degli utenti.
 - Costo - Per via del costo elevato, le dapp di maggior successo mettono porzioni piccole del loro codice sulla blockchain.
@@ -49,11 +50,13 @@ Nella tabella seguente elenchiamo alcuni dei vantaggi e degli svantaggi delle re
 | L'autorità centrale può censurare dati, escludendo potenzialmente parti della rete dall'interazione con il resto della rete.                                                                                                                   | La censura è molto più difficile perché le informazioni hanno molti modi per diffondersi attraverso la rete.                                                                                                                                                            |
 | La partecipazione alla rete è controllata dall'autorità centrale.                                                                                                                                                                              | Chiunque può partecipare alla rete, non ci sono "guardiani". Idealmente, il costo per la partecipazione è molto basso.                                                                                                                                                  |
 
-Tieni presente che questi sono schemi generali, che potrebbero non essere validi per ogni rete. Oltre a questo, in realtà il grado a cui una rete si può definire decentralizzata o centralizzata non è facile da definire; nessuna rete è totalmente centralizzata o decentralizzata.
+Tieni presente che questi sono schemi generali, che potrebbero non essere validi per ogni rete. Oltre a questo, in realtà il grado a cui una rete può essere considerata decentralizzata o centralizzata non è facile da definire; nessuna rete è totalmente centralizzata o decentralizzata.
 
 ## Letture consigliate {#further-reading}
 
+- [What is Web3?](/web3/) - _ethereum.org_
 - [L'Architettura di un'applicazione Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 - [The Meaning of Decentralization](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274) _6 febbraio 2017 - Vitalik Buterin_
 - [Why Decentralization Matters](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _18 febbraio 2018 - Chris Dixon_
-- [What Is Web 3.0 & Why It Matters](https://medium.com/fabric-ventures/what-is-web-3-0-why-it-matters-934eb07f3d2b) _Dec 31, 2019 - Max Mersch e Richard Muirhead_
+- [What Is Web 3.0 & Why It Matters](https://medium.com/fabric-ventures/what-is-web-3-0-why-it-matters-934eb07f3d2b) _31 dicembre 2019 - Max Mersch e Richard Muirhead_
+- [Perché Abbiamo Bisogno di Web 3.0](https://medium.com/@gavofyork/why-we-need-web-3-0-5da4f2bf95ab) _12 Set 2018 - Gavin Wood_

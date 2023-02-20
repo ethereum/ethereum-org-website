@@ -3,7 +3,6 @@ title: Főhálózat dokkolása az Eth2-vel
 description: Tudj meg többet a dokkolásról - amikor a főhálózati Ethereum csatlakozik a Beacon Chain által koordinált proof-of-stake rendszerhez.
 lang: hu
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: Végül a jelenlegi Ethereum főhálózat "dokkolni" fog a többi Eth2 fejlesztéssel együtt.
 summaryPoint2: A dokkolás egyesíti az "Eth1" főhálózatot a Beacon Chainnel és a sharding rendszerrel.

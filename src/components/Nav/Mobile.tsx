@@ -1,9 +1,9 @@
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 import { motion } from "framer-motion"
 
-import Emoji from "../Emoji"
+import Emoji from "../OldEmoji"
 import Icon from "../Icon"
 import Link from "../Link"
 import NakedButton from "../NakedButton"
@@ -224,6 +224,7 @@ const BottomLink = styled(Link)`
     fill: ${(props) => props.theme.colors.text};
   }
   &:hover {
+    text-decoration: none;
     color: ${(props) => props.theme.colors.primary};
     & > svg {
       fill: ${(props) => props.theme.colors.primary};
@@ -268,6 +269,7 @@ export interface IProps {
   toggleMenu: (item?: "search" | "menu") => void
   toggleTheme: () => void
   linkSections: ISections
+  fromPageParameter: string
 }
 
 const MobileNavMenu: React.FC<IProps> = ({
@@ -277,6 +279,7 @@ const MobileNavMenu: React.FC<IProps> = ({
   toggleMenu,
   toggleTheme,
   linkSections,
+  fromPageParameter,
 }) => {
   const intl = useIntl()
 
@@ -390,7 +393,7 @@ const MobileNavMenu: React.FC<IProps> = ({
           </BottomItemText>
         </BottomItem>
         <BottomItem onClick={handleClick}>
-          <BottomLink to="/languages/">
+          <BottomLink to={`/languages/${fromPageParameter}`}>
             <MenuIcon name="language" />
             <BottomItemText>
               <Translation id="languages" />

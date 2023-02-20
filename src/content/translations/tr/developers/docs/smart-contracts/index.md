@@ -2,7 +2,6 @@
 title: Akıllı sözleşmelere giriş
 description: Akıllı sözleşmelerin benzersiz özelliklerine ve kısıtlamalarına odaklanan genel bir bakış.
 lang: tr
-sidebar: true
 ---
 
 ## Akıllı sözleşme nedir? {#what-is-a-smart-contract}

@@ -2,11 +2,9 @@
 title: Getting Started with Ethereum Development
 description: "This is a beginner's guide to getting started with Ethereum development. We’ll take you from spinning up an API endpoint, to making a command line request, to writing your first web3 script! No blockchain development experience necessary!"
 author: "Elan Halpern"
-tags:
-  ["getting started", "javascript", "ethers.js", "nodes", "querying", "alchemy"]
+tags: ["javascript", "ethers.js", "nodes", "querying", "alchemy"]
 skill: beginner
 lang: en
-sidebar: true
 published: 2020-10-30
 source: Medium
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
@@ -20,7 +18,7 @@ We’ll take you from signing up with Alchemy to writing your first web3 script!
 
 ## 1. Sign Up for a Free Alchemy Account {#sign-up-for-a-free-alchemy-account}
 
-Creating an account with Alchemy is easy, [sign up for free here](https://dashboard.alchemyapi.io/signup/).
+Creating an account with Alchemy is easy, [sign up for free here](https://auth.alchemyapi.io/signup).
 
 ## 2. Create an Alchemy App {#create-an-alchemy-app}
 
@@ -74,7 +72,7 @@ _**NOTE:** Replace [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainn
 
 **_NOTE:_** The scripts below need to be run in a **node context** or **saved in a file**, not run from the command line. If you don’t already have Node or npm installed, check out this quick [set-up guide for macs](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs).
 
-There are tons of [Web3 libraries](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) you can integrate with Alchemy, however, we recommend using [Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3), a drop-in replacement for web3.js, built and configured to work seamlessly with Alchemy. This provides multiple advantages such as automatic retries and robust WebSocket support.
+There are tons of [Web3 libraries](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) you can integrate with Alchemy, however, we recommend using [Alchemy Web3](https://docs.alchemy.com/reference/api-overview), a drop-in replacement for web3.js, built and configured to work seamlessly with Alchemy. This provides multiple advantages such as automatic retries and robust WebSocket support.
 
 To install AlchemyWeb3.js, **navigate to your project directory** and run:
 
@@ -148,4 +146,4 @@ The latest block number is 11043912
 
 Not sure what to do next? Try deploying your first smart contract and get your hands dirty with some solidity programming in our [Hello World Smart Contract Guide](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract), or test your dashboard knowledge with the [Dashboard Demo App](https://docs.alchemyapi.io/tutorials/demo-app)!
 
-_[Sign up with Alchemy for free](https://dashboard.alchemyapi.io/signup/), check out our [documentation](https://docs.alchemyapi.io/), and for the latest news, follow us on [Twitter](https://twitter.com/AlchemyPlatform)_.
+_[Sign up with Alchemy for free](https://auth.alchemyapi.io/signup), check out our [documentation](https://docs.alchemyapi.io/), and for the latest news, follow us on [Twitter](https://twitter.com/AlchemyPlatform)_.

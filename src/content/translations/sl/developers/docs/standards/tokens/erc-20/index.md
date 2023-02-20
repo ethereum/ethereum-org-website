@@ -2,7 +2,6 @@
 title: Standard za žetone ERC-20
 description:
 lang: sl
-sidebar: true
 ---
 
 ## Uvod {#introduction}
@@ -75,8 +74,8 @@ Oglejmo si, zakaj je standard tako pomemben za to, da poenostavi pregled katerek
 
 Najprej se prepričajte, da ste namestili knjižnico [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python:
 
-```
-$ pip install web3
+```bash
+pip install web3
 ```
 
 ```python

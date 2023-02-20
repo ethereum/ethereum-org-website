@@ -2,7 +2,6 @@
 title: Introduction to blockchain bridges
 description: Bridges allow users to move their funds across different blockchains
 lang: en
-sidebar: true
 ---
 
 # Blockchain bridges {#prerequisites}
@@ -35,6 +34,8 @@ Bridges enable:
 - dapps to access the strengths of various blockchains – thus enhancing their capabilities (as protocols now have more design space for innovation).
 - users to access new platforms and leverage the benefits of different chains.
 - developers from different blockchain ecosystems to collaborate and build new platforms for the users.
+
+[How to bridge tokens to layer 2](/guides/how-to-use-a-bridge/)
 
 <Divider />
 
@@ -114,15 +115,19 @@ User's funds are at risk if:
 - the bridge operators have malicious intent in a trusted bridge
 - the bridge gets hacked
 
-One recent hack was Solana’s Wormhole bridge, [where 120k wETH ($325 million USD) was stolen during the hack](https://rekt.news/wormhole-rekt/).
+One recent hack was Solana’s Wormhole bridge, [where 120k wETH ($325 million USD) was stolen during the hack](https://rekt.news/wormhole-rekt/). Many of the [top hacks in blockchains involved bridges](https://rekt.news/leaderboard/).
 
-Bridges are crucial to onboarding users onto Ethereum L2s, and even for users who want to explore different ecosystems. However, given the risks involved in interacting with bridges, users must understand the trade-offs the bridges are making.
+Bridges are crucial to onboarding users onto Ethereum L2s, and even for users who want to explore different ecosystems. However, given the risks involved in interacting with bridges, users must understand the trade-offs the bridges are making. These are some [strategies for cross-chain security](https://blog.debridge.finance/10-strategies-for-cross-chain-security-8ed5f5879946).
 
 <Divider />
 
 ## Further reading {#further-reading}
 
+- [EIP-5164: Cross-Chain Execution](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _June 18, 2022 - Brendan Asselstine_
+- [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _July 5, 2022 - Bartek Kiepuszewski_
+- ["Why the future will be multi-chain, but it will not be cross-chain."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _January 8, 2022 - Vitalik Buterin_
 - [What Are Blockchain Bridges And How Can We Classify Them?](https://blog.li.finance/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa) _Feb 18, 2021 - Arjun Chand_
+- [What Are Cross-Chain Bridges?](https://www.alchemy.com/overviews/cross-chain-bridges) _May 10, 2022 - Alchemy_
 - [Blockchain Bridges: Building Networks of Cryptonetworks](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) _Sep 8, 2021 - Dmitriy Berenzon_
 - [Bridges in Crypto-Space](https://medium.com/chainsafe-systems/bridges-in-crypto-space-12e158f5fd1e) _Aug 23, 2021 - Ben Adar Hyman_
 - [The Interoperability Trilemma](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17) _Oct 1, 2021 - Arjun Bhuptani_

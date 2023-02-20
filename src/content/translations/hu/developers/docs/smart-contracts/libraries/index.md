@@ -2,7 +2,6 @@
 title: Okosszerződés könyvtárak
 description:
 lang: hu
-sidebar: true
 ---
 
 Nem kell minden okosszerződést a nulláról megírni. Számos nyílt forráskódú okosszerződés könyvtár áll rendelkezésedre, amelyek újrafelhasználható építőelemeket kínálnak a projektedhez, így megkímélnek attól, hogy újra fel kelljen találni a kereket.

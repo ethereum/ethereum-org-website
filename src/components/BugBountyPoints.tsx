@@ -1,73 +1,17 @@
-import React, { useContext, useState, useEffect } from "react"
-import { ThemeContext } from "styled-components"
+import React, { useState, useEffect } from "react"
+import { useTheme } from "@emotion/react"
 import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import styled from "styled-components"
+import { GatsbyImage } from "gatsby-plugin-image"
 import axios from "axios"
 
 import Emoji from "./Emoji"
 import Translation from "./Translation"
-import Icon from "./Icon"
 import Link from "./Link"
 import Tooltip from "./Tooltip"
 
-const PointsExchange = styled.div`
-  flex: 1 1 560px;
-  padding: 1.5rem;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  border-radius: 2px;
-  margin: 0 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 2rem 0;
-  }
-`
-
-const PointsExchangeLabel = styled.div`
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  margin-bottom: 1rem;
-`
-
-const PointsExchangeTitle = styled.h2`
-  font-family: ${(props) => props.theme.fonts.monospace};
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-top: 0rem;
-`
-
-const InfoIcon = styled(Icon)`
-  margin-left: 0.5rem;
-  fill: ${(props) => props.theme.colors.text200};
-`
-
-const TextNoMargin = styled.p`
-  margin-bottom: 0rem;
-`
-
-const Token = styled(GatsbyImage)`
-  margin-right: 0.5rem;
-`
-
-const TokenValue = styled.p`
-  font-size: 1.25rem;
-  margin: 0rem;
-  margin-right: 1rem;
-`
-
-const Row = styled.div`
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-`
-
-const ValueRow = styled(Row)`
-  margin-bottom: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`
+import { getImage } from "../utils/image"
+import { Box, Flex, Heading, Icon, Text } from "@chakra-ui/react"
+import { MdInfoOutline } from "react-icons/md"
 
 export const TokenLogo = graphql`
   fragment TokenLogo on File {
@@ -103,8 +47,8 @@ const BugBountyPoints: React.FC<IProps> = () => {
     currentDAIPriceUSD: 1,
     hasError: false,
   })
-  const themeContext = useContext(ThemeContext)
-  const isDarkTheme = themeContext.isDark
+  const theme = useTheme()
+  const isDarkTheme = theme.isDark
 
   useEffect(() => {
     axios
@@ -141,10 +85,10 @@ const BugBountyPoints: React.FC<IProps> = () => {
     : 0
 
   const tooltipContent = (
-    <div>
+    <Box>
       <Translation id="data-provided-by" />{" "}
       <Link to="https://www.coingecko.com/en/api">coingecko.com</Link>
-    </div>
+    </Box>
   )
 
   const data = useStaticQuery(graphql`
@@ -163,57 +107,100 @@ const BugBountyPoints: React.FC<IProps> = () => {
   const ethImage = isDarkTheme ? data.ethDark : data.ethLight
 
   return (
-    <PointsExchange>
-      <PointsExchangeLabel>
+    <Box
+      flex="1 1 560px"
+      mx={{ base: 0, lg: 8 }}
+      my={{ base: 8, lg: 0 }}
+      p={6}
+      border="1px solid"
+      borderColor="border"
+      borderRadius="2px"
+      textTransform="uppercase"
+    >
+      <Box mb={4} fontSize="sm">
         <Translation id="page-upgrades-bug-bounty-points-exchange" />{" "}
         <Tooltip content={tooltipContent}>
-          <InfoIcon name="info" size="14" />
+          <Icon as={MdInfoOutline} fill="text200" boxSize="4" />
         </Tooltip>
-      </PointsExchangeLabel>
-      <PointsExchangeTitle>
+      </Box>
+      <Heading
+        as="h2"
+        mt={0}
+        fontFamily="monospace"
+        fontSize="2xl"
+        fontWeight="bold"
+      >
         <Translation id="page-upgrades-bug-bounty-points-point" />
-      </PointsExchangeTitle>
+      </Heading>
       {state.hasError && (
-        <ValueRow>
-          <TokenValue>
+        <Flex
+          align={{ base: "start", sm: "center" }}
+          direction={{ base: "column", sm: "row" }}
+          wrap="wrap"
+          mb={8}
+        >
+          <Text fontSize="xl" m={0} mr={4}>
             <Translation id="page-upgrades-bug-bounty-points-error" />
-          </TokenValue>
-        </ValueRow>
+          </Text>
+        </Flex>
       )}
       {isLoading && !state.hasError && (
-        <ValueRow>
-          <TokenValue>
+        <Flex
+          align={{ base: "start", sm: "center" }}
+          direction={{ base: "column", sm: "row" }}
+          wrap="wrap"
+          mb={8}
+        >
+          <Text fontSize="xl" m={0} mr={4}>
             <Translation id="page-upgrades-bug-bounty-points-loading" />
-          </TokenValue>
-        </ValueRow>
+          </Text>
+        </Flex>
       )}
       {!isLoading && !state.hasError && (
-        <ValueRow>
-          <Row>
-            <Emoji mr={`0.5rem`} text=":dollar:" />
-            <TokenValue>
+        <Flex
+          align={{ base: "start", sm: "center" }}
+          direction={{ base: "column", sm: "row" }}
+          wrap="wrap"
+          mb={8}
+          gap={2}
+        >
+          <Flex align="center" wrap="wrap">
+            <Emoji fontSize="xl" mr={2} text=":dollar:" />
+            <Text fontSize="xl" m={0} mr={4}>
               <Translation id="page-upgrades-bug-bounty-points-usd" />
-            </TokenValue>
-          </Row>
-          <Row>
-            <Token image={getImage(data.dai)} />
-            <TokenValue>{pointsInDAI} DAI</TokenValue>
-          </Row>
-          <Row>
-            <Token image={getImage(ethImage)} />
-            <TokenValue>{pointsInETH} ETH</TokenValue>
-          </Row>
-        </ValueRow>
+            </Text>
+          </Flex>
+          <Flex align="center" wrap="wrap">
+            <GatsbyImage
+              image={getImage(data.dai)!}
+              style={{ marginRight: "0.5rem" }}
+              alt=""
+            />
+            <Text fontSize="xl" m={0} mr={4}>
+              {pointsInDAI} DAI
+            </Text>
+          </Flex>
+          <Flex align="center" wrap="wrap">
+            <GatsbyImage
+              image={getImage(ethImage)!}
+              style={{ marginRight: "0.5rem" }}
+              alt=""
+            />
+            <Text fontSize="xl" m={0} mr={4}>
+              {pointsInETH} ETH
+            </Text>
+          </Flex>
+        </Flex>
       )}
-      <p>
+      <Text>
         <Translation id="page-upgrades-bug-bounty-points-payout-desc" />
-      </p>
-      <TextNoMargin>
-        <em>
+      </Text>
+      <Text mb={0}>
+        <Text as="em">
           <Translation id="page-upgrades-bug-bounty-points-rights-desc" />
-        </em>
-      </TextNoMargin>
-    </PointsExchange>
+        </Text>
+      </Text>
+    </Box>
   )
 }
 

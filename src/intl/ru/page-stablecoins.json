@@ -134,7 +134,7 @@
   "page-stablecoins-top-coins-intro": "Рыночная капитализация - это",
   "page-stablecoins-top-coins-intro-code": "общее количество существующих токенов, умноженное на значение на токен. Этот список часто меняется, и перечисленные проекты не обязательно поддерживаются командой ethereum.org.",
   "page-stablecoins-types-of-stablecoin": "Как они работают: типы стабильных монет",
-  "page-stablecoins-usdc-banner-body": "USDC - пожалуй, самая популярная фиатная стабильная монета. Ее ценность составляет около доллара, и она поддерживается компаниями Circle и Coinbase.",
+  "page-stablecoins-usdc-banner-body": "USDC — это, пожалуй, самая известная стабильная монета, обеспеченная фиатом. Ее стоимость составляет примерно доллар, и она поддерживается компаниями Circle и Coinbase.",
   "page-stablecoins-usdc-banner-learn-button": "Узнайте больше о USDC",
   "page-stablecoins-usdc-banner-swap-button": "Обменять ETH на USDC",
   "page-stablecoins-usdc-banner-title": "USDC",
@@ -142,5 +142,7 @@
   "page-stablecoins-why-stablecoins": "Почему стабильные монеты?",
   "page-stablecoins-how-they-work-button": "Как они работают",
   "page-stablecoins-why-stablecoins-body": "ETH, как и Bitcoin, отличается волатильностью, потому что это новая технология. Поэтому, возможно, вы не станете регулярно тратить их. Стабильные монеты отражают стоимость традиционных валют и предоставляют вам доступ к стабильным деньгам, которыми вы можете пользоваться на Ethereum.",
-  "page-stablecoins-more-defi-button": "Подробнее о децентрализованных финансах (DeFi)"
+  "page-stablecoins-more-defi-button": "Подробнее о децентрализованных финансах (DeFi)",
+  "page-stablecoins-tools-title": "Узнайте больше о стабильных монетах",
+  "page-stablecoins-tools-stablecoinswtf-description": "Stablecoins.wtf предлагает панель инструментов с историческими рыночными данными, статистикой и образовательным контентом о самых известных стабильных монетах."
 }

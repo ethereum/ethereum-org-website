@@ -134,7 +134,7 @@
   "page-stablecoins-top-coins-intro": "A capitalização de mercado é",
   "page-stablecoins-top-coins-intro-code": "o número total de tokens que existem multiplicado pelo valor por token. Esta lista é dinâmica e os projetos listados aqui não são necessariamente endossados ​​pela equipe da ethereum.org.",
   "page-stablecoins-types-of-stablecoin": "Como elas funcionam: tipos de stablecoins",
-  "page-stablecoins-usdc-banner-body": "USDc é provavelmente a mais famosa stablecoin respaldada por moeda fiduciária. Seu valor é de aproximadamente um dólar e é apoiado pela Circle e Coinbase.",
+  "page-stablecoins-usdc-banner-body": "USDC é provavelmente a mais famosa moeda estável respaldada por moeda fiduciária. Seu valor é de aproximadamente um dólar e é apoiado pela Circle e Coinbase.",
   "page-stablecoins-usdc-banner-learn-button": "Aprenda sobre USDC",
   "page-stablecoins-usdc-banner-swap-button": "Troque ETH por USDC",
   "page-stablecoins-usdc-banner-title": "USDC",
@@ -142,5 +142,7 @@
   "page-stablecoins-why-stablecoins": "Por que stablecoins?",
   "page-stablecoins-how-they-work-button": "Como funcionam",
   "page-stablecoins-why-stablecoins-body": "ETH, como Bitcoin, tem um preço volátil porque é uma nova tecnologia. Portanto, você pode não querer gastá-lo regularmente. As stablecoins espelham o valor das moedas tradicionais para dar a você acesso a dinheiro estável que você pode usar na Ethereum.",
-  "page-stablecoins-more-defi-button": "Mais sobre finanças descentralizadas (DeFi)"
+  "page-stablecoins-more-defi-button": "Mais sobre finanças descentralizadas (DeFi)",
+  "page-stablecoins-tools-title": "Saiba mais sobre stablecoins",
+  "page-stablecoins-tools-stablecoinswtf-description": "Stablecoins.wtf oferece um painel com dados históricos do mercado, estatísticas e conteúdo educacional para as stablecoins mais proeminentes."
 }

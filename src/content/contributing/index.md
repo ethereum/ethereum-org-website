@@ -2,7 +2,6 @@
 title: Contributing
 description: Learn about the different ways you can contribute to ethereum.org
 lang: en
-sidebar: true
 ---
 
 # Contributing to ethereum.org 🦄 {#contributing-to-ethereumorg}
@@ -37,9 +36,13 @@ The ethereum.org website, like Ethereum more broadly, is an open-source project.
 - [Create/edit content](/contributing/#how-to-update-content)
   _– Suggest new pages or makes tweaks to what's here already_
 - [Add a layer 2](/contributing/adding-layer-2s/)
-  _- Add a layer 2 to a relevant page_
-- [Add a staking product or service](/contributing/adding-staking-products/) - _Add a project that helps facilitate solo staking, pooled staking, or staking as a service_
-- [Add a wallet](/contributing/adding-wallets/) _- Add a wallet for the [find wallets page](/wallets/find-wallet/)._
+  _– Add a layer 2 to a relevant page_
+- [Add a staking product or service](/contributing/adding-staking-products/)
+  _– Add a project that helps facilitate solo staking, pooled staking, or staking as a service_
+- [Add a wallet](/contributing/adding-wallets/)
+  _– Add a wallet for the [find wallets page](/wallets/find-wallet/)_
+- [Suggest a project for our DeSci page](/contributing/adding-desci-projects/)
+  _- Add a project built on Ethereum that contributes to decentralized science_
 
 _Any questions?_ 🤔 Reach out on our [Discord server](https://discord.gg/CetY6Y4)
 

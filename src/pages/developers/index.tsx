@@ -1,15 +1,13 @@
 import React, { ReactNode } from "react"
-import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import styled from "@emotion/styled"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 
-import { translateMessageId } from "../../utils/translations"
 import Card from "../../components/Card"
 import Callout from "../../components/Callout"
 import Link from "../../components/Link"
 import Translation from "../../components/Translation"
-import PreMergeBanner from "../../components/PreMergeBanner"
 import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
 import {
@@ -19,6 +17,10 @@ import {
   GrayContainer,
 } from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
+
+import { translateMessageId } from "../../utils/translations"
+import { getImage } from "../../utils/image"
+
 import { Context } from "../../types"
 
 const HeroContainer = styled.div`
@@ -248,9 +250,6 @@ const DevelopersPage = ({
         title={translateMessageId("page-developer-meta-title", intl)}
         description={translateMessageId("page-developers-meta-desc", intl)}
       />
-      <PreMergeBanner announcementOnly>
-        <Translation id="page-upgrades-merge-banner-developers-landing" />
-      </PreMergeBanner>
       <Content>
         <HeroContainer>
           <HeroCopyContainer>
@@ -269,7 +268,7 @@ const DevelopersPage = ({
             </HeroCopy>
           </HeroCopyContainer>
           <Hero
-            image={getImage(data.ednHero)}
+            image={getImage(data.ednHero)!}
             alt={translateMessageId("alt-eth-blocks", intl)}
             loading="eager"
           />
@@ -376,7 +375,7 @@ const DevelopersPage = ({
             </p>
             <ImageContainer>
               <Image
-                image={getImage(data.doge)}
+                image={getImage(data.doge)!}
                 alt={translateMessageId("page-assets-doge", intl)}
               />
             </ImageContainer>

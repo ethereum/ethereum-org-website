@@ -2,7 +2,6 @@
 title: JSON-RPC API
 description: Ethereum istemcileri için durum bilgisi olmayan, hafif bir uzaktan prosedür çağrısı (RPC) protokolü.
 lang: tr
-sidebar: true
 ---
 
 Bir yazılım uygulamasının Ethereum blok zinciri ile etkileşime girebilmesi için (blok zinciri verilerini okuyarak ve/veya ağa işlemler göndererek), bir Ethereum düğümüne bağlanması gerekir.

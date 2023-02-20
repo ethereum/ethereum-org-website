@@ -2,7 +2,6 @@
 title: Rollups de conocimiento cero
 description: Introducción a los rollups de conocimiento cero
 lang: es
-sidebar: true
 ---
 
 ## Pre requisitos {#prerequisites}

@@ -21,7 +21,7 @@
       "website": "https://optimism.io/",
       "developerDocs": "https://community.optimism.io/docs/developers/",
       "l2beat": "https://l2beat.com/projects/optimism/",
-      "bridge": "https://gateway.optimism.io/",
+      "bridge": "https://app.optimism.io/bridge",
       "bridgeWallets": ["MetaMask", "WalletConnect", "Coinbase Wallet"],
       "blockExplorer": "https://optimistic.etherscan.io/",
       "ecosystemPortal": "https://www.optimism.io/apps/all",
@@ -50,32 +50,6 @@
     }
   ],
   "zk": [
-    {
-      "name": "dYdX",
-      "website": "https://dydx.exchange",
-      "developerDocs": "https://docs.dydx.exchange/#general",
-      "l2beat": "https://l2beat.com/projects/dydx/",
-      "bridge": "https://trade.dydx.exchange/",
-      "bridgeWallets": [
-        "imToken",
-        "MetaMask",
-        "WalletConnect",
-        "Coinbase Wallet",
-        "Trust Wallet",
-        "Rainbow Wallet",
-        "Huobi Wallet",
-        "Token Pocket",
-        "Others"
-      ],
-      "blockExplorer": "",
-      "ecosystemPortal": "",
-      "tokenLists": "",
-      "noteKey": "",
-      "purpose": ["exchange"],
-      "descriptionKey": "dydx-description",
-      "imageKey": "dydx",
-      "background": "#121223"
-    },
     {
       "name": "Loopring",
       "website": "https://loopring.org/#/",
@@ -146,11 +120,11 @@
     {
       "name": "Aztec",
       "website": "https://aztec.network/",
-      "developerDocs": "https://developers.aztec.network/",
+      "developerDocs": "https://docs.aztec.network/",
       "l2beat": "https://l2beat.com/projects/aztec",
       "bridge": "https://zk.money/",
       "bridgeWallets": ["MetaMask", "WalletConnect"],
-      "blockExplorer": "https://explorer.aztec.network/",
+      "blockExplorer": "https://aztec-connect-prod-explorer.aztec.network/",
       "ecosystemPortal": "",
       "tokenLists": "",
       "noteKey": "",

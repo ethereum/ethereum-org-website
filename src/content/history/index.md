@@ -2,7 +2,6 @@
 title: History and Forks of Ethereum
 description: A history of the Ethereum blockchain including major milestones, releases, and forks.
 lang: en
-sidebar: true
 sidebarDepth: 1
 ---
 
@@ -24,7 +23,92 @@ Looking for future protocol upgrades? [Learn about upcoming upgrades to Ethereum
 
 <Divider />
 
+## 2023 {#2023}
+
+### Shanghai (_planned_) {#shanghai}
+
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Timestamp: TBD<br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Block number: TBD<br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: TBD<br />
+
+<!-- <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/{}/https://ethereum.org/">ethereum.org on waybackmachine</a> -->
+
+#### Summary {#shanghai-summary}
+
+The Shanghai upgrade brings staking withdrawals to the execution layer. In tandem with the Capella upgrade, this enables blocks to accept withdrawal operations, which allow stakers to withdraw their ETH from the Beacon Chain to the execution layer.
+
+<ExpandableCard title="Shanghai EIPs" contentPreview="Official improvements included in this upgrade.">
+
+- [EIP-3651](https://eips.ethereum.org/EIPS/eip-3651) – _Starts the `COINBASE` address warm_
+- [EIP-3855](https://eips.ethereum.org/EIPS/eip-3855) – _New `PUSH0` instruction_
+- [EIP-3860](https://eips.ethereum.org/EIPS/eip-3860) – _Limit and meter initcode_
+- [EIP-4895](https://eips.ethereum.org/EIPS/eip-4895) – _Beacon chain push withdrawals as operations_
+
+</ExpandableCard>
+
+- [Read the Shanghai upgrade specification](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
+
+---
+
+### Capella (_planned_) {#capella}
+
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Timestamp: TBD<br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Epoch number: TBD<br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: TBD<br />
+
+<!-- <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/{}/https://ethereum.org/en/">ethereum.org on waybackmachine</a> -->
+
+#### Summary {#capella-summary}
+
+The Capella upgrade is the third major upgrade to the consensus layer (Beacon Chain), which enables staking withdrawals. Capella is to occur simultaneous to the Shanghai upgrade occurring on the execution layer to enable withdrawal functionality in sync with one another.
+
+This consensus layer upgrade brings the ability for stakers who did not provide withdrawal credentials with their initial deposit to do so, thereby enabling withdrawals.
+
+The upgrade also provides automatic account sweeping functionality, which continuously processes validator accounts for any available rewards payments or full withdrawals.
+
+- [More on staking withdrawals](/staking/withdrawals/).
+- [Read the Capella upgrade specifications](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+
+<Divider />
+
 ## 2022 {#2022}
+
+### Paris (The Merge) {#paris}
+
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Sep-15-2022 06:42:42 AM +UTC</code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Block number: <a href="https://etherscan.io/block/15537394">15537394</a><br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: $1,472 USD<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220915075314/https://ethereum.org/">ethereum.org on waybackmachine</a>
+
+#### Summary {#paris-summary}
+
+The Paris upgrade was triggered by the proof-of-work blockchain passing a [terminal total difficulty](/glossary/#terminal-total-difficulty) of 58750000000000000000000. This happened at block 15537393 on 15th September 2022, triggering the Paris upgrade the next block. Paris was [The Merge](/upgrades/merge/) transition - its major feature was switching off the [proof-of-work](/developers/docs/consensus-mechanisms/pow) mining algorithm and associated consensus logic and switching on [proof-of-stake](/developers/docs/consensus-mechanisms/pos) instead. Paris itself was an upgrade to the [execution clients](/developers/docs/nodes-and-clients/#execution-clients) (equivalent to Bellatrix on the consensus layer) that enabled them to take instruction from their connected [consensus clients](/developers/docs/nodes-and-clients/#consensus-clients). This required a new set of internal API methods, collectively known as the [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md), to be activated. This was arguably the most significant upgrade in Ethereum history since [Homestead](#homestead)!
+
+- [Read the Paris upgrade specification](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
+
+<ExpandableCard title="Paris EIPs" contentPreview="Official improvements included in this upgrade.">
+
+- [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) – _Upgrade consensus to Proof-of-Stake_
+- [EIP-4399](https://eips.ethereum.org/EIPS/eip-4399) – _Supplant DIFFICULTY opcode with PREVRANDAO_
+
+</ExpandableCard>
+
+---
+
+### Bellatrix {#bellatrix}
+
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Sep-06-2022 11:34:47 AM +UTC</code><br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Epoch number: 144,896<br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: $1,558 USD<br />
+<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220906112525/https://ethereum.org/en/">ethereum.org on waybackmachine</a>
+
+#### Summary {#bellatrix-summary}
+
+The Bellatrix upgrade was the second scheduled upgrade for the [Beacon Chain](/upgrades/beacon-chain), preparing the chain for [The Merge](/upgrades/merge/). It brings validator penalties to their full values for inactivity and slashable offenses. Bellatrix also includes an update to the fork choice rules to prepare the chain for The Merge and the transition from the last proof-of-work block to the first proof-of-stake block. This includes making consensus clients aware of the [terminal total difficulty](/glossary/#terminal-total-difficulty) of 58750000000000000000000.
+
+- [Read the Bellatrix upgrade specification](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
+
+---
 
 ### Gray Glacier {#gray-glacier}
 
@@ -80,7 +164,7 @@ The Arrow Glacier network upgrade pushed back the [difficulty bomb](/glossary/#d
 
 #### Summary {#altair-summary}
 
-The Altair upgrade was the first scheduled upgrade for the [Beacon Chain](/upgrades/beacon-chain). It added support for "sync committees"—enabling light clients, and bringing validator inactivity and slashing penalties up to their full values.
+The Altair upgrade was the first scheduled upgrade for the [Beacon Chain](/upgrades/beacon-chain). It added support for "sync committees"—enabling light clients, and increased validator inactivity and slashing penalties as development progressed towards The Merge.
 
 - [Read the Altair upgrade specification](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
@@ -88,7 +172,7 @@ The Altair upgrade was the first scheduled upgrade for the [Beacon Chain](/upgra
 
 Altair was the first major network upgrade that had an exact rollout time. Every upgrade prior had been based on a declared block number on the proof-of-work chain, where block times vary. The Beacon Chain does not require solving for proof-of-work, and instead works on a time-based epoch system consisting of 32 twelve-second "slots" of time where validators can propose blocks. This is why we knew exactly when we would hit epoch 74,240 and Altair became live!
 
-- [Beaconcha.in Glossary - Slots](https://kb.beaconcha.in/glossary#slots)
+- [Block time](/developers/docs/blocks/#block-time)
 
 ---
 

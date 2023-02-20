@@ -2,7 +2,6 @@
 title: Geliştirme Ağları
 description: Geliştirme ağlarına ve Ethereum uygulamaları oluşturmaya yardımcı mevcut araçlara genel bakış.
 lang: tr
-sidebar: true
 ---
 
 Akıllı sözleşmelerle bir Ethereum uygulaması geliştirirken, onu dağıtmadan önce nasıl çalıştığını görmek amacıyla yerel bir ağda çalıştırmanız faydalı olur.

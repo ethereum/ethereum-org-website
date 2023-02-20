@@ -2,7 +2,6 @@
 title: Introduction à la pile Ethereum
 description: Présentation étape par étape des différentes couches de la pile Ethereum, et comment elles fonctionnent ensemble.
 lang: fr
-sidebar: true
 ---
 
 Comme toute pile logicielle, la pile complète Ethereum varie d'un projet à l'autre en fonction de vos objectifs propres.

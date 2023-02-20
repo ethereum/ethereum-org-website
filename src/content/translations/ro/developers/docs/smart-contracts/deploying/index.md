@@ -2,7 +2,6 @@
 title: Implementarea contractelor inteligente
 description:
 lang: ro
-sidebar: true
 ---
 
 Contractul inteligent trebuie implementat pentru ca acesta să fie disponibil utilizatorilor unei rețele Ethereum.

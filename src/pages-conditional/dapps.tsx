@@ -1,11 +1,10 @@
 import React, { useRef, useState, useEffect } from "react"
-import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import styled from "@emotion/styled"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 
 import Translation from "../components/Translation"
-import Pill from "../components/Pill"
 import BoxGrid from "../components/BoxGrid"
 import Card from "../components/Card"
 import Callout from "../components/Callout"
@@ -15,7 +14,7 @@ import GhostCard from "../components/GhostCard"
 import Link from "../components/Link"
 import InfoBanner from "../components/InfoBanner"
 import DocLink from "../components/DocLink"
-import Emoji from "../components/Emoji"
+import Emoji from "../components/OldEmoji"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import ProductList from "../components/ProductList"
@@ -32,10 +31,12 @@ import {
   OptionContainer,
   OptionText,
 } from "../components/SharedStyledComponents"
+import FeedbackCard from "../components/FeedbackCard"
 
 import { translateMessageId } from "../utils/translations"
+import { getImage, getSrc } from "../utils/image"
 import { Context } from "../types"
-import FeedbackCard from "../components/FeedbackCard"
+import { Badge } from "@chakra-ui/react"
 
 const MagiciansImage = styled(GatsbyImage)`
   background-size: cover;
@@ -198,6 +199,7 @@ const StepBox = styled(Link)`
   text-decoration: none;
   width: 100%;
   &:hover {
+    text-decoration: none;
     background: ${(props) => props.theme.colors.ednBackground};
     transition: transform 0.2s;
     transform: scale(1.05);
@@ -655,6 +657,13 @@ const DappsPage = ({
       image: getImage(data.dai),
       alt: translateMessageId("page-dapps-oasis-logo-alt", intl),
     },
+    {
+      title: "PWN",
+      description: translateMessageId("page-dapps-dapp-description-pwn", intl),
+      link: "https://pwn.xyz",
+      image: getImage(data.pwn),
+      alt: translateMessageId("page-dapps-pwn-image-alt", intl),
+    },
   ]
 
   const dex = [
@@ -720,13 +729,6 @@ const DappsPage = ({
       link: "https://loopring.org/#/",
       image: getImage(data.loopring),
       alt: translateMessageId("page-dapps-loopring-logo-alt", intl),
-    },
-    {
-      title: "dYdX",
-      description: translateMessageId("page-dapps-dapp-description-dydx", intl),
-      link: "https://dydx.exchange/",
-      image: getImage(data.dydx),
-      alt: "page-dapps-dydx-logo-alt",
     },
   ]
 
@@ -797,6 +799,16 @@ const DappsPage = ({
       image: getImage(data.index),
       alt: translateMessageId("page-dapps-index-coop-logo-alt", intl),
     },
+    {
+      title: "Balancer",
+      description: translateMessageId(
+        "page-dapps-dapp-description-balancer",
+        intl
+      ),
+      link: "https://balancer.fi/",
+      image: getImage(data.balancer),
+      alt: translateMessageId("page-dapps-balancer-logo-alt", intl),
+    },
   ]
 
   const insurance = [
@@ -852,6 +864,16 @@ const DappsPage = ({
       link: "https://rotki.com/",
       image: getImage(data.rotki),
       alt: translateMessageId("page-dapps-rotki-logo-alt", intl),
+    },
+    {
+      title: "Krystal",
+      description: translateMessageId(
+        "page-dapps-dapp-description-krystal",
+        intl
+      ),
+      link: "https://defi.krystal.app/",
+      image: getImage(data.krystal),
+      alt: translateMessageId("page-dapps-krystal-logo-alt", intl),
     },
   ]
 
@@ -1017,7 +1039,7 @@ const DappsPage = ({
         "page-dapps-dapp-description-cryptopunks",
         intl
       ),
-      link: "https://www.larvalabs.com/cryptopunks",
+      link: "https://cryptopunks.app/",
       image: getImage(data.cryptopunks),
       alt: translateMessageId("page-dapps-cryptopunks-logo-alt", intl),
     },
@@ -1145,7 +1167,7 @@ const DappsPage = ({
     title: translateMessageId("decentralized-applications-dapps", intl),
     header: translateMessageId("page-dapps-hero-header", intl),
     subtitle: translateMessageId("page-dapps-hero-subtitle", intl),
-    image: getImage(data.doge),
+    image: getImage(data.doge)!,
     alt: translateMessageId("page-dapps-doge-img-alt", intl),
     buttons: [
       {
@@ -1155,7 +1177,7 @@ const DappsPage = ({
       {
         content: translateMessageId("page-dapps-what-are-dapps", intl),
         to: "#what-are-dapps",
-        isSecondary: true,
+        variant: "outline",
       },
     ],
   }
@@ -1164,7 +1186,7 @@ const DappsPage = ({
       <PageMetadata
         title={translateMessageId("decentralized-applications-dapps", intl)}
         description={translateMessageId("page-dapps-desc", intl)}
-        image={getImage(data.ogImage)?.images.fallback.src}
+        image={getSrc(data.ogImage)}
       />
       <PageHero content={heroContent} />
       <Divider />
@@ -1236,10 +1258,12 @@ const DappsPage = ({
               description={choice.description}
               url={choice.url}
               alt={choice.alt}
-              image={choice.image}
+              image={choice.image!}
               name={choice.name}
             >
-              <Pill color={choice.pillColor}>{choice.type}</Pill>
+              <Badge size="sm" background={choice.pillColor}>
+                {choice.type}
+              </Badge>
             </ProductCard>
           ))}
         </StyledCardGrid>
@@ -1370,7 +1394,7 @@ const DappsPage = ({
             <StyledCalloutBanner
               titleKey={"page-dapps-wallet-callout-title"}
               descriptionKey={"page-dapps-wallet-callout-description"}
-              image={getImage(data.wallet)}
+              image={getImage(data.wallet)!}
               maxImageWidth={300}
               alt={translateMessageId(
                 "page-dapps-wallet-callout-image-alt",
@@ -1548,7 +1572,7 @@ const DappsPage = ({
               </TextNoMargin>
             </div>
             <AddDappButton
-              isSecondary
+              variant="outline"
               to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dapp.md&title="
             >
               <Translation id="page-dapps-add-button" />
@@ -1578,21 +1602,21 @@ const DappsPage = ({
               </CardContainer>
               {selectedCategory === CategoryType.FINANCE && (
                 <MoreButtonContainer>
-                  <ButtonLink isSecondary to="/defi/">
+                  <ButtonLink variant="outline" to="/defi/">
                     <Translation id="page-dapps-more-on-defi-button" />
                   </ButtonLink>
                 </MoreButtonContainer>
               )}
               {selectedCategory === CategoryType.COLLECTIBLES && (
                 <MoreButtonContainer>
-                  <ButtonLink isSecondary to="/nft/">
+                  <ButtonLink variant="outline" to="/nft/">
                     <Translation id="page-dapps-more-on-nft-button" />
                   </ButtonLink>
                 </MoreButtonContainer>
               )}
               {selectedCategory === CategoryType.GAMING && (
                 <MoreButtonContainer>
-                  <ButtonLink isSecondary to="/nft/">
+                  <ButtonLink variant="outline" to="/nft/">
                     <Translation id="page-dapps-more-on-nft-gaming-button" />
                   </ButtonLink>
                 </MoreButtonContainer>
@@ -1624,7 +1648,7 @@ const DappsPage = ({
         <ImageContainer id="what-are-dapps">
           <StyledGhostCard>
             <MagiciansImage
-              image={getImage(data.magicians)}
+              image={getImage(data.magicians)!}
               alt={translateMessageId("page-dapps-magician-img-alt", intl)}
             />
           </StyledGhostCard>
@@ -1872,9 +1896,6 @@ export const query = graphql`
     oneinch: file(relativePath: { eq: "exchanges/1inch.png" }) {
       ...dappImage
     }
-    dydx: file(relativePath: { eq: "exchanges/dydx.png" }) {
-      ...dappImage
-    }
     augur: file(relativePath: { eq: "dapps/augur.png" }) {
       ...dappImage
     }
@@ -1899,7 +1920,16 @@ export const query = graphql`
     rotki: file(relativePath: { eq: "dapps/rotki.png" }) {
       ...dappImage
     }
+    krystal: file(relativePath: { eq: "dapps/krystal.png" }) {
+      ...dappImage
+    }
     poap: file(relativePath: { eq: "dapps/poap.png" }) {
+      ...dappImage
+    }
+    pwn: file(relativePath: { eq: "dapps/pwn.png" }) {
+      ...dappImage
+    }
+    balancer: file(relativePath: { eq: "dapps/balancer.png" }) {
       ...dappImage
     }
   }

@@ -1,5 +1,6 @@
 import React, { useState } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
+import { useLocation } from "@reach/router"
 import { useIntl } from "react-intl"
 
 import PageMetadata from "../components/PageMetadata"
@@ -68,12 +69,13 @@ const ResetIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
 `
 
-interface TranslatedLanguage extends Language {
-  path?: string
-}
-
 const LanguagesPage = () => {
   const intl = useIntl()
+  const location = useLocation()
+  const redirectTo =
+    location.search.split("from=").length > 1
+      ? location.search.split("from=")[1]
+      : "/"
   const [keyword, setKeyword] = useState<string>("")
   const resetKeyword = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
@@ -83,21 +85,20 @@ const LanguagesPage = () => {
     "page-languages-filter-placeholder",
     intl
   )
-  let translationsCompleted: Array<TranslatedLanguage> = []
+  let translationsCompleted: Array<Language> = []
   for (const lang in languageMetadata) {
-    const langMetadata = languageMetadata[lang]
-    langMetadata["path"] = `/${lang}/`
-    langMetadata["name"] = translateMessageId(
-      `language-${lang}` as TranslationKey,
-      intl
-    )
-    const nativeLangTitle = langMetadata["localName"]
-    const englishLangTitle = langMetadata["name"]
+    const langMetadata = {
+      ...languageMetadata[lang],
+      name: translateMessageId(`language-${lang}` as TranslationKey, intl),
+    }
+
+    const nativeLangTitle = langMetadata.localName
+    const englishLangTitle = langMetadata.name
     if (
       englishLangTitle.toLowerCase().includes(keyword.toLowerCase()) ||
       nativeLangTitle.toLowerCase().includes(keyword.toLowerCase())
     ) {
-      translationsCompleted.push(languageMetadata[lang])
+      translationsCompleted.push(langMetadata)
     }
   }
   translationsCompleted.sort((a, b) => a["name"].localeCompare(b["name"]))
@@ -147,7 +148,7 @@ const LanguagesPage = () => {
           </Form>
           <LangContainer>
             {translationsCompleted.map((lang) => (
-              <LangItem to={lang.path} key={lang["name"]}>
+              <LangItem to={redirectTo} language={lang.code} key={lang["name"]}>
                 <LangTitle>{lang["name"]}</LangTitle>
                 <h4>{lang.localName}</h4>
               </LangItem>

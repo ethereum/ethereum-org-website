@@ -2,7 +2,6 @@
 title: Bukti kerja (PoW)
 description: Penjelasan tentang protokol konsensus bukti kerja dan perannya di Ethereum.
 lang: id
-sidebar: true
 incomplete: true
 ---
 

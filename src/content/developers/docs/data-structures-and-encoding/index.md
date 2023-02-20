@@ -2,7 +2,6 @@
 title: Data structures and encoding
 description: An overview of the fundamental Ethereum data structures.
 lang: en
-sidebar: true
 sidebarDepth: 2
 ---
 

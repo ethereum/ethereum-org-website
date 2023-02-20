@@ -2,7 +2,6 @@
 title: Lingkungan Pengembangan Terintegrasi (IDE)
 description:
 lang: id
-sidebar: true
 ---
 
 Ketika berkaitan dengan menyiapkan [lingkungan pengembangan terintegrasi (IDE)](https://wikipedia.org/wiki/Integrated_development_environment), memprogram aplikasi di Ethereum sama dengan pemrograman proyek perangkat lunak lainnya. Ada banyak opsi untuk dipilih, jadi pada akhirnya, pilihlah IDE atau editor kode yang paling sesuai dengan preferensi Anda. Sangat mungkin pilihan IDE terbaik untuk pengembangan Ethereum Anda adalah IDE yang telah Anda gunakan untuk pengembangan perangkat lunak tradisional.
@@ -35,7 +34,6 @@ IDE yang paling mapan memiliki plugin untuk meningkatkan pengalaman pengembangan
 **Visual Studio Code -** **_IDE antarplatform profesional dengan dukungan Ethereum resmi._**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Kotak Peralatan Pengembangan Blockchain untuk Ethereum](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain)
 - [Meja Kerja Blockchain Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
 - [Contoh kode](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)

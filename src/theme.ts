@@ -1,4 +1,3 @@
-import { createGlobalStyle, DefaultTheme } from "styled-components"
 import { mix } from "polished"
 
 const white = "#ffffff"
@@ -254,16 +253,14 @@ const lightColors = {
     "linear-gradient(102.7deg, rgba(185, 185, 241, 0.2) 0%, rgba(84, 132, 234, 0.2) 51.56%, rgba(58, 142, 137, 0.2) 100%)",
   bannerGridGradient:
     "linear-gradient(90deg, rgba(127,127,213,0.2) 0%, rgba(132,145,221,0.2) 50%, rgba(145,234,228,0.2) 100%)",
-  slider: {
-    bg: "#F7F7F7",
-    border: "#ECECEC",
-    dot: "#A4A4A4",
-    dotActive: "#1C1DFF",
-    btnBg: "#A4A4A4",
-    btnColor: white,
-    btnBgDisabled: "#E7E7E7",
-    btnColorDisabled: "#737373",
-  },
+  sliderBg: "#F7F7F7",
+  sliderBorder: "#ECECEC",
+  sliderDot: "#A4A4A4",
+  sliderDotActive: "#1C1DFF",
+  sliderBtnBg: "#A4A4A4",
+  sliderBtnColor: white,
+  sliderBtnBgDisabled: "#E7E7E7",
+  sliderBtnColorDisabled: "#737373",
 }
 
 // TODO replace random variables w/ baseColor variables
@@ -292,6 +289,8 @@ const darkColors = {
   primary200: primaryDark200,
   primary100: primaryDark100,
   lightBorder: "#404040",
+  priceCardBackgroundPositive: "transparent",
+  priceCardBackgroundNegative: "transparent",
   priceCardBackground: "transparent",
   priceCardBorder: success700,
   priceCardBorderNegative: fail300,
@@ -370,22 +369,20 @@ const darkColors = {
     "linear-gradient(83.46deg, #2C2C32 7.03%, #44404D 52.42%, #303038 98.77%)",
   bannerGridGradient:
     "linear-gradient(90deg, rgba(172, 182, 229, 0.08) 0%, rgba(134, 253, 232, 0.08) 100%)",
-  slider: {
-    bg: "#191919",
-    border: "#404040",
-    dot: "#A4A4A4",
-    dotActive: "#FF7324",
-    btnBg: "#404040",
-    btnColor: white,
-    btnBgDisabled: "#404040",
-    btnColorDisabled: "#737373",
-  },
+  sliderBg: "#191919",
+  sliderBorder: "#404040",
+  sliderDot: "#A4A4A4",
+  sliderDotActive: "#FF7324",
+  sliderBtnBg: "#404040",
+  sliderBtnColor: white,
+  sliderBtnBgDisabled: "#404040",
+  sliderBtnColorDisabled: "#737373",
 }
 
 const lightThemeColors = Object.assign({}, baseColors, lightColors)
 const darkThemeColors = Object.assign({}, baseColors, darkColors)
 
-const theme: DefaultTheme = {
+const theme = {
   isDark: false, // Overwritten in Object.assign
   colors: {}, // Overwritten in Object.assign
   fonts: {
@@ -431,219 +428,3 @@ export const darkTheme = Object.assign(
   { isDark: true },
   { colors: darkThemeColors }
 )
-
-// Dynamic global styles
-// Unfortunately Prettier doesn't format `createGlobalStyle`
-// TODO external link styles no longer working...
-// Seemingly nothing that doesn't involve a theme variable?
-export const GlobalStyle = createGlobalStyle`
-  body {
-    background-color: ${(props) => props.theme.colors.background};
-    color: ${(props) => props.theme.colors.text};
-  }
-  a {
-    color: ${(props) => props.theme.colors.primary};
-    text-decoration: underline;
-  }
-  mark {
-    background: ${(props) => props.theme.colors.markBackground};
-    box-shadow: inset 0 -2px 0 0 rgba(69,142,225,.8);
-  }
-
-  .anchor.before {
-    fill: ${(props) => props.theme.colors.text};
-  }
-
-  hr {
-    background: ${(props) => props.theme.colors.lightBorder};
-  }
-
-  /* Legacy styles from lists.styl */
-  ul {
-    font-size: 1rem;
-    line-height: 1.6;
-    font-weight: 400;
-    margin: 2rem 0 1rem;
-    padding: 0;
-    margin: 1em;
-    list-style-type: none;
-    list-style-image: none;
-  }
-
-  li {
-    padding-left: .5em;
-    margin-bottom: .5em;
-      p:first-of-type {
-        margin-top: 0;
-      }
-      p:last-of-type {
-        margin-bottom: 0;
-      }
-    &:before {
-      content: "\2022";
-      color: ${(props) => props.theme.colors.primary};
-      display: inline-block;
-      width: 1em;
-      margin-left: -1em;
-      position: absolute;
-    }
-  }
-
-  /* YouTube embeds */
-  iframe {
-    display: block;
-    max-width: 560px;
-    margin: 32px 0;
-  }
-  
-  h1 {
-    font-size: 3rem;
-    line-height: 1.4;
-    margin: 2rem 0;
-    font-weight: 700;
-    scroll-margin-top: ${theme.variables.navHeight};
-    scroll-snap-margin: ${theme.variables.navHeight};
-    @media (max-width: ${theme.breakpoints.m}) {
-      font-size: 2.5rem;
-    }
-  }
-  
-  h2 {
-    font-size: 2rem;
-    line-height: 1.4;
-    margin: 2rem 0;
-    margin-top: 3rem;
-    font-weight: 600;
-    scroll-margin-top: ${theme.variables.navHeight};
-    scroll-snap-margin: ${theme.variables.navHeight};
-    @media (max-width: ${theme.breakpoints.m}) {
-      font-size: 1.5rem;
-    }
-  }
-  
-  h3 {
-    font-size: 1.5rem;
-    line-height: 1.4;
-    margin: 2rem 0;
-    margin-top: 2.5rem;
-    font-weight: 600;
-    scroll-margin-top: ${theme.variables.navHeight};
-    scroll-snap-margin: ${theme.variables.navHeight};
-    @media (max-width: ${theme.breakpoints.m}) {
-      font-size: 1.25rem;
-    }
-  }
-  
-  h4 {
-    font-size: 1.25rem;
-    line-height: 1.4;
-    font-weight: 500;
-    margin: 2rem 0;
-    scroll-margin-top: ${theme.variables.navHeight};
-    scroll-snap-margin: ${theme.variables.navHeight};
-    @media (max-width: ${theme.breakpoints.m}) {
-      font-size: 1rem;
-    }
-  }
-  
-  h5 {
-    font-size: 1rem;
-    line-height: 1.4;
-    font-weight: 450;
-    margin: 2rem 0;
-    scroll-margin-top: ${theme.variables.navHeight};
-    scroll-snap-margin: ${theme.variables.navHeight};
-  }
-
-  h6 {
-    font-size: 0.9rem;
-    line-height: 1.4;
-    font-weight: 400;
-    text-transform: uppercase;
-    margin: 2rem 0;
-    scroll-margin-top: ${theme.variables.navHeight};
-    scroll-snap-margin: ${theme.variables.navHeight};
-  }
-
-  /* Anchor tag styles */
-  /* Selected specifically for mdx rendered side icon link */
-  .header-anchor {
-    position: relative;
-    display: initial;
-    margin-left: -1.5em;
-    padding-right: 0.5rem;
-    font-size: 1rem;
-    vertical-align: middle;
-
-    svg {
-      fill: ${(props) => props.theme.colors.primary};
-      visibility: hidden;
-    }
-  }
-
-  h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
-    .header-anchor svg {
-      visibility: visible;
-    }
-  }
-
-  .header-anchor:focus svg {
-    visibility: visible;
-  }
-
-`
-// H6 basically only uses as labels as per design system
-
-// Old Mixins for referecne
-// export const Mixins = {
-//   textLevel1: `
-//     font-size: 3rem;
-//     line-height: 1.4;
-//     margin: 2rem 0;
-//     font-weight: 400;
-//   `,
-//   textLevel2: `
-//     font-size: 2rem;
-//     line-height: 1.4;
-//     margin: 2rem 0;
-//     font-weight: 600;
-//   `,
-//   textLevel3: `
-//     font-size: 1.5rem;
-//     line-height: 1.4;
-//     margin: 1.5rem 0 2rem;
-//     font-weight: 600;
-//   `,
-//   textLevel4: `
-//     font-size: 1.25rem;
-//     line-height: 1.4;
-//     font-weight: 400;
-//     margin-top: 2rem;
-//   `,
-//   textLevel5: `
-//     font-size: 1rem;
-//     line-height: 1.6;
-//     font-weight: 400;
-//     margin-top: 2rem;
-//   `,
-//   textLevel6: `
-//     font-size: .875rem;
-//     line-height: 1.6;
-//     font-weight: 400;
-//     letter-spacing: 0.04em;
-//     margin: 1.14em 0;
-//     text-transform uppercase
-//   `,
-//   textLevel7: `
-//     font-size: 1rem;
-//     line-height: 1.6;
-//     font-weight: 400;
-//     margin: 2rem 0 1rem;
-//   `,
-//   textLevel8: `
-//     font-size: .875rem;
-//     line-height:1.6;
-//     margin: 1.14em 0;
-//     font-weight: 400;
-//   `,
-// }

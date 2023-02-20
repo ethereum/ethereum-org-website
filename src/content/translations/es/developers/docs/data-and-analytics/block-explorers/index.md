@@ -2,7 +2,6 @@
 title: Exploradores de bloques
 description: Una introducción sobre los exploradores de bloques, tu portal en el mundo de los datos de la blockchain, en el que puedes consultar información sobre las transacciones, las cuentas, los contratos, etc.
 lang: es
-sidebar: true
 sidebarDepth: 3
 ---
 

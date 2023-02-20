@@ -3,7 +3,6 @@ title: Minyororo ya Vigae
 description: Jifunze juu ya minyororo ya shard - sehemu za mtandao ambazo zinampa Ethereum uwezo zaidi wa shughuli na iwe rahisi kukimbia.
 lang: sw
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: Ugawanyaji wa vigae ni kazi ya usasishaji yenye awamu nyingi ili kuboresha utanukaji wa Ethereum na ujazo wake.
 summaryPoint2: Minyororo ya vigae hutoa huduma nafuu zaidi kwa ajili ya safu za kuhifadhi programu na sehemu za kutunza data.

@@ -2,7 +2,6 @@
 title: Chi siamo
 description: Informazioni sul team, la community e la mission di ethereum.org
 lang: it
-sidebar: true
 ---
 
 # Informazioni su ethereum.org {#about-ethereumorg}
@@ -32,7 +31,7 @@ Vogliamo catturare l'interesse dei nostri utenti e rispondere alle loro domande 
 
 [La community di Ethereum](/community/) è al centro di questo: non dobbiamo limitarci a servire la community, bensì lavorarci assieme ed incorporarne il feedback. Il sito web non è solo per la community di oggi, ma anche per quella che speriamo di veder crescere. Ricordiamoci che la nostra community è globale, e include quindi persone di svariate lingue, regioni e culture.
 
-### 2. ethereum.org è in continua evoluzione 🛠 {#core-principles-2}
+### 2. ethereum.org è in continua evoluzione {#core-principles-2}
 
 Ethereum e la sua community sono in continua evoluzione. ethereum.org lo sarà di conseguenza. Ecco perché il sito ha una progettazione semplice e una struttura modulare. Apportiamo continui cambiamenti man mano che capiamo come viene utilizzato il sito e cosa cerca la community.
 
@@ -40,7 +39,7 @@ Siamo open source, con una community di collaboratori, quindi anche tu puoi prop
 
 [Come contribuire](/contributing/)
 
-### 3. ethereum.org non è uno dei soliti siti che propongono prodotti 🦄 {#core-principles-3}
+### 3. ethereum.org non è uno dei soliti siti che propongono prodotti {#core-principles-3}
 
 Ethereum è tanta roba: include una community, una tecnologia, una serie di idee, ideologie e non solo. Significa che il sito deve gestire numerosi percorsi degli utenti, ognuno diverso dall'altro, dallo "sviluppatore che cerca uno strumento specifico" al "novellino che ha appena acquistato degli ETH e non sa cosa sia un portafoglio"
 
@@ -57,10 +56,6 @@ Abbiamo una [guida di stile](/contributing/style-guide/) per standardizzare cert
 Apprezziamo feedback sia sui principi di design che sulla guida di stile. Ricorda, ethereum.org è per la community, dalla community.
 
 Assicurati di leggere [i nostri principi](/contributing/design-principles/) e [la nostra guida di stile](/contributing/style-guide/) se desideri [contribuire al sito](/contributing/).
-
-## Roadmap {#roadmap}
-
-<Roadmap />
 
 ## Posizioni aperte {#open-jobs}
 

@@ -2,7 +2,6 @@
 title: À propos de nous
 description: À propos de l'équipe, de la communauté et de la mission d'ethereum.org
 lang: fr
-sidebar: true
 ---
 
 # À propos d'ethereum.org {#about-ethereumorg}
@@ -57,10 +56,6 @@ Nous nous appuyons sur un [guide de style](/contributing/style-guide/) pour stan
 Nous vous invitons à nous faire part de vos commentaires sur les principes de conception et le guide de style. Rappelez-vous qu'ethereum.org est fait pour la communauté, par la communauté.
 
 Assurez-vous de lire [nos principes](/contributing/design-principles/) et [notre guide de style](/contributing/style-guide/) si vous souhaitez [contribuer au site](/contributing/).
-
-## Feuille de route {#roadmap}
-
-<Roadmap />
 
 ## Offres d'emploi {#open-jobs}
 

@@ -2,7 +2,6 @@
 title: Ethereum Java fejlesztőknek
 description: Tanulj meg Ethereumon fejleszteni Java alapú projektek és eszközök használatával
 lang: hu
-sidebar: true
 incomplete: true
 ---
 

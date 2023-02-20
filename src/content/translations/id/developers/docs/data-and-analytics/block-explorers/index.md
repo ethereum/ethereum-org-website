@@ -2,7 +2,6 @@
 title: Penjelajah blok
 description: Pengantar tentang penjelajah blok, portal Anda ke dunia data blockchain, di mana Anda dapat membuat kueri informasi tentang transaksi, akun, kontrak, dan banyak lagi.
 lang: id
-sidebar: true
 sidebarDepth: 3
 ---
 

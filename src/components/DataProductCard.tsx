@@ -1,102 +1,19 @@
 import React from "react"
-import styled from "styled-components"
-import { GatsbyImage } from "gatsby-plugin-image"
 
-import Link from "./Link"
-
-const ImageWrapper = styled.div<{
-  background: string
-}>`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background: ${(props) => props.background};
-  box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
-  min-height: 200px;
-`
-
-const Image = styled(GatsbyImage)`
-  width: 100%;
-  align-self: center;
-  max-width: 372px;
-  max-height: 257px;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    max-width: 311px;
-  }
-`
-
-const Card = styled(Link)`
-  color: ${(props) => props.theme.colors.text};
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  display: flex;
-  flex-direction: column;
-  background: ${(props) => props.theme.colors.searchBackground};
-  border-radius: 4px;
-  border: 1px solid ${(props) => props.theme.colors.lightBorder};
-  text-decoration: none;
-  &:hover {
-    box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
-    transition: transform 0.1s;
-    transform: scale(1.02);
-  }
-`
-
-const Content = styled.div`
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-`
-
-const Title = styled.h3`
-  margin: 2rem 1rem;
-  margin-bottom: 1rem;
-`
-
-const Description = styled.p`
-  opacity: 0.8;
-  font-size: ${(props) => props.theme.fontSizes.s};
-  margin-left: 1rem;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  line-height: 140%;
-`
-
-const DataRow = styled.div`
-  border-bottom: 1px solid ${(props) => props.theme.colors.lightBorder};
-  color: ${(props) => props.theme.colors.text300};
-  display: flex;
-  font-size: ${(props) => props.theme.fontSizes.s};
-  justify-content: space-between;
-  padding-right: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin-left: 1rem;
-  text-transform: uppercase;
-`
-
-const Data = styled.div`
-  overflow-y: scroll;
-  max-height: 160px;
-  margin-bottom: 1rem;
-  border-top: 1px solid ${(props) => props.theme.colors.lightBorder};
-`
-
-const Box = styled.div`
-  display: flex;
-  align-items: center;
-`
-
-const Logo = styled(GatsbyImage)`
-  min-width: 24px;
-  margin-right: 0.5rem;
-`
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
+import {
+  Box,
+  Flex,
+  Heading,
+  Image,
+  Text,
+  LinkOverlay,
+  LinkBox,
+  useColorModeValue,
+} from "@chakra-ui/react"
 
 export interface DataRow {
-  logo: string
+  logo: IGatsbyImageData
   coin: string
   apy: string
 }
@@ -104,7 +21,7 @@ export interface DataRow {
 export interface IProps {
   url: string
   background: string
-  image: string
+  image: IGatsbyImageData
   alt?: string
   name: string
   description?: string
@@ -119,31 +36,111 @@ const DataProductCard: React.FC<IProps> = ({
   name,
   description,
   data,
-}) => (
-  <Card hideArrow={true} to={url}>
-    <ImageWrapper background={background}>
-      <Image image={image} alt={alt ? alt : `${name} logo`} />
-    </ImageWrapper>
-    <Content>
-      <div>
-        <Title>{name}</Title>
-        {description && <Description>{description}</Description>}
-      </div>
-      {data && (
-        <Data>
-          {data.map(({ logo, coin, apy }, idx) => (
-            <DataRow key={idx}>
-              <Box>
-                {logo && <Logo image={logo} />}
-                {coin}
-              </Box>
-              <div>{apy}% APY</div>
-            </DataRow>
-          ))}
-        </Data>
-      )}
-    </Content>
-  </Card>
-)
+}) => {
+  const boxShadow = useColorModeValue("tableBox.light", "tableBox.dark")
+
+  return (
+    <LinkBox
+      color="text"
+      background="searchBackground"
+      border="1px solid"
+      borderColor="lightBorder"
+      borderRadius="base"
+      overflow="hidden"
+      boxShadow={boxShadow}
+      display="flex"
+      flexDirection="column"
+      _hover={{
+        background: "tableBackgroundHover",
+        boxShadow: boxShadow,
+        transition: "transform 0.1s ease 0s",
+        transform: "scale(1.02)",
+      }}
+    >
+      <Flex
+        alignItems="center"
+        justifyContent="center"
+        boxShadow="rgb(0 0 0 / 10%) 0px -1px 0px inset;"
+        minH="200px"
+        bg={background}
+      >
+        <Image
+          as={GatsbyImage}
+          image={image}
+          objectFit="cover"
+          alt={alt ? alt : `${name} logo`}
+          width="100%"
+          alignSelf="center"
+          maxWidth={{ base: "311px", sm: "372px" }}
+          maxHeight="257px"
+        />
+      </Flex>
+      <Flex
+        textAlign="left"
+        flexDirection="column"
+        justifyContent="space-between"
+      >
+        <Box>
+          <Heading
+            as="h3"
+            size="lg"
+            fontSize="2xl"
+            fontWeight="600"
+            lineHeight="1.4"
+            my={8}
+            mx={4}
+            mb={4}
+          >
+            <LinkOverlay href={url} isExternal>
+              {name}
+            </LinkOverlay>
+          </Heading>
+          <Text fontSize="sm" opacity="0.8" mx={4} mb={4} lineHeight="140%">
+            {description}
+          </Text>
+        </Box>
+        {data && (
+          <Box
+            overflowY="scroll"
+            maxHeight="160px"
+            mb={4}
+            borderTop="1px solid"
+            borderColor="lightBorder"
+          >
+            {data.map(({ logo, coin, apy }, idx) => (
+              <Flex
+                key={idx}
+                color="text300"
+                fontSize="sm"
+                justify="space-between"
+                p={4}
+                textTransform="uppercase"
+                border="1px solid"
+                borderColor="lightBorder"
+                borderLeft="0"
+                borderRight="0"
+              >
+                <Flex alignItems="center">
+                  {logo && (
+                    <Image
+                      as={GatsbyImage}
+                      image={logo}
+                      objectFit="cover"
+                      alt=""
+                      minWidth="24px"
+                      marginRight="0.5rem"
+                    />
+                  )}
+                  {coin}
+                </Flex>
+                <Flex alignItems="center">{apy}% APY</Flex>
+              </Flex>
+            ))}
+          </Box>
+        )}
+      </Flex>
+    </LinkBox>
+  )
+}
 
 export default DataProductCard

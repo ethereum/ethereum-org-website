@@ -2,7 +2,6 @@
 title: Guida per i traduttori
 lang: it
 description: Istruzioni e suggerimenti per i traduttori di ethereum.org
-sidebar: true
 ---
 
 # Guida di stile per la traduzione di ethereum.org {#style-guide}
@@ -83,15 +82,29 @@ Di seguito puoi trovare alcuni esempi di come queste stringhe appaiono ai tradut
 
 ### Avvisi di Crowdin {#crowdin-warnings}
 
-Crowdin offre una funzionalità integrata che avvisa i traduttori quando stanno per commettere un errore. Se digiti una traduzione ma dimentichi di includere un tag del testo sorgente, oppure traduci elementi che non vanno tradotti, aggiungi spazi multipli consecutivi, dimentichi la punteggiatura finale, ecc., Crowdin ti avvisa automaticamente prima di salvare la tua traduzione. Se visualizzi un avviso simile a questo, ti invitiamo a tornare indietro e ricontrollare la traduzione inserita.
+Crowdin offre una funzionalità integrata che avvisa i traduttori quando stanno per commettere un errore. Crowdin ti avviserà automaticamente di questo prima di salvare la tua traduzione se dimentichi di includere un tag dal testo sorgente, se traduci elementi che non dovrebbero essere tradotti, se inserisci più spazi consecutivi, dimentichi la punteggiatura finale, ecc. Se visualizzi un avviso simile a questo, ti invitiamo a tornare indietro e ricontrollare la traduzione inserita.
 
 **Non ignorare mai questi avvisi, poiché solitamente significano che c'è qualcosa che non va o che manca una parte fondamentale del testo di partenza.**
 
-Un esempio di avviso di Crowdin quando dimentichi di aggiungere un tag nella tua traduzione: ![Esempio di avviso di Crowdin.png](./crowdin-warning-example.png)
+Un esempio di avviso di Crowdin quando dimentichi di aggiungere un tag nella tua traduzione: ![Esempio di avviso di Crowdin](./crowdin-warning-example.png)
 
 ### Gestire tag e frammenti di codice {#dealing-with-tags}
 
 Molti dei contenuti di origine contengono tag e variabili, evidenziati in giallo nell'editor di Crowdin. Questi svolgono diverse funzioni e dovrebbero essere trattati correttamente.
+
+**Impostazioni di Crowdin**
+
+Per semplificare la gestione dei tag e copiarli direttamente dal testo di partenza, consigliamo di modificare le tue impostazioni nell'editor di Crowdin.
+
+1. Apri le impostazioni ![Come aprire le impostazioni nell'editor](./editor-settings.png)
+
+2. Scorri verso il basso fino alla sezione "HTML tags displaying”
+
+3. Seleziona "Hide"![Seleziona "Hide"](./hide-tags.png)
+
+4. Fai clic su "Save"
+
+Selezionando quest'opzione, il testo del tag completo non sarà più mostrato e sarà sostituito da un numero. Durante la traduzione, facendo clic su questo tag si copierà automaticamente lo stesso tag nel campo di traduzione.
 
 **Link**
 
@@ -103,7 +116,7 @@ Il modo migliore per gestire i collegamenti è copiarli direttamente dal testo d
 
 ![Esempio di link.png](./example-of-link.png)
 
-I link appaiono nel testo sorgente anche sotto forma di tag (cioè <0> </0>). Se passi sul tag, l'editor ne mostrerà il contenuto completo; talvolta questi tag rappresentano dei link.
+I link appaiono nel testo di partenza anche sotto forma di tag (cioè <0> </0>). Se passi sul tag, l'editor ne mostrerà il contenuto completo; talvolta questi tag rappresentano dei link.
 
 È molto importante copiare i link dal testo di partenza senza modificarne l'ordine.
 
@@ -113,7 +126,7 @@ Se l'ordine dei tag viene modificato, il link corrispondente risulterà corrotto
 
 **Tag e variabili**
 
-Il testo di partenza può contenere diversi tipi di tag, che dovrebbero sempre essere copiati dalla sorgente e mai modificati. In modo simile a quanto detto sopra, l'ordine di questi tag nella traduzione dovrebbe anch'esso rimanere identico a quello del testo originale.
+Il testo di partenza può contenere diversi tipi di tag, che dovrebbero sempre essere copiati dalla sorgente e mai modificati. Analogamente a quanto detto sopra, anche l'ordine di questi tag nella traduzione dovrebbe rimanere identico a quello del testo originale.
 
 I tag contengono sempre un tag d'apertura e uno di chiusura. In gran parte dei casi, il testo tra i tag d'apertura e di chiusura va tradotto.
 
@@ -125,7 +138,7 @@ Decentralizzato - _Testo traducibile_
 
 `</strong>` - _Tag di chiusura_
 
-![Esempio di tag 'forti'.png](./example-of-strong-tags.png)
+![Esempio di tag "forti".png](./example-of-strong-tags.png)
 
 I frammenti di codice vanno trattati in maniera leggermente diversa rispetto agli altri tag, poiché contengono codice che non va tradotto.
 
@@ -139,27 +152,27 @@ nonce - _Testo non traducibile_
 
 ![Esempio di frammenti di codice.png](./example-of-code-snippets.png)
 
-Il testo di partenza contiene tag abbreviati, contenenti solo numeri, il che significa che la loro funzione non è immediatamente ovvia. Puoi passare su questi tag per vedere esattamente quale scopo assolvono.
+Il testo di partenza contiene anche tag abbreviati, contenenti solo numeri, il che significa che la loro funzione non è immediatamente ovvia. Puoi passare su questi tag per vedere esattamente quale scopo assolvono.
 
-Nell'esempio seguente, passando con il mouse su <0> puoi vedere che che il tag rappresenta `<code>` e contiene un frammento di codice, quindi il contenuto non va tradotto.
+Nell'esempio seguente, passando con il mouse sul <0> tag puoi vedere che rappresenta `<code>` e contiene un frammento di codice, quindi il contenuto non va tradotto.
 
 ![Esempio di tag ambigui.png](./example-of-ambiguous-tags.png)
 
 ### Formule/abbreviazioni brevi vs. complete {#short-vs-full-forms}
 
-Sul sito web vengono usate molte abbreviazioni, ad es. dApp, NFT, DAO, DeFi, ecc. Queste abbreviazioni sono comunemente usate in inglese e gran parte dei visitatori del sito web ne è a conoscenza.
+Nel sito web sono usate molte abbreviazioni, es. dapp, NFT, DAO, DeFi, ecc. Queste abbreviazioni sono comunemente usate in inglese e gran parte dei visitatori del sito web ne è a conoscenza.
 
 Dal momento che di solito non esistono traduzioni attestate in altre lingue, il modo migliore per trattare questi termini e altri simili è quello di fornire una traduzione descrittiva della forma estesa e aggiungere l'abbreviazione inglese tra parentesi.
 
 Non tradurre queste abbreviazioni, poiché la maggior parte delle persone non le conoscerebbe e le versioni localizzate non avrebbero molto senso per la maggior parte dei visitatori.
 
-Esempio di come tradurre dApp:
+Esempio di come tradurre le dapp:
 
-- Applicazioni decentralizzate (dApp) → _Traduzione della forma estesa (abbreviazione inglese tra parentesi)_
+- Applicazioni decentralizzate (dApp) → _Tradotto integralmente (abbreviazione tra parentesi)_
 
 ### Termini senza traduzioni attestate {#terms-without-established-translations}
 
-Alcuni termini potrebbero non avere traduzioni attestate in altre lingue e sono ampiamente noti con il termine originale in inglese. Tali termini includono principalmente concetti recenti, come proof-of-work, proof-of-stake, Beacon Chain, staking, ecc.
+Alcuni termini potrebbero non avere traduzioni attestate in altre lingue e sono ampiamente noti con il termine originale in inglese. Tali termini includono principalmente concetti recenti, come Proof of Work, Proof of Stake, Beacon Chain, staking, ecc.
 
 Sebbene la traduzione di questi termini possa sembrare innaturale, poiché la versione inglese è comunemente usata anche in altre lingue, si consiglia vivamente di tradurli.
 
@@ -169,9 +182,9 @@ Traducendoli, sentiti libero di essere creativo, usa traduzioni descrittive o se
 
 ### Pulsanti e CTA {#buttons-and-ctas}
 
-Il sito web contiene numerosi pulsanti, che dovrebbero esser tradotti in modo diverso dagli altri contenuti.
+Il sito web contiene numerosi pulsanti, che dovrebbero essere tradotti in modo diverso dagli altri contenuti.
 
-Il testo del pulsante può essere identificato visualizzando gli screenshot contestuali, associati a gran parte delle stringhe, o visualizzando il contesto nell'editor, che include il segmento "pulsante".
+Il testo del pulsante può essere identificato visualizzando gli screenshot contestuali, associati a gran parte delle stringhe, o controllando il contesto nell'editor, che include l'espressione "button".
 
 Le traduzioni dei pulsanti dovrebbero essere il più possibile brevi, onde evitare mancate corrispondenze di formattazione. Inoltre, le traduzioni dei pulsanti dovrebbero essere in forma imperativa, ovvero indicare un comando o una richiesta.
 
@@ -199,28 +212,28 @@ Alcuni esempi di aspetti a cui prestare particolare attenzione:
 
 **Maiuscole/minuscole**
 
-- Ci sono vaste differenze nella capitalizzazione nelle diverse lingue.
+- Esistono notevoli differenze nell'uso delle maiuscole/minuscole nelle varie lingue.
 - In inglese, è comune usare la maiuscola per tutte le parole di titoli e nomi, mesi e giorni, nomi di lingue, festività, ecc. In molte altre lingue, questo è sbagliato dal punto di vista grammaticale, in quanto vigono regole diverse sull'uso delle maiuscole/minuscole.
 - Alcune lingue hanno anche regole sull'uso della maiuscola per pronomi personali, sostantivi e alcuni aggettivi, che in inglese vengono scritti con l'iniziale minuscola.
 
 **Spaziatura**
 
-- Le regole ortografiche definiscono l'uso degli spazi per ogni lingua. Poiché gli spazi sono usati ovunque, queste regole sono alcune delle più distinte e gli spazi sono alcuni degli elementi più tradotti in modo errato.
+- Le regole ortografiche definiscono l'uso degli spazi per ogni lingua. Poiché gli spazi sono usati ovunque, queste regole sono alcune delle più distinte e gli spazi sono alcuni degli elementi maggiormente tradotti in modo improprio.
 - Alcune differenze comuni nella spaziatura tra l'inglese e altre lingue:
-  - Spazio prima dell'unità di misura e delle valute (es., USD, EUR, kB, MB)
+  - Spazio prima dell'unità di misura e delle valute (es. USD, EUR, kB, MB)
   - Spazio prima dei segni di grado (es. °C, ℉)
   - Spazio prima di certi segni di punteggiatura, specialmente i puntini di sospensione (…)
   - Spazio prima e dopo le barre (/)
 
 **Elenchi**
 
-- Ogni lingua ha una diversa e complessa serie di regole per la scrittura di elenchi. Questi possono esser significativamente differenti dall'inglese.
+- Ogni lingua ha una diversa e complessa serie di regole per la redazione di elenchi. Questi possono differire significativamente rispetto all'inglese.
 - In alcune lingue, la prima parola di ogni nuova riga deve essere maiuscola, mentre in altre le nuove righe devono iniziare con lettere minuscole. Molte lingue hanno anche regole differenti sull'uso delle maiuscole/minuscole negli elenchi, a seconda della lunghezza di ogni riga.
 - Lo stesso si applica alla punteggiatura dei vari punti dell'elenco. La punteggiatura finale negli elenchi può essere un punto (**.**), una virgola (**,**) o un punto e virgola (**;**), a seconda della lingua.
 
 **Virgolette**
 
-- Le lingue usano molte virgolette differenti. Copiare semplicemente le virgolette inglesi dalla fonte è spesso errato.
+- Le varie lingue usano tipi diversi di virgolette. Copiare semplicemente le virgolette inglesi dal segmento originale spesso è sbagliato.
 - Tra i tipi più comuni di virgolette troviamo:
   - „testo di esempio“
   - ‚testo di esempio’
@@ -231,27 +244,27 @@ Alcuni esempi di aspetti a cui prestare particolare attenzione:
 
 **Trattini lunghi e corti**
 
-- In inglese, un meno (-) è usato per unire parole o differenti parti di una parola, mentre un trattino (–) è usato per indicare un intervallo o una pausa.
+- In inglese si utilizza un trattino corto (-) per unire parole o parti diverse di una parola e un trattino lungo (–) per indicare un intervallo o una pausa.
 - Molte lingue hanno regole diverse per l'uso di trattini corti e lunghi, che dovrebbero essere osservate.
 
 ### Formati {#formats}
 
 **Numeri**
 
-- La differenza principale nella scrittura dei numeri in diverse lingue è il separatore usato per decimali e migliaia. Per le migliaia, può essere un punto, una virgola o uno spazio. Similmente, alcune lingue usano un punteo decimale, mentre altre usano una virgola decimale.
+- La differenza principale nella scrittura dei numeri nelle varie lingue riguarda il separatore usato per decimali e migliaia. Per le migliaia, può essere un punto, una virgola o uno spazio. Analogamente, alcune lingue usano un punto decimale, mentre altre usano una virgola.
   - Alcuni esempi di grandi numeri:
     - Inglese – **1,000.50**
     - Spagnolo – **1.000,50**
     - Francese – **1 000,50**
 - Un'altra considerazione importante sulla traduzione dei numeri riguarda il segno percentuale. Può essere scritto in diversi modi: **100%**, **100 %** o **%100**.
-- Infine, i numeri negativi possono essere mostrati in modo diverso, a seconda della lingua: -100, 100- (100) o [100].
+- Infine, i numeri negativi possono esser scritti diversamente, a secnda della lingua: -100, 100-, (100) o [100].
 
 **Date**
 
-- Per la traduzione delle date, occorre tenere conto di una serie di considerazioni e differenze basate sulla lingua, tra cui il formato della data, il separatore, l'uso delle maiuscole/minuscole e gli zeri iniziali. Esistono anche differenze tra le date scritte per esteso e le date numeriche.
+- Traducendo le date, esistono numerose considerazioni e differenze basate sulla lingua. Ciò include il formato della data, il separatore, l'uso di maiuscole e minuscole e gli zeri iniziali. Esistono anche differenze tra le date scritte per esteso e le date numeriche.
   - Alcuni esempi di formati di data diversi:
-    - English UK (mm/dd/yyyy) – 1st January, 2022
-    - Inglese USA (gg/mm/aaaa) – January 1, 2022
+    - Inglese UK (gg/mm/aaaa) – 1st January, 2022
+    - Inglese US (mm/gg/aaaa) – January 1st, 2022
     - Cinese (aaaa-mm-gg) – 2022 年 1 月 1 日
     - Francese (gg/mm/aaaa) – 1er janvier 2022
     - Italiano (gg/mm/aaaa) – 1º gennaio 2022
@@ -259,7 +272,7 @@ Alcuni esempi di aspetti a cui prestare particolare attenzione:
 
 **Valute**
 
-- Tradurre le valute può esser impegnativo, a causa dei diversi formati, convenzioni e conversioni. Come regola generale, sei pregato di mantenere le valute come dalla fonte. Puoi aggiungere la tua valuta locale e conversione tra parentesi, a beneficio del lettore.
+- Tradurre le valute può essere complicato, a causa dei diversi formati, convenzioni e conversioni. Come regola generale, consigliamo di lasciare la valuta riportata nel testo originale. Puoi aggiungere la tua valuta locale e la conversione tra parentesi, per comodità del lettore.
 - Le principali differenze nella scrittura delle valute nelle varie lingue riguardano il posizionamento dei simboli, l'uso di virgole o punti decimali, la spaziatura e l'uso di abbreviazioni o simboli.
   - Posizionamento del simbolo: $100 o 100$
   - Virgole vs. punti decimali: 100,50$ o 100.50$
@@ -268,8 +281,8 @@ Alcuni esempi di aspetti a cui prestare particolare attenzione:
 
 **Unità di misura**
 
-- Come regola generale, sei pregato di mantenere le unità di misura come per la sorgente. Se il tuo paese usa un sistema differente, puoi includere la conversione tra parentesi.
-- Oltre alla localizzazione delle unità di misura, è importante notare anche il diverso trattamento di tali unità nelle varie lingue. La differenza principale riguarda la spaziatura tra numero e unità, che può variare in base alla lingua. Ed esempio: 100kB o 100 kB, 50°F o 50 °F.
+- Come regola generale, consigliamo di lasciare le unità di misura come appaiono nel testo originale. Se il tuo paese usa un sistema differente, puoi includere la conversione tra parentesi.
+- Oltre alla localizzazione delle unità di misura, è importante notare anche il diverso trattamento di tali unità nelle varie lingue. La differenza principale riguarda la spaziatura tra numero e unità, che può variare in base alla lingua. Esempi di ciò includono: 100kB o 100 kB, 50°F o 50 °F.
 
 ### Conclusioni {#conclusion}
 
@@ -277,4 +290,4 @@ Tradurre ethereum.org è una grande opportunità per conoscere i diversi aspetti
 
 Quando traduci, cerca di non andare troppo in fretta. Prendila con calma e goditi l'esperienza!
 
-Grazie per aver partecipato al Programma di traduzione e per averci aiutato a rendere il sito web accessibile a un pubblico più ampio. La comunità di Ethereum è globale e siamo felici che tu ne faccia parte!
+Grazie per aver partecipato al Programma di Traduzione e per averci aiutato a rendere il sito web accessibile a un pubblico più ampio. La comunità di Ethereum è globale e siamo felici che tu ne faccia parte!

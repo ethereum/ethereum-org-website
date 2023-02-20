@@ -2,7 +2,6 @@
 title: Biblioteki JavaScript API
 description: Wprowadzenie do bibliotek klienta JavaScript, które umożliwiają interakcję z blockchainem z poziomu aplikacji.
 lang: pl
-sidebar: true
 ---
 
 Aby aplikacja mogła wchodzić w interakcję z blockchainem Ethereum (tj. odczytywać dane blockchainu i/lub wysyłać transakcje do sieci), musi łączyć się z węzłem Ethereum.
@@ -243,7 +242,7 @@ eterach. tils.formatEther(balance)
 
 **Alchemyweb3 -** **_Wrapper wokół Web3.js z automatycznymi ponownymi próbami i ulepszonymi apis._**
 
-- [Dokumentacja](https://docs.alchemyapi.io/documentation/alchemy-web3)
+- [Dokumentacja](https://docs.alchemy.com/reference/api-overview)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
 ## Dodatkowo przeczytaj {#further-reading}

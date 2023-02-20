@@ -19,7 +19,7 @@ export const lambda = async (apiKey: string): Promise<HandlerResponse> => {
     const { data } = response
     return {
       statusCode: 200,
-      body: JSON.stringify(data),
+      body: JSON.stringify(data.result),
     }
   } catch (error) {
     console.error(error)

@@ -2,7 +2,6 @@
 title: Pustaka API JavaScript
 description: Pengantar pustaka klien JavaScript yang memungkinkan Anda berinteraksi dengan blockchain dari aplikasi Anda.
 lang: id
-sidebar: true
 ---
 
 Agar aplikasi web dapat berinteraksi dengan blockchain Ethereum (yaitu membaca data blockchain dan/atau mengirim transaksi ke jaringan), aplikasi harus terhubung ke node Ethereum.
@@ -265,7 +264,7 @@ ethers.utils.formatEther(balance)
 
 **Alchemyweb3 -** **_Wrapper Web3.js dengan percobaan ulang otomatis dan api yang ditingkatkan._**
 
-- [Dokumentasi](https://docs.alchemyapi.io/documentation/alchemy-web3)
+- [Dokumentasi](https://docs.alchemy.com/reference/api-overview)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
 ## Bacaan lebih lanjut {#further-reading}

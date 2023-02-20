@@ -2,7 +2,6 @@
 title: Standard za žetone ERC-777
 description:
 lang: sl
-sidebar: true
 ---
 
 ## Uvod? {#introduction}

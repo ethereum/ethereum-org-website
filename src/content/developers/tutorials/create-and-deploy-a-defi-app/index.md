@@ -5,7 +5,6 @@ author: "strykerin"
 tags: ["solidity", "defi", "web3.js", "truffle", "ganache", "smart contracts"]
 skill: intermediate
 lang: en
-sidebar: true
 published: 2020-12-31
 source: github.com
 sourceUrl: https://github.com/strykerin/DeFi-Token-Farm
@@ -146,7 +145,7 @@ The address used to deploy our contracts is the first one from the list of addre
 
 To verify that 1 million MyToken tokens have been sent to the deployer address, we can use the Truffle Console to interact with our deployed smart contract.
 
-> [Truffle Console is a a basic interactive console connecting to any Ethereum client.](https://www.trufflesuite.com/docs/truffle/getting-started/using-truffle-develop-and-the-console)
+> [Truffle Console is a basic interactive console connecting to any Ethereum client.](https://www.trufflesuite.com/docs/truffle/getting-started/using-truffle-develop-and-the-console)
 
 In order to interact with our smart contract, run the following command:
 
@@ -473,4 +472,4 @@ _output of withdrawMyTokenFromTokenFarm.js_
 
 [What is DeFi? A Beginner's Guide (2021 Updated) (99bitcoins.com)](https://99bitcoins.com/what-is-defi/)
 
-[DeFi - The Decentralized Finance Leaderboard at DeFi Pulse](https://defipulse.com/)
+[DeFi - The Decentralized Finance Leaderboard at DeFi Llama](https://defillama.com/)

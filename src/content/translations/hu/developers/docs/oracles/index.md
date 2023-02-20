@@ -2,7 +2,6 @@
 title: Orákulumok
 description: Az orákulumok segítségével külvilági adatokat vihetsz be az Ethereum alkalmazásodba, mivel az okosszerződések nem tudnak külvilági adatokat saját maguk lekérdezni.
 lang: hu
-sidebar: true
 incomplete: true
 isOutdated: true
 ---

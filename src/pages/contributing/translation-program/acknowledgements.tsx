@@ -1,9 +1,10 @@
 // Libraries
-import React, { useContext } from "react"
+import React from "react"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
-import styled, { ThemeContext } from "styled-components"
+import styled from "@emotion/styled"
+import { useTheme } from "@emotion/react"
 import type { Context } from "../../../types"
 
 // Components
@@ -14,10 +15,11 @@ import PageMetadata from "../../../components/PageMetadata"
 import Translation from "../../../components/Translation"
 import TranslationLeaderboard from "../../../components/TranslationLeaderboard"
 import { Content, Page } from "../../../components/SharedStyledComponents"
+import FeedbackCard from "../../../components/FeedbackCard"
 
 // Utils
 import { translateMessageId } from "../../../utils/translations"
-import FeedbackCard from "../../../components/FeedbackCard"
+import { getImage } from "../../../utils/image"
 
 // Styles
 const H1 = styled.h1`
@@ -109,8 +111,8 @@ const TranslatorAcknowledgements = ({
   location,
 }: PageProps<Queries.TranslatorAcknowledgementsPageQuery, Context>) => {
   const intl = useIntl()
-  const themeContext = useContext(ThemeContext)
-  const isDarkTheme = themeContext.isDark
+  const theme = useTheme()
+  const isDarkTheme = theme.isDark
   const themedCertificateImage = isDarkTheme
     ? data.darkThemeCertificate
     : data.lightThemeCertificate
@@ -158,7 +160,7 @@ const TranslatorAcknowledgements = ({
           </LeftColumn>
           <RightColumn>
             <Image
-              image={getImage(data.dogeComputer)}
+              image={getImage(data.dogeComputer)!}
               alt={translateMessageId(
                 "page-contributing-translation-program-acknowledgements-hero-image-alt",
                 intl
@@ -200,7 +202,7 @@ const TranslatorAcknowledgements = ({
             "page-contributing-translation-program-acknowledgements-our-translators-cta",
             intl
           )}
-          image={getImage(data.ethereum)}
+          image={getImage(data.ethereum)!}
         />
       </Content>
 
@@ -219,7 +221,7 @@ const TranslatorAcknowledgements = ({
         </p>
         <CertificateImageWrapper>
           <Image
-            image={getImage(themedCertificateImage)}
+            image={getImage(themedCertificateImage)!}
             alt="translator certificate"
             objectFit="contain"
           />

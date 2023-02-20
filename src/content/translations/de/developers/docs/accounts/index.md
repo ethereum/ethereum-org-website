@@ -2,7 +2,6 @@
 title: Ethereum-Konten
 description: Eine Erklärung der Ethereum-Konten – ihre Datenstrukturen und ihre Beziehung zur Schlüsselpaar-Kryptografie.
 lang: de
-sidebar: true
 ---
 
 Ein Ethereum-Konto ist eine Entität mit einem Ether(ETH)-Guthaben, welche Transaktionen bei Ethereum durchführen kann. Konten können benutzerkontrolliert oder als intelligenter Vertrag bereitgestellt werden.

@@ -2,7 +2,6 @@
 title: Menguji kontrak pintar
 description:
 lang: id
-sidebar: true
 incomplete: true
 ---
 

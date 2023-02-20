@@ -2,7 +2,6 @@
 title: Frameworki programistyczne zdecentralizowanych aplikacji
 description: Zapoznaj się z zaletami frameworków i porównaj dostępne opcje.
 lang: pl
-sidebar: true
 ---
 
 ## Wprowadzenie do frameworków {#introduction-to-frameworks}

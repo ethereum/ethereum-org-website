@@ -2,7 +2,6 @@
 title: 엔터프라이즈
 description: 엔터프라이즈용 공개 및 비공개 이더리움 블록체인 개발을 위한 각종 가이드, 문서 및 도구
 lang: ko
-sidebar: true
 sidebarDepth: 1
 ---
 

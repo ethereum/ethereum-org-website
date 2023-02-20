@@ -8,7 +8,6 @@ tags:
   - "代币"
 skill: beginner
 lang: zh
-sidebar: true
 published: 2021-04-06
 ---
 
@@ -98,9 +97,9 @@ window.ethersProvider.getGasPrice() // gasPrice
 
 1. **`send_accoun`**：代币发送人的地址
 2. **`to_address`**：代币接收人的地址
-3. **`send_token_amount`**：您想要发送给接收人的金额
+3. **`send_token_amount`**：您想要发送的代币数量
 4. **`gas_limit`**：燃料限制
-5. **`gas_limit`**：燃料价格
+5. **`gas_price`**：燃料价格
 
 [请参阅下文了解如何使用](#how-to-use)
 

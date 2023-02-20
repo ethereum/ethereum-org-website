@@ -2,7 +2,6 @@
 title: Jalankan node Ethereum Anda sendiri
 description: Pengenalan umum untuk menjalankan instance klien Ethereum Anda sendiri.
 lang: id
-sidebar: true
 sidebarDepth: 2
 ---
 

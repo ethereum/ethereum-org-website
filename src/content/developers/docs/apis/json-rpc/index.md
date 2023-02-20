@@ -2,14 +2,13 @@
 title: JSON-RPC API
 description: A stateless, light-weight remote procedure call (RPC) protocol for Ethereum clients.
 lang: en
-sidebar: true
 ---
 
-In order for a software application to interact with the Ethereum blockchain (by reading blockchain data and/or sending transactions to the network), it must connect to an Ethereum node.
+In order for a software application to interact with the Ethereum blockchain - either by reading blockchain data or sending transactions to the network - it must connect to an Ethereum node.
 
-For this purpose, every [Ethereum client](/developers/docs/nodes-and-clients/#execution-clients) implements a [JSON-RPC specification](http://www.jsonrpc.org/specification), so there are a uniform set of methods that applications can rely on.
+For this purpose, every [Ethereum client](/developers/docs/nodes-and-clients/#execution-clients) implements a [JSON-RPC specification](https://github.com/ethereum/execution-apis), so there are a uniform set of methods that applications can rely on regardless of the specific node or client implementation.
 
-JSON-RPC is a stateless, light-weight remote procedure call (RPC) protocol. It defines several data structures and the rules around their processing. It is transport agnostic in that the concepts can be used within the same process, over sockets, over HTTP, or in many various message passing environments. It uses JSON (RFC 4627) as data format.
+[JSON-RPC](https://www.jsonrpc.org/specification) is a stateless, light-weight remote procedure call (RPC) protocol. It defines several data structures and the rules around their processing. It is transport agnostic in that the concepts can be used within the same process, over sockets, over HTTP, or in many various message passing environments. It uses JSON (RFC 4627) as data format.
 
 ## Client implementations {#client-implementations}
 
@@ -19,7 +18,13 @@ Ethereum clients each may utilize different programming languages when implement
 
 While you may choose to interact directly with Ethereum clients via the JSON-RPC API, there are often easier options for dapp developers. Many [JavaScript](/developers/docs/apis/javascript/#available-libraries) and [backend API](/developers/docs/apis/backend/#available-libraries) libraries exist to provide wrappers on top of the JSON-RPC API. With these libraries, developers can write intuitive, one-line methods in the programming language of their choice to initialize JSON-RPC requests (under the hood) that interact with Ethereum.
 
-## Spec {#spec}
+## Consensus client APIs {#consensus-clients}
+
+This page deals mainly with the JSON-RPC API used by Ethereum execution clients. However, consensus clients also have an RPC API that allows users to query information about the node, request Beacon blocks, Beacon state, and other consensus-related information directly from a node. This API is documented on the [Beacon API webpage](https://ethereum.github.io/beacon-APIs/#/).
+
+An internal API is also used for inter-client communication within a node - that is, it enables the consensus client and execution client to swap data. This is called the 'Engine API' and the specs are available on [Github](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
+
+## Execution client spec {#spec}
 
 [Read the full JSON-RPC API spec on GitHub](https://github.com/ethereum/execution-apis).
 
@@ -194,7 +199,7 @@ None
 
 `String` - The current network id.
 
-The full list of current network IDs is available at [chainlist.org](https://chainlist.org). Sopme common ones are:
+The full list of current network IDs is available at [chainlist.org](https://chainlist.org). Some common ones are:
 `1`: Ethereum Mainnet
 `2`: Morden testnet (now deprecated)
 `3`: Ropsten testnet
@@ -214,7 +219,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67
 }
 ```
 
-### net_listening {#net_peercount}
+### net_listening {#net_listening}
 
 Returns `true` if client is actively listening for network connections.
 
@@ -239,7 +244,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":
 }
 ```
 
-### net_peerCount {#net_listening}
+### net_peerCount {#net_peercount}
 
 Returns number of peers currently connected to the client.
 
@@ -266,7 +271,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":
 
 ### eth_protocolVersion {#eth_protocolversion}
 
-Returns the current Ethereum protocol version.
+Returns the current Ethereum protocol version. Note that this method is [not available in Geth](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924).
 
 **Parameters**
 
@@ -1196,7 +1201,7 @@ Returns the receipt of a transaction by transaction hash.
 1. `DATA`, 32 Bytes - hash of a transaction
 
 ```js
-params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"]
+params: ["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"]
 ```
 
 **Returns**
@@ -1208,11 +1213,13 @@ params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"]
 - `blockNumber`: `QUANTITY` - block number where this transaction was in.
 - `from`: `DATA`, 20 Bytes - address of the sender.
 - `to`: `DATA`, 20 Bytes - address of the receiver. null when its a contract creation transaction.
-- `cumulativeGasUsed `: `QUANTITY ` - The total amount of gas used when this transaction was executed in the block.
+- `cumulativeGasUsed` : `QUANTITY ` - The total amount of gas used when this transaction was executed in the block.
+- `effectiveGasPrice` : `QUANTITY` - The sum of the base fee and tip paid per unit of gas.
 - `gasUsed `: `QUANTITY ` - The amount of gas used by this specific transaction alone.
 - `contractAddress `: `DATA`, 20 Bytes - The contract address created, if the transaction was a contract creation, otherwise `null`.
 - `logs`: `Array` - Array of log objects, which this transaction generated.
 - `logsBloom`: `DATA`, 256 Bytes - Bloom filter for light clients to quickly retrieve related logs.
+- `type`: `DATA` - integer of the transaction type, `0x00` for legacy transactions, `0x01` for access list types, `0x02` for dynamic fees.
   It also returns _either_ :
 - `root` : `DATA` 32 bytes of post-transaction stateroot (pre Byzantium)
 - `status`: `QUANTITY` either `1` (success) or `0` (failure)
@@ -1221,24 +1228,30 @@ params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"]
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","params":["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","params":["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"],"id":1}'
 // Result
 {
-"id":1,
-"jsonrpc":"2.0",
-"result": {
-     transactionHash: '0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238',
-     transactionIndex:  '0x1', // 1
-     blockNumber: '0xb', // 11
-     blockHash: '0xc6ef2fc5426d6ad6fd9e2a26abeab0aa2411b7ab17f30a99d3cb96aed1d1055b',
-     cumulativeGasUsed: '0x33bc', // 13244
-     gasUsed: '0x4dc', // 1244
-     contractAddress: '0xb60e8dd61c5d32be8058bb8eb970870f07233155', // or null, if none was created
-     logs: [{
-         // logs as returned by getFilterLogs, etc.
-     }, ...],
-     logsBloom: "0x00...0", // 256 byte bloom filter
-     status: '0x1'
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "blockHash":
+      "0xa957d47df264a31badc3ae823e10ac1d444b098d9b73d204c40426e57f47e8c3",
+    "blockNumber": "0xeff35f",
+    "contractAddress": null, // string of the address if it was created
+    "cumulativeGasUsed": "0xa12515",
+    "effectiveGasPrice": "0x5a9c688d4",
+    "from": "0x6221a9c005f6e47eb398fd867784cacfdcfff4e7",
+    "gasUsed": "0xb4c8",
+    "logs": [{
+      // logs as returned by getFilterLogs, etc.
+    }],
+    "logsBloom": "0x00...0", // 256 byte bloom filter
+    "status": "0x1",
+    "to": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+    "transactionHash":
+      "0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5",
+    "transactionIndex": "0x66",
+    "type": "0x2"
   }
 }
 ```
@@ -1670,7 +1683,7 @@ Returns an array of all logs matching a given filter object.
 - `toBlock`: `QUANTITY|TAG` - (optional, default: `"latest"`) Integer block number, or `"latest"` for the last mined block or `"pending"`, `"earliest"` for not yet mined transactions.
 - `address`: `DATA|Array`, 20 Bytes - (optional) Contract address or a list of addresses from which logs should originate.
 - `topics`: `Array of DATA`, - (optional) Array of 32 Bytes `DATA` topics. Topics are order-dependent. Each topic can also be an array of DATA with "or" options.
-- `blockhash`: `DATA`, 32 Bytes - (optional, **future**) With the addition of EIP-234, `blockHash` will be a new filter option which restricts the logs returned to the single block with the 32-byte hash `blockHash`. Using `blockHash` is equivalent to `fromBlock` = `toBlock` = the block number with hash `blockHash`. If `blockHash` is present in in the filter criteria, then neither `fromBlock` nor `toBlock` are allowed.
+- `blockhash`: `DATA`, 32 Bytes - (optional, **future**) With the addition of EIP-234, `blockHash` will be a new filter option which restricts the logs returned to the single block with the 32-byte hash `blockHash`. Using `blockHash` is equivalent to `fromBlock` = `toBlock` = the block number with hash `blockHash`. If `blockHash` is present in the filter criteria, then neither `fromBlock` nor `toBlock` are allowed.
 
 ```js
 params: [
@@ -1765,7 +1778,7 @@ Used for submitting mining hashrate.
 
 **Parameters**
 
-1. `Hashrate`, a hexadecimal string representation (32 bytes) of the hash rate
+1. `Hashrate`, a hexadecimal string representation (32 bytes) of the hashrate
 2. `ID`, String - A random hexadecimal(32 bytes) ID identifying the client
 
 ```js
@@ -2273,14 +2286,12 @@ contract Multiply7 {
 The first thing to do is make sure the HTTP RPC interface is enabled. This means we supply Geth with the `--http` flag on startup. In this example we use the Geth node on a private development chain. Using this approach we don't need ether on the real network.
 
 ```bash
-
-geth --http --dev --mine --miner.threads 1 --unlock 0 console 2>>geth.log
-
+geth --http --dev console 2>>geth.log
 ```
 
 This will start the HTTP RPC interface on `http://localhost:8545`.
 
-We can verify that the interface is running by retrieving the Coinbase address and balance using [curl](https://curl.haxx.se/download.html). Please note that data in these examples will differ on your local node. If you want to try these commands, replace the request params in the second curl request with the result returned from the first.
+We can verify that the interface is running by retrieving the Coinbase address and balance using [curl](https://curl.se). Please note that data in these examples will differ on your local node. If you want to try these commands, replace the request params in the second curl request with the result returned from the first.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method":"eth_coinbase", "id":1}' -H "Content-Type: application/json" localhost:8545

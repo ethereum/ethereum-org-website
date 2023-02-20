@@ -3,11 +3,9 @@ title: Un'introduzione ad Ethereum per sviluppatori con Python, parte 1
 description: Un'introduzione allo sviluppo di Ethereum, particolarmente utile per chi conosce il linguaggio di programmazione Python
 author: Marc Garreau
 lang: it
-sidebar: true
 tags:
   - "primi passi"
   - "python"
-  - "blockchain"
   - "web3.py"
 skill: beginner
 published: 2020-09-08
@@ -15,7 +13,7 @@ source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/
 ---
 
-Quindi hai sentito parlare di questo Ethereum e sei pronto ad avventurarti nella tana del coniglio? Questo post coprirà rapidamente alcune basi della blockchain, portandoti a interagire con un nodo simulato di Ethereum, leggere i dati del blocco, verificare i saldi del conto e inviare transazioni. Lungo il percorso, evidenzieremo le differenze tra metodi tradizionali di costruzione delle app e questo nuovo paradigma decentralizzato.
+Quindi hai sentito parlare di questo Ethereum e sei pronto ad avventurarti nella tana del coniglio? Questo post coprirà rapidamente alcune basi della blockchain, portandoti a interagire con un nodo simulato di Ethereum: leggere i dati del blocco, verificare i saldi dei conti e inviare transazioni. Lungo il percorso, evidenzieremo le differenze tra metodi tradizionali di costruzione delle app e questo nuovo paradigma decentralizzato.
 
 ## Prerequisiti (soft) {#soft-prerequisites}
 
@@ -37,7 +35,6 @@ Ci sono molti modi per descrivere Ethereum, ma il suo fulcro è costituito dalla
    "number": 1234567,
    "hash": "0xabc123...",
    "parentHash": "0xdef456...",
-   "miner": "0xa1b2c3...",
    ...,
    "transactions": [...]
 }
@@ -61,7 +58,7 @@ Questa nuova tecnologia decentralizzata ha generato nuovi strumenti per sviluppa
 
 Gli sviluppatori di Python che desiderano interagire con Ethereum, probabilmente sceglieranno [Web3.py](https://web3py.readthedocs.io/). Web3.py è una libreria che semplifica notevolmente la connessione a un nodo di Ethereum e l'invio e la ricezione di dati da esso.
 
-<div class="featured">Nota: "nodo di Ethereum" e "client di Ethereum" sono usati in modo intercambiabile. Ad ogni modo, ci riferiamo al software eseguito da un partecipante alla rete di Ethereum. Questo software può leggere i dati del blocco, ricevere aggiornamenti quando vengono aggiunti blocchi alla catena ("minati"), trasmettere nuove transazioni e altro.</div>
+<div class="featured">Nota: "nodo di Ethereum" e "client di Ethereum" sono usati in modo intercambiabile. Ad ogni modo, ci riferiamo al software eseguito da un partecipante alla rete di Ethereum. Questo software può leggere i dati del blocco, ricevere aggiornamenti quando i nuovi blocchi sono aggiunti alla catena, trasmettere le nuove transazioni e tanto altro. Tecnicamente, il client è il software, il nodo è il computer che esegue il software.</div>
 
 I [client di Ethereum](/developers/docs/nodes-and-clients/) sono configurabili per esser raggiungibili da [IPC](https://wikipedia.org/wiki/Inter-process_communication), HTTP, o Websocket, quindi Web3.py dovrà rispecchiare tale configurazione. Web3.py si riferisce a queste opzioni di connessione come **provider**. Occorre scegliere uno dei tre provider per collegare l'istanza di Web3.py al tuo nodo.
 
@@ -192,7 +189,7 @@ Poiché stiamo usando il provider di prova, non è un test assolutamente indispe
 
 ## Fermata #1 del tour: [conti](/developers/docs/accounts/) {#tour-stop-1-accounts}
 
-Per convenzione, il provider di prova ha creato dei conti e li ha precaricati con ether di prova.
+Per convenzione, il fornitore del tester ha creato dei conti e li ha precaricati con ether di prova.
 
 In primo luogo, vediamo un elenco di questi conti:
 
@@ -205,7 +202,7 @@ Out[6]: ['0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf',
 
 Se esegui questo comando, vedrai un elenco di dieci stringhe che iniziano per `0x`. Ognuno è un **indirizzo pubblico** ed è, in qualche modo, analogo al numero del conto su un conto corrente. Puoi fornire questo indirizzo a chiunque voglia inviarti ether.
 
-Come menzionato, il provider di prova ha precaricato ognuno di questi conti con ether di prova. Scopriamo quanto c'è nel primo conto:
+Come menzionato, il fornitore del tester ha precaricato ognuno di questi conti con ether di prova. Scopriamo quanto c'è nel primo conto:
 
 ```python
 In [7]: w3.eth.get_balance(w3.eth.accounts[0])
@@ -238,13 +235,13 @@ Out[9]: AttributeDict({
 
 Vengono restituite molte informazioni su un blocco, ma qui vale la pena di sottolineare solo un paio di cose:
 
-- Il numero del blocco è zero, non importa quanto tempo fa tu abbia configurato il provider di prova. A differenza della rete di Ethereum reale, che mina un nuovo blocco circa ogni 15 secondi, questa simulazione attenderà finché non le darai qualcosa da fare.
+- Il numero del blocco è zero, non importa quanto tempo fa tu abbia configurato il provider di prova. A differenza della vera rete di Ethereum, che aggiunge un nuovo blocco ogni 12 secondi, questa simulazione attenderà finché non le darai qualcosa da fare.
 - `transactions` è un elenco vuoto, per lo stesso motivo: non abbiamo ancora fatto nulla. Questo primo blocco è un **blocco vuoto**, giusto per dare il via alla catena.
 - Nota che il `parentHash` è solo un mucchio di byte vuoti. Questo significa che è il primo blocco nella catena, anche noto come **blocco di genesi**.
 
 ## Fermata #3 del tour: [transazioni](/developers/docs/transactions/) {#tour-stop-3-transactions}
 
-Siamo fermi al blocco zero finché non si verifica una transazione da minare, allora creiamone una. Invia qualche ether di prova da un conto all'altro:
+Siamo bloccati al blocco zero finché non si verifica una transazione in sospeso, quindi diamogliene una. Invia qualche ether di prova da un conto all'altro:
 
 ```python
 In [10]: tx_hash = w3.eth.send_transaction({
@@ -255,10 +252,10 @@ In [10]: tx_hash = w3.eth.send_transaction({
 })
 ```
 
-Questo è tipicamente il punto in cui devi aspettare vari secondi affinché la transazione venga minata in un nuovo blocco. L'intero processo va più o meno come indicato sotto:
+Questo è tipicamente il punto in cui dovresti aspettare diversi secondi affinché la tua transazione sia inclusa in un nuovo blocco. L'intero processo va più o meno come indicato sotto:
 
-1. Invia una transazione e mantieni l'hash della transazione. Finché non è minata, la transazione è "in sospeso". `tx_hash = w3.eth.send_transaction({ … })`
-2. Attendi che la transazione sia minata: `w3.eth.wait_for_transaction_receipt(tx_hash)`
+1. Invia una transazione e mantieni l'hash della transazione. Finché il blocco contenente la transazione non viene creato e trasmesso, la transazione è "in sospeso". `tx_hash = w3.eth.send_transaction({ … })`
+2. Attendi che la transazione sia inclusa in un blocco: `w3.eth.wait_for_transaction_receipt(tx_hash)`
 3. Prosegui la logica dell'applicazione. Per visualizzare la transazione riuscita: `w3.eth.get_transaction(tx_hash)`
 
 Il nostro ambiente simulato aggiungerà la transazione in un nuovo blocco istantaneamente, quindi possiamo visualizzare immediatamente la transazione:

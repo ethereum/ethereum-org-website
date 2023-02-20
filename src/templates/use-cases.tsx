@@ -3,8 +3,9 @@ import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import styled from "styled-components"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import styled from "@emotion/styled"
+import { GatsbyImage } from "gatsby-plugin-image"
+import { Badge } from "@chakra-ui/react"
 
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
@@ -23,14 +24,11 @@ import MarkdownTable from "../components/MarkdownTable"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
-import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
-import Roadmap from "../components/Roadmap"
 import UpgradeTableOfContents, {
   Item as ItemTableOfContents,
 } from "../components/UpgradeTableOfContents"
 import TableOfContents from "../components/TableOfContents"
-import TranslationsInProgress from "../components/TranslationsInProgress"
 import Translation from "../components/Translation"
 import SectionNav from "../components/SectionNav"
 import {
@@ -40,14 +38,15 @@ import {
   Header4,
   ListItem,
 } from "../components/SharedStyledComponents"
-import Emoji from "../components/Emoji"
+import Emoji from "../components/OldEmoji"
 import YouTube from "../components/YouTube"
-import PreMergeBanner from "../components/PreMergeBanner"
 import FeedbackCard from "../components/FeedbackCard"
+import QuizWidget from "../components/Quiz/QuizWidget"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
 import { Lang } from "../utils/languages"
+import { getImage } from "../utils/image"
 import { Context } from "../types"
 
 const Page = styled.div`
@@ -158,7 +157,6 @@ const components = {
   table: MarkdownTable,
   MeetupList,
   RandomAppList,
-  Roadmap,
   Logo,
   ButtonLink,
   Contributors,
@@ -166,13 +164,13 @@ const components = {
   Card,
   Divider,
   SectionNav,
-  Pill,
-  TranslationsInProgress,
+  Badge,
   Emoji,
   UpgradeStatus,
   DocLink,
   ExpandableCard,
   YouTube,
+  QuizWidget,
 }
 
 const Title = styled.h1`
@@ -230,7 +228,7 @@ const HeroContainer = styled.div`
   }
 `
 
-const Image = styled(GatsbyImage)`
+const Image = styled(GatsbyImage)<{ useCase: string }>`
   flex: 1 1 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -317,8 +315,7 @@ const UseCasePage = ({
     throw new Error("Required `title` property missing for use-cases template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
-  const showMergeBanner = !!mdx.frontmatter.preMergeBanner
-  const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
+  const tocItems = mdx.tableOfContents?.items
   const summaryPoints = getSummaryPoints(mdx.frontmatter)
 
   const { editContentUrl } = siteData.siteMetadata || {}
@@ -370,19 +367,15 @@ const UseCasePage = ({
 
   return (
     <Container>
-      {showMergeBanner ? (
-        <PreMergeBanner />
-      ) : (
-        <StyledBannerNotification shouldShow>
-          <StyledEmoji text=":pencil:" />
-          <div>
-            <Translation id="template-usecase-banner" />{" "}
-            <Link to={absoluteEditPath}>
-              <Translation id="template-usecase-edit-link" />
-            </Link>
-          </div>
-        </StyledBannerNotification>
-      )}
+      <StyledBannerNotification shouldShow>
+        <StyledEmoji text=":pencil:" />
+        <div>
+          <Translation id="template-usecase-banner" />{" "}
+          <Link to={absoluteEditPath}>
+            <Translation id="template-usecase-edit-link" />
+          </Link>
+        </div>
+      </StyledBannerNotification>
       <HeroContainer>
         <TitleCard>
           <Emoji size={4} text={mdx.frontmatter.emoji!} />
@@ -402,8 +395,8 @@ const UseCasePage = ({
         </TitleCard>
         <Image
           useCase={useCase}
-          image={getImage(mdx.frontmatter.image)}
-          alt={mdx.frontmatter.alt}
+          image={getImage(mdx.frontmatter.image)!}
+          alt={mdx.frontmatter.alt || ""}
         />
       </HeroContainer>
       <MoreContent to="#content">
@@ -418,7 +411,7 @@ const UseCasePage = ({
           <StyledButtonDropdown list={dropdownLinks} />
           <InfoTitle>{mdx.frontmatter.title}</InfoTitle>
 
-          {mdx.frontmatter.sidebar && tocItems && (
+          {tocItems && (
             <UpgradeTableOfContents
               items={tocItems}
               maxDepth={mdx.frontmatter.sidebarDepth!}
@@ -454,7 +447,6 @@ export const useCasePageQuery = graphql`
         title
         description
         lang
-        sidebar
         emoji
         sidebarDepth
         summaryPoint1
@@ -471,7 +463,6 @@ export const useCasePageQuery = graphql`
           }
         }
         isOutdated
-        preMergeBanner
       }
       body
       tableOfContents

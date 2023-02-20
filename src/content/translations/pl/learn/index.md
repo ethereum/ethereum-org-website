@@ -1,7 +1,6 @@
 ---
 title: Nauka
 lang: pl
-sidebar: true
 ---
 
 # Ucz się Ethereum {#learn-about-ethereum}

@@ -2,12 +2,11 @@
 title: Smart contracts
 description: A non-technical introduction to smart contracts
 lang: en
-sidebar: true
 ---
 
 # Introduction to smart contracts {#introduction-to-smart-contracts}
 
-Smart contracts are the fundamental building blocks of [Ethereum applications](/dapps/). They are computer programs stored on the blockchain that allows us to convert traditional contracts into digital parallels. Smart contracts are very logical - following an if this then that structure. This means they behave exactly as programmed and cannot be changed.
+Smart contracts are the fundamental building blocks of [Ethereum applications](/dapps/). They are computer programs stored on the blockchain that allow converting traditional contracts into digital parallels. Smart contracts are very logical - following an if this then that structure. This means they behave exactly as programmed and cannot be changed.
 
 Nick Szabo coined the term "smart contract". In 1994, he wrote [an introduction to the concept](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) and, in 1996, [an exploration of what smart contracts could do](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
@@ -61,7 +60,7 @@ Smart contracts are also useful for audits and tracking. Since Ethereum smart co
 
 ### Privacy protection {#privacy-protection}
 
-Smart contracts can also protect our privacy. Since Ethereum is a pseudonymous network (your transactions are tied publicly to a unique cryptographic address, not your identity), you can protect your privacy from observers.
+Smart contracts can also protect your privacy. Since Ethereum is a pseudonymous network (your transactions are tied publicly to a unique cryptographic address, not your identity), you can protect your privacy from observers.
 
 ### Visible terms {#visible-terms}
 

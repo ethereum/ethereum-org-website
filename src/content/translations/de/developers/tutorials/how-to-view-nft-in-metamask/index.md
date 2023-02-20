@@ -11,7 +11,6 @@ tags:
   - "Solidity"
 skill: Einsteiger
 lang: de
-sidebar: true
 published: 2021-04-22
 ---
 

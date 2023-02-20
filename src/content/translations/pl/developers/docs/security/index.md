@@ -2,7 +2,6 @@
 title: Ochrona
 description: Kwestie bezpieczeństwa dla deweloperów Ethereum
 lang: pl
-sidebar: true
 ---
 
 Inteligentne kontrakty Ethereum są niezwykle elastyczne, zdolne zarówno do utrzymywania dużych ilości tokenów (często powyżej 1 mld USD), jak i do używania niezmiennej logiki opartej na wcześniej wdrożonym kodzie kontraktów inteligentnych. Stworzyło to wprawdzie dynamiczny i kreatywny ekosystem godny zaufania, ale powiązane ze sobą inteligentne kontrakty są również idealnym ekosystemem, który przyciąga atakujących poszukujących zysków poprzez wykorzystanie słabych punktów w inteligentnych kontraktach i nieoczekiwanych zachowań w Ethereum. Kodu inteligentnego kontraktu _zazwyczaj_ nie można zmienić w celu usunięcia luk w zabezpieczeniach; zasoby, które zostały skradzione z inteligentnych kontraktów, są nie do odzyskania, a skradzione aktywa są niezwykle trudne do śledzenia. Całkowita kwota wartości skradzionej lub utraconej z powodu problemów z inteligentnymi kontraktami z dużym prawdopodobieństwem sięga 1 mld USD. Do poważniejszych strat wynikających z błędów w kodowaniu kontraktów inteligentnych należą:

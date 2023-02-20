@@ -2,7 +2,6 @@
 title: Nodes und Clients
 description: Eine Übersicht über Ethereum-Nodes und Client-Software, wie eine Node eingerichtet wird und warum du dies tun solltest.
 lang: de
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -119,7 +118,7 @@ Diese Tabelle gibt einen Überblick über die verschiedenen Clients. Sie alle be
 | [Geth](https://geth.ethereum.org/)                                      | Go       | Linux, Windows, MacOS | Mainnet, Görli, Rinkeby, Ropsten             | Snap, Full          | Archive, Pruned     |
 | [Nethermind](http://nethermind.io/)                                     | C#, .NET | Linux, Windows, MacOS | Mainnet, Görli, Ropsten, Rinkeby und weitere | Fast, Beam, Archive | Archive, Pruned     |
 | [Besu](https://besu.hyperledger.org/en/stable/)                         | Java     | Linux, Windows, MacOS | Mainnet, Rinkeby, Ropsten, Görli und weitere | Fast, Full          | Archive, Pruned     |
-| [Erigon](https://github.com/ledgerwatch/erigon)                         | Los      | Linux, Windows, MacOS | Mainnet, Görli, Rinkeby, Ropsten             | Full                | Archive, Pruned     |
+| [Erigon](https://github.com/ledgerwatch/erigon)                         | Go       | Linux, Windows, MacOS | Mainnet, Görli, Rinkeby, Ropsten             | Full                | Archive, Pruned     |
 | [OpenEthereum (veraltet)](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, MacOS | Mainnet, Kovan, Ropsten und weitere          | Warp, Full          | Archive, Pruned     |
 
 **Beachte, dass OpenEthereum [veraltet](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) ist und nicht mehr gewartet wird.** Verwende es mit Vorsicht und wechsle lieber zu einer anderen Client-Implementierung.
@@ -174,7 +173,7 @@ Die Synchronisationsmodi stellen verschiedene Ansätze für diesen Prozess mit u
 
 Allgemeiner Überblick über die Synchronisierungsansätze, die in Mainnet-Ready-Clients verwendet werden:
 
-##### Full sync {#full-sync}
+##### Full sync
 
 Bei full sync werden alle Blöcke (einschließlich Headern, Transaktionen und Quittungen) heruntergeladen und der Zustand der Blockchain inkrementell generiert, indem jeder Block ab Genesis ausgeführt wird.
 
@@ -248,13 +247,13 @@ Es gibt mehrere Konsens-Clients (früher als Eth2-Clients bekannt), die dazu da 
 
 [Konsens-Clients anschauen](/upgrades/get-involved/#clients)
 
-| Client                                                      | Sprache    | Betriebssysteme       | Netzwerke                             |
-| ----------------------------------------------------------- | ---------- | --------------------- | ------------------------------------- |
-| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, MacOS | Beacon Chain, Prater                  |
-| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, MacOS | Beacon Chain, Prater                  |
-| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, MacOS | Beacon Chain, Prater, Pyrmont         |
-| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, MacOS | Beacon Chain, Prater                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Los        | Linux, Windows, MacOS | Beacon Chain, Gnosis, Prater, Pyrmont |
+| Client                                                      | Sprache    | Betriebssysteme       | Netzwerke                        |
+| ----------------------------------------------------------- | ---------- | --------------------- | -------------------------------- |
+| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, MacOS | Mainnet, Goerli                  |
+| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, MacOS | Mainnet, Goerli                  |
+| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, MacOS | Mainnet, Goerli, Pyrmont         |
+| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, MacOS | Mainnet, Goerli                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Los        | Linux, Windows, MacOS | Mainnet, Gnosis, Goerli, Pyrmont |
 
 ## Hardware {#hardware}
 

@@ -2,7 +2,6 @@
 title: エンタープライズ
 description: エンタープライズ向けのパブリックおよびプライベートのイーサリアムブロックチェーンに関するガイド、記事、ツール
 lang: ja
-sidebar: true
 sidebarDepth: 1
 ---
 

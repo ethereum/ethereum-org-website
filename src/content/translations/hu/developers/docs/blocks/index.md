@@ -2,7 +2,6 @@
 title: Blokkok
 description: Egy áttekintő a blokkokról az Ethereum blokkláncban - az adatstruktúrájukról, miért van rájuk szükség és hogyan készülnek.
 lang: hu
-sidebar: true
 ---
 
 A blokkok tranzakciókból álló csoportosítások a láncban lévő előző blokk hash-ével ellátva. Ez összeköti a blokkokat (egy lánccá), mivel a hasheket kriptográfiailag származtatjuk a blokk adatból. Ez megelőzi a csalásokat, mivel bármely blokkon történő változtatás érvénytelenítené az összes következő blokkot, mivel az összes többi hash megváltozna és bárki aki a blokkláncot futtatja észrevenné.

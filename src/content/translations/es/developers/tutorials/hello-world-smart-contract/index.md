@@ -11,7 +11,6 @@ tags:
   - "implementación"
 skill: beginner
 lang: es
-sidebar: true
 published: 2021-03-31
 ---
 

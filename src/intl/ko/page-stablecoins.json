@@ -36,7 +36,7 @@
   "page-stablecoins-accordion-earn-requirements-description": "스테이블 코인은 가치가 안정적이기 때문에 작업과 서비스에 대한 훌륭한 지불 수단입니다. 하지만 지급받으려면 지갑이 필요합니다.",
   "page-stablecoins-accordion-earn-text-preview": "이더리움 생태계 내에서 프로젝트에 대해 작업하면 스테이블 코인을 벌 수 있습니다.",
   "page-stablecoins-accordion-earn-title": "획득하기",
-  "page-stablecoins-accordion-less": "간단히 보기",
+  "page-stablecoins-accordion-less": "간단히",
   "page-stablecoins-accordion-more": "자세히",
   "page-stablecoins-accordion-requirements": "필요한 것",
   "page-stablecoins-accordion-swap-dapp-intro": "이미 ETH와 지갑이 있는 경우, 해당하는 디앱스를 사용하여 스테이블 코인으로 교환할 수 있습니다.",
@@ -134,7 +134,7 @@
   "page-stablecoins-top-coins-intro": "시가총액이란",
   "page-stablecoins-top-coins-intro-code": "토큰마다 존재하는 토큰의 총수에 토큰당 값을 곱한 것입니다. 이 목록은 동적이며, 여기에 기재된 프로젝트는 반드시 ethereum.org 팀에서 보증하는 것은 아닙니다.",
   "page-stablecoins-types-of-stablecoin": "작동 방식: 스테이블 코인의 종류",
-  "page-stablecoins-usdc-banner-body": "USD 코인은 가장 유명한 명목화폐 기반 스테이블 코인입니다. 그 가치는 대략 1달러이고 Circle and Coinbase가 운영합니다.",
+  "page-stablecoins-usdc-banner-body": "USDC는 가장 유명한 명목화폐 기반 스테이블 코인입니다. 가치는 약 1달러이며 서클과 코인베이스에서 운영합니다.",
   "page-stablecoins-usdc-banner-learn-button": "USD 코인에 대해 알아보기",
   "page-stablecoins-usdc-banner-swap-button": "ETH를 USD 코인으로 교환하기",
   "page-stablecoins-usdc-banner-title": "USD 코인",
@@ -142,5 +142,7 @@
   "page-stablecoins-why-stablecoins": "왜 스테이블 코인인가요?",
   "page-stablecoins-how-they-work-button": "어떻게 작동하나요?",
   "page-stablecoins-why-stablecoins-body": "ETH는 새로운 기술이기 때문에 비트코인과 비슷하게 가격이 변동합니다. 따라서 정기적으로 소비하지 않으려고 할 수 있습니다. 스테이블 코인은 일반 화폐의 가치를 반영하여 이더리움에서 사용할 수 있는 안정적인 자산에 접근할 수 있게 합니다.",
-  "page-stablecoins-more-defi-button": "탈중앙화 금융(DeFi)에 대해 자세히 보기"
+  "page-stablecoins-more-defi-button": "탈중앙화 금융(DeFi)에 대해 자세히 보기",
+  "page-stablecoins-tools-title": "스테이블 코인에 대해 자세히 알아보기",
+  "page-stablecoins-tools-stablecoinswtf-description": "Stablecoins.wtf는 가장 대표적인 스테이블 코인에 대한 과거 시장 데이터, 통계 및 학습 자료가 포함된 대시보드를 제공합니다."
 }

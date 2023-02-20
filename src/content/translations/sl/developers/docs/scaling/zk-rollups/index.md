@@ -2,7 +2,6 @@
 title: Zvitki brez znanja
 description: Uvod v zvitke brez znanja
 lang: sl
-sidebar: true
 ---
 
 ## Predpogoji {#prerequisites}

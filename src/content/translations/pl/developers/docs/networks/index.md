@@ -2,7 +2,6 @@
 title: Sieci
 description: Przegląd sieci Ethereum i informacje o miejscach, w których można uzyskać ether testnetowy (ETH) do testowania aplikacji.
 lang: pl
-sidebar: true
 ---
 
 Ethereum jest protokołem, co oznacza, że może istnieć wiele niezależnych „sieci” zgodnych z tym protokołem, które nie wchodzą ze sobą w interakcje.

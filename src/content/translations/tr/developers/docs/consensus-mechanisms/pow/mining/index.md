@@ -2,7 +2,6 @@
 title: Madencilik
 description: Ethereum'da madenciliğin nasıl çalıştığına ve Ethereum'un güvenli ve merkeziyetsiz kalmasına nasıl yardımcı olduğuna dair bir açıklama.
 lang: tr
-sidebar: true
 incomplete: true
 ---
 

@@ -2,7 +2,6 @@
 title: Pengantar tumpukan Ethereum
 description: Panduan tentang berbagai lapisan tumpukan Ethereum dan bagaimana mereka bisa saling cocok.
 lang: id
-sidebar: true
 ---
 
 Seperti perangkat lunak penumpukan mana saja, "tumpukan Ethereum" lengkap akan berbeda-beda dari satu proyek ke proyek lainnya bergantung pada tujuan Anda.

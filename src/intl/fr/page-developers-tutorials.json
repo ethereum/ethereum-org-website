@@ -1,6 +1,4 @@
 {
-  "page-tutorial-beginner": "Débutant",
-  "page-tutorial-intermediate": "Intermédiaire",
   "comp-tutorial-metadata-minute-read": "minutes de lecture",
   "page-tutorial-listing-policy-intro": "Avant de soumettre un tutoriel, prenez le temps de lire notre politique d'inscription.",
   "comp-tutorial-metadata-tip-author": "Astuce de l'auteur",
@@ -21,5 +19,8 @@
   "page-tutorial-title": "Tutoriels de développement Ethereum",
   "page-tutorials-meta-description": "Naviguez et filtrez les tutoriels de la communauté Ethereum par sujet.",
   "page-tutorial-external-link": "Externe",
-  "page-tutorials-meta-title": "Tutoriels de développement Ethereum"
+  "page-tutorials-meta-title": "Tutoriels de développement Ethereum",
+  "page-tutorial-beginner": "Débutant",
+  "page-tutorial-intermediate": "Intermédiaire",
+  "page-tutorial-advanced": "Avancé"
 }

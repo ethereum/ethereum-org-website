@@ -2,7 +2,6 @@
 title: Okosszerződés összeilleszthetőség
 description:
 lang: hu
-sidebar: true
 incomplete: true
 ---
 

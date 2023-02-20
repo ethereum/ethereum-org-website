@@ -1,5 +1,5 @@
 import React, { useState, createRef, useContext } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 import { motion } from "framer-motion"
 
@@ -93,6 +93,7 @@ const NavLink = styled(Link)`
     fill: ${(props) => props.theme.colors.text200};
   }
   &:hover {
+    text-decoration: none;
     color: ${(props) => props.theme.colors.primary};
     svg {
       fill: ${(props) => props.theme.colors.primary};
@@ -128,6 +129,7 @@ interface IDropdownContext {
 const DropdownContext = React.createContext<IDropdownContext | null>(null)
 
 export interface IProps {
+  children?: React.ReactNode
   section: ISection
   hasSubNav: boolean
 }
@@ -199,6 +201,7 @@ const NavDropdown: React.FC<IProps> & {
 }
 
 interface IItemProp {
+  children?: React.ReactNode
   isLast?: boolean
 }
 
@@ -216,7 +219,9 @@ const Item: React.FC<IItemProp> = ({ children, isLast = false, ...rest }) => {
   )
 }
 
-interface ITitleProps {}
+interface ITitleProps {
+  children?: React.ReactNode
+}
 
 const Title: React.FC<ITitleProps> = ({ children }) => {
   return <H2>{children}</H2>

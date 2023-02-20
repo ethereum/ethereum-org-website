@@ -8,7 +8,6 @@ tags:
   - "keamanan"
 skill: intermediate
 lang: id
-sidebar: true
 published: 2020-09-06
 source: Membuat kontrak yang aman
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md

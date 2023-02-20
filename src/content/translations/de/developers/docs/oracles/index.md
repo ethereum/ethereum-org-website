@@ -2,7 +2,6 @@
 title: Oracles
 description: Oracles helfen dabei, Daten aus der realen Welt in Ihre Ethereum-Anwendung zu bringen, da Smart Contracts die realen Daten nicht allein abfragen können.
 lang: de
-sidebar: true
 incomplete: true
 ---
 

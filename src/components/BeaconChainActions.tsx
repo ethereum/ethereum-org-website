@@ -1,10 +1,12 @@
 import React from "react"
+import { Box, Flex, Heading } from "@chakra-ui/react"
+
 import { useStaticQuery, graphql } from "gatsby"
-import { getImage } from "gatsby-plugin-image"
-import styled from "styled-components"
+
 import { useIntl } from "react-intl"
 
 import { translateMessageId } from "../utils/translations"
+import { getImage, ImageDataLike } from "../utils/image"
 
 import CardList from "./CardList"
 import Card from "./Card"
@@ -13,50 +15,17 @@ import Translation from "./Translation"
 
 import type { CardListItem } from "./CardList"
 
-const Container = styled.div`
-  margin-bottom: 4rem;
-`
-
-const StyledCardContainer = styled.div`
-  display: flex;
-  padding-top: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column;
-  }
-`
-
-const StyledCardLeft = styled(Card)`
-  margin-left: 0rem;
-  margin-right: 1rem;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-right: 0rem;
-    margin-bottom: 2rem;
-  }
-`
-
-const StyledCardRight = styled(Card)`
-  margin-left: 0rem;
-  margin-left: 1rem;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-left: 0rem;
-  }
-`
-
-const H3 = styled.h3`
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-
-  a {
-    display: none;
-  }
-`
-
-const StyledButtonLink = styled(ButtonLink)`
-  margin-bottom: 0.75rem;
-`
+const H3: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <Heading
+    as="h3"
+    fontSize="2xl"
+    fontWeight="bold"
+    mb={8}
+    sx={{ a: { display: "none" } }}
+  >
+    {children}
+  </Heading>
+)
 
 export const DataLogo = graphql`
   fragment DataLogo on File {
@@ -71,12 +40,6 @@ export const DataLogo = graphql`
   }
 `
 
-type ChildImage = {
-  childImageSharp: {
-    gatsbyImageData: Record<string, unknown>
-  }
-}
-
 const BeaconStaticQuery = graphql`
   query {
     beaconscan: file(relativePath: { eq: "upgrades/etherscan.png" }) {
@@ -89,8 +52,8 @@ const BeaconStaticQuery = graphql`
 `
 
 type BeaconQueryTypes = {
-  beaconscan: ChildImage
-  beaconchain: ChildImage
+  beaconscan: ImageDataLike | null
+  beaconchain: ImageDataLike | null
 }
 
 const BeaconChainActions: React.FC = () => {
@@ -100,14 +63,14 @@ const BeaconChainActions: React.FC = () => {
   const datapoints: Array<CardListItem> = [
     {
       title: "beaconscan",
-      image: getImage(data.beaconscan),
+      image: getImage(data.beaconscan)!,
       alt: "",
       link: "https://beaconscan.com",
       description: translateMessageId("consensus-beaconscan-desc", intl),
     },
     {
       title: "beaconcha.in",
-      image: getImage(data.beaconchain),
+      image: getImage(data.beaconchain)!,
       alt: "",
       link: "https://beaconcha.in",
       description: translateMessageId("consensus-beaconcha-in-desc", intl),
@@ -146,21 +109,28 @@ const BeaconChainActions: React.FC = () => {
   ]
 
   return (
-    <Container>
-      <StyledCardContainer>
-        <StyledCardLeft
+    <Box mb={16}>
+      <Flex flexDir={{ base: "column", md: "row" }} pt={4}>
+        <Card
+          w="full"
+          ml={0}
+          mr={{ base: 0, md: 4 }}
+          mb={{ base: 8, md: 0 }}
           emoji=":money_with_wings:"
           title={translateMessageId("consensus-become-staker", intl)}
           description={translateMessageId("consensus-become-staker-desc", intl)}
         >
-          <StyledButtonLink to="https://launchpad.ethereum.org">
+          <ButtonLink mb={3} to="https://launchpad.ethereum.org">
             <Translation id="get-started" />
-          </StyledButtonLink>
-          <ButtonLink isSecondary to="/staking/">
+          </ButtonLink>
+          <ButtonLink variant="outline" to="/staking/">
             <Translation id="page-upgrades-index-staking-learn" />
           </ButtonLink>
-        </StyledCardLeft>
-        <StyledCardRight
+        </Card>
+        <Card
+          w="full"
+          mr={0}
+          ml={{ base: 0, md: 4 }}
           emoji=":computer:"
           title={translateMessageId("consensus-run-beacon-chain", intl)}
           description={translateMessageId(
@@ -168,11 +138,11 @@ const BeaconChainActions: React.FC = () => {
             intl
           )}
         >
-          <ButtonLink isSecondary to="/upgrades/get-involved/">
+          <ButtonLink variant="outline" to="/upgrades/get-involved/">
             <Translation id="consensus-run-beacon-chain" />
           </ButtonLink>
-        </StyledCardRight>
-      </StyledCardContainer>
+        </Card>
+      </Flex>
       <H3>
         <Translation id="consensus-explore" />
       </H3>
@@ -182,7 +152,7 @@ const BeaconChainActions: React.FC = () => {
         <Translation id="read-more" />
       </H3>
       <CardList content={reads} />
-    </Container>
+    </Box>
   )
 }
 

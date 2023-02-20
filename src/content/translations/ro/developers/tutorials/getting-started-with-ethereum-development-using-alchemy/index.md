@@ -11,7 +11,6 @@ tags:
   - "alchemy"
 skill: beginner
 lang: ro
-sidebar: true
 published: 2020-10-30
 source: Mediu
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
@@ -25,7 +24,7 @@ Acesta este un ghid pentru începători ca să se familiarizeze cu dezvoltarea �
 
 ## 1. Înregistrează-te pentru un cont Alchemy gratuit {#sign-up-for-a-free-alchemy-account}
 
-Crearea unui cont cu Alchemy este ușoară, [înregistrează-te gratuit aici](https://dashboard.alchemyapi.io/signup/).
+Crearea unui cont cu Alchemy este ușoară, [înregistrează-te gratuit aici](https://auth.alchemyapi.io/signup).
 
 ## 2. Crearea unei aplicații Alchemy {#create-an-alchemy-app}
 
@@ -79,7 +78,7 @@ _**NOTE:** Replace [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainn
 
 **_NOTĂ:_** Script-urile de mai jos trebuie să fie rulate într-un **context nod** sau **salvate într-un fișier**, nu rulează de la linia de comandă. Dacă nu ai instalat deja Node sau npm, consultă acest [ghid de configurare pentru mac](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs)-uri.
 
-Există tone de [biblioteci Web3](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) pe care le poți integra cu Alchemy, totuși, îți recomandăm să folosești [Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3), un înlocuitor treptat pentru web3.js, construit și configurat pentru a funcționa perfect cu Alchemy. Acesta oferă mai multe avantaje, cum ar fi reîncercări automate și suport robust WebSocket.
+Există tone de [biblioteci Web3](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) pe care le poți integra cu Alchemy, totuși, îți recomandăm să folosești [Alchemy Web3](https://docs.alchemy.com/reference/api-overview), un înlocuitor treptat pentru web3.js, construit și configurat pentru a funcționa perfect cu Alchemy. Acesta oferă mai multe avantaje, cum ar fi reîncercări automate și suport robust WebSocket.
 
 Pentru a instala AlchemyWeb3.js, **navigă la directorul proiectului tău** și rulează:
 
@@ -153,4 +152,4 @@ Cel mai recent număr de bloc este 11.043.912
 
 Not sure what to do next? Try deploying your first smart contract and get your hands dirty with some solidity programming in our [Hello World Smart Contract Guide](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract), or test your dashboard knowledge with the [Dashboard Demo App](https://docs.alchemyapi.io/tutorials/demo-app)!
 
-_[Înregistrează-te la Alchemy gratis](https://dashboard.alchemyapi.io/signup/), consultă [documentația](https://docs.alchemyapi.io/) și, pentru cele mai recente știri, urmărește-ne pe [Twitter](https://twitter.com/AlchemyPlatform)_.
+_[Înregistrează-te la Alchemy gratis](https://auth.alchemyapi.io/signup), consultă [documentația](https://docs.alchemyapi.io/) și, pentru cele mai recente știri, urmărește-ne pe [Twitter](https://twitter.com/AlchemyPlatform)_.

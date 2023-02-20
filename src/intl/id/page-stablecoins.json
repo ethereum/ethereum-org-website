@@ -134,7 +134,7 @@
   "page-stablecoins-top-coins-intro": "Kapitalisasi pasar adalah",
   "page-stablecoins-top-coins-intro-code": "jumlah total token yang ada dikalikan dengan nilai per token. Daftar ini dinamis dan proyek yang tercantum di sini tidak wajib didukung oleh tim ethereum.org.",
   "page-stablecoins-types-of-stablecoin": "Bagaimana mereka bekerja: jenis stablecoin",
-  "page-stablecoins-usdc-banner-body": "USDc mungkin adalah stablecoin yang didukung fiat paling terkenal. Nilainya kira-kira satu dolar dan didukung oleh Circle dan Coinbase.",
+  "page-stablecoins-usdc-banner-body": "USDC mungkin adalah koin stabil yang didukung fiat paling terkenal. Nilainya kira-kira satu dolar dan didukung oleh Circle dan Coinbase.",
   "page-stablecoins-usdc-banner-learn-button": "Pelajari tentang USDC",
   "page-stablecoins-usdc-banner-swap-button": "Tukar ETH untuk USDC",
   "page-stablecoins-usdc-banner-title": "USDC",
@@ -142,5 +142,7 @@
   "page-stablecoins-why-stablecoins": "Mengapa stablecoins?",
   "page-stablecoins-how-they-work-button": "Bagaimana mereka bekerja",
   "page-stablecoins-why-stablecoins-body": "ETH, seperti Bitcoin, memiliki harga yang fluktuatif karena merupakan teknologi baru. Jadi Anda mungkin tidak ingin menggunakannya secara rutin. Stablecoin mencerminkan nilai mata uang tradisional untuk memberi Anda akses ke uang stabil yang dapat Anda gunakan di Ethereum.",
-  "page-stablecoins-more-defi-button": "Lebih lanjut tentang keuangan terdesentralisasi (DeFi)"
+  "page-stablecoins-more-defi-button": "Lebih lanjut tentang keuangan terdesentralisasi (DeFi)",
+  "page-stablecoins-tools-title": "Learn more about stablecoins",
+  "page-stablecoins-tools-stablecoinswtf-description": "Stablecoins.wtf offers a dashboard with historical market data, statistics, and educational content for the most prominent stablecoins."
 }

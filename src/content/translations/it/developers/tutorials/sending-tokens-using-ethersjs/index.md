@@ -8,7 +8,6 @@ tags:
   - "TOKEN"
 skill: beginner
 lang: it
-sidebar: true
 published: 2021-04-06
 ---
 

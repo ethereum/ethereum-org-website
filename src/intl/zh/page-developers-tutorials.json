@@ -1,8 +1,5 @@
 {
-  "page-tutorial-beginner": "初学者",
-  "page-tutorial-intermediate": "中级",
-  "page-tutorial-advanced": "高级",
-  "comp-tutorial-metadata-minute-read": "一分钟阅读",
+  "comp-tutorial-metadata-minute-read": "分钟阅读",
   "page-tutorial-listing-policy-intro": "在您提交教程之前，请阅读我们的上架政策。",
   "comp-tutorial-metadata-tip-author": "提示作者",
   "page-tutorial-listing-policy": "文章上架政策",
@@ -22,5 +19,8 @@
   "page-tutorial-title": "以太坊开发教程",
   "page-tutorials-meta-description": "按主题浏览并过滤已审查的以太坊社区教程。",
   "page-tutorial-external-link": "外部",
-  "page-tutorials-meta-title": "以太坊开发教程"
+  "page-tutorials-meta-title": "以太坊开发教程",
+  "page-tutorial-beginner": "初学者",
+  "page-tutorial-intermediate": "中级",
+  "page-tutorial-advanced": "高级"
 }

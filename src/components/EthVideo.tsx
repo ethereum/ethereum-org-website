@@ -1,5 +1,5 @@
-import React, { useContext } from "react"
-import { ThemeContext } from "styled-components"
+import React from "react"
+import { Box, useColorModeValue } from "@chakra-ui/react"
 
 import darkVideo from "../assets/ethereum-hero-dark.mp4"
 import lightVideo from "../assets/ethereum-hero-light.mp4"
@@ -10,13 +10,12 @@ export interface IProps {
 }
 
 const EthVideo: React.FC<IProps> = ({ className, videoSrc }) => {
-  const themeContext = useContext(ThemeContext)
-  const isDarkTheme = themeContext.isDark
+  const videoFile = useColorModeValue(lightVideo, darkVideo)
 
-  const src = videoSrc ? videoSrc : isDarkTheme ? darkVideo : lightVideo
+  const src = videoSrc ? videoSrc : videoFile
 
   return (
-    <div className={className}>
+    <Box className={className}>
       <video
         id="hero-video"
         width="100%"
@@ -27,7 +26,7 @@ const EthVideo: React.FC<IProps> = ({ className, videoSrc }) => {
         loop
         muted
       />
-    </div>
+    </Box>
   )
 }
 

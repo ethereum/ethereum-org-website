@@ -1,13 +1,9 @@
 import React from "react"
-import styled from "styled-components"
-import CardList, { CardListItem } from "./CardList"
 import { useIntl } from "react-intl"
+import CardList, { CardListItem } from "./CardList"
 
+import { Box } from "@chakra-ui/react"
 import { translateMessageId } from "../utils/translations"
-
-const Container = styled.div`
-  margin-bottom: 4rem;
-`
 
 export interface IProps {}
 
@@ -19,7 +15,10 @@ const ShardChainsList: React.FC<IProps> = () => {
         "page-upgrade-article-title-sharding-is-great",
         intl
       ),
-      description: "Vitalik Buterin",
+      description: translateMessageId(
+        "page-upgrade-article-author-vitalik-buterin",
+        intl
+      ),
       link: "https://vitalik.ca/general/2021/04/07/sharding.html",
     },
     {
@@ -27,7 +26,10 @@ const ShardChainsList: React.FC<IProps> = () => {
         "page-upgrade-article-title-rollup-roadmap",
         intl
       ),
-      description: "Vitalik Buterin",
+      description: translateMessageId(
+        "page-upgrade-article-author-vitalik-buterin",
+        intl
+      ),
       link: "https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698",
     },
     {
@@ -35,7 +37,10 @@ const ShardChainsList: React.FC<IProps> = () => {
         "page-upgrade-article-title-two-point-oh",
         intl
       ),
-      description: "Ethos.dev",
+      description: translateMessageId(
+        "page-upgrade-article-author-ethos-dev",
+        intl
+      ),
       link: "https://ethos.dev/beacon-chain/",
     },
     {
@@ -49,12 +54,53 @@ const ShardChainsList: React.FC<IProps> = () => {
       ),
       link: "https://blog.ethereum.org/2020/03/27/sharding-consensus/",
     },
+    {
+      title: translateMessageId(
+        "page-upgrade-article-title-hitchhikers-guide-to-ethereum",
+        intl
+      ),
+      description: translateMessageId(
+        "page-upgrade-article-author-delphi-digital",
+        intl
+      ),
+      link: "https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum",
+    },
+    {
+      title: translateMessageId("page-upgrade-article-title-eip-4844", intl),
+      description: translateMessageId(
+        "page-upgrade-article-author-eip-4844",
+        intl
+      ),
+      link: "https://eips.ethereum.org/EIPS/eip-4844",
+    },
+    {
+      title: translateMessageId(
+        "page-upgrade-article-title-proto-danksharding-faq",
+        intl
+      ),
+      description: translateMessageId(
+        "page-upgrade-article-author-vitalik-buterin",
+        intl
+      ),
+      link: "https://notes.ethereum.org/@vbuterin/proto_danksharding_faq",
+    },
+    {
+      title: translateMessageId(
+        "page-upgrade-article-title-sharding-das",
+        intl
+      ),
+      description: translateMessageId(
+        "page-upgrade-article-author-vitalik-buterin",
+        intl
+      ),
+      link: "https://hackmd.io/@vbuterin/sharding_proposal",
+    },
   ]
 
   return (
-    <Container>
+    <Box mb="4rem">
       <CardList content={reads} />
-    </Container>
+    </Box>
   )
 }
 

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
 import makeBlockie from "ethereum-blockies-base64"
-import { getImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 
 import Breadcrumbs from "../../components/Breadcrumbs"
@@ -10,7 +9,7 @@ import ButtonLink from "../../components/ButtonLink"
 import CardList from "../../components/CardList"
 import Checkbox from "../../components/Checkbox"
 import CopyToClipboard from "../../components/CopyToClipboard"
-import Emoji from "../../components/Emoji"
+import Emoji from "../../components/OldEmoji"
 import InfoBanner from "../../components/InfoBanner"
 import Link from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
@@ -25,6 +24,7 @@ import { DEPOSIT_CONTRACT_ADDRESS } from "../../data/addresses"
 import { translateMessageId, TranslationKey } from "../../utils/translations"
 import type { Context } from "../../types"
 import FeedbackCard from "../../components/FeedbackCard"
+import { getImage } from "../../utils/image"
 
 const Page = styled.div`
   width: 100%;
@@ -128,6 +128,7 @@ const Address = styled.div`
 
 const CopyButton = styled(ButtonSecondary)`
   margin-right: 1.5rem;
+  margin-bottom: 1rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin-right: 0rem;
     margin-top: 1rem;
@@ -165,16 +166,6 @@ const Caption = styled.div`
   font-size: 0.875rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin-bottom: 2rem;
-  }
-`
-
-const StyledCheckbox = styled(Checkbox)`
-  display: flex;
-  min-height: 3.5rem;
-  margin-bottom: 0.5rem;
-
-  .styled-checkbox {
-    margin-top: 0.25rem;
   }
 `
 
@@ -229,12 +220,12 @@ const DepositContractPage = ({
     // Create textToSpeechRequest
     let speech = new SpeechSynthesisUtterance()
     speech.lang = "en-US"
-    speech.text = DEPOSIT_CONTRACT_ADDRESS.split("").join(" ")
+    speech.text = DEPOSIT_CONTRACT_ADDRESS.split("").join(",")
     speech.volume = 1
-    speech.rate = 0.5
+    speech.rate = 1
     speech.pitch = 1
     // Add event listeners
-    // Explicity set state in listener callback
+    // Explicitly set state in listener callback
     const speechCallbackState = {
       browserHasTextToSpeechSupport: true,
       textToSpeechRequest: speech,
@@ -282,22 +273,26 @@ const DepositContractPage = ({
     {
       title: "ConsenSys",
       link: "https://consensys.net/blog/news/eth2-phase-0-deposit-contract-address/",
-      image: getImage(data.consensys),
+      image: getImage(data.consensys)!,
+      alt: "",
     },
     {
       title: "Ethereum Foundation",
       link: "https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/",
-      image: getImage(data.ef),
+      image: getImage(data.ef)!,
+      alt: "",
     },
     {
       title: "Etherscan",
       link: `https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`,
-      image: getImage(data.etherscan),
+      image: getImage(data.etherscan)!,
+      alt: "",
     },
     {
       title: "EthHub",
       link: "https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/deposit-contract/",
-      image: getImage(data.ethhub),
+      image: getImage(data.ethhub)!,
+      alt: "",
     },
   ]
 
@@ -366,10 +361,15 @@ const DepositContractPage = ({
                       <Translation id="page-staking-deposit-contract-confirm-address" />
                     </CardTitle>
                   </Row>
-                  <StyledCheckbox
-                    size={1.5}
-                    checked={state.userHasUsedLaunchpad}
-                    callback={() =>
+                  <Checkbox
+                    isChecked={state.userHasUsedLaunchpad}
+                    size="md"
+                    mb="0.5rem"
+                    display="flex"
+                    alignItems="top"
+                    variant="alignTop"
+                    minHeight="3.5rem"
+                    onChange={() =>
                       setState({
                         ...state,
                         userHasUsedLaunchpad: !state.userHasUsedLaunchpad,
@@ -377,11 +377,16 @@ const DepositContractPage = ({
                     }
                   >
                     <Translation id="page-staking-deposit-contract-checkbox1" />
-                  </StyledCheckbox>
-                  <StyledCheckbox
-                    size={1.5}
-                    checked={state.userUnderstandsStaking}
-                    callback={() =>
+                  </Checkbox>
+                  <Checkbox
+                    isChecked={state.userUnderstandsStaking}
+                    size="md"
+                    mb="0.5rem"
+                    display="flex"
+                    alignItems="top"
+                    variant="alignTop"
+                    minHeight="3.5rem"
+                    onChange={() =>
                       setState({
                         ...state,
                         userUnderstandsStaking: !state.userUnderstandsStaking,
@@ -389,11 +394,16 @@ const DepositContractPage = ({
                     }
                   >
                     <Translation id="page-staking-deposit-contract-checkbox2" />
-                  </StyledCheckbox>
-                  <StyledCheckbox
-                    size={1.5}
-                    checked={state.userWillCheckOtherSources}
-                    callback={() =>
+                  </Checkbox>
+                  <Checkbox
+                    isChecked={state.userWillCheckOtherSources}
+                    size="md"
+                    mb="0.5rem"
+                    display="flex"
+                    alignItems="top"
+                    variant="alignTop"
+                    minHeight="3.5rem"
+                    onChange={() =>
                       setState({
                         ...state,
                         userWillCheckOtherSources:
@@ -402,7 +412,7 @@ const DepositContractPage = ({
                     }
                   >
                     <Translation id="page-staking-deposit-contract-checkbox3" />
-                  </StyledCheckbox>
+                  </Checkbox>
                   <CopyButton
                     disabled={!isButtonEnabled}
                     onClick={() =>

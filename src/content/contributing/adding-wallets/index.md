@@ -2,7 +2,6 @@
 title: Adding wallets
 description: The policy we use when adding a wallet to ethereum.org
 lang: en
-sidebar: true
 ---
 
 # Adding wallets {#adding-wallets}
@@ -49,7 +48,7 @@ Wallets are rapidly changing in Ethereum. We've tried to create a fair framework
 - **ERC-20 support** - your wallet allows users to import ERC-20 token contracts, or automatically queries and displays ERC-20 tokens.
 - **EIP-1559 (type 2) transactions** - your wallet supports EIP-1559 (type 2) transactions.
 - **Buy crypto** - your wallet supports users directly purchasing and onboarding to crypto.
-- **Withdraw crypto** - your wallet supports users withdrawing directly to card or a bank account.
+- **Sell for fiat** - your wallet supports users selling and withdrawing to fiat directly to card or a bank account.
 - **Multisig** - your wallet supports multiple signatures to sign a transaction.
 - **Social recovery** - your wallet supports guardians and a user can recover their wallet if they lose their seed phrase using these guardians.
 - **Dedicated support team** - your wallet has a dedicated support team where users can go to when experiencing issues.

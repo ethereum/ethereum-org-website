@@ -2,8 +2,8 @@
 title: Ethereum Whitepaper
 description: An introductory paper to Ethereum, published in 2013 before its launch.
 lang: en
-sidebar: true
 sidebarDepth: 2
+hideEditButton: true
 ---
 
 # Ethereum Whitepaper {#ethereum-whitepaper}
@@ -315,7 +315,7 @@ A general outline for how to code a DAO is as follows. The simplest design is si
 - `[1,i]` to register a vote in favor of proposal `i`
 - `[2,i]` to finalize proposal `i` if enough votes have been made
 
-The contract would then have clauses for each of these. It would maintain a record of all open storage changes, along with a list of who voted for them. It would also have a list of all members. When any storage change gets to two thirds of members voting for it, a finalizing transaction could execute the change. A more sophisticated skeleton would also have built-in voting ability for features like sending a transaction, adding members and removing members, and may even provide for [Liquid Democracy](https://wikipedia.org/wiki/Delegative_democracy)-style vote delegation (ie. anyone can assign someone to vote for them, and assignment is transitive so if A assigns B and B assigns C then C determines A's vote). This design would allow the DAO to grow organically as a decentralized community, allowing people to eventually delegate the task of filtering out who is a member to specialists, although unlike in the "current system" specialists can easily pop in and out of existence over time as individual community members change their alignments.
+The contract would then have clauses for each of these. It would maintain a record of all open storage changes, along with a list of who voted for them. It would also have a list of all members. When any storage change gets to two thirds of members voting for it, a finalizing transaction could execute the change. A more sophisticated skeleton would also have built-in voting ability for features like sending a transaction, adding members and removing members, and may even provide for [Liquid Democracy](https://wikipedia.org/wiki/Liquid_democracy)-style vote delegation (ie. anyone can assign someone to vote for them, and assignment is transitive so if A assigns B and B assigns C then C determines A's vote). This design would allow the DAO to grow organically as a decentralized community, allowing people to eventually delegate the task of filtering out who is a member to specialists, although unlike in the "current system" specialists can easily pop in and out of existence over time as individual community members change their alignments.
 
 An alternative model is for a decentralized corporation, where any account can have zero or more shares, and two thirds of the shares are required to make a decision. A complete skeleton would involve asset management functionality, the ability to make an offer to buy or sell shares, and the ability to accept offers (preferably with an order-matching mechanism inside the contract). Delegation would also exist Liquid Democracy-style, generalizing the concept of a "board of directors".
 
@@ -509,15 +509,15 @@ The concept of an arbitrary state transition function as implemented by the Ethe
 10. [Colored coins whitepaper](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)
 11. [Mastercoin whitepaper](https://github.com/mastercoin-MSC/spec)
 12. [Decentralized autonomous corporations, Bitcoin Magazine](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)
-13. [Simplified payment verification](https://en.bitcoin.it/wiki/Scalability#Simplifiedpaymentverification)
+13. [Simplified payment verification](https://en.bitcoin.it/wiki/Scalability#Simplified_payment_verification)
 14. [Merkle trees](https://wikipedia.org/wiki/Merkle_tree)
 15. [Patricia trees](https://wikipedia.org/wiki/Patricia_tree)
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ and Autonomous Agents, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
-18. [Mike Hearn on Smart Property at Turing Festival](http://www.youtube.com/watch?v=Pu4PAMFPo5Y)
+18. [Mike Hearn on Smart Property at Turing Festival](https://www.youtube.com/watch?v=MVyv4t0OKe4)
 19. [Ethereum RLP](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
 20. [Ethereum Merkle Patricia trees](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
-21. [Peter Todd on Merkle sum trees](http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
+21. [Peter Todd on Merkle sum trees](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
 _For history of the whitepaper, see [this wiki](https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
 

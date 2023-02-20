@@ -2,7 +2,6 @@
 title: Canaux d'état
 description: Une introduction aux canaux d'état et canaux de paiement en tant que solution de mise à l'échelle actuellement utilisée par la communauté Ethereum.
 lang: fr
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---

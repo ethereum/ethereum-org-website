@@ -1,10 +1,10 @@
 import React, { useState } from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 
 import { StyledSelect as Select } from "../SharedStyledComponents"
 import ButtonLink from "../ButtonLink"
-import Emoji from "../Emoji"
+import Emoji from "../OldEmoji"
 import Translation from "../Translation"
 
 import { trackCustomEvent } from "../../utils/matomo"
@@ -63,8 +63,8 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
 
   const data = {
     testnet: {
-      label: "Goerli/Prater testnet",
-      url: "https://prater.launchpad.ethereum.org",
+      label: "Goerli testnet",
+      url: "https://goerli.launchpad.ethereum.org",
     },
     mainnet: {
       label: "Mainnet",
@@ -115,7 +115,7 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
           <Translation id="page-staking-launchpad-widget-p3" />
         </p>
         <ButtonContainer>
-          <ButtonLink to="#node-and-client-tools" isSecondary>
+          <ButtonLink to="#node-and-client-tools" variant="outline">
             <Emoji text="🛠" mr="1rem" />
             <Translation id="page-staking-launchpad-widget-link" />
           </ButtonLink>

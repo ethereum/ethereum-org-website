@@ -2,7 +2,6 @@
 title: Ethereum geliştirme dokümantasyonu
 description: ethereum.org geliştirici belgelerinin tanıtımı.
 lang: tr
-sidebar: true
 ---
 
 Bu belge, Ethereum ile geliştirmenize yardımcı olmak için tasarlanmıştır. Ethereum'un kavramsal yönünü kapsar, Ethereum teknoloji yığınını açıklar ve daha karmaşık uygulamalar ve kullanım alanları için gelişmiş konuları belgeler.

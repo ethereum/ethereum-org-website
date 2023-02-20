@@ -1,8 +1,8 @@
 // Libraries
 import React from "react"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 
 // Components
@@ -20,6 +20,7 @@ import Translation from "../../components/Translation"
 // Utils
 import { Lang } from "../../utils/languages"
 import { translateMessageId, isLangRightToLeft } from "../../utils/translations"
+import { getImage } from "../../utils/image"
 
 // Types
 import type { Context } from "../../types"
@@ -179,7 +180,7 @@ const BannerImage = styled.div`
 
 const Section = styled.section`
   margin-top: 6rem;
-  &:first-child {
+  &:first-of-type {
     margin-top: 0;
   }
 `
@@ -227,7 +228,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
     title: translateMessageId("hero-title", intl),
     header: translateMessageId("hero-header", intl),
     subtitle: translateMessageId("hero-subtitle", intl),
-    image: getImage(data.heroImage),
+    image: getImage(data.heroImage)!,
     alt: "",
     buttons: [
       {
@@ -241,7 +242,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
     <Container>
       <PageMetadata
         title={translateMessageId("hero-title", intl)}
-        description={""}
+        description={translateMessageId("hero-subtitle", intl)}
       />
 
       <HeroBackground>
@@ -281,7 +282,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 <>
                   <CardImage>
                     <GatsbyImage
-                      image={getImage(data.whatIsEth)}
+                      image={getImage(data.whatIsEth)!}
                       alt={translateMessageId(
                         "what-is-ethereum-card-image-alt",
                         intl
@@ -302,7 +303,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <CardImage>
-                    <GatsbyImage image={getImage(data.eth)} alt="" />
+                    <GatsbyImage image={getImage(data.eth)!} alt="" />
                   </CardImage>
                   <ButtonLink to="/eth/">
                     <Translation id="what-is-eth-card-title" />
@@ -321,7 +322,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <CardImage>
-                    <GatsbyImage image={getImage(data.impact)} alt="" />
+                    <GatsbyImage image={getImage(data.impact)!} alt="" />
                   </CardImage>
                   <ButtonLink to="/get-eth/">
                     <Translation id="where-can-i-get-eth-card-title" />
@@ -334,6 +335,9 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               <Translation id="additional-reading-more-on-ethereum-basics" />
             </AdditionalReadingHeader>
             <DocsContainer>
+              <DocLink to="/guides/">
+                <Translation id="guides-hub" />
+              </DocLink>
               <DocLink to="/smart-contracts/">
                 <Translation id="additional-reading-what-are-smart-contracts" />
               </DocLink>
@@ -368,7 +372,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 <>
                   <CardImage>
                     <GatsbyImage
-                      image={getImage(data.wallet)}
+                      image={getImage(data.wallet)!}
                       alt={translateMessageId(
                         "what-is-a-wallet-card-alt",
                         intl
@@ -390,7 +394,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 <>
                   <CardImage>
                     <GatsbyImage
-                      image={getImage(data.futureTransparent)}
+                      image={getImage(data.futureTransparent)!}
                       alt=""
                     />
                   </CardImage>
@@ -411,7 +415,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <CardImage>
-                    <GatsbyImage image={getImage(data.dogeComputer)} alt="" />
+                    <GatsbyImage image={getImage(data.dogeComputer)!} alt="" />
                   </CardImage>
                   <ButtonLink to="/security/">
                     <Translation id="crypto-security-basics-card-button" />
@@ -439,7 +443,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </ul>
               </BannerBody>
               <BannerImage>
-                <GatsbyImage image={getImage(data.newRings)} alt="" />
+                <GatsbyImage image={getImage(data.newRings)!} alt="" />
               </BannerImage>
             </Banner>
 
@@ -447,6 +451,12 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               <Translation id="additional-reading-more-on-using-ethereum" />
             </AdditionalReadingHeader>
             <DocsContainer>
+              <DocLink to="/guides/how-to-register-an-ethereum-account/">
+                <Translation id="additional-reading-how-to-register-an-ethereum-account" />
+              </DocLink>
+              <DocLink to="/guides/how-to-use-a-wallet/">
+                <Translation id="additional-reading-how-to-use-a-wallet" />
+              </DocLink>
               <DocLink to="/community/support/">
                 <Translation id="additional-reading-support-for-ethereum-and-wallets" />
               </DocLink>
@@ -469,7 +479,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 <>
                   <CardImage>
                     <GatsbyImage
-                      image={getImage(data.financeTransparent)}
+                      image={getImage(data.financeTransparent)!}
                       alt=""
                     />
                   </CardImage>
@@ -487,7 +497,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <CardImage>
-                    <GatsbyImage image={getImage(data.stablecoins)} alt="" />
+                    <GatsbyImage image={getImage(data.stablecoins)!} alt="" />
                   </CardImage>
                   <ButtonLink to="/stablecoins/">
                     <Translation id="stablecoins-card-button" />
@@ -501,7 +511,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 <>
                   <CardImage>
                     <GatsbyImage
-                      image={getImage(data.infrastructureTransparent)}
+                      image={getImage(data.infrastructureTransparent)!}
                       alt=""
                     />
                   </CardImage>
@@ -516,7 +526,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <CardImage>
-                    <GatsbyImage image={getImage(data.dao)} alt="" />
+                    <GatsbyImage image={getImage(data.dao)!} alt="" />
                   </CardImage>
                   <ButtonLink to="/dao/">
                     <Translation id="dao-card-button" />
@@ -530,7 +540,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 <>
                   <CardImage>
                     <GatsbyImage
-                      image={getImage(data.developersEthBlocks)}
+                      image={getImage(data.developersEthBlocks)!}
                       alt=""
                     />
                   </CardImage>
@@ -558,7 +568,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="https://future.com/what-is-decentralized-science-aka-desci/">
+                    <Link to="/desci/">
                       <Translation id="decentralized-science" />
                     </Link>
                   </li>
@@ -609,7 +619,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <CardImage>
-                    <GatsbyImage image={getImage(data.rhino)} alt="" />
+                    <GatsbyImage image={getImage(data.rhino)!} alt="" />
                   </CardImage>
                   <ButtonLink to="/staking/">
                     <Translation id="staking-ethereum-card-button" />
@@ -625,7 +635,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <CardImage>
-                    <GatsbyImage image={getImage(data.ethereumInside)} alt="" />
+                    <GatsbyImage
+                      image={getImage(data.ethereumInside)!}
+                      alt=""
+                    />
                   </CardImage>
                   <ButtonLink to="/run-a-node/">
                     <Translation id="run-a-node-card-title" />
@@ -653,7 +666,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <CardImage>
-                    <GatsbyImage image={getImage(data.hackathon)} alt="" />
+                    <GatsbyImage image={getImage(data.hackathon)!} alt="" />
                   </CardImage>
                   <ButtonLink to="/energy-consumption/">
                     <Translation id="energy-consumption-card-button" />
@@ -669,7 +682,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <CardImage>
-                    <GatsbyImage image={getImage(data.merge)} alt="" />
+                    <GatsbyImage image={getImage(data.merge)!} alt="" />
                   </CardImage>
                   <ButtonLink to="/upgrades/">
                     <Translation id="ethereum-upgrades-card-button" />
@@ -689,7 +702,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 <>
                   <CardImage>
                     <GatsbyImage
-                      image={getImage(data.financeTransparent)}
+                      image={getImage(data.financeTransparent)!}
                       alt=""
                     />
                   </CardImage>
@@ -741,7 +754,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 <>
                   <CardImage>
                     <GatsbyImage
-                      image={getImage(data.enterprise)}
+                      image={getImage(data.enterprise)!}
                       alt={translateMessageId("community-hub-card-alt", intl)}
                     />
                   </CardImage>
@@ -759,7 +772,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <CardImage>
-                    <GatsbyImage image={getImage(data.dogeComputer)} alt="" />
+                    <GatsbyImage image={getImage(data.dogeComputer)!} alt="" />
                   </CardImage>
                   <ButtonLink to="/community/get-involved/">
                     <Translation id="get-involved-card-title" />
@@ -778,7 +791,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               >
                 <>
                   <CardImage>
-                    <GatsbyImage image={getImage(data.impact)} alt="" />
+                    <GatsbyImage image={getImage(data.impact)!} alt="" />
                   </CardImage>
                   <ButtonLink to="/community/online/">
                     <Translation id="online-communities-card-button" />
@@ -797,7 +810,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               <ul>
                 <li>
                   <Link to="https://www.goodreads.com/book/show/57356067-the-cryptopians">
-                    The Cryptopians
+                    <Translation id="cryptopians-title" />
                   </Link>{" "}
                   <i>
                     <Translation id="cryptopians-description" />
@@ -805,7 +818,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/book/show/55360267-out-of-the-ether">
-                    Out of the Ether
+                    <Translation id="out-of-the-ether-title" />
                   </Link>{" "}
                   <i>
                     <Translation id="out-of-the-ether-description" />
@@ -813,7 +826,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/en/book/show/50175330-the-infinite-machine">
-                    The Infinite Machine
+                    <Translation id="the-infinite-machine-title" />
                   </Link>{" "}
                   <i>
                     <Translation id="the-infinite-machine-description" />
@@ -821,7 +834,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/en/book/show/22174460-the-age-of-cryptocurrency">
-                    The Age of Cryptocurrency
+                    <Translation id="the-age-of-cryptocurrency-title" />
                   </Link>{" "}
                   <i>
                     <Translation id="the-age-of-cryptocurrency-description" />
@@ -829,7 +842,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/en/book/show/34964890-the-truth-machine">
-                    The Truth Machine
+                    <Translation id="the-truth-machine-title" />
                   </Link>{" "}
                   <i>
                     <Translation id="the-truth-machine-description" />
@@ -837,7 +850,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/book/show/23546676-digital-gold">
-                    Digital Gold
+                    <Translation id="digital-gold-title" />
                   </Link>{" "}
                   <i>
                     <Translation id="digital-gold-description" />
@@ -845,7 +858,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </li>
                 <li>
                   <Link to="https://www.goodreads.com/en/book/show/56274031-kings-of-crypto">
-                    Kings of Crypto
+                    <Translation id="kings-of-crypto-title" />
                   </Link>{" "}
                   <i>
                     <Translation id="kings-of-crypto-description" />
@@ -853,10 +866,18 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                 </li>
                 <li>
                   <Link to="https://github.com/ethereumbook/ethereumbook">
-                    Mastering Ethereum
+                    <Translation id="mastering-ethereum-title" />
                   </Link>{" "}
                   <i>
                     <Translation id="mastering-ethereum-description" />{" "}
+                  </i>
+                </li>
+                <li>
+                  <Link to="https://www.goodreads.com/en/book/show/59892281-proof-of-stake">
+                    <Translation id="proof-of-stake-title" />
+                  </Link>{" "}
+                  <i>
+                    <Translation id="proof-of-stake-description" />
                   </i>
                 </li>
               </ul>
@@ -865,49 +886,59 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               </h3>
               <ul>
                 <li>
-                  <Link to="https://podcast.ethhub.io/">Into the Ether</Link>{" "}
-                  <i>
-                    <Translation id="ethhub-description" />
-                  </i>
-                </li>
-                <li>
-                  <Link to="http://podcast.banklesshq.com/">Bankless</Link>{" "}
+                  <Link to="http://podcast.banklesshq.com/">
+                    <Translation id="bankless-title" />
+                  </Link>{" "}
                   <i>
                     <Translation id="bankless-description" />
                   </i>
                 </li>
                 <li>
                   <Link to="https://uncommoncore.co/podcast/">
-                    Uncommon Core
+                    <Translation id="uncommon-core-title" />
                   </Link>{" "}
                   <i>
                     <Translation id="uncommon-core-description" />
                   </i>
                 </li>
                 <li>
-                  <Link to="https://www.zeroknowledge.fm/">Zero Knowledge</Link>{" "}
+                  <Link to="https://www.zeroknowledge.fm/">
+                    <Translation id="zeroknowledge-title" />
+                  </Link>{" "}
                   <i>
                     <Translation id="zeroknowledge-description" />
                   </i>
                 </li>
                 <li>
-                  <Link to="https://epicenter.tv/">Epicenter</Link>{" "}
+                  <Link to="https://epicenter.tv/">
+                    <Translation id="epicenter-title" />
+                  </Link>{" "}
                   <i>
                     <Translation id="epicenter-description" />
                   </i>
                 </li>
                 <li>
-                  <Link to="https://unchainedpodcast.com/">Unchained</Link>{" "}
+                  <Link to="https://unchainedpodcast.com/">
+                    <Translation id="unchained-title" />
+                  </Link>{" "}
                   <i>
                     <Translation id="unchained-description" />
                   </i>
                 </li>
                 <li>
                   <Link to="https://www.intothebytecode.xyz/">
-                    Into the Bytecode
+                    <Translation id="into-the-bytecode-title" />
                   </Link>{" "}
                   <i>
                     <Translation id="into-the-bytecode-description" />
+                  </i>
+                </li>
+                <li>
+                  <Link to="https://www.youtube.com/@TheDailyGwei/">
+                    <Translation id="the-daily-gwei-title" />
+                  </Link>{" "}
+                  <i>
+                    <Translation id="the-daily-gwei-description" />
                   </i>
                 </li>
               </ul>

@@ -2,7 +2,6 @@
 title: Web2 vs Web3
 description:
 lang: fr
-sidebar: true
 ---
 
 Web2 fait référence à la version d'Internet que la plupart d'entre nous connaissent aujourd'hui. Un Internet dominé par les sociétés qui fournissent des services en échange de vos données personnelles. Dans le contexte d'Ethereum, Web3 fait référence aux applications décentralisées qui s'exécutent sur la blockchain. Ce sont des applications qui permettent à quiconque de participer sans monétiser ses données personnelles.

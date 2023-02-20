@@ -2,7 +2,6 @@
 title: Merkeziyetsiz Depolama
 description: Merkeziyetsiz depolamanın ne olduğuna ve onu bir dapp'ye entegre etmeye yarayan mevcut araçlara genel bakış.
 lang: tr
-sidebar: true
 ---
 
 Tek bir şirket veya kuruluş tarafından işletilen merkezi bir sunucunun aksine, merkeziyetsiz depolama sistemleri, genel verilerin bir bölümünü tutan ve esnek bir dosya depolama paylaşım sistemi oluşturan eşler arası bir kullanıcı operatörleri ağından oluşur. Bunlar, blok zinciri tabanlı bir uygulamada veya herhangi bir eşler arası tabanlı ağda olabilir.

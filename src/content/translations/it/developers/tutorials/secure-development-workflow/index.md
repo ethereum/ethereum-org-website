@@ -3,12 +3,11 @@ title: Elenco di controllo di sicurezza per gli smart contract
 description: Un flusso di lavoro suggerito per scrivere smart contract sicuri
 author: "Trailofbits"
 tags:
-  - "smart contract"
+  - "smart Contract"
   - "sicurezza"
   - "Solidity"
 skill: intermediate
 lang: it
-sidebar: true
 published: 2020-09-07
 source: Creare contratti sicuri
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md

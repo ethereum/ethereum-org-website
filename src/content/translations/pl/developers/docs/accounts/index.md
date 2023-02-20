@@ -2,7 +2,6 @@
 title: Konta Ethereum
 description: Wyjaśnienie kont Ethereum – ich struktury danych i powiązania z kryptografią kluczy.
 lang: pl
-sidebar: true
 isOutdated: true
 ---
 

@@ -2,7 +2,6 @@
 title: Infrastructures de développement des dApps
 description: Explorez les avantages des frameworks et comparez les options disponibles.
 lang: fr
-sidebar: true
 ---
 
 ## Introduction aux infrastructures {#introduction-to-frameworks}

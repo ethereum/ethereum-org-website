@@ -2,7 +2,6 @@
 title: İyimser toplamalar
 description: İyimser toplamalara giriş
 lang: tr
-sidebar: true
 ---
 
 ## Ön koşullar {#prerequisites}

@@ -2,7 +2,6 @@
 title: Data availability
 description: An overview of problems and solutions relating to data availability in Ethereum
 lang: en
-sidebar: true
 ---
 
 Trustlessness is a major premise of public blockchains ("don't trust, verify"). One of the ways Ethereum reduces trust assumptions is by enforcing rules on data availability. Block producers are required to publish the data for each block, which nodes participating in Ethereum's consensus store locally.
@@ -80,8 +79,7 @@ However, for Ethereum to guarantee the security of rollups, it needs a mechanism
 
 [Optimistic rollups](/developers/docs/scaling/optimistic-rollups/) post compressed transaction data to Ethereum as `calldata`. This allows anyone to verify the state of the rollup and also provides guarantees of transaction validity. If a transaction is invalid, a verifier can use the available transaction data to construct a [fraud proof](/glossary/#fraud-proof) to challenge it.
 
-[Zero-knowledge (ZK) rollups](/developers/docs/scaling/zk-rollups) don't need to post transaction data since zero-knowledge proofs
-validity proofs](/glossary/#zk-proof) guarantee the correctness of state transitions. However, we cannot guarantee the functionality of the ZK-rollup (or interact with it) without access to its state data.
+[Zero-knowledge (ZK) rollups](/developers/docs/scaling/zk-rollups) don't need to post transaction data since [zero-knowledge validity proofs](/glossary/#zk-proof) guarantee the correctness of state transitions. However, we cannot guarantee the functionality of the ZK-rollup (or interact with it) without access to its state data.
 
 For example, users cannot know their balances if an operator withholds details about the rollup’s state. Also, they cannot perform state updates using information contained in a newly added block.
 

@@ -11,7 +11,6 @@ tags:
   - "alchemy"
 skill: beginner
 lang: id
-sidebar: true
 published: 2020-10-30
 source: Sedang
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
@@ -25,7 +24,7 @@ Kami akan memandu Anda mulai dari mendaftar di Alchemy hingga menulis skrip web3
 
 ## 1. Mendaftar Akun Alchemy Secara Gratis {#sign-up-for-a-free-alchemy-account}
 
-Membuat akun Alchemy itu mudah, [daftar secara gratis di sini](https://dashboard.alchemyapi.io/signup/).
+Membuat akun Alchemy itu mudah, [daftar secara gratis di sini](https://auth.alchemyapi.io/signup).
 
 ## 2. Membuat Aplikasi Alchemy {#create-an-alchemy-app}
 
@@ -79,7 +78,7 @@ _**NOTE:** Replace [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainn
 
 **_CATATAN:_** Skrip di bawah harus dijalankan pada **konteks node** atau **disimpan dalam file**, jangan menjalankannya di baris perintah. Jika Anda tidak memiliki Node atau npm yang terinstal, simak [panduan pengaturan untuk mac](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs) singkat ini.
 
-Ada banyak sekali [pustaka Web3](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) yang bisa Anda integrasikan dengan Alchemy, namun, kami merekomendasikan menggunakan [Web3 Alchemy](https://docs.alchemyapi.io/documentation/alchemy-web3), pengganti web3.js, yang dibuat dan dikonfigurasi agar bekerja dengan mulus dengan Alchemy. Ini menyediakan banyak keuntungan seperti percobaan ulang otomatis dan dukungan WebSocket yang kuat.
+Ada banyak sekali [pustaka Web3](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) yang bisa Anda integrasikan dengan Alchemy, namun, kami merekomendasikan menggunakan [Web3 Alchemy](https://docs.alchemy.com/reference/api-overview), pengganti web3.js, yang dibuat dan dikonfigurasi agar bekerja dengan mulus dengan Alchemy. Ini menyediakan banyak keuntungan seperti percobaan ulang otomatis dan dukungan WebSocket yang kuat.
 
 Untuk menginstal AlchemyWeb3.js, **arahkan kursor ke direktori proyek Anda** dan jalankan:
 
@@ -153,4 +152,4 @@ The latest block number is 11043912
 
 Not sure what to do next? Try deploying your first smart contract and get your hands dirty with some solidity programming in our [Hello World Smart Contract Guide](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract), or test your dashboard knowledge with the [Dashboard Demo App](https://docs.alchemyapi.io/tutorials/demo-app)!
 
-_[Daftar Alchemy secara gratis](https://dashboard.alchemyapi.io/signup/), lihat [dokumentasi](https://docs.alchemyapi.io/) kami, dan untuk berita terbaru, ikuti kami di [Twitter](https://twitter.com/AlchemyPlatform)_.
+_[Daftar Alchemy secara gratis](https://auth.alchemyapi.io/signup), lihat [dokumentasi](https://docs.alchemyapi.io/) kami, dan untuk berita terbaru, ikuti kami di [Twitter](https://twitter.com/AlchemyPlatform)_.

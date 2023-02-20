@@ -1,13 +1,12 @@
 ---
 title: Come posso partecipare?
 description: Come partecipare alla community Ethereum.
-sidebar: true
 lang: it
 ---
 
 # Come posso partecipare? {#get-involved}
 
-La community di Ethereum include le persone con diverse esperienze e serie di competenze. Che tu sia uno sviluppatore, un'artista, o un contabile, ci sono modi di essere coinvolti. Ecco un elenco di suggerimenti che potrebbero aiutarti ad iniziare.
+La community di Ethereum include le persone con diverse esperienze e serie di competenze. Che tu sia uno sviluppatore, un artista o un contabile, ci sono molti modi per partecipare. Ecco un elenco di suggerimenti che potrebbero aiutarti ad iniziare.
 
 ## Sviluppatori <Emoji text=":computer:" size={1} />‍ {#developers}
 
@@ -18,6 +17,7 @@ La community di Ethereum include le persone con diverse esperienze e serie di co
 - Segui o partecipa alle [riunioni dei Core Dev](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
 - [Lista del programma di supporto degli ecosistemi](https://esp.ethereum.foundation/wishlist/) - strumenti, documentazione, e infrastrutture dove il programma di supporto per l'ecosistema Ethereum è attivamente alla ricerca di domande di sovvenzione
 - [Web3Bridge](https://www.web3bridge.com/) - unisciti alla community di aspiranti web3 nella loro iniziativa per identificare, formare e supportare centinaia di sviluppatori e membri della community in tutta l'Africa
+- Unisciti al [Discord Ethereum Cat Herders](https://discord.io/EthCatHerders)
 
 ## Ricercatori & Accademici <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
 
@@ -26,6 +26,8 @@ Hai conoscenze in matematica, crittografia o economia? Potresti essere interessa
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) - una serie di premi di ricerca di alto valore dove puoi guadagnare fino a >$100.000 USD
 - [Ethresearch.ch](https://ethresear.ch) - Il forum principale di Ethereum per la ricerca, e il forum più influente al mondo per la criptoeconomia
 - [Lista dei desideri del programma di supporto per gli ecosistemi](https://esp.ethereum.foundation/wishlist/) - aree di ricerca in cui il programma di supporto per gli ecosistemi Ethereum sta cercando attivamente domande di sovvenzione
+
+[Esplora altre aree di ricerca attive](/community/research/).
 
 ## Competenze non tecniche <Emoji text=":briefcase:" size={1} /> {#non-technical}
 
@@ -68,10 +70,10 @@ L'ecosistema Ethereum ha come missione di finanziare beni pubblici e progetti di
 - [Gitcoin](https://gitcoin.co/fund)
 - [clr.fund](https://clr.fund/#/about)
 
-## Professionisti finanziari & Contabili <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
+## Professionisti finanziari e Contabili <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
 
-- Ethereum è la casa della "Finanza Decentralizzata" - una rete di protocolli e applicazioni che offrono un sistema finanziario alternativo. Se sei un professionista finanziario, controlla alcune applicazioni DeFi su [DeFi Pulse](https://defipulse.com/) o su [DeFiPrime](https://defiprime.com)
-- Contabile? Le risorse su Ethereum - ETH, token, DeFi, ecc - introducono molte nuove alternative di contabilità. Puoi incominciare avvicinandoti ad alcuni progetti che hanno il fine di aiutare gli utenti di criptovalute a risolvere le difficoltà riguardanti la contabilità, come [Rotki](https://rotki.com/)
+- Ethereum è la casa della "Finanza Decentralizzata" - una rete di protocolli e applicazioni che offrono un sistema finanziario alternativo. Se sei un professionista finanziario, controlla alcune applicazioni DeFi su [DeFi Llama](https://defillama.com/) o su [DeFiPrime](https://defiprime.com)
+- Contabile? Le risorse su Ethereum: ETH, token, Defi, etc., introducono molti nuovi problemi di compatibilità. Potresti iniziare dando un'occhiata ad alcuni progetti che mirano ad aiutare gli utenti delle criptovalute a risolvere le proprie difficoltà di contabilità e ragioneria, come [Rotki](https://rotki.com/)
 
 ## Product Manager <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
@@ -96,15 +98,16 @@ L'ecosistema Ethereum ha come missione di finanziare beni pubblici e progetti di
 - [Lavori useWeb3](https://www.useweb3.xyz/jobs)
 - [Lavori Web3](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
+- [Crypto Valley Jobs](https://cryptovalley.jobs/)
 
-## Entra a far parte di una OAD {#decentralized-autonomous-organizations-daos}
+## Entra a far parte di una DAO {#decentralized-autonomous-organizations-daos}
 
-Le "OAD" sono Organizzazioni Autonome Decentralizzate. Questi gruppi sfruttano la tecnologia di Ethereum per facilitare organizzazione e collaborazione. Ad esempio, per il controllo dei membri, il voto su proposte o la gestione delle risorse comuni. Mentre le OAD sono ancora sperimentali, ti offrono l'opportunità di trovare gruppi con cui ti identifichi, trovare collaboratori, ed aumentare il tuo impatto sulla community di Ethereum. [Maggiori informazioni sulle OAD](/dao/)
+Le "DAO" sono organizzazioni autonome decentralizzate (Decentralized Autonomous Organizations). Questi gruppi sfruttano la tecnologia di Ethereum per facilitare organizzazione e collaborazione. Ad esempio, per il controllo dei membri, il voto su proposte o la gestione delle risorse comuni. Mentre le DAO sono ancora sperimentali, ti offrono l'opportunità di trovare gruppi con cui ti identifichi, trovare collaboratori, ed aumentare il tuo impatto sulla community di Ethereum. [Maggiori informazioni sulle DAO](/dao/)
 
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Promuovi il concetto di DAO in campo non tecnico e aiuta le persone a creare valore tramite una DAO._
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Community di creatori che credono nella proprietà collettiva di internet_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Collettivo di sviluppo su base freelance di Web3 operante come una DAO_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Sviluppo e governance decentralizzati di dApp e protocolli_
+- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Sviluppo decentralizzato e governance di dApp e protocolli_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Governance comunitaria di DAOhaus_
 - [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _Supereroe di proprietà della Comunità_
 - [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _Ingegneria legale_

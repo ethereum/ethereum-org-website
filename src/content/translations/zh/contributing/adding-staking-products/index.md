@@ -2,7 +2,6 @@
 title: 添加质押产品或服务
 description: 将质押产品或服务添加到 ethereum.org 时适用的政策
 lang: zh
-sidebar: true
 ---
 
 # 添加质押产品或服务 {#adding-staking-products-or-services}
@@ -27,7 +26,7 @@ sidebar: true
 
 - 节点或客户端工具
 - 密钥管理
-- 质押即服务(SaaS)
+- 质押即服务 (SaaS)
 - 质押池
 
 目前，我们仅在这些类别中上架产品或服务。
@@ -147,7 +146,7 @@ sidebar: true
 
 **支持哪些用户界面？**
 
-- 例如： 浏览器应用程序、桌面应用程序、移动应用程序、CLI
+- 例如 浏览器应用程序、桌面应用程序、移动应用程序、CLI
 
 **对于节点工具，软件是否提供了在客户端之间轻松切换的方法？**
 
@@ -168,5 +167,5 @@ sidebar: true
 如果您想将质押产品或服务添加到 ethereum.org，请在 GitHub 上创建一个提议。
 
 <ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_staking_product.md">
-  创建一个议题
+  创建一个提议
 </ButtonLink>

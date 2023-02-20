@@ -2,7 +2,6 @@
 title: Ethereum İyileştirme Önerileri (EIP'ler)
 description: Ethereum İyileştirme Önerilerini (EIP'ler) anlamak için ihtiyacınız olan temel bilgiler.
 lang: tr
-sidebar: true
 ---
 
 # Ethereum İyileştirme Önerilerine (EIP'ler) Giriş {#introduction-to-ethereum-improvement-proposals-eips}

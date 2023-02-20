@@ -2,7 +2,6 @@
 title: Exploradores de bloco
 description: Uma introdução aos exploradores de bloco, seu portal no mundo dos dados da cadeia de blocos, onde você pode consultar informações sobre transações, contas, contratos e mais.
 lang: pt-br
-sidebar: true
 sidebarDepth: 3
 ---
 

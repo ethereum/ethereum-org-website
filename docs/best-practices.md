@@ -52,7 +52,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
 
   - _tl;dr Each individual JSON entry should be a complete phrase by itself_
 
-- This is done using the `Translation` component. However there is an alternative method for regular JS: `gatsby-theme-i18n` with `/src/utils/translations.ts`
+- This is done using the `Translation` component. However there is an alternative method for regular JS: using the `t` function from `gatsby-plugin-react-i18next`
 
   - **Method one: `<Translation />` component (preferred if only needed in JSX)**
 
@@ -63,19 +63,18 @@ Markdown will be translated as whole pages of content, so no specific action is 
     ;<Translation id="language-json-key" />
     ```
 
-  - **Method two: `translateMessageId()`**
+  - **Method two: `t()`**
 
     ```tsx
-    import { useIntl } from "react-intl"
-    import { translateMessageId } from "src/utils/translations"
+    import { useTranslation } from "gatsby-plugin-react-i18next"
 
     // Utilize anywhere in JS using
-    const intl = useIntl()
-    translateMessageId("language-json-key", intl)
+    const { t } = useTranslation()
+    t("language-json-key")
     ```
 
     ```tsx
-    const siteTitle = translateMessageId("site-title", intl)
+    const siteTitle = t("site-title")
     ```
 
 ## React Hooks
@@ -104,14 +103,14 @@ export default ComponentName
 ## Styling
 
 - `src/theme.ts` - Declares site color themes, breakpoints and other constants (try to utilize these colors first)
-- We use [styled-components](https://styled-components.com/)
+- We use [emotion](https://emotion.sh/)
 
   - Tagged template literals are used to style custom components
 
   ```tsx
-  // Example of styling syntax using styled-components
+  // Example of styling syntax using emotion
 
-  import styled from "styled-components"
+  import styled from "@emotion/styled"
 
   const GenericButton = styled.div`
     width: 200px;
@@ -128,14 +127,12 @@ export default ComponentName
   // ie: <PrimaryButton>Text</PrimaryButton>
   ```
 
-  - Recommended VS Code Plugin: `vscode-styled-components` <br>To install: Open VS Code > `Ctrl+P` / `Cmd+P` > Run: <br>`ext install vscode-styled-components`
-
 - Values from `src/theme.ts` are automatically passed as a prop object to styled components
 
   ```tsx
   // Example of theme.ts usage
 
-  import styled from "styled-components"
+  import styled from "@emotion/styled"
 
   const Container = styled.div`
     background: ${(props) => props.theme.colors.background};
@@ -153,7 +150,7 @@ export default ComponentName
 import Emoji from "./Emoji"
 
 // Within JSX:
-;<Emoji text=":star:" size={1} /> // sized in `em`
+;<Emoji text=":star:" fontSize="xl" /> // the base fontSize is `md`
 ```
 
 - **Icons**: We use [React Icons](https://react-icons.github.io/react-icons/)
@@ -166,7 +163,7 @@ import Emoji from "./Emoji"
 // Example of how to add new icon not listed
 import { ZzIconName } from "react-icons/zz"
 
-// Then add to IconContect.Provider children:
+// Then add to IconContext.Provider children:
 {
   name === "alias" && <ZzIconName />
 }

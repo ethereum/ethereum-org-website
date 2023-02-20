@@ -2,7 +2,6 @@
 title: Узлы и клиенты
 description: Немного об узлах Ethereum и клиентском программном обеспечении, а также о том, как настроить узел и почему вы должны это сделать.
 lang: ru
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -174,7 +173,7 @@ Erigon (в прошлом — Turbo-Geth) представляет собой о
 
 Общий обзор подходов к синхронизации, используемых в клиентах с поддержкой основной сети:
 
-##### Полная синхронизация {#full-sync}
+##### Полная синхронизация
 
 Полная синхронизация загружает все блоки (включая заголовки, транзакции и квитанции) и генерирует состояние блокчейна постепенно, выполняя каждый блок из начала.
 
@@ -250,11 +249,11 @@ Erigon (в прошлом — Turbo-Geth) представляет собой о
 
 | Клиент                                                      | Язык       | Операционные системы  | Сети                                  |
 | ----------------------------------------------------------- | ---------- | --------------------- | ------------------------------------- |
-| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | Beacon Chain, Prater                  |
-| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Beacon Chain, Prater                  |
-| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Beacon Chain, Prater, Pyrmont         |
-| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Beacon Chain, Prater                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Prater, Pyrmont |
+| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | Beacon Chain, Goerli                  |
+| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Beacon Chain, Goerli                  |
+| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Beacon Chain, Goerli, Pyrmont         |
+| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Beacon Chain, Goerli                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Pyrmont |
 
 ## Аппаратное обеспечение {#hardware}
 

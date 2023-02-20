@@ -1,7 +1,6 @@
 ---
 title: Vyanzo vya lugha
 description: Vyanzo vya kujifunza kuhusu Ethereum vya lugha tofauti na kiingereza
-sidebar: true
 lang: sw
 ---
 

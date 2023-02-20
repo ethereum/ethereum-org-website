@@ -3,7 +3,6 @@ title: 面向 Python 开发者的以太坊介绍，第一部分
 description: 这是一篇介绍以太坊开发的文章，对那些熟悉 Python 编程语言的人来说尤其有用。
 author: Marc Garreau
 lang: zh
-sidebar: true
 tags:
   - "入门指南"
   - "python"
@@ -15,7 +14,7 @@ source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/
 ---
 
-想必您已经听说过以太坊，那么，您准备好投身于这个领域了吗？ 本篇文章将快速介绍一些区块链基础知识，然后让您与模拟的以太坊节点进行互动， 比如读取区块数据、检查账户余额和发送交易。 在这个过程中，我们会着重强调用传统方式构建应用与这种新的去中心化范式之间的差异。
+想必您已经听说过以太坊，那么，您准备好投身于这个领域了吗？ 本篇文章将快速介绍一些区块链基础知识，然后让您与模拟的以太坊节点进行互动，比如读取区块数据、检查账户余额和发送交易。 在这个过程中，我们会着重强调用传统方式构建应用与这种新的去中心化范式之间的差异。
 
 ## （软）前提条件 {#soft-prerequisites}
 
@@ -37,7 +36,6 @@ sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-
    "number": 1234567,
    "hash": "0xabc123...",
    "parentHash": "0xdef456...",
-   "miner": "0xa1b2c3...",
    ...,
    "transactions": [...]
 }
@@ -51,7 +49,7 @@ sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-
 
 _区块链本质上是一个链表；每个区块都有一个对前一个区块的引用。_
 
-这种数据结构并不新颖，但治理网络的规则（即点对点协议）却很新颖。 区块链没有中央机构；网络中的对等节点必需协作以维持网络，并且通过竞争决定将哪些交易纳入下一个区块。 因此，当您想给朋友转账时，您需要将这笔交易广播到网络上， 然后等待它被纳入即将产生的区块。
+这种数据结构并不新颖，但治理网络的规则（即点对点协议）却很新颖。 区块链没有中央机构；网络中的对等节点必需协作以维持网络，并且通过竞争决定将哪些交易纳入下一个区块。 因此，当您想给朋友转账时，您需要将这笔交易广播到网络上，然后等待它被纳入即将产生的区块。
 
 区块链验证资金确实从一个用户发送给另一个用户的唯一方法是使用该区块链原生货币（即，由该区块链创建和管理的货币）。 在以太坊，这种货币被称为 ETH，以太坊区块链是账户余额的唯一正式记录。
 
@@ -61,7 +59,7 @@ _区块链本质上是一个链表；每个区块都有一个对前一个区块�
 
 想要与以太坊进行互动的 Python 开发人员可能会接触到 [Web3.py](https://web3py.readthedocs.io/)。 Web3.py 是一个库，可以帮助我们简化连接以太坊节点，以及发送和接收数据。
 
-<div class="featured">注：“以太坊节点”和“以太坊客户端”可互换使用。 这两种说法都是指以太坊网络中参与者所运行的软件。 该软件可以读取区块数据，在新区块被添加到链上（“挖矿”）时接收更新、广播新交易等。</div>
+<div class="featured">注：“以太坊节点”和“以太坊客户端”可互换使用。 这两种说法都是指以太坊网络中参与者所运行的软件。 该软件可以读取区块数据，在新区块添加到链中时接收更新，广播新交易等等。 从技术角度讲，客户端是软件，节点是运行软件的计算机。</div>
 
 [以太坊客户端](/developers/docs/nodes-and-clients/)可以配置为通过[进程间通信 (IPC)](https://wikipedia.org/wiki/Inter-process_communication)、超文本传输协议 (HTTP) 或网络套接字 (Websockets) 进行访问，因此 Web3.py 也需要完成这个配置。 Web3.py 将这些连接选项称为**提供者**。 您需要从三个提供者中选择一个来连接 Web3.py 实例和您的节点。
 
@@ -83,7 +81,7 @@ w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 
 在这个演练中，我们仅在 Python 解释器中进行。 我们不会创建任何目录、文件、类或函数。
 
-<div class="featured">注：在下面的例子中，以“$”开头的命令是要在终端中运行的。 （不要输入 `$`，它只是表示行的开始。)</div>
+<div class="featured">注：在下面的例子中，以“$”开头的命令是要在终端中运行的。 （不要输入 `$`，它只是表示行的开始。）</div>
 
 首先，安装 [IPython](https://ipython.org/)，以方便用户在其中进行探索。 IPython 提供了 tab 补全等功能，使得我们更容易看到 Web3.py 中有哪些可用方法。
 
@@ -97,7 +95,7 @@ Web3.py 以 `web3` 的名称发布。 安装方式如下：
 $ pip install web3
 ```
 
-另外， 我们后面要模拟一个区块链，这就需要更多依赖项。 可以通过下面的命令安装这些依赖项：
+另外，我们后面要模拟一个区块链，这就需要更多依赖项。 可以通过下面的命令安装这些依赖项：
 
 ```bash
 $ pip install 'web3[tester]'
@@ -136,9 +134,9 @@ In [1]: from web3 import Web3
 
 在以 <b>ETH</b> 处理交易时，也使用了类似的模式。 但是，ETH 不是只有两个小数位，而是有 18 位。 ether 的最小单位是 <b>wei</b>，所以发送交易时指定的就是这个值。
 
-1 ETH = 1000000000000000 wei
+1 ETH = 1000000000000000000 wei
 
-1 wei = 0.0000000000000001 ETH
+1 wei = 0.000000000000000001 ETH
 
 </div>
 
@@ -152,7 +150,7 @@ In [3]: Web3.fromWei(500000000, 'gwei')
 Out[3]: Decimal('0.5')
 ```
 
-Web3 模块上的其他实用方法包括数据格式转换器（例如 [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)）， 地址助手，（例如 [`is address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)），以及哈希函数（例如 [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)）。 其中许多内容将在后面的系列文章中介绍。 要查看所有可用的方法和属性，可以利用 IPython 的自动补全功能，输入 `Web3`.， 然后在点号后面按两次 tab 键。
+Web3 模块上的其他实用方法包括数据格式转换器（例如 [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)），地址助手，（例如 [`is address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)），以及哈希函数（例如 [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)）。 其中许多内容将在后面的系列文章中介绍。 要查看所有可用的方法和属性，可以利用 IPython 的自动补全功能，输入 `Web3`。 然后在点号后面按两次 tab 键。
 
 ## 与链交互 {#talk-to-the-chain}
 
@@ -219,7 +217,7 @@ In [8]: w3.fromWei(1000000000000000000000000, 'ether')
 Out[8]: Decimal('1000000')
 ```
 
-100 万测试 ETH  , 也不算太寒酸。
+100 万测试以太币，也不算太寒酸。
 
 ## 第二站：区块数据 {#tour-stop-2-block-data}
 
@@ -238,13 +236,13 @@ Out[9]: AttributeDict({
 
 这里返回了大量关于区块的信息，但这里只介绍以下几点：
 
-- 该区块编号是零  - 无论您在多久以前配置了测试器提供者  。 与真实的以太坊网络不同，真实的以太坊网络大概每隔 15 秒就会挖掘一个新的区块，而模拟链则则需要您给它一些工作才增加区块。
+- 该区块编号是零  —无论您在多久以前配置了测试器提供者。 与每 12 秒添加一个新区块的真实以太坊网络不同，此模拟区块链则需要你给它一些工作去做才添加区块。
 - `transactions` 是一个空列表，原因相同：我们还没有做任何事情。 第一个区块是一个**空区块**，只是为了开个头。
 - 注意，`parentHash` 只是一堆空的字节。 这标志着它是链条上的第一个区块，也就是所谓的**创世区块**。
 
-## 第三站：[交易](/developers/docs/transactions/) {#tour-stop-3-transactions}
+## 第三站：[ 交易 ](/developers/docs/transactions/) {#tour-stop-3-transactions}
 
-在没有交易之前，我们停留在零区块，所以我们给它一个交易。 从一个账户向另一个账户发送一些测试 ETH：
+在没有待处理交易之前，我们停留在零区块处，所以我们给它一个交易。 从一个账户向另一个账户发送一些测试 ETH：
 
 ```python
 In [10]: tx_hash = w3.eth.send_transaction({
@@ -255,10 +253,10 @@ In [10]: tx_hash = w3.eth.send_transaction({
 })
 ```
 
-这时通常会等上几秒钟，等待交易挖到一个新的区块。 完整的流程是这样的：
+这时你通常会等上几秒钟，等待交易添加到新区块中。 完整的流程是这样的：
 
-1. 提交交易并持有交易哈希。 在没有被挖出来之前，交易是“等待中”的。 `tx_hash = w3.eth.send_transaction({ … })`
-2. 等待交易被开采： `w3.eth.wait_for_transaction_receipt(tx_hash)`
+1. 提交交易并持有交易哈希。 在包含交易的区块被创建并广播之前，交易一直处于“待处理”状态。 `tx_hash = w3.eth.send_transaction({ … })`
+2. 等待交易添加到区块中： `w3.eth.wait_for_transaction_receipt(tx_hash)`
 3. 继续应用逻辑。 查看成功的交易：`w3.eth.get_transaction(tx_hash)`
 
 我们的模拟环境会在一个新的区块中即时添加交易，所以我们可以立即查看交易：
@@ -288,7 +286,7 @@ In [13]: w3.eth.get_balance(w3.eth.accounts[1])
 Out[13]: 1000003000000000000000000
 ```
 
-后者看起来不错！ 余额从 1000000 增加到 100003 个 ETH。 但第一个账户发生了什么情况？ 它减少的数量看起来略大于三个 ETH？ 是的，没有免费的午餐，使用以太坊公网需要支付矿工手续费， 一笔小额交易费从进行交易的帐户中扣除，金额为 31000 wei。
+后者看起来不错！ 余额从 1000000 增加到 1000003 个 ETH。 但第一个账户发生了什么情况？ 它减少的数量看起来略大于三个 ETH？ 是的，没有免费的午餐，使用以太坊公网需要支付矿工手续费， 一笔小额交易费从进行交易的帐户中扣除，金额为 31000 wei。
 
 <div class="featured">注：在公共网络上，交易费用根据网络需求和您希望交易处理的速度而变化。 如果您对费用的计算方式感兴趣，请查看我之前关于<a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">如何将交易包含在一个区块中</a>的文章。</div>
 

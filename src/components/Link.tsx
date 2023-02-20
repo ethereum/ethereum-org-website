@@ -1,226 +1,167 @@
 import React from "react"
-import { Link as GatsbyLink, navigate as gatsbyNavigate } from "gatsby"
+import { Icon, Link as ChakraLink, LinkProps, useTheme } from "@chakra-ui/react"
+import { navigate as gatsbyNavigate } from "gatsby"
 import { LocalizedLink as IntlLink } from "gatsby-theme-i18n"
 import { NavigateOptions } from "@reach/router"
 import { IntlShape } from "react-intl"
-import styled from "styled-components"
 
-import Icon from "./Icon"
+import { BsQuestionSquareFill } from "react-icons/bs"
 
-import { isLang, Lang } from "../utils/languages"
+import { Lang } from "../utils/languages"
 import { trackCustomEvent, EventOptions } from "../utils/matomo"
+import * as url from "../utils/url"
 import { Direction } from "../types"
 
-const HASH_PATTERN = /^#.*/
-// const DOMAIN_PATTERN = /^(?:https?:)?[/]{2,}([^/]+)/
-// const INTERNAL_PATTERN = /^\/(?!\/)/
-// const FILE_PATTERN = /.*[/](.+\.[^/]+?)([/].*?)?([#?].*)?$/
-
-const isHashLink = (to: string): boolean => HASH_PATTERN.test(to)
-
-const ExternalLink = styled.a`
-  &:after {
-    margin-left: 0.125em;
-    margin-right: 0.3em;
-    display: inline;
-    content: "↗";
-    transition: all 0.1s ease-in-out;
-    font-style: normal;
-  }
-  &:hover {
-    &:after {
-      transform: translate(0.15em, -0.2em);
-    }
-  }
-`
-
-const InternalLink = styled(IntlLink)`
-  .is-glossary {
-    white-space: nowrap;
-  }
-  &.active {
-    color: ${(props) => props.theme.colors.primary};
-  }
-  &:hover {
-    svg {
-      fill: ${(props) => props.theme.colors.primary};
-      transition: transform 0.1s;
-      transform: scale(1.2);
-    }
-  }
-`
-
-const ExplicitLangInternalLink = styled(GatsbyLink)`
-  &.active {
-    color: ${(props) => props.theme.colors.primary};
-  }
-`
-
-const GlossaryIcon = styled(Icon)`
-  margin: 0 0.25rem 0 0.35rem;
-  fill: ${(props) => props.theme.colors.primary400};
-  text-decoration: underline;
-  &:hover {
-    transition: transform 0.1s;
-    transform: scale(1.2);
-  }
-`
-
-export interface IProps {
+export interface IBaseProps {
   to?: string
   href?: string
-  dir?: Direction
+  language?: Lang
   hideArrow?: boolean
-  className?: string
   isPartiallyActive?: boolean
-  ariaLabel?: string
   customEventOptions?: EventOptions
-  onClick?: () => void
+  activeStyle?: object
 }
 
+export interface IProps extends IBaseProps, LinkProps {
+  dir?: Direction // TODO: remove this prop once we use the native Chakra RTL support
+}
+
+/**
+ * Link wrapper which handles:
+ *
+ * - Hashed links
+ * e.g. <Link href="/page-2/#specific-section">
+ *
+ * - External links
+ * e.g. <Link href="https://example.com/">
+ *
+ * - PDFs & static files (which open in a new tab)
+ * e.g. <Link href="/eth-whitepaper.pdf">
+ *
+ * - Intl links
+ * e.g. <Link href="/page-2/" language="de">
+ */
 const Link: React.FC<IProps> = ({
-  to,
-  dir = "ltr",
+  to: toProp,
   href,
+  language,
+  dir = "ltr",
   children,
   hideArrow = false,
-  className,
   isPartiallyActive = true,
-  ariaLabel,
   customEventOptions,
-  onClick = () => {},
+  activeStyle = null,
+  ...restProps
 }) => {
-  // markdown pages pass `href`, not `to`
-  to = to || href
+  const theme = useTheme()
 
-  if (!to) {
-    throw new Error("Either 'to' or 'href' props must be provided")
-  }
+  // TODO: in the next PR we are going to deprecate the `to` prop and just use `href`
+  // this is to support the ButtonLink component which uses the `to` prop
+  const to = (toProp || href)!
 
-  const isExternal = to.includes("http") || to.includes("mailto:")
-  const isHash = isHashLink(to)
-  const isGlossary = to.includes("glossary") && to.includes("#")
-  const isStatic = to.includes("static")
-  const isPdf = to.includes(".pdf")
+  const isExternal = url.isExternal(to)
+  const isHash = url.isHash(to)
+  const isGlossary = url.isGlossary(to)
+  const isStatic = url.isStatic(to)
+  const isPdf = url.isPdf(to)
 
-  // Must use <a> tags for anchor links
-  // Otherwise <Link> functionality will navigate to homepage
-  // See https://github.com/gatsbyjs/gatsby/issues/21909
-  if (isHash) {
-    return (
-      <a dir={dir} className={className} href={to} aria-label={ariaLabel}>
-        {children}
-      </a>
-    )
-  }
-
-  // Links to static image assets must use <a> to avoid
-  // <Link> redirection. Opens in separate window.
-  if (isStatic) {
-    return (
-      <a
-        className={className}
-        href={to}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={ariaLabel}
-      >
-        {children}
-      </a>
-    )
-  }
-
-  const eventOptions: EventOptions = {
+  const externalLinkEvent: EventOptions = {
     eventCategory: `External link`,
     eventAction: `Clicked`,
     eventName: to,
   }
 
-  if (isExternal) {
-    return hideArrow ? (
-      <a
-        dir={dir}
-        className={className}
+  const hashLinkEvent: EventOptions = {
+    eventCategory: `Hash link`,
+    eventAction: `Clicked`,
+    eventName: to,
+  }
+
+  const commonProps = {
+    dir,
+    ...restProps,
+  }
+
+  // Must use Chakra's native <Link> for anchor links
+  // Otherwise the Gatsby <Link> functionality will navigate to homepage
+  // See https://github.com/gatsbyjs/gatsby/issues/21909
+  if (isHash) {
+    return (
+      <ChakraLink
         href={to}
-        target="_blank"
-        rel="noopener noreferrer"
         onClick={(e) => {
+          // only track events on external links and hash links
+          if (!isHash) {
+            return
+          }
+
           e.stopPropagation()
           trackCustomEvent(
-            customEventOptions ? customEventOptions : eventOptions
+            customEventOptions ? customEventOptions : hashLinkEvent
           )
         }}
-        aria-label={ariaLabel}
+        {...commonProps}
       >
         {children}
-      </a>
-    ) : (
-      <ExternalLink
-        dir={dir}
-        className={className}
-        href={to}
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={(e) => {
-          e.stopPropagation()
-          trackCustomEvent(
-            customEventOptions ? customEventOptions : eventOptions
-          )
-        }}
-        aria-label={ariaLabel}
-      >
-        {children}
-      </ExternalLink>
+      </ChakraLink>
     )
   }
 
-  // If lang path has been explicitly set, use `gatsby` Link
-  const langPath = to.split("/")[1]
-  if (isLang(langPath)) {
+  // Download link for internally hosted PDF's & static files (ex: whitepaper)
+  // Opens in separate window.
+  if (isExternal || isPdf || isStatic) {
     return (
-      <ExplicitLangInternalLink
-        dir={dir}
-        className={className}
-        to={to}
-        activeClassName="active"
-        partiallyActive={isPartiallyActive}
-        onClick={onClick}
-      >
-        {children}
-      </ExplicitLangInternalLink>
-    )
-  }
-
-  // Download link for internally hosted PDF's (ex: whitepaper)
-  if (isPdf && !isExternal) {
-    return (
-      <a
-        dir={dir}
+      <ChakraLink
         href={to}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={ariaLabel}
+        isExternal
+        _after={{
+          content: !hideArrow ? '"↗"' : undefined,
+          ml: 0.5,
+          mr: 1.5,
+        }}
+        onClick={(e) => {
+          // only track events on external links and hash links
+          if (!isExternal) {
+            return
+          }
+
+          e.stopPropagation()
+          trackCustomEvent(
+            customEventOptions ? customEventOptions : externalLinkEvent
+          )
+        }}
+        {...commonProps}
       >
         {children}
-      </a>
+      </ChakraLink>
     )
   }
 
   // Use `gatsby-theme-i18n` Link (which prepends lang path)
   return (
-    <InternalLink
-      dir={dir}
-      className={isGlossary ? `is-glossary ${className}` : className}
+    <ChakraLink
       to={to}
-      activeClassName="active"
+      as={IntlLink}
+      language={language}
       partiallyActive={isPartiallyActive}
-      onClick={onClick}
+      activeStyle={activeStyle ? activeStyle : { color: theme.colors.primary }}
+      whiteSpace={isGlossary ? "nowrap" : "normal"}
+      {...commonProps}
     >
       {children}
       {isGlossary && (
-        <GlossaryIcon aria-label="See definition" size="12px" name="glossary" />
+        <Icon
+          as={BsQuestionSquareFill}
+          aria-label="See definition"
+          fontSize="12px"
+          margin="0 0.25rem 0 0.35rem"
+          _hover={{
+            transition: "transform 0.1s",
+            transform: "scale(1.2)",
+          }}
+        />
       )}
-    </InternalLink>
+    </ChakraLink>
   )
 }
 

@@ -33,6 +33,6 @@ Vil du lære mer om Ethereum-lommebøker?
 Vil du lære mer om sikker lagring av midler og administrasjon av private nøkler?
 
 - [Beskytter Deg selv og dine Midler](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) _Oppdatert ofte - MyCrypto_
-- [Nøklene til å holde valutaen din trygg](https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf) _Jan 16, 2019 - Coinbase bloggen_
+- [Nøklene til å holde valutaen din trygg](https://web.archive.org/web/20190716160333/https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf?gi=548619266f28) _Jan 16, 2019 - Coinbase bloggen_
 - [Hvordan lagre digitale ressurser på Ethereum](https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0) _30. mai 2018 - ConsenSys_
 - [Trenger du virkelig en hardware wallet?](https://medium.com/ledger-on-security-and-blockchain/ledger-101-part-1-do-you-really-need-a-hardware-wallet-7f5abbadd945) _Sep 24, 2018 - Ledger_

@@ -2,7 +2,6 @@
 title: Propostes de millora d'Ethereum (EIP per les seves sigles en anglès)
 description: Conceptes bàsics que necessites per entendre les Propostes de Millora d'Ethereum (EIP).
 lang: ca
-sidebar: true
 ---
 
 # Introducció a les Propostes de Millora d'Ethereum (EIP) {#introduction-to-ethereum-improvement-proposals-eips}

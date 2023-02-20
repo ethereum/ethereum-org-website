@@ -2,7 +2,6 @@
 title: Stranske verige
 description: Uvod v stranske verige kot rešitev za razširljivost, ki jo trenutno uporablja skupnost Ethereum.
 lang: sl
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---

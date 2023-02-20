@@ -66,10 +66,11 @@ const config: GatsbyConfig = {
         icon: `src/assets/favicon.png`,
       },
     },
-    // Sitemap generator (ethereum.org/sitemap.xml)
+    // Sitemap generator (ethereum.org/sitemap/sitemap-index.xml)
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
+        output: "/sitemap",
         query: `{
           site {
             siteMetadata {
@@ -104,6 +105,15 @@ const config: GatsbyConfig = {
         },
       },
     },
+    // robots.txt creation
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: siteUrl,
+        sitemap: `${siteUrl}/sitemap/sitemap-index.xml`,
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
     // Ability to set custom IDs for headings (for translations)
     // i.e. https://www.markdownguide.org/extended-syntax/#heading-ids
     `gatsby-remark-autolink-headers`,
@@ -134,8 +144,8 @@ const config: GatsbyConfig = {
         // See: https://www.gatsbyjs.org/docs/mdx/plugins/
         gatsbyRemarkPlugins: [
           {
-            // Local plugin to adjust the images urls of the translated md files
-            resolve: path.resolve(`./plugins/gatsby-remark-image-urls`),
+            // Local plugin to adjust the images & links urls of the translated md files
+            resolve: path.resolve(`./plugins/gatsby-remark-fix-static-urls`),
           },
           {
             resolve: `gatsby-remark-autolink-headers`,
@@ -185,7 +195,20 @@ const config: GatsbyConfig = {
       },
     },
     // CSS in JS
-    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-emotion`,
+      options: {
+        labelFormat: "[filename]--[local]",
+      },
+    },
+    {
+      resolve: "@chakra-ui/gatsby-plugin",
+      options: {
+        resetCSS: true,
+        isUsingColorMode: true,
+        portalZIndex: 1001,
+      },
+    },
     // Source assets
     {
       resolve: `gatsby-source-filesystem`,
