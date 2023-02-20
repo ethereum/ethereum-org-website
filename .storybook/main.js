@@ -1,5 +1,7 @@
 const { propNames } = require("@chakra-ui/react")
+
 const { babelConfig } = require("./babel-storybook-config")
+
 module.exports = {
   stories: [
     {
