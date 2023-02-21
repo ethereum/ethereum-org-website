@@ -181,7 +181,7 @@ Ethereum pada awalnya memiliki satu format transaksi. Setiap transaksi berisi no
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
-Ethereum telah berkembang untuk mendukung beberapa jenis transaksi agar memungkinkan fitur baru seperti daftar akses dan [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) diimplementasikan tanpa memengaruhi format transaksi warisan.
+Ethereum telah berkembang untuk mendukung beberapa jenis transaksi agar memungkinkan fitur baru seperti daftar akses dan [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) diimplementasikan tanpa memengaruhi format transaksi warisan.
 
 [EIP-2718: Transaksi Berjenis Amplop](https://eips.ethereum.org/EIPS/eip-2718) mendefiniskan jenis transaksi berupa amplop untuk jenis transaksi di masa mendatang.
 

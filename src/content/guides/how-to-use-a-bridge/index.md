@@ -9,6 +9,7 @@ lang: en
 Layer 2s are scaling solutions for Ethereum which allow users to transact with increased speed and decreased costs. Many popular crypto projects are moving to layer 2s because of these benefits. The simplest way to move tokens from Ethereum to layer 2 is to use a bridge project.
 
 **Prerequisite:**
+
 - have crypto wallet, you can follow this tutorial: [How to: "Register" an Ethereum account](/guides/how-to-register-an-ethereum-account/)
 - add funds to your wallet
 
@@ -19,6 +20,7 @@ You can learn more about the different projects and important links on our [laye
 ## 2. Go to the selected bridge
 
 Some popular layer 2s are:
+
 - [Arbitrum bridge](https://bridge.arbitrum.io/?l2ChainId=42161)
 - [Optimism bridge](https://app.optimism.io/bridge/deposit)
 - [Boba network bridge](https://gateway.boba.network/)
@@ -63,4 +65,5 @@ You can use [chainlist.org](http://chainlist.org) to find the network's RPC deta
 You might be able to withdraw to some layer 2s directly from an exchange. Check out “Move to layer 2” section of our [Layer 2 page](/layer-2/) for more information.
 
 ### Can I go back to Ethereum mainnet after I bridge my tokens to L2?
+
 Yes, you can always move your funds back to the mainnet using the same bridge.

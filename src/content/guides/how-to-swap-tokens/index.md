@@ -6,11 +6,12 @@ lang: en
 
 # How to swap tokens
 
-Tired of searching for an exchange that lists all your favorite tokens? You can swap most of the tokens using decentralized exchanges. 
+Tired of searching for an exchange that lists all your favorite tokens? You can swap most of the tokens using decentralized exchanges.
 
-A token swap involves the exchange of two different assets that exist on the Ethereum network, for example swapping ETH for DAI (an ERC-20 token). The process is very fast and cheap. You will need to have a crypto wallet to swap tokens. 
+A token swap involves the exchange of two different assets that exist on the Ethereum network, for example swapping ETH for DAI (an ERC-20 token). The process is very fast and cheap. You will need to have a crypto wallet to swap tokens.
 
 **Prerequisite:**
+
 - have crypto wallet, you can follow this tutorial: [How to: "Register" an Ethereum account](/guides/how-to-register-an-ethereum-account/)
 - add funds to your wallet
 
@@ -35,13 +36,14 @@ The exchange will automatically calculate how many tokens you will get.
 ![Common interface for swapping](./swap2.png)
 
 ## 4. Confirm the transaction
+
 Review the details of the transaction. Check the exchange rate and any other fees to prevent ugly surprises.
 
 ![Common interface for reviewing the transaction](./swap3.png)
 
 ## 5. Wait for the transaction to be processed
 
-You can view the progress of the transaction on any blockchain explorer. This process should not take longer than 10 minutes. 
+You can view the progress of the transaction on any blockchain explorer. This process should not take longer than 10 minutes.
 
 You will automatically receive the swapped tokens in your wallet once the transaction is processed.
 

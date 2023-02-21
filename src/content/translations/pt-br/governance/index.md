@@ -153,7 +153,7 @@ O processo de governança Ethereum muitas vezes troca velocidade e eficiência p
 
 Embora o desenvolvimento de especificações e implementações tenha sido sempre totalmente aberto, os processos formais usados para propor atualizações descritas acima não eram usados. Isso permitiu que as alterações fossem especificadas e acordadas mais rapidamente por pesquisadores e implementadores.
 
-Quando a Beacon Chain se integrar à camada de execução da Ethereum, o processo de governança para a proposta de alterações será harmonizado. Este processo para implementar a integração já está [em andamento](https://github.com/ethereum/EIPs/pull/3675).
+Quando a Beacon Chain se integrar à camada de execução da Ethereum, o processo de governança para a proposta de alterações será harmonizado. Este processo para implementar a integração já está [em andamento](https://eips.ethereum.org/EIPS/eip-3675).
 
 <ButtonLink to="/upgrades/merge/">
   Mais sobre a integração
