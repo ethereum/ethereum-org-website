@@ -5,7 +5,7 @@ lang: en
 ---
 
 # Distributed Validator Technology {#what-is-dvt}
-_With the advent of Ethreum’s PoS consensus, standard validator setups were accompanied by some challenges and the risk of stake centralization. To help distribute validator nodes and decentralize the network, **Distributed Validator Technology** was conceived._
+_With the advent of Ethreum’s PoS consensus, standard validator setups were accompanied by some challenges and the risk of stake centralization. To help distribute validator nodes and decentralize the network, Distributed Validator Technology was conceived._
 
 <Divider />
 
