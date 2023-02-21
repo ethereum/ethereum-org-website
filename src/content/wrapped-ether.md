@@ -2,39 +2,35 @@
 title: Wrapped Ether (WETH)
 description: An introduction to Wrapped Ether (WETH)—an ERC20-compatible version of Ether (ETH). 
 ---
-
+---
 # What Is Wrapped Ether (WETH)? {#what-is-wrapped-ether-weth}    
-Wrapped Ether (WETH) is an ERC-20 token representing Ether, Ethereum’s native coin. If you use Ethereum dapps, you've likely seen tokens built using the ERC-20 standard. The ERC-20 standard offers many benefits to developers and users, especially **flexibility** (tokens can be customized for different use cases) and **fungibility** (tokens are identical and interchangeable). 
+Wrapped Ether (WETH) is an ERC-20 token representing Ether (ETH), Ethereum’s native coin. If you use Ethereum dapps, you've likely seen tokens built using the ERC-20 standard. The ERC-20 standard offers many benefits to developers and users, especially**flexibility** (tokens can be customized for different use cases) and **fungibility** (tokens are identical and interchangeable). 
 
-Ether (ETH) doesn't comply with the ERC-20 standard, but there's significant demand to use it in ERC20-compatible wallets and dapps. Wrapped Ether (WETH) solves the problem by providing an ERC20-compliant version of ETH to use in dapps or swap with other ERC-20 tokens. As WETH is pegged to the price of ETH, using it will feel very similar to using native ETH. 
-
-Wrapping Ether requires depositing ETH into a smart contract that creates an amount of WETH tokens equal to the original deposit; you can also “unwrap” Ether by sending WETH to the contract and receiving ETH in return. By locking up ETH before minting new tokens, the WETH contract ensures the value of WETH tokens in circulation is backed by ETH held in reserves. This keeps the prices WETH and ETH relatively equal, such that you can convert WETH to ETH (and vice-versa) at a 1:1 ratio
+Ether (ETH) doesn't comply with the ERC-20 standard, but there's significant demand to use it in ERC20-compatible wallets and dapps. Wrapped Ether (WETH) solves the problem by providing an ERC20-compliant version of ETH to use in dapps or swap with other ERC-20 tokens.
 
 Today, **nearly 3% of the circulating ETH supply is locked in the WETH token contract**—inspiring its description as the "World's Most Popular Smart Contract". WETH is also one of the most used ERC-20 tokens, especially among users interacting with applications in Ethereum's Decentralized Finance (DeFi) ecosystem. 
 
+## Introduction to wrapped tokens {#intro-to-wrapped-tokens} 
+
+A wrapped token is a token whose value is pegged to an underlying asset. An amount of the original asset is deposited into a smart contract—similar to a digital bank vault—that mints an equal amount of wrapped tokens. The vault holds the deposit until you're ready to exchange your wrapped tokens for the original asset (so you can think think of a wrapped token as a redeemable IOU issued by a smart contract).
+
+Wrapping ETH today requires by depositing it in a smart contract which creates an amount of wrapped ETH (WETH) tokens equal to the original deposit. You can also “unwrap” ETH by sending WETH tokens to the contract and receiving ETH in return.
+
+In all cases, the conversion between WETH and ETH is always completed at a 1:1 ratio. Since the smart contract locks up ETH before minting WETH tokens, the value of WETH tokens in circulation is backed by ETH held in reserves. This keeps the prices of WETH and ETH relatively equal and ensures you can always swap both assets without realizing a loss. 
+
 ## Why do we need to wrap ETH? {#why-do-we-need-to-wrap-eth} 
-The [ERC-20 token standard](https://www.gemini.com/cryptopedia/erc20-token-standard-ethereum) was introduced to ensure greater interoperability between products and services on Ethereum. ERC-20 defines a standard interface for fungible tokens, making it easier for developers to build tokens that seamlessly interoperate with applications and other tokens in the Ethereum ecosystem. 
 
-But the creation of Ether predates the introduction of the ERC-20 standard, which means ETH tokens don’t conform to the ERC-20 specification. Wrapped Ether (WETH) was thus created to make ETH compatible with applications implementing ERC-20 interfaces. Compared to ETH, WETH is based on the ERC-20 standard and offers similar functionalities as other ERC-20 tokens (eg. the ability to approve token spends by third-party accounts). 
+Common use cases for wrapping tokens include extending the functionality of a token, allowing a native cryptocurrency to behave like an ERC20 token, or allowing the use of a token outside its native blockchain. The [canonical implementation of Wrapped Ether (WETH)](https://blog.0xproject.com/canonical-weth-a9aa7d0279dd) described here is designed for the former two use cases. 
 
-Important to note is that there are other variants than the [canonical implementation of WETH](https://blog.0xproject.com/canonical-weth-a9aa7d0279dd) described here. These may be custom tokens created by dapp developers or versions issued on other blockchains and may behave differently. **Always doubleck the token information to know which WETH implementation you're interacting with.**
+For example, the creation of Ether predates the introduction of the ERC-20 standard, which means ETH tokens don’t conform to the ERC-20 specification. Wrapped Ether (WETH) was thus created to **make ETH compatible with applications implementing ERC-20 interfaces**. 
 
-### What are the use cases for WETH? {#weth-use-cases} 
-As an ERC-20 token, WETH has more versatile use-cases, unlike ETH which is limited to making payments and paying for computation on the Ethereum network. Benefits of using WETH include: 
+As a native cryptocurrency, the use of ETH is limited to transferring value and paying for computation on the Ethereum network. Transforming ETH into an ERC-20 token (WETH) increases the number of things you can do with it. Some use cases for WETH include: 
 
-1. **Exchange ETH for ERC-20 tokens**
+- **Exchange ETH for ERC-20 tokens**: You cannot exchange ETH directly for other ERC-20 tokens (not without introducing trusted third parties or complex technical processes). WETH is a representation of Ether that complies with the ERC-20 fungible token standard and can be exchanged 1:1 for other ERC-20 tokens. 
 
-You  cannot exchange ETH directly for other ERC-20 tokens (not without introducing trusted third parties or complex technical processes). WETH is a representation of Ether that complies with the ERC-20 fungible token standard and can be exchanged 1:1 for other ERC20 tokens. 
+- **Use ETH in dapps**: Because ETH isn’t ERC20-compatible, developers would need to create separate interfaces (one for ETH and another for ERC-20 tokens) in dapps. Wrapping ETH in ERC-20 standards using WETH removes this obstacle and enables developers to handle ETH and other tokens within the same dapp. 
 
-2. **Use ETH in dapps**
-
-Because ETH isn’t ERC20-compatible, developers would need to create separate interfaces (one for ETH and another for ERC-20 tokens) in dapps. Wrapping ETH in ERC-20 standards using WETH removes this obstacle and enables developers to handle ETH and other tokens within the same dapp. 
-
-3. **Interact with DeFi applications**
-
-Besides borrowing and lending, DeFi enables complex use-cases like [yield farms](https://blockworks.co/what-is-yield-farming-what-you-need-to-know/) and [automated market makers](https://www.gemini.com/cryptopedia/amm-what-are-automated-market-makers) (AMMs). These applications can make investment decisions on your behalf, such as automatically supplying liquidity to a lending pool or executing trades. 
-
-That said, these applications can only work if they have access to funds in your wallet. With ERC-20 tokens like WETH, you can approve a smart contract to deduct WETH tokens from your balance up to a predefined limit. This feature is, however, unavailable when using native ETH. 
+- **Interact with DeFi applications**: DeFi enables complex use-cases like [yield farms](https://blockworks.co/what-is-yield-farming-what-you-need-to-know/) and [automated market makers](https://www.gemini.com/cryptopedia/amm-what-are-automated-market-makers) (AMMs), but these applications need access to funds in your wallet to work. With ERC-20 tokens like WETH, you can approve a smart contract to deduct WETH tokens from your balance up to a predefined limit (a feature that's unavailable when using native ETH).
 
 ## Wrapped Ether (WETH) vs Ether (ETH): What is the difference? {#weth-vs-eth-differences}
 Although they look similar, Wrapped Ether (WETH) and Ether (ETH) have subtle differences you should be aware of. For example, the Ethereum protocol recognizes Ether—but it has no native knowledge of WETH (and ERC-20 tokens), causing both assets to behave differently. We have listed other important distinctions between ETH and WETH tokens below: 
@@ -103,9 +99,9 @@ WETH was created because the ETH token doesn't follow with the ERC-20 technical 
 
 ETH is the safest asset because it is part of the Ethereum protocol, whereas WETH is defined in a smart contract which could feasibly be hacked. Nevertheless, WETH is generally considered secure because it is based on a simple, battle-tested smart contract. The WETH contract has also beeen formally verified, which is the highest security standard for smart contracts on Ethereum. 
 
-**Can I use WETH on other blockchains?**
+**Why am I seeing different types of WETH?**
 
-Yes. If using a bridge, it is possible to get WETH tokens compatible with other blockchain protocols aside from Ethereum. These versions of WETH have different security properties from Ethereum-native WETH, however. For example, the bridge contact may be upgreadable or administered by a party with special priviledges. 
+Besides the canonical implementation of WETH described om this page, there are other variants in the wild. These may be custom tokens created by dapp developers or versions issued on other blockchains and may behave differently or have different security properties. **Always double-check the token information to know which WETH implementation you're interacting with.**
 
 **What can I do with WETH?**
 
