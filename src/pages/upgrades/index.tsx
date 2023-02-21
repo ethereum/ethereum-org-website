@@ -40,7 +40,7 @@ import { TranslationKey, translateMessageId } from "../../utils/translations"
 import { getImage } from "../../utils/image"
 import Button from "../../components/Button"
 
-type ChildOnlyProp = { children: ReactNode }
+import type { ChildOnlyProp } from "../../types"
 
 const PageDivider = () => (
   <Divider
