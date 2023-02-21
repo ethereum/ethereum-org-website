@@ -1,5 +1,5 @@
 ---
-title: Secret Single leader election (SSLE)
+title: Secret leader election
 description: Explanation of history expiry and stateless Ethereum
 ---
 
@@ -7,7 +7,7 @@ In today's proof-of-stake based consensus mechanism, the list of upcoming block 
 
 This could create opportunities for an attacker to profit. For example a block proposer selected for slot `n+1` could DOS the proposer in slot `n` so that they miss their opportunity to propose a block. This would allow the attacking block proposer to extract the MEV of both slots, or grab all the transactions that should have been split across two blocks and instead include them all in one, gaining all the associated fees. This is likely to affect home validators more than sophisticated institutional validators who can use more advanced methods to protect themselves from DOS attacks, and could therefore be a centralizing force.
 
-There are several solutions to this problem. One is Distributed Validator Technology which aims to spread the various tasks related to running a validator across multiple machines, with redundancy, so that it is much harder for an attacker to prevent a block from being proposed in a particular slot. However, the most robust solution is Single Secret Leader Election (SSLE).
+There are several solutions to this problem. One is [Distributed Validator Technology](https://github.com/ethereum/distributed-validator-specs) which aims to spread the various tasks related to running a validator across multiple machines, with redundancy, so that it is much harder for an attacker to prevent a block from being proposed in a particular slot. However, the most robust solution is Single Secret Leader Election (SSLE).
 
 ## Secret single leader election
 
@@ -30,6 +30,4 @@ There is also a separate proposal that aims to create a scenario where validator
 
 Read more on [SnSLE](https://ethresear.ch/t/secret-non-single-leader-election/11789)
 
-<Note>
-SSLE and SnSLE are both in the research phase. They are competing proposals that couldn't both be implemented. Before shipping they need more research and development, prototyping, and implementing on public testnets.
-</Note>
+**SSLE and SnSLE are both in the research phase. They are competing proposals that couldn't both be implemented. Before shipping they need more research and development, prototyping, and implementing on public testnets.**

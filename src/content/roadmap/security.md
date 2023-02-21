@@ -28,4 +28,6 @@ Implementing proposer-builder separation (PBS) will drastically improve Ethereum
 
 ## Protecting validators
 
-Although it is unlikely, it is possible that a sophisticated attacker could identify upcoming validators and spam them to prevent them from proposing blocks. Implementing **secret leader election (SLE)** will protect against this type of attack by preventing block proposers from being knowable in advance. This works by continually shuffling a set of cryptographic commitments representing candidate block proposers and using their order to determine which validator is selected in such a way that only the validators themselves know their ordering in advance.
+Although it is unlikely, it is possible that a sophisticated attacker could identify upcoming validators and spam them to prevent them from proposing blocks. Implementing [**secret leader election (SLE)**](./secret-leader-election) will protect against this type of attack by preventing block proposers from being knowable in advance. This works by continually shuffling a set of cryptographic commitments representing candidate block proposers and using their order to determine which validator is selected in such a way that only the validators themselves know their ordering in advance.
+
+Read more on [secret leader election](./secret-leader-election)
