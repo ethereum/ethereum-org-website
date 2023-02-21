@@ -126,7 +126,7 @@ const styles: Styles = (theme: Theme) => {
     /* Modal body */
     .DocSearch-Dropdown {
       padding-inline: ${space["8"]};
-      max-height: calc(100vh - ${space["64"]});
+      max-height: calc(100vh - 16rem);
       overflow-y: scroll;
     }
 
@@ -205,6 +205,11 @@ const styles: Styles = (theme: Theme) => {
 
     svg[aria-label="Algolia"] * {
       fill: var(--eth-colors-bodyLight);
+    }
+
+    /* TODO: Remove once sponsored by DocSearch */
+    .DocSearch-Logo * {
+      display: none;
     }
 
     /* Mobile modal styling */
