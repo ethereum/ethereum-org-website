@@ -6,11 +6,11 @@ const styles = css`
   .DocSearch-Button {
     border-radius: var(--eth-radii-base);
     border: var(--eth-borders-1px);
-    border-color: var(--eth-colors-bodyLight);
-    height: 30px;
+    border-color: var(--eth-colors-disabled);
+    height: 42px;
     background: none;
     margin: 0;
-    padding-inline: var(--eth-space-1);
+    padding-inline: var(--eth-space-3);
     gap: var(--eth-space-4);
     align-items: center;
     --docsearch-searchbox-shadow: inset 0 0 0 1px
@@ -21,15 +21,12 @@ const styles = css`
   .DocSearch-Button:focus,
   .DocSearch-Button:hover {
     box-shadow: none;
-    outline: var(--eth-borders-2px);
-    outline-color: var(--eth-colors-primary);
+    outline: var(--eth-borders-1px);
+    outline-color: var(--eth-colors-primaryHover);
   }
-
-  .DocSearch-Button:hover svg path,
-  .DocSearch-Button:hover kbd,
-  .DocSearch-Button:hover span {
-    color: var(--eth-colors-bg);
-    border-color: var(--eth-colors-bg);
+  .DocSearch-Button:hover .DocSearch-Button-Keys kbd {
+    color: var(--eth-colors-disabled);
+    border-color: var(--eth-colors-disabled);
   }
 
   .DocSearch-Button-Keys {
@@ -70,7 +67,6 @@ const styles = css`
 
   .DocSearch-Button-Placeholder {
     text-transform: lowercase;
-    font-style: italic;
     color: var(--eth-colors-body);
     font-weight: var(--eth-fontWeights-normal);
   }
