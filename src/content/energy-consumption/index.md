@@ -8,7 +8,7 @@ lang: en
 
 Ethereum is a green blockchain. It uses a [proof-of-stake](/developers/docs/consensus-mechanisms/pos) consensus mechanism, using ETH instead of [energy to secure the network](/developers/docs/consensus-mechanisms/pow). Ethereum's proof-of-stake mechanism only uses [~0.0026 TWh/yr](https://carbon-ratings.com/eth-report-2022) across the entire global network.
 
-[CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com) generated bottom-up estimates of the electricity consumption and the carbon footprint of the Ethereum network ([see the report](https://carbon-ratings.com/eth-report-2022)). They measured the electricity consumption of different nodes with various hardware and client software configurations. This yielded an estimate of **2.601 MWh** (0.0026 TWh) for the network’s annual electricity consumption (September 2022), which corresponds to yearly carbon emissions of **870 tonnes CO2e** applying regional-specific carbon intensity factors.
+[CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com) generated bottom-up estimates of the electricity consumption and the carbon footprint of the Ethereum network ([see the report](https://carbon-ratings.com/eth-report-2022)). They measured the electricity consumption of different nodes with various hardware and client software configurations. This yielded an estimate of **2,601 MWh** (0.0026 TWh) for the network’s annual electricity consumption (September 2022), which corresponds to yearly carbon emissions of **870 tonnes CO2e** applying regional-specific carbon intensity factors.
 
 <EnergyConsumptionChart />
 

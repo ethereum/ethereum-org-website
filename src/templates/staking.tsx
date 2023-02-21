@@ -21,7 +21,6 @@ import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
 import RandomAppList from "../components/RandomAppList"
-import Roadmap from "../components/Roadmap"
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents, {
   Item as ItemTableOfContents,
@@ -321,6 +320,10 @@ const TableContainer: FC<BoxProps> = (props) => (
         borderCollapse: "separate",
         borderSpacing: "1rem 0",
       },
+      th: {
+        whiteSpace: "break-spaces !important",
+        textAlign: "center",
+      },
     }}
     {...props}
   />
@@ -353,7 +356,6 @@ const components = {
   Logo,
   MeetupList,
   RandomAppList,
-  Roadmap,
   SectionNav,
   ShanghaiCapella,
   StakingComparison,

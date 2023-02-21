@@ -10,11 +10,11 @@ There are, however, core components of Ethereum that help provide a mental model
 
 ## Level 1: Ethereum Virtual Machine {#ethereum-virtual-machine}
 
-The [Ethereum Virtual Machine (EVM)](/developers/docs/evm/) is the runtime environment for smart contracts in Ethereum. All smart contracts and state changes on the Ethereum blockchain are executed by [transactions](/developers/docs/transactions/). The EVM handles all of the transaction processing on the Ethereum network.
+The [Ethereum Virtual Machine (EVM)](/developers/docs/evm/) is the runtime environment for smart contracts on Ethereum. All smart contracts and state changes on the Ethereum blockchain are executed by [transactions](/developers/docs/transactions/). The EVM handles all of the transaction processing on the Ethereum network.
 
-As with any virtual machine, the EVM creates a level of abstraction between the executing code and the executing machine (an Ethereum node). Currently the EVM is running on thousands of nodes distributed across the world.
+As with any virtual machine, the EVM creates a level of abstraction between the executing code and the executing machine (an Ethereum node). Currently, the EVM is running on thousands of nodes distributed across the world.
 
-Under the hood, the EVM uses a set of opcode instructions to execute specific tasks. These (140 unique) opcodes allow the EVM to be Turing-complete, which means the EVM is able to compute just about anything, given enough resources.
+Under the hood, the EVM uses a set of opcode instructions to execute specific tasks. These (140 unique) opcodes allow the EVM to be [Turing-complete](https://en.wikipedia.org/wiki/Turing_completeness), which means the EVM is able to compute just about anything, given enough resources.
 
 As a dapp developer, you don't need to know much about the EVM other than it exists and that it reliably powers all applications on Ethereum without downtime.
 

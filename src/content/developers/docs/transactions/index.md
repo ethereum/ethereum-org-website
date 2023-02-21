@@ -26,10 +26,10 @@ A submitted transaction includes the following information:
 - `from` – the address of the sender, that will be signing the transaction. This will be an externally-owned account as contract accounts cannot send transactions.
 - `recipient` – the receiving address (if an externally-owned account, the transaction will transfer value. If a contract account, the transaction will execute the contract code)
 - `signature` – the identifier of the sender. This is generated when the sender's private key signs the transaction and confirms the sender has authorized this transaction
-- `nonce` - a sequentially incrementing counter which indicates the transaction number from the account
-- `value` – amount of ETH to transfer from sender to recipient (in WEI, a denomination of ETH)
+- `nonce` - a sequencially incrementing counter which indicates the transaction number from the account
+- `value` – amount of ETH to transfer from sender to recipient (denominated in WEI, where 1ETH equals 1e+18wei)
 - `data` – optional field to include arbitrary data
-- `gasLimit` – the maximum amount of gas units that can be consumed by the transaction. Units of gas represent computational steps
+- `gasLimit` – the maximum amount of gas units that can be consumed by the transaction. The [EVM](https://ethereum.org/en/developers/docs/evm/opcodes) specifies the units of gas required by each computational step
 - `maxPriorityFeePerGas` - the maximum price of the consumed gas to be included as a tip to the validator
 - `maxFeePerGas` - the maximum fee per unit of gas willing to be paid for the transaction (inclusive of `baseFeePerGas` and `maxPriorityFeePerGas`)
 
@@ -171,13 +171,13 @@ Any gas not used in a transaction is refunded to the user account.
 
 Once the transaction has been submitted the following happens:
 
-1. Once you send a transaction, cryptography generates a transaction hash:
+1. A transaction hash is cryptographically generated:
    `0x97d99bc7729211111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`
-2. The transaction is then broadcast to the network and included in a pool with lots of other transactions.
+2. The transaction is then broadcasted to the network and added to a transaction pool consisting of all other pending network transactions.
 3. A validator must pick your transaction and include it in a block in order to verify the transaction and consider it "successful".
 4. As time passes the block containing your transaction will be upgraded to "justified" then "finalized". These upgrades make it much
    more certain that your transaction was successful and will never be altered. Once a block is "finalized" it could only ever be changed
-   by an attack that would cost many billions of dollars.
+   by a network level attack that would cost many billions of dollars.
 
 ## A visual demo {#a-visual-demo}
 
