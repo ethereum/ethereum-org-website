@@ -252,7 +252,7 @@ const LearningToolsPage = ({
     {
       name: "Alchemy University",
       description: "page-learning-tools-alchemy-university-description",
-      url: "https://university.alchemycom/",
+      url: "https://university.alchemy.com/",
       image: getImage(data.alchemyuniversity)!,
       alt: "page-learning-tools-alchemy-university-logo-alt",
       background: "#ffffff",

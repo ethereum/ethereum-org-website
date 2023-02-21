@@ -40,7 +40,6 @@ import Link from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
 import FeedbackCard from "../components/FeedbackCard"
 import Icon from "../components/Icon"
-import NakedButton from "../components/NakedButton"
 
 // Utils
 import { translateMessageId, TranslationKey } from "../utils/translations"
@@ -317,14 +316,6 @@ const AvadoButtonLink = styled(ResponsiveButtonLink)`
 
 const StyledEmoji = styled(Emoji)`
   margin-right: 1rem;
-`
-
-const ScrollLink = styled(NakedButton)`
-  text-align: start;
-  color: ${({ theme }) => theme.colors.primary};
-  &.active {
-    color: ${({ theme }) => theme.colors.primary};
-  }
 `
 
 const BuildContainer = styled(Container)`
@@ -760,16 +751,14 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
                     <Translation id="page-run-a-node-build-your-own-min-ram" />
                   </p>
                   <p>
-                    <ScrollLink
-                      onClick={() => scrollIntoView("plan-on-staking")}
-                    >
+                    <Link href="#plan-on-staking">
                       <Translation id="page-run-a-node-build-your-own-ram-note-1" />
-                    </ScrollLink>
+                    </Link>
                   </p>
                   <p>
-                    <ScrollLink onClick={() => scrollIntoView("rasp-pi")}>
+                    <Link href="#rasp-pi">
                       <Translation id="page-run-a-node-build-your-own-ram-note-2" />
-                    </ScrollLink>
+                    </Link>
                   </p>
                 </li>
                 <li>

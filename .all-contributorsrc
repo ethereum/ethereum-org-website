@@ -10064,6 +10064,24 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "t-rutten",
+      "name": "Tom Rutten",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1389793?v=4",
+      "profile": "https://github.com/t-rutten",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "chawyehsu",
+      "name": "Chawye Hsu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5764917?v=4",
+      "profile": "http://chawyehsu.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

@@ -57,10 +57,6 @@ Hem tasarım ilkelerine hem de stil rehberine ilişkin geri bildirimlerinizi alm
 
 [Siteye katkıda bulunmak](/contributing/) istiyorsanız, [İlkelerimizi](/contributing/design-principles/) ve [stil rehberimizi](/contributing/style-guide/) okuduğunuzdan emin olun.
 
-## Yol Haritası {#roadmap}
-
-<Roadmap />
-
 ## İş imkanları {#open-jobs}
 
 Bu web sitesi açık kaynaklı olmasına ve herkes site üzerinde çalışabilmesine rağmen, ethereum.org ve diğer Ethereum Vakfı web projelerine adanmış bir ekibimiz bulunuyor.

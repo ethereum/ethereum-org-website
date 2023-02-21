@@ -1,8 +1,8 @@
 import { action } from "@storybook/addon-actions"
-import theme from "../src/@chakra-ui/gatsby-plugin/theme"
-import { theme as DefaultChakraTheme } from "@chakra-ui/react"
 
-const chakraBreakpointArray = Object.entries(DefaultChakraTheme.breakpoints)
+import theme from "../src/@chakra-ui/gatsby-plugin/theme"
+
+const chakraBreakpointArray = Object.entries(theme.breakpoints)
 
 // Gatsby's Link overrides:
 // Gatsby Link calls the `enqueue` & `hovering` methods on the global variable ___loader.

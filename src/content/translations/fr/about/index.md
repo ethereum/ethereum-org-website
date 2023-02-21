@@ -57,10 +57,6 @@ Nous vous invitons à nous faire part de vos commentaires sur les principes de c
 
 Assurez-vous de lire [nos principes](/contributing/design-principles/) et [notre guide de style](/contributing/style-guide/) si vous souhaitez [contribuer au site](/contributing/).
 
-## Feuille de route {#roadmap}
-
-<Roadmap />
-
 ## Offres d'emploi {#open-jobs}
 
 Bien que ce site soit open source et que tout le monde puisse y travailler, nous avons une équipe dédiée à ethereum.org et à d'autres projets web de l'Ethereum Foundation.
