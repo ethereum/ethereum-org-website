@@ -67,8 +67,55 @@ const Search: FC = () => {
               closeKeyAriaLabel: translateMessageId("docsearch-to-close", intl),
               searchByText: translateMessageId("docsearch-search-by", intl),
             },
+            errorScreen: {
+              titleText: translateMessageId("docsearch-error-title", intl),
+              helpText: translateMessageId("docsearch-error-help", intl),
+            },
+            startScreen: {
+              recentSearchesTitle: translateMessageId(
+                "docsearch-start-recent-searches-title",
+                intl
+              ),
+              noRecentSearchesText: translateMessageId(
+                "docsearch-start-no-recent-searches",
+                intl
+              ),
+              saveRecentSearchButtonTitle: translateMessageId(
+                "docsearch-start-save-recent-search",
+                intl
+              ),
+              removeRecentSearchButtonTitle: translateMessageId(
+                "docsearch-start-remove-recent-search",
+                intl
+              ),
+              favoriteSearchesTitle: translateMessageId(
+                "docsearch-start-favorite-searches",
+                intl
+              ),
+              removeFavoriteSearchButtonTitle: translateMessageId(
+                "docsearch-start-remove-favorite-search",
+                intl
+              ),
+            },
+            noResultsScreen: {
+              noResultsText: translateMessageId(
+                "docsearch-no-results-text",
+                intl
+              ),
+              suggestedQueryText: translateMessageId(
+                "docsearch-no-results-suggested-query",
+                intl
+              ),
+              reportMissingResultsText: translateMessageId(
+                "docsearch-no-results-missing",
+                intl
+              ),
+              reportMissingResultsLinkText: translateMessageId(
+                "docsearch-no-results-missing-link",
+                intl
+              ),
+            },
           },
-          /* TODO: Setup remainder of translations */
         }}
       />
     </>
