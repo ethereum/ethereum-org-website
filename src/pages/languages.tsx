@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { IconButton } from "@chakra-ui/react"
 import styled from "@emotion/styled"
 import { useLocation } from "@reach/router"
 import { useIntl } from "react-intl"
@@ -12,7 +13,6 @@ import { Language, languageMetadata } from "../utils/languages"
 import { translateMessageId, TranslationKey } from "../utils/translations"
 import { CardItem as LangItem } from "../components/SharedStyledComponents"
 import Icon from "../components/Icon"
-import NakedButton from "../components/NakedButton"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -56,17 +56,6 @@ const StyledInput = styled.input`
   &:focus {
     outline: ${(props) => props.theme.colors.primary} auto 1px;
   }
-`
-
-const IconButton = styled(NakedButton)`
-  position: absolute;
-  top: 50%;
-  margin-top: -12px;
-  right: 6px;
-`
-
-const ResetIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
 `
 
 const LanguagesPage = () => {
@@ -140,10 +129,16 @@ const LanguagesPage = () => {
               placeholder={searchString}
               onChange={(e) => setKeyword(e.target.value)}
             />
-            {keyword === "" ? null : (
-              <IconButton onClick={resetKeyword}>
-                <ResetIcon name="close" />
-              </IconButton>
+            {keyword !== "" && (
+              <IconButton
+                icon={<Icon name="close" />}
+                onClick={resetKeyword}
+                position="absolute"
+                insetInlineEnd={1}
+                aria-label={translateMessageId("clear", intl)}
+                variant="icon"
+                _hover={{ svg: { fill: "primary" } }}
+              />
             )}
           </Form>
           <LangContainer>

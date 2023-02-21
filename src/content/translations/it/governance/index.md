@@ -153,7 +153,7 @@ Il processo di governance di Ethereum spesso rinuncia a velocità ed efficienza 
 
 Lo sviluppo di specifiche e implementazioni è sempre stato totalmente open source; non sono stati invece utilizzati i processi formali descritti sopra per proporre gli aggiornamenti. Questo ha consentito a ricercatori e implementatori di specificare e concordare le modifiche più rapidamente.
 
-Quando la Beacon Chain si fonderà con il livello di esecuzione di Ethereum, il processo di governance per proporre le modifiche sarà armonizzato. Questo processo per implementare la fusione è [già in corso](https://github.com/ethereum/EIPs/pull/3675).
+Quando la Beacon Chain si fonderà con il livello di esecuzione di Ethereum, il processo di governance per proporre le modifiche sarà armonizzato. Questo processo per implementare la fusione è [già in corso](https://eips.ethereum.org/EIPS/eip-3675).
 
 <ButtonLink to="/upgrades/merge/">
   Maggiori informazioni sulla fusione
