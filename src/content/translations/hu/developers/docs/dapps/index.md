@@ -2,7 +2,6 @@
 title: Bevezetés a dappokba
 description:
 lang: hu
-sidebar: true
 ---
 
 Egy decentralizált applikáció (dapp) olyan applikáció, mely egy olyan decentralizált hálózatra épült, ami egyesít egy [okosszerződést](/developers/docs/smart-contracts/) és egy frontend felhasználói felületet. Megjegyzésül: az Ethereum okosszerződések elérhetőek és transzparensek - mint a nyílt API-ok - így a dappod tartalmazhat olyan okosszerződést, melyet másvalaki írt.

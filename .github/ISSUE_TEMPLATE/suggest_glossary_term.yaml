@@ -1,0 +1,47 @@
+name: Suggest a glossary term
+description: Suggest a new ethereum.org glossary term
+title: Suggest a glossary term
+labels: ["feature :sparkles:", "content :fountain_pen:"]
+body:
+  - type: checkboxes
+    id: glossary_checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: This is a term not already found in the glossary (for similar terms, please consider the benefits of a new term vs updating an existing term)
+          required: true
+        - label: This term/definition is not a product advertisement or contain other promotional content
+          required: true
+        - label: This term/definition is directly relevant to Ethereum
+          required: true
+    validations:
+      required: true
+  - type: input
+    id: glossary_term_name
+    attributes:
+      label: Term name
+    validations:
+      required: true
+  - type: textarea
+    id: glossary_term_definition
+    attributes:
+      label: Term definition
+    validations:
+      required: true
+  - type: textarea
+    id: glossary_term_sources
+    attributes:
+      label: Sources, if any (please do not submit copywrited content without appropriate approval)
+      description: Please list any sources utilized
+    validations:
+      required: false
+  - type: textarea
+    id: glossary_terms_ethereumdotorg_links
+    attributes:
+      label: Ethereum.org links
+      description: If appropriate/available, please suggest an internal ethereum.org link that would expand someones learning of this term
+  - type: textarea
+    id: glossary_term_additional_context
+    attributes:
+      label: Additional context
+      description: Add any other context or screenshots about the feature request here

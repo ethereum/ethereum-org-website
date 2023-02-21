@@ -9,12 +9,9 @@ tags:
   - "alchemy"
   - "kontrak pintar"
   - "frontend"
-  - "UI"
-  - "wallet"
   - "Pinata"
 skill: intermediate
 lang: id
-sidebar: true
 published: 2021-10-06
 ---
 

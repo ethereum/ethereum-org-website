@@ -1,28 +1,8 @@
 import React from "react"
-import styled from "@emotion/styled"
+import { Box } from "@chakra-ui/react"
+
 import Translation from "./Translation"
-
-const Div = styled.div`
-  background-color: ${(props) => props.theme.colors.primary};
-`
-
-const Anchor = styled.a`
-  line-height: 2rem;
-  position: absolute;
-  top: -3rem;
-  margin-left: 0.5rem;
-  color: ${(props) => props.theme.colors.background};
-  text-decoration: none;
-
-  &:focus {
-    position: static;
-  }
-`
-
-const DivAnchor = styled.div`
-  height: 80px;
-  margin-top: -80px;
-`
+import Link from "../components/Link"
 
 export interface IProps {
   hrefId: string
@@ -30,14 +10,24 @@ export interface IProps {
 
 export const SkipLink: React.FC<IProps> = ({ hrefId }) => {
   return (
-    <Div>
-      <Anchor href={hrefId}>
+    <Box bg="primary">
+      <Link
+        href={hrefId}
+        lineHeight="taller"
+        position="absolute"
+        top="-12"
+        ml="2"
+        color="background"
+        textDecorationLine="none"
+        _hover={{ textDecoration: "none" }}
+        _focus={{ position: "static" }}
+      >
         <Translation id="skip-to-main-content" />
-      </Anchor>
-    </Div>
+      </Link>
+    </Box>
   )
 }
 
 export const SkipLinkAnchor: React.FC<{ id: string }> = ({ id }) => {
-  return <DivAnchor id={id}></DivAnchor>
+  return <Box height="80px" mt="-80px" id={id}></Box>
 }

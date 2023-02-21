@@ -2,7 +2,6 @@
 title: Aggiunta di strumenti per sviluppatori
 lang: it
 description: I nostri criteri per elencare gli strumenti per sviluppatori su ethereum.org
-sidebar: true
 ---
 
 # Aggiunta di strumenti per sviluppatori {#contributing-to-ethereumorg-}

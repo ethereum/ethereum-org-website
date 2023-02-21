@@ -2,7 +2,6 @@
 title: Block-Explorer
 description: Eine Einführung in Block-Explorer, Ihr Portal in die Welt der Blockchain-Daten – dort können Sie Informationen über Transaktionen, Konten, Verträge und mehr abfragen
 lang: de
-sidebar: true
 sidebarDepth: 3
 ---
 

@@ -5,7 +5,6 @@ import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 
 import Translation from "../components/Translation"
-import Pill from "../components/Pill"
 import BoxGrid from "../components/BoxGrid"
 import Card from "../components/Card"
 import Callout from "../components/Callout"
@@ -37,6 +36,7 @@ import FeedbackCard from "../components/FeedbackCard"
 import { translateMessageId } from "../utils/translations"
 import { getImage, getSrc } from "../utils/image"
 import { Context } from "../types"
+import { Badge } from "@chakra-ui/react"
 
 const MagiciansImage = styled(GatsbyImage)`
   background-size: cover;
@@ -650,6 +650,13 @@ const DappsPage = ({
       image: getImage(data.dai),
       alt: translateMessageId("page-dapps-oasis-logo-alt", intl),
     },
+    {
+      title: "PWN",
+      description: translateMessageId("page-dapps-dapp-description-pwn", intl),
+      link: "https://pwn.xyz",
+      image: getImage(data.pwn),
+      alt: translateMessageId("page-dapps-pwn-image-alt", intl),
+    },
   ]
 
   const dex = [
@@ -784,6 +791,16 @@ const DappsPage = ({
       link: "https://www.indexcoop.com/",
       image: getImage(data.index),
       alt: translateMessageId("page-dapps-index-coop-logo-alt", intl),
+    },
+    {
+      title: "Balancer",
+      description: translateMessageId(
+        "page-dapps-dapp-description-balancer",
+        intl
+      ),
+      link: "https://balancer.fi/",
+      image: getImage(data.balancer),
+      alt: translateMessageId("page-dapps-balancer-logo-alt", intl),
     },
   ]
 
@@ -1015,7 +1032,7 @@ const DappsPage = ({
         "page-dapps-dapp-description-cryptopunks",
         intl
       ),
-      link: "https://www.larvalabs.com/cryptopunks",
+      link: "https://cryptopunks.app/",
       image: getImage(data.cryptopunks),
       alt: translateMessageId("page-dapps-cryptopunks-logo-alt", intl),
     },
@@ -1237,7 +1254,9 @@ const DappsPage = ({
               image={choice.image!}
               name={choice.name}
             >
-              <Pill color={choice.pillColor}>{choice.type}</Pill>
+              <Badge size="sm" background={choice.pillColor}>
+                {choice.type}
+              </Badge>
             </ProductCard>
           ))}
         </StyledCardGrid>
@@ -1901,6 +1920,12 @@ export const query = graphql`
       ...dappImage
     }
     poap: file(relativePath: { eq: "dapps/poap.png" }) {
+      ...dappImage
+    }
+    pwn: file(relativePath: { eq: "dapps/pwn.png" }) {
+      ...dappImage
+    }
+    balancer: file(relativePath: { eq: "dapps/balancer.png" }) {
       ...dappImage
     }
   }

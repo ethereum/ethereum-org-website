@@ -2,7 +2,6 @@
 title: Pustaka API JavaScript
 description: Pengantar pustaka klien JavaScript yang memungkinkan Anda berinteraksi dengan blockchain dari aplikasi Anda.
 lang: id
-sidebar: true
 ---
 
 Agar aplikasi web dapat berinteraksi dengan blockchain Ethereum (yaitu membaca data blockchain dan/atau mengirim transaksi ke jaringan), aplikasi harus terhubung ke node Ethereum.

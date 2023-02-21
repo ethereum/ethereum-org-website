@@ -2,7 +2,6 @@
 title: Aggiungere prodotti o servizi di staking
 description: La politica che usiamo quando aggiungiamo prodotti o servizi di staking a ethereum.org
 lang: it
-sidebar: true
 ---
 
 # Aggiungere prodotti o servizi di staking {#adding-staking-products-or-services}
@@ -97,7 +96,7 @@ Per gli [elenchi di staking come servizio](/staking/saas/) (es. operazione del n
 - Qual è la struttura tariffaria, ad esempio vi è un canone mensile per il servizio?
 - Ulteriori requisiti per lo staking?
 
-**Gli utenti sono tenuti a registrarsi per un account?**
+**Gli utenti sono tenuti a registrarsi per un conto?**
 
 - Qualcuno può usare il servizio senza permessi o KYC?
 - Questo serve a determinare il punteggio "senza permessi" dei prodotti.

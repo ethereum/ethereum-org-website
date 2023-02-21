@@ -1,7 +1,6 @@
 ---
 title: Yayasan Ethereum dan program hibah masyarakat
 description: Daftar program hibah di seluruh ekosistem Ethereum.
-sidebar: true
 lang: id
 ---
 

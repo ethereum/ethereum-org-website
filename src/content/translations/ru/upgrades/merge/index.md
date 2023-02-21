@@ -3,7 +3,6 @@ title: Слияние
 description: "Узнайте о слиянии: когда Ethereum присоединяется к скоординированной системе доказательства владения Beacon Chain."
 lang: ru
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: В конечном итоге текущая основная сеть Ethereum «сольется» с системой доказательства владения.
 summaryPoint2: Это станет концом использования доказательства работы в Ethereum и ознаменует полный переход на доказательство владения.

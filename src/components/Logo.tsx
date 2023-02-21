@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { useTheme } from "@emotion/react"
+import { useColorMode } from "@chakra-ui/react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 
@@ -11,8 +11,8 @@ export interface IProps {}
 
 const Logo: React.FC<IProps> = () => {
   const intl = useIntl()
-  const theme = useTheme()
-  const isDarkTheme = theme.isDark
+  const { colorMode } = useColorMode()
+  const isDarkTheme = colorMode === "dark"
   const data = useStaticQuery(graphql`
     {
       dark: file(relativePath: { eq: "ef-logo.png" }) {

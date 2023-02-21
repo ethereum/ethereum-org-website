@@ -1,5 +1,7 @@
 import React, { useState } from "react"
+import { IconButton } from "@chakra-ui/react"
 import styled from "@emotion/styled"
+import { useLocation } from "@reach/router"
 import { useIntl } from "react-intl"
 
 import PageMetadata from "../components/PageMetadata"
@@ -7,11 +9,10 @@ import Translation from "../components/Translation"
 import Link from "../components/Link"
 import { Page, Content } from "../components/SharedStyledComponents"
 
-import { Lang, Language, languageMetadata } from "../utils/languages"
+import { Language, languageMetadata } from "../utils/languages"
 import { translateMessageId, TranslationKey } from "../utils/translations"
 import { CardItem as LangItem } from "../components/SharedStyledComponents"
 import Icon from "../components/Icon"
-import NakedButton from "../components/NakedButton"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -57,23 +58,13 @@ const StyledInput = styled.input`
   }
 `
 
-const IconButton = styled(NakedButton)`
-  position: absolute;
-  top: 50%;
-  margin-top: -12px;
-  right: 6px;
-`
-
-const ResetIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
-`
-
-interface TranslatedLanguage extends Language {
-  path: string
-}
-
 const LanguagesPage = () => {
   const intl = useIntl()
+  const location = useLocation()
+  const redirectTo =
+    location.search.split("from=").length > 1
+      ? location.search.split("from=")[1]
+      : "/"
   const [keyword, setKeyword] = useState<string>("")
   const resetKeyword = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
@@ -83,11 +74,10 @@ const LanguagesPage = () => {
     "page-languages-filter-placeholder",
     intl
   )
-  let translationsCompleted: Array<TranslatedLanguage> = []
+  let translationsCompleted: Array<Language> = []
   for (const lang in languageMetadata) {
     const langMetadata = {
       ...languageMetadata[lang],
-      path: "/",
       name: translateMessageId(`language-${lang}` as TranslationKey, intl),
     }
 
@@ -139,15 +129,21 @@ const LanguagesPage = () => {
               placeholder={searchString}
               onChange={(e) => setKeyword(e.target.value)}
             />
-            {keyword === "" ? null : (
-              <IconButton onClick={resetKeyword}>
-                <ResetIcon name="close" />
-              </IconButton>
+            {keyword !== "" && (
+              <IconButton
+                icon={<Icon name="close" />}
+                onClick={resetKeyword}
+                position="absolute"
+                insetInlineEnd={1}
+                aria-label={translateMessageId("clear", intl)}
+                variant="icon"
+                _hover={{ svg: { fill: "primary" } }}
+              />
             )}
           </Form>
           <LangContainer>
             {translationsCompleted.map((lang) => (
-              <LangItem to={lang.path} language={lang.code} key={lang["name"]}>
+              <LangItem to={redirectTo} language={lang.code} key={lang["name"]}>
                 <LangTitle>{lang["name"]}</LangTitle>
                 <h4>{lang.localName}</h4>
               </LangItem>

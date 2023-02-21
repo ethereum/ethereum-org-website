@@ -2,7 +2,6 @@
 title: Ethereum JavaScript fejlesztőknek
 description: Tanulj meg Ethereumon fejleszteni JavaScript alapú projektek és eszközök használatával.
 lang: hu
-sidebar: true
 ---
 
 A JavaScript a legnépszerűbb nyelvek között van az Ethereum ökoszisztémában. Valójában van egy [csapat](https://github.com/ethereumjs), mely célul tűzte ki, hogy a lehető legtöbb Ethereumot vigye be a JavaScriptbe.

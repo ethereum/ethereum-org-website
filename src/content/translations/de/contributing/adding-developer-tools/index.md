@@ -2,7 +2,6 @@
 title: Entwicklertools hinzufügen
 lang: de
 description: Unsere Kriterien für die Auflistung von Entwicklertools auf ethereum.org
-sidebar: true
 ---
 
 # Entwicklertools hinzufügen {#contributing-to-ethereumorg-}

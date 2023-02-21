@@ -3,7 +3,6 @@ title: "The Graph: Remedierea interogării datelor Web3"
 description: Blockchain este ca o bază de date, dar fără SQL. Toate datele sunt acolo, dar nu există nicio modalitate de a le accesa. O să-ți arăt cum să reparăm acest lucru cu Graph și GraphQL.
 author: Markus Waas
 lang: ro
-sidebar: true
 tags:
   - "solidity"
   - "contracte inteligente"

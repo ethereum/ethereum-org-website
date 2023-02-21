@@ -2,7 +2,6 @@
 title: Oracles
 description: Kâhinler (Oracle), gerçek dünya verilerini Ethereum uygulamanıza almanıza yardımcı olur çünkü akıllı sözleşmeler gerçek dünya verilerini kendi başlarına sorgulayamaz.
 lang: tr
-sidebar: true
 incomplete: true
 ---
 

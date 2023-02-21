@@ -2,7 +2,6 @@
 title: Les blocs
 description: Présentation des blocs de la blockchain Ethereum, leur structure de données, pourquoi ils sont nécessaires et comment ils sont créés.
 lang: fr
-sidebar: true
 ---
 
 Les blocs sont des lots de transactions avec un hachage du bloc précédent dans la chaîne. Ceci relie les blocs ensemble (dans une chaîne) car les hachages sont cryptographiquement dérivés des données des blocs. Cela empêche la fraude, car un changement dans n'importe quel bloc de l'historique invaliderait tous les blocs suivants puisque tous les hachages ultérieurs changeraient et que quiconque exécutant la blockchain le remarquerait.

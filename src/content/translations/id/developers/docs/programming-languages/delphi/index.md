@@ -2,7 +2,6 @@
 title: Ethereum untuk pengembang Delphi
 description: Pelajari cara menjadi pengembang untuk Ethereum menggunakan bahasa pemrograman Delphi
 lang: id
-sidebar: true
 incomplete: true
 ---
 

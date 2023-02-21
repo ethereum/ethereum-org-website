@@ -70,6 +70,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
+        output: "/sitemap",
         query: `{
           site {
             siteMetadata {
@@ -205,6 +206,7 @@ const config: GatsbyConfig = {
       options: {
         resetCSS: true,
         isUsingColorMode: true,
+        portalZIndex: 1001,
       },
     },
     // Source assets

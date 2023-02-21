@@ -11,7 +11,6 @@ tags:
   - "智能合约"
 skill: intermediate
 lang: zh
-sidebar: true
 published: 2020-12-31
 source: www.github.com
 sourceUrl: https://github.com/strykerin/DeFi-Token-Farm
@@ -23,7 +22,7 @@ sourceUrl: https://github.com/strykerin/DeFi-Token-Farm
 
 如果这是您第一次编写智能合约，您需要搭建您的环境。 我们将使用两个工具：[Truffle](https://www.trufflesuite.com/) 和 [Ganache](https://www.trufflesuite.com/ganache)。
 
-Truffle 是用于开发以太坊智能合约的开发环境和测试框架。 使用 Truffle 可以很容易地在区块链中创建和部署智能合约。 Ganach 可以帮助我们创建一个本地以太坊区块链，用以测试智能合约。 它模拟真实的网络功能，前 10 个帐户存入了 100 个测试以太币，如此可以随意部署和测试智能合约。 Ganache 可提供桌面应用程序和命令行工具。 在本文中，我们将使用有图形界面的桌面应用程序。
+Truffle 是用于开发以太坊智能合约的开发环境和测试框架。 使用 Truffle 可以很容易地在区块链中创建和部署智能合约。 Ganache 可以帮助我们创建一个本地以太坊区块链，用以测试智能合约。 它模拟真实的网络功能，前 10 个帐户存入了 100 个测试以太币，如此可以随意部署和测试智能合约。 Ganache 可提供桌面应用程序和命令行工具。 在本文中，我们将使用有图形界面的桌面应用程序。
 
 ![Ganache 图形界面桌面应用程序](https://cdn-images-1.medium.com/max/2360/1*V1iQ5onbLbT5Ib2QaiOSyg.png)_Ganache UI desktop application_
 
@@ -75,7 +74,7 @@ contract MyToken is ERC20 {
 
 - 第 6 行：我们要调用 ERC20.sol 构造函数，并将名称和符号参数分别设为 `"MyToken"` 和 `"MTKN"`。
 
-- 第 7 行：我们为正在部署智能合约的账户铸造和转移 100 万代币（我们默认为 ERC20 代币使用 18 位小数）。这意味着，如果我们想要铸造 1 个代币，则需将其表示为 100000000000000，即 1 和 18 个零）。
+- 第 7 行：我们为正在部署智能合约的账户铸造和转移 100 万代币（我们默认为 ERC20 代币使用 18 位小数）。这意味着，如果我们想要铸造 1 个代币，则需将其表示为 1000000000000000000，即 1 和 18 个零）。
 
 我们可以看到，ERC20.sol 构造函数实现下方，`_decimals` 字段设置为 18：
 
@@ -128,7 +127,7 @@ truffle compile
 
 编译后，我们现在便可以部署代币了。
 
-在 `migrations` 文件夹中，创建一个名为 `2_depu_Tokens.js` 的文件。 我们将在该文件中部署 ERC20 代币和 FarmToken 智能合约。 以下代码用于部署我们的 MyToken.sol 合约：
+在 `migrations` 文件夹中，创建一个名为 `2_deploy_Tokens.js` 的文件。 我们将在该文件中部署 ERC20 代币和 FarmToken 智能合约。 以下代码用于部署我们的 MyToken.sol 合约：
 
 ```javascript
 const MyToken = artifacts.require("MyToken")
@@ -168,7 +167,7 @@ truffle console
 
 - 获取第一个帐户的余额：`balance = await myToken.balance Of(accounts[0])`
 
-- 格式化具有 18 位小数的余额：`web3.utils.fromWei(Balance.toString())`
+- 格式化具有 18 位小数的余额：`web3.utils.fromWei(balance.toString())`
 
 通过运行上述命令，我们会看到第一个地址实际上有 100 万 MyToken：
 
@@ -252,7 +251,7 @@ function withdraw(uint256 _amount) public {
 }
 ```
 
-现在我们将部署我们的智能合约。 为此，我们将返回文件 `2_depu_Tokens.js` 并添加要部署的新合约：
+现在我们将部署我们的智能合约。 为此，我们将返回文件 `2_deploy_Tokens.js` 并添加要部署的新合约：
 
 ```javascript
 const MyToken = artifacts.require("MyToken")
@@ -463,7 +462,7 @@ module.exports = async function (callback) {
 }
 ```
 
-要运行此脚本：`truffle exec .\script\transferMyTokenToFarmToken.js`。 正如我们在下面的输出中所看到的，我们已经成功地取回了 MyToken，并消耗掉了 FarmToken：
+要运行此脚本：`truffle exec .\scripts\withdrawMyTokenFromTokenFarm.js`。 正如我们在下面的输出中所看到的，我们已经成功地取回了 MyToken，并消耗掉了 FarmToken：
 
 ![withdrawMyTokenFromTokenFarm.js 的输出](https://cdn-images-1.medium.com/max/2000/1*jHYlTFg0NgGbhASpsRvc0w.png)
 
@@ -479,4 +478,4 @@ _withdrawMyTokenFromTokenFarm.js 的输出_
 
 [什么是去中心化金融？ 初学者指南（2021 年更新）(99bitcoins.com)](https://99bitcoins.com/what-is-defi/)
 
-[去中心化金融 - DeFi Pulse 的去中心化金融排行榜](https://defipulse.com/)
+[去中心化金融 - DeFi Llama 的去中心化金融排行榜](https://defillama.com/)

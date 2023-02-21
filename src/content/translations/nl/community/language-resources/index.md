@@ -1,7 +1,6 @@
 ---
 title: Taalbronnen
 description: Niet-Engelse bronnen om te leren over Ethereum
-sidebar: true
 lang: nl
 ---
 

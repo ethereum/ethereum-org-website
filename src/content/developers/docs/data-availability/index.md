@@ -2,7 +2,6 @@
 title: Data availability
 description: An overview of problems and solutions relating to data availability in Ethereum
 lang: en
-sidebar: true
 ---
 
 Trustlessness is a major premise of public blockchains ("don't trust, verify"). One of the ways Ethereum reduces trust assumptions is by enforcing rules on data availability. Block producers are required to publish the data for each block, which nodes participating in Ethereum's consensus store locally.

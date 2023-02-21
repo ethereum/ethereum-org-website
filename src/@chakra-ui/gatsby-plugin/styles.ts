@@ -19,6 +19,10 @@ const styles = {
       bg: mode("white", "gray.700")(props),
       lineHeight: "1.6rem",
     },
+    a: {
+      color: "primary",
+      textDecoration: "underline",
+    },
     // should be replace with https://chakra-ui.com/docs/components/text
     p: {
       margin: "0px 0px 1.45rem",
@@ -28,11 +32,35 @@ const styles = {
       margin: "0px 0px 1.45rem 1.45rem",
       padding: 0,
     },
-    // YouTube embeds
-    iframe: {
-      display: "block",
-      maxWidth: "560px",
-      margin: "32px 0",
+    // imported global CSS styles for list items
+    li: {
+      "margin-bottom": "calc(1.45rem / 2)",
+    },
+    "ol li": {
+      "padding-left": "0",
+    },
+    "ul li": {
+      "padding-left": "0",
+    },
+    "li > ol": {
+      "margin-left": "1.45rem",
+      "margin-bottom": "calc(1.45rem / 2)",
+      "margin-top": "calc(1.45rem / 2)",
+    },
+    "li > ul": {
+      "margin-left": "1.45rem",
+      "margin-bottom": "calc(1.45rem / 2)",
+      "margin-top": "calc(1.45rem / 2)",
+    },
+
+    "li *:last-child": {
+      "margin-bottom": "0",
+    },
+    "p *:last-child": {
+      "margin-bottom": "0",
+    },
+    "li > p": {
+      "margin-bottom": "calc(1.45rem / 2)",
     },
     // should be replace by the usage of https://chakra-ui.com/docs/components/heading
     // also, the media queries defined on each of these heading tags are bearly used
@@ -104,6 +132,11 @@ const styles = {
     },
     ".header-anchor:focus svg": {
       visibility: "visible",
+    },
+    "pre, code, kbd, samp": {
+      fontSize: "0.8em",
+      lineHeight: "1.1rem",
+      fontFamily: "SFMono-Regular,Menlo,Monaco,Consolas,monospace",
     },
   }),
 }

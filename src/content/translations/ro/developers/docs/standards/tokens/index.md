@@ -2,7 +2,6 @@
 title: Standarde de tokenuri
 description:
 lang: ro
-sidebar: true
 incomplete: true
 ---
 

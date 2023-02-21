@@ -12,7 +12,7 @@
   "page-upgrades-bug-bounty-misc-bugs-desc": "See the Solidity SECURITY.MD for more details about what is included in this scope.",
   "page-upgrades-bug-bounty-misc-bugs-desc-2": "Solidity does not hold security guarantees regarding compilation of untrusted input – and we do not issue rewards for crashes of the solc compiler on maliciously generated data.",
   "page-upgrades-bug-bounty-deposit-bugs": "Deposit Contract bugs",
-  "page-upgrades-bug-bounty-deposit-bugs-desc": "The specificiations and source code of the Beacon Chain Deposit Contract is part of the bug bounty program.",
+  "page-upgrades-bug-bounty-deposit-bugs-desc": "The specifications and source code of the Beacon Chain Deposit Contract is part of the bug bounty program.",
   "page-upgrades-bug-bounty-docking": "merge",
   "page-upgrades-bug-bounty-email-us": "Email us:",
   "page-upgrades-bug-bounty-help-links": "Helpful links",
@@ -27,6 +27,7 @@
   "page-upgrades-bug-bounty-hunting-li-3": "Employees and contractors of the Ethereum Foundation or client teams in scope of the bounty program may participate in the program only in the accrual of points and will not receive monetary rewards.",
   "page-upgrades-bug-bounty-hunting-li-4": "Ethereum bounty program considers a number of variables in determining rewards. Determinations of eligibility, score and all terms related to an award are at the sole and final discretion of the Ethereum Foundation bug bounty panel.",
   "page-upgrades-bug-bounty-leaderboard": "See full leaderboards",
+  "page-upgrades-bug-bounty-leaderboard-list": "Bug bounty leaderboard",
   "page-upgrades-bug-bounty-leaderboard-points": "points",
   "page-upgrades-bug-bounty-ledger-desc": "The Ethereum Specifications detail the design rationale for the Execution Layer and Consensus Layer.",
   "page-upgrades-bug-bounty-ledger-title": "Specification bugs",
@@ -68,7 +69,7 @@
   "page-upgrades-bug-bounty-type-4": "Calculation or parameter inconsistencies",
   "page-upgrades-bug-bounty-types": "Types of bugs",
   "page-upgrades-bug-bounty-validity": "In Scope",
-  "page-upgrades-bug-bounty-validity-desc": "Our bug bounty program spans end-to-end: from soundness of protocols (such as the blockchain consensus model, the wire and p2p protocols, proof of work, proof of stake, etc) and protocol/implementation compliance to network security and consensus integrity. Classical client security as well as security of cryptographic primitives are also part of the program. When in doubt, send an email to bounty@ethereum.org and ask us.",
+  "page-upgrades-bug-bounty-validity-desc": "Our bug bounty program spans end-to-end: from soundness of protocols (such as the blockchain consensus model, the wire and p2p protocols, proof of stake, etc.) and protocol/implementation compliance to network security and consensus integrity. Classical client security as well as security of cryptographic primitives are also part of the program. When in doubt, send an email to bounty@ethereum.org and ask us.",
   "page-upgrades-bug-bounty-card-critical": "Critical",
   "page-upgrades-bug-bounty-card-critical-risk": "Submit critical risk bug",
   "page-upgrades-bug-bounty-card-h2": "Medium",
@@ -97,6 +98,6 @@
   "page-upgrades-bug-bounty-card-subheader-2": "Example",
   "page-upgrades-bug-bounty-card-text": "Attacker can sometimes put a node in a state that causes it to drop one out of every one hundred attestations made by a validator",
   "page-upgrades-bug-bounty-card-text-1": "Attacker can successfully conduct eclipse attacks on nodes with peer-ids with 4 leading zero bytes",
-  "page-upgrades-bug-bounty-card-text-2": "There is a consensus bug between two clients, but it is difficult or impractical for the attacker to trigger the event.",
-  "page-upgrades-bug-bounty-card-text-3": "There is a remote code execution in a majority client, and it is trivial for an attacker to trigger the vulnerability."
+  "page-upgrades-bug-bounty-card-text-2": "Attacker can successfully partition large parts of the network, and it is trivial for an attacker to trigger the vulnerability",
+  "page-upgrades-bug-bounty-card-text-3": "Attacker can successfully conduct remote code execution in a majority client, and it is trivial for an attacker to trigger the vulnerability"
 }

@@ -2,7 +2,6 @@
 title: Medii de dezvoltare integrate (IDE)
 description:
 lang: ro
-sidebar: true
 ---
 
 Când vine vorba de configurarea unui [mediu de dezvoltare integrat (IDE)](https://wikipedia.org/wiki/Integrated_development_environment), programarea aplicațiilor pe Ethereum este similară cu programarea oricărui proiect software. Există multe opțiuni din care puteți alege, așa că, în final, alegeți IDE-ul sau editorul de cod care corespunde cel mai bine preferințelor dvs. Cel mai probabil este că cea mai bună alegere de IDE pentru dezvoltarea Ethereum este IDE-ul pe care îl folosiți deja pentru dezvoltarea de software tradițional.

@@ -2,7 +2,6 @@
 title: 帕特里夏默克尔树
 description: 帕特里夏默克尔树简介。
 lang: zh
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -246,7 +245,7 @@ else:
 
 ### 收据树 {#receipts-trie}
 
-每个区块都有自己的收据树。 此处的 `path` 是：`rlp(transactionIndex)`。 `transactionIndex` 是它在挖矿区块中的索引。 收据树不会更新。 与交易树类似，也有当前和遗留的收据。 要查询收据树中的特定收据，需要区块中的交易索引、收据有效载荷和交易类型。 返回的收据可以是 `Receipt` 类型，定义为 `transaction type` 和 `transaction payload` 的串接，也可以是 `LegacyReceipt` 类型，定义为 `rlp([status, cumularGasUsed, logsBloom, logs])`。
+每个区块都有自己的收据树。 此处的 `path` 是：`rlp(transactionIndex)`。 `transactionIndex` 是它在挖矿区块中的索引。 收据树不会更新。 与交易树类似，也有当前和遗留的收据。 要查询收据树中的特定收据，需要区块中的交易索引、收据有效载荷和交易类型。 返回的收据可以是 `Receipt` 类型，定义为 `transaction type` 和 `transaction payload` 的串接，也可以是 `LegacyReceipt` 类型，定义为 `rlp([status, cumulativeGasUsed, logsBloom, logs])`。
 
 关于这个问题的更多信息可以在 [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718) 文档中找到。
 

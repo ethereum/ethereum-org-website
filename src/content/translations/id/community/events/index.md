@@ -1,7 +1,7 @@
 ---
 title: Aksi Ethereum
 description: Cara terlibat di dalam komunitas Ethereum.
-sidebar: false
+hideEditButton: true
 lang: id
 ---
 

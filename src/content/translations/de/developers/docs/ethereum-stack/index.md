@@ -2,7 +2,6 @@
 title: Eine Anleitung zum Ethereum-Stack
 description: Eine Vorstellung der verschiedenen Ebenen des Ethereum-Stacks und wie sie zusammen passen
 lang: de
-sidebar: true
 ---
 
 Wie bei jedem Software-Stack variiert der komplette "Ethereum-Stack" zielabhängig von Projekt zu Projekt.
@@ -47,7 +46,7 @@ Obwohl diese APIs kein notwendiger Bestandteil des Stacks sind, gestalten sie di
 
 ## Ebene 5: Endbenutzeranwendungen {#end-user-applications}
 
-Auf der obersten Ebene des Stacks befinden sich benutzerorientierte Anwendungen. Das sind die Standardanwendungen, die Sie heute regelmäßig nutzen aund aufhauen: in erster Linie Web- und Mobilanwendungen.
+Auf der obersten Ebene des Stacks befinden sich benutzerorientierte Anwendungen. Das sind die Standardanwendungen, die Sie heute regelmäßig nutzen und erstellen: in erster Linie Web- und Mobilanwendungen.
 
 Die Art und Weise, wie Sie diese Benutzeroberflächen entwickeln, bleibt im Wesentlichen unverändert. Meist müssen Benutzer nicht wissen, dass die von ihnen verwendete Anwendung auf einer Blockchain erstellt wurde.
 

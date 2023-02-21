@@ -2,7 +2,6 @@
 title: Умные контракты
 description: Нетехническое введение в умные контракты
 lang: ru
-sidebar: true
 ---
 
 # Введение в умные контракты {#introduction-to-smart-contracts}

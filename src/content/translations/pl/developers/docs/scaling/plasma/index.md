@@ -2,7 +2,6 @@
 title: Łańcuchy plazmy
 description: Wprowadzenie do łańcuchów plazmowych jako rozwiązania skalowania obecnie wykorzystywanego przez społeczność Ethereum.
 lang: pl
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---

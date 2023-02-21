@@ -2,7 +2,6 @@
 title: Strutture di dati e codifica
 description: Una panoramica delle strutture di dati fondamentali di Ethereum.
 lang: it
-sidebar: true
 sidebarDepth: 2
 ---
 

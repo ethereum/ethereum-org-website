@@ -2,7 +2,6 @@
 title: Ambientes de Desenvolvimento Integrado (IDEs)
 description:
 lang: pt-br
-sidebar: true
 ---
 
 Quando se trata de construir um [ambiente de trabalho integrado (IDE)](https://pt.wikipedia.org/wiki/Ambiente_de_desenvolvimento_integrado) programar em Ethereum é similar a programar qualquer outro projeto de software. Há muitas opções para escolher, então simplesmente escolha o IDE ou editor de código que melhor se adapta a suas preferências. A melhor escolha para o seu desenvolvimento em Ethereum provavelmente vai ser o IDE que você já usa para o desenvolvimento tradicional de softwares.

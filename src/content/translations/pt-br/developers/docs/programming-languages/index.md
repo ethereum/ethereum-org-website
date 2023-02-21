@@ -2,7 +2,6 @@
 title: Linguagens de programação
 description:
 lang: pt-br
-sidebar: true
 ---
 
 A common misconception is that developers must write [smart contracts](/developers/docs/smart-contracts/) in order to build on Ethereum. Isso é falso. Uma das belezas da rede e comunidade Ethereum é que você pode [participar](/community/)com apenas uma linguagem de programação.

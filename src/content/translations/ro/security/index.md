@@ -2,7 +2,6 @@
 title: Securitatea și prevenirea fraudelor pe Ethereum
 description: Cum să vă păstrați securitatea pe Ethereum
 lang: ro
-sidebar: true
 ---
 
 # Securitatea și prevenirea fraudelor pe Ethereum {#introduction}
@@ -158,8 +157,6 @@ Trimiterea accidentală de cripto la o adresă greșită este o greșeală comun
 Atunci când interacționați cu contractele inteligente, nu permiteți limite de cheltuieli nelimitate. Lipsa limitelor de cheltuieli ar putea permite contractului inteligent să vă golească portofelul. În schimb, stabiliți limite de cheltuieli doar la suma necesară pentru tranzacție.
 
 Multe portofele Ethereum oferă „protecție a limitelor” pentru a vă apăra împotriva golirii conturilor.
-
-[Explorați portofelele cu „protecție a limitelor”](/wallets/find-wallet/?filters=has_limits_protection)
 
 <Divider />
 

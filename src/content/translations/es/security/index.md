@@ -2,7 +2,6 @@
 title: Seguridad en Ethereum y prevención de fraudes
 description: Actuar con seguridad en Ethereum
 lang: es
-sidebar: true
 ---
 
 # Seguridad en Ethereum y la prevención de fraude {#introduction}
@@ -158,8 +157,6 @@ Asegúrese siempre de que la dirección a la que está enviando los fondos sea e
 Cuando firme contratos inteligentes, no permita un techo ilimitado de gasto. Un gasto ilimitado podría permitir que el contrato inteligente vaciara su cartera. En cambio, fije límites de gasto a tan solo la cantidad necesaria para la transacción.
 
 Muchas carteras de Ethereum ofrecen una protección de límites para evitar que las cuentas se vacíen.
-
-[Explore las carteras con protección de límites.](/wallets/find-wallet/?filters=has_limits_protection)
 
 <Divider />
 

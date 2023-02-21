@@ -2,7 +2,6 @@
 title: JavaScript Geliştiricileri için Ethereum
 description: JavaScript tabanlı projeler ve araçlarla nasıl Ethereum için geliştireceğinizi öğrenin.
 lang: tr
-sidebar: true
 ---
 
 JavaScript, Ethereum ekosistemindeki en popüler diller arasındadır. Hatta Ethereum'u mümkün olduğunca JavaScript'e taşımaya adanmış bir [ekip](https://github.com/ethereumjs) bulunuyor.

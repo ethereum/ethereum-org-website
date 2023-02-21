@@ -2,7 +2,6 @@
 title: Maximal extractable value (MEV)
 description: An introduction to maximal extractable value (MEV)
 lang: ro
-sidebar: true
 ---
 
 Maximal extractable value (MEV) refers to the maximum value that can be extracted from block production in excess of the standard block reward and gas fees by including, excluding, and changing the order of transactions in a block.

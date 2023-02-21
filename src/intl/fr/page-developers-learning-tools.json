@@ -35,6 +35,8 @@
   "page-learning-tools-remix-logo-alt": "Logo Remix",
   "page-learning-tools-sandbox": "Boîtes à sable de code",
   "page-learning-tools-sandbox-desc": "Ces espaces de test vous permettront de faire des expériences avec la rédaction de contrats intelligents et de mieux comprendre d'Ethereum.",
+  "page-learning-tools-speed-run-ethereum-description": "Speed Run Ethereum est un ensemble de défis pour tester vos connaissances en Solidity en utilisant Scaffold-ETH",
+  "page-learning-tools-speed-run-ethereum-logo-alt": "Logo de Speed Run Ethereum",
   "page-learning-tools-studio-description": "Un IDE basé sur le Web où vous pouvez suivre des tutoriels pour créer et tester des contrats intelligents, et construire un frontend pour eux.",
   "page-learning-tools-vyperfun-description": "Apprenez à développer avec Vyper en construisant votre propre jeu de Pokémon.",
   "page-learning-tools-vyperfun-logo-alt": "Logo Vyper.fun",

@@ -2,7 +2,6 @@
 title: Łańcuchy boczne
 description: Wprowadzenie do łańcuchów bocznych jako rozwiązania skalowania obecnie wykorzystywanego przez społeczność Ethereum.
 lang: pl
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---

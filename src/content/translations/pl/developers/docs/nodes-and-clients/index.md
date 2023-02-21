@@ -2,7 +2,6 @@
 title: Węzły i klienci
 description: Przegląd węzłów Ethereum i oprogramowania klienta, a także jak skonfigurować węzeł i dlaczego powinieneś to zrobić.
 lang: pl
-sidebar: true
 sidebarDepth: 2
 isOutdated: true
 ---

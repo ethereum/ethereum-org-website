@@ -3,7 +3,6 @@ title: Lista de verificare a integrării tokenului
 description: Listă cu lucruri de considerat când interacționăm cu tokenuri
 author: "Trailofbits"
 lang: ro
-sidebar: true
 tags:
   - "solidity"
   - "contracte inteligente"

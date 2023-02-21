@@ -2,7 +2,6 @@
 title: Anatomi kontrak pintar
 description: Penjabaran mendalam tentang anatomi kontak cerdas – fungsi, data, dan variabel.
 lang: id
-sidebar: true
 ---
 
 Kontrak pintar adalah program yang dijalankan pada sebuah alamat di Ethereum. Kontrak pintar terbuat dari data dan fungsi yang bisa dieksekusi saat menerima sebuah transaksi. Berikut adalah gambaran umum dari komponen yang menyusun sebuah kontrak pintar.

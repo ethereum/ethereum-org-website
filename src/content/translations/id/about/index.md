@@ -2,7 +2,6 @@
 title: Tentang Kami
 description: Tentang tim, komunitas, dan misi ethereum.org
 lang: id
-sidebar: true
 ---
 
 # Tentang Ethereum.org {#about-ethereumorg}
@@ -57,10 +56,6 @@ Kami memiliki [panduan gaya penulisan](/contributing/style-guide/) untuk menstan
 Kami menyambut umpan balik baik untuk prinsip desain maupun panduan gaya penulisan. Ingat, ethereum.org adalah untuk komunitas, oleh komunitas.
 
 Pastikan Anda membaca [prinsip-prinsip kami](/contributing/design-principles/) dan [panduan gaya penulisan kami](/contributing/style-guide/) jika Anda ingin [berkontribusi ke situs ini](/contributing/).
-
-## Rencana kerja {#roadmap}
-
-<Roadmap />
 
 ## Lowongan kerja {#open-jobs}
 

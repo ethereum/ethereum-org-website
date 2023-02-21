@@ -2,7 +2,6 @@
 title: Skalowanie
 description: Wprowadzenie do różnych opcji skalowania opracowywanych obecnie przez społeczność Ethereum.
 lang: pl
-sidebar: true
 ---
 
 ## Omówienie skalowania {#scaling-overview}

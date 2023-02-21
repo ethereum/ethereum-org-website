@@ -27,6 +27,11 @@ import FeedbackCard from "../../components/FeedbackCard"
 import { translateMessageId } from "../../utils/translations"
 import { getImage } from "../../utils/image"
 
+const ProblemCardContainer = styled(CardContainer)`
+  max-width: ${(props) => props.theme.breakpoints.l};
+  margin: 0 auto;
+`
+
 const StyledCardContainer = styled(CardContainer)`
   margin-top: 2rem;
   margin-bottom: 3rem;
@@ -82,11 +87,6 @@ const paths = [
     emoji: ":minidisc:",
     title: <Translation id="page-upgrades-vision-title-2" />,
     description: <Translation id="page-upgrades-vision-desc-2" />,
-  },
-  {
-    emoji: ":high_voltage_sign:",
-    title: <Translation id="page-upgrades-vision-title-3" />,
-    description: <Translation id="page-upgrades-vision-desc-3" />,
   },
 ]
 
@@ -192,7 +192,7 @@ const VisionPage = ({
         <CenterH2>
           <Translation id="page-upgrades-vision-problems" />
         </CenterH2>
-        <CardContainer>
+        <ProblemCardContainer>
           {paths.map((path, idx) => (
             <CentreCard
               key={idx}
@@ -201,7 +201,7 @@ const VisionPage = ({
               description={path.description}
             />
           ))}
-        </CardContainer>
+        </ProblemCardContainer>
       </Content>
       <TrilemmaContent>
         <Trilemma />

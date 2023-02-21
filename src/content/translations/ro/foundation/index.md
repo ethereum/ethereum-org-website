@@ -1,7 +1,7 @@
 ---
 title: Fundația Ethereum
 description: Aflați despre Ethereum Foundation (EF), o organizație non-profit dedicată sprijinirii Ethereum și a tehnologiilor conexe.
-sidebar: false
+hideEditButton: true
 lang: ro
 ---
 

@@ -4,7 +4,6 @@ description: Eine Übersicht über DAOs auf Ethereum
 lang: de
 template: use-cases
 emoji: ":handshake:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/use-cases/dao-2.png
 alt: Darstellung, wie eine DAO über einen Vorschlag abstimmt
@@ -69,11 +68,21 @@ _Findet in der Regel Anwendung für kleinere, auf den Menschen ausgerichtete Org
 
 [MolochDAO](http://molochdao.com/) – MolochDAO ist auf die Finanzierung von Ethereum-Projekten ausgerichtet. Gefordert wird ein Antrag auf Mitgliedschaft, damit die Gruppe beurteilen kann, ob Interessenten über das nötige Fachwissen und Kapital verfügen, um fundierte Entscheidungen über potenzielle Zuschussempfänger zu treffen. Es ist nicht möglich, den Zugang zur DAO einfach auf dem freien Markt zu kaufen.
 
+### Reputationsbasierte Mitgliedschaft {#reputation-based-membership}
+
+Reputation ist ein Nachweis der Teilnahme und gewährt Stimmrechte im DAO. Im Gegensatz zur token- oder anteilsbasierten Mitgliedschaft übertragen reputationsbasierte DAOs keine Vermögenswerte an Mitwirkende. Reputation kann weder gekauft, übertragen noch delegiert werden. DAO-Mitglieder können Reputation nur durch Teilnahme erwerben. On-Chain-Abstimmungen sind frei zugänglich. Jedes potenzielle Mitglied kann einen Antrag auf Beitritt zur DAO und Vergütung seiner Mitwirkung in Form von Reputation und Token stellen.
+
+_Typischerweise für die dezentrale Entwicklung und Steuerung von Protokollen und dapps verwendet, aber auch gut geeignet für eine Vielzahl von Organisationen wie Wohltätigkeitsorganisationen, Arbeiterkollektive, Investmentclubs usw._
+
+#### Bekanntes Beispiel {#reputation-example}
+
+[DXdao](https://DXdao.eth.link) – DXdao ist ein globales und souveränes Kollektiv, das seit 2019 dezentralisierte Protokolle und Anwendungen entwickelt und administriert. Zur Koordinierung und Verwaltung der Geldmittel wird auf eine reputationsbasierte Administration gesetzt und ein holografischer Konsens verwendet. Somit ist es nicht möglich, sich die Entscheidungsmacht über die Organisation zu erkaufen.
+
 ## Wie funktionieren DAOs? {#how-daos-work}
 
-Das Rückgrat einer DAO ist ihr Smart Contract. Über den Smart Contract werden die Regeln der Organisation festgelegt und die Finanzmittel der Gruppe verwaltet. Sobald ein Smart Contract auf Ethereum aktiv ist, können Regeln ausschließlich per Abstimmung geändert werden. Vorgänge, die nicht durch die Regeln und Logik des Codes abgedeckt sind, schlagen fehl. Da auch die Finanzverwaltung durch den Smart Contract definiert ist, kann auch niemand das Geld ohne die Zustimmung der Gruppe ausgeben. Daher benötigen DAOs keine zentrale Instanz. Stattdessen trifft die Gruppe gemeinsam Entscheidungen und Zahlungen werden automatisch genehmigt, wenn eine Abstimmung positiv ausfällt.
+Das Rückgrat einer DAO ist ihr Smart Contract. Über den Smart Contract werden die Regeln der Organisation festgelegt und die Finanzmittel der Gruppe verwaltet. Sobald ein Smart Contract auf Ethereum aktiv ist, können die Regeln ausschließlich per Abstimmung geändert werden. Vorgänge, die nicht durch die Regeln und Logik des Codes abgedeckt sind, schlagen fehl. Da auch die Finanzverwaltung durch den Smart Contract definiert ist, kann niemand das Geld ohne die Zustimmung der Gruppe ausgeben. Daher benötigen DAOs keine zentrale Instanz. Stattdessen trifft die Gruppe gemeinsam Entscheidungen, wobei Zahlungen bei positiver Abstimmung automatisch genehmigt werden.
 
-Das ist möglich, da Smart Contracts manipulationssicher sind, sobald sie auf Ethereum veröffentlicht wurden. Es ist nicht möglich, unbemerkt einfach Änderungen am Code (also den Regeln der DAOs) vorzunehmen, da alle Vorgänge öffentlich sind.
+Möglich wird dies durch die Manipulationssicherheit veröffentlichter Smart Contracts. Da alle Vorgänge öffentlich sind, sind unbemerkte Änderungen am Code (also den Regeln der DAO) unmöglich.
 
 <DocLink to="/smart-contracts/">
   Mehr zu Smart Contracts
@@ -81,7 +90,7 @@ Das ist möglich, da Smart Contracts manipulationssicher sind, sobald sie auf Et
 
 ## Ethereum und DAOs {#ethereum-and-daos}
 
-Aus verschiedenen Gründen ist Ethereum die perfekte Grundlage für DAOs:
+Ethereum ist aus einer Reihe von Gründen die perfekte Plattform für DAOs:
 
 - Der Ethereum-eigene Konsens ist so weit verbreitet und etabliert, dass Unternehmen dem Netzwerk vertrauen können.
 - Der Code eines Smart Contracts kann nach seiner Veröffentlichung nicht mehr geändert werden, auch nicht von seinen Eigentümern. Damit kann die DAO nach den Regeln arbeiten, mit denen sie programmiert wurde.
@@ -90,17 +99,17 @@ Aus verschiedenen Gründen ist Ethereum die perfekte Grundlage für DAOs:
 
 ## DAO – Beitritt und Gründung {#join-start-a-dao}
 
-### Einer DAO beitreten {#join-a-dao}
+### Beitritt zu einer DAO {#join-a-dao}
 
 - [DAOs der Ethereum-Community](/community/get-involved/#decentralized-autonomous-organizations-daos)
 - [DAO-Liste von DAOHaus](https://app.daohaus.club/explore)
 
-### Eine DAO gründen {#start-a-dao}
+### Gründung einer DAO {#start-a-dao}
 
 - [Eine DAO mit DAOHaus gründen](https://app.daohaus.club/summon)
 - [Eine von Aragon betriebene DAO gründen](https://aragon.org/product)
 - [Eine Kolonie gründen](https://colony.io/)
-- [Eine DAO mit DAOstack gründen](https://daostack.io/)
+- [Erstellen einer DAO mit dem holografischen Konsens von DAOstack](https://alchemy.daostack.io/daos/create)
 
 ## Weiterführende Informationen {#further-reading}
 
@@ -111,6 +120,7 @@ Aus verschiedenen Gründen ist Ethereum die perfekte Grundlage für DAOs:
 - [Was ist eine DAO und wofür ist sie da?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [Wie man eine DAO-basierte digitale Community gründet](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [Was ist eine DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
+- [Was ist holografischer Konsens?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) – [DAOstack](https://daostack.io/)
 
 ### Videos {#videos}
 

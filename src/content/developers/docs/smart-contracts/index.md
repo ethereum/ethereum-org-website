@@ -2,7 +2,6 @@
 title: Introduction to smart contracts
 description: An overview of smart contracts, focussing on their unique characteristics and limitations.
 lang: en
-sidebar: true
 ---
 
 ## What is a smart contract? {#what-is-a-smart-contract}

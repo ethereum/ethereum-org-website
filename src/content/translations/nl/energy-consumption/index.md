@@ -2,7 +2,6 @@
 title: Ethereum-energieverbruik
 description: De basisinformatie die u nodig heeft om het energieverbruik van Ethereum te begrijpen.
 lang: nl
-sidebar: true
 ---
 
 # Ethereum-energieverbruik {#introduction}

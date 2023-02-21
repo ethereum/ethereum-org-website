@@ -1,7 +1,6 @@
 ---
 title: Assistance Ethereum
 description: Obtenez de l'aide sur l'écosystème Ethereum.
-sidebar: true
 lang: fr
 ---
 
@@ -21,7 +20,7 @@ Comprendre la nature décentralisée d'Ethereum est essentiel, car quiconque pr�
   Apprendre les fondamentaux d'Ethereum
 </DocLink>
 
-Malgré l'absence d'assistance officielle, de nombreux groupes, communautés et projets de l'écosystème Ethereum seront heureux de vous aider.
+Malgré le manque d'assistance officielle, de nombreux groupes, communautés et projets à travers l'écosystème Ethereum sont heureux de vous aider. Vous pouvez trouver beaucoup d'informations et de ressources utiles sur cette page. Vous avez d'autres questions ? Rejoignez le [Discord ethereum.org](/discord/) et nous essaierons de vous aider.
 
 ## Assistance concernant votre portefeuille {#wallet-support}
 
@@ -107,4 +106,8 @@ Les transactions sur Ethereum peuvent parfois se bloquer si vous avez soumis des
 
 #### Comment miner de l'Ethereum ? {#mining-ethereum}
 
-Nous ne vous recommandons pas d'investir dans de l'équipement de minage si vous n'êtes pas déjà en train de miner de l'Ethereum. Pendant le deuxième trimestre de 2022, [la fusion](/upgrades/merge/) aura lieu, ce qui aura pour conséquence de faire passer Ethereum de la preuve de travail à la preuve d'enjeu. Ce changement signifie que miner de l'Ethereum ne sera plus possible.
+Le minage d'Ethereum n'est plus possible. Le minage a disparu lors du passage d'Ethereum de la preuve de travail à la preuve d'enjeu. Désormais, en place des mineurs, Ethereum dispose de validateurs. Les validateurs misent de l'ETH et reçoivent des récompenses pour la sécurisation du réseau.
+
+#### Comment devenir un staker/validateur ? {#become-validator}
+
+Pour devenir un validateur, vous devez miser 32 ETH dans le contrat de dépôt Ethereum et mettre en place un nœud de validateur. Davantage d'informations sont disponibles sur nos [pages de staking](/staking) et sur [la plateforme de lancement de staking](https://launchpad.ethereum.org/).

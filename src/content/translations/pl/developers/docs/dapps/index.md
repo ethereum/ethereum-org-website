@@ -2,7 +2,6 @@
 title: Wprowadzenie do zdecentralizowanych aplikacji
 description:
 lang: pl
-sidebar: true
 ---
 
 Zdecentralizowana aplikacja (dapp) to aplikacja zbudowana na zdecentralizowanej sieci, która łączy [inteligentny kontrakt](/developers/docs/smart-contracts/) i interfejs użytkownika frontend. Pamiętaj, że inteligentne kontrakty Ethereum są dostępne i przejrzyste – jak otwarte API – aby aplikacja dapp mogła nawet zawierać inteligentny kontrakt, który ktoś inny napisał.

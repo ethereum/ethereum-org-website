@@ -2,7 +2,6 @@
 title: Nœuds et clients
 description: Présentation des nœuds Ethereum et des logiciels clients, de la façon de configurer un nœud et des raisons de le faire.
 lang: fr
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -174,7 +173,7 @@ Les modes de synchronisation offrent des approches différentes de ce processus,
 
 Aperçu général des approches de synchronisation utilisées dans les clients prêts pour le réseau principal :
 
-##### Synchronisation totale {#full-sync}
+##### Synchronisation totale
 
 La synchronisation complète permet de télécharger tous les blocs (y compris les en-têtes, les transactions et les reçus) et génère l'état de la blockchain de façon incrémentielle en exécutant chaque bloc depuis le début.
 
@@ -250,11 +249,11 @@ Il existe de nombreux clients de consensus (précédemment connus sous le nom de
 
 | Client                                                      | Langage    | Systèmes d'exploitation | Réseaux                               |
 | ----------------------------------------------------------- | ---------- | ----------------------- | ------------------------------------- |
-| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS   | Chaîne phare, Prater                  |
-| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS   | Beacon Chain, Prater                  |
-| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS   | Chaîne phare, Prater, Pyrmont         |
-| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS   | Chaîne phare, Prater                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Aller      | Linux, Windows, macOS   | Chaîne phare, Gnosis, Prater, Pyrmont |
+| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS   | Chaîne phare, Goerli                  |
+| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS   | Beacon Chain, Goerli                  |
+| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS   | Chaîne phare, Goerli, Pyrmont         |
+| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS   | Chaîne phare, Goerli                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Aller      | Linux, Windows, macOS   | Chaîne phare, Gnosis, Goerli, Pyrmont |
 
 ## Matériel {#hardware}
 

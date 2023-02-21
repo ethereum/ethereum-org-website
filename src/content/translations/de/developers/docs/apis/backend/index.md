@@ -2,7 +2,6 @@
 title: Backend API-Bibliotheken
 description: Eine Einführung in die Ethereum-Client-APIs, über die Sie mit der Blockchain Ihrer Anwendung interagieren können.
 lang: de
-sidebar: true
 ---
 
 Damit eine Softwareanwendung mit der Ethereum-Blockchain interagieren kann (z. B. Lesen von Blockchain-Daten und/oder Senden von Transaktionen an das Netzwerk), muss es sich mit einem Ethereum-Node verbinden.

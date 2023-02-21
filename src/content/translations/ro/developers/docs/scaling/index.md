@@ -2,7 +2,6 @@
 title: Scalarea
 description: Introducere despre diferitele opțiuni de scalare care sunt dezvoltate actualmente de comunitatea Ethereum.
 lang: ro
-sidebar: true
 sidebarDepth: 3
 ---
 

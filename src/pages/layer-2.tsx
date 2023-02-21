@@ -4,6 +4,7 @@ import { graphql, PageProps } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
+import { Badge } from "@chakra-ui/react"
 
 // Data
 import layer2Data from "../data/layer-2/layer-2.json"
@@ -16,13 +17,13 @@ import FeedbackCard from "../components/FeedbackCard"
 import Icon from "../components/Icon"
 import InfoBanner from "../components/InfoBanner"
 import Layer2Onboard from "../components/Layer2/Layer2Onboard"
+import Layer2ProductCard from "../components/Layer2ProductCard"
 import Link from "../components/Link"
 import OrderedList from "../components/OrderedList"
 import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
-import Pill from "../components/Pill"
-import Layer2ProductCard from "../components/Layer2ProductCard"
 import ProductList from "../components/ProductList"
+import QuizWidget from "../components/Quiz/QuizWidget"
 import Tooltip from "../components/Tooltip"
 import Translation from "../components/Translation"
 import { CardGrid, Content, Page } from "../components/SharedStyledComponents"
@@ -186,11 +187,15 @@ const StatDivider = styled.div`
     margin: 2rem 0;
   }
 `
-
-interface L2DataResponse {
+interface L2DataResponseItem {
   daily: {
     data: Array<[string, number, number]>
   }
+}
+interface L2DataResponse {
+  layers2s: L2DataResponseItem
+  combined: L2DataResponseItem
+  bridges: L2DataResponseItem
 }
 
 interface FeeDataResponse {
@@ -214,6 +219,8 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
           `${GATSBY_FUNCTIONS_PATH}/l2beat`
         )
 
+        const dailyData = l2BeatData.layers2s.daily.data
+
         // formatted TVL from L2beat API formatted
         const TVL = new Intl.NumberFormat(localeForStatsBoxNumbers, {
           style: "currency",
@@ -221,13 +228,14 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
           notation: "compact",
           minimumSignificantDigits: 2,
           maximumSignificantDigits: 3,
-        }).format(l2BeatData.daily.data[l2BeatData.daily.data.length - 1][1])
+        }).format(dailyData[dailyData.length - 1][1])
+
         setTVL(`${TVL}`)
         // Calculate percent change ((new value - old value) / old value) *100)
         const percentage =
-          ((l2BeatData.daily.data[l2BeatData.daily.data.length - 1][1] -
-            l2BeatData.daily.data[l2BeatData.daily.data.length - 31][1]) /
-            l2BeatData.daily.data[l2BeatData.daily.data.length - 31][1]) *
+          ((dailyData[dailyData.length - 1][1] -
+            dailyData[dailyData.length - 31][1]) /
+            dailyData[dailyData.length - 31][1]) *
           100
         setL2PercentChange(
           percentage > 0
@@ -765,7 +773,9 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                   tokenLists={l2.tokenLists}
                 >
                   {l2.purpose.map((purpose, index) => (
-                    <Pill key={index}>{purpose}</Pill>
+                    <Badge key={index} me={2}>
+                      {purpose}
+                    </Badge>
                   ))}
                 </Layer2ProductCard>
               )
@@ -955,6 +965,9 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <i>- Barnabé Monnot</i>
           </li>
         </ul>
+      </PaddedContent>
+      <PaddedContent>
+        <QuizWidget quizKey="layer-2" />
       </PaddedContent>
       <PaddedContent>
         <FeedbackCard />

@@ -3,7 +3,6 @@ title: İşaret Zinciri
 description: Hisse ispatını Ethereum'a tanıtan yükseltme olan İşaret Zinciri hakkında bilgi edinin.
 lang: tr
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: İşaret Zinciri kullanmakta olduğumuz Ethereum ile ilgili hiçbir şeyi değiştirmez.
 summaryPoint2: Mutabakat katmanı görevi görerek ağı koordine eder.

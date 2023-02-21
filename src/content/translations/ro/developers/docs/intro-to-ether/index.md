@@ -2,7 +2,6 @@
 title: Introducere despre ether
 description: Introducere din partea dezvoltatorului despre criptomoneda ether.
 lang: ro
-sidebar: true
 ---
 
 ## Condiții prealabile {#prerequisites}

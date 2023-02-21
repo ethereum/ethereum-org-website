@@ -4,7 +4,6 @@ description: Огляд DeFi на Ethereum
 lang: uk
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../assets/use-cases/defi.png
 alt: Логотип Eth із блоків Lego.
 sidebarDepth: 2
@@ -333,7 +332,6 @@ DeFi — це ініціатива з відкритим вихідним код
 
 ### Інформація про DeFi {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 

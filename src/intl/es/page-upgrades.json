@@ -1,5 +1,13 @@
 {
+  "page-upgrades-merge-infographic-el": "Estado de Ethereum: Transacciones, aplicaciones, contratos, balances",
+  "page-upgrades-merge-infographic-alt-text": "Infografía que ilustra cómo la cadena de baliza se fusiona con la capa de ejecución de Ethereum durante la transición de prueba de trabajo a prueba de participación.",
   "page-upgrades-beacon-date": "¡Enviado!",
-  "page-upgrades-merge-date": "Septiembre 2022",
-  "page-upgrades-shards-date": "aproximadamente en 2023"
+  "page-upgrades-merge-date": "Septiembre de 2022\n",
+  "page-upgrades-shards-date": "aproximadamente en 2023",
+  "page-upgrades-merge-banner-intro": "La Fusión se acerca y trae cambios en Ethereum.",
+  "page-upgrades-merge-banner-content-outdated": "Algunos contenidos de esta página están obsoletos en lo que respecta a estos cambios. Próximamente se hará una actualización.",
+  "page-upgrades-merge-banner-developers-landing": "Algunos documentos tienen indicadores que están obsoletos. Próximamente se hará una actualización.",
+  "page-upgrades-post-merge-banner-tutorial-ood": "Este tutorial estará obsoleto después de la fusión y puede que no funcione. Por favor, cree una PR si desea contribuir.",
+  "page-upgrades-post-merge-banner-tutorial-light-node-ood": "Este tutorial estará obsoleto después de la fusión. Los nodos ligeros no funcionan actualmente en la prueba de participación, pero se espera que funcionen pronto.",
+  "page-upgrades-post-merge-banner-governance-ood": "Parte del contenido de esta página estará obsoleto después de la fusión. Por favor cree una PR si quiere contribuir."
 }

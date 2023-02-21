@@ -8,7 +8,6 @@ tags:
   - "nodi"
 skill: beginner
 lang: it
-sidebar: true
 published: 2022-03-04
 ---
 

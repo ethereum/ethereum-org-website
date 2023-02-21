@@ -2,7 +2,6 @@
 title: Perguntas frequentes sobre o Programa de tradução
 lang: pt-br
 description: Perguntas frequentes sobre o Programa de tradução da ethereum.org
-sidebar: true
 ---
 
 # Traduzindo o guia ethereum.org {#translating-ethereum-guide}

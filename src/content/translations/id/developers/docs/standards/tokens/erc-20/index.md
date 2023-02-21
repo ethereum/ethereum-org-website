@@ -2,7 +2,6 @@
 title: Standar Token ERC-20
 description:
 lang: id
-sidebar: true
 ---
 
 ## Pendahuluan {#introduction}
@@ -76,7 +75,7 @@ Mari kita lihat bagaimana sebuah Standar begitu penting untuk mempermudah pemeri
 Pertama-tama, pastikan Anda telah menginstal pustaka Python [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation):
 
 ```
-$ pip install web3
+pip install web3
 ```
 
 ```python

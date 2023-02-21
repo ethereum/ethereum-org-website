@@ -8,7 +8,6 @@ tags:
   - "alchemy"
 skill: beginner
 lang: id
-sidebar: true
 published: 2020-11-04
 source: Dokumen Alchemy
 sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs

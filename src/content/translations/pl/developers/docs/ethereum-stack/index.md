@@ -2,7 +2,6 @@
 title: Wprowadzenie do stosu Ethereum
 description: Omówienie różnych warstw stosu Ethereum i sposobu, w jaki się ze sobą łączą.
 lang: pl
-sidebar: true
 ---
 
 Podobnie jak każdy stos oprogramowania, kompletny stos Ethereum będzie się różnił w zależności od projektu w zależności od Twoich celów biznesowych.

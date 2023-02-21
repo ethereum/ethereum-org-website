@@ -1,7 +1,7 @@
 ---
 title: Ethereum Kuruluşu
 description: Ethereum ve ilgili teknolojileri desteklemeye adanmış, kâr amacı gütmeyen bir organizasyon olan Ethereum Vakfı (EF) hakkında bilgi edinin.
-sidebar: false
+hideEditButton: true
 lang: tr
 ---
 

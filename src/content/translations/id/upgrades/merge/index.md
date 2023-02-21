@@ -3,7 +3,6 @@ title: Penggabungan
 description: Pelajari tentang Penggabungan - ketika Jaringan Utama Ethereum berkolaborasi dengan sistem bukti taruhan Rantai Suar yang terkoordinir.
 lang: id
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: Pada akhirnya, Jaringan Utama Ethereum saat ini akan "bergabung" dengan sistem bukti taruhan rantai suar.
 summaryPoint2: Ini akan menandai akhir bukti kerja untuk Ethereum, dan transisi penuh ke bukti taruhan.

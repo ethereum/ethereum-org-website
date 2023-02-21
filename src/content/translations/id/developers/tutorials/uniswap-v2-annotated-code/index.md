@@ -2,7 +2,6 @@
 title: "Panduan Lengkap Kontrak Uniswap-v2"
 description: Bagaimana cara kerja kontrak Uniswap-v2? Mengapa ditulis dengan cara tersebut?
 author: Ori Pomerantz
-sidebar: true
 tags:
   - "solidity"
   - "uniswap"
@@ -451,7 +450,7 @@ Gunakan fungsi `UniswapV2ERC20._mint` untuk benar-benar membuat token-token liku
     }
 ```
 
-Jika tidak ada biaya, tetapkan `kLast` menjadi nol (jika belum menjadi nol). Ketika kontrak ini ditulis terdapat [fitur pengembalian dana gas](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3298.md) yang mendorong kontrak untuk mengurangi ukuran keseluruhan status Ethereum dengan mengosongkan penyimpanan yang tidak diperlukan. Kode ini mendapatkan pengembalian dana tersebut jika memungkinkan.
+Jika tidak ada biaya, tetapkan `kLast` menjadi nol (jika belum menjadi nol). Ketika kontrak ini ditulis terdapat [fitur pengembalian dana gas](https://eips.ethereum.org/EIPS/eip-3298) yang mendorong kontrak untuk mengurangi ukuran keseluruhan status Ethereum dengan mengosongkan penyimpanan yang tidak diperlukan. Kode ini mendapatkan pengembalian dana tersebut jika memungkinkan.
 
 #### Fungsi yang Dapat Diakses secara Eksternal {#pair-external}
 
@@ -655,7 +654,7 @@ Ini adalah pemeriksaan kewarasan untuk memastikan kita tidak mengalami kerugian 
 
 Perbarui `reserve0` dan `reserve1`, dan jika diperlukan pengumpul harga dan stempel waktu dan pancarkan aksi.
 
-##### Sync or Skim {#sync-or-skim}
+##### Sync or Skim
 
 Saldo asli yang tidak tersinkronisasi dengan cadangan yang dianggap bursa pasangan sebagai miliknya mungkin terjadi. Tidak ada cara untuk menarik token tanpa persetujuan kontrak, tetapi setoran adalah masalah yang berbeda. Suatu akun dapat mentransfer token ke bursa tanpa memanggil `cetak` atau `tukar`.
 

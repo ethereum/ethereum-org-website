@@ -2,7 +2,6 @@
 title: 数据结构与编码
 description: 以太坊基础数据结构概览。
 lang: zh
-sidebar: true
 sidebarDepth: 2
 ---
 

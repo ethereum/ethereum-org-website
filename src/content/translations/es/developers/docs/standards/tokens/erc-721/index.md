@@ -2,7 +2,6 @@
 title: Estándar de token no fungible ERC-721
 description:
 lang: es
-sidebar: true
 ---
 
 ## Introducción {#introduction}
@@ -64,7 +63,7 @@ Vamos a ver la importancia de un estándar para que inspeccionemos fácilmente c
 Primero asegúrate de haber instalado [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python library:
 
 ```
-$ pip install web3
+pip install web3
 ```
 
 ```python

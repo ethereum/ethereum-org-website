@@ -2,7 +2,6 @@
 title: Durum Kanalları
 description: Şu anda Ethereum topluluğu tarafından kullanılan bir ölçeklendirme çözümü olarak durum kanallarına ve ödeme kanallarına giriş.
 lang: tr
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---

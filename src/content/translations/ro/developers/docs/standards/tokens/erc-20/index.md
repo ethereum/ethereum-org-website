@@ -2,7 +2,6 @@
 title: Standardul de token ERC-20
 description:
 lang: ro
-sidebar: true
 ---
 
 ## Introducere {#introduction}
@@ -76,7 +75,7 @@ Să vedem cât de important este un standard pentru a ne simplifica lucrurile c�
 În primul rând aveţi grijă să instalaţi librăria Python [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation):
 
 ```
-$ pip install web3
+pip install web3
 ```
 
 ```python

@@ -2,7 +2,6 @@
 title: Mengompilasi kontrak pintar
 description: Penjelasan mengapa Anda perlu mengompilasi kontrak pintar dan apa yang sebenarnya dilakukan pengompilasian.
 lang: id
-sidebar: true
 incomplete: true
 ---
 

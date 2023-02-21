@@ -2,7 +2,6 @@
 title: "Uniswap-v2 Sözleşmesine Genel Bakış"
 description: Uniswap-v2 sözleşmesi nasıl çalışır? Neden bu şekilde yazılmıştır?
 author: Ori Pomerantz
-sidebar: true
 tags:
   - "katılık"
   - "uniswap"
@@ -451,7 +450,7 @@ Ek likidite token'larını gerçekten oluşturmak ve bunları `feeTo` öğesine 
     }
 ```
 
-Herhangi bir ücret yoksa `kLast` öğesini sıfıra ayarlayın (zaten değilse). Bu sözleşme yazıldığında, ihtiyaç duymadıkları depolama alanını sıfırlayarak sözleşmeleri Ethereum durumunun genel boyutunu küçültmeye teşvik eden bir [gaz iadesi özelliği](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3298.md) bulunuyordu. Bu kod, mümkün olduğunda o iadeyi alır.
+Herhangi bir ücret yoksa `kLast` öğesini sıfıra ayarlayın (zaten değilse). Bu sözleşme yazıldığında, ihtiyaç duymadıkları depolama alanını sıfırlayarak sözleşmeleri Ethereum durumunun genel boyutunu küçültmeye teşvik eden bir [gaz iadesi özelliği](https://eips.ethereum.org/EIPS/eip-3298) bulunuyordu. Bu kod, mümkün olduğunda o iadeyi alır.
 
 #### Harici Erişilebilir Fonksiyonlar {#pair-external}
 
@@ -655,7 +654,7 @@ Bu, takastan zarara uğramayacağımızdan emin olmak için yapılan bir doğrul
 
 `reserve0`, `reserve1`'i ve gerekliyse fiyat biriktiricilerini ve tarih bilgisini güncelleyin ve bir olay yayın.
 
-##### Senkronize Etme veya Fazlasını Alma {#sync-or-skim}
+##### Senkronize Etme veya Fazlasını Alma
 
 Reel bakiyelerin, eş takasının sahip olduğunu düşündüğü rezervlerle uyumsuz olması mümkündür. Sözleşmenin izni olmadan token'ları çekmenin bir yolu yoktur, ancak yatırımlar farklı bir konudur. Bir hesap borsaya `mint` veya `swap` çağırmadan token aktarabilir.
 

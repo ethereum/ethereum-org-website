@@ -2,7 +2,6 @@
 title: "Optimism standard bridge contract walkthrough"
 description: How does the standard bridge for Optimism work? Why does it work this way?
 author: Ori Pomerantz
-sidebar: true
 tags: ["solidity", "optimism", "bridge", "layer 2"]
 skill: intermediate
 published: 2022-03-30

@@ -2,7 +2,6 @@
 title: Ethereum pentru dezvoltatorii Java
 description: Învăţaţi să programaţi pe Ethereum folosind proiecte și instrumente Java
 lang: ro
-sidebar: true
 incomplete: true
 ---
 

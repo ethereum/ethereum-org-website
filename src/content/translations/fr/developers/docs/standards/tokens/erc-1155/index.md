@@ -2,7 +2,6 @@
 title: Norme de multijeton ERC-1155
 description:
 lang: fr
-sidebar: true
 ---
 
 ## Introduction {#introduction}

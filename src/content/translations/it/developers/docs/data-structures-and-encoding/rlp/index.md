@@ -2,7 +2,6 @@
 title: Serializzazione a prefisso di lunghezza ricorsiva (RLP)
 description: Una definizione della codifica rlp nel livello d'esecuzione di Ethereum.
 lang: it
-sidebar: true
 sidebarDepth: 2
 ---
 

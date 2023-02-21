@@ -4,12 +4,11 @@ description: Un aperçu de la façon de commencer à miser votre ETH de manière
 lang: fr
 template: staking
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../../assets/staking/leslie-solo.png
 alt: Leslie le rhinocéros sur sa puce d'ordinateur.
 sidebarDepth: 2
 summaryPoints:
-  - Recevez un maximum de récompenses directement à partir du protocole (notamment les frais non brûlés après la Fusion) pour maintenir votre validateur en ligne et en bon fonctionnement
+  - Recevoir directement du protocole un maximum de récompenses pour le maintien de votre validateur en bon état de fonctionnement et en ligne
   - Faites fonctionner votre propre matériel et contribuez ainsi à la sécurité et la décentralisation du réseau Ethereum
   - Supprimez le tiers de confiance et gardez en permanence le contrôle sur vos fonds
 ---
@@ -58,7 +57,7 @@ Bien que nous souhaitions que la mise en jeu individuelle soit accessible et san
     <p style={{marginTop: "1rem"}}><a href="/security">Sécurité d'Ethereum et prévention des arnaques</a></p>
   </ExpandableCard>
   <ExpandableCard title="Pas de retrait (pour l'instant)" eventCategory="SoloStaking" eventName="clicked no withdrawing">
-    Il n'est pour l'instant pas possible de retirer les ETH misés ou les récompenses du solde d'un validateur. Le support des retraits est prévu pour la mise à niveau de Shanghai qui suivra La Fusion. Vous devriez vous attendre à ce que vos ETH soient immobilisés pendant au moins un à deux ans. Après la mise à niveau de Shanghai, vous pourrez retirer librement une partie ou la totalité de vos ETH mis en jeu.
+    Il n'est pour l'instant pas possible de retirer les ETH misés ou les récompenses du solde d'un validateur. La prise en charge des retraits est prévue pour la prochaine mise à niveau Shanghai. Vous devriez vous attendre à ce que vos ETH soient immobilisés pendant au moins un à deux ans. Après la mise à niveau de Shanghai, vous pourrez retirer librement une partie ou la totalité de vos ETH mis en jeu.
   </ExpandableCard>
   <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
     Le matériel tombe parfois en panne, tout comme les connexions réseau, et les logiciels client ont parfois besoin d'être mis à jour. La maintenance des nœuds est inévitable et nécessitera occasionnellement votre attention. Il est préférable de se tenir au courant de toutes les mises à niveau du réseau prévues, ou d'autres mises à jour critiques des logiciels client.
@@ -88,10 +87,6 @@ Après Shanghai, les utilisateurs pourront retirer leurs récompenses ainsi que 
 La plateforme de lancement de la mise en jeu est une application open source qui vous aidera à devenir un validateur. Elle vous guidera dans le choix de vos clients, génèrera vos clés et déposera vos ETH dans le contrat de dépôt des mises en jeu. Une liste de vérification est fournie pour vous assurer que vous avez fait le tour de la question pour installer votre validateur en toute sécurité.
 
 <StakingLaunchpadWidget />
-
-<InfoBanner emoji=":panda:" isWarning>
-<strong>Note pour les validateurs actuels :</strong> La Fusion approche, ce qui apporte quelques changements depuis le lancement de la mise en jeu. Assurez-vous que vous êtes bien préparé avec la <a href="https://launchpad. ethereum. org/en/merge-readiness">liste de vérification de la Fusion</a> sur la plateforme de lancement de la mise en jeu.
-</InfoBanner>
 
 ## Éléments à prendre en compte avec les outils de configuration de nœud et de client {#node-tool-considerations}
 
@@ -130,7 +125,9 @@ Vous souhaitez suggérer un outil de mise en jeu que nous avons manqué ? Consul
 Voici quelques-unes des questions les plus fréquentes relatives à la mise en jeu qui valent la peine d'être connues.
 
 <ExpandableCard title="Qu'est-ce qu'un validateur ?">
-Un <em>validateur</em> est une entité virtuelle qui vit sur la Chaîne phare et participe au consensus du protocole Ethereum. Les validateurs sont représentés par un solde, une clé publique et d'autres propriétés. Un <em>client de validateur</em> est le logiciel qui agit au nom du validateur en détenant et en utilisant sa clé privée. Un même client peut contenir plusieurs paires de clés, contrôlant de nombreux validateurs.
+
+Un validateur est une entité virtuelle existant sur Ethereum et participant au consensus du protocole Ethereum. Les validateurs sont représentés par un solde, une clé publique et d'autres propriétés. Un client validateur est le logiciel qui agit au nom du validateur en détenant et en utilisant sa clé privée. Un même client peut contenir plusieurs paires de clés, contrôlant de nombreux validateurs.
+
 </ExpandableCard>
 
 <ExpandableCard title="Puis-je déposer plus de 32 ETH ?">
@@ -178,18 +175,6 @@ Plus il y a de clients validateurs fonctionnant sur une seule solution de stocka
 Les pénalités hors ligne sont proportionnelles au nombre de personnes se trouvant hors ligne au même moment. L'utilisation d'un VPS augmente considérablement le risque de voir les pénalités hors ligne devenir plus sévères, et accroît votre risque de fuite quadratique ou de délestage dans le cas où la panne serait suffisamment importante. Pour minimiser vos propres risques et ceux encourus par le réseau, les utilisateurs sont fortement encouragés à se procurer et à exploiter leur propre matériel.
 
 <a href="https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/">En savoir plus sur les récompenses et les pénalités</a>
-</ExpandableCard>
-
-<ExpandableCard title="Dois-je faire quelque chose avant la Fusion ?">
-Les validateurs exécutant actuellement un client de la couche de consensu (Beacon Chain) devront également exécuter un client de la couche d'exécution après la Fusion. La nouvelle API Moteur sera utilisée pour interagir entre les deux couches, et nécessitera un JWT secret. Si vous faites actuellement tourner la Beacon Chain (consensus) sans un client de la couche d'exécution, vous devrez synchroniser la couche d'exécution avant la Fusion pour rester synchronisé avec le réseau.
-
-La Fusion apportera également des frais de transaction non brûlés aux validateurs. Ces frais ne s'accumulent pas dans le solde associé aux clés de validation, mais peuvent être dirigés vers une adresse Ethereum ordinaire de votre choix. Pour recevoir vos tips (frais de priorité) sur les blocs proposés, vous devez mettre à jour les paramètres de votre client avec l'adresse vers laquelle vous souhaitez que ces frais soient envoyés.
-
-Des liens vers la documentation de chaque client et des informations supplémentaires peuvent être trouvés dans la liste de vérification de la préparation à la Fusion sur la plateforme de lancement.
-
-<ButtonLink to="https://launchpad.ethereum.org/merge-readiness/">
-Fusionner la liste de vérification de la disponibilité
-</ButtonLink>
 </ExpandableCard>
 
 ## Complément d'information {#further-reading}

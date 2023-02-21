@@ -2,7 +2,6 @@
 title: Livre blanc Ethereum
 description: Document d'introduction à Ethereum, publié en 2013 avant son lancement.
 lang: fr
-sidebar: true
 sidebarDepth: 2
 ---
 

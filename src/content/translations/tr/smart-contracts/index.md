@@ -2,12 +2,11 @@
 title: Akıllı sözleşmeler
 description: Akıllı sözleşmelere teknik olmayan bir giriş
 lang: tr
-sidebar: true
 ---
 
 # Akıllı sözleşmelere giriş {#introduction-to-smart-contracts}
 
-Akıllı sözleşmeler [Ethereum uygulamalarının](/dapps/) temel yapı taşıdır. Bunlar, geleneksel sözleşmeleri dijital benzerlerine çevirmemizi sağlayan blokzincir üzerinde depolanan bilgisayar programlarıdır. Akıllı sözleşmeler gayet mantıksaldır; "bu olduysa şu olmalı" yapısını takip ederler. Bu, programlandıkları gibi davranacakları ve değiştirilemeyecekleri anlamına gelir.
+Akıllı sözleşmeler [Ethereum uygulamalarının](/dapps/) temel yapı taşıdır. Bunlar, geleneksel sözleşmeleri dijital benzerlerine çevrilmesine olanak tanıyan blokzincir üzerinde depolanan bilgisayar programlarıdır. Akıllı sözleşmeler gayet mantıksaldır; "bu olduysa şu olmalı" yapısını takip ederler. Bu, programlandıkları gibi davranacakları ve değiştirilemeyecekleri anlamına gelir.
 
 "Akıllı sözleşme" terimini Nick Szabo ortaya atmıştır. 1994'te [konsepte bir giriş](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) ve 1996'da [akıllı sözleşmelerin neler yapabildiğiyle ilgili bir inceleme](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html) yazdı.
 
@@ -61,7 +60,7 @@ Akıllı sözleşmeler denetim ve takip için de kullanışlıdır. Ethereum ak�
 
 ### Gizlilik koruması {#privacy-protection}
 
-Akıllı sözleşmeler gizliliğimizi de koruyabilir. Ethereum takma adlı bir ağ olduğu için (işlemleriniz herkese açık olarak eşsiz kriptografik bir adrese bağlıdır, kimliğinize değil) gizliliğinizi gözlemleyicilerden koruyabilirsiniz.
+Akıllı sözleşmeler ayrıca gizliliğinizi de koruyabilir. Ethereum takma adlı bir ağ olduğu için (işlemleriniz herkese açık olarak eşsiz kriptografik bir adrese bağlıdır, kimliğinize değil) gizliliğinizi gözlemleyicilerden koruyabilirsiniz.
 
 ### Açık koşullar {#visible-terms}
 
@@ -75,7 +74,7 @@ Hesaplamalar gerçekleştirebilir, para birimleri oluşturabilir, veri tutabilir
 
 - [Sabit coinler](/stablecoins/)
 - [Eşsiz dijital varlıkların oluşturulması ve dağıtılması](/nft/)
-- [Otomatik, açık bir para birimi borsası](/get-eth/#dex/)
+- [Otomatik, açık bir para birimi borsası](/get-eth/#dex)
 - [Merkezi olmayan oyun](/dapps/?category=gaming)
 - [Otomatik olarak ödeme yapan bir sigorta poliçesi](https://etherisc.com/)
 - [İnsanların özel, uyumlu para birimleri oluşturmasını sağlayan bir standart](/developers/docs/standards/tokens/)

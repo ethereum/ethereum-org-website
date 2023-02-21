@@ -2,7 +2,6 @@
 title: Az Ethereum története
 description: Az Ethereum blokklánc története a nagyobb mérföld kövekkel, kiadásokkal és forkokkal.
 lang: hu
-sidebar: true
 sidebarDepth: 1
 isOutdated: true
 ---

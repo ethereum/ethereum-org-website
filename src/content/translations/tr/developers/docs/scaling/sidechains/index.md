@@ -2,7 +2,6 @@
 title: Yan zincirler
 description: Şu anda Ethereum topluluğu tarafından kullanılan bir ölçeklendirme çözümü olarak yan zincirlere giriş.
 lang: tr
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 ---

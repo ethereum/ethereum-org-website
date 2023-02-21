@@ -2,7 +2,6 @@
 title: API JSON-RPC
 description: Protokol pemanggilan prosedur jarak jauh (RPC) tanpa state dan berbobot ringan untuk klien Ethereum.
 lang: id
-sidebar: true
 ---
 
 Agar aplikasi perangkat lunak dapat berinteraksi dengan blockchain Ethereum (dengan membaca data blockchain dan/atau mengirim transaksi ke jaringan), perangkat lunak harus terhubung dengan node Ethereum.

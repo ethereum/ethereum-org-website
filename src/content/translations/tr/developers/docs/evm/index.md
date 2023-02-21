@@ -2,7 +2,6 @@
 title: Ethereum Sanal Makinası (EVM)
 description: Ethereum Sanal Makinesine (EVM) ve EVM'nin durum, işlem ve akıllı sözleşmelerle olan ilgisine dair bir giriş.
 lang: tr
-sidebar: true
 ---
 
 EVM'nin fiziksel varlığı, bir buluta veya bir okyanus dalgasına benzetilerek açıklanamaz ama EVM, bir Ethereum istemcisi çalıştıran binlerce bağlı bilgisayar tarafından sürdürülen tek bir varlık olarak _var olmaktadır_.

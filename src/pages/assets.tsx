@@ -8,6 +8,7 @@ import { graphql, PageProps } from "gatsby"
 
 // Assets
 import EthGlyphColoredSvg from "../assets/assets/eth-glyph-colored.svg"
+import MergePandaSvg from "../assets/home/merge-panda.svg"
 
 // Components
 import AssetDownload from "../components/AssetDownload"
@@ -129,6 +130,23 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             image={data.hero}
             artistName="Liam Cobb"
             artistUrl="https://liamcobb.com/"
+          />
+        </Row>
+        <Row>
+          <AssetDownload
+            title={translateMessageId("page-assets-hero-panda", intl)}
+            alt={translateMessageId("page-assets-hero-panda", intl)}
+            image={data.heroPanda}
+          />
+          <AssetDownload
+            title={translateMessageId("page-assets-merge-panda", intl)}
+            alt={translateMessageId("page-assets-merge-panda", intl)}
+            image={data.mergePanda}
+          />
+          <AssetDownload
+            title={translateMessageId("page-assets-merge-panda-svg", intl)}
+            alt={translateMessageId("page-assets-merge-panda-svg", intl)}
+            svg={MergePandaSvg}
           />
         </Row>
 
@@ -562,6 +580,12 @@ export const query = graphql`
       }
     }
     hero: file(relativePath: { eq: "home/hero.png" }) {
+      ...assetItem
+    }
+    heroPanda: file(relativePath: { eq: "home/hero-panda.png" }) {
+      ...assetItem
+    }
+    mergePanda: file(relativePath: { eq: "home/merge-panda.png" }) {
       ...assetItem
     }
     doge: file(relativePath: { eq: "doge-computer.png" }) {

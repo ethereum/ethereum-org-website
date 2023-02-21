@@ -2,7 +2,6 @@
 title: Çeviri Programı
 lang: tr
 description: ethereum.org'un Çeviri Programına nasıl katkıda bulunulur
-sidebar: true
 ---
 
 # Çeviri Programı {#translation-program}

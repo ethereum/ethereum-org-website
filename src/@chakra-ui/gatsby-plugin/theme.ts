@@ -11,7 +11,7 @@ import styles from "./styles"
 import foundations from "./foundations"
 
 // Component style overrides
-import * as components from "./components"
+import components from "./components"
 
 import semanticTokens from "./semanticTokens"
 
@@ -35,6 +35,8 @@ const theme: ThemeOverride = {
     heading:
       "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
     body: "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
+    monospace:
+      "SFMono-Regular, Consolas, 'Roboto Mono', 'Droid Sans Mono', 'Liberation Mono', Menlo, Courier, monospace",
   },
   styles,
   ...foundations,

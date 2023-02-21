@@ -3,7 +3,6 @@ title: A guide to smart contract security tools
 description: An overview of three different testing and program analysis techniques
 author: "Trailofbits"
 lang: en
-sidebar: true
 tags: ["solidity", "smart contracts", "security"]
 skill: intermediate
 published: 2020-09-07

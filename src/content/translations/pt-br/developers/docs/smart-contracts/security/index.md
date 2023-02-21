@@ -2,7 +2,6 @@
 title: Segurança de um Contrato Inteligente
 description: Considerações de segurança para desenvolvedores Ethereum
 lang: pt-br
-sidebar: true
 ---
 
 Os contratos inteligentes da Ethereum são extremamente flexíveis, capaz de armazenar grandes quantidades de tokens (muitas vezes superior a $1B) e executar uma lógica imutável baseada no código do contrato inteligente previamente implantado. Embora isto tenha criado um ecossistema criativo e vibrante de contratos inteligentes confiáveis e interconectados, é também o ecossistema perfeito para atrair atacantes que buscam lucrar, explorando vulnerabilidades em contratos inteligentes e comportamento inesperado na Ethereum. O código do contrato inteligente _geralmente_ não pode ser alterado para correção de falhas de segurança. Os bens que foram roubados a contratos inteligentes são irrecuperáveis e os bens roubados são extremamente difíceis de rastrear. The total of amount of value stolen or lost due to smart contract issues is easily over $1B. Alguns dos maiores devido a erros de código de contrato inteligentes incluem:

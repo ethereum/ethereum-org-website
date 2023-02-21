@@ -2,7 +2,6 @@
 title: Standar Token Multi ERC-1155
 description:
 lang: id
-sidebar: true
 ---
 
 ## Pendahuluan {#introduction}

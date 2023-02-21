@@ -10,7 +10,6 @@ tags:
   - "simulare"
 skill: intermediate
 lang: ro
-sidebar: true
 published: 2020-11-14
 ---
 

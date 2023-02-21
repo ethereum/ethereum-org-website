@@ -2,7 +2,6 @@
 title: Storia e diramazioni di Ethereum
 description: Storia della blockchain Ethereum che include le principali pietre miliari, versioni e diramazioni.
 lang: it
-sidebar: true
 sidebarDepth: 1
 ---
 
@@ -89,19 +88,19 @@ Altair è stato il primo importante aggiornamento di rete che ha avuto un tempo 
 
 #### Riepilogo {#london-summary}
 
-L'aggiornamento London ha introdotto l'[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), che ha riformato il mercato delle commissioni di transazione, oltre a modificare le modalità di gestione dei rimborsi di carburante e la pianificazione dell'[Ice Age](/glossary/#ice-age).
+L'aggiornamento di Londra ha introdotto l'[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), che ha riformato il mercato delle commissioni di transazione, oltre a modificare come sono gestiti i rimborsi di gas e la pianificazione dell'[Era Glaciale](/glossary/#ice-age).
 
-- [Sei uno sviluppatore di dApp? Assicurati di aggiornare le tue librerie e strumentazioni.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
+- [Sei uno sviluppatore di dapp? Assicurati di aggiornare le tue librerie e strumentazioni.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
 - [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Leggi la spiegazione del Cat Herder di Ethereum](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
 <ExpandableCard title="EIP di London" contentPreview="Official improvements included in this upgrade.">
 
-- [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) – _migliora il mercato delle commissioni di transazione_
-- [EIP-3198](https://eips.ethereum.org/EIPS/eip-3198) – _restituisce `BASEFEE` da un blocco_
-- [EIP-3529](https://eips.ethereum.org/EIPS/eip-3529) - _riduce i rimborsi di gas per le operazioni EVM_
-- [EIP-3541](https://eips.ethereum.org/EIPS/eip-3541) - _impedisce la distribuzione di contratti che iniziano per `0xEF`_
-- [EIP-3554](https://eips.ethereum.org/EIPS/eip-3554) – _ritardo dell'Ice Age fino a dicembre 2021_
+- [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559): _migliora il mercato delle commissioni di transazione_
+- [EIP-3198](https://eips.ethereum.org/EIPS/eip-3198): _restituisce la `BASEFEE` da un blocco_
+- [EIP-3529](https://eips.ethereum.org/EIPS/eip-3529): _riduce i rimborsi di gas per le operazioni dell'EVM_
+- [EIP-3541](https://eips.ethereum.org/EIPS/eip-3541): _impedisce la distribuzione dei contratti che iniziano per `0xEF`_
+- [EIP-3554](https://eips.ethereum.org/EIPS/eip-3554): _ritarda l'Era Glaciale fino a dicembre 2021_
 
 </ExpandableCard>
 
@@ -113,17 +112,17 @@ L'aggiornamento London ha introdotto l'[EIP-1559](https://eips.ethereum.org/EIPS
 
 #### Riepilogo {#berlin-summary}
 
-L'aggiornamento Berlin ha ottimizzato i costi del gas per certe azioni dell'EVM e ha aumentato il supporto per tipi di transazione multipli.
+L'aggiornamento di Berlino ha ottimizzato i costi del gas per certe azioni dell'EVM e ha aumentato il supporto per numerosi tipi di transazione.
 
 - [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [Leggi la spiegazione del Cat Herder di Ethereum](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
 <ExpandableCard title="EIP di Berlin" contentPreview="Official improvements included in this upgrade.">
 
-- [EIP-2565](https://eips.ethereum.org/EIPS/eip-2565) – _riduce i costi del gas di ModExp_
-- [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) – _consente un più facile supporto per più tipi di transazione_
-- [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929) – _aumento del costo del gas per i codici operativi d'accesso di stato_
-- [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) – _aggiunge elenchi d'accesso opzionali_
+- [EIP-2565](https://eips.ethereum.org/EIPS/eip-2565): _riduce il costo del gas di ModExp_
+- [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718): _consente un più facile supporto per numerosi tipi di transazione_
+- [EIP-2929](https://eips.ethereum.org/EIPS/eip-2929): _il costo del gas aumenta per gli opcode d'accesso di stato_
+- [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930): _aggiunge elenchi d'accesso facoltativi_
 
 </ExpandableCard>
 
@@ -192,7 +191,7 @@ La diramazione di Muir Glacier ha introdotto un ritardo nella [bomba di difficol
 
 La diramazione Instanbul:
 
-- Ha ottimizzato i costi del [carburante](/glossary/#gas) di certe azioni nell'[EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
+- Ha ottimizzato il costo del [gas](/glossary/#gas) di certe azioni nell'[EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Ha migliorato la resilienza agli attacchi denial-of-service.
 - Ha reso più performanti le soluzioni di [ridimensionamento di Livello 2](/developers/docs/scaling/#layer-2-scaling) basate su SNARK e STARK.
 - Ha reso possibile l'interazione tra Ethereum e Zcash.
@@ -202,12 +201,12 @@ La diramazione Instanbul:
 
 <ExpandableCard title="EIP di Istanbul" contentPreview="Official improvements included in this fork.">
 
-- [EIP-152](https://eips.ethereum.org/EIPS/eip-152) – _consente a Ethereum di funzionare con valuta che preserva la privacy come Zcash._
-- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _crittografia più economica per migliorare i costi di [gas](/glossary/#gas)._
-- [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _protegge Ethereum dagli attacchi di riproduzione aggiungendo 'CHAINID' [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine)._
-- [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _ottimizzazione dei prezzi del gas opcode in base ai consumi._
-- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _riduce il costo di CallData per consentire più dati nei blocchi, utile per il [ridimensionamento di Layer 2](/developers/docs/scaling/#layer-2-scaling)._
-- [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _altre modifiche del prezzo del gas dell'opcode._
+- [EIP-152](https://eips.ethereum.org/EIPS/eip-152): _consente a Ethereum di operare con valute che tutelano la privacy come Zcash._
+- [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108): _crittografia più economica per migliorare i costi del [gas](/glossary/#gas)._
+- [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344): _protegge Ethereum dagli attacchi di ripetizione, aggiungendo `CHAINID` [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine)._
+- [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884): _ottimizzare i prezzi del gas dell'opcode a seconda dei consumi._
+- [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028): _riduce il costo di CallData per consentire più dati nei blocchi; ideale per il [ridimensionamento del Livello 2](/developers/docs/scaling/#layer-2-scaling)._
+- [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200): _altre alterazioni del prezzo del gas dell'opcode._
 
 </ExpandableCard>
 
@@ -222,7 +221,7 @@ La diramazione Instanbul:
 La diramazione Constantinople:
 
 - Ha assicurato che la blockchain non si bloccasse prima dell'[implementazione della Proof of Stake](#beacon-chain-genesis).
-- Ha ottimizzato i costi del [carburante](/glossary/#gas) di certe azioni nell'[EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
+- Ha ottimizzato i costi del [gas](/glossary/#gas) di certe azioni nell'[EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Ha aggiunto la capacità di interagire con gli indirizzi non ancora creati.
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
@@ -289,10 +288,10 @@ La diramazione Spurious Dragon è stata la seconda risposta agli attacchi denial
 
 <ExpandableCard title="EIP di Spurious Dragon" contentPreview="Official improvements included in this fork.">
 
-- [EIP-155](https://eips.ethereum.org/EIPS/eip-155) – _evita che le transazioni da una catena di Ethereum vengano ritrasmesse su una catena alternativa, per esempio la replica di una transazione della testnet sulla catena principale di Ethereum._
-- [EIP-160](https://eips.ethereum.org/EIPS/eip-160) – _regola i prezzi del codice operativo `EXP`, rendendo più difficile rallentare la rete tramite operazioni di contratto onerose a livello di calcolo._
-- [EIP-161](https://eips.ethereum.org/EIPS/eip-161) – _consente la rimozione dei conti vuoti aggiunti tramite attacchi DOS._
-- [EIP-170](https://eips.ethereum.org/EIPS/eip-170) – _modifica la dimensione massima del codice che un contratto sulla blockchain può avere: fino a 24576 byte._
+- [EIP-155](https://eips.ethereum.org/EIPS/eip-155): _impedisce la ri-trasmissione delle transazioni da una catena di Ethereum a una catena alternativa, ad esempio, che una transazione della rete di prova sia riprodotta sulla catena principale di Ethereum._
+- [EIP-160](https://eips.ethereum.org/EIPS/eip-160): _regola i prezzi dell'opcode `EXP`, lo rende più difficile per rallentare la rete tramite operazioni computazionalmente costose del contratto._
+- [EIP-161](https://eips.ethereum.org/EIPS/eip-161): _consente la rimozione dei conti vuoti aggiunti tramite gli attacchi di DOS._
+- [EIP-170](https://eips.ethereum.org/EIPS/eip-170): _modifica le dimensioni massime del codice che un contratto sulla blockchain possa avere, a 24.576 byte._
 
 </ExpandableCard>
 
@@ -312,8 +311,8 @@ La diramazione Tangerine Whistle è stata la prima risposta agli attacchi denial
 
 <ExpandableCard title="EIP di Tangerine Whistle" contentPreview="Official improvements included in this fork.">
 
-- [EIP-150](https://eips.ethereum.org/EIPS/eip-150) – _aumenta i costi del carburante degli opcode utilizzabili negli attacchi di spam._
-- [EIP-158](https://eips.ethereum.org/EIPS/eip-158) – _riduce la dimensione dello stato rimuovendo un gran numero di account vuoti messi nello stato a costo molto basso a causa di bug nelle prime versioni del protocollo di Ethereum._
+- [EIP-150](https://eips.ethereum.org/EIPS/eip-150): _aumenta i costi del gas degli opcode utilizzabili negli attacchi di spam._
+- [EIP-158](https://eips.ethereum.org/EIPS/eip-158): _riduce la dimensione di stato rimuovendo un gran numero di conti vuoti, introdotti nello stato a un costo molto ridotto a causa di falle nelle versioni precedenti del protocollo di Ethereum._
 
 </ExpandableCard>
 
@@ -363,7 +362,7 @@ La diramazione Homestead guardava al futuro. Includeva diverse modifiche al prot
 
 #### Riepilogo {#frontier-thawing-summary}
 
-La diramazione frontier thawing ha introdotto il limite di 5.000 unità di [carburante](/glossary/#gas) per [blocco](/glossary/#block) e ha impostato il prezzo predefinito del carburante a 51 [gwei](/glossary/#gwei). Ciò ha reso possibili le transazioni, che richiedono 21.000 unità di carburante. La [bomba di difficoltà](/glossary/#difficulty-bomb) è stata introdotta per assicurare una hard-fork futura verso il [proof-of-stake](/glossary/#pos).
+La biforcazione disgelo di frontiera ha innalzato il limite di 5.000 [gas](/glossary/#gas) per [blocco](/glossary/#block) e ha impostato il prezzo predefinito del gas a 51 [gwei](/glossary/#gwei). Ciò ha reso possibili le transazioni, che richiedono 21.000 gas. La [bomba di difficoltà](/glossary/#difficulty-bomb) è stata introdotta per assicurare una hard-fork futura verso il [proof-of-stake](/glossary/#pos).
 
 - [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
 - [Leggi l'Aggiornamento 1 del Protocollo di Ethereum](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/)
@@ -376,7 +375,7 @@ La diramazione frontier thawing ha introdotto il limite di 5.000 unità di [carb
 
 #### Riepilogo {#frontier-summary}
 
-Frontier è stata un'implementazione operativa ma rudimentale del progetto Ethereum. Seguì la fase di prova Olympic, con esito positivo. Era destinata agli utenti tecnici, in particolare agli sviluppatori. I [blocchi](/glossary/#block) avevano un limite di 5.000 unità di [carburante](/glossary/#gas). Questo periodo di ’disgelo’ (dall'inglese thawing) consentì ai miner di iniziare e ai primi utilizzatori di installare i client senza fretta.
+Frontier è stata un'implementazione operativa ma rudimentale del progetto Ethereum. Seguì la fase di prova Olympic, con esito positivo. Era destinata agli utenti tecnici, in particolare agli sviluppatori. I [blocchi](/glossary/#block) avevano un limite di 5.000 [gas](/glossary/#gas). Questo periodo di ’disgelo’ (dall'inglese thawing) consentì ai miner di iniziare e ai primi utilizzatori di installare i client senza fretta.
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 

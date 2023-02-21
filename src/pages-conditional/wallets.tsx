@@ -1,4 +1,5 @@
 import React from "react"
+import { Center } from "@chakra-ui/react"
 import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
@@ -22,6 +23,7 @@ import {
   TwoColumnContent,
 } from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
+import QuizWidget from "../components/Quiz/QuizWidget"
 
 import { translateMessageId } from "../utils/translations"
 import { getImage, getSrc } from "../utils/image"
@@ -207,12 +209,25 @@ const articles = [
   {
     title: <Translation id="page-wallets-keys-to-safety" />,
     description: <Translation id="page-wallets-blog" />,
-    link: "https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
+    link: "https://www.coinbase.com/learn/crypto-basics/how-to-secure-crypto",
   },
   {
     title: <Translation id="page-wallets-how-to-store" />,
     description: "ConsenSys",
     link: "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
+  },
+]
+
+const guides = [
+  {
+    title: (
+      <Translation id="additional-reading-how-to-register-an-ethereum-account" />
+    ),
+    link: "/guides/how-to-register-an-ethereum-account/",
+  },
+  {
+    title: <Translation id="additional-reading-how-to-use-a-wallet" />,
+    link: "/guides/how-to-use-a-wallet/",
   },
 ]
 
@@ -256,10 +271,8 @@ const WalletsPage = ({
             </p>
             <p>
               <Translation id="page-wallets-desc-2" />{" "}
-              <Link to="/eth/">
-                <Translation id="page-wallets-desc-2-link" />{" "}
-              </Link>
             </p>
+            <CardList content={guides} />
           </LeftColumn>
           <StyledRightColumn>
             <p>
@@ -452,6 +465,11 @@ const WalletsPage = ({
         </CalloutCardContainer>
       </Content>
       <Content>
+        <Center w="100%">
+          <QuizWidget quizKey="wallets" />
+        </Center>
+      </Content>
+      <Content>
         <FeedbackCard />
       </Content>
     </Page>
@@ -488,7 +506,7 @@ export const listImage = graphql`
 
 export const query = graphql`
   query WalletsPage {
-    hero: file(relativePath: { eq: "wallet.png" }) {
+    hero: file(relativePath: { eq: "wallets/find-wallet-hero.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }

@@ -2,7 +2,6 @@
 title: Tranzakciók
 description: Egy áttekintő az Ethereum tranzakciókról – hogyan működnek, az adatszerkezetük és hogyan lehet őket elküldeni egy alkalmazáson keresztül.
 lang: hu
-sidebar: true
 isOutdated: true
 ---
 

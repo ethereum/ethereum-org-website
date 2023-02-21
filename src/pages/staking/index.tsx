@@ -34,6 +34,7 @@ const HeroStatsWrapper = styled.div`
   align-items: center;
   background: ${({ theme }) => theme.colors.layer2Gradient};
   padding-bottom: 2rem;
+  width: 100%;
 `
 
 const Page = styled.div`
@@ -298,6 +299,15 @@ const StakingPage = ({
           eventCategory: `Staking dropdown`,
           eventAction: `Clicked`,
           eventName: "clicked pooled staking",
+        },
+      },
+      {
+        text: "page-staking-dropdown-withdrawals",
+        to: "/staking/withdrawals/",
+        matomo: {
+          eventCategory: `Staking dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked about withdrawals",
         },
       },
     ],
@@ -618,8 +628,24 @@ const StakingPage = ({
               <p>
                 <Translation id="page-staking-faq-4-answer-p2" />
               </p>
+              <p>
+                <Translation id="page-staking-faq-4-answer-p3" />
+              </p>
               <ButtonLink to="/upgrades/merge/">
                 <Translation id="page-upgrades-merge-btn" />
+              </ButtonLink>
+            </ExpandableCard>
+            <ExpandableCard
+              title={translateMessageId("page-staking-faq-5-question", intl)}
+            >
+              <p>
+                <Translation id="page-staking-faq-5-answer-p1" />
+              </p>
+              <p>
+                <Translation id="page-staking-faq-5-answer-p2" />
+              </p>
+              <ButtonLink to="/staking/withdrawals/">
+                <Translation id="page-staking-faq-5-answer-link" />
               </ButtonLink>
             </ExpandableCard>
             <ExpandableCard
@@ -709,6 +735,11 @@ const StakingPage = ({
               <li>
                 <Link to="https://launchpad.ethereum.org/en/faq">
                   <Translation id="page-staking-further-reading-9-link" />
+                </Link>
+              </li>
+              <li>
+                <Link to="https://ethstaker.gitbook.io/ethstaker-knowledge-base/">
+                  <Translation id="page-staking-further-reading-10-link" />
                 </Link>
               </li>
             </ul>

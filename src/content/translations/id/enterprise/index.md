@@ -2,7 +2,6 @@
 title: Perusahaan di Jaringan Utama Ethereum
 description: Panduan, artikel, dan peralatan tentang aplikasi perusahaan di blockchain Ethereum publik
 lang: id
-sidebar: true
 ---
 
 # Jaringan Utama Ethereum untuk perusahaan {#ethereum-for-enterprise}

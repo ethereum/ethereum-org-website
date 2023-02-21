@@ -2,7 +2,6 @@
 title: Errichte deinen eigenen Ethereum-Node
 description: Allgemeine Einführung in den Betrieb einer eigenen Ethereum-Client-Instanz.
 lang: de
-sidebar: true
 sidebarDepth: 2
 ---
 

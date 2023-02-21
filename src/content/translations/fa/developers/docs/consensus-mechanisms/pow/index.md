@@ -2,7 +2,6 @@
 title: اثبات کار (PoW)
 description: توضیحی درباره‌ی پروتکل اجماع اثبات کار و نقشش در اتریوم.
 lang: fa
-sidebar: true
 incomplete: true
 ---
 

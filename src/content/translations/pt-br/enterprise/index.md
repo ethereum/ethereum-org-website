@@ -2,7 +2,6 @@
 title: Empresas
 description: Guias, artigos e ferramentas sobre blockchains da Ethereum públicas e privadas para empresas
 lang: pt-br
-sidebar: true
 sidebarDepth: 1
 ---
 

@@ -2,7 +2,6 @@
 title: Ethereum-Entwicklungsstandards
 description:
 lang: de
-sidebar: true
 incomplete: true
 ---
 

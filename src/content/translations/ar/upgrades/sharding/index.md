@@ -3,7 +3,6 @@ title: سلاسل الأجزاء
 description: تعرف على سلاسل الأجزاء - أقسام الشبكة التي تعطي إثيريوم قدرة أكبر للمعاملات وتسهل تشغيله.
 lang: ar
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: التقسيم هو تحديث متعدد المراحل لتحسين قدرة إثيريوم و قابليته للتوسع.
 summaryPoint2: سلاسل الأجزاء توزع حمولة الشبكة عبر 64 سلسلة جديدة.

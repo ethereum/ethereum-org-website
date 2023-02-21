@@ -2,16 +2,14 @@
 title: Client diversity
 description: A high level explanation of the importance of Ethereum client diversity.
 lang: en
-sidebar: true
 sidebarDepth: 2
-preMergeBanner: true
 ---
 
 The behavior of an Ethereum node is controlled by the client software it runs. There are several production-level Ethereum clients, each one developed and maintained in different languages by separate teams. The clients are built to a common spec that ensures the clients seamlessly communicate with each other and have the same functionality and provide an equivalent user experience. However, at the moment the distribution of clients across nodes is not equal enough to realize this network fortification to its full potential. Ideally, users divide roughly equally across the various clients to bring as much client diversity as possible to the network.
 
 ## Prerequisites {#prerequisites}
 
-If you don't already have an understanding of what nodes and clients are, check out [nodes and clients](/developers/docs/nodes-and-clients/). The Beacon Chain is explained [here](/upgrades/beacon-chain/). [Execution](/glossary/#execution-layer) and [consensus](/glossary/#consensus-layer) layers are defined in the glossary.
+If you don't already understand what nodes and clients are, check out [nodes and clients](/developers/docs/nodes-and-clients/). [Execution](/glossary/#execution-layer) and [consensus](/glossary/#consensus-layer) layers are defined in the glossary.
 
 ## Why are there multiple clients? {#why-multiple-clients}
 
@@ -31,11 +29,11 @@ Client diversity also offers resilience to attacks. For example, an attack that 
 
 ### Proof-of-stake finality {#finality}
 
-Ethereum has had 100% uptime since the network began. After The Merge, the risks caused by poor client diversity become more alarming. A critical bug in a consensus client with over 33% of the Ethereum nodes could prevent the Beacon Chain from finalizing, causing Ethereum to go offline.
+A bug in a consensus client with over 33% of the Ethereum nodes could prevent the Beacon Chain from finalizing, meaning users could not trust that transactions would not be reverted or changed at some point. This would be very problematic for many of the apps built on top of Ethereum, particularly DeFi.
 
 <Emoji text="🚨" mr="1rem" /> Worse still, a critical bug in a client with a two-thirds majority could cause the chain to <a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain-consensus-fails/" target="_blank">incorrectly split and finalize</a>, leading to a large set of validators getting stuck on an invalid chain. If they want to rejoin the correct chain, these validators face slashing or a slow and expensive voluntary withdrawal and reactivation. The magnitude of a slashing scales with the number of culpable nodes with a two-thirds majority slashed maximally (32 ETH).
 
-Although these are unlikely scenarios, the Ethereum eco-system can mitigate their risk by evening out the distribution of clients across the active nodes. Ideally, no consensus client would ever have more than a 33% share of the total nodes.
+Although these are unlikely scenarios, the Ethereum eco-system can mitigate their risk by evening out the distribution of clients across the active nodes. Ideally, no consensus client would ever reach a 33% share of the total nodes.
 
 ### Shared responsibility {#responsibility}
 
@@ -50,7 +48,7 @@ The two pie charts above show snapshots of the current client diversity for the 
 
 The execution layer data were obtained from [Ethernodes](https://ethernodes.org) on 23/01/22. Data for consensus clients was obtained from [Michael Sproul](https://github.com/sigp/blockprint). Consensus client data is more difficult to obtain because the Beacon Chain clients do not always have unambiguous traces that can be used to identify them. The data was generated using a classification algorithm that sometimes confuses some of the minority clients (see [here](https://twitter.com/sproulM_/status/1440512518242197516) for more details). In the diagram above, these ambiguous classifications are treated with an either/or label (e.g. Nimbus/Teku). Nevertheless, it is clear that the majority of the network is running Prysm. The data is a snapshot over a fixed set of blocks (in this case Beacon blocks in slots 2048001 to 2164916) and Prysm's dominance has sometimes been higher, exceeding 68%. Despite only being snapshots, the values in the diagram provide a good general sense of the current state of client diversity.
 
-Up to date client diversity data for the consensus layer is now available at https://clientdiversity.org/.
+Up to date client diversity data for the consensus layer is now available at [clientdiversity.org](https://clientdiversity.org/).
 
 ## Execution layer {#execution-layer}
 
@@ -80,7 +78,9 @@ Addressing client diversity requires more than individual users to choose minori
 
 [Teku](https://consensys.net/knowledge-base/ethereum-2/teku/)
 
-[Lodestar](https://github.com/ChainSafe/lodestar) - _Under review and audit_
+[Lodestar](https://github.com/ChainSafe/lodestar)
+
+[Prysm](https://docs.prylabs.network/docs/getting-started)
 
 Technical users can help accelerate this process by writing more tutorials and documentation for minority clients and encouraging their node-operating peers to migrate away from the dominant clients. Guides for switching to a minority consensus client are available on [clientdiversity.org](https://clientdiversity.org/).
 
@@ -106,7 +106,7 @@ Several dashboards give real-time client diversity statistics for the execution 
 - [Importance of client diversity](https://our.status.im/the-importance-of-client-diversity/)
 - [List of Ethereum node services](https://ethereumnodes.com/)
 - ["Five Whys" of the client diversity problem](https://notes.ethereum.org/@afhGjrKfTKmksTOtqhB9RQ/BJGj7uh08)
-- [Ethereum Diversity and How to Solve For It (Youtube)](https://www.youtube.com/watch?v=1hZgCaiqwfU)
+- [Ethereum Diversity and How to Solve For It (YouTube)](https://www.youtube.com/watch?v=1hZgCaiqwfU)
 - [clientdiversity.org](https://clientdiversity.org/)
 
 ## Related topics {#related-topics}

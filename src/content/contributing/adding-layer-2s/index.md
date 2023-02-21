@@ -2,7 +2,6 @@
 title: Adding Layer 2s
 description: The policy we use when adding a layer 2 to ethereum.org
 lang: en
-sidebar: true
 ---
 
 # Adding layer 2s {#adding-layer-2}

@@ -2,7 +2,6 @@
 title: Historia i forki Ethereum
 description: Historia blockchainu Ethereum, w tym najważniejsze kamienie milowe, wydania i forki.
 lang: pl
-sidebar: true
 sidebarDepth: 1
 isOutdated: true
 ---

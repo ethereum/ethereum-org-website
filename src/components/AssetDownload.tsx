@@ -1,10 +1,18 @@
 import React from "react"
-import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
+import {
+  Box,
+  Flex,
+  Container,
+  Img,
+  Center,
+  Heading,
+  Text,
+} from "@chakra-ui/react"
 
 import Translation from "../components/Translation"
 import ButtonLink from "./ButtonLink"
-import Emoji from "./OldEmoji"
+import Emoji from "./Emoji"
 import Link from "./Link"
 
 import { getImage, getSrc, ImageDataLike } from "../utils/image"
@@ -34,56 +42,6 @@ interface IPropsWithImage extends IPropsBase {
 
 export type IProps = IPropsWithImage | IPropsWithSVG
 
-const Container = styled.div<IHide>`
-  flex: 1 1 45%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 1rem;
-  opacity: ${(props) => (props.shouldHide ? 0 : 1)};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: ${(props) => (props.shouldHide ? `none` : `flex`)};
-  }
-`
-
-const Image = styled(GatsbyImage)`
-  align-self: center;
-  width: 100%;
-`
-
-const ImageContainer = styled.div`
-  border: 1px solid ${(props) => props.theme.colors.white700};
-  width: 100%;
-  padding: 2rem;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-`
-
-const ArtistSubtitle = styled.div`
-  display: flex;
-  font-size: ${(props) => props.theme.fontSizes.m};
-  color: ${(props) => props.theme.colors.text300};
-  margin-right: 0.5rem;
-`
-
-const Caption = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 1rem;
-  width: 100%;
-  background: ${(props) => props.theme.colors.background};
-  border-left: 1px solid ${(props) => props.theme.colors.white700};
-  border-bottom: 1px solid ${(props) => props.theme.colors.white700};
-  border-right: 1px solid ${(props) => props.theme.colors.white700};
-  border-radius: 0px 0px 4px 4px;
-  padding: 0.5rem 1rem;
-`
-
-const ButtonContainer = styled.div`
-  margin-top: 1rem;
-`
-
 // TODO add ability to download SVGs
 const AssetDownload: React.FC<IProps> = ({
   alt,
@@ -102,35 +60,77 @@ const AssetDownload: React.FC<IProps> = ({
   const Svg = svg
 
   return (
-    <Container shouldHide={shouldHide}>
-      <h4>{title}</h4>
-      <div>
-        {children && <ImageContainer>{children}</ImageContainer>}
+    <Box
+      display={{
+        base: shouldHide ? "none" : "flex",
+        lg: "flex",
+      }}
+      maxW="100%"
+      minW="170px"
+      flex="1 1 45%"
+      flexDirection="column"
+      justifyContent="space-between"
+      m={4}
+      p={0}
+      opacity={shouldHide ? 0 : 1}
+    >
+      <Heading as="h4" fontSize={{ base: "md", md: "xl" }} fontWeight="500">
+        {title}
+      </Heading>
+      <Box>
+        {children && (
+          <Flex
+            border="1px"
+            borderColor="white700"
+            w="100%"
+            p={8}
+            textAlign="center"
+            justify="center"
+          >
+            {children}
+          </Flex>
+        )}
         {!children && (
-          <ImageContainer>
+          <Center border="1px" borderColor="white700" p={8} w="100%">
             {Svg && <Svg alt={alt} />}
-            {image && <Image image={getImage(image)!} alt={alt} />}
-          </ImageContainer>
+            {image && (
+              <Img
+                as={GatsbyImage}
+                image={getImage(image)!}
+                alt={alt}
+                w="100%"
+                alignSelf="center"
+              />
+            )}
+          </Center>
         )}
         {artistName && (
-          <Caption>
-            <ArtistSubtitle>
-              <Emoji text=":artist_palette:" mr={`0.5em`} />
+          <Flex
+            mb={4}
+            border="1px"
+            borderTop="none"
+            borderColor="white700"
+            py={2}
+            px={4}
+            borderRadius="0 0 4px 4px"
+          >
+            <Flex mr={2} fontSize="md" textColor="text300">
+              <Emoji text=":artist_palette:" mr={2} fontSize="2xl" />
               <Translation id="page-assets-download-artist" />
-            </ArtistSubtitle>
+            </Flex>
             {artistUrl && <Link to={artistUrl}>{artistName}</Link>}
-            {!artistUrl && <span>{artistName}</span>}
-          </Caption>
+            {!artistUrl && <Text m={0}>{artistName}</Text>}
+          </Flex>
         )}
-      </div>
-      <ButtonContainer>
+      </Box>
+      <Box mt={4} p={0}>
         {!Svg && (
           <ButtonLink to={downloadUrl}>
             <Translation id="page-assets-download-download" />
           </ButtonLink>
         )}
-      </ButtonContainer>
-    </Container>
+      </Box>
+    </Box>
   )
 }
 

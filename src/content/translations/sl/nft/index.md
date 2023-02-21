@@ -4,7 +4,6 @@ description: Pregled NFTjev na Ethereumu
 lang: sl
 template: use-cases
 emoji: ":frame_with_picture:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/infrastructure_transparent.png
 alt: Logotip Eth prikazan prek holograma.

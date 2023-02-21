@@ -142,5 +142,7 @@
   "page-stablecoins-why-stablecoins": "Mengapa stablecoins?",
   "page-stablecoins-how-they-work-button": "Bagaimana mereka bekerja",
   "page-stablecoins-why-stablecoins-body": "ETH, seperti Bitcoin, memiliki harga yang fluktuatif karena merupakan teknologi baru. Jadi Anda mungkin tidak ingin menggunakannya secara rutin. Stablecoin mencerminkan nilai mata uang tradisional untuk memberi Anda akses ke uang stabil yang dapat Anda gunakan di Ethereum.",
-  "page-stablecoins-more-defi-button": "Lebih lanjut tentang keuangan terdesentralisasi (DeFi)"
+  "page-stablecoins-more-defi-button": "Lebih lanjut tentang keuangan terdesentralisasi (DeFi)",
+  "page-stablecoins-tools-title": "Learn more about stablecoins",
+  "page-stablecoins-tools-stablecoinswtf-description": "Stablecoins.wtf offers a dashboard with historical market data, statistics, and educational content for the most prominent stablecoins."
 }

@@ -594,12 +594,6 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
                 </Link>
               </p>
               <p>
-                <Translation id="page-upgrades-question-4-answer-2" />{" "}
-                <Link to="/upgrades/merge/">
-                  <Translation id="page-upgrades-merge-btn" />
-                </Link>
-              </p>
-              <p>
                 <Translation id="page-upgrades-question-4-answer-3" />{" "}
                 <Link to="/developers/docs/consensus-mechanisms/pos/">
                   <Translation id="page-upgrades-proof-stake-link" />
@@ -610,9 +604,6 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
                 <Link to="/staking/">
                   <Translation id="page-upgrades-question-4-answer-7" />
                 </Link>
-              </p>
-              <p>
-                <Translation id="page-upgrades-question-4-answer-8" />
               </p>
             </ExpandableCard>
             <ExpandableCard
@@ -869,7 +860,7 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
             <Translation id="page-upgrades-take-part-desc" />
           </p>
           <ButtonLink to="https://ethresear.ch/">
-            <Translation id="page-upgrades-head-to" /> ethresear.ch
+            <Translation id="page-upgrades-head-to-ethresearch" />
           </ButtonLink>
         </ResearchContainer>
       </Content>

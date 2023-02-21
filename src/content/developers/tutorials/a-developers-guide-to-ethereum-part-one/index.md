@@ -3,8 +3,7 @@ title: A Python developer's introduction to Ethereum, part 1
 description: An introduction to Ethereum development, especially useful for those with knowledge of the Python programming language
 author: Marc Garreau
 lang: en
-sidebar: true
-tags: ["getting started", "python", "blockchain", "web3.py"]
+tags: ["python", "web3.py"]
 skill: beginner
 published: 2020-09-08
 source: Snake charmers
@@ -34,7 +33,6 @@ There are many ways to describe Ethereum, but at its heart is a blockchain. Bloc
    "number": 1234567,
    "hash": "0xabc123...",
    "parentHash": "0xdef456...",
-   "miner": "0xa1b2c3...",
    ...,
    "transactions": [...]
 }
@@ -58,7 +56,7 @@ This new decentralized tech stack has spawned new developer tools. Such tools ex
 
 Python developers that want to interact with Ethereum are likely to reach for [Web3.py](https://web3py.readthedocs.io/). Web3.py is a library that greatly simplifies the way you connect to an Ethereum node, then send and receive data from it.
 
-<div class="featured">Note: “Ethereum node” and “Ethereum client” are used interchangeably. In either case, it refers to the software that a participant in the Ethereum network runs. This software can read block data, receive updates when new blocks are added to the chain ("mined"), broadcast new transactions, and more.</div>
+<div class="featured">Note: “Ethereum node” and “Ethereum client” are used interchangeably. In either case, it refers to the software that a participant in the Ethereum network runs. This software can read block data, receive updates when new blocks are added to the chain, broadcast new transactions, and more. Technically, the client is the software, the node is the computer running the software.</div>
 
 [Ethereum clients](/developers/docs/nodes-and-clients/) can be configured to be reachable by [IPC](https://wikipedia.org/wiki/Inter-process_communication), HTTP, or Websockets, so Web3.py will need to mirror this configuration. Web3.py refers to these connection options as **providers**. You’ll want to choose one of the three providers to link the Web3.py instance with your node.
 
@@ -85,19 +83,19 @@ In this walkthrough, we’ll just be working within a Python interpreter. We won
 First, install [IPython](https://ipython.org/) for a user-friendly environment to explore in. IPython offers tab completion, among other features, making it much easier to see what’s possible within Web3.py.
 
 ```bash
-$ pip install ipython
+pip install ipython
 ```
 
 Web3.py is published under the name `web3`. Install it like so:
 
 ```bash
-$ pip install web3
+pip install web3
 ```
 
 One more thing – we're going to simulate a blockchain later, which requires a couple more dependencies. You can install those via:
 
 ```bash
-$ pip install 'web3[tester]'
+pip install 'web3[tester]'
 ```
 
 You’re all set up to go!
@@ -107,7 +105,7 @@ You’re all set up to go!
 Open up a new Python environment by running `ipython` in your terminal. This is comparable to running `python`, but comes with more bells and whistles.
 
 ```bash
-$ ipython
+ipython
 ```
 
 This will print out some information about the versions of Python and IPython you’re running, then you should see a prompt waiting for input:
@@ -236,13 +234,13 @@ Out[9]: AttributeDict({
 
 A lot of information gets returned about a block, but just a couple things to point out here:
 
-- The block number is zero — no matter how long ago you configured the tester provider. Unlike the real Ethereum network, which mines a new block roughly every 15 seconds, this simulation will wait until you give it some work to do.
+- The block number is zero — no matter how long ago you configured the tester provider. Unlike the real Ethereum network, which adds a new block every 12 seconds, this simulation will wait until you give it some work to do.
 - `transactions` is an empty list, for the same reason: we haven’t done anything yet. This first block is an **empty block**, just to kick off the chain.
 - Notice that the `parentHash` is just a bunch of empty bytes. This signifies that it's the first block in the chain, also known as the **genesis block**.
 
 ## Tour stop #3: [transactions](/developers/docs/transactions/) {#tour-stop-3-transactions}
 
-We’re stuck at block zero until there’s a transaction to mine, so let’s give it one. Send a few test ether from one account to another:
+We’re stuck at block zero until there’s a pending transaction, so let’s give it one. Send a few test ether from one account to another:
 
 ```python
 In [10]: tx_hash = w3.eth.send_transaction({
@@ -253,11 +251,11 @@ In [10]: tx_hash = w3.eth.send_transaction({
 })
 ```
 
-This is typically the point where you’d wait for several seconds for your transaction to get mined into a new block. The full process goes something like this:
+This is typically the point where you’d wait for several seconds for your transaction to get included in a new block. The full process goes something like this:
 
-1. Submit a transaction and hold on to the transaction hash. Until it gets mined, the transaction is “pending.”
+1. Submit a transaction and hold on to the transaction hash. Until the block containing the transaction is created and broadcast, the transaction is “pending.”
    `tx_hash = w3.eth.send_transaction({ … })`
-2. Wait for the transaction to be mined:
+2. Wait for the transaction to be included in a block:
    `w3.eth.wait_for_transaction_receipt(tx_hash)`
 3. Continue application logic. To view the successful transaction:
    `w3.eth.get_transaction(tx_hash)`
@@ -283,13 +281,15 @@ We can also easily verify the success of this transaction by checking the balanc
 
 ```python
 In [12]: w3.eth.get_balance(w3.eth.accounts[0])
-Out[12]: 999996999999999999969000
+Out[12]: 999996999979000000000000
 
 In [13]: w3.eth.get_balance(w3.eth.accounts[1])
 Out[13]: 1000003000000000000000000
 ```
 
-The latter looks good! The balance went from 1,000,000 to 1,000,003 ether. But what happened to the first account? It appears to have lost slightly more than three ether. Alas, nothing in life is free, and using the Ethereum public network requires that you compensate your peers for their supporting role. A small transaction fee was deducted from the account making the transaction to the tune of 31000 wei.
+The latter looks good! The balance went from 1,000,000 to 1,000,003 ether. But what happened to the first account? It appears to have lost slightly more than three ether. Alas, nothing in life is free, and using the Ethereum public network requires that you compensate your peers for their supporting role. A small transaction fee was deducted from the account that submitted the transaction - this fee is the amount of gas burned (21000 units of gas for an ETH transfer) multiplied by a base fee that varies according to network activity plus a tip that goes to the validator that includes the transaction in a block.
+
+More on [gas](https://ethereum.org/en/developers/docs/gas/#post-london)
 
 <div class="featured">Note: On the public network, transaction fees are variable based on network demand and how quickly you'd like a transaction to be processed. If you're interested in a breakdown of how fees are calculated, see my earlier post on <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">how transactions are included in a block</a>.</div>
 

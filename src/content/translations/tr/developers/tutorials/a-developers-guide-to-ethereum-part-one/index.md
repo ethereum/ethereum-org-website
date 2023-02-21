@@ -3,7 +3,6 @@ title: Python Geliştiricileri için Ethereum'a Giriş, Bölüm 1
 description: Özellikle Python programlama dili hakkında bilgi sahibi olanlar için yararlı olan Ethereum geliştirmeye giriş
 author: Marc Garreau
 lang: tr
-sidebar: true
 tags:
   - "başlarken"
   - "python"

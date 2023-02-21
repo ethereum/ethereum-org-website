@@ -2,7 +2,6 @@
 title: Rollup-uri Optimistic
 description: Introduction to optimistic rollups
 lang: ro
-sidebar: true
 ---
 
 ## Cerințe prealabile {#prerequisites}

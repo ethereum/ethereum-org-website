@@ -2,7 +2,6 @@
 title: Penambangan
 description: Penjelasan tentang cara kerja penambangan Ethereum dan bagaimana hal itu membantu menjaga Ethereum tetap aman dan terdesentralisasi.
 lang: id
-sidebar: true
 incomplete: true
 ---
 

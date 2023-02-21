@@ -2,7 +2,6 @@
 title: Энергопотребление Ethereum
 description: Основная информация, необходимая для понимания энергопотребления Ethereum.
 lang: ru
-sidebar: true
 ---
 
 # Энергопотребление Ethereum {#introduction}

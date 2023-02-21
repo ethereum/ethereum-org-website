@@ -2,7 +2,6 @@
 title: Pendekezo la Uboreshaji wa Ethereum(EIPs)
 description: Maelezo ya msingi unayohitaji kuelewa Mapendekezo ya Uboreshaji wa Ethereum (EIPs).
 lang: sw
-sidebar: true
 ---
 
 # Utangulizi wa Mapendekezo ya Uboreshaji wa Ethereum (EIPs) {#introduction-to-ethereum-improvement-proposals-eips}

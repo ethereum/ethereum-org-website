@@ -2,7 +2,6 @@
 title: Okos szerződések tesztelése
 description:
 lang: hu
-sidebar: true
 incomplete: true
 ---
 

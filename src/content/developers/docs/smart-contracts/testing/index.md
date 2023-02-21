@@ -2,7 +2,6 @@
 title: Testing smart contracts
 description: An overview of techniques and considerations for testing Ethereum smart contracts
 lang: en
-sidebar: true
 ---
 
 Testing [smart contracts](/developers/docs/smart-contracts/) is one of the most important measures for improving [smart contract security](/developers/docs/smart-contracts/security/). Unlike traditional software, smart contracts cannot typically be updated after launching, making it imperative to test rigorously before deploying contracts on the Ethereum network.

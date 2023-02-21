@@ -2,7 +2,6 @@
 title: Csomópontok és kliensek
 description: Egy áttekintő az Ethereum csomópontokról és kliens szoftverekről, valamint egy csomópont felállításának menetéről és hogy miért is érdemes.
 lang: hu
-sidebar: true
 sidebarDepth: 2
 isOutdated: true
 ---

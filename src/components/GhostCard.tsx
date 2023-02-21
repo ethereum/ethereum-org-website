@@ -1,34 +1,5 @@
 import React from "react"
-import styled from "@emotion/styled"
-
-const Container = styled.div`
-  position: relative;
-  margin-top: 0.5rem;
-  align-self: stretch;
-`
-
-const BaseCard = styled.div`
-  height: 100%;
-  width: 100%;
-  border-radius: 2px;
-`
-
-const Card = styled(BaseCard)`
-  z-index: 2;
-  padding: 1.5rem;
-  text-align: left;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  background-color: ${(props) => props.theme.colors.ghostCardBackground};
-`
-
-const Ghost = styled(BaseCard)`
-  z-index: -1;
-  position: absolute;
-  bottom: 0.5rem;
-  left: 0.5rem;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  background-color: ${(props) => props.theme.colors.ghostCardGhost};
-`
+import { Box } from "@chakra-ui/react"
 
 export interface IProps {
   children?: React.ReactNode
@@ -36,10 +7,34 @@ export interface IProps {
 }
 
 const GhostCard: React.FC<IProps> = ({ children, className }) => (
-  <Container className={className}>
-    <Ghost />
-    <Card className="ghost-card-base">{children}</Card>
-  </Container>
+  <Box position="relative" mt="2" alignSelf="stretch" className={className}>
+    <Box
+      zIndex="hide"
+      position="absolute"
+      backgroundColor="ghostCardGhost"
+      bottom="2"
+      left="2"
+      border="1px solid"
+      borderColor="border"
+      borderRadius="2px"
+      height="full"
+      width="full"
+    />
+    <Box
+      className="ghost-card-base"
+      height="full"
+      width="full"
+      borderRadius="2px"
+      zIndex={2}
+      padding="6"
+      background="ghostCardBackground"
+      border="1px solid"
+      borderColor="border"
+      textAlign="left"
+    >
+      {children}
+    </Box>
+  </Box>
 )
 
 export default GhostCard

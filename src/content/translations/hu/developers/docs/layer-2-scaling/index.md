@@ -2,7 +2,6 @@
 title: 2. rétegű skálázás
 description: Bevezetés a különböző skálázási lehetőségekbe, melyet jelenleg az Ethereum közösség fejleszt.
 lang: hu
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 isOutdated: true

@@ -2,7 +2,6 @@
 title: Historia y bifurcaciones de Ethereum
 description: Una historia de la cadena de bloques de Ethereum, que incluye los principales hitos, lanzamientos y bifurcaciones.
 lang: es
-sidebar: true
 sidebarDepth: 1
 ---
 

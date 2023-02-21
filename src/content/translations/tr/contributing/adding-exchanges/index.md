@@ -2,7 +2,6 @@
 title: Borsa ekleme
 description: Ethereum.org'a borsa eklerken kullandığımız politika
 lang: tr
-sidebar: true
 ---
 
 # Ethereum borsaları ekleme {#adding-ethereum-exchanges}

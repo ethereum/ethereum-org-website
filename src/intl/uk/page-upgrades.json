@@ -1,3 +1,13 @@
 {
-  "page-upgrades-beacon-date": "Відправлено!"
+  "page-upgrades-merge-infographic-el": "Стан Ethereum: транзакції, програми, контракти, баланси",
+  "page-upgrades-merge-infographic-alt-text": "Інфографіка, що ілюструє, як Beacon Chain об’єднується з виконавчим рівнем Ethereum під час переходу від моделі підтвердження роботи до моделі доказу частки.",
+  "page-upgrades-beacon-date": "Уже запущено!",
+  "page-upgrades-merge-date": "Вересень 2022 р.",
+  "page-upgrades-shards-date": "Приблизно 2023 р.",
+  "page-upgrades-merge-banner-intro": "The Merge буде здійснено незабаром. Об’єднання принесе зміни до Ethereum.",
+  "page-upgrades-merge-banner-content-outdated": "Деякий вміст на цій сторінці, пов’язаний із цими змінами, застарілий. Оновлення очікуються незабаром.",
+  "page-upgrades-merge-banner-developers-landing": "Деякі документи мають банер, на якому зазначено, що вони застарілі. Оновлення очікуються незабаром.",
+  "page-upgrades-post-merge-banner-tutorial-ood": "Ці інструкції стали застарілими після об’єднання й можуть не працювати. Подайте запит (PR), якщо хочете допомогти нам.",
+  "page-upgrades-post-merge-banner-tutorial-light-node-ood": "Ці інструкції стали застарілими після об’єднання. Легкі вузли наразі не працюють у моделях із доказом частки, але незабаром будуть запущені.",
+  "page-upgrades-post-merge-banner-governance-ood": "Деякий вміст на цій сторінці став застарілим після об’єднання. Подайте запит (PR), якщо хочете допомогти нам."
 }

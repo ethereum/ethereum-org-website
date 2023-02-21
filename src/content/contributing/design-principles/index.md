@@ -2,7 +2,6 @@
 title: Design principles
 lang: en
 description: The principles behind ethereum.org's design and content decisions
-sidebar: true
 ---
 
 # Our design principles {#contributing-to-ethereumorg-}

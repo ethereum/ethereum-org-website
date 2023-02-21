@@ -120,6 +120,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "gu",
+    "hrefLang": "gu",
+    "name": "Gujarati",
+    "localName": "ગુજરાતી",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "hi",
     "hrefLang": "hi",
     "name": "Hindi",
@@ -192,6 +200,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "km",
+    "hrefLang": "km",
+    "name": "Khmer",
+    "localName": "ចក្រភពខ្មែរ",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "ko",
     "hrefLang": "ko",
     "name": "Korean",
@@ -249,7 +265,7 @@
   },
   {
     "code": "ph",
-    "hrefLang": "ph",
+    "hrefLang": "fil",
     "name": "Filipino",
     "localName": "Filipino",
     "langDir": "ltr",
@@ -336,6 +352,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "ta",
+    "hrefLang": "ta",
+    "name": "Tamil",
+    "localName": "தமிழ்",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "th",
     "hrefLang": "th",
     "name": "Thai",
@@ -356,6 +380,14 @@
     "hrefLang": "uk",
     "name": "Ukrainian",
     "localName": "Українська",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
+    "code": "uz",
+    "hrefLang": "uz",
+    "name": "Uzbek",
+    "localName": "O'zbekcha",
     "langDir": "ltr",
     "dateFormat": "MM/DD/YYYY"
   },
