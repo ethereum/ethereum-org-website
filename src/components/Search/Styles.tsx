@@ -207,11 +207,6 @@ const styles: Styles = (theme: Theme) => {
       fill: var(--eth-colors-bodyLight);
     }
 
-    /* TODO: Remove once sponsored by DocSearch */
-    .DocSearch-Logo * {
-      display: none;
-    }
-
     /* Mobile modal styling */
     @media (max-width: 768px) {
       .DocSearch-Container {
