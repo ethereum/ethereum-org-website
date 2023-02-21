@@ -55,26 +55,38 @@ Please note the importance of supporting <a href="/developers/docs/nodes-and-cli
 
 Have a suggestion for a staking-as-a-service provider we missed? Check out our [product listing policy](/contributing/adding-staking-products/) to see if it would be a good fit, and to submit it for review.
 
-## FAQ {#faq}
+## Frequently asked questions {#faq}
 
 <ExpandableCard title="Who holds my keys?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
-  Arrangements will differ from provider-to-provider, but commonly you will be guided through setting up any signing keys you need (one per 32 ETH), and uploading these to your provider to allow them to validate on your behalf. The signing keys alone do not give any ability to withdraw, transfer or spend your funds. However, they do provide the ability to cast votes towards consensus, which if not done properly can result in offline penalties or slashing.
+  Arrangements will differ from provider-to-provider, but commonly you will be guided through setting up any signing keys you need (one per 32 ETH), and uploading these to your provider to allow them to validate on your behalf. The signing keys alone do not give any ability to withdraw, transfer, or spend your funds. However, they do provide the ability to cast votes towards consensus, which if not done properly can result in offline penalties or slashing.
 </ExpandableCard>
 
 <ExpandableCard title="So there are two sets of keys?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
-Yes. Each account is comprised of both <em>signing</em> keys, and <em>withdrawal</em> keys. In order for a validator to attest to the state of the chain, participate in sync committees and propose blocks, the signing keys must be readily accessible by a validator client. These must be connected to the internet in some form, and are thus inherently considered to be "hot" keys. This is a requirement for your validator to be able to attest, and thus the keys used to transfer or withdraw funds are separated for security reasons.
+Yes. Each account is comprised of both BLS <em>signing</em> keys, and BLS <em>withdrawal</em> keys. In order for a validator to attest to the state of the chain, participate in sync committees and propose blocks, the signing keys must be readily accessible by a validator client. These must be connected to the internet in some form, and are thus inherently considered to be "hot" keys. This is a requirement for your validator to be able to attest, and thus the keys used to transfer or withdraw funds are separated for security reasons.
 
-All of these keys can always be regenerated in a reproducible manner using your 24-word mnemonic seed phrase. <em>Make certain you back this seed phrase up safely or you will be unable to generate your withdraw keys when the time comes</em>.
+The BLS withdrawal keys are used to sign a one-time message that declares which execution layer account staking rewards and exited funds should go to. Once this message is broadcast, the <em>BLS withdrawal</em> keys are no longer needed. Instead, control over withdrawn funds is permanently delegated to the address you provided. This allows you to set a withdrawal address secured via your own cold storage, minimizing risk to your validator funds, even if someone else controls your validator signing keys.
+
+Updating withdrawal credentials is a requires step to enable withdrawals with the Shanghai upgrade. This process involves generating the withdrawal keys using your mnemonic seed phrase. <em>Make certain you back this seed phrase up safely or you will be unable to generate your withdraw keys when the time comes.</em>
+
+Stakers who provided a withdrawal address with initial deposit do not need to set this. Check with your SaaS provider for support regarding how to prepare your validator.
 </ExpandableCard>
 
 <ExpandableCard title="When can I withdraw?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-  When you stake 32 ETH with a SaaS provider, that ETH is still deposited to the official staking deposit contract. As such, SaaS stakers are currently limited by the same withdrawal restrictions as solo stakers. This means that staking your ETH is currently a one-way deposit. This will be the case until the Shanghai upgrade.
+When you stake 32 ETH with a SaaS provider, that ETH is still deposited to the official staking deposit contract. As such, SaaS stakers are limited by the same withdrawal restrictions as solo stakers, and withdrawals are not enabled until the Shanghai upgrade.
+
+Staking withdrawals will be implemented in the upcoming Shanghai upgrade, which is expected in Q1/Q2 2023. After that, stakers need to provide a withdrawal address (if not provided on initial deposit), and reward payments will begin being distributed automatically on a periodic basis every few days.
+
+This will also enable the unlocking of exited funds. Validators can fully exit as a validator, and they will receive their entire balance back to the withdrawal address provided.
+
+<ButtonLink to="/staking/withdrawals/">More on staking withdrawals</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="What happens if I get slashed?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 By using an SaaS provider, you are entrusting the operation of your node to someone else. This comes with the risk of poor node performance, which is not in your control. In the event your validator is slashed, your validator balance will be penalized and forcibly removed from the validator pool. These funds will be locked until withdrawals are enabled at the protocol level.
 
-Contact individual SaaS provider for more details on any guarantees or insurance options. If you'd prefer to be in full control of your validator setup, <a href="/staking/solo/">learn more about how to solo stake your ETH</a>.
+The upcoming Shanghai upgrade brings withdrawal functionality, which requires providing a withdrawal address to enable. This may have been provided on initial deposit. If not, the validator signing keys will need to be used to sign a message declaring a withdrawal address once the upgrade is live.
+
+Contact individual SaaS provider for more details on any guarantees or insurance options, and for instructions on how to provide a withdrawal address. If you'd prefer to be in full control of your validator setup, <a href="/staking/solo/">learn more about how to solo stake your ETH</a>.
 </ExpandableCard>
 
 ## Further reading {#further-reading}
