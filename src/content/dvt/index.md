@@ -1,0 +1,106 @@
+---
+title: Distributed Validator Technology
+description: Distributed Validator Technology enables the distributed operation of an Ethereum validator by multiple parties.
+lang: en
+---
+
+# Distributed Validator Technology {#what-is-dvt}
+_With the advent of Ethreum’s PoS consensus, standard validator setups were accompanied by some challenges and the risk of [stake centralization](<https://www.rated.network/?network=mainnet&view=pool&timeWindow=30d&page=1>). To help distribute validator nodes and decentralize the network, **Distributed Validator Technology** was conceived._
+
+<Divider />
+
+## What is DVT? {#what-is-dvt}
+
+**Distributed Validator Technology (DVT)** is a technology primitive in the evolving **Ethereum technology** stack aimed at improving the resilience and health of the Ethereum blockchain. The solution focuses on strengthening the backbone of the blockchain's PoS consensus by enabling multiple non-trusting parties to operate an Ethereum validator collectively, as opposed to how standard validators are operated. This shift in validator operation dramatically improves the liveness and security of the network while significantly reducing slashing, downtime, and centralization risks compared to standard validator setups. 
+
+A way to think about DVT is that DVT is to validators as multisig is to wallets. Where standard validators use a single key to sign duties, the key of a Distributed Validator is split across multiple nodes. In the case of DVT, the "multisig" is operated by a consensus protocol (BFT) instead of human interaction. Enabling the distributed operation of an Ethereum validator with best-in-class security practices. 
+
+Distributing a new or existing validator is quite complex in practice, but using a DVT solution like ssv.network as a layer to split the validator private key into multiple key shares makes the technology more accessible. Regardless of the [DVT-implementation](<https://ssv.network/>) stakers can have multiple nodes each operating a key share in a cluster, allowing them to ensure the uptime of their validators.
+
+## How does DVT work? {#how-does-dvt-work}
+
+DVT uses multiple components to facilitate the distribution of an Ethereum validator:
+
+![A Diagram showing how a single validator key is split into key shares and distributed to multiple nodes with varying components.](./dvt-cluster.png)
+
+- **[Shamir's Secret Sharing](https://medium.com/@keylesstech/a-beginners-guide-to-shamir-s-secret-sharing-e864efbf3648)** - Validator keys use BLS signatures - that are additive - allowing multiple signatures to be combined to recreate a validator key signature. The BLS private validator key is split into multiple "key shares." Using [BLS aggregation](https://our.status.im/fastest-bls-signature-implementation/), multiple shares or signatures can be aggregated into a single signature. 
+- **[Threshold Signature Scheme](https://medium.com/nethermind-eth/threshold-signature-schemes-36f40bc42aca)** - Determines the threshold of key shares that are required to create a distributed validator key signature for signing duties, i.e., 3 key shares out of 4.
+- **Distributed Key Generation (DKG)** - Cryptographic process that produces the key shares and is used to share the parts of an existing or new validator key. 
+- **[Multi-Party Computation (MPC)](https://messari.io/report/applying-multiparty-computation-to-the-world-of-blockchains)** - The key shares of a distributed validator are transferred to nodes that securely perform the decentralized computation of validator duties without reconstructing the validator key on a single device. The private validator key is never reconstructed, but rather signatures from a threshold of the key shares are aggregated to produce the distributed validator key signature.
+- **[BFT Consensus Protocol](https://www.naukri.com/learning/articles/byzantine-fault-tolerance-in-blockchain/)** - The coordination process of the machines performing validator duties in a distributed validator "cluster." 
+
+Altogether, the key share signatures are combined to create a validator key signature to perform duties on the Beacon Chain. A distributed validator (DV) cluster operates with each node holding a key share of the complete validator key. No single node can recreate the validator's private key or produce a signature for the validator on its own, nor do they have access to the key shares of others.
+
+In a validator cluster of four nodes, following the threshold n≥3f+1, where n is the number of nodes and f is the number of faulty nodes the system can tolerate. Only three of the key shares are required to produce a valid signature. The cluster can tolerate one faulty or malicious operator and continue functioning as expected.
+
+Nodes within DV clusters do not need to trust each other to operate as a group. As long as a predefined majority threshold of key shares is signed appropriately, the validator will perform its duties as intended. Distributed validators have built-in fault tolerance and can achieve genuine [active-active redundancy](https://kemptechnologies.com/white-papers/unfog-confusion-active-passive-activeactive-load-balancing) by maintaining diverse operator configurations. 
+
+<Divider />
+
+## Why do we need DVT? {#why-do-we-need-dvt}
+
+The standard validator configuration creates single points of failure in Ethereum's consensus layer that lead to several challenges and risks:
+
+### Security {#security}
+
+Validators generate two public-private key pairs: validator keys for participating in consensus and withdrawal keys for accessing funds. While validators can secure withdrawal keys in cold storage, validator private keys must be online 24/7, increasing the possibility of theft. If a validator private key is compromised, an attacker can control the validator, potentially leading to slashing or the loss of the staker's ETH. 
+
+With DVT, the validator's private key is split into key shares, and since the nodes only need to have their key share online, the validator's private key can be safely stored in cold storage.
+
+### No Single Points of Failure {#no-single-point-of-failure}
+
+Standard validators have various fallible components, consisting of hardware (node hosting and physical location) and software (node software and operating system), each presenting a single point of failure. Active-passive solutions have been implemented but are costly and can lead to slashing through double attestations. 
+
+Since DVT distributes the operation of a validator between multiple parties, each partie's machine can run different infrastructure component configurations (e.g., multiple client types and nodes hosted in various locations).
+
+If one of the components of a machine in a cluster goes down (For example, if there are four operators in a validator cluster and one uses a specific client that has a bug), the others ensure that the validator keeps running. 
+
+### Centralization {#centralization}
+
+Economies of scale in staking can lead to the centralization of stake, which is the idea that there is a single point of failure in the form of a single entity - a service provider or client - that has enough market share to potentially take down or censor the network (with malicious intent or through human error). 
+
+Stake centralization can also lead to client centralization since it's easier for services to support only one or two client configurations. In case of a faulty node, or poor performance, this could have a massive impact on the entire network, which should be avoided.
+
+DVT solves these issues by allowing staking providers to distribute their validator's operation between multiple operators, leading to improved operator participation in the network. While simultaneously reducing correlation risks by diversifying client configurations and jurisdictions. Resulting in the Ethereum network being more resistant and decentralized.
+
+In a nutshell, DVT enables:
+- Decentralization of Ethereum's PoS consensus
+- Ensures the liveness of the network
+- Creates validator fault tolerance
+- Trust minimized validator operation
+- Minimized slashing and downtime risks
+- Improves Diversity (client, data center, location, regulation, etc.)
+- Enhanced security of validator key management
+
+## DVT use cases {#dvt-use-cases}
+
+DVT has significant implications for the broader staking industry:
+
+### Solo stakers {#solo-stakers}
+
+The main benefit DVT brings to solo stakers is that it removes the technical barrier for running a validator node. Stakers that want to run their own validators no longer have to supply the infrastructure to participate in staking. Running a single validator instance is susceptible to technical issues, hacking, and high maintenance costs. A solo staker can use DVT to run their validator in a decentralized manner, on par with the performance of large staking services, while still having complete control over their validator keys and custody of their funds.
+
+### Staking as a Service (SaaS) {#saas}
+
+Staking providers and institutions managing many validators can leverage DVT to mitigate the risks associated with large-scale single validator instance setups. By distributing their infrastructure, they can introduce redundancy to their operations and diversify their infrastructure components to achieve greater performance and eliminate single points of failure in any single location or client type. 
+
+Staking providers invest heavily to work around operational costs in development, DevOps, and comprehensive insurance policies. With DVT, responsibility is distributed between nodes, resulting in much lower operational risk and expense.
+
+DVT can bridge the way for institutions that want to join ETH staking by reducing their risk as well as providing the much-needed transparency and trust required. By having permissioned sets of nodes that comply with KYC/AML regulations, institutions can know precisely the operators they are staking with, including slashing protection and redundancy benefits of the technology. 
+
+### Staking Pools {#staking-pools}
+
+Due to standard validator setups, staking pools and LSP (Liquid Staking Providers) are compelled to have varying levels of single-operator trust since gains and losses are socialized throughout the pool. They are also reliant on operators to safeguard signing keys because, until now, there has been no other option for them.
+
+Even though efforts are made to spread risk by distributing stakes across multiple operators, each operator still manages a significant stake independently. Relying on a single operator poses immense risks if they underperform, encounter downtime, get compromised, or act maliciously.
+
+By leveraging DVT, the trust required from operators is significantly reduced. Pools can enable operators to hold stakes without needing custody of validator keys (as only key shares are utilized). It also allows managed stakes to be distributed between more operators (e.g., instead of having a single operator managing 1000 validators, DVT enables those validators to be collectively run by multiple operators). Diverse operator configurations will ensure that if one operator should go down, the others will still be able to attest. Resulting in redundancy and diversification that leads to better performance (maximizing rewards) and resilience.
+
+Another benefit to minimizing single-operator trust is that staking pools can allow more open and permission-less operator participation. By doing this, services can reduce their risk and support Ethereum decentralization by using both curated and permissionless sets of operators, for example, by pairing home or more minor stakers with larger ones. 
+
+
+## Potential drawbacks of using DVT {#potential-drawbacks-of-using-dvt}
+
+- **Additional component** - introducing a DVT node adds another part that can possibly be faulty or vulnerable. A way to mitigate this is to strive for multiple implementations of a DVT node, meaning multiple clients (similarly as there are multiple clients for the consensus and execution layer).
+- **Operational costs** - as DVT distributes the validator between multiple parties, there are more nodes required for operation instead of only a single node, which introduces increased operating costs.
+- **Potentially increased latency** - since DVT utilizes a consensus protocol to achieve consensus between the multiple nodes operating a validator, it can potentially introduce increased latency.
