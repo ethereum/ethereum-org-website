@@ -25,9 +25,8 @@ import FeedbackCard from "../components/FeedbackCard"
 
 import { translateMessageId } from "../utils/translations"
 import { getImage } from "../utils/image"
-import { Context } from "../types"
 
-type ChildOnlyProp = { children: ReactNode }
+import type { ChildOnlyProp, Context } from "../types"
 
 const CardContainer = ({ children }: ChildOnlyProp) => {
   return (
