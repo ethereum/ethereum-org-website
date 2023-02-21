@@ -90,7 +90,7 @@ const ActionCard: React.FC<IProps> = ({
         )}
       </Flex>
       <Box p={6} className="action-card-content">
-        <Heading as="h3" fontSize="2xl" mt={2} mb={4}>
+        <Heading as="h3" fontSize="2xl" mt={2} mb={4} fontWeight={600} lineHeight={1.4}>
           <LinkOverlay
             as={Link}
             color="text"
