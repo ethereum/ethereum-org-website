@@ -36,6 +36,8 @@ This project follows the [all-contributors](https://allcontributors.org/docs/en/
 - Create a [new issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 - Comment on the issue (if you'd like to be assigned to it) - that way [our team can assign the issue to you](https://github.blog/2019-06-25-assign-issues-to-issue-commenters/).
 
+More information on the issue creation process, and expectations around creating issues can be [found here](docs/github-issue-triage-process.md).
+
 ### 2. Fork the repository (repo)
 
 - If you're not sure, here's how to [fork the repo](https://help.github.com/en/articles/fork-a-repo).
@@ -142,10 +144,12 @@ In case you want to test them as if you were in a Netlify env, you can install t
 - See [how decisions are made on content changes](https://ethereum.org/en/contributing/#how-decisions-about-the-site-are-made)
 - Acceptable PRs will be approved & merged into the `dev` branch
 
+Learn more about how we review pull requests [here](docs/deploy-and-review-process.md).
+
 ### 8. Release
 
 - `master` is continually synced to Netlify and will automatically deploy new commits to ethereum.org
-- The [website team](https://ethereum.org/en/contributing/#how-decisions-about-the-site-are-made) will periodically merge `dev` into `master` (typically multiple times per week)
+- The [website team](https://ethereum.org/en/contributing/#how-decisions-about-the-site-are-made) will create deploys and merge `dev` into `master`. This happens on Tuesdays and Thursdays every week. More info on deploys and review process [here](docs/deploy-and-review-process.md).
 - You can [view the history of releases](https://github.com/ethereum/ethereum-org-website/releases), which include PR highlights
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
