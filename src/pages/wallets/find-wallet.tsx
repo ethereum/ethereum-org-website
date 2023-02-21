@@ -37,7 +37,7 @@ import { trackCustomEvent } from "../../utils/matomo"
 import { getImage } from "../../utils/image"
 import { useOnClickOutside } from "../../hooks/useOnClickOutside"
 
-type ChildOnlyProp = { children: ReactNode }
+import type { ChildOnlyProp } from "../../types"
 
 const Subtitle = ({ children }: ChildOnlyProp) => {
   return (
@@ -178,7 +178,11 @@ const FindWalletPage = ({ data, location }) => {
       >
         <Box w={{ base: "full", sm: "50%" }} mt={{ base: 8, sm: 0 }}>
           <Breadcrumbs slug={location.pathname} />
-          <Heading as="h1" fontSize={{ base: "2.5rem", md: "5xl" }}>
+          <Heading
+            as="h1"
+            fontSize={{ base: "2.5rem", md: "5xl" }}
+            lineHeight={1.4}
+          >
             <Translation id="page-find-wallet-title" />
           </Heading>
           <Subtitle>
@@ -271,7 +275,9 @@ const FindWalletPage = ({ data, location }) => {
         </Box>
       </Box>
       <Flex
-        pt={{ base: 4, lg: 0 }}
+        px={{ base: 0, md: 8 }}
+        pt={4}
+        pb={0}
         w="full"
         gap={6}
         height="90vh"
