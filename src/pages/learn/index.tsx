@@ -35,9 +35,7 @@ import { translateMessageId, isLangRightToLeft } from "../../utils/translations"
 import { getImage } from "../../utils/image"
 
 // Types
-import type { Context } from "../../types"
-
-type ChildOnlyProp = { children: ReactNode }
+import type { ChildOnlyProp, Context } from "../../types"
 
 const Card = ({ children, ...props }: IOriginalCardProps) => {
   return (
