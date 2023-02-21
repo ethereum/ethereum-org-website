@@ -447,10 +447,12 @@ const GetInvolvedPage = ({
       <Staking>
         <CalloutBanner
           bg="transparent"
-          w={{ base: "full", md: "null" }}
-          p={{ base: 0, md: "null" }}
-          pt={{ base: 16, md: "null" }}
-          ml={{ base: 0, md: "null" }}
+          w={{ base: "full" }}
+          p={{ base: 0, sm: 12 }}
+          pt={{ base: 16, sm: 12 }}
+          ml={{ base: 0 }}
+          mt={{ base: 16, lg: 24 }}
+          mb={{ base: 16, lg: 40 }}
           image={getImage(data.rhino)!}
           alt={translateMessageId("page-staking-image-alt", intl)}
           titleKey={"page-upgrades-get-involved-stake"}

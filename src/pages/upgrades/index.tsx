@@ -316,12 +316,12 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
         </Vision>
       </Content>
       <CalloutBanner
-        ml={0}
-        mr={0}
         image={getImage(data.oldship)!}
         alt={translateMessageId("page-eth-whats-eth-hero-alt", intl)}
         titleKey={"page-upgrades-dive"}
         descriptionKey={"page-upgrades-dive-desc"}
+        mt={{ base: 16, lg: 24 }}
+        mb={{ base: 16, lg: 40 }}
       >
         <div>
           <ButtonLink to="/upgrades/vision/">
