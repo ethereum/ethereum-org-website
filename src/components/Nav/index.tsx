@@ -255,6 +255,10 @@ const Nav: React.FC<IProps> = ({ path }) => {
               text: "zero-knowledge-proofs",
               to: "/zero-knowledge-proofs/",
             },
+			{
+              text: "distributed-validator-technology",
+              to: "/dvt/",
+            },
           ],
         },
       ],
