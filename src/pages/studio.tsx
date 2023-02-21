@@ -8,13 +8,13 @@ const StudioRedirectPage = () => (
   <Container
     w="100%"
     display="flex"
-    maxWidth="5xl"
+    maxW="5xl"
     flexDirection="column"
     alignItems="center"
     alignSelf="flex-start"
-    marginY="16"
+    my="16"
   >
-    <Box paddingX="8" paddingY="4" width="100%">
+    <Box px="8" py="4" w="100%">
       <Emoji fontSize="8xl" mb="10" text=":sunset_over_buildings:" />
       <Heading
         fontSize={{ base: "5xl", lg: "6xl" }}
@@ -48,9 +48,9 @@ const StudioRedirectPage = () => (
         </ul>
       </p>
       <Divider
-        marginY="16"
-        width="10%"
-        height="1"
+        my="16"
+        w="10%"
+        h="1"
         opacity="1"
         backgroundColor="homeDivider"
       />
