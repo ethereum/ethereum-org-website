@@ -697,6 +697,16 @@ const DappsPage = ({
       image: getImage(data.oneinch),
       alt: translateMessageId("page-dapps-1inch-logo-alt", intl),
     },
+    {
+      title: "DexGuru",
+      description: translateMessageId(
+        "page-dapps-dapp-description-dexguru",
+        intl
+      ),
+      link: "https://dex.guru",
+      image: getImage(data.dexguru),
+      alt: translateMessageId("page-dapps-dexguru-logo-alt", intl),
+    },
   ]
 
   const trading = [
@@ -1930,6 +1940,9 @@ export const query = graphql`
       ...dappImage
     }
     balancer: file(relativePath: { eq: "dapps/balancer.png" }) {
+      ...dappImage
+    }
+    dexguru: file(relativePath: { eq: "dapps/dexguru.png" }) {
       ...dappImage
     }
   }

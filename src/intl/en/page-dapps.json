@@ -1,5 +1,6 @@
 {
   "page-dapps-1inch-logo-alt": "1inch logo",
+  "page-dapps-dexguru-logo-alt": "DexGuru logo",
   "page-dapps-aave-logo-alt": "Aave logo",
   "page-dapps-add-button": "Suggest dapp",
   "page-dapps-add-title": "Add dapp",
@@ -86,6 +87,7 @@
   "page-dapps-dapp-description-token-sets": "Crypto investment strategies that automatically rebalance.",
   "page-dapps-dapp-description-tornado-cash": "Send anonymous transactions on Ethereum.",
   "page-dapps-dapp-description-uniswap": "Swap tokens simply or provide tokens for % rewards.",
+  "page-dapps-dapp-description-dexguru": "Non-custodial trading terminal for DeFi traders",
   "page-dapps-docklink-dapps": "Intro to dapps",
   "page-dapps-docklink-smart-contracts": "Smart contracts",
   "page-dapps-dark-forest-logo-alt": "Dark Forest logo",
