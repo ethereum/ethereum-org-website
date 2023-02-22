@@ -108,6 +108,15 @@
     "endDate": "2023-04-16"
   },
   {
+    "title": "ETHVenice",
+    "to": "https://ethvenice.com/",
+    "sponsor": null,
+    "location": "Venice, Italy",
+    "description": "The event takes place in one of the most beautiful and historic cities in the world, Venice! A conference and hackathon open to all people who want to expand their knowledge, learn about this amazing world or get involved. We are waiting for you in many, let's connect.",
+    "startDate": "2023-10-20",
+    "endDate": "2023-10-22"
+  },
+  {
     "title": "Schelling Point",
     "to": "https://schellingpoint.gitcoin.co/",
     "sponsor": "GitcoinDAO",
