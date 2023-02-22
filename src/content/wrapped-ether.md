@@ -101,7 +101,7 @@ ETH is the safest asset because it is part of the Ethereum protocol, whereas WET
 
 **Why am I seeing different WETH tokens?**
 
-Besides the [canonical implementation of WETH](https://blog.0xproject.com/canonical-weth-a9aa7d0279dd) described om this page, there are other variants in the wild. These may be custom tokens created by dapp developers or versions issued on other blockchains, and may behave differently or have different security properties. **Always double-check the token information to know which WETH implementation you're interacting with.**
+Besides the [canonical implementation of WETH](https://blog.0xproject.com/canonical-weth-a9aa7d0279dd) described on this page, there are other variants in the wild. These may be custom tokens created by dapp developers or versions issued on other blockchains, and may behave differently or have different security properties. **Always double-check the token information to know which WETH implementation you're interacting with.**
 
 **How can I add WETH to my Metamask wallet?**
 
