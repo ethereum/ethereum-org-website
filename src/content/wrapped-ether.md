@@ -12,7 +12,7 @@ Today, **nearly 3% of the circulating ETH supply is locked in the WETH token con
 
 ## What are wrapped tokens? {#intro-to-wrapped-tokens} 
 
-A wrapped token is a token whose value is pegged to an underlying asset. An amount of the original asset is deposited into a smart contract—similar to a digital bank vault—that mints an equal amount of wrapped tokens. The vault holds the deposit until you're ready to exchange your wrapped tokens for the original asset (so you can think think of a wrapped token as a redeemable IOU issued by a smart contract).
+A wrapped token is a token whose value is pegged to an underlying asset. An amount of the original asset is deposited into a smart contract—similar to a digital bank vault—that mints an equal amount of wrapped tokens. The vault holds the deposit until you're ready to exchange your wrapped tokens for the original asset.
 
 Wrapping ETH today requires depositing it in a smart contract which creates an amount of wrapped ETH (WETH) tokens equal to the original deposit. You can also “unwrap” ETH by sending WETH tokens to the contract and receiving ETH in return.
 
@@ -20,11 +20,11 @@ In all cases, the conversion between WETH and ETH is always completed at a 1:1 r
 
 ## Why do we need to wrap ETH? {#why-do-we-need-to-wrap-eth} 
 
-Common use cases for wrapping tokens include extending the functionality of a token, allowing a native cryptocurrency to behave like an ERC20 token, or allowing the use of a token outside its native blockchain. The [canonical implementation of Wrapped Ether (WETH)](https://blog.0xproject.com/canonical-weth-a9aa7d0279dd) described here is designed for the former two use cases. 
+Common use cases for wrapping tokens include extending the functionality of a token and allowing the use of a token outside its native blockchain. With Wrapped Ether (WETH), the goal is to make ETH more useful by giving it the features of an ERC-20 token. 
 
-For example, the creation of Ether predates the introduction of the ERC-20 standard, which means ETH tokens don’t conform to the ERC-20 specification. Wrapped Ether (WETH) was thus created to **make ETH compatible with applications implementing ERC-20 interfaces**. 
+For context, [ERC-20](https://www.gemini.com/en-US/cryptopedia/erc20-token-standard-ethereum) defines a standard interface for fungible tokens, so anyone can create tokens that interact seamlessly with applications and other tokens in Ethereum's ecosystem.  But, as the creation of Ether predates the ERC-20 standard, ETH tokens don’t conform to this specification. This means you can't easily exchange ETH for other ERC-20 tokens or use ETH coins in dapps built according to the ERC-20 standard. 
 
-Some use cases for WETH include: 
+Wrapped Ether (WETH) was created to **make ETH compatible with applications and tokens implementing ERC-20 interfaces**. WETH also extends the functionality of native ETH token and gives you the opportunity to do the following:
 
 - **Exchange ETH for ERC-20 tokens**: You cannot exchange ETH directly for other ERC-20 tokens (not without introducing trusted third parties or complex technical processes). WETH is a representation of Ether that complies with the ERC-20 fungible token standard and can be exchanged 1:1 for other ERC-20 tokens. 
 
@@ -101,7 +101,7 @@ ETH is the safest asset because it is part of the Ethereum protocol, whereas WET
 
 **Why am I seeing different types of WETH?**
 
-Besides the canonical implementation of WETH described om this page, there are other variants in the wild. These may be custom tokens created by dapp developers or versions issued on other blockchains and may behave differently or have different security properties. **Always double-check the token information to know which WETH implementation you're interacting with.**
+Besides the {canonical implementation of WETH](https://blog.0xproject.com/canonical-weth-a9aa7d0279dd) described om this page, there are other variants in the wild. These may be custom tokens created by dapp developers or versions issued on other blockchains and may behave differently or have different security properties. **Always double-check the token information to know which WETH implementation you're interacting with.**
 
 **What can I do with WETH?**
 
