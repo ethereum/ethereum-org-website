@@ -459,7 +459,6 @@ As part of your monitoring, make sure to keep an eye on your machine's performan
 
 ## Further reading {#further-reading}
 
-- [Ethereum Staking Guides](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, updated often_
 - [Guide | How to setup a validator for Ethereum staking on mainnet](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, updated regularly_
 - [ETHStaker guides on running validators on testnets](https://github.com/remyroy/ethstaker#guides) – _ETHStaker, updated regularly_
 - [Ethereum Staking Guides](https://github.com/SomerEsat/ethereum-staking-guides) _– Somer Esat, updated regularly_
