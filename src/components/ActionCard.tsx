@@ -86,11 +86,27 @@ const ActionCard: React.FC<IProps> = ({
           />
         )}
         {isImageURL && (
-          <img src={image} alt={alt} className="action-card-image" />
+          <Image
+            alt={alt || ""}
+            maxH="257px"
+            maxW={{ base: "311px", sm: "372px" }}
+            minW="100px"
+            minH="100px"
+            src={image}
+            sizes="full"
+            className="action-card-image"
+          />
         )}
       </Flex>
       <Box p={6} className="action-card-content">
-        <Heading as="h3" fontSize="2xl" mt={2} mb={4} fontWeight={600} lineHeight={1.4}>
+        <Heading
+          as="h3"
+          fontSize="2xl"
+          mt={2}
+          mb={4}
+          fontWeight={600}
+          lineHeight={1.4}
+        >
           <LinkOverlay
             as={Link}
             color="text"
