@@ -395,15 +395,47 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
 
   const layer2DataCombined = [...layer2Data.optimistic, ...layer2Data.zk]
 
-  const tooltipContent = (metric: {
+  type ToolTipContentMetric = {
     apiUrl: string
     apiProvider: string
-  }): JSX.Element => (
+  }
+  const tooltipContent = (metric: ToolTipContentMetric): JSX.Element => (
     <div>
       <Translation id="data-provided-by" />{" "}
       <Link to={metric.apiUrl}>{metric.apiProvider}</Link>
     </div>
   )
+
+  const statBoxGroupData: Array<{
+    content: string
+    descriptionId: TranslationKey
+    tooltipContent: ToolTipContentMetric
+  }> = [
+    {
+      content: tvl,
+      descriptionId: "layer-2-statsbox-1",
+      tooltipContent: {
+        apiUrl: "https://l2beat.com/",
+        apiProvider: "L2BEAT",
+      },
+    },
+    {
+      content: averageFee,
+      descriptionId: "layer-2-statsbox-2",
+      tooltipContent: {
+        apiUrl: "https://cryptostats.community/",
+        apiProvider: "CryptoStats",
+      },
+    },
+    {
+      content: percentChangeL2,
+      descriptionId: "layer-2-statsbox-3",
+      tooltipContent: {
+        apiUrl: "https://l2beat.com/",
+        apiProvider: "L2BEAT",
+      },
+    },
+  ]
 
   return (
     <Flex flexDirection="column" alignItems="center">
@@ -425,56 +457,22 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             // To allow the content divider to expand vertically above the breakpoint
             height={{ md: "100px" }}
           >
-            <StatBox>
-              <StatPrimary content={tvl} />
-              <StatSpan>
-                <StatDescription>
-                  <Translation id="layer-2-statsbox-1" />
-                </StatDescription>
-                <Tooltip
-                  content={tooltipContent({
-                    apiUrl: "https://l2beat.com/",
-                    apiProvider: "L2BEAT",
-                  })}
-                >
-                  <StyledInfoIcon />
-                </Tooltip>
-              </StatSpan>
-            </StatBox>
-            <StatDivider />
-            <StatBox>
-              <StatPrimary content={averageFee} />
-              <StatSpan>
-                <StatDescription>
-                  <Translation id="layer-2-statsbox-2" />
-                </StatDescription>
-                <Tooltip
-                  content={tooltipContent({
-                    apiUrl: "https://cryptostats.community/",
-                    apiProvider: "CryptoStats",
-                  })}
-                >
-                  <StyledInfoIcon />
-                </Tooltip>
-              </StatSpan>
-            </StatBox>
-            <StatDivider />
-            <StatBox>
-              <StatPrimary content={percentChangeL2} />
-              <StatSpan>
-                <StatDescription>
-                  <Translation id="layer-2-statsbox-3" />
-                </StatDescription>
-                <Tooltip
-                  content={tooltipContent({
-                    apiUrl: "https://l2beat.com/",
-                    apiProvider: "L2BEAT",
-                  })}
-                >
-                  <StyledInfoIcon />
-                </Tooltip>
-              </StatSpan>
-            </StatBox>
+            {statBoxGroupData.map((box, idx) => (
+              <>
+                <StatBox>
+                  <StatPrimary content={box.content} />
+                  <StatSpan>
+                    <StatDescription>
+                      <Translation id={box.descriptionId} />
+                    </StatDescription>
+                    <Tooltip content={tooltipContent(box.tooltipContent)}>
+                      <StyledInfoIcon />
+                    </Tooltip>
+                  </StatSpan>
+                </StatBox>
+                {idx < statBoxGroupData.length - 1 ? <StatDivider /> : null}
+              </>
+            ))}
           </Center>
         </ContentBox>
       </Box>
