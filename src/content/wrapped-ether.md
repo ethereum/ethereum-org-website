@@ -99,19 +99,21 @@ WETH was created because the ETH token doesn't follow with the ERC-20 technical 
 
 ETH is the safest asset because it is part of the Ethereum protocol, whereas WETH is defined in a smart contract which could feasibly be hacked. Nevertheless, WETH is generally considered secure because it is based on a simple, battle-tested smart contract. The WETH contract has also beeen formally verified, which is the highest security standard for smart contracts on Ethereum. 
 
-**Why am I seeing different types of WETH?**
+**Why am I seeing different WETH tokens?**
 
-Besides the {canonical implementation of WETH](https://blog.0xproject.com/canonical-weth-a9aa7d0279dd) described om this page, there are other variants in the wild. These may be custom tokens created by dapp developers or versions issued on other blockchains and may behave differently or have different security properties. **Always double-check the token information to know which WETH implementation you're interacting with.**
+Besides the [canonical implementation of WETH](https://blog.0xproject.com/canonical-weth-a9aa7d0279dd) described om this page, there are other variants in the wild. These may be custom tokens created by dapp developers or versions issued on other blockchains, and may behave differently or have different security properties. **Always double-check the token information to know which WETH implementation you're interacting with.**
 
-**What can I do with WETH?**
+**How can I add WETH to my Metamask wallet?**
 
-WETH can be used with any decentralized application built on the ERC-20 standard. WETH is particularly useful for decentralized finance (DeFi) applications—you can exchange WETH for other tokens on a DEX, use it as collateral to borrow funds, or supply liquidity to lending platforms in order to earn interest. 
+The easiest way to add WETH on Metamask is to use the "Import Tokens" feature: search for "wrapped ether" and select WETH as the token you want to import. You'll need to make sure your Metamask wallet is connected to Ethereum Mainnet before trying to add WETH to your wallet. 
+
+Alternatively, you can add WETH to Metamask by clicking the "Custom Token" button (after selecting "Import Tokens"). Copy the WETH contract address from [Etherscan](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) and paste into the "Token Contract Address" field. If the contract address is correct, WETH should appear as the Token Symbol, after which you'll need to confirm importing WETH before it appears in your wallet. 
 
 ## Further reading {#further-reading}
 - [WTF is WETH?](https://weth.io/)
-- [What Is Wrapped Ether (WETH) and How to Wrap It?](https://academy.binance.com/en/articles/what-is-wrapped-ether-weth-and-how-to-wrap-it)
 - [What are the cheapest ways to wrap ETH into WETH?](https://medium.com/@therugpush/cheapest-way-to-wrap-eth-into-weth-446cf1ddccf7) 
 - [WETH token information on Etherscan](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
+- [How To add Wrapped Ether (WETH) to Metamask](https://isitcrypto.com/add-weth-to-metamask/)
 - [Formal Verification of WETH](https://zellic.io/blog/formal-verification-weth)
 
 
