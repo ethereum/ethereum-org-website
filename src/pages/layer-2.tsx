@@ -98,6 +98,7 @@ const StyledInfoIcon = () => (
     color="text"
     mr={2}
     opacity={0.8}
+    boxSize="full"
     _hover={{ color: "primary" }}
     _active={{ color: "primary" }}
     _focus={{ color: "primary" }}
