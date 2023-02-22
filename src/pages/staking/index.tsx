@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
+import { Box, Flex, Grid, Heading, useToken } from "@chakra-ui/react"
 import ButtonDropdown, {
   List as ButtonDropdownList,
 } from "../../components/ButtonDropdown"
@@ -10,11 +11,6 @@ import Link from "../../components/Link"
 import PageHero from "../../components/PageHero"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
-import {
-  Content,
-  Page as PageContainer,
-  Divider,
-} from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
 import ExpandableCard from "../../components/ExpandableCard"
 import StakingStatsBox from "../../components/Staking/StakingStatsBox"
@@ -25,11 +21,21 @@ import StakingCommunityCallout from "../../components/Staking/StakingCommunityCa
 import { translateMessageId, TranslationKey } from "../../utils/translations"
 import { getImage } from "../../utils/image"
 import type { Context } from "../../types"
-import { Box, Flex, Grid, Heading } from "@chakra-ui/react"
-import theme from "../../@chakra-ui/gatsby-plugin/theme"
 
 
 type ChildOnlyProp = { children: ReactNode }
+
+const Content = (props: ChildOnlyProp) => (
+  <Box p="1rem 2rem" w="100%" {...props} />
+)
+
+const PageContainer = (props: ChildOnlyProp) => (
+  <Flex flexDir="column" alignItems="center" w="100%" m="0 auto" {...props} />
+)
+
+const Divider = () => (
+  <Box mb={16} mt={16} w="10%" height="0.25rem" bgColor="homeDivider" />
+)
 
 const HeroStatsWrapper = (props: ChildOnlyProp) => (
   <Flex
@@ -114,10 +120,11 @@ const MobileButton = (props: { list: ButtonDropdownList }) => (
 )
 
 const ContentContainer = (props: { children: ReactNode; id: string }) => {
+  const mdBp = useToken("breakpoints", "md")
   return (
     <Flex
       flex="1 1"
-      flexBasis={theme.breakpoints.md}
+      flexBasis={mdBp}
       position="relative"
       padding={{ base: 0, md: "0 2rem 2rem" }}
       gap={8}
