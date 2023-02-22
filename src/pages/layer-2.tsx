@@ -157,6 +157,10 @@ const StatDescription = (props: ChildOnlyType) => (
   <Text opacity={0.8} m={0} {...props} />
 )
 
+const Layer2CardGrid = (props: ChildOnlyType) => (
+  <SimpleGrid columns={4} gap={8} {...props} />
+)
+
 interface L2DataResponseItem {
   daily: {
     data: Array<[string, number, number]>
@@ -704,7 +708,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
         <Text>
           <Translation id="layer-2-use-layer-2-generalized-1" />
         </Text>
-        <SimpleGrid columns={4} gap={8}>
+        <Layer2CardGrid>
           {layer2DataCombined
             .filter((l2) => !l2.purpose.indexOf("universal"))
             .map((l2, idx) => {
@@ -732,7 +736,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                 </Layer2ProductCard>
               )
             })}
-        </SimpleGrid>
+        </Layer2CardGrid>
       </ContentBox>
       {/* Layer 2 App Specific Section */}
       <ContentBox id="use-layer-2">
@@ -742,7 +746,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
         <Text>
           <Translation id="layer-2-use-layer-2-application-specific-1" />
         </Text>
-        <SimpleGrid columns={4} gap={8}>
+        <Layer2CardGrid>
           {layer2DataCombined
             .filter((l2) => l2.purpose.indexOf("universal"))
             .map((l2, idx) => {
@@ -770,7 +774,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                 </Layer2ProductCard>
               )
             })}
-        </SimpleGrid>
+        </Layer2CardGrid>
       </ContentBox>
       {/* Layer 2 Sidechain Section */}
       <ContentBox>
