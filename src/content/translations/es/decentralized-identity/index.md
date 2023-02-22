@@ -175,7 +175,7 @@ Hay muchos proyectos ambiciosos que utilizan Ethereum como base para soluciones 
 - [Identidad descentralizada (bonificación de sesión Livestream)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Un vídeo muy aclarador de la identidad descentralizada explicado por Andreas_
 - [Iniciar sesión con Ethereum e Identity descentralizada con Ceramic, IDX, React, y 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _tutorial de YouTube sobre la construcción de un sistema de gestión de identidad para crear, leer, y actualizar el perfil de un usuario usando su cartera Ethereum por Nader Dabit_
 - [BrightID - Identidad descentralizada en Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _episodio de pódcast Bankless abordando BrightID, una solución de identidad descentralizada para Ethereum_
-- [Internet fuera de la cadena: Credenciales descentralizadas y verificables](https://www.youtube.com/watch?v=Ez_Bb6j87mg) — _EthDenver 2022 presentación de Evin McMullen_
+- [Internet fuera de la cadena: Credenciales descentralizadas y verufucables](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — EthDenver 2022 presentación de Evin McMullen
 
 ### Comunidades {#communities}
 

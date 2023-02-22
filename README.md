@@ -1570,6 +1570,14 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/azpwnz"><img src="https://avatars.githubusercontent.com/u/6987007?v=4?s=100" width="100px;" alt="Andriy Zhuk"/><br /><sub><b>Andriy Zhuk</b></sub></a><br /><a href="#content-azpwnz" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://etherscan.io/address/gooser.eth"><img src="https://avatars.githubusercontent.com/u/121782105?v=4?s=100" width="100px;" alt="gooser.eth"/><br /><sub><b>gooser.eth</b></sub></a><br /><a href="#content-gooseri" title="Content">🖋</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/feibowei"><img src="https://avatars.githubusercontent.com/u/69777448?v=4?s=100" width="100px;" alt="feibowei"/><br /><sub><b>feibowei</b></sub></a><br /><a href="#content-feibowei" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/mesquitaoliveira"><img src="https://avatars.githubusercontent.com/u/92008139?v=4?s=100" width="100px;" alt="Mesquita Oliveira"/><br /><sub><b>Mesquita Oliveira</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=mesquitaoliveira" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.juanjosegiraldo.com"><img src="https://avatars.githubusercontent.com/u/91024217?v=4?s=100" width="100px;" alt="Juan José Giraldo"/><br /><sub><b>Juan José Giraldo</b></sub></a><br /><a href="#content-Juancamp1987" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Ash20pk"><img src="https://avatars.githubusercontent.com/u/86375577?v=4?s=100" width="100px;" alt="Ash@metaschool"/><br /><sub><b>Ash@metaschool</b></sub></a><br /><a href="#content-Ash20pk" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/t-rutten"><img src="https://avatars.githubusercontent.com/u/1389793?v=4?s=100" width="100px;" alt="Tom Rutten"/><br /><sub><b>Tom Rutten</b></sub></a><br /><a href="#content-t-rutten" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://chawyehsu.com"><img src="https://avatars.githubusercontent.com/u/5764917?v=4?s=100" width="100px;" alt="Chawye Hsu"/><br /><sub><b>Chawye Hsu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=chawyehsu" title="Documentation">📖</a></td>
+    </tr>
   </tbody>
 </table>
 
