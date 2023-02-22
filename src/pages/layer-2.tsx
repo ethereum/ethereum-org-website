@@ -704,10 +704,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
         <Text>
           <Translation id="layer-2-use-layer-2-generalized-1" />
         </Text>
-        <SimpleGrid
-          templateColumns="repeat(auto-fit, minmax(280px, 1fr))"
-          gap={8}
-        >
+        <SimpleGrid columns={4} gap={8}>
           {layer2DataCombined
             .filter((l2) => !l2.purpose.indexOf("universal"))
             .map((l2, idx) => {
@@ -745,10 +742,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
         <Text>
           <Translation id="layer-2-use-layer-2-application-specific-1" />
         </Text>
-        <SimpleGrid
-          templateColumns="repeat(auto-fit, minmax(280px, 1fr))"
-          gap={8}
-        >
+        <SimpleGrid columns={4} gap={8}>
           {layer2DataCombined
             .filter((l2) => l2.purpose.indexOf("universal"))
             .map((l2, idx) => {
