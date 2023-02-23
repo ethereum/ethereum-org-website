@@ -10082,6 +10082,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "MateusTP",
+      "name": "Mateus Pimenta",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59940545?v=4",
+      "profile": "https://github.com/MateusTP",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
