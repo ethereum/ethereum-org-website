@@ -99,7 +99,7 @@ The initial draft of an EIP is unlikely to be implemented on the Ethereum Mainne
 
 ### Community consensus {#community-consensus}
 
-While some EIPs are straightforward technical improvements with minimal nuance, some are more complex and come with tradeoffs which will affect different stakeholders in different ways. This means some EIPs are more contentious within the community than others. In such cases, there will always be various interest groups attempting to control the network through a series of coordination games where widespread support across stakeholder groups is crucial.
+While some EIPs are straightforward technical improvements with minimal nuance, some are more complex and come with tradeoffs which will affect different stakeholders in different ways. This means some EIPs are more contentious within the community than others.
 
 There is no clear playbook on how to handle contentious proposals. This is a result of Ethereum's decentralized design whereby no single stakeholder group can coerce the other through brute force: protocol developers can choose not to implement code changes; node operators can choose not to run the latest Ethereum client; application teams and users can choose not to transact on the chain. Since Protocol Developers have no way to force people to adopt network upgrades, they will generally avoid implementing EIPs where the contentiousness outweighs the benefits to the broader community.
 
