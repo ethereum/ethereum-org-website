@@ -1577,6 +1577,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Ash20pk"><img src="https://avatars.githubusercontent.com/u/86375577?v=4?s=100" width="100px;" alt="Ash@metaschool"/><br /><sub><b>Ash@metaschool</b></sub></a><br /><a href="#content-Ash20pk" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/t-rutten"><img src="https://avatars.githubusercontent.com/u/1389793?v=4?s=100" width="100px;" alt="Tom Rutten"/><br /><sub><b>Tom Rutten</b></sub></a><br /><a href="#content-t-rutten" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://chawyehsu.com"><img src="https://avatars.githubusercontent.com/u/5764917?v=4?s=100" width="100px;" alt="Chawye Hsu"/><br /><sub><b>Chawye Hsu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=chawyehsu" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/MateusTP"><img src="https://avatars.githubusercontent.com/u/59940545?v=4?s=100" width="100px;" alt="Mateus Pimenta"/><br /><sub><b>Mateus Pimenta</b></sub></a><br /><a href="#content-MateusTP" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
