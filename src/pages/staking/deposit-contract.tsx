@@ -225,7 +225,7 @@ const DepositContractPage = ({
     speech.rate = 1
     speech.pitch = 1
     // Add event listeners
-    // Explicity set state in listener callback
+    // Explicitly set state in listener callback
     const speechCallbackState = {
       browserHasTextToSpeechSupport: true,
       textToSpeechRequest: speech,

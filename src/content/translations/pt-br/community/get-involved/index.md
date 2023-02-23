@@ -72,7 +72,7 @@ O ecossistema Ethereum pretende financiar bens públicos e projetos de impacto. 
 
 ## Profissionais de finanças e contadores <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
 
-- Ethereum é o centro do ecossistema de "Finanças descentralizadas" – uma rede de protocolos e aplicativos que oferece um sistema financeiro alternativo. Se você é um profissional de finanças, confira alguns aplicativos de DeFi em [DeFi Pulse](https://defipulse.com/) ou [DeFiPrime](https://defiprime.com)
+- Ethereum é o centro do ecossistema de "Finanças descentralizadas" – uma rede de protocolos e aplicativos que oferece um sistema financeiro alternativo. Se você é um profissional de finanças, confira alguns aplicativos de DeFi em [DeFi Llama](https://defillama.com/) ou [DeFiPrime](https://defiprime.com)
 - É um contador? Ativos no Ethereum — ETH, tokens, DeFi etc – criam novas dúvidas contábeis. Você pode começar conferindo alguns projetos que tem como objetivo ajudar usuários de criptomoedas a resolver seus desafios de contabilidade, como o [Rotki](https://rotki.com/)
 
 ## Gerentes de produto <Emoji text=":fountain_pen:" size={1} /> {#product-managers}

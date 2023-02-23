@@ -44,11 +44,11 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 ## Rust projects and tools {#rust-projects-and-tools}
 
-- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Collection of externs to interact with ethereum-like network._
+- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Collection of externs to interact with ethereum-like network_
 - [Lighthouse](https://github.com/sigp/lighthouse) - _Fast Ethereum consensus layer client_
-- [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/)
+- [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _Proposed redesign of the Ethereum smart contract execution layer using a deterministic subset of WebAssembly_
 - [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS API reference_
-- [Solaris](https://github.com/paritytech/sol-rs)
+- [Solaris](https://github.com/paritytech/sol-rs) - _Solidity Smart Contracts unit test harness using the native Parity Client EVM._
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Rust Ethereum Virtual Machine Implementation_
 - [rust-web3](https://github.com/tomusdrw/rust-web3) - _Rust implementation of Web3.js library_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Wavelet smart contract in Rust_

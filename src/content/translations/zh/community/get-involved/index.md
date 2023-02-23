@@ -73,7 +73,7 @@ lang: zh
 
 ## 金融专业人士 & 会计师 <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}
 
-- 以太坊是“去中心化金融”生态系统的发源地，该系统是一个提供替代金融系统的协议和应用程序网络。 如果您是金融专业人士，请访问 [DeFi Pulse](https://defipulse.com/) 或 [DeFiPrime](https://defiprime.com)，查看一些去中心化金融应用程序。
+- 以太坊是“去中心化金融”生态系统的发源地，该系统是一个提供替代金融系统的协议和应用程序网络。 如果您是金融专业人士，请访问 [DeFi Llama](https://defillama.com/) 或 [DeFiPrime](https://defiprime.com)，查看一些去中心化金融应用程序。
 - 会计师？ 以太坊上的资产（以太币、令牌、去中心化金融等）带来了许多新的会计问题。 您可以从查看一些项目开始，帮助加密货币用户克服他们的记账 & 会计挑战，如 [Rotki](https://rotki.com/)
 
 ## 产品经理 <Emoji text=":fountain_pen:" size={1} />‍ {#product-managers}

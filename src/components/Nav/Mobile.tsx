@@ -1,4 +1,5 @@
 import React from "react"
+import { Box, IconButton } from "@chakra-ui/react"
 import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 import { motion } from "framer-motion"
@@ -6,32 +7,12 @@ import { motion } from "framer-motion"
 import Emoji from "../OldEmoji"
 import Icon from "../Icon"
 import Link from "../Link"
-import NakedButton from "../NakedButton"
 import Search from "../Search"
 import Translation from "../Translation"
 import { NavLink } from "../SharedStyledComponents"
 import { translateMessageId } from "../../utils/translations"
 
 import { ISections } from "./types"
-
-const Container = styled.div`
-  display: none;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: flex;
-  }
-`
-
-const MenuIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
-`
-
-const MenuButton = styled(NakedButton)`
-  margin-left: 1rem;
-`
-
-const OtherIcon = styled(MenuIcon)`
-  margin-right: 1rem;
-`
 
 const MobileModal = styled(motion.div)`
   position: fixed;
@@ -290,25 +271,33 @@ const MobileNavMenu: React.FC<IProps> = ({
   }
 
   return (
-    <Container>
-      <MenuButton
+    <Box
+      display={{ base: "flex", lg: "none" }}
+      gap={4}
+      sx={{ svg: { fill: "body" } }}
+    >
+      <IconButton
+        icon={<Icon name="search" />}
         onClick={() => toggleMenu("search")}
         aria-label={translateMessageId("aria-toggle-search-button", intl)}
-      >
-        <OtherIcon name="search" />
-      </MenuButton>
-      <MenuButton
+        variant="icon"
+        _hover={{ svg: { fill: "primary" } }}
+      />
+      <IconButton
+        icon={
+          <GlyphButton viewBox="0 0 24 40">
+            <motion.path
+              variants={glyphPathVariants}
+              initial={false}
+              animate={isOpen ? "open" : "closed"}
+            />
+          </GlyphButton>
+        }
         onClick={() => toggleMenu("menu")}
-        aria-label={translateMessageId("aria-toggle-menu-button", intl)}
-      >
-        <GlyphButton viewBox="0 0 24 40">
-          <motion.path
-            variants={glyphPathVariants}
-            initial={false}
-            animate={isOpen ? "open" : "closed"}
-          />
-        </GlyphButton>
-      </MenuButton>
+        aria-label={translateMessageId("aria-toggle-search-button", intl)}
+        variant="icon"
+        _hover={{ svg: { fill: "primary" } }}
+      />
       <MobileModal
         animate={isOpen ? "open" : "closed"}
         variants={mobileModalVariants}
@@ -381,20 +370,20 @@ const MobileNavMenu: React.FC<IProps> = ({
         initial="closed"
       >
         <BottomItem onClick={() => toggleMenu("search")}>
-          <MenuIcon name="search" />
+          <Icon name="search" />
           <BottomItemText>
             <Translation id="search" />
           </BottomItemText>
         </BottomItem>
         <BottomItem onClick={toggleTheme}>
-          <MenuIcon name={isDarkTheme ? "darkTheme" : "lightTheme"} />
+          <Icon name={isDarkTheme ? "darkTheme" : "lightTheme"} />
           <BottomItemText>
             <Translation id={isDarkTheme ? "dark-mode" : "light-mode"} />
           </BottomItemText>
         </BottomItem>
         <BottomItem onClick={handleClick}>
           <BottomLink to={`/languages/${fromPageParameter}`}>
-            <MenuIcon name="language" />
+            <Icon name="language" />
             <BottomItemText>
               <Translation id="languages" />
             </BottomItemText>
@@ -418,7 +407,7 @@ const MobileNavMenu: React.FC<IProps> = ({
           <Translation id="search-box-blank-state-text" />
         </BlankSearchState>
       </SearchContainer>
-    </Container>
+    </Box>
   )
 }
 

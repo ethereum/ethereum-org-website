@@ -332,7 +332,6 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 ### 去中心化金融数据 {#defi-data}
 
-- [去中心化金融 Pulse](https://defipulse.com/)
 - [去中心化金融 Prime](https://defiprime.com/)
 - [去中心化金融 Llama](https://defillama.com/)
 - [DeFi Rate](https://defirate.com/)

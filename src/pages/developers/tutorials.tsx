@@ -466,7 +466,7 @@ export const query = graphql`
   query DevelopersTutorialsPage {
     allTutorials: allMdx(
       filter: { slug: { regex: "/tutorials/" } }
-      sort: { fields: frontmatter___published, order: DESC }
+      sort: { frontmatter: { published: DESC } }
     ) {
       nodes {
         fields {

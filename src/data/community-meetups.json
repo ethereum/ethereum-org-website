@@ -66,16 +66,16 @@
     "link": "https://www.meetup.com/ethvancouver-meetup-group/"
   },
   {
+    "title": "Ethereum-France",
+    "emoji": ":fr:",
+    "location": "France",
+    "link": "https://www.meetup.com/fr-FR/ethereum-france/"
+  },
+  {
     "title": "Ethereum Paris",
     "emoji": ":fr:",
     "location": "Paris",
     "link": "https://www.meetup.com/Ethereum-Paris/"
-  },
-  {
-    "title": "Ethereum Toulouse",
-    "emoji": ":fr:",
-    "location": "Toulouse",
-    "link": "https://www.meetup.com/Ethereum-Toulouse/"
   },
   {
     "title": "Berlin Ethereum Meetup",
@@ -106,6 +106,12 @@
     "emoji": ":it:",
     "location": "Remote",
     "link": "https://t.me/ethereumitalia"
+  },
+  {
+    "title": "Ethereum Venezia Meetup",
+    "emoji": ":it:",
+    "location": "Venice",
+    "link": "https://discord.gg/VMzVjCHN8k"
   },
   {
     "title": "Ethereum Japan",
@@ -171,7 +177,7 @@
     "title": "Ethereum Madrid",
     "emoji": ":es:",
     "location": "Madrid",
-    "link": "https://ethereummadrid.com/"
+    "link": "https://www.meetup.com/ethereum-madrid/"
   },
   {
     "title": "Geneva DevChain",
@@ -340,5 +346,11 @@
     "emoji": ":cr:",
     "location": "Costa Rica",
     "link": "https://twitter.com/EthereumCR"
+  },
+  {
+    "title": "Hash House Medellín",
+    "emoji": ":co:",
+    "location": "Colombia",
+    "link": "https://www.meetup.com/hash-house-medellin/"
   }
 ]

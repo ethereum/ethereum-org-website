@@ -61,7 +61,7 @@ Download the Raspberry Pi image from [Ethereum on Arm](https://ethereumonarm-my.
 ```sh
 # From directory containing the downloaded image
 shasum -a 256 ethonarm_22.04.00.img.zip
-# Hash should output: 485cf36128ca60a41b5de82b5fee3ee46b7c479d0fc5dfa5b9341764414c4c57
+# Hash should output: fb497e8f8a7388b62d6e1efbc406b9558bee7ef46ec7e53083630029c117444f
 ```
 
 Note that images for Rock 5B and Odroid M1 boards are available at the Ethereum-on-Arm [downloads page](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/download-and-install.html).
@@ -82,7 +82,7 @@ It is really important to get the name correct because the next command includes
 ```shell
 # unzip and flash image
 unzip ethonarm_22.04.00.img.zip
-sudo dd bs=1M if=ethonarm_kiln_22.04.00.img of=/dev/mmcblk0 conv=fdatasync status=progress
+sudo dd bs=1M if=ethonarm_22.04.00.img of=/dev/<sdxx> conv=fdatasync status=progress
 ```
 
 The card is now flashed, so it can be inserted into the Raspberry Pi.

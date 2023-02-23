@@ -101,13 +101,13 @@ Unul dintre beneficiile principale ale actualizării Londra este creşterea sati
 
 ## EIP-1559 {#eip-1559}
 
-Punerea în aplicare a [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) în cadrul Actualizării Londra a făcut ca mecanismul taxelor de tranzacție să fie mai complex decât licitația anterioară a prețului gazului, dar are avantajul de a face ca taxele de gaz mai previzibile, conducând la o piață a taxelor de tranzacție mai eficientă. Utilizatorii pot transmite tranzacții cu un `maxFeePerGas` care corespunde sumei pe care sunt dispuși să o plătească pentru executarea tranzacţiei, ştiind că nu vor plăti mai mult decât prețul de piață pentru gaz (`baseFeePerGas`) și că orice sumă în plus, mai puțin bacșișul, le va fi rambursată.
+Punerea în aplicare a [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) în cadrul Actualizării Londra a făcut ca mecanismul taxelor de tranzacție să fie mai complex decât licitația anterioară a prețului gazului, dar are avantajul de a face ca taxele de gaz mai previzibile, conducând la o piață a taxelor de tranzacție mai eficientă. Utilizatorii pot transmite tranzacții cu un `maxFeePerGas` care corespunde sumei pe care sunt dispuși să o plătească pentru executarea tranzacţiei, ştiind că nu vor plăti mai mult decât prețul de piață pentru gaz (`baseFeePerGas`) și că orice sumă în plus, mai puțin bacșișul, le va fi rambursată.
 
 Acest videoclip explică EIP-1559 și beneficiile aduse de acesta:
 
 <YouTube id="MGemhK9t44Q" />
 
-Dacă sunteți interesat, puteți citi [Specificațiile EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md)exacte.
+Dacă sunteți interesat, puteți citi [Specificațiile EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)exacte.
 
 Aprofundați-vă cunoștințele cu aceste [Resurse EIP-1559](https://hackmd.io/@timbeiko/1559-resources).
 

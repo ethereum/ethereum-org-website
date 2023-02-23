@@ -135,6 +135,14 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [NOWNodes.io](https://nownodes.io/)
 - [Documentation](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
 
+**Moralis -** **_Enterprise-Grade EVM API Provider._**
+
+- [moralis.io](http://moralis.io)
+- [Documentation](https://docs.moralis.io/)
+- [GitHub](https://github.com/MoralisWeb3)
+- [Discord](https://discord.com/invite/KYswaxwEtg)
+- [Forum](https://forum.moralis.io/)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_

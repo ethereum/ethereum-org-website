@@ -454,7 +454,7 @@ Use the `UniswapV2ERC20._mint` function to actually create the additional liquid
     }
 ```
 
-If there is no fee set `kLast` to zero (if it isn't that already). When this contract was written there was a [gas refund feature](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3298.md) that encouraged contracts to reduce the overall size of the Ethereum state by zeroing out storage they did not need.
+If there is no fee set `kLast` to zero (if it isn't that already). When this contract was written there was a [gas refund feature](https://eips.ethereum.org/EIPS/eip-3298) that encouraged contracts to reduce the overall size of the Ethereum state by zeroing out storage they did not need.
 This code gets that refund when possible.
 
 #### Externally Accessible Functions {#pair-external}
@@ -925,7 +925,7 @@ import './interfaces/IERC20.sol';
 import './interfaces/IWETH.sol';
 ```
 
-Most of these we either encountered before, or are fairly obvious. The one exception is `IWETH.sol`. Uniswap v2 allows exchanges for any pair of ERC-20 tokens, but ether (ETH) itself isn't an ERC-20 token. It predates the standard and is transfered by unique mechanisms. To enable the use of ETH in contracts that apply to ERC-20 tokens people came up with the [wrapped ether (WETH)](https://weth.io/) contract. You send this contract ETH, and it mints you an equivalent amount of WETH. Or you can burn WETH, and get ETH back.
+Most of these we either encountered before, or are fairly obvious. The one exception is `IWETH.sol`. Uniswap v2 allows exchanges for any pair of ERC-20 tokens, but ether (ETH) itself isn't an ERC-20 token. It predates the standard and is transferred by unique mechanisms. To enable the use of ETH in contracts that apply to ERC-20 tokens people came up with the [wrapped ether (WETH)](https://weth.io/) contract. You send this contract ETH, and it mints you an equivalent amount of WETH. Or you can burn WETH, and get ETH back.
 
 ```solidity
 contract UniswapV2Router02 is IUniswapV2Router02 {
@@ -1067,12 +1067,6 @@ If the optimal B amount is more than the desired B amount it means B tokens are 
 Putting it all together we get this graph. Assume you're trying to deposit a thousand A tokens (blue line) and a thousand B tokens (red line). The x axis is the exchange rate, A/B. If x=1, they are equal in value and you deposit a thousand of each. If x=2, A is twice the value of B (you get two B tokens for each A token) so you deposit a thousand B tokens, but only 500 A tokens. If x=0.5, the situation is reversed, a thousand A tokens and five hundred B tokens.
 
 ![Graph](liquidityProviderDeposit.png)
-
-```solidity
-            }
-        }
-    }
-```
 
 You could deposit liquidity directly into the core contract (using [UniswapV2Pair::mint](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol#L110)), but the core contract only checks that it is not getting cheated itself, so you run the risk of losing value if the exchange rate changes between the time you submit your transaction and the time it is executed. If you use the periphery contract, it figures the amount you should deposit and deposits it immediately, so the exchange rate doesn't change and you don't lose anything.
 

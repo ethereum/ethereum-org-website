@@ -332,7 +332,6 @@ DeFi é um movimento de código aberto. Os protocolos e aplicações DeFi são t
 
 ### Dados DeFi {#defi-data}
 
-- [Defi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 - [Taxa DeFi](https://defirate.com/)

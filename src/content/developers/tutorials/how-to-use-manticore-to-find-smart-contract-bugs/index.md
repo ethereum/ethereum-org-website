@@ -62,7 +62,7 @@ This approach produces no false positives in the sense that all identified progr
 
 ### Path Predicate Example {#path-predicate-example}
 
-To get an insigh of how DSE works, consider the following example:
+To get an insight of how DSE works, consider the following example:
 
 ```solidity
 function f(uint a){
@@ -74,7 +74,7 @@ function f(uint a){
 }
 ```
 
-As `f()` contains two paths, a DSE will construct two differents path predicates:
+As `f()` contains two paths, a DSE will construct two different path predicates:
 
 - Path 1: `a == 65`
 - Path 2: `Not (a == 65)`
@@ -98,7 +98,7 @@ Here there is only one path to explore in the function:
 
 - Path 1: `c = a + b`
 
-Using Manticore, you can check for overflow, and add constraitns to the path predicate:
+Using Manticore, you can check for overflow, and add constraints to the path predicate:
 
 - `c = a + b AND (c < a OR c < b)`
 

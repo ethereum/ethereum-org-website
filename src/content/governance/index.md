@@ -91,7 +91,7 @@ This flow, while very simplified, gives an overview of the significant stages fo
 
 ### Understanding prior work {#prior-work}
 
-EIP Champions should familiarise themselves with prior work and proposals before creating an EIP which can be seriously considered for deployment on the Ethereum Mainnet. This way, the EIP hopefully brings something new which hasn't been rejected before. The three main places to research this are the [EIP repository](https://github.com/ethereum/eips), [Ethereum Magicians](https://ethereum-magicians.org/) and [ethresear.ch](https://ethresear.ch/).
+EIP Champions should familiarise themselves with prior work and proposals before creating an EIP which can be seriously considered for deployment on the Ethereum Mainnet. This way, the EIP hopefully brings something new which hasn't been rejected before. The three main places to research this are the [EIP repository](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/) and [ethresear.ch](https://ethresear.ch/).
 
 ### Working groups {#working-groups}
 
@@ -153,7 +153,7 @@ The Ethereum governance process often trades off speed and efficiency for openne
 
 While the specification and development implementations have always been fully open source, the formal processes used to propose updates described above weren't used. This allowed changes to be specified and agreed upon quicker by researchers and implementers.
 
-When the Beacon Chain (consensus layer) merged with the Ethereum execution layer, the governance process to propose changes was harmonized. The Merge was successfully implemented on September 15, 2022 and the governance process that lead to its success can be found [here](https://github.com/ethereum/EIPs/pull/3675).
+When the Beacon Chain merged with the Ethereum execution layer on September 15th, 2022 The Merge was complete as part of the [Paris network upgrade](https://ethereum.org/en/history/#paris). The proposal [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) was changed from 'Last Call' to 'Final', completing the transition to proof-of-stake.
 
 <ButtonLink to="/upgrades/merge/">
   More on The Merge
