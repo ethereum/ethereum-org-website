@@ -54,12 +54,12 @@ Platforms with contract-based persistence:
 IPFS is a distributed system for storing and accessing files, websites, applications, and data. It doesn't have a built-in incentive scheme, but can instead be used with any of the contract-based incentive solutions above for longer-term persistence. Another way to persist data on IPFS is to work with a pinning service, which will "pin" your data for you. You can even run your own IPFS node and contribute to the network to persist your and/or other's data for free!
 
 - [IPFS](https://docs.ipfs.io/concepts/what-is-ipfs/)
-- [Filebase](https://filebase.com) _(IPFS Pinning Service)_
 - [Pinata](https://www.pinata.cloud/) _(IPFS pinning service)_
 - [web3.storage](https://web3.storage/) _(IPFS/Filecoin pinning service)_
 - [Infura](https://infura.io/product/ipfs) _(IPFS pinning service)_
 - [IPFS Scan](https://ipfs-scan.io) _(IPFS pinning explorer)_
 - [4EVERLAND](https://www.4everland.org/)_（IPFS pinning service）_
+- [Filebase](https://filebase.com) _(IPFS Pinning Service)_
 
 SWARM is a decentralised data storage and distribution technology with a storage incentive system and a storage rent price oracle.
 
@@ -177,12 +177,6 @@ Proof-of-stake based:
 - [Documentation](https://developers.ceramic.network/learn/welcome/)
 - [GitHub](https://github.com/ceramicnetwork/js-ceramic/)
 
-**Filebase - _The first S3-compatible decentralized storage and geo-redundant IPFS pinning service. All files uploaded to IPFS through Filebase are automatically pinned to the Filebase infrastructure with 3x replication across the globe._**
-
-- [Filebase.com](https://filebase.com/)
-- [Documentation](https://docs.filebase.com/)
-- [GitHub](https://github.com/filebase)
-
 **4EVERLAND - _A Web 3.0 cloud computing platform that integrates storage, compute and networking core capabilities, is S3 compatible and provides synchronous data storage on decentralised storage networks such as IPFS and Arweave._**
 
 - [4everland.org](https://www.4everland.org/)
@@ -194,6 +188,12 @@ Proof-of-stake based:
 - [Kaleido](https://kaleido.io/)
 - [Documentation](https://docs.kaleido.io/kaleido-services/ipfs/)
 - [GitHub](https://github.com/kaleido-io)
+
+**Filebase - _S3-compatible decentralized storage and geo-redundant IPFS pinning service. All files uploaded to IPFS through Filebase are automatically pinned to the Filebase infrastructure with 3x replication across the globe._**
+
+- [Filebase.com](https://filebase.com/)
+- [Documentation](https://docs.filebase.com/)
+- [GitHub](https://github.com/filebase)
 
 ## Further reading {#further-reading}
 
