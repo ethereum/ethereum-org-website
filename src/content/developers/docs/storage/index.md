@@ -59,6 +59,7 @@ IPFS is a distributed system for storing and accessing files, websites, applicat
 - [Infura](https://infura.io/product/ipfs) _(IPFS pinning service)_
 - [IPFS Scan](https://ipfs-scan.io) _(IPFS pinning explorer)_
 - [4EVERLAND](https://www.4everland.org/)_（IPFS pinning service）_
+- [Filebase](https://filebase.com) _(IPFS Pinning Service)_
 
 SWARM is a decentralised data storage and distribution technology with a storage incentive system and a storage rent price oracle.
 
