@@ -84,7 +84,7 @@ const styles: Styles = (theme: Theme) => {
       --docsearch-searchbox-height: fit-content;
       --docsearch-highlight-color: var(--eth-colors-primaryHover);
       --docsearch-modal-width: 650px;
-      --docsearch-hit-height: 48px;
+      --docsearch-hit-height: fit-content;
     }
 
     /* Modal header */
@@ -134,8 +134,9 @@ const styles: Styles = (theme: Theme) => {
     }
 
     .DocSearch-Hit-source {
-      line-height: 22px;
+      line-height: ${space["6"]};
       color: var(--eth-colors-body);
+      padding-bottom: ${space["0.5"]};
     }
 
     .DocSearch-Hit {
@@ -152,12 +153,13 @@ const styles: Styles = (theme: Theme) => {
       border-bottom: ${borders["1px"]};
       border-color: var(--eth-colors-disabled);
       background: none;
+      padding-block: ${space["3"]};
     }
 
     .DocSearch-Hit[aria-selected="true"] a {
       background: var(--eth-colors-primaryHover);
       box-shadow: 4px 4px 0 0 var(--eth-colors-primaryLight);
-      border-bottom: none;
+      border-bottom: transparent;
       --docsearch-hit-active-color: var(--eth-colors-background);
     }
 
