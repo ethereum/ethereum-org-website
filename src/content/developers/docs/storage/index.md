@@ -48,6 +48,7 @@ Platforms with contract-based persistence:
 - [0Chain](https://0chain.net/)
 - [Crust Network](https://crust.network)
 - [Swarm](https://www.ethswarm.org/)
+- [4EVERLAND](https://www.4everland.org/)
 
 ### Additional considerations {#additional-consideration}
 
@@ -78,6 +79,7 @@ Types of dStorage with a challenge mechanism:
 - Arweave
 - Filecoin
 - Crust Network
+- 4EVERLAND
 
 ### Decentrality {#decentrality}
 
@@ -92,6 +94,7 @@ Decentralized tools without KYC:
 - IPFS
 - Ethereum
 - Crust Network
+- 4EVERLAND
 
 ### Consensus {#consensus}
 

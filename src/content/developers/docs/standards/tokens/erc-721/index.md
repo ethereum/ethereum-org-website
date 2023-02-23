@@ -77,7 +77,7 @@ see below we will use a simplified ABI, to make it a low friction example.
 First, make sure you have installed [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python library:
 
 ```
-$ pip install web3
+pip install web3
 ```
 
 ```python

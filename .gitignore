@@ -84,3 +84,6 @@ src/gatsby-types.d.ts
 
 # vscode workplace configuration
 .vscode
+
+# storybook static files
+storybook-static/
