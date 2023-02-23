@@ -418,7 +418,6 @@ const Nav: FC<IProps> = ({ path }) => {
               <Menu path={path} sections={linkSections} />
             </LeftItems>
             <RightItems>
-              {/* <Search useKeyboardShortcut /> */}
               <Search />
               <IconButton
                 aria-label={
