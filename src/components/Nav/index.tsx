@@ -9,7 +9,6 @@ import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
 import ButtonLink from "../ButtonLink"
 import Link from "../Link"
-// import Search from "../Search"
 import Search from "../Search"
 import Translation from "../Translation"
 import { NavLink } from "../SharedStyledComponents"
@@ -384,10 +383,10 @@ const Nav: FC<IProps> = ({ path }) => {
   let mobileLinkSections = cloneDeep(linkSections)
   const handleMenuToggle = (item?: "search" | "menu"): void => {
     if (item === "menu") {
-      setIsMenuOpen(!isMenuOpen)
+      setIsMenuOpen((prev) => !prev)
     } else if (item === "search") {
       document.getElementsByClassName("DocSearch-Button")[0].click()
-      setIsSearchOpen(!isSearchOpen)
+      setIsSearchOpen((prev) => !prev)
     } else {
       setIsMenuOpen(false)
       setIsSearchOpen(false)

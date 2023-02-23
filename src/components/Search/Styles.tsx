@@ -127,7 +127,8 @@ const styles: Styles = (theme: Theme) => {
 
     /* Modal body */
     .DocSearch-Dropdown {
-      padding-inline: ${space["8"]};
+      padding-inline-start: ${space["8"]};
+      padding-inline-end: ${space["4"]} !important;
       max-height: calc(100vh - 16rem);
       overflow-y: scroll;
     }
@@ -156,6 +157,7 @@ const styles: Styles = (theme: Theme) => {
     .DocSearch-Hit[aria-selected="true"] a {
       background: var(--eth-colors-primaryHover);
       box-shadow: 4px 4px 0 0 var(--eth-colors-primaryLight);
+      border-bottom: none;
       --docsearch-hit-active-color: var(--eth-colors-background);
     }
 
@@ -228,7 +230,7 @@ const styles: Styles = (theme: Theme) => {
 
       .DocSearch-Modal {
         position: fixed;
-        --inset: 1rem;
+        --inset: ${space["4"]};
         inset: var(--inset);
         max-width: calc(100vw - 2 * var(--inset));
         max-height: calc(100vh - 2 * var(--inset));
@@ -236,12 +238,21 @@ const styles: Styles = (theme: Theme) => {
         overflow: hidden;
       }
 
+      .DocSearch-SearchBar {
+        padding: ${space["4"]};
+      }
+
+      .DocSearch-SearchBar input {
+        font-size: ${fontSizes["m"]};
+      }
+
       .DocSearch-Cancel {
         color: var(--eth-colors-primary);
       }
 
       .DocSearch-Dropdown {
-        padding-inline: ${space["8"]};
+        padding-inline-start: ${space["4"]};
+        padding-inline-end: ${space["2"]} !important;
         max-height: 100%;
         overflow-y: scroll;
       }
