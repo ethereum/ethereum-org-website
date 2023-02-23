@@ -15,19 +15,90 @@ import PageMetadata from "../../../components/PageMetadata"
 import CardList from "../../../components/CardList"
 import Translation from "../../../components/Translation"
 import Link from "../../../components/Link"
-
-import {
-  CardContainer,
-  CardGrid,
-  Content,
-  Page,
-  GrayContainer,
-  Divider,
-  SloganGradient,
-} from "../../../components/SharedStyledComponents"
 import Breadcrumbs from "../../../components/Breadcrumbs"
 import FeedbackCard from "../../../components/FeedbackCard"
 import { getImage, ImageDataLike } from "../../../utils/image"
+import {
+  Box,
+  Divider,
+  DividerProps,
+  Flex,
+  Grid,
+  useToken,
+} from "@chakra-ui/react"
+import { ChildOnlyProp } from "../../../types"
+
+const Page = (props: ChildOnlyProp) => (
+  <Flex direction="column" align="center" w="full" {...props} />
+)
+
+const PageDivider = (props: DividerProps) => (
+  <Divider
+    my={16}
+    w="10%"
+    borderBottomWidth="0.25rem"
+    borderColor="homeDivider"
+    {...props}
+  />
+)
+
+const PageContent = (props: ChildOnlyProp) => (
+  <Box py={4} px={8} w="full" {...props} />
+)
+
+const StyledCardContainer = (props: ChildOnlyProp) => (
+  <Flex wrap="wrap" mt={8} mb={12} mx={-4} {...props} />
+)
+
+const StyledCardGrid = (props: ChildOnlyProp) => (
+  <Grid
+    mt={8}
+    mb={12}
+    gap={8}
+    templateColumns="repeat(auto-fill, minmax(min(100%, 280px), 1fr))"
+    {...props}
+  />
+)
+
+const StyledGrayContainer = (props: ChildOnlyProp) => {
+  const tableItemBoxShadow = useToken("colors", "tableItemBoxShadow")
+
+  return (
+    <Box
+      w="full"
+      py={16}
+      px={0}
+      mt={8}
+      bg="grayBackground"
+      boxShadow={`inset 0px 1px 0px ${tableItemBoxShadow}`}
+      {...props}
+    />
+  )
+}
+
+const SloganGradient = (props: ChildOnlyProp) => {
+  const upgradesGradient = useToken("colors", "upgradesGradient")
+
+  return (
+    <Box
+      fontSize={{ base: "2.5rem", lg: "5xl" }}
+      fontWeight="extrabold"
+      lineHeight="140%"
+      maxW="720px"
+      mt={4}
+      mb={0}
+      mx="auto"
+      bgImage={upgradesGradient}
+      bgClip="text"
+      sx={{
+        "&": {
+          "-webkit-text-fill-color": "transparent",
+        },
+      }}
+      {...props}
+    />
+  )
+}
 
 const HeroContainer = styled.div`
   padding-left: 0rem;
@@ -100,16 +171,6 @@ const ReverseRow = styled.div`
   }
 `
 
-const StyledCardContainer = styled(CardContainer)`
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-`
-
-const StyledCardGrid = styled(CardGrid)`
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-`
-
 const StyledCardList = styled(CardList)`
   margin-right: 2rem;
 `
@@ -145,12 +206,6 @@ const RightColumn = styled.div`
 
 const StyledBreadcrumbs = styled(Breadcrumbs)`
   justify-content: center;
-`
-
-const StyledGrayContainer = styled(GrayContainer)`
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
 `
 
 const StyledCalloutBanner = styled(CalloutBanner)`
@@ -396,7 +451,7 @@ const GetInvolvedPage = ({
           intl
         )}
       />
-      <Content>
+      <PageContent>
         <HeroCard>
           <HeroContainer>
             <StyledBreadcrumbs slug={location.pathname} startDepth={1} />
@@ -427,9 +482,9 @@ const GetInvolvedPage = ({
             </StyledCard>
           ))}
         </StyledCardContainer>
-      </Content>
-      <Divider id="clients" />
-      <Content>
+      </PageContent>
+      <PageDivider id="clients" />
+      <PageContent>
         <h2>
           <Translation id="page-upgrades-get-involved-run-clients" />
         </h2>
@@ -453,7 +508,7 @@ const GetInvolvedPage = ({
           <Translation id="page-upgrades-get-involved-run-clients-consensus-desc" />
         </p>
         {getClientCards("cl")}
-      </Content>
+      </PageContent>
       <Staking>
         <StyledCalloutBanner
           image={getImage(data.rhino)!}
@@ -469,7 +524,7 @@ const GetInvolvedPage = ({
         </StyledCalloutBanner>
       </Staking>
       <StyledGrayContainer>
-        <Content>
+        <PageContent>
           <Row>
             <LeftColumn>
               <h2 id="#bug-bounty">
@@ -503,9 +558,9 @@ const GetInvolvedPage = ({
               <Leaderboard content={bountyHunters} limit={5} />
             </LeaderboardContainer>
           </Row>
-        </Content>
+        </PageContent>
       </StyledGrayContainer>
-      <Content>
+      <PageContent>
         <ReverseRow>
           <LeftColumn>
             <StyledCardList content={ethresearch} />
@@ -519,7 +574,7 @@ const GetInvolvedPage = ({
             </p>
           </RightColumn>
         </ReverseRow>
-      </Content>
+      </PageContent>
       <FeedbackCard />
     </Page>
   )
