@@ -45,6 +45,15 @@
     "endDate": "2023-04-16"
   },
   {
+    "title": "ETHTaipei",
+    "to": "https://ethtaipei.org/",
+    "sponsor": null,
+    "location": "Taipei, Taiwan",
+    "description": "ETHTaipei is a community-driven event, spawned from the desire of connecting the Taiwan/Asia community with teams globally on a deep technical level.",
+    "startDate": "2023-04-21",
+    "endDate": "2023-04-25"
+  },
+  {
     "title": "ETHGlobal Istanbul",
     "to": "https://ethglobal.com/events/istanbul",
     "sponsor": null,
