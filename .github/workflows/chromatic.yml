@@ -16,6 +16,7 @@ on:
       - "src/pages/**/*"
       - "src/pages-conditional/**/*"
       - "src/templates/**/*"
+      - "src/@chakra-ui/gatsby-plugin/**/*"
 
 # List of jobs
 jobs:
