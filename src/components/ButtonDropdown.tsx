@@ -5,6 +5,7 @@ import {
   MenuItem,
   Box,
   BoxProps,
+  MenuListProps,
 } from "@chakra-ui/react"
 import React, { useState } from "react"
 import { translateMessageId, TranslationKey } from "../utils/translations"
@@ -98,11 +99,6 @@ const ButtonDropdown: React.FC<IProps> = ({ list, ...props }) => {
             backgroundColor="dropdownBackground"
             color="text"
             width={{ base: "100%", lg: "auto" }}
-            display={{ base: isOpen ? "block" : "none", lg: "none" }}
-            position="initial"
-            rootProps={{
-              position: "initial",
-            }}
           >
             {list.items.map(({ text, to, matomo, callback }, idx) => (
               <MenuItem
