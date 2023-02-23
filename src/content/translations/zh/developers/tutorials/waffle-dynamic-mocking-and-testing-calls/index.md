@@ -35,29 +35,29 @@ published: 2020-11-14
 在开始之前，我们需要准备一个简单的 node.js 项目：
 
 ```bash
-$ mkdir dynamic-mocking
-$ cd dynamic-mocking
-$ mkdir contracts src
+mkdir dynamic-mocking
+cd dynamic-mocking
+mkdir contracts src
 
-$ yarn init
+yarn init
 # or if you're using npm
-$ npm init
+npm init
 ```
 
 让我们从添加类型脚本和测试依赖项开始-mocha & chai：
 
 ```bash
-$ yarn add --dev @types/chai @types/mocha chai mocha ts-node typescript
+yarn add --dev @types/chai @types/mocha chai mocha ts-node typescript
 # or if you're using npm
-$ npm install @types/chai @types/mocha chai mocha ts-node typescript --save-dev
+npm install @types/chai @types/mocha chai mocha ts-node typescript --save-dev
 ```
 
 现在让我们添加`Waffle`和`Ethers`：
 
 ```bash
-$ yarn add --dev ethereum-waffle ethers
+yarn add --dev ethereum-waffle ethers
 # or if you're using npm
-$ npm install ethereum-waffle ethers --save-dev
+npm install ethereum-waffle ethers --save-dev
 ```
 
 您的项目结构现在应该如下所示：
@@ -113,7 +113,7 @@ contract AmIRichAlready {
 现在我们已经准备好使用 Waffer 构建合约：
 
 ```bash
-$ npx waffle
+npx waffle
 ```
 
 很简单，对吗？ 在`build/`文件夹中，出现了与合约和接口相对应的两个文件。 我们稍后将使用它们进行测试。

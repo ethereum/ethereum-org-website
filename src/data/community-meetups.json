@@ -346,5 +346,11 @@
     "emoji": ":cr:",
     "location": "Costa Rica",
     "link": "https://twitter.com/EthereumCR"
+  },
+  {
+    "title": "Hash House Medellín",
+    "emoji": ":co:",
+    "location": "Colombia",
+    "link": "https://www.meetup.com/hash-house-medellin/"
   }
 ]

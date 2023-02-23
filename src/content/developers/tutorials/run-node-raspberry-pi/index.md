@@ -82,7 +82,7 @@ It is really important to get the name correct because the next command includes
 ```shell
 # unzip and flash image
 unzip ethonarm_22.04.00.img.zip
-sudo dd bs=1M if=ethonarm_kiln_22.04.00.img of=/dev/mmcblk0 conv=fdatasync status=progress
+sudo dd bs=1M if=ethonarm_22.04.00.img of=/dev/<sdxx> conv=fdatasync status=progress
 ```
 
 The card is now flashed, so it can be inserted into the Raspberry Pi.
