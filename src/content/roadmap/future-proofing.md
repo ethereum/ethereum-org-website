@@ -5,7 +5,7 @@ description: High level overview of how Ethereum is set up for the future
 
 Some parts of the roadmap are not necessarily required for scaling or securing Ethereum in the near-term, but set Ethereum up for stability and reliability for centuries to come. These upgrades cement Ethereum as the resilient, decentralized base layer for the future, whatever it may hold.
 
-## Quantum resistance
+## Quantum resistance {#quantum-resistance}
 
 Some of the cryptography securing present-day Ethereum will be compromised when quantum computing becomes a reality. Although quantum computers are probably decades away from being a genuine threat to modern cryptography, Ethereum is being built to be secure for centuries to come. This means making Ethereum quantum resistant now.
 
@@ -15,7 +15,7 @@ The “KZG” commitment schemes used in many places across Ethereum to generate
 
 Read more on [KZG and trusted setups](./danksharding#what-is-kzg)
 
-## Simpler and more efficient Ethereum
+## Simpler and more efficient Ethereum {#simpler-more-efficient-ethereum}
 
 Complexity creates opportunities for bugs or vulnerabilities that can be exploited by attackers. Therefore, part of the roadmap is simplifying Ethereum and removing code that has hung around through various upgrades but is no longer needed or can now be improved upon. As well as minimizing the attack surface, a leaner, simpler codebase is easier for developers to maintain and reason about.
 

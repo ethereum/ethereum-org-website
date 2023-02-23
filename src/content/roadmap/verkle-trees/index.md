@@ -24,11 +24,11 @@ Ethereum clients currently use a data structure known as a Patricia Merkle Trie 
 
 </ExpandableCard>
 
-## What is a witness and why do we need them?
+## What is a witness and why do we need them? {#what-is-a-witness}
 
 Verifying a block means re-executing the transactions contained in the block, applying the changes to Ethereum's state trie, and calculating the new root hash. A verified block is one whose computed state root hash is the same as the one provided with the block (because this means the block proposer really did the computation they say they did). In today's Ethereum clients, updating the state requires access to the entire state trie, which is a large data structure that must be stored locally. A witness only contains the fragments of the state data that are required to execute the transactions in the block. A validator can then only use those fragments to verify that the block proposer has executed the block transactions and updated the state correctly. However, this means that the witness needs to be transferred between peers on the Ethereum network rapidly enough to be received and processed by each node safely within a 12 second slot. If the witness is too large, it might take some nodes too long to download it and keep up with the chain. This is a centralizing force because it means only nodes with fast internet connections can participate in validating blocks. With Verkle trees there is no need to have the state stored on your hard drive; _everything_ you need to verify a block is contained within the block itself. Unfortunately, the witnesses that can be produced from Merkle tries are too large to support stateless clients.
 
-## Why do Verkle trees enable smaller witnesses?
+## Why do Verkle trees enable smaller witnesses? {#why-do-verkle-trees-enable-smaller-witnesses}
 
 The structure of a Merkle Tree makes witness sizes very large - too large to safely broadcast between peers within a 12 second slot. This is because the witness is a path connecting the data, which is held in trie leaves, to the root hash. To verify the data it is necessary to have not only all the intermediate hashes that connect each leaf to the root, but also all the "sibling" nodes. Each node in the proof has a sibling that it is hashed with to create the next hash up the trie. This is a lot of data. Verkle trees reduce the witness size by shortening the distance between the leaves of the tree and its root and also eliminating the need to provide sibling nodes for verifying the root hash. Even more space efficiency will be gained by using a powerful polynomial commitment scheme instead of the hash-style vector commitment. The polynomial commitment allows the witness to have a fixed size regardless of the number of leaves that it proves.
 
@@ -40,7 +40,7 @@ The witness size varies depending on the number of leaves it includes. Assuming 
 
 </ExpandableCard>
 
-## What is the structure of a Verkle tree?
+## What is the structure of a Verkle tree? {#what-is-the-structure-of-a-verkle-tree}
 
 Verkle trees are `(key,value)` pairs where the keys are 32 byte elements composed of a 31 byte _stem_ and a single byte _suffix_. These keys are organized into _extension_ nodes and _inner_ nodes. Extension nodes represent a single stem for 256 children with different suffixes. Inner nodes also have 256 children, but they can be other extension nodes. The main difference between the Verkle tree and the Merkle tree structure is that the Verkle tree is much flatter, meaning there are fewer intermediate nodes linking a leaf to the root, and therefore less data required to generate a proof.
 

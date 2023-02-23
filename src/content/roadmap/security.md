@@ -18,7 +18,7 @@ However, the relatively long time window does not provide a great user experienc
 Read more on [proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 Read more on [single slot finality](single-slot-finality/)
 
-## Defending against censorship
+## Defending against censorship {#defending-against-censorship}
 
 Another facet of security is preventing certain individuals or small groups of validators from becoming too influential. This includes building software that shares validator responsibilities across multiple nodes. This is known as Distributed Validator Technology (DVT). Staking pools are incentivized to use DVT because it allows multiple computers to collectively participate in validation, adding redundancy and fault-tolerance. It also splits validator keys across several systems, rather than having single operators running multiple validators. This makes it harder for dishonest operators to coordinate attacks on Ethereum. Overall,the idea is to derive security benefits by running validators as _communities_ rather than as individuals.
 
@@ -26,7 +26,7 @@ Implementing proposer-builder separation (PBS) will drastically improve Ethereum
 
 [Read more on PBS](pbs/)
 
-## Protecting validators
+## Protecting validators {#protecting-validators}
 
 Although it is unlikely, it is possible that a sophisticated attacker could identify upcoming validators and spam them to prevent them from proposing blocks. Implementing [**secret leader election (SLE)**](./secret-leader-election) will protect against this type of attack by preventing block proposers from being knowable in advance. This works by continually shuffling a set of cryptographic commitments representing candidate block proposers and using their order to determine which validator is selected in such a way that only the validators themselves know their ordering in advance.
 

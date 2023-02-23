@@ -17,7 +17,7 @@ Present-day Ethereum validators create _and_ broadcast blocks. They bundle toget
 
 This is an important upgrade for several reasons. First, it creates opportunities to prevent transaction censorship at the protocol level. Second, it prevents hobbyist validators from being outcompeted by institutional players that can better optimize the profitability of their block building. Third, it helps with scaling Ethereum by enabling the Danksharding upgrades.
 
-## PBS and censorship resistance
+## PBS and censorship resistance {#pbs-and-censorship-resistance}
 
 Separating out block builders and block proposers makes it much harder for block builders to censor transactions. This is because relatively complex inclusion criteria can be added that ensure no censorship has taken place before the block is proposed. As the block proposer is a separate entity from the block builder, it can take on the role of protector against censoring block builders.
 
@@ -33,7 +33,7 @@ In 2022, the US Government Office for Foreign Asset Control sanctioned the Torna
 [Read more about PBS and censorship resistance](https://notes.ethereum.org/@fradamt/H1TsYRfJc#Secondary-auctions)
 [Read more about inclusion lists](https://notes.ethereum.org/@fradamt/H1ZqdtrBF)
 
-## PBS and MEV
+## PBS and MEV {#pbs-and-mev}
 
 **Maximum extractable value (MEV)** refers to validators maximizing their profitability by favorably ordering transactions. Common examples include arbitraging swaps on decentralized exchanges (e.g. frontrunning a large sale or purchase) or identifying opportunities to liquidate DeFi positions. Maximizing MEV requires sophisticated technical know-how and custom software appended to normal validators, making it much moer likely that institutional operators outperform individuals and hobbyist validators at MEV extraction. This means staking returns are likely to be higher with centralized operators, creating a centralizing force that disincentivizes home staking.
 
@@ -46,7 +46,7 @@ PBS solves this problem by reconfiguring the economics of MEV. Instead of the bl
 Individuals could be incentivized to stake with pools rather than on their own due to the enhanced rewards offered by sophisticated MEV strategies. Separating the block building from the block proposal means that the MEV extracted will be distributed over more validators rather than centralizing with the most effective MEV searcher. At the same time, allowing specialized block builders to exist takes the burden of block building away from individuals, while maximizing the number of individual, independent validators that can check the blocks are honest. The important concept is "prover-verifier asymmetry" which refers to the idea that centralized block production is fine as long as there is a robust and maximally decentralized network of validators able to prove the blocks are honest. Decentralization is a means, not an end goal - what we want are honest blocks.
 </ExpandableCard>
 
-## PBS and Danksharding
+## PBS and Danksharding {#pbs-and-danksharding}
 
 Danksharding is the way Ethereum will scale to >100,000 transactions per second and minimize fees for rollup users. It relies upon PBS because it adds to the workload for block builders, who will have to compute proofs for up to 64 MB of rollup data in less than 1 second. This will probably require specialized builders that can dedicate fairly substantial hardware to the task. However, in the current situation block building could become increasingly centralized around more sophisticated and powerful operators anyway due to MEV extraction. Proposer-builder separation is a way to embrace this reality and prevent it from exerting centralizing force on block validation (the important part) or the distribution of staking rewards. A great side-benefit is that the specialized block builders are also willing and able to compute the necessary data proofs for Danksharding.
 
