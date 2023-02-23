@@ -18,7 +18,7 @@ const styles: Styles = (theme: Theme) => {
       gap: ${space["4"]};
       align-items: center;
       --docsearch-searchbox-shadow: inset 0 0 0 1px
-        var(--eth-colors-primaryDarkLight);
+        var(--eth-colors-primaryHighContrast);
     }
 
     .DocSearch-Button:active,
@@ -94,7 +94,7 @@ const styles: Styles = (theme: Theme) => {
     .DocSearch-SearchBar form {
       padding-block: ${space["3"]};
       --docsearch-searchbox-shadow: inset 0 0 0 1px
-        var(--eth-colors-primaryDarkLight);
+        var(--eth-colors-primaryHighContrast);
       background: var(--eth-colors-neutral);
     }
 
@@ -102,16 +102,16 @@ const styles: Styles = (theme: Theme) => {
       --size: ${space["4"]};
       height: var(--size);
       width: var(--size);
-      color: var(--eth-colors-primaryDarkLight);
+      color: var(--eth-colors-primaryHighContrast);
     }
 
     .DocSearch-SearchBar input {
       font-size: ${fontSizes["l"]};
-      color: var(--eth-colors-primaryDarkLight);
+      color: var(--eth-colors-primaryHighContrast);
     }
 
     .DocSearch-SearchBar button {
-      color: var(--eth-colors-primaryDarkLight);
+      color: var(--eth-colors-primaryHighContrast);
     }
 
     .DocSearch-SearchBar button:hover {
@@ -120,7 +120,7 @@ const styles: Styles = (theme: Theme) => {
 
     .DocSearch-Container--Stalled .DocSearch-MagnifierLabel,
     .DocSearch-Container--Stalled .DocSearch-LoadingIndicator {
-      color: var(--eth-colors-primaryDarkLight);
+      color: var(--eth-colors-primaryHighContrast);
     }
 
     /* Modal body */
@@ -178,7 +178,7 @@ const styles: Styles = (theme: Theme) => {
     }
 
     .DocSearch-Footer {
-      background: var(--eth-colors-primaryLightDark);
+      background: var(--eth-colors-primaryLowContrast);
       --docsearch-logo-colors: var(--eth-colors-bodyLight);
       --docsearch-footer-shadow: none;
       border-top: ${borders["2px"]};
