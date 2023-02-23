@@ -84,6 +84,7 @@ const styles: Styles = (theme: Theme) => {
       --docsearch-searchbox-height: fit-content;
       --docsearch-highlight-color: var(--eth-colors-primaryHover);
       --docsearch-modal-width: 650px;
+      --docsearch-hit-height: 48px;
     }
 
     /* Modal header */
@@ -132,7 +133,16 @@ const styles: Styles = (theme: Theme) => {
     }
 
     .DocSearch-Hit-source {
+      line-height: 22px;
       color: var(--eth-colors-body);
+    }
+
+    .DocSearch-Hit {
+      padding-bottom: 0;
+    }
+
+    .DocSearch-Hit-content-wrapper {
+      white-space: normal;
     }
 
     .DocSearch-Hit a {
