@@ -34,10 +34,9 @@ const Search: FC = () => {
               .replace("#content", "")
               .replace("#top", "")),
               (newItem._highlightResult.hierarchy.lvl0.value =
-                item._highlightResult.hierarchy.lvl0.value.replace(
-                  " | ethereum.org",
-                  ""
-                ))
+                item._highlightResult.hierarchy.lvl0.value
+                  .replace(" | ethereum.org", "")
+                  .replaceAll("&quot;", '"'))
             return newItem
           })
         }

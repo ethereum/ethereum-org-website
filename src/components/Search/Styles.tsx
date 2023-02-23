@@ -27,6 +27,7 @@ const styles: Styles = (theme: Theme) => {
       box-shadow: none;
       outline: ${borders["1px"]};
       outline-color: var(--eth-colors-primaryHover);
+      background: none;
     }
     .DocSearch-Button:hover .DocSearch-Button-Keys kbd {
       color: var(--eth-colors-disabled);
