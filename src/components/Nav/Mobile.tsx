@@ -201,26 +201,24 @@ const BottomItemText = styled.div`
 
 export interface IProps {
   isMenuOpen: boolean
-  isSearchOpen: boolean
   isDarkTheme: boolean
-  toggleMenu: (item?: "search" | "menu") => void
+  toggleMenu: () => void
   toggleTheme: () => void
+  toggleSearch: () => void
   linkSections: ISections
   fromPageParameter: string
 }
 
 const MobileNavMenu: React.FC<IProps> = ({
   isMenuOpen,
-  isSearchOpen,
   isDarkTheme,
   toggleMenu,
   toggleTheme,
+  toggleSearch,
   linkSections,
   fromPageParameter,
 }) => {
   const intl = useIntl()
-
-  const isOpen = isMenuOpen || isSearchOpen
 
   const handleClick = (): void => {
     toggleMenu()
@@ -234,7 +232,7 @@ const MobileNavMenu: React.FC<IProps> = ({
     >
       <IconButton
         icon={<Icon name="search" />}
-        onClick={() => toggleMenu("search")}
+        onClick={toggleSearch}
         aria-label={translateMessageId("aria-toggle-search-button", intl)}
         variant="icon"
         _hover={{ svg: { fill: "primary" } }}
@@ -245,17 +243,17 @@ const MobileNavMenu: React.FC<IProps> = ({
             <motion.path
               variants={glyphPathVariants}
               initial={false}
-              animate={isOpen ? "open" : "closed"}
+              animate={isMenuOpen ? "open" : "closed"}
             />
           </GlyphButton>
         }
-        onClick={() => toggleMenu("menu")}
+        onClick={toggleMenu}
         aria-label={translateMessageId("aria-toggle-search-button", intl)}
         variant="icon"
         _hover={{ svg: { fill: "primary" } }}
       />
       <MobileModal
-        animate={isOpen ? "open" : "closed"}
+        animate={isMenuOpen ? "open" : "closed"}
         variants={mobileModalVariants}
         initial="closed"
         onClick={handleClick}
@@ -325,7 +323,7 @@ const MobileNavMenu: React.FC<IProps> = ({
         variants={mobileMenuVariants}
         initial="closed"
       >
-        <BottomItem onClick={() => toggleMenu("search")}>
+        <BottomItem onClick={toggleSearch}>
           <Icon name="search" />
           <BottomItemText>
             <Translation id="search" />

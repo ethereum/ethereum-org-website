@@ -255,7 +255,11 @@ const styles: Styles = (theme: Theme) => {
       .DocSearch-Dropdown {
         padding-inline-start: ${space["4"]};
         padding-inline-end: ${space["2"]} !important;
-        max-height: 100%;
+        --search-form-height: 75px;
+        max-height: calc(
+          100vh - var(--search-form-height) - var(--docsearch-footer-height) - 2 *
+            var(--inset)
+        );
         overflow-y: scroll;
       }
     }

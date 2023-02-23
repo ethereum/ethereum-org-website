@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from "react"
+import React, { FC, useState } from "react"
 import { Icon, IconButton, Text, useColorMode } from "@chakra-ui/react"
 import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
 import styled from "@emotion/styled"
@@ -102,7 +102,6 @@ export interface IProps {
 const Nav: FC<IProps> = ({ path }) => {
   const { colorMode, toggleColorMode } = useColorMode()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isSearchOpen, setIsSearchOpen] = useState(false)
   const intl = useIntl()
 
   const isDarkTheme = colorMode === "dark"
@@ -362,43 +361,16 @@ const Nav: FC<IProps> = ({ path }) => {
       to: "/developers/local-environment/",
     },
   ]
-  useEffect(() => {
-    // Event listener for when user clicks on .DocSearch-Container div, to toggle isSearchOpen to false
-    const closeSearchListener = (e) => {
-      if (
-        e.target &&
-        (e.target.className === "DocSearch-Container" ||
-          e.target.className === "DocSearch-Cancel")
-      ) {
-        setIsSearchOpen(false)
-        setIsMenuOpen(false)
-      }
-    }
-    document.addEventListener("click", closeSearchListener)
-    // remove event listener on dismount
-    return () => {
-      document.removeEventListener("click", closeSearchListener)
-    }
-  }, [])
-  let mobileLinkSections = cloneDeep(linkSections)
-  const handleMenuToggle = (item?: "search" | "menu"): void => {
-    if (item === "menu") {
-      setIsMenuOpen((prev) => !prev)
-    } else if (item === "search") {
-      document.getElementsByClassName("DocSearch-Button")[0].click()
-      setIsSearchOpen((prev) => !prev)
-    } else {
-      setIsMenuOpen(false)
-      setIsSearchOpen(false)
-    }
 
-    if (isMenuOpen || isSearchOpen) {
-      document.documentElement.style.overflowY = "scroll"
-    } else {
-      document.documentElement.style.overflowY = "hidden"
-    }
+  let mobileLinkSections = cloneDeep(linkSections)
+  const toggleMenu = (): void => {
+    setIsMenuOpen((prev) => !prev)
+    document.documentElement.style.overflowY = isMenuOpen ? "scroll" : "hidden"
   }
 
+  const toggleSearch = (): void => {
+    document.getElementsByClassName("DocSearch-Button")[0].click()
+  }
   const shouldShowSubNav = path.includes("/developers/")
   const splitPath = path.split("/")
   const fromPageParameter =
@@ -444,10 +416,10 @@ const Nav: FC<IProps> = ({ path }) => {
           {/* Mobile */}
           <MobileNavMenu
             isMenuOpen={isMenuOpen}
-            isSearchOpen={isSearchOpen}
             isDarkTheme={isDarkTheme}
-            toggleMenu={handleMenuToggle}
+            toggleMenu={toggleMenu}
             toggleTheme={toggleColorMode}
+            toggleSearch={toggleSearch}
             linkSections={mobileLinkSections}
             fromPageParameter={fromPageParameter}
           />
