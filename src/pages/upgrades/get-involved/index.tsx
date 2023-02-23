@@ -1,9 +1,23 @@
 import React, { useState, useEffect, ReactNode } from "react"
+import {
+  Box,
+  Divider,
+  DividerProps,
+  Flex,
+  Grid,
+  Heading,
+  HeadingProps,
+  List,
+  ListItem,
+  Text,
+  useToken,
+} from "@chakra-ui/react"
 import { useTheme } from "@emotion/react"
 import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 import { shuffle } from "lodash"
+
 import { translateMessageId, TranslationKey } from "../../../utils/translations"
 import Card from "../../../components/Card"
 import Leaderboard, { Person } from "../../../components/Leaderboard"
@@ -18,14 +32,6 @@ import Link from "../../../components/Link"
 import Breadcrumbs from "../../../components/Breadcrumbs"
 import FeedbackCard from "../../../components/FeedbackCard"
 import { getImage, ImageDataLike } from "../../../utils/image"
-import {
-  Box,
-  Divider,
-  DividerProps,
-  Flex,
-  Grid,
-  useToken,
-} from "@chakra-ui/react"
 import { ChildOnlyProp } from "../../../types"
 
 const Page = (props: ChildOnlyProp) => (
@@ -44,6 +50,28 @@ const PageDivider = (props: DividerProps) => (
 
 const PageContent = (props: ChildOnlyProp) => (
   <Box py={4} px={8} w="full" {...props} />
+)
+
+const H2 = (props: HeadingProps) => (
+  <Heading
+    as="h2"
+    mt={0}
+    mb={4}
+    fontSize={{ base: "2xl", md: "2rem" }}
+    fontWeight="semibold"
+    lineHeight={1.4}
+    {...props}
+  />
+)
+
+const H3 = (props: HeadingProps) => (
+  <Heading
+    as="h3"
+    fontSize={{ base: "xl", md: "2xl" }}
+    fontWeight="semibold"
+    lineHeight={1.4}
+    {...props}
+  />
 )
 
 const StyledCardContainer = (props: ChildOnlyProp) => (
@@ -100,17 +128,24 @@ const SloganGradient = (props: ChildOnlyProp) => {
   )
 }
 
-const HeroContainer = styled.div`
-  padding-left: 0rem;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  width: 50%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 2rem;
-    padding-left: 0rem;
-    width: 100%;
-  }
-`
+const HeroContainer = (props: ChildOnlyProp) => (
+  <Box
+    pl={0}
+    pt={{ base: 8, lg: 32 }}
+    pb={32}
+    w={{ base: "full", lg: "50%" }}
+    {...props}
+  />
+)
+
+const HeroCard = (props: ChildOnlyProp) => (
+  <Flex
+    justify="center"
+    textAlign="center"
+    mt={{ base: 4, lg: -8 }}
+    {...props}
+  />
+)
 
 const StyledCard = styled(Card)`
   flex: 1 1 30%;
@@ -132,16 +167,6 @@ const LeaderboardContainer = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     width: 100%;
     margin-top: 2rem;
-  }
-`
-
-const HeroCard = styled.div`
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-top: -2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 1rem;
   }
 `
 
@@ -464,12 +489,12 @@ const GetInvolvedPage = ({
             </Subtitle>
           </HeroContainer>
         </HeroCard>
-        <h2>
+        <H2>
           <Translation id="page-upgrades-get-involved-how" />
-        </h2>
-        <p>
+        </H2>
+        <Text>
           <Translation id="page-upgrades-get-involved-how-desc" />
-        </p>
+        </Text>
         <StyledCardContainer>
           {paths.map((path, idx) => (
             <StyledCard
@@ -485,28 +510,28 @@ const GetInvolvedPage = ({
       </PageContent>
       <PageDivider id="clients" />
       <PageContent>
-        <h2>
+        <H2>
           <Translation id="page-upgrades-get-involved-run-clients" />
-        </h2>
-        <p>
+        </H2>
+        <Text>
           <Translation id="page-upgrades-get-involved-run-clients-desc" />{" "}
           <Link to="https://clientdiversity.org">
             <Translation id="page-upgrades-get-involved-run-clients-desc-link" />
           </Link>
-        </p>
-        <h3>
+        </Text>
+        <H3>
           <Translation id="page-upgrades-get-involved-run-clients-execution" />
-        </h3>
-        <p>
+        </H3>
+        <Text>
           <Translation id="page-upgrades-get-involved-run-clients-execution-desc" />
-        </p>
+        </Text>
         {getClientCards("el")}
-        <h3>
+        <H3>
           <Translation id="page-upgrades-get-involved-run-clients-consensus" />
-        </h3>
-        <p>
+        </H3>
+        <Text>
           <Translation id="page-upgrades-get-involved-run-clients-consensus-desc" />
-        </p>
+        </Text>
         {getClientCards("cl")}
       </PageContent>
       <Staking>
@@ -516,40 +541,40 @@ const GetInvolvedPage = ({
           titleKey={"page-upgrades-get-involved-stake"}
           descriptionKey={"page-upgrades-get-involved-stake-desc"}
         >
-          <div>
+          <Box>
             <ButtonLink to="/staking/">
               <Translation id="page-upgrades-get-involved-stake-eth" />
             </ButtonLink>
-          </div>
+          </Box>
         </StyledCalloutBanner>
       </Staking>
       <StyledGrayContainer>
         <PageContent>
           <Row>
             <LeftColumn>
-              <h2 id="#bug-bounty">
+              <H2 id="#bug-bounty">
                 <Translation id="page-upgrades-get-involved-bug-hunting" />
-              </h2>
-              <p>
+              </H2>
+              <Text>
                 <Translation id="page-upgrades-get-involved-bug-hunting-desc" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-upgrades-get-involved-bug" />
-              </p>
-              <ul>
-                <li>
+              </Text>
+              <List listStyleType="disc">
+                <ListItem>
                   <Translation id="page-upgrades-get-involved-bug-li" />
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   <Translation id="page-upgrades-get-involved-bug-li-2" />
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   <Translation id="page-upgrades-get-involved-bug-li-3" />
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   <Translation id="page-upgrades-get-involved-bug-li-4" />
-                </li>
-              </ul>
+                </ListItem>
+              </List>
               <ButtonLink to="/bug-bounty/">
                 <Translation id="page-upgrades-get-involved-bug-hunting" />
               </ButtonLink>
@@ -566,12 +591,12 @@ const GetInvolvedPage = ({
             <StyledCardList content={ethresearch} />
           </LeftColumn>
           <RightColumn>
-            <h2>
+            <H2>
               <Translation id="page-upgrades-get-involved-join" />
-            </h2>
-            <p>
+            </H2>
+            <Text>
               <Translation id="page-upgrades-get-involved-join-desc" />
-            </p>
+            </Text>
           </RightColumn>
         </ReverseRow>
       </PageContent>
