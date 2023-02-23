@@ -15,6 +15,20 @@ const Search: FC = () => {
   const indexName =
     process.env.GATSBY_ALGOLIA_BASE_SEARCH_INDEX_NAME || "prod-ethereum-org"
 
+  const sanitizeHitUrl = (url: string): string =>
+    url
+      .replace(/^https?:\/\/[^\/]+(?=\/)/, "")
+      .replace("#main-content", "")
+      .replace("#content", "")
+      .replace("#top", "")
+
+  const sanitizeHitTitle = (value: string): string => {
+    const newValue = value.replaceAll("&quot;", '"')
+    const siteNameIndex = value.lastIndexOf(" | ")
+    if (siteNameIndex < 0) return newValue
+    return newValue.substring(0, siteNameIndex)
+  }
+
   return (
     <>
       <DocSearchStyles />
@@ -28,15 +42,10 @@ const Search: FC = () => {
         transformItems={(items) =>
           items.map((item: DocSearchHit) => {
             const newItem: DocSearchHit = structuredClone(item)
-            ;(newItem.url = item.url
-              .replace(/^https?:\/\/[^\/]+(?=\/)/, "")
-              .replace("#main-content", "")
-              .replace("#content", "")
-              .replace("#top", "")),
-              (newItem._highlightResult.hierarchy.lvl0.value =
-                item._highlightResult.hierarchy.lvl0.value
-                  .replace(" | ethereum.org", "")
-                  .replaceAll("&quot;", '"'))
+            newItem.url = sanitizeHitUrl(item.url)
+            newItem._highlightResult.hierarchy.lvl0.value = sanitizeHitTitle(
+              item._highlightResult.hierarchy.lvl0.value
+            )
             return newItem
           })
         }
