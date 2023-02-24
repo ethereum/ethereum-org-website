@@ -17,7 +17,6 @@ Today, users interact with Ethereum using **externally owned accounts (EOAs)**. 
 
 Account abstraction is an upgrade that makes smart contract wallets first-class citizens, natively supported on Ethereum. Those smart contract wallets unlock many benefits for the user, including:
 
-- no more seed phrases
 - define your own flexible security rules
 - recover your account if you lose the keys
 - share your account security across trusted devices or individuals
@@ -32,9 +31,11 @@ Ultimately, account abstraction is about improving support for smart contract wa
 
 ## Beyond seed phrases {#beyond-seed-phrases}
 
-Today's accounts are secured using private keys that are calculated from seed phrases. Any person who has access to a seed phrase can easily discover the private key protecting an account and gain access to all the assets it protects. If a private key and seed phrase are lost. they can never be recovered and the assets they control are frozen forever. Securing these seed phrases is awkward, even for expert users and seed phrase phishing is one of the most common ways users get scammed.
+Today's accounts are secured using private keys that are calculated from seed phrases. Any person who has access to a seed phrase can easily discover the private key protecting an account and gain access to all the assets it protects. If a private key and seed phrase are lost, they can never be recovered and the assets they control are frozen forever. Securing these seed phrases is awkward, even for expert users and seed phrase phishing is one of the most common ways users get scammed.
 
-Account abstraction will solve this problem by using a smart contract to hold assets and authorize transactions. These smart contracts can then be decorated with custom logic to make them as secure and tailored to the user as possible. Custom security logic can be built into the wallet itself. A wallet can be instructed to block every transaction unless it is to a trusted address or verified by multiple approved addresses. Alternatively, you might want to separate out types of transactions with different rules, for example low value transactions can be verified by a single signature, whereas higher value transactions require verification from multiple authenticated signers.
+Account abstraction will solve this problem by using a smart contract to hold assets and authorize transactions. These smart contracts can then be decorated with custom logic to make them as secure and tailored to the user as possible. Ultimately, you still use private keys to control access to your account, but with safety nets that make them easier and safer to manage.
+
+For example, backup keys can be added to a wallet so that if you lose or accidentally expose your main key, it can be replaced with a new, secure one with permission from the backup keys. You might secure each of these keys in a different way, or split them across trusted guardians. This makes it much harder for a thief to gain full control over your funds. Similarly, you can add rules to the wallet to reduce the impact if your main key gets compromised, for example you might allow low value transactions to be verified by a single signature, whereas higher value transactions require approval from multiple authenticated signers. There are other ways smart contract wallets can help you to thwart thieves too, for example a whitelist can be used to block every transaction unless it is to a trusted address or verified by several of your pre-approved keys.
 
 ### Examples of security logic that can be built into a smart contract wallet:
 
@@ -42,7 +43,7 @@ Account abstraction will solve this problem by using a smart contract to hold as
 - **Account freezing**: If a device is lost or compromised the account can be locked from another authorized device, protecting the user's assets.
 - **Account recovery**: Lost a device or forgotten a password? In the current paradigm this means your assets could be frozen forever. With a smart contract wallet, you can set some pre-approved accounts that can authorize new devices and reset access.
 - **Set transaction limits**: specify daily thresholds for how much value can be transferred from the account in a day/week/month. This means if an attacker does gain access to your account they can't drain everything at once and you have opportunities to freeze and reset access.
-- **Create whitelists**: only allow transactions to certain addresses that you know to be safe. This means that _even if_ your private key was stolen, the attacker could not send funds to non-whitelisted destination accounts.
+- **Create whitelists**: only allow transactions to certain addresses that you know to be safe. This means that _even if_ your private key was stolen, the attacker could not send funds to non-whitelisted destination accounts. These whitelists would require multiple signatures to change them so that an attackjer couldn't add their own address to the list unless they had access to several of your backup keys.
 
 ## Better user experience {#better-user-experience}
 
