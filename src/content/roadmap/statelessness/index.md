@@ -11,7 +11,7 @@ Cheaper hard drives can be used to store older data but those are too slow to ke
 
 ## Reducing storage for nodes {#reducing-storage-for-nodes}
 
-There are several ways to reduce the amount of data each node has to store, each requiring Ethereums' core protocol to be updates to a different extent:
+There are several ways to reduce the amount of data each node has to store, each requiring Ethereum's core protocol to be updates to a different extent:
 
 - **History expiry**: enable nodes to discard state data older than X blocks, but does not change how Ethereum client's handle state data
 - **State expiry**: allow state data that is not used frequently to become inactive. Inactive data can be ignored by clients until it is resurrected.
@@ -24,11 +24,11 @@ There are several ways to reduce the amount of data each node has to store, each
 
 History expiry refers to clients pruning away older data that they are unlikely to need, so that they only store a small amount of historical data, dropping older data when new data arrives. There are two reasons clients require historical data: syncing and serving data requests. Originally, clients had to sync from the genesis block, verifying that each successive block is correct all the way to the head of the chain. Today, clients use "weak subjectivity checkpoints" to bootstrap their way to the head of the chain. These checkpoints are trusted started points, like having a genesis block close to the present rather than the very start of Ethereum. This means clients can drop all information prior to the most recent weak subjectivity checkpoint without losing the ability to sync to the head of the chain. Clients currently serve requests (arriving via JSON-RPC) for historical data by grabbing it from their local databases. However, with history expiry this will not be possible if the requested data has been pruned. Serving this historical data is where some innovative solutions are required.
 
-One option is that clients request historical data from peers using a solution such as the Portal Network. The Portal Network is an in-development peer-to-peer network for serving historical data where each node stores a small piece of Ethereum's history such that the entire history exists distributed across the network. Requests are served by seeking out peers storing the relevant dataand requesting it from them. Alternatively, since it is generally apps that require access to historical data, it can become their responsibility to store it. There may also be enough altruistic actors in the Ethereum space that would be willing to maintain historical archives. It could be a DAO that spins up to manage historical data storage, or ideally it will be a combination of all these options. These providers could serve the data in many ways, such as on a torrent, FTP, Filecoin or IPFS.
+One option is that clients request historical data from peers using a solution such as the Portal Network. The Portal Network is an in-development peer-to-peer network for serving historical data where each node stores a small piece of Ethereum's history such that the entire history exists distributed across the network. Requests are served by seeking out peers storing the relevant data and requesting it from them. Alternatively, since it is generally apps that require access to historical data, it can become their responsibility to store it. There may also be enough altruistic actors in the Ethereum space that would be willing to maintain historical archives. It could be a DAO that spins up to manage historical data storage, or ideally it will be a combination of all these options. These providers could serve the data in many ways, such as on a torrent, FTP, Filecoin or IPFS.
 
 History expiry is somewhat controversial because so far Ethereum has always implicitly guaranteed the availability of any historical data. A full sync from genesis has always been possible as standard, even if it relies on rebuilding some older data from snapshots. History expiry moves the responsibility for providing this guarantee outside of the Ethereum core protocol. This could introduce new censorship risks if it is centralized organizations that end up stepping in to provide historical data.
 
-EIP-4444 is not yet ready to ship, but it is under active discussion. Interestingly, the challenges with EIP-4444 are not so much technical, but mostly community management. In order for this to ship, there needs to be community buy-in that inludes not only agreement but also commitments to store and serve historical data from trustworthy entities.
+EIP-4444 is not yet ready to ship, but it is under active discussion. Interestingly, the challenges with EIP-4444 are not so much technical, but mostly community management. In order for this to ship, there needs to be community buy-in that includes not only agreement but also commitments to store and serve historical data from trustworthy entities.
 
 This upgrade doesn't fundamentally change how Ethereum nodes handle state data, it just changes how historical data is accessed.
 
@@ -55,7 +55,7 @@ State expiry is still in the research phase and not yet ready to ship. State exp
 
 ## Statelessness {#statelessness}
 
-Statelessness is a bit of a misnomer because it does not mean the concept of "state" is eliminated, but it does involve changes to how Ethereum nodes handle state data. Statelessness itself comes in two flavours: weak statelessness and strong statelessness. Weak statelessness enables most nodes to go stateless by putting responsibility for state storage onto a few. Strong statelessness compeltely removes the need for any node to store the full state data. Both weak and strong statelessness offer the following benefits to normal validators:
+Statelessness is a bit of a misnomer because it does not mean the concept of "state" is eliminated, but it does involve changes to how Ethereum nodes handle state data. Statelessness itself comes in two flavors: weak statelessness and strong statelessness. Weak statelessness enables most nodes to go stateless by putting responsibility for state storage onto a few. Strong statelessness completely removes the need for any node to store the full state data. Both weak and strong statelessness offer the following benefits to normal validators:
 
 - nearly instant syncing
 - ability to validate blocks out-of-order
@@ -72,7 +72,7 @@ Weak statelessness does involve changes to the way Ethereum nodes verify state c
 
 **In weak statelessness proposing blocks requires access to full state data but verifying blocks requires no state data**
 
-For this to happen, [Verkle trees](../verkle-trees) must already have been implemented in Ethereum clients. Verkle trees are a replacement data structure for storing Ethereum state data that allow small, fixed size "witnesses" to the data to be passed between peers and used to verify blocks instead of verifying blocks against local databases. [Proposer-builder separation](../pbs) is also required because this allows block builders to be specialized nodes with more powerful hardware, and those are the ones that require access to the full state data.
+For this to happen, [Verkle trees](../verkle-trees) must already have been implemented in Ethereum clients. Verkle trees are a replacement data structure for storing Ethereum state data that allow small, fixed size "witnesses" to the data to be passed between peers and used to verify blocks instead of verifying blocks against local databases. [Proposer-builder separation](/roadmap/pbs/) is also required because this allows block builders to be specialized nodes with more powerful hardware, and those are the ones that require access to the full state data.
 
 <ExpandableCard title="Why is it OK to rely on fewer block proposers?">
 
@@ -84,7 +84,7 @@ Read more on [Dankrad's notes](https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w
 
 Block proposers use the state data to create "witnesses" - the minimal set of data that prove the values of the state that are being changed by the transactions in a block. Other validators do not hold the state, they only store the state root (a hash of the entire state). They receive a block and a witness and use them to update their state root. This makes a validating node extremely lightweight.
 
-Weak statelessness is in an advanced state of research, but it relies upon [Proposer-builder separation](../pbs) and Verkle Trees to have been implemented so that small witnesses can be passed between peers. This means weak statelessness is probably a few years away from Ethereum Mainnet.
+Weak statelessness is in an advanced state of research, but it relies upon proposer-builder separation and Verkle Trees to have been implemented so that small witnesses can be passed between peers. This means weak statelessness is probably a few years away from Ethereum Mainnet.
 
 ### Strong statelessness {#strong-statelessness}
 

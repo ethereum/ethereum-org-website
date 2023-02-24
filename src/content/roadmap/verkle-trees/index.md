@@ -8,7 +8,7 @@ image: ../../../assets/staking/leslie-pool.png
 alt: Leslie the rhino swimming in the pool.
 sidebarDepth: 2
 summaryPoints:
-  - Discover Verkle Trees
+  - Discover what Verkle trees are
   - Read why Verkle Trees are a useful upgrade for Ethereum
 ---
 
@@ -36,13 +36,13 @@ Under the polynomial commitment scheme, the witnesses have manageable sizes that
 
 <ExpandableCard title="Exactly how much can Verkle trees reduce witness size?">
 
-The witness size varies depending on the number of leaves it includes. Assuming the witness covers 1000 leaves, a witness for a Merkle trie would be about 3.5MB (assuming 7 levels to the trie). A witness for the same data in a Verkle tree (assuming 4 levels to the tree) would be about 150 kB - about 23x smaller. This reduction in witness size will allow stateless client witnesses to be acceptably small. Polynomial witnesses are 0.128 -1 kB depending on which specific polynomial commitment is used).
+The witness size varies depending on the number of leaves it includes. Assuming the witness covers 1000 leaves, a witness for a Merkle trie would be about 3.5MB (assuming 7 levels to the trie). A witness for the same data in a Verkle tree (assuming 4 levels to the tree) would be about 150 kB - **about 23x smaller**. This reduction in witness size will allow stateless client witnesses to be acceptably small. Polynomial witnesses are 0.128 -1 kB depending on which specific polynomial commitment is used).
 
 </ExpandableCard>
 
 ## What is the structure of a Verkle tree? {#what-is-the-structure-of-a-verkle-tree}
 
-Verkle trees are `(key,value)` pairs where the keys are 32 byte elements composed of a 31 byte _stem_ and a single byte _suffix_. These keys are organized into _extension_ nodes and _inner_ nodes. Extension nodes represent a single stem for 256 children with different suffixes. Inner nodes also have 256 children, but they can be other extension nodes. The main difference between the Verkle tree and the Merkle tree structure is that the Verkle tree is much flatter, meaning there are fewer intermediate nodes linking a leaf to the root, and therefore less data required to generate a proof.
+Verkle trees are `(key,value)` pairs where the keys are 32-byte elements composed of a 31-byte _stem_ and a single byte _suffix_. These keys are organized into _extension_ nodes and _inner_ nodes. Extension nodes represent a single stem for 256 children with different suffixes. Inner nodes also have 256 children, but they can be other extension nodes. The main difference between the Verkle tree and the Merkle tree structure is that the Verkle tree is much flatter, meaning there are fewer intermediate nodes linking a leaf to the root, and therefore less data required to generate a proof.
 
 ![Illustration of the Verkle tree structure from the [EIP](https://notes.ethereum.org/@vbuterin/verkle_tree_eip)](./verkle.png)
 
@@ -50,7 +50,7 @@ Verkle trees are `(key,value)` pairs where the keys are 32 byte elements compose
 
 ## When will Verkle trees ship? {#when-will-verkle-trees-ship}
 
-Verkle tree testnets are already up and running, but there are still substantial outstanding updates to clients that are required to supprot Verkle trees. You can help accelerate progress by deploying contracts to the testnets or running testnet clients.
+Verkle tree testnets are already up and running, but there are still substantial outstanding updates to clients that are required to support Verkle trees. You can help accelerate progress by deploying contracts to the testnets or running testnet clients.
 
 [Explore the Beverly Hills Verkle testnet](https://beverlyhills.ethpandaops.io)
 
