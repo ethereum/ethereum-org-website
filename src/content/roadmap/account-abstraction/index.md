@@ -1,6 +1,6 @@
 ---
 title: Account abstraction
-description: An overview of Ethereum's plans to make user-accounts simpler and safer
+description: An overview of Ethereum's plans to make user accounts simpler and safer
 lang: en
 template: staking
 emoji: ":money_with_wings:"
@@ -8,12 +8,12 @@ image: ../../../assets/staking/leslie-pool.png
 alt: Leslie the rhino swimming in the pool.
 sidebarDepth: 2
 summaryPoints:
-  - Learn about upcoming changes to how users interact with Ethereum
-  - Read why account abstraction will help users to secure their assets
   - Understand why account abstraction will make Ethereum easier to use
+  - Learn about upcoming changes to how users will interact with Ethereum
+  - Read why account abstraction will help users to secure their assets
 ---
 
-Today, users interact with Ethereum using "Externally Owned Accounts" (EOAs). These are the only entities that can initiate a transaction or execute functions in smart contracts, and they pay gas fees in ETH whenever those transactions change Ethereum's state. Account abstraction aims to relax this constraint to allow smart contract wallets to initiate transactions too. This allows users to flexibly program more security and better user experiences into their accounts.
+Today, users interact with Ethereum using **externally owned accounts (EOAs)**. These are the only entities that can initiate a transaction or execute functions in smart contracts, and they pay gas fees in ETH whenever those transactions change Ethereum's state. Account abstraction aims to relax this constraint to allow smart contract wallets to initiate transactions too. This allows users to flexibly program more security and better user experiences into their accounts.
 
 Account abstraction is an upgrade that makes smart contract wallets first-class citizens, natively supported on Ethereum. Those smart contract wallets unlock many benefits for the user, including:
 
@@ -41,24 +41,24 @@ Account abstraction will solve this problem by using a smart contract to hold as
 - **Multisig authorization**: You can share authorization credentials across multiple trusted people or devices. Then the contract can be configured so that transactions of more than some preset value require authorization from a certain proportion (e.g. 3/5) of the trusted parties. For example, high value transactions might require approval from both a mobile device and a hardware wallet, or signatures from accounts distributed to trusted family members.
 - **Account freezing**: If a device is lost or compromised the account can be locked from another authorized device, protecting the user's assets.
 - **Account recovery**: Lost a device or forgotten a password? In the current paradigm this means your assets could be frozen forever. With a smart contract wallet, you can set some pre-approved accounts that can authorize new devices and reset access.
-- **Set transaction limits**: specify daily thresholds for how much value can be transferred from the accoutn in a day/week/month. This means if an attacker does gain access to your account they can't drain everything at once and you have opportunities to freeze and reset access.
+- **Set transaction limits**: specify daily thresholds for how much value can be transferred from the account in a day/week/month. This means if an attacker does gain access to your account they can't drain everything at once and you have opportunities to freeze and reset access.
 - **Create whitelists**: only allow transactions to certain addresses that you know to be safe. This means that _even if_ your private key was stolen, the attacker could not send funds to non-whitelisted destination accounts.
 
 ## Better user experience {#better-user-experience}
 
-Account abstraction allows for a better overall user experience as well as improved security. The most important reason for this is that it will provide smart contract, wallet and application developers with much more freedom to innovate on the user experience in ways that we may not yet be able to anticipate. Some obvious improvements that will come along with account abstraction include bundling of transactions for speed and efficiency. For example, a simple swap should be a one-click operation but today it requires signing multiple transactions for approving spending of individual tokens before the swap is executed. Account abstraction removes that friction by allowing transaction bundling. Furthermore, the bundled transaction could approve precisely the right value of tokens required for each transaction and then revoke the approvals after the transaction completes, providing additional security.
+Account abstraction allows for a better overall user experience as well as improved security. The most important reason for this is that it will provide developers of smart contracts, wallets and applications with much more freedom to innovate on the user experience in ways that we may not yet be able to anticipate. Some obvious improvements that will come along with account abstraction include bundling of transactions for speed and efficiency. For example, a simple swap should be a one-click operation, but today it requires signing multiple transactions for approving spending of individual tokens before the swap is executed. Account abstraction removes that friction by allowing transaction bundling. Furthermore, the bundled transaction could approve precisely the right value of tokens required for each transaction and then revoke the approvals after the transaction completes, providing additional security.
 
 Gas management is also much improved with account abstraction. Not only can applications offer to pay their users' gas fees, but gas fees can be paid in tokens other than ETH, freeing users from having to maintain an ETH balance for funding transactions. This would work by swapping the user's tokens for ETH inside the contract and then using the ETH to pay for gas.
 
 Trusted sessions are also potentially transformative for user experiences, especially for applications like gaming where large numbers of small transactions might need to be approved in a small amount of time. Individually approving each transaction would break the gaming experience, but permanent approval is unsafe. Therefore, the wallet could approve certain transactions for a fixed time, possibly also up to a certain value or only to certain addresses.
 
-It is also interesting to consider how purchases could change with account abstraction. Today, each transaction has to be approved and executed from a wallet prefunded with a sufficient amount of the correct token. With account absraction the experience could be more like familiar online shopping where a user could fill a "basket" with items and click once to purchase all at once, with all the logic required handled by the contract, not the user.
+It is also interesting to consider how purchases could change with account abstraction. Today, each transaction has to be approved and executed from a wallet pre-funded with a sufficient amount of the correct token. With account abstraction the experience could be more like familiar online shopping where a user could fill a "basket" with items and click once to purchase all at once, with all the logic required handled by the contract, not the user.
 
 These are just a few examples of how user experiences could be levelled up by account abstraction, but there will be many more that we haven't imagined yet. Account abstraction frees developers from the constraints of present-day EOAs, allows them to bring the good aspects of web2 into web3 without sacrificing self-custody and to hack creatively on inventive new user experiences.
 
 ## How will account abstraction be implemented? {#how-will-aa-be-implemented}
 
-Smart contract wallets are already implemented today, but they are difficult to implement because they are not supported at the protocol level and instead rely on wrapping relatively complex code around normal Ethereum transactions. This problme can be solved by allowing smart contracts to initiate transactions, since then the logic implemented by the wallet can be handled in Ethereum smart contracts rather than happening off-chain and being translated into Ethereum transactions. This has the added benefit of increasing decentralization since it removes the need for "relayers" run by wallet developers to translate messages signed by the user to normal Ethereum transactions.
+Smart contract wallets are already implemented today, but they are difficult to implement because they are not supported at the protocol level and instead rely on wrapping relatively complex code around normal Ethereum transactions. This problem can be solved by allowing smart contracts to initiate transactions, since then the logic implemented by the wallet can be handled in Ethereum smart contracts rather than happening off-chain and being translated into Ethereum transactions. This has the added benefit of increasing decentralization since it removes the need for "relayers" run by wallet developers to translate messages signed by the user to normal Ethereum transactions.
 
 <ExpandableCard title="EIP-4337: account abstraction without changing the Ethereum protocol">
 
@@ -75,7 +75,7 @@ The way wallets work would also change under EIP-4337. Instead of each wallet re
 
 EIP-2938 aims to update the Ethereum protocol by introducing a new transaction type, `AA_TX_TYPE` that includes three fields: `nonce`, `target` and `data`, where `nonce` is a transaction counter, `target` is the entry point contract address and `data` is EVM bytecode. To execute these transactions, two new instructions (known as opcodes) have to be added to the EVM: `NONCE` and `PAYGAS`. The `NONCE` opcode tracks the transaction sequence and `PAYGAS` calculates and withdraws the gas required to execute the transaction from the contract's balance. These new features allow Ethereum to support smart contract wallets natively as the necessary infrastructure is built in to Ethereum's protocol.
 
-Note that EIP-2938 is currently not active. The community is currently favouring EIP-4337 because it does not require changes to the protocol.
+Note that EIP-2938 is currently not active. The community is currently favoring EIP-4337 because it does not require changes to the protocol.
 
 [Read more about EIP2938](https://hackmd.io/@SamWilsn/ryhxoGp4D#What-is-EIP-2938)
 [Read the EIP-2938 documentation](https://eips.ethereum.org/EIPS/eip-2938)
@@ -84,7 +84,7 @@ Note that EIP-2938 is currently not active. The community is currently favouring
 
 ## When will account abstraction ship? {when-will-aa-ship}
 
-Smart contract wallets are already available, but more upgrades are required to make them as decentralized and permisionless as possible. EIP-4337 is a mature proposal that does not require any changes to Ethereum's protocol, so it is possible that this could be implemented quickly. Upgrades that alter Ethereum's protocol are not currently being actively developed so may take much longer to ship. It is also very possible that account abstraction is achieved well enough by EIP-4337 that no protocol changes are ever required.
+Smart contract wallets are already available, but more upgrades are required to make them as decentralized and permissionless as possible. EIP-4337 is a mature proposal that does not require any changes to Ethereum's protocol, so it is possible that this could be implemented quickly. Upgrades that alter Ethereum's protocol are currently not in active development, so may take much longer to ship. It is also very possible that account abstraction is achieved well enough by EIP-4337 that no protocol changes are ever required.
 
 ## Further Reading {#further-reading}
 

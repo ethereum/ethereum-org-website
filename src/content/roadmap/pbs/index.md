@@ -15,7 +15,7 @@ summaryPoint3: This separation is crucial for censorship resistance and also ena
 
 Present-day Ethereum validators create _and_ broadcast blocks. They bundle together transactions that they have heard about through the gossip network and package them into a block that is sent out to peers on the Ethereum network. **Proposer-builder separation (PBS)** splits these tasks across multiple validators. Block builders become responsible for creating blocks and offering them to the block proposer in each slot. The block proposer cannot see the contents of the block, they simply choose the most profitable one, paying a fee to the block builder before sending the block to its peers.
 
-This is an important upgrade for several reasons. First, it creates opportunities to prevent transaction censorship at the protocol level. Second, it prevents hobbyist validators from being outcompeted by institutional players that can better optimize the profitability of their block building. Third, it helps with scaling Ethereum by enabling the Danksharding upgrades.
+This is an important upgrade for several reasons. First, it creates opportunities to prevent transaction censorship at the protocol level. Second, it prevents hobbyist validators from being out-competed by institutional players that can better optimize the profitability of their block building. Third, it helps with scaling Ethereum by enabling the Danksharding upgrades.
 
 ## PBS and censorship resistance {#pbs-and-censorship-resistance}
 
@@ -35,7 +35,7 @@ In 2022, the US Government Office for Foreign Asset Control sanctioned the Torna
 
 ## PBS and MEV {#pbs-and-mev}
 
-**Maximum extractable value (MEV)** refers to validators maximizing their profitability by favorably ordering transactions. Common examples include arbitraging swaps on decentralized exchanges (e.g. frontrunning a large sale or purchase) or identifying opportunities to liquidate DeFi positions. Maximizing MEV requires sophisticated technical know-how and custom software appended to normal validators, making it much moer likely that institutional operators outperform individuals and hobbyist validators at MEV extraction. This means staking returns are likely to be higher with centralized operators, creating a centralizing force that disincentivizes home staking.
+**Maximum extractable value (MEV)** refers to validators maximizing their profitability by favorably ordering transactions. Common examples include arbitraging swaps on decentralized exchanges (e.g. frontrunning a large sale or purchase) or identifying opportunities to liquidate DeFi positions. Maximizing MEV requires sophisticated technical know-how and custom software appended to normal validators, making it much more likely that institutional operators outperform individuals and hobbyist validators at MEV extraction. This means staking returns are likely to be higher with centralized operators, creating a centralizing force that disincentivizes home staking.
 
 PBS solves this problem by reconfiguring the economics of MEV. Instead of the block proposer doing their own MEV searching, they simply pick a block from many offered to them by block builders. The block builders might have done sophisticated MEV extraction, but the reward for it goes to the block proposer. This means that even if a small pool of specialized block builders dominate MEV extraction, the reward for it could go to any validator on the network, including individual home stakers.
 
