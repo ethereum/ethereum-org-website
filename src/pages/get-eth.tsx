@@ -3,6 +3,7 @@ import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
+import { Text } from "@chakra-ui/react"
 
 import { translateMessageId, TranslationKey } from "../utils/translations"
 import Translation from "../components/Translation"
@@ -26,17 +27,6 @@ import {
 import FeedbackCard from "../components/FeedbackCard"
 import { CardListItem } from "../components/CardList"
 import { getImage } from "../utils/image"
-
-const Subtitle = styled.div<{
-  mb?: string
-}>`
-  font-size: 1.25rem;
-  line-height: 140%;
-  max-width: 45ch;
-  text-align: center;
-  color: ${(props) => props.theme.colors.text200};
-  margin-bottom: ${(props) => props.mb || ""};
-`
 
 const HeroContainer = styled.div`
   position: relative;
@@ -263,12 +253,26 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           <h1>
             <Translation id="page-get-eth-where-to-buy-title" />
           </h1>
-          <Subtitle>
+          <Text
+            fontSize="xl"
+            lineHeight="140%"
+            maxWidth="45ch"
+            color="text200"
+            textAlign="center"
+            mb={0}
+          >
             <Translation id="page-get-eth-where-to-buy-desc" />
-          </Subtitle>
-          <Subtitle mb="2rem">
+          </Text>
+          <Text
+            fontSize="xl"
+            lineHeight="140%"
+            maxWidth="45ch"
+            color="text200"
+            textAlign="center"
+            mb={8}
+          >
             <Translation id="page-get-eth-where-to-buy-desc-2" />
-          </Subtitle>
+          </Text>
           <StyledEthPriceCard />
           <ButtonLink to="#country-picker">
             <Translation id="page-get-eth-search-by-country" />
