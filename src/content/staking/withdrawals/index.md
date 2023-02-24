@@ -166,7 +166,7 @@ eventName="read more">
 <p>Once a validator has completed the exiting process, and assuming the account has withdrawal credentials, the remaining balance will <em>then</em> be withdrawn during the next validator sweep.</p>
 </ExpandableCard>
 
-<ExpandableCard title="Can I withdraw a custom amount?">
+<ExpandableCard title="Can I withdraw a custom amount?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
 eventName="read more">
