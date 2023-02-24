@@ -1579,6 +1579,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://chawyehsu.com"><img src="https://avatars.githubusercontent.com/u/5764917?v=4?s=100" width="100px;" alt="Chawye Hsu"/><br /><sub><b>Chawye Hsu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=chawyehsu" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/MateusTP"><img src="https://avatars.githubusercontent.com/u/59940545?v=4?s=100" width="100px;" alt="Mateus Pimenta"/><br /><sub><b>Mateus Pimenta</b></sub></a><br /><a href="#content-MateusTP" title="Content">🖋</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ezal"><img src="https://avatars.githubusercontent.com/u/6931328?v=4?s=100" width="100px;" alt="ezal"/><br /><sub><b>ezal</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aezal" title="Bug reports">🐛</a></td>
+    </tr>
   </tbody>
 </table>
 
