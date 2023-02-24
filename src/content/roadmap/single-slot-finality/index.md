@@ -13,13 +13,13 @@ summaryPoints:
 
 Today it takes about 15 minutes for an Ethereum block to finalize. However, there are several improvements that can be made to the consensus mechanism that will make validating blocks much more efficient and allow the time-to-finality to decrease dramatically. Instead of waiting for fifteen minutes, blocks could be finalized in the same slot in which it is proposed. This is known as **single slot finality (SSF)**.
 
-## Finality {#finality}
+## What is finality? {#what-is-finality}
 
 In Ethereum's proof-of-stake based consensus mechanism, finality refers to the guarantee that a block cannot be altered or removed from the blockchain without burning at least 33% of the total staked ETH. This is 'crypto-economic' security because confidence comes from the extremely high cost associated with changing the order or content of the chain that would prevent any rational economic actor from trying it.
 
 ## Why aim for quicker finality? {#why-aim-for-quicker-finality}
 
-The current time to finality has turned out to be too long. Most users do not want to wait 15 minutes for finality, and it is inconvenient for apps and exchanges that might want high transaction throughput to have to wait that long to be certain their transactions are permanent. Having a delay between a block's proposal and finalization also creates an opportunity for short reorgs that an attacker could use to censor certain blocks or extract MEV. The mechanism that deals with upgrading blocks in stages is also quite complex and has been patched several times to close security vulnerabilities, making it one of the parts of the Ethereum codebase where subtle bugs are more to arise. These issues could all be eliminated by reducing the time to finality to a single slot.
+The current time to finality has turned out to be too long. Most users do not want to wait 15 minutes for finality, and it is inconvenient for apps and exchanges that might want high transaction throughput to have to wait that long to be certain their transactions are permanent. Having a delay between a block's proposal and finalization also creates an opportunity for short reorgs that an attacker could use to censor certain blocks or extract MEV. The mechanism that deals with upgrading blocks in stages is also quite complex and has been patched several times to close security vulnerabilities, making it one of the parts of the Ethereum codebase where subtle bugs are more likely to arise. These issues could all be eliminated by reducing the time to finality to a single slot.
 
 ## The decentralization / time / overhead tradeoff {#the-decentralization-time-overhead-tradeoff}
 
