@@ -43,7 +43,7 @@ For example, backup keys can be added to a wallet so that if you lose or acciden
 - **Account freezing**: If a device is lost or compromised the account can be locked from another authorized device, protecting the user's assets.
 - **Account recovery**: Lost a device or forgotten a password? In the current paradigm this means your assets could be frozen forever. With a smart contract wallet, you can set some pre-approved accounts that can authorize new devices and reset access.
 - **Set transaction limits**: specify daily thresholds for how much value can be transferred from the account in a day/week/month. This means if an attacker does gain access to your account they can't drain everything at once and you have opportunities to freeze and reset access.
-- **Create whitelists**: only allow transactions to certain addresses that you know to be safe. This means that _even if_ your private key was stolen, the attacker could not send funds to non-whitelisted destination accounts. These whitelists would require multiple signatures to change them so that an attackjer couldn't add their own address to the list unless they had access to several of your backup keys.
+- **Create whitelists**: only allow transactions to certain addresses that you know to be safe. This means that _even if_ your private key was stolen, the attacker could not send funds to non-whitelisted destination accounts. These whitelists would require multiple signatures to change them so that an attacker couldn't add their own address to the list unless they had access to several of your backup keys.
 
 ## Better user experience {#better-user-experience}
 
@@ -89,8 +89,8 @@ Smart contract wallets are already available, but more upgrades are required to 
 
 ## Further Reading {#further-reading}
 
-- [Watch the account abstraction panel discussion from Devcon Bogota](https://www.youtube.com/watch?app=desktop&v=WsZBymiyT-8)
-- [Watch "Why account abstraction is a game changer for dapps" from Devcon Bogota](https://www.youtube.com/watch?v=OwppworJGzs)
-- [Watch "Account abstraction ELI5" from Devcon Bogota](https://www.youtube.com/watch?v=QuYZWJj65AY)
-- [Read Vitalik's "Road to Account Abstraction" notes](https://notes.ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists)
-- [Read Vitalik's blog post on social recovery wallets](https://vitalik.ca/general/2021/01/11/recovery.html)
+- [Account abstraction panel discussion from Devcon Bogota](https://www.youtube.com/watch?app=desktop&v=WsZBymiyT-8)
+- ["Why account abstraction is a game changer for dapps" from Devcon Bogota](https://www.youtube.com/watch?v=OwppworJGzs)
+- ["Account abstraction ELI5" from Devcon Bogota](https://www.youtube.com/watch?v=QuYZWJj65AY)
+- [Vitalik's "Road to Account Abstraction" notes](https://notes.ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists)
+- [Vitalik's blog post on social recovery wallets](https://vitalik.ca/general/2021/01/11/recovery.html)
