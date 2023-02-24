@@ -59,7 +59,7 @@ export const Button: ComponentStyleConfig = {
   },
   sizes: {
     md: {
-      h: 42,
+      h: "50px",
     },
   },
   variants: {

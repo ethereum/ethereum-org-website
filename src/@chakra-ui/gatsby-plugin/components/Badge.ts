@@ -17,7 +17,7 @@ export const Badge: ComponentStyleConfig = {
     borderColor: "transparent",
     fontWeight: "initial",
     py: 1,
-    px: 2,
+    px: 4,
     textTransform: "uppercase",
   },
   variants: {
