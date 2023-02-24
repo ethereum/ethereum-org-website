@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { Text } from "@chakra-ui/react"
+import { Flex, Text } from "@chakra-ui/react"
 
 import { translateMessageId, TranslationKey } from "../utils/translations"
 import Translation from "../components/Translation"
@@ -27,26 +27,6 @@ import {
 import FeedbackCard from "../components/FeedbackCard"
 import { CardListItem } from "../components/CardList"
 import { getImage } from "../utils/image"
-
-const HeroContainer = styled.div`
-  position: relative;
-  width: 100%;
-  max-width: 1440px;
-  display: flex;
-  flex-direction: column;
-  margin: 2rem 0;
-  justify-content: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    max-width: 100vw;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column-reverse;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    flex-direction: column-reverse;
-    margin-bottom: 0rem;
-  }
-`
 
 const Hero = styled(GatsbyImage)`
   position: absolute !important;
@@ -243,7 +223,21 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
         description={translateMessageId("page-get-eth-meta-description", intl)}
       />
 
-      <HeroContainer>
+      <Flex
+        position="relative"
+        width="full"
+        maxWidth="1440px"
+        flexDir={{
+          base: "column-reverse",
+          sm: "column-reverse",
+          md: "column",
+          lg: "column",
+        }}
+        mt={8}
+        mx={0}
+        mb={{ base: 0, sm: 8 }}
+        justifyContent="center"
+      >
         <Hero
           image={getImage(data.hero)!}
           alt={translateMessageId("page-get-eth-hero-image-alt", intl)}
@@ -278,7 +272,7 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
             <Translation id="page-get-eth-search-by-country" />
           </ButtonLink>
         </Header>
-      </HeroContainer>
+      </Flex>
       <CardContainer>
         <StyledCard
           emoji=":office_building:"
