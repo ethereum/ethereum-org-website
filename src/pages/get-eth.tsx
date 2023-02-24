@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { Flex, Text } from "@chakra-ui/react"
+import { Flex, Img, Text } from "@chakra-ui/react"
 
 import { translateMessageId, TranslationKey } from "../utils/translations"
 import Translation from "../components/Translation"
@@ -27,19 +27,6 @@ import {
 import FeedbackCard from "../components/FeedbackCard"
 import { CardListItem } from "../components/CardList"
 import { getImage } from "../utils/image"
-
-const Hero = styled(GatsbyImage)`
-  position: absolute !important;
-  z-index: -1;
-  width: 100%;
-  max-width: 1440px;
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    max-width: 100vw;
-  }
-  min-height: 300px;
-  max-height: 400px;
-  background-size: cover;
-`
 
 const Header = styled.header`
   display: flex;
@@ -238,7 +225,15 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
         mb={{ base: 0, sm: 8 }}
         justifyContent="center"
       >
-        <Hero
+        <Img
+          position="absolute !important"
+          as={GatsbyImage}
+          zIndex={-1}
+          w="full"
+          maxW={{ base: "100vh", xl: "8xl" }}
+          minH="300px"
+          maxH="400px"
+          backgroundSize="cover"
           image={getImage(data.hero)!}
           alt={translateMessageId("page-get-eth-hero-image-alt", intl)}
           loading="eager"
