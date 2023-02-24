@@ -10100,6 +10100,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "jarrodwatts",
+      "name": "Jarrod Watts",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35651410?v=4",
+      "profile": "https://jarrodwatts.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
