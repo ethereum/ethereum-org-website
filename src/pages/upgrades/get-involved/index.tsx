@@ -1,4 +1,9 @@
-import React, { useState, useEffect, ReactNode } from "react"
+import React, {
+  useState,
+  useEffect,
+  ReactNode,
+  ComponentPropsWithRef,
+} from "react"
 import {
   Box,
   Divider,
@@ -10,10 +15,9 @@ import {
   List,
   ListItem,
   Text,
+  useTheme,
   useToken,
 } from "@chakra-ui/react"
-import { useTheme } from "@emotion/react"
-import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 import { shuffle } from "lodash"
@@ -94,9 +98,11 @@ const StyledGrayContainer = (props: ChildOnlyProp) => {
   return (
     <Box
       w="full"
-      py={16}
+      pt={16}
+      pb={8}
       px={0}
       mt={8}
+      mb={12}
       bg="grayBackground"
       boxShadow={`inset 0px 1px 0px ${tableItemBoxShadow}`}
       {...props}
@@ -128,6 +134,18 @@ const SloganGradient = (props: ChildOnlyProp) => {
   )
 }
 
+const Subtitle = (props: ChildOnlyProp) => (
+  <Flex
+    justify="center"
+    textAlign="center"
+    color="text200"
+    lineHeight="140%"
+    fontSize="2xl"
+    mt={4}
+    {...props}
+  />
+)
+
 const HeroContainer = (props: ChildOnlyProp) => (
   <Box
     pl={0}
@@ -147,101 +165,71 @@ const HeroCard = (props: ChildOnlyProp) => (
   />
 )
 
-const StyledCard = styled(Card)`
-  flex: 1 1 30%;
-  min-width: 240px;
-  margin: 1rem;
-  padding: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex: 1 1 30%;
-  }
-`
+const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
+  <Card flex="1 1 30%" minW="240px" m={4} p={6} {...props} />
+)
 
-const LeaderboardContainer = styled.div`
-  padding-left: 0rem;
-  padding-top: 2rem;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-    margin-top: 2rem;
-  }
-`
+const StyledCardList = (props: ComponentPropsWithRef<typeof CardList>) => (
+  <Box as={CardList} mr={8} {...props} />
+)
 
-const Subtitle = styled.div`
-  font-size: 1.5rem;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-  margin-top: 1rem;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-`
+const LeaderboardContainer = (props: ChildOnlyProp) => (
+  <Flex
+    align="center"
+    direction="column"
+    w={{ base: "full", md: "50%" }}
+    pl={0}
+    pt={8}
+    {...props}
+  />
+)
 
-const Row = styled.div`
-  display: flex;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column;
-  }
-`
+const Row = (props: ChildOnlyProp) => (
+  <Flex align="center" direction={{ base: "column", md: "row" }} {...props} />
+)
 
-const ReverseRow = styled.div`
-  display: flex;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column-reverse;
-  }
-`
+const ReverseRow = (props: ChildOnlyProp) => (
+  <Flex
+    align="center"
+    direction={{ base: "column-reverse", md: "row" }}
+    {...props}
+  />
+)
 
-const StyledCardList = styled(CardList)`
-  margin-right: 2rem;
-`
+const Column = (props: ChildOnlyProp) => (
+  <Box
+    w={{ base: "full", md: "50%" }}
+    ml={16}
+    mr={{ base: 16, md: 0 }}
+    {...props}
+  />
+)
 
-const Staking = styled.div`
-  padding: 4rem;
-  background: ${(props) => props.theme.colors.cardGradient};
-  width: 100%;
-  margin-top: 2rem;
-  margin-bottom: -2rem;
-  display: flex;
-  flex-direction: column;
-`
+const Staking = (props: ChildOnlyProp) => (
+  <Flex
+    direction="column"
+    w="full"
+    mt={8}
+    mb={-8}
+    p={16}
+    background="cardGradient"
+    {...props}
+  />
+)
 
-const LeftColumn = styled.div`
-  width: 50%;
-  margin-right: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-    margin-left: 4rem;
-  }
-`
-
-const RightColumn = styled.div`
-  width: 50%;
-  margin-left: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-    margin-right: 4rem;
-    margin-bottom: -2rem;
-  }
-`
-
-const StyledBreadcrumbs = styled(Breadcrumbs)`
-  justify-content: center;
-`
-
-const StyledCalloutBanner = styled(CalloutBanner)`
-  background: transparent;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-    padding: 0rem;
-    padding-top: 4rem;
-    margin-left: 0rem;
-  }
-`
+const StyledCalloutBanner = (
+  props: ComponentPropsWithRef<typeof CalloutBanner>
+) => (
+  <Box
+    as={CalloutBanner}
+    bg="transparent"
+    w={{ base: "full", md: "auto" }}
+    p={{ base: 0, md: 12 }}
+    pt={{ base: 16, md: 12 }}
+    ml={{ base: 0, md: 8 }}
+    {...props}
+  />
+)
 
 type Layer = "el" | "cl"
 
@@ -266,8 +254,7 @@ const GetInvolvedPage = ({
   location,
 }: PageProps<Queries.GetInvolvedPageQuery>) => {
   const intl = useIntl()
-  const theme = useTheme()
-  const isDarkTheme = theme.isDark
+  const { isDark: isDarkTheme } = useTheme()
 
   // TODO sort query isn't working :(
   const bountyHunters: Array<Person> = [...data.bountyHunters.nodes].sort(
@@ -479,7 +466,7 @@ const GetInvolvedPage = ({
       <PageContent>
         <HeroCard>
           <HeroContainer>
-            <StyledBreadcrumbs slug={location.pathname} startDepth={1} />
+            <Breadcrumbs slug={location.pathname} startDepth={1} />
             <SloganGradient>
               <Translation id="page-upgrades-get-involved" />{" "}
               <Emoji size={1} text=":wave:" />
@@ -551,7 +538,7 @@ const GetInvolvedPage = ({
       <StyledGrayContainer>
         <PageContent>
           <Row>
-            <LeftColumn>
+            <Column>
               <H2 id="#bug-bounty">
                 <Translation id="page-upgrades-get-involved-bug-hunting" />
               </H2>
@@ -578,7 +565,7 @@ const GetInvolvedPage = ({
               <ButtonLink to="/bug-bounty/">
                 <Translation id="page-upgrades-get-involved-bug-hunting" />
               </ButtonLink>
-            </LeftColumn>
+            </Column>
             <LeaderboardContainer>
               <Leaderboard content={bountyHunters} limit={5} />
             </LeaderboardContainer>
@@ -587,17 +574,17 @@ const GetInvolvedPage = ({
       </StyledGrayContainer>
       <PageContent>
         <ReverseRow>
-          <LeftColumn>
+          <Column>
             <StyledCardList content={ethresearch} />
-          </LeftColumn>
-          <RightColumn>
+          </Column>
+          <Column>
             <H2>
               <Translation id="page-upgrades-get-involved-join" />
             </H2>
             <Text>
               <Translation id="page-upgrades-get-involved-join-desc" />
             </Text>
-          </RightColumn>
+          </Column>
         </ReverseRow>
       </PageContent>
       <FeedbackCard />
