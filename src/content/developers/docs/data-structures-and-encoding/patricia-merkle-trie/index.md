@@ -13,7 +13,6 @@ Merkle Patricia Tries are fully deterministic, meaning that tries with the same 
 
 To better understand this page, it would be helpful to have basic knowledge of [hashes](https://en.wikipedia.org/wiki/Hash_function), [Merkle trees](https://en.wikipedia.org/wiki/Merkle_tree), [tries](https://en.wikipedia.org/wiki/Trie) and [serialization](https://en.wikipedia.org/wiki/Serialization).
 
-
 ## Basic radix tries {#basic-radix-tries}
 
 In a basic radix trie, every node looks as follows:

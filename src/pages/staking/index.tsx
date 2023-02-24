@@ -34,6 +34,7 @@ const HeroStatsWrapper = styled.div`
   align-items: center;
   background: ${({ theme }) => theme.colors.layer2Gradient};
   padding-bottom: 2rem;
+  width: 100%;
 `
 
 const Page = styled.div`

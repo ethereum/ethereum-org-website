@@ -57,10 +57,6 @@ Kami menyambut umpan balik baik untuk prinsip desain maupun panduan gaya penulis
 
 Pastikan Anda membaca [prinsip-prinsip kami](/contributing/design-principles/) dan [panduan gaya penulisan kami](/contributing/style-guide/) jika Anda ingin [berkontribusi ke situs ini](/contributing/).
 
-## Rencana kerja {#roadmap}
-
-<Roadmap />
-
 ## Lowongan kerja {#open-jobs}
 
 Meskipun situs web ini adalah sumber terbuka dan siapa pun dapat mengerjakannya, kami memiliki sebuah tim yang didedikasikan untuk ethereum.org dan proyek web Yayasan Ethereum lainnya.

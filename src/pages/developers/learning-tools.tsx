@@ -204,6 +204,15 @@ const LearningToolsPage = ({
       subjects: ["Solidity", "web3"],
     },
     {
+      name: "Metaschool",
+      description: "page-learning-tools-metaschool-description",
+      url: "https://metaschool.so",
+      image: getImage(data.metaschool)!,
+      alt: "page-learning-tools-metaschool-logo-alt",
+      background: "#f6f7f9",
+      subjects: ["Solidity", "web3"],
+    },
+    {
       name: "NFT School",
       description: "page-learning-tools-nftschool-description",
       url: "https://nftschool.dev/",
@@ -243,7 +252,7 @@ const LearningToolsPage = ({
     {
       name: "Alchemy University",
       description: "page-learning-tools-alchemy-university-description",
-      url: "https://university.alchemycom/",
+      url: "https://university.alchemy.com/",
       image: getImage(data.alchemyuniversity)!,
       alt: "page-learning-tools-alchemy-university-logo-alt",
       background: "#ffffff",
@@ -354,6 +363,9 @@ export const query = graphql`
       ...learningToolImage
     }
     oz: file(relativePath: { eq: "dev-tools/oz.png" }) {
+      ...learningToolImage
+    }
+    metaschool: file(relativePath: { eq: "dev-tools/metaschool.png" }) {
       ...learningToolImage
     }
     questbook: file(relativePath: { eq: "dev-tools/questbook.png" }) {

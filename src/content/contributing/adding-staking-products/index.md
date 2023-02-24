@@ -8,7 +8,7 @@ lang: en
 
 We want to make sure we list the best resources possible while keeping users safe and confident.
 
-Anyone is free to suggest adding a staking products or service on ethereum.org. If there's one that we have missed, **[please suggest it](https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_staking_product.md)!**
+Anyone is free to suggest adding a staking products or service on ethereum.org. If there's one that we have missed, **[please suggest it](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml&title=Suggest+a+staking+product+or+service)!**
 
 We currently list staking products and services on the following pages:
 
@@ -166,6 +166,6 @@ The code logic and weights for these criteria are currently contained in [this J
 
 If you want to add a staking product or service to ethereum.org, create an issue on GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_staking_product.md">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml&title=Suggest+a+staking+product+or+service">
   Create an issue
 </ButtonLink>
