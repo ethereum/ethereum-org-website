@@ -1,6 +1,7 @@
 ---
 title: A more secure Ethereum
 description: High level overview of how Ethereum's security will be upgraded in the future
+lang: en
 ---
 
 Ethereum is the most secure and decentralized smart-contract platform in existence. However, there are still improvements that can be made so that Ethereum stays resilient to any level of attack far into the future. These include subtle changes to the way Ethereum clients deal with competing blocks, as well as increasing the speed the network considers blocks to be "finalized" (meaning they can't be changed without extreme economic losses to an attacker). There are also improvements that make censoring transactions much more difficult by making block proposers blind to the actual contents of their blocks, and new ways to identify when a client is censoring. Together these improvements will upgrade the proof-of-stake protocol so that users - from individuals to corporations - have instant confidence in their apps, data and assets on Ethereum.

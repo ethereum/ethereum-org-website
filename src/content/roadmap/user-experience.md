@@ -1,6 +1,7 @@
 ---
 title: Improving user experience
 description: High level overview of how Ethereum will scale in the future
+lang: en
 ---
 
 It is still too complex to use Ethereum for most people - key management, wallets, transactions etc are too technical compared to using a bank. The full benefits of running an Ethereum node remain out of reach for the majority of users because there are technical and hardware requirements and it requires some degree of motivation to engage with Ethereum and learn the foundational principles. This situation is fine for technically-minded Ethereum enthusiasts but it will prevent Ethereum being used day-to-day by the general public. To encourage mass adoption, Ethereum must drastically lower its barriers to entry - users must get the benefits of decentralized, permissionless and censorship resistant access to Ethereum but it must be as frictionless as using a traditional web2 app. Read on to discover some of the changes that will be implemented to allow the barriers-to-entry to be broken down:

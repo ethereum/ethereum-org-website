@@ -1,6 +1,7 @@
 ---
 title: Secret leader election
 description: Explanation of how secret leader election can help protect validators from attacks
+lang: en
 ---
 
 In today's proof-of-stake based consensus mechanism, the list of upcoming block proposers is public and it is possible to map their IP addresses. This means that attackers could identify which validators are due to propose a block and target them with a denial-of-service (DOS) attack that leaves them unable to propose their block in time.
