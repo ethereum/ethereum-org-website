@@ -1,6 +1,7 @@
 ---
 title: Scaling Ethereum
 description: High level overview of how Ethereum will scale in the future via faster, cheaper transactions.
+lang: en
 ---
 
 Ethereum is scaled using rollups. Rollups batch transactions together offchain and send the result to Ethereum. Today, users have to rely on centralized operators to manage rollups honestly. At the same time, the data rollups post to Ethereum is too expensive, imposing a limit on the cost savigns that rollups can create for users. To solve these problems, cheap data blobs will be added to Ethereum blocks specifically for rollups, and rollup infrastructure will be decentralized across a wider community of operators. This will allow Ethereum to fully scale without sacrificing decentralization.

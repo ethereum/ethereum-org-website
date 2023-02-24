@@ -1,6 +1,7 @@
 ---
 title: Statelessness, state expiry and history expiry
 description: Explanation of history expiry and stateless Ethereum
+lang: en
 ---
 
 The ability to run Ethereum nodes on modest hardware is critical for true decentralization. This is because running a node gives users the ability to verify information by performing cryptographic checks independently rather than trusting a third party to feed them data. Running a node allows users to submit transactions directly to the Ethereum peer-to-peer network rather than having to trust an intermediary. Decentralization is not possible if these benefits are only available to users with expensive hardware. Instead, nodes should be able to run with extremely modest processing and memory requirements so that they can run on mobile phones, micro-computers or unnoticeably on a home computer.
