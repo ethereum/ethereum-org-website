@@ -1,6 +1,14 @@
 ---
 title: Single slot finality
 description: Explanation of single slot finality
+template: staking
+image: ../../../assets/staking/leslie-pool.png
+alt: Leslie the rhino swimming in the pool.
+sidebarDepth: 2
+summaryPoints:
+  - Single slot finality means that transactions become irreversible almost instantly
+  - Near-instant finality means users and apps can be immediately sure of the permanence of their transactions.
+  - Several types of attack rely upon the ability to reorganize blocks - single slot finality eliominates them.
 ---
 
 Today it takes about 15 minutes for an Ethereum block to finalize. However, there are several improvements that can be made to the consensus mechanism that will make validating blocks much more efficient and allow the time-to-finality to decrease dramatically. Instead of waiting for fifteen minutes, blocks could be finalized in the same slot in which it is proposed. This is known as **single slot finality (SSF)**.
@@ -60,5 +68,5 @@ SSF is still in the research phase and is not expected to ship for several years
 
 ## Further Reading {#further-reading}
 
-- [Watch Vitalik on SSF at EDCON 2022](https://www.youtube.com/watch?v=nPgUKNPWXNI)
+- [Vitalik on SSF at EDCON 2022](https://www.youtube.com/watch?v=nPgUKNPWXNI)
 - [Vitalik's notes: Paths to single slot finality](https://notes.ethereum.org/@vbuterin/single_slot_finality#What-might-the-exact-consensus-algorithm-look-like)

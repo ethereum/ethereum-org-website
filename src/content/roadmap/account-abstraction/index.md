@@ -3,14 +3,13 @@ title: Account abstraction
 description: An overview of Ethereum's plans to make user accounts simpler and safer
 lang: en
 template: staking
-emoji: ":money_with_wings:"
 image: ../../../assets/staking/leslie-pool.png
 alt: Leslie the rhino swimming in the pool.
 sidebarDepth: 2
 summaryPoints:
-  - Understand why account abstraction will make Ethereum easier to use
-  - Learn about upcoming changes to how users will interact with Ethereum
-  - Read why account abstraction will help users to secure their assets
+  - Account abstraction makes it much easier to build smart contract wallets
+  - Smart contract wallets make it much easier to manage access to Ethereum accounts
+  - Lost and exposed keys can be recovered using multiple backups
 ---
 
 Today, users interact with Ethereum using **externally owned accounts (EOAs)**. These are the only entities that can initiate a transaction or execute functions in smart contracts, and they pay gas fees in ETH whenever those transactions change Ethereum's state. Account abstraction aims to relax this constraint to allow smart contract wallets to initiate transactions too. This allows users to flexibly program more security and better user experiences into their accounts.
