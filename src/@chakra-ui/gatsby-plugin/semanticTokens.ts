@@ -35,6 +35,8 @@ const semanticTokens = {
 
     // Design System colors
     primary: { _light: "blue.500", _dark: "orange.500" },
+    primaryHighContrast: { _light: "blue.700", _dark: "orange.100" },
+    primaryLowContrast: { _light: "blue.100", _dark: "orange.800" },
     primaryLight: { _light: "blue.100", _dark: "orange.100" },
     primaryDark: { _light: "blue.700", _dark: "orange.800" },
     primaryHover: { _light: "blue.300", _dark: "orange.300" },
@@ -44,7 +46,7 @@ const semanticTokens = {
     body: { _light: "gray.700", _dark: "gray.100" },
     // ! Deprecating bodyInverted
     bodyInverted: { _light: "gray.100", _dark: "gray.700" },
-    bodyLight: { _light: "gray.500", _dark: "gray.100" },
+    bodyLight: { _light: "gray.600", _dark: "gray.300" },
     disabled: { _light: "gray.300", _dark: "gray.500" },
     background: { _light: "white", _dark: "gray.700" },
     backgroundHighlight: { _light: "gray.100", _dark: "gray.900" },
@@ -52,15 +54,18 @@ const semanticTokens = {
     neutral: { _light: "white", _dark: "gray.900" },
     success: "green.500",
     successLight: "green.100",
+    successOutline: { _light: "success", _dark: "successLight" },
     // ! Deprecating successNeutral
     successNeutral: { _light: "green.100", _dark: "green.900" },
     // ? Keep "error" or rename to "fail" ?
     error: "red.500",
     errorLight: "red.100",
+    errorOutline: { _light: "error", _dark: "errorLight" },
     // ! Deprecating errorNeutral
     errorNeutral: { _light: "red.100", _dark: "red.900" },
     attention: "yellow.500",
     attentionLight: "yellow.200",
+    attentionOutline: { _light: "attention", _dark: "attentionLight" },
     tooltipShadow: {
       _light: "blackAlpha.400",
       _dark: "whiteAlpha.400",
