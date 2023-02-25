@@ -226,7 +226,11 @@ const StyledCalloutBanner = (
     w={{ base: "full", md: "auto" }}
     p={{ base: 0, md: 12 }}
     pt={{ base: 16, md: 12 }}
-    ml={{ base: 0, md: 8 }}
+    sx={{
+      "&": {
+        ml: 0,
+      },
+    }}
     {...props}
   />
 )
