@@ -2,11 +2,10 @@
 title: Ethereum roadmap
 description: An overview of Ethereum's upgrade plans
 lang: en
-template: staking
+template: roadmap
 emoji: ":money_with_wings:"
-image: ../../../assets/staking/leslie-pool.png
-alt: Leslie the rhino swimming in the pool.
-sidebarDepth: 2
+image: ../../assets/upgrades/merge.png
+alt: "Ethereum roadmap"
 summaryPoints:
   - Learn about how Ethereum will evolve into the future
   - Read why Ethereum is still being worked on
