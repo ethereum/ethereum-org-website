@@ -18,7 +18,7 @@ When upgrades are needed in traditional, centrally-controlled software, the comp
 These rule changes may create a temporary split in the network. New blocks could be produced according to the new rules or the old ones. Forks are usually agreed upon ahead of time so that clients adopt the changes in unison and the fork with the upgrades becomes the main chain. However, in rare cases, disagreements over forks can cause the network to permanently split – most notably the creation of Ethereum Classic with the [DAO fork](#dao-fork).
 </ExpandableCard>
 
-Skip straight to information about some of the particularly important past upgrades: [The Beacon Chain](/history/beacon-chain/index.md); [The Merge](/history/merge); and [EIP-1559](#london)
+Skip straight to information about some of the particularly important past upgrades: [The Beacon Chain](/history/beacon-chain/); [The Merge](/history/merge/); and [EIP-1559](#london)
 
 Looking for future protocol upgrades? [Learn about upcoming upgrades on the Ethereum roadmap](/roadmap/).
 

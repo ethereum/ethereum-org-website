@@ -49,7 +49,7 @@ The way this would work is probably to have a state tree for specific time perio
 
 Similarly to history expiry, under state expiry responsibility for storing old state data is removed from individual users and pushed onto other entities such as centralized providers, altruistic community members or more futuristic decentralized solutions such as the Portal Network.
 
-State expiry is still in the research phase and not yet ready to ship. State expiry may well happen later than stateless clients and history expiry because those upgrades make large state sizes easily managebale for the majority of validators.
+State expiry is still in the research phase and not yet ready to ship. State expiry may well happen later than stateless clients and history expiry because those upgrades make large state sizes easily manageable for the majority of validators.
 
 [Read more on state expiry](https://hackmd.io/@vbuterin/state_size_management#A-more-moderate-solution-state-expiry)
 [Read even more on state expiry](https://hackmd.io/@vbuterin/state_expiry_paths#Option-2-per-epoch-state-expiry)
