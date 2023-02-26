@@ -222,6 +222,10 @@ const Nav: React.FC<IProps> = ({ path }) => {
               to: "/energy-consumption/",
             },
             {
+              text: "ethereum-roadmap",
+              to: "/roadmap/",
+            },
+            {
               text: "ethereum-upgrades",
               to: "/upgrades/",
             },

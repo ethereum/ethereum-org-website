@@ -121,6 +121,10 @@ const Footer: React.FC<IProps> = () => {
           text: "ethereum-whitepaper",
         },
         {
+          text: "ethereum-roadmap",
+          to: "/roadmap/",
+        },
+        {
           text: "ethereum-upgrades",
           to: "/upgrades/",
         },
