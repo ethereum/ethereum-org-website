@@ -2,6 +2,7 @@
 title: Future-proofing Ethereum
 description: High level overview of how Ethereum is set up for the future
 lang: en
+template: roadmap
 ---
 
 Some parts of the roadmap are not necessarily required for scaling or securing Ethereum in the near-term, but set Ethereum up for stability and reliability for centuries to come. These upgrades cement Ethereum as the resilient, decentralized base layer for the future, whatever it may hold.
@@ -24,4 +25,8 @@ There are several updates that will be made to the Ethereum Virtual Machine (EVM
 
 Similarly, there are updates that can be made to other parts of present-day Ethereum clients. One example is that current execution and consensus clients use a different type of data compression. It will be much easier and more intuitive to share data between clients when the compression scheme is unified across the whole network.
 
-Read more on [gas](/developers/docs/gas), the [EVM](/developers/docs/evm) and [data structures](/developers/docs/data-structures-and-encoding).
+**Read more on:**
+
+- [Gas](/developers/docs/gas)
+- [EVM](/developers/docs/evm)
+- [Data structures](/developers/docs/data-structures-and-encoding)
