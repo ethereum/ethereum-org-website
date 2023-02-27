@@ -42,7 +42,7 @@ Verkle trees are `(key,value)` pairs where the keys are 32-byte elements compose
 
 [Read more about the structure of Verkle trees](https://blog.ethereum.org/2021/12/02/verkle-tree-structure)
 
-## When will Verkle trees ship? {#when-will-verkle-trees-ship}
+## Current progress {#current-progress}
 
 Verkle tree testnets are already up and running, but there are still substantial outstanding updates to clients that are required to support Verkle trees. You can help accelerate progress by deploying contracts to the testnets or running testnet clients.
 

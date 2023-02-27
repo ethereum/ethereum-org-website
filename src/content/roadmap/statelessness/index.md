@@ -101,6 +101,10 @@ Strong statelessness removes the need for any blocks to store state data. Instea
 
 Strong statelessness is the most elegant solution to reducing the disk requirements for nodes but it requires some substantial updates to the Ethereum protocol. It is still in the research phase and probably won't ship for several years.
 
+## Current progress {#current-progress}
+
+Full statelessness is still in the research phase and is likely several years away from being implemented. Weak statelessness, history expiry and state expiry are all milestones on the road to full statelessness. They too are still in the research phase. There is no guarantee that all of these proposals will be implemented, for example, if state expiry is implemented first there may be no need to also implement history expiry. There are also other roadmap items, such as [Verkle Trees](/roadmap/verkle-trees) and [Proposer-builder separation](/roadmap/pbs) that need to be completed first.
+
 ## Further reading {#further-reading}
 
 - [Vitalik statelessness AMA](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)

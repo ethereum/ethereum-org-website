@@ -57,7 +57,7 @@ Today's consensus mechanism relies on a tight coupling between the finality gadg
 
 The problem with scaling aggregation by growing the number of validators per subnet is that it leads to greater load on the peer-to-peer network. The problem with adding layers of aggregations is that it is quite complex to engineer and adds latency (i.e. it could take longer for the block proposer to hear from all the subnet aggregators). It is also not clear how to deal with the scenario that there are more active validators on the network than can feasibly be processed in each slot, even with BLS signature aggregation. One potential solution is that, because all validators attest in every slot and there are no committees under SSF, the 32 ETH cap on the effective balance could be removed entirely, meaning operators managing multiple validators could consolidate their stake and run fewer, reducing the number of messages that validating nodes have to process to account for the entire validator set. This relies on large stakers agreeing to consolidate their validators. It is also possible to impose a fixed cap on the number of validators or the amount of staked ETH at any time. However, this requires some mechanism for deciding which validators are allowed to participate and which are not, which is liable to create unwanted secondary effects.
 
-## When will SSF ship? {#when-will-ssf-ship}
+## Current progress {#current-progress}
 
 SSF is still in the research phase and is not expected to ship for several years, likely after other substantial upgrades such as Verkle trees and Danksharding.
 

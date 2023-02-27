@@ -79,6 +79,10 @@ Data availability sampling is required for validators to quickly and efficiently
 [Read more on data availability sampling for blobs](https://hackmd.io/@vbuterin/sharding_proposal#ELI5-data-availability-sampling)
 </ExpandableCard>
 
+### Current progress {#current-progress}
+
+Full Danksharding is several years away. However, Proto-Danksharding should arrive relatively soon. At the time of writing (Feb 2023) the KZG ceremony is still open and has so far attracted over 50,000 contributors. The [EIP](https://eips.ethereum.org/EIPS/eip-4844) for ProtoDanksharding is mature, the specification is agreed and the clients have implemented prototypes that are currently being tested and made production-ready. The next step is to implement the changes on a public testnet. You can keep up to date using the [EIP 4844 readiness checklist](https://github.com/ethereum/pm/blob/master/Breakout-Room/4844-readiness-checklist.md#client-implementation-status).
+
 ### Further reading {#further-reading}
 
 - [Read more about Danksharding](https://notes.ethereum.org/@dankrad/new_sharding)

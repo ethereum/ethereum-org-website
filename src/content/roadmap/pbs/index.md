@@ -51,6 +51,10 @@ Individuals could be incentivized to stake with pools rather than on their own d
 
 Danksharding is the way Ethereum will scale to >100,000 transactions per second and minimize fees for rollup users. It relies upon PBS because it adds to the workload for block builders, who will have to compute proofs for up to 64 MB of rollup data in less than 1 second. This will probably require specialized builders that can dedicate fairly substantial hardware to the task. However, in the current situation block building could become increasingly centralized around more sophisticated and powerful operators anyway due to MEV extraction. Proposer-builder separation is a way to embrace this reality and prevent it from exerting centralizing force on block validation (the important part) or the distribution of staking rewards. A great side-benefit is that the specialized block builders are also willing and able to compute the necessary data proofs for Danksharding.
 
+## Current progress {#current-progress}
+
+PBS is in an advanced stage of research, but there are still some important design questions that need to be resolved before it can be prototyped in Ethereum clients. There is no finalized specification yet. This means PBS is likely a year away or more. Check the latest [state of the research](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance).
+
 ## Further Reading {#further-reading}
 
 - [State of research: censorship resistance under PBS](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
