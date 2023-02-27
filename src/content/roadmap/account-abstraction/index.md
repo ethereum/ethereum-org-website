@@ -2,15 +2,9 @@
 title: Account abstraction
 description: An overview of Ethereum's plans to make user accounts simpler and safer
 lang: en
-template: staking
-image: ../../../assets/staking/leslie-pool.png
-alt: Leslie the rhino swimming in the pool.
-sidebarDepth: 2
-summaryPoints:
-  - Account abstraction makes it much easier to build smart contract wallets
-  - Smart contract wallets make it much easier to manage access to Ethereum accounts
-  - Lost and exposed keys can be recovered using multiple backups
 ---
+
+# Account abstraction {#account-abstraction}
 
 Today, users interact with Ethereum using **externally owned accounts (EOAs)**. These are the only entities that can initiate a transaction or execute functions in smart contracts, and they pay gas fees in ETH whenever those transactions change Ethereum's state. Account abstraction aims to relax this constraint to allow smart contract wallets to initiate transactions too. This allows users to flexibly program more security and better user experiences into their accounts.
 
@@ -66,8 +60,10 @@ EIP-4337 is the first step towards native smart contract wallet support in a dec
 
 The way wallets work would also change under EIP-4337. Instead of each wallet re-implementing common but complex safety logic, those functions would be outsourced to a global wallet contract known as the "entry point". This would handle operations such as paying fees and executing EVM code so that wallet developers can focus on providing excellent user experiences.
 
-[Read more on EIP-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)
-[Read the EIP-4337 documentation](https://eips.ethereum.org/EIPS/eip-4337)
+**Read more**
+
+- [About EIP-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)
+- [EIP-4337 documentation](https://eips.ethereum.org/EIPS/eip-4337)
 
 </ExpandableCard>
 
@@ -77,12 +73,14 @@ EIP-2938 aims to update the Ethereum protocol by introducing a new transaction t
 
 Note that EIP-2938 is currently not active. The community is currently favoring EIP-4337 because it does not require changes to the protocol.
 
-[Read more about EIP2938](https://hackmd.io/@SamWilsn/ryhxoGp4D#What-is-EIP-2938)
-[Read the EIP-2938 documentation](https://eips.ethereum.org/EIPS/eip-2938)
+**Read more**
+
+- [About EIP2938](https://hackmd.io/@SamWilsn/ryhxoGp4D#What-is-EIP-2938)
+- [EIP-2938 documentation](https://eips.ethereum.org/EIPS/eip-2938)
 
 </ExpandableCard>
 
-## When will account abstraction ship? {when-will-aa-ship}
+## When will account abstraction ship? {#when-will-aa-ship}
 
 Smart contract wallets are already available, but more upgrades are required to make them as decentralized and permissionless as possible. EIP-4337 is a mature proposal that does not require any changes to Ethereum's protocol, so it is possible that this could be implemented quickly. Upgrades that alter Ethereum's protocol are currently not in active development, so may take much longer to ship. It is also very possible that account abstraction is achieved well enough by EIP-4337 that no protocol changes are ever required.
 

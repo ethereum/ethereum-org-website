@@ -29,6 +29,7 @@ import SectionNav from "../components/SectionNav"
 import DocLink from "../components/DocLink"
 import GhostCard from "../components/GhostCard"
 import MatomoOptOut from "../components/MatomoOptOut"
+import UpgradeStatus from "../components/UpgradeStatus"
 import {
   Divider,
   Paragraph,
@@ -156,6 +157,7 @@ const components = {
   TranslationChartImage,
   EnergyConsumptionChart,
   QuizWidget,
+  UpgradeStatus,
 }
 
 const StaticPage = ({

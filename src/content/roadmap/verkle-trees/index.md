@@ -2,15 +2,9 @@
 title: Verkle trees
 description: A high level description of Verkle trees and how they will be used to upgrade Ethereum
 lang: en
-template: staking
-emoji: ":money_with_wings:"
-image: ../../../assets/staking/leslie-pool.png
-alt: Leslie the rhino swimming in the pool.
-sidebarDepth: 2
-summaryPoints:
-  - Discover what Verkle trees are
-  - Read why Verkle Trees are a useful upgrade for Ethereum
 ---
+
+# Verkle trees {#verkle-trees}
 
 Verkle tries (a portmanteau of "Vector commitment" and "Merkle Tries") are a data structure that be used to upgrade Ethereum nodes so that they can stop storing large amounts of state data without losing the ability to validate blocks.
 

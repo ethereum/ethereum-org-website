@@ -4,6 +4,8 @@ description: Explanation of history expiry and stateless Ethereum
 lang: en
 ---
 
+# Statelessness, state expiry and history expiry {#statelessness}
+
 The ability to run Ethereum nodes on modest hardware is critical for true decentralization. This is because running a node gives users the ability to verify information by performing cryptographic checks independently rather than trusting a third party to feed them data. Running a node allows users to submit transactions directly to the Ethereum peer-to-peer network rather than having to trust an intermediary. Decentralization is not possible if these benefits are only available to users with expensive hardware. Instead, nodes should be able to run with extremely modest processing and memory requirements so that they can run on mobile phones, micro-computers or unnoticeably on a home computer.
 
 Today, high disk space requirements is the main barrier preventing universal access to nodes. This is primarily due to the need to store large chunks of Ethereum's state data. This state data contains critical information required to correctly process new blocks and transactions. At the time of writing, a fast 2TB SSD is recommended for running a full Ethereum node. For a node that does not prune any older data, the storage requirement grows at around 14GB/week, and archive nodes that store all data since genesis are approaching 12 TB.
@@ -33,8 +35,10 @@ EIP-4444 is not yet ready to ship, but it is under active discussion. Interestin
 
 This upgrade doesn't fundamentally change how Ethereum nodes handle state data, it just changes how historical data is accessed.
 
-Watch [Alex Stokes explain EIP-4444](https://youtu.be/SfDC_qUZaos)
-Read the [EIP-4444 specification](https://eips.ethereum.org/EIPS/eip-4444)
+**Read more**
+
+- [Watch Alex Stokes explain EIP-4444](https://youtu.be/SfDC_qUZaos)
+- [EIP-4444 specification](https://eips.ethereum.org/EIPS/eip-4444)
 
 ### State expiry {#state-expiry}
 
@@ -51,8 +55,10 @@ Similarly to history expiry, under state expiry responsibility for storing old s
 
 State expiry is still in the research phase and not yet ready to ship. State expiry may well happen later than stateless clients and history expiry because those upgrades make large state sizes easily manageable for the majority of validators.
 
-[Read more on state expiry](https://hackmd.io/@vbuterin/state_size_management#A-more-moderate-solution-state-expiry)
-[Read even more on state expiry](https://hackmd.io/@vbuterin/state_expiry_paths#Option-2-per-epoch-state-expiry)
+**Read more**
+
+- [Read more on state expiry](https://hackmd.io/@vbuterin/state_size_management#A-more-moderate-solution-state-expiry)
+- [Read even more on state expiry](https://hackmd.io/@vbuterin/state_expiry_paths#Option-2-per-epoch-state-expiry)
 
 ## Statelessness {#statelessness}
 
@@ -64,8 +70,10 @@ Statelessness is a bit of a misnomer because it does not mean the concept of "st
 - nodes can run on top of cheap hard drives because there is no disk reading/writing required
 - compatible with future upgrades to Ethereum's cryptography
 
-Read more on [why it's so important to go stateless](https://dankradfeist.de/ethereum/2021/02/14/why-stateless.html)
-Read the original [stateless client concept notes](https://ethresear.ch/t/the-stateless-client-concept/172)
+**Read more**
+
+- [Read more on why it's so important to go stateless](https://dankradfeist.de/ethereum/2021/02/14/why-stateless.html)
+- [Read the original stateless client concept notes](https://ethresear.ch/t/the-stateless-client-concept/172)
 
 ### Weak Statelessness {#weak-statelessness}
 

@@ -2,14 +2,11 @@
 title: Proposer-builder separation
 description: Learn how and why Ethereum validators will split their block building and block broadcasting responsibilities.
 lang: en
-template: upgrade
-image: ../../../assets/upgrades/newrings.png
-summaryPoint1: Proposer-builder separation reconfigures how blocks are built and broadcast by Ethereum validators.
-summaryPoint2: Block builders take responsibility for creating new blocks. Block proposers then pick blocks from builders to broadcast.
-summaryPoint3: This separation is crucial for censorship resistance and also enables data sharding.
 ---
 
-<UpgradeStatus dateKey="Not imminent - expect 2024/25">
+# Proposer-builder separation {#proposer-builder-separation}
+
+<UpgradeStatus dateKey="page-upgrades-pbs">
     Proposer-builder separation is being actively researched and is unlikely to ship before 2024. 
 </UpgradeStatus>
 
@@ -30,8 +27,10 @@ For example, inclusion lists can be introduced so that when validators know abou
 In 2022, the US Government Office for Foreign Asset Control sanctioned the Tornado Cash smart contract, making it illegal for Americans to use it. This led to many validators censoring transactions that touched the Tornado Cash contract. They do this by detecting blacklisted addresses in their transaction pool and omitting them from the blocks the propose. After PBS this will no longer be possible because block proposers will not know which transactions they are broadcasting in their blocks. This doesn't imply users should break any laws - it means that compliance can happen at the application layer rather than in-protocol.
 </ExpandableCard>
 
-[Read more about PBS and censorship resistance](https://notes.ethereum.org/@fradamt/H1TsYRfJc#Secondary-auctions)
-[Read more about inclusion lists](https://notes.ethereum.org/@fradamt/H1ZqdtrBF)
+**Read more**
+
+- [Read more about PBS and censorship resistance](https://notes.ethereum.org/@fradamt/H1TsYRfJc#Secondary-auctions)
+- [Read more about inclusion lists](https://notes.ethereum.org/@fradamt/H1ZqdtrBF)
 
 ## PBS and MEV {#pbs-and-mev}
 
@@ -39,12 +38,14 @@ In 2022, the US Government Office for Foreign Asset Control sanctioned the Torna
 
 PBS solves this problem by reconfiguring the economics of MEV. Instead of the block proposer doing their own MEV searching, they simply pick a block from many offered to them by block builders. The block builders might have done sophisticated MEV extraction, but the reward for it goes to the block proposer. This means that even if a small pool of specialized block builders dominate MEV extraction, the reward for it could go to any validator on the network, including individual home stakers.
 
-[Read more on PBS and MEV](https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725)
-
 <ExpandableCard title="Why is it OK to centralize block building?" contentPreview="Block building is naturally centralizing due to MEV extraction. It make sense to allow this to continue but maximize the decentralization of block reward distribution and block validation.">
 
 Individuals could be incentivized to stake with pools rather than on their own due to the enhanced rewards offered by sophisticated MEV strategies. Separating the block building from the block proposal means that the MEV extracted will be distributed over more validators rather than centralizing with the most effective MEV searcher. At the same time, allowing specialized block builders to exist takes the burden of block building away from individuals, while maximizing the number of individual, independent validators that can check the blocks are honest. The important concept is "prover-verifier asymmetry" which refers to the idea that centralized block production is fine as long as there is a robust and maximally decentralized network of validators able to prove the blocks are honest. Decentralization is a means, not an end goal - what we want are honest blocks.
 </ExpandableCard>
+
+**Read more**
+
+- [Read more on PBS and MEV](https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725)
 
 ## PBS and Danksharding {#pbs-and-danksharding}
 

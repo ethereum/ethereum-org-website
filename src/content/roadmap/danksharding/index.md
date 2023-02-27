@@ -2,13 +2,9 @@
 title: Danksharding
 description: Learn about Proto-Danksharding and Danksharding - two sequential upgrades for scaling Ethereum.
 lang: en
-template: upgrade
-image: ../../../assets/upgrades/newrings.png
-summaryPoint1: Danksharding is a multi-phase upgrade to improve Ethereum’s scalability and capacity.
-summaryPoint2: The first stage, Proto-Danksharding, adds data blobs to blocks
-summaryPoint3: Data blobs offer a cheaper way for rollups to post data to Ethereum and those costs can be passed on to users in the form of lower transaction fees.
-summaryPoint4: Later, full Danksharding will spread responsibility for verifying data blobs across subsets of nodes, further scaling Ethereum to more than 100,000 transactions per second.
 ---
+
+# Danksharding {#danksharding}
 
 <InfoBanner isWarning>
   Danksharding is how Ethereum becomes a truly scalable blockchain, but there are several protocol upgrades required to get there. Proto-Danksharding is an intermediate step along the way. Both aim to make transactions on Layer 2 as cheap as possible for users and should scale Ethereum to >100,000 transactions per second.
@@ -18,7 +14,9 @@ summaryPoint4: Later, full Danksharding will spread responsibility for verifying
 
 Proto-Danksharding, also known as EIP-4844, is a way for rollups to add cheaper data to blocks. Right now, rollups are limited in how cheap they can make user transactions by the fact that they post their transactions in `CALLDATA`. This is expensive because it is processed by all Ethereum nodes and lives on chain forever, even though rollups only need the data for a short time. Proto-Danksharding introduces data blobs that can be sent attached to blocks. The data in these blobs is not accessible to the EVM and is automatically deleted after a fixed time period (1-3 months). This means rollups can send their data much more cheaply and pass the savings on to end users in the form of cheaper transactions.
 
-[Read more on Proto-Danksharding](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq)
+**Read more**
+
+- [Proto-Danksharding](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq) - _Vitalik Buterin_
 
 <ExpandableCard title="Why do blobs make rollups cheaper?">
 
@@ -32,7 +30,7 @@ Rollups post commitments to their transaction data on-chain and also make the ac
 
 </ExpandableCard>
 
-### How is blob data verified {#how-are-blobs-verified}?
+### How is blob data verified? {#how-are-blobs-verified}
 
 Rollups post the transactions they execute in data blobs. They also post a "commitment" to the data. They do this by fitting a polynomial function to the data. This function can then be evaluated at various points. For example, if we define an extremely simply function `f(x) = 2x-1` then we can evaluate this function for `x = 1`, `x=2`, `x=3` giving the results `1, 3, 5`. A prover applies the same function to the data and evaluates it at the same points. If the original data is changed, the function will not be identical, and therefore neither are the values evaluated at each point. In reality, the commitment and proof are more complicated because they are wrapped in cryptographic functions.
 
@@ -44,8 +42,10 @@ KZG stands for Kate-Zaverucha-Goldberg - the names of the three [original author
 
 A KZG ceremony is a way for many people from across the Ethereum community to generate a secret random string of numbers together that can be used to verify some data. It is very important that this string of numbers is not known and cannot be recreated by anyone. To ensure this, each person that participates in the ceremony receives a string from the previous participant. They then create some new random values (e.g. by allowing their browser to measure the movement of their mouse) and mix it in with the previous value. They then send the value on to the next participant and destroy it from their local machine. As long as one person in the ceremony does this honestly, the final value will be unknowable to an attacker. The EIP-4844 KZG ceremony was open to the public and tens of thousands of people participated to add their own entropy. For the ceremony to be undermined, 100% of those participants would have to be actively dishonest. From the perspective of the participants, if they know they were honest, there is no need to trust anyone else because they know that they secured the ceremony (they individually satisfied the 1-out-of-N honest participant requirement).
 
-[Read more about the KZG ceremony](https://ceremony.ethereum.org/)
-[Watch Carl Beekhuizen's Devcon talk on trusted setups](https://archive.devcon.org/archive/watch/6/the-kzg-ceremony-or-how-i-learnt-to-stop-worrying-and-love-trusted-setups/?tab=YouTube)
+**Read more**
+
+- [Read more about the KZG ceremony](https://ceremony.ethereum.org/)
+- [Watch Carl Beekhuizen's Devcon talk on trusted setups](https://archive.devcon.org/archive/watch/6/the-kzg-ceremony-or-how-i-learnt-to-stop-worrying-and-love-trusted-setups/?tab=YouTube)
 
 <ExpandableCard title="What is the random number from the KZG ceremony used for?">
 When a rollup posts data in a blob, they provide a "commitment" that they post on chain. This commitment is the result of evaluating a polynomial fit to the data at certain points. These points are defined by the random numbers generated in the KZG ceremony. Provers can then evaluate the polynomial at the same points in order to verify the data - if they arrive at the same values then the data is correct.
