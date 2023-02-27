@@ -2,6 +2,10 @@
 title: Proposer-builder separation
 description: Learn how and why Ethereum validators will split their block building and block broadcasting responsibilities.
 lang: en
+summaryPoints:
+  - Proposer-builder separation reconfigures how blocks are built and broadcast by Ethereum validators.
+  - Block builders take responsibility for creating new blocks. Block proposers then pick blocks from builders to broadcast.
+  - This separation is crucial for censorship resistance and also enables data sharding.
 ---
 
 # Proposer-builder separation {#proposer-builder-separation}

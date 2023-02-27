@@ -2,6 +2,10 @@
 title: Single slot finality
 description: Explanation of single slot finality
 lang: en
+summaryPoints:
+  - Single slot finality means that transactions become irreversible almost instantly
+  - Near-instant finality means users and apps can be immediately sure of the permanence of their transactions.
+  - Several types of attack rely upon the ability to reorganize blocks - single slot finality eliminates them.
 ---
 
 # Single slot finality {#single-slot-finality}
