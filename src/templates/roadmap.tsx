@@ -4,6 +4,9 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { MDXProvider } from "@mdx-js/react"
 import styled from "@emotion/styled"
+import { Center, Flex, Stack, Wrap, WrapItem } from "@chakra-ui/react"
+
+import Button from "../components/Button"
 
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
@@ -40,6 +43,7 @@ import {
 import Emoji from "../components/OldEmoji"
 import YouTube from "../components/YouTube"
 import Breadcrumbs from "../components/Breadcrumbs"
+import StatsBox from "../components/Stats/StatsBox"
 
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Context } from "../types"
@@ -254,9 +258,6 @@ const HeroContainer = styled.div`
   display: flex;
   align-items: center;
   padding: 2rem;
-  --height: 500px;
-  max-height: var(--height);
-  min-height: var(--height);
   background: ${({ theme }) => theme.colors.layer2Gradient};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
@@ -339,7 +340,7 @@ const RoadmapPage = ({
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
   const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
-  const { summaryPoints } = mdx.frontmatter
+  const { summaryPoints, stats } = mdx.frontmatter
 
   const dropdownLinks: ButtonDropdownList = {
     text: "Roadmap Options" as TranslationKey,
@@ -396,25 +397,56 @@ const RoadmapPage = ({
   return (
     <Container>
       <HeroContainer>
-        <TitleCard>
-          <Breadcrumbs slug={location.pathname} />
-          <Title>{mdx.frontmatter.title}</Title>
-          <ul>
-            {(summaryPoints || []).map((point, idx) => (
-              <SummaryPoint key={idx}>{point}</SummaryPoint>
-            ))}
-          </ul>
-          <MobileTableOfContents
-            items={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth!}
-            isMobile={true}
-          />
-        </TitleCard>
-        <Image
-          image={getImage(mdx.frontmatter.image)!}
-          alt={mdx.frontmatter.alt || ""}
-          objectFit="contain"
-        />
+        <Stack>
+          <Flex flexDirection={{ base: "column", md: "row" }}>
+            <TitleCard>
+              <Breadcrumbs slug={location.pathname} />
+              <Title>{mdx.frontmatter.title}</Title>
+              <ul>
+                {(summaryPoints || []).map((point, idx) => (
+                  <SummaryPoint key={idx}>{point}</SummaryPoint>
+                ))}
+              </ul>
+              {mdx?.frontmatter?.buttons && (
+                <Wrap spacing={2}>
+                  {mdx.frontmatter.buttons.map((button, idx) => {
+                    if (button?.to) {
+                      return (
+                        <WrapItem>
+                          <ButtonLink
+                            key={idx}
+                            variant={button?.variant}
+                            to={button?.to}
+                          >
+                            {button.label}
+                          </ButtonLink>
+                        </WrapItem>
+                      )
+                    }
+                    return (
+                      <WrapItem>
+                        <Button
+                          key={idx}
+                          variant={button?.variant}
+                          toId={button?.toId}
+                        >
+                          {button?.label}
+                        </Button>
+                      </WrapItem>
+                    )
+                  })}
+                </Wrap>
+              )}
+              <MobileTableOfContents items={tocItems} isMobile={true} />
+            </TitleCard>
+            <Image
+              image={getImage(mdx.frontmatter.image)!}
+              alt={mdx.frontmatter.alt || ""}
+              objectFit="contain"
+            />
+          </Flex>
+          <Center>{stats && <StatsBox stats={stats!} />}</Center>
+        </Stack>
       </HeroContainer>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
@@ -456,10 +488,21 @@ export const roadmapPageQuery = graphql`
         title
         description
         lang
-        emoji
         sidebarDepth
         summaryPoints
         alt
+        buttons {
+          label
+          to
+          toId
+          variant
+        }
+        stats {
+          number
+          label
+          tooltip
+          tooltipUrl
+        }
         image {
           childImageSharp {
             gatsbyImageData(

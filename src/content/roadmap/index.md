@@ -9,6 +9,25 @@ summaryPoints:
   - Learn about how Ethereum will evolve into the future
   - Read why Ethereum is still being worked on
   - Understand how Ethereum is setting up for long term success
+buttons:
+  - label: Further updates
+    toId: what-changes-are-coming
+  - label: Past updates
+    to: /history/
+    variant: outline
+stats:
+  - number: 1435
+    label: Number of completed updates
+    tooltip: TODO
+    tooltipUrl: TODO
+  - number: 3
+    label: Number of updates in 2022
+    tooltip: TODO
+    tooltipUrl: TODO
+  - number: 2
+    label: Expected updates in 2023
+    tooltip: TODO
+    tooltipUrl: TODO
 ---
 
 Ethereum is a powerful platform for global coordination, but it is not finished! An ambitious set of improvements will upgrade Ethereum from its current form into a fully scaled, maximally resilient platform. These upgrades are laid out in the Ethereum roadmap.
@@ -60,10 +79,18 @@ The roadmap is mostly the result of years of work by researchers and developers 
 
 When these ideas mature, they can be proposed as [Ethereum Improvement Proposals](https://eips.ethereum.org/). Client developers then create prototypes that get investigated intensely and simulated on private and then public testnets before being scheduled for releasing on Ethereum Mainnet. There are nine independent Ethereum client teams (four execution clients and five consensus clients) that all do this independently in different languages. This is all done in public so that anyone from the community can weigh in at any time.
 
-<ExpandableCard title="What is ETH2?">
-The term 'Eth2' was commonly used to describe the future of Ethereum before the switch to proof-of-stake but it was phased out in favor of more precise terminology. It was originally used to differentiate the Ethereum network before the switch to proof-of-stake and the network after, or sometimes to refer to the different Ethereum clients (execution clients were sometimes referred to as ETH1 clients and consensus clients were sometimes referred to as ETH2 clients).
+<InfoBanner>
+  <h4 style="margin-top: 0">ETH2 term is no longer in use</h4>
 
-Some staking operators have also represented ETH staked on the Beacon Chain with the ‘ETH2’ ticker. This creates potential confusion, given that users of these services are not actually receiving an ‘ETH2’ token. No ‘ETH2’ token exists; it simply represents their share in that specific providers’ stake.
+  <p>The term 'Eth2' was commonly used to describe the future of Ethereum before the switch to proof-of-stake but it was phased out in favor of more precise terminology. It was originally used to differentiate the Ethereum network before the switch to proof-of-stake and the network after, or sometimes to refer to the different Ethereum clients (execution clients were sometimes referred to as ETH1 clients and consensus clients were sometimes referred to as ETH2 clients).</p>
+
+  <p style="margin-bottom: 0">Some staking operators have also represented ETH staked on the Beacon Chain with the ‘ETH2’ ticker. This creates potential confusion, given that users of these services are not actually receiving an ‘ETH2’ token. No ‘ETH2’ token exists; it simply represents their share in that specific providers’ stake.</p>
+</InfoBanner>
+
+## Frequently asked questions {#faq}
+
+<ExpandableCard title="Do I have to do anything when there is an upgrade?">
+  Upgrades tend not to impact end-users except by providing better user-experiences and a more secure protocol and perhaps more <i>options</i> for how to interact with Ethereum. End uses are not required to actively participate in an upgrade, nor are they required to do anything to secure their assets. Node operators will need to update their clients to prepare for an upgrade. Some upgrades may lead to changes for application developers. For example, history expiry upgrades may lead application developers to grab historical data from new sources.
 </ExpandableCard>
 
 <ExpandableCard title="What about the verge, the splurge etc?">
@@ -79,16 +106,12 @@ Vitalik proposed a vision for the Ethereum roadmap that was organized into sever
 We decided not to persist this terminology on this page because we wanted to use a simpler and more user-centric model.
 </ExpandableCard>
 
-### Is the roadmap set in stone? {#is-roadmap-set-in-stone}
+<ExpandableCard title="Is the roadmap set in stone?">
+  No! The roadmap is the current plan for upgrading Ethereum in the near term and also far into the future. The roadmap can change as new information and new technology becomes available. For example, the original Ethereum roadmap intended for sharding to be implemented before The Merge. However, scaling by rollups developed much faster than expected and the roadmap was updated to focus on layer 2 scaling first, allowing The Merge to happen sooner than originally anticipated. The roadmap is a set of intentions for improving Ethereum - it is the research and developer community's best guess about where we should go from here.
+</ExpandableCard>
 
-No! The roadmap is the current plan for upgrading Ethereum in the near term and also far into the future. The roadmap can change as new information and new technology becomes available. For example, the original Ethereum roadmap intended for sharding to be implemented before The Merge. However, scaling by rollups developed much faster than expected and the roadmap was updated to focus on layer 2 scaling first, allowing The Merge to happen sooner than originally anticipated. The roadmap is a set of intentions for improving Ethereum - it is the research and developer community's best guess about where we should go from here.
-
-### When will the roadmap be finished? {#when-will-the-roadmap-be-finished}
-
-The current roadmap contains some upgrades that will be implemented in the next 6 months (e.g. staking withdrawals) and others that will probably take 5-10 years to be fully implemented (e.g. quantum resistance). The precise timing of each upgrade is very difficult to predict as many roadmap items are worked on in parallel and develop at different speeds. The relative urgency of different upgrades can also change over time depending on external factors (e.g. a sudden leap in the performance and availability of quantum computers may make quantum resistant cryptography more urgent).
+<ExpandableCard title="When will the roadmap be finished?">
+  The current roadmap contains some upgrades that will be implemented in the next 6 months (e.g. staking withdrawals) and others that will probably take 5-10 years to be fully implemented (e.g. quantum resistance). The precise timing of each upgrade is very difficult to predict as many roadmap items are worked on in parallel and develop at different speeds. The relative urgency of different upgrades can also change over time depending on external factors (e.g. a sudden leap in the performance and availability of quantum computers may make quantum resistant cryptography more urgent).
 
 One way to think about Ethereum development is by analogy to biological evolution. A network that is able to adapt to new challenges and maintain fitness is more likely to succeed that one that is resistant to change. We aim for homeostasis rather than ossification, although as the network evolves to become more and more performant, scalable and secure over time fewer and fewer changes to the protocol will be required.
-
-### Do I have to do anything when there is an upgrade? {#do-i-have-to-do-anything-for-an-upgrade}
-
-Upgrades tend not to impact end-users except by providing better user-experiences and a more secure protocol and perhaps more _options_ for how to interact with Ethereum. End uses are not required to actively participate in an upgrade, nor are they required to do anything to secure their assets. Node operators will need to update their clients to prepare for an upgrade. Some upgrades may lead to changes for application developers. For example, history expiry upgrades may lead application developers to grab historical data from new sources.
+</ExpandableCard>
