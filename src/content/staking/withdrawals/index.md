@@ -133,7 +133,7 @@ By setting an execution layer withdrawal address the withdrawal credentials for 
 
 Withdrawal addresses can be either a smart contract (controlled by its code), or an externally owned account (EOA, controlled by its private key). Currently these accounts have no way to communicate a message back to the consensus layer that would signal a change of validator credentials, and adding this functionality would add unnecessary complexity to the protocol.
 
-As an alternative to changing the withdrawal address for a particular validator, users may choose to set a smart contract as their withdrawal address which could handle key rotating, such as a Safe. Users who set their funds to their own EOA can perform a full exit to withdrawal all of their staked funds, and then re-stake using new credentials.
+As an alternative to changing the withdrawal address for a particular validator, users may choose to set a smart contract as their withdrawal address which could handle key rotating, such as a Safe. Users who set their funds to their own EOA can perform a full exit to withdraw all of their staked funds, and then re-stake using new credentials.
 </ExpandableCard>
 
 <ExpandableCard
@@ -143,7 +143,7 @@ eventAction="What if I participate in liquid staking derivatives or pooled staki
 eventName="read more">
 
 <p>If you are part of a <a href="/staking/pools/">staking pool</a> or hold liquid staking derivatives, you should check with your provider for more details about how staking withdrawals will affect your arrangement, as each service operates differently.</p>
-<p>In general, users will likely have nothing they need to do, and these services will no longer be limited by the inability to withdrawal rewards or exit validator funds after this upgrade.</p>
+<p>In general, users will likely have nothing they need to do, and these services will no longer be limited by the inability to withdraw rewards or exit validator funds after this upgrade.</p>
 <p>This means that users can now decide to redeem their underlying staked ETH, or change which staking provider they utilize. If a particular pool is getting too large, funds can be exited and redeemed, and re-staked with a <a href="https://pools.invis.cloud">smaller provider</a>. Or, if you’ve accumulated enough ETH you could <a href="/staking/solo/">stake from home</a>.</p>
 </ExpandableCard>
 
@@ -166,10 +166,9 @@ eventName="read more">
 <p>Once a validator has completed the exiting process, and assuming the account has withdrawal credentials, the remaining balance will <em>then</em> be withdrawn during the next validator sweep.</p>
 </ExpandableCard>
 
-<ExpandableCard
-title="How can I withdrawal a custom amount?"
+<ExpandableCard title="Can I withdraw a custom amount?"
 eventCategory="FAQ"
-eventAction="How can I withdrawal a custom amount?"
+eventAction="Can I withdraw a custom amount?"
 eventName="read more">
 
 <p>Withdrawals are designed to be pushed automatically, transferring any ETH that is not actively contributing to stake. This includes full balances for accounts </p>

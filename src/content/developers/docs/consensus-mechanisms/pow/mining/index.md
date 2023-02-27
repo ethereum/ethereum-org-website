@@ -74,10 +74,6 @@ Ethereum Mainnet only ever used one mining algorithm - ['Ethash'](/developers/do
 
 [More on mining algorithms](/developers/docs/consensus-mechanisms/pow/mining-algorithms/).
 
-## Further reading {#further-reading}
-
-- [What does it mean to mine Ethereum?](https://web.archive.org/web/20220917012350/https://docs.ethhub.io/using-ethereum/mining/) _EthHub (Archived)_
-
 ## Related topics {#related-topics}
 
 - [Gas](/developers/docs/gas/)
