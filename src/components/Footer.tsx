@@ -125,10 +125,6 @@ const Footer: React.FC<IProps> = () => {
           to: "/roadmap/",
         },
         {
-          text: "ethereum-upgrades",
-          to: "/upgrades/",
-        },
-        {
           text: "ethereum-security",
           to: "/security/",
         },

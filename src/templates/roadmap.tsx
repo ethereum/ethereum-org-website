@@ -257,7 +257,7 @@ const Container = styled.div`
 const HeroContainer = styled.div`
   display: flex;
   align-items: center;
-  padding: 2rem;
+  padding: 3rem 2rem;
   background: ${({ theme }) => theme.colors.layer2Gradient};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
@@ -365,7 +365,7 @@ const RoadmapPage = ({
         },
       },
       {
-        text: "Faster, cheaper transactions" as TranslationKey,
+        text: "Scaling" as TranslationKey,
         to: "/roadmap/scaling",
         matomo: {
           eventCategory: `Roadmap scaling dropdown`,
@@ -384,7 +384,7 @@ const RoadmapPage = ({
       },
       {
         text: "Future-proofing" as TranslationKey,
-        to: "/roadmap/",
+        to: "/roadmap/future-proofing",
         matomo: {
           eventCategory: `Roadmap future-proofing dropdown`,
           eventAction: `Clicked`,

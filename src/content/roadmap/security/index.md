@@ -19,13 +19,12 @@ The upgrade from proof-of-work to proof-of-stake began with Ethereum pioneers â€
 
 ## Defending against attacks {#defending-against-attacks}
 
-Even after withdrawals there are improvements that can be made to Ethereum's proof-of-stake protocol. One is known as [view-merge](https://ethresear.ch/t/view-merge-as-a-replacement-for-proposer-boost/13739) - a more secure fork-choice algorithm that makes certain sophisticated types of attack more difficult.
+Even after withdrawals there are improvements that can be made to Ethereum's [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) protocol. One is known as [view-merge](https://ethresear.ch/t/view-merge-as-a-replacement-for-proposer-boost/13739) - a more secure fork-choice algorithm that makes certain sophisticated types of attack more difficult.
 
-However, the relatively long time window does not provide a great user experience and creates opportunities for sophisticated "reorg" attacks. This problem can be solved using [**single slot finality (SSF)**](./single-slot-finality). Right now there are 15 mins worth of blocks that an attacker could theoretically convince other validators to reconfigure. With single slot finality, there are 0. Users, from individuals to apps and exchanges, benefit from fast assurance that their transactions will not be reverted, and the network benefits by closing an attack vector.
+However, the relatively long time window does not provide a great user experience and creates opportunities for sophisticated "reorg" attacks. This problem can be solved using [**single slot finality (SSF)**](/roadmap/single-slot-finality). Right now there are 15 mins worth of blocks that an attacker could theoretically convince other validators to reconfigure. With single slot finality, there are 0. Users, from individuals to apps and exchanges, benefit from fast assurance that their transactions will not be reverted, and the network benefits by closing an attack vector.
 
 **Read more**
 
-- [Proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 - [Single slot finality](/roadmap/single-slot-finality/)
 
 ## Defending against censorship {#defending-against-censorship}

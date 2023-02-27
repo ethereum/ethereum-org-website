@@ -80,15 +80,16 @@ The roadmap is mostly the result of years of work by researchers and developers 
 When these ideas mature, they can be proposed as [Ethereum Improvement Proposals](https://eips.ethereum.org/). Client developers then create prototypes that get investigated intensely and simulated on private and then public testnets before being scheduled for releasing on Ethereum Mainnet. There are nine independent Ethereum client teams (four execution clients and five consensus clients) that all do this independently in different languages. This is all done in public so that anyone from the community can weigh in at any time.
 
 <InfoBanner>
-  <h4 style="margin-top: 0">ETH2 term is no longer in use</h4>
+  <h4 style="margin-top: 0">What is ETH2?</h4>
 
-  <p>The term 'Eth2' was commonly used to describe the future of Ethereum before the switch to proof-of-stake but it was phased out in favor of more precise terminology. It was originally used to differentiate the Ethereum network before the switch to proof-of-stake and the network after, or sometimes to refer to the different Ethereum clients (execution clients were sometimes referred to as ETH1 clients and consensus clients were sometimes referred to as ETH2 clients).</p>
+  <p>The term 'Eth2' was commonly used to describe the future of Ethereum before the switch to proof-of-stake but it was <strong>phased out in favor of more precise terminology.</strong> It was originally used to differentiate the Ethereum network before the switch to proof-of-stake and the network after, or sometimes to refer to the different Ethereum clients (execution clients were sometimes referred to as ETH1 clients and consensus clients were sometimes referred to as ETH2 clients).</p>
 
   <p style="margin-bottom: 0">Some staking operators have also represented ETH staked on the Beacon Chain with the ‘ETH2’ ticker. This creates potential confusion, given that users of these services are not actually receiving an ‘ETH2’ token. No ‘ETH2’ token exists; it simply represents their share in that specific providers’ stake.</p>
 </InfoBanner>
 
 ## Frequently asked questions {#faq}
 
+<!-- TODO: Add event tracking on expandable cards -->
 <ExpandableCard title="Do I have to do anything when there is an upgrade?">
   Upgrades tend not to impact end-users except by providing better user-experiences and a more secure protocol and perhaps more <i>options</i> for how to interact with Ethereum. End uses are not required to actively participate in an upgrade, nor are they required to do anything to secure their assets. Node operators will need to update their clients to prepare for an upgrade. Some upgrades may lead to changes for application developers. For example, history expiry upgrades may lead application developers to grab historical data from new sources.
 </ExpandableCard>

@@ -226,10 +226,6 @@ const Nav: React.FC<IProps> = ({ path }) => {
               to: "/roadmap/",
             },
             {
-              text: "ethereum-upgrades",
-              to: "/upgrades/",
-            },
-            {
               text: "eips",
               to: "/eips/",
             },
