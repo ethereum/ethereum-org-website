@@ -19,6 +19,7 @@ The ethereum.org Translation Program is open and anyone can contribute!
 3. Before starting, please check out the [How to translate](/contributing/translation-program/how-to-translate/) guide to learn how to use Crowdin, and the [Translation Style Guide](/contributing/translation-program/translators-guide/) for tips and best practices.
 4. Machine translations will not be approved.
 5. All translations are reviewed before being added to the site, so there will be a short delay before your translations go live.
+_Join the [ethereum.org Discord](https://discord.gg/6WX7E97) to collaborate on translations, ask questions, share feedback and ideas, or join a translation group._
 
 <ButtonLink to="https://crowdin.com/project/ethereum-org/invite">
   Start translating
