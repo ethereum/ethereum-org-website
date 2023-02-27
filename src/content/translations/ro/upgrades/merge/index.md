@@ -11,7 +11,7 @@ summaryPoint4: Acest proces l-am numit „andocarea”
 ---
 
 <UpgradeStatus dateKey="page-upgrades-merge-date">
-  Actualizarea reprezintă trecerea oficială la consensul bazat pe Dovada Mizei (proof-of-stake). Astfel, se elimină nevoia de minat folosind o cantitate mare de energie, securizând rețeaua folosind ether mizat. Un pas cu adevărat important în realizarea <a href="/upgrades/vision/">Viziunii Eth2</a> – mai multă scalabilitate, securitate și sustenabilitate.
+  Actualizarea reprezintă trecerea oficială la consensul bazat pe Dovada Mizei (proof-of-stake). Astfel, se elimină nevoia de minat folosind o cantitate mare de energie, securizând rețeaua folosind ether mizat. Un pas cu adevărat important în realizarea <a href="/roadmap/vision/">Viziunii Eth2</a> – mai multă scalabilitate, securitate și sustenabilitate.
 </UpgradeStatus>
 
 ## Ce este unirea? {#what-is-the-docking}
@@ -28,7 +28,7 @@ Rețeaua principală va aduce posibilitatea de a rula contracte inteligente în 
 
 ## După unire {#after-the-merge}
 
-Sfârșitul unirii va însemna și sfârșitul Dovezii Muncii (proof-of-work) pentru Ethereum și va începe era unui Ethereum mai sustenabil și mai ecologic. La momentul respectiv, Ethereum va fi cu un pas mai aproape de atingerea nivelului maxim de securitate și sustenabilitate subliniat în [Viziunea Eth2](/upgrades/vision/).
+Sfârșitul unirii va însemna și sfârșitul Dovezii Muncii (proof-of-work) pentru Ethereum și va începe era unui Ethereum mai sustenabil și mai ecologic. La momentul respectiv, Ethereum va fi cu un pas mai aproape de atingerea nivelului maxim de securitate și sustenabilitate subliniat în [Viziunea Eth2](/roadmap/vision/).
 
 Este important de remaracat faptul că obiectivul de implementare a unirii este pur și simplu de a livra tranziția dintre Dovada Muncii (proof-of-work) și Dovada Mizei (proof-of-stake). Dezvoltatorii își concentrează eforturile pe această tranziție și reduc la minim funcționalitățile suplimentare care ar putea întârzia acest obiectiv.
 

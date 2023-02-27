@@ -18,7 +18,7 @@ summaryPoint4: To možete prepoznati kao „Fazu 0” na tehničkom planu.
 
 Beacon Chain će dirigirati ili uskladiti proširenu mrežu [ djelića](/upgrades/sharding/) i [učesnika](/staking/). Ali neće biti kao današnja [glavna mreža Ethereum](/glossary/#mainnet). Ne podržava račune ili pametne ugovore.
 
-Beacon Chain će tijekom vremena mijenjati ulogu, međutim to je temeljna komponenta za [siguran, održiv i nadogradiv Ethereum na kojem radimo](/upgrades/vision/).
+Beacon Chain će tijekom vremena mijenjati ulogu, međutim to je temeljna komponenta za [siguran, održiv i nadogradiv Ethereum na kojem radimo](/roadmap/vision/).
 
 ## Beacon Chain – značajke {#beacon-chain-features}
 

@@ -11,7 +11,7 @@ summaryPoint4: Predhodno smo jo omenjali kot "priklop".
 ---
 
 <UpgradeStatus dateKey="page-upgrades-merge-date">
-  Ta nadgradnja predstavlja uraden preklop na sistem soglasja z dokazom o deležu. Tako bomo odpravili potrebo po energetsko potratnem rudarjenju. Resnično vznemirljiv korak proti realizaciji <a href="/upgrades/vision/">Eth2 vizije</a> – več nadgradljivosti, varnosti in trajnosti.
+  Ta nadgradnja predstavlja uraden preklop na sistem soglasja z dokazom o deležu. Tako bomo odpravili potrebo po energetsko potratnem rudarjenju. Resnično vznemirljiv korak proti realizaciji <a href="/roadmap/vision/">Eth2 vizije</a> – več nadgradljivosti, varnosti in trajnosti.
 </UpgradeStatus>
 
 ## Kaj je spojitev? {#what-is-the-docking}
@@ -28,7 +28,7 @@ Glavno omrežje bo zagotavljalo možnost izvajanja pametnih pogodb v sistemu z d
 
 ## Po spojitvi {#after-the-merge}
 
-To bo za Ethereum predstavljalo konec dokaza o delu in začetek obdobja bolj trajnostnega in okolju prijaznega Ethereuma. Na tej točki bo Ethereum korak bližje dosegu polnega obsega, varnosti in trajnosti, kot je predstavljeno v [Eth2 viziji](/upgrades/vision/).
+To bo za Ethereum predstavljalo konec dokaza o delu in začetek obdobja bolj trajnostnega in okolju prijaznega Ethereuma. Na tej točki bo Ethereum korak bližje dosegu polnega obsega, varnosti in trajnosti, kot je predstavljeno v [Eth2 viziji](/roadmap/vision/).
 
 Pomembno je omeniti, da je cilj spojitve preprostost z namenom pospešitve prehoda z dokaza o delu na dokaz o deležu. Razvijalci svoj trud usmerjajo v prehod in zmanjševanje dodatnih funkcij, ki bi lahko dodatno odložile dosego tega cilja.
 

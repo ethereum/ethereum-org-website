@@ -9,7 +9,7 @@ sidebarDepth: 3
 
 Le nombre grandissant d'utilisateurs d'Ethereum révèle certaines limites de capacité de la blockchain. Cela a augmenté le coût de l'utilisation du réseau, impliquant le besoin de « solutions d'évolutivité ». De nombreuses solutions ont été étudiées, testées et mises en œuvre qui adoptent différentes approches pour atteindre des objectifs similaires.
 
-L'objectif principal de l'évolutivité est d'augmenter la vitesse de transaction (finalisation plus rapide) et le débit de la transaction (nombre élevé de transactions par seconde), sans sacrifier la décentralisation ou la sécurité (en savoir plus sur la [vision Ethereum](/upgrades/vision/)). Sur la blockchain Ethereum de la couche 1, une forte demande entraîne un ralentissement des transactions et des prix de [gaz](/developers/docs/gas/) non viables. L'augmentation de la capacité du réseau en termes de vitesse et de débit est fondamentale pour l'adoption significative et massive d'Ethereum.
+L'objectif principal de l'évolutivité est d'augmenter la vitesse de transaction (finalisation plus rapide) et le débit de la transaction (nombre élevé de transactions par seconde), sans sacrifier la décentralisation ou la sécurité (en savoir plus sur la [vision Ethereum](/roadmap/vision/)). Sur la blockchain Ethereum de la couche 1, une forte demande entraîne un ralentissement des transactions et des prix de [gaz](/developers/docs/gas/) non viables. L'augmentation de la capacité du réseau en termes de vitesse et de débit est fondamentale pour l'adoption significative et massive d'Ethereum.
 
 Bien que la vitesse et le débit soient importants, il est essentiel que les solutions de mise à l'échelle permettent d'atteindre ces objectifs en restant décentralisées et sécurisées. Le maintien d'une faible barrière d'entrée pour les opérateurs de nœuds est essentiel pour empêcher une progression vers une puissance informatique centralisée et peu sûre.
 
@@ -88,7 +88,7 @@ En savoir plus sur [Validium](/developers/docs/scaling/validium/).
 - Plusieurs solutions peuvent aider à réduire la congestion globale sur une partie du réseau et à prévenir les points de défaillance uniques.
 - Le tout est plus grand que la somme de ses parties. Différentes solutions peuvent exister et fonctionner en harmonie, permettant un effet exponentiel sur la vitesse et le débit des transactions futures.
 - Toutes les solutions ne nécessitent pas d’utiliser directement l’algorithme de consensus Ethereum, et les alternatives peuvent offrir des avantages qui seraient autrement difficiles à obtenir.
-- Aucune solution de mise à l'échelle n'est suffisante pour réaliser la [vision Ethereum](/upgrades/vision/).
+- Aucune solution de mise à l'échelle n'est suffisante pour réaliser la [vision Ethereum](/roadmap/vision/).
 
 ## Davantage qu'un apprenant visuel ? {#visual-learner}
 

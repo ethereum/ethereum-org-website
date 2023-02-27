@@ -209,7 +209,11 @@
   },
   {
     "fromPath": "/*/eth2/vision/",
-    "toPath": "/:splat/upgrades/vision/"
+    "toPath": "/:splat/roadmap/vision/"
+  },
+  {
+    "fromPath": "/*/upgrades/vision/",
+    "toPath": "/:splat/roadmap/vision/"
   },
   {
     "fromPath": "/*/eth2/get-involved/",

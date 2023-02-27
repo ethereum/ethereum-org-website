@@ -18,7 +18,7 @@ summaryPoint4: Puede que se describa como «Fase 0» en las hojas de ruta técni
 
 La cadena de baliza conducirá o coordinará la expansión de la red de [fragmentos](/upgrades/sharding/) y [participantes](/staking/). Pero no será como la [red principal de Ethereum](/glossary/#mainnet) de hoy en día: no puede manejar cuentas o contratos inteligentes.
 
-La función de la cadena de baliza cambiará con el tiempo, pero es un componente fundamental para lograr el [ Ethereum seguro, sostenible y escalable en el que estamos trabajando](/upgrades/vision/).
+La función de la cadena de baliza cambiará con el tiempo, pero es un componente fundamental para lograr el [ Ethereum seguro, sostenible y escalable en el que estamos trabajando](/roadmap/vision/).
 
 ## Características de la cadena de baliza {#beacon-chain-features}
 

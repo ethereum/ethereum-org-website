@@ -11,7 +11,7 @@ summaryPoint4: Być może znasz ten etap jako „Faza 1.5” z technicznego harm
 ---
 
 <UpgradeStatus dateKey="page-upgrades-merge-date">
-    To ulepszenie nastąpi po uruchomieniu łańcuchów fragmentowych. Będzie to chwila, w której <a href="/upgrades/vision/">wizja Eth2</a> zostanie w pełni zrealizowana — bardziej skalarna, bezpieczna i po równi rozwijana z inwestycją wspierającą całą sieć.
+    To ulepszenie nastąpi po uruchomieniu łańcuchów fragmentowych. Będzie to chwila, w której <a href="/roadmap/vision/">wizja Eth2</a> zostanie w pełni zrealizowana — bardziej skalarna, bezpieczna i po równi rozwijana z inwestycją wspierającą całą sieć.
 </UpgradeStatus>
 
 ## Czym jest dokowanie? {#what-is-the-docking}
@@ -28,7 +28,7 @@ Główna sieć stworzy możliwość włączenia inteligentnych kontraktów do sy
 
 ## Po dokowaniu {#after-the-docking}
 
-To będzie sygnał końca Ethereum proof-of-work i początek nowej ery bardziej zrównoważonego, przyjaznego ekologii Ethereum. W tym punkcie Ethereum będzie miało skalę, zabezpieczenia i zrównoważenie opisane w tej [wizji Eth2](/upgrades/vision/).
+To będzie sygnał końca Ethereum proof-of-work i początek nowej ery bardziej zrównoważonego, przyjaznego ekologii Ethereum. W tym punkcie Ethereum będzie miało skalę, zabezpieczenia i zrównoważenie opisane w tej [wizji Eth2](/roadmap/vision/).
 
 ## Relacje między ulepszeniami {#relationship-between-upgrades}
 

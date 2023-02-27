@@ -18,7 +18,7 @@ summaryPoint4: S-ar putea să-l cunoști sub numele de „Faza 0” pe foile de 
 
 Lanțul Beacon va conduce sau va coordona rețeaua extinsă de [fragmente](/upgrades/sharding/) și [stakeri](/staking/). Dar nu va fi ca [Rețeaua principală Ethereum](/glossary/#mainnet) de astăzi. Nu poate gestiona conturi sau contracte inteligente.
 
-Rolul rețelei Beacon se va schimba în timp, dar este o componentă fundamentală pentru [Ethereum-ul sigur, durabil și scalabil la care lucrăm](/upgrades/vision/).
+Rolul rețelei Beacon se va schimba în timp, dar este o componentă fundamentală pentru [Ethereum-ul sigur, durabil și scalabil la care lucrăm](/roadmap/vision/).
 
 ## Caracteristicile Lanțului Beacon {#beacon-chain-features}
 

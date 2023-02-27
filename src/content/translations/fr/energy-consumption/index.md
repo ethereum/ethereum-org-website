@@ -69,7 +69,7 @@ En savoir plus sur [la façon dont Ethereum met en œuvre la preuve d'enjeu](/de
 
 ## Thèmes connexes {#related-topics}
 
-- [La vision d'Ethereum](/upgrades/vision/)
+- [La vision d'Ethereum](/roadmap/vision/)
 - [La chaîne phare](/upgrades/beacon-chain)
 - [La Fusion](/upgrades/merge/)
 - [Fragmentation](/upgrades/beacon-chain/)

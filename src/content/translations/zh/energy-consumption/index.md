@@ -69,7 +69,7 @@ lang: zh
 
 ## 相关主题 {#related-topics}
 
-- [以太坊愿景](/upgrades/vision/)
+- [以太坊愿景](/roadmap/vision/)
 - [信标链](/upgrades/beacon-chain)
 - [合并](/upgrades/merge/)
 - [分片](/upgrades/beacon-chain/)

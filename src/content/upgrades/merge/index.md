@@ -108,7 +108,7 @@ The Merge marked the end of proof-of-work for Ethereum and start the era of a mo
 
 ## The Merge and scaling {#merge-and-scaling}
 
-The Merge also set the stage for further scalability upgrades not possible under proof-of-work, bringing Ethereum one step closer to achieving the full scale, security and sustainability outlined in its [Ethereum vision](/upgrades/vision/).
+The Merge also set the stage for further scalability upgrades not possible under proof-of-work, bringing Ethereum one step closer to achieving the full scale, security and sustainability outlined in its [Ethereum vision](/roadmap/vision/).
 
 ## Misconceptions about The Merge {#misconceptions}
 

@@ -327,7 +327,7 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
         descriptionKey={"page-upgrades-dive-desc"}
       >
         <div>
-          <ButtonLink to="/upgrades/vision/">
+          <ButtonLink to="/roadmap/vision/">
             <Translation id="page-upgrades-vision-btn" />
           </ButtonLink>
         </div>
@@ -534,7 +534,7 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
               </p>
               <p>
                 <Translation id="page-upgrades-answer-4" />{" "}
-                <Link to="/upgrades/vision/">
+                <Link to="/roadmap/vision/">
                   <Translation id="page-upgrades-vision-btn" />
                 </Link>
               </p>
@@ -759,7 +759,7 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
                 <Translation id="page-upgrades-question-8-answer-4" />
               </p>
               <p>
-                <ButtonLink to="/upgrades/vision/">
+                <ButtonLink to="/roadmap/vision/">
                   <Translation id="page-upgrades-question-8-answer-6" />
                 </ButtonLink>
               </p>

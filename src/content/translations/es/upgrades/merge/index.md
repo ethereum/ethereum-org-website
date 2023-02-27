@@ -11,7 +11,7 @@ summaryPoint4: A las que anteriormente denominábamos «docking» o acoplamiento
 ---
 
 <UpgradeStatus dateKey="page-upgrades-merge-date">
-  Esta actualización representa el cambio oficial al consenso de prueba de participación. Se elimina la necesidad de una minería con alto consumo de energía y, en su lugar, se asegura la red utilizando ether apostado. Es un paso realmente emocionante en la materialización de <a href="/upgrades/vision/">la visión de Ethereum</a>: mayor escalabilidad, seguridad y sostenibilidad.
+  Esta actualización representa el cambio oficial al consenso de prueba de participación. Se elimina la necesidad de una minería con alto consumo de energía y, en su lugar, se asegura la red utilizando ether apostado. Es un paso realmente emocionante en la materialización de <a href="/roadmap/vision/">la visión de Ethereum</a>: mayor escalabilidad, seguridad y sostenibilidad.
 </UpgradeStatus>
 
 ## ¿Qué es la fusión? {#what-is-the-docking}
@@ -28,7 +28,7 @@ La red principal aportará la capacidad de ejecutar contratos inteligentes en el
 
 ## Después de la fusión {#after-the-merge}
 
-Esto marcará el final de la prueba de trabajo para Ethereum y el comienzo de la era de un Ethereum más sostenible y ecológico. En este punto, Ethereum estará un paso mas cerca de lograr la escala completa, seguridad y sostenibilidad plasmadas en la [visión Ethereum](/upgrades/vision/).
+Esto marcará el final de la prueba de trabajo para Ethereum y el comienzo de la era de un Ethereum más sostenible y ecológico. En este punto, Ethereum estará un paso mas cerca de lograr la escala completa, seguridad y sostenibilidad plasmadas en la [visión Ethereum](/roadmap/vision/).
 
 Es importante señalar que un objetivo de implementación de la fusión es la facilidad para acelerar la transición de la prueba de trabajo a la prueba de participación. Los desarrolladores están centrando sus esfuerzos en esta transición y minimizando características adicionales que podrían retrasar este objetivo.
 
