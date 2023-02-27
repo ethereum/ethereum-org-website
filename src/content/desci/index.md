@@ -87,6 +87,14 @@ The starting point must be a system accessible by any decentralized identity hol
 
 Flexible Web3 data solutions support the scenarios above and provide the foundation for truly Open Science, where researchers can create public goods without access permissions or fees. Web3 public data solutions such as IPFS, Arweave and Filecoin are optimized for decentralization. dClimate, for example, provides universal access to climate and weather data, including from weather stations and predictive climate models.
 
+### Precision medicine to underrepresented populations {#precision-medicine}
+
+Precision Medicine is a modern approach to disease prevention and treatment that takes into account people's genetics, environment, and lifestyle. However, not all populations have equal access to precision medicine. Underrepresented populations, such as Asians, Hispanics, and Africans, are often left behind in medical research and innovation.
+
+The current precision medicine industry is centralized and heavily reliant on a few monopolistic pharmaceutical conglomerates in Western countries such as the US and the UK, where the population is predominantly Caucasian. This monopolization of pharmaceutical companies and centralization of their power can lead to a lack of data and stagnation in innovation, simultaneously widening the gap in providing precision medicine to underrepresented groups.
+
+Efforts to shift the focus have been increasing with the hope to provide more equitable and effective healthcare solutions. Along this movement, [GenomicDAO](https://genomicdao.com) emerges as an AI-powered Desci Platform that enables individuals to participate in the Precision Medicine cause. As the user base grows, [GenomicDAO](https://genomicdao.com) is able to provide a stronger range of research initiatives, as determined by the DAO itself. These initiatives will evolve over time, moving from genetic healthcare insights to DAO-driven drug-response studies and ultimately to DAO-selected drug discovery. The commercialization of released genetic products allows Precision Medicine to scale and bring value to the masses.
+
 ## Get involved {#get-involved}
 
 Explore projects and join the DeSci community.
@@ -112,6 +120,7 @@ Explore projects and join the DeSci community.
 - [Cherubs DAO: NFT funded and DAO governed impact fund for mental health & brain wellness](https://cherubsdao.com/)
 - [CureDAO: Community-Owned Precision Health Platform](https://docs.curedao.org/)
 - [IdeaMarkets: enabling decentralized scientific credibility](https://ideamarket.io/)
+- [GenomicDAO: An AI-Powered DeSci platform for Precision Medicine](https://docs.genomicdao.com/genomicdao-whitepaper)
 
 We welcome suggestions for new projects to list - please look at our [listing policy](/contributing/adding-desci-projects/) to get started!
 
