@@ -87,7 +87,7 @@ The starting point must be a system accessible by any decentralized identity hol
 
 Flexible Web3 data solutions support the scenarios above and provide the foundation for truly Open Science, where researchers can create public goods without access permissions or fees. Web3 public data solutions such as IPFS, Arweave and Filecoin are optimized for decentralization. dClimate, for example, provides universal access to climate and weather data, including from weather stations and predictive climate models.
 
-### Precision medicine to underrepresented populations {#precision-medicine}
+### Precision medicine for underrepresented populations {#precision-medicine}
 
 Precision Medicine is a modern approach to disease prevention and treatment that takes into account people's genetics, environment, and lifestyle. However, not all populations have equal access to precision medicine. Underrepresented populations, such as Asians, Hispanics, and Africans, are often left behind in medical research and innovation.
 
