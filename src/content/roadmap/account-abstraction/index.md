@@ -16,7 +16,6 @@ Account abstraction is an upgrade that makes smart contract wallets natively sup
 - pay someone else's gas, or have someone else pay yours
 - batch transactions together (e.g. approve and execute a swap in one go)
 - more opportunities for dapps and wallet developers to innovate on user experiences
-- upgrade the cryptography securing an account when quantum computers arrive
 
 These benefits are not natively supported today because only externally-owned accounts ([EOAs](https://ethereum.org/en/glossary/#eoa)) can start transactions. EOAs are simply public-private key pairs. They work like this:
 
