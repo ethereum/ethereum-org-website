@@ -6,6 +6,7 @@ import React, {
 } from "react"
 import {
   Box,
+  chakra,
   Divider,
   DividerProps,
   Flex,
@@ -226,23 +227,14 @@ const Staking = (props: ChildOnlyProp) => (
   />
 )
 
-const StyledCalloutBanner = (
-  props: ComponentPropsWithRef<typeof CalloutBanner>
-) => (
-  <Box
-    as={CalloutBanner}
-    bg="transparent"
-    w={{ base: "full", md: "auto" }}
-    p={{ base: 0, md: 12 }}
-    pt={{ base: 16, md: 12 }}
-    sx={{
-      "&": {
-        ml: 0,
-      },
-    }}
-    {...props}
-  />
-)
+const StyledCalloutBanner = chakra(CalloutBanner, {
+  baseStyle: {
+    bg: "transparent",
+    w: { base: "full", md: "auto" },
+    p: { base: 0, md: 12 },
+    pt: { base: 16, md: 12 },
+  },
+})
 
 type Layer = "el" | "cl"
 
@@ -540,6 +532,11 @@ const GetInvolvedPage = ({
           alt={translateMessageId("page-staking-image-alt", intl)}
           titleKey={"page-upgrades-get-involved-stake"}
           descriptionKey={"page-upgrades-get-involved-stake-desc"}
+          sx={{
+            "&": {
+              ml: 0,
+            },
+          }}
         >
           <Box>
             <ButtonLink to="/staking/">
