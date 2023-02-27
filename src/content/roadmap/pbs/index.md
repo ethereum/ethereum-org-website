@@ -6,10 +6,6 @@ lang: en
 
 # Proposer-builder separation {#proposer-builder-separation}
 
-<UpgradeStatus dateKey="page-upgrades-pbs">
-    Proposer-builder separation is being actively researched and is unlikely to ship before 2024. 
-</UpgradeStatus>
-
 Present-day Ethereum validators create _and_ broadcast blocks. They bundle together transactions that they have heard about through the gossip network and package them into a block that is sent out to peers on the Ethereum network. **Proposer-builder separation (PBS)** splits these tasks across multiple validators. Block builders become responsible for creating blocks and offering them to the block proposer in each slot. The block proposer cannot see the contents of the block, they simply choose the most profitable one, paying a fee to the block builder before sending the block to its peers.
 
 This is an important upgrade for several reasons. First, it creates opportunities to prevent transaction censorship at the protocol level. Second, it prevents hobbyist validators from being out-competed by institutional players that can better optimize the profitability of their block building. Third, it helps with scaling Ethereum by enabling the Danksharding upgrades.
@@ -40,7 +36,7 @@ PBS solves this problem by reconfiguring the economics of MEV. Instead of the bl
 
 <ExpandableCard title="Why is it OK to centralize block building?" contentPreview="Block building is naturally centralizing due to MEV extraction. It make sense to allow this to continue but maximize the decentralization of block reward distribution and block validation.">
 
-Individuals could be incentivized to stake with pools rather than on their own due to the enhanced rewards offered by sophisticated MEV strategies. Separating the block building from the block proposal means that the MEV extracted will be distributed over more validators rather than centralizing with the most effective MEV searcher. At the same time, allowing specialized block builders to exist takes the burden of block building away from individuals, while maximizing the number of individual, independent validators that can check the blocks are honest. The important concept is "prover-verifier asymmetry" which refers to the idea that centralized block production is fine as long as there is a robust and maximally decentralized network of validators able to prove the blocks are honest. Decentralization is a means, not an end goal - what we want are honest blocks.
+Individuals could be incentivized to stake with pools rather than on their own due to the enhanced rewards offered by sophisticated MEV strategies. Separating the block building from the block proposal means that the MEV extracted will be distributed over more validators rather than centralizing with the most effective MEV searcher. At the same time, allowing specialized block builders to exist takes the burden of block building away from individuals, and also prevents individuals from stealing MEV for themselves, while maximizing the number of individual, independent validators that can check the blocks are honest. The important concept is "prover-verifier asymmetry" which refers to the idea that centralized block production is fine as long as there is a robust and maximally decentralized network of validators able to prove the blocks are honest. Decentralization is a means, not an end goal - what we want are honest blocks.
 </ExpandableCard>
 
 **Read more**

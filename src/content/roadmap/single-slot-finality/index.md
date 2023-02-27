@@ -64,4 +64,4 @@ SSF is still in the research phase and is not expected to ship for several years
 ## Further Reading {#further-reading}
 
 - [Vitalik on SSF at EDCON 2022](https://www.youtube.com/watch?v=nPgUKNPWXNI)
-- [Vitalik's notes: Paths to single slot finality](https://notes.ethereum.org/@vbuterin/single_slot_finality#What-might-the-exact-consensus-algorithm-look-like)
+- [Vitalik's notes: Paths to single slot finality](https://notes.ethereum.org/@vbuterin/single_slot_finality)
