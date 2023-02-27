@@ -26,7 +26,7 @@ import { translateMessageId, TranslationKey } from "../../../utils/translations"
 import Card from "../../../components/Card"
 import Leaderboard, { Person } from "../../../components/Leaderboard"
 import CalloutBanner from "../../../components/CalloutBanner"
-import Emoji from "../../../components/OldEmoji"
+import Emoji from "../../../components/Emoji"
 import ProductCard from "../../../components/ProductCard"
 import ButtonLink from "../../../components/ButtonLink"
 import PageMetadata from "../../../components/PageMetadata"
@@ -482,7 +482,7 @@ const GetInvolvedPage = ({
             <Breadcrumbs slug={location.pathname} startDepth={1} />
             <SloganGradient>
               <Translation id="page-upgrades-get-involved" />{" "}
-              <Emoji size={1} text=":wave:" />
+              <Emoji text=":wave:" />
             </SloganGradient>
             <Subtitle>
               <Translation id="page-upgrades-get-involved-subtitle" />
