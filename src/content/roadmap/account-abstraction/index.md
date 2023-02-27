@@ -6,7 +6,7 @@ lang: en
 
 # Account abstraction {#account-abstraction}
 
-Today, users interact with Ethereum using **externally owned accounts (EOAs)**. These are the only entities that can initiate a transaction or execute functions in smart contracts, and they pay gas fees in ETH whenever those transactions change Ethereum's state. Account abstraction aims to relax this constraint to allow smart contract wallets to initiate transactions too. This allows users to flexibly program more security and better user experiences into their accounts.
+Users interact with Ethereum using **[externally owned accounts (EOAs)](/glossary/#eoa)**, and using an EOA is the only way to create a transaction or execute a smart contract. Account abstraction will allow smart contract wallets to create transactions, letting users flexibly program more security and better user experiences into their accounts.
 
 Account abstraction is an upgrade that makes smart contract wallets first-class citizens, natively supported on Ethereum. Those smart contract wallets unlock many benefits for the user, including:
 
@@ -14,13 +14,20 @@ Account abstraction is an upgrade that makes smart contract wallets first-class 
 - recover your account if you lose the keys
 - share your account security across trusted devices or individuals
 - pay someone else's gas, or have someone else pay yours
-- easily batch transactions together (e.g. approve and execute a swap in one go)
+- batch transactions together (e.g. approve and execute a swap in one go)
 - more opportunities for dapps and wallet developers to innovate on user experiences
 - upgrade the cryptography securing an account when quantum computers arrive
 
-These benefits are not natively supported today because Ethereum accounts are simple public-private key pairs. The security model is simple: if you have the private key you can do _anything_ within the rules of the Ethereum Virtual Machine (EVM); if you do not have the private key you can do _nothing_. This means lost keys are completely unrecoverable and stolen keys give thieves instant access to all the funds in an account. The logic that can be embedded in these accounts is only the validation that is native to the EVM and cannot be customized. Smart contract wallets are the solution to these problems, but today they are difficult to program because in the end any logic they implement has to resolve to a sequence of EOA transactions before they can be processed by Ethereum. Account abstraction enables smart contracts to initiate transactions themselves, so that any logic that the user wishes to implement can be coded into the smart contract wallet itself and executed on Ethereum.
+These benefits are not natively supported today because Ethereum accounts (EOA's) are simply public-private key pairs. They work like this: 
 
-Ultimately, account abstraction is about improving support for smart contract wallets, making them easier to build and safer to use. In the end, with account abstraction users can enjoy all the benefits of Ethereum without having to know, or care, about the underlying technology.
+- if you have the private key you can do _anything_ within the rules of the Ethereum Virtual Machine (EVM)
+- if you do not have the private key you can do _nothing_. 
+
+If you lose your keys they can't be recovered, and stolen keys give thieves instant access to all the funds in an account. 
+
+Smart contract wallets are the solution to these problems, but today they are difficult to program because in the end any logic they implement has to be translated into a set of EOA transactions before they can be processed by Ethereum. Account abstraction enables smart contracts to initiate transactions themselves, so that any logic that the user wishes to implement can be coded into the smart contract wallet itself and executed on Ethereum.
+
+Ultimately, account abstraction improves support for smart contract wallets, making them easier to build and safer to use. In the end, with account abstraction, users can enjoy all the benefits of Ethereum without knowing or caring about the underlying technology.
 
 ## Beyond seed phrases {#beyond-seed-phrases}
 
@@ -44,15 +51,15 @@ Account abstraction allows for a better overall user experience as well as impro
 
 Gas management is also much improved with account abstraction. Not only can applications offer to pay their users' gas fees, but gas fees can be paid in tokens other than ETH, freeing users from having to maintain an ETH balance for funding transactions. This would work by swapping the user's tokens for ETH inside the contract and then using the ETH to pay for gas.
 
-Trusted sessions are also potentially transformative for user experiences, especially for applications like gaming where large numbers of small transactions might need to be approved in a small amount of time. Individually approving each transaction would break the gaming experience, but permanent approval is unsafe. Therefore, the wallet could approve certain transactions for a fixed time, possibly also up to a certain value or only to certain addresses.
+Trusted sessions are also potentially transformative for user experiences, especially for applications like gaming, where large numbers of small transactions might need approval in a short time. Individually approving each transaction would break the gaming experience, but permanent approval is unsafe. A smart contract wallet could approve certain transactions for a fixed time, up to a specific value or only to certain addresses.
 
-It is also interesting to consider how purchases could change with account abstraction. Today, each transaction has to be approved and executed from a wallet pre-funded with a sufficient amount of the correct token. With account abstraction the experience could be more like familiar online shopping where a user could fill a "basket" with items and click once to purchase all at once, with all the logic required handled by the contract, not the user.
+It is also interesting to consider how purchases could change with account abstraction. Today, each transaction has to be approved and executed from a wallet pre-funded with a sufficient amount of the correct token. With account abstraction, the experience could be more like familiar online shopping where a user could fill a "basket" with items and click once to purchase all at once, with all the logic required handled by the contract, not the user.
 
 These are just a few examples of how user experiences could be levelled up by account abstraction, but there will be many more that we haven't imagined yet. Account abstraction frees developers from the constraints of present-day EOAs, allows them to bring the good aspects of web2 into web3 without sacrificing self-custody and to hack creatively on inventive new user experiences.
 
 ## How will account abstraction be implemented? {#how-will-aa-be-implemented}
 
-Smart contract wallets are already implemented today, but they are difficult to implement because they are not supported at the protocol level and instead rely on wrapping relatively complex code around normal Ethereum transactions. This problem can be solved by allowing smart contracts to initiate transactions, since then the logic implemented by the wallet can be handled in Ethereum smart contracts rather than happening off-chain and being translated into Ethereum transactions. This has the added benefit of increasing decentralization since it removes the need for "relayers" run by wallet developers to translate messages signed by the user to normal Ethereum transactions.
+Smart contract wallets exist today but are challenging to implement because the EVM does not support them. Instead, they rely on wrapping relatively complex code around standard Ethereum transactions. Ethereum can change this by allowing smart contracts to initiate transactions, handling the necessary logic in Ethereum smart contracts instead of off-chain. Putting logic into smart contracts also increases Ethereum's decentralization since it removes the need for "relayers" run by wallet developers to translate messages signed by the user to regular Ethereum transactions.
 
 <ExpandableCard title="EIP-4337: account abstraction without changing the Ethereum protocol">
 
