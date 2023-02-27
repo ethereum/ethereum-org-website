@@ -1,5 +1,14 @@
 import React, { useEffect, useState } from "react"
-import styled from "@emotion/styled"
+import {
+  Box,
+  Flex,
+  Heading,
+  Img,
+  ListItem,
+  Text,
+  UnorderedList,
+} from "@chakra-ui/react"
+
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
@@ -26,31 +35,7 @@ import FeedbackCard from "../../components/FeedbackCard"
 import { translateMessageId, TranslationKey } from "../../utils/translations"
 import { getImage } from "../../utils/image"
 
-import { Context } from "../../types"
-
-const StyledPage = styled(Page)`
-  margin-top: 4rem;
-`
-
-const HeroContent = styled(Content)`
-  margin-bottom: 2rem;
-  justify-content: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    padding: 0 2rem 2rem;
-  }
-`
-
-const Slogan = styled.h1`
-  font-style: normal;
-  font-weight: normal;
-  font-family: ${(props) => props.theme.fonts.monospace};
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 2rem;
-  line-height: 140%;
-  text-align: center;
-  margin: 0 0 1.625rem;
-`
+import { ChildOnlyProp, Context } from "../../types"
 
 // const Subtitle = styled.div`
 //   font-size: 1.25rem;
@@ -59,14 +44,6 @@ const Slogan = styled.h1`
 //   margin-bottom: 0.5rem;
 // `
 
-const SubSlogan = styled.p`
-  font-size: 1.25rem;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-  margin-bottom: 0.5rem;
-  text-align: center;
-`
-
 // const HeroContainer = styled.div`
 //   display: flex;
 //   justify-content: space-between;
@@ -74,38 +51,21 @@ const SubSlogan = styled.p`
 //     flex-direction: column-reverse;
 //   }
 // `
-const TwoColumnContent = styled.div`
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-  }
-`
 
-const Column = styled.div`
-  flex: 1 0 33%;
-  justify-content: flex-end;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    max-width: 100%;
-  }
-  margin-bottom: 1.5rem;
-  margin-right: 2rem;
-  width: 100%;
-`
-
-const Hero = styled(GatsbyImage)`
-  flex: 1 1 100%;
-  max-width: 800px;
-  background-size: cover;
-  background-repeat: no-repeat;
-`
-
-const H2 = styled.h2`
-  margin: 0 0 1.625rem;
-`
+const Column = ({ children }: ChildOnlyProp) => {
+  return (
+    <Box
+      flex="1 0 33%"
+      justifyContent="flex-end"
+      mb={6}
+      mr={8}
+      w="full"
+      maxW={{ base: "full", md: "none" }}
+    >
+      {children}
+    </Box>
+  )
+}
 
 // const Header = styled.header`
 //   margin-top: 3rem;
@@ -397,7 +357,7 @@ const ChooseStackPage = ({
   }, [data])
 
   return (
-    <StyledPage>
+    <Flex direction="column" alignItems="center" w="full" mx="auto" mt={16}>
       <PageMetadata
         title={translateMessageId(
           "page-local-environment-setup-meta-title",
@@ -408,54 +368,93 @@ const ChooseStackPage = ({
           intl
         )}
       />
-      <HeroContent>
-        <Slogan>
+      <Box
+        pt={{ base: 0, xl: 4 }}
+        pb={{ base: 8, xl: 4 }}
+        px={8}
+        w="full"
+        mb={8}
+        justifyContent="center"
+      >
+        <Heading
+          as="h1"
+          fontStyle="normal"
+          fontFamily="monospace"
+          textTransform="uppercase"
+          fontWeight="semibold"
+          fontSize="2rem"
+          lineHeight={1.4}
+          textAlign="center"
+          mt={0}
+          mb="1.625rem"
+        >
           <Translation id="page-local-environment-setup-title" />
-        </Slogan>
-        <SubSlogan>
+        </Heading>
+        <Text
+          fontSize="xl"
+          lineHeight={1.4}
+          color="text200"
+          mb={2}
+          textAlign="center"
+        >
           <Translation id="page-local-environment-setup-subtitle" />
           <br />
           <Translation id="page-local-environment-setup-subtitle-2" />
-        </SubSlogan>
-      </HeroContent>
+        </Text>
+      </Box>
       <Content>
-        <TwoColumnContent>
+        <Flex
+          direction={{ base: "column-reverse", lg: "row" }}
+          alignItems={{ base: "flex-start", lg: "center" }}
+          w="full"
+          justifyContent="space-between"
+        >
           <Column>
-            <H2>
+            <Heading
+              fontSize={{ base: "2xl", md: "2rem" }}
+              lineHeight={1.4}
+              mt={0}
+              mb="1.625rem"
+            >
               <Translation id="page-local-environment-frameworks-title" />
-            </H2>
-            <p>
+            </Heading>
+            <Text>
               <Translation id="page-local-environment-frameworks-desc" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-local-environment-framework-features" />
-            </p>
-            <ul>
-              <li>
+            </Text>
+            <UnorderedList>
+              <ListItem>
                 <Translation id="page-local-environment-framework-feature-1" />
-              </li>
-              <li>
+              </ListItem>
+              <ListItem>
                 <Translation id="page-local-environment-framework-feature-2" />
-              </li>
-              <li>
+              </ListItem>
+              <ListItem>
                 <Translation id="page-local-environment-framework-feature-3" />
-              </li>
-              <li>
+              </ListItem>
+              <ListItem>
                 <Translation id="page-local-environment-framework-feature-4" />
-              </li>
-              <li>
+              </ListItem>
+              <ListItem>
                 <Translation id="page-local-environment-framework-feature-5" />
-              </li>
-            </ul>
+              </ListItem>
+            </UnorderedList>
           </Column>
           <Column>
-            <Hero
+            <Img
+              as={GatsbyImage}
+              flex="1 1 100%"
+              maxW="50rem"
+              backgroundSize="cover"
+              backgroundRepeat="no-repeat"
               image={getImage(data.hero)!}
               alt={translateMessageId("alt-eth-blocks", intl)}
               loading="eager"
             />
           </Column>
-        </TwoColumnContent>
+        </Flex>
         <CardGrid>
           {frameworks.map((framework, idx) => (
             <ProductCard
@@ -601,7 +600,7 @@ const ChooseStackPage = ({
           })}
         </CardGrid>
         </StackContainer> */}
-    </StyledPage>
+    </Flex>
   )
 }
 export default ChooseStackPage
