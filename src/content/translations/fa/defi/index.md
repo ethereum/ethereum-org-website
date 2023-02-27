@@ -332,7 +332,6 @@ DeFi یک جنبش متن‌باز است. پروتکل‌ها و برنامه�
 
 ### داده‌های DeFi {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 

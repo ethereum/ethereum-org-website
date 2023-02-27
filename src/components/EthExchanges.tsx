@@ -161,8 +161,10 @@ type ExchangeName =
   | "kraken"
   | "kucoin"
   | "mtpelerin"
+  | "moonpay"
   | "okx"
   | "rain"
+  | "shakepay"
   | "wazirx"
 
 type WalletProviderName = "simplex" | "moonpay" | "wyre"
@@ -249,6 +251,7 @@ const EthExchanges = () => {
           mtpelerin
           okx
           rain
+          shakepay
           simplex
           wazirx
           wyre
@@ -334,6 +337,9 @@ const EthExchanges = () => {
       kucoin: file(relativePath: { eq: "exchanges/kucoin.png" }) {
         ...cardListImage
       }
+      moonpay: file(relativePath: { eq: "exchanges/moonpay.png" }) {
+        ...cardListImage
+      }
       mtpelerin: file(relativePath: { eq: "exchanges/mtpelerin.png" }) {
         ...cardListImage
       }
@@ -347,6 +353,9 @@ const EthExchanges = () => {
         ...cardListImage
       }
       rain: file(relativePath: { eq: "exchanges/rain.png" }) {
+        ...cardListImage
+      }
+      shakepay: file(relativePath: { eq: "exchanges/shakepay.png" }) {
         ...cardListImage
       }
       squarelink: file(relativePath: { eq: "wallets/squarelink.png" }) {
@@ -482,6 +491,12 @@ const EthExchanges = () => {
       image: data.kucoin,
       usaExceptions: [],
     },
+    moonpay: {
+      name: "MoonPay",
+      url: "https://www.moonpay.com/",
+      image: data.moonpay,
+      usaExceptions: ["VI"],
+    },
     mtpelerin: {
       name: "Mt Pelerin",
       url: "https://www.mtpelerin.com/",
@@ -504,6 +519,12 @@ const EthExchanges = () => {
       name: "Rain",
       url: "https://rain.bh",
       image: data.rain,
+      usaExceptions: [],
+    },
+    shakepay: {
+      name: "Shakepay",
+      url: "https://shakepay.com",
+      image: data.shakepay,
       usaExceptions: [],
     },
     wazirx: {

@@ -4,6 +4,7 @@ import { graphql, PageProps } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
+import { Badge } from "@chakra-ui/react"
 
 // Data
 import layer2Data from "../data/layer-2/layer-2.json"
@@ -21,7 +22,6 @@ import Link from "../components/Link"
 import OrderedList from "../components/OrderedList"
 import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
-import Pill from "../components/Pill"
 import ProductList from "../components/ProductList"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import Tooltip from "../components/Tooltip"
@@ -697,7 +697,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <Translation id="layer-2-dyor-2" />
           </p>
           <p>
-            <ButtonLink to="https://l2beat.com/?view=risk">
+            <ButtonLink to="https://l2beat.com/scaling/risk">
               <Translation id="layer-2-dyor-3" />
             </ButtonLink>
           </p>
@@ -773,7 +773,9 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                   tokenLists={l2.tokenLists}
                 >
                   {l2.purpose.map((purpose, index) => (
-                    <Pill key={index}>{purpose}</Pill>
+                    <Badge key={index} me={2}>
+                      {purpose}
+                    </Badge>
                   ))}
                 </Layer2ProductCard>
               )

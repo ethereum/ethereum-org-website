@@ -69,7 +69,7 @@ Ecosistemul Ethereum are ca misiune să finanțeze bunurile publice și proiecte
 
 ## Profesioniști în domeniul financiar & Contabili <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
 
-- Ethereum găzduiește ecosistemul de „Finanțe descentralizate” - o rețea de protocoale și aplicații care oferă un sistem financiar alternativ. Dacă sunteți un profesionist în domeniul financiar, consultați câteva aplicații la DeFi la [Defi Pulse](https://defipulse.com/) sau [DeFiPrime](https://defiprime.com)
+- Ethereum găzduiește ecosistemul de „Finanțe descentralizate” - o rețea de protocoale și aplicații care oferă un sistem financiar alternativ. Dacă sunteți un profesionist în domeniul financiar, consultați câteva aplicații la DeFi la [Defi Llama](https://defillama.com/) sau [DeFiPrime](https://defiprime.com)
 - Sunteți contabil? Activele pe Ethereum - ETH, tokenuri, DeFi etc. - introduc multe aspecte contabile noi. Ați putea începe prin examinarea unor proiecte care urmăresc să ajute utilizatorii de criptomonede să-și rezolve & problemele legate de contabilitate, cum ar fi [Rotki](https://rotki.com/)
 
 ## Managerii de produse <Emoji text=":fountain_pen:" size={1} /> {#product-managers}

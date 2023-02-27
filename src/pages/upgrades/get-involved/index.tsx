@@ -289,8 +289,6 @@ const GetInvolvedPage = ({
         url: "https://lodestar.chainsafe.io/",
         image: () => data.lodestar,
         githubUrl: "https://github.com/ChainSafe/lodestar",
-        isBeta: true,
-        children: <Translation id="consensus-client-under-review" />,
       },
       {
         name: "Nimbus",
@@ -542,9 +540,7 @@ export const Clients = graphql`
 
 export const query = graphql`
   query GetInvolvedPage {
-    bountyHunters: allConsensusBountyHuntersCsv(
-      sort: { order: DESC, fields: score }
-    ) {
+    bountyHunters: allConsensusBountyHuntersCsv(sort: { score: DESC }) {
       nodes {
         username
         name

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { ApolloProvider } from "@apollo/client"
-import { useColorModeValue } from "@chakra-ui/react"
+import { useColorModeValue, Text } from "@chakra-ui/react"
 import { ThemeProvider } from "@emotion/react"
-import styled from "@emotion/styled"
 import { IntlProvider } from "react-intl"
 import { LocaleProvider } from "gatsby-theme-i18n"
 
@@ -11,6 +10,7 @@ import { Flex } from "@chakra-ui/react"
 import { lightTheme, darkTheme } from "../theme"
 
 import Footer from "./Footer"
+import Link from "./Link"
 import ZenMode from "./ZenMode"
 import Nav from "./Nav"
 import SideNav from "./SideNav"
@@ -19,6 +19,7 @@ import TranslationBanner from "./TranslationBanner"
 import TranslationBannerLegal from "./TranslationBannerLegal"
 import FeedbackWidget from "./FeedbackWidget"
 import { SkipLink, SkipLinkAnchor } from "./SkipLink"
+import DismissableBanner from "./Banners/DismissableBanner"
 
 import { ZenModeContext } from "../contexts/ZenModeContext"
 
@@ -135,8 +136,8 @@ const Layout: React.FC<IProps> = ({
                 margin="0px auto"
                 minHeight="100vh"
                 flexFlow="column"
-                maxW={{ 
-                  lg: lightTheme.variables.maxPageWidth 
+                maxW={{
+                  lg: lightTheme.variables.maxPageWidth,
                 }}
               >
                 <ZenMode>
@@ -144,15 +145,26 @@ const Layout: React.FC<IProps> = ({
                   {shouldShowSideNav && <SideNavMobile path={path} />}
                 </ZenMode>
                 <SkipLinkAnchor id="main-content" />
-                <Flex
-                  flexDirection={{ base: 'column', lg: 'row' }}
-                >
+                <Flex flexDirection={{ base: "column", lg: "row" }}>
                   {shouldShowSideNav && (
                     <ZenMode>
                       <SideNav path={path} />
                     </ZenMode>
                   )}
                   <Flex flexDirection="column" width="100%">
+                    <DismissableBanner storageKey="kzgCeremony">
+                      <Text m={0} p={0}>
+                        Ethereum needs help summoning a shared secret to
+                        continue to scale. Make your contribution at the{" "}
+                        {
+                          <Link to="https://ceremony.ethereum.org/">
+                            KZG ceremony
+                          </Link>
+                        }
+                        !
+                      </Text>
+                    </DismissableBanner>
+
                     <Flex
                       justifyContent="space-around"
                       alignItems="flex-start"

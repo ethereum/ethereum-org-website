@@ -69,7 +69,7 @@ Het Ethereum-ecosysteem is op een missie om publieke goederen te financieren en 
 
 ## Financiële professionals & accountants <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
 
-- Ethereum is de thuisbasis van het “Decentralized Finance”-ecosysteem - een netwerk van protocollen en toepassingen die een alternatief financieel systeem bieden. Als u een financiële professional bent, bekijk dan een paar DeFi-apps via [DeFi Puls](https://defipulse.com/) of [DeFiPrime](https://defiprime.com)
+- Ethereum is de thuisbasis van het “Decentralized Finance”-ecosysteem - een netwerk van protocollen en toepassingen die een alternatief financieel systeem bieden. Als u een financiële professional bent, bekijk dan een paar DeFi-apps via [DeFi Llama](https://defillama.com/) of [DeFiPrime](https://defiprime.com)
 - Accountant? Assets op Ethereum - ETH, tokens, DeFi, etc - introduceren veel nieuwe boekhoudkundige kwesties. U kunt beginnen met het bekijken van enkele projecten die erop gericht zijn gebruikers van cryptovaluta te helpen hun boekhouduitdagingen op te lossen, zoals [Rotki](https://rotki.com/)
 
 ## Productbeheerders <Emoji text=":fountain_pen:" size={1} /> ½ {#product-managers}

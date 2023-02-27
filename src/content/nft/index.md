@@ -288,7 +288,7 @@ If minting and distributing NFTs is about community-generation or community digi
 
 - [Collab.land](https://collab.land/) tokengates Discord chat servers or Telegram groups
 - [Unlock protocol](https://unlock-protocol.com/) is a protocol for tokengating
-- [Shopify](https://help.shopify.com/en/manual/products/digital-service-product/nfts) have a growing roster of apps that let merchants tokengate access to products and discounts
+- [Shopify](https://help.shopify.com/en/manual/products/digital-service-product/nfts) has a growing roster of apps that let merchants tokengate access to products and discounts
 
 <Divider />
 

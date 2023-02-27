@@ -130,8 +130,8 @@
   "page-run-a-node-what-3-text": "Een Ethereum-node draaien kan ingewikkeld klinken, maar het is gewoon het werk van continu draaiende clientsoftware op een computer terwijl deze verbonden is met het internet. Wanneer u offline bent, zal uw node eenvoudig inactief zijn totdat het terug online komt en bijgewerkt wordt met de laatste wijzigingen.",
   "page-run-a-node-who-title": "<i>Wie</i> zou een node moeten draaien?",
   "page-run-a-node-who-preview": "Iedereen! Nodes zijn niet alleen voor miners en validators. <i>Iedereen</i> kan een node draaien - je hebt niet eens ETH nodig.",
-  "page-run-a-node-who-copy-1": "U hoeft geen ETH te staken of een miner te zijn om een node te draaien. Sterker nog, het is bijna elke node op Ethereum die miners en validators verantwoordelijk houdt.",
-  "page-run-a-node-who-copy-2": "U krijgt misschien niet de financiële beloningen die validators en miners verdienen, maar er zijn vele andere voordelen van het draaien van een node voor een Ethereum-gebruiker, inclusief privacy, beveiliging, verminderde afhankelijkheid van servers van derden, censuurweerstand en verbeterde gezondheid en decentralisatie van het netwerk.",
+  "page-run-a-node-who-copy-1": "U hoeft geen ETH te staken om een node te draaien. Sterker nog, het is bijna elke node op Ethereum die validators verantwoordelijk houdt.",
+  "page-run-a-node-who-copy-2": "U krijgt misschien niet de financiële beloningen die validators verdienen, maar er zijn vele andere voordelen van het draaien van een node voor een Ethereum-gebruiker, inclusief privacy, beveiliging, verminderde afhankelijkheid van servers van derden, censuurweerstand en verbeterde gezondheid en decentralisatie van het netwerk.",
   "page-run-a-node-who-copy-3": "Met uw eigen node hoeft u geen informatie te vertrouwen over de status van het netwerk die door een derde partij wordt verstrekt.",
   "page-run-a-node-who-copy-bold": "Vertrouw niet. Verifieer.",
   "page-run-a-node-why-title": "<i>Waarom</i> een node draaien?"

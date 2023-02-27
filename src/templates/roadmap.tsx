@@ -26,7 +26,6 @@ import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
-import Roadmap from "../components/Roadmap"
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents, {
   Item as ItemTableOfContents,
@@ -308,7 +307,6 @@ const components = {
   li: ListItem,
   MeetupList,
   RandomAppList,
-  Roadmap,
   Logo,
   ButtonLink,
   Contributors,

@@ -64,10 +64,10 @@ Multiple projects provide implementations of sidechains that you can integrate i
 - [Skale](https://skale.network/)
 - [Gnosis Chain (formerly xDai)](https://www.gnosischain.com/)
 - [Loom Network](https://loomx.io/)
+- [Metis Andromeda](https://www.metis.io/)
 
 ## Further reading {#further-reading}
 
-- [EthHub on sidechains](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/sidechains/)
 - [Scaling Ethereum dapps through Sidechains](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _Feb 8, 2018 - Georgios Konstantopoulos_
 
 _Know of a community resource that helped you? Edit this page and add it!_

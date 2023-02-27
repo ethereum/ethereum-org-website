@@ -96,14 +96,18 @@ Ethereum.org 被地道地翻译成 40 多种语言，请参阅我们的[语言�
 - [Microsoft Learning（智能合约）](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - 学习用 Solidity 编写智能合约
 - [Microsoft Learn（用去中心化应用程序）](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - 使用去中心化应用程序创建用户界面
 
+### 俄语 {#ru}
+
+- [Cyber Academy](https://cyberacademy.dev) - 面向 web3 构建者的教育空间
+
 ### 西班牙语 {#es}
 
 - [Ethereum Madrid](https://ethereummadrid.com/) - 区块链、去中心化金融与治理课程、活动和博客
 - [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) - 以太坊初学者指南（西班牙语）
 - [在线教程](https://tutoriales.online/curso/solidity) - 在以太坊上学习 Solidity 和编程
 - [以太坊开发课程介绍](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) - Solidity 基础知识以及测试和部署你的首个智能合约
-- [Curso Introducción a Seguridad y Hacking en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) - 了解真实智能合约中常见的漏洞和安全问题
-- [去中心化金融开发课程介绍](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - 了解去中心化金融智能合约如何在 Solidity 中工作，并创建自己的自动化做市商 (Automated Market Maker) 应用
+- [以太坊安全与黑客攻击课程介绍](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) - 了解真实智能合约中常见的漏洞和安全问题
+- [去中心化金融开发课程介绍](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - 了解去中心化金融智能合约如何在 Solidity 中运作，并创建自己的自动化做市商应用
 - [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) - 非技术类区块链教育（面向初学者到高阶学习者）。 全面学习加密货币和以太坊。
 
 ### 土耳其语 {#tr}
@@ -121,6 +125,6 @@ Ethereum.org 被地道地翻译成 40 多种语言，请参阅我们的[语言�
 
 - [日本数字资产交易业协会](https://jvcea.or.jp/)
 - [日本加密货币商业协会](https://cryptocurrency-association.org/)
-- [区块链开发入门 - 学习 | Microsoft 文档](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - 此学习资料向您介绍区块链和以太坊平台上的开发
+- [区块链开发入门 - 学习 | Microsoft 文档](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - 此学习路径介绍区块链和以太坊平台上的开发
 - [精通以太坊](https://www.oreilly.co.jp/books/9784873118963/) - 精通以太坊（日文）
 - [Solidity 智能合约开发和以太坊实战](https://www.oreilly.co.jp/books/9784873119342/) - Solidity 智能合约开发和以太坊实战（日文）

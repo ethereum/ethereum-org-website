@@ -72,7 +72,7 @@ L'ecosistema Ethereum ha come missione di finanziare beni pubblici e progetti di
 
 ## Professionisti finanziari e Contabili <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
 
-- Ethereum è la casa della "Finanza Decentralizzata" - una rete di protocolli e applicazioni che offrono un sistema finanziario alternativo. Se sei un professionista finanziario, controlla alcune applicazioni DeFi su [DeFi Pulse](https://defipulse.com/) o su [DeFiPrime](https://defiprime.com)
+- Ethereum è la casa della "Finanza Decentralizzata" - una rete di protocolli e applicazioni che offrono un sistema finanziario alternativo. Se sei un professionista finanziario, controlla alcune applicazioni DeFi su [DeFi Llama](https://defillama.com/) o su [DeFiPrime](https://defiprime.com)
 - Contabile? Le risorse su Ethereum: ETH, token, Defi, etc., introducono molti nuovi problemi di compatibilità. Potresti iniziare dando un'occhiata ad alcuni progetti che mirano ad aiutare gli utenti delle criptovalute a risolvere le proprie difficoltà di contabilità e ragioneria, come [Rotki](https://rotki.com/)
 
 ## Product Manager <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
