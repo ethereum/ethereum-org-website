@@ -196,11 +196,20 @@ const ReverseRow = (props: ChildOnlyProp) => (
   />
 )
 
-const Column = (props: ChildOnlyProp) => (
+const LeftColumn = (props: ChildOnlyProp) => (
   <Box
     w={{ base: "full", md: "50%" }}
-    ml={16}
+    mr={16}
+    ml={{ base: 16, md: 0 }}
+    {...props}
+  />
+)
+
+const RightColumn = (props: ChildOnlyProp) => (
+  <Box
+    w={{ base: "full", md: "50%" }}
     mr={{ base: 16, md: 0 }}
+    ml={16}
     {...props}
   />
 )
@@ -542,7 +551,7 @@ const GetInvolvedPage = ({
       <StyledGrayContainer>
         <PageContent>
           <Row>
-            <Column>
+            <LeftColumn>
               <H2 id="#bug-bounty">
                 <Translation id="page-upgrades-get-involved-bug-hunting" />
               </H2>
@@ -569,7 +578,7 @@ const GetInvolvedPage = ({
               <ButtonLink to="/bug-bounty/">
                 <Translation id="page-upgrades-get-involved-bug-hunting" />
               </ButtonLink>
-            </Column>
+            </LeftColumn>
             <LeaderboardContainer>
               <Leaderboard content={bountyHunters} limit={5} />
             </LeaderboardContainer>
@@ -578,17 +587,17 @@ const GetInvolvedPage = ({
       </StyledGrayContainer>
       <PageContent>
         <ReverseRow>
-          <Column>
+          <LeftColumn>
             <StyledCardList content={ethresearch} />
-          </Column>
-          <Column>
+          </LeftColumn>
+          <RightColumn>
             <H2>
               <Translation id="page-upgrades-get-involved-join" />
             </H2>
             <Text>
               <Translation id="page-upgrades-get-involved-join-desc" />
             </Text>
-          </Column>
+          </RightColumn>
         </ReverseRow>
       </PageContent>
       <FeedbackCard />
