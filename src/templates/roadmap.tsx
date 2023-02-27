@@ -42,7 +42,6 @@ import {
 import Emoji from "../components/OldEmoji"
 import YouTube from "../components/YouTube"
 import Breadcrumbs from "../components/Breadcrumbs"
-import StatsBox from "../components/Stats/StatsBox"
 
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Context } from "../types"
@@ -338,7 +337,7 @@ const RoadmapPage = ({
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
   const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
-  const { summaryPoints, stats } = mdx.frontmatter
+  const { summaryPoints } = mdx.frontmatter
 
   const dropdownLinks: ButtonDropdownList = {
     text: "Roadmap Options" as TranslationKey,
@@ -443,7 +442,6 @@ const RoadmapPage = ({
               objectFit="contain"
             />
           </Flex>
-          <Center>{stats && <StatsBox stats={stats!} />}</Center>
         </Stack>
       </HeroContainer>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
@@ -494,12 +492,6 @@ export const roadmapPageQuery = graphql`
           to
           toId
           variant
-        }
-        stats {
-          number
-          label
-          tooltip
-          tooltipUrl
         }
         image {
           childImageSharp {

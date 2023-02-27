@@ -15,19 +15,6 @@ buttons:
   - label: Past updates
     to: /history/
     variant: outline
-stats:
-  - number: 1435
-    label: Number of completed updates
-    tooltip: TODO
-    tooltipUrl: TODO
-  - number: 3
-    label: Number of updates in 2022
-    tooltip: TODO
-    tooltipUrl: TODO
-  - number: 2
-    label: Expected updates in 2023
-    tooltip: TODO
-    tooltipUrl: TODO
 ---
 
 Ethereum is a powerful platform for global coordination, but it is not finished! An ambitious set of improvements will upgrade Ethereum from its current form into a fully scaled, maximally resilient platform. These upgrades are laid out in the Ethereum roadmap.
