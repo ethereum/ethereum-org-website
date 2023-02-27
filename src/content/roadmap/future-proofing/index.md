@@ -2,6 +2,8 @@
 title: Future-proofing Ethereum
 description: High level overview of how Ethereum is set up for the future
 lang: en
+image: ../../../assets/upgrades/core.png
+alt: "Ethereum roadmap"
 template: roadmap
 ---
 

@@ -14,7 +14,7 @@ import ImageCard from "../components/ImageCard"
 import ExpandableCard from "../components/ExpandableCard"
 import DocLink from "../components/DocLink"
 import Contributors from "../components/Contributors"
-import SharedInfoBanner from "../components/InfoBanner"
+import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
 import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
@@ -34,8 +34,8 @@ import {
   Divider,
   Paragraph,
   Header1,
-  Header4,
   InfoGrid,
+  ListItem,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/OldEmoji"
 import YouTube from "../components/YouTube"
@@ -294,10 +294,6 @@ const TitleCard = styled.div`
   width: 100%;
 `
 
-const InfoBanner = styled(SharedInfoBanner)`
-  margin: 2rem 0;
-`
-
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
@@ -305,10 +301,10 @@ const components = {
   h1: Header1,
   h2: H2,
   h3: H3,
-  h4: Header4,
   p: Paragraph,
   pre: Pre,
   table: MarkdownTable,
+  li: ListItem,
   MeetupList,
   RandomAppList,
   Roadmap,
@@ -356,6 +352,42 @@ const RoadmapPage = ({
           eventCategory: `Roadmap dropdown`,
           eventAction: `Clicked`,
           eventName: "clicked roadmap home",
+        },
+      },
+      {
+        text: "Better security" as TranslationKey,
+        to: "/roadmap/security",
+        matomo: {
+          eventCategory: `Roadmap security dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked roadmap security",
+        },
+      },
+      {
+        text: "Faster, cheaper transactions" as TranslationKey,
+        to: "/roadmap/scaling",
+        matomo: {
+          eventCategory: `Roadmap scaling dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked roadmap scaling home",
+        },
+      },
+      {
+        text: "Better user experience" as TranslationKey,
+        to: "/roadmap/user-experience/",
+        matomo: {
+          eventCategory: `Roadmap user experience dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked roadmap user experience home",
+        },
+      },
+      {
+        text: "Future-proofing" as TranslationKey,
+        to: "/roadmap/",
+        matomo: {
+          eventCategory: `Roadmap future-proofing dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked roadmap future-proofing home",
         },
       },
     ],
@@ -431,7 +463,7 @@ export const roadmapPageQuery = graphql`
         image {
           childImageSharp {
             gatsbyImageData(
-              width: 600
+              width: 800
               layout: CONSTRAINED
               placeholder: BLURRED
               quality: 100

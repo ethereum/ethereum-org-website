@@ -3,7 +3,6 @@ title: Ethereum roadmap
 description: An overview of Ethereum's upgrade plans
 lang: en
 template: roadmap
-emoji: ":money_with_wings:"
 image: ../../assets/upgrades/merge.png
 alt: "Ethereum roadmap"
 summaryPoints:
@@ -25,7 +24,7 @@ The Ethereum roadmap outlines the specific improvements that will be made to pro
 
     Today's scaling solutions, known as rollups, are too centralized, meaning users have to trust small groups of operators to behave honestly. Also, the way rollups send data to Ethereum is too expensive, limiting how cheap transactions can be for end users. The roadmap includes fixes for both of these problems.
 
-    [Read how Ethereum will scale](/roadmap/faster-transactions/)
+    [Read how Ethereum will scale](/roadmap/scaling/)
 
   </Card>
   <Card title="Improved user experience">
@@ -39,14 +38,14 @@ The Ethereum roadmap outlines the specific improvements that will be made to pro
 
     Ethereum is the most secure and decentralized smart-contract platform in existence. However, there are still improvements that can be made so that Ethereum stays resilient to any level of attack far into the future.
 
-    [Read how Ethereum will become even more secure](./more-secure-ethereum.md)
+    [Read how Ethereum will become even more secure](/roadmap/security/)
 
   </Card>
     <Card title="Future proofing">
 
     Today's Ethereum researchers and developers are building a protocol for future generations. This means anticipating problems that could arise in decades to centuries and solving them now, such as quantum computers that break current crypotography.
 
-    [Read how Ethereum will be future-proofed](./future-proofing.md)
+    [Read how Ethereum will be future-proofed](/roadmap/future-proofing/)
 
   </Card>
 </CardGrid>

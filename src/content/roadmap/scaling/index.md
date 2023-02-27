@@ -2,17 +2,23 @@
 title: Scaling Ethereum
 description: High level overview of how Ethereum will scale in the future via faster, cheaper transactions.
 lang: en
+image: ../../../assets/eth.png
+alt: "Ethereum roadmap"
+template: roadmap
 ---
 
 Ethereum is scaled using rollups. Rollups batch transactions together offchain and send the result to Ethereum. Today, users have to rely on centralized operators to manage rollups honestly. At the same time, the data rollups post to Ethereum is too expensive, imposing a limit on the cost savings that rollups can create for users. To solve these problems, cheap data blobs will be added to Ethereum blocks specifically for rollups, and rollup infrastructure will be decentralized across a wider community of operators. This will allow Ethereum to fully scale without sacrificing decentralization.
 
 <InfoBanner>
-Today’s rollups are **3-8x cheaper** than Ethereum layer 1. ZK-rollups will soon lower fees by **40-100x**.
+  <h4 style="margin-top: 0">Transaction costs</h4>
 
-Upcoming changes to Ethereum will provide another **100-1000x** of scaling.
-
-Users will benefit from transactions costing < $0.001
-<InfoBanner>
+  <ul style="margin-bottom: 0">
+    <li>Today’s rollups are <strong>3-8x</strong> cheaper than Ethereum layer 1</li>
+    <li>ZK-rollups will soon lower fees by <strong>40-100x</strong></li>
+    <li>Upcoming changes to Ethereum will provide another <strong>100-1000x</strong> of scaling</li>
+    <li style="margin-bottom: 0">Users will benefit from transactions <strong>costing less than $0.001</strong></li>
+  </ul>
+</InfoBanner>
 
 Rollups are already scaling Ethereum. A rich ecosystem of rollup projects is enabling users to transact quickly and cheaply, with a range of security guarantees. However, they are not currently fully decentralized - they run with a set of "training wheels" that must eventually be removed. The way data is handled on Ethereum is not very rollup-friendly - it is too expensive for rollups to post large volumes of data to Ethereum. Read on to discover how these issues will be resolved to allow rollups to scale Ethereum.
 
@@ -20,7 +26,9 @@ Rollups are already scaling Ethereum. A rich ecosystem of rollup projects is ena
 
 Rollups have been bootstrapped using centralized sequencers (computers that do all the transaction processing and aggregation before submitting them to Ethereum). This is vulnerable to censorship, because the sequencer operators can be sanctioned, bribed or otherwise compromised. At the same time, [rollups vary](https://l2beat.com) in the way they validate incoming data. The best way is for "provers" to submit fraud proofs or validity proofs, but not all rollups are there yet. Even those rollups that do use validity/fraud proofs use a small pool of known provers. Therefore, the next critical step in scaling Ethereum is to distribute responsibility for running sequencers and provers across more people.
 
-Read more on [rollups](/developers/docs/scaling)
+**Read more**
+
+- [Rollups](/developers/docs/scaling)
 
 ## Managing huge rollup data {#managing-rollup-data}
 
@@ -30,6 +38,8 @@ After blob transactions have become part of the Ethereum protocol, it will be po
 
 This second step is known as “Danksharding”. It is likely several years away from being fully implemented, and it relies on other developments such as new network designs that enable efficiently confirm that data is available by randomly sampling a few kilobytes at a time, known as **data availability sampling (DAS)**.
 
-Read more on [Danksharding](/roadmap/danksharding/)
-Read more on [Proposer-builder separation](/roadmap/pbs)
-Read more on [Data availability sampling](/developers/docs/data-availability)
+**Read more**
+
+- [Danksharding](/roadmap/danksharding/)
+- [Proposer-builder separation](/roadmap/pbs)
+- [Data availability sampling](/developers/docs/data-availability)
