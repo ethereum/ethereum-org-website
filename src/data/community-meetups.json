@@ -352,5 +352,14 @@
     "emoji": ":co:",
     "location": "Colombia",
     "link": "https://www.meetup.com/hash-house-medellin/"
+  },
+  {
+    "title": "ETHMiami",
+    "to": "https://ethmiami.net/",
+    "sponsor": null,
+    "location": "Miami, USA",
+    "description": "ETHMiami’s 2nd annual fest and Web3 Hackathon. Bringing together the best Web3 builders and creators.",
+    "startDate": "2023-10-27",
+    "endDate": "2023-10-29"
   }
 ]
