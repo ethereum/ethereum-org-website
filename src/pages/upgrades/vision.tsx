@@ -57,7 +57,7 @@ const H2 = (props: HeadingProps) => (
   <Heading
     as="h2"
     mt={0}
-    mb={4}
+    mb={8}
     fontSize={{ base: "2xl", md: "2rem" }}
     fontWeight="semibold"
     lineHeight={1.4}
@@ -65,9 +65,7 @@ const H2 = (props: HeadingProps) => (
   />
 )
 
-const CenterH2 = (props: HeadingProps) => (
-  <H2 textAlign="center" mb={8} {...props} />
-)
+const CenterH2 = (props: HeadingProps) => <H2 textAlign="center" {...props} />
 
 const H3 = (props: HeadingProps) => (
   <Heading
