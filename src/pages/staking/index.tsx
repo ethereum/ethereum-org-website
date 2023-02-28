@@ -2,6 +2,7 @@ import React, { ReactNode } from "react"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 import { Box, Flex, Grid, Heading, useToken } from "@chakra-ui/react"
+
 import ButtonDropdown, {
   List as ButtonDropdownList,
 } from "../../components/ButtonDropdown"
@@ -22,15 +23,14 @@ import { translateMessageId, TranslationKey } from "../../utils/translations"
 import { getImage } from "../../utils/image"
 import type { Context } from "../../types"
 
-
 type ChildOnlyProp = { children: ReactNode }
 
 const Content = (props: ChildOnlyProp) => (
-  <Box p="1rem 2rem" w="100%" {...props} />
+  <Box p="1rem 2rem" w="full" {...props} />
 )
 
 const PageContainer = (props: ChildOnlyProp) => (
-  <Flex flexDir="column" alignItems="center" w="100%" m="0 auto" {...props} />
+  <Flex flexDir="column" alignItems="center" w="full" m="0 auto" {...props} />
 )
 
 const Divider = () => (
@@ -43,18 +43,18 @@ const HeroStatsWrapper = (props: ChildOnlyProp) => (
     alignItems="center"
     bg="layer2Gradient"
     pb={8}
-    w="100%"
+    w="full"
     {...props}
   />
 )
 
 const Page = (props: ChildOnlyProp) => (
   <Flex
+    w="full"
     justifyContent="space-between"
-    w="100%"
     m="0 auto 4rem"
     pt={16}
-    flexDirection={{ base: "column", xl: "row" }}
+    flexDirection={{ base: "column", lg: "row" }}
     {...props}
   />
 )
@@ -63,28 +63,12 @@ const InfoTitle = (props: ChildOnlyProp) => (
   <Heading
     fontSize="5xl"
     fontWeight="700"
+    lineHeight={1.4}
     textAlign="right"
-    mt="0"
-    display={{ base: "none", xl: "block" }}
+    mt={0}
+    display={{ base: "none", lg: "block" }}
     {...props}
   />
-)
-
-const StyledButtonDropdown = (props: { list: ButtonDropdownList }) => (
-  <Flex
-    mb={{ base: 0, xl: 8 }}
-    justifyContent="center"
-    textAlign="center"
-    sx={{
-      "> *": {
-        ml: { base: "initial", xl: "auto" },
-        w: { base: "100%", sm: "initial !important" },
-      },
-    }}
-    {...props}
-  >
-    <ButtonDropdown list={props.list} />
-  </Flex>
 )
 
 // InfoColumn shows above xl
@@ -95,35 +79,57 @@ const InfoColumn = (props: ChildOnlyProp) => (
     top="6.25rem"
     height="calc(100vh - 80px)"
     flex="0 1 330px"
-    m="0 2rem"
-    display={{ base: "none", xl: "initial" }}
+    mx={8}
+    display={{ base: "none", lg: "initial" }}
     {...props}
   />
 )
 
-// ButtonDropdown for mobile only
-const MobileButton = (props: { list: ButtonDropdownList }) => (
-  <Box
-    bg="background"
-    boxShadow="0 -1px 0px"
-    color="border"
-    w="100%"
-    position="sticky"
-    zIndex="99"
-    bottom="0"
-    p={8}
-    mb="0"
-    display={{ base: "initial", xl: "none" }}
+const StyledButtonDropdown = ({
+  list,
+  ...rest
+}: {
+  list: ButtonDropdownList
+}) => (
+  <Flex
+    justifyContent="flex-end"
+    textAlign="center"
+    alignSelf={{ base: "auto", lg: "flex-end" }}
+    mb={8}
+    {...rest}
   >
-    <StyledButtonDropdown list={props.list} />
-  </Box>
+    <ButtonDropdown list={list} />
+  </Flex>
 )
 
+// ButtonDropdown for mobile only
+const MobileButton = ({ list, ...rest }: { list: ButtonDropdownList }) => {
+  const borderBoxShadowColor = useToken("colors", "border")
+
+  return (
+    <Box
+      position="sticky"
+      bottom="0"
+      w="full"
+      bg="background"
+      boxShadow={`0 -1px 0px ${borderBoxShadowColor}`}
+      zIndex="99"
+      p={8}
+      mb={0}
+      display={{ base: "block", lg: "none" }}
+      {...rest}
+    >
+      <ButtonDropdown list={list} />
+    </Box>
+  )
+}
+
 const ContentContainer = (props: { children: ReactNode; id: string }) => {
-  const mdBp = useToken("breakpoints", "md")
+  const [mdBp, lgBp] = useToken("breakpoints", ["md", "lg"])
+
   return (
     <Flex
-      flex="1 1"
+      flex={`1 1 ${lgBp}`}
       flexBasis={mdBp}
       position="relative"
       padding={{ base: 0, md: "0 2rem 2rem" }}
