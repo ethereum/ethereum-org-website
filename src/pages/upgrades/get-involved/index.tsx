@@ -289,8 +289,6 @@ const GetInvolvedPage = ({
         url: "https://lodestar.chainsafe.io/",
         image: () => data.lodestar,
         githubUrl: "https://github.com/ChainSafe/lodestar",
-        isBeta: true,
-        children: <Translation id="consensus-client-under-review" />,
       },
       {
         name: "Nimbus",
