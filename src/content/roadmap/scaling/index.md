@@ -7,7 +7,7 @@ alt: "Ethereum roadmap"
 template: roadmap
 ---
 
-Ethereum is scaled using rollups. Rollups batch transactions together offchain and send the result to Ethereum. Today, the data rollups post to Ethereum is too expensive, imposing a limit on the cost savings that rollups can create for users. Today's rollups also rely on some centralized components. To solve these problems, cheap data blobs will be added to Ethereum blocks specifically for rollups, and rollup infrastructure will be decentralized across a wider community of operators. This will allow Ethereum to fully scale without sacrificing decentralization.
+Ethereum is scaled using [rollups](/layer-2/#rollups). Rollups batch transactions together offchain and send the result to Ethereum. Today, the data rollups post to Ethereum is too expensive, limiting the cost savings that rollups can create for users. Today's rollups also rely on some centralized components that can be removed as the rollups mature. To solve these issues, cheap data blobs will be added to Ethereum blocks specifically for rollups, and rollup infrastructure will be distributed across a wider community of operators. This will allow Ethereum to fully scale without sacrificing decentralization.
 
 <InfoBanner>
   <h4 style="margin-top: 0">Transaction costs</h4>
@@ -34,7 +34,7 @@ This second step is known as [“Danksharding”](/roadmap/danksharding/). It is
 
 ## Decentralizing rollups {#decentralizing-rollups}
 
-[Rollups](/layer-2/#rollups) are already scaling Ethereum. A rich ecosystem of rollup projects is enabling users to transact quickly and cheaply, with a range of security guarantees. However, rollups have been bootstrapped using centralized sequencers (computers that do all the transaction processing and aggregation before submitting them to Ethereum). This is vulnerable to censorship, because the sequencer operators can be sanctioned, bribed or otherwise compromised. At the same time, [rollups vary](https://l2beat.com) in the way they validate incoming data. The best way is for "provers" to submit fraud proofs or validity proofs, but not all rollups are there yet. Even those rollups that do use validity/fraud proofs use a small pool of known provers. Therefore, the next critical step in scaling Ethereum is to distribute responsibility for running sequencers and provers across more people.
+Rollups are already scaling Ethereum. A rich ecosystem of rollup projects is enabling users to transact quickly and cheaply, with a range of security guarantees. However, rollups have been bootstrapped using centralized sequencers (computers that do all the transaction processing and aggregation before submitting them to Ethereum). This is vulnerable to censorship, because the sequencer operators can be sanctioned, bribed or otherwise compromised. At the same time, [rollups vary](https://l2beat.com) in the way they validate incoming data. The best way is for "provers" to submit fraud proofs or validity proofs, but not all rollups are there yet. Even those rollups that do use validity/fraud proofs use a small pool of known provers. Therefore, the next critical step in scaling Ethereum is to distribute responsibility for running sequencers and provers across more people.
 
 **Read more**
 
