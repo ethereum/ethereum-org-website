@@ -21,9 +21,8 @@ import StakingCommunityCallout from "../../components/Staking/StakingCommunityCa
 
 import { translateMessageId, TranslationKey } from "../../utils/translations"
 import { getImage } from "../../utils/image"
-import type { Context } from "../../types"
 
-type ChildOnlyProp = { children: ReactNode }
+import type { ChildOnlyProp, Context } from "../../types"
 
 const Content = (props: ChildOnlyProp) => (
   <Box p="1rem 2rem" w="full" {...props} />
