@@ -55,9 +55,11 @@ Account abstraction allows for a **better overall user experience** as well as *
 Gas management is also much improved with account abstraction. Not only can applications offer to pay their users' gas fees, but gas fees can be paid in tokens other than ETH, freeing users from having to maintain an ETH balance for funding transactions. This would work by swapping the user's tokens for ETH inside the contract and then using the ETH to pay for gas.
 
 <ExpandableCard title="How can account abstraction help with gas?" eventCategory="/roadmap/account-abstraction" eventName="clicked how can account abstraction help with gas?">
+
 Gas management is one of the primary frictions for users of Ethereum, mainly because ETH is the only asset that can be used to pay for transactions. Imagine you have a wallet with a USDC balance, but no ETH. You can't move or swap those USDC tokens because you can't pay gas. You can't swap the USDC for ETH either, because that in itself costs gas. You would have to send more ETH to your account from an exchange or another address to solve the problem. With smart contract wallets, you can simply pay gas in USDC instead, freeing your account. You don't have to keep an ETH balance in all your accounts anymore.
 
 Account abstraction also allows dapp developers to be creative with gas management. For example, you might be able to start paying your favourite DEX a fixed fee each month for unlimited transactions. Dapps might offer to pay all your gas fees on your behalf as a reward for using their platform, or as an onboarding offer. It will be much easier for developers to innovate on gas when smart contract wallets are supported at the protocol-level.
+
 </ExpandableCard>
 
 Trusted sessions are also potentially transformative for user experiences, especially for applications like gaming, where large numbers of small transactions might need approval in a short time. Individually approving each transaction would break the gaming experience, but permanent approval is unsafe. A smart contract wallet could approve certain transactions for a fixed time, up to a specific value or only to certain addresses.
@@ -71,6 +73,7 @@ These are just a few examples of how user experiences could be levelled up by ac
 Smart contract wallets exist today but are challenging to implement because the EVM does not support them. Instead, they rely on wrapping relatively complex code around standard Ethereum transactions. Ethereum can change this by allowing smart contracts to initiate transactions, handling the necessary logic in Ethereum smart contracts instead of off-chain. Putting logic into smart contracts also increases Ethereum's decentralization since it removes the need for "relayers" run by wallet developers to translate messages signed by the user to regular Ethereum transactions.
 
 <ExpandableCard title="EIP-4337: account abstraction without changing the Ethereum protocol" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-4337: account abstraction without changing the Ethereum protocol">
+
 EIP-4337 is the first step towards native smart contract wallet support in a decentralized way _without requiring changes to the Ethereum protocol_. Instead of modifying the consensus layer to support smart contract wallets, a new system is added separately to the normal transaction gossip protocol. This higher level system is built around a new object called a `UserOperation` that package up actions from a user along with the relevant signatures. These `UserOperation` objects then get broadcast into a dedicated mempool where validators can collect them into a "bundle transaction". The bundle transaction represents a sequence of many individual `UserOperations` and can be included in Ethereum blocks just like a normal transaction, and would be picked up by validators using a similar fee-maximizing selection model.
 
 The way wallets work would also change under EIP-4337. Instead of each wallet re-implementing common but complex safety logic, those functions would be outsourced to a global wallet contract known as the "entry point". This would handle operations such as paying fees and executing EVM code so that wallet developers can focus on providing excellent user experiences.
@@ -79,9 +82,11 @@ The way wallets work would also change under EIP-4337. Instead of each wallet re
 
 - [About EIP-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)
 - [EIP-4337 documentation](https://eips.ethereum.org/EIPS/eip-4337)
-  </ExpandableCard>
+
+</ExpandableCard>
 
 <ExpandableCard title="EIP-2938: changing the Ethereum protocol to support account abstraction" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-2938: changing the Ethereum protocol to support account abstraction">
+
 EIP-2938 aims to update the Ethereum protocol by introducing a new transaction type, `AA_TX_TYPE` that includes three fields: `nonce`, `target` and `data`, where `nonce` is a transaction counter, `target` is the entry point contract address and `data` is EVM bytecode. To execute these transactions, two new instructions (known as opcodes) have to be added to the EVM: `NONCE` and `PAYGAS`. The `NONCE` opcode tracks the transaction sequence and `PAYGAS` calculates and withdraws the gas required to execute the transaction from the contract's balance. These new features allow Ethereum to support smart contract wallets natively as the necessary infrastructure is built in to Ethereum's protocol.
 
 Note that EIP-2938 is currently not active. The community is currently favoring EIP-4337 because it does not require changes to the protocol.
@@ -90,7 +95,8 @@ Note that EIP-2938 is currently not active. The community is currently favoring 
 
 - [About EIP2938](https://hackmd.io/@SamWilsn/ryhxoGp4D#What-is-EIP-2938)
 - [EIP-2938 documentation](https://eips.ethereum.org/EIPS/eip-2938)
-  </ExpandableCard>
+
+</ExpandableCard>
 
 ## Current progress {#current-progress}
 
