@@ -64,11 +64,13 @@ The Ethereum roadmap outlines the specific improvements that will be made to pro
 
 Ethereum is a network that undergoes periodic upgrades that enhance its scalability, security or sustainability. One of the core strengths of Ethereum is that it is not fixed forever in its current form - as new ideas arise from research and development they can be implemented to make sure Ethereum is ever-improving. This gives Ethereum the flexibility to tackle emerging challenges and keep up with the most advanced technological breakthroughs in cryptography, computing and cryptoeconomics.
 
-### How the roadmap is defined {#how-the-roadmap-is-defined}
+<RoadmapImageContent title="How the roadmap is defined">
 
 The roadmap is mostly the result of years of work by researchers and developers - because the protocol is very technical - but any motivated person can participate. Ideas usually start off as discussions on a forum such as [ethresear.ch](https://github.com/ethereum/ethereum-org-website/blob/1c5502a0abaa746512323bbce0fbf1093387a724/src/content/roadmap/ethresear.ch), [Ethereum magicians](https://www.figma.com/exit?url=https%3A%2F%2Fethereum-magicians.org%2F) or the Eth R&D discord server. They may be responses to new vulnerabilities that are discovered, suggestions from organizations working in the application layer (such as dapps and exchanges) or from known frictions for end users (such as costs or transaction speeds).
 
 When these ideas mature, they can be proposed as [Ethereum Improvement Proposals](https://eips.ethereum.org/). Client developers then create prototypes that get investigated intensely and simulated on private and then public testnets before being scheduled for releasing on Ethereum Mainnet. There are nine independent Ethereum client teams (four execution clients and five consensus clients) that all do this independently in different languages. This is all done in public so that anyone from the community can weigh in at any time.
+
+</RoadmapImageContent>
 
 <InfoBanner>
   <h4 style="margin-top: 0">What is ETH2?</h4>
