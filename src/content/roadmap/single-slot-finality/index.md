@@ -37,7 +37,7 @@ With the current mechanism design, in order to reduce the time to finality, it i
 
 ## Routes to SSF {#routes-to-ssf}
 
-<ExpandableCard title= "Why can't we have SSF today?">
+<ExpandableCard title= "Why can't we have SSF today?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 The current consensus mechanism combines attestations from multiple validators, known as committees, to reduce the number of messages each validator has to process to validate a block. Every validator has an opportunity to attest in each epoch (32 slots) but in each slot, only a subset of validators, known as a 'committee' attest. They do so by dividing up into subnets in which a few validators are selected to be 'aggregators'. Those aggregators each combine all the signatures they see from other validators in their subnet into a single aggregate signature. The aggregator that includes the greatest number of individual contributions passes their aggregate signature to the block proposer, who includes it in the block along with the aggregate signature from the other committees.
 

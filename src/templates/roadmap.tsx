@@ -4,7 +4,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { MDXProvider } from "@mdx-js/react"
 import styled from "@emotion/styled"
-import { Center, Flex, Stack, Wrap, WrapItem } from "@chakra-ui/react"
+import { Flex, Stack, Wrap, WrapItem } from "@chakra-ui/react"
 
 import Button from "../components/Button"
 
