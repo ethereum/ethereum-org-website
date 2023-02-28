@@ -26,34 +26,38 @@ Ethereum is a powerful platform for global coordination, but it is not finished!
 The Ethereum roadmap outlines the specific improvements that will be made to protocol in the future. Overall, the roadmap will bring the following benefits to Ethereum users:
 
 <CardGrid>
-  <Card title="Faster, cheaper transactions">
-
-    Today's scaling solutions, known as rollups, are too centralized, meaning users have to trust small groups of operators to behave honestly. Also, the way rollups send data to Ethereum is too expensive, limiting how cheap transactions can be for end users. The roadmap includes fixes for both of these problems.
-
-    [Read how Ethereum will scale](/roadmap/scaling/)
-
-  </Card>
-  <Card title="Improved user experience">
-
-    Using Ethereum will soon be as intuitive as the rest of the web. Ethereum nodes will run on mobile phones, giving every user trustless access to their data and assets. Changes to the way users use accounts will also make using Ethereum simpler and safer.
-
-    [Read how the user experience will improve](/roadmap/user-experience/)
-
-  </Card>
-  <Card title="More security">
-
-    Ethereum is the most secure and decentralized smart-contract platform in existence. However, there are still improvements that can be made so that Ethereum stays resilient to any level of attack far into the future.
-
-    [Read how Ethereum will become even more secure](/roadmap/security/)
-
-  </Card>
-    <Card title="Future proofing">
-
-    Today's Ethereum researchers and developers are building a protocol for future generations. This means anticipating problems that could arise in decades to centuries and solving them now, such as quantum computers that break current crypotography.
-
-    [Read how Ethereum will be future-proofed](/roadmap/future-proofing/)
-
-  </Card>
+  <RoadmapActionCard
+    to="/roadmap/scaling"
+    title="Faster, cheaper transactions"
+    image="scaling"
+    description="Today's scaling solutions, known as rollups, are too centralized, meaning users have to trust small groups of operators to behave honestly. Also, the way rollups send data to Ethereum is too expensive, limiting how cheap transactions can be for end users. The roadmap includes fixes for both of these problems."
+  >
+    <ButtonLink to="/roadmap/scaling/">Read more</ButtonLink>
+  </RoadmapActionCard>
+  <RoadmapActionCard
+    to="/roadmap/security"
+    title="More security"
+    image="security"
+    description="Ethereum is the most secure and decentralized smart-contract platform in existence. However, there are still improvements that can be made so that Ethereum stays resilient to any level of attack far into the future."
+  >
+    <ButtonLink to="/roadmap/security/">Read more</ButtonLink>
+  </RoadmapActionCard>
+  <RoadmapActionCard
+    to="/roadmap/user-experience"
+    title="Improved user experience"
+    image="userExperience"
+    description="Using Ethereum will soon be as intuitive as the rest of the web. Ethereum nodes will run on mobile phones, giving every user trustless access to their data and assets. Changes to the way users use accounts will also make using Ethereum simpler and safer."
+  >
+    <ButtonLink to="/roadmap/user-experience/">Read more</ButtonLink>
+  </RoadmapActionCard>
+  <RoadmapActionCard
+    to="/roadmap/future-proofing"
+    title="Future proofing"
+    image="futureProofing"
+    description="Today's Ethereum researchers and developers are building a protocol for future generations. This means anticipating problems that could arise in decades to centuries and solving them now, such as quantum computers that break current crypotography."
+  >
+    <ButtonLink to="/roadmap/future-proofing/">Read more</ButtonLink>
+  </RoadmapActionCard>
 </CardGrid>
 
 ### Why Ethereum needs a roadmap {#why-ethereum-needs-a-roadmap}

@@ -42,6 +42,7 @@ import {
 import Emoji from "../components/OldEmoji"
 import YouTube from "../components/YouTube"
 import Breadcrumbs from "../components/Breadcrumbs"
+import RoadmapActionCard from "../components/Roadmap/RoadmapActionCard"
 
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Context } from "../types"
@@ -322,6 +323,7 @@ const components = {
   DocLink,
   ExpandableCard,
   YouTube,
+  RoadmapActionCard,
 }
 
 const RoadmapPage = ({
