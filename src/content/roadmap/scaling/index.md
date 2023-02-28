@@ -26,9 +26,7 @@ Rollups are already scaling Ethereum. A rich ecosystem of rollup projects is ena
 
 Rollups have been bootstrapped using centralized sequencers (computers that do all the transaction processing and aggregation before submitting them to Ethereum). This is vulnerable to censorship, because the sequencer operators can be sanctioned, bribed or otherwise compromised. At the same time, [rollups vary](https://l2beat.com) in the way they validate incoming data. The best way is for "provers" to submit fraud proofs or validity proofs, but not all rollups are there yet. Even those rollups that do use validity/fraud proofs use a small pool of known provers. Therefore, the next critical step in scaling Ethereum is to distribute responsibility for running sequencers and provers across more people.
 
-**Read more**
-
-- [Rollups](/developers/docs/scaling)
+<ButtonLink variant="outline-color" to="/developers/docs/scaling"> Read about rollups</ButtonLink>
 
 ## Managing huge rollup data {#managing-rollup-data}
 
@@ -38,8 +36,8 @@ After blob transactions have become part of the Ethereum protocol, it will be po
 
 This second step is known as “Danksharding”. It is likely several years away from being fully implemented, and it relies on other developments such as new network designs that enable efficiently confirm that data is available by randomly sampling a few kilobytes at a time, known as **data availability sampling (DAS)**.
 
-**Read more**
+**Further reading**
 
-- [Danksharding](/roadmap/danksharding/)
-- [Proposer-builder separation](/roadmap/pbs)
-- [Data availability sampling](/developers/docs/data-availability)
+- [Read about Danksharding](/roadmap/danksharding/)
+- [Read about proposer-builder separation](/roadmap/pbs)
+- [Read about data availability sampling](/developers/docs/data-availability)

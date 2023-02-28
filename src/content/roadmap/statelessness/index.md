@@ -35,10 +35,13 @@ EIP-4444 is not yet ready to ship, but it is under active discussion. Interestin
 
 This upgrade doesn't fundamentally change how Ethereum nodes handle state data, it just changes how historical data is accessed.
 
-**Read more**
+**Further reading**
+
+- [EIP-4444 specification](https://eips.ethereum.org/EIPS/eip-4444)
+
+**Watch video**
 
 - [Watch Alex Stokes explain EIP-4444](https://youtu.be/SfDC_qUZaos)
-- [EIP-4444 specification](https://eips.ethereum.org/EIPS/eip-4444)
 
 ### State expiry {#state-expiry}
 
@@ -55,7 +58,7 @@ Similarly to history expiry, under state expiry responsibility for storing old s
 
 State expiry is still in the research phase and not yet ready to ship. State expiry may well happen later than stateless clients and history expiry because those upgrades make large state sizes easily manageable for the majority of validators.
 
-**Read more**
+**Further reading**
 
 - [Read more on state expiry](https://hackmd.io/@vbuterin/state_size_management#A-more-moderate-solution-state-expiry)
 - [Read even more on state expiry](https://hackmd.io/@vbuterin/state_expiry_paths#Option-2-per-epoch-state-expiry)
@@ -70,7 +73,7 @@ Statelessness is a bit of a misnomer because it does not mean the concept of "st
 - nodes can run on top of cheap hard drives because there is no disk reading/writing required
 - compatible with future upgrades to Ethereum's cryptography
 
-**Read more**
+**Further reading**
 
 - [Read more on why it's so important to go stateless](https://dankradfeist.de/ethereum/2021/02/14/why-stateless.html)
 - [Read the original stateless client concept notes](https://ethresear.ch/t/the-stateless-client-concept/172)
@@ -87,8 +90,7 @@ For this to happen, [Verkle trees](../verkle-trees) must already have been imple
 
 Statelessness relies oin block builders maintaining a copy of the full state data so that they can generate witnesses that can be used to verify the block. Other nodes do not need access to the state data, all the information required to verify the block is available in the witness. This creates a situation where proposing a block is expensive, but verifying the block is cheap, which implies fewer operators will run a block proposing node. However, decentralization of block proposers is not critical as long as as many participants as possible can independently verify that the blocks they propose are valid.
 
-Read more on [Dankrad's notes](https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers)
-
+<ButtonLink variant="outline-color" to="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Read more on Dankrad's notes</ButtonLink>
 </ExpandableCard>
 
 Block proposers use the state data to create "witnesses" - the minimal set of data that prove the values of the state that are being changed by the transactions in a block. Other validators do not hold the state, they only store the state root (a hash of the entire state). They receive a block and a witness and use them to update their state root. This makes a validating node extremely lightweight.

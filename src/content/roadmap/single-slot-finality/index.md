@@ -44,7 +44,6 @@ The current consensus mechanism combines attestations from multiple validators, 
 This process provides sufficient capacity for every validator to vote in each epoch, because `32 slots * 64 committees * 256 validators per committee = 524,288 validators per epoch`. At the time of writing (February 2023) there are ~513,000 active validators.
 
 In this scheme, it is only possible for every validator to vote on a block by distributing their attestations across the whole epoch. However, there are potentially ways to improve the mechanism so that _every validator has the chance to attest in every slot_.
-
 </ExpandableCard>
 
 Since the Ethereum consensus mechanism was designed, the signature aggregation scheme (BLS) has been found to be far more scalable than was initially thought, while the ability of clients to process and verify signatures has also improved. It turns out that processing attestations from a huge number of validators is actually possible within a single slot. For example, with one million validators each voting twice in each slot, and slot times adjusted to be 16 seconds, nodes would be required to verify signatures at a minimum rate of 125,000 aggregations per second in order to process all 1 million attestations within the slot. In reality, it takes a normal computer around 500 nanoseconds to do one signature verification, meaning 125,000 can be done in ~62.5 ms - far below the one second threshold.

@@ -27,7 +27,7 @@ For example, inclusion lists can be introduced so that when validators know abou
 In 2022, the US Government Office for Foreign Asset Control sanctioned the Tornado Cash smart contract, making it illegal for Americans to use it. This led to many validators censoring transactions that touched the Tornado Cash contract. They do this by detecting blacklisted addresses in their transaction pool and omitting them from the blocks the propose. After PBS this will no longer be possible because block proposers will not know which transactions they are broadcasting in their blocks. This doesn't imply users should break any laws - it means that compliance can happen at the application layer rather than in-protocol.
 </ExpandableCard>
 
-**Read more**
+**Further reading**
 
 - [Read more about PBS and censorship resistance](https://notes.ethereum.org/@fradamt/H1TsYRfJc#Secondary-auctions)
 - [Read more about inclusion lists](https://notes.ethereum.org/@fradamt/H1ZqdtrBF)
@@ -43,7 +43,7 @@ PBS solves this problem by reconfiguring the economics of MEV. Instead of the bl
 Individuals could be incentivized to stake with pools rather than on their own due to the enhanced rewards offered by sophisticated MEV strategies. Separating the block building from the block proposal means that the MEV extracted will be distributed over more validators rather than centralizing with the most effective MEV searcher. At the same time, allowing specialized block builders to exist takes the burden of block building away from individuals, and also prevents individuals from stealing MEV for themselves, while maximizing the number of individual, independent validators that can check the blocks are honest. The important concept is "prover-verifier asymmetry" which refers to the idea that centralized block production is fine as long as there is a robust and maximally decentralized network of validators able to prove the blocks are honest. Decentralization is a means, not an end goal - what we want are honest blocks.
 </ExpandableCard>
 
-**Read more**
+**Further reading**
 
 - [Read more on PBS and MEV](https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725)
 

@@ -17,7 +17,7 @@ The challenge facing Ethereum developers is that the current proof-of-stake prot
 
 The “KZG” commitment schemes used in many places across Ethereum to generate cryptographic secrets is known to be quantum-vulnerable. Currently, this is circumvented using “trusted setups” where many users generate randomness that cannot be reverse-engineered by a quantum computer. However, the ideal solution would simply be to incorporate quantum safe cryptography instead. There are two leading approaches that could become efficient replacements for the BLS scheme: STARK-based and Lattice-based signing. These are still being researched and prototyped.
 
-Read more on [KZG and trusted setups](./danksharding#what-is-kzg)
+<ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> Read about KZG and trusted setups</ButtonLink>
 
 ## Simpler and more efficient Ethereum {#simpler-more-efficient-ethereum}
 
@@ -27,7 +27,7 @@ There are several updates that will be made to the Ethereum Virtual Machine (EVM
 
 Similarly, there are updates that can be made to other parts of present-day Ethereum clients. One example is that current execution and consensus clients use a different type of data compression. It will be much easier and more intuitive to share data between clients when the compression scheme is unified across the whole network.
 
-**Read more on:**
+**Further reading**
 
 - [Gas](/developers/docs/gas)
 - [EVM](/developers/docs/evm)

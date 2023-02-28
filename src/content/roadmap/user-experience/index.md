@@ -15,16 +15,12 @@ Ethereum accounts are protected by a pair of keys that are used to identify acco
 
 The solution to this is using smart contract wallets to interact with Ethereum. This creates powerful new opportunities for fraud detection and defense, upgradeability and social recovery that allows lost keys to be recovered. Although smart contract wallets exist today, they are awkward to build because they are not very well supported by the Ethereum protocol. Adding the necessary support will lead to great security and useability benefits for ordinary users.
 
-**More on**
-
-- [Account abstraction](/roadmap/account-abstraction)
+<ButtonLink variant="outline-color" to="/roadmap/account-abstraction/">Read about account abstraction</ButtonLink>
 
 ## Nodes for everyone
 
 Users that run their own nodes do not have to trust third parties to provide them truthful data, and they can interact quickly, privately and permissionlessly with the Ethereum blockchain. However, right now running a node requires some technical knowledge and substantial disk space,meaning many people choose to trust intermediaries instead. There are several upgrades that will make running nodes far easier and far less resource intensive. The way data is stored will be changed to use a more space-efficient structure known as a Verkle Tree. Also, with history expiry, Ethereum nodes will not need to store their own copy of the Ethereum state data, drastically reducing hard disk space requirements. Light nodes will offer many of the benefits of running a full node but able to run easily on mobile phones or inside simple browser apps.
 
-**More on**
-
-- [Verkle trees](/roadmap/verkle-trees)
+<ButtonLink variant="outline-color" to="/roadmap/verkle-trees/">Read about Verkle trees</ButtonLink>
 
 With these upgrades, the barriers to running a node are reduced to effectively zero. Users will benefit from secure, permissionless access to Ethereum without having to sacrifice noticeable disk space or CPU on their computer or mobile phone, and will not have to rely on third parties for data or network access when they use apps.

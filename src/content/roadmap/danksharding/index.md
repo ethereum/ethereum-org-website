@@ -19,20 +19,16 @@ summaryPoints:
 
 Proto-Danksharding, also known as EIP-4844, is a way for rollups to add cheaper data to blocks. Right now, rollups are limited in how cheap they can make user transactions by the fact that they post their transactions in `CALLDATA`. This is expensive because it is processed by all Ethereum nodes and lives on chain forever, even though rollups only need the data for a short time. Proto-Danksharding introduces data blobs that can be sent attached to blocks. The data in these blobs is not accessible to the EVM and is automatically deleted after a fixed time period (1-3 months). This means rollups can send their data much more cheaply and pass the savings on to end users in the form of cheaper transactions.
 
-**Read more**
+**Further reading**
 
 - [Proto-Danksharding](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq) - _Vitalik Buterin_
 
 <ExpandableCard title="Why do blobs make rollups cheaper?" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
-
 Rollups are a way to scale Ethereum by batching transactions off-chain and then posting the results to Ethereum. A rollup is essentially composed of two parts: data and execution check. The data is the full sequence of transactions that is being processed by a rollup to produce the state change being posted to Ethereum. The execution check is the re-execution of those transactions by some honest actor (a "prover") to ensure that the proposed state change is correct. In order for the execution check, the transaction data has to be available for long enough for anyone to download and check. This means any dishonest behavior by the rollup sequencer can be identified and challenged by the prover. However, it does not need to be available forever.
-
 </ExpandableCard>
 
 <ExpandableCard title="Why is it OK to delete the blob data?" eventCategory="/roadmap/danksharding" eventName="clicked why is it OK to delete the blob data?">
-
 Rollups post commitments to their transaction data on-chain and also make the actual data available in data blobs. This means provers can check the commitments are valid or challenge data they think is wrong. At the node-level, the blobs of data are held in the consensus client. The consensus clients attest that they have seen the data and that it has been propagated around the network. If the data was kept forever, these clients would bloat and lead to large hardware requirements for running nodes. Instead, the data is automatically pruned from the node every 1-3 months. The consensus client attestations demonstrate that there was a sufficient opportunity for provers to verify the data. The actual data can be stored off-chain by rollup operators, users or others.
-
 </ExpandableCard>
 
 ### How is blob data verified? {#how-are-blobs-verified}
@@ -47,22 +43,29 @@ KZG stands for Kate-Zaverucha-Goldberg - the names of the three [original author
 
 A KZG ceremony is a way for many people from across the Ethereum community to generate a secret random string of numbers together that can be used to verify some data. It is very important that this string of numbers is not known and cannot be recreated by anyone. To ensure this, each person that participates in the ceremony receives a string from the previous participant. They then create some new random values (e.g. by allowing their browser to measure the movement of their mouse) and mix it in with the previous value. They then send the value on to the next participant and destroy it from their local machine. As long as one person in the ceremony does this honestly, the final value will be unknowable to an attacker. The EIP-4844 KZG ceremony was open to the public and tens of thousands of people participated to add their own entropy. For the ceremony to be undermined, 100% of those participants would have to be actively dishonest. From the perspective of the participants, if they know they were honest, there is no need to trust anyone else because they know that they secured the ceremony (they individually satisfied the 1-out-of-N honest participant requirement).
 
-**Read more**
+**Further reading**
 
-- [Read more about the KZG ceremony](https://ceremony.ethereum.org/)
+- [Read about the KZG ceremony](https://ceremony.ethereum.org/)
+
+**Watch video**
+
 - [Watch Carl Beekhuizen's Devcon talk on trusted setups](https://archive.devcon.org/archive/watch/6/the-kzg-ceremony-or-how-i-learnt-to-stop-worrying-and-love-trusted-setups/?tab=YouTube)
 
 <ExpandableCard title="What is the random number from the KZG ceremony used for?" eventCategory="/roadmap/danksharding" eventName="clicked why is the random number from the KZG ceremony used for?">
 When a rollup posts data in a blob, they provide a "commitment" that they post on chain. This commitment is the result of evaluating a polynomial fit to the data at certain points. These points are defined by the random numbers generated in the KZG ceremony. Provers can then evaluate the polynomial at the same points in order to verify the data - if they arrive at the same values then the data is correct.
 
-[Read about KZG polynomial commitments](https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html)
-</ExpandableCard>
+**Future reading**
+
+- [Read about KZG polynomial commitments](https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html)
+  </ExpandableCard>
 
 <ExpandableCard title="Why does the KZG random data have to stay secret?" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
 If someone knows the random locations used for the commitment, it is easy for them to generate a new polynomial that fits at those specific points (i.e. a "collision"). This means they could add or remove data from the blob and still provide a valid proof. To prevent this, instead of giving provers the actual secret locations, they actually receive the locations wrapped in a cryptographic "black box" using elliptic curves. These effectively scramble the values in such a way that the original values cannot be reverse-engineered, but with some clever algebra provers and verifiers can still evaluate polynomials at the points they represent.
 
-[Watch Dankrad explain the KZG commitments and proofs in detail](https://youtu.be/8L2C6RDMV9Q)
-</ExpandableCard>
+**Watch video**
+
+- [Watch Dankrad explain the KZG commitments and proofs in detail](https://youtu.be/8L2C6RDMV9Q)
+  </ExpandableCard>
 
 <InfoBanner isWarning>
   Neither Danksharding nor Proto-Danksharding follow the traditional "sharding" model that aimed to split the blockchain into multiple parts. Shard chains are no longer part of the roadmap. Instead, Danksharding uses distributed data sampling across blobs to scale Ethereum. This is much simpler to implement.  
@@ -81,8 +84,10 @@ Proposer-builder separation is required to prevent individual validators from ha
 <ExpandableCard title="Why does Danksharding require data availability sampling?" eventCateogry="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
 Data availability sampling is required for validators to quickly and efficiently verify blob data. Using data availability sampling, the validators can be very certain that the blob data was available and correctly committed. Every validator can randomly sample just a few data points and create a proof, meaning no validator has to check the entire blob. If any data is missing, it will be identified quickly and the blob rejected.
 
-[Read more on data availability sampling for blobs](https://hackmd.io/@vbuterin/sharding_proposal#ELI5-data-availability-sampling)
-</ExpandableCard>
+**Future reading**
+
+- [Read more on data availability sampling for blobs](https://hackmd.io/@vbuterin/sharding_proposal#ELI5-data-availability-sampling)
+  </ExpandableCard>
 
 ### Current progress {#current-progress}
 
