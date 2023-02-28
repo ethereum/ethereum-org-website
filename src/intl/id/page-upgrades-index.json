@@ -4,7 +4,6 @@
   "consensus-client-nimbus-logo-alt": "Logo Nimbus",
   "consensus-client-prysm-logo-alt": "Logo Prysm",
   "consensus-client-teku-logo-alt": "Logo Teku",
-  "consensus-client-under-review": "Tinjauan dan audit sedang berlangsung",
   "page-upgrades-answer-1": "Pikirkan perubahan yang diluncurkan sebagai serangkaian peningkatan yang ditambahkan untuk meningkatkan Ethereum yang kita gunakan saat ini. Peningkatan ini mencakup pembuatan rantai baru yang disebut Rantai Suar, dan akan memperkenalkan rantai baru yang dikenal sebagai 'shard' di masa mendatang.",
   "page-upgrades-answer-2": "Beberapa peningkatan terpisah dari Jaringan Utama Ethereum yang kita gunakan hari ini tetapi tidak akan menggantikannya. Sebaliknya, Jaringan Utama akan 'bergabung' dengan sistem paralel ini yang ditambahkan dari waktu ke waktu.",
   "page-upgrades-answer-4": "Dengan kata lain, Ethereum yang kita gunakan hari ini pada akhirnya akan mewujudkan semua fitur yang menjadi sasaran kami dalam visi Ethereum.",

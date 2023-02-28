@@ -91,6 +91,18 @@ require(msg.sender == owner, "Only the owner of this contract can call this func
 require(msg.sender == owner, "OW1");
 ```
 
+### Use custom errors instead of error messages
+
+Custom errors have been introduced in [Solidity 0.8.4](https://blog.soliditylang.org/2021/04/21/custom-errors/). They are a great way to reduce the size of your contracts, because they are ABI-encoded as selectors (just like functions are).
+
+```solidity
+error Unauthorized();
+
+if (msg.sender != owner) {
+    revert Unauthorized();
+}
+```
+
 ### Consider a low run value in the optimizer {#consider-a-low-run-value-in-the-optimizer}
 
 You can also change the optimizer settings. The default value of 200 means that it's trying to optimize the bytecode as if a function is called 200 times. If you change it to 1, you basically tell the optimizer to optimize for the case of running each function only once. An optimized function for running only one time means it is optimized for the deployment itself. Be aware that **this increases the [gas costs](/developers/docs/gas/) for running the functions**, so you may not want to do it.
