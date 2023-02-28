@@ -1,6 +1,6 @@
 ---
 title: Future-proofing Ethereum
-description: High level overview of how Ethereum is set up for the future
+description: Some parts of the roadmap are not necessarily required for scaling or securing Ethereum in the near-term, but set Ethereum up for stability and reliability for centuries to come. These upgrades cement Ethereum as the resilient, decentralized base layer for the future, whatever it may hold.
 lang: en
 image: ../../../assets/upgrades/core.png
 alt: "Ethereum roadmap"

@@ -4,7 +4,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { MDXProvider } from "@mdx-js/react"
 import styled from "@emotion/styled"
-import { Flex, Stack, Wrap, WrapItem } from "@chakra-ui/react"
+import { Flex, Stack, Text, Wrap, WrapItem } from "@chakra-ui/react"
 
 import Button from "../components/Button"
 
@@ -341,7 +341,6 @@ const RoadmapPage = ({
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
   const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
-  const { summaryPoints } = mdx.frontmatter
 
   const dropdownLinks: ButtonDropdownList = {
     text: "Roadmap Options" as TranslationKey,
@@ -403,11 +402,7 @@ const RoadmapPage = ({
             <TitleCard>
               <Breadcrumbs slug={location.pathname} />
               <Title>{mdx.frontmatter.title}</Title>
-              <ul>
-                {(summaryPoints || []).map((point, idx) => (
-                  <SummaryPoint key={idx}>{point}</SummaryPoint>
-                ))}
-              </ul>
+              <Text>{mdx.frontmatter.description}</Text>
               {mdx?.frontmatter?.buttons && (
                 <Wrap spacing={2}>
                   {mdx.frontmatter.buttons.map((button, idx) => {
@@ -500,7 +495,7 @@ export const roadmapPageQuery = graphql`
         image {
           childImageSharp {
             gatsbyImageData(
-              width: 800
+              width: 600
               layout: CONSTRAINED
               placeholder: BLURRED
               quality: 100

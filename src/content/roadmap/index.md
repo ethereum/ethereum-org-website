@@ -1,6 +1,6 @@
 ---
 title: Ethereum roadmap
-description: An overview of Ethereum's upgrade plans
+description: The Ethereum we know and love, just more scalable, more secure, and more sustainable.
 lang: en
 template: roadmap
 image: ../../assets/upgrades/merge.png

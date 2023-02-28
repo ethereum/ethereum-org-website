@@ -1,6 +1,6 @@
 ---
 title: Scaling Ethereum
-description: High level overview of how Ethereum will scale in the future via faster, cheaper transactions.
+description: Ethereum is scaled using rollups. Rollups batch transactions together offchain and send the result to Ethereum.
 lang: en
 image: ../../../assets/eth.png
 alt: "Ethereum roadmap"

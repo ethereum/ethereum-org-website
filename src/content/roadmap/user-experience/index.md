@@ -1,6 +1,6 @@
 ---
 title: Improving user experience
-description: High level overview of how Ethereum will scale in the future
+description: It is still too complex to use Ethereum for most people. To encourage mass adoption, Ethereum must drastically lower its barriers to entry - users must get the benefits of decentralized, permissionless and censorship resistant access to Ethereum but it must be as frictionless as using a traditional web2 app.
 lang: en
 image: ../../../assets/enterprise-eth.png
 alt: "Ethereum roadmap"
