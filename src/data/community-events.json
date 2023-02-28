@@ -682,5 +682,14 @@
     "description": "ETHMalaysia is the first Ethereum Innovation Festival in Southeast Asia that consists of a conference, a hackathon and fun Web3 themed activities.",
     "startDate": "2023-5-5",
     "endDate": "2023-5-7"
+  },
+  {
+    "title": "ETHMiami",
+    "to": "https://ethmiami.net/",
+    "sponsor": null,
+    "location": "Miami, USA",
+    "description": "ETHMiami’s 2nd annual fest and Web3 Hackathon. Bringing together the best Web3 builders and creators.",
+    "startDate": "2023-10-27",
+    "endDate": "2023-10-29"
   }
 ]
