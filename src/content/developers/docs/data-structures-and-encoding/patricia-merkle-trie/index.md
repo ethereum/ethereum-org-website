@@ -55,7 +55,7 @@ The update and delete operations for radix tries can be defined as follows:
                 newindex = delete(curnode[path[0]],path[1:])
                 newnode[path[0]] = newindex
 
-            if len(filter(x -> x is not NULL, newnode)) == 0:
+            if all(x is NULL for x in newnode):
                 return NULL
             else:
                 db.put(hash(newnode),newnode)

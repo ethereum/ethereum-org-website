@@ -4,7 +4,6 @@
   "consensus-client-nimbus-logo-alt": "Nimbus-Logo",
   "consensus-client-prysm-logo-alt": "Prysm-Logo",
   "consensus-client-teku-logo-alt": "Teku-Logo",
-  "consensus-client-under-review": "Überprüfung in Arbeit",
   "page-upgrades-answer-1": "Sie können Sie die Änderungen als eine Reihe von Upgrades vorstellen. Sie werden durchgeführt, um Ethereum, wie es heute ist, zu verbessern. Mit den Upgrades wird eine neue Chain geschaffen, die Beacon Chain. Zukünftig kommen weitere Chains hinzu, sogenannte Shards.",
   "page-upgrades-answer-2": "Einige Upgrades erfolgen getrennt vom Ethereum-Mainnet, das wir heute benutzen. Diese Upgrades werden das heutige Ethereum-Mainnet nicht direkt ersetzen. Stattdessen wird das heutige Mainnet zukünftig mit diesem parallelen System integriert.",
   "page-upgrades-answer-4": "Anders ausgedrückt: Ethereum, das wir heute verwenden, umfasst zukünftig alle Funktionen, die wir in der Ethereum-Vision anstreben.",

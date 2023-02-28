@@ -81,6 +81,15 @@
     "endDate": "2023-07-23"
   },
   {
+    "title": "AB-Summit",
+    "to": "https://blockchainsummit.africa",
+    "sponsor": null,
+    "location": "Accra, Ghana",
+    "description": "Solutions For Disempowered Economies. We support the Blockchain revolution and we are establishing a movement to promote its use out of love for our African Continent and the nations that make it up.",
+    "startDate": "2023-08-26",
+    "endDate": "2023-08-27"
+  },
+  {
     "title": "ETHGlobal New York",
     "to": "https://ethglobal.com/events/newyork2023",
     "sponsor": null,
