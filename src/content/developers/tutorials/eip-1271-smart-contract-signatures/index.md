@@ -32,7 +32,7 @@ In the same way, a digital signature doesn’t mean anything without an associat
 
 In order to create a digital signature for use on Ethereum-based blockchains, you generally need a secret private key which no one else knows. This is what makes your signature, yours (no one else can create the same signature without knowledge of the secret key).
 
-Your Ethereum wallet (i.e. your externally-owned account/EOA) has a private key associated with it, and this is the private key that’s typically used when a website or dapp asks you for a signature (e.g. for “Log in with Ethereum”).
+Your Ethereum account (i.e. your externally-owned account/EOA) has a private key associated with it, and this is the private key that’s typically used when a website or dapp asks you for a signature (e.g. for “Log in with Ethereum”).
 
 An app can [verify a signature](https://docs.alchemy.com/docs/how-to-verify-a-message-signature-on-ethereum) you create using a third-party library like ethers.js [without knowing your private key](https://en.wikipedia.org/wiki/Public-key_cryptography) (because of math) and be confident (again, [because of math](https://crypto.stackexchange.com/questions/48816/discrete-logarithm-problem-of-ecc)) that _you_ were the one that created the signature.
 
