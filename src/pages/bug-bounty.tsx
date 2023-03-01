@@ -3,7 +3,14 @@ import { useTheme } from "@emotion/react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
-import { Box, Center, Heading, List, ListItem, Text } from "@chakra-ui/react"
+import {
+  Box,
+  Center,
+  Heading,
+  ListItem,
+  Text,
+  UnorderedList,
+} from "@chakra-ui/react"
 
 import { translateMessageId } from "../utils/translations"
 import Translation from "../components/Translation"
@@ -541,7 +548,7 @@ const BugBountiesPage = ({
                 <Text>
                   <Translation id="page-upgrades-bug-bounty-annotations" />
                 </Text>
-                <List>
+                <UnorderedList>
                   <ListItem>
                     <Link to="https://benjaminion.xyz/eth2-annotated-spec/">
                       Ben Edgington's{" "}
@@ -554,17 +561,18 @@ const BugBountiesPage = ({
                       <Translation id="page-upgrades-bug-bounty-annotated-specs" />
                     </Link>
                   </ListItem>
-                </List>
+                </UnorderedList>
               </Box>
               <Box>
                 <Heading
                   as="h4"
+                  fontWeight={500}
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
                 >
                   <Translation id="page-upgrades-bug-bounty-types" />
                 </Heading>
-                <List>
+                <UnorderedList>
                   <ListItem>
                     <Translation id="page-upgrades-bug-bounty-type-1" />
                   </ListItem>
@@ -577,11 +585,12 @@ const BugBountiesPage = ({
                   <ListItem>
                     <Translation id="page-upgrades-bug-bounty-type-4" />
                   </ListItem>
-                </List>
+                </UnorderedList>
               </Box>
               <Box>
                 <Heading
                   as="h4"
+                  fontWeight={500}
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
                 >
@@ -607,12 +616,13 @@ const BugBountiesPage = ({
                 </Text>
                 <Heading
                   as="h4"
+                  fontWeight={500}
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
                 >
                   <Translation id="page-upgrades-bug-bounty-types" />
                 </Heading>
-                <List>
+                <UnorderedList>
                   <ListItem>
                     <Translation id="page-upgrades-bug-bounty-clients-type-1" />
                   </ListItem>
@@ -623,11 +633,12 @@ const BugBountiesPage = ({
                     {" "}
                     <Translation id="page-upgrades-bug-bounty-clients-type-3" />
                   </ListItem>
-                </List>
+                </UnorderedList>
               </Box>
               <Box>
                 <Heading
                   as="h4"
+                  fontWeight={500}
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
                 >
@@ -655,6 +666,7 @@ const BugBountiesPage = ({
               <Box>
                 <Heading
                   as="h4"
+                  fontWeight={500}
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
                 >
@@ -679,6 +691,7 @@ const BugBountiesPage = ({
               <Box>
                 <Heading
                   as="h4"
+                  fontWeight={500}
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
                 >
@@ -747,7 +760,7 @@ const BugBountiesPage = ({
               <Translation id="page-upgrades-bug-bounty-hunting-desc" />
             </Text>
           </Text>
-          <List>
+          <UnorderedList>
             <ListItem>
               <Translation id="page-upgrades-bug-bounty-hunting-li-1" />
             </ListItem>
@@ -760,7 +773,7 @@ const BugBountiesPage = ({
             <ListItem id="leaderboard">
               <Translation id="page-upgrades-bug-bounty-hunting-li-4" />
             </ListItem>
-          </List>
+          </UnorderedList>
         </Rules>
       </Content>
       <GradientContainer>
