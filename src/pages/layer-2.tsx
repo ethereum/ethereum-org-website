@@ -158,7 +158,7 @@ const StatDescription = (props: ChildOnlyType) => (
 )
 
 const Layer2CardGrid = (props: ChildOnlyType) => (
-  <SimpleGrid columns={4} gap={8} {...props} />
+  <SimpleGrid columns={4} gap={8} minChildWidth="280px" {...props} />
 )
 
 interface L2DataResponseItem {
