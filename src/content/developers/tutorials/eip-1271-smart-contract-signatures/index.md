@@ -36,7 +36,7 @@ Your Ethereum account (i.e. your externally-owned account/EOA) has a private key
 
 An app can [verify a signature](https://docs.alchemy.com/docs/how-to-verify-a-message-signature-on-ethereum) you create using a third-party library like ethers.js [without knowing your private key](https://en.wikipedia.org/wiki/Public-key_cryptography) and be confident that _you_ were the one that created the signature.
 
-> In fact, because EOA digital signatures are just based on cryptography, they can be generated and verified **off-chain**! This is how gasless DAO voting works — instead of submitting votes on-chain, digital signatures can be created and verified off-chain using cryptographic libraries.
+> In fact, because EOA digital signatures use public-key cryptography, they can be generated and verified **off-chain**! This is how gasless DAO voting works — instead of submitting votes on-chain, digital signatures can be created and verified off-chain using cryptographic libraries.
 
 While your personal/EOA wallet has a private key, smart contracts do not have any sort of private or secret key (so "Log in with Ethereum", etc. cannot natively work with smart contracts).
 
