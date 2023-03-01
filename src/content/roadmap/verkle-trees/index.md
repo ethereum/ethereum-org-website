@@ -41,7 +41,7 @@ The witness size varies depending on the number of leaves it includes. Assuming 
 
 Verkle trees are `(key,value)` pairs where the keys are 32-byte elements composed of a 31-byte _stem_ and a single byte _suffix_. These keys are organized into _extension_ nodes and _inner_ nodes. Extension nodes represent a single stem for 256 children with different suffixes. Inner nodes also have 256 children, but they can be other extension nodes. The main difference between the Verkle tree and the Merkle tree structure is that the Verkle tree is much flatter, meaning there are fewer intermediate nodes linking a leaf to the root, and therefore less data required to generate a proof.
 
-![Illustration of the Verkle tree structure from the [EIP](https://notes.ethereum.org/@vbuterin/verkle_tree_eip)](./verkle.png)
+![](./verkle.png)
 
 [Read more about the structure of Verkle trees](https://blog.ethereum.org/2021/12/02/verkle-tree-structure)
 

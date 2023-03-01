@@ -6,9 +6,6 @@ template: roadmap
 image: ../../assets/upgrades/merge.png
 alt: "Ethereum roadmap"
 summaryPoints:
-  - Learn about how Ethereum will evolve into the future
-  - Read why Ethereum is still being worked on
-  - Understand how Ethereum is setting up for long term success
 buttons:
   - label: Further updates
     toId: what-changes-are-coming
@@ -17,7 +14,7 @@ buttons:
     variant: outline
 ---
 
-Ethereum is a powerful platform for global coordination, but it is not finished! An ambitious set of improvements will upgrade Ethereum from its current form into a fully scaled, maximally resilient platform. These upgrades are laid out in the Ethereum roadmap.
+Ethereum is already a powerful platform for global coordination, but it is still being improved. An ambitious set of improvements will upgrade Ethereum from its current form into a fully scaled, maximally resilient platform. These upgrades are laid out in the Ethereum roadmap.
 
 **To learn about previous upgrades to Ethereum, such as EIP-1559 or The Merge, please visit our [History](/history/) page**
 
@@ -30,13 +27,13 @@ The Ethereum roadmap outlines the specific improvements that will be made to pro
     to="/roadmap/scaling"
     title="Faster, cheaper transactions"
     image="scaling"
-    description="Today's scaling solutions, known as rollups, are too expensive because of the way they send data to Ethereum. They also rely on some centralized components meaning users have to place too much trust in small groups of operators. The roadmap includes fixes for both of these problems."
+    description="Rollups are too expensive and rely on centralized components, causing users to place too much trust in their operators. The roadmap includes fixes for both of these problems."
   >
     <ButtonLink to="/roadmap/scaling/">Read more</ButtonLink>
   </RoadmapActionCard>
   <RoadmapActionCard
     to="/roadmap/security"
-    title="More security"
+    title="Extra security"
     image="security"
     description="Ethereum is a very secure, decentralized smart-contract platform. However, there are still improvements that can be made so that Ethereum stays resilient to all kinds of attack far into the future."
   >
@@ -44,7 +41,7 @@ The Ethereum roadmap outlines the specific improvements that will be made to pro
   </RoadmapActionCard>
   <RoadmapActionCard
     to="/roadmap/user-experience"
-    title="Improved user experience"
+    title="Better user experience"
     image="userExperience"
     description="Using Ethereum will soon be as intuitive as the rest of the web. Ethereum nodes will be able to run on small devices like mobile phones, giving every user trustless access to their data and assets. Changes to the way users use accounts will also make using Ethereum simpler and safer."
   >
@@ -62,7 +59,7 @@ The Ethereum roadmap outlines the specific improvements that will be made to pro
 
 ## Why Ethereum needs a roadmap {#why-ethereum-needs-a-roadmap}
 
-Ethereum is a network that undergoes periodic upgrades that enhance its scalability, security or sustainability. One of the core strengths of Ethereum is that it is not fixed forever in its current form - as new ideas arise from research and development they can be implemented to make sure Ethereum is ever-improving. This gives Ethereum the flexibility to tackle emerging challenges and keep up with the most advanced technological breakthroughs in cryptography, computing and cryptoeconomics.
+Ethereum gets regular upgrades that enhance its scalability, security, or sustainability. One of Ethereum's core strengths is adapting as new ideas emerge from research and development. Adaptability gives Ethereum the flexibility to tackle emerging challenges and keep up with the most advanced technological breakthroughs.
 
 <RoadmapImageContent title="How the roadmap is defined">
 
@@ -80,9 +77,11 @@ When these ideas mature, they can be proposed as [Ethereum Improvement Proposals
   <p style="margin-bottom: 0">Some staking operators have also represented ETH staked on the Beacon Chain with the ‘ETH2’ ticker. This creates potential confusion, given that users of these services are not actually receiving an ‘ETH2’ token. No ‘ETH2’ token exists; it simply represents their share in that specific providers’ stake.</p>
 </InfoBanner>
 
-## Is the roadmap set in stone?
+## Will Ethereum's roadmap change over time?
 
-No! The roadmap is the current plan for upgrading Ethereum in the near term and also far into the future. The roadmap can change as new information and new technology becomes available. For example, the original Ethereum roadmap intended for sharding to be implemented before The Merge. However, scaling by rollups developed much faster than expected and the roadmap was updated to focus on layer 2 scaling first, allowing The Merge to happen sooner than originally anticipated. The roadmap is a set of intentions for improving Ethereum - it is the research and developer community's best guess about where we should go from here.
+Yes—almost definitely. The roadmap is the current plan for upgrading Ethereum, covering both near-term and future plans. We expect the roadmap to change as new information and technology become available. 
+
+Think of Ethereum's roadmap as a set of intentions for improving Ethereum; it is the core researchers' and developers' best hypothesize of Ethereum's most optimal path forward.
 
 ## When will the roadmap be finished?
 
@@ -94,9 +93,9 @@ One way to think about Ethereum development is by analogy to biological evolutio
 
 Upgrades tend not to impact end-users except by providing better user-experiences and a more secure protocol and perhaps more <i>options</i> for how to interact with Ethereum. End uses are not required to actively participate in an upgrade, nor are they required to do anything to secure their assets. Node operators will need to update their clients to prepare for an upgrade. Some upgrades may lead to changes for application developers. For example, history expiry upgrades may lead application developers to grab historical data from new sources.
 
-## What about the verge, the splurge etc?
+## What about The Verge, The Splurge, etc?
 
-Vitalik proposed a vision for the Ethereum roadmap that was organized into several categories linked by their effects on Ethereum's artchitecture. It included:
+Vitalik Buterin proposed a vision for the Ethereum roadmap that was organized into several categories linked by their effects on Ethereum's architecture. It included:
 
 - The Merge: upgrades relating to the switch from proof-of-work to proof-of-stake
 - The Surge: upgrades related to scalability by rollups and data sharding
@@ -105,4 +104,4 @@ Vitalik proposed a vision for the Ethereum roadmap that was organized into sever
 - The Purge: upgrades related to reducing the computational costs of running nodes and simplifying the protocol
 - The Splurge: other upgrades that don't fit well into the previous categories.
 
-We decided not to persist this terminology on this page because we wanted to use a simpler and more user-centric model.
+We decided not to use this terminology because we wanted to use a simpler and more user-centric model. Although we use user-centric language, the vision remains the same as the one proposed by Vitalik.
