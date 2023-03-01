@@ -37,7 +37,7 @@ Now that we included the library in the project we need to initialize it. Your p
 const web3 = new Web3("http://localhost:8545")
 ```
 
-If you’d like to directly access a hosted node you can use Infura or the free ones provided by [Cloudflare](https://cloudflare-eth.com/):
+If you’d like to directly access a hosted node you can use Infura. You can also use the free ones provided by [Cloudflare](https://cloudflare-eth.com/), [Moralis](https://moralis.io), or [Alchemy](https://alchemy.com/ethereum):
 
 ```js
 const web3 = new Web3("https://cloudflare-eth.com")
@@ -89,4 +89,4 @@ if (window.ethereum != null) {
 }
 ```
 
-Alternatives to web3.js like [Ethers.js](https://docs.ethers.io/) do exist but we’ll focus all our JavaScript tutorials on web3.js as it is the official library to interact with Ethereum in the browser. In the next tutorial we’ll see [how to easily listen to new incoming blocks on the blockchain and see what they contains](https://ethereumdev.io/listening-to-new-transactions-happening-on-the-blockchain/).
+Alternatives to web3.js like [Ethers.js](https://docs.ethers.io/) do exist and are also commonly used. In the next tutorial we’ll see [how to easily listen to new incoming blocks on the blockchain and see what they contains](https://ethereumdev.io/listening-to-new-transactions-happening-on-the-blockchain/).

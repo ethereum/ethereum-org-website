@@ -15,7 +15,7 @@ La llista ha estat confeccionada per la nostra comnunitat. Si falta alguna cosa 
 Aquests programes donen suport a l'ample ecosistema Ethereum oferint subvencions a un gran ventall de projectes. Entre ells, solucions d'escalabilitat, desenvolupament de la comunitat, seguretat, privacitat i molts altres. Aquestes subvencions no son específiques de cap plataforma Ethereum i són un bon punt de partida si teniu cap dubte.
 
 - [Programa d'ajuda a l'ecosistema de l'EF](https://esp.ethereum.foundation) - _Subvenció de projectes de programari lliure que beneficiin Ethereum, amb un enfocament particular en eines universals, infrastructura, investigació i béns públics_
-  - [Ronda de subvencions acadèmiques](/community/grants/academic-grants-round/) - _La Fundació Ethereum promou una sèrie de subvencions per a l'ajuda de treballs acadèmics relacionats amb Ethereum_
+  - [Ronda de subvencions acadèmiques](https://esp.ethereum.foundation/academic-grants) - _La Fundació Ethereum promou una sèrie de subvencions per a l'ajuda de treballs acadèmics relacionats amb Ethereum_
 - [RFP d'Ethereum](https://github.com/ethereum/requests-for-proposals) - _Peticions de propostes (RFP) de la Fundació Ethereum a nivell laboral i de projectes en l'ecosistema Ethereum_
 - [MetaCartel](https://www.metacartel.org/grants/) - _Desenvolupament de Dapps i creació de DAO_  
   Subvencions d'entre $1K i $8K USD.

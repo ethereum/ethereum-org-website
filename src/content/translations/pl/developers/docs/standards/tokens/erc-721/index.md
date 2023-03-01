@@ -63,7 +63,7 @@ Zobaczmy, dlaczego standard jest tak ważny, aby ułatwić nam sprawdza kontrakt
 Najpierw upewnij się, że zainstalowałeś [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) bibliotekę Pythona:
 
 ```
-$ pip install web3
+pip install web3
 ```
 
 ```python

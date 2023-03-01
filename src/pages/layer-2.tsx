@@ -685,7 +685,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <Translation id="layer-2-dyor-2" />
           </Text>
           <Text>
-            <ButtonLink to="https://l2beat.com/?view=risk">
+            <ButtonLink to="https://l2beat.com/scaling/risk">
               <Translation id="layer-2-dyor-3" />
             </ButtonLink>
           </Text>
