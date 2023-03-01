@@ -14,7 +14,7 @@ In this tutorial, we give an overview of digital signatures, EIP-1271's backgrou
 
 ## What is a signature?
 
-In this context, a signature (more precisely, a “digital signature”) is a message + some sort of proof that the message came from a specific person/sender/address.
+In this context, a signature (more precisely, a “digital signature”) is a message plus some sort of proof that the message came from a specific person/sender/address.
 
 For instance, a digital signature might look like this:
 
