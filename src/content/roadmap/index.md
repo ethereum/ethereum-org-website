@@ -70,11 +70,10 @@ Read more on [Ethereum governance](https://ethereum.org/en/governance/)
 </RoadmapImageContent>
 
 <InfoBanner>
-  <h4 style="margin-top: 0">What is ETH2?</h4>
+  <h4 style="margin-top: 0">What was ETH2?</h4>
 
   <p>The term 'Eth2' was commonly used to describe the future of Ethereum before the switch to proof-of-stake but it was <strong>phased out in favor of more precise terminology.</strong> It was originally used to differentiate the Ethereum network before the switch to proof-of-stake and the network after, or sometimes to refer to the different Ethereum clients (execution clients were sometimes referred to as ETH1 clients and consensus clients were sometimes referred to as ETH2 clients).</p>
 
-  <p style="margin-bottom: 0">Some staking operators have also represented ETH staked on the Beacon Chain with the ‘ETH2’ ticker. This creates potential confusion, given that users of these services are not actually receiving an ‘ETH2’ token. No ‘ETH2’ token exists; it simply represents their share in that specific providers’ stake.</p>
 </InfoBanner>
 
 ## Will Ethereum's roadmap change over time?
