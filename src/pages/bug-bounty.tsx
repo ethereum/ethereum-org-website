@@ -18,10 +18,11 @@ import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import ExpandableCard from "../components/ExpandableCard"
 import FeedbackCard from "../components/FeedbackCard"
-import { Context } from "../types"
 import { getImage } from "../utils/image"
 
-const Page = ({ children }) => (
+import type { ChildOnlyProp, Context } from "../types"
+
+const Page = (props: ChildOnlyProp) => (
   <Box
     display="flex"
     flexDirection="column"
@@ -29,30 +30,26 @@ const Page = ({ children }) => (
     w="full"
     my={0}
     mx="auto"
-  >
-    {children}
-  </Box>
+    {...props}
+  />
 )
 
-const Content = ({ children }) => (
-  <Box py={4} px={8} w="full">
-    {children}
-  </Box>
+const Content = (props: ChildOnlyProp) => (
+  <Box py={4} px={8} w="full" {...props} />
 )
 
-const Title = ({ children }) => (
+const Title = (props: ChildOnlyProp) => (
   <Text
     textTransform="uppercase"
     fontSize="0.875rem"
     color="text"
     mb={0}
     ml={2}
-  >
-    {children}
-  </Text>
+    {...props}
+  />
 )
 
-const H2 = ({ children }) => (
+const H2 = (props: ChildOnlyProp) => (
   <Heading
     as="h2"
     fontSize="1.5rem"
@@ -61,18 +58,22 @@ const H2 = ({ children }) => (
     lineHeight="22px"
     letterSpacing="0rem"
     textAlign="left"
-  >
-    {children}
-  </Heading>
+    {...props}
+  />
 )
 
-const Subtitle = ({ children }) => (
-  <Box fontSize="1.5rem" lineHeight="140%" color="text200" maxW="480px" mt={4}>
-    {children}
-  </Box>
+const Subtitle = (props: ChildOnlyProp) => (
+  <Box
+    fontSize="1.5rem"
+    lineHeight="140%"
+    color="text200"
+    maxW="480px"
+    mt={4}
+    {...props}
+  />
 )
 
-const SloganGradient = ({ children }) => (
+const SloganGradient = (props: ChildOnlyProp) => (
   <Box
     fontWeight="800"
     fontSize={{ base: "2.5rem", lg: "3rem" }}
@@ -84,11 +85,11 @@ const SloganGradient = ({ children }) => (
     sx={{ WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}
     bg="upgradesGradient"
   >
-    <Text>{children}</Text>
+    <Text>{props.children}</Text>
   </Box>
 )
 
-const Rules = ({ children }) => (
+const Rules = (props: ChildOnlyProp) => (
   <Box
     my={0}
     mx="auto"
@@ -96,18 +97,15 @@ const Rules = ({ children }) => (
     display="flex"
     flexDirection="column"
     alignItems="center"
-  >
-    {children}
-  </Box>
+    {...props}
+  />
 )
 
-const SubmitInstructions = ({ children }) => (
-  <Box flex="1 1 600px" mr={8} maxW="100ch">
-    {children}
-  </Box>
+const SubmitInstructions = (props: ChildOnlyProp) => (
+  <Box flex="1 1 600px" mr={8} maxW="100ch" {...props} />
 )
 
-const GradientContainer = ({ children }) => (
+const GradientContainer = (props: ChildOnlyProp) => (
   <Box
     w="full"
     py={16}
@@ -115,24 +113,22 @@ const GradientContainer = ({ children }) => (
     mt={8}
     bg="cardGradient"
     boxShadow="inset 0px 1px 0px tableItemBoxShadow"
-  >
-    {children}
-  </Box>
+    {...props}
+  />
 )
 
-const LeaderboardContainer = ({ children }) => (
+const LeaderboardContainer = (props: ChildOnlyProp) => (
   <Box
     flex="1 1 50%"
     display="flex"
     flexDirection="column"
     alignItems="center"
     p={{ lg: "6rem 2rem 8rem 0rem", base: "0" }}
-  >
-    {children}
-  </Box>
+    {...props}
+  />
 )
 
-const FullLeaderboardContainer = ({ children }) => (
+const FullLeaderboardContainer = (props: ChildOnlyProp) => (
   <Box
     my={8}
     mx="auto"
@@ -142,18 +138,17 @@ const FullLeaderboardContainer = ({ children }) => (
     display="flex"
     flexDirection="column"
     alignItems="center"
-  >
-    {children}
-  </Box>
+    {...props}
+  />
 )
 
-const On = () => <Box w="8px" h="8px" bg="success400" borderRadius="64px"></Box>
+const On = () => <Box w="8px" h="8px" bg="success400" borderRadius="64px" />
 
 const Divider = () => (
-  <Box my={16} mx={0} w="10%" h={1} backgroundColor="homeDivider"></Box>
+  <Box my={16} mx={0} w="10%" h={1} backgroundColor="homeDivider" />
 )
 
-const Contact = ({ children }) => (
+const Contact = (props: ChildOnlyProp) => (
   <Box
     borderRadius="2px"
     border="1px"
@@ -166,15 +161,12 @@ const Contact = ({ children }) => (
     my={12}
     mx={32}
     w="80%"
-  >
-    {children}
-  </Box>
+    {...props}
+  />
 )
 
-const ButtonRow = ({ children }) => (
-  <Box display="flex" alignItems="center" mt={4} flexWrap="wrap">
-    {children}
-  </Box>
+const ButtonRow = (props: ChildOnlyProp) => (
+  <Box display="flex" alignItems="center" mt={4} flexWrap="wrap" {...props} />
 )
 
 const StyledButton = ({ children, ...props }) => {
@@ -185,66 +177,60 @@ const StyledButton = ({ children, ...props }) => {
   )
 }
 
-const ClientIntro = ({ children }) => (
+const ClientIntro = (props: ChildOnlyProp) => (
   <Text
     textTransform="uppercase"
     fontSize="0.875rem"
     color="text300"
     fontWeight="600"
     mt={{ base: "3rem", lg: "0" }}
-  >
-    {children}
-  </Text>
+    {...props}
+  />
 )
 
-const ClientRow = ({ children }) => (
+const ClientRow = (props: ChildOnlyProp) => (
   <Box
     display="flex"
     alignItems="center"
     flexDirection={{ base: "column", lg: "row" }}
-  >
-    {children}
-  </Box>
+    {...props}
+  />
 )
 
-const Client = ({ children }) => (
-  <Box m={16} mt={4} mb={12}>
-    {children}
-  </Box>
+const Client = (props: ChildOnlyProp) => (
+  <Box m={16} mt={4} mb={12} {...props} />
 )
 
-const HeroCard = ({ children }) => (
+const HeroCard = (props: ChildOnlyProp) => (
   <Box
     display="flex"
     justifyContent="space-between"
     flexDirection={{ base: "column", lg: "row" }}
     pl={{ lg: "0" }}
     mt={{ base: "-2rem", lg: "0" }}
-  >
-    {children}
-  </Box>
+    {...props}
+  />
 )
 
-const HeroContainer = ({ children }) => (
-  <Box flex="1 1 50%" p={{ lg: "8rem 2rem 8rem 2rem", base: "6rem 0 4rem 0" }}>
-    {children}
-  </Box>
+const HeroContainer = (props: ChildOnlyProp) => (
+  <Box
+    flex="1 1 50%"
+    p={{ lg: "8rem 2rem 8rem 2rem", base: "6rem 0 4rem 0" }}
+    {...props}
+  />
 )
 
-const Row = ({ children }) => (
+const Row = (props: ChildOnlyProp) => (
   <Box
     display="flex"
     alignItems="center"
     flexWrap={{ base: "nowrap", lg: "wrap" }}
-  >
-    {children}
-  </Box>
+    {...props}
+  />
 )
 
-const StyledCardContainer = ({ children }) => (
-  <Box display="flex" flexWrap="wrap" m="2rem -1rem 3rem -1rem">
-    {children}
-  </Box>
+const StyledCardContainer = (props: ChildOnlyProp) => (
+  <Box display="flex" flexWrap="wrap" m="2rem -1rem 3rem -1rem" {...props} />
 )
 
 const StyledCard = ({ children, ...props }) => {
@@ -270,20 +256,22 @@ const StyledGrayContainer = ({ children, ...props }) => (
   </Box>
 )
 
-const Faq = ({ children }) => (
-  <Box display="flex" mt={16} flexDirection={{ base: "column", lg: "row" }}>
-    {children}
-  </Box>
+const Faq = (props: ChildOnlyProp) => (
+  <Box
+    display="flex"
+    mt={16}
+    flexDirection={{ base: "column", lg: "row" }}
+    {...props}
+  />
 )
-const LeftColumn = ({ children }) => <Box w="full">{children}</Box>
-const RightColumn = ({ children }) => (
+const LeftColumn = (props: ChildOnlyProp) => <Box w="full" {...props} />
+const RightColumn = (props: ChildOnlyProp) => (
   <Box
     w="full"
     ml={{ base: "0rem", lg: "2rem" }}
     flexDirection={{ base: "column", lg: "column" }}
-  >
-    {children}
-  </Box>
+    {...props}
+  />
 )
 
 type BountyHuntersArg = {
