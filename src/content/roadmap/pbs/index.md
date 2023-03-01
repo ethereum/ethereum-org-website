@@ -51,6 +51,5 @@ PBS is in an advanced stage of research, but there are still some important desi
 
 - [State of research: censorship resistance under PBS](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
 - [PBS-friendly fee market designs](https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725)
-- [Read more about PBS and censorship resistance](https://notes.ethereum.org/@fradamt/H1TsYRfJc#Secondary-auctions)
-- [Read more about inclusion lists](https://notes.ethereum.org/@fradamt/H1ZqdtrBF)
-- [Read more on PBS and MEV](https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725)
+- [PBS and censorship resistance](https://notes.ethereum.org/@fradamt/H1TsYRfJc#Secondary-auctions)
+- [Inclusion lists](https://notes.ethereum.org/@fradamt/H1ZqdtrBF)
