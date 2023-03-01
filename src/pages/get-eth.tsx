@@ -28,11 +28,6 @@ import FeedbackCard from "../components/FeedbackCard"
 import { CardListItem } from "../components/CardList"
 import { getImage } from "../utils/image"
 
-const WalletLeftColumn = styled(LeftColumn)`
-  display: flex;
-  flex-direction: column;
-`
-
 const GradientContainer = styled.div`
   background: radial-gradient(
     46.28% 66.31% at 66.95% 58.35%,
@@ -345,7 +340,7 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
         </h2>
       </Content>
       <TwoColumnContent>
-        <WalletLeftColumn>
+        <Flex as={LeftColumn} flexDir="column">
           <Img
             as={GatsbyImage}
             alignSelf="center"
@@ -359,7 +354,7 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
             <Translation id="page-get-eth-community-safety" />
           </h3>
           <CardList content={safetyArticles} />
-        </WalletLeftColumn>
+        </Flex>
         <RightColumn>
           <p>
             <Translation id="page-get-eth-description" />
