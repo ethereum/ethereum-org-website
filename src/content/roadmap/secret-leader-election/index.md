@@ -10,7 +10,7 @@ summaryPoints:
 
 # Secret leader election {#single-secret-leader-election}
 
-In today's proof-of-stake based consensus mechanism, the list of upcoming block proposers is public and it is possible to map their IP addresses. This means that attackers could identify which validators are due to propose a block and target them with a denial-of-service (DOS) attack that leaves them unable to propose their block in time.
+In today's [proof-of-stake](/developers/docs/consensus-mechanisms/pos) based consensus mechanism, the list of upcoming block proposers is public and it is possible to map their IP addresses. This means that attackers could identify which validators are due to propose a block and target them with a denial-of-service (DOS) attack that leaves them unable to propose their block in time.
 
 This could create opportunities for an attacker to profit. For example a block proposer selected for slot `n+1` could DOS the proposer in slot `n` so that they miss their opportunity to propose a block. This would allow the attacking block proposer to extract the MEV of both slots, or grab all the transactions that should have been split across two blocks and instead include them all in one, gaining all the associated fees. This is likely to affect home validators more than sophisticated institutional validators who can use more advanced methods to protect themselves from DOS attacks, and could therefore be a centralizing force.
 
