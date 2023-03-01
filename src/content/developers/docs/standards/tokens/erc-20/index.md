@@ -151,5 +151,6 @@ print("Addr Balance:", addr_balance)
 ## Further reading {#further-reading}
 
 - [EIP-20: ERC-20 Token Standard](https://eips.ethereum.org/EIPS/eip-20)
+- [Guide to Solidity ERC20 Tokens](https://www.alchemy.com/overviews/erc20-solidity)
 - [OpenZeppelin - Tokens](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
 - [OpenZeppelin - ERC-20 Implementation](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
