@@ -28,19 +28,6 @@ import FeedbackCard from "../components/FeedbackCard"
 import { CardListItem } from "../components/CardList"
 import { getImage } from "../utils/image"
 
-const WalletImage = styled(GatsbyImage)`
-  align-self: center;
-  width: 50%;
-  max-width: 600px;
-  margin-bottom: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 60%;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    width: 100%;
-  }
-`
-
 const WalletLeftColumn = styled(LeftColumn)`
   display: flex;
   flex-direction: column;
@@ -359,7 +346,15 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
       </Content>
       <TwoColumnContent>
         <WalletLeftColumn>
-          <WalletImage image={getImage(data.wallet)!} alt="" />
+          <Img
+            as={GatsbyImage}
+            alignSelf="center"
+            w={{ base: "full", sm: "60%", md: "50%" }}
+            maxW="600px"
+            mb={8}
+            image={getImage(data.wallet)!}
+            alt=""
+          />
           <h3>
             <Translation id="page-get-eth-community-safety" />
           </h3>
