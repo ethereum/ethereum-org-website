@@ -1,6 +1,6 @@
 ---
 title: Ethereum roadmap
-description: The Ethereum we know and love, just more scalable, more secure, and more sustainable.
+description: The path to more scalability, security and sustainability for Ethereum.
 lang: en
 template: roadmap
 image: ../../assets/upgrades/merge.png
