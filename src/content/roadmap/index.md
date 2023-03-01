@@ -30,7 +30,7 @@ The Ethereum roadmap outlines the specific improvements that will be made to pro
     to="/roadmap/scaling"
     title="Faster, cheaper transactions"
     image="scaling"
-    description="Today's scaling solutions, known as rollups, are too centralized, meaning users have to trust small groups of operators to behave honestly. Also, the way rollups send data to Ethereum is too expensive, limiting how cheap transactions can be for end users. The roadmap includes fixes for both of these problems."
+    description="Today's scaling solutions, known as rollups, are too expensive because of the way they send data to Ethereum. They also rely on some centralized components meaning users have to place too much trust in small groups of operators. The roadmap includes fixes for both of these problems."
   >
     <ButtonLink to="/roadmap/scaling/">Read more</ButtonLink>
   </RoadmapActionCard>
@@ -38,7 +38,7 @@ The Ethereum roadmap outlines the specific improvements that will be made to pro
     to="/roadmap/security"
     title="More security"
     image="security"
-    description="Ethereum is the most secure and decentralized smart-contract platform in existence. However, there are still improvements that can be made so that Ethereum stays resilient to any level of attack far into the future."
+    description="Ethereum is a very secure, decentralized smart-contract platform. However, there are still improvements that can be made so that Ethereum stays resilient to all kinds of attack far into the future."
   >
     <ButtonLink to="/roadmap/security/">Read more</ButtonLink>
   </RoadmapActionCard>
@@ -46,7 +46,7 @@ The Ethereum roadmap outlines the specific improvements that will be made to pro
     to="/roadmap/user-experience"
     title="Improved user experience"
     image="userExperience"
-    description="Using Ethereum will soon be as intuitive as the rest of the web. Ethereum nodes will run on mobile phones, giving every user trustless access to their data and assets. Changes to the way users use accounts will also make using Ethereum simpler and safer."
+    description="Using Ethereum will soon be as intuitive as the rest of the web. Ethereum nodes will be able to run on small devices like mobile phones, giving every user trustless access to their data and assets. Changes to the way users use accounts will also make using Ethereum simpler and safer."
   >
     <ButtonLink to="/roadmap/user-experience/">Read more</ButtonLink>
   </RoadmapActionCard>
