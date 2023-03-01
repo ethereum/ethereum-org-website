@@ -28,17 +28,6 @@ import FeedbackCard from "../components/FeedbackCard"
 import { CardListItem } from "../components/CardList"
 import { getImage } from "../utils/image"
 
-const Header = styled.header`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 6rem;
-  text-align: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 2rem;
-  }
-`
-
 const CardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -238,7 +227,14 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           alt={translateMessageId("page-get-eth-hero-image-alt", intl)}
           loading="eager"
         />
-        <Header>
+        <Flex
+          flexDir="column"
+          alignItems="center"
+          mx={{ base: 8, lg: 0 }}
+          mb={{ base: 8, lg: 0 }}
+          mt={{ base: 8, lg: 24 }}
+          textAlign="center"
+        >
           <h1>
             <Translation id="page-get-eth-where-to-buy-title" />
           </h1>
@@ -266,7 +262,7 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           <ButtonLink to="#country-picker">
             <Translation id="page-get-eth-search-by-country" />
           </ButtonLink>
-        </Header>
+        </Flex>
       </Flex>
       <CardContainer>
         <StyledCard
