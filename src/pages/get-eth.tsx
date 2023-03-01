@@ -28,15 +28,6 @@ import FeedbackCard from "../components/FeedbackCard"
 import { CardListItem } from "../components/CardList"
 import { getImage } from "../utils/image"
 
-const CardContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0rem 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 1rem;
-  }
-`
-
 const WalletImage = styled(GatsbyImage)`
   align-self: center;
   width: 50%;
@@ -264,7 +255,7 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           </ButtonLink>
         </Flex>
       </Flex>
-      <CardContainer>
+      <Flex flexWrap="wrap" mx={{ base: 4, lg: 8 }} my={{ base: 4, lg: 0 }}>
         <StyledCard
           emoji=":office_building:"
           title={translateMessageId("page-get-eth-cex", intl)}
@@ -307,7 +298,7 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
             </Link>
           </StyledInfoBanner>
         </Content>
-      </CardContainer>
+      </Flex>
       <GradientContainer id="country-picker">
         <EthExchanges />
       </GradientContainer>
