@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { Flex, Img, Text } from "@chakra-ui/react"
+import { Box, Flex, Img, Text } from "@chakra-ui/react"
 
 import { translateMessageId, TranslationKey } from "../utils/translations"
 import Translation from "../components/Translation"
@@ -60,10 +60,6 @@ const CodeBox = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column-reverse;
   }
-`
-
-const StyledEthPriceCard = styled(EthPriceCard)`
-  margin-bottom: 2rem;
 `
 
 const Code = styled.p`
@@ -231,7 +227,7 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           >
             <Translation id="page-get-eth-where-to-buy-desc-2" />
           </Text>
-          <StyledEthPriceCard />
+          <Box as={EthPriceCard} mb={8} />
           <ButtonLink to="#country-picker">
             <Translation id="page-get-eth-search-by-country" />
           </ButtonLink>
