@@ -59,6 +59,7 @@ Your address represents you on all Ethereum projects. You will not need to regis
 
 5. Confirm the signature request in your wallet to establish the connection. Do note that signing this message should not require spending any ETH.
 6. That's it! Start using the app. You can find some interesting projects on our [dApps page](/dapps/#explore).
+ <br />
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Want to learn more?</div>
