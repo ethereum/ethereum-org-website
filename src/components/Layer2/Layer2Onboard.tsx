@@ -251,7 +251,7 @@ const Layer2Onboard: React.FC<IProps> = ({
   const formatGroupLabel = (data) => {
     return data.label ? (
       <Stack borderTop="2px solid" m={0}>
-        <Text mb={0} mt={2} textTransform="none" color="body">
+        <Text mb={0} mt={2} textTransform="none" color="theme.colors.text">
           {data.label}
         </Text>
       </Stack>
