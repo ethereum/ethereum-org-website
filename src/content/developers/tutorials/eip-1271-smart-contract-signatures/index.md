@@ -16,7 +16,7 @@ In this tutorial, we give an overview of digital signatures, EIP-1271's backgrou
 
 In this context, a signature (more precisely, a “digital signature”) is a message + some sort of proof that the message came from a specific person/sender/address.
 
-For instance, a digital signature might look like this (usually combined into some sort of data structure):
+For instance, a digital signature might look like this:
 
 1. Message: “I want to log in to this website with my Ethereum wallet.”
 2. Signer: My address is `0x000…`
