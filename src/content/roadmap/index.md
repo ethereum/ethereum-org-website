@@ -84,7 +84,7 @@ Think of Ethereum's roadmap as a set of intentions for improving Ethereum; it is
 
 ## When will the roadmap be finished?
 
-The current roadmap contains some upgrades that will be implemented in the next 6 months (e.g. staking withdrawals) and others that will probably take 5-10 years to be fully implemented (e.g. quantum resistance). The precise timing of each upgrade is very difficult to predict as many roadmap items are worked on in parallel and develop at different speeds. The relative urgency of different upgrades can also change over time depending on external factors (e.g. a sudden leap in the performance and availability of quantum computers may make quantum resistant cryptography more urgent).
+Ethereum will implement some upgrades in the next six months (e.g. staking withdrawals); others are lower priority and likely not to be implemented for the next 5-10 years (e.g. quantum resistance). Giving precise timing of each upgrade is complicated to predict as many roadmap items are worked on in parallel and developed at different speeds. The urgency of an upgrade can also change over time depending on external factors (e.g. a sudden leap in the performance and availability of quantum computers may make quantum-resistant cryptography more urgent).
 
 One way to think about Ethereum development is by analogy to biological evolution. A network that is able to adapt to new challenges and maintain fitness is more likely to succeed that one that is resistant to change, although as the network becomes more and more performant, scalable and secure fewer changes to the protocol will be required.
 
@@ -94,7 +94,7 @@ Upgrades tend not to impact end-users except by providing better user-experience
 
 ## What about The Verge, The Splurge, etc?
 
-Vitalik Buterin proposed a vision for the Ethereum roadmap that was organized into several categories linked by their effects on Ethereum's architecture. It included:
+[Vitalik Buterin proposed a vision for the Ethereum roadmap](https://twitter.com/VitalikButerin/status/1588669782471368704) that was organized into several categories linked by their effects on Ethereum's architecture. It included:
 
 - The Merge: upgrades relating to the switch from proof-of-work to proof-of-stake
 - The Surge: upgrades related to scalability by rollups and data sharding
