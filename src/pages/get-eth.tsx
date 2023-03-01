@@ -62,12 +62,6 @@ const CodeBox = styled.div`
   }
 `
 
-const Code = styled.p`
-  font-family: monospace;
-  color: #ffffff;
-  margin-bottom: 0rem;
-`
-
 const CodeLabel = styled.p`
   text-transform: uppercase;
   font-size: 0.875rem;
@@ -370,7 +364,9 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
             <Translation id="page-get-eth-your-address-desc" />
           </p>
           <CodeBox>
-            <Code>0x0125e2478d69eXaMpLe81766fef5c120d30fb53f</Code>
+            <Text fontFamily="monospace" color="white" mb={0} fontSize="xs">
+              0x0125e2478d69eXaMpLe81766fef5c120d30fb53f
+            </Text>
             <CodeLabel>
               <Text
                 as={Translation}
