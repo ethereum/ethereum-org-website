@@ -33,7 +33,7 @@ Cara termudah untuk menguji WebSocket adalah menginstal peralatan baris perintah
 _Catatan: jika Anda memiliki akun Alchemy, Anda bisa menggantikan `demo` dengan kunci API Anda sendiri. [Daftar akun Alchemy secara gratis di sini!](https://auth.alchemyapi.io/signup)_
 
 ```
-$ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
+wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 >  {"jsonrpc":  "2.0", "id": 0, "method":  "eth_gasPrice"}
 

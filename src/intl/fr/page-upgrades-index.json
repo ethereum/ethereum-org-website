@@ -8,7 +8,6 @@
   "consensus-client-nimbus-logo-alt": "Logo de Nimbus",
   "consensus-client-prysm-logo-alt": "Logo Prysm",
   "consensus-client-teku-logo-alt": "Logo Teku",
-  "consensus-client-under-review": "Revue et audit en cours",
   "page-upgrades-answer-1": "La Chaîne phare a été employée comme outil pour mettre à niveau le réseau principal Ethereum durant La Fusion.",
   "page-upgrades-answer-2": "La Fusion représente la mise à niveau la plus importante de l'histoire d'Ethereum, en substituant la preuve de travail par une nouvelle couche de consensus basée sur la preuve d'enjeu.",
   "page-upgrades-answer-4": "La Chaîne phare a été utilisée pour développer le consensus basé sur la preuve d'enjeu qu'Ethereum utilise aujourd'hui. Elle s'exécute en parallèle du réseau principal Ethereum afin de permettre aux développeurs d'observer le mécanisme de consensus de manière isolée avant de l'utiliser pour coordonner une activité réelle.",

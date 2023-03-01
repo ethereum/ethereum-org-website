@@ -48,6 +48,7 @@ Platforms with contract-based persistence:
 - [0Chain](https://0chain.net/)
 - [Crust Network](https://crust.network)
 - [Swarm](https://www.ethswarm.org/)
+- [4EVERLAND](https://www.4everland.org/)
 
 ### Additional considerations {#additional-consideration}
 
@@ -59,6 +60,7 @@ IPFS is a distributed system for storing and accessing files, websites, applicat
 - [Infura](https://infura.io/product/ipfs) _(IPFS pinning service)_
 - [IPFS Scan](https://ipfs-scan.io) _(IPFS pinning explorer)_
 - [4EVERLAND](https://www.4everland.org/)_（IPFS pinning service）_
+- [Filebase](https://filebase.com) _(IPFS Pinning Service)_
 
 SWARM is a decentralised data storage and distribution technology with a storage incentive system and a storage rent price oracle.
 
@@ -77,6 +79,7 @@ Types of dStorage with a challenge mechanism:
 - Arweave
 - Filecoin
 - Crust Network
+- 4EVERLAND
 
 ### Decentrality {#decentrality}
 
@@ -91,6 +94,7 @@ Decentralized tools without KYC:
 - IPFS
 - Ethereum
 - Crust Network
+- 4EVERLAND
 
 ### Consensus {#consensus}
 
@@ -176,7 +180,7 @@ Proof-of-stake based:
 - [Documentation](https://developers.ceramic.network/learn/welcome/)
 - [GitHub](https://github.com/ceramicnetwork/js-ceramic/)
 
-**Filebase - _The first S3-compatible object storage platform that allows you to store data across multiple decentralized storage networks including IPFS, Sia, Skynet, and Storj._**
+**Filebase - _S3-compatible decentralized storage and geo-redundant IPFS pinning service. All files uploaded to IPFS through Filebase are automatically pinned to the Filebase infrastructure with 3x replication across the globe._**
 
 - [Filebase.com](https://filebase.com/)
 - [Documentation](https://docs.filebase.com/)
