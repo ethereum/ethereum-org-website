@@ -75,7 +75,7 @@ Vamos a ver cómo un estándar es tan importante para que las cosas sean sencill
 Primero asegúrate de haber instalado [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python library:
 
 ```
-$ pip install web3
+pip install web3
 ```
 
 ```python

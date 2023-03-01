@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react"
+import { Meta, StoryFn } from "@storybook/react"
 import React from "react"
 import Slider, { EmblaSlide } from "."
 
@@ -13,7 +13,7 @@ export default {
       handles: ["click"],
     },
   },
-} as ComponentMeta<typeof Component>
+} as Meta<typeof Component>
 
 const ComponentSlides = () => (
   <>
@@ -85,7 +85,7 @@ const ComponentSlides = () => (
   </>
 )
 
-export const Basic: ComponentStory<typeof Component> = (args) => (
+export const Basic: StoryFn<typeof Component> = (args) => (
   <Component {...args}>
     <ComponentSlides />
   </Component>

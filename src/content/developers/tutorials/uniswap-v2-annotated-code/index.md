@@ -22,7 +22,7 @@ _Traders_ send one type of token to the pool and receive the other (for example,
 
 When liquidity providers want their assets back they can burn the pool tokens and receive back their tokens, including their share of the rewards.
 
-[Click here for a fuller description](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/swaps/).
+[Click here for a fuller description](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/).
 
 ### Why v2? Why not v3? {#why-v2}
 
@@ -816,7 +816,7 @@ These two functions allow `feeSetter` to control the fee recipient (if any), and
 
 [This contract](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implements the ERC-20 liquidity token. It is similar to the [OpenZeppelin ERC-20 contract](/developers/tutorials/erc20-annotated-code), so I will only explain the part that is different, the `permit` functionality.
 
-Transactions on Ethereum cost ether (ETH), which is equivalent to real money. If you have ERC-20 tokens but not ETH, you can't send transactions, so you can't do anything with them. One solution to avoid this problem is [meta-transactions](https://docs.uniswap.org/protocol/V2/guides/smart-contract-integration/supporting-meta-transactions/).
+Transactions on Ethereum cost ether (ETH), which is equivalent to real money. If you have ERC-20 tokens but not ETH, you can't send transactions, so you can't do anything with them. One solution to avoid this problem is [meta-transactions](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions).
 The owner of the tokens signs a transaction that allows somebody else to withdraw tokens off chain and sends it using the Internet to the recipient. The recipient, which does have ETH, then submits the permit on behalf of the owner.
 
 ```solidity
