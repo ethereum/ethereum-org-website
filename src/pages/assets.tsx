@@ -25,11 +25,19 @@ import Translation from "../components/Translation"
 import FeedbackCard from "../components/FeedbackCard"
 
 // Types
-import { Context } from "../types"
+import type { ChildOnlyProp, Context } from "../types"
 
 // Utils
 import { translateMessageId } from "../utils/translations"
 import { getImage } from "../utils/image"
+
+const Row = (props: ChildOnlyProp) => (
+  <Flex
+    wrap={{ base: "wrap", lg: "nowrap" }}
+    justify="space-between"
+    {...props}
+  />
+)
 
 const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
   const intl = useIntl()
@@ -44,7 +52,7 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
         title={translateMessageId("page-assets-meta-title", intl)}
         description={translateMessageId("page-assets-meta-desc", intl)}
       />
-      <Box padding="1rem 2rem">
+      <Box py={4} px={8}>
         <Flex direction="column" px={8} py={4}>
           <Center>
             <Img
@@ -85,7 +93,7 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             artistName="Liam Cobb"
             artistUrl="https://liamcobb.com/"
           />
-          <Flex>
+          <Row>
             <AssetDownload
               title={translateMessageId("page-assets-hero-panda", intl)}
               alt={translateMessageId("page-assets-hero-panda", intl)}
@@ -101,15 +109,9 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
               alt={translateMessageId("page-assets-merge-panda-svg", intl)}
               svg={MergePandaSvg}
             />
-          </Flex>
+          </Row>
 
-          <Flex
-            direction="column"
-            alignItems="center"
-            mt={24}
-            textAlign="center"
-            margin={{ lg: 8 }}
-          >
+          <Row>
             <AssetDownload
               title={translateMessageId("page-assets-doge", intl)}
               alt={translateMessageId("page-assets-doge", intl)}
@@ -131,9 +133,9 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
               artistName="William Tempest"
               artistUrl="https://cargocollective.com/willtempest"
             />
-          </Flex>
+          </Row>
 
-          <Flex>
+          <Row>
             <AssetDownload
               title={translateMessageId("page-assets-infrastructure", intl)}
               alt={translateMessageId("page-assets-infrastructure", intl)}
@@ -155,9 +157,9 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
               artistName="William Tempest"
               artistUrl="https://cargocollective.com/willtempest"
             />
-          </Flex>
+          </Row>
 
-          <Flex>
+          <Row>
             <AssetDownload
               title={translateMessageId("page-assets-future", intl)}
               alt={translateMessageId("page-assets-future", intl)}
@@ -172,15 +174,9 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
               artistName="William Tempest"
               artistUrl="https://cargocollective.com/willtempest"
             />
-          </Flex>
+          </Row>
 
-          <Flex
-            justifyContent="space-between"
-            pt={0}
-            pr={-4}
-            pb={8}
-            flexWrap={{ l: "wrap" }}
-          >
+          <Row>
             <AssetDownload
               title={translateMessageId("page-assets-robot", intl)}
               alt={translateMessageId("page-assets-robot", intl)}
@@ -196,9 +192,9 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
               artistUrl="https://cargocollective.com/willtempest"
               shouldHide={true}
             />
-          </Flex>
+          </Row>
 
-          <Flex>
+          <Row>
             <AssetDownload
               title={translateMessageId("page-assets-bazaar", intl)}
               alt={translateMessageId("page-assets-bazaar", intl)}
@@ -213,9 +209,9 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
               artistName="Viktor Hachmang"
               artistUrl="http://viktorhachmang.nl/"
             />
-          </Flex>
+          </Row>
 
-          <Flex>
+          <Row>
             <AssetDownload
               title={translateMessageId("page-assets-mainnet", intl)}
               alt={translateMessageId("page-assets-mainnet", intl)}
@@ -230,9 +226,9 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
               artistName="Viktor Hachmang"
               artistUrl="https://viktorhachmang.nl"
             />
-          </Flex>
+          </Row>
 
-          <Flex>
+          <Row>
             <AssetDownload
               title={translateMessageId("page-assets-beacon-chain", intl)}
               alt={translateMessageId("page-assets-beacon-chain", intl)}
@@ -247,9 +243,9 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
               artistName="Viktor Hachmang"
               artistUrl="https://viktorhachmang.nl"
             />
-          </Flex>
+          </Row>
 
-          <Flex>
+          <Row>
             <AssetDownload
               title={translateMessageId("page-assets-defi", intl)}
               alt={translateMessageId("page-assets-defi", intl)}
@@ -264,9 +260,9 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
               artistName="Patrick Atkins"
               artistUrl="https://www.patrickatkins.co.uk/"
             />
-          </Flex>
+          </Row>
 
-          <Flex>
+          <Row>
             <AssetDownload
               title={translateMessageId("page-assets-leslie-the-rhino", intl)}
               alt={translateMessageId("page-assets-leslie-the-rhino", intl)}
@@ -282,7 +278,7 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
               image={data.leslieTheRhino}
               shouldHide={true}
             />
-          </Flex>
+          </Row>
         </VStack>
 
         <Heading as="h2" id="historical">
@@ -297,7 +293,7 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
           <Translation id="page-assets-page-assets-transparent-background" />
         </Heading>
 
-        <Flex>
+        <Row>
           <AssetDownload
             title={translateMessageId("page-assets-eth-diamond-glyph", intl)}
             alt={translateMessageId("page-assets-eth-diamond-glyph", intl)}
@@ -313,8 +309,8 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             alt={translateMessageId("page-assets-eth-diamond-color", intl)}
             image={data.ethDiamondColor}
           />
-        </Flex>
-        <Flex>
+        </Row>
+        <Row>
           <AssetDownload
             title={translateMessageId("page-assets-eth-diamond-purple", intl)}
             alt={translateMessageId("page-assets-eth-diamond-purple", intl)}
@@ -336,8 +332,8 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             )}
             svg={EthGlyphColoredSvg}
           />
-        </Flex>
-        <Flex>
+        </Row>
+        <Row>
           <AssetDownload
             title={translateMessageId(
               "page-assets-eth-logo-portrait-gray",
@@ -362,8 +358,8 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             alt={translateMessageId("page-assets-eth-wordmark-gray", intl)}
             image={data.ethWordmarkBlack}
           />
-        </Flex>
-        <Flex>
+        </Row>
+        <Row>
           <AssetDownload
             title={translateMessageId(
               "page-assets-eth-logo-portrait-purple",
@@ -391,13 +387,13 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             alt={translateMessageId("page-assets-eth-wordmark-purple", intl)}
             image={data.ethWordmarkPurple}
           />
-        </Flex>
+        </Row>
 
         <Heading as="h3">
           <Translation id="page-assets-page-assets-solid-background" />
         </Heading>
 
-        <Flex>
+        <Row>
           <AssetDownload
             title={translateMessageId("page-assets-eth-diamond-white", intl)}
             alt={translateMessageId("page-assets-eth-diamond-white", intl)}
@@ -418,8 +414,8 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             alt={translateMessageId("page-assets-eth-diamond-white", intl)}
             image={data.ethDiamondPurpleWhite}
           />
-        </Flex>
-        <Flex>
+        </Row>
+        <Row>
           <AssetDownload
             title={translateMessageId(
               "page-assets-eth-logo-portrait-gray",
@@ -444,8 +440,8 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             alt={translateMessageId("page-assets-eth-wordmark-gray", intl)}
             image={data.ethWordmarkBlackGray}
           />
-        </Flex>
-        <Flex>
+        </Row>
+        <Row>
           <AssetDownload
             title={translateMessageId(
               "page-assets-eth-logo-portrait-purple",
@@ -473,8 +469,8 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             alt={translateMessageId("page-assets-eth-wordmark-purple", intl)}
             image={data.ethWordmarkPurplePurple}
           />
-        </Flex>
-        <Flex>
+        </Row>
+        <Row>
           <AssetDownload
             title={translateMessageId(
               "page-assets-eth-logo-portrait-white",
@@ -502,7 +498,7 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             alt={translateMessageId("page-assets-eth-wordmark-white", intl)}
             image={data.ethWordmarkPurpleWhite}
           />
-        </Flex>
+        </Row>
       </Box>
       <FeedbackCard />
     </Flex>
