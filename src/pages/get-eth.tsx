@@ -80,10 +80,6 @@ const CodeLabel = styled.p`
   }
 `
 
-const AllCapsTranslation = styled(Translation)`
-  text-transform: uppercase;
-`
-
 const StyledInfoBanner = styled(InfoBanner)<{
   mt: string
 }>`
@@ -376,7 +372,11 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           <CodeBox>
             <Code>0x0125e2478d69eXaMpLe81766fef5c120d30fb53f</Code>
             <CodeLabel>
-              <AllCapsTranslation id="page-get-eth-do-not-copy" />
+              <Text
+                as={Translation}
+                textTransform="uppercase"
+                id="page-get-eth-do-not-copy"
+              />
             </CodeLabel>
           </CodeBox>
           <p>
