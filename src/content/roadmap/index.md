@@ -60,7 +60,7 @@ The Ethereum roadmap outlines the specific improvements that will be made to pro
   </RoadmapActionCard>
 </CardGrid>
 
-### Why Ethereum needs a roadmap {#why-ethereum-needs-a-roadmap}
+## Why Ethereum needs a roadmap {#why-ethereum-needs-a-roadmap}
 
 Ethereum is a network that undergoes periodic upgrades that enhance its scalability, security or sustainability. One of the core strengths of Ethereum is that it is not fixed forever in its current form - as new ideas arise from research and development they can be implemented to make sure Ethereum is ever-improving. This gives Ethereum the flexibility to tackle emerging challenges and keep up with the most advanced technological breakthroughs in cryptography, computing and cryptoeconomics.
 
@@ -80,13 +80,21 @@ When these ideas mature, they can be proposed as [Ethereum Improvement Proposals
   <p style="margin-bottom: 0">Some staking operators have also represented ETH staked on the Beacon Chain with the ‘ETH2’ ticker. This creates potential confusion, given that users of these services are not actually receiving an ‘ETH2’ token. No ‘ETH2’ token exists; it simply represents their share in that specific providers’ stake.</p>
 </InfoBanner>
 
-## Frequently asked questions {#faq}
+## Is the roadmap set in stone?
 
-### Do I have to do anything when there is an upgrade?
+No! The roadmap is the current plan for upgrading Ethereum in the near term and also far into the future. The roadmap can change as new information and new technology becomes available. For example, the original Ethereum roadmap intended for sharding to be implemented before The Merge. However, scaling by rollups developed much faster than expected and the roadmap was updated to focus on layer 2 scaling first, allowing The Merge to happen sooner than originally anticipated. The roadmap is a set of intentions for improving Ethereum - it is the research and developer community's best guess about where we should go from here.
+
+## When will the roadmap be finished?
+
+The current roadmap contains some upgrades that will be implemented in the next 6 months (e.g. staking withdrawals) and others that will probably take 5-10 years to be fully implemented (e.g. quantum resistance). The precise timing of each upgrade is very difficult to predict as many roadmap items are worked on in parallel and develop at different speeds. The relative urgency of different upgrades can also change over time depending on external factors (e.g. a sudden leap in the performance and availability of quantum computers may make quantum resistant cryptography more urgent).
+
+One way to think about Ethereum development is by analogy to biological evolution. A network that is able to adapt to new challenges and maintain fitness is more likely to succeed that one that is resistant to change, although as the network becomes more and more performant, scalable and secure fewer changes to the protocol will be required.
+
+## Do I have to do anything when there is an upgrade?
 
 Upgrades tend not to impact end-users except by providing better user-experiences and a more secure protocol and perhaps more <i>options</i> for how to interact with Ethereum. End uses are not required to actively participate in an upgrade, nor are they required to do anything to secure their assets. Node operators will need to update their clients to prepare for an upgrade. Some upgrades may lead to changes for application developers. For example, history expiry upgrades may lead application developers to grab historical data from new sources.
 
-### What about the verge, the splurge etc?
+## What about the verge, the splurge etc?
 
 Vitalik proposed a vision for the Ethereum roadmap that was organized into several categories linked by their effects on Ethereum's artchitecture. It included:
 
@@ -98,13 +106,3 @@ Vitalik proposed a vision for the Ethereum roadmap that was organized into sever
 - The Splurge: other upgrades that don't fit well into the previous categories.
 
 We decided not to persist this terminology on this page because we wanted to use a simpler and more user-centric model.
-
-### Is the roadmap set in stone?
-
-No! The roadmap is the current plan for upgrading Ethereum in the near term and also far into the future. The roadmap can change as new information and new technology becomes available. For example, the original Ethereum roadmap intended for sharding to be implemented before The Merge. However, scaling by rollups developed much faster than expected and the roadmap was updated to focus on layer 2 scaling first, allowing The Merge to happen sooner than originally anticipated. The roadmap is a set of intentions for improving Ethereum - it is the research and developer community's best guess about where we should go from here.
-
-### When will the roadmap be finished?
-
-The current roadmap contains some upgrades that will be implemented in the next 6 months (e.g. staking withdrawals) and others that will probably take 5-10 years to be fully implemented (e.g. quantum resistance). The precise timing of each upgrade is very difficult to predict as many roadmap items are worked on in parallel and develop at different speeds. The relative urgency of different upgrades can also change over time depending on external factors (e.g. a sudden leap in the performance and availability of quantum computers may make quantum resistant cryptography more urgent).
-
-One way to think about Ethereum development is by analogy to biological evolution. A network that is able to adapt to new challenges and maintain fitness is more likely to succeed that one that is resistant to change. We aim for homeostasis rather than ossification, although as the network evolves to become more and more performant, scalable and secure over time fewer and fewer changes to the protocol will be required.
