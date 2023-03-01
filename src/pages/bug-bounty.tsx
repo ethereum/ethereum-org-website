@@ -3,7 +3,7 @@ import { useTheme } from "@emotion/react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
-import { Box, Center, Heading, Text } from "@chakra-ui/react"
+import { Box, Center, Heading, List, ListItem, Text } from "@chakra-ui/react"
 
 import { translateMessageId } from "../utils/translations"
 import Translation from "../components/Translation"
@@ -514,9 +514,9 @@ const BugBountiesPage = ({
           <H2>
             <Translation id="page-upgrades-bug-bounty-validity" />
           </H2>
-          <p>
+          <Text>
             <Translation id="page-upgrades-bug-bounty-validity-desc" />
-          </p>
+          </Text>
           <StyledCardContainer>
             <StyledCard
               emoji=":ledger:"
@@ -537,50 +537,58 @@ const BugBountiesPage = ({
                 <Translation id="page-upgrades-bug-bounty-execution-specs" />
               </Link>
               <br />
-              <div>
-                <p>
+              <Box>
+                <Text>
                   <Translation id="page-upgrades-bug-bounty-annotations" />
-                </p>
-                <ul>
-                  <li>
+                </Text>
+                <List>
+                  <ListItem>
                     <Link to="https://benjaminion.xyz/eth2-annotated-spec/">
                       Ben Edgington's{" "}
                       <Translation id="page-upgrades-bug-bounty-annotated-specs" />
                     </Link>
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <Link to="https://github.com/ethereum/annotated-spec">
                       Vitalik Buterin's{" "}
                       <Translation id="page-upgrades-bug-bounty-annotated-specs" />
                     </Link>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4>
+                  </ListItem>
+                </List>
+              </Box>
+              <Box>
+                <Heading
+                  as="h4"
+                  lineHeight={1.4}
+                  fontSize={{ base: "md", md: "xl" }}
+                >
                   <Translation id="page-upgrades-bug-bounty-types" />
-                </h4>
-                <ul>
-                  <li>
+                </Heading>
+                <List>
+                  <ListItem>
                     <Translation id="page-upgrades-bug-bounty-type-1" />
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <Translation id="page-upgrades-bug-bounty-type-2" />
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <Translation id="page-upgrades-bug-bounty-type-3" />
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <Translation id="page-upgrades-bug-bounty-type-4" />
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4>
+                  </ListItem>
+                </List>
+              </Box>
+              <Box>
+                <Heading
+                  as="h4"
+                  lineHeight={1.4}
+                  fontSize={{ base: "md", md: "xl" }}
+                >
                   <Translation id="page-upgrades-bug-bounty-specs-docs" />
-                </h4>
+                </Heading>
                 <CardList content={specs} />
-              </div>
+              </Box>
             </StyledCard>
             <StyledCard
               emoji=":computer:"
@@ -593,32 +601,40 @@ const BugBountiesPage = ({
                 intl
               )}
             >
-              <div>
-                <p>
+              <Box>
+                <Text>
                   <Translation id="page-upgrades-bug-bounty-client-bugs-desc-2" />
-                </p>
-                <h4>
+                </Text>
+                <Heading
+                  as="h4"
+                  lineHeight={1.4}
+                  fontSize={{ base: "md", md: "xl" }}
+                >
                   <Translation id="page-upgrades-bug-bounty-types" />
-                </h4>
-                <ul>
-                  <li>
+                </Heading>
+                <List>
+                  <ListItem>
                     <Translation id="page-upgrades-bug-bounty-clients-type-1" />
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <Translation id="page-upgrades-bug-bounty-clients-type-2" />
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     {" "}
                     <Translation id="page-upgrades-bug-bounty-clients-type-3" />
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4>
+                  </ListItem>
+                </List>
+              </Box>
+              <Box>
+                <Heading
+                  as="h4"
+                  lineHeight={1.4}
+                  fontSize={{ base: "md", md: "xl" }}
+                >
                   <Translation id="page-upgrades-bug-bounty-help-links" />
-                </h4>
+                </Heading>
                 <CardList content={clients} />
-              </div>
+              </Box>
             </StyledCard>
             <StyledCard
               emoji=":book:"
@@ -631,19 +647,23 @@ const BugBountiesPage = ({
                 intl
               )}
             >
-              <div>
-                <p>
+              <Box>
+                <Text>
                   <Translation id="page-upgrades-bug-bounty-misc-bugs-desc-2" />
-                </p>
-              </div>
-              <div>
-                <h4>
+                </Text>
+              </Box>
+              <Box>
+                <Heading
+                  as="h4"
+                  lineHeight={1.4}
+                  fontSize={{ base: "md", md: "xl" }}
+                >
                   <Translation id="page-upgrades-bug-bounty-help-links" />
-                </h4>
+                </Heading>
                 <Link to="https://github.com/ethereum/solidity/blob/develop/SECURITY.md">
                   SECURITY.md
                 </Link>
-              </div>
+              </Box>
             </StyledCard>
             <StyledCard
               emoji=":scroll:"
@@ -656,10 +676,14 @@ const BugBountiesPage = ({
                 intl
               )}
             >
-              <div>
-                <h4>
+              <Box>
+                <Heading
+                  as="h4"
+                  lineHeight={1.4}
+                  fontSize={{ base: "md", md: "xl" }}
+                >
                   <Translation id="page-upgrades-bug-bounty-help-links" />
-                </h4>
+                </Heading>
                 <Link to="https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/deposit-contract.md">
                   Deposit Contract Specifications
                 </Link>
@@ -667,15 +691,15 @@ const BugBountiesPage = ({
                 <Link to="https://github.com/ethereum/consensus-specs/blob/dev/solidity_deposit_contract/deposit_contract.sol">
                   Deposit Contract Source Code
                 </Link>
-              </div>
+              </Box>
             </StyledCard>
           </StyledCardContainer>
           <H2>
             <Translation id="page-upgrades-bug-bounty-not-included" />
           </H2>
-          <p>
+          <Text>
             <Translation id="page-upgrades-bug-bounty-not-included-desc" />
-          </p>
+          </Text>
         </Content>
       </StyledGrayContainer>
       <Content>
@@ -684,30 +708,30 @@ const BugBountiesPage = ({
             <H2>
               <Translation id="page-upgrades-bug-bounty-submit" />
             </H2>
-            <p>
+            <Text>
               <Translation id="page-upgrades-bug-bounty-submit-desc" />{" "}
               <Link to="https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology">
                 <Translation id="page-upgrades-bug-bounty-owasp" />
               </Link>
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-upgrades-bug-bounty-points" />
-            </p>
-            <p>
-              <b>
+            </Text>
+            <Text>
+              <Text as="b">
                 <Translation id="page-upgrades-bug-bounty-quality" />
-              </b>
+              </Text>
               <Translation id="page-upgrades-bug-bounty-quality-desc" />
-            </p>
-            <p>
-              <b>
+            </Text>
+            <Text>
+              <Text as="b">
                 <Translation id="page-upgrades-bug-bounty-quality-repro" />
-              </b>
+              </Text>
               <Translation id="page-upgrades-bug-bounty-quality-repro-desc" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-upgrades-bug-bounty-quality-fix" />
-            </p>
+            </Text>
           </SubmitInstructions>
           {/* TODO: Re-add Points Exchange (BugBountyPoints Component) */}
         </Row>
@@ -718,25 +742,25 @@ const BugBountiesPage = ({
           <H2>
             <Translation id="page-upgrades-bug-bounty-hunting" />
           </H2>
-          <p>
-            <em>
+          <Text>
+            <Text as="em">
               <Translation id="page-upgrades-bug-bounty-hunting-desc" />
-            </em>
-          </p>
-          <ul>
-            <li>
+            </Text>
+          </Text>
+          <List>
+            <ListItem>
               <Translation id="page-upgrades-bug-bounty-hunting-li-1" />
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               <Translation id="page-upgrades-bug-bounty-hunting-li-2" />
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               <Translation id="page-upgrades-bug-bounty-hunting-li-3" />
-            </li>
-            <li id="leaderboard">
+            </ListItem>
+            <ListItem id="leaderboard">
               <Translation id="page-upgrades-bug-bounty-hunting-li-4" />
-            </li>
-          </ul>
+            </ListItem>
+          </List>
         </Rules>
       </Content>
       <GradientContainer>
@@ -744,18 +768,18 @@ const BugBountiesPage = ({
           <H2>
             <Translation id="page-upgrades-bug-bounty-hunting-execution-leaderboard" />
           </H2>
-          <p>
+          <Text>
             <Translation id="page-upgrades-bug-bounty-hunting-execution-leaderboard-subtitle" />
-          </p>
+          </Text>
           <Leaderboard content={executionBountyHunters} />
         </FullLeaderboardContainer>
         <FullLeaderboardContainer>
           <H2>
             <Translation id="page-upgrades-bug-bounty-hunting-leaderboard" />
           </H2>
-          <p>
+          <Text>
             <Translation id="page-upgrades-bug-bounty-hunting-leaderboard-subtitle" />
-          </p>
+          </Text>
           <Leaderboard content={consensusBountyHunters} />
         </FullLeaderboardContainer>
       </GradientContainer>
@@ -775,27 +799,27 @@ const BugBountiesPage = ({
                 intl
               )}
             >
-              <p>
+              <Text>
                 <Translation id="bug-bounty-faq-q1-content-1" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="bug-bounty-faq-q1-content-2" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="bug-bounty-faq-q1-content-3" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="bug-bounty-faq-q1-content-4" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="bug-bounty-faq-q1-content-5" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="bug-bounty-faq-q1-content-6" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="bug-bounty-faq-q1-content-7" />
-              </p>
+              </Text>
             </ExpandableCard>
             <ExpandableCard
               title={translateMessageId("bug-bounty-faq-q2-title", intl)}
@@ -804,9 +828,9 @@ const BugBountiesPage = ({
                 intl
               )}
             >
-              <p>
+              <Text>
                 <Translation id="bug-bounty-faq-q2-content-1" />
-              </p>
+              </Text>
             </ExpandableCard>
             <ExpandableCard
               title={translateMessageId("bug-bounty-faq-q3-title", intl)}
@@ -815,9 +839,9 @@ const BugBountiesPage = ({
                 intl
               )}
             >
-              <p>
+              <Text>
                 <Translation id="bug-bounty-faq-q3-content-1" />
-              </p>
+              </Text>
             </ExpandableCard>
             <ExpandableCard
               title={translateMessageId("bug-bounty-faq-q4-title", intl)}
@@ -826,9 +850,9 @@ const BugBountiesPage = ({
                 intl
               )}
             >
-              <p>
+              <Text>
                 <Translation id="bug-bounty-faq-q4-content-1" />
-              </p>
+              </Text>
             </ExpandableCard>
           </LeftColumn>
           <RightColumn>
@@ -839,9 +863,9 @@ const BugBountiesPage = ({
                 intl
               )}
             >
-              <p>
+              <Text>
                 <Translation id="bug-bounty-faq-q5-content-1" />
-              </p>
+              </Text>
             </ExpandableCard>
             <ExpandableCard
               title={translateMessageId("bug-bounty-faq-q6-title", intl)}
@@ -850,12 +874,12 @@ const BugBountiesPage = ({
                 intl
               )}
             >
-              <p>
+              <Text>
                 <Translation id="bug-bounty-faq-q6-content-1" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="bug-bounty-faq-q6-content-2" />
-              </p>
+              </Text>
             </ExpandableCard>
             <ExpandableCard
               title={translateMessageId("bug-bounty-faq-q7-title", intl)}
@@ -864,9 +888,9 @@ const BugBountiesPage = ({
                 intl
               )}
             >
-              <p>
+              <Text>
                 <Translation id="bug-bounty-faq-q7-content-1" />
-              </p>
+              </Text>
             </ExpandableCard>
             <ExpandableCard
               title={translateMessageId("bug-bounty-faq-q8-title", intl)}
@@ -875,9 +899,9 @@ const BugBountiesPage = ({
                 intl
               )}
             >
-              <p>
+              <Text>
                 <Translation id="bug-bounty-faq-q8-content-1" />
-              </p>
+              </Text>
               <Link to="https://ethereum.org/security_at_ethereum.org.asc">
                 <Translation id="bug-bounty-faq-q8-PGP-key" />
               </Link>
@@ -887,7 +911,7 @@ const BugBountiesPage = ({
       </Content>
       <Divider />
       <Contact>
-        <div>
+        <Box>
           <H2>
             <Translation id="page-upgrades-bug-bounty-questions" />
           </H2>
@@ -895,7 +919,7 @@ const BugBountiesPage = ({
             <Translation id="page-upgrades-bug-bounty-email-us" />{" "}
             <Link to="mailto:bounty@ethereum.org">bounty@ethereum.org</Link>
           </Text>
-        </div>
+        </Box>
         <Emoji fontSize="5xl" text=":email:" />
       </Contact>
       <FeedbackCard />
