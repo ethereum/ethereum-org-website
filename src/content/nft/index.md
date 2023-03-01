@@ -345,6 +345,7 @@ Most NFTs are built using a consistent standard known as [ERC-721](/developers/d
 
 ## Further reading {#further-reading}
 
+- [Ethereum NFT APIs](https://www.alchemy.com/list-of/nft-apis-on-ethereum) - _Alchemy_
 - [Crypto art data](https://cryptoart.io/data) – Richard Chen, updated automatically
 - [OpenSea: the NFT Bible](https://opensea.io/blog/guides/non-fungible-tokens/) – _Devin Fizner, January 10 2020_
 - [A beginner's guide to NFTs](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, January 2020_
