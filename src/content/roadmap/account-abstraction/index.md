@@ -80,11 +80,6 @@ The way wallets work would also change under EIP-4337. Instead of each wallet re
 
 **Note** the EIP 4337 entry point contract was deployed to Ethereum Mainnet on 1st March 2023. You can see the contract on [Etherscan](https://etherscan.io/address/0x0576a174D229E3cFA37253523E645A78A0C91B57).
 
-**Further reading**
-
-- [About EIP-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)
-- [EIP-4337 documentation](https://eips.ethereum.org/EIPS/eip-4337)
-
 </ExpandableCard>
 
 <ExpandableCard title="EIP-2938: changing the Ethereum protocol to support account abstraction" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-2938: changing the Ethereum protocol to support account abstraction">
@@ -92,11 +87,6 @@ The way wallets work would also change under EIP-4337. Instead of each wallet re
 EIP-2938 aims to update the Ethereum protocol by introducing a new transaction type, `AA_TX_TYPE` that includes three fields: `nonce`, `target` and `data`, where `nonce` is a transaction counter, `target` is the entry point contract address and `data` is EVM bytecode. To execute these transactions, two new instructions (known as opcodes) have to be added to the EVM: `NONCE` and `PAYGAS`. The `NONCE` opcode tracks the transaction sequence and `PAYGAS` calculates and withdraws the gas required to execute the transaction from the contract's balance. These new features allow Ethereum to support smart contract wallets natively as the necessary infrastructure is built in to Ethereum's protocol.
 
 Note that EIP-2938 is currently not active. The community is currently favoring EIP-4337 because it does not require changes to the protocol.
-
-**Further reading**
-
-- [About EIP2938](https://hackmd.io/@SamWilsn/ryhxoGp4D#What-is-EIP-2938)
-- [EIP-2938 documentation](https://eips.ethereum.org/EIPS/eip-2938)
 
 </ExpandableCard>
 
@@ -111,3 +101,7 @@ Smart contract wallets are already available, but more upgrades are required to 
 - ["Account abstraction ELI5" from Devcon Bogota](https://www.youtube.com/watch?v=QuYZWJj65AY)
 - [Vitalik's "Road to Account Abstraction" notes](https://notes.ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists)
 - [Vitalik's blog post on social recovery wallets](https://vitalik.ca/general/2021/01/11/recovery.html)
+- [About EIP2938](https://hackmd.io/@SamWilsn/ryhxoGp4D#What-is-EIP-2938)
+- [EIP-2938 documentation](https://eips.ethereum.org/EIPS/eip-2938)
+- [About EIP-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)
+- [EIP-4337 documentation](https://eips.ethereum.org/EIPS/eip-4337)

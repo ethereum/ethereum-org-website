@@ -41,21 +41,15 @@ KZG stands for Kate-Zaverucha-Goldberg - the names of the three [original author
 
 A KZG ceremony is a way for many people from across the Ethereum community to generate a secret random string of numbers together that can be used to verify some data. It is very important that this string of numbers is not known and cannot be recreated by anyone. To ensure this, each person that participates in the ceremony receives a string from the previous participant. They then create some new random values (e.g. by allowing their browser to measure the movement of their mouse) and mix it in with the previous value. They then send the value on to the next participant and destroy it from their local machine. As long as one person in the ceremony does this honestly, the final value will be unknowable to an attacker. The EIP-4844 KZG ceremony was open to the public and tens of thousands of people participated to add their own entropy. For the ceremony to be undermined, 100% of those participants would have to be actively dishonest. From the perspective of the participants, if they know they were honest, there is no need to trust anyone else because they know that they secured the ceremony (they individually satisfied the 1-out-of-N honest participant requirement).
 
-- [Watch Carl Beekhuizen's Devcon talk on trusted setups](https://archive.devcon.org/archive/watch/6/the-kzg-ceremony-or-how-i-learnt-to-stop-worrying-and-love-trusted-setups/?tab=YouTube)
-
 <ExpandableCard title="What is the random number from the KZG ceremony used for?" eventCategory="/roadmap/danksharding" eventName="clicked why is the random number from the KZG ceremony used for?">
 
 When a rollup posts data in a blob, they provide a "commitment" that they post on chain. This commitment is the result of evaluating a polynomial fit to the data at certain points. These points are defined by the random numbers generated in the KZG ceremony. Provers can then evaluate the polynomial at the same points in order to verify the data - if they arrive at the same values then the data is correct.
-
-[Read about KZG polynomial commitments](https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html)
 
 </ExpandableCard>
 
 <ExpandableCard title="Why does the KZG random data have to stay secret?" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
 
 If someone knows the random locations used for the commitment, it is easy for them to generate a new polynomial that fits at those specific points (i.e. a "collision"). This means they could add or remove data from the blob and still provide a valid proof. To prevent this, instead of giving provers the actual secret locations, they actually receive the locations wrapped in a cryptographic "black box" using elliptic curves. These effectively scramble the values in such a way that the original values cannot be reverse-engineered, but with some clever algebra provers and verifiers can still evaluate polynomials at the points they represent.
-
-- [Watch Dankrad explain the KZG commitments and proofs in detail](https://youtu.be/8L2C6RDMV9Q)
 
 </ExpandableCard>
 
@@ -79,8 +73,6 @@ Proposer-builder separation is required to prevent individual validators from ha
 
 Data availability sampling is required for validators to quickly and efficiently verify blob data. Using data availability sampling, the validators can be very certain that the blob data was available and correctly committed. Every validator can randomly sample just a few data points and create a proof, meaning no validator has to check the entire blob. If any data is missing, it will be identified quickly and the blob rejected.
 
-[More on data availability sampling for blobs](https://hackmd.io/@vbuterin/sharding_proposal#ELI5-data-availability-sampling)
-
 </ExpandableCard>
 
 ### Current progress {#current-progress}
@@ -93,3 +85,7 @@ Full Danksharding is several years away. However, Proto-Danksharding should arri
 - [Dankrad's notes on Danksharding](https://notes.ethereum.org/@dankrad/new_sharding)
 - [Dankrad, Proto and Vitalik discuss Danksharding](https://www.youtube.com/watch?v=N5p0TB77flM)
 - [The KZG ceremony](https://ceremony.ethereum.org/)
+- [Carl Beekhuizen's Devcon talk on trusted setups](https://archive.devcon.org/archive/watch/6/the-kzg-ceremony-or-how-i-learnt-to-stop-worrying-and-love-trusted-setups/?tab=YouTube)
+- [More on data availability sampling for blobs](https://hackmd.io/@vbuterin/sharding_proposal#ELI5-data-availability-sampling)
+- [Dankrad Feist on KZG commitments and proofs](https://youtu.be/8L2C6RDMV9Q)
+- [KZG polynomial commitments](https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html)
