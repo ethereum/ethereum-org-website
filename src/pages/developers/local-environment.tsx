@@ -5,6 +5,7 @@ import {
   Heading,
   Img,
   ListItem,
+  SimpleGrid,
   Text,
   UnorderedList,
 } from "@chakra-ui/react"
@@ -17,17 +18,20 @@ import { shuffle } from "lodash"
 import Translation from "../../components/Translation"
 import PageMetadata from "../../components/PageMetadata"
 import ProductCard from "../../components/ProductCard"
-import {
-  Content,
-  CardGrid,
-  Page,
-} from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
 
 import { translateMessageId, TranslationKey } from "../../utils/translations"
 import { getImage } from "../../utils/image"
 
 import { ChildOnlyProp, Context } from "../../types"
+
+const Content = ({ children }: ChildOnlyProp) => {
+  return (
+    <Box py={4} px={8} w="full">
+      {children}
+    </Box>
+  )
+}
 
 const Column = ({ children }: ChildOnlyProp) => {
   return (
@@ -264,7 +268,7 @@ const ChooseStackPage = ({
             />
           </Column>
         </Flex>
-        <CardGrid>
+        <SimpleGrid minChildWidth="min(100%, 280px)" spacing={8}>
           {frameworks.map((framework, idx) => (
             <ProductCard
               key={idx}
@@ -279,7 +283,7 @@ const ChooseStackPage = ({
               <Translation id={framework.description} />
             </ProductCard>
           ))}
-        </CardGrid>
+        </SimpleGrid>
       </Content>
       <Content>
         <FeedbackCard />
