@@ -8,7 +8,6 @@
   "consensus-client-nimbus-logo-alt": "Nimbusロゴ",
   "consensus-client-prysm-logo-alt": "Prysmロゴ",
   "consensus-client-teku-logo-alt": "Tekuロゴ",
-  "consensus-client-under-review": "レビューおよび監査中",
   "page-upgrades-answer-1": "ビーコンチェーンは、マージでイーサリアムメインネットをアップグレードするためのツールとして使用されました。",
   "page-upgrades-answer-2": "マージはこれまでにない大規模なアップグレードとなり、プルーフ・オブ・ワークからプルーフ・オブ・ステークをベースとした新しいコンセンサスレイヤーへの移行が行われました。",
   "page-upgrades-answer-4": "ビーコンチェーンは、今日のプルーフ・オブ・ステークをベースとしたイーサリアムを開発するために使用されました。ビーコンチェーンは、イーサリアムメインネットとは別個に実行されたため、実環境での使用前に、デベロッパー達は分離した別環境で合意メカニズムを確認できました。",

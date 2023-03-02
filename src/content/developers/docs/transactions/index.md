@@ -100,7 +100,7 @@ Example response:
 }
 ```
 
-- the `raw` is the signed transaction in Recursive Length Prefix (RLP) encoded form
+- the `raw` is the signed transaction in [Recursive Length Prefix (RLP)](https://ethereum.org/en/developers/docs/data-structures-and-encoding/rlp) encoded form
 - the `tx` is the signed transaction in JSON form
 
 With the signature hash, the transaction can be cryptographically proven that it came from the sender and submitted to the network.
