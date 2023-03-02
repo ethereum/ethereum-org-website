@@ -1,17 +1,29 @@
 // Libraries
-import React from "react"
-import styled from "@emotion/styled"
+import React, { ReactNode } from "react"
+import {
+  Box,
+  Center,
+  Flex,
+  Grid,
+  Heading,
+  HeadingProps,
+  ListItem,
+  Text,
+  UnorderedList,
+  useTheme,
+} from "@chakra-ui/react"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 
 // Components
-import { CardGrid as OriginalCardGrid } from "../../components/SharedStyledComponents"
 import ButtonLink from "../../components/ButtonLink"
 import DocLink from "../../components/DocLink"
 import FeedbackCard from "../../components/FeedbackCard"
 import Link from "../../components/Link"
-import OriginalCard from "../../components/Card"
+import OriginalCard, {
+  IProps as IOriginalCardProps,
+} from "../../components/Card"
 import PageHero from "../../components/PageHero"
 import PageMetadata from "../../components/PageMetadata"
 import StakingHomeTableOfContents from "../../components/Staking/StakingHomeTableOfContents"
@@ -23,173 +35,86 @@ import { translateMessageId, isLangRightToLeft } from "../../utils/translations"
 import { getImage } from "../../utils/image"
 
 // Types
-import type { Context } from "../../types"
+import type { ChildOnlyProp, Context } from "../../types"
 
-// Styles
-const Container = styled.div`
-  position: relative;
-  width: 100%;
-`
+const Card = ({ children, ...props }: IOriginalCardProps) => {
+  return (
+    <OriginalCard
+      justifyContent="space-between"
+      sx={{
+        h3: {
+          mt: 0,
+        },
+      }}
+      {...props}
+    >
+      {children}
+    </OriginalCard>
+  )
+}
 
-const HeroBackground = styled.div`
-  background: ${(props) => props.theme.colors.layer2Gradient};
-`
+const CardImage = ({ children }: ChildOnlyProp) => {
+  return (
+    <Center textAlign="center" mb={4}>
+      {children}
+    </Center>
+  )
+}
 
-const HeroContainer = styled.div``
+const DocsContainer = ({ children }: ChildOnlyProp) => {
+  return (
+    <Flex mx={{ base: 0, xl: 36 }} direction="column" gap="0.8rem">
+      {children}
+    </Flex>
+  )
+}
 
-const Hero = styled(PageHero)`
-  padding-bottom: 2rem;
-`
+const AdditionalReadingHeader = ({ children }: ChildOnlyProp) => {
+  return (
+    <Heading as="h3" mt={16} fontSize="xl" fontWeight="bold" textAlign="center">
+      {children}
+    </Heading>
+  )
+}
 
-const Page = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0 auto 4rem;
+const Section = ({ children }: ChildOnlyProp) => {
+  return (
+    <Box as="section" mt={24} _first={{ mt: 0 }}>
+      {children}
+    </Box>
+  )
+}
 
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 4rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
+const CardGrid = ({ children }: ChildOnlyProp) => {
+  return (
+    <Grid
+      templateColumns="repeat(auto-fill, minmax(min(100%, 280px), 1fr))"
+      gap={8}
+      mt={8}
+    >
+      {children}
+    </Grid>
+  )
+}
 
-const InfoColumn = styled.aside`
-  display: flex;
-  flex-direction: column;
-  position: sticky;
-  top: 6.25rem; /* account for navbar */
-  height: calc(100vh - 80px);
-  flex: 0 1 330px;
-  margin: 0 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
+const H2 = ({ children, ...props }: HeadingProps) => {
+  return (
+    <Heading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4} {...props}>
+      {children}
+    </Heading>
+  )
+}
 
-const InfoTitle = styled.h2`
-  font-size: 3rem;
-  font-weight: 700;
-  text-align: right;
-  margin-top: 0rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    text-align: left;
-    font-size: 2.5rem
-    display: none;
-  }
-`
-
-const ContentContainer = styled.article`
-  flex: 1 1 ${(props) => props.theme.breakpoints.l};
-  position: relative;
-  padding: 2rem;
-  padding-top: 0rem;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.l}) {
-    h2:first-of-type {
-      margin-top: 0;
-    }
-  }
-
-  .featured {
-    padding-left: 1rem;
-    margin-left: -1rem;
-    border-left: 1px dotted ${(props) => props.theme.colors.primary};
-  }
-
-  .citation {
-    p {
-      color: ${(props) => props.theme.colors.text200};
-    }
-  }
-`
-const Card = styled(OriginalCard)`
-  justify-content: space-between;
-  h3 {
-    margin-top: 0;
-  }
-`
-
-const CardGradient = styled(Card)`
-  justify-content: start;
-  background: ${(props) => props.theme.colors.cardGradient};
-
-  ul {
-    flex: 1;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    margin-bottom: 0;
-  }
-`
-
-const CardImage = styled.div`
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
-`
-
-const DocsContainer = styled.div`
-  margin: 0 9rem;
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 0.8rem;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    margin: 0;
-  }
-`
-
-const AdditionalReadingHeader = styled.h3`
-  margin-top: 4rem;
-  font-size: 1.2rem;
-  font-weight: 700;
-  text-align: center;
-`
-
-const Banner = styled.div`
-  margin: 3rem 0;
-  display: flex;
-  border-radius: 10px;
-  overflow: hidden;
-  background: ${(props) => props.theme.colors.cardGradient};
-
-  h3 {
-    margin-top: 0;
-  }
-
-  ul {
-    margin-bottom: 0;
-  }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-flow: column nowrap;
-  }
-`
-
-const BannerBody = styled.div`
-  padding: 3rem;
-`
-
-const BannerImage = styled.div`
-  align-self: end;
-`
-
-const Section = styled.section`
-  margin-top: 6rem;
-  &:first-of-type {
-    margin-top: 0;
-  }
-`
-
-const CardGrid = styled(OriginalCardGrid)`
-  margin-top: 2rem;
-`
+const H3 = ({ children, ...props }: HeadingProps) => {
+  return (
+    <Heading as="h3" fontSize={{ base: "xl", md: "2xl" }} {...props}>
+      {children}
+    </Heading>
+  )
+}
 
 const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
+  const theme = useTheme()
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale as Lang)
 
@@ -239,38 +164,70 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
   }
 
   return (
-    <Container>
+    <Box position="relative" w="full">
       <PageMetadata
         title={translateMessageId("hero-title", intl)}
         description={translateMessageId("hero-subtitle", intl)}
       />
 
-      <HeroBackground>
-        <HeroContainer>
-          <Hero content={heroContent} isReverse />
-        </HeroContainer>
-      </HeroBackground>
+      <Box bg="layer2Gradient">
+        <Box>
+          <Box as={PageHero} pb={8} content={heroContent} isReverse />
+        </Box>
+      </Box>
 
-      <Page dir={isRightToLeft ? "rtl" : "ltr"}>
-        <InfoColumn>
-          <InfoTitle>
+      <Flex
+        direction={{ base: "column", lg: "row" }}
+        justifyContent="space-between"
+        w="full"
+        mb={16}
+        mx="auto"
+        pt={{ lg: 16 }}
+        dir={isRightToLeft ? "rtl" : "ltr"}
+      >
+        <Box
+          as="aside"
+          display={{ base: "none", lg: "flex" }}
+          flexDirection="column"
+          position="sticky"
+          top="6.25rem" // account for navbar
+          h="calc(100vh - 80px)"
+          flex="0 1 330px"
+          mx={8}
+        >
+          <Heading
+            lineHeight={1.4}
+            fontSize={{ base: "2.5rem", lg: "5xl" }}
+            fontWeight="bold"
+            textAlign={{ base: "left", lg: "right" }}
+            mt={0}
+            display={{ base: "none", lg: "block" }}
+          >
             <Translation id="toc-learn-hub" />
-          </InfoTitle>
+          </Heading>
           <StakingHomeTableOfContents items={tocItems} />
-        </InfoColumn>
+        </Box>
 
-        <ContentContainer id="content">
+        <Box
+          as="article"
+          flex={`1 1 ${theme.breakpoints.l}`}
+          pb={8}
+          px={8}
+          id="content"
+        >
           <Section>
-            <h2 id={tocItems[0].id}>{tocItems[0].title}</h2>
-            <p>
+            <H2 mt={{ lg: 0 }} id={tocItems[0].id}>
+              {tocItems[0].title}
+            </H2>
+            <Text>
               <Translation id="what-is-crypto-1" />{" "}
               <Link to="/what-is-ethereum/">
                 <Translation id="what-is-crypto-link-1" />
               </Link>
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="what-is-crypto-2" />
-            </p>
+            </Text>
             <CardGrid>
               <Card
                 title={translateMessageId("what-is-ethereum-card-title", intl)}
@@ -357,10 +314,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           </Section>
 
           <Section>
-            <h2 id={tocItems[1].id}>{tocItems[1].title}</h2>
-            <p>
+            <H2 id={tocItems[1].id}>{tocItems[1].title}</H2>
+            <Text>
               <Translation id="how-do-i-use-ethereum-1" />
-            </p>
+            </Text>
             <CardGrid>
               <Card
                 title={translateMessageId("what-is-a-wallet-card-title", intl)}
@@ -424,28 +381,34 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
               </Card>
             </CardGrid>
 
-            <Banner>
-              <BannerBody>
-                <h3>
+            <Flex
+              my={12}
+              borderRadius="10px"
+              overflow="hidden"
+              bg="cardGradient"
+              direction={{ base: "column", lg: "row" }}
+            >
+              <Box p={12}>
+                <H3 mt={0}>
                   <Translation id="things-to-consider-banner-title" />
-                </h3>
-                <ul>
-                  <li>
+                </H3>
+                <UnorderedList mb={0}>
+                  <ListItem>
                     <Translation id="things-to-consider-banner-1" />
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <Translation id="things-to-consider-banner-2" />{" "}
                     <Link to="/layer-2/">
                       <Translation id="things-to-consider-banner-layer-2" />
                     </Link>
                     .
-                  </li>
-                </ul>
-              </BannerBody>
-              <BannerImage>
+                  </ListItem>
+                </UnorderedList>
+              </Box>
+              <Box alignSelf="end">
                 <GatsbyImage image={getImage(data.newRings)!} alt="" />
-              </BannerImage>
-            </Banner>
+              </Box>
+            </Flex>
 
             <AdditionalReadingHeader>
               <Translation id="additional-reading-more-on-using-ethereum" />
@@ -467,10 +430,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           </Section>
 
           <Section>
-            <h2 id={tocItems[2].id}>{tocItems[2].title}</h2>
-            <p>
+            <H2 id={tocItems[2].id}>{tocItems[2].title}</H2>
+            <Text>
               <Translation id="what-is-ethereum-used-for-1" />
-            </p>
+            </Text>
             <CardGrid>
               <Card
                 title={translateMessageId("defi-card-title", intl)}
@@ -549,46 +512,54 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   </ButtonLink>
                 </>
               </Card>
-              <CardGradient
+              <Card
+                justifyContent="start"
+                bg="cardGradient"
                 title={translateMessageId("emerging-use-cases-title", intl)}
                 description={translateMessageId(
                   "emerging-use-cases-description",
                   intl
                 )}
               >
-                <ul>
-                  <li>
+                <UnorderedList
+                  flex={1}
+                  display="flex"
+                  flexDirection="column"
+                  justifyContent="center"
+                  mb={0}
+                >
+                  <ListItem>
                     <Link to="/decentralized-identity/">
                       <Translation id="decentralized-identity" />
                     </Link>
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <Link to="/social-networks/">
                       <Translation id="decentralized-social-networks" />
                     </Link>
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <Link to="/desci/">
                       <Translation id="decentralized-science" />
                     </Link>
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <Link to="https://decrypt.co/resources/what-are-play-to-earn-games-how-players-are-making-a-living-with-nfts">
                       <Translation id="play-to-earn" />
                     </Link>
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <Link to="https://woodstockfund.medium.com/quadratic-funding-better-way-to-fund-public-goods-76f1679b2ba2">
                       <Translation id="fundraising-through-quadratic-funding" />
                     </Link>
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <Link to="https://hbr.org/2022/01/how-walmart-canada-uses-blockchain-to-solve-supply-chain-challenges">
                       <Translation id="supply-chain-management" />
                     </Link>
-                  </li>
-                </ul>
-              </CardGradient>
+                  </ListItem>
+                </UnorderedList>
+              </Card>
             </CardGrid>
 
             <AdditionalReadingHeader>
@@ -605,10 +576,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           </Section>
 
           <Section>
-            <h2 id={tocItems[3].id}>{tocItems[3].title}</h2>
-            <p>
+            <H2 id={tocItems[3].id}>{tocItems[3].title}</H2>
+            <Text>
               <Translation id="strengthening-the-ethereum-network-description" />
-            </p>
+            </Text>
             <CardGrid>
               <Card
                 title={translateMessageId("staking-ethereum-card-title", intl)}
@@ -649,10 +620,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           </Section>
 
           <Section>
-            <h2 id={tocItems[4].id}>{tocItems[4].title}</h2>
-            <p>
+            <H2 id={tocItems[4].id}>{tocItems[4].title}</H2>
+            <Text>
               <Translation id="learn-about-ethereum-protocol-description" />
-            </p>
+            </Text>
             <CardGrid>
               <Card
                 title={translateMessageId(
@@ -739,10 +710,10 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           </Section>
 
           <Section>
-            <h2 id={tocItems[5].id}>{tocItems[5].title}</h2>
-            <p>
+            <H2 id={tocItems[5].id}>{tocItems[5].title}</H2>
+            <Text>
               <Translation id="ethereum-community-description" />
-            </p>
+            </Text>
             <CardGrid>
               <Card
                 title={translateMessageId("community-hub-card-title", intl)}
@@ -802,153 +773,153 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
           </Section>
 
           <Section>
-            <h2 id={tocItems[6].id}>{tocItems[6].title}</h2>
-            <div>
-              <h3>
+            <H2 id={tocItems[6].id}>{tocItems[6].title}</H2>
+            <Box>
+              <H3>
                 <Translation id="books-about-ethereum" />
-              </h3>
-              <ul>
-                <li>
+              </H3>
+              <UnorderedList>
+                <ListItem>
                   <Link to="https://www.goodreads.com/book/show/57356067-the-cryptopians">
                     <Translation id="cryptopians-title" />
                   </Link>{" "}
-                  <i>
+                  <Text as="i">
                     <Translation id="cryptopians-description" />
-                  </i>
-                </li>
-                <li>
+                  </Text>
+                </ListItem>
+                <ListItem>
                   <Link to="https://www.goodreads.com/book/show/55360267-out-of-the-ether">
                     <Translation id="out-of-the-ether-title" />
                   </Link>{" "}
-                  <i>
+                  <Text as="i">
                     <Translation id="out-of-the-ether-description" />
-                  </i>
-                </li>
-                <li>
+                  </Text>
+                </ListItem>
+                <ListItem>
                   <Link to="https://www.goodreads.com/en/book/show/50175330-the-infinite-machine">
                     <Translation id="the-infinite-machine-title" />
                   </Link>{" "}
-                  <i>
+                  <Text as="i">
                     <Translation id="the-infinite-machine-description" />
-                  </i>
-                </li>
-                <li>
+                  </Text>
+                </ListItem>
+                <ListItem>
                   <Link to="https://www.goodreads.com/en/book/show/22174460-the-age-of-cryptocurrency">
                     <Translation id="the-age-of-cryptocurrency-title" />
                   </Link>{" "}
-                  <i>
+                  <Text as="i">
                     <Translation id="the-age-of-cryptocurrency-description" />
-                  </i>
-                </li>
-                <li>
+                  </Text>
+                </ListItem>
+                <ListItem>
                   <Link to="https://www.goodreads.com/en/book/show/34964890-the-truth-machine">
                     <Translation id="the-truth-machine-title" />
                   </Link>{" "}
-                  <i>
+                  <Text as="i">
                     <Translation id="the-truth-machine-description" />
-                  </i>
-                </li>
-                <li>
+                  </Text>
+                </ListItem>
+                <ListItem>
                   <Link to="https://www.goodreads.com/book/show/23546676-digital-gold">
                     <Translation id="digital-gold-title" />
                   </Link>{" "}
-                  <i>
+                  <Text as="i">
                     <Translation id="digital-gold-description" />
-                  </i>
-                </li>
-                <li>
+                  </Text>
+                </ListItem>
+                <ListItem>
                   <Link to="https://www.goodreads.com/en/book/show/56274031-kings-of-crypto">
                     <Translation id="kings-of-crypto-title" />
                   </Link>{" "}
-                  <i>
+                  <Text as="i">
                     <Translation id="kings-of-crypto-description" />
-                  </i>
-                </li>
-                <li>
+                  </Text>
+                </ListItem>
+                <ListItem>
                   <Link to="https://github.com/ethereumbook/ethereumbook">
                     <Translation id="mastering-ethereum-title" />
                   </Link>{" "}
-                  <i>
+                  <Text as="i">
                     <Translation id="mastering-ethereum-description" />{" "}
-                  </i>
-                </li>
-                <li>
+                  </Text>
+                </ListItem>
+                <ListItem>
                   <Link to="https://www.goodreads.com/en/book/show/59892281-proof-of-stake">
                     <Translation id="proof-of-stake-title" />
                   </Link>{" "}
-                  <i>
+                  <Text as="i">
                     <Translation id="proof-of-stake-description" />
-                  </i>
-                </li>
-              </ul>
-              <h3>
+                  </Text>
+                </ListItem>
+              </UnorderedList>
+              <H3>
                 <Translation id="podcasts-about-ethereum" />
-              </h3>
-              <ul>
-                <li>
+              </H3>
+              <UnorderedList>
+                <ListItem>
                   <Link to="http://podcast.banklesshq.com/">
                     <Translation id="bankless-title" />
                   </Link>{" "}
-                  <i>
+                  <Text as="i">
                     <Translation id="bankless-description" />
-                  </i>
-                </li>
-                <li>
+                  </Text>
+                </ListItem>
+                <ListItem>
                   <Link to="https://uncommoncore.co/podcast/">
                     <Translation id="uncommon-core-title" />
                   </Link>{" "}
-                  <i>
+                  <Text as="i">
                     <Translation id="uncommon-core-description" />
-                  </i>
-                </li>
-                <li>
+                  </Text>
+                </ListItem>
+                <ListItem>
                   <Link to="https://www.zeroknowledge.fm/">
                     <Translation id="zeroknowledge-title" />
                   </Link>{" "}
-                  <i>
+                  <Text as="i">
                     <Translation id="zeroknowledge-description" />
-                  </i>
-                </li>
-                <li>
+                  </Text>
+                </ListItem>
+                <ListItem>
                   <Link to="https://epicenter.tv/">
                     <Translation id="epicenter-title" />
                   </Link>{" "}
-                  <i>
+                  <Text as="i">
                     <Translation id="epicenter-description" />
-                  </i>
-                </li>
-                <li>
+                  </Text>
+                </ListItem>
+                <ListItem>
                   <Link to="https://unchainedpodcast.com/">
                     <Translation id="unchained-title" />
                   </Link>{" "}
-                  <i>
+                  <Text as="i">
                     <Translation id="unchained-description" />
-                  </i>
-                </li>
-                <li>
+                  </Text>
+                </ListItem>
+                <ListItem>
                   <Link to="https://www.intothebytecode.xyz/">
                     <Translation id="into-the-bytecode-title" />
                   </Link>{" "}
-                  <i>
+                  <Text as="i">
                     <Translation id="into-the-bytecode-description" />
-                  </i>
-                </li>
-                <li>
+                  </Text>
+                </ListItem>
+                <ListItem>
                   <Link to="https://www.youtube.com/@TheDailyGwei/">
                     <Translation id="the-daily-gwei-title" />
                   </Link>{" "}
-                  <i>
+                  <Text as="i">
                     <Translation id="the-daily-gwei-description" />
-                  </i>
-                </li>
-              </ul>
-            </div>
+                  </Text>
+                </ListItem>
+              </UnorderedList>
+            </Box>
           </Section>
 
           <FeedbackCard />
-        </ContentContainer>
-      </Page>
-    </Container>
+        </Box>
+      </Flex>
+    </Box>
   )
 }
 
