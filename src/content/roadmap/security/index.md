@@ -36,3 +36,7 @@ Implementing proposer-builder separation (PBS) will drastically improve Ethereum
 Although it is unlikely, it is possible that a sophisticated attacker could identify upcoming validators and spam them to prevent them from proposing blocks. Implementing [**secret leader election (SLE)**](/roadmap/secret-leader-election) will protect against this type of attack by preventing block proposers from being knowable in advance. This works by continually shuffling a set of cryptographic commitments representing candidate block proposers and using their order to determine which validator is selected in such a way that only the validators themselves know their ordering in advance.
 
 <ButtonLink variant="outline-color" to="/roadmap/secret-leader-election">Read about secret leader election</ButtonLink>
+
+## Current progress {#current-progress}
+
+Staking withdrawals are the next major uprade coming to Ethereum. They should ship in Q1/Q2 2023. They have already been rolled out on public testnets and the next step in launching on Ethereum Mainnet. The other security upgrades on the roadmap are in advanced stages of research, but they are not expected to be implemented for some time. The next steps for view-merge, PBS, SSF and SLE is to finalize a specification and start building prototypes.

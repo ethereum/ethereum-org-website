@@ -27,6 +27,10 @@ There are several updates that will be made to the [Ethereum Virtual Machine (EV
 
 Similarly, there are updates that can be made to other parts of present-day Ethereum clients. One example is that current execution and consensus clients use a different type of data compression. It will be much easier and more intuitive to share data between clients when the compression scheme is unified across the whole network.
 
+## Current progress {#current-progress}
+
+Most of the upgrades required for future-proofing Ethereum are still in the research phase and may be several years away from being implemented. Upgrades such as removing SELF-DESTRUCT and harmonizing the compression scheme used in the execution and consensus clients are likely to come sooner than quantum resistant cryptography.
+
 **Further reading**
 
 - [Gas](/developers/docs/gas)
