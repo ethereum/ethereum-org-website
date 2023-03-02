@@ -18,8 +18,8 @@ Anyone! Ethereum.org is entirely open source, and many of its best pages are sub
 
 ## Audience {#audience}
 
-- 60% of our website visitors do not own any Ether according to our survey responses.
-- 50% of visitors identify themselves as newcomers to the crypto space.
+- 60% of our website visitors do not own any Ether according to our survey responses
+- 50% of visitors identify themselves as newcomers to the crypto space
 
 **Common reading-related problems:**
 
@@ -32,8 +32,8 @@ Anyone! Ethereum.org is entirely open source, and many of its best pages are sub
 
 **Takeaways**:
 
-- operate with a mindset that people are curious about crypto, but not invested enough to spend hours exploring the topics
-- users want to understand how the topic relates to them and how they can take a part in it rather than going deep into the theory
+- Operate with a mindset that people are curious about crypto, but not invested enough to spend hours exploring the topics
+- Users want to understand how the topic relates to them and how they can take a part in it rather than going deep into the theory
 
 Loosely we can categorize the site audiences as:
 
@@ -89,11 +89,11 @@ People, businesses, and other organizations who want to understand Ethereum's va
 
 **Style**
 
-- [ ]  Focus on the advantages for the user instead of explaining technical details about the system.
-- [ ]  Use active voice and clear, concise sentences that are easy to follow.
-- [ ]  Break up longer chunks of text into smaller sections or paragraphs.
+- [ ]  Focus on the advantages for the user instead of explaining technical details about the system
+- [ ]  Use active voice and clear, concise sentences that are easy to follow
+- [ ]  Break up longer chunks of text into smaller sections or paragraphs
 - [ ]  Consider using tables, bullet points or numbered lists instead of paragraphs
-- [ ]  Highlight (bold) key phrases to support scanning and skimming through the article.
+- [ ]  Highlight (bold) key phrases to support scanning and skimming through the article
 
 **Content ideas:**
 
@@ -107,8 +107,8 @@ People, businesses, and other organizations who want to understand Ethereum's va
 
 **Other**:
 
-- [ ]  The optimal size of a page is up to 1000 words (1500 max)
-- [ ]  Limit number of hyperlinks to approximately 5 per 1000 words (excluding further reading section at the bottom of the page or product listings)
+- [ ]  Limit the legth of the article up to 1000 words (1500 max)
+- [ ]  Reduce the number of hyperlinks to approximately 5 per 1000 words (excluding further reading section at the bottom of the page or product listings)
 
 ### Objectivity {#objectivity}
 
