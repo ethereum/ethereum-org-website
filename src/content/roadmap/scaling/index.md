@@ -9,9 +9,7 @@ template: roadmap
 
 Ethereum is scaling through [rollups](/layer-2/#rollups), which batch transactions together and send the output to Ethereum. Even though rollups are up to eight times less expensive than Ethereum Mainnet, it's possible to optimize rollups further to reduce costs for end users. Rollups also rely on some centralized components that developers can remove as the rollups mature.
 
-<InfoBanner mb={8}>
-  <h4 style="margin-top: 0">Transaction costs</h4>
-
+<InfoBanner mb={8} title="Transaction costs">
   <ul style="margin-bottom: 0">
     <li>Today’s rollups are <strong>3-8x</strong> cheaper than Ethereum layer 1</li>
     <li>ZK-rollups will soon lower fees by <strong>40-100x</strong></li>
@@ -24,11 +22,11 @@ Ethereum is scaling through [rollups](/layer-2/#rollups), which batch transactio
 
 Rollups collect large numbers of transactions, execute them and post the results to Ethereum. This generates a lot of data that needs to be available so that someone other than the rollup operator can execute the transactions and verify the correctness or raise a challenge.
 
-### Proto-danksharding {#proto-danksharding}
+### Proto-danksharding {#proto-danksharding}
 
 Rollup data is stored on Ethereum permanently, which is expensive. Over 90% of the transaction cost users pay on rollups is due to this data storage. To reduce transaction costs, we can move the data into a new temporary 'blob' storage. Blobs are cheaper because they are not permanent; they get deleted once they are no longer needed. Adding blob transactions to Ethereum is part of an upgrade known as "Proto-Danksharding". It is expected to be shipped relatively soon—perhaps in late 2023.
 
-After blob transactions have become part of the Ethereum protocol, it will be possible to add many blobs to Ethereum blocks. This will be another substantial scale-up to Ethereum’s throughput and scale-down in transaction costs. 
+After blob transactions have become part of the Ethereum protocol, it will be possible to add many blobs to Ethereum blocks. This will be another substantial scale-up to Ethereum’s throughput and scale-down in transaction costs.
 
 ### Danksharding {#danksharding}
 
