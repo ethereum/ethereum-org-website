@@ -3,6 +3,7 @@ import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import React, { useState } from "react"
 import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
+import { Stack, Text } from "@chakra-ui/react"
 
 // Components
 import ButtonLink from "../ButtonLink"
@@ -11,6 +12,10 @@ import Translation from "../Translation"
 import { StyledSelect as Select } from "../SharedStyledComponents"
 
 // Data
+import {
+  cexOnboardData,
+  CexOnboard,
+} from "../../data/layer-2/cex-layer-2-onboard"
 import cexSupport from "../../data/layer-2/cex-layer-2-support.json"
 
 //Utils
@@ -190,6 +195,10 @@ interface ExchangeOption extends Option {
   cex: Exchange
 }
 
+interface CexOnboardOption extends Option {
+  cexOnboard: CexOnboard
+}
+
 export interface IProps {
   layer2DataCombined: Array<Layer2>
   ethIcon: IGatsbyImageData
@@ -203,8 +212,13 @@ const Layer2Onboard: React.FC<IProps> = ({
 }) => {
   const intl = useIntl()
 
-  const [selectedExchange, setSelectedExchange] = useState<Exchange>()
-  const [selectedL2, setSelectedL2] = useState<Layer2>()
+  const [selectedCexOnboard, setSelectedCexOnboard] = useState<
+    CexOnboard | undefined
+  >(undefined)
+  const [selectedExchange, setSelectedExchange] = useState<
+    Exchange | undefined
+  >(undefined)
+  const [selectedL2, setSelectedL2] = useState<Layer2 | undefined>(undefined)
 
   const layer2Options: Array<Layer2Option> = layer2DataCombined.map((l2) => {
     return {
@@ -223,6 +237,50 @@ const Layer2Onboard: React.FC<IProps> = ({
       }
     }
   )
+
+  const cexOnboardOptions: Array<CexOnboardOption> = cexOnboardData.map(
+    (cexOnboard: CexOnboard) => {
+      return {
+        label: cexOnboard.name,
+        value: cexOnboard.name,
+        cexOnboard: cexOnboard,
+      }
+    }
+  )
+
+  const formatGroupLabel = (data) => {
+    return data.label ? (
+      <Stack borderTop="2px solid" m={0}>
+        <Text mb={0} mt={2} textTransform="none" color="theme.colors.text">
+          {data.label}
+        </Text>
+      </Stack>
+    ) : (
+      <></>
+    )
+  }
+
+  const selectExchangeOnboard = (option: ExchangeOption | CexOnboardOption) => {
+    if (Object.hasOwn(option, "cex")) {
+      trackCustomEvent({
+        eventCategory: `Selected cex to onboard`,
+        eventAction: `Clicked`,
+        eventName: `${option.cex.name} selected`,
+        eventValue: `${option.cex.name}`,
+      })
+      setSelectedExchange(option.cex)
+      setSelectedCexOnboard(undefined)
+    } else {
+      trackCustomEvent({
+        eventCategory: `Selected cexOnboard to onboard`,
+        eventAction: `Clicked`,
+        eventName: `${option.cexOnboard.name} selected`,
+        eventValue: `${option.cexOnboard.name}`,
+      })
+      setSelectedCexOnboard(option.cexOnboard)
+      setSelectedExchange(undefined)
+    }
+  }
 
   return (
     <Content>
@@ -308,20 +366,24 @@ const Layer2Onboard: React.FC<IProps> = ({
           <StyledSelect
             className="react-select-container"
             classNamePrefix="react-select"
-            options={cexSupportOptions}
-            onChange={(selectedOption: ExchangeOption) => {
-              trackCustomEvent({
-                eventCategory: `Selected cex to onboard`,
-                eventAction: `Clicked`,
-                eventName: `${selectedOption.cex.name} selected`,
-                eventValue: `${selectedOption.cex.name}`,
-              })
-              setSelectedExchange(selectedOption.cex)
+            options={[
+              {
+                options: [...cexSupportOptions],
+              },
+              {
+                label:
+                  "Don't see you exchange? Use dapps to bridge directly from exchanges to layer 2.",
+                options: [...cexOnboardOptions],
+              },
+            ]}
+            onChange={(selectedOption: ExchangeOption | CexOnboardOption) => {
+              selectExchangeOnboard(selectedOption)
             }}
             placeholder={translateMessageId(
               "layer-2-onboard-exchange-input-placeholder",
               intl
             )}
+            formatGroupLabel={formatGroupLabel}
           />
         </RightSelect>
         <EthLogo>
@@ -355,6 +417,21 @@ const Layer2Onboard: React.FC<IProps> = ({
               <ButtonLink to={selectedExchange.url}>
                 {`${translateMessageId("layer-2-go-to", intl)} ${
                   selectedExchange.name
+                }`}
+              </ButtonLink>
+            </SelectedContainer>
+          </RightSelected>
+        )}
+        {selectedCexOnboard && (
+          <RightSelected>
+            <SelectedContainer>
+              <H3>Supported exchanges</H3>
+              <p>{selectedCexOnboard.cex_support.join(", ")}</p>
+              <H3>Supported layer 2s</H3>
+              <p>{selectedCexOnboard.network_support.join(", ")}</p>
+              <ButtonLink to={selectedCexOnboard.url}>
+                {`${translateMessageId("layer-2-go-to", intl)} ${
+                  selectedCexOnboard.name
                 }`}
               </ButtonLink>
             </SelectedContainer>
