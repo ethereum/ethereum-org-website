@@ -76,23 +76,23 @@ Read more on [Ethereum governance](https://ethereum.org/en/governance/)
 
 </InfoBanner>
 
-## Will Ethereum's roadmap change over time?
+## Will Ethereum's roadmap change over time? {#will-ethereum's-roadmap-change-over-time%3F}
 
 Yes—almost definitely. The roadmap is the current plan for upgrading Ethereum, covering both near-term and future plans. We expect the roadmap to change as new information and technology become available.
 
 Think of Ethereum's roadmap as a set of intentions for improving Ethereum; it is the core researchers' and developers' best hypothesize of Ethereum's most optimal path forward.
 
-## When will the roadmap be finished?
+## When will the roadmap be finished? {#when-will-the-roadmap-be-finished%3F}
 
 Ethereum will implement some upgrades in the next six months (e.g. staking withdrawals); others are lower priority and likely not to be implemented for the next 5-10 years (e.g. quantum resistance). Giving precise timing of each upgrade is complicated to predict as many roadmap items are worked on in parallel and developed at different speeds. The urgency of an upgrade can also change over time depending on external factors (e.g. a sudden leap in the performance and availability of quantum computers may make quantum-resistant cryptography more urgent).
 
 One way to think about Ethereum development is by analogy to biological evolution. A network that is able to adapt to new challenges and maintain fitness is more likely to succeed that one that is resistant to change, although as the network becomes more and more performant, scalable and secure fewer changes to the protocol will be required.
 
-## Do I have to do anything when there is an upgrade?
+## Do I have to do anything when there is an upgrade? {#do-i-have-to-do-anything-when-there-is-an-upgrade%3F}
 
 Upgrades tend not to impact end-users except by providing better user-experiences and a more secure protocol and perhaps more <i>options</i> for how to interact with Ethereum. End uses are not required to actively participate in an upgrade, nor are they required to do anything to secure their assets. Node operators will need to update their clients to prepare for an upgrade. Some upgrades may lead to changes for application developers. For example, history expiry upgrades may lead application developers to grab historical data from new sources.
 
-## What about The Verge, The Splurge, etc?
+## What about The Verge, The Splurge, etc? {#what-about-the-verge%2C-the-splurge%2C-etc%3F}
 
 [Vitalik Buterin proposed a vision for the Ethereum roadmap](https://twitter.com/VitalikButerin/status/1588669782471368704) that was organized into several categories linked by their effects on Ethereum's architecture. It included:
 
