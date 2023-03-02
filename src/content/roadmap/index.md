@@ -25,7 +25,7 @@ The Ethereum roadmap outlines the specific improvements that will be made to pro
 <CardGrid>
   <RoadmapActionCard
     to="/roadmap/scaling"
-    title="Faster, cheaper transactions"
+    title="Cheaper transactions"
     image="scaling"
     description="Rollups are too expensive and rely on centralized components, causing users to place too much trust in their operators. The roadmap includes fixes for both of these problems."
   >
