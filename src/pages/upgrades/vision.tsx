@@ -1,4 +1,4 @@
-import React, { ComponentPropsWithRef, ReactNode } from "react"
+import React, { ComponentPropsWithRef } from "react"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 import {
@@ -32,9 +32,7 @@ import FeedbackCard from "../../components/FeedbackCard"
 import { translateMessageId } from "../../utils/translations"
 import { getImage } from "../../utils/image"
 
-type ChildOnlyProp = {
-  children: ReactNode
-}
+import type { ChildOnlyProp } from "../../types"
 
 const Page = (props: ChildOnlyProp) => (
   <Flex direction="column" align="center" w="full" {...props} />
