@@ -35,14 +35,6 @@ EIP-4444 is not yet ready to ship, but it is under active discussion. Interestin
 
 This upgrade doesn't fundamentally change how Ethereum nodes handle state data, it just changes how historical data is accessed.
 
-**Further reading**
-
-- [EIP-4444 specification](https://eips.ethereum.org/EIPS/eip-4444)
-
-**Watch video**
-
-- [Watch Alex Stokes explain EIP-4444](https://youtu.be/SfDC_qUZaos)
-
 ### State expiry {#state-expiry}
 
 State expiry refers to removing state from individual nodes if it hasn't been accessed recently. There are several ways this could be implemented, including:
@@ -58,11 +50,6 @@ Similarly to history expiry, under state expiry responsibility for storing old s
 
 State expiry is still in the research phase and not yet ready to ship. State expiry may well happen later than stateless clients and history expiry because those upgrades make large state sizes easily manageable for the majority of validators.
 
-**Further reading**
-
-- [Read more on state expiry](https://hackmd.io/@vbuterin/state_size_management#A-more-moderate-solution-state-expiry)
-- [Read even more on state expiry](https://hackmd.io/@vbuterin/state_expiry_paths#Option-2-per-epoch-state-expiry)
-
 ## Statelessness {#statelessness}
 
 Statelessness is a bit of a misnomer because it does not mean the concept of "state" is eliminated, but it does involve changes to how Ethereum nodes handle state data. Statelessness itself comes in two flavors: weak statelessness and strong statelessness. Weak statelessness enables most nodes to go stateless by putting responsibility for state storage onto a few. Strong statelessness completely removes the need for any node to store the full state data. Both weak and strong statelessness offer the following benefits to normal validators:
@@ -72,11 +59,6 @@ Statelessness is a bit of a misnomer because it does not mean the concept of "st
 - nodes able to run with very low hardware requirements (e.g. on phones)
 - nodes can run on top of cheap hard drives because there is no disk reading/writing required
 - compatible with future upgrades to Ethereum's cryptography
-
-**Further reading**
-
-- [Read more on why it's so important to go stateless](https://dankradfeist.de/ethereum/2021/02/14/why-stateless.html)
-- [Read the original stateless client concept notes](https://ethresear.ch/t/the-stateless-client-concept/172)
 
 ### Weak Statelessness {#weak-statelessness}
 
@@ -113,3 +95,9 @@ Full statelessness is still in the research phase and is likely several years aw
 - [A theory of state size management](https://hackmd.io/@vbuterin/state_size_management)
 - [Resurrection-conflict-minimized state bounding](https://ethresear.ch/t/resurrection-conflict-minimized-state-bounding-take-2/8739)
 - [Paths to statelessness and state expiry](https://hackmd.io/@vbuterin/state_expiry_paths)
+- [EIP-4444 specification](https://eips.ethereum.org/EIPS/eip-4444)
+- [Alex Stokes on EIP-4444](https://youtu.be/SfDC_qUZaos)
+- [Why it's so important to go stateless](https://dankradfeist.de/ethereum/2021/02/14/why-stateless.html)
+- [The original stateless client concept notes](https://ethresear.ch/t/the-stateless-client-concept/172)
+- [More on state expiry](https://hackmd.io/@vbuterin/state_size_management#A-more-moderate-solution-state-expiry)
+- [Even more on state expiry](https://hackmd.io/@vbuterin/state_expiry_paths#Option-2-per-epoch-state-expiry)
