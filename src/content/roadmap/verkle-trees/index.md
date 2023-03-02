@@ -53,7 +53,7 @@ Verkle tree testnets are already up and running, but there are still substantial
 
 [Watch Guillaume Ballet explain the Condrieu Verkle testnet](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (note that the Condrieu testnet was proof-of-work and has now been superseded by the [Kaustinen testnet](https://kaustinen.ethdevops.io)).
 
-## Further Reading {#further-reading}
+## Further reading {#further-reading}
 
 - [Dankrad Feist explain Verkle trees on PEEPanEIP](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
 - [Guillaume Ballet explain verkle trees at ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
