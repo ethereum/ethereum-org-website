@@ -1,10 +1,23 @@
 ---
-title: Using consistent writing tips
+title: Content standartization
 description: Guide to use consistent terminology in content writing
 lang: en
 ---
 
 This style guide aims to standardize certain aspects of writing content to make the contribution process smoother.
+
+## Use American English {#american-english}
+
+For words that have multiple spellings, use American English over British English.
+
+**For example:**
+
+- "decentralized" over "decentralised"
+- "color" over "colour"
+- "analyze" over "analyse"
+
+## Terminology {#Terminology}
+
 
 ### Ethereum {#ethereum}
 
