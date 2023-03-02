@@ -59,7 +59,7 @@ If someone knows the random locations used for the commitment, it is easy for th
 
 </ExpandableCard>
 
-<InfoBanner isWarning>
+<InfoBanner isWarning mb={8}>
   Neither Danksharding nor Proto-Danksharding follow the traditional "sharding" model that aimed to split the blockchain into multiple parts. Shard chains are no longer part of the roadmap. Instead, Danksharding uses distributed data sampling across blobs to scale Ethereum. This is much simpler to implement. This m doel has sometimes been referred to as "data-sharding".
 </InfoBanner>
 
