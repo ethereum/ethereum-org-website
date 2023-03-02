@@ -108,7 +108,7 @@ People, businesses, and other organizations who want to understand Ethereum's va
 **Other**:
 
 - [ ]  The optimal size of a page is up to 1000 words (1500 max)
-- [ ]  Limit number of hyperlinks to approximately 5 hyperlinks per 1000 words (excluding further reading section at the bottom of the page or product listings)
+- [ ]  Limit number of hyperlinks to approximately 5 per 1000 words (excluding further reading section at the bottom of the page or product listings)
 
 ### Objectivity {#objectivity}
 
