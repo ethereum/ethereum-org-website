@@ -78,6 +78,8 @@ EIP-4337 is the first step towards native smart contract wallet support in a dec
 
 The way wallets work would also change under EIP-4337. Instead of each wallet re-implementing common but complex safety logic, those functions would be outsourced to a global wallet contract known as the "entry point". This would handle operations such as paying fees and executing EVM code so that wallet developers can focus on providing excellent user experiences.
 
+**Note** the EIP 4337 entry point contract was deployed to Ethereum Mainnet on 1st March 2023. You can see the contract on [Etherscan](https://etherscan.io/address/0x0576a174D229E3cFA37253523E645A78A0C91B57).
+
 **Further reading**
 
 - [About EIP-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)
