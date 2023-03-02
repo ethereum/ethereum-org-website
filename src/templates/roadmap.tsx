@@ -96,6 +96,9 @@ const ContentContainer = styled.article`
   position: relative;
   padding: 2rem;
   padding-top: 0rem;
+  p:first-of-type {
+    margin-top: 0;
+  }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.l}) {
     h2:first-of-type {
