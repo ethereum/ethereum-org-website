@@ -5,6 +5,7 @@ import { useIntl } from "react-intl"
 import {
   Box,
   Button,
+  ButtonProps,
   Flex,
   Heading,
   Img,
@@ -17,23 +18,24 @@ import ButtonLink from "../../components/ButtonLink"
 import CardList from "../../components/CardList"
 import Checkbox from "../../components/Checkbox"
 import CopyToClipboard from "../../components/CopyToClipboard"
-import Emoji from "../../components/OldEmoji"
+import Emoji from "../../components/Emoji"
 import InfoBanner from "../../components/InfoBanner"
 import Link from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import Tooltip from "../../components/Tooltip"
+import FeedbackCard from "../../components/FeedbackCard"
+
 import { DEPOSIT_CONTRACT_ADDRESS } from "../../data/addresses"
 import { translateMessageId, TranslationKey } from "../../utils/translations"
-import type { Context } from "../../types"
-import FeedbackCard from "../../components/FeedbackCard"
 import { getImage } from "../../utils/image"
 
-type ChildOnlyProp = { children: ReactNode }
+import type { ChildOnlyProp, Context } from "../../types"
 
 const FlexBox = (props: ChildOnlyProp) => (
   <Flex
-    sx={{ borderBottom: "border" }}
+    borderBottom="1px"
+    borderBottomColor="border"
     direction={{ base: "column", lg: "row" }}
     {...props}
   />
@@ -47,7 +49,7 @@ const RightColumn = (props: ChildOnlyProp) => (
   <Flex
     flex="1 1 50%"
     p={8}
-    pt={{ base: "1rem", lg: "8.5rem" }}
+    pt={{ base: 4, lg: "8.5rem" }}
     direction="column"
     alignItems="center"
     {...props}
@@ -120,7 +122,7 @@ const AddressCard = (props: ChildOnlyProp) => {
 const Address = (props: ChildOnlyProp) => (
   <Box
     fontFamily="monospace"
-    borderRadius="2px"
+    borderRadius="sm"
     fontSize="2rem"
     flexWrap="wrap"
     textTransform="uppercase"
@@ -130,21 +132,14 @@ const Address = (props: ChildOnlyProp) => (
   />
 )
 
-const CopyButton = (props: {
-  disabled?: boolean
-  onClick?: any
-  children: ReactNode
-}) => (
+const CopyButton = (props: ButtonProps) => (
   <Button
     variant="outline"
     mb={4}
-    mr={{ base: 0, md: "1.5rem" }}
-    mt={{ base: "1rem", md: "0" }}
-    isDisabled={props.disabled}
-    onClick={props.onClick}
-  >
-    {props.children}
-  </Button>
+    mr={{ base: 0, md: 6 }}
+    mt={{ base: 4, md: 0 }}
+    {...props}
+  />
 )
 
 const Row = (props: ChildOnlyProp) => (
@@ -159,7 +154,15 @@ const Row = (props: ChildOnlyProp) => (
 )
 
 const CardTitle = (props: ChildOnlyProp) => (
-  <Heading as="h2" mt="0" mb={4} fontWeight="600" fontSize="2rem" {...props} />
+  <Heading
+    as="h2"
+    mt={0}
+    mb={4}
+    fontWeight="600"
+    fontSize="2rem"
+    lineHeight={1.4}
+    {...props}
+  />
 )
 
 const Caption = (props: ChildOnlyProp) => (
@@ -167,13 +170,13 @@ const Caption = (props: ChildOnlyProp) => (
     color="text200"
     fontWeight="400"
     fontSize="sm"
-    mb={["2rem", "2rem", "0"]}
+    mb={[8, 8, 0]}
     {...props}
   />
 )
 
 const Blockie = (props: { src: string }) => (
-  <Img src={props.src} borderRadius="4px" height={16} width={16} />
+  <Img src={props.src} borderRadius="base" height={16} width={16} />
 )
 
 const StyledFakeLink = (props: { onClick: any; children: ReactNode }) => (
@@ -420,11 +423,11 @@ const DepositContractPage = ({
                   </Checkbox>
                   <CopyButton
                     disabled={!isButtonEnabled}
+                    leftIcon={<Emoji text=":eyes:" boxSize={4} />}
                     onClick={() =>
                       setState({ ...state, showAddress: !state.showAddress })
                     }
                   >
-                    <Emoji text=":eyes:" size={1} />{" "}
                     <Translation id="page-staking-deposit-contract-reveal-address-btn" />
                   </CopyButton>
                 </>
@@ -432,14 +435,14 @@ const DepositContractPage = ({
               {state.showAddress && (
                 <>
                   <Row>
-                    <Text>
+                    <Box>
                       <CardTitle>
                         <Translation id="page-staking-deposit-contract-address" />
                       </CardTitle>
                       <Caption>
                         <Translation id="page-staking-deposit-contract-address-caption" />
                       </Caption>
-                    </Text>
+                    </Box>
                     <Blockie src={blockieSrc} />
                   </Row>
                   {state.browserHasTextToSpeechSupport && (
@@ -447,7 +450,7 @@ const DepositContractPage = ({
                       <StyledFakeLink onClick={handleTextToSpeech}>
                         <Translation id={textToSpeechText as TranslationKey} />
                       </StyledFakeLink>{" "}
-                      <Emoji text={textToSpeechEmoji} size={1} />
+                      <Emoji text={textToSpeechEmoji} boxSize={4} />
                     </Flex>
                   )}
                   <Tooltip
@@ -461,17 +464,19 @@ const DepositContractPage = ({
                   <ButtonRow>
                     <CopyToClipboard text={DEPOSIT_CONTRACT_ADDRESS}>
                       {(isCopied) => (
-                        <CopyButton>
+                        <CopyButton
+                          leftIcon={
+                            isCopied ? (
+                              <Emoji text=":white_check_mark:" boxSize={4} />
+                            ) : (
+                              <Emoji text=":clipboard:" boxSize={4} />
+                            )
+                          }
+                        >
                           {!isCopied ? (
-                            <div>
-                              <Emoji text=":clipboard:" size={1} />{" "}
-                              <Translation id="page-staking-deposit-contract-copy" />
-                            </div>
+                            <Translation id="page-staking-deposit-contract-copy" />
                           ) : (
-                            <div>
-                              <Emoji text=":white_check_mark:" size={1} />{" "}
-                              <Translation id="page-staking-deposit-contract-copied" />
-                            </div>
+                            <Translation id="page-staking-deposit-contract-copied" />
                           )}
                         </CopyButton>
                       )}
