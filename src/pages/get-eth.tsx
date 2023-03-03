@@ -28,22 +28,6 @@ import FeedbackCard from "../components/FeedbackCard"
 import { CardListItem } from "../components/CardList"
 import { getImage } from "../utils/image"
 
-const CodeBox = styled.div`
-  display: flex;
-  justify-content: space-between;
-  background: #191919;
-  border-radius: 4px;
-  padding: 0.5rem;
-  margin-bottom: 1.5rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
-  }
-`
-
 const CodeLabel = styled.p`
   text-transform: uppercase;
   font-size: 0.875rem;
@@ -359,7 +343,15 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           <p>
             <Translation id="page-get-eth-your-address-desc" />
           </p>
-          <CodeBox>
+          <Flex
+            justifyContent="space-between"
+            bg="#191919"
+            borderRadius="base"
+            p={2}
+            mb={6}
+            userSelect="none"
+            flexDir={{ base: "column-reverse", lg: "initial" }}
+          >
             <Text fontFamily="monospace" color="white" mb={0} fontSize="xs">
               0x0125e2478d69eXaMpLe81766fef5c120d30fb53f
             </Text>
@@ -370,7 +362,7 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
                 id="page-get-eth-do-not-copy"
               />
             </CodeLabel>
-          </CodeBox>
+          </Flex>
           <p>
             <Translation id="page-get-eth-your-address-desc-3" />
           </p>
