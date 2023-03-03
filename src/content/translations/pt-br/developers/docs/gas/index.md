@@ -91,13 +91,13 @@ Um dos principais benefícios da atualização London é melhorar a experiência
 
 ## EIP-1559 {#eip-1559}
 
-A implementação de [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) na atualização London tornou o mecanismo de taxa de transação mais complexo do que o leilão de preço de gás anterior, mas tem a vantagem de tornar as taxas de gás mais previsíveis, resultando em um mercado de taxas de transação mais eficiente. Os usuários podem enviar transações com um `maxFeePerGas` que corresponde ao quanto estão dispostos a pagar pela transação a ser executada, sabendo que não pagarão mais do que o preço de mercado do gás (`baseFeePerGas`) e receber o reembolso por qualquer extra, menos a gorjeta.
+A implementação de [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) na atualização London tornou o mecanismo de taxa de transação mais complexo do que o leilão de preço de gás anterior, mas tem a vantagem de tornar as taxas de gás mais previsíveis, resultando em um mercado de taxas de transação mais eficiente. Os usuários podem enviar transações com um `maxFeePerGas` que corresponde ao quanto estão dispostos a pagar pela transação a ser executada, sabendo que não pagarão mais do que o preço de mercado do gás (`baseFeePerGas`) e receber o reembolso por qualquer extra, menos a gorjeta.
 
 Este vídeo explica o EIP-1559 e os benefícios que ele traz:
 
 <YouTube id="MGemhK9t44Q" />
 
-Se você estiver interessado, você pode ler as [especificações EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md).
+Se você estiver interessado, você pode ler as [especificações EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
 
 Continue seguindo o coelho pela toca com estes [Recursos EIP-1559](https://hackmd.io/@timbeiko/1559-resources).
 

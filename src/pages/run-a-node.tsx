@@ -1,22 +1,25 @@
 // Libraries
-import React, { ComponentType, SVGProps } from "react"
+import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import styled from "@emotion/styled"
+import { type Icon as ChakraIcon } from "@chakra-ui/react"
 
 // Assets
 import Dappnode from "../assets/run-a-node/dappnode.svg"
 import Dapptap from "../assets/run-a-node/dapptap.svg"
 import Terminal from "../assets/run-a-node/terminal.svg"
-import DecentralizationGlyph from "../assets/run-a-node/decentralization-glyph.svg"
-import SovereigntyGlyph from "../assets/run-a-node/sovereignty-glyph.svg"
-import PrivacyGlyph from "../assets/run-a-node/privacy-glyph.svg"
-import MegaphoneGlyph from "../assets/run-a-node/megaphone-glyph.svg"
-import VoteGlyph from "../assets/run-a-node/vote-glyph.svg"
-import EarthGlyph from "../assets/run-a-node/earth-glyph.svg"
-import DownloadGlyph from "../assets/run-a-node/download-glyph.svg"
-import HardwareGlyph from "../assets/run-a-node/hardware-glyph.svg"
+import {
+  DecentralizationGlyphIcon,
+  DownloadGlyphIcon,
+  EarthGlyphIcon,
+  HardwareGlyphIcon,
+  MegaphoneGlyphIcon,
+  PrivacyGlyphIcon,
+  SovereigntyGlyphIcon,
+  VoteGlyphIcon,
+} from "../components/icons/run-a-node"
 
 // Components
 import PageHero from "../components/PageHero"
@@ -37,7 +40,6 @@ import Link from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
 import FeedbackCard from "../components/FeedbackCard"
 import Icon from "../components/Icon"
-import NakedButton from "../components/NakedButton"
 
 // Utils
 import { TranslationKey } from "../utils/translations"
@@ -291,13 +293,13 @@ const ButtonContainer = styled.div`
 `
 
 const DappNodeButtonLink = styled(ResponsiveButtonLink)`
-  background-color: #187d76;
+  background-color: #007dfc;
   span {
     color: ${({ theme }) => theme.colors.white};
   }
   &:hover {
-    background-color: #0f5f5f;
-    box-shadow: 4px 4px 0 0 rgba(#187d76, 0.47);
+    background-color: #0077be;
+    box-shadow: 4px 4px 0 0 rgba(#007dfc, 0.47);
   }
 `
 
@@ -314,14 +316,6 @@ const AvadoButtonLink = styled(ResponsiveButtonLink)`
 
 const StyledEmoji = styled(Emoji)`
   margin-right: 1rem;
-`
-
-const ScrollLink = styled(NakedButton)`
-  text-align: start;
-  color: ${({ theme }) => theme.colors.primary};
-  &.active {
-    color: ${({ theme }) => theme.colors.primary};
-  }
 `
 
 const BuildContainer = styled(Container)`
@@ -396,7 +390,7 @@ const StrongParagraph = styled.p`
 `
 
 interface RunANodeCard {
-  image: ComponentType<SVGProps<SVGElement>>
+  image: typeof ChakraIcon
   title: string
   preview: string
   body: Array<string>
@@ -426,7 +420,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
 
   const whyRunANodeCards: Array<RunANodeCard> = [
     {
-      image: PrivacyGlyph,
+      image: PrivacyGlyphIcon,
       title: t("page-run-a-node-privacy-title"),
       preview: t("page-run-a-node-privacy-preview"),
       body: [
@@ -437,7 +431,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
       alt: t("page-run-a-node-glyph-alt-privacy"),
     },
     {
-      image: MegaphoneGlyph,
+      image: MegaphoneGlyphIcon,
       title: t("page-run-a-node-censorship-resistance-title"),
       preview: t("page-run-a-node-censorship-resistance-preview"),
       body: [
@@ -447,7 +441,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
       alt: t("page-run-a-node-glyph-alt-censorship-resistance"),
     },
     {
-      image: EarthGlyph,
+      image: EarthGlyphIcon,
       title: t("page-run-a-node-participate-title"),
       preview: t("page-run-a-node-participate-preview"),
       body: [
@@ -457,7 +451,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
       alt: t("page-run-a-node-glyph-alt-earth"),
     },
     {
-      image: DecentralizationGlyph,
+      image: DecentralizationGlyphIcon,
       title: t("page-run-a-node-decentralized-title"),
       preview: t("page-run-a-node-decentralized-preview"),
       body: [
@@ -467,7 +461,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
       alt: t("page-run-a-node-glyph-alt-decentralization"),
     },
     {
-      image: VoteGlyph,
+      image: VoteGlyphIcon,
       title: t("page-run-a-node-voice-your-choice-title"),
       preview: t("page-run-a-node-voice-your-choice-preview"),
       body: [
@@ -477,7 +471,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
       alt: t("page-run-a-node-glyph-alt-vote"),
     },
     {
-      image: SovereigntyGlyph,
+      image: SovereigntyGlyphIcon,
       title: t("page-run-a-node-sovereignty-title"),
       preview: t("page-run-a-node-sovereignty-preview"),
       body: [
@@ -727,7 +721,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
 
         <BuildContainer>
           <SvgTitle>
-            <HardwareGlyph
+            <HardwareGlyphIcon
               // TODO: make a11y svgs (using <title>)
               // @ts-ignore
               alt={t("page-run-a-node-glyph-alt-hardware")}
@@ -748,16 +742,14 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
                     <Translation id="page-run-a-node-build-your-own-min-ram" />
                   </p>
                   <p>
-                    <ScrollLink
-                      onClick={() => scrollIntoView("plan-on-staking")}
-                    >
+                    <Link href="#plan-on-staking">
                       <Translation id="page-run-a-node-build-your-own-ram-note-1" />
-                    </ScrollLink>
+                    </Link>
                   </p>
                   <p>
-                    <ScrollLink onClick={() => scrollIntoView("rasp-pi")}>
+                    <Link href="#rasp-pi">
                       <Translation id="page-run-a-node-build-your-own-ram-note-2" />
-                    </ScrollLink>
+                    </Link>
                   </p>
                 </li>
                 <li>
@@ -811,7 +803,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
 
         <BuildContainer>
           <SvgTitle>
-            <DownloadGlyph
+            <DownloadGlyphIcon
               // TODO: make a11y svgs (using <title>)
               // @ts-ignore
               alt={t("page-run-a-node-glyph-alt-software")}

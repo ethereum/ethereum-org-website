@@ -2,21 +2,24 @@ import React, { useState } from "react"
 import styled from "@emotion/styled"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 // SVG imports
-import GreenCheck from "../../assets/staking/green-check-product-glyph.svg"
-import Caution from "../../assets/staking/caution-product-glyph.svg"
-import Warning from "../../assets/staking/warning-product-glyph.svg"
-import OpenSource from "../../assets/staking/open-source.svg"
-import Audited from "../../assets/staking/audited.svg"
-import BugBounty from "../../assets/staking/bug-bounty.svg"
-import BattleTested from "../../assets/staking/battle-tested.svg"
-import Trustless from "../../assets/staking/trustless.svg"
-import Permissionless from "../../assets/staking/permissionless.svg"
-import MultiClient from "../../assets/staking/multi-client.svg"
-import SelfCustody from "../../assets/staking/self-custody.svg"
-import Economical from "../../assets/staking/economical.svg"
-import LiquidityToken from "../../assets/staking/liquidity-token.svg"
+import {
+  AuditedIcon,
+  BattleTestedIcon,
+  BugBountyIcon,
+  CautionProductGlyphIcon,
+  EconomicalIcon,
+  GreenCheckProductGlyphIcon,
+  LiquidityTokenIcon,
+  MultiClientIcon,
+  OpenSourceStakingIcon,
+  PermissionlessIcon,
+  SelfCustodyIcon,
+  TrustlessIcon,
+  WarningProductGlyphIcon,
+} from "../icons/staking"
 // Component imports
 import ButtonDropdown, { List as ButtonDropdownList } from "../ButtonDropdown"
+import Translation from "../Translation"
 import { EventOptions, trackCustomEvent } from "../../utils/matomo"
 
 const Container = styled.div`
@@ -142,7 +145,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         valid: t("page-staking-considerations-solo-1-title"),
         caution: "",
         warning: t("page-staking-considerations-solo-1-warning"),
-        Svg: OpenSource,
+        Svg: OpenSourceStakingIcon,
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
@@ -155,7 +158,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         valid: t("page-staking-considerations-solo-2-title"),
         caution: "",
         warning: t("page-staking-considerations-solo-2-warning"),
-        Svg: Audited,
+        Svg: AuditedIcon,
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
@@ -168,7 +171,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         valid: t("page-staking-considerations-solo-3-valid"),
         caution: t("page-staking-considerations-solo-3-caution"),
         warning: t("page-staking-considerations-solo-2-warning"),
-        Svg: BugBounty,
+        Svg: BugBountyIcon,
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
@@ -181,7 +184,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         valid: t("page-staking-considerations-solo-4-valid"),
         caution: t("page-staking-considerations-solo-4-caution"),
         warning: t("page-staking-considerations-solo-4-warning"),
-        Svg: BattleTested,
+        Svg: BattleTestedIcon,
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
@@ -194,7 +197,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         valid: t("page-staking-considerations-solo-5-title"),
         caution: "",
         warning: t("page-staking-considerations-solo-5-warning"),
-        Svg: Trustless,
+        Svg: TrustlessIcon,
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
@@ -207,7 +210,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         valid: t("page-staking-considerations-solo-6-valid"),
         caution: "",
         warning: t("page-staking-considerations-solo-6-warning"),
-        Svg: Permissionless,
+        Svg: PermissionlessIcon,
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
@@ -220,7 +223,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         valid: t("page-staking-considerations-solo-7-valid"),
         caution: "",
         warning: t("page-staking-considerations-solo-7-warning"),
-        Svg: MultiClient,
+        Svg: MultiClientIcon,
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
@@ -233,7 +236,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         valid: t("page-staking-considerations-solo-8-title"),
         caution: "",
         warning: t("page-staking-considerations-solo-8-warning"),
-        Svg: SelfCustody,
+        Svg: SelfCustodyIcon,
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
@@ -246,7 +249,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         valid: t("page-staking-considerations-solo-9-valid"),
         caution: "",
         warning: t("page-staking-considerations-solo-9-warning"),
-        Svg: Economical,
+        Svg: EconomicalIcon,
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
@@ -261,7 +264,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         valid: t("page-staking-considerations-solo-1-title"),
         caution: "",
         warning: t("page-staking-considerations-solo-1-warning"),
-        Svg: OpenSource,
+        Svg: OpenSourceStakingIcon,
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
@@ -274,7 +277,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         valid: t("page-staking-considerations-solo-2-title"),
         caution: "",
         warning: t("page-staking-considerations-solo-2-warning"),
-        Svg: Audited,
+        Svg: AuditedIcon,
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
@@ -287,7 +290,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         valid: t("page-staking-considerations-solo-3-valid"),
         caution: t("page-staking-considerations-solo-3-caution"),
         warning: t("page-staking-considerations-solo-2-warning"),
-        Svg: BugBounty,
+        Svg: BugBountyIcon,
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
@@ -300,7 +303,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         valid: t("page-staking-considerations-solo-4-valid"),
         caution: t("page-staking-considerations-solo-4-caution"),
         warning: t("page-staking-considerations-solo-4-warning"),
-        Svg: BattleTested,
+        Svg: BattleTestedIcon,
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
@@ -313,7 +316,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         valid: t("page-staking-considerations-saas-6-valid"),
         caution: "",
         warning: t("page-staking-considerations-saas-6-warning"),
-        Svg: Permissionless,
+        Svg: PermissionlessIcon,
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
@@ -326,7 +329,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         valid: t("page-staking-considerations-saas-7-valid"),
         caution: t("page-staking-considerations-saas-7-caution"),
         warning: t("page-staking-considerations-saas-7-warning"),
-        Svg: MultiClient,
+        Svg: MultiClientIcon,
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
@@ -339,7 +342,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         valid: t("page-staking-considerations-solo-8-title"),
         caution: "",
         warning: t("page-staking-considerations-solo-8-warning"),
-        Svg: SelfCustody,
+        Svg: SelfCustodyIcon,
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
@@ -354,7 +357,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         valid: t("page-staking-considerations-solo-1-title"),
         caution: "",
         warning: t("page-staking-considerations-solo-1-warning"),
-        Svg: OpenSource,
+        Svg: OpenSourceStakingIcon,
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
@@ -367,7 +370,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         valid: t("page-staking-considerations-solo-2-title"),
         caution: "",
         warning: t("page-staking-considerations-solo-2-warning"),
-        Svg: Audited,
+        Svg: AuditedIcon,
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
@@ -380,7 +383,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         valid: t("page-staking-considerations-solo-3-valid"),
         caution: t("page-staking-considerations-solo-3-caution"),
         warning: t("page-staking-considerations-solo-2-warning"),
-        Svg: BugBounty,
+        Svg: BugBountyIcon,
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
@@ -393,7 +396,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         valid: t("page-staking-considerations-solo-4-valid"),
         caution: t("page-staking-considerations-solo-4-caution"),
         warning: t("page-staking-considerations-solo-4-warning"),
-        Svg: BattleTested,
+        Svg: BattleTestedIcon,
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
@@ -406,7 +409,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         valid: t("page-staking-hierarchy-solo-pill-4"),
         caution: "",
         warning: t("page-staking-considerations-solo-5-warning"),
-        Svg: Trustless,
+        Svg: TrustlessIcon,
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
@@ -419,7 +422,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         valid: t("page-staking-considerations-saas-6-valid"),
         caution: "",
         warning: t("page-staking-considerations-saas-6-warning"),
-        Svg: Permissionless,
+        Svg: PermissionlessIcon,
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
@@ -432,7 +435,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         valid: t("page-staking-considerations-saas-7-valid"),
         caution: t("page-staking-considerations-saas-7-caution"),
         warning: t("page-staking-considerations-saas-7-warning"),
-        Svg: MultiClient,
+        Svg: MultiClientIcon,
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
@@ -445,7 +448,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         valid: t("page-staking-considerations-pools-8-valid"),
         caution: "",
         warning: t("page-staking-considerations-pools-8-warning"),
-        Svg: LiquidityToken,
+        Svg: LiquidityTokenIcon,
         matomo: {
           eventCategory: `StakingConsiderations`,
           eventAction: `Clicked`,
@@ -512,20 +515,26 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         <IndicatorRow>
           {!!valid && (
             <Indicator>
-              <GreenCheck style={indicatorSvgStyle} />
-              <p>{valid}</p>
+              <GreenCheckProductGlyphIcon style={indicatorSvgStyle} />
+              <p>
+                <Translation id={valid} />
+              </p>
             </Indicator>
           )}
           {!!caution && (
             <Indicator>
-              <Caution style={indicatorSvgStyle} />
-              <p>{caution}</p>
+              <CautionProductGlyphIcon style={indicatorSvgStyle} />
+              <p>
+                <Translation id={caution} />
+              </p>
             </Indicator>
           )}
           {!!warning && (
             <Indicator>
-              <Warning style={indicatorSvgStyle} />
-              <p>{warning}</p>
+              <WarningProductGlyphIcon style={indicatorSvgStyle} />
+              <p>
+                <Translation id={warning} />
+              </p>
             </Indicator>
           )}
         </IndicatorRow>

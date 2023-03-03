@@ -217,6 +217,19 @@ const articles = [
   },
 ]
 
+const guides = [
+  {
+    title: (
+      <Translation id="additional-reading-how-to-register-an-ethereum-account" />
+    ),
+    link: "/guides/how-to-register-an-ethereum-account/",
+  },
+  {
+    title: <Translation id="additional-reading-how-to-use-a-wallet" />,
+    link: "/guides/how-to-use-a-wallet/",
+  },
+]
+
 const WalletsPage = ({
   data,
 }: PageProps<Queries.WalletsPageQuery, Context>) => {
@@ -257,10 +270,8 @@ const WalletsPage = ({
             </p>
             <p>
               <Translation id="page-wallets-desc-2" />{" "}
-              <Link to="/eth/">
-                <Translation id="page-wallets-desc-2-link" />{" "}
-              </Link>
             </p>
+            <CardList content={guides} />
           </LeftColumn>
           <StyledRightColumn>
             <p>
@@ -493,7 +504,7 @@ export const query = graphql`
         }
       }
     }
-    hero: file(relativePath: { eq: "wallet.png" }) {
+    hero: file(relativePath: { eq: "wallets/find-wallet-hero.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }

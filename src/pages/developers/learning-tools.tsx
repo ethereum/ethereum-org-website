@@ -112,6 +112,15 @@ const LearningToolsPage = ({
         background: "#0f1524",
         subjects: ["Solidity", "web3"],
       },
+      {
+        name: "ChainIDE",
+        description: "page-learning-tools-chainIDE-description",
+        url: "https://chainide.com/",
+        image: getImage(data.chainIDE)!,
+        alt: "page-learning-tools-chainIDE-logo-alt",
+        background: "#2C60A3",
+        subjects: ["Solidity", "web3"],
+      },
     ]
     const randomizedSandboxes = shuffle(sandboxes)
     setRandomizedSandboxes(randomizedSandboxes)
@@ -194,6 +203,15 @@ const LearningToolsPage = ({
       subjects: ["Solidity", "web3"],
     },
     {
+      name: "Metaschool",
+      description: "page-learning-tools-metaschool-description",
+      url: "https://metaschool.so",
+      image: getImage(data.metaschool)!,
+      alt: "page-learning-tools-metaschool-logo-alt",
+      background: "#f6f7f9",
+      subjects: ["Solidity", "web3"],
+    },
+    {
       name: "NFT School",
       description: t("page-learning-tools-nftschool-description"),
       url: "https://nftschool.dev/",
@@ -227,6 +245,15 @@ const LearningToolsPage = ({
       url: "https://speedrunethereum.com/",
       image: getImage(data.speedRunEthereum)!,
       alt: t("page-learning-tools-speed-run-ethereum-logo-alt"),
+      background: "#ffffff",
+      subjects: ["Solidity", "web3"],
+    },
+    {
+      name: "Alchemy University",
+      description: "page-learning-tools-alchemy-university-description",
+      url: "https://university.alchemy.com/",
+      image: getImage(data.alchemyuniversity)!,
+      alt: "page-learning-tools-alchemy-university-logo-alt",
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
     },
@@ -353,6 +380,9 @@ export const query = graphql`
     oz: file(relativePath: { eq: "dev-tools/oz.png" }) {
       ...learningToolImage
     }
+    metaschool: file(relativePath: { eq: "dev-tools/metaschool.png" }) {
+      ...learningToolImage
+    }
     questbook: file(relativePath: { eq: "dev-tools/questbook.png" }) {
       ...learningToolImage
     }
@@ -370,6 +400,9 @@ export const query = graphql`
     ethdotbuild: file(relativePath: { eq: "dev-tools/eth-dot-build.png" }) {
       ...learningToolImage
     }
+    chainIDE: file(relativePath: { eq: "dev-tools/chainIDE.png" }) {
+      ...learningToolImage
+    }
     nftschool: file(relativePath: { eq: "dev-tools/nftschool.png" }) {
       ...learningToolImage
     }
@@ -379,7 +412,11 @@ export const query = graphql`
     platzi: file(relativePath: { eq: "dev-tools/platzi.png" }) {
       ...learningToolImage
     }
-
+    alchemyuniversity: file(
+      relativePath: { eq: "dev-tools/alchemyuniversity.png" }
+    ) {
+      ...learningToolImage
+    }
     learn: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
         gatsbyImageData(
