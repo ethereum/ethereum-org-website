@@ -11,7 +11,7 @@ summaryPoint4: Vroeger noemden we dit "de docking."
 ---
 
 <UpgradeStatus dateKey="page-upgrades-merge-date">
-  Deze upgrade bevat de officiële overschakeling naar proof-of-stake consensus. Dit elimineert de noodzaak van energie-intensieve mining en in plaats daarvan beveiligt het het netwerk met gestakete ether. Een waarlijk opwindende stap in het realiseren van de <a href="/upgrades/vision/">Ethereum-visie</a> - schaalbaarder, veiliger en duurzamer.
+  Deze upgrade bevat de officiële overschakeling naar proof-of-stake consensus. Dit elimineert de noodzaak van energie-intensieve mining en in plaats daarvan beveiligt het het netwerk met gestakete ether. Een waarlijk opwindende stap in het realiseren van de <a href="/roadmap/vision/">Ethereum-visie</a> - schaalbaarder, veiliger en duurzamer.
 </UpgradeStatus>
 
 ## Wat is de merge? {#what-is-the-docking}
@@ -28,7 +28,7 @@ Het hoofdnet zal de mogelijkheid om slimme contracten uit te voeren in het proof
 
 ## Na de merge {#after-the-merge}
 
-Dit zal het einde betekenen van proof-of-work voor Ethereum en het tijdperk beginnen van een duurzamer, milieuvriendelijker Ethereum. Op dit punt zal Ethereum een stap dichter zijn bij het bereiken van de volledige schaalgrootte, veiligheid en duurzaamheid zoals geschetst in de [Ethereum-visie](/upgrades/vision/).
+Dit zal het einde betekenen van proof-of-work voor Ethereum en het tijdperk beginnen van een duurzamer, milieuvriendelijker Ethereum. Op dit punt zal Ethereum een stap dichter zijn bij het bereiken van de volledige schaalgrootte, veiligheid en duurzaamheid zoals geschetst in de [Ethereum-visie](/roadmap/vision/).
 
 Het is belangrijk op te merken dat een implementatiedoel van de merge eenvoud is, om zo de overgang van proof-of-work naar proof-of-stake te versnellen. De ontwikkelaars richten hun inspanningen op deze overgang en minimaliseren extra functies die dit doel kunnen vertragen.
 

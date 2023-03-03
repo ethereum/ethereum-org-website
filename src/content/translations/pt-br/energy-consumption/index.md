@@ -69,7 +69,7 @@ Leia mais sobre [como o Ethereum implementa a prova de participação](/develope
 
 ## Tópicos relacionados {#related-topics}
 
-- [Visão do Ethereum](/upgrades/vision/)
+- [Visão do Ethereum](/roadmap/vision/)
 - [A Beacon Chain](/upgrades/beacon-chain)
 - [The Merge (A Fusão)](/upgrades/merge/)
 - [Fragmentação](/upgrades/beacon-chain/)

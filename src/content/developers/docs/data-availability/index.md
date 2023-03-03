@@ -69,7 +69,7 @@ Visibility of block data to full nodes is critical because other network partici
 
 ### Decentralized scalability {#decentralized-scalability}
 
-[Ethereum’s goal is to scale computation without trading off decentralization and security](/upgrades/vision/). Due to the constraints of the monolithic blockchain architecture, data availability is critical to achieving decentralized scalability.
+[Ethereum’s goal is to scale computation without trading off decentralization and security](/roadmap/vision/). Due to the constraints of the monolithic blockchain architecture, data availability is critical to achieving decentralized scalability.
 
 #### Data availability and layer 2 scaling {#data-availability-and-layer-2-scaling}
 

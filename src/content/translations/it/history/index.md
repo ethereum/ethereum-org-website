@@ -136,7 +136,7 @@ L'aggiornamento di Berlino ha ottimizzato i costi del gas per certe azioni dell'
 
 #### Riepilogo {#beacon-chain-genesis-summary}
 
-La [Beacon Chain](/upgrades/beacon-chain/) necessita di 16.384 depositi da 32 ETH di staking per poter essere spedita in sicurezza. Ciò ha avuto luogo il 27 novembre, quindi la beacon chain ha iniziato a produrre blocchi il 1° dicembre 2020. Si tratta di una prima fase importante nel percorso per raggiungere la [visione di Ethereum](/upgrades/vision/).
+La [Beacon Chain](/upgrades/beacon-chain/) necessita di 16.384 depositi da 32 ETH di staking per poter essere spedita in sicurezza. Ciò ha avuto luogo il 27 novembre, quindi la beacon chain ha iniziato a produrre blocchi il 1° dicembre 2020. Si tratta di una prima fase importante nel percorso per raggiungere la [visione di Ethereum](/roadmap/vision/).
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
