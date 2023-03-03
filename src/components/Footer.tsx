@@ -123,8 +123,8 @@ const Footer: React.FC<IProps> = () => {
           text: t("ethereum-whitepaper"),
         },
         {
-          text: t("ethereum-upgrades"),
-          to: "/upgrades/",
+          text: t("ethereum-roadmap"),
+          to: "/roadmap/",
         },
         {
           text: t("ethereum-security"),

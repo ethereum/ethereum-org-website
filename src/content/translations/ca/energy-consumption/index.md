@@ -75,7 +75,7 @@ Mentre que el consum energètic d'Ethereum històricament ha estat substancial, 
 
 ## Temes relacionats {#related-topics}
 
-- [La visió d'Ethereum](/upgrades/vision/)
+- [La visió d'Ethereum](/roadmap/vision/)
 - [La Cadena de Balisa](/upgrades/beacon-chain)
 - [La Fusió](/upgrades/merge/)
 - [Fragmentació](/upgrades/beacon-chain/)

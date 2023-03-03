@@ -136,7 +136,7 @@ Berlin güncellemesi, belirli EVM eylemleri için optimize edilmiş gaz maliyeti
 
 #### Özet {#beacon-chain-genesis-summary}
 
-[İşaret Zinciri](/upgrades/beacon-chain/)'nin güvenli bir şekilde gönderilmesi için 16.384 adet 32 stake edilmiş ETH yatırılması gerekiyordu. Bu, 27 Kasım'da meydana geldi, yani İşaret Zinciri blok üretmeye 1 Aralık 2020'de başladı. Bu, [Ethereum vizyonuna](/upgrades/vision/) ulaşmak için önemli bir ilk adımdır.
+[İşaret Zinciri](/upgrades/beacon-chain/)'nin güvenli bir şekilde gönderilmesi için 16.384 adet 32 stake edilmiş ETH yatırılması gerekiyordu. Bu, 27 Kasım'da meydana geldi, yani İşaret Zinciri blok üretmeye 1 Aralık 2020'de başladı. Bu, [Ethereum vizyonuna](/roadmap/vision/) ulaşmak için önemli bir ilk adımdır.
 
 [Ethereum Vakfı'nın duyurusunu okuyun](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 

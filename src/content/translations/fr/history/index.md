@@ -136,7 +136,7 @@ La mise à niveau de Berlin a optimisé le coût du gaz pour certaines actions E
 
 #### Résumé {#beacon-chain-genesis-summary}
 
-La [chaîne phare](/upgrades/beacon-chain/) avait besoin de 16 384 dépôts de 32 ETH mis en jeu pour être déployée en toute sécurité. Cela s'est produit le 27 novembre, ce qui signifie que la chaîne phare a commencé à produire des blocs le 1er décembre 2020. C'est une première étape importante dans la réalisation de la [vision Ethereum](/upgrades/vision/).
+La [chaîne phare](/upgrades/beacon-chain/) avait besoin de 16 384 dépôts de 32 ETH mis en jeu pour être déployée en toute sécurité. Cela s'est produit le 27 novembre, ce qui signifie que la chaîne phare a commencé à produire des blocs le 1er décembre 2020. C'est une première étape importante dans la réalisation de la [vision Ethereum](/roadmap/vision/).
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 

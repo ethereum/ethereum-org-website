@@ -349,10 +349,6 @@ const UpgradePage = ({
         text: t("page-upgrades-upgrades-docking"),
         to: "/upgrades/merge/",
       },
-      {
-        text: t("page-upgrades-shard-title"),
-        to: "/upgrades/sharding/",
-      },
     ],
   }
 
