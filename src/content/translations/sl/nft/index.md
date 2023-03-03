@@ -322,7 +322,7 @@ Nismo tukaj, da bi zagovarjali vpliv rudarjenja na okolje, namesto tega želimo 
 
 ### Bolj zelena prihodnost... {#a-greener-future}
 
-Od kar Ethereum obstaja, je bila za razvijalce in raziskovalce poraba energije za rudarjenje pomembno fokusno področje. In vizija je vedno bila, da se to nadomesti takoj, ko bo mogoče. [Več o viziji Ethereuma](/upgrades/vision/)
+Od kar Ethereum obstaja, je bila za razvijalce in raziskovalce poraba energije za rudarjenje pomembno fokusno področje. In vizija je vedno bila, da se to nadomesti takoj, ko bo mogoče. [Več o viziji Ethereuma](/roadmap/vision/)
 
 Ta vizija se dostavlja prav zdaj.
 

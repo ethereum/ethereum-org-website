@@ -30,7 +30,7 @@ Ezek a szabályváltoztatások átmeneti törést okozhatnak a hálózatban. Új
 
 #### Összefoglaló {#beacon-chain-genesis-summary}
 
-A [Beacon Chain](/upgrades/beacon-chain/) biztonságos elindításához 16384 darab 32 ETH-nyi letétre volt szükség. Ez november 27.-én történt meg, vagyis a Beacon Chain a blokkok létrehozását december 1.-jén kezdte meg 2020-ban. Ez az [Eth2 vízió](/upgrades/vision/) elérésének fontos első lépése.
+A [Beacon Chain](/upgrades/beacon-chain/) biztonságos elindításához 16384 darab 32 ETH-nyi letétre volt szükség. Ez november 27.-én történt meg, vagyis a Beacon Chain a blokkok létrehozását december 1.-jén kezdte meg 2020-ban. Ez az [Eth2 vízió](/roadmap/vision/) elérésének fontos első lépése.
 
 [Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 

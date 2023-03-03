@@ -75,7 +75,7 @@ _Ми повинні також враховувати, що Ethereum не об�
 
 ## Пов’язані теми {#related-topics}
 
-- [Бачення Ethereum](/upgrades/vision/)
+- [Бачення Ethereum](/roadmap/vision/)
 - [Beacon Chain](/upgrades/beacon-chain)
 - [Об’єднання](/upgrades/merge/)
 - [Шардинг](/upgrades/beacon-chain/)

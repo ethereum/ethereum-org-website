@@ -322,10 +322,6 @@ const dropdownLinks: ButtonDropdownList = {
       text: "page-upgrades-upgrades-docking",
       to: "/upgrades/merge/",
     },
-    {
-      text: "page-upgrades-shard-title",
-      to: "/upgrades/sharding/",
-    },
   ],
 }
 
