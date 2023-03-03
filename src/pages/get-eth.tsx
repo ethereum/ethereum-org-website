@@ -28,18 +28,6 @@ import FeedbackCard from "../components/FeedbackCard"
 import { CardListItem } from "../components/CardList"
 import { getImage } from "../utils/image"
 
-const CodeLabel = styled.p`
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  color: ${(props) => props.theme.colors.fail300};
-  margin-bottom: 0rem;
-  margin-right: 1rem;
-  margin-left: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 0rem;
-  }
-`
-
 const StyledInfoBanner = styled(InfoBanner)<{
   mt: string
 }>`
@@ -355,13 +343,19 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
             <Text fontFamily="monospace" color="white" mb={0} fontSize="xs">
               0x0125e2478d69eXaMpLe81766fef5c120d30fb53f
             </Text>
-            <CodeLabel>
+            <Text
+              textTransform="uppercase"
+              fontSize="sm"
+              color="fail300"
+              mb={0}
+              mx={4}
+            >
               <Text
                 as={Translation}
                 textTransform="uppercase"
                 id="page-get-eth-do-not-copy"
               />
-            </CodeLabel>
+            </Text>
           </Flex>
           <p>
             <Translation id="page-get-eth-your-address-desc-3" />
