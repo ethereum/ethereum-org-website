@@ -18,7 +18,7 @@ summaryPoint4: Unaweza kua unaitambua hii kama "Awamu 0" kwenye mipango ya kitaa
 
 Mnyororo wa Beacon utaendeleza mwenendo wa kutanua mtandao wake wa [shards](/upgrades/sharding/) na [wanahisa](/staking/). Lakini haitakua kama [mtandao mkuu wa Ethereum](/glossary/#mainnet) wa leo. Inaweza kuhimili akaunti au mikataba mahiri.
 
-Jukumu ya mnyororo wa Kioleza litabadilika baada ya mda ila sehemu ya msingi ya [usalama, kuendeleza na ubadilikaji wa Ethereum tunayoijenga](/upgrades/vision/).
+Jukumu ya mnyororo wa Kioleza litabadilika baada ya mda ila sehemu ya msingi ya [usalama, kuendeleza na ubadilikaji wa Ethereum tunayoijenga](/roadmap/vision/).
 
 ## Sura za mnyororo wa Kioleza {#beacon-chain-features}
 
