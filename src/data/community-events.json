@@ -36,6 +36,15 @@
     "endDate": "2023-03-29"
   },
   {
+    "title": "ETH Beijing",
+    "to": "https://ethbeijing.com/",
+    "sponsor": null,
+    "location": "Beijing, China",
+    "description": "Join the first offline event of Ethereum in Beijing in the post-covid-19 era.",
+    "startDate": "2023-04-05",
+    "endDate": "2023-04-08"
+  },
+  {
     "title": "ETHGlobal Tokyo",
     "to": "https://tokyo.ethglobal.com/",
     "sponsor": null,
