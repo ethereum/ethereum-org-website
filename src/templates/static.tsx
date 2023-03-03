@@ -1,10 +1,18 @@
 import React from "react"
+import {
+  Badge,
+  Box,
+  Flex,
+  Text,
+  useTheme,
+  Divider as ChakraDivider,
+  Heading,
+  ListItem as ChakraListItem,
+} from "@chakra-ui/react"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import styled from "@emotion/styled"
-import { Badge } from "@chakra-ui/react"
 
 import ButtonLink from "../components/ButtonLink"
 import Breadcrumbs from "../components/Breadcrumbs"
@@ -20,25 +28,13 @@ import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
 import RandomAppList from "../components/RandomAppList"
 import ExpandableCard from "../components/ExpandableCard"
-import TableOfContents, {
-  Item as ItemTableOfContents,
-} from "../components/TableOfContents"
+import TableOfContents from "../components/TableOfContents"
 import Translation from "../components/Translation"
 import SectionNav from "../components/SectionNav"
 import DocLink from "../components/DocLink"
 import GhostCard from "../components/GhostCard"
 import MatomoOptOut from "../components/MatomoOptOut"
 import UpgradeStatus from "../components/UpgradeStatus"
-import {
-  Divider,
-  Paragraph,
-  Header1,
-  Header2,
-  Header3,
-  Header4,
-  ListItem,
-  CardContainer,
-} from "../components/SharedStyledComponents"
 import Emoji from "../components/OldEmoji"
 import UpcomingEventsList from "../components/UpcomingEventsList"
 import Icon from "../components/Icon"
@@ -52,69 +48,142 @@ import QuizWidget from "../components/Quiz/QuizWidget"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
-import { Context } from "../types"
-
-const Container = styled.div`
-  width: 100%;
-`
-
-const Page = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0 auto 4rem;
-  padding: 2rem;
-
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 4rem;
-  }
-`
+import { Item as ItemTableOfContents } from "../components/TableOfContents/utils"
+import { ChildOnlyProp, Context } from "../types"
 
 // Apply styles for classes within markdown here
-const ContentContainer = styled.article`
-  max-width: ${(props) => props.theme.breakpoints.m};
-  width: 100%;
 
-  .featured {
-    padding-left: 1rem;
-    margin-left: -1rem;
-    border-left: 1px dotted ${(props) => props.theme.colors.primary};
-  }
+const Pre = ({ children }: ChildOnlyProp) => {
+  return (
+    <Text
+      as="pre"
+      maxW="full"
+      overflowX="scroll"
+      bgColor="preBackground"
+      borderRadius="base"
+      p={4}
+      border="1px solid"
+      borderColor="preBorder"
+      whiteSpace="pre-wrap"
+    >
+      {children}
+    </Text>
+  )
+}
 
-  .citation {
-    p {
-      color: ${(props) => props.theme.colors.text200};
-    }
-  }
-`
+const HR = () => {
+  return (
+    <ChakraDivider
+      mt={8}
+      mb={4}
+      display="inline-block"
+      position="inherit"
+      bg="border"
+    />
+  )
+}
 
-const LastUpdated = styled.p`
-  color: ${(props) => props.theme.colors.text200};
-`
+const Divider = () => {
+  return <Box my={16} w="10%" h={1} bgColor="homeDivider" />
+}
 
-const Pre = styled.pre`
-  max-width: 100%;
-  overflow-x: scroll;
-  background-color: ${(props) => props.theme.colors.preBackground};
-  border-radius: 0.25rem;
-  padding: 1rem;
-  border: 1px solid ${(props) => props.theme.colors.preBorder};
-  white-space: pre-wrap;
-`
+const Header1 = ({ children }: ChildOnlyProp) => {
+  return (
+    <Heading
+      as="h1"
+      fontWeight="bold"
+      _before={{
+        content: `""`,
+        display: "block",
+        h: "140px",
+        mt: "-140px",
+        visibility: "hidden",
+      }}
+      sx={{
+        a: {
+          display: "none",
+        },
+      }}
+    >
+      {children}
+    </Heading>
+  )
+}
 
-const MobileTableOfContents = styled(TableOfContents)`
-  position: relative;
-  z-index: 2;
-`
+const Header2 = ({ children }: ChildOnlyProp) => {
+  return (
+    <Heading
+      fontWeight="bold"
+      sx={{ position: "inherit !important" }}
+      _before={{
+        content: `""`,
+        display: "block",
+        h: "120px",
+        mt: "-120px",
+        visibility: "hidden",
+      }}
+    >
+      {children}
+    </Heading>
+  )
+}
 
-const HR = styled.hr`
-  width: 100%;
-  margin: 2rem 0rem;
-  margin-bottom: 1rem;
-  display: inline-block;
-  position: inherit;
-  background: ${(props) => props.theme.colors.border};
-`
+const Header3 = ({ children }: ChildOnlyProp) => {
+  return (
+    <Heading
+      as="h3"
+      sx={{ position: "inherit !important" }}
+      _before={{
+        content: `""`,
+        display: "block",
+        h: "120px",
+        mt: "-120px",
+        visibility: "hidden",
+      }}
+    >
+      {children}
+    </Heading>
+  )
+}
+
+const Header4 = ({ children }: ChildOnlyProp) => {
+  return (
+    <Heading
+      as="h4"
+      fontWeight="semibold"
+      sx={{ position: "unset !important" }}
+      _before={{
+        content: `""`,
+        display: "block",
+        h: "120px",
+        mt: "-120px",
+        visibility: "hidden",
+      }}
+    >
+      {children}
+    </Heading>
+  )
+}
+
+const Paragraph = ({ children }: ChildOnlyProp) => {
+  return (
+    <Text fontSize="md" mt={8} mb={4} color="text300">
+      {children}
+    </Text>
+  )
+}
+
+const ListItem = ({ children }: ChildOnlyProp) => {
+  return <ChakraListItem color="text300">{children}</ChakraListItem>
+}
+
+const CardContainer = ({ children }: ChildOnlyProp) => {
+  return (
+    <Flex wrap="wrap" mx={-4}>
+      {children}
+    </Flex>
+  )
+}
 
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
@@ -162,6 +231,7 @@ const StaticPage = ({
   data: { siteData, pageData: mdx },
   pageContext: { relativePath },
 }: PageProps<Queries.StaticPageQuery, Context>) => {
+  const theme = useTheme()
   const intl = useIntl()
 
   if (!siteData || !mdx?.frontmatter || !mdx.parent)
@@ -192,26 +262,55 @@ const StaticPage = ({
   const slug = mdx.fields?.slug || ""
 
   return (
-    <Container>
+    <Box w="full">
       {showPostMergeBanner && (
         <PostMergeBanner
           translationString={postMergeBannerTranslationString!}
         />
       )}
-      <Page dir={isRightToLeft ? "rtl" : "ltr"}>
+      <Flex
+        justifyContent="space-between"
+        w="full"
+        mx="auto"
+        mb={16}
+        p={8}
+        pt={{ lg: 16 }}
+        dir={isRightToLeft ? "rtl" : "ltr"}
+      >
         <PageMetadata
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
         />
-        <ContentContainer>
+        <Box
+          as="article"
+          maxW={theme.breakpoints.md}
+          w="full"
+          sx={{
+            ".featured": {
+              pl: 4,
+              ml: -4,
+              borderLeft: "1px dotted",
+              borderLeftColor: "primary",
+            },
+
+            ".citation": {
+              p: {
+                color: "text200",
+              },
+            },
+          }}
+        >
           <Breadcrumbs slug={slug} />
-          <LastUpdated
+          <Text
+            color="text200"
             dir={isLangRightToLeft(intl.locale as Lang) ? "rtl" : "ltr"}
           >
             <Translation id="page-last-updated" />:{" "}
             {getLocaleTimestamp(intl.locale as Lang, lastUpdatedDate)}
-          </LastUpdated>
-          <MobileTableOfContents
+          </Text>
+          <TableOfContents
+            position="relative"
+            zIndex={2}
             editPath={absoluteEditPath}
             items={tocItems}
             isMobile={true}
@@ -222,7 +321,7 @@ const StaticPage = ({
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
           <FeedbackCard isArticle />
-        </ContentContainer>
+        </Box>
         {tocItems && (
           <TableOfContents
             editPath={absoluteEditPath}
@@ -231,8 +330,8 @@ const StaticPage = ({
             hideEditButton={!!mdx.frontmatter.hideEditButton}
           />
         )}
-      </Page>
-    </Container>
+      </Flex>
+    </Box>
   )
 }
 
