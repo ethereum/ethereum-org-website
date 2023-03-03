@@ -70,7 +70,7 @@ For this to happen, [Verkle trees](../verkle-trees) must already have been imple
 
 <ExpandableCard title="Why is it OK to rely on fewer block proposers?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
-Statelessness relies oin block builders maintaining a copy of the full state data so that they can generate witnesses that can be used to verify the block. Other nodes do not need access to the state data, all the information required to verify the block is available in the witness. This creates a situation where proposing a block is expensive, but verifying the block is cheap, which implies fewer operators will run a block proposing node. However, decentralization of block proposers is not critical as long as as many participants as possible can independently verify that the blocks they propose are valid.
+Statelessness relies on block builders maintaining a copy of the full state data so that they can generate witnesses that can be used to verify the block. Other nodes do not need access to the state data, all the information required to verify the block is available in the witness. This creates a situation where proposing a block is expensive, but verifying the block is cheap, which implies fewer operators will run a block proposing node. However, decentralization of block proposers is not critical as long as as many participants as possible can independently verify that the blocks they propose are valid.
 
 <ButtonLink variant="outline-color" to="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Read more on Dankrad's notes</ButtonLink>
 </ExpandableCard>

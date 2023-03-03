@@ -107,12 +107,6 @@ const ContentContainer = styled.article`
     margin-top: 0;
   }
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.l}) {
-    h2:first-of-type {
-      margin-top: 0;
-    }
-  }
-
   .featured {
     padding-left: 1rem;
     margin-left: -1rem;

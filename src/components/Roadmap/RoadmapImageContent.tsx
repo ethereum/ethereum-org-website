@@ -27,7 +27,7 @@ const RoadmapImageContent: React.FC<IProps> = ({ children, title }) => {
   `)
 
   return (
-    <Stack mb={1}>
+    <Stack mb={1} mt={16}>
       <Heading as="h3" mt={0}>
         {title}
       </Heading>

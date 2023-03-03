@@ -15,7 +15,7 @@ summaryPoints:
 
 ## What is Proto-Danksharding? {#what-is-protodanksharding}
 
-Proto-Danksharding, also known as [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), is a way for [rollups](/layer2/#rollups) to add cheaper data to blocks. The name comes from the two researchers who proposed the idea: Protolambda and Dankrad Feist. Right now, rollups are limited in how cheap they can make user transactions by the fact that they post their transactions in `CALLDATA`. This is expensive because it is processed by all Ethereum nodes and lives on chain forever, even though rollups only need the data for a short time. Proto-Danksharding introduces data blobs that can be sent attached to blocks. The data in these blobs is not accessible to the EVM and is automatically deleted after a fixed time period (1-3 months). This means rollups can send their data much more cheaply and pass the savings on to end users in the form of cheaper transactions.
+Proto-Danksharding, also known as [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), is a way for [rollups](/layer2/#rollups) to add cheaper data to blocks. The name comes from the two researchers who proposed the idea: Protolambda and Dankrad Feist. Right now, rollups are limited in how cheap they can make user transactions by the fact that they post their transactions in `CALLDATA`. This is expensive because it is processed by all Ethereum nodes and lives on chain forever, even though rollups only need the data for a short time. Proto-Danksharding introduces data blobs that can be sent and attached to blocks. The data in these blobs is not accessible to the EVM and is automatically deleted after a fixed time period (1-3 months). This means rollups can send their data much more cheaply and pass the savings on to end users in the form of cheaper transactions.
 
 <ExpandableCard title="Why do blobs make rollups cheaper?" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
 
@@ -31,7 +31,7 @@ Rollups post commitments to their transaction data on-chain and also make the ac
 
 ### How is blob data verified? {#how-are-blobs-verified}
 
-Rollups post the transactions they execute in data blobs. They also post a "commitment" to the data. They do this by fitting a polynomial function to the data. This function can then be evaluated at various points. For example, if we define an extremely simply function `f(x) = 2x-1` then we can evaluate this function for `x = 1`, `x=2`, `x=3` giving the results `1, 3, 5`. A prover applies the same function to the data and evaluates it at the same points. If the original data is changed, the function will not be identical, and therefore neither are the values evaluated at each point. In reality, the commitment and proof are more complicated because they are wrapped in cryptographic functions.
+Rollups post the transactions they execute in data blobs. They also post a "commitment" to the data. They do this by fitting a polynomial function to the data. This function can then be evaluated at various points. For example, if we define an extremely simply function `f(x) = 2x-1` then we can evaluate this function for `x = 1`, `x = 2`, `x = 3` giving the results `1, 3, 5`. A prover applies the same function to the data and evaluates it at the same points. If the original data is changed, the function will not be identical, and therefore neither are the values evaluated at each point. In reality, the commitment and proof are more complicated because they are wrapped in cryptographic functions.
 
 ### What is KZG? {#what-is-kzg}
 
@@ -54,7 +54,7 @@ If someone knows the random locations used for the commitment, it is easy for th
 </ExpandableCard>
 
 <InfoBanner isWarning mb={8}>
-  Neither Danksharding nor Proto-Danksharding follow the traditional "sharding" model that aimed to split the blockchain into multiple parts. Shard chains are no longer part of the roadmap. Instead, Danksharding uses distributed data sampling across blobs to scale Ethereum. This is much simpler to implement. This m doel has sometimes been referred to as "data-sharding".
+  Neither Danksharding nor Proto-Danksharding follow the traditional "sharding" model that aimed to split the blockchain into multiple parts. Shard chains are no longer part of the roadmap. Instead, Danksharding uses distributed data sampling across blobs to scale Ethereum. This is much simpler to implement. This model has sometimes been referred to as "data-sharding".
 </InfoBanner>
 
 ## What is Danksharding? {#what-is-danksharding}
@@ -77,7 +77,7 @@ Data availability sampling is required for validators to quickly and efficiently
 
 ### Current progress {#current-progress}
 
-Full Danksharding is several years away. However, Proto-Danksharding should arrive relatively soon. At the time of writing (Feb 2023) the KZG ceremony is still open and has so far attracted over 50,000 contributors. The [EIP](https://eips.ethereum.org/EIPS/eip-4844) for ProtoDanksharding is mature, the specification is agreed and the clients have implemented prototypes that are currently being tested and made production-ready. The next step is to implement the changes on a public testnet. You can keep up to date using the [EIP 4844 readiness checklist](https://github.com/ethereum/pm/blob/master/Breakout-Room/4844-readiness-checklist.md#client-implementation-status).
+Full Danksharding is several years away. However, Proto-Danksharding should arrive relatively soon. At the time of writing (Feb 2023) the KZG ceremony is still open and has so far attracted over 50,000 contributors. The [EIP](https://eips.ethereum.org/EIPS/eip-4844) for Proto-Danksharding is mature, the specification is agreed and the clients have implemented prototypes that are currently being tested and made production-ready. The next step is to implement the changes on a public testnet. You can keep up to date using the [EIP 4844 readiness checklist](https://github.com/ethereum/pm/blob/master/Breakout-Room/4844-readiness-checklist.md#client-implementation-status).
 
 ### Further reading {#further-reading}
 
