@@ -1584,6 +1584,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://jarrodwatts.com"><img src="https://avatars.githubusercontent.com/u/35651410?v=4?s=100" width="100px;" alt="Jarrod Watts"/><br /><sub><b>Jarrod Watts</b></sub></a><br /><a href="#content-jarrodwatts" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/mlCode111"><img src="https://avatars.githubusercontent.com/u/34754144?v=4?s=100" width="100px;" alt="Miao"/><br /><sub><b>Miao</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=mlCode111" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ljiatu"><img src="https://avatars.githubusercontent.com/u/3280973?v=4?s=100" width="100px;" alt="Jiatu Liu"/><br /><sub><b>Jiatu Liu</b></sub></a><br /><a href="#content-ljiatu" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/DeUETH"><img src="https://avatars.githubusercontent.com/u/107472460?v=4?s=100" width="100px;" alt="DeUETH"/><br /><sub><b>DeUETH</b></sub></a><br /><a href="#content-DeUETH" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
