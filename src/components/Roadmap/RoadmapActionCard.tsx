@@ -1,9 +1,28 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
-import ActionCard, { IProps } from "../ActionCard"
+import { GatsbyImage } from "gatsby-plugin-image"
+import {
+  Box,
+  Center,
+  Flex,
+  Image,
+  LinkBox,
+  LinkOverlay,
+  Text,
+} from "@chakra-ui/react"
 
 import { getImage } from "../../utils/image"
+
+import ButtonLink from "../ButtonLink"
+
+interface IProps {
+  to: string
+  alt: string
+  image: string
+  title: string
+  description: string
+  buttonText: string
+}
 
 const RoadmapActionCard: React.FC<IProps> = ({
   to,
@@ -11,7 +30,7 @@ const RoadmapActionCard: React.FC<IProps> = ({
   image,
   title,
   description,
-  children,
+  buttonText,
 }) => {
   const data = useStaticQuery(graphql`
     query RoadmapActionCard {
@@ -19,6 +38,7 @@ const RoadmapActionCard: React.FC<IProps> = ({
         childImageSharp {
           gatsbyImageData(
             width: 400
+            height: 260
             layout: CONSTRAINED
             placeholder: BLURRED
             quality: 100
@@ -28,7 +48,7 @@ const RoadmapActionCard: React.FC<IProps> = ({
       scaling: file(relativePath: { eq: "eth.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 400
+            height: 260
             layout: CONSTRAINED
             placeholder: BLURRED
             quality: 100
@@ -38,7 +58,8 @@ const RoadmapActionCard: React.FC<IProps> = ({
       security: file(relativePath: { eq: "hackathon_transparent.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 400
+            width: 380
+            height: 260
             layout: CONSTRAINED
             placeholder: BLURRED
             quality: 100
@@ -48,7 +69,8 @@ const RoadmapActionCard: React.FC<IProps> = ({
       userExperience: file(relativePath: { eq: "enterprise-eth.png" }) {
         childImageSharp {
           gatsbyImageData(
-            width: 400
+            width: 380
+            height: 260
             layout: CONSTRAINED
             placeholder: BLURRED
             quality: 100
@@ -59,15 +81,29 @@ const RoadmapActionCard: React.FC<IProps> = ({
   `)
 
   return (
-    <ActionCard
-      to={to}
-      alt={alt}
-      image={getImage(data[image])}
-      title={title}
-      description={description}
+    <LinkBox
+      as={Flex}
+      direction="column"
+      justifyContent="space-between"
+      border="1px solid"
+      borderColor="lightBorder"
     >
-      {children}
-    </ActionCard>
+      <Center background="cardGradient" h="260px">
+        <Image
+          as={GatsbyImage}
+          image={getImage(data[image])!}
+          alt={alt}
+          fit="contain"
+        />
+      </Center>
+      <Box p={6}>
+        <Text as="h3">{title}</Text>
+        <Text>{description}</Text>
+        <LinkOverlay as={ButtonLink} href={to}>
+          {buttonText}
+        </LinkOverlay>
+      </Box>
+    </LinkBox>
   )
 }
 
