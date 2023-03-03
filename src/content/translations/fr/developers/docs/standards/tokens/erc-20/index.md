@@ -75,7 +75,7 @@ Voyons pourquoi une norme est importante et pourquoi elle nous facilite le contr
 Pour commencer, assurez-vous d'avoir installé la bibliothèque Python [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation):
 
 ```
-$ pip install web3
+pip install web3
 ```
 
 ```python

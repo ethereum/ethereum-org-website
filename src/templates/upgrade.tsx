@@ -26,7 +26,6 @@ import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
 import RandomAppList from "../components/RandomAppList"
-import Roadmap from "../components/Roadmap"
 import UpgradeTableOfContents, {
   Item as ItemTableOfContents,
 } from "../components/UpgradeTableOfContents"
@@ -167,7 +166,6 @@ const components = {
   table: MarkdownTable,
   MeetupList,
   RandomAppList,
-  Roadmap,
   Logo,
   ButtonLink,
   Contributors,
@@ -349,10 +347,6 @@ const UpgradePage = ({
       {
         text: t("page-upgrades-upgrades-docking"),
         to: "/upgrades/merge/",
-      },
-      {
-        text: t("page-upgrades-shard-title"),
-        to: "/upgrades/sharding/",
       },
     ],
   }

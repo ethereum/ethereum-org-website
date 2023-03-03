@@ -57,10 +57,6 @@ Toda sugerencia, tanto para los principios de diseños, como para la guía de es
 
 Asegúrese de leer [nuestros principios](/contributing/design-principles/) y [nuestra guía de estilo](/contributing/style-guide/) si quiere [contribuir con el sitio](/contributing/).
 
-## Hoja de ruta {#roadmap}
-
-<Roadmap />
-
 ## Ofertas de trabajo disponibles {#open-jobs}
 
 Aunque este sitio web es de código abierto, y cualquiera puede trabajar en él, tenemos un equipo dedicado a ethereum.org y a otros proyectos web de Ethereum Foundation.

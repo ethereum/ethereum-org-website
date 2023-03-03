@@ -11,7 +11,7 @@ summaryPoint4: En el passat ens hi referíem com "l'acoblament."
 ---
 
 <UpgradeStatus dateKey="page-upgrades-merge-date">
-  Aquesta actualització representa el canvi oficial al consens de la prova de participació. D'aquesta manera s'elimina la necessitat de la mineria, que consumeix molta energia, i en el seu lloc s'assegura la xarxa utilitzant ether estacat. Un pas realment exitant és assolir <a href="/upgrades/vision/">Ethereum vision</a> - més escalabilitat, seguretat, i sostenibilitat.
+  Aquesta actualització representa el canvi oficial al consens de la prova de participació. D'aquesta manera s'elimina la necessitat de la mineria, que consumeix molta energia, i en el seu lloc s'assegura la xarxa utilitzant ether estacat. Un pas realment exitant és assolir <a href="/roadmap/vision/">Ethereum vision</a> - més escalabilitat, seguretat, i sostenibilitat.
 </UpgradeStatus>
 
 ## Què és la fusió? {#what-is-the-docking}
@@ -28,7 +28,7 @@ La xarxa principal aportarà la capacitat d'executar contractes intel·ligents e
 
 ## Després de la fusió {#after-the-merge}
 
-Això marcarà el final de la prova de treball per a Ethereum i el principi d'una nova era més sostenible i respectuosa amb el medi ambient. Arribats a aquest punt, Ethereum estarà un pas més a prop d'adquirir la mida completa, la seguretat i la sostenibilitat remarcades en la seva [visió d'Ethereum](/upgrades/vision/).
+Això marcarà el final de la prova de treball per a Ethereum i el principi d'una nova era més sostenible i respectuosa amb el medi ambient. Arribats a aquest punt, Ethereum estarà un pas més a prop d'adquirir la mida completa, la seguretat i la sostenibilitat remarcades en la seva [visió d'Ethereum](/roadmap/vision/).
 
 És important tenir en compte que un objectiu d’implementació de la fusió és la simplicitat per agilitar la transició de la prova de treball a la prova de participació. Els desenvolupadors estan focalitzant els seus esforços en aquesta transició, alhora que minimitzen característiques addicionals que podrien endarrerir aquest objectiu.
 

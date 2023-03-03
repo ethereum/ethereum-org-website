@@ -20,7 +20,6 @@ import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
 import RandomAppList from "../components/RandomAppList"
 import ExpandableCard from "../components/ExpandableCard"
-import Roadmap from "../components/Roadmap"
 import TableOfContents, {
   Item as ItemTableOfContents,
 } from "../components/TableOfContents"
@@ -29,6 +28,7 @@ import SectionNav from "../components/SectionNav"
 import DocLink from "../components/DocLink"
 import GhostCard from "../components/GhostCard"
 import MatomoOptOut from "../components/MatomoOptOut"
+import UpgradeStatus from "../components/UpgradeStatus"
 import {
   Divider,
   Paragraph,
@@ -131,7 +131,6 @@ const components = {
   table: MarkdownTable,
   MeetupList,
   RandomAppList,
-  Roadmap,
   Link,
   Logo,
   ButtonLink,
@@ -156,6 +155,7 @@ const components = {
   TranslationChartImage,
   EnergyConsumptionChart,
   QuizWidget,
+  UpgradeStatus,
 }
 
 const StaticPage = ({

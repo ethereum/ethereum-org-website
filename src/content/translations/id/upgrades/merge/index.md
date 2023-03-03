@@ -11,7 +11,7 @@ summaryPoint4: Sebelumnya kami menyebutnya sebagai "docking."
 ---
 
 <UpgradeStatus dateKey="page-upgrades-merge-date">
-  Peningkatan ini mewakilkan peralihan resmi ke konsensus bukti taruhan. Ini menghilangkan kebutuhan akan penambangan dengan energi besar, dan alih-alih mengamankan jaringan yang menggunakan ether yang ditaruhkan. Satu langkah yang sangat menyenangkan dalam mewujudkan <a href="/upgrades/vision/">visi Ethereum</a> – lebih banyak skalabilitas, keamanan, dan keberlanjutan.
+  Peningkatan ini mewakilkan peralihan resmi ke konsensus bukti taruhan. Ini menghilangkan kebutuhan akan penambangan dengan energi besar, dan alih-alih mengamankan jaringan yang menggunakan ether yang ditaruhkan. Satu langkah yang sangat menyenangkan dalam mewujudkan <a href="/roadmap/vision/">visi Ethereum</a> – lebih banyak skalabilitas, keamanan, dan keberlanjutan.
 </UpgradeStatus>
 
 ## Apa itu Penggabungan? {#what-is-the-docking}
@@ -28,7 +28,7 @@ Jaringan Utama akan memampukan pengoperasian kontrak pintar menjadi sistem bukti
 
 ## Setelah Penggabungan {#after-the-merge}
 
-Ini akan menandakan akhir dari bukti kerja untuk Ethereum dan memulai era Ethereum yang lebih berkelanjutan dan ramah lingkungan. Pada titik ini Ethereum akan satu langkah lebih dekat pada pencapaian penskalaan, keamanan, dan keberlanjutan penuh yang digariskan dalam [visi Ethereum](/upgrades/vision/).
+Ini akan menandakan akhir dari bukti kerja untuk Ethereum dan memulai era Ethereum yang lebih berkelanjutan dan ramah lingkungan. Pada titik ini Ethereum akan satu langkah lebih dekat pada pencapaian penskalaan, keamanan, dan keberlanjutan penuh yang digariskan dalam [visi Ethereum](/roadmap/vision/).
 
 Penting untuk dicatat bahwa satu tujuan implementasi dari Penggabungan adalah kemudahan untuk mempercepat transisi dari sistem bukti kerja ke bukti taruhan. Pengembang sedang memusatkan usaha mereka pada transisi ini, dan mengurangi fitur tambahan yang bisa menunda pencapaian tujuan ini.
 

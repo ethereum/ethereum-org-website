@@ -99,8 +99,8 @@ The eth-gas-reporter plugin is quite useful for keeping track of the gas costs o
 ### Step 1: Install the eth-gas-reporter plugin and codechecks {#step-1-install-the-eth-gas-reporter-plugin-and-codechecks}
 
 ```bash
-$ npm install --save-dev eth-gas-reporter
-$ npm install --save-dev @codechecks/client
+npm install --save-dev eth-gas-reporter
+npm install --save-dev @codechecks/client
 ```
 
 ### Step 2: Add the plugin to the mocha settings inside your truffle-config.js {#step-2-add-the-plugin-to-the-mocha-settings-inside-your-truffle-configjs}
@@ -151,9 +151,7 @@ With the solidity-coverage plugin you can check how much of your code paths are 
 ### Step 1: Create a metacoin project and install coverage tools {#step-1-create-a-metacoin-project-and-install-coverage-tools}
 
 ```bash
-$ npm install --save-dev truffle
-$ npm install --save-dev coveralls
-$ npm install --save-dev solidity-coverage
+npm install --save-dev truffle coveralls solidity-coverage
 ```
 
 ### Step 2: Add solidity-coverage to the plugins array in truffle-config.js {#step-2-add-solidity-coverage-to-the-plugins-array-in-truffle-configjs}

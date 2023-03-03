@@ -1,8 +1,11 @@
+import { ReactNode } from "react"
 import { IGatsbyImageData } from "gatsby-plugin-image"
 
 import type { Messages } from "./interfaces"
 import type { Lang } from "./utils/languages"
 import { TranslationKey } from "./utils/translations"
+
+export type ChildOnlyProp = { children: ReactNode }
 
 export type Intl = {
   language: Lang

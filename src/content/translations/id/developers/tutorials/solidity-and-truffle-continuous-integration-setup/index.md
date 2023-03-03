@@ -105,8 +105,8 @@ Plugin eth-gas-reporter cukup berguna untuk melacak biaya gas dari fungsi kontra
 ### Langkah 1: Instal plugin eth-gas-reporter dan codechecks {#step-1-install-the-eth-gas-reporter-plugin-and-codechecks}
 
 ```bash
-$ npm install --save-dev eth-gas-reporter
-$ npm install --save-dev @codechecks/client
+npm install --save-dev eth-gas-reporter
+npm install --save-dev @codechecks/client
 ```
 
 ### Langkah 2: Tambahkan plugin ke pengaturan mocha di dalam truffle-config.js Anda {#step-2-add-the-plugin-to-the-mocha-settings-inside-your-truffle-configjs}
@@ -157,9 +157,9 @@ Dengan plugin solidity-coverage, Anda dapat memeriksa seberapa banyak jalur kode
 ### Langkah 1: Buat proyek metacoin dan instal peralatan coverage {#step-1-create-a-metacoin-project-and-install-coverage-tools}
 
 ```bash
-$ npm install --save-dev truffle
-$ npm install --save-dev coveralls
-$ npm install --save-dev solidity-coverage
+npm install --save-dev truffle
+npm install --save-dev coveralls
+npm install --save-dev solidity-coverage
 ```
 
 ### Langkah 2: Tambahkan solidity-coverage ke dalam array plugin di dalam truffle-config.js {#step-2-add-solidity-coverage-to-the-plugins-array-in-truffle-configjs}

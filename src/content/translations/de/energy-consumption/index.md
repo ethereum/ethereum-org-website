@@ -18,7 +18,7 @@ Bei Ethereum ist zum Beispiel der Transaktionsdurchsatz nicht nur der der Basise
 
 Wichtiger sind der Energieverbrauch und die CO2-Bilanz des gesamten Netzwerkes. Auf Basis dieser Werte kann untersucht werden, was das Netzwerk seinen Benutzern und der Gesellschaft insgesamt anbieten kann, und ob die dafür benötigten Energieaufwendungen gerechtfertigt sind oder nicht. Es kommt hinzu, dass auf Transaktionen basierte Kenngrößen den Wert eines Netzwerkes ausschließlich anhand der Rolle bei dem Transfer von Krypto zwischen Konten bewerten und daher eine ehrliche Kosten-Nutzen-Analyse unterbinden.
 
-[CCRI](https://carbon-ratings.com) (Crypto Carbon Ratings Institute) hat den Stromverbrauch und den CO2-Fußabdruck des Ethereum-Netzwerks umfassend analysiert (siehe Bericht [_ Der Zusammenschluss - Auswirkungen auf den Stromverbrauch und den CO2-Footprint des Ethereum-Netzwerks_](https://carbon-ratings.com/eth-report-2022)). CCRI hat den Stromverbrauch verschiedener Nodes mit verschiedenen Hardware- und Client-Software-Konfigurationen gemessen. Dies führte zu einer Schätzung von **2.601 MWh** (0. 026 TWh) für den jährlichen Stromverbrauch des Netzes zum Zeitpunkt der Analyse (September 2022). Das entspricht den jährlichen CO2-Emissionen von **870 Tonnen CO2e** unter Berücksichtigung regionaler spezifischer Faktoren der CO2-Intensität.
+[CCRI](https://carbon-ratings.com) (Crypto Carbon Ratings Institute) hat den Stromverbrauch und den CO2-Fußabdruck des Ethereum-Netzwerks umfassend analysiert (siehe Bericht [_ Der Zusammenschluss - Auswirkungen auf den Stromverbrauch und den CO2-Footprint des Ethereum-Netzwerks_](https://carbon-ratings.com/eth-report-2022)). CCRI hat den Stromverbrauch verschiedener Nodes mit verschiedenen Hardware- und Client-Software-Konfigurationen gemessen. Dies führte zu einer Schätzung von **2601 MWh** (0,0026 TWh) für den jährlichen Stromverbrauch des Netzes zum Zeitpunkt der Analyse (September 2022). Das entspricht den jährlichen CO2-Emissionen von **870 Tonnen CO2e** unter Berücksichtigung regionaler spezifischer Faktoren der CO2-Intensität.
 
 [Digiconomist stellt Daten über den gesamten Energieverbrauch und CO2-Abdruck der Netzwerke Bitcoin und Ethereum bereit](https://digiconomist.net/ethereum-energy-consumption). Zum Zeitpunkt dieses Artikels benötigt Bitcoin ungefähr 200 TWh/a elektrische Energie und emittiert 100 MT (Megatonnen) CO2 pro Jahr. Zusätzlich werden jährlich 32 KT (Kilotonnen) elektrische Abfälle durch veraltete Hardware verursacht. Zum Vergleich: Der Energiebedarf für die Sicherung von Ethereum liegt ungefähr bei **0,01 TWh/a**.
 
@@ -69,7 +69,7 @@ Erfahren Sie mehr darüber, wie [Ethereum Proof-of-Stake verwendet](/developers/
 
 ## Verwandte Themen {#related-topics}
 
-- [Die Vision von Ethereum](/upgrades/vision/)
+- [Die Vision von Ethereum](/roadmap/vision/)
 - [Die Beacon Chain](/upgrades/beacon-chain)
 - [Der Zusammenschluss](/upgrades/merge/)
 - [Sharding](/upgrades/beacon-chain/)

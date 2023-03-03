@@ -15,7 +15,7 @@ import FocusTrap from "focus-trap-react"
 // Component imports
 import Translation from "./Translation"
 // SVG imports
-import FeedbackGlyph from "../assets/feedback-glyph.svg"
+import { FeedbackGlyphIcon } from "./icons"
 // Utility imports
 import { trackCustomEvent } from "../utils/matomo"
 // Hook imports
@@ -160,7 +160,7 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
             lg: isExpanded ? "absolute" : "inherit",
           }}
         >
-          <Icon as={FeedbackGlyph} color="white" h="32px" w="26px" my="11px" />
+          <FeedbackGlyphIcon color="white" my="11px" />
           {isExpanded && (
             <ScaleFade in={isExpanded} delay={0.25}>
               <Text

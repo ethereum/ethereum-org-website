@@ -8,7 +8,6 @@
   "consensus-client-nimbus-logo-alt": "Nimbus logo",
   "consensus-client-prysm-logo-alt": "Prysm logo",
   "consensus-client-teku-logo-alt": "Teku logo",
-  "consensus-client-under-review": "Review and audit in progress",
   "page-upgrades-answer-1": "The Beacon Chain was used as a tool to upgrade Ethereum Mainnet at The Merge.",
   "page-upgrades-answer-2": "With The Merge, Ethereum had its most substantial upgrade ever swapping proof-of-work for a new proof-of-stake based consensus layer.",
   "page-upgrades-answer-4": "The Beacon Chain was used to develop the proof-of-stake-based consensus Ethereum uses today. It was run separately to Ethereum Mainnet so developers could observe the consensus mechanism in isolation before using it to coordinate real activity.",

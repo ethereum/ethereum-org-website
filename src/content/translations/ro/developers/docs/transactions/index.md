@@ -181,7 +181,7 @@ Ethereum avea inițial un singur format pentru tranzacții. Fiecare tranzacție 
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
-Ethereum a evoluat pentru a suporta mai multe tipuri de tranzacții care permită implementarea de noi caracteristici, cum ar fi listele de acces și [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md), fără ca acestea să afecteze formatele tradiționale de tranzacții.
+Ethereum a evoluat pentru a suporta mai multe tipuri de tranzacții care permită implementarea de noi caracteristici, cum ar fi listele de acces și [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), fără ca acestea să afecteze formatele tradiționale de tranzacții.
 
 [EIP-2718: Tranzacția plic tipizată (Typed Transaction Envelope)](https://eips.ethereum.org/EIPS/eip-2718) definește un tip de tranzacție care este un plic pentru viitoarele tipuri de tranzacții.
 

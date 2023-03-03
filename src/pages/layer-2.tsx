@@ -568,7 +568,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <p>
               <Translation id="layer-2-why-do-we-need-layer-2-scalability-2" />
             </p>
-            <Link to="/upgrades/vision/">
+            <Link to="/roadmap/vision/">
               <Translation id="layer-2-why-do-we-need-layer-2-scalability-3" />
             </Link>
           </FlexContainer>
@@ -659,7 +659,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <Translation id="layer-2-dyor-2" />
           </p>
           <p>
-            <ButtonLink to="https://l2beat.com/?view=risk">
+            <ButtonLink to="https://l2beat.com/scaling/risk">
               <Translation id="layer-2-dyor-3" />
             </ButtonLink>
           </p>

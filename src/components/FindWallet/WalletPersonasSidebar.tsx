@@ -15,26 +15,28 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 import Translation from "../Translation"
 
 // Icons
-import BuyCrypto from "../../assets/wallets/buy_crypto.svg"
-import ENSSupport from "../../assets/wallets/ens_support.svg"
-import ERC20Support from "../../assets/wallets/erc_20_support.svg"
-import GasFeeCustomization from "../../assets/wallets/gas_fee_customization.svg"
-import HardwareSupport from "../../assets/wallets/hardware_support.svg"
-import Hardware from "../../assets/wallets/hardware.svg"
-import Layer2 from "../../assets/wallets/layer_2.svg"
-import NFTSupport from "../../assets/wallets/nft_support.svg"
-import NonCustodial from "../../assets/wallets/non_custodial.svg"
-import OpenSource from "../../assets/wallets/open_source.svg"
-import RPCImporting from "../../assets/wallets/rpc_importing.svg"
-import Staking from "../../assets/wallets/staking.svg"
-import WalletConnect from "../../assets/wallets/walletconnect.svg"
-import ConnectDapps from "../../assets/wallets/connect_dapps.svg"
-import WithdrawCrypto from "../../assets/wallets/withdraw_crypto.svg"
-import Multisig from "../../assets/wallets/multisig.svg"
-import SocialRecover from "../../assets/wallets/social_recover.svg"
-import Swap from "../../assets/wallets/swap.svg"
-import Eip1559 from "../../assets/wallets/eip1559.svg"
 import { MdCircle } from "react-icons/md"
+import {
+  BuyCryptoIcon,
+  ConnectDappsIcon,
+  EIP1559Icon,
+  ENSSupportIcon,
+  ERC20SupportIcon,
+  GasFeeCustomizationIcon,
+  HardwareIcon,
+  HardwareSupportIcon,
+  Layer2Icon,
+  MultisigIcon,
+  NFTSupportIcon,
+  NonCustodialIcon,
+  OpenSourceWalletIcon,
+  RPCImportingIcon,
+  SocialRecoverIcon,
+  StakingIcon,
+  SwapIcon,
+  WalletConnectIcon,
+  WithdrawCryptoIcon,
+} from "../icons/wallets"
 
 // Utils
 import { trackCustomEvent } from "../../utils/matomo"
@@ -87,79 +89,79 @@ const WalletPersonasSidebar = ({
   const filterLabels = {
     hardware: {
       label: t("page-find-wallet-hardware"),
-      icon: <Hardware />,
+      icon: <HardwareIcon />,
     },
     open_source: {
       label: t("page-find-wallet-open-source"),
-      icon: <OpenSource />,
+      icon: <OpenSourceWalletIcon />,
     },
     non_custodial: {
       label: t("page-find-wallet-non-custodial"),
-      icon: <NonCustodial />,
+      icon: <NonCustodialIcon />,
     },
     hardware_support: {
       label: t("page-find-wallet-hardware-wallet-support"),
-      icon: <HardwareSupport />,
+      icon: <HardwareSupportIcon />,
     },
     walletconnect: {
       label: t("page-find-wallet-walletconnect"),
-      icon: <WalletConnect />,
+      icon: <WalletConnectIcon />,
     },
     rpc_importing: {
       label: t("page-find-wallet-rpc-importing"),
-      icon: <RPCImporting />,
+      icon: <RPCImportingIcon />,
     },
     nft_support: {
       label: t("page-find-wallet-nft-support"),
-      icon: <NFTSupport />,
+      icon: <NFTSupportIcon />,
     },
     connect_to_dapps: {
       label: t("page-find-wallet-connect-to-dapps"),
-      icon: <ConnectDapps />,
+      icon: <ConnectDappsIcon />,
     },
     staking: {
       label: t("page-find-wallet-staking"),
-      icon: <Staking />,
+      icon: <StakingIcon />,
     },
     swaps: {
       label: t("page-find-wallet-swaps"),
-      icon: <Swap />,
+      icon: <SwapIcon />,
     },
     layer_2: {
       label: t("page-find-wallet-layer-2"),
-      icon: <Layer2 />,
+      icon: <Layer2Icon />,
     },
     gas_fee_customization: {
       label: t("page-find-wallet-gas-fee-customization"),
-      icon: <GasFeeCustomization />,
+      icon: <GasFeeCustomizationIcon />,
     },
     ens_support: {
       label: t("page-find-wallet-ens-support"),
-      icon: <ENSSupport />,
+      icon: <ENSSupportIcon />,
     },
     buy_crypto: {
       label: t("page-find-wallet-buy-crypto"),
-      icon: <BuyCrypto />,
+      icon: <BuyCryptoIcon />,
     },
     withdraw_crypto: {
       label: t("page-find-wallet-sell-for-fiat"),
-      icon: <WithdrawCrypto />,
+      icon: <WithdrawCryptoIcon />,
     },
     multisig: {
       label: t("page-find-wallet-multisig"),
-      icon: <Multisig />,
+      icon: <MultisigIcon />,
     },
     social_recovery: {
       label: t("page-find-wallet-social-recovery"),
-      icon: <SocialRecover />,
+      icon: <SocialRecoverIcon />,
     },
     erc_20_support: {
       label: t("page-find-wallet-token-support"),
-      icon: <ERC20Support />,
+      icon: <ERC20SupportIcon />,
     },
     eip_1559_support: {
       label: t("page-find-wallet-fee-optimization"),
-      icon: <Eip1559 />,
+      icon: <EIP1559Icon />,
     },
   }
   const personas: Personas[] = [

@@ -107,6 +107,7 @@ const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
                 </Heading>
                 <AccordionPanel as={List} p={0} m={0}>
                   {filterOption.items.map((item, itemIdx) => {
+                    const LabelIcon = item.icon
                     return (
                       <Box
                         borderBottom="1px"
@@ -149,18 +150,13 @@ const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
                                 }
                           }
                         >
-                          <GridItem
-                            sx={{
-                              svg: {
-                                boxSize: 7,
-                                mt: 2,
-                                path: {
-                                  fill: "text",
-                                },
-                              },
-                            }}
-                          >
-                            {item.icon}
+                          <GridItem>
+                            <LabelIcon
+                              boxSize={7}
+                              mt={0.5}
+                              color="text"
+                              aria-hidden
+                            />
                           </GridItem>
                           <GridItem as="span" lineHeight="1.1rem">
                             {item.title}

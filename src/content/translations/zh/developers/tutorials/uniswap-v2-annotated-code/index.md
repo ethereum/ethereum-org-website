@@ -24,7 +24,7 @@ lang: zh
 
 当流动性提供者想要收回他们的代币资产时，他们可以销毁资金池代币并收回他们的代币，其中包括属于他们的奖励。
 
-[点击此处查看更完整的描述](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/swaps/)。
+[点击此处查看更完整的描述](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/)。
 
 ### 为什么选择 v2？ 而不是 v3？ {#why-v2}
 
@@ -450,7 +450,7 @@ ERC-20 的转移调用有两种方式可能失败：
     }
 ```
 
-如果不需收费则将 `klast` 设为 0（如果 klast 不为 0）。 编写该合约时，有一个[燃料返还功能](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3298.md)，用于鼓励合约将其不需要的存储释放，从而减少以太坊上状态变量的整体存储大小。 此段代码在可行时返还。
+如果不需收费则将 `klast` 设为 0（如果 klast 不为 0）。 编写该合约时，有一个[燃料返还功能](https://eips.ethereum.org/EIPS/eip-3298)，用于鼓励合约将其不需要的存储释放，从而减少以太坊上状态变量的整体存储大小。 此段代码在可行时返还。
 
 #### 外部可访问函数 {#pair-external}
 
@@ -803,7 +803,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
 
 [本合约](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol)实现 ERC-20 流动性代币。 它与 [OpenWhisk ERC-20 合约](/developers/tutorials/erc20-annotated-code)相似，因此这里仅解释不同的部分，即 `permit` 的功能。
 
-以太坊上的交易需要消耗以太币 (ETH)，相当于实际货币。 如果你有 ERC-20 代币但没有以太币，就无法发送交易，因而不能用代币做任何事情。 避免该问题的一个解决方案是[元交易](https://docs.uniswap.org/protocol/V2/guides/smart-contract-integration/supporting-meta-transactions/)。 代币的所有者签署一个交易，允许其他人从链上提取代币，并通过网络发送给接收人。 接收人拥有以太币，可以代表所有者提交许可。
+以太坊上的交易需要消耗以太币 (ETH)，相当于实际货币。 如果你有 ERC-20 代币但没有以太币，就无法发送交易，因而不能用代币做任何事情。 避免该问题的一个解决方案是[元交易](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions)。 代币的所有者签署一个交易，允许其他人从链上提取代币，并通过网络发送给接收人。 接收人拥有以太币，可以代表所有者提交许可。
 
 ```solidity
     bytes32 public DOMAIN_SEPARATOR;

@@ -23,7 +23,7 @@ Z oddajniško verigo je bila poimenovana glavna knjiga računov, s katero se je 
 
 Uvedla je mehanizem za doseganje soglasja (ali "plast soglasja"), ki je zamenjalo Ethereumovo rudarjenje po mehanizmu z dokazom o delu, in tako prinesla številne izboljšave.
 
-Oddajniška veriga je bila temeljni del [varnega, okolju prijaznega in prilagodljivega Ethereuma, kot ga poznamo danes](/upgrades/vision/).
+Oddajniška veriga je bila temeljni del [varnega, okolju prijaznega in prilagodljivega Ethereuma, kot ga poznamo danes](/roadmap/vision/).
 
 ## Vpliv oddajniške verige {#beacon-chain-features}
 
@@ -71,5 +71,5 @@ Razdrobitev je mogoče v Ethereumovo okolje varno uvesti le, ko je vpeljan mehan
 
 ## Dodatno branje
 
-- [Več o prihodnjih nadgradnjah Ethereuma](/upgrades/vision)
+- [Več o prihodnjih nadgradnjah Ethereuma](/roadmap/vision)
 - [Več o dokazu o deležu](/developers/docs/consensus-mechanisms/pos)

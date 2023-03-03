@@ -1,5 +1,7 @@
 const { propNames } = require("@chakra-ui/react")
 
+const { babelConfig } = require("./babel-storybook-config")
+
 module.exports = {
   stories: [
     {
@@ -16,30 +18,43 @@ module.exports = {
     "@storybook/addon-a11y",
     "@chakra-ui/storybook-addon",
   ],
-  framework: "@storybook/react",
+  babel: async (options) => ({
+    ...babelConfig,
+  }),
+  framework: {
+    name: "@storybook/react-webpack5",
+    options: {},
+  },
   refs: {
     "@chakra-ui/react": {
       disable: true,
     },
   },
-  core: {
-    builder: "webpack5",
-  },
-  features: {
-    storyStoreV7: true,
-    emotionAlias: false,
-  },
+  features: {},
   webpackFinal: async (config) => {
-    // Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
-    config.module.rules[0].exclude = [
-      /node_modules\/(?!(gatsby|gatsby-script)\/)/,
-    ]
-    // Remove core-js to prevent issues with Storybook
-    config.module.rules[0].exclude = [/core-js/]
-    // Use babel-plugin-remove-graphql-queries to remove static queries from components when rendering in storybook
-    config.module.rules[0].use[0].options.plugins.push(
-      require.resolve("babel-plugin-remove-graphql-queries")
-    )
+    const isRuleExist =
+      config.module && config.module.rules && config.module.rules.length
+    if (isRuleExist) {
+      // Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
+      config.module.rules[0].exclude = [
+        /node_modules\/(?!(gatsby|gatsby-script)\/)/,
+      ]
+
+      // Remove core-js to prevent issues with Storybook
+      config.module.rules[0].exclude = [/core-js/]
+    }
+
+    if (
+      isRuleExist &&
+      config.module.rules[0].use &&
+      config.module.rules[0].use.length
+    ) {
+      // Use babel-plugin-remove-graphql-queries to remove static queries from components when rendering in storybook
+      config.module.rules[0].use[0].options.plugins.push(
+        require.resolve("babel-plugin-remove-graphql-queries")
+      )
+    }
+
     config.resolve.mainFields = ["browser", "module", "main"]
     return config
   },
@@ -71,5 +86,8 @@ module.exports = {
         return !(isStyledSystemProp || isHTMLElementProp)
       },
     },
+  },
+  docs: {
+    autodocs: true,
   },
 }
