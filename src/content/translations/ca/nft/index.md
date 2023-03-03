@@ -326,7 +326,7 @@ No estem aquí per defensar l'empremta mediambiental de la mineria, sinó que vo
 
 ### Un futur més verd... {#a-greener-future}
 
-Durant tot aquest temps que Ethereum ha existit, el consum energètic de la mineria ha estat un gran àmbit d'atenció per als desenvolupadors i els investigadors. I la visió sempre ha estat reemplaçar-la el més aviat possible. [Més informació sobre la visió d'Ethereum](/upgrades/vision/)
+Durant tot aquest temps que Ethereum ha existit, el consum energètic de la mineria ha estat un gran àmbit d'atenció per als desenvolupadors i els investigadors. I la visió sempre ha estat reemplaçar-la el més aviat possible. [Més informació sobre la visió d'Ethereum](/roadmap/vision/)
 
 Aquesta visió s'està lliurant ara mateix.
 

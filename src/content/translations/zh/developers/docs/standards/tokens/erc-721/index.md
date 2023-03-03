@@ -63,7 +63,7 @@ ERC-721（Ethereum Request for Comments 721），由 William Entriken、Dieter S
 首先，请确保您已安装 [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python 库：
 
 ```
-$ pip install web3
+pip install web3
 ```
 
 ```python

@@ -70,6 +70,7 @@ const semanticTokens = {
       _light: "blackAlpha.400",
       _dark: "whiteAlpha.400",
     },
+    switchBackground: { _light: "gray.300", _dark: "whiteAlpha.400" },
   },
 }
 

@@ -23,7 +23,7 @@ Lanțul Beacon a fost numele dat unui registru al conturilor care a condus și c
 
 A introdus motorul pentru consens (sau „stratul de consens”) care a luat locul minării prin dovada muncii în Ethereum și a adus îmbunătățiri majore.
 
-Lanțul Beacon a fost o componentă fundamentală pentru [securitatea, respectul pentru mediu și scalabilitatea Ethereum de care ne bucurăm acum](/upgrades/vision/).
+Lanțul Beacon a fost o componentă fundamentală pentru [securitatea, respectul pentru mediu și scalabilitatea Ethereum de care ne bucurăm acum](/roadmap/vision/).
 
 ## Impactul Lanțului Beacon {#beacon-chain-features}
 
@@ -71,5 +71,5 @@ Fragmentarea poate intra în ecosistemul Ethereum în siguranță doar cu un mec
 
 ## Referințe suplimentare
 
-- [Mai multe despre viitoarele modernizări ale Ethereum](/upgrades/vision)
+- [Mai multe despre viitoarele modernizări ale Ethereum](/roadmap/vision)
 - [Mai multe despre dovada mizei](/developers/docs/consensus-mechanisms/pos)
