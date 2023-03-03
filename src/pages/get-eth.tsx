@@ -28,24 +28,6 @@ import FeedbackCard from "../components/FeedbackCard"
 import { CardListItem } from "../components/CardList"
 import { getImage } from "../utils/image"
 
-const GradientContainer = styled.div`
-  background: radial-gradient(
-    46.28% 66.31% at 66.95% 58.35%,
-    rgba(127, 127, 213, 0.2) 0%,
-    rgba(134, 168, 231, 0.2) 50%,
-    rgba(145, 234, 228, 0.2) 100%
-  );
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 4rem 4rem;
-  padding: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    padding: 4rem 2rem;
-  }
-`
-
 const CodeBox = styled.div`
   display: flex;
   justify-content: space-between;
@@ -267,9 +249,23 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           </StyledInfoBanner>
         </Content>
       </Flex>
-      <GradientContainer id="country-picker">
+      <Flex
+        id="country-picker"
+        bgGradient="radial-gradient(
+          46.28% 66.31% at 66.95% 58.35%,
+          rgba(127, 127, 213, 0.2) 0%,
+          rgba(134, 168, 231, 0.2) 50%,
+          rgba(145, 234, 228, 0.2) 100%
+        )"
+        w="full"
+        flexDir="column"
+        alignItems="center"
+        m={16}
+        px={{ base: 8, sm: 16 }}
+        py={{ base: 16, sm: 16 }}
+      >
         <EthExchanges />
-      </GradientContainer>
+      </Flex>
       <Content id="dex">
         <h2>
           <Translation id="page-get-eth-dexs" />
