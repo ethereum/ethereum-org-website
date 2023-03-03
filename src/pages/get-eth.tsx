@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "@emotion/styled"
 import { useIntl } from "react-intl"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
@@ -27,12 +26,6 @@ import {
 import FeedbackCard from "../components/FeedbackCard"
 import { CardListItem } from "../components/CardList"
 import { getImage } from "../utils/image"
-
-const StyledInfoBanner = styled(InfoBanner)<{
-  mt: string
-}>`
-  margin-top: ${(props) => props.mt};
-`
 
 const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
   const intl = useIntl()
@@ -213,12 +206,12 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
               </Link>
             </em>
           </p>
-          <StyledInfoBanner emoji=":wave:" shouldCenter={true} mt={`2rem`}>
+          <Box as={InfoBanner} emoji=":wave:" shouldCenter={true} mt={8}>
             <Translation id="page-get-eth-new-to-eth" />{" "}
             <Link to="/eth/">
               <Translation id="page-get-eth-whats-eth-link" />
             </Link>
-          </StyledInfoBanner>
+          </Box>
         </Content>
       </Flex>
       <Flex
