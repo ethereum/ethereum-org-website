@@ -59,9 +59,6 @@ const InnerContent = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
 `
 
 const LeftItems = styled.ul`
