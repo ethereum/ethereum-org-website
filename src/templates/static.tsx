@@ -91,6 +91,8 @@ const Header1 = ({ children }: ChildOnlyProp) => {
   return (
     <Heading
       as="h1"
+      fontSize={{ base: "2.5rem", md: "5xl" }}
+      lineHeight={1.4}
       fontWeight="bold"
       _before={{
         content: `""`,
@@ -113,6 +115,8 @@ const Header1 = ({ children }: ChildOnlyProp) => {
 const Header2 = ({ children }: ChildOnlyProp) => {
   return (
     <Heading
+      fontSize={{ base: "2xl", md: "2rem" }}
+      lineHeight={1.4}
       fontWeight="bold"
       sx={{ position: "inherit !important" }}
       _before={{
@@ -132,6 +136,8 @@ const Header3 = ({ children }: ChildOnlyProp) => {
   return (
     <Heading
       as="h3"
+      fontSize={{ base: "xl", md: "2xl" }}
+      lineHeight={1.4}
       sx={{ position: "inherit !important" }}
       _before={{
         content: `""`,
@@ -150,6 +156,8 @@ const Header4 = ({ children }: ChildOnlyProp) => {
   return (
     <Heading
       as="h4"
+      fontSize={{ base: "md", md: "xl" }}
+      lineHeight={1.4}
       fontWeight="semibold"
       sx={{ position: "unset !important" }}
       _before={{
