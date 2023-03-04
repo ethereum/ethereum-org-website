@@ -8,6 +8,7 @@ import {
   Divider as ChakraDivider,
   Heading,
   ListItem as ChakraListItem,
+  Icon,
 } from "@chakra-ui/react"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
@@ -35,9 +36,8 @@ import DocLink from "../components/DocLink"
 import GhostCard from "../components/GhostCard"
 import MatomoOptOut from "../components/MatomoOptOut"
 import UpgradeStatus from "../components/UpgradeStatus"
-import Emoji from "../components/OldEmoji"
+import Emoji from "../components/Emoji"
 import UpcomingEventsList from "../components/UpcomingEventsList"
-import Icon from "../components/Icon"
 import SocialListItem from "../components/SocialListItem"
 import YouTube from "../components/YouTube"
 import TranslationChartImage from "../components/TranslationChartImage"
