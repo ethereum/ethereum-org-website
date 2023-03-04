@@ -352,5 +352,11 @@
     "emoji": ":co:",
     "location": "Colombia",
     "link": "https://www.meetup.com/hash-house-medellin/"
+  },
+  {
+    "title": "ETHMiami",
+    "emoji": ":us:",
+    "location": "Miami",
+    "link": "https://ethmiami.net"
   }
 ]
