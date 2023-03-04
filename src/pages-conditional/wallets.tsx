@@ -271,7 +271,6 @@ const WalletsPage = ({
       >
         <Content>
           <Flex flexDirection="column" alignItems="center" mb="8">
-            //central column
             <Heading m="0">
               <Translation id="page-wallets-features-title" />
             </Heading>
