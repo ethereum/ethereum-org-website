@@ -51,6 +51,14 @@ Although it's challenging to provide a rigid definition of what Web3 is, a few c
 - **Web3 is permissionless:** everyone has equal access to participate in Web3, and no one gets excluded.
 - **Web3 has native payments:** it uses cryptocurrency for spending and sending money online instead of relying on the outdated infrastructure of banks and payment processors.
 - **Web3 is trustless:** it operates using incentives and economic mechanisms instead of relying on trusted third-parties.
+ 
+ ##  TABLE : COMPARISONS OF THE EVOLUTION OF THE WEB ##
+ 
+  |WEB 1.0 | WEB 2.0 | WEB 3.0 |
+  | ------ | ------ | ------ |
+  | permissionless | permissioned | Permissionless |
+  | static content | dynamic content | dynamic content |
+  |                | companies run your agreements on their servers | It is an ownership economy. You own part of the protocols you interact with. Your agreements are run on decentralized networks. |
 
 ### Why is Web3 important? {#why-is-web3-important}
 
