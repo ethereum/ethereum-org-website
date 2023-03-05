@@ -385,7 +385,6 @@ const Nav: React.FC<IProps> = ({ path }) => {
     }
   }
   const lgBreakpoint = useToken("breakpoints", "lg")
-  console.log("lgBreakpoint", lgBreakpoint)
 
   const shouldShowSubNav = path.includes("/developers/")
   const splitPath = path.split("/")
