@@ -58,8 +58,8 @@ Although it's challenging to provide a rigid definition of what Web3 is, a few c
   | ------ | ------ | ------ |
   | Permissionless | Permissioned | Permissionless |
   | Static content | Dynamic content | Dynamic content |
-  | Does not require complex server-side architectures | Companies run your agreements on their servers | It is an ownership economy. You own part of the protocols you interact with. Your agreements are run on decentralized networks. |
-  | Online directories, Static informational websites(e.g news), Text-based online forums | Social networking(e.g Twitter, Meta, LinkedIn), E-commerce(e.g Amazon, Shopify), Collaborative platforms | Crypto wallets(e.g MetaMask), Decentralized exchanges(e.g Binance, Uniswap), Decentralized tokens(e.g Bitcoin, NFTs), Decentraland [see here](https://www.bing.com/ck/a?!&&p=0be7e71f4b178550JmltdHM9MTY3ODA2MDgwMCZpZ3VpZD0zOWM1Njk2Yi00MGY3LTZjNjYtMTRmYi03YjE1NDRmNzYyOGUmaW5zaWQ9NTE5MQ&ptn=3&hsh=3&fclid=39c5696b-40f7-6c66-14fb-7b1544f7628e&psq=decentraland&u=a1aHR0cHM6Ly9kZWNlbnRyYWxhbmQub3JnLw&ntb=1)|
+  | Does not require complex server-side architectures. | Companies run your agreements on their servers. | It is an ownership economy. You own part of the protocols you interact with. Your agreements are run on decentralized networks. |
+  | Online directories, Static informational websites(e.g news), Text-based online forums. | Social networking(e.g Twitter, Meta, LinkedIn), E-commerce(e.g Amazon, Shopify), Collaborative platforms. | Crypto wallets(e.g MetaMask), Decentralized exchanges(e.g Binance, Uniswap), Decentralized tokens(e.g Bitcoin, NFTs), Decentraland [see here](https://www.bing.com/ck/a?!&&p=0be7e71f4b178550JmltdHM9MTY3ODA2MDgwMCZpZ3VpZD0zOWM1Njk2Yi00MGY3LTZjNjYtMTRmYi03YjE1NDRmNzYyOGUmaW5zaWQ9NTE5MQ&ptn=3&hsh=3&fclid=39c5696b-40f7-6c66-14fb-7b1544f7628e&psq=decentraland&u=a1aHR0cHM6Ly9kZWNlbnRyYWxhbmQub3JnLw&ntb=1)|
 
 ### Why is Web3 important? {#why-is-web3-important}
 
