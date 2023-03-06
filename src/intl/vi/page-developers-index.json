@@ -8,7 +8,6 @@
   "page-developers-advanced": "Nâng cao",
   "page-developers-api-desc": "Sử dụng các thư viện để tương tác với các hợp đồng thông minh",
   "page-developers-api-link": "API đầu cuối",
-  "page-developers-aria-label": "Menu của nhà phát triển",
   "page-developers-block-desc": "Hàng loạt giao dịch được bổ sung vào chuỗi khối",
   "page-developers-block-explorers-desc": "Cổng thông tin vào dữ liệu Ethereum của bạn",
   "page-developers-block-explorers-link": "Trình duyệt khối",
@@ -84,5 +83,6 @@
   "page-developers-transactions-desc": "Cách Ethereum tuyên bố thay đổi",
   "page-developers-transactions-link": "Giao dịch",
   "page-developers-web3-desc": "Sự khác biệt của thế giới phát triển web3",
-  "page-developers-web3-link": "Web2 và Web3"
+  "page-developers-web3-link": "Web2 và Web3",
+  "alt-eth-blocks": "Hình minh họa các khối được sắp xếp thành một biểu tượng ETH"
 }

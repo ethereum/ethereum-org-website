@@ -160,8 +160,8 @@ export const query = graphql`
         language: { in: $languagesToFetch }
         ns: {
           in: [
-            "src-pages-contributing-translation-program-contributors"
-            "components"
+            "page-contributing-translation-program-contributors"
+            "page-languages"
             "common"
           ]
         }

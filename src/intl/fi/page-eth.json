@@ -92,5 +92,6 @@
   "page-eth-tokens-nft-description": "Rahakkeet edustavat kohteiden omistajuutta Ethereum-verkossa.",
   "page-eth-tokens-dao-description": "Nettiyhteisöjä, joita rahakkeiden omistajat usein hallitsevat.",
   "page-eth-whats-defi": "Lisätietoa hajautetusta rahoituksesta (DeFi)",
-  "page-eth-whats-defi-description": "DeFi on Ethereumiin rakennettu hajautettu rahoitusjärjestelmä. Tämä yleiskatsaus kertoo, mitä voit tehdä."
+  "page-eth-whats-defi-description": "DeFi on Ethereumiin rakennettu hajautettu rahoitusjärjestelmä. Tämä yleiskatsaus kertoo, mitä voit tehdä.",
+  "page-what-is-ethereum-what-is-ether": "Mitä Ether on?"
 }

@@ -1,216 +1,74 @@
 import fs from "fs"
 import path from "path"
-import typescript, { ScriptTarget } from "typescript"
 import walkdir from "walkdir"
-import eol from "eol"
-import deepMerge from "deepmerge"
 import _ from "lodash"
-import scanner from "i18next-scanner"
-import vfs from "vinyl-fs"
+import rimraf from "rimraf"
 
-import type { Scanner } from "i18next-scanner"
-import type File from "vinyl"
+import { defaultLanguage, supportedLanguages } from "../utils/languages"
 
-import { supportedLanguages } from "../utils/languages"
-
-/**
- * What does this script?
- *
- * - First, it grabs all the existing translations under `i18n/merged/{lang}/index.json`
- *  (the resource file)
- *
- * - Then it collects all the translation keys used in each file
- *    1. Scans all the files under the `src/` folder
- *    2. Looks for the translation keys used by calling `t({key})` or by using `<Translation id="{key}">`
- *
- * - Finally, under `i18n/locales`, it creates new json files with just the
- *   translations needed for each specific namespace
- */
-
-const input = ["./src/**/*.{ts,tsx}"]
-const output = "./i18n"
+const input = "src/intl"
+const output = "i18n/locales"
 
 /**
- * Creates a namespace given a filename.
+ * Creates the locales used later by the app.
  *
- * E.g. for `usr/www/src/pages/get-eth.tsx` it returns `src-pages-get-eth`
- *
- * Namespaces generation logic:
- *
- * 1. One namespace per page is created. E.g. `src-pages-get-eth` or `src-templates-static`
- *
- * 2. A namespace to group all the translations under the `components/` folder.
- *    These are going to be shared between multiple pages
- *
- * 3. A `common` namespace for the rest of the translations that are not included
- *    either in a page or the components folder
+ * 1. Loads all the `defaultLang` translations under `input`
+ * 2. For each language and namespace, it will create a locale under `output`
+ * 3. For any missing translation, it will fill that string with the
+ *    `defaultLang` version of it
  */
-function createNamespaceFromFilename(filename: string) {
-  const file = path.parse(filename)
-  const dir = file.dir.slice(filename.lastIndexOf("src/"))
-  const namespace = dir.replace(/\//g, "-") + "-" + file.name
-  return namespace
-}
-
-/**
- * Custom transform function that is going to allocate each translation to the
- * corresponding namespace
- */
-function customTransform(
-  this: Scanner,
-  file: File,
-  enc: BufferEncoding,
-  done: () => void
-) {
-  const { base, ext } = path.parse(file.path)
-  const extensions = [".ts", ".tsx"]
-  const target = ScriptTarget.ES2018
-
-  if (extensions.includes(ext) && !base.includes(".d.ts")) {
-    const content = fs.readFileSync(file.path, enc)
-
-    const { outputText } = typescript.transpileModule(content, {
-      compilerOptions: { target },
-      fileName: path.basename(file.path),
-    })
-
-    const namespace = createNamespaceFromFilename(file.path)
-
-    const customHandler = (key: string, options: any) => {
-      const ns = file.path.includes("components") ? "components" : namespace
-
-      // if the key is not found in the current lng then we store the
-      // defaultLng value instead
-      const defaultLng = this.parser.options.defaultLng
-      const defaultValue = this.parser.resStore[defaultLng][ns][key]
-
-      if (defaultValue) {
-        this.parser.set(key, {
-          ...options,
-          defaultValue,
-          ns,
-        })
-      }
-    }
-
-    // Look for translation keys in `<Translation id="key">` calls
-    this.parser.parseTransFromString(
-      outputText,
-      { component: "Translation", i18nKey: "id" },
-      customHandler
-    )
-    // Look for translation keys in `t(key)` calls
-    this.parser.parseFuncFromString(outputText, { list: ["t"] }, customHandler)
-  }
-
-  done()
-}
-
-/**
- * Custom flush function that is going to create all the necessary json files
- * for each corresponding namespace and put them in `i18n/locales`
- */
-function customFlush(this: Scanner, done: () => void) {
-  const parser = this.parser
-  const resStore = parser.resStore
-  const resScan = parser.resScan
-
-  // Merge two objects `resStore` and `resScan` deeply, returning a new merged object with the elements from both `resStore` and `resScan`.
-  const resMerged = deepMerge<{ [key: string]: string }>(resStore, resScan)
-
-  Object.keys(resMerged).forEach(function (lng) {
-    const namespaces = resMerged[lng]
-    const commonNs = resStore[lng]["common"]
-    Object.keys(namespaces).forEach(function (ns) {
-      const resStoreKeys = Object.keys(_.get(resStore, [lng, ns], {}))
-      const resScanKeys = Object.keys(_.get(resScan, [lng, ns], {}))
-      const unusedKeys = _.differenceWith(resStoreKeys, resScanKeys, _.isEqual)
-
-      // remove all unused keys from the current namespace
-      for (let i = 0; i < unusedKeys.length; ++i) {
-        _.unset(resMerged[lng][ns], unusedKeys[i])
-      }
-
-      // in the common namespace, we want to keep only those keys that weren't
-      // detected for some reason by the scanner. We don't want to lose any
-      // translation from the resource file
-      for (let i = 0; i < resScanKeys.length; ++i) {
-        _.unset(commonNs, resScanKeys[i])
-      }
-
-      const obj = resMerged[lng][ns]
-
-      const resPath = parser.formatResourceSavePath(lng, ns)
-      let text = JSON.stringify(obj, null, 2) + "\n"
-      text = eol.lf(text)
-
-      const dest = path.join(output, path.dirname(resPath))
-
-      fs.mkdirSync(dest, {
-        recursive: true,
-      })
-      fs.writeFileSync(path.join(output, resPath), text)
-    })
-
-    // save common file
-    let commonNsText = JSON.stringify(commonNs, null, 2) + "\n"
-    commonNsText = eol.lf(commonNsText)
-    const resPath = parser.formatResourceSavePath(lng, "common")
-    fs.writeFileSync(path.join(output, resPath), commonNsText)
-  })
-
-  done()
-}
-
-/**
- * Main script function
- */
-async function createLocales() {
+async function createLocales(): Promise<void> {
   // cleanup any previous generated locales
-  const localesPath = path.join(output, "locales")
-  if (fs.existsSync(localesPath)) {
-    fs.rmSync(localesPath, { recursive: true })
-  }
+  await rimraf(output)
 
-  // create all the necessary namespaces to be used by the scanner
-  const ns = ["components", "common"]
-  walkdir.sync("./src/pages", (file) => {
-    const namespace = createNamespaceFromFilename(file)
-    ns.push(namespace)
+  const defaultLangLocales: Record<string, Record<string, string>> = {}
+  walkdir.sync(`${input}/${defaultLanguage}/`, (filepath) => {
+    const namespace = path.basename(filepath)
+
+    // load english content per ns in memory in order to compare it with the
+    // other languages
+    const data = fs.readFileSync(filepath, { encoding: "utf8" })
+    const translations = JSON.parse(data)
+
+    defaultLangLocales[namespace] = translations
   })
 
-  walkdir.sync("./src/templates", (file) => {
-    const namespace = createNamespaceFromFilename(file)
-    ns.push(namespace)
-  })
+  supportedLanguages.forEach((language) => {
+    //create language folder in `output`
+    fs.mkdirSync(path.join(output, language), { recursive: true })
 
-  walkdir.sync("./src/pages-conditional", (file) => {
-    const namespace = createNamespaceFromFilename(file)
-    ns.push(namespace)
-  })
+    const nsInLanguage: Array<string> = []
+    walkdir.sync(path.join(input, language), (filepath) => {
+      const ns = path.basename(filepath)
 
-  const options = {
-    sort: true,
-    lngs: supportedLanguages,
-    ns,
-    defaultLng: "en",
-    defaultValue: "__STRING_NOT_TRANSLATED__",
-    fallbackLng: "en",
-    resource: {
-      loadPath: "i18n/merged/{{lng}}/index.json",
-      savePath: "locales/{{lng}}/{{ns}}.json",
-    },
-    nsSeparator: false,
-    keySeparator: false,
-    removeUnusedKeys: true,
-  }
+      nsInLanguage.push(ns)
 
-  // scan all the files & find all the used translation keys
-  const stream = scanner(options, customTransform, customFlush)
+      const data = fs.readFileSync(filepath, { encoding: "utf8" })
+      const translations = JSON.parse(data)
 
-  // output the results in different json files
-  return new Promise(function (resolve) {
-    vfs.src(input).pipe(stream).pipe(vfs.dest(output)).on("end", resolve)
+      // check differences and fill the missing translations strings in english
+      const defaultLangContent = defaultLangLocales[ns]
+      const completeSet = { ...defaultLangContent, ...translations }
+
+      fs.writeFileSync(
+        path.join(output, language, ns),
+        JSON.stringify(completeSet, null, 2)
+      )
+    })
+
+    const missingNs = _.difference(
+      Object.keys(defaultLangLocales),
+      nsInLanguage
+    )
+    missingNs.forEach((ns) => {
+      // fill the content with english content
+      const defaultLangContent = defaultLangLocales[ns]
+
+      fs.writeFileSync(
+        path.join(output, language, ns),
+        JSON.stringify(defaultLangContent, null, 2)
+      )
+    })
   })
 }
 

@@ -62,5 +62,6 @@
   "page-get-eth-your-address": "Twój adres ETH",
   "page-get-eth-your-address-desc": "Kiedy pobierzesz portfel, stworzy dla Ciebie publiczny adres ETH. Oto jak wygląda:",
   "page-get-eth-your-address-desc-3": "To coś podobnego do adresu e-mail, ale zamiast wysyłać wiadomość, możesz odbierać ETH. Jeśli chcesz przenieść ETH z giełdy do swojego portfela, użyj swojego adresu jako miejsca docelowego. Upewnij się, że zawsze sprawdzasz dokładnie przed wysłaniem!",
-  "page-get-eth-your-address-wallet-link": "Sprawdź portfele"
+  "page-get-eth-your-address-wallet-link": "Sprawdź portfele",
+  "listing-policy-raise-issue-link": "Zgłoś problem"
 }

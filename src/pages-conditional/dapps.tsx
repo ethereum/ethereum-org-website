@@ -1462,7 +1462,7 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["src-pages-conditional-dapps", "components", "common"] }
+        ns: { in: ["page-dapps", "common"] }
       }
     ) {
       edges {

@@ -525,7 +525,7 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["src-pages-conditional-eth", "components", "common"] }
+        ns: { in: ["page-eth", "learn-quizzes", "common"] }
       }
     ) {
       edges {

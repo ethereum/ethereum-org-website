@@ -160,7 +160,7 @@ const components = {
 
 const StaticPage = ({
   data: { siteData, pageData: mdx },
-  pageContext: { relativePath },
+  pageContext: { relativePath, slug },
 }: PageProps<Queries.StaticPageQuery, Context>) => {
   const { language } = useI18next()
 
@@ -188,8 +188,6 @@ const StaticPage = ({
   const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
   const { editContentUrl } = siteData.siteMetadata || {}
   const absoluteEditPath = `${editContentUrl}${relativePath}`
-
-  const slug = mdx.fields?.slug || ""
 
   return (
     <Container>
@@ -241,7 +239,7 @@ export const staticPageQuery = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["src-templates-static", "components", "common"] }
+        ns: { in: ["page-about", "page-community", "learn-quizzes", "common"] }
       }
     ) {
       edges {

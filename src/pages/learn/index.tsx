@@ -151,7 +151,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
   ]
 
   const heroContent = {
-    title: t("hero-title"),
+    title: t("learn-hub"),
     header: t("hero-header"),
     subtitle: t("hero-subtitle"),
     image: getImage(data.heroImage)!,
@@ -166,7 +166,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
 
   return (
     <Box position="relative" w="full">
-      <PageMetadata title={t("hero-title")} description={t("hero-subtitle")} />
+      <PageMetadata title={t("learn-hub")} description={t("hero-subtitle")} />
 
       <Box bg="layer2Gradient">
         <Box>
@@ -873,7 +873,7 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["src-pages-learn-index", "components", "common"] }
+        ns: { in: ["page-learn", "common"] }
       }
     ) {
       edges {

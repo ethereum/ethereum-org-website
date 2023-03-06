@@ -959,9 +959,7 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: {
-          in: ["src-pages-conditional-what-is-ethereum", "components", "common"]
-        }
+        ns: { in: ["page-what-is-ethereum", "learn-quizzes", "common"] }
       }
     ) {
       edges {

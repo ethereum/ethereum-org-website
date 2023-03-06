@@ -497,7 +497,7 @@ export const stakingPageQuery = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["src-templates-staking", "components", "common"] }
+        ns: { in: ["page-staking", "common"] }
       }
     ) {
       edges {

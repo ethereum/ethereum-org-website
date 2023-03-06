@@ -7,15 +7,10 @@
   "page-staking-benefits-3-title": "More sustainable",
   "page-staking-benefits-3-description": "Stakers don't need energy-intensive computers to participate in a proof-of-stake system–just a home computer or smartphone. This will make Ethereum better for the environment.",
   "page-staking-benefits-3-link": "More on Ethereum's energy consumption",
-  "page-staking-check-address": "Check deposit address",
-  "page-staking-deposit-address": "Check the deposit address",
-  "page-staking-deposit-address-desc": "If you’ve already followed the setup instructions on the launchpad, you’ll know you need to send a transaction to the staking deposit contract. We recommend you check the address very carefully. You can find the official address on ethereum.org and a number of other trusted sites.",
   "page-staking-description": "Staking is the act of depositing 32 ETH to activate validator software. As a validator you’ll be responsible for storing data, processing transactions, and adding new blocks to the blockchain. This will keep Ethereum secure for everyone and earn you new ETH in the process.",
   "page-staking-hero-title": "How to stake your ETH",
   "page-staking-hero-header": "Earn rewards while securing Ethereum",
   "page-staking-hero-subtitle": "Staking is a public good for the Ethereum ecosystem. Any user with any amount of ETH can help secure the network and earn rewards in the process.",
-  "page-staking-dropdown-text": "Staking options",
-  "page-staking-dropdown-aria": "Staking options dropdown menu",
   "page-staking-dropdown-home": "Staking home",
   "page-staking-dropdown-solo": "Solo staking",
   "page-staking-more-on-solo": "More on solo staking",
@@ -29,7 +24,6 @@
   "page-staking-more-on-pools": "More on pooled staking",
   "page-staking-learn-more-pools": "Learn more about pooled staking",
   "page-staking-section-what-title": "What is staking?",
-  "page-staking-section-what-p": "Staking is the act of locking up ETH to give you the right to participate in block proposals on the network. Anyone who holds even a small amount of ETH can consider staking.",
   "page-staking-section-what-link": "Learn how to get ETH",
   "page-staking-section-why-title": "Why stake your ETH?",
   "page-staking-section-why-p1": "It all depends on how much you are willing to stake. You'll need 32 ETH to activate your own validator, but it is possible to stake less.",
@@ -201,5 +195,6 @@
   "page-staking-meta-description": "An overview of Ethereum staking: the risks, rewards, requirements, and where to do it.",
   "page-staking-meta-title": "Ethereum staking",
   "page-staking-withdrawals-important-notices": "Important notices",
-  "page-staking-withdrawals-important-notices-desc": "Withdrawals are not yet available. Please read the <a href=\"https://blog.ethereum.org/2021/12/01/eth2-merge-and-post-merge-faq/\" target=\"_blank\">Eth2 Merge and post-merge FAQ</a> for more information."
+  "page-staking-withdrawals-important-notices-desc": "Withdrawals are not yet available. Please read the <a href=\"https://blog.ethereum.org/2021/12/01/eth2-merge-and-post-merge-faq/\" target=\"_blank\">Eth2 Merge and post-merge FAQ</a> for more information.",
+  "page-upgrades-merge-btn": "More on The Merge"
 }

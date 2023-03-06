@@ -140,11 +140,11 @@ const Nav: React.FC<IProps> = ({ path }) => {
           to: "/dao/",
         },
         {
-          text: t("page-stablecoins-title"),
+          text: t("stablecoins"),
           to: "/stablecoins/",
         },
         {
-          text: t("page-stake-eth"),
+          text: t("stake-eth"),
           to: "/staking/",
         },
         {
@@ -173,11 +173,11 @@ const Nav: React.FC<IProps> = ({ path }) => {
           text: "Start here",
           items: [
             {
-              text: "hero-title",
+              text: t("learn-hub"),
               to: "/learn/",
             },
             {
-              text: "guides-hub",
+              text: t("guides-hub"),
               to: "/guides/",
             },
           ],

@@ -99,5 +99,6 @@
   "page-upgrades-bug-bounty-card-text": "バリデータの100件のアテステーションごとに、攻撃者が1件ドロップさせる状態にすることができる脆弱性",
   "page-upgrades-bug-bounty-card-text-1": "攻撃者が4バイト先頭のゼロを持つピアIDを持つノードに対してエクリプス攻撃を成功させることができる脆弱性",
   "page-upgrades-bug-bounty-card-text-2": "攻撃者がネットワークの大部分をパーティションでき、脆弱性を容易に引き起こせる。",
-  "page-upgrades-bug-bounty-card-text-3": "攻撃者がマジョリティクライアントでリモートコードを実行でき、脆弱性を容易に引き起こされる。"
+  "page-upgrades-bug-bounty-card-text-3": "攻撃者がマジョリティクライアントでリモートコードを実行でき、脆弱性を容易に引き起こされる。",
+  "page-upgrades-question-title": "よくある質問"
 }

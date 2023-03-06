@@ -275,8 +275,7 @@ export const query = graphql`
         language: { in: $languagesToFetch }
         ns: {
           in: [
-            "src-pages-contributing-translation-program-acknowledgements"
-            "components"
+            "page-contributing-translation-program-acknowledgements"
             "common"
           ]
         }

@@ -99,5 +99,6 @@
   "page-upgrades-bug-bounty-card-text": "Napadač ponekad može staviti čvor u stanje zbog kojeg će jedna od sto ovjera koje je izvršio validator biti ispuštena",
   "page-upgrades-bug-bounty-card-text-1": "Napadač može uspješno izvoditi skrivene napade na čvorove s peer-id-ovima s 4 vodeća nulta bajta",
   "page-upgrades-bug-bounty-card-text-2": "Napadač uspješno može izdvojiti veliki dio mreže i vrlo je jednostavno za napadača da aktivira ranjivost",
-  "page-upgrades-bug-bounty-card-text-3": "Napadač uspješno može udaljeno pokrenuti izvršavanje programskog koda u većini klijenata i vrlo je jednostavno za napadača da aktivira ranjivost"
+  "page-upgrades-bug-bounty-card-text-3": "Napadač uspješno može udaljeno pokrenuti izvršavanje programskog koda u većini klijenata i vrlo je jednostavno za napadača da aktivira ranjivost",
+  "page-upgrades-question-title": "Često postavljana pitanja"
 }
