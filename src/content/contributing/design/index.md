@@ -12,9 +12,7 @@ Ultimately, this is a great way to build a diverse and impressive portfolio that
 <br />
 How to contribute?
 
-**Minimal or no design skills needed**
-
-## Provide feedback on early design prototypes {#design-critique}
+## :one: Provide feedback on early design prototypes {#design-critique}
 
 We sometimes need a help testing our raw ideas. This is a great way how to contribute without any technical knowledge.
 
@@ -22,7 +20,7 @@ We sometimes need a help testing our raw ideas. This is a great way how to contr
 2. You will be guided through the designs to provide feedback via comments function.
 3. The outcome will be shared in the GitHub issue and then closed by the team.
 
-## Participate in survey research {#answer-surveys}
+## :two: Participate in survey research {#answer-surveys}
 
 Provide feedback on our website by:
 
@@ -30,7 +28,7 @@ Provide feedback on our website by:
 2. Clicking on the feedback widget at the bottom right corner and answering design and content-related questions.
 3. Focus on the free format questions.
 
-## Find design related issues on the website and report them {#report-design-issues}
+## :three: Find design related issues on the website and report them {#report-design-issues}
 
 [Ethereum.org](http://Ethereum.org) is a fast growing website with many features and content. Some of the UI can easily become obsolete or could be improved. If you encounter any such instance, please report it so that it gets our attention. 
 
@@ -38,9 +36,7 @@ Provide feedback on our website by:
 2. Take screenshots and notes If you see any visual or UX issues.
 3. Report the found issues using a [bug report](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
-**Basic design skills needed**
-
-## Propose design changes {#propose-design-changes}
+## :four: Propose design changes {#propose-design-changes}
 
 If you feel comfortable taking on design challenges, you can visit our GitHub issues board and filter for [design-related issues](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 
@@ -49,9 +45,7 @@ If you feel comfortable taking on design challenges, you can visit our GitHub is
 3. Propose the solution in the corresponding GitHub issue or [create a new one.](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&template=feature_request.yaml&title=Feature+request)
 4. Wait for the design team to review.
 
-**Good design skills required**
-
-## Build Design System together {#Contribute-to-design-system}
+## :five: Build Design System together {#Contribute-to-design-system}
 
 Our design system makes designing [ethereum.org](http://ethereum.org) fun and easy. If you are an experienced designer, you can help us prepare many components for the website.
 
@@ -62,7 +56,7 @@ Our design system makes designing [ethereum.org](http://ethereum.org) fun and ea
 5. The design team will review.
 6. The Design team will incorporate the changes in the main file and publish the file to the community.
 
-## Write design-related content on the website {#write-design-articles}
+## :six: Write design-related content on the website {#write-design-articles}
 
 The Ethereum developer community is strong, but the design community is falling slightly behind. If you are a designer with web3 knowledge, please consider sharing your learnings with the larger community so that we can all grow and improve together!
 
@@ -72,7 +66,7 @@ The Ethereum developer community is strong, but the design community is falling 
 4. Once approved, write the content.
 5. Submit it in the corresponding GH issue.
 
-## Draw new illustrations {#prepare-illustrations}
+## :seven: Draw new illustrations {#prepare-illustrations}
 
 Visualisations are one of the most powerful tools to explain abstract topics. There is an enormous potential by adding diagrams and infographics. After all, one image can say thousand words.
 
