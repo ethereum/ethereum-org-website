@@ -2,9 +2,9 @@ import React, { useState } from "react"
 import {
   Icon,
   IconButton,
+  Flex,
   Text,
   useColorMode,
-  Show,
   useToken,
 } from "@chakra-ui/react"
 import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
@@ -60,12 +60,6 @@ const NavContent = styled.div`
     align-items: center;
     justify-content: space-between;
   }
-`
-
-const InnerContent = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
 `
 
 const LeftItems = styled.ul`
@@ -400,41 +394,38 @@ const Nav: React.FC<IProps> = ({ path }) => {
             <HomeLogo />
           </HomeLogoNavLink>
           {/* Desktop */}
-          <Show above={lgBreakpoint}>
-            <InnerContent>
-              <LeftItems>
-                <Menu path={path} sections={linkSections} />
-              </LeftItems>
-              <RightItems>
-                <Search useKeyboardShortcut />
-                <IconButton
-                  aria-label={
-                    isDarkTheme
-                      ? "Switch to Light Theme"
-                      : "Switch to Dark Theme"
-                  }
-                  icon={
-                    <Icon
-                      as={isDarkTheme ? MdWbSunny : MdBrightness2}
-                      fontSize="2xl"
-                    />
-                  }
-                  variant="icon"
-                  _hover={{ color: "primary" }}
-                  onClick={toggleColorMode}
-                />
-                <ButtonLink
-                  to={`/languages/${fromPageParameter}`}
-                  variant="icon"
-                >
-                  <Icon as={MdLanguage} fontSize="2xl" />
-                  <Text as="span" pl={2}>
-                    <Translation id="languages" />
-                  </Text>
-                </ButtonLink>
-              </RightItems>
-            </InnerContent>
-          </Show>
+          <Flex
+            justifyContent="space-between"
+            w="100%"
+            display={{ base: "none", lg: "flex" }}
+          >
+            <LeftItems>
+              <Menu path={path} sections={linkSections} />
+            </LeftItems>
+            <RightItems>
+              <Search useKeyboardShortcut />
+              <IconButton
+                aria-label={
+                  isDarkTheme ? "Switch to Light Theme" : "Switch to Dark Theme"
+                }
+                icon={
+                  <Icon
+                    as={isDarkTheme ? MdWbSunny : MdBrightness2}
+                    fontSize="2xl"
+                  />
+                }
+                variant="icon"
+                _hover={{ color: "primary" }}
+                onClick={toggleColorMode}
+              />
+              <ButtonLink to={`/languages/${fromPageParameter}`} variant="icon">
+                <Icon as={MdLanguage} fontSize="2xl" />
+                <Text as="span" pl={2}>
+                  <Translation id="languages" />
+                </Text>
+              </ButtonLink>
+            </RightItems>
+          </Flex>
           {/* Mobile */}
           <MobileNavMenu
             isMenuOpen={isMenuOpen}
