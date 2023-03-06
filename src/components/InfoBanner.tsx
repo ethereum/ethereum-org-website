@@ -28,7 +28,11 @@ const InfoBanner: React.FC<IProps> = ({
       p={6}
       borderRadius={"sm"}
       maxW={shouldCenter ? "55rem" : "100%"}
-      color="black300"
+      sx={{
+        "*": {
+          color: "black300 !important",
+        },
+      }}
       bg={isWarning ? "warning" : "infoBanner"}
       direction={{ base: "column", sm: "row" }}
       {...props}
