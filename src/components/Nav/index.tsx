@@ -1,5 +1,12 @@
 import React, { useState } from "react"
-import { Icon, IconButton, Text, useColorMode } from "@chakra-ui/react"
+import {
+  Icon,
+  IconButton,
+  Flex,
+  Text,
+  useColorMode,
+  useToken,
+} from "@chakra-ui/react"
 import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
 import styled from "@emotion/styled"
 import { cloneDeep } from "lodash"
@@ -52,15 +59,6 @@ const NavContent = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     align-items: center;
     justify-content: space-between;
-  }
-`
-
-const InnerContent = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
   }
 `
 
@@ -380,6 +378,7 @@ const Nav: React.FC<IProps> = ({ path }) => {
       document.documentElement.style.overflowY = "hidden"
     }
   }
+  const lgBreakpoint = useToken("breakpoints", "lg")
 
   const shouldShowSubNav = path.includes("/developers/")
   const splitPath = path.split("/")
@@ -395,7 +394,11 @@ const Nav: React.FC<IProps> = ({ path }) => {
             <HomeLogo />
           </HomeLogoNavLink>
           {/* Desktop */}
-          <InnerContent>
+          <Flex
+            justifyContent="space-between"
+            w="100%"
+            display={{ base: "none", lg: "flex" }}
+          >
             <LeftItems>
               <Menu path={path} sections={linkSections} />
             </LeftItems>
@@ -422,7 +425,7 @@ const Nav: React.FC<IProps> = ({ path }) => {
                 </Text>
               </ButtonLink>
             </RightItems>
-          </InnerContent>
+          </Flex>
           {/* Mobile */}
           <MobileNavMenu
             isMenuOpen={isMenuOpen}
