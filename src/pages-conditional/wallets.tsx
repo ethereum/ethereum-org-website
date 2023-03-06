@@ -1,5 +1,5 @@
 import React from "react"
-import { Center, Heading } from "@chakra-ui/react"
+import { Center, Heading, Box, Flex, chakra } from "@chakra-ui/react"
 
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
@@ -29,7 +29,6 @@ import QuizWidget from "../components/Quiz/QuizWidget"
 import { translateMessageId } from "../utils/translations"
 import { getImage, getSrc } from "../utils/image"
 import { Context } from "../types"
-import { Box, Flex, chakra } from "@chakra-ui/react"
 
 const StyledTwoColumnContent = chakra(TwoColumnContent)
 
