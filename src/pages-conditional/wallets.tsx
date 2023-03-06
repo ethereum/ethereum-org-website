@@ -1,6 +1,6 @@
 import React from "react"
 import { Center, Heading, Box, Flex, chakra } from "@chakra-ui/react"
-
+import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
