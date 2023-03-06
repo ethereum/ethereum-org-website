@@ -99,5 +99,6 @@
   "page-upgrades-bug-bounty-card-text": "攻击者有时可以促使一个节点进入一种非正常的状态：以 1/100 的概率丢失验证者发来的证明信息。",
   "page-upgrades-bug-bounty-card-text-1": "攻击者可以成功针对一类节点（对等点 ID 以 4 个 0 字节开头）发动日蚀攻击",
   "page-upgrades-bug-bounty-card-text-2": "攻击者可以成功地对大部分网络进行分区，而对攻击者来说触发该漏洞是很容易的",
-  "page-upgrades-bug-bounty-card-text-3": "攻击者可以成功地在一种主流客户端进行远程代码执行，而对攻击者来说触发该漏洞是很容易的"
+  "page-upgrades-bug-bounty-card-text-3": "攻击者可以成功地在一种主流客户端进行远程代码执行，而对攻击者来说触发该漏洞是很容易的",
+  "page-upgrades-question-title": "常见问题"
 }

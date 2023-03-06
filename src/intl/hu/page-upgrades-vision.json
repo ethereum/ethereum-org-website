@@ -1,15 +1,8 @@
 {
   "page-upgrades-vision-2014": "Egy proof-of-stake-et részletező 2014-es blog poszt megtekintése",
-  "page-upgrades-vision-beacon-chain": "A Beacon Chain",
-  "page-upgrades-vision-beacon-chain-btn": "Többet a Beacon Chain-ről",
-  "page-upgrades-vision-beacon-chain-date": "A Beacon Chain életbe lépett",
-  "page-upgrades-vision-beacon-chain-desc": "Az ökoszisztéma első Eth2 kiegészítője. A Beacon Chain elhozza a letétbe helyezést az Ethereumra, lefekteti a jövő fejlesztéseinek alapjait és az új rendszert fogja koordinálni végül.",
-  "page-upgrades-vision-beacon-chain-upper": "Beacon Chain",
   "page-upgrades-vision-desc-1": "Az Ethereumnak csökkentenie kell a hálózati torlódást és növelnie a sebességet, hogy kiszolgálja a globális felhasználói bázist.",
   "page-upgrades-vision-desc-2": "Egy csomópont futtatása egyre nehezebb, ahogy nő a hálózat. Ez csak nehezebbé fog válni a hálózat méretezhetőségének növelésével.",
   "page-upgrades-vision-desc-3": "Az Ethereum túl sok elektromosságot használ. A hálózat biztonságát szolgáltató technológiának fenntarthatóbbnak kell lennie.",
-  "page-upgrades-vision-merge-date": "Becslés: 2022",
-  "page-upgrades-vision-merge-desc": "Egy ponton a főhálózati Ethereumnak be kell majd “dokkolnia” a Beacon Chain-be. Ez lehetővé teszi majd a letétbe helyezést a teljes hálózatnak és az energia-intenzív bányászat végét jelenti.",
   "page-upgrades-vision-ethereum-node": "Többet a csomópontokról",
   "page-upgrades-vision-explore-upgrades": "A fejlesztések felfedezése",
   "page-upgrades-vision-future": "Egy digitális jövő globális méretben",
@@ -27,13 +20,9 @@
   "page-upgrades-vision-security-desc-5": "Ez nem lehetséges a proof-of-work esetében, ahol legjobb esetben a protokoll kényszerítheti a hálózatot biztosító szereplőket (bányászokat), hogy elveszítsék a bányászati jutalékot, amit egyébként megkaptak volna. Hogy azonos hatást érjünk el a proof-of-worknél, a protokollnak el kellene pusztítania a bányász teljes felszerelését, ha megpróbál csalni.",
   "page-upgrades-vision-security-desc-5-link": "Többet a proof-of-work-ről",
   "page-upgrades-vision-security-desc-8": "Továbbá az Ethereum biztonsági modelljének meg kell változni, mivel bevezetik a(z):",
-  "page-upgrades-vision-security-desc-9": "lehetővé teszi, hogy véletlenszerűen válasszunk ki validátorokat különböző shardokra - ez lényegében lehetetlenné teszi a validátoroknak, hogy összefogjanak egy bizonyos shard megtámadásával. A sharding nem olyan biztonságos egy proof-of-work blokkláncon, mivel a bányászokat nem lehet ilyen módszerrel irányítani.",
   "page-upgrades-vision-security-desc-10": "A staking azt is jelenti, hogy nem kell elit hardverbe fektetned, hogy egy Ethereum csomópontot 'futtass'. Ez több embert bátoríthat arra, hogy validátorok legyenek, megnövelve ezzel a hálózat decentralizáltságát és csökkentve a támadási felületet.",
   "page-upgrades-vision-security-staking": "ETH letétbe helyezése",
   "page-upgrades-vision-security-validator": "Az ETH-ed letétbe helyezésével validátor lehetsz.",
-  "page-upgrades-vision-shard-chains": "shard láncok",
-  "page-upgrades-vision-shard-date": "Becslés: 2023",
-  "page-upgrades-vision-shard-desc-4": "A shard láncok eloszlatják a hálózat terhelését 64 új blokkláncra. A shardoknak megvan a potenciálja, hogy drasztikusan megnöveljék a tranzakciós sebességet - egészen 100 000 per másodpercig.",
   "page-upgrades-vision-shard-upgrade": "Többet a shard láncokról",
   "page-upgrades-vision-staking-lower": "Többet a letétbe helyezésről",
   "page-upgrades-vision-subtitle": "Addig fejleszteni az Ethereumot, amíg elég erős nem lesz, hogy az egész emberiséget szolgálja.",
@@ -72,5 +61,6 @@
   "page-upgrades-vision-upgrade-needs-desc-3": "Amire gyakran Eth2-ként hivatkozunk, gyakorlatilag egy fejlesztéssorozat, mely ezeket a problémákat orvosolja és még ennél is többet. Ezt a fejlesztési halmazt eredetlieg 'Serenity-nek' hívták, és már 2014-től aktív területe a kutatásnak és fejlesztésnek.",
   "page-upgrades-vision-upgrade-needs-desc-6": " Ez azt jelenti, hogy az Eth2-n nincs bekapcsoló gomb. A fejlesztések egyesével fognak megérkezni idővel.",
   "page-upgrades-vision-upgrade-needs-serenity": "Egy 2015-ös blog poszt megtekintése a 'Serenity-ről'",
-  "page-upgrades-vision-upgrade-needs-desc-5": "Most, hogy a technológia készen áll, ezek a fejlesztések át fogják alakítani az Ethereumot, hogy méretezhetőbb, biztonságosabb és fenntarthatóbb legyen - hogy jobbá tegyék a jelenlegi és új felhasználók életét. Mindezt úgy, hogy megőrizzék az Ethereum belső decentralizáltági értékét."
+  "page-upgrades-vision-upgrade-needs-desc-5": "Most, hogy a technológia készen áll, ezek a fejlesztések át fogják alakítani az Ethereumot, hogy méretezhetőbb, biztonságosabb és fenntarthatóbb legyen - hogy jobbá tegyék a jelenlegi és új felhasználók életét. Mindezt úgy, hogy megőrizzék az Ethereum belső decentralizáltági értékét.",
+  "ethereum": "Ethereum"
 }
