@@ -32,7 +32,7 @@ After blob transactions have become part of the Ethereum protocol, it will be po
 
 The second stage of expanding blob data is complicated because it requires new methods for checking rollup data is available on the network and relies on validators separating their block building and block proposal responsibilities. It also requires a way to cryptographically prove that validators have verified small subsets of the blob data.
 
-This second step is known as [“Danksharding”](/roadmap/danksharding/). It is likely several years away from being fully implemented. Danksharding relies on other developments such as [separating block building and block proposal](/roadmap/pbs) and new network designs that enable efficiently confirm that data is available by randomly sampling a few kilobytes at a time, known as [data availability sampling (DAS)](/developers/docs/data-availability).
+This second step is known as [“Danksharding”](/roadmap/danksharding/). It is likely several years away from being fully implemented. Danksharding relies on other developments such as [separating block building and block proposal](/roadmap/pbs) and new network designs that enable the network to efficiently confirm that data is available by randomly sampling a few kilobytes at a time, known as [data availability sampling (DAS)](/developers/docs/data-availability).
 
 <ButtonLink variant="outline-color" to="/roadmap/danksharding/">More on Danksharding</ButtonLink>
 
