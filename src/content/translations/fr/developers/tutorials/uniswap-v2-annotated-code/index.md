@@ -24,7 +24,7 @@ Les _traders_ envoient un type de jeton au pool et reçoivent l'autre (par exemp
 
 Lorsque les fournisseurs de liquidités veulent récupérer leurs actifs, ils peuvent brûler les jetons du pool et récupérer leurs jetons, y compris leur part des récompenses.
 
-[Cliquez ici pour une description plus complète](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/swaps/).
+[Cliquez ici pour une description plus complète](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/).
 
 ### Pourquoi v2 ? Pourquoi pas v3 ? {#why-v2}
 
@@ -450,7 +450,7 @@ Utilisez la fonction `UniswapV2ERC20._mint` pour créer les jetons de liquidité
     }
 ```
 
-S'il n'existe pas de frais, réglez `kLast` à zéro (si ce n'est pas déjà le cas). Lorsque ce contrat a été rédigé, il existait une [fonctionnalité de remboursement de gaz](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3298.md) qui encourageait les contrats à réduire la taille globale de l'état Ethereum en mettant à zéro le stockage dont ils n'avaient pas besoin. Ce code récupère ce remboursement lorsque c'est possible.
+S'il n'existe pas de frais, réglez `kLast` à zéro (si ce n'est pas déjà le cas). Lorsque ce contrat a été rédigé, il existait une [fonctionnalité de remboursement de gaz](https://eips.ethereum.org/EIPS/eip-3298) qui encourageait les contrats à réduire la taille globale de l'état Ethereum en mettant à zéro le stockage dont ils n'avaient pas besoin. Ce code récupère ce remboursement lorsque c'est possible.
 
 #### Fonctions accessibles en externe {#pair-external}
 
@@ -803,7 +803,7 @@ Ces deux fonctions permettent à `feeSetter` de contrôler le destinataire des f
 
 [Ce contrat](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implemente le jeton de liquidité ERC-20. Il est identique au [contrat OpenWhisk ERC-20](/developers/tutorials/erc20-annotated-code). De fait, je n'expliquerai que la partie qui est différente, à savoir la fonctionnalité `Permit`.
 
-Les transactions sur Ethereum coûtent de l'Ether (ETH), ce qui équivaut à de l'argent réel. Si vous avez des jetons ERC-20 mais pas d'ETH, vous ne pouvez pas envoyer de transactions. Vous ne pouvez donc rien faire avec. Pour éviter ce problème, vous pouvez opter pour des [méta-transactions](https://docs.uniswap.org/protocol/V2/guides/smart-contract-integration/supporting-meta-transactions/). Le propriétaire des jetons signe une transaction qui permet à quelqu'un d'autre de retirer des jetons hors chaîne et de les envoyer via Internet à un destinataire. Le destinataire disposant d'ETH soumet ensuite le permis pour le compte du propriétaire.
+Les transactions sur Ethereum coûtent de l'Ether (ETH), ce qui équivaut à de l'argent réel. Si vous avez des jetons ERC-20 mais pas d'ETH, vous ne pouvez pas envoyer de transactions. Vous ne pouvez donc rien faire avec. Pour éviter ce problème, vous pouvez opter pour des [méta-transactions](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions). Le propriétaire des jetons signe une transaction qui permet à quelqu'un d'autre de retirer des jetons hors chaîne et de les envoyer via Internet à un destinataire. Le destinataire disposant d'ETH soumet ensuite le permis pour le compte du propriétaire.
 
 ```solidity
     bytes32 public DOMAIN_SEPARATOR;

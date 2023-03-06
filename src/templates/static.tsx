@@ -4,6 +4,7 @@ import { useIntl } from "react-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
+import { Badge } from "@chakra-ui/react"
 
 import ButtonLink from "../components/ButtonLink"
 import Breadcrumbs from "../components/Breadcrumbs"
@@ -17,10 +18,8 @@ import MarkdownTable from "../components/MarkdownTable"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
-import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import ExpandableCard from "../components/ExpandableCard"
-import Roadmap from "../components/Roadmap"
 import TableOfContents, {
   Item as ItemTableOfContents,
 } from "../components/TableOfContents"
@@ -29,6 +28,7 @@ import SectionNav from "../components/SectionNav"
 import DocLink from "../components/DocLink"
 import GhostCard from "../components/GhostCard"
 import MatomoOptOut from "../components/MatomoOptOut"
+import UpgradeStatus from "../components/UpgradeStatus"
 import {
   Divider,
   Paragraph,
@@ -131,7 +131,6 @@ const components = {
   table: MarkdownTable,
   MeetupList,
   RandomAppList,
-  Roadmap,
   Link,
   Logo,
   ButtonLink,
@@ -141,7 +140,7 @@ const components = {
   Card,
   Divider,
   SectionNav,
-  Pill,
+  Badge,
   Emoji,
   DocLink,
   ExpandableCard,
@@ -156,6 +155,7 @@ const components = {
   TranslationChartImage,
   EnergyConsumptionChart,
   QuizWidget,
+  UpgradeStatus,
 }
 
 const StaticPage = ({

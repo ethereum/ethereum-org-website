@@ -332,7 +332,6 @@ Dai、USDC 等穩定幣的價值和美元的差距通常維持在幾美分之內
 
 ### 去中心化金融資料 {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 - [DeFi Rate](https://defirate.com/)

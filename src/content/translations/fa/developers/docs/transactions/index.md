@@ -181,7 +181,7 @@ According to the ABI specifications, integer values (such as addresses, which ar
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
-اتریوم به گونه‌ای تکامل یافته است که از چندین نوع تراکنش پشتیبانی می‌کند تا پیاده‌سازی ویژگی‌های جدیدی مانند لیست‌های دسترسی و [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) را بدون تأثیر بر قالب‌های تراکنش قدیمی امکان‌پذیر سازد.
+اتریوم به گونه‌ای تکامل یافته است که از چندین نوع تراکنش پشتیبانی می‌کند تا پیاده‌سازی ویژگی‌های جدیدی مانند لیست‌های دسترسی و [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) را بدون تأثیر بر قالب‌های تراکنش قدیمی امکان‌پذیر سازد.
 
 [EIP-2718: پاکت تراکنش تایپ‌شده](https://eips.ethereum.org/EIPS/eip-2718) نوعی از تراکنش را تعریف می‌کند که پوششی برای انواع تراکنش‌های آینده است.
 

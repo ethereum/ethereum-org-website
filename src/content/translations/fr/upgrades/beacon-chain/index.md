@@ -23,7 +23,7 @@ La Chaîne phare était le nom donné à un registre de comptes qui a mené et c
 
 Elle a introduit le moteur de consensus (ou « couche de consensus ») qui a pris la place du minage par preuve de travail sur Ethereum et a apporté de nombreuses améliorations significatives.
 
-La Chaîne phare était un composant fondamental pour [la sécurisation, le respect environnemental et l'évolutivité d'Ethereum](/upgrades/vision/).
+La Chaîne phare était un composant fondamental pour [la sécurisation, le respect environnemental et l'évolutivité d'Ethereum](/roadmap/vision/).
 
 ## Impact de la Chaîne phare {#beacon-chain-features}
 
@@ -71,5 +71,5 @@ La fragmentation ne peut s'ajouter en toute sécurité dans l'écosystème Ether
 
 ## Complément d'information
 
-- [En savoir plus sur les futures mises à jour d'Ethereum](/upgrades/vision)
+- [En savoir plus sur les futures mises à jour d'Ethereum](/roadmap/vision)
 - [En savoir plus sur la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos)

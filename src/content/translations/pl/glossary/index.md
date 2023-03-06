@@ -27,7 +27,7 @@ Obiekt zawierający [adres](#address), saldo, [nonce](#nonce) oraz opcjonalną p
 
 ### adres {#address}
 
-Najczęściej jest to [EOA](#eoa) lub [umowa](#contract-accouint), która może odbierać (adres docelowy) lub wysyłać (adres źródłowy) [transakcje](#transaction) w łańcuchu bloków. Dokładniej rzecz ujmując, jest to 160 skrajnych prawych bitów [Keccak hash](#keccak-256) z [ECDSA](#ecdsa) [klucza publicznego](#public-key).
+Najczęściej jest to [EOA](#eoa) lub [umowa](#contract-account), która może odbierać (adres docelowy) lub wysyłać (adres źródłowy) [transakcje](#transaction) w łańcuchu bloków. Dokładniej rzecz ujmując, jest to 160 skrajnych prawych bitów [Keccak hash](#keccak-256) z [ECDSA](#ecdsa) [klucza publicznego](#public-key).
 
 ### Interfejs binarny aplikacji (ABI) {#abi}
 

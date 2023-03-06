@@ -27,7 +27,7 @@ Merkeziyetsiz bir [ağa](#network) yapılan, bir grubun [düğümlerin](#node) �
 
 ### adres {#address}
 
-En genel olarak bu, blok zincirinde [işlemleri](#transaction) alabilen (varış adresi) veya gönderebilen (kaynak adresi) bir [EOA](#eoa)'yı veya [sözleşmeyi](#contract-accouint) temsil eder. Daha spesifik olarak, bir [ECDSA](#ecdsa) [açık anahtarının](#public-key) [Keccak hash değerinin](#keccak-256) en sağdaki 160 bitidir.
+En genel olarak bu, blok zincirinde [işlemleri](#transaction) alabilen (varış adresi) veya gönderebilen (kaynak adresi) bir [EOA](#eoa)'yı veya [sözleşmeyi](#contract-account) temsil eder. Daha spesifik olarak, bir [ECDSA](#ecdsa) [açık anahtarının](#public-key) [Keccak hash değerinin](#keccak-256) en sağdaki 160 bitidir.
 
 ### uygulama ikili arayüzü (ABI) {#abi}
 

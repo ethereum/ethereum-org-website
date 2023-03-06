@@ -1,5 +1,12 @@
 import React, { useState } from "react"
-import { Icon, IconButton, Text, useColorMode } from "@chakra-ui/react"
+import {
+  Icon,
+  IconButton,
+  Flex,
+  Text,
+  useColorMode,
+  useToken,
+} from "@chakra-ui/react"
 import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
 import styled from "@emotion/styled"
 import { cloneDeep } from "lodash"
@@ -12,8 +19,8 @@ import Link from "../Link"
 import Search from "../Search"
 import Translation from "../Translation"
 import { NavLink } from "../SharedStyledComponents"
+import { EthHomeIcon } from "../icons"
 import { translateMessageId } from "../../utils/translations"
-import HomeIcon from "../../assets/eth-home-icon.svg"
 import { IItem, ISections } from "./types"
 
 const NavContainer = styled.div`
@@ -55,15 +62,6 @@ const NavContent = styled.div`
   }
 `
 
-const InnerContent = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
-
 const LeftItems = styled.ul`
   margin: 0;
   margin-left: 2rem;
@@ -87,9 +85,7 @@ const HomeLogoNavLink = styled(Link)`
   align-items: center;
 `
 
-const HomeLogo = styled(HomeIcon)`
-  width: 22px;
-  height: 35px;
+const HomeLogo = styled(EthHomeIcon)`
   opacity: 0.85;
   &:hover {
     opacity: 1;
@@ -181,6 +177,10 @@ const Nav: React.FC<IProps> = ({ path }) => {
               text: "hero-title",
               to: "/learn/",
             },
+            {
+              text: "guides-hub",
+              to: "/guides/",
+            },
           ],
         },
         {
@@ -222,8 +222,8 @@ const Nav: React.FC<IProps> = ({ path }) => {
               to: "/energy-consumption/",
             },
             {
-              text: "ethereum-upgrades",
-              to: "/upgrades/",
+              text: "ethereum-roadmap",
+              to: "/roadmap/",
             },
             {
               text: "eips",
@@ -378,6 +378,7 @@ const Nav: React.FC<IProps> = ({ path }) => {
       document.documentElement.style.overflowY = "hidden"
     }
   }
+  const lgBreakpoint = useToken("breakpoints", "lg")
 
   const shouldShowSubNav = path.includes("/developers/")
   const splitPath = path.split("/")
@@ -393,7 +394,11 @@ const Nav: React.FC<IProps> = ({ path }) => {
             <HomeLogo />
           </HomeLogoNavLink>
           {/* Desktop */}
-          <InnerContent>
+          <Flex
+            justifyContent="space-between"
+            w="100%"
+            display={{ base: "none", lg: "flex" }}
+          >
             <LeftItems>
               <Menu path={path} sections={linkSections} />
             </LeftItems>
@@ -420,7 +425,7 @@ const Nav: React.FC<IProps> = ({ path }) => {
                 </Text>
               </ButtonLink>
             </RightItems>
-          </InnerContent>
+          </Flex>
           {/* Mobile */}
           <MobileNavMenu
             isMenuOpen={isMenuOpen}

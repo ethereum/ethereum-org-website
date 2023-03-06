@@ -43,7 +43,7 @@ No. The cost to send a transaction (gas fee) is determined by a dynamic fee mark
 
 ## What are nodes, clients and validators? {#what-are-nodes-clients-and-validators}
 
-Nodes are computers connected to the Ethereum network. Clients are the software they run that turns the computer into a node. There are two types of clients: execution clients are consensus clients. Both are needed to create a node. A validator is an optional add-on to a consensus client that enables the node to participate in proof-of-stake consensus. This means creating and proposing blocks when selected and attesting to blocks they hear about on the network. To run a validator, the node operator must deposit 32 ETH into the deposit contract.
+Nodes are computers connected to the Ethereum network. Clients are the software they run that turns the computer into a node. There are two types of clients: execution clients and consensus clients. Both are needed to create a node. A validator is an optional add-on to a consensus client that enables the node to participate in proof-of-stake consensus. This means creating and proposing blocks when selected and attesting to blocks they hear about on the network. To run a validator, the node operator must deposit 32 ETH into the deposit contract.
 
 - [More on nodes and clients](/developers/docs/nodes-and-clients)
 - [More on staking](/staking)
@@ -76,7 +76,7 @@ Validators have to stake ETH so that they have something to lose if they misbeha
 
 A single validator is pseudo-randomly chosen to propose a block in each slot using an algorithm called RANDAO that mixes a hash from the block proposer with a seed that gets updated every block. This value is used to select a specific validator from the total validator set. The validator selection is fixed four epochs in advance.
 
-[More on validator selection](/developers/docs/consensus-mechanisms/pos/block_proposal)
+[More on validator selection](/developers/docs/consensus-mechanisms/pos/block-proposal)
 
 ## What is stake grinding? {#what-is-stake-grinding}
 

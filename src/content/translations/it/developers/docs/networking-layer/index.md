@@ -119,7 +119,7 @@ SSZ sta per simple serialization (serializzazione semplice). Usa offset fissi ch
 
 ## Connettere i client d'esecuzione e di consenso {#connecting-clients}
 
-I client del consenso e d'esecuzione, operano in parallelo. Devono esser connessi, così che il client del consenso possa fornire istruzioni al client d'esecuzione e che il client d'esecuzione possa passare pacchetti di transazioni al client del consenso per includerli nei blocchi della Beacon. La comunicazione tra i due client è ottenibile usando una connessione RPC locale. Un'API nota come [“Engine-API”](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md) definisce le istruzioni inviate tra i due client. Poiché entrambi i client risiedono dietro un'identità di rete singola, condividono un ENR (Registro del Nodo di Ethereum), contenente una chiave separata per ogni client (chiave eth1 e chiave eth2).
+I client del consenso e d'esecuzione, operano in parallelo. Devono esser connessi, così che il client del consenso possa fornire istruzioni al client d'esecuzione e che il client d'esecuzione possa passare pacchetti di transazioni al client del consenso per includerli nei blocchi della Beacon. La comunicazione tra i due client è ottenibile usando una connessione RPC locale. Un'API nota come [“Engine-API”](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) definisce le istruzioni inviate tra i due client. Poiché entrambi i client risiedono dietro un'identità di rete singola, condividono un ENR (Registro del Nodo di Ethereum), contenente una chiave separata per ogni client (chiave eth1 e chiave eth2).
 
 Un sommario del flusso di controllo è mostrato di seguito, con indicazione tra parentesi dello stack di rete rilevante.
 

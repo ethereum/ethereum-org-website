@@ -105,8 +105,8 @@ Il plugin eth-gas-reporter è piuttosto utile per tenere traccia dei costi del g
 ### Fase 1: Installa il plugin eth-gas-reporter e i codecheck {#step-1-install-the-eth-gas-reporter-plugin-and-codechecks}
 
 ```bash
-$ npm install --save-dev eth-gas-reporter
-$ npm install --save-dev @codechecks/client
+npm install --save-dev eth-gas-reporter
+npm install --save-dev @codechecks/client
 ```
 
 ### Fase 2: Aggiungi il plugin alle impostazioni di mocha nel tuo truffle-config.js {#step-2-add-the-plugin-to-the-mocha-settings-inside-your-truffle-configjs}
@@ -157,9 +157,9 @@ Con il plugin di solidity-coverage puoi controllare in quale misura i percorsi d
 ### Fase 1: Crea un progetto di metacoin e installa gli strumenti di coverage {#step-1-create-a-metacoin-project-and-install-coverage-tools}
 
 ```bash
-$ npm install --save-dev truffle
-$ npm install --save-dev coveralls
-$ npm install --save-dev solidity-coverage
+npm install --save-dev truffle
+npm install --save-dev coveralls
+npm install --save-dev solidity-coverage
 ```
 
 ### Fase 2: Aggiungi solidity-coverage all'insieme di plugin in truffle-config.js {#step-2-add-solidity-coverage-to-the-plugins-array-in-truffle-configjs}

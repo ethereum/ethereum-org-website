@@ -431,7 +431,7 @@ Community-driven content: [Ethereum.org Website](/), [EthHub Docs](https://docs.
 
 Ethereum software projects often host their documentation on [Read the Docs](https://readthedocs.org/)
 
-GitHub-hosted technical specifications: [EIPs](https://github.com/ethereum/eips), [Execution Specs](https://github.com/ethereum/execution-specs), [Consensus Specs](https://github.com/ethereum/consensus-specs)
+GitHub-hosted technical specifications: [EIPs](https://github.com/ethereum/EIPs), [Execution Specs](https://github.com/ethereum/execution-specs), [Consensus Specs](https://github.com/ethereum/consensus-specs)
 
 ### forum.ethereum.org {#forum-ethereum-org}
 

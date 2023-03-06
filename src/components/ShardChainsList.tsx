@@ -1,13 +1,9 @@
 import React from "react"
-import styled from "@emotion/styled"
-import CardList, { CardListItem } from "./CardList"
 import { useIntl } from "react-intl"
+import CardList, { CardListItem } from "./CardList"
 
+import { Box } from "@chakra-ui/react"
 import { translateMessageId } from "../utils/translations"
-
-const Container = styled.div`
-  margin-bottom: 4rem;
-`
 
 export interface IProps {}
 
@@ -102,9 +98,9 @@ const ShardChainsList: React.FC<IProps> = () => {
   ]
 
   return (
-    <Container>
+    <Box mb="4rem">
       <CardList content={reads} />
-    </Container>
+    </Box>
   )
 }
 

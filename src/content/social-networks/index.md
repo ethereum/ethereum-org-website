@@ -79,7 +79,7 @@ Reddit has [touted Community Points](https://cointelegraph.com/news/reddit-to-re
 
 The program is already live, with the r/CryptoCurrency subreddit [running its version of Community Points called "Moons"](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki). Per the official description, Moons "reward posters, commenters, and moderators for their contributions to the subreddit." Because these tokens are on the blockchain (users receive them in wallets), they are independent of Reddit and cannot be taken away.
 
-After concluding a beta phase on the Rinkeby testnet, Reddit Community Points are now on [Arbitrum Nova](https://nova.arbitrum.io/), a blockchain that combines properties of a [validium](/developers/docs/scaling/validium/) and an [optimistic rollup](/developers/docs/scaling/optimistic-rollups/). Besides using Community Points to unlock special features, users can also trade them for fiat on exchanges. Also, the amount of Community Points a user owns determines their influence on the decision-making process within the community.
+After concluding a beta phase on the Rinkeby testnet, Reddit Community Points are now on [Arbitrum Nova](https://nova.arbitrum.io/), a blockchain that combines properties of a [sidechain](/developers/docs/scaling/sidechains/) and an [optimistic rollup](/developers/docs/scaling/optimistic-rollups/). Besides using Community Points to unlock special features, users can also trade them for fiat on exchanges. Also, the amount of Community Points a user owns determines their influence on the decision-making process within the community.
 
 ### Twitter {#twitter}
 
@@ -94,16 +94,19 @@ In May 2022, [Instagram announced support for NFTs](https://about.instagram.com/
 - **[Status.im](https://status.im/)** - _Status is a secure messaging app that uses an open-source, peer-to-peer protocol, and end-to-end encryption to protect your messages from third parties._
 - **[Mirror.xyz](https://mirror.xyz/)** - _Mirror is a decentralized, user-owned publishing platform built on Ethereum for users to crowdfund ideas, monetize content, and build high-value communities._
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol is a composable and decentralized social graph helping creators take ownership of their content wherever they go in the digital garden of the decentralized internet._
+- **[Farcaster](https://farcaster.xyz/)** - _Farcaster is a sufficiently decentralized social network. It is an open protocol that can support many clients, just like email._
 
 ## Further reading {#further-reading}
 
 ### Articles {#articles}
 
+- [Decentralizing social media: a guide to the web3 social stack](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) - _Coinbase Ventures_
 - [Social Networks Are the Next Big Decentralization Opportunity](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
 - [Web3 holds the promise of decentralized, community-powered social networks](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
 - [An Overview of the Blockchain Social Media Landscape](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
 - [How Blockchain Can Solve Social Media Privacy](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
 - [Social Media Networks Are Coming To The Blockchain](https://businesstechguides.co/what-are-decentralized-social-networks) — _Emmanuel Awosika_
+- [Sufficient Decentralization for Social Networks](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
 
 ### Videos {#videos}
 

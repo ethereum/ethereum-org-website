@@ -80,7 +80,7 @@ The new state root that the ZK-rollup operator submits to the L1 contract is the
 
 But the rollup contract won’t automatically accept the proposed state commitment until the operator proves the new Merkle root resulted from correct updates to the rollup’s state. The ZK-rollup operator does this by producing a validity proof, a succinct cryptographic commitment verifying the correctness of batched transactions.
 
-Validity proofs allow parties to prove the correctness of a statement without revealing the statement itself—hence, they are also called zero-knowledge proofs. ZK-rollups use validity proofs to confirm the correctness of off-chain state transitions without having to re-execute transactions on Ethereum. These proofs can come in the form of a [ZK-SNARK](https://arxiv.org/abs/2202.06877) (Zero-Knowledge Succint Non-Interactive Argument of Knowledge) or [ZK-STARK](https://eprint.iacr.org/2018/046) (Zero-Knowledge Scalable Transparent Argument of Knowledge).
+Validity proofs allow parties to prove the correctness of a statement without revealing the statement itself—hence, they are also called zero-knowledge proofs. ZK-rollups use validity proofs to confirm the correctness of off-chain state transitions without having to re-execute transactions on Ethereum. These proofs can come in the form of a [ZK-SNARK](https://arxiv.org/abs/2202.06877) (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge) or [ZK-STARK](https://eprint.iacr.org/2018/046) (Zero-Knowledge Scalable Transparent Argument of Knowledge).
 
 Both SNARKs and STARKs help attest to the integrity of off-chain computation in ZK-rollups, although each proof type has distinctive features.
 
@@ -238,13 +238,12 @@ Projects working on zkEVMs include:
 
 - **[Scroll](https://scroll.io/blog/zkEVM)** - _Scroll is a tech-driven company working on building a native zkEVM Layer 2 Solution for Ethereum._
 
-- **[Polygon Hermez](https://docs.hermez.io/zkEVM/architecture/introduction/)** - _Hermez 2.0 is a decentralized ZK Rollup on the Ethereum mainnet working on a zero-knowledge Ethereum Virtual Machine (zkEVM) that executes Ethereum transactions in a transparent way, including smart contracts with zero-knowledge-proof validations._
+- **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)** - _is a decentralized ZK Rollup on the Ethereum mainnet working on a zero-knowledge Ethereum Virtual Machine (zkEVM) that executes Ethereum transactions in a transparent way, including smart contracts with zero-knowledge-proof validations._
 
 ## Further reading on ZK-rollups reading {#further-reading-on-zk-rollups}
 
 - [What Are Zero-Knowledge Rollups?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
 - [What are zero-knowledge rollups?](https://alchemy.com/blog/zero-knowledge-rollups)
-- [EthHub on ZK-rollups](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 - [STARKs vs SNARKs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
 - [What is a zkEVM?](https://www.alchemy.com/overviews/zkevm)
 - [Intro to zkEVM](https://hackmd.io/@yezhang/S1_KMMbGt)

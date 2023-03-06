@@ -36,15 +36,15 @@ Ether is minted as a reward for each block proposed and at every epoch checkpoin
 
 ## Burning ether {#burning-ether}
 
-As well as creating ether through block rewards, ether can get destroyed by a process called 'burning'. When ether gets burned, it gets removed from circulation permanently.
+As well as creating ether through block rewards, ether can be destroyed through a process called 'burning'. When ether gets burned, it gets removed from circulation permanently.
 
 Ether burn occurs in every transaction on Ethereum. When users pay for their transactions, a base gas fee, set by the network according to transactional demand, gets destroyed. This, coupled with variable block sizes and a maximum gas fee, simplifies transaction fee estimation on Ethereum. When network demand is high, [blocks](https://etherscan.io/block/12965263) can burn more ether than they mint, effectively offsetting ether issuance.
 
-Burning the base fee prevents various ways block producers could manipulate it otherwise. For example, if block producers received the base fee, they could include their own transactions for free and raise the base fee for everyone else. Alternatively, they could refund the base fee to some users off-chain, leading to a more opaque and complex transaction fee market.
+Burning the base fee hinders a block producers ability to manipulate transactions. For example, if block producers received the base fee, they could include their own transactions for free and raise the base fee for everyone else. Alternatively, they could refund the base fee to some users off-chain, leading to a more opaque and complex transaction fee market.
 
 ## Denominations of ether {#denominations}
 
-Since many transactions on Ethereum are small, ether has several denominations which may be referenced for smaller amounts. Of these denominations, Wei and gwei are particularly important.
+Since the value of many transactions on Ethereum are small, ether has several denominations which may be referenced as smaller units of account. Of these denominations, Wei and gwei are particularly important.
 
 Wei is the smallest possible amount of ether, and as a result, many technical implementations, such as the [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf), will base all calculations in Wei.
 

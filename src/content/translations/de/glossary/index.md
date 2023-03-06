@@ -27,7 +27,7 @@ Ein Objekt mit einer [Adresse](#address), einem Saldo, einer [Nonce](#nonce), op
 
 ### Adresse {#address}
 
-Im Allgemeinen symbolisiert diese einen [EOA](#eoa) oder [Vertrag](#contract-accouint), welcher [Transaktionen](#transaction) auf der Blockchain empfangen (Zieladresse) oder senden (Quelladresse) kann. Genauer gesagt sind es die ganz rechten 160 Bit eines [Keccak-Hashs](#keccak-256) eines [öffentlichen ECDSA](#ecdsa) [-Schlüssels](#public-key).
+Im Allgemeinen symbolisiert diese einen [EOA](#eoa) oder [Vertrag](#contract-account), welcher [Transaktionen](#transaction) auf der Blockchain empfangen (Zieladresse) oder senden (Quelladresse) kann. Genauer gesagt sind es die ganz rechten 160 Bit eines [Keccak-Hashs](#keccak-256) eines [öffentlichen ECDSA](#ecdsa) [-Schlüssels](#public-key).
 
 ### Binäre Anwendungsschnittstelle (ABI) {#abi}
 

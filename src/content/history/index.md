@@ -16,10 +16,59 @@ Forks are when major technical upgrades or changes need to be made to the networ
 When upgrades are needed in traditional, centrally-controlled software, the company will just publish a new version for the end-user. Blockchains work differently because there is no central ownership. [Ethereum clients](/developers/docs/nodes-and-clients/) must update their software to implement the new fork rules. Plus block creators (miners in a proof-of-work world, validators in a proof-of-stake world) and nodes must create blocks and validate against the new rules. [More on consensus mechanisms](/developers/docs/consensus-mechanisms/)
 
 These rule changes may create a temporary split in the network. New blocks could be produced according to the new rules or the old ones. Forks are usually agreed upon ahead of time so that clients adopt the changes in unison and the fork with the upgrades becomes the main chain. However, in rare cases, disagreements over forks can cause the network to permanently split – most notably the creation of Ethereum Classic with the [DAO fork](#dao-fork).
+</ExpandableCard>
+
+Skip straight to information about some of the particularly important past upgrades: [The Beacon Chain](/upgrades/beacon-chain/); [The Merge](/upgrades/merge/); and [EIP-1559](#london)
+
+Looking for future protocol upgrades? [Learn about upcoming upgrades on the Ethereum roadmap](/roadmap/).
+
+<Divider />
+
+## 2023 {#2023}
+
+### Shanghai (_planned_) {#shanghai}
+
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Timestamp: TBD<br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Block number: TBD<br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: TBD<br />
+
+<!-- <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/{}/https://ethereum.org/">ethereum.org on waybackmachine</a> -->
+
+#### Summary {#shanghai-summary}
+
+The Shanghai upgrade brings staking withdrawals to the execution layer. In tandem with the Capella upgrade, this enables blocks to accept withdrawal operations, which allow stakers to withdraw their ETH from the Beacon Chain to the execution layer.
+
+<ExpandableCard title="Shanghai EIPs" contentPreview="Official improvements included in this upgrade.">
+
+- [EIP-3651](https://eips.ethereum.org/EIPS/eip-3651) – _Starts the `COINBASE` address warm_
+- [EIP-3855](https://eips.ethereum.org/EIPS/eip-3855) – _New `PUSH0` instruction_
+- [EIP-3860](https://eips.ethereum.org/EIPS/eip-3860) – _Limit and meter initcode_
+- [EIP-4895](https://eips.ethereum.org/EIPS/eip-4895) – _Beacon chain push withdrawals as operations_
 
 </ExpandableCard>
 
-Looking for future protocol upgrades? [Learn about upcoming upgrades to Ethereum](/upgrades/).
+- [Read the Shanghai upgrade specification](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
+
+---
+
+### Capella (_planned_) {#capella}
+
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Timestamp: TBD<br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Epoch number: TBD<br />
+<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: TBD<br />
+
+<!-- <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/{}/https://ethereum.org/en/">ethereum.org on waybackmachine</a> -->
+
+#### Summary {#capella-summary}
+
+The Capella upgrade is the third major upgrade to the consensus layer (Beacon Chain), which enables staking withdrawals. Capella is to occur simultaneous to the Shanghai upgrade occurring on the execution layer to enable withdrawal functionality in sync with one another.
+
+This consensus layer upgrade brings the ability for stakers who did not provide withdrawal credentials with their initial deposit to do so, thereby enabling withdrawals.
+
+The upgrade also provides automatic account sweeping functionality, which continuously processes validator accounts for any available rewards payments or full withdrawals.
+
+- [More on staking withdrawals](/staking/withdrawals/).
+- [Read the Capella upgrade specifications](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
 
 <Divider />
 
@@ -34,9 +83,16 @@ Looking for future protocol upgrades? [Learn about upcoming upgrades to Ethereum
 
 #### Summary {#paris-summary}
 
-The Paris upgrade was triggered by the proof-of-work blockchain passing a [terminal total difficulty](/glossary/#terminal-total-difficulty) of 58750000000000000000000. This happened at block 15537393 on 15th September 2022, triggering the Paris upgrade the next block. Paris was [The Merge](/upgrades/merge/) transition - its major feature was switching off the [proof-of-work](/developers/docs/consensus-mechanisms/pow) mining algorithm and associated consensus logic and switching on [proof-of-stake](/developers/docs/consensus-mechanisms/pos) instead. Paris itself was an upgrade to the [execution clients](/developers/docs/nodes-and-clients/#execution-clients) (equivalent to Bellatrix on the consensus layer) that enabled them to take instruction from their connected [consensus clients](/developers/docs/nodes-and-clients/#consensus-clients). This required a new set of internal API methods, collectively known as the [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md), to be activated. This was arguably the most significant upgrade in Ethereum history since [Homestead](#homestead)!
+The Paris upgrade was triggered by the proof-of-work blockchain passing a [terminal total difficulty](/glossary/#terminal-total-difficulty) of 58750000000000000000000. This happened at block 15537393 on 15th September 2022, triggering the Paris upgrade the next block. Paris was [The Merge](/upgrades/merge/) transition - its major feature was switching off the [proof-of-work](/developers/docs/consensus-mechanisms/pow) mining algorithm and associated consensus logic and switching on [proof-of-stake](/developers/docs/consensus-mechanisms/pos) instead. Paris itself was an upgrade to the [execution clients](/developers/docs/nodes-and-clients/#execution-clients) (equivalent to Bellatrix on the consensus layer) that enabled them to take instruction from their connected [consensus clients](/developers/docs/nodes-and-clients/#consensus-clients). This required a new set of internal API methods, collectively known as the [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md), to be activated. This was arguably the most significant upgrade in Ethereum history since [Homestead](#homestead)!
 
 - [Read the Paris upgrade specification](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
+
+<ExpandableCard title="Paris EIPs" contentPreview="Official improvements included in this upgrade.">
+
+- [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) – _Upgrade consensus to Proof-of-Stake_
+- [EIP-4399](https://eips.ethereum.org/EIPS/eip-4399) – _Supplant DIFFICULTY opcode with PREVRANDAO_
+
+</ExpandableCard>
 
 ---
 
@@ -184,7 +240,7 @@ The Berlin upgrade optimized gas cost for certain EVM actions, and increases sup
 
 #### Summary {#beacon-chain-genesis-summary}
 
-The [Beacon Chain](/upgrades/beacon-chain/) needed 16384 deposits of 32 staked ETH to ship securely. This happened on November 27, meaning the Beacon Chain started producing blocks on December 1, 2020. This is an important first step in achieving the [Ethereum vision](/upgrades/vision/).
+The [Beacon Chain](/upgrades/beacon-chain/) needed 16384 deposits of 32 staked ETH to ship securely. This happened on November 27, meaning the Beacon Chain started producing blocks on December 1, 2020. This is an important first step in achieving the [Ethereum vision](/roadmap/vision/).
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 

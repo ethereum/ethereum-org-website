@@ -35,6 +35,8 @@ Bridges enable:
 - users to access new platforms and leverage the benefits of different chains.
 - developers from different blockchain ecosystems to collaborate and build new platforms for the users.
 
+[How to bridge tokens to layer 2](/guides/how-to-use-a-bridge/)
+
 <Divider />
 
 ## Bridge use cases {#bridge-use-cases}

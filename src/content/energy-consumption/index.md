@@ -8,7 +8,7 @@ lang: en
 
 Ethereum is a green blockchain. It uses a [proof-of-stake](/developers/docs/consensus-mechanisms/pos) consensus mechanism, using ETH instead of [energy to secure the network](/developers/docs/consensus-mechanisms/pow). Ethereum's proof-of-stake mechanism only uses [~0.0026 TWh/yr](https://carbon-ratings.com/eth-report-2022) across the entire global network.
 
-[CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com) generated bottom-up estimates of the electricity consumption and the carbon footprint of the Ethereum network ([see the report](https://carbon-ratings.com/eth-report-2022)). They measured the electricity consumption of different nodes with various hardware and client software configurations. This yielded an estimate of **2.601 MWh** (0.0026 TWh) for the network’s annual electricity consumption (September 2022), which corresponds to yearly carbon emissions of **870 tonnes CO2e** applying regional-specific carbon intensity factors.
+[CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com) generated bottom-up estimates of the electricity consumption and the carbon footprint of the Ethereum network ([see the report](https://carbon-ratings.com/eth-report-2022)). They measured the electricity consumption of different nodes with various hardware and client software configurations. This yielded an estimate of **2,601 MWh** (0.0026 TWh) for the network’s annual electricity consumption (September 2022), which corresponds to yearly carbon emissions of **870 tonnes CO2e** applying regional-specific carbon intensity factors.
 
 <EnergyConsumptionChart />
 
@@ -22,7 +22,7 @@ To put Ethereum's energy consumption in context, we can compare annualized estim
 | Gold mining         |                 130                 |          50,000x           | [source](https://ccaf.io/cbeci/index/comparisons)                                                                                                 |
 | Bitcoin             |                 130                 |          50,000x           | [source](https://digiconomist.net/bitcoin-energy-consumption)                                                                                     |
 | Bitcoin             |                 100                 |          38,000x           | [source](https://ccaf.io/cbeci/index/comparisons)                                                                                                 |
-| YouTube             |                 244                 |          94,000 x          | [source](https://thefactsource.com/how-much-electricity-does-youtube-use/)                                                                        |
+| YouTube             |                 244                 |          94,000x           | [source](https://thefactsource.com/how-much-electricity-does-youtube-use/)                                                                        |
 | Global data centers |                 200                 |          78,000x           | [source](https://www.iea.org/commentaries/data-centres-and-energy-from-global-headlines-to-local-headaches)                                       |
 | Netflix             |                0.45                 |            175x            | [source](https://s22.q4cdn.com/959853165/files/doc_downloads/2020/02/0220_Netflix_EnvironmentalSocialGovernanceReport_FINAL.pdf)                  |
 | Netflix             |                 94                  |          36,000x           | [source](https://theshiftproject.org/en/article/unsustainable-use-online-video/)                                                                  |
@@ -49,7 +49,7 @@ From the very beginning, Ethereum planned to implement a proof-of-stake based co
 
 ![Energy consumption comparison of pre- and post-Merge Ethereum. Displayed is on the left the Eiffel tower with 330 meters height and on the right a plastic toy figure with 4 cm height within a magnifying glass.](energy_consumption_pre_post_merge.png)
 
-CCRI examined the impact of Ethereum’s transition from proof-of-work to proof-of-stake. The annualized electricity consumption was reduced by more than **99.988 %**. Likewise, Ethereum’s carbon footprint was decreased by approximately **99.992 %** (from 11,016,000 to 870 tonnes CO2e). Depicted metaphorically, this corresponds to a reduction in emissions from the height of the Eiffel Tower to a small plastic toy figure, as shown in the figure above. Therefore, the environmental cost of securing the network is drastically reduced. Simultaneously, the security of the network is thought to have increased.
+CCRI examined the impact of Ethereum’s transition from proof-of-work to proof-of-stake. The annualized electricity consumption was reduced by more than **99.988%**. Likewise, Ethereum’s carbon footprint was decreased by approximately **99.992%** (from 11,016,000 to 870 tonnes CO2e). Depicted metaphorically, this corresponds to a reduction in emissions from the height of the Eiffel Tower to a small plastic toy figure, as shown in the figure above. Therefore, the environmental cost of securing the network is drastically reduced. Simultaneously, the security of the network is thought to have increased.
 
 ## A green application layer {#green-applications}
 
@@ -72,7 +72,7 @@ Web3 native public goods funding platforms such as [Gitcoin](https://gitcoin.co)
 
 ## Related topics {#related-topics}
 
-- [Ethereum's vision](/upgrades/vision/)
+- [Ethereum's vision](/roadmap/vision/)
 - [The Beacon Chain](/upgrades/beacon-chain)
 - [The Merge](/upgrades/merge/)
 - [Sharding](/upgrades/beacon-chain/)
