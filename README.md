@@ -1586,6 +1586,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ljiatu"><img src="https://avatars.githubusercontent.com/u/3280973?v=4?s=100" width="100px;" alt="Jiatu Liu"/><br /><sub><b>Jiatu Liu</b></sub></a><br /><a href="#content-ljiatu" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/DeUETH"><img src="https://avatars.githubusercontent.com/u/107472460?v=4?s=100" width="100px;" alt="DeUETH"/><br /><sub><b>DeUETH</b></sub></a><br /><a href="#content-DeUETH" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://www.erinleelikes.com"><img src="https://avatars.githubusercontent.com/u/50590950?v=4?s=100" width="100px;" alt="erin-at-work"/><br /><sub><b>erin-at-work</b></sub></a><br /><a href="#content-erin-at-work" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/AmazingAng"><img src="https://avatars.githubusercontent.com/u/14728591?v=4?s=100" width="100px;" alt="0xAA"/><br /><sub><b>0xAA</b></sub></a><br /><a href="#content-AmazingAng" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
