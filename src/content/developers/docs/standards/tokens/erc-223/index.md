@@ -147,11 +147,37 @@ contract RecipientContract is IERC223Recipient {
 }
 ```
 
-What will happen if we send some tokenB to the contract? - The transaction will fail and the transfer of tokens will simply not happen. The tokens will be returned to the sender's address.
+- **What will happen if we send some tokenB to the contract?** - The transaction will fail and the transfer of tokens will simply not happen. The tokens will be returned to the sender's address.
+- **How can we make a deposit to this contract?** - We can simply call the `transfer(address,uint256)` or `transfer(address,uint256,bytes)` function of the ERC-223 token and tell it to transfer some tokens to the address of the `RecipientContract`. That's it.
+- **What will happen if we transfer a ERC-20 token to this contract?** - Well, ERC-20 standard supports two methods of transferring tokens: `transfer` function and `approve + transferFrom` pattern. This is not possible to make a deposit with `transferFrom` function as the `RecipientContract` does not have any functions that subsequently call `transferFrom`. If a ERC-20 token is sent with `transfer` function to the address of the `RecipientContract` then unfortunately the tokens will be transferred from the sender's address to the address of the `RecipientContract` but the transfer will not be recognized i.e. `Deposit()` event will not be fired and `deposits` value will not change. There is also no way to filter or prevent unwanted ERC-20 deposits that are made with the `transfer` function.
+- **What if we want to execute some function after the token deposit is completed?**
 
-How can we make a deposit to this contract? - We can simply call the `transfer(address,uint256)` or `transfer(address,uint256,bytes)` function of the ERC-223 token and tell it to transfer some tokens to the address of the `RecipientContract`. That's it.
+There are multiple ways of doing so. In this example we will follow the method which makes ERC-223 transfers identical to Ether transfers:
 
-What will happen if we transfer a ERC-20 token to this contract? - Well, ERC-20 standard supports two methods of transferring tokens: `transfer` function and `approve + transferFrom` pattern. This is not possible to make a deposit with `transferFrom` function as the `RecipientContract` does not have any functions that subsequently call `transferFrom`. If a ERC-20 token is sent with `transfer` function to the address of the `RecipientContract` then unfortunately the tokens will be transferred from the sender's address to the address of the `RecipientContract` but the transfer will not be recognized i.e. `Deposit()` event will not be fired and `deposits` value will not change. There is also no way to filter or prevent unwanted ERC-20 deposits that are made with the `transfer` function.
+```solidity
+contract RecipientContract is IERC223Recipient {
+    event Foo();
+    event Bar();
+    address tokenA; // The only token that we want to accept.
+    function tokenReceived(address _from, uint _value, bytes memory _data) public override
+    {
+        require(msg.sender == tokenA);
+        address(this).call(_data); // Handle incoming transaction and perform a subsequent function call.
+    }
+    function foo() public
+    {
+        emit Foo();
+    }
+    function bar() public
+    {
+        emit Bar();
+    }
+}
+```
+
+When the `RecipientContract` will receive a ERC-223 token the contract will execute a function encoded as `_data` parameter of the token transaction, identical to how Ether transactions encode function calls as transaction `data`. Read [the data field](https://ethereum.org/en/developers/docs/transactions/#the-data-field) for more information.
+
+
 
 ## Further reading {#further-reading}
 
