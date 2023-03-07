@@ -6,26 +6,17 @@ lang: en
 
 ## Introduction {#introduction}
 
-**What is a Token?**
+**What is ERC-223?**
 
-Tokens can represent virtually anything in Ethereum:
+The ERC-223 is another standard for Fungible Tokens, like the ERC-20. The key difference is that ERC-223 defines not only the token API, but also the logic of how tokens should be transferred from sender to recipient and introduces a communication model that allows token transfers to be handled on the recipients side.
 
-- reputation points in an online platform
-- skills of a character in a game
-- lottery tickets
-- financial assets like a share in a company
-- a fiat currency like USD
-- an ounce of gold
-- and more...
+**How is it different from ERC-20 and why we need another token standard?**
 
-Such a powerful feature of Ethereum must be handled by a robust standard, right? That's exactly
-where the ERC-20 plays its role! This standard allows developers to build token applications that are interoperable with other products and services.
+ERC-223 addresses some limitations of ERC-20 and introduces a new method of interactions between token contract and a contract that may receive the tokens. There are few things that are possible with ERC-223 but not with ERC-20:
 
-**What is ERC-20?**
-
-The ERC-20 introduces a standard for Fungible Tokens, in other words, they have a property that makes each Token be exactly
-the same (in type and value) as another Token. For example, an ERC-20 Token acts just like the ETH, meaning that 1 Token
-is and will always be equal to all the other Tokens.
+- Token transfer handling on the recipient's side. Recipient can detect that a ERC-223 token is being deposited.
+- Rejection of improperly sent tokens. If a user sent ERC-223 tokens to a contract that is not supposed to receive tokens then the contract can reject the transaction and the tokens will not be lost.
+- The transfer of ERC-223 tokens may contain metadata, which allows arbitrary information to be attached to the token transactions.
 
 ## Prerequisites {#prerequisites}
 
