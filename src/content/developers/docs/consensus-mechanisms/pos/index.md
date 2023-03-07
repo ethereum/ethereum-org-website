@@ -20,7 +20,7 @@ Proof-of-stake comes with a number of improvements to the now-deprecated proof-o
 - lower barriers to entry, reduced hardware requirements – there is no need for elite hardware to stand a chance of creating new blocks
 - reduced centralization risk – proof-of-stake should lead to more nodes securing the network
 - because of the low energy requirement less ETH issuance is required to incentivize participation
-- economic penalties for misbehaviour make 51% style attacks exponentially more costly for an attacker compared to proof-of-work
+- economic penalties for misbehavior make 51% style attacks exponentially more costly for an attacker compared to proof-of-work
 - the community can resort to social recovery of an honest chain if a 51% attack were to overcome the crypto-economic defenses.
 
 ## Validators {#validators}
