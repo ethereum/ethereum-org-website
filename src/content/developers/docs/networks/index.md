@@ -53,12 +53,13 @@ The Sepolia network uses a permissioned validator set. It's fairly new, meaning 
 - [Etherscan](https://sepolia.etherscan.io)
 
 ##### Faucets
-- [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
+
 - [Grabteeth](https://grabteeth.xyz/)
 - [PoW faucet](https://sepolia-faucet.pk910.de/)
 - [Sepolia faucet](https://faucet.sepolia.dev/)
 - [FaucETH](https://fauceth.komputing.org)
 - [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
+- [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
 
 #### Goerli _(long-term support)_ {#goerli}
 
