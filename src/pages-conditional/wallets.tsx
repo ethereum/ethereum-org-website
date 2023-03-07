@@ -17,7 +17,6 @@ import {
   Divider,
   GrayContainer,
   Page,
-  RightColumn,
   StyledCard,
   TwoColumnContent,
 } from "../components/SharedStyledComponents"
@@ -30,7 +29,9 @@ import { Context } from "../types"
 
 const StyledTwoColumnContent = chakra(TwoColumnContent)
 
-const StyledRightColumn = chakra(RightColumn)
+const StyledRightColumn = (props: { children: React.ReactNode }) => (
+  <Box flex="0 1 50%" ml={{ lg: 4 }} maxW="full" {...props} />
+)
 
 const StyledGrayContainer = chakra(GrayContainer)
 
@@ -172,7 +173,7 @@ const WalletsPage = ({
             </p>
             <CardList content={guides} />
           </Box>
-          <StyledRightColumn marginTop={{ lg: 0 }}>
+          <StyledRightColumn>
             <p>
               <Translation id="page-wallets-desc-3" />
             </p>
