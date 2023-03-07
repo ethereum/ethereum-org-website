@@ -1,10 +1,8 @@
 import React from "react"
 import { Center, Heading, Box, Flex, chakra } from "@chakra-ui/react"
-
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
-
 import PageHero from "../components/PageHero"
 import Translation from "../components/Translation"
 import Callout from "../components/Callout"
@@ -153,7 +151,7 @@ const WalletsPage = ({
       <PageHero content={heroContent} isReverse />
       <StyledGrayContainer marginTop={{ lg: 4 }}>
         <Intro paddingBottom={0} sx={{ h2: { mb: 0 } }}>
-          <Heading m="0">
+          <Heading>
             <Translation id="page-wallets-whats-a-wallet" />
           </Heading>
         </Intro>
@@ -205,7 +203,7 @@ const WalletsPage = ({
           mt={{ lg: 0 }}
           maxWidth={{ lg: "100%" }}
         >
-          <Heading m="0">
+          <Heading>
             <Translation id="page-wallets-accounts-addresses" />
           </Heading>
           <p>
@@ -240,7 +238,7 @@ const WalletsPage = ({
           maxWidth={{ lg: "100%" }}
           marginLeft={{ base: 8, lg: 0 }}
         >
-          <Heading m="0">
+          <Heading>
             <Translation id="page-wallets-types" />
           </Heading>
           <p>
@@ -270,7 +268,7 @@ const WalletsPage = ({
       >
         <Content>
           <Flex flexDirection="column" alignItems="center" mb="8">
-            <Heading m="0">
+            <Heading>
               <Translation id="page-wallets-features-title" />
             </Heading>
             <Box
@@ -306,7 +304,7 @@ const WalletsPage = ({
           mt={{ lg: 0 }}
           maxWidth={{ lg: "100%" }}
         >
-          <Heading m="0">
+          <Heading>
             <Translation id="page-wallets-stay-safe" />
           </Heading>
           <Box
@@ -395,7 +393,7 @@ const WalletsPage = ({
           maxWidth={{ lg: "100%" }}
           marginLeft={{ base: 8, lg: 0 }}
         >
-          <Heading m="0">
+          <Heading>
             <Translation id="page-wallets-tips" />
           </Heading>
           <Box
@@ -411,7 +409,7 @@ const WalletsPage = ({
       </TwoColumnContent>
       <Content>
         <Divider />
-        <Heading m="0">
+        <Heading>
           <Translation id="page-wallets-explore" />
         </Heading>
         <CalloutCardContainer marginTop={16}>
