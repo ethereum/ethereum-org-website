@@ -50,7 +50,7 @@ const GlyphButton = styled.svg`
   height: 2.5rem;
   position: relative;
   stroke-width: 2px;
-  z-index: ${(props) => props.pointsAtZ};
+  z-index: 100;
   pointer-events: ${(props) => props.pointerEvents};
   & > path {
     stroke: ${(props) => props.theme.colors.text};
@@ -242,8 +242,7 @@ const MobileNavMenu: React.FC<IProps> = ({
         icon={
           <GlyphButton
             viewBox="0 0 24 40"
-            pointerEvents={isSearchOpen && isMenuOpen ? "none" : "auto"}
-            pointsAtZ={isSearchOpen ? 0 : 100}
+            pointerEvents={isMenuOpen ? "none" : "auto"}
           >
             <motion.path
               variants={glyphPathVariants}
