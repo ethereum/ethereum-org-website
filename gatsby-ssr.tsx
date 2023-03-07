@@ -6,7 +6,7 @@
 
 import React from "react"
 
-import type { GatsbySSR } from "gatsby"
+import type { GatsbySSR, RenderBodyArgs } from "gatsby"
 
 import Layout from "./src/components/Layout"
 
@@ -33,4 +33,17 @@ export const wrapPageElement: GatsbySSR<any, Context>["wrapPageElement"] = ({
   }
 
   return <Layout {...props}>{element}</Layout>
+}
+
+export const onRenderBody = ({ setHeadComponents }: RenderBodyArgs) => {
+  setHeadComponents([
+    <link
+      rel="preload"
+      href="/fonts/Inter-roman.var.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+      key="interFont"
+    />,
+  ])
 }
