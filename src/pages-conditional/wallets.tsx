@@ -234,7 +234,7 @@ const WalletsPage = ({
           flexGrow="0"
           flexShrink="1"
           flexBasis="50%"
-          marginTop={{ lg: 0 }}
+          marginTop={{ lg: 12 }}
           maxWidth={{ lg: "100%" }}
           marginLeft={{ base: 8, lg: 0 }}
         >
@@ -389,7 +389,7 @@ const WalletsPage = ({
           flexGrow="0"
           flexShrink="1"
           flexBasis="50%"
-          marginTop={{ lg: 0 }}
+          marginTop={{ lg: 12 }}
           maxWidth={{ lg: "100%" }}
           marginLeft={{ base: 8, lg: 0 }}
         >
