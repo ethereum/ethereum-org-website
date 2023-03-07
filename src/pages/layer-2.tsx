@@ -606,7 +606,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <p>
               <Translation id="layer-2-why-do-we-need-layer-2-scalability-2" />
             </p>
-            <Link to="/upgrades/vision/">
+            <Link to="/roadmap/vision/">
               <Translation id="layer-2-why-do-we-need-layer-2-scalability-3" />
             </Link>
           </FlexContainer>

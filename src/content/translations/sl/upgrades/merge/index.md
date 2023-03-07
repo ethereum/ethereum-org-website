@@ -108,7 +108,7 @@ Spojitev predstavlja konec mehanizma dokaza o delu za Ethereum in začetek bolj 
 
 ## Spojitev in širjenje omrežja {#merge-and-scaling}
 
-Spojitev je tudi postavila temelje za nadaljnje širitve omrežja, ki z dokazom o delu niso bile mogoče. Tako se je Ethereum še za korak približal velikosti, varnosti in trajnosti, opisani v [viziji za Ethereum](/upgrades/vision/).
+Spojitev je tudi postavila temelje za nadaljnje širitve omrežja, ki z dokazom o delu niso bile mogoče. Tako se je Ethereum še za korak približal velikosti, varnosti in trajnosti, opisani v [viziji za Ethereum](/roadmap/vision/).
 
 ## Zmote o spojitvi {#misconceptions}
 
