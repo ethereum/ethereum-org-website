@@ -289,7 +289,7 @@ const MobileNavMenu: React.FC<IProps> = ({
           <GlyphButton 
           viewBox="0 0 24 40"
           pointerEvents={ isSearchOpen && isMenuOpen ? "none" : "auto"}
-          pointsAtZ={isSearchOpen ?"0":100}
+          pointsAtZ={ isSearchOpen ? 0 : 100 }
            >
             <motion.path
               variants={glyphPathVariants}
