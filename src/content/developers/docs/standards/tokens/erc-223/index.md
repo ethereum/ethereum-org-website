@@ -69,6 +69,89 @@ event Transfer(address indexed _from, address indexed _to, uint256 _value, bytes
 
 The API of ERC-223 token is similar to that of ERC-20, so from UI development point of view there is no difference. The only exception here is that ERC-223 tokens may  not have `approve` + `transferFrom` functions as these are optional for this standard.
 
+### Examples {#solidity-example}
+
+The purpose of this example is to illustrate how a contract must work with ERC-223 tokens.
+
+Assume that we have a very basic ERC-223 token:
+
+```solidity
+pragma solidity ^0.8.19;
+
+abstract contract IERC223Recipient {
+    function tokenReceived(address _from, uint _value, bytes memory _data) public virtual;
+}
+
+contract VeryBasicERC223Token {
+    event Transfer(address indexed from, address indexed to, uint value, bytes data);
+
+    string  private _name;
+    string  private _symbol;
+    uint8   private _decimals;
+    uint256 private _totalSupply;
+    
+    mapping(address => uint256) public balances;
+
+    function isContract(address account) internal view returns (bool) {
+        uint256 size;
+        assembly { size := extcodesize(account) }
+        return size > 0;
+    }
+    function name() public view returns (string memory){
+        return _name;
+    }
+    function symbol() public view returns (string memory){
+        return _symbol;
+    }
+    function decimals() public view returns (uint8){
+        return _decimals;
+    }
+    function totalSupply() public view returns (uint256){
+        return _totalSupply;
+    }
+    function balanceOf(address _owner) public view returns (uint256){
+        return balances[_owner];
+    }
+    function transfer(address _to, uint _value, bytes calldata _data) public returns (bool success){
+        balances[msg.sender] = balances[msg.sender] - _value;
+        balances[_to] = balances[_to] + _value;
+        if(isContract(_to)) {
+            IERC223Recipient(_to).tokenReceived(msg.sender, _value, _data);
+        }
+        emit Transfer(msg.sender, _to, _value, _data);
+        return true;
+    }
+    function transfer(address _to, uint _value) public returns (bool success){
+        bytes memory _empty = hex"00000000";
+        balances[msg.sender] = balances[msg.sender] - _value;
+        balances[_to] = balances[_to] + _value;
+        if(isContract(_to)) {
+            IERC223Recipient(_to).tokenReceived(msg.sender, _value, _empty);
+        }
+        emit Transfer(msg.sender, _to, _value, _empty);
+        return true;
+    }
+}
+```
+
+Now we want another contract to accept deposits of `tokenA` assuming that tokenA is a ERC-223 token. The contract must accept only tokenA and reject any other tokens. When the contract receives tokenA it must emit a `Deposit()` event and increase the value of the internal `deposits` variable.
+
+Here is the code:
+
+```solidity
+contract Recipient is IERC223Recipient {
+    event Deposit();
+    uint256 deposits = 0;
+    address tokenA; // The only token that we want to accept.
+    function tokenReceived(address _from, uint _value, bytes memory _data) public override
+    {
+        require(msg.sender == tokenA);
+        deposits += _value;
+        emit Deposit();
+    }
+}
+```
+
 ## Further reading {#further-reading}
 
 - [EIP-223: ERC-223 Token Standard](https://eips.ethereum.org/EIPS/eip-223)
