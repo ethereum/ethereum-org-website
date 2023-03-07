@@ -130,14 +130,19 @@ Here is the code:
 
 ```solidity
 contract Recipient is IERC223Recipient {
-    event Deposit();
+    event Deposit(address whoSentTheTokens);
     uint256 deposits = 0;
     address tokenA; // The only token that we want to accept.
     function tokenReceived(address _from, uint _value, bytes memory _data) public override
     {
+        // It is important to understand that within this function
+        // msg.sender is the address of a token that is being received,
+        // msg.value  is always 0 as the token contract does not own or send Ether in most cases,
+        // _from      is the sender of the token transfer,
+        // _value     is the amount of tokens that was deposited.
         require(msg.sender == tokenA);
         deposits += _value;
-        emit Deposit();
+        emit Deposit(_from);
     }
 }
 ```
