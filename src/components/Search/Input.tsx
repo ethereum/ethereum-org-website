@@ -1,63 +1,39 @@
 import React, { ChangeEvent, FormEvent } from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import styled from "@emotion/styled"
 import { connectSearchBox } from "react-instantsearch-dom"
+import {
+  Box,
+  Input as ChakraInput,
+  InputGroup,
+  Text,
+  InputLeftElement,
+  InputRightElement,
+  InputProps,
+  BoxProps,
+  TextProps,
+} from "@chakra-ui/react"
+import { MdSearch } from "react-icons/md"
 
-import Icon from "../Icon"
+const SearchSlash = (props: TextProps) => (
+  <Text
+    m={0}
+    px="6px"
+    border="1px solid"
+    borderColor="searchBorder"
+    borderRadius="base"
+    {...props}
+  >
+    /
+  </Text>
+)
 
-const Form = styled.form`
-  margin: 0;
-  position: relative;
-  border-radius: 0.25em;
-`
+const SearchIcon = (props: BoxProps) => (
+  <Box fontSize="2xl" color="secondary" {...props}>
+    <MdSearch />
+  </Box>
+)
 
-const StyledInput = styled.input`
-  border: 1px solid ${(props) => props.theme.colors.searchBorder};
-  color: ${(props) => props.theme.colors.text};
-  background: ${(props) => props.theme.colors.searchBackground};
-  padding: 0.5rem;
-  padding-right: 2rem;
-  border-radius: 0.25em;
-  width: 100%;
-
-  &:focus {
-    outline: ${(props) => props.theme.colors.primary} auto 1px;
-  }
-
-  @media only screen and (min-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-left: 2rem;
-  }
-`
-
-const SearchIcon = styled(Icon)`
-  position: absolute;
-  right: 6px;
-  top: 50%;
-  margin-top: -12px;
-
-  @media only screen and (min-width: ${(props) => props.theme.breakpoints.l}) {
-    left: 6px;
-  }
-`
-
-const SearchSlash = styled.p`
-  border: 1px solid ${(props) => props.theme.colors.searchBorder};
-  border-radius: 0.25em;
-  color: ${(props) => props.theme.colors.text};
-  display: none;
-  margin-bottom: 0;
-  padding: 0 6px;
-  position: absolute;
-  right: 6px;
-  top: 20%;
-
-  @media only screen and (min-width: ${(props) => props.theme.breakpoints.l}) {
-    display: inline-block;
-  }
-`
-
-interface IInputProps
-  extends React.ComponentPropsWithoutRef<typeof StyledInput> {
+interface IInputProps extends InputProps {
   query: string
   setQuery: (query: string) => void
   refine: (query: string) => void
@@ -85,19 +61,35 @@ const Input: React.FC<IInputProps> = ({
   }
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <StyledInput
-        ref={inputRef}
-        type="text"
-        placeholder={searchString}
-        value={query}
-        aria-label={searchString}
-        onChange={handleInputChange}
-        {...rest}
-      />
-      <SearchSlash>/</SearchSlash>
-      <SearchIcon name="search" />
-    </Form>
+    <form onSubmit={handleSubmit}>
+      <InputGroup>
+        <InputLeftElement
+          display={{ base: "none", lg: "flex" }}
+          children={<SearchIcon />}
+        />
+        <ChakraInput
+          ref={inputRef}
+          paddingStart={{ base: 2, lg: 8 }}
+          bg="searchBackground"
+          border="1px solid"
+          borderColor="searchBorder"
+          borderRadius="base"
+          type="text"
+          placeholder={searchString}
+          value={query}
+          onChange={handleInputChange}
+          _focus={{
+            outline: "1px auto",
+            outlineColor: "primary",
+          }}
+          {...rest}
+        />
+        <InputRightElement>
+          <SearchSlash display={{ base: "none", lg: "block" }} />
+          <SearchIcon display={{ base: "block", lg: "none" }} />
+        </InputRightElement>
+      </InputGroup>
+    </form>
   )
 }
 
