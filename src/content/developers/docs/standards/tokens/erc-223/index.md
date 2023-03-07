@@ -157,7 +157,7 @@ There are multiple ways of doing so. In this example we will follow the method w
 ```solidity
 contract RecipientContract is IERC223Recipient {
     event Foo();
-    event Bar();
+    event Bar(uint256 someNumber);
     address tokenA; // The only token that we want to accept.
     function tokenReceived(address _from, uint _value, bytes memory _data) public override
     {
@@ -168,16 +168,18 @@ contract RecipientContract is IERC223Recipient {
     {
         emit Foo();
     }
-    function bar() public
+    function bar(uint256 _someNumber) public
     {
-        emit Bar();
+        emit Bar(_someNumber);
     }
 }
 ```
 
 When the `RecipientContract` will receive a ERC-223 token the contract will execute a function encoded as `_data` parameter of the token transaction, identical to how Ether transactions encode function calls as transaction `data`. Read [the data field](https://ethereum.org/en/developers/docs/transactions/#the-data-field) for more information.
 
+In the above example a ERC-223 token must be transferred to the address of the `RecipientContract` with the `transfer(address,uin256,bytes calldata _data)` function. If the data parameter will be `0xc2985578` (the signature of a `foo()` function) then the function foo() will be invoked after the token deposit is received and the event Foo() will be fired.
 
+Parameters can be encoded in the `data` of the token transfer as well, for example we can call the bar() function with 12345 value for `_someNumber`. In this case the `data` must be `0x0423a13200000000000000000000000000000000000000000000000000000000000004d2` where `0x0423a132` is the signature of the `bar(uint256)` function and `00000000000000000000000000000000000000000000000000000000000004d2` is 12345 as uint256.
 
 ## Further reading {#further-reading}
 
