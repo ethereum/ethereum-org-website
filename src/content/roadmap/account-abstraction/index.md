@@ -10,9 +10,11 @@ summaryPoints:
 
 # Account abstraction {#account-abstraction}
 
-Users interact with Ethereum using **[externally owned accounts (EOAs)](/glossary/#eoa)**, and using an EOA is the only way to create a transaction or execute a smart contract. Account abstraction will allow smart contract wallets to create transactions, letting users flexibly program more security and better user experiences into their accounts.
+Users interact with Ethereum using **[externally owned accounts (EOAs)](/glossary/#eoa)**. This is the only way to start a transaction or execute a smart contract. This limits how users can interact with Ethereum. For example, it makes it difficult to do batches of transactions and requires users to always keep an ETH balance to cover gas.
 
-Account abstraction is an upgrade that makes smart contract wallets natively supported on Ethereum. Those smart contract wallets unlock many benefits for the user, including:
+Account abstraction is a way to solve these problems by allowing users to flexibly program more security and better user experiences into their accounts. This can happen by [upgrading EOAs](https://eips.ethereum.org/EIPS/eip-3074) so they be controlled by smart contracts, or by [upgrading smart contracts](https://eips.ethereum.org/EIPS/eip-2938) so they can initiate transactions. These options both require changes to the Ethereum protocol. There is also a third path involving adding a [second, separate transaction system](https://eips.ethereum.org/EIPS/eip-4337) to run in parallel to the existing protocol. Regardless of the route, the outcome is access to Ethereum via smart contract wallets, either natively supported as part of the existing protocol or via an add-on transaction network.
+
+Smart contract wallets unlock many benefits for the user, including:
 
 - define your own flexible security rules
 - recover your account if you lose the keys
