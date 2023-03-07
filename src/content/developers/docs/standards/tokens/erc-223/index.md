@@ -97,21 +97,11 @@ contract VeryBasicERC223Token {
         assembly { size := extcodesize(account) }
         return size > 0;
     }
-    function name() public view returns (string memory){
-        return _name;
-    }
-    function symbol() public view returns (string memory){
-        return _symbol;
-    }
-    function decimals() public view returns (uint8){
-        return _decimals;
-    }
-    function totalSupply() public view returns (uint256){
-        return _totalSupply;
-    }
-    function balanceOf(address _owner) public view returns (uint256){
-        return balances[_owner];
-    }
+    function name() public view returns (string memory) { return _name; }
+    function symbol() public view returns (string memory) {return _symbol; }
+    function decimals() public view returns (uint8) { return _decimals; }
+    function totalSupply() public view returns (uint256) { return _totalSupply; }
+    function balanceOf(address _owner) public view returns (uint256) { return balances[_owner]; }
     function transfer(address _to, uint _value, bytes calldata _data) public returns (bool success){
         balances[msg.sender] = balances[msg.sender] - _value;
         balances[_to] = balances[_to] + _value;
