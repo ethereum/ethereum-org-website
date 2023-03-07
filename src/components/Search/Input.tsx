@@ -1,8 +1,6 @@
 import React, { ChangeEvent, FormEvent } from "react"
 import { useIntl } from "react-intl"
 import { connectSearchBox } from "react-instantsearch-dom"
-
-import { translateMessageId } from "../../utils/translations"
 import {
   Box,
   Input as ChakraInput,
@@ -16,13 +14,15 @@ import {
 } from "@chakra-ui/react"
 import { MdSearch } from "react-icons/md"
 
+import { translateMessageId } from "../../utils/translations"
+
 const SearchSlash = (props: TextProps) => (
   <Text
     m={0}
     px="6px"
     border="1px solid"
     borderColor="searchBorder"
-    borderRadius="0.25em"
+    borderRadius="base"
     {...props}
   >
     /
@@ -71,11 +71,11 @@ const Input: React.FC<IInputProps> = ({
         />
         <ChakraInput
           ref={inputRef}
-          paddingStart={{ base: 2, lg: 9 }}
+          paddingStart={{ base: 2, lg: 8 }}
           bg="searchBackground"
           border="1px solid"
           borderColor="searchBorder"
-          borderRadius="0.25em"
+          borderRadius="base"
           type="text"
           placeholder={searchString}
           value={query}

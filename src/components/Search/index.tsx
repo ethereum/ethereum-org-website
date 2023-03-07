@@ -51,24 +51,6 @@ const StyledHighlight = (props: {
   />
 )
 
-const StyledSnippet = (props: {
-  attribute: string
-  hit: Hit<Record<string, any>>
-}) => (
-  <Box
-    as={Snippet}
-    tagName="mark"
-    display="block"
-    color="text"
-    fontSize="md"
-    padding={2}
-    _hover={{
-      bg: "markBackground",
-    }}
-    {...props}
-  />
-)
-
 const HitsWrapper = (props: GridProps) => {
   const [lightBorder, markUnderline] = useToken("color", [
     "lightBorder",
@@ -88,7 +70,7 @@ const HitsWrapper = (props: GridProps) => {
       right={0}
       top="calc(100% + 0.5em)"
       boxShadow="0 0 5px 0"
-      borderRadius="0.25em"
+      borderRadius="base"
       sx={{
         "& > * + *": {
           pt: "1em !important",
@@ -118,7 +100,7 @@ const HitsWrapper = (props: GridProps) => {
           color: "background",
           bg: "text300",
           p: "0.1em 0.4em",
-          borderRadius: "0.25em",
+          borderRadius: "base",
         },
         h3: {
           m: "0 0 0.5em",
@@ -157,7 +139,7 @@ const PageHit =
           {hit.hierarchy.lvl4 && (
             <StyledHighlight attribute="hierarchy.lvl4" hit={hit} />
           )}
-          {hit.content && <StyledSnippet attribute="content" hit={hit} />}
+          {hit.content && <StyledHighlight attribute="content" hit={hit} />}
         </GatsbyLink>
       </Box>
     )
@@ -277,7 +259,7 @@ const Search: React.FC<ISearchProps> = ({
   useKeyPress("/", focusSearch)
 
   return (
-    <Grid ref={containerRef} gap="1em" pos="relative">
+    <Grid ref={containerRef} gap={4} pos="relative">
       <InstantSearch
         searchClient={searchClient}
         indexName={indices[0].name}
