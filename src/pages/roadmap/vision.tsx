@@ -1,7 +1,18 @@
-import React from "react"
-import styled from "@emotion/styled"
+import React, { ComponentPropsWithRef } from "react"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
+import {
+  Box,
+  Divider,
+  Flex,
+  FlexProps,
+  Heading,
+  HeadingProps,
+  List,
+  ListItem,
+  Text,
+  useToken,
+} from "@chakra-ui/react"
 
 import Translation from "../../components/Translation"
 import Card from "../../components/Card"
@@ -16,66 +27,96 @@ import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
 import InfoBanner from "../../components/InfoBanner"
-import {
-  CardContainer,
-  Content,
-  Page,
-  Divider,
-} from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
 
 import { translateMessageId } from "../../utils/translations"
 import { getImage } from "../../utils/image"
 
-const ProblemCardContainer = styled(CardContainer)`
-  max-width: ${(props) => props.theme.breakpoints.l};
-  margin: 0 auto;
-`
+import type { ChildOnlyProp } from "../../types"
 
-const StyledCardContainer = styled(CardContainer)`
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-`
+const Page = (props: ChildOnlyProp) => (
+  <Flex direction="column" align="center" w="full" {...props} />
+)
 
-const H2 = styled.h2`
-  margin-top: 0;
-`
+const PageDivider = () => (
+  <Divider
+    my={16}
+    w="10%"
+    borderBottomWidth="0.25rem"
+    borderColor="homeDivider"
+  />
+)
 
-const CenterH2 = styled(H2)`
-  text-align: center;
-  margin-bottom: 2rem;
-`
+const PageContent = (props: ChildOnlyProp) => (
+  <Box py={4} px={8} w="full" {...props} />
+)
 
-const CentreCard = styled(Card)`
-  flex: 1 1 30%;
-  min-width: 240px;
-  margin: 1rem;
-  padding: 1.5rem;
-  border: 0px;
-  text-align: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex: 1 1 30%;
-  }
-`
+const H2 = (props: HeadingProps) => (
+  <Heading
+    as="h2"
+    mt={0}
+    mb={8}
+    fontSize={{ base: "2xl", md: "2rem" }}
+    fontWeight="semibold"
+    lineHeight={1.4}
+    {...props}
+  />
+)
 
-const CentralContent = styled.div`
-  margin: 0rem 12rem;
-  justify-content: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 0rem 0rem;
-  }
-`
+const CenterH2 = (props: HeadingProps) => <H2 textAlign="center" {...props} />
 
-const TrilemmaContent = styled.div`
-  width: 100%;
-  margin: 2rem 0;
-  background: ${(props) => props.theme.colors.cardGradient};
-  padding: 2rem;
-`
+const H3 = (props: HeadingProps) => (
+  <Heading
+    as="h3"
+    fontSize={{ base: "xl", md: "2xl" }}
+    fontWeight="semibold"
+    lineHeight={1.4}
+    {...props}
+  />
+)
 
-const StyledBreadcrumbs = styled(Breadcrumbs)`
-  justify-content: center;
-`
+const H6 = (props: HeadingProps) => (
+  <Heading
+    as="h6"
+    fontSize="0.9rem"
+    fontWeight="normal"
+    lineHeight={1.4}
+    {...props}
+  />
+)
+
+const CardContainer = (props: FlexProps) => (
+  <Flex wrap="wrap" mx={-4} {...props} />
+)
+
+const ProblemCardContainer = (props: ChildOnlyProp) => {
+  const containerMaxWidth = useToken("breakpoints", ["lg"])
+
+  return <CardContainer maxW={containerMaxWidth} m="0 auto" {...props} />
+}
+const StyledCardContainer = (props: ChildOnlyProp) => (
+  <CardContainer mt={8} mb={12} {...props} />
+)
+
+const CentreCard = (props: ComponentPropsWithRef<typeof Card>) => (
+  <Card
+    flex="1 1 30%"
+    minW="240px"
+    m={4}
+    p={6}
+    border={0}
+    textAlign="center"
+    {...props}
+  />
+)
+
+const CentralContent = (props: ChildOnlyProp) => (
+  <Box my={0} mx={{ base: 0, lg: 48 }} {...props} />
+)
+
+const TrilemmaContent = (props: ChildOnlyProp) => (
+  <Box w="full" my={8} mx={0} p={8} background="cardGradient" {...props} />
+)
 
 const paths = [
   {
@@ -136,59 +177,59 @@ const VisionPage = ({
         description={translateMessageId("page-upgrades-vision-meta-desc", intl)}
       />
       <PageHero content={heroContent} />
-      <Divider />
-      <Content>
-        <StyledBreadcrumbs slug={location.pathname} startDepth={1} />
+      <PageDivider />
+      <PageContent>
+        <Breadcrumbs slug={location.pathname} startDepth={1} />
         <CentralContent>
           <CenterH2>
             <Translation id="page-upgrades-vision-upgrade-needs" />
           </CenterH2>
-          <p>
+          <Text>
             <Translation id="page-upgrades-vision-upgrade-needs-desc" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-upgrade-needs-desc-2" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-upgrade-needs-desc-3" />{" "}
-          </p>
-          <ul>
-            <li>
+          </Text>
+          <List listStyleType="disc">
+            <ListItem>
               <Link to="https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum">
                 <Translation id="page-upgrades-vision-2022" />
               </Link>
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               <Link to="https://trent.mirror.xyz/82eyq_NXZzzqFmCNXiKJgSdayf6omCW7BgDQIneyPoA">
                 <Translation id="page-upgrades-vision-2021-updates" />
               </Link>
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               <Link to="https://tim.mirror.xyz/CHQtTJb1NDxCK41JpULL-zAJe7YOtw-m4UDw6KDju6c">
                 <Translation id="page-upgrades-vision-2021" />
               </Link>
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               <Link to="https://blog.ethereum.org/2015/03/03/ethereum-launch-process/">
                 <Translation id="page-upgrades-vision-upgrade-needs-serenity" />
               </Link>
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               <Link to="https://blog.ethereum.org/2014/01/15/slasher-a-punitive-proof-of-stake-algorithm/">
                 <Translation id="page-upgrades-vision-2014" />
               </Link>
-            </li>
-          </ul>
-          <p>
+            </ListItem>
+          </List>
+          <Text>
             <Translation id="page-upgrades-vision-upgrade-needs-desc-5" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-upgrade-needs-desc-6" />
-          </p>
+          </Text>
         </CentralContent>
-      </Content>
-      <Divider />
-      <Content>
+      </PageContent>
+      <PageDivider />
+      <PageContent>
         <CenterH2>
           <Translation id="page-upgrades-vision-problems" />
         </CenterH2>
@@ -202,100 +243,100 @@ const VisionPage = ({
             />
           ))}
         </ProblemCardContainer>
-      </Content>
+      </PageContent>
       <TrilemmaContent>
         <Trilemma />
       </TrilemmaContent>
-      <Divider />
-      <Content>
+      <PageDivider />
+      <PageContent>
         <CentralContent>
           <CenterH2>
             <Translation id="page-upgrades-vision-understanding" />
           </CenterH2>
-          <h3>
+          <H3>
             <Translation id="page-upgrades-vision-scalability" />{" "}
             <Emoji text=":rocket:" />
-          </h3>
-          <p>
+          </H3>
+          <Text>
             <Translation id="page-upgrades-vision-scalability-desc" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-scalability-desc-3" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-scalability-desc-4" />{" "}
             <Link to="/upgrades/sharding/">
               <Translation id="page-upgrades-vision-shard-upgrade" />
             </Link>{" "}
-          </p>
-          <h3>
+          </Text>
+          <H3>
             <Translation id="page-upgrades-vision-security" />{" "}
             <Emoji text=":shield:" />
-          </h3>
-          <p>
+          </H3>
+          <Text>
             <Translation id="page-upgrades-vision-security-desc" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-security-desc-3" />{" "}
             <Link to="/developers/docs/consensus-mechanisms/pos/">
               <Translation id="page-upgrades-proof-stake-link" />
             </Link>{" "}
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-security-desc-5" />{" "}
             <Link to="/developers/docs/consensus-mechanisms/pow/">
               <Translation id="page-upgrades-vision-security-desc-5-link" />
             </Link>
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-security-desc-8" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-security-desc-10" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-security-validator" />{" "}
             <Link to="/run-a-node/">
               <Translation id="page-upgrades-vision-ethereum-node" />
             </Link>
-          </p>
+          </Text>
           <ButtonLink to="/staking/">
             <Translation id="page-upgrades-vision-security-staking" />
           </ButtonLink>
-          <h3>
+          <H3>
             <Translation id="page-upgrades-vision-sustainability" />{" "}
             <Emoji text=":evergreen_tree:" />
-          </h3>
-          <p>
+          </H3>
+          <Text>
             <Translation id="page-upgrades-vision-sustainability-subtitle" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-sustainability-desc-1" />{" "}
             <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
               <Translation id="page-upgrades-vision-mining" />
             </Link>
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-sustainability-desc-2" />{" "}
             <Link to="/staking/">
               <Translation id="page-upgrades-vision-staking-lower" />
             </Link>
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-upgrades-vision-sustainability-desc-3" />
-          </p>
+          </Text>
           <InfoBanner>
-            <p>
+            <Text>
               <Translation id="page-upgrades-vision-sustainability-desc-8" />
-            </p>
+            </Text>
             <ButtonLink to="/upgrades/merge/">
               <Translation id="page-upgrades-merge-btn" />
             </ButtonLink>
           </InfoBanner>
         </CentralContent>
-      </Content>
-      <Divider />
-      <Content>
+      </PageContent>
+      <PageDivider />
+      <PageContent>
         <H2>
           <Translation id="page-upgrades-vision-explore-upgrades" />
         </H2>
@@ -309,11 +350,11 @@ const VisionPage = ({
               description={upgrade.description}
               to={upgrade.to}
             >
-              <h6>{upgrade.date}</h6>
+              <H6>{upgrade.date}</H6>
             </ActionCard>
           ))}
         </StyledCardContainer>
-      </Content>
+      </PageContent>
       <FeedbackCard />
     </Page>
   )
