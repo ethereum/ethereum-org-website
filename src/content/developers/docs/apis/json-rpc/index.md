@@ -60,8 +60,7 @@ Here are some examples:
 
 ### The default block parameter {#default-block}
 
-The following methods have an extra 
-parameter:
+The following methods have an extra default block parameter:
 
 - [eth_getBalance](#eth_getbalance)
 - [eth_getCode](#eth_getcode)
