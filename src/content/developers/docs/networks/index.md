@@ -58,7 +58,7 @@ The Sepolia network uses a permissioned validator set. It's fairly new, meaning 
 - [PoW faucet](https://sepolia-faucet.pk910.de/)
 - [Sepolia faucet](https://faucet.sepolia.dev/)
 - [FaucETH](https://fauceth.komputing.org)
-- [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
+- [Coinbase Wallet Faucet](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 
 #### Goerli _(long-term support)_ {#goerli}
 
