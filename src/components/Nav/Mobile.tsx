@@ -288,7 +288,7 @@ const MobileNavMenu: React.FC<IProps> = ({
         icon={
           <GlyphButton 
           viewBox="0 0 24 40"
-          pointerEvents={isSearchOpen||isSearchOpen&&isMenuOpen ? "none" : "auto"}
+          pointerEvents={ isSearchOpen && isMenuOpen ? "none" : "auto"}
           pointsAtZ={isSearchOpen ?"0":100}
            >
             <motion.path
