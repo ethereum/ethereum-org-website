@@ -82,51 +82,22 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 
 Building your application on top of a Layer 2 scalability solution can help [address many of the concerns that have previously driven companies to build on private blockchains](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/), yet retain the benefits of building on Mainnet.
 
-Layer 2 projects include:
-
-- Optimistic rollups (data on chain, fraud proofs)
-  - [Optimism](https://optimism.io/)
-  - [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/)
-  - [Fuel Network](https://fuel.sh)
-  - [Boba Network](https://boba.network/)
-- ZK-rollups (data on chain, ZK validity proofs)
-  - [Loopring](https://loopring.org)
-  - [Starkware](https://starkware.co)
-  - [Matter Labs zkSync](https://matter-labs.io/)
-  - [Aztec 2.0](https://aztec.network/)
-- Validium (data off chain, ZK validity proofs)
-  - [Starkware](https://starkware.co)
-  - [Matter Labs zkPorter](https://matter-labs.io/)
-- State channels
-  - [Connext](https://connext.network/)
-  - [Kchannels](https://www.kchannels.io/)
-  - [Perun](https://perun.network)
-  - [Raiden](https://raiden.network/)
-- Sidechains
-  - [Polygon POS](https://polygon.technology/)
-  - [Skale](https://skale.network)
-  - [POA Network](https://www.poa.network/)
-- Hybrid solutions that combine properties of multiple categories
-  - [Celer](https://celer.network)
-
 ## Enterprise applications live on Mainnet {#enterprise-live-on-mainnet}
 
-Here are some of the enterprise applications that have been deployed to the public Ethereum Mainnet
+Here are some of the enterprise applications that have been built on top of the public Ethereum Mainnet
 
 ### Payments {#payments}
 
 - [Brave Browser](https://basicattentiontoken.org/) _pays users for their attention to advertisements and users can pay publishers to support them, via the Basic Attention Token_
 - [hCaptcha](https://www.hcaptcha.com/) _Bot prevention CAPTCHA system which pays web site operators for the work done by users to label data for machine learning. Now deployed by Cloudflare_
-- [Audius](https://audius.co/) _a streaming service that connects music fans directly with artists, and allows artists to be paid in full by their fans, directly and instantly for every stream_
 - [EthereumAds](https://ethereumads.com/) _lets web site operators sell advertising space and get paid via Ethereum_
 
 ### Finance {#finance}
 
 - [Santander Bank](https://www.coindesk.com/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _bond issuance and settlement_
-- [Societe Generale](https://www.societegenerale.com/en/news/newsroom/societe-generale-performs-first-financial-transaction-settled-central-bank-digital) _bond issuance_
+- [Societe Generale](https://www.generali-investments.com/it/en/institutional/article/generali-investments-and-generali-iard-carry-out-first-market-transaction-based-on-blockchain-infrastructure) _bond issuance_
 - [Cadence](https://www.forbes.com/sites/benjaminpirus/2019/10/09/fatburger-and-others-feed-30-million-into-ethereum-for-new-bond-offering/#513870be115b) _bond offering and tokenization for FAT Brands_
-- [Sila](https://silamoney.com/) _banking and ACH payments infrastructure-as-a-service_
-- [Kratos](https://triterras.com/kratos) _commodity trading and trade finance platform that connects and enables commodity traders to trade and source capital from lenders directly online_
+- [Sila](https://silamoney.com/) _banking and ACH payments infrastructure-as-a-service, using a stablecoin_
 - [Taurus](https://www.taurushq.com/) _issues tokenized securities_
 
 ### Asset tokenization {#tokenization}
@@ -150,7 +121,6 @@ Here are some of the enterprise applications that have been deployed to the publ
 - [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _bill of lading and document transfer provider_
 - [Morpheus.network](https://morpheus.network/) _supply chain automation platform which implements a hybrid of private chains with notarized data on the Ethereum Mainnet, and is in use by companies such as Canadian food, oil & gas distributor Federated Co-op Ltd. and Argentinian pet food provider Vitalcan_
 - [Minespider](https://www.minespider.com/) _supply chain tracking_
-- [Follow Our Fibre](https://www.followourfibre.com) _viscose supply chain traceability_
 - [EY OpsChain Contract Manager](https://blockchain.ey.com/products/contract-manager) _enables companies to engage in a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across your network of trusted business partners_
 - [Treum](https://treum.io/) _brings transparency, traceability, and tradability to supply chains, using blockchain technology_
 - [TradeTrust](https://www.tradetrust.io/) _verifies electronic Bills of Lading (eBLs) for international shipping_
@@ -165,11 +135,9 @@ Here are some of the enterprise applications that have been deployed to the publ
 
 - [Two Italian high schools](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _digital diplomas issued on Ethereum Mainnet_
 - [University of St. Gallen](https://cointelegraph.com/news/swiss-university-fights-fake-diplomas-with-blockchain-technology) _pilot project to verify degrees by a Swiss university_
-- [Malta](https://cointelegraph.com/news/malta-to-store-education-certificates-on-a-blockchain) _all educational certificates recorded on Mainnet by [Hyland](https://www.learningmachine.com/)_
-- [Pohang University of Science and Technology](https://www.theblockcrypto.com/linked/55176/south-korean-university-issues-blockchain-stored-diplomas-amid-the-spread-of-the-coronavirus) _South Korean university issues blockchain-stored diplomas to its new graduates_
-- [OpenCerts](https://opencerts.io/) _issues blockchain education credentials in Singapore_
+- [Hyland Credentials](https://www.hylandcredentials.com) _digital diplomas and other education credentials, licenses, and certificates_
+- [OpenCerts](https://opencerts.io/faq) _issues blockchain education credentials in Singapore_
 - [BlockCerts](https://www.blockcerts.org/) _developed an open standard for blockchain credentials_
-- [SkillTree](http://skilltree.org/) _online skill training and certifications which can be configured with expiration triggers or dependencies on other skills_
 
 ### Utilities {#utilities}
 

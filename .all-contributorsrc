@@ -10082,6 +10082,78 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "MateusTP",
+      "name": "Mateus Pimenta",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59940545?v=4",
+      "profile": "https://github.com/MateusTP",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "ezal",
+      "name": "ezal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6931328?v=4",
+      "profile": "https://github.com/ezal",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "jarrodwatts",
+      "name": "Jarrod Watts",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35651410?v=4",
+      "profile": "https://jarrodwatts.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "mlCode111",
+      "name": "Miao",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34754144?v=4",
+      "profile": "https://github.com/mlCode111",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "ljiatu",
+      "name": "Jiatu Liu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3280973?v=4",
+      "profile": "https://github.com/ljiatu",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "DeUETH",
+      "name": "DeUETH",
+      "avatar_url": "https://avatars.githubusercontent.com/u/107472460?v=4",
+      "profile": "https://github.com/DeUETH",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "erin-at-work",
+      "name": "erin-at-work",
+      "avatar_url": "https://avatars.githubusercontent.com/u/50590950?v=4",
+      "profile": "http://www.erinleelikes.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "AmazingAng",
+      "name": "0xAA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14728591?v=4",
+      "profile": "https://github.com/AmazingAng",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

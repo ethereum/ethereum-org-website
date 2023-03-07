@@ -4,7 +4,6 @@
   "consensus-client-nimbus-logo-alt": "Nimbus logosu",
   "consensus-client-prysm-logo-alt": "Prysm logosu",
   "consensus-client-teku-logo-alt": "Teku logosu",
-  "consensus-client-under-review": "İnceleme ve denetim devam ediyor",
   "page-upgrades-answer-1": "Yayınlanan değişiklikleri, bugün kullandığımız Ethereum'u iyileştirmek için eklenen bir dizi yükseltme olarak düşünebilirsiniz. Bu yükseltmeler, İşaret Zinciri (Beacon Chain) adı verilen yeni bir zincirin oluşturulmasını içeriyor ve gelecekte \"parça\" (shard) adlı yeni zincirleri kullanıma sokacaklar.",
   "page-upgrades-answer-2": "Bazı yükseltmeler, bugün kullandığımız Ethereum Mainnet'ten ayrıdır ancak onun yerini almayacaklar. Bunun yerine Mainnet, zamanla eklenen bu paralel sistemle \"birleşecek\".",
   "page-upgrades-answer-4": "Başka bir deyişle, bugün kullandığımız Ethereum, nihayetinde Ethereum vizyonunda hedeflediğimiz tüm özellikleri bünyesinde barındıracaktır.",

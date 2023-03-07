@@ -69,7 +69,7 @@ Leggi di più su [come Ethereum implementa il proof-of-stake](/developers/docs/c
 
 ## Argomenti correlati {#related-topics}
 
-- [Visione di Ethereum](/upgrades/vision/)
+- [Visione di Ethereum](/roadmap/vision/)
 - [La Beacon Chain](/upgrades/beacon-chain)
 - [La Fusione](/upgrades/merge/)
 - [Frammentazione](/upgrades/beacon-chain/)

@@ -108,7 +108,7 @@ Spajanje predstavlja kraj ere dokaza rada u Ethereumu i početak održivijeg, ek
 
 ## Spajanje i skaliranje {#merge-and-scaling}
 
-Spajanje je postavilo temelje za nove nadogradnje skalabilnosti koje nisu bile moguće u konceptu dokaza rada. Tako se Ethereum približio potpunoj sigurnosti i održivosti koja je opisana u [Viziji Ethereuma](/upgrades/vision/).
+Spajanje je postavilo temelje za nove nadogradnje skalabilnosti koje nisu bile moguće u konceptu dokaza rada. Tako se Ethereum približio potpunoj sigurnosti i održivosti koja je opisana u [Viziji Ethereuma](/roadmap/vision/).
 
 ## Zablude o spajanju {#misconceptions}
 

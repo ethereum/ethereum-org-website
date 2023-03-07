@@ -1,9 +1,16 @@
 import React, { ReactNode } from "react"
 import { useTheme } from "@emotion/react"
-import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useIntl } from "react-intl"
+import {
+  Box,
+  Center,
+  Heading,
+  ListItem,
+  Text,
+  UnorderedList,
+} from "@chakra-ui/react"
 
 import { translateMessageId } from "../utils/translations"
 import Translation from "../components/Translation"
@@ -11,225 +18,268 @@ import Card from "../components/Card"
 import Leaderboard from "../components/Leaderboard"
 import BugBountyCards from "../components/BugBountyCards"
 import Link from "../components/Link"
-import Emoji from "../components/OldEmoji"
+import Emoji from "../components/Emoji"
 import CardList from "../components/CardList"
 import Breadcrumbs from "../components/Breadcrumbs"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import ExpandableCard from "../components/ExpandableCard"
-import {
-  CardContainer,
-  Content,
-  Divider,
-  Page,
-  GrayContainer,
-  GradientContainer,
-  SloganGradient,
-} from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
-import { Context } from "../types"
 import { getImage } from "../utils/image"
 
-const HeroCard = styled.div`
-  display: flex;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    padding-left: 0;
-    padding-right: 0;
-    margin-top: -2rem;
-  }
-`
+import type { ChildOnlyProp, Context } from "../types"
 
-const HeroContainer = styled.div`
-  flex: 1 1 50%;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 6rem;
-    padding-bottom: 4rem;
-    padding-left: 0;
-    padding-right: 0;
-  }
-`
+const Page = (props: ChildOnlyProp) => (
+  <Box
+    display="flex"
+    flexDirection="column"
+    alignItems="center"
+    w="full"
+    my={0}
+    mx="auto"
+    {...props}
+  />
+)
 
-const LeaderboardContainer = styled.div`
-  flex: 1 1 50%;
-  padding-left: 0rem;
-  padding-right: 2rem;
-  padding-top: 6rem;
-  padding-bottom: 8rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding: 0;
-  }
-`
+const Content = (props: ChildOnlyProp) => (
+  <Box py={4} px={8} w="full" {...props} />
+)
 
-const Title = styled.p`
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  color: ${(props) => props.theme.colors.text};
-  margin-bottom: 0rem;
-  margin-left: 0.5rem;
-`
+const Title = (props: ChildOnlyProp) => (
+  <Text
+    textTransform="uppercase"
+    fontSize="0.875rem"
+    color="text"
+    mb={0}
+    ml={2}
+    {...props}
+  />
+)
 
-const Subtitle = styled.div`
-  font-size: 1.5rem;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-  max-width: 480px;
-  margin-top: 1rem;
-`
+const H2 = (props: ChildOnlyProp) => (
+  <Heading
+    as="h2"
+    fontSize="1.5rem"
+    fontStyle="normal"
+    fontWeight="700"
+    lineHeight="22px"
+    letterSpacing="0rem"
+    textAlign="left"
+    {...props}
+  />
+)
 
-const Row = styled.div`
-  display: flex;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-wrap: wrap;
-  }
-`
+const Subtitle = (props: ChildOnlyProp) => (
+  <Box
+    fontSize="1.5rem"
+    lineHeight="140%"
+    color="text200"
+    maxW="480px"
+    mt={4}
+    {...props}
+  />
+)
 
-const ClientRow = styled.div`
-  display: flex;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
+const SloganGradient = (props: ChildOnlyProp) => (
+  <Box
+    fontWeight="800"
+    fontSize={{ base: "2.5rem", lg: "3rem" }}
+    lineHeight="140%"
+    maxW="720px"
+    mt={4}
+    mb={0}
+    bgClip="text"
+    sx={{ WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}
+    bg="upgradesGradient"
+  >
+    <Text>{props.children}</Text>
+  </Box>
+)
 
-const ButtonRow = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-`
+const Rules = (props: ChildOnlyProp) => (
+  <Box
+    my={0}
+    mx="auto"
+    maxW="3xl"
+    display="flex"
+    flexDirection="column"
+    alignItems="center"
+    {...props}
+  />
+)
 
-const StyledButton = styled(ButtonLink)`
-  margin-right: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 1rem;
-  }
-`
+const SubmitInstructions = (props: ChildOnlyProp) => (
+  <Box flex="1 1 600px" mr={8} maxW="100ch" {...props} />
+)
 
-const StyledCardContainer = styled(CardContainer)`
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-`
+const GradientContainer = (props: ChildOnlyProp) => (
+  <Box
+    w="full"
+    py={16}
+    px={0}
+    mt={8}
+    bg="cardGradient"
+    boxShadow="inset 0px 1px 0px tableItemBoxShadow"
+    {...props}
+  />
+)
 
-const H2 = styled.h2`
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0px;
-  text-align: left;
-`
+const LeaderboardContainer = (props: ChildOnlyProp) => (
+  <Box
+    flex="1 1 50%"
+    display="flex"
+    flexDirection="column"
+    alignItems="center"
+    p={{ lg: "6rem 2rem 8rem 0rem", base: "0" }}
+    {...props}
+  />
+)
 
-const CenterH2 = styled(H2)`
-  text-align: center;
-`
+const FullLeaderboardContainer = (props: ChildOnlyProp) => (
+  <Box
+    my={8}
+    mx="auto"
+    py={0}
+    px={8}
+    maxW="3xl"
+    display="flex"
+    flexDirection="column"
+    alignItems="center"
+    {...props}
+  />
+)
 
-const StyledCard = styled(Card)`
-  flex: 1 1 464px;
-  margin: 1rem;
-  padding: 1.5rem;
-  justify-content: flex-start;
-`
+const On = () => <Box w="8px" h="8px" bg="success400" borderRadius="64px" />
 
-const On = styled.div`
-  width: 8px;
-  height: 8px;
-  background: ${(props) => props.theme.colors.success400};
-  border-radius: 64px;
-`
+const Divider = () => (
+  <Box my={16} mx={0} w="10%" h={1} backgroundColor="homeDivider" />
+)
 
-const StyledGrayContainer = styled(GrayContainer)`
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
-`
+const Contact = (props: ChildOnlyProp) => (
+  <Box
+    borderRadius="2px"
+    border="1px"
+    borderStyle="solid"
+    borderColor="border"
+    display="flex"
+    justifyContent="space-between"
+    alignItems="center"
+    p={6}
+    my={12}
+    mx={32}
+    w="80%"
+    {...props}
+  />
+)
 
-const FullLeaderboardContainer = styled.div`
-  margin: 2rem auto;
-  padding: 0 2rem;
-  max-width: ${(props) => props.theme.breakpoints.m};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
+const ButtonRow = (props: ChildOnlyProp) => (
+  <Box display="flex" alignItems="center" mt={4} flexWrap="wrap" {...props} />
+)
 
-const Client = styled(GatsbyImage)`
-  margin: 4rem;
-  margin-top: 1rem;
-  margin-bottom: 3rem;
-`
+const StyledButton = ({ children, ...props }) => {
+  return (
+    <ButtonLink mr={4} mb={0} {...props}>
+      {children}
+    </ButtonLink>
+  )
+}
 
-const ClientIntro = styled.p`
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  color: ${(props) => props.theme.colors.text300};
-  font-weight: 600;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 3rem;
-  }
-`
+const ClientIntro = (props: ChildOnlyProp) => (
+  <Text
+    textTransform="uppercase"
+    fontSize="0.875rem"
+    color="text300"
+    fontWeight="600"
+    mt={{ base: "3rem", lg: "0" }}
+    {...props}
+  />
+)
 
-const Rules = styled.div`
-  margin: 0 auto;
-  max-width: ${(props) => props.theme.breakpoints.m};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
+const ClientRow = (props: ChildOnlyProp) => (
+  <Box
+    display="flex"
+    alignItems="center"
+    flexDirection={{ base: "column", lg: "row" }}
+    {...props}
+  />
+)
 
-const SubmitInstructions = styled.div`
-  flex: 1 1 600px;
-  margin-right: 2rem;
-  max-width: 100ch;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-right: 0;
-  }
-`
+const Client = (props: ChildOnlyProp) => (
+  <Box m={16} mt={4} mb={12} {...props} />
+)
 
-const TextNoMargin = styled.p`
-  margin-bottom: 0rem;
-`
-const Contact = styled.div`
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  padding: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 3rem 8rem;
-  width: 80%;
-`
+const HeroCard = (props: ChildOnlyProp) => (
+  <Box
+    display="flex"
+    justifyContent="space-between"
+    flexDirection={{ base: "column", lg: "row" }}
+    pl={{ lg: "0" }}
+    mt={{ base: "-2rem", lg: "0" }}
+    {...props}
+  />
+)
 
-const LeftColumn = styled.div`
-  width: 100%;
-`
+const HeroContainer = (props: ChildOnlyProp) => (
+  <Box
+    flex="1 1 50%"
+    p={{ lg: "8rem 2rem 8rem 2rem", base: "6rem 0 4rem 0" }}
+    {...props}
+  />
+)
 
-const RightColumn = styled.div`
-  width: 100%;
-  margin-left: 2rem;
-  flex-direction: column;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-left: 0rem;
-    flex-direction: column;
-  }
-`
+const Row = (props: ChildOnlyProp) => (
+  <Box
+    display="flex"
+    alignItems="center"
+    flexWrap={{ base: "nowrap", lg: "wrap" }}
+    {...props}
+  />
+)
 
-const Faq = styled.div`
-  display: flex;
-  margin-top: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`
+const StyledCardContainer = (props: ChildOnlyProp) => (
+  <Box display="flex" flexWrap="wrap" m="2rem -1rem 3rem -1rem" {...props} />
+)
+
+const StyledCard = ({ children, ...props }) => {
+  return (
+    <Card flex="1 1 464px" m={4} p={6} justifyContent="flex-start" {...props}>
+      {children}
+    </Card>
+  )
+}
+
+const StyledGrayContainer = ({ children, ...props }) => (
+  <Box
+    w="full"
+    py={16}
+    px={0}
+    mt={8}
+    mb={12}
+    bg="grayBackground"
+    boxShadow="inset 0px 1px 0px tableItemBoxShadow"
+    {...props}
+  >
+    {children}
+  </Box>
+)
+
+const Faq = (props: ChildOnlyProp) => (
+  <Box
+    display="flex"
+    mt={16}
+    flexDirection={{ base: "column", lg: "row" }}
+    {...props}
+  />
+)
+const LeftColumn = (props: ChildOnlyProp) => <Box w="full" {...props} />
+const RightColumn = (props: ChildOnlyProp) => (
+  <Box
+    w="full"
+    ml={{ base: "0rem", lg: "2rem" }}
+    flexDirection={{ base: "column", lg: "column" }}
+    {...props}
+  />
+)
 
 type BountyHuntersArg = {
   score?: number | null
@@ -410,7 +460,7 @@ const BugBountiesPage = ({
             </Row>
             <SloganGradient>
               <Translation id="page-upgrades-bug-bounty-slogan" />{" "}
-              <Emoji size={1} text=":bug:" />
+              <Emoji text=":bug:" />
             </SloganGradient>
             <Subtitle>
               <Translation id="page-upgrades-bug-bounty-subtitle" />
@@ -436,26 +486,44 @@ const BugBountiesPage = ({
         <Translation id="page-upgrades-bug-bounty-clients" />
       </ClientIntro>
       <ClientRow>
-        <Client image={getImage(data.besu)!} alt="" />
-        <Client image={getImage(data.erigon)!} alt="" />
-        <Client image={getImage(data.geth)!} alt="" />
-        <Client image={getImage(data.nethermind)!} alt="" />
+        <Client>
+          <GatsbyImage image={getImage(data.besu)!} alt=""></GatsbyImage>
+        </Client>
+        <Client>
+          <GatsbyImage image={getImage(data.erigon)!} alt=""></GatsbyImage>
+        </Client>
+        <Client>
+          <GatsbyImage image={getImage(data.geth)!} alt=""></GatsbyImage>
+        </Client>
+        <Client>
+          <GatsbyImage image={getImage(data.nethermind)!} alt=""></GatsbyImage>
+        </Client>
       </ClientRow>
       <ClientRow>
-        <Client image={lighthouseImage!} alt="" />
-        <Client image={getImage(data.lodestar)!} alt="" />
-        <Client image={getImage(data.nimbus)!} alt="" />
-        <Client image={getImage(data.prysm)!} alt="" />
-        <Client image={tekuImage!} alt="" />
+        <Client>
+          <GatsbyImage image={lighthouseImage!} alt=""></GatsbyImage>
+        </Client>
+        <Client>
+          <GatsbyImage image={getImage(data.lodestar)!} alt=""></GatsbyImage>
+        </Client>
+        <Client>
+          <GatsbyImage image={getImage(data.nimbus)!} alt=""></GatsbyImage>
+        </Client>
+        <Client>
+          <GatsbyImage image={getImage(data.prysm)!} alt=""></GatsbyImage>
+        </Client>
+        <Client>
+          <GatsbyImage image={tekuImage!} alt=""></GatsbyImage>
+        </Client>
       </ClientRow>
       <StyledGrayContainer id="rules">
         <Content>
           <H2>
             <Translation id="page-upgrades-bug-bounty-validity" />
           </H2>
-          <p>
+          <Text>
             <Translation id="page-upgrades-bug-bounty-validity-desc" />
-          </p>
+          </Text>
           <StyledCardContainer>
             <StyledCard
               emoji=":ledger:"
@@ -476,50 +544,60 @@ const BugBountiesPage = ({
                 <Translation id="page-upgrades-bug-bounty-execution-specs" />
               </Link>
               <br />
-              <div>
-                <p>
+              <Box>
+                <Text>
                   <Translation id="page-upgrades-bug-bounty-annotations" />
-                </p>
-                <ul>
-                  <li>
+                </Text>
+                <UnorderedList>
+                  <ListItem>
                     <Link to="https://benjaminion.xyz/eth2-annotated-spec/">
                       Ben Edgington's{" "}
                       <Translation id="page-upgrades-bug-bounty-annotated-specs" />
                     </Link>
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <Link to="https://github.com/ethereum/annotated-spec">
                       Vitalik Buterin's{" "}
                       <Translation id="page-upgrades-bug-bounty-annotated-specs" />
                     </Link>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4>
+                  </ListItem>
+                </UnorderedList>
+              </Box>
+              <Box>
+                <Heading
+                  as="h4"
+                  fontWeight={500}
+                  lineHeight={1.4}
+                  fontSize={{ base: "md", md: "xl" }}
+                >
                   <Translation id="page-upgrades-bug-bounty-types" />
-                </h4>
-                <ul>
-                  <li>
+                </Heading>
+                <UnorderedList>
+                  <ListItem>
                     <Translation id="page-upgrades-bug-bounty-type-1" />
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <Translation id="page-upgrades-bug-bounty-type-2" />
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <Translation id="page-upgrades-bug-bounty-type-3" />
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <Translation id="page-upgrades-bug-bounty-type-4" />
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4>
+                  </ListItem>
+                </UnorderedList>
+              </Box>
+              <Box>
+                <Heading
+                  as="h4"
+                  fontWeight={500}
+                  lineHeight={1.4}
+                  fontSize={{ base: "md", md: "xl" }}
+                >
                   <Translation id="page-upgrades-bug-bounty-specs-docs" />
-                </h4>
+                </Heading>
                 <CardList content={specs} />
-              </div>
+              </Box>
             </StyledCard>
             <StyledCard
               emoji=":computer:"
@@ -532,32 +610,42 @@ const BugBountiesPage = ({
                 intl
               )}
             >
-              <div>
-                <p>
+              <Box>
+                <Text>
                   <Translation id="page-upgrades-bug-bounty-client-bugs-desc-2" />
-                </p>
-                <h4>
+                </Text>
+                <Heading
+                  as="h4"
+                  fontWeight={500}
+                  lineHeight={1.4}
+                  fontSize={{ base: "md", md: "xl" }}
+                >
                   <Translation id="page-upgrades-bug-bounty-types" />
-                </h4>
-                <ul>
-                  <li>
+                </Heading>
+                <UnorderedList>
+                  <ListItem>
                     <Translation id="page-upgrades-bug-bounty-clients-type-1" />
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     <Translation id="page-upgrades-bug-bounty-clients-type-2" />
-                  </li>
-                  <li>
+                  </ListItem>
+                  <ListItem>
                     {" "}
                     <Translation id="page-upgrades-bug-bounty-clients-type-3" />
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4>
+                  </ListItem>
+                </UnorderedList>
+              </Box>
+              <Box>
+                <Heading
+                  as="h4"
+                  fontWeight={500}
+                  lineHeight={1.4}
+                  fontSize={{ base: "md", md: "xl" }}
+                >
                   <Translation id="page-upgrades-bug-bounty-help-links" />
-                </h4>
+                </Heading>
                 <CardList content={clients} />
-              </div>
+              </Box>
             </StyledCard>
             <StyledCard
               emoji=":book:"
@@ -570,19 +658,24 @@ const BugBountiesPage = ({
                 intl
               )}
             >
-              <div>
-                <p>
+              <Box>
+                <Text>
                   <Translation id="page-upgrades-bug-bounty-misc-bugs-desc-2" />
-                </p>
-              </div>
-              <div>
-                <h4>
+                </Text>
+              </Box>
+              <Box>
+                <Heading
+                  as="h4"
+                  fontWeight={500}
+                  lineHeight={1.4}
+                  fontSize={{ base: "md", md: "xl" }}
+                >
                   <Translation id="page-upgrades-bug-bounty-help-links" />
-                </h4>
+                </Heading>
                 <Link to="https://github.com/ethereum/solidity/blob/develop/SECURITY.md">
                   SECURITY.md
                 </Link>
-              </div>
+              </Box>
             </StyledCard>
             <StyledCard
               emoji=":scroll:"
@@ -595,10 +688,15 @@ const BugBountiesPage = ({
                 intl
               )}
             >
-              <div>
-                <h4>
+              <Box>
+                <Heading
+                  as="h4"
+                  fontWeight={500}
+                  lineHeight={1.4}
+                  fontSize={{ base: "md", md: "xl" }}
+                >
                   <Translation id="page-upgrades-bug-bounty-help-links" />
-                </h4>
+                </Heading>
                 <Link to="https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/deposit-contract.md">
                   Deposit Contract Specifications
                 </Link>
@@ -606,15 +704,15 @@ const BugBountiesPage = ({
                 <Link to="https://github.com/ethereum/consensus-specs/blob/dev/solidity_deposit_contract/deposit_contract.sol">
                   Deposit Contract Source Code
                 </Link>
-              </div>
+              </Box>
             </StyledCard>
           </StyledCardContainer>
           <H2>
             <Translation id="page-upgrades-bug-bounty-not-included" />
           </H2>
-          <p>
+          <Text>
             <Translation id="page-upgrades-bug-bounty-not-included-desc" />
-          </p>
+          </Text>
         </Content>
       </StyledGrayContainer>
       <Content>
@@ -623,30 +721,30 @@ const BugBountiesPage = ({
             <H2>
               <Translation id="page-upgrades-bug-bounty-submit" />
             </H2>
-            <p>
+            <Text>
               <Translation id="page-upgrades-bug-bounty-submit-desc" />{" "}
               <Link to="https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology">
                 <Translation id="page-upgrades-bug-bounty-owasp" />
               </Link>
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-upgrades-bug-bounty-points" />
-            </p>
-            <p>
-              <b>
+            </Text>
+            <Text>
+              <Text as="b">
                 <Translation id="page-upgrades-bug-bounty-quality" />
-              </b>
+              </Text>
               <Translation id="page-upgrades-bug-bounty-quality-desc" />
-            </p>
-            <p>
-              <b>
+            </Text>
+            <Text>
+              <Text as="b">
                 <Translation id="page-upgrades-bug-bounty-quality-repro" />
-              </b>
+              </Text>
               <Translation id="page-upgrades-bug-bounty-quality-repro-desc" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-upgrades-bug-bounty-quality-fix" />
-            </p>
+            </Text>
           </SubmitInstructions>
           {/* TODO: Re-add Points Exchange (BugBountyPoints Component) */}
         </Row>
@@ -657,25 +755,25 @@ const BugBountiesPage = ({
           <H2>
             <Translation id="page-upgrades-bug-bounty-hunting" />
           </H2>
-          <p>
-            <em>
+          <Text>
+            <Text as="em">
               <Translation id="page-upgrades-bug-bounty-hunting-desc" />
-            </em>
-          </p>
-          <ul>
-            <li>
+            </Text>
+          </Text>
+          <UnorderedList>
+            <ListItem>
               <Translation id="page-upgrades-bug-bounty-hunting-li-1" />
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               <Translation id="page-upgrades-bug-bounty-hunting-li-2" />
-            </li>
-            <li>
+            </ListItem>
+            <ListItem>
               <Translation id="page-upgrades-bug-bounty-hunting-li-3" />
-            </li>
-            <li id="leaderboard">
+            </ListItem>
+            <ListItem id="leaderboard">
               <Translation id="page-upgrades-bug-bounty-hunting-li-4" />
-            </li>
-          </ul>
+            </ListItem>
+          </UnorderedList>
         </Rules>
       </Content>
       <GradientContainer>
@@ -683,27 +781,28 @@ const BugBountiesPage = ({
           <H2>
             <Translation id="page-upgrades-bug-bounty-hunting-execution-leaderboard" />
           </H2>
-          <p>
+          <Text>
             <Translation id="page-upgrades-bug-bounty-hunting-execution-leaderboard-subtitle" />
-          </p>
+          </Text>
           <Leaderboard content={executionBountyHunters} />
         </FullLeaderboardContainer>
-
         <FullLeaderboardContainer>
           <H2>
             <Translation id="page-upgrades-bug-bounty-hunting-leaderboard" />
           </H2>
-          <p>
+          <Text>
             <Translation id="page-upgrades-bug-bounty-hunting-leaderboard-subtitle" />
-          </p>
+          </Text>
           <Leaderboard content={consensusBountyHunters} />
         </FullLeaderboardContainer>
       </GradientContainer>
       <Divider />
       <Content>
-        <CenterH2>
-          <Translation id="page-upgrades-question-title" />
-        </CenterH2>
+        <Center>
+          <H2>
+            <Translation id="page-upgrades-question-title" />
+          </H2>
+        </Center>
         <Faq>
           <LeftColumn>
             <ExpandableCard
@@ -713,27 +812,27 @@ const BugBountiesPage = ({
                 intl
               )}
             >
-              <p>
+              <Text>
                 <Translation id="bug-bounty-faq-q1-content-1" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="bug-bounty-faq-q1-content-2" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="bug-bounty-faq-q1-content-3" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="bug-bounty-faq-q1-content-4" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="bug-bounty-faq-q1-content-5" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="bug-bounty-faq-q1-content-6" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="bug-bounty-faq-q1-content-7" />
-              </p>
+              </Text>
             </ExpandableCard>
             <ExpandableCard
               title={translateMessageId("bug-bounty-faq-q2-title", intl)}
@@ -742,9 +841,9 @@ const BugBountiesPage = ({
                 intl
               )}
             >
-              <p>
+              <Text>
                 <Translation id="bug-bounty-faq-q2-content-1" />
-              </p>
+              </Text>
             </ExpandableCard>
             <ExpandableCard
               title={translateMessageId("bug-bounty-faq-q3-title", intl)}
@@ -753,9 +852,9 @@ const BugBountiesPage = ({
                 intl
               )}
             >
-              <p>
+              <Text>
                 <Translation id="bug-bounty-faq-q3-content-1" />
-              </p>
+              </Text>
             </ExpandableCard>
             <ExpandableCard
               title={translateMessageId("bug-bounty-faq-q4-title", intl)}
@@ -764,9 +863,9 @@ const BugBountiesPage = ({
                 intl
               )}
             >
-              <p>
+              <Text>
                 <Translation id="bug-bounty-faq-q4-content-1" />
-              </p>
+              </Text>
             </ExpandableCard>
           </LeftColumn>
           <RightColumn>
@@ -777,9 +876,9 @@ const BugBountiesPage = ({
                 intl
               )}
             >
-              <p>
+              <Text>
                 <Translation id="bug-bounty-faq-q5-content-1" />
-              </p>
+              </Text>
             </ExpandableCard>
             <ExpandableCard
               title={translateMessageId("bug-bounty-faq-q6-title", intl)}
@@ -788,12 +887,12 @@ const BugBountiesPage = ({
                 intl
               )}
             >
-              <p>
+              <Text>
                 <Translation id="bug-bounty-faq-q6-content-1" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="bug-bounty-faq-q6-content-2" />
-              </p>
+              </Text>
             </ExpandableCard>
             <ExpandableCard
               title={translateMessageId("bug-bounty-faq-q7-title", intl)}
@@ -802,9 +901,9 @@ const BugBountiesPage = ({
                 intl
               )}
             >
-              <p>
+              <Text>
                 <Translation id="bug-bounty-faq-q7-content-1" />
-              </p>
+              </Text>
             </ExpandableCard>
             <ExpandableCard
               title={translateMessageId("bug-bounty-faq-q8-title", intl)}
@@ -813,9 +912,9 @@ const BugBountiesPage = ({
                 intl
               )}
             >
-              <p>
+              <Text>
                 <Translation id="bug-bounty-faq-q8-content-1" />
-              </p>
+              </Text>
               <Link to="https://ethereum.org/security_at_ethereum.org.asc">
                 <Translation id="bug-bounty-faq-q8-PGP-key" />
               </Link>
@@ -825,16 +924,16 @@ const BugBountiesPage = ({
       </Content>
       <Divider />
       <Contact>
-        <div>
+        <Box>
           <H2>
             <Translation id="page-upgrades-bug-bounty-questions" />
           </H2>
-          <TextNoMargin>
+          <Text mb="0rem">
             <Translation id="page-upgrades-bug-bounty-email-us" />{" "}
             <Link to="mailto:bounty@ethereum.org">bounty@ethereum.org</Link>
-          </TextNoMargin>
-        </div>
-        <Emoji size={3} text=":email:" />
+          </Text>
+        </Box>
+        <Emoji fontSize="5xl" text=":email:" />
       </Contact>
       <FeedbackCard />
     </Page>

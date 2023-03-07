@@ -26,7 +26,7 @@ A submitted transaction includes the following information:
 - `from` – the address of the sender, that will be signing the transaction. This will be an externally-owned account as contract accounts cannot send transactions.
 - `recipient` – the receiving address (if an externally-owned account, the transaction will transfer value. If a contract account, the transaction will execute the contract code)
 - `signature` – the identifier of the sender. This is generated when the sender's private key signs the transaction and confirms the sender has authorized this transaction
-- `nonce` - a sequencially incrementing counter which indicates the transaction number from the account
+- `nonce` - a sequentially incrementing counter which indicates the transaction number from the account
 - `value` – amount of ETH to transfer from sender to recipient (denominated in WEI, where 1ETH equals 1e+18wei)
 - `data` – optional field to include arbitrary data
 - `gasLimit` – the maximum amount of gas units that can be consumed by the transaction. The [EVM](https://ethereum.org/en/developers/docs/evm/opcodes) specifies the units of gas required by each computational step
@@ -100,7 +100,7 @@ Example response:
 }
 ```
 
-- the `raw` is the signed transaction in Recursive Length Prefix (RLP) encoded form
+- the `raw` is the signed transaction in [Recursive Length Prefix (RLP)](https://ethereum.org/en/developers/docs/data-structures-and-encoding/rlp) encoded form
 - the `tx` is the signed transaction in JSON form
 
 With the signature hash, the transaction can be cryptographically proven that it came from the sender and submitted to the network.
