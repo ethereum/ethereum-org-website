@@ -1,4 +1,5 @@
-import React, { useState, useRef, MouseEventHandler } from "react"
+import React, { useState, useRef, MouseEventHandler, ReactNode } from "react"
+import { Box, Grid, GridProps, Text, useToken } from "@chakra-ui/react"
 import { Link as GatsbyLink } from "gatsby"
 import { useIntl } from "react-intl"
 import {
@@ -13,7 +14,6 @@ import {
 import type { StateResultsProvided } from "react-instantsearch-core"
 import algoliasearch from "algoliasearch/lite"
 import { Hit } from "@algolia/client-search"
-import styled from "@emotion/styled"
 
 import Input from "./Input"
 import Link from "../Link"
@@ -21,99 +21,101 @@ import Translation from "../Translation"
 import { useOnClickOutside } from "../../hooks/useOnClickOutside"
 import { useKeyPress } from "../../hooks/useKeyPress"
 
-const Root = styled.div`
-  position: relative;
-  display: grid;
-  grid-gap: 1em;
-`
+const PageHeader = (props: { children: ReactNode }) => (
+  <Box
+    p="5px 10px"
+    mt={0}
+    color="searchResultText"
+    bg="searchResultBackground"
+    fontWeight="semibold"
+    border="none"
+    {...props}
+  />
+)
 
-const HitsWrapper = styled.div<{ show: boolean }>`
-  display: ${(props) => (props.show ? `grid` : `none`)};
-  max-height: 80vh;
-  overflow: scroll;
-  z-index: 2;
-  position: absolute;
-  right: 0;
-  top: calc(100% + 0.5em);
-  width: 80vw;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 100%;
-  }
-  max-width: 30em;
-  box-shadow: 0 0 5px 0;
-  padding: 0.5rem;
-  background: ${(props) => props.theme.colors.background};
-  border-radius: 0.25em;
-  > * + * {
-    padding-top: 1em !important;
-    border-top: 2px solid black;
-  }
-  li {
-    margin-bottom: 0.4rem;
-  }
-  li + li {
-    padding-top: 0.7em;
-    border-top: 1px solid ${(props) => props.theme.colors.lightBorder};
-  }
-  ul {
-    margin: 0;
-    list-style: none;
-  }
-  mark {
-    color: ${(props) => props.theme.colors.primary};
-    box-shadow: inset 0 -2px 0 0 ${(props) => props.theme.colors.markUnderline};
-  }
-  header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.3em;
-    h3 {
-      color: ${(props) => props.theme.colors.background};
-      background: ${(props) => props.theme.colors.text300};
-      padding: 0.1em 0.4em;
-      border-radius: 0.25em;
-    }
-  }
-  h3 {
-    margin: 0 0 0.5em;
-  }
-  h4 {
-    margin-bottom: 0.3em;
-  }
-  a {
-    text-decoration: none;
-  }
-`
+const StyledHighlight = (props: {
+  attribute: string
+  hit: Hit<Record<string, any>>
+}) => (
+  <Box
+    as={Highlight}
+    tagName="mark"
+    display="block"
+    color="text"
+    fontSize="md"
+    padding={2}
+    _hover={{
+      bg: "markBackground",
+    }}
+    {...props}
+  />
+)
 
-const PageHeader = styled.div`
-  padding: 5px 10px;
-  margin-top: 0;
-  font-weight: 600;
-  border: none;
-  font-size: 1em;
-  color: ${(props) => props.theme.colors.searchResultText};
-  background: ${(props) => props.theme.colors.searchResultBackground};
-`
+const HitsWrapper = (props: GridProps) => {
+  const [lightBorder, markUnderline] = useToken("color", [
+    "lightBorder",
+    "markUnderline",
+  ])
 
-const StyledSnippet = styled(Snippet)`
-  display: block;
-  color: ${(props) => props.theme.colors.text};
-  font-size: ${(props) => props.theme.fontSizes.m};
-  padding: 0.5rem;
-  &:hover {
-    background: ${(props) => props.theme.colors.markBackground};
-  }
-`
-
-const StyledHighlight = styled(Highlight)`
-  display: block;
-  color: ${(props) => props.theme.colors.text};
-  font-size: ${(props) => props.theme.fontSizes.m};
-  padding: 0.5rem;
-  &:hover {
-    background: ${(props) => props.theme.colors.markBackground};
-  }
-`
+  return (
+    <Grid
+      bg="background"
+      pos="absolute"
+      maxH="80vh"
+      maxW="30em"
+      w={{ base: "full", lg: "80vw" }}
+      p={2}
+      overflow="scroll"
+      zIndex={2}
+      right={0}
+      top="calc(100% + 0.5em)"
+      boxShadow="0 0 5px 0"
+      borderRadius="base"
+      sx={{
+        "& > * + *": {
+          pt: "1em !important",
+          borderTop: "2px solid black",
+        },
+        ul: {
+          m: 0,
+          listStyle: "none",
+        },
+        li: {
+          mb: "0.4rem",
+        },
+        "li + li": {
+          pt: "0.7em",
+          borderTop: `1px solid ${lightBorder}`,
+        },
+        mark: {
+          color: "primary",
+          boxShadow: `inset 0 -2px 0 0 ${markUnderline}`,
+        },
+        header: {
+          display: "flex",
+          justifyContent: "space-between",
+          mb: "0.3em",
+        },
+        "header h3": {
+          color: "background",
+          bg: "text300",
+          p: "0.1em 0.4em",
+          borderRadius: "base",
+        },
+        h3: {
+          m: "0 0 0.5em",
+        },
+        h4: {
+          mb: "0.3em",
+        },
+        a: {
+          textDecor: "none",
+        },
+      }}
+      {...props}
+    />
+  )
+}
 
 //FIXME: Add a strict type for `hit` prop
 const PageHit =
@@ -121,38 +123,25 @@ const PageHit =
   ({ hit }: { hit: Hit<Record<string, any>> }) => {
     // Make url relative, so `handleSelect` is triggered
     const url = hit.url.replace("https://ethereum.org", "")
+
     return (
-      <div>
+      <Box>
         <GatsbyLink to={url} onClick={clickHandler}>
           <PageHeader>
             <Highlight attribute="hierarchy.lvl1" hit={hit} tagName="mark" />
           </PageHeader>
           {hit.hierarchy.lvl2 && (
-            <StyledHighlight
-              attribute="hierarchy.lvl2"
-              hit={hit}
-              tagName="mark"
-            />
+            <StyledHighlight attribute="hierarchy.lvl2" hit={hit} />
           )}
           {hit.hierarchy.lvl3 && (
-            <StyledHighlight
-              attribute="hierarchy.lvl3"
-              hit={hit}
-              tagName="mark"
-            />
+            <StyledHighlight attribute="hierarchy.lvl3" hit={hit} />
           )}
           {hit.hierarchy.lvl4 && (
-            <StyledHighlight
-              attribute="hierarchy.lvl4"
-              hit={hit}
-              tagName="mark"
-            />
+            <StyledHighlight attribute="hierarchy.lvl4" hit={hit} />
           )}
-          {hit.content && (
-            <StyledSnippet attribute="content" hit={hit} tagName="mark" />
-          )}
+          {hit.content && <StyledHighlight attribute="content" hit={hit} />}
         </GatsbyLink>
-      </div>
+      </Box>
     )
   }
 
@@ -179,30 +168,30 @@ const Results = ({
   }
   if (state.query && isValidAddress(state.query)) {
     return (
-      <div>
-        <p>
-          <strong>
+      <Box>
+        <Text>
+          <Text as="strong">
             <Translation id="search-no-results" />
-          </strong>{" "}
+          </Text>{" "}
           "{state.query}"
-        </p>
-        <p>
+        </Text>
+        <Text>
           <Translation id="search-eth-address" />{" "}
           <Link to={`https://etherscan.io/address/${state.query}`}>
             Etherscan
           </Link>
           .
-        </p>
-      </div>
+        </Text>
+      </Box>
     )
   }
   return (
-    <div>
-      <strong>
+    <Box>
+      <Text as="strong">
         <Translation id="search-no-results" />
-      </strong>{" "}
+      </Text>{" "}
       "{state.query}"
-    </div>
+    </Box>
   )
 }
 
@@ -226,6 +215,7 @@ const Search: React.FC<ISearchProps> = ({
     process.env.GATSBY_ALGOLIA_APP_ID,
     process.env.GATSBY_ALGOLIA_SEARCH_KEY
   )
+
   const searchClient = {
     // Avoid Algolia request (by mocking one) if search query is empty
     // https://www.algolia.com/doc/guides/building-search-ui/going-further/conditional-requests/js/
@@ -269,7 +259,7 @@ const Search: React.FC<ISearchProps> = ({
   useKeyPress("/", focusSearch)
 
   return (
-    <Root ref={containerRef}>
+    <Grid ref={containerRef} gap={4} pos="relative">
       <InstantSearch
         searchClient={searchClient}
         indexName={indices[0].name}
@@ -282,7 +272,7 @@ const Search: React.FC<ISearchProps> = ({
           setQuery={setQuery}
           onFocus={() => setFocus(true)}
         />
-        <HitsWrapper show={query?.length > 0 && focus}>
+        <HitsWrapper display={query?.length > 0 && focus ? "grid" : "none"}>
           {indices.map(({ name, hitComp }) => (
             <Index key={name} indexName={name}>
               <ConnectedResults>
@@ -292,7 +282,7 @@ const Search: React.FC<ISearchProps> = ({
           ))}
         </HitsWrapper>
       </InstantSearch>
-    </Root>
+    </Grid>
   )
 }
 
