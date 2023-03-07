@@ -24,14 +24,14 @@ A Storybook "story" is an instance of a component in a certain state or with cer
 
 Each component will only need one file containing all the stories.
 
-The stories file will reside with each component as simply `stories.tsx`. So the base folder structure in `src` will look like this:
+The stories file will reside with each component. So the base folder structure in `src` will look like this:
 
 ```
 src/
 └── components/
     └── ComponentA/
         ├── index.tsx
-        ├── stories.tsx
+        ├── CommponentA.stories.tsx
         └── // Any other files as applicable (utils, child components, useHook, etc.)
 ```
 
