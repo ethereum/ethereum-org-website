@@ -36,6 +36,15 @@
     "endDate": "2023-03-29"
   },
   {
+    "title": "ETH Beijing",
+    "to": "https://ethbeijing.xyz/",
+    "sponsor": null,
+    "location": "Beijing, China",
+    "description": "Join the first offline event of Ethereum in Beijing in the post-covid-19 era.",
+    "startDate": "2023-04-05",
+    "endDate": "2023-04-08"
+  },
+  {
     "title": "ETHGlobal Tokyo",
     "to": "https://tokyo.ethglobal.com/",
     "sponsor": null,
@@ -43,6 +52,15 @@
     "description": "ETHGlobal is coming to Tokyo, as the Ethereum community converges in Asia for an unforgettable weekend of hacking, summits, and side events celebrating a new year in our ecosystem.",
     "startDate": "2023-04-14",
     "endDate": "2023-04-16"
+  },
+  {
+    "title": "ETHTaipei",
+    "to": "https://ethtaipei.org/",
+    "sponsor": null,
+    "location": "Taipei, Taiwan",
+    "description": "ETHTaipei is a community-driven event, spawned from the desire of connecting the Taiwan/Asia community with teams globally on a deep technical level.",
+    "startDate": "2023-04-21",
+    "endDate": "2023-04-25"
   },
   {
     "title": "EDCON 2023",
@@ -124,6 +142,15 @@
     "description": "Ethereum Zürich is a development and research-focused conference and hackathon, bringing the Ethereum community to one of the most crypto-friendly countries, and the cradle of blockchain research.",
     "startDate": "2023-04-14",
     "endDate": "2023-04-16"
+  },
+  {
+    "title": "ETHVenice",
+    "to": "https://ethvenice.com/",
+    "sponsor": null,
+    "location": "Venice, Italy",
+    "description": "The event takes place in one of the most beautiful and historic cities in the world, Venice! A conference and hackathon open to all people who want to expand their knowledge, learn about this amazing world or get involved. We are waiting for you in many, let's connect.",
+    "startDate": "2023-10-20",
+    "endDate": "2023-10-22"
   },
   {
     "title": "Schelling Point",
