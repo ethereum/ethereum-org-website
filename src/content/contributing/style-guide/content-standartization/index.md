@@ -207,13 +207,13 @@ Everyone loves emojis <Emoji text="🥰" size={1} /> To standardize the appearan
 ```md
 <--- Good --->
 
-The London Upgrade is live <Emoji text=":heart:" size={1} />
+The London Upgrade is live <Emoji text=":tada:" size={1} />
 
-The London Upgrade is live <Emoji text="❤️" size={1} />
+The London Upgrade is live <Emoji text="🎉" size={1} />
 
 <--- Bad --->
 
-The London Upgrade is live ❤️
+The London Upgrade is live 🎉
 ```
 
 ### Header casing {#header-casing}
