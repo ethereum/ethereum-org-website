@@ -92,7 +92,7 @@ contentPreview="People, businesses, and other organizations who want to understa
 - Use examples or real-life scenarios of the application of the technology to help illustrate complex concepts or ideas
 - Explain how the idea can positively affect people now or in the future
 - Create before Ethereum / after Ethereum comparison
-- Add step-by-step / how-to dos to take action
+- Add step-by-step how to take action
 - Include relevant statistics or graphs to strengthen the arguments
 - Add calls to action
 - Provide visual aids to explain the topic better
