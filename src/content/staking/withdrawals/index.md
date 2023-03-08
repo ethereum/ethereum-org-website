@@ -186,6 +186,15 @@ eventName="read more">
 <p>Validator operators are recommended to visit the <a href="https://zhejiang.launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals (Zhejiang Testnet)</a> page where you'll find more details about how to be prepared, timing of events, and more details about how withdrawals function.</p>
 </ExpandableCard>
 
+<ExpandableCard
+title="Can I re-activate my validator after exiting by depositing more ETH?"
+eventCategory="FAQ"
+eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
+eventName="read more">
+
+<p>No. Once a validator has exited and its full balance has been withdrawn, any additional funds deposited to that validator will automatically be transferred to the withdrawal address during the next validator sweep. To re-stake ETH, a new validator must be activated.</p>
+</ExpandableCard>
+
 ## Further reading {#further-reading}
 
 - [Staking Launchpad Withdrawals - Zhejiang Testnet](https://zhejiang.launchpad.ethereum.org/withdrawals)
