@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { FC, useState } from "react"
 import {
   Icon,
   IconButton,
@@ -26,7 +26,7 @@ import { IItem, ISections } from "./types"
 const NavContainer = styled.div`
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
   width: 100%;
 `
 
@@ -97,10 +97,9 @@ export interface IProps {
 }
 
 // TODO display page title on mobile
-const Nav: React.FC<IProps> = ({ path }) => {
+const Nav: FC<IProps> = ({ path }) => {
   const { colorMode, toggleColorMode } = useColorMode()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isSearchOpen, setIsSearchOpen] = useState(false)
   const intl = useIntl()
 
   const isDarkTheme = colorMode === "dark"
@@ -362,24 +361,15 @@ const Nav: React.FC<IProps> = ({ path }) => {
   ]
 
   let mobileLinkSections = cloneDeep(linkSections)
-  const handleMenuToggle = (item?: "search" | "menu"): void => {
-    if (item === "menu") {
-      setIsMenuOpen(!isMenuOpen)
-    } else if (item === "search") {
-      setIsSearchOpen(!isSearchOpen)
-    } else {
-      setIsMenuOpen(false)
-      setIsSearchOpen(false)
-    }
-
-    if (isMenuOpen || isSearchOpen) {
-      document.documentElement.style.overflowY = "scroll"
-    } else {
-      document.documentElement.style.overflowY = "hidden"
-    }
+  const toggleMenu = (): void => {
+    setIsMenuOpen((prev) => !prev)
+    document.documentElement.style.overflowY = isMenuOpen ? "scroll" : "hidden"
   }
   const lgBreakpoint = useToken("breakpoints", "lg")
 
+  const toggleSearch = (): void => {
+    document.getElementsByClassName("DocSearch-Button")[0].click()
+  }
   const shouldShowSubNav = path.includes("/developers/")
   const splitPath = path.split("/")
   const fromPageParameter =
@@ -403,7 +393,7 @@ const Nav: React.FC<IProps> = ({ path }) => {
               <Menu path={path} sections={linkSections} />
             </LeftItems>
             <RightItems>
-              <Search useKeyboardShortcut />
+              <Search />
               <IconButton
                 aria-label={
                   isDarkTheme ? "Switch to Light Theme" : "Switch to Dark Theme"
@@ -429,10 +419,10 @@ const Nav: React.FC<IProps> = ({ path }) => {
           {/* Mobile */}
           <MobileNavMenu
             isMenuOpen={isMenuOpen}
-            isSearchOpen={isSearchOpen}
             isDarkTheme={isDarkTheme}
-            toggleMenu={handleMenuToggle}
+            toggleMenu={toggleMenu}
             toggleTheme={toggleColorMode}
+            toggleSearch={toggleSearch}
             linkSections={mobileLinkSections}
             fromPageParameter={fromPageParameter}
           />
