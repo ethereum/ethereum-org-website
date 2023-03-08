@@ -18,7 +18,7 @@ Anyone! Ethereum.org is entirely open source, and many of its best pages are sub
 
 ## Audience {#audience}
 
-- 60% of our website visitors do not own any Ether according to our survey responses
+- 60% of our website visitors do not own any ether according to our survey responses
 - 50% of visitors identify themselves as newcomers to the crypto space
 
 **Common reading-related problems:**
