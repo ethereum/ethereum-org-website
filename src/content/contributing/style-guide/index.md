@@ -6,9 +6,9 @@ lang: en
 
 # Ethereum.org style guide {#style-guide}
 
-Content on [ethereum.org](/) is crowdsourced and primarily written by our incredible contributors. 
+Content on [ethereum.org](/) is crowdsourced and primarily written by our incredible contributors.
 
-Our primary objective is to educate and inform visitors about Ethereum in a manner that is accessible to a diverse range of readers, from technical experts to casual visitors. Since we deal with complex and abstract topics, clear content writing is crucial to effectively convey the information and avoid confusion or misinterpretation. 
+Our primary objective is to educate and inform visitors about Ethereum in a manner that is accessible to a diverse range of readers, from technical experts to casual visitors. Since we deal with complex and abstract topics, clear content writing is crucial to effectively convey the information and avoid confusion or misinterpretation.
 
 You should read this style guide before you [contribute to ethereum.org](/contributing/).
 
@@ -24,9 +24,9 @@ Anyone! Ethereum.org is entirely open source, and many of its best pages are sub
 **Common reading-related problems:**
 
 - Articles are hard to digest due to
-    - too much text per page / paragraph
-    - usage of complex sentences
-    - technical jargon
+  - too much text per page / paragraph
+  - usage of complex sentences
+  - technical jargon
 - Content is too abstract and detached from reality, therefore users are unable to relate to it
 - Too many links inside articles result in readers feeling overloaded and leaving the website
 
@@ -37,10 +37,9 @@ Anyone! Ethereum.org is entirely open source, and many of its best pages are sub
 
 Loosely we can categorize the site audiences as:
 
-<details><summary>Individuals</summary>
-<p>
-
-App users, investors, enthusiasts, or anyone who is "new to Ethereum".
+<ExpandableCard
+title="Individuals"
+contentPreview='App users, investors, enthusiasts, or anyone who is "new to Ethereum".'>
 
 **Example user journeys:**
 
@@ -50,17 +49,11 @@ App users, investors, enthusiasts, or anyone who is "new to Ethereum".
 - "I want to get a sense of the size and activity of the Ethereum community, to decide if it's active enough, so I can get help if needed"
 - "I’m excited about Ethereum and want to get involved, but I don’t know what to do next"
 
-</p>
-</details>
+</ExpandableCard>
 
-<details><summary>Developers</summary>
-<p>
-
-App users, investors, enthusiasts, or anyone who is "new to Ethereum".
-
-**Example user journeys:**
-
-Developers or others who want technical information about Ethereum.
+<ExpandableCard
+title="Developers"
+contentPreview="Developers or others who want technical information about Ethereum.">
 
 **Example user journeys**:
 
@@ -68,13 +61,12 @@ Developers or others who want technical information about Ethereum.
 - "I want to get a sample Ethereum project up and running fast, to get a sense of how difficult or easy it is to build a real project on Ethereum"
 - "I want to learn about Ethereum's technical roadmap"
 - "I’ve started work on an Ethereum project, and want to try out a few smart contract testing libraries"
-</p>
-</details>
 
-<details><summary>Enterprises</summary>
-<p>
+</ExpandableCard>
 
-People, businesses, and other organizations who want to understand Ethereum's value in an enterprise setting.
+<ExpandableCard
+title="Enterprises"
+contentPreview="People, businesses, and other organizations who want to understand Ethereum's value in an enterprise setting.">
 
 **Example user journeys**:
 
@@ -82,33 +74,33 @@ People, businesses, and other organizations who want to understand Ethereum's va
 - "I work at a business that is beginning an Ethereum related project, and want to learn more"
 - "I want to understand the differences between private Ethereum chains, consortium chains, and the public Ethereum Mainnet"
 - "I want to know the current status of Ethereum - how long has it been in production, how much usage it has, what's the direction of new development - to decide if I am confident to build my project on top of it"
-</p>
-</details>
+
+</ExpandableCard>
 
 ## Best practices {#best-practices}
 
 **Style**
 
-- [ ]  Focus on the advantages for the user instead of explaining technical details about the system
-- [ ]  Use active voice and clear, concise sentences that are easy to follow
-- [ ]  Break up longer chunks of text into smaller sections or paragraphs
-- [ ]  Consider using tables, bullet points or numbered lists instead of paragraphs
-- [ ]  Highlight (bold) key phrases to support scanning and skimming through the article
+- [ ] Focus on the advantages for the user instead of explaining technical details about the system
+- [ ] Use active voice and clear, concise sentences that are easy to follow
+- [ ] Break up longer chunks of text into smaller sections or paragraphs
+- [ ] Consider using tables, bullet points or numbered lists instead of paragraphs
+- [ ] Highlight (bold) key phrases to support scanning and skimming through the article
 
 **Content ideas:**
 
-- [ ]  Use examples or real-life scenarios of the application of the technology to help illustrate complex concepts or ideas
-- [ ]  Explain how the idea can positively affect people now or in the future
-- [ ]  Create before Ethereum / after Ethereum comparison
-- [ ]  Add step-by-step / how-to dos to take action
-- [ ]  Include relevant statistics or graphs to strengthen the arguments
-- [ ]  Add calls to action
-- [ ]  Provide visual aids to explain the topic better
+- [ ] Use examples or real-life scenarios of the application of the technology to help illustrate complex concepts or ideas
+- [ ] Explain how the idea can positively affect people now or in the future
+- [ ] Create before Ethereum / after Ethereum comparison
+- [ ] Add step-by-step / how-to dos to take action
+- [ ] Include relevant statistics or graphs to strengthen the arguments
+- [ ] Add calls to action
+- [ ] Provide visual aids to explain the topic better
 
 **Other**:
 
-- [ ]  Limit the legth of the article up to 1000 words (1500 max)
-- [ ]  Reduce the number of hyperlinks to approximately 5 per 1000 words (excluding further reading section at the bottom of the page or product listings)
+- [ ] Limit the legth of the article up to 1000 words (1500 max)
+- [ ] Reduce the number of hyperlinks to approximately 5 per 1000 words (excluding further reading section at the bottom of the page or product listings)
 
 ### Objectivity {#objectivity}
 
@@ -139,7 +131,6 @@ When introducing an unfamiliar acronym, spell out the full term, and put the acr
 Many of the topics covered on ethereum.org are technically complex. To reduce confusion to the reader, terms should be used consistently. For example, don't cycle back-and-forth between proof-of-work and PoW at random.
 
 [Content standardization](/style-guide/content-standardization/) - Read more about proper usage of terminology and other aspects such as how to properly add an image, attribute etc.
-
 
 ## Anything else? {#anything-else}
 
