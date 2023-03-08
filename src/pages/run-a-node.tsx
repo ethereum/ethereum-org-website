@@ -1,5 +1,5 @@
 // Libraries
-import React from "react"
+import React, { ReactNode } from "react"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
@@ -392,7 +392,7 @@ const StrongParagraph = styled.p`
 interface RunANodeCard {
   image: typeof ChakraIcon
   title: string
-  preview: string
+  preview: ReactNode
   body: Array<string>
   alt: string
 }
@@ -443,7 +443,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
     {
       image: EarthGlyphIcon,
       title: t("page-run-a-node-participate-title"),
-      preview: t("page-run-a-node-participate-preview"),
+      preview: <Translation id="page-run-a-node-participate-preview" />,
       body: [
         t("page-run-a-node-participate-1"),
         t("page-run-a-node-participate-2"),
