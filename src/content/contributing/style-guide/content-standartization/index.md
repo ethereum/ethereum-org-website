@@ -147,6 +147,7 @@ Sentences using active voice are more concise and efficient, making your writing
 **Active voice sentence:** an actor acts on a target
 
 > _"The man bought a car."_
+
 **Passive voice sentence:** a target acts on an actor
 
 > _"The car was bought by a man."_
