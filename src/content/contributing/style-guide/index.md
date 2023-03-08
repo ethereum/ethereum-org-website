@@ -81,26 +81,26 @@ contentPreview="People, businesses, and other organizations who want to understa
 
 **Style**
 
-- [ ] Focus on the advantages for the user instead of explaining technical details about the system
-- [ ] Use active voice and clear, concise sentences that are easy to follow
-- [ ] Break up longer chunks of text into smaller sections or paragraphs
-- [ ] Consider using tables, bullet points or numbered lists instead of paragraphs
-- [ ] Highlight (bold) key phrases to support scanning and skimming through the article
+- Focus on the advantages for the user instead of explaining technical details about the system
+- Use active voice and clear, concise sentences that are easy to follow
+- Break up longer chunks of text into smaller sections or paragraphs
+- Consider using tables, bullet points or numbered lists instead of paragraphs
+- Highlight (bold) key phrases to support scanning and skimming through the article
 
 **Content ideas:**
 
-- [ ] Use examples or real-life scenarios of the application of the technology to help illustrate complex concepts or ideas
-- [ ] Explain how the idea can positively affect people now or in the future
-- [ ] Create before Ethereum / after Ethereum comparison
-- [ ] Add step-by-step / how-to dos to take action
-- [ ] Include relevant statistics or graphs to strengthen the arguments
-- [ ] Add calls to action
-- [ ] Provide visual aids to explain the topic better
+- Use examples or real-life scenarios of the application of the technology to help illustrate complex concepts or ideas
+- Explain how the idea can positively affect people now or in the future
+- Create before Ethereum / after Ethereum comparison
+- Add step-by-step / how-to dos to take action
+- Include relevant statistics or graphs to strengthen the arguments
+- Add calls to action
+- Provide visual aids to explain the topic better
 
 **Other**:
 
-- [ ] Limit the legth of the article up to 1000 words (1500 max)
-- [ ] Reduce the number of hyperlinks to approximately 5 per 1000 words (excluding further reading section at the bottom of the page or product listings)
+- Limit the legth of the article up to 1000 words (1500 max)
+- Reduce the number of hyperlinks to approximately 5 per 1000 words (excluding further reading section at the bottom of the page or product listings)
 
 ### Objectivity {#objectivity}
 
