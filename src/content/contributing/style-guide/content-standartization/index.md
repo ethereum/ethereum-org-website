@@ -151,6 +151,7 @@ Sentences using active voice are more concise and efficient, making your writing
 **Passive voice sentence:** a target acts on an actor
 
 > _"The car was bought by a man."_
+
 [Read more on active voice](https://www.grammarly.com/blog/active-vs-passive-voice/)
 
 _This isn't an easy one, especially for non-native English speakers. If you aren't sure, don't worry. We'll help with any of these._
