@@ -50,7 +50,7 @@ When referring to the Ethereum Mainnet (i.e. not referring to a testnet) use the
 
 ### Proof-of-work / Proof-of-stake {#proof-of}
 
-Proof-of-work should be capitalized at the beginning of a sentence. In any other instance, all letters should be lower case. In either case, proof-of-work should be hyphenated between each word.
+Proof-of-work should be capitalized only when at the beginning of a sentence. In any other instance, all letters should be lower case. In either case, proof-of-work should be hyphenated between each word.
 
 **Correct usage:**
 
