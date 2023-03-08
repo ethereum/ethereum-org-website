@@ -183,7 +183,13 @@ const MDXH1 = (props: HeadingProps) => (
 )
 
 const H2 = (props: HeadingProps) => (
-  <Heading fontSize={8} fontWeight="bold" lineHeight={1.4} mt={16} {...props} />
+  <Heading
+    fontSize="2rem"
+    fontWeight="bold"
+    lineHeight={1.4}
+    mt={16}
+    {...props}
+  />
 )
 
 const H3 = (props: HeadingProps) => (
@@ -246,7 +252,7 @@ const components = {
 const Title = (props: ChildOnlyProp) => (
   <Heading
     as="h1"
-    fontSize={10}
+    fontSize="2.5rem"
     fontWeight="bold"
     lineHeight={1.4}
     mt={0}
@@ -404,6 +410,8 @@ const UpgradePage = ({
 
   const slug = mdx.fields?.slug || ""
 
+  const lgBreakpoint = useToken("breakpoints", "lg")
+
   return (
     <Container>
       <HeroContainer>
@@ -425,7 +433,7 @@ const UpgradePage = ({
         </TitleCard>
         <Image image={getImage(mdx.frontmatter.image)!} alt="" />
       </HeroContainer>
-      <Show above="lg">
+      <Show above={lgBreakpoint}>
         <MoreContent to="#content">
           <Icon name="chevronDown" />
         </MoreContent>
@@ -435,10 +443,10 @@ const UpgradePage = ({
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
         />
-        <Show above="lg">
+        <Show above={lgBreakpoint}>
           <InfoColumn>
             <StyledButtonDropdown list={dropdownLinks} />
-            <Show above="lg">
+            <Show above={lgBreakpoint}>
               <H1>{mdx.frontmatter.title}</H1>
             </Show>
 
@@ -457,7 +465,7 @@ const UpgradePage = ({
           </MDXProvider>
           <FeedbackCard />
         </ContentContainer>
-        <Show below="lg">
+        <Show below={lgBreakpoint}>
           <MobileButton>
             <MobileButtonDropdown list={dropdownLinks} />
           </MobileButton>
