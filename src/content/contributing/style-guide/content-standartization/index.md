@@ -1,5 +1,5 @@
 ---
-title: Content standartization
+title: Content standardization
 description: Guide to use consistent terminology in content writing
 lang: en
 ---
