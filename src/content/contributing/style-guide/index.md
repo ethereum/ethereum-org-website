@@ -99,7 +99,7 @@ contentPreview="People, businesses, and other organizations who want to understa
 
 **Other**:
 
-- Limit the legth of the article up to 1000 words (1500 max)
+- Limit the length of the article up to 1000 words (1500 max)
 - Reduce the number of hyperlinks to approximately 5 per 1000 words (excluding further reading section at the bottom of the page or product listings)
 
 ### Objectivity {#objectivity}
