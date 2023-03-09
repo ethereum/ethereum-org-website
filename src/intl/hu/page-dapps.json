@@ -178,5 +178,8 @@
   "page-dapps-wallet-callout-title": "Tárcák megtekintése",
   "page-dapps-warning-header": "Mindig végezz saját kutatást",
   "page-dapps-warning-message": "Az Ethereum egy új technológia és a legtöbb alkalmazás még új. Mielőtt nagyobb mennyiségű pénzt fektetsz be, győződj meg róla, hogy tisztában vagy a kockázatokkal.",
-  "page-dapps-what-are-dapps": "Mik azok a dappok?"
+  "page-dapps-what-are-dapps": "Mik azok a dappok?",
+  "foundation": "Alapítvány",
+  "transaction-fees": "Mik azok a tranzakciós díjak?",
+  "page-wallets-get-some": "Szerezz valamennyi ETH-et"
 }

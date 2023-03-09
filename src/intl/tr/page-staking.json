@@ -7,15 +7,10 @@
   "page-staking-benefits-3-title": "Daha sürdürülebilir",
   "page-staking-benefits-3-description": "Stake edenler, bir hisse kanıtı sistemine katılmak için enerji yoğun bilgisayarlara ihtiyaç duymazlar yalnızca bir ev bilgisayarı veya akıllı telefon yeterlidir. Bu, Ethereum'u daha çevre dostu hale getirecektir.",
   "page-staking-benefits-3-link": "Ethereum'un enerji tüketimi hakkında daha fazlası",
-  "page-staking-check-address": "Para yatırma adresini kontrol edin",
-  "page-staking-deposit-address": "Para yatırma adresini kontrol edin",
-  "page-staking-deposit-address-desc": "Başlama noktasındaki kurulum talimatlarını zaten takip ettiyseniz, stake yatırma sözleşmesine bir işlem göndermeniz gerektiğini biliyorsunuzdur. Adresi çok dikkatli kontrol etmenizi öneririz. Resmi adresi ethereum.org'da ve bir dizi başka güvenilir sitede bulabilirsiniz.",
   "page-staking-description": "Hisseleme, doğrulayıcı yazılımını etkinleştirmek için 32 ETH yatırma işlemidir. Bir doğrulayıcı olarak; verileri depolamaktan, işlemleri gerçekleştirmekten ve blok zincire yeni bloklar eklemekten siz sorumlu olursunuz. Bu, Ethereum'u herkes için güvende tutar ve bu süreçte size yeni ETH kazandırır.",
   "page-staking-hero-title": "ETH'nizi stake etme",
   "page-staking-hero-header": "Ethereum'u güvence altına alırken ödüller kazanın",
   "page-staking-hero-subtitle": "Staking, Ethereum ekosistemi için bir kamu yararıdır. Herhangi bir miktarda ETH'ye sahip herhangi bir kullanıcı, ağın güvenliğini sağlamaya ve bu süreçte ödüller kazanmaya yardımcı olabilir.",
-  "page-staking-dropdown-text": "Staking seçenekleri",
-  "page-staking-dropdown-aria": "Staking seçenekleri menüsü",
   "page-staking-dropdown-home": "Staking Ana Sayfa",
   "page-staking-dropdown-solo": "Tekli staking",
   "page-staking-more-on-solo": "Solo stake etme hakkında daha fazla bilgi",
@@ -28,7 +23,6 @@
   "page-staking-more-on-pools": "Havuzlu stake etme hakkında daha fazlası",
   "page-staking-learn-more-pools": "Havuzlanmış stake etme hakkında daha fazla bilgi edinin",
   "page-staking-section-what-title": "Staking nedir?",
-  "page-staking-section-what-p": "Staking, size ağdaki blok tekliflerine katılma hakkı vermek için ETH'yi kilitleme eylemidir. Az miktarda ETH'ye sahip olan herkes, stake etmeyi düşünebilir.",
   "page-staking-section-what-link": "Nasıl ETH elde edeceğini öğren",
   "page-staking-section-why-title": "ETH'nizi neden stake etmelisiniz?",
   "page-staking-section-why-p1": "Her şey ne kadar stake yapmak istediğinize bağlı. Kendi doğrulayıcınızı etkinleştirmek için 32 ETH'ye ihtiyacınız olacak, ancak daha az stake yapmak da mümkün.",
@@ -192,5 +186,6 @@
   "page-staking-join-community": "Stake edenlere katılın",
   "page-staking-join-community-desc": "EthStaker, herkesin Ethereum üzerinde stake etme hakkında tartışması ve öğrenmesi için bir topluluktur. Tavsiye, destek ve stake ilgili her şeyi konuşmak için dünyanın dört bir yanından on binlerce üyeye katılın.",
   "page-staking-meta-description": "Ethereum stake etmeye genel bir bakış: riskler, ödüller, gereksinimler ve nereden yapılacağı.",
-  "page-staking-meta-title": "Ethereum stake etme"
+  "page-staking-meta-title": "Ethereum stake etme",
+  "page-upgrades-merge-btn": "Birleştirme hakkında daha fazla bilgi"
 }

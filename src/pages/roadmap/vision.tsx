@@ -1,6 +1,6 @@
 import React, { ComponentPropsWithRef } from "react"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
   Divider,
@@ -29,7 +29,6 @@ import PageMetadata from "../../components/PageMetadata"
 import InfoBanner from "../../components/InfoBanner"
 import FeedbackCard from "../../components/FeedbackCard"
 
-import { translateMessageId } from "../../utils/translations"
 import { getImage } from "../../utils/image"
 
 import type { ChildOnlyProp } from "../../types"
@@ -135,14 +134,14 @@ const VisionPage = ({
   data,
   location,
 }: PageProps<Queries.UpgradesVisionPageQuery>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   const heroContent: IPageHeroContent = {
-    title: translateMessageId("page-upgrades-vision-title", intl),
-    header: translateMessageId("page-upgrades-vision-future", intl),
-    subtitle: translateMessageId("page-upgrades-vision-subtitle", intl),
+    title: t("page-upgrades-vision-title"),
+    header: t("page-upgrades-vision-future"),
+    subtitle: t("page-upgrades-vision-subtitle"),
     image: getImage(data.oldship)!,
-    alt: translateMessageId("page-eth-whats-eth-hero-alt", intl),
+    alt: t("page-eth-whats-eth-hero-alt"),
   }
 
   const upgrades = [
@@ -173,8 +172,8 @@ const VisionPage = ({
   return (
     <Page>
       <PageMetadata
-        title={translateMessageId("page-upgrades-vision-meta-title", intl)}
-        description={translateMessageId("page-upgrades-vision-meta-desc", intl)}
+        title={t("page-upgrades-vision-meta-title")}
+        description={t("page-upgrades-vision-meta-desc")}
       />
       <PageHero content={heroContent} />
       <PageDivider />
@@ -363,7 +362,21 @@ const VisionPage = ({
 export default VisionPage
 
 export const query = graphql`
-  query UpgradesVisionPage {
+  query UpgradesVisionPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-upgrades-vision", "page-upgrades-index", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     oldship: file(relativePath: { eq: "upgrades/oldship.png" }) {
       childImageSharp {
         gatsbyImageData(

@@ -1,7 +1,6 @@
 {
   "layer-2-arbitrum-note": "不正証明はホワイトリストに登録されたユーザーのみ、ホワイトリストはまだ未公開。",
   "layer-2-boba-note": "検証開発中",
-  "layer-2-metis-note": "不正証明は開発中",
   "layer-2-optimism-note": "不正証明は開発中",
   "layer-2-hero-title": "レイヤー2",
   "layer-2-hero-header": "すべての人に開かれたイーサリアム",
@@ -131,5 +130,6 @@
   "layer-2-note": "注意:",
   "layer-2-ecosystem-portal": "エコシステムポータル",
   "layer-2-token-lists": "トークンリスト",
-  "layer-2-explore": "探索"
+  "layer-2-explore": "探索",
+  "page-dapps-ready-button": "次へ"
 }

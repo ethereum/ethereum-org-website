@@ -1,14 +1,13 @@
 import React from "react"
 import { Box, IconButton } from "@chakra-ui/react"
 import styled from "@emotion/styled"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import { motion } from "framer-motion"
 
 import Icon from "../Icon"
 import Link from "../Link"
 import Translation from "../Translation"
 import { NavLink } from "../SharedStyledComponents"
-import { translateMessageId } from "../../utils/translations"
 
 import { ISections } from "./types"
 
@@ -219,7 +218,7 @@ const MobileNavMenu: React.FC<IProps> = ({
   linkSections,
   fromPageParameter,
 }) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   const handleClick = (): void => {
     toggleMenu()
@@ -234,7 +233,7 @@ const MobileNavMenu: React.FC<IProps> = ({
       <IconButton
         icon={<Icon name="search" />}
         onClick={toggleSearch}
-        aria-label={translateMessageId("aria-toggle-search-button", intl)}
+        aria-label={t("aria-toggle-search-button")}
         variant="icon"
         _hover={{ svg: { fill: "primary" } }}
       />
@@ -252,7 +251,7 @@ const MobileNavMenu: React.FC<IProps> = ({
           </GlyphButton>
         }
         onClick={toggleMenu}
-        aria-label={translateMessageId("aria-toggle-search-button", intl)}
+        aria-label={t("aria-toggle-search-button")}
         variant="icon"
         _hover={{ svg: { fill: "primary" } }}
       />
@@ -272,13 +271,8 @@ const MobileNavMenu: React.FC<IProps> = ({
           {Object.keys(linkSections).map((sectionKey, idx) => {
             const section = linkSections[sectionKey]
             return section.items ? (
-              <NavListItem
-                key={idx}
-                aria-label={`Select ${translateMessageId(section.text, intl)}`}
-              >
-                <SectionTitle>
-                  <Translation id={section.text} />
-                </SectionTitle>
+              <NavListItem key={idx} aria-label={`Select ${section.text}`}>
+                <SectionTitle>{section.text}</SectionTitle>
                 <SectionItems>
                   {section.items.map((item, idx) =>
                     item.items ? (
@@ -290,7 +284,7 @@ const MobileNavMenu: React.FC<IProps> = ({
                               to={item.to}
                               isPartiallyActive={item.isPartiallyActive}
                             >
-                              <Translation id={item.text} />
+                              {item.text}
                             </StyledNavLink>
                           </SectionItem>
                         ))}
@@ -301,7 +295,7 @@ const MobileNavMenu: React.FC<IProps> = ({
                           to={item.to}
                           isPartiallyActive={item.isPartiallyActive}
                         >
-                          <Translation id={item.text} />
+                          {item.text}
                         </StyledNavLink>
                       </SectionItem>
                     )
@@ -314,7 +308,7 @@ const MobileNavMenu: React.FC<IProps> = ({
                   to={section.to}
                   isPartiallyActive={section.isPartiallyActive}
                 >
-                  <Translation id={section.text} />
+                  {section.text}
                 </NavLink>
               </NavListItem>
             )
