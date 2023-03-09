@@ -48,8 +48,8 @@ const WithdrawalsTabComparison: React.FC<IProps> = () => {
               The majority of stakers did not provide a withdrawal address on
               initial deposit, and will need to update their withdrawal
               credentials. The{" "}
-              <Link href="https://zhejiang.launchpad.ethereum.org/withdrawals">
-                Zhejiang Testnet Launchpad
+              <Link href="https://launchpad.ethereum.org/withdrawals">
+                Staking Launchpad
               </Link>{" "}
               has instructions on when and how to do this
             </ListItem>

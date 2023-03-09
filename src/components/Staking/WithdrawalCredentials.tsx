@@ -25,23 +25,25 @@ const WithdrawalCredentials: FC<IProps> = () => {
   const [validator, setValidator] = useState<Validator | null>(null)
 
   const checkWithdrawalCredentials = async (isTestnet: boolean = false) => {
+    const network = isTestnet ? "Goerli" : "Mainnet"
+    const networkLowercase = network.toLowerCase()
     trackCustomEvent({
       eventCategory: `Validator index`,
-      eventAction: `Verify on ${isTestnet ? "Goerli" : "Mainnet"}`,
+      eventAction: `Verify on ${network}`,
       eventName: `click`,
     })
     setHasError(false)
     setIsLoading((prev) => ({
       ...prev,
-      [isTestnet ? "testnet" : "mainnet"]: true,
+      [networkLowercase]: true,
     }))
-    const endpoint = `https://${
-      isTestnet ? "goerli." : ""
-    }beaconcha.in/api/v1/validator/${inputValue}`
+    const endpoint = `https://${networkLowercase}.beaconcha.in/api/v1/validator/${inputValue}`
     try {
       const response = await fetch(endpoint)
       const { data } = await response.json()
-      const withdrawalCredentials = data.withdrawalcredentials
+      const withdrawalCredentials = data.length
+        ? data[0].withdrawalcredentials
+        : data.withdrawalcredentials
       setValidator({
         validatorIndex: parseInt(inputValue),
         withdrawalCredentials,
@@ -54,7 +56,7 @@ const WithdrawalCredentials: FC<IProps> = () => {
     } finally {
       setIsLoading((prev) => ({
         ...prev,
-        [isTestnet ? "testnet" : "mainnet"]: false,
+        [networkLowercase]: false,
       }))
     }
   }
@@ -119,9 +121,13 @@ const WithdrawalCredentials: FC<IProps> = () => {
             This {validator.isTestnet ? "Goerli testnet" : ""} validator needs
             to be upgraded.
           </Text>{" "}
-          Instructions on how to upgrade can currently be found at{" "}
-          <Link to="https://zhejiang.launchpad.ethereum.org/withdrawals">
-            Zhejiang Testnet Staking Launchpad
+          Instructions on how to upgrade can currently be found at the{" "}
+          <Link
+            to={`https://${
+              validator.isTestnet ? "goerli" : "mainnet"
+            }.launchpad.ethereum.org/withdrawals`}
+          >
+            {validator.isTestnet ? "Goerli Testnet" : ""} Staking Launchpad
           </Link>
         </Text>
       </Flex>

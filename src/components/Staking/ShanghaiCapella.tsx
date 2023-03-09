@@ -72,7 +72,7 @@ const ShanghaiCapella: FC<IProps> = (props) => {
               broadcast this message once the Capella upgrade has taken place.
             </Text>
             <ButtonLink
-              to="https://zhejiang.launchpad.ethereum.org/withdrawals"
+              to="https://goerli.launchpad.ethereum.org/withdrawals"
               mt="auto"
               hideArrow
               whiteSpace="normal"
@@ -80,8 +80,7 @@ const ShanghaiCapella: FC<IProps> = (props) => {
               h="fit-content"
               py={3}
             >
-              Test your setup on Zhejiang launchpad
-              {/* TODO: Update once Withdrawals page merged to Goerli/Mainnet branches */}
+              Test your setup on Goerli launchpad
             </ButtonLink>
           </>
         }
