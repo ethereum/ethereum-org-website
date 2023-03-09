@@ -11,6 +11,7 @@ import {
 // Components
 import ButtonLink from "../ButtonLink"
 import Card from "../Card"
+import Link from "../Link"
 
 interface IProps extends FlexProps {}
 const ShanghaiCapella: FC<IProps> = (props) => {
@@ -70,6 +71,13 @@ const ShanghaiCapella: FC<IProps> = (props) => {
             <Text>
               Stakers who need to update their validator withdrawal keys can
               broadcast this message once the Capella upgrade has taken place.
+            </Text>
+            <Text>
+              <Link href="https://blog.ethereum.org/category/protocol/#subscribe">
+                Subscribe to the EF Blog
+              </Link>{" "}
+              to receive email notifications for the latest protocol
+              announcements.
             </Text>
             <ButtonLink
               to="https://goerli.launchpad.ethereum.org/withdrawals"
