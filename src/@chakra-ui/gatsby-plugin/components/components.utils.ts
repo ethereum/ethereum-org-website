@@ -61,10 +61,12 @@ export {
  * This is for merging default imported theming with custom styles.
  *
  * @param defaultTheming - The related object that comes from the Charka default themes
+ *
+ * @param styleObjs - The following style objects to be merged
  */
 export function defineMergeStyles(
-  defaultTheming: SystemStyleObject | undefined,
-  ...styleObjs: any[]
+  defaultTheming?: SystemStyleObject,
+  ...styleObjs: SystemStyleObject[] | undefined[]
 ) {
   return merge(defaultTheming, ...styleObjs)
 }
