@@ -1,6 +1,7 @@
 import { action } from "@storybook/addon-actions"
 
 import theme from "../src/@chakra-ui/gatsby-plugin/theme"
+import { reactIntl } from "./reactIntl"
 
 const chakraBreakpointArray = Object.entries(theme.breakpoints)
 
@@ -24,6 +25,8 @@ window.___navigate = (pathname) => {
 }
 
 export const parameters = {
+  reactIntl,
+  locale: reactIntl.defaultLocale,
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {
