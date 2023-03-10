@@ -7,18 +7,27 @@ const Fonts = () => (
       /* latin */
       @font-face {
         font-family: 'Inter';
-        font-style: normal;
-        font-weight: 300 800;
+        font-style:  normal;
+        font-weight: 400;
         font-display: swap;
-        src: url('/fonts/Inter.ttf') format('truetype');
+        src: url("/fonts/Inter-Regular.woff2?v=3.19") format("woff2"),
+             url("/fonts/Inter-Regular.woff?v=3.19") format("woff");
       }
       @font-face {
         font-family: 'Inter';
-        font-style: normal;
-        font-weight: 300 800;
+        font-style:  italic;
+        font-weight: 400;
         font-display: swap;
-        font-named-instance: 'Regular';
-        src: url("/fonts/Inter-roman.var.woff2") format("woff2");
+        src: url("/fonts/Inter-Italic.woff2?v=3.19") format("woff2"),
+             url("/fonts/Inter-Italic.woff?v=3.19") format("woff");
+      }
+      @font-face {
+        font-family: 'Inter';
+        font-style:  normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url("/fonts/Inter-Bold.woff2?v=3.19") format("woff2"),
+             url("/fonts/Inter-Bold.woff?v=3.19") format("woff");
       }
       `}
   />
