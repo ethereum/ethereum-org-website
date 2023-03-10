@@ -6,15 +6,8 @@ import { useDocSearchKeyboardEvents } from "@docsearch/react"
 import { DocSearchHit } from "@docsearch/react/dist/esm/types"
 import SearchButton from "./SearchButton"
 import SearchModal from "./SearchModal"
-import { IS_DEV } from "../../utils/env"
 // Styles
 import "@docsearch/css"
-
-const DEFAULT_SEARCH_CREDENTIALS = {
-  appId: "R2IYF7ETH7",
-  apiKey: "599cec31baffa4868cae4e79f180729b",
-  indexName: "docsearch",
-}
 
 const Search: FC = () => {
   const searchButtonRef = React.useRef<HTMLButtonElement>(null)
@@ -60,13 +53,9 @@ const Search: FC = () => {
       <Portal>
         {isOpen ? (
           <SearchModal
-            {...(IS_DEV
-              ? DEFAULT_SEARCH_CREDENTIALS
-              : {
-                  apiKey,
-                  appId,
-                  indexName,
-                })}
+            apiKey={apiKey}
+            appId={appId}
+            indexName={indexName}
             onClose={onClose}
             searchParameters={{
               facetFilters: [`lang:${language}`],
