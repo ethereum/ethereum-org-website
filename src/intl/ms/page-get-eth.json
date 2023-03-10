@@ -62,5 +62,6 @@
   "page-get-eth-your-address": "Alamat ETH anda",
   "page-get-eth-your-address-desc": "Apabila anda memuat turun dompet, ia akan mencipta alamat ETH awam untuk anda. Ia akan kelihatan seperti ini:",
   "page-get-eth-your-address-desc-3": "Anggap ia seperti e-mel anda, tetapi sebaliknya dengan menghantar mel, ia boleh menerima ETH. Jika anda ingin memindahkan ETH daripada pertukaran kepada dompet anda, gunakan alamat anda sebagai destinasi. Pastikan anda semak sekali lagi sebelum menghantar!",
-  "page-get-eth-your-address-wallet-link": "Lihat dompet"
+  "page-get-eth-your-address-wallet-link": "Lihat dompet",
+  "listing-policy-raise-issue-link": "Sampaikan maklum balas"
 }

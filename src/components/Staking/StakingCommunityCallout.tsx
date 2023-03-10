@@ -1,5 +1,5 @@
 import React from "react"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import styled from "@emotion/styled"
 import { graphql, useStaticQuery } from "gatsby"
 
@@ -7,7 +7,6 @@ import ButtonLink from "../ButtonLink"
 import CalloutBanner from "../CalloutBanner"
 import Translation from "../Translation"
 
-import { translateMessageId } from "../../utils/translations"
 import { trackCustomEvent } from "../../utils/matomo"
 import { getImage } from "../../utils/image"
 
@@ -34,7 +33,7 @@ export interface IProps {
 }
 
 const StakingCommunityCallout: React.FC<IProps> = (props) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const { image } = useStaticQuery(graphql`
     {
       image: file(relativePath: { eq: "enterprise-eth.png" }) {
@@ -54,7 +53,7 @@ const StakingCommunityCallout: React.FC<IProps> = (props) => {
     <StyledCallout
       {...props}
       image={getImage(image)!}
-      alt={translateMessageId("page-staking-image-alt", intl)}
+      alt={t("page-staking-image-alt")}
       titleKey={"page-staking-join-community"}
       descriptionKey={"page-staking-join-community-desc"}
     >

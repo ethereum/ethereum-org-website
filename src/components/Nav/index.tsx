@@ -1,4 +1,5 @@
 import React, { FC, useState } from "react"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Icon,
   IconButton,
@@ -10,7 +11,6 @@ import {
 import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
 import styled from "@emotion/styled"
 import { cloneDeep } from "lodash"
-import { useIntl } from "react-intl"
 
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
@@ -20,7 +20,6 @@ import Search from "../Search"
 import Translation from "../Translation"
 import { NavLink } from "../SharedStyledComponents"
 import { EthHomeIcon } from "../icons"
-import { translateMessageId } from "../../utils/translations"
 import { IItem, ISections } from "./types"
 
 const NavContainer = styled.div`
@@ -100,156 +99,152 @@ export interface IProps {
 const Nav: FC<IProps> = ({ path }) => {
   const { colorMode, toggleColorMode } = useColorMode()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   const isDarkTheme = colorMode === "dark"
 
   const linkSections: ISections = {
     useEthereum: {
-      text: "use-ethereum",
-      ariaLabel: "use-ethereum-menu",
+      text: t("use-ethereum"),
+      ariaLabel: t("use-ethereum-menu"),
       items: [
         {
-          text: "find-wallet",
+          text: t("find-wallet"),
           to: "/wallets/find-wallet/",
         },
         {
-          text: "get-eth",
+          text: t("get-eth"),
           to: "/get-eth/",
         },
         {
-          text: "decentralized-applications-dapps",
+          text: t("decentralized-applications-dapps"),
           to: "/dapps/",
         },
         {
-          text: "layer-2",
+          text: t("layer-2"),
           to: "/layer-2/",
         },
         {
-          text: "nft-page",
+          text: t("nft-page"),
           to: "/nft/",
         },
         {
-          text: "defi-page",
+          text: t("defi-page"),
           to: "/defi/",
         },
         {
-          text: "dao-page",
+          text: t("dao-page"),
           to: "/dao/",
         },
         {
-          text: "page-stablecoins-title",
+          text: t("stablecoins"),
           to: "/stablecoins/",
         },
         {
-          text: "page-stake-eth",
+          text: t("stake-eth"),
           to: "/staking/",
         },
         {
-          text: "run-a-node",
+          text: t("run-a-node"),
           to: "/run-a-node/",
         },
         {
-          text: "decentralized-social-networks",
+          text: t("decentralized-social-networks"),
           to: "/social-networks/",
         },
         {
-          text: "decentralized-identity",
+          text: t("decentralized-identity"),
           to: "/decentralized-identity/",
         },
         {
-          text: "decentralized-science",
+          text: t("decentralized-science"),
           to: "/desci/",
         },
       ],
     },
     learn: {
-      text: "learn",
-      ariaLabel: "learn-menu",
+      text: t("learn"),
+      ariaLabel: t("learn-menu"),
       items: [
         {
-          // @ts-ignore: until we add the translations
           text: "Start here",
           items: [
             {
-              // @ts-ignore: until we add the translations
-              text: "hero-title",
+              text: t("learn-hub"),
               to: "/learn/",
             },
             {
-              text: "guides-hub",
+              text: t("guides-hub"),
               to: "/guides/",
             },
           ],
         },
         {
-          // @ts-ignore: until we add the translations
           text: "Ethereum basics",
           items: [
             {
-              text: "what-is-ethereum",
+              text: t("what-is-ethereum"),
               to: "/what-is-ethereum/",
             },
             {
-              text: "what-is-ether",
+              text: t("what-is-ether"),
               to: "/eth/",
             },
             {
-              text: "ethereum-wallets",
+              text: t("ethereum-wallets"),
               to: "/wallets/",
             },
             {
-              text: "ethereum-security",
+              text: t("ethereum-security"),
               to: "/security/",
             },
             {
-              text: "web3",
+              text: t("web3"),
               to: "/web3/",
             },
             {
-              text: "smart-contracts",
+              text: t("smart-contracts"),
               to: "/smart-contracts/",
             },
           ],
         },
         {
-          // @ts-ignore: until we add the translations
           text: "Ethereum protocol",
           items: [
             {
-              text: "energy-consumption",
+              text: t("energy-consumption"),
               to: "/energy-consumption/",
             },
             {
-              text: "ethereum-roadmap",
+              text: t("ethereum-roadmap"),
               to: "/roadmap/",
             },
             {
-              text: "eips",
+              text: t("eips"),
               to: "/eips/",
             },
             {
-              text: "history-of-ethereum",
+              text: t("history-of-ethereum"),
               to: "/history/",
             },
             {
-              text: "ethereum-whitepaper",
+              text: t("ethereum-whitepaper"),
               to: "/whitepaper/",
             },
             {
-              text: "ethereum-glossary",
+              text: t("ethereum-glossary"),
               to: "/glossary/",
             },
             {
-              text: "ethereum-governance",
+              text: t("ethereum-governance"),
               to: "/governance/",
             },
             {
-              text: "bridges",
+              text: t("bridges"),
               to: "/bridges/",
             },
             {
-              text: "zero-knowledge-proofs",
+              text: t("zero-knowledge-proofs"),
               to: "/zero-knowledge-proofs/",
             },
           ],
@@ -257,79 +252,79 @@ const Nav: FC<IProps> = ({ path }) => {
       ],
     },
     developers: {
-      text: "developers",
-      ariaLabel: "page-developers-aria-label",
+      text: t("developers"),
+      ariaLabel: t("page-developers-aria-label"),
       items: [
         {
-          text: "developers-home",
+          text: t("developers-home"),
           to: "/developers/",
         },
         {
-          text: "documentation",
+          text: t("documentation"),
           to: "/developers/docs/",
         },
         {
-          text: "tutorials",
+          text: t("tutorials"),
           to: "/developers/tutorials/",
         },
         {
-          text: "learn-by-coding",
+          text: t("learn-by-coding"),
           to: "/developers/learning-tools/",
         },
         {
-          text: "set-up-local-env",
+          text: t("set-up-local-env"),
           to: "/developers/local-environment/",
         },
       ],
     },
     enterprise: {
-      text: "enterprise",
-      ariaLabel: "enterprise-menu",
+      text: t("enterprise"),
+      ariaLabel: t("enterprise-menu"),
       items: [
         {
-          text: "mainnet-ethereum",
+          text: t("mainnet-ethereum"),
           to: "/enterprise/",
         },
         {
-          text: "private-ethereum",
+          text: t("private-ethereum"),
           to: "/enterprise/private-ethereum/",
         },
       ],
     },
     community: {
-      text: "community",
-      ariaLabel: "community-menu",
+      text: t("community"),
+      ariaLabel: t("community-menu"),
       items: [
         {
-          text: "community-hub",
+          text: t("community-hub"),
           to: "/community/",
         },
         {
-          text: "ethereum-online",
+          text: t("ethereum-online"),
           to: "/community/online/",
         },
         {
-          text: "ethereum-events",
+          text: t("ethereum-events"),
           to: "/community/events/",
         },
         {
-          text: "get-involved",
+          text: t("get-involved"),
           to: "/community/get-involved/",
         },
         {
-          text: "open-research",
+          text: t("open-research"),
           to: "/community/research/",
         },
         {
-          text: "grants",
+          text: t("grants"),
           to: "/community/grants/",
         },
         {
-          text: "ethereum-support",
+          text: t("ethereum-support"),
           to: "/community/support/",
         },
         {
-          text: "language-resources",
+          text: t("language-resources"),
           to: "/community/language-resources/",
         },
       ],
@@ -338,24 +333,24 @@ const Nav: FC<IProps> = ({ path }) => {
 
   const ednLinks: Array<IItem> = [
     {
-      text: "home",
+      text: t("home"),
       to: "/developers/",
       isPartiallyActive: false,
     },
     {
-      text: "docs",
+      text: t("docs"),
       to: "/developers/docs/",
     },
     {
-      text: "tutorials",
+      text: t("tutorials"),
       to: "/developers/tutorials/",
     },
     {
-      text: "learn-by-coding",
+      text: t("learn-by-coding"),
       to: "/developers/learning-tools/",
     },
     {
-      text: "set-up-local-env",
+      text: t("set-up-local-env"),
       to: "/developers/local-environment/",
     },
   ]
@@ -378,9 +373,9 @@ const Nav: FC<IProps> = ({ path }) => {
       : ""
   return (
     <NavContainer>
-      <StyledNav aria-label={translateMessageId("nav-primary", intl)}>
+      <StyledNav aria-label={t("nav-primary")}>
         <NavContent>
-          <HomeLogoNavLink to="/" aria-label={translateMessageId("home", intl)}>
+          <HomeLogoNavLink to="/" aria-label={t("home")}>
             <HomeLogo />
           </HomeLogoNavLink>
           {/* Desktop */}
@@ -429,14 +424,14 @@ const Nav: FC<IProps> = ({ path }) => {
         </NavContent>
       </StyledNav>
       {shouldShowSubNav && (
-        <SubNav aria-label={translateMessageId("nav-developers", intl)}>
+        <SubNav aria-label={t("nav-developers")}>
           {ednLinks.map((link, idx) => (
             <NavLink
               key={idx}
               to={link.to}
               isPartiallyActive={link.isPartiallyActive}
             >
-              <Translation id={link.text} />
+              {link.text}
             </NavLink>
           ))}
         </SubNav>
