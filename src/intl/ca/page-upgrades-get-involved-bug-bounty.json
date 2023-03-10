@@ -43,7 +43,6 @@
   "page-upgrades-bug-bounty-quality-repro-desc": ": inclou codi de prova, scripts i instruccions detallades. Com més fàcil sigui reproduir i verificar la vulnerabilitat, major serà la recompensa.",
   "page-upgrades-bug-bounty-questions": "Teniu preguntes?",
   "page-upgrades-bug-bounty-rules": "Llegiu les normes",
-  "page-upgrades-bug-bounty-shard-chains": "cadenes de fragments",
   "page-upgrades-bug-bounty-slogan": "Recompenses d'errors en la capa de consens",
   "page-upgrades-bug-bounty-specs": "Llegir totes les especificacions",
   "page-upgrades-bug-bounty-specs-docs": "Documents d'especificacions",
@@ -91,5 +90,6 @@
   "page-upgrades-bug-bounty-card-text": "L'atacant de vegades pot posar un node en un estat que fa que invalidi un de cada cent certificats fets per un validador",
   "page-upgrades-bug-bounty-card-text-1": "Un atacant pot dur a terme amb èxit atacs d'eclipsi en nodes amb identificacions paritàries amb 4 bytes zero inicials",
   "page-upgrades-bug-bounty-card-text-2": "Hi ha un error de consens entre dos clients, però és difícil o poc pràctic per a l'atacant activar l'esdeveniment.",
-  "page-upgrades-bug-bounty-card-text-3": "  Hi ha un error de consens entre dos clients i és trivial per a un atacant activar l'esdeveniment."
+  "page-upgrades-bug-bounty-card-text-3": "  Hi ha un error de consens entre dos clients i és trivial per a un atacant activar l'esdeveniment.",
+  "page-upgrades-question-title": "Preguntes freqüents"
 }

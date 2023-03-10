@@ -62,5 +62,6 @@
   "page-get-eth-your-address": "Su dirección de ETH",
   "page-get-eth-your-address-desc": "Cuando descargue una cartera, creará una dirección pública de ETH para usted. Tendrá el siguiente aspecto:",
   "page-get-eth-your-address-desc-3": "Piense en esto como si fuera su dirección de correo electrónico, pero en lugar de correo recibe ETH. Si quiere transferir ETH de un intercambio a su cartera, utilice su dirección como destino. Asegúrese de revisarlo siempre cuidadosamente antes de enviar.",
-  "page-get-eth-your-address-wallet-link": "Revisar las carteras"
+  "page-get-eth-your-address-wallet-link": "Revisar las carteras",
+  "listing-policy-raise-issue-link": "Crear una incidencia"
 }

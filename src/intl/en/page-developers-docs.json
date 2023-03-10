@@ -132,5 +132,13 @@
   "page-calltocontribute-link": "documentation template",
   "page-calltocontribute-link-2": "Discord server",
   "page-calltocontribute-span": "Edit page",
-  "page-calltocontribute-title": "Help us with this page"
+  "page-calltocontribute-title": "Help us with this page",
+  "layer-2-arbitrum-note": "Fraud proofs only for whitelisted users, whitelist not open yet",
+  "layer-2-boba-note": "State validation in development",
+  "layer-2-metis-note": "Fraud proofs in development",
+  "layer-2-optimism-note": "Fault proofs in development",
+  "back-to-top": "Back to top",
+  "banner-page-incomplete": "This page is incomplete and we'd love your help. Edit this page and add anything that you think might be useful to others.",
+  "next": "Next",
+  "previous": "Previous"
 }

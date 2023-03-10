@@ -26,5 +26,6 @@
   "page-learning-tools-sandbox-desc": "സ്മാർട്ട് കരാറുകൾ എഴുതുന്നതിനും Ethereumനെ മനസിലാക്കുന്നതിനും പരീക്ഷിക്കാൻ ഈ സാൻ‌ഡ്‌ബോക്സുകൾ‌ ഒരു ഇടം നൽകും.",
   "page-learning-tools-studio-description": "സ്മാർട്ട് കരാറുകൾ സൃഷ്ടിക്കുന്നതിനും പരിശോധിക്കുന്നതിനും ട്യൂട്ടോറിയലുകൾ പിന്തുടരാനും അവയ്‌ക്കായി ഒരു ഫ്രണ്ട് എൻഡ് നിർമ്മിക്കാനും കഴിയുന്ന ഒരു വെബ് അധിഷ്‌ഠിത IDE.",
   "page-learning-tools-vyperfun-description": "നിങ്ങളുടെ സ്വന്തം പോക്കിമോൻ ഗെയിം നിർമ്മിക്കുന്നത് വൈപ്പർ പഠിക്കുക.",
-  "page-learning-tools-vyperfun-logo-alt": "Vyper.fun ലോഗോ"
+  "page-learning-tools-vyperfun-logo-alt": "Vyper.fun ലോഗോ",
+  "alt-eth-blocks": "ഒരു ETH ചിഹ്നം പോലെ ക്രമീകരിച്ചിരിക്കുന്ന ബ്ലോക്കുകളുടെ ചിത്രീകരണം"
 }

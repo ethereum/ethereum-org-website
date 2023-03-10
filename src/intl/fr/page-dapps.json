@@ -209,5 +209,8 @@
   "page-dapps-more-on-nft-button": "En savoir plus sur les objets de collection tokenisés",
   "page-dapps-more-on-nft-gaming-button": "En savoir plus sur les objets en jeu tokenisés",
   "page-dapps-dapp-description-pwn": "Prêts faciles garantis par n'importe quel jeton ou NFT sur Ethereum.",
-  "page-dapps-pwn-image-alt": "Logo PWN"
+  "page-dapps-pwn-image-alt": "Logo PWN",
+  "foundation": "Fondation",
+  "transaction-fees": "Quels sont les frais de transaction ?",
+  "page-wallets-get-some": "Obtenir de l'ETH"
 }

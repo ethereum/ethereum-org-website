@@ -178,5 +178,8 @@
   "page-dapps-wallet-callout-title": "Pogledajte novčanike",
   "page-dapps-warning-header": "Uvijek provedite vlastita istraživanja",
   "page-dapps-warning-message": "Ethereum je nova tehnologija i većina aplikacija je nova. Prije polaganja velike količine novca, provjerite razumijete li rizike.",
-  "page-dapps-what-are-dapps": "Što su dapps-ovi?"
+  "page-dapps-what-are-dapps": "Što su dapps-ovi?",
+  "foundation": "Zaklada",
+  "transaction-fees": "Što su naknade za transakcije?",
+  "page-wallets-get-some": "Nabavite nešto ETH-a"
 }

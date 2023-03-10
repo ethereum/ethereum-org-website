@@ -45,4 +45,5 @@ const theme: ThemeOverride = {
   components,
 }
 
+// TODO: use `extendBaseTheme` when updating theming for components for new DS
 export default extendTheme(theme)

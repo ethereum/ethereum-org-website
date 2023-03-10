@@ -8,7 +8,6 @@
   "page-developers-advanced": "Napredno",
   "page-developers-api-desc": "Interakcija s pametnim ugovorima kroz korištenje knjižnica",
   "page-developers-api-link": "Pozadinski API-ji",
-  "page-developers-aria-label": "Programerski izbornik",
   "page-developers-block-desc": "Skup transakcija dodanih u lanac blokova",
   "page-developers-block-explorers-desc": "Vaš ulaz u Ethereummove podatke",
   "page-developers-block-explorers-link": "Istraživači blokova",
@@ -80,5 +79,7 @@
   "page-developers-transactions-desc": "Kako se mijenja stanje Ethereuma",
   "page-developers-transactions-link": "Transakcije",
   "page-developers-web3-desc": "Kako je svijet razvijanja sa web3 drugačiji",
-  "page-developers-web3-link": "Web2 ili Web3"
+  "page-developers-web3-link": "Web2 ili Web3",
+  "alt-eth-blocks": "Ilustracija blokova posloženih kao simbol ETH-a",
+  "page-assets-doge": "Doge upotrebljava dapps-ove"
 }
