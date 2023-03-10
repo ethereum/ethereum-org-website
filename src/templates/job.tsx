@@ -395,7 +395,18 @@ const JobPage = ({
 }
 
 export const JobQuery = graphql`
-  query JobPage($relativePath: String) {
+  query JobPage($languagesToFetch: [String!]!, $relativePath: String) {
+    locales: allLocale(
+      filter: { language: { in: $languagesToFetch }, ns: { in: ["common"] } }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     mdx(fields: { relativePath: { eq: $relativePath } }) {
       frontmatter {
         title

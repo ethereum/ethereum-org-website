@@ -4,7 +4,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import { keyframes } from "@emotion/react"
 import styled from "@emotion/styled"
 import { Icon as ChakraIcon } from "@chakra-ui/react"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 // Components
 import ButtonLink from "../ButtonLink"
@@ -46,7 +46,6 @@ import {
 // Utils
 import { trackCustomEvent } from "../../utils/matomo"
 import { getImage } from "../../utils/image"
-import { translateMessageId } from "../../utils/translations"
 
 // Styles
 const Container = styled.table`
@@ -480,136 +479,130 @@ const secondCol = "secondCol"
 const thirdCol = "thirdCol"
 
 const WalletTable = ({ data, filters, walletData }) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const featureDropdownItems: Array<DropdownOption> = [
     {
-      label: translateMessageId("page-find-wallet-open-source", intl),
-      value: translateMessageId("page-find-wallet-open-source", intl),
+      label: t("page-find-wallet-open-source"),
+      value: t("page-find-wallet-open-source"),
       filterKey: "open_source",
       category: "security",
       icon: <OpenSourceWalletIcon />,
     },
     {
-      label: translateMessageId("page-find-wallet-self-custody", intl),
-      value: translateMessageId("page-find-wallet-self-custody", intl),
+      label: t("page-find-wallet-self-custody"),
+      value: t("page-find-wallet-self-custody"),
       filterKey: "non_custodial",
       category: "security",
       icon: <NonCustodialIcon />,
     },
     {
-      label: translateMessageId(
-        "page-find-wallet-hardware-wallet-support",
-        intl
-      ),
-      value: translateMessageId(
-        "page-find-wallet-hardware-wallet-support",
-        intl
-      ),
+      label: t("page-find-wallet-hardware-wallet-support"),
+      value: t("page-find-wallet-hardware-wallet-support"),
       filterKey: "hardware_support",
       category: "feature",
       icon: <HardwareSupportIcon />,
     },
     {
-      label: translateMessageId("page-find-wallet-walletconnect", intl),
-      value: translateMessageId("page-find-wallet-walletconnect", intl),
+      label: t("page-find-wallet-walletconnect"),
+      value: t("page-find-wallet-walletconnect"),
       filterKey: "walletconnect",
       category: "feature",
       icon: <WalletConnectIcon />,
     },
     {
-      label: translateMessageId("page-find-wallet-rpc-importing", intl),
-      value: translateMessageId("page-find-wallet-rpc-importing", intl),
+      label: t("page-find-wallet-rpc-importing"),
+      value: t("page-find-wallet-rpc-importing"),
       filterKey: "rpc_importing",
       category: "feature",
       icon: <RPCImportingIcon />,
     },
     {
-      label: translateMessageId("page-find-wallet-nft-support", intl),
-      value: translateMessageId("page-find-wallet-nft-support", intl),
+      label: t("page-find-wallet-nft-support"),
+      value: t("page-find-wallet-nft-support"),
       filterKey: "nft_support",
       category: "feature",
       icon: <NFTSupportIcon />,
     },
     {
-      label: translateMessageId("page-find-wallet-connect-to-dapps", intl),
-      value: translateMessageId("page-find-wallet-connect-to-dapps", intl),
+      label: t("page-find-wallet-connect-to-dapps"),
+      value: t("page-find-wallet-connect-to-dapps"),
       filterKey: "connect_to_dapps",
       category: "feature",
       icon: <ConnectDappsIcon />,
     },
     {
-      label: translateMessageId("page-find-wallet-staking", intl),
-      value: translateMessageId("page-find-wallet-staking", intl),
+      label: t("page-find-wallet-staking"),
+      value: t("page-find-wallet-staking"),
       filterKey: "staking",
       category: "feature",
       icon: <StakingIcon />,
     },
     {
-      label: translateMessageId("page-find-wallet-swaps", intl),
-      value: translateMessageId("page-find-wallet-swaps", intl),
+      label: t("page-find-wallet-swaps"),
+      value: t("page-find-wallet-swaps"),
       filterKey: "swaps",
       category: "feature",
       icon: <SwapIcon />,
     },
     {
-      label: translateMessageId("page-find-wallet-layer-2", intl),
-      value: translateMessageId("page-find-wallet-layer-2", intl),
+      label: t("page-find-wallet-layer-2"),
+      value: t("page-find-wallet-layer-2"),
       filterKey: "layer_2",
       category: "feature",
       icon: <Layer2Icon />,
     },
     {
-      label: translateMessageId("page-find-wallet-gas-fee-customization", intl),
-      value: translateMessageId("page-find-wallet-gas-fee-customization", intl),
+      label: t("page-find-wallet-gas-fee-customization"),
+      value: t("page-find-wallet-gas-fee-customization"),
       filterKey: "gas_fee_customization",
       category: "feature",
       icon: <GasFeeCustomizationIcon />,
     },
     {
-      label: translateMessageId("page-find-wallet-ens-support", intl),
-      value: translateMessageId("page-find-wallet-ens-support", intl),
+      label: t("page-find-wallet-ens-support"),
+      value: t("page-find-wallet-ens-support"),
       filterKey: "ens_support",
       category: "feature",
       icon: <ENSSupportIcon />,
     },
     {
-      label: translateMessageId("page-find-wallet-token-importing", intl),
-      value: translateMessageId("page-find-wallet-token-importing", intl),
+      label: t("page-find-wallet-token-importing"),
+      value: t("page-find-wallet-token-importing"),
       filterKey: "erc_20_support",
       category: "feature",
       icon: <ERC20SupportIcon />,
     },
     {
-      label: translateMessageId("page-find-wallet-fee-optimization", intl),
-      value: translateMessageId("page-find-wallet-fee-optimization", intl),
+      label: t("page-find-wallet-fee-optimization"),
+      value: t("page-find-wallet-fee-optimization"),
       filterKey: "eip_1559_support",
       category: "feature",
       icon: <EIP1559Icon />,
     },
     {
-      label: translateMessageId("page-find-wallet-buy-crypto", intl),
-      value: translateMessageId("page-find-wallet-buy-crypto", intl),
+      label: t("page-find-wallet-buy-crypto"),
+      value: t("page-find-wallet-buy-crypto"),
       filterKey: "buy_crypto",
       category: "trade_and_buy",
       icon: <BuyCryptoIcon />,
     },
     {
-      label: translateMessageId("page-find-wallet-sell-for-fiat", intl),
-      value: translateMessageId("page-find-wallet-sell-for-fiat", intl),
+      label: t("page-find-wallet-sell-for-fiat"),
+      value: t("page-find-wallet-sell-for-fiat"),
       filterKey: "withdraw_crypto",
       category: "trade_and_buy",
       icon: <WithdrawCryptoIcon />,
     },
     {
-      label: translateMessageId("page-find-wallet-multisig", intl),
-      value: translateMessageId("page-find-wallet-multisig", intl),
+      label: t("page-find-wallet-multisig"),
+      value: t("page-find-wallet-multisig"),
       filterKey: "multisig",
       category: "smart_contract",
       icon: <MultisigIcon />,
     },
     {
-      label: translateMessageId("page-find-wallet-social-recovery", intl),
-      value: translateMessageId("page-find-wallet-social-recovery", intl),
+      label: t("page-find-wallet-social-recovery"),
+      value: t("page-find-wallet-social-recovery"),
       filterKey: "social_recovery",
       category: "smart_contract",
       icon: <SocialRecoverIcon />,
@@ -801,9 +794,8 @@ const WalletTable = ({ data, filters, walletData }) => {
                         <Tooltip
                           content={
                             <p>
-                              {translateMessageId(
-                                walletFilterData[feature.filterKey].description,
-                                intl
+                              {t(
+                                walletFilterData[feature.filterKey].description
                               )}
                             </p>
                           }
@@ -837,9 +829,8 @@ const WalletTable = ({ data, filters, walletData }) => {
                         <Tooltip
                           content={
                             <p>
-                              {translateMessageId(
-                                walletFilterData[feature.filterKey].description,
-                                intl
+                              {t(
+                                walletFilterData[feature.filterKey].description
                               )}
                             </p>
                           }
@@ -856,12 +847,8 @@ const WalletTable = ({ data, filters, walletData }) => {
             </WalletMoreInfoCategory>
             <WalletMoreInfoCategory>
               <h4>
-                {`${translateMessageId(
-                  "page-find-wallet-buy-crypto",
-                  intl
-                )} / ${translateMessageId(
-                  "page-find-wallet-sell-for-fiat",
-                  intl
+                {`${t("page-find-wallet-buy-crypto")} / ${t(
+                  "page-find-wallet-sell-for-fiat"
                 )}`}
               </h4>
               <Features>
@@ -879,9 +866,8 @@ const WalletTable = ({ data, filters, walletData }) => {
                         <Tooltip
                           content={
                             <p>
-                              {translateMessageId(
-                                walletFilterData[feature.filterKey].description,
-                                intl
+                              {t(
+                                walletFilterData[feature.filterKey].description
                               )}
                             </p>
                           }
@@ -915,9 +901,8 @@ const WalletTable = ({ data, filters, walletData }) => {
                         <Tooltip
                           content={
                             <p>
-                              {translateMessageId(
-                                walletFilterData[feature.filterKey].description,
-                                intl
+                              {t(
+                                walletFilterData[feature.filterKey].description
                               )}
                             </p>
                           }
@@ -942,15 +927,12 @@ const WalletTable = ({ data, filters, walletData }) => {
                   eventValue: filters,
                 }}
               >
-                {`${translateMessageId("page-find-wallet-check-out", intl)} ${
-                  wallet.name
-                }`}
+                {`${t("page-find-wallet-check-out")} ${wallet.name}`}
               </ButtonLink>
               <i>
-                {`${wallet.name} ${translateMessageId(
-                  "page-find-wallet-info-updated-on",
-                  intl
-                )} ${wallet.last_updated}`}
+                {`${wallet.name} ${t("page-find-wallet-info-updated-on")} ${
+                  wallet.last_updated
+                }`}
               </i>
             </LastUpdated>
           </div>
@@ -965,16 +947,16 @@ const WalletTable = ({ data, filters, walletData }) => {
         <th>
           {filteredWallets.length === walletCardData.length ? (
             <p>
-              {translateMessageId("page-find-wallet-showing-all-wallets", intl)}{" "}
-              (<strong>{walletCardData.length}</strong>)
+              {t("page-find-wallet-showing-all-wallets")} (
+              <strong>{walletCardData.length}</strong>)
             </p>
           ) : (
             <p>
-              {translateMessageId("page-find-wallet-showing", intl)}{" "}
+              {t("page-find-wallet-showing")}{" "}
               <strong>
                 {filteredWallets.length} / {walletCardData.length}
               </strong>{" "}
-              {translateMessageId("page-find-wallet-wallets", intl)}
+              {t("page-find-wallet-wallets")}
             </p>
           )}
         </th>
@@ -984,7 +966,7 @@ const WalletTable = ({ data, filters, walletData }) => {
             classNamePrefix="react-select"
             options={[
               {
-                label: translateMessageId("page-find-choose-to-compare", intl),
+                label: t("page-find-choose-to-compare"),
                 options: [...filteredFeatureDropdownItems],
               },
             ]}
@@ -1001,7 +983,7 @@ const WalletTable = ({ data, filters, walletData }) => {
             classNamePrefix="react-select"
             options={[
               {
-                label: translateMessageId("page-find-choose-to-compare", intl),
+                label: t("page-find-choose-to-compare"),
                 options: [...filteredFeatureDropdownItems],
               },
             ]}
@@ -1018,7 +1000,7 @@ const WalletTable = ({ data, filters, walletData }) => {
             classNamePrefix="react-select"
             options={[
               {
-                label: translateMessageId("page-find-choose-to-compare", intl),
+                label: t("page-find-choose-to-compare"),
                 options: [...filteredFeatureDropdownItems],
               },
             ]}
@@ -1033,32 +1015,14 @@ const WalletTable = ({ data, filters, walletData }) => {
       {filteredWallets.map((wallet, idx) => {
         const deviceLabels: Array<string> = []
 
-        wallet.ios &&
-          deviceLabels.push(translateMessageId("page-find-wallet-iOS", intl))
-        wallet.android &&
-          deviceLabels.push(
-            translateMessageId("page-find-wallet-android", intl)
-          )
-        wallet.linux &&
-          deviceLabels.push(translateMessageId("page-find-wallet-linux", intl))
-        wallet.windows &&
-          deviceLabels.push(
-            translateMessageId("page-find-wallet-windows", intl)
-          )
-        wallet.macOS &&
-          deviceLabels.push(translateMessageId("page-find-wallet-macOS", intl))
-        wallet.chromium &&
-          deviceLabels.push(
-            translateMessageId("page-find-wallet-chromium", intl)
-          )
-        wallet.firefox &&
-          deviceLabels.push(
-            translateMessageId("page-find-wallet-firefox", intl)
-          )
-        wallet.hardware &&
-          deviceLabels.push(
-            translateMessageId("page-find-wallet-hardware", intl)
-          )
+        wallet.ios && deviceLabels.push(t("page-find-wallet-iOS"))
+        wallet.android && deviceLabels.push(t("page-find-wallet-android"))
+        wallet.linux && deviceLabels.push(t("page-find-wallet-linux"))
+        wallet.windows && deviceLabels.push(t("page-find-wallet-windows"))
+        wallet.macOS && deviceLabels.push(t("page-find-wallet-macOS"))
+        wallet.chromium && deviceLabels.push(t("page-find-wallet-chromium"))
+        wallet.firefox && deviceLabels.push(t("page-find-wallet-firefox"))
+        wallet.hardware && deviceLabels.push(t("page-find-wallet-hardware"))
 
         return (
           <WalletContainer key={wallet.key}>

@@ -1,9 +1,8 @@
 import React from "react"
 import { Icon, Link as ChakraLink, LinkProps, useTheme } from "@chakra-ui/react"
 import { navigate as gatsbyNavigate } from "gatsby"
-import { LocalizedLink as IntlLink } from "gatsby-theme-i18n"
+import { Link as IntlLink } from "gatsby-plugin-react-i18next"
 import { NavigateOptions } from "@reach/router"
-import { IntlShape } from "react-intl"
 
 import { BsQuestionSquareFill } from "react-icons/bs"
 
@@ -57,7 +56,7 @@ const Link: React.FC<IProps> = ({
 
   // TODO: in the next PR we are going to deprecate the `to` prop and just use `href`
   // this is to support the ButtonLink component which uses the `to` prop
-  const to = (toProp || href)!
+  const to = (toProp ?? href)!
 
   const isExternal = url.isExternal(to)
   const isHash = url.isHash(to)
@@ -167,14 +166,14 @@ const Link: React.FC<IProps> = ({
 
 export function navigate(
   to: string,
-  intl: IntlShape,
+  language: Lang,
   options?: NavigateOptions<{}>
 ) {
   if (typeof window === "undefined") {
     return
   }
 
-  const link = `/${intl.locale as Lang}${to}`
+  const link = `/${language}${to}`
   gatsbyNavigate(link, options)
 }
 

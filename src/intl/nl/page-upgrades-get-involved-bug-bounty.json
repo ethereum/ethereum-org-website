@@ -43,7 +43,6 @@
   "page-upgrades-bug-bounty-quality-repro-desc": ": voeg testcode, scripts en gedetailleerde instructies toe. Hoe makkelijker het is voor ons om de kwetsbaarheid te reproduceren en te verifiëren, hoe hoger de beloning.",
   "page-upgrades-bug-bounty-questions": "Vragen?",
   "page-upgrades-bug-bounty-rules": "Lees de regels",
-  "page-upgrades-bug-bounty-shard-chains": "shardketens",
   "page-upgrades-bug-bounty-slogan": "Beloningen voor bugs in de consensuslaag",
   "page-upgrades-bug-bounty-specs": "Lees alle specificaties",
   "page-upgrades-bug-bounty-specs-docs": "Specificatiedocumenten",
@@ -91,5 +90,6 @@
   "page-upgrades-bug-bounty-card-text": "Een aanvaller kan soms een node in een staat plaatsen die ervoor zorgt dat het een bevestiging laat vallen uit elke honderd bevestigingen die door een validator worden gemaakt",
   "page-upgrades-bug-bounty-card-text-1": "Een aanvaller kan succesvol eclipsaanvallen uitvoeren op nodes met peer-id's met de 4 eerste nul bytes",
   "page-upgrades-bug-bounty-card-text-2": "Er is sprake van een consensus-bug tussen twee clients, maar het is moeilijk of onpraktisch voor de aanvaller om de gebeurtenis te activeren.",
-  "page-upgrades-bug-bounty-card-text-3": "Er is sprake van een consensus-bug tussen twee clients, en het is triviaal voor de aanvaller om de gebeurtenis te activeren."
+  "page-upgrades-bug-bounty-card-text-3": "Er is sprake van een consensus-bug tussen twee clients, en het is triviaal voor de aanvaller om de gebeurtenis te activeren.",
+  "page-upgrades-question-title": "Veelgestelde vragen"
 }

@@ -8,7 +8,6 @@
   "page-developers-advanced": "詳細",
   "page-developers-api-desc": "ライブラリを使用してスマートコントラクトとやり取りする",
   "page-developers-api-link": "バックエンドAPI",
-  "page-developers-aria-label": "デベロッパー向けメニュー",
   "page-developers-block-desc": "ブロックチェーンに追加されたトランザクションのバッチ数",
   "page-developers-block-explorers-desc": "イーサリアムデータへのポータル",
   "page-developers-block-explorers-link": "ブロックエクスプローラー",
@@ -92,5 +91,7 @@
   "page-developers-networking-layer-desc": "イーサリアムネットワークレイヤー入門",
   "page-developers-data-structures-and-encoding": "データ構造とエンコード",
   "page-developers-data-structures-and-encoding-link": "データ構造とエンコード",
-  "page-developers-data-structures-and-encoding-desc": "イーサリアムスタックで使用されるデータ構造とエンコーディングスキーマ入門"
+  "page-developers-data-structures-and-encoding-desc": "イーサリアムスタックで使用されるデータ構造とエンコーディングスキーマ入門",
+  "alt-eth-blocks": "ETHの記号のように構成されているブロックの図",
+  "page-assets-doge": "Dogeはdappsを使っている"
 }

@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "react-intl"
+import { useI18next } from "gatsby-plugin-react-i18next"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
@@ -160,9 +160,9 @@ const components = {
 
 const StaticPage = ({
   data: { siteData, pageData: mdx },
-  pageContext: { relativePath },
+  pageContext: { relativePath, slug },
 }: PageProps<Queries.StaticPageQuery, Context>) => {
-  const intl = useIntl()
+  const { language } = useI18next()
 
   if (!siteData || !mdx?.frontmatter || !mdx.parent)
     throw new Error(
@@ -189,8 +189,6 @@ const StaticPage = ({
   const { editContentUrl } = siteData.siteMetadata || {}
   const absoluteEditPath = `${editContentUrl}${relativePath}`
 
-  const slug = mdx.fields?.slug || ""
-
   return (
     <Container>
       {showPostMergeBanner && (
@@ -206,10 +204,10 @@ const StaticPage = ({
         <ContentContainer>
           <Breadcrumbs slug={slug} />
           <LastUpdated
-            dir={isLangRightToLeft(intl.locale as Lang) ? "rtl" : "ltr"}
+            dir={isLangRightToLeft(language as Lang) ? "rtl" : "ltr"}
           >
             <Translation id="page-last-updated" />:{" "}
-            {getLocaleTimestamp(intl.locale as Lang, lastUpdatedDate)}
+            {getLocaleTimestamp(language as Lang, lastUpdatedDate)}
           </LastUpdated>
           <MobileTableOfContents
             editPath={absoluteEditPath}
@@ -237,7 +235,21 @@ const StaticPage = ({
 }
 
 export const staticPageQuery = graphql`
-  query StaticPage($relativePath: String) {
+  query StaticPage($languagesToFetch: [String!]!, $relativePath: String) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-about", "page-community", "learn-quizzes", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     siteData: site {
       siteMetadata {
         editContentUrl

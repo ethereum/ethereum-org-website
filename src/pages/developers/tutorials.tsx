@@ -1,10 +1,9 @@
 import React, { useEffect, useMemo, useState } from "react"
 import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "react-intl"
+import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 
 import Translation from "../../components/Translation"
-import { translateMessageId } from "../../utils/translations"
 import Icon from "../../components/Icon"
 import ButtonLink from "../../components/ButtonLink"
 import Link from "../../components/Link"
@@ -260,9 +259,9 @@ const TutorialsPage = ({
       filterTutorialsByLang(
         data.allTutorials.nodes,
         externalTutorials,
-        pageContext.locale
+        pageContext.language
       ),
-    [pageContext.locale]
+    [pageContext.language]
   )
 
   const allTags = useMemo(
@@ -270,7 +269,8 @@ const TutorialsPage = ({
     [filteredTutorialsByLang]
   )
 
-  const intl = useIntl()
+  const { t } = useTranslation()
+  const { language } = useI18next()
   const [isModalOpen, setModalOpen] = useState(false)
   const [filteredTutorials, setFilteredTutorials] = useState(
     filteredTutorialsByLang
@@ -305,11 +305,8 @@ const TutorialsPage = ({
   return (
     <StyledPage>
       <PageMetadata
-        title={translateMessageId("page-tutorials-meta-title", intl)}
-        description={translateMessageId(
-          "page-tutorials-meta-description",
-          intl
-        )}
+        title={t("page-tutorials-meta-title")}
+        description={t("page-tutorials-meta-description")}
       />
       <PageTitle>
         <Translation id="page-tutorial-title" />
@@ -428,7 +425,7 @@ const TutorialsPage = ({
                 {/* TODO: Refactor each tutorial tag as a component */}
                 <Emoji text=":writing_hand:" fontSize="sm" mr={2} />
                 {tutorial.author} •
-                {published(intl.locale, tutorial.published ?? "")}
+                {published(language, tutorial.published ?? "")}
                 {tutorial.timeToRead && (
                   <>
                     {" "}
@@ -463,7 +460,21 @@ const TutorialsPage = ({
 export default TutorialsPage
 
 export const query = graphql`
-  query DevelopersTutorialsPage {
+  query DevelopersTutorialsPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-developers-tutorials", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     allTutorials: allMdx(
       filter: { slug: { regex: "/tutorials/" } }
       sort: { frontmatter: { published: DESC } }
