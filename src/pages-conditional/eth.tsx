@@ -467,9 +467,6 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
           <p>
             <Translation id="page-eth-has-value-desc-4" />
           </p>
-          <p>
-            <Translation id="page-eth-has-value-desc-5" />
-          </p>
         </LeftColumn>
         <RightColumn>
           <CardList content={cardListContent} />
