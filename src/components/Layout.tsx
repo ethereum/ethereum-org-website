@@ -8,7 +8,6 @@ import { Flex } from "@chakra-ui/react"
 import { lightTheme, darkTheme } from "../theme"
 
 import Footer from "./Footer"
-import Link from "./Link"
 import ZenMode from "./ZenMode"
 import Nav from "./Nav"
 import SideNav from "./SideNav"
@@ -17,7 +16,6 @@ import TranslationBanner from "./TranslationBanner"
 import TranslationBannerLegal from "./TranslationBannerLegal"
 import FeedbackWidget from "./FeedbackWidget"
 import { SkipLink, SkipLinkAnchor } from "./SkipLink"
-import DismissableBanner from "./Banners/DismissableBanner"
 
 import { ZenModeContext } from "../contexts/ZenModeContext"
 
@@ -143,19 +141,6 @@ const Layout: React.FC<IProps> = ({
                 </ZenMode>
               )}
               <Flex flexDirection="column" width="100%">
-                <DismissableBanner storageKey="kzgCeremony">
-                  <Text m={0} p={0}>
-                    Ethereum needs help summoning a shared secret to continue to
-                    scale. Make your contribution at the{" "}
-                    {
-                      <Link to="https://ceremony.ethereum.org/">
-                        KZG ceremony
-                      </Link>
-                    }
-                    !
-                  </Text>
-                </DismissableBanner>
-
                 <Flex
                   justifyContent="space-around"
                   alignItems="flex-start"
