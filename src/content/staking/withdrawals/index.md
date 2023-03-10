@@ -13,7 +13,7 @@ summaryPoints:
   - Validators who fully exit staking will receive their remaining balance
 ---
 
-<UpgradeStatus dateKey="page-upgrades-withdrawals">
+<UpgradeStatus dateKey="page-staking-withdrawals-when">
   Staking withdrawals will be enabled through the Shanghai/Capella upgrade. This Ethereum network upgrade is expected to take place in the first half of 2023. <a href="#when" customEventOptions={{ eventCategory: "Anchor link", eventAction: "When's it shipping?", eventName: "click" }}>More below</a>
 </UpgradeStatus>
 
