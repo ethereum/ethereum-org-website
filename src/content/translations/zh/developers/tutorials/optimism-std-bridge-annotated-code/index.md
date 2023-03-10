@@ -1,10 +1,10 @@
 ---
-title: "乐观解决方案标准链桥合约演示"
-description: 乐观解决方案标准链桥如何运作？ 为什么它会这样工作？
+title: "Optimism标准链桥合约演示"
+description: Optimism标准链桥如何运作？ 为什么它会这样工作？
 author: Ori Pomerantz
 tags:
   - "solidity"
-  - "乐观解决方案"
+  - "Optimism"
   - "链桥"
   - "二层网络"
 skill: intermediate
@@ -12,11 +12,11 @@ published: 2022-03-30
 lang: zh
 ---
 
-[乐观解决方案](https://www.optimism.io/)采用[乐观卷叠](/developers/docs/scaling/optimistic-rollups/)技术。 乐观卷叠能够以比以太坊主网（也称“第一层”）低得多的价格处理交易，因为交易只是由几个节点而非网络上的所有节点处理。 同时所有数据都已写入第一层，因此一切都能够得到证明并重建，并且具有主网的所有完整性和可用性保证。
+[Optimism](https://www.optimism.io/)采用[乐观卷叠(Optimistic Rollup)](/developers/docs/scaling/optimistic-rollups/)技术。 乐观卷叠能够以比以太坊主网（也称“第一层”）低得多的价格处理交易，因为交易只是由几个节点而非网络上的所有节点处理。 同时所有数据都已写入第一层，因此一切都能够得到证明并重建，并且具有主网的所有完整性和可用性保证。
 
-要在乐观解决方案（或任何其他第二层）上使用第一层资产，需要[桥接](/bridges/#prerequisites)该资产。 实现这一点的一种方法是，用户在第一层上锁定资产（以太币和 [ERC-20 代币](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/)是最常见的资产）并收到相应资产，供在第二层上使用。 最后，拥有这些资产的任何人可能想把它们桥接回第一层。 在桥接过程中，资产会在第二层销毁，然后在第一层上发放给用户。
+要在Optimism（或任何其他第二层）上使用第一层资产，需要[桥接](/bridges/#prerequisites)该资产。 实现这一点的一种方法是，用户在第一层上锁定资产（以太币和 [ERC-20 代币](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/)是最常见的资产）并收到相应资产，供在第二层上使用。 最后，拥有这些资产的任何人可能想把它们桥接回第一层。 在桥接过程中，资产会在第二层销毁，然后在第一层上发放给用户。
 
-这就是[乐观解决方案标准链桥](https://community.optimism.io/docs/developers/bridge/standard-bridge)的工作方式。 在本文中，我们将学习链桥的源代码，看看它如何工作，并将它作为精心编写的 Solidity 代码示例加以研究。
+这就是[Optimism标准链桥](https://community.optimism.io/docs/developers/bridge/standard-bridge)的工作方式。 在本文中，我们将学习链桥的源代码，看看它如何工作，并将它作为精心编写的 Solidity 代码示例加以研究。
 
 ## 控制流通 {#control-flows}
 
@@ -38,8 +38,8 @@ lang: zh
 
 #### 二层网络 {#deposit-flow-layer-2}
 
-5. 第二层链桥验证调用 `finalizeDeposit` 是否合法：
-   - 来自交叉域信息合约
+5. 第二层链桥验证对 `finalizeDeposit` 的调用是否合法：
+   - 来自跨域信息合约
    - 最初来自第一层链桥
 6. 第二层链桥检查第二层上的 ERC-20 代币合约是否正确：
    - 第二层合约报告，对应的第一层合约与第一层上提供代币的合约相同
@@ -70,13 +70,13 @@ lang: zh
 [此接口在此处定义](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1ERC20Bridge.sol)。 其中包括桥接 ERC-20 代币所需的函数和定义。
 
 ```solidity
-/ SPDX-许可标识符： MIT
+// SPDX-License-Identifier: MIT
 ```
 
-[大多数乐观解决方案代码都是依据 MIT 许可证发布的](https://help.optimism.io/hc/en-us/articles/4411908707995-What-software-license-does-Optimism-use-)。
+[大多数Optimism代码都是依据 MIT 许可证发布的](https://help.optimism.io/hc/en-us/articles/4411908707995-What-software-license-does-Optimism-use-)。
 
 ```solidity
-实用性 >0.5.0 <0.9.0;
+pragma solidity >0.5.0 <0.9.0;
 ```
 
 编写代码时，Solidity 最新版本为 0.8.12。 在 0.9.0 版发布之前，我们不知道这段代码是否与它兼容。
@@ -85,69 +85,70 @@ lang: zh
 /**
  * @title IL1ERC20Bridge
  */
-接口 IL1ERC20Bridge 然后
-    /**************
-     * 事件 *
+interface IL1ERC20Bridge {
+    /**********
+     * Events *
      **********/
 
-    事件 ERC20DepositInitiated(
+    event ERC20DepositInitiated(
 ```
 
-在乐观解决方案链桥术语中，*存款*是指从第一层转账到第二层，*提款*是指从第二层转账到第一层。
+在Optimism链桥术语中，*存款*是指从第一层转账到第二层，*提款*是指从第二层转账到第一层。
 
 ```solidity
-        地址索引_l1Token,
-        地址索引_l2Token,
+        address indexed _l1Token,
+        address indexed _l2Token,
 ```
 
-大多数情况下，第一层上的 ERC-20 地址与第二层上对应的 ERC-20 地址不同。 [可以在此处参阅代币地址列表](https://static.optimism.io/optimism.tokenlist.json)。 带有 `chainId` 1 的地址在第一层（主网），带有 `chainId` 10 的地址在第二层（乐观解决方案）上。 另两个 `chainId` 值用于 Kovan 测试网络 (42) 和乐观 Kovan 测试网络 (69)。
+大多数情况下，第一层上的 ERC-20 地址与第二层上对应的 ERC-20 地址不同。 [可以在此处参阅代币地址列表](https://static.optimism.io/optimism.tokenlist.json)。 带有 `chainId` 1 的地址在第一层（主网），带有 `chainId` 10 的地址在第二层（Optimism）上。 另两个 `chainId` 值用于 Kovan 测试网络 (42) 和乐观 Kovan 测试网络 (69)。
 
 ```solidity
-        地址索引_from
-        地址到
-        uint256 _amounty,
+        address indexed _from,
+        address _to,
+        uint256 _amount,
         bytes _data
-;
+    );
+
 ```
 
 可以为转账添加注解，在这种情况下，注解将被添加到报告它们的事件中。
 
 ```solidity
-    事件ERC20提款已完成(
-        地址索引_l1Token,
-        地址索引_l2Token,
-        地址索引_from
-        地址_to
+    event ERC20WithdrawalFinalized(
+        address indexed _l1Token,
+        address indexed _l2Token,
+        address indexed _from,
+        address _to,
         uint256 _amount,
         bytes _data
-);
+    );
 ```
 
 同一链桥合约处理双向转账。 就第一层链桥而言，这意味着存款的初始化和提款的终局化。
 
 ```solidity
 
-    ****************************
-     * 公共函数 *
-     **********************/
+    /********************
+     * Public Functions *
+     ********************/
 
     /**
-     * @dev 获得相应的L2 桥合同的地址。
-     * 对应的L2桥合同的@return 地址。
+     * @dev get the address of the corresponding L2 bridge contract.
+     * @return Address of the corresponding L2 bridge contract.
      */
-    函数 l2TokenBridge() 外部返回 (地址)；
+    function l2TokenBridge() external returns (address);
 ```
 
 并不是真需要此函数，因为在第二层上它是一个预部署的合约，所以它总是位于地址 `0x4200000000000000000000000000000000000010` 处。 使用此函数是为了与第二层链桥对称，因为知道第一层桥的地址*并非*不重要。
 
 ```solidity
     /**
-     * @dev 将ERC20的金额存入L2上来电者的余额。
-     * @param _l1Token Address of the L1 ERC20 we being sording
+     * @dev deposit an amount of the ERC20 to the caller's balance on L2.
+     * @param _l1Token Address of the L1 ERC20 we are depositing
      * @param _l2Token Address of the L1 respective L2 ERC20
-     * @param _amount Amount of the ERC20 to entorize
-     * @param _l2Gas Gas limit required to complete on L2
-     * @param _data 可选数据转发到 L2。 This data is provided
+     * @param _amount Amount of the ERC20 to deposit
+     * @param _l2Gas Gas limit required to complete the deposit on L2.
+     * @param _data Optional data to forward to L2. This data is provided
      *        solely as a convenience for external contracts. Aside from enforcing a maximum
      *        length, these contracts provide no guarantees about its content.
      */
@@ -216,7 +217,7 @@ lang: zh
 }
 ```
 
-乐观解决方案中的提款（以及从第二层到第一层的其他信息）是一个包含两个步骤的过程：
+Optimism中的提款（以及从第二层到第一层的其他信息）是一个包含两个步骤的过程：
 
 1. 在第二层上的启动交易。
 2. 在第一层上完成或声明交易。 在第二层交易的[缺陷质询期](https://community.optimism.io/docs/how-optimism-works/#fault-proofs)结束后此交易才可以进行。
@@ -359,7 +360,7 @@ contract CrossDomainEnabled {
     modifier onlyFromCrossDomainAccount(address _sourceDomainAccount) {
 ```
 
-跨域消息传递可以由运行在区块链（以太坊主网或乐观解决方案）上的任何合约使用。 但是每一层都需要链桥。如果信息来自于另一边的链桥，将*只*信任特定信息。
+跨域消息传递可以由运行在区块链（以太坊主网或Optimism）上的任何合约使用。 但是每一层都需要链桥。如果信息来自于另一边的链桥，将*只*信任特定信息。
 
 ```solidity
         require(
@@ -425,7 +426,7 @@ contract CrossDomainEnabled {
         // slither-disable-next-line reentrancy-events, reentrancy-benign
 ```
 
-[Slither](https://github.com/crytic/slither) 是一个静态分析器，乐观解决方案在每个合约上运行它以查找漏洞和其他潜在问题。 在本例中，下面一行会触发两个漏洞：
+[Slither](https://github.com/crytic/slither) 是一个静态分析器，Optimism在每个合约上运行它以查找漏洞和其他潜在问题。 在本例中，下面一行会触发两个漏洞：
 
 1. [重入事件](https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3)
 2. [良性重入](https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2)
@@ -675,7 +676,7 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
 | 参数      | 值                             | 意义                                                                                                                |
 | --------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------- |
 | \_l1Token | address(0)                     | 在第一层上代表以太币（不是 ERC-20 代币）的特殊值                                                                    |
-| \_l2Token | Lib_PredeployAddresses.OVM_ETH | 乐观解决方案上管理以太币的第二层合约 `0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000`（此合约仅供乐观解决方案内部使用） |
+| \_l2Token | Lib_PredeployAddresses.OVM_ETH | Optimism上管理以太币的第二层合约 `0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000`（此合约仅供Optimism内部使用） |
 | \_from    | \_from                         | 第一层上发送以太币的地址                                                                                            |
 | \_to      | \_to                           | 第二层上接收以太币的地址                                                                                            |
 | amount    | 值                             | 已发送的 wei 数量（已经发送到链桥的 wei）                                                                           |
@@ -886,7 +887,7 @@ ERC-20 代币的转账过程不同以太币：
 
 ## 第二层上的 ERC-20 代币 {#erc-20-tokens-on-l2}
 
-为了使 ERC-20 代币适合标准链桥，它需要允许标准链桥并且*只*允许标准链桥铸造代币。 这是必要的，因为链桥需要确保在乐观解决方案上流通的代币数量和锁定在第一层链桥合约内的代币数量相同。 如果第二层上的代币太多，一些用户将无法将他们的资产桥接到第一层。 我们实际上将重新建立[部分准备金银行制度](https://www.investopedia.com/terms/f/fractionalreservebanking.asp)，而不是一个受信任的链桥。 如果第一层上的代币太多，其中一些代币将永远锁定在链桥合约中，因为不销毁第二层代币就无法释放它们。
+为了使 ERC-20 代币适合标准链桥，它需要允许标准链桥并且*只*允许标准链桥铸造代币。 这是必要的，因为链桥需要确保在Optimism上流通的代币数量和锁定在第一层链桥合约内的代币数量相同。 如果第二层上的代币太多，一些用户将无法将他们的资产桥接到第一层。 我们实际上将重新建立[部分准备金银行制度](https://www.investopedia.com/terms/f/fractionalreservebanking.asp)，而不是一个受信任的链桥。 如果第一层上的代币太多，其中一些代币将永远锁定在链桥合约中，因为不销毁第二层代币就无法释放它们。
 
 ### IL2StandardERC20 {#il2standarderc20}
 
@@ -938,7 +939,7 @@ pragma solidity ^0.8.9;
 import { ERC20 } from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 ```
 
-[OpenZeppelin ERC-20 合约](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)。 乐观解决方案不相信重新编写合约，尤其是合约经过严格审计并且需要足够的信任来持有资产时。
+[OpenZeppelin ERC-20 合约](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)。 Optimism不相信重新编写合约，尤其是合约经过严格审计并且需要足够的信任来持有资产时。
 
 ```solidity
 import "./IL2StandardERC20.sol";
@@ -1018,7 +1019,7 @@ contract L2StandardERC20 is IL2StandardERC20, ERC20 {
 
 ## 第二层链桥代码 {#l2-bridge-code}
 
-这是在乐观解决方案上运行链桥的代码。 [此合约源自此处](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol)。
+这是在Optimism上运行链桥的代码。 [此合约源自此处](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol)。
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -1033,7 +1034,7 @@ import { IL2ERC20Bridge } from "./IL2ERC20Bridge.sol";
 [IL2ERC20Bridge](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/IL2ERC20Bridge.sol) 接口与我们上面看到的[第一层等效](#IL1ERC20Bridge)接口非常相似。 有两个明显区别：
 
 1. 在第一层上您发起存款并完成提款。 在此处您发起提款并完成存款。
-2. 在第一层上，有必要区分以太币和 ERC-20 代币。 在第二层上，我们可以对两者使用相同的函数，因为在乐观解决方案上的以太币余额会作为地址为 [0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000](https://optimistic.etherscan.io/address/0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000) 的 ERC-20 代币在内部处理。
+2. 在第一层上，有必要区分以太币和 ERC-20 代币。 在第二层上，我们可以对两者使用相同的函数，因为在Optimism上的以太币余额会作为地址为 [0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000](https://optimistic.etherscan.io/address/0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000) 的 ERC-20 代币在内部处理。
 
 ```solidity
 /* Library Imports */
