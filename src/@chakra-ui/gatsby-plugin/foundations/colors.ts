@@ -26,6 +26,7 @@ const colors = {
   red: {
     100: "#f7c8c8",
     500: "#b80000",
+    // ! Deprecating 900
     900: "#1B0C0C",
   },
   green: {
