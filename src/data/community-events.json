@@ -709,5 +709,14 @@
     "description": "Join ETHMiami during Art Basel Miami 2022.",
     "startDate": "2022-11-28",
     "endDate": "2022-12-4"
+  },
+  {
+    "title": "ETHRome",
+    "to": "https://www.ethrome.xyz/",
+    "sponsor": null,
+    "location": "Rome, ITA",
+    "description": "Join the first web3 Hackathon in Rome focused on governance and privacy-preserving technologies. Hosted by the builders' community @urbeeth",
+    "startDate": "2023-10-06",
+    "endDate": "2023-10-08"
   }
 ]
