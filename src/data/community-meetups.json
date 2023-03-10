@@ -358,5 +358,11 @@
     "emoji": ":taiwan:",
     "location": "Taipei",
     "link": "https://www.meetup.com/taipei-ethereum-meetup/"
+  },
+  {
+    "title": "UrbeTalks Ethereum Meetup",
+    "emoji": ":it:",
+    "location": "Rome, Italy",
+    "link": "https://www.youtube.com/@urbetalks381"
   }
 ]
