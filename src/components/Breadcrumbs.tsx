@@ -1,19 +1,22 @@
 import React from "react"
+import { useTranslation, useI18next } from "gatsby-plugin-react-i18next"
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbProps,
 } from "@chakra-ui/react"
-import { useIntl } from "react-intl"
 
 import Link from "./Link"
-import { isLang } from "../utils/languages"
-import { isTranslationKey, translateMessageId } from "../utils/translations"
 
 export interface IProps extends BreadcrumbProps {
   slug: string
   startDepth?: number
+}
+
+interface Crumb {
+  fullPath: string
+  text: string
 }
 
 // Generate crumbs from slug
@@ -30,28 +33,39 @@ export interface IProps extends BreadcrumbProps {
 //   { fullPath: "/en/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
 // ]
 const Breadcrumbs: React.FC<IProps> = ({
-  slug,
+  slug: originalSlug,
   startDepth = 0,
   ...restProps
 }) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
+  const { language } = useI18next()
+
+  const hasHome = originalSlug.includes(`/${language}/`)
+  const slug = originalSlug.replace(`/${language}/`, "/")
 
   const slugChunk = slug.split("/")
-  const sliced = slugChunk.filter((item) => !!item).slice(startDepth)
+  const sliced = slugChunk.filter((item) => !!item)
 
-  const crumbs = sliced.map((path, idx) => {
+  const crumbs = [
     // If homepage (e.g. "en"), set text to "home" translation
-    const text = isLang(path)
-      ? translateMessageId("page-index-meta-title", intl)
-      : isTranslationKey(path)
-      ? translateMessageId(path, intl)
-      : ""
-
-    return {
-      fullPath: slugChunk.slice(0, idx + 2 + startDepth).join("/") + "/",
-      text: text.toUpperCase(),
-    }
-  })
+    ...(hasHome
+      ? [
+          {
+            fullPath: "/",
+            text: t("page-index-meta-title"),
+          },
+        ]
+      : []),
+    ,
+    ...sliced.map((path, idx) => {
+      return {
+        fullPath: slugChunk.slice(0, idx + 2).join("/") + "/",
+        text: t(path),
+      }
+    }),
+  ]
+    .filter((item): item is Crumb => !!item)
+    .slice(startDepth)
 
   return (
     <Breadcrumb
@@ -84,7 +98,7 @@ const Breadcrumbs: React.FC<IProps> = ({
               _hover={{ color: "primary", textDecor: "none" }}
               _active={{ color: "primary" }}
             >
-              {crumb.text}
+              {crumb.text.toUpperCase()}
             </BreadcrumbLink>
           </BreadcrumbItem>
         )

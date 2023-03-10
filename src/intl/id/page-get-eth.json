@@ -62,5 +62,6 @@
   "page-get-eth-your-address": "Alamat ETH Anda",
   "page-get-eth-your-address-desc": "Saat Anda mengunduh dompet, itu akan membuat alamat ETH publik untuk Anda. Berikut ini contoh tampilan alamatnya:",
   "page-get-eth-your-address-desc-3": "Anggap ini seperti alamat email Anda, tetapi bukan surat, alamat ini dapat menerima ETH. Jika Anda ingin menukar ETH dari bursa ke dompet, gunakan alamat Anda sebagai tujuan. Pastikan untuk selalu memeriksa ulang sebelum Anda mengirim!",
-  "page-get-eth-your-address-wallet-link": "Periksa dompet"
+  "page-get-eth-your-address-wallet-link": "Periksa dompet",
+  "listing-policy-raise-issue-link": "Angkat masalah"
 }

@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react"
 import axios from "axios"
-import { useIntl } from "react-intl"
+import { useTranslation, useI18next } from "gatsby-plugin-react-i18next"
 
 import { RangeSelector } from "./RangeSelector"
 import { Direction } from "../../types"
 import { GATSBY_FUNCTIONS_PATH } from "../../constants"
 import { getData } from "../../utils/cache"
-import { Lang } from "../../utils/languages"
 import {
   getLocaleForNumberFormat,
-  translateMessageId,
   isLangRightToLeft,
 } from "../../utils/translations"
 
@@ -50,7 +48,8 @@ interface IFetchTxResponse {
 }
 
 export const useStatsBoxGrid = () => {
-  const intl = useIntl()
+  const { t } = useTranslation()
+  const { language } = useI18next()
 
   const [ethPrices, setEthPrices] = useState<State>({
     data: [],
@@ -82,9 +81,7 @@ export const useStatsBoxGrid = () => {
   const [selectedRangeTxs, setSelectedRangeTxs] = useState<string>(ranges[0])
 
   useEffect(() => {
-    const localeForStatsBoxNumbers = getLocaleForNumberFormat(
-      intl.locale as Lang
-    )
+    const localeForStatsBoxNumbers = getLocaleForNumberFormat(language)
 
     const formatPrice = (price: number): string => {
       return new Intl.NumberFormat(localeForStatsBoxNumbers, {
@@ -228,20 +225,14 @@ export const useStatsBoxGrid = () => {
       }
     }
     fetchTxCount()
-  }, [intl.locale])
+  }, [language])
 
   const metrics: Array<Metric> = [
     {
       apiProvider: "CoinGecko",
       apiUrl: "https://www.coingecko.com/en/coins/ethereum",
-      title: translateMessageId(
-        "page-index-network-stats-eth-price-description",
-        intl
-      ),
-      description: translateMessageId(
-        "page-index-network-stats-eth-price-explainer",
-        intl
-      ),
+      title: t("page-index-network-stats-eth-price-description"),
+      description: t("page-index-network-stats-eth-price-explainer"),
       buttonContainer: (
         <RangeSelector
           state={selectedRangePrice}
@@ -254,14 +245,8 @@ export const useStatsBoxGrid = () => {
     {
       apiProvider: "Etherscan",
       apiUrl: "https://etherscan.io/",
-      title: translateMessageId(
-        "page-index-network-stats-tx-day-description",
-        intl
-      ),
-      description: translateMessageId(
-        "page-index-network-stats-tx-day-explainer",
-        intl
-      ),
+      title: t("page-index-network-stats-tx-day-description"),
+      description: t("page-index-network-stats-tx-day-explainer"),
       buttonContainer: (
         <RangeSelector
           state={selectedRangeTxs}
@@ -274,14 +259,8 @@ export const useStatsBoxGrid = () => {
     {
       apiProvider: "DeFi Llama",
       apiUrl: "https://defillama.com/",
-      title: translateMessageId(
-        "page-index-network-stats-value-defi-description",
-        intl
-      ),
-      description: translateMessageId(
-        "page-index-network-stats-value-defi-explainer",
-        intl
-      ),
+      title: t("page-index-network-stats-value-defi-description"),
+      description: t("page-index-network-stats-value-defi-explainer"),
       buttonContainer: (
         <RangeSelector
           state={selectedRangeTvl}
@@ -294,14 +273,8 @@ export const useStatsBoxGrid = () => {
     {
       apiProvider: "Etherscan",
       apiUrl: "https://etherscan.io/nodetracker",
-      title: translateMessageId(
-        "page-index-network-stats-nodes-description",
-        intl
-      ),
-      description: translateMessageId(
-        "page-index-network-stats-nodes-explainer",
-        intl
-      ),
+      title: t("page-index-network-stats-nodes-description"),
+      description: t("page-index-network-stats-nodes-explainer"),
       buttonContainer: (
         <RangeSelector
           state={selectedRangeNodes}
@@ -312,7 +285,7 @@ export const useStatsBoxGrid = () => {
       range: selectedRangeNodes,
     },
   ]
-  const dir: Direction = isLangRightToLeft(intl.locale as Lang) ? "rtl" : "ltr"
+  const dir: Direction = isLangRightToLeft(language) ? "rtl" : "ltr"
 
   return {
     metrics,

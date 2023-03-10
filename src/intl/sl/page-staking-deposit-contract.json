@@ -23,5 +23,6 @@
   "page-staking-deposit-contract-stop-reading": "Ustavi branje",
   "page-staking-deposit-contract-subtitle": " To je naslov pogodbe za zastavljanje Eth2. Uporabite to stran za potrditev, da pri zastavljanju pošiljate sredstva na pravilen naslov.",
   "page-staking-deposit-contract-warning": "Pozorno preverite vsak znak.",
-  "page-staking-deposit-contract-warning-2": "Pošiljanje sredstev na ta naslov ne bo delovalo in s tem ne boste zastavili svojega Eth. Upoštevati morate navodila na zagonski platformi."
+  "page-staking-deposit-contract-warning-2": "Pošiljanje sredstev na ta naslov ne bo delovalo in s tem ne boste zastavili svojega Eth. Upoštevati morate navodila na zagonski platformi.",
+  "page-staking-deposit-contract-title": "Preverite naslov pogodbe za polog"
 }

@@ -4,10 +4,18 @@
   "page-upgrades-beacon-date": "Uvedeno!",
   "page-upgrades-merge-date": "September 2022",
   "page-upgrades-shards-date": "~2023",
-  "page-upgrades-merge-banner-intro": "Približuje se spojitev in z njo spremembe Ethereuma.",
-  "page-upgrades-merge-banner-content-outdated": "Del vsebine na tej strani, povezan s temi spremembami, ni več aktualen. Vsebina bo kmalu posodobljena.",
-  "page-upgrades-merge-banner-developers-landing": "V nekaterih dokumentih so pasice, ki označujejo, da dokumenti niso več aktualni. Kmalu bodo posodobljeni.",
   "page-upgrades-post-merge-banner-tutorial-ood": "Ta vadnica po spojitvi ni več aktualna in postopek, opisan v njej, morda ne bo deloval. Če želite prispevati, ustvarite PR.",
-  "page-upgrades-post-merge-banner-tutorial-light-node-ood": "Ta vadnica po spojitvi ni več aktualna. Lahka vozlišča z mehanizmom dokaza o deležu trenutno ne delujejo. Pričakujemo, da bodo kmalu na voljo.",
-  "page-upgrades-post-merge-banner-governance-ood": "Del vsebine na tej strani po spojitvi ni več aktualen. Če želite prispevati, ustvarite PR."
+  "page-upgrades-post-merge-banner-governance-ood": "Del vsebine na tej strani po spojitvi ni več aktualen. Če želite prispevati, ustvarite PR.",
+  "page-upgrades-upgrades-guide": "Vodnik po nadgradnjah Ethereuma",
+  "page-upgrades-upgrades-docking": "Spojitev",
+  "page-upgrades-shard-title": "Razdrobitev",
+  "page-upgrades-upgrades-beacon-chain": "Oddajniška veriga",
+  "consensus-beaconcha-in-desc": "Odprtokodni raziskovalnik oddajniške verige",
+  "consensus-beaconscan-desc": "Raziskovalnik oddajniške verige - Etherscan za plast soglasja",
+  "consensus-become-staker": "Postanite zastavljavec",
+  "consensus-become-staker-desc": "Zastavljanje je na voljo. Če želite zastaviti svoj ETH in pomagati zaščititi omrežje, se vedno zavedate tveganj.",
+  "consensus-explore": "Raziščite podatke",
+  "consensus-run-beacon-chain": "Zaženite soglasje stranke",
+  "consensus-run-beacon-chain-desc": "Ethereum potrebuje čim več aktivnih odjemalcev. Pomagajte v javno dobro Ethereuma.",
+  "read-more": "Preberite več"
 }

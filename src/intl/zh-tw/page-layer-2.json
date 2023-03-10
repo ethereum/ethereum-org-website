@@ -1,7 +1,6 @@
 {
   "layer-2-arbitrum-note": "欺詐證明僅適用於白名單使用者，白名單尚未開放",
   "layer-2-boba-note": "狀態驗證正在開發中",
-  "layer-2-metis-note": "欺詐證明正在開發中",
   "layer-2-optimism-note": "錯誤性證明正在開發中",
   "layer-2-hero-title": "二層網路",
   "layer-2-hero-header": "以太坊為所有人而生",
@@ -131,5 +130,6 @@
   "layer-2-note": "備註：",
   "layer-2-ecosystem-portal": "生態系統相關入口網站",
   "layer-2-token-lists": "代幣清單",
-  "layer-2-explore": "探索"
+  "layer-2-explore": "探索",
+  "page-dapps-ready-button": "開始"
 }

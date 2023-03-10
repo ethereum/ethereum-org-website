@@ -70,8 +70,8 @@
     "description": "EDCON is a non-profit annual global conference committed to serving the Ethereum ecosystem in boosting the communication and interaction of Ethereum communities worldwide",
     "startDate": "2023-05-19",
     "endDate": "2023-05-23"
-   },
-   {
+  },
+  {
     "title": "ETHGlobal Istanbul",
     "to": "https://ethglobal.com/events/istanbul",
     "sponsor": null,

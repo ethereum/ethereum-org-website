@@ -23,5 +23,6 @@
   "page-staking-deposit-contract-stop-reading": "Arrêter la lecture",
   "page-staking-deposit-contract-subtitle": "Voici l'adresse pour le contrat de mise en jeu d'Ethereum. Utilisez cette page pour confirmer que vous envoyez des fonds à la bonne adresse quand vous miserez.",
   "page-staking-deposit-contract-warning": "Vérifier soigneusement chaque caractère.",
-  "page-staking-deposit-contract-warning-2": "L'envoi de fonds à cette adresse ne fonctionnera pas et vous ne deviendrez pas un validateur. Vous devez suivre les instructions de la plateforme de lancement."
+  "page-staking-deposit-contract-warning-2": "L'envoi de fonds à cette adresse ne fonctionnera pas et vous ne deviendrez pas un validateur. Vous devez suivre les instructions de la plateforme de lancement.",
+  "page-staking-deposit-contract-title": "Vérifiez l'adresse du contrat de dépôt"
 }

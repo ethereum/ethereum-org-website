@@ -2,7 +2,7 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
   BoxProps,
@@ -28,7 +28,6 @@ import TranslationLeaderboard from "../../../components/TranslationLeaderboard"
 import FeedbackCard from "../../../components/FeedbackCard"
 
 // Utils
-import { translateMessageId } from "../../../utils/translations"
 import { getImage } from "../../../utils/image"
 
 const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />
@@ -54,7 +53,7 @@ const TranslatorAcknowledgements = ({
   data,
   location,
 }: PageProps<Queries.TranslatorAcknowledgementsPageQuery, Context>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const themedCertificateImage = useColorModeValue(
     data.lightThemeCertificate,
     data.darkThemeCertificate
@@ -63,13 +62,11 @@ const TranslatorAcknowledgements = ({
   return (
     <Flex direction="column" align="center" w="full">
       <PageMetadata
-        title={translateMessageId(
-          "page-contributing-translation-program-acknowledgements-meta-title",
-          intl
+        title={t(
+          "page-contributing-translation-program-acknowledgements-meta-title"
         )}
-        description={translateMessageId(
-          "page-contributing-translation-program-acknowledgements-meta-description",
-          intl
+        description={t(
+          "page-contributing-translation-program-acknowledgements-meta-description"
         )}
       />
 
@@ -121,9 +118,8 @@ const TranslatorAcknowledgements = ({
           >
             <Image
               image={getImage(data.dogeComputer)!}
-              alt={translateMessageId(
-                "page-contributing-translation-program-acknowledgements-hero-image-alt",
-                intl
+              alt={t(
+                "page-contributing-translation-program-acknowledgements-hero-image-alt"
               )}
             />
           </Box>
@@ -163,13 +159,11 @@ const TranslatorAcknowledgements = ({
         <Box
           as={ActionCard}
           to="/contributing/translation-program/contributors/"
-          title={translateMessageId(
-            "page-contributing-translation-program-acknowledgements-our-translators-view-all",
-            intl
+          title={t(
+            "page-contributing-translation-program-acknowledgements-our-translators-view-all"
           )}
-          description={translateMessageId(
-            "page-contributing-translation-program-acknowledgements-our-translators-cta",
-            intl
+          description={t(
+            "page-contributing-translation-program-acknowledgements-our-translators-cta"
           )}
           image={getImage(data.ethereum)!}
           display={{ base: "block", sm: "flex" }}
@@ -275,7 +269,26 @@ const TranslatorAcknowledgements = ({
 export default TranslatorAcknowledgements
 
 export const query = graphql`
-  query TranslatorAcknowledgementsPage {
+  query TranslatorAcknowledgementsPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: {
+          in: [
+            "page-contributing-translation-program-acknowledgements"
+            "common"
+          ]
+        }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     dogeComputer: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
         gatsbyImageData(

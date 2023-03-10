@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "@emotion/styled"
-import { useIntl } from "react-intl"
+import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import { Badge } from "@chakra-ui/react"
 
 // Data
@@ -30,11 +30,7 @@ import { CardGrid, Content, Page } from "../components/SharedStyledComponents"
 
 // Utils
 import { getData } from "../utils/cache"
-import {
-  translateMessageId,
-  getLocaleForNumberFormat,
-  TranslationKey,
-} from "../utils/translations"
+import { getLocaleForNumberFormat, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
 import { getImage } from "../utils/image"
 
@@ -203,15 +199,14 @@ interface FeeDataResponse {
 }
 
 const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
+  const { language } = useI18next()
   const [tvl, setTVL] = useState("loading...")
   const [percentChangeL2, setL2PercentChange] = useState("loading...")
   const [averageFee, setAverageFee] = useState("loading...")
 
   useEffect(() => {
-    const localeForStatsBoxNumbers = getLocaleForNumberFormat(
-      intl.locale as Lang
-    )
+    const localeForStatsBoxNumbers = getLocaleForNumberFormat(language as Lang)
 
     const fetchL2Beat = async (): Promise<void> => {
       try {
@@ -280,26 +275,26 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
       }
     }
     fetchCryptoStats()
-  }, [intl.locale])
+  }, [language])
 
   const heroContent = {
-    title: translateMessageId("layer-2-hero-title", intl),
-    header: translateMessageId("layer-2-hero-header", intl),
-    subtitle: translateMessageId("layer-2-hero-subtitle", intl),
+    title: t("layer-2-hero-title"),
+    header: t("layer-2-hero-header"),
+    subtitle: t("layer-2-hero-subtitle"),
     image: getImage(data.heroImage)!,
-    alt: translateMessageId("layer-2-hero-alt-text", intl),
+    alt: t("layer-2-hero-alt-text"),
     buttons: [
       {
-        content: translateMessageId("layer-2-hero-button-1", intl),
+        content: t("layer-2-hero-button-1"),
         toId: "what-is-layer-2",
       },
       {
-        content: translateMessageId("layer-2-hero-button-2", intl),
+        content: t("layer-2-hero-button-2"),
         toId: "use-layer-2",
         variant: "outline",
       },
       {
-        content: translateMessageId("layer-2-hero-button-3", intl),
+        content: t("layer-2-hero-button-3"),
         toId: "how-to-get-onto-layer-2",
         variant: "outline",
       },
@@ -309,49 +304,34 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
   const layer2Cards = [
     {
       emoji: ":money_with_wings:",
-      title: translateMessageId("layer-2-lower-fees-title", intl),
-      description: translateMessageId("layer-2-lower-fees-description", intl),
+      title: t("layer-2-lower-fees-title"),
+      description: t("layer-2-lower-fees-description"),
     },
     {
       emoji: ":closed_lock_with_key:",
-      title: translateMessageId("layer-2-maintain-security-title", intl),
-      description: translateMessageId(
-        "layer-2-maintain-security-description",
-        intl
-      ),
+      title: t("layer-2-maintain-security-title"),
+      description: t("layer-2-maintain-security-description"),
     },
     {
       emoji: ":hammer_and_wrench:",
-      title: translateMessageId("layer-2-expand-use-cases-title", intl),
-      description: translateMessageId(
-        "layer-2-expand-use-cases-description",
-        intl
-      ),
+      title: t("layer-2-expand-use-cases-title"),
+      description: t("layer-2-expand-use-cases-description"),
     },
   ]
 
   const rollupCards = [
     {
       image: getImage(data.optimisticRollup),
-      title: translateMessageId("layer-2-optimistic-rollups-title", intl),
-      description: translateMessageId(
-        "layer-2-optimistic-rollups-description",
-        intl
-      ),
-      childSentence: translateMessageId(
-        "layer-2-optimistic-rollups-childSentance",
-        intl
-      ),
+      title: t("layer-2-optimistic-rollups-title"),
+      description: t("layer-2-optimistic-rollups-description"),
+      childSentence: t("layer-2-optimistic-rollups-childSentance"),
       childLink: "/developers/docs/scaling/optimistic-rollups/",
     },
     {
       image: getImage(data.zkRollup),
-      title: translateMessageId("layer-2-zk-rollups-title", intl),
-      description: translateMessageId("layer-2-zk-rollups-description", intl),
-      childSentence: translateMessageId(
-        "layer-2-zk-rollups-childSentance",
-        intl
-      ),
+      title: t("layer-2-zk-rollups-title"),
+      description: t("layer-2-zk-rollups-description"),
+      childSentence: t("layer-2-zk-rollups-childSentance"),
       childLink: "/developers/docs/scaling/zk-rollups/",
     },
   ]
@@ -360,30 +340,21 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
     information: [
       {
         title: "L2BEAT",
-        description: translateMessageId(
-          "layer-2-tools-l2beat-description",
-          intl
-        ),
+        description: t("layer-2-tools-l2beat-description"),
         link: "https://l2beat.com",
         image: getImage(data.l2beat),
         alt: "L2BEAT",
       },
       {
         title: "L2 Fees",
-        description: translateMessageId(
-          "layer-2-tools-l2fees-description",
-          intl
-        ),
+        description: t("layer-2-tools-l2fees-description"),
         link: "https://l2fees.info",
         image: getImage(data.doge),
         alt: "L2 Fees",
       },
       {
         title: "Chainlist",
-        description: translateMessageId(
-          "layer-2-tools-chainlist-description",
-          intl
-        ),
+        description: t("layer-2-tools-chainlist-description"),
         link: "https://chainlist.org",
         image: getImage(data.doge),
         alt: "Chainlist",
@@ -392,30 +363,21 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
     walletManagers: [
       {
         title: "Zapper",
-        description: translateMessageId(
-          "layer-2-tools-zapper-description",
-          intl
-        ),
+        description: t("layer-2-tools-zapper-description"),
         link: "https://zapper.fi/",
         image: getImage(data.zapper),
         alt: "Zapper",
       },
       {
         title: "Zerion",
-        description: translateMessageId(
-          "layer-2-tools-zerion-description",
-          intl
-        ),
+        description: t("layer-2-tools-zerion-description"),
         link: "https://zerion.io",
         image: getImage(data.zerion),
         alt: "Zerion",
       },
       {
         title: "DeBank",
-        description: translateMessageId(
-          "layer-2-tools-debank-description",
-          intl
-        ),
+        description: t("layer-2-tools-debank-description"),
         link: "https://debank.com",
         image: getImage(data.debank),
         alt: "DeBank",
@@ -729,12 +691,9 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                   key={idx}
                   background={l2.background}
                   image={getImage(data[l2.imageKey])!}
-                  description={translateMessageId(
-                    l2.descriptionKey as TranslationKey,
-                    intl
-                  )}
+                  description={t(l2.descriptionKey as TranslationKey)}
                   url={l2.website}
-                  note={translateMessageId(l2.noteKey as TranslationKey, intl)}
+                  note={t(l2.noteKey as TranslationKey)}
                   name={l2.name}
                   bridge={l2.bridge}
                   ecosystemPortal={l2.ecosystemPortal}
@@ -761,12 +720,9 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                   key={idx}
                   background={l2.background}
                   image={getImage(data[l2.imageKey])!}
-                  description={translateMessageId(
-                    l2.descriptionKey as TranslationKey,
-                    intl
-                  )}
+                  description={t(l2.descriptionKey as TranslationKey)}
                   url={l2.website}
-                  note={translateMessageId(l2.noteKey as TranslationKey, intl)}
+                  note={t(l2.noteKey as TranslationKey)}
                   name={l2.name}
                   bridge={l2.bridge}
                   ecosystemPortal={l2.ecosystemPortal}
@@ -821,7 +777,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
         <Layer2Onboard
           layer2DataCombined={layer2DataCombined}
           ethIcon={getImage(data.ethHome)!}
-          ethIconAlt={translateMessageId("ethereum-logo", intl)}
+          ethIconAlt={t("ethereum-logo")}
         />
       </PaddedContent>
 
@@ -849,16 +805,12 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
         <h2>
           <Translation id="layer-2-faq-title" />
         </h2>
-        <ExpandableCard
-          title={`${translateMessageId("layer-2-faq-question-1-title", intl)}`}
-        >
+        <ExpandableCard title={`${t("layer-2-faq-question-1-title")}`}>
           <p>
             <Translation id="layer-2-faq-question-1-description-1" />
           </p>
         </ExpandableCard>
-        <ExpandableCard
-          title={`${translateMessageId("layer-2-faq-question-2-title", intl)}`}
-        >
+        <ExpandableCard title={`${t("layer-2-faq-question-2-title")}`}>
           <p>
             <Translation id="layer-2-faq-question-2-description-1" />
           </p>
@@ -879,9 +831,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             </Link>
           </p>
         </ExpandableCard>
-        <ExpandableCard
-          title={`${translateMessageId("layer-2-faq-question-3-title", intl)}`}
-        >
+        <ExpandableCard title={`${t("layer-2-faq-question-3-title")}`}>
           <p>
             <Translation id="layer-2-faq-question-3-description-1" />{" "}
           </p>
@@ -891,9 +841,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             </Link>
           </p>
         </ExpandableCard>
-        <ExpandableCard
-          title={`${translateMessageId("layer-2-faq-question-4-title", intl)}`}
-        >
+        <ExpandableCard title={`${t("layer-2-faq-question-4-title")}`}>
           <p>
             <Translation id="layer-2-faq-question-4-description-1" />
           </p>
@@ -901,7 +849,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <Translation id="layer-2-faq-question-4-description-2" />
           </p>
           <p>
-            <Translation id="layer-2-faq-question-4-description-3" />{" "}
+            <Translation id="layer-2-faq-question-4-description-3" />
           </p>
           <p>
             <Link to="/bridges/">
@@ -909,9 +857,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             </Link>
           </p>
         </ExpandableCard>
-        <ExpandableCard
-          title={`${translateMessageId("layer-2-faq-question-5-title", intl)}`}
-        >
+        <ExpandableCard title={`${t("layer-2-faq-question-5-title")}`}>
           <p>
             <Translation id="layer-2-faq-question-5-description-1" />{" "}
             <Link to="/contributing/adding-layer-2s/">
@@ -979,7 +925,21 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
 export default Layer2Page
 
 export const query = graphql`
-  query Layer2Page {
+  query Layer2Page($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-layer-2", "learn-quizzes", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     dao: file(relativePath: { eq: "use-cases/dao-2.png" }) {
       childImageSharp {
         gatsbyImageData(
