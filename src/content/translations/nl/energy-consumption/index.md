@@ -75,7 +75,7 @@ Hoewel het energieverbruik van Ethereum historisch aanzienlijk is, is er veel ti
 
 ## Gerelateerde onderwerpen {#related-topics}
 
-- [De visie van Ethereum](/upgrades/vision/)
+- [De visie van Ethereum](/roadmap/vision/)
 - [De Beacon Chain](/upgrades/beacon-chain)
 - [De merge](/upgrades/merge/)
 - [Sharding](/upgrades/beacon-chain/)

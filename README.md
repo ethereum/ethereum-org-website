@@ -1572,6 +1572,25 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/feibowei"><img src="https://avatars.githubusercontent.com/u/69777448?v=4?s=100" width="100px;" alt="feibowei"/><br /><sub><b>feibowei</b></sub></a><br /><a href="#content-feibowei" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/mesquitaoliveira"><img src="https://avatars.githubusercontent.com/u/92008139?v=4?s=100" width="100px;" alt="Mesquita Oliveira"/><br /><sub><b>Mesquita Oliveira</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=mesquitaoliveira" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.juanjosegiraldo.com"><img src="https://avatars.githubusercontent.com/u/91024217?v=4?s=100" width="100px;" alt="Juan José Giraldo"/><br /><sub><b>Juan José Giraldo</b></sub></a><br /><a href="#content-Juancamp1987" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Ash20pk"><img src="https://avatars.githubusercontent.com/u/86375577?v=4?s=100" width="100px;" alt="Ash@metaschool"/><br /><sub><b>Ash@metaschool</b></sub></a><br /><a href="#content-Ash20pk" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/t-rutten"><img src="https://avatars.githubusercontent.com/u/1389793?v=4?s=100" width="100px;" alt="Tom Rutten"/><br /><sub><b>Tom Rutten</b></sub></a><br /><a href="#content-t-rutten" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://chawyehsu.com"><img src="https://avatars.githubusercontent.com/u/5764917?v=4?s=100" width="100px;" alt="Chawye Hsu"/><br /><sub><b>Chawye Hsu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=chawyehsu" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/MateusTP"><img src="https://avatars.githubusercontent.com/u/59940545?v=4?s=100" width="100px;" alt="Mateus Pimenta"/><br /><sub><b>Mateus Pimenta</b></sub></a><br /><a href="#content-MateusTP" title="Content">🖋</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ezal"><img src="https://avatars.githubusercontent.com/u/6931328?v=4?s=100" width="100px;" alt="ezal"/><br /><sub><b>ezal</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aezal" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://jarrodwatts.com"><img src="https://avatars.githubusercontent.com/u/35651410?v=4?s=100" width="100px;" alt="Jarrod Watts"/><br /><sub><b>Jarrod Watts</b></sub></a><br /><a href="#content-jarrodwatts" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/mlCode111"><img src="https://avatars.githubusercontent.com/u/34754144?v=4?s=100" width="100px;" alt="Miao"/><br /><sub><b>Miao</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=mlCode111" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ljiatu"><img src="https://avatars.githubusercontent.com/u/3280973?v=4?s=100" width="100px;" alt="Jiatu Liu"/><br /><sub><b>Jiatu Liu</b></sub></a><br /><a href="#content-ljiatu" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/DeUETH"><img src="https://avatars.githubusercontent.com/u/107472460?v=4?s=100" width="100px;" alt="DeUETH"/><br /><sub><b>DeUETH</b></sub></a><br /><a href="#content-DeUETH" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.erinleelikes.com"><img src="https://avatars.githubusercontent.com/u/50590950?v=4?s=100" width="100px;" alt="erin-at-work"/><br /><sub><b>erin-at-work</b></sub></a><br /><a href="#content-erin-at-work" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/AmazingAng"><img src="https://avatars.githubusercontent.com/u/14728591?v=4?s=100" width="100px;" alt="0xAA"/><br /><sub><b>0xAA</b></sub></a><br /><a href="#content-AmazingAng" title="Content">🖋</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://changwu.me/"><img src="https://avatars.githubusercontent.com/u/1557364?v=4?s=100" width="100px;" alt="changwu"/><br /><sub><b>changwu</b></sub></a><br /><a href="#content-changwu-tw" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://uniyj.eth"><img src="https://avatars.githubusercontent.com/u/84749041?v=4?s=100" width="100px;" alt="yj"/><br /><sub><b>yj</b></sub></a><br /><a href="#content-uniyj" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>

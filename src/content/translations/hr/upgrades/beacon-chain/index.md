@@ -23,7 +23,7 @@ Beacon Chain predstavlja glavnu knjigu računa koji su proveli i koordinirali mr
 
 Nadogradnja uvodi procesor konsenzusa (ili „sloj konsenzusa”) koji je preuzeo mjesto rudarenja dokaza rada u Ethereumu i uveo mnoge značajne promjene.
 
-Beacon Chain bila je temeljna komponenta [sadašnjeg sigurnog, ekološkog i prilagodljivog Ethereuma](/upgrades/vision/).
+Beacon Chain bila je temeljna komponenta [sadašnjeg sigurnog, ekološkog i prilagodljivog Ethereuma](/roadmap/vision/).
 
 ## Utjecaj nadogradnje Beacon Chain {#beacon-chain-features}
 
@@ -71,5 +71,5 @@ Razdjeljivanje se sigurno može uvesti u Ethereumov ekosustav samo ako je uspost
 
 ## Daljnje čitanje
 
-- [Više o budućim nadogradnjama Ethereuma](/upgrades/vision)
+- [Više o budućim nadogradnjama Ethereuma](/roadmap/vision)
 - [Više o dokazu uloga](/developers/docs/consensus-mechanisms/pos)

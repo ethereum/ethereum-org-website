@@ -26,5 +26,6 @@
   "page-learning-tools-sandbox-desc": "ये सैंडबॉक्स आपको स्मार्ट अनुबंध लिखने और इथेरियम को समझने के साथ प्रयोग करने के लिए एक स्थान देंगे।",
   "page-learning-tools-studio-description": "एक वेब-आधारित IDE, जहां पर आप स्मार्ट अनुबंध बनाने और परीक्षण करने के लिए ट्यूटोरियल का अनुसरण कर सकते हैं, और उनके लिए एक फ़्रंटएंड का निर्माण कर सकते हैं।",
   "page-learning-tools-vyperfun-description": "अपना खुद का Pokémon गेम बनाने के लिए Vyper के बारे में जानें।",
-  "page-learning-tools-vyperfun-logo-alt": "Vyper.fun का लोगो"
+  "page-learning-tools-vyperfun-logo-alt": "Vyper.fun का लोगो",
+  "alt-eth-blocks": "ETH प्रतीक की तरह व्यवस्थित किए जा रहे ब्लॉकों का चित्रण"
 }

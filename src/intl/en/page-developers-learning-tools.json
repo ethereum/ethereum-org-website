@@ -22,6 +22,8 @@
   "page-learning-tools-eth-dot-build-logo-alt": "Eth.build logo",
   "page-learning-tools-ethernauts-description": "Complete levels by hacking smart contracts.",
   "page-learning-tools-ethernauts-logo-alt": "Ethernauts logo",
+  "page-learning-tools-metaschool-description": "Become a Web3 Developer by building & shipping dApps.",
+  "page-learning-tools-metaschool-logo-alt": "_metaschool logo",
   "page-learning-tools-game-tutorials": "Interactive game tutorials",
   "page-learning-tools-game-tutorials-desc": "Learn while you play. These tutorials get you through the basics using gameplay.",
   "page-learning-tools-meta-desc": "Web-based coding tools and interactive learning experiences to help you experiment with Ethereum development.",
@@ -49,5 +51,6 @@
   "page-learning-tools-platzi-description": "Learn how to build dapps on Web3 and master all the skills needed to be a blockchain developer.",
   "page-learning-tools-platzi-logo-alt": "Platzi logo",
   "page-learning-tools-alchemy-university-description": "Develop your web3 career through courses, projects and code.",
-  "page-learning-tools-alchemy-university-logo-alt": "Alchemy University logo"
+  "page-learning-tools-alchemy-university-logo-alt": "Alchemy University logo",
+  "alt-eth-blocks": "Illustration of blocks being organized like an ETH symbol"
 }

@@ -69,7 +69,7 @@ Visibility of block data to full nodes is critical because other network partici
 
 ### Decentralized scalability {#decentralized-scalability}
 
-[Ethereum’s goal is to scale computation without trading off decentralization and security](/upgrades/vision/). Due to the constraints of the monolithic blockchain architecture, data availability is critical to achieving decentralized scalability.
+[Ethereum’s goal is to scale computation without trading off decentralization and security](/roadmap/vision/). Due to the constraints of the monolithic blockchain architecture, data availability is critical to achieving decentralized scalability.
 
 #### Data availability and layer 2 scaling {#data-availability-and-layer-2-scaling}
 
@@ -93,7 +93,7 @@ However, on-chain data availability places bottlenecks on scalability. Monolithi
 
 ### Off-chain data availability {#off-chain-data-availability}
 
-Off-chain data availability systems move data storage off the blockchain: block producers don't publish transaction data on-chain, but provide a cryptographic commitment to prove the availability of the data. This is a method used by [modular blockchains](https://celestia.org/learn/basics-of-modular-blockchains/), where the chain manages some tasks, such as transaction execution and consensus, and offloads others (e.g., data availability) to another layer.
+Off-chain data availability systems move data storage off the blockchain: block producers don't publish transaction data on-chain, but provide a cryptographic commitment to prove the availability of the data. This is a method used by [modular blockchains](https://celestia.org/learn/basics-of-modular-blockchains/modular-and-monolithic-blockchains/), where the chain manages some tasks, such as transaction execution and consensus, and offloads others (e.g., data availability) to another layer.
 
 Many scaling solutions adopt a modular approach by separating data availability from consensus and execution, as this is considered the ideal way to scale blockchains without increasing node requirements. For example, [validiums](/developers/docs/scaling/validium/) and [plasma](/developers/docs/scaling/plasma/) use off-chain storage to reduce the amount of data posted on-chain.
 

@@ -62,5 +62,6 @@
   "page-get-eth-your-address": "Ang iyong ETH address",
   "page-get-eth-your-address-desc": "Kapag nag-download ka ng wallet, lilikha ito ng pampublikong ETH address para sa iyo. Narito ang hitsura ng isa:",
   "page-get-eth-your-address-desc-3": "Isiping tulad ito ng inyong email address, ngunit sa halip na sulat ay makakatanggap ito ng ETH. Kung gusto ninyong ilipat ang ETH mula sa isang exchange papunta sa inyong wallet, gamitin ang inyong address bilang destinasyon. Tiyaking palaging mag-double check bago kayo magpadala!",
-  "page-get-eth-your-address-wallet-link": "Tingnan ang mga wallet"
+  "page-get-eth-your-address-wallet-link": "Tingnan ang mga wallet",
+  "listing-policy-raise-issue-link": "Magsumite ng issue"
 }
