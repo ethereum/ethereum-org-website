@@ -7,15 +7,10 @@
   "page-staking-benefits-3-title": "更加可持续",
   "page-staking-benefits-3-description": "质押人不需要高耗能电脑便能参与到权益证明系统中，只要一台家用电脑或智能手机。这会使得以太坊更加环保。",
   "page-staking-benefits-3-link": "更多关于以太坊能源消耗的信息",
-  "page-staking-check-address": "检查存款地址",
-  "page-staking-deposit-address": "检查存款地址",
-  "page-staking-deposit-address-desc": "如果您已经完成了启动板中的指示操作，您将需要向质押协议发送一个交易。我们建议您非常小心地确认接收地址。您可以在 ethereum.org 上找到官方地址和一系列其它受信站点。",
   "page-staking-description": "质押是指存入 32 个以太币以激活验证者软件的行为。作为验证者，你将负责存储数据、处理交易以及向区块链添加新区块。这将每个人保证以太坊的安全，并在此过程中为你赚取新的以太币。",
   "page-staking-hero-title": "如何质押以太币",
   "page-staking-hero-header": "保护以太坊的同时赚取奖励",
   "page-staking-hero-subtitle": "质押对于以太坊的生态属于公益行为。拥有任意数量以太币的任何用户都有助于让网络更加安全，同时也会在此过程中获得奖励。",
-  "page-staking-dropdown-text": "质押方案",
-  "page-staking-dropdown-aria": "质押方案下拉菜单",
   "page-staking-dropdown-home": "质押首页",
   "page-staking-dropdown-solo": "单独质押",
   "page-staking-more-on-solo": "更多关于单独质押的信息",
@@ -28,7 +23,6 @@
   "page-staking-more-on-pools": "更多关于联合质押的信息",
   "page-staking-learn-more-pools": "详细了解联合质押",
   "page-staking-section-what-title": "什么是质押？",
-  "page-staking-section-what-p": "质押是一种锁定以太币的行为，让你有权在网络中参与区块提议。任何人，即使仅拥有少量以太币，都可以考虑参与质押。",
   "page-staking-section-what-link": "学习如何获取以太币",
   "page-staking-section-why-title": "为什么要质押你的以太币？",
   "page-staking-section-why-p1": "这完全取决于你想要质押多少。你将需要 32 个以太币才能激活自己的验证者，但是也可以选择质押更少的以太币。",
@@ -192,5 +186,6 @@
   "page-staking-join-community": "加入质押人社区",
   "page-staking-join-community-desc": "EthStaker 是一个供大家讨论和学习在以太坊上质押的社区。快来加入全球数万名成员的行列，一起寻求建议和支持并探讨质押的方方面面。",
   "page-staking-meta-description": "以太坊质押概述：风险、奖励、要求以及质押位置。",
-  "page-staking-meta-title": "以太坊质押"
+  "page-staking-meta-title": "以太坊质押",
+  "page-upgrades-merge-btn": "关于合并的更多信息"
 }

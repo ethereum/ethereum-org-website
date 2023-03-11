@@ -1,7 +1,6 @@
 {
   "layer-2-arbitrum-note": "Fraud proofs alleen voor gewhiteliste gebruikers, whitelist is nog niet geopend",
   "layer-2-boba-note": "Staatsvalidatie in ontwikkeling",
-  "layer-2-metis-note": "Fraud proofs in ontwikkeling",
   "layer-2-optimism-note": "Fault proofs in ontwikkeling",
   "layer-2-hero-title": "Laag 2",
   "layer-2-hero-header": "Ethereum voor iedereen",
@@ -131,5 +130,6 @@
   "layer-2-note": "Opmerking:",
   "layer-2-ecosystem-portal": "Ecosysteemportaal",
   "layer-2-token-lists": "Tokenlijsten",
-  "layer-2-explore": "Verkennen"
+  "layer-2-explore": "Verkennen",
+  "page-dapps-ready-button": "Beginnen"
 }

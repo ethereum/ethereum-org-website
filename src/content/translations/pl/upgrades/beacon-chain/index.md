@@ -23,7 +23,7 @@ summaryPoint3: Łańcuch śledzący wprowadził logikę konsensusu i protokół 
 
 Wprowadził on mechanizm konsensusu (lub „warstwę konsensusu”), który zajął miejsce wydobywania z mechanizmem proof-of-work w sieci Ethereum i przyniósł wiele znaczących ulepszeń.
 
-Łańcuch śledzący był podstawowym elementem [bezpiecznego, przyjaznego środowisku i skalowalnego Ethereum, które mamy teraz](/upgrades/vision/).
+Łańcuch śledzący był podstawowym elementem [bezpiecznego, przyjaznego środowisku i skalowalnego Ethereum, które mamy teraz](/roadmap/vision/).
 
 ## Wpływ łańcucha śledzącego {#beacon-chain-features}
 
@@ -71,5 +71,5 @@ Sharding może bezpiecznie wejść do ekosystemu Ethereum tylko z mechanizmem ko
 
 ## Dalsza lektura
 
-- [Więcej na temat przyszłych uaktualnień Ethereum](/upgrades/vision)
+- [Więcej na temat przyszłych uaktualnień Ethereum](/roadmap/vision)
 - [Więcej o proof-of-stake](/developers/docs/consensus-mechanisms/pos)

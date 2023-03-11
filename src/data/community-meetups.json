@@ -352,5 +352,11 @@
     "emoji": ":co:",
     "location": "Colombia",
     "link": "https://www.meetup.com/hash-house-medellin/"
+  },
+  {
+    "title": "Taipei Ethereum Meetup",
+    "emoji": ":taiwan:",
+    "location": "Taipei",
+    "link": "https://www.meetup.com/taipei-ethereum-meetup/"
   }
 ]

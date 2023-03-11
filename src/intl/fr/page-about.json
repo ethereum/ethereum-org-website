@@ -21,5 +21,7 @@
   "page-about-p-5": "Les tâches en cours d'implémentation.",
   "page-about-p-6": "Les tâches que nous avons mises en file d'attente pour les implémenter plus tard.",
   "page-about-p-7": "Les tâches récemment terminées.",
-  "page-about-p-8": "Vous avez des idées pour améliorer ethereum.org ? Nous adorerions collaborer avec vous !"
+  "page-about-p-8": "Vous avez des idées pour améliorer ethereum.org ? Nous adorerions collaborer avec vous !",
+  "page-what-is-ethereum-energy-consumption-chart-legend": "Consommation d'énergie annuelle en TWh/an",
+  "page-upgrades-post-merge-banner-governance-ood": "Certains contenus sur cette page sont périmés depuis la fusion. Veuillez éditer un PR sur GitHub si vous souhaitez contribuer."
 }

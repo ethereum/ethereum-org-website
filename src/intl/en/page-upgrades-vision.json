@@ -64,5 +64,6 @@
   "page-upgrades-vision-upgrade-needs-desc-3": "Ethereum has a set of upgrades that address these problems and more. This set of upgrades was originally called 'Serenity' and 'Eth2,' and they've been an active area of research and development since 2014.",
   "page-upgrades-vision-upgrade-needs-desc-5": "Now that the technology is ready, these upgrades will re-architect Ethereum to make it more scalable, secure, and sustainable - to make life better for existing users and entice new ones. All while preserving Ethereum's core value of decentralization.",
   "page-upgrades-vision-upgrade-needs-desc-6": "This means there's no on-switch for scalability. Improvements will ship incrementally over time.",
-  "page-upgrades-vision-upgrade-needs-serenity": "View a 2015 blog post discussing 'Serenity'"
+  "page-upgrades-vision-upgrade-needs-serenity": "View a 2015 blog post discussing 'Serenity'",
+  "ethereum": "Ethereum"
 }

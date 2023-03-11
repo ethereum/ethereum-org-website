@@ -64,5 +64,6 @@
   "page-upgrades-vision-upgrade-needs-desc-3": "Ethereum tiene una serie de actualizaciones que intentan resolver estos problemas, entre otros. A esta serie de actualizaciones se llamó originalmente «Serenity» y «Eth2» y ha sido un área activa de investigación y desarrollo desde 2014.",
   "page-upgrades-vision-upgrade-needs-desc-5": "Ahora que la tecnología está lista, estas actualizaciones cambiarán la arquitectura de Ethereum para hacerla más escalable, segura y sostenible para hacerle la vida más fácil a los usuarios existentes y atraer a otros nuevos. Y todo ello preservando el valor central de Ethereum de la descentralización.",
   "page-upgrades-vision-upgrade-needs-desc-6": "Esto significa que no hay un botón de encendido para la escalabilidad. Las actualizaciones irán llegando progresivamente con el tiempo.",
-  "page-upgrades-vision-upgrade-needs-serenity": "Ver una entrada en el blog de 2015 sobre Serenity"
+  "page-upgrades-vision-upgrade-needs-serenity": "Ver una entrada en el blog de 2015 sobre Serenity",
+  "ethereum": "Ethereum"
 }
