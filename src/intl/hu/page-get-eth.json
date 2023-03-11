@@ -62,5 +62,6 @@
   "page-get-eth-your-address": "Az ETH címed",
   "page-get-eth-your-address-desc": "Ha letöltesz egy tárcát, akkor egy nyilvános ETH címet fog generálni neked. Így néz ki:",
   "page-get-eth-your-address-desc-3": "Gondolj rá úgy, mint az email címedre, de emailek helyett ETH-et kaphatsz rá. Ha ETH-et szeretnél kiutalni egy tőzsdéről a tárcádra, használd a címedet, mint beérkező cím. Küldés előtt mindig ellenőrizd többször is!",
-  "page-get-eth-your-address-wallet-link": "Tárcák megtekintése"
+  "page-get-eth-your-address-wallet-link": "Tárcák megtekintése",
+  "listing-policy-raise-issue-link": "Ticket feladása"
 }

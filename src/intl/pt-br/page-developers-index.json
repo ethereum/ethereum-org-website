@@ -8,7 +8,6 @@
   "page-developers-advanced": "Avançado",
   "page-developers-api-desc": "Como usar bibliotecas para interagir com contratos inteligentes",
   "page-developers-api-link": "APIs de back-end",
-  "page-developers-aria-label": "Menu dos Desenvolvedores",
   "page-developers-block-desc": "Lotes de transações adicionados à blockchain",
   "page-developers-block-explorers-desc": "Seu portal para dados Ethereum",
   "page-developers-block-explorers-link": "Exploradores de bloco",
@@ -92,5 +91,6 @@
   "page-developers-networking-layer-desc": "Introdução à camada de rede Ethereum",
   "page-developers-data-structures-and-encoding": "Codificação e estruturas de dados",
   "page-developers-data-structures-and-encoding-link": "Codificação e estruturas de dados",
-  "page-developers-data-structures-and-encoding-desc": "Introdução às estruturas de dados e esquema de codificação utilizado na pilha Ethereum"
+  "page-developers-data-structures-and-encoding-desc": "Introdução às estruturas de dados e esquema de codificação utilizado na pilha Ethereum",
+  "alt-eth-blocks": "Ilustração de blocos sendo organizados como um símbolo do ETH"
 }

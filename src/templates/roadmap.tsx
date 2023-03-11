@@ -479,7 +479,18 @@ const RoadmapPage = ({
 }
 
 export const roadmapPageQuery = graphql`
-  query RoadmapPage($relativePath: String) {
+  query RoadmapPage($languagesToFetch: [String!]!, $relativePath: String) {
+    locales: allLocale(
+      filter: { language: { in: $languagesToFetch }, ns: { in: ["common"] } }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     pageData: mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug

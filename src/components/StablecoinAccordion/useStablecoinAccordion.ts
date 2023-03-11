@@ -1,11 +1,10 @@
 import { useStaticQuery, graphql } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import { CardListItem } from "../CardList"
-import { translateMessageId } from "../../utils/translations"
 
 export const useStablecoinAccordion = () => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const data = useStaticQuery(graphql`
     {
       uniswap: file(relativePath: { eq: "dapps/uni.png" }) {
@@ -176,25 +175,25 @@ export const useStablecoinAccordion = () => {
       title: "Uniswap",
       image: getImage(data.uniswap)!,
       link: "https://uniswap.org",
-      alt: translateMessageId("uniswap-logo", intl),
+      alt: t("uniswap-logo"),
     },
     {
       title: "Loopring",
       image: getImage(data.loopring)!,
       link: "https://loopring.org",
-      alt: translateMessageId("loopring-logo", intl),
+      alt: t("loopring-logo"),
     },
     {
       title: "1inch",
       image: getImage(data.oneinch)!,
       link: "https://app.1inch.io",
-      alt: translateMessageId("1inch-logo", intl),
+      alt: t("1inch-logo"),
     },
     {
       title: "Matcha",
       image: getImage(data.matcha)!,
       link: "https://matcha.xyz",
-      alt: translateMessageId("matcha-logo", intl),
+      alt: t("matcha-logo"),
     },
   ]
 
@@ -203,61 +202,43 @@ export const useStablecoinAccordion = () => {
       title: "Compound",
       image: getImage(data.compound)!,
       link: "https://compound.finance",
-      alt: translateMessageId("compound-logo", intl),
+      alt: t("compound-logo"),
     },
     {
       title: "Aave",
       image: getImage(data.aave)!,
       link: "https://aave.com",
-      alt: translateMessageId("aave-logo", intl),
+      alt: t("aave-logo"),
     },
     {
       title: "Oasis",
       image: getImage(data.oasis)!,
       link: "https://oasis.app",
-      alt: translateMessageId("oasis-logo", intl),
+      alt: t("oasis-logo"),
     },
   ]
 
   const earn: Array<CardListItem> = [
     {
-      title: translateMessageId(
-        "page-stablecoins-accordion-earn-project-bounties",
-        intl
-      ),
+      title: t("page-stablecoins-accordion-earn-project-bounties"),
       image: getImage(data.gitcoin)!,
       link: "https://gitcoin.co/explorer",
-      description: translateMessageId(
-        "page-stablecoins-accordion-earn-project-1-description",
-        intl
-      ),
-      alt: translateMessageId("gitcoin-logo", intl),
+      description: t("page-stablecoins-accordion-earn-project-1-description"),
+      alt: t("gitcoin-logo"),
     },
     {
-      title: translateMessageId(
-        "page-stablecoins-accordion-earn-project-community",
-        intl
-      ),
+      title: t("page-stablecoins-accordion-earn-project-community"),
       image: getImage(data.maker)!,
       link: "https://makerdao.world/en/resources/",
-      description: translateMessageId(
-        "page-stablecoins-accordion-earn-project-2-description",
-        intl
-      ),
-      alt: translateMessageId("makerdao-logo", intl),
+      description: t("page-stablecoins-accordion-earn-project-2-description"),
+      alt: t("makerdao-logo"),
     },
     {
-      title: translateMessageId(
-        "page-stablecoins-accordion-earn-project-bug-bounties",
-        intl
-      ),
+      title: t("page-stablecoins-accordion-earn-project-bug-bounties"),
       image: getImage(data.eth)!,
       link: "/bug-bounty/",
-      description: translateMessageId(
-        "page-stablecoins-accordion-earn-project-3-description",
-        intl
-      ),
-      alt: translateMessageId("ethereum-logo", intl),
+      description: t("page-stablecoins-accordion-earn-project-3-description"),
+      alt: t("ethereum-logo"),
     },
   ]
 
@@ -266,37 +247,37 @@ export const useStablecoinAccordion = () => {
       title: "Coinbase",
       image: getImage(data.coinbase)!,
       link: "https://coinbase.com",
-      alt: translateMessageId("coinbase-logo", intl),
+      alt: t("coinbase-logo"),
     },
     {
       title: "Gemini",
       image: getImage(data.gemini)!,
       link: "https://gemini.com",
-      alt: translateMessageId("gemini-logo", intl),
+      alt: t("gemini-logo"),
     },
     {
       title: "Kraken",
       image: getImage(data.kraken)!,
       link: "https://kraken.com",
-      alt: translateMessageId("kraken-logo", intl),
+      alt: t("kraken-logo"),
     },
     {
       title: "Coinmama",
       image: getImage(data.coinmama)!,
       link: "https://coinmama.com",
-      alt: translateMessageId("coinmama-logo", intl),
+      alt: t("coinmama-logo"),
     },
     {
       title: "Bittrex",
       image: getImage(data.bittrex)!,
       link: "https://global.bittrex.com",
-      alt: translateMessageId("bittrex-logo", intl),
+      alt: t("bittrex-logo"),
     },
     {
       title: "Binance",
       image: getImage(data.binance)!,
       link: "https://binance.com",
-      alt: translateMessageId("binance-logo", intl),
+      alt: t("binance-logo"),
     },
   ]
 

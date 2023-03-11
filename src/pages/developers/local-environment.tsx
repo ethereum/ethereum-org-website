@@ -12,7 +12,7 @@ import {
 
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import { shuffle } from "lodash"
 
 import Translation from "../../components/Translation"
@@ -20,7 +20,6 @@ import PageMetadata from "../../components/PageMetadata"
 import ProductCard from "../../components/ProductCard"
 import FeedbackCard from "../../components/FeedbackCard"
 
-import { translateMessageId, TranslationKey } from "../../utils/translations"
 import { getImage } from "../../utils/image"
 
 import { ChildOnlyProp, Context } from "../../types"
@@ -54,109 +53,109 @@ interface IFramework {
   githubUrl: string
   background: string
   name: string
-  description: TranslationKey
-  alt: TranslationKey
+  description: string
+  alt: string
   image?: IGatsbyImageData
 }
-
-const frameworksList: Array<IFramework> = [
-  {
-    id: "waffle",
-    url: "https://getwaffle.io/",
-    githubUrl: "https://github.com/EthWorks/waffle",
-    background: "#ffffff",
-    name: "Waffle",
-    description: "page-local-environment-waffle-desc",
-    alt: "page-local-environment-waffle-logo-alt",
-  },
-  {
-    id: "hardhat",
-    url: "https://hardhat.org/",
-    githubUrl: "https://github.com/nomiclabs/hardhat",
-    background: "#faf8fb",
-    name: "Hardhat",
-    description: "page-local-environment-hardhat-desc",
-    alt: "page-local-environment-hardhat-logo-alt",
-  },
-  {
-    id: "truffle",
-    url: "https://www.trufflesuite.com/",
-    githubUrl: "https://github.com/trufflesuite/truffle",
-    background: "#31272a",
-    name: "Truffle",
-    description: "page-local-environment-truffle-desc",
-    alt: "page-local-environment-truffle-logo-alt",
-  },
-  {
-    id: "embark",
-    url: "https://framework.embarklabs.io/",
-    githubUrl: "https://github.com/embarklabs/embark",
-    background: "#1b3e5f",
-    name: "Embark",
-    description: "page-local-environment-embark-desc",
-    alt: "page-local-environment-embark-logo-alt",
-  },
-  {
-    id: "brownie",
-    url: "https://github.com/eth-brownie/brownie",
-    githubUrl: "https://github.com/eth-brownie/brownie",
-    background: "#ffffff",
-    name: "Brownie",
-    description: "page-local-environment-brownie-desc",
-    alt: "page-local-environment-brownie-logo-alt",
-  },
-  {
-    id: "epirus",
-    url: "https://www.web3labs.com/epirus",
-    githubUrl: "https://github.com/web3labs/epirus-free",
-    background: "#ffffff",
-    name: "Epirus",
-    description: "page-local-environment-epirus-desc",
-    alt: "page-local-environment-epirus-logo-alt",
-  },
-  {
-    id: "createethapp",
-    url: "https://github.com/PaulRBerg/create-eth-app",
-    githubUrl: "https://github.com/PaulRBerg/create-eth-app",
-    background: "#ffffff",
-    name: "Create Eth App",
-    description: "page-local-environment-eth-app-desc",
-    alt: "page-local-environment-eth-app-logo-alt",
-  },
-  {
-    id: "scaffoldeth",
-    url: "https://github.com/austintgriffith/scaffold-eth",
-    githubUrl: "https://github.com/austintgriffith/scaffold-eth",
-    background: "#ffffff",
-    name: "scaffold-eth",
-    description: "page-local-environment-scaffold-eth-desc",
-    alt: "page-local-environment-scaffold-eth-logo-alt",
-  },
-  {
-    id: "soliditytemplate",
-    url: "https://github.com/paulrberg/solidity-template",
-    githubUrl: "https://github.com/paulrberg/solidity-template",
-    background: "#ffffff",
-    name: "Solidity template",
-    description: "page-local-environment-solidity-template-desc",
-    alt: "page-local-environment-solidity-template-logo-alt",
-  },
-  {
-    id: "foundry",
-    url: "https://getfoundry.sh/",
-    githubUrl: "https://github.com/foundry-rs/foundry",
-    background: "#ffffff",
-    name: "Foundry",
-    description: "page-local-environment-foundry-desc",
-    alt: "page-local-environment-foundry-logo-alt",
-  },
-]
 
 const ChooseStackPage = ({
   data,
 }: PageProps<Queries.DevelopersLocalEnvironmentPageQuery, Context>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const [frameworks, setFrameworks] = useState<Array<IFramework>>([])
+
+  const frameworksList: Array<IFramework> = [
+    {
+      id: "waffle",
+      url: "https://getwaffle.io/",
+      githubUrl: "https://github.com/EthWorks/waffle",
+      background: "#ffffff",
+      name: "Waffle",
+      description: t("page-local-environment-waffle-desc"),
+      alt: t("page-local-environment-waffle-logo-alt"),
+    },
+    {
+      id: "hardhat",
+      url: "https://hardhat.org/",
+      githubUrl: "https://github.com/nomiclabs/hardhat",
+      background: "#faf8fb",
+      name: "Hardhat",
+      description: t("page-local-environment-hardhat-desc"),
+      alt: t("page-local-environment-hardhat-logo-alt"),
+    },
+    {
+      id: "truffle",
+      url: "https://www.trufflesuite.com/",
+      githubUrl: "https://github.com/trufflesuite/truffle",
+      background: "#31272a",
+      name: "Truffle",
+      description: t("page-local-environment-truffle-desc"),
+      alt: t("page-local-environment-truffle-logo-alt"),
+    },
+    {
+      id: "embark",
+      url: "https://framework.embarklabs.io/",
+      githubUrl: "https://github.com/embarklabs/embark",
+      background: "#1b3e5f",
+      name: "Embark",
+      description: t("page-local-environment-embark-desc"),
+      alt: t("page-local-environment-embark-logo-alt"),
+    },
+    {
+      id: "brownie",
+      url: "https://github.com/eth-brownie/brownie",
+      githubUrl: "https://github.com/eth-brownie/brownie",
+      background: "#ffffff",
+      name: "Brownie",
+      description: t("page-local-environment-brownie-desc"),
+      alt: t("page-local-environment-brownie-logo-alt"),
+    },
+    {
+      id: "epirus",
+      url: "https://www.web3labs.com/epirus",
+      githubUrl: "https://github.com/web3labs/epirus-free",
+      background: "#ffffff",
+      name: "Epirus",
+      description: t("page-local-environment-epirus-desc"),
+      alt: t("page-local-environment-epirus-logo-alt"),
+    },
+    {
+      id: "createethapp",
+      url: "https://github.com/PaulRBerg/create-eth-app",
+      githubUrl: "https://github.com/PaulRBerg/create-eth-app",
+      background: "#ffffff",
+      name: "Create Eth App",
+      description: t("page-local-environment-eth-app-desc"),
+      alt: t("page-local-environment-eth-app-logo-alt"),
+    },
+    {
+      id: "scaffoldeth",
+      url: "https://github.com/austintgriffith/scaffold-eth",
+      githubUrl: "https://github.com/austintgriffith/scaffold-eth",
+      background: "#ffffff",
+      name: "scaffold-eth",
+      description: t("page-local-environment-scaffold-eth-desc"),
+      alt: t("page-local-environment-scaffold-eth-logo-alt"),
+    },
+    {
+      id: "soliditytemplate",
+      url: "https://github.com/paulrberg/solidity-template",
+      githubUrl: "https://github.com/paulrberg/solidity-template",
+      background: "#ffffff",
+      name: "Solidity template",
+      description: t("page-local-environment-solidity-template-desc"),
+      alt: t("page-local-environment-solidity-template-logo-alt"),
+    },
+    {
+      id: "foundry",
+      url: "https://getfoundry.sh/",
+      githubUrl: "https://github.com/foundry-rs/foundry",
+      background: "#ffffff",
+      name: "Foundry",
+      description: t("page-local-environment-foundry-desc"),
+      alt: t("page-local-environment-foundry-logo-alt"),
+    },
+  ]
 
   useEffect(() => {
     const list = shuffle(
@@ -172,14 +171,8 @@ const ChooseStackPage = ({
   return (
     <Flex direction="column" alignItems="center" w="full" mx="auto" mt={16}>
       <PageMetadata
-        title={translateMessageId(
-          "page-local-environment-setup-meta-title",
-          intl
-        )}
-        description={translateMessageId(
-          "page-local-environment-setup-meta-desc",
-          intl
-        )}
+        title={t("page-local-environment-setup-meta-title")}
+        description={t("page-local-environment-setup-meta-desc")}
       />
       <Box
         pt={{ base: 0, xl: 4 }}
@@ -263,7 +256,7 @@ const ChooseStackPage = ({
               backgroundSize="cover"
               backgroundRepeat="no-repeat"
               image={getImage(data.hero)!}
-              alt={translateMessageId("alt-eth-blocks", intl)}
+              alt={t("alt-eth-blocks")}
               loading="eager"
             />
           </Column>
@@ -278,9 +271,9 @@ const ChooseStackPage = ({
               name={framework.name}
               githubUrl={framework.githubUrl}
               repoLangCount={2}
-              alt={translateMessageId(framework.alt, intl)}
+              alt={framework.alt}
             >
-              <Translation id={framework.description} />
+              {framework.description}
             </ProductCard>
           ))}
         </SimpleGrid>
@@ -307,7 +300,21 @@ export const devtoolImage = graphql`
 `
 
 export const query = graphql`
-  query DevelopersLocalEnvironmentPage {
+  query DevelopersLocalEnvironmentPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-developers-local-environment", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     hero: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
         gatsbyImageData(
