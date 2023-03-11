@@ -416,7 +416,7 @@ const DepositContractPage = ({
                     <Translation id="page-staking-deposit-contract-checkbox3" />
                   </Checkbox>
                   <CopyButton
-                    disabled={!isButtonEnabled}
+                    isDisabled={!isButtonEnabled}
                     leftIcon={<Emoji text=":eyes:" boxSize={4} />}
                     onClick={() =>
                       setState({ ...state, showAddress: !state.showAddress })
