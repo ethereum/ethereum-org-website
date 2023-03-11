@@ -3,7 +3,6 @@ import React, { ReactNode, useState } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { keyframes } from "@emotion/react"
 import styled from "@emotion/styled"
-import { Icon as ChakraIcon } from "@chakra-ui/react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
 // Components
@@ -204,7 +203,7 @@ const StyledSelect = styled(Select)`
   }
 
   .react-select__control--is-focused {
-    border: border: 1px solid ${(props) => props.theme.colors.primary};
+    border: 1px solid ${(props) => props.theme.colors.primary};
     background: ${(props) => props.theme.colors.primary};
     svg {
       fill: ${(props) => props.theme.colors.background};
@@ -336,8 +335,8 @@ const WalletMoreInfoCategory = styled.div`
   h4 {
     color: ${(props) => props.theme.colors.primary};
     margin: 0 0.2rem 0.5rem;
-    display:block;
-    font-size; 1rem;
+    display: block;
+    font-size: 1rem;
   }
 `
 
@@ -761,7 +760,7 @@ const WalletTable = ({ data, filters, walletData }) => {
     const walletHasFilter = (filterKey) => {
       return wallet[filterKey] === true
     }
-    // Cast as Number because TypeScript warned about sorting implictily by true/false
+    // Cast as Number because TypeScript warned about sorting implicitly by true/false
     const orderedFeatureDropdownItems = [...featureDropdownItems].sort(
       (a, b) =>
         Number(walletHasFilter(b.filterKey)) -
