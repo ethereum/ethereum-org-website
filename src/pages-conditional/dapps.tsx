@@ -1294,7 +1294,7 @@ const DappsPage = ({
             </div>
             <AddDappButton
               variant="outline"
-              to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dapp.md&title="
+              to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dapp.yaml&title="
             >
               <Translation id="page-dapps-add-button" />
             </AddDappButton>

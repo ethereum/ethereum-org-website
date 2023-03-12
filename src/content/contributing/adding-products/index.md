@@ -97,7 +97,7 @@ As is the fluid nature of Ethereum, teams and products come and go and innovatio
 - ensure that all wallets and dapps listed still fulfil our criteria
 - verify there aren't products that have been suggested that meet more of our criteria than the ones currently listed
 
-You can help with this by checking and letting us know. [Create an issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=) or send an email to [website@ethereum.org](mailto:website@ethereum.org)
+You can help with this by checking and letting us know. [Create an issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) or send an email to [website@ethereum.org](mailto:website@ethereum.org)
 
 _We're also investigating options for voting so the community can indicate their preferences and highlight the best products out there for us to recommend._
 
