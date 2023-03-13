@@ -61,6 +61,7 @@ export const Checkbox = defineMultiStyleConfig({
   })),
   sizes,
   variants: {
+    // TODO: remove this variant
     alignTop: variantAlignTop,
   },
   defaultProps: {
