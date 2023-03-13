@@ -1,7 +1,7 @@
 import { defineStyle, defineStyleConfig } from "@chakra-ui/react"
 import { badgeDefaultTheme, defineMergeStyles } from "./components.utils"
 
-const { baseStyle: defaultBaseStyle, sizes: defaultSizes } = badgeDefaultTheme
+const { baseStyle: defaultBaseStyle } = badgeDefaultTheme
 
 const baseStyle = defineMergeStyles(defaultBaseStyle, {
   borderRadius: "base",
