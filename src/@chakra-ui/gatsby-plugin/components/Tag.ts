@@ -47,6 +47,7 @@ export const Tag = defineMultiStyleConfig({
         boxShadow: "none",
       },
     },
+    // TODO: remove this variant, as it doesn't exist on the DS
     custom: {}, // empty variant
   },
   defaultProps: {
