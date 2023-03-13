@@ -219,6 +219,7 @@ const FindWalletPage = ({ data, location }) => {
           border="1px solid"
           borderColor="primary"
           borderLeft="none"
+          transition="1.5s all"
           borderRightRadius="base"
           pt={1.5}
           px={5}
@@ -289,12 +290,11 @@ const FindWalletPage = ({ data, location }) => {
         borderBottomColor="secondary"
       >
         <Flex
-          maxW="330px"
           direction="column"
           gap="0.55rem"
           overflowY="scroll"
           bg="background"
-          transition="0.5s all"
+          transition="1.8s all"
           zIndex={20}
           borderTopRightRadius="lg"
           ref={wrapperRef}
@@ -318,7 +318,7 @@ const FindWalletPage = ({ data, location }) => {
           }}
           width={{ base: "90%", sm: "350px", lg: "full" }}
           height={{ base: "full", lg: "auto" }}
-          display={{ base: showMobileSidebar ? "flex" : "none", lg: "flex" }}
+          maxW={showMobileSidebar ? "330px" : "0px"}
           position={{
             base: showMobileSidebar ? "absolute" : "relative",
             lg: "static",
