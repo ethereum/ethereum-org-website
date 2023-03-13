@@ -282,6 +282,7 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
           createPage<Context>({
             path: langSlug,
             component: path.resolve(`src/templates/${template}.tsx`),
+            defer: true,
             context: {
               language: lang,
               languagesToFetch: [lang],
@@ -310,6 +311,7 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
     createPage<Context>({
       path: slug,
       component: path.resolve(`src/templates/${template}.tsx`),
+      defer: true,
       context: {
         language,
         languagesToFetch: [language],
