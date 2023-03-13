@@ -41,7 +41,7 @@ import PageMetadata from "../components/PageMetadata"
 import RandomAppList from "../components/RandomAppList"
 
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
-import TableOfContents, { Item } from "../components/TableOfContents"
+import TableOfContents from "../components/TableOfContents"
 import Translation from "../components/Translation"
 import SectionNav from "../components/SectionNav"
 import {
@@ -54,6 +54,7 @@ import YouTube from "../components/YouTube"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
 
+import { Item } from "../components/TableOfContents/utils"
 import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
 import { Lang } from "../utils/languages"
