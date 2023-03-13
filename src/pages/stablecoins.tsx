@@ -2,7 +2,7 @@ import React, { useEffect, useState, useMemo } from "react"
 import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import ButtonLink from "../components/ButtonLink"
 import CalloutBanner from "../components/CalloutBanner"
@@ -31,7 +31,6 @@ import Tooltip from "../components/Tooltip"
 import Translation from "../components/Translation"
 
 import { getData } from "../utils/cache"
-import { translateMessageId } from "../utils/translations"
 import { getImage } from "../utils/image"
 
 const StyledContent = styled(Content)`
@@ -311,22 +310,15 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
     markets: [],
     marketsHasError: false,
   })
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   // Stablecoin types
-  const FIAT = translateMessageId(
-    "page-stablecoins-stablecoins-table-type-fiat-backed",
-    intl
+  const FIAT = t("page-stablecoins-stablecoins-table-type-fiat-backed")
+  const CRYPTO = t("page-stablecoins-stablecoins-table-type-crypto-backed")
+  const ASSET = t(
+    "page-stablecoins-stablecoins-table-type-precious-metals-backed"
   )
-  const CRYPTO = translateMessageId(
-    "page-stablecoins-stablecoins-table-type-crypto-backed",
-    intl
-  )
-  const ASSET = translateMessageId(
-    "page-stablecoins-stablecoins-table-type-precious-metals-backed",
-    intl
-  )
-  const ALGORITHMIC = translateMessageId("page-stablecoins-algorithmic", intl)
+  const ALGORITHMIC = t("page-stablecoins-algorithmic")
 
   const stablecoins = useMemo(
     () => ({
@@ -411,19 +403,16 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
 
   const features = [
     {
-      title: translateMessageId("page-stablecoins-fiat-backed", intl),
-      description: translateMessageId(
-        "page-stablecoins-fiat-backed-description",
-        intl
-      ),
+      title: t("page-stablecoins-fiat-backed"),
+      description: t("page-stablecoins-fiat-backed-description"),
       emoji: ":dollar:",
       pros: [
-        translateMessageId("page-stablecoins-fiat-backed-pro-1", intl),
-        translateMessageId("page-stablecoins-fiat-backed-pro-2", intl),
+        t("page-stablecoins-fiat-backed-pro-1"),
+        t("page-stablecoins-fiat-backed-pro-2"),
       ],
       cons: [
-        translateMessageId("page-stablecoins-fiat-backed-con-1", intl),
-        translateMessageId("page-stablecoins-fiat-backed-con-2", intl),
+        t("page-stablecoins-fiat-backed-con-1"),
+        t("page-stablecoins-fiat-backed-con-2"),
       ],
       links: [
         { text: "USDC", url: "https://www.coinbase.com/usdc" },
@@ -431,53 +420,42 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
       ],
     },
     {
-      title: translateMessageId("page-stablecoins-crypto-backed", intl),
-      description: translateMessageId(
-        "page-stablecoins-crypto-backed-description",
-        intl
-      ),
+      title: t("page-stablecoins-crypto-backed"),
+      description: t("page-stablecoins-crypto-backed-description"),
       emoji: ":unicorn:",
       pros: [
-        translateMessageId("page-stablecoins-crypto-backed-pro-1", intl),
-        translateMessageId("page-stablecoins-crypto-backed-pro-2", intl),
-        translateMessageId("page-stablecoins-crypto-backed-pro-3", intl),
+        t("page-stablecoins-crypto-backed-pro-1"),
+        t("page-stablecoins-crypto-backed-pro-2"),
+        t("page-stablecoins-crypto-backed-pro-3"),
       ],
       cons: [
-        translateMessageId("page-stablecoins-crypto-backed-con-1", intl),
-        translateMessageId("page-stablecoins-crypto-backed-con-2", intl),
+        t("page-stablecoins-crypto-backed-con-1"),
+        t("page-stablecoins-crypto-backed-con-2"),
       ],
       links: [{ text: "Dai", url: "https://makerdao.com/en/" }],
     },
     {
-      title: translateMessageId("page-stablecoins-precious-metals", intl),
-      description: translateMessageId(
-        "page-stablecoins-precious-metals-description",
-        intl
-      ),
+      title: t("page-stablecoins-precious-metals"),
+      description: t("page-stablecoins-precious-metals-description"),
       emoji: ":gem_stone:",
-      pros: [
-        translateMessageId("page-stablecoins-precious-metals-pro-1", intl),
-      ],
+      pros: [t("page-stablecoins-precious-metals-pro-1")],
       cons: [
-        translateMessageId("page-stablecoins-precious-metals-con-1", intl),
-        translateMessageId("page-stablecoins-precious-metals-con-2", intl),
+        t("page-stablecoins-precious-metals-con-1"),
+        t("page-stablecoins-precious-metals-con-2"),
       ],
       links: [{ text: "Pax Gold", url: "https://paxos.com/paxgold/" }],
     },
     {
-      title: translateMessageId("page-stablecoins-algorithmic", intl),
-      description: translateMessageId(
-        "page-stablecoins-algorithmic-description",
-        intl
-      ),
+      title: t("page-stablecoins-algorithmic"),
+      description: t("page-stablecoins-algorithmic-description"),
       emoji: ":chart_with_downwards_trend:",
       pros: [
-        translateMessageId("page-stablecoins-algorithmic-pro-1", intl),
-        translateMessageId("page-stablecoins-algorithmic-pro-2", intl),
+        t("page-stablecoins-algorithmic-pro-1"),
+        t("page-stablecoins-algorithmic-pro-2"),
       ],
       cons: [
-        translateMessageId("page-stablecoins-algorithmic-con-1", intl),
-        translateMessageId("page-stablecoins-algorithmic-con-2", intl),
+        t("page-stablecoins-algorithmic-con-1"),
+        t("page-stablecoins-algorithmic-con-2"),
       ],
       links: [{ text: "Ampleforth", url: "https://www.ampleforth.org/" }],
     },
@@ -486,31 +464,19 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
   const tokens = [
     {
       emoji: ":globe_showing_americas:",
-      description: translateMessageId(
-        "page-stablecoins-stablecoins-feature-1",
-        intl
-      ),
+      description: t("page-stablecoins-stablecoins-feature-1"),
     },
     {
       emoji: ":chart_with_upwards_trend:",
-      description: translateMessageId(
-        "page-stablecoins-stablecoins-feature-2",
-        intl
-      ),
+      description: t("page-stablecoins-stablecoins-feature-2"),
     },
     {
       emoji: ":handshake:",
-      description: translateMessageId(
-        "page-stablecoins-stablecoins-feature-3",
-        intl
-      ),
+      description: t("page-stablecoins-stablecoins-feature-3"),
     },
     {
       emoji: ":key:",
-      description: translateMessageId(
-        "page-stablecoins-stablecoins-feature-4",
-        intl
-      ),
+      description: t("page-stablecoins-stablecoins-feature-4"),
     },
   ]
 
@@ -518,69 +484,48 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
     {
       background: "linear-gradient(225deg, #aa589b 0%, #5cb8c4 100%)",
       url: "https://aave.com",
-      alt: translateMessageId("aave-logo", intl),
+      alt: t("aave-logo"),
       image: getImage(data.aave),
       name: "Aave",
-      description: translateMessageId(
-        "page-stablecoins-stablecoins-dapp-description-1",
-        intl
-      ),
+      description: t("page-stablecoins-stablecoins-dapp-description-1"),
     },
     {
       background: "#f9fafb",
       url: "https://compound.finance",
-      alt: translateMessageId("compound-logo", intl),
+      alt: t("compound-logo"),
       image: getImage(data.compound),
       name: "Compound",
-      description: translateMessageId(
-        "page-stablecoins-stablecoins-dapp-description-2",
-        intl
-      ),
+      description: t("page-stablecoins-stablecoins-dapp-description-2"),
     },
     {
       background: "linear-gradient(135deg, #c7efe6 0%, #eeeac7 100%)",
       url: "https://oasis.app",
-      alt: translateMessageId("oasis-logo", intl),
+      alt: t("oasis-logo"),
       image: getImage(data.oasis),
       name: "Oasis",
-      description: translateMessageId(
-        "page-stablecoins-stablecoins-dapp-description-4",
-        intl
-      ),
+      description: t("page-stablecoins-stablecoins-dapp-description-4"),
     },
   ]
 
   const tableColumns = [
-    translateMessageId(
-      "page-stablecoins-stablecoins-table-header-column-1",
-      intl
-    ),
-    translateMessageId(
-      "page-stablecoins-stablecoins-table-header-column-2",
-      intl
-    ),
-    translateMessageId(
-      "page-stablecoins-stablecoins-table-header-column-3",
-      intl
-    ),
+    t("page-stablecoins-stablecoins-table-header-column-1"),
+    t("page-stablecoins-stablecoins-table-header-column-2"),
+    t("page-stablecoins-stablecoins-table-header-column-3"),
   ]
 
   const heroContent = {
-    title: translateMessageId("page-stablecoins-title", intl),
-    header: translateMessageId("page-stablecoins-hero-header", intl),
-    subtitle: translateMessageId("page-stablecoins-hero-subtitle", intl),
+    title: t("page-stablecoins-title"),
+    header: t("page-stablecoins-hero-header"),
+    subtitle: t("page-stablecoins-hero-subtitle"),
     image: getImage(data.stablecoins)!,
-    alt: translateMessageId("page-stablecoins-hero-alt", intl),
+    alt: t("page-stablecoins-hero-alt"),
     buttons: [
       {
-        content: translateMessageId("page-stablecoins-hero-button", intl),
+        content: t("page-stablecoins-hero-button"),
         toId: "explore",
       },
       {
-        content: translateMessageId(
-          "page-stablecoins-how-they-work-button",
-          intl
-        ),
+        content: t("page-stablecoins-how-they-work-button"),
         toId: "how",
         variant: "outline",
       },
@@ -590,10 +535,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
   const toolsData = [
     {
       title: "Stablecoins.wtf",
-      description: translateMessageId(
-        "page-stablecoins-tools-stablecoinswtf-description",
-        intl
-      ),
+      description: t("page-stablecoins-tools-stablecoinswtf-description"),
       link: "https://stablecoins.wtf",
       image: getImage(data.stablecoinswtf),
       alt: "Stablecoins.wtf",
@@ -603,11 +545,8 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
   return (
     <Page>
       <PageMetadata
-        title={translateMessageId("page-stablecoins-title", intl)}
-        description={translateMessageId(
-          "page-stablecoins-meta-description",
-          intl
-        )}
+        title={t("page-stablecoins-title")}
+        description={t("page-stablecoins-meta-description")}
       />
       <PageHero isReverse content={heroContent} />
       {/* <HeroSectionContent>
@@ -724,7 +663,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
               </StyledLeftColumn>
               <Image
                 image={getImage(data.dailarge)!}
-                alt={translateMessageId("page-stablecoins-dai-logo", intl)}
+                alt={t("page-stablecoins-dai-logo")}
               />
             </StyledDaiBanner>
             <USDCBanner>
@@ -759,7 +698,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
               </StyledLeftColumn>
               <Image
                 image={getImage(data.usdclarge)!}
-                alt={translateMessageId("page-stablecoins-usdc-logo", intl)}
+                alt={t("page-stablecoins-usdc-logo")}
               />
             </USDCBanner>
           </Row>
@@ -799,10 +738,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
           }
           image={getImage(data.doge)!}
           maxImageWidth={600}
-          alt={translateMessageId(
-            "page-stablecoins-stablecoins-dapp-callout-image-alt",
-            intl
-          )}
+          alt={t("page-stablecoins-stablecoins-dapp-callout-image-alt")}
         >
           <ButtonLinkContainer>
             <ButtonLink to="/dapps/">
@@ -893,7 +829,21 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
 export default StablecoinsPage
 
 export const query = graphql`
-  query StablecoinsPage {
+  query StablecoinsPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-stablecoins", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     stablecoins: file(relativePath: { eq: "stablecoins/hero.png" }) {
       childImageSharp {
         gatsbyImageData(

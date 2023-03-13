@@ -13,7 +13,7 @@ summaryPoints:
   - Validators who fully exit staking will receive their remaining balance
 ---
 
-<UpgradeStatus dateKey="page-upgrades-withdrawals">
+<UpgradeStatus dateKey="page-staking-withdrawals-when">
   Staking withdrawals will be enabled through the Shanghai/Capella upgrade. This Ethereum network upgrade is expected to take place in the first half of 2023. <a href="#when" customEventOptions={{ eventCategory: "Anchor link", eventAction: "When's it shipping?", eventName: "click" }}>More below</a>
 </UpgradeStatus>
 
@@ -96,7 +96,7 @@ This approach to staking withdrawals avoids requiring stakers to manually submit
 
 ### How frequently will I get my staking rewards? {#how-soon}
 
-A maximum of 16 withdrawals can be processed in a single block. At that rate, 115,200 validator withdrawals can be processed per day (assuming no missed blocks). As noted above, validators without eligible withdrawals will be skipped, decreasing the time to finish the sweep.
+A maximum of 16 withdrawals can be processed in a single block. At that rate, 115,200 validator withdrawals can be processed per day (assuming no missed slots). As noted above, validators without eligible withdrawals will be skipped, decreasing the time to finish the sweep.
 
 Expanding this calculation, we can estimate the time it will take to process a given number of withdrawals:
 
@@ -184,6 +184,15 @@ eventAction="I operate a validator, where can I find more information on prepari
 eventName="read more">
 
 <p>Validator operators are recommended to visit the <a href="https://zhejiang.launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals (Zhejiang Testnet)</a> page where you'll find more details about how to be prepared, timing of events, and more details about how withdrawals function.</p>
+</ExpandableCard>
+
+<ExpandableCard
+title="Can I re-activate my validator after exiting by depositing more ETH?"
+eventCategory="FAQ"
+eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
+eventName="read more">
+
+<p>No. Once a validator has exited and its full balance has been withdrawn, any additional funds deposited to that validator will automatically be transferred to the withdrawal address during the next validator sweep. To re-stake ETH, a new validator must be activated.</p>
 </ExpandableCard>
 
 ## Further reading {#further-reading}

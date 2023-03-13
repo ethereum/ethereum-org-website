@@ -23,5 +23,6 @@
   "page-staking-deposit-contract-stop-reading": "Parar leitura",
   "page-staking-deposit-contract-subtitle": "Este é o endereço do contrato de depósito no Ethereum. Use esta página para confirmar que está enviando fundos para o endereço correto quando fizer tal depósito.",
   "page-staking-deposit-contract-warning": "Verifique cada caractere cuidadosamente.",
-  "page-staking-deposit-contract-warning-2": "O envio de fundos para este endereço não funcionará e não o tornará um staker. Você deve seguir as instruções da plataforma."
+  "page-staking-deposit-contract-warning-2": "O envio de fundos para este endereço não funcionará e não o tornará um staker. Você deve seguir as instruções da plataforma.",
+  "page-staking-deposit-contract-title": "Verifique o endereço do contrato de depósito"
 }

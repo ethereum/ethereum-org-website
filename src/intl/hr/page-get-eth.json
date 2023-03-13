@@ -58,5 +58,6 @@
   "page-get-eth-your-address": "Vaša ETH adresa",
   "page-get-eth-your-address-desc": "Kada preuzmete novčanik, stvorit će vam javnu ETH adresu. Evo primjera kako to izgleda:",
   "page-get-eth-your-address-desc-3": "Mislite na ovo kao na svoju e-adresu, ali umjesto pošte može primiti ETH. Ako želite prenijeti ETH iz mjenjačnice u novčanik, upotrijebite svoju adresu kao odredište. Obavezno provjerite prije slanja!",
-  "page-get-eth-your-address-wallet-link": "Provjerite novčanike"
+  "page-get-eth-your-address-wallet-link": "Provjerite novčanike",
+  "listing-policy-raise-issue-link": "Pokrenite zahtjev za rješavanje problema"
 }
