@@ -113,7 +113,7 @@ export const Button = defineStyleConfig({
   baseStyle,
   sizes: defineMergeStyles(defaultSizes, {
     md: {
-      h: 42,
+      h: "42px",
     },
   }),
   variants: {
