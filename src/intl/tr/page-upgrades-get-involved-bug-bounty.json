@@ -43,7 +43,6 @@
   "page-upgrades-bug-bounty-quality-repro-desc": ": Lütfen test kodunu, komut dosyalarını ve ayrıntılı talimatları ekleyin. Güvenlik açığını yeniden üretmek ve doğrulamak bizim için ne kadar kolay olursa, ödül de o kadar yüksek olur.",
   "page-upgrades-bug-bounty-questions": "Sorularınız mı var?",
   "page-upgrades-bug-bounty-rules": "Kuralları okuyun",
-  "page-upgrades-bug-bounty-shard-chains": "parça zincirleri",
   "page-upgrades-bug-bounty-slogan": "Mutabakat katmanı hata ödülleri",
   "page-upgrades-bug-bounty-specs": "Şartnamenin tamamını okuyun",
   "page-upgrades-bug-bounty-specs-docs": "Şartname belgeleri",
@@ -91,5 +90,6 @@
   "page-upgrades-bug-bounty-card-text": "Saldırgan bazen bir düğümü, doğrulayıcı tarafından yapılan her yüz onaydan birini bırakmasına neden olacak bir duruma getirebilir",
   "page-upgrades-bug-bounty-card-text-1": "Saldırgan, başında 4 sıfır bayt bulunduran eş kimlikli düğümlere başarılı tutulma saldırıları gerçekleştirebilir",
   "page-upgrades-bug-bounty-card-text-2": "İki istemci arasında bir mutabakat hatası vardır, ancak saldırganın olayı tetiklemesi zordur veya pratik değildir.",
-  "page-upgrades-bug-bounty-card-text-3": "İki istemci arasında bir mutabakat hatası vardır ve bir saldırganın olayı tetiklemesi çok kolaydır."
+  "page-upgrades-bug-bounty-card-text-3": "İki istemci arasında bir mutabakat hatası vardır ve bir saldırganın olayı tetiklemesi çok kolaydır.",
+  "page-upgrades-question-title": "Sıkça sorulan sorular"
 }

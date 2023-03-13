@@ -99,5 +99,6 @@
   "page-upgrades-bug-bounty-card-text": "Atacatorul poate pune uneori un nod într-o stare care îl determină să invalideze câte una la fiecare o sută de atestări efectuate de un validator",
   "page-upgrades-bug-bounty-card-text-1": "Atacatorul poate efectua cu succes atacuri eclipsă asupra nodurilor cu peer-id-uri cu 4 octeți de bază zero",
   "page-upgrades-bug-bounty-card-text-2": "Atacatorul poate realiza cu succes partiții de rețea majore și este fără interes pentru un atacator să declanșeze vulnerabilitatea",
-  "page-upgrades-bug-bounty-card-text-3": "Atacatorul poate efectua rularea codului de la distanță într-un client cu majoritate și este banal pentru un atacator să declanșeze vulnerabilitatea"
+  "page-upgrades-bug-bounty-card-text-3": "Atacatorul poate efectua rularea codului de la distanță într-un client cu majoritate și este banal pentru un atacator să declanșeze vulnerabilitatea",
+  "page-upgrades-question-title": "Întrebări frecvente"
 }

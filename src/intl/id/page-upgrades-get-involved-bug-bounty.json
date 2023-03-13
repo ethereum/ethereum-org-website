@@ -43,7 +43,6 @@
   "page-upgrades-bug-bounty-quality-repro-desc": ": Harap sertakan kode pengujian, skrip, dan instruksi terperinci. Semakin mudah bagi kami untuk mereproduksi dan memverifikasi kerentanan, semakin tinggi imbalannya.",
   "page-upgrades-bug-bounty-questions": "Ada pertanyaan?",
   "page-upgrades-bug-bounty-rules": "Baca aturan",
-  "page-upgrades-bug-bounty-shard-chains": "rantai shard",
   "page-upgrades-bug-bounty-slogan": "Hadiah bug lapisan konsensus",
   "page-upgrades-bug-bounty-specs": "Baca spesifikasi selengkapnya",
   "page-upgrades-bug-bounty-specs-docs": "Dokumen spesifikasi",
@@ -91,5 +90,6 @@
   "page-upgrades-bug-bounty-card-text": "Penyerang terkadang dapat menempatkan sebuah node dalam state yang menyebabkannya hilangnya satu dari setiap seratus pengesahan yang dibuat oleh validator",
   "page-upgrades-bug-bounty-card-text-1": "Penyerang dapat berhasil melakukan serangan gerhana pada node dengan peer-id dengan 4 bita nol di depan",
   "page-upgrades-bug-bounty-card-text-2": "Ada bug konsensus antara dua klien, tetapi sulit atau tidak praktis bagi penyerang untuk memicu aksi tersebut.",
-  "page-upgrades-bug-bounty-card-text-3": "Ada konsensus bug antara dua klien, dan tampak tidak mungkin bagi penyerang untuk memicu aksi."
+  "page-upgrades-bug-bounty-card-text-3": "Ada konsensus bug antara dua klien, dan tampak tidak mungkin bagi penyerang untuk memicu aksi.",
+  "page-upgrades-question-title": "Pertanyaan yang sering diajukan"
 }

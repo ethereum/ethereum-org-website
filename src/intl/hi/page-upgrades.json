@@ -1,3 +1,15 @@
 {
-  "page-upgrades-beacon-date": "लादा गया!"
+  "page-upgrades-beacon-date": "लादा गया!",
+  "page-upgrades-upgrades-guide": "Eth2 अपग्रेड के लिए मार्गदर्शिका",
+  "page-upgrades-upgrades-docking": "डॉकिंग मेननेट और Eth2",
+  "page-upgrades-shard-title": "शार्ड चेन",
+  "page-upgrades-upgrades-beacon-chain": "बीकन चेन",
+  "consensus-beaconcha-in-desc": "ओपन सोर्स बीकन चेन एक्सप्लोरर",
+  "consensus-beaconscan-desc": "बीकन चेन एक्सप्लोरर - सहमति परत का इथरस्कैन",
+  "consensus-become-staker": "स्टेकर बनें",
+  "consensus-become-staker-desc": "स्टेकिंग चालू है! यदि आप नेटवर्क को सुरक्षित रखने में मदद के लिए अपने ETH पर स्टेक लगाना चाहते हैं, तो सुनिश्चित करें कि आप जोखिमों से अवगत हैं।",
+  "consensus-explore": "डेटा का अन्वेषण करें",
+  "consensus-run-beacon-chain": "सहमति ग्राहक चलाएँ",
+  "consensus-run-beacon-chain-desc": "एथेरियम को ज़्यादा से ज़्यादा क्लाइंट चलाने की ज़रूरत होती है। इस एथेरियम सार्वजनिक हित में मदद करें!",
+  "read-more": "और पढ़ें"
 }

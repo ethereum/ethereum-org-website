@@ -26,5 +26,6 @@
   "page-learning-tools-sandbox-desc": "Te piaskownice dadzą Ci przestrzeń do eksperymentowania z pisaniem inteligentnych kontraktów i zrozumieniem Ethereum.",
   "page-learning-tools-studio-description": "Oparte na Internecie IDE, w którym możesz korzystać z samouczków do tworzenia i testowania inteligentnych kontraktów, a także budować dla nich frontend.",
   "page-learning-tools-vyperfun-description": "Naucz się Vyper, tworząc własną grę w Pokémony.",
-  "page-learning-tools-vyperfun-logo-alt": "Logo Vyper.fun"
+  "page-learning-tools-vyperfun-logo-alt": "Logo Vyper.fun",
+  "alt-eth-blocks": "Ilustracja bloków zorganizowanych jak symbol ETH"
 }

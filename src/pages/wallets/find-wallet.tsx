@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import { shuffle } from "lodash"
 import { MdOutlineCancel } from "react-icons/md"
 import { BsArrowCounterclockwise } from "react-icons/bs"
@@ -32,7 +32,6 @@ import walletData from "../../data/wallets/wallet-data"
 import { FilterBurgerIcon } from "../../components/icons/wallets"
 
 // Utils
-import { translateMessageId } from "../../utils/translations"
 import { trackCustomEvent } from "../../utils/matomo"
 import { getImage } from "../../utils/image"
 import { useOnClickOutside } from "../../hooks/useOnClickOutside"
@@ -120,7 +119,7 @@ const randomizedWalletData = shuffle(walletData)
 
 const FindWalletPage = ({ data, location }) => {
   const theme = useTheme()
-  const intl = useIntl()
+  const { t } = useTranslation()
   const resetWalletFilter = React.useRef(() => {})
   const wrapperRef = useRef<HTMLDivElement>(null)
 
@@ -161,11 +160,8 @@ const FindWalletPage = ({ data, location }) => {
       pointerEvents={showMobileSidebar ? "none" : "auto"}
     >
       <PageMetadata
-        title={translateMessageId("page-find-wallet-meta-title", intl)}
-        description={translateMessageId(
-          "page-find-wallet-meta-description",
-          intl
-        )}
+        title={t("page-find-wallet-meta-title")}
+        description={t("page-find-wallet-meta-description")}
       />
 
       <Flex
@@ -264,7 +260,7 @@ const FindWalletPage = ({ data, location }) => {
                 }
                 return acc
               }, 0)}{" "}
-              {translateMessageId("page-find-wallet-active", intl)}
+              {t("page-find-wallet-active")}
             </Text>
           </Box>
           {showMobileSidebar ? (
@@ -375,7 +371,7 @@ const FindWalletPage = ({ data, location }) => {
               }}
             >
               <Text>
-                {translateMessageId("page-find-wallet-feature-filters", intl)} (
+                {t("page-find-wallet-feature-filters")} (
                 {Object.values(filters).reduce((acc, filter) => {
                   if (filter) {
                     acc += 1
@@ -513,7 +509,21 @@ const FindWalletPage = ({ data, location }) => {
 export default FindWalletPage
 
 export const query = graphql`
-  {
+  query FindWalletPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-wallets-find-wallet", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     hero: file(relativePath: { eq: "wallets/find-wallet-hero.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)

@@ -20,6 +20,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 import { MdExpandMore } from "react-icons/md"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
@@ -38,8 +39,9 @@ import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
 import RandomAppList from "../components/RandomAppList"
+
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
-import TableOfContents from "../components/TableOfContents"
+import TableOfContents, { Item } from "../components/TableOfContents"
 import Translation from "../components/Translation"
 import SectionNav from "../components/SectionNav"
 import {
@@ -52,7 +54,6 @@ import YouTube from "../components/YouTube"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
 
-import { Item } from "../components/TableOfContents/utils"
 import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
 import { Lang } from "../utils/languages"
@@ -260,6 +261,8 @@ const UseCasePage = ({
   data: { siteData, pageData: mdx },
   pageContext,
 }: PageProps<Queries.UseCasePageQuery, Context>) => {
+  const { t } = useTranslation()
+
   if (!siteData || !mdx?.frontmatter)
     throw new Error(
       "UseCases page template query does not return expected values"
@@ -268,7 +271,7 @@ const UseCasePage = ({
     throw new Error("Required `title` property missing for use-cases template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
-  const tocItems = mdx.tableOfContents?.items as Item[]
+  const tocItems = mdx.tableOfContents?.items as Array<Item>
   const summaryPoints = getSummaryPoints(mdx.frontmatter)
 
   const { editContentUrl } = siteData.siteMetadata || {}
@@ -292,27 +295,27 @@ const UseCasePage = ({
   }
 
   const dropdownLinks: ButtonDropdownList = {
-    text: "template-usecase-dropdown",
-    ariaLabel: "template-usecase-dropdown-aria",
+    text: t("template-usecase-dropdown"),
+    ariaLabel: t("template-usecase-dropdown-aria"),
     items: [
       {
-        text: "template-usecase-dropdown-defi",
+        text: t("template-usecase-dropdown-defi"),
         to: "/defi/",
       },
       {
-        text: "template-usecase-dropdown-nft",
+        text: t("template-usecase-dropdown-nft"),
         to: "/nft/",
       },
       {
-        text: "template-usecase-dropdown-dao",
+        text: t("template-usecase-dropdown-dao"),
         to: "/dao/",
       },
       {
-        text: "template-usecase-dropdown-social-networks",
+        text: t("template-usecase-dropdown-social-networks"),
         to: "/social-networks/",
       },
       {
-        text: "template-usecase-dropdown-identity",
+        text: t("template-usecase-dropdown-identity"),
         to: "/decentralized-identity/",
       },
     ],
@@ -414,7 +417,21 @@ const UseCasePage = ({
 }
 
 export const useCasePageQuery = graphql`
-  query UseCasePage($relativePath: String) {
+  query UseCasePage($languagesToFetch: [String!]!, $relativePath: String) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["template-usecase", "learn-quizzes", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     siteData: site {
       siteMetadata {
         editContentUrl
