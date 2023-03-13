@@ -62,5 +62,6 @@
   "page-get-eth-your-address": "आपका ETH पता",
   "page-get-eth-your-address-desc": "जब आप एक वॉलेट डाउनलोड करते हैं. तो यह आपके लिए एक सार्वजनिक ETH पता बनाएगा। यह इस तरह से दिखता है:",
   "page-get-eth-your-address-desc-3": "इसे अपने ईमेल पते की तरह मानें, लेकिन मेल के बजाय यह ETH प्राप्त कर सकता है। यदि आप ETH को एक्सचेंज से अपने वॉलेट में स्थानांतरित करना चाहते हैं, तो गंतव्य के रूप में अपने पते का उपयोग करें। भेजने से पहले हमेशा दोबारा जांचें!",
-  "page-get-eth-your-address-wallet-link": "वॉलेट की जाँच करें"
+  "page-get-eth-your-address-wallet-link": "वॉलेट की जाँच करें",
+  "listing-policy-raise-issue-link": "मुद्दा उठाएं"
 }

@@ -1,8 +1,6 @@
 {
   "page-local-environment-brownie-desc": "基于Python的智能合约开发和测试框架，针对以太坊虚拟机为目标。",
   "page-local-environment-brownie-logo-alt": "Brownie徽标",
-  "page-local-environment-embark-desc": "用于构建和部署去中心化应用的所有内部开发者平台。",
-  "page-local-environment-embark-logo-alt": "Embark徽标",
   "page-local-environment-epirus-desc": "用于在 Java 虚拟机上开发、部署和监测区块链应用的平台。",
   "page-local-environment-epirus-logo-alt": "Epirus徽标",
   "page-local-environment-eth-app-desc": "使用一个命令创建由以太坊提供支持的应用。使用广泛的UI框架和DeFi模板来选择。",

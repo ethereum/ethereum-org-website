@@ -100,5 +100,13 @@
   "page-calltocontribute-link": "Modèle de documentation",
   "page-calltocontribute-link-2": "Serveur Discord",
   "page-calltocontribute-span": "Modifier la page",
-  "page-calltocontribute-title": "Aidez-nous avec cette page"
+  "page-calltocontribute-title": "Aidez-nous avec cette page",
+  "layer-2-arbitrum-note": "Preuves de fraude uniquement pour les utilisateurs en liste blanche, liste blanche non encore ouverte",
+  "layer-2-boba-note": "Validation de l'état en cours de développement",
+  "layer-2-metis-note": "Preuves de fraude en cours de développement",
+  "layer-2-optimism-note": "Preuves de défaillance en développement",
+  "back-to-top": "Retour en Haut",
+  "banner-page-incomplete": "Cette page est incomplète et nous aimerions votre aide. Modifiez cette page et ajoutez tout ce que vous pensez être utile aux autres.",
+  "next": "Suivant",
+  "previous": "Précédent"
 }

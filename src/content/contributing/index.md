@@ -34,7 +34,7 @@ The ethereum.org website, like Ethereum more broadly, is an open-source project.
 - [Add a glossary term](/contributing/adding-glossary-terms)
   _– Help us continue to expand the Ethereum [glossary](/glossary/)_
 - [Create/edit content](/contributing/#how-to-update-content)
-  _– Suggest new pages or makes tweaks to what's here already_
+  _– Suggest new pages or make tweaks to what's here already_
 - [Add a layer 2](/contributing/adding-layer-2s/)
   _– Add a layer 2 to a relevant page_
 - [Add a staking product or service](/contributing/adding-staking-products/)
