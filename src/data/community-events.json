@@ -709,10 +709,10 @@
     "description": "Join ETHMiami during Art Basel Miami 2022.",
     "startDate": "2022-11-28",
     "endDate": "2022-12-4"
-  }
-    {
+  },
+  {
     "title": "ETHSamba Hack",
-    "to": "https://ethsamhba.org/",
+    "to": "https://ethsamba.org/",
     "sponsor": null,
     "location": "Rio de Janeiro, BR",
     "description": "Bootcamp, Hackathon, and 1-day conference in the sun.",
