@@ -1,7 +1,7 @@
 // Import libraries
 import React, { useState, useEffect, ReactNode } from "react"
 import { MdInfoOutline } from "react-icons/md"
-import { useIntl } from "react-intl"
+import { useI18next } from "gatsby-plugin-react-i18next"
 import { Code, Flex, Icon, Spinner, VStack } from "@chakra-ui/react"
 // Import components
 import Translation from "../Translation"
@@ -93,7 +93,7 @@ export interface IProps {}
 
 // StatsBox component
 const StakingStatsBox: React.FC<IProps> = () => {
-  const intl = useIntl()
+  const { language } = useI18next()
   /**
    * State variables:
    * - ZERO is default string, "0", representing loading state
@@ -104,9 +104,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
   const [currentApr, setCurrentApr] = useState<string | null>(ZERO)
 
   useEffect(() => {
-    const localeForStatsBoxNumbers = getLocaleForNumberFormat(
-      intl.locale as Lang
-    )
+    const localeForStatsBoxNumbers = getLocaleForNumberFormat(language as Lang)
 
     // Helper functions
     const formatInteger = (amount: number): string =>
@@ -142,7 +140,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
         setTotalValidators(null)
       }
     })()
-  }, [intl.locale])
+  }, [language])
 
   return (
     <Flex direction={{ base: "column", md: "row" }}>

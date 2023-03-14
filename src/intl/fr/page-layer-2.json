@@ -1,7 +1,6 @@
 {
   "layer-2-arbitrum-note": "Preuves de fraude uniquement pour les utilisateurs en liste blanche, liste blanche non encore ouverte",
   "layer-2-boba-note": "Validation de l'état en cours de développement",
-  "layer-2-metis-note": "Preuves de fraude en cours de développement",
   "layer-2-optimism-note": "Preuves de défaillance en développement",
   "layer-2-hero-title": "Couche 2",
   "layer-2-hero-header": "Ethereum pour tous",
@@ -131,5 +130,6 @@
   "layer-2-note": "Remarque :",
   "layer-2-ecosystem-portal": "Portail de l'écosystème",
   "layer-2-token-lists": "Listes de jetons",
-  "layer-2-explore": "Explorer"
+  "layer-2-explore": "Explorer",
+  "page-dapps-ready-button": "Aller"
 }

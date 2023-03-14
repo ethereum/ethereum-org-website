@@ -147,14 +147,14 @@ const WithdrawalCredentials: FC<IProps> = () => {
         >
           <Button
             onClick={() => checkWithdrawalCredentials()}
-            disabled={!inputValue.length}
+            isDisabled={!inputValue.length}
             isLoading={isLoading.mainnet}
           >
             Verify on Mainnet
           </Button>
           <Button
             onClick={() => checkWithdrawalCredentials(true)}
-            disabled={!inputValue.length}
+            isDisabled={!inputValue.length}
             variant="outline"
             isLoading={isLoading.testnet}
           >

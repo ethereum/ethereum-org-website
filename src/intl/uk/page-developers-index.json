@@ -8,7 +8,6 @@
   "page-developers-advanced": "Для досвідчених розробників",
   "page-developers-api-desc": "Як взаємодіяти зі смарт-контрактами за допомогою бібліотек",
   "page-developers-api-link": "API серверної частини",
-  "page-developers-aria-label": "Меню розробника",
   "page-developers-block-desc": "Пакети транзакцій, додані до блокчейну",
   "page-developers-block-explorers-desc": "Ваш доступ до даних Ethereum",
   "page-developers-block-explorers-link": "Переглядач блоків",
@@ -84,5 +83,7 @@
   "page-developers-transactions-desc": "Як змінюється стан Ethereum",
   "page-developers-transactions-link": "Транзакції",
   "page-developers-web3-desc": "Чим відрізняються інструменти для розробки web3",
-  "page-developers-web3-link": "Різниця між Web2 та Web3"
+  "page-developers-web3-link": "Різниця між Web2 та Web3",
+  "alt-eth-blocks": "Ілюстрація блоків, організованих як символ ETH",
+  "page-assets-doge": "DOGE у децентралізованих програмах"
 }

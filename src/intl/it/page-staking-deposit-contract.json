@@ -23,5 +23,6 @@
   "page-staking-deposit-contract-stop-reading": "Interrompi lettura",
   "page-staking-deposit-contract-subtitle": "Questo è l'indirizzo del contratto per lo staking Eth2. Usa questa pagina per confermare che stai inviando fondi all'indirizzo corretto quando fai staking.",
   "page-staking-deposit-contract-warning": "Controlla attentamente ogni carattere.",
-  "page-staking-deposit-contract-warning-2": "L'invio di fondi a questo indirizzo non funzionerà e non ti renderà uno staker. Devi seguire le istruzioni del launchpad."
+  "page-staking-deposit-contract-warning-2": "L'invio di fondi a questo indirizzo non funzionerà e non ti renderà uno staker. Devi seguire le istruzioni del launchpad.",
+  "page-staking-deposit-contract-title": "Controlla l'indirizzo del contratto di deposito"
 }

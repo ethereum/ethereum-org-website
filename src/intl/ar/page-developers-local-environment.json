@@ -1,8 +1,6 @@
 {
   "page-local-environment-brownie-desc": "إطار عمل للتطوير والاختبار قائم على Python للعقود الذكية التي تستهدف جهاز إثيريوم الظاهري.",
   "page-local-environment-brownie-logo-alt": "شعار Brownie",
-  "page-local-environment-embark-desc": "النظام الأساسي للمطورين الكل في واحد لبناء ونشر التطبيقات اللامركزية.",
-  "page-local-environment-embark-logo-alt": "شعار Embrak",
   "page-local-environment-epirus-desc": "منصة لتطوير ونشر ومراقبة تطبيقات سلسلة الكتل على جهاز Java الظاهري",
   "page-local-environment-epirus-logo-alt": "شعار\tEpirus",
   "page-local-environment-eth-app-desc": "إنشاء تطبيقات تعمل بتشغيل إثيريوم بأمر واحد. يأتي مع عرض واسع لأطر واجهة المستخدم وقوالب DeFi للاختيار منها.",

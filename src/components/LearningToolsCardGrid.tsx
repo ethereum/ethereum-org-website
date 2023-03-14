@@ -1,12 +1,9 @@
 // Library imports
 import React from "react"
 import { Grid } from "@chakra-ui/react"
-import { useIntl } from "react-intl"
 // Component imports
 import ProductCard from "./ProductCard"
 import Translation from "./Translation"
-// Util imports
-import { translateMessageId } from "../utils/translations"
 // Type imports
 import { LearningToolsCardGridProps } from "../types"
 
@@ -14,7 +11,6 @@ import { LearningToolsCardGridProps } from "../types"
 const LearningToolsCardGrid: React.FC<LearningToolsCardGridProps> = ({
   category,
 }) => {
-  const intl = useIntl()
   return (
     <Grid
       templateColumns="repeat(auto-fill, minmax(min(100%, 280px), 1fr))"
@@ -28,7 +24,7 @@ const LearningToolsCardGrid: React.FC<LearningToolsCardGridProps> = ({
             key={name}
             background={background}
             url={url}
-            alt={translateMessageId(alt, intl)}
+            alt={alt}
             image={image}
             name={name}
             subjects={subjects}

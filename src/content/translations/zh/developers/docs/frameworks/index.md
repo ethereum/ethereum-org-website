@@ -42,11 +42,6 @@ lang: zh
 - [相关文档](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
 
-**Embark -** **_ 开发环境、测试框架以及与以太坊、星际文件系统和 Whisper 集成的其他工具。_**
-
-- [相关文档](https://embark.status.im/docs/)
-- [GitHub](https://github.com/embark-framework/embark)
-
 **Web3j -** **_ 在 Java 虚拟机上开发区块链应用程序的平台。_ **
 
 - [首页](https://www.web3labs.com/web3j-sdk)

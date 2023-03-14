@@ -8,7 +8,6 @@
   "page-developers-advanced": "Geavanceerd",
   "page-developers-api-desc": "Bibliotheken gebruiken voor interactie met Smart Contracts",
   "page-developers-api-link": "Backend API's",
-  "page-developers-aria-label": "Menu voor ontwikkelaars",
   "page-developers-block-desc": "Batches van aan de blockchain toegevoegde transacties",
   "page-developers-block-explorers-desc": "Je portaal naar Ethereum-gegevens",
   "page-developers-block-explorers-link": "Block explorers",
@@ -92,5 +91,6 @@
   "page-developers-networking-layer-desc": "Introductie tot de netwerklaag van Ethereum",
   "page-developers-data-structures-and-encoding": "Gegevensstructuren en codering",
   "page-developers-data-structures-and-encoding-link": "Gegevensstructuren en codering",
-  "page-developers-data-structures-and-encoding-desc": "Introductie tot de gegevensstructuren en het coderingsschema gebruikt in de Ethereum stack"
+  "page-developers-data-structures-and-encoding-desc": "Introductie tot de gegevensstructuren en het coderingsschema gebruikt in de Ethereum stack",
+  "alt-eth-blocks": "Illustratie van blokken die worden georganiseerd als een ETH-symbool"
 }
