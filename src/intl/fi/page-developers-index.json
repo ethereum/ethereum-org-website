@@ -8,7 +8,6 @@
   "page-developers-advanced": "Edistyneille",
   "page-developers-api-desc": "Kirjastojen käyttäminen älysopimusten kanssa",
   "page-developers-api-link": "Backend API:t",
-  "page-developers-aria-label": "Kehittäjien valikko",
   "page-developers-block-desc": "Lohkoketjuun lisättyjen tapahtumien osat",
   "page-developers-block-explorers-desc": "Portaali Ethereum-tietoihin",
   "page-developers-block-explorers-link": "Lohkoselaimet",
@@ -80,5 +79,6 @@
   "page-developers-transactions-desc": "Ethereumin tilamuutokset",
   "page-developers-transactions-link": "Tapahtumat",
   "page-developers-web3-desc": "Miten web3:n kehitysmaailma on erilainen",
-  "page-developers-web3-link": "Web2 ja Web3"
+  "page-developers-web3-link": "Web2 ja Web3",
+  "alt-eth-blocks": "Kuva lohkoista, jotka muodostavat yhdessä ETH-symbolin"
 }

@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react"
 import WithdrawalCredentials from "./WithdrawalCredentials"
 import ButtonLink from "../ButtonLink"
-import Link from "../Link"
+import Translation from "../Translation"
 import { trackCustomEvent } from "../../utils/matomo"
 
 interface IProps {}
@@ -28,62 +28,50 @@ const WithdrawalsTabComparison: React.FC<IProps> = () => {
     <Tabs>
       <TabList>
         <Tab onClick={() => handleMatomoEvent("Current stakers")}>
-          Current stakers
+          <Translation id="comp-withdrawal-comparison-current-title" />
         </Tab>
         <Tab onClick={() => handleMatomoEvent("New stakers")}>
-          New stakers (not yet deposited)
+          <Translation id="comp-withdrawal-comparison-new-title" />
         </Tab>
       </TabList>
 
       <TabPanels>
         <TabPanel>
-          <Heading as="h3">Current stakers</Heading>
+          <Heading as="h3">
+            <Translation id="comp-withdrawal-comparison-current-title" />
+          </Heading>
           <UnorderedList>
             <ListItem>
-              Some users may have provided a withdrawal address when initially
-              setting up their staking deposit—these users have nothing more
-              they need to do
+              <Translation id="comp-withdrawal-comparison-current-li-1" />
             </ListItem>
             <ListItem>
-              The majority of stakers did not provide a withdrawal address on
-              initial deposit, and will need to update their withdrawal
-              credentials. The{" "}
-              <Link href="https://zhejiang.launchpad.ethereum.org/withdrawals">
-                Zhejiang Testnet Launchpad
-              </Link>{" "}
-              has instructions on when and how to do this
+              <Translation id="comp-withdrawal-comparison-current-li-2" />
             </ListItem>
           </UnorderedList>
           <Text fontWeight="bold">
-            You can enter your validator index number here to see if you still
-            need to update your credentials{" "}
-            <Text as="span" fontWeight="normal">
-              (this can be found in your client logs):
-            </Text>
+            <Translation id="comp-withdrawal-comparison-current-p" />
           </Text>
 
           <WithdrawalCredentials />
         </TabPanel>
 
         <TabPanel>
-          <Heading as="h3">New stakers (not yet deposited)</Heading>
+          <Heading as="h3">
+            <Translation id="comp-withdrawal-comparison-new-title" />
+          </Heading>
           <UnorderedList>
             <ListItem>
-              By default, new stakers looking to automatically enable reward
-              payments and withdrawal functionality should provide an Ethereum
-              withdrawal address they control when generating their validator
-              keys using the Staking Deposit CLI tool
+              <Translation id="comp-withdrawal-comparison-new-li-1" />
             </ListItem>
             <ListItem>
-              This is not required at time of deposit, but will prevent the need
-              to update these keys at a later date to unlock your funds
+              <Translation id="comp-withdrawal-comparison-new-li-2" />
             </ListItem>
           </UnorderedList>
           <Text fontWeight="bold">
-            The Staking Launchpad will guide you through staking onboarding.
+            <Translation id="comp-withdrawal-comparison-new-p" />
           </Text>
           <ButtonLink to="https://launchpad.ethereum.org/" hideArrow>
-            Visit Staking Launchpad
+            <Translation id="comp-withdrawal-comparison-new-link" />
           </ButtonLink>
         </TabPanel>
       </TabPanels>

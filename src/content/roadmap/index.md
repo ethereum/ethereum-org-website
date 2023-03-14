@@ -7,9 +7,9 @@ image: ../../assets/upgrades/merge.png
 alt: "Ethereum roadmap"
 summaryPoints:
 buttons:
-  - label: Further updates
+  - label: Further upgrades
     toId: what-changes-are-coming
-  - label: Past updates
+  - label: Past upgrades
     to: /history/
     variant: outline
 ---

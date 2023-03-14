@@ -62,5 +62,6 @@
   "page-get-eth-your-address": "Vaše ETH adresa",
   "page-get-eth-your-address-desc": "Když si stáhnete peněženku, vytvoří pro vás veřejnou ETH adresu. Zde je, jak vypadá:",
   "page-get-eth-your-address-desc-3": "Je to něco jako vaše e-mailová adresa, ale místo e-mailu můžete dostávat ETH. Pokud chcete přenést ETH z výměny do peněženky, použijte vaši adresu jako místo určení. Před odesláním vše radši dvakrát zkontrolujete!",
-  "page-get-eth-your-address-wallet-link": "Podívejte se na peněženky"
+  "page-get-eth-your-address-wallet-link": "Podívejte se na peněženky",
+  "listing-policy-raise-issue-link": "Vytvořit hlášení o chybě"
 }

@@ -200,5 +200,8 @@
   "page-dapps-what-are-dapps": "Какво е dapps?",
   "page-dapps-more-on-defi-button": "Повече за децентрализираните финанси",
   "page-dapps-more-on-nft-button": "Повече за токенизираните предмети за колекция",
-  "page-dapps-more-on-nft-gaming-button": "Повече за токенизираните предмети, вградени в играта"
+  "page-dapps-more-on-nft-gaming-button": "Повече за токенизираните предмети, вградени в играта",
+  "foundation": "Фондация",
+  "transaction-fees": "Какви са таксите при трансакция?",
+  "page-wallets-get-some": "Вземете малко ETH"
 }
