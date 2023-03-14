@@ -67,6 +67,12 @@ Withdrawal functionality will be enabled through a two-part simultaneous network
 
 Whether a given validator is eligible for a withdrawal or not is determined by the state of the validator account itself. No user input is needed at any given time to determine whether an account should have a withdrawal initiated or not—the entire process is done automatically by the consensus layer on a continuous loop.
 
+### More of a visual learner? {#visual-learner}
+
+Check out this explanation of Ethereum staking withdrawals by Finematics:
+
+<YouTube id="RwwU3P9n3uo" />
+
 ### Validator "sweeping" {#validator-sweeping}
 
 When a validator is scheduled to propose the next block, it is required to build a withdrawal queue, of up to 16 eligible withdrawals. This is done by originally starting with validator index 0, determining if there is an eligible withdrawal for this account per the rules of the protocol, and adding it to the queue if there is. The validator set to propose the following block will pick up where the last one left off, progressing in order indefinitely.

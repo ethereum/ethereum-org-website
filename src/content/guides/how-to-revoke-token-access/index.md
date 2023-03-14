@@ -45,6 +45,8 @@ We advise to refresh the revoking tool after few minutes and connect your wallet
 
 <mark>We recommend you never allow projects unlimited access to your tokens and revoke all token allowance access regularly. Revoking token access will never result in loss of funds.</mark>
 
+ <br />
+
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Want to learn more?</div>
   <ButtonLink to="/guides/">

@@ -22,5 +22,11 @@
     "supports_withdrawals": ["Arbitrum", "Optimism"],
     "supports_deposits": ["Arbitrum", "Optimism"],
     "url": "https://www.huobi.com/"
+  },
+  {
+    "name": "Kraken",
+    "supports_withdrawals": ["Arbitrum"],
+    "supports_deposits": ["Arbitrum"],
+    "url": "https://www.kraken.com/"
   }
 ]
