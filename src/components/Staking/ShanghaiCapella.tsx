@@ -8,7 +8,6 @@ import {
   Text,
   UnorderedList,
 } from "@chakra-ui/react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
 // Components
 import Card from "../Card"
 import Translation from "../Translation"
