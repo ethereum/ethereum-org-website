@@ -28,7 +28,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [How to develop Ethereum contract using Python Flask?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Intro to Web3.py · Ethereum For Python Developers](https://www.dappuniversity.com/articles/web3-py-intro)
 - [How to call a Smart Contract function using Python and web3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
-- [The state of Python in blockchain 2023 report features multiple Python integration, SDK and security tools for Ethereum](https://tradingstrategy.ai/blog/the-state-of-python-in-blockchain-in-2023)
+- [The state of Python in blockchain 2023 report](https://tradingstrategy.ai/blog/the-state-of-python-in-blockchain-in-2023)
 
 ## Intermediate articles {#intermediate-articles}
 
