@@ -98,5 +98,6 @@
   "page-upgrades-bug-bounty-card-text": "Un utente malintenzionato potrebbe impostare un nodo su uno stato che faccia fallire una su cento attestazioni eseguite da un validatore",
   "page-upgrades-bug-bounty-card-text-1": "Un utente malintenzionato può condurre con successo attacchi eclipse su nodi con Id peer aventi byte a 4 zeri iniziali",
   "page-upgrades-bug-bounty-card-text-2": "Gli utenti malintenzionati possono eseguire correttamente la partizione di grandi parti della rete, ed è banale che un utente malintezionato inneschi la vulnerabilità",
-  "page-upgrades-bug-bounty-card-text-3": "L'utente malintenzionato può condurre con successo l'esecuzione del codice da remoto in un client di maggioranza ed è banale che un utente malintenzionato inneschi la vulnerabilità"
+  "page-upgrades-bug-bounty-card-text-3": "L'utente malintenzionato può condurre con successo l'esecuzione del codice da remoto in un client di maggioranza ed è banale che un utente malintenzionato inneschi la vulnerabilità",
+  "page-upgrades-question-title": "Domande frequenti"
 }

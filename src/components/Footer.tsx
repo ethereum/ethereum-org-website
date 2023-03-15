@@ -11,7 +11,8 @@ import {
 import { graphql, StaticQuery } from "gatsby"
 import React from "react"
 import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa"
-import { useIntl } from "react-intl"
+import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+
 import { Lang } from "../utils/languages"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
@@ -53,225 +54,226 @@ export interface LinkSection {
 export interface IProps {}
 
 const Footer: React.FC<IProps> = () => {
-  const intl = useIntl()
+  const { language } = useI18next()
+  const { t } = useTranslation()
 
-  const isPageRightToLeft = isLangRightToLeft(intl.locale as Lang)
+  const isPageRightToLeft = isLangRightToLeft(language as Lang)
 
   const [medBp] = useToken("breakpoints", ["md"])
 
   const linkSections: Array<LinkSection> = [
     {
-      title: "use-ethereum",
+      title: t("use-ethereum"),
       links: [
         {
-          text: "find-wallet",
+          text: t("find-wallet"),
           to: "/wallets/find-wallet/",
         },
         {
           to: `/get-eth/`,
-          text: "get-eth",
+          text: t("get-eth"),
         },
         {
           to: `/dapps/`,
-          text: "decentralized-applications-dapps",
+          text: t("decentralized-applications-dapps"),
         },
         {
           to: "/layer-2/",
-          text: "layer-2",
+          text: t("layer-2"),
         },
         {
           to: "/run-a-node/",
-          text: "run-a-node",
+          text: t("run-a-node"),
         },
         {
           to: `/stablecoins/`,
-          text: "page-stablecoins-title",
+          text: t("stablecoins"),
         },
         {
           to: `/staking/`,
-          text: "page-upgrades-get-involved-stake-eth",
+          text: t("stake-eth"),
         },
       ],
     },
     {
-      title: "learn",
+      title: t("learn"),
       links: [
         {
           to: `/what-is-ethereum/`,
-          text: "what-is-ethereum",
+          text: t("what-is-ethereum"),
         },
         {
           to: `/eth/`,
-          text: "what-is-ether",
+          text: t("what-is-ether"),
         },
         {
           to: `/wallets/`,
-          text: "ethereum-wallets",
+          text: t("ethereum-wallets"),
         },
         {
           to: `/learn/`,
-          text: "guides-and-resources",
+          text: t("guides-and-resources"),
         },
         {
           to: "/history/",
-          text: "history-of-ethereum",
+          text: t("history-of-ethereum"),
         },
         {
           to: "/whitepaper/",
-          text: "ethereum-whitepaper",
+          text: t("ethereum-whitepaper"),
         },
         {
-          text: "ethereum-upgrades",
-          to: "/upgrades/",
+          text: t("ethereum-roadmap"),
+          to: "/roadmap/",
         },
         {
-          text: "ethereum-security",
+          text: t("ethereum-security"),
           to: "/security/",
         },
         {
           to: `/glossary/`,
-          text: "ethereum-glossary",
+          text: t("ethereum-glossary"),
         },
         {
-          text: "ethereum-governance",
+          text: t("ethereum-governance"),
           to: "/governance/",
         },
         {
-          text: "bridges",
+          text: t("bridges"),
           to: "/bridges/",
         },
         {
-          text: "zero-knowledge-proofs",
+          text: t("zero-knowledge-proofs"),
           to: "/zero-knowledge-proofs/",
         },
         {
-          text: "energy-consumption",
+          text: t("energy-consumption"),
           to: "/energy-consumption/",
         },
         {
-          text: "web3",
+          text: t("web3"),
           to: "/web3/",
         },
         {
           to: "/eips/",
-          text: "eips",
+          text: t("eips"),
         },
       ],
     },
     {
-      title: "developers",
+      title: t("developers"),
       links: [
         {
           to: `/developers/`,
-          text: "get-started",
+          text: t("get-started"),
           isPartiallyActive: false,
         },
         {
           to: `/developers/docs/`,
-          text: "documentation",
+          text: t("documentation"),
         },
         {
           to: `/developers/tutorials/`,
-          text: "tutorials",
+          text: t("tutorials"),
         },
         {
           to: `/developers/learning-tools/`,
-          text: "learn-by-coding",
+          text: t("learn-by-coding"),
         },
         {
           to: `/developers/local-environment/`,
-          text: "set-up-local-env",
+          text: t("set-up-local-env"),
         },
       ],
     },
     {
-      title: "ecosystem",
+      title: t("ecosystem"),
       links: [
         {
           to: `/community/`,
-          text: "community-hub",
+          text: t("community-hub"),
         },
         {
           to: "/foundation/",
-          text: "ethereum-foundation",
+          text: t("ethereum-foundation"),
         },
         {
           to: "https://blog.ethereum.org/",
-          text: "ef-blog",
+          text: t("ef-blog"),
         },
         {
           to: "https://esp.ethereum.foundation",
-          text: "esp",
+          text: t("esp"),
         },
         {
           to: "/bug-bounty/",
-          text: "ethereum-bug-bounty",
+          text: t("ethereum-bug-bounty"),
         },
         {
           to: "/community/grants",
-          text: "grant-programs",
+          text: t("grant-programs"),
         },
         {
           to: "/assets/",
-          text: "ethereum-brand-assets",
+          text: t("ethereum-brand-assets"),
         },
         {
           to: "https://devcon.org/",
-          text: "devcon",
+          text: t("devcon"),
         },
       ],
     },
     {
-      title: "enterprise",
+      title: t("enterprise"),
       links: [
         {
           to: "/enterprise/",
-          text: "mainnet-ethereum",
+          text: t("mainnet-ethereum"),
         },
         {
           to: "/enterprise/private-ethereum/",
-          text: "private-ethereum",
+          text: t("private-ethereum"),
         },
         {
           to: "/enterprise/",
-          text: "enterprise",
+          text: t("enterprise"),
         },
       ],
     },
     {
-      title: "about-ethereum-org",
+      title: t("about-ethereum-org"),
       links: [
         {
           to: "/about/",
-          text: "about-us",
+          text: t("about-us"),
         },
         {
           to: "/about/#open-jobs",
-          text: "jobs",
+          text: t("jobs"),
         },
         {
           to: "/contributing/",
-          text: "contributing",
+          text: t("contributing"),
         },
         {
           to: "/languages/",
-          text: "language-support",
+          text: t("language-support"),
         },
         {
           to: "/privacy-policy/",
-          text: "privacy-policy",
+          text: t("privacy-policy"),
         },
         {
           to: "/terms-of-use/",
-          text: "terms-of-use",
+          text: t("terms-of-use"),
         },
         {
           to: "/cookie-policy/",
-          text: "cookie-policy",
+          text: t("cookie-policy"),
         },
         {
           to: "mailto:press@ethereum.org",
-          text: "contact",
+          text: t("contact"),
         },
       ],
     },
@@ -301,7 +303,7 @@ const Footer: React.FC<IProps> = () => {
             <Box color="text200">
               <Translation id="website-last-updated" />:{" "}
               {getLocaleTimestamp(
-                intl.locale as Lang,
+                language as Lang,
                 data.allSiteBuildMetadata.edges[0].node.buildTime
               )}
             </Box>
@@ -340,7 +342,7 @@ const Footer: React.FC<IProps> = () => {
             {linkSections.map((section: LinkSection, idx) => (
               <Box key={idx}>
                 <Heading as="h3" fontSize="sm" lineHeight="1.6" my="1.14em">
-                  <Translation id={section.title} />
+                  {section.title}
                 </Heading>
                 <List fontSize="sm" lineHeight="1.6" fontWeight="400" m={0}>
                   {section.links.map((link, linkIdx) => (
@@ -367,7 +369,7 @@ const Footer: React.FC<IProps> = () => {
                           },
                         }}
                       >
-                        <Translation id={link.text} />
+                        {link.text}
                       </Link>
                     </ListItem>
                   ))}

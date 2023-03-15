@@ -67,7 +67,7 @@ Below is a breakdown of the website pages each content bucket contains.
 ## 8) Upgrades {#upgrades}
 
 - [Ethereum upgrades](/upgrades/)
-- [Ethereum vision](/upgrades/vision/)
+- [Ethereum vision](/roadmap/vision/)
 - [The Beacon Chain](/upgrades/beacon-chain/)
 - [The Merge](/upgrades/merge/)
 - [Shard chains](/upgrades/sharding/)

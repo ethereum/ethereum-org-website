@@ -1,7 +1,6 @@
 import React, { ReactNode } from "react"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import { chakra, HTMLChakraProps } from "@chakra-ui/react"
-import { translateMessageId } from "../../utils/translations"
 import { HandleClickParam } from "./useTrilemma"
 
 export interface IProps {
@@ -25,7 +24,7 @@ export const TriangleSVG: React.FC<IProps> = ({
   isSecure,
   isScalable,
 }) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   const Path = () => (
     <chakra.path
@@ -159,16 +158,16 @@ export const TriangleSVG: React.FC<IProps> = ({
         />
       </CircleSelect>
       <Text x="400" y="540" isActive={isEthereum}>
-        {translateMessageId("ethereum", intl)}
+        {t("ethereum")}
       </Text>
       <Text x="460" y="150" isActive={isDecentralized}>
-        {translateMessageId("page-upgrades-vision-trilemma-text-1", intl)}
+        {t("page-upgrades-vision-trilemma-text-1")}
       </Text>
       <Text x="-24" y="486" isActive={isSecure}>
-        {translateMessageId("page-upgrades-vision-trilemma-text-2", intl)}
+        {t("page-upgrades-vision-trilemma-text-2")}
       </Text>
       <Text x="540" y="835" isActive={isScalable}>
-        {translateMessageId("page-upgrades-vision-trilemma-text-3", intl)}
+        {t("page-upgrades-vision-trilemma-text-3")}
       </Text>
     </chakra.svg>
   )

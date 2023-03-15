@@ -1,8 +1,23 @@
-import React from "react"
-import styled from "@emotion/styled"
-import { GatsbyImage } from "gatsby-plugin-image"
+import React, { ComponentPropsWithRef, ReactNode } from "react"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
+import {
+  Box,
+  BoxProps,
+  Center,
+  Divider,
+  Flex,
+  FlexProps,
+  Heading,
+  HeadingProps,
+  Img,
+  ImgProps,
+  List,
+  ListItem,
+  Text,
+  useToken,
+} from "@chakra-ui/react"
 
 import ButtonLink from "../../components/ButtonLink"
 import Card from "../../components/Card"
@@ -19,193 +34,211 @@ import Translation from "../../components/Translation"
 import PageHero, {
   IContent as IPageHeroContent,
 } from "../../components/PageHero"
-import {
-  CardContainer,
-  Content,
-  Page,
-  Divider,
-} from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
 
-import { translateMessageId } from "../../utils/translations"
 import { getImage } from "../../utils/image"
+import Button from "../../components/Button"
 
-const Row = styled.div`
-  display: flex;
-  align-items: flex-start;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
+import type { ChildOnlyProp } from "../../types"
 
-const H2 = styled.h2`
-  text-align: left;
-  margin-top: 0;
-  margin-bottom: 1rem;
-`
+const PageDivider = () => (
+  <Divider
+    my={16}
+    w="10%"
+    borderBottomWidth="0.25rem"
+    borderColor="homeDivider"
+  />
+)
 
-const CentreCard = styled(Card)`
-  flex: 1 1 30%;
-  min-width: 240px;
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex: 1 1 30%;
-  }
-`
+const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />
 
-const StyledCardContainer = styled(CardContainer)`
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-`
+const CardContainer = (props: FlexProps) => (
+  <Flex flexWrap="wrap" mx={-4} {...props} />
+)
 
-const StyledCard = styled(Card)`
-  flex: 1 1 30%;
-  min-width: 240px;
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  margin: 1rem;
-  padding: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex: 1 1 30%;
-  }
+const Row = (props: ChildOnlyProp) => (
+  <Flex
+    align="flex-start"
+    direction={{ base: "column", lg: "row" }}
+    {...props}
+  />
+)
 
-  &:hover {
-    border-radius: 4px;
-    box-shadow: 0px 8px 17px rgba(#000000, 0.15);
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
-    transition: transform 0.1s;
-    transform: scale(1.02);
-  }
-`
+const H2 = (props: HeadingProps) => (
+  <Heading
+    as="h2"
+    mt={0}
+    mb={4}
+    fontSize={{ base: "2xl", md: "2rem" }}
+    fontWeight="semibold"
+    lineHeight={1.4}
+    {...props}
+  />
+)
 
-const Disclaimer = styled.div`
-  margin: 0rem 12rem;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 0rem 2rem;
-  }
-`
+const H3 = (props: HeadingProps) => (
+  <Heading
+    as="h3"
+    fontSize={{ base: "xl", md: "2xl" }}
+    fontWeight="semibold"
+    lineHeight={1.4}
+    {...props}
+  />
+)
 
-const StyledInfoBanner = styled(InfoBanner)`
-  margin-left: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 2rem 0;
-  }
-`
+const H4 = (props: HeadingProps) => (
+  <Heading
+    as="h4"
+    fontSize={{ base: "md", md: "xl" }}
+    fontWeight="medium"
+    lineHeight={1.4}
+    {...props}
+  />
+)
 
-const Vision = styled.div`
-  margin-top: 4rem;
-`
+const H6 = (props: HeadingProps) => (
+  <Heading
+    as="h6"
+    fontSize="0.9rem"
+    fontWeight="normal"
+    lineHeight={1.4}
+    {...props}
+  />
+)
 
-const ContributeCard = styled.div`
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0rem auto;
-  margin-bottom: 2rem;
-  max-width: 100ch;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-left: 0rem;
-    margin-right: 0rem;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`
+const PageCard = (props: ComponentPropsWithRef<typeof Card>) => (
+  <Card flex="1 1 30%" minW="240px" m={4} p={6} {...props} />
+)
 
-const StyledCallout = styled(CalloutBanner)`
-  margin-left: 0rem;
-  margin-right: 0rem;
-`
+const CentreCard = (props: ComponentPropsWithRef<typeof PageCard>) => (
+  <PageCard textAlign="center" {...props} />
+)
 
-const ContributeButton = styled(ButtonLink)`
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 100%;
-    margin-top: 1.5rem;
-  }
-`
+const StyledCard = (props: ComponentPropsWithRef<typeof PageCard>) => {
+  const tableBoxShadow = useToken("colors", "tableBoxShadow")
 
-const Staking = styled.div`
-  padding: 4rem;
-  background: ${(props) => props.theme.colors.cardGradient};
-  width: 100%;
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding: 2rem;
-  }
-`
+  return (
+    <PageCard
+      boxShadow={tableBoxShadow}
+      transition="transform 0.1s"
+      _hover={{
+        borderRadius: "4px",
+        boxShadow: "0px 8px 17px rgba(0, 0, 0, 0.15)",
+        background: "tableBackgroundHover",
+        transform: "scale(1.02)",
+      }}
+      {...props}
+    />
+  )
+}
 
-const StakingColumns = styled.div`
-  display: flex;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
+const Disclaimer = (props: ChildOnlyProp) => (
+  <Center textAlign="center" my={0} mx={{ base: 8, lg: 4 * 12 }} {...props} />
+)
 
-const CenterH2 = styled(H2)`
-  text-align: center;
-`
+const ContributeCard = (props: ChildOnlyProp) => (
+  <Flex
+    direction={{ base: "column", lg: "row" }}
+    align={{ base: "flex-start", lg: "center" }}
+    justify="space-between"
+    borderRadius="2px"
+    border="1px solid"
+    borderColor="border"
+    p={8}
+    mt={0}
+    mb={8}
+    mx={{ base: 0, lg: "auto" }}
+    maxW="100ch"
+    {...props}
+  />
+)
 
-const StakingLeftColumn = styled.div``
+interface IStyledCalloutProps {
+  image: IGatsbyImageData
+  alt: string
+  titleKey: string
+  descriptionKey: string
+  children: ReactNode
+}
 
-const StakingRightColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0rem 2rem;
-  margin-left: 8rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    align-items: flex-start;
-    flex-direction: column-reverse;
-    margin: 0rem;
-    margin-top: 2rem;
-  }
-`
+const StyledCallout = (props: IStyledCalloutProps) => (
+  <Img as={CalloutBanner} mx={0} {...props} />
+)
 
-const StakingCard = styled(StyledCard)`
-  margin: 0;
-`
+const ContributeButton = (props) => (
+  <Button
+    as={ButtonLink}
+    w={{ base: "full", lg: "auto" }}
+    mt={{ base: 6, lg: 0 }}
+    {...props}
+  />
+)
 
-const StakingImage = styled(GatsbyImage)`
-  margin: 3rem 0;
-  align-self: center;
-  width: 100%;
-  max-width: 320px;
-`
+const Staking = (props: ChildOnlyProp) => (
+  <Flex
+    w="full"
+    mt={8}
+    p={{ base: 8, lg: 16 }}
+    direction="column"
+    background="cardGradient"
+    {...props}
+  />
+)
 
-const LeftColumn = styled.div`
-  width: 100%;
-`
+const StakingCard = (props: ComponentPropsWithRef<typeof StyledCard>) => (
+  <StyledCard m={0} {...props} />
+)
 
-const RightColumn = styled.div`
-  width: 100%;
-  margin-left: 2rem;
-  flex-direction: column;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-left: 0rem;
-    flex-direction: column;
-  }
-`
+const StakingColumns = (props: ChildOnlyProp) => (
+  <Flex direction={{ base: "column", lg: "row" }} {...props} />
+)
 
-const Faq = styled.div`
-  display: flex;
-  margin-top: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`
+const StakingLeftColumn = (props: ChildOnlyProp) => <Box {...props} />
 
-const ResearchContainer = styled.div`
-  margin-top: 2rem;
-`
+const StakingRightColumn = (props: ChildOnlyProp) => (
+  <Flex
+    align={{ basae: "flex-start", lg: "center" }}
+    direction={{ base: "column-reverse", lg: "column" }}
+    m={{ base: 0, lg: "0 2rem" }}
+    mt={{ base: 8, lg: 0 }}
+    ml={{ base: 0, lg: 32 }}
+    {...props}
+  />
+)
+
+interface IStakingImageProps extends ImgProps {
+  image: IGatsbyImageData
+  alt: string
+}
+
+const StakingImage = (props: IStakingImageProps) => (
+  <Img
+    as={GatsbyImage}
+    my={12}
+    mx={0}
+    alignSelf="center"
+    w="full"
+    maxW="320px"
+    {...props}
+  />
+)
+
+const LeftColumn = (props: ChildOnlyProp) => <Box w="full" {...props} />
+
+const RightColumn = (props: ChildOnlyProp) => (
+  <Box w="full" ml={{ base: 0, lg: 8 }} {...props} />
+)
+
+const Faq = (props: ChildOnlyProp) => (
+  <Flex
+    align={{ base: "flex-start", lg: "normal" }}
+    direction={{ base: "column", lg: "row" }}
+    mt={16}
+    {...props}
+  />
+)
+
+const ResearchContainer = (props: ChildOnlyProp) => <Box mt={8} {...props} />
 
 const paths = [
   {
@@ -226,21 +259,21 @@ const paths = [
 ]
 
 const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   const heroContent: IPageHeroContent = {
-    title: translateMessageId("page-upgrades-upgrades", intl),
-    header: translateMessageId("page-upgrades-upgrading", intl),
-    subtitle: translateMessageId("page-upgrades-upgrade-desc", intl),
+    title: t("page-upgrades-upgrades"),
+    header: t("page-upgrades-upgrading"),
+    subtitle: t("page-upgrades-upgrade-desc"),
     image: getImage(data.merge)!,
-    alt: translateMessageId("page-dapps-doge-img-alt", intl),
+    alt: t("page-dapps-doge-img-alt"),
     buttons: [
       {
-        content: translateMessageId("page-upgrades-explore-btn", intl),
+        content: t("page-upgrades-explore-btn"),
         to: "/upgrades/beacon-chain/",
       },
       {
-        content: translateMessageId("page-upgrades-whats-ethereum", intl),
+        content: t("page-upgrades-whats-ethereum"),
         to: "/what-is-ethereum/",
         variant: "outline",
       },
@@ -272,13 +305,13 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
   ]
 
   return (
-    <Page>
+    <Flex direction="column" align="center" w="full">
       <PageMetadata
-        title={translateMessageId("page-upgrades-meta-title", intl)}
-        description={translateMessageId("page-upgrades-meta-desc", intl)}
+        title={t("page-upgrades-meta-title")}
+        description={t("page-upgrades-meta-desc")}
       />
       <PageHero content={heroContent} />
-      <Divider />
+      <PageDivider />
       <Content>
         <Row>
           <GhostCard>
@@ -290,7 +323,7 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
               <Translation id="page-upgrades-whats-next-history" />
             </Link>
           </GhostCard>
-          <StyledInfoBanner isWarning={true}>
+          <InfoBanner isWarning={true}>
             <H2>
               <Translation id="page-upgrades-what-to-do" />
             </H2>
@@ -298,16 +331,16 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
             <Link to="/upgrades/get-involved/">
               <Translation id="page-upgrades-get-involved" />
             </Link>
-          </StyledInfoBanner>
+          </InfoBanner>
         </Row>
-        <Vision>
+        <Box mt={16}>
           <H2>
             <Translation id="page-upgrades-vision" />
             <Emoji ml={`0.5rem`} text=":sparkles:" />
           </H2>
-          <p>
+          <Text>
             <Translation id="page-upgrades-vision-desc" />
-          </p>
+          </Text>
           <CardContainer>
             {paths.map((path, idx) => (
               <CentreCard
@@ -318,28 +351,28 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
               />
             ))}
           </CardContainer>
-        </Vision>
+        </Box>
       </Content>
       <StyledCallout
         image={getImage(data.oldship)!}
-        alt={translateMessageId("page-eth-whats-eth-hero-alt", intl)}
+        alt={t("page-eth-whats-eth-hero-alt")}
         titleKey={"page-upgrades-dive"}
         descriptionKey={"page-upgrades-dive-desc"}
       >
-        <div>
+        <Box>
           <ButtonLink to="/upgrades/vision/">
             <Translation id="page-upgrades-vision-btn" />
           </ButtonLink>
-        </div>
+        </Box>
       </StyledCallout>
       <Content>
         <H2>
           <Translation id="page-upgrades-the-upgrades" />
         </H2>
-        <p>
+        <Text>
           <Translation id="page-upgrades-the-upgrades-desc" />
-        </p>
-        <StyledCardContainer>
+        </Text>
+        <CardContainer mt={8} mb={12}>
           {upgrades.map((upgrade, idx) => (
             <ActionCard
               isRight
@@ -349,89 +382,89 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
               description={upgrade.description}
               to={upgrade.to}
             >
-              <h6>{upgrade.date}</h6>
+              <H6>{upgrade.date}</H6>
             </ActionCard>
           ))}
-        </StyledCardContainer>
+        </CardContainer>
       </Content>
       <Content id="eth2">
         <ContributeCard>
-          <div>
+          <Box>
             <H2>
               <Translation id="page-upgrades-what-happened-to-eth2-title" />
             </H2>
-            <p>
+            <Text>
               <Translation id="page-upgrades-what-happened-to-eth2-1" />{" "}
               <Link to="/upgrades/merge">
                 <Translation id="page-upgrades-what-happened-to-eth2-1-more" />
               </Link>
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-upgrades-what-happened-to-eth2-2" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-upgrades-what-happened-to-eth2-3" />
-            </p>
-            <ul>
-              <li>
+            </Text>
+            <List listStyleType="disc">
+              <ListItem>
                 <Translation id="page-upgrades-what-happened-to-eth2-3-1" />
-              </li>
-              <li>
+              </ListItem>
+              <ListItem>
                 <Translation id="page-upgrades-what-happened-to-eth2-3-2" />
-              </li>
-            </ul>
-            <p>
+              </ListItem>
+            </List>
+            <Text>
               <Translation id="page-upgrades-what-happened-to-eth2-4" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Link to="https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/">
                 <Translation id="page-upgrades-what-happened-to-eth2-5" />
               </Link>
-            </p>
-            <h3>
+            </Text>
+            <H3>
               <Translation id="page-upgrades-why-cant-we-just-use-eth2-title" />
-            </h3>
-            <h4>
+            </H3>
+            <H4>
               <Translation id="page-upgrades-why-cant-we-just-use-eth2-mental-models-title" />
-            </h4>
-            <p>
+            </H4>
+            <Text>
               <Translation id="page-upgrades-why-cant-we-just-use-eth2-mental-models-description" />
-            </p>
-            <h4>
+            </Text>
+            <H4>
               <Translation id="page-upgrades-why-cant-we-just-use-eth2-inclusivity-title" />
-            </h4>
-            <p>
+            </H4>
+            <Text>
               <Translation id="page-upgrades-why-cant-we-just-use-eth2-inclusivity-description" />
-            </p>
-            <h4>
+            </Text>
+            <H4>
               <Translation id="page-upgrades-why-cant-we-just-use-eth2-scam-prevention-title" />
-            </h4>
-            <p>
+            </H4>
+            <Text>
               <Translation id="page-upgrades-why-cant-we-just-use-eth2-scam-prevention-description" />
-            </p>
-            <h4>
+            </Text>
+            <H4>
               <Translation id="page-upgrades-why-cant-we-just-use-eth2-staking-clarity-title" />
-            </h4>
-            <p>
+            </H4>
+            <Text>
               <Translation id="page-upgrades-why-cant-we-just-use-eth2-staking-clarity-description" />
-            </p>
-          </div>
+            </Text>
+          </Box>
         </ContributeCard>
         <ContributeCard>
-          <div>
+          <Box>
             <H2>
               <Translation id="page-upgrades-help" />
             </H2>
             <Translation id="page-upgrades-help-desc" />
-          </div>
+          </Box>
           <ContributeButton variant="outline" to="/upgrades/get-involved/">
             <Translation id="page-upgrades-get-involved-2" />
           </ContributeButton>
         </ContributeCard>
         <Disclaimer>
-          <em>
+          <Text as="em">
             <Translation id="page-upgrades-unofficial-roadmap" />
-          </em>
+          </Text>
         </Disclaimer>
       </Content>
 
@@ -441,24 +474,24 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
         </H2>
         <StakingColumns>
           <StakingLeftColumn>
-            <p>
+            <Text>
               <Translation id="page-upgrades-index-staking-desc" />
-            </p>
-            <h3>
+            </Text>
+            <H3>
               <Translation id="page-upgrades-index-staking-step-1" />
-            </h3>
-            <p>
+            </H3>
+            <Text>
               <Translation id="page-upgrades-index-staking-step-1-desc" />
-            </p>
+            </Text>
             <ButtonLink to="https://launchpad.ethereum.org">
               <Translation id="page-upgrades-index-staking-step-1-btn" />
             </ButtonLink>
-            <h3>
+            <H3>
               <Translation id="page-upgrades-index-staking-step-2" />
-            </h3>
-            <p>
+            </H3>
+            <Text>
               <Translation id="page-upgrades-index-staking-step-2-desc" />
-            </p>
+            </Text>
             <ButtonLink to="/staking/deposit-contract/">
               <Translation id="page-upgrades-index-staking-step-2-btn" />
             </ButtonLink>
@@ -466,14 +499,8 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
           <StakingRightColumn>
             <StakingCard
               emoji=":money_with_wings:"
-              title={translateMessageId(
-                "page-upgrades-index-staking-learn",
-                intl
-              )}
-              description={translateMessageId(
-                "page-upgrades-index-staking-learn-desc",
-                intl
-              )}
+              title={t("page-upgrades-index-staking-learn")}
+              description={t("page-upgrades-index-staking-learn-desc")}
             >
               <ButtonLink to="/staking/">
                 <Translation id="page-staking-deposit-contract-staking-more-link" />
@@ -483,399 +510,375 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
           </StakingRightColumn>
         </StakingColumns>
       </Staking>
-      <Divider />
+      <PageDivider />
       <Content>
-        <CenterH2>
+        <H2 textAlign="center">
           <Translation id="page-upgrades-question-title" />
-        </CenterH2>
+        </H2>
         <Faq>
           <LeftColumn>
             <ExpandableCard
-              contentPreview={translateMessageId(
-                "page-upgrades-question-1-desc",
-                intl
-              )}
-              title={translateMessageId("page-upgrades-question-1-title", intl)}
+              contentPreview={t("page-upgrades-question-1-desc")}
+              title={t("page-upgrades-question-1-title")}
             >
               <Link to="/upgrades/beacon-chain/">
                 <Translation id="page-upgrades-beacon-chain-title" />
               </Link>
-              <p>
+              <Text>
                 <Translation id="page-upgrades-beacon-chain-date" />
-              </p>
+              </Text>
               <Link to="/upgrades/merge/">
                 <Translation id="page-upgrades-docking" />
               </Link>
-              <p>
+              <Text>
                 <Translation id="page-upgrades-merge-answer-1" />{" "}
-              </p>
+              </Text>
               <Link to="/upgrades/sharding/">
                 <Translation id="page-upgrades-shard-title" />
               </Link>
-              <p>
+              <Text>
                 <Translation id="page-upgrades-shard-date" />
-              </p>
+              </Text>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={translateMessageId(
-                "page-upgrades-question-2-desc",
-                intl
-              )}
-              title={translateMessageId("page-upgrades-question-2-title", intl)}
+              contentPreview={t("page-upgrades-question-2-desc")}
+              title={t("page-upgrades-question-2-title")}
             >
-              <p>
+              <Text>
                 <Translation id="page-upgrades-answer-1" />{" "}
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-upgrades-answer-2" />{" "}
                 <Link to="/upgrades/merge/">
                   <Translation id="page-upgrades-merge-btn" />
                 </Link>
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-upgrades-answer-4" />{" "}
-                <Link to="/upgrades/vision/">
+                <Link to="/roadmap/vision/">
                   <Translation id="page-upgrades-vision-btn" />
                 </Link>
-              </p>
+              </Text>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={translateMessageId(
-                "page-upgrades-question-3-desc",
-                intl
-              )}
-              title={translateMessageId("page-upgrades-question-3-title", intl)}
+              contentPreview={t("page-upgrades-question-3-desc")}
+              title={t("page-upgrades-question-3-title")}
             >
-              <p>
+              <Text>
                 <Translation id="page-upgrades-question3-answer-1" />{" "}
                 <Link to="/security/">
                   <Translation id="page-upgrades-security-link" />
                 </Link>
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-upgrades-question-3-answer-2a" />
-              </p>
-              <ul>
-                <li>
+              </Text>
+              <List listStyleType="disc">
+                <ListItem>
                   <Link to="/upgrades/merge/">
                     <Translation id="page-upgrades-merge-btn" />
                   </Link>
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   <Link to="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">
                     <Translation id="page-upgrades-question-3-answer-2a-link" />
                   </Link>
-                </li>
-              </ul>
-              <p>
+                </ListItem>
+              </List>
+              <Text>
                 <Translation id="page-upgrades-question-3-answer-2b" />
-              </p>
-              <ul>
-                <li>
+              </Text>
+              <List listStyleType="disc">
+                <ListItem>
                   <Link to="/upgrades/sharding/">
                     <Translation id="page-upgrades-shard-lower" />
                   </Link>
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   <Link to="/layer-2/">
                     <Translation id="page-upgrades-layer-2-rollups" />
                   </Link>
-                </li>
-              </ul>
+                </ListItem>
+              </List>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={translateMessageId(
-                "page-upgrades-question-4-desc",
-                intl
-              )}
-              title={translateMessageId("page-upgrades-question-4-title", intl)}
+              contentPreview={t("page-upgrades-question-4-desc")}
+              title={t("page-upgrades-question-4-title")}
             >
-              <p>
+              <Text>
                 <Translation id="page-upgrades-question-4-answer-1" />{" "}
                 <Link to="/glossary/#mainnet">
                   <Translation id="page-upgrades-merge-mainnet" />
                 </Link>
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-upgrades-question-4-answer-3" />{" "}
                 <Link to="/developers/docs/consensus-mechanisms/pos/">
                   <Translation id="page-upgrades-proof-stake-link" />
                 </Link>
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-upgrades-question-4-answer-6" />{" "}
                 <Link to="/staking/">
                   <Translation id="page-upgrades-question-4-answer-7" />
                 </Link>
-              </p>
+              </Text>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={translateMessageId(
-                "page-upgrades-question-5-desc",
-                intl
-              )}
-              title={translateMessageId("page-upgrades-question-5-title", intl)}
+              contentPreview={t("page-upgrades-question-5-desc")}
+              title={t("page-upgrades-question-5-title")}
             >
-              <p>
+              <Text>
                 <Translation id="page-upgrades-question-5-answer-1" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Link to="/staking/">
                   <Translation id="page-staking-deposit-contract-staking-more-link" />
                 </Link>
-              </p>
+              </Text>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={translateMessageId(
-                "page-upgrades-question-11-desc",
-                intl
-              )}
-              title={translateMessageId(
-                "page-upgrades-question-11-title",
-                intl
-              )}
+              contentPreview={t("page-upgrades-question-11-desc")}
+              title={t("page-upgrades-question-11-title")}
             >
-              <p>
+              <Text>
                 <Translation id="page-upgrades-question-11-answer-1" />
                 <Link to="/security/#eth2-token-scam/">
                   <Translation id="page-upgrades-question-11-answer-2" />
                 </Link>
-              </p>
+              </Text>
             </ExpandableCard>
           </LeftColumn>
           <RightColumn>
             <ExpandableCard
-              contentPreview={translateMessageId(
-                "page-upgrades-question-6-desc",
-                intl
-              )}
-              title={translateMessageId("page-upgrades-question-6-title", intl)}
+              contentPreview={t("page-upgrades-question-6-desc")}
+              title={t("page-upgrades-question-6-title")}
             >
-              <p>
+              <Text>
                 <Translation id="page-upgrades-question-6-answer-1" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Link to="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">
                   <Translation id="page-upgrades-question-6-answer-1-link" />
                 </Link>
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-upgrades-question-6-answer-2" />
-              </p>
-              <ul>
-                <li>
+              </Text>
+              <List listStyleType="disc">
+                <ListItem>
                   <Translation id="page-upgrades-question-6-answer-3" />{" "}
                   <Link to="https://blog.ethereum.org">
                     <Translation id="page-upgrades-eth-blog" />
                   </Link>
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   <Translation id="page-upgrades-question-6-answer-4" />{" "}
                   <Link to="https://eth2.news">
                     <Translation id="page-upgrades-whats-new" />
                   </Link>
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   <Translation id="page-upgrades-question-6-answer-5" />{" "}
                   <Link to="https://ethresear.ch">
                     <Translation id="page-upgrades-question-3-answer-3-link" />
                   </Link>
-                </li>
-              </ul>
-              <p>
+                </ListItem>
+              </List>
+              <Text>
                 <Link to="/upgrades/merge/">
                   <Translation id="page-upgrades-merge-btn" />
                 </Link>
-              </p>
+              </Text>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={translateMessageId(
-                "page-upgrades-question-7-desc",
-                intl
-              )}
-              title={translateMessageId("page-upgrades-question-7-title", intl)}
+              contentPreview={t("page-upgrades-question-7-desc")}
+              title={t("page-upgrades-question-7-title")}
             >
-              <p>
+              <Text>
                 <Translation id="page-upgrades-question-7-teams" />
-              </p>
-              <ul>
-                <li>
+              </Text>
+              <List listStyleType="disc">
+                <ListItem>
                   <Link to="https://sigmaprime.io/">
                     <Translation id="page-upgrades-question-7-lighthouse" />
                   </Link>{" "}
                   <Translation id="page-upgrades-question-7-lighthouse-lang" />
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   <Link to="https://nimbus.team/">
                     <Translation id="page-upgrades-question-7-nimbus" />
                   </Link>{" "}
                   <Translation id="page-upgrades-question-7-nimbus-lang" />
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   <Link to="https://prysmaticlabs.com/">
                     <Translation id="page-upgrades-question-7-prysm" />
                   </Link>{" "}
                   <Translation id="page-upgrades-question-7-prysm-lang" />
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   <Link to="https://pegasys.tech/teku-ethereum-2-for-enterprise/">
                     <Translation id="page-upgrades-question-7-teku" />
                   </Link>{" "}
                   <Translation id="page-upgrades-question-7-teku-lang" />
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   <Link to="https://github.com/chainsafe/lodestar#getting-started">
                     <Translation id="page-upgrades-question-7-lodestar" />
                   </Link>{" "}
                   <Translation id="page-upgrades-question-7-lodestar-lang" />
-                </li>
-              </ul>
-              <p>
+                </ListItem>
+              </List>
+              f
+              <Text>
                 <Link to="/developers/docs/nodes-and-clients/">
                   <Translation id="page-upgrades-question-7-clients" />
                 </Link>
-              </p>
+              </Text>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={translateMessageId(
-                "page-upgrades-question-8-desc",
-                intl
-              )}
-              title={translateMessageId("page-upgrades-question-8-title", intl)}
+              contentPreview={t("page-upgrades-question-8-desc")}
+              title={t("page-upgrades-question-8-title")}
             >
-              <p>
+              <Text>
                 <Translation id="page-upgrades-question-8-answer-1" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-upgrades-question-8-answer-2" />{" "}
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-upgrades-question-8-answer-3" />{" "}
                 <Link to="/energy-consumption/">
                   <Translation id="page-upgrades-energy-consumption" />
                 </Link>
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-upgrades-question-8-answer-4" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <ButtonLink to="/upgrades/vision/">
                   <Translation id="page-upgrades-question-8-answer-6" />
                 </ButtonLink>
-              </p>
+              </Text>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={translateMessageId(
-                "page-upgrades-question-9-desc",
-                intl
-              )}
-              title={translateMessageId("page-upgrades-question-9-title", intl)}
+              contentPreview={t("page-upgrades-question-9-desc")}
+              title={t("page-upgrades-question-9-title")}
             >
-              <p>
+              <Text>
                 <Translation id="page-upgrades-question-9-answer-1" />{" "}
                 <Link to="/staking/">
                   <Translation id="page-upgrades-question-9-stake-eth" />
                 </Link>
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-upgrades-question-9-answer-2" />{" "}
                 <Link to="/upgrades/get-involved/">
                   <Translation id="page-upgrades-clients" />
                 </Link>
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-upgrades-question-9-answer-3" />{" "}
                 <Link to="/bug-bounty/">
                   <Translation id="page-upgrades-bug-bounty" />
                 </Link>
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-upgrades-question-9-answer-4" />{" "}
                 <Link to="https://ethresear.ch">
                   <Translation id="page-upgrades-question-3-answer-3-link" />
                 </Link>
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Link to="/community/get-involved/">
                   <Translation id="page-upgrades-question-9-more" />
                 </Link>
-              </p>
+              </Text>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={translateMessageId(
-                "page-upgrades-question-10-desc",
-                intl
-              )}
-              title={translateMessageId(
-                "page-upgrades-question-10-title",
-                intl
-              )}
+              contentPreview={t("page-upgrades-question-10-desc")}
+              title={t("page-upgrades-question-10-title")}
             >
-              <p>
+              <Text>
                 <Translation id="page-upgrades-question-10-answer-0" />
-              </p>
+              </Text>
 
-              <p>
+              <Text>
                 <Translation id="page-upgrades-question-10-answer-1" />{" "}
                 <Link to="/upgrades/beacon-chain/">
                   <Translation id="page-upgrades-question-10-answer-1-link" />
                 </Link>
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-upgrades-question-10-answer-2" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-upgrades-question-10-answer-3" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-upgrades-question-10-answer-5" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-upgrades-question-10-answer-6" />{" "}
                 <Link to="/developers/docs/consensus-mechanisms/pos/">
                   <Translation id="page-upgrades-proof-stake-link" />
                 </Link>
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-upgrades-question-10-answer-7" />{" "}
                 <Link to="/upgrades/sharding/#code-execution">
                   <Translation id="page-upgrades-question-10-answer-8" />
                 </Link>
-              </p>
+              </Text>
             </ExpandableCard>
           </RightColumn>
         </Faq>
       </Content>
-      <Divider />
+      <PageDivider />
       <Content>
         <H2>
           <Translation id="page-upgrades-stay-up-to-date" />
         </H2>
-        <p>
+        <Text>
           <Translation id="page-upgrades-stay-up-to-date-desc" />
-        </p>
+        </Text>
         <UpgradeArticles />
         <ResearchContainer>
           <H2>
             <Translation id="page-upgrades-take-part" />
           </H2>
-          <p>
+          <Text>
             <Translation id="page-upgrades-take-part-desc" />
-          </p>
+          </Text>
           <ButtonLink to="https://ethresear.ch/">
             <Translation id="page-upgrades-head-to-ethresearch" />
           </ButtonLink>
         </ResearchContainer>
       </Content>
       <FeedbackCard />
-    </Page>
+    </Flex>
   )
 }
 
 export default Eth2IndexPage
 
 export const query = graphql`
-  query UpgradesPage {
+  query UpgradesPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-upgrades-index", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     oldship: file(relativePath: { eq: "upgrades/oldship.png" }) {
       childImageSharp {
         gatsbyImageData(

@@ -318,7 +318,7 @@ The following are common use-cases for oracles in Ethereum:
 
 If you plan to build a DeFi lending protocol, for example, you’ll need to query current market prices for assets (e.g., ETH) deposited as collateral. This is so your smart contract can determine the value of collateral assets and determine how much they can borrow from the system.
 
-Popular “price oracles” (as they are often called) in DeFi include Chainlink Price Feeds, Compound Protocol’s [Open Price Feed](https://compound.finance/docs/prices), Uniswap’s [Time-Weighted Average Prices (TWAPs)](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/oracles), and [Maker Oracles](https://docs.makerdao.com/smart-contract-modules/oracle-module). It is advisable to understand the caveats that come with these price oracles before integrating them into your project. This [article](https://blog.openzeppelin.com/secure-smart-contract-guidelines-the-dangers-of-price-oracles/) provides a detailed analysis of what to consider when planning to use any of the price oracles mentioned.
+Popular “price oracles” (as they are often called) in DeFi include Chainlink Price Feeds, Compound Protocol’s [Open Price Feed](https://compound.finance/docs/prices), Uniswap’s [Time-Weighted Average Prices (TWAPs)](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles), and [Maker Oracles](https://docs.makerdao.com/smart-contract-modules/oracle-module). It is advisable to understand the caveats that come with these price oracles before integrating them into your project. This [article](https://blog.openzeppelin.com/secure-smart-contract-guidelines-the-dangers-of-price-oracles/) provides a detailed analysis of what to consider when planning to use any of the price oracles mentioned.
 
 Below is an example of how you can retrieve the latest ETH price in your smart contract using a Chainlink price feed:
 
@@ -403,6 +403,8 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 **[Paralink](https://paralink.network/)** - _Paralink provides an open source and decentralized oracle platform for smart contracts running on Ethereum and other popular blockchains._
 
 **[Dos.Network](https://dos.network/)** - _DOS Network is a decentralized oracle service network to boost blockchain usability with real-world data and computation power._
+
+**[Pyth Network](https://pyth.network/)** - _The Pyth network is a first-party financial oracle network designed to publish continuous real-world data on-chain in a tamper-resistant, decentralized, and self-sustainable environment._
 
 ## Further reading {#further-reading}
 

@@ -249,11 +249,11 @@ Il existe de nombreux clients de consensus (précédemment connus sous le nom de
 
 | Client                                                      | Langage    | Systèmes d'exploitation | Réseaux                               |
 | ----------------------------------------------------------- | ---------- | ----------------------- | ------------------------------------- |
-| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS   | Chaîne phare, Prater                  |
-| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS   | Beacon Chain, Prater                  |
-| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS   | Chaîne phare, Prater, Pyrmont         |
-| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS   | Chaîne phare, Prater                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Aller      | Linux, Windows, macOS   | Chaîne phare, Gnosis, Prater, Pyrmont |
+| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS   | Chaîne phare, Goerli                  |
+| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS   | Beacon Chain, Goerli                  |
+| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS   | Chaîne phare, Goerli, Pyrmont         |
+| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS   | Chaîne phare, Goerli                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Aller      | Linux, Windows, macOS   | Chaîne phare, Gnosis, Goerli, Pyrmont |
 
 ## Matériel {#hardware}
 

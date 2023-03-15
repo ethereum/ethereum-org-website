@@ -274,6 +274,11 @@ ethers.utils.formatEther(balance)
 - [Documentation](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
+**viem -** **_TypeScript Interface for Ethereum._**
+
+- [Documentation](https://viem.sh)
+- [GitHub](https://github.com/wagmi-dev/viem)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_

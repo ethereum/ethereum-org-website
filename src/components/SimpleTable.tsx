@@ -110,7 +110,9 @@ const SimpleTable: React.FC<IProps> = ({ columns, content, hasError }) => {
             </Td>
             {url && (
               <Td textAlign="end">
-                <ButtonLink to={url} size="sm">Go to {name}</ButtonLink>
+                <ButtonLink to={url} size="sm">
+                  Go to {name}
+                </ButtonLink>
               </Td>
             )}
           </Tr>

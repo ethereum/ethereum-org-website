@@ -249,11 +249,11 @@ Existen múltiples clientes de consenso (antes conocidos como clientes "Eth2") q
 
 | Cliente                                                     | Idioma     | Sistemas operativos   | Redes                                     |
 | ----------------------------------------------------------- | ---------- | --------------------- | ----------------------------------------- |
-| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | Cadena de baliza, Prater                  |
-| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Cadena de baliza, Prater                  |
-| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Cadena de baliza, Prater, Pyrmont         |
-| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Cadena de baliza, Prater                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Cadena de baliza, Gnosis, Prater, Pyrmont |
+| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | Cadena de baliza, Goerli                  |
+| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Cadena de baliza, Goerli                  |
+| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Cadena de baliza, Goerli, Pyrmont         |
+| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Cadena de baliza, Goerli                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Cadena de baliza, Gnosis, Goerli, Pyrmont |
 
 ## Hardware {#hardware}
 

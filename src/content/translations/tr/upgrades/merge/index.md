@@ -11,7 +11,7 @@ summaryPoint4: Önceden bundan "kenetlenme" olarak bahsettik.
 ---
 
 <UpgradeStatus dateKey="page-upgrades-merge-date">
-  Bu yükseltme, hisse ispatı mutabakatına resmi geçişi temsil eder. Bu, madencilik için gereken yoğun enerji ihtiyacını ortadan kaldırır ve stake edilmiş ether kullanarak ağı güvence altına alır. <a href="/upgrades/vision/">Ethereum vizyonunu </a> gerçekleştirmede oldukça heyecan verici bir adım; daha fazla ölçeklenebilirlik, güvenlik ve sürdürülebilirlik.
+  Bu yükseltme, hisse ispatı mutabakatına resmi geçişi temsil eder. Bu, madencilik için gereken yoğun enerji ihtiyacını ortadan kaldırır ve stake edilmiş ether kullanarak ağı güvence altına alır. <a href="/roadmap/vision/">Ethereum vizyonunu </a> gerçekleştirmede oldukça heyecan verici bir adım; daha fazla ölçeklenebilirlik, güvenlik ve sürdürülebilirlik.
 </UpgradeStatus>
 
 ## Birleştirme nedir? {#what-is-the-docking}
@@ -28,7 +28,7 @@ Mainnet, tüm ETH sahipleri ve kullanıcıları için geçişin sorunsuz olması
 
 ## Birleştirmeden sonra {#after-the-merge}
 
-Bu, Ethereum için iş ispatının sona sinyalini vererek daha sürdürülebilir ve çevre dostu bir Ethereum çağını başlatacaktır. Bu noktada Ethereum, [Ethereum vizyonunda](/upgrades/vision/) özetlenen tam boyuta, güvenliğe ve sürdürülebilirliğe ulaşmaya bir adım daha yakın olacak.
+Bu, Ethereum için iş ispatının sona sinyalini vererek daha sürdürülebilir ve çevre dostu bir Ethereum çağını başlatacaktır. Bu noktada Ethereum, [Ethereum vizyonunda](/roadmap/vision/) özetlenen tam boyuta, güvenliğe ve sürdürülebilirliğe ulaşmaya bir adım daha yakın olacak.
 
 Birleştirmenin uygulama hedeflerinden birinin, iş ispatından hisse ispatına geçişi hızlandırmak için basitlik sağlamak olduğunu belirtmek gerekir. Geliştiriciler çabalarını bu geçişe odaklıyor ve bu hedefi geciktirebilecek ek özellikleri en aza indiriyor.
 
