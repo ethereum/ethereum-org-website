@@ -200,6 +200,7 @@ const styles: Styles = (theme: Theme) => {
       --docsearch-footer-shadow: none;
       border-top: ${borders["2px"]};
       border-color: var(--eth-colors-primary);
+      cursor: auto;
     }
 
     .DocSearch-Footer ul {
@@ -213,6 +214,10 @@ const styles: Styles = (theme: Theme) => {
     .DocSearch-Footer span {
       color: var(--eth-colors-body);
       text-transform: lowercase;
+    }
+
+    .DocSearch-Logo a {
+      display: none;
     }
 
     .DocSearch-Logo a span {
