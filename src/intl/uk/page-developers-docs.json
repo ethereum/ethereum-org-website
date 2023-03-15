@@ -60,5 +60,9 @@
   "page-calltocontribute-link": "шаблон для документів",
   "page-calltocontribute-link-2": "сервері Discord",
   "page-calltocontribute-span": "Виправити сторінку",
-  "page-calltocontribute-title": "Допоможіть нам покращити цю сторінку"
+  "page-calltocontribute-title": "Допоможіть нам покращити цю сторінку",
+  "back-to-top": "Угору",
+  "banner-page-incomplete": "Ця сторінка незавершена, тому ми будемо раді, якщо ви нам допоможете. Відредагуйте цю сторінку та додайте будь-яку інформацію, яка, на вашу думку, буде корисною для інших.",
+  "next": "Далі",
+  "previous": "Назад"
 }

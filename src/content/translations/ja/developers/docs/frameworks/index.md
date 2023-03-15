@@ -42,11 +42,6 @@ lang: ja
 - [ドキュメント](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
 
-**Embark -** **_イーサリアム、IPFS、Whisper と統合された開発環境、テストフレームワーク、およびその他のツール_**
-
-- [ドキュメント](https://embark.status.im/docs/)
-- [GitHub](https://github.com/embark-framework/embark)
-
 **Web3j -** **_JVM 上でブロックチェーンアプリケーションを開発するためのプラットフォーム_**
 
 - [ホームページ](https://www.web3labs.com/web3j-sdk)

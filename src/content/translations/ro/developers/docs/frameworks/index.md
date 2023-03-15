@@ -42,11 +42,6 @@ Framework-urile sunt prevăzute cu numeroase funcționalități predefinite, cum
 - [Documentație](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
 
-**Embark -** **_Un mediu de dezvoltare, un framework de testare și alte instrumente integrate cu Ethereum, IPFS și Whisper._**
-
-- [Documentație](https://embark.status.im/docs/)
-- [GitHub](https://github.com/embark-framework/embark)
-
 **Web3j -** **_A platform for developing blockchain applications on the JVM._**
 
 - [Pagina de start](https://www.web3labs.com/web3j-sdk)

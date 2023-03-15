@@ -62,5 +62,6 @@
   "page-get-eth-your-address": "Votre adresse ETH",
   "page-get-eth-your-address-desc": "Lorsque vous téléchargez un portefeuille, il créera une adresse ETH publique pour vous. Voici à quoi ressemble une adresse :",
   "page-get-eth-your-address-desc-3": "Pensez à cela comme votre adresse e-mail, mais au lieu du courrier, il peut recevoir de l'ETH. Si vous souhaitez transférer des ETH depuis un échange vers votre portefeuille, utilisez votre adresse comme destination. Assurez-vous de toujours la vérifier à deux reprises avant d'envoyer !",
-  "page-get-eth-your-address-wallet-link": "Découvrez les portefeuilles"
+  "page-get-eth-your-address-wallet-link": "Découvrez les portefeuilles",
+  "listing-policy-raise-issue-link": "Soulever un problème"
 }

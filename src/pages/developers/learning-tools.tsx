@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react"
 import styled from "@emotion/styled"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import { shuffle } from "lodash"
 // Component imports
 import PageMetadata from "../../components/PageMetadata"
@@ -14,7 +14,6 @@ import { Content, Page } from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
 import LearningToolsCardGrid from "../../components/LearningToolsCardGrid"
 // Util imports
-import { translateMessageId } from "../../utils/translations"
 import { getImage } from "../../utils/image"
 // Type imports
 import { Context, LearningTool } from "../../types"
@@ -79,7 +78,7 @@ const StackContainer = styled(Content)`
 const LearningToolsPage = ({
   data,
 }: PageProps<Queries.DevelopersLearningToolsPageQuery, Context>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const [randomizedSandboxes, setRandomizedSandboxes] = useState<
     Array<LearningTool>
   >([])
@@ -88,28 +87,28 @@ const LearningToolsPage = ({
     const sandboxes: Array<LearningTool> = [
       {
         name: "Remix",
-        description: "page-learning-tools-remix-description",
+        description: t("page-learning-tools-remix-description"),
         url: "https://remix.ethereum.org",
         image: getImage(data.remix)!,
-        alt: "page-learning-tools-remix-logo-alt",
+        alt: t("page-learning-tools-remix-logo-alt"),
         background: "#5098d6",
         subjects: ["Solidity", "Vyper"],
       },
       {
         name: "Eth.build",
-        description: "page-learning-tools-eth-dot-build-description",
+        description: t("page-learning-tools-eth-dot-build-description"),
         url: "https://eth.build/",
         image: getImage(data.ethdotbuild)!,
-        alt: "page-learning-tools-eth-dot-build-logo-alt",
+        alt: t("page-learning-tools-eth-dot-build-logo-alt"),
         background: "#000000",
         subjects: ["web3"],
       },
       {
         name: "Replit",
-        description: "page-learning-tools-replit-description",
+        description: t("page-learning-tools-replit-description"),
         url: "https://replit.com/@replit/Solidity-starter-beta",
         image: getImage(data.replit)!,
-        alt: "page-learning-tools-replit-logo-alt",
+        alt: t("page-learning-tools-replit-logo-alt"),
         background: "#0f1524",
         subjects: ["Solidity", "web3"],
       },
@@ -130,28 +129,28 @@ const LearningToolsPage = ({
   const games: Array<LearningTool> = [
     {
       name: "CryptoZombies",
-      description: "page-learning-tools-cryptozombies-description",
+      description: t("page-learning-tools-cryptozombies-description"),
       url: "https://cryptozombies.io/",
       image: getImage(data.cryptoZombie)!,
-      alt: "page-learning-tools-cryptozombies-logo-alt",
+      alt: t("page-learning-tools-cryptozombies-logo-alt"),
       background: "#2b2f48",
       subjects: ["Solidity"],
     },
     {
       name: "Ethernauts",
-      description: "page-learning-tools-ethernauts-description",
+      description: t("page-learning-tools-ethernauts-description"),
       url: "https://ethernaut.openzeppelin.com/",
       image: getImage(data.oz)!,
-      alt: "page-learning-tools-ethernauts-logo-alt",
+      alt: t("page-learning-tools-ethernauts-logo-alt"),
       background: "#4f62dc",
       subjects: ["Solidity"],
     },
     {
       name: "Capture The Ether",
-      description: "page-learning-tools-capture-the-ether-description",
+      description: t("page-learning-tools-capture-the-ether-description"),
       url: "https://capturetheether.com/",
       image: getImage(data.captureTheEther)!,
-      alt: "page-learning-tools-capture-the-ether-logo-alt",
+      alt: t("page-learning-tools-capture-the-ether-logo-alt"),
       background: "#1b9aaa",
       subjects: ["Solidity"],
     },
@@ -160,46 +159,46 @@ const LearningToolsPage = ({
   const bootcamps: Array<LearningTool> = [
     {
       name: "ChainShot",
-      description: "page-learning-tools-chainshot-description",
+      description: t("page-learning-tools-chainshot-description"),
       url: "https://www.chainshot.com",
       image: getImage(data.chainshot)!,
-      alt: "page-learning-tools-chainshot-logo-alt",
+      alt: t("page-learning-tools-chainshot-logo-alt"),
       background: "#111f29",
       subjects: ["Solidity", "Vyper", "web3"],
     },
     {
       name: "ConsenSys Academy",
-      description: "page-learning-tools-consensys-academy-description",
+      description: t("page-learning-tools-consensys-academy-description"),
       url: "https://consensys.net/academy/bootcamp/",
       image: getImage(data.consensys)!,
-      alt: "page-learning-tools-consensys-academy-logo-alt",
+      alt: t("page-learning-tools-consensys-academy-logo-alt"),
       background: "#f6f7f9",
       subjects: ["Solidity", "web3"],
     },
     {
       name: "BloomTech",
-      description: "page-learning-tools-bloomtech-description",
+      description: t("page-learning-tools-bloomtech-description"),
       url: "https://www.bloomtech.com/courses/web3",
       image: getImage(data.bloomtech)!,
-      alt: "page-learning-tools-bloomtech-logo-alt",
+      alt: t("page-learning-tools-bloomtech-logo-alt"),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
     },
     {
       name: "_buildspace",
-      description: "page-learning-tools-buildspace-description",
+      description: t("page-learning-tools-buildspace-description"),
       url: "https://buildspace.so",
       image: getImage(data.buildspace)!,
-      alt: "page-learning-tools-buildspace-logo-alt",
+      alt: t("page-learning-tools-buildspace-logo-alt"),
       background: "#f6f7f9",
       subjects: ["Solidity", "web3"],
     },
     {
       name: "Questbook",
-      description: "page-learning-tools-questbook-description",
+      description: t("page-learning-tools-questbook-description"),
       url: "https://learn.questbook.xyz/",
       image: getImage(data.questbook)!,
-      alt: "page-learning-tools-questbook-logo-alt",
+      alt: t("page-learning-tools-questbook-logo-alt"),
       background: "#141236",
       subjects: ["Solidity", "web3"],
     },
@@ -214,38 +213,38 @@ const LearningToolsPage = ({
     },
     {
       name: "NFT School",
-      description: "page-learning-tools-nftschool-description",
+      description: t("page-learning-tools-nftschool-description"),
       url: "https://nftschool.dev/",
       image: getImage(data.nftschool)!,
-      alt: "page-learning-tools-nftschool-logo-alt",
+      alt: t("page-learning-tools-nftschool-logo-alt"),
       background: "#111f29",
       subjects: ["Solidity", "web3"],
     },
     {
       name: "Pointer",
-      description: "page-learning-tools-pointer-description",
+      description: t("page-learning-tools-pointer-description"),
       url: "https://pointer.gg/",
       image: getImage(data.pointer)!,
-      alt: "page-learning-tools-pointer-logo-alt",
+      alt: t("page-learning-tools-pointer-logo-alt"),
       background: "#171717",
       subjects: ["Solidity", "web3"],
     },
     {
       name: "Platzi",
-      description: "page-learning-tools-platzi-description",
+      description: t("page-learning-tools-platzi-description"),
       url: "https://platzi.com/escuela/escuela-blockchain/",
-      image: getImage(data.platzi),
-      alt: "page-learning-tools-platzi-logo-alt",
+      image: getImage(data.platzi)!,
+      alt: t("page-learning-tools-platzi-logo-alt"),
       background: "#121f3d",
       subjects: ["Solidity", "web3"],
       locales: ["es"],
     },
     {
       name: "Speed Run Ethereum",
-      description: "page-learning-tools-speed-run-ethereum-description",
+      description: t("page-learning-tools-speed-run-ethereum-description"),
       url: "https://speedrunethereum.com/",
       image: getImage(data.speedRunEthereum)!,
-      alt: "page-learning-tools-speed-run-ethereum-logo-alt",
+      alt: t("page-learning-tools-speed-run-ethereum-logo-alt"),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
     },
@@ -263,8 +262,8 @@ const LearningToolsPage = ({
   return (
     <StyledPage>
       <PageMetadata
-        title={translateMessageId("page-learning-tools-meta-title", intl)}
-        description={translateMessageId("page-learning-tools-meta-desc", intl)}
+        title={t("page-learning-tools-meta-title")}
+        description={t("page-learning-tools-meta-desc")}
       />
       <Header>
         <H1>
@@ -307,7 +306,7 @@ const LearningToolsPage = ({
       <Content>
         <CalloutBanner
           image={getImage(data.learn)!}
-          alt={translateMessageId("page-index-tout-enterprise-image-alt", intl)}
+          alt={t("page-index-tout-enterprise-image-alt")}
           titleKey={"page-learning-tools-documentation"}
           descriptionKey={"page-learning-tools-documentation-desc"}
         >
@@ -341,7 +340,21 @@ export const learningToolImage = graphql`
 `
 
 export const query = graphql`
-  query DevelopersLearningToolsPage {
+  query DevelopersLearningToolsPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-developers-learning-tools", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     captureTheEther: file(
       relativePath: { eq: "dev-tools/capturetheether.png" }
     ) {
