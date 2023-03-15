@@ -204,6 +204,10 @@
     "toPath": "/:splat/upgrades/sharding/"
   },
   {
+    "fromPath": "/upgrades/shard-chains/",
+    "toPath": "/en/roadmap/danksharding/"
+  },
+  {
     "fromPath": "/*/eth2/staking/",
     "toPath": "/:splat/staking/"
   },
