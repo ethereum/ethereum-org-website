@@ -181,15 +181,13 @@ eventName="read more">
 <p>It is not possible to manually request specific amounts of ETH to be withdrawn.</p>
 </ExpandableCard>
 
-<!-- TODO: Switch link to Mainnet once available -->
-
 <ExpandableCard
 title="I operate a validator, where can I find more information on preparing?"
 eventCategory="FAQ"
 eventAction="I operate a validator, where can I find more information on preparing?"
 eventName="read more">
 
-<p>Validator operators are recommended to visit the <a href="https://zhejiang.launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals (Zhejiang Testnet)</a> page where you'll find more details about how to be prepared, timing of events, and more details about how withdrawals function.</p>
+<p>Validator operators are recommended to visit the <a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals</a> page where you'll find more details about how to be prepared, timing of events, and more details about how withdrawals function.</p>
 </ExpandableCard>
 
 <ExpandableCard
@@ -203,7 +201,7 @@ eventName="read more">
 
 ## Further reading {#further-reading}
 
-- [Staking Launchpad Withdrawals - Zhejiang Testnet](https://zhejiang.launchpad.ethereum.org/withdrawals)
+- [Staking Launchpad Withdrawals](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Beacon chain push withdrawals as operations](https://eips.ethereum.org/EIPS/eip-4895)
 - [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Staked ETH Withdrawal (Testing) with Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)

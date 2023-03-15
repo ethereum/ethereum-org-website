@@ -35,7 +35,7 @@
   "page-staking-benefits-2-title": "Better security",
   "page-staking-benefits-2-description": "The network gets stronger against attacks as more ETH is staked, as it then requires more ETH to control a majority of the network. To become a threat, you would need to hold the majority of validators, which means you'd need to control the majority of ETH in the system–that's a lot!",
   "page-staking-benefits-3-title": "More sustainable",
-  "page-staking-benefits-3-description": "Stakers don't need energy-intensive computers to participate in a proof-of-stake system–just a home computer or smartphone. This will make Ethereum better for the environment.",
+  "page-staking-benefits-3-description": "Stakers don't need to do energy-intensive proof-of-work computations to participate in securing the network meaning staking nodes can run on relatively modest hardware using very little energy .",
   "page-staking-benefits-3-link": "More on Ethereum's energy consumption",
   "page-staking-description": "Staking is the act of depositing 32 ETH to activate validator software. As a validator you’ll be responsible for storing data, processing transactions, and adding new blocks to the blockchain. This will keep Ethereum secure for everyone and earn you new ETH in the process.",
   "page-staking-hero-title": "How to stake your ETH",
@@ -226,5 +226,6 @@
   "page-staking-meta-title": "Ethereum staking",
   "page-staking-withdrawals-important-notices": "Important notices",
   "page-staking-withdrawals-important-notices-desc": "Withdrawals are not yet available. Please read the <a href=\"https://blog.ethereum.org/2021/12/01/eth2-merge-and-post-merge-faq/\" target=\"_blank\">Eth2 Merge and post-merge FAQ</a> for more information.",
-  "page-upgrades-merge-btn": "More on The Merge"
+  "page-upgrades-merge-btn": "More on The Merge",
+  "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">Subscribe to the EF Blog</a> to receive email notifications for the latest protocol announcements."
 }
