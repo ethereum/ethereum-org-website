@@ -209,5 +209,8 @@
   "page-dapps-more-on-nft-button": "المزيد عن المجموعات الرمزية",
   "page-dapps-more-on-nft-gaming-button": "المزيد عن عناصر اللعبة الرمزية",
   "page-dapps-dapp-description-pwn": "القروض المُيسّرة المدعومة بأي رمز مميز أو رموز مميزة غير قابلة للاستبدال على إثيريوم.",
-  "page-dapps-pwn-image-alt": "شعار PWN"
+  "page-dapps-pwn-image-alt": "شعار PWN",
+  "foundation": "مؤسسة",
+  "transaction-fees": "ما هي رسوم التحويل؟",
+  "page-wallets-get-some": "احصل على بعض ETH"
 }

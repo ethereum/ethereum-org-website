@@ -26,5 +26,6 @@
   "page-learning-tools-sandbox-desc": "Αυτά τα λογισμικά ασφαλούς περιβάλλοντος (sandbox), σας παρέχουν ένα χώρο για να πειραματιστείτε με τη συγγραφή των Smart Contract και την καλύτερη κατανόηση του Ethereum.",
   "page-learning-tools-studio-description": "Ένα IDE με χρήση μέσω περιηγητή, όπου μπορείτε να ακολουθήσετε τα μαθήματα για να δημιουργήσετε και να δοκιμάσετε Smart Contract και να δημιουργήσετε ένα frontend γι 'αυτά.",
   "page-learning-tools-vyperfun-description": "Μάθετε το Vyper δημιουργώντας το δικό σας παιχνίδι Pokemon.",
-  "page-learning-tools-vyperfun-logo-alt": "Λογότυπο Vyper.fun"
+  "page-learning-tools-vyperfun-logo-alt": "Λογότυπο Vyper.fun",
+  "alt-eth-blocks": "Απεικόνιση των μπλοκ που οργανώνονται σαν ένα σύμβολο ETH"
 }

@@ -3,14 +3,15 @@ import React, { FC } from "react"
 import {
   Box,
   Flex,
+  FlexProps,
+  ListItem,
   Text,
   UnorderedList,
-  ListItem,
-  FlexProps,
 } from "@chakra-ui/react"
 // Components
-import ButtonLink from "../ButtonLink"
 import Card from "../Card"
+import Translation from "../Translation"
+import ButtonLink from "../ButtonLink"
 
 interface IProps extends FlexProps {}
 const ShanghaiCapella: FC<IProps> = (props) => {
@@ -22,34 +23,28 @@ const ShanghaiCapella: FC<IProps> = (props) => {
       {...props}
     >
       <Card
-        title="Shanghai"
+        title={<Translation id="comp-shanghai-title" />}
         emoji="📜"
         children={
           <>
             <Text>
-              Withdrawal functionality will be enabled in the upcoming Shanghai
-              upgrade planned for Q1/Q2 2023 (as with any upgrade, timing
-              subject to change). This enables previously staked ETH to be
-              deposited into execution layer accounts, closing the loop on
-              staking liquidity, and taking one more step on Ethereum’s journey
-              towards building a sustainable, scalable, secure decentralized
-              ecosystem.
+              <Translation id="comp-shanghai-p-1" />
             </Text>
             <Text>
-              Shanghai marks the end of an undefined lock-up period for ETH
-              staking. Users will be free to:
+              <Translation id="comp-shanghai-p-2" />
             </Text>
             <UnorderedList mb={0}>
-              <ListItem>Stake their ETH</ListItem>
               <ListItem>
-                Earn ETH rewards that will be distributed automatically
+                <Translation id="comp-shanghai-li-1" />
               </ListItem>
               <ListItem>
-                Un-stake their ETH to regain full access to their entire balance
+                <Translation id="comp-shanghai-li-2" />
               </ListItem>
               <ListItem>
-                And of course, re-stake to sign back up and start earning more
-                rewards
+                <Translation id="comp-shanghai-li-3" />
+              </ListItem>
+              <ListItem>
+                <Translation id="comp-shanghai-li-4" />
               </ListItem>
             </UnorderedList>
           </>
@@ -57,22 +52,18 @@ const ShanghaiCapella: FC<IProps> = (props) => {
         flex={5}
       />
       <Card
-        title="Capella"
+        title={<Translation id="comp-capella-title" />}
         emoji="⛓️"
         children={
           <>
             <Text>
-              For the Shanghai upgrade to take effect, a simultaneous upgrade to
-              the Beacon Chain must take place named Capella. Node operating
-              stakers should stay tuned to client communication channels to be
-              alerted of upcoming client updates planned for Q1/Q2 2023.
+              <Translation id="comp-capella-p-1" />
             </Text>
             <Text>
-              Stakers who need to update their validator withdrawal keys can
-              broadcast this message once the Capella upgrade has taken place.
+              <Translation id="comp-capella-p-2" />
             </Text>
             <ButtonLink
-              to="https://zhejiang.launchpad.ethereum.org/withdrawals"
+              to="https://launchpad.ethereum.org/withdrawals"
               mt="auto"
               hideArrow
               whiteSpace="normal"
@@ -80,8 +71,7 @@ const ShanghaiCapella: FC<IProps> = (props) => {
               h="fit-content"
               py={3}
             >
-              Test your setup on Zhejiang launchpad
-              {/* TODO: Update once Withdrawals page merged to Goerli/Mainnet branches */}
+              <Translation id="comp-capella-link" />
             </ButtonLink>
           </>
         }

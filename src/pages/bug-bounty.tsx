@@ -2,7 +2,7 @@ import React, { ReactNode } from "react"
 import { useTheme } from "@emotion/react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
   Center,
@@ -12,7 +12,6 @@ import {
   UnorderedList,
 } from "@chakra-ui/react"
 
-import { translateMessageId } from "../utils/translations"
 import Translation from "../components/Translation"
 import Card from "../components/Card"
 import Leaderboard from "../components/Leaderboard"
@@ -314,7 +313,7 @@ const BugBountiesPage = ({
   data,
   location,
 }: PageProps<Queries.BugBountyPageQuery, Context>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const theme = useTheme()
   const isDarkTheme = theme.isDark
 
@@ -442,11 +441,8 @@ const BugBountiesPage = ({
   return (
     <Page>
       <PageMetadata
-        title={translateMessageId("page-upgrades-bug-bounty-meta-title", intl)}
-        description={translateMessageId(
-          "page-upgrades-bug-bounty-meta-description",
-          intl
-        )}
+        title={t("page-upgrades-bug-bounty-meta-title")}
+        description={t("page-upgrades-bug-bounty-meta-description")}
       />
       <Content>
         <HeroCard>
@@ -527,14 +523,8 @@ const BugBountiesPage = ({
           <StyledCardContainer>
             <StyledCard
               emoji=":ledger:"
-              title={translateMessageId(
-                "page-upgrades-bug-bounty-ledger-title",
-                intl
-              )}
-              description={translateMessageId(
-                "page-upgrades-bug-bounty-ledger-desc",
-                intl
-              )}
+              title={t("page-upgrades-bug-bounty-ledger-title")}
+              description={t("page-upgrades-bug-bounty-ledger-desc")}
             >
               <Link to="https://github.com/ethereum/consensus-specs">
                 <Translation id="page-upgrades-bug-bounty-specs" />
@@ -601,14 +591,8 @@ const BugBountiesPage = ({
             </StyledCard>
             <StyledCard
               emoji=":computer:"
-              title={translateMessageId(
-                "page-upgrades-bug-bounty-client-bugs",
-                intl
-              )}
-              description={translateMessageId(
-                "page-upgrades-bug-bounty-client-bugs-desc",
-                intl
-              )}
+              title={t("page-upgrades-bug-bounty-client-bugs")}
+              description={t("page-upgrades-bug-bounty-client-bugs-desc")}
             >
               <Box>
                 <Text>
@@ -649,14 +633,8 @@ const BugBountiesPage = ({
             </StyledCard>
             <StyledCard
               emoji=":book:"
-              title={translateMessageId(
-                "page-upgrades-bug-bounty-misc-bugs",
-                intl
-              )}
-              description={translateMessageId(
-                "page-upgrades-bug-bounty-misc-bugs-desc",
-                intl
-              )}
+              title={t("page-upgrades-bug-bounty-misc-bugs")}
+              description={t("page-upgrades-bug-bounty-misc-bugs-desc")}
             >
               <Box>
                 <Text>
@@ -679,14 +657,8 @@ const BugBountiesPage = ({
             </StyledCard>
             <StyledCard
               emoji=":scroll:"
-              title={translateMessageId(
-                "page-upgrades-bug-bounty-deposit-bugs",
-                intl
-              )}
-              description={translateMessageId(
-                "page-upgrades-bug-bounty-deposit-bugs-desc",
-                intl
-              )}
+              title={t("page-upgrades-bug-bounty-deposit-bugs")}
+              description={t("page-upgrades-bug-bounty-deposit-bugs-desc")}
             >
               <Box>
                 <Heading
@@ -806,11 +778,8 @@ const BugBountiesPage = ({
         <Faq>
           <LeftColumn>
             <ExpandableCard
-              title={translateMessageId("bug-bounty-faq-q1-title", intl)}
-              contentPreview={translateMessageId(
-                "bug-bounty-faq-q1-contentPreview",
-                intl
-              )}
+              title={t("bug-bounty-faq-q1-title")}
+              contentPreview={t("bug-bounty-faq-q1-contentPreview")}
             >
               <Text>
                 <Translation id="bug-bounty-faq-q1-content-1" />
@@ -835,33 +804,24 @@ const BugBountiesPage = ({
               </Text>
             </ExpandableCard>
             <ExpandableCard
-              title={translateMessageId("bug-bounty-faq-q2-title", intl)}
-              contentPreview={translateMessageId(
-                "bug-bounty-faq-q2-contentPreview",
-                intl
-              )}
+              title={t("bug-bounty-faq-q2-title")}
+              contentPreview={t("bug-bounty-faq-q2-contentPreview")}
             >
               <Text>
                 <Translation id="bug-bounty-faq-q2-content-1" />
               </Text>
             </ExpandableCard>
             <ExpandableCard
-              title={translateMessageId("bug-bounty-faq-q3-title", intl)}
-              contentPreview={translateMessageId(
-                "bug-bounty-faq-q3-contentPreview",
-                intl
-              )}
+              title={t("bug-bounty-faq-q3-title")}
+              contentPreview={t("bug-bounty-faq-q3-contentPreview")}
             >
               <Text>
                 <Translation id="bug-bounty-faq-q3-content-1" />
               </Text>
             </ExpandableCard>
             <ExpandableCard
-              title={translateMessageId("bug-bounty-faq-q4-title", intl)}
-              contentPreview={translateMessageId(
-                "bug-bounty-faq-q4-contentPreview",
-                intl
-              )}
+              title={t("bug-bounty-faq-q4-title")}
+              contentPreview={t("bug-bounty-faq-q4-contentPreview")}
             >
               <Text>
                 <Translation id="bug-bounty-faq-q4-content-1" />
@@ -870,22 +830,16 @@ const BugBountiesPage = ({
           </LeftColumn>
           <RightColumn>
             <ExpandableCard
-              title={translateMessageId("bug-bounty-faq-q5-title", intl)}
-              contentPreview={translateMessageId(
-                "bug-bounty-faq-q5-contentPreview",
-                intl
-              )}
+              title={t("bug-bounty-faq-q5-title")}
+              contentPreview={t("bug-bounty-faq-q5-contentPreview")}
             >
               <Text>
                 <Translation id="bug-bounty-faq-q5-content-1" />
               </Text>
             </ExpandableCard>
             <ExpandableCard
-              title={translateMessageId("bug-bounty-faq-q6-title", intl)}
-              contentPreview={translateMessageId(
-                "bug-bounty-faq-q6-contentPreview",
-                intl
-              )}
+              title={t("bug-bounty-faq-q6-title")}
+              contentPreview={t("bug-bounty-faq-q6-contentPreview")}
             >
               <Text>
                 <Translation id="bug-bounty-faq-q6-content-1" />
@@ -895,22 +849,16 @@ const BugBountiesPage = ({
               </Text>
             </ExpandableCard>
             <ExpandableCard
-              title={translateMessageId("bug-bounty-faq-q7-title", intl)}
-              contentPreview={translateMessageId(
-                "bug-bounty-faq-q7-contentPreview",
-                intl
-              )}
+              title={t("bug-bounty-faq-q7-title")}
+              contentPreview={t("bug-bounty-faq-q7-contentPreview")}
             >
               <Text>
                 <Translation id="bug-bounty-faq-q7-content-1" />
               </Text>
             </ExpandableCard>
             <ExpandableCard
-              title={translateMessageId("bug-bounty-faq-q8-title", intl)}
-              contentPreview={translateMessageId(
-                "bug-bounty-faq-q8-contentPreview",
-                intl
-              )}
+              title={t("bug-bounty-faq-q8-title")}
+              contentPreview={t("bug-bounty-faq-q8-contentPreview")}
             >
               <Text>
                 <Translation id="bug-bounty-faq-q8-content-1" />
@@ -969,7 +917,21 @@ export const ClientLogosSmall = graphql`
 `
 
 export const query = graphql`
-  query BugBountyPage {
+  query BugBountyPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-upgrades-get-involved-bug-bounty", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     consensusBountyHunters: allConsensusBountyHuntersCsv(
       sort: { score: DESC }
     ) {

@@ -238,5 +238,8 @@
   "bug-bounty-faq-q8-title": "Do you have a PGP key?",
   "bug-bounty-faq-q8-contentPreview": "Yes. Expand for details.",
   "bug-bounty-faq-q8-content-1": "Please use <code>AE96 ED96 9E47 9B00 84F3 E17F E88D 3334 FA5F 6A0A</code>",
-  "bug-bounty-faq-q8-PGP-key": "PGP Key"
+  "bug-bounty-faq-q8-PGP-key": "PGP Key",
+  "page-staking-deposit-contract-staking-more-link": "المزيد عن تجميد العملات",
+  "page-upgrades-get-involved-ethresearch-1": "التقسيم",
+  "page-upgrades-get-involved-ethresearch-2": "الانتقال من Eth1 إلى upgrades"
 }

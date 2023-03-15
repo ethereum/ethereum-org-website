@@ -9,7 +9,6 @@
   "page-upgrades-get-involved-bug-li-2": "القضاء على الأخطاء نهائيًا",
   "page-upgrades-get-involved-bug-li-3": "رفض ناقلات الخدمة (DOS)",
   "page-upgrades-get-involved-bug-li-4": "والمزيد...",
-  "page-upgrades-get-involved-date": "تاريخ الانتهاء: 23 ديسمبر 2020",
   "page-upgrades-get-involved-desc-1": "تشغيل عميل يعني أنك ستكون مشاركًا نشطًا في إثيريوم. سيقوم عميلك بمساعدتك في تتبع المعاملات والتحقق من الكتل الجديدة.",
   "page-upgrades-get-involved-desc-2": "إذا كان لديك إثيريوم، يمكنك تخزينه لتصبح مدققًا وتساعد في تأمين الشبكة. وبصفتك مدققًا، يمكنك كسب مكافآت إثيريوم.",
   "page-upgrades-get-involved-desc-3": "انضم إلى جهود الاختبار التي يبذلها المجتمع! ساعد في اختبار ترقيات إثيريوم قبل إتاحتها أو إرسالها، وابحث عن الأخطاء، واكسب المكافآت.",
@@ -17,8 +16,6 @@
   "page-upgrades-get-involved-ethresearch-2": "الدمج",
   "page-upgrades-get-involved-ethresearch-3": "التنفيذ المقسم لأجزاء",
   "page-upgrades-get-involved-ethresearch-4": "جميع مواضيع البحث",
-  "page-upgrades-get-involved-grants": "المنح المجتمعية لتجميد العملات",
-  "page-upgrades-get-involved-grants-desc": "ساعد في إنشاء أدوات ومحتوى تعليمي لمجتمع تجميد العملات",
   "page-upgrades-get-involved-how": "كيف تريد المشاركة؟",
   "page-upgrades-get-involved-how-desc": "سيستفيد مجتمع إثيريوم دائمًا من المزيد من الأشخاص الذين يديرون العملاء، ويقومون بتجميد العملات، ويبحثون عن الأخطاء.",
   "page-upgrades-get-involved-join": "انضم إلى البحث",
@@ -46,6 +43,8 @@
   "page-upgrades-get-involved-written-javascript": "تمت الكتابة بلغة JavasScript",
   "page-upgrades-get-involved-written-net": "تمت الكتابة بلغة ‎.NET",
   "page-upgrades-get-involved-written-nim": "تمت الكتابة بلغة Nim",
-  "page-upgrades-get-involved-written-python": "تمت الكتابة بلغة Python",
-  "page-upgrades-get-involved-written-rust": "تمت الكتابة بلغة Rust"
+  "page-upgrades-get-involved-written-rust": "تمت الكتابة بلغة Rust",
+  "page-upgrades-get-involved": "شارك في upgrades",
+  "page-upgrades-get-involved-2": "شارك في التحدي",
+  "page-upgrades-bug-bounty-leaderboard-points": "نقاط"
 }

@@ -42,11 +42,6 @@ Bevor Sie sich mit Frameworks beschäftigen, empfehlen wir, dass Sie sich mit de
 - [Dokumentation](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
 
-**Embark –** **_Eine Entwicklungsumgebung, Test-Framework und weitere Tools, die in Ethereum, IPFS und Whisper integriert sind_**
-
-- [Dokumentation](https://embark.status.im/docs/)
-- [GitHub](https://github.com/embark-framework/embark)
-
 **Web3j –** **_Eine Plattform für die Entwicklung von Blockchain-Anwendungen auf JVM_**
 
 - [Webseite](https://www.web3labs.com/web3j-sdk)

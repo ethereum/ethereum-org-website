@@ -21,5 +21,7 @@
   "page-about-p-5": "Zadania, które realizujemy.",
   "page-about-p-6": "Zadania oczekujące na wdrożenie.",
   "page-about-p-7": "Ostatnio ukończone zadania.",
-  "page-about-p-8": "Masz pomysł, jak ulepszyć ethereum.org? Chcielibyśmy z Tobą współpracować!"
+  "page-about-p-8": "Masz pomysł, jak ulepszyć ethereum.org? Chcielibyśmy z Tobą współpracować!",
+  "page-what-is-ethereum-energy-consumption-chart-legend": "Roczne zużycie energii w TW/rok",
+  "page-upgrades-post-merge-banner-governance-ood": "Niektóre treści na tej stronie są nieaktualne po Połączeniu. Jeśli chcesz wnieść swój wkład, zgłoś PR."
 }
