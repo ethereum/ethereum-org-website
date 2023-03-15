@@ -5,7 +5,7 @@
   "page-staking-benefits-2-title": "Better security",
   "page-staking-benefits-2-description": "The network gets stronger against attacks as more ETH is staked, as it then requires more ETH to control a majority of the network. To become a threat, you would need to hold the majority of validators, which means you'd need to control the majority of ETH in the system–that's a lot!",
   "page-staking-benefits-3-title": "More sustainable",
-  "page-staking-benefits-3-description": "Stakers don't need energy-intensive computers to participate in a proof-of-stake system–just a home computer or smartphone, making Ethereum environmentally sustainable.",
+  "page-staking-benefits-3-description": "Stakers don't need to do energy-intensive proof-of-work computations to participate in securing the network meaning staking nodes can run on relatively modest hardware using very little energy .",
   "page-staking-benefits-3-link": "More on Ethereum's energy consumption",
   "page-staking-check-address": "Check deposit address",
   "page-staking-deposit-address": "Check the deposit address",
