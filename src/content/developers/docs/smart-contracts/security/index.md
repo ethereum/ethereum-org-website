@@ -500,7 +500,7 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[Hacken](https://hacken.io)** - _Web3 cybersecurity auditor bringing the 360-degree approach to blockchain security._
 
-- **[HashEx](https://hashex.org/)** - _HashEx is a leading provider in the Web3 space, offering a range of services to secure, develop and educate the Web3 community. HashEx focuses on blockchain and smart contract auditing to ensure the security of cryptocurrencies, providing services such as smart contract development, penetration testing, blockchain consulting._
+- **[HashEx](https://hashex.org/)** - _HashEx focuses on blockchain and smart contract auditing to ensure the security of cryptocurrencies, providing services such as smart contract development, penetration testing, blockchain consulting._
 
 ### Bug bounty platforms {#bug-bounty-platforms}
 
