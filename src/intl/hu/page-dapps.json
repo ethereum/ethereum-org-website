@@ -209,5 +209,8 @@
   "page-dapps-more-on-nft-button": "Bővebben a tokenizált gyűjthető tárgyakról",
   "page-dapps-more-on-nft-gaming-button": "Bővebben a tokenizált, játékokhoz kapcsolódó dolgokról",
   "page-dapps-dapp-description-pwn": "Hitelek könyedén, amelyek mögött bármilyen, az Ethereumon elérhető token vagy NFT áll.",
-  "page-dapps-pwn-image-alt": "PWN logó"
+  "page-dapps-pwn-image-alt": "PWN logó",
+  "foundation": "Alapítvány",
+  "transaction-fees": "Mik azok a tranzakciós díjak?",
+  "page-wallets-get-some": "Szerezz valamennyi ETH-et"
 }

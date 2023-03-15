@@ -1,5 +1,5 @@
 import React, { ReactNode, useState } from "react"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import {
@@ -30,7 +30,7 @@ import PageMetadata from "../components/PageMetadata"
 import StatsBoxGrid from "../components/StatsBoxGrid"
 import Translation from "../components/Translation"
 import TitleCardList, { ITitleCardItem } from "../components/TitleCardList"
-import { translateMessageId, isLangRightToLeft } from "../utils/translations"
+import { isLangRightToLeft } from "../utils/translations"
 import { getImage } from "../utils/image"
 
 import SimpleWalletContent from "!!raw-loader!../data/SimpleWallet.sol"
@@ -188,7 +188,7 @@ const HomePage = ({
   data,
   pageContext: { language = "en" },
 }: PageProps<Queries.IndexPageQuery, Context>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const [isModalOpen, setModalOpen] = useState(false)
   const [activeCode, setActiveCode] = useState(0)
   const dir = isLangRightToLeft(language) ? "rtl" : "ltr"
@@ -203,42 +203,30 @@ const HomePage = ({
   const cards = [
     {
       image: getImage(data.robotfixed),
-      title: translateMessageId("page-index-get-started-wallet-title", intl),
-      description: translateMessageId(
-        "page-index-get-started-wallet-description",
-        intl
-      ),
-      alt: translateMessageId("page-index-get-started-wallet-image-alt", intl),
+      title: t("page-index-get-started-wallet-title"),
+      description: t("page-index-get-started-wallet-description"),
+      alt: t("page-index-get-started-wallet-image-alt"),
       to: "/wallets/find-wallet/",
     },
     {
       image: getImage(data.ethfixed),
-      title: translateMessageId("page-index-get-started-eth-title", intl),
-      description: translateMessageId(
-        "page-index-get-started-eth-description",
-        intl
-      ),
-      alt: translateMessageId("page-index-get-started-eth-image-alt", intl),
+      title: t("page-index-get-started-eth-title"),
+      description: t("page-index-get-started-eth-description"),
+      alt: t("page-index-get-started-eth-image-alt"),
       to: "/get-eth/",
     },
     {
       image: getImage(data.dogefixed),
-      title: translateMessageId("page-index-get-started-dapps-title", intl),
-      description: translateMessageId(
-        "page-index-get-started-dapps-description",
-        intl
-      ),
-      alt: translateMessageId("page-index-get-started-dapps-image-alt", intl),
+      title: t("page-index-get-started-dapps-title"),
+      description: t("page-index-get-started-dapps-description"),
+      alt: t("page-index-get-started-dapps-image-alt"),
       to: "/dapps/",
     },
     {
       image: getImage(data.devfixed),
-      title: translateMessageId("page-index-get-started-devs-title", intl),
-      description: translateMessageId(
-        "page-index-get-started-devs-description",
-        intl
-      ),
-      alt: translateMessageId("page-index-get-started-devs-image-alt", intl),
+      title: t("page-index-get-started-devs-title"),
+      description: t("page-index-get-started-devs-description"),
+      alt: t("page-index-get-started-devs-image-alt"),
       to: "/developers/",
     },
   ]
@@ -246,32 +234,23 @@ const HomePage = ({
   const touts = [
     {
       image: getImage(data.merge),
-      alt: translateMessageId("page-index-tout-upgrades-image-alt", intl),
-      title: translateMessageId("page-index-tout-upgrades-title", intl),
-      description: translateMessageId(
-        "page-index-tout-upgrades-description",
-        intl
-      ),
+      alt: t("page-index-tout-upgrades-image-alt"),
+      title: t("page-index-tout-upgrades-title"),
+      description: t("page-index-tout-upgrades-description"),
       to: "/upgrades/",
     },
     {
       image: getImage(data.infrastructurefixed),
-      alt: translateMessageId("page-index-tout-enterprise-image-alt", intl),
-      title: translateMessageId("page-index-tout-enterprise-title", intl),
-      description: translateMessageId(
-        "page-index-tout-enterprise-description",
-        intl
-      ),
+      alt: t("page-index-tout-enterprise-image-alt"),
+      title: t("page-index-tout-enterprise-title"),
+      description: t("page-index-tout-enterprise-description"),
       to: "/enterprise/",
     },
     {
       image: getImage(data.enterprise),
-      alt: translateMessageId("page-index-tout-community-image-alt", intl),
-      title: translateMessageId("page-index-tout-community-title", intl),
-      description: translateMessageId(
-        "page-index-tout-community-description",
-        intl
-      ),
+      alt: t("page-index-tout-community-image-alt"),
+      title: t("page-index-tout-community-title"),
+      description: t("page-index-tout-community-description"),
       to: "/community/",
     },
   ]
@@ -283,50 +262,26 @@ const HomePage = ({
 
   const codeExamples: Array<CodeExample> = [
     {
-      title: translateMessageId(
-        "page-index-developers-code-example-title-0",
-        intl
-      ),
-      description: translateMessageId(
-        "page-index-developers-code-example-description-0",
-        intl
-      ),
+      title: t("page-index-developers-code-example-title-0"),
+      description: t("page-index-developers-code-example-description-0"),
       codeLanguage: "language-solidity",
       code: SimpleWalletContent,
     },
     {
-      title: translateMessageId(
-        "page-index-developers-code-example-title-1",
-        intl
-      ),
-      description: translateMessageId(
-        "page-index-developers-code-example-description-1",
-        intl
-      ),
+      title: t("page-index-developers-code-example-title-1"),
+      description: t("page-index-developers-code-example-description-1"),
       codeLanguage: "language-solidity",
       code: SimpleTokenContent,
     },
     {
-      title: translateMessageId(
-        "page-index-developers-code-example-title-2",
-        intl
-      ),
-      description: translateMessageId(
-        "page-index-developers-code-example-description-2",
-        intl
-      ),
+      title: t("page-index-developers-code-example-title-2"),
+      description: t("page-index-developers-code-example-description-2"),
       codeLanguage: "language-javascript",
       code: CreateWalletContent,
     },
     {
-      title: translateMessageId(
-        "page-index-developers-code-example-title-3",
-        intl
-      ),
-      description: translateMessageId(
-        "page-index-developers-code-example-description-3",
-        intl
-      ),
+      title: t("page-index-developers-code-example-title-3"),
+      description: t("page-index-developers-code-example-description-3"),
       codeLanguage: "language-solidity",
       code: SimpleDomainRegistryContent,
     },
@@ -337,13 +292,13 @@ const HomePage = ({
   return (
     <Flex flexDirection="column" alignItems="center" dir={dir} width="full">
       <PageMetadata
-        title={translateMessageId("page-index-meta-title", intl)}
-        description={translateMessageId("page-index-meta-description", intl)}
+        title={t("page-index-meta-title")}
+        description={t("page-index-meta-description")}
       />
       <Img
         as={GatsbyImage}
         image={getImage(data.hero)!}
-        alt={translateMessageId("page-index-hero-image-alt", intl)}
+        alt={t("page-index-hero-image-alt")}
         loading="eager"
         width="full"
         minH="380px"
@@ -380,10 +335,7 @@ const HomePage = ({
               <Img
                 as={GatsbyImage}
                 image={getImage(data.hackathon)!}
-                alt={translateMessageId(
-                  "page-index-get-started-image-alt",
-                  intl
-                )}
+                alt={t("page-index-get-started-image-alt")}
                 width="full"
                 backgroundSize="cover"
                 background="no-repeat 50px"
@@ -434,10 +386,7 @@ const HomePage = ({
               as={GatsbyImage}
               width="full"
               image={getImage(data.ethereum)!}
-              alt={translateMessageId(
-                "page-index-what-is-ethereum-image-alt",
-                intl
-              )}
+              alt={t("page-index-what-is-ethereum-image-alt")}
             />
           </ImageContainer>
         </Row>
@@ -464,7 +413,7 @@ const HomePage = ({
               as={GatsbyImage}
               width="full"
               image={getImage(data.impact)!}
-              alt={translateMessageId("page-index-defi-image-alt", intl)}
+              alt={t("page-index-defi-image-alt")}
             />
           </ImageContainer>
         </Row>
@@ -491,7 +440,7 @@ const HomePage = ({
               as={GatsbyImage}
               width="full"
               image={getImage(data.infrastructure)!}
-              alt={translateMessageId("page-index-nft-alt", intl)}
+              alt={t("page-index-nft-alt")}
             />
           </ImageContainer>
         </Row>
@@ -525,7 +474,7 @@ const HomePage = ({
                 as={GatsbyImage}
                 width="full"
                 image={getImage(data.future)!}
-                alt={translateMessageId("page-index-internet-image-alt", intl)}
+                alt={t("page-index-internet-image-alt")}
               />
             </ImageContainer>
           </Row>
@@ -635,10 +584,7 @@ const HomePage = ({
           descriptionKey={"page-index-contribution-banner-description"}
           image={getImage(data.finance)!}
           maxImageWidth={600}
-          alt={translateMessageId(
-            "page-index-contribution-banner-image-alt",
-            intl
-          )}
+          alt={t("page-index-contribution-banner-image-alt")}
           mt={32}
           mb={16}
           mx={0}
@@ -674,7 +620,21 @@ const HomePage = ({
 export default HomePage
 
 export const query = graphql`
-  query IndexPage {
+  query IndexPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-index", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     hero: file(relativePath: { eq: "home/hero.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)

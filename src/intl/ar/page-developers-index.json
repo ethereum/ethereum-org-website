@@ -8,7 +8,6 @@
   "page-developers-advanced": "إعدادات متقدمة",
   "page-developers-api-desc": "استخدام مكتبات (العقود المجانية) للتفاعل مع العقود الذكية",
   "page-developers-api-link": "واجهات برمجة التطبيقات لأكواد التطبيق",
-  "page-developers-aria-label": "قائمة المبرمجين",
   "page-developers-block-desc": "دفعات المعاملات المضافة إلى سلسلة الكتل",
   "page-developers-block-explorers-desc": "بوابة بيانات إيثيريوم الخاصة بك",
   "page-developers-block-explorers-link": "مستكشفات الكتل",
@@ -84,5 +83,6 @@
   "page-developers-transactions-desc": "الطريقة التي تتغير بها حالة إثيريوم",
   "page-developers-transactions-link": "المعاملات",
   "page-developers-web3-desc": "كيف يختلف عالم التطوير على شبكة الإنترنت الامركزية web3",
-  "page-developers-web3-link": "شبكة Web2 مقابل شبكة Web3"
+  "page-developers-web3-link": "شبكة Web2 مقابل شبكة Web3",
+  "alt-eth-blocks": "صورة توضيحية لكتل منظمة على شكل شعار الإثير"
 }
