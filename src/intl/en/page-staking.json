@@ -35,7 +35,7 @@
   "page-staking-benefits-2-title": "Better security",
   "page-staking-benefits-2-description": "The network gets stronger against attacks as more ETH is staked, as it then requires more ETH to control a majority of the network. To become a threat, you would need to hold the majority of validators, which means you'd need to control the majority of ETH in the system–that's a lot!",
   "page-staking-benefits-3-title": "More sustainable",
-  "page-staking-benefits-3-description": "Stakers don't need to do energy-intensive proof-of-work computations to participate in securing the network meaning staking nodes can run on relatively modest hardware using very little energy .",
+  "page-staking-benefits-3-description": "Stakers don't need to do energy-intensive proof-of-work computations to participate in securing the network meaning staking nodes can run on relatively modest hardware using very little energy.",
   "page-staking-benefits-3-link": "More on Ethereum's energy consumption",
   "page-staking-description": "Staking is the act of depositing 32 ETH to activate validator software. As a validator you’ll be responsible for storing data, processing transactions, and adding new blocks to the blockchain. This will keep Ethereum secure for everyone and earn you new ETH in the process.",
   "page-staking-hero-title": "How to stake your ETH",
