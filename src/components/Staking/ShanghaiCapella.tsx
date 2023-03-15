@@ -64,11 +64,7 @@ const ShanghaiCapella: FC<IProps> = (props) => {
               <Translation id="comp-capella-p-2" />
             </Text>
             <Text>
-              <Link href="https://blog.ethereum.org/category/protocol/#subscribe">
-                Subscribe to the EF Blog
-              </Link>{" "}
-              to receive email notifications for the latest protocol
-              announcements.
+              <Translation id="subscribe-to-ef-blog" />
             </Text>
             <ButtonLink
               to="https://launchpad.ethereum.org/withdrawals"
