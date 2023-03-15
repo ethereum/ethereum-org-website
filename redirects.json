@@ -205,7 +205,7 @@
   },
   {
     "fromPath": "/upgrades/shard-chains/",
-    "toPath": "/en/upgrades/sharding/"
+    "toPath": "/en/roadmap/danksharding/"
   },
   {
     "fromPath": "/*/eth2/staking/",
