@@ -100,5 +100,13 @@
   "page-calltocontribute-link": "plantilla de documentación",
   "page-calltocontribute-link-2": "Servidor Discord",
   "page-calltocontribute-span": "Editar página",
-  "page-calltocontribute-title": "Ayúdanos con esta página"
+  "page-calltocontribute-title": "Ayúdanos con esta página",
+  "layer-2-arbitrum-note": "Pruebas de fraude solo para los usuarios de la lista blanca, la lista blanca aún no está abierta.",
+  "layer-2-boba-note": "Validación de estado en desarrollo",
+  "layer-2-metis-note": "Pruebas de fraude en desarrollo",
+  "layer-2-optimism-note": "Pruebas de fallos en desarrollo",
+  "back-to-top": "Volver arriba",
+  "banner-page-incomplete": "Esta página está incompleta y nos encantaría que nos ayudara a acabarla: edítela añadiendo cualquier cosa que crea que pueda sernos de utilidad.",
+  "next": "Siguiente",
+  "previous": "Anterior"
 }

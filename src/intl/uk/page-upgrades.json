@@ -4,10 +4,18 @@
   "page-upgrades-beacon-date": "Уже запущено!",
   "page-upgrades-merge-date": "Вересень 2022 р.",
   "page-upgrades-shards-date": "Приблизно 2023 р.",
-  "page-upgrades-merge-banner-intro": "The Merge буде здійснено незабаром. Об’єднання принесе зміни до Ethereum.",
-  "page-upgrades-merge-banner-content-outdated": "Деякий вміст на цій сторінці, пов’язаний із цими змінами, застарілий. Оновлення очікуються незабаром.",
-  "page-upgrades-merge-banner-developers-landing": "Деякі документи мають банер, на якому зазначено, що вони застарілі. Оновлення очікуються незабаром.",
   "page-upgrades-post-merge-banner-tutorial-ood": "Ці інструкції стали застарілими після об’єднання й можуть не працювати. Подайте запит (PR), якщо хочете допомогти нам.",
-  "page-upgrades-post-merge-banner-tutorial-light-node-ood": "Ці інструкції стали застарілими після об’єднання. Легкі вузли наразі не працюють у моделях із доказом частки, але незабаром будуть запущені.",
-  "page-upgrades-post-merge-banner-governance-ood": "Деякий вміст на цій сторінці став застарілим після об’єднання. Подайте запит (PR), якщо хочете допомогти нам."
+  "page-upgrades-post-merge-banner-governance-ood": "Деякий вміст на цій сторінці став застарілим після об’єднання. Подайте запит (PR), якщо хочете допомогти нам.",
+  "page-upgrades-upgrades-guide": "Посібник з оновлень Ethereum",
+  "page-upgrades-upgrades-docking": "The Merge",
+  "page-upgrades-shard-title": "Сегментування",
+  "page-upgrades-upgrades-beacon-chain": "Beacon Chain",
+  "consensus-beaconcha-in-desc": "Дослідник Beacon Chain із відкритим джерелом коду",
+  "consensus-beaconscan-desc": "Дослідник Beacon Chain: Etherscan для шару консенсусу",
+  "consensus-become-staker": "Станьте стейкером",
+  "consensus-become-staker-desc": "Стейкінг уже тут! Якщо ви хочете вкласти ETH і допомогти захистити мережу, ознайомтеся з можливими ризиками.",
+  "consensus-explore": "Дізнайтеся більше",
+  "consensus-run-beacon-chain": "Запуск клієнтів консенсусу",
+  "consensus-run-beacon-chain-desc": "Ethereum потребує якнайбільше запущених клієнтів. Допоможіть спільноті Ethereum із цим!",
+  "read-more": "Читати далі"
 }

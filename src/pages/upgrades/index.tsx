@@ -1,7 +1,7 @@
 import React, { ComponentPropsWithRef, ReactNode } from "react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
   BoxProps,
@@ -36,7 +36,6 @@ import PageHero, {
 } from "../../components/PageHero"
 import FeedbackCard from "../../components/FeedbackCard"
 
-import { TranslationKey, translateMessageId } from "../../utils/translations"
 import { getImage } from "../../utils/image"
 import Button from "../../components/Button"
 
@@ -157,8 +156,8 @@ const ContributeCard = (props: ChildOnlyProp) => (
 interface IStyledCalloutProps {
   image: IGatsbyImageData
   alt: string
-  titleKey: TranslationKey
-  descriptionKey: TranslationKey
+  titleKey: string
+  descriptionKey: string
   children: ReactNode
 }
 
@@ -260,21 +259,21 @@ const paths = [
 ]
 
 const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   const heroContent: IPageHeroContent = {
-    title: translateMessageId("page-upgrades-upgrades", intl),
-    header: translateMessageId("page-upgrades-upgrading", intl),
-    subtitle: translateMessageId("page-upgrades-upgrade-desc", intl),
+    title: t("page-upgrades-upgrades"),
+    header: t("page-upgrades-upgrading"),
+    subtitle: t("page-upgrades-upgrade-desc"),
     image: getImage(data.merge)!,
-    alt: translateMessageId("page-dapps-doge-img-alt", intl),
+    alt: t("page-dapps-doge-img-alt"),
     buttons: [
       {
-        content: translateMessageId("page-upgrades-explore-btn", intl),
+        content: t("page-upgrades-explore-btn"),
         to: "/upgrades/beacon-chain/",
       },
       {
-        content: translateMessageId("page-upgrades-whats-ethereum", intl),
+        content: t("page-upgrades-whats-ethereum"),
         to: "/what-is-ethereum/",
         variant: "outline",
       },
@@ -308,8 +307,8 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
   return (
     <Flex direction="column" align="center" w="full">
       <PageMetadata
-        title={translateMessageId("page-upgrades-meta-title", intl)}
-        description={translateMessageId("page-upgrades-meta-desc", intl)}
+        title={t("page-upgrades-meta-title")}
+        description={t("page-upgrades-meta-desc")}
       />
       <PageHero content={heroContent} />
       <PageDivider />
@@ -356,7 +355,7 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
       </Content>
       <StyledCallout
         image={getImage(data.oldship)!}
-        alt={translateMessageId("page-eth-whats-eth-hero-alt", intl)}
+        alt={t("page-eth-whats-eth-hero-alt")}
         titleKey={"page-upgrades-dive"}
         descriptionKey={"page-upgrades-dive-desc"}
       >
@@ -500,14 +499,8 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
           <StakingRightColumn>
             <StakingCard
               emoji=":money_with_wings:"
-              title={translateMessageId(
-                "page-upgrades-index-staking-learn",
-                intl
-              )}
-              description={translateMessageId(
-                "page-upgrades-index-staking-learn-desc",
-                intl
-              )}
+              title={t("page-upgrades-index-staking-learn")}
+              description={t("page-upgrades-index-staking-learn-desc")}
             >
               <ButtonLink to="/staking/">
                 <Translation id="page-staking-deposit-contract-staking-more-link" />
@@ -525,11 +518,8 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
         <Faq>
           <LeftColumn>
             <ExpandableCard
-              contentPreview={translateMessageId(
-                "page-upgrades-question-1-desc",
-                intl
-              )}
-              title={translateMessageId("page-upgrades-question-1-title", intl)}
+              contentPreview={t("page-upgrades-question-1-desc")}
+              title={t("page-upgrades-question-1-title")}
             >
               <Link to="/upgrades/beacon-chain/">
                 <Translation id="page-upgrades-beacon-chain-title" />
@@ -551,11 +541,8 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
               </Text>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={translateMessageId(
-                "page-upgrades-question-2-desc",
-                intl
-              )}
-              title={translateMessageId("page-upgrades-question-2-title", intl)}
+              contentPreview={t("page-upgrades-question-2-desc")}
+              title={t("page-upgrades-question-2-title")}
             >
               <Text>
                 <Translation id="page-upgrades-answer-1" />{" "}
@@ -574,11 +561,8 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
               </Text>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={translateMessageId(
-                "page-upgrades-question-3-desc",
-                intl
-              )}
-              title={translateMessageId("page-upgrades-question-3-title", intl)}
+              contentPreview={t("page-upgrades-question-3-desc")}
+              title={t("page-upgrades-question-3-title")}
             >
               <Text>
                 <Translation id="page-upgrades-question3-answer-1" />{" "}
@@ -618,11 +602,8 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
               </List>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={translateMessageId(
-                "page-upgrades-question-4-desc",
-                intl
-              )}
-              title={translateMessageId("page-upgrades-question-4-title", intl)}
+              contentPreview={t("page-upgrades-question-4-desc")}
+              title={t("page-upgrades-question-4-title")}
             >
               <Text>
                 <Translation id="page-upgrades-question-4-answer-1" />{" "}
@@ -644,11 +625,8 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
               </Text>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={translateMessageId(
-                "page-upgrades-question-5-desc",
-                intl
-              )}
-              title={translateMessageId("page-upgrades-question-5-title", intl)}
+              contentPreview={t("page-upgrades-question-5-desc")}
+              title={t("page-upgrades-question-5-title")}
             >
               <Text>
                 <Translation id="page-upgrades-question-5-answer-1" />
@@ -660,14 +638,8 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
               </Text>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={translateMessageId(
-                "page-upgrades-question-11-desc",
-                intl
-              )}
-              title={translateMessageId(
-                "page-upgrades-question-11-title",
-                intl
-              )}
+              contentPreview={t("page-upgrades-question-11-desc")}
+              title={t("page-upgrades-question-11-title")}
             >
               <Text>
                 <Translation id="page-upgrades-question-11-answer-1" />
@@ -679,11 +651,8 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
           </LeftColumn>
           <RightColumn>
             <ExpandableCard
-              contentPreview={translateMessageId(
-                "page-upgrades-question-6-desc",
-                intl
-              )}
-              title={translateMessageId("page-upgrades-question-6-title", intl)}
+              contentPreview={t("page-upgrades-question-6-desc")}
+              title={t("page-upgrades-question-6-title")}
             >
               <Text>
                 <Translation id="page-upgrades-question-6-answer-1" />
@@ -723,11 +692,8 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
               </Text>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={translateMessageId(
-                "page-upgrades-question-7-desc",
-                intl
-              )}
-              title={translateMessageId("page-upgrades-question-7-title", intl)}
+              contentPreview={t("page-upgrades-question-7-desc")}
+              title={t("page-upgrades-question-7-title")}
             >
               <Text>
                 <Translation id="page-upgrades-question-7-teams" />
@@ -772,11 +738,8 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
               </Text>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={translateMessageId(
-                "page-upgrades-question-8-desc",
-                intl
-              )}
-              title={translateMessageId("page-upgrades-question-8-title", intl)}
+              contentPreview={t("page-upgrades-question-8-desc")}
+              title={t("page-upgrades-question-8-title")}
             >
               <Text>
                 <Translation id="page-upgrades-question-8-answer-1" />
@@ -800,11 +763,8 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
               </Text>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={translateMessageId(
-                "page-upgrades-question-9-desc",
-                intl
-              )}
-              title={translateMessageId("page-upgrades-question-9-title", intl)}
+              contentPreview={t("page-upgrades-question-9-desc")}
+              title={t("page-upgrades-question-9-title")}
             >
               <Text>
                 <Translation id="page-upgrades-question-9-answer-1" />{" "}
@@ -837,14 +797,8 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
               </Text>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={translateMessageId(
-                "page-upgrades-question-10-desc",
-                intl
-              )}
-              title={translateMessageId(
-                "page-upgrades-question-10-title",
-                intl
-              )}
+              contentPreview={t("page-upgrades-question-10-desc")}
+              title={t("page-upgrades-question-10-title")}
             >
               <Text>
                 <Translation id="page-upgrades-question-10-answer-0" />
@@ -910,7 +864,21 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
 export default Eth2IndexPage
 
 export const query = graphql`
-  query UpgradesPage {
+  query UpgradesPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-upgrades-index", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     oldship: file(relativePath: { eq: "upgrades/oldship.png" }) {
       childImageSharp {
         gatsbyImageData(

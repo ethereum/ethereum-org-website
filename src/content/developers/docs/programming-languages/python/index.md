@@ -23,6 +23,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 ## Beginner articles {#beginner-articles}
 
 - [A (Python) Developer's Guide to Ethereum](https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/)
+- [The state of Python in blockchain 2023 report](https://tradingstrategy.ai/blog/the-state-of-python-in-blockchain-in-2023)
 - [An Introduction to Smart Contracts with Vyper](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [Deploy your own ERC20 Token with Python and Brownie](https://betterprogramming.pub/python-blockchain-token-deployment-tutorial-create-an-erc20-77a5fd2e1a58)
 - [How to develop Ethereum contract using Python Flask?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)

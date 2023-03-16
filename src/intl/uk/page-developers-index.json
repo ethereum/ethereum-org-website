@@ -8,7 +8,6 @@
   "page-developers-advanced": "Для досвідчених розробників",
   "page-developers-api-desc": "Як взаємодіяти зі смарт-контрактами за допомогою бібліотек",
   "page-developers-api-link": "API серверної частини",
-  "page-developers-aria-label": "Меню розробника",
   "page-developers-block-desc": "Пакети транзакцій, додані до блокчейну",
   "page-developers-block-explorers-desc": "Ваш доступ до даних Ethereum",
   "page-developers-block-explorers-link": "Переглядач блоків",
@@ -92,5 +91,7 @@
   "page-developers-networking-layer-desc": "Знайомство з мережевим рівнем Ethereum",
   "page-developers-data-structures-and-encoding": "Структури даних і кодування",
   "page-developers-data-structures-and-encoding-link": "Структури даних і кодування",
-  "page-developers-data-structures-and-encoding-desc": "Знайомство зі структурами даних і схемою кодування, що використовуються в стеку Ethereum"
+  "page-developers-data-structures-and-encoding-desc": "Знайомство зі структурами даних і схемою кодування, що використовуються в стеку Ethereum",
+  "alt-eth-blocks": "Ілюстрація блоків, організованих як символ ETH",
+  "page-assets-doge": "DOGE у децентралізованих програмах"
 }

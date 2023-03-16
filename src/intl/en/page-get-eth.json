@@ -62,5 +62,6 @@
   "page-get-eth-your-address": "Your ETH address",
   "page-get-eth-your-address-desc": "When you download a wallet it will create a public ETH address for you. Here's what one looks like:",
   "page-get-eth-your-address-desc-3": "Think of this like your email address, but instead of mail it can receive ETH. If you want to transfer ETH from an exchange to your wallet, use your address as the destination. Be sure to always double check before you send!",
-  "page-get-eth-your-address-wallet-link": "Check out wallets"
+  "page-get-eth-your-address-wallet-link": "Check out wallets",
+  "listing-policy-raise-issue-link": "Raise issue"
 }
