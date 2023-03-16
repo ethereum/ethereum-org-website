@@ -8,7 +8,6 @@
   "page-developers-advanced": "Emelitere",
   "page-developers-api-desc": "Eji oba akwukwo ekwuritara mmemme na aru oru na blockchain",
   "page-developers-api-link": "Ebe nchekwa data APIs",
-  "page-developers-aria-label": "Ndepụta nhọrọ mmemme ndi Mmeputa",
   "page-developers-block-desc": "Mkpọkọta azụmahịa etinyèrè na blockchain",
   "page-developers-block-explorers-desc": "Uzo isi aga na data Ethereum",
   "page-developers-block-explorers-link": "Gbochie ndị na-eme nchọpụta",
@@ -80,5 +79,6 @@
   "page-developers-transactions-desc": "Etu ọnọdụ Ethereum si agbanwe",
   "page-developers-transactions-link": "Azụmahịa",
   "page-developers-web3-desc": "Etu mmepe uwa web3 siri di iche",
-  "page-developers-web3-link": "Web2 vs Web3"
+  "page-developers-web3-link": "Web2 vs Web3",
+  "alt-eth-blocks": "Ihe ngosi ebe a na-ahazi blọk dịka akara ETH"
 }

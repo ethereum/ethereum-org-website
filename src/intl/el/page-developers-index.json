@@ -8,7 +8,6 @@
   "page-developers-advanced": "Για προχωρημένους",
   "page-developers-api-desc": "Χρήση βιβλιοθηκών για αλληλεπίδραση με smart contracts",
   "page-developers-api-link": "Backend APIs",
-  "page-developers-aria-label": "Μενού προγραμματιστών",
   "page-developers-block-desc": "Μαζικές συναλλαγές προστέθηκαν στο blockchain",
   "page-developers-block-explorers-desc": "Η πύλη σας στα δεδομένα Ethereum",
   "page-developers-block-explorers-link": "Εξερευνητές μπλοκ",
@@ -80,5 +79,7 @@
   "page-developers-transactions-desc": "Ο τρόπος με τον οποίο αλλάζει η κατάσταση του Ethereum",
   "page-developers-transactions-link": "Συναλλαγές",
   "page-developers-web3-desc": "Πώς ο κόσμος ανάπτυξης του web3 είναι διαφορετικός",
-  "page-developers-web3-link": "Web2 vs Web3"
+  "page-developers-web3-link": "Web2 vs Web3",
+  "alt-eth-blocks": "Απεικόνιση των μπλοκ που οργανώνονται σαν ένα σύμβολο ETH",
+  "page-assets-doge": "Ο Doge χρησιμοποιεί dapps"
 }

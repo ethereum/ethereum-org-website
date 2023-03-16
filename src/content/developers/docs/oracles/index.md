@@ -404,6 +404,8 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 
 **[Dos.Network](https://dos.network/)** - _DOS Network is a decentralized oracle service network to boost blockchain usability with real-world data and computation power._
 
+**[Pyth Network](https://pyth.network/)** - _The Pyth network is a first-party financial oracle network designed to publish continuous real-world data on-chain in a tamper-resistant, decentralized, and self-sustainable environment._
+
 ## Further reading {#further-reading}
 
 **Articles**

@@ -62,5 +62,6 @@
   "page-get-eth-your-address": "Ether-osoitteesi",
   "page-get-eth-your-address-desc": "Kun lataat valitsemasi lompakon, sille luodaan Ether-osoite. Alla malli osoitteesta:",
   "page-get-eth-your-address-desc-3": "Osoite toimii kuten sähköpostiosoite, mutta sähköpostin sijaan se voi vastaanottaa Ethereitä. Jos haluat tehdä vaihdantaa Ethereillä, käytä osoitetta vastaanottotietona. Tarkista osoite huolellisesti ennen kuin lähetät sen!",
-  "page-get-eth-your-address-wallet-link": "Tutustu lompakkoihin"
+  "page-get-eth-your-address-wallet-link": "Tutustu lompakkoihin",
+  "listing-policy-raise-issue-link": "Ilmoita ongelmasta"
 }

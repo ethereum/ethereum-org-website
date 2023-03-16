@@ -10136,6 +10136,42 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "erin-at-work",
+      "name": "erin-at-work",
+      "avatar_url": "https://avatars.githubusercontent.com/u/50590950?v=4",
+      "profile": "http://www.erinleelikes.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "AmazingAng",
+      "name": "0xAA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14728591?v=4",
+      "profile": "https://github.com/AmazingAng",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "changwu-tw",
+      "name": "changwu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1557364?v=4",
+      "profile": "https://changwu.me/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "uniyj",
+      "name": "yj",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84749041?v=4",
+      "profile": "http://uniyj.eth",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

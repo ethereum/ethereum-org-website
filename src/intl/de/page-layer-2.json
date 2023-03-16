@@ -1,7 +1,6 @@
 {
   "layer-2-arbitrum-note": "Betrugsbeweise nur für Benutzer auf der Whitelist, Whitelist noch nicht geöffnet",
   "layer-2-boba-note": "Zustandsprüfung in Entwicklung",
-  "layer-2-metis-note": "Betrugsbeweise in Entwicklung",
   "layer-2-optimism-note": "Fehlernachweise in Entwicklung",
   "layer-2-hero-title": "Ebene 2",
   "layer-2-hero-header": "Ethereum für jedermann",
@@ -131,5 +130,6 @@
   "layer-2-note": "Hinweis:",
   "layer-2-ecosystem-portal": "Portal für das Ökosystem",
   "layer-2-token-lists": "Token-Listen",
-  "layer-2-explore": "Entdecken"
+  "layer-2-explore": "Entdecken",
+  "page-dapps-ready-button": "Los"
 }

@@ -100,5 +100,9 @@
   "page-calltocontribute-link": "шаблон документации",
   "page-calltocontribute-link-2": "Сервер Discord",
   "page-calltocontribute-span": "Редактировать страницу",
-  "page-calltocontribute-title": "Помогите нам с этой страницей"
+  "page-calltocontribute-title": "Помогите нам с этой страницей",
+  "back-to-top": "Вернуться вверх",
+  "banner-page-incomplete": "Эта страница является неполной и мы будем рады вашей помощи. Редактируйте эту страницу и добавляйте то, что как вы думаете, может быть полезно для других.",
+  "next": "Следующий",
+  "previous": "Предыдущие"
 }

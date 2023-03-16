@@ -64,5 +64,6 @@
   "page-upgrades-vision-upgrade-needs-desc-3": "O Ethereum dispõe de um conjunto de melhorias que abordam esses problemas e muitos mais. Este conjunto de melhorias foi originalmente chamado de 'Serenity' e \"Eth2\", e tem sido uma área ativa de pesquisa e desenvolvimento desde 2014.",
   "page-upgrades-vision-upgrade-needs-desc-5": "Agora que a tecnologia está pronta, essas melmhorias irão rearquitetar o Ethereum para torná-lo mais dimensionável, seguro e sustentável, com o propósito de melhorar a vida dos usuários existentes e de atrair novos. Tudo isso preservando o valor central da descentralização do Ethereum.",
   "page-upgrades-vision-upgrade-needs-desc-6": "Isto significa que não há nenhuma solução pronta para o dimensionamento. As melhorias irão chegando incrementalmente ao longo do tempo.",
-  "page-upgrades-vision-upgrade-needs-serenity": "Veja uma publicação de blog de 2015 que fala sobre o 'Serenity'"
+  "page-upgrades-vision-upgrade-needs-serenity": "Veja uma publicação de blog de 2015 que fala sobre o 'Serenity'",
+  "ethereum": "Ethereum"
 }

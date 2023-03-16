@@ -99,5 +99,6 @@
   "page-upgrades-bug-bounty-card-text": "O invasor pode, às vezes, colocar um nó em um estado que faz com que ele exclua uma em cada cem comprovações feitas por um validador",
   "page-upgrades-bug-bounty-card-text-1": "O invasor pode conduzir ataques de eclipse em nós com pares de ids com 4 bytes com zeros à esquerda",
   "page-upgrades-bug-bounty-card-text-2": "O invasor pode particionar com êxito grandes partes da rede. Para um invasor, ativar a vulnerabilidade é algo banal",
-  "page-upgrades-bug-bounty-card-text-3": "O invasor pode conduzir a execução de código remoto com êxito em um cliente maioritário. Para um invasor, ativar a vulnerabilidade é algo banal"
+  "page-upgrades-bug-bounty-card-text-3": "O invasor pode conduzir a execução de código remoto com êxito em um cliente maioritário. Para um invasor, ativar a vulnerabilidade é algo banal",
+  "page-upgrades-question-title": "Perguntas frequentes"
 }
