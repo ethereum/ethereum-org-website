@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react"
 // Components
 import Card from "../Card"
+import Link from "../Link"
 import Translation from "../Translation"
 import ButtonLink from "../ButtonLink"
 
@@ -61,6 +62,9 @@ const ShanghaiCapella: FC<IProps> = (props) => {
             </Text>
             <Text>
               <Translation id="comp-capella-p-2" />
+            </Text>
+            <Text>
+              <Translation id="subscribe-to-ef-blog" />
             </Text>
             <ButtonLink
               to="https://launchpad.ethereum.org/withdrawals"
