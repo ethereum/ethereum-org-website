@@ -8,7 +8,6 @@
   "page-developers-advanced": "Fortgeschritten",
   "page-developers-api-desc": "Verwendung von Bibliotheken zur Interaktion mit Smart Contracts",
   "page-developers-api-link": "Backend-APIs",
-  "page-developers-aria-label": "Entwicklermenü",
   "page-developers-block-desc": "Stapel von Transaktionen, die der Blockchain hinzugefügt werden",
   "page-developers-block-explorers-desc": "Ihr Portal zu Ethereum-Daten",
   "page-developers-block-explorers-link": "Block-Explorer",
@@ -92,5 +91,7 @@
   "page-developers-networking-layer-desc": "Einführung in die Netzwerkebene von Ethereum",
   "page-developers-data-structures-and-encoding": "Datenstrukturen und Kodierung",
   "page-developers-data-structures-and-encoding-link": "Datenstrukturen und Kodierung",
-  "page-developers-data-structures-and-encoding-desc": "Einführung in die Datenstrukturen und das Kodierungsschema des Ethereum-Stacks"
+  "page-developers-data-structures-and-encoding-desc": "Einführung in die Datenstrukturen und das Kodierungsschema des Ethereum-Stacks",
+  "alt-eth-blocks": "Illustration von Blöcken, die wie ein ETH-Symbol angeordnet sind",
+  "page-assets-doge": "Doge nutzt dApps"
 }

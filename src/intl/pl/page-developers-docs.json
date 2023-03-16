@@ -60,5 +60,9 @@
   "page-calltocontribute-link": "szablonu dokumentacji",
   "page-calltocontribute-link-2": "serwerze Discord",
   "page-calltocontribute-span": "Edytuj stronę",
-  "page-calltocontribute-title": "Pomóż nam zaktualizować tę stronę"
+  "page-calltocontribute-title": "Pomóż nam zaktualizować tę stronę",
+  "back-to-top": "Powrót na początek strony",
+  "banner-page-incomplete": "Ta strona jest niekompletna. Chętnie przyjmiemy Twoją pomoc. Edytuj tę stronę i dodaj rzeczy, które według Ciebie pomogą innym.",
+  "next": "Dalej",
+  "previous": "Wstecz"
 }

@@ -8,7 +8,6 @@
   "page-developers-advanced": "進階",
   "page-developers-api-desc": "使用程式庫與智慧型合約互動",
   "page-developers-api-link": "後端 API",
-  "page-developers-aria-label": "開發者選單",
   "page-developers-block-desc": "新增至區塊鏈的異動批次",
   "page-developers-block-explorers-desc": "取得 Ethereum 資料的入口",
   "page-developers-block-explorers-link": "區塊瀏覽器",
@@ -92,5 +91,6 @@
   "page-developers-networking-layer-desc": "以太坊網路層的簡介",
   "page-developers-data-structures-and-encoding": "資料結構和編碼",
   "page-developers-data-structures-and-encoding-link": "資料結構和編碼",
-  "page-developers-data-structures-and-encoding-desc": "以太坊技術堆棧中使用的資料結構和編碼方案的簡介"
+  "page-developers-data-structures-and-encoding-desc": "以太坊技術堆棧中使用的資料結構和編碼方案的簡介",
+  "alt-eth-blocks": "插圖：由積木組成的以太幣符號"
 }

@@ -21,5 +21,7 @@
   "page-about-p-5": "Tasks that we're implementing.",
   "page-about-p-6": "Tasks we've queued up to implement next.",
   "page-about-p-7": "Recently completed tasks.",
-  "page-about-p-8": "Do you have an idea for how to improve ethereum.org? We'd love to collaborate with you!"
+  "page-about-p-8": "Do you have an idea for how to improve ethereum.org? We'd love to collaborate with you!",
+  "page-what-is-ethereum-energy-consumption-chart-legend": "Annual Energy Consumption in TWh/yr",
+  "page-upgrades-post-merge-banner-governance-ood": "Some content on this page is out-of-date after the merge. Please raise a PR if you would like to contribute."
 }

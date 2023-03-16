@@ -8,7 +8,6 @@
   "page-developers-advanced": "고급",
   "page-developers-api-desc": "라이브러리를 사용하여 스마트 계약으로 상호 작용",
   "page-developers-api-link": "백엔드 API",
-  "page-developers-aria-label": "개발자 메뉴",
   "page-developers-block-desc": "블록체인에 추가된 거래의 배치",
   "page-developers-block-explorers-desc": "이더리움 데이터 포털",
   "page-developers-block-explorers-link": "블록 탐색기",
@@ -92,5 +91,6 @@
   "page-developers-networking-layer-desc": "이더리움 네트워킹 계층 소개",
   "page-developers-data-structures-and-encoding": "데이터 구조 및 인코딩",
   "page-developers-data-structures-and-encoding-link": "데이터 구조 및 인코딩",
-  "page-developers-data-structures-and-encoding-desc": "이더리움 스택에서 사용되는 데이터 구조 및 인코딩 스키마 소개"
+  "page-developers-data-structures-and-encoding-desc": "이더리움 스택에서 사용되는 데이터 구조 및 인코딩 스키마 소개",
+  "alt-eth-blocks": "ETH 기호처럼 구성되고 있는 블록의 그림"
 }

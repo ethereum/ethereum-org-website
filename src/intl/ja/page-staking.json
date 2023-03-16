@@ -7,15 +7,10 @@
   "page-staking-benefits-3-title": "持続可能性",
   "page-staking-benefits-3-description": "ステーカーが、プルーフ・オブ・ステークのシステムに参加するのに、大量にエネルギーを消費するコンピュータを必要とはしません。ノートパソコンやスマートフォンだけです。これにより、イーサリアムはより環境に優しいものになります。",
   "page-staking-benefits-3-link": "イーサリアムのエネルギー消費の詳細",
-  "page-staking-check-address": "デポジットアドレスの確認",
-  "page-staking-deposit-address": "デポジットアドレスの確認",
-  "page-staking-deposit-address-desc": "すでにランチパッドのセットアップ手順を完了している場合は、ステーキングデポジットコントラクトにトランザクションを送信する必要があるのをご存知だと思います。万全の注意を払って、宛先のアドレスを確認することを推奨します。ethereum.orgと他の信頼できるサイトで、公式のアドレスを必ずご確認ください。",
   "page-staking-description": "ステーキングとは、バリデータソフトウェアを有効化するために32 ETHをデポジットすることです。バリデータとして、データの保存、トランザクションの処理、ブロックチェーンへ新規ブロック追加の責任を負います。これにより、イーサリアムの安全性が保たれ、同時にステーカーはETHの報酬を獲得することができます。",
   "page-staking-hero-title": "ETHのステーキング方法",
   "page-staking-hero-header": "イーサリアムを保護しつつ、報酬を獲得",
   "page-staking-hero-subtitle": "ステーキングは、イーサリアムエコシステムの公共善です。ネットワークのセキュリティ確保に貢献しつつ、報酬を得ることができます。",
-  "page-staking-dropdown-text": "ステーキングオプション",
-  "page-staking-dropdown-aria": "ステーキングオプションのドロップダウンメニュー",
   "page-staking-dropdown-home": "ステーキングホーム",
   "page-staking-dropdown-solo": "ソロステーキング",
   "page-staking-more-on-solo": "ソロステーキングの詳細",
@@ -28,7 +23,6 @@
   "page-staking-more-on-pools": "ステーキングプールの詳細",
   "page-staking-learn-more-pools": "ステーキングプールについてもっと知る",
   "page-staking-section-what-title": "ステーキングとは",
-  "page-staking-section-what-p": "ステーキングとは、ETHを預け入れ、ネットワーク上のブロックの提案に参加する権利を得ることです。少額のETHでもステーキングを始めることができます。",
   "page-staking-section-what-link": "ETHの獲得方法を学ぶ",
   "page-staking-section-why-title": "ETHをステーキングする理由",
   "page-staking-section-why-p1": "まずは、どのくらいの額をステーキングするかにより異なります。フルバリデータになるには 32 ETH必要ですが、それよりも少額をステーキングすることもできます。",
@@ -192,5 +186,6 @@
   "page-staking-join-community": "ステーカーのコミュニティに参加",
   "page-staking-join-community-desc": "EthStakerは、イーサリアムでのステーキングについて議論し、学ぶためのコミュニティです。 世界中の何万人ものメンバーにアドバイスやサポートを得たり、ステーキングに関することについて話し合う場です。",
   "page-staking-meta-description": "イーサリアムステーキングの概要: リスク、報酬、要件、ステーキングできる場所。",
-  "page-staking-meta-title": "イーサリアムステーキング"
+  "page-staking-meta-title": "イーサリアムステーキング",
+  "page-upgrades-merge-btn": "マージの詳細"
 }

@@ -2,6 +2,8 @@ import React from "react"
 import { Theme } from "@chakra-ui/react"
 import { Global, css } from "@emotion/react"
 
+import "@docsearch/css"
+
 type Styles = typeof Global.prototype.props.styles
 const styles: Styles = (theme: Theme) => {
   const { space, radii, borders, fontSizes, fontWeights } = theme

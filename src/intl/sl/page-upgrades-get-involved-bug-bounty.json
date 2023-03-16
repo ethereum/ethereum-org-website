@@ -99,5 +99,6 @@
   "page-upgrades-bug-bounty-card-text": "Napadalec lahko vozlišče včasih preklopi v stanje, zaradi katerega spusti vsako stoto potrditev, ki jo opravi validator",
   "page-upgrades-bug-bounty-card-text-1": "Napadalec lahko uspešno izvede napade z mrkom vozlišča z uporabo ID-jev v omrežju enakopravnih računalnikov s 4 vodilnimi ničlami",
   "page-upgrades-bug-bounty-card-text-2": "Napadalec lahko uspešno razdeli velike dele omrežja in brez težav izkoristi ranljivost",
-  "page-upgrades-bug-bounty-card-text-3": "Napadalec lahko uspešno izvede kodo v večinskem odjemalcu na daljavo in brez težav izkoristi ranljivost"
+  "page-upgrades-bug-bounty-card-text-3": "Napadalec lahko uspešno izvede kodo v večinskem odjemalcu na daljavo in brez težav izkoristi ranljivost",
+  "page-upgrades-question-title": "Pogosta vprašanja"
 }

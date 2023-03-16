@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { useIntl } from "react-intl"
+import { useI18next } from "gatsby-plugin-react-i18next"
 import { css, Theme } from "@emotion/react"
 import styled from "@emotion/styled"
 import { useQuery, gql } from "@apollo/client"
@@ -259,7 +259,7 @@ const FileContributors: React.FC<IProps> = ({
   editPath,
 }) => {
   const [isModalOpen, setModalOpen] = useState(false)
-  const intl = useIntl()
+  const { language } = useI18next()
 
   const { loading, error, data } = useQuery(COMMIT_HISTORY, {
     variables: { relativePath },
@@ -332,7 +332,7 @@ const FileContributors: React.FC<IProps> = ({
               </Link>
             )}
             {!lastContributor.user && <span>{lastContributor.name}</span>},{" "}
-            {getLocaleTimestamp(intl.locale as Lang, lastCommit.committedDate)}
+            {getLocaleTimestamp(language as Lang, lastCommit.committedDate)}
           </Info>
         </LeftContent>
         <ButtonContainer>

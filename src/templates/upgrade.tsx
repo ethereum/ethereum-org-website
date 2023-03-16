@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "react-intl"
+import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
@@ -310,25 +310,12 @@ const TitleCard = styled.div`
   }
 `
 
-const dropdownLinks: ButtonDropdownList = {
-  text: "page-upgrades-upgrades-guide",
-  ariaLabel: "page-upgrades-upgrades-aria-label",
-  items: [
-    {
-      text: "page-upgrades-upgrades-beacon-chain",
-      to: "/upgrades/beacon-chain/",
-    },
-    {
-      text: "page-upgrades-upgrades-docking",
-      to: "/upgrades/merge/",
-    },
-  ],
-}
-
 const UpgradePage = ({
   data: { mdx },
+  pageContext: { slug },
 }: PageProps<Queries.UpgradePageQuery, Context>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
+  const { language } = useI18next()
 
   if (!mdx?.frontmatter || !mdx.parent)
     throw new Error(
@@ -349,7 +336,20 @@ const UpgradePage = ({
 
   const summaryPoints = getSummaryPoints(mdx.frontmatter)
 
-  const slug = mdx.fields?.slug || ""
+  const dropdownLinks: ButtonDropdownList = {
+    text: t("page-upgrades-upgrades-guide"),
+    ariaLabel: t("page-upgrades-upgrades-aria-label"),
+    items: [
+      {
+        text: t("page-upgrades-upgrades-beacon-chain"),
+        to: "/upgrades/beacon-chain/",
+      },
+      {
+        text: t("page-upgrades-upgrades-docking"),
+        to: "/upgrades/merge/",
+      },
+    ],
+  }
 
   return (
     <Container>
@@ -367,7 +367,7 @@ const UpgradePage = ({
           </SummaryBox>
           <LastUpdated>
             <Translation id="page-last-updated" />:{" "}
-            {getLocaleTimestamp(intl.locale as Lang, lastUpdatedDate)}
+            {getLocaleTimestamp(language as Lang, lastUpdatedDate)}
           </LastUpdated>
         </TitleCard>
         <Image image={getImage(mdx.frontmatter.image)!} alt="" />
@@ -407,7 +407,28 @@ const UpgradePage = ({
 }
 
 export const upgradePageQuery = graphql`
-  query UpgradePage($relativePath: String) {
+  query UpgradePage($languagesToFetch: [String!]!, $relativePath: String) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: {
+          in: [
+            "page-upgrades"
+            "page-upgrades-index"
+            "learn-quizzes"
+            "common"
+          ]
+        }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug

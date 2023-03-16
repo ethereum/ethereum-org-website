@@ -8,7 +8,6 @@
   "page-developers-advanced": "Avançado",
   "page-developers-api-desc": "Usar bibliotecas para interagir com smart contracts",
   "page-developers-api-link": "APIs de Backend",
-  "page-developers-aria-label": "Menu para Programadores",
   "page-developers-block-desc": "Lotes de transações adicionados à blockchain",
   "page-developers-block-explorers-desc": "O seu portal para dados Ethereum",
   "page-developers-block-explorers-link": "Exploradores de blocos",
@@ -80,5 +79,6 @@
   "page-developers-transactions-desc": "A forma como o estado do Ethereum muda",
   "page-developers-transactions-link": "Transações",
   "page-developers-web3-desc": "Em que difere o mundo da programação web3",
-  "page-developers-web3-link": "Web2 vs Web3"
+  "page-developers-web3-link": "Web2 vs Web3",
+  "alt-eth-blocks": "Ilustração de blocos a ser organizados como um símbolo ETH"
 }

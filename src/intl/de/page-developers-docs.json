@@ -100,5 +100,13 @@
   "page-calltocontribute-link": "Dokumentationsvorlage",
   "page-calltocontribute-link-2": "Discord-Server",
   "page-calltocontribute-span": "Seite bearbeiten",
-  "page-calltocontribute-title": "Hilf uns mit dieser Seite"
+  "page-calltocontribute-title": "Hilf uns mit dieser Seite",
+  "layer-2-arbitrum-note": "Betrugsbeweise nur für Benutzer auf der Whitelist, Whitelist noch nicht geöffnet",
+  "layer-2-boba-note": "Zustandsprüfung in Entwicklung",
+  "layer-2-metis-note": "Betrugsbeweise in Entwicklung",
+  "layer-2-optimism-note": "Fehlernachweise in Entwicklung",
+  "back-to-top": "Zum Seitenanfang",
+  "banner-page-incomplete": "Diese Seite ist unvollständig und wir würden uns über Ihre Unterstützung freuen. Vervollständigen Sie diese Seite und fügen Sie alles hinzu, das Ihrer Meinung nach für die Community nützlich sein könnte.",
+  "next": "Weiter",
+  "previous": "Vorherige"
 }

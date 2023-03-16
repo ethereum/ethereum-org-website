@@ -1,15 +1,15 @@
 // Import libraries
 import React, { FC } from "react"
-import { useIntl } from "react-intl"
+import { useTranslation, useI18next } from "gatsby-plugin-react-i18next"
 import { DocSearch } from "@docsearch/react"
 import { DocSearchHit } from "@docsearch/react/dist/esm/types"
-import { translateMessageId } from "../../utils/translations"
 // Styles
-import "@docsearch/css"
 import DocSearchStyles from "./Styles"
 
 const Search: FC = () => {
-  const intl = useIntl()
+  const { t } = useTranslation()
+  const { language } = useI18next()
+
   const appId = process.env.GATSBY_ALGOLIA_APP_ID || ""
   const apiKey = process.env.GATSBY_ALGOLIA_SEARCH_KEY || ""
   const indexName =
@@ -37,7 +37,7 @@ const Search: FC = () => {
         apiKey={apiKey}
         indexName={indexName}
         searchParameters={{
-          facetFilters: [`lang:${intl.locale}`],
+          facetFilters: [`lang:${language}`],
         }}
         transformItems={(items) =>
           items.map((item: DocSearchHit) => {
@@ -49,78 +49,53 @@ const Search: FC = () => {
             return newItem
           })
         }
-        placeholder={translateMessageId("search-ethereum-org", intl)}
+        placeholder={t("search-ethereum-org")}
         translations={{
           button: {
-            buttonText: translateMessageId("search", intl),
-            buttonAriaLabel: translateMessageId("search", intl),
+            buttonText: t("search"),
+            buttonAriaLabel: t("search"),
           },
           modal: {
             searchBox: {
-              resetButtonTitle: translateMessageId("clear", intl),
-              resetButtonAriaLabel: translateMessageId("clear", intl),
-              cancelButtonText: translateMessageId("close", intl),
-              cancelButtonAriaLabel: translateMessageId("close", intl),
+              resetButtonTitle: t("clear"),
+              resetButtonAriaLabel: t("clear"),
+              cancelButtonText: t("close"),
+              cancelButtonAriaLabel: t("close"),
             },
             footer: {
-              selectText: translateMessageId("docsearch-to-select", intl),
-              selectKeyAriaLabel: translateMessageId(
-                "docsearch-to-select",
-                intl
-              ),
-              navigateText: translateMessageId("docsearch-to-navigate", intl),
-              navigateUpKeyAriaLabel: translateMessageId("up", intl),
-              navigateDownKeyAriaLabel: translateMessageId("down", intl),
-              closeText: translateMessageId("docsearch-to-close", intl),
-              closeKeyAriaLabel: translateMessageId("docsearch-to-close", intl),
-              searchByText: translateMessageId("docsearch-search-by", intl),
+              selectText: t("docsearch-to-select"),
+              selectKeyAriaLabel: t("docsearch-to-select"),
+              navigateText: t("docsearch-to-navigate"),
+              navigateUpKeyAriaLabel: t("up"),
+              navigateDownKeyAriaLabel: t("down"),
+              closeText: t("docsearch-to-close"),
+              closeKeyAriaLabel: t("docsearch-to-close"),
+              searchByText: t("docsearch-search-by"),
             },
             errorScreen: {
-              titleText: translateMessageId("docsearch-error-title", intl),
-              helpText: translateMessageId("docsearch-error-help", intl),
+              titleText: t("docsearch-error-title"),
+              helpText: t("docsearch-error-help"),
             },
             startScreen: {
-              recentSearchesTitle: translateMessageId(
-                "docsearch-start-recent-searches-title",
-                intl
+              recentSearchesTitle: t("docsearch-start-recent-searches-title"),
+              noRecentSearchesText: t("docsearch-start-no-recent-searches"),
+              saveRecentSearchButtonTitle: t(
+                "docsearch-start-save-recent-search"
               ),
-              noRecentSearchesText: translateMessageId(
-                "docsearch-start-no-recent-searches",
-                intl
+              removeRecentSearchButtonTitle: t(
+                "docsearch-start-remove-recent-search"
               ),
-              saveRecentSearchButtonTitle: translateMessageId(
-                "docsearch-start-save-recent-search",
-                intl
-              ),
-              removeRecentSearchButtonTitle: translateMessageId(
-                "docsearch-start-remove-recent-search",
-                intl
-              ),
-              favoriteSearchesTitle: translateMessageId(
-                "docsearch-start-favorite-searches",
-                intl
-              ),
-              removeFavoriteSearchButtonTitle: translateMessageId(
-                "docsearch-start-remove-favorite-search",
-                intl
+              favoriteSearchesTitle: t("docsearch-start-favorite-searches"),
+              removeFavoriteSearchButtonTitle: t(
+                "docsearch-start-remove-favorite-search"
               ),
             },
             noResultsScreen: {
-              noResultsText: translateMessageId(
-                "docsearch-no-results-text",
-                intl
-              ),
-              suggestedQueryText: translateMessageId(
-                "docsearch-no-results-suggested-query",
-                intl
-              ),
-              reportMissingResultsText: translateMessageId(
-                "docsearch-no-results-missing",
-                intl
-              ),
-              reportMissingResultsLinkText: translateMessageId(
-                "docsearch-no-results-missing-link",
-                intl
+              noResultsText: t("docsearch-no-results-text"),
+              suggestedQueryText: t("docsearch-no-results-suggested-query"),
+              reportMissingResultsText: t("docsearch-no-results-missing"),
+              reportMissingResultsLinkText: t(
+                "docsearch-no-results-missing-link"
               ),
             },
           },
