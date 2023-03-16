@@ -62,5 +62,6 @@
   "page-get-eth-your-address": "La vostra adreça ETH",
   "page-get-eth-your-address-desc": "Quan descarregueu una cartera se vos crea una adreça ETH pública. Un exemple:",
   "page-get-eth-your-address-desc-3": "Considereu-la una adreça de correu electrònic, però en lloc de correus reps ETH. Si voleu transferir ETH d'una casa de canvi a la cartera, utilitzeu la vostra adreça com a destinació. Assegureu-vos de revisar-ho sempre amb cura abans d'enviar!",
-  "page-get-eth-your-address-wallet-link": "Descobriu carteres"
+  "page-get-eth-your-address-wallet-link": "Descobriu carteres",
+  "listing-policy-raise-issue-link": "Planteja tema"
 }

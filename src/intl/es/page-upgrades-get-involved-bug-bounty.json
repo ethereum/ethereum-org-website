@@ -99,5 +99,6 @@
   "page-upgrades-bug-bounty-card-text": "El atacante a veces puede poner un nodo en un estado que hace que invalide una de cada cien certificaciones hechas por un validador.",
   "page-upgrades-bug-bounty-card-text-1": "El atacante puede realizar con éxito ataques de eclipse en nodos con identificadores de pares que empiecen con 4 bytes en 0.",
   "page-upgrades-bug-bounty-card-text-2": "El atacante puede dividir con éxito grandes partes de la red, y es insignificante para un atacante activar la vulnerabilidad.",
-  "page-upgrades-bug-bounty-card-text-3": "El atacante puede realizar con éxito la ejecución remota de código en un cliente mayoritario, y es insignificante que un atacante desencadene la vulnerabilidad"
+  "page-upgrades-bug-bounty-card-text-3": "El atacante puede realizar con éxito la ejecución remota de código en un cliente mayoritario, y es insignificante que un atacante desencadene la vulnerabilidad",
+  "page-upgrades-question-title": "Preguntas más frecuentes"
 }

@@ -1,7 +1,6 @@
 {
   "layer-2-arbitrum-note": "Fraud proofs only for whitelisted users, whitelist not open yet",
   "layer-2-boba-note": "State validation in development",
-  "layer-2-metis-note": "Fraud proofs in development",
   "layer-2-optimism-note": "Fault proofs in development",
   "layer-2-hero-title": "Layer 2",
   "layer-2-hero-header": "Ethereum for everyone",
@@ -131,5 +130,6 @@
   "layer-2-note": "Note:",
   "layer-2-ecosystem-portal": "Ecosystem Portal",
   "layer-2-token-lists": "Token Lists",
-  "layer-2-explore": "Explore"
+  "layer-2-explore": "Explore",
+  "page-dapps-ready-button": "Go"
 }
