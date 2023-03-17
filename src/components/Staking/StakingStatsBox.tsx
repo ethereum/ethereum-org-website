@@ -89,6 +89,19 @@ const BeaconchainTooltip = ({ isEthStore }: { isEthStore?: boolean }) => (
 )
 
 // Interfaces
+interface EthStoreResponse {
+  data: {
+    apr: number
+    effective_balances_sum_wei: number
+  }
+}
+
+interface EpochResponse {
+  data: {
+    validatorscount: number
+  }
+}
+
 export interface IProps {}
 
 // StatsBox component
@@ -124,12 +137,6 @@ const StakingStatsBox: React.FC<IProps> = () => {
     // Get total ETH staked and current APR from ethstore endpoint
     ;(async () => {
       try {
-        interface EthStoreResponse {
-          data: {
-            apr: number
-            effective_balances_sum_wei: number
-          }
-        }
         const ethStoreResponse = await getData<EthStoreResponse>(ethstore)
         const {
           data: { apr, effective_balances_sum_wei },
@@ -147,11 +154,6 @@ const StakingStatsBox: React.FC<IProps> = () => {
     // Get total active validators from latest epoch endpoint
     ;(async () => {
       try {
-        interface EpochResponse {
-          data: {
-            validatorscount: number
-          }
-        }
         const epochResponse = await getData<EpochResponse>(epoch)
         const {
           data: { validatorscount },
