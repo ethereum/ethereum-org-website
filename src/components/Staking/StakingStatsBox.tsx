@@ -89,6 +89,19 @@ const BeaconchainTooltip = ({ isEthStore }: { isEthStore?: boolean }) => (
 )
 
 // Interfaces
+interface EthStoreResponse {
+  data: {
+    apr: number
+    effective_balances_sum_wei: number
+  }
+}
+
+interface EpochResponse {
+  data: {
+    validatorscount: number
+  }
+}
+
 export interface IProps {}
 
 // StatsBox component
@@ -117,26 +130,37 @@ const StakingStatsBox: React.FC<IProps> = () => {
         maximumSignificantDigits: 2,
       }).format(amount)
 
-    // API call, data formatting, and state setting
+    // API calls, data formatting, and state setting
+    const base = "https://beaconcha.in"
+    const { href: ethstore } = new URL("api/v1/ethstore/latest", base)
+    const { href: epoch } = new URL("api/v1/epoch/latest", base)
+    // Get total ETH staked and current APR from ethstore endpoint
     ;(async () => {
       try {
+        const ethStoreResponse = await getData<EthStoreResponse>(ethstore)
         const {
           data: { apr, effective_balances_sum_wei },
-        } = await getData<{
-          data: { apr: number; effective_balances_sum_wei: number }
-        }>("https://beaconcha.in/api/v1/ethstore/latest")
+        } = ethStoreResponse
         const totalEffectiveBalance: number = effective_balances_sum_wei * 1e-18
         const valueTotalEth = formatInteger(Math.floor(totalEffectiveBalance))
-        const valueTotalValidators = formatInteger(
-          totalEffectiveBalance / MAX_EFFECTIVE_BALANCE
-        )
         const valueCurrentApr = formatPercentage(apr)
         setTotalEth(valueTotalEth)
-        setTotalValidators(valueTotalValidators)
         setCurrentApr(valueCurrentApr)
       } catch (error) {
         setTotalEth(null)
         setCurrentApr(null)
+      }
+    })()
+    // Get total active validators from latest epoch endpoint
+    ;(async () => {
+      try {
+        const epochResponse = await getData<EpochResponse>(epoch)
+        const {
+          data: { validatorscount },
+        } = epochResponse
+        const valueTotalValidators = formatInteger(validatorscount)
+        setTotalValidators(valueTotalValidators)
+      } catch (error) {
         setTotalValidators(null)
       }
     })()
