@@ -5,12 +5,12 @@
   "page-find-wallet-last-updated": "अंतिम अद्यतन",
   "page-find-wallet-meta-description": "उन सुविधाओं के आधार पर इथेरियम वॉलेट खोजें और तुलना करें, जो आप चाहते हैं।",
   "page-find-wallet-meta-title": "एक इथेरियम वॉलेट ढूंढें",
-  "page-find-wallet-multisig": "बहु-हस्ताक्षर खाते",
-  "page-find-wallet-multisig-desc": "अतिरिक्त सुरक्षा के लिए, कुछ लेनदेन को अधिकृत करने के लिए बहु-हस्ताक्षर वाले वॉलेट को एक से अधिक खातों की आवश्यकता होती है।",
-  "page-find-wallet-showing": "दिखाया जा रहा है ",
-  "page-find-wallet-swaps": "विकेंद्रीकृत टोकन स्वैप",
-  "page-find-wallet-swaps-desc": "अपने वॉलेट से सीधे ETH और अन्य टोकन के बीच का ट्रेड करें।",
   "page-find-wallet-title": "वॉलेट खोजें",
   "page-find-wallet-try-removing": "एक या दो सुविधा हटाने की कोशिश करें",
-  "page-stake-eth": "स्टेक ETH"
+  "page-stake-eth": "स्टेक ETH",
+  "page-find-wallet-swaps": "विकेंद्रीकृत टोकन स्वैप",
+  "page-find-wallet-swaps-desc": "अपने वॉलेट से सीधे ETH और अन्य टोकन के बीच का ट्रेड करें।",
+  "page-find-wallet-multisig": "बहु-हस्ताक्षर खाते",
+  "page-find-wallet-multisig-desc": "अतिरिक्त सुरक्षा के लिए, कुछ लेनदेन को अधिकृत करने के लिए बहु-हस्ताक्षर वाले वॉलेट को एक से अधिक खातों की आवश्यकता होती है।",
+  "page-find-wallet-showing": "दिखाया जा रहा है "
 }

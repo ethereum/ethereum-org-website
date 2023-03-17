@@ -5,12 +5,12 @@
   "page-find-wallet-last-updated": "Последно обновен",
   "page-find-wallet-meta-description": "Намерете и сравнете портфейлите в Етереум на базата на характеристиките, които търсите.",
   "page-find-wallet-meta-title": "Намерете портфейл в Етереум",
-  "page-find-wallet-multisig": "Акаунти с няколко подписа",
-  "page-find-wallet-multisig-desc": "За допълнителна сигурност портфейлите с няколко подписа изискват повече от един акаунт, който да оторизира определени трансакции.",
-  "page-find-wallet-showing": "Показване ",
-  "page-find-wallet-swaps": "Размяна на децентрализирани токени",
-  "page-find-wallet-swaps-desc": "Търгувайте между ETH и останалите токени направо от портфейла си.",
   "page-find-wallet-title": "Намерете портфейл",
   "page-find-wallet-try-removing": "Опитайте се да премахнете една-две характеристики",
-  "page-stake-eth": "Залагайте ETH"
+  "page-stake-eth": "Залагайте ETH",
+  "page-find-wallet-swaps": "Размяна на децентрализирани токени",
+  "page-find-wallet-swaps-desc": "Търгувайте между ETH и останалите токени направо от портфейла си.",
+  "page-find-wallet-multisig": "Акаунти с няколко подписа",
+  "page-find-wallet-multisig-desc": "За допълнителна сигурност портфейлите с няколко подписа изискват повече от един акаунт, който да оторизира определени трансакции.",
+  "page-find-wallet-showing": "Показване "
 }

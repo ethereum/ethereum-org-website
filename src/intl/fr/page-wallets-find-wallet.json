@@ -5,12 +5,12 @@
   "page-find-wallet-last-updated": "Dernière mise à jour",
   "page-find-wallet-meta-description": "Trouvez et comparez les portefeuilles Ethereum en fonction des fonctionnalités que vous souhaitez.",
   "page-find-wallet-meta-title": "Trouver un portefeuille Ethereum",
-  "page-find-wallet-multisig": "Comptes multisignatures",
-  "page-find-wallet-multisig-desc": "Pour plus de sécurité, les portefeuilles multisignatures requièrent plusieurs comptes pour autoriser certaines transactions.",
-  "page-find-wallet-showing": "Affiché ",
-  "page-find-wallet-swaps": "Échanges de jetons décentralisés",
-  "page-find-wallet-swaps-desc": "Tradez entre ETH et d'autres jetons directement depuis votre portefeuille.",
   "page-find-wallet-title": "Trouver un portefeuille",
   "page-find-wallet-try-removing": "Essayez de supprimer une ou deux fonctionnalités",
-  "page-stake-eth": "Mettre en jeu de l'ETH"
+  "page-stake-eth": "Mettre en jeu de l'ETH",
+  "page-find-wallet-swaps": "Échanges de jetons décentralisés",
+  "page-find-wallet-swaps-desc": "Tradez entre ETH et d'autres jetons directement depuis votre portefeuille.",
+  "page-find-wallet-multisig": "Comptes multisignatures",
+  "page-find-wallet-multisig-desc": "Pour plus de sécurité, les portefeuilles multisignatures requièrent plusieurs comptes pour autoriser certaines transactions.",
+  "page-find-wallet-showing": "Affiché "
 }

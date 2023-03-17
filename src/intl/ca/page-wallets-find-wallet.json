@@ -5,12 +5,12 @@
   "page-find-wallet-last-updated": "Última actualització",
   "page-find-wallet-meta-description": "Trobeu i compareu les carteres d'Ethereum segons les funcions que vulgueu.",
   "page-find-wallet-meta-title": "Cerqueu una cartera d'Ethereum",
-  "page-find-wallet-multisig": "Comptes de diverses signatures",
-  "page-find-wallet-multisig-desc": "Per a més seguretat, les carteres de diverses signatures requereixen més d'un compte per autoritzar determinades transaccions.",
-  "page-find-wallet-showing": "S'està mostrant ",
-  "page-find-wallet-swaps": "Intercanvi de tokens descentralitzats",
-  "page-find-wallet-swaps-desc": "Comercieu entre ETH i altres tokens directament des de la vostra cartera.",
   "page-find-wallet-title": "Trobeu una cartera",
   "page-find-wallet-try-removing": "Proveu de suprimir una o dues funcions",
-  "page-stake-eth": "Aposteu ETH"
+  "page-stake-eth": "Aposteu ETH",
+  "page-find-wallet-swaps": "Intercanvi de tokens descentralitzats",
+  "page-find-wallet-swaps-desc": "Comercieu entre ETH i altres tokens directament des de la vostra cartera.",
+  "page-find-wallet-multisig": "Comptes de diverses signatures",
+  "page-find-wallet-multisig-desc": "Per a més seguretat, les carteres de diverses signatures requereixen més d'un compte per autoritzar determinades transaccions.",
+  "page-find-wallet-showing": "S'està mostrant "
 }

@@ -1,7 +1,6 @@
 {
   "layer-2-arbitrum-note": "Докази шахрайства тільки для користувачів з білого списку, білий список ще не відкритий",
   "layer-2-boba-note": "Державна верифікація в розробці",
-  "layer-2-metis-note": "Захист від шахрайства в розробці",
   "layer-2-optimism-note": "Захист від помилок у розробці",
   "layer-2-hero-title": "Рівень 2",
   "layer-2-hero-header": "Ethereum для всіх",
@@ -131,5 +130,6 @@
   "layer-2-note": "Примітка.",
   "layer-2-ecosystem-portal": "Екосистемний портал",
   "layer-2-token-lists": "Списки токенів",
-  "layer-2-explore": "Огляд"
+  "layer-2-explore": "Огляд",
+  "page-dapps-ready-button": "ОК"
 }
