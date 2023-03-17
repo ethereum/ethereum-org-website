@@ -140,7 +140,6 @@ Essa tabela resume os diferentes clientes. Todos eles passam em [testes de clien
 | [Nethermind](http://nethermind.io/)             | C#, .NET                 | Linux, Windows, macOS | Mainnet, Sepolia, Görli, Ropsten, Rinkeby e mais    | Instantâneo (sem servidor), Rápido, Completo | Arquivo, Removido |
 | [Besu](https://besu.hyperledger.org/en/stable/) | Java                     | Linux, Windows, macOS | Mainnet, Sepolia, Görli, Ropsten, Rinkeby e mais    | Rápido, Completo                             | Arquivo, Removido |
 | [Erigon](https://github.com/ledgerwatch/erigon) | Go                       | Linux, Windows, macOS | Mainnet, Sepolia, Görli, Rinkeby, Ropsten, and more | Completo                                     | Arquivo, Removido |
-| [Akula](https://akula.app)                      | Rust                     | Linux                 | Mainnet, Sepolia, Görli, Rinkeby, Ropsten           | Completo                                     | Arquivo, Removido |
 
 **Observe que o OpenEthereum [foi depreciado](https://medium.com/openethereum/gnosis-joins-erigon-form-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) e não está mais sendo mantido.** Use-o com cuidado e, de preferência, mude para outra implementação de cliente.
 
