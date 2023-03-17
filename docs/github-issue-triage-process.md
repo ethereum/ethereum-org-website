@@ -2,7 +2,7 @@
 
 This documentation outlines the current process for how issues are triaged for the ethereum.org GitHub repository.
 
-## Issue created process
+## Issue creation process
 
 Whenever a new issue is opened, it will automatically be labeled with a `needs-triage` label. The `needs-triage` label means that the core team needs to look at the issue, and nobody should work on it yet to avoid unnecessary work. This label will be removed after the issue has been triaged by a core contributor.
 
