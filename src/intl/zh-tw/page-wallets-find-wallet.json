@@ -5,12 +5,12 @@
   "page-find-wallet-last-updated": "最後更新",
   "page-find-wallet-meta-description": "根據您想要的功能尋找與比較以太坊錢包。",
   "page-find-wallet-meta-title": "尋找以太坊錢包",
-  "page-find-wallet-multisig": "多重簽章帳戶",
-  "page-find-wallet-multisig-desc": "為增加安全性，多重簽章錢包需要複數帳戶授權特定交易。",
-  "page-find-wallet-showing": "顯示 ",
-  "page-find-wallet-swaps": "去中心化代幣交換",
-  "page-find-wallet-swaps-desc": "從您的錢包直接交易以太幣及其他代幣。",
   "page-find-wallet-title": "尋找錢包",
   "page-find-wallet-try-removing": "嘗試移除一兩項功能",
-  "page-stake-eth": "質押以太幣"
+  "page-stake-eth": "質押以太幣",
+  "page-find-wallet-swaps": "去中心化代幣交換",
+  "page-find-wallet-swaps-desc": "從您的錢包直接交易以太幣及其他代幣。",
+  "page-find-wallet-multisig": "多重簽章帳戶",
+  "page-find-wallet-multisig-desc": "為增加安全性，多重簽章錢包需要複數帳戶授權特定交易。",
+  "page-find-wallet-showing": "顯示 "
 }

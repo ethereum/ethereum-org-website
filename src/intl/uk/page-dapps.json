@@ -207,10 +207,10 @@
   "page-dapps-what-are-dapps": "Що таке децентралізовані програми?",
   "page-dapps-more-on-defi-button": "Докладніше про децентралізовані фінанси",
   "page-dapps-more-on-nft-button": "Докладніше про токенізовані предмети колекціонування",
-  "foundation": "Foundation",
-  "transaction-fees": "Що таке комісія за транзакції?",
-  "page-wallets-get-some": "Отримайте ETH",
   "page-dapps-more-on-nft-gaming-button": "Докладніше про токенізовані елементи в іграх",
   "page-dapps-dapp-description-pwn": "Легкі кредити на Ethereum, що підтримуються будь-яким токеном або NFT.",
-  "page-dapps-pwn-image-alt": "Логотип PWN"
+  "page-dapps-pwn-image-alt": "Логотип PWN",
+  "foundation": "Foundation",
+  "transaction-fees": "Що таке комісія за транзакції?",
+  "page-wallets-get-some": "Отримайте ETH"
 }

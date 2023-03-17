@@ -1,7 +1,4 @@
 {
-  "page-tutorial-beginner": "Pemula",
-  "page-tutorial-intermediate": "Tingkat menengah",
-  "page-tutorial-advanced": "Tingkat lanjut",
   "comp-tutorial-metadata-minute-read": "bacaan singkat",
   "page-tutorial-listing-policy-intro": "Sebelum Anda mengirimkan tutorial, harap baca kebijakan pendaftaran kami.",
   "comp-tutorial-metadata-tip-author": "Penulis tips",
@@ -23,6 +20,9 @@
   "page-tutorials-meta-description": "Jelajahi dan filter tutorial komunitas Ethereum yang sudah diperiksa berdasarkan topik.",
   "page-tutorial-external-link": "Eksternal",
   "page-tutorials-meta-title": "Tutorial Pengembangan Ethereum",
+  "page-tutorial-beginner": "Pemula",
+  "page-tutorial-intermediate": "Tingkat menengah",
+  "page-tutorial-advanced": "Tingkat lanjut",
   "page-find-wallet-try-removing": "Cobalah menghapus satu atau dua fitur",
   "page-find-wallet-clear": "Hapus filter"
 }
