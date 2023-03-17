@@ -294,3 +294,12 @@ body:
     attributes:
       label: Does the wallet have any integrated tools not mentioned above?
       description: Please provide any information about extra features this wallet has that we may have missed in the above criteria. (e.g. privacy features, transaction batching, etc).
+  - type: checkboxes
+    id: exchange_work_on
+    attributes:
+      label: Would you like to work on this issue?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
