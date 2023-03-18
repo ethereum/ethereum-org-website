@@ -1,6 +1,6 @@
-# Deploy and review process
+# Deploy and pull request review process
 
-This documentation outlines our current processes for how we deploy the latest changes to ethereum.org, and how we prioritize items in our review process.
+This documentation outlines our current processes for how we deploy the latest changes to ethereum.org, and how we prioritize items in our pull request review process.
 
 ## Deploy process
 
@@ -8,37 +8,43 @@ Anything merged into the `dev` branch of [ethereum.org](http://ethereum.org) wil
 
 Occasionally, we’ll also do a patch deploy to fix an urgent or widespread issue.
 
-## Review process
+## Pull request review process
 
 ### General review process
 
 We use a first-in, first-out system for reviewing pull requests. The longer a pull request has been open, the higher priority it is for our team to review. In some cases—for example, fixing a high-priority issue or merging low-hanging fruit for a deploy—we will stray from this process and use our best judgement to get higher-impact changes deployed more quickly.
 
-We aim to have every new PR merged or closed within 30 days of opening. As outlined in the following sections, different types of pull requests do have different levels of priority, and this may influence how promptly a pull request is acted on.
+We aim to have every new PR reviewed with change requests, merged, or closed within 30 days of opening. As outlined in the following sections, different types of pull requests do have different levels of priority, and this may influence how promptly a pull request is acted on.
 
 ### Translations
 
 Translation pull requests are considered high priority. These are when the translated and reviewed files from our translation management platform are submitted as a pull request. They are important to our core value of bringing Ethereum education to as many languages as possible. They also are the accumulation of months of work by translators and reviewers, and any delay to this already long process is undesirable.
 
-**Timeline:** PRs should be merged within 1-4 days of opening (by the next release).
+**Timeline:** PRs should be merged within 4 days of opening (by the next release).
 
-### Feature and bug fixes
+### Bug fixes
 
-Any new feature correlated to an approved issue or bug fix is high-priority. Similar to translators, code contributors dedicate a large amount of their time to improving [ethereum.org](http://ethereum.org) as a resource and addressing their efforts quickly is desirable. All bug fixes should be handled swiftly, but new features that were not discussed, requested or approved do not fall under this timeline.
+Bug pull requests can vary from low-priority to high-priority depending on the severity of the issue. Site breaking bugs will be considered high-priority and will be addressed promptly.
 
-**Timeline:** Features or bug fixes should be reviewed within 1-12 days. In the case of bugs, more severe bugs will be reviewed more promptly.
+**Timeline:** High-priority bugs should be merged within 4 days, and depending on the severity may result in a patch deploy. Medium-priority bugs should be merged within 14 days. Low-issue bugs should be merged within 30 days.
+
+### Features
+
+Any new feature correlated to an approved issue is medium-priority. Similar to translators, code contributors dedicate a large amount of their time to improving [ethereum.org](http://ethereum.org) as a resource and addressing their efforts quickly is desirable. New features that were not discussed, requested or approved do not fall under this timeline.
+
+**Timeline:** Major features should be merged within 30 days of opening. Minor features should be merged within 14 days of opening.
 
 ### Content
 
 Content PRs are considered medium-priority. Depending on their content, they can be very high-impact but also a high effort to go through the various stages of content review to ensure the content meets the standards we aim for. Content PRs can be broken into two categories: major content (e.g. a new page) and minor content changes (e.g. a new section to an existing page). Typo or grammar fixes are considered separately.
 
-**Timeline:** Major content should be merged within 15-30 days of opening. Minor content changes within 5-15 days of opening.
+**Timeline:** Major content should be merged within 30 days of opening. Minor content changes within 14 days of opening.
 
 ### Typographical and grammatical errors
 
 Typographical and grammatical errors are medium-priority as small errors of this kind can have second-order ramifications for the linguists of the ~50 languages we currently translate to. Though technically a subgroup of ‘content PRs’, typos and grammar errors take significantly less time to review and, as a result, are treated differently.
 
-**Timeline:** Typo or grammar pull requests should be merged within 1-8 days of opening.
+**Timeline:** Typo or grammar pull requests should be merged within 8 days of opening.
 
 ### Adding products
 

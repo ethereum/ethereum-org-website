@@ -23,5 +23,6 @@
   "page-staking-deposit-contract-stop-reading": "أوقف القراءة",
   "page-staking-deposit-contract-subtitle": "هذا هو عنوان عقد تجميد عملات staking. استخدم هذه الصفحة لتأكيد أنك تقوم بإرسال الأموال إلى العنوان الصحيح عندما تجمد العملات.",
   "page-staking-deposit-contract-warning": "تحقق من كل حرف بعناية.",
-  "page-staking-deposit-contract-warning-2": "إرسال الأموال إلى هذا العنوان لن يعمل ولن يجعلك مراهنًا. يجب عليك اتباع تعليمات منصة التشغيل."
+  "page-staking-deposit-contract-warning-2": "إرسال الأموال إلى هذا العنوان لن يعمل ولن يجعلك مراهنًا. يجب عليك اتباع تعليمات منصة التشغيل.",
+  "page-staking-deposit-contract-title": "التحقق من عنوان عقد الإيداع"
 }

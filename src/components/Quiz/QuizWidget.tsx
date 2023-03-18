@@ -404,7 +404,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
                         currentQuestionAnswerChoice!
                       )
                     }
-                    disabled={!currentQuestionAnswerChoice}
+                    isDisabled={!currentQuestionAnswerChoice}
                   >
                     <Translation id="submit-answer" />
                   </Button>

@@ -23,4 +23,4 @@ New glossary terms will be assessed by the following criteria:
 
 ## Add your term {#how-decisions-about-the-site-are-made}
 
-If you want to add a glossary term to ethereum.org and it meets the criteria, [create an issue on GitHub](https://github.com/ethereum/ethereum-org-website/issues/new?template=suggest_glossary_term.md).
+If you want to add a glossary term to ethereum.org and it meets the criteria, [create an issue on GitHub](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_glossary_term.yaml).

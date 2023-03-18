@@ -45,3 +45,12 @@ body:
     attributes:
       label: Additional context
       description: Add any other context or screenshots about the feature request here
+  - type: checkboxes
+    id: exchange_work_on
+    attributes:
+      label: Would you like to work on this issue?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true

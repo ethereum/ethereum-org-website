@@ -5,12 +5,12 @@
   "page-find-wallet-last-updated": "Última atualização",
   "page-find-wallet-meta-description": "Encontre e compare carteiras Ethereum com base nos recursos que você deseja.",
   "page-find-wallet-meta-title": "Encontre uma carteira Ethereum",
-  "page-find-wallet-multisig": "Contas com várias assinatura",
-  "page-find-wallet-multisig-desc": "Para maior segurança, as carteiras de várias assinaturas exigem mais de uma conta para autorizar certas transações.",
-  "page-find-wallet-showing": "Exibindo ",
-  "page-find-wallet-swaps": "Troca de tokens descentralizada",
-  "page-find-wallet-swaps-desc": "Opere entre ETH e outros tokens diretamente da sua carteira.",
   "page-find-wallet-title": "Encontre uma carteira",
   "page-find-wallet-try-removing": "Tente remover um ou dois recursos",
-  "page-stake-eth": "Participe com ETH"
+  "page-stake-eth": "Participe com ETH",
+  "page-find-wallet-swaps": "Troca de tokens descentralizada",
+  "page-find-wallet-swaps-desc": "Opere entre ETH e outros tokens diretamente da sua carteira.",
+  "page-find-wallet-multisig": "Contas com várias assinatura",
+  "page-find-wallet-multisig-desc": "Para maior segurança, as carteiras de várias assinaturas exigem mais de uma conta para autorizar certas transações.",
+  "page-find-wallet-showing": "Exibindo "
 }

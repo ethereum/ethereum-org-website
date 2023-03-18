@@ -529,7 +529,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
             </AdditionalReadingHeader>
             <DocsContainer>
               <DocLink
-                to="http://governance40.com/wp-content/uploads/2019/06/Blockchain-in-Developing-Countries.pdf"
+                to="https://web.archive.org/web/20220708092831/http://governance40.com/wp-content/uploads/2019/06/Blockchain-in-Developing-Countries.pdf"
                 isExternal
               >
                 <Translation id="more-on-ethereum-use-cases-link" />

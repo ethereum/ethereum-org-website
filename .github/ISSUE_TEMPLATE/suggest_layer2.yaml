@@ -150,3 +150,12 @@ body:
     attributes:
       label: Is there a block explorer?
       description: Are there block explorers for the network? Please share URLs.
+  - type: checkboxes
+    id: exchange_work_on
+    attributes:
+      label: Would you like to work on this issue?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
