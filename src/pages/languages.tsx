@@ -15,9 +15,7 @@ import { TranslationKey } from "../utils/translations"
 import { CardItem as LangItem } from "../components/SharedStyledComponents"
 import Icon from "../components/Icon"
 
-const StyledPage = styled(Page)`
-  margin-top: 4rem;
-`
+const StyledPage = styled(Page)``
 
 const ContentContainer = styled.div``
 
