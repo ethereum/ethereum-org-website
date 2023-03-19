@@ -40,7 +40,7 @@ As well as creating ether through block rewards, ether can be destroyed through 
 
 Ether burn occurs in every transaction on Ethereum. When users pay for their transactions, a base gas fee, set by the network according to transactional demand, gets destroyed. This, coupled with variable block sizes and a maximum gas fee, simplifies transaction fee estimation on Ethereum. When network demand is high, [blocks](https://etherscan.io/block/12965263) can burn more ether than they mint, effectively offsetting ether issuance.
 
-Burning the base fee hinders a block producers ability to manipulate transactions. For example, if block producers received the base fee, they could include their own transactions for free and raise the base fee for everyone else. Alternatively, they could refund the base fee to some users off-chain, leading to a more opaque and complex transaction fee market.
+Burning the base fee hinders a block producer's ability to manipulate transactions. For example, if block producers received the base fee, they could include their own transactions for free and raise the base fee for everyone else. Alternatively, they could refund the base fee to some users off-chain, leading to a more opaque and complex transaction fee market.
 
 ## Denominations of ether {#denominations}
 
@@ -57,7 +57,7 @@ Gwei, short for giga-wei, is often used to describe gas costs on Ethereum.
 
 ## Transferring ether {#transferring-ether}
 
-Each transaction on Ethereum contains a `value` field, which specifies the amount of ether to be transferred, denominated in wei, to send from the sender's address to the recipient address.
+Each transaction on Ethereum contains a `value` field, which specifies the amount of ether to be transferred, denominated in wei, to send from the sender's address to the recipient's address.
 
 When the recipient address is a [smart contract](/developers/docs/smart-contracts/), this transferred ether may be used to pay for gas when the smart contract executes its code.
 
