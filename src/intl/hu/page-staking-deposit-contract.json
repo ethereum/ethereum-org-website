@@ -23,5 +23,6 @@
   "page-staking-deposit-contract-stop-reading": "Olvasás befejezése",
   "page-staking-deposit-contract-subtitle": " Ez az Eth2 staking szerződés címe. Használd ezt az oldalt, hogy megerősítsd, hogy biztosan a megfelelő címre küldöd a pénzed stakeléskor.",
   "page-staking-deposit-contract-warning": "Minden karaktert ellenőrizz le.",
-  "page-staking-deposit-contract-warning-2": "Erre a címre küldött pénz nem fog működni és tesz stakerré. Követned kell az indítópult utasításait."
+  "page-staking-deposit-contract-warning-2": "Erre a címre küldött pénz nem fog működni és tesz stakerré. Követned kell az indítópult utasításait.",
+  "page-staking-deposit-contract-title": "A letéti szerződés cím ellenőrzése"
 }

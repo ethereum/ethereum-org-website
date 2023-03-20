@@ -38,6 +38,6 @@ jobs:
         uses: chromaui/action@v1
         # Options required for Chromatic's GitHub Action
         with:
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          projectToken: fee8e66c9916
           # 👇 Only fail if Storybook contains stories that error
           exitZeroOnChanges: true

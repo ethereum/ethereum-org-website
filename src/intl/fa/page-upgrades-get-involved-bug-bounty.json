@@ -43,7 +43,6 @@
   "page-upgrades-bug-bounty-quality-repro-desc": ": لطفا کد آزمایشی، اسکریپت‌ها و دستورالعمل‌ها را با جزئیات ضمیمه کنید. هرچه تکرارپذیری و تشخیص آسیب‌پذیری برای ما ساده‌تر باشد، پاداش بیشتر خواهند بود.",
   "page-upgrades-bug-bounty-questions": "سؤالی دارید؟",
   "page-upgrades-bug-bounty-rules": "خواندن قوانین",
-  "page-upgrades-bug-bounty-shard-chains": "خرده‌زنجیره‌ها",
   "page-upgrades-bug-bounty-slogan": "پیدا کردن باگ لایه‌ی اجماع",
   "page-upgrades-bug-bounty-specs": "خواندن مشخصات جامع",
   "page-upgrades-bug-bounty-specs-docs": "اسناد و مدارک مشخصات",
@@ -91,5 +90,6 @@
   "page-upgrades-bug-bounty-card-text": "مهاجم می‌تواند یک گره را گاهی در شرایطی قرار دهد که باعث رد کردن یک از هر صد تصدیق انجام شده توسط اعتبارسنج شود",
   "page-upgrades-bug-bounty-card-text-1": "مهاجم می‌تواند با موفقیت حملات خسوف (eclipse) را روی گره‌هایی با شناسه‌ی همتای شامل 4 بایت اول صفر به انجام برساند",
   "page-upgrades-bug-bounty-card-text-2": "یک باگ وفاق بین 2 کلاینت وجود دارد، اما برای مهاجم سخت یا در عمل غیرممکن است که رویداد را شروع کند.",
-  "page-upgrades-bug-bounty-card-text-3": "یک باگ وفاق بین 2 کلاینت وجود دارد، و شروع رویداد از سوی مهاجم بدیهی است."
+  "page-upgrades-bug-bounty-card-text-3": "یک باگ وفاق بین 2 کلاینت وجود دارد، و شروع رویداد از سوی مهاجم بدیهی است.",
+  "page-upgrades-question-title": "پرسش‌های متداول"
 }

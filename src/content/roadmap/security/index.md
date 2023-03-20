@@ -11,7 +11,7 @@ Ethereum is already a very secure, decentralized smart-contract platform. Howeve
 
 ## Staking withdrawals {#staking-withdrawals}
 
-The upgrade from proof-of-work to proof-of-stake began with Ethereum pioneers “staking” their ETH in a deposit contract. That ETH is used to protect the network. However, that ETH cannot yet be unlocked and returned to the users. Allowing ETH to be withdrawn is a critical part of the proof-of-stake upgrade. In addition to withdrawals being a critical component of a fully-functional proof-of-stake protocol, allowing withdrawals is also good for Ethereum security as it allows stakers to use their ETH rewards for other non-staking purposes. This means users that want liquidity do not have to rely upon liquid staking derivatives (LSDs) that can be a centralizing force on Ethereum. This upgrade is due to be completed in Q1/Q2 2023.
+The upgrade from proof-of-work to proof-of-stake began with Ethereum pioneers “staking” their ETH in a deposit contract. That ETH is used to protect the network. However, that ETH cannot yet be unlocked and returned to the users. Allowing ETH to be withdrawn is a critical part of the proof-of-stake upgrade. In addition to withdrawals being a critical component of a fully-functional proof-of-stake protocol, allowing withdrawals is also good for Ethereum security as it allows stakers to use their ETH rewards for other non-staking purposes. This means users that want liquidity do not have to rely upon liquid staking derivatives (LSDs) that can be a centralizing force on Ethereum. This upgrade is scheduled to be completed on April 12, 2023.
 
 <ButtonLink variant="outline-color" to="/staking/withdrawals/">Read about withdrawals</ButtonLink>
 
@@ -39,4 +39,4 @@ Although it is unlikely, it is possible that a sophisticated attacker could iden
 
 ## Current progress {#current-progress}
 
-Staking withdrawals are the next major uprade coming to Ethereum. They should ship in Q1/Q2 2023. They have already been rolled out on public testnets and the next step in launching on Ethereum Mainnet. The other security upgrades on the roadmap are in advanced stages of research, but they are not expected to be implemented for some time. The next steps for view-merge, PBS, SSF and SLE is to finalize a specification and start building prototypes.
+Staking withdrawals are the next major upgrade coming to Ethereum. They are planned for inclusion with the Shanghai/Capella upgrade scheduled for April 12, 2023. They have already been rolled out on public testnets and the next step in launching on Ethereum Mainnet. The other security upgrades on the roadmap are in advanced stages of research, but they are not expected to be implemented for some time. The next steps for view-merge, PBS, SSF and SLE is to finalize a specification and start building prototypes.

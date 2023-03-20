@@ -43,7 +43,6 @@
   "page-upgrades-bug-bounty-quality-repro-desc": ": Bitte fügen Sie Testcode, Skripte und detaillierte Anweisungen bei. Je einfacher es für uns ist, die Vulnerabilität zu reproduzieren und zu überprüfen, desto höher die Belohnung.",
   "page-upgrades-bug-bounty-questions": "Fragen?",
   "page-upgrades-bug-bounty-rules": "Regeln lesen",
-  "page-upgrades-bug-bounty-shard-chains": "Shard Chains",
   "page-upgrades-bug-bounty-slogan": "Konsens-Layer-Bug-Bounties",
   "page-upgrades-bug-bounty-specs": "Vollständige Spezifikation lesen",
   "page-upgrades-bug-bounty-specs-docs": "Spezifikationsdokumente",
@@ -91,5 +90,6 @@
   "page-upgrades-bug-bounty-card-text": "Ein Angreifer kann manchmal einen Knoten in einen Zustand versetzen, der ihn dazu veranlasst, eine von hundert Bescheinigungen zu verlieren, die von einem Validator gemacht wurden",
   "page-upgrades-bug-bounty-card-text-1": "Ein Angreifer kann erfolgreich einen Eclipse-Angriff auf Knoten mit Peer-IDs mit 4 führenden Nullbytes ausführen",
   "page-upgrades-bug-bounty-card-text-2": "Es gibt einen Konsensfehler zwischen zwei Clients, aber es ist schwierig oder unpraktisch für den Angreifer, das Ereignis auszulösen.",
-  "page-upgrades-bug-bounty-card-text-3": "Es gibt einen Konsensfehler zwischen zwei Clients und es ist trivial für einen Angreifer, das Ereignis auszulösen."
+  "page-upgrades-bug-bounty-card-text-3": "Es gibt einen Konsensfehler zwischen zwei Clients und es ist trivial für einen Angreifer, das Ereignis auszulösen.",
+  "page-upgrades-question-title": "Häufig gestellte Fragen"
 }
