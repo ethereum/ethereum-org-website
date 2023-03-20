@@ -28,7 +28,7 @@ Looking for future protocol upgrades? [Learn about upcoming upgrades on the Ethe
 
 ### Shanghai (_planned_) {#shanghai}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Timestamp: TBD<br />
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Timestamp: Apr-12-2023 22:27:35 +UTC<br />
 <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Block number: TBD<br />
 <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: TBD<br />
 
@@ -53,8 +53,8 @@ The Shanghai upgrade brings staking withdrawals to the execution layer. In tande
 
 ### Capella (_planned_) {#capella}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Timestamp: TBD<br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Epoch number: TBD<br />
+<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Timestamp: Apr-12-2023 22:27:35 +UTC<br />
+<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Epoch number: 194048 (Slot 6209536)<br />
 <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: TBD<br />
 
 <!-- <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/{}/https://ethereum.org/en/">ethereum.org on waybackmachine</a> -->
