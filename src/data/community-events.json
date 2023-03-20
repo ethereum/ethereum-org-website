@@ -78,7 +78,16 @@
     "location": "Podgorica, Montenegro",
     "description": "EDCON is a non-profit annual global conference committed to serving the Ethereum ecosystem in boosting the communication and interaction of Ethereum communities worldwide",
     "startDate": "2023-05-19",
-    "endDate": "2023-05-23"
+    "endDate": "2023-05-23"  
+  },
+  {
+    "title": "BlockSplit",
+    "to": "https://www.blocksplit.net",
+    "sponsor": null,
+    "location": "Split, Croatia",
+    "description": "BlockSplit is the oldest web3 conference in the South-East Europe, taking place since 2018 and attracting over 600 attendees from all around the world.",
+    "startDate": "2023-05-23",
+    "endDate": "2023-05-24"
   },
   {
     "title": "ETH Belgrade 2023",
