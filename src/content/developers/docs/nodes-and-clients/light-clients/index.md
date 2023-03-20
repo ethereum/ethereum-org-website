@@ -4,7 +4,7 @@ description: Introduction to Ethereum light clients.
 lang: en
 ---
 
-Running a full node is the most trustless, private, decentralized and censorship resistant way to interact with Ethereum. With a full node you keep your own copy of the blockchain that you can query instantly and you get direct access to Ethereum's peer-to-peer-network. However, running a full node requires a substantial amount of memory, storage and CPU. This can be expensive, meaning it is not feasible for everyone to run their own node. There are several solutions to this on the Ethereum roadmap, including statelessness, but they are several years away from being implemented. The answer in the near-term is to trade-off some of the benefits of running a full node for large performance improvements that allow nodes to run with very low hardware requirements. Nodes that make this trade-off are known as light nodes.
+Running a full node is the most trustless, private, decentralized and censorship resistant way to interact with Ethereum. With a full node you keep your own copy of the blockchain that you can query instantly and you get direct access to Ethereum's peer-to-peer network. However, running a full node requires a substantial amount of memory, storage and CPU. This can be expensive, meaning it is not feasible for everyone to run their own node. There are several solutions to this on the Ethereum roadmap, including statelessness, but they are several years away from being implemented. The answer in the near-term is to trade-off some of the benefits of running a full node for large performance improvements that allow nodes to run with very low hardware requirements. Nodes that make this trade-off are known as light nodes.
 
 ## What is a light client {#what-is-a-light-client}
 
