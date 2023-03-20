@@ -5,12 +5,12 @@
   "page-find-wallet-last-updated": "Останнє оновлення",
   "page-find-wallet-meta-description": "Знайдіть і порівняйте гаманці Ethereum на основі функцій, які вас цікавлять.",
   "page-find-wallet-meta-title": "Як знайти гаманець Ethereum",
-  "page-find-wallet-multisig": "Акаунти з кількома підписами",
-  "page-find-wallet-multisig-desc": "З міркувань посилення захисту для гаманців із кількома підписами потрібно мати більше ніж один акаунт для підтвердження деяких транзакцій.",
-  "page-find-wallet-showing": "Показано ",
-  "page-find-wallet-swaps": "Децентралізований обмін токенів",
-  "page-find-wallet-swaps-desc": "Торгуйте ETH та іншими токенами прямо в гаманці.",
   "page-find-wallet-title": "Знайти гаманець",
   "page-find-wallet-try-removing": "Спробуйте вилучити одну або дві функції",
-  "page-stake-eth": "Частка ETH"
+  "page-stake-eth": "Частка ETH",
+  "page-find-wallet-swaps": "Децентралізований обмін токенів",
+  "page-find-wallet-swaps-desc": "Торгуйте ETH та іншими токенами прямо в гаманці.",
+  "page-find-wallet-multisig": "Акаунти з кількома підписами",
+  "page-find-wallet-multisig-desc": "З міркувань посилення захисту для гаманців із кількома підписами потрібно мати більше ніж один акаунт для підтвердження деяких транзакцій.",
+  "page-find-wallet-showing": "Показано "
 }

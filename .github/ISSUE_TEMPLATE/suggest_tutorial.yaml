@@ -62,3 +62,12 @@ body:
     attributes:
       label: "For tutorials hosted elsewhere: URL to tutorial"
       description: Please paste the URL to your tutorial
+  - type: checkboxes
+    id: exchange_work_on
+    attributes:
+      label: Would you like to work on this issue?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true

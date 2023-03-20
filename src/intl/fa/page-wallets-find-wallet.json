@@ -5,12 +5,12 @@
   "page-find-wallet-last-updated": "آخرین بروزرسانی",
   "page-find-wallet-meta-description": "کیف پول‌های اتریوم را مطابق ویژگی‌های مد نظرتان بیابید و مقایسه کنید.",
   "page-find-wallet-meta-title": "پیدا کردن یک کیف پول اتریوم",
-  "page-find-wallet-multisig": "حساب‌های چند امضائه",
-  "page-find-wallet-multisig-desc": "جهت ایمنی مضاعف، کیف پول‌های چند امضائه مستلزم بیش از یک حساب برای تایید اعتبار تراکنش‌های خاص هستند.",
-  "page-find-wallet-showing": "نمایش ",
-  "page-find-wallet-swaps": "تبادل توکن‌های نامتمرکز",
-  "page-find-wallet-swaps-desc": "مستقیماً از کیف پول خود، میان اتر و سایر توکن‌ها مبادله کنید.",
   "page-find-wallet-title": "یافتن یک کیف پول",
   "page-find-wallet-try-removing": "حذف یک یا دو ویژگی را امتحان کنید",
-  "page-stake-eth": "سهام گذاری اتر"
+  "page-stake-eth": "سهام گذاری اتر",
+  "page-find-wallet-swaps": "تبادل توکن‌های نامتمرکز",
+  "page-find-wallet-swaps-desc": "مستقیماً از کیف پول خود، میان اتر و سایر توکن‌ها مبادله کنید.",
+  "page-find-wallet-multisig": "حساب‌های چند امضائه",
+  "page-find-wallet-multisig-desc": "جهت ایمنی مضاعف، کیف پول‌های چند امضائه مستلزم بیش از یک حساب برای تایید اعتبار تراکنش‌های خاص هستند.",
+  "page-find-wallet-showing": "نمایش "
 }

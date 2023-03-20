@@ -5,12 +5,12 @@
   "page-find-wallet-last-updated": "Utolsó frissítés",
   "page-find-wallet-meta-description": "Keresd meg és hasonlítsd össze az Ethereum tárcákat a kívánt tulajdonságok alapján.",
   "page-find-wallet-meta-title": "Ethereum tárca keresése",
-  "page-find-wallet-multisig": "Több-aláírós számlák",
-  "page-find-wallet-multisig-desc": "Az extra biztonság kedvéért a több aláírásos tárcák esetében, egynél több számla szükséges bizonyos tranzakciók jóváhagyásához.",
-  "page-find-wallet-showing": "Mutatás ",
-  "page-find-wallet-swaps": "Decentralizált token váltások",
-  "page-find-wallet-swaps-desc": "Kereskedj ETH-tel és más tokenekkel közvetlenül a tárcádból.",
   "page-find-wallet-title": "Tárca keresése",
   "page-find-wallet-try-removing": "Próbálj elvenni egy vagy két tulajdonságot",
-  "page-stake-eth": "ETH letétbe helyezése"
+  "page-stake-eth": "ETH letétbe helyezése",
+  "page-find-wallet-swaps": "Decentralizált token váltások",
+  "page-find-wallet-swaps-desc": "Kereskedj ETH-tel és más tokenekkel közvetlenül a tárcádból.",
+  "page-find-wallet-multisig": "Több-aláírós számlák",
+  "page-find-wallet-multisig-desc": "Az extra biztonság kedvéért a több aláírásos tárcák esetében, egynél több számla szükséges bizonyos tranzakciók jóváhagyásához.",
+  "page-find-wallet-showing": "Mutatás "
 }
