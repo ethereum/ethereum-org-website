@@ -1,7 +1,7 @@
 ---
 title: "EIP-1271: Signing and Verifying Smart Contract Signatures"
-description: An overview of smart contract signature generation and verification with EIP-1271. We also walk through Gnosis Safe's EIP-1271 implementation to provide a concrete example for smart contract developers to build on.
-author: nathanhleung
+description: An overview of smart contract signature generation and verification with EIP-1271. We also walk through the EIP-1271 implementation used in Safe (previously Gnosis Safe) to provide a concrete example for smart contract developers to build on.
+author: Nathan H. Leung
 lang: en
 tags: ["eip-1271", "smart contracts", "verifying", "signing"]
 skill: intermediate
@@ -10,7 +10,7 @@ published: 2023-01-12
 
 The [EIP-1271](https://eips.ethereum.org/EIPS/eip-1271) standard allows smart contracts to verify signatures.
 
-In this tutorial, we give an overview of digital signatures, EIP-1271's background, and [Gnosis Safe](https://gnosis-safe.io/)'s specific implementation of EIP-1271. All together, this can serve as a starting point for implementing EIP-1271 in your own contracts.
+In this tutorial, we give an overview of digital signatures, EIP-1271's background, and the specific implementation of EIP-1271 used by [Safe](https://safe.global/) (previously Gnosis Safe). All together, this can serve as a starting point for implementing EIP-1271 in your own contracts.
 
 ## What is a signature?
 
@@ -84,20 +84,20 @@ contract ERC1271 {
 }
 ```
 
-## Example EIP-1271 Implementation: Gnosis Safe
+## Example EIP-1271 Implementation: Safe
 
 Contracts can implement `isValidSignature` in many ways — the spec only doesn’t say much about the exact implementation.
 
-One notable contract which implements EIP-1271 is Gnosis Safe.
+One notable contract which implements EIP-1271 is Safe (previously Gnosis Safe).
 
-In Gnosis Safe’s code, `isValidSignature` [is implemented](https://github.com/safe-global/safe-contracts/blob/main/contracts/handler/CompatibilityFallbackHandler.sol) so that signatures can be created and verified in [two ways](https://ethereum.stackexchange.com/questions/122635/signing-messages-as-a-gnosis-safe-eip1271-support):
+In Safe’s code, `isValidSignature` [is implemented](https://github.com/safe-global/safe-contracts/blob/main/contracts/handler/CompatibilityFallbackHandler.sol) so that signatures can be created and verified in [two ways](https://ethereum.stackexchange.com/questions/122635/signing-messages-as-a-gnosis-safe-eip1271-support):
 
 1. On-chain messages
    1. Creation: a safe owner creates a new safe transaction to “sign” a message, passing the message as data into the transaction. Once enough owners sign the transaction to reach the multisig threshold, the transaction is broadcast and run. In the transaction, there is a safe function called which adds the message to a list of “approved” messages.
-   2. Verification: call `isValidSignature` on the Gnosis Safe contract, and pass in the message to verify as the message parameter and [an empty value for the signature parameter](https://github.com/safe-global/safe-contracts/blob/main/contracts/handler/CompatibilityFallbackHandler.sol#L32) (i.e. `0x`). Gnosis will see that the signature parameter is empty and instead of cryptographically verifying the signature, it will know to just go ahead and check whether the message is on the list of “approved” messages.
+   2. Verification: call `isValidSignature` on the Safe contract, and pass in the message to verify as the message parameter and [an empty value for the signature parameter](https://github.com/safe-global/safe-contracts/blob/main/contracts/handler/CompatibilityFallbackHandler.sol#L32) (i.e. `0x`). The Safe will see that the signature parameter is empty and instead of cryptographically verifying the signature, it will know to just go ahead and check whether the message is on the list of “approved” messages.
 2. Off-chain messages:
    1. Creation: a safe owner creates a message off-chain, then gets other safe owners to sign the message each individually until there are enough signatures to overcome the multisig approval threshold.
-   2. Verification: call `isValidSignature`. In the message parameter, pass in the message to be verified. In the signature parameter, pass in each safe owner’s individual signatures all concatenated together, back-to-back. Gnosis will check that there are enough signatures to meet the threshold **and** that each signature is valid. If so, it will return a value indicating successful signature verification.
+   2. Verification: call `isValidSignature`. In the message parameter, pass in the message to be verified. In the signature parameter, pass in each safe owner’s individual signatures all concatenated together, back-to-back. The Safe will check that there are enough signatures to meet the threshold **and** that each signature is valid. If so, it will return a value indicating successful signature verification.
 
 ## What exactly is the `_hash` parameter? Why not pass the whole message?
 
@@ -111,7 +111,7 @@ There are EIP-1271 specifications in the wild that have an `isValidSignature` fu
 
 ## How should EIP-1271 be implemented in my own contracts?
 
-The spec is very open-ended here. The Gnosis Safe implementation has some good ideas:
+The spec is very open-ended here. The Safe implementation has some good ideas:
 
 - You can consider EOA signatures from the "owner" of the contract to be valid.
 - You could store a list of approved messages and only consider those to be valid.
@@ -120,4 +120,4 @@ In the end, it is up to you as the contract developer!
 
 ## Conclusion
 
-[EIP-1271](https://eips.ethereum.org/EIPS/eip-1271) is a versatile standard that allows smart contracts to verify signatures. It opens the door for smart contracts to act more like EOAs — for instance providing a way for "Log in with Ethereum" to work with smart contracts — and it can be implemented in many ways (Gnosis Safe having a nontrivial, interesting implementation to consider).
+[EIP-1271](https://eips.ethereum.org/EIPS/eip-1271) is a versatile standard that allows smart contracts to verify signatures. It opens the door for smart contracts to act more like EOAs — for instance providing a way for "Log in with Ethereum" to work with smart contracts — and it can be implemented in many ways (Safe having a nontrivial, interesting implementation to consider).
