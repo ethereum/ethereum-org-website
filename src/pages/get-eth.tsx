@@ -352,13 +352,16 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           </ButtonLink>
         </LeftColumn>
         <RightColumn>
-          <h3>
+          {/* <h3>
             <Translation id="page-get-eth-traditional-currencies" />
           </h3>
           <p>
             <Translation id="page-get-eth-traditional-payments" />
           </p>
-          <CardList content={decentralizedExchanges} />
+          <CardList content={decentralizedExchanges} /> 
+          
+          // Hide localcryptos.com card, cause its winding down
+          */}
           <h3>
             <Translation id="page-get-eth-other-cryptos" />
           </h3>
