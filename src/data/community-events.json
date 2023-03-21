@@ -78,7 +78,7 @@
     "location": "Podgorica, Montenegro",
     "description": "EDCON is a non-profit annual global conference committed to serving the Ethereum ecosystem in boosting the communication and interaction of Ethereum communities worldwide",
     "startDate": "2023-05-19",
-    "endDate": "2023-05-23"  
+    "endDate": "2023-05-23"
   },
   {
     "title": "BlockSplit",
@@ -598,7 +598,7 @@
     "to": "https://www.ethgathering.com/",
     "sponsor": null,
     "location": "Barcelona, Spain",
-    "description": "Hosted in one of the world's most vibrant and creative cities, ETH Gathering Barcelona 2022 is a two-day conference focused on the community building the decentralised future.",
+    "description": "Hosted in one of the world's most vibrant and creative cities, ETH Gathering Barcelona 2022 is a two-day conference focused on the community building the decentralized future.",
     "startDate": "2022-11-18",
     "endDate": "2022-11-20"
   },
