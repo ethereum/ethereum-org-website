@@ -217,7 +217,7 @@ To onboard more people onto Ethereum, the ecosystem must improve the UX/UI. This
 
 ### Economics {#economics}
 
-Economics research in Ethereum broadly follows two approaches: validate the security of mechanisms relying on economic incentives ("microeconomics") and analyse the flows of value between protocols, applications and users ("macroeconomics"). There are complex crypto-economic factors relating to Ethereum's native asset (ether) and the tokens built on top of it (for example NFTs and ERC20 tokens).
+Economics research in Ethereum broadly follows two approaches: validate the security of mechanisms relying on economic incentives ("microeconomics") and analyze the flows of value between protocols, applications and users ("macroeconomics"). There are complex crypto-economic factors relating to Ethereum's native asset (ether) and the tokens built on top of it (for example NFTs and ERC20 tokens).
 
 #### Background reading {#background-reading-9}
 
