@@ -6,7 +6,7 @@ import { Center, Text } from "@chakra-ui/react"
 import BannerNotification from "../BannerNotification"
 
 const BugBountyBanner: React.FC = () => (
-  <BannerNotification shouldShow>
+  <BannerNotification shouldShow={true}>
     <Center>
       <Text m={0} p={0}>
         All Shapella-related bounties currently receive a 2x bonus multiplier

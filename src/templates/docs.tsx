@@ -207,7 +207,7 @@ const DocsPage = ({
             slug={slug}
             editPath={absoluteEditPath}
             items={tocItems}
-            isMobile
+            isMobile={true}
             maxDepth={mdx.frontmatter.sidebarDepth!}
             hideEditButton={!!mdx.frontmatter.hideEditButton}
           />

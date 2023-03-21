@@ -391,7 +391,7 @@ const UseCasePage = ({
           <MobileTableOfContents
             items={tocItems}
             maxDepth={mdx.frontmatter.sidebarDepth!}
-            isMobile
+            isMobile={true}
           />
         </TitleCard>
         <Image

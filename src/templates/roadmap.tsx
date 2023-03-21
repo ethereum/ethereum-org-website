@@ -438,7 +438,7 @@ const RoadmapPage = ({
                   })}
                 </Wrap>
               )}
-              <MobileTableOfContents items={tocItems} isMobile />
+              <MobileTableOfContents items={tocItems} isMobile={true} />
             </TitleCard>
             <Image
               image={getImage(mdx.frontmatter.image)!}

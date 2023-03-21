@@ -34,7 +34,7 @@ Amb menys requeriments de hardware, la fragmentació farà més fàcil executar 
 
 <br />
 
-<InfoBanner isWarning>
+<InfoBanner isWarning={true}>
   En primer lloc, hauràs d'executar un client de xarxa Principal a la vegada que el teu client de Cadena de Balisa. <a href="https://launchpad.ethereum.org" target="_blank">La plataforma de llançament</a> us guiarà a través del procés i els requeriments de hardware. Alternativament, pots utilitzar una <a href="/developers/docs/apis/backend/#available-libraries">API de backend</a>.
 </InfoBanner>
 

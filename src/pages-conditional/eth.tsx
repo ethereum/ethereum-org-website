@@ -326,7 +326,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
               />
             ))}
           </StyledCardContainer>
-          <InfoBanner emoji=":wave:" shouldCenter>
+          <InfoBanner emoji=":wave:" shouldCenter={true}>
             <b>
               <Translation id="page-eth-buy-some" />
             </b>{" "}

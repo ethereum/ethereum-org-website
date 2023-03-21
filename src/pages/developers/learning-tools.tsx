@@ -281,7 +281,7 @@ const LearningToolsPage = ({
           <Translation id="page-learning-tools-sandbox-desc" />
         </p>
         <LearningToolsCardGrid category={randomizedSandboxes} />
-        <InfoBanner emoji=":point_up:" shouldCenter>
+        <InfoBanner emoji=":point_up:" shouldCenter={true}>
           <Translation id="page-learning-tools-remix-description-2" />
         </InfoBanner>
       </StackContainer>

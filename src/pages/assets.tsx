@@ -211,7 +211,7 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             image={data.wallet}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
-            shouldHide
+            shouldHide={true}
           />
         </Row>
         <Row>
@@ -292,7 +292,7 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             artistName="Tomo Saito"
             artistUrl="https://tomosaito.com/"
             image={data.leslieTheRhino}
-            shouldHide
+            shouldHide={true}
           />
         </Row>
         <H2 id="historical">

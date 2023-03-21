@@ -193,7 +193,7 @@ const TutorialPage = ({
             items={tocItems}
             maxDepth={mdx.frontmatter.sidebarDepth!}
             editPath={absoluteEditPath}
-            isMobile
+            isMobile={true}
           />
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
