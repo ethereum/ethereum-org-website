@@ -446,7 +446,7 @@ const GetInvolvedPage = ({
             description={client.description}
             alt={client.alt}
             githubUrl={client.githubUrl}
-            hideStars={true}
+            hideStars
           >
             {client.children}
           </ProductCard>

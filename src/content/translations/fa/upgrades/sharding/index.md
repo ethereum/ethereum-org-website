@@ -34,7 +34,7 @@ summaryPoint4: این ارتقا برای بعد از ادغام شبکه اصل
 
 <br />
 
-<InfoBanner isWarning={true}>
+<InfoBanner isWarning>
   در ابتدا، نیاز خواهید داشت تا یک در کنار شبکه‌ی اصلی، زنجیره‌ی بیکن را اجرا کنید. <a href="https://launchpad.ethereum.org" target="_blank">صحفه پرتاب</a> شما را در مسیر این فرآیند و پیش نیازهای سخت افزاری همراهی خواهد کرد. همین‌طور می‌توانید از<a href="/developers/docs/apis/backend/#available-libraries">Backend API</a> به شکل جایگزین استفاده کنید.
 </InfoBanner>
 

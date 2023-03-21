@@ -323,7 +323,7 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
               <Translation id="page-upgrades-whats-next-history" />
             </Link>
           </GhostCard>
-          <InfoBanner isWarning={true}>
+          <InfoBanner isWarning>
             <H2>
               <Translation id="page-upgrades-what-to-do" />
             </H2>

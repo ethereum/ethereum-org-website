@@ -34,7 +34,7 @@ Dengan persyaratan spesifikasi perangkat keras yang rendah, sharding akan memper
 
 <br />
 
-<InfoBanner isWarning={true}>
+<InfoBanner isWarning>
   Pertama - tama, Anda perlu menjalankan klien Jaringan Utama bersamaan dengan klien Rantai Suar Anda. <a href="https://launchpad.ethereum.org" target="_blank">Launchpad</a> akan membantu Anda dalam persyaratan spesifikasi perangkat keras dan prosesnya. Sebagai alternatif, Anda juga dapat menggunakan <a href="/developers/docs/apis/backend/#available-libraries">API backend</a>.
 </InfoBanner>
 

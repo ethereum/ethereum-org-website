@@ -34,7 +34,7 @@ Na mahitaji ya chini ya vifaa, ugawanyaji utafanya iwe rahisi kuendesha [wateja]
 
 <br />
 
-<InfoBanner isWarning={true}>
+<InfoBanner isWarning>
   Mara ya kwanza, utahitaji kuendesha programu ya mtandao mkuu (mainnet) kwa wakati mmoja na programu yako ya Eth2. <a href="https://launchpad.ethereum.org" target="_blank">Uzinduzi wa pedi</a>itakuelekeza mahitaji ya vifaa na mchakato. Vinginevyo unaweza kutumia <a href="/developers/docs/apis/backend/#available-libraries">mawasiliano ya nyuma ya programu(backend API)</a>.
 </InfoBanner>
 
