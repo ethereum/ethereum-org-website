@@ -3,14 +3,13 @@ import { Box, HStack, Icon } from "@chakra-ui/react"
 
 import { motion } from "framer-motion"
 import { MdExpandMore } from "react-icons/md"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import Link, { IProps as ILinkProps } from "./Link"
 import Translation from "./Translation"
 import { dropdownIconContainerVariant } from "./SharedStyledComponents"
 
 import docLinks from "../data/developer-docs-links.yaml"
-import { translateMessageId } from "../utils/translations"
 import { DeveloperDocsLink } from "../types"
 
 const innerLinksVariants = {
@@ -134,7 +133,7 @@ export interface IProps {
 // and they only collapse when clicked on.
 // e.g. solution: https://github.com/hasura/gatsby-gitbook-starter/blob/5c165af40e48fc55eb06b45b95c84eb64b17ed32/src/components/sidebar/tree.js
 const SideNav: React.FC<IProps> = ({ path }) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   return (
     <Box
@@ -153,7 +152,7 @@ const SideNav: React.FC<IProps> = ({ path }) => {
       borderRight="1px solid"
       borderRightColor="border"
       display={{ base: "none", lg: "block" }}
-      aria-label={translateMessageId("nav-developers-docs", intl)}
+      aria-label={t("nav-developers-docs")}
     >
       {docLinks.map((item, idx) => (
         <NavLink item={item} path={path} key={idx} />

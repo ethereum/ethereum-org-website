@@ -8,7 +8,6 @@
   "page-developers-advanced": "Tingkat Lanjut",
   "page-developers-api-desc": "Menggunakan pustaka untuk berinteraksi dengan kontrak pintar",
   "page-developers-api-link": "API Backend",
-  "page-developers-aria-label": "Menu Pengembang",
   "page-developers-block-desc": "Sekumpulan transaksi ditambahkan ke blockchain",
   "page-developers-block-explorers-desc": "Portal Anda ke data Ethereum",
   "page-developers-block-explorers-link": "Penjelajah blok",
@@ -84,5 +83,7 @@
   "page-developers-transactions-desc": "Cara status Ethereum berubah",
   "page-developers-transactions-link": "Transaksi",
   "page-developers-web3-desc": "Bagaimana dunia pengembangan web3 berbeda",
-  "page-developers-web3-link": "Web2 vs Web3"
+  "page-developers-web3-link": "Web2 vs Web3",
+  "alt-eth-blocks": "Ilustrasi blok yang diorganisir seperti simbol ETH",
+  "page-assets-doge": "Doge menggunakan dapp"
 }

@@ -62,5 +62,6 @@
   "page-get-eth-your-address": "Seu endereço de ETH",
   "page-get-eth-your-address-desc": "Quando você baixar uma carteira, ela criará um endereço ETH público para você. Ele se verá assim:",
   "page-get-eth-your-address-desc-3": "Pense nele como seu endereço de e-mail, mas em vez de mensagem, ele pode receber ETH. Se você quiser transferir ETH de uma exchange para sua carteira, use seu endereço como o destino. Não deixe de verificar o endereço antes de enviar!",
-  "page-get-eth-your-address-wallet-link": "Confira as carteiras"
+  "page-get-eth-your-address-wallet-link": "Confira as carteiras",
+  "listing-policy-raise-issue-link": "Fazer uma consulta"
 }

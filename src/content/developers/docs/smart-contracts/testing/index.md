@@ -227,6 +227,10 @@ Formal verification is considered important for smart contracts because it helps
 
 - [Website](https://www.openzeppelin.com/security-audits)
 
+**Nethermind** - _Solidity and Cairo auditing services, ensuring the integrity of smart contracts and the safety of users across Ethereum and Starknet._
+
+- [Website](https://nethermind.io/smart-contracts-audits)
+
 ### Bug bounty platforms {#bug-bounty-platforms}
 
 **Immunefi** - _Bug bounty platform for smart contracts and DeFi projects, where security researchers review code, disclose vulnerabilities, get paid, and make crypto safer._

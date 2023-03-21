@@ -4,10 +4,18 @@
   "page-upgrades-beacon-date": "¡Enviado!",
   "page-upgrades-merge-date": "Septiembre de 2022\n",
   "page-upgrades-shards-date": "aproximadamente en 2023",
-  "page-upgrades-merge-banner-intro": "La Fusión se acerca y trae cambios en Ethereum.",
-  "page-upgrades-merge-banner-content-outdated": "Algunos contenidos de esta página están obsoletos en lo que respecta a estos cambios. Próximamente se hará una actualización.",
-  "page-upgrades-merge-banner-developers-landing": "Algunos documentos tienen indicadores que están obsoletos. Próximamente se hará una actualización.",
   "page-upgrades-post-merge-banner-tutorial-ood": "Este tutorial estará obsoleto después de la fusión y puede que no funcione. Por favor, cree una PR si desea contribuir.",
-  "page-upgrades-post-merge-banner-tutorial-light-node-ood": "Este tutorial estará obsoleto después de la fusión. Los nodos ligeros no funcionan actualmente en la prueba de participación, pero se espera que funcionen pronto.",
-  "page-upgrades-post-merge-banner-governance-ood": "Parte del contenido de esta página estará obsoleto después de la fusión. Por favor cree una PR si quiere contribuir."
+  "page-upgrades-post-merge-banner-governance-ood": "Parte del contenido de esta página estará obsoleto después de la fusión. Por favor cree una PR si quiere contribuir.",
+  "page-upgrades-upgrades-guide": "Guía de actualizaciones de Ethereum",
+  "page-upgrades-upgrades-docking": "La fusión",
+  "page-upgrades-shard-title": "La fragmentación",
+  "page-upgrades-upgrades-beacon-chain": "La cadena de baliza",
+  "consensus-beaconcha-in-desc": "Explorador de la cadena de baliza de código abierto",
+  "consensus-beaconscan-desc": "Explorador de la cadena de baliza - Etherscan para la capa de consenso",
+  "consensus-become-staker": "Conviértase en un participante",
+  "consensus-become-staker-desc": "El «staking» (o apuestas) ya es una realidad. Si quiere hacer apuestas con sus ETH para ayudar a hacer segura la red, asegúrese de que es consciente de los riesgos.",
+  "consensus-explore": "Explorar los datos",
+  "consensus-run-beacon-chain": "Ejecutar un cliente de consenso",
+  "consensus-run-beacon-chain-desc": "Ethereum necesita tantos clientes participando como sea posible. ¡Ayude con este bien público de Ethereum!",
+  "read-more": "Más información"
 }

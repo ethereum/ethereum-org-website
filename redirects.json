@@ -49,7 +49,7 @@
   },
   {
     "fromPath": "/eth2/",
-    "toPath": "/en/upgrades/"
+    "toPath": "/en/roadmap/"
   },
   {
     "fromPath": "/build/",
@@ -197,11 +197,23 @@
   },
   {
     "fromPath": "/*/eth2/shard-chains/",
-    "toPath": "/:splat/upgrades/sharding/"
+    "toPath": "/:splat/roadmap/danksharding/"
   },
   {
     "fromPath": "/*/upgrades/shard-chains/",
-    "toPath": "/:splat/upgrades/sharding/"
+    "toPath": "/:splat/roadmap/danksharding/"
+  },
+  {
+    "fromPath": "/upgrades/sharding/",
+    "toPath": "/en/roadmap/danksharding/"
+  },
+  {
+    "fromPath": "/*/upgrades/sharding/",
+    "toPath": "/:splat/roadmap/danksharding/"
+  },
+  {
+    "fromPath": "/upgrades/shard-chains/",
+    "toPath": "/en/roadmap/danksharding/"
   },
   {
     "fromPath": "/*/eth2/staking/",

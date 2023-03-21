@@ -11,7 +11,7 @@ import {
   Icon,
 } from "@chakra-ui/react"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "react-intl"
+import { useI18next } from "gatsby-plugin-react-i18next"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
@@ -215,9 +215,9 @@ const components = {
 
 const StaticPage = ({
   data: { siteData, pageData: mdx },
-  pageContext: { relativePath },
+  pageContext: { relativePath, slug },
 }: PageProps<Queries.StaticPageQuery, Context>) => {
-  const intl = useIntl()
+  const { language } = useI18next()
 
   if (!siteData || !mdx?.frontmatter || !mdx.parent)
     throw new Error(
@@ -243,8 +243,6 @@ const StaticPage = ({
   const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
   const { editContentUrl } = siteData.siteMetadata || {}
   const absoluteEditPath = `${editContentUrl}${relativePath}`
-
-  const slug = mdx.fields?.slug || ""
 
   return (
     <Box w="full">
@@ -321,7 +319,21 @@ const StaticPage = ({
 }
 
 export const staticPageQuery = graphql`
-  query StaticPage($relativePath: String) {
+  query StaticPage($languagesToFetch: [String!]!, $relativePath: String) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-about", "page-community", "learn-quizzes", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     siteData: site {
       siteMetadata {
         editContentUrl

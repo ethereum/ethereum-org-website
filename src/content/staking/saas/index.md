@@ -74,7 +74,7 @@ Stakers who provided a withdrawal address with initial deposit do not need to se
 <ExpandableCard title="When can I withdraw?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 When you stake 32 ETH with a SaaS provider, that ETH is still deposited to the official staking deposit contract. As such, SaaS stakers are limited by the same withdrawal restrictions as solo stakers, and withdrawals are not enabled until the Shanghai upgrade.
 
-Staking withdrawals will be implemented in the upcoming Shanghai upgrade, which is expected in Q1/Q2 2023. After that, stakers need to provide a withdrawal address (if not provided on initial deposit), and reward payments will begin being distributed automatically on a periodic basis every few days.
+Staking withdrawals will be implemented in the upcoming Shanghai upgrade, which is scheduled for April 12, 2023. After that, stakers need to provide a withdrawal address (if not provided on initial deposit), and reward payments will begin being distributed automatically on a periodic basis every few days.
 
 This will also enable the unlocking of exited funds. Validators can fully exit as a validator, and they will receive their entire balance back to the withdrawal address provided.
 

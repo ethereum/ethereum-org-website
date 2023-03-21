@@ -8,7 +8,6 @@
   "page-developers-advanced": "उन्नत",
   "page-developers-api-desc": "स्मार्ट कॉन्ट्रैक्ट के साथ इंटरैक्ट करने के लिए लाइब्रेरी का उपयोग करना",
   "page-developers-api-link": "बैकएंड API",
-  "page-developers-aria-label": "डेवलपर्स का मेनू",
   "page-developers-block-desc": "लेनदेन के बैच ब्लॉकचेन में जोड़े गए",
   "page-developers-block-explorers-desc": "इथेरियम डेटा के लिए आपका पोर्टल",
   "page-developers-block-explorers-link": "ब्लॉक खोजकर्ता",
@@ -80,5 +79,7 @@
   "page-developers-transactions-desc": "इथेरियम की स्थिति बदलने का तरीका",
   "page-developers-transactions-link": "लेनदेन",
   "page-developers-web3-desc": "web3 डेवलपमेंट की दुनिया अलग कैसे है",
-  "page-developers-web3-link": "Web2 बनाम Web3"
+  "page-developers-web3-link": "Web2 बनाम Web3",
+  "alt-eth-blocks": "ETH प्रतीक की तरह व्यवस्थित किए जा रहे ब्लॉकों का चित्रण",
+  "page-assets-doge": "डेप्स का उपयोग करने वाला Doge"
 }

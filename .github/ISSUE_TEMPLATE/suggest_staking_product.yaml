@@ -193,3 +193,12 @@ body:
     attributes:
       label: Social media links
       description: List available social media links. ie. Discord, Twitter, Telegram, Reddit
+  - type: checkboxes
+    id: exchange_work_on
+    attributes:
+      label: Would you like to work on this issue?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
