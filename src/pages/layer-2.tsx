@@ -648,7 +648,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
       </PaddedContent>
 
       <PaddedContent>
-        <InfoBanner isWarning={true}>
+        <InfoBanner isWarning>
           <h2>
             <Translation id="layer-2-dyor-title" />
           </h2>

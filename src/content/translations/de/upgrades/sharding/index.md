@@ -34,7 +34,7 @@ Dank Sharding werden geringere Hardwareanforderungen es vereinfachen, [Clients](
 
 <br />
 
-<InfoBanner isWarning={true}>
+<InfoBanner isWarning>
   Zunächst müssen Sie einen Mainnet-Client gleichzeitig mit Ihrem Beacon Chain-Client ausführen. <a href="https://launchpad.ethereum.org" target="_blank">Das Launchpad</a> wird dich durch die Hardwareanforderungen und den Prozess begleiten. Alternativ können Sie auch eine <a href="/developers/docs/apis/backend/#available-libraries">Backend-API</a> verwenden.
 </InfoBanner>
 

@@ -11,7 +11,7 @@ export interface IProps {
 
 const PostMergeBanner: React.FC<IProps> = ({ translationString }) => (
   <BannerNotification
-    shouldShow={true}
+    shouldShow
     zIndex={1}
     textAlign="center"
     sx={{

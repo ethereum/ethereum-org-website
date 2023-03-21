@@ -92,7 +92,7 @@ const ActionCard: React.FC<IProps> = ({
   const isImageURL = typeof image === "string"
 
   return (
-    <Card to={to} className={className} hideArrow={true}>
+    <Card to={to} className={className} hideArrow>
       <ImageWrapper
         isRight={isRight}
         isBottom={isBottom}
