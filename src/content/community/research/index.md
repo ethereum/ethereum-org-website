@@ -249,7 +249,7 @@ Blockspace markets govern the inclusion of end-user transactions, either directl
 
 ### Proof-of-stake incentives {#proof-of-stake-incentives}
 
-Validators use Ethereum's native asset (ether) as collateral against dishonest behaviour. The cryptoeconomics of this determines the security of the network. Sophisticated validators may be able to exploit the nuances of the incentive layer to launch explicit attacks.
+Validators use Ethereum's native asset (ether) as collateral against dishonest behavior. The cryptoeconomics of this determines the security of the network. Sophisticated validators may be able to exploit the nuances of the incentive layer to launch explicit attacks.
 
 #### Background reading {#background-reading-11}
 
