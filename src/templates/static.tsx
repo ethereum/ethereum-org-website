@@ -4,10 +4,10 @@ import {
   Box,
   Flex,
   Text,
-  useTheme,
   Divider as ChakraDivider,
   Heading,
   ListItem as ChakraListItem,
+  UnorderedList as ChakraUnorderedList,
   Icon,
 } from "@chakra-ui/react"
 import { graphql, PageProps } from "gatsby"
@@ -53,145 +53,122 @@ import { ChildOnlyProp, Context } from "../types"
 
 // Apply styles for classes within markdown here
 
-const Pre = ({ children }: ChildOnlyProp) => {
-  return (
-    <Text
-      as="pre"
-      maxW="full"
-      overflowX="scroll"
-      bgColor="preBackground"
-      borderRadius="base"
-      p={4}
-      border="1px solid"
-      borderColor="preBorder"
-      whiteSpace="pre-wrap"
-    >
-      {children}
-    </Text>
-  )
-}
+const Pre = (props: ChildOnlyProp) => (
+  <Text
+    as="pre"
+    maxW="full"
+    overflowX="scroll"
+    bgColor="preBackground"
+    borderRadius="base"
+    p={4}
+    border="1px solid"
+    borderColor="preBorder"
+    whiteSpace="pre-wrap"
+    {...props}
+  />
+)
 
-const HR = () => {
-  return (
-    <ChakraDivider
-      mt={8}
-      mb={4}
-      display="inline-block"
-      position="inherit"
-      bg="border"
-    />
-  )
-}
+const HR = () => (
+  <ChakraDivider
+    mt={8}
+    mb={4}
+    display="inline-block"
+    position="inherit"
+    bg="border"
+  />
+)
 
-const Divider = () => {
-  return <Box my={16} w="10%" h={1} bgColor="homeDivider" />
-}
+const Divider = () => <Box my={16} w="10%" h={1} bgColor="homeDivider" />
 
-const Header1 = ({ children }: ChildOnlyProp) => {
-  return (
-    <Heading
-      as="h1"
-      fontSize={{ base: "2.5rem", md: "5xl" }}
-      lineHeight={1.4}
-      fontWeight="bold"
-      _before={{
-        content: `""`,
-        display: "block",
-        h: "140px",
-        mt: "-140px",
-        visibility: "hidden",
-      }}
-      sx={{
-        a: {
-          display: "none",
-        },
-      }}
-    >
-      {children}
-    </Heading>
-  )
-}
+const Header1 = (props: ChildOnlyProp) => (
+  <Heading
+    as="h1"
+    fontSize={{ base: "2.5rem", md: "5xl" }}
+    lineHeight={1.4}
+    fontWeight="bold"
+    _before={{
+      content: `""`,
+      display: "block",
+      h: "140px",
+      mt: "-140px",
+      visibility: "hidden",
+    }}
+    sx={{
+      a: {
+        display: "none",
+      },
+    }}
+    {...props}
+  />
+)
 
-const Header2 = ({ children }: ChildOnlyProp) => {
-  return (
-    <Heading
-      fontSize={{ base: "2xl", md: "2rem" }}
-      lineHeight={1.4}
-      fontWeight="bold"
-      sx={{ position: "inherit !important" }}
-      _before={{
-        content: `""`,
-        display: "block",
-        h: "120px",
-        mt: "-120px",
-        visibility: "hidden",
-      }}
-    >
-      {children}
-    </Heading>
-  )
-}
+const Header2 = (props: ChildOnlyProp) => (
+  <Heading
+    fontSize={{ base: "2xl", md: "2rem" }}
+    lineHeight={1.4}
+    fontWeight="bold"
+    sx={{ position: "inherit !important" }}
+    _before={{
+      content: `""`,
+      display: "block",
+      h: "120px",
+      mt: "-120px",
+      visibility: "hidden",
+    }}
+    {...props}
+  />
+)
 
-const Header3 = ({ children }: ChildOnlyProp) => {
-  return (
-    <Heading
-      as="h3"
-      fontSize={{ base: "xl", md: "2xl" }}
-      lineHeight={1.4}
-      sx={{ position: "inherit !important" }}
-      _before={{
-        content: `""`,
-        display: "block",
-        h: "120px",
-        mt: "-120px",
-        visibility: "hidden",
-      }}
-    >
-      {children}
-    </Heading>
-  )
-}
+const Header3 = (props: ChildOnlyProp) => (
+  <Heading
+    as="h3"
+    fontSize={{ base: "xl", md: "2xl" }}
+    lineHeight={1.4}
+    sx={{ position: "inherit !important" }}
+    _before={{
+      content: `""`,
+      display: "block",
+      h: "120px",
+      mt: "-120px",
+      visibility: "hidden",
+    }}
+    {...props}
+  />
+)
 
-const Header4 = ({ children }: ChildOnlyProp) => {
-  return (
-    <Heading
-      as="h4"
-      fontSize={{ base: "md", md: "xl" }}
-      lineHeight={1.4}
-      fontWeight="semibold"
-      sx={{ position: "unset !important" }}
-      _before={{
-        content: `""`,
-        display: "block",
-        h: "120px",
-        mt: "-120px",
-        visibility: "hidden",
-      }}
-    >
-      {children}
-    </Heading>
-  )
-}
+const Header4 = (props: ChildOnlyProp) => (
+  <Heading
+    as="h4"
+    fontSize={{ base: "md", md: "xl" }}
+    lineHeight={1.4}
+    fontWeight="semibold"
+    sx={{ position: "unset !important" }}
+    _before={{
+      content: `""`,
+      display: "block",
+      h: "120px",
+      mt: "-120px",
+      visibility: "hidden",
+    }}
+    {...props}
+  />
+)
 
-const Paragraph = ({ children }: ChildOnlyProp) => {
-  return (
-    <Text fontSize="md" mt={8} mb={4} color="text300">
-      {children}
-    </Text>
-  )
-}
+const Paragraph = (props: ChildOnlyProp) => (
+  <Text fontSize="md" mt={8} mb={4} color="text300" {...props} />
+)
 
-const ListItem = ({ children }: ChildOnlyProp) => {
-  return <ChakraListItem color="text300">{children}</ChakraListItem>
-}
+const ListItem = (props: ChildOnlyProp) => (
+  <ChakraListItem color="text300" {...props} />
+)
 
-const CardContainer = ({ children }: ChildOnlyProp) => {
-  return (
-    <Flex wrap="wrap" mx={-4}>
-      {children}
-    </Flex>
-  )
-}
+const UnorderedList = (props: ChildOnlyProp) => (
+  <ChakraUnorderedList ms="1.45rem" {...props} />
+)
+
+const CardContainer = (props: ChildOnlyProp) => (
+  <Flex wrap="wrap" mx={-4} {...props} />
+)
 
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
@@ -202,6 +179,7 @@ const components = {
   h3: Header3,
   h4: Header4,
   p: Paragraph,
+  ul: UnorderedList,
   li: ListItem,
   pre: Pre,
   hr: HR,
@@ -239,7 +217,6 @@ const StaticPage = ({
   data: { siteData, pageData: mdx },
   pageContext: { relativePath },
 }: PageProps<Queries.StaticPageQuery, Context>) => {
-  const theme = useTheme()
   const intl = useIntl()
 
   if (!siteData || !mdx?.frontmatter || !mdx.parent)
