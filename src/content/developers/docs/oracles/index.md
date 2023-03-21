@@ -382,7 +382,7 @@ Developers will need to trigger such functions at intervals to keep the applicat
 
 Some decentralized oracle networks offer automation services, which allow off-chain oracle nodes to trigger smart contract functions according to parameters defined by the user. Typically, this requires “registering” the target contract with the oracle service, providing funds to pay the oracle operator, and specifying the conditions or times to trigger the contract.
 
-An example is Chainlink’s [Keeper Network](https://chain.link/keepers), which provides options for smart contracts to outsource regular maintenance tasks in a trust minimized and decentralized manner. Read the official [Keepers documentation](https://docs.chain.link/docs/chainlink-keepers/introduction/) for information on making your contract Keeper-compatible and using the Upkeep service.
+An example is Chainlink’s [Keeper Network](https://chain.link/keepers), which provides options for smart contracts to outsource regular maintenance tasks in a trust minimized and decentralized manner. Read the official [Keeper's documentation](https://docs.chain.link/docs/chainlink-keepers/introduction/) for information on making your contract Keeper-compatible and using the Upkeep service.
 
 ## Use blockchain oracles {#use-blockchain-oracles}
 
@@ -402,7 +402,7 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 
 **[Paralink](https://paralink.network/)** - _Paralink provides an open source and decentralized oracle platform for smart contracts running on Ethereum and other popular blockchains._
 
-**[Dos.Network](https://dos.network/)** - _DOS Network is a decentralized oracle service network to boost blockchain usability with real-world data and computation power._
+**[DOS Network](https://dos.network/)** - _DOS Network is a decentralized oracle service network to boost blockchain usability with real-world data and computation power._
 
 **[Pyth Network](https://pyth.network/)** - _The Pyth network is a first-party financial oracle network designed to publish continuous real-world data on-chain in a tamper-resistant, decentralized, and self-sustainable environment._
 
