@@ -291,7 +291,7 @@ const StaticPage = ({
         />
         <Box
           as="article"
-          maxW={theme.breakpoints.md}
+          maxW="container.md"
           w="full"
           sx={{
             ".featured": {
