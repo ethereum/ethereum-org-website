@@ -222,7 +222,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
               </Text>
               <Translation id="data-provided-by" />{" "}
               <Link to="https://beaconcha.in/ethstore">
-                Beaconcha.in ETH.STORE
+                Beaconcha.in
               </Link>
             </div>
           </BeaconchainTooltip>
