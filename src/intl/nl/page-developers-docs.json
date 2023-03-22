@@ -1,5 +1,10 @@
 {
   "layer-2-arbitrum-note": "Fraud proofs alleen voor gewhiteliste gebruikers, whitelist is nog niet geopend",
   "layer-2-boba-note": "Staatsvalidatie in ontwikkeling",
-  "layer-2-optimism-note": "Fault proofs in ontwikkeling"
+  "layer-2-metis-note": "Fraud proofs in ontwikkeling",
+  "layer-2-optimism-note": "Fault proofs in ontwikkeling",
+  "back-to-top": "Terug naar boven",
+  "banner-page-incomplete": "Deze pagina is onvolledig en wij zouden graag uw hulp gebruiken. Bewerk deze pagina en voeg iets toe waarvan u denkt dat het nuttig zou kunnen zijn voor anderen.",
+  "next": "Volgende",
+  "previous": "Vorige"
 }
