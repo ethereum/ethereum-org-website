@@ -172,8 +172,8 @@ const StakingStatsBox: React.FC<IProps> = () => {
           <Translation id="page-staking-stats-box-metric-1" />
           <BeaconchainTooltip>
             <Text>
-              Total cumulative ETH at stake on the Beacon Chain (does not
-              include accumulated rewards above 32 ETH)
+              Sum of ETH at stake on the Beacon Chain, not including balances
+              over 32 ETH
             </Text>
             <Translation id="data-provided-by" />{" "}
             <Link to="https://beaconcha.in/">Beaconcha.in</Link>
@@ -192,7 +192,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
           <Translation id="page-staking-stats-box-metric-2" />
           <BeaconchainTooltip>
             <Text>
-              Number of active, non-exited validator accounts on the Beacon
+              Number of validator accounts currently activated on the Beacon
               Chain
             </Text>
             <Translation id="data-provided-by" />{" "}
