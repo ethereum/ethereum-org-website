@@ -5,6 +5,5 @@
   "consensus-become-staker-desc": "Staking er live! Hvis du vil stake dine ETH for å bidra til å sikre nettverket, må du være sikker på at du er klar over risikoene.",
   "consensus-explore": "Utforsk dataene",
   "consensus-run-beacon-chain": "Kjør en konsensus-klient",
-  "consensus-run-beacon-chain-desc": "Ethereum trenger at så mange klienter som mulig kjører. Hjelp med dette felles Ethereum-godet!",
-  "read-more": "Les mer"
+  "consensus-run-beacon-chain-desc": "Ethereum trenger at så mange klienter som mulig kjører. Hjelp med dette felles Ethereum-godet!"
 }

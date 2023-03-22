@@ -9,13 +9,5 @@
   "page-upgrades-upgrades-guide": "دليل ترقيات إثيريوم",
   "page-upgrades-upgrades-docking": "الدمج",
   "page-upgrades-shard-title": "التقسيم",
-  "page-upgrades-upgrades-beacon-chain": "سلسلة المنارة",
-  "consensus-beaconcha-in-desc": "مستكشف سلسلة المنارة المفتوح المصدر",
-  "consensus-beaconscan-desc": "مستكشف سلسلة المنارة - مسح إثير من أجل طبقة إجماع الآراء",
-  "consensus-become-staker": "كن مراهنًا",
-  "consensus-become-staker-desc": "بدأ تجميد العملات! إذا كنت تتطلع لتجميد عملة إثير للمساعدة على تأمين الشبكة، فتأكد من أنك على دراية بالمخاطر.",
-  "consensus-explore": "استكشاف البيانات",
-  "consensus-run-beacon-chain": "تشغيل عميل إجماع آراء",
-  "consensus-run-beacon-chain-desc": "يحتاج إثيريوم إلى أكبر عدد ممكن من العملاء. ساعد إثيريوم للمصلحة العامة!",
-  "read-more": "قراءة المزيد"
+  "page-upgrades-upgrades-beacon-chain": "سلسلة المنارة"
 }
