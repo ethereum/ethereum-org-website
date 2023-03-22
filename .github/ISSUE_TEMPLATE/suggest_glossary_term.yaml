@@ -50,9 +50,9 @@ body:
     attributes:
       label: Would you like to work on this issue?
       options:
-        - label: Yes
+        - label: "Yes"
           required: false
-        - label: No
+        - label: "No"
           required: false
     validations:
       required: true
