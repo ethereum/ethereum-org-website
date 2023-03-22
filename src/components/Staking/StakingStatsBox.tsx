@@ -171,14 +171,12 @@ const StakingStatsBox: React.FC<IProps> = () => {
         <Label>
           <Translation id="page-staking-stats-box-metric-1" />
           <BeaconchainTooltip>
-            <div>
-              <Text>
-                Total cumulative ETH at stake on the Beacon Chain (does not
-                include accumulated rewards above 32 ETH)
-              </Text>
-              <Translation id="data-provided-by" />{" "}
-              <Link to="https://beaconcha.in/">Beaconcha.in</Link>
-            </div>
+            <Text>
+              Total cumulative ETH at stake on the Beacon Chain (does not
+              include accumulated rewards above 32 ETH)
+            </Text>
+            <Translation id="data-provided-by" />{" "}
+            <Link to="https://beaconcha.in/">Beaconcha.in</Link>
           </BeaconchainTooltip>
         </Label>
       </Cell>
@@ -193,14 +191,12 @@ const StakingStatsBox: React.FC<IProps> = () => {
         <Label>
           <Translation id="page-staking-stats-box-metric-2" />
           <BeaconchainTooltip>
-            <div>
-              <Text>
-                Number of active, non-exited validator accounts on the Beacon
-                Chain
-              </Text>
-              <Translation id="data-provided-by" />{" "}
-              <Link to="https://beaconcha.in/">Beaconcha.in</Link>
-            </div>
+            <Text>
+              Number of active, non-exited validator accounts on the Beacon
+              Chain
+            </Text>
+            <Translation id="data-provided-by" />{" "}
+            <Link to="https://beaconcha.in/">Beaconcha.in</Link>
           </BeaconchainTooltip>
         </Label>
       </Cell>
@@ -215,16 +211,12 @@ const StakingStatsBox: React.FC<IProps> = () => {
         <Label>
           <Translation id="page-staking-stats-box-metric-3" />
           <BeaconchainTooltip>
-            <div>
-              <Text>
-                Average annualized financial return per validator over the past
-                24-hour period
-              </Text>
-              <Translation id="data-provided-by" />{" "}
-              <Link to="https://beaconcha.in/ethstore">
-                Beaconcha.in
-              </Link>
-            </div>
+            <Text>
+              Average annualized financial return per validator over the past
+              24-hour period
+            </Text>
+            <Translation id="data-provided-by" />{" "}
+            <Link to="https://beaconcha.in/ethstore">Beaconcha.in</Link>
           </BeaconchainTooltip>
         </Label>
       </Cell>
