@@ -1,8 +1,8 @@
 // Libraries
-import React from "react"
+import React, { ReactNode } from "react"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import styled from "@emotion/styled"
 import { type Icon as ChakraIcon } from "@chakra-ui/react"
 
@@ -42,7 +42,7 @@ import FeedbackCard from "../components/FeedbackCard"
 import Icon from "../components/Icon"
 
 // Utils
-import { translateMessageId, TranslationKey } from "../utils/translations"
+import { TranslationKey } from "../utils/translations"
 import { scrollIntoView } from "../utils/scrollIntoView"
 import { getImage } from "../utils/image"
 
@@ -391,20 +391,20 @@ const StrongParagraph = styled.p`
 
 interface RunANodeCard {
   image: typeof ChakraIcon
-  title: TranslationKey
-  preview: TranslationKey
-  body: Array<TranslationKey>
-  alt: TranslationKey
+  title: string
+  preview: ReactNode
+  body: Array<string>
+  alt: string
 }
 
 const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const heroContent = {
     title: <Translation id="page-run-a-node-title" />,
     header: <Translation id="page-run-a-node-hero-header" />,
     subtitle: <Translation id="page-run-a-node-hero-subtitle" />,
     image: getImage(data.ethereumInside)!,
-    alt: translateMessageId("page-run-a-node-hero-alt", intl),
+    alt: t("page-run-a-node-hero-alt"),
     buttons: [
       {
         content: <Translation id="page-run-a-node-hero-cta-1" />,
@@ -421,69 +421,72 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
   const whyRunANodeCards: Array<RunANodeCard> = [
     {
       image: PrivacyGlyphIcon,
-      title: "page-run-a-node-privacy-title",
-      preview: "page-run-a-node-privacy-preview",
+      title: t("page-run-a-node-privacy-title"),
+      preview: t("page-run-a-node-privacy-preview"),
       body: [
-        "page-run-a-node-privacy-1",
-        "page-run-a-node-privacy-2",
-        "page-run-a-node-privacy-3",
+        t("page-run-a-node-privacy-1"),
+        t("page-run-a-node-privacy-2"),
+        t("page-run-a-node-privacy-3"),
       ],
-      alt: "page-run-a-node-glyph-alt-privacy",
+      alt: t("page-run-a-node-glyph-alt-privacy"),
     },
     {
       image: MegaphoneGlyphIcon,
-      title: "page-run-a-node-censorship-resistance-title",
-      preview: "page-run-a-node-censorship-resistance-preview",
+      title: t("page-run-a-node-censorship-resistance-title"),
+      preview: t("page-run-a-node-censorship-resistance-preview"),
       body: [
-        "page-run-a-node-censorship-resistance-1",
-        "page-run-a-node-censorship-resistance-2",
+        t("page-run-a-node-censorship-resistance-1"),
+        t("page-run-a-node-censorship-resistance-2"),
       ],
-      alt: "page-run-a-node-glyph-alt-censorship-resistance",
+      alt: t("page-run-a-node-glyph-alt-censorship-resistance"),
     },
     {
       image: EarthGlyphIcon,
-      title: "page-run-a-node-participate-title",
-      preview: "page-run-a-node-participate-preview",
-      body: ["page-run-a-node-participate-1", "page-run-a-node-participate-2"],
-      alt: "page-run-a-node-glyph-alt-earth",
+      title: t("page-run-a-node-participate-title"),
+      preview: <Translation id="page-run-a-node-participate-preview" />,
+      body: [
+        t("page-run-a-node-participate-1"),
+        t("page-run-a-node-participate-2"),
+      ],
+      alt: t("page-run-a-node-glyph-alt-earth"),
     },
     {
       image: DecentralizationGlyphIcon,
-      title: "page-run-a-node-decentralized-title",
-      preview: "page-run-a-node-decentralized-preview",
+      title: t("page-run-a-node-decentralized-title"),
+      preview: t("page-run-a-node-decentralized-preview"),
       body: [
-        "page-run-a-node-decentralized-1",
-        "page-run-a-node-decentralized-2",
+        t("page-run-a-node-decentralized-1"),
+        t("page-run-a-node-decentralized-2"),
       ],
-      alt: "page-run-a-node-glyph-alt-decentralization",
+      alt: t("page-run-a-node-glyph-alt-decentralization"),
     },
     {
       image: VoteGlyphIcon,
-      title: "page-run-a-node-voice-your-choice-title",
-      preview: "page-run-a-node-voice-your-choice-preview",
+      title: t("page-run-a-node-voice-your-choice-title"),
+      preview: t("page-run-a-node-voice-your-choice-preview"),
       body: [
-        "page-run-a-node-voice-your-choice-1",
-        "page-run-a-node-voice-your-choice-2",
+        t("page-run-a-node-voice-your-choice-1"),
+        t("page-run-a-node-voice-your-choice-2"),
       ],
-      alt: "page-run-a-node-glyph-alt-vote",
+      alt: t("page-run-a-node-glyph-alt-vote"),
     },
     {
       image: SovereigntyGlyphIcon,
-      title: "page-run-a-node-sovereignty-title",
-      preview: "page-run-a-node-sovereignty-preview",
-      body: ["page-run-a-node-sovereignty-1", "page-run-a-node-sovereignty-2"],
-      alt: "page-run-a-node-glyph-alt-sovereignty",
+      title: t("page-run-a-node-sovereignty-title"),
+      preview: t("page-run-a-node-sovereignty-preview"),
+      body: [
+        t("page-run-a-node-sovereignty-1"),
+        t("page-run-a-node-sovereignty-2"),
+      ],
+      alt: t("page-run-a-node-glyph-alt-sovereignty"),
     },
   ]
 
   return (
     <GappedPage>
       <PageMetadata
-        title={translateMessageId("page-run-a-node-title", intl)}
-        description={translateMessageId(
-          "page-run-a-node-meta-description",
-          intl
-        )}
+        title={t("page-run-a-node-title")}
+        description={t("page-run-a-node-meta-description")}
       />
       <HeroContainer>
         <Hero content={heroContent} isReverse />
@@ -554,16 +557,16 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
           {whyRunANodeCards.map(({ image, title, preview, body, alt }, idx) => {
             return (
               <ExpandableCard
-                contentPreview={<Translation id={preview} />}
-                title={translateMessageId(title, intl)}
+                contentPreview={preview}
+                title={title}
                 // TODO: make a11y svgs (using <title>)
                 // @ts-ignore
-                alt={translateMessageId(alt, intl)}
+                alt={alt}
                 svg={image}
                 key={idx}
               >
                 {body.map((item, idx) => (
-                  <p key={idx}>{<Translation id={item} />}</p>
+                  <p key={idx}>{item}</p>
                 ))}
               </ExpandableCard>
             )
@@ -597,10 +600,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
               <Terminal
                 // TODO: make a11y svgs (using <title>)
                 // @ts-ignore
-                alt={translateMessageId(
-                  "page-run-a-node-glyph-alt-terminal",
-                  intl
-                )}
+                alt={t("page-run-a-node-glyph-alt-terminal")}
               />
             </ColumnNarrow>
           </SoftwareHighlight>
@@ -615,10 +615,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
               <Dappnode
                 // TODO: make a11y svgs (using <title>)
                 // @ts-ignore
-                alt={translateMessageId(
-                  "page-run-a-node-glyph-alt-dappnode",
-                  intl
-                )}
+                alt={t("page-run-a-node-glyph-alt-dappnode")}
               />
             </ColumnNarrow>
           </SoftwareHighlight>
@@ -636,10 +633,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
               <Dapptap
                 // TODO: make a11y svgs (using <title>)
                 // @ts-ignore
-                alt={translateMessageId(
-                  "page-run-a-node-glyph-alt-phone",
-                  intl
-                )}
+                alt={t("page-run-a-node-glyph-alt-phone")}
               />
             </ColumnNarrow>
           </SoftwareHighlight>
@@ -730,10 +724,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
             <HardwareGlyphIcon
               // TODO: make a11y svgs (using <title>)
               // @ts-ignore
-              alt={translateMessageId(
-                "page-run-a-node-glyph-alt-hardware",
-                intl
-              )}
+              alt={t("page-run-a-node-glyph-alt-hardware")}
             />
             <h3>
               <Translation id="page-run-a-node-build-your-own-hardware-title" />
@@ -815,10 +806,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
             <DownloadGlyphIcon
               // TODO: make a11y svgs (using <title>)
               // @ts-ignore
-              alt={translateMessageId(
-                "page-run-a-node-glyph-alt-software",
-                intl
-              )}
+              alt={t("page-run-a-node-glyph-alt-software")}
             />
             <h3>
               <Translation id="page-run-a-node-build-your-own-software" />
@@ -1010,7 +998,21 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
 export default RunANodePage
 
 export const query = graphql`
-  query RunANodePage {
+  query RunANodePage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-run-a-node", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     ethereumInside: file(
       relativePath: { eq: "run-a-node/ethereum-inside.png" }
     ) {

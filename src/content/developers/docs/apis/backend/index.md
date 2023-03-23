@@ -143,7 +143,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Discord](https://discord.com/invite/KYswaxwEtg)
 - [Forum](https://forum.moralis.io/)
 
-**GetBlock- Blockchain-as-a-service for Web3 developement*
+\*_GetBlock- Blockchain-as-a-service for Web3 developement_
 
 - [GetBlock.io](https://getblock.io/)
 - [Documentation](https://getblock.io/docs/)

@@ -69,7 +69,7 @@ Erfahren Sie mehr darüber, wie [Ethereum Proof-of-Stake verwendet](/developers/
 
 ## Verwandte Themen {#related-topics}
 
-- [Die Vision von Ethereum](/upgrades/vision/)
+- [Die Vision von Ethereum](/roadmap/vision/)
 - [Die Beacon Chain](/upgrades/beacon-chain)
 - [Der Zusammenschluss](/upgrades/merge/)
 - [Sharding](/upgrades/beacon-chain/)

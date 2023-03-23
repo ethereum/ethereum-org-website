@@ -23,7 +23,7 @@ Beacon Chain foi o nome dado a um livro de contas que conduziu e coordenou a red
 
 Ela introduziu o mecanismo de consenso (ou "camada de consenso") que substituiu a mineração de prova de trabalho no Ethereum e trouxe melhorias significativas em relação ao antigo modelo.
 
-A Beacon Chain foi um componente fundamental para [o Ethereum seguro, amigo do ambiente e escalável que temos agora](/upgrades/vision/).
+A Beacon Chain foi um componente fundamental para [o Ethereum seguro, amigo do ambiente e escalável que temos agora](/roadmap/vision/).
 
 ## O impacto da Beacon Chain {#beacon-chain-features}
 
@@ -71,5 +71,5 @@ As cadeias de fragmentos somente podem ser introduzidas ao ecossistema Ethereum 
 
 ## Leituras adicionais
 
-- [Mais informações sobre as futuras atualizações do Ethereum](/upgrades/vision)
+- [Mais informações sobre as futuras atualizações do Ethereum](/roadmap/vision)
 - [Mais sobre prova de participação](/developers/docs/consensus-mechanisms/pos)

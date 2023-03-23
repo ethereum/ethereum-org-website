@@ -1,8 +1,6 @@
 {
   "page-local-environment-brownie-desc": "在以太坊虛擬機上，以 Python 為基礎架構的智慧型合約開發、測試架構。",
   "page-local-environment-brownie-logo-alt": "Brownie 標誌",
-  "page-local-environment-embark-desc": "一應俱全的開發者平台，用於建立及部署去中心化應用程式。",
-  "page-local-environment-embark-logo-alt": "Embark 標誌",
   "page-local-environment-epirus-desc": "於 Java 虛擬機開發、部署及監測區塊鏈應用程式的平台。",
   "page-local-environment-epirus-logo-alt": "Epirus 標誌",
   "page-local-environment-eth-app-desc": "使用單一命令建立以太坊為基礎的應用程式，附帶多種使用者介面架構及去中心化金融模板任您選擇。",

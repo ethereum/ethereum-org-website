@@ -1,7 +1,6 @@
 {
   "layer-2-arbitrum-note": "사기 증명은 화이트리스트 유저만 사용할 수 있습니다(화이트리스트는 아직 열리지 않았습니다)",
   "layer-2-boba-note": "상태 검증 개발 중",
-  "layer-2-metis-note": "사기 증명 개발 중",
   "layer-2-optimism-note": "오류 증명 개발 중",
   "layer-2-hero-title": "레이어 2",
   "layer-2-hero-header": "모두를 위한 이더리움",
@@ -131,5 +130,6 @@
   "layer-2-note": "참고:",
   "layer-2-ecosystem-portal": "생태계 포털",
   "layer-2-token-lists": "토큰 목록",
-  "layer-2-explore": "탐색"
+  "layer-2-explore": "탐색",
+  "page-dapps-ready-button": "이동"
 }

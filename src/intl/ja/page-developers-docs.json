@@ -59,7 +59,6 @@
   "docs-nav-mev-description": "ブロック報酬以外でイーサリアムブロックチェーンから価値が抽出される方法",
   "docs-nav-mining": "マイニング",
   "docs-nav-mining-algorithms": "マイニングアルゴリズム",
-  "docs-nav-dagger-hashamoto": "Dagger-Hashamoto",
   "docs-nav-ethash": "Ethash",
   "docs-nav-networks": "ネットワーク",
   "docs-nav-networks-description": "テストネットワークを含むイーサリアムの実装",
@@ -125,5 +124,13 @@
   "page-calltocontribute-link": "ドキュメントテンプレート",
   "page-calltocontribute-link-2": "Discord サーバ",
   "page-calltocontribute-span": "ページを編集",
-  "page-calltocontribute-title": "このページについてご協力ください。"
+  "page-calltocontribute-title": "このページについてご協力ください。",
+  "layer-2-arbitrum-note": "不正証明はホワイトリストに登録されたユーザーのみ、ホワイトリストはまだ未公開。",
+  "layer-2-boba-note": "検証開発中",
+  "layer-2-metis-note": "不正証明は開発中",
+  "layer-2-optimism-note": "不正証明は開発中",
+  "back-to-top": "トップに戻る",
+  "banner-page-incomplete": "このページは不完全なので、皆さまのご協力をお願いします。このページを編集して、他の人に役に立つものは、何でも追加してください。",
+  "next": "次へ",
+  "previous": "前へ"
 }

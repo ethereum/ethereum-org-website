@@ -62,5 +62,6 @@
   "page-get-eth-your-address": "您的以太幣位址",
   "page-get-eth-your-address-desc": "在您下載錢包時，為您建立一個公開的以太幣位址，如下圖為一範例：",
   "page-get-eth-your-address-desc-3": "請將其想像為電子郵件地址，但是接收的是以太幣而非郵件。如果您想要將以太幣從交易所轉移到您的錢包，使用您的位址作為目的地。發送前請記得檢查！",
-  "page-get-eth-your-address-wallet-link": "查看錢包"
+  "page-get-eth-your-address-wallet-link": "查看錢包",
+  "listing-policy-raise-issue-link": "提出問題"
 }

@@ -75,7 +75,7 @@ Mientras que el consumo energético de Ethereum siempre ha sido considerable, lo
 
 ## Temas relacionados {#related-topics}
 
-- [Visión de Ethereum](/upgrades/vision/)
+- [Visión de Ethereum](/roadmap/vision/)
 - [La cadena de baliza](/upgrades/beacon-chain)
 - [La fusión](/upgrades/merge/)
 - [Fragmentación](/upgrades/beacon-chain/)

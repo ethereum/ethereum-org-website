@@ -4,10 +4,18 @@
   "page-upgrades-beacon-date": "Otpremljen!",
   "page-upgrades-merge-date": "Rujan 2022.",
   "page-upgrades-shards-date": "~2023.",
-  "page-upgrades-merge-banner-intro": "Spajanje se približava i donosi promjene u Ethereum.",
-  "page-upgrades-merge-banner-content-outdated": "Neki je sadržaj ove stranice u vezi s tim promjenama zastarjeo. Uskoro ćemo ga ažurirati.",
-  "page-upgrades-merge-banner-developers-landing": "Neki dokumenti imaju zaglavlje s informacijom da su zastarjeli. Uskoro ćemo ih osvježiti.",
   "page-upgrades-post-merge-banner-tutorial-ood": "Nakon spajanja ovaj je vodič zastarjeo i možda neće biti koristan. Pošaljite PR ako želite dati svoj doprinos.",
-  "page-upgrades-post-merge-banner-tutorial-light-node-ood": "Nakon spajanja ovaj je vodič zastarjeo. Blagi čvorovi trenutačno ne funkcioniraju u konceptu dokaza uloga ali će se i to uskoro implementirati.",
-  "page-upgrades-post-merge-banner-governance-ood": "Nakon spajanja neki je sadržaj ove stranice zastario. Pošaljite PR ako želite dati svoj doprinos."
+  "page-upgrades-post-merge-banner-governance-ood": "Nakon spajanja neki je sadržaj ove stranice zastario. Pošaljite PR ako želite dati svoj doprinos.",
+  "page-upgrades-upgrades-guide": "Vodič za nadogradnje Ethereuma",
+  "page-upgrades-upgrades-docking": "Spajanje",
+  "page-upgrades-shard-title": "Dijeljenje",
+  "page-upgrades-upgrades-beacon-chain": "Beacon Chain",
+  "consensus-beaconcha-in-desc": "Istraživač otvorenog koda za Beacon Chain",
+  "consensus-beaconscan-desc": "Istraživač za Beacon Chain - Etherscan za sloj konsenzusa",
+  "consensus-become-staker": "Postanite ulagač",
+  "consensus-become-staker-desc": "Ulaganje radi! Ako želite uložiti svoj ETH za unapređenje sigurnosti mreže, budite svjesni rizika.",
+  "consensus-explore": "Istražite podatke",
+  "consensus-run-beacon-chain": "Pokrenite konsenzus klijenta",
+  "consensus-run-beacon-chain-desc": "Ethereumu treba što više klijenata u pogonu. Pomozite za javno dobro Ethereuma!",
+  "read-more": "Pročitaj više"
 }

@@ -13,7 +13,7 @@ summaryPoints:
   - Validators who fully exit staking will receive their remaining balance
 ---
 
-<UpgradeStatus dateKey="page-upgrades-withdrawals">
+<UpgradeStatus dateKey="page-staking-withdrawals-when">
   Staking withdrawals will be enabled through the Shanghai/Capella upgrade. This Ethereum network upgrade is expected to take place in the first half of 2023. <a href="#when" customEventOptions={{ eventCategory: "Anchor link", eventAction: "When's it shipping?", eventName: "click" }}>More below</a>
 </UpgradeStatus>
 
@@ -67,6 +67,12 @@ Withdrawal functionality will be enabled through a two-part simultaneous network
 
 Whether a given validator is eligible for a withdrawal or not is determined by the state of the validator account itself. No user input is needed at any given time to determine whether an account should have a withdrawal initiated or not—the entire process is done automatically by the consensus layer on a continuous loop.
 
+### More of a visual learner? {#visual-learner}
+
+Check out this explanation of Ethereum staking withdrawals by Finematics:
+
+<YouTube id="RwwU3P9n3uo" />
+
 ### Validator "sweeping" {#validator-sweeping}
 
 When a validator is scheduled to propose the next block, it is required to build a withdrawal queue, of up to 16 eligible withdrawals. This is done by originally starting with validator index 0, determining if there is an eligible withdrawal for this account per the rules of the protocol, and adding it to the queue if there is. The validator set to propose the following block will pick up where the last one left off, progressing in order indefinitely.
@@ -96,7 +102,7 @@ This approach to staking withdrawals avoids requiring stakers to manually submit
 
 ### How frequently will I get my staking rewards? {#how-soon}
 
-A maximum of 16 withdrawals can be processed in a single block. At that rate, 115,200 validator withdrawals can be processed per day (assuming no missed blocks). As noted above, validators without eligible withdrawals will be skipped, decreasing the time to finish the sweep.
+A maximum of 16 withdrawals can be processed in a single block. At that rate, 115,200 validator withdrawals can be processed per day (assuming no missed slots). As noted above, validators without eligible withdrawals will be skipped, decreasing the time to finish the sweep.
 
 Expanding this calculation, we can estimate the time it will take to process a given number of withdrawals:
 
@@ -175,20 +181,27 @@ eventName="read more">
 <p>It is not possible to manually request specific amounts of ETH to be withdrawn.</p>
 </ExpandableCard>
 
-<!-- TODO: Switch link to Mainnet once available -->
-
 <ExpandableCard
 title="I operate a validator, where can I find more information on preparing?"
 eventCategory="FAQ"
 eventAction="I operate a validator, where can I find more information on preparing?"
 eventName="read more">
 
-<p>Validator operators are recommended to visit the <a href="https://zhejiang.launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals (Zhejiang Testnet)</a> page where you'll find more details about how to be prepared, timing of events, and more details about how withdrawals function.</p>
+<p>Validator operators are recommended to visit the <a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals</a> page where you'll find more details about how to be prepared, timing of events, and more details about how withdrawals function.</p>
+</ExpandableCard>
+
+<ExpandableCard
+title="Can I re-activate my validator after exiting by depositing more ETH?"
+eventCategory="FAQ"
+eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
+eventName="read more">
+
+<p>No. Once a validator has exited and its full balance has been withdrawn, any additional funds deposited to that validator will automatically be transferred to the withdrawal address during the next validator sweep. To re-stake ETH, a new validator must be activated.</p>
 </ExpandableCard>
 
 ## Further reading {#further-reading}
 
-- [Staking Launchpad Withdrawals - Zhejiang Testnet](https://zhejiang.launchpad.ethereum.org/withdrawals)
+- [Staking Launchpad Withdrawals](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Beacon chain push withdrawals as operations](https://eips.ethereum.org/EIPS/eip-4895)
 - [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Staked ETH Withdrawal (Testing) with Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)

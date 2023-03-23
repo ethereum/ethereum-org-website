@@ -8,7 +8,6 @@
   "page-developers-advanced": "വിപുലമായത്",
   "page-developers-api-desc": "സ്മാർട്ട് കരാറുകളുമായി സംവദിക്കാനായി ലൈബ്രറികൾ ഉപയോഗിക്കുന്നു",
   "page-developers-api-link": "ബാക്കെൻഡ് API- കൾ",
-  "page-developers-aria-label": "ഡവലപ്പർമാരുടെ മെനു",
   "page-developers-block-desc": "ബ്ലോക്ക്ചെയിനിൽ ചേർത്തിട്ടുള്ള ഇടപാടുകളുടെ ബാച്ചുകൾ",
   "page-developers-block-explorers-desc": "Ethereum ഡാറ്റയിലേക്കുള്ള നിങ്ങളുടെ പോർട്ടൽ",
   "page-developers-block-explorers-link": "ബ്ലോക് പര്യവേക്ഷകർ",
@@ -80,5 +79,7 @@
   "page-developers-transactions-desc": "Ethereum-ന്‍റെ നില മാറുന്ന രീതി",
   "page-developers-transactions-link": "ഇടപാടുകൾ",
   "page-developers-web3-desc": "വികസനത്തിന്റെ web3 ലോകം എങ്ങനെ വ്യത്യസ്തമാണ്",
-  "page-developers-web3-link": "Web2 vs Web3"
+  "page-developers-web3-link": "Web2 vs Web3",
+  "alt-eth-blocks": "ഒരു ETH ചിഹ്നം പോലെ ക്രമീകരിച്ചിരിക്കുന്ന ബ്ലോക്കുകളുടെ ചിത്രീകരണം",
+  "page-assets-doge": "ഡാപ്പുകൾ ഉപയോഗിക്കുന്ന ഡോജി"
 }

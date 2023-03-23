@@ -64,5 +64,6 @@
   "page-upgrades-vision-upgrade-needs-desc-3": "Ethereum possède un ensemble de mises à niveau qui traitent ces problèmes et bien plus encore. Cet ensemble d'améliorations s'appelait à l'origine « Serenity » et « Eth2 », et elles sont un domaine actif de recherche et de développement depuis 2014.",
   "page-upgrades-vision-upgrade-needs-desc-5": "Maintenant que la technologie est prête, ces mises à niveau réarchitectureront Ethereum pour le rendre plus évolutif, sécurisé et durable... pour améliorer la vie des utilisateurs existants et en attirer de nouveaux. Tout en préservant l'idée clé de décentralisation, qui sous-tend Ethereum.",
   "page-upgrades-vision-upgrade-needs-desc-6": "Cela signifie qu'il n'y a pas d'interrupteur pour activer l'évolutivité d'un seul coup. Les améliorations seront incorporées progressivement au fil du temps.",
-  "page-upgrades-vision-upgrade-needs-serenity": "Voir un article de blog 2015 traitant de « Serenity »"
+  "page-upgrades-vision-upgrade-needs-serenity": "Voir un article de blog 2015 traitant de « Serenity »",
+  "ethereum": "Ethereum"
 }

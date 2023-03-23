@@ -4,7 +4,6 @@ description: Uniswap-v2 合约是如何工作的？ 为什么要如此编写？
 author: Ori Pomerantz
 tags:
   - "solidity"
-  - "uniswap"
 skill: intermediate
 published: 2021-05-01
 lang: zh

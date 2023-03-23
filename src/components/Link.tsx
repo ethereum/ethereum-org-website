@@ -1,9 +1,15 @@
 import React from "react"
-import { Icon, Link as ChakraLink, LinkProps, useTheme } from "@chakra-ui/react"
+import {
+  Box,
+  Icon,
+  Link as ChakraLink,
+  LinkProps,
+  useTheme,
+  VisuallyHidden,
+} from "@chakra-ui/react"
 import { navigate as gatsbyNavigate } from "gatsby"
-import { LocalizedLink as IntlLink } from "gatsby-theme-i18n"
+import { Link as IntlLink } from "gatsby-plugin-react-i18next"
 import { NavigateOptions } from "@reach/router"
-import { IntlShape } from "react-intl"
 
 import { BsQuestionSquareFill } from "react-icons/bs"
 
@@ -57,7 +63,7 @@ const Link: React.FC<IProps> = ({
 
   // TODO: in the next PR we are going to deprecate the `to` prop and just use `href`
   // this is to support the ButtonLink component which uses the `to` prop
-  const to = (toProp || href)!
+  const to = (toProp ?? href)!
 
   const isExternal = url.isExternal(to)
   const isHash = url.isHash(to)
@@ -114,11 +120,6 @@ const Link: React.FC<IProps> = ({
       <ChakraLink
         href={to}
         isExternal
-        _after={{
-          content: !hideArrow ? '"↗"' : undefined,
-          ml: 0.5,
-          mr: 1.5,
-        }}
         onClick={(e) => {
           // only track events on external links and hash links
           if (!isExternal) {
@@ -133,6 +134,12 @@ const Link: React.FC<IProps> = ({
         {...commonProps}
       >
         {children}
+        <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
+        {!hideArrow && (
+          <Box as="span" ml={0.5} mr={1.5} aria-hidden>
+            ↗
+          </Box>
+        )}
       </ChakraLink>
     )
   }
@@ -167,14 +174,14 @@ const Link: React.FC<IProps> = ({
 
 export function navigate(
   to: string,
-  intl: IntlShape,
+  language: Lang,
   options?: NavigateOptions<{}>
 ) {
   if (typeof window === "undefined") {
     return
   }
 
-  const link = `/${intl.locale as Lang}${to}`
+  const link = `/${language}${to}`
   gatsbyNavigate(link, options)
 }
 
