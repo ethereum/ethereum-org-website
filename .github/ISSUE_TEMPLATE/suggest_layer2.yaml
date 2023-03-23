@@ -151,11 +151,13 @@ body:
       label: Is there a block explorer?
       description: Are there block explorers for the network? Please share URLs.
   - type: checkboxes
-    id: exchange_work_on
+    id: layer_2_work_on
     attributes:
       label: Would you like to work on this issue?
       options:
-        - "Yes"
-        - "No"
+        - label: "Yes"
+          required: false
+        - label: "No"
+          required: false
     validations:
       required: true

@@ -125,6 +125,4 @@ Although this website is open-source and anyone can work on it, we do have a tea
 
 We'll post any job openings here. If you don't see a role here for you, head over to [our Discord server](https://discord.gg/CetY6Y4) and let us know how you'd like to work with us!
 
-- [Community Lead](/about/community-lead/)
-
 Looking beyond the ethereum.org team? [Check out other Ethereum related jobs](/community/get-involved/#ethereum-jobs/).

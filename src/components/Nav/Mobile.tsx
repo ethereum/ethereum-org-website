@@ -254,6 +254,7 @@ const MobileNavMenu: React.FC<IProps> = ({
         aria-label={t("aria-toggle-search-button")}
         variant="icon"
         _hover={{ svg: { fill: "primary" } }}
+        zIndex={100}
       />
       <MobileModal
         animate={isMenuOpen ? "open" : "closed"}
