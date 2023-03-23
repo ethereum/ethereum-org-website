@@ -472,7 +472,7 @@ DEX の価格は正確であることが多く、これは市場の均衡を取�
 
 - **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/admin)** - _アクセス制御、アップグレード、一時停止など、スマートコントラクトの管理を行うためのインターフェイス。_
 
-- **[Gnosis Safe](https://gnosis.io/safe/)** - _イーサリアム上で動作し、トランザクションが発生する前に最低人数 (N 人中の M 人) の承認が必要なスマートコントラクトウォレット。_
+- **[Safe](https://safe.global/)** - _イーサリアム上で動作し、トランザクションが発生する前に最低人数 (N 人中の M 人) の承認が必要なスマートコントラクトウォレット。_
 
 - **[OpenZeppelin コントラクト](https://docs.openzeppelin.com/contracts/4.x/)** - _コントラクトの所有権、アップグレード、アクセス制御、ガバナンス、一時停止機能など、管理機能を実装するためのコントラクトライブラリ。_
 

@@ -205,7 +205,7 @@ There are two reasons why a function would not be available here:
    The value of `msg.sender` is going to be `CalldataInterpreter`'s address, not the caller.
 
 Unfortunately, [looking at the ERC-20 specifications](https://eips.ethereum.org/EIPS/eip-20), this leaves only one function, `transfer`.
-This leaves us with only two functions: `transfer` (because we can call `transferFrom`) and `faucet` (because we can transfer the tokens back to whever called us).
+This leaves us with only two functions: `transfer` (because we can call `transferFrom`) and `faucet` (because we can transfer the tokens back to whoever called us).
 
 ```solidity
 
@@ -488,7 +488,7 @@ If so, run the function which we modify.
     }
 ```
 
-These are three operations that normally require the message to come directly from the entity transfering tokens or approving an allowance.
+These are three operations that normally require the message to come directly from the entity transferring tokens or approving an allowance.
 Here we have a proxy version these operations which:
 
 1. Is modified by `onlyProxy()` so nobody else is allowed to control them.
@@ -581,12 +581,12 @@ const transferFromTx = {
 }
 await (await poorSigner.sendTransaction(transferFromTx)).wait()
 
-// Check the approve / transeferFrom combo was done correctly
+// Check the approve / transferFrom combo was done correctly
 expect(await token.balanceOf(destAddr2)).to.equal(255)
 ```
 
 Test the two new functions.
-Note that `transeferFromTx` requires two address parameters: the giver of the allowance and the receiver.
+Note that `transferFromTx` requires two address parameters: the giver of the allowance and the receiver.
 
 ### Example {#example-2}
 

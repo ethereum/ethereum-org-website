@@ -365,7 +365,7 @@ Both integer overflows and underflows can lead to unexpected changes to a contra
 pragma solidity ^0.7.6;
 
 // This contract is designed to act as a time vault.
-// User can deposit into this contract but cannot withdraw for atleast a week.
+// User can deposit into this contract but cannot withdraw for at least a week.
 // User can also extend the wait time beyond the 1 week waiting period.
 
 /*
@@ -474,7 +474,7 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/admin)** - _Interface for managing smart contract administration, including access controls, upgrades, and pausing._
 
-- **[Gnosis Safe](https://gnosis.io/safe/)** - _Smart contract wallet running on Ethereum that requires a minimum number of people to approve a transaction before it can occur (M-of-N)._
+- **[Safe](https://safe.global/)** - _Smart contract wallet running on Ethereum that requires a minimum number of people to approve a transaction before it can occur (M-of-N)._
 
 - **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/)** - _Contract libraries for implementing administrative features, including contract ownership, upgrades, access controls, governance, pauseability, and more._
 

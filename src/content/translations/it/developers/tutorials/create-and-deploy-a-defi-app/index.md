@@ -478,4 +478,4 @@ _output di withdrawMyTokenFromTokenFarm.js_
 
 [Cos'è la DeFi? Una Guida per Principianti (Aggiornata al 2021) (99bitcoins.com)](https://99bitcoins.com/what-is-defi/)
 
-[DeFi - La classifica della finanza decentralizzata su DeFi Pulse](https://defipulse.com/)
+[DeFi - La classifica della finanza decentralizzata su DeFi LLama](https://defillama.com/)

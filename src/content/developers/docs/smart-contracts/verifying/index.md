@@ -18,7 +18,7 @@ Smart contract verification enables investigating what a contract does through t
 
 ### What is full verification? {#full-verification}
 
-There are some parts of the source code that do not affect the compiled bytecode such as comments or variable names. That means two source codes with different variable names and different comments would both be able to verify the same contract. With that, a malicous actor can add deceiving comments or give misleading variable names inside the source code and get the contract verified with a source code different than the original source code.
+There are some parts of the source code that do not affect the compiled bytecode such as comments or variable names. That means two source codes with different variable names and different comments would both be able to verify the same contract. With that, a malicious actor can add deceiving comments or give misleading variable names inside the source code and get the contract verified with a source code different than the original source code.
 
 It is possible to avoid this by appending extra data to the bytecode to serve as a _cryptographical guarantee_ for the exactness of the source code, and as a _fingerprint_ of the compilation information. The necessary information is found in the [Solidity's contract metadata](https://docs.soliditylang.org/en/v0.8.15/metadata.html), and the hash of this file is appended to the bytecode of a contract. You can see it in action in the [metadata playground](https://playground.sourcify.dev)
 
@@ -40,7 +40,7 @@ Source code verification tools provide guarantees that a smart contract’s sour
 
 ### User Safety {#user-safety}
 
-With smart contracts, there’s usually a lot of money at stake. This calls for higher security guarantees and verification of a smart contract’s logic before using it. The problem is that unscruplous developers can deceive users by inserting malicious code in a smart contract. Without verification, malicious smart contracts can have [backdoors](https://www.trustnodes.com/2018/11/10/concerns-rise-over-backdoored-smart-contracts), controversial access control mechanisms, exploitable vulnerabilities, and other things that jeopardize user safety that would go undetected.
+With smart contracts, there’s usually a lot of money at stake. This calls for higher security guarantees and verification of a smart contract’s logic before using it. The problem is that unscrupulous developers can deceive users by inserting malicious code in a smart contract. Without verification, malicious smart contracts can have [backdoors](https://www.trustnodes.com/2018/11/10/concerns-rise-over-backdoored-smart-contracts), controversial access control mechanisms, exploitable vulnerabilities, and other things that jeopardize user safety that would go undetected.
 
 Publishing a smart contract's source code files makes it easier for those interested, such as auditors, to assess the contract for potential attack vectors. With multiple parties independently verifying a smart contract, users have stronger guarantees of its security.
 

@@ -542,9 +542,7 @@ export const Clients = graphql`
 
 export const query = graphql`
   query GetInvolvedPage {
-    bountyHunters: allConsensusBountyHuntersCsv(
-      sort: { order: DESC, fields: score }
-    ) {
+    bountyHunters: allConsensusBountyHuntersCsv(sort: { score: DESC }) {
       nodes {
         username
         name

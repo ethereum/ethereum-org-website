@@ -181,7 +181,7 @@ Ursprünglich hatte Ethereum ein einziges Format für Transaktionen. Jede Transa
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
-Ethereum hat sich so entwickelt, dass es mehrere Transaktionsarten unterstützt, damit neue Funktionen wie Zugriffslisten und [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) implementiert werden können, ohne die alten Transaktionsformate zu beeinflussen.
+Ethereum hat sich so entwickelt, dass es mehrere Transaktionsarten unterstützt, damit neue Funktionen wie Zugriffslisten und [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) implementiert werden können, ohne die alten Transaktionsformate zu beeinflussen.
 
 [EIP-2718: Typisierter Transaktionsumschlag](https://eips.ethereum.org/EIPS/eip-2718) definiert einen Transaktionstyp, der ein Umschlag für zukünftige Transaktionstypen ist.
 

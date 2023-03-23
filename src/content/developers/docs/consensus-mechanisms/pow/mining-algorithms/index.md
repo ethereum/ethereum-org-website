@@ -16,7 +16,7 @@ To better understand this page, we recommend you first read up on [proof-of-work
 
 ## Dagger Hashimoto {#dagger-hashimoto}
 
-Dagger Hashimoto was a precursor research algorithm for Ethereum mining that Ethash superseded. It was an amalgamation of two different algorithms: Dagger and Hashimoto. It was only ever a research implementation and was superceded by Ethash by the time Ethereum Mainnet launched.
+Dagger Hashimoto was a precursor research algorithm for Ethereum mining that Ethash superseded. It was an amalgamation of two different algorithms: Dagger and Hashimoto. It was only ever a research implementation and was superseded by Ethash by the time Ethereum Mainnet launched.
 
 [Dagger](http://www.hashcash.org/papers/dagger.html) involves the generation of a [Directed Acyclic Graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph), random slices of which get hashed together. The core principle is that each nonce only requires a small portion of a large total data tree. Recomputing the subtree for each nonce is prohibitive for mining - hence the need to store the tree - but okay for a single nonce’s worth of verification. Dagger was designed to be an alternative to existing algorithms like Scrypt, which are memory-hard but difficult to verify when their memory-hardness increases to genuinely secure levels. However, Dagger was vulnerable to shared memory hardware acceleration and dropped in favor of other avenues of research.
 

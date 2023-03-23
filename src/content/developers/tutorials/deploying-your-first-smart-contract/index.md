@@ -45,14 +45,14 @@ contract Counter {
 }
 ```
 
-If you’re used to programing you can easily guess what this program does. Here is an explainer line by line:
+If you’re used to programming you can easily guess what this program does. Here is an explainer line by line:
 
-- Line 3: We define a contract with the name `Counter`.
-- Line 6: Our contract stores one unsigned integer named `count` starting at 0.
-- Line 9: The first function will modify the state of the contract and `increment()` our variable `count`.
-- Line 14: The second function is just a getter to be able to read the value of the `count` variable outside of the smart contract. Note that, as we defined our `count` variable as public this is not necessary but is shown as an example.
+- Line 4: We define a contract with the name `Counter`.
+- Line 7: Our contract stores one unsigned integer named `count` starting at 0.
+- Line 10: The first function will modify the state of the contract and `increment()` our variable `count`.
+- Line 15: The second function is just a getter to be able to read the value of the `count` variable outside of the smart contract. Note that, as we defined our `count` variable as public this is not necessary but is shown as an example.
 
-This is all for our first simple smart contract. As you may know, it looks like a class from OOP languages like Java or C++. It’s now time to play with our contract.
+This is all for our first simple smart contract. As you may know, it looks like a class from OOP (Object-Oriented Programming) languages like Java or C++. It’s now time to play with our contract.
 
 ## Deploying our contract {#deploying-our-contract}
 

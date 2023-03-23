@@ -332,7 +332,6 @@ DeFi este o mișcare open-source. Protocoalele și aplicațiile DeFi sunt dtoate
 
 ### Date despre DeFi {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 

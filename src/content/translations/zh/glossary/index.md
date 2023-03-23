@@ -27,7 +27,7 @@ sidebarDepth: 2
 
 ### 地址 {#address}
 
-通常情况下，地址代表一个[外部账户](#eoa)或[合约账户](#contract-accouint)，可以在区块链上接收（目标地址）或发送（源地址）[交易](#transaction)。 更具体地说，它是 [ECDSA](#ecdsa) 的 [Keccak 哈希值](#keccak-256)[公钥](#public-key)的最右边 160 位。
+通常情况下，地址代表一个[外部账户](#eoa)或[合约账户](#contract-account)，可以在区块链上接收（目标地址）或发送（源地址）[交易](#transaction)。 更具体地说，它是 [ECDSA](#ecdsa) 的 [Keccak 哈希值](#keccak-256)[公钥](#public-key)的最右边 160 位。
 
 ### 应用程序二进制接口 (ABI) {#abi}
 

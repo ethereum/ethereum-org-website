@@ -47,6 +47,7 @@ Platforms with contract-based persistence:
 - [Storj](https://storj.io/)
 - [0Chain](https://0chain.net/)
 - [Crust Network](https://crust.network)
+- [Swarm](https://www.ethswarm.org/)
 
 ### Additional considerations {#additional-consideration}
 
@@ -58,6 +59,8 @@ IPFS is a distributed system for storing and accessing files, websites, applicat
 - [Infura](https://infura.io/product/ipfs) _(IPFS pinning service)_
 - [IPFS Scan](https://ipfs-scan.io) _(IPFS pinning explorer)_
 - [4EVERLAND](https://www.4everland.org/)_（IPFS pinning service）_
+
+SWARM is a decentralised data storage and distribution technology with a storage incentive system and a storage rent price oracle.
 
 ## Data retention {#data-retention}
 
@@ -117,6 +120,7 @@ Proof-of-stake based:
 
 - [Storj.io](https://storj.io/)
 - [Documentation](https://docs.storj.io/)
+- [GitHub](https://github.com/storj/storj)
 
 **Skynet - _Skynet is a decentralized PoW chain dedicated to a decentralized web._**
 

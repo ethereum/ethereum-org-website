@@ -478,4 +478,4 @@ _withdrawMyTokenFromTokenFarm.js 的输出_
 
 [什么是去中心化金融？ 初学者指南（2021 年更新）(99bitcoins.com)](https://99bitcoins.com/what-is-defi/)
 
-[去中心化金融 - DeFi Pulse 的去中心化金融排行榜](https://defipulse.com/)
+[去中心化金融 - DeFi Llama 的去中心化金融排行榜](https://defillama.com/)

@@ -69,7 +69,7 @@ El ecosistema de Ethereum tiene la misión de financiar bienes públicos y proye
 
 ## Profesionales financieros y contables <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
 
-- Ethereum es la sede del ecosistema de «Finanzas descentralizadas», es decir, una red de protocolos y aplicaciones que ofrecen un sistema financiero alternativo. Si usted es un profesional de las Finanzas, eche un vistazo a algunas aplicaciones DeFi en [DeFi Pulse](https://defipulse.com/) o [DeFiPrime](https://defiprime.com).
+- Ethereum es la sede del ecosistema de «Finanzas descentralizadas», es decir, una red de protocolos y aplicaciones que ofrecen un sistema financiero alternativo. Si usted es un profesional de las Finanzas, eche un vistazo a algunas aplicaciones DeFi en [DeFi Llama](https://defillama.com/) o [DeFiPrime](https://defiprime.com).
 - ¿Contable? Los activos en Ethereum (ETH, tókenes, DeFi, etc.) tratan de muchos y novedosos asuntos de contabilidad. Podría empezar por revisar algunos proyectos que tienen como objetivo ayudar a los usuarios de criptomonedas a ocuparse de su contabilidad y complejidades de la contabilidad, como [Rotki](https://rotki.com/).
 
 ## Gestores de producto <Emoji text=":fountain_pen:" size={1} />‍ {#product-managers}

@@ -13,6 +13,7 @@ import {
   AccordionPanel,
   Box,
   Heading,
+  Icon,
   Text,
 } from "@chakra-ui/react"
 
@@ -20,7 +21,7 @@ export interface IProps {
   children?: React.ReactNode
   contentPreview?: ReactNode
   title: ReactNode
-  svg?: ComponentType<SVGProps<SVGElement>>
+  svg?: typeof Icon
   eventCategory?: string
   eventName?: string
 }
@@ -57,7 +58,6 @@ const ExpandableCard: React.FC<IProps> = ({
       border="1px solid"
       borderColor="border"
       borderRadius="sm"
-      h3
       display="flex"
       flex-direction="column"
       marginBottom="4"

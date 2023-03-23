@@ -134,7 +134,7 @@ Le système d'exploitation Ubuntu démarrera en moins d'une minute mais **vous d
 En fonction de l'image, vous allez exécuter :
 
 - Client d'exécution : Geth comme client par défaut de synchronisation de la blockchain
-- Client de consensus : Prysm comme client par défaut de synchronisation de la chaîne phare (Prater testnet)
+- Client de consensus : Prysm comme client par défaut de synchronisation de la chaîne phare (Goerli testnet)
 
 ### 5. S'identifier {#5-log-in}
 
@@ -163,7 +163,7 @@ sudo tail -f /var/log/syslog
 
 Vous devez maintenant attendre que la blockchain soit synchronisée. Dans le cas de la couche d'exécution, cela pourra prendre quelques jours en fonction de plusieurs facteurs, mais il faudra bien compter 5 à 7 jours.
 
-Si vous utilisez la couche de consensus Prater testnet, vous pouvez attendre 1 à 2 jours avant la synchronisation de la chaîne phare. N'oubliez pas que vous devrez configurer le validateur plus tard afin de démarrer le processus de mise en jeu. [Comment exécuter le validateur de couche de consensus](/developers/tutorials/run-node-raspberry-pi/#validator)
+Si vous utilisez la couche de consensus Goerli testnet, vous pouvez attendre 1 à 2 jours avant la synchronisation de la chaîne phare. N'oubliez pas que vous devrez configurer le validateur plus tard afin de démarrer le processus de mise en jeu. [Comment exécuter le validateur de couche de consensus](/developers/tutorials/run-node-raspberry-pi/#validator)
 
 ## Tableaux de bord de suivi {#monitoring-dashboards}
 
@@ -235,7 +235,7 @@ Tous deux nécessitent de nouveaux tests alors n'hésitez pas à vous exercer av
 
 ## Comment exécuter le validateur de consensus (mise en jeu) {#validator}
 
-Une fois que la chaîne phare Prater testnet est synchronisée, vous pouvez exécuter un validateur sur le même appareil. Vous devrez suivre [ces étapes de participation](https://prylabs.net/participate).
+Une fois que la chaîne phare Goerli testnet est synchronisée, vous pouvez exécuter un validateur sur le même appareil. Vous devrez suivre [ces étapes de participation](https://prylabs.net/participate).
 
 La première fois, vous devrez créer manuellement un compte en exécutant le « validateur » binaire et configurer un mot de passe. Une fois cette étape terminée, vous pouvez ajouter le mot de passe à `/etc/ethereum/prysm-validator.conf` et démarrer le validateur en tant que service système.
 

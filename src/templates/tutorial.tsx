@@ -174,7 +174,7 @@ const TutorialPage = ({
   const hideEditButton = !!mdx.frontmatter.hideEditButton
   const absoluteEditPath = `${editContentUrl}${relativePath}`
   return (
-    <div>
+    <>
       {showPostMergeBanner && (
         <PostMergeBanner
           translationString={postMergeBannerTranslationString!}
@@ -213,7 +213,7 @@ const TutorialPage = ({
           />
         )}
       </Page>
-    </div>
+    </>
   )
 }
 
