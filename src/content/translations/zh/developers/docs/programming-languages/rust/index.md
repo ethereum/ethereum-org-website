@@ -30,9 +30,6 @@ incomplete: true
 
 ## 面向中等程度用户的文章 {#intermediate-articles}
 
-- [Rust-Web3 相关文档](https://tomusdrw.github.io/rust-web3/web3/index.html)
-- [Rust-Web3 工作示例](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-
 ## 面向高等程度用户的使用模式 {#advanced-use-patterns}
 
 - [pwasm_ethereum 外部库与类以太坊网络交互](https://github.com/openethereum/pwasm-ethereum)
@@ -50,7 +47,6 @@ incomplete: true
 - [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS 应用程序界面参考_
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _采用 Rust 实现以太坊虚拟机_
-- [rust-web3](https://github.com/tomusdrw/rust-web3) - _ Web3.js 库 Rust 语言实现_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rust 语言的 Wavelet 智能合约_
 - [Foundry](https://github.com/gakonst/foundry) - _以太坊应用开发工具包_
 - [Ethers_rs](https://github.com/gakonst/ethers-rs)- _可实现以太坊库和钱包功能_
