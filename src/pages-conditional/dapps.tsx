@@ -1624,7 +1624,7 @@ const DappsPage = ({
             </About>
           )}
         </Content>
-        <MobileOptionContainer>
+        {/* <MobileOptionContainer>
           <h3>
             <Translation id="page-dapps-mobile-options-header" />
           </h3>
@@ -1642,7 +1642,7 @@ const DappsPage = ({
               </Option>
             )
           })}
-        </MobileOptionContainer>
+        </MobileOptionContainer> */}
       </FullWidthContainer>
       <Content>
         <ImageContainer id="what-are-dapps">
