@@ -134,7 +134,7 @@ Symbolic execution is a method of analyzing a smart contract by executing functi
 
 Symbolic execution represents an execution trace as a mathematical formula over symbolic input values, otherwise called a _path predicate_. An [SMT solver](https://en.wikipedia.org/wiki/Satisfiability_modulo_theories) is used to check if a path predicate is "satisfiable" (i.e., there exists a value that can satisfy the formula). If a vulnerable path is satisfiable, the SMT solver will generate a concrete value that triggers steers execution toward that path.
 
-Suppose a smart contract's function takes as input a `uint` value (`x`) and reverts when `x` is greater than `5` but lower than `10`. Finding a value for `x` that triggers the error using a normal testing procedure would require running through dozens of test cases (or more) without the assurance of actually finding an error-triggering input.
+Suppose a smart contract's function takes as input a `uint` value (`x`) and reverts when `x` is greater than `5` and also lower than `10`. Finding a value for `x` that triggers the error using a normal testing procedure would require running through dozens of test cases (or more) without the assurance of actually finding an error-triggering input.
 
 Conversely, a symbolic execution tool would execute the function with the symbolic value: `X > 5 ∧ X < 10` (i.e., `x` is greater than 5 AND `x` is less than 10). The associated path predicate `x = X > 5 ∧ X < 10` would then be given to an SMT solver to solve. If a particular value satisfies the formula `x = X > 5 ∧ X < 10`, the SMT solver will calculate it—for example, the solver might produce `7` as a value for `x`.
 
