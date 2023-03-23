@@ -1,5 +1,5 @@
 import React from "react"
-import { Center, Heading, Box, Flex, chakra } from "@chakra-ui/react"
+import { Center, Heading, Box, Flex, chakra, BoxProps } from "@chakra-ui/react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
@@ -11,15 +11,7 @@ import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import HorizontalCard from "../components/HorizontalCard"
 import CardList from "../components/CardList"
-import {
-  CardContainer,
-  Content,
-  Divider,
-  GrayContainer,
-  Page,
-  StyledCard,
-  TwoColumnContent,
-} from "../components/SharedStyledComponents"
+import { StyledCard } from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
 
@@ -27,19 +19,52 @@ import { translateMessageId } from "../utils/translations"
 import { getImage, getSrc } from "../utils/image"
 import { Context } from "../types"
 
-const StyledTwoColumnContent = chakra(TwoColumnContent)
-
 const StyledRightColumn = (props: { children: React.ReactNode }) => (
   <Box flex="0 1 50%" ml={{ lg: 4 }} maxW="full" {...props} />
 )
 
-const StyledGrayContainer = chakra(GrayContainer)
+// const StyledGrayContainer = chakra(GrayContainer)
+
+const StyledGrayContainer = (props: { children: React.ReactNode }) => (
+  <GrayContainer marginTop={{ lg: 4 }} {...props} />
+)
+const GrayContainer = (props: BoxProps) => (
+  <Box
+    width={"100%"}
+    padding={"4rem 0rem"}
+    marginTop={"2rem"}
+    background="grayBackground"
+    boxShadow={"inset 0px 1px 0px tableItemBoxShadow"}
+    {...props}
+  />
+)
 
 const FindWallet = chakra(GatsbyImage)
 
-const Intro = chakra(Content)
+// const IntroTwoColumnContent = chakra(TwoColumnContent)
+const IntroTwoColumnContent = (props: { children: React.ReactNode }) => (
+  <TwoColumnContent marginBottom={0} paddingBottom={0} {...props} />
+)
+const TwoColumnContent = (props: BoxProps) => (
+  <Content
+    display="flex"
+    justifyContent="space-between"
+    padding="2rem"
+    marginBottom="3rem"
+    flexDirection={{ base: "column", lg: "row" }}
+    {...props}
+  />
+)
 
-const IntroTwoColumnContent = chakra(TwoColumnContent)
+const StyledTwoColumnContent = chakra(TwoColumnContent)
+
+// const Intro = chakra(Content)
+const Intro = (props: { children: React.ReactNode }) => (
+  <Content paddingBottom={0} sx={{ h2: { mb: 0 } }} {...props} />
+)
+const Content = (props: BoxProps) => (
+  <Box padding={"1rem 2rem"} width="100%" {...props} />
+)
 
 const GradientContainer = chakra(GrayContainer)
 
@@ -49,7 +74,44 @@ const WalletType = chakra(HorizontalCard)
 
 const StyledCallout = chakra(Callout)
 
-const CalloutCardContainer = chakra(CardContainer)
+// const CalloutCardContainer = chakra(CardContainer)
+const CalloutCardContainer = (props: { children: React.ReactNode }) => (
+  <CardContainer marginTop={16} {...props} />
+)
+const CardContainer = (props: BoxProps) => (
+  <Box
+    display={"flex"}
+    flexWrap={"wrap"}
+    marginLeft={-4}
+    marginRight={-4}
+    {...props}
+  />
+)
+
+// Divider
+const Divider = (props: BoxProps) => (
+  <Box
+    mb="4rem"
+    mt="4rem"
+    w="10%"
+    h="0.25rem"
+    bgColor="homeDivider"
+    {...props}
+  />
+)
+
+// Page
+const Page = (props: BoxProps) => (
+  <Box
+    display="flex"
+    flexDirection="column"
+    alignItems="center"
+    width="100%"
+    maxW="1200px"
+    margin="0 auto"
+    {...props}
+  />
+)
 
 const cards = [
   {
@@ -150,13 +212,13 @@ const WalletsPage = ({
         image={getSrc(data.ogImage)}
       />
       <PageHero content={heroContent} isReverse />
-      <StyledGrayContainer marginTop={{ lg: 4 }}>
-        <Intro paddingBottom={0} sx={{ h2: { mb: 0 } }}>
+      <StyledGrayContainer>
+        <Intro>
           <Heading>
             <Translation id="page-wallets-whats-a-wallet" />
           </Heading>
         </Intro>
-        <IntroTwoColumnContent marginBottom={0} paddingBottom={0}>
+        <IntroTwoColumnContent>
           <Box
             flexGrow="0"
             flexShrink="1"
@@ -413,7 +475,7 @@ const WalletsPage = ({
         <Heading>
           <Translation id="page-wallets-explore" />
         </Heading>
-        <CalloutCardContainer marginTop={16}>
+        <CalloutCardContainer>
           <StyledCallout
             flex="1 1 424px"
             minH="full"
