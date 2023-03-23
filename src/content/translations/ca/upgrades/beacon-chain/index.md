@@ -18,7 +18,7 @@ summaryPoint4: Potser, això, ho coneixeu com la "Fase 0" dels mapes tècnics.
 
 La cadena de balisa dirigirà o coordinarà l'expansió de la xarxa de [fragments](/upgrades/sharding/) i [participants](/staking/). Però no serà com [la xarxa principal d'Ethereum](/glossary/#mainnet) d'avui en dia. No pot gestionar comptes o contractes intel·ligents.
 
-El rol de la cadena de balisa canviarà amb el pas del temps, però és un element fonamental de [l'Ethereum segur, sostenible i escalable per la qual treballem](/upgrades/vision/).
+El rol de la cadena de balisa canviarà amb el pas del temps, però és un element fonamental de [l'Ethereum segur, sostenible i escalable per la qual treballem](/roadmap/vision/).
 
 ## Característiques de la cadena de balisa {#beacon-chain-features}
 

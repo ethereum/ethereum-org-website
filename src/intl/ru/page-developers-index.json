@@ -8,7 +8,6 @@
   "page-developers-advanced": "Дополнительно",
   "page-developers-api-desc": "Пользование библиотеками для взаимодействия с умными контрактами",
   "page-developers-api-link": "Внутренние API",
-  "page-developers-aria-label": "Меню разработчика",
   "page-developers-block-desc": "Пакеты транзакций, добавленных в блокчейн",
   "page-developers-block-explorers-desc": "Ваш портал с данными об Ethereum",
   "page-developers-block-explorers-link": "Инструменты изучения блоков",
@@ -84,5 +83,7 @@
   "page-developers-transactions-desc": "Способ изменения состояния Ethereum",
   "page-developers-transactions-link": "Транзакции",
   "page-developers-web3-desc": "Чем отличается мир разработок web3",
-  "page-developers-web3-link": "Web2 против Web3"
+  "page-developers-web3-link": "Web2 против Web3",
+  "alt-eth-blocks": "Иллюстрация блоков организуется как символ ETH",
+  "page-assets-doge": "Doge использует dapps"
 }

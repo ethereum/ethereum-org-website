@@ -326,7 +326,7 @@ Rolul nostru nu este de a pleda pentru amprenta de mediu a minării, ci vrem să
 
 ### Un viitor mai ecologic... {#a-greener-future}
 
-De când există Ethereum, consumul de energie pentru minare a fost în centrul atenției dezvoltatorilor și cercetătorilor. Și viziunea consta în înlocuirea acestuia cât mai curând posibil. [Mai multe despre viziunea Ethereum](/upgrades/vision/)
+De când există Ethereum, consumul de energie pentru minare a fost în centrul atenției dezvoltatorilor și cercetătorilor. Și viziunea consta în înlocuirea acestuia cât mai curând posibil. [Mai multe despre viziunea Ethereum](/roadmap/vision/)
 
 Viziunea se concretizează chiar acum.
 

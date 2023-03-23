@@ -1,0 +1,43 @@
+# .github/workflows/chromatic.yml
+
+# Workflow name
+name: Chromatic Publish and Testing
+
+# Event for the workflow
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - ready_for_review
+    paths:
+      # Only run on file changes in any of these paths
+      - "src/components/**/*"
+      - "src/pages/**/*"
+      - "src/pages-conditional/**/*"
+      - "src/templates/**/*"
+      - "src/@chakra-ui/gatsby-plugin/**/*"
+
+# List of jobs
+jobs:
+  chromatic-deployment:
+    # Operating System
+    runs-on: ubuntu-latest
+    # Job steps
+    steps:
+      # 👇 Version 2 of the action
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # 👈 Required to retrieve git history
+      - name: Install deps
+        # 👇 Install dependencies with the same package manager used in the project (replace it as needed), e.g. yarn, npm, pnpm
+        run: yarn
+      - name: Publish to Chromatic
+        # 👇 Adds Chromatic as a step in the workflow
+        uses: chromaui/action@v1
+        # Options required for Chromatic's GitHub Action
+        with:
+          projectToken: fee8e66c9916
+          # 👇 Only fail if Storybook contains stories that error
+          exitZeroOnChanges: true

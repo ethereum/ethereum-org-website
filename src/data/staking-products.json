@@ -707,7 +707,7 @@
       "isFoss": true,
       "hasBugBounty": false,
       "isTrustless": false,
-      "hasPermissionlessNodes": false,
+      "hasPermissionlessNodes": true,
       "pctMajorityClient": null,
       "platforms": ["Browser"],
       "ui": ["GUI"],

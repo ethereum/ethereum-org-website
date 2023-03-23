@@ -1,8 +1,6 @@
 {
   "page-local-environment-brownie-desc": "Egy Python-alapú fejlesztői és tesztelési környezet okos szerződéseknek, melyek az Ethereum Virtuális Gépre fókuszálnak.",
   "page-local-environment-brownie-logo-alt": "Brownie logo",
-  "page-local-environment-embark-desc": "Minden az egyben fejlesztői platform decentralizált alkalmazások építésére és telepítésére.",
-  "page-local-environment-embark-logo-alt": "Embark logo",
   "page-local-environment-epirus-desc": "Egy platform blokklánc alkalmazások fejlesztésére, telepítésére és monitorozására a Java Virtuális Gépen",
   "page-local-environment-epirus-logo-alt": "Epirus logo",
   "page-local-environment-eth-app-desc": "Készíts Ethereumon működő appokat egy paranccsal. Ezenkívül UI keretrendszerek és DeFi sablonok széles skálájából választhatsz.",

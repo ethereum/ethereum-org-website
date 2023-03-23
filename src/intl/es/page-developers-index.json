@@ -8,7 +8,6 @@
   "page-developers-advanced": "Recursos avanzados",
   "page-developers-api-desc": "Uso de bibliotecas para interactuar con contratos inteligentes",
   "page-developers-api-link": "API de back-end",
-  "page-developers-aria-label": "Menú para desarrolladores",
   "page-developers-block-desc": "Lotes de transacciones añadidas a la cadena de bloques",
   "page-developers-block-explorers-desc": "Su portal para acceder a los datos de Ethereum",
   "page-developers-block-explorers-link": "Exploradores de bloques",
@@ -92,5 +91,7 @@
   "page-developers-networking-layer-desc": "Introducción a la capa de red de Ethereum",
   "page-developers-data-structures-and-encoding": "Estructuras de datos y codificación",
   "page-developers-data-structures-and-encoding-link": "Estructuras de datos y codificación",
-  "page-developers-data-structures-and-encoding-desc": "Introducción a las estructuras de datos y proyecto de codificación usado en la pila de Ethereum"
+  "page-developers-data-structures-and-encoding-desc": "Introducción a las estructuras de datos y proyecto de codificación usado en la pila de Ethereum",
+  "alt-eth-blocks": "Ilustración de bloques organizados como un símbolo ETH",
+  "page-assets-doge": "Doge usando dapps"
 }

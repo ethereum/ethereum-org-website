@@ -59,7 +59,6 @@
   "docs-nav-mev-description": "Come viene estratto il valore dalla blockchain Ethereum attraverso il blocco delle ricompense",
   "docs-nav-mining": "Mining",
   "docs-nav-mining-algorithms": "Algoritmi di mining",
-  "docs-nav-dagger-hashamoto": "Dagger-Hashamoto",
   "docs-nav-ethash": "Ethash",
   "docs-nav-networks": "Reti",
   "docs-nav-networks-description": "Implementazioni di Ethereum compresi test di rete",
@@ -125,5 +124,13 @@
   "page-calltocontribute-link": "modello di documentazione",
   "page-calltocontribute-link-2": "server Discord",
   "page-calltocontribute-span": "Modifica pagina",
-  "page-calltocontribute-title": "Aiutaci con questa pagina"
+  "page-calltocontribute-title": "Aiutaci con questa pagina",
+  "layer-2-arbitrum-note": "A prova di frode solo per gli utenti in whitelist, whitelist non ancora aperta",
+  "layer-2-boba-note": "Validazione dello stato in sviluppo",
+  "layer-2-metis-note": "Prove di frode in sviluppo",
+  "layer-2-optimism-note": "Prove di errore in sviluppo",
+  "back-to-top": "Torna all’inizio",
+  "banner-page-incomplete": "Questa pagina è incompleta e ci piacerebbe avere il tuo aiuto. Modifica questa pagina e aggiungi tutto ciò che pensi possa essere utile agli altri.",
+  "next": "Avanti",
+  "previous": "Indietro"
 }

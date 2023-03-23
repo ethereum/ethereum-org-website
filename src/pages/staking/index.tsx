@@ -1,7 +1,7 @@
-import React from "react"
+import React, { ReactNode } from "react"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "react-intl"
-import styled from "@emotion/styled"
+import { useTranslation } from "gatsby-plugin-react-i18next"
+import { Box, Flex, Grid, Heading, useToken } from "@chakra-ui/react"
 
 import ButtonDropdown, {
   List as ButtonDropdownList,
@@ -12,11 +12,6 @@ import Link from "../../components/Link"
 import PageHero from "../../components/PageHero"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
-import {
-  Content,
-  Page as PageContainer,
-  Divider,
-} from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
 import ExpandableCard from "../../components/ExpandableCard"
 import StakingStatsBox from "../../components/Staking/StakingStatsBox"
@@ -24,249 +19,265 @@ import StakingHierarchy from "../../components/Staking/StakingHierarchy"
 import StakingHomeTableOfContents from "../../components/Staking/StakingHomeTableOfContents"
 import StakingCommunityCallout from "../../components/Staking/StakingCommunityCallout"
 
-import { translateMessageId, TranslationKey } from "../../utils/translations"
 import { getImage } from "../../utils/image"
-import type { Context } from "../../types"
 
-const HeroStatsWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: ${({ theme }) => theme.colors.layer2Gradient};
-  padding-bottom: 2rem;
-  width: 100%;
-`
+import type { ChildOnlyProp, Context } from "../../types"
 
-const Page = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0 auto 4rem;
+const Content = (props: ChildOnlyProp) => (
+  <Box p="1rem 2rem" w="full" {...props} />
+)
 
-  padding-top: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
+const PageContainer = (props: ChildOnlyProp) => (
+  <Flex flexDir="column" alignItems="center" w="full" m="0 auto" {...props} />
+)
 
-const InfoTitle = styled.h2`
-  font-size: 3rem;
-  font-weight: 700;
-  text-align: right;
-  margin-top: 0rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    text-align: left;
-    font-size: 2.5rem
-    display: none;
-  }
-`
+const Divider = () => (
+  <Box mb={16} mt={16} w="10%" height="0.25rem" bgColor="homeDivider" />
+)
 
-const StyledButtonDropdown = styled(ButtonDropdown)`
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: flex-end;
-  text-align: center;
-  @media (min-width: ${(props) => props.theme.breakpoints.s}) {
-    align-self: flex-end;
-  }
-`
+const HeroStatsWrapper = (props: ChildOnlyProp) => (
+  <Flex
+    direction="column"
+    alignItems="center"
+    bg="layer2Gradient"
+    pb={8}
+    w="full"
+    {...props}
+  />
+)
 
-const InfoColumn = styled.aside`
-  display: flex;
-  flex-direction: column;
-  position: sticky;
-  top: 6.25rem; /* account for navbar */
-  height: calc(100vh - 80px);
-  flex: 0 1 330px;
-  margin: 0 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
+const Page = (props: ChildOnlyProp) => (
+  <Flex
+    w="full"
+    justifyContent="space-between"
+    m="0 auto 4rem"
+    pt={16}
+    flexDirection={{ base: "column", lg: "row" }}
+    {...props}
+  />
+)
 
-const MobileButton = styled.div`
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    background: ${(props) => props.theme.colors.background};
-    box-shadow: 0 -1px 0px ${(props) => props.theme.colors.border};
-    width: 100%;
-    bottom: 0;
-    position: sticky;
-    padding: 2rem;
-    z-index: 99;
-    margin-bottom: 0rem;
-  }
-`
+const InfoTitle = (props: ChildOnlyProp) => (
+  <Heading
+    fontSize="5xl"
+    fontWeight="700"
+    lineHeight={1.4}
+    textAlign="right"
+    mt={0}
+    display={{ base: "none", lg: "block" }}
+    {...props}
+  />
+)
 
-const MobileButtonDropdown = styled(StyledButtonDropdown)`
-  margin-bottom: 0rem;
-  display: none;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: block;
-  }
-`
+// InfoColumn shows above xl
+const InfoColumn = (props: ChildOnlyProp) => (
+  <Flex
+    flexDir="column"
+    position="sticky"
+    top="6.25rem"
+    height="calc(100vh - 80px)"
+    flex="0 1 330px"
+    mx={8}
+    display={{ base: "none", lg: "initial" }}
+    {...props}
+  />
+)
 
-// Apply styles for classes within markdown here
-const ContentContainer = styled.article`
-  flex: 1 1 ${(props) => props.theme.breakpoints.l};
-  position: relative;
-  padding: 2rem;
-  padding-top: 0rem;
-  gap: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    padding: 0rem;
-  }
-  .featured {
-    padding-left: 1rem;
-    margin-left: -1rem;
-    border-left: 1px dotted ${(props) => props.theme.colors.primary};
-  }
+const StyledButtonDropdown = ({
+  list,
+  ...rest
+}: {
+  list: ButtonDropdownList
+}) => (
+  <Flex
+    justifyContent="flex-end"
+    textAlign="center"
+    alignSelf={{ base: "auto", lg: "flex-end" }}
+    mb={8}
+    {...rest}
+  >
+    <ButtonDropdown list={list} />
+  </Flex>
+)
 
-  .citation {
-    p {
-      color: ${(props) => props.theme.colors.text200};
-    }
-  }
-  h2:first-of-type,
-  & > div:first-child {
-    margin-top: 0;
-    padding-top: 0;
-  }
-`
+// ButtonDropdown for mobile only
+const MobileButton = ({ list, ...rest }: { list: ButtonDropdownList }) => {
+  const borderBoxShadowColor = useToken("colors", "border")
 
-const ComparisonGrid = styled.div`
-  display: grid;
-  grid-column-gap: 3rem;
-  grid-auto-rows: minmax(64px, auto);
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas:
-    "solo-title saas-title pool-title"
-    "solo-rewards saas-rewards pool-rewards"
-    "solo-risks saas-risks pool-risks"
-    "solo-reqs saas-reqs pool-reqs"
-    "solo-cta saas-cta pool-cta";
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "solo-title"
-      "solo-rewards"
-      "solo-risks"
-      "solo-reqs"
-      "solo-cta"
-      "saas-title"
-      "saas-rewards"
-      "saas-risks"
-      "saas-reqs"
-      "saas-cta"
-      "pool-title"
-      "pool-rewards"
-      "pool-risks"
-      "pool-reqs"
-      "pool-cta";
-  }
-
-  h4 {
-    color: #787878;
-  }
-`
-
-const ColorH3 = styled.h3<{ color: string }>`
-  grid-area: ${({ color }) => {
-    switch (color) {
-      case "stakingGold":
-        return "solo-title"
-      case "stakingGreen":
-        return "saas-title"
-      case "stakingBlue":
-        return "pool-title"
-      default:
-        return ""
-    }
-  }};
-  color: ${({ theme, color }) => theme.colors[color]};
-`
-
-const StyledButtonLink = styled(ButtonLink)`
-  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
-    width: 100%;
-  }
-`
-
-const CardGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
-    grid-template-columns: 1fr;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    grid-template-columns: 1fr;
-  }
-`
-
-const StyledCard = styled(Card)`
-  justify-content: flex-start;
-  h3 {
-    font-weight: 700;
-    margin: 0 0 1rem;
-  }
-`
-
-type BenefitsType = {
-  title: TranslationKey
-  emoji: string
-  description: TranslationKey
-  linkText?: TranslationKey
-  to?: string
+  return (
+    <Box
+      position="sticky"
+      bottom="0"
+      w="full"
+      bg="background"
+      boxShadow={`0 -1px 0px ${borderBoxShadowColor}`}
+      zIndex="99"
+      p={8}
+      mb={0}
+      display={{ base: "block", lg: "none" }}
+      {...rest}
+    >
+      <ButtonDropdown list={list} />
+    </Box>
+  )
 }
 
-const benefits: Array<BenefitsType> = [
-  {
-    title: "page-staking-benefits-1-title",
-    emoji: "💰",
-    description: "page-staking-benefits-1-description",
-  },
-  {
-    title: "page-staking-benefits-2-title",
-    emoji: ":shield:",
-    description: "page-staking-benefits-2-description",
-  },
-  {
-    title: "page-staking-benefits-3-title",
-    emoji: "🍃",
-    description: "page-staking-benefits-3-description",
-    linkText: "page-staking-benefits-3-link",
-    to: "/energy-consumption",
-  },
-]
+const ContentContainer = (props: { children: ReactNode; id: string }) => {
+  const [mdBp, lgBp] = useToken("breakpoints", ["md", "lg"])
+
+  return (
+    <Flex
+      flex={`1 1 ${lgBp}`}
+      flexBasis={mdBp}
+      position="relative"
+      padding={{ base: 0, md: "0 2rem 2rem" }}
+      gap={8}
+      direction="column"
+      alignItems="center"
+      sx={{
+        "h2:first-of-type, & > div:first-of-type": {
+          mt: 0,
+          pt: 0,
+        },
+      }}
+      {...props}
+    ></Flex>
+  )
+}
+
+const ComparisonGrid = (props: ChildOnlyProp) => {
+  const gridAreas = {
+    base: `"solo-title"
+        "solo-rewards"
+        "solo-risks"
+        "solo-reqs"
+        "solo-cta"
+        "saas-title"
+        "saas-rewards"
+        "saas-risks"
+        "saas-reqs"
+        "saas-cta"
+        "pool-title"
+        "pool-rewards"
+        "pool-risks"
+        "pool-reqs"
+        "pool-cta";`,
+    lg: `"solo-title saas-title pool-title"
+        "solo-rewards saas-rewards pool-rewards"
+        "solo-risks saas-risks pool-risks"
+        "solo-reqs saas-reqs pool-reqs"
+        "solo-cta saas-cta pool-cta"`,
+  }
+  return (
+    <Grid
+      columnGap={12}
+      gridAutoRows="minmax(64px, auto)"
+      gridTemplateColumns={{ base: "1fr", lg: "repeat(3, 1fr)" }}
+      gridTemplateAreas={gridAreas}
+      sx={{
+        h4: {
+          color: "#787878",
+        },
+      }}
+      {...props}
+    ></Grid>
+  )
+}
+
+const ColorH3 = (props: { color: string; id: TranslationKey }) => (
+  <Heading as="h3" fontSize="2xl" color={props.color}>
+    <Translation id={props.id} />
+  </Heading>
+)
+
+const StyledButtonLink = (props: { to: string; id: TranslationKey }) => {
+  return (
+    <ButtonLink to={props.to} sx={{ width: { base: "100%", sm: "initial" } }}>
+      <Translation id={props.id} />
+    </ButtonLink>
+  )
+}
+
+const CardGrid = (props: ChildOnlyProp) => (
+  <Grid
+    gap={8}
+    templateColumns={{ base: "1fr", lg: "repeat(3, 1fr)" }}
+    {...props}
+  />
+)
+
+const StyledCard = (props: {
+  title: string
+  emoji: string
+  description: string
+  key: number
+  children: ReactNode
+}) => (
+  <Card
+    title={props.title}
+    emoji={props.emoji}
+    key={props.key}
+    description={props.description}
+    sx={{
+      justifyContent: "flex-start",
+      h3: {
+        fontWeight: "700",
+        margin: "0 0 1rem",
+      },
+    }}
+  >
+    {props.children}
+  </Card>
+)
+
+type BenefitsType = {
+  title: string
+  emoji: string
+  description: string
+  linkText?: string
+  to?: string
+}
 
 const StakingPage = ({
   data,
 }: PageProps<Queries.StakingPageIndexQuery, Context>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   const heroContent = {
-    title: translateMessageId("page-staking-hero-title", intl),
-    header: translateMessageId("page-staking-hero-header", intl),
-    subtitle: translateMessageId("page-staking-hero-subtitle", intl),
+    title: t("page-staking-hero-title"),
+    header: t("page-staking-hero-header"),
+    subtitle: t("page-staking-hero-subtitle"),
     image: getImage(data.rhino)!,
-    alt: translateMessageId("page-staking-image-alt", intl),
+    alt: t("page-staking-image-alt"),
     buttons: [],
   }
 
+  const benefits: Array<BenefitsType> = [
+    {
+      title: t("page-staking-benefits-1-title"),
+      emoji: "💰",
+      description: t("page-staking-benefits-1-description"),
+    },
+    {
+      title: t("page-staking-benefits-2-title"),
+      emoji: ":shield:",
+      description: t("page-staking-benefits-2-description"),
+    },
+    {
+      title: t("page-staking-benefits-3-title"),
+      emoji: "🍃",
+      description: t("page-staking-benefits-3-description"),
+      linkText: t("page-staking-benefits-3-link"),
+      to: "/energy-consumption",
+    },
+  ]
+
   const dropdownLinks: ButtonDropdownList = {
-    text: "Staking Options" as TranslationKey,
+    text: "Staking Options",
     ariaLabel: "Staking options dropdown menu",
     items: [
       {
-        text: "page-staking-dropdown-home",
+        text: t("page-staking-dropdown-home"),
         to: "/staking/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -275,7 +286,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "page-staking-dropdown-solo",
+        text: t("page-staking-dropdown-solo"),
         to: "/staking/solo/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -284,7 +295,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "page-staking-dropdown-saas",
+        text: t("page-staking-dropdown-saas"),
         to: "/staking/saas/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -293,7 +304,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "page-staking-dropdown-pools",
+        text: t("page-staking-dropdown-pools"),
         to: "/staking/pools/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -313,35 +324,34 @@ const StakingPage = ({
     ],
   }
 
-  // TODO: use translateMessageId() for these strings
   const tocItems = {
     whatIsStaking: {
       id: "what-is-staking",
-      title: translateMessageId("page-staking-section-what-title", intl),
+      title: t("page-staking-section-what-title"),
     },
     whyStakeYourEth: {
       id: "why-stake-your-eth",
-      title: translateMessageId("page-staking-section-why-title", intl),
+      title: t("page-staking-section-why-title"),
     },
     howToStakeYourEth: {
       id: "how-to-stake-your-eth",
-      title: translateMessageId("page-staking-toc-how-to-stake-your-eth", intl),
+      title: t("page-staking-toc-how-to-stake-your-eth"),
     },
     comparisonOfOptions: {
       id: "comparison-of-options",
-      title: translateMessageId("page-staking-toc-comparison-of-options", intl),
+      title: t("page-staking-toc-comparison-of-options"),
     },
     joinTheCommunity: {
       id: "join-the-community",
-      title: translateMessageId("page-staking-join-community", intl),
+      title: t("page-staking-join-community"),
     },
     faq: {
       id: "faq",
-      title: translateMessageId("page-staking-toc-faq", intl),
+      title: t("page-staking-toc-faq"),
     },
     further: {
       id: "further",
-      title: translateMessageId("page-staking-toc-further", intl),
+      title: t("page-staking-toc-further"),
     },
   }
 
@@ -350,8 +360,8 @@ const StakingPage = ({
   return (
     <PageContainer>
       <PageMetadata
-        title={translateMessageId("page-staking-meta-title", intl)}
-        description={translateMessageId("page-staking-meta-description", intl)}
+        title={t("page-staking-meta-title")}
+        description={t("page-staking-meta-description")}
       />
       <HeroStatsWrapper>
         <PageHero content={heroContent} />
@@ -387,14 +397,12 @@ const StakingPage = ({
               {benefits.map(
                 ({ title, description, emoji, linkText, to }, idx) => (
                   <StyledCard
-                    title={translateMessageId(title, intl)}
+                    title={title}
                     emoji={emoji}
                     key={idx}
-                    description={translateMessageId(description, intl)}
+                    description={description}
                   >
-                    {to && linkText && (
-                      <Link to={to}>{translateMessageId(linkText, intl)}</Link>
-                    )}
+                    {to && linkText && <Link to={to}>{linkText}</Link>}
                   </StyledCard>
                 )
               )}
@@ -426,9 +434,7 @@ const StakingPage = ({
               <Translation id="page-staking-section-comparison-subtitle" />
             </p>
             <ComparisonGrid>
-              <ColorH3 color="stakingGold">
-                <Translation id="page-staking-dropdown-solo" />
-              </ColorH3>
+              <ColorH3 color="stakingGold" id="page-staking-dropdown-solo" />
               <div
                 style={{
                   gridArea: "solo-rewards",
@@ -488,13 +494,12 @@ const StakingPage = ({
                 </ul>
               </div>
               <div style={{ gridArea: "solo-cta" }}>
-                <StyledButtonLink to="/staking/solo/">
-                  <Translation id="page-staking-more-on-solo" />
-                </StyledButtonLink>
+                <StyledButtonLink
+                  to="/staking/solo/"
+                  id="page-staking-more-on-solo"
+                />
               </div>
-              <ColorH3 color="stakingGreen">
-                <Translation id="page-staking-dropdown-saas" />
-              </ColorH3>
+              <ColorH3 color="stakingGreen" id="page-staking-dropdown-saas" />
               <div
                 style={{
                   gridArea: "saas-rewards",
@@ -548,14 +553,13 @@ const StakingPage = ({
                 </ul>
               </div>
               <div style={{ gridArea: "saas-cta" }}>
-                <StyledButtonLink to="/staking/saas">
-                  <Translation id="page-staking-more-on-saas" />
-                </StyledButtonLink>
+                <StyledButtonLink
+                  to="/staking/saas"
+                  id="page-staking-more-on-saas"
+                />
               </div>
 
-              <ColorH3 color="stakingBlue">
-                <Translation id="page-staking-dropdown-pools" />
-              </ColorH3>
+              <ColorH3 color="stakingBlue" id="page-staking-dropdown-pools" />
               <div
                 style={{
                   gridArea: "pool-rewards",
@@ -609,9 +613,10 @@ const StakingPage = ({
                 </ul>
               </div>
               <div style={{ gridArea: "pool-cta" }}>
-                <StyledButtonLink to="/staking/pools/">
-                  <Translation id="page-staking-more-on-pools" />
-                </StyledButtonLink>
+                <StyledButtonLink
+                  to="/staking/pools/"
+                  id="page-staking-more-on-pools"
+                />
               </div>
             </ComparisonGrid>
           </Content>
@@ -619,9 +624,7 @@ const StakingPage = ({
           <StakingCommunityCallout id={tocItems.joinTheCommunity.id} />
           <Content>
             <h2 id={tocItems.faq.id}>{tocItems.faq.title}</h2>
-            <ExpandableCard
-              title={translateMessageId("page-staking-faq-4-question", intl)}
-            >
+            <ExpandableCard title={t("page-staking-faq-4-question")}>
               <p>
                 <Translation id="page-staking-faq-4-answer-p1" />
               </p>
@@ -635,9 +638,7 @@ const StakingPage = ({
                 <Translation id="page-upgrades-merge-btn" />
               </ButtonLink>
             </ExpandableCard>
-            <ExpandableCard
-              title={translateMessageId("page-staking-faq-5-question", intl)}
-            >
+            <ExpandableCard title={t("page-staking-faq-5-question")}>
               <p>
                 <Translation id="page-staking-faq-5-answer-p1" />
               </p>
@@ -648,19 +649,13 @@ const StakingPage = ({
                 <Translation id="page-staking-faq-5-answer-link" />
               </ButtonLink>
             </ExpandableCard>
-            <ExpandableCard
-              title={translateMessageId("page-staking-faq-1-question", intl)}
-            >
+            <ExpandableCard title={t("page-staking-faq-1-question")}>
               <Translation id="page-staking-faq-1-answer" />
             </ExpandableCard>
-            <ExpandableCard
-              title={translateMessageId("page-staking-faq-2-question", intl)}
-            >
+            <ExpandableCard title={t("page-staking-faq-2-question")}>
               <Translation id="page-staking-faq-2-answer" />
             </ExpandableCard>
-            <ExpandableCard
-              title={translateMessageId("page-staking-faq-3-question", intl)}
-            >
+            <ExpandableCard title={t("page-staking-faq-3-question")}>
               <p>
                 <Translation id="page-staking-faq-3-answer-p1" />
               </p>
@@ -748,9 +743,7 @@ const StakingPage = ({
             <FeedbackCard />
           </Content>
         </ContentContainer>
-        <MobileButton>
-          <MobileButtonDropdown list={dropdownLinks} />
-        </MobileButton>
+        <MobileButton list={dropdownLinks} />
       </Page>
     </PageContainer>
   )
@@ -759,7 +752,21 @@ const StakingPage = ({
 export default StakingPage
 
 export const query = graphql`
-  query StakingPageIndex {
+  query StakingPageIndex($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-staking", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     rhino: file(relativePath: { eq: "upgrades/upgrade_rhino.png" }) {
       childImageSharp {
         gatsbyImageData(
