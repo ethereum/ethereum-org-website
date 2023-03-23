@@ -286,10 +286,10 @@ const StaticPage = ({
           <Breadcrumbs slug={slug} />
           <Text
             color="text200"
-            dir={isLangRightToLeft(intl.locale as Lang) ? "rtl" : "ltr"}
+            dir={isLangRightToLeft(language as Lang) ? "rtl" : "ltr"}
           >
             <Translation id="page-last-updated" />:{" "}
-            {getLocaleTimestamp(intl.locale as Lang, lastUpdatedDate)}
+            {getLocaleTimestamp(language as Lang, lastUpdatedDate)}
           </Text>
           <TableOfContents
             position="relative"
