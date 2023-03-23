@@ -297,6 +297,15 @@
     "endDate": "2022-05-05"
   },
   {
+    "title": "ETHDam",
+    "to": "https://ethdam.com/",
+    "sponsor": null,
+    "location": "Amsterdam, Netherlands",
+    "description": "ETHDam is a conference and hackathon gathering the best DeFi and Privacy builders in Amsterdam in May 2023.",
+    "startDate": "2023-05-20",
+    "endDate": "2023-05-21"
+  },
+  {
     "title": "BlockSplit",
     "to": "https://blocksplit.net/",
     "sponsor": null,
