@@ -29,3 +29,6 @@
   - src/pages/*
   - src/pages-conditional/*
   - src/content/**/*
+
+"event :date:":
+  - src/data/community-events.json

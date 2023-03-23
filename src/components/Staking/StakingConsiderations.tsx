@@ -1,24 +1,26 @@
 import React, { useState } from "react"
 import styled from "@emotion/styled"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 // SVG imports
-import GreenCheck from "../../assets/staking/green-check-product-glyph.svg"
-import Caution from "../../assets/staking/caution-product-glyph.svg"
-import Warning from "../../assets/staking/warning-product-glyph.svg"
-import OpenSource from "../../assets/staking/open-source.svg"
-import Audited from "../../assets/staking/audited.svg"
-import BugBounty from "../../assets/staking/bug-bounty.svg"
-import BattleTested from "../../assets/staking/battle-tested.svg"
-import Trustless from "../../assets/staking/trustless.svg"
-import Permissionless from "../../assets/staking/permissionless.svg"
-import MultiClient from "../../assets/staking/multi-client.svg"
-import SelfCustody from "../../assets/staking/self-custody.svg"
-import Economical from "../../assets/staking/economical.svg"
-import LiquidityToken from "../../assets/staking/liquidity-token.svg"
+import {
+  AuditedIcon,
+  BattleTestedIcon,
+  BugBountyIcon,
+  CautionProductGlyphIcon,
+  EconomicalIcon,
+  GreenCheckProductGlyphIcon,
+  LiquidityTokenIcon,
+  MultiClientIcon,
+  OpenSourceStakingIcon,
+  PermissionlessIcon,
+  SelfCustodyIcon,
+  TrustlessIcon,
+  WarningProductGlyphIcon,
+} from "../icons/staking"
 // Component imports
 import ButtonDropdown, { List as ButtonDropdownList } from "../ButtonDropdown"
 import Translation from "../Translation"
 import { EventOptions, trackCustomEvent } from "../../utils/matomo"
-import { TranslationKey } from "../../utils/translations"
 
 const Container = styled.div`
   display: flex;
@@ -118,334 +120,13 @@ const Indicator = styled.div`
 `
 
 type DataType = {
-  title: TranslationKey
-  description: TranslationKey
-  valid: TranslationKey
-  caution: TranslationKey | ""
-  warning: TranslationKey
+  title: string
+  description: string
+  valid: string
+  caution: string
+  warning: string
   Svg: any
   matomo: EventOptions
-}
-
-const data: { [key in "solo" | "saas" | "pools"]: DataType[] } = {
-  solo: [
-    {
-      title: "page-staking-considerations-solo-1-title",
-      description: "page-staking-considerations-solo-1-description",
-      valid: "page-staking-considerations-solo-1-title",
-      caution: "",
-      warning: "page-staking-considerations-solo-1-warning",
-      Svg: OpenSource,
-      matomo: {
-        eventCategory: `StakingConsiderations`,
-        eventAction: `Clicked`,
-        eventName: "clicked solo open source",
-      },
-    },
-    {
-      title: "page-staking-considerations-solo-2-title",
-      description: "page-staking-considerations-solo-2-description",
-      valid: "page-staking-considerations-solo-2-title",
-      caution: "",
-      warning: "page-staking-considerations-solo-2-warning",
-      Svg: Audited,
-      matomo: {
-        eventCategory: `StakingConsiderations`,
-        eventAction: `Clicked`,
-        eventName: "clicked solo audited",
-      },
-    },
-    {
-      title: "page-staking-considerations-solo-3-title",
-      description: "page-staking-considerations-solo-3-description",
-      valid: "page-staking-considerations-solo-3-valid",
-      caution: "page-staking-considerations-solo-3-caution",
-      warning: "page-staking-considerations-solo-2-warning",
-      Svg: BugBounty,
-      matomo: {
-        eventCategory: `StakingConsiderations`,
-        eventAction: `Clicked`,
-        eventName: "clicked solo bug bounty",
-      },
-    },
-    {
-      title: "page-staking-considerations-solo-4-title",
-      description: "page-staking-considerations-solo-4-description",
-      valid: "page-staking-considerations-solo-4-valid",
-      caution: "page-staking-considerations-solo-4-caution",
-      warning: "page-staking-considerations-solo-4-warning",
-      Svg: BattleTested,
-      matomo: {
-        eventCategory: `StakingConsiderations`,
-        eventAction: `Clicked`,
-        eventName: "clicked solo battle tested",
-      },
-    },
-    {
-      title: "page-staking-considerations-solo-5-title",
-      description: "page-staking-considerations-solo-5-description",
-      valid: "page-staking-considerations-solo-5-title",
-      caution: "",
-      warning: "page-staking-considerations-solo-5-warning",
-      Svg: Trustless,
-      matomo: {
-        eventCategory: `StakingConsiderations`,
-        eventAction: `Clicked`,
-        eventName: "clicked solo trustless",
-      },
-    },
-    {
-      title: "page-staking-considerations-solo-6-title",
-      description: "page-staking-considerations-solo-6-description",
-      valid: "page-staking-considerations-solo-6-valid",
-      caution: "",
-      warning: "page-staking-considerations-solo-6-warning",
-      Svg: Permissionless,
-      matomo: {
-        eventCategory: `StakingConsiderations`,
-        eventAction: `Clicked`,
-        eventName: "clicked solo permissionless",
-      },
-    },
-    {
-      title: "page-staking-considerations-solo-7-title",
-      description: "page-staking-considerations-solo-7-description",
-      valid: "page-staking-considerations-solo-7-valid",
-      caution: "",
-      warning: "page-staking-considerations-solo-7-warning",
-      Svg: MultiClient,
-      matomo: {
-        eventCategory: `StakingConsiderations`,
-        eventAction: `Clicked`,
-        eventName: "clicked solo multi-client",
-      },
-    },
-    {
-      title: "page-staking-considerations-solo-8-title",
-      description: "page-staking-considerations-solo-8-description",
-      valid: "page-staking-considerations-solo-8-title",
-      caution: "",
-      warning: "page-staking-considerations-solo-8-warning",
-      Svg: SelfCustody,
-      matomo: {
-        eventCategory: `StakingConsiderations`,
-        eventAction: `Clicked`,
-        eventName: "clicked solo self custody",
-      },
-    },
-    {
-      title: "page-staking-considerations-solo-9-title",
-      description: "page-staking-considerations-solo-9-description",
-      valid: "page-staking-considerations-solo-9-valid",
-      caution: "",
-      warning: "page-staking-considerations-solo-9-warning",
-      Svg: Economical,
-      matomo: {
-        eventCategory: `StakingConsiderations`,
-        eventAction: `Clicked`,
-        eventName: "clicked solo economical",
-      },
-    },
-  ],
-  saas: [
-    {
-      title: "page-staking-considerations-solo-1-title",
-      description: "page-staking-considerations-solo-1-description",
-      valid: "page-staking-considerations-solo-1-title",
-      caution: "",
-      warning: "page-staking-considerations-solo-1-warning",
-      Svg: OpenSource,
-      matomo: {
-        eventCategory: `StakingConsiderations`,
-        eventAction: `Clicked`,
-        eventName: "clicked saas open source",
-      },
-    },
-    {
-      title: "page-staking-considerations-solo-2-title",
-      description: "page-staking-considerations-solo-2-description",
-      valid: "page-staking-considerations-solo-2-title",
-      caution: "",
-      warning: "page-staking-considerations-solo-2-warning",
-      Svg: Audited,
-      matomo: {
-        eventCategory: `StakingConsiderations`,
-        eventAction: `Clicked`,
-        eventName: "clicked saas audited",
-      },
-    },
-    {
-      title: "page-staking-considerations-solo-3-title",
-      description: "page-staking-considerations-solo-3-description",
-      valid: "page-staking-considerations-solo-3-valid",
-      caution: "page-staking-considerations-solo-3-caution",
-      warning: "page-staking-considerations-solo-2-warning",
-      Svg: BugBounty,
-      matomo: {
-        eventCategory: `StakingConsiderations`,
-        eventAction: `Clicked`,
-        eventName: "clicked saas bug-bounty",
-      },
-    },
-    {
-      title: "page-staking-considerations-solo-4-title",
-      description: "page-staking-considerations-saas-4-description",
-      valid: "page-staking-considerations-solo-4-valid",
-      caution: "page-staking-considerations-solo-4-caution",
-      warning: "page-staking-considerations-solo-4-warning",
-      Svg: BattleTested,
-      matomo: {
-        eventCategory: `StakingConsiderations`,
-        eventAction: `Clicked`,
-        eventName: "clicked saas battle tested",
-      },
-    },
-    {
-      title: "page-staking-considerations-solo-6-title",
-      description: "page-staking-considerations-saas-6-description",
-      valid: "page-staking-considerations-saas-6-valid",
-      caution: "",
-      warning: "page-staking-considerations-saas-6-warning",
-      Svg: Permissionless,
-      matomo: {
-        eventCategory: `StakingConsiderations`,
-        eventAction: `Clicked`,
-        eventName: "clicked saas permissionless",
-      },
-    },
-    {
-      title: "page-staking-considerations-saas-7-title",
-      description: "page-staking-considerations-saas-7-description",
-      valid: "page-staking-considerations-saas-7-valid",
-      caution: "page-staking-considerations-saas-7-caution",
-      warning: "page-staking-considerations-saas-7-warning",
-      Svg: MultiClient,
-      matomo: {
-        eventCategory: `StakingConsiderations`,
-        eventAction: `Clicked`,
-        eventName: "clicked saas diverse clients",
-      },
-    },
-    {
-      title: "page-staking-considerations-solo-8-title",
-      description: "page-staking-considerations-solo-8-description",
-      valid: "page-staking-considerations-solo-8-title",
-      caution: "",
-      warning: "page-staking-considerations-solo-8-warning",
-      Svg: SelfCustody,
-      matomo: {
-        eventCategory: `StakingConsiderations`,
-        eventAction: `Clicked`,
-        eventName: "clicked saas self custody",
-      },
-    },
-  ],
-  pools: [
-    {
-      title: "page-staking-considerations-solo-1-title",
-      description: "page-staking-considerations-solo-1-description",
-      valid: "page-staking-considerations-solo-1-title",
-      caution: "",
-      warning: "page-staking-considerations-solo-1-warning",
-      Svg: OpenSource,
-      matomo: {
-        eventCategory: `StakingConsiderations`,
-        eventAction: `Clicked`,
-        eventName: "clicked pooled open source",
-      },
-    },
-    {
-      title: "page-staking-considerations-solo-2-title",
-      description: "page-staking-considerations-solo-2-description",
-      valid: "page-staking-considerations-solo-2-title",
-      caution: "",
-      warning: "page-staking-considerations-solo-2-warning",
-      Svg: Audited,
-      matomo: {
-        eventCategory: `StakingConsiderations`,
-        eventAction: `Clicked`,
-        eventName: "clicked pooled audited",
-      },
-    },
-    {
-      title: "page-staking-considerations-solo-3-title",
-      description: "page-staking-considerations-solo-3-description",
-      valid: "page-staking-considerations-solo-3-valid",
-      caution: "page-staking-considerations-solo-3-caution",
-      warning: "page-staking-considerations-solo-2-warning",
-      Svg: BugBounty,
-      matomo: {
-        eventCategory: `StakingConsiderations`,
-        eventAction: `Clicked`,
-        eventName: "clicked pooled bug bounty",
-      },
-    },
-    {
-      title: "page-staking-considerations-solo-4-title",
-      description: "page-staking-considerations-saas-4-description",
-      valid: "page-staking-considerations-solo-4-valid",
-      caution: "page-staking-considerations-solo-4-caution",
-      warning: "page-staking-considerations-solo-4-warning",
-      Svg: BattleTested,
-      matomo: {
-        eventCategory: `StakingConsiderations`,
-        eventAction: `Clicked`,
-        eventName: "clicked pooled battle tested",
-      },
-    },
-    {
-      title: "page-staking-hierarchy-solo-pill-4",
-      description: "page-staking-considerations-pools-5-description",
-      valid: "page-staking-hierarchy-solo-pill-4",
-      caution: "",
-      warning: "page-staking-considerations-solo-5-warning",
-      Svg: Trustless,
-      matomo: {
-        eventCategory: `StakingConsiderations`,
-        eventAction: `Clicked`,
-        eventName: "clicked pooled trustless",
-      },
-    },
-    {
-      title: "page-staking-considerations-pools-6-title",
-      description: "page-staking-considerations-pools-6-description",
-      valid: "page-staking-considerations-saas-6-valid",
-      caution: "",
-      warning: "page-staking-considerations-saas-6-warning",
-      Svg: Permissionless,
-      matomo: {
-        eventCategory: `StakingConsiderations`,
-        eventAction: `Clicked`,
-        eventName: "clicked pooled permissionless nodes",
-      },
-    },
-    {
-      title: "page-staking-considerations-saas-7-title",
-      description: "page-staking-considerations-pools-7-description",
-      valid: "page-staking-considerations-saas-7-valid",
-      caution: "page-staking-considerations-saas-7-caution",
-      warning: "page-staking-considerations-saas-7-warning",
-      Svg: MultiClient,
-      matomo: {
-        eventCategory: `StakingConsiderations`,
-        eventAction: `Clicked`,
-        eventName: "clicked pooled diverse clients",
-      },
-    },
-    {
-      title: "page-staking-considerations-pools-8-title",
-      description: "page-staking-considerations-pools-8-description",
-      valid: "page-staking-considerations-pools-8-valid",
-      caution: "",
-      warning: "page-staking-considerations-pools-8-warning",
-      Svg: LiquidityToken,
-      matomo: {
-        eventCategory: `StakingConsiderations`,
-        eventAction: `Clicked`,
-        eventName: "clicked pooled liquidity token",
-      },
-    },
-  ],
 }
 
 export interface IProps {
@@ -453,14 +134,336 @@ export interface IProps {
 }
 
 const StakingConsiderations: React.FC<IProps> = ({ page }) => {
+  const { t } = useTranslation()
   const [activeIndex, setActiveIndex] = useState(0)
+
+  const data: { [key in "solo" | "saas" | "pools"]: DataType[] } = {
+    solo: [
+      {
+        title: t("page-staking-considerations-solo-1-title"),
+        description: t("page-staking-considerations-solo-1-description"),
+        valid: t("page-staking-considerations-solo-1-title"),
+        caution: "",
+        warning: t("page-staking-considerations-solo-1-warning"),
+        Svg: OpenSourceStakingIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked solo open source",
+        },
+      },
+      {
+        title: t("page-staking-considerations-solo-2-title"),
+        description: t("page-staking-considerations-solo-2-description"),
+        valid: t("page-staking-considerations-solo-2-title"),
+        caution: "",
+        warning: t("page-staking-considerations-solo-2-warning"),
+        Svg: AuditedIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked solo audited",
+        },
+      },
+      {
+        title: t("page-staking-considerations-solo-3-title"),
+        description: t("page-staking-considerations-solo-3-description"),
+        valid: t("page-staking-considerations-solo-3-valid"),
+        caution: t("page-staking-considerations-solo-3-caution"),
+        warning: t("page-staking-considerations-solo-2-warning"),
+        Svg: BugBountyIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked solo bug bounty",
+        },
+      },
+      {
+        title: t("page-staking-considerations-solo-4-title"),
+        description: t("page-staking-considerations-solo-4-description"),
+        valid: t("page-staking-considerations-solo-4-valid"),
+        caution: t("page-staking-considerations-solo-4-caution"),
+        warning: t("page-staking-considerations-solo-4-warning"),
+        Svg: BattleTestedIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked solo battle tested",
+        },
+      },
+      {
+        title: t("page-staking-considerations-solo-5-title"),
+        description: t("page-staking-considerations-solo-5-description"),
+        valid: t("page-staking-considerations-solo-5-title"),
+        caution: "",
+        warning: t("page-staking-considerations-solo-5-warning"),
+        Svg: TrustlessIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked solo trustless",
+        },
+      },
+      {
+        title: t("page-staking-considerations-solo-6-title"),
+        description: t("page-staking-considerations-solo-6-description"),
+        valid: t("page-staking-considerations-solo-6-valid"),
+        caution: "",
+        warning: t("page-staking-considerations-solo-6-warning"),
+        Svg: PermissionlessIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked solo permissionless",
+        },
+      },
+      {
+        title: t("page-staking-considerations-solo-7-title"),
+        description: t("page-staking-considerations-solo-7-description"),
+        valid: t("page-staking-considerations-solo-7-valid"),
+        caution: "",
+        warning: t("page-staking-considerations-solo-7-warning"),
+        Svg: MultiClientIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked solo multi-client",
+        },
+      },
+      {
+        title: t("page-staking-considerations-solo-8-title"),
+        description: t("page-staking-considerations-solo-8-description"),
+        valid: t("page-staking-considerations-solo-8-title"),
+        caution: "",
+        warning: t("page-staking-considerations-solo-8-warning"),
+        Svg: SelfCustodyIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked solo self custody",
+        },
+      },
+      {
+        title: t("page-staking-considerations-solo-9-title"),
+        description: t("page-staking-considerations-solo-9-description"),
+        valid: t("page-staking-considerations-solo-9-valid"),
+        caution: "",
+        warning: t("page-staking-considerations-solo-9-warning"),
+        Svg: EconomicalIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked solo economical",
+        },
+      },
+    ],
+    saas: [
+      {
+        title: t("page-staking-considerations-solo-1-title"),
+        description: t("page-staking-considerations-solo-1-description"),
+        valid: t("page-staking-considerations-solo-1-title"),
+        caution: "",
+        warning: t("page-staking-considerations-solo-1-warning"),
+        Svg: OpenSourceStakingIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked saas open source",
+        },
+      },
+      {
+        title: t("page-staking-considerations-solo-2-title"),
+        description: t("page-staking-considerations-solo-2-description"),
+        valid: t("page-staking-considerations-solo-2-title"),
+        caution: "",
+        warning: t("page-staking-considerations-solo-2-warning"),
+        Svg: AuditedIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked saas audited",
+        },
+      },
+      {
+        title: t("page-staking-considerations-solo-3-title"),
+        description: t("page-staking-considerations-solo-3-description"),
+        valid: t("page-staking-considerations-solo-3-valid"),
+        caution: t("page-staking-considerations-solo-3-caution"),
+        warning: t("page-staking-considerations-solo-2-warning"),
+        Svg: BugBountyIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked saas bug-bounty",
+        },
+      },
+      {
+        title: t("page-staking-considerations-solo-4-title"),
+        description: t("page-staking-considerations-saas-4-description"),
+        valid: t("page-staking-considerations-solo-4-valid"),
+        caution: t("page-staking-considerations-solo-4-caution"),
+        warning: t("page-staking-considerations-solo-4-warning"),
+        Svg: BattleTestedIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked saas battle tested",
+        },
+      },
+      {
+        title: t("page-staking-considerations-solo-6-title"),
+        description: t("page-staking-considerations-saas-6-description"),
+        valid: t("page-staking-considerations-saas-6-valid"),
+        caution: "",
+        warning: t("page-staking-considerations-saas-6-warning"),
+        Svg: PermissionlessIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked saas permissionless",
+        },
+      },
+      {
+        title: t("page-staking-considerations-saas-7-title"),
+        description: t("page-staking-considerations-saas-7-description"),
+        valid: t("page-staking-considerations-saas-7-valid"),
+        caution: t("page-staking-considerations-saas-7-caution"),
+        warning: t("page-staking-considerations-saas-7-warning"),
+        Svg: MultiClientIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked saas diverse clients",
+        },
+      },
+      {
+        title: t("page-staking-considerations-solo-8-title"),
+        description: t("page-staking-considerations-solo-8-description"),
+        valid: t("page-staking-considerations-solo-8-title"),
+        caution: "",
+        warning: t("page-staking-considerations-solo-8-warning"),
+        Svg: SelfCustodyIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked saas self custody",
+        },
+      },
+    ],
+    pools: [
+      {
+        title: t("page-staking-considerations-solo-1-title"),
+        description: t("page-staking-considerations-solo-1-description"),
+        valid: t("page-staking-considerations-solo-1-title"),
+        caution: "",
+        warning: t("page-staking-considerations-solo-1-warning"),
+        Svg: OpenSourceStakingIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked pooled open source",
+        },
+      },
+      {
+        title: t("page-staking-considerations-solo-2-title"),
+        description: t("page-staking-considerations-solo-2-description"),
+        valid: t("page-staking-considerations-solo-2-title"),
+        caution: "",
+        warning: t("page-staking-considerations-solo-2-warning"),
+        Svg: AuditedIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked pooled audited",
+        },
+      },
+      {
+        title: t("page-staking-considerations-solo-3-title"),
+        description: t("page-staking-considerations-solo-3-description"),
+        valid: t("page-staking-considerations-solo-3-valid"),
+        caution: t("page-staking-considerations-solo-3-caution"),
+        warning: t("page-staking-considerations-solo-2-warning"),
+        Svg: BugBountyIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked pooled bug bounty",
+        },
+      },
+      {
+        title: t("page-staking-considerations-solo-4-title"),
+        description: t("page-staking-considerations-saas-4-description"),
+        valid: t("page-staking-considerations-solo-4-valid"),
+        caution: t("page-staking-considerations-solo-4-caution"),
+        warning: t("page-staking-considerations-solo-4-warning"),
+        Svg: BattleTestedIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked pooled battle tested",
+        },
+      },
+      {
+        title: t("page-staking-hierarchy-solo-pill-4"),
+        description: t("page-staking-considerations-pools-5-description"),
+        valid: t("page-staking-hierarchy-solo-pill-4"),
+        caution: "",
+        warning: t("page-staking-considerations-solo-5-warning"),
+        Svg: TrustlessIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked pooled trustless",
+        },
+      },
+      {
+        title: t("page-staking-considerations-pools-6-title"),
+        description: t("page-staking-considerations-pools-6-description"),
+        valid: t("page-staking-considerations-saas-6-valid"),
+        caution: "",
+        warning: t("page-staking-considerations-saas-6-warning"),
+        Svg: PermissionlessIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked pooled permissionless nodes",
+        },
+      },
+      {
+        title: t("page-staking-considerations-saas-7-title"),
+        description: t("page-staking-considerations-pools-7-description"),
+        valid: t("page-staking-considerations-saas-7-valid"),
+        caution: t("page-staking-considerations-saas-7-caution"),
+        warning: t("page-staking-considerations-saas-7-warning"),
+        Svg: MultiClientIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked pooled diverse clients",
+        },
+      },
+      {
+        title: t("page-staking-considerations-pools-8-title"),
+        description: t("page-staking-considerations-pools-8-description"),
+        valid: t("page-staking-considerations-pools-8-valid"),
+        caution: "",
+        warning: t("page-staking-considerations-pools-8-warning"),
+        Svg: LiquidityTokenIcon,
+        matomo: {
+          eventCategory: `StakingConsiderations`,
+          eventAction: `Clicked`,
+          eventName: "clicked pooled liquidity token",
+        },
+      },
+    ],
+  }
 
   const pageData = data[page]
   const { title, description, valid, caution, warning, Svg } =
     pageData[activeIndex]
 
   const dropdownLinks: ButtonDropdownList = {
-    text: "Staking Considerations" as TranslationKey,
+    text: "Staking Considerations",
     ariaLabel: "Dropdown menu for staking considerations",
     items: pageData.map(({ title }) => ({
       text: title,
@@ -499,7 +502,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
                 }}
                 active={idx === activeIndex}
               >
-                <Translation id={title} />
+                {title}
               </ListItem>
             ))}
           </ul>
@@ -507,16 +510,12 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
       </List>
       <Content>
         <StyledSvg style={selectionSvgStyle} />
-        <h3>
-          <Translation id={title} />
-        </h3>
-        <p>
-          <Translation id={description} />
-        </p>
+        <h3>{title}</h3>
+        <p>{description}</p>
         <IndicatorRow>
           {!!valid && (
             <Indicator>
-              <GreenCheck style={indicatorSvgStyle} />
+              <GreenCheckProductGlyphIcon style={indicatorSvgStyle} />
               <p>
                 <Translation id={valid} />
               </p>
@@ -524,7 +523,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
           )}
           {!!caution && (
             <Indicator>
-              <Caution style={indicatorSvgStyle} />
+              <CautionProductGlyphIcon style={indicatorSvgStyle} />
               <p>
                 <Translation id={caution} />
               </p>
@@ -532,7 +531,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
           )}
           {!!warning && (
             <Indicator>
-              <Warning style={indicatorSvgStyle} />
+              <WarningProductGlyphIcon style={indicatorSvgStyle} />
               <p>
                 <Translation id={warning} />
               </p>

@@ -4,10 +4,18 @@
   "page-upgrades-beacon-date": "リリース!",
   "page-upgrades-merge-date": "2022年9月",
   "page-upgrades-shards-date": "～2023年",
-  "page-upgrades-merge-banner-intro": "マージが近づいきており、イーサリアムに変更が加えられます。",
-  "page-upgrades-merge-banner-content-outdated": "変更に伴い、本ページの一部のコンテンツの情報が古くなっています。アップデートは近日中に行われる予定です。",
-  "page-upgrades-merge-banner-developers-landing": "一部のドキュメントには、古いコンテンツであることを示すバナーが表示されています。アップデートは近日中に行われる予定です。",
   "page-upgrades-post-merge-banner-tutorial-ood": "マージ後、本チュートリアルの情報は古くなったため、動作しない可能性があります。ご貢献いただける場合はPRを上げてください。",
-  "page-upgrades-post-merge-banner-tutorial-light-node-ood": "マージ後、本チュートリアルの情報は古くなっています。ライトノードは現在プルーフ・オブ・ステークでは動作しませんが、まもなくリリースされる予定です。",
-  "page-upgrades-post-merge-banner-governance-ood": "マージ後、本ページの一部のコンテンツの情報が古くなっています。ご貢献いただける場合はPRを上げてください。"
+  "page-upgrades-post-merge-banner-governance-ood": "マージ後、本ページの一部のコンテンツの情報が古くなっています。ご貢献いただける場合はPRを上げてください。",
+  "page-upgrades-upgrades-guide": "イーサリアムのアップグレードのガイド",
+  "page-upgrades-upgrades-docking": "マージ",
+  "page-upgrades-shard-title": "シャーディング",
+  "page-upgrades-upgrades-beacon-chain": "ビーコンチェーン",
+  "consensus-beaconcha-in-desc": "オープンソースのビーコンチェーンエクスプローラー",
+  "consensus-beaconscan-desc": "ビーコンチェインエクスプローラー - コンセンサスレイヤレイヤーのEtherscan",
+  "consensus-become-staker": "ステーカーになる",
+  "consensus-become-staker-desc": "ステーキングは稼働しています! ネットワークの安全性を高めるため、ETHのステーキングをご希望の場合は、リスクをよくご理解の上行ってください。",
+  "consensus-explore": "データの探索",
+  "consensus-run-beacon-chain": "コンセンサスクライアントの実行",
+  "consensus-run-beacon-chain-desc": "イーサリアムではクライアントの多様性が重要ですので、この点にご協力ください。",
+  "read-more": "続きを読む"
 }

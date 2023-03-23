@@ -114,7 +114,7 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 
 <StakingProductsCardGrid category="keyGen" />
 
-想要推荐其他未提到的质押工具吗？ 可以查看我们的[产品清单政策](/contributing/adding-staking-products/)，思考你想要推荐的工具是否合适，合适的话，请提交以供审核。
+想要推荐其他未提到的质押工具吗？ 可以查看我们的[产品清单政策](/contributing/adding-staking-products/)，思考你想要推荐的内容是否合适，合适的话，请提交以供审核。
 
 ## 探索单独质押指南 {#staking-guides}
 

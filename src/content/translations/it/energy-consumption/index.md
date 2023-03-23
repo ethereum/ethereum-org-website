@@ -6,87 +6,70 @@ lang: it
 
 # Consumo energetico di Ethereum {#introduction}
 
-L'attuale spesa energetica di Ethereum con il [proof-of-work](/developers/docs/consensus-mechanisms/#proof-of-work) è troppo elevata e insostenibile. Risolvere i problemi di spesa energetica senza sacrificare la sicurezza e la decentralizzazione è una sfida tecnica significativa ed è stata oggetto di ricerca e sviluppo per anni. Esploriamo perché la costruzione di Ethereum ha avuto un alto impatto ambientale e come il prossimo aggiornamento della rete a [proof-of-stake](/developers/docs/consensus-mechanisms/pos) cambierà drasticamente la situazione.
-
-## L'energia protegge la rete {#energy-secures-the-network}
-
-Le transazioni sulla blockchain Ethereum sono convalidate dai ["minatori"](/developers/docs/consensus-mechanisms/pow/mining). I "minatori" raggruppano le transazioni in blocchi ordinati e le aggiungono alla blockchain Ethereum. I nuovi blocchi vengono trasmessi a tutti gli altri operatori del nodo che eseguono le transazioni in modo indipendente e verificano che siano validi. Qualsiasi azione disonesta si presenta come un'incongruenza tra i diversi nodi. I blocchi onesti vengono aggiunti alla blockchain e diventano una parte immutabile della storia.
-
-La capacità di ogni "minatore" di aggiungere nuovi blocchi funziona solo se c'è un costo associato al minare e imprevedibilità su quale nodo specifico invia il prossimo blocco. Queste condizioni sono soddisfatte imponendo il proof-of-work (PoW). Per essere idoneo a inviare un blocco di transazioni, un "minatore" deve risolvere un puzzle computazionale arbitrario più velocemente di qualsiasi altro "minatore". Risolvere il puzzle crea concorrenza tra i "minatori" e costi sotto forma di spesa energetica. Per defraudare con successo la blockchain, un "minatore" disonesto dovrebbe vincere costantemente la gara di proof-of-work, il che è molto improbabile ed estremamente costoso.
-
-Ethereum usa il proof-of-work fin dall'inizio. La migrazione dal proof-of-work al proof-of-stake è sempre stato un obiettivo fondamentale di Ethereum. Tuttavia, sviluppare un sistema proof-of-stake che aderisca ai principi fondamentali di Ethereum di sicurezza e decentralizzazione non è banale. Ci sono volute molte ricerche e scoperte nella crittografia, nella criptoeconomia e nella progettazione di meccanismi per arrivare ad un punto in cui la transizione è possibile.
-
-## Spesa energetica del proof-of-work {#proof-of-work}
-
-Proof-of-work è un modo solido per proteggere la rete e imporre cambiamenti onesti alla blockchain, ma è problematico per diverse ragioni. Poiché il diritto di minare un blocco richiede la risoluzione di un puzzle computazionale arbitrario, i "minatori" possono aumentare le loro probabilità di successo investendo in un hardware più potente. Questi incentivi causano una "corsa agli armamenti" dei "minatori" che acquistano attrezzature per minare che consumano sempre più energia. Il protocollo proof-of-work di Ethereum attualmente ha un consumo energetico totale annuo approssimativamente uguale a quello della Finlandia<sup>[^1]</sup> e un'impronta di carbonio simile alla Svizzera<sup>[^1]</sup>.
-
-## Proof-of-Stake {#proof-of-stake}
-
-Un futuro più verde per Ethereum è già in costruzione sotto forma di catena [**proof-of-stake (PoS)**](/upgrades/beacon-chain/). Nell'ambito del [proof-of-stake](/developers/docs/consensus-mechanisms/pos/), la risoluzione dei puzzle arbitrario non è necessaria. Rimuovendo la risoluzione dei puzzle si riduce drasticamente il dispendio energetico necessario per mettere in sicurezza la rete. I "minatori" vengono sostituiti da convalidatori che svolgono la stessa funzione, ma, anziché spendere i loro attivi in anticipo sotto forma di lavoro computazionale, investono ETH come garanzia reale contro il comportamento disonesto. Se il convalidatore è pigro (offline quando si suppone che debba adempiere a qualche dovere di convalidatore) può lentamente perdere il suo ETH investito, mentre un comportamento palesemente disonesto ha come risultato che gli attivi investiti vengono ridotti. Questo incentiva fortemente la partecipazione attiva e onesta nel rendere sicura la rete.
-
-Analogamente al proof-of-work, un'entità dannosa richiederebbe almeno il 51% del totale degli ETH investiti nella rete per eseguire un [attacco del 51%](/glossary/#51-attack). Tuttavia, a differenza del proof-of-work, dove la perdita potenziale di un attacco non riuscito è solo il costo di generare la potenza di hash necessaria per minare, nel proof-of-stake, la possibile perdita di un attacco è l'intera quantità di ETH usata come garanzia reale. Questa struttura disincentivante permette la sicurezza della rete con il proof-of-stake eliminando la necessità di spendere energia in calcoli arbitrari. Spiegazioni dettagliate sulla sicurezza della rete in proof-of-stake possono essere trovate [qui](/developers/docs/consensus-mechanisms/pos/) e [qui](https://vitalik.ca/general/2017/12/31/pos_faq.html).
-
-## La fusione {#the-merge}
-
-C'è una catena proof-of-stake funzionale chiamata [Beacon Chain](/upgrades/beacon-chain/) che è in funzione da dicembre 2020 e che sta dimostrando la fattibilità del protocollo proof-of-stake. La fusione si riferisce al momento in cui Ethereum si lascia alle spalle il proof-of-work e adotta completamente il proof-of-stake. La fusione dovrebbe avvenire nel secondo trimestre del 2022. [Maggiori informazioni sulla fusione](/upgrades/merge/).
+Ethereum è una blockchain ecologica. Usa un meccanismo di consenso di [proof-of-stake](/developers/docs/consensus-mechanisms/pos) che può esser eseguito sui dispositivi a bassa potenza e non richiede elevata potenza di calcolo per partecipare. Il meccanismo di proof-of-stake di Ethereum protegge la rete usando gli ETH in staking piuttosto che l'energia consumata, come nel [proof-of-work](/developers/docs/consensus-mechanisms/pow). Il passaggio al proof-of-stake significa che l'energia consumata dalla rete di Ethereum è relativamente ridotta, verso i 0,01 TWh/anno.
 
 ## Spesa energetica del proof-of-stake {#proof-of-stake-energy}
 
-Oltre a costruire la fiducia nel meccanismo di proof-of-stake, la Beacon Chain permette anche di stimare l'utilizzo di energia post-fusione di Ethereum. Una [stima recente](https://blog.ethereum.org/2021/05/18/country-power-no-more/) ha suggerito che la fusione del proof-of-stake potrebbe risultare in una riduzione del 99,95% dell'uso totale di energia, con il proof-of-stake che è ~2000 volte più efficiente dal punto di vista energetico del proof-of-work. Il dispendio energetico di Ethereum sarà all'incirca uguale al costo di funzionamento di un computer domestico per ogni nodo della rete.
+Il consumo energetico di Ethereum è approssimativamente pari al costo di operazione di un portatile modesto per ogni nodo sulla rete.
 
-![immagine](energy_use_per_transaction.png)
+Molti articoli stimano una spesa energetica "per transazione" per confrontare le blockchain ad altre industrie. Il beneficio di ciò è che è facile da comprendere. Tuttavia, le stime basate sulle transazioni possono essere fuorvianti poiché l'energia richiesta per proporre e validare un blocco è indipendente dal numero di transazioni al suo interno. Un'unità di spesa energetica per transazione implica che meno transazioni porterebbero a una spesa minore e viceversa, il che non è vero. Una stima per transazione dipende fortemente da come è definito il volume di transazione di una blockchain e, modificare tale definizione, può far sembrare maggiore o minore il valore.
 
-<p style="text-align: center;"><small><i>Stima del consumo energetico del PoW (proof-of-work) per tx utilizzato in cifre sulla base dei dati di <a href="https://blog.ethereum.org/2021/05/18/country-power-no-more/" target="_blank" rel="noopener noreferrer">maggio 2021</a>, al momento di scrivere la stessa fonte suggeriva fino a <a href="https://digiconomist.net/ethereum-energy-consumption" target="_blank" rel="noopener noreferrer">175,56 kWh</a></i></small></p>
+Ad esempio, su Ethereum, il volume di transazione non è solo quello del livello di base, è anche la somma del volume di transazione di tutti i suoi rollup del "[livello 2](/layer-2/)", non generalmente inclusi nei calcoli e che lo ridurrebbero drasticamente. Questo è uno dei motivi per cui gli strumenti che confrontano il consumo energetico per transazione sulle piattaforme, sono fuorvianti.
 
-Confrontiamo questi numeri a un servizio come Visa. 100.000 transazioni Visa utilizzano 149 kWh di energia<sup>[^2]</sup>. Supponendo che lo sharding sia stato implementato, il tasso di transazione corrente di Ethereum (15 transazioni al secondo) sarà aumentato di almeno 64 volte (il numero di partizioni), senza contare l'ottimizzazione aggiuntiva dai rollup. Una stima realistica per Ethereum post-fusione sottoposto a sharding con rollup è [25.000 - 100.000](https://twitter.com/VitalikButerin/status/1312905884549300224?s=20) transazioni al secondo. Possiamo utilizzare queste informazioni per stimare la spesa massima e minima di energia per 100.000 transazioni.
+Più rilevante è il consumo energetico complessivo e l'impronta carbonica dell'intera rete. Da tali valori, possiamo esaminare ciò che la rete offre ai suoi utenti e alla società intera ed effettuare una valutazione più globale del fatto che la spesa energetica sia o meno giustificata. Le misurazioni per transazione, d'altra parte, implicano che il valore della rete provenga solo dal suo ruolo nel trasferire criptovalute tra conti e proibiscono un'analisi onesta di costi e benefici.
 
-- 25.000 transazioni al secondo.
-- `100.000 / 25.000 = 4` secondi per elaborare 100.000 transazioni.
+Il [CCRI](https://carbon-ratings.com) (Crypto Carbon Ratings Institute) ha analizzato ampiamente il consumo di elettricità e l'impronta carbonica della rete Ethereum (vedi il report [_La Fusione - Implicazioni sul consumo elettrico e sull'impronta carbonica della rete Ethereum_](https://carbon-ratings.com/eth-report-2022)). Il CCRI ha misurato il consumo elettrico di diversi nodi con varie configurazioni hardware e software del client. Ne è risultata una stima di **2,601 MWh** (0,0026 TWh) per il consumo annuo di elettricità della rete al momento dell'analisi (settembre 2022), corrispondente alle emissioni carboniche annuali di **870 tonnellate di CO2e**, applicando i fattori di intensità carbonica specifici regionali.
 
-Possiamo anche stimare la spesa energetica di Ethereum al secondo, facendo una stima prudente che 10.000 convalidatori attivi stiano proteggendo la rete (ci sono più di [250.000 convalidatori sulla Beacon Chain](https://beaconscan.com/) al momento, ma molti convalidatori possono operare su un unico nodo. Attualmente, si stima che ci siano 3.000-4.000 singoli nodi, quindi 10.000 è una stima prudente per la post-fusione):
+[Digiconomist fornisce il consumo energetico e le impronte carboniche dell'intera rete per Bitcoin ed Ethereum](https://digiconomist.net/ethereum-energy-consumption). Nel momento in cui viene scritto questo articolo, Bitcoin consuma circa 200 TWh/anno di energia ed emette circa 100 MT (megatonnellate) di carbonio all'anno, generando circa 32.000 t di rifiuti energetici da hardware obsoleti ogni anno. In confronto, la spesa energetica totale per proteggere Ethereum è più vicina a **0,01 TWh/anno**.
 
-`1,44 kWh di uso giornaliero * 10.000 nodi di rete = 14.400 kWh` al giorno. Ci sono 86.400 secondi in un giorno, quindi `14.400 / 86.400 = 0,1666666667 kWh` al secondo.
+<EnergyConsumptionChart />
 
-Moltiplicando questo valore per il tempo necessario ad elaborare 100.000 transazioni: `0,1667 * 4 = 0,667 kWh`.
+La suddetta cifra mostra il consumo energetico annuale stimato in TWh/anno per vari settori (aggiornata a giugno 2022). _Nota che le stime presentate nel grafico provengono da fonti disponibili pubblicamente, delle quali si riporta il link nel testo di seguito. Sono illustrative e non rappresentano una stima, promessa o previsione ufficiale._
 
-Questo valore è pari allo ~0,4% dell'energia utilizzata da Visa per lo stesso numero di transazioni, ovvero una riduzione della spesa energetica di un fattore di ~225 rispetto all'attuale rete proof-of-work di Ethereum.
+Per contestualizzare il consumo energetico di Ethereum, possiamo confrontare le stime annualizzate per altri settori. Se consideriamo Ethereum una piattaforma per mantenere in modo sicuro gli asset digitali come investimenti, forse possiamo compararla all'estrazione dell'oro, che si stima consumi circa [240 TWh/anno](https://www.kitco.com/news/2021-05-17/Gold-s-energy-consumption-doubles-that-of-bitcoin-Galaxy-Digital.html). Come piattaforma di pagamenti digitali, potremmo forse compararla a PayPal (che si stima consumi circa [0,26 TWh/anno](https://app.impaakt.com/analyses/paypal-consumed-264100-mwh-of-energy-in-2020-24-from-non-renewable-sources-27261)). Come piattaforma di intrattenimento, potremmo forse compararla all'industria videoludica, che si stima consumi circa [34 TW/anno](https://www.researchgate.net/publication/336909520_Toward_Greener_Gaming_Estimating_National_Energy_Use_and_Energy_Efficiency_Potential) _nei soli Stati Uniti_. Le stime del consumo energetico di Netflix oscillano drasticamente tra [circa 0,45TWhr/anno](https://s22.q4cdn.com/959853165/files/doc_downloads/2020/02/0220_Netflix_EnvironmentalSocialGovernanceReport_FINAL.pdf) (come da sua stima del 2019) fino a circa 94 TWh/anno (come stimato da [Shift Project](https://theshiftproject.org/en/article/unsustainable-use-online-video/)); esistono delle discussioni sulle ipotesi sottostanti tali stime, disponibili su [Carbon Brief](https://www.carbonbrief.org/factcheck-what-is-the-carbon-footprint-of-streaming-video-on-netflix). Altrimenti, Ethereum potrebbe essere comparata a YouTube, che si stima consumi circa [244 TWh/anno](https://thefactsource.com/how-much-electricity-does-youtube-use/), sebbene questi valori dipendano molto dal tipo di dispositivo su cui sono trasmessi i video e dall'efficienza energetica dell'infrastruttura sottostante, come i centri di dati. Le stime del consumo energetico di YouTube sono state ripartite per canali e singoli video. [Queste stime](https://thefactsource.com/how-much-electricity-does-youtube-use/) lasciano intendere che le persone che hanno guardato Gangnam Style nel 2019 hanno consumato 45 volte più energia di quella utilizzata dal proof-of-stake di Ethereum in un anno.
 
-Ripetere il calcolo con il numero massimo di transazioni al secondo si ottiene 0,1667 kWh al secondo, che è circa lo 0,1% della spesa energetica di Visa, ovvero una riduzione di ~894 volte.
+## Un livello d'applicazione ecologico {#green-applications}
 
-_Nota: non è del tutto accurato confrontare in base al numero di transazioni dato che il consumo di energia di Ethereum è basato sul tempo. Il consumo di energia di Ethereum è lo stesso in 1 minuto, indipendentemente dal fatto che faccia 1 o 1.000 transazioni._
+Mentre il consumo energetico di Ethereum è molto ridotto, vi è anche una community sostanziale, in crescita e altamente attiva di **finanza rigenerativa (ReFi)** che sta nascendo su Ethereum. Le applicazioni ReFi usano i componenti della DeFi per creare applicazioni finanziarie aventi esternalità positive a beneficio dell'ambiente. La ReFi è parte di un più ampio movimento ["solarpunk"](https://en.wikipedia.org/wiki/Solarpunk), strettamente allineato con Ethereum e che mira ad accoppiare l'avanzamento tecnologico alla gestione ambientale. La natura decentralizzata, senza permessi e componibile di Ethereum lo rende il livello di base ideale per la ReFi e le community solarpunk. Tramite il loro sviluppo (e altri, es. [DeSci](/desci/)), Ethereum sta diventando una tecnologia positiva in termini ambientali e sociali.
 
-_Dobbiamo anche considerare che Ethereum non si limita a semplici transazioni finanziarie, ma è anche una piattaforma completa costruita per smart contract e applicazioni decentralizzate._
+## Il debito carbonico di Ethereum {#carbon-debt}
 
-## Un Ethereum più verde {#green-ethereum}
+Il consumo energetico corrente di Ethereum è molto ridotto, ma non è sempre stato così. Ethereum è passato al suo meccanismo di consenso di proof-of-stake nel 3° trimestre del 2022. Tuttavia, dal 2014 al 2022 Ethereum ha usato un meccanismo di proof-of-work, che ha avuto un costo ambientale molto maggiore.
 
-Mentre il consumo di energia di Ethereum è stato storicamente sostanziale, c'è stato un grande investimento di tempo e intelletto degli sviluppatori nella transizione da una convalida dei blocchi ad elevato consumo energetico a una efficiente dal punto di vista energetico. Per citare [Bankless](http://podcast.banklesshq.com/), il modo migliore per ridurre l'energia consumata dal proof-of-work è semplicemente "spegnerlo", che è l'approccio che Ethereum si è impegnata ad adottare.
+Dalle sue origini, Ethereum ha mirato a implementare un meccanismo di consenso di proof-of-stake, ma farlo senza sacrificare la sicurezza e la decentralizzazione ha richiesto anni di ricerca e sviluppo mirati. Dunque, per avviare la rete è stato usato un meccanismo di proof-of-work. Il consenso di proof-of-work richiede ai miner di usare il proprio hardware per risolvere un rompicapo, consumando energia nel processo. La soluzione al rompicapo prova che l'energia è stata realmente utilizzata dal miner, dimostrando che ha investito valore del mondo reale per il diritto ad aggiungere elementi alla blockchain. Il consumo energetico totale di Ethereum ha raggiunto un picco durante l'apice del mercato rialzista delle criptovalute a febbraio 2022 a poco meno di 94 TWh/anno. Nell'estate precedente al passaggio al proof-of-stake, il consumo energetico era più vicino ai 60 TWh/anno, comparabile a quello dell'Uzbekistan, con un'emissione carbonica equivalente a quella dell'Azerbaijan (33 MT/anno).
+
+Il [CCRI](https://carbon-ratings.com) ha esaminato l'impatto della fusione di Ethereum dal proof-of-work al proof-of-stake; i risultati hanno sottolineato il significativo impatto del cambiamento del protocollo di consenso: il consumo di elettricità annualizzato è stato ridotto da 22.900.320 MWh a 2.601 MWh e, dunque, di oltre il **99,988%**. Similmente, l'impronta carbonica di Ethereum è stata ridotta approssimativamente del **99,992%** (da 11.016.000 a 870 tonnellate di CO2e). Rappresentato metaforicamente, ciò corrisponde a una riduzione delle emissioni dall'altezza della Torre Eiffel a un piccolo giocattolo di plastica, come mostrato nella figura sottostante.
+
+![Confronto del consumo energetico di Ethereum prima e dopo La Fusione. Sulla sinistra è mostrata la Torre Eiffel, alta 330 metri, e sulla destra un giocattolo di plastica, alto 4 cm, sotto una lente d'ingrandimento.](energy_consumption_pre_post_merge.png)
+
+Sia il proof-of-work che il proof-of-stake sono semplicemente meccanismi per decidere chi aggiungerà il prossimo blocco. Passare dal proof-of-work al proof-of-stake, in cui il valore reale investito proviene dagli ETH in staking direttamente in un contratto intelligente, rimuove la necessità per i miner di consumare energia per aggiungere alla blockchain. Dunque, il costo ambientale per proteggere la rete è ridotto drasticamente.
+
+## Perché il proof-of-stake è più ecologico del proof-of-work? {#why-pos-is-greener-than-pow}
+
+Il proof-of-work è un metodo forte per proteggere la rete. Le transazioni sulla blockchain di Ethereum sotto il precedente sistema di proof-of-work erano validate dai [miner](/developers/docs/consensus-mechanisms/pow/mining). I miner raggruppavano le transazioni in blocchi ordinati e li aggiungevano alla blockchain di Ethereum. I nuovi blocchi venivano trasmessi a tutti gli altri operatori del nodo che eseguivano le transazioni in modo indipendente e verificavano che fossero valide. Qualsiasi azione disonesta si presentava come un'incongruenza tra i diversi nodi. I blocchi onesti erano aggiunti alla blockchain e diventavano una parte immutabile dello storico. La capacità di ogni miner di aggiungere nuovi blocchi funziona solo se c'è un costo associato al mining e vi è imprevedibilità su quale nodo specifico invii il blocco successivo. Tali condizioni sono soddisfatte imponendo il proof-of-work. Per esser idoneo a inviare un blocco di transazioni, un miner deve prima inviare la soluzione di un rompicapo computazionalmente dispendioso. Per assumere correttamente il controllo della blockchain, un miner disonesto avrebbe dovuto vincere coerentemente la gara del proof-of-work investendo in hardware ed energia sufficienti a superare le prestazioni di gran parte degli altri miner.
+
+Questo meccanismo di protezione della rete è problematico per diversi motivi. Prima di tutto, i miner avrebbero aumentato le proprie possibilità di successo investendo in hardware più potenti, creando le condizioni per una corsa alle armi, coi miner che acquistavano equipaggiamenti di mining sempre più energivori. Questo ha aumentato il consumo energetico della rete e ha generato sprechi di hardware. In secondo luogo, il protocollo di proof-of-work di Ethereum (prima della transizione al proof-of-stake) aveva un consumo energetico annualizzato totale approssimativamente pari a quello della Finlandia <sup>[^1]</sup> e un'impronta carbonica simile a quella della Svizzera <sup>[^1]</sup>.
+
+Il proof-of-stake usa i validatori invece dei miner. I validatori ricoprono la stessa funzione dei miner, tranne che invece di consumare le proprie risorse come consumo energetico, mettono ETH in staking come garanzia contro i comportamenti disonesti. Questi ETH in staking possono essere distrutti se il validatore si comporta male, con sanzioni più severe per le azioni più nefaste. Ciò incentiva fortemente la partecipazione attiva e onesta nel proteggere la rete senza richiedere grandi consumi energetici. Poiché quasi tutta l'energia consumata proteggendo la rete di proof-of-work proveniva dall'algoritmo di mining, il passaggio al proof-of-stake ha ridotto drasticamente i consumi energetici. Inoltre, non vi è alcun beneficio nell'investire in hardware più potente sotto il proof-of-stake, quindi non esiste alcuna condizione di corsa alle armi e vi è un ridotto spreco elettronico. I validatori di Ethereum possono operare sui tipici laptop o dispositivi a basso consumo, come [Raspberry Pi](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/index.html).
+
+Leggi di più su [come Ethereum implementa il proof-of-stake](/developers/docs/consensus-mechanisms/pos) e com'è paragonato al proof-of-work.
 
 <InfoBanner emoji=":evergreen_tree:">
   Se pensi che queste statistiche siano errate o possano essere rese più accurate, ti invitiamo a segnalarlo o inviare una "Pull Request". Queste sono stime del team di ethereum.org fatte usando informazioni pubblicamente accessibili e l'attuale tabella di marcia di Ethereum. Queste dichiarazioni non rappresentano una promessa ufficiale della Fondazione Ethereum. 
 </InfoBanner>
 
-## Letture consigliate {#further-reading}
+## Ulteriori letture {#further-reading}
 
-- [A country's worth of power, no more](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, 18 maggio 2021_
-- [Emissions Ethereum: A bottom-up Estimate](https://kylemcdonald.github.io/ethereum-emissions/) _ Kyle McDonald_
-- [Ethereum Energy Consumption Index](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
+- [L'energia necessaria a un paese; non più](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, 18 maggio 2021_
+- [Consumo energetico di Ethereum](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
+- [Emissioni di Ethereum: Una Stima Completa](https://kylemcdonald.github.io/ethereum-emissions/) _Kyle McDonald_
+- [Indice del Consumo Energetico di Ethereum](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
 - [ETHMerge.com](https://ethmerge.com/)—_[@InsideTheSim](https://twitter.com/InsideTheSim)_
+- [La Fusione - Implicazioni sul consumo elettrico e sull'impronta carbonica della rete Ethereum](https://carbon-ratings.com/eth-report-2022) - _CCRI_
 
 ## Argomenti correlati {#related-topics}
 
-- [Visione di Ethereum](/upgrades/vision/)
+- [Visione di Ethereum](/roadmap/vision/)
 - [La Beacon Chain](/upgrades/beacon-chain)
-- [La fusione](/upgrades/merge/)
-- [Sharding](/upgrades/beacon-chain/)
-
-### Note a piè pagina e fonti {#footnotes-and-sources}
-
-#### 1. Consumo energetico del proof-of-work di Ethereum {#fn-1}
-
-[Consumo di energia per paese. Ethereum (TWh all'anno)](https://digiconomist.net/ethereum-energy-consumption)
-
-#### 2. Consumo energetico di Visa {#fn-2}
-
-[Consumo energetico medio di rete Bitcoin per transazione rispetto alla rete VISA a partire dal 2020, Statista](https://www.statista.com/statistics/881541/bitcoin-energy-consumption-transaction-comparison-visa/)
-
-[Rapporto finanziario Visa quarto trimestre 2020](https://s1.q4cdn.com/050606653/files/doc_financials/2020/q4/Visa-Inc.-Q4-2020-Operational-Performance-Data.pdf)
+- [La Fusione](/upgrades/merge/)
+- [Frammentazione](/upgrades/beacon-chain/)

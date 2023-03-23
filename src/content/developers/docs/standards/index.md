@@ -45,7 +45,7 @@ More detailed information on these different types and categories can be found i
   - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309) - A standardized event emitted when creating/transferring one, or many non-fungible tokens using consecutive token identifiers.
   - [ERC-4400](https://eips.ethereum.org/EIPS/eip-4400) - Interface extension for EIP-721 consumer role
   - [ERC-4907](https://eips.ethereum.org/EIPS/eip-4907) - Add a time-limited role with restricted permissions to ERC-721 tokens.
-- [ERC-777](/developers/docs/standards/tokens/erc-777/) - A token standard improving over ERC-20.
+- [ERC-777](/developers/docs/standards/tokens/erc-777/) - **(NOT RECOMMENDED)** A token standard improving over ERC-20.
 - [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - A token standard which can contain both fungible and non-fungible assets.
 - [ERC-4626](/developers/docs/standards/tokens/erc-4626/) - A tokenized vault standard designed to optimize and unify the technical parameters of yield-bearing vaults.
 

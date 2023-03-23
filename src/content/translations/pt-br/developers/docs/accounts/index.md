@@ -14,8 +14,8 @@ As contas são um tema muito amigável para iniciantes. Mas para ajudá-lo a ent
 
 Ethereum tem dois tipos de contas:
 
-- Propriedade externa — controlada por qualquer pessoa com as chaves privadas
-- Contrato – um contrato inteligente implantado para a rede, controlado por código. Saiba mais sobre [contratos inteligentes](/developers/docs/smart-contracts/)
+- Conta de propriedade externa (EOA) — controlada por qualquer pessoa com as chaves privadas
+- Conta de contrato — um contrato inteligente implantado na rede, controlado por código. Saiba mais sobre [contratos inteligentes](/developers/docs/smart-contracts/)
 
 Ambos os tipos de conta têm capacidade para:
 
@@ -29,12 +29,14 @@ Ambos os tipos de conta têm capacidade para:
 - Não há custo para criar uma conta
 - Pode iniciar transações
 - Transações entre contas de propriedade externa só podem ser transferências de ETH/token
+- Composto por um par de chaves criptográficas: chaves públicas e privadas que controlam as atividades da conta
 
 **Contrato**
 
 - Criar um contrato tem um custo porque você está usando o armazenamento de rede
 - Só pode enviar transações em resposta ao recebimento de transação
 - Transações de uma conta externa para uma conta contrato podem acionar um código que pode executar muitas ações diferentes, como transferir tokens ou até mesmo criar um contrato
+- As contas de contrato não têm chaves privadas. Em vez disso, eles são controlados pela lógica do código do contrato inteligente
 
 ## Uma conta analisada {#an-account-examined}
 
@@ -95,13 +97,19 @@ Exemplo:
 
 O endereço do contrato é geralmente dado quando um contrato é implantado na Blockchain do Ethereum. O endereço vem do endereço do criador e do número de transações enviadas desse endereço (o “nonce”).
 
-## Mais informações sobre carteiras {#a-note-on-wallets}
+## Chaves de validação {#validators-keys}
 
-Uma conta não é uma carteira. Uma conta é o par de chaves para uma conta Ethereum de propriedade do usuário. Uma carteira é uma “interface” ou aplicativo que permite você interagir com a sua conta Ethereum.
+Há também outro tipo de chave no Ethereum, introduzida quando o Ethereum mudou de prova de trabalho para prova de participação baseado no consenso. Essas chaves são "BLS" e são usadas para identificar validadores. Essas chaves podem ser agregadas de forma eficiente para reduzir a largura de banda necessária para que a rede chegue a um consenso. Sem essa agregação de chaves, a participação mínima para um validador seria muito maior.
+
+[Mais sobre chaves de validação](/developers/docs/consensus-mechanisms/pos/keys/).
+
+## Observação sobre carteiras {#a-note-on-wallets}
+
+Uma conta não é uma carteira. Uma conta é o par de chaves para uma conta Ethereum de propriedade do usuário. Uma carteira é uma interface ou um aplicativo que permite interagir com a sua conta Ethereum.
 
 ## Uma demonstração visual {#a-visual-demo}
 
-Assista a Austin guiar você pelas funções hash e pelos pares de chaves.
+Assista a Austin mostrando passo a passo as funções de hash e os pares de chaves.
 
 <YouTube id="QJ010l-pBpE" />
 
@@ -109,7 +117,7 @@ Assista a Austin guiar você pelas funções hash e pelos pares de chaves.
 
 ## Leitura adicional {#further-reading}
 
-_Conhece um recurso da comunidade que ajudou você? Edite esta página e adicione-o!_
+_Conhece algum recurso da comunidade que o ajudou? Edite essa página e adicione-a!_
 
 ## Tópicos relacionados {#related-topics}
 

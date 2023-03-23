@@ -60,7 +60,7 @@ summaryPoints:
 
 <StakingProductsCardGrid category="keyGen" />
 
-想要推荐其他未提到的质押即服务提供商吗？ 可以查看我们的[产品清单政策](/contributing/adding-staking-products/)，思考你想要推荐的提供商是否合适，合适的话，请提交以供审核。
+想要推荐其他未提到的质押即服务提供商吗？ 可以查看我们的[产品清单政策](/contributing/adding-staking-products/)，思考你想要推荐的内容是否合适，合适的话，请提交以供审核。
 
 ## 常见问题 {#faq}
 

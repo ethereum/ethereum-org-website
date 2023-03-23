@@ -27,11 +27,6 @@ Antes de sumergirte en los frameworks, te recomendamos que leas nuestra introduc
 - [trufflesuite.com](https://www.trufflesuite.com/)
 - [GitHub](https://github.com/trufflesuite/truffle)
 
-**Embark: ** **_Un entorno de desarrollo que incluye un espacio para pruebas y otras herramientas integradas con Ethereum, IPFS y Whisper._**
-
-- [Documentación](https://embark.status.im/docs/)
-- [GitHub](https://github.com/embark-framework/embark)
-
 **Epirus:** **_ es Una plataforma de desarrollo, implementación y supervisión de las aplicaciones de la blockchain en la máquina virtual de Java (JVM, por sus siglas en inglés)_**
 
 - [Página de inicio](https://www.web3labs.com/epirus)

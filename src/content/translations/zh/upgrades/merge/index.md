@@ -5,18 +5,22 @@ lang: zh
 template: upgrade
 image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: 以太坊主网采用权益证明机制，但情况并非一直如此。
-summaryPoint2: 从原有的工作量证明过渡到权益证明称为合并。
-summaryPoint3: 合并是指原有的以太坊主网成为权益证明区块链即信标链的一部分，现已成为一条链。
+summaryPoint2: 从原有的工作量证明机制过渡到权益证明机制的升级称为合并。
+summaryPoint3: 合并是指原有的以太坊主网与单独的权益证明区块链即信标链合并，现已成为一条链。
 summaryPoint4: 合并将使以太坊的能源消耗减少大约 99.95%。
 ---
 
+<UpgradeStatus dateKey="page-upgrades-beacon-date">
+  合并于 2022 年 9 月 15 日执行， 它完成了以太坊向权益证明共识的过渡，以太坊正式弃用了工作量证明并将能源消耗减少了约 99.95%。
+</UpgradeStatus>
+
 ## 什么是合并？ {#what-is-the-merge}
 
-合并是指以太坊的原有执行层（从[创世块](/history/#frontier)开始就一直存在的主网）加入其新的权益证明共识层，即信标链。 它消除了对能源密集型挖矿的需求，而是使用质押以太币来保证网络的安全。 这是实现以太坊愿景 — 可扩展性、安全性和可持续性更强 — 这一过程中真正激动人心的一步。
+合并是指以太坊的原有执行层（从[创世块](/history/#frontier)开始就一直存在的主网）加入其新的权益证明共识层，即信标链。 合并摒弃了消耗大量能源的挖矿，而是通过质押以太币来保护网络的安全。 这是实现以太坊愿景 — 可扩展性、安全性和可持续性更强 — 这一过程中真正激动人心的一步。
 
 <MergeInfographic />
 
-[信标链](/upgrades/beacon-chain/)最初是与[主网](/glossary/#mainnet)分开上线的。 以太坊主网（所有账户、余额、智能合约和区块链状态继续）一直通过[工作量证明](/developers/docs/consensus-mechanisms/pow/)保护，即便与使用[权益证明](/developers/docs/consensus-mechanisms/pos/)的信标链一起运行时也是如此。 合并是指这两个系统最终整合在一起之时，而工作量证明被权益证明永久取代。
+[信标链](/upgrades/beacon-chain/)最初是与[主网](/glossary/#mainnet)分开上线的。 以太坊主网（所有帐户、余额、智能合约和区块链状态）仍继续由[工作量证明](/developers/docs/consensus-mechanisms/pow/)保护，即便与此同时，与之一起运行的信标链采用[权益证明](/developers/docs/consensus-mechanisms/pos/)。 合并是指这两个系统最终整合在一起之时，而工作量证明被权益证明永久取代。
 
 想象一下，以太坊是一艘还没有完全准备好进行星际航行的就已经起飞的宇宙飞船。 借助信标链，社区构建了新的引擎和坚固的外壳。 经过大量测试，是时候在飞行途中通过“热插拔”用新引擎更换旧引擎了。 将新的、更高效引擎装入现有飞船后，飞船就能够开始许多光年的航行并占领整个宇宙。
 
@@ -42,7 +46,7 @@ summaryPoint4: 合并将使以太坊的能源消耗减少大约 99.95%。
 
 *再次提醒：*作为以太币或以太坊上任何其他数字资产的用户或持有者，以及非节点运营的质押人，**不需要在合并之前对你的资金或钱包做任何事情以加入合并。**以太币还是以太币。 没有像“旧以太币”/“新以太币”或“以太坊 1”/“以太坊 2”这样说法，钱包在合并前后的工作方式一样 — 告诉你其他说法人很可能是骗子。
 
-虽然权益证明替代了工作量证明，但是以太坊自创世块以来的全部历史记录都完整保留且没有改变。 合并前你钱包里的任何资金在合并后仍可使用。 **你不需要采取任何行动来升级。**
+虽然权益证明替代了工作量证明，但是以太坊自创世块以来的全部历史记录都完整保留且没有改变。 合并前你钱包里的所有资金在合并后仍可使用。 **你不需要采取任何行动来升级。**
 
 [有关以太坊安全的更多内容](/security/#eth2-token-scam)
 
@@ -59,7 +63,7 @@ id="staking-node-operators">
 2. 使用共享 JWT 密钥对执行层和共识层客户端进行身份验证，以便它们能够安全地通信。
 3. 设置“费用接收人”地址，以接收你赚取的交易费的小费/矿工可提取价值。
 
-如果没有完成上述前两项，在合并之后你的节点会被视为“离线”，直到两层都同步并通过身份验证。
+如果没有完成上述操作的前两项，会导致你的节点被视为“离线”，直到这两层都完成同步和身份验证。
 
 不设置“费用接收人”将仍然允许验证者像往常一样运行，但你将无法获得交易费小费和矿工可提取价值，这些你原本可以在你的验证者提出的区块中赢得。
 </ExpandableCard>
@@ -95,7 +99,7 @@ id="developers">
 - 链上随机性的来源
 - _安全头_ 和 _最终区块_ 的概念
 
-更多信息，请查看 Tim Beiko 的这篇博客：[合并如何影响以太坊的应用层](https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer)。
+更多信息，请查看 Tim Beiko 的这篇博客：【合并如何影响以太坊的应用层】(https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/)。
 </ExpandableCard>
 
 ## 合并和能源消耗 {#merge-and-energy}
@@ -104,7 +108,7 @@ id="developers">
 
 ## 合并与扩容 {#merge-and-scaling}
 
-合并还为在工作量证明下无法实现的进一步可扩展性升级奠定了基础，使以太坊更接近实现[以太坊愿景](/upgrades/vision/)中概述的全面可扩展、安全性和可持续性。
+合并还为在工作量证明下无法实现的进一步可扩展性升级奠定了基础，使以太坊更接近实现[以太坊愿景](/roadmap/vision/)中概述的全面可扩展、安全性和可持续性。
 
 ## 合并的误区 {#misconceptions}
 
@@ -151,7 +155,7 @@ contentPreview="False. Staking withdrawals are not yet enabled with The Merge. T
 </ExpandableCard>
 
 <ExpandableCard
-title="误解 5：&quot;上海升级即提款功能启用前，验证者无法获得任何流动性以太币奖励。&quot;"
+title="误解：&quot;上海升级即提款功能启用前，验证者无法获得任何流动性以太币奖励。&quot;"
 contentPreview="False. Fee tips/MEV are credited to a non-staking account controlled by the validator, available immediately.">
 这似乎与上面提到的在上海升级之前不启用提款功能的做法冲突，但验证者将立即在区块提出过程中获得费用奖励/矿工可提取价值。
 
@@ -161,7 +165,7 @@ contentPreview="False. Fee tips/MEV are credited to a non-staking account contro
 </ExpandableCard>
 
 <ExpandableCard
-title="误解 6：&quot;启用提款功能后，质押人将立即退出。&quot;"
+title="误解：&quot;启用提款功能后，质押人将立即退出。&quot;"
 contentPreview="False. Validator exits are rate limited for security reasons.">
 上海升级启用提款功能后，会激励所有验证者将其质押余额提取到超过 32 个以太币即可，因为这些资金不会增加收益并且不提取还会被锁定。 取决于年化利率（由质押的以太币总量决定），激励可能会导致验证者退出，以收回他们的全部余额，或者验证者也可能会把他们的奖励进行再质押，以赚取更多收益。
 
@@ -176,14 +180,14 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 为了减少混乱，社区更新了这些条款：
 
-- “以太坊 1”现在是执行层，它处理交易和执行。
-- “以太坊 2”现在是共识层，它处理权益证明共识。
+- “以太坊 1”现在是处理交易和执行的“执行层”。
+- “以太坊 2”现在是处理权益证明共识的“共识层”。
 
 这些术语的更新仅会改变命名约定；不会改变以太坊的目标及路线图。
 
 [了解有关“以太坊 2”重命名的更多信息](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
 
-## 升级之间的关系 {#relationship-between-upgrades}
+## 升级间的关系 {#relationship-between-upgrades}
 
 以太坊所有升级都存在一些关联。 因此，让我们回顾一下合并与其他升级的关系。
 
@@ -216,3 +220,5 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 ## 延伸阅读 {#further-reading}
 
 <MergeArticleList />
+
+<QuizWidget quizKey="merge" />

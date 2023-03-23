@@ -3,7 +3,7 @@ title: A Python developer's introduction to Ethereum, part 1
 description: An introduction to Ethereum development, especially useful for those with knowledge of the Python programming language
 author: Marc Garreau
 lang: en
-tags: ["getting started", "python", "blockchain", "web3.py"]
+tags: ["python", "web3.py"]
 skill: beginner
 published: 2020-09-08
 source: Snake charmers
@@ -83,19 +83,19 @@ In this walkthrough, we’ll just be working within a Python interpreter. We won
 First, install [IPython](https://ipython.org/) for a user-friendly environment to explore in. IPython offers tab completion, among other features, making it much easier to see what’s possible within Web3.py.
 
 ```bash
-$ pip install ipython
+pip install ipython
 ```
 
 Web3.py is published under the name `web3`. Install it like so:
 
 ```bash
-$ pip install web3
+pip install web3
 ```
 
 One more thing – we're going to simulate a blockchain later, which requires a couple more dependencies. You can install those via:
 
 ```bash
-$ pip install 'web3[tester]'
+pip install 'web3[tester]'
 ```
 
 You’re all set up to go!
@@ -105,7 +105,7 @@ You’re all set up to go!
 Open up a new Python environment by running `ipython` in your terminal. This is comparable to running `python`, but comes with more bells and whistles.
 
 ```bash
-$ ipython
+ipython
 ```
 
 This will print out some information about the versions of Python and IPython you’re running, then you should see a prompt waiting for input:
@@ -281,13 +281,15 @@ We can also easily verify the success of this transaction by checking the balanc
 
 ```python
 In [12]: w3.eth.get_balance(w3.eth.accounts[0])
-Out[12]: 999996999999999999969000
+Out[12]: 999996999979000000000000
 
 In [13]: w3.eth.get_balance(w3.eth.accounts[1])
 Out[13]: 1000003000000000000000000
 ```
 
-The latter looks good! The balance went from 1,000,000 to 1,000,003 ether. But what happened to the first account? It appears to have lost slightly more than three ether. Alas, nothing in life is free, and using the Ethereum public network requires that you compensate your peers for their supporting role. A small transaction fee was deducted from the account making the transaction to the tune of 31000 wei.
+The latter looks good! The balance went from 1,000,000 to 1,000,003 ether. But what happened to the first account? It appears to have lost slightly more than three ether. Alas, nothing in life is free, and using the Ethereum public network requires that you compensate your peers for their supporting role. A small transaction fee was deducted from the account that submitted the transaction - this fee is the amount of gas burned (21000 units of gas for an ETH transfer) multiplied by a base fee that varies according to network activity plus a tip that goes to the validator that includes the transaction in a block.
+
+More on [gas](https://ethereum.org/en/developers/docs/gas/#post-london)
 
 <div class="featured">Note: On the public network, transaction fees are variable based on network demand and how quickly you'd like a transaction to be processed. If you're interested in a breakdown of how fees are calculated, see my earlier post on <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">how transactions are included in a block</a>.</div>
 

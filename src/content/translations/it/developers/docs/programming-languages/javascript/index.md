@@ -14,18 +14,18 @@ Esistono opportunità per scrivere in JavaScript (o simile) a [tutti i livelli d
 
 Se vuoi scrivere in JavaScript per interrogare la blockchain, inviare transazioni e altro ancora, il modo più comodo per farlo è utilizzare una [libreria API JavaScript](/developers/docs/apis/javascript/). Queste API consentono agli sviluppatori di interagire facilmente con i [nodi della rete Ethereum](/developers/docs/nodes-and-clients/).
 
-È possibile utilizzare queste librerie per interagire con gli Smart Contract su Ethereum, nel qual caso si può creare una dapp in cui JavaScript viene utilizzato solo per interagire con i contratti preesistenti.
+Puoi utilizzare queste librerie per interagire con i contratti intelligenti su Ethereum, quindi è possibile creare una dapp in cui, semplicemente, utilizzi JavaScript per interagire con i contratti pre-esistenti.
 
 **Dai un'occhiata a:**
 
 - [Web3.js](https://web3js.readthedocs.io/)
 - [Ethers.js](https://docs.ethers.io/) _– Contiene l'implementazione del portafoglio di Ethereum e le utility in JavaScript e TypeScript._
 
-### Smart Contract {#smart-contracts}
+### Contratti intelligenti {#smart-contracts}
 
-Se sei uno sviluppatore JavaScript e vuoi scrivere uno Smart Contract personalizzato, consigliamo di familiarizzare con [Solidity](https://solidity.readthedocs.io). Questo è il linguaggio degli smart contract più popolare ed è sintatticamente simile a JavaScript, il che lo rende facile da imparare.
+Se sei uno sviluppatore JavaScript e vorresti scrivere il tuo contratto intelligente, consigliamo di familiarizzare con [Solidity](https://solidity.readthedocs.io). Questo è il linguaggio di contratti intelligenti più popolare ed è sintatticamente simile a JavaScript, che lo rende più facile da imparare.
 
-Scopri di più sugli [Smart Contract](/developers/docs/smart-contracts/).
+Di più sui [contratti intelligenti](/developers/docs/smart-contracts/).
 
 ## Comprendere il protocollo {#understand-the-protocol}
 
@@ -35,13 +35,13 @@ Esiste un'implementazione JavaScript della [macchina virtuale di Ethereum](/en/d
 
 È suddivisa in vari pacchetti JavaScript che puoi leggere per comprendere meglio:
 
-- Account
+- Conti
 - Blocchi
 - La blockchain stessa
 - Transazioni
 - E molto altro...
 
-Ti aiuterà a comprendere ad esempio la struttura dati di un account.
+Ciò ti aiuterà a comprendere cose come "cos'è la struttura dei dati di un conto?".
 
 Se preferisci invece leggere codice, questo codice JavaScript può essere un'alternativa interessante alla lettura della nostra documentazione.
 
@@ -63,7 +63,7 @@ Ci sono molte altre novità nel mondo di JavaScript per Ethereum, tra cui:
 - strumenti per generare, importare ed esportare chiavi Ethereum.
 - un'implementazione di `merkle-patricia-tree`, una struttura di dati delineata nel yellow paper di Ethereum.
 
-Approfondisci ciò che ti interessa maggiormente sul [repo EthereumJSrepo](https://github.com/ethereumjs)
+Approfondisci ciò che ti interessa maggiormente sul [repository EthereumJS](https://github.com/ethereumjs)
 
 ## Letture consigliate {#further-reading}
 

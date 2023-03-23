@@ -12,7 +12,7 @@
   "page-upgrades-bug-bounty-misc-bugs-desc": "このスコープに含まれることの詳細については、Solidity SECURITY.MDを参照してください。",
   "page-upgrades-bug-bounty-misc-bugs-desc-2": "Solidityは、信頼されていない入力のコンパイルに関してセキュリティを保証しません。Solcコンパイラが悪意を持って生成されたデータでクラッシュした場合には報酬は支払われません。",
   "page-upgrades-bug-bounty-deposit-bugs": "デポジットコントラクトのバグ",
-  "page-upgrades-bug-bounty-deposit-bugs-desc": "ビーコンチェーンのデポジットコントラクトの仕様とソースコードは、バグ報奨金プログラムの一部です。",
+  "page-upgrades-bug-bounty-deposit-bugs-desc": "ビーコンチェーンのデポジットコントラクトの仕様とソースコードは、バグ報奨金プログラムの対象です。",
   "page-upgrades-bug-bounty-docking": "マージ",
   "page-upgrades-bug-bounty-email-us": "メールでのお問い合わせ:",
   "page-upgrades-bug-bounty-help-links": "参考リンク",
@@ -27,6 +27,7 @@
   "page-upgrades-bug-bounty-hunting-li-3": "報奨金プログラム主催者内にあるイーサリアム・ファウンデーションまたはクライアントチームの従業員および委託者は、ポイントが付与されるプログラムのみに参加することができ、金銭的な報酬を受け取ることはありません。",
   "page-upgrades-bug-bounty-hunting-li-4": "イーサリアム報奨金プログラムは、報酬を決定する際に数点を考慮します。 資格、スコア、報酬に関するすべての条件の決定は、イーサリアム・ファウンデーションバグ報奨金パネルの独自かつ最終的な裁量に委ねられています。",
   "page-upgrades-bug-bounty-leaderboard": "リーダーボードをすべて表示",
+  "page-upgrades-bug-bounty-leaderboard-list": "バグ報奨金リーダーボード",
   "page-upgrades-bug-bounty-leaderboard-points": "ポイント",
   "page-upgrades-bug-bounty-ledger-desc": "イーサリアムの仕様には、実行レイヤとコンセンサスレイヤの設計根拠が詳述されています。",
   "page-upgrades-bug-bounty-ledger-title": "仕様のバグ",
@@ -98,5 +99,6 @@
   "page-upgrades-bug-bounty-card-text": "バリデータの100件のアテステーションごとに、攻撃者が1件ドロップさせる状態にすることができる脆弱性",
   "page-upgrades-bug-bounty-card-text-1": "攻撃者が4バイト先頭のゼロを持つピアIDを持つノードに対してエクリプス攻撃を成功させることができる脆弱性",
   "page-upgrades-bug-bounty-card-text-2": "攻撃者がネットワークの大部分をパーティションでき、脆弱性を容易に引き起こせる。",
-  "page-upgrades-bug-bounty-card-text-3": "攻撃者がマジョリティクライアントでリモートコードを実行でき、脆弱性を容易に引き起こされる。"
+  "page-upgrades-bug-bounty-card-text-3": "攻撃者がマジョリティクライアントでリモートコードを実行でき、脆弱性を容易に引き起こされる。",
+  "page-upgrades-question-title": "よくある質問"
 }

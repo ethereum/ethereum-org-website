@@ -1,22 +1,25 @@
 // Libraries
-import React, { ComponentType, SVGProps } from "react"
+import React, { ReactNode } from "react"
 import { graphql, PageProps } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import styled from "@emotion/styled"
+import { type Icon as ChakraIcon } from "@chakra-ui/react"
 
 // Assets
 import Dappnode from "../assets/run-a-node/dappnode.svg"
 import Dapptap from "../assets/run-a-node/dapptap.svg"
 import Terminal from "../assets/run-a-node/terminal.svg"
-import DecentralizationGlyph from "../assets/run-a-node/decentralization-glyph.svg"
-import SovereigntyGlyph from "../assets/run-a-node/sovereignty-glyph.svg"
-import PrivacyGlyph from "../assets/run-a-node/privacy-glyph.svg"
-import MegaphoneGlyph from "../assets/run-a-node/megaphone-glyph.svg"
-import VoteGlyph from "../assets/run-a-node/vote-glyph.svg"
-import EarthGlyph from "../assets/run-a-node/earth-glyph.svg"
-import DownloadGlyph from "../assets/run-a-node/download-glyph.svg"
-import HardwareGlyph from "../assets/run-a-node/hardware-glyph.svg"
+import {
+  DecentralizationGlyphIcon,
+  DownloadGlyphIcon,
+  EarthGlyphIcon,
+  HardwareGlyphIcon,
+  MegaphoneGlyphIcon,
+  PrivacyGlyphIcon,
+  SovereigntyGlyphIcon,
+  VoteGlyphIcon,
+} from "../components/icons/run-a-node"
 
 // Components
 import PageHero from "../components/PageHero"
@@ -37,10 +40,9 @@ import Link from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
 import FeedbackCard from "../components/FeedbackCard"
 import Icon from "../components/Icon"
-import NakedButton from "../components/NakedButton"
 
 // Utils
-import { translateMessageId, TranslationKey } from "../utils/translations"
+import { TranslationKey } from "../utils/translations"
 import { scrollIntoView } from "../utils/scrollIntoView"
 import { getImage } from "../utils/image"
 
@@ -291,13 +293,13 @@ const ButtonContainer = styled.div`
 `
 
 const DappNodeButtonLink = styled(ResponsiveButtonLink)`
-  background-color: #187d76;
+  background-color: #007dfc;
   span {
     color: ${({ theme }) => theme.colors.white};
   }
   &:hover {
-    background-color: #0f5f5f;
-    box-shadow: 4px 4px 0 0 rgba(#187d76, 0.47);
+    background-color: #0077be;
+    box-shadow: 4px 4px 0 0 rgba(#007dfc, 0.47);
   }
 `
 
@@ -314,14 +316,6 @@ const AvadoButtonLink = styled(ResponsiveButtonLink)`
 
 const StyledEmoji = styled(Emoji)`
   margin-right: 1rem;
-`
-
-const ScrollLink = styled(NakedButton)`
-  text-align: start;
-  color: ${({ theme }) => theme.colors.primary};
-  &.active {
-    color: ${({ theme }) => theme.colors.primary};
-  }
 `
 
 const BuildContainer = styled(Container)`
@@ -396,21 +390,21 @@ const StrongParagraph = styled.p`
 `
 
 interface RunANodeCard {
-  image: ComponentType<SVGProps<SVGElement>>
-  title: TranslationKey
-  preview: TranslationKey
-  body: Array<TranslationKey>
-  alt: TranslationKey
+  image: typeof ChakraIcon
+  title: string
+  preview: ReactNode
+  body: Array<string>
+  alt: string
 }
 
 const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const heroContent = {
     title: <Translation id="page-run-a-node-title" />,
     header: <Translation id="page-run-a-node-hero-header" />,
     subtitle: <Translation id="page-run-a-node-hero-subtitle" />,
     image: getImage(data.ethereumInside)!,
-    alt: translateMessageId("page-run-a-node-hero-alt", intl),
+    alt: t("page-run-a-node-hero-alt"),
     buttons: [
       {
         content: <Translation id="page-run-a-node-hero-cta-1" />,
@@ -426,70 +420,73 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
 
   const whyRunANodeCards: Array<RunANodeCard> = [
     {
-      image: PrivacyGlyph,
-      title: "page-run-a-node-privacy-title",
-      preview: "page-run-a-node-privacy-preview",
+      image: PrivacyGlyphIcon,
+      title: t("page-run-a-node-privacy-title"),
+      preview: t("page-run-a-node-privacy-preview"),
       body: [
-        "page-run-a-node-privacy-1",
-        "page-run-a-node-privacy-2",
-        "page-run-a-node-privacy-3",
+        t("page-run-a-node-privacy-1"),
+        t("page-run-a-node-privacy-2"),
+        t("page-run-a-node-privacy-3"),
       ],
-      alt: "page-run-a-node-glyph-alt-privacy",
+      alt: t("page-run-a-node-glyph-alt-privacy"),
     },
     {
-      image: MegaphoneGlyph,
-      title: "page-run-a-node-censorship-resistance-title",
-      preview: "page-run-a-node-censorship-resistance-preview",
+      image: MegaphoneGlyphIcon,
+      title: t("page-run-a-node-censorship-resistance-title"),
+      preview: t("page-run-a-node-censorship-resistance-preview"),
       body: [
-        "page-run-a-node-censorship-resistance-1",
-        "page-run-a-node-censorship-resistance-2",
+        t("page-run-a-node-censorship-resistance-1"),
+        t("page-run-a-node-censorship-resistance-2"),
       ],
-      alt: "page-run-a-node-glyph-alt-censorship-resistance",
+      alt: t("page-run-a-node-glyph-alt-censorship-resistance"),
     },
     {
-      image: EarthGlyph,
-      title: "page-run-a-node-participate-title",
-      preview: "page-run-a-node-participate-preview",
-      body: ["page-run-a-node-participate-1", "page-run-a-node-participate-2"],
-      alt: "page-run-a-node-glyph-alt-earth",
-    },
-    {
-      image: DecentralizationGlyph,
-      title: "page-run-a-node-decentralized-title",
-      preview: "page-run-a-node-decentralized-preview",
+      image: EarthGlyphIcon,
+      title: t("page-run-a-node-participate-title"),
+      preview: <Translation id="page-run-a-node-participate-preview" />,
       body: [
-        "page-run-a-node-decentralized-1",
-        "page-run-a-node-decentralized-2",
+        t("page-run-a-node-participate-1"),
+        t("page-run-a-node-participate-2"),
       ],
-      alt: "page-run-a-node-glyph-alt-decentralization",
+      alt: t("page-run-a-node-glyph-alt-earth"),
     },
     {
-      image: VoteGlyph,
-      title: "page-run-a-node-voice-your-choice-title",
-      preview: "page-run-a-node-voice-your-choice-preview",
+      image: DecentralizationGlyphIcon,
+      title: t("page-run-a-node-decentralized-title"),
+      preview: t("page-run-a-node-decentralized-preview"),
       body: [
-        "page-run-a-node-voice-your-choice-1",
-        "page-run-a-node-voice-your-choice-2",
+        t("page-run-a-node-decentralized-1"),
+        t("page-run-a-node-decentralized-2"),
       ],
-      alt: "page-run-a-node-glyph-alt-vote",
+      alt: t("page-run-a-node-glyph-alt-decentralization"),
     },
     {
-      image: SovereigntyGlyph,
-      title: "page-run-a-node-sovereignty-title",
-      preview: "page-run-a-node-sovereignty-preview",
-      body: ["page-run-a-node-sovereignty-1", "page-run-a-node-sovereignty-2"],
-      alt: "page-run-a-node-glyph-alt-sovereignty",
+      image: VoteGlyphIcon,
+      title: t("page-run-a-node-voice-your-choice-title"),
+      preview: t("page-run-a-node-voice-your-choice-preview"),
+      body: [
+        t("page-run-a-node-voice-your-choice-1"),
+        t("page-run-a-node-voice-your-choice-2"),
+      ],
+      alt: t("page-run-a-node-glyph-alt-vote"),
+    },
+    {
+      image: SovereigntyGlyphIcon,
+      title: t("page-run-a-node-sovereignty-title"),
+      preview: t("page-run-a-node-sovereignty-preview"),
+      body: [
+        t("page-run-a-node-sovereignty-1"),
+        t("page-run-a-node-sovereignty-2"),
+      ],
+      alt: t("page-run-a-node-glyph-alt-sovereignty"),
     },
   ]
 
   return (
     <GappedPage>
       <PageMetadata
-        title={translateMessageId("page-run-a-node-title", intl)}
-        description={translateMessageId(
-          "page-run-a-node-meta-description",
-          intl
-        )}
+        title={t("page-run-a-node-title")}
+        description={t("page-run-a-node-meta-description")}
       />
       <HeroContainer>
         <Hero content={heroContent} isReverse />
@@ -560,16 +557,16 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
           {whyRunANodeCards.map(({ image, title, preview, body, alt }, idx) => {
             return (
               <ExpandableCard
-                contentPreview={<Translation id={preview} />}
-                title={translateMessageId(title, intl)}
+                contentPreview={preview}
+                title={title}
                 // TODO: make a11y svgs (using <title>)
                 // @ts-ignore
-                alt={translateMessageId(alt, intl)}
+                alt={alt}
                 svg={image}
                 key={idx}
               >
                 {body.map((item, idx) => (
-                  <p key={idx}>{<Translation id={item} />}</p>
+                  <p key={idx}>{item}</p>
                 ))}
               </ExpandableCard>
             )
@@ -603,10 +600,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
               <Terminal
                 // TODO: make a11y svgs (using <title>)
                 // @ts-ignore
-                alt={translateMessageId(
-                  "page-run-a-node-glyph-alt-terminal",
-                  intl
-                )}
+                alt={t("page-run-a-node-glyph-alt-terminal")}
               />
             </ColumnNarrow>
           </SoftwareHighlight>
@@ -621,10 +615,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
               <Dappnode
                 // TODO: make a11y svgs (using <title>)
                 // @ts-ignore
-                alt={translateMessageId(
-                  "page-run-a-node-glyph-alt-dappnode",
-                  intl
-                )}
+                alt={t("page-run-a-node-glyph-alt-dappnode")}
               />
             </ColumnNarrow>
           </SoftwareHighlight>
@@ -642,10 +633,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
               <Dapptap
                 // TODO: make a11y svgs (using <title>)
                 // @ts-ignore
-                alt={translateMessageId(
-                  "page-run-a-node-glyph-alt-phone",
-                  intl
-                )}
+                alt={t("page-run-a-node-glyph-alt-phone")}
               />
             </ColumnNarrow>
           </SoftwareHighlight>
@@ -733,13 +721,10 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
 
         <BuildContainer>
           <SvgTitle>
-            <HardwareGlyph
+            <HardwareGlyphIcon
               // TODO: make a11y svgs (using <title>)
               // @ts-ignore
-              alt={translateMessageId(
-                "page-run-a-node-glyph-alt-hardware",
-                intl
-              )}
+              alt={t("page-run-a-node-glyph-alt-hardware")}
             />
             <h3>
               <Translation id="page-run-a-node-build-your-own-hardware-title" />
@@ -757,16 +742,14 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
                     <Translation id="page-run-a-node-build-your-own-min-ram" />
                   </p>
                   <p>
-                    <ScrollLink
-                      onClick={() => scrollIntoView("plan-on-staking")}
-                    >
+                    <Link href="#plan-on-staking">
                       <Translation id="page-run-a-node-build-your-own-ram-note-1" />
-                    </ScrollLink>
+                    </Link>
                   </p>
                   <p>
-                    <ScrollLink onClick={() => scrollIntoView("rasp-pi")}>
+                    <Link href="#rasp-pi">
                       <Translation id="page-run-a-node-build-your-own-ram-note-2" />
-                    </ScrollLink>
+                    </Link>
                   </p>
                 </li>
                 <li>
@@ -820,13 +803,10 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
 
         <BuildContainer>
           <SvgTitle>
-            <DownloadGlyph
+            <DownloadGlyphIcon
               // TODO: make a11y svgs (using <title>)
               // @ts-ignore
-              alt={translateMessageId(
-                "page-run-a-node-glyph-alt-software",
-                intl
-              )}
+              alt={t("page-run-a-node-glyph-alt-software")}
             />
             <h3>
               <Translation id="page-run-a-node-build-your-own-software" />
@@ -980,7 +960,7 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
         </p>
         <ul>
           <li>
-            <Link to="https://docs.dappnode.io/get-started/installation/arm-hardware/installation">
+            <Link to="https://docs.dappnode.io/user/quick-start/Core/installation#arm">
               <Translation id="page-run-a-node-rasp-pi-note-1-link" />
             </Link>{" "}
             -{" "}
@@ -1018,7 +998,21 @@ const RunANodePage = ({ data }: PageProps<Queries.RunANodePageQuery>) => {
 export default RunANodePage
 
 export const query = graphql`
-  query RunANodePage {
+  query RunANodePage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-run-a-node", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     ethereumInside: file(
       relativePath: { eq: "run-a-node/ethereum-inside.png" }
     ) {

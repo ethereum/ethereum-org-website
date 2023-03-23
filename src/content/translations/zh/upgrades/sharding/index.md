@@ -4,10 +4,10 @@ description: 了解分片 - 分解和分配必需的数据负载，增强以太�
 lang: zh
 template: upgrade
 image: ../../../../../assets/upgrades/newrings.png
-summaryPoint1: 分片是一个多阶段升级，以提高以太坊的可扩容性和容量。
+summaryPoint1: 分片是一个多阶段升级，旨在提升以太坊的可扩展性和容量。
 summaryPoint2: 分片实现了数据存储要求的安全分配，使卷叠更经济实惠，让节点更易于操作。
-summaryPoint3: 它们使第二层解决方案能够提供更低的交易费，同时利用以太坊的安全性。
-summaryPoint4: 在以太坊过渡到权益证明后，这种升级日益成为焦点。
+summaryPoint3: 分片使二层网络解决方案能够提供交低的交易费，同时可以利用以太坊的安全性。
+summaryPoint4: 在以太坊过渡到权益证明后，该升级日益成为焦点。
 ---
 
 <UpgradeStatus dateKey="page-upgrades-shards-date">
@@ -30,7 +30,7 @@ summaryPoint4: 在以太坊过渡到权益证明后，这种升级日益成为�
 
 将最终让您在个人笔记本电脑或手机上运行以太坊。 因此，更多的人应该能够在中参与或运行[客户端](/developers/docs/nodes-and-clients/)。 这将提高安全性，因为网络越分散，攻击面越小。
 
-由于硬件需求较低，区块分片将使您更容易单独运行 [客户端](/developers/docs/nodes-and-clients/) ，而根本不依赖任何中间服务。 如果您可以，请考虑运行多个客户端。 这可以通过进一步减少故障点来帮助网络健康。
+由于硬件需求较低，区块分片将使您更容易单独运行 [客户端](/developers/docs/nodes-and-clients/)，而根本不依赖任何中间服务。 如果您可以，请考虑运行多个客户端。 这可以通过进一步减少故障点来帮助网络健康。
 
 <br />
 
@@ -42,7 +42,7 @@ summaryPoint4: 在以太坊过渡到权益证明后，这种升级日益成为�
 
 <InfoBanner emoji=":construction:" isWarning>
   <strong>注意：</strong>随着更高效扩容路径的开发，分片计划也在不断发展。 “Danksharding”是一种新的分片方法，它不使用分片“链”的概念，而是使用分片“blob”来分割数据，同时使用“数据可用性采样”来确认所有数据是否可用。 这个计划改变解决了原来的问题。<br/><br/>
-  <strong>以下详细信息可能与最新的开发计划不符。</strong>在我们更新内容时，请参阅<a href="https://members.delphidigital.io/reports/the-hitchhikers-guide- to-ethereum">以太坊漫游指南</a>，了解太坊计路线图划详解。
+  <strong>以下详细信息可能与最新的开发计划不符。</strong>在我们更新内容时，请参阅<a href="https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum">以太坊漫游指南</a>，了解太坊计路线图划详解。
 </InfoBanner>
 
 当第一个分片链发布时，它们只会向网络提供额外的数据。 他们不会处理交易或智能合约。 但当它们与卷叠相结合时，仍然会对每秒交易数提供令人难以置信的改进。
@@ -83,7 +83,7 @@ Vitalik Buterin 在接受 Bankless 播客采访时提出了 3 个值得讨论的
 
 ## 升级间的关系 {#relationship-between-upgrades}
 
-以太坊所有升级都是有点关联的。 所以让我们回顾一下分批链如何与其他升级相关联。
+以太坊所有升级都存在一些关联。 所以让我们回顾一下分批链如何与其他升级相关联。
 
 ### 分片和以太坊区块链 {#shards-and-blockchain}
 

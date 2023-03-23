@@ -10,9 +10,16 @@ import {
   useRadio,
   useRadioGroup,
 } from "@chakra-ui/react"
+import { useTranslation } from "gatsby-plugin-react-i18next"
+
+// Components
+import Translation from "../Translation"
 
 // Import types
 import { Question } from "../../types"
+
+// Utils
+import { TranslationKey } from "../../utils/translations"
 
 // Interfaces
 export interface CustomRadioProps extends RadioProps {
@@ -33,13 +40,14 @@ const QuizRadioGroup: React.FC<IProps> = ({
   handleSelection,
   selectedAnswer,
 }) => {
+  const { t } = useTranslation()
   const { getRadioProps, getRootProps } = useRadioGroup({
     onChange: handleSelection,
   })
   const { prompt, answers, correctAnswerId } = questionData
 
   // Memoized values
-  const explanation = useMemo<string>(() => {
+  const explanation = useMemo<TranslationKey>(() => {
     if (!selectedAnswer) return ""
     return answers.filter(({ id }) => id === selectedAnswer)[0].explanation
   }, [selectedAnswer])
@@ -121,7 +129,7 @@ const QuizRadioGroup: React.FC<IProps> = ({
   return (
     <Flex {...getRootProps()} direction="column" w="100%">
       <Text fontWeight="700" fontSize="2xl" mb={6}>
-        {prompt}
+        {t(prompt)}
       </Text>
       <Flex direction="column" gap={4}>
         {answers.map(({ id, label }, index) => {
@@ -132,7 +140,7 @@ const QuizRadioGroup: React.FC<IProps> = ({
               key={id}
               display={display}
               index={index}
-              label={label}
+              label={t(label)}
               {...getRadioProps({ value: id })}
             />
           )
@@ -141,9 +149,9 @@ const QuizRadioGroup: React.FC<IProps> = ({
       {showAnswer && (
         <Box mt={5}>
           <Text fontWeight="bold" mt={0} mb={2}>
-            Explanation
+            <Translation id="explanation" />
           </Text>
-          <Text m={0}>{explanation}</Text>
+          <Text m={0}>{t(explanation)}</Text>
         </Box>
       )}
     </Flex>

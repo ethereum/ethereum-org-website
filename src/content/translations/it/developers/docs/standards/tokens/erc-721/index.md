@@ -12,23 +12,23 @@ Un token non fungibile (NFT) è usato per identificare inequivocabilmente qualco
 
 **Cos'è ERC-721?**
 
-ERC-721 introduce uno standard per NFT, in altre parole questo tipo di token è unico e può avere un diverso valore rispetto a un altro token dello stesso Smart Contract, magari dovuto all'età, alla rarità o ad altro, come il suo aspetto. Cosa? Aspetto?
+L'ERC-721 introduce uno standard per gli NFT; in altre parole, questo tipo di Token è unico e può avere un valore differente da un altro Token dallo stesso Contratto Intelligente, forse a causa della sua età, rarità o persino ad altro, come il suo aspetto. Cosa? Aspetto?
 
-Sì! Tutti gli NFT hanno una variabile `uint256` chiamata `tokenId`, quindi per i contratti ERC-721 la coppia `contract address, uint256 tokenId` deve essere unica a livello globale. Detto ciò, una dApp può avere un "convertitore" che usa il `tokenId` come input e produce in output un'immagine come zombie, armi, skill o fantastici gattini!
+Sì! Tutti gli NFT hanno una variabile `uint256` chiamata `tokenId`, quindi per i contratti ERC-721 la coppia `contract address, uint256 tokenId` deve essere unica a livello globale. Detto ciò, una dapp può avere un "convertitore" che utilizza il `tokenId` come input e restituisce l'immagine di qualcosa come zombie, armi, abilità o teneri gattini!
 
 ## Prerequisiti {#prerequisites}
 
-- [Account](/developers/docs/accounts/)
-- [Smart Contract](/developers/docs/smart-contracts/)
+- [Conti](/developers/docs/accounts/)
+- [Contratti Intelligenti](/developers/docs/smart-contracts/)
 - [Standard token](/developers/docs/standards/tokens/)
 
 ## Corpo {#body}
 
-ERC-721 (Ethereum Request for Comments 721), proposto da William Entriken, dieter Shirley, Jacob Evans e Nastassia Sachs nel gennaio 2018, è uno standard token non fungibile che implementa un'API per token all'interno di Smart Contract.
+L'ERC-721 (Ethereum Request for Comments 721), proposto da William Entriken, Dieter Shirely, Jacob Evans e Nastassia Sachs a gennaio 2018, è uno Standard del Token Non Fungibile che implementa un'API per i token nei Contratti Intelligenti.
 
-Fornisce funzionalità ad esempio per il trasferimento di token da un account a un altro, la richiesta del saldo corrente di token di un account, del proprietario di un token specifico e anche la quantità totale di token disponibili sulla rete. Oltre a questo ha anche altre funzionalità, come la possibilità di approvare che una quantità di token di un account possa essere spostata da un account terzo.
+Fornisce funzionalità come il trasferimento dei token da un conto all'altro, l'ottenimento del saldo corrente del token di un conto, l'ottenimento del proprietario di un token specifico, nonché l'offerta totale del token disponibile sulla rete. Oltre a ciò, ha alcune altre funzionalità, come approvare che un importo di token da un conto possa esser spostato da un conto di terze parti.
 
-Se uno Smart Contract implementa i seguenti metodi ed eventi può essere chiamato contratto token non fungibile ERC-721 e, una volta distribuito, sarà responsabile di tenere traccia dei token creati su Ethereum.
+Se un Contratto Intelligente implementa i seguenti metodi ed eventi, può esser definito un Contratto a Token Non Fungibile ERC-721 e, una volta distribuito, sarà responsabile di tenere traccia dei token creati su Ethereum.
 
 Da [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 
@@ -63,7 +63,7 @@ Vediamo perché uno standard è così importante per semplificare l'ispezione de
 Prima di tutto, controlla di avere installato la libreria Python [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation):
 
 ```
-$ pip install web3
+pip install web3
 ```
 
 ```python
@@ -231,9 +231,10 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [CryptoKitties](https://www.cryptokitties.co/) è un gioco basato su creature a cui si può dare da mangiare, collezionabili e molto tenere chiamate CryptoKitties.
 - [Sorare](https://sorare.com/) è un gioco di calcio fantasy globale in cui si possono collezionare oggetti in edizione limitata e gestire squadre, gareggiando per vincere premi.
 - [The Ethereum Name Service (ENS)](https://ens.domains/) offre un modo sicuro e decentralizzato per indirizzare risorse sia all'interno che all'esterno della blockchain utilizzando nomi semplici e leggibili.
-- [Unstoppable Domains](https://unstoppabledomains.com/) è un'azienda di San Francisco che crea domini sulle blockchain. I domini delle blockchain sostituiscono gli indirizzi della criptovaluta con nomi facilmente leggibili, che possono essere usati per creare siti web resistenti alla censura.
+- [POAP](https://poap.xyz) offre NFT gratuiti alle persone che partecipano a eventi o completano azioni specifiche. I POAP sono creabili e distribuibili gratuitamente.
+- [Unstoppable Domains](https://unstoppabledomains.com/) è un'azienda di San Francisco che crea domini sulle blockchain. I domini delle blockchain sostituiscono gli indirizzi della criptovaluta con nomi leggibili dall'uomo, che possono essere usati per creare siti web resistenti alla censura.
 - [Gods Unchained Cards](https://godsunchained.com/) è un gioco di carte collezionabili sulla blockchain Ethereum che usa gli NFT per dare una proprietà reale alle risorse del gioco.
-- [Bored Ape Yacht Club](https://boredapeyachtclub.com) è una raccolta di 10.000 NFT uniche, che, oltre a essere opere d'arte la cui rarità è dimostrata, agiscono da token di appartenenza al club, fornendo ai membri vantaggi e benefici che possono aumentare nel tempo come risultato degli sforzi della community.
+- [Bored Ape Yacht Club](https://boredapeyachtclub.com) è una raccolta di 10.000 NFT unici che, oltre a essere opere d'arte la cui rarità è dimostrata, fungono da token di appartenenza al club, fornendo ai membri vantaggi e benefici che possono aumentare nel tempo come risultato degli sforzi della community.
 
 ## Letture consigliate {#further-reading}
 

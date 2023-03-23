@@ -4,7 +4,6 @@ description: Cum funcționează contractul Uniswap-v2? De ce este scris în aces
 author: Ori Pomerantz
 tags:
   - "solidity"
-  - "uniswap"
 skill: intermediate
 published: 2021-05-01
 lang: ro
@@ -24,7 +23,7 @@ _Comercianții_ trimit un tip de token la fondul comun și îl primesc pe celăl
 
 Când furnizorii de lichidităţi își vor înapoi activele, aceștia pot arde tokenurile fondului comun și îşi pot primi înapoi tokenurile, inclusiv partea lor de recompense.
 
-[Faceți clic aici pentru a vedea o descriere completă](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/swaps/).
+[Faceți clic aici pentru a vedea o descriere completă](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/).
 
 ### De ce v2? De ce nu v3? {#why-v2}
 
@@ -450,7 +449,7 @@ Folosește funcția `UniswapV2ERC20._mint` pentru a crea efectiv tokenurile de l
     }
 ```
 
-În caz că nu există nicio taxă, setează `kLast` la zero (dacă nu este deja setat astfel). Când a fost scris acest contract, exista o [funcție de rambursare a gazului](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3298.md) care încuraja contractele să reducă dimensiunea totală a stării Ethereum, prin reducerea la zero a stocării de care nu aveau nevoie. Acest cod obține această rambursare atunci când este posibil.
+În caz că nu există nicio taxă, setează `kLast` la zero (dacă nu este deja setat astfel). Când a fost scris acest contract, exista o [funcție de rambursare a gazului](https://eips.ethereum.org/EIPS/eip-3298) care încuraja contractele să reducă dimensiunea totală a stării Ethereum, prin reducerea la zero a stocării de care nu aveau nevoie. Acest cod obține această rambursare atunci când este posibil.
 
 #### Funcții accesibile din exterior {#pair-external}
 
@@ -803,7 +802,7 @@ Aceste două funcții permit `feeToSetter` să controleze destinatarul taxei (î
 
 [Acest contract](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implementează tokenul de lichidităţi ERC-20. Este similar cu [contractul OpenWhisk ERC-20](/developers/tutorials/erc20-annotated-code), așa că voi explica numai partea care este diferită, funcționalitatea `permit`.
 
-Tranzacțiile pe Ethereum costă ether (ETH), care este echivalent cu banii reali. Dacă aveți tokenuri ERC-20, şi nu ETH, nu puteți trimite tranzacții, deci nu puteți face nimic cu ele. O soluție pentru a evita această problemă constă în [meta-tranzacții](https://docs.uniswap.org/protocol/V2/guides/smart-contract-integration/supporting-meta-transactions/). Proprietarul tokenurilor semnează o tranzacție care permite altcuiva să retragă jetoanele din lanț și să le trimită prin internet destinatarului. Destinatarul, care posedă ETH, transmite apoi autorizația în numele proprietarului.
+Tranzacțiile pe Ethereum costă ether (ETH), care este echivalent cu banii reali. Dacă aveți tokenuri ERC-20, şi nu ETH, nu puteți trimite tranzacții, deci nu puteți face nimic cu ele. O soluție pentru a evita această problemă constă în [meta-tranzacții](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions). Proprietarul tokenurilor semnează o tranzacție care permite altcuiva să retragă jetoanele din lanț și să le trimită prin internet destinatarului. Destinatarul, care posedă ETH, transmite apoi autorizația în numele proprietarului.
 
 ```solidity
     bytes32 public DOMAIN_SEPARATOR;
@@ -891,11 +890,11 @@ Contractele periferice sunt API-uri (interfață de program de aplicație) pentr
 
 ### UniswapV2Router01.sol {#UniswapV2Router01}
 
-[Acest contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) are probleme și [ar trebui să nu mai fie utilizat](https://docs.uniswap.org/protocol/V2/reference/smart-contracts/router-01/). Din fericire, contractele periferice sunt fără stare și nu dețin niciun activ, de aceea este ușor să fie eliminate; se recomandă în schimb utilizarea înlocuitorului lor, `UniswapV2Router02`.
+[Acest contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) are probleme și [ar trebui să nu mai fie utilizat](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Din fericire, contractele periferice sunt fără stare și nu dețin niciun activ, de aceea este ușor să fie eliminate; se recomandă în schimb utilizarea înlocuitorului lor, `UniswapV2Router02`.
 
 ### UniswapV2Router02.sol {#UniswapV2Router02}
 
-În cele mai multe cazuri, veți utiliza Uniswap prin intermediul [acestui contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). Puteți vedea cum să îl utilizați [aici](https://docs.uniswap.org/protocol/V2/reference/smart-contracts/router-02/).
+În cele mai multe cazuri, veți utiliza Uniswap prin intermediul [acestui contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). Puteți vedea cum să îl utilizați [aici](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02).
 
 ```solidity
 pragma solidity =0.6.6;

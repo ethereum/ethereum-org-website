@@ -1,8 +1,7 @@
 import React from "react"
-import { useIntl } from "react-intl"
-import { Box, Flex, HStack, Text } from "@chakra-ui/react"
+import { useI18next } from "gatsby-plugin-react-i18next"
+import { Badge, Box, Flex, HStack, Text } from "@chakra-ui/react"
 import CopyToClipboard from "./CopyToClipboard"
-import Pill from "./Pill"
 import Link from "./Link"
 import TutorialTags from "./TutorialTags"
 import { getLocaleTimestamp } from "../utils/time"
@@ -25,7 +24,7 @@ export const getSkillTranslationId = (skill: Skill): TranslationKey =>
   `page-tutorial-${Skill[skill.toUpperCase() as keyof typeof Skill]}`
 
 const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
-  const intl = useIntl()
+  const { language } = useI18next()
 
   const frontmatter = tutorial.frontmatter
   const hasSource = frontmatter.source && frontmatter.sourceUrl
@@ -45,11 +44,11 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
           <TutorialTags tags={frontmatter.tags} />
         </Flex>
         <Flex
-          as={Pill}
+          as={Badge}
+          variant="secondary"
           alignSelf="flex-start"
           mb={2}
           whiteSpace="nowrap"
-          isSecondary={true}
         >
           <Translation id={getSkillTranslationId(frontmatter.skill)} />
         </Flex>
@@ -79,7 +78,7 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
         {published && (
           <Box>
             <Emoji fontSize="sm" mr={2} text=":calendar:" />
-            {getLocaleTimestamp(intl.locale as Lang, published)}
+            {getLocaleTimestamp(language as Lang, published)}
           </Box>
         )}
         <Box>

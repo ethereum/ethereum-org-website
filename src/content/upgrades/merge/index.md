@@ -22,7 +22,7 @@ The Merge was the joining of the original execution layer of Ethereum (the Mainn
 
 Initially, the [Beacon Chain](/upgrades/beacon-chain/) shipped separately from [Mainnet](/glossary/#mainnet). Ethereum Mainnet - with all its accounts, balances, smart contracts, and blockchain state - continued to be secured by [proof-of-work](/developers/docs/consensus-mechanisms/pow/), even while the Beacon Chain ran in parallel using [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). The Merge was when these two systems finally came together, and proof-of-work was permanently replaced by proof-of-stake.
 
-Imagine Ethereum is a spaceship that launched before it was quite ready for an interstellar voyage. With the Beacon Chain, the community built a new engine and a hardened hull. After significant testing, it became time to hot-swap the new engine for the old one mid-flight. This merged the new, more efficient engine into the existing ship enabling it to put in some serious lightyears and take on the universe.
+Imagine Ethereum is a spaceship that launched before it was quite ready for an interstellar voyage. With the Beacon Chain, the community built a new engine and a hardened hull. After significant testing, it became time to hot-swap the new engine for the old one mid-flight. This merged the new, more efficient engine into the existing ship enabling it to put in some serious light years and take on the universe.
 
 ## Merging with Mainnet {#merging-with-mainnet}
 
@@ -108,7 +108,7 @@ The Merge marked the end of proof-of-work for Ethereum and start the era of a mo
 
 ## The Merge and scaling {#merge-and-scaling}
 
-The Merge also set the stage for further scalability upgrades not possible under proof-of-work, bringing Ethereum one step closer to achieving the full scale, security and sustainability outlined in its [Ethereum vision](/upgrades/vision/).
+The Merge also set the stage for further scalability upgrades not possible under proof-of-work, bringing Ethereum one step closer to achieving the full scale, security and sustainability outlined in its [Ethereum vision](/roadmap/vision/).
 
 ## Misconceptions about The Merge {#misconceptions}
 
@@ -144,7 +144,7 @@ A transaction's "speed" can be measured in a few ways, including time to be incl
 
 Historically, on proof-of-work, the target was to have a new block every ~13.3 seconds. Under proof-of-stake, slots occur precisely every 12 seconds, each of which is an opportunity for a validator to publish a block. Most slots have blocks, but not necessarily all (i.e. a validator is offline). In proof-of-stake, blocks are produced ~10% more frequently than on proof-of-work. This was a fairly insignificant change and is unlikely to be noticed by users.
 
-Proof-of-stake introduced the transaction finality concept that did not previously exist. In proof-of-work, the ability to reverse a block gets exponentially more difficult with every passing block mined on top of a transaction, but it never quite reaches zero. Under proof-of-stake, blocks are bundled into epochs (6.4 minute spans of time containing 32 chances for blocks) which validators vote on. When an epoch ends, validators vote on whether to consider the epoch 'justified'. If validators agree to justify the epoch, it gets finalized in the next epoch. Undoing finalized transactions is economically unviable as it would require obtaining and burning over one-third of the total staked ETH.
+Proof-of-stake introduced the transaction finality concept that did not previously exist. In proof-of-work, the ability to reverse a block gets exponentially more difficult with every passing block mined on top of a transaction, but it never quite reaches zero. Under proof-of-stake, blocks are bundled into epochs (6.4 minute spans of time containing 32 chances for blocks) which validators vote on. When an epoch ends, validators vote on whether to consider the epoch 'justified'. If validators agree to justify the epoch, it gets finalized in the next epoch. Undoing finalized transactions is economically inviable as it would require obtaining and burning over one-third of the total staked ETH.
 
 </ExpandableCard>
 

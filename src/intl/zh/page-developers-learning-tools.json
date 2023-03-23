@@ -8,7 +8,7 @@
   "page-learning-tools-capture-the-ether-logo-alt": "Capture the Ether 徽标",
   "page-learning-tools-chainshot-description": "有教师指导的远程以太坊开发者训练营和其他课程。",
   "page-learning-tools-chainshot-logo-alt": "ChainShot徽标",
-  "page-learning-tools-coding": "通过编程来学习",
+  "page-learning-tools-coding": "通过编码来学习",
   "page-learning-tools-coding-subtitle": "如果您更喜欢在互动中学习，这些工具会帮您实践理解以太坊。",
   "page-learning-tools-consensys-academy-description": "线上以太坊开发者训练营。",
   "page-learning-tools-consensys-academy-logo-alt": "ConsenSys Academy徽标",
@@ -35,7 +35,7 @@
   "page-learning-tools-remix-logo-alt": "Remix徽标",
   "page-learning-tools-sandbox": "代码沙箱",
   "page-learning-tools-sandbox-desc": "代码沙箱提供您一个尝试写智能合约和理解以太坊的空间。",
-  "page-learning-tools-speed-run-ethereum-description": "Speed Run Ethereum 是一系列使用 Scaffold-ETH 测试你的 Solidity 知识的挑战",
+  "page-learning-tools-speed-run-ethereum-description": "Speed Run Ethereum 提供一系列挑战，通过使用 Scaffold-ETH 测试你的 Solidity 知识",
   "page-learning-tools-speed-run-ethereum-logo-alt": "Speed Run 以太坊徽标",
   "page-learning-tools-studio-description": "一个基于网络的IDE，您可以在这里关注教程来创建和测试智能合约，并为它们建立一个前端。",
   "page-learning-tools-vyperfun-description": "通过学习 Vyper 来构建您自己的 Pokémon 游戏。",
@@ -45,5 +45,6 @@
   "page-learning-tools-pointer-description": "通过有趣的交互式教程学习 web3 开发技能。在学习过程中一路赚取加密货币奖励。",
   "page-learning-tools-pointer-logo-alt": "指针标志",
   "page-learning-tools-platzi-description": "了解如何在 Web3 上构建去中心化应用程序，掌握成为区块链开发者所需的所有技能。",
-  "page-learning-tools-platzi-logo-alt": "Platzi 徽标"
+  "page-learning-tools-platzi-logo-alt": "Platzi 徽标",
+  "alt-eth-blocks": "组织成类似ETH符号的区块示例"
 }

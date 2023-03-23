@@ -1,24 +1,24 @@
 ---
-title: 区块链桥梁简介
+title: 区块链桥简介
 description: 桥梁使用户能够跨不同的区块链转移他们的资金
 lang: zh
 ---
 
-# 区块链桥梁 {#prerequisites}
+# 区块链桥 {#prerequisites}
 
-_Web3 已经发展成为一个由一层网络区块链和二层网络扩展解决方案组成的生态系统，每个解决方案都具有独特的功能和权衡。 随着区块链协议数量的增加，[跨链移动资产的需求也随之增加](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>)。  为了满足这一需求，我们需要桥梁。_
+_Web3 已经发展成为一个由一层网络区块链和二层网络扩展解决方案组成的生态系统，每个解决方案都具有独特的功能和权衡。 随着区块链协议数量的增加，[跨链移动资产的需求也随之增加](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>)。  为了满足这一需求，我们需要桥接。_
 
 <Divider />
 
 ## 什么是桥梁？ {#what-are-bridges}
 
-区块链桥梁就像我们在真实世界所知道的桥梁一样。 就像真实桥梁连结两个物理位置一样，区块链桥梁连接两个区块链生态系统。 桥梁通过传递信息和资产，促进区块链之间的通信。
+区块链桥就像我们在真实世界所知道的桥梁一样。 就像真实桥梁连结两个物理位置一样，区块链桥梁连接两个区块链生态系统。 桥梁通过传递信息和资产，促进区块链之间的通信。
 
 我们来看一个例子：
 
 你来自美国，正计划去欧洲旅行。 你有美元，但你需要欧元来消费。 要将你的美元兑换成欧元，你可以使用货币兑换并支付少量费用。
 
-但是，如果你想使用不同的区块链进行类似的兑换，您会怎么做？ 假设你想用以太坊主网的以太币兑换 [Arbitrum](https://arbitrum.io/) 上的以太币。 就像我们为欧元进行的货币兑换一样，我们需要一种机制将我们的 ETH 从以太坊转移到 Arbitrum。 桥梁使这种交易成为可能。 在本例中，[Arbitrum 有一个原生桥梁](https://bridge.arbitrum.io/)，可以将以太币从主网转移到 Arbitrum。
+但是，如果你想使用不同的区块链进行类似的兑换，您会怎么做？ 假设你想用以太坊主网的以太币兑换 [Arbitrum](https://arbitrum.io/) 上的以太币。 就像我们为欧元进行的货币兑换一样，我们需要一种机制将我们的以太币从以太坊转移到 Arbitrum。 桥梁使这种交易成为可能。 在本例中，[Arbitrum 有一个原生桥梁](https://bridge.arbitrum.io/)，可以将以太币从主网转移到 Arbitrum。
 
 ## 我们为什么需要桥梁？ {#why-do-we-need-bridges}
 
@@ -113,16 +113,19 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 - 桥梁运营商对需信任桥梁有恶意
 - 桥梁被非法侵入
 
-最近的一次黑客攻击是 Solana 的虫洞桥，[在黑客攻击期间被窃取了 12 万 wETH（3.25 亿美元）](https://rekt.news/wormhole-rekt/)。
+最近的一次黑客攻击是 Solana 的虫洞桥，[在黑客攻击期间被窃取了 12 万 wETH（3.25 亿美元）](https://rekt.news/wormhole-rekt/)。 [区块链中的许多顶级黑客攻击都涉及到桥梁](https://rekt.news/leaderboard/)。
 
-桥梁对于让用户加入以太坊二层网络至关重要，甚至对于想要探索不同生态系统的用户也至关重要。 然而，鉴于与桥梁交互所涉及的风险，用户必须了解桥梁正在做出的权衡取舍。
+桥梁对于让用户加入以太坊二层网络至关重要，甚至对于想要探索不同生态系统的用户也至关重要。 然而，鉴于与桥梁交互所涉及的风险，用户必须了解桥梁正在做出的权衡取舍。 这些是一些确保[跨链安全的策略](https://blog.debridge.finance/10-strategies-for-cross-chain-security-8ed5f5879946)。
 
 <Divider />
 
 ## 延伸阅读 {#further-reading}
 
+- [EIP-5164：跨链执行](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658)_2022 年 6 月 18 日 - Brendan Asselstine_
+- [二层网络桥梁风险框架](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _2022 年 7 月 5 日 - Bartek Kiepuszewski_
+- [“为什么未来将出现多链，而不会是跨链。”](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _2022 年 1 月 8 日 - Vitalik Buterin_
 - [什么是区块链桥以及我们如何对其进行分类？](https://blog.li.finance/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa) _2021 年 2 月 18 日 - Arjun Chand_
-- [什么是跨链桥梁？](https://www.alchemy.com/overviews/cross-chain-bridges) _2022 年 5 月 10 日 - Alchemy_
+- [什么是跨链桥接？](https://www.alchemy.com/overviews/cross-chain-bridges) _2022 年 5 月 10 日 - Alchemy_
 - [区块链桥：构建加密网络的网络](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) _2021 年 9 月 8 日 - Dmitriy Berenzon _
 - [加密空间中的桥梁](https://medium.com/chainsafe-systems/bridges-in-crypto-space-12e158f5fd1e) _2021 年 8 月 23 日 - Ben Adar Hyman_
 - [互操作性三难困境](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17) _2021 年 10 月 1 日 - Arjun Bhuptani_

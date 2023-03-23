@@ -18,11 +18,11 @@ La prima criptovaluta è stata Bitcoin, creata da Satoshi Nakamoto. Dal rilascio
 
 ## Cos'è un ether? {#what-is-ether}
 
-**Ether (ETH)** è la criptovaluta impiegata per molti scopi sulla rete Ethereum. Fondamentalmente è l'unica forma di pagamento accettabile per le commissioni sulle transazioni, e dopo [la fusione](/upgrades/merge) servianno degli ether per convalidare e proporre blocchi sulla rete principale. Ether viene anche utilizzato come forma primaria di garanzia nei mercati dei prestiti [DeFi](/defi), come unità di conto nei mercati NFT, come pagamento guadagnato per l'esecuzione di servizi o la vendita di beni fisici e altro ancora.
+**Ether (ETH)** è la criptovaluta impiegata per molti scopi sulla rete Ethereum. Fondamentalmente è l'unica forma di pagamento accettabile per le commissioni sulle transazioni, e dopo [la fusione](/upgrades/merge) servianno degli ether per convalidare e proporre blocchi sulla rete principale. L'ether è anche usato come una forma principale di garanzia nei mercati di prestito della [DeFi](/defi), come un'unità di conto nei mercati di NFT, come pagamento guadagnato per l'esecuzione di servizi o della vendita di beni del mondo reale e molto altro.
 
 Ethereum consente agli sviluppatori di creare [**applicazioni decentralizzate (dapp)**](/developers/docs/dapps), che condividono tutte un pool di potenza di elaborazione. Questo pool condiviso è limitato, quindi Ethereum necessita di un meccanismo per determinare chi lo usa. In caso contrario, una dApp potrebbe consumare accidentalmente o malevolmente tutte le risorse della rete, impedendo ad altri di accedervi.
 
-La criptovaluta ether supporta un meccanismo di determinazione dei prezzi per la potenza di calcolo di Ethereum. Quando vogliono effettuare una transazione, gli utenti devono pagare ether per far riconoscere la propria transazione sulla blockchain. Questi costi d'uso sono noti come [commissioni del carburante](/developers/docs/gas/) e dipendono dalla quantità di potenza di calcolo necessaria per eseguire la transazione e dalla domanda di potenza di calcolo a livello della rete in quel momento.
+La criptovaluta ether supporta un meccanismo di determinazione dei prezzi per la potenza di calcolo di Ethereum. Quando vogliono effettuare una transazione, gli utenti devono pagare ether per far riconoscere la propria transazione sulla blockchain. Questi costi d'uso sono noti come [commissioni sul gas](/developers/docs/gas/), derivate dalla quantità di potenza di calcolo necessaria per eseguire la transazione e dalla domanda della rete per la potenza di calcolo in quel momento.
 
 Pertanto, anche se una dApp malevola inviasse un ciclo infinito, a un certo punto la transazione terminerebbe gli ether e si arresterebbe, consentendo alla rete di tornare alla normalità.
 
@@ -38,7 +38,7 @@ L'ether è coniato come una ricompensa per ogni blocco proposto e al punto di co
 
 Oltre a essere creato tramite le ricompense per il blocco, l'ether può essere anche distrutto o "bruciato", come si dice in gergo. L'ether bruciato viene rimosso dalla circolazione in via permanente.
 
-La bruciatura di ether ha luogo in ogni transazione su Ethereum. Quando gli utenti pagano per le proprie transazioni, viene distrutta una commissione di base sul gas, impostata dalla rete a seconda della domanda di transazioni. Questo, insieme a dimensioni variabili dei blocchi e una commissione del gas massima, semplifica la stima della commissione di transazione su Ethereum. Quando la domanda della rete è elevata, i [blocchi](https://etherscan.io/block/12965263) possono bruciare più ether di quanto ne sia coniato, compensando efficacemente l'emissione di ether.
+La bruciatura di ether ha luogo in ogni transazione su Ethereum. Quando gli utenti pagano per le proprie transazioni, una commissione di base sul gas, impostata dalla rete secondo la domanda di transazioni, viene distrutta. Questo, insieme a dimensioni variabili dei blocchi e una commissione sul gas massima, semplifica la stima della commissione della transazione su Ethereum. Quando la domanda della rete è elevata, i [blocchi](https://etherscan.io/block/12965263) possono bruciare più ether di quanto ne sia coniato, compensando efficacemente l'emissione di ether.
 
 Bruciare la commissione di base impedisce vari metodi in cui i produttori del blocco potrebbero altrimenti manipolarla. Ad esempio, se i produttori del blocco hanno ricevuto la commissione di base, potrebbero includere le proprie transazioni gratuitamente e aumentare la commissione di base per tutti gli altri. In caso contrario, potrebbero rimborsare la commissione di base ad alcuni utenti al di fuori della catena, creando così un mercato delle commissioni sulle transazioni più opaco e complesso.
 
@@ -50,24 +50,24 @@ Wei è la quantità più piccola possibile di ether. Di conseguenza, molte imple
 
 Gwei, abbreviazione di giga-wei, è spesso usato per descrivere i costi del gas su Ethereum.
 
-| Denominazione | Valore in ether  | Uso comune                                     |
-| ------------- | ---------------- | ---------------------------------------------- |
-| Wei           | 10<sup>-18</sup> | Implementazioni tecniche                       |
-| Gwei          | 10<sup>-9</sup>  | Commissioni sul carburante leggibili dall'uomo |
+| Denominazione | Valore in ether  | Uso comune                              |
+| ------------- | ---------------- | --------------------------------------- |
+| Wei           | 10<sup>-18</sup> | Implementazioni tecniche                |
+| Gwei          | 10<sup>-9</sup>  | Commissioni sul gas leggibili dall'uomo |
 
 ## Trasferire ether {#transferring-ether}
 
 Ogni transazione su Ethereum contiene un campo di `valore`, che specifica l'importo di ether da trasferire, denominato in wei, e da inviare dall'indirizzo del mittente all'indirizzo del destinatario.
 
-Quando l'indirizzo del destinatario è uno [smart contract](/developers/docs/smart-contracts/), questo ether trasferito potrebbe essere usato per pagare il carburante quando lo smart contract esegue il proprio codice.
+Quando l'indirizzo del destinatario è un [contratto intelligente](/developers/docs/smart-contracts/), questo ether trasferito potrebbe essere usato per pagare il gas quando il contratto intelligente esegue il proprio codice.
 
 [Maggiori informazioni sulle transazioni](/developers/docs/transactions/)
 
 ## Interrogare l'ether {#querying-ether}
 
-Gli utenti possono interrogare il saldo di ether di qualsiasi [accout](/developers/docs/accounts/) consultando il rispettivo campo del `saldo`, che mostra le posizioni in ether denominate in wei.
+Gli utenti possono interrogare il saldo di ether di qualsiasi [conto](/developers/docs/accounts/), ispezionando il campo `balance` del conto, che mostra le posizioni in ether, denominate in wei.
 
-[Etherscan](https://etherscan.io) è uno strumento popolare per consultare i saldi dell'indirizzo attraverso un'applicazione basata sul web. Per esempio, [questa pagina di Etherscan](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) mostra il saldo per la Ethereum Foundation. I saldi del conto sono anche interrogabili usando i portafogli o direttamente effettuando richieste ai nodi.
+[Etherscan](https://etherscan.io) è uno strumento popolare per consultare i saldi dell'indirizzo attraverso un'applicazione basata sul web. Per esempio, [questa pagina di Etherscan](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) mostra il saldo per la Ethereum Foundation. I saldi dei conti possono esser interrogati anche utilizzando i portafogli, o direttamente, effettuando richieste ai nodi.
 
 ## Letture consigliate {#further-reading}
 

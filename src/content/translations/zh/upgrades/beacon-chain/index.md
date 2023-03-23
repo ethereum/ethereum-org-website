@@ -4,14 +4,13 @@ description: 了解信标链 - 引入权益证明的以太坊升级。
 lang: zh
 template: upgrade
 image: ../../../../../assets/upgrades/core.png
-summaryPoint1: 信标链对我们今天使用的以太坊没有造成任何变化。
-summaryPoint2: 信标链以太坊生态系统引入了权益证明。
-summaryPoint3: 信标链于 2022 年与原有的以太坊工作量证明链合并。
-summaryPoint4: 信标链引入的共识逻辑和区块广播协议现在保护着以太坊。
+summaryPoint1: 信标链为以太坊生态系统引入了权益证明。
+summaryPoint2: 信标链于 2022 年 9 月与原有的以太坊工作量证明链合并。
+summaryPoint3: 信标链引入的共识逻辑和区块广播协议目前保护着以太坊。
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
-  信标链于 2020 年 12 月 1 日上线。 在当时，它是独立于以太坊主网的一条单独链。 信标链运行权益证明，但不处理任何交易。 2022 年，信标链与原有的以太坊主网合并，取代了以太坊之前的共识逻辑和区块传播方式。 合并后，就只有一条以太坊链。
+  信标链于 2020 年 12 月 1 日上线，并且在 2022 年 9 月 15 日完成合并升级，将权益证明正式确定为太坊的共识机制。
 </UpgradeStatus>
 
 ## 什么是信标链？ {#what-is-the-beacon-chain}
@@ -24,7 +23,7 @@ summaryPoint4: 信标链引入的共识逻辑和区块广播协议现在保护�
 
 信标链引入共识引擎（或“共识层”），取代了以太坊在工作量证明机制下的挖矿，并带来了很多重大改进。
 
-信标链是[我们目前拥有的安全、环保、可扩展的以太坊](/upgrades/vision/)的基础组成部分。
+信标链是[我们目前拥有的安全、环保、可扩展的以太坊](/roadmap/vision/)的基础组成部分。
 
 ## 信标链的影响 {#beacon-chain-features}
 
@@ -72,4 +71,5 @@ summaryPoint4: 信标链引入的共识逻辑和区块广播协议现在保护�
 
 ## 延伸阅读
 
-[有关以太坊未来升级的更多信息](/upgrades/vision) [更多关于权益证明的信息](/develoeprs/docs/consensus-mechanisms/pos)
+- [有关以太坊未来升级的更多信息](/roadma/vision)
+- [有关权益证明的更多信息](/developers/docs/consensus-mechanisms/pos)

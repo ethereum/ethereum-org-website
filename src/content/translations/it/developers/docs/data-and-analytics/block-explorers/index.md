@@ -1,11 +1,11 @@
 ---
 title: Esploratori dei blocchi
-description: Introduzione agli esploratori di blocchi, il tuo portale nel mondo dei dati della blockchain, dove puoi eseguire ricerche su informazioni su transazioni, account, contratti e altro ancora.
+description: Un'introduzione agli esploratori di blocchi, il tuo portale al mondo dei dati della blockchain, dove puoi richiedere informazioni sulle transazioni, i conti, i contratti e altro.
 lang: it
 sidebarDepth: 3
 ---
 
-I block explorer sono il tuo portale sui dati di Ethereum. Puoi usarli per vedere dati in tempo reale su blocchi, transazioni, miner, account e altre attività che avvengono sulla catena.
+I block explorer sono il tuo portale sui dati di Ethereum. Puoi usarli per visualizzare i dati in tempo reale sui blocchi, le transazioni, i miner, i conti e altra attività sulla catena.
 
 ## Prerequisiti {#prerequisites}
 
@@ -36,12 +36,12 @@ Ogni 12 secondi vengono aggiunti nuovi blocchi a Ethereum (a meno che un proposi
 - Altezza del blocco - Il numero del blocco e la lunghezza della blockchain (in blocchi) alla creazione del blocco corrente
 - Marca oraria - L'ora in cui è stato proposto un blocco
 - Transazioni - Il numero di transazioni incluse nel blocco
-- Destinatario della commissione - L'indirizzo che ha ricevuto le mance della commissione del gas dalle transazioni
+- Destinatario della commissione: L'indirizzo che ha ricevuto le mance della commissione del gas dalle transazioni
 - Ricompensa del blocco - L'importo di ETH elargito al validatore che ha proposto il blocco
 - Dimensione - Le dimensioni dei dati nel blocco (misurate in byte)
-- Gas usato - Le unità totali di gas usate dalle transazioni nel blocco
-- Limite del gas - I limiti di gas totali impostati dalle transazioni nel blocco
-- Commissione di base per gas - Il moltiplicatore minimo necessario perché una transazione venga inclusa in un blocco
+- Gas usato: Le unità di gas totali usate dalle transazioni nel blocco
+- Limite di gas: I limiti totali di gas impostati dalle transazioni nel blocco
+- Commissione di base per il gas: Il moltiplicatore minimo necessario perché una transazione sia inclusa in un blocco
 - Commissioni bruciate - La quantità di ETH bruciati nel blocco
 - Dati aggiuntivi - Ogni dato aggiuntivo che il miner ha incluso nel blocco
 
@@ -51,16 +51,16 @@ Ogni 12 secondi vengono aggiunti nuovi blocchi a Ethereum (a meno che un proposi
 - Hash padre - L'hash del blocco che precedeva quello corrente
 - StateRoot - L'hash di root dell'albero di Merkle che memorizza l'intero stato del sistema
 
-### Carburante {#gas}
+### Gas {#gas}
 
-Gli esploratori di blocchi non forniscono informazioni solo sull'utilizzo del carburante nelle transazioni e nei blocchi, ma anche sui prezzi correnti del carburante nella rete. Questo può aiutare a capire l'utilizzo della rete, a inviare transazioni sicure e a non spendere più carburante del necessario. Cerca le API che possono aiutarti a ottenere queste informazioni nell'interfaccia del tuo prodotto. I dati riguardanti il carburante coprono:
+Non solo gli esploratori dei blocchi ti forniranno i dati sull'utilizzo del Gas nelle transazioni e nei blocchi, ma alcuni ti forniranno informazioni anche sui prezzi correnti del gas nella rete. Ciò ti aiuterà a comprendere l'utilizzo della rete, a inviare transazioni sicuri e a non spendere troppo in gas. Cerca le API che possono aiutarti a ottenere queste informazioni nell'interfaccia del tuo prodotto. I dati specifici sul gas coprono:
 
-- Le unità stimate di carburante necessarie per una transazione sicura ma lenta (+ prezzo stimato e durata)
-- Le unità stimate di carburante necessarie per una transazione media (+ prezzo stimato e durata)
-- Le unità stimate di carburante necessarie per una transazione veloce (+ prezzo stimato e durata)
-- Tempo medio per la conferma basato sul prezzo del carburante
-- Contratti che consumano gas - in altre parole, i prodotti popolari e più utilizzati sulla rete
-- Conti che consumano gas - in altre parole, gli utenti frequenti della rete
+- Le unità stimate di gas necessarie per una transazione sicura ma lenta (+ prezzo stimato e durata)
+- Le unità stimate di gas necessarie per una transazione media (+ prezzo stimato e durata)
+- Le unità stimate di gas necessarie per una transazione veloce (+ prezzo stimato e durata)
+- Tempo medio di conferma basato sul prezzo del gas
+- Contratti che consumano gas: in altre parole, i prodotti popolari e più utilizzati sulla rete
+- Conti che consumano gas: in altre parole, gli utenti frequenti della rete
 
 ### Transazioni {#transactions}
 
@@ -72,53 +72,53 @@ Gli esploratori di blocchi sono diventati un punto di riferimento comune per tra
 - Stato - Un'indicazione del fatto che la transazione sia in sospeso, fallita o riuscita
 - Blocco - Il blocco in cui è stata inclusa la transazione
 - Marca oraria - L'ora in cui il miner ha minato la transazione
-- Mittente - L'indirizzo del conto che ha inviato la transazione
-- Destinatario - L'indirizzo del destinatario o dello smart contract con cui interagisce la transazione
+- Mittente: L'indirizzo del conto che ha inviato la transazione
+- A - L'indirizzo del destinatario o del contratto intelligente con cui interagisce la transazione
 - Token trasferiti - Un elenco dei token trasferiti nell'ambito della transazione
 - Valore - Il valore totale degli ETH trasferiti
-- Commissione di transazione - L'importo pagato al miner per elaborare la transazione (calcolato per prezzo del gas\*gas usato)
+- Commissione di transazione: L'importo pagato al miner per elaborare la transazione (calcolato dal prezzo del gas\*gas usato)
 
 **Dati avanzati**
 
-- Limite di gas - I numeri massimi di unità di gas che questa transazione può consumare
-- Gas usato - La quantità effettiva di unità di gas consumate dalla transazione
-- Prezzo del gas - Il prezzo fissato per unità di gas
-- Nonce - Il numero della transazione per l'indirizzo `from` (tieni a mente che inizia a 0, quindi un nonce di `100` sarebbe in realtà la 101a transazione inviata dal conto
+- Limite di gas: I numeri massimi di unità di gas che questa transazione può consumare
+- Gas usato: L'importo effettivo di unità di gas che la transazione ha consumato
+- Prezzo del gas: Il prezzo fissato per unità di gas
+- Nonce: Il numero della transazione per l'indirizzo `from` (tieni a mente che inizia a 0, quindi un nonce di `100`, sarebbe in realtà la 101° transazione inviata da questo conto
 - Dati di input - Ogni informazione aggiuntiva richiesta dalla transazione
 
-### Conto {#accounts}
+### Conti {#accounts}
 
-Esistono molti dati relativi al conto ai quali è possibile accedere. Ecco perché spesso viene raccomandato di utilizzare diversi conti, così che le tue risorse e il valore non possano essere tracciati facilmente. Sono state sviluppate anche alcune soluzioni per rendere transazioni e attività del conto più private. Ecco i dati che sono disponibili per i conti:
+Esistono molti dati relativi a un conto a cui puoi accedere. Ecco perché, spesso, è consigliato usare più conti, così che le tue risorse e il tuo valore non siano facili da tracciare. Sono in oltre in corso di sviluppo alcune soluzioni per rendere le transazioni e l'attività del conto, più private. Ma ecco i dati disponibili per i conti:
 
-**Conti utente**
+**Conti dell'utente**
 
-- Indirizzo del conto - L'indirizzo pubblico che puoi usare per l'invio dei fondi
-- Saldo di ETH - L'importo di ETH associati a quel conto
+- Indirizzo del conto: L'indirizzo pubblico che puoi usare per l'invio dei fondi
+- Saldo di ETH: L'importo di ETH associato a quel conto
 - Valore totale di ETH - Il valore degli ETH
-- Token - I token associati al conto e il loro valore
-- Storico della transazione - Un elenco di tutte le transazioni nell'ambito delle quali il conto in questione era il mittente o il destinatario
+- Token: I token associati al conto e il loro valore
+- Storico delle transazioni: Un elenco di tutte le transazioni in cui questo conto era il mittente o il destinatario
 
-**Smart contract**
+**Contratto intelligente**
 
-I conti Smart Contract hanno tutti i dati di un conto utente, ma alcuni esploratori di blocchi mostreranno anche alcune informazioni di codice. Ad esempio:
+I conti del contratto intelligente contengono tutti i dati che avrà il conto di un utente, ma alcuni esploratori del blocco mostreranno persino delle informazioni del codice. Ad esempio:
 
 - Creatore del contratto - L'indirizzo che ha distribuito il contratto sulla rete principale
 - Transazione di creazione - La transazione che ha incluso la distribuzione alla rete principale
-- Codice sorgente - Il codice in Solidity o Vyper dello smart contract
+- Codice sorgente: Il codice in Solidity o Vyper del contratto intelligente
 - ABI del contratto - L'interfaccia binaria dell'applicazione del contratto; le chiamate che il contratto effettua e i dati ricevuti
-- Codice di creazione del contratto - Il bytecode compilato dello smart contract, creato quando si compila uno smart contract scritto in Solidity o Vyper, ecc.
-- Eventi del contratto - Uno storico dei metodi chiamati nello smart contract, fondamentalmente un modo per vedere come viene usato il contratto e con quale frequenza
+- Codice di creazione del contratto: Il bytecode compilato del contratto intelligente, creato quando compili un contratto intelligente scritto in Solidity o Vyper, etc.
+- Eventi del contratto: Uno storico dei metodi chiamati nel contratto intelligente, fondamentalmente, un modo per vedere come e quanto spesso è usato il contratto
 
 ### Token {#tokens}
 
-I token sono un tipo di contratto, quindi avranno dati simili a uno smart contract. Ma siccome hanno un valore e possono essere scambiati, contengono dati aggiuntivi:
+I token sono un tipo di contratto, quindi conterranno dati simili a un contratto intelligente. Ma siccome hanno un valore e possono essere scambiati, contengono dati aggiuntivi:
 
 - Tipo - Se si tratta di un ERC-20, un ERC-721 o un altro standard di token
 - Prezzo - Se si tratta di un ERC-20, avrà il valore di mercato corrente
 - Limite di mercato - Se si tratta di un ERC-20, avrà un limite di mercato (calcolato come prezzo\*offerta totale)
 - Offerta totale - Il numero di token in circolazione
 - Titolari - Il numero di indirizzi contenenti il token
-- Trasferimenti - Il numero di volte che il token è stato trasferito tra conti
+- Trasferimenti: Il numero di volte che il token è stato trasferito tra i conti
 - Storico delle transazioni - Uno storico di tutte le transazioni che includono il token
 - Indirizzo del contratto - L'indirizzo del token distribuito sulla rete principale
 - Decimali - I token ERC-20 sono divisibili e hanno cifre decimali

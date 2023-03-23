@@ -13,6 +13,7 @@ import {
   AccordionPanel,
   Box,
   Heading,
+  Icon,
   Text,
 } from "@chakra-ui/react"
 
@@ -20,7 +21,8 @@ export interface IProps {
   children?: React.ReactNode
   contentPreview?: ReactNode
   title: ReactNode
-  svg?: ComponentType<SVGProps<SVGElement>>
+  svg?: typeof Icon
+  eventAction?: string
   eventCategory?: string
   eventName?: string
 }
@@ -30,12 +32,13 @@ const ExpandableCard: React.FC<IProps> = ({
   contentPreview,
   title,
   svg: Svg,
+  eventAction = "Clicked",
   eventCategory = "",
   eventName = "",
 }) => {
   const [isVisible, setIsVisible] = useState(false)
   const matomo = {
-    eventAction: `Clicked`,
+    eventAction,
     eventCategory: `ExpandableCard${eventCategory}`,
     eventName,
   }
@@ -57,7 +60,6 @@ const ExpandableCard: React.FC<IProps> = ({
       border="1px solid"
       borderColor="border"
       borderRadius="sm"
-      h3
       display="flex"
       flex-direction="column"
       marginBottom="4"
@@ -84,6 +86,7 @@ const ExpandableCard: React.FC<IProps> = ({
               width="100%"
               alignItems="center"
               flexDir={{ base: "column", sm: "row" }}
+              textAlign="start"
             >
               <Box
                 marginBottom={{ base: 2, sm: 0 }}

@@ -18,7 +18,7 @@ Vejamos um exemplo:
 
 Você é dos EUA e está planejando uma viagem à Europa. Você tem Dólar, mas precisa de Euro para gastar. Para trocar seus Dólares por Euros, você pode usar uma corretora de câmbio por uma pequena taxa.
 
-Mas, o que você faz se quiser fazer uma troca parecida para usar um blockchain diferente? Digamos que você queira trocar ETH na rede principal Ethereum por ETH no [Arbitrum](https://arbitrum.io/). Como o câmbio de moedas que fizemos por Euro, precisamos de um mecanismo para mover nosso ETH do Ethereum para o Arbitrum. As pontes tornam essa transação possível. Neste caso,a [Arbitrum tem uma ponte nativa](https://bridge.arbitrum.io/) que pode transferir o ETH da rede principal para o Arbitrum.
+Mas, o que você faz se quiser fazer uma troca parecida para usar um blockchain diferente? Digamos que você queira trocar ETH na rede principal Ethereum por ETH no [Arbitrum](https://arbitrum.io/). Como o câmbio de moedas que fizemos por Euro, precisamos de um mecanismo para mover nosso ETH do Ethereum para o Arbitrum. As pontes tornam essa transação possível. Neste caso, a [Arbitrum tem uma ponte nativa ](https://bridge.arbitrum.io/) que pode transferir o ETH da rede principal para o Arbitrum.
 
 ## Por que precisamos de pontes? {#why-do-we-need-bridges}
 
@@ -113,16 +113,17 @@ Os fundos do usuário estão em risco se:
 - os operadores da ponte tiverem intenção maliciosa em uma ponte confiável
 - a ponte for hackeada
 
-Um ataque hacker recente foi a ponte Wormhole da Solana, [onde 120k wETH (US$ 325 milhões) foram roubados durante o ataque hacker](https://rekt.news/wormhole-rekt/).
+Um ataque hacker recente foi a ponte Wormhole da Solana, [onde 120k wETH (US$ 325 milhões) foram roubados durante o ataque hacker](https://rekt.news/wormhole-rekt/). Muitos dos [principais hacks em blockchains envolveram pontes](https://rekt.news/leaderboard/).
 
-As pontes são cruciais para integrar usuários às camadas 2 do Ethereum e até mesmo para usuários que desejam explorar diferentes ecossistemas. Entretanto, dados os riscos envolvidos na interação com as pontes, os usuários devem entender as trocas que as pontes estão fazendo.
+As pontes são cruciais para integrar usuários às camadas 2 do Ethereum e até mesmo para usuários que desejam explorar diferentes ecossistemas. Entretanto, dados os riscos envolvidos na interação com as pontes, os usuários devem entender as trocas que as pontes estão fazendo. Estas são algumas [estratégias para segurança entre cadeias](https://blog.debridge.finance/10-strategies-for-cross-chain-security-8ed5f5879946).
 
 <Divider />
 
 ## Leitura adicional {#further-reading}
 
--
-
+- [EIP-5164: Execução entre cadeias](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _18 de junho de 2022 - Brendan Asselstine_
+- [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _5 de julho de 2022 - Bartek Kiepuszewski_
+- ["Por que o futuro será multi-chain, mas não será cross-chain."](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)_8 de janeiro de 2022 - Vitalik Buterin_
 - [O que são pontes Blockchain e como podemos classificá-las?](https://blog.li.finance/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa) _18 de fevereiro de 2021 – Arjun Chand_
 - [O que são pontes de cadeias cruzadas?](https://www.alchemy.com/overviews/cross-chain-bridges) _10 de maio de 2022 – Alchemy_
 - [Pontos Blockchain: construindo redes de criptoredes](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) _8 de setembro de 2021 – Dmitriy Berenzon_

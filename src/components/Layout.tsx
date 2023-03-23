@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react"
 import { ApolloProvider } from "@apollo/client"
-import { useColorModeValue } from "@chakra-ui/react"
+import { useColorModeValue, Text } from "@chakra-ui/react"
 import { ThemeProvider } from "@emotion/react"
-import styled from "@emotion/styled"
-import { IntlProvider } from "react-intl"
-import { LocaleProvider } from "gatsby-theme-i18n"
+
+import { Flex } from "@chakra-ui/react"
 
 import { lightTheme, darkTheme } from "../theme"
 
@@ -29,40 +28,6 @@ import { isMobile } from "../utils/isMobile"
 import type { Context } from "../types"
 
 import client from "../apollo"
-
-const ContentContainer = styled.div`
-  position: relative;
-  margin: 0px auto;
-  min-height: 100vh;
-  display: flex;
-  flex-flow: column;
-
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    max-width: ${(props) => props.theme.variables.maxPageWidth};
-  }
-`
-
-const MainContainer = styled.div`
-  display: flex;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
-
-const MainContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-`
-
-const Main = styled.main`
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  overflow: visible;
-  width: 100%;
-  flex-grow: 1;
-`
 
 export interface IProps {
   children?: React.ReactNode
@@ -92,8 +57,6 @@ const Layout: React.FC<IProps> = ({
 
   const [isZenMode, setIsZenMode] = useState<boolean>(false)
   const [shouldShowSideNav, setShouldShowSideNav] = useState<boolean>(false)
-  const locale = pageContext.locale
-  const messages = require(`../intl/${locale}.json`)
 
   // Exit Zen Mode on 'esc' click
   useKeyPress(`Escape`, () => handleZenModeChange(false))
@@ -141,52 +104,62 @@ const Layout: React.FC<IProps> = ({
     !isTranslationBannerIgnored
 
   return (
-    <LocaleProvider pageContext={pageContext}>
-      {/* our current react-intl types does not support react 18 */}
-      {/* TODO: once we upgrade react-intl to v6, remove this ts-ignore */}
-      {/* @ts-ignore */}
-      <IntlProvider locale={locale!} key={locale} messages={messages}>
-        <ApolloProvider client={client}>
-          <ThemeProvider theme={theme}>
-            <ZenModeContext.Provider value={{ isZenMode, handleZenModeChange }}>
-              <SkipLink hrefId="#main-content" />
-              <TranslationBanner
-                shouldShow={shouldShowTranslationBanner}
-                isPageContentEnglish={isPageContentEnglish}
-                isPageRightToLeft={isPageRightToLeft}
-                originalPagePath={pageContext.originalPath!}
-              />
-              <TranslationBannerLegal
-                shouldShow={isLegal}
-                isPageRightToLeft={isPageRightToLeft}
-                originalPagePath={pageContext.originalPath!}
-              />
-              <ContentContainer>
+    <ApolloProvider client={client}>
+      <ThemeProvider theme={theme}>
+        <ZenModeContext.Provider value={{ isZenMode, handleZenModeChange }}>
+          <SkipLink hrefId="#main-content" />
+          <TranslationBanner
+            shouldShow={shouldShowTranslationBanner}
+            isPageContentEnglish={isPageContentEnglish}
+            isPageRightToLeft={isPageRightToLeft}
+            originalPagePath={pageContext.i18n.originalPath || ""}
+          />
+          <TranslationBannerLegal
+            shouldShow={isLegal}
+            isPageRightToLeft={isPageRightToLeft}
+            originalPagePath={pageContext.i18n.originalPath || ""}
+          />
+
+          <Flex
+            position="relative"
+            margin="0px auto"
+            minHeight="100vh"
+            flexFlow="column"
+            maxW={{
+              lg: lightTheme.variables.maxPageWidth,
+            }}
+          >
+            <ZenMode>
+              <Nav path={path} />
+              {shouldShowSideNav && <SideNavMobile path={path} />}
+            </ZenMode>
+            <SkipLinkAnchor id="main-content" />
+            <Flex flexDirection={{ base: "column", lg: "row" }}>
+              {shouldShowSideNav && (
                 <ZenMode>
-                  <Nav path={path} />
-                  {shouldShowSideNav && <SideNavMobile path={path} />}
+                  <SideNav path={path} />
                 </ZenMode>
-                <SkipLinkAnchor id="main-content" />
-                <MainContainer>
-                  {shouldShowSideNav && (
-                    <ZenMode>
-                      <SideNav path={path} />
-                    </ZenMode>
-                  )}
-                  <MainContent>
-                    <Main>{children}</Main>
-                  </MainContent>
-                </MainContainer>
-                <ZenMode>
-                  <Footer />
-                </ZenMode>
-                <FeedbackWidget location={path} />
-              </ContentContainer>
-            </ZenModeContext.Provider>
-          </ThemeProvider>
-        </ApolloProvider>
-      </IntlProvider>
-    </LocaleProvider>
+              )}
+              <Flex flexDirection="column" width="100%">
+                <Flex
+                  justifyContent="space-around"
+                  alignItems="flex-start"
+                  overflow="visible"
+                  width="100%"
+                  flexGrow="1"
+                >
+                  {children}
+                </Flex>
+              </Flex>
+            </Flex>
+            <ZenMode>
+              <Footer />
+            </ZenMode>
+            <FeedbackWidget location={path} />
+          </Flex>
+        </ZenModeContext.Provider>
+      </ThemeProvider>
+    </ApolloProvider>
   )
 }
 

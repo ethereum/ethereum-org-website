@@ -88,6 +88,8 @@ Ethereum does not support a large population of light nodes yet, but light node 
 
 Syncing clients in any mode other than archive will result in pruned blockchain data. This means, there is no archive of all historical states but the full node is able to build them on demand.
 
+Learn more about [Archive nodes](/developers/docs/archive-nodes).
+
 ## Why should I run an Ethereum node? {#why-should-i-run-an-ethereum-node}
 
 Running a node allows you to directly, trustlessly and privately use Ethereum while supporting the network by keeping it more robust and decentralized.
@@ -126,7 +128,7 @@ If you're more of a technical user, dive into more details and options on how to
 
 ## Alternatives {#alternatives}
 
-Setting up your own node can cost you time and resources but you don’t always need to run your own instance. In this case, you can use a third party API provider like [Infura](https://infura.io), [Alchemy](https://alchemyapi.io), [Chainstack](https://chainstack.com), or [QuikNode](https://www.quiknode.io). Alternatively, [ArchiveNode](https://archivenode.io/) is a community-funded Archive node that hopes to bring archive data on the Ethereum blockchain to independent developers who otherwise couldn't afford it. For an overview of using these services, check out [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/).
+Setting up your own node can cost you time and resources but you don’t always need to run your own instance. In this case, you can use a third party API provider like [Infura](https://infura.io), [Alchemy](https://alchemyapi.io), [Chainstack](https://chainstack.com), [QuikNode](https://www.quiknode.io), [Tenderly](https://tenderly.co/web3-gateway), [Blast](https://blastapi.io/), or [GetBlock](https://getblock.io/). Alternatively, [ArchiveNode](https://archivenode.io/) is a community-funded Archive node that hopes to bring archive data on the Ethereum blockchain to independent developers who otherwise couldn't afford it. For an overview of using these services, check out [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/).
 
 If somebody runs an Ethereum node with a public API in your community, you can point your light wallets (like MetaMask) to a community node [via Custom RPC](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) and gain more privacy than with some random trusted third party.
 
@@ -138,13 +140,12 @@ The Ethereum community maintains multiple open-source execution clients (previou
 
 This table summarizes the different clients. All of them pass [client tests](https://github.com/ethereum/tests) and are actively maintained to stay updated with network upgrades.
 
-| Client                                          | Language | Operating systems     | Networks                                            | Sync strategies                    | State pruning   |
-| ----------------------------------------------- | -------- | --------------------- | --------------------------------------------------- | ---------------------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)              | Go       | Linux, Windows, macOS | Mainnet, Sepolia, Görli, Ropsten, Rinkeby           | Snap, Full                         | Archive, Pruned |
-| [Nethermind](http://nethermind.io/)             | C#, .NET | Linux, Windows, macOS | Mainnet, Sepolia, Görli, Ropsten, Rinkeby, and more | Snap (without serving), Fast, Full | Archive, Pruned |
-| [Besu](https://besu.hyperledger.org/en/stable/) | Java     | Linux, Windows, macOS | Mainnet, Sepolia, Görli, Ropsten, Rinkeby, and more | Fast, Full                         | Archive, Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux, Windows, macOS | Mainnet, Sepolia, Görli, Rinkeby, Ropsten, and more | Full                               | Archive, Pruned |
-| [Akula](https://akula.app)                      | Rust     | Linux                 | Mainnet, Sepolia, Görli, Rinkeby, Ropsten           | Full                               | Archive, Pruned |
+| Client                                          | Language | Operating systems     | Networks                           | Sync strategies                    | State pruning   |
+| ----------------------------------------------- | -------- | --------------------- | ---------------------------------- | ---------------------------------- | --------------- |
+| [Geth](https://geth.ethereum.org/)              | Go       | Linux, Windows, macOS | Mainnet, Sepolia, Goerli           | Snap, Full                         | Archive, Pruned |
+| [Nethermind](http://nethermind.io/)             | C#, .NET | Linux, Windows, macOS | Mainnet, Sepolia, Goerli, and more | Snap (without serving), Fast, Full | Archive, Pruned |
+| [Besu](https://besu.hyperledger.org/en/stable/) | Java     | Linux, Windows, macOS | Mainnet, Sepolia, Goerli, and more | Snap, Fast, Full                   | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux, Windows, macOS | Mainnet, Sepolia, Goerli, and more | Full                               | Archive, Pruned |
 
 **Note that OpenEthereum [has been deprecated](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) and is no longer being maintained.** Use another client implementation!
 
@@ -160,7 +161,7 @@ Besu's extensive [documentation](https://besu.hyperledger.org/en/stable/) will g
 
 ### Erigon {#erigon}
 
-Erigon, formerly known as Turbo‐Geth, started as a fork of Go Ethereum oriented toward speed and disk‐space efficiency. Erigon is a completely re-architected implementation of Ethereum, currently written in Go but with implementations in other languages under development, e.g. [Akula](https://medium.com/@vorot93/meet-akula-the-fastest-ethereum-implementation-ever-built-58eaca244c39). Erigon's goal is to provide a faster, more modular, and more optimized implementation of Ethereum. It can perform a full archive node sync using around 2TB of disk space, in under 3 days.
+Erigon, formerly known as Turbo‐Geth, started as a fork of Go Ethereum oriented toward speed and disk‐space efficiency. Erigon is a completely re-architected implementation of Ethereum, currently written in Go but with implementations in other languages under development. Erigon's goal is to provide a faster, more modular, and more optimized implementation of Ethereum. It can perform a full archive node sync using around 2TB of disk space, in under 3 days.
 
 ### Go Ethereum {#geth}
 
@@ -271,13 +272,7 @@ Snap sync is the latest approach to syncing a client, pioneered by the Geth team
 
 [More on snap sync](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
 
-| Client       | Disk size (fast sync) | Disk size (full archive) |
-| ------------ | --------------------- | ------------------------ |
-| Geth         | 400GB+                | 6TB+                     |
-| OpenEthereum | 280GB+                | 6TB+                     |
-| Nethermind   | 500GB+                | 12TB+                    |
-| Besu         | 750GB+                | 5TB+                     |
-| Erigon       | N/A                   | 1TB+                     |
+### Consensus layer sync modes {#consensus-layer-sync-modes}
 
 #### Optimistic sync {#optimistic-sync}
 
@@ -299,7 +294,6 @@ There is a lot of information about Ethereum clients on the internet. Here are f
 
 - [Ethereum 101 - Part 2 - Understanding Nodes](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _– Wil Barnes, 13 February 2019_
 - [Running Ethereum Full Nodes: A Guide for the Barely Motivated](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 November 2019_
-- [Running an Ethereum Node](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub, updated often_
 
 ## Related topics {#related-topics}
 

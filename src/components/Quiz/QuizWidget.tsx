@@ -13,17 +13,21 @@ import {
 } from "@chakra-ui/react"
 import { shuffle } from "lodash"
 import { FaTwitter } from "react-icons/fa"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 // Import components
 import Button from "../Button"
 import QuizRadioGroup from "./QuizRadioGroup"
 import QuizSummary from "./QuizSummary"
+import Translation from "../Translation"
 
 // Import SVGs
-import Trophy from "../../assets/quiz/trophy.svg"
-import Correct from "../../assets/quiz/correct.svg"
-import Incorrect from "../../assets/quiz/incorrect.svg"
-import StarConfetti from "../../assets/quiz/star-confetti.svg"
+import {
+  CorrectIcon,
+  IncorrectIcon,
+  StarConfettiIcon,
+  TrophyIcon,
+} from "../icons/quiz"
 
 // Import data
 import allQuizData from "../../data/quizzes"
@@ -49,6 +53,7 @@ export interface IProps {
 
 // Component
 const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
+  const { t } = useTranslation()
   const [quizData, setQuizData] = useState<Quiz | null>(null)
   const [userQuizProgress, setUserQuizProgress] = useState<Array<AnswerChoice>>(
     []
@@ -86,7 +91,10 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
     const trimmedQuestions = maxQuestions
       ? shuffledQuestions.slice(0, maxQuestions)
       : shuffledQuestions
-    const quiz: Quiz = { title: rawQuiz.title, questions: trimmedQuestions }
+    const quiz: Quiz = {
+      title: t(rawQuiz.title),
+      questions: trimmedQuestions,
+    }
     setQuizData(quiz)
   }
   useEffect(initialize, [quizKey])
@@ -219,6 +227,22 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
     )
   }
 
+  const AnswerIcon = () => {
+    const commonProps = {
+      color: "neutral",
+    }
+
+    if (!showAnswer) {
+      return <TrophyIcon {...commonProps} />
+    }
+
+    return currentQuestionAnswerChoice?.isCorrect ? (
+      <CorrectIcon {...commonProps} />
+    ) : (
+      <IncorrectIcon {...commonProps} />
+    )
+  }
+
   // TODO: Allow user to submit quiz for storage
   // TODO: Fix a11y keyboard tab stops
 
@@ -233,7 +257,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
         scrollMarginTop={24}
         id="quiz"
       >
-        Test your knowledge
+        <Translation id="test-your-knowledge" />
       </Heading>
       <Box
         w="full"
@@ -255,16 +279,14 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
       >
         {showConfetti && (
           <>
-            <Icon
-              as={StarConfetti}
+            <StarConfettiIcon
               fontSize="184px"
               position="absolute"
               zIndex={-1}
               top={-8}
               left={0}
             />
-            <Icon
-              as={StarConfetti}
+            <StarConfettiIcon
               fontSize="184px"
               position="absolute"
               zIndex={-1}
@@ -274,7 +296,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
             />
           </>
         )}
-        {/* Trophy icon */}
+        {/* Answer Icon - defaults to TrophyIcon */}
         <Circle
           size="50px"
           bg={
@@ -289,17 +311,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
           left="50%"
           transform="translateX(-50%) translateY(-50%)"
         >
-          <Icon
-            as={
-              !showAnswer
-                ? Trophy
-                : currentQuestionAnswerChoice?.isCorrect
-                ? Correct
-                : Incorrect
-            }
-            fontSize="1.75rem"
-            color="neutral"
-          />
+          <AnswerIcon />
         </Circle>
         {quizData ? (
           <>
@@ -361,7 +373,7 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
                       onClick={handleRetryQuestion}
                       variant="outline-color"
                     >
-                      Try again
+                      <Translation id="try-again" />
                     </Button>
                   )}
                 {showResults ? (
@@ -370,17 +382,19 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
                       leftIcon={<Icon as={FaTwitter} />}
                       onClick={handleShare}
                     >
-                      Share results
+                      <Translation id="share-results" />
                     </Button>
                     {score < 100 && (
-                      <Button onClick={initialize}>Try again</Button>
+                      <Button onClick={initialize}>
+                        <Translation id="try-again" />
+                      </Button>
                     )}
                   </>
                 ) : showAnswer ? (
                   <Button onClick={handleContinue}>
                     {userQuizProgress.length === quizData.questions.length - 1
-                      ? "See results"
-                      : "Next question"}
+                      ? t("see-results")
+                      : t("next-question")}
                   </Button>
                 ) : (
                   <Button
@@ -390,9 +404,9 @@ const QuizWidget: React.FC<IProps> = ({ quizKey, maxQuestions }) => {
                         currentQuestionAnswerChoice!
                       )
                     }
-                    disabled={!currentQuestionAnswerChoice}
+                    isDisabled={!currentQuestionAnswerChoice}
                   >
-                    Submit answer
+                    <Translation id="submit-answer" />
                   </Button>
                 )}
               </Flex>

@@ -205,5 +205,8 @@
   "page-dapps-what-are-dapps": "Что такое приложения dapp?",
   "page-dapps-more-on-defi-button": "Подробнее о децентрализованных финансах",
   "page-dapps-more-on-nft-button": "Подробнее о токенизированных предметах коллекционирования",
-  "page-dapps-more-on-nft-gaming-button": "Подробнее о токенизированных внутриигровых предметах"
+  "page-dapps-more-on-nft-gaming-button": "Подробнее о токенизированных внутриигровых предметах",
+  "foundation": "Фонд",
+  "transaction-fees": "Что такое комиссия за транзакцию?",
+  "page-wallets-get-some": "Получите ETH"
 }

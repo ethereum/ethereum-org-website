@@ -4,10 +4,10 @@ description: "Impara sulla frammentazione: spezzare e distribuire il carico di d
 lang: it
 template: upgrade
 image: ../../../../../assets/upgrades/newrings.png
-summaryPoint1: Lo sharding è un aggiornamento multi-fase per migliorare la scalabilità e la capacità di Ethereum.
-summaryPoint2: La frammentazione fornisce la distribuzione sicura dei requisiti d'archiviazione dei dati, consentendo ai rollup di esser persino più economici e di semplificare l'operazione dei nodi.
+summaryPoint1: La frammentazione è un aggiornamento multi-fase per migliorare la scalabilità e la capacità di Ethereum.
+summaryPoint2: La frammentazione fornisce la distribuzione sicura dei requisiti d'archiviazione dei dati, consentendo ai rollup di essere persino più economici e rendendo i nodi più facili da operare.
 summaryPoint3: Consentono alle soluzioni del livello 2 di offrire commissioni di transazione contenute, sfruttando la sicurezza di Ethereum.
-summaryPoint4: Questo aggiornamento è diventato più di un punto focale, da quando Ethereum è passato al proof-of-stake.
+summaryPoint4: Questo aggiornamento è diventato più di un punto focale da quando Ethereum è passato al proof-of-stake.
 ---
 
 <UpgradeStatus dateKey="page-upgrades-shards-date">
@@ -46,13 +46,13 @@ Con requisiti hardware minori, lo sharding faciliterà l'esecuzione dei [client]
 Mentre aggiorniamo le cose, dai un'occhiata a <a href="https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum">La Guida per Autostoppisti a Ethereum</a> per un'eccellente spiegazione della tabella di marcia di Ethereum.
 </InfoBanner>
 
-Le prime shard chain disponibili forniranno solo dati aggiuntivi in rete. Non gestiranno le transazioni o gli Smart Contract. Garantiranno comunque incredibili miglioramenti al numero di transazioni al secondo quando combinate ai rollup.
+Le prime shard chain disponibili forniranno solo dati aggiuntivi in rete. Non gestiranno le transazioni o i contratti intelligenti. Garantiranno comunque incredibili miglioramenti al numero di transazioni al secondo quando combinate ai rollup.
 
 I rollup sono una tecnologia di secondo livello che esiste già oggi. Permettono alle dapp di raggruppare o "eseguire il roll up" delle transazioni in una sola transazione off-chain, generare una prova crittografica e inviarla alla catena. In questo modo, i dati necessari per una transazione vengono ridotti. Combinando questo aspetto con le informazioni extra rese disponibili dalle shard, s ottengono 100.000 transazioni al secondo.
 
 ## Shard chain versione 2: esecuzione di codice {#code-execution}
 
-Il piano è sempre stato quello di aggiungere ulteriori funzionalità agli shard, per renderli più simili a quello che è oggi la [rete principale Ethereum](/glossary/#mainnet). Questo consentirebbe loro di memorizzare ed eseguire il codice e gestire le transazioni, poiché ogni frammento conterrebbe la propria serie univoca di smart contract e saldi di conti. La comunicazione incrociata tra frammenti consentirebbe l'esecuzione di transazioni tra i vari frammenti.
+Il piano è sempre stato quello di aggiungere ulteriori funzionalità agli shard, per renderli più simili a quello che è oggi la [rete principale Ethereum](/glossary/#mainnet). Questo consentirebbe loro di memorizzare ed eseguire il codice e gestire le transazioni, poiché ogni frammento conterrebbe la propria serie univoca di contratti intelligenti e saldi di conti. La comunicazione incrociata tra frammenti consentirebbe l'esecuzione di transazioni tra i vari frammenti.
 
 Tuttavia, considerando l'aumento di transazioni al secondo che i frammenti di versione 1 forniscono, ce n'è ancora bisogno? La questione è tuttora oggetto di dibattito all'interno della community e sembrano esserci alcune opzioni.
 
@@ -64,7 +64,7 @@ Vitalik Buterin, parlando al podcast Bankless, ha presentato 3 potenziali opzion
 
 #### 1. Esecuzione di stato non necessaria {#state-execution-not-needed}
 
-Significa che non diamo agli shard la possibilità di gestire gli smart contract e li utilizziamo solo come depositi di dati.
+Questo significherebbe che non diamo ai frammenti la capacità di gestire i contratti intelligenti e li utilizziamo invece come depositi di dati.
 
 #### 2. Inserire alcuni shard di esecuzione {#some-execution-shards}
 

@@ -120,7 +120,7 @@ Peningkatan Berlin mengoptimalkan harga gas untuk beberapa aksi EVM, dan meningk
 
 #### Ringkasan {#beacon-chain-genesis-summary}
 
-[Rantai Suar](/upgrades/beacon-chain/) memerlukan deposito 16384 dari 32 ETH yang ditaruhkan untuk diluncurkan secara aman. Ini terjadi pada 27 November yang berarti Rantai Suar mulai memproduksi blok pada 1 Desember 2020. Ini adalah langkah pertama yang penting untuk meraih [visi Ethereum](/upgrades/vision/).
+[Rantai Suar](/upgrades/beacon-chain/) memerlukan deposito 16384 dari 32 ETH yang ditaruhkan untuk diluncurkan secara aman. Ini terjadi pada 27 November yang berarti Rantai Suar mulai memproduksi blok pada 1 Desember 2020. Ini adalah langkah pertama yang penting untuk meraih [visi Ethereum](/roadmap/vision/).
 
 [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 

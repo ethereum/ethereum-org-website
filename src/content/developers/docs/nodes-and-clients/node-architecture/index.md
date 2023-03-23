@@ -14,7 +14,7 @@ The diagram below shows the relationship between the two Ethereum clients. The t
 
 _This image is borrowed from geth.ethereum.org and uses the Geth logo to represent execution clients - there are other options for the execution client including Erigon, Nethermind and Besu_
 
-For this two-client structure to work, consensus clients must be able to pass bundles of transactions to the execution client. Executing the transactions locally is how the client validates that the transactions do not violate any Ethereum rules and that the proposed update to Ethereum’s state is correct. Likewise, when the node is selected to be a block producer the consensus client must be able to request bundles of transactions from Geth to include in the new block and execute them to update the global state. This inter-client communication is handled by a local RPC connection using the [engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md).
+For this two-client structure to work, consensus clients must be able to pass bundles of transactions to the execution client. Executing the transactions locally is how the client validates that the transactions do not violate any Ethereum rules and that the proposed update to Ethereum’s state is correct. Likewise, when the node is selected to be a block producer the consensus client must be able to request bundles of transactions from Geth to include in the new block and execute them to update the global state. This inter-client communication is handled by a local RPC connection using the [engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
 ## What does the execution client do? {#execution-client}
 
@@ -31,13 +31,13 @@ In summary, the execution client is:
 
 ## What does the consensus client do? {#consensus-client}
 
-The consensus client deals with all the logic that enables a node to stay in sync with the Ethereum network. This includes receiving blocks from peers and running a fork choice algorithm to ensure the node always follows the chain with the greatest accumulation of attestations (weighted by validator effective balances). Similar to the execution client, consensus clients have their own P2P network through which they share blocks and attestations. 
+The consensus client deals with all the logic that enables a node to stay in sync with the Ethereum network. This includes receiving blocks from peers and running a fork choice algorithm to ensure the node always follows the chain with the greatest accumulation of attestations (weighted by validator effective balances). Similar to the execution client, consensus clients have their own P2P network through which they share blocks and attestations.
 
 The consensus client does not participate in attesting to or proposing blocks - this is done by a validator, an optional add-on to a consensus client. A consensus client without a validator only keeps up with the head of the chain, allowing the node to stay synced. This enables a user to transact with Ethereum using their execution client, confident that they are on the correct chain.
 
 ## Validators {#validators}
 
-Node operators can add a validator to their consensus clients if 32 ETH is the deposit contract. The validator client comes bundled with the consensus client and can be added to a node at any time. The validator handles attestations and block proposals. They enable a node to accrue rewards or lose ETH via penalties or slashing. Running the validator software also makes a node eligible to be selected to propose a new block.
+Node operators can add a validator to their consensus clients by depositing 32 ETH in the deposit contract. The validator client comes bundled with the consensus client and can be added to a node at any time. The validator handles attestations and block proposals. They enable a node to accrue rewards or lose ETH via penalties or slashing. Running the validator software also makes a node eligible to be selected to propose a new block.
 
 [More on staking](/staking/).
 
@@ -50,7 +50,7 @@ Node operators can add a validator to their consensus clients if 32 ETH is the d
 | Verifies incoming state changes                    | Keeps track of the head of the chain                             | Makes attestations           |
 | Manages state and receipts tries                   | Manages the Beacon state (contains consensus and execution info) | Requires 32 ETH to be staked |
 | Creates execution payload                          | Keeps track of accumulated randomness in RANDAO                  | Proposes blocks              |
-| Exposes JSON-RPC API for interacting with Ethereum | Keeps track of justification and finalization                    | Can be slashed  |
+| Exposes JSON-RPC API for interacting with Ethereum | Keeps track of justification and finalization                    | Can be slashed               |
 
 ## Further reading {#further-reading}
 

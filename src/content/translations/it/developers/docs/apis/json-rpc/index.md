@@ -22,7 +22,7 @@ Anche se è possibile scegliere di interagire direttamente con i client di Ether
 
 Questa pagina tratta principalmente dell'API di JSON-RPC usata dai client di esecuzione di Ethereum. Tuttavia, anche i client del consenso hanno un'API RPC che consente agli utenti di interrogare le informazioni sul nodo, richiedere blocchi della Beacon, lo stato della Beacon e altre informazioni correlate al consenso, direttamente da un nodo. Questa API è documentata sulla [pagina web dell'API Beacon](https://ethereum.github.io/beacon-APIs/#/).
 
-Inoltre, un'API interna viene usata per la comunicazione tra client in un nodo, ovvero consente al client di consenso e al client di esecuzione di scambiarsi dati. Questa è detta "Engine API" e le specifiche sono disponibili su [GitHub](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md).
+Inoltre, un'API interna viene usata per la comunicazione tra client in un nodo, ovvero consente al client di consenso e al client di esecuzione di scambiarsi dati. Questa è detta "Engine API" e le specifiche sono disponibili su [GitHub](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
 ## Specifiche del client di esecuzione {#spec}
 
@@ -48,7 +48,7 @@ Ecco alcuni esempi:
 
 ### Dati non formattati {#unformatted-data-encoding}
 
-Per la codifica di dati non formattati (insiemi di dati, indirizzi del conto, hash, insiemi di bytecode): codifica come esadecimali, prefisso "0x", due cifre esadecimali per byte.
+Codificando i dati non formattati (insiemi di dati, indirizzi dei conti, hash, insiemi di bytecode): codifica come esadecimali, prefisso "0x", due cifre esadecimali per byte.
 
 Ecco alcuni esempi:
 
@@ -79,7 +79,7 @@ Le seguenti opzioni sono possibili per il parametro defaultBlock:
 
 ## Esempi
 
-Su questa pagina forniamo esempi su come usare gli endpoint individuali dell'API JSON_RPC usando lo strumento della riga di comando, [curl](https://curl.se). Questi esempi di endpoint individuali si trovano di seguito nella sezione [esempi di Curl](#curl-examples). In seguito in questa pagina, forniamo anche un [esempio end-to-end](#usage-example) per compilare e distribuire un contratto intelligente usando un nodo di Geth, l'API di JSON_RPC e curl.
+Su questa pagina forniamo esempi su come usare gli endpoint individuali dell'API JSON_RPC usando lo strumento della riga di comando, [curl](https://curl.se). Questi esempi di endpoint individuali si trovano di seguito nella sezione [esempi di Curl](#curl-examples). In seguito nella pagina, forniamo anche un [esempio completo](#usage-example) per la compilazione e la distribuzione di un contratto intelligente usando un nodo di Geth, l'API JSON_RPC e curl.
 
 ## Esempi di Curl {#curl-examples}
 
@@ -104,7 +104,7 @@ Alcuni metodi base del protocollo JSON-RPC richiedono dati dalla rete di Ethereu
 
 ### Metodi di Stato {#state_methods}
 
-> Metodi che indicano lo stato corrente di tutti i dati immagazzinati. Lo "stato" è come una grande RAM condivisa, che include i saldi dei conti, i dati dei contratti e le stime del gas.
+> Metodi che indicano lo stato corrente di tutti i dati immagazzinati. Lo "stato" è come una grande porzione di RAM condivisa, che include i saldi dei conti, i dati dei contratti e le stime del gas.
 
 - [eth_getBalance](#eth_getbalance)
 - [eth_getStorageAt](#eth_getstorageat)
@@ -213,7 +213,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67
 }
 ```
 
-### net_listening {#net_peercount}
+### net_listening {#net_listening}
 
 Restituisce `true` se il client sta ascoltando attivamente le connessioni di rete.
 
@@ -238,7 +238,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":
 }
 ```
 
-### net_peerCount {#net_listening}
+### net_peerCount {#net_peercount}
 
 Restituisce il numero di pari attualmente connessi al client.
 
@@ -412,7 +412,7 @@ Nessuno
 
 **Restituisce**
 
-`QUANTITY` - intero del prezzo corrente di gas in wei.
+`QUANTITY`: intero del prezzo corrente del gas in wei.
 
 **Esempio**
 
@@ -479,7 +479,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 
 ### eth_getBalance {#eth_getbalance}
 
-Restituisce il saldo del conto del dato indirizzo.
+Restituisce il saldo del conto dell'indirizzo dato.
 
 **Parametri**
 
@@ -800,8 +800,8 @@ Firma una transazione che può essere inviata alla rete in un secondo momento ut
 
 - `from`: `DATI`, 20 Bytes - L'indirizzo da cui viene inviata la transazione.
 - `to`: `DATI`, 20 Bytes - (opzionale quando si crea un nuovo contratto) L'indirizzo a cui è indirizzata la transazione.
-- `gas`: `QUANTITÀ` - (opzionale, predefinito: 90000) Intero del gas fornito per l'esecuzione della transazione. Restituirà il gas inutilizzato.
-- `gasPrice`: `QUANTITY` - (opzionale, predefinito: To-Be-Determined) Intero del prezzo del gas utilizzato per ogni gas pagato, in Wei.
+- `gas`: `QUANTITÀ`: (facoltativo, predefinito: 90000) Intero del gas fornito per l'esecuzione della transazione. Restituirà il gas inutilizzato.
+- `gasPrice`: `QUANTITY`: (facoltativo, predefinito: To-Be-Determined) Intero del gasPrice usato per ogni gas pagato, in Wei.
 - `value`: `QUANTITÀ` - (opzionale) Intero del valore inviato con questa transazione, in Wei.
 - `data`: `DATI` - Il codice compilato di un contratto OPPURE l'hash della firma del metodo richiamato e i parametri codificati.
 - `nonce`: `QUANTITÀ` - (opzionale) Intero di una nonce. Ciò permette di sovrascrivere le proprie transazioni in sospeso che utilizzano la stessa nonce.
@@ -833,8 +833,8 @@ Se il campo dati contiene il codice, crea una nuova transazione via messaggio o 
 
 - `from`: `DATI`, 20 Bytes - L'indirizzo da cui viene inviata la transazione.
 - `to`: `DATI`, 20 Bytes - (opzionale quando si crea un nuovo contratto) L'indirizzo a cui è indirizzata la transazione.
-- `gas`: `QUANTITÀ` - (opzionale, predefinito: 90000) Intero del gas fornito per l'esecuzione della transazione. Restituirà il gas inutilizzato.
-- `gasPrice`: `QUANTITY` - (opzionale, predefinito: To-Be-Determined) Intero del prezzo del gas utilizzato per ogni gas pagato, in Wei.
+- `gas`: `QUANTITY`: (facoltativo, prededfinito: 90000) Intero del gas fornito per l'esecuzione della transazione. Restituirà il gas inutilizzato.
+- `gasPrice`: `QUANTITY`: (facoltativo, predefinito: To-Be-Determined) Intero del gasPrice usato per ogni gas pagato.
 - `value`: `QUANTITÀ` - (opzionale) Intero del valore inviato con questa transazione, in Wei.
 - `data`: `DATI` - Il codice compilato di un contratto OPPURE l'hash della firma del metodo richiamato e i parametri codificati.
 - `nonce`: `QUANTITÀ` - (opzionale) Intero di una nonce. Questo permette di sovrascrivere le tue transazioni in sospeso che utilizzano la stessa nonce.
@@ -914,8 +914,8 @@ Esegue immediatamente un nuovo messaggio di chiamata senza creare una transazion
 
 - `from`: `DATA`, 20 Bytes - (opzionale) L'indirizzo da cui viene inviata la transazione.
 - `to`: `DATA`, 20 Bytes - L'indirizzo a cui è indirizzata la transazione.
-- `gas`: `QUANTITY` - (opzionale) Intero del gas fornito per l'esecuzione della transazione. eth_call consuma zero gas, ma questo parametro potrebbe essere necessario per alcune esecuzioni.
-- `gasPrice`: `QUANTITY` - (opzionale) Intero del prezzo del gas utilizzato per ogni gas pagato, in Wei
+- `gas`: `QUANTITY`: (facoltativo) Intero del gas fornito per l'esecuzione della transazione. eth_call consuma zero gas, ma questo parametro potrebbe essere necessario per alcune esecuzioni.
+- `gasPrice`: `QUANTITY`: (facoltativo) Intero del gasPrice usato per ogni gas pagato
 - `value`: `QUANTITY` - (opzionale) Intero del valore inviato con questa transazione
 - `data`: `DATA` - (opzionale) Hash del metodo di firma e dei parametri codificati. Per maggiori dettagli consulta [Ethereum Contract ABI nella documentazione di Solidity](https://docs.soliditylang.org/en/latest/abi-spec.html)
 
@@ -940,15 +940,15 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 
 ### eth_estimateGas {#eth_estimategas}
 
-Genera e restituisce una stima di quanto gas è necessario per consentire il completamento della transazione. La transazione non verrà aggiunta alla blockchain. Si noti che la stima può essere significativamente superiore alla quantità di gas effettivamente utilizzato dall'operazione, e ciò per una serie di motivi, tra cui la meccanica EVM e le prestazioni del nodo.
+Genera e restituisce una stima di quanto gas è necessario per consentire il completamento della transazione. La transazione non verrà aggiunta alla blockchain. Nota che la stima potrebbe esser significativamente superiore all'importo di gas effettivamente usato dall'operazione, per vari motivi, incluse le meccaniche dell'EVM e le prestazioni del nodo.
 
 **Parametri**
 
-Vedi i parametri [eth_call](#eth_call), tutte le proprietà dovrebbero essere opzionali. Se non viene specificato alcun limite di gas, Go Ethereum usa il limite di gas del blocco in sospeso come limite superiore. Di conseguenza, la stima restituita potrebbe non essere sufficiente per eseguire la chiamata/transazione quando la quantità di gas è superiore al limite del gas del blocco in sospeso.
+Vedi i parametri [eth_call](#eth_call), tutte le proprietà dovrebbero essere opzionali. Se non è specificato alcun limite di gas, geth usa il limite di gas del blocco dal blocco in sospeso come limite massimo. Di conseguenza, la stima restituita potrebbe non esser sufficiente per eseguire la chiamata/transazione quando l'importo di gas è maggiore del limite di gas del blocco.
 
 **Restituisce**
 
-`QUANTITY` - La quantità di gas utilizzato.
+`QUANTITY`: l'importo di gas utilizzato.
 
 **Esempio**
 
@@ -997,8 +997,8 @@ params: [
 - `totalDifficulty`: `QUANTITY` - intero della difficoltà totale della catena fino a questo blocco.
 - `extraData`: `DATA` - il campo "dati extra" di questo blocco.
 - `size`: `QUANTITY` - intero in bytes della dimensione di questo blocco.
-- `gasLimit`: `QUANTITY` - il gas massimo consentito in questo blocco.
-- `gasUsed`: `QUANTITY` - la totalità di gas usato da tutte le transazioni di questo blocco.
+- `gasLimit`: `QUANTITY`: il gas massimo consentito in questo blocco.
+- `gasUsed`: `QUANTITY`: il gas totale usato da tutte le transazioni in questo blocco.
 - `timestamp`: `QUANTITY` - la marca temporale unix relativa a quando il blocco è stato collazionato.
 - `transactions`: `Array` - Matrice di oggetti transazione o hash di transazione da 32 byte a seconda dell'ultimo parametro specificato.
 - `uncles`: `Array` - Matrice di ommer hash.
@@ -1086,8 +1086,8 @@ params: ["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"]
 - `blockHash`: `DATA`, 32 byte - hash del blocco in cui si trovava questa transazione. `null` quando è in sospeso.
 - `blockNumber`: `QUANTITY` - numero di blocco in cui si trovava questa transazione. `null` quando è in sospeso.
 - `from`: `DATA`, 20 Bytes - l'indirizzo del mittente.
-- `gas`: `QUANTITY` - gas fornito dal mittente.
-- `gasPrice`: `QUANTITY` - prezzo del gas fornito dal mittente in Wei.
+- `gas`: `QUANTITY`: gas fornito dal mittente.
+- `gasPrice`: `QUANTITY`: prezzo del gas fornito dal mittente in Wei.
 - `hash`: `DATA`, 32 Bytes - hash della transazione.
 - `input`: `DATA` - i dati inviati insieme alla transazione.
 - `nonce`: `QUANTITY` - il numero di transazioni effettuate dal mittente prima di questa.
@@ -1202,8 +1202,8 @@ params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"]
 - `blockNumber`: `QUANTITY` - numero di blocco in cui si trovava questa transazione.
 - `from`: `DATA`, 20 Bytes - l'indirizzo del mittente.
 - `to`: `DATA`, 20 Bytes - l'indirizzo del destinatario. null quando è una transazione di creazione del contratto.
-- `cumulativeGasUsed`: `QUANTITY` - La quantità totale di gas utilizzato quando questa transazione è stata eseguita nel blocco.
-- `gas Usato`: `QUANTITÀ` - La quantità di gas utilizzata solo da questa specifica transazione.
+- `cumulativeGasUsed`: `QUANTITY`: L'importo totale di gas usato all'esecuzione nel blocco di questa transazione.
+- `gas Usato`: `QUANTITÀ`: L'importo di gas usato solo da questa specifica transazione.
 - `contractAddress`: `DATA`, 20 Bytes - L'indirizzo del contratto creato, se la transazione consisteva nella creazione di un contratto, altrimenti `null`.
 - `logs`: `Array` - Array di oggetti di registro che questa transazione ha generato.
 - `logsBloom`: `DATA`, 256 Bytes - Filtro Bloom per i client leggeri per recuperare rapidamente i log correlati. Restituisce anche _either_:
@@ -2059,7 +2059,7 @@ Crea un filtro per notificare, quando il client riceve un messaggio Whisper corr
 1. `Oggetto` - Le opzioni del filtro:
 
 - `to`: `DATA`, 60 Byte - (opzionale) L'identità del destinatario. _Quando è presente, proverà a decifrare qualsiasi messaggio in arrivo se il client detiene la chiave privata di questa identità._
-- `topics`: `Array of DATA` - Array of `DATA` topics which the incoming message's topics should match. You can use the following combinations:
+- `topics`: `Array of DATA` - Insieme di argomenti `DATA` a cui dovrebbero corrispondere gli argomenti del messaggio in entrata. You can use the following combinations:
   - `[A, B] = A && B`
   - `[A, [B, C]] = A && (B || C)`
   - `[null, A, B] = ANYTHING && A && B` `null` funge da jolly
@@ -2201,7 +2201,7 @@ Risultato vedi [shh_getFilterChanges](#shh_getfilterchanges)
 
 Questa sezione include una dimostrazione di come distribuire un contratto utilizzando solo l'interfaccia RPC. Esistono vie alternative per la distribuzione di contratti in cui questa complessità viene eliminata tramite astrazione, ad esempio utilizzando librerie costruite partendo dall'interfaccia RPC, come [web3. s](https://web3js.readthedocs.io/) e [web3.py](https://github.com/ethereum/web3.py). Queste astrazioni sono generalmente più facili da capire e meno soggette a errori, ma è comunque utile capire cosa succede dietro le quinte.
 
-Di seguito è riportato un semplice smart contract chiamato `Multiply7` che verrà distribuito utilizzando l'interfaccia JSON-RPC su un nodo Ethereum. Questo tutorial presuppone che il lettore stia già eseguendo un nodo Geth. Maggiori informazioni sui nodi e sui client sono disponibili [qui](/developers/docs/nodes-and-clients/run-a-node). Fare riferimento alla documentazione del [client](/developers/docs/nodes-and-clients/) individuale per capire come avviare HTTP JSON-RPC per i client non-Geth. La maggior parte dei clienti serve di default su `localhost:8545`.
+Di seguito, trovi un semplice contratto intelligente, detto `Multiply7`, che sarà distribuito usando l'interfaccia JSON-RPC a un nodo di Ethereum. Questo tutorial presuppone che il lettore stia già eseguendo un nodo Geth. Maggiori informazioni sui nodi e sui client sono disponibili [qui](/developers/docs/nodes-and-clients/run-a-node). Fare riferimento alla documentazione del [client](/developers/docs/nodes-and-clients/) individuale per capire come avviare HTTP JSON-RPC per i client non-Geth. La maggior parte dei clienti serve di default su `localhost:8545`.
 
 ```javascript
 contract Multiply7 {
@@ -2252,7 +2252,7 @@ Binary:
 6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029
 ```
 
-Ora che abbiamo il codice compilato dobbiamo determinare quanto gas occorre per distribuirlo. L'interfaccia RPC ha un metodo `eth_estimateGas` che ci darà una stima.
+Ora che abbiamo il codice compilato, dobbiamo determinare quanto gas occorre per distribuirlo. L'interfaccia RPC ha un metodo `eth_estimateGas` che ci darà una stima.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_estimateGas", "params": [{"from": "0x9b1d35635cc34752ca54713bb99d38614f63c955", "data": "0x6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029"}], "id": 5}' -H "Content-Type: application/json" localhost:8545
@@ -2266,7 +2266,7 @@ curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from
 {"id":6,"jsonrpc":"2.0","result":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"}
 ```
 
-La transazione è accettata dal nodo e viene restituito un hash di transazione. Questo hash può essere usato per tracciare la transazione. Il passo successivo è quello di determinare l'indirizzo dove il nostro contratto è distribuito. Ogni transazione eseguita creerà una ricevuta. Questa ricevuta contiene varie informazioni sull'operazione, ad esempio il blocco in qui l'operazione è stata inclusa e la quantità di gas utilizzato dall'EVM. Se una transazione crea un contratto, conterrà anche l'indirizzo dello stesso. Possiamo recuperare la ricevuta con il metodo `eth_getTransactionReceipt` RPC.
+La transazione è accettata dal nodo e viene restituito un hash di transazione. Questo hash può essere usato per tracciare la transazione. Il passo successivo è quello di determinare l'indirizzo dove il nostro contratto è distribuito. Ogni transazione eseguita creerà una ricevuta. Questa ricevuta contiene varie informazioni sulla transazione, ad esempio, in quale blocco è stata inclusa e quanto gas è stato usato dall'EVM. Se una transazione crea un contratto, conterrà anche l'indirizzo dello stesso. Possiamo recuperare la ricevuta con il metodo `eth_getTransactionReceipt` RPC.
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method": "eth_getTransactionReceipt", "params": ["0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"], "id": 7}' -H "Content-Type: application/json" localhost:8545
@@ -2275,11 +2275,11 @@ curl --data '{"jsonrpc":"2.0","method": "eth_getTransactionReceipt", "params": [
 
 Il nostro contratto è stato creato su `0x4d03d617d700cf81935d7f797f4e2ae719648262`. Un risultato nullo invece di una ricevuta significa che la transazione non è ancora stata inclusa in un blocco. Attendere un attimo e controllare se il miner è in esecuzione, quindi riprovare.
 
-#### Interagire con gli smart contract {#interacting-with-smart-contract}
+#### Interagire con i contratti intelligenti {#interacting-with-smart-contract}
 
 In questo esempio invieremo una transazione usando `eth_sendTransaction` al metodo `multiply` del contratto.
 
-`eth_sendTransaction` richiede diversi argomenti, in particolare `from`, `to` e `data`. `From` è l'indirizzo pubblico del nostro account, mentre `to` è l'indirizzo del contratto. L'argomento `data` contiene un carico utile che definisce quale metodo deve essere chiamato e con quali argomenti. È qui che entra in gioco l'[ABI (interfaccia binaria dell'applicazione)](https://docs.soliditylang.org/en/latest/abi-spec.html). L'ABI è un file JSON che determina come definire e codificare i dati per l'EVM.
+`eth_sendTransaction` richiede diversi argomenti, in particolare `from`, `to` e `data`. `From` è l'indirizzo pubblico del nostro conto, mentre `to` è l'indirizzo del contratto. L'argomento `data` contiene un carico utile che definisce quale metodo deve essere chiamato e con quali argomenti. È qui che entra in gioco l'[ABI (interfaccia binaria dell'applicazione)](https://docs.soliditylang.org/en/latest/abi-spec.html). L'ABI è un file JSON che determina come definire e codificare i dati per l'EVM.
 
 I byte del carico utile definiscono quale metodo viene chiamato nel contratto. Si tratta dei primi 4 byte dall'hash Keccak sul nome della funzione e sui suoi tipi di argomento, con codifica esadecimale. La funzione di moltiplicazione accetta un uint che è un alias per uint256. Ci ritroviamo quindi con:
 

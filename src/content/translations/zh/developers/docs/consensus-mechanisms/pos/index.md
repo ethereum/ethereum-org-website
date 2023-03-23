@@ -43,7 +43,7 @@ lang: zh
 
 ## 权益证明和安全性 {#pos-and-security}
 
-正如在工作量证明中一样，权益证明中仍然存在 [51% 攻击](https://www.investopedia.com/terms/1/51-attack.asp)的威胁，但对于攻击者来说风险却更大。 攻击者需要 51% 的质押以太币。 然后他们可以通过自己的认证确保他们首选的分叉拥有最多累积认证。 共识客户端使用累积认证的“权重”确定正确的链，所以攻击者能够使他们的分叉成为规范区块。 然而与工作量证明相比，权益证明的优势在于，社区能够灵活地发动反击。 例如，诚实的验证者可以决定继续在非主流链上构建并忽略攻击者的分叉，同时鼓励应用程序、交易所和池也这样做。 他们还可以决定强行将攻击者从网络中移除并销毁攻击者质押的以太币。 这些都是对 51% 攻击的强有力的经济防御措施。
+正如在工作量证明中一样，权益证明中仍然存在 [51% 攻击](https://www.investopedia.com/terms/1/51-attack.asp)的威胁，但对于攻击者来说风险却更大。 攻击者需要获得 51% 的质押以太币。 然后他们可以通过自己的认证确保他们首选的分叉拥有最多累积认证。 共识客户端使用累积认证的“权重”确定正确的链，所以攻击者能够使他们的分叉成为规范区块。 然而与工作量证明相比，权益证明的优势在于，社区能够灵活地发动反击。 例如，诚实的验证者可以决定继续在非主流链上构建并忽略攻击者的分叉，同时鼓励应用程序、交易所和池也这样做。 他们还可以决定强行将攻击者从网络中移除并销毁攻击者质押的以太币。 这些都是对 51% 攻击的强有力的经济防御措施。
 
 51% 攻击只是其中一种恶意行为。 不良行为者可能会尝试远程攻击（尽管最终确定性小工具抵消了这种攻击向量）、短程“重组”（尽管提议者权重提升和认证期限可以缓解这种情况）、弹跳攻击和平衡攻击（也可以通过提议者权重提升来缓解，并且这些攻击只能在理想化的网络条件下演示）或雪崩攻击（被只考虑最新消息的分叉选择算法规则抵消）。
 
@@ -58,12 +58,16 @@ lang: zh
 | 权益证明的加密经济安全性高于工作量证明                                                                                                         | 用户需要运行三种软件才能参与以太坊的权益证明。                     |
 | 需要发行较少的新以太币就可以激励网络参与者                                                                                                     |                                                                    |
 
+## 更愿意通过视频学习？ {#visual-learner}
+
+<YouTube id="psKDXvXdr7k" />
+
 ## 延伸阅读 {#further-reading}
 
 - [Proof of Stake FAQ](https://vitalik.ca/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
 - [What is Proof of Stake](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
 - [What Proof of Stake Is And Why It Matters](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) _Vitalik Buterin_
-- [The Beacon Chain Ethereum 2.0 explainer you need to read first](https://ethos.dev/beacon-chain/) _Ethos.dev_
+- [以太坊 2.0 信标链：一篇需要优先阅读的解读文章](https://ethos.dev/beacon-chain) _Ethos.dev_
 - [Why Proof of Stake (Nov 2020)](https://vitalik.ca/general/2020/11/06/pos2020.html) _Vitalik Buterin_
 - [Proof of Stake: How I Learned to Love Weak Subjectivity](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
 - [权益证明以太坊的攻击和防御](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)

@@ -11,7 +11,7 @@ summaryPoint4: Kabla tuliita hii hatua kama "utiaji nanga"
 ---
 
 <UpgradeStatus dateKey="page-upgrades-merge-date">
-  Sasisho hili linawakilisha mabadiliko rasmi kuwa makubaliano ya uthibitisho-wa-hisa. Hii inaondoa mahitaji ya umeme wenye nguvu wakati wa uchimbaji, na badala yake italinda mtandao kwa kutumia ether iliopo. Hatua ya kusisimua kweli katika kutambua <a href="/upgrades/vision/">maono ya Eth2</a> - inayoweza kubadilika zaidi, yenye usalama na endelevu.
+  Sasisho hili linawakilisha mabadiliko rasmi kuwa makubaliano ya uthibitisho-wa-hisa. Hii inaondoa mahitaji ya umeme wenye nguvu wakati wa uchimbaji, na badala yake italinda mtandao kwa kutumia ether iliopo. Hatua ya kusisimua kweli katika kutambua <a href="/roadmap/vision/">maono ya Eth2</a> - inayoweza kubadilika zaidi, yenye usalama na endelevu.
 </UpgradeStatus>
 
 ## Muunganisho ni nini? {#what-is-the-docking}
@@ -28,7 +28,7 @@ Mtandao Mkuu utaleta uwezo wa kuendesha mikataba mahiri kwenye mfumo wa uthibiti
 
 ## Baada ya muunganisho {#after-the-merge}
 
-Hii itaashiria kumalizika kwa uthibitisho-wa-kazi kwa Ethereum na kuanza enzi ya Ethereum endelevu zaidi, rafiki kwa ikolojia ya mazingira. Kwa wakati huu Ethereum itakuwa hatua moja karibu na kufikia kiwango kamili, usalama na uendelevu ulioainishwa katika [Maono ya Ethereum](/upgrades/vision/).
+Hii itaashiria kumalizika kwa uthibitisho-wa-kazi kwa Ethereum na kuanza enzi ya Ethereum endelevu zaidi, rafiki kwa ikolojia ya mazingira. Kwa wakati huu Ethereum itakuwa hatua moja karibu na kufikia kiwango kamili, usalama na uendelevu ulioainishwa katika [Maono ya Ethereum](/roadmap/vision/).
 
 Ni muhimu kutambua kuwa lengo la utekelezaji wa unganisho ni urahisishaji ili kuharakisha mabadiliko kutoka kwa uthibitisho-wa-kazi hadi uthibitisho-wa-hisa. Waendelezaji wanazingatia juhudi zao kwenye mpito huu, na kupunguza huduma zingine ambazo zinaweza kuchelewesha lengo hili.
 

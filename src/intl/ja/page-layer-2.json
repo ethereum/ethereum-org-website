@@ -1,7 +1,6 @@
 {
   "layer-2-arbitrum-note": "不正証明はホワイトリストに登録されたユーザーのみ、ホワイトリストはまだ未公開。",
   "layer-2-boba-note": "検証開発中",
-  "layer-2-metis-note": "不正証明は開発中",
   "layer-2-optimism-note": "不正証明は開発中",
   "layer-2-hero-title": "レイヤー2",
   "layer-2-hero-header": "すべての人に開かれたイーサリアム",
@@ -58,7 +57,7 @@
   "layer-2-dyor-3": "L2BEATへ移動",
   "layer-2-use-layer-2-title": "レイヤー2を使う",
   "layer-2-use-layer-2-1": "レイヤー2がなぜ必要か、またレイヤー2の仕組みを理解したところで、さっそく使ってみましょう。",
-  "layer-2-contract-accounts": "<strong>注:</strong> ブリッジしてレイヤー2を使用する場合、イーサリアムメインネットと同様、ご自身がEOAアカウント(単一の秘密鍵のみがアカウントを制御するアカウント)のアドレス管理をすることに留意することが重要です。ただし、<a href=\"https://gnosis-safe.io/\"  target=”_blank”>Gnosis Safe</a>や<a href=\"https://www.argent.xyz/\"  target=”_blank”>Argent</a>などのコントラクトアカウントを使用している場合は、コントラクトアカウントをレイヤー2上のアドレスに再デプロイするまで、レイヤー2上で、そのアドレスを制御することはできません。ブリッジ、またはコントラクトアカウントへ送金を行う際、コントラクトアカウントのアドレスを制御していない場合は、資金が失われるおそれがあります。",
+  "layer-2-contract-accounts": "<strong>注:</strong> ブリッジしてレイヤー2を使用する場合、イーサリアムメインネットと同様、ご自身がEOAアカウント(単一の秘密鍵のみがアカウントを制御するアカウント)のアドレス管理をすることに留意することが重要です。ただし、<a href=\"https://safe.global/\"  target=”_blank”>Safe</a>や<a href=\"https://www.argent.xyz/\"  target=”_blank”>Argent</a>などのコントラクトアカウントを使用している場合は、コントラクトアカウントをレイヤー2上のアドレスに再デプロイするまで、レイヤー2上で、そのアドレスを制御することはできません。ブリッジ、またはコントラクトアカウントへ送金を行う際、コントラクトアカウントのアドレスを制御していない場合は、資金が失われるおそれがあります。",
   "layer-2-use-layer-2-generalized-title": "汎用レイヤー2",
   "layer-2-use-layer-2-generalized-1": "汎用レイヤー2は、イーサリアムと同じように動作しますが、より安価です。イーサリアムのレイヤー1でできることは、すべてレイヤー2でもできます。多くの分散型アプリ(Dapp)はすでにこれらのネットワークに移行し始めています。また、メインネットにデプロイせずに、レイヤー2に直接デプロイしているアプリもあります。\n",
   "layer-2-use-layer-2-application-specific-title": "アプリケーション特化型レイヤー2",
@@ -131,5 +130,6 @@
   "layer-2-note": "注意:",
   "layer-2-ecosystem-portal": "エコシステムポータル",
   "layer-2-token-lists": "トークンリスト",
-  "layer-2-explore": "探索"
+  "layer-2-explore": "探索",
+  "page-dapps-ready-button": "次へ"
 }

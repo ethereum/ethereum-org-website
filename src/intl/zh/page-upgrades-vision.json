@@ -26,7 +26,7 @@
   "page-upgrades-vision-security-desc-10": "质押还意味着你无需投资购买高性能硬件即可直接参与共识。这样，应该会促使更多的人成为验证者，提升网络的去中心化并减少攻击面。",
   "page-upgrades-vision-security-staking": "质押以太币",
   "page-upgrades-vision-security-validator": "您可以通过质押您的以太币成为一个验证者。",
-  "page-upgrades-vision-shard-upgrade": "更多关于分片的信息",
+  "page-upgrades-vision-shard-upgrade": "有关分片的更多信息",
   "page-upgrades-vision-staking-lower": "关于质押的更多信息",
   "page-upgrades-vision-subtitle": "以太坊将持续增长，直到造福全人类。",
   "page-upgrades-vision-sustainability": "可持续发展",
@@ -45,7 +45,7 @@
   "page-upgrades-vision-trilemma-cardtext-4": "增加以太坊验证节点的大小和计算能力能够安全地提高每秒处理的交易数。但是这种对硬件的要求将会成为验证节点的门槛，进而威胁到去中心化的原则。人们将期望寄于通过分片和权益证明技术提高以太坊的节点数量（而非节点大小），进而支持以太坊扩容。",
   "page-upgrades-vision-trilemma-h2": "去中心化扩展的挑战",
   "page-upgrades-vision-trilemma-modal-tip": "点击以下圆圈以更好地理解去中心化扩展遇到的问题",
-  "page-upgrades-vision-trilemma-p": "解决以太坊已有问题的一个天真方案是中心化。但是去中心化真的是太重要了，是它赋予了以太坊反审查、开放、保障隐私和近乎绝对的安全。",
+  "page-upgrades-vision-trilemma-p": "通过使以太坊更加中心化来解决其现有问题是草率的。然而去中心化太重要了，正是去中心化赋予以太坊中立、抗审查、开放性、数据所有权和近乎牢不可破的安全性。",
   "page-upgrades-vision-trilemma-p-1": "以太坊的愿景是在去中心化的前提下变得更具有可扩展性并且更安全。如何同时达成这 3 个目标被称为可扩展性的三难困境。",
   "page-upgrades-vision-trilemma-p-2": "以太坊的升级致力于解决这个三难问题，但是面临很大的挑战。",
   "page-upgrades-vision-trilemma-press-button": "点击三角形上的按钮以深入理解去中心化扩展遇到的问题。",
@@ -64,5 +64,6 @@
   "page-upgrades-vision-upgrade-needs-desc-3": "以太坊的一系列升级将解决这些问题和其他问题。这套升级的初始代号为“宁静”和“以太坊 2”，自从 2014 年以来就已经成为一个研究和开发的活跃领域。",
   "page-upgrades-vision-upgrade-needs-desc-5": "现在这项技术已经成熟，这些升级将重构以太坊，使它更加可扩展、更安全以及更可持续发展，并因此更好地服务于现有和潜在的用户。这一切都不会改变以太坊去中心化的核心价值。",
   "page-upgrades-vision-upgrade-needs-desc-6": "这意味着以太坊的可扩展性并非一蹴而就，这一方面的改进将随着时间的推移而持续上线。",
-  "page-upgrades-vision-upgrade-needs-serenity": "查看 2015 年一篇讨论“宁静”的博文"
+  "page-upgrades-vision-upgrade-needs-serenity": "查看 2015 年一篇讨论“宁静”的博文",
+  "ethereum": "以太坊"
 }

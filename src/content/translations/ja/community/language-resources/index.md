@@ -96,6 +96,10 @@ ethereum.org は[言語ページ](/languages)に記載されている、40 以�
 - [Microsoft Learn (Smart contracts)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - Solidity を使ったイーサリアムのスマートコントラクトの書き方
 - [Microsoft Learn 分散型アプリ(Dapp)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - 分散型アプリでユーザーインターフェースを作成
 
+### ロシア語 {#ru}
+
+- [Cyber Academy](https://cyberacademy.dev) - Web3 ビルダーのための学習スペース
+
 ### スペイン語 {#es}
 
 - [Ethereum Madrid](https://ethereummadrid.com/) - ブロックチェーン、分散型金融(DeFi)、およびガバナンスに関するコース、イベント、ブログ
@@ -104,7 +108,7 @@ ethereum.org は[言語ページ](/languages)に記載されている、40 以�
 - [Curso Introduction a Ethereum Development](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) - Solidity の基本、はじめてのスマートコントラクト(テストとデプロイ)
 - [Curso Introducción a Seguridad y Hacking en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) - 実際のスマートコントラクトでよくある脆弱性とセキュリティ問題の理解
 - [Curso Introduction a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - 分散型金融(DeFi)スマートコントラクトが Solidity でどのように動作し、独自の自動マーケットメーカーを作成するかの学習
-- [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) - 初心者から上級者までの非技術的なブロックチェーン教育 暗号技術とイーサリアムに関するすべてを学ぶ
+- [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) - 初心者から上級者までの非技術的なブロックチェーン学習。 暗号技術とイーサリアムに関するすべての学び
 
 ### トルコ語 {#tr}
 

@@ -49,7 +49,7 @@
   },
   {
     "fromPath": "/eth2/",
-    "toPath": "/en/upgrades/"
+    "toPath": "/en/roadmap/"
   },
   {
     "fromPath": "/build/",
@@ -197,11 +197,23 @@
   },
   {
     "fromPath": "/*/eth2/shard-chains/",
-    "toPath": "/:splat/upgrades/sharding/"
+    "toPath": "/:splat/roadmap/danksharding/"
   },
   {
     "fromPath": "/*/upgrades/shard-chains/",
-    "toPath": "/:splat/upgrades/sharding/"
+    "toPath": "/:splat/roadmap/danksharding/"
+  },
+  {
+    "fromPath": "/upgrades/sharding/",
+    "toPath": "/en/roadmap/danksharding/"
+  },
+  {
+    "fromPath": "/*/upgrades/sharding/",
+    "toPath": "/:splat/roadmap/danksharding/"
+  },
+  {
+    "fromPath": "/upgrades/shard-chains/",
+    "toPath": "/en/roadmap/danksharding/"
   },
   {
     "fromPath": "/*/eth2/staking/",
@@ -209,7 +221,11 @@
   },
   {
     "fromPath": "/*/eth2/vision/",
-    "toPath": "/:splat/upgrades/vision/"
+    "toPath": "/:splat/roadmap/vision/"
+  },
+  {
+    "fromPath": "/*/upgrades/vision/",
+    "toPath": "/:splat/roadmap/vision/"
   },
   {
     "fromPath": "/*/eth2/get-involved/",
@@ -252,10 +268,6 @@
     "toPath": "/:splat/about/#open-jobs"
   },
   {
-    "fromPath": "/*/about/community-lead",
-    "toPath": "/:splat/about/#open-jobs"
-  },
-  {
     "fromPath": "/*/about/product-designer",
     "toPath": "/:splat/about/#open-jobs"
   },
@@ -278,5 +290,13 @@
   {
     "fromPath": "/*/developers/docs/smart-contracts/upgrading-smart-contracts/",
     "toPath": "/:splat/developers/docs/smart-contracts/upgrading/"
+  },
+  {
+    "fromPath": "/staking/withdraws",
+    "toPath": "/en/staking/withdrawals/"
+  },
+  {
+    "fromPath": "/*/staking/withdraws",
+    "toPath": "/:splat/staking/withdrawals/"
   }
 ]

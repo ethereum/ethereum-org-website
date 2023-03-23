@@ -1,17 +1,25 @@
 // Libraries
-import React, { useState, useRef } from "react"
+import React, { useState, useRef, ReactNode } from "react"
+import {
+  Flex,
+  Box,
+  Image,
+  Icon,
+  Text,
+  Center,
+  Heading,
+  useTheme,
+} from "@chakra-ui/react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { useIntl } from "react-intl"
-import styled from "@emotion/styled"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import { shuffle } from "lodash"
+import { MdOutlineCancel } from "react-icons/md"
+import { BsArrowCounterclockwise } from "react-icons/bs"
 
 // Components
 import Breadcrumbs from "../../components/Breadcrumbs"
-import Icon from "../../components/Icon"
-import Link from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
-import { Content, Page } from "../../components/SharedStyledComponents"
 import Translation from "../../components/Translation"
 import WalletFilterSidebar from "../../components/FindWallet/WalletFilterSidebar"
 import WalletPersonasSidebar from "../../components/FindWallet/WalletPersonasSidebar"
@@ -21,312 +29,62 @@ import WalletTable from "../../components/FindWallet/WalletTable"
 import walletData from "../../data/wallets/wallet-data"
 
 // Icons
-import FilterBurger from "../../assets/wallets/filter_burger.svg"
+import { FilterBurgerIcon } from "../../components/icons/wallets"
 
 // Utils
-import { translateMessageId } from "../../utils/translations"
 import { trackCustomEvent } from "../../utils/matomo"
 import { getImage } from "../../utils/image"
 import { useOnClickOutside } from "../../hooks/useOnClickOutside"
 
-// Styles
-const PageStyled = styled(Page)<{ showMobileSidebar: boolean }>`
-  ${({ showMobileSidebar }) =>
-    showMobileSidebar &&
-    `
-    pointer-events: none;
-  `}
-`
+import type { ChildOnlyProp } from "../../types"
 
-const HeroContainer = styled.div`
-  position: relative;
-  width: 100%;
-  display: flex;
-  padding: 3rem;
-  background: ${(props) => props.theme.colors.layer2Gradient};
-  margin-bottom: 44px;
+const Subtitle = ({ children }: ChildOnlyProp) => {
+  return (
+    <Box
+      fontSize="xl"
+      lineHeight={1.4}
+      color="text200"
+      _last={{
+        mb: 8,
+      }}
+    >
+      {children}
+    </Box>
+  )
+}
 
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    flex-direction: column-reverse;
-  }
-`
-
-const HeroContent = styled.div`
-  width: 50%;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-top: 2rem;
-    width: 100%;
-  }
-`
-
-const Subtitle = styled.div`
-  font-size: 1.25rem;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-  &:last-of-type {
-    margin-bottom: 2rem;
-  }
-`
-
-const HeroImage = styled(GatsbyImage)`
-  width: 50%;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    width: 100%;
-  }
-`
-
-const TableContent = styled(Content)`
-  display: flex;
-  gap: 24px;
-  height: 90vh;
-  overflow: hidden;
-  position: sticky;
-  top: 76px;
-  margin-bottom: 150px;
-  border-bottom: 1px solid ${(props) => props.theme.colors.secondary};
-  padding-bottom: 0;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding: 1rem 0 0;
-    margin-bottom: 120px;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    padding: 1rem 0 0;
-    margin-bottom: 230px;
-  }
-`
-
-const MobileFilterToggleContainer = styled.div`
-  position: sticky;
-  top: 76px;
-  background: ${(props) => props.theme.colors.background};
-  width: 100%;
-  z-index: 1;
-  padding: 5px 0;
-`
-
-const MobileFilterToggle = styled.div<{ showMobileSidebar: boolean }>`
-  display: none;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: flex;
-    gap: 1rem;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid ${(props) => props.theme.colors.primary};
-    border-left: none;
-    border-radius: 0px 4px 4px 0px;
-    padding: 6px 20px 10px 20px;
-    margin: auto;
-    margin-left: 0;
-    z-index: 1;
-    width: 100%;
-    max-width: ${(props) => (props.showMobileSidebar ? "330px" : "150px")};
-    background: ${(props) =>
-      props.showMobileSidebar
-        ? props.theme.colors.background
-        : props.theme.colors.background};
-  }
-
-  p {
-    margin: 0;
-  }
-
-  svg {
-    width: 32px;
-    height: 32px;
-    line {
-      stroke: ${(props) => props.theme.colors.primary};
-    }
-    circle {
-      stroke: ${(props) => props.theme.colors.primary};
-    }
-  }
-`
-
-const StyledIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.primary};
-  width: 24;
-  height: 24;
-  pointer-events: none;
-`
-
-const FilterBurgerStyled = styled(FilterBurger)`
-  pointer-events: none;
-`
-
-const SecondaryText = styled.p`
-  font-size: 14px;
-  line-height: 14px;
-  color: ${(props) => props.theme.colors.text200};
-`
-
-const FilterSidebar = styled.div<{ showMobileSidebar: boolean }>`
-  max-width: 330px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 0.55rem;
-  overflow-y: scroll;
-  background: ${(props) => props.theme.colors.background};
-  transition: 0.5s all;
-  z-index: 20;
-  border-radius: 0px 8px 0px 0px;
-  scrollbar-width: thin;
-  pointer-events: auto;
-  scrollbar-color: ${(props) => props.theme.colors.lightBorder}
-    ${(props) => props.theme.colors.background};
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-  ::-webkit-scrollbar-track {
-    background: ${(props) => props.theme.colors.background};
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: ${(props) => props.theme.colors.lightBorder};
-    border-radius: 4px;
-    border: 2px solid ${(props) => props.theme.colors.background};
-  }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: ${(props) => (props.showMobileSidebar ? "350px" : "350px")};
-    left: ${(props) => (props.showMobileSidebar ? "0" : "-400px")};
-    height: ${(props) => (props.showMobileSidebar ? "100%" : "100%")};
-    display: ${(props) => (props.showMobileSidebar ? "flex" : "none")};
-    position: ${(props) => (props.showMobileSidebar ? "absolute" : "relative")};
-    box-shadow: ${(props) =>
-      props.showMobileSidebar ? "0 800px 0 800px rgb(0 0 0 / 65%)" : "none"};
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    width: ${(props) => (props.showMobileSidebar ? "90%" : "90%")};
-    height: ${(props) => (props.showMobileSidebar ? "100%" : "100%")};
-    display: ${(props) => (props.showMobileSidebar ? "flex" : "none")};
-  }
-`
-
-const FilterTabs = styled.div`
-  display: flex;
-  border-bottom: 1px solid ${(props) => props.theme.colors.primary};
-  cursor: pointer;
-  position: sticky;
-  top: 0;
-  background: ${(props) => props.theme.colors.background};
-  z-index: 1;
-
-  p {
-    margin: 0;
-    letter-spacing: 0.02rem;
-    font-size: 0.9rem;
-    width: 100%;
-  }
-`
-
-const FilterTab = styled.div<{
+interface IFilterTabProps {
+  children: ReactNode
   active: boolean
-}>`
-  width: 50%;
-  text-align: center;
-  background: ${(props) =>
-    props.active === true ? props.theme.colors.primary : "none"};
-  border-radius: 8px 0px 0px 0px;
-  padding: 0.9rem 0.4rem;
-  display: flex;
-  justify-items: center;
-  align-items: center;
+  onClick?: React.MouseEventHandler<HTMLDivElement>
+}
 
-  color: ${(props) =>
-    props.active === true
-      ? props.theme.colors.background
-      : props.theme.colors.text};
-
-  :last-child {
-    border-radius: 0px 8px 0px 0px;
-  }
-
-  :hover {
-    background: ${(props) =>
-      props.active === true
-        ? props.theme.colors.primary
-        : props.theme.colors.selectHover};
-  }
-`
-
-const WalletContent = styled.div<{ showMobileSidebar: boolean }>`
-  width: 100%;
-  overflow-y: scroll;
-  scrollbar-width: thin;
-  scrollbar-color: ${(props) => props.theme.colors.lightBorder}
-    ${(props) => props.theme.colors.background};
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-  ::-webkit-scrollbar-track {
-    background: ${(props) => props.theme.colors.background};
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: ${(props) => props.theme.colors.lightBorder};
-    border-radius: 4px;
-    border: 2px solid ${(props) => props.theme.colors.background};
-  }
-  table {
-    margin: 0;
-  }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 100%;
-  }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    width: 100%;
-    display: ${(props) => (props.showMobileSidebar ? "none" : "")};
-  }
-`
-
-const Note = styled.div`
-  text-align: center;
-  padding: 20px;
-
-  p {
-    font-size: 14px;
-    line-height: 23px;
-    margin: 0;
-    padding-top: 0.2rem;
-  }
-`
-
-const ResetContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 2px 4px;
-  border-radius: 4px;
-  width: 100%;
-  margin: 0 auto;
-  gap: 0.25rem;
-  font-size: 0.75rem;
-  cursor: pointer;
-  :hover {
-    p {
-      color: ${(props) => props.theme.colors.selectHover};
-    }
-    svg {
-      fill: ${(props) => props.theme.colors.selectHover};
-    }
-  }
-
-  p {
-    margin: 0;
-    color: ${(props) => props.theme.colors.primary};
-  }
-  svg {
-    fill: ${(props) => props.theme.colors.primary};
-  }
-`
-
-const ResetIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.primary};
-`
+const FilterTab = ({ children, active, onClick }: IFilterTabProps) => {
+  return (
+    <Flex
+      justifyContent="center"
+      alignItems="center"
+      onClick={onClick}
+      w="50%"
+      textAlign="center"
+      bg={active ? "primary" : "none"}
+      py="0.9rem"
+      px="0.4rem"
+      color={active ? "background" : "text"}
+      _first={{
+        borderTopLeftRadius: "lg",
+      }}
+      _last={{
+        borderTopRightRadius: "lg",
+      }}
+      _hover={{
+        bg: active ? "primary" : "selectHover",
+      }}
+    >
+      {children}
+    </Flex>
+  )
+}
 
 const filterDefault = {
   android: false,
@@ -360,7 +118,8 @@ const filterDefault = {
 const randomizedWalletData = shuffle(walletData)
 
 const FindWalletPage = ({ data, location }) => {
-  const intl = useIntl()
+  const theme = useTheme()
+  const { t } = useTranslation()
   const resetWalletFilter = React.useRef(() => {})
   const wrapperRef = useRef<HTMLDivElement>(null)
 
@@ -393,38 +152,79 @@ const FindWalletPage = ({ data, location }) => {
   useOnClickOutside(wrapperRef, () => setShowMobileSidebar(false), ["mouseup"])
 
   return (
-    <PageStyled showMobileSidebar={showMobileSidebar}>
+    <Flex
+      direction="column"
+      alignItems="center"
+      w="full"
+      mx="auto"
+      pointerEvents={showMobileSidebar ? "none" : "auto"}
+    >
       <PageMetadata
-        title={translateMessageId("page-find-wallet-meta-title", intl)}
-        description={translateMessageId(
-          "page-find-wallet-meta-description",
-          intl
-        )}
+        title={t("page-find-wallet-meta-title")}
+        description={t("page-find-wallet-meta-description")}
       />
 
-      <HeroContainer>
-        <HeroContent>
+      <Flex
+        direction={{ base: "column-reverse", sm: "row" }}
+        position="relative"
+        w="full"
+        p={12}
+        bg="layer2Gradient"
+        mb="44px"
+      >
+        <Box w={{ base: "full", sm: "50%" }} mt={{ base: 8, sm: 0 }}>
           <Breadcrumbs slug={location.pathname} />
-          <h1>
+          <Heading
+            as="h1"
+            fontSize={{ base: "2.5rem", md: "5xl" }}
+            lineHeight={1.4}
+          >
             <Translation id="page-find-wallet-title" />
-          </h1>
+          </Heading>
           <Subtitle>
             <Translation id="page-find-wallet-description" />
           </Subtitle>
           <Subtitle>
             <Translation id="page-find-wallet-desc-2" />
           </Subtitle>
-        </HeroContent>
-        <HeroImage
+        </Box>
+        <Image
+          as={GatsbyImage}
+          w={{ base: "full", sm: "50%" }}
           image={getImage(data.hero)!}
           alt=""
           loading="eager"
-          objectFit="contain"
+          imgStyle={{
+            objectFit: "contain",
+          }}
         />
-      </HeroContainer>
-      <MobileFilterToggleContainer>
-        <MobileFilterToggle
-          showMobileSidebar={showMobileSidebar}
+      </Flex>
+      <Box
+        position="sticky"
+        top="76px"
+        bg="background"
+        w="full"
+        zIndex={1}
+        py="5px"
+      >
+        <Box
+          display={{ base: "flex", lg: "none" }}
+          gap={4}
+          justifyContent="space-between"
+          alignItems="center"
+          border="1px solid"
+          borderColor="primary"
+          borderLeft="none"
+          borderRightRadius="base"
+          pt={1.5}
+          px={5}
+          pb={2.5}
+          m="auto"
+          ml={0}
+          zIndex={1}
+          w="full"
+          maxW={showMobileSidebar ? "330px" : "150px"}
+          bg="background"
           onClick={() => {
             setShowMobileSidebar(!showMobileSidebar)
             trackCustomEvent({
@@ -433,29 +233,117 @@ const FindWalletPage = ({ data, location }) => {
               eventName: `show mobile filters ${!showMobileSidebar}`,
             })
           }}
+          sx={{
+            p: {
+              m: 0,
+            },
+            svg: {
+              pointerEvents: "none",
+              boxSize: 8,
+              line: {
+                stroke: "primary",
+              },
+              circle: {
+                stroke: "primary",
+              },
+            },
+          }}
         >
-          <div>
-            <p>FILTERS</p>
-            <SecondaryText>
+          <Box>
+            <Text>
+              <Translation id="page-find-wallet-filters" />
+            </Text>
+            <Text fontSize="sm" lineHeight="14px" color="text200">
               {Object.values(filters).reduce((acc, filter) => {
                 if (filter) {
                   acc += 1
                 }
                 return acc
               }, 0)}{" "}
-              active
-            </SecondaryText>
-          </div>
+              {t("page-find-wallet-active")}
+            </Text>
+          </Box>
           {showMobileSidebar ? (
-            <StyledIcon name="cancel" />
+            <Icon as={MdOutlineCancel} fill="primary" />
           ) : (
-            <FilterBurgerStyled />
+            <FilterBurgerIcon />
           )}
-        </MobileFilterToggle>
-      </MobileFilterToggleContainer>
-      <TableContent>
-        <FilterSidebar showMobileSidebar={showMobileSidebar} ref={wrapperRef}>
-          <FilterTabs>
+        </Box>
+      </Box>
+      <Flex
+        px={{ base: 0, md: 8 }}
+        pt={4}
+        pb={0}
+        w="full"
+        gap={6}
+        height="90vh"
+        overflow="hidden"
+        position="sticky"
+        top="76px"
+        mb={{ base: "230px", md: "120px", lg: "150px" }}
+        borderBottom="1px solid"
+        borderBottomColor="secondary"
+      >
+        <Flex
+          maxW="330px"
+          direction="column"
+          gap="0.55rem"
+          overflowY="scroll"
+          bg="background"
+          transition="0.5s all"
+          zIndex={20}
+          borderTopRightRadius="lg"
+          ref={wrapperRef}
+          pointerEvents="auto"
+          sx={{
+            scrollbarWidth: "thin",
+            scrollbarColor: `${theme.colors.lightBorder} ${theme.colors.background}`,
+
+            "::-webkit-scrollbar": {
+              width: 2,
+            },
+            "::-webkit-scrollbar-track": {
+              bg: "background",
+            },
+            "::-webkit-scrollbar-thumb": {
+              bgColor: "lightBorder",
+              borderRadius: "base",
+              border: "2px solid",
+              borderColor: "background",
+            },
+          }}
+          width={{ base: "90%", sm: "350px", lg: "full" }}
+          height={{ base: "full", lg: "auto" }}
+          display={{ base: showMobileSidebar ? "flex" : "none", lg: "flex" }}
+          position={{
+            base: showMobileSidebar ? "absolute" : "relative",
+            lg: "static",
+          }}
+          boxShadow={{
+            base: showMobileSidebar
+              ? "0 800px 0 800px rgb(0 0 0 / 65%)"
+              : "none",
+            lg: "none",
+          }}
+          left={showMobileSidebar ? 0 : "-400px"}
+        >
+          <Flex
+            borderBottom="1px solid"
+            borderBottomColor="primary"
+            cursor="pointer"
+            position="sticky"
+            top={0}
+            bg="background"
+            zIndex={1}
+            sx={{
+              p: {
+                m: 0,
+                letterSpacing: "0.02rem",
+                fontSize: "0.9rem",
+                w: "full",
+              },
+            }}
+          >
             <FilterTab
               active={!showFeatureFilters}
               onClick={() => {
@@ -467,7 +355,9 @@ const FindWalletPage = ({ data, location }) => {
                 })
               }}
             >
-              <p>Profile Filters</p>
+              <Text>
+                <Translation id="page-find-wallet-profile-filters" />
+              </Text>
             </FilterTab>
             <FilterTab
               active={showFeatureFilters}
@@ -480,8 +370,8 @@ const FindWalletPage = ({ data, location }) => {
                 })
               }}
             >
-              <p>
-                Feature Filters (
+              <Text>
+                {t("page-find-wallet-feature-filters")} (
                 {Object.values(filters).reduce((acc, filter) => {
                   if (filter) {
                     acc += 1
@@ -489,10 +379,18 @@ const FindWalletPage = ({ data, location }) => {
                   return acc
                 }, 0)}
                 )
-              </p>
+              </Text>
             </FilterTab>
-          </FilterTabs>
-          <ResetContainer
+          </Flex>
+          <Center
+            py={0.5}
+            px={1}
+            borderRadius="base"
+            w="full"
+            mx="auto"
+            gap={1}
+            fontSize="xs"
+            cursor="pointer"
             role="button"
             aria-labelledby="reset-filter"
             onClick={() => {
@@ -504,17 +402,26 @@ const FindWalletPage = ({ data, location }) => {
                 eventName: `reset filters`,
               })
             }}
+            data-group
           >
-            <ResetIcon
+            <Icon
+              as={BsArrowCounterclockwise}
               aria-hidden="true"
-              name="arrowCounterClockwise"
-              size="14"
+              fontSize="sm"
+              fill="primary"
+              _groupHover={{ fill: "selectHover" }}
             />
-            <p id="reset-filter" aria-hidden="true">
+            <Text
+              m={0}
+              color="primary"
+              _groupHover={{ color: "selectHover" }}
+              id="reset-filter"
+              aria-hidden="true"
+            >
               {"Reset filters".toUpperCase()}
-            </p>
-          </ResetContainer>
-          <div>
+            </Text>
+          </Center>
+          <Box>
             {showFeatureFilters ? (
               <WalletFilterSidebar
                 resetWalletFilter={resetWalletFilter}
@@ -530,49 +437,93 @@ const FindWalletPage = ({ data, location }) => {
                 setSelectedPersona={setSelectedPersona}
               />
             )}
-          </div>
-        </FilterSidebar>
-        <WalletContent showMobileSidebar={showMobileSidebar}>
+          </Box>
+        </Flex>
+        <Box
+          w="full"
+          overflowY="scroll"
+          sx={{
+            scrollbarWidth: "thin",
+            scrollbarColor: `${theme.colors.lightBorder} ${theme.colors.background}`,
+
+            "::-webkit-scrollbar": {
+              width: 2,
+            },
+            "::-webkit-scrollbar-track": {
+              bg: "background",
+            },
+            "::-webkit-scrollbar-thumb": {
+              bgColor: "lightBorder",
+              borderRadius: "base",
+              border: "2px solid",
+              borderColor: "background",
+            },
+            table: {
+              m: 0,
+            },
+          }}
+          display={{
+            base: showMobileSidebar ? "none" : "block",
+            sm: "block",
+          }}
+        >
           <WalletTable
             data={data}
             filters={filters}
             walletData={randomizedWalletData}
           />
-        </WalletContent>
-      </TableContent>
-      <Note>
-        <p>
-          <i>
-            Wallets listed on this page are not official endorsements, and are
-            provided for informational purposes only.{" "}
-          </i>
-        </p>
-        <p>
-          <i>
-            Their descriptions have been provided by the wallet projects
-            themselves.{" "}
-          </i>
-        </p>
-        <p>
-          <i>
-            We add products to this page based on criteria in our{" "}
-            <Link to="/contributing/adding-products/">listing policy</Link>. If
-            you'd like us to add a wallet,{" "}
-            <Link to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet">
-              raise an issue in GitHub
-            </Link>
-            .
-          </i>
-        </p>
-      </Note>
-    </PageStyled>
+        </Box>
+      </Flex>
+      <Box
+        textAlign="center"
+        p={5}
+        sx={{
+          p: {
+            fontSize: "sm",
+            lineHeight: "23px",
+            pt: "0.2rem",
+            m: 0,
+          },
+        }}
+      >
+        <Text>
+          <Text as="i">
+            <Translation id="page-find-wallet-footnote-1" />
+          </Text>
+        </Text>
+        <Text>
+          <Text as="i">
+            <Translation id="page-find-wallet-footnote-2" />
+          </Text>
+        </Text>
+        <Text>
+          <Text as="i">
+            <Translation id="page-find-wallet-footnote-3" />
+          </Text>
+        </Text>
+      </Box>
+    </Flex>
   )
 }
 
 export default FindWalletPage
 
 export const query = graphql`
-  {
+  query FindWalletPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-wallets-find-wallet", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     hero: file(relativePath: { eq: "wallets/find-wallet-hero.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
@@ -638,7 +589,7 @@ export const query = graphql`
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
     }
-    gnosis: file(relativePath: { eq: "wallets/gnosis.png" }) {
+    safe: file(relativePath: { eq: "wallets/safe.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
@@ -799,6 +750,31 @@ export const query = graphql`
       }
     }
     gridplus: file(relativePath: { eq: "wallets/gridplus.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    bitkeep: file(relativePath: { eq: "wallets/bitkeep.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    blockwallet: file(relativePath: { eq: "wallets/blockwallet.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    okx: file(relativePath: { eq: "wallets/okx.jpeg" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    onekey: file(relativePath: { eq: "wallets/onekey.png" }) {
+      childImageSharp {
+        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
+      }
+    }
+    apex: file(relativePath: { eq: "wallets/apex.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }

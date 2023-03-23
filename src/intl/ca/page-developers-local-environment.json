@@ -1,8 +1,6 @@
 {
   "page-local-environment-brownie-desc": "Un marc per a desenvolupament i proves basat en Python per a contractes intel·ligents orientat a la màquina virtual d'Ethereum.",
   "page-local-environment-brownie-logo-alt": "Logotip de Brownie",
-  "page-local-environment-embark-desc": "La plataforma de desenvolupament tot en un per crear i implementar aplicacions descentralitzades.",
-  "page-local-environment-embark-logo-alt": "Logotip d'Embark",
   "page-local-environment-epirus-desc": "Una plataforma per desenvolupar, implementar i supervisar aplicacions de la cadena de blocs a la màquina virtual de Java",
   "page-local-environment-epirus-logo-alt": "Logotip d'Epirus",
   "page-local-environment-eth-app-desc": "Creeu aplicacions impulsades per Ethereum amb una ordre. Ve amb una àmplia oferta de marcs d'IU i de plantilles DeFi per escollir.",

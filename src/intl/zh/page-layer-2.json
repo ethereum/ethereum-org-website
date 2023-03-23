@@ -1,7 +1,6 @@
 {
   "layer-2-arbitrum-note": "欺诈证明仅适用于白名单用户，白名单尚未开放",
   "layer-2-boba-note": "状态验证正在开发中",
-  "layer-2-metis-note": "欺诈证明正在开发中",
   "layer-2-optimism-note": "错误性证明正在开发中",
   "layer-2-hero-title": "二层网络",
   "layer-2-hero-header": "以太坊——为所有人而生",
@@ -14,7 +13,7 @@
   "layer-2-statsbox-2": "二层网络平均 ETH 转账费用 (USD)",
   "layer-2-statsbox-3": "二层网络价值总量变化（30 天）",
   "layer-2-what-is-layer-2-title": "什么是二层网络？",
-  "layer-2-what-is-layer-2-1": "二层网络 (L2) 是一个集体术语，用以描述一套具体的以太坊扩容解决方案。<strong>二层网络是单独的区块链，其扩展了以太坊并继承了太坊的安全保证</strong>。",
+  "layer-2-what-is-layer-2-1": "二层网络 (L2) 是一个集体术语，用于描述一系列具体的以太坊扩容解决方案。<strong>二层网络是一条独立的区块链，它扩展了以太坊并继承了以太坊的安全保证</strong>。",
   "layer-2-what-is-layer-2-2": "现在让我们来深入地了解一下它，为此，我们需要解释一层网络 (L1)。",
   "layer-2-what-is-layer-1-title": "什么是一层网络？",
   "layer-2-what-is-layer-1-1": "一层网络是底层区块链。以太坊和比特币都是一层网络区块链，<strong>因为它们是基石，各种二层网络都构建于其上</strong>。二层网络项目的示例包括以太坊上的“卷叠”和基于比特币的闪电网络。所有这些二层网络项目上的用户交易活动最终都可以回到一层网络区块链。",
@@ -58,7 +57,7 @@
   "layer-2-dyor-3": "前往 L2BEAT",
   "layer-2-use-layer-2-title": "使用二层网络",
   "layer-2-use-layer-2-1": "现在您知道二层网络为什么存在以及它是如何工作的，下面让我们开始运行起来吧！",
-  "layer-2-contract-accounts": "<strong>注意：</strong>当桥接并使用二层网络时，请务必注意，你将控制你外部帐户（外部帐户只有一个私钥控制帐户）的地址，就像在以太坊主网上一样。但是，如果你使用的是合约帐户，例如 <a href=\"https://gnosis-safe.io/\"  target=”_blank”>Gnosis Safe</a> 或 <a href=\"https://www.argent.xyz/\"  target=”_blank”>Argent</a>，在你将合约帐户重新部署到二层网络上的该地址之前，你将无法控制二层网络上的这一地址。如果你正在桥接或向合约帐户发送资金，并且没有控制合约账户的地址，你的资金可能会丢失。",
+  "layer-2-contract-accounts": "<strong>注意：</strong>当桥接并使用二层网络时，请务必注意，你将控制你外部帐户（外部帐户只有一个私钥控制帐户）的地址，就像在以太坊主网上一样。但是，如果你使用的是合约帐户，例如 <a href=\"https://safe.global/\"  target=”_blank”>Safe</a> 或 <a href=\"https://www.argent.xyz/\"  target=”_blank”>Argent</a>，在你将合约帐户重新部署到二层网络上的该地址之前，你将无法控制二层网络上的这一地址。如果你正在桥接或向合约帐户发送资金，并且没有控制合约账户的地址，你的资金可能会丢失。",
   "layer-2-use-layer-2-generalized-title": "广义二层网络",
   "layer-2-use-layer-2-generalized-1": "广义二层网络的行为与以太坊别无二致，但成本更低。您在以太坊一层网络能做的任何事，在二层网络也能做到。许多去中心化应用已经开始迁移到这类二层网络，或是连同主网一起跳过，直接部署在二层网络上。",
   "layer-2-use-layer-2-application-specific-title": "应用特定的二层网络",
@@ -116,7 +115,7 @@
   "layer-2-faq-question-5-description-2": "任何人都可以自由地提议在 ethereum.org 上添加一个二层网络。如果有我们未收录的二层网络，<a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_layer2.md\">请提供建议</a>。",
   "layer-2-further-reading-title": "延伸阅读",
   "a-rollup-centric-ethereum-roadmap": "以卷叠为中心的以太坊路线图",
-  "an-incomplete-guide-to-rollups": "不完全卷叠指南",
+  "an-incomplete-guide-to-rollups": "卷叠不完全指南",
   "polygon-sidechain-vs-ethereum-rollups": "多变聚合侧链对比以太坊卷叠：二层网络扩容方案 | Vitalik Buterin 与 Lex Fridman",
   "rollups-the-ultimate-ethereum-scaling-strategy": "卷叠 - 以太坊终极扩容策略？解释 Arbitrum 和乐观",
   "scaling-layer-1-with-shard-chains": "分片链扩容一层网络",
@@ -131,5 +130,6 @@
   "layer-2-note": "备注:",
   "layer-2-ecosystem-portal": "生态系统相关门户网站",
   "layer-2-token-lists": "代币列表",
-  "layer-2-explore": "探索"
+  "layer-2-explore": "探索",
+  "page-dapps-ready-button": "出发"
 }

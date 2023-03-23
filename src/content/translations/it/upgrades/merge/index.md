@@ -4,11 +4,15 @@ description: "Scopri La Fusione: quando la Rete principale di Ethereum ha adotta
 lang: it
 template: upgrade
 image: ../../../../../assets/upgrades/merge.png
-summaryPoint1: La Rete principale di Ethereum usa il Poof of stake, ma non è sempre stato così.
-summaryPoint2: La transizione dal meccanismo originale di Proof of Work al Proof of stake è stata chiamata La Fusione.
-summaryPoint3: La Fusione si riferisce al momento in cui la Rete principale originale di Ethereum è divenuta parte di una blockchain di Proof of stake separata, detta Beacon Chain, ora esistente come un'unica catena.
+summaryPoint1: La Rete Principale di Ethereum usa il proof-of-stake, ma non è sempre stato così.
+summaryPoint2: L'aggiornamento dal meccanismo originale di proof-of-work al proof-of-stake è stato chiamato La Fusione.
+summaryPoint3: La Fusione si riferisce alla fusione della Rete Principale originale di Ethereum con una blockchain di proof-of-stake separata, detta Beacon Chain, ora esistenti come un'unica catena.
 summaryPoint4: La Fusione ha ridotto il consumo energetico di Ethereum di circa il 99,95%.
 ---
+
+<UpgradeStatus dateKey="page-upgrades-beacon-date">
+  La Fusione è avvenuta il 15 settembre 2022. Ciò ha portato a termine la transizione di Ethereum al consenso di proof-of-stake, deprecando ufficialmente il proof-of-work e riducendo il consumo energetico di circa il 99,95%.
+</UpgradeStatus>
 
 ## In cosa ha consistito la Fusione? {#what-is-the-merge}
 
@@ -16,17 +20,17 @@ La Fusione è stata l'unione del livello di esecuzione originale di Ethereum (la
 
 <MergeInfographic />
 
-Inizialmente, la [Beacon Chain](/upgrades/beacon-chain/) veniva inviata separatamente dalla [Rete principale](/glossary/#mainnet). La Rete principale di Ethereum, con tutti i suoi account, saldi, smart contract e lo stato della blockchain, continuava a esser protetta dalla [Proof of Work](/developers/docs/consensus-mechanisms/pow/), anche mentre la Beacon Chain funzionava in parallelo utilizzando la [Proof of stake](/developers/docs/consensus-mechanisms/pos/). La Fusione si è verificata quando, finalmente, questi due sistemi si sono uniti e il Poof of Work è stata permanentemente sostituita dal Proof of stake.
+Inizialmente, la [Beacon Chain](/upgrades/beacon-chain/) veniva inviata separatamente dalla [Rete principale](/glossary/#mainnet). La Rete Principale di Ethereum, con tutti i suoi conti, saldi, contratti intelligenti e stati della blockchain, ha continuato a esser protetta dal [proof-of-work](/developers/docs/consensus-mechanisms/pow/), anche mentre la Beacon Chain operava in parallelo, utilizzando il [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). La Fusione si è verificata quando, finalmente, questi due sistemi si sono uniti e il Poof of Work è stata permanentemente sostituita dal Proof of stake.
 
 Immagina Ethereum come una nave lanciata prima di essere pronta per un viaggio interstellare. Con la Beacon Chain, la community ha costruito un nuovo motore e uno scafo più resistente. Dopo test significativi, è arrivato il momento di scambiare il vecchio motore con quello nuovo durante il volo. Questo ha aggiunto il nuovo e più efficiente motore nella nave esistente, consentendole di percorrere diversi anni luce e conquistare l'universo.
 
 ## La fusione con la rete principale {#merging-with-mainnet}
 
-La Proof of Work ha protetto la Rete rrincipale di Ethereum dalla genesi alla Fusione. Questo ha permesso alla blockchain di Ethereum a cui siamo tutti abituati di venire alla luce, nel luglio 2015, con tutte le sue funzionalità familiari: transazioni, smart contract, account, ecc.
+La Proof of Work ha protetto la Rete rrincipale di Ethereum dalla genesi alla Fusione. Questo ha consentito alla blockchain di Ethereum a cui siamo tutti abituati di venire alla luce, a luglio 2015, con tutte le sue funzionalità familiari: transazioni, contratti intelligenti, conti, etc.
 
 Nella storia di Ethereum, gli sviluppatori si sono preparati per un'eventuale transizione dal Proof of Work al Proof of stake. Il 1° dicembre 2020, la Beacon Chain è stata creata come una blockchain separata dalla Rete principale, eseguita in parallelo.
 
-Originariamente la Beacon Chain non elaborava le transazioni della Rete principale. Invece, ha raggiunto il consenso sul proprio stato, concordando sui validatori attivi e i saldi dei loro account. Dopo numerose prove, è giunto il momento che la Beacon Chain raggiunga il consenso sui dati del mondo reale. Dopo La Fusione, la Beacon Chain è diventata il motore di consenso per tutti i dati della rete, incluse le transazioni e i saldi degli account del livello di esecuzione.
+Originariamente la Beacon Chain non elaborava le transazioni della Rete principale. Invece, stava raggiungendo il consenso sul proprio stato, concordando sui validatori attivi e i saldi dei loro conti. Dopo numerose prove, è giunto il momento che la Beacon Chain raggiunga il consenso sui dati del mondo reale. Dopo La Fusione, la Beacon Chain è divenuta il motore di consenso per tutti i dati della rete, incluse le transazioni del livello d'esecuzione e i saldi dei conti.
 
 La Fusione ha rappresentato il passaggio ufficiale all'uso della Beacon Chain come il motore della produzione del blocco. Il mining non è più il mezzo di produzione di blocchi validi. Invece, i validatori del Proof of stake hanno adottato questo ruolo e sono ora responsabili dell'elaborazione della validità di tutte le transazioni e della proposta dei blocchi.
 
@@ -40,9 +44,9 @@ Questa transizione al Proof of stake ha cambiato il metodo di emissione dell'eth
 
 **La Fusione non ha modificato nulla per i detentori/utenti.**
 
-_Vale la pena ripeterlo_: Come utente o detentore di ETH o di qualsiasi altra risorsa digitale su Ethereum, nonché come staker non operante su nodi, **non devi fare nulla coi tuoi fondi o il tuo portafoglio per approcciare La Fusione.** Gli ETH sono sempre ETH. Non esiste nulla del tipo "vecchi ETH"/"nuovi ETH" o "ETH1"/"ETH2" e i portafogli funzioneranno esattamente allo stesso modo dopo La Fusione. Le persone che dicono altro sono probabilmente truffatori.
+_Vale la pena ripeterlo_: Come utente o detentore di ETH o di qualsiasi altra risorsa digitale su Ethereum, nonché come staker non operatore di nodo, **non devi fare nulla coi tuoi fondi o il tuo portafoglio per approcciare La Fusione.** Gli ETH sono sempre ETH. Non esiste nulla del tipo "vecchi ETH"/"nuovi ETH" o "ETH1"/"ETH2" e i portafogli funzioneranno esattamente allo stesso modo dopo La Fusione. Le persone che dicono altro sono probabilmente truffatori.
 
-Nonostante il passaggio dal Proof of Work, l'intera cronologia di Ethereum dalla genesi è rimasta intatta e inalterata dalla transizione al Proof of stake. Ogni fondo detenuto nel tuo portafoglio prima de La Fusione sarà ancora accessibile dopo di essa. **Non è richiesta alcuna azione di aggiornamento da parte tua.**
+Nonostante il passaggio dal Proof of Work, l'intera cronologia di Ethereum dalla genesi è rimasta intatta e inalterata dalla transizione al Proof of stake. Qualsiasi fondo detenuto nel tuo portafoglio prima della Fusione è ancora accessibile dopo di essa. **Non è richiesta alcuna azione di aggiornamento da parte tua.**
 
 [Maggiori informazioni sulla sicurezza di Ethereum](/security/#eth2-token-scam)
 
@@ -59,7 +63,7 @@ Gli elementi dell'azione chiave includono:
 2. Autentica sia il client di esecuzione che quello di consenso con un segreto JWT condiviso, così che tu possa comunicare in sicurezza.
 3. Imposta un indirizzo `fee recipient` per ricevere le mance/MEV di commissioni su transazioni che hai guadagnato.
 
-Non completare i primi due elementi farà sì che il tuo nodo risulti "offline", finché entrambi i livelli non saranno sincronizzati e autenticati.
+Non completare i primi due elementi farà sì che il tuo nodo risulti "offline" finché entrambi i livelli non saranno sincronizzati e autenticati.
 
 Non impostare un `fee recipient` consentirà comunque al tuo validatore di comportarsi come al solito, ma perderai le mance e qualsiasi MEV di commissioni non bruciate che avresti altrimenti ottenuto nei blocchi proposti dal tuo validatore.
 </ExpandableCard>
@@ -83,7 +87,7 @@ Non completare i suddetti elementi farà sì che il tuo nodo risulti "offline", 
 </ExpandableCard>
 
 <ExpandableCard
-title="Sviluppatori di dapp e smart contract"
+title="Sviluppatori di dapp e contratti intelligenti"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
@@ -104,7 +108,7 @@ Questa fase ha segnato la fine del Proof of Work per Ethereum e l'inizio di una 
 
 ## La Fusione e il ridimensionamento {#merge-and-scaling}
 
-La Fusione ha inoltre gettato le basi per ulteriori aggiornamenti di scalabilità, impossibili sotto il Poof of Work, portando Ethereum un po' più vicina al raggiungimento della completa scalabilità, sicurezza e sostenibilità delinate nella [visione di Ethereum](/upgrades/vision/).
+La Fusione ha inoltre gettato le basi per ulteriori aggiornamenti di scalabilità, impossibili sotto il Poof of Work, portando Ethereum un po' più vicina al raggiungimento della completa scalabilità, sicurezza e sostenibilità delinate nella [visione di Ethereum](/roadmap/vision/).
 
 ## Equivoci su La Fusione {#misconceptions}
 
@@ -115,7 +119,7 @@ Esistono due tipi di nodi di Ethereum: i nodi che possono proporre blocchi e que
 
 I nodi che propongono blocchi sono solo una minima parte dei nodi totali su Ethereum. Questa categoria include i nodi di mining in modalità Proof of Work (PoW) e i nodi validatori in modalità Proof of stake (PoS). Questa categoria richiede l'impegno di risorse economiche (come la potenza di hash della GPU nel Proof of Work o ETH in staking nel Proof of stake) in cambio della capacità di proporre occasionalmente il blocco successivo e ottenere le ricompense del protocollo.
 
-Gli altri nodi sulla rete (cioè, la maggioranza) non devono impegnare alcuna risorsa economica oltre a un computer di livello consumer con 1-2 TB di spazio di archiviazione disponibile e una connessione a Internet. Questi nodi non propongono i blocchi, ma rivestono comunque un ruolo critico nel proteggere la rete, considerando responsabili tutti i propositori di blocchi, attendendo nuovi blocchi e verificandone la validità all'arrivo secondo le regole del consenso di rete. Se il blocco è valido, il nodo continua a propagarlo per la rete. Se per qualsiasi motivo il blocco non è valido, il software del nodo lo scarterà come non valido e ne interromperà la propagazione.
+Gli altri nodi sulla rete (cioè, la maggioranza) non devono impegnare alcuna risorsa economica oltre a un computer di livello consumer con 1-2 TB di spazio di archiviazione disponibile e una connessione a Internet. Questi nodi non propongono blocchi, tuttavia, rivestono un ruolo critico nel proteggere la rete, considerando responsabili tutti i propositori di blocco, ascoltando nuovi blocchi e verificandone la validità all'arrivo, secondo le regole di consenso della rete. Se il blocco è valido, il nodo continua a propagarlo per la rete. Se per qualsiasi motivo il blocco non è valido, il software del nodo lo scarterà come non valido e ne interromperà la propagazione.
 
 Eseguire un nodo che non produce blocchi è possibile per chiunque in entrambi i meccanismi di consenso (Proof of Work o Proof of stake); è _fortemente consigliato_ a tutti gli utenti che ne hanno i mezzi. Eseguire un nodo è estremamente prezioso per Ethereum e offre benefici aggiuntivi a ogni persona che ne esegue uno, come maggiore sicurezza, privacy e resistenza alla censura.
 
@@ -126,11 +130,11 @@ L'abilità per chiunque di eseguire il proprio nodo è _assolutamente essenziale
 </ExpandableCard>
 
 <ExpandableCard
-title="Equivoco: &quot;La Fusione non è riuscita a ridurre le commissioni del carburante.&quot;"
+title="Equivoco: &quot;La Fusione non è riuscita a ridurre le commissioni del gas.&quot;"
 contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
-Le commissioni del carburante sono un prodotto della domanda di rete rispetto alla capacità della rete. La Fusione ha reso obsoleto l'uso del Proof of Work, passando al Proof of stake per il consenso, ma non ha modificato significativamente alcun parametro che influenzi direttamente la capacità o il volume di rete.
+Le commissioni del gas sono un prodotto della domanda di rete relativo alla capacità della rete. La Fusione ha reso obsoleto l'uso del Proof of Work, passando al Proof of stake per il consenso, ma non ha modificato significativamente alcun parametro che influenzi direttamente la capacità o il volume di rete.
 
-Con una [tabella di marcia incentrata sul rollup](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698), gli sforzi si concentrano su scalare l'attività degli utenti al [livello 2](/layer-2/), abilitando allo stesso tempo la Rete principale di livello 1 come livello di accordo decentralizzato sicuro, ottimizzato per l'archiviazione dei dati di rollup per aiutare a rendere esponenzialmente più economiche le transazioni di rollup. La transizione al Proof of stake è un precursore essenziale per realizzarlo. [Maggiori informazioni su carburante e commissioni.](/developers/docs/gas/)
+Con una [tabella di marcia incentrata sul rollup](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698), gli sforzi si concentrano su scalare l'attività degli utenti al [livello 2](/layer-2/), abilitando allo stesso tempo la Rete principale di livello 1 come livello di accordo decentralizzato sicuro, ottimizzato per l'archiviazione dei dati di rollup per aiutare a rendere esponenzialmente più economiche le transazioni di rollup. La transizione al Proof of stake è un precursore essenziale per realizzarlo. [Di più su gas e commissioni.](/developers/docs/gas/)
 </ExpandableCard>
 
 <ExpandableCard
@@ -157,7 +161,7 @@ Questo potrebbe sembrare controintuitivo rispetto alla nota precedente, ovvero c
 
 Il protocollo emette ETH come una ricompensa ai validatori per aver contribuito al consenso. Il livello di consenso tiene conto degli ETH appena emessi, in cui un validatore ha un indirizzo univoco che detiene i suoi ETH in staking e le ricompense del protocollo. Questi ETH sono bloccati fino a Shanghai.
 
-Gli ETH sul livello di esecuzione sono contabilizzati separatamente dal livello di consenso. Quando gli utenti eseguono transazioni sulla Rete principale di Ethereum, gli ETH devono esser pagati per coprire il carburante, inclusa una mancia al validatore. Questi ETH sono già sul livello di esecuzione, NON sono appena stati emessi dal protocollo e sono disponibili immediatamente al validatore (a condizione che un indirizzo `fee recipient` adatto sia fornito al software client).
+Gli ETH sul livello di esecuzione sono contabilizzati separatamente dal livello di consenso. Quando gli utenti eseguono le transazioni sulla Rete Principale di Ethereum, devono esser pagati degli ETH per coprire il gas, inclusa una mancia al validatore. Questi ETH sono già sul livello di esecuzione, NON sono appena stati emessi dal protocollo e sono disponibili immediatamente al validatore (a condizione che un indirizzo `fee recipient` adatto sia fornito al software client).
 </ExpandableCard>
 
 <ExpandableCard

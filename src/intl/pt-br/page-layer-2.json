@@ -1,7 +1,6 @@
 {
   "layer-2-arbitrum-note": "Provas de fraude somente para usuários na lista de permissões, lista de permissões ainda não está aberta",
   "layer-2-boba-note": "Validação de estado em desenvolvimento",
-  "layer-2-metis-note": "Provas de fraude em desenvolvimento",
   "layer-2-optimism-note": "Provas de falha em desenvolvimento",
   "layer-2-hero-title": "Camada 2",
   "layer-2-hero-header": "Ethereum para todos",
@@ -58,7 +57,7 @@
   "layer-2-dyor-3": "Ir para L2BEAT",
   "layer-2-use-layer-2-title": "Use a camada 2",
   "layer-2-use-layer-2-1": "Agora que você entendeu porque a Camada 2 existe e como ela funciona, vamos começar a trabalhar!",
-  "layer-2-contract-accounts": "<strong>OBSERVAÇÃO:</strong> Ao fazer a ponte para utilizar a camada 2, é importante observar que você controlará o endereço da sua conta EOA (uma conta em que apenas uma única chave privada controla a conta), assim como na Rede Principal Ethereum. Entretanto, se você estiver usando uma conta de contrato, como <a href=\"https://gnosis-safe.io/\" target=\"_blank”>Gnosis Safe</a> ou <a href=\"https:// www.argent.xyz/\" target=”_blank”>Argent</a>, você não terá controle sobre esse endereço em uma camada 2 até reimplantar sua conta de contrato para esse endereço na camada 2. Se você estiver fazendo uma ponte ou enviando fundos para uma conta de contrato, e você não tem o controle desse endereço da conta de contrato, você poderá perder os seus fundos.",
+  "layer-2-contract-accounts": "<strong>OBSERVAÇÃO:</strong> Ao fazer a ponte para utilizar a camada 2, é importante observar que você controlará o endereço da sua conta EOA (uma conta em que apenas uma única chave privada controla a conta), assim como na Rede Principal Ethereum. Entretanto, se você estiver usando uma conta de contrato, como <a href=\"https://safe.global/\" target=\"_blank”>Safe</a> ou <a href=\"https:// www.argent.xyz/\" target=”_blank”>Argent</a>, você não terá controle sobre esse endereço em uma camada 2 até reimplantar sua conta de contrato para esse endereço na camada 2. Se você estiver fazendo uma ponte ou enviando fundos para uma conta de contrato, e você não tem o controle desse endereço da conta de contrato, você poderá perder os seus fundos.",
   "layer-2-use-layer-2-generalized-title": "A Camada de uso global 2s",
   "layer-2-use-layer-2-generalized-1": "A camada de uso global 2s se comporta exatamente como o Ethereum – porém, custa menos. Qualquer coisa que se possa fazer na camada 1 do Ethereum, também pode-se fazer na camada 2. Muitos dapps já começaram a migrar para essa rede ou passaram a implantar diretamente na camada 2.",
   "layer-2-use-layer-2-application-specific-title": "Camadas 2s específicas de aplicativos",
@@ -131,5 +130,6 @@
   "layer-2-note": "Observação:",
   "layer-2-ecosystem-portal": "Portal Ecossistema",
   "layer-2-token-lists": "Listas de tokens",
-  "layer-2-explore": "Explorar"
+  "layer-2-explore": "Explorar",
+  "page-dapps-ready-button": "Vamos"
 }

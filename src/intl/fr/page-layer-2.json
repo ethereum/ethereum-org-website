@@ -1,7 +1,6 @@
 {
   "layer-2-arbitrum-note": "Preuves de fraude uniquement pour les utilisateurs en liste blanche, liste blanche non encore ouverte",
   "layer-2-boba-note": "Validation de l'état en cours de développement",
-  "layer-2-metis-note": "Preuves de fraude en cours de développement",
   "layer-2-optimism-note": "Preuves de défaillance en développement",
   "layer-2-hero-title": "Couche 2",
   "layer-2-hero-header": "Ethereum pour tous",
@@ -58,7 +57,7 @@
   "layer-2-dyor-3": "Accéder à L2BEAT",
   "layer-2-use-layer-2-title": "Utilisez la couche 2",
   "layer-2-use-layer-2-1": "Maintenant que vous comprenez pourquoi la couche 2 existe et comment elle fonctionne, il est temps de vous lancer !",
-  "layer-2-contract-accounts": "<strong>REMARQUE :</strong> Lors de l'utilisation de la couche 2, il est important de noter que vous contrôlerez l'adresse de votre compte EOA (un compte où une seule clé privée contrôle le compte) comme sur le réseau principal d'Ethereum. Cependant, si vous utilisez un compte de contrat, comme <a href=\"https://gnosis-safe.io/\"  target=”_blank”>Gnosis Safe</a> ou <a href=\"https://www.argent.xyz/\"  target=”_blank”>Argent</a>, vous n'aurez pas le contrôle de cette adresse sur une couche 2 jusqu'à ce que vous redéployiez votre compte de contrat à cette adresse sur la couche 2. Si vous utilisez une passerelle ou envoyez des fonds à un compte contractuel, et que vous ne contrôlez pas cette adresse, vos fonds peuvent être perdus.",
+  "layer-2-contract-accounts": "<strong>REMARQUE :</strong> Lors de l'utilisation de la couche 2, il est important de noter que vous contrôlerez l'adresse de votre compte EOA (un compte où une seule clé privée contrôle le compte) comme sur le réseau principal d'Ethereum. Cependant, si vous utilisez un compte de contrat, comme <a href=\"https://safe.global/\"  target=”_blank”>Safe</a> ou <a href=\"https://www.argent.xyz/\"  target=”_blank”>Argent</a>, vous n'aurez pas le contrôle de cette adresse sur une couche 2 jusqu'à ce que vous redéployiez votre compte de contrat à cette adresse sur la couche 2. Si vous utilisez une passerelle ou envoyez des fonds à un compte contractuel, et que vous ne contrôlez pas cette adresse, vos fonds peuvent être perdus.",
   "layer-2-use-layer-2-generalized-title": "Les couches 2 à visée générale",
   "layer-2-use-layer-2-generalized-1": "Les couches généralisées de couche 2 se comportent exactement comme Ethereum — mais en moins cher. Tout ce que vous pouvez faire sur la couche 1 Ethereum, vous pouvez également le faire sur la couche 2. Beaucoup de DApps ont déjà commencé à migrer vers ces réseaux ou ont complètement ignoré le réseau principal pour se déployer directement sur une couche 2.",
   "layer-2-use-layer-2-application-specific-title": "Application spécifique de la couche 2",
@@ -131,5 +130,6 @@
   "layer-2-note": "Remarque :",
   "layer-2-ecosystem-portal": "Portail de l'écosystème",
   "layer-2-token-lists": "Listes de jetons",
-  "layer-2-explore": "Explorer"
+  "layer-2-explore": "Explorer",
+  "page-dapps-ready-button": "Aller"
 }

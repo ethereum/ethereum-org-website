@@ -37,11 +37,11 @@ summaryPoint3: 代币和非同质化代币创造了一种将内容货币化的�
 
 2. 去中心化社交网络建立在开源理念的基础上，并使应用程序的源代码可供公众查看。 通过去除传统社交媒体中常见的不透明算法，基于区块链的社交网络可以使用户和平台创建者的利益保持一致。
 
-3. 去中心化社交网络取消了“中间人”。 内容创建者对其内容拥有直接所有权，他们直接与关注者、粉丝、买家和其他各方互动，双方之间仅有智能合约。
+3. 去中心化社交网络淘汰了“中间人”。 内容创建者对其内容拥有直接所有权，他们直接与关注者、粉丝、买家和其他各方互动，双方之间仅有智能合约。
 
 4. 由于去中心化应用程序在由全球节点对等网络提供支持的以太坊网络上运行，去中心化社交网络受服务器停机和中断的影响较小。
 
-5. 去中心化社交平台通过非同质化代币 (NFT)、应用内加密支付等为内容创建人提供改进的货币化框架。
+5. 去中心化社交平台通过非同质化代币 (NFT)、应用程序内加密支付等为内容创建人提供改进的货币化框架。
 
 6. 去中心化的社交网络为用户提供了高度的隐私和匿名性。 例如，个人可以使用以太坊域名服务的配置文件或钱包登录基于以太坊的社交网络，而无需共享可识别个人信息 (PII)，例如姓名、电子邮件地址等。
 
@@ -75,11 +75,11 @@ summaryPoint3: 代币和非同质化代币创造了一种将内容货币化的�
 
 ### Reddit {#reddit}
 
-Reddit 有[回赠式社区积分](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users)，这是 [ERC-20 代币](/developers/docs/standards/tokens/erc-20/)，用户可以通过发布优质内容和为在线社区 (subreddit) 做出贡献来赚取。 你可以在 subreddit 中兑换这些代币以[获得独有的特权和福利](https://www.reddit.com/community-points/)。 对于这个项目，Reddit 正在与 Arbitrum 合作，后者是旨在扩展以太坊交易的[第 2 层](/layer-2/)汇总。
+Reddit 提供[回赠式社区积分](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users)，即 [ERC-20 代币](/developers/docs/standards/tokens/erc-20/)，用户可以通过发布优质内容和为在线社区 (subreddit) 做出贡献来赚取。 你可以在 subreddit 中兑换这些代币以[获得独有的特权和福利](https://www.reddit.com/community-points/)。 对于这个项目，Reddit 正在与 Arbitrum 合作，后者是旨在扩展以太坊交易的[第 2 层](/layer-2/)汇总。
 
-该程序已经上线，r/加密货币 subreddit [运行其名为“Moons”的社区积分版本](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki)。 根据官方描述，Moons“奖励发布者、评论者和版主对 subreddit 的贡献。” 因为这些代币在区块链上进行交易（代币会直接进入用户钱包），代币与 Reddit 无关，因此其他人无法获取用户的代币。
+该程序已经上线，r/CryptoCurrency subreddit [运行其名为“Moons”的社区积分版本](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki)。 根据官方描述，Moons“奖励发布者、评论者和版主对 subreddit 的贡献。” 因为这些代币在区块链上进行交易（代币会直接进入用户钱包），代币与 Reddit 无关，因此其他人无法获取用户的代币。
 
-在 Rinkeby 测试网上结束测试阶段后，Reddit 社区积分现在在 [Arbitrum Nova](https://nova.arbitrum.io/) 上，这是一个结合了 [validium](/developers/docs/scaling/validium/) 和 [乐观卷叠](/developers/docs/scaling/optimistic-rollups/)属性的区块链。 除了使用社区积分来解锁特殊功能外，用户还可以在交易所用它们换取法币。 此外，用户拥有的社区积分决定了他们对社区内决策过程的影响。
+在 Rinkeby 测试网上结束测试阶段后，Reddit 社区积分现在在 [Arbitrum Nova](https://nova.arbitrum.io/) 上，这是一条结合了 [validium](/developers/docs/scaling/validium/) 和 [乐观卷叠](/developers/docs/scaling/optimistic-rollups/)属性的区块链。 除了使用社区积分来解锁特殊功能外，用户还可以在交易所用它们换取法币。 此外，用户拥有的社区积分决定了他们对社区内决策过程的影响。
 
 ### Twitter {#twitter}
 

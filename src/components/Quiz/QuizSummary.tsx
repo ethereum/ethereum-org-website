@@ -1,7 +1,10 @@
 // Import libraries
-import React, { useMemo } from "react"
+import React from "react"
 import { Box, Flex, Text, useMediaQuery } from "@chakra-ui/react"
-import { useIntl } from "react-intl"
+import { useI18next } from "gatsby-plugin-react-i18next"
+
+// Components
+import Translation from "../Translation"
 
 // Import utilities
 import { numberToPercent } from "../../utils/numberToPercent"
@@ -21,7 +24,7 @@ const QuizSummary: React.FC<IProps> = ({
   questionCount,
   ratioCorrect,
 }) => {
-  const { locale } = useIntl()
+  const { language } = useI18next()
   const [largerThanMobile] = useMediaQuery("(min-width: 30em)")
 
   const valueStyles = { fontWeight: "700", mb: 2 }
@@ -54,17 +57,25 @@ const QuizSummary: React.FC<IProps> = ({
         overflowX="hidden"
       >
         <Flex>
-          <Text {...valueStyles}>{numberToPercent(ratioCorrect, locale)}</Text>
-          <Text {...labelStyles}>Score</Text>
+          <Text {...valueStyles}>
+            {numberToPercent(ratioCorrect, language)}
+          </Text>
+          <Text {...labelStyles}>
+            <Translation id="score" />
+          </Text>
         </Flex>
         <Flex>
           <Text {...valueStyles}>+{correctCount}</Text>
-          <Text {...labelStyles}>Correct</Text>
+          <Text {...labelStyles}>
+            <Translation id="correct" />
+          </Text>
         </Flex>
         {largerThanMobile && (
           <Flex>
             <Text {...valueStyles}>{questionCount}</Text>
-            <Text {...labelStyles}>Total</Text>
+            <Text {...labelStyles}>
+              <Translation id="total" />
+            </Text>
           </Flex>
         )}
       </Flex>

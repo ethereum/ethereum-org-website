@@ -6,6 +6,7 @@
   "page-dapps-audius-logo-alt": "لوگوی Audius",
   "page-dapps-augur-logo-alt": "لوگوی Augur",
   "page-dapps-axie-infinity-logo-alt": "لوگوی Axie Infinity",
+  "page-dapps-balancer-logo-alt": "لوگوی Balancer",
   "page-dapps-brave-logo-alt": "لوگوی Brave",
   "page-dapps-category-arts": "هنر و مد",
   "page-dapps-category-browsers": "مرورگرها",
@@ -47,6 +48,7 @@
   "page-dapps-dapp-description-audius": "پلتفرم پخش آنلاین غیرمتمرکز. شنیدن= پول برای سازنده، نه برچسب آن.",
   "page-dapps-dapp-description-augur": "بر روی نتایج مسابقات ورزشی، رخدادهای اقتصادی و اتفاقات بیشتر در جهان شرط بندی کنید.",
   "page-dapps-dapp-description-axie-infinity": "مخلوقات تجارت و نبرد آکسی‌ها هستند. بازی کنید و درآمد کسب کنید – هم‌اکنون قابل دریافت از طریق گوشی تلفن همراه",
+  "page-dapps-dapp-description-balancer": "Balancer یک سکوی مدیریت سبد دارایی‌ها و مبادله است.",
   "page-dapps-dapp-description-brave": "به خاطر جستجو و حمایت از سازندگان مورد علاقه خود در کنار آن‌ها توکن دریافت کنید.",
   "page-dapps-dapp-description-cent": "شبکه ای اجتماعی که در آن شما با پست نیفتی‌ها پول کسب می‌کنید.",
   "page-dapps-dapp-description-compound": "برای کسب سود توکن‌های خود را سرمایه‌گذاری کنید و هر زمان که تمایل داشتید، آن‌ها را برداشت کنید.",
@@ -205,5 +207,10 @@
   "page-dapps-what-are-dapps": "دپ چیست؟",
   "page-dapps-more-on-defi-button": "اطلاعات بیشتر درباره امور مالی نامتمرکز",
   "page-dapps-more-on-nft-button": "اطلاعات بیشتر درباره کالاهای توکنی‌شده",
-  "page-dapps-more-on-nft-gaming-button": "اطلاعات بیشتر درباره کالاهای توکنی‌شده داخل بازی"
+  "page-dapps-more-on-nft-gaming-button": "اطلاعات بیشتر درباره کالاهای توکنی‌شده داخل بازی",
+  "page-dapps-dapp-description-pwn": "وام‌های آسان با پشتیبانی هر توکن یا NFT در اتریوم.",
+  "page-dapps-pwn-image-alt": "لوگوی PWN",
+  "foundation": "بنیاد",
+  "transaction-fees": "هزینه تراکنش چیست؟",
+  "page-wallets-get-some": "کمی Eth بگیرید"
 }

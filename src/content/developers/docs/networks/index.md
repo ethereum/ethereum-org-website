@@ -6,7 +6,7 @@ lang: en
 
 Networks are different Ethereum environments you can access for development, testing, or production use cases. Since Ethereum is a protocol, there can be multiple independent "networks" that conform to the protocol without interacting with each other.
 
-Your Ethereum account will work across the different networks, but your account balance and transaction history won't carry over from the main Ethereum network. For testing purposes, it's useful to know which networks are available and how to get testnet ETH to play around with.
+Your Ethereum account will work across the different networks, but your account balance and transaction history won't carry over from the main Ethereum network. For testing purposes, it's useful to know which networks are available and how to get testnet ETH to play around with. In general, for security considerations, it's not recommended to reuse mainnet accounts on testnets or vice versa.
 
 ## Prerequisites {#prerequisites}
 
@@ -28,118 +28,103 @@ In addition to Mainnet, there are public testnets. These are networks used by pr
 
 You should test any contract code you write on a testnet before deploying to Mainnet. Among dapps that integrate with existing smart contracts, most projects have copies deployed to testnets.
 
-Most testnets started by using a proof-of-authority consensus mechanism. This means a small number of nodes are chosen to validate transactions and create new blocks – staking their identity in the process. Alternatively, some testnets started off using a proof-of-work consensus mechanism with just a few permissioned miners. However, in preparation for [The Merge](/upgrades/merge), these testnets underwent their own transitions to proof-of-stake, offering the opportunity for multiple 'dress-rehearsals' before developers merged Ethereum Mainnet. The Ethereum testnets are now proof-of-stake, just like Ethereum Mainnet.
+Most testnets started by using a permissioned proof-of-authority consensus mechanism. This means a small number of nodes are chosen to validate transactions and create new blocks – staking their identity in the process. Alternatively, some testnets feature an open proof-of-stake consensus mechanism where everyone can test running a validator, just like Ethereum Mainnet.
 
 ETH on testnets has no real value; therefore, there are no markets for testnet ETH. Since you need ETH to actually interact with Ethereum, most people get testnet ETH from faucets. Most faucets are webapps where you can input an address which you request ETH to be sent to.
 
 #### Which Testnet should I use?
 
-The two public proof-of-stake testnets (which client developers are maintaining post-merge) are Goerli and Sepolia. The Goerli network was merged with the Prater Beacon Chain testnet. The Sepolia network was created to test the transition to proof-of-stake.
+The two public testnets that client developers are currently maintaining are Sepolia and Goerli. Sepolia is a network for contract and application developers to test their applications. The Goerli network lets protocol developers test network upgrades, and lets stakers test running validators.
 
-**[Sepolia](#sepolia) is the recommended default testnet for application development**.
+#### Sepolia {#sepolia}
+
+**Sepolia is the recommended default testnet for application development**.
 The Sepolia network uses a permissioned validator set. It's fairly new, meaning its state and history are both quite small. This means the network is quick to sync to and that running a node on it requires less storage. This is useful for users who want to quickly spin up a node and interact with the network directly.
 
 - Closed validator set, controlled by client & testing teams
 - New testnet, less applications deployed than other testnets
 - Fast to sync and running a node requires minimal disk space
 
-**[Goerli](#goerli) is the recommended default testnet for testing of validating and staking**.
-The Goerli network is open for users wanting to run a testnet validator. Stakers wanting to test protocol upgrades before they are deployed to mainnet should therefore use Goerli.
+##### Resources
+
+- [Website](https://sepolia.dev/)
+- [GitHub](https://github.com/eth-clients/sepolia)
+- [Otterscan](https://sepolia.otterscan.io/)
+- [Etherscan](https://sepolia.etherscan.io)
+
+##### Faucets
+
+- [Grabteeth](https://grabteeth.xyz/)
+- [PoW faucet](https://sepolia-faucet.pk910.de/)
+- [Sepolia faucet](https://faucet.sepolia.dev/)
+- [FaucETH](https://fauceth.komputing.org)
+- [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
+- [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
+
+#### Goerli _(long-term support)_ {#goerli}
+
+_Note: [the Goerli testnet is deprecated](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) and will be replaced by [Holesovice](https://github.com/eth-clients/holesovice) in 2023. Please consider migrating your applications to Sepolia._
+
+Goerli is testnet for testing of validating and staking. The Goerli network is open for users wanting to run a testnet validator. Stakers wanting to test protocol upgrades before they are deployed to mainnet should therefore use Goerli.
 
 - Open validator set, stakers can test network upgrades
 - Large state, useful for testing complex smart contract interactions
 - Longer to sync and requires more storage to run a node
 
-#### Sepolia {#sepolia}
-
-Sepolia is a proof-of-stake testnet, and is the recommended default testnet for application development.
-
-- [Website](https://sepolia.dev/)
-- [GitHub](https://github.com/goerli/sepolia)
-- [Otterscan](https://sepolia.otterscan.io/)
-- [Etherscan](https://sepolia.etherscan.io)
-
-##### Sepolia faucets
-
-- [Sepolia faucet](https://faucet.sepolia.dev/)
-- [FaucETH](https://fauceth.komputing.org)
-
-#### Goerli {#goerli}
-
-Goerli is a proof-of-stake testnet, and is the recommended default testnet for testing of validating and staking.
+##### Resources
 
 - [Website](https://goerli.net/)
-- [GitHub](https://github.com/goerli/testnet)
+- [GitHub](https://github.com/eth-clients/goerli)
 - [Etherscan](https://goerli.etherscan.io)
 
-##### Goerli faucets
+##### Faucets
 
+- [Grabteeth](https://grabteeth.xyz/)
+- [PoW faucet](https://goerli-faucet.pk910.de/)
 - [Goerli faucet](https://faucet.goerli.mudit.blog/)
-- [Chainlink faucet](https://faucets.chain.link/)
+- [Paradigm faucet](https://faucet.paradigm.xyz/)
 - [Alchemy Goerli Faucet](https://goerlifaucet.com/)
 - [All That Node Goerli Faucet](https://www.allthatnode.com/faucet/ethereum.dsrv)
+- [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 
 To launch a Validator on Goerli testnet, use ethstaker's ["cheap goerli validator" launchpad](https://goerli.launchpad.ethstaker.cc/en/).
 
-#### Ropsten _(deprecated)_ {#ropsten}
+#### Rinkeby _(long-term support)_ {#rinkeby}
 
-_Note, [the Ropsten testnet is deprecated](https://github.com/ethereum/pm/issues/460) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia or Goerli._
-
-Ropsten is a proof-of-stake testnet. Ropsten will be deprecated in late 2022. Before undergoing The Merge in May 2022, Ropsten was a proof-of-work testnet.
-
-##### Ropsten faucets
-
-- [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
-
-#### Rinkeby _(deprecated)_ {#rinkeby}
-
-_Note: [the Rinkeby testnet is deprecated](https://github.com/ethereum/pm/issues/460) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia or Goerli._
+_Note: [the Rinkeby testnet is deprecated](https://blog.ethereum.org/2022/11/30/ropsten-shutdown-announcement) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia._
 
 A proof-of-authority testnet for those running old versions of the Geth client.
 
-##### Rinkeby faucets
+##### Faucets
 
 - [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
-- [Alchemy faucet](https://RinkebyFaucet.com)
 - [Chainlink faucet](https://faucets.chain.link/)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
 - [Rinkeby faucet](https://faucet.rinkeby.io/)
-
-#### Kovan _(deprecated)_ {#kovan}
-
-_Note: [the Kovan testnet is deprecated](https://github.com/ethereum/pm/issues/460) and will no longer receive protocol upgrades. Please consider migrating your applications to Sepolia or Goerli._
-
-A very old proof-of-authority testnet for those still running OpenEthereum clients.
-
-##### Kovan faucets
-
-- [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
-- [Chainlink faucet](https://faucets.chain.link/)
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
 
 ### Layer 2 testnets {#layer-2-testnets}
 
 [Layer 2 (L2)](/layer-2/) is a collective term to describe a specific set of Ethereum scaling solutions. A layer 2 is a separate blockchain that extends Ethereum and inherits the security guarantees of Ethereum. Layer 2 testnets are usually tightly coupled to public Ethereum testnets.
 
-#### Arbitrum Rinkeby {#arbitrum-rinkeby}
+#### Arbitrum Goerli {#arbitrum-goerli}
 
 A testnet for [Arbitrum](https://arbitrum.io/).
 
-Arbitrum Rinkeby faucets:
+##### Faucets
 
 - [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
 - [Chainlink faucet](https://faucets.chain.link/)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
 
-#### Optimistic Kovan {#optimistic-kovan}
+#### Optimistic Goerli {#optimistic-goerli}
 
 A testnet for [Optimism](https://www.optimism.io/).
 
-Optimistic Kovan faucets:
+##### Faucets
 
 - [FaucETH](https://fauceth.komputing.org) (multi-Chain faucet without the need for social account)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
+- [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
 
 ## Private networks {#private-networks}
 
@@ -164,4 +149,5 @@ If a public Ethereum network is like the public internet, a consortium network i
 
 ## Further reading {#further-reading}
 
+- [Proposal: Predictable Ethereum Testnet Lifecycle](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
 - [The Evolution of Ethereum Testnets](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

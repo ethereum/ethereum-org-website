@@ -1,63 +1,75 @@
 ---
 title: Oddajniška veriga
-description: Preberite več o oddajniški verigi – prvi večji nadgradnji Eth2 za Ethereum.
+description: Več informacij o oddajniški verigi – nadgradnji, s katero je bil uveden Ethereum z dokazom o deležu.
 lang: sl
 template: upgrade
 image: ../../../../../assets/upgrades/core.png
-summaryPoint1: Oddajniška veriga ne spreminja ničesar glede Ethereuma, ki ga uporabljamo danes.
-summaryPoint2: Usklajevala bo omrežje.
-summaryPoint3: V ekosistem Ethereum uvaja dokaz o deležu.
-summaryPoint4: Oddajniško verigo morda poznate pod imenom "faza 0", ki se uporablja v tehničnih načrtih.
+summaryPoint1: Oddajniška veriga je v Ethereumovo okolje vpeljala dokaz o deležu.
+summaryPoint2: Z izvirno Ethereumovo verigo, ki je uporabljala dokaz o delu, je bila spojena septembra 2022.
+summaryPoint3: Oddajniška veriga je vpeljala protokol z logiko za doseganje soglasja in blokiranja lažnih govoric, ki zdaj ščiti Ethereum.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
-    Oddajniška veriga je začela delovati 1. decembra ob 12.00 UTC. Če želite več informacij, <a href="https://beaconscan.com/">raziščite podatke</a>. Če želite pomagati potrjevati verigo, lahko <a href="/staking/">zastavite svoj ETH</a>.
+  Oddajniška veriga je začela delovati 1. decembra 2020 in je formalizirala dokaz o deležu kot Ethereumov mehanizem za doseganje soglasja ob spojitvi 15. septembra 2022.
 </UpgradeStatus>
 
-## Kakšen je namen oddajniške verige? {#what-does-the-beacon-chain-do}
+## Kaj je bila oddajniška veriga? {#what-is-the-beacon-chain}
 
-Oddajniška veriga bo izvajala in usklajevala razširjeno omrežje [drobcev](/upgrades/sharding/) in [zastavljavcev](/staking/). Vendar ne bo enaka kot [glavno Ethereum omrežje](/glossary/#mainnet) danes. Ne more obdelovati računov ali pametnih pogodb.
+Oddajniška veriga se je imenovala izvirna veriga blokov z mehanizmom dokaza o deležu, ki je začela delovati leta 2020. Ustvarili smo jo, da bi preverili, ali je mehanizem za doseganje soglasja z dokazom o deležu ustrezen in vzdržen, preden bi ga omogočili v glavnem Ethereumovem omrežju. Zaradi tega je delovala vzporedno z izvirnim Ethereumovim omrežjem z dokazom o delu. Za izklop mehanizma z dokazom o delu in vklop mehanizma z dokazom o deležu v Ethereumovem omrežju smo morali oddajniški verigi ukazati, da sprejema transakcije z izvirne Ethereumove verige, združiti te transakcije v bloke in jih razvrstiti v verigo blokov z mehanizmom za doseganje soglasja z dokazom o deležu. V istem trenutku so izvirni Ethereumovi odjemalci prenehali z rudarjenjem, posredovanjem blokov in logiko za doseganje soglasja ter jih predali oddajniški verigi. Ta dogodek se imenuje [spojitev](/upgrades/merge/). Ko je prišlo do spojitve, ni bilo več dveh verig blokov. Obstajala je le še ena Ethereumova veriga z dokazom o deležu.
 
-Vloga oddajniške verige se bo sčasoma spremenila, vendar je temeljni sestavni del [varnega, trajnostnega in nadgradljivega Ethereuma, ki ga želimo razviti](/upgrades/vision/).
+## Kaj je naredila oddajniška veriga? {#what-does-the-beacon-chain-do}
 
-## Lastnosti oddajniške verige {#beacon-chain-features}
+Z oddajniško verigo je bila poimenovana glavna knjiga računov, s katero se je usmerjalo in koordiniralo omrežje Ethereumovih [zastavljavcev](/staking/), preden so ti začeli preverjati resnične Ethereumove transakcije. Ni obdelovala transakcij ali upravljala interakcij s pametnimi pogodbami.
 
-### Predstavljamo zastavljanje {#introducing-staking}
+Uvedla je mehanizem za doseganje soglasja (ali "plast soglasja"), ki je zamenjalo Ethereumovo rudarjenje po mehanizmu z dokazom o delu, in tako prinesla številne izboljšave.
 
-Oddajniška veriga bo v Ethereum uvedla [dokaz o deležu](/developers/docs/consensus-mechanisms/pos/). To bo nov način, na katerega boste lahko zaščitili Ethereum. Na to lahko lahko gledate kot na javno dobro, s katerim bo Ethereum v boljšem stanju, hkrati pa boste zaslužili še več ETH. V praksi bo to pomenilo, da boste zastavili ETH za aktiviranje programske opreme, ki jo uporabljajo validatorji. Kot validator boste obdelovali transakcije in ustvarjali nove bloke v verigi.
+Oddajniška veriga je bila temeljni del [varnega, okolju prijaznega in prilagodljivega Ethereuma, kot ga poznamo danes](/roadmap/vision/).
 
-Zastavljanje in delovanje kot validator sta lažja kot [rudarjenje](/developers/docs/mining/) (to je način, s katerim je omrežje trenutno zaščiteno). Upamo, da bo Ethereum s tem dolgoročno postal bolj varen. Več ljudi sodeluje v omrežju, bolj decentralizirano in varno pred napadi bo postalo.
+## Vpliv oddajniške verige {#beacon-chain-features}
+
+### Vpeljava zastavljanja {#introducing-staking}
+
+Oddajniška veriga je v Ethereum vpeljala mehanizem [dokaza o deležu](/developers/docs/consensus-mechanisms/pos/). Ta ščiti Ethereum in omogoča validatorjem, da v postopku zaslužijo več ETH. V praksi to pomeni, da je treba za aktiviranje programske opreme za validacijo zastaviti ETH. Kot zastavljavec poganjate programsko opremo, ki ustvarja in validira nove bloke v verigi.
+
+Zastavljanje deluje podobno, kot je prej [rudarjenje](/developers/docs/mining/), vendar je drugačno. Rudarjenje je zahtevalo veliko predhodno investicijo v obliki zmogljive strojne opreme in porabe energije. Posledici sta bili ekonomija obsega in spodbujanje centralizacije. Rudarjenje prav tako ni vključevalo zahteve po zamrznitvi sredstev kot jamstva, kar je omejevalo možnosti prokotola, da kaznuje storilce po napadu.
+
+S prehodom na mehanizem dokaza o deležu je Ethereum postal občutno varnejši in bolj decentraliziran v primerjavi z mehanizmom dokaza o delu. Več ljudi kot sodeluje v omrežju, bolj decentralizirano in varno pred napadi postane.
 
 <InfoBanner emoji=":money_bag:">
-Če vas zanima, da bi postali validator in pomagali zaščititi oddajniško verigo, <a href="/staking/">preberite več o zastavljanju</a>.
+  Če želite postati validator in pomagati pri zaščiti Ethereuma, <a href="/staking/">preberite več o zastavljanju</a>.
 </InfoBanner>
 
-To je prav tako pomembna sprememba za drugo Eth2 nadgradnjo: [razdrobljene verige](/upgrades/sharding/).
+### Priprava na razdrobitev {#setting-up-for-sharding}
 
-### Priprava na razdrobljene verige {#setting-up-for-shard-chains}
+Odkar se je oddajniška veriga spojila z izvirnim Ethereumovim omrežjem, si Ethereumova skupnost prizadeva razširiti omrežje.
 
-Po spojitvi glavne verige z oddajniško, bo sledila nadgradnja, ki bo razdrobljenje verige dodala omrežju z dokazom o deležu. Te "drobci" bodo z razširitvijo omrežja na 64 blokovnih verig povečali kapaciteto omrežja in izboljšali hitrost procesiranja transkacij. Oddajniška veriga je prvi pomemben korak k uvedbi razdrobljenih verig, saj za varno delovanje potrebujejo zastavljanje.
+Mehanizem dokaza o deležu ima to prednost, da ima v vsakem trenutku register vseh odobrenih ustvarjalcev blokov in njihove zastavljene deleže ETH. Ta register omogoča postopek deljenja in vladanja, s katerim zanesljivo razdeli določene odgovornosti v omrežju.
 
-Sčasoma bo oddajniška veriga odgovorna tudi za naključno dodeljevanje zastavljavcev, ki bodo potrjevali razdrobljene verige. To je ključno, da se zastavljavcem oteži skrivno sodelovanje in prevzemanje nadzora nad drobcem. V bistvu pomeni, da so njihove možnosti za to [manjše od 1 na bilijon](https://medium.com/@chihchengliang/minimum-committee-size-explained-67047111fa20).
+Ta odgovornost je drugačna kot mehanizem dokaza o delu, kjer rudarji niso odgovorni omrežju. Tako lahko kadarkoli in brez posledic trajno prenehajo z rudarjenjem in izklopijo programsko opremo vozlišča. Pri tem mehanizmu prav tako ni registra znanih ustvarjalcev blokov niti zanesljivega načina za varno razdelitev odgovornosti v omrežju.
+
+[Več o razdrobitvi](/upgrades/sharding/)
 
 ## Razmerje med nadgradnjami {#relationship-between-upgrades}
 
-Nadgradnje Eth2 so vse delno medsebojno povezane. Povzemimo torej, kako oddajniška veriga vpliva na druge nadgradnje.
+Vse nadgradnje Ethereuma so med seboj delno povezane. Povzemimo torej, kako oddajniška veriga vpliva na druge nadgradnje.
 
-### Glavno omrežje in oddajniška veriga {#mainnet-and-beacon-chain}
+### Oddajniška veriga in spojitev {#merge-and-beacon-chain}
 
-Oddajniška veriga bo sprva obstajala ločeno od glavnega omrežja, ki ga uporabljamo danes. Vendar sčasoma se bosta povezala. Načrt je spojiti glavno omrežje v sistem dokaza z deležem, ki ga nadzira in koordinira oddajniška veriga.
+Oddajniška veriga je najprej delovala neodvisno od Ethereumovega glavnega omrežja, vendar sta se leta 2022 spojila.
 
-<ButtonLink to="/upgrades/merge/">Spojitev</ButtonLink>
+<ButtonLink to="/upgrades/merge/">
+  Spojitev
+</ButtonLink>
 
 ### Drobci in oddajniška veriga {#shards-and-beacon-chain}
 
-Razdrobljene verige lahko v ekosistem Ethereum varno vstopijo samo, ko je vključen mehanizem za doseganje soglasja z dokazom o deležu. Oddajniška veriga bo uvedla zastavljanje in tlakovala pot za nadgradnjo razdrobljenih verig, ki prihaja.
+Razdrobitev je mogoče v Ethereumovo okolje varno uvesti le, ko je vpeljan mehanizem za doseganje soglasja z dokazom o deležu. Oddajniška veriga je vpeljala zastavljanje, ki se je "spojilo" z glavnim omrežem in tlakovalo pot razdrobitvi, ki bo pomagala pri širitvi Ethereumovega omrežja.
 
-<ButtonLink to="/upgrades/sharding/">Razdrobljene verige</ButtonLink>
+<ButtonLink to="/upgrades/sharding/">
+  Razdrobljene verige
+</ButtonLink>
 
-<Divider />
+## Dodatno branje
 
-## Interakcija z oddajniško verigo {#interact-with-beacon-chain}
-
-<BeaconChainActions />
+- [Več o prihodnjih nadgradnjah Ethereuma](/roadmap/vision)
+- [Več o dokazu o deležu](/developers/docs/consensus-mechanisms/pos)

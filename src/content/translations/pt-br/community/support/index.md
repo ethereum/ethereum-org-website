@@ -20,7 +20,7 @@ Compreender a natureza descentralizada do Ethereum é vital porque qualquer pess
   Aprenda os conceitos básicos do Ethereum
 </DocLink>
 
-Apesar da falta de apoio oficial, muitos grupos, comunidades e projetos em todo o ecossistema Ethereum ficarão felizes em ajudar.
+Apesar da falta de suporte oficial, muitos grupos, comunidades e projetos em todo o ecossistema Ethereum estão felizes em ajudar, e você pode encontrar muitas informações e recursos úteis nesta página. Ainda tem dúvidas? Junte-se ao [Discord ethereum.org](/discord/) e tentaremos ajudar.
 
 ## Suporte a carteiras {#wallet-support}
 
@@ -106,4 +106,8 @@ Transações em Ethereum podem algumas vezes ficar bloqueadas se você tiver env
 
 #### Como minero Ethereum? {#mining-ethereum}
 
-Não recomendamos comprar equipamentos de mineração, se você ainda não está minerando Ethereum. A [fusão](/upgrades/merge/) que ocorrerá cerca do 2º trimestre de 2022 fará a transição do Ethereum da prova de trabalho para a prova de participação. Esta mudança significa que a mineração de Ethereum não será mais possível.
+A mineração do Ethereum não é mais possível. A mineração foi desativada quando o Ethereum passou de prova de trabalho para prova de participação. Agora, em vez de mineradores, o Ethereum tem validadores. Os validadores participam com ETH e recebem recompensas de aposta para proteger a rede.
+
+#### Como me torno um participante/validador? {#become-validator}
+
+Para se tornar um validador, você deve participar com 32 ETH no contrato de depósito do Ethereum e configurar um nó validador. Mais informações estão disponíveis em nossas [páginas de participação](/staking) e na [plataforma de lançamento de participação](https://launchpad.ethereum.org/).

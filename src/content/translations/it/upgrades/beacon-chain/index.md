@@ -4,14 +4,13 @@ description: Informati rigurado alla Beacon Chain - l'aggiornamento che ha intro
 lang: it
 template: upgrade
 image: ../../../../../assets/upgrades/core.png
-summaryPoint1: La Beacon Chain non apporta modifiche all'Ethereum che stiamo utilizzando.
-summaryPoint2: Ha introdotto Proof of Stake nell'ecosistema Ethereum.
-summaryPoint3: Nel 2022, è stata fusa con la catena di Proof of Work originale di Ethereum.
-summaryPoint4: La logica del consenso e il protocollo di gossip del blocco introdotti dalla Beacon Chain, proteggono ora Ethereum.
+summaryPoint1: La Beacon Chain ha introdotto il proof-of-stake nell'ecosistema Ethereum.
+summaryPoint2: È stata fusa con la catena di proof-of-work originale di Ethereum nel settembre 2022.
+summaryPoint3: La Beacon Chain ha introdotto la logica del consenso e il protocollo di gossip del blocco, che ora protegge Ethereum.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
-  La Beacon Chain è stata resa disponibile il 1° dicembre 2020. All'epoca, era una catena separata dalla Rete principale di Ethereum. Eseguiva il Poof of stake, ma non gestiva alcuna transazione. La Beacon Chain è stata fusa con la Rete principale originale di Ethereum nel 2022 per acquisire la logica di consenso e la propagazione dei blocchi per Ethereum. A partire dalla Fusione, esiste una sola catena di Ethereum.
+  La Beacon Chain è stata attivata l'1 dicembre 2020 e ha formalizzato il proof-of-stake come il meccanismo di consenso di Ethereum con l'aggiornamento della Fusione il 15 settembre 2022.
 </UpgradeStatus>
 
 ## Cos'era la Beacon Chain? {#what-is-the-beacon-chain}
@@ -20,11 +19,11 @@ La Beacon Chain era il nome della blockchain di Proof of stake originale, lancia
 
 ## Cosa faceva la Beacon Chain? {#what-does-the-beacon-chain-do}
 
-La Beacon Chain era il nome dato a un registro degli account che conducevano e coordinavano la rete di [staker](/staking/) di Ethereum, prima che questi iniziassero a convalidare transazioni reali di Ethereum. Non elaborava le transazioni né gestiva le interazioni tra smart contract.
+La Beacon Chain era il nome dato a un registro di conti che conduceva e coordinava la rete di [staker](/staking/) di Ethereum, prima che questi iniziassero a convalidare transazioni reali di Ethereum. Non elaborava le transazioni, né gestiva le interazioni del contratto intelligente.
 
 Ha introdotto il motore di consenso (o "livello di consenso") che ha preso il posto del mining di Proof of Work su Ethereum, apportando con esso molti miglioramenti significativi.
 
-La Beacon Chain è stata un componente fondamentale per [l'Ethereum sicura, ecosostenibile e scalabile che conosciamo ora](/upgrades/vision/).
+La Beacon Chain è stata un componente fondamentale per [l'Ethereum sicura, ecosostenibile e scalabile che conosciamo ora](/roadmap/vision/).
 
 ## Impatto della Beacon Chain {#beacon-chain-features}
 
@@ -72,4 +71,5 @@ Lo sharding potrà entrare in modo sicuro nell'ecosistema Ethereum solo quando s
 
 ## Letture consigliate
 
-[Maggiori informazioni sugli aggiornamenti futuri di Ethereum](/upgrades/vision) [Maggiori informazioni sul Proof of stake](/develoeprs/docs/consensus-mechanisms/pos)
+- [Maggiori informazioni sugli aggiornamenti futuri di Ethereum](/roadmap/vision)
+- [Maggiori informazioni sul proof-of-stake](/developers/docs/consensus-mechanisms/pos)

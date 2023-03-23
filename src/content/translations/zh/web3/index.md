@@ -87,7 +87,7 @@ Web 2.0 需要内容创作者信任平台不会更改规则，但抗审查则是
 然而，许多 Web3 社区都被定义为去中心化自治组织。 这些社区都通过代码实现了不同程度的去中心化和自动化。 目前，我们仍在探索去中心化自治组织是什么以及它们在未来会如何发展。
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
-  <div>详细了解去中心化自治组织</div>
+  <div>了解更多有关去中心化自治组织的信息</div>
   <ButtonLink to="/dao/">
     关于去中心化自治组织的更多信息
   </ButtonLink>
@@ -108,7 +108,7 @@ Web3 允许你使用以太坊地址和以太坊域名服务配置文件控制你
 Web2 的支付基础设施依赖于银行和第三方支付机构，这就把没有银行账户或碰巧生活在某些“不好”国家/地区的人排除在外。 Web3 使用诸如[以太币](/eth/)之类的代币直接在浏览器中汇款，不需要受信任的第三方。
 
 <ButtonLink to="/eth/">
-  以太币的更多信息
+  有关以太币的更多信息
 </ButtonLink>
 
 ## Web3 的局限性 {#web3-limitations}
@@ -157,3 +157,5 @@ Web3 没有严格的定义。 不同的社区参与者对其有不同的看法�
 - [为什么去中心化很重要](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) - _Chris Dixon_
 - [Web3 概况](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
 - [Web3 之辩论](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
+
+<QuizWidget quizKey="web3" />

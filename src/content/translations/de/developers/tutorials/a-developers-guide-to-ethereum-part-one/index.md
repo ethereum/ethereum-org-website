@@ -6,7 +6,6 @@ lang: de
 tags:
   - "Erste Schritte"
   - "Python"
-  - "Blockchain"
   - "web3.py"
 skill: Einsteiger
 published: 2020-09-08

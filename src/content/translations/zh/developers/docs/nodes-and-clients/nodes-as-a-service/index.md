@@ -5,11 +5,11 @@ lang: zh
 sidebarDepth: 2
 ---
 
-## 介绍 {#Introduction}
+## 简介 {#Introduction}
 
 运行自己的以太坊节点可能会比较困难，特别是在刚开始时或在快速扩展时。 许多服务都可以为你运行优化的节点基础设施，藉此，你可以专注于开发你的应用程序或产品。 我们将解释节点服务运行的原理以及它们的优缺点，如果有兴趣着手开始，我们将为你列出供应商。
 
-## 前置要求 {#prerequisites}
+## 前提条件 {#prerequisites}
 
 如果你还不了解什么是节点和客户端，请查看[节点和客户端](/developers/docs/nodes-and-clients/)。
 
@@ -221,7 +221,7 @@ sidebarDepth: 2
   - 功能
     - 专用和共享节点
     - 仪表板
-    - 在拉丁美洲不同地区的多个托管服务提供商上托管 AWS
+    - 在拉丁美洲不同地区的多个托管服务提供商上托管亚马逊网络服务
     - Prysm 和 Lighthouse 客户端
 - [**SettleMint**](https://console.settlemint.com/)
   - [相关文档](https://docs.settlemint.com/)

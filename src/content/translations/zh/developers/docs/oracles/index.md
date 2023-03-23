@@ -5,17 +5,11 @@ lang: zh
 incomplete: true
 ---
 
-预言机是一个数据输入应用程序，它从区块链外部（链外）的数据源获取数据，并输入到区块链（链上），以供智能合约使用。预言机之所以需要，是由于在以太坊上运行的智能合约无法访问存储在区块链网络之外的信息。
+预言机是将以太坊连接到链外、真实世界信息的数据源，以便您可以在智能合约中查询数据。 例如，预测市场的去中心化应用程序使用预言机来根据事件进行结算。 预测市场可能要求您使用以太币来打赌下一任美国总统是谁。 他们将使用一个预言机来确认结果并向获胜者付款。
 
-赋予智能合约使用链外数据输入的能力，扩展了去中心化应用程序的价值。例如，去中心化市场预测依靠预言机来提供有关结果的信息，从而可以验证用户的预测。假设 Alice 下注 20ETH 押注谁将成为下一任美国总统，市场预测去中心化应用 dapp 需要一个预言机来确认选举结果并决定 Alice 是否有资格获得付款。
+## 前提条件 {#prerequisites}
 
-## 先决条件 {#prerequisites}
-
-This page assumes the reader is familiar with Ethereum fundamentals, including nodes, consensus mechanisms, and the EVM. You should also have a good grasp of smart contracts and smart contract anatomy, especially events.
-
-本页假设读者熟悉以太坊基础知识，包括节点、共识机制和 EVM。 您还应该很好地掌握智能合约和智能合约解剖结构，尤其是事件。
-
-本页假设读者熟悉以太坊基础知识，包括[节点](/developers/docs/nodes-and-clients/)、[共识机制](/developers/docs/consensus-mechanisms/)和[以太虚拟机 EVM](/developers/docs/evm/)。您还应该很好地掌握[智能合约](/developers/docs/smart-contracts/)和[智能合约结构](/developers/docs/smart-contracts/anatomy/)，尤其是[事件](/glossary/#events)。
+请确保您熟悉[节点](/developers/docs/nodes-and-clients/)、[共识机制](/developers/docs/consensus-mechanisms/)和[智能合约解析](/developers/docs/smart-contracts/anatomy/)，尤其是事件。
 
 ## 什么是预言机 {#what-is-an-oracle}
 
@@ -431,19 +425,23 @@ _我们希望有更多关于构建预言机智能合约的文档。 如果您能
 
 **文章**
 
-- [什么是区块链 Oracle？](https://chain.link/education/blockchain-oracles) - _Chainlink_
+- [什么是区块链 Oracle？](https://chain.link/education/blockchain-oracles)- _Chainlink_
 - [预言机](https://docs.ethhub.io/built-on-ethereum/oracles/what-are-oracles/) – _EthHub_
-- [什么是区块链预言机？](https://betterprogramming.pub/what-is-a-blockchain-oracle-f5ccab8dbd72) - _Patrick Collins_
-- [去中心化预言机：综述](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) – _Julien Thevenard_
-- [在以太坊部署区块链预言机](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_
-- [为什么智能合约无法调用应用程序接口？](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls) - _StackExchange_
-- [我们为什么需要去中心化预言机](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles) - _Bankless_
-- [因此您想要使用价格预言机](https://samczsun.com/so-you-want-to-use-a-price-oracle/) - _samczsun_
+- [什么是区块链预言机？](https://betterprogramming.pub/what-is-a-blockchain-oracle-f5ccab8dbd72)- _Patrick Collins_
+- [去中心化预言机：综述](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841)– _Julien Thevenard_
+- [在以太坊部署区块链预言机](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e)– _Pedro Costa_
+- [为什么智能合约无法调用应用程序接口？](https://ethereum.stackexchange.com/questions/301/why-cant-contracts-make-api-calls)- _StackExchange_
+- [我们为什么需要去中心化预言机](https://newsletter.banklesshq.com/p/why-we-need-decentralized-oracles)- _Bankless_
+- [因此您想要使用价格预言机](https://samczsun.com/so-you-want-to-use-a-price-oracle/)- _samczsun_
 
-**相关视频**
+**视频**
 
-- [预言机和区块链实用程序拓展](https://youtu.be/BVUZpWa8vpw) - _Real Vision Finance_
+- [预言机和区块链实用程序拓展](https://youtu.be/BVUZpWa8vpw)- _Real Vision Finance_
 
 **教程**
 
-- [如何在 Solidity 中获取以太坊的当前价格](https://blog.chain.link/fetch-current-crypto-price-data-solidity/) - _Chainlink_
+- [如何在 Solidity 中获取以太坊的当前价格](https://blog.chain.link/fetch-current-crypto-price-data-solidity/)- _ Chainlink _
+
+**示例项目**
+
+- [采用 Solidity 为以太坊编写的完整的 Chainlink 启动项目](https://github.com/hackbg/chainlink-fullstack)-_HackBG_

@@ -11,7 +11,7 @@
   "page-get-eth-dex-desc": "Se vuoi più controllo, compra ETH peer-to-peer. Con una DEX puoi acquistare e vendere senza dare a un'azienda centralizzata il controllo dei tuoi fondi.",
   "page-get-eth-dexs": "Borse decentralizzate (DEX)",
   "page-get-eth-dexs-desc": "Le borse decentralizzate sono piazze aperte in cui scambiare ETH e altri token. Collegano direttamente acquirenti e venditori.",
-  "page-get-eth-dexs-desc-2": "Anziché utilizzare una terza parte attendibile per salvaguardare i fondi nella transazione, utilizzano il codice. L'ETH del venditore verrà trasferito solo quando il pagamento sarà garantito. Questo tipo di codice è detto Smart Contract.",
+  "page-get-eth-dexs-desc-2": "Invece di sfruttare una terza parte attendibile per salvaguardare i fondi nella transazione, utilizzano il codice. L'ETH del venditore sarà trasferito solo quando il pagamento è garantito. Questo tipo di codice è noto come contratto intelligente.",
   "page-get-eth-dexs-desc-3": "Tutto questo significa che ci sono meno restrizioni geografiche rispetto alle alternative centralizzate. Se qualcuno vende ciò che cerchi e accetta un metodo di pagamento fornisci, puoi procedere. Con le DEX puoi acquistare ETH con altri token, Paypal o anche contanti di persona.",
   "page-get-eth-do-not-copy": "Esempio: Non copiare",
   "page-get-eth-exchanges-disclaimer": "Abbiamo raccolto questa informazione manualmente. Se trovi qualcosa di sbagliato, faccelo sapere:",
@@ -62,5 +62,6 @@
   "page-get-eth-your-address": "Il tuo indirizzo ETH",
   "page-get-eth-your-address-desc": "Quando scarichi un portafoglio, ti verrà creato un indirizzo ETH pubblico, che si presenta così:",
   "page-get-eth-your-address-desc-3": "Puoi considerarlo come un indirizzo email, su cui invece delle email riceverai ETH. Se vuoi trasferire ETH da una borsa al tuo portafoglio, usa questo indirizzo come destinazione. Controlla sempre due volte prima di confermare l'invio!",
-  "page-get-eth-your-address-wallet-link": "Scopri i portafogli"
+  "page-get-eth-your-address-wallet-link": "Scopri i portafogli",
+  "listing-policy-raise-issue-link": "Apri segnalazione"
 }

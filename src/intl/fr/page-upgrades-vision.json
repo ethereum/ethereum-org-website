@@ -45,7 +45,7 @@
   "page-upgrades-vision-trilemma-cardtext-4": "L'augmentation de la taille et de la puissance des nœuds d'Ethereum pourrait augmenter les transactions par seconde de façon sécurisée, mais l’exigence matérielle restreindrait alors qui peut ou non le faire – c'est une menace sur la décentralisation. Nous espérons que la fragmentation et la preuve d'enjeu permettront à Ethereum d'augmenter la quantité de nœuds et non la taille de nœuds.",
   "page-upgrades-vision-trilemma-h2": "Le défi de la mise à l'échelle décentralisée",
   "page-upgrades-vision-trilemma-modal-tip": "Appuyez sur les cercles ci-dessous pour mieux comprendre les problèmes de la mise à l'échelle décentralisée",
-  "page-upgrades-vision-trilemma-p": "Une manière naïve de résoudre les problèmes d'Ethereum serait de centraliser. Cependant, la décentralisation est trop importante. C'est la décentralisation qui donne à Ethereum une résistance à la censure, sa capacité d'ouverture, la confidentialité des données et une sécurité quasi indestructible.",
+  "page-upgrades-vision-trilemma-p": "La manière naïve de résoudre les problèmes d'Ethereum serait de le rendre plus centralisé. Cependant, la décentralisation est trop importante. C'est la décentralisation qui donne à Ethereum sa neutralité, sa capacité de résistance à la censure, son ouverture, sa gestion de la propriété des données et une sécurité quasi inébranlable.",
   "page-upgrades-vision-trilemma-p-1": "La vision d’Ethereum est d’être plus évolutive et plus sûre, mais aussi de rester décentralisée. Atteindre ces 3 qualités est un problème connu sous le nom de trilemme de mise à l'échelle.",
   "page-upgrades-vision-trilemma-p-2": "Les mises à jour d'Ethereum visent à résoudre le trilemme, mais il y a des défis importants.",
   "page-upgrades-vision-trilemma-press-button": "Appuyez sur les boutons du triangle pour mieux comprendre les problèmes de la mise à l'échelle décentralisée.",
@@ -64,5 +64,6 @@
   "page-upgrades-vision-upgrade-needs-desc-3": "Ethereum possède un ensemble de mises à niveau qui traitent ces problèmes et bien plus encore. Cet ensemble d'améliorations s'appelait à l'origine « Serenity » et « Eth2 », et elles sont un domaine actif de recherche et de développement depuis 2014.",
   "page-upgrades-vision-upgrade-needs-desc-5": "Maintenant que la technologie est prête, ces mises à niveau réarchitectureront Ethereum pour le rendre plus évolutif, sécurisé et durable... pour améliorer la vie des utilisateurs existants et en attirer de nouveaux. Tout en préservant l'idée clé de décentralisation, qui sous-tend Ethereum.",
   "page-upgrades-vision-upgrade-needs-desc-6": "Cela signifie qu'il n'y a pas d'interrupteur pour activer l'évolutivité d'un seul coup. Les améliorations seront incorporées progressivement au fil du temps.",
-  "page-upgrades-vision-upgrade-needs-serenity": "Voir un article de blog 2015 traitant de « Serenity »"
+  "page-upgrades-vision-upgrade-needs-serenity": "Voir un article de blog 2015 traitant de « Serenity »",
+  "ethereum": "Ethereum"
 }

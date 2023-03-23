@@ -68,7 +68,7 @@
   "page-upgrades-bug-bounty-type-4": "Incongruenze di calcolo o dei parametri",
   "page-upgrades-bug-bounty-types": "Tipi di bug",
   "page-upgrades-bug-bounty-validity": "In ambito",
-  "page-upgrades-bug-bounty-validity-desc": "Il nostro programma bug bounty si estende end-to-end: dalla solidità dei protocolli (come il modello di consenso della blockchain, i protocolli via cavo e p2p, il Poof of Work, il Poof of stake, ecc.) e la conformità del protocollo/implementazione alla sicurezza della rete e all'integrità del consenso. Fanno parte del programma anche la classica sicurezza del client nonché la sicurezza dei primitivi crittografici. In caso di dubbi, invia un'email a bounty@ethereum.org.",
+  "page-upgrades-bug-bounty-validity-desc": "Il nostro programma bug bounty si estende end-to-end: dalla solidità dei protocolli (come il modello di consenso della blockchain, i protocolli via cavo e p2p, proof-of-stake, ecc.) e la conformità del protocollo/implementazione alla sicurezza della rete e all'integrità del consenso. Fanno parte del programma anche la classica sicurezza del client nonché la sicurezza dei primitivi crittografici. In caso di dubbi, invia un'email a bounty@ethereum.org.",
   "page-upgrades-bug-bounty-card-critical": "Critico",
   "page-upgrades-bug-bounty-card-critical-risk": "Invia bug a rischio critico",
   "page-upgrades-bug-bounty-card-h2": "Medio",
@@ -97,6 +97,7 @@
   "page-upgrades-bug-bounty-card-subheader-2": "Esempio",
   "page-upgrades-bug-bounty-card-text": "Un utente malintenzionato potrebbe impostare un nodo su uno stato che faccia fallire una su cento attestazioni eseguite da un validatore",
   "page-upgrades-bug-bounty-card-text-1": "Un utente malintenzionato può condurre con successo attacchi eclipse su nodi con Id peer aventi byte a 4 zeri iniziali",
-  "page-upgrades-bug-bounty-card-text-2": "C'è un bug di consenso tra due client, ma è difficile o poco pratico per un utente malintenzionato attivare l'evento.",
-  "page-upgrades-bug-bounty-card-text-3": "C'è un'esecuzione remota del codice in un client di maggioranza ed è banale che un utente malevolo inneschi la vulnerabilità."
+  "page-upgrades-bug-bounty-card-text-2": "Gli utenti malintenzionati possono eseguire correttamente la partizione di grandi parti della rete, ed è banale che un utente malintezionato inneschi la vulnerabilità",
+  "page-upgrades-bug-bounty-card-text-3": "L'utente malintenzionato può condurre con successo l'esecuzione del codice da remoto in un client di maggioranza ed è banale che un utente malintenzionato inneschi la vulnerabilità",
+  "page-upgrades-question-title": "Domande frequenti"
 }
