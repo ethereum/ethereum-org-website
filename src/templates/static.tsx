@@ -6,9 +6,8 @@ import {
   Text,
   Divider as ChakraDivider,
   Heading,
-  ListItem as ChakraListItem,
-  UnorderedList as ChakraUnorderedList,
   Icon,
+  chakra,
 } from "@chakra-ui/react"
 import { graphql, PageProps } from "gatsby"
 import { useI18next } from "gatsby-plugin-react-i18next"
@@ -159,11 +158,7 @@ const Paragraph = (props: ChildOnlyProp) => (
 )
 
 const ListItem = (props: ChildOnlyProp) => (
-  <ChakraListItem color="text300" {...props} />
-)
-
-const UnorderedList = (props: ChildOnlyProp) => (
-  <ChakraUnorderedList ms="1.45rem" {...props} />
+  <chakra.li color="text300" {...props} />
 )
 
 const CardContainer = (props: ChildOnlyProp) => (
@@ -179,7 +174,6 @@ const components = {
   h3: Header3,
   h4: Header4,
   p: Paragraph,
-  ul: UnorderedList,
   li: ListItem,
   pre: Pre,
   hr: HR,
@@ -257,7 +251,7 @@ const StaticPage = ({
         mx="auto"
         mb={16}
         p={8}
-        pt={{ lg: 16 }}
+        pt={{ base: 8, lg: 16 }}
         dir={isRightToLeft ? "rtl" : "ltr"}
       >
         <PageMetadata
