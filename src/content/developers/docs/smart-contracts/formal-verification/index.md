@@ -120,7 +120,7 @@ Model checking uses state space exploration, which involves constructing all pos
 
 Theorem proving is a method of mathematically reasoning about the correctness of programs, including smart contracts. It involves transforming the model of a contract’s system and its specifications into mathematical formulas (logic statements).
 
-The objective of theorem proving is to verify logical equivalence between these statements. “Logical equivalence” (also called “logical implication”) is a type of relationship between two statements in which statement A can only be true _if and only if_ statement B is true.
+The objective of theorem proving is to verify logical equivalence between these statements. “Logical equivalence” (also called “logical bi-implication”) is a type of relationship between two statements such that the first statement is true _if and only if_ the second statement is true.
 
 The required relationship (logical equivalence) between statements about a contract’s model and its property is formulated as a provable statement (called a theorem). Using a formal system of inference, the automated theorem prover can verify the theorem’s validity. In other words, a theorem prover can conclusively prove a smart contract’s model precisely matches its specifications.
 
