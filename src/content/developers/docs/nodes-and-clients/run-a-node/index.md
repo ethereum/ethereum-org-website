@@ -56,6 +56,8 @@ Both options have different advantages summed up above. If you are looking for a
 - [Alchemy](https://www.alchemy.com/)
 - [Blast](https://blastapi.io/)
 - [Getblock](https://getblock.io/)
+- [NodeReal](https://nodereal.io/)
+- [NOWNodes](https://nownodes.io/)
 
 Check out also [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/) for more options on hosted nodes.
 
