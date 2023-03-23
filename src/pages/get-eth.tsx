@@ -111,8 +111,10 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
         justifyContent="center"
       >
         <Img
-          position="absolute !important"
           as={GatsbyImage}
+          sx={{
+            position: "absolute !important",
+          }}
           zIndex={-1}
           w="full"
           maxW={{ base: "100vh", xl: "8xl" }}
@@ -193,12 +195,12 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
               </Link>
             </em>
           </p>
-          <Box as={InfoBanner} emoji=":wave:" shouldCenter={true} mt={8}>
+          <InfoBanner emoji=":wave:" shouldCenter={true} mt={8}>
             <Translation id="page-get-eth-new-to-eth" />{" "}
             <Link to="/eth/">
               <Translation id="page-get-eth-whats-eth-link" />
             </Link>
-          </Box>
+          </InfoBanner>
         </Content>
       </Flex>
       <Flex
