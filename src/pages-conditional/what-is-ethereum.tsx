@@ -516,7 +516,7 @@ const WhatIsEthereumPage = ({
               </h2>
               <BannerGrid>
                 <BannerGridCell>
-                  <StatPrimary>2970</StatPrimary>
+                  <StatPrimary>3986</StatPrimary>
                   <StatDescription>
                     Projects built on{" "}
                     <NoWrapText>
