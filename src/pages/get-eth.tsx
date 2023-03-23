@@ -2,7 +2,7 @@ import React from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
-import { Box, Flex, Img, Text } from "@chakra-ui/react"
+import { Box, Flex, Heading, Img, Text } from "@chakra-ui/react"
 
 import Translation from "../components/Translation"
 import CardList from "../components/CardList"
@@ -133,9 +133,13 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           mt={{ base: 8, lg: 24 }}
           textAlign="center"
         >
-          <h1>
+          <Heading
+            as="h1"
+            fontSize={{ base: "2.5rem", md: "5xl" }}
+            lineHeight={1.4}
+          >
             <Translation id="page-get-eth-where-to-buy-title" />
-          </h1>
+          </Heading>
           <Text
             fontSize="xl"
             lineHeight="140%"
@@ -187,14 +191,14 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           </Link>
         </StyledCard>
         <Content>
-          <p>
-            <em>
+          <Text>
+            <Text as="em">
               <Translation id="listing-policy-disclaimer" />{" "}
               <Link to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
                 <Translation id="listing-policy-raise-issue-link" />
               </Link>
-            </em>
-          </p>
+            </Text>
+          </Text>
           <InfoBanner emoji=":wave:" shouldCenter={true} mt={8}>
             <Translation id="page-get-eth-new-to-eth" />{" "}
             <Link to="/eth/">
@@ -221,48 +225,60 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
         <EthExchanges />
       </Flex>
       <Content id="dex">
-        <h2>
+        <Heading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4}>
           <Translation id="page-get-eth-dexs" />
-        </h2>
+        </Heading>
       </Content>
       <TwoColumnContent>
         <LeftColumn>
-          <h3>
+          <Heading
+            as="h3"
+            fontSize={{ base: "xl", md: "2xl" }}
+            lineHeight={1.4}
+          >
             <Translation id="page-get-eth-what-are-DEX's" />
-          </h3>
-          <p>
+          </Heading>
+          <Text>
             <Translation id="page-get-eth-dexs-desc" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-get-eth-dexs-desc-2" />{" "}
             <Link to="/smart-contracts">
               <Translation id="page-get-eth-smart-contract-link" />
             </Link>
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-get-eth-dexs-desc-3" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-get-eth-need-wallet" />
-          </p>
+          </Text>
           <ButtonLink to="/wallets/">
             <Translation id="page-get-eth-get-wallet-btn" />
           </ButtonLink>
         </LeftColumn>
         <RightColumn>
-          <h3>
+          <Heading
+            as="h3"
+            fontSize={{ base: "xl", md: "2xl" }}
+            lineHeight={1.4}
+          >
             <Translation id="page-get-eth-traditional-currencies" />
-          </h3>
-          <p>
+          </Heading>
+          <Text>
             <Translation id="page-get-eth-traditional-payments" />
-          </p>
+          </Text>
           <CardList content={decentralizedExchanges} />
-          <h3>
+          <Heading
+            as="h3"
+            fontSize={{ base: "xl", md: "2xl" }}
+            lineHeight={1.4}
+          >
             <Translation id="page-get-eth-other-cryptos" />
-          </h3>
-          <p>
+          </Heading>
+          <Text>
             <Translation id="page-get-eth-swapping" />
-          </p>
+          </Text>
           <CardList content={tokenSwaps} />
           <InfoBanner isWarning={true}>
             <Translation id="page-get-eth-warning" />
@@ -271,9 +287,9 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
       </TwoColumnContent>
       <Divider />
       <Content>
-        <h2>
+        <Heading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4}>
           <Translation id="page-get-eth-keep-it-safe" />
-        </h2>
+        </Heading>
       </Content>
       <TwoColumnContent>
         <Flex as={LeftColumn} flexDir="column">
@@ -286,33 +302,45 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
             image={getImage(data.wallet)!}
             alt=""
           />
-          <h3>
+          <Heading
+            as="h3"
+            fontSize={{ base: "xl", md: "2xl" }}
+            lineHeight={1.4}
+          >
             <Translation id="page-get-eth-community-safety" />
-          </h3>
+          </Heading>
           <CardList content={safetyArticles} />
         </Flex>
         <RightColumn>
-          <p>
+          <Text>
             <Translation id="page-get-eth-description" />
-          </p>
-          <p>
+          </Text>
+          <Text>
             <Translation id="page-get-eth-security" />
-          </p>
-          <h3>
+          </Text>
+          <Heading
+            as="h3"
+            fontSize={{ base: "xl", md: "2xl" }}
+            lineHeight={1.4}
+          >
             <Translation id="page-get-eth-protect-eth-in-wallet" />
-          </h3>
-          <p>
+          </Heading>
+          <Text>
             <Translation id="page-get-eth-protect-eth-desc" />
-          </p>
+          </Text>
           <Link to="/wallets/">
             <Translation id="page-get-eth-your-address-wallet-link" />
           </Link>
-          <h3>
+          <Heading
+            as="h3"
+            fontSize={{ base: "xl", md: "2xl" }}
+            lineHeight={1.4}
+          >
             <Translation id="page-get-eth-your-address" />
-          </h3>
-          <p>
+          </Heading>
+          <Text>
             <Translation id="page-get-eth-your-address-desc" />
-          </p>
+          </Text>
           <Flex
             justifyContent="space-between"
             bg="#191919"
@@ -339,15 +367,19 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
               />
             </Text>
           </Flex>
-          <p>
+          <Text>
             <Translation id="page-get-eth-your-address-desc-3" />
-          </p>
-          <h3>
+          </Text>
+          <Heading
+            as="h3"
+            fontSize={{ base: "xl", md: "2xl" }}
+            lineHeight={1.4}
+          >
             <Translation id="page-get-eth-wallet-instructions" />
-          </h3>
-          <p>
+          </Heading>
+          <Text>
             <Translation id="page-get-eth-wallet-instructions-lost" />
-          </p>
+          </Text>
         </RightColumn>
       </TwoColumnContent>
       <Divider />
@@ -358,11 +390,11 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
         alt={t("page-index-sections-individuals-image-alt")}
         maxImageWidth={600}
       >
-        <div>
+        <Box>
           <ButtonLink to="/dapps/">
             <Translation id="page-get-eth-checkout-dapps-btn" />
           </ButtonLink>
-        </div>
+        </Box>
       </CalloutBanner>
       <FeedbackCard />
     </Page>
