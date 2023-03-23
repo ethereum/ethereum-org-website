@@ -155,7 +155,7 @@ const StatDescription = (props: ChildOnlyType) => (
 
 const Layer2CardGrid = (props: ChildOnlyType) => (
   <SimpleGrid
-    templateColumns="repeat(4, minmax(min(100%, 280px), 1fr))"
+    templateColumns="repeat(auto-fill, minmax(min(100%, 280px), 1fr))"
     gap={8}
     {...props}
   />
