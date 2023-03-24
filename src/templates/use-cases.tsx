@@ -16,6 +16,7 @@ import {
   Icon,
   ListItem as ChakraListItem,
   Show,
+  Text,
   UnorderedList,
   useToken,
 } from "@chakra-ui/react"
@@ -44,11 +45,7 @@ import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents from "../components/TableOfContents"
 import Translation from "../components/Translation"
 import SectionNav from "../components/SectionNav"
-import {
-  Divider,
-  Paragraph,
-  ListItem,
-} from "../components/SharedStyledComponents"
+import { Divider } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
 import FeedbackCard from "../components/FeedbackCard"
@@ -96,8 +93,8 @@ const components = {
   h2: H2,
   h3: H3,
   h4: H4,
-  p: Paragraph,
-  li: ListItem,
+  p: Text,
+  li: chakra.li,
   // pre: Pre,
   table: MarkdownTable,
   MeetupList,
