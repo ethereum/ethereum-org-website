@@ -85,6 +85,20 @@ const H4 = (props: HeadingProps) => (
   />
 )
 
+const Pre = (props: ChildOnlyProp) => (
+  <chakra.pre
+    bg="preBackground"
+    border="1px"
+    borderColor="preBorder"
+    borderRadius="base"
+    maxW="full"
+    overflowX="scroll"
+    p={4}
+    whiteSpace="pre-wrap"
+    {...props}
+  />
+)
+
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
@@ -95,7 +109,7 @@ const components = {
   h4: H4,
   p: Text,
   li: chakra.li,
-  // pre: Pre,
+  pre: Pre,
   table: MarkdownTable,
   MeetupList,
   RandomAppList,
