@@ -68,7 +68,7 @@ const H1 = (props: HeadingProps) => (
 )
 
 const H2 = (props: HeadingProps) => (
-  <Heading {...commonHeadingProps} fontSize="2rem" {...props} />
+  <Heading {...commonHeadingProps} fontSize="2rem" mt={16} {...props} />
 )
 
 const H3 = (props: HeadingProps) => (
