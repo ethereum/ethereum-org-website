@@ -135,7 +135,7 @@ const HeroContainer = (props: ChildOnlyProp) => (
     boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
     flexDirection={{ base: "column-reverse", lg: "row" }}
     justifyContent="flex-end"
-    minH="608px"
+    height="608px"
     width="full"
     {...props}
   />
