@@ -99,6 +99,10 @@ const Pre = (props: ChildOnlyProp) => (
   />
 )
 
+const Paragraph = (props: ChildOnlyProp) => (
+  <Text color="text300" mt={8} mb={4} {...props} />
+)
+
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
@@ -107,7 +111,7 @@ const components = {
   h2: H2,
   h3: H3,
   h4: H4,
-  p: Text,
+  p: Paragraph,
   li: chakra.li,
   pre: Pre,
   table: MarkdownTable,
