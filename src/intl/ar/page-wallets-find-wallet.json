@@ -5,12 +5,12 @@
   "page-find-wallet-last-updated": "آخر تحديث",
   "page-find-wallet-meta-description": "ابحث عن محافظ إثيريوم وقارن بينها بناءً على الميزات التي تريدها.",
   "page-find-wallet-meta-title": "العثور على محفظة إثيريوم",
-  "page-find-wallet-multisig": "حسابات التوقيع المتعدد",
-  "page-find-wallet-multisig-desc": "لمزيد من الأمان، تتطلب المحافظ متعددة التوقيع أكثر من حساب واحد لتفويض معاملات معينة.",
-  "page-find-wallet-showing": "عرض ",
-  "page-find-wallet-swaps": "مبادلات الرموز اللامركزية",
-  "page-find-wallet-swaps-desc": "التجارة بين إثير والرموز الأخرى مباشرة من محفظتك.",
   "page-find-wallet-title": "البحث عن محفظة",
   "page-find-wallet-try-removing": "حاول إزالة ميزة أو اثنين",
-  "page-stake-eth": "تجميد عملات إثير"
+  "page-stake-eth": "تجميد عملات إثير",
+  "page-find-wallet-swaps": "مبادلات الرموز اللامركزية",
+  "page-find-wallet-swaps-desc": "التجارة بين إثير والرموز الأخرى مباشرة من محفظتك.",
+  "page-find-wallet-multisig": "حسابات التوقيع المتعدد",
+  "page-find-wallet-multisig-desc": "لمزيد من الأمان، تتطلب المحافظ متعددة التوقيع أكثر من حساب واحد لتفويض معاملات معينة.",
+  "page-find-wallet-showing": "عرض "
 }

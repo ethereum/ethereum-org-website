@@ -1,5 +1,14 @@
 [
   {
+    "title": "Ethereum Rio",
+    "to": "https://www.ethereumbrasil.com/ethereumrio",
+    "sponsor": null,
+    "location": "Museu de Arte de Rio, Rio de Janeiro, Brazil",
+    "description": "A convergence of creators, builders & thinkers.",
+    "startDate": "2023-03-28",
+    "endDate": "2023-03-30"
+  },
+  {
     "title": "ETHVietnam",
     "to": "https://www.eth-vietnam.com/",
     "sponsor": null,
@@ -63,6 +72,15 @@
     "endDate": "2023-04-25"
   },
   {
+    "title": "ETHGlobal Lisbon",
+    "to": "https://ethglobal.com/events/lisbon",
+    "sponsor": null,
+    "location": "Lisbon, Portugal",
+    "description": "ETHGlobal Lisbon replaces ETHGlobal Istanbul",
+    "startDate": "2023-05-12",
+    "endDate": "2023-05-14"
+  },
+  {
     "title": "EDCON 2023",
     "to": "https://edcon.io/",
     "sponsor": null,
@@ -72,13 +90,13 @@
     "endDate": "2023-05-23"
   },
   {
-    "title": "ETHGlobal Istanbul",
-    "to": "https://ethglobal.com/events/istanbul",
+    "title": "BlockSplit",
+    "to": "https://www.blocksplit.net",
     "sponsor": null,
-    "location": "Istanbul, Turkey",
-    "description": "Get hype to build the future of web3 with thousands of developers and creatives in one of the oldest cities in the world, let's hack in Istanbul.",
-    "startDate": "2023-05-26",
-    "endDate": "2023-05-28"
+    "location": "Split, Croatia",
+    "description": "BlockSplit is the oldest web3 conference in the South-East Europe, taking place since 2018 and attracting over 600 attendees from all around the world.",
+    "startDate": "2023-05-23",
+    "endDate": "2023-05-24"
   },
   {
     "title": "ETH Belgrade 2023",
@@ -277,6 +295,15 @@
     "description": "We are welcoming developers, entrepreneurs, creatives, PAs, regulators and newbies into the first Italian Ethereum event.",
     "startDate": "2022-05-03",
     "endDate": "2022-05-05"
+  },
+  {
+    "title": "ETHDam",
+    "to": "https://ethdam.com/",
+    "sponsor": null,
+    "location": "Amsterdam, Netherlands",
+    "description": "ETHDam is a conference and hackathon gathering the best DeFi and Privacy builders in Amsterdam in May 2023.",
+    "startDate": "2023-05-20",
+    "endDate": "2023-05-21"
   },
   {
     "title": "BlockSplit",
@@ -495,6 +522,16 @@
     "endDate": "2022-08-31"
   },
   {
+    "title": "Ethereum Singapore",
+    "to": "https://www.ethereumsingapore.com/",
+    "sponsor": null,
+    "location": "Singapore, Singapore",
+    "description": "Ethereum Singapore is taking flight -- this meetup (supported by over 9000 members!) that was founded in 2016 is coming back in 2023 with both a hackathon to tackle real-life challenge statements curated from Singaporean non-profits and social enterprises, as well as a conference featuring curated community hubs.",
+    "startDate": "2023-09-10",
+    "endDate": "2023-09-12"
+  },
+
+  {
     "title": "MCON",
     "to": "https://www.mcon.fun/",
     "sponsor": null,
@@ -709,5 +746,14 @@
     "description": "Join ETHMiami during Art Basel Miami 2022.",
     "startDate": "2022-11-28",
     "endDate": "2022-12-4"
+  },
+  {
+    "title": "ETHSamba Hack",
+    "to": "https://ethsamba.org/",
+    "sponsor": null,
+    "location": "Rio de Janeiro, BR",
+    "description": "Bootcamp, Hackathon, and 1-day conference in the sun.",
+    "startDate": "2023-03-31",
+    "endDate": "2023-04-02"
   }
 ]

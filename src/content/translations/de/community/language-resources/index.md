@@ -96,6 +96,10 @@ Wenn Sie zweisprachig sind und uns helfen möchten, mehr Menschen zu erreichen, 
 - [Microsoft Learn (Intelligente Verträge)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) – Lernen, wie man mit Solidity intelligente Verträge schreibt
 - [Microsoft Learn (dApps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - Erstelle eine Benutzeroberfläche mit dezentralen Anwendungen
 
+### Russisch {#ru}
+
+- [Cyber Academy](https://cyberacademy.dev) – Bildungsbereich für Web3-Entwickler
+
 ### Spanisch {#es}
 
 - [Ethereum Madrid](https://ethereummadrid.com/) – Blockchain-, DeFi- und Verwaltungskurse, Veranstaltungen und Blog
@@ -104,7 +108,7 @@ Wenn Sie zweisprachig sind und uns helfen möchten, mehr Menschen zu erreichen, 
 - [Einführungskurs zur Ethereum-Entwicklung](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) – Solidity-Grundlagen, Testen und Einsatz Ihres ersten intelligenten Vertrags
 - [Einführungskurs in Sicherheit und Hacking bei Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) – Allgemeine Schwachstellen und Sicherheitsprobleme in echten intelligenten Verträgen verstehen
 - [Einführungskurs zur DeFi-Entwicklung](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) – Lernen, wie intelligente Verträge von DeFi in Solidity funktionieren und einen eigenen Automated Market Maker erstellen
-- [Krypto-Universität](https://www.youtube.com/c/Cryptoversidad) - Nicht-technische Blockchain Bildung vom Anfänger bis zum Fortgeschrittenen. Lernen Sie alles über Krypto und Ethereum.
+- [Krypto-Universität](https://www.youtube.com/c/Cryptoversidad) – Nicht-technische Blockchain Bildung vom Anfänger bis zum Fortgeschrittenen. Lernen Sie alles über Krypto und Ethereum.
 
 ### Türkisch {#tr}
 
@@ -113,7 +117,7 @@ Wenn Sie zweisprachig sind und uns helfen möchten, mehr Menschen zu erreichen, 
 
 ### Vietnamesisch {#vi}
 
-- [Tino Gruppe](https://wiki.tino.org/ethereum-la-gi/) - Übersicht zu Ethereum, dApps, Wallets und häufig gestellte Fragen
+- [Tino Gruppe](https://wiki.tino.org/ethereum-la-gi/) – Übersicht zu Ethereum, dApps, Wallets und häufig gestellte Fragen
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) – Webplattform mit Unterseiten für Ethereum-Nachrichten und -Bildung
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) – Kryptowährungsportal mit Ethereum-Nachrichten und Bildungsinhalten
 

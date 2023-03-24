@@ -5,12 +5,12 @@
   "page-find-wallet-last-updated": "Naposledy aktualizováno",
   "page-find-wallet-meta-description": "Najděte a porovnejte Ethereum peněženky založené na funkcích, které chcete.",
   "page-find-wallet-meta-title": "Najděte peněženku pro Ethereum",
-  "page-find-wallet-multisig": "Vícepodpisové účty",
-  "page-find-wallet-multisig-desc": "Aby byly bezpečnější, vyžadují vícepodpisové peněženky více než jeden účet k autorizaci určitých transakcí.",
-  "page-find-wallet-showing": "Zobrazeno ",
-  "page-find-wallet-swaps": "Decentralizované výměny žetonů",
-  "page-find-wallet-swaps-desc": "Obchoduje mezi ETH a jinými žetony přímo z Vaší peněženky.",
   "page-find-wallet-title": "Najít peněženku",
   "page-find-wallet-try-removing": "Zkuste odebrat funkci nebo dvě",
-  "page-stake-eth": "Investování ETH"
+  "page-stake-eth": "Investování ETH",
+  "page-find-wallet-swaps": "Decentralizované výměny žetonů",
+  "page-find-wallet-swaps-desc": "Obchoduje mezi ETH a jinými žetony přímo z Vaší peněženky.",
+  "page-find-wallet-multisig": "Vícepodpisové účty",
+  "page-find-wallet-multisig-desc": "Aby byly bezpečnější, vyžadují vícepodpisové peněženky více než jeden účet k autorizaci určitých transakcí.",
+  "page-find-wallet-showing": "Zobrazeno "
 }

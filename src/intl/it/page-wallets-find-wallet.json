@@ -5,12 +5,12 @@
   "page-find-wallet-last-updated": "Ultimo aggiornamento",
   "page-find-wallet-meta-description": "Trova e confronta portafogli Ethereum in base alle caratteristiche che cerchi.",
   "page-find-wallet-meta-title": "Trova un portafoglio Ethereum",
-  "page-find-wallet-multisig": "Account multifirma",
-  "page-find-wallet-multisig-desc": "Per aumentare la sicurezza, i portafogli multifirma richiedono che più account autorizzino determinate transazioni.",
-  "page-find-wallet-showing": "Vengono mostrati ",
-  "page-find-wallet-swaps": "Scambio di token decentralizzato",
-  "page-find-wallet-swaps-desc": "Scambia ETH e altri token direttamente dal tuo portafoglio.",
   "page-find-wallet-title": "Trova un portafoglio",
   "page-find-wallet-try-removing": "Prova rimuovere una o due funzionalità",
-  "page-stake-eth": "Fai staking con gli ETH"
+  "page-stake-eth": "Fai staking con gli ETH",
+  "page-find-wallet-swaps": "Scambio di token decentralizzato",
+  "page-find-wallet-swaps-desc": "Scambia ETH e altri token direttamente dal tuo portafoglio.",
+  "page-find-wallet-multisig": "Account multifirma",
+  "page-find-wallet-multisig-desc": "Per aumentare la sicurezza, i portafogli multifirma richiedono che più account autorizzino determinate transazioni.",
+  "page-find-wallet-showing": "Vengono mostrati "
 }
