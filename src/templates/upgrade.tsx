@@ -345,7 +345,6 @@ const TitleCard = (props: ChildOnlyProp) => {
       borderRadius="base"
       boxShadow={{ lg: cardBoxShadow }}
       maxW={{ base: "full", lg: "640px" }}
-      mt={{ base: 0, lg: 12 }}
       p={8}
       top={{ lg: 24 }}
       left={{ lg: 24 }}
