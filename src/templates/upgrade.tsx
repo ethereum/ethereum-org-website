@@ -264,20 +264,6 @@ const SummaryPoint = (props: ChildOnlyProp) => (
   <ListItem color="text300" mb={0} {...props} />
 )
 
-const DesktopBreadcrumbs = chakra(Breadcrumbs, {
-  baseStyle: {
-    mt: 2,
-    display: { base: "none", lg: "block" },
-  },
-})
-
-const MobileBreadcrumbs = chakra(Breadcrumbs, {
-  baseStyle: {
-    mt: 2,
-    display: { lg: "none" },
-  },
-})
-
 type ButtonDropdownProps = Pick<
   ComponentPropsWithRef<typeof ButtonDropdown>,
   "list"
@@ -416,8 +402,7 @@ const UpgradePage = ({
     <Container>
       <HeroContainer>
         <TitleCard>
-          <DesktopBreadcrumbs slug={slug} startDepth={1} />
-          <MobileBreadcrumbs slug={slug} startDepth={1} />
+          <Breadcrumbs slug={slug} startDepth={1} mt={2} />
           <Title>{mdx.frontmatter.title}</Title>
           <Box>
             <List listStyleType="disc">
