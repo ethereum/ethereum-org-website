@@ -1,5 +1,5 @@
 import {
-  extendTheme,
+  extendBaseTheme,
   type ThemeConfig,
   type ThemeOverride,
 } from "@chakra-ui/react"
@@ -44,5 +44,4 @@ const theme: ThemeOverride = {
   components,
 }
 
-// TODO: use `extendBaseTheme` when updating theming for components for new DS
-export default extendTheme(theme)
+export default extendBaseTheme(theme)
