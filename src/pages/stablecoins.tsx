@@ -168,6 +168,9 @@ const H3 = styled.h3`
 
 const StyledCalloutBanner = styled(CalloutBanner)`
   margin: 2rem 0 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin: 2rem 0 2rem;
+  }
 `
 
 const FullWidthContainer = styled(Page)`
@@ -255,6 +258,10 @@ const InfoIcon = styled(Icon)`
 
 const ButtonLinkWrap = styled(ButtonLink)`
   white-space: break-spaces;
+  text-align: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
+    padding: 1.8rem 0;
+  }
 `
 
 const ButtonLinkContainer = styled.div`
@@ -262,6 +269,11 @@ const ButtonLinkContainer = styled.div`
   flex-direction: row;
   flex-flow: wrap;
   gap: 1em;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 const PaddedContent = styled(Content)`
