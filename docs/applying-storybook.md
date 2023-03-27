@@ -31,7 +31,7 @@ src/
 └── components/
     └── ComponentA/
         ├── index.tsx
-        ├── CommponentA.stories.tsx
+        ├── ComponentA.stories.tsx
         └── // Any other files as applicable (utils, child components, useHook, etc.)
 ```
 
