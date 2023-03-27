@@ -331,7 +331,7 @@ lighthouse beacon_node \
     --datadir /data/ethereum \
     --http \
     --execution-endpoint http://127.0.0.1:8551 \
-    --execution-jwt /path/to/jwtsecret \
+    --execution-jwt /path/to/jwtsecret
 ```
 
 ##### Running Lodestar
