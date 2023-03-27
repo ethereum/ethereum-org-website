@@ -25,10 +25,10 @@ import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
 import RandomAppList from "../components/RandomAppList"
-import UpgradeTableOfContents, {
-  Item as ItemTableOfContents,
-} from "../components/UpgradeTableOfContents"
-import TableOfContents, { Item } from "../components/TableOfContents"
+import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
+import TableOfContents, {
+  type Item as ItemTableOfContents,
+} from "../components/TableOfContents"
 import Translation from "../components/Translation"
 import SectionNav from "../components/SectionNav"
 import {
@@ -316,7 +316,7 @@ const UseCasePage = ({
     throw new Error("Required `title` property missing for use-cases template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
-  const tocItems = mdx.tableOfContents?.items as Array<Item>
+  const tocItems = mdx.tableOfContents?.items as ItemTableOfContents[]
   const summaryPoints = getSummaryPoints(mdx.frontmatter)
 
   const { editContentUrl } = siteData.siteMetadata || {}
