@@ -5,12 +5,12 @@
   "page-find-wallet-last-updated": "Son güncelleme",
   "page-find-wallet-meta-description": "İstediğiniz özelliklere göre Ethereum cüzdanlarını bulun ve karşılaştırın.",
   "page-find-wallet-meta-title": "Bir Ethereum cüzdanı bulun",
-  "page-find-wallet-multisig": "Çoklu imza hesapları",
-  "page-find-wallet-multisig-desc": "Ekstra güvenlik için, çoklu imza cüzdanları belirli işlemleri yetkilendirmek için birden fazla hesap gerektirir.",
-  "page-find-wallet-showing": "Gösteriliyor ",
-  "page-find-wallet-swaps": "Merkezi olmayan token takasları",
-  "page-find-wallet-swaps-desc": "ETH ve diğer tokenler arasında doğrudan cüzdanınızdan işlem yapın.",
   "page-find-wallet-title": "Cüzdan bul",
   "page-find-wallet-try-removing": "Bir veya iki özelliği kaldırmayı deneyin",
-  "page-stake-eth": "ETH stake etme"
+  "page-stake-eth": "ETH stake etme",
+  "page-find-wallet-swaps": "Merkezi olmayan token takasları",
+  "page-find-wallet-swaps-desc": "ETH ve diğer tokenler arasında doğrudan cüzdanınızdan işlem yapın.",
+  "page-find-wallet-multisig": "Çoklu imza hesapları",
+  "page-find-wallet-multisig-desc": "Ekstra güvenlik için, çoklu imza cüzdanları belirli işlemleri yetkilendirmek için birden fazla hesap gerektirir.",
+  "page-find-wallet-showing": "Gösteriliyor "
 }

@@ -52,7 +52,7 @@ There are various free [services](/developers/docs/nodes-and-clients/nodes-as-a-
 
 Archive node in this context means data served by user facing execution layer clients as they handle the state database and provide JSON-RPC endpoints. Configuration options, sync time and database size may vary by client. For details, please refer to the documentation provided by your client.
 
-Before starting your own archive node, learn about the differences between the clients and especially the various [hardware requirements](/developers/docs/nodes-and-clients/run-a-node/#requirements). Most clients are not optimized for this feature and their archives requires more than 12TB of space. In contrast, implementations like Erigon and Akula can store the same data in under 3TB which makes them the most effective way of running an archive node.
+Before starting your own archive node, learn about the differences between the clients and especially the various [hardware requirements](/developers/docs/nodes-and-clients/run-a-node/#requirements). Most clients are not optimized for this feature and their archives requires more than 12TB of space. In contrast, implementations like Erigon can store the same data in under 3TB which makes them the most effective way of running an archive node.
 
 ## Recommended practices
 

@@ -14,7 +14,7 @@ summaryPoint3: Auf Grundlage von intelligenten Verträgen auf der Ethereum-Block
 
 NFTs erobern derzeit regelrecht die Welt der digitalen Kunst und Sammelgegenstände im Sturm. Digitale Künstler erleben dank der enormen Verkäufe an ein neues Krypto-Publikum gerade einen Wandel in ihrem Leben. Und auch prominente Personen springen auf diesen Zug auf, da sich neue Gelegenheiten eröffnen, um mit ihren Fans zu kommunizieren. Doch digitale Kunst ist nur eine Verwendungsform für NFTs. Tatsächlich lassen sie sich nutzen, um jegliche Form von Besitz an einem einzigartigen Asset darzustellen, wie zum Beispiel eine Urkunde für einen digitalen oder physischen Gegenstand.
 
-Wäre Andy Warhol Ende der 90er Jahre geboren, hätte er wohl die Suppe von Campbell als NFT geprägt. Es ist nur eine Frage der Zeit, bis Kanye West eine Kollektion Yeezys auf Ethereum umsetzt. Und eines Tages weisen Sie vielleicht den Besitz Ihres Autos per NFT nach.
+Wäre Andy Warhol Ende der 90er Jahre geboren, hätte er wohl die Suppe von Campbell als NFT geprägt. Es ist nur eine Frage der Zeit, bis Nike eine Auswahl von Jordans auf Ethereum umsetzt. Und eines Tages weisen Sie vielleicht den Besitz Ihres Autos per NFT nach.
 
 ## Was ist ein NFT? {#what-are-nfts}
 
@@ -153,6 +153,7 @@ Im Folgenden erfahren Sie mehr über ein paar der besser entwickelten Anwendungs
 - [Domänennamen](#nft-domains)
 - [Physische Gegenstände](#nft-physical-items)
 - [Investitionen und Sicherheiten](#nfts-and-defi)
+- [Tokenschranke](#tokengating)
 
 <Divider />
 
@@ -273,6 +274,24 @@ Berichten zufolge ist das Anbieten gefälschter Hochschulabschlüsse eine Millia
 
 <Divider />
 
+### Tokenschranke {#tokengating}
+
+Tokenschranke ist eine Möglichkeit, den Zugriff auf etwas einzuschränken und NFTs als Optiont zum Entsperren eines Zugriffs zu verwenden. Diese Möglichkeiten können je nach Plattform sehr unterschiedlich gestalet sein. Einige beliebte Beispiele sind geschlossene Inhalte, private Chat-Server und in der Welt des E-Commerce exklusive Produkte.
+
+Eine Plattform, die Tokenschranken durchführt, wird Sie in der Regel auffordern, Ihre Wallet zu verbinden, um nachzuweisen, dass Sie die erforderliche NFT besitzen. Wenn Sie über das geforderte NFT verfügen erhalten Sie Zugriff. Wenn nicht, bleibt die angeforderte Sache verschlossen. NFTs sind aufgrund ihrer Einzigartigkeit eine großartige Möglichkeit für die Valdierung – Sie können das Eigentum nicht vortäuschen, um Zugang zu der angestrebten Sache zu erhalten.
+
+Da sich die NFTs auf Ethereum befinden, können sie zum Entsperren von Ethereum-Tokenschranken auf jeder Plattform verwendet werden, die sie implementiert. Ein einziges NFT in Ihren Besitz könnte geschützte Inhalte, private Chat-Server und exklusive Produkte für völlig unterschiedliche Websites und Anwendungen freischalten.
+
+Wenn das Prägen und Verteilen von NFTs um Gemeinschaftsgenerierung oder Digitalisierung von Gemeinschaften geht, dann geht es bei Tokenschranken um die Pflege von Gemeinschaften. Sie sieht NFTs mehr als Werkzeug für Mitgliedschaft oder Loyalität - und eine großartige Möglichkeit, Belohnungen zuverlässig zu distributieren.
+
+#### Beispiele
+
+- [Collab.land](https://collab.land/) nutzt Tokenschranken für Discord-Chat-Server oder Telegram-Gruppen
+- [Unlock protocol](https://unlock-protocol.com/) ist ein Protokoll für Tokenschranken
+- [Shopify](https://help.shopify.com/en/manual/products/digital-service-product/nfts) hat eine wachsende Liste von Apps, die Händlern ermöglichen, Zugang zu Produkten und Rabatten mithilfe von Tokengating zu reglementieren
+
+<Divider />
+
 ## Ethereum und NFTs {#ethereum-and-nfts}
 
 Es gibt eine Reihe von Gründen, weshalb Ethereum ermöglicht, dass NFTs funktionieren:
@@ -285,20 +304,15 @@ Es gibt eine Reihe von Gründen, weshalb Ethereum ermöglicht, dass NFTs funktio
 
 ## Die Umweltauswirkungen von NFTs {#environmental-impact-nfts}
 
-NFTs werden immer beliebter, was bedeutet, dass sie auch vermehrt unter die Lupe genommen werden – vor allem was ihren CO2-Fußabdruck angeht.
+Das Erstellen und Übertragen von NFTs sind einfache Ethereum-Transaktionen - Das Prägen, Kaufen, Tauschen oder Interagieren mit NFTs verbraucht keine Energie. Seit [The Merge](/upgrades/merge) ist Ethereum eine energieeffiziente Blockchain. Demnach sind die Umweltauswirkungen bei der Nutzung von NFTs gering.
 
-Zum Verständnis:
-
-- Das Erschaffen oder Versenden von NFTs sind lediglich Ethereum-Transaktionen - sie haben weder einen direkten Einfluss auf den Energiekonsum von Ethereum, noch verbrauchen sie anderweitig Energie.
-- Ethereum ist eine energiesparende Blockchain. Das bedeutet, dass der Einfluss auf die Umwelt durch das Erschaffen, Kaufen und Versenden von NFTs sehr gering ist.
-
-Die nächsten Abschnitte erklären dies etwas genauer...
+[ Mehr zum Energieverbrauch von Ethereum](/energy-consumption/).
 
 ### Die NFTs trifft keine Schuld {#nft-qualities}
 
 Das gesamte NFT-Ökosystem funktioniert, weil Ethereum dezentral und sicher ist.
 
-Dezentralisiert bedeutet, dass Sie und alle anderen verifizieren können, dass Sie etwas besitzen. Und das alles ohne Vertrauen oder die Verwahrung an Drittparteien abzugeben, die Ihnen nach Belieben ihre eigenen Regeln aufzwingen können. Das bedeutet auch, dass die NFTs über viele verschiedene Produkte und Märkte bewegt werden können.
+Dezentralisiert bedeutet, dass Sie und alle anderen verifizieren können, dass Sie etwas besitzen. Und das alles ohne Vertrauen oder die Verwahrung an Drittparteien abzugeben, die Ihnen nach Belieben ihre eigenen Regeln aufzwingen können. Das bedeutet auch, dass die NFTs über viele verschiedene Produkte und Märkte hinweg bewegt werden können.
 
 Sicher bedeutet, dass niemand Ihren NFT per Copy-and-paste kopieren oder stehlen kann.
 
@@ -306,7 +320,7 @@ Diese Eigenschaften von Ethereum ermöglichen den Besitz von digitalen Einzelst�
 
 #### NFTs prägen {#minting-nfts}
 
-Wenn Sie einen NFT minten, müssen einige Dinge passieren:
+Wenn Sie einen NFT prägen, müssen einige Dinge passieren:
 
 - Es muss als Asset in der Blockchain bestätigt werden.
 - Der Kontostand des Eigentümers muss aktualisiert werden, um dieses Asset einzubinden. Dadurch wird es möglich, es zu handeln oder es nachweislich zu „besitzen“.
@@ -317,7 +331,7 @@ Alle diese Aufgaben werden von Blockherstellern und Validatoren erledigt. Ihre N
 
 #### NFT-Sicherheit {#nft-security}
 
-Die Sicherheit von Ethereum basiert auf Proof-of-Stake. Das System ist darauf ausgelegt, böswillige Handlungen mithilfe finanziell negativer Anreize zu verhindern und Ethereum dadurch Manipulationen gegenüber sicherer zu machen. Das macht NFTs überhaupt erst möglich. Sobald der Block, welcher Ihre NFT-Transaktion beinhaltet, endgültig festgelegt wird, würde es einen Angreifer Millionen von ETH kosten, um dies wieder zu ändern. Sobald der Block, welcher Ihre NEU-Transaktion beinhaltet, endgültig festgelegt wird, würde es einen Angreifer Millionen von ETH kosten, um dies wieder zu ändern.
+Die Sicherheit von Ethereum basiert auf Proof-of-Stake. Das System ist darauf ausgelegt, böswillige Handlungen mithilfe finanziell negativer Anreize zu verhindern und Ethereum dadurch Manipulationen gegenüber sicherer zu machen. Das macht NFTs überhaupt erst möglich. Sobald der Block, welcher Ihre NFT-Transaktion beinhaltet, endgültig festgelegt wird, würde es einen Angreifer Millionen von ETH kosten, um dies wieder zu ändern. Sobald der Block, welcher Ihre neue Transaktion beinhaltet, endgültig festgelegt wird, würde es einen Angreifer Millionen von ETH kosten, um dies wieder zu ändern.
 
 Sicherheitsprobleme mit NFTs stehen oft im Zusammenhang mit Phishing-Betrügereien, Schwachstellen bei intelligenten Verträgen oder Benutzerfehlern (z. B. unbeabsichtigtes Veröffentlichen privater Schlüssel). Damit wird eine sichere Wallet für NFT-Besitzer umso wichtiger.
 
@@ -325,9 +339,9 @@ Sicherheitsprobleme mit NFTs stehen oft im Zusammenhang mit Phishing-Betrügerei
   Weiteres zur Sicherheit
 </ButtonLink>
 
-## Gestalten mit NFTs {#build-with-nfts}
+## NFTs erstellen {#build-with-nfts}
 
-Die meisten NFTs werden mit dem einheitlichen Standard [ERC-721](/developers/docs/standards/tokens/erc-721/) erstellt. Es gibt jedoch noch andere Standards, die für Sie unter Umständen von Interesse sind. Der Standard [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) erlaubt halb-fungible Token, die besonders im Gaming-Bereich nützlich sind. Kürzlich wurde [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) vorgeschlagen, um das Prägen von NFTs wesentlich effizienter zu machen. Mit diesem Standard können Sie beliebig viele Stücke in einer Transaktion prägen.
+Die meisten NFTs werden mit dem einheitlichen Standard [ERC-721](/developers/docs/standards/tokens/erc-721/) erstellt. Es gibt jedoch noch andere Standards, die für Sie unter Umständen von Interesse sind. Der Standard [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) erlaubt halb-fungible Token, die besonders im Gaming-Bereich nützlich sind. Kürzlich wurde [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) vorgeschlagen, um das Prägen von NFTs wesentlich effizienter zu machen. Dieser Standard ermöglicht es Ihnen, so viele Tokens wie Sie möchten in einer Transaktion zu prägen!
 
 ## Weiterführende Informationen {#further-reading}
 
@@ -337,4 +351,5 @@ Die meisten NFTs werden mit dem einheitlichen Standard [ERC-721](/developers/doc
 - [Alles, was Sie über das Metaverse wissen müssen](https://foundation.app/blog/enter-the-metaverse) – _Foundation-Team, foundation.app_
 - [Nein, Krypto-Künstler schaden dem Planeten nicht](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
 - [Der Energieverbrauch von Ethereum](/energy-consumption/)
-- [Der Strombedarf eines Landes, nicht mehr](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, 18. Mai 2021_
+
+<QuizWidget quizKey="nfts" />

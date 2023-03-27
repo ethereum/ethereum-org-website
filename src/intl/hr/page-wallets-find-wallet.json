@@ -5,12 +5,12 @@
   "page-find-wallet-last-updated": "Posljednje ažuriranje",
   "page-find-wallet-meta-description": "Pronađite i usporedite Ethereumove novčanike na temelju značajki koje želite.",
   "page-find-wallet-meta-title": "Pronađite Ethereumov novčanik",
-  "page-find-wallet-multisig": "Računi s više potpisa",
-  "page-find-wallet-multisig-desc": "Radi dodatne sigurnosti, novčanici s više potpisa trebaju više od jednog računa za autorizaciju određenih transakcija.",
-  "page-find-wallet-showing": "Prikazivanje ",
-  "page-find-wallet-swaps": "Decentralizirane zamjene tokena",
-  "page-find-wallet-swaps-desc": "Trgujte između ETH-a i drugih tokena izravno iz svog novčanika.",
   "page-find-wallet-title": "Pronađite novčanik",
   "page-find-wallet-try-removing": "Pokušajte ukloniti jednu ili dvije značajke",
-  "page-stake-eth": "Ulog ETH"
+  "page-stake-eth": "Ulog ETH",
+  "page-find-wallet-swaps": "Decentralizirane zamjene tokena",
+  "page-find-wallet-swaps-desc": "Trgujte između ETH-a i drugih tokena izravno iz svog novčanika.",
+  "page-find-wallet-multisig": "Računi s više potpisa",
+  "page-find-wallet-multisig-desc": "Radi dodatne sigurnosti, novčanici s više potpisa trebaju više od jednog računa za autorizaciju određenih transakcija.",
+  "page-find-wallet-showing": "Prikazivanje "
 }

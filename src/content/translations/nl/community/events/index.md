@@ -2,6 +2,7 @@
 title: Ethereum-evenementen
 description: Hoe betrokken raken bij de Ethereum-gemeenschap.
 lang: nl
+hideEditButton: true
 ---
 
 ## Aankomende evenementen {#events}

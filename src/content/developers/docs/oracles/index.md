@@ -392,7 +392,7 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 
 **[Witnet](https://witnet.io/)** - _Witnet is a permissionless, decentralized, and censorship-resistant oracle helping smart contracts to react to real world events with strong crypto-economic guarantees._
 
-**[UMA Oracle](https://umaproject.org/products/optimistic-oracle)** - _UMA's optimistic oracle allows smart contracts to quickly and receive any kind of data for different applications, including insurance, financial derivatives, and prediction market._
+**[UMA Oracle](https://uma.xyz)** - _UMA's optimistic oracle allows smart contracts to quickly and receive any kind of data for different applications, including insurance, financial derivatives, and prediction markets._
 
 **[Tellor](https://tellor.io/)** - _Tellor is a transparent and permissionless oracle protocol for your smart contract to easily get any data whenever it needs it._
 

@@ -24,6 +24,7 @@ import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import ExpandableCard from "../components/ExpandableCard"
 import FeedbackCard from "../components/FeedbackCard"
+import BugBountyBanner from "../components/Banners/BugBountyBanner"
 import { getImage } from "../utils/image"
 
 import type { ChildOnlyProp, Context } from "../types"
@@ -444,6 +445,8 @@ const BugBountiesPage = ({
         title={t("page-upgrades-bug-bounty-meta-title")}
         description={t("page-upgrades-bug-bounty-meta-description")}
       />
+      {/* TODO: Remove April 6 */}
+      <BugBountyBanner />
       <Content>
         <HeroCard>
           <HeroContainer>

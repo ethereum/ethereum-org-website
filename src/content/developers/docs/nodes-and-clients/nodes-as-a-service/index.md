@@ -315,6 +315,18 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Fastest getting of the new block and reading of the blockchain
     - The best price per API call guarantee
 
+[**Zeeve**](https://www.zeeve.io/)
+
+- [Docs](https://www.zeeve.io/docs/)
+- Features
+  - Enterprise-grade no-code automation platform providing deployment, monitoring and management of Blockchain nodes and networks
+  - 30+ Supported Protocols & Integrations, and adding more
+  - Value added web3 infrastructure services like decentralized storage, decentralized identity and Blockchain Ledger data APIs for real-world use cases
+  - 24/7 support and proactive monitoring ensure the health of nodes all the time.
+  - RPC endpoints offer authenticated access to API’s, hassle free management with intuitive dashboard and analytics.
+  - Provides both managed cloud and bring your own cloud options to choose from and supports all major cloud providers like AWS, Azure, Google Cloud, Digital Ocean and on-premise.
+  - We use intelligent routing to hit the node closest to your user every time
+
 ## Further reading {#further-reading}
 
 - [List of Ethereum node services](https://ethereumnodes.com/)

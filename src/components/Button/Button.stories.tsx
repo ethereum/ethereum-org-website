@@ -28,6 +28,6 @@ export const OutlineColor: StoryObj<typeof Button> = {
 export const Disabled: StoryObj<typeof Button> = {
   args: {
     children: "I am disabled",
-    disabled: true,
+    isDisabled: true,
   },
 }

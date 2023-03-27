@@ -5,12 +5,12 @@
   "page-find-wallet-last-updated": "Laatst gewijzigd op",
   "page-find-wallet-meta-description": "Zoek en vergelijk Ethereum portemonnees op basis van de functies die u wilt.",
   "page-find-wallet-meta-title": "Vind een Ethereum Portemonnee",
-  "page-find-wallet-multisig": "Multi-signature accounts",
-  "page-find-wallet-multisig-desc": "Voor extra beveiliging, vereisen multi-signature portemonnees meer dan één account om bepaalde transacties te autoriseren.",
-  "page-find-wallet-showing": "Zichtbaar ",
-  "page-find-wallet-swaps": "Gedecentraliseerde token swaps",
-  "page-find-wallet-swaps-desc": "Handel tussen ETH en andere tokens, direct vanuit je portemonnee.",
   "page-find-wallet-title": "Vind een portemonnee",
   "page-find-wallet-try-removing": "Probeer een functie of twee te verwijderen",
-  "page-stake-eth": "Stake ETH"
+  "page-stake-eth": "Stake ETH",
+  "page-find-wallet-swaps": "Gedecentraliseerde token swaps",
+  "page-find-wallet-swaps-desc": "Handel tussen ETH en andere tokens, direct vanuit je portemonnee.",
+  "page-find-wallet-multisig": "Multi-signature accounts",
+  "page-find-wallet-multisig-desc": "Voor extra beveiliging, vereisen multi-signature portemonnees meer dan één account om bepaalde transacties te autoriseren.",
+  "page-find-wallet-showing": "Zichtbaar "
 }
