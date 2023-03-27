@@ -6,7 +6,6 @@
   "repository": "git@github.com:ethereum/ethereum-org-website.git",
   "author": "Sam Richards <sam.richards@ethereum.org>",
   "license": "MIT",
-  "private": false,
   "dependencies": {
     "@apollo/client": "^3.3.13",
     "@chakra-ui/gatsby-plugin": "^3.0.1",

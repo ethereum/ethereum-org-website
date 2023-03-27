@@ -62,7 +62,9 @@ public
 .DS_Store
 
 # Yarn
+.yarn/*
 yarn-error.log
+.yarn.lock
 .pnp/
 .pnp.js
 # Yarn Integrity file
