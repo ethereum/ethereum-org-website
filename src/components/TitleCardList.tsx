@@ -146,7 +146,7 @@ const TitleCardList: React.FC<IProps> = ({
               {title}
             </LinkOverlay>
 
-            <Box fontSize="s" marginBottom="0" opacity="0.7">
+            <Box fontSize="sm" marginBottom="0" color={descriptionCaptionColor}>
               {description}
             </Box>
           </Flex>
