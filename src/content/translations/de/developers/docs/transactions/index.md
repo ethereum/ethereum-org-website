@@ -2,7 +2,6 @@
 title: Transaktionen
 description: Eine Übersicht über die Transaktionen von Ethereum – wie sie arbeiten, ihre Datenstruktur und wie sie über eine App gesendet werden.
 lang: de
-sidebar: true
 ---
 
 Transaktionen sind kryptographisch signierte Anweisungen von Konten. Ein Konto wird eine Transaktion starten, um den Zustand des Ethereum-Netzwerks zu aktualisieren. Die einfachste Transaktion ist die Übertragung von ETH von einem Konto auf ein anderes.
@@ -182,7 +181,7 @@ Ursprünglich hatte Ethereum ein einziges Format für Transaktionen. Jede Transa
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 
-Ethereum hat sich so entwickelt, dass es mehrere Transaktionsarten unterstützt, damit neue Funktionen wie Zugriffslisten und [EIP-1559](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md) implementiert werden können, ohne die alten Transaktionsformate zu beeinflussen.
+Ethereum hat sich so entwickelt, dass es mehrere Transaktionsarten unterstützt, damit neue Funktionen wie Zugriffslisten und [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) implementiert werden können, ohne die alten Transaktionsformate zu beeinflussen.
 
 [EIP-2718: Typisierter Transaktionsumschlag](https://eips.ethereum.org/EIPS/eip-2718) definiert einen Transaktionstyp, der ein Umschlag für zukünftige Transaktionstypen ist.
 

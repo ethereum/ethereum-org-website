@@ -2,7 +2,6 @@
 title: Yrityksille
 description: Ohjeita, artikkeleita ja työkaluja julkisiin ja yksityisiin Ethereum-lohkoketjuihin yrityksille
 lang: fi
-sidebar: true
 sidebarDepth: 1
 ---
 

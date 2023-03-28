@@ -1,9 +1,10 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "react-intl"
+import { useI18next } from "gatsby-plugin-react-i18next"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
+import { Badge } from "@chakra-ui/react"
 
 import ButtonLink from "../components/ButtonLink"
 import Breadcrumbs from "../components/Breadcrumbs"
@@ -17,10 +18,8 @@ import MarkdownTable from "../components/MarkdownTable"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
-import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import ExpandableCard from "../components/ExpandableCard"
-import Roadmap from "../components/Roadmap"
 import TableOfContents, {
   Item as ItemTableOfContents,
 } from "../components/TableOfContents"
@@ -29,6 +28,7 @@ import SectionNav from "../components/SectionNav"
 import DocLink from "../components/DocLink"
 import GhostCard from "../components/GhostCard"
 import MatomoOptOut from "../components/MatomoOptOut"
+import UpgradeStatus from "../components/UpgradeStatus"
 import {
   Divider,
   Paragraph,
@@ -44,8 +44,10 @@ import UpcomingEventsList from "../components/UpcomingEventsList"
 import Icon from "../components/Icon"
 import SocialListItem from "../components/SocialListItem"
 import YouTube from "../components/YouTube"
+import TranslationChartImage from "../components/TranslationChartImage"
 import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
+import QuizWidget from "../components/Quiz/QuizWidget"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
@@ -129,7 +131,6 @@ const components = {
   table: MarkdownTable,
   MeetupList,
   RandomAppList,
-  Roadmap,
   Link,
   Logo,
   ButtonLink,
@@ -139,7 +140,7 @@ const components = {
   Card,
   Divider,
   SectionNav,
-  Pill,
+  Badge,
   Emoji,
   DocLink,
   ExpandableCard,
@@ -151,14 +152,17 @@ const components = {
   MatomoOptOut,
   Callout,
   YouTube,
+  TranslationChartImage,
   EnergyConsumptionChart,
+  QuizWidget,
+  UpgradeStatus,
 }
 
 const StaticPage = ({
   data: { siteData, pageData: mdx },
-  pageContext: { relativePath },
+  pageContext: { relativePath, slug },
 }: PageProps<Queries.StaticPageQuery, Context>) => {
-  const intl = useIntl()
+  const { language } = useI18next()
 
   if (!siteData || !mdx?.frontmatter || !mdx.parent)
     throw new Error(
@@ -183,13 +187,7 @@ const StaticPage = ({
 
   const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
   const { editContentUrl } = siteData.siteMetadata || {}
-  const absoluteEditPath =
-    relativePath.split("/").includes("whitepaper") ||
-    relativePath.split("/").includes("events")
-      ? ""
-      : `${editContentUrl}${relativePath}`
-
-  const slug = mdx.fields?.slug || ""
+  const absoluteEditPath = `${editContentUrl}${relativePath}`
 
   return (
     <Container>
@@ -206,27 +204,29 @@ const StaticPage = ({
         <ContentContainer>
           <Breadcrumbs slug={slug} />
           <LastUpdated
-            dir={isLangRightToLeft(intl.locale as Lang) ? "rtl" : "ltr"}
+            dir={isLangRightToLeft(language as Lang) ? "rtl" : "ltr"}
           >
             <Translation id="page-last-updated" />:{" "}
-            {getLocaleTimestamp(intl.locale as Lang, lastUpdatedDate)}
+            {getLocaleTimestamp(language as Lang, lastUpdatedDate)}
           </LastUpdated>
           <MobileTableOfContents
             editPath={absoluteEditPath}
             items={tocItems}
             isMobile={true}
             maxDepth={mdx.frontmatter.sidebarDepth!}
+            hideEditButton={!!mdx.frontmatter.hideEditButton}
           />
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
           <FeedbackCard isArticle />
         </ContentContainer>
-        {mdx.frontmatter.sidebar && tocItems && (
+        {tocItems && (
           <TableOfContents
             editPath={absoluteEditPath}
             items={tocItems}
             maxDepth={mdx.frontmatter.sidebarDepth!}
+            hideEditButton={!!mdx.frontmatter.hideEditButton}
           />
         )}
       </Page>
@@ -235,7 +235,21 @@ const StaticPage = ({
 }
 
 export const staticPageQuery = graphql`
-  query StaticPage($relativePath: String) {
+  query StaticPage($languagesToFetch: [String!]!, $relativePath: String) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-about", "page-community", "learn-quizzes", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     siteData: site {
       siteMetadata {
         editContentUrl
@@ -249,10 +263,10 @@ export const staticPageQuery = graphql`
         title
         description
         lang
-        sidebar
         sidebarDepth
         isOutdated
         postMergeBannerTranslation
+        hideEditButton
       }
       body
       tableOfContents

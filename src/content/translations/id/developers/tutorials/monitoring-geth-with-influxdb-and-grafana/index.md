@@ -4,11 +4,9 @@ description:
 author: "Mario Havel"
 tags:
   - "klien"
-  - "geth"
   - "node"
 skill: intermediate
 lang: id
-sidebar: true
 published: 2021-01-13
 ---
 

@@ -2,7 +2,6 @@
 title: Okos szerződések telepítése
 description:
 lang: hu
-sidebar: true
 incomplete: true
 ---
 

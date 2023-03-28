@@ -2,7 +2,6 @@
 title: Keamanan Ethereum dan pencegahan penipuan
 description: Tetap aman di Ethereum
 lang: id
-sidebar: true
 ---
 
 # Keamanan Ethereum dan pencegahan penipuan {#introduction}
@@ -158,8 +157,6 @@ Selalu pastikan alamat yang Anda kirim sama persis dengan alamat penerima yang d
 Saat berinteraksi dengan kontrak pintar, jangan izinkan batas pembelanjaan tak terbatas. Pengeluaran tak terbatas dapat memungkinkan kontrak pintar menguras dompet Anda. Sebaliknya, tetapkan batas pengeluaran hanya untuk jumlah yang diperlukan untuk transaksi.
 
 Banyak dompet Ethereum menawarkan perlindungan batas untuk melindungi dari akun yang terkuras.
-
-[Jelajahi dompet dengan perlindungan terbatas](/wallets/find-wallet/?filters=has_limits_protection)
 
 <Divider />
 

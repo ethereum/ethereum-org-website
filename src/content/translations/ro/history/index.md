@@ -2,7 +2,6 @@
 title: Istoricul şi fork-urile lui Ethereum
 description: Un istoric al blockchain-ului Ethereum care cuprinde repere majore, lansări și fork-uri.
 lang: ro
-sidebar: true
 sidebarDepth: 1
 ---
 
@@ -121,7 +120,7 @@ Actualizarea Berlin a optimizat costul gazului pentru anumite acțiuni EVM și c
 
 #### Rezumat {#beacon-chain-genesis-summary}
 
-[Lanțul Beacon](/upgrades/beacon-chain/) avea nevoie de 16384 de depozite de 32 de ETH mizați pentru a transfera în siguranță. Acest lucru se întâmpla pe 27 noiembrie, ceea ce înseamnă că Lanțul Beacon a început să producă blocuri pe 1 decembrie 2020. Acesta este primul pas important în realizarea [viziunii Ethereum](/upgrades/vision/).
+[Lanțul Beacon](/upgrades/beacon-chain/) avea nevoie de 16384 de depozite de 32 de ETH mizați pentru a transfera în siguranță. Acest lucru se întâmpla pe 27 noiembrie, ceea ce înseamnă că Lanțul Beacon a început să producă blocuri pe 1 decembrie 2020. Acesta este primul pas important în realizarea [viziunii Ethereum](/roadmap/vision/).
 
 [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 

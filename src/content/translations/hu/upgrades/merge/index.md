@@ -3,7 +3,6 @@ title: Főhálózat dokkolása az Eth2-vel
 description: Tudj meg többet a dokkolásról - amikor a főhálózati Ethereum csatlakozik a Beacon Chain által koordinált proof-of-stake rendszerhez.
 lang: hu
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: Végül a jelenlegi Ethereum főhálózat "dokkolni" fog a többi Eth2 fejlesztéssel együtt.
 summaryPoint2: A dokkolás egyesíti az "Eth1" főhálózatot a Beacon Chainnel és a sharding rendszerrel.
@@ -12,7 +11,7 @@ summaryPoint4: Úgy is ismerheted, mint a Fázis 1.5 a technikai ütemtervek sze
 ---
 
 <UpgradeStatus dateKey="page-upgrades-merge-date">
-    Ezt a fejlesztést a shard láncok eljövetele fogja követni. De ez lesz az a pillanat, amikor az <a href="/upgrades/vision/">Eth2 vízió</a> teljesen megvalósul – nagyobb skálázhatóság, biztonság és fenntarthatóság valamint letétbe helyezés, mely a teljes hálózatot biztosítja.
+    Ezt a fejlesztést a shard láncok eljövetele fogja követni. De ez lesz az a pillanat, amikor az <a href="/roadmap/vision/">Eth2 vízió</a> teljesen megvalósul – nagyobb skálázhatóság, biztonság és fenntarthatóság valamint letétbe helyezés, mely a teljes hálózatot biztosítja.
 </UpgradeStatus>
 
 ## Mi az a dokkolás? {#what-is-the-docking}
@@ -29,7 +28,7 @@ A főhálózat lehetővé teszi majd az okosszerződések futtatását a proof-o
 
 ## A dokkolás után {#after-the-docking}
 
-Ez a proof-of-work végét és egy fenntarthatóbb, környezetbarátabb korszak kezdetét fogja jelenteni az Ethereum számára. Ettől a ponttól kezdve az Ethereum skálázható, biztonságos és fenntartható lesz, ahogy az az [Eth2 vízió](/upgrades/vision/) szerint körvonalazódott.
+Ez a proof-of-work végét és egy fenntarthatóbb, környezetbarátabb korszak kezdetét fogja jelenteni az Ethereum számára. Ettől a ponttól kezdve az Ethereum skálázható, biztonságos és fenntartható lesz, ahogy az az [Eth2 vízió](/roadmap/vision/) szerint körvonalazódott.
 
 ## A fejlesztések közötti kapcsolat {#relationship-between-upgrades}
 

@@ -2,7 +2,6 @@
 title: Машинный код для EVM
 description: Список всех доступных кодов операций для виртуальной машины Ethereum.
 lang: ru
-sidebar: true
 ---
 
 ## Описание {#overview}

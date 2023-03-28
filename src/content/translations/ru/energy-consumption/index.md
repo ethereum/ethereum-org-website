@@ -2,7 +2,6 @@
 title: Энергопотребление Ethereum
 description: Основная информация, необходимая для понимания энергопотребления Ethereum.
 lang: ru
-sidebar: true
 ---
 
 # Энергопотребление Ethereum {#introduction}
@@ -76,7 +75,7 @@ _Мы должны также учитывать, что Ethereum не огра�
 
 ## Похожие темы {#related-topics}
 
-- [Видение Ethereum](/upgrades/vision/)
+- [Видение Ethereum](/roadmap/vision/)
 - [Beacon Chain](/upgrades/beacon-chain)
 - [Слияние](/upgrades/merge/)
 - [Шардинг](/upgrades/beacon-chain/)

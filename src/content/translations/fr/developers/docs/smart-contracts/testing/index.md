@@ -2,7 +2,6 @@
 title: Tester les contrats intelligents
 description:
 lang: fr
-sidebar: true
 incomplete: true
 ---
 

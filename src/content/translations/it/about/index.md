@@ -2,7 +2,6 @@
 title: Chi siamo
 description: Informazioni sul team, la community e la mission di ethereum.org
 lang: it
-sidebar: true
 ---
 
 # Informazioni su ethereum.org {#about-ethereumorg}
@@ -26,7 +25,7 @@ Per farlo ci basiamo su alcuni principi chiave.
 
 ## Principi fondamentali {#core-principles}
 
-### 1. ethereum.org è un portale per Ethereum {#core-principles-1}
+### 1. ethereum.org è un portale per Ethereum 🌏 {#core-principles-1}
 
 Vogliamo catturare l'interesse dei nostri utenti e rispondere alle loro domande Dunque il nostro portale deve combinare informazione, "momenti magici" e collegamenti alle preziose risorse della community. Il nostro contenuto è meramente introduttivo e non vuole sostituire risorse esaustive già esistenti. Il nostro desiderio è fornisce sostegno e integrare le informazioni con le risorse offerte dalla community, dando loro più visibilità e rendendole quindi più reperibili.
 
@@ -57,10 +56,6 @@ Abbiamo una [guida di stile](/contributing/style-guide/) per standardizzare cert
 Apprezziamo feedback sia sui principi di design che sulla guida di stile. Ricorda, ethereum.org è per la community, dalla community.
 
 Assicurati di leggere [i nostri principi](/contributing/design-principles/) e [la nostra guida di stile](/contributing/style-guide/) se desideri [contribuire al sito](/contributing/).
-
-## Roadmap {#roadmap}
-
-<Roadmap />
 
 ## Posizioni aperte {#open-jobs}
 

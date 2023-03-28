@@ -3,7 +3,6 @@ title: Jak korzystać z Manticore, aby znaleźć błędy w inteligentnych kontra
 description: Jak używać Manticore do automatycznego wyszukiwania błędów w inteligentnych kontraktach
 author: Trailofbits
 lang: pl
-sidebar: true
 tags:
   - "solidity"
   - "inteligentne kontrakty"

@@ -1,7 +1,6 @@
 ---
 title: Msaada wa Ethereum
 description: Pata msaada kwenye ikolojia ya Ethereum.
-sidebar: true
 lang: sw
 ---
 

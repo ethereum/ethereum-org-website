@@ -10,7 +10,6 @@ tags:
   - "contratos inteligentes"
 skill: beginner
 lang: es
-sidebar: true
 published: 2021-04-22
 ---
 

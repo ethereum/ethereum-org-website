@@ -3,7 +3,6 @@ title: De Beacon Chain
 description: Leer meer over de Beacon Chain - de upgrade die proof-of-stake Ethereum introduceerde.
 lang: nl
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: De Beacon Chain verandert niks aan de Ethereum die we nu gebruiken.
 summaryPoint2: Het zal het netwerk coördineren en als consensuslaag fungeren.
@@ -19,7 +18,7 @@ summaryPoint4: U kent dit wellicht als "Fase 0" op technische routekaarten.
 
 De Beacon Chain zal het uitgebreide netwerk leiden of coördineren tussen [shards](/upgrades/sharding/) en [stakers](/staking/). Maar het zal niet zijn zoals het [Ethereum-hoofdnet](/glossary/#mainnet) dat we nu gebruiken. Het kan geen accounts of slimme contracten aan.
 
-Het doel van de Beacon Chain zal in de loop van de tijd veranderen, maar het is een fundamenteel onderdeel voor [het veilige, duurzame en haalbare Ethereum waar we naartoe werken.](/upgrades/vision/).
+Het doel van de Beacon Chain zal in de loop van de tijd veranderen, maar het is een fundamenteel onderdeel voor [het veilige, duurzame en haalbare Ethereum waar we naartoe werken.](/roadmap/vision/).
 
 ## Beacon Chain-kenmerken {#beacon-chain-features}
 

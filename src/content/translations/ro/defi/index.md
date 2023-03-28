@@ -4,7 +4,6 @@ description: Prezentare generală a DeFi de pe Ethereum
 lang: ro
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../assets/use-cases/defi.png
 alt: Sigla Eth alcătuită din piese lego.
 sidebarDepth: 2
@@ -333,7 +332,6 @@ DeFi este o mișcare open-source. Protocoalele și aplicațiile DeFi sunt dtoate
 
 ### Date despre DeFi {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 

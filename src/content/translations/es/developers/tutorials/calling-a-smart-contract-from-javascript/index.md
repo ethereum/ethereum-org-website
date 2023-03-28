@@ -9,7 +9,6 @@ tags:
   - "web3.js"
 skill: beginner
 lang: es
-sidebar: true
 published: 2020-04-19
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/ejecutar-un-smart-contract-desde-javascript/

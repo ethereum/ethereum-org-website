@@ -4,7 +4,6 @@ description: Gambaran umum tentang NFT di Ethereum
 lang: id
 template: use-cases
 emoji: ":frame_with_picture:"
-sidebar: true
 sidebarDepth: 2
 image: ../../../../assets/infrastructure_transparent.png
 alt: Logo Eth yang ditampilkan melalui hologram.

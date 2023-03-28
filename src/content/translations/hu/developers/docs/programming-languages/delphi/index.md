@@ -2,7 +2,6 @@
 title: Ethereum Delphi fejlesztőknek
 description: Tanuld meg az Ethereum fejlesztést a Delphi programozási nyelv használatával
 lang: hu
-sidebar: true
 incomplete: true
 ---
 

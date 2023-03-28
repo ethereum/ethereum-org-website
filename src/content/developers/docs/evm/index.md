@@ -2,7 +2,6 @@
 title: Ethereum Virtual Machine (EVM)
 description: An introduction to the Ethereum virtual machine and how it relates to state, transactions, and smart contracts.
 lang: en
-sidebar: true
 ---
 
 The EVM’s physical instantiation can’t be described in the same way that one might point to a cloud or an ocean wave, but it does _exist_ as one single entity maintained by thousands of connected computers running an Ethereum client.
@@ -59,9 +58,9 @@ _Diagrams adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/
 
 All implementations of the EVM must adhere to the specification described in the Ethereum Yellowpaper.
 
-Over Ethereum's 7 year history, the EVM has undergone several revisions, and there are several implementations of the EVM in various programming languages.
+Over Ethereum's nine year history, the EVM has undergone several revisions, and there are several implementations of the EVM in various programming languages.
 
-All [Ethereum clients](/developers/docs/nodes-and-clients/#execution-clients) include an EVM implementation. Additionally there are multiple standalone implementations, including:
+[Ethereum execution clients](/developers/docs/nodes-and-clients/#execution-clients) include an EVM implementation. Additionally, there are multiple standalone implementations, including:
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_

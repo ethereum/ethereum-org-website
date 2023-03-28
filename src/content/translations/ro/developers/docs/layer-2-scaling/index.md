@@ -2,7 +2,6 @@
 title: Scalare Nivel 2
 description: Prezentarea diferitelor opțiuni de scalare care sunt dezvoltate în prezent de comunitatea Ethereum.
 lang: ro
-sidebar: true
 incomplete: true
 sidebarDepth: 3
 isOutdated: true

@@ -4,11 +4,9 @@ description:
 author: "Mario Havel"
 tags:
   - "clienți"
-  - "geth"
   - "noduri"
 skill: intermediate
 lang: ro
-sidebar: true
 published: 2021-01-13
 ---
 

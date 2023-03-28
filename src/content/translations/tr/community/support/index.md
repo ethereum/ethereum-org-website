@@ -1,7 +1,6 @@
 ---
 title: Ethereum destek
 description: Ethereum ekosisteminde destek alın.
-sidebar: true
 lang: tr
 ---
 

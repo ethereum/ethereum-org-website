@@ -120,6 +120,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "gu",
+    "hrefLang": "gu",
+    "name": "Gujarati",
+    "localName": "ગુજરાતી",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "hi",
     "hrefLang": "hi",
     "name": "Hindi",
@@ -188,6 +196,14 @@
     "hrefLang": "kk",
     "name": "Kazakh",
     "localName": "қазақ",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
+    "code": "km",
+    "hrefLang": "km",
+    "name": "Khmer",
+    "localName": "ចក្រភពខ្មែរ",
     "langDir": "ltr",
     "dateFormat": "MM/DD/YYYY"
   },
@@ -332,6 +348,14 @@
     "hrefLang": "sw",
     "name": "Swahili",
     "localName": "Kiswahili",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
+    "code": "ta",
+    "hrefLang": "ta",
+    "name": "Tamil",
+    "localName": "தமிழ்",
     "langDir": "ltr",
     "dateFormat": "MM/DD/YYYY"
   },

@@ -2,7 +2,6 @@
 title: Oracole
 description: Oracolele vă ajută să introduceţi date din lumea reală în aplicația dvs. Ethereum, deoarece contractele inteligente nu pot interoga singure datele din lumea reală.
 lang: ro
-sidebar: true
 incomplete: true
 ---
 

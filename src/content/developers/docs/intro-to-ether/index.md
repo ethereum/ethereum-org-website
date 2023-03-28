@@ -2,7 +2,6 @@
 title: Intro to ether
 description: A developer's introduction to the ether cryptocurrency.
 lang: en
-sidebar: true
 ---
 
 ## Prerequisites {#prerequisites}
@@ -19,7 +18,7 @@ The first cryptocurrency was Bitcoin, created by Satoshi Nakamoto. Since Bitcoin
 
 ## What is ether? {#what-is-ether}
 
-**Ether (ETH)** is the cryptocurrency used for many things on the Ethereum network. Fundamentally, it is the only acceptable form of payment for transaction fees, and after [The Merge](/upgrades/merge), ether will be required to validate and propose blocks on Mainnet. Ether is also used as a primary form of collateral in the [DeFi](/defi) lending markets, as a unit of account in NFT marketplaces, as payment earned for performing services or selling real-world goods, and more.
+**Ether (ETH)** is the cryptocurrency used for many things on the Ethereum network. Fundamentally, it is the only acceptable form of payment for transaction fees, and after [The Merge](/upgrades/merge), ether is required to validate and propose blocks on Mainnet. Ether is also used as a primary form of collateral in the [DeFi](/defi) lending markets, as a unit of account in NFT marketplaces, as payment earned for performing services or selling real-world goods, and more.
 
 Ethereum allows developers to create [**decentralized applications (dapps)**](/developers/docs/dapps), which all share a pool of computing power. This shared pool is finite, so Ethereum needs a mechanism to determine who gets to use it. Otherwise, a dapp could accidentally or maliciously consume all network resources, which would block others from accessing it.
 
@@ -37,15 +36,15 @@ Ether is minted as a reward for each block proposed and at every epoch checkpoin
 
 ## Burning ether {#burning-ether}
 
-As well as creating ether through block rewards, ether can get destroyed by a process called 'burning'. When ether gets burned, it gets removed from circulation permanently.
+As well as creating ether through block rewards, ether can be destroyed through a process called 'burning'. When ether gets burned, it gets removed from circulation permanently.
 
 Ether burn occurs in every transaction on Ethereum. When users pay for their transactions, a base gas fee, set by the network according to transactional demand, gets destroyed. This, coupled with variable block sizes and a maximum gas fee, simplifies transaction fee estimation on Ethereum. When network demand is high, [blocks](https://etherscan.io/block/12965263) can burn more ether than they mint, effectively offsetting ether issuance.
 
-Burning the base fee prevents various ways block producers could manipulate it otherwise. For example, if block producers received the base fee, they could include their own transactions for free and raise the base fee for everyone else. Alternatively, they could refund the base fee to some users off-chain, leading to a more opaque and complex transaction fee market.
+Burning the base fee hinders a block producers ability to manipulate transactions. For example, if block producers received the base fee, they could include their own transactions for free and raise the base fee for everyone else. Alternatively, they could refund the base fee to some users off-chain, leading to a more opaque and complex transaction fee market.
 
 ## Denominations of ether {#denominations}
 
-Since many transactions on Ethereum are small, ether has several denominations which may be referenced for smaller amounts. Of these denominations, Wei and gwei are particularly important.
+Since the value of many transactions on Ethereum are small, ether has several denominations which may be referenced as smaller units of account. Of these denominations, Wei and gwei are particularly important.
 
 Wei is the smallest possible amount of ether, and as a result, many technical implementations, such as the [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf), will base all calculations in Wei.
 

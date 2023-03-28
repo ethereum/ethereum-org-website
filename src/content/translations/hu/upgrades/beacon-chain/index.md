@@ -3,7 +3,6 @@ title: A Beacon Chain
 description: Tudj meg többet a beacon chainről - az Ethereum első nagy Eth2 fejlesztéséről.
 lang: hu
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: A beacon chain nem változtatja meg azt, ahogy az Ethereumot ma használjuk.
 summaryPoint2: A hálózatot fogja koordinálni.
@@ -19,7 +18,7 @@ summaryPoint4: A technikai ütemtervekben "Fázis 0"-ként is ismerheted.
 
 A Beacon Chain fogja koordinálni vagy vezetni a [shardokból](/upgrades/sharding/) és [stakerekből](/staking/) álló kiterjesztett hálózatot. De nem olyan lesz, mint jelenleg az [Ethereum főhálózat](/glossary/#mainnet). Nem fog tudni számlákat vagy okosszerződéseket kezelni.
 
-A Beacon Chain szerepe meg fog változni idővel, de egy olyan alapvető összetevője [ a biztonságos, fenntartható és skálázható Ethereumnak, amiért dolgozunk](/upgrades/vision/).
+A Beacon Chain szerepe meg fog változni idővel, de egy olyan alapvető összetevője [ a biztonságos, fenntartható és skálázható Ethereumnak, amiért dolgozunk](/roadmap/vision/).
 
 ## Beacon Chain tulajdonságok {#beacon-chain-features}
 

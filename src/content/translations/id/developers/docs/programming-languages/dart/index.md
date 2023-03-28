@@ -2,7 +2,6 @@
 title: Ethereum untuk pengembang Dart
 description: Pelajari cara menjadi pengembang untuk Ethereum dengan menggunakan bahasa pemrograman Dart
 lang: id
-sidebar: true
 incomplete: true
 ---
 

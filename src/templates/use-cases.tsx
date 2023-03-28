@@ -1,10 +1,11 @@
 import React from "react"
-import { useIntl } from "react-intl"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { useTranslation } from "gatsby-plugin-react-i18next"
+import { Badge } from "@chakra-ui/react"
 
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
@@ -23,13 +24,11 @@ import MarkdownTable from "../components/MarkdownTable"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
-import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
-import Roadmap from "../components/Roadmap"
-import UpgradeTableOfContents, {
-  Item as ItemTableOfContents,
-} from "../components/UpgradeTableOfContents"
-import TableOfContents from "../components/TableOfContents"
+import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
+import TableOfContents, {
+  type Item as ItemTableOfContents,
+} from "../components/TableOfContents"
 import Translation from "../components/Translation"
 import SectionNav from "../components/SectionNav"
 import {
@@ -42,6 +41,7 @@ import {
 import Emoji from "../components/OldEmoji"
 import YouTube from "../components/YouTube"
 import FeedbackCard from "../components/FeedbackCard"
+import QuizWidget from "../components/Quiz/QuizWidget"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
@@ -157,7 +157,6 @@ const components = {
   table: MarkdownTable,
   MeetupList,
   RandomAppList,
-  Roadmap,
   Logo,
   ButtonLink,
   Contributors,
@@ -165,12 +164,13 @@ const components = {
   Card,
   Divider,
   SectionNav,
-  Pill,
+  Badge,
   Emoji,
   UpgradeStatus,
   DocLink,
   ExpandableCard,
   YouTube,
+  QuizWidget,
 }
 
 const Title = styled.h1`
@@ -306,7 +306,8 @@ const UseCasePage = ({
   data: { siteData, pageData: mdx },
   pageContext,
 }: PageProps<Queries.UseCasePageQuery, Context>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
+
   if (!siteData || !mdx?.frontmatter)
     throw new Error(
       "UseCases page template query does not return expected values"
@@ -315,7 +316,7 @@ const UseCasePage = ({
     throw new Error("Required `title` property missing for use-cases template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
-  const tocItems = mdx.tableOfContents?.items
+  const tocItems = mdx.tableOfContents?.items as ItemTableOfContents[]
   const summaryPoints = getSummaryPoints(mdx.frontmatter)
 
   const { editContentUrl } = siteData.siteMetadata || {}
@@ -339,27 +340,27 @@ const UseCasePage = ({
   }
 
   const dropdownLinks: ButtonDropdownList = {
-    text: "template-usecase-dropdown",
-    ariaLabel: "template-usecase-dropdown-aria",
+    text: t("template-usecase-dropdown"),
+    ariaLabel: t("template-usecase-dropdown-aria"),
     items: [
       {
-        text: "template-usecase-dropdown-defi",
+        text: t("template-usecase-dropdown-defi"),
         to: "/defi/",
       },
       {
-        text: "template-usecase-dropdown-nft",
+        text: t("template-usecase-dropdown-nft"),
         to: "/nft/",
       },
       {
-        text: "template-usecase-dropdown-dao",
+        text: t("template-usecase-dropdown-dao"),
         to: "/dao/",
       },
       {
-        text: "template-usecase-dropdown-social-networks",
+        text: t("template-usecase-dropdown-social-networks"),
         to: "/social-networks/",
       },
       {
-        text: "template-usecase-dropdown-identity",
+        text: t("template-usecase-dropdown-identity"),
         to: "/decentralized-identity/",
       },
     ],
@@ -411,7 +412,7 @@ const UseCasePage = ({
           <StyledButtonDropdown list={dropdownLinks} />
           <InfoTitle>{mdx.frontmatter.title}</InfoTitle>
 
-          {mdx.frontmatter.sidebar && tocItems && (
+          {tocItems && (
             <UpgradeTableOfContents
               items={tocItems}
               maxDepth={mdx.frontmatter.sidebarDepth!}
@@ -433,7 +434,21 @@ const UseCasePage = ({
 }
 
 export const useCasePageQuery = graphql`
-  query UseCasePage($relativePath: String) {
+  query UseCasePage($languagesToFetch: [String!]!, $relativePath: String) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["template-usecase", "learn-quizzes", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     siteData: site {
       siteMetadata {
         editContentUrl
@@ -447,7 +462,6 @@ export const useCasePageQuery = graphql`
         title
         description
         lang
-        sidebar
         emoji
         sidebarDepth
         summaryPoint1

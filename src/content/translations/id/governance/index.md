@@ -2,7 +2,6 @@
 title: Tata Kelola Ethereum
 description: Pengantar cara mengambil keputusan tentang Ethereum.
 lang: id
-sidebar: true
 ---
 
 # Pengantar tentang tata kelola Ethereum {#introduction}
@@ -153,7 +152,7 @@ Proses tata kelola Ethereum sering menukarkan kecepatan dan efisiensi untuk kete
 
 Sekalipun pengembangan spesifikasi dan implementasinya selalu sepenuhnya merupakan sumber terbuka, proses formal yang digunakan untuk mengusulkan pembaruan yang dijelaskan di atas tidak digunakan. Ini memungkinkan perubahan untuk ditetapkan dan disetujui lebih cepat oleh para peneliti dan para pengimplementasi.
 
-Ketika Rantai Suar bergabung dengan lapisan eksekusi Ethereum, proses tata kelola untuk mengusulkan perubahan akan diselaraskan. Proses untuk mengimplementasikan penggabungan ini [sudah dimulai](https://github.com/ethereum/EIPs/pull/3675).
+Ketika Rantai Suar bergabung dengan lapisan eksekusi Ethereum, proses tata kelola untuk mengusulkan perubahan akan diselaraskan. Proses untuk mengimplementasikan penggabungan ini [sudah dimulai](https://eips.ethereum.org/EIPS/eip-3675).
 
 <ButtonLink to="/upgrades/merge/">
   Selengkapnya tentang penggabungan

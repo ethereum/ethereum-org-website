@@ -2,7 +2,6 @@
 title: Blöcke
 description: Eine Übersicht über Blöcke in der Ethereum Blockchain – ihre Datenstruktur, warum sie benötigt werden und wie sie erstellt werden.
 lang: de
-sidebar: true
 ---
 
 Blöcke sind Stapel von Transaktionen mit einem Hash des vorherigen Blocks in der Kette. Dies verbindet Blöcke (in einer Kette), weil Hashes kryptographisch aus den Blockdaten abgeleitet werden. Dies verhindert Betrug: Eine Änderung in irgendeiner Chronik würde alle nachfolgenden Blöcke ungültig machen, da sich alle nachfolgenden Hashes ändern und jeder, der die Blockchain ausführt, dies bemerken würde.

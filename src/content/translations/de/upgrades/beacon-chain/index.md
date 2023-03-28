@@ -3,7 +3,6 @@ title: Die Beacon Chain
 description: Informieren Sie sich über die Beacon Chain – das Upgrade, mit dem Proof-of-Stake für Ethereum eingeführt wurde
 lang: de
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: Die Beacon Chain ändert nichts an Ethereum, das wir heute verwenden.
 summaryPoint2: Sie wird die Koordination im Netzwerk übernehmen und dabei als Konsensuslayer dienen.
@@ -19,7 +18,7 @@ summaryPoint4: Sie kennen das möglicherweise als „Phase 0“ in technischen D
 
 Die Beacon Chain übernimmt die Koordination und Verknüpfung des Netzwerks der [Shards](/upgrades/sharding/) und [Staker](/staking/). Aber sie ist nicht mit dem [Ethereum-Mainnet](/glossary/#mainnet) von heute vergleichbar, da sie keine Konten oder Smart Contracts verarbeitet.
 
-Mit der Zeit können sich Aufgabe und Rolle der Beacon Chain zwar verändern, sie ist jedoch ein fundamentaler Baustein für das [sichere, nachhaltige und skalierbare Ethereum der Zukunft](/upgrades/vision/).
+Mit der Zeit können sich Aufgabe und Rolle der Beacon Chain zwar verändern, sie ist jedoch ein fundamentaler Baustein für das [sichere, nachhaltige und skalierbare Ethereum der Zukunft](/roadmap/vision/).
 
 ## Eigenschaften der Beacon Chain {#beacon-chain-features}
 

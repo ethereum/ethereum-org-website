@@ -2,7 +2,6 @@
 title: Smart-Contract-Kombinierbarkeit
 description:
 lang: de
-sidebar: true
 incomplete: true
 ---
 

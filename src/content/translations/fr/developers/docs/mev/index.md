@@ -2,7 +2,6 @@
 title: Valeur Extractible Maximale (Maximal extractable value - MEV)
 description: Une introduction à la Valeur Extractible Maximale (Maximal extractable value - MEV)
 lang: fr
-sidebar: true
 ---
 
 La Valeur Extractible Maximale (MEV) représente la valeur maximale qui peut être extraite de la production d'un bloc au-delà de la récompense standard du bloc et des frais de gaz, en incluant, en excluant ou en modifiant l'ordre des transactions au sein d'un bloc.

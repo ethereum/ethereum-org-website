@@ -1,0 +1,16 @@
+{
+  "page-find-wallet-clear": "Tyhjennä suodattimet",
+  "page-find-wallet-desc-2": "Valitse lompakko, jossa toivomasi ominaisuudet.",
+  "page-find-wallet-description": "Lompakoiden ominaisuuksissa on runsaasti kivoja vaihtoehtoja.",
+  "page-find-wallet-last-updated": "Päivitetty",
+  "page-find-wallet-meta-description": "Etsi ja vertaile Ethereum lompakkoja, jotka perustuvat ominaisuuksiin, joita haluat.",
+  "page-find-wallet-meta-title": "Löydä Ethereum lompakko",
+  "page-find-wallet-title": "Lompakon metsästykseen",
+  "page-find-wallet-try-removing": "Kokeile poistaa ominaisuus tai pari",
+  "page-stake-eth": "Stake ETH",
+  "page-find-wallet-swaps": "Hajautettu rahakkeiden swaippaus",
+  "page-find-wallet-swaps-desc": "Kaupankäyntiä Ethereillä ja muilla rahakkeilla suoraan lompakostasi.",
+  "page-find-wallet-multisig": "Tupla-hyväksynnän vaativat tilit",
+  "page-find-wallet-multisig-desc": "Lisäturvallisuuden luomiseksi, usean allekirjoituksen lompakot tarvitsevat vahvistuksen siirtokäskyille vähintään kahdelta taholta.",
+  "page-find-wallet-showing": "Näytetään "
+}

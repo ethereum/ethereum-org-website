@@ -2,7 +2,6 @@
 title: Ejecute su propio nodo de Ethereum
 description: Introducción general para ejecutar su propia instancia de un cliente de Ethereum.
 lang: es
-sidebar: true
 sidebarDepth: 2
 ---
 

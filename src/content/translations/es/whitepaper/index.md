@@ -2,7 +2,6 @@
 title: Guía de Ethereum
 description: Una guía introductoria a Ethereum publicada en 2013 antes de su lanzamiento.
 lang: es
-sidebar: true
 sidebarDepth: 2
 ---
 

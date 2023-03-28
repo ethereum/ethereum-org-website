@@ -2,7 +2,6 @@
 title: Rollups Zero-Knowledge (ZK)
 description: Introduction aux Rollups Zero-Knowledge
 lang: fr
-sidebar: true
 ---
 
 ## Prérequis {#prerequisites}

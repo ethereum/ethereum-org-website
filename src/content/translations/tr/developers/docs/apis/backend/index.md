@@ -2,7 +2,6 @@
 title: Arka uç API'si kütüphaneleri
 description: Uygulamanızdan blok zinciri ile etkileşime girmenizi sağlayan Ethereum istemci API'lerine giriş.
 lang: tr
-sidebar: true
 ---
 
 Bir yazılım uygulamasının Ethereum blok zinciri ile etkileşime girmesi (yani blok zinciri verilerini okuması ve/veya ağa işlem göndermesi) için bir Ethereum düğümüne bağlanması gerekir.

@@ -3,7 +3,6 @@ title: Mnyororo Kioleza
 description: Jifunze juu ya Mnyororo Kioleza - Kisasisho kilichoanzishwa na Ethereum ya uthibitisho-wa-hisa.
 lang: sw
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: Mnyororo Kioleza haitabadili kitu chochote katika Ethereum ya leo.
 summaryPoint2: Itaratibu mtandao, na kutumikia kama safu ya makubaliano.
@@ -19,7 +18,7 @@ summaryPoint4: Unaweza kua unaitambua hii kama "Awamu 0" kwenye mipango ya kitaa
 
 Mnyororo wa Beacon utaendeleza mwenendo wa kutanua mtandao wake wa [shards](/upgrades/sharding/) na [wanahisa](/staking/). Lakini haitakua kama [mtandao mkuu wa Ethereum](/glossary/#mainnet) wa leo. Inaweza kuhimili akaunti au mikataba mahiri.
 
-Jukumu ya mnyororo wa Kioleza litabadilika baada ya mda ila sehemu ya msingi ya [usalama, kuendeleza na ubadilikaji wa Ethereum tunayoijenga](/upgrades/vision/).
+Jukumu ya mnyororo wa Kioleza litabadilika baada ya mda ila sehemu ya msingi ya [usalama, kuendeleza na ubadilikaji wa Ethereum tunayoijenga](/roadmap/vision/).
 
 ## Sura za mnyororo wa Kioleza {#beacon-chain-features}
 

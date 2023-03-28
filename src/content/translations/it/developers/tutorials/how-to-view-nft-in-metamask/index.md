@@ -6,12 +6,10 @@ tags:
   - "NFT"
   - "ERC-721"
   - "Alchemy"
-  - "MetaMask"
   - "token non fungibili"
   - "Solidity"
 skill: beginner
 lang: it
-sidebar: true
 published: 2021-04-22
 ---
 
@@ -33,7 +31,7 @@ Una volta sulla rete di Ropsten, seleziona la scheda "Oggetti collezionabili" a 
 
 ![Come trovare l'hash della tua transazione e l'ID del token ERC-721](./findNFTEtherscan.png)
 
-È possibile che tu debba ricaricare un paio di volte per vedere il tuo NFT — ma ci sarà <Emoji text="" size={1} />!
+È possibile che tu debba ricaricare un paio di volte per vedere il tuo NFT — ma ci sarà <Emoji text="😄" size={1} />!
 
 ![Come caricare il tuo NFT su MetaMask](./findNFTMetamask.gif)
 

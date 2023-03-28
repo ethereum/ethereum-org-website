@@ -1,10 +1,10 @@
-import React from "react"
+import React, { FC } from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { MDXProvider } from "@mdx-js/react"
 import styled from "@emotion/styled"
-
+import { Badge, Box, BoxProps } from "@chakra-ui/react"
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown, {
   List as ButtonDropdownList,
@@ -20,12 +20,10 @@ import MarkdownTable from "../components/MarkdownTable"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
-import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
-import Roadmap from "../components/Roadmap"
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents, {
-  Item as ItemTableOfContents,
+  type Item as ItemTableOfContents,
 } from "../components/TableOfContents"
 import FeedbackCard from "../components/FeedbackCard"
 import SectionNav from "../components/SectionNav"
@@ -39,6 +37,7 @@ import {
 import Emoji from "../components/OldEmoji"
 import YouTube from "../components/YouTube"
 import Breadcrumbs from "../components/Breadcrumbs"
+import ShanghaiCapella from "../components/Staking/ShanghaiCapella"
 import StakingLaunchpadWidget from "../components/Staking/StakingLaunchpadWidget"
 import StakingProductsCardGrid from "../components/Staking/StakingProductsCardGrid"
 import StakingComparison from "../components/Staking/StakingComparison"
@@ -46,6 +45,9 @@ import StakingHowSoloWorks from "../components/Staking/StakingHowSoloWorks"
 import StakingConsiderations from "../components/Staking/StakingConsiderations"
 import StakingCommunityCallout from "../components/Staking/StakingCommunityCallout"
 import StakingGuides from "../components/Staking/StakingGuides"
+import WithdrawalCredentials from "../components/Staking/WithdrawalCredentials"
+import WithdrawalsTabComparison from "../components/Staking/WithdrawalsTabComparison"
+import Callout from "../components/Callout"
 
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Context } from "../types"
@@ -254,6 +256,9 @@ const MobileButtonDropdown = styled(StyledButtonDropdown)`
 
 const Container = styled.div`
   position: relative;
+  * {
+    scroll-margin-top: 5.5rem;
+  }
 `
 
 const HeroContainer = styled.div`
@@ -306,6 +311,24 @@ const InfoBanner = styled(SharedInfoBanner)`
   margin: 2rem 0;
 `
 
+const TableContainer: FC<BoxProps> = (props) => (
+  <Box
+    w="fit-content"
+    mx={["auto", null, null, 0]}
+    sx={{
+      table: {
+        borderCollapse: "separate",
+        borderSpacing: "1rem 0",
+      },
+      th: {
+        whiteSpace: "break-spaces !important",
+        textAlign: "center",
+      },
+    }}
+    {...props}
+  />
+)
+
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
@@ -317,30 +340,35 @@ const components = {
   p: Paragraph,
   pre: Pre,
   table: MarkdownTable,
-  MeetupList,
-  RandomAppList,
-  Roadmap,
-  Logo,
+  div: Box,
+  Badge,
   ButtonLink,
-  Contributors,
-  InfoBanner,
+  Callout,
   Card,
   CardGrid,
-  InfoGrid,
+  Contributors,
   Divider,
-  SectionNav,
-  Pill,
-  Emoji,
-  UpgradeStatus,
   DocLink,
+  Emoji,
   ExpandableCard,
-  YouTube,
-  StakingLaunchpadWidget,
-  StakingProductsCardGrid,
+  InfoBanner,
+  InfoGrid,
+  Logo,
+  MeetupList,
+  RandomAppList,
+  SectionNav,
+  ShanghaiCapella,
   StakingComparison,
-  StakingHowSoloWorks,
   StakingConsiderations,
   StakingGuides,
+  StakingHowSoloWorks,
+  StakingLaunchpadWidget,
+  StakingProductsCardGrid,
+  TableContainer,
+  UpgradeStatus,
+  WithdrawalCredentials,
+  WithdrawalsTabComparison,
+  YouTube,
 }
 
 const StakingPage = ({
@@ -355,15 +383,15 @@ const StakingPage = ({
     throw new Error("Required `title` property missing for staking template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
-  const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
+  const tocItems = mdx.tableOfContents?.items as ItemTableOfContents[]
   const { summaryPoints } = mdx.frontmatter
 
   const dropdownLinks: ButtonDropdownList = {
-    text: "Staking Options" as TranslationKey,
+    text: "Staking Options",
     ariaLabel: "Staking options dropdown menu",
     items: [
       {
-        text: "Staking home" as TranslationKey,
+        text: "Staking home",
         to: "/staking/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -372,7 +400,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "Solo staking" as TranslationKey,
+        text: "Solo staking",
         to: "/staking/solo/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -381,7 +409,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "Staking as a service" as TranslationKey,
+        text: "Staking as a service",
         to: "/staking/saas/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -390,12 +418,21 @@ const StakingPage = ({
         },
       },
       {
-        text: "Pooled staking" as TranslationKey,
+        text: "Pooled staking",
         to: "/staking/pools/",
         matomo: {
           eventCategory: `Staking dropdown`,
           eventAction: `Clicked`,
           eventName: "clicked pooled staking",
+        },
+      },
+      {
+        text: "About withdrawals" as TranslationKey,
+        to: "/staking/withdrawals/",
+        matomo: {
+          eventCategory: `Staking dropdown`,
+          eventAction: `Clicked`,
+          eventName: "clicked about withdrawals",
         },
       },
     ],
@@ -433,7 +470,7 @@ const StakingPage = ({
           <StyledButtonDropdown list={dropdownLinks} />
           <InfoTitle>{mdx.frontmatter.title}</InfoTitle>
 
-          {mdx.frontmatter.sidebar && tocItems && (
+          {tocItems && (
             <UpgradeTableOfContents
               items={tocItems}
               maxDepth={mdx.frontmatter.sidebarDepth!}
@@ -456,7 +493,21 @@ const StakingPage = ({
 }
 
 export const stakingPageQuery = graphql`
-  query StakingPage($relativePath: String) {
+  query StakingPage($languagesToFetch: [String!]!, $relativePath: String) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-staking", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     pageData: mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug
@@ -465,7 +516,6 @@ export const stakingPageQuery = graphql`
         title
         description
         lang
-        sidebar
         emoji
         sidebarDepth
         summaryPoints

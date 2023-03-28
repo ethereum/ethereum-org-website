@@ -2,7 +2,6 @@
 title: Ajouter des produits
 description: La politique que nous appliquons pour l'ajout de portefeuilles et de dApps à ethereum.org
 lang: fr
-sidebar: true
 ---
 
 _Remarque sur l'ajout de portefeuilles : dans le cadre de [notre feuille de route sur les produits pour le premier trimestre](https://github.com/ethereum/ethereum-org-website/issues/5105), nous remanions notre page de portefeuilles. Cela comprend la révision des critères de listage sur notre page des portefeuilles. Tant que nous n'aurons pas étudié, défini et publié les nouveaux critères de listage, nous n'ajouterons aucun nouveau portefeuille au site web._

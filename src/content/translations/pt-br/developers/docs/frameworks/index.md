@@ -2,7 +2,6 @@
 title: Dapp Desenvolvimento de Infraestrutura
 description: Explore as vantagens de frameworks e compare as opções disponíveis.
 lang: pt-br
-sidebar: true
 ---
 
 ## Introdução aos frameworks {#introduction-to-frameworks}
@@ -42,11 +41,6 @@ Antes de mergulhar em frameworks, recomendamos que você primeiro leia a nossa i
 
 - [Documentação](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
-
-**Embark -** **_Um ambiente de desenvolvimento, teste de framework e outras ferramentas integradas com a Ethereum, IPFS e Whisper._**
-
-- [Documentação](https://embark.status.im/docs/)
-- [GitHub](https://github.com/embark-framework/embark)
 
 **Web3j -** **_A platform for developing blockchain applications on the JVM._**
 

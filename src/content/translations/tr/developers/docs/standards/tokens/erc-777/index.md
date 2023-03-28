@@ -2,7 +2,6 @@
 title: ERC-777 Token Standardı
 description:
 lang: tr
-sidebar: true
 ---
 
 ## Giriş {#introduction}

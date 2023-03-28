@@ -2,7 +2,6 @@
 title: Energia consumată de Ethereum
 description: Informațiile de bază necesare pentru a înțelege câtă energie consumă Ethereum.
 lang: ro
-sidebar: true
 ---
 
 # Energia consumată de Ethereum {#introduction}
@@ -75,7 +74,7 @@ _Totodată, trebuie să luăm în considerare că Ethereum nu se limitează la s
 
 ## Subiecte corelate {#related-topics}
 
-- [Viziunea Ethereum](/upgrades/vision/)
+- [Viziunea Ethereum](/roadmap/vision/)
 - [Lanțul Beacon](/upgrades/beacon-chain)
 - [Fuziunea](/upgrades/merge/)
 - [Fragmentare](/upgrades/beacon-chain/)

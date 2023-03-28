@@ -2,7 +2,6 @@
 title: 关于我们
 description: 关于 ethereum.org 的团队、社区和任务
 lang: zh
-sidebar: true
 ---
 
 # 关于 ethereum.org {#about-ethereumorg}
@@ -57,10 +56,6 @@ ethereum.org 是一个为以太坊社区打造的公共且开源的网站，任�
 我们欢迎大家对设计原则和风格指南提出反馈意见。 请记住，ethereum.org 来自社区，服务社区。
 
 如果您想要[对官网做贡献](/contributing/)，请先阅读[我们的宗旨](/contributing/design-principles/)，以及[我们的风格指南](/contributing/style-guide/)。
-
-## 愿景与计划 {#roadmap}
-
-<Roadmap />
 
 ## 正在招聘 {#open-jobs}
 

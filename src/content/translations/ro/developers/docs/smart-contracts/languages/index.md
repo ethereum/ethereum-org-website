@@ -2,7 +2,6 @@
 title: Limbaje pentru contractele inteligente
 description: O prezentare generală și o comparație a celor două limbaje principale ale contractelor inteligente – Solidity și Vyper.
 lang: ro
-sidebar: true
 ---
 
 Un aspect important despre Ethereum este că puteţi programa contractele inteligente folosind limbaje relativ uşor de utilizat de către dezvoltatori. Dacă aveţi experiență cu Python sau cu orice [limbaj de programare cu acolade](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), puteţi găsi un limbaj a cărui sintaxă o cunoaşteţi.

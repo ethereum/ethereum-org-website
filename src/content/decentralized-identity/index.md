@@ -4,7 +4,6 @@ description: What is decentralized identity, and why does it matter?
 lang: en
 template: use-cases
 emoji: ":id:"
-sidebar: true
 sidebarDepth: 2
 image: ../../assets/eth-gif-cat.png
 summaryPoint1: Traditional identity systems have centralized the issuance, maintenance and control of your identifiers.
@@ -18,7 +17,7 @@ However, traditional identity management systems have long relied on centralized
 
 To solve these problems, we have decentralized identity systems built on public blockchains like Ethereum. Decentralized identity allows individuals to manage their identity-related information. With decentralized identity solutions, _you_ can create identifiers and claim and hold your attestations without relying on central authorities, like service providers or governments.
 
-## What is identity {#what-is-identity}
+## What is identity? {#what-is-identity}
 
 Identity means an individual's sense of self, defined by unique characteristics. Identity refers to being an _individual_, i.e., a distinct human entity. Identity could also refer to other non-human entities, such as an organization or authority.
 

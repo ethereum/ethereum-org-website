@@ -2,7 +2,6 @@
 title: Créez votre propre nœud Ethereum
 description: Introduction générale à l'exécution de votre propre instance d'un client Ethereum.
 lang: fr
-sidebar: true
 sidebarDepth: 2
 ---
 

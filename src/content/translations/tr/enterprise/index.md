@@ -2,7 +2,6 @@
 title: Ethereum Mainnet'te İşletme
 description: Herkese açık Ethereum blok zincirindeki işletme uygulamaları hakkında kılavuzlar, makaleler ve araçlar
 lang: tr
-sidebar: true
 ---
 
 # İşletmeler için Ethereum Mainnet {#ethereum-for-enterprise}

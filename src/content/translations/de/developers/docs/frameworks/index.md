@@ -2,7 +2,6 @@
 title: dApp-Entwicklungs-Frameworks
 description: Mehr über die Vorteile von Frameworks erfahren und verfügbare Optionen vergleichen
 lang: de
-sidebar: true
 ---
 
 ## Einführung in Frameworks {#introduction-to-frameworks}
@@ -42,11 +41,6 @@ Bevor Sie sich mit Frameworks beschäftigen, empfehlen wir, dass Sie sich mit de
 
 - [Dokumentation](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
-
-**Embark –** **_Eine Entwicklungsumgebung, Test-Framework und weitere Tools, die in Ethereum, IPFS und Whisper integriert sind_**
-
-- [Dokumentation](https://embark.status.im/docs/)
-- [GitHub](https://github.com/embark-framework/embark)
 
 **Web3j –** **_Eine Plattform für die Entwicklung von Blockchain-Anwendungen auf JVM_**
 

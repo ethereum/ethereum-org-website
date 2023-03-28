@@ -43,7 +43,6 @@
   "page-upgrades-bug-bounty-quality-repro-desc": ": Tafadhali jumuisha nambari ya jaribio, hati na maagizo ya kina. Kadiri inavyokuwa rahisi kwetu kuzaliana na kuthibitisha uwezekano wa kuathiriwa, ndivyo zawadi inavyoongezeka.",
   "page-upgrades-bug-bounty-questions": "Maswali?",
   "page-upgrades-bug-bounty-rules": "Soma maelekezo",
-  "page-upgrades-bug-bounty-shard-chains": "minyororo ya Vigae",
   "page-upgrades-bug-bounty-slogan": "Safu ya makubaliano na zawadi za wadudu",
   "page-upgrades-bug-bounty-specs": "Soma vipimo kamili",
   "page-upgrades-bug-bounty-specs-docs": "Nyaraka za vipimo",
@@ -91,5 +90,6 @@
   "page-upgrades-bug-bounty-card-text": "Mshambulizi wakati mwingine anaweza kuweka nodi katika hali inayosababisha kuacha uthibitisho mmoja kati ya kila mia moja unaotolewa na kiidhinisha",
   "page-upgrades-bug-bounty-card-text-1": "Mshambulizi anaweza kufanya mashambulizi ya kupatwa kwa jua kwenye nodi kwa vitambulisho rika na baiti 4 zinazoongoza kwa sufuri",
   "page-upgrades-bug-bounty-card-text-2": "Kuna hitilafu ya makubaliano kati ya wateja wawili, lakini ni vigumu au haiwezekani kwa mshambuliaji kuanzisha tukio.",
-  "page-upgrades-bug-bounty-card-text-3": "Kuna hitilafu ya makubaliano kati ya wateja wawili, lakini ni vigumu au haiwezekani kwa mshambuliaji kuanzisha tukio."
+  "page-upgrades-bug-bounty-card-text-3": "Kuna hitilafu ya makubaliano kati ya wateja wawili, lakini ni vigumu au haiwezekani kwa mshambuliaji kuanzisha tukio.",
+  "page-upgrades-question-title": "Maswali yanayoulizwa mara kwa mara"
 }

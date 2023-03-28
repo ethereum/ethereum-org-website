@@ -2,7 +2,6 @@
 title: Wydobywanie
 description: Wyjaśnienie jak działa wydobycie w Ethereum i jak pomaga utrzymać Ethereum bezpieczne i zdecentralizowane.
 lang: pl
-sidebar: true
 incomplete: true
 ---
 

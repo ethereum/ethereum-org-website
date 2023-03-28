@@ -2,7 +2,6 @@
 title: Web3 nedir ve neden önemlidir?
 description: Web3’e (internet’in bir sonraki evrimine) giriş ve Web3'ün önemi.
 lang: tr
-sidebar: true
 ---
 
 # Web3'e Giriş {#introduction}

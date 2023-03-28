@@ -2,7 +2,6 @@
 title: Lenguajes de contrato inteligente
 description: "Descripción y comparación de los 2 lenguajes de contrato inteligente principales: Solidity y Vyper."
 lang: es
-sidebar: true
 ---
 
 Un gran aspecto de Ethereum es que los contratos inteligentes pueden programarse utilizando lenguajes relativamente fáciles para el programador. Si tienes experiencia con Python o JavaScript, puedes encontrar un lenguaje con una sintaxis familiar.

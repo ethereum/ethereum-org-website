@@ -2,7 +2,6 @@
 title: Alberi di Patricia Merkle
 description: Introduzione ai Trie di Patricia Merkle.
 lang: it
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -179,7 +178,7 @@ Ora, costruiamo un trie di questo tipo con le seguenti coppie chiave/valore nel 
     hashE:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coin' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
 ```
 
-Quando in un nodo si fa riferimento a un altro nodo, viene inserito `H(rlp.encode(x))`, dove `H(x) = keccak256(x) if len(x) >= 32 else x` e `rlp.encode` è la funzione di codifica [RLP](/developers/docs/data-structures-and-encoding/rlp).
+Quando in un nodo si fa riferimento a un altro nodo, viene inserito `H(rlp.encode(x))`, dove `H(x) = keccak256(x) if len(x) >= 32 else x` e `rlp.encode` è la funzione di codifica [RLP](/fundamentals/rlp).
 
 Nota che, aggiornando un trie, si deve memorizzare la coppia chiave/valore `(keccak256(x), x)` in una tabella di ricerca persistente _se_ il nodo appena creato ha una lunghezza >= 32. Se invece il nodo è inferiore a questo valore, non è necessario memorizzare nulla, poiché la funzione f(x) = x è reversibile.
 
@@ -253,5 +252,4 @@ Maggiori informazioni a riguardo si possono trovare nella documentazione [EIP 27
 ## Letture consigliate {#further-reading}
 
 - [Trie di Patricia Merkle modificato - Come Ethereum salva uno stato](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
-- [Merkling su Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)
-- [Comprendere il trie di Ethereum](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)
+- [Merkling su Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/) -[Comprendere il trie di Ethereum](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)

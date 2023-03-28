@@ -1,7 +1,6 @@
 ---
 title: Online communities
 description: A listing of the grant programs throughout the Ethereum ecosystem.
-sidebar: true
 lang: en
 ---
 
@@ -28,14 +27,16 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 <SocialListItem socialIcon="discord"><Link to="https://discord.io/ethstaker">EthStaker Discord</Link> - community oriented around offering project management support to Ethereum development</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/CetY6Y4">Ethereum.org website team</Link> - stop by and chat ethereum.org web development and design with the team and folks from the community</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ZH5aXDgWEU">Web3 University</Link> - community focused on learning web3 development </SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> - web3 creators community where builders, industrial figureheads, and Ethereum enthusiasts hang out. we're passioned about web3 development, design, and culture. come build with us.</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> - web3 creators community where builders, industrial figureheads, and Ethereum enthusiasts hang out. We're passionate about web3 development, design, and culture. Come build with us.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> - chat for solidity development (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - chat for solidity development (Matrix)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- question and answer forum</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> <i>- decentralized question and answer forum</i></SocialListItem>
 
 ## YouTube and Twitter {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> - Keep up to date with the latest from the Ethereum Foundation</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> - Offical account of the Ethereum Foundation</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> - Official account of the Ethereum Foundation</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethdotorg">@ethdotorg</Link> - The portal to Ethereum, built for our growing global community</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://hive.one/c/ethereum?page=1">List of influential Ethereum twitter accounts</Link></SocialListItem>
 

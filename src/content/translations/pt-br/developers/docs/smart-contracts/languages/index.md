@@ -2,7 +2,6 @@
 title: Linguagens de contratos inteligentes
 description: Uma visão geral e comparação de duas línguagens de contratos inteligentes – Solidity e Vyper.
 lang: pt-br
-sidebar: true
 ---
 
 Um grande aspecto sobre a Ethereum é que os contratos inteligentes podem ser programados usando linguagens relativamente amigáveis para o desenvolvedor. Se você tem experiência com Python ou qualquer [linguagem de marcação](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), você pode encontrar um idioma com sintaxe familiar.

@@ -4,11 +4,9 @@ description: Come scaricare, installare ed eseguire un client leggero con Geth.
 authors: "Brian Gu"
 tags:
   - "client"
-  - "geth"
   - "nodi"
 skill: beginner
 lang: it
-sidebar: true
 published: 2022-03-04
 ---
 

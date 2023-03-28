@@ -2,7 +2,6 @@
 title: Testowanie inteligentnych kontraktów
 description:
 lang: pl
-sidebar: true
 incomplete: true
 ---
 

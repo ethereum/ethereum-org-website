@@ -5,7 +5,6 @@ author: "Trailofbits"
 tags: ["smart contracts", "security", "solidity"]
 skill: intermediate
 lang: en
-sidebar: true
 published: 2020-09-07
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md

@@ -2,7 +2,6 @@
 title: Réseaux
 description: Une vue d'ensemble des réseaux Ethereum et où obtenir de l'ether de réseau de test (ETH) pour tester votre application.
 lang: fr
-sidebar: true
 ---
 
 Ethereum étant un protocole, il peut exister plusieurs « réseaux » indépendants conformes à ce protocole, qui n'interagissent pas entre eux.

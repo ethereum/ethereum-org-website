@@ -2,12 +2,11 @@
 title: 以太坊帐户
 description: 对 以太坊帐户的解释--它们的数据结构以及它们与密钥对密码学的关系。
 lang: zh
-sidebar: true
 ---
 
 一个以太坊帐户是一个具有以太币 (ETH) 余额的实体，可以在以太坊上发送交易。 帐户可以由用户控制，也可以作为智能合约部署。
 
-## 前置要求 {#prerequisites}
+## 前提条件 {#prerequisites}
 
 帐户是一个很适合初学者的主题。 但为了帮助您更好地理解这个页面，我们建议您首先阅读我们的[以太坊简介](/developers/docs/intro-to-ethereum/)。
 
@@ -15,8 +14,8 @@ sidebar: true
 
 以太坊有两种帐户类型：
 
-- 外部持有 – 私钥的所有者控制
-- 合约 – 一种由代码控制，部署在网络上的智能合约。 了解[智能合约](/developers/docs/smart-contracts/)。
+- 外部所有的帐户 (EOA) – 由任何拥有私钥的人控制
+- 合约帐户 — 部署到网络上的智能合约，由代码控制。 了解[智能合约](/developers/docs/smart-contracts/)。
 
 这两种帐户类型都能：
 
@@ -29,13 +28,15 @@ sidebar: true
 
 - 创建帐户是免费的
 - 可以发起交易
-- 外部所有的帐户之间只能进行 ETH 和代币交易
+- 外部所有的帐户之间只能进行以太币和代币交易
+- 由一对加密密钥组成：控制帐户活动的公钥和私钥
 
 **合约**
 
 - 创建合约存在成本，因为需要使用网络存储空间
 - 只能在收到交易时发送交易
 - 从外部帐户向合约帐户发起的交易能触发可执行多种操作的代码，例如转移代币甚至创建新合约
+- 合约帐户没有私钥。 相反，它们由智能合约代码逻辑控制
 
 ## 理解帐户 {#an-account-examined}
 
@@ -46,7 +47,7 @@ sidebar: true
 - `codeHash` - 该哈希表示以太坊虚拟机 (EVM) 上的帐户*代码*。 合约帐户具有编程的代码片段，可以执行不同的操作。 如果帐户收到消息调用，则执行此 EVM 代码。 与其他帐户字段不同，不能更改。 所有代码片段都被保存在状态数据库的相应哈希下，供后续检索。 此哈希值称为 codeHash。 对于外部所有的帐户，codeHash 字段是空字符串的哈希。
 - `storageRoot` – 有时被称为存储哈希。 Merkle Patricia trie 根节点的 256 位哈希已编码了帐户的存储内容（256 位整数值映射），并编码为 Trie，作为来自 256 的 Keccak 256 位哈希的映射位整数键，用于 RLP 编码的 256 位整数值。 此 Trie 对此帐户存储内容的哈希进行编码，默认情况下为空。
 
-![显示帐户组成部分的图表](./accounts.png) _图表来自 [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![显示帐户组成部分的图表](./accounts.png) _示意图节选自[以太坊虚拟机图解](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## 外部持有的帐户和密钥对 {#externally-owned-accounts-and-key-pairs}
 
@@ -80,7 +81,7 @@ Repeat passphrase:
 "0x3d80b31a78c30fc628f20b2c89d7ddbf6e53cedc"
 ```
 
-[GETH 文档](https://geth.ethereum.org/docs)
+[GETH 相关文档](https://geth.ethereum.org/docs)
 
 可以通过您的私钥获取公钥，但您不能通过公钥获取私钥。 这意味着保持私人密钥的安全至关重要，如同名称所建议的 **PRIVATE**。
 
@@ -96,11 +97,17 @@ Repeat passphrase:
 
 合约地址通常在将合约部署到以太坊区块链时给出。 地址产生自创建人的地址和从创建人地址发送的交易数量（“nonce”）。
 
+## 验证者密钥 {#validators-keys}
+
+以太坊还有一另种类型的密钥，它们是在以太坊从工作量证明过渡到权益证明共识时引入的。 它们是“BLS”密钥，用来识别验证者。 这些密钥可以有效地聚合，减少网络达成共识所需要的带宽。 没有这种密钥集合，验证者的最小质押金额将会高出许多。
+
+[更多关于验证者密钥的信息](/developers/docs/consensus-mechanisms/pos/keys/)。
+
 ## 关于钱包的说明 {#a-note-on-wallets}
 
-帐户和钱包不同。 账户是用户拥有的以太坊账户的密钥和地址对。 钱包是一个界面或者说应用程序，可以让您与以太坊账户交互。
+帐户和钱包不同。 帐户是用户拥有的以太坊帐户的密钥对。 钱包是界面或应用程序，可以让你与以太坊帐户交互。
 
-## 直观演示 {#a-visual-demo}
+## 视频演示 {#a-visual-demo}
 
 跟随 Austin 了解哈希函数和密钥对。
 
@@ -110,7 +117,7 @@ Repeat passphrase:
 
 ## 延伸阅读 {#further-reading}
 
-_还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_
+_还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
 
 ## 相关主题 {#related-topics}
 

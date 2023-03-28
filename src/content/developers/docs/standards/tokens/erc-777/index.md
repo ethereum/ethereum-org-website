@@ -2,8 +2,11 @@
 title: ERC-777 Token Standard
 description:
 lang: en
-sidebar: true
 ---
+
+## Warning {#warning}
+
+**ERC-777 is difficult to implement properly, due to its [susceptibility to different forms of attack](https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620). It is recommended to use [ERC-20](/developers/docs/standards/tokens/erc-20/) instead.** This page remains as a historical archive.
 
 ## Introduction? {#introduction}
 

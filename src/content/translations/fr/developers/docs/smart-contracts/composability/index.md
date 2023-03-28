@@ -2,7 +2,6 @@
 title: Composabilité des contrats intelligents
 description:
 lang: fr
-sidebar: true
 incomplete: true
 ---
 

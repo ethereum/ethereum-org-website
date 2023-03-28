@@ -2,7 +2,6 @@
 title: Consumo energético de Ethereum
 description: La información básica que necesita saber para entender el consumo energético de Ethereum.
 lang: es
-sidebar: true
 ---
 
 # Consumo energético de Ethereum {#introduction}
@@ -76,7 +75,7 @@ Mientras que el consumo energético de Ethereum siempre ha sido considerable, lo
 
 ## Temas relacionados {#related-topics}
 
-- [Visión de Ethereum](/upgrades/vision/)
+- [Visión de Ethereum](/roadmap/vision/)
 - [La cadena de baliza](/upgrades/beacon-chain)
 - [La fusión](/upgrades/merge/)
 - [Fragmentación](/upgrades/beacon-chain/)

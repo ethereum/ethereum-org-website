@@ -3,7 +3,6 @@ title: La cadena de balisa
 description: Aprèn més coses sobre la Cadena de Balisa - la millora que va introduir la prova de participació d'Ethereum.
 lang: ca
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: La Cadena de Balisa no canvia en res l'Ethereum que utilitzem avui en dia.
 summaryPoint2: Coordinarà la xarxa, fent servei com a capa de consens.
@@ -19,7 +18,7 @@ summaryPoint4: Potser, això, ho coneixeu com la "Fase 0" dels mapes tècnics.
 
 La cadena de balisa dirigirà o coordinarà l'expansió de la xarxa de [fragments](/upgrades/sharding/) i [participants](/staking/). Però no serà com [la xarxa principal d'Ethereum](/glossary/#mainnet) d'avui en dia. No pot gestionar comptes o contractes intel·ligents.
 
-El rol de la cadena de balisa canviarà amb el pas del temps, però és un element fonamental de [l'Ethereum segur, sostenible i escalable per la qual treballem](/upgrades/vision/).
+El rol de la cadena de balisa canviarà amb el pas del temps, però és un element fonamental de [l'Ethereum segur, sostenible i escalable per la qual treballem](/roadmap/vision/).
 
 ## Característiques de la cadena de balisa {#beacon-chain-features}
 

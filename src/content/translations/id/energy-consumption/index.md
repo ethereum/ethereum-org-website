@@ -2,7 +2,6 @@
 title: Konsumsi Energi Ethereum
 description: Informasi dasar yang Anda perlukan untuk memahami konsumsi energi Ethereum.
 lang: id
-sidebar: true
 ---
 
 # Konsumsi Energi Ethereum {#introduction}
@@ -76,7 +75,7 @@ Sekalipun pemakaian energi Ethereum secara historis telah menjadi penting, telah
 
 ## Topik Terkait {#related-topics}
 
-- [Visi Ethereum](/upgrades/vision/)
+- [Visi Ethereum](/roadmap/vision/)
 - [Rantai Suar](/upgrades/beacon-chain)
 - [Penggabungan](/upgrades/merge/)
 - [Sharding](/upgrades/beacon-chain/)

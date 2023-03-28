@@ -2,7 +2,6 @@
 title: Introduction aux contrats intelligents
 description: Présentation des contrats intelligents, axée sur leurs caractéristiques uniques et leurs limites
 lang: fr
-sidebar: true
 ---
 
 ## Qu'est-ce qu'un contrat intelligent ? {#what-is-a-smart-contract}

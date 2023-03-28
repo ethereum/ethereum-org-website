@@ -2,7 +2,6 @@
 title: Ajout de la Couche 2
 description: La politique que nous appliquons pour ajouter une couche de niveau 2 sur ethereum.org
 lang: fr
-sidebar: true
 ---
 
 # Ajouter une Couche de niveau 2 {#adding-layer-2}

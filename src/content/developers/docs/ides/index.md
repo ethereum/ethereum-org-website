@@ -2,7 +2,6 @@
 title: Integrated Development Environments (IDEs)
 description:
 lang: en
-sidebar: true
 ---
 
 When it comes to setting up an [integrated development environment (IDE)](https://wikipedia.org/wiki/Integrated_development_environment), programming applications on Ethereum is similar to programming any other software project. There are many options to choose from, so at the end of the day, pick the IDE or code editor that best suits your preferences. Most likely the best IDE choice for your Ethereum development is the IDE you already use for traditional software development.
@@ -13,9 +12,17 @@ If you're looking to fiddle with code before you [set up a local development env
 
 **[Remix](https://remix.ethereum.org/)** - **_Web-based IDE with built in static analysis, and a test blockchain virtual machine_**
 
+- [Docs](https://remix-ide.readthedocs.io/en/latest/#)
+- [Gitter](https://gitter.im/ethereum/remix)
+
 **[ChainIDE](https://chainide.com/)** - **_A cloud-based multi-chain IDE_**
 
-**[Replit (Solidity Starter)](https://replit.com/@replit/Solidity-starter-beta)** - **_A customizable development environment for Ethereum with hot reloading, error checking, and first-class testnet support_**
+- [Docs](https://chainide.gitbook.io/chainide-english-1/)
+- [Help forum](https://forum.chainide.com/)
+
+**[Replit (Solidity Starter - Beta)](https://replit.com/@replit/Solidity-starter-beta)** - **_A customizable development environment for Ethereum with hot reloading, error checking, and first-class testnet support_**
+
+- [Docs](https://docs.replit.com/)
 
 **[Tenderly Sandbox](https://sandbox.tenderly.co/)** - **_A fast prototyping environment where you can write, execute, and debug smart contracts in the browser using Solidity and JavaScript_**
 
@@ -54,6 +61,7 @@ Most established IDEs have built plugins to enhance the Ethereum development exp
 ## Plugins and extensions {#plugins-extensions}
 
 - [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Ethereum Solidity Language for Visual Studio Code
+- [Solidity + Hardhat for VS Code](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - Solidity and Hardhat support by the Hardhat team
 - [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Code formatter using prettier
 
 ## Further reading {#further-reading}

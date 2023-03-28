@@ -1,56 +1,22 @@
 import React from "react"
-import styled from "@emotion/styled"
-import { useIntl } from "react-intl"
+import { useTranslation, useI18next } from "gatsby-plugin-react-i18next"
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbProps,
+} from "@chakra-ui/react"
 
 import Link from "./Link"
-import { isLang, supportedLanguages } from "../utils/languages"
-import { isTranslationKey, translateMessageId } from "../utils/translations"
 
-const ListContainer = styled.nav`
-  margin-bottom: 2rem;
-  list-style-type: none;
-  /* Avoid header overlap: */
-  position: relative;
-  z-index: 1;
-`
-
-const List = styled.ol`
-  margin: 0;
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-`
-
-const ListItem = styled.li`
-  margin: 0;
-  margin-right: 0.5rem;
-  font-size: 0.875rem;
-  line-height: 140%;
-  letter-spacing: 0.04em;
-`
-
-const Slash = styled.span`
-  margin-left: 0.5rem;
-  color: ${(props) => props.theme.colors.textTableOfContents};
-`
-
-const CrumbLink = styled(Link)`
-  text-decoration: none;
-  color: ${(props) => props.theme.colors.textTableOfContents};
-
-  &:hover {
-    text-decoration: none;
-    color: ${(props) => props.theme.colors.primary};
-  }
-
-  &.active {
-    color: ${(props) => props.theme.colors.primary};
-  }
-`
-
-export interface IProps {
+export interface IProps extends BreadcrumbProps {
   slug: string
   startDepth?: number
+}
+
+interface Crumb {
+  fullPath: string
+  text: string
 }
 
 // Generate crumbs from slug
@@ -67,45 +33,77 @@ export interface IProps {
 //   { fullPath: "/en/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
 // ]
 const Breadcrumbs: React.FC<IProps> = ({
-  slug,
+  slug: originalSlug,
   startDepth = 0,
   ...restProps
 }) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
+  const { language } = useI18next()
+
+  const hasHome = originalSlug.includes(`/${language}/`)
+  const slug = originalSlug.replace(`/${language}/`, "/")
 
   const slugChunk = slug.split("/")
-  const sliced = slugChunk.filter((item) => !!item).slice(startDepth)
+  const sliced = slugChunk.filter((item) => !!item)
 
-  const crumbs = sliced.map((path, idx) => {
+  const crumbs = [
     // If homepage (e.g. "en"), set text to "home" translation
-    const text = isLang(path)
-      ? translateMessageId("page-index-meta-title", intl)
-      : isTranslationKey(path)
-      ? translateMessageId(path, intl)
-      : ""
-
-    return {
-      fullPath: slugChunk.slice(0, idx + 2 + startDepth).join("/") + "/",
-      text: text.toUpperCase(),
-    }
-  })
+    ...(hasHome
+      ? [
+          {
+            fullPath: "/",
+            text: t("page-index-meta-title"),
+          },
+        ]
+      : []),
+    ,
+    ...sliced.map((path, idx) => {
+      return {
+        fullPath: slugChunk.slice(0, idx + 2).join("/") + "/",
+        text: t(path),
+      }
+    }),
+  ]
+    .filter((item): item is Crumb => !!item)
+    .slice(startDepth)
 
   return (
-    <ListContainer aria-label="Breadcrumb" dir="auto" {...restProps}>
-      <List>
-        {crumbs.map((crumb, idx) => (
-          <ListItem key={idx}>
-            <CrumbLink
+    <Breadcrumb
+      dir="auto"
+      position="relative"
+      zIndex="1"
+      mb={8}
+      listProps={{
+        m: 0,
+        lineHeight: 1,
+      }}
+      {...restProps}
+    >
+      {crumbs.map((crumb, idx) => {
+        const isCurrentPage = slug === crumb.fullPath
+        return (
+          <BreadcrumbItem
+            key={idx}
+            isCurrentPage={isCurrentPage}
+            color="textTableOfContents"
+            fontSize="sm"
+            letterSpacing="wider"
+            lineHeight="140%"
+            m={0}
+          >
+            <BreadcrumbLink
+              as={Link}
               to={crumb.fullPath}
-              isPartiallyActive={slug === crumb.fullPath}
+              isPartiallyActive={isCurrentPage}
+              _hover={{ color: "primary", textDecor: "none" }}
+              _active={{ color: "primary" }}
             >
-              {crumb.text}
-            </CrumbLink>
-            {idx < crumbs.length - 1 && <Slash>/</Slash>}
-          </ListItem>
-        ))}
-      </List>
-    </ListContainer>
+              {crumb.text.toUpperCase()}
+            </BreadcrumbLink>
+          </BreadcrumbItem>
+        )
+      })}
+    </Breadcrumb>
   )
 }
 

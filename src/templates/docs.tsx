@@ -3,6 +3,7 @@ import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
+import { Badge } from "@chakra-ui/react"
 
 import BannerNotification from "../components/BannerNotification"
 import ButtonLink from "../components/ButtonLink"
@@ -15,7 +16,6 @@ import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
 import PageMetadata from "../components/PageMetadata"
-import Pill from "../components/Pill"
 import TableOfContents, {
   Item as ItemTableOfContents,
 } from "../components/TableOfContents"
@@ -58,12 +58,6 @@ const ContentContainer = styled.div<{ isZenMode: boolean }>`
     padding: 0;
   }
   background-color: ${(props) => props.theme.colors.ednBackground};
-`
-
-const DesktopTableOfContents = styled(TableOfContents)<{
-  isPageIncomplete: boolean
-}>`
-  padding-top: ${(props) => (props.isPageIncomplete ? `5rem` : `3rem`)};
 `
 
 // Apply styles for classes within markdown here
@@ -156,7 +150,7 @@ const components = {
   Card,
   Divider,
   SectionNav,
-  Pill,
+  Badge,
   CallToContribute,
   Emoji,
   DeveloperDocsLinks,
@@ -190,8 +184,6 @@ const DocsPage = ({
 
   const { editContentUrl } = siteData.siteMetadata || {}
   const absoluteEditPath = `${editContentUrl}${relativePath}`
-  const isDevelopersHome = relativePath.endsWith("/developers/docs/index.md")
-  const showPostMergeBanner = !!mdx.frontmatter.postMergeBanner
 
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
@@ -204,7 +196,6 @@ const DocsPage = ({
           <Translation id="banner-page-incomplete" />
         </BannerNotification>
       )}
-      {showPostMergeBanner && <PostMergeBanner />}
       <ContentContainer isZenMode={isZenMode}>
         <Content>
           <H1 id="top">{mdx.frontmatter.title}</H1>
@@ -218,6 +209,7 @@ const DocsPage = ({
             items={tocItems}
             isMobile={true}
             maxDepth={mdx.frontmatter.sidebarDepth!}
+            hideEditButton={!!mdx.frontmatter.hideEditButton}
           />
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
@@ -231,13 +223,14 @@ const DocsPage = ({
           <FeedbackCard isArticle />
           <DocsNav relativePath={relativePath}></DocsNav>
         </Content>
-        {mdx.frontmatter.sidebar && tocItems && (
-          <DesktopTableOfContents
+        {tocItems && (
+          <TableOfContents
             slug={slug}
             editPath={absoluteEditPath}
             items={tocItems}
-            isPageIncomplete={isPageIncomplete}
             maxDepth={mdx.frontmatter.sidebarDepth!}
+            hideEditButton={!!mdx.frontmatter.hideEditButton}
+            pt={isPageIncomplete ? "5rem" : "3rem"}
           />
         )}
       </ContentContainer>
@@ -246,7 +239,21 @@ const DocsPage = ({
 }
 
 export const query = graphql`
-  query DocsPage($relativePath: String) {
+  query DocsPage($languagesToFetch: [String!]!, $relativePath: String) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-developers-docs", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     siteData: site {
       siteMetadata {
         editContentUrl
@@ -261,9 +268,9 @@ export const query = graphql`
         description
         lang
         incomplete
-        sidebar
         sidebarDepth
         isOutdated
+        hideEditButton
       }
       body
       tableOfContents

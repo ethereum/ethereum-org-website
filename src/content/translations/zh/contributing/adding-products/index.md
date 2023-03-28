@@ -2,7 +2,6 @@
 title: 添加产品
 description: 将钱包和去中心化应用程序添加到 ethereum.org 时适用的政策
 lang: zh
-sidebar: true
 ---
 
 _关于添加钱包的说明：作为[我们的第一季度产品路线图](https://github.com/ethereum/ethereum-org-website/issues/5105)的一部分，我们正在完善我们的钱包页面。 这将包括为我们钱包页面完善上架标准。 在我们研究、建立和发布完善的上架标准之前，我们不会积极向网站添加新钱包。_

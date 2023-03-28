@@ -2,7 +2,6 @@
 title: Optimistische Rollups
 description: Einführung in optimistische Rollups
 lang: de
-sidebar: true
 ---
 
 ## Voraussetzungen {#prerequisites}

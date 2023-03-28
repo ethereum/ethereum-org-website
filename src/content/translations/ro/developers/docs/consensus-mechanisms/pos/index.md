@@ -2,7 +2,6 @@
 title: Dovada-mizei (PoS)
 description: O explicație a protocolului de consens „dovada-mizei” și a rolului său în Ethereum.
 lang: ro
-sidebar: true
 incomplete: true
 ---
 

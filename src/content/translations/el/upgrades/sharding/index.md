@@ -3,7 +3,6 @@ title: Οι Shard chains
 description: Μάθετε για τις shard chains - τα κομμάτια του δικτύου που δίνουν στο Ethereum περισσότερη χωρητικότητα συναλλαγών και διευκολύνουν τη λειτουργία του.
 lang: el
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/newrings.png
 summaryPoint1: Το Sharding είναι μια αναβάθμιση πολλών φάσεων για τη βελτίωση της επεκτασιμότητας και της χωρητικότητας του Ethereum.
 summaryPoint2: Οι Shard chains διαμοιράζουν το φορτίο του δικτύου σε 64 νέες αλυσίδες (chains).

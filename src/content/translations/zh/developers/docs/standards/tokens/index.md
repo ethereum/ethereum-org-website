@@ -2,15 +2,14 @@
 title: 代币标准
 description:
 lang: zh
-sidebar: true
 incomplete: true
 ---
 
-## 简介 {#introduction}
+## 介绍 {#introduction}
 
-许多以太坊开发标准之一侧重于代币接口。 这些标准有助于确保智能合约仍然可以被撰写，例如，当新项目签发代币时，它与现有分散化的交易是兼容的。
+许多以太坊开发标准都集中在代币接口上。 这些标准有助于确保智能合约仍然可以被撰写，例如，当新项目签发代币时，它与现有分散化的交易是兼容的。
 
-## 前体条件 {#prerequisites}
+## 前提条件 {#prerequisites}
 
 - [以太坊开发标准](/developers/docs/standards/)
 - [智能合约](/developers/docs/smart-contracts/)
@@ -23,10 +22,11 @@ incomplete: true
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - 非同质化代币的标准接口，比如艺术作品或歌曲的契约。
 - [ERC-777](/developers/docs/standards/tokens/erc-777/) - ERC-777 使人们能够通过代币上创建额外的功能，例如用于改善交易私密性的混合合约，或是在您不慎丢失私钥时的紧急恢复功能。
 - [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - ERC-1155 允许更有效的交易和打包交易，从而节省燃料成本。 此代币标准允许创建实用代币（例如 $BNB 或 $BAT）和加密朋克之类的非同质化代币。
+- [ERC-4626](/developers/docs/standards/tokens/erc-4626/) - 一个代币化的资金库标准，旨在优化和统一收益资金库的技术参数。
 
 ## 延伸阅读 {#further-reading}
 
-_你知道有什么社区资源帮助过你吗？ 编辑并添加本页面！_
+_还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
 
 ## 相关教程 {#related-tutorials}
 

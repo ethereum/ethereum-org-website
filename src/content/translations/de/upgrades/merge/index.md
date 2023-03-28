@@ -3,7 +3,6 @@ title: Die Zusammenführung
 description: Erfahren Sie mehr über die Zusammenführung, wenn das Ethereum-Mainnet mit dem durch die Beacon Chain koordinierten Proof-of-Stake-System verbunden wird.
 lang: de
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/merge.png
 summaryPoint1: Letztendlich wird das derzeitige Ethereum-Mainnet mit dem Proof-of-Stake-System der Bacon Chain zusammengeführt.
 summaryPoint2: Das markiert das Ende des Proof-of-Work für Ethereum sowie den vollständigen Übergang zu Proof-of-Stake.
@@ -12,7 +11,7 @@ summaryPoint4: Zuvor wurde dieser Vorgang als „das Andocken“ bezeichnet.
 ---
 
 <UpgradeStatus dateKey="page-upgrades-merge-date">
-  Dieses Upgrade stellt den offiziellen Übergang zum Proof-of-Stake-Konsens dar. Damit entfällt das energieintensive Mining. Stattdessen wird das Netzwerk durch den Einsatz von Staked Ether gesichert. Ein wirklich spannender Schritt zur Verwirklichung der <a href="/upgrades/vision/">Ethereum-Vision</a>: mehr Skalierbarkeit, Sicherheit und Nachhaltigkeit.
+  Dieses Upgrade stellt den offiziellen Übergang zum Proof-of-Stake-Konsens dar. Damit entfällt das energieintensive Mining. Stattdessen wird das Netzwerk durch den Einsatz von Staked Ether gesichert. Ein wirklich spannender Schritt zur Verwirklichung der <a href="/roadmap/vision/">Ethereum-Vision</a>: mehr Skalierbarkeit, Sicherheit und Nachhaltigkeit.
 </UpgradeStatus>
 
 ## Was ist die Zusammenführung? {#what-is-the-docking}
@@ -29,7 +28,7 @@ Mainnet wird es sowohl ermöglichen, Smart Contracts ins Proof-of-Stake-System e
 
 ## Nach der Zusammenführung {#after-the-merge}
 
-Mit dem Ende von Proof-of-Work für Ethereum beginnt eine neue Ära eines nachhaltigeren, umweltfreundlicheren Ethereum. An diesem Punkt hat Ethereum einen weiteren Schritt auf dem Weg, das volle Potenzial, Sicherheit und Nachhaltigkeit zu erreichen, geschafft, wie in der [Ethereum-Vision](/upgrades/vision/) beschrieben.
+Mit dem Ende von Proof-of-Work für Ethereum beginnt eine neue Ära eines nachhaltigeren, umweltfreundlicheren Ethereum. An diesem Punkt hat Ethereum einen weiteren Schritt auf dem Weg, das volle Potenzial, Sicherheit und Nachhaltigkeit zu erreichen, geschafft, wie in der [Ethereum-Vision](/roadmap/vision/) beschrieben.
 
 Es ist wichtig, zu erwähnen, dass Einfachheit ein Ziel der Zusammenführung ist, um den Übergang von Proof-of-Work zu Proof-of-Stake zu beschleunigen. Die Entwickler konzentrieren ihre Bemühungen auf diesen Übergang und verzichten zunächst auf zusätzliche Funktionen, die die Erreichung dieses Ziels verzögern könnten.
 

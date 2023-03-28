@@ -2,7 +2,6 @@
 title: Estándar de token ERC-777
 description:
 lang: es
-sidebar: true
 ---
 
 ## ¿Introducción? {#introduction}

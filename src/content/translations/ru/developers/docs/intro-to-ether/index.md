@@ -2,7 +2,6 @@
 title: Введение в эфир
 description: Знакомство разработчика с криптовалютой эфир.
 lang: ru
-sidebar: true
 ---
 
 ## Прежде чем начать {#prerequisites}

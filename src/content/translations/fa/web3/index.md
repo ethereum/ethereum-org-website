@@ -2,7 +2,6 @@
 title: وب 3 چیست و چرا اهمیت دارد?
 description: مقدمه‌ای بر وب 3- تکامل بعدی اینترنت - و چرایی اهمیت آن.
 lang: fa
-sidebar: true
 ---
 
 # مقدمه ای بر وب 3 {#introduction}

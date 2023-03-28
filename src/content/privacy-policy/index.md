@@ -1,6 +1,7 @@
 ---
 title: Privacy Policy
 lang: en
+hideEditButton: true
 ---
 
 # Privacy Policy {#privacy-policy}

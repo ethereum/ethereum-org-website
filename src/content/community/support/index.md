@@ -1,7 +1,6 @@
 ---
 title: Ethereum support
 description: Get support in the Ethereum ecosystem.
-sidebar: true
 lang: en
 ---
 
@@ -58,6 +57,7 @@ Here are some popular examples:
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
 - [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
+- [Tenderly](https://discord.gg/fBvDJYR)
 
 ## Running a node {#node-support}
 

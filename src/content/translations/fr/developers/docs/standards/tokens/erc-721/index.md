@@ -2,7 +2,6 @@
 title: Norme de jeton non fongible ERC-721
 description:
 lang: fr
-sidebar: true
 ---
 
 ## Introduction {#introduction}
@@ -64,7 +63,7 @@ Voyons comment une norme peut être si importante pour nous faciliter le contrô
 Pour commencer, assurez-vous d'avoir installé la bibliothèque Python [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation):
 
 ```
-$ pip install web3
+pip install web3
 ```
 
 ```python

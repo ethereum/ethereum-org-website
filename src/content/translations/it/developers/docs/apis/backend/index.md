@@ -2,12 +2,11 @@
 title: Librerie API di backend
 description: Introduzione alle API client di Ethereum che permettono l'interazione tra un'applicazione con la blockchain.
 lang: it
-sidebar: true
 ---
 
 Per interagire con la blockchain Ethereum (ad esempio leggere i dati della blockchain e/o inviare transazioni alla rete), un'applicazione software deve connettersi a un nodo Ethereum.
 
-Per questo scopo, ogni client di Ethereum implementa la specifica [JSON-RPC](/developers/docs/apis/json-rpc/), quindi esiste una serie uniforme di [endpoint](/developers/docs/apis/json-rpc/#json-rpc-methods) su cui possono basarsi le applicazioni.
+Per questo scopo, ogni client di Ethereum implementa la specifica [JSON-RPC](/developers/docs/apis/json-rpc/), quindi esiste una serie uniforme di [metodi](/developers/docs/apis/json-rpc/#json-rpc-methods) su cui possono basarsi le applicazioni.
 
 Se desideri utilizzare un linguaggio di programmazione specifico per connetterti a un nodo Ethereum, sviluppa una soluzione personalizzata, ma tieni presente che ci sono già molte librerie all'interno dell'ecosistema che possono facilitarti la vita. Con queste librerie, gli sviluppatori possono scrivere metodi a una riga intuitivi per inizializzare le richieste RPC JSON (under the hood) che interagiscono con Ethereum.
 
@@ -28,7 +27,7 @@ Queste librerie eliminano buona parte della complessità legata al dover interag
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
 
-**BlockCypher -** **_API Web Ethereum_**
+**BlockCypher -** **_API Web Ethereum._**
 
 - [blockcypher.com](https://www.blockcypher.com/)
 - [Documentazione](https://www.blockcypher.com/dev/ethereum/)
@@ -57,14 +56,17 @@ Queste librerie eliminano buona parte della complessità legata al dover interag
 
 - [ethercluster.com](https://www.ethercluster.com/)
 
-**Catainstack -** **_Nodi Ethereum condivisi e dedicati come servizio_**
+**Catainstack -** **_Nodi Ethereum elastici e dedicati come servizio_**
 
 - [chainstack.com](https://chainstack.com)
 - [Documentazione](https://docs.chainstack.com)
+- [Riferimento all'API di Ethereum](https://docs.chainstack.com/api/ethereum/ethereum-api-reference)
 
-**QuikNode -** **_Piattaforma per sviluppatori di blockchain_**
+**QuickNode -** **_Infrastruttura della Blockchain come servizio._**
 
-- [quiknode.io](https://quiknode.io)
+- [quicknode.com](https://quicknode.com)
+- [Documentazione](https://www.quicknode.com/docs)
+- [Discord](https://discord.gg/NaR7TtpvJq)
 
 **Strumenti Python -** **_Diverse librerie per interagire con Ethereum tramite Python_**
 
@@ -97,6 +99,19 @@ Queste librerie eliminano buona parte della complessità legata al dover interag
 - [Documentazione](https://docs.tatum.io/)
 - [Discord](https://discord.gg/EDmW3kjTC9)
 
+**Watchdata -** **_Accesso semplice e affidabile delle API alla blockchain di Ethereum._**
+
+- [Watchdata](https://watchdata.io/)
+- [Documentazione](https://docs.watchdata.io/)
+- [Discord](https://discord.com/invite/TZRJbZ6bdn)
+
+**Zmok -** **_Nodi di Ethereum orientati alla velocità come l'API JSON-RPC/WebSockets._**
+
+- [zmok.io](https://zmok.io/)
+- [GitHub](https://github.com/zmok-io)
+- [Documentazione](https://docs.zmok.io/)
+- [Discord](https://discord.gg/fAHeh3ka6s)
+
 ## Letture consigliate {#further-reading}
 
 _Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
@@ -108,5 +123,5 @@ _Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e ag
 
 ## Tutorial correlati {#related-tutorials}
 
-- [Set up Web3js to use the Ethereum blockchain in JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Istruzioni per utilizzare e configurare web3.js in un progetto_
-- [Calling a Smart Contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Usando il token Dai, impara a chiamare le funzioni dei contratti con JavaScript_
+- [Set up Web3js to use the Ethereum blockchain in JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Istruzioni per impostare web3.js in un progetto._
+- [Chiamare un contratto intelligente da JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _- Usando il token Dai, impara come chiamare le funzioni dei contratti usando JavaScript_

@@ -2,7 +2,6 @@
 title: Розумні контракти
 description: Нетехнічне знайомство з розумними контрактами
 lang: uk
-sidebar: true
 ---
 
 # Коротко про розумні контракти {#introduction-to-smart-contracts}

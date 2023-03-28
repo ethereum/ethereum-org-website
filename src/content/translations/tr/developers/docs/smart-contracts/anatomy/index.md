@@ -2,7 +2,6 @@
 title: Akıllı sözleşmelerin anatomisi
 description: Akıllı bir sözleşmenin anatomisine derinlemesine bir bakış – fonksiyonlar, veriler ve değişkenler.
 lang: tr
-sidebar: true
 ---
 
 Bir akıllı sözleşme Ethereum üzerindeki bir adreste çalışan bir programdır. Bir işlem alındığında yürütülebilen fonksiyonlar ve verilerden oluşurlar. Burada bir akıllı sözleşmenin nelerden oluştuğu hakkında genel bir bakış bulunmaktadır.

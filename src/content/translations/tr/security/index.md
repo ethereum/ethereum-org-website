@@ -2,7 +2,6 @@
 title: Ethereum güvenliği ve dolandırıcılık önleme
 description: Ethereum'da güvende kalmak
 lang: tr
-sidebar: true
 ---
 
 # Ethereum güvenliği ve dolandırıcılık önleme {#introduction}
@@ -158,8 +157,6 @@ Bir işlem göndermeden önce, gönderdiğiniz adresin istediğiniz alıcının 
 Akıllı sözleşmelerle etkileşim kurarken sınırsız harcama limitlerine izin vermeyin. Sınırsız bir harcama, akıllı sözleşmenin cüzdanınızı boşaltmasını sağlayabilir. Bunun yerine, harcama limitlerini yalnızca işlem için gerekli olan miktara ayarlayın.
 
 Birçok Ethereum cüzdanı, boşaltılan hesaplara karşı koruma sağlamak için limit koruması sunar.
-
-[Limit korumalı cüzdanları keşfedin](/wallets/find-wallet/?filters=has_limits_protection)
 
 <Divider />
 

@@ -2,7 +2,6 @@
 title: Content buckets
 lang: en
 description: Which pages each content bucket of Ethereum.org contains
-sidebar: true
 ---
 
 # Content buckets {#content-buckets}
@@ -68,7 +67,7 @@ Below is a breakdown of the website pages each content bucket contains.
 ## 8) Upgrades {#upgrades}
 
 - [Ethereum upgrades](/upgrades/)
-- [Ethereum vision](/upgrades/vision/)
+- [Ethereum vision](/roadmap/vision/)
 - [The Beacon Chain](/upgrades/beacon-chain/)
 - [The Merge](/upgrades/merge/)
 - [Shard chains](/upgrades/sharding/)
@@ -183,7 +182,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Network adresses](/developers/docs/networking-layer/network-addresses/)
 - [Simple serialize](/developers/docs/data-structures-and-encoding/ssz/)
 - [Mining algorithms](/developers/docs/consensus-mechanisms/pow/mining-algorithms/)
-- [Dagger-Hashamoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashamoto/)
+- [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto/)
 - [Ethash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash/)
 - [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/)
 - [Weak subjectivity](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/)

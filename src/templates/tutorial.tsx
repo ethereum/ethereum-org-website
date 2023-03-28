@@ -3,6 +3,7 @@ import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "@emotion/styled"
+import { Badge } from "@chakra-ui/react"
 
 import ButtonLink from "../components/ButtonLink"
 import Card from "../components/Card"
@@ -13,7 +14,6 @@ import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
 import PageMetadata from "../components/PageMetadata"
-import Pill from "../components/Pill"
 import TableOfContents, {
   Item as ItemTableOfContents,
 } from "../components/TableOfContents"
@@ -135,7 +135,7 @@ const components = {
   Card,
   Divider,
   SectionNav,
-  Pill,
+  Badge,
   CallToContribute,
   Emoji,
   YouTube,
@@ -171,9 +171,10 @@ const TutorialPage = ({
   const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
 
   const { editContentUrl } = siteData.siteMetadata || {}
+  const hideEditButton = !!mdx.frontmatter.hideEditButton
   const absoluteEditPath = `${editContentUrl}${relativePath}`
   return (
-    <div>
+    <>
       {showPostMergeBanner && (
         <PostMergeBanner
           translationString={postMergeBannerTranslationString!}
@@ -203,22 +204,37 @@ const TutorialPage = ({
           />
           <FeedbackCard />
         </ContentContainer>
-        {mdx.frontmatter.sidebar && tocItems && (
+        {tocItems && (
           <DesktopTableOfContents
             items={tocItems}
             maxDepth={mdx.frontmatter.sidebarDepth!}
             editPath={absoluteEditPath}
+            hideEditButton={hideEditButton}
           />
         )}
       </Page>
-    </div>
+    </>
   )
 }
 
 export default TutorialPage
 
 export const query = graphql`
-  query TutorialPage($relativePath: String) {
+  query TutorialPage($languagesToFetch: [String!]!, $relativePath: String) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-developers-tutorials", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     siteData: site {
       siteMetadata {
         editContentUrl
@@ -241,11 +257,11 @@ export const query = graphql`
         sourceUrl
         skill
         published
-        sidebar
         sidebarDepth
         address
         isOutdated
         postMergeBannerTranslation
+        hideEditButton
       }
       body
       tableOfContents

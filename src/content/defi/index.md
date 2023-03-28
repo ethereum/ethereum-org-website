@@ -4,7 +4,6 @@ description: An overview of DeFi on Ethereum
 lang: en
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../assets/use-cases/defi.png
 alt: An Eth logo made of lego bricks.
 sidebarDepth: 2
@@ -333,13 +332,12 @@ DeFi is an open-source movement. The DeFi protocols and applications are all ope
 
 ### DeFi data {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
+- [DeFi Rate](https://defirate.com/)
 
 ### DeFi articles {#defi-articles}
 
-- [What is Decentralized Finance?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) – _ETHHub, updated regularly_
 - [A beginner's guide to DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, January 6 2020_
 
 ### Videos {#videos}

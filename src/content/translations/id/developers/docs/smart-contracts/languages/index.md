@@ -2,7 +2,6 @@
 title: Bahasa kontrak pintar
 description: Gambaran umum dan perbandingan dua bahasa kontrak pintar utama – Solidity dan Vyper.
 lang: id
-sidebar: true
 ---
 
 Aspek keren tentang Ethereum adalah kontrak pintar bisa diprogram menggunakan bahasa yang ramah bagi pengembang. Jika Anda berpengalaman dalam penggunaan Python atau [bahasa tanda kurung kurawal](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), Anda dapat menemukan bahasa dengan sintaksis yang dikenal.

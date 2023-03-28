@@ -2,7 +2,6 @@
 title: Hakkımızda
 description: Ethereum.org ekibi, topluluğu ve misyonu hakkında
 lang: tr
-sidebar: true
 ---
 
 # Ethereum.org hakkında {#about-ethereumorg}
@@ -57,10 +56,6 @@ Katkı sürecini daha sorunsuz hâle getirmek amacıyla içerik yazmanın belirl
 Hem tasarım ilkelerine hem de stil rehberine ilişkin geri bildirimlerinizi almaktan mutluluk duyarız. Unutmayın, ethereum.org topluluk için, topluluk tarafından yönetilir.
 
 [Siteye katkıda bulunmak](/contributing/) istiyorsanız, [İlkelerimizi](/contributing/design-principles/) ve [stil rehberimizi](/contributing/style-guide/) okuduğunuzdan emin olun.
-
-## Yol Haritası {#roadmap}
-
-<Roadmap />
 
 ## İş imkanları {#open-jobs}
 

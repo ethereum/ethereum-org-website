@@ -2,7 +2,6 @@
 title: Akıllı sözleşme güvenliği
 description: Ethereum geliştiricileri için güvenlik değerlendirmeleri
 lang: tr
-sidebar: true
 ---
 
 Ethereum akıllı sözleşmeleri aşırı esnektirler; hem büyük miktarlarda token tutabilirler (genelde 1 milyar ABD Dolarından fazla) hem de önceden dağıtılmış akıllı sözleşme kodunu esas alarak değişmez mantık çalıştırabilirler. Bu; güvene gerek olmayan ve birbirine bağlı akıllı sözleşmelerden oluşan renkli ve yaratıcı bir ekosistem oluşturmuş olsa da; akıllı sözleşmelerdeki güvenlik açıklarından ve Ethereum'daki beklenmedik davranışlardan faydalanarak kâr elde etmek isteyen saldırganları cezbetmek için mükemmel bir ekosistemdir. Akıllı sözleşme kodu _genellikle_ güvenlik açıklarını onarmak için değiştirilemez; akıllı sözleşmelerden çalınan varlıklar kurtarılamaz ve çalınan varlıkların takibini yapmak aşırı derecede zordur. Akıllı sözleşme sorunlarına bağlı olarak çalınan veya kaybolan toplam değer miktarı, kuşkusuz 1 milyar ABD dolarının üzerindedir. Akıllı sözleşme kodlama hatalarına bağlı bazı büyük kayıplar:

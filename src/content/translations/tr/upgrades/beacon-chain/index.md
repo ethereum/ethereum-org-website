@@ -3,7 +3,6 @@ title: İşaret Zinciri
 description: Hisse ispatını Ethereum'a tanıtan yükseltme olan İşaret Zinciri hakkında bilgi edinin.
 lang: tr
 template: upgrade
-sidebar: true
 image: ../../../../../assets/upgrades/core.png
 summaryPoint1: İşaret Zinciri kullanmakta olduğumuz Ethereum ile ilgili hiçbir şeyi değiştirmez.
 summaryPoint2: Mutabakat katmanı görevi görerek ağı koordine eder.
@@ -19,7 +18,7 @@ summaryPoint4: Bunu teknik yol haritalarından "Aşama 0" olarak biliyor olabili
 
 İşaret Zinciri, [parçalardan](/upgrades/sharding/) ve [stake edenlerden](/staking/) oluşan genişletilmiş ağı yönetir veya koordine eder. Ancak günümüzün [Ethereum ana ağı](/glossary/#mainnet) gibi olmayacaktır. Hesapları veya akıllı sözleşmeleri ele alamaz.
 
-İşaret Zincirinin rolü zamanla değişecek ancak [geliştirmeye çalıştığımız güvenli, sürdürülebilir ve ölçeklenebilir Ethereum](/upgrades/vision/) için temel bir bileşendir.
+İşaret Zincirinin rolü zamanla değişecek ancak [geliştirmeye çalıştığımız güvenli, sürdürülebilir ve ölçeklenebilir Ethereum](/roadmap/vision/) için temel bir bileşendir.
 
 ## İşaret (Beacon) Zinciri özellikleri {#beacon-chain-features}
 

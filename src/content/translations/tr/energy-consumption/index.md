@@ -2,7 +2,6 @@
 title: Ethereum Enerji Tüketimi
 description: Ethereum'un enerji tüketimini anlamak için ihtiyacınız olan temel bilgiler.
 lang: tr
-sidebar: true
 ---
 
 # Ethereum enerji tüketimi {#introduction}
@@ -76,7 +75,7 @@ Ethereum'un enerji tüketimi tarihsel olarak önemli olsa da, enerjiye aç bir b
 
 ## İlgili konular {#related-topics}
 
-- [Ethereum'un vizyonu](/upgrades/vision/)
+- [Ethereum'un vizyonu](/roadmap/vision/)
 - [İşaret Zinciri](/upgrades/beacon-chain)
 - [Birleştirme](/upgrades/merge/)
 - [Parçalama](/upgrades/beacon-chain/)

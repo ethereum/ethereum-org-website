@@ -2,7 +2,6 @@
 title: Biała księga Ethereum
 description: Dokument wprowadzający do Ethereum, opublikowany w 2013 r. przed jego uruchomieniem.
 lang: pl
-sidebar: true
 sidebarDepth: 2
 ---
 

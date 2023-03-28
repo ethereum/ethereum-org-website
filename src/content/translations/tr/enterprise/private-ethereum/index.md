@@ -2,7 +2,6 @@
 title: İşletmeler için Özel Ethereum
 description: Özel Ethereum blok zincirlerinde işletme uygulamaları için kaynaklar.
 lang: tr
-sidebar: true
 ---
 
 # İşletmeler için özel Ethereum {#private-ethereum-for-enterprise}

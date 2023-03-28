@@ -2,7 +2,6 @@
 title: Ethereum untuk Pengembang Python
 description: Pelajari cara menjadi pengembang untuk Ethereum menggunakan proyek dan peralatan berbasis Python
 lang: id
-sidebar: true
 incomplete: true
 ---
 
@@ -62,7 +61,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 ### Diarsipkan / Tidak lagi dipertahankan: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _Klien Python Ethereum_
-- [Mamba](https://mamba.black) - _kerangka kerja untuk menulis, mengompilasi, dan menyebarkan kontrak pintar yang ditulis dalam bahasa Vyper_
+- [Mamba](https://github.com/arjunaskykok/mamba) - _kerangka kerja untuk menulis, mengompilasi, dan menyebarkan kontrak pintar yang ditulis dalam bahasa Vyper_
 
 Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers](/developers/).
 

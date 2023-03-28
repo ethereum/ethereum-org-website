@@ -2,7 +2,6 @@
 title: Produkte hinzufügen
 description: Richtlinien zum Hinzufügen von Wallets und dApps zu ethereum.org
 lang: de
-sidebar: true
 ---
 
 _Ein Hinweis zum Hinzufügen von Wallets: Im Rahmen [unserer Q1-Produkt-Roadmap](https://github.com/ethereum/ethereum-org-website/issues/5105) überarbeiten wir unsere Wallets-Seite. Dazu gehört auch eine detailliertere Ausarbeitung der Auflistungskriterien für unsere Wallets-Seite. Solange wir keine übearbeiteten Kriterien für die Auflistung von Wallets recherchiert, festgelegt und veröffentlicht haben, werden aktiv keine neuen Wallets auf der Website hinzugefügt._
@@ -108,6 +107,6 @@ _Wir untersuchen auch Optionen für Abstimmungen, damit die Community ihre Präf
 
 Wenn Sie eine Wallet oder dApp zu ethereum.org hinzufügen möchten und das Produkt die Kriterien erfüllt, erstellen Sie einen Eintrag auf GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
   Eintrag erstellen
 </ButtonLink>

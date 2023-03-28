@@ -2,7 +2,6 @@
 title: Nodos y clientes
 description: Una visión general de los nodos de Ethereum y del software del cliente, además de cómo configurar un nodo y por qué deberías hacerlo.
 lang: es
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -174,7 +173,7 @@ Los modos de sincronización representan diferentes enfoques de este proceso con
 
 Resumen general de los enfoques de sincronización utilizados en clientes listos para la red principal:
 
-##### Sincronización total {#full-sync}
+##### Sincronización total
 
 La sincronización total descarga todos los bloques (incluidos los encabezados, las transacciones y los recibos) y va generando de manera creciente el estado del la cadena de bloques al ejecutar cada bloque desde el principio.
 
@@ -250,11 +249,11 @@ Existen múltiples clientes de consenso (antes conocidos como clientes "Eth2") q
 
 | Cliente                                                     | Idioma     | Sistemas operativos   | Redes                                     |
 | ----------------------------------------------------------- | ---------- | --------------------- | ----------------------------------------- |
-| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | Cadena de baliza, Prater                  |
-| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Cadena de baliza, Prater                  |
-| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Cadena de baliza, Prater, Pyrmont         |
-| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Cadena de baliza, Prater                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Cadena de baliza, Gnosis, Prater, Pyrmont |
+| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | Cadena de baliza, Goerli                  |
+| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Cadena de baliza, Goerli                  |
+| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Cadena de baliza, Goerli, Pyrmont         |
+| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Cadena de baliza, Goerli                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Cadena de baliza, Gnosis, Goerli, Pyrmont |
 
 ## Hardware {#hardware}
 

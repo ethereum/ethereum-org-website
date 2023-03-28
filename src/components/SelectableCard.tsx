@@ -15,11 +15,6 @@ const StyledCard = styled.div`
   cursor: pointer;
 `
 
-const StyledCheckbox = styled(Checkbox)`
-  position: absolute;
-  right: 0;
-`
-
 const Description = styled.p`
   opacity: 0.8;
 `
@@ -56,7 +51,14 @@ const Card: React.FC<IProps> = ({
     <StyledCard className={className} onClick={handleSelect}>
       <TopContent>
         <Emoji text={emoji} size={3} mb={`1em`} />
-        <StyledCheckbox checked={isSelected} aria-label={title} />
+        <Checkbox
+          checked={isSelected}
+          aria-label={title}
+          sx={{
+            position: "absolute",
+            right: "0",
+          }}
+        />
         <h3>{title}</h3>
         <Description>{description}</Description>
       </TopContent>

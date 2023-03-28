@@ -2,7 +2,6 @@
 title: استخراج
 description: توضیحی در مورد نحوه کار استخراج در اتریوم و اینکه چگونه اتریوم را امن و غیرمتمرکز نگه می‌دارد.
 lang: fa
-sidebar: true
 incomplete: true
 ---
 

@@ -1,7 +1,6 @@
 {
   "layer-2-arbitrum-note": "Sahtekarlık kanıtları sadece ön listede olan kullanıcılar içindir. Ön liste henüz açık değil.",
   "layer-2-boba-note": "Durum doğrulaması geliştirme aşamasında",
-  "layer-2-metis-note": "Sahtekarlık kanıtları geliştirme aşamasında",
   "layer-2-optimism-note": "Sahtekarlık kanıtları geliştirme aşamasında",
   "layer-2-hero-title": "Katman 2",
   "layer-2-hero-header": "Herkes için Ethereum",
@@ -58,7 +57,7 @@
   "layer-2-dyor-3": "L2BEAT'e git",
   "layer-2-use-layer-2-title": "Katman 2'yi kullan",
   "layer-2-use-layer-2-1": "Artık Katman 2 neden var ve ne işe yarar biliyorsunuz, şimdi deneyimleme zamanı!",
-  "layer-2-contract-accounts": "<strong>NOT:</strong> 2 katmana olan köprüyü kullanırken ve 2. katmanları kullanırken tıpkı Ethereum Ana Ağında olduğu gibi EOA hesabınızın (hesabı yalnızca tek bir özel anahtarın kontrol ettiği bir hesap) adresini kontrol edeceğinizi unutmamak önemlidir. Ancak, <a href=\"https://gnosis-safe.io/\" target=”_blank”>Gnosis Safe</a> veya <a href=\"https:// gibi bir akıllı sözleşme hesabı kullanıyorsanız www.argent.xyz/\" target=”_blank”>Argent</a>, sözleşme hesabınızı 2. katmandaki o adrese yeniden dağıtana kadar bu adres üzerinde herhangi bir 2. katman üzerinde kontrole sahip olmayacaksınız. Bir sözleşme hesabıyla köprüleme yapıyor veya kontrata para gönderiyorsanız ve sözleşme hesabı için bu adresi kontrol etmiyorsanız fonlarınız kaybolabilir.",
+  "layer-2-contract-accounts": "<strong>NOT:</strong> 2 katmana olan köprüyü kullanırken ve 2. katmanları kullanırken tıpkı Ethereum Ana Ağında olduğu gibi EOA hesabınızın (hesabı yalnızca tek bir özel anahtarın kontrol ettiği bir hesap) adresini kontrol edeceğinizi unutmamak önemlidir. Ancak, <a href=\"https://safe.global/\" target=”_blank”> Safe</a> veya <a href=\"https:// gibi bir akıllı sözleşme hesabı kullanıyorsanız www.argent.xyz/\" target=”_blank”>Argent</a>, sözleşme hesabınızı 2. katmandaki o adrese yeniden dağıtana kadar bu adres üzerinde herhangi bir 2. katman üzerinde kontrole sahip olmayacaksınız. Bir sözleşme hesabıyla köprüleme yapıyor veya kontrata para gönderiyorsanız ve sözleşme hesabı için bu adresi kontrol etmiyorsanız fonlarınız kaybolabilir.",
   "layer-2-use-layer-2-generalized-title": "Genelleştirilmiş 2. katman",
   "layer-2-use-layer-2-generalized-1": "Genel anlamda Katman 2'ler Ethereum gibi hareket eder - hem de daha ucuzdur. Ethereum Katman 2'de yapabileceğiniz herhangi bir şeyi Katman 2'de de yapabilirsiniz. Birçok merkeziyetsiz uygulama bu ağlara geçiş yaptı ya da Ana Ağı pas geçerek doğrudan Katman 2 üzerinde kuruldu.",
   "layer-2-use-layer-2-application-specific-title": "Uygulamaya özel Katman 2'ler",
@@ -131,5 +130,6 @@
   "layer-2-note": "Not:",
   "layer-2-ecosystem-portal": "Ekosistem Portalı",
   "layer-2-token-lists": "Token listeleri",
-  "layer-2-explore": "Keşfet"
+  "layer-2-explore": "Keşfet",
+  "page-dapps-ready-button": "Başla"
 }

@@ -2,7 +2,6 @@
 title: مصرف انرژی اتریوم
 description: اطلاعات بنیادینی که برای درک مصرف انرژی اتریوم نیاز دارید.
 lang: fa
-sidebar: true
 ---
 
 # مصرف انرژی اتریوم {#introduction}
@@ -76,7 +75,7 @@ _ما باید در نظر بگیریم که اتریوم تنها به تراک
 
 ## موضوعات مرتبط {#related-topics}
 
-- [چشم‌انداز اتریوم](/upgrades/vision/)
+- [چشم‌انداز اتریوم](/roadmap/vision/)
 - [زنجیره‌ی بیکن](/upgrades/beacon-chain)
 - [ادغام](/upgrades/merge/)
 - [زنجیره‌ای‌سازی](/upgrades/beacon-chain/)

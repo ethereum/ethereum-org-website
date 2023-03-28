@@ -4,7 +4,6 @@ description: Una visió general de les DeFi a Ethereum
 lang: ca
 template: use-cases
 emoji: ":money_with_wings:"
-sidebar: true
 image: ../../../../assets/use-cases/defi.png
 alt: Un logotip d'Ethereum fet de peces de lego.
 sidebarDepth: 2
@@ -333,7 +332,6 @@ Les DeFi són un moviment de codi obert. Els protocols i les aplicacions DeFi s�
 
 ### Dades sobre DeFi {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 

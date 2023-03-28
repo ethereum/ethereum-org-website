@@ -5,7 +5,6 @@ author: "Elan Halpern"
 tags: ["transactions", "web3.js", "alchemy"]
 skill: beginner
 lang: en
-sidebar: true
 published: 2020-11-04
 source: Alchemy docs
 sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs

@@ -3,7 +3,6 @@ title: Cara menggunakan Echidna untuk menguji kontrak pintar
 description: Bagaimana cara menggunakan Echidna untuk secara otomatis menguji kontrak pintar
 author: "Trailofbits"
 lang: id
-sidebar: true
 tags:
   - "solidity"
   - "kontrak pintar"

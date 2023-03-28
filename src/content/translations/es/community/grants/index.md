@@ -1,7 +1,6 @@
 ---
 title: Ethereum Foundation y programas de subvenciones para la comunidad
 description: Un listado de los programas de subvenciones del ecosistema Ethereum.
-sidebar: true
 lang: es
 ---
 

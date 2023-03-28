@@ -3,7 +3,7 @@ export const Frontmatter = `
     frontmatter: Frontmatter
   }
   type Frontmatter {
-    sidebar: Boolean
+    hideEditButton: Boolean
     sidebarDepth: Int
     incomplete: Boolean
     template: String
@@ -24,5 +24,6 @@ export const Frontmatter = `
     author: String
     tags: [String]
     isOutdated: Boolean
+    postMergeBannerTranslation: String
   }
 `

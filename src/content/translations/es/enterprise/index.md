@@ -2,7 +2,6 @@
 title: Empresa en la red principal de Ethereum
 description: Guías, artículos y herramientas sobre aplicaciones empresariales en la cadena de bloques pública de Ethereum
 lang: es
-sidebar: true
 ---
 
 # Red principal de Ethereum para empresas {#ethereum-for-enterprise}

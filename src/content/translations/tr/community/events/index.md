@@ -1,7 +1,6 @@
 ---
 title: Ethereum etkinlikleri
 description: Ethereum topluluğuna nasıl dahil olunur?
-sidebar: true
 lang: tr
 ---
 

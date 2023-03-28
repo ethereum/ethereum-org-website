@@ -2,10 +2,9 @@
 title: ERC-721 非同质化代币标准
 description:
 lang: zh
-sidebar: true
 ---
 
-## 简介 {#introduction}
+## 介绍 {#introduction}
 
 **什么是非同质化代币？**
 
@@ -13,11 +12,11 @@ sidebar: true
 
 **ERC-721 是什么？**
 
-ERC-721 为 NFT 引入了一个标准，换言之， 这种类型的代币是独一无二的，并且可能与来自同一智能合约的另一代币有不同的价值，也许是因为它的年份、稀有性、甚至是它的观感。 稍等，看起来怎么样呢？
+ERC-721 为 NFT 引入了一个标准，换言之，这种类型的代币是独一无二的，并且可能与来自同一智能合约的另一代币有不同的价值，也许是因为它的年份、稀有性、甚至是它的观感。 稍等，看起来怎么样呢？
 
-是的。 所有 NFTs 都有一个 `uint256` 变量，名为 `tokenId`，所以对于任何 ERC-721 合约，这对值`contract address, tokenId` 必须是全局唯一的。 也就是说，dApp 可以有一个“转换器”，该转换器使用 `tokenId` 输入和输出一些非常有趣的事物的图像， 例如僵尸、武器、技能或非常可爱的猫咪！
+是的。 所有 NFTs 都有一个 `uint256` 变量，名为 `tokenId`，所以对于任何 ERC-721 合约，这对值`contract address, tokenId` 必须是全局唯一的。 也就是说，去中心化应用程序可以有一个“转换器”， 使用 `tokenId` 作为输入并输出一些很酷的事物图像，例如僵尸、武器、技能或神奇的小猫咪！
 
-## 前体条件 {#prerequisites}
+## 前提条件 {#prerequisites}
 
 - [帐户](/developers/docs/accounts/)
 - [智能合约](/developers/docs/smart-contracts/)
@@ -31,7 +30,7 @@ ERC-721（Ethereum Request for Comments 721），由 William Entriken、Dieter S
 
 如果一个智能合约实现了下列方法和事件，它就可以被称为 ERC-721 非同质化代币合约。 一旦被部署，它将负责跟踪在以太坊上创建的代币。
 
-来自 [EIP-721](https://eips.ethereum.org/EIPS/eip-721)：
+来自[ EIP-721 ](https://eips.ethereum.org/EIPS/eip-721)：
 
 #### 方法 {#methods}
 
@@ -57,14 +56,14 @@ ERC-721（Ethereum Request for Comments 721），由 William Entriken、Dieter S
 
 ### 示例 {#web3py-example}
 
-让我们看看一个标准是多么重要，它使我们能够简单地在以太坊上检查任何 ERC-721 代币合约。 我们只需要合约的应用程序二进制接口（ABI）就可以创造任何 ERC-721 代币的接口。 下面我们将使用一个简化的应用程序二进制接口，使其成为一个简单易用的例子。
+让我们看看一个标准是多么重要，它使我们能够简单地在以太坊上检查任何 ERC-721 代币合约。 我们只需要合约的应用程序二进制接口（ABI）就可以创造任何 ERC-721 代币的接口。 下面我们将使用一个简化的应用程序二进制接口，让例子变得更为简单。
 
 #### Web3.py 示例 {#web3py-example}
 
-首先，确认已经安装了 [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation)Python 库。
+首先，请确保您已安装 [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python 库：
 
 ```
-$ pip install web3
+pip install web3
 ```
 
 ```python
@@ -232,9 +231,10 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [CryptoKitties](https://www.cryptokitties.co/) 是一个围绕着我们称之为加密猫的可繁殖、可收藏和可爱的生物游戏。
 - [Sorare](https://sorare.com/) 是一场全球迷幻足球赛，您可以在这里收集有限版本的收藏品，管理您的球队，参加比赛以获得奖品。
 - [以太坊域名服务 (ENS)](https://ens.domains/) 提供了一种安全和去中心化的方式，用人类可读的名字来处理链上和链下的资源。
-- [Unstoppable Domains](https://unstoppabledomains.com/) 是一个坐落在旧金山，在区块链上创建域名的公司。 区块链域名用人类可读的名字替换加密货币地址，并且可用于支撑抗审查的网站。
-- [Gods Unchained Cards](https://godsunchained.com/) 是以太坊区块链上的 TCG（集换式卡牌游戏）, 它使用 NFT 来给游戏中的资产带来实际所有权。
-- [无聊猿游艇俱乐部](https://boredapeyachtclub.com)是一个由 10,000 个独特 NFT 组成的系列收藏品，这些收藏品不仅仅是非常罕见的艺术品，还是俱乐部入会的标志，可为成员提供多种特权和福利。在社区的努力下，这些特权和福利还会随着时间的推移不断增加。
+- [POAP](https://poap.xyz) 向参加事件或完成特定行动的人免费提供非同质化代币。 POAP 的创建和分发是免费的。
+- [Unstoppable Domains](https://unstoppabledomains.com/) 总部设在旧金山，是一家在区块链上创建域的公司。 区块链域将加密货币地址替换为人类可读的名称，并且可用于支持抗审查的网站。
+- [Gods Unchained Cards](https://godsunchained.com/) 是以太坊区块链上的一款集换式卡牌游戏，它使用非同质化代币来为游戏中的资产提供真实所有权。
+- [无聊猿游艇俱乐部](https://boredapeyachtclub.com)是一件由 10,000 个独一无二的非同质化代币构成的收藏品，也是一件非常罕见的艺术品，它作为俱乐部会员资格代币，可为成员提供多种特权和福利，而且在社区的努力下，这些特权和福利还会随着时间的推移不断增加。
 
 ## 延伸阅读 {#further-reading}
 

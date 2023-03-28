@@ -2,7 +2,6 @@
 title: Python Geliştiricileri için Ethereum
 description: Ethereum için Python temelli projeler ve araçları kullanarak nasıl geliştireceğinizi öğrenin
 lang: tr
-sidebar: true
 incomplete: true
 ---
 
@@ -65,7 +64,7 @@ Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/lea
 ### Arşivlenmiş / Artık sürdürülmeyen: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _Ethereum Python istemcisi_
-- [Mamba](https://mamba.black) - _Vyper dilinde yazılmış akıllı sözleşmeleri yazmak, derlemek ve dağıtmak için çerçeve_
+- [Mamba](https://github.com/arjunaskykok/mamba) - _Vyper dilinde yazılmış akıllı sözleşmeleri yazmak, derlemek ve dağıtmak için çerçeve_
 
 Daha fazla kaynak mı arıyorsunuz? Göz atın: [ethereum.org/developers](/developers/).
 

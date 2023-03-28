@@ -5,7 +5,6 @@ author: "Trailofbits"
 tags: ["solidity", "smart contracts", "security"]
 skill: intermediate
 lang: en
-sidebar: true
 published: 2020-09-06
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
@@ -48,7 +47,7 @@ We discussed the different upgradeability solutions in [our blogpost](https://bl
 
 The architecture of your codebase should make your code easy to review. Avoid architectural choices that decrease the ability to reason about its correctness.
 
-- **Split the logic of your system**, either through multiple contracts or by grouping similar functions together (for example, authentification, arithmetic, ...).
+- **Split the logic of your system**, either through multiple contracts or by grouping similar functions together (for example, authentication, arithmetic, ...).
 - **Write small functions, with a clear purpose.** This will facilitate easier review and allow the testing of individual components.
 
 ### Inheritance {#inheritance}

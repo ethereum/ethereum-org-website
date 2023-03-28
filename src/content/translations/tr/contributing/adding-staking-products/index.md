@@ -2,7 +2,6 @@
 title: Stake ürünleri veya hizmetleri ekleme
 description: Ethereum.org'a stake ürünleri veya hizmetleri eklerken kullandığımız politika
 lang: tr
-sidebar: true
 ---
 
 # Stake ürünleri veya hizmetleri ekleme {#adding-staking-products-or-services}

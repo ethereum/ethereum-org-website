@@ -3,7 +3,6 @@ title: "Downsizing contracts to fight the contract size limit"
 description: What can you do to prevent your smart contracts from getting too large?
 author: Markus Waas
 lang: en
-sidebar: true
 tags: ["solidity", "smart contracts", "storage", "truffle"]
 skill: intermediate
 published: 2020-06-26
@@ -90,6 +89,18 @@ require(msg.sender == owner, "Only the owner of this contract can call this func
 
 ```solidity
 require(msg.sender == owner, "OW1");
+```
+
+### Use custom errors instead of error messages
+
+Custom errors have been introduced in [Solidity 0.8.4](https://blog.soliditylang.org/2021/04/21/custom-errors/). They are a great way to reduce the size of your contracts, because they are ABI-encoded as selectors (just like functions are).
+
+```solidity
+error Unauthorized();
+
+if (msg.sender != owner) {
+    revert Unauthorized();
+}
 ```
 
 ### Consider a low run value in the optimizer {#consider-a-low-run-value-in-the-optimizer}

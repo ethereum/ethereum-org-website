@@ -2,7 +2,6 @@
 title: Seguretat i prevenció d'estafes a Ethereum
 description: Anar amb compte a Ethereum
 lang: ca
-sidebar: true
 ---
 
 # Seguretat i prevenció d'estafes a Ethereum {#introduction}
@@ -158,8 +157,6 @@ Assegureu-vos sempre que l'adreça a la qual esteu enviant concorda exactament a
 Quan interactueu amb contractes intel·ligents, no permeteu límits de despesa il·limitats. Una despesa il·limitada podria capacitar un contracte intel·ligent per buidar la vostra cartera. En lloc d'això, poseu límits de despesa només a la quantitat necessària per a la transacció.
 
 Algunes carteres d'Ethereum ofereixen protecció de límits per a salvaguardar els comptes contra el seu buidatge.
-
-[Exploreu carteres amb protecció de límits](/wallets/find-wallet/?filters=has_limits_protection)
 
 <Divider />
 

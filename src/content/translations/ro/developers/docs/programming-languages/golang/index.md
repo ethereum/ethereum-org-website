@@ -2,7 +2,6 @@
 title: Ethereum pentru dezvoltatorii Go
 description: Învățați cum să faceţi dezvoltare pentru Ethereum folosind proiecte şi instrumente bazate pe Go
 lang: ro
-sidebar: true
 incomplete: true
 ---
 
