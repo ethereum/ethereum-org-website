@@ -133,7 +133,18 @@ const TitleCardList: React.FC<IProps> = ({
             />
           )}
           <Flex flex="1 1 75%" flexDirection="column" marginRight={8}>
-            <Box>{title}</Box>
+            <LinkOverlay
+              as={Link}
+              href={link}
+              hideArrow
+              color="inherit"
+              textDecoration="none"
+              _hover={{
+                textDecoration: "none",
+              }}
+            >
+              {title}
+            </LinkOverlay>
 
             <Box fontSize="s" marginBottom="0" opacity="0.7">
               {description}
