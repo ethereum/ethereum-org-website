@@ -89,14 +89,14 @@ All clients support major operating systems - Linux, MacOS, Windows. This means 
 
 - CPU with 2+ cores
 - 8 GB RAM
-- 700GB free disk space
+- 2TB SSD
 - 10+ MBit/s bandwidth
 
 ##### Recommended specifications
 
 - Fast CPU with 4+ cores
 - 16 GB+ RAM
-- Fast SSD with 1+TB
+- Fast SSD with 2+TB
 - 25+ MBit/s bandwidth
 
 The sync mode and client you choose will affect space requirements, but we've estimated the disk space you'll need for each client below.
