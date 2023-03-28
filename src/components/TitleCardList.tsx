@@ -157,7 +157,7 @@ const TitleCardList: React.FC<IProps> = ({
               flexWrap="wrap"
               marginRight={4}
             >
-              <Box fontSize="s" marginBottom="0" opacity="0.7">
+              <Box fontSize="sm" marginBottom="0" color={descriptionCaptionColor}>
                 {caption}
               </Box>
             </Flex>
