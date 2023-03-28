@@ -52,6 +52,26 @@
     "toPath": "/en/roadmap/"
   },
   {
+    "fromPath": "/*/upgrades/merge",
+    "toPath": "/roadmap/merge/"
+  },
+  {
+    "fromPath": "/*/upgrades/merge/issuance",
+    "toPath": "/roadmap/merge/issuance"
+  },
+  {
+    "fromPath": "/*/upgrades/beacon-chain",
+    "toPath": "/roadmap/beacon-chain"
+  },
+  {
+    "fromPath": "/*/upgrades/vision/",
+    "toPath": "/roadmap/vision/"
+  },
+  {
+    "fromPath": "/*/upgrades",
+    "toPath": "/roadmap"
+  },
+  {
     "fromPath": "/build/",
     "toPath": "/en/developers/learning-tools/"
   },
