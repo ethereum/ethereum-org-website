@@ -72,6 +72,10 @@
     "toPath": "/roadmap"
   },
   {
+    "fromPath": "/upgrades/get-involved",
+    "toPath": "/contributing"
+  },
+  {
     "fromPath": "/build/",
     "toPath": "/en/developers/learning-tools/"
   },
