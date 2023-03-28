@@ -101,7 +101,7 @@ Download and install the [Metamask wallet](https://metamask.io/).
 
 Check out this article for [more information on getting started with Metamask](https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-started-with-MetaMask)!
 
-Get some testnet [ETH using a faucet](https://faucet.paradigm.xyz/).  This Paradigm MultiFaucet funds a wallet with ETH, [wETH](https://weth.io/), [DAI](https://makerdao.com/en/) and NFTs across 8 testnet networks, at once.
+Get some testnet ETH for Sepolia using: [Infura's Free Faucet](https://www.infura.io/faucet).
 
 **Setup your `.env` file in your project root directory:**
 
@@ -111,7 +111,7 @@ Get some testnet [ETH using a faucet](https://faucet.paradigm.xyz/).  This Para
 
 **Clone the project locally:**
 
-    git clone [email protected]:anataliocs/Getting-Started-With-Infura.git
+    git clone [emailprotected]:anataliocs/Getting-Started-With-Infura.git
 
 Check out the project [README for more details on how to setup your local developer environment](https://github.com/anataliocs/Getting-Started-With-Infura/blob/main/README.md).
 
@@ -149,11 +149,11 @@ Enter in another ETH wallet address and the amount in ETH to transfer.
 
 You can use this faucet donation address for example: _0x6Cc9397c3B38739daCbfaA68EaD5F5D77Ba5F455_
 
-Then click submit and approve the transaction in Metamask.  Copy the broadcasted transaction hash then click _“NEXT”_
+Then click submit and approve the transaction in Metamask. Copy the broadcasted transaction hash then click _“NEXT”_
 
 ![](https://lh4.googleusercontent.com/hxVi9AIAjN9Xhhe4iae7543GV3XPOG5jipIghfk8YlhFUReWVeKuCD9Lx0t7c-9aXCVtx6-0yvhkqMYZ89OwNqDH4rg8-pTmjwYlkc8hPxIp0w_auoShDRhgKCLeLEc7IXFRCxZhiy0nig1FHevv0w_MVt6tXdsT8xulHvvwq55qAO8SRoOq63LqPA)
 
-Finally, you can review the transaction details.  For additional information, click the _“View on [Etherscan](https://goerli.etherscan.io/)”_ link.
+Finally, you can review the transaction details. For additional information, click the _“View on [Etherscan](https://goerli.etherscan.io/)”_ link.
 
 [Etherscan](https://etherscan.io/) is a Block Explorer and analytics platform for Ethereum.
 
