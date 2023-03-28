@@ -64,15 +64,11 @@ However, it is only possible to trust the 'summary' transactions posted to Ether
 
 ## Data availability vs. data retrievability {#data-availability-vs-data-retrievability}
 
-Data availability is different from data retrievability. Data availability is the ability of nodes to download transaction data for a block while it is being proposed for addition to the chain. In other words, data availability is relevant when a block is yet to pass consensus.
+Data availability is different from data retrievability. Data availability is the assurance that full nodes have been able to access and verify the full set of transactions associated with a specific block. It does not necessarily follow that the data is accessible forever.
 
-Data retrievability is the ability of nodes to retrieve _historical information_ from the blockchain. A blockchain's history is made up of ancient blocks and receipts that store information about past events. While historical blockchain data may be necessary for archiving purposes, nodes can validate the chain and process transactions without it.
+Data retrievability is the ability of nodes to retrieve _historical information_ from the blockchain. This historical data is not needed for verifying new blocks, it is only required for syncing full nodes from the genesis block or serving specific historical requests.
 
-The core Ethereum protocol is primarily concerned with data availability, not data retrievability. Ethereum will not store data for every transaction it has processed forever, as doing so increases storage requirements for full nodes, negatively impacting Ethereum's decentralization.
-
-Fortunately, data retrievability is a much easier problem to solve than data availability. The ability to retrieve historical blockchain data only needs one honest node to store it for it to be retrievable. Furthermore, some entities, such as blockchain explorers, have incentives to store archival data and make it available to others on request.
-
-[More on solutions to the data retrievability problem](https://notes.ethereum.org/@vbuterin/data_sharding_roadmap#Who-would-store-historical-data-under-sharding).
+The core Ethereum protocol is primarily concerned with data availability, not data retrievability. Data retrievability cna be provided by a small population of archive nodes run by third parties, or it can be distributed across the network using decentralized file storage such as the [Portal Network](https://www.ethportal.net/).
 
 ## Further reading {#further-reading}
 
@@ -84,3 +80,4 @@ Fortunately, data retrievability is a much easier problem to solve than data ava
 - [A note on data availability and erasure coding](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding#can-an-attacker-not-circumvent-this-scheme-by-releasing-a-full-unavailable-block-but-then-only-releasing-individual-bits-of-data-as-clients-query-for-them)
 - [Data availability committees.](https://medium.com/starkware/data-availability-e5564c416424)
 - [Proof-of-stake data availability committees.](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf)
+- [Solutions to the data retrievability problem](https://notes.ethereum.org/@vbuterin/data_sharding_roadmap#Who-would-store-historical-data-under-sharding)
