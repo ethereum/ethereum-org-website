@@ -124,7 +124,7 @@ In [1]: from web3 import Web3
 
 Besides being a gateway to Ethereum, the [Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api) module offers a few convenience functions. Let’s explore a couple.
 
-In an Ethereum application, you will commonly need to convert currency denominations. The Web3 module provides a couple of helper methods just for this: [fromWei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.fromWei) and [toWei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toWei).
+In an Ethereum application, you will commonly need to convert currency denominations. The Web3 module provides a couple of helper methods just for this: [from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei) and [to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei).
 
 <div class="featured">
 Note: Computers are notoriously bad at handling decimal math. To get around this, developers often store dollar amounts in cents. For example, an item with a price of $5.99 may be stored in the database as 599.
@@ -140,10 +140,10 @@ A similar pattern is used when handling transactions in <b>ether</b>. However, i
 Try converting some values to and from wei. Note that [there are names for many of the denominations](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations) in between ether and wei. One of the better known among them is **gwei**, as it’s often how transaction fees are represented.
 
 ```python
-In [2]: Web3.toWei(1, 'ether')
+In [2]: Web3.to_wei(1, 'ether')
 Out[2]: 1000000000000000000
 
-In [3]: Web3.fromWei(500000000, 'gwei')
+In [3]: Web3.from_wei(500000000, 'gwei')
 Out[3]: Decimal('0.5')
 ```
 
@@ -211,7 +211,7 @@ Out[7]: 1000000000000000000000000
 That’s a lot of zeros! Before you go laughing all the way to the fake bank, recall that lesson about currency denominations from earlier. Ether values are represented in the smallest denomination, wei. Convert that to ether:
 
 ```python
-In [8]: w3.fromWei(1000000000000000000000000, 'ether')
+In [8]: w3.from_wei(1000000000000000000000000, 'ether')
 Out[8]: Decimal('1000000')
 ```
 
@@ -246,7 +246,7 @@ We’re stuck at block zero until there’s a pending transaction, so let’s gi
 In [10]: tx_hash = w3.eth.send_transaction({
    'from': w3.eth.accounts[0],
    'to': w3.eth.accounts[1],
-   'value': w3.toWei(3, 'ether'),
+   'value': w3.to_wei(3, 'ether'),
    'gas': 21000
 })
 ```

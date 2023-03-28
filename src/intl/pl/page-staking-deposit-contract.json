@@ -23,5 +23,6 @@
   "page-staking-deposit-contract-stop-reading": "Przerwij czytanie",
   "page-staking-deposit-contract-subtitle": " Jest to adres kontraktu stakowania Eth2. Użyj tej strony, aby potwierdzić, że wysyłasz środki na prawidłowy adres, kiedy stakujesz.",
   "page-staking-deposit-contract-warning": "Sprawdź dokładnie każdy znak.",
-  "page-staking-deposit-contract-warning-2": "Wysyłanie środków na ten adres nie zadziała i nie sprawi, że będziesz stakerem. Musisz postępować zgodnie z instrukcjami launchpada."
+  "page-staking-deposit-contract-warning-2": "Wysyłanie środków na ten adres nie zadziała i nie sprawi, że będziesz stakerem. Musisz postępować zgodnie z instrukcjami launchpada.",
+  "page-staking-deposit-contract-title": "Sprawdź adres kontraktu depozytowego"
 }

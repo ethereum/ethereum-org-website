@@ -104,7 +104,7 @@ Fuziunea a marcat finalul dovezii muncii pentru Ethereum și începutul unei ere
 
 ## Fuziunea și scalarea {#merge-and-scaling}
 
-De asemenea, Fuziunea a creat posibilitatea pentru și mai multe modernizări de scalabilitate care nu erau posibile în sistemul cu dovada muncii, aducând Ethereum cu un pas mai aproape de a atinge amploarea, securitatea și durabilitatea descrise în [Viziunea Ethereum](/upgrades/vision/).
+De asemenea, Fuziunea a creat posibilitatea pentru și mai multe modernizări de scalabilitate care nu erau posibile în sistemul cu dovada muncii, aducând Ethereum cu un pas mai aproape de a atinge amploarea, securitatea și durabilitatea descrise în [Viziunea Ethereum](/roadmap/vision/).
 
 ## Neînțelegeri despre Fuziune {#misconceptions}
 

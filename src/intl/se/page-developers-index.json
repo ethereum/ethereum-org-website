@@ -8,7 +8,6 @@
   "page-developers-advanced": "Avancerat",
   "page-developers-api-desc": "Använda bibliotek för att interagera med smarta kontrakt",
   "page-developers-api-link": "Serverdel-API:er",
-  "page-developers-aria-label": "Utvecklarmeny",
   "page-developers-block-desc": "Batcher av transaktioner som lagts till i blockkedjan",
   "page-developers-block-explorers-desc": "Din portal till Ethereum-data",
   "page-developers-block-explorers-link": "Blockutforskare",
@@ -80,5 +79,6 @@
   "page-developers-transactions-desc": "Hur Ethereum-tillstånd förändras",
   "page-developers-transactions-link": "Transaktioner",
   "page-developers-web3-desc": "Hur web3-utvecklingsvärlden är annorlunda",
-  "page-developers-web3-link": "Web2 kontra Web3"
+  "page-developers-web3-link": "Web2 kontra Web3",
+  "alt-eth-blocks": "Illustration av block som organiseras som en ETH-symbol"
 }

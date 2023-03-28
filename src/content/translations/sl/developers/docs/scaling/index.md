@@ -9,7 +9,7 @@ sidebarDepth: 3
 
 Glede na to, da je število ljudi, ki uporabljajo Ethereum, naraslo, je blokovna veriga dosegla določene omejitve kapacitete. To je povečalo stroške uporabe omrežja, kar je ustvarilo potrebo po "rešitvah za širjenje". Raziskuje, testira in implementira se več rešitev, ki zavzemajo različne pristope, da bi dosegli enak cilj.
 
-Glavni cilj razširljivosti je zvišanje hitrosti (hitrejša dokončnost) in pretočnosti transakcij (višje število transakcij na sekundo), brez žrtvovanja decentralizacije ali varnosti (več o [viziji Ethereum](/upgrades/vision/)). Na plasti 1 blokovne verige Ethereum visoko povpraševanje vodi do počasnejših transakcij in neživljenjskih [cen goriva](/developers/docs/gas/). Povečanje kapacitete omrežja v obliki hitrosti in pretočnosti je temeljnega pomena za smiseln in masovni sprejem Ethereuma.
+Glavni cilj razširljivosti je zvišanje hitrosti (hitrejša dokončnost) in pretočnosti transakcij (višje število transakcij na sekundo), brez žrtvovanja decentralizacije ali varnosti (več o [viziji Ethereum](/roadmap/vision/)). Na plasti 1 blokovne verige Ethereum visoko povpraševanje vodi do počasnejših transakcij in neživljenjskih [cen goriva](/developers/docs/gas/). Povečanje kapacitete omrežja v obliki hitrosti in pretočnosti je temeljnega pomena za smiseln in masovni sprejem Ethereuma.
 
 Medtem ko sta hitrost in pretočnost pomembni, je ključno, da rešitve za širjenje, ki omogočajo dosego teh ciljev, ostanejo decentralizirane in varne. Ohranjanje nizkih ovir za vstop upravljavcev vozlišč je ključno za preprečevanje napredovanja proti centralizirani in negotovi računski moči.
 
@@ -88,7 +88,7 @@ Izvedite več o [Validiumu](/developers/docs/scaling/validium/).
 - Več rešitev lahko pomaga zmanjšati splošno rpenatrpanost na kateremkoli delu omrežja in prav tako preprečujejo posamezne točke neuspeha.
 - Celota je večja kot vsota njenih delov. Različne rešitve lahko obstajajo in delujejo usklajeno, kar omogoča eksponenten učinek na prihodnjo hitrost transakcij in pretočnost.
 - Vse rešitve ne zahtevajo neposredne uporabe algoritma za soglasje Ethereum in alternative lahko ponudijo prednosti, ki bi jih bilo drugače težko pridobiti.
-- Nobena rešitev za širjenje sama ni dovolj za izpolnitev [vizije Ethereum](/upgrades/vision/).
+- Nobena rešitev za širjenje sama ni dovolj za izpolnitev [vizije Ethereum](/roadmap/vision/).
 
 ## Se lažje učite z vizualizacijo? {#visual-learner}
 

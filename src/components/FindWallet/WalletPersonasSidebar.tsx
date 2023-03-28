@@ -9,7 +9,7 @@ import {
   useColorMode,
   Icon,
 } from "@chakra-ui/react"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 // Components
 import Translation from "../Translation"
@@ -40,7 +40,6 @@ import {
 
 // Utils
 import { trackCustomEvent } from "../../utils/matomo"
-import { translateMessageId } from "../../utils/translations"
 
 // Types
 interface Personas {
@@ -83,98 +82,92 @@ const WalletPersonasSidebar = ({
   selectedPersona,
   setSelectedPersona,
 }) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const { colorMode } = useColorMode()
   const isDark = colorMode === "dark"
 
   const filterLabels = {
     hardware: {
-      label: translateMessageId("page-find-wallet-hardware", intl),
+      label: t("page-find-wallet-hardware"),
       icon: <HardwareIcon />,
     },
     open_source: {
-      label: translateMessageId("page-find-wallet-open-source", intl),
+      label: t("page-find-wallet-open-source"),
       icon: <OpenSourceWalletIcon />,
     },
     non_custodial: {
-      label: translateMessageId("page-find-wallet-non-custodial", intl),
+      label: t("page-find-wallet-non-custodial"),
       icon: <NonCustodialIcon />,
     },
     hardware_support: {
-      label: translateMessageId(
-        "page-find-wallet-hardware-wallet-support",
-        intl
-      ),
+      label: t("page-find-wallet-hardware-wallet-support"),
       icon: <HardwareSupportIcon />,
     },
     walletconnect: {
-      label: translateMessageId("page-find-wallet-walletconnect", intl),
+      label: t("page-find-wallet-walletconnect"),
       icon: <WalletConnectIcon />,
     },
     rpc_importing: {
-      label: translateMessageId("page-find-wallet-rpc-importing", intl),
+      label: t("page-find-wallet-rpc-importing"),
       icon: <RPCImportingIcon />,
     },
     nft_support: {
-      label: translateMessageId("page-find-wallet-nft-support", intl),
+      label: t("page-find-wallet-nft-support"),
       icon: <NFTSupportIcon />,
     },
     connect_to_dapps: {
-      label: translateMessageId("page-find-wallet-connect-to-dapps", intl),
+      label: t("page-find-wallet-connect-to-dapps"),
       icon: <ConnectDappsIcon />,
     },
     staking: {
-      label: translateMessageId("page-find-wallet-staking", intl),
+      label: t("page-find-wallet-staking"),
       icon: <StakingIcon />,
     },
     swaps: {
-      label: translateMessageId("page-find-wallet-swaps", intl),
+      label: t("page-find-wallet-swaps"),
       icon: <SwapIcon />,
     },
     layer_2: {
-      label: translateMessageId("page-find-wallet-layer-2", intl),
+      label: t("page-find-wallet-layer-2"),
       icon: <Layer2Icon />,
     },
     gas_fee_customization: {
-      label: translateMessageId("page-find-wallet-gas-fee-customization", intl),
+      label: t("page-find-wallet-gas-fee-customization"),
       icon: <GasFeeCustomizationIcon />,
     },
     ens_support: {
-      label: translateMessageId("page-find-wallet-ens-support", intl),
+      label: t("page-find-wallet-ens-support"),
       icon: <ENSSupportIcon />,
     },
     buy_crypto: {
-      label: translateMessageId("page-find-wallet-buy-crypto", intl),
+      label: t("page-find-wallet-buy-crypto"),
       icon: <BuyCryptoIcon />,
     },
     withdraw_crypto: {
-      label: translateMessageId("page-find-wallet-sell-for-fiat", intl),
+      label: t("page-find-wallet-sell-for-fiat"),
       icon: <WithdrawCryptoIcon />,
     },
     multisig: {
-      label: translateMessageId("page-find-wallet-multisig", intl),
+      label: t("page-find-wallet-multisig"),
       icon: <MultisigIcon />,
     },
     social_recovery: {
-      label: translateMessageId("page-find-wallet-social-recovery", intl),
+      label: t("page-find-wallet-social-recovery"),
       icon: <SocialRecoverIcon />,
     },
     erc_20_support: {
-      label: translateMessageId("page-find-wallet-token-support", intl),
+      label: t("page-find-wallet-token-support"),
       icon: <ERC20SupportIcon />,
     },
     eip_1559_support: {
-      label: translateMessageId("page-find-wallet-fee-optimization", intl),
+      label: t("page-find-wallet-fee-optimization"),
       icon: <EIP1559Icon />,
     },
   }
   const personas: Personas[] = [
     {
-      title: translateMessageId("page-find-wallet-new-to-crypto-title", intl),
-      description: translateMessageId(
-        "page-find-wallet-new-to-crypto-desc",
-        intl
-      ),
+      title: t("page-find-wallet-new-to-crypto-title"),
+      description: t("page-find-wallet-new-to-crypto-desc"),
       featureHighlight: [
         filterLabels.connect_to_dapps,
         filterLabels.layer_2,
@@ -213,8 +206,8 @@ const WalletPersonasSidebar = ({
       },
     },
     {
-      title: translateMessageId("page-find-wallet-nfts-title", intl),
-      description: translateMessageId("page-find-wallet-nfts-desc", intl),
+      title: t("page-find-wallet-nfts-title"),
+      description: t("page-find-wallet-nfts-desc"),
       featureHighlight: [
         filterLabels.nft_support,
         filterLabels.layer_2,
@@ -250,8 +243,8 @@ const WalletPersonasSidebar = ({
       },
     },
     {
-      title: translateMessageId("page-find-wallet-hodler-title", intl),
-      description: translateMessageId("page-find-wallet-hodler-desc", intl),
+      title: t("page-find-wallet-hodler-title"),
+      description: t("page-find-wallet-hodler-desc"),
       featureHighlight: [filterLabels.hardware, filterLabels.non_custodial],
       presetFilters: {
         android: false,
@@ -283,8 +276,8 @@ const WalletPersonasSidebar = ({
       },
     },
     {
-      title: translateMessageId("page-find-wallet-finance-title", intl),
-      description: translateMessageId("page-find-wallet-finance-desc", intl),
+      title: t("page-find-wallet-finance-title"),
+      description: t("page-find-wallet-finance-desc"),
       featureHighlight: [
         filterLabels.hardware_support,
         filterLabels.connect_to_dapps,
@@ -322,8 +315,8 @@ const WalletPersonasSidebar = ({
       },
     },
     {
-      title: translateMessageId("page-find-wallet-developer-title", intl),
-      description: translateMessageId("page-find-wallet-developer-desc", intl),
+      title: t("page-find-wallet-developer-title"),
+      description: t("page-find-wallet-developer-desc"),
       featureHighlight: [
         filterLabels.open_source,
         filterLabels.walletconnect,

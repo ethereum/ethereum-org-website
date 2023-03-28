@@ -2,7 +2,7 @@
 title: Monitoring Geth with InfluxDB and Grafana
 description:
 author: "Mario Havel"
-tags: ["clients", "geth", "nodes"]
+tags: ["clients", "nodes"]
 skill: intermediate
 lang: en
 published: 2021-01-13

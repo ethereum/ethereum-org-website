@@ -59,7 +59,7 @@ When connected through a WebSocket, you may use two additional methods: `eth_sub
 
 ### `eth_subscribe` {#eth-subscribe}
 
-Creates a new subscription for specified events. [Learn more about `eth_subscribe`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_subscribe).
+Creates a new subscription for specified events. [Learn more about `eth_subscribe`](https://docs.alchemy.com/reference/eth-subscribe).
 
 #### Parameters {#parameters}
 
