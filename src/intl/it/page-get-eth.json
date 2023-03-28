@@ -63,5 +63,6 @@
   "page-get-eth-your-address-desc": "Quando scarichi un portafoglio, ti verrà creato un indirizzo ETH pubblico, che si presenta così:",
   "page-get-eth-your-address-desc-3": "Puoi considerarlo come un indirizzo email, su cui invece delle email riceverai ETH. Se vuoi trasferire ETH da una borsa al tuo portafoglio, usa questo indirizzo come destinazione. Controlla sempre due volte prima di confermare l'invio!",
   "page-get-eth-your-address-wallet-link": "Scopri i portafogli",
-  "listing-policy-raise-issue-link": "Apri segnalazione"
+  "listing-policy-raise-issue-link": "Apri segnalazione",
+  "page-find-wallet-last-updated": "Ultimo aggiornamento"
 }
