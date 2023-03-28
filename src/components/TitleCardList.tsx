@@ -1,6 +1,5 @@
 import React from "react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import Icon from "./Icon"
 import Link from "./Link"
 import Translation from "./Translation"
 import { TranslationKey } from "../utils/translations"
@@ -8,11 +7,13 @@ import {
   Flex,
   Box,
   Hide,
-  Icon as ChakraIcon,
+  Icon,
   LinkBox,
   LinkOverlay,
   useColorModeValue,
 } from "@chakra-ui/react"
+
+import { IoCodeOutline } from "react-icons/io5"
 
 export interface ITitleCardItem {
   title: string
@@ -29,7 +30,6 @@ export interface IProps {
   className?: string
   clickHandler: (idx: number) => void
   headerKey: TranslationKey
-  icon: string
   isCode: boolean
 }
 
@@ -38,7 +38,6 @@ const TitleCardList: React.FC<IProps> = ({
   className,
   clickHandler,
   headerKey,
-  icon,
   isCode,
 }) => {
   // This will be accessible with color contrast
@@ -66,15 +65,12 @@ const TitleCardList: React.FC<IProps> = ({
         borderBottomStyle="solid"
         borderBottomColor="text"
       >
-        {icon && (
-          <ChakraIcon
-            as={Icon}
-            name={icon}
-            _hover={{
-              path: { fill: "tranparent" },
-            }}
-          />
-        )}
+        <Icon
+          as={IoCodeOutline}
+          _hover={{
+            path: { fill: "tranparent" },
+          }}
+        />
         <Translation id={headerKey} />
         {isCode && (
           <Hide below="s">
