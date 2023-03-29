@@ -21,7 +21,7 @@ The solution to this is using smart contract wallets to interact with Ethereum. 
 
 Users running nodes do not have to trust third parties to provide them with data, and they can interact quickly, privately, and permissionlessly with the Ethereum blockchain. However, running a node right now requires technical knowledge and substantial disk space, meaning many people must trust intermediaries instead.
 
-There are several upgrades that will make running nodes far easier and far less resource intensive. The way data is stored will be changed to use a more space-efficient structure known as a **Verkle Tree**. Also, with [statelessness](/roadmap/statelessness) or [data expiry](/roadmap/statelessness/#data-expiry), Ethereum nodes will not need to store a copy of the entire Ethereum state data, drastically reducing hard disk space requirements. [Light nodes](/developers/docs/nodes-and-clients/light-clients) will offer many benefits of running a full node but can run easily on mobile phones or inside simple browser apps.
+There are several upgrades that will make running nodes far easier and far less resource intensive. The way data is stored will be changed to use a more space-efficient structure known as a **Verkle Tree**. Also, with [statelessness](/roadmap/statelessness) or [data expiry](/roadmap/statelessness/#data-expiry), Ethereum nodes will not need to store a copy of the entire Ethereum state data, drastically reducing hard disk space requirements. [Light nodes](/developers/docs/nodes-and-clients/light-clients/) will offer many benefits of running a full node but can run easily on mobile phones or inside simple browser apps.
 
 <ButtonLink variant="outline-color" to="/roadmap/verkle-trees/">Read about Verkle trees</ButtonLink>
 
@@ -31,6 +31,6 @@ With these upgrades, the barriers to running a node are reduced to effectively z
 
 Smart contract wallets are already available, but more upgrades are required to make them as decentralized and permissionless as possible. EIP-4337 is a mature proposal that does not require any changes to Ethereum's protocol. The main smart contract required for EIP-4337 was deployed in March 2023.
 
-Full statelessness is still in the research phase and is likely several years away from being implemented. There are several milestones on the road to full statelessness, including data expiry, that may be implemented sooner. Other roadmap items, such as [Verkle Trees](/roadmap/verkle-trees) and [Proposer-builder separation](/roadmap/pbs) need to be completed first.
+Full statelessness is still in the research phase and is likely several years away from being implemented. There are several milestones on the road to full statelessness, including data expiry, that may be implemented sooner. Other roadmap items, such as [Verkle Trees](/roadmap/verkle-trees/) and [Proposer-builder separation](/roadmap/pbs/) need to be completed first.
 
 Verkle tree testnets are already up and running, and the next phase is running Verkle-tree enabled clients on private, then public testnets. You can help accelerate progress by deploying contracts to the testnets or running testnet clients.
