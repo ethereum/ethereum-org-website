@@ -41,8 +41,6 @@ const semanticTokens = {
     primaryLight: { _light: "blue.100", _dark: "orange.100" },
     // ! Deprecating primaryDark
     primaryDark: { _light: "blue.700", _dark: "orange.800" },
-    primaryLowContrast: { _light: "blue.100", _dark: "orange.800" },
-    primaryHighContrast: { _light: "blue.700", _dark: "orange.100" },
     primaryHover: { _light: "blue.300", _dark: "orange.300" },
     primaryVisited: { _light: "blue.600", _dark: "orange.600" },
     // ! Deprecating primaryPressed
