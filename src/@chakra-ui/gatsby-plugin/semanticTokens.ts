@@ -74,6 +74,14 @@ const semanticTokens = {
     },
     switchBackground: { _light: "gray.300", _dark: "whiteAlpha.400" },
   },
+  gradients: {
+    bgMainGradient: {
+      _light:
+        "linear-gradient(102.7deg, rgba(185, 185, 241, 0.2) 0%, rgba(84, 132, 234, 0.2) 51.56%, rgba(58, 142, 137, 0.2) 100%)",
+      _dark:
+        "linear-gradient(102.7deg, rgba(185, 185, 241, 0.2) 0%, rgba(84, 132, 234, 0.2) 51.56%, rgba(58, 142, 137, 0.2) 100%)",
+    },
+  },
 }
 
 export default semanticTokens
