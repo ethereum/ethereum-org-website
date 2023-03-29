@@ -1,6 +1,8 @@
 import * as React from "react"
 import { Global } from "@emotion/react"
 
+// Font files obtained from: https://github.com/rsms/inter
+
 const Fonts = () => (
   <Global
     styles={`
