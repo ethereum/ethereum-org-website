@@ -120,13 +120,13 @@ const TrilemmaContent = (props: ChildOnlyProp) => (
 const paths = [
   {
     emoji: ":vertical_traffic_light:",
-    title: <Translation id="page-upgrades-vision-title-1" />,
-    description: <Translation id="page-upgrades-vision-desc-1" />,
+    title: <Translation id="page-roadmap-vision-title-1" />,
+    description: <Translation id="page-roadmap-vision-desc-1" />,
   },
   {
     emoji: ":minidisc:",
-    title: <Translation id="page-upgrades-vision-title-2" />,
-    description: <Translation id="page-upgrades-vision-desc-2" />,
+    title: <Translation id="page-roadmap-vision-title-2" />,
+    description: <Translation id="page-roadmap-vision-desc-2" />,
   },
 ]
 
@@ -137,9 +137,9 @@ const VisionPage = ({
   const { t } = useTranslation()
 
   const heroContent: IPageHeroContent = {
-    title: t("page-upgrades-vision-title"),
-    header: t("page-upgrades-vision-future"),
-    subtitle: t("page-upgrades-vision-subtitle"),
+    title: t("page-roadmap-vision-title"),
+    header: t("page-roadmap-vision-future"),
+    subtitle: t("page-roadmap-vision-subtitle"),
     image: getImage(data.oldship)!,
     alt: t("page-eth-whats-eth-hero-alt"),
   }
@@ -172,8 +172,8 @@ const VisionPage = ({
   return (
     <Page>
       <PageMetadata
-        title={t("page-upgrades-vision-meta-title")}
-        description={t("page-upgrades-vision-meta-desc")}
+        title={t("page-roadmap-vision-meta-title")}
+        description={t("page-roadmap-vision-meta-desc")}
       />
       <PageHero content={heroContent} />
       <PageDivider />
@@ -181,56 +181,56 @@ const VisionPage = ({
         <Breadcrumbs slug={location.pathname} startDepth={1} />
         <CentralContent>
           <CenterH2>
-            <Translation id="page-upgrades-vision-upgrade-needs" />
+            <Translation id="page-roadmap-vision-upgrade-needs" />
           </CenterH2>
           <Text>
-            <Translation id="page-upgrades-vision-upgrade-needs-desc" />
+            <Translation id="page-roadmap-vision-upgrade-needs-desc" />
           </Text>
           <Text>
-            <Translation id="page-upgrades-vision-upgrade-needs-desc-2" />
+            <Translation id="page-roadmap-vision-upgrade-needs-desc-2" />
           </Text>
           <Text>
-            <Translation id="page-upgrades-vision-upgrade-needs-desc-3" />{" "}
+            <Translation id="page-roadmap-vision-upgrade-needs-desc-3" />{" "}
           </Text>
           <List listStyleType="disc">
             <ListItem>
               <Link to="https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum">
-                <Translation id="page-upgrades-vision-2022" />
+                <Translation id="page-roadmap-vision-2022" />
               </Link>
             </ListItem>
             <ListItem>
               <Link to="https://trent.mirror.xyz/82eyq_NXZzzqFmCNXiKJgSdayf6omCW7BgDQIneyPoA">
-                <Translation id="page-upgrades-vision-2021-updates" />
+                <Translation id="page-roadmap-vision-2021-updates" />
               </Link>
             </ListItem>
             <ListItem>
               <Link to="https://tim.mirror.xyz/CHQtTJb1NDxCK41JpULL-zAJe7YOtw-m4UDw6KDju6c">
-                <Translation id="page-upgrades-vision-2021" />
+                <Translation id="page-roadmap-vision-2021" />
               </Link>
             </ListItem>
             <ListItem>
               <Link to="https://blog.ethereum.org/2015/03/03/ethereum-launch-process/">
-                <Translation id="page-upgrades-vision-upgrade-needs-serenity" />
+                <Translation id="page-roadmap-vision-upgrade-needs-serenity" />
               </Link>
             </ListItem>
             <ListItem>
               <Link to="https://blog.ethereum.org/2014/01/15/slasher-a-punitive-proof-of-stake-algorithm/">
-                <Translation id="page-upgrades-vision-2014" />
+                <Translation id="page-roadmap-vision-2014" />
               </Link>
             </ListItem>
           </List>
           <Text>
-            <Translation id="page-upgrades-vision-upgrade-needs-desc-5" />
+            <Translation id="page-roadmap-vision-upgrade-needs-desc-5" />
           </Text>
           <Text>
-            <Translation id="page-upgrades-vision-upgrade-needs-desc-6" />
+            <Translation id="page-roadmap-vision-upgrade-needs-desc-6" />
           </Text>
         </CentralContent>
       </PageContent>
       <PageDivider />
       <PageContent>
         <CenterH2>
-          <Translation id="page-upgrades-vision-problems" />
+          <Translation id="page-roadmap-vision-problems" />
         </CenterH2>
         <ProblemCardContainer>
           {paths.map((path, idx) => (
@@ -250,83 +250,83 @@ const VisionPage = ({
       <PageContent>
         <CentralContent>
           <CenterH2>
-            <Translation id="page-upgrades-vision-understanding" />
+            <Translation id="page-roadmap-vision-understanding" />
           </CenterH2>
           <H3>
-            <Translation id="page-upgrades-vision-scalability" />{" "}
+            <Translation id="page-roadmap-vision-scalability" />{" "}
             <Emoji text=":rocket:" />
           </H3>
           <Text>
-            <Translation id="page-upgrades-vision-scalability-desc" />
+            <Translation id="page-roadmap-vision-scalability-desc" />
           </Text>
           <Text>
-            <Translation id="page-upgrades-vision-scalability-desc-3" />
+            <Translation id="page-roadmap-vision-scalability-desc-3" />
           </Text>
           <Text>
-            <Translation id="page-upgrades-vision-scalability-desc-4" />{" "}
+            <Translation id="page-roadmap-vision-scalability-desc-4" />{" "}
             <Link to="/upgrades/sharding/">
-              <Translation id="page-upgrades-vision-shard-upgrade" />
+              <Translation id="page-roadmap-vision-shard-upgrade" />
             </Link>{" "}
           </Text>
           <H3>
-            <Translation id="page-upgrades-vision-security" />{" "}
+            <Translation id="page-roadmap-vision-security" />{" "}
             <Emoji text=":shield:" />
           </H3>
           <Text>
-            <Translation id="page-upgrades-vision-security-desc" />
+            <Translation id="page-roadmap-vision-security-desc" />
           </Text>
           <Text>
-            <Translation id="page-upgrades-vision-security-desc-3" />{" "}
+            <Translation id="page-roadmap-vision-security-desc-3" />{" "}
             <Link to="/developers/docs/consensus-mechanisms/pos/">
               <Translation id="page-upgrades-proof-stake-link" />
             </Link>{" "}
           </Text>
           <Text>
-            <Translation id="page-upgrades-vision-security-desc-5" />{" "}
+            <Translation id="page-roadmap-vision-security-desc-5" />{" "}
             <Link to="/developers/docs/consensus-mechanisms/pow/">
-              <Translation id="page-upgrades-vision-security-desc-5-link" />
+              <Translation id="page-roadmap-vision-security-desc-5-link" />
             </Link>
           </Text>
           <Text>
-            <Translation id="page-upgrades-vision-security-desc-8" />
+            <Translation id="page-roadmap-vision-security-desc-8" />
           </Text>
           <Text>
-            <Translation id="page-upgrades-vision-security-desc-10" />
+            <Translation id="page-roadmap-vision-security-desc-10" />
           </Text>
           <Text>
-            <Translation id="page-upgrades-vision-security-validator" />{" "}
+            <Translation id="page-roadmap-vision-security-validator" />{" "}
             <Link to="/run-a-node/">
-              <Translation id="page-upgrades-vision-ethereum-node" />
+              <Translation id="page-roadmap-vision-ethereum-node" />
             </Link>
           </Text>
           <ButtonLink to="/staking/">
-            <Translation id="page-upgrades-vision-security-staking" />
+            <Translation id="page-roadmap-vision-security-staking" />
           </ButtonLink>
           <H3>
-            <Translation id="page-upgrades-vision-sustainability" />{" "}
+            <Translation id="page-roadmap-vision-sustainability" />{" "}
             <Emoji text=":evergreen_tree:" />
           </H3>
           <Text>
-            <Translation id="page-upgrades-vision-sustainability-subtitle" />
+            <Translation id="page-roadmap-vision-sustainability-subtitle" />
           </Text>
           <Text>
-            <Translation id="page-upgrades-vision-sustainability-desc-1" />{" "}
+            <Translation id="page-roadmap-vision-sustainability-desc-1" />{" "}
             <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
-              <Translation id="page-upgrades-vision-mining" />
+              <Translation id="page-roadmap-vision-mining" />
             </Link>
           </Text>
           <Text>
-            <Translation id="page-upgrades-vision-sustainability-desc-2" />{" "}
+            <Translation id="page-roadmap-vision-sustainability-desc-2" />{" "}
             <Link to="/staking/">
-              <Translation id="page-upgrades-vision-staking-lower" />
+              <Translation id="page-roadmap-vision-staking-lower" />
             </Link>
           </Text>
           <Text>
-            <Translation id="page-upgrades-vision-sustainability-desc-3" />
+            <Translation id="page-roadmap-vision-sustainability-desc-3" />
           </Text>
           <InfoBanner>
             <Text>
-              <Translation id="page-upgrades-vision-sustainability-desc-8" />
+              <Translation id="page-roadmap-vision-sustainability-desc-8" />
             </Text>
             <ButtonLink to="/upgrades/merge/">
               <Translation id="page-upgrades-merge-btn" />
@@ -337,7 +337,7 @@ const VisionPage = ({
       <PageDivider />
       <PageContent>
         <H2>
-          <Translation id="page-upgrades-vision-explore-upgrades" />
+          <Translation id="page-roadmap-vision-explore-upgrades" />
         </H2>
         <StyledCardContainer>
           {upgrades.map((upgrade, idx) => (
@@ -366,7 +366,7 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-upgrades-vision", "page-upgrades-index", "common"] }
+        ns: { in: ["page-roadmap-vision", "page-upgrades-index", "common"] }
       }
     ) {
       edges {
