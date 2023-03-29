@@ -31,6 +31,14 @@ const Fonts = () => (
         src: url("/fonts/Inter-Bold.woff2?v=3.19") format("woff2"),
              url("/fonts/Inter-Bold.woff?v=3.19") format("woff");
       }
+      @font-face {
+        font-family: 'Inter';
+        font-style:  italic;
+        font-weight: 700;
+        font-display: swap;
+        src: url("/fonts/Inter-BoldItalic.woff2?v=3.19") format("woff2"),
+             url("/fonts/Inter-BoldItalic.woff?v=3.19") format("woff");
+      }
       `}
   />
 )
