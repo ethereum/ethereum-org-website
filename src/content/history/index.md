@@ -44,6 +44,7 @@ The Shanghai upgrade brings staking withdrawals to the execution layer. In tande
 - [EIP-3855](https://eips.ethereum.org/EIPS/eip-3855) – _New `PUSH0` instruction_
 - [EIP-3860](https://eips.ethereum.org/EIPS/eip-3860) – _Limit and meter initcode_
 - [EIP-4895](https://eips.ethereum.org/EIPS/eip-4895) – _Beacon chain push withdrawals as operations_
+- [EIP-6049](https://eips.ethereum.org/EIPS/eip-6049) - _Deprecate `SELFDESTRUCT`_
 
 </ExpandableCard>
 

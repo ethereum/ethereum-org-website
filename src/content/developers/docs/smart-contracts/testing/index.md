@@ -171,6 +171,11 @@ Formal verification is considered important for smart contracts because it helps
 
 - [GitHub](https://github.com/crytic/etheno)
 
+**Woke development and testing framework** - _Test and deployment scripts in Python with type hints, fuzzer, debugging support, code coverage, cross-chain testing._
+
+- [Documentation](https://ackeeblockchain.com/woke/docs/latest/testing-framework/overview/)
+- [Github](https://github.com/Ackee-Blockchain/woke)
+
 ### Static analysis tools {#static-analysis-tools}
 
 **Mythril** - _EVM bytecode assessment tool for detecting contract vulnerabilities using taint analysis, concolic analysis, and control flow checking._
