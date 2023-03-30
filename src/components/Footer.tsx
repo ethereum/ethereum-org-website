@@ -278,7 +278,7 @@ const Footer: React.FC<IProps> = () => {
       ],
     },
   ]
-  
+
   const data = useStaticQuery(graphql`
     query {
       allSiteBuildMetadata {
@@ -302,7 +302,7 @@ const Footer: React.FC<IProps> = () => {
         <Box color="text200">
           <Translation id="website-last-updated" />:{" "}
           {getLocaleTimestamp(
-            intl.locale as Lang,
+            language as Lang,
             data.allSiteBuildMetadata.edges[0].node.buildTime
           )}
         </Box>
