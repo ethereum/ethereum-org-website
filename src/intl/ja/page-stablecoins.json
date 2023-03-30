@@ -145,22 +145,5 @@
   "page-stablecoins-more-defi-button": "分散型金融(DeFi)の詳細",
   "page-stablecoins-tools-title": "ステーブルコインについてもっと詳しく",
   "page-stablecoins-tools-stablecoinswtf-description": "Stablecoins.wtfは、最有力のステーブルコインの過去の市場データ、統計、および教育コンテンツを備えたダッシュボードを提供しています。",
-  "page-dapps-ready-button": "次へ",
-  "pros": "利点",
-  "cons": "欠点",
-  "1inch-logo": "1inch ロゴ",
-  "aave-logo": "Aave ロゴ",
-  "binance-logo": "Binance ロゴ",
-  "bittrex-logo": "Bittrex ロゴ",
-  "coinbase-logo": "Coinbaseロゴ",
-  "coinmama-logo": "Coinmama ロゴ",
-  "compound-logo": "Compound ロゴ",
-  "example-projects": "プロジェクト例",
-  "gemini-logo": "Gemini",
-  "gitcoin-logo": "Gitcoin",
-  "loopring-logo": "Loopring ロゴ",
-  "makerdao-logo": "MakerDao ロゴ",
-  "matcha-logo": "Matcha ロゴ",
-  "oasis-logo": "Oasis",
-  "uniswap-logo": "Uniswap ロゴ"
+  "page-dapps-ready-button": "次へ"
 }
