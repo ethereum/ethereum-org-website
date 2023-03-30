@@ -35,8 +35,6 @@ Le aziende sperimentano la tecnologia blockchain dal 2016 circa, quando furono l
 
 Un altro sviluppo che sta spostando l'attenzione verso le blockchain pubbliche è il [Livello 2](/developers/docs/scaling/#layer-2-scaling). Con livello 2 si intende una categoria di tecnologie per la scalabilità che permettono volumi elevati sulle catene pubbliche. Ma le soluzioni di livello 2 possono anche [permettere di vincere alcune sfide che hanno portato gli sviluppatori aziendali a scegliere in passato le catene private](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/).
 
-Il protocollo Baseline è un progetto chiave che sta definendo un protocollo per una collaborazione confidenziale e complessa tra aziende, senza lasciare dati sensibili sulla catena. Ha beneficiato di uno [slancio significativo](https://www.oasis-open.org/2020/08/26/baseline-protocol-achieves-key-milestone-with-release-of-v0-1-implementation-for-enterprise/) nel corso del 2020.
-
 ## Risorse per sviluppatori aziendali {#enterprise-developer-resources}
 
 ### Organizzazioni {#organizations}
@@ -50,16 +48,20 @@ Alcuni sforzi collaborativi per rendere la rete Ethereum aziendale più intuitiv
 ### Prodotti e servizi {#products-and-services}
 
 - [Alchemy](https://www.alchemy.com/) _ fornisce servizi API e strumenti per creare e monitorare applicazioni su Ethereum_
+- [Blast](https://blastapi.io/): _una piattaforma API che fornisce API RPC/WSS per la Rete Principale e le Reti di Prova dell'Archivio di Ethereum._
 - [Blockapps](https://blockapps.net/) _implementazione del protocollo Enterprise Ethereum, strumenti e API che formano la piattaforma STRATO_
 - [Chainstack](https://chainstack.com/) _infrastruttura per rete principale e rete di prova di Ethereum ospitata in cloud pubblici e isolati dei clienti_
 - [ConsenSys](https://consensys.net/) _offre una gamma di prodotti e strumenti per sviluppare su Ethereum, oltre a servizi di consulenza e sviluppo personalizzato_
 - [Envision Blockchain](https://envisionblockchain.com/) _fornisce consulenza e servizi di sviluppo incentrati sulle imprese specializzati nella rete principale di Ethereum_
-- [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _offre un flusso di lavoro di approvvigionamento rilasciando RFQ, contratti, ordini di acquisto e fatture attraverso la rete di business partner certificati dell'azienda_
+- [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _offre un flusso di lavoro per gli acquisti rilasciando RFQ, contratti, ordini di acquisto e fatture attraverso la rete di business partner certificati dell'azienda_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _client Ethereum open source aziendale sviluppato con licenza Apache 2.0 e scritto in Java_
 - [Infura](https://infura.io/) _accesso scalabile all'API alle reti di Ethereum e IPFS_
-- [Provide](https://provide.services/) _infrastruttura e API per applicazioni aziendali Web3_
+- [Kaleido](https://kaleido.io/) _una piattaforma di sviluppo incentrata sulle imprese che offre applicazioni semplificate per blockchain e asset digitali_
+- [Fornire](https://provide.services/) _infrastruttura e API per applicazioni aziendali Web3_
 - [QuickNode](https://www.quicknode.com/) _fornisce nodi affidabili e veloci con API di alto livello come l'API NFT, l'API Token, etc., consegnando una suite di prodotti unificata e soluzioni aziendali_
-- [Unibright](https://unibright.io/), _ un team di specialisti della blockchain, architetti, sviluppatori e consulenti con più di 20 anni di esperienza nei processi di business e integrazione_
+- [Tenderly](https://tenderly.co) _una piattaforma di sviluppo Web3 che fornisce elementi di debug, osservabilità e infrastruttura per lo sviluppo, il test, il monitoraggio e il funzionamento dei contratti intelligenti._
+- [Unibright](https://unibright.io/) _team di specialisti della blockchain, architetti, sviluppatori e consulenti con più di 20 anni di esperienza in processi di business e integrazione_
+- [Zero Services GmbH](https://www.zeroservices.eu/) _provider di servizi gestiti si diffonde in co-sedi in Europa e Asia. Fa funzionare e monitora i tuoi nodi in modo sicuro e affidabile_
 
 ### Strumenti e librerie {#tooling-and-libraries}
 
@@ -72,16 +74,17 @@ Alcuni sforzi collaborativi per rendere la rete Ethereum aziendale più intuitiv
 
 ### Soluzioni di scalabilità {#scalability-solutions}
 
-Il [Livello 2](/developers/docs/scaling/#layer-2-scaling) è una serie di tecnologie o sistemi eseguiti in Ethereum (Livello 1), che ereditano le proprietà di sicurezza dal Livello 1 e forniscono capacità superiori di elaborazione delle transazioni (volumi), minori commissioni sulle transazioni (costi operativi) e conferme delle transazioni più veloci rispetto al Livello 1. Le soluzioni di ridimensionamento di livello 2 sono protette dal livello 1, ma consentono alle applicazioni della blockchain di gestire molti più utenti o azioni o dati rispetto al livello 1. Molte sfruttano gli ultimi progetti in fatto di crittografia e prove zero-knowledge (ZK) per massimizzare prestazioni e sicurezza.
+[Il Livello 2](/layer-2) è una serie di tecnologie o sistemi eseguiti su Ethereum (livello 1) che ereditano le proprietà di sicurezza dal livello 1 e forniscono maggiori capacità di elaborazione delle transazioni (volumi), commissioni sulle transazioni inferiori (costi operativi) e conferme delle transazioni più veloci rispetto al livello 1. Le soluzioni di scalabilità di livello 2 sono protette dal livello 1, ma consentono alle applicazioni della blockchain di gestire molti più utenti o azioni o dati rispetto al livello 1. Molte sfruttano gli ultimi progetti in fatto di crittografia e prove zero-knowledge (ZK) per massimizzare prestazioni e sicurezza.
 
-Creare un'applicazione su una soluzione di scalabilità livello 2 può aiutare a [gestire molte problematiche che precedentemente hanno portato le aziende a sviluppare sulle blockchain private](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/), mantenendo i vantaggi legati allo sviluppo sulla rete principale.
+Sviluppare un'applicazione su una soluzione di scalabilità livello 2 può aiutare a [gestire molte problematiche che precedentemente hanno spinto le aziende a sviluppare su blockchain private](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/), mantenendo comunque i vantaggi legati allo sviluppo sulla rete principale.
 
-Esempi di soluzioni L2 già pronte per la produzione (o che lo saranno presto) includono:
+I progetti di Livello 2 includono:
 
 - Optimistic Rollup (dati sulla catena, prove di frode)
   - [Optimism](https://optimism.io/)
   - [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/)
   - [Fuel Network](https://fuel.sh)
+  - [Rete Boba](https://boba.network/)
 - Rollup ZK (dati sulla catena, prove di validità ZK)
   - [Loopring](https://loopring.org)
   - [Starkware](https://starkware.co)
@@ -90,17 +93,13 @@ Esempi di soluzioni L2 già pronte per la produzione (o che lo saranno presto) i
 - Validium (dati esterni alla catena, prove di validità ZK)
   - [Starkware](https://starkware.co)
   - [Matter Labs zkPorter](https://matter-labs.io/)
-- Plasma (dati esterni alla catena, prove di frode)
-  - [OMG Network](https://omg.network/)
-  - [Gazelle](https://gzle.io)
-  - [Matic Network](https://matic.network/)
-  - [LeapDAO](https://ipfs.leapdao.org/)
 - Canali di stato
   - [Connext](https://connext.network/)
   - [Kchannels](https://www.kchannels.io/)
   - [Perun](https://perun.network)
   - [Raiden](https://raiden.network/)
-- Sidechain
+- Catene secondarie
+  - [Polygon PoS](https://polygon.technology/)
   - [Skale](https://skale.network)
   - [POA Network](https://www.poa.network/)
 - Soluzioni ibride che combinano le proprietà di più categorie
@@ -123,38 +122,47 @@ Ecco alcune applicazioni aziendali che sono state distribuite alla rete principa
 - [Societe Generale](https://www.societegenerale.com/en/news/newsroom/societe-generale-performs-first-financial-transaction-settled-central-bank-digital) _emissione di obbligazioni_
 - [Cadence](https://www.forbes.com/sites/benjaminpirus/2019/10/09/fatburger-and-others-feed-30-million-into-ethereum-for-new-bond-offering/#513870be115b) _offerta e tokenizzazione di obbligazioni per FAT Brands_
 - [Sila](https://silamoney.com/) _infrastruttura di servizi bancari e pagamenti ACH sotto forma di servizio_
-- [Tinlake](https://tinlake.centrifuge.io/) _sconti commerciali tramite risorse tokenizzate del mondo reale quali fatture, mutui o royalty in streaming_
-- [Kratos](https://triterras.com/kratos) _piattaforma finanziaria di commercio di beni che connette i negoziatori di merci per conto proprio e consente loro di scambiare e procurarsi capitale dagli istituti di credito direttamente online_
-- [Fasset](https://www.fasset.com/) _piattaforma per supportare l'infrastruttura sostenibile_
+- [Kratos](https://triterras.com/kratos) _piattaforma finanziaria di commercio di commodity che connette i trader di commodity e consente loro di scambiare e procurarsi capitale dai finanziatori direttamente online_
 - [Taurus](https://www.taurushq.com/) _emette titoli tokenizzati_
+
+### Tokenizzazione di asset {#tokenization}
+
+- [Tinlake](https://tinlake.centrifuge.io/) _sconti commerciali tramite risorse tokenizzate del mondo reale quali fatture, mutui o royalty in streaming_
+- [RealT](https://realt.co/) _investitori in tutto il mondo possono acquistare nel mercato immobiliare statunitense attraverso una proprietà completamente conforme, frazionale, tokenizzata_
+- [AgroToken](https://agrotoken.io/en/) _tokenizzazione e trading di materie prime agricole_
+- [Fasset](https://www.fasset.com/) _piattaforma per supportare le infrastrutture sostenibili_
 
 ### Autenticazione dei dati {#notarization-of-data}
 
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _i dettagli dei prestiti finalizzati sono associati ad hash e registrati sulla rete principale_
 - [Splunk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html) _l'integrità dei dati può essere assicurata scrivendo periodicamente hash di dati indicizzati nella rete principale_
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _la maggiore agenzia di stampa italiana combatte contro le fake news e consente ai lettori di verificare l'origine delle notizie registrandole sulla rete principale_
-- [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _registra le conferenze stampa su Ethereum per assicurare l'affidabilità e la fiducia aziendale_
+- [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _registra le conferenze stampa su Ethereum per assicurare l'affidabilità e la fiducia nell'azienda_
 - [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _registra la provenienza e lo storico delle riparazioni degli orologi su Ethereum_
 - [EthSign](https://ethsign.xyz/) _registra i documenti elettronici firmati sulla blockchain di Ethereum_
 
 ### Catena d'approvvigionamento {#supply-chain}
 
 - [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _fornitore di polizze di carico e trasferimento di documenti_
-- [Morpheus.network](https://morpheus.network/): _Piattaforma di automazione della filiera che implementa un ibrido di catene private con dati autenticati sulla Rete Principale di Ethereum ed è in uso da aziende come come il distributore di alimenti, olio e carburanti canadese Federated Co-op Ltd. e il fornitore argentino di alimenti per animali domestici Vitalcan_
+- [Morpheus.network](https://morpheus.network/) _piattaforma di automatizzazione della catena d'approvvigionamento che implementa un ibrido di catene private con dati autenticati sulla rete principale Ethereum e viene utilizzata da aziende come il distributore di carburante e petrolio canadese Federated Co-op Ltd. e il fornitore di alimenti per animali domestici argentino Vitalcan_
 - [Minespider](https://www.minespider.com/) _monitoraggio della catena di approvvigionamento_
 - [Follow Our Fibre](https://www.followourfibre.com) _tracciabilità della filiera della viscosa_
 - [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _consente alle aziende di interagire in un flusso di lavoro di approvvigionamento emettendo richieste di preventivo, contratti, ordini d'acquisto e fatture sulla rete di partner aziendali fidati_
 - [Treum](https://treum.io/) _assicura trasparenza, tracciabilità e commerciabilità alle catene d'approvvigionamento usando la tecnologia della blockchain_
-- [TradeTrust](https://www.tradetrust.io/) _verifica le Polizze di Carico (B/L) per la spedizione internazionale_
+- [TradeTrust](https://www.tradetrust.io/) _verifica le Polizze di Carico (B/L) per le spedizioni internazionali_
 - [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _conia NFT per ogni nuovo lotto di birra, consentendo una maggiore visibilità ed efficienza lungo l'intera catena di approvvigionamento_
+
+### Assicurazioni {#insurance}
+
+- [Arbol](https://www.arbolmarket.com/) _assicurazione parametrica per coprire i rischi legati alle intemperie_
+- [Etherisc](https://etherisc.com/) _assicurazione decentrata per vari rischi_
 
 ### Credenziali e certificazioni {#credentials}
 
-- La [Contea dello Utah](http://www.utahcounty.gov/Dept/ClerkAud/DigitalCertCopy.html) _emette certificati di matrimonio digitali su Ethereum_
 - [Due scuole superiori italiane](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _emettono diplomi sulla rete principale Ethereum_
 - L'[Università di St. Gallen](https://cointelegraph.com/news/swiss-university-fights-fake-diplomas-with-blockchain-technology) _ha avviato un progetto pilota per verificare le lauree conferite da un'università svizzera_
-- [Malta](https://cointelegraph.com/news/malta-to-store-education-certificates-on-a-blockchain) _tutti i certificati di istruzione registrati sulla rete principale da [Hyland](https://www.learningmachine.com/)_
-- La [Pohang University of Science and Technology](https://www.theblockcrypto.com/linked/55176/south-korean-university-issues-blockchain-stored-diplomas-amid-the-spread-of-the-coronavirus), _università sudcoreana, emette diplomi memorizzati sulla blockchain ai nuovi laureati_
+- [Malta](https://cointelegraph.com/news/malta-to-store-education-certificates-on-a-blockchain) _tutti i certificati di istruzione sono registrati sulla rete principale da [Hyland](https://www.learningmachine.com/)_
+- La [Pohang University of Science and Technology](https://www.theblockcrypto.com/linked/55176/south-korean-university-issues-blockchain-stored-diplomas-amid-the-spread-of-the-coronavirus), _università sudcoreana, rilascia ai nuovi laureati diplomi memorizzati sulla blockchain_
 - [OpenCerts](https://opencerts.io/) _emette credenziali d'istruzione nella blockchain a Singapore_
 - [BlockCerts](https://www.blockcerts.org/) _ha sviluppato uno standard aperto per le credenziali della blockchain_
 - [SkillTree](http://skilltree.org/) _training per migliorare le competenze online e certificazioni configurabili con trigger di scadenza o dipendenze da altre competenze_
