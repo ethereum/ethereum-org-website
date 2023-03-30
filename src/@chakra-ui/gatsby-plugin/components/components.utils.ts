@@ -73,3 +73,53 @@ export function defineMergeStyles(
     SystemStyleObject
   >
 }
+
+export const _notDisabled = "&:not([data-disabled], [disabled])"
+
+const INPUT_TRIGGER_DISABLE_COLOR = "--input-trigger-disable-color"
+
+export const commonInputTriggerStyles = {
+  commonControlProps: {
+    border: "1px",
+    outline: "2px solid",
+    outlineColor: "transparent",
+    _checked: {
+      color: "background",
+      bg: "primary",
+      borderColor: "primary",
+    },
+    _focusVisible: {
+      borderColor: "primaryHighContrast",
+      outlineColor: "primaryHover",
+      outlineOffset: "2px",
+      boxShadow: "none",
+    },
+    _disabled: {
+      bg: `var(${INPUT_TRIGGER_DISABLE_COLOR})`,
+      borderColor: `var(${INPUT_TRIGGER_DISABLE_COLOR})`,
+      opacity: 1,
+    },
+    [_notDisabled]: {
+      // Hovering over the label triggers the style for the control
+      "*:hover > &": {
+        bg: "primaryHover",
+        outlineColor: "primaryDark",
+        _dark: {
+          outlineColor: "primaryLight",
+        },
+      },
+    },
+  },
+  commonContainerProps: {
+    [INPUT_TRIGGER_DISABLE_COLOR]: "colors.disabled",
+    _disabled: {
+      cursor: "not-allowed",
+    },
+  },
+  commonLabelProps: {
+    _disabled: {
+      color: `var(${INPUT_TRIGGER_DISABLE_COLOR})`,
+      opacity: 1,
+    },
+  },
+}
