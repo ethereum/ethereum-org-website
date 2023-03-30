@@ -17,6 +17,8 @@ summaryPoints:
 
 O staking individual é o ato de [executar um nó Ethereum](/run-a-node/) conectado à Internet e depositar 32 ETH para ativar um [validador](#faq), dando a você a capacidade de participar diretamente do consenso da rede.
 
+**A participação individual aumenta a descentralização da rede Ethereum**, tornando o Ethereum mais resistente a censura e ataques. Outros métodos de participação podem não ajudar a rede da mesma maneira. A participação individual é a melhor opção de participação para proteger o Ethereum.
+
 Um nó Ethereum consiste em um cliente de camada de execução (EL) e em um cliente de camada de consenso (CL). Esses clientes são softwares que trabalham em conjunto, juntamente com um conjunto válido de chaves de assinatura, para verificar transações e blocos, atestar o bloco correto no topo da cadeia, agregar atestações e propor blocos.
 
 Os stakers individuais são responsáveis por operar o hardware necessário para executar esses clientes. É altamente recomendável usar uma máquina dedicada para isso, que você opera em casa – isso é extremamente benéfico para a saúde da rede.
@@ -25,18 +27,12 @@ Um staker individual recebe recompensas diretamente do protocolo por manter seu 
 
 ## Por que fazer staking individual? {#why-stake-solo}
 
-O staking individual vem com mais responsabilidades, mas oferece controle máximo sobre seus fundos e configurações de staking.
+A participação individual vem com mais responsabilidades, mas fornece o máximo de controle sobre seus fundos e configuração de participação.
 
 <CardGrid>
-  <Card title="Ganhe mais ETH" emoji="💸">
-    Ganhe recompensas denominadas em ETH diretamente do protocolo quando seu validador estiver on-line, sem que nenhum intermediário leve uma parte.
-  </Card>
-  <Card title="Controle total" emoji="🎛️">
-    Guarde suas próprias chaves. Escolha a combinação de clientes e hardware que permite minimizar o risco e contribuir melhor para a integridade e a segurança da rede. Os serviços de staking de terceiros tomam essas decisões por você e nem sempre fazem as escolhas mais seguras.
-  </Card>
-  <Card title="Segurança de rede" emoji="🔐">
-    O staking individual é a maneira mais impactante de fazer staking. Ao executar um validador em seu próprio hardware em casa, você fortalece a robustez, a descentralização e a segurança do protocolo Ethereum.
-  </Card>
+  <Card title="Ganhe mais ETH" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
+  <Card title="Controle total" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
+  <Card title="Segurança de rede" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
 ## Considerações antes de fazer staking individual {#considerations-before-staking-solo}
@@ -57,7 +53,7 @@ Por mais que desejemos que o staking individual fosse acessível e sem riscos pa
     <p style={{marginTop: "1rem"}}><a href="/security">Segurança e prevenção de fraude do Ethereum</a></p>
   </ExpandableCard>
   <ExpandableCard title="Sem saques (por enquanto)" eventCategory="SoloStaking" eventName="clicked no withdrawing">
-    O saque de ETH ou recompensas em stake de um saldo de validador ainda não é suportada. O suporte para retiradas está planejado para a próxima atualização de Xangai. Você deve esperar que seu ETH será bloqueado por pelo menos um a dois anos. Após a atualização Xangai, você poderá retirar livremente partes ou todo o seu stake, se desejar.
+    O saque de ETH ou recompensas em stake de um saldo de validador ainda não é suportada. O suporte para retiradas está planejado para a próxima atualização de Xangai. Após isso, os usuários podem optar por receber pagamentos de recompensas automaticamente e podem retirar todo o seu saldo para receber os seus fundos de volta.
   </ExpandableCard>
   <ExpandableCard title="Manutenção" eventCategory="SoloStaking" eventName="clicked maintenance">
     O hardware falha ocasionalmente, as conexões de rede falham e o software cliente ocasionalmente precisa ser atualizado. A manutenção do nó é inevitável e ocasionalmente exigirá sua atenção. Você deve estar ciente de quaisquer informações de atualizações de rede ou outras atualizações críticas de clientes.
@@ -78,9 +74,13 @@ Por mais que desejemos que o staking individual fosse acessível e sem riscos pa
 
 <StakingHowSoloWorks />
 
-Se desejar, você pode parar suas atividades como um validador, o que elimina a necessidade de estar on-line e interrompe outras recompensas. Esteja ciente que até a atualização Xangai que está planejada, não será possível _retirar_ esses fundos.
+Enquanto ativo, você ganhará recompensas ETH, que serão depositadas periodicamente no seu endereço de saque.
 
-Após a atualização Xangai, os usuários poderão retirar suas recompensas, assim como seu stake, se assim o desejarem.
+Se desejar, você pode parar suas atividades como um validador, o que elimina a necessidade de estar on-line e interrompe outras recompensas. O seu saldo restante será sacado para o endereço de saque que você indicou durante a configuração.
+
+_Atualização Shanghai necessária para habilitar os pagamentos de recompensa e saques totais de validadores saídos._
+
+[Mais sobre saques de participação](/staking/withdrawals/)
 
 ## Comece a usar o Staking Launchpad {#get-started-on-the-staking-launchpad}
 
@@ -177,12 +177,24 @@ As penalidades por ficar off-line são proporcionais a quantos outros estão off
 <a href="https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/">Mais sobre recompensas e penalidades</a>
 </ExpandableCard>
 
+<ExpandableCard title="Como posso desbloquear minhas recompensas ou obter meu ETH de volta?">
+No momento da atualização Shangai, serão iniciados os pagamentos de recompensa e os saques totais para os validadores saídos. Saques de qualquer tipo da Beacon Chain exigem que sejam definidas credenciais de retirada.
+
+Os novos participantes estabeleceram isso no momento da geração da chave e do depósito. Os participantes existentes que ainda não definiram isso podem atualizar suas chaves para dar suporte a essa funcionalidade após a atualização Shangai.
+
+Depois que as credenciais de saque estiverem definidas, os pagamentos de recompensa (ETH acumulado sobre os 32 iniciais) serão periodicamente distribuídos para o endereço de saque automaticamente.
+
+Para desbloquear e receber todo o seu saldo de volta, você deve concluir o processo de saída de seu validador.
+
+<ButtonLink to="/staking/withdrawals/">Mais sobre saques de participação</ButtonLink>
+</ExpandableCard>
+
 ## Leitura adicional {#further-reading}
 
 - [Problema de diversidade de clientes da Ethereum](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
 - [Ajudando a diversidade dos clientes](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Diversidade de clientes na camada de consenso do Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [Como comprar o hardware validador do Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
-- [Passo a passo: Como ingressar na rede de testes da Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
-- [Dicas de prevenção de cortes Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
+- [Passo a passo: Como ingressar na rede de testes da Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _ Butta_
+- [Dicas de prevenção de cortes Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020 _
 - [Recompensas e penalidades no Ethereum 2.0](https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/) - _James Beck, Maço de 2020_

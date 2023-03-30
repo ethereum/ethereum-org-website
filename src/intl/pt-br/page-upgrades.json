@@ -9,13 +9,5 @@
   "page-upgrades-upgrades-guide": "Guia para as melhorias no Ethereum",
   "page-upgrades-upgrades-docking": "A fusão",
   "page-upgrades-shard-title": "Fragmentação",
-  "page-upgrades-upgrades-beacon-chain": "A Beacon Chain",
-  "consensus-beaconcha-in-desc": "Explorador de código aberto da Beacon Chain",
-  "consensus-beaconscan-desc": "Explorador da Beacon Chain - Etherscan para a camada de consenso",
-  "consensus-become-staker": "Torne-se um staker (participante)",
-  "consensus-become-staker-desc": "A prova de participação começou! Caso você queira participar com os seus ETH para ajudar a proteger a rede, certifique-se de conhecer os riscos envolvidos.",
-  "consensus-explore": "Conheça os dados",
-  "consensus-run-beacon-chain": "Executar um cliente de consenso",
-  "consensus-run-beacon-chain-desc": "Ethereum precisa da maior quantidade possível de clientes sendo executados. Ajude com este bem público do Ethereum!",
-  "read-more": "Leia mais"
+  "page-upgrades-upgrades-beacon-chain": "A Beacon Chain"
 }
