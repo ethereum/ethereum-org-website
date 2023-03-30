@@ -114,7 +114,7 @@ Zero-knowledge proofs are particularly useful in the context of [decentralized i
 
 ### Authentication {#authentication}
 
-Using online services requires proving your identity and right to access those platforms. This often requires providing personal information, like names, email addresses, birth dates, and so on. You may also need to memorize long passwords or risk losing access.
+Using online services requires personal information and secure passwords to prove your identity and access the platforms. This may include names, email addresses, birth dates, and so on. You may also need to memorize long passwords or risk losing access.
 
 Zero-knowledge proofs, however, can simplify authentication for both platforms and users. Once a ZK-proof has been generated using public inputs (e.g., data attesting to the user's membership of the platform) and private inputs (e.g., the user's details), the user can simply present it to authenticate their identity when they need to access the service. This improves the experience for users and frees organizations from the need to store huge amounts of user information.
 
