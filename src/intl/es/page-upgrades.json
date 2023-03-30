@@ -9,13 +9,5 @@
   "page-upgrades-upgrades-guide": "Guía de actualizaciones de Ethereum",
   "page-upgrades-upgrades-docking": "La fusión",
   "page-upgrades-shard-title": "La fragmentación",
-  "page-upgrades-upgrades-beacon-chain": "La cadena de baliza",
-  "consensus-beaconcha-in-desc": "Explorador de la cadena de baliza de código abierto",
-  "consensus-beaconscan-desc": "Explorador de la cadena de baliza - Etherscan para la capa de consenso",
-  "consensus-become-staker": "Conviértase en un participante",
-  "consensus-become-staker-desc": "El «staking» (o apuestas) ya es una realidad. Si quiere hacer apuestas con sus ETH para ayudar a hacer segura la red, asegúrese de que es consciente de los riesgos.",
-  "consensus-explore": "Explorar los datos",
-  "consensus-run-beacon-chain": "Ejecutar un cliente de consenso",
-  "consensus-run-beacon-chain-desc": "Ethereum necesita tantos clientes participando como sea posible. ¡Ayude con este bien público de Ethereum!",
-  "read-more": "Más información"
+  "page-upgrades-upgrades-beacon-chain": "La cadena de baliza"
 }
