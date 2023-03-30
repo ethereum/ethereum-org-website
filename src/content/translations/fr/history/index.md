@@ -23,11 +23,83 @@ Vous cherchez de prochaines mises à jour de protocole ? [En savoir plus sur les
 
 <Divider />
 
+## 2023 {#2023}
+
+### Shanghai (_planifié_) {#shanghai}
+
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Horodatage : TBD<br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Numéro de bloc : TBD<br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Prix ETH : TBD<br />
+
+<!-- <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/{}/https://ethereum.org/">ethereum.org on waybackmachine</a> -->
+
+#### Résumé {#shanghai-summary}
+
+La mise à jour Shanghai fait basculer les retraits de mise en jeu vers la couche d'exécution. En tandem avec la mise à jour Capella, cette mise à jour permet aux blocs d'accepter des opérations de retrait, qui permettent aux stakers de retirer leur ETH de la chaine phare la basculer vers la couche d'exécution.
+
+<ExpandableCard title="EIP Shanghai" contentPreview="Official improvements included in this upgrade.">
+
+- [EIP-3651](https://eips.ethereum.org/EIPS/eip-3651) – _Starts the `COINBASE` address warm_
+- [EIP-3855](https://eips.ethereum.org/EIPS/eip-3855) – _New `PUSH0` instruction_
+- [EIP-3860](https://eips.ethereum.org/EIPS/eip-3860) – _Limit and meter initcode_
+- [EIP-4895](https://eips.ethereum.org/EIPS/eip-4895) – _Beacon chain push withdrawals as operations_
+
+</ExpandableCard>
+
+- [Lire les spécificités de la mise à jour Shanghai](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
+
+---
+
+### Capella (_planifié_) {#capella}
+
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Horodatage : A confirmer<br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Numéro d'Époque : A confirmer<br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Prix ETH : A confirmer<br />
+
+<!-- <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/{}/https://ethereum.org/en/">ethereum.org on waybackmachine</a> -->
+
+#### Résumé {#capella-summary}
+
+La mise à jour Capella est la troisième mise à jour majeure vers la couche de consensus (Chaine phare), qui permet les retraits de la mise en jeu. La mise à jour Capella et la mise à jour Shanghai survenant sur la couche d'exécution doivent se produire simultanément pour synchroniser la fonctionnalité de retrait.
+
+Cette mise à jour de la couche de consensus permet aux stakers qui n'ont pas fourni de certificats de retrait avec leur dépôt initial de le faire, ce qui leur permet les retraits.
+
+La mise à jour fournit aussi des fonctionnalités de balayage automatique de compte, qui traitent continuellement les comptes de validateur pour tous les paiements de récompenses disponibles ou les retraits complets.<!-- - \[More on staking withdrawals\](/staking/withdrawals/). -->- [Lire les spécificités de la mise à jour Capella](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
+
+<Divider />
+
 ## 2022 {#2022}
+
+### Paris (La Fusion) {#paris}
+
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>15 Sept. 2022 06:42:42 AM UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Bloc numéro : <a href="https://etherscan.io/block/15537394">15537394</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Prix ETH : 1 472 $US<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220915075314/https://ethereum.org/">Ethereum.org sur Wayback Machine</a>
+
+#### Résumé {#paris-summary}
+
+La mise à jour de Paris a été déclenchée par le passage de la blockchain de preuve de travail à une[difficulté totale finale](/glossary/#terminal-total-difficulty) de 5875000000000000000. Cela s'est produit au bloc 15537393 le 15 septembre 2022, déclenchant la mise à jour Paris du bloc suivant. Paris était la transition vers la [La Fusion](/upgrades/merge/) : sa principale fonctionnalité était de désactiver l'algorithme de minage [preuve de travail](/developers/docs/consensus-mechanisms/pow) et sa logique de consensus associée et d'activer la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos) à la place. Paris lui-même était une mise à jour vers les [clients d'exécution](/developers/docs/nodes-and-clients/#execution-clients) (équivalent de Bellatrix sur la couche de consensus) qui leur permettait de recevoir des instructions depuis leurs [clients de consensus](/developers/docs/nodes-and-clients/#consensus-clients) connectés. Cela nécessite un nouvel ensemble de méthodes internes d'API, collectivement connues sous le nom d'[API Moteur](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md), à activer. C'est sans doute la mise à jour la plus significative de l'histoire d'Ethereum depuis [Homestead](#homestead)!
+
+- [Lisez la spécification de la mise à jour Paris](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
+
+<ExpandableCard title="EIP Paris" contentPreview="Official improvements included in this upgrade.">
+
+- [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) – \_Mettre à jour le consensus pour basculer vers la preuve d'essai
+- [EIP-4399](https://eips.ethereum.org/EIPS/eip-4399) – _Remplacer l'opcode DIFFICULTY par PREVRANDAO._
+
+</ExpandableCard>
+
+---
+
+### Bellatrix {#bellatrix}
+
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>06/09/2022 11:34:47 AM +UTC</code><br /> <Emoji text=":bricks :" size={1} mr={"0.5 rem"} mb={"0.5rem"} />Numéro d'époque : 144 896<br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem" } />Prix ETH : 1 558 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https  ://web.archive.org/web/20220906112525/https://ethereum.org/en/">ethereum.org sur waybackmachine</a>
+
+#### Résumé {#bellatrix-summary}
+
+La mise à jour de Bellatrix était la seconde mise à jour planifiée pour la [Chaîne Phare](/upgrades/beacon-chain), préparant la chaîne à [La Fusion](/upgrades/merge/). Elle porte les pénalités de validateur à leurs valeurs maximales en cas d'inactivité ou d'infractions sanctionnable. Bellatrix inclut également une mise à jour des règles de choix de fourche pour préparer la chaîne à La Fusion et à la transition du dernier bloc de preuve de travail vers le premier bloc de preuve d'enjeu. Cela inclut la sensibilisation des clients de consensus à la [difficulté totale du terminal](/glossary/#terminal-total-difficulty) de 5875000000000000000.
+
+- [Lire les spécifications de la mise à niveau Bellatrix](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
+
+---
 
 ### Gray Glacier {#gray-glacier}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Jun-30-2022 10:54:04 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Numéro de bloc : <a href="https://etherscan.io/block/15050000">15 050 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Cours ETH : 1 069 $ USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220630094629/https://ethereum.org/en/">ethereum.org sur waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Jun-30-2022 10:54:04 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Numéro de bloc : <a href="https://etherscan.io/block/15050000">15 050 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Cours ETH : 1 069 $ USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220630094629/https://ethereum.org/en/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#gray-glacier-summary}
 
@@ -47,16 +119,16 @@ La mise à niveau Gray Glacier a retardé le déclenchement de la [bombe de diff
 
 ### Arrow Glacier {#arrow-glacier}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Dec-09-2021 07:55:23 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Numéro de bloc : <a href="https://etherscan.io/block/13773000">13 773 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Cours ETH : 4 111 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211207064430/https://ethereum.org/en/">ethereum.org sur waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Dec-09-2021 07:55:23 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Numéro de bloc : <a href="https://etherscan.io/block/13773000">13 773 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Cours ETH : 4 111 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211207064430/https://ethereum.org/en/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#arrow-glacier-summary}
 
-La mise à niveau Arrow Glacier a retardé le déclenchement de la [bombe de difficulté](/glossary/#difficulty-bomb) de plusieurs mois. Il s'agit de la seule modification apportée par cette mise à niveau. En essence, elle est donc très semblable à la mise à jour [Muir Glacier](#muir-glacier). Des changements similaires avaient également été effectués lors des mises à niveau [Byzantium](#byzantium), [Constantinople](#constantinople) et [London](#london).
+La mise à niveau Arrow Glacier a retardé le déclenchement de la [bombe de difficulté](/glossary/#difficulty-bomb) de plusieurs mois. Il s'agit de la seule modification apportée par cette mise à niveau. En essence, elle est donc très semblable à la mise à niveau [Muir Glacier](#muir-glacier). Des changements similaires avaient également été effectués lors des mises à niveau [Byzantium](#byzantium), [Constantinople](#constantinople) et [London](#london).
 
 - [Blog de l'Ethereum Foundation - Annonce de la mise à niveau Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - Mise à niveau Ethereum Arrow Glacier](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
-<ExpandableCard title="Les EIP d'Arrow Glacier" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP Arrow Glacier" contentPreview="Official improvements included in this upgrade.">
 
 - [EIP-4345](https://eips.ethereum.org/EIPS/eip-4345) – _Reporte la bombe de difficulté jusqu'en juin 2022_
 
@@ -66,35 +138,35 @@ La mise à niveau Arrow Glacier a retardé le déclenchement de la [bombe de dif
 
 ### Altair {#altair}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Oct-27-2021 10:56:23 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Numéro de période : 74,240<br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Cours ETH : 4 024 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211026174951/https://ethereum.org/en/">ethereum.org sur waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Oct-27-2021 10:56:23 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Numéro de période : 74,240<br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Cours ETH : 4 024 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211026174951/https://ethereum.org/en/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#altair-summary}
 
-La mise à niveau Altair était la première mise à niveau répertoriée pour la [chaîne phare](/upgrades/beacon-chain). La prise en charge des « comités de synchronisation » a été ajoutée, autorisant d'une part les clients légers et apportant d'autre part l'inactivité du validateur ainsi que la réduction des pénalités jusqu'à leurs pleines valeurs.
+La mise à niveau Altair était la première mise à niveau répertoriée pour la [chaîne phare](/upgrades/beacon-chain). La prise en charge des « comités de synchronisation » a été ajoutée, autorisant d'une part les clients légers et augmentant d'autre part les pénalités d'inactivité et de délestage des validateurs alors que la situation évoluait vers La Fusion.
 
-- [Lire les informations de mise à niveau Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
+- [Lire les spécifications de la mise à niveau Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <Emoji text=":tada:" size={1} mr="0.5rem" />Anecdote ! {#altair-fun-fact}
+#### <emoji text=":tada:" size={1} mr="0.5rem" />Anecdote ! {#altair-fun-fact}
 
-Altair a été la première mise à niveau majeure d'un réseau dont la date de déploiement était exacte. Toutes les mises à niveau antérieures étaient basées sur un numéro de bloc déclaré sur la chaîne de preuve de travail dans laquelle les temps de bloc varient. La chaîne phare ne nécessite pas de résolution de preuve de travail mais fonctionne sur la base d'un système d'époques composé de 32 « créneaux » de 12 secondes durant lesquels les validateurs peuvent proposer des blocs. C'est pourquoi nous savions exactement quand nous atteindrions l'époque 74 240 et la date de sortie d'Altaïr !
+Altair a été la première mise à niveau majeure d'un réseau dont la date de déploiement était exacte. Toutes les mises à niveau antérieures étaient basées sur un numéro de bloc déclaré sur la chaîne de preuve de travail dans laquelle les durées de blocage varient. La chaîne phare ne nécessite pas de résoudre de preuve de travail, mais fonctionne sur la base d'un système de périodes composées de 32 créneaux de 12 secondes chacun durant lesquels les validateurs peuvent proposer des blocs. C'est pourquoi nous savions exactement quand nous atteindrions l'époque 74 240 et la date de sortie d'Altaïr !
 
-- [Glossaire Beaconcha.in - Créneaux](https://kb.beaconcha.in/glossary#slots)
+- [Durée de blocage](/developers/docs/blocks/#block-time)
 
 ---
 
 ### London {#london}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Aug-05-2021 12:33:42 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/12 965 000">12,965,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 2 621 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210805124609/https://ethereum.org/en/">ethereum.org sur waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Aug-05-2021 12:33:42 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/12 965 000">12,965,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 2 621 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210805124609/https://ethereum.org/en/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#london-summary}
 
-La mise à niveau London a introduit [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), qui a réformé le marché des frais de transaction, ainsi que les changements dans la façon dont les remboursements de gaz sont gérés et le calendrier [Ice Age](/glossary/#ice-age).
+La mise à niveau London a introduit [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), qui a réorganisé le marché des frais de transaction, ainsi que des changements dans le traitement des remboursements de gaz et dans le calendrier [Ice Age](/glossary/#ice-age).
 
-- [Êtes-vous un développeur de dApp ? Assurez-vous de mettre à niveau vos bibliothèques et vos outils.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
+- [Êtes-vous un développeur d'applications décentralisées ? Assurez-vous de mettre à niveau vos bibliothèques et vos outils.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
 - [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Lire l'explication du site Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
-<ExpandableCard title="Les EIP de London" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP de London" contentPreview="Official improvements included in this upgrade.">
 
 - [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) – _Améliore le marché des frais de transaction_
 - [EIP-3198](https://eips.ethereum.org/EIPS/eip-3198) – _Retourne le « BASEFEE » depuis un bloc_
@@ -108,16 +180,16 @@ La mise à niveau London a introduit [EIP-1559](https://eips.ethereum.org/EIPS/e
 
 ### Berlin {#berlin}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>15-avril-2021 10:07:03 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/12244000">12 244 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 2 454 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210415093618/https://ethereum.org/">ethereum.org sur waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>15-avril-2021 10:07:03 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/12244000">12 244 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 2 454 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210415093618/https://ethereum.org/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#berlin-summary}
 
-La mise à niveau de Berlin a optimisé le coût du gaz pour certaines actions EVM et augmente la prise en charge de plusieurs types de transactions.
+La mise à niveau Berlin a optimisé le coût en gaz de certaines actions EVM et augmenté la prise en charge de plusieurs types de transactions.
 
 - [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [Lire l'explication du site Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
-<ExpandableCard title="Les EIP de Berlin" contentPreview="Official improvements included in this upgrade.">
+<ExpandableCard title="EIP de Berlin" contentPreview="Official improvements included in this upgrade.">
 
 - [EIP-2565](https://eips.ethereum.org/EIPS/eip-2565) – _Diminue le coût en gaz pour ModExp_
 - [EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) – _Permet une prise en charge plus facile pour plusieurs types de transactions_
@@ -132,11 +204,11 @@ La mise à niveau de Berlin a optimisé le coût du gaz pour certaines actions E
 
 ### Origine de la chaîne phare {#beacon-chain-genesis}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>01-Déc-2020 12:00:35 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc sur la chaîne phare : <a href="https://beaconscan.com/slot/1">1</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 586,23 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201207184633/https://www.ethereum.org/en/">ethereum.org sur waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>01-Déc-2020 12:00:35 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc sur la chaîne phare : <a href="https://beaconscan.com/slot/1">1</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 586,23 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201207184633/https://www.ethereum.org/en/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#beacon-chain-genesis-summary}
 
-La [chaîne phare](/upgrades/beacon-chain/) avait besoin de 16 384 dépôts de 32 ETH mis en jeu pour être déployée en toute sécurité. Cela s'est produit le 27 novembre, ce qui signifie que la chaîne phare a commencé à produire des blocs le 1er décembre 2020. C'est une première étape importante dans la réalisation de la [vision Ethereum](/roadmap/vision/).
+La [chaîne phare](/upgrades/beacon-chain/) avait besoin de 16 384 dépôts de 32 ETH mis en jeu pour être déployée en toute sécurité. C'est arrivé le 27 novembre, ce qui signifie que la chaîne phare a commencé à produire des blocs le 1er décembre 2020. Ce fut une première étape importante dans la réalisation de la [vision Ethereum](/upgrades/vision/).
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
@@ -148,7 +220,7 @@ La [chaîne phare](/upgrades/beacon-chain/) avait besoin de 16 384 dépôts de 
 
 ### Contrat de dépôt de mise en jeu déployé {#staking-deposit-contract}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>14-oct-2020 09:22:52 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/11052984">11 052 984</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 379,04 USD <br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201104235727/https://ethereum.org/en/">ethereum.org sur waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>14-oct-2020 09:22:52 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/11052984">11 052 984</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 379,04 USD <br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201104235727/https://ethereum.org/en/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#deposit-contract-summary}
 
@@ -164,18 +236,18 @@ Le contrat de dépôt de mise en jeu a introduit la [mise en jeu](/glossary/#sta
 
 ### Muir Glacier {#muir-glacier}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>02-janv-2020 08:30:49 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/9200000">9200000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 127,18 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20200103093618/https://ethereum.org/">ethereum.org sur waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>02-janv-2020 08:30:49 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/9200000">9200000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 127,18 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20200103093618/https://ethereum.org/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#muir-glacier-summary}
 
-La fourche Muir Glacier a généré un retard de la [bombe de difficulté](/glossary/#difficulty-bomb). L'augmentation de la difficulté des blocs du mécanisme de consensus de [preuve de travail](/developers/docs/consensus-mechanisms/pow/) menaçait de dégrader l'utilisation d'Ethereum en allongeant les temps d'attente pour l'envoi de transactions et l'utilisation des DApps.
+La fourche Muir Glacier a entraîné un report de la [bombe de difficulté](/glossary/#difficulty-bomb). L'augmentation de la difficulté des blocs du mécanisme de consensus de [preuve de travail](/developers/docs/consensus-mechanisms/pow/) menaçait de dégrader l'utilisation d'Ethereum en allongeant les temps d'attente pour l'envoi de transactions et l'utilisation d'applications décentralisées.
 
 - [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Lire l'explication du site Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
-<ExpandableCard title="EIP Muir Glacier" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Les EIP de Muir Glacier" contentPreview="Official improvements included in this fork.">
 
-- [EIP-2384](https://eips.ethereum.org/EIPS/eip-2384) - _Retard de la bombe de difficulté pour 4 000 000 autres blocs, ou ~611 jours_
+<a href="https://eips.ethereum.org/EIPS/eip-2384">EIP 2384</a> - Retard de la bombe de difficulté pour 4 000 000 autres blocs, ou ~611 jours
 
 </ExpandableCard>
 
@@ -185,13 +257,13 @@ La fourche Muir Glacier a généré un retard de la [bombe de difficulté](/glos
 
 ### Istanbul {#istanbul}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>08-déc-2019 12:25:09 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/9069000">9 069 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 151,06 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20191216101254if*/https://ethereum.org/">ethereum.org sur waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>08-déc-2019 12:25:09 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/9069000">9 069 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 151,06 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20191216101254if*/https://ethereum.org/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#istanbul-summary}
 
 La fourche Istanbul a :
 
-- optimisé le coût de [gaz](/glossary/#gas) de certaines actions dans l'[EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine) ;
+- optimisé le coût de [gaz](/glossary/#gas) de certaines actions dans l'[EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine) ;
 - amélioré la résilience face aux attaques par déni de service ;
 - rendu plus performantes les solutions de [mise à l'échelle de la couche 2](/developers/docs/scaling/#layer-2-scaling) basées sur les SNARK et les STARK ;
 - permis à Ethereum et Zcash d'interagir ;
@@ -199,7 +271,7 @@ La fourche Istanbul a :
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
-<ExpandableCard title="EIP Istanbul" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Les EIP d'Istanbul" contentPreview="Official improvements included in this fork.">
 
 - [EIP-152](https://eips.ethereum.org/EIPS/eip-152) – _Permet à Ethereum de travailler avec des monnaies préservant la confidentialité, comme Zcash._
 - [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _Cryptographie moins onéreuse pour améliorer le coût du [gas](/glossary/#gas)._
@@ -214,24 +286,24 @@ La fourche Istanbul a :
 
 ### Constantinople {#constantinople}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>28-fév-2019 07:52:04 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/7280000">7 280 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 136,29 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20190415163751/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>28-fév-2019 07:52:04 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/7280000">7 280 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 136,29 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20190415163751/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#constantinople-summary}
 
 La fourche Constantinople a :
 
-- protégé la blockchain d'un blocage avant l'implémentation de la [preuve d'enjeu](#beacon-chain-genesis) ;
-- optimisé le coût de [gaz](/glossary/#gas) de certaines actions dans l'[EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine) ;
-- ajouté de la possibilité d'interagir avec des adresses non encore créées.
+- protégé la blockchain d'un blocage avant [l'implémentation de la preuve d'enjeu](#beacon-chain-genesis)  ;
+- optimisé le coût de [gaz](/glossary/#gas) certaines actions dans l'[EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine) ;
+- ajouté la possibilité d'interagir avec des adresses qui n'ont pas encore été créées.
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
-<ExpandableCard title="EIP Constantinople" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="Les EIP de Constantinople" contentPreview="Official improvements included in this fork.">
 
-- [EIP-145](https://eips.ethereum.org/EIPS/eip-145) - _Optimise le coût de certaines actions sur la chaîne._
-- [EIP-1014](https://eips.ethereum.org/EIPS/eip-1014) - _Vous permet d'interagir avec des adresses non encore créées._
-- [EIP-1052](https://eips.ethereum.org/EIPS/eip-1052) - _Optimise le coût de certaines actions sur la chaîne._
-- [EIP-1234](https://eips.ethereum.org/EIPS/eip-1234) - _Protège la blockchain d'un blocage avant la preuve d'enjeu._
+- [EIP-145](https://eips.ethereum.org/EIPS/eip-145) - Optimise le coût de certaines actions sur la chaîne.
+- [EIP-1014](https://eips.ethereum.org/EIPS/eip-1014) - Vous permet d'interagir avec des adresses non encore créées.
+- [EIP-1052](https://eips.ethereum.org/EIPS/eip-1052) - Optimise le coût de certaines actions sur la chaîne.
+- [EIP-1234](https://eips.ethereum.org/EIPS/eip-1234) - Protège la blockchain d'un blocage avant la preuve d'enjeu.
 
 </ExpandableCard>
 
@@ -241,20 +313,20 @@ La fourche Constantinople a :
 
 ### Byzantium {#byzantium}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>16-oct-2017 05:22:11 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/4370000">4 370 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 334,23 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20171017201143/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>16-oct-2017 05:22:11 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/4370000">4 370 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 334,23 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20171017201143/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#byzantium-summary}
 
 La fourche Byzantium a :
 
-- réduit les récompenses pour le [minage des blocs](/developers/docs/consensus-mechanisms/pow/mining/) de 5 à 3 ETH ;
+- réduit les récompenses pour le [minage ](/developers/docs/consensus-mechanisms/pow/mining/)des blocs de 5 à 3 ETH ;
 - retardé la [bombe de difficulté](/glossary/#difficulty-bomb) d'un an ;
 - ajouté la possibilité d'effectuer des appels sans changement d'état vers d'autres contrats ;
 - ajouté certaines méthodes de cryptographie pour permettre la [mise à l'échelle de la couche 2](/developers/docs/scaling/#layer-2-scaling).
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
-<ExpandableCard title="EIP Byzantium" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP de Byzantium" contentPreview="Official improvements included in this fork.">
 
 - [EIP-140](https://eips.ethereum.org/EIPS/eip-140) – _Ajoute le code d'opération « REVERT »._
 - [EIP-658](https://eips.ethereum.org/EIPS/eip-658) – _Champ de statut ajouté aux reçus de transaction pour indiquer le succès ou l'échec._
@@ -274,19 +346,19 @@ La fourche Byzantium a :
 
 ### Spurious Dragon {#spurious-dragon}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>22-nov-2016 04:15:44 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/2675000">2 675 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 9,84 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161127154654/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>22-nov-2016 04:15:44 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/2675000">2 675 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 9,84 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161127154654/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#spurious-dragon-summary}
 
-La fourche Spurious Dragon est la deuxième réponse aux attaques par déni de service (DoS) sur le réseau (septembre/octobre 2016). Elle comprend les opérations suivantes :
+La fourche Spurious Dragon a été la deuxième réponse aux attaques par déni de service (DoS) sur le réseau (septembre/octobre 2016). Elle comprend les opérations suivantes :
 
-- Réglage de la tarification du code d'opération pour éviter de futures attaques sur le réseau ;
+- Adaptation de la tarification du code d'opération pour éviter de futures attaques sur le réseau ;
 - « Dégonflage » de l'état de la blockchain ;
 - Ajout de la protection contre les attaques par rejeu.
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
-<ExpandableCard title="EIP Spurious Dragon" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP de Spurious Dragon" contentPreview="Official improvements included in this fork.">
 
 - [EIP-155](https://eips.ethereum.org/EIPS/eip-155) - _Empêche les transactions d'une chaîne Ethereum d'être rediffusées sur une chaîne alternative, par exemple une transaction du réseau de test rejouée sur la chaîne principale Ethereum._
 - [EIP-160](https://eips.ethereum.org/EIPS/eip-160) - _Règle les prix du code d'opération « EXP ». Rend plus difficile le ralentissement du réseau via des opérations de contrat coûteuses sur le plan du calcul._
@@ -299,17 +371,17 @@ La fourche Spurious Dragon est la deuxième réponse aux attaques par déni de s
 
 ### Tangerine Whistle {#tangerine-whistle}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>18-oct-2016 01:19:31 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/2463000">2 463 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 12,50 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161030043727/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>18-oct-2016 01:19:31 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/2463000">2 463 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 12,50 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161030043727/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#tangerine-whistle-summary}
 
-La fourche Tangerine Whistle a été la deuxième réponse aux attaques par déni de service (DoS) sur le réseau (septembre/octobre 2016). Elle comprend les opérations suivantes :
+La fourche Tangerine Whistle a été la première réponse aux attaques par déni de service (DoS) sur le réseau (septembre/octobre 2016). Elle comprend les opérations suivantes :
 
 - Résolution des problèmes urgents d'intégrité du réseau concernant les codes d'opération sous-évalués.
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
-<ExpandableCard title="EIP Tangerine Whistle" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP de Tangerine Whistle" contentPreview="Official improvements included in this fork.">
 
 - [EIP-150](https://eips.ethereum.org/EIPS/eip-150) - _Augmente le coût en carburant des codes d'opération qui peuvent être utilisés dans les attaques par spam._
 - [EIP-158](https://eips.ethereum.org/EIPS/eip-158) - _Réduit la taille de l'état en supprimant un grand nombre de comptes vides mis dans l'état à très bas prix en raison de failles dans les versions précédentes du protocole Ethereum._
@@ -320,11 +392,11 @@ La fourche Tangerine Whistle a été la deuxième réponse aux attaques par dén
 
 ### Fourche DAO {#dao-fork}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>20-juil-2016 01:20:40 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro du bloc : <a href="https://etherscan.io/block/1920000">1 920 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 12,54 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160803215306/https://ethereum.org/">ethereum.org sur waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>20-juil-2016 01:20:40 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro du bloc : <a href="https://etherscan.io/block/1920000">1 920 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 12,54 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160803215306/https://ethereum.org/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#dao-fork-summary}
 
-La fourche DAO est la réponse à [l'attaque DAO de 2016](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/) au cours de laquelle un contrat non sécurisé d'une [DAO](/glossary/#dao) a été vidé de plus de 3,6 millions d'ETH lors d'un piratage. La fourche a déplacé les fonds du contrat défectueux vers un [nouveau contrat](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) avec une seule fonction : withdraw (retrait). Toute personne ayant perdu des fonds pouvait retirer 1 ETH pour chaque tranche de 100 jetons DAO dans son portefeuille.
+La fourche DAO est la réponse à l'[attaque DAO de 2016](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/) au cours de laquelle le contrat non sécurisé d'une [DAO](/glossary/#dao) a été vidé de plus de 3,6 millions d'ETH lors d'un piratage. La fourche a déplacé les fonds du contrat défectueux vers un [nouveau contrat](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) avec une seule fonction : withdraw (retrait). Toute personne ayant perdu des fonds pouvait retirer 1 ETH pour chaque tranche de 100 jetons DAO dans son portefeuille.
 
 Ce plan d'action a été voté par la communauté Ethereum. Tout détenteur d'ETH a pu voter via une transaction sur [une plateforme de vote](http://v1.carbonvote.com/). Plus de 85 % des votes étaient favorables à la fourche.
 
@@ -336,15 +408,15 @@ Certains mineurs ont refusé la fourche car l'incident DAO ne résultait pas d'u
 
 ### Homestead {#homestead}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>14-mars-2016 06:49:53 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/1150000">1 150 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 12,50 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160313203843/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>14-mars-2016 06:49:53 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/1150000">1 150 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 12,50 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160313203843/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#homestead-summary}
 
-La fourche Homestead tournée vers l'avenir. Elle comprenait plusieurs changements de protocole et un changement de réseau qui a permis à Ethereum de faire d'autres mises à niveau du réseau.
+La fourche Homestead qui regardait vers l'avenir. Elle comprenait plusieurs changements de protocole et un changement de réseau ayant permis à Ethereum de faire d'autres mises à niveau du réseau.
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
-<ExpandableCard title="EIP Homestead" contentPreview="Official improvements included in this fork.">
+<ExpandableCard title="EIP d'Homestead" contentPreview="Official improvements included in this fork.">
 
 - [EIP-2](https://eips.ethereum.org/EIPS/eip-2) - _Apporte des modifications au processus de création de contrats._
 - [EIP-7](https://eips.ethereum.org/EIPS/eip-7) - _Ajoute le nouveau code d'opération "DELEGATECALL"._
@@ -358,7 +430,7 @@ La fourche Homestead tournée vers l'avenir. Elle comprenait plusieurs changemen
 
 ### Frontier Thawing {#frontier-thawing}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>7-sep-2015 09:33:09 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro du bloc : <a href="https://etherscan.io/block/200000">200 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 1,24 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150912193811/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>7-sep-2015 09:33:09 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro du bloc : <a href="https://etherscan.io/block/200000">200 000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Cours ETH : 1,24 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150912193811/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#frontier-thawing-summary}
 
@@ -371,11 +443,11 @@ La fourche Frontier Thawing a levé la [limite de gaz](/glossary/#gas) de 5 000
 
 ### Frontier {#frontier}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>30-juil-2015 03:26:13 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/0">0</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Cours ETH : N/A<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150802035735/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>30-juil-2015 03:26:13 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Numéro de bloc : <a href="https://etherscan.io/block/0">0</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Cours ETH : N/A<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150802035735/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
 
 #### Résumé {#frontier-summary}
 
-Frontier était une implémentation vivante, mais sans structure, du projet Ethereum. Elle fait suite à la phase de tests réussie Olympic. Elle était destinée aux utilisateurs techniques, en particulier aux développeurs. Les [blocs](/glossary/#block) avaient une limite de [gaz](/glossary/#gas) de 5 000. La période « Thawing » a permis aux mineurs de démarrer leurs opérations et aux premiers adoptants d’installer leurs clients sans avoir à « se précipiter ».
+Frontier était une implémentation réelle, mais sans structure, du projet Ethereum. Elle a fait suite à la phase de tests réussie Olympic. Elle était destinée aux utilisateurs techniques, en particulier aux développeurs. Les [blocs](/glossary/#block) avaient une limite de [gaz](/glossary/#gas) de 5 000. La période « Thawing » a permis aux mineurs de démarrer leurs opérations et aux premiers adoptants d’installer leurs clients sans avoir à « se précipiter ».
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 
@@ -385,9 +457,9 @@ Frontier était une implémentation vivante, mais sans structure, du projet Ethe
 
 ### Vente d'ETH {#ether-sale}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Du 02 au 22 septembre 2014<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140804235628/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Du 2 juillet au 22 septembre 2014<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140804235628/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
 
-L'ETH est officiellement en vente pour 42 jours. Il était possible d'en acheter avec des BTC.
+L'ETH a offciellement été en vente pendant 42 jours. Il était possible d'en acheter avec des BTC.
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2014/07/22/launching-the-ether-sale/)
 
@@ -395,9 +467,9 @@ L'ETH est officiellement en vente pour 42 jours. Il était possible d'en acheter
 
 ### Publication du Livre jaune {#yellowpaper}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 1er avril 2014<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140509173418/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 1er avril 2014<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140509173418/https://www.ethereum.org/">ethereum.org sur waybackmachine</a>
 
-Le Livre jaune, rédigé par le Dr. Gavin Wood, est une définition technique du protocole Ethereum.
+Le Livre jaune, rédigé par le Dr Gavin Wood, est une définition technique du protocole Ethereum.
 
 [Voir le Livre jaune](https://github.com/ethereum/yellowpaper)
 
@@ -407,9 +479,9 @@ Le Livre jaune, rédigé par le Dr. Gavin Wood, est une définition technique du
 
 ### Publication du Livre blanc {#whitepaper}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 27 novembre 2013<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140208030136/http://www.ethereum.org/">ethereum.org sur waybackmachine</a>
+<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 27 novembre 2013<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140208030136/http://www.ethereum.org/">ethereum.org sur waybackmachine</a>
 
-Document d'introduction publié en 2013 par Vitalik Buterin, le fondateur d'Ethereum, précédant le lancement du projet en 2015.
+Document d'introduction publié en 2013 par Vitalik Buterin, fondateur d'Ethereum, précédant le lancement du projet en 2015.
 
 <DocLink to="/whitepaper/">
   Livre blanc
