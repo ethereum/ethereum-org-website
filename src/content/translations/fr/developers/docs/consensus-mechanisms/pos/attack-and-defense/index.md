@@ -5,7 +5,7 @@ lang: fr
 ---
 
 Les voleurs et les saboteurs sont constamment à la recherche d'opportunités pour attaquer le logiciel client d'Ethereum. Cette page met en lumière les vecteurs d'attaques connus sur la couche de consensus d'Ethereum. Elle montre aussi comment ces attaques peuvent être défendues. Les information de cette page est une adaptation d'une version longue trouvable sur ce lien.
-.</p>
+.
 
 ## Les prérequis {#prerequisites}
 
