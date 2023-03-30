@@ -335,11 +335,11 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
         </Row>
         <Box mt={16}>
           <H2>
-            <Translation id="page-upgrades-vision" />
+            <Translation id="page-roadmap-vision" />
             <Emoji ml={`0.5rem`} text=":sparkles:" />
           </H2>
           <Text>
-            <Translation id="page-upgrades-vision-desc" />
+            <Translation id="page-roadmap-vision-desc" />
           </Text>
           <CardContainer>
             {paths.map((path, idx) => (
@@ -361,7 +361,7 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
       >
         <Box>
           <ButtonLink to="/upgrades/vision/">
-            <Translation id="page-upgrades-vision-btn" />
+            <Translation id="page-roadmap-vision-btn" />
           </ButtonLink>
         </Box>
       </StyledCallout>
@@ -556,7 +556,7 @@ const Eth2IndexPage = ({ data }: PageProps<Queries.UpgradesPageQuery>) => {
               <Text>
                 <Translation id="page-upgrades-answer-4" />{" "}
                 <Link to="/roadmap/vision/">
-                  <Translation id="page-upgrades-vision-btn" />
+                  <Translation id="page-roadmap-vision-btn" />
                 </Link>
               </Text>
             </ExpandableCard>

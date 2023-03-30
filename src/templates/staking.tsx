@@ -23,7 +23,7 @@ import PageMetadata from "../components/PageMetadata"
 import RandomAppList from "../components/RandomAppList"
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents, {
-  Item as ItemTableOfContents,
+  type Item as ItemTableOfContents,
 } from "../components/TableOfContents"
 import FeedbackCard from "../components/FeedbackCard"
 import SectionNav from "../components/SectionNav"
@@ -383,7 +383,7 @@ const StakingPage = ({
     throw new Error("Required `title` property missing for staking template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
-  const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
+  const tocItems = mdx.tableOfContents?.items as ItemTableOfContents[]
   const { summaryPoints } = mdx.frontmatter
 
   const dropdownLinks: ButtonDropdownList = {
