@@ -2560,7 +2560,7 @@ const walletData: WalletData[] = [
     swaps: true,
     multichain: true,
     layer_2: true,
-    gas_fee_customization: false,
+    gas_fee_customization: true,
     ens_support: true,
     erc_20_support: true,
     eip_1559_support: true,
