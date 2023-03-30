@@ -24,13 +24,13 @@ We sometimes need a help testing our raw ideas. This is a great way how to contr
 
 Provide feedback on our website by:
 
-1. Visiting [ethereum.org](http://ethereum.org/) and reading through pages.
+1. Visiting ethereum.org and reading through pages.
 2. Clicking on the feedback widget at the bottom right corner and answering design and content-related questions.
 3. Focus on the free format questions.
 
 ## <Emoji text=":three:" size={1} /> Find design related issues on the website and report them {#report-design-issues}
 
-[Ethereum.org](http://Ethereum.org) is a fast growing website with many features and content. Some of the UI can easily become obsolete or could be improved. If you encounter any such instance, please report it so that it gets our attention. 
+Ethereum.org is a fast growing website with many features and content. Some of the UI can easily become obsolete or could be improved. If you encounter any such instance, please report it so that it gets our attention. 
 
 1. Go through the website and pay attention to its design. 
 2. Take screenshots and notes If you see any visual or UX issues.
@@ -47,7 +47,7 @@ If you feel comfortable taking on design challenges, you can visit our GitHub is
 
 ## <Emoji text=":five:" size={1} /> Build Design System together {#Contribute-to-design-system}
 
-Our design system makes designing [ethereum.org](http://ethereum.org) fun and easy. If you are an experienced designer, you can help us prepare many components for the website.
+Our design system makes designing ethereum.org fun and easy. If you are an experienced designer, you can help us prepare many components for the website.
 
 1. Select an issue to work on from [design system board](https://github.com/ethereum/ethereum-org-website/labels/design%20system) on GitHub or create a new one.
 2. Request the selected issue to be assigned to you.
@@ -60,7 +60,7 @@ Our design system makes designing [ethereum.org](http://ethereum.org) fun and ea
 
 The Ethereum developer community is strong, but the design community is falling slightly behind. If you are a designer with web3 knowledge, please consider sharing your learnings with the larger community so that we can all grow and improve together!
 
-1. Ideate on design topics that should be covered on [ethereum.org](http://ethereum.org)  and would be beneficial for the designers in the space.
+1. Ideate on design topics that should be covered on ethereum.org  and would be beneficial for the designers in the space.
 2. Go to our GitHub repository and [raise an issue](https://github.com/ethereum/ethereum-org-website/issues/new) proposing a topic (do not write the content yet).
 3. Wait for the design team to approve.
 4. Once approved, write the content.
