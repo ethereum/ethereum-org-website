@@ -8,7 +8,7 @@ const commonBtnStateStyles: SystemStyleObject = {
   outlineOffset: "-2px",
 }
 
-export const getSearchButtonStyles = () => ({
+export const getSearchButtonStyles = (): ButtonProps => ({
   alignItems: "center",
   borderRadius: "base",
   border: "1px",
@@ -67,7 +67,7 @@ export const getSearchButtonStyles = () => ({
   },
 })
 
-export const getSearchModalStyles = () => ({
+export const getSearchModalStyles = (): SystemStyleObject => ({
   "--docsearch-modal-background": "var(--eth-colors-background)",
   "--docsearch-searchbox-height": "fit-content",
   "--docsearch-highlight-color": "var(--eth-colors-primaryHover)",
