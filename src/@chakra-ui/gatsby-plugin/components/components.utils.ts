@@ -1,4 +1,4 @@
-import { SystemStyleObject, theme } from "@chakra-ui/react"
+import { cssVar, SystemStyleObject, theme } from "@chakra-ui/react"
 import { merge } from "lodash"
 
 const {
@@ -79,10 +79,12 @@ export function defineMergeStyles(
 export const _notDisabled = "&:not([data-disabled], [disabled])"
 
 const INPUT_TRIGGER_DISABLE_COLOR = "--input-trigger-disable-color"
+const $inputTriggerDisableColor = cssVar("input-trigger-disable-color")
 
 export const commonInputTriggerStyles = {
   commonControlProps: {
     border: "1px",
+    borderColor: "bodyLight",
     outline: "2px solid",
     outlineColor: "transparent",
     _checked: {
@@ -97,9 +99,13 @@ export const commonInputTriggerStyles = {
       boxShadow: "none",
     },
     _disabled: {
-      bg: `var(${INPUT_TRIGGER_DISABLE_COLOR})`,
-      borderColor: `var(${INPUT_TRIGGER_DISABLE_COLOR}) !important`,
+      bg: $inputTriggerDisableColor.reference,
+      borderColor: $inputTriggerDisableColor.reference,
       opacity: 1,
+      _checked: {
+        bg: $inputTriggerDisableColor.reference,
+        borderColor: $inputTriggerDisableColor.reference,
+      },
     },
     [_notDisabled]: {
       // Hovering over the label triggers the style for the control
@@ -110,14 +116,14 @@ export const commonInputTriggerStyles = {
     },
   },
   commonContainerProps: {
-    [INPUT_TRIGGER_DISABLE_COLOR]: "colors.disabled",
+    [$inputTriggerDisableColor.variable]: "colors.disabled",
     _disabled: {
       cursor: "not-allowed",
     },
   },
   commonLabelProps: {
     _disabled: {
-      color: `var(${INPUT_TRIGGER_DISABLE_COLOR})`,
+      color: $inputTriggerDisableColor.reference,
       opacity: 1,
     },
   },
