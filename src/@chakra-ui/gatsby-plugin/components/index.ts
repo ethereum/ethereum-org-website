@@ -8,6 +8,7 @@ import { Tabs } from "./Tabs"
 import { Radio } from "./Radio"
 import { Switch } from "./Switch"
 import { Input } from "./Input"
+import { Dropdown } from "./Dropdown"
 import {
   accordionDefaultTheme,
   avatarDefaultTheme,
@@ -36,6 +37,7 @@ export default {
   Code: codeDefaultTheme,
   Divider: dividerDefaultTheme,
   Drawer: drawerDefaultTheme,
+  Dropdown,
   Form: formDefaultTheme,
   FormLabel: formLabelDefaultTheme,
   Heading: headingDefaultTheme,
