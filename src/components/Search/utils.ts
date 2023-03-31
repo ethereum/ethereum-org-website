@@ -8,9 +8,7 @@ const commonBtnStateStyles: SystemStyleObject = {
   outlineOffset: "-2px",
 }
 
-export const getSearchButtonStyles = ({
-  searchBoxShadowColorToken,
-}): ButtonProps => ({
+export const getSearchButtonStyles = () => ({
   alignItems: "center",
   borderRadius: "base",
   border: "1px",
@@ -30,8 +28,7 @@ export const getSearchButtonStyles = ({
   _focus: commonBtnStateStyles,
   _active: commonBtnStateStyles,
   sx: {
-    "--docsearch-searchbox-shadow": `inset 0 0 0 1px
-        ${searchBoxShadowColorToken}`,
+    "--docsearch-searchbox-shadow": `inset 0 0 0 1px var(--eth-colors-primaryHighContrast)`,
     ".DocSearch-Button-Container svg": {
       boxSize: 3.5,
     },
@@ -70,10 +67,7 @@ export const getSearchButtonStyles = ({
   },
 })
 
-export const getSearchModalStyles = ({
-  searchBoxShadowColorToken,
-  hitSelectedShadowColorToken,
-}): SystemStyleObject => ({
+export const getSearchModalStyles = () => ({
   "--docsearch-modal-background": "var(--eth-colors-background)",
   "--docsearch-searchbox-height": "fit-content",
   "--docsearch-highlight-color": "var(--eth-colors-primaryHover)",
@@ -84,7 +78,7 @@ export const getSearchModalStyles = ({
     p: { base: 4, md: 8 },
     pb: 4,
     form: {
-      "--docsearch-searchbox-shadow": `inset 0 0 0 1px ${searchBoxShadowColorToken}`,
+      "--docsearch-searchbox-shadow": `inset 0 0 0 1px var(--eth-colors-primaryHighContrast)`,
       bg: "neutral",
       py: 3,
     },
@@ -141,7 +135,7 @@ export const getSearchModalStyles = ({
     '&[aria-selected="true"] a': {
       "--docsearch-hit-active-color": "colors.background",
       bg: "primaryHover",
-      boxShadow: `4px 4px 0 0 ${hitSelectedShadowColorToken}`,
+      boxShadow: `4px 4px 0 0 var(--eth-colors-primaryLight)`,
       borderColor: "transparent",
     },
   },

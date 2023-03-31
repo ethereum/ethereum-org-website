@@ -17,21 +17,7 @@ const DocSearchModalWithChakra = chakra(
 )
 
 const SearchModal = (props: ModalPropsNoScroll) => {
-  const [searchBoxShadowColorToken, hitSelectedShadowColorToken] = useToken(
-    "colors",
-    ["primaryHighContrast", "primaryLight"]
-  )
-
-  useBreakpoint()
-  return (
-    <DocSearchModalWithChakra
-      {...props}
-      sx={getSearchModalStyles({
-        searchBoxShadowColorToken,
-        hitSelectedShadowColorToken,
-      })}
-    />
-  )
+  return <DocSearchModalWithChakra {...props} sx={getSearchModalStyles()} />
 }
 
 export default SearchModal
