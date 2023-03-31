@@ -52,7 +52,7 @@
     "toPath": "/en/roadmap/"
   },
   {
-    "fromPath": /upgrades/sharding/",
+    "fromPath": "/upgrades/sharding",
     "toPath": "/roadmap/danksharding/"
   },
   {
