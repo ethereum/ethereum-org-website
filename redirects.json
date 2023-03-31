@@ -52,6 +52,10 @@
     "toPath": "/en/roadmap/"
   },
   {
+    "fromPath": /upgrades/sharding/",
+    "toPath": "/roadmap/danksharding/"
+  },
+  {
     "fromPath": "/*/upgrades/merge",
     "toPath": "/roadmap/merge/"
   },
