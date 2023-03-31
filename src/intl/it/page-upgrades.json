@@ -9,5 +9,13 @@
   "page-upgrades-upgrades-guide": "Guida agli aggiornamenti di Ethereum",
   "page-upgrades-upgrades-docking": "La fusione",
   "page-upgrades-shard-title": "Sharding",
-  "page-upgrades-upgrades-beacon-chain": "La Cadena de Baliza"
+  "page-upgrades-upgrades-beacon-chain": "La Cadena de Baliza",
+  "consensus-beaconcha-in-desc": "Piattaforma di ricerca Beacon Chain open source",
+  "consensus-beaconscan-desc": "Piattaforma di ricerca Beacon Chain - Etherscan per il livello di consenso",
+  "consensus-become-staker": "Diventa uno staker",
+  "consensus-become-staker-desc": "Ora è disponibile lo staking! Se vuoi fare staking con i tuoi ETH per contribuire a proteggere la rete, assicurati di essere consapevole dei rischi.",
+  "consensus-explore": "Esplora i dati",
+  "consensus-run-beacon-chain": "Esegui un client di consenso",
+  "consensus-run-beacon-chain-desc": "Ethereum ha bisogno del maggior numero possibile di client in esecuzione. Contribuisci con questo bene pubblico di Ethereum!",
+  "read-more": "Ulteriori contenuti"
 }
