@@ -7,6 +7,7 @@ import { Checkbox } from "./Checkbox"
 import { Tabs } from "./Tabs"
 import { Radio } from "./Radio"
 import { Switch } from "./Switch"
+import { Input } from "./Input"
 import {
   accordionDefaultTheme,
   avatarDefaultTheme,
@@ -38,6 +39,7 @@ export default {
   Form: formDefaultTheme,
   FormLabel: formLabelDefaultTheme,
   Heading: headingDefaultTheme,
+  Input,
   Link,
   Menu: menuDefaultTheme,
   Modal,
