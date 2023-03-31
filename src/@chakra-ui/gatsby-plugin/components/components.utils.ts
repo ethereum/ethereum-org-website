@@ -20,6 +20,7 @@ const {
   List: listDefaultTheme,
   Menu: menuDefaultTheme,
   Modal: modalDefaultTheme,
+  Radio: radioDefaultTheme,
   Select: selectDefaultTheme,
   Spinner: spinnerDefaultTheme,
   Switch: switchDefaultTheme,
@@ -47,6 +48,7 @@ export {
   listDefaultTheme,
   menuDefaultTheme,
   modalDefaultTheme,
+  radioDefaultTheme,
   selectDefaultTheme,
   spinnerDefaultTheme,
   switchDefaultTheme,
@@ -96,7 +98,7 @@ export const commonInputTriggerStyles = {
     },
     _disabled: {
       bg: `var(${INPUT_TRIGGER_DISABLE_COLOR})`,
-      borderColor: `var(${INPUT_TRIGGER_DISABLE_COLOR})`,
+      borderColor: `var(${INPUT_TRIGGER_DISABLE_COLOR}) !important`,
       opacity: 1,
     },
     [_notDisabled]: {
