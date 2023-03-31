@@ -1,4 +1,5 @@
 import fs from "fs"
+import os from "os"
 import path from "path"
 import walkdir from "walkdir"
 import _ from "lodash"
@@ -43,7 +44,7 @@ async function reorgIntl() {
       if (!_.isEmpty(translations)) {
         fs.writeFileSync(
           path.join(sourcePath, language, ns),
-          JSON.stringify(translations, null, 2)
+          JSON.stringify(translations, null, 2) + os.EOL
         )
       }
     })
