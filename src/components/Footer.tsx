@@ -368,7 +368,7 @@ const Footer: React.FC<IProps> = () => {
                       },
                     }}
                   >
-                    <Translation id={link.text} />
+                    {link.text}
                   </Link>
                 </ListItem>
               ))}
