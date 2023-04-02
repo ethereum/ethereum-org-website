@@ -43,7 +43,7 @@ import ComponentA from "."
 type ComponentAType = typeof ComponentA
 
 const meta: Meta<ComponentAType> {
-  title: "ComponentA", // Generates the nav structure in the Storybook server
+  title: "ComponentA",
   component: ComponentA
 }
 
@@ -54,6 +54,8 @@ export const Basic: Story = {
   render: () => <ComponentA />
 }
 ```
+
+**Note**: with the `title` option, we write this based on the groupings set by the Design System. Groupings are declared with forward slashes. (i.e. `Atoms / Form / Input`). See the Storybook docs for details on [Naming conventions](https://storybook.js.org/docs/7.0/react/writing-stories/naming-components-and-hierarchy)
 
 We will maintain this structure for every story file, regardless of simplicity.
 
@@ -103,6 +105,8 @@ export const Variants = () => (
   </VStack>
 )
 ```
+
+If only one story is provided for a component, the name of the exported object should match the name in the `title` meta option. (If the title is `Atoms / Form / Button` then the object should be named `Button`) This will hoist the display name up to the parent level in the Storybook dashboard's sidebar.
 
 As you go and make adjustments to the component itself or it's variant styles, Storybook will hot reload and those changes will appear in the stories that emphasize them.
 
