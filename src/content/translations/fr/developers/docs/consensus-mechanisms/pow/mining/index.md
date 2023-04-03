@@ -1,12 +1,9 @@
 ---
 title: Minage
-description: Une explication de la façon dont le minage fonctionnait sur Ethereum.
+description: Une explication du fonctionnement du minage sur Ethereum et de la façon dont il aide à garder Ethereum sécurisé et décentralisé.
 lang: fr
+incomplete: true
 ---
-
-<InfoBanner emoji=":wave:">
-La preuve de travail n'est plus le mécanisme de consensus d'Ethereum, ce qui implique que le minage a été désactivé. À la place, Ethereum est sécurisé par les validateurs qui misent de l'ETH. Vous pouvez commencer à miser votre ETH aujourd'hui. En savoir plus sur <a href='/upgrades/merge/'>La Fusion</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>la preuve d'enjeu</a> et <a href='/staking/'>la mise en jeu</a>. Cette page n'a qu'un intérêt historique.
-</InfoBanner>
 
 ## Prérequis {#prerequisites}
 
@@ -14,34 +11,34 @@ Pour mieux comprendre cette page, nous vous recommandons de commencer par lire c
 
 ## Qu'est-ce que le minage Ethereum ? {#what-is-ethereum-mining}
 
-Le minage est le processus de création d'un bloc de transactions à ajouter à la blockchain Ethereum dans l'architecture de preuve de travail, désormais obsolète, pour Ethereum.
+Le minage est le processus de création d'un bloc de transactions à ajouter à la blockchain Ethereum.
 
-Le terme « minage » trouve son origine dans la comparaison avec l'or des crypto-monnaies. L'or et les métaux précieux sont rares, tout comme les jetons numériques, et le seul moyen d'en augmenter le volume dans le cadre du système de preuve de travail est le minage. Dans le cadre de la preuve de travail Ethereum, le seul mode d’émission était le minage. À la différence du minage historique de l'or ou des métaux précieux, le minage avec Ethereum permet également de sécuriser le réseau en créant, vérifiant, publiant et propageant de nouveaux blocs dans la blockchain.
+Ethereum, comme Bitcoin, utilise actuellement un mécanisme de consensus appelé [preuve de travail (PoW)](/developers/docs/consensus-mechanisms/pow/). Le minage est l’essence même de la preuve de travail. Les mineurs d'Ethereum (les ordinateurs qui exécutent des logiciels) utilisent leur temps et leur puissance de calcul pour traiter les transactions et produire des blocs.
 
-Miner de l'ether = Sécuriser le réseau
-
-Le minage est la colonne vertébrale de toute blockchain utilisant la preuve de travail. Les mineurs d'Ethereum - les ordinateurs qui exécutent des logiciels - utilisaient leur puissance de temps et de calcul pour traiter les transactions et produire des blocs avant la transition vers la preuve d'enjeu.
+<InfoBanner emoji=":wave:">
+   La Preuve d'enjeu remplacera le minage et la Preuve de travail au cours de l'année prochaine. Vous pouvez commencer à miser votre ETH aujourd'hui. <a href="/staking/">En savoir plus sur les mises</a>    
+</InfoBanner>
 
 ## Pourquoi existe-t-il des mineurs ? {#why-do-miners-exist}
 
-Dans les systèmes décentralisés comme Ethereum, nous devons nous assurer que tout le monde s'accorde sur l'ordre des transactions. Les mineurs y contribuent en résolvant des casse-têtes informatiques complexes pour produire des blocs, sécurisant également ainsi le réseau contre les attaques.
+Dans les systèmes décentralisés comme Ethereum, nous devons nous assurer que tout le monde s'accorde sur l'ordre des transactions. Les mineurs aident à cela en résolvant des casse-têtes complexes sur le plan informatique afin de produire des blocs, qui constituent un moyen de sécuriser le réseau des attaques.
 
 [En savoir plus sur la preuve de travail](/developers/docs/consensus-mechanisms/pow/)
 
-Auparavant, n'importe qui pouvait miner sur le réseau Ethereum à l'aide de son ordinateur. Cependant, tout le monde ne pouvait pas miner de l'éther (ETH) de manière rentable. Dans la plupart des cas, les mineurs devaient acheter du matériel informatique et des logiciels dédiés et avoir accès à des sources d'énergie peu coûteuses. Il était peu probable que l'ordinateur moyen gagne suffisamment de récompenses de blocs pour couvrir les coûts associés au minage.
+## Qui peut devenir mineur sur Ethereum ? {#who-can-become-a-miner}
+
+Techniquement, n'importe qui peut exploiter le réseau Ethereum à l'aide de son ordinateur. Cependant, tout le monde ne peut pas exploiter l'éther (ETH) de manière rentable. Dans la plupart des cas, les mineurs doivent acheter du matériel informatique dédié pour exploiter de manière rentable. S'il est vrai que n'importe qui peut exécuter le logiciel de minage sur son ordinateur, il est peu probable que l'ordinateur moyen gagne suffisamment de récompenses globales pour couvrir les coûts associés au minage.
 
 ### Coût du minage {#cost-of-mining}
 
 - Coûts potentiels du matériel nécessaire pour construire et entretenir une plate-forme minière
 - Coût électrique de l'alimentation de la plate-forme minière
-- Si vous miniez au sein d'un pool, ces derniers facturaient généralement des frais fixes en % de chaque bloc généré par le pool
+- Si vous minez dans un pool, les pools de minage facturent généralement des frais fixes en % de chaque bloc généré par le pool
 - Coût potentiel de l'équipement pour soutenir la plate-forme minière (ventilation, surveillance de l'énergie, câblage électrique, etc.)
 
 Pour explorer davantage la rentabilité du minage, utilisez un calculateur de minage, tel que celui fourni par [Etherscan](https://etherscan.io/ether-mining-calculator).
 
-## Comment les transactions Ethereum étaient-elles minées ? {#how-ethereum-transactions-were-mined}
-
-Ce qui suit donne un aperçu de la façon dont les transactions ont été exécutés dans Ethereum PoW. Une description analogue de ce processus pour Ethereum PoS peut être trouvée [ici](/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos).
+## Comment les transactions Ethereum sont-elles minées ? {#how-ethereum-transactions-are-mined}
 
 1. Un utilisateur rédige et signe une demande de [transaction](/developers/docs/transactions/) avec la clé privée d'un [compte](/developers/docs/accounts/).
 2. L'utilisateur diffuse la demande de transaction sur l'ensemble du réseau Ethereum à partir de certains [nœuds](/developers/docs/nodes-and-clients/).
@@ -54,7 +51,7 @@ Ce qui suit donne un aperçu de la façon dont les transactions ont été exécu
 7. Chaque nœud supprime toutes les transactions du nouveau bloc de son mempool local de demandes de transaction non satisfaites.
 8. Les nouveaux nœuds qui rejoignent le réseau téléchargent tous les blocs en séquence, y compris le bloc contenant la transaction qui nous intéresse. Ils initialisent une copie locale de l'EVM (qui débute en tant qu'EVM vide), puis commencent l'exécution de chaque transaction dans chaque bloc en plus de leur copie locale de l'EVM, en vérifiant la somme de contrôle de l'état de chaque bloc dans le processus.
 
-Chaque transaction est minée (incluse dans un nouveau bloc et propagée pour la première fois) une fois, mais exécutée et vérifiée par chaque participant au processus d'avancement vers l'état conforme de l'EVM. Cette approche met en avant l'une des devises de la blockchain : **Ne faites pas confiance, vérifiez**.
+Chaque transaction est minée (incluse dans un nouveau bloc et propagée pour la première fois) une fois, mais exécutée et vérifiée par chaque participant du processus d'avancement vers l'état conforme de l'EVM. Ceci met en avant l'une des devises de la blockchain : **Ne faites pas confiance, vérifiez**.
 
 ## Démonstration visuelle {#a-visual-demo}
 
@@ -62,15 +59,15 @@ Regardez Austin vous guider à travers le minage et la blockchain.
 
 <YouTube id="zcX7OJ-L8XQ" />
 
-## L'algorithme de minage {#mining-algorithm}
-
-Le réseau principal Ethereum n'a jamais utilisé qu'un algorithme de minage - ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash). Ethhash était le successeur d'un algorithme R&D original connu sous le nom de ["Dagger-Hashimoto"](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto).
-
-[Plus de détails sur les algorithmes de minage](/developers/docs/consensus-mechanisms/pow/mining-algorithms/).
-
 ## Complément d'information {#further-reading}
 
 - [Que signifie miner Ethereum ?](https://docs.ethhub.io/using-ethereum/mining/) _Ethhub_
+
+## Outils connexes {#related-tools}
+
+- [Meilleurs mineurs d'Ethereum](https://etherscan.io/stat/miner?range=7&blocktype=blocks)
+- [Calculateur de minage Etherscan](https://etherscan.io/ether-mining-calculator)
+- [Calculateur de minage Minerstat](https://minerstat.com/coin/ETH)
 
 ## Sujets connexes {#related-topics}
 
