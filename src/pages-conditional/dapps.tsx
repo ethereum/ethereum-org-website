@@ -137,13 +137,6 @@ const StyledCalloutBanner = styled(CalloutBanner)`
   }
 `
 
-const MobileOptionContainer = styled(OptionContainer)`
-  text-align: center;
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    display: none;
-  }
-`
-
 const Column = styled.div`
   flex: 1 1 75%;
   margin-bottom: 1.5rem;
@@ -1345,25 +1338,6 @@ const DappsPage = ({
             </About>
           )}
         </Content>
-        <MobileOptionContainer>
-          <h3>
-            <Translation id="page-dapps-mobile-options-header" />
-          </h3>
-          {categoryKeys.map((key, idx) => {
-            const categoryType = key as CategoryType
-            const category = categories[categoryType]
-            return (
-              <Option
-                key={idx}
-                isActive={selectedCategory === categoryType}
-                onClick={() => handleCategorySelect(categoryType, true)}
-              >
-                <Emoji mr={`1rem`} text={category.emoji} />
-                <OptionText>{category.title}</OptionText>
-              </Option>
-            )
-          })}
-        </MobileOptionContainer>
       </FullWidthContainer>
       <Content>
         <ImageContainer id="what-are-dapps">
