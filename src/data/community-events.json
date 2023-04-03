@@ -90,15 +90,6 @@
     "endDate": "2023-06-4"
   },
   {
-    "title": "ETHGlobal Toronto",
-    "to": "https://ethglobal.com/events/toronto",
-    "sponsor": null,
-    "location": "Toronto, Canada",
-    "description": "Join us and explore the frontier of web3 in one of the most vibrant cities in Canada.",
-    "startDate": "2023-06-23",
-    "endDate": "2023-06-25"
-  },
-  {
     "title": "ETHGlobal Paris",
     "to": "https://ethglobal.com/events/paris2023",
     "sponsor": null,
@@ -205,5 +196,23 @@
     "description": "Ethereum Developer Conference Run by Community Volunteers",
     "startDate": "2023-09-01",
     "endDate": "2023-09-03"
+  },
+  {
+    "title": "ETHGlobal Waterloo",
+    "to": "https://ethglobal.com/events/waterloo2023",
+    "sponsor": null,
+    "location": "Waterloo, Canada",
+    "description": "ETHGlobal is heading back to Waterloo, where it all began. This humble city on the outskirts of Toronto is home to both Ethereum and ETHGlobal.",
+    "startDate": "2023-06-23",
+    "endDate": "2023-06-25"
+  },
+  {
+    "title": "ETHToronto",
+    "to": "https://www.ethtoronto.ca/",
+    "sponsor": null,
+    "location": "Toronto, Canada",
+    "description": "2nd annual ETHToronto, in the birthplace of Ethereum. Official Hackathon of Blockchain Futurist Conference.",
+    "startDate": "2023-08-13",
+    "endDate": "2023-08-16"
   }
 ]
