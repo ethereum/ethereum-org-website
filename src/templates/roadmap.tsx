@@ -268,6 +268,7 @@ const HeroContainer = styled.div`
     max-height: 100%;
     padding-left: 0;
     padding-right: 0;
+    margin-bottom: 2em;
   }
 `
 
@@ -409,7 +410,7 @@ const RoadmapPage = ({
               <Title>{mdx.frontmatter.title}</Title>
               <Text>{mdx.frontmatter.description}</Text>
               {mdx?.frontmatter?.buttons && (
-                <Wrap spacing={2}>
+                <Wrap spacing={2} marginBottom={4}>
                   {mdx.frontmatter.buttons.map((button, idx) => {
                     if (button?.to) {
                       return (
@@ -479,7 +480,18 @@ const RoadmapPage = ({
 }
 
 export const roadmapPageQuery = graphql`
-  query RoadmapPage($relativePath: String) {
+  query RoadmapPage($languagesToFetch: [String!]!, $relativePath: String) {
+    locales: allLocale(
+      filter: { language: { in: $languagesToFetch }, ns: { in: ["common"] } }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     pageData: mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug

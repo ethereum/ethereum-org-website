@@ -66,7 +66,7 @@ Typically ERC-20 liquidity tokens are issued to stakers that represents the valu
 <ExpandableCard title="When can I withdraw my stake?">
 Currently, withdrawing funds from an Ethereum validator is not possible, which limits the ability to actually <i>redeem</i> your liquidity token for the ETH rewards locked in the consensus layer.
 
-The Shanghai network upgrade will introduce withdrawal functionality which is planned for Q1/Q2 2023. All staked ETH will remain locked until then.
+The Shanghai network upgrade will introduce withdrawal functionality which is scheduled for April 12, 2023. All staked ETH will remain locked until then.
 
 After this upgrade, the validator accounts that back staking pools will have the ability to exit and withdraw ETH to their designated withdrawal address. This will enable the ability to redeem your portion of stake for the underlying ETH. Check with your provider to see how they support this functionality.
 

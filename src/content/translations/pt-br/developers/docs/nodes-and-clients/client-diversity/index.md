@@ -65,8 +65,6 @@ Endereçar a diversidade do cliente requer mais do que usuários individuais par
 
 [Erigon](https://github.com/ledgerwatch/erigon)
 
-[Akula](https://akula.app)
-
 [Go-Ethereum](https://geth.ethereum.org/)
 
 ### Clientes de consenso {#consensus-clients}

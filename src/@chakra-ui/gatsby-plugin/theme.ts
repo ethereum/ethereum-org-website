@@ -1,5 +1,5 @@
 import {
-  extendTheme,
+  extendBaseTheme,
   type ThemeConfig,
   type ThemeOverride,
 } from "@chakra-ui/react"
@@ -29,6 +29,7 @@ const config: ThemeConfig = {
  */
 const theme: ThemeOverride = {
   config,
+  // TODO: fonts object to be removed (it'll now be in the 'foundation' directory)
   fonts: {
     // old fonts from the previous theme
     // TODO: update the fonts when we transition to the Design System
@@ -44,4 +45,4 @@ const theme: ThemeOverride = {
   components,
 }
 
-export default extendTheme(theme)
+export default extendBaseTheme(theme)

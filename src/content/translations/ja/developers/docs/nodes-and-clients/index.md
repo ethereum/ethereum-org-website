@@ -140,7 +140,6 @@ sidebarDepth: 2
 | [Nethermind](http://nethermind.io/)             | C#、.NET | Linux、Windows、macOS    | メインネット、Sepolia、Görli、Ropsten、Rinkeby など | スナップ(配信なし) 、高速、フル | アーカイブ、プルーン |
 | [Besu](https://besu.hyperledger.org/en/stable/) | Java     | Linux、Windows、macOS    | メインネット、Sepolia、Görli、Ropsten、Rinkeby など | 高速、フル                      | アーカイブ、プルーン |
 | [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux、Windows、macOS    | メインネット、Sepolia、Görli、Rinkeby、Ropsten など | フル                            | アーカイブ、プルーン |
-| [Akula](https://akula.app)                      | Rust     | Linux                    | メインネット、Sepolia、Görli、Rinkeby、Ropsten      | フル                            | アーカイブ、プルーン |
 
 **OpenEthereum は[非推奨](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd)となり、メンテナンスされていません。**注意して使用し、できれば他のクライアントに切り替えてください。
 
@@ -156,7 +155,7 @@ sidebarDepth: 2
 
 ### Erigon {#erigon}
 
-Erigon(旧称: Turbo-Geth)は、Go Ethereum のフォークとして始まり、速度とディスク容量の効率に特化しています。 Erigon はイーサリアムを完全に再構築された実装で、現在は Go 実装ですが、[Akula](https://medium.com/@vorot93/meet-akula-the-fastest-ethereum-implementation-ever-built-58eaca244c39)など他の言語でも開発中です。 Erigon は、より高速、よりモジュラー型、より最適化されたイーサリアムの実装を提供することを目的としています。 2TB 程度のディスク容量で、3 日以内にフルアーカイブノードの同期ができます。
+Erigon(旧称: Turbo-Geth)は、Go Ethereum のフォークとして始まり、速度とディスク容量の効率に特化しています。 Erigon はイーサリアムを完全に再構築された実装で、現在は Go 実装ですが など他の言語でも開発中です。 Erigon は、より高速、よりモジュラー型、より最適化されたイーサリアムの実装を提供することを目的としています。 2TB 程度のディスク容量で、3 日以内にフルアーカイブノードの同期ができます。
 
 ### Go Ethereum (Geth) {#geth}
 

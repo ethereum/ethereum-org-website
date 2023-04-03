@@ -65,8 +65,6 @@ Per "indirizzare" la diversità dei client non basta che i singoli utenti scelga
 
 [Erigon](https://github.com/ledgerwatch/erigon)
 
-[Akula](https://akula.app)
-
 [Go-Ethereum](https://geth.ethereum.org/)
 
 ### Client di consenso {#consensus-clients}

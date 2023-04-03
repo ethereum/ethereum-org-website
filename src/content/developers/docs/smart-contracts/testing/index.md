@@ -171,6 +171,11 @@ Formal verification is considered important for smart contracts because it helps
 
 - [GitHub](https://github.com/crytic/etheno)
 
+**Woke development and testing framework** - _Test and deployment scripts in Python with type hints, fuzzer, debugging support, code coverage, cross-chain testing._
+
+- [Documentation](https://ackeeblockchain.com/woke/docs/latest/testing-framework/overview/)
+- [Github](https://github.com/Ackee-Blockchain/woke)
+
 ### Static analysis tools {#static-analysis-tools}
 
 **Mythril** - _EVM bytecode assessment tool for detecting contract vulnerabilities using taint analysis, concolic analysis, and control flow checking._
@@ -227,6 +232,10 @@ Formal verification is considered important for smart contracts because it helps
 
 - [Website](https://www.openzeppelin.com/security-audits)
 
+**Nethermind** - _Solidity and Cairo auditing services, ensuring the integrity of smart contracts and the safety of users across Ethereum and Starknet._
+
+- [Website](https://nethermind.io/smart-contracts-audits)
+
 ### Bug bounty platforms {#bug-bounty-platforms}
 
 **Immunefi** - _Bug bounty platform for smart contracts and DeFi projects, where security researchers review code, disclose vulnerabilities, get paid, and make crypto safer._
@@ -242,7 +251,7 @@ Formal verification is considered important for smart contracts because it helps
 - [Solidity and Truffle Continuous Integration Setup](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/) _– How to setup Travis or Circle CI for Truffle testing along with useful plugins._
 - [Testing products overview](/developers/tutorials/guide-to-smart-contract-security-tools/) _– An overview and comparison of different testing products._
 - [How to use Echidna to test smart contracts](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [How to use Manticore to find smart contract bugs](/developers/tutorials/how-to-use-manticor-to-find-smart-contract-bugs/)
+- [How to use Manticore to find smart contract bugs](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [How to use Slither to find smart contract bugs](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [How to mock Solidity contracts for testing](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [How to migrate from Truffle Tests to OpenZeppelin Test Environment](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)

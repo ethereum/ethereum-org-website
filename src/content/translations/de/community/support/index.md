@@ -57,6 +57,7 @@ Hier sind einige beliebte Beispiele:
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
 - [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
+- [Tenderly](https://discord.gg/fBvDJYR)
 
 ## Einen Knoten betreiben {#node-support}
 

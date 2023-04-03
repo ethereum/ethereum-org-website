@@ -8,7 +8,6 @@ import {
   Flex,
   Heading,
   Icon,
-  Show,
   SimpleGrid,
   useToken,
   VStack,
@@ -141,26 +140,25 @@ const Line = () => {
   const medBp = useToken("breakpoints", "md")
 
   return (
-    <Show above={medBp}>
-      <Box
-        as="aside"
-        gridColumn={1}
-        gridRow="1 / 3"
-        boxSize="100%"
-        position="relative"
-        _after={{
-          content: `""`,
-          height: calc.subtract("100%", "50px"),
-          borderImage: `linear-gradient(to bottom, ${$colorVar.reference}, ${$nextColorVar.reference}) 1 100%`,
-          borderLeft: "4px",
-          borderColor: "orange",
-          position: "absolute",
-          left: calc.subtract("50%", "2px"),
-          top: "50px",
-          zIndex: 1,
-        }}
-      />
-    </Show>
+    <Box
+      as="aside"
+      gridColumn={1}
+      gridRow="1 / 3"
+      boxSize="100%"
+      position="relative"
+      hideBelow={medBp}
+      _after={{
+        content: `""`,
+        height: calc.subtract("100%", "50px"),
+        borderImage: `linear-gradient(to bottom, ${$colorVar.reference}, ${$nextColorVar.reference}) 1 100%`,
+        borderLeft: "4px",
+        borderColor: "orange",
+        position: "absolute",
+        left: calc.subtract("50%", "2px"),
+        top: "50px",
+        zIndex: 1,
+      }}
+    />
   )
 }
 

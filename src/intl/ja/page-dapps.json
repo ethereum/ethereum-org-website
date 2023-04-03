@@ -205,5 +205,8 @@
   "page-dapps-what-are-dapps": "Dappsとは?",
   "page-dapps-more-on-defi-button": "分散型金融の詳細",
   "page-dapps-more-on-nft-button": "トークン化された収集物の詳細",
-  "page-dapps-more-on-nft-gaming-button": "トークン化されたゲームアイテムの詳細"
+  "page-dapps-more-on-nft-gaming-button": "トークン化されたゲームアイテムの詳細",
+  "foundation": "基礎",
+  "transaction-fees": "トランザクションフィーとは？",
+  "page-wallets-get-some": "ETHを取得する"
 }

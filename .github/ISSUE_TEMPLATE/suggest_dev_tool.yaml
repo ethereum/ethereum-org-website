@@ -64,3 +64,14 @@ body:
     attributes:
       label: Additional context
       description: Add any other context or screenshots about the dev tool here
+  - type: checkboxes
+    id: dev_tools_work_on
+    attributes:
+      label: Would you like to work on this issue?
+      options:
+        - label: "Yes"
+          required: false
+        - label: "No"
+          required: false
+    validations:
+      required: true
