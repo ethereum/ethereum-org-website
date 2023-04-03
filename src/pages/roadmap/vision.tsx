@@ -309,6 +309,7 @@ const VisionPage = ({
           </InfoBanner>
         </CentralContent>
       </PageContent>
+      <PageDivider />
       <FeedbackCard />
     </Page>
   )
