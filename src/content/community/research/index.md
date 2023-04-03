@@ -97,7 +97,7 @@ See the [nodes and clients page](/developers/docs/nodes-and-clients/) for more d
 
 ## Scaling and performance {#scaling-and-performance}
 
-Scaling Ethereum is a large area of focus for Ethereum researchers. Current approaches include sharding the blockchain, danksharding, and using rollups. Introductory information on scaling Ethereum is available on our [scaling page](/developers/docs/scaling).
+Scaling Ethereum is a large area of focus for Ethereum researchers. Current approaches include offloading transactions onto rollups and makign them as cheap as possible using data blobs. Introductory information on scaling Ethereum is available on our [scaling page](/developers/docs/scaling).
 
 ### Layer 2 {#layer-2}
 
@@ -136,7 +136,6 @@ Sharding Ethereum's blockchain has long been part of the development roadmap. Ho
 
 #### Background reading {#background-reading-4}
 
-- [Introduction to Ethereum sharding](/upgrades/sharding/)
 - [Proto-Danksharding notes](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq)
 - [Bankless Danksharding video](https://www.youtube.com/watch?v=N5p0TB77flM)
 - [Ethereum Sharding Research Compendium](https://notes.ethereum.org/@serenity/H1PGqDhpm?type=view)

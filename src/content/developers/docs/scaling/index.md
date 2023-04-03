@@ -25,9 +25,7 @@ This method of scaling requires changes to the Ethereum protocol (layer 1 [Mainn
 
 ### Sharding {#sharding}
 
-Sharding is the process of splitting a database horizontally to spread the load. In an Ethereum context, sharding will reduce network congestion and increase transactions per second by creating new chains, known as “shards.” This will also lighten the load for each validator who will no longer be required to process the entirety of all transactions across the network.
-
-Learn more about [sharding](/upgrades/sharding/).
+Sharding is the process of splitting a database. Subsets of validators would be responsible for individual shards rather than keeping track of all of Ethereum. Sharding was on the Ethereum [roadmap](/roadmap/) for a long time, and was once intended to be shipped before The Merge to proof-of-stake. However, but the rapid development of [layer 2 rollups](#layer-2-scaling) and the invention of [Danksharding](/roadmap/danksharding) (adding blobs of rollup data to Ethereum blocks that can be very efficiently verified by validators) has led the Ethereum community to favour rollup-centric scaling instead of scaling by sharding. This will also help to keep Ethereum's consensus logic simpler.
 
 ## Off-chain scaling {#off-chain-scaling}
 

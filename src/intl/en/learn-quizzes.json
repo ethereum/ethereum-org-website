@@ -303,7 +303,5 @@
   "h005-b-label": "Eth2",
   "h005-b-explanation": "Before being renamed the consensus layer, it was originally called ‘Eth2’.",
   "h005-c-label": "Eth1",
-  "h005-c-explanation": "Eth1 was the original name given to the execution layer, not the consensus layer.",
-  "h005-d-label": "Sharding",
-  "h005-d-explanation": "Sharding is an update on the Ethereum roadmap related to scaling."
+  "h005-c-explanation": "Eth1 was the original name given to the execution layer, not the consensus layer."
 }
