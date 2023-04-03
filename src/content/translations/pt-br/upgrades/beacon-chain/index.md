@@ -71,5 +71,5 @@ As cadeias de fragmentos somente podem ser introduzidas ao ecossistema Ethereum 
 
 ## Leituras adicionais
 
-- [Mais informações sobre as futuras atualizações do Ethereum](/upgrades/vision)
+- [Mais informações sobre as futuras atualizações do Ethereum](/roadmap/vision)
 - [Mais sobre prova de participação](/developers/docs/consensus-mechanisms/pos)
