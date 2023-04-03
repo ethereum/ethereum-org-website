@@ -159,7 +159,7 @@ The Arrow Glacier network upgrade pushed back the [difficulty bomb](/glossary/#d
 
 ### Altair {#altair}
 
-<NetworkUpgradeSummary dateTimeAsString="Oct-27-2021 10:56:23 AM +UTC" epochNumber={74240} ethPriceInUSD={4024} waybackLink="https://web.archive.org/web/20211026174951/https://ethereum.org/en/" />
+<NetworkUpgradeSummary name="altair" />
 
 #### Summary {#altair-summary}
 
@@ -204,7 +204,7 @@ The London upgrade introduced [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559
 
 ### Berlin {#berlin}
 
-<NetworkUpgradeSummary dateTimeAsString="Jun-30-2022 10:54:04 AM +UTC" blockNumber={12244000} ethPriceInUSD={2454} waybackLink="https://web.archive.org/web/20210415093618/https://ethereum.org/" />
+<NetworkUpgradeSummary name="berlin" />
 
 #### Summary {#berlin-summary}
 
@@ -228,7 +228,7 @@ The Berlin upgrade optimized gas cost for certain EVM actions, and increases sup
 
 ### Beacon Chain genesis {#beacon-chain-genesis}
 
-<NetworkUpgradeSummary dateTimeAsString="Dec-01-2020 12:00:35 PM +UTC" slotNumber={1} ethPriceInUSD={586.23} waybackLink="https://web.archive.org/web/20201207184633/https://www.ethereum.org/en/" />
+<NetworkUpgradeSummary name="beaconChainGenesis" />
 
 #### Summary {#beacon-chain-genesis-summary}
 

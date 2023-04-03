@@ -1,130 +1,114 @@
 // Libraries
 import React from "react"
-import styled from "styled-components"
-import { FormattedNumber } from "react-intl"
+import { Flex, Stack, Text } from "@chakra-ui/react"
+import { useI18next } from "gatsby-plugin-react-i18next"
 
 // Components
 import Emoji from "../Emoji"
 import Link from "../Link"
 import Translation from "../Translation"
 
-const UnstyledList = styled.ul`
-  margin-left: 0;
-`
+// Data
+import NetworkUpgradeSummaryData from "../../data/NetworkUpgradeSummaryData"
 
-const UnstyledListItem = styled.li`
-  list-style: none;
-  margin-bottom: 0.5rem;
+// Utils
+import { Lang } from "../../utils/languages"
+import { getLocaleForNumberFormat } from "../../utils/translations"
 
-  &:last-child {
-    margin-bottom: 0;
-  }
-`
-
-const FormattedEmoji = ({ text }) => (
-  <Emoji text={text} size={1} mr={"0.5rem"} />
-)
-
-export interface IPropsBase {
-  dateTimeAsString: string
-  ethPriceInUSD: number
-  waybackLink: string
+interface IProps {
+  name: string
 }
 
-export interface IPropsWithBlockNumber extends IPropsBase {
-  blockNumber: number
-  epochNumber?: never
-  slotNumber?: never
-}
-
-export interface IPropsWithEpochNumber extends IPropsBase {
-  blockNumber?: never
-  epochNumber: number
-  slotNumber?: never
-}
-
-export interface IPropsWithSlotNumber extends IPropsBase {
-  blockNumber?: never
-  epochNumber?: never
-  slotNumber: number
-}
-
-export type IProps =
-  | IPropsWithBlockNumber
-  | IPropsWithEpochNumber
-  | IPropsWithSlotNumber
-
-const NetworkUpgradeSummary: React.FC<IProps> = ({
-  dateTimeAsString,
-  blockNumber,
-  epochNumber,
-  slotNumber,
-  ethPriceInUSD,
-  waybackLink,
-}) => {
+const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
   let blockTypeTranslation
+  const { language } = useI18next()
+  const localeForStatsBoxNumbers = getLocaleForNumberFormat(language as Lang)
+  const {
+    dateTimeAsString,
+    ethPriceInUSD,
+    waybackLink,
+    blockNumber,
+    epochNumber,
+    slotNumber,
+  } = NetworkUpgradeSummaryData[name]
+  const date = new Date(dateTimeAsString)
+  const formattedDate = date.toLocaleString(language, {
+    timeZone: "UTC",
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+  })
+  const formattedUTC = `${formattedDate} +UTC`
 
   if (blockNumber) {
     blockTypeTranslation = (
-      <UnstyledListItem>
-        <FormattedEmoji text=":bricks:" />
-        <Translation id="page-history-block-number" />:{" "}
+      <Flex>
+        <Emoji fontSize="sm" mr={2} text=":bricks:" />
+        <Translation id="page-history-block-number" />
+        :&nbsp;
         <Link to={`https://etherscan.io/block/${blockNumber}`}>
-          <FormattedNumber value={blockNumber} />
+          {new Intl.NumberFormat(localeForStatsBoxNumbers).format(blockNumber)}
         </Link>
-      </UnstyledListItem>
+      </Flex>
     )
   }
 
   if (epochNumber) {
     blockTypeTranslation = (
-      <UnstyledListItem>
-        <FormattedEmoji text=":bricks:" />
-        <Translation id="page-history-epoch-number" />:{" "}
+      <Flex>
+        <Emoji fontSize="sm" mr={2} text=":bricks:" />
+        <Translation id="page-history-epoch-number" />
+        :&nbsp;
         <Link to={`https://beaconscan.com/epoch/${epochNumber}`}>
-          <FormattedNumber value={epochNumber} />
+          {new Intl.NumberFormat(localeForStatsBoxNumbers).format(epochNumber)}
         </Link>
-      </UnstyledListItem>
+      </Flex>
     )
   }
 
   if (slotNumber) {
     blockTypeTranslation = (
-      <UnstyledListItem>
-        <FormattedEmoji text=":bricks:" />
-        <Translation id="page-history-beacon-block-number" />:{" "}
+      <Flex>
+        <Emoji fontSize="sm" mr={2} text=":bricks:" />
+        <Translation id="page-history-beacon-block-number" />
+        :&nbsp;
         <Link to={`https://beaconscan.com/slot/${slotNumber}`}>
-          <FormattedNumber value={slotNumber} />
+          {new Intl.NumberFormat(localeForStatsBoxNumbers).format(slotNumber)}
         </Link>
-      </UnstyledListItem>
+      </Flex>
     )
   }
 
   return (
-    <UnstyledList>
-      <UnstyledListItem>
-        <FormattedEmoji text=":calendar:" />
-        <code>{dateTimeAsString}</code>
-      </UnstyledListItem>
+    <Stack>
+      <Flex>
+        <Emoji fontSize="sm" mr={2} text=":calendar:" />
+        <Text fontFamily="monospace" m={0}>
+          {formattedUTC}
+        </Text>
+      </Flex>
       {blockTypeTranslation}
-      <UnstyledListItem>
-        <FormattedEmoji text=":money_bag:" />
-        <Translation id="page-history-eth-price" />:{" "}
-        <FormattedNumber
-          value={ethPriceInUSD}
-          style="currency"
-          currency="USD"
-          maximumFractionDigits={0}
-        />{" "}
-        USD
-      </UnstyledListItem>
-      <UnstyledListItem>
-        <FormattedEmoji text=":desktop_computer:" />{" "}
+      <Flex>
+        <Emoji fontSize="sm" mr={2} text=":money_bag:" />
+        <Translation id="page-history-eth-price" />
+        :&nbsp;
+        {new Intl.NumberFormat(localeForStatsBoxNumbers, {
+          style: "currency",
+          currency: "USD",
+          minimumSignificantDigits: 2,
+          maximumSignificantDigits: 3,
+        }).format(ethPriceInUSD)}
+      </Flex>
+      <Flex>
+        <Emoji fontSize="sm" mr={2} text=":desktop_computer:" />
         <Link to={waybackLink}>
           <Translation id="page-history-ethereum-org-wayback" />
         </Link>
-      </UnstyledListItem>
-    </UnstyledList>
+      </Flex>
+    </Stack>
   )
 }
 
