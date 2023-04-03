@@ -5,12 +5,12 @@
   "page-find-wallet-last-updated": "Cập nhật mới nhất",
   "page-find-wallet-meta-description": "Tìm và so sánh ví Ethereum theo tính năng bạn muốn.",
   "page-find-wallet-meta-title": "Tìm một ví Ethereum",
-  "page-find-wallet-multisig": "Tài khoản đa chữ ký",
-  "page-find-wallet-multisig-desc": "Để tăng cường bảo mật, ví đa chữ ký yêu cầu phải lập hai tài khoản trở lên để cho phép thực hiện một số giao dịch nhất định.",
-  "page-find-wallet-showing": "Đang hiển thị ",
-  "page-find-wallet-swaps": "Hoán đổi token phi tập trung",
-  "page-find-wallet-swaps-desc": "Giao dịch giữa ETH và các token khác trực tiếp từ ví của bạn.",
   "page-find-wallet-title": "Tìm một ví",
   "page-find-wallet-try-removing": "Thử xóa một hoặc hai tính năng",
-  "page-stake-eth": "Ký gửi ETH"
+  "page-stake-eth": "Ký gửi ETH",
+  "page-find-wallet-swaps": "Hoán đổi token phi tập trung",
+  "page-find-wallet-swaps-desc": "Giao dịch giữa ETH và các token khác trực tiếp từ ví của bạn.",
+  "page-find-wallet-multisig": "Tài khoản đa chữ ký",
+  "page-find-wallet-multisig-desc": "Để tăng cường bảo mật, ví đa chữ ký yêu cầu phải lập hai tài khoản trở lên để cho phép thực hiện một số giao dịch nhất định.",
+  "page-find-wallet-showing": "Đang hiển thị "
 }

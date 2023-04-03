@@ -67,11 +67,18 @@ Als u tweetalig bent en ons wilt helpen meer mensen te bereiken, kunt u ook betr
 - [SecbitLabs](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw) - een WeChat-account, met uitleg over cryptografie, veiligheid, enz.
 - [Sparkbyte](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ) - een WeChat-account, met uitleg van zk-technologie
 
+### Tsjechisch {#cs}
+
+- [Gwei.cz](https://gwei.cz) - lokale gemeenschap rond Web3, maakt educatieve inhoud, organiseert online en persoonlijke evenementen
+- [Gwei.cz Příručka](https://prirucka.gwei.cz/) - Ethereum-gids voor beginners
+- [DAO Příručka](https://dao.gwei.cz/) - beginnersgids voor DAO's
+- [Mastering Ethereum](https://ipfs.infura-ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - beheers Ethereum in het Tsjechisch
+
 ### Frans {#fr}
 
-- [Ethereum France](https://www.ethereum-france.com/) - Ethereum France organiseert evenementen, creëert content en moedigt discussies rond Ethereum aan
+- [Ethereum France](https://www.ethereum-france.com/) - Ethereum France organiseert evenementen, maakt content en moedigt discussies rond Ethereum aan
 - [Ethereum.fr](https://ethereum.fr/) - nieuws en voorlichting over Ethereum
-- [BanklessFR](https://banklessfr.substack.com/) - Nieuwsbrief zonder bank in het Frans
+- [BanklessFR](https://banklessfr.substack.com/) - Bankless-nieuwsbrief in het Frans
 - [CryptoFR](https://cryptofr.com/category/44/ethereum-general) - cryptocurrency-forum met een Ethereum-subpagina
 
 ### Duits {#de}
@@ -83,20 +90,25 @@ Als u tweetalig bent en ons wilt helpen meer mensen te bereiken, kunt u ook betr
 
 ### Italiaans {#it}
 
-- [Ethereum Italia](https://www.ethereum-italia.it/) - Ethereum-voorlichting, -evenementen en -nieuws, gericht op slimme contracten en blockchain-technologie
+- [Ethereum Italia](https://www.ethereum-italia.it/) - Ethereum-voorlichting, -evenementen en -nieuws, gericht op slimme contracten en blockchaintechnologie
 - [Ethereum Italia Podcast](https://www.ethereum-italia.it/podcast/) - Ethereum-podcast in het Italiaans
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/it-it/learn/modules/blockchain-learning-solidity/) - leer hoe gebruik te maken van Solidity
-- [Microsoft Learn (slimme contracten)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - leer over schrijven van slimme contracten met Solidity
+- [Microsoft Learn (slimme contracten)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - meer informatie over schrijven van slimme contracten met Solidity
 - [Microsoft Learn (dApps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - maak een gebruikersinterface met gedecentraliseerde applicaties
+
+### Russisch {#ru}
+
+- [Cyber Academy](https://cyberacademy.dev) - voorlichtingsruimte voor web3-builders
 
 ### Spaans {#es}
 
 - [Ethereum Madrid](https://ethereummadrid.com/) - cursussen, evenementen en blog over blockchain, DeFi en governance
 - [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) - Ethereum-gids voor beginners in het Spaans
-- [Handleidingen online](https://tutoriales.online/curso/solidity) - leer Solidity en programmeren op Ethereum
+- [Handleidingen online](https://tutoriales.online/curso/solidity) - meer informatie over Solidity en programmeren op Ethereum
 - [Curso Introducción a Ethereum Development](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) - Solidity-basisbeginselen, testen en implementeren van uw eerste slimme contract
-- [Curso Introducción a Seguridad y Hacking en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) - krijg inzicht in gemeenschappelijke kwetsbaarheden en beveiligingsproblemen in echte slimme contracten
-- [Curso Introducción a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - leer hoe slimme DeFi-contracten werken in Solidity en creëer uw eigen Automated Market Maker
+- [Curso Introducción a Seguridad y Hacking en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) - krijg inzicht in veelvoorkomende kwetsbaarheden en beveiligingsproblemen in echte slimme contracten
+- [Curso Introducción a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - leer hoe slimme DeFi-contracten werken in Solidity en maak uw eigen Automated Market Maker
+- [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) - Niet-technische blockchain-cursus, van beginner tot geavanceerd. Leer alles over crypto en Ethereum.
 
 ### Turks {#tr}
 
@@ -105,14 +117,14 @@ Als u tweetalig bent en ons wilt helpen meer mensen te bereiken, kunt u ook betr
 
 ### Vietnamees {#vi}
 
-- [Tino Groep](https://wiki.tino.org/ethereum-la-gi/) - overzicht van Ethereum, dApps, portemonnees en FAQs
+- [Tino Groep](https://wiki.tino.org/ethereum-la-gi/) - overzicht van Ethereum, dapps, portemonnees en FAQ's
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - webplatform met subpagina's met nieuws en voorlichting over Ethereum
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) - cryptocurrency-portaal met nieuws en educatieve inhoud over Ethereum
 
 ### Japans {#ja}
 
-- [Japan Virtual en Crypto assets Exchange Associatie](https://jvcea.or.jp/)
-- [Japan Cryptoasset Business Associatie](https://cryptocurrency-association.org/)
-- [Ga aan de slag met blockchain ontwikkeling - Leer | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - Dit leerpad introduceert u tot blockchain en het ontwikkeling op het Ethereum platform
-- [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) - Ethereum in het Japanse masteren
-- [Hands-On Smart Contract Ontwikkeling met Solidity en Ethereum](https://www.oreilly.co.jp/books/9784873119342/) - Hands-On Smart Contract Development met Solidity en Ethereum in het Japans
+- [Japan Virtual en Crypto Assets Exchange Association](https://jvcea.or.jp/)
+- [Japan Cryptoasset Business Association](https://cryptocurrency-association.org/)
+- [Ga aan de slag met blockchain-ontwikkeling - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) - Dit leerpad laat u kennismaken met blockchain en ontwikkeling op het Ethereum-platform
+- [Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) - Beheers Ethereum in het Japans
+- [Praktische ontwikkeling van slimme contracten met Solidity en Ethereum](https://www.oreilly.co.jp/books/9784873119342/) - Praktische ontwikkeling van slimme contracten met Solidity en Ethereum in het Japans

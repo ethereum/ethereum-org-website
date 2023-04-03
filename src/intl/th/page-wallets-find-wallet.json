@@ -5,12 +5,12 @@
   "page-find-wallet-last-updated": "อัปเดตล่าสุด",
   "page-find-wallet-meta-description": "ค้นหาและเปรียบเทียบวอลเล็ทบนอีเธอเรียมตามคุณสมบัติที่คุณต้องการ",
   "page-find-wallet-meta-title": "ค้นหาวอลเล็ทบนอีเธอเรียม",
-  "page-find-wallet-multisig": "บัญชีที่กำกับโดยหลายลายเซ็น (multisig)",
-  "page-find-wallet-multisig-desc": "เพิ่มความปลอดภัยมากยิ่งขึ้นด้วยวอลเล็ทที่ควบคุมโดยหลายลายเซ็น (multi-signature wallet) ซึ่งจะกำหนดให้มีมากกว่าหนึ่งบัญชีเป็นคนอนุมัติธุรกรรมบางชนิด",
-  "page-find-wallet-showing": "Showing ",
-  "page-find-wallet-swaps": "สวอปโทเคนโดยไม่ต้องผ่านตัวกลาง",
-  "page-find-wallet-swaps-desc": "แลกเปลี่ยน ETH และโทเคนอื่นๆ จากวอลเล็ทของคุณได้โดยตรง",
   "page-find-wallet-title": "ค้นหาวอลเล็ท",
   "page-find-wallet-try-removing": "Try removing a feature or two",
-  "page-stake-eth": "Stake ETH"
+  "page-stake-eth": "Stake ETH",
+  "page-find-wallet-swaps": "สวอปโทเคนโดยไม่ต้องผ่านตัวกลาง",
+  "page-find-wallet-swaps-desc": "แลกเปลี่ยน ETH และโทเคนอื่นๆ จากวอลเล็ทของคุณได้โดยตรง",
+  "page-find-wallet-multisig": "บัญชีที่กำกับโดยหลายลายเซ็น (multisig)",
+  "page-find-wallet-multisig-desc": "เพิ่มความปลอดภัยมากยิ่งขึ้นด้วยวอลเล็ทที่ควบคุมโดยหลายลายเซ็น (multi-signature wallet) ซึ่งจะกำหนดให้มีมากกว่าหนึ่งบัญชีเป็นคนอนุมัติธุรกรรมบางชนิด",
+  "page-find-wallet-showing": "Showing "
 }

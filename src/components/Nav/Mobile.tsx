@@ -254,6 +254,7 @@ const MobileNavMenu: React.FC<IProps> = ({
         aria-label={t("aria-toggle-search-button")}
         variant="icon"
         _hover={{ svg: { fill: "primary" } }}
+        zIndex={100}
       />
       <MobileModal
         animate={isMenuOpen ? "open" : "closed"}
@@ -328,9 +329,9 @@ const MobileNavMenu: React.FC<IProps> = ({
           </BottomItemText>
         </BottomItem>
         <BottomItem onClick={toggleTheme}>
-          <Icon name={isDarkTheme ? "darkTheme" : "lightTheme"} />
+          <Icon name={!isDarkTheme ? "darkTheme" : "lightTheme"} />
           <BottomItemText>
-            <Translation id={isDarkTheme ? "dark-mode" : "light-mode"} />
+            <Translation id={!isDarkTheme ? "dark-mode" : "light-mode"} />
           </BottomItemText>
         </BottomItem>
         <BottomItem onClick={handleClick}>

@@ -5,12 +5,12 @@
   "page-find-wallet-last-updated": "Terakhir diperbarui",
   "page-find-wallet-meta-description": "Cari dan bandingkan dompet Ethereum berdasarkan fitur yang Anda inginkan.",
   "page-find-wallet-meta-title": "Temukan Dompet Ethereum",
-  "page-find-wallet-multisig": "Akun multi tanda tangan",
-  "page-find-wallet-multisig-desc": "Untuk keamanan ekstra, dompet multi-kunci memerlukan lebih dari satu akun untuk mengotorisasi transaksi tertentu.",
-  "page-find-wallet-showing": "Menampilkan ",
-  "page-find-wallet-swaps": "Pertukaran token terdesentralisasi",
-  "page-find-wallet-swaps-desc": "Perdagangkan antara ETH dan token lainnya langsung dari dompet Anda.",
   "page-find-wallet-title": "Temukan dompet",
   "page-find-wallet-try-removing": "Cobalah menghapus satu atau dua fitur",
-  "page-stake-eth": "Pertaruhkan ETH"
+  "page-stake-eth": "Pertaruhkan ETH",
+  "page-find-wallet-swaps": "Pertukaran token terdesentralisasi",
+  "page-find-wallet-swaps-desc": "Perdagangkan antara ETH dan token lainnya langsung dari dompet Anda.",
+  "page-find-wallet-multisig": "Akun multi tanda tangan",
+  "page-find-wallet-multisig-desc": "Untuk keamanan ekstra, dompet multi-kunci memerlukan lebih dari satu akun untuk mengotorisasi transaksi tertentu.",
+  "page-find-wallet-showing": "Menampilkan "
 }

@@ -338,7 +338,7 @@ const TutorialsPage = ({
             </p>
             <GithubButton
               variant="outline"
-              to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_tutorial.md&title="
+              to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_tutorial.yaml&title="
             >
               <GithubIcon name="github" />{" "}
               <span>

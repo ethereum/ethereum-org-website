@@ -1,7 +1,4 @@
 {
-  "page-tutorial-beginner": "Începător",
-  "page-tutorial-intermediate": "Intermediar",
-  "page-tutorial-advanced": "Avansat",
   "comp-tutorial-metadata-minute-read": "minute de citit",
   "page-tutorial-listing-policy-intro": "Înainte de a trimite un tutorial, te rugăm să citești politica noastră de listare.",
   "comp-tutorial-metadata-tip-author": "Sfatul autorului",
@@ -23,6 +20,9 @@
   "page-tutorials-meta-description": "Navighează și filtrează tutorialele comunității Ethereum după subiect.",
   "page-tutorial-external-link": "Extern",
   "page-tutorials-meta-title": "Tutoriale de dezvoltare Ethereum",
+  "page-tutorial-beginner": "Începător",
+  "page-tutorial-intermediate": "Intermediar",
+  "page-tutorial-advanced": "Avansat",
   "page-find-wallet-try-removing": "Încercați să eliminați una sau două funcționalități",
   "page-find-wallet-clear": "Ștergeți filtrele"
 }

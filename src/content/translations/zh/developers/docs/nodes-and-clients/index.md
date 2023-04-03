@@ -140,7 +140,6 @@ sidebarDepth: 2
 | [Nethermind](http://nethermind.io/)             | C#、.NET | Linux、Windows、macOS | 主网、Sepolia、Görli、Ropsten、Rinkeby 等 | 快照（不提供服务）、快速、完全 | Archive、Pruned |
 | [Besu](https://besu.hyperledger.org/en/stable/) | Java     | Linux、Windows、macOS | 主网、Sepolia、Görli、Ropsten、Rinkeby 等 | 快速、完全                     | Archive、Pruned |
 | [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux、Windows、macOS | 主网、Sepolia、Görli、Rinkeby、Ropsten 等 | 完全                           | Archive、Pruned |
-| [Akula](https://akula.app)                      | Rust     | Linux                 | 主网、Sepolia、Görli、Rinkeby、Ropsten    | 完全                           | Archive、Pruned |
 
 **注意，OpenEthereum [已废弃](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd)并已停止维护。**请谨慎使用，最好改用其他客户端实现。
 
@@ -156,7 +155,7 @@ Besu 提供大量[相关文档](https://besu.hyperledger.org/en/stable/)，将�
 
 ### Erigon {#erigon}
 
-Erigon 以前称为 Turbo‐Geth，最初是 Go Ethereum 的一个分叉，注重速度和磁盘空间效率。 Erigon 是一个完全重新架构的以太坊实现，目前用 Go 语言编写，但正在开发其他语言的实现，例如 [Akula](https://medium.com/@vorot93/meet-akula-the-fastest-ethereum-implementation-ever-built-58eaca244c39)。 Erigon 的目标是成为更快、模块化程度更高和更优化的以太坊实现。 它可以在 3 天内使用大约 2TB 的磁盘空间执行完整的存档节点同步。
+Erigon 以前称为 Turbo‐Geth，最初是 Go Ethereum 的一个分叉，注重速度和磁盘空间效率。 Erigon 是一个完全重新架构的以太坊实现，目前用 Go 语言编写，但正在开发其他语言的实现。 Erigon 的目标是成为更快、模块化程度更高和更优化的以太坊实现。 它可以在 3 天内使用大约 2TB 的磁盘空间执行完整的存档节点同步。
 
 ### Go Ethereum {#geth}
 
