@@ -16,7 +16,7 @@ summaryPoint4: Esta actualización se ha convertido en una prioridad desde la tr
 
 ## ¿Qué es la fragmentación? {#what-is-sharding}
 
-La fragmentación o «sharding» es un concepto común en informática que denomina el proceso de dividir una base de datos horizontalmente para distribuir la carga. En el contexto de la red de Ethereum, la fragmentación operará en sinergia con las [acumulaciones de capa 2](/layer-2/) al aliviar la carga que representa el manejo de la amplia cantidad de datos requeridos por las acumulaciones en toda la red. Esto continuará ayudando a reducir la congestión de la red e incrementará el número de transacciones por segundo.
+La fragmentación o «sharding» es un concepto común en informática que denomina el proceso de dividir una base de datos horizontalmente para distribuir la carga. En el contexto de la red de Ethereum, la fragmentación operará en sinergia con las [ acumulaciones de capa 2 ](/layer-2/) al aliviar la carga que representa el manejo de la amplia cantidad de datos requeridos por las acumulaciones en toda la red. Esto continuará ayudando a reducir la congestión de la red e incrementará el número de transacciones por segundo.
 
 Esto es importante por otras razones, además de la escalabilidad.
 
