@@ -51,7 +51,7 @@
   "page-developers-meta-desc": "本页为以太坊开发者提供相关文档、教程以及工具。",
   "page-developers-mev-desc": "最大可提取价值 (MEV) 简介",
   "page-developers-mev-link": "最大可提取价值 (MEV)",
-  "page-developers-mining-desc": "如何创建新块并达成协商一致意见",
+  "page-developers-mining-desc": "如何使用工作量证明创建新区块并达成共识",
   "page-developers-mining-link": "挖矿",
   "page-developers-mining-algorithms-desc": "关于以太坊挖矿算法的信息",
   "page-developers-mining-algorithms-link": "挖矿算法",
