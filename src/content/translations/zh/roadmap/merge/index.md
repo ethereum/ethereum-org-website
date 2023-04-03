@@ -20,7 +20,7 @@ summaryPoint4: 合并将使以太坊的能源消耗减少大约 99.95%。
 
 <MergeInfographic />
 
-[信标链](/upgrades/beacon-chain/)最初是与[主网](/glossary/#mainnet)分开上线的。 以太坊主网（所有帐户、余额、智能合约和区块链状态）仍继续由[工作量证明](/developers/docs/consensus-mechanisms/pow/)保护，即便与此同时，与之一起运行的信标链采用[权益证明](/developers/docs/consensus-mechanisms/pos/)。 合并是指这两个系统最终整合在一起之时，而工作量证明被权益证明永久取代。
+[信标链](/roadmap/beacon-chain/)最初是与[主网](/glossary/#mainnet)分开上线的。 以太坊主网（所有帐户、余额、智能合约和区块链状态）仍继续由[工作量证明](/developers/docs/consensus-mechanisms/pow/)保护，即便与此同时，与之一起运行的信标链采用[权益证明](/developers/docs/consensus-mechanisms/pos/)。 合并是指这两个系统最终整合在一起之时，而工作量证明被权益证明永久取代。
 
 想象一下，以太坊是一艘还没有完全准备好进行星际航行的就已经起飞的宇宙飞船。 借助信标链，社区构建了新的引擎和坚固的外壳。 经过大量测试，是时候在飞行途中通过“热插拔”用新引擎更换旧引擎了。 将新的、更高效引擎装入现有飞船后，飞船就能够开始许多光年的航行并占领整个宇宙。
 
@@ -37,7 +37,7 @@ summaryPoint4: 合并将使以太坊的能源消耗减少大约 99.95%。
 历史记录不会在合并中丢失。 随着主网与信标链合并，它还合并以太坊的整个交易历史记录。
 
 <InfoBanner>
-这种向权益证明的过渡改变了以太币的发行方式。 了解有关<a href="/upgrades/merge/issuance/">合并前后以太币发行的信息更多信息</a>。
+这种向权益证明的过渡改变了以太币的发行方式。 了解有关<a href="/roadmap/merge/issuance/">合并前后以太币发行的信息更多信息</a>。
 </InfoBanner>
 
 ### 用户与持有者 {#users-holders}
@@ -197,7 +197,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 相反，区块由验证节点提出，验证节点质押以太币以获得参与共识的权利。 这些升级为未来的可扩展性升级（包括分片）奠定了基础。
 
-<ButtonLink to="/upgrades/beacon-chain/">
+<ButtonLink to="/roadmap/beacon-chain/">
   信标链
 </ButtonLink>
 
@@ -213,7 +213,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 分片计划正在迅速发展，但随着扩展交易执行的二层网络技术的兴起和成功，分片计划已变为寻找最佳的负载分配方式，来存储来自卷叠合约中的压缩调用数据，这使得网络容量呈指数级增长。 如果不先过渡到权益证明，这是不可能的。
 
-<ButtonLink to="/upgrades/sharding/">
+<ButtonLink to="/roadmap/danksharding/">
   分片
 </ButtonLink>
 

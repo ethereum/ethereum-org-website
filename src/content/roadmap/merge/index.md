@@ -20,7 +20,7 @@ The Merge was the joining of the original execution layer of Ethereum (the Mainn
 
 <MergeInfographic />
 
-Initially, the [Beacon Chain](/upgrades/beacon-chain/) shipped separately from [Mainnet](/glossary/#mainnet). Ethereum Mainnet - with all its accounts, balances, smart contracts, and blockchain state - continued to be secured by [proof-of-work](/developers/docs/consensus-mechanisms/pow/), even while the Beacon Chain ran in parallel using [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). The Merge was when these two systems finally came together, and proof-of-work was permanently replaced by proof-of-stake.
+Initially, the [Beacon Chain](/roadmap/beacon-chain/) shipped separately from [Mainnet](/glossary/#mainnet). Ethereum Mainnet - with all its accounts, balances, smart contracts, and blockchain state - continued to be secured by [proof-of-work](/developers/docs/consensus-mechanisms/pow/), even while the Beacon Chain ran in parallel using [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). The Merge was when these two systems finally came together, and proof-of-work was permanently replaced by proof-of-stake.
 
 Imagine Ethereum is a spaceship that launched before it was quite ready for an interstellar voyage. With the Beacon Chain, the community built a new engine and a hardened hull. After significant testing, it became time to hot-swap the new engine for the old one mid-flight. This merged the new, more efficient engine into the existing ship enabling it to put in some serious light years and take on the universe.
 
@@ -37,7 +37,7 @@ The Merge represented the official switch to using the Beacon Chain as the engin
 No history was lost in The Merge. As Mainnet merged with the Beacon Chain, it also merged the entire transactional history of Ethereum.
 
 <InfoBanner>
-This transition to proof-of-stake changed the way ether is issued. Learn more about <a href="/upgrades/merge/issuance/">ether issuance before and after The Merge</a>.
+This transition to proof-of-stake changed the way ether is issued. Learn more about <a href="/roadmap/merge/issuance/">ether issuance before and after The Merge</a>.
 </InfoBanner>
 
 ### Users and holders {#users-holders}
@@ -198,7 +198,7 @@ The Merge represents the formal adoption of the Beacon Chain as the new consensu
 
 Blocks are instead proposed by validating nodes that have staked ETH in return for the right to participate in consensus. These upgrades set the stage for future scalability upgrades, including sharding.
 
-<ButtonLink to="/upgrades/beacon-chain/">
+<ButtonLink to="/roadmap/beacon-chain/">
   The Beacon Chain
 </ButtonLink>
 
@@ -214,7 +214,7 @@ Originally, the plan was to work on sharding before The Merge to address scalabi
 
 Plans for sharding are rapidly evolving, but given the rise and success of layer 2 technologies to scale transaction execution, sharding plans have shifted to finding the most optimal way to distribute the burden of storing compressed calldata from rollup contracts, allowing for exponential growth in network capacity. This would not be possible without first transitioning to proof-of-stake.
 
-<ButtonLink to="/upgrades/sharding/">
+<ButtonLink to="/roadmap/danksharding/">
   Sharding
 </ButtonLink>
 

@@ -16,7 +16,7 @@ summaryPoint4: En el passat ens hi referíem com "l'acoblament."
 
 ## Què és la fusió? {#what-is-the-docking}
 
-És important recordar que inicialment, l'actualització de la [cadena de balisa](/upgrades/beacon-chain/) s'enviava per separat des de la [xarxa principal](/glossary/#mainnet), la cadena que utilitzem avui. La xarxa principal d'Ethereum seguirà estant protegida mitjançant la [prova de treball](/developers/docs/consensus-mechanisms/pow/), fins i tot quan la cadena de balisa s'executi en paral·lel utilitzant la [prova de participació](/developers/docs/consensus-mechanisms/pos/). La fusió és quan aquests dos sistemes finalment es combinen.
+És important recordar que inicialment, l'actualització de la [cadena de balisa](/roadmap/beacon-chain/) s'enviava per separat des de la [xarxa principal](/glossary/#mainnet), la cadena que utilitzem avui. La xarxa principal d'Ethereum seguirà estant protegida mitjançant la [prova de treball](/developers/docs/consensus-mechanisms/pow/), fins i tot quan la cadena de balisa s'executi en paral·lel utilitzant la [prova de participació](/developers/docs/consensus-mechanisms/pos/). La fusió és quan aquests dos sistemes finalment es combinen.
 
 Imagineu que Ethereum és una nau espacial que no està del tot preparada per a un viatge interestel·lar. Amb la cadena de balisa la comunitat ha creat un nou motor i un habitacle més reforçat. Quan sigui el moment, la nau actual es fusionarà amb aquest nou sistema per convertir-se en una única nau, preparada per viatjar a anys llum i conquerir l'univers.
 
@@ -42,7 +42,7 @@ Les millores d'Ethereum estan d'alguna manera interrelacionades. Per tant, recap
 
 Un cop succeeixi La Fusió, s'assignaran els tenidors per validar la xarxa principal d'Ethereum. [La mineria](/developers/docs/consensus-mechanisms/pow/mining/) ja no farà falta, per tant, el miners probablement invertiran els seus guanys en participacions en el nou sistema de prova de participació.
 
-<ButtonLink to="/upgrades/beacon-chain/">
+<ButtonLink to="/roadmap/beacon-chain/">
   La cadena de balisa
 </ButtonLink>
 
@@ -58,7 +58,7 @@ Originalment, el pla era treballar en cadenes de fragments abans de La Fusió, p
 
 La comunitat avaluarà de forma contínua la necessitat de múltiples rondes de cadenes de fragments per permetre una escalabilitat infinita.
 
-<ButtonLink to="/upgrades/sharding/">
+<ButtonLink to="/roadmap/danksharding/">
   Cadenes de fragments
 </ButtonLink>
 

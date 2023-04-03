@@ -16,7 +16,7 @@ summaryPoint4: Sebelumnya kami menyebutnya sebagai "docking."
 
 ## Apa itu Penggabungan? {#what-is-the-docking}
 
-Penting untuk diingat bahwa pada awalnya [Rantai Suar](/upgrades/beacon-chain/) diluncurkan terpisah dari [Jaringan Utama](/glossary/#mainnet) - sistem rantai yang kita pakai saat ini. Jaringan Utama Ethereum terus diamankan oleh [bukti kerja](/developers/docs/consensus-mechanisms/pow/), sekalipun Rantai Suar beroperasi secara paralel menggunakan [bukti taruhan](/developers/docs/consensus-mechanisms/pos/). Penggabungan adalah ketika pada akhirnya kedua sistem ini menjadi satu.
+Penting untuk diingat bahwa pada awalnya [Rantai Suar](/roadmap/beacon-chain/) diluncurkan terpisah dari [Jaringan Utama](/glossary/#mainnet) - sistem rantai yang kita pakai saat ini. Jaringan Utama Ethereum terus diamankan oleh [bukti kerja](/developers/docs/consensus-mechanisms/pow/), sekalipun Rantai Suar beroperasi secara paralel menggunakan [bukti taruhan](/developers/docs/consensus-mechanisms/pos/). Penggabungan adalah ketika pada akhirnya kedua sistem ini menjadi satu.
 
 Bayangkan Ethereum adalah sebuah kapal luar angkasa yang belum cukup siap untuk perjalanan antar bintang. Dengan Rantai Suar, komunitas telah membangun sebuah mesin baru dan lambung kapal yang lebih kuat. Ketika sudah saatnya, kapal yang ada saat ini akan bergabung dengan sistem baru, menjadi satu kapal, siap untuk melakukan perjalanan tahun cahaya yang intens, dan mengarungi alam semesta.
 
@@ -42,7 +42,7 @@ Semua peningkatan Ethereum saling terkait. Jadi mari kita ringkas bagaimana Peng
 
 Saat penggabungan terjadi, stakers akan ditugaskan untuk memvalidasi Jaringan Utama Ethereum. [Menambang](/developers/docs/consensus-mechanisms/pow/mining/) tidak akan lagi diperlukan, jadi para penambang mungkin akan menginvestasikan pendapatan mereka dengan bertaruh dalam sistem bukti taruhan yang baru.
 
-<ButtonLink to="/upgrades/beacon-chain/">
+<ButtonLink to="/roadmap/beacon-chain/">
   Rantai Suar
 </ButtonLink>
 
@@ -58,7 +58,7 @@ Pada awalnya, rencananya adalah melanjutkan pengembangan rantai shard sebelum Pe
 
 Ini akan menjadi penilaian berkelanjutan dari komunitas seiring dengan kebutuhan akan potensi beberapa putaran rantai shard untuk memungkinkan skalabilitas yang tak terbatas.
 
-<ButtonLink to="/upgrades/sharding/">
+<ButtonLink to="/roadmap/danksharding/">
   Pecahan rantai jaringan
 </ButtonLink>
 

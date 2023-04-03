@@ -20,7 +20,7 @@ Fuziunea a reprezentat combinarea stratului de execuție original al Ethereum (R
 
 <MergeInfographic />
 
-Inițial, [Lanțul Beacon](/upgrades/beacon-chain/) a fost lansat separat de [Rețeaua principală](/glossary/#mainnet). Rețeaua principală Ethereum - cu toate conturile, soldurile, contractele inteligente și starea blockchainului - a continuat să fie securizată prin [dovada muncii](/developers/docs/consensus-mechanisms/pow/), chiar și atunci când Lanțul Beacon funcționa în paralel folosind [dovada mizei](/developers/docs/consensus-mechanisms/pos/). Fuziunea a avut loc când acest două sisteme s-au reunit în cele din urmă și dovada muncii a fost înlocuită permanent de dovada mizei.
+Inițial, [Lanțul Beacon](/roadmap/beacon-chain/) a fost lansat separat de [Rețeaua principală](/glossary/#mainnet). Rețeaua principală Ethereum - cu toate conturile, soldurile, contractele inteligente și starea blockchainului - a continuat să fie securizată prin [dovada muncii](/developers/docs/consensus-mechanisms/pow/), chiar și atunci când Lanțul Beacon funcționa în paralel folosind [dovada mizei](/developers/docs/consensus-mechanisms/pos/). Fuziunea a avut loc când acest două sisteme s-au reunit în cele din urmă și dovada muncii a fost înlocuită permanent de dovada mizei.
 
 Imaginează-ți Ethereum ca o navă spațială care a fost lansată înainte de a fi fost foarte bine pregătită pentru o călătorie interstelară. Prin Lanțul Beacon, comunitatea a construit un motor nou și o carenă întărită. După efectuarea unor teste majore, a venit timpul pentru schimbarea motorului vechi cu cel nou în timpul călătoriei. Aceasta e permis fuziunea motorului nou, mai eficient în nava existentă, ceea ce a dus la câștigarea unui număr mare de ani lumină și la cucerirea universului.
 
@@ -37,7 +37,7 @@ Fuziunea a reprezentat trecerea oficială la folosirea Lanțului Beacon drept mo
 Niciun istoric nu a fost pierdut în Fuziune. Când Rețeaua principală a fuzionat cu Lanțul Beacon, a fuzionat cu întregul istoric al tranzacțiilor Ethereum.
 
 <InfoBanner>
-Această tranziție la dovada mizei a schimbat felul în care este emis eterul. Aflați mai multe despre <a href="/upgrades/merge/issuance/">emiterea de eter înainte și după Fuziune</a>.
+Această tranziție la dovada mizei a schimbat felul în care este emis eterul. Aflați mai multe despre <a href="/roadmap/merge/issuance/">emiterea de eter înainte și după Fuziune</a>.
 </InfoBanner>
 
 ### Utilizatori și deținători {#users-holders}
@@ -193,7 +193,7 @@ Fuziunea reprezintă adoptarea formală a Lanțului Beacon ca noul strat de cons
 
 În schimb, blocurile sunt propuse prin validarea nodurilor care dețin ETH mizat în schimbul dreptului de a participa la consens. Aceste modernizări au deschis drumul pentru viitoarele modernizări de scalabilitate, inclusiv pentru fragmentare.
 
-<ButtonLink to="/upgrades/beacon-chain/">
+<ButtonLink to="/roadmap/beacon-chain/">
   Lanțul Beacon
 </ButtonLink>
 
@@ -209,7 +209,7 @@ Inițial, se prevedea ca fragmentarea să fie implementată înainte ca Fuziunea
 
 Planurile pentru fragmentare evoluează rapid, dar, având în vedere apariția și succesul tehnologiilor de nivelul 2 pentru scalarea executării tranzacției, planurile pentru fragmentare au fost reorientate către găsirea modalității optime de distribuire a problemei de stocare a datelor de apel comprimate din contractele rollup, permițând creșterea exponențială a capacității rețelei. Acest lucru nu ar fi posibil fără a se trece mai întâi la dovada mizei.
 
-<ButtonLink to="/upgrades/sharding/">
+<ButtonLink to="/roadmap/danksharding/">
   Fragmentarea
 </ButtonLink>
 

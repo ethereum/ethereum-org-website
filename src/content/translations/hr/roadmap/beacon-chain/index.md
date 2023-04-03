@@ -15,7 +15,7 @@ summaryPoint3: Nadogradnja Beacon Chain uvela je logiku koncenzusa i protokol bl
 
 ## Što je Beacon Chain? {#what-is-the-beacon-chain}
 
-Beacon Chain bio je naziv izvornog lanca blokova dokaza uloga koji je pokrenut u 2020. Nadogradnja je izrađena prije implementacije glavne mreže Ethereuma kako bi osigurao da je logika konsenzusa dokaza uloga točna i održiva. Ova nadogradnja aktivna je zajedno s izvornim dokazom rada Ethereuma. Isključivanje i uključivanje dokaza rada na Ethereumu zahtijevalo je upućivanje nadogradnje Beacon Chain da prihvati transakcije iz izvornog Ethereumovog lanca, da ih objedini u blokove i organizira u lance blokova koristeći se mehanizmom konsenzusa dokaza uloga. Istodobno, izvorni korisnici Ethereuma isključili su rudarenje, propagiranje bloka i logiku konsenzusa i predali to nadogradnji Beacon Chain. Taj je događaj poznat pod nazivom [The Merge (Spajanje)](/upgrades/merge/). Nako što se spajanje dogodilo, više nisu postojala dva lanca blokova – postojao je samo jedan lanac dokaza uloga Ethereuma.
+Beacon Chain bio je naziv izvornog lanca blokova dokaza uloga koji je pokrenut u 2020. Nadogradnja je izrađena prije implementacije glavne mreže Ethereuma kako bi osigurao da je logika konsenzusa dokaza uloga točna i održiva. Ova nadogradnja aktivna je zajedno s izvornim dokazom rada Ethereuma. Isključivanje i uključivanje dokaza rada na Ethereumu zahtijevalo je upućivanje nadogradnje Beacon Chain da prihvati transakcije iz izvornog Ethereumovog lanca, da ih objedini u blokove i organizira u lance blokova koristeći se mehanizmom konsenzusa dokaza uloga. Istodobno, izvorni korisnici Ethereuma isključili su rudarenje, propagiranje bloka i logiku konsenzusa i predali to nadogradnji Beacon Chain. Taj je događaj poznat pod nazivom [The Merge (Spajanje)](/roadmap/merge/). Nako što se spajanje dogodilo, više nisu postojala dva lanca blokova – postojao je samo jedan lanac dokaza uloga Ethereuma.
 
 ## Što radi Beacon Chain? {#what-does-the-beacon-chain-do}
 
@@ -47,7 +47,7 @@ Prednost dokaza uloga predstavlja dostupnost registra svih odobrenih izdavača b
 
 Razlika je i u odgovornost u odnosu na dokaz rada gdje rudari nisu imali obvezu prema mreži i mogli su zaustaviti rudarenje i trajno i trenutačno isključiti svoje čvorove bez ikakvih posljedica. Također, nema registra poznatih, blokiranih predlagača te pouzdanog načina sigurne podjele mrežnih odgovornosti.
 
-[Više o dijeljenju](/upgrades/sharding/)
+[Više o dijeljenju](/roadmap/danksharding/)
 
 ## Odnos između nadogradnji {#relationship-between-upgrades}
 
@@ -57,7 +57,7 @@ Sve nadogradnje Ethereuma donekle su međusobno povezane. Dakle, ponovimo ukratk
 
 U početku je Beacon Chain postojao odvojeno od glavne mreže Ethereuma. Godine 2022. konačno su objedinjeni.
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   Spajanje
 </ButtonLink>
 
@@ -65,7 +65,7 @@ U početku je Beacon Chain postojao odvojeno od glavne mreže Ethereuma. Godine 
 
 Razdjeljivanje se sigurno može uvesti u Ethereumov ekosustav samo ako je uspostavljen mehanizam konsenzusa dokaza uloga. Beacon Chain uveo je ulaganje objedinjeno s glavnom mrežom i tako pripremio teren za razdjeljivanje koje će pomoći u daljnjem prilagođavanju Ethereuma.
 
-<ButtonLink to="/upgrades/sharding/">
+<ButtonLink to="/roadmap/danksharding/">
   Lanci djelića
 </ButtonLink>
 

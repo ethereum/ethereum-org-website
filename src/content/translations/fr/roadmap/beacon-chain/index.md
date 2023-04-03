@@ -15,7 +15,7 @@ summaryPoint3: La Chaîne phare a introduit la logique de consensus et le protoc
 
 ## Qu'est-ce que fut la Chaîne phare ? {#what-is-the-beacon-chain}
 
-La Chaîne phare était le nom de la blockchain originale par preuve d'enjeu qui a été lancée en 2020. Elle a été créé pour s'assurer que la logique de consensus par preuve d'enjeu était saine et durable avant de l'activer sur le réseau principal Ethereum. Par conséquent, elle a fonctionné aux côtés de l'Ethereum original de preuve de travail. La désactivation de la preuve de travail au profit de la preuve d'enjeu sur Ethereum nécessite d'indiquer à la Chaîne phare d'accepter les transactions de la chaîne Ethereum d'origine, de les regrouper en blocs, puis les organiser en blockchain en utilisant un mécanisme de consensus basé sur la preuve d'enjeu. Au même moment, les clients originaux d'Ethereum ont arrêté leur minage, la propagation du bloc et la logique de consensus, regroupant tout ceci sur la Chaîne phare. Cet événement était connu sous le nom de [La Fusion](/upgrades/merge/). Une fois la Fusion réalisée, il n'y avait plus deux blockchains mais une chaîne unique Ethereum de preuve d'enjeu.
+La Chaîne phare était le nom de la blockchain originale par preuve d'enjeu qui a été lancée en 2020. Elle a été créé pour s'assurer que la logique de consensus par preuve d'enjeu était saine et durable avant de l'activer sur le réseau principal Ethereum. Par conséquent, elle a fonctionné aux côtés de l'Ethereum original de preuve de travail. La désactivation de la preuve de travail au profit de la preuve d'enjeu sur Ethereum nécessite d'indiquer à la Chaîne phare d'accepter les transactions de la chaîne Ethereum d'origine, de les regrouper en blocs, puis les organiser en blockchain en utilisant un mécanisme de consensus basé sur la preuve d'enjeu. Au même moment, les clients originaux d'Ethereum ont arrêté leur minage, la propagation du bloc et la logique de consensus, regroupant tout ceci sur la Chaîne phare. Cet événement était connu sous le nom de [La Fusion](/roadmap/merge/). Une fois la Fusion réalisée, il n'y avait plus deux blockchains mais une chaîne unique Ethereum de preuve d'enjeu.
 
 ## Que fait la Chaîne phare ? {#what-does-the-beacon-chain-do}
 
@@ -47,7 +47,7 @@ La preuve d’enjeu présente l’avantage d’avoir un registre de tous les pro
 
 Cette responsabilité contraste avec la preuve de travail, où les mineurs n'ont aucune obligation à l'égard du réseau et pourraient arrêter de miner et fermer définitivement leur logiciel de nœud en un instant et sans répercussion. Il n'y a pas non plus de registre des soumissionnaires de blocs connus et aucun moyen fiable de séparer en toute sécurité les responsabilités des réseaux.
 
-[En savoir plus sur la fragmentation](/upgrades/sharding/)
+[En savoir plus sur la fragmentation](/roadmap/danksharding/)
 
 ## Relation entre les mises à niveau {#relationship-between-upgrades}
 
@@ -57,7 +57,7 @@ Les mises à niveau Ethereum sont plus ou moins interdépendantes. Récapitulons
 
 Au début, La Chaîne phare existait séparément du réseau principal Ethereum, mais ils ont été fusionnés en 2022.
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   La Fusion
 </ButtonLink>
 
@@ -65,7 +65,7 @@ Au début, La Chaîne phare existait séparément du réseau principal Ethereum,
 
 La fragmentation ne peut s'ajouter en toute sécurité dans l'écosystème Ethereum que s'il existe un mécanisme de consensus sur la preuve d'enjeu. La Chaîne phare a introduit la notion de mise en jeu qui a « fusionnée » avec le réseau principal et a ouvert la voie à la fragmentation pour favoriser une plus grande évolutivité d'Ethereum.
 
-<ButtonLink to="/upgrades/sharding/">
+<ButtonLink to="/roadmap/danksharding/">
   Chaînes de fragments
 </ButtonLink>
 

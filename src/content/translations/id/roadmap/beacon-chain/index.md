@@ -16,7 +16,7 @@ summaryPoint4: Anda mungkin mengenalnya sebagai "Fase 0" pada roadmap teknis.
 
 ## Apa yang dilakukan oleh Rantai Suar? {#what-does-the-beacon-chain-do}
 
-Rantai Suar akan mengadakan atau mengoordinasi jaringan yang sudah diperluas dari [shard](/upgrades/sharding/) dan [penaruh](/staking/). Tapi itu tidak akan sama seperti [Jaringan Utama Ethereum](/glossary/#mainnet) saat ini. Rantai suar tidak bisa menangani akun ataupun kontrak pintar.
+Rantai Suar akan mengadakan atau mengoordinasi jaringan yang sudah diperluas dari [shard](/roadmap/danksharding/) dan [penaruh](/staking/). Tapi itu tidak akan sama seperti [Jaringan Utama Ethereum](/glossary/#mainnet) saat ini. Rantai suar tidak bisa menangani akun ataupun kontrak pintar.
 
 Peran Rantai Suar akan berubah seiring berjalannya waktu, namun rantai ini merupakan komponen dasar untuk [jaringan Ethereum yang aman, berkelanjutan, dan terukur yang sedang kami kerjakan](/roadmap/vision/).
 
@@ -32,7 +32,7 @@ Penaruhan dan menjadi validator lebih mudah daripada [menambang](/developers/doc
 Jika Anda tertarik untuk menjadi validator dan membantu mengamankan Rantai Suar, <a href="/staking/">pelajari selengkapnya tentang penaruhan</a>.
 </InfoBanner>
 
-Ini juga merupakan perubahan penting untuk peningkatan lainnya: [rantai shard](/upgrades/sharding/).
+Ini juga merupakan perubahan penting untuk peningkatan lainnya: [rantai shard](/roadmap/danksharding/).
 
 ### Menyiapkan rantai shard {#setting-up-for-shard-chains}
 
@@ -48,7 +48,7 @@ Semua peningkatan Ethereum saling terkait. Jadi ayo kita ingat kembali bagaimana
 
 Rantai Suar, pada awalnya, akan hadir terpisah dari Jaringan Utama Ethereum yang kita gunakan saat ini. Tetapi mereka akan disatukan ke depannya. Rencananya adalah "menggabungkan" Jaringan Utama ke dalam sistem bukti taruhan yang dikontrol dan dikoordinasi oleh Rantai Suar.
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
     Penggabungan
 </ButtonLink>
 
@@ -56,7 +56,7 @@ Rantai Suar, pada awalnya, akan hadir terpisah dari Jaringan Utama Ethereum yang
 
 Rantai shard hanya dapat masuk dalam ekosistem Ethereum dengan mekanisme konsesus bukti taruhan. Rantai Suar akan memperkenalkan penaruhan, menyiapkan jalan bagi peningkatan rantai shard berikutnya.
 
-<ButtonLink to="/upgrades/sharding/">
+<ButtonLink to="/roadmap/danksharding/">
     Rantai shard
 </ButtonLink>
 

@@ -16,7 +16,7 @@ summaryPoint4: Önceden bundan "kenetlenme" olarak bahsettik.
 
 ## Birleştirme nedir? {#what-is-the-docking}
 
-Başlangıçta [İşaret Zinciri](/upgrades/beacon-chain/)nin bugün kullandığımız zincir olan [Mainnet](/glossary/#mainnet)'ten ayrı olarak başladığını unutmamak gerekir. Ethereum Mainnet [iş ispatı](/developers/docs/consensus-mechanisms/pow/) İşaret Zinciri ile paralel olarak çalışırken bile [hisse ispatı](/developers/docs/consensus-mechanisms/pos/) tarafından güvence altına alınmaya devam etmektedir. Bu iki sistem sonunda bir araya geldiği zaman Birleştirme gerçekleşmiş olacak.
+Başlangıçta [İşaret Zinciri](/roadmap/beacon-chain/)nin bugün kullandığımız zincir olan [Mainnet](/glossary/#mainnet)'ten ayrı olarak başladığını unutmamak gerekir. Ethereum Mainnet [iş ispatı](/developers/docs/consensus-mechanisms/pow/) İşaret Zinciri ile paralel olarak çalışırken bile [hisse ispatı](/developers/docs/consensus-mechanisms/pos/) tarafından güvence altına alınmaya devam etmektedir. Bu iki sistem sonunda bir araya geldiği zaman Birleştirme gerçekleşmiş olacak.
 
 Ethereum'un yıldızlararası bir yolculuk için pek de hazır olmayan bir uzay aracı olduğunu hayal edin. İşaret Zinciri ile topluluk, yeni bir motor ve sertleştirilmiş bir gövde inşa etti. Zamanı geldiğinde mevcut gemi, bu yeni sistemle rıhtıma yanaşıp tek bir gemide birleşerek uzun ışık yılları mesafe alacak ve evreni ele geçirmeye hazır olacak.
 
@@ -42,7 +42,7 @@ Ethereum yükseltmelerinin tamamı bir şekilde ilişkilidir. Öyleyse Birleşti
 
 Birleştirme gerçekleştiğinde, Ethereum Mainnet'i doğrulamak için stake eden kişiler atanacaktır. [Madencilik](/developers/docs/consensus-mechanisms/pow/mining/) artık gerekli olmayacağı için madenciler büyük ihtimalle kazançlarını yeni hisse ispatı sisteminde stake etmeye yatıracaklardır.
 
-<ButtonLink to="/upgrades/beacon-chain/">
+<ButtonLink to="/roadmap/beacon-chain/">
   İşaret (Beacon) Zinciri
 </ButtonLink>
 
@@ -58,7 +58,7 @@ Başlangıçta plan, ölçeklenebilirliği ele almak için Birleştirmeden önce
 
 Bu, sonsuz ölçeklenebilirliğe izin vermek için potansiyel olarak birden fazla parça zinciri turuna duyulan ihtiyaç konusunda topluluk tarafından, devam eden bir değerlendirme olacaktır.
 
-<ButtonLink to="/upgrades/sharding/">
+<ButtonLink to="/roadmap/danksharding/">
   Parça zincirleri
 </ButtonLink>
 

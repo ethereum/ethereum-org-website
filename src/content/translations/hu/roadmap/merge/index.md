@@ -16,7 +16,7 @@ summaryPoint4: Úgy is ismerheted, mint a Fázis 1.5 a technikai ütemtervek sze
 
 ## Mi az a dokkolás? {#what-is-the-docking}
 
-Fontos megjegyezni, hogy eredetileg a többi Eth2 fejlesztés a [főhálózattól](/glossary/#mainnet) - azaz a lánctól, amit ma is használunk - külön kerül bevezetésre. Az Ethereum főhálózat biztonságát továbbra is a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) szolgáltatja majd, még akkor is amikor [a Beacon Chain](/upgrades/beacon-chain/) és a [shard láncok](/upgrades/sharding/) párhuzamosan futnak majd a [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) használatával. A dokkolás az, amikor ez a két rendszer egybeolvad.
+Fontos megjegyezni, hogy eredetileg a többi Eth2 fejlesztés a [főhálózattól](/glossary/#mainnet) - azaz a lánctól, amit ma is használunk - külön kerül bevezetésre. Az Ethereum főhálózat biztonságát továbbra is a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) szolgáltatja majd, még akkor is amikor [a Beacon Chain](/roadmap/beacon-chain/) és a [shard láncok](/roadmap/danksharding/) párhuzamosan futnak majd a [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) használatával. A dokkolás az, amikor ez a két rendszer egybeolvad.
 
 Képzeld el, hogy az Ethereum egy űrhajó, ami még nem teljesen áll készen egy csillagközi utazásra. A Beacon Chainnel és a shard láncokkal a közösség egy új hajtóművet és egy erősebb hajótestet épített. Ha eljön az idő, a meglévő hajó dokkol ezzel az új rendszerrel, eggyé válik vele és készen áll arra, hogy néhány fényév alatt meghódítsa az univerzumot.
 
@@ -38,10 +38,10 @@ Az Eth2 fejlesztések némileg összefüggnek. Foglaljuk össze tehát, hogy a d
 
 Amint megtörtént a dokkolás, a letétbe helyezőket kijelölik az Ethereum főhálózat validálására. Csakúgy, mint a shard láncoknál. [A bányászat](/developers/docs/consensus-mechanisms/pow/mining/) így feleslegessé válik, tehát a bányászok az új proof-of-stake rendszerben valószínűleg letétbe helyezésbe fektetik majd, amit kerestek.
 
-<ButtonLink to="/upgrades/beacon-chain/">A Beacon Chain</ButtonLink>
+<ButtonLink to="/roadmap/beacon-chain/">A Beacon Chain</ButtonLink>
 
 ### Dokkolás és shard láncok {#docking-and-shard-chains}
 
 Mivel a főhálózat egy sharddá válik, a shard láncok sikeres implementációja kritikus ezen fejlesztési lépés szempontjából. Valószínű, hogy az átmenet egy fontos szerepet fog játszani, hogy a közösség eldöntse szeretne-e egy második sharding fejlesztést. Ez a fejlesztés a többi shardot is a főhálózathoz hasonlóvá teszi: képesek lesznek tranzakciókat és okosszerződéseket feldolgozni, nem csak több adatot biztosítani.
 
-<ButtonLink to="/upgrades/sharding/">Shard láncok</ButtonLink>
+<ButtonLink to="/roadmap/danksharding/">Shard láncok</ButtonLink>

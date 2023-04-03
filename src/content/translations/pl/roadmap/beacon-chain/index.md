@@ -15,7 +15,7 @@ summaryPoint3: Łańcuch śledzący wprowadził logikę konsensusu i protokół 
 
 ## Czym był łańcuch śledzący? {#what-is-the-beacon-chain}
 
-Łańcuch śledzący to nazwa pierwotnego łańcucha bloków proof-of-stake, który został uruchomiony w 2020 r. Został on stworzony w celu zapewnienia, że logika konsensusu proof-of-stake jest solidna i zrównoważona, zanim zostanie uruchomiona w sieci głównej Ethereum. W związku z tym działał on równolegle z pierwotnym mechanizmem proof-of-work Ethereum. Wyłączenie mechanizmu proof-of-work i włączenie mechanizmu proof-of-stake w sieci Ethereum wymagało poinstruowania łańcucha śledzącego, aby akceptował transakcje z pierwotnego łańcucha Ethereum, łączył je w bloki, a następnie organizował je w łańcuch bloków przy użyciu mechanizmu konsensusu opartego na proof-of-stake. W tym samym momencie pierwotni klienci Ethereum wyłączyli wydobywanie, propagację bloków i logikę konsensusu, przekazując je w całości łańcuchowi śledzącemu. Wydarzenie to było określane jako [Połączenie](/upgrades/merge/). Po Połączeniu nie było już dwóch sieci blockchain; istniał tylko jeden łańcuch proof-of-stake Ethereum.
+Łańcuch śledzący to nazwa pierwotnego łańcucha bloków proof-of-stake, który został uruchomiony w 2020 r. Został on stworzony w celu zapewnienia, że logika konsensusu proof-of-stake jest solidna i zrównoważona, zanim zostanie uruchomiona w sieci głównej Ethereum. W związku z tym działał on równolegle z pierwotnym mechanizmem proof-of-work Ethereum. Wyłączenie mechanizmu proof-of-work i włączenie mechanizmu proof-of-stake w sieci Ethereum wymagało poinstruowania łańcucha śledzącego, aby akceptował transakcje z pierwotnego łańcucha Ethereum, łączył je w bloki, a następnie organizował je w łańcuch bloków przy użyciu mechanizmu konsensusu opartego na proof-of-stake. W tym samym momencie pierwotni klienci Ethereum wyłączyli wydobywanie, propagację bloków i logikę konsensusu, przekazując je w całości łańcuchowi śledzącemu. Wydarzenie to było określane jako [Połączenie](/roadmap/merge/). Po Połączeniu nie było już dwóch sieci blockchain; istniał tylko jeden łańcuch proof-of-stake Ethereum.
 
 ## Co robił łańcuch śledzący? {#what-does-the-beacon-chain-do}
 
@@ -47,7 +47,7 @@ Zaletą proof-of-stake jest posiadanie rejestru wszystkich zatwierdzonych produc
 
 Ta odpowiedzialność jest przeciwieństwem proof-of-work, gdzie górnicy nie mają żadnych zobowiązań wobec sieci i mogą w jednej chwili zaprzestać wydobycia i wyłączyć oprogramowanie swojego węzła bez żadnych konsekwencji. Nie ma też rejestru znanych proponentów bloków ani niezawodnego sposobu na bezpieczny podział obowiązków sieciowych.
 
-[Więcej o shardingu](/upgrades/sharding/)
+[Więcej o shardingu](/roadmap/danksharding/)
 
 ## Relacje między uaktualnieniami {#relationship-between-upgrades}
 
@@ -57,7 +57,7 @@ Wszystkie uaktualnienia Ethereum są poniekąd wzajemnie powiązane. Podsumujmy 
 
 Na początku łańcuch śledzący istniał oddzielnie od sieci głównej Ethereum, ale zostały one połączone w 2022 r.
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   Połączenie
 </ButtonLink>
 
@@ -65,7 +65,7 @@ Na początku łańcuch śledzący istniał oddzielnie od sieci głównej Ethereu
 
 Sharding może bezpiecznie wejść do ekosystemu Ethereum tylko z mechanizmem konsensusu proof-of-stake. W łańcuchu śledzącym wprowadzono staking, który „połączył się” z siecią główną, torując drogę shardingowi, który pomoże w dalszym skalowaniu Ethereum.
 
-<ButtonLink to="/upgrades/sharding/">
+<ButtonLink to="/roadmap/danksharding/">
   Łańcuchy odłamkowe
 </ButtonLink>
 

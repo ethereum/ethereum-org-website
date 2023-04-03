@@ -20,7 +20,7 @@ A Fusão foi a junção da camada de execução original do Ethereum (a Rede pri
 
 <MergeInfographic />
 
-Inicialmente, a [Beacon Chain](/upgrades/beacon-chain/) foi enviada separadamente da [Rede principal](/glossary/#mainnet). A rede principal da Ethereum - com todas as suas contas, saldos, contratos inteligentes e estado da cadeia de blocos - continuou a ser protegida pela [prova de trabalho](/developers/docs/consensus-mechanisms/pow/), mesmo enquanto a Beacon Chain funcionava em paralelo usando a [prova de participação](/developers/docs/consensus-mechanisms/pos/). A Fusão foi quando esses dois sistemas finalmente se uniram, e a prova de trabalho foi permanentemente substituída pela prova de participação.
+Inicialmente, a [Beacon Chain](/roadmap/beacon-chain/) foi enviada separadamente da [Rede principal](/glossary/#mainnet). A rede principal da Ethereum - com todas as suas contas, saldos, contratos inteligentes e estado da cadeia de blocos - continuou a ser protegida pela [prova de trabalho](/developers/docs/consensus-mechanisms/pow/), mesmo enquanto a Beacon Chain funcionava em paralelo usando a [prova de participação](/developers/docs/consensus-mechanisms/pos/). A Fusão foi quando esses dois sistemas finalmente se uniram, e a prova de trabalho foi permanentemente substituída pela prova de participação.
 
 Imagine que o Ethereum é uma espaçonave que foi lançada antes que estivesse pronta para uma viagem interestelar. Com a Beacon Chain, a comunidade construiu um novo motor e um casco reforçado. Após muitos testes, chegou a hora de trocar o novo motor a quente pelo antigo em pleno voo. Isso integrou o novo e mais eficiente motor à nave existente, o que lhe permitiu cruzar anos-luz e conquistar o universo.
 
@@ -37,7 +37,7 @@ A integração representou a mudança oficial para o uso da Beacon Chain como o 
 Nenhuma história foi perdida na Fusão. À medida que a Rede principal se uniu com a Beacon Chain, ela também integrou todo o histórico transacional do Ethereum.
 
 <InfoBanner>
-Essa transição para a prova de participação mudou o modo como o ether é emitido. Saiba mais sobre <a href="/upgrades/merge/issuance/">Emissão de ether antes de depois da Fusão</a>.
+Essa transição para a prova de participação mudou o modo como o ether é emitido. Saiba mais sobre <a href="/roadmap/merge/issuance/">Emissão de ether antes de depois da Fusão</a>.
 </InfoBanner>
 
 ### Usuários e titulares {#users-holders}
@@ -197,7 +197,7 @@ A Fusão representa a adoção formal do Beacon Chain como a nova camada de cons
 
 Em vez disso, os blocos são propostos validando nós que colocaram o ETH em troca do direito de participar do consenso. Essas atualizações preparam o cenário para futuras atualizações de escalabilidade, incluindo fragmentação.
 
-<ButtonLink to="/upgrades/beacon-chain/">
+<ButtonLink to="/roadmap/beacon-chain/">
   A Beacon Chain
 </ButtonLink>
 
@@ -213,7 +213,7 @@ Originalmente, o plano era trabalhar na fragmentação antes da Fusão para aten
 
 Os planos para fragmentação estão evoluindo rapidamente, mas dado o surgimento e o sucesso das tecnologias de camada 2 para escalar a execução de transação, os planos de fragmentação mudaram para encontrar a maneira mais otimizada de distribuir a carga de armazenamento dos dados de chamadas compactadas em contratos rollup, permitindo um crescimento exponencial da capacidade da rede. Isso não seria possível sem uma primeira transição para a prova de participação.
 
-<ButtonLink to="/upgrades/sharding/">
+<ButtonLink to="/roadmap/danksharding/">
   Fragmentação
 </ButtonLink>
 

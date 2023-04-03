@@ -16,7 +16,7 @@ summaryPoint4: A technikai ütemtervekben "Fázis 0"-ként is ismerheted.
 
 ## Mit csinál a Beacon Chain? {#what-does-the-beacon-chain-do}
 
-A Beacon Chain fogja koordinálni vagy vezetni a [shardokból](/upgrades/sharding/) és [stakerekből](/staking/) álló kiterjesztett hálózatot. De nem olyan lesz, mint jelenleg az [Ethereum főhálózat](/glossary/#mainnet). Nem fog tudni számlákat vagy okosszerződéseket kezelni.
+A Beacon Chain fogja koordinálni vagy vezetni a [shardokból](/roadmap/danksharding/) és [stakerekből](/staking/) álló kiterjesztett hálózatot. De nem olyan lesz, mint jelenleg az [Ethereum főhálózat](/glossary/#mainnet). Nem fog tudni számlákat vagy okosszerződéseket kezelni.
 
 A Beacon Chain szerepe meg fog változni idővel, de egy olyan alapvető összetevője [ a biztonságos, fenntartható és skálázható Ethereumnak, amiért dolgozunk](/roadmap/vision/).
 
@@ -32,7 +32,7 @@ A letétbe helyezés és a validátorrá válás egyszerűbb, mint a [bányásza
 Ha érdekel a letétbe helyezés és szeretnél segíteni a Beacon Chain biztosításában, akkor <a href="/staking/">tudj meg többet a letétbe helyezésről</a>.
 </InfoBanner>
 
-Ez a második Eth2 fejlesztésnél is fontos változás: [a shard láncoknál](/upgrades/sharding/).
+Ez a második Eth2 fejlesztésnél is fontos változás: [a shard láncoknál](/roadmap/danksharding/).
 
 ### Shard láncok előkészítése {#setting-up-for-shard-chains}
 
@@ -48,13 +48,13 @@ Az Eth2 fejlesztések némileg összefüggnek. Foglaljuk össze tehát, hogy a B
 
 A Beacon Chain eleinte különállóan fog létezni az Ethereum főhálózattól, melyet ma is használunk. De végül össze lesznek kapcsolva. A terv a főhálózat “dokkolása” a proof-of-stake rendszerhez, melyet a Beacon Chain vezérel és koordinál.
 
-<ButtonLink to="/upgrades/merge/">A dokkolás</ButtonLink>
+<ButtonLink to="/roadmap/merge/">A dokkolás</ButtonLink>
 
 ### Shardok és a Beacon Chain {#shards-and-beacon-chain}
 
 A shard láncokat csak a proof-of-stake konszenzus mechnanizmussal lehet biztonságosan bevezetni az Ethereum ökoszisztémába. A Beacon Chain bevezeti a letétbe helyezést (staking) ezzel lekövezve a shard láncok bevezetéséhez szükséges utat.
 
-<ButtonLink to="/upgrades/sharding/">Shard láncok</ButtonLink>
+<ButtonLink to="/roadmap/danksharding/">Shard láncok</ButtonLink>
 
 <Divider />
 

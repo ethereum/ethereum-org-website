@@ -20,7 +20,7 @@ La Fusion est la réunion de la couche d'exécution originale d'Ethereum (le ré
 
 <MergeInfographic />
 
-Initialement, la [Chaîne phare](/upgrades/beacon-chain/) était envoyée séparément du [réseau principal](/glossary/#mainnet). Le réseau principal Ethereum - avec tous ses comptes, ses soldes, ses contrats intelligents et l'état de la blockchain - continuait d'être sécurisé par [la preuve de travail](/developers/docs/consensus-mechanisms/pow/), même si la Chaîne Phare fonctionnait en parallèle en utilisant [la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/). La Fusion a été le moment où ces deux systèmes se sont finalement combinés, et la preuve de travail a été remplacée de façon permanente par la preuve d'enjeu.
+Initialement, la [Chaîne phare](/roadmap/beacon-chain/) était envoyée séparément du [réseau principal](/glossary/#mainnet). Le réseau principal Ethereum - avec tous ses comptes, ses soldes, ses contrats intelligents et l'état de la blockchain - continuait d'être sécurisé par [la preuve de travail](/developers/docs/consensus-mechanisms/pow/), même si la Chaîne Phare fonctionnait en parallèle en utilisant [la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/). La Fusion a été le moment où ces deux systèmes se sont finalement combinés, et la preuve de travail a été remplacée de façon permanente par la preuve d'enjeu.
 
 Imaginez qu'Ethereum est un vaisseau spatial qui a été lancé avant qu'il ne soit prêt pour un voyage interstellaire. Avec la Chaîne phare, la communauté a construit un nouveau moteur et un fuselage renforcé. Après de nombreux tests, il a été temps de remplacer à chaud le nouveau moteur par l'ancien en plein vol. Cela a permis de fusionner le nouveau moteur, plus efficace, avec le vaisseau existant, prêt à franchir plusieurs années-lumière et à conquérir l'univers.
 
@@ -37,7 +37,7 @@ La Fusion représente le passage officiel à l'utilisation de la Chaîne phare c
 Aucun historique n'a été perdu dans la Fusion. Au fur et à mesure que le réseau principal a fusionné avec la Chaîne phare, il a également fusionné la totalité de l'historique transactionnel d'Ethereum.
 
 <InfoBanner>
-Cette transition vers la preuve d'enjeu a modifié la façon dont l'éther est émis. En savoir plus sur l'émission d'<a href="/upgrades/merge/issuance/">éthers avant et après la Fusion</a>.
+Cette transition vers la preuve d'enjeu a modifié la façon dont l'éther est émis. En savoir plus sur l'émission d'<a href="/roadmap/merge/issuance/">éthers avant et après la Fusion</a>.
 </InfoBanner>
 
 ### Utilisateurs et détenteurs {#users-holders}
@@ -197,7 +197,7 @@ La Fusion représente l'adoption formelle de la Chaîne phare comme nouvelle cou
 
 Les blocs sont dès lors proposés par validation des nœuds qui ont misés l'ETH en échange du droit de participer au consensus. Ces mises à niveau permettent de préparer le terrain pour de futures améliorations d'évolutivité, y compris la fragmentation.
 
-<ButtonLink to="/upgrades/beacon-chain/">
+<ButtonLink to="/roadmap/beacon-chain/">
   La Chaîne phare
 </ButtonLink>
 
@@ -213,7 +213,7 @@ Initialement, l'objectif était de travailler sur la fragmentation avant la Fusi
 
 Les plans liés à la fragmentation évoluent rapidement, mais compte tenu du développement et du succès rencontré par les technologies de couche 2 visant à augmenter l'évolutivité de l'exécution des transactions, ces plans de fragmentation ont été modifiés afin de trouver la meilleure manière de répartir le poids lié au stockage des données d'appel comprimées émanant des contrats roll-up et de permettre la croissance exponentielle du réseau. Cela ne serait pas possible sans opérer d'abord une transition vers le système de preuve d'enjeu.
 
-<ButtonLink to="/upgrades/sharding/">
+<ButtonLink to="/roadmap/danksharding/">
   Fragmentation
 </ButtonLink>
 

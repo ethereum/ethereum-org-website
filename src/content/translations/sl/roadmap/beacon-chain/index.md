@@ -15,7 +15,7 @@ summaryPoint3: Oddajniška veriga je vpeljala protokol z logiko za doseganje sog
 
 ## Kaj je bila oddajniška veriga? {#what-is-the-beacon-chain}
 
-Oddajniška veriga se je imenovala izvirna veriga blokov z mehanizmom dokaza o deležu, ki je začela delovati leta 2020. Ustvarili smo jo, da bi preverili, ali je mehanizem za doseganje soglasja z dokazom o deležu ustrezen in vzdržen, preden bi ga omogočili v glavnem Ethereumovem omrežju. Zaradi tega je delovala vzporedno z izvirnim Ethereumovim omrežjem z dokazom o delu. Za izklop mehanizma z dokazom o delu in vklop mehanizma z dokazom o deležu v Ethereumovem omrežju smo morali oddajniški verigi ukazati, da sprejema transakcije z izvirne Ethereumove verige, združiti te transakcije v bloke in jih razvrstiti v verigo blokov z mehanizmom za doseganje soglasja z dokazom o deležu. V istem trenutku so izvirni Ethereumovi odjemalci prenehali z rudarjenjem, posredovanjem blokov in logiko za doseganje soglasja ter jih predali oddajniški verigi. Ta dogodek se imenuje [spojitev](/upgrades/merge/). Ko je prišlo do spojitve, ni bilo več dveh verig blokov. Obstajala je le še ena Ethereumova veriga z dokazom o deležu.
+Oddajniška veriga se je imenovala izvirna veriga blokov z mehanizmom dokaza o deležu, ki je začela delovati leta 2020. Ustvarili smo jo, da bi preverili, ali je mehanizem za doseganje soglasja z dokazom o deležu ustrezen in vzdržen, preden bi ga omogočili v glavnem Ethereumovem omrežju. Zaradi tega je delovala vzporedno z izvirnim Ethereumovim omrežjem z dokazom o delu. Za izklop mehanizma z dokazom o delu in vklop mehanizma z dokazom o deležu v Ethereumovem omrežju smo morali oddajniški verigi ukazati, da sprejema transakcije z izvirne Ethereumove verige, združiti te transakcije v bloke in jih razvrstiti v verigo blokov z mehanizmom za doseganje soglasja z dokazom o deležu. V istem trenutku so izvirni Ethereumovi odjemalci prenehali z rudarjenjem, posredovanjem blokov in logiko za doseganje soglasja ter jih predali oddajniški verigi. Ta dogodek se imenuje [spojitev](/roadmap/merge/). Ko je prišlo do spojitve, ni bilo več dveh verig blokov. Obstajala je le še ena Ethereumova veriga z dokazom o deležu.
 
 ## Kaj je naredila oddajniška veriga? {#what-does-the-beacon-chain-do}
 
@@ -47,7 +47,7 @@ Mehanizem dokaza o deležu ima to prednost, da ima v vsakem trenutku register vs
 
 Ta odgovornost je drugačna kot mehanizem dokaza o delu, kjer rudarji niso odgovorni omrežju. Tako lahko kadarkoli in brez posledic trajno prenehajo z rudarjenjem in izklopijo programsko opremo vozlišča. Pri tem mehanizmu prav tako ni registra znanih ustvarjalcev blokov niti zanesljivega načina za varno razdelitev odgovornosti v omrežju.
 
-[Več o razdrobitvi](/upgrades/sharding/)
+[Več o razdrobitvi](/roadmap/danksharding/)
 
 ## Razmerje med nadgradnjami {#relationship-between-upgrades}
 
@@ -57,7 +57,7 @@ Vse nadgradnje Ethereuma so med seboj delno povezane. Povzemimo torej, kako odda
 
 Oddajniška veriga je najprej delovala neodvisno od Ethereumovega glavnega omrežja, vendar sta se leta 2022 spojila.
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   Spojitev
 </ButtonLink>
 
@@ -65,7 +65,7 @@ Oddajniška veriga je najprej delovala neodvisno od Ethereumovega glavnega omre�
 
 Razdrobitev je mogoče v Ethereumovo okolje varno uvesti le, ko je vpeljan mehanizem za doseganje soglasja z dokazom o deležu. Oddajniška veriga je vpeljala zastavljanje, ki se je "spojilo" z glavnim omrežem in tlakovalo pot razdrobitvi, ki bo pomagala pri širitvi Ethereumovega omrežja.
 
-<ButtonLink to="/upgrades/sharding/">
+<ButtonLink to="/roadmap/danksharding/">
   Razdrobljene verige
 </ButtonLink>
 

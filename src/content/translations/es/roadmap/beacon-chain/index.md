@@ -15,7 +15,7 @@ summaryPoint3: La cadena de baliza introdujo la lógica de consenso y bloqueó e
 
 ## ¿Qué era la cadena de baliza? {#what-is-the-beacon-chain}
 
-La cadena de bloques fue el nombre de la cadena de bloques de prueba de participación original lanzada en 2020. Fue creada para mostrar que la lógica de consenso de la prueba de participación era segura y sostenible, antes de habilitarla en la red principal de Ethereum. Por esta razón, estuvo funcionando paralelamente con la prueba de trabajo de Ethereum. Al desconectar la prueba de trabajo y habilitar la prueba de participación en Ethereum, fue necesario instruir a la cadena de baliza a que aceptara las transacciones alojadas en la agrupación de cadena original de Ethereum. Luego, estas se agruparon en bloques y posteriormente se organizaron en la cadena de bloques usando un mecanismo de consenso basado en la prueba de participación. Al mismo tiempo, los clientes originales de Ethereum apagaron su minería, propagación de bloques y lógica de consenso, confiándolo todo a la cadena de baliza. A este evento se le denominó [La Fusión](/upgrades/merge/). Una vez completada La Fusión, dejó de haber dos cadenas de bloques, convirtiéndose en una única cadena de Ethereum con prueba de participación.
+La cadena de bloques fue el nombre de la cadena de bloques de prueba de participación original lanzada en 2020. Fue creada para mostrar que la lógica de consenso de la prueba de participación era segura y sostenible, antes de habilitarla en la red principal de Ethereum. Por esta razón, estuvo funcionando paralelamente con la prueba de trabajo de Ethereum. Al desconectar la prueba de trabajo y habilitar la prueba de participación en Ethereum, fue necesario instruir a la cadena de baliza a que aceptara las transacciones alojadas en la agrupación de cadena original de Ethereum. Luego, estas se agruparon en bloques y posteriormente se organizaron en la cadena de bloques usando un mecanismo de consenso basado en la prueba de participación. Al mismo tiempo, los clientes originales de Ethereum apagaron su minería, propagación de bloques y lógica de consenso, confiándolo todo a la cadena de baliza. A este evento se le denominó [La Fusión](/roadmap/merge/). Una vez completada La Fusión, dejó de haber dos cadenas de bloques, convirtiéndose en una única cadena de Ethereum con prueba de participación.
 
 ## ¿Qué hace la cadena de baliza? {#what-does-the-beacon-chain-do}
 
@@ -47,7 +47,7 @@ La prueba de participación ofrece las ventajas de contar con un registro de tod
 
 Esta responsabilidad se diferencia de la responsabilidad de la prueba de trabajo, en donde los mineros no tenían obligaciones con la red, quienes podían detener el minado y desactivar el software del nodo permanentemente sin que esto tuviera repercusiones. Tampoco había un registro de quién proponía los bloques, por lo que no había forma de dividir apropiadamente las responsabilidades de la red.
 
-[Más sobre la fragmentación](/upgrades/sharding/)
+[Más sobre la fragmentación](/roadmap/danksharding/)
 
 ## Relación entre actualizaciones {#relationship-between-upgrades}
 
@@ -57,7 +57,7 @@ Las actualizaciones de Ethereum están interrelacionadas de alguna manera. Por t
 
 En sus comienzos, la cadena de baliza existía de manera independiente a la red principal de Ethereum, pero se fusionaron en 2022.
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   La Fusión
 </ButtonLink>
 
@@ -65,7 +65,7 @@ En sus comienzos, la cadena de baliza existía de manera independiente a la red 
 
 La fragmentación solo podría ser implementada en el ecosistema de Ethereum de manera segura a través del mecanismo de consenso de la prueba de participación. La cadena de baliza introdujo apuestas, que se «fusionaron» con la red principal, allanando el camino para la fragmentación y así ayudar a una mayor escalabilidad de Ethereum.
 
-<ButtonLink to="/upgrades/sharding/">
+<ButtonLink to="/roadmap/danksharding/">
   Cadenas de fragmentos
 </ButtonLink>
 
