@@ -39,17 +39,17 @@ Guides, resources, and tools for web3 Designers
 - [2022 DAO Research Update: What do DAO Builders Need?](https://youtu.be/NlNGbHgJbAU)
 - [ConSensys: DeFi User Research Report 2022](https://archive.devcon.org/archive/watch/5/testing-dapps-with-realistic-web3-mocking/?playlist=Devcon%205&tab=YouTube)
 
-## Bounties {Bounties}
+## Bounties {#Bounties}
 - [Dework](https://app.dework.xyz/bounties)
 - [Gitcoin](https://gitcoin.co/bounties)
 - [Gitcoin Hackathons](https://gitcoin.co/hackathons)
 
-## Design DAOs {Design-DAOs}
+## Design DAOs {#Design-DAOs}
 - [Vectordao.com](https://vectordao.com/)
 - [Deepwork.studio](https://www.deepwork.studio/)
 - [Designer-dao.xyz](https://www.designer-dao.xyz/)
 
-## Communities {Communities}
+## Communities {#Communities}
 - [Openux.xyz](https://openux.xyz/about)
 - [t.me/web3uxdesign](https://t.me/web3uxdesign)
 
