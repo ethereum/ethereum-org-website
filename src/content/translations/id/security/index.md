@@ -158,8 +158,6 @@ Saat berinteraksi dengan kontrak pintar, jangan izinkan batas pembelanjaan tak t
 
 Banyak dompet Ethereum menawarkan perlindungan batas untuk melindungi dari akun yang terkuras.
 
-[Jelajahi dompet dengan perlindungan terbatas](/wallets/find-wallet/?filters=has_limits_protection)
-
 <Divider />
 
 ## Penipuan umum {#common-scams}

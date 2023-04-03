@@ -55,8 +55,8 @@ Remembering strong, unique passwords for every account you have isn't ideal. A p
 
 - [Bitwarden](https://bitwarden.com/)
 - [KeePass](https://keepass.info/)
-- [LastPass](https://www.lastpass.com/)
 - [1Password](https://1password.com/)
+- Or check out other [recommended password managers](https://www.privacytools.io/secure-password-manager)
 
 ### Use Two-Factor Authentication {#two-factor-authentication}
 
@@ -137,7 +137,7 @@ By screenshotting your seed phrases or private keys, you risk syncing them to th
 
 ### Use a hardware wallet {#use-hardware-wallet}
 
-A hardware wallet provides offline storage for private keys. They are considered the most secure wallet option for storing your private keys.
+A hardware wallet provides offline storage for private keys. They are considered the most secure wallet option for storing your private keys: your private key touches the internet and stays completely local on your device.
 
 Keeping private keys offline massively reduces the risk of being hacked, even if a hacker gets control of your computer.
 
@@ -159,7 +159,7 @@ When interacting with smart contracts, do not allow unlimited spend limits. An u
 
 Many Ethereum wallets offer limits protection to safeguard against accounts being drained.
 
-[Explore wallets with limits protection](/wallets/find-wallet/?filters=has_limits_protection)
+[How to revoke smart contract access to your crypto funds](/guides/how-to-revoke-token-access/)
 
 <Divider />
 
@@ -288,3 +288,5 @@ Airdrop scams involve a scam project airdropping an asset (NFT, token) into your
 - [Staying Safe: Common Scams](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Avoiding Scams](https://bitcoin.org/en/scams) - _Bitcoin.org_
 - [Twitter thread on common crypto phishing emails and messages](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+
+<QuizWidget quizKey="security" />

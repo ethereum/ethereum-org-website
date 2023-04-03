@@ -1,10 +1,21 @@
 // Libraries
 import React from "react"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
-import { useIntl } from "react-intl"
-import styled from "@emotion/styled"
-import { useTheme } from "@emotion/react"
+import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
+import { useTranslation } from "gatsby-plugin-react-i18next"
+import {
+  Box,
+  BoxProps,
+  Flex,
+  Heading,
+  HeadingProps,
+  Img,
+  ImgProps,
+  List,
+  ListItem,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react"
 import type { Context } from "../../../types"
 
 // Components
@@ -14,268 +25,270 @@ import Link from "../../../components/Link"
 import PageMetadata from "../../../components/PageMetadata"
 import Translation from "../../../components/Translation"
 import TranslationLeaderboard from "../../../components/TranslationLeaderboard"
-import { Content, Page } from "../../../components/SharedStyledComponents"
 import FeedbackCard from "../../../components/FeedbackCard"
 
 // Utils
-import { translateMessageId } from "../../../utils/translations"
 import { getImage } from "../../../utils/image"
 
-// Styles
-const H1 = styled.h1`
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 2rem;
-  }
-`
+const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />
 
-const H2 = styled.h2``
+const ContentHeading = (props: HeadingProps) => (
+  <Heading lineHeight={1.4} {...props} />
+)
 
-const TwoColumnContent = styled.div`
-  display: flex;
-  width: 100%;
-  margin-right: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 0rem;
-    margin-right: 0rem;
-  }
-`
-
-const LeaderboardContent = styled(Content)`
-  max-width: 800px;
-  h2 {
-    text-align: center;
-  }
-`
-
-const LeftColumn = styled.div`
-  margin-right: 2rem;
-  width: 50%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: auto 0rem;
-    width: 100%;
-  }
-`
-
-const RightColumn = styled.div`
-  margin-left: 2rem;
-  width: 50%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: auto 0rem;
-    width: 100%;
-  }
-`
-
-const CertificateImageWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-`
-
-const Image = styled(GatsbyImage)`
-  background-size: contain;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    max-height: 300px;
-    max-width: 300px;
-  }
-`
-
-const CentralActionCard = styled(ActionCard)`
-  flex: none;
-  margin: 2rem 0;
-  .action-card-image-wrapper {
-    padding: 1rem;
-  }
-  @media (min-width: ${(props) => props.theme.breakpoints.s}) {
-    display: flex;
-
-    .action-card-image-wrapper {
-      min-width: 260px;
-    }
-    .action-card-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin-left: 1rem;
-
-      p {
-        margin-bottom: 0;
-      }
-    }
-  }
-`
+const Image = (props: ImgProps & { image: IGatsbyImageData }) => {
+  return (
+    <Img
+      as={GatsbyImage}
+      maxH={{ base: "300px", sm: "none" }}
+      maxW={{ base: "300px", sm: "none" }}
+      backgroundSize="contain"
+      imgStyle={{ objectFit: "contain" }}
+      {...props}
+    />
+  )
+}
 
 const TranslatorAcknowledgements = ({
   data,
   location,
 }: PageProps<Queries.TranslatorAcknowledgementsPageQuery, Context>) => {
-  const intl = useIntl()
-  const theme = useTheme()
-  const isDarkTheme = theme.isDark
-  const themedCertificateImage = isDarkTheme
-    ? data.darkThemeCertificate
-    : data.lightThemeCertificate
+  const { t } = useTranslation()
+  const themedCertificateImage = useColorModeValue(
+    data.lightThemeCertificate,
+    data.darkThemeCertificate
+  )
 
   return (
-    <Page>
+    <Flex direction="column" align="center" w="full">
       <PageMetadata
-        title={translateMessageId(
-          "page-contributing-translation-program-acknowledgements-meta-title",
-          intl
+        title={t(
+          "page-contributing-translation-program-acknowledgements-meta-title"
         )}
-        description={translateMessageId(
-          "page-contributing-translation-program-acknowledgements-meta-description",
-          intl
+        description={t(
+          "page-contributing-translation-program-acknowledgements-meta-description"
         )}
       />
 
       <Content>
         <Breadcrumbs slug={location.pathname} />
-        <H1>
+        <ContentHeading
+          as="h1"
+          fontSize={{ base: "2rem", sm: "2.5rem", md: "5xl" }}
+        >
           <Translation id="page-contributing-translation-program-acknowledgements-acknowledgement-page-title" />
-        </H1>
-        <TwoColumnContent>
-          <LeftColumn>
-            <p>
+        </ContentHeading>
+        <Flex
+          direction={{ base: "column", lg: "row" }}
+          align={{ base: "flex-start", lg: "normal" }}
+          w="full"
+          ml={0}
+          mr={{ base: 0, lg: 8 }}
+        >
+          {/* LEFT COLUMN */}
+          <Box
+            m={{ base: "auto 0", lg: "0 2rem 0 0" }}
+            w={{ base: "full", lg: "50%" }}
+          >
+            <Text>
               <Translation id="page-contributing-translation-program-acknowledgements-acknowledgement-page-1" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-contributing-translation-program-acknowledgements-acknowledgement-page-2" />
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-contributing-translation-program-acknowledgements-acknowledgement-page-3" />{" "}
               <Link to="/contributing/translation-program/contributors/">
                 <Translation id="page-contributing-translation-program-acknowledgements-acknowledgement-page-link" />
               </Link>
               .
-            </p>
-            <p>
+            </Text>
+            <Text>
               <Translation id="page-contributing-translation-program-acknowledgements-acknowledgement-page-4" />
-            </p>
+            </Text>
             {/* TODO: add certification section */}
             {/* <p>
               <Translation id="page-contributing-translation-program-acknowledgements-acknowledgement-page-5" />
             </p> */}
-          </LeftColumn>
-          <RightColumn>
+          </Box>
+          {/* RIGHT COLUMN */}
+          <Box
+            m={{ base: "auto 0", lg: "0 0 0 2rem" }}
+            w={{ base: "full", lg: "50%" }}
+          >
             <Image
               image={getImage(data.dogeComputer)!}
-              alt={translateMessageId(
-                "page-contributing-translation-program-acknowledgements-hero-image-alt",
-                intl
+              alt={t(
+                "page-contributing-translation-program-acknowledgements-hero-image-alt"
               )}
-              objectFit="contain"
             />
-          </RightColumn>
-        </TwoColumnContent>
+          </Box>
+        </Flex>
       </Content>
 
-      <LeaderboardContent>
-        <H2>
+      <Content maxW="800px">
+        <ContentHeading
+          as="h2"
+          textAlign="center"
+          fontSize={{ base: "2xl", md: "2rem" }}
+          fontWeight={600}
+        >
           <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-title" />
-        </H2>
+        </ContentHeading>
         <TranslationLeaderboard
           monthData={data.monthData}
           quarterData={data.quarterData}
           allTimeData={data.allTimeData}
         />
-        <p>
+        <Text>
           <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-1" />
-        </p>
-      </LeaderboardContent>
+        </Text>
+      </Content>
 
       <Content>
-        <H2>
+        <ContentHeading
+          as="h2"
+          fontSize={{ base: "2xl", md: "2rem" }}
+          fontWeight={600}
+        >
           <Translation id="page-contributing-translation-program-acknowledgements-our-translators-title" />
-        </H2>
-        <p>
+        </ContentHeading>
+        <Text>
           <Translation id="page-contributing-translation-program-acknowledgements-our-translators-1" />
-        </p>
-        <CentralActionCard
+        </Text>
+        <Box
+          as={ActionCard}
           to="/contributing/translation-program/contributors/"
-          title={translateMessageId(
-            "page-contributing-translation-program-acknowledgements-our-translators-view-all",
-            intl
+          title={t(
+            "page-contributing-translation-program-acknowledgements-our-translators-view-all"
           )}
-          description={translateMessageId(
-            "page-contributing-translation-program-acknowledgements-our-translators-cta",
-            intl
+          description={t(
+            "page-contributing-translation-program-acknowledgements-our-translators-cta"
           )}
           image={getImage(data.ethereum)!}
+          display={{ base: "block", sm: "flex" }}
+          flex="none"
+          my={8}
+          mx={0}
+          sx={{
+            ".action-card-image-wrapper": {
+              p: 4,
+              minW: { sm: "260px" },
+            },
+            ".action-card-content": {
+              display: { sm: "flex" },
+              justifyContent: { sm: "center" },
+              flexDirection: { sm: "column" },
+              ml: { sm: 4 },
+            },
+            p: {
+              mb: 0,
+            },
+          }}
         />
       </Content>
 
       <Content id="certificate">
-        <H2>
+        <ContentHeading
+          as="h2"
+          fontSize={{ base: "2xl", md: "2rem" }}
+          fontWeight={600}
+        >
           <Translation id="page-contributing-translation-program-acknowledgements-cert-title" />
-        </H2>
-        <p>
+        </ContentHeading>
+        <Text>
           <Translation id="page-contributing-translation-program-acknowledgements-cert-1" />
-        </p>
-        <p>
+        </Text>
+        <Text>
           <Translation id="page-contributing-translation-program-acknowledgements-cert-2" />
-        </p>
-        <p>
+        </Text>
+        <Text>
           <Translation id="page-contributing-translation-program-acknowledgements-cert-3" />
-        </p>
-        <CertificateImageWrapper>
+        </Text>
+        <Flex justify="center">
           <Image
             image={getImage(themedCertificateImage)!}
             alt="translator certificate"
-            objectFit="contain"
           />
-        </CertificateImageWrapper>
+        </Flex>
       </Content>
 
       <Content id="poap">
-        <H2>
+        <ContentHeading
+          as="h2"
+          fontSize={{ base: "2xl", md: "2rem" }}
+          fontWeight={600}
+        >
           <Translation id="page-contributing-translation-program-acknowledgements-poaps-title" />
-        </H2>
-        <p>
+        </ContentHeading>
+        <Text>
           <Translation id="page-contributing-translation-program-acknowledgements-1" />
-        </p>
-        <p>
+        </Text>
+        <Text>
           <Translation id="page-contributing-translation-program-acknowledgements-2" />
-        </p>
-        <p>
+        </Text>
+        <Text>
           <Translation id="page-contributing-translation-program-acknowledgements-3" />
-        </p>
-        <h3>
+        </Text>
+        <ContentHeading
+          as="h3"
+          fontSize={{ base: "xl", md: "2xl" }}
+          fontWeight={600}
+        >
           <Translation id="page-contributing-translation-program-acknowledgements-how-to-claim-title" />
-        </h3>
-        <ol type="1">
-          <li>
+        </ContentHeading>
+
+        <List as="ol" styleType="decimal">
+          <ListItem>
             <Translation id="page-contributing-translation-program-acknowledgements-how-to-claim-1" />{" "}
             <Link to="https://discord.gg/CetY6Y4">
               <Translation id="page-contributing-translation-program-acknowledgements-how-to-claim-1-discord" />
             </Link>
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <Translation id="page-contributing-translation-program-acknowledgements-how-to-claim-2" />
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <Translation id="page-contributing-translation-program-acknowledgements-how-to-claim-3" />
-          </li>
-          <li>
+          </ListItem>
+          <ListItem>
             <Translation id="page-contributing-translation-program-acknowledgements-how-to-claim-4" />
-          </li>
-        </ol>
-        <p>
+          </ListItem>
+        </List>
+        <Text>
           <Translation id="page-contributing-translation-program-acknowledgements-4" />
-        </p>
+        </Text>
       </Content>
       <Content>
         <FeedbackCard />
       </Content>
-    </Page>
+    </Flex>
   )
 }
 
 export default TranslatorAcknowledgements
 
 export const query = graphql`
-  query TranslatorAcknowledgementsPage {
+  query TranslatorAcknowledgementsPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: {
+          in: [
+            "page-contributing-translation-program-acknowledgements"
+            "common"
+          ]
+        }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     dogeComputer: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
         gatsbyImageData(

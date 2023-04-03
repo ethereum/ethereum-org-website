@@ -1,42 +1,57 @@
 // Libraries
 import React from "react"
-import styled from "@emotion/styled"
+import { Flex, Box, Icon } from "@chakra-ui/react"
+import {
+  FaTwitter,
+  FaYoutube,
+  FaDiscord,
+  FaRedditAlien,
+  FaStackExchange,
+  FaGlobe,
+} from "react-icons/fa"
 
-// Components
-import Icon from "./Icon"
+const socialColors = {
+  reddit: "#ff4301",
+  twitter: "#1da1f2",
+  youtube: "#ff0000",
+  discord: "#7289da",
+  stackExchange: "#48a2da",
+}
 
-// Styles
-const Item = styled.div`
-  display: flex;
-  width: 100%;
-  padding: 0.5rem 0;
-  align-items: center;
-`
-
-const StyledIcon = styled(Icon)`
-  padding-right: 0.75rem;
-`
-
-const ChildrenContainer = styled.div`
-  font-style: italic;
-
-  > a {
-    font-style: normal;
-  }
-`
+const icons = {
+  reddit: FaRedditAlien,
+  twitter: FaTwitter,
+  youtube: FaYoutube,
+  discord: FaDiscord,
+  stackExchange: FaStackExchange,
+  webpage: FaGlobe,
+}
 
 export interface IProps {
   children?: React.ReactNode
-  socialIcon: string
+  socialIcon: keyof typeof icons
 }
+
 const SocialListItem: React.FC<IProps> = ({ children, socialIcon }) => {
   return (
-    <Item>
-      <div>
-        <StyledIcon name={socialIcon} size={"2.5rem"} color={true} />
-      </div>
-      <ChildrenContainer>{children}</ChildrenContainer>
-    </Item>
+    <Flex w="100%" py="2" px="0" align="center">
+      <Icon
+        as={icons[socialIcon]}
+        pr={3}
+        boxSize={10}
+        color={socialColors[socialIcon]}
+      />
+      <Box
+        fontStyle="italic"
+        sx={{
+          "> a": {
+            fontStyle: "normal",
+          },
+        }}
+      >
+        {children}
+      </Box>
+    </Flex>
   )
 }
 

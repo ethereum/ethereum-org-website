@@ -1,8 +1,7 @@
 ---
-title: Dagger-Hashamoto 算法
-description: 详细说明 Dagger-Hashamoto 算法。
+title: Dagger-Hashimoto
+description: 详细了解 Dagger-Hashimoto 算法。
 lang: zh
-sidebar: true
 ---
 
 Dagger-Hashimoto 是以太坊挖矿算法的原始研究实现和规范。 但是，Dagger-Hashimoto 已被 [Ethash](#ethash) 取代。 在[合并](/updates/merge)之后，挖矿将完全关闭，届时以太坊将使用[权益证明](/developers/docs/consensus-mechanisms/pos)机制来提供保护。

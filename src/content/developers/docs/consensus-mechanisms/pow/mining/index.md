@@ -5,7 +5,7 @@ lang: en
 ---
 
 <InfoBanner emoji=":wave:">
-   Proof-of-work is no longer underlying Ethereum's consensus mechanism, meaning mining has been switched off. Instead, Ethereum is secured by validators who stake ETH. You can start staking your ETH today. Read more on [The Merge](/upgrades/merge/), [proof-of-stake](/developers/docs/consensus-mechanisms/pos/), and [staking](/staking/). This page is for historical interest.
+Proof-of-work is no longer underlying Ethereum's consensus mechanism, meaning mining has been switched off. Instead, Ethereum is secured by validators who stake ETH. You can start staking your ETH today. Read more on <a href='/upgrades/merge/'>The Merge</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>proof-of-stake</a>, and <a href='/staking/'>staking</a>. This page is for historical interest only.
 </InfoBanner>
 
 ## Prerequisites {#prerequisites}
@@ -41,6 +41,8 @@ To further explore mining profitability, use a mining calculator, such as the on
 
 ## How Ethereum transactions were mined {#how-ethereum-transactions-were-mined}
 
+The following provides an overview of how transactions were mined in Ethereum proof-of-work. An analogous description of this process for Ethereum proof-of-stake can be found [here](/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos).
+
 1. A user writes and signs a [transaction](/developers/docs/transactions/) request with the private key of some [account](/developers/docs/accounts/).
 2. The user broadcasts the transaction request to the entire Ethereum network from some [node](/developers/docs/nodes-and-clients/).
 3. Upon hearing about the new transaction request, each node in the Ethereum network adds the request to their local mempool, a list of all transaction requests they’ve heard about that have not yet been committed to the blockchain in a block.
@@ -54,6 +56,12 @@ To further explore mining profitability, use a mining calculator, such as the on
 
 Every transaction is mined (included in a new block and propagated for the first time) once, but executed and verified by every participant in the process of advancing the canonical EVM state. This highlights one of the central mantras of blockchain: **Don’t trust, verify**.
 
+## Ommer (uncle) blocks {#ommer-blocks}
+
+Block mining on proof-of-work was probabilistic, meaning sometimes two valid blocks were published simultaneously due to network latency. In this case, the protocol had to determine the longest (and therefore most "valid") chain while ensuring fairness towards miners by partially rewarding the unincluded valid block proposed. This encouraged further decentralization of the network as smaller miners, who might face greater latency, could still generate returns via [ommer](/glossary/#ommer) block rewards.
+
+The term "ommer" is the preferred gender-neutral term for the sibling of a parent block, but this is also sometimes referred to as an "uncle". **Since Ethereum's move to proof-of-stake, ommer blocks are no longer mined** as only one proposer is elected in each slot. You can see this change by viewing the [historical chart](https://ycharts.com/indicators/ethereum_uncle_rate) of the ommer blocks mined.
+
 ## A visual demo {#a-visual-demo}
 
 Watch Austin walk you through mining and the proof-of-work blockchain.
@@ -65,16 +73,6 @@ Watch Austin walk you through mining and the proof-of-work blockchain.
 Ethereum Mainnet only ever used one mining algorithm - ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash). Ethhash was the successor to an original R&D algorithm known as ['Dagger-Hashimoto'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto).
 
 [More on mining algorithms](/developers/docs/consensus-mechanisms/pow/mining-algorithms/).
-
-## Further reading {#further-reading}
-
-- [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
-
-## Related tools {#related-tools}
-
-- [Top Ethereum miners](https://etherscan.io/stat/miner?range=7&blocktype=blocks)
-- [Etherscan mining calculator](https://etherscan.io/ether-mining-calculator)
-- [Minerstat mining calculator](https://minerstat.com/coin/ETH)
 
 ## Related topics {#related-topics}
 

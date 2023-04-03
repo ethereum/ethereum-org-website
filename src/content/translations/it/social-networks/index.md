@@ -21,7 +21,7 @@ Esistono molti social network decentralizzati come alternative ai servizi social
 
 ### Come funzionano i social network decentralizzati? {#decentralized-social-networks-overview}
 
-I social network decentralizzati sono una classe di [applicazioni decentralizzate (dapp)](/dapps/), applicazioni sviluppate dai [contratti intelligenti](/developers/docs/smart-contracts/) distribuiti sulla blockchain. Il codice del contratto serve da backend per queste app e ne definisce la logica aziendale.
+I social network decentralizzati sono una classe di [applicazioni decentralizzate (dapp)](/dapps/): applicazioni sviluppate dai [contratti intelligenti](/developers/docs/smart-contracts/) distribuiti sulla blockchain. Il codice del contratto serve da backend per queste app e ne definisce la logica aziendale.
 
 Le piattaforme social tradizionali si affidano ai database per memorizzare le informazioni degli utenti, il codice del programma e altre forme di dati. Ma questo crea singoli punti di guasto e introduce un rischio significativo. Ad esempio, i server di Facebook sono tristemente [andati offline per ore](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) l'anno scorso, impedendo agli utenti di accedere alla piattaforma.
 
@@ -37,13 +37,13 @@ Molte piattaforme social basate sulla blockchain hanno token nativi che rendono 
 
 2. I social network decentralizzati sono costruiti su ideali open source e rendono disponibile il codice sorgente per le applicazioni all'ispezione pubblica. Eliminando l'implementazione di algoritmi opachi comuni nei social tradizionali, i social network basati sulla blockchain possono allineare gli interessi di utenti e a quelli dei creatori della piattaforma.
 
-3. I social decentralizzati eliminano l’"intermediario." I creatori di contenuti hanno la proprietà diretta sui propri contenuti e si impegnano direttamente con follower, fan, acquirenti e altri soggetti, semplicemente con uno smart contract tra loro.
+3. I social network decentralizzati eliminano l'"intermediario". I creatori di contenuti hanno la proprietà diretta sui propri contenuti e si impegnano direttamente con seguaci, fan, acquirenti e altre parti, senza nient'altro che un contratto intelligente tra loro.
 
 4. Poiché le dapp sono eseguite sulla rete di Ethereum, sostenuta da una rete di nodi globale e peer-to-peer, i social decentralizzati sono meno esposte a interruzioni e guasti del server.
 
-5. Le piattaforme social decentralizzate offrono un quadro di monetizzazione migliorato per i creatori di contenuti tramite i token non fungibili (NFT), i pagamenti in cripto in app e altro.
+5. Le piattaforme social decentralizzate offrono un quadro di monetizzazione migliorato per i creatori di contenuti, tramite i token non fungibili (NFT), i pagamenti in criptovalute integrati e altro.
 
-6. I social decentralizzati consentono agli utenti un livello elevato di privacy e anonimato. Per esempio, una persona può accedere a un social basato su Ethereum usando un profilo ENS o un portafoglio, senza dover condividere dati personali identificabili (PII) come nomi, indirizzi email, etc.
+6. I social decentralizzati permettono agli utenti un elevato livello di privacy e anonimato. Per esempio, una persona può accedere a un social basato su Ethereum usando un profilo ENS o un portafoglio, senza dover condividere dati personali identificabili (PII) come nomi, indirizzi email, etc.
 
 7. I social decentralizzati non si affidano a database centralizzati, ma all'archiviazione decentralizzata, considerevolmente migliori per proteggere i dati degli utenti.
 
@@ -75,11 +75,11 @@ Le piattaforme social native del [Web3](/web3/) non sono le sole che stanno prov
 
 ### Reddit {#reddit}
 
-Reddit ha [pubblicizzato i Community Points](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users), ovvero token ERC-20 che gli utenti possono guadagnare pubblicando contenuti di qualità e contribuendo alle community online (subreddit). È possibile rivendicarli per [ottenere privilegi esclusivi e vantaggi](https://www.reddit.com/community-points/) in una subreddit. Per questo progetto, Reddit sta collaborando con Arbitrum, un rollup di [livello 2](/layer-2/) progettato per scalare le transazioni di Ethereum.
+Reddit ha [propagandato i Punti della Community](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users), [token ERC-20](/developers/docs/standards/tokens/erc-20/) che gli utenti possono guadagnare pubblicando contenuti di qualità e contribuendo alle community online (subreddit). Puoi riscattare questi token in una subreddit per [ottenere privilegi e vantaggi esclusivi](https://www.reddit.com/community-points/). Per questo progetto, Reddit sta collaborando con Arbitrum, un rollup di [livello 2](/layer-2/) progettato per scalare le transazioni di Ethereum.
 
-Il programma è già in fase beta, con la subreddit r/CryptoCurrency che sta [eseguendo la propria versione dei Community Points, detti "Moons"](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki). Dalla wiki della community:
+Il programma è già attivo, con la subreddit r/CryptoCurrency [che adopera la sua versione dei Punti della Community, detti "Moon"](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki). Secondo la descrizione ufficiale, i Moon "ricompensano pubblicatori, commentatori e moderatori per i loro contributi alla subreddit." Poiché questi token sono sulla blockchain (gli utenti li ricevono nei portafogli), sono indipendenti da Reddit e non possono esser rimossi.
 
-> _Le “Moons” sono token ERC-20 sulla rete di Rinkeby, lanciati dagli admin di Reddit a maggio 2020 nell’ambito del progetto dei Community Points. Sono un mezzo per ricompensare gli utenti per i loro contributi in r/CryptoCurrency con un'unità di proprietà nella subreddit. Le Moons sono indipendenti da Reddit e, una volta guadagnate, né gli admin né i moderatori della subreddit possono toglierle dagli utenti. Le Moons sono gestite da una serie di smart contract che gestiscono saldi, trasferimenti, distribuzione/rivendicazione e acquisto di Abbonamenti Speciali. Gli smart contract e le app mobili sono stati revisionati e controllati da Trail of Bits, una società di sicurezza indipendente._
+Dopo aver confluso una fase beta sulla rete di prova di Rinkeby, i Punti della Community di Reddit sono ora su [Arbitrum Nova](https://nova.arbitrum.io/), una blockchain che combina le proprietà di un [Validium](/developers/docs/scaling/validium/) e di un [rollup ottimistico](/developers/docs/scaling/optimistic-rollups/). Oltre a usare i Punti della Community per sbloccare funzionalità speciali, gli utenti possono anche scambiarli per valuta legale nelle borse. Inoltre, la quantità di Punti della Community posseduto da un utente, ne determina l'influenza sul processo di presa decisionale nella community.
 
 ### Twitter {#twitter}
 

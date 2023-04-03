@@ -4,7 +4,16 @@
   "page-upgrades-beacon-date": "Отправлено!",
   "page-upgrades-merge-date": "сентябрь 2022 г.",
   "page-upgrades-shards-date": "Примерно 2023 г.",
-  "page-upgrades-merge-banner-intro": "Слияние все ближе, и Ethereum ждут перемены.",
-  "page-upgrades-merge-banner-content-outdated": "Часть материалов на этой странице, касающихся изменений, устарела. Скоро они будут обновлены.",
-  "page-upgrades-merge-banner-developers-landing": "У некоторых докумеентов есть баннер, показывающий, что они устарели. Скоро они будут обновлены."
+  "page-upgrades-upgrades-guide": "Руководство по обновлениям Ethereum",
+  "page-upgrades-upgrades-docking": "Слияние",
+  "page-upgrades-shard-title": "Шардинг",
+  "page-upgrades-upgrades-beacon-chain": "Beacon Chain",
+  "consensus-beaconcha-in-desc": "Обозреватель цепочки с открытым исходным кодом",
+  "consensus-beaconscan-desc": "Обозреватель Beacon Chain: Etherscan для консенсусного уровня",
+  "consensus-become-staker": "Стать стейкером",
+  "consensus-become-staker-desc": "Доступны вложения! Если вы хотите вложить свои ETH, чтобы помочь обезопасить сеть, убедитесь, что вы осознаете риски.",
+  "consensus-explore": "Исследовать данные",
+  "consensus-run-beacon-chain": "Запуск клиента с консенсусом",
+  "consensus-run-beacon-chain-desc": "Ethereum нужно как можно больше запущенных клиентов. Помогите Ethereum принести обществу пользу!",
+  "read-more": "Подробнее"
 }

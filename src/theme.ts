@@ -253,16 +253,14 @@ const lightColors = {
     "linear-gradient(102.7deg, rgba(185, 185, 241, 0.2) 0%, rgba(84, 132, 234, 0.2) 51.56%, rgba(58, 142, 137, 0.2) 100%)",
   bannerGridGradient:
     "linear-gradient(90deg, rgba(127,127,213,0.2) 0%, rgba(132,145,221,0.2) 50%, rgba(145,234,228,0.2) 100%)",
-  slider: {
-    bg: "#F7F7F7",
-    border: "#ECECEC",
-    dot: "#A4A4A4",
-    dotActive: "#1C1DFF",
-    btnBg: "#A4A4A4",
-    btnColor: white,
-    btnBgDisabled: "#E7E7E7",
-    btnColorDisabled: "#737373",
-  },
+  sliderBg: "#F7F7F7",
+  sliderBorder: "#ECECEC",
+  sliderDot: "#A4A4A4",
+  sliderDotActive: "#1C1DFF",
+  sliderBtnBg: "#A4A4A4",
+  sliderBtnColor: white,
+  sliderBtnBgDisabled: "#E7E7E7",
+  sliderBtnColorDisabled: "#737373",
 }
 
 // TODO replace random variables w/ baseColor variables
@@ -291,6 +289,8 @@ const darkColors = {
   primary200: primaryDark200,
   primary100: primaryDark100,
   lightBorder: "#404040",
+  priceCardBackgroundPositive: "transparent",
+  priceCardBackgroundNegative: "transparent",
   priceCardBackground: "transparent",
   priceCardBorder: success700,
   priceCardBorderNegative: fail300,
@@ -369,16 +369,14 @@ const darkColors = {
     "linear-gradient(83.46deg, #2C2C32 7.03%, #44404D 52.42%, #303038 98.77%)",
   bannerGridGradient:
     "linear-gradient(90deg, rgba(172, 182, 229, 0.08) 0%, rgba(134, 253, 232, 0.08) 100%)",
-  slider: {
-    bg: "#191919",
-    border: "#404040",
-    dot: "#A4A4A4",
-    dotActive: "#FF7324",
-    btnBg: "#404040",
-    btnColor: white,
-    btnBgDisabled: "#404040",
-    btnColorDisabled: "#737373",
-  },
+  sliderBg: "#191919",
+  sliderBorder: "#404040",
+  sliderDot: "#A4A4A4",
+  sliderDotActive: "#FF7324",
+  sliderBtnBg: "#404040",
+  sliderBtnColor: white,
+  sliderBtnBgDisabled: "#404040",
+  sliderBtnColorDisabled: "#737373",
 }
 
 const lightThemeColors = Object.assign({}, baseColors, lightColors)

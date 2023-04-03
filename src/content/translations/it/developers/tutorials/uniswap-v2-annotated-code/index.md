@@ -4,7 +4,6 @@ description: Come funziona il contratto Uniswap-v2? Perché è scritto così?
 author: Ori Pomerantz
 tags:
   - "solidity"
-  - "uniswap"
 skill: intermediate
 published: 2021-05-01
 lang: it
@@ -450,7 +449,7 @@ Usa la funzione `UniswapV2ERC20._mint` per creare realmente i token aggiuntivi d
     }
 ```
 
-Se non c'è alcuna commissione con `kLast` impostato a zero (se non è già così). Alla scrittura di questo contratto, esisteva una [funzionalità di rimborso del carburante](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3298.md) che incoraggiava i contratti a ridurre la dimensione generale dello stato di Ethereum azzerando l'archiviazione non necessaria. Questo codice ottiene quel rimborso, se possibile.
+Se non c'è alcuna commissione con `kLast` impostato a zero (se non è già così). Alla scrittura di questo contratto, esisteva una [funzionalità di rimborso del carburante](https://eips.ethereum.org/EIPS/eip-3298) che incoraggiava i contratti a ridurre la dimensione generale dello stato di Ethereum azzerando l'archiviazione non necessaria. Questo codice ottiene quel rimborso, se possibile.
 
 #### Funzioni accessibili esternamente {#pair-external}
 
@@ -654,7 +653,7 @@ Questo è un controllo di sicurezza, per assicurarsi di non perdere in seguito a
 
 Aggiorna `reserve0` e `reserve1` e, se necessario, gli accumulatori di prezzo e la marca oraria ed emetti un evento.
 
-##### Sincronizzazione o Skim {#sync-or-skim}
+##### Sincronizzazione o Skim
 
 È possibile che i saldi reali si desincronizzino rispetto alle riserve considerate dallo scambio in pari. Non c'è modo di prelevare i token senza il consenso del contratto, ma i depositi sono una questione diversa. Un conto può trasferire i token allo scambio senza chiamare `mint` o `swap`.
 
@@ -803,7 +802,7 @@ Queste due funzioni consentono a `feeSetter` di controllare il destinatario dell
 
 [Questo contratto](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implementa il token di liquidità ERC-20. È simile al [contratto ERC-20 di OpenWhisk](/developers/tutorials/erc20-annotated-code), quindi spiegherò solo la parte diversa, la funzionalità `permit`.
 
-Le transazioni su Ethereum costano ether (ETH), equivalente al denaro reale. Se hai token ERC-20 ma non ETH, non puoi inviare transazioni, quindi non puoi farci nulla. Una soluzione per evitare questo problema sono le [meta-transazioni](https://docs.uniswap.org/protocol/V2/guides/smart-contract-integration/supporting-meta-transactions/). Il proprietario dei token firma una transazione che consenta ad altri di prelevare i token al di fuori della catena e la invia al destinatario usando Internet. Il destinatario, che ha ETH a disposizione, invia il permesso per conto del proprietario.
+Le transazioni su Ethereum costano ether (ETH), equivalente al denaro reale. Se hai token ERC-20 ma non ETH, non puoi inviare transazioni, quindi non puoi farci nulla. Una soluzione per evitare questo problema sono le [meta-transazioni](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions). Il proprietario dei token firma una transazione che consenta ad altri di prelevare i token al di fuori della catena e la invia al destinatario usando Internet. Il destinatario, che ha ETH a disposizione, invia il permesso per conto del proprietario.
 
 ```solidity
     bytes32 public DOMAIN_SEPARATOR;

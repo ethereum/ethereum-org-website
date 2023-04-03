@@ -26,7 +26,6 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 - [Clientul Rust Ethereum](https://openethereum.github.io/) \* **Țineţi cont că OpenEthereum [nu mai este întreținut](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd).** Folosiţi-l cu precauție și este de preferat să treceţi la implementarea unui alt client.
 - [Trimiterea tranzacțiilor în Ethereum cu clientul Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Introducere despre contractele inteligente cu clientul Parity pentru Ethereum](https://wiki.parity.io/Smart-Contracts)
-- [Setarea mediului de dezvoltare Oasis SDK](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Tutorial pas cu pas de dezvoltare a contractelor inteligente în Rust Wasm pentru Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Articole de nivel intermediar {#intermediate-articles}
@@ -41,7 +40,6 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 - [Dezvoltă o aplicație Todo descentralizată folosind Vue.js și Rust](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Noțiuni de bază ale Enigma - Limbaj de programare în Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [Introducere despre contractele secrete](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
-- [Implementarea contractelor Solidity pe Oasis (compus)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)
 
 ## Proiecte și instrumente Rust {#rust-projects-and-tools}
 

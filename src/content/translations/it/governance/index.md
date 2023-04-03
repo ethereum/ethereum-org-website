@@ -2,11 +2,12 @@
 title: La governance di Ethereum
 description: Un'introduzione a come vengono prese le decisioni su Ethereum.
 lang: it
+postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # Introduzione alla governance di Ethereum {#introduction}
 
-_Se nessuno possiede Ethereum, come vengono prese le decisioni sui cambiamenti passati e futuri? Con "governance di Ethereum" si intende il processo che consente di prendere tali decisioni_
+_Se nessuno possiede Ethereum, come vengono prese le decisioni sui cambiamenti passati e futuri? La governance di Ethereum si riferisce al processo che consente di prendere tali decisioni._
 
 <Divider />
 
@@ -20,7 +21,7 @@ Nessuna persona possiede o controlla il protocollo Ethereum, ma è comunque nece
 
 ## La governance di Ethereum {#ethereum-governance}
 
-La governance di Ethereum è il processo attraverso il quale vengono apportate modifiche al protocollo. È importante sottolineare che questo processo non ha a che fare con il modo in cui le persone e le applicazioni utilizzano il protocollo, infatti Ethereum è senza autorizzazioni. Chiunque da qualsiasi parte del mondo può partecipare ad attività on-chain. Non ci sono regole fisse su chi può o non può creare un'applicazione o inviare una transazione. Tuttavia, esiste un processo per proporre modifiche al protocollo principale, su cui vengono eseguite queste applicazioni. Poiché così tante persone dipendono dalla stabilità di Ethereum, esiste una soglia di coordinamento molto alta per i cambiamenti fondamentali, inclusi i processi sociali e tecnici, per garantire che qualsiasi modifica a Ethereum sia sicura e ampiamente supportata dalla comunità
+La governance di Ethereum è il processo attraverso il quale vengono apportate modifiche al protocollo. È importante sottolineare che questo processo non ha a che fare con il modo in cui le persone e le applicazioni utilizzano il protocollo, infatti Ethereum è senza autorizzazioni. Chiunque da qualsiasi parte del mondo può partecipare ad attività on-chain. Non ci sono regole fisse su chi può o non può creare un'applicazione o inviare una transazione. Tuttavia, esiste un processo per proporre modifiche al protocollo principale, su cui vengono eseguite queste applicazioni. Poiché molte persone dipendono dalla stabilità di Ethereum, esiste una soglia di coordinamento davvero elevata per i cambiamenti principali, inclusi i processi sociali e tecnici, per garantire che ogni modifica a Ethereum sia sicura e ampiamente supportata dalla community.
 
 ### Governance on-chain e off-chain {#on-chain-vs-off-chain}
 
@@ -152,7 +153,7 @@ Il processo di governance di Ethereum spesso rinuncia a velocità ed efficienza 
 
 Lo sviluppo di specifiche e implementazioni è sempre stato totalmente open source; non sono stati invece utilizzati i processi formali descritti sopra per proporre gli aggiornamenti. Questo ha consentito a ricercatori e implementatori di specificare e concordare le modifiche più rapidamente.
 
-Quando la Beacon Chain si fonderà con il livello di esecuzione di Ethereum, il processo di governance per proporre le modifiche sarà armonizzato. Questo processo per implementare la fusione è [già in corso](https://github.com/ethereum/EIPs/pull/3675).
+Quando la Beacon Chain si fonderà con il livello di esecuzione di Ethereum, il processo di governance per proporre le modifiche sarà armonizzato. Questo processo per implementare la fusione è [già in corso](https://eips.ethereum.org/EIPS/eip-3675).
 
 <ButtonLink to="/upgrades/merge/">
   Maggiori informazioni sulla fusione

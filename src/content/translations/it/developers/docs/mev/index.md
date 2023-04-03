@@ -4,39 +4,37 @@ description: Un'introduzione al valore estraibile massimo (MEV)
 lang: it
 ---
 
-Il valore estraibile massimo (MEV) si riferisce al valore massimo che può essere estratto dalla produzione del blocco oltre alla ricompensa del blocco standard e alle commissioni del gas, includendo, escludendo e modificando l'ordine delle transazioni in un blocco.
+Il valore estraibile massimo (MEV) si riferisce al valore massimo che può esser estratto dalla produzione del blocco, oltre alla ricompensa standard del blocco e alle commissioni sul gas, includendo, escludendo e cambiando l'ordine delle transazioni in un blocco.
 
-### Valore estraibile del minatore
+### Valore estraibile dal miner {#miner-extractable-value}
 
-Questo concetto è stato applicato per la prima volta nell'ambito del [proof-of-work](/developers/docs/consensus-mechanisms/pow/) ed è stato inizialmente denominato "valore estraibile del minatore". Questo perché nel Proof of Work i miner controllano l'inclusione, l'esclusione e l'ordinamento della transazione. Tuttavia, dopo la transizione al proof-of-stake tramite [La Fusione](/upgrades/merge), i validatori saranno responsabili di questi ruoli e il mining non sarà più applicabile. Questi metodi di estrazione del valore persisteranno dopo la transizione e proprio per questo è stato necessario modificare il nome. Per conservare lo stesso acronimo a scopo di continuità e mantenere al contempo lo stesso significato fondamentale, ora utilizziamo "valore estraibile massimo" come alternativa più inclusiva.
+Il valore estraibile massimo fu applicato per la prima volta nel contesto del [proof-of-work](/developers/docs/consensus-mechanisms/pow/) e fu inizialmente definito come "valore estraibile dal miner". Questo perché nel Proof of Work i miner controllano l'inclusione, l'esclusione e l'ordinamento della transazione. Tuttavia, a partire dalla transizione al proof-of-stake tramite [La Fusione](/upgrades/merge), i validatori sono responsabili di tali ruoli e il mining non è più parte del protocollo di Ethereum. I metodi d'estrazione del valore però esistono ancora, quindi il termine usato adesso è invece "Valore estraibile massimo".
 
 ## Prerequisiti {#prerequisites}
 
-Assicurati di avere familiarità con [transazioni](/developers/docs/transactions/), [blocchi](/developers/docs/blocks/), [gas](/developers/docs/gas/) e [mining](/developers/docs/consensus-mechanisms/pow/mining/). Anche la familiarità con [dApp](/dapps/) e [DeFi](/defi/) è utile.
+Assicurati di essere familiare con le [transazioni](/developers/docs/transactions/), i [blocchi](/developers/docs/blocks/), il [proof-of-stake](/developers/docs/consensus-mechanisms/pos) e il [gas](/developers/docs/gas/). Anche la familiarità con [dApp](/dapps/) e [DeFi](/defi/) è utile.
 
 ## Estrazione del MEV {#mev-extraction}
 
-In teoria, il MEV proviene interamente dai minatori, poiché questi sono la sola parte in grado di garantire l'esecuzione di un'opportunità di MEV redditizia (almeno sull'attuale catena di proof-of-work - questo cambierà dopo [La Fusione](/upgrades/merge/)). Nella pratica, tuttavia, una grande porzione del MEV è estratta da partecipanti indipendenti della rete, chiamati "ricercatori". I ricercatori eseguono algoritmi complessi sui dati della blockchain per rilevare opportunità di MEV redditizie e si servono di bot per inviare automaticamente tali transazioni redditizie alla rete.
+In teoria, il MEV proviene interamente dai validatori poiché sono l'unica parte in grado di garantire l'esecuzione di un'opportunità di MEV redditizia. Nella pratica, tuttavia, una grande porzione del MEV è estratta da partecipanti indipendenti della rete, chiamati "ricercatori". I ricercatori eseguono algoritmi complessi sui dati della blockchain per rilevare opportunità di MEV redditizie e si servono di bot per inviare automaticamente tali transazioni redditizie alla rete.
 
-I miner ottengono comunque una parte dell'importo del MEV intero siccome i ricercatori sono disposti a pagare commissioni del carburante elevate (che vanno al miner), in cambio di una maggior probabilità d'inclusione delle loro transazioni redditizie in un blocco. Presumendo che i ricercatori siano economicamente razionali, la commissione del carburante che un ricercatore è disposto a pagare sarà pari fino al 100% del MEV del ricercatore (infatti, se la commissione del carburante fosse maggiore, il ricercatore perderebbe denaro).
+I validatori ottengono comunque una porzione dell'intero importo del MEV, poiché i ricercatori sono disposti a pagare commissioni sul gas maggiori (che vanno al validatore), in cambio di una maggiore probabilità d'inclusione delle loro transazioni profittevoli in un blocco. Supponendo che i ricercatori siano economicamente razionari, la commissione sul gas che un ricercatore è disposto a pagare sarà un importo fino al 100% del MEV del ricercatore (poiché se la commissione sul gas fosse stata maggiore, il ricercatore avrebbe perso denaro).
 
-Così, per alcune opportunità MEV altamente competitive, come l'[arbitraggio DEX](#mev-examples-dex-arbitrage), i ricercatori potrebbero dover pagare il 90% (o persino di più) dei loro ricavi MEV complessivi in commissioni del carburante al miner, in quanto sono tante le persone interessate a compiere lo stesso scambio di arbitraggio redditizio. Questo perché l'unico modo per garantire che la loro transazione di arbitraggio funzioni è quello di inviare la transazione con il prezzo del carburante più alto.
+Così, per alcune opportunità di MEV molto competitive, come l'[arbitraggio della DEX](#mev-examples-dex-arbitrage), i ricercatori potrebbero dover pagare il 90%, se non più, delle loro entrate totali del MEV in commissioni sul gas al validatore, poiché così tante persone vogliono eseguire lo stesso scambio d'arbitraggio profittevole. Questo è perché il solo modo per garantire che la loro transazione d'arbitraggio sia eseguita se inviano la transazione con il prezzo sul gas maggiore.
 
-### Golfing del carburante {#mev-extraction-gas-golfing}
+### Golf del gas {#mev-extraction-gas-golfing}
 
-Con questa dinamica, chi è bravo nel "golfing del carburante", ovvero la programmazione delle transazioni in modo che consumino la quantità minima di gas, ha un vantaggio competitivo, in quanto consente ai ricercatori di impostare un prezzo del carburante maggiore pur mantenendo costanti le commissioni del carburante totali (poiché commissioni del carburante = prezzo del carburante \* carburante utilizzato).
+Questa dinamica ha reso esser bravi al "golf del gas", la programmazione delle transazioni così che usino l'importo minimo di gas, un vantaggio competitivo, poiché consente ai ricercatori di impostare un prezzo del gas maggiore, mantenendo costanti le proprie commissioni sul gas totali (poiché, commissioni sul gas = prezzo del gas \* gas usato).
 
-Tra le tecniche di golfing del carburante più diffuse vi è quella di usare indirizzi che iniziano con una lunga stringa di zeri (ad es. [0x0000000000C521824EaFf97Eac7B73B084ef9306](https://etherscan.io/address/0x0000000000c521824eaff97eac7b73b084ef9306)), poiché occupano meno spazio di archiviazione (e dunque meno gas), oppure quella di lasciare piccoli saldi di token [ERC-20](/developers/docs/standards/tokens/erc-20/) nei contratti, poiché inizializzare uno slot di archiviazione costa più carburante (se il saldo è 0) rispetto a quello necessario per aggiornarne uno. Individuare altre tecniche per ridurre il consumo di carburante è un'area di ricerca attiva tra i ricercatori.
+Alcune tecniche di golf del gas ben note includono: usare indirizzi che iniziano con una lunga stringa di zeri (es. [0x0000000000C521824EaFf97Eac7B73B084ef9306](https://etherscan.io/address/0x0000000000c521824eaff97eac7b73b084ef9306)) poiché richiedono meno spazio (e quindi gas) da archiviare; e lasciando piccoli saldi del token [ERC-20](/developers/docs/standards/tokens/erc-20/) nei contratti, poiché costa più gas inizializzare uno slot d'archiviazione (se il saldo è 0), piuttosto che aggiornarne uno. Individuare altre tecniche per ridurre il consumo di gas è un'area di ricerca attiva tra i ricercatori.
 
 ### Frontrunner generalizzati {#mev-extraction-generalized-frontrunners}
 
-Anziché programmare algoritmi complessi per rilevare opportunità di MEV redditizie, alcuni ricercatori eseguono frontrunner generalizzati. I frontrunner generalizzati sono bot che tengono d'occhio il mempool per individuare le transazioni redditizie. Il frontrunner copierà il codice della transazione potenzialmente redditizia, sostituirà gli indirizzi con il proprio ed eseguirà la transazione localmente per verificare due volte che la transazione modificata risulti in un profitto all'indirizzo del frontrunner. Se la transazione è effettivamente redditizia, il frontrunner invierà la transazione modificata con l'indirizzo sostituito e un prezzo del carburante maggiorato, eseguendo il "frontrunning" della transazione originale e ottenendo il MEV del ricercatore originale.
+Anziché programmare algoritmi complessi per rilevare opportunità di MEV redditizie, alcuni ricercatori eseguono frontrunner generalizzati. I frontrunner generalizzati sono bot che tengono d'occhio il mempool per individuare le transazioni redditizie. Il frontrunner copierà il codice della transazione potenzialmente redditizia, sostituirà gli indirizzi con il proprio ed eseguirà la transazione localmente per verificare due volte che la transazione modificata risulti in un profitto all'indirizzo del frontrunner. Se la transazione è effettivamente redditizia, il precursore invierà la transazione modificata con l'indirizzo sostituito e un prezzo del gas maggiore, "precorrendo" la transazione originale e ottenendo il MEV originale del ricercatore.
 
 ### Flashbot {#mev-extraction-flashbots}
 
-I flashbot sono un progetto indipendente che estende il client di go-ethereum con un servizio che consente ai ricercatori di inviare le transazioni del MEV ai miner senza rivelarli al mempool pubblico. Questo impedisce ai frontrunner generalizzati di eseguire frontrun sulle transazioni.
-
-Al momento della redazione del presente articolo, una porzione significativa di transazioni MEV viene indirizzata attraverso i Flashbot; ciò significa che i frontrunner generalizzati non sono efficaci come in passato.
+I flashbot sono un progetto indipendente che estende i client di esecuzione con un servizio che consente ai ricercatori di inviare le transazioni del MEV ai validatori senza rivelarle al mempool pubblico. Questo impedisce ai frontrunner generalizzati di eseguire frontrun sulle transazioni.
 
 ## Esempi di MEV {#mev-examples}
 
@@ -44,17 +42,19 @@ Il MEV emerge sulla blockchain in diversi modi.
 
 ### Arbitraggio DEX {#mev-examples-dex-arbitrage}
 
-L'arbitraggio dello [scambio decentralizzato](/glossary/#dex) (DEX) è l'opportunità di MEV più semplice e più diffusa. Ne risulta che è anche la più competitiva.
+L'arbitraggio dello [scambio decentralizzato](/glossary/#dex) (DEX) è l'opportunità di MEV più semplice e più diffusa. Di conseguenza è anche la più competitiva.
 
 Funziona come segue: se due DEX offrono un token a due prezzi diversi, qualcuno può acquistare il token sul DEX al prezzo minore e rivenderlo sul DEX al prezzo maggiore in un'unica transazione atomica. Grazie ai meccanismi della blockchain, questo è vero e proprio arbitraggio privo di rischi.
 
-[Ecco un esempio](https://etherscan.io/tx/0x5e1657ef0e9be9bc72efefe59a2528d0d730d478cfc9e6cdd09af9f997bb3ef4) di transazione d'arbitraggio redditizia in cui un ricercatore ha trasformato 1.000 ETH in 1.045 ETH sfruttando i diversi prezzi della coppia ETH/DAI su Uniswap vs. Sushiswap.
+[Ecco un esempio](https://etherscan.io/tx/0x5e1657ef0e9be9bc72efefe59a2528d0d730d478cfc9e6cdd09af9f997bb3ef4) di una transazione di arbitraggio redditizia in cui un ricercatore ha trasformato 1.000 ETH in 1.045 ETH sfruttando i diversi prezzi della coppia ETH/DAI su Uniswap vs. Sushiswap.
 
 ### Liquidazioni {#mev-examples-liquidations}
 
-Le liquidazioni del protocollo di prestito presentano un'altra ben nota opportunità di MEV.
+Le liquidazioni del protocollo di prestito presentano un'altra opportunità di MEV ben nota.
 
-I protocolli di prestito come Maker e Aave funzionano richiedendo agli utenti di depositare qualche tipo di garanzia (es. ETH). Gli utenti possono quindi prendere in prestito attivi e token diversi da altri, a seconda delle loro esigenze (ad esempio possono prendere in prestito MKR se vogliono votare su una proposta di governance di MakerDAO o SUSHI se vogliono guadagnare una porzione delle commissioni di trading su Sushiswap) fino a un certo importo della loro garanzia depositata, per esempio il 30% (l'esatta percentuale della capacità di prestito è determinata dal protocollo). In questo caso gli utenti da cui prendono in prestito gli altri token fungono da creditori.
+I protocolli di prestito come Maker e Aave richiedono agli utenti di depositare un qualche tipo di garanzia (es. ETH). Questa garanzia depositata è poi usata per concedere prestiti ad altri utenti.
+
+Gli utenti possono quindi prendere in prestito risorse e token dagli altri, a seconda delle loro esigenze (ad es. potresti prendere in prestito MKR se desideri votare in una proposta di governance di MakerDAO), fino a una certa percentuale della loro garanzia depositata. Ad esempio, se l'importo preso in prestito è un massimo del 30%, un utente che deposita 100 DAI nel protocollo può prendere in prestito fino all'equivalente di 30 DAI di un'altra risorsa. Il protocollo determina l'esatta percentuale di potenza presa in prestito.
 
 Al fluttuare del valore della garanzia di un debitore, fluttua anche la capacità di prestito. Se, a causa delle fluttuazioni del mercato, il valore degli attivi presi in presi in prestito supera, ad esempio, il 30% del valore della loro garanzia (anche in questo caso l'esatta percentuale è determinata dal protocollo), il protocollo consente tipicamente a chiunque di liquidare la garanzia, pagando istantaneamente i creditori (in modo simile al funzionamento dei [margini aggiuntivi](https://www.investopedia.com/terms/m/margincall.asp) nella finanza tradizionale). In caso di liquidazione, il debitore deve solitamente pagare una cospicua commissione di liquidazione, parte della quale va al liquidatore; ed è qui che risiede l'opportunità di MEV.
 
@@ -100,24 +100,25 @@ Senza ricercatori razionali che cercano e correggono le inefficienze economiche 
 
 A livello di applicazione, alcune forme di MEV, come il sandwich trading, si traducono in un'esperienza inequivocabilmente peggiore per gli utenti. Gli utenti che ricevono il sandwich subiscono un maggiore slittamento e una peggiore esecuzione delle loro operazioni.
 
-A livello di rete, i frontrunner generalizzati e le aste dei prezzi del carburante che spesso intraprendono (quando due o più frontrunner competono affinché la loro transazione sia inclusa nel blocco successivo aumentando progressivamente il prezzo del carburante delle loro transazioni) determinano la congestione della rete e l'aumento dei prezzi del carburante per tutti gli altri soggetti che provino a eseguire transazioni regolari.
+Al livello della rete, i precursori generalizzati e le aste del prezzo del gas, che spesso intraprendono (quando due o più precursori competono perché la propria transazione sia inclusa nel blocco successivo, aumentando progressivamente il prezzo del gas della loro transazione), risultano in congestione della rete e prezzi del gas elevati per chiunque altro sia provando a eseguire transazioni regolari.
 
-Oltre a ciò che si verifica _all'interno_ dei blocchi, il MEV può avere effetti deleteri _tra_ i blocchi. Se il MEV disponibile in un blocco eccede significativamente la ricompensa del blocco standard, i miner potrebbero essere incentivati a ri-minare i blocchi e catturare da soli il MEV, provocando la riorganizzazione della blockchain e l'instabilità del consenso.
+Oltre a ciò che si verifica _all'interno_ dei blocchi, il MEV può avere effetti deleteri _tra_ i blocchi. Se il MEV disponibile in un blocco supera significativamente la ricompensa standard del blocco, i validatori potrebbero essere incentivati a riorganizzare i blocchi e catturare da soli il MEV, causando la riorganizzazione della blockchain e l'instabilità del consenso.
 
 Questa possibile riorganizzazione della blockchain è stata [precedentemente esplorata sulla blockchain di Bitcoin](https://dl.acm.org/doi/10.1145/2976749.2978408). Poiché le metà delle ricompense del blocco e le commissioni di transazione di Bitcoin costituiscono una porzione sempre più consistente della ricompensa del blocco, si presentano situazioni in cui diventa economicamente razionale per i miner rinunciare alla ricompensa del blocco successivo e ri-minare invece i blocchi passati con commissioni maggiori. Con la crescita del MEV, la stessa tipologia di situazione potrebbe verificarsi in Ethereum, minacciando l'integrità della blockchain.
 
 ## Stato del MEV {#state-of-mev}
 
-L'estrazione di MEV è cresciuta esponenzialmente all'inizio del 2021, traducendosi in prezzi del gas estremamente alti nei primi mesi dell'anno. L'emergere del MEV-Relay di Flashbot ha ridotto l'efficacia dei frontrunner generalizzati e ha portato le aste dei prezzi del carburante al di fuori della catena, facendo scendere i prezzi del carburante per gli utenti ordinari.
+L'estrazione del MEV è aumentata a dismisura agli inizi del 2021, risultando in prezzi del gas estremamente elevati nei primi mesi dell'anno. L'emergere della trasmissione del MEV dei Flashbot ha ridotto l'efficienza dei precursori generalizzati e ha portato le aste del prezzo del gas al di fuori della catena, riducendo i prezzi del gas per gli utenti ordinari.
 
-Anche se molti ricercatori continuano a guadagnare bene con il MEV, in un contesto in cui le opportunità diventano più note e un numero crescente di ricercatori compete per la stessa opportunità, i miner otterranno ricavi totali sempre più alti dal MEV (poiché anche nei Flashbot hanno luogo aste del carburante come quelle descritte sopra, seppur privatamente, e i miner otterranno i ricavi del carburante risultanti). Inoltre, il MEV non è un'esclusiva di Ethereum e, man mano che le opportunità su Ethereum diventano più competitive, i ricercatori si spostano su blockchain alternative come Binance Smart Chain, dove esistono opportunità di MEV simili a quelle di Ethereum ma con minore competizione.
+Mentre molti ricercatori guadagnano ancora molto dal MEV, con il diffondersi delle opportunità e la competizione di sempre più ricercatori per la stessa opportunità, i validatori cattureranno sempre più ricavi totali del MEV (poiché lo stesso tipo di aste del gas originariamente descritte in precedenza, si verificano anche nei Flashbot, seppur privatamente, e i validatori cattureranno i ricavi di gas risultanti). Inoltre, il MEV non è un'esclusiva di Ethereum e, man mano che le opportunità su Ethereum diventano più competitive, i ricercatori si spostano su blockchain alternative come Binance Smart Chain, dove esistono opportunità di MEV simili a quelle di Ethereum ma con minore competizione.
 
-Man mano che la DeFi cresce e la sua popolarità aumenta, il MEV potrebbe presto superare significativamente la ricompensa di base dei blocchi di Ethereum. Da ciò deriva una crescente possibilità di re-mining dei blocchi in chiave egoistica e di instabilità del consenso. Alcuni ritengono che questa sia una minaccia esistenziale a Ethereum, ragion per cui disincentivare il mining egoistico è un'area attiva di ricerca nella teoria del protocollo Ethereum. Una soluzione attualmente in fase di esplorazione è l'[attenuazione delle ricompense del MEV](https://ethresear.ch/t/committee-driven-mev-smoothing/10408).
+D'altra parte, la transizione dal proof-of-work al proof-of-stake e lo sforzo di ridimensionamento di Ethereum in corso usando i rollup e lo sharding stanno modificando il panorama del MEV in modi ancora piuttosto nebuloso. Non è ancora noto come il fatto di conoscere i propositori di blocchi garantiti lievemente in anticipo modifichi le dinamiche di estrazione del MEV rispetto al modello probabilistico nel proof-of-work, o come questo sarà sconvolto quando l'[elezione del leader segreto singolo](https://ethresear.ch/t/secret-non-single-leader-election/11789) e la [tecnologia distribuita del validatore](https://github.com/ethereum/distributed-validator-specs) saranno implementate. Similmente, resta da vedere quali opportunità del MEV esistono quando gran parte dell'attività degli utenti è portata via da Ethereum e sui suoi rollup e shard di livello 2.
 
 ## Risorse correlate {#related-resources}
 
+- [Documentazione dei Flashbot](https://docs.flashbots.net/)
 - [Flashbots GitHub](https://github.com/flashbots/pm)
-- [MEV-Explore](https://explore.flashbots.net/) _Dashboard ed esploratore delle transazioni live per le transazioni MEV_
+- [MEV-Explore](https://explore.flashbots.net/) _Dashboard e piattaforma di ricerca live delle transazioni MEV_
 
 ## Letture consigliate {#further-reading}
 
@@ -127,3 +128,4 @@ Man mano che la DeFi cresce e la sua popolarità aumenta, il MEV potrebbe presto
 - [Escaping the Dark Forest](https://samczsun.com/escaping-the-dark-forest/)
 - [Flashbots: Frontrunning the MEV Crisis](https://medium.com/flashbots/frontrunning-the-mev-crisis-40629a613752)
 - [@bertcmiller's MEV Threads](https://twitter.com/bertcmiller/status/1402665992422047747)
+- [The Hitchhikers Guide To Ethereum](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum)

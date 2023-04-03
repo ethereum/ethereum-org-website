@@ -27,7 +27,7 @@ An object containing an [address](#address), balance, [nonce](#nonce), and optio
 
 ### address {#address}
 
-Most generally, this represents an [EOA](#eoa) or [contract](#contract-accouint) that can receive (destination address) or send (source address) [transactions](#transaction) on the blockchain. More specifically, it is the rightmost 160 bits of a [Keccak hash](#keccak-256) of an [ECDSA](#ecdsa) [public key](#public-key).
+Most generally, this represents an [EOA](#eoa) or [contract](#contract-account) that can receive (destination address) or send (source address) [transactions](#transaction) on the blockchain. More specifically, it is the rightmost 160 bits of a [Keccak hash](#keccak-256) of an [ECDSA](#ecdsa) [public key](#public-key).
 
 ### application binary interface (ABI) {#abi}
 
@@ -195,6 +195,10 @@ Ethereum's consensus layer is the network of [consensus clients](#consensus-clie
 
 The block validation rules that full nodes follow to stay in consensus with other nodes. Not to be confused with [consensus](#consensus).
 
+### Considered for Inclusion (CFI) {#cfi}
+
+A Core [EIP](#eip) which is not yet active on Mainnet, and client developers are generally positive towards the idea. Assuming it meets all the requirements for mainnet inclusion, it could potentially be included in a network upgrade (not necessarily the next one).
+
 ### Constantinople fork {#constantinople-fork}
 
 The second part of the [Metropolis](#metropolis) stage, originally planned for mid-2018. Expected to include a switch to a hybrid [proof-of-work](#pow)/[proof-of-stake](#pos) consensus algorithm, among other changes.
@@ -205,7 +209,7 @@ An account containing code that executes whenever it receives a [transaction](#t
 
 ### contract creation transaction {#contract-creation-transaction}
 
-A special [transaction](#transaction), with the [zero address](#zero-address) as the recipient, that is used to register a [contract](#contract-account) and record it on the Ethereum blockchain.
+A special [transaction](#transaction) that includes a contract's initiation code. The recipient is set to `null` and the contract is deployed to an address generated from the user address and `nonce`. that is used to register a [contract](#contract-account) and record it on the Ethereum blockchain.
 
 ### cryptoeconomics {#cryptoeconomics}
 
@@ -219,7 +223,7 @@ The economics of cryptocurrencies.
 
 ### DAG {#dag}
 
-DAG stands for Directed Acyclic Graph. It is a data structure composed of nodes and links between them. Ethereum uses a DAG in its [proof-of-work](#pow) algorithm, [Ethash](#ethash).
+DAG stands for Directed Acyclic Graph. It is a data structure composed of nodes and links between them. Before The Merge, Ethereum used a DAG in its [proof-of-work](#pow) algorithm, [Ethash](#ethash), but is no longer used in [proof-of-stake](#pos).
 
 ### Dapp {#dapp}
 
@@ -1095,7 +1099,7 @@ The smallest denomination of [ether](#ether). 10<sup>18</sup> wei = 1 ether.
 
 ### zero address {#zero-address}
 
-A special Ethereum address, composed entirely of zeros, that is specified as the destination address of a [contract creation transaction](#contract-creation-transaction).
+An Ethereum address, composed entirely of zeros, that is frequently used as an address to remove tokens from owned circulation. A distinction is drawn between tokens formally removed from a smart contract's index via the burn() method and those sent to this address.
 
 ### zero-knowledge proof {#zk-proof}
 

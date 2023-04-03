@@ -2,7 +2,6 @@
 title: 帕特里夏默克尔树
 description: 帕特里夏默克尔树简介。
 lang: zh
-sidebar: true
 sidebarDepth: 2
 ---
 
@@ -179,7 +178,7 @@ sidebarDepth: 2
     hashE:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coin' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
 ```
 
-当一个节点在另一个节点中被引用时，包含的是 `H(rlp.encode(x))`，其中 `H(x) = keccak256(x) if len(x) > > = 32 else x` 和 `rlp.encode` 是[递归长度前缀](/developers/docs/data-structures-and-encoding/rlp)编码函数。
+当一个节点在另一个节点中被引用时，包含的是 `H(rlp.encode(x))`，其中 `H(x) = keccak256(x) if len(x) > > = 32 else x` 和 `rlp.encode` 是[递归长度前缀](/fundamentals/rlp)编码函数。
 
 请注意，更新前缀树时，*如果*新创建节点的长度 >= 32，则需要将键/值对 `(keccak256(x), x)` 存储在一个持久的查询表中。 然而，如果节点比这短，则不需要存储任何数据，因为函数 f(x) = x 是可逆的。
 
@@ -246,7 +245,7 @@ else:
 
 ### 收据树 {#receipts-trie}
 
-每个区块都有自己的收据树。 此处的 `path` 是：`rlp(transactionIndex)`。 `transactionIndex` 是它在挖矿区块中的索引。 收据树不会更新。 与交易树类似，也有当前和遗留的收据。 要查询收据树中的特定收据，需要区块中的交易索引、收据有效载荷和交易类型。 返回的收据可以是 `Receipt` 类型，定义为 `transaction type` 和 `transaction payload` 的串接，也可以是 `LegacyReceipt` 类型，定义为 `rlp([status, cumularGasUsed, logsBloom, logs])`。
+每个区块都有自己的收据树。 此处的 `path` 是：`rlp(transactionIndex)`。 `transactionIndex` 是它在挖矿区块中的索引。 收据树不会更新。 与交易树类似，也有当前和遗留的收据。 要查询收据树中的特定收据，需要区块中的交易索引、收据有效载荷和交易类型。 返回的收据可以是 `Receipt` 类型，定义为 `transaction type` 和 `transaction payload` 的串接，也可以是 `LegacyReceipt` 类型，定义为 `rlp([status, cumulativeGasUsed, logsBloom, logs])`。
 
 关于这个问题的更多信息可以在 [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718) 文档中找到。
 

@@ -2,7 +2,6 @@
 title: Simple serialize
 description: Spiegazione del formato SSZ di Ethereum.
 lang: it
-sidebar: true
 sidebarDepth: 2
 ---
 

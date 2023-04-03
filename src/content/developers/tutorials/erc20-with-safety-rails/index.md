@@ -3,7 +3,6 @@ title: ERC-20 with Safety Rails
 description: How to help people avoid silly mistakes
 author: Ori Pomerantz
 lang: en
-sidebar: true
 tags: ["erc-20"]
 skill: beginner
 published: 2022-08-15
@@ -128,7 +127,7 @@ Sometimes it is useful to have an administrator that can undo mistakes. To reduc
 
    Sometimes frauds send fraudulant tokens to the real token's contract to gain legitimacy. For example, [see here](https://optimistic.etherscan.io/token/0x2348b1a1228ddcd2db668c3d30207c3e1852fbbe?a=0x4200000000000000000000000000000000000042). The legitimate ERC-20 contract is [0x4200....0042](https://optimistic.etherscan.io/address/0x4200000000000000000000000000000000000042). The scam that pretends to be it is [0x234....bbe](https://optimistic.etherscan.io/address/0x2348b1a1228ddcd2db668c3d30207c3e1852fbbe).
 
-   It is also possible that people send legitimate ERC-20 tokens to our contract by mistake, which is anotehr reason to want to have a way to get them out.
+   It is also possible that people send legitimate ERC-20 tokens to our contract by mistake, which is another reason to want to have a way to get them out.
 
 OpenZeppelin provides two mechanisms to enable administrative access:
 
@@ -185,7 +184,7 @@ Freezing and thawing contracts requires several changes:
 
 ### Asset cleanup {#asset-cleanup}
 
-To release ERC-20 tokens held by this contract we need to call a function on the token contract to which they belong, either [`transfer`](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md#transfer) or [`approve`](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md#approve). There's no point wasting gas in this case on allowances, we might as well transfer directly.
+To release ERC-20 tokens held by this contract we need to call a function on the token contract to which they belong, either [`transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer) or [`approve`](https://eips.ethereum.org/EIPS/eip-20#approve). There's no point wasting gas in this case on allowances, we might as well transfer directly.
 
 ```solidity
     function cleanupERC20(

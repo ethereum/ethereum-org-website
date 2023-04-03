@@ -26,7 +26,6 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na [ethereum.org/learn](
 - [Klient Ethereum Rust](https://wiki.parity.io/Setup)
 - [Wysyłanie transakcji do Ethereum za pomocą Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Wprowadzenie do inteligentnych kontraktów z klientem Parity Ethereum](https://wiki.parity.io/Smart-Contracts)
-- [Konfigurowanie środowiska deweloperskiego Oasis SDK](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Samouczek krok po kroku, jak pisać umowy w Rust Wasm dla Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Artykuły dla średniozaawansowanych {#intermediate-articles}
@@ -41,7 +40,6 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na [ethereum.org/learn](
 - [Zbuduj zdecentralizowaną aplikację Todo za pomocą Vue.js & Rust](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Pierwsze kroki z Enigma - w języku programowania Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [Wprowadzenie do tajnych kontraktów](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
-- [Wdrażanie kontraktów Solidity na Oasis (Compound)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)
 
 ## Projekty i Narzędzia Rust {#rust-projects-and-tools}
 

@@ -332,7 +332,6 @@ DeFi adalah gerakan sumber terbuka. Anda bisa memeriksa, melakukan fork, dan ber
 
 ### Data DeFi {#defi-data}
 
-- [DeFi Pulse](https://defipulse.com/)
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 

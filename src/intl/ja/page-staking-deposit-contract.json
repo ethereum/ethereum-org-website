@@ -23,5 +23,6 @@
   "page-staking-deposit-contract-stop-reading": "音声読み上げを停止",
   "page-staking-deposit-contract-subtitle": "これがイーサリアムのステーキングコントラクトのアドレスです。このページを使って、ステーキング時に正しいアドレスに送金していることを必ず確認してください。",
   "page-staking-deposit-contract-warning": "各文字を注意深くご確認ください。",
-  "page-staking-deposit-contract-warning-2": "このアドレスに送金することはできず、ステーキングにはなりません。必ずランチパッドの案内に従ってください。"
+  "page-staking-deposit-contract-warning-2": "このアドレスに送金することはできず、ステーキングにはなりません。必ずランチパッドの案内に従ってください。",
+  "page-staking-deposit-contract-title": "デポジットコントラクトアドレスを確認"
 }

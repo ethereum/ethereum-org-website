@@ -27,7 +27,7 @@ Egy objektum, mely egy [címet](#address), egy egyenleget, [egy nonce-t](#nonce)
 
 ### address (cím) {#address}
 
-Általánosságban ez egy [EOA-t](#eoa) vagy egy [szerződést](#contract-accouint) reprezentál, mely fogadhat (cél cím) vagy küldhet (eredő cím) [tranzakciókat](#transaction) a blokkláncon. Pontosabban ez egy [ECDSA](#ecdsa) [publikus kulcs](#public-key) [Keccak hashének](#keccak-256) jobb oldalra eső 160 bitje.
+Általánosságban ez egy [EOA-t](#eoa) vagy egy [szerződést](#contract-account) reprezentál, mely fogadhat (cél cím) vagy küldhet (eredő cím) [tranzakciókat](#transaction) a blokkláncon. Pontosabban ez egy [ECDSA](#ecdsa) [publikus kulcs](#public-key) [Keccak hashének](#keccak-256) jobb oldalra eső 160 bitje.
 
 ### assert {#assert}
 

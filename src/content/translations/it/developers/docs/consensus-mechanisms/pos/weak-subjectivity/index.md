@@ -2,7 +2,6 @@
 title: Soggettività debole
 description: Una spiegazione della soggettività debole e del suo ruolo nell'Ethereum PoS.
 lang: it
-sidebar: true
 ---
 
 Per soggettività nelle blockchain si intende l'affidamento alle informazioni sociali per acconsentire allo stato corrente. Potrebbero esistere diverse biforcazioni valide, tra le quali si sceglie basandosi sulle informazioni raccolte da altri peer sulla rete. Il contrario è l'oggettività, che si riferisce alle catene in cui è possibile solo una catena valida, su cui tutti i nodi acconsentiranno necessariamente, applicando delle proprie regole codificate. Esiste anche un terzo stato, noto come soggettività debole. Esso indica una catena che può progredire oggettivamente dopo aver recuperato socialmente parte del seed iniziale di informazioni.

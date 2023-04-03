@@ -53,3 +53,14 @@ body:
     attributes:
       label: Do you have any extra information?
       description: Add any more info that may make a stronger case for listing this exchange. Consider years of operation, size of company, financial backing etc
+  - type: checkboxes
+    id: exchange_work_on
+    attributes:
+      label: Would you like to work on this issue?
+      options:
+        - label: "Yes"
+          required: false
+        - label: "No"
+          required: false
+    validations:
+      required: true

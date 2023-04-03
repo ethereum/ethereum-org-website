@@ -26,7 +26,6 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 - [Klien Ethereum Rust](https://openethereum.github.io/) \* **Perhatikan bahwa OpenEthereum [telah menjadi usang](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) dan tidak lagi dipertahankan.** Gunakan dengan hati-hati dan lebih baik beralih ke implementasi klien lainnya.
 - [Mengirimkan Transaksi ke Ethereum Menggunakan Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Pengantar Kontrak Pintar dengan Klien Ethereum Parity](https://wiki.parity.io/Smart-Contracts)
-- [Menyiapkan lingkungan pengembangan Oasis SDK Anda](https://docs.oasis.dev/oasis-sdk/guide/getting-started)
 - [Tutorial langkah demi langkah tentang cara menulis kontrak dalam rust Wasm untuk Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Artikel tingkat menengah {#intermediate-articles}
@@ -41,7 +40,6 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 - [Bangun Aplikasi Todo Terdesentralisasi Menggunakan Vue.js dan Rust](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 - [Mulai Menggunakan Enigma - Dalam Bahasa Pemrograman Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [Pengantar Kontrak Rahasia](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
-- [Menggunakan Kontrak Solidity di Oasis (Gabungan)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)
 
 ## Proyek dan peralatan Rust {#rust-projects-and-tools}
 

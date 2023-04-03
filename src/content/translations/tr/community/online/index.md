@@ -1,7 +1,6 @@
 ---
 title: Çevrimiçi topluluklar
 description: Ethereum ekosistemindeki hibe programlarının bir listesi.
-sidebar: true
 lang: tr
 ---
 

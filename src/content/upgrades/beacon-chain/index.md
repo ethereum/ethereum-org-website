@@ -23,7 +23,7 @@ The Beacon Chain was the name given to a ledger of accounts that conducted and c
 
 It introduced the consensus engine (or "consensus layer") that took the place of proof-of-work mining on Ethereum and brought many significant improvements with it.
 
-The Beacon Chain was a foundational component for [the secure, environmentally friendly and scalable Ethereum we have now](/upgrades/vision/).
+The Beacon Chain was a foundational component for [the secure, environmentally friendly and scalable Ethereum we have now](/roadmap/vision/).
 
 ## Beacon Chain impact {#beacon-chain-features}
 
@@ -71,5 +71,5 @@ Sharding can only safely enter the Ethereum ecosystem with a proof-of-stake cons
 
 ## Further Reading
 
-- [More on Ethereum's future upgrades](/upgrades/vision)
+- [More on Ethereum's future upgrades](/roadmap/vision)
 - [More of proof-of-stake](/developers/docs/consensus-mechanisms/pos)

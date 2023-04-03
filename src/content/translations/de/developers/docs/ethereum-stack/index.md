@@ -46,7 +46,7 @@ Obwohl diese APIs kein notwendiger Bestandteil des Stacks sind, gestalten sie di
 
 ## Ebene 5: Endbenutzeranwendungen {#end-user-applications}
 
-Auf der obersten Ebene des Stacks befinden sich benutzerorientierte Anwendungen. Das sind die Standardanwendungen, die Sie heute regelmäßig nutzen aund aufhauen: in erster Linie Web- und Mobilanwendungen.
+Auf der obersten Ebene des Stacks befinden sich benutzerorientierte Anwendungen. Das sind die Standardanwendungen, die Sie heute regelmäßig nutzen und erstellen: in erster Linie Web- und Mobilanwendungen.
 
 Die Art und Weise, wie Sie diese Benutzeroberflächen entwickeln, bleibt im Wesentlichen unverändert. Meist müssen Benutzer nicht wissen, dass die von ihnen verwendete Anwendung auf einer Blockchain erstellt wurde.
 

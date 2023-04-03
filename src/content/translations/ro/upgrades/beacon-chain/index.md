@@ -1,63 +1,75 @@
 ---
-title: Rețeaua Beacon
-description: Informații despre rețeaua Beacon - primul upgrade major Eth2 la Ethereum.
+title: Lanțul Beacon
+description: Aflați despre Lanțul Beacon - actualizarea care a introdus în Ethereum dovada-mizei.
 lang: ro
 template: upgrade
-image: ../../../../assets/upgrades/core.png
-summaryPoint1: Rețeaua Beacon nu schimbă Ethereum-ul pe care îl folosim astăzi.
-summaryPoint2: Va coordona rețeaua.
-summaryPoint3: Introduce Dovada Mizei (proof-of-stake) în ecosistemul Ethereum.
-summaryPoint4: S-ar putea să-l cunoști sub numele de „Faza 0” pe foile de parcurs tehnice.
+image: ../../../../../assets/upgrades/core.png
+summaryPoint1: Lanțul Beacon a introdus dovada mizei în ecosistemul Ethereum.
+summaryPoint2: Acesta a fost fuzionat cu lanțul dovadă a muncii Ethereum original în septembrie 2022.
+summaryPoint3: Lanțul Beacon a introdus logica consensului și protocolul de bârfă al blocului care protejează Ethereum în acest moment.
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
-    Rețeaua Beacon a fost lansată pe 1 decembrie 2020 la prânz, UTC. Pentru informații suplimentare, <a href="https://beaconscan.com/">explorează datele</a>. Dacă vrei să ajuți la validarea lanțului, poți <a href="/staking/">să mizezi ETH</a>.
+  Lanțul Beacon a fost lansat pe 1 decembrie 2020 și a formalizat dovada mizei ca mecanism de consens al Ethereum prin modernizarea Fuziunii în 15 septembrie 2022.
 </UpgradeStatus>
 
-## Ce face Lanțul Beacon? {#what-does-the-beacon-chain-do}
+## Ce este lanțul Beacon? {#what-is-the-beacon-chain}
 
-Lanțul Beacon va conduce sau va coordona rețeaua extinsă de [fragmente](/upgrades/sharding/) și [stakeri](/staking/). Dar nu va fi ca [Rețeaua principală Ethereum](/glossary/#mainnet) de astăzi. Nu poate gestiona conturi sau contracte inteligente.
+Lanțul Beacon a fost numele blockchain-ului dovada mizei original, lansat în 2020. A fost creat pentru a ne asigura că logica de consens cu dovada mizei este sănătoasă și durabilă înainte de a o activa în Rețeaua principală Ethernet. Prin urmare, a funcționat împreună cu dovada muncii Ethereum originală. Dezactivarea și activarea dovezii muncii în Ethereum a necesitat o instrucțiune prin care Lanțul Beacon să accepte tranzacții din lanțul Ethereum original, să le regrupeze în blocuri și să le organizeze într-un blockchain folosind un mecanism de consens bazat pe dovada mizei. În același moment, clienții originali Ethereum au oprit minarea, propagarea blocului și logica consensului, transferând toate acestea în Lanțul Beacon. Acest eveniment a fost cunoscut sub numele de [Fuziunea](/upgrades/merge/). Odată ce Fuziunea a avut loc, nu au mai existat două blockchain-uri, ci doar un singur lanț dovada mizei Ethereum.
 
-Rolul rețelei Beacon se va schimba în timp, dar este o componentă fundamentală pentru [Ethereum-ul sigur, durabil și scalabil la care lucrăm](/upgrades/vision/).
+## Care a fost rolul Lanțului Beacon? {#what-does-the-beacon-chain-do}
 
-## Caracteristicile Lanțului Beacon {#beacon-chain-features}
+Lanțul Beacon a fost numele dat unui registru al conturilor care a condus și coordonat rețeaua de [stakeri](/staking/) Ethereum înainte ca stakerii să înceapă validarea tranzacțiilor Ethereum reale. Nu a procesat tranzacții și nu a gestionat interacțiunile contractului inteligent.
 
-### Prezentarea mizării {#introducing-staking}
+A introdus motorul pentru consens (sau „stratul de consens”) care a luat locul minării prin dovada muncii în Ethereum și a adus îmbunătățiri majore.
 
-Rețeaua Beacon va introduce [Dovada de Minare](/developers/docs/consensus-mechanisms/pos/) în Ethereum. Aceasta este o nouă modalitate prin care tu să cpntribui la menținerea siguranței Ethereum. Gândește-te la acest lucru ca la un bun public care va face Ethereum mai sănătos și, în același timp, te va face să câștigi mai mult ETH. În practică, te va implica în minarea de ETH pentru a activa software-ul de validare. În calitate de validator, vei procesa tranzacțiile și vei crea noi blocuri în lanț.
+Lanțul Beacon a fost o componentă fundamentală pentru [securitatea, respectul pentru mediu și scalabilitatea Ethereum de care ne bucurăm acum](/roadmap/vision/).
 
-Mizarea și transformarea în validator este mai ușoară decât [minatul](/developers/docs/mining/) (modul în care rețeaua este securizată în prezent). Și sperăm că acest lucru va ajuta Ethereum să fie mai sigur pe termen lung. Cu cât vor participa mai mulți oameni la rețeaua Ethereum, cu atât va deveni mai descentralizată și mai ferită de atacuri.
+## Impactul Lanțului Beacon {#beacon-chain-features}
+
+### Introducere despre mizare {#introducing-staking}
+
+Lanțul Beacon a introdus [dovada mizei](/developers/docs/consensus-mechanisms/pos/) în Ethereum. Aceasta asigură securitatea Ethereum și generează mai mult ETH pentru validatori în cadrul procesului. În practică, mizarea implică mizarea ETH pentru activarea software-ului validatorului. În calitate de staker, rulați software-ul care creează și validează noile blocuri din lanț.
+
+Mizarea joacă același rol avut înainte de [minare](/developers/docs/mining/), dar diferă în multe moduri. Minarea necesita cheltuieli inițiale mari, sub forma unor echipamente hardware puternice și a unui consum mare de energie, ceea ce duce la economii de scalare și promovarea centralizării. De asemenea, minarea nu implica cerințe pentru blocarea activelor drept garanție, limitând capacitatea protocolului de a pedepsi actorii răi după un atac.
+
+Tranziția la dovada mizei a făcut ca Ethereum să fie mult mai sigur și mai descentralizat în comparație cu dovada muncii. Cu cât numărul de oameni din rețea este mai mare, cu atât mai descentralizată și mai sigură în caz de atacuri devine aceasta.
 
 <InfoBanner emoji=":money_bag:">
-Dacă dorești să devii validator și să ajuți la securizarea rețelei Beacon, <a href="/staking/">află mai multe despre mizare</a>.
+  Dacă dorești să devii un validator și să contribui la securitatea Ethereum, <a href="/staking/">află mai multe despre mizare</a>.
 </InfoBanner>
 
-Aceasta este o altă schimbare importantă pentru următorul upgrade Eth2: [lanțurile de fragmente](/upgrades/sharding/).
+### Configurarea pentru fragmentare {#setting-up-for-sharding}
 
-### Configurarea lanțurilor de fragmente {#setting-up-for-shard-chains}
+De la momentul în care Lanțul Beacon a fuzionat cu Rețeaua principală Ethereum, comunitatea Ethereum a început să caute să scaleze rețeaua.
 
-După ce Rețeaua principală se va uni cu rețeaua Beacon, următoarea actualizare va introduce lanțurile de fragmente în rețeaua care folosește dovada de minare(proof-of-stake). Aceste „fragmente” vor crește capacitatea rețelei și vor îmbunătăți viteza tranzacțiilor extinzând rețeaua la 64 de blockchain-uri. Rețeaua Beacon este primul pas important în introducerea lanțurilor de fragmente, deoarece acestea necesită mizarea pentru a funcționa în siguranță.
+Dovada mizei are avantajul de a deține un registru cu toți producătorii aprobați în orice moment, fiecare având în joc ETH. Acest registru creează condițiile pentru capacitatea de a diviza și de a cuceri, dar separă în mod fiabil responsabilitățile specifice rețelei.
 
-În cele din urmă, rețeaua Beacon va fi, de asemenea, responsabil pentru atribuirea aleatorie a stakerilor pentru validarea lanțurilor de fragmente. Acest lucru este esențial pentru a îngreuna realizarea înțelegerilor între stakeri și preluarea controlului unui fragment. Ei bine, acest lucru înseamnă că au [mai puțin de o șansă la un trilion](https://medium.com/@chihchengliang/minimum-committee-size-explained-67047111fa20).
+Această responsabilitate contrastează cu dovada muncii, unde minerii nu au nicio obligație față de rețea și ar putea opri minarea și ar putea dezactiva permanent software-ul nodului într-o clipă, fără repercusiuni. De asemenea, nu există niciun registru al promotorilor de blocuri cunoscuți și nicio modalitate fiabilă de a împărți responsabilitățile din rețea în siguranță.
 
-## Relația dintre upgrade-uri {#relationship-between-upgrades}
+[Aflați mai multe despre fragmentare](/upgrades/sharding/)
 
-Toate upgrade-urile Eth2 sunt oarecum interdependente. Deci, să recapitulăm modul în care lanțul Beacon afectează celelalte upgrade-uri.
+## Relațiile dintre actualizări {#relationship-between-upgrades}
 
-### Rețeaua principală și Rețeaua Beacon {#mainnet-and-beacon-chain}
+Toate actualizările Ethereum se află într-o anumită corelație. Deci, să recapitulăm cum afectează Lanțul Beacon celelalte actualizări.
 
-La început, Rețeaua Beacon va exista separat de Rețeaua principală Ethereum care este folosită în prezent. Dar în cele din urmă vor fi conectate. Planul este de a „uni” Rețeaua principală în sistemul bazat pe Dovada de Minare(proof-of-stake) care este controlat și coordonat de rețeaua Beacon.
+### Lanțul Beacon și Fuziunea {#merge-and-beacon-chain}
 
-<ButtonLink to="/upgrades/merge/">Unirea</ButtonLink>
+La început, Lanțul Beacon a existat separat de Rețeaua principală Ethereum, dar au fuzionat în 2022.
 
-### Fragmentele și lanțul Beacon {#shards-and-beacon-chain}
+<ButtonLink to="/upgrades/merge/">
+  Fuziunea
+</ButtonLink>
 
-Lanțurile de fragmente nu pot intra în siguranță în ecosistemul Ethereum decât cu un mecanism de consens bazat pe Dovada de Minare(proof-of-stake). Rețeaua Beacon va introduce mizarea, pregătind astfel terenul pentru ca actualizarea lanțului de fragmente să aibă loc.
+### Fragmentele și Lanțul Beacon {#shards-and-beacon-chain}
 
-<ButtonLink to="/upgrades/sharding/">Lanțuri de fragmente</ButtonLink>
+Fragmentarea poate intra în ecosistemul Ethereum în siguranță doar cu un mecanism de consens în vigoare, dovada mizei. Lanțul Beacon a introdus mizarea, care a „fuzionat” cu Rețeaua principală, deschizând calea pentru fragmentare, pentru o scalare și mai mare a Ethereum.
 
-<Divider />
+<ButtonLink to="/upgrades/sharding/">
+  Lanțurile de fragmente
+</ButtonLink>
 
-## Interacțiunea cu lanțul Beacon {#interact-with-beacon-chain}
+## Referințe suplimentare
 
-<BeaconChainActions />
+- [Mai multe despre viitoarele modernizări ale Ethereum](/roadmap/vision)
+- [Mai multe despre dovada mizei](/developers/docs/consensus-mechanisms/pos)

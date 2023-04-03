@@ -171,7 +171,7 @@ Mode sinkronisasi mewakili pendekatan berbeda terhadap proses ini dengan berbaga
 
 Tinjauan umum pendekatan sinkronisasi yang digunakan dalam klien untuk Jaringan Utama:
 
-##### Sinkonisasi penuh {#full-sync}
+##### Sinkonisasi penuh
 
 Sinkronisasi penuh mengunduh semua blok (termasuk header, transaksi, dan bukti pembayaran) dan menghasilkan state blockchain yang terus bertambah dengan mengeksekusi setiap blok dari blok genesis.
 
@@ -247,11 +247,11 @@ Ada beberapa klien konsensus (sebelumnya dikenal sebagai klien 'Eth2') untuk men
 
 | Klien                                                       | Bahasa     | Sistem operasi        | Jaringan                             |
 | ----------------------------------------------------------- | ---------- | --------------------- | ------------------------------------ |
-| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | Rantai Suar, Prater                  |
-| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Rantai Suar, Prater                  |
-| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Rantai Suar, Prater, Pyrmont         |
-| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Rantai Suar, Prater                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Rantai Suar, Gnosis, Prater, Pyrmont |
+| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | Rantai Suar, Goerli                  |
+| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Rantai Suar, Goerli                  |
+| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Rantai Suar, Goerli, Pyrmont         |
+| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Rantai Suar, Goerli                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Rantai Suar, Gnosis, Goerli, Pyrmont |
 
 ## Perangkat keras {#hardware}
 

@@ -1,167 +1,238 @@
-import React, { useState, useEffect, ReactNode } from "react"
-import { useTheme } from "@emotion/react"
-import styled from "@emotion/styled"
+import React, {
+  useState,
+  useEffect,
+  ReactNode,
+  ComponentPropsWithRef,
+} from "react"
+import {
+  Box,
+  chakra,
+  Divider,
+  DividerProps,
+  Flex,
+  Grid,
+  Heading,
+  HeadingProps,
+  List,
+  ListItem,
+  Text,
+  useTheme,
+  useToken,
+} from "@chakra-ui/react"
 import { graphql, PageProps } from "gatsby"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import { shuffle } from "lodash"
-import { translateMessageId, TranslationKey } from "../../../utils/translations"
+
 import Card from "../../../components/Card"
 import Leaderboard, { Person } from "../../../components/Leaderboard"
 import CalloutBanner from "../../../components/CalloutBanner"
-import Emoji from "../../../components/OldEmoji"
+import Emoji from "../../../components/Emoji"
 import ProductCard from "../../../components/ProductCard"
 import ButtonLink from "../../../components/ButtonLink"
 import PageMetadata from "../../../components/PageMetadata"
 import CardList from "../../../components/CardList"
 import Translation from "../../../components/Translation"
 import Link from "../../../components/Link"
-
-import {
-  CardContainer,
-  CardGrid,
-  Content,
-  Page,
-  GrayContainer,
-  Divider,
-  SloganGradient,
-} from "../../../components/SharedStyledComponents"
 import Breadcrumbs from "../../../components/Breadcrumbs"
 import FeedbackCard from "../../../components/FeedbackCard"
 import { getImage, ImageDataLike } from "../../../utils/image"
+import { ChildOnlyProp } from "../../../types"
 
-const HeroContainer = styled.div`
-  padding-left: 0rem;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  width: 50%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 2rem;
-    padding-left: 0rem;
-    width: 100%;
-  }
-`
+const Page = (props: ChildOnlyProp) => (
+  <Flex direction="column" align="center" w="full" {...props} />
+)
 
-const StyledCard = styled(Card)`
-  flex: 1 1 30%;
-  min-width: 240px;
-  margin: 1rem;
-  padding: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex: 1 1 30%;
-  }
-`
+const PageDivider = (props: DividerProps) => (
+  <Divider
+    my={16}
+    w="10%"
+    borderBottomWidth="0.25rem"
+    borderColor="homeDivider"
+    {...props}
+  />
+)
 
-const LeaderboardContainer = styled.div`
-  padding-left: 0rem;
-  padding-top: 2rem;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-    margin-top: 2rem;
-  }
-`
+const PageContent = (props: ChildOnlyProp) => (
+  <Box py={4} px={8} w="full" {...props} />
+)
 
-const HeroCard = styled.div`
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-top: -2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 1rem;
-  }
-`
+const H2 = (props: HeadingProps) => (
+  <Heading
+    mt={12}
+    mb={8}
+    fontSize={{ base: "2xl", md: "2rem" }}
+    fontWeight="semibold"
+    lineHeight={1.4}
+    {...props}
+  />
+)
 
-const Subtitle = styled.div`
-  font-size: 1.5rem;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-  margin-top: 1rem;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-`
+const H3 = (props: HeadingProps) => (
+  <Heading
+    as="h3"
+    fontSize={{ base: "xl", md: "2xl" }}
+    fontWeight="semibold"
+    lineHeight={1.4}
+    {...props}
+  />
+)
 
-const Row = styled.div`
-  display: flex;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column;
-  }
-`
+const StyledCardContainer = (props: ChildOnlyProp) => (
+  <Flex wrap="wrap" mt={8} mb={12} mx={-4} {...props} />
+)
 
-const ReverseRow = styled.div`
-  display: flex;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column-reverse;
-  }
-`
+const StyledCardGrid = (props: ChildOnlyProp) => (
+  <Grid
+    mt={8}
+    mb={12}
+    gap={8}
+    templateColumns="repeat(auto-fill, minmax(min(100%, 280px), 1fr))"
+    {...props}
+  />
+)
 
-const StyledCardContainer = styled(CardContainer)`
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-`
+const StyledGrayContainer = (props: ChildOnlyProp) => {
+  const tableItemBoxShadow = useToken("colors", "tableItemBoxShadow")
 
-const StyledCardGrid = styled(CardGrid)`
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-`
+  return (
+    <Box
+      w="full"
+      pt={16}
+      pb={8}
+      px={0}
+      mt={8}
+      mb={12}
+      bg="grayBackground"
+      boxShadow={`inset 0px 1px 0px ${tableItemBoxShadow}`}
+      {...props}
+    />
+  )
+}
 
-const StyledCardList = styled(CardList)`
-  margin-right: 2rem;
-`
+const SloganGradient = (props: ChildOnlyProp) => {
+  const upgradesGradient = useToken("colors", "upgradesGradient")
 
-const Staking = styled.div`
-  padding: 4rem;
-  background: ${(props) => props.theme.colors.cardGradient};
-  width: 100%;
-  margin-top: 2rem;
-  margin-bottom: -2rem;
-  display: flex;
-  flex-direction: column;
-`
+  return (
+    <Box
+      fontSize={{ base: "2.5rem", lg: "5xl" }}
+      fontWeight="extrabold"
+      lineHeight="140%"
+      maxW="720px"
+      mt={4}
+      mb={0}
+      mx="auto"
+      bgImage={upgradesGradient}
+      bgClip="text"
+      sx={{
+        "&": {
+          "-webkit-text-fill-color": "transparent",
+        },
+      }}
+      {...props}
+    />
+  )
+}
 
-const LeftColumn = styled.div`
-  width: 50%;
-  margin-right: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-    margin-left: 4rem;
-  }
-`
+const Subtitle = (props: ChildOnlyProp) => (
+  <Flex
+    justify="center"
+    textAlign="center"
+    color="text200"
+    lineHeight="140%"
+    fontSize="2xl"
+    mt={4}
+    {...props}
+  />
+)
 
-const RightColumn = styled.div`
-  width: 50%;
-  margin-left: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-    margin-right: 4rem;
-    margin-bottom: -2rem;
-  }
-`
+const HeroContainer = (props: ChildOnlyProp) => (
+  <Box
+    pl={0}
+    pt={{ base: 8, lg: 32 }}
+    pb={32}
+    w={{ base: "full", lg: "50%" }}
+    {...props}
+  />
+)
 
-const StyledBreadcrumbs = styled(Breadcrumbs)`
-  justify-content: center;
-`
+const HeroCard = (props: ChildOnlyProp) => (
+  <Flex
+    justify="center"
+    textAlign="center"
+    mt={{ base: 4, lg: -8 }}
+    {...props}
+  />
+)
 
-const StyledGrayContainer = styled(GrayContainer)`
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
-`
+const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
+  <Card flex="1 1 30%" minW="240px" m={4} p={6} {...props} />
+)
 
-const StyledCalloutBanner = styled(CalloutBanner)`
-  background: transparent;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-    padding: 0rem;
-    padding-top: 4rem;
-    margin-left: 0rem;
-  }
-`
+const StyledCardList = (props: ComponentPropsWithRef<typeof CardList>) => (
+  <Box as={CardList} mr={8} {...props} />
+)
+
+const LeaderboardContainer = (props: ChildOnlyProp) => (
+  <Flex
+    align="center"
+    direction="column"
+    w={{ base: "full", md: "50%" }}
+    pl={0}
+    pt={8}
+    {...props}
+  />
+)
+
+const Row = (props: ChildOnlyProp) => (
+  <Flex align="center" direction={{ base: "column", md: "row" }} {...props} />
+)
+
+const ReverseRow = (props: ChildOnlyProp) => (
+  <Flex
+    align="center"
+    direction={{ base: "column-reverse", md: "row" }}
+    {...props}
+  />
+)
+
+const LeftColumn = (props: ChildOnlyProp) => (
+  <Box
+    w={{ base: "full", md: "50%" }}
+    mr={16}
+    ml={{ base: 16, md: 0 }}
+    {...props}
+  />
+)
+
+const RightColumn = (props: ChildOnlyProp) => (
+  <Box
+    w={{ base: "full", md: "50%" }}
+    mr={{ base: 16, md: 0 }}
+    ml={16}
+    {...props}
+  />
+)
+
+const Staking = (props: ChildOnlyProp) => (
+  <Flex
+    direction="column"
+    w="full"
+    mt={8}
+    mb={-8}
+    p={16}
+    background="cardGradient"
+    {...props}
+  />
+)
+
+const StyledCalloutBanner = chakra(CalloutBanner, {
+  baseStyle: {
+    bg: "transparent",
+    w: { base: "full", md: "auto" },
+    p: { base: 0, md: 12 },
+    pt: { base: 16, md: 12 },
+  },
+})
 
 type Layer = "el" | "cl"
 
@@ -169,7 +240,7 @@ type Client = {
   name: string
   background: string
   description: ReactNode
-  alt: TranslationKey
+  alt: string
   url: string
   image: (isDarkTheme?: boolean) => ImageDataLike | null
   githubUrl: string
@@ -185,9 +256,8 @@ const GetInvolvedPage = ({
   data,
   location,
 }: PageProps<Queries.GetInvolvedPageQuery>) => {
-  const intl = useIntl()
-  const theme = useTheme()
-  const isDarkTheme = theme.isDark
+  const { t } = useTranslation()
+  const { isDark: isDarkTheme } = useTheme()
 
   // TODO sort query isn't working :(
   const bountyHunters: Array<Person> = [...data.bountyHunters.nodes].sort(
@@ -210,7 +280,7 @@ const GetInvolvedPage = ({
         description: (
           <Translation id="page-upgrades-get-involved-written-java" />
         ),
-        alt: "consensus-client-besu-logo-alt",
+        alt: t("consensus-client-besu-logo-alt"),
         url: "https://besu.hyperledger.org/en/stable/HowTo/Get-Started/Install-Binaries/",
         image: () => data.besu,
         githubUrl: "https://github.com/hyperledger/besu",
@@ -219,7 +289,7 @@ const GetInvolvedPage = ({
         name: "Erigon",
         background: "#3A4B56",
         description: <Translation id="page-upgrades-get-involved-written-go" />,
-        alt: "consensus-client-erigon-logo-alt",
+        alt: t("consensus-client-erigon-logo-alt"),
         url: "https://github.com/ledgerwatch/erigon#erigon",
         image: () => data.erigon,
         githubUrl: "https://github.com/ledgerwatch/erigon",
@@ -228,7 +298,7 @@ const GetInvolvedPage = ({
         name: "Geth",
         background: "#303D4E",
         description: <Translation id="page-upgrades-get-involved-written-go" />,
-        alt: "consensus-client-geth-logo-alt",
+        alt: t("consensus-client-geth-logo-alt"),
         url: "https://geth.ethereum.org/docs/getting-started",
         image: () => data.geth,
         githubUrl: "https://github.com/ethereum/go-ethereum",
@@ -239,7 +309,7 @@ const GetInvolvedPage = ({
         description: (
           <Translation id="page-upgrades-get-involved-written-c-sharp" />
         ),
-        alt: "consensus-client-lodestar-logo-alt",
+        alt: t("consensus-client-lodestar-logo-alt"),
         url: "https://docs.nethermind.io/nethermind/",
         image: () => data.nethermind,
         githubUrl: "https://github.com/NethermindEth/nethermind",
@@ -251,7 +321,7 @@ const GetInvolvedPage = ({
         name: "Prysm",
         background: "#23292e",
         description: <Translation id="page-upgrades-get-involved-written-go" />,
-        alt: "consensus-client-prysm-logo-alt",
+        alt: t("consensus-client-prysm-logo-alt"),
         url: "https://docs.prylabs.network/docs/getting-started/",
         image: () => data.prysm,
         githubUrl: "https://github.com/prysmaticlabs/prysm",
@@ -262,7 +332,7 @@ const GetInvolvedPage = ({
         description: (
           <Translation id="page-upgrades-get-involved-written-rust" />
         ),
-        alt: "consensus-client-lighthouse-logo-alt",
+        alt: t("consensus-client-lighthouse-logo-alt"),
         url: "https://lighthouse-book.sigmaprime.io/",
         image: (isDarkTheme) =>
           isDarkTheme ? data.lighthouseDark : data.lighthouseLight,
@@ -274,7 +344,7 @@ const GetInvolvedPage = ({
         description: (
           <Translation id="page-upgrades-get-involved-written-java" />
         ),
-        alt: "consensus-client-teku-logo-alt",
+        alt: t("consensus-client-teku-logo-alt"),
         url: "https://pegasys.tech/teku",
         image: (isDarkTheme) => (isDarkTheme ? data.tekuLight : data.tekuDark),
         githubUrl: "https://github.com/ConsenSys/teku",
@@ -285,12 +355,10 @@ const GetInvolvedPage = ({
         description: (
           <Translation id="page-upgrades-get-involved-written-javascript" />
         ),
-        alt: "consensus-client-lodestar-logo-alt",
+        alt: t("consensus-client-lodestar-logo-alt"),
         url: "https://lodestar.chainsafe.io/",
         image: () => data.lodestar,
         githubUrl: "https://github.com/ChainSafe/lodestar",
-        isBeta: true,
-        children: <Translation id="consensus-client-under-review" />,
       },
       {
         name: "Nimbus",
@@ -298,7 +366,7 @@ const GetInvolvedPage = ({
         description: (
           <Translation id="page-upgrades-get-involved-written-nim" />
         ),
-        alt: "consensus-client-nimbus-logo-alt",
+        alt: t("consensus-client-nimbus-logo-alt"),
         url: "https://nimbus.team/",
         image: () => data.nimbus,
         githubUrl: "https://github.com/status-im/nimbus-eth2",
@@ -376,7 +444,7 @@ const GetInvolvedPage = ({
             image={getImage(client.image(isDarkTheme))!}
             name={client.name}
             description={client.description}
-            alt={translateMessageId(client.alt, intl)}
+            alt={client.alt}
             githubUrl={client.githubUrl}
             hideStars={true}
           >
@@ -390,31 +458,28 @@ const GetInvolvedPage = ({
   return (
     <Page>
       <PageMetadata
-        title={translateMessageId("page-upgrades-get-involved", intl)}
-        description={translateMessageId(
-          "page-upgrades-get-involved-meta-description",
-          intl
-        )}
+        title={t("page-upgrades-get-involved")}
+        description={t("page-upgrades-get-involved-meta-description")}
       />
-      <Content>
+      <PageContent>
         <HeroCard>
           <HeroContainer>
-            <StyledBreadcrumbs slug={location.pathname} startDepth={1} />
+            <Breadcrumbs slug={location.pathname} startDepth={1} />
             <SloganGradient>
               <Translation id="page-upgrades-get-involved" />{" "}
-              <Emoji size={1} text=":wave:" />
+              <Emoji text=":wave:" />
             </SloganGradient>
             <Subtitle>
               <Translation id="page-upgrades-get-involved-subtitle" />
             </Subtitle>
           </HeroContainer>
         </HeroCard>
-        <h2>
+        <H2>
           <Translation id="page-upgrades-get-involved-how" />
-        </h2>
-        <p>
+        </H2>
+        <Text>
           <Translation id="page-upgrades-get-involved-how-desc" />
-        </p>
+        </Text>
         <StyledCardContainer>
           {paths.map((path, idx) => (
             <StyledCard
@@ -427,74 +492,79 @@ const GetInvolvedPage = ({
             </StyledCard>
           ))}
         </StyledCardContainer>
-      </Content>
-      <Divider id="clients" />
-      <Content>
-        <h2>
+      </PageContent>
+      <PageDivider id="clients" />
+      <PageContent>
+        <H2>
           <Translation id="page-upgrades-get-involved-run-clients" />
-        </h2>
-        <p>
+        </H2>
+        <Text>
           <Translation id="page-upgrades-get-involved-run-clients-desc" />{" "}
           <Link to="https://clientdiversity.org">
             <Translation id="page-upgrades-get-involved-run-clients-desc-link" />
           </Link>
-        </p>
-        <h3>
+        </Text>
+        <H3>
           <Translation id="page-upgrades-get-involved-run-clients-execution" />
-        </h3>
-        <p>
+        </H3>
+        <Text>
           <Translation id="page-upgrades-get-involved-run-clients-execution-desc" />
-        </p>
+        </Text>
         {getClientCards("el")}
-        <h3>
+        <H3>
           <Translation id="page-upgrades-get-involved-run-clients-consensus" />
-        </h3>
-        <p>
+        </H3>
+        <Text>
           <Translation id="page-upgrades-get-involved-run-clients-consensus-desc" />
-        </p>
+        </Text>
         {getClientCards("cl")}
-      </Content>
+      </PageContent>
       <Staking>
         <StyledCalloutBanner
           image={getImage(data.rhino)!}
-          alt={translateMessageId("page-staking-image-alt", intl)}
+          alt={t("page-staking-image-alt")}
           titleKey={"page-upgrades-get-involved-stake"}
           descriptionKey={"page-upgrades-get-involved-stake-desc"}
+          sx={{
+            "&": {
+              ml: 0,
+            },
+          }}
         >
-          <div>
+          <Box>
             <ButtonLink to="/staking/">
               <Translation id="page-upgrades-get-involved-stake-eth" />
             </ButtonLink>
-          </div>
+          </Box>
         </StyledCalloutBanner>
       </Staking>
       <StyledGrayContainer>
-        <Content>
+        <PageContent>
           <Row>
             <LeftColumn>
-              <h2 id="#bug-bounty">
+              <H2 id="#bug-bounty">
                 <Translation id="page-upgrades-get-involved-bug-hunting" />
-              </h2>
-              <p>
+              </H2>
+              <Text>
                 <Translation id="page-upgrades-get-involved-bug-hunting-desc" />
-              </p>
-              <p>
+              </Text>
+              <Text>
                 <Translation id="page-upgrades-get-involved-bug" />
-              </p>
-              <ul>
-                <li>
+              </Text>
+              <List listStyleType="disc">
+                <ListItem>
                   <Translation id="page-upgrades-get-involved-bug-li" />
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   <Translation id="page-upgrades-get-involved-bug-li-2" />
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   <Translation id="page-upgrades-get-involved-bug-li-3" />
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                   <Translation id="page-upgrades-get-involved-bug-li-4" />
-                </li>
-              </ul>
+                </ListItem>
+              </List>
               <ButtonLink to="/bug-bounty/">
                 <Translation id="page-upgrades-get-involved-bug-hunting" />
               </ButtonLink>
@@ -503,23 +573,23 @@ const GetInvolvedPage = ({
               <Leaderboard content={bountyHunters} limit={5} />
             </LeaderboardContainer>
           </Row>
-        </Content>
+        </PageContent>
       </StyledGrayContainer>
-      <Content>
+      <PageContent>
         <ReverseRow>
           <LeftColumn>
             <StyledCardList content={ethresearch} />
           </LeftColumn>
           <RightColumn>
-            <h2>
+            <H2>
               <Translation id="page-upgrades-get-involved-join" />
-            </h2>
-            <p>
+            </H2>
+            <Text>
               <Translation id="page-upgrades-get-involved-join-desc" />
-            </p>
+            </Text>
           </RightColumn>
         </ReverseRow>
-      </Content>
+      </PageContent>
       <FeedbackCard />
     </Page>
   )
@@ -541,10 +611,22 @@ export const Clients = graphql`
 `
 
 export const query = graphql`
-  query GetInvolvedPage {
-    bountyHunters: allConsensusBountyHuntersCsv(
-      sort: { order: DESC, fields: score }
+  query GetInvolvedPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-upgrades-get-involved", "common"] }
+      }
     ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+    bountyHunters: allConsensusBountyHuntersCsv(sort: { score: DESC }) {
       nodes {
         username
         name

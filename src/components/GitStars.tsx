@@ -1,52 +1,9 @@
 import React from "react"
-import styled from "@emotion/styled"
-import Emoji from "./OldEmoji"
-import Icon from "./Icon"
+import { Icon, Text, Center, Flex } from "@chakra-ui/react"
+import { FaGithub } from "react-icons/fa"
+import Emoji from "./Emoji"
 import Link from "./Link"
 
-const Container = styled(Link)`
-  float: right;
-  display: flex;
-  text-decoration: none;
-  border-radius: 4px;
-  border: 1px solid ${(props) => props.theme.colors.lightBorder};
-  color: ${(props) => props.theme.colors.text};
-  &:hover {
-    text-decoration: none;
-    box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
-  }
-  &:hover path {
-    fill: ${(props) => props.theme.colors.primary};
-  }
-  background: ${(props) => props.theme.colors.lightBorder};
-`
-
-const Pill = styled.div`
-  text-align: center;
-`
-
-const StyledIcon = styled(Icon)`
-  margin: 0.25rem;
-`
-
-const GlyphPill = styled(Pill)`
-  display: flex;
-  align-items: center;
-  width: 36px;
-  justify-content: space-between;
-  margin: 0 0.325rem;
-  path {
-    fill: ${(props) => props.theme.colors.text};
-  }
-  float: left;
-  font-size: ${(props) => props.theme.fontSizes.s};
-`
-
-const Text = styled.div`
-  padding: 0 0.325rem;
-  font-size: 0.8125rem;
-  background: ${(props) => props.theme.colors.searchBackgroundEmpty};
-`
 export interface GitHubRepo {
   stargazerCount: number
   url: string
@@ -65,21 +22,47 @@ const GitStars: React.FC<IProps> = ({ gitHubRepo, className, hideStars }) => {
   while (rgx.test(starsString)) {
     starsString = starsString.replace(rgx, "$1,$2")
   }
-  if (hideStars) {
-    return (
-      <Container className={className} to={gitHubRepo.url} hideArrow={true}>
-        <StyledIcon name="github" size="16px" />
-      </Container>
-    )
-  }
+
   return (
-    <Container className={className} to={gitHubRepo.url} hideArrow={true}>
-      <GlyphPill>
-        <Icon name="github" size="16px" />
-        <Emoji text=":star:" size={1} />
-      </GlyphPill>
-      <Text>{starsString}</Text>
-    </Container>
+    <Link className={className} to={gitHubRepo.url} hideArrow={true}>
+      <Flex
+        background="lightBorder"
+        textDecoration="none"
+        border="1px solid"
+        borderColor="lightBorder"
+        borderRadius="base"
+        float="right"
+        color="text"
+        _hover={{
+          boxShadow: "0 0 1px var(--eth-colors-primary)",
+          path: { fill: "primary" },
+        }}
+      >
+        {hideStars ? (
+          <Icon as={FaGithub} m={1} />
+        ) : (
+          <>
+            <Center
+              w="36px"
+              justifyContent="space-between"
+              fontSize="s"
+              mx="0.325rem"
+            >
+              <Icon as={FaGithub} />
+              <Emoji text=":star:" />
+            </Center>
+            <Text
+              fontSize="0.8125rem"
+              px="0.325rem"
+              my="0"
+              background="searchBackgroundEmpty"
+            >
+              {starsString}
+            </Text>
+          </>
+        )}
+      </Flex>
+    </Link>
   )
 }
 

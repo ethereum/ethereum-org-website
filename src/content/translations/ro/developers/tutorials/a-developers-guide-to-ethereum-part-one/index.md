@@ -6,7 +6,6 @@ lang: ro
 tags:
   - "noțiuni de bază"
   - "python"
-  - "blockchain"
   - "web3.py"
 skill: beginner
 published: 2020-09-08

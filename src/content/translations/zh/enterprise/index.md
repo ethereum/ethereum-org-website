@@ -33,7 +33,7 @@ lang: zh
 
 企业从 2016 年左右开始使用区块链技术，当时已经有了 Hyperledger、Quorum 和 Corda 项目。 最初的重点主要放在私有企业级区块链上。但从 2019 年开始，人们对商业应用程序在公共与私有区块链上的思考发生了转变。 福雷斯特进行的[调查](https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/blockchain/ey-public-blockchain-opportunity-snapshot.pdf)显示，“调查答卷人... 看看这个潜力，75% 的人说他们可能会在未来使用公链，将近三分之一的人说他们很可能”。 EY’s Paul Brody 曾经[谈到](https://www.youtube.com/watch?v=-ycu5vGDdZw&feature=youtu.be&t=3668)有关在以太坊主链上进行构建的优点。其中（根据不同的应用）包括了更强的安全性/不可更改性、透明、低成本及方便与其他主链上的应用交互（网络效应）。 企业之间分享一个共同的参照基准，可以避免不必要地产生无数孤立的节点，它们不能相互沟通、分享或同步信息。
 
-公链另一个引人注意的发展是[第二层](/developers/docs/scaling/layer-2)。 第二层主要是一种可伸缩性技术类别，它提高了公共链上的吞吐量。 但第二层解决方案也可以[解决一些其他问题。这些问题正是当初企业开发者在过去选择私有链的原因](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/)。
+公共区块链另一个引人注意的发展是[二层网络](/developers/docs/scaling/layer-2)。 第二层主要是一种可伸缩性技术类别，它提高了公共链上的吞吐量。 但第二层解决方案也可以[解决一些其他问题。这些问题正是当初企业开发者在过去选择私有链的原因](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/)。
 
 “Baseline 协议”是一个关键项目，它定义了一项协议，使企业之间能够进行保密和复杂的合作而不会在链上留下任何敏感数据。 它在 2020 年取得了重大的[进展](https://www.oasis-open.org/2020/08/26/baseline-protocol-achieves-key-milestone-with-release-of-v0-1-implementation-for-enterprise/)。
 

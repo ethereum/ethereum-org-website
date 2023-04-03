@@ -10,7 +10,7 @@ Un'interfaccia standard per i contratti che gestiscono più tipi di token. Un si
 
 **Cosa si intende per Standard Multi-Token?**
 
-L'idea è semplice e cerca di creare un'interfaccia per gli smart contract in grado di rappresentare e controllare qualsiasi numero di tipi di token fungibili e non fungibili. In questo modo, il token ERC-1155 può svolgere le stesse funzioni di un token [ERC-20](/developers/docs/standards/tokens/erc-20/) e [ERC-721](/developers/docs/standards/tokens/erc-721/), e anche entrambi contemporaneamente. E soprattutto, migliorare la funzionalità di entrambi gli standard, rendendola più efficiente, e correggendo evidenti errori di implementazione sugli standard ERC-20 e ERC-721.
+L'idea è semplice e cerca di creare un'interfaccia per i contratti intelligenti, che possa rappresentare e controllare qualsiasi numero di tipi di token fungibili e non fungibili. In questo modo, il token ERC-1155 può svolgere le stesse funzioni di un token [ERC-20](/developers/docs/standards/tokens/erc-20/) e [ERC-721](/developers/docs/standards/tokens/erc-721/), e anche entrambi contemporaneamente. E soprattutto, migliorare la funzionalità di entrambi gli standard, rendendola più efficiente, e correggendo evidenti errori di implementazione sugli standard ERC-20 e ERC-721.
 
 Il token ERC-1155 è descritto nella sua interezza in [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155).
 
@@ -113,7 +113,7 @@ function onERC1155BatchReceived(
 ) external returns(bytes4);
 ```
 
-Dato il supporto a [EIP-165](https://eips.ethereum.org/EIPS/eip-165), i supporti di ERC-1155 ricevono hook solo per gli smart contract. La funzione di hook deve restituire un valore bytes4 magico predefinito dato come:
+Dato il supporto all'[EIP-165](https://eips.ethereum.org/EIPS/eip-165), i supporti di ERC-1155 ricevono hook solo per i contratti intelligenti. La funzione di hook deve restituire un valore bytes4 magico predefinito dato come:
 
 ```solidity
 bytes4(keccak256("onERC1155BatchReceived(address,address,uint256[],uint256[],bytes)"))
@@ -136,11 +136,11 @@ Abbiamo già accennato ad alcune regole di trasferimento sicure già nelle spieg
    3. uno qualsiasi dei saldi dei titolari per i token in `_ids` è inferiore ai rispettivi importi in `_values` inviati al destinatario.
    4. si verifica qualsiasi altro errore.
 
-_Nota_: tutte le funzioni batch compreso l'hook esistono anche come versioni senza batch. Questo è fatto per ragioni di efficienza nell’uso del carburante, considerando che il trasferimento di un solo bene sarà probabilmente ancora la modalità più comunemente utilizzato. Li abbiamo esclusi per semplicità nelle spiegazioni, lo stesso vale per le regole di trasferimento sicure. I nomi sono identici, basta rimuovere 'Batch'.
+_Nota_: tutte le funzioni batch compreso l'hook esistono anche come versioni senza batch. Ciò avviene per l'efficienza del gas, considerando che trasferire una singola risorsa sarebbe comunque il metodo più usato. Li abbiamo esclusi per semplicità nelle spiegazioni, lo stesso vale per le regole di trasferimento sicure. I nomi sono identici, basta rimuovere 'Batch'.
 
 ## Letture consigliate {#further-reading}
 
 - [EIP-1155 Standard Multi-Token](https://eips.ethereum.org/EIPS/eip-1155)
 - [ERC-1155: Openzeppelin Docs](https://docs.openzeppelin.com/contracts/3.x/erc1155)
-- [ERC-1155: GitHub Repo](https://github.com/enjin/erc-1155)
+- [ERC-1155: Repository di GitHub](https://github.com/enjin/erc-1155)
 - [API di Alchemy NFT](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)

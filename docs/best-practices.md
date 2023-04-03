@@ -52,7 +52,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
 
   - _tl;dr Each individual JSON entry should be a complete phrase by itself_
 
-- This is done using the `Translation` component. However there is an alternative method for regular JS: `gatsby-theme-i18n` with `/src/utils/translations.ts`
+- This is done using the `Translation` component. However there is an alternative method for regular JS: using the `t` function from `gatsby-plugin-react-i18next`
 
   - **Method one: `<Translation />` component (preferred if only needed in JSX)**
 
@@ -63,19 +63,18 @@ Markdown will be translated as whole pages of content, so no specific action is 
     ;<Translation id="language-json-key" />
     ```
 
-  - **Method two: `translateMessageId()`**
+  - **Method two: `t()`**
 
     ```tsx
-    import { useIntl } from "react-intl"
-    import { translateMessageId } from "src/utils/translations"
+    import { useTranslation } from "gatsby-plugin-react-i18next"
 
     // Utilize anywhere in JS using
-    const intl = useIntl()
-    translateMessageId("language-json-key", intl)
+    const { t } = useTranslation()
+    t("language-json-key")
     ```
 
     ```tsx
-    const siteTitle = translateMessageId("site-title", intl)
+    const siteTitle = t("site-title")
     ```
 
 ## React Hooks
@@ -164,7 +163,7 @@ import Emoji from "./Emoji"
 // Example of how to add new icon not listed
 import { ZzIconName } from "react-icons/zz"
 
-// Then add to IconContect.Provider children:
+// Then add to IconContext.Provider children:
 {
   name === "alias" && <ZzIconName />
 }

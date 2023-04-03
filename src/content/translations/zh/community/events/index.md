@@ -1,7 +1,8 @@
 ---
-title: 以太坊事件
+title: 以太坊活动
 description: 如何加入以太坊社区。
 lang: zh
+hideEditButton: true
 ---
 
 ## 活动预告 {#events}

@@ -16,7 +16,7 @@ sourceUrl: https://soliditydeveloper.com/mocking-contracts
 
 Mocking a contract essentially means creating a second version of that contract which behaves very similar to the original one, but in a way that can be easily controlled by the developer. You often end up with complex contracts where you only want to [unit-test small parts of the contract](/developers/docs/smart-contracts/testing/). The problem is what if testing this small part requires a very specific contract state that is difficult to end up in?
 
-You could write complex test setup logic everytime that brings in the contract in the required state or you write a mock. Mocking a contract is easy with inheritance. Simply create a second mock contract that inherits from the original one. Now you can override functions to your mock. Let us see it with an example.
+You could write complex test setup logic every time that brings in the contract in the required state or you write a mock. Mocking a contract is easy with inheritance. Simply create a second mock contract that inherits from the original one. Now you can override functions to your mock. Let us see it with an example.
 
 ## Example: Private ERC20 {#example-private-erc20}
 

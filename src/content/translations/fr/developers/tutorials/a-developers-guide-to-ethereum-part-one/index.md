@@ -6,7 +6,6 @@ lang: fr
 tags:
   - "premiers pas"
   - "python"
-  - "blockchain"
   - "web3.py"
 skill: beginner
 published: 2020-09-08
