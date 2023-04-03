@@ -393,7 +393,7 @@
       "additionalStakeUnit": null,
       "monthlyFee": null,
       "monthlyFeeUnit": null,
-      "isFoss": true,
+      "isFoss": false,
       "hasBugBounty": false,
       "isTrustless": false,
       "isPermissionless": false,
