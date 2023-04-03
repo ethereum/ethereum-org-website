@@ -9,5 +9,13 @@
   "page-upgrades-upgrades-guide": "Guide des mises à niveau d'Ethereum",
   "page-upgrades-upgrades-docking": "La fusion",
   "page-upgrades-shard-title": "Fragmentation",
-  "page-upgrades-upgrades-beacon-chain": "La chaîne phare"
+  "page-upgrades-upgrades-beacon-chain": "La chaîne phare",
+  "consensus-beaconcha-in-desc": "Explorateur open source de la chaîne phare",
+  "consensus-beaconscan-desc": "Explorateur de la chaîne phare – Etherscan pour la couche consensus",
+  "consensus-become-staker": "Devenir un validateur",
+  "consensus-become-staker-desc": "La mise en jeu est ouverte ! Si vous voulez miser vos ETH pour aider à sécuriser le réseau, soyez au courant des risques.",
+  "consensus-explore": "Explorer les données",
+  "consensus-run-beacon-chain": "Exécuter un client de consensus",
+  "consensus-run-beacon-chain-desc": "Ethereum a besoin qu'un maximum de clients s'exécutent. Aidez ce bien public Ethereum !",
+  "read-more": "Voir plus"
 }
