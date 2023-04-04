@@ -45,3 +45,14 @@ body:
     attributes:
       label: Additional context
       description: Add any other context or screenshots about the feature request here
+  - type: checkboxes
+    id: glossary_work_on
+    attributes:
+      label: Would you like to work on this issue?
+      options:
+        - label: "Yes"
+          required: false
+        - label: "No"
+          required: false
+    validations:
+      required: true

@@ -20,7 +20,7 @@ Begrijpen van de gedecentraliseerde aard van Ethereum is van vitaal belang, omda
   Leer de Ethereum-basisprincipes
 </DocLink>
 
-Ondanks het gebrek aan officiële ondersteuning, helpen veel groepen, gemeenschappen en projecten in het Ethereum-ecosysteem graag.
+Ondanks het gebrek aan officiële ondersteuning, helpen veel groepen, gemeenschappen en projecten in het Ethereum-ecosysteem, waardoor u veel nuttige informatie en bronnen kunt vinden op deze pagina. Heeft u nog vragen? Neem deel aan de [ethereum.org Discord](/discord/) en we zullen proberen te helpen.
 
 ## Ondersteuning voor portemonnee {#wallet-support}
 
@@ -57,6 +57,7 @@ Hier zijn enkele populaire voorbeelden:
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
 - [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
+- [Tenderly](https://discord.gg/fBvDJYR)
 
 ## Een node uitvoeren {#node-support}
 
@@ -106,4 +107,8 @@ Transacties op Ethereum kunnen soms vast komen te zitten als u een lagere transa
 
 #### Hoe kan ik Ethereum minen? {#mining-ethereum}
 
-We raden u niet aan om mining-uitrusting te kopen als u Ethereum nog niet aan het minen bent. In het tweede kwartaal van 2022 zal [de merge](/upgrades/merge/) plaatsvinden die Ethereum van proof-of-work naar proof-of-stake overschakelt. Deze wijziging betekent dat het minen van Ethereum niet langer mogelijk zal zijn.
+Ethereum-mining is niet langer mogelijk. Mining werd uitgeschakeld toen Ethereum overschakelde van proof-of-work naar proof-of-stake. Nu heeft Ethereum validators in plaats van miners. Validators staken ETH en ontvangen staking-beloningen voor het beveiligen van het netwerk.
+
+#### Hoe word ik een staker/validator? {#become-validator}
+
+Om een validator te worden moet u 32 ETH staken in het Ethereum-stortingscontract en een validator-node instellen. Er is meer informatie beschikbaar op onze [staking-pagina's](/staking) en op [het staking launchpad](https://launchpad.ethereum.org/).

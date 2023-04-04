@@ -3,7 +3,7 @@ title: A Fusão
 description: Aprenda sobre A Fusão — quando a Rede principal do Ethereum adotou a prova de participação.
 lang: pt-br
 template: upgrade
-image: ../../../../../assets/upgrades/merge.png
+image: .../../../assets/upgrades/merge.png
 summaryPoint1: A Rede principal do Ethereum usa prova de participação, mas nem sempre foi esse o caso.
 summaryPoint2: A melhoria do mecanismo original de prova de trabalho para prova de participação foi chamada de The Merge, ou seja, A Fusão.
 summaryPoint3: A Fusão se refere à fusão original da Rede Principal do Ethereum, com uma cadeia de blocos de prova de participação separada chamada Beacon Chain, agora existente como uma cadeia.
@@ -134,7 +134,7 @@ title="Equívoco: &quot;A Fusão falhou em reduzir as taxas de gás.&quot;"
 contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
 Taxas de gás são um produto da demanda de rede relativa à capacidade da rede. A Fusão depreciou o uso da prova de trabalho, passando para a prova de participação por consenso, mas não alterou significativamente nenhum parâmetro que influencie diretamente a capacidade da rede ou a taxa de transferência.
 
-Com um [planejamento centrado por rollup](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698), os esforços se concentram em escalar a atividade do usuário na [camada 2](/layer-2/), enquanto habilita a Rede principal da camada 1 como uma camada de liquidação descentralizada otimizada para o armazenamento de dados rollup para ajudar a tornar as transações rollup exponencialmente mais baratas. A transição para a prova de participação é um precursor crítico para a realização desse objetivo. [Mais sobre gas e tarifas.](/developers/docs/gas/)
+Com um [planejamento centrado por rollup](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698), os esforços se concentram em escalar a atividade do usuário na [camada 2](/camada -2/), enquanto habilita a Rede principal da camada 1 como uma camada de liquidação descentralizada otimizada para o armazenamento de dados rollup para ajudar a tornar as transações rollup exponencialmente mais baratas. A transição para a prova de participação é um precursor crítico para a realização desse objetivo. [Mais sobre gas e tarifas.](/developers/docs/gas/)
 </ExpandableCard>
 
 <ExpandableCard

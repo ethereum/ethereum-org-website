@@ -43,7 +43,6 @@
   "page-upgrades-bug-bounty-quality-repro-desc": ": कृपया परीक्षण कोड, स्क्रिप्ट और विस्तृत निर्देश शामिल करें। हमारे लिए भेद्यता को पुनः प्रस्तुत करना और सत्यापित करना जितना आसान होगा, उतना ही अधिक पुरस्कार होगा।",
   "page-upgrades-bug-bounty-questions": "प्रश्न हैं?",
   "page-upgrades-bug-bounty-rules": "नियम पढ़ें",
-  "page-upgrades-bug-bounty-shard-chains": "शार्ड चेन",
   "page-upgrades-bug-bounty-slogan": "Eth2 बग बाउंटी",
   "page-upgrades-bug-bounty-specs": "पूर्ण विनिर्देश पढ़ें",
   "page-upgrades-bug-bounty-specs-docs": "विनिर्देश दस्तावेज़",
@@ -91,5 +90,6 @@
   "page-upgrades-bug-bounty-card-text": "हमलावर कभी-कभी एक स्थिति में एक नोड डाल सकता है, जो इसे एक सत्यापनकर्ता द्वारा किए गए प्रत्येक सौ सत्यापन में से एक को छोड़ने का कारण बनता है",
   "page-upgrades-bug-bounty-card-text-1": " हमलावर आगे के 4 शून्य वाली बाइट के साथ पीयर-आईडी के साथ नोड पर सफलतापूर्वक एक्लिप्स हमलों का संचालन कर सकता है",
   "page-upgrades-bug-bounty-card-text-2": "दो ग्राहकों के बीच एक आम सहमति बग है, लेकिन हमलावर के लिए घटना को ट्रिगर करना मुश्किल या अव्यवहारिक है।",
-  "page-upgrades-bug-bounty-card-text-3": " दो ग्राहकों के बीच एक आम सहमति बग है, और यह एक हमलावर के लिए घटना को ट्रिगर करने में नगण्य है।"
+  "page-upgrades-bug-bounty-card-text-3": " दो ग्राहकों के बीच एक आम सहमति बग है, और यह एक हमलावर के लिए घटना को ट्रिगर करने में नगण्य है।",
+  "page-upgrades-question-title": "अक्सर पूछे जाने वाले सवाल"
 }

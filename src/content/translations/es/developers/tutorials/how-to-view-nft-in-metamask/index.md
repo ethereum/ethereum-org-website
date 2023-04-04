@@ -6,7 +6,6 @@ tags:
   - "NTF"
   - "ERC-721"
   - "Alchemy"
-  - "MetaMask"
   - "tókenes no fungibles"
   - "Solidity"
 skill: beginner
