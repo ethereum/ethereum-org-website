@@ -1,206 +1,47 @@
 import React, { useState } from "react"
+
 import { useI18next } from "gatsby-plugin-react-i18next"
-import { css, Theme } from "@emotion/react"
-import styled from "@emotion/styled"
 import { useQuery, gql } from "@apollo/client"
 
-import ButtonLink from "./ButtonLink"
-import Icon from "./Icon"
-import Link from "./Link"
-import Modal from "./Modal"
-import Translation from "./Translation"
-import { ButtonSecondary } from "./SharedStyledComponents"
+import {
+  Avatar,
+  ButtonProps,
+  ChakraProps,
+  Flex,
+  Icon,
+  ListItem,
+  ModalBody,
+  ModalHeader,
+  Skeleton,
+  SkeletonCircle,
+  Text,
+  UnorderedList,
+} from "@chakra-ui/react"
+import { FaGithub } from "react-icons/fa"
+
 import { getLocaleTimestamp } from "../utils/time"
 import { Lang } from "../utils/languages"
 
-const loadingStyles = (theme: Theme) => css`
-  font-size: 0;
-  background: linear-gradient(
-    -90deg,
-    ${theme.colors.lightBorder} 0%,
-    ${theme.colors.searchBackgroundEmpty} 50%,
-    ${theme.colors.lightBorder} 100%
-  );
-  background-size: 400% 400%;
-  animation: pulse 1.2s ease-in-out infinite;
+import ButtonLink from "./ButtonLink"
+import Link, { IProps as ILinkProps } from "./Link"
+import Modal from "./Modal"
+import Translation from "./Translation"
+import Button from "./Button"
 
-  @keyframes pulse {
-    0% {
-      background-position: 0% 0%;
-    }
-    100% {
-      background-position: -135% 0%;
-    }
+interface Author {
+  name: string
+  email: string
+  avatarUrl: string
+  user: {
+    login: string
+    url: string
   }
-`
+}
 
-const Container = styled.div`
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-
-  border-radius: 2px;
-  padding: 0.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column;
-    padding-top: 0rem;
-    padding-left: 0rem;
-    padding-right: 0rem;
-    border-bottom: 0px solid ${(props) => props.theme.colors.border};
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    border-bottom: 0px solid ${(props) => props.theme.colors.border};
-  }
-`
-
-const SkeletonContainer = styled(Container)<{
-  loading: boolean
-}>`
-  justify-content: flex-start;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  opacity: 1;
-  transition: opacity 0.15s ease-in-out;
-
-  ${({ loading }) =>
-    !loading &&
-    `
-    opacity: 0;
-    pointer-events: none;
-  `}
-`
-
-const LeftContent = styled.div`
-  display: flex;
-  align-items: center;
-  margin-right: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: ${(props) => props.theme.fontSizes.s};
-  }
-`
-
-const SkeletonLeftContent = styled(LeftContent)`
-  flex: 1;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-right: 2rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-right: 1rem;
-    flex: none;
-  }
-`
-
-const Avatar = styled.img`
-  height: 40px;
-  width: 40px;
-  margin-right: 0.5rem;
-  border-radius: 50%;
-`
-
-const SkeletonAvatar = styled.div`
-  height: 40px;
-  width: 40px;
-  margin-right: 0.5rem;
-  border-radius: 50%;
-  ${({ theme }) => loadingStyles(theme)}
-`
-
-const Info = styled.div`
-  line-height: 130%;
-  color: ${(props) => props.theme.colors.text200};
-`
-
-const SkeletonInfo = styled(Info)`
-  ${({ theme }) => loadingStyles(theme)}
-  height: 40px;
-  flex: 1;
-  border-radius: 3px;
-`
-
-const ButtonContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-`
-
-const SkeletonButtonContainer = styled(ButtonContainer)`
-  ${({ theme }) => loadingStyles(theme)}
-  width: 145px;
-  border-radius: 3px;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 1rem;
-    justify-content: center;
-    height: 40px;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-    margin-top: 1rem;
-  }
-`
-
-const ContributorsButton = styled(ButtonSecondary)<{ loading: boolean }>`
-  background-color: ${(props) => props.theme.colors.background};
-  margin-top: 0;
-  height: 40px;
-  border: 0px;
-  &:hover {
-    border: 0px;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    justify-content: center;
-  }
-
-  ${({ loading }) =>
-    loading &&
-    `
-    visibility: hidden;
-  `}
-`
-
-const GithubButton = styled(ButtonLink)`
-  margin-top: 0;
-  height: 40px;
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
-
-const ButtonContent = styled.div`
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
-
-const GithubIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
-  margin-right: 0.5rem;
-`
-
-const ModalTitle = styled.h2`
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-`
-
-const ContributorList = styled.ul`
-  margin: 0;
-  margin-top: 1.5rem;
-  list-style-type: none;
-  overflow-y: scroll;
-  max-height: 16rem;
-`
-
-const Contributor = styled.li`
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
-  margin-bottom: 0;
-`
+interface Commit {
+  author: Author
+  committedDate: string
+}
 
 const COMMIT_HISTORY = gql`
   query CommitHistory($relativePath: String) {
@@ -232,31 +73,98 @@ const COMMIT_HISTORY = gql`
   }
 `
 
-interface Author {
-  name: string
-  email: string
-  avatarUrl: string
-  user: {
-    login: string
-    url: string
-  }
+const ContributorsButton = ({
+  children,
+  ...props
+}: {
+  children: React.ReactNode
+} & ButtonProps) => {
+  return (
+    <Button
+      m={0}
+      variant="outline"
+      border={0}
+      color="text"
+      bgColor="background"
+      p="md"
+      mt="1rem"
+      mb="0.5rem"
+      justifyContent="center"
+      height="40px"
+      {...props}
+    >
+      {children}
+    </Button>
+  )
 }
 
-interface Commit {
-  author: Author
-  committedDate: string
+const GithubButton = ({ ...props }: ILinkProps & ButtonProps) => {
+  return (
+    <ButtonLink
+      mt={0}
+      p="0.5rem"
+      height="40%"
+      display={{ base: "block", lg: "none" }}
+      {...props}
+    />
+  )
+}
+
+const ContributorList = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <UnorderedList maxH="16rem" m={0} mt="1.5rem" overflowY="scroll">
+      {children}
+    </UnorderedList>
+  )
+}
+
+const Contributor = ({ contributor }: { contributor: Author }) => {
+  return (
+    <ListItem p="0.5rem" display="flex" alignItems="center">
+      <Avatar
+        height="40px"
+        width="40px"
+        src={contributor.avatarUrl}
+        name={contributor.name}
+        mr="0.5rem"
+      />
+      {contributor.user && (
+        <Link to={contributor.user.url}>@{contributor.user.login}</Link>
+      )}
+      {!contributor.user && <span>{contributor.name}</span>}
+    </ListItem>
+  )
+}
+
+const LeftContent = ({
+  children,
+  ...props
+}: { children: React.ReactNode } & ChakraProps) => {
+  return (
+    <Flex
+      w="100%"
+      mr="1rem"
+      alignItems="center"
+      fontSize={{
+        base: "sm",
+        md: "unset",
+      }}
+      {...props}
+    >
+      {children}
+    </Flex>
+  )
 }
 
 export interface IProps {
   relativePath: string
-  className?: string
   editPath?: string
 }
 
 const FileContributors: React.FC<IProps> = ({
   relativePath,
-  className,
   editPath,
+  ...props
 }) => {
   const [isModalOpen, setModalOpen] = useState(false)
   const { language } = useI18next()
@@ -294,67 +202,97 @@ const FileContributors: React.FC<IProps> = ({
     ) || []
 
   return (
-    <div className={className}>
-      <Modal isOpen={isModalOpen} setIsOpen={setModalOpen}>
-        <ModalTitle>
-          <Translation id="contributors" />
-        </ModalTitle>
-        <div>
+    <>
+      <Modal isOpen={isModalOpen} setIsOpen={setModalOpen} {...props}>
+        <ModalHeader py={0}>
+          <Text as="h2" m={0}>
+            <Translation id="contributors" />
+          </Text>
+        </ModalHeader>
+
+        <ModalBody>
           <Translation id="contributors-thanks" />
-        </div>
-        <ContributorList>
-          {uniqueContributors.map((contributor) => (
-            <Contributor key={contributor.email}>
-              <Avatar src={contributor.avatarUrl} alt={contributor.name} />
-              {contributor.user && (
-                <Link to={contributor.user.url}>@{contributor.user.login}</Link>
-              )}
-              {!contributor.user && <span>{contributor.name}</span>}
-            </Contributor>
-          ))}
-        </ContributorList>
+
+          <ContributorList>
+            {uniqueContributors.map((contributor) => (
+              <Contributor contributor={contributor} key={contributor.email} />
+            ))}
+          </ContributorList>
+        </ModalBody>
       </Modal>
-      <Container>
-        <SkeletonContainer loading={!!loading}>
-          <SkeletonLeftContent>
-            <SkeletonAvatar />
-            <SkeletonInfo />
-          </SkeletonLeftContent>
-          <SkeletonButtonContainer />
-        </SkeletonContainer>
+
+      <Flex
+        justifyContent="space-between"
+        direction={{
+          base: "column",
+          md: "row",
+        }}
+        pb={{
+          base: "2rem",
+          lg: 0,
+        }}
+      >
         <LeftContent>
-          <Avatar src={lastContributor.avatarUrl} alt={lastContributor.name} />
-          <Info>
-            <Translation id="last-edit" />:{" "}
-            {lastContributor.user && (
-              <Link to={lastContributor.user.url}>
-                @{lastContributor.user.login}
-              </Link>
-            )}
-            {!lastContributor.user && <span>{lastContributor.name}</span>},{" "}
-            {getLocaleTimestamp(language as Lang, lastCommit.committedDate)}
-          </Info>
+          <SkeletonCircle size="10" mr="0.5rem" isLoaded={!loading}>
+            <Avatar
+              height="40px"
+              width="40px"
+              src={lastContributor.avatarUrl}
+              name={lastContributor.name}
+              mr="0.5rem"
+            />
+          </SkeletonCircle>
+
+          <Skeleton isLoaded={!loading} w="100%" alignSelf="stretch">
+            <Flex
+              h="100%"
+              alignItems="center"
+              lineHeight="130%"
+              color="text200"
+            >
+              <Translation id="last-edit" />:{" "}
+              {lastContributor.user && (
+                <Link to={lastContributor.user.url}>
+                  @{lastContributor.user.login}
+                </Link>
+              )}
+              {!lastContributor.user && <span>{lastContributor.name}</span>},{" "}
+              {getLocaleTimestamp(language as Lang, lastCommit.committedDate)}
+            </Flex>
+          </Skeleton>
         </LeftContent>
-        <ButtonContainer>
-          <ContributorsButton
-            onClick={() => setModalOpen(true)}
-            loading={loading}
+
+        <Flex direction="column" alignContent="center">
+          <Skeleton
+            isLoaded={!loading}
+            my={{
+              base: "1rem",
+              md: 0,
+            }}
           >
-            <Translation id="see-contributors" />
-          </ContributorsButton>
+            <ContributorsButton onClick={() => setModalOpen(true)} w="100%">
+              <Translation id="see-contributors" />
+            </ContributorsButton>
+          </Skeleton>
+
           {editPath && (
             <GithubButton to={editPath} hideArrow variant="outline">
-              <ButtonContent>
-                <GithubIcon name="github" />
+              <Flex
+                h="100%"
+                alignItems="center"
+                justifyContent="center"
+                gap="2"
+              >
+                <Icon as={FaGithub} />
                 <span>
                   <Translation id="edit-page" />
                 </span>
-              </ButtonContent>
+              </Flex>
             </GithubButton>
           )}
-        </ButtonContainer>
-      </Container>
-    </div>
+        </Flex>
+      </Flex>
+    </>
   )
 }
 
