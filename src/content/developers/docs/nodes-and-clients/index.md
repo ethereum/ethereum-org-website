@@ -88,7 +88,7 @@ Ethereum does not support a large population of light nodes yet, but light node 
 
 Syncing clients in any mode other than archive will result in pruned blockchain data. This means, there is no archive of all historical states but the full node is able to build them on demand.
 
-Learn more about [Archive nodes](/developers/docs/archive-nodes).
+Learn more about [Archive nodes](/developers/docs/nodes-and-clients/archive-nodes).
 
 ## Why should I run an Ethereum node? {#why-should-i-run-an-ethereum-node}
 

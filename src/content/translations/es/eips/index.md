@@ -14,7 +14,7 @@ Cualquier persona dentro de la comunidad Ethereum tiene la capacidad de crear un
 
 ## ¿Por qué importan las EIP? {#why-do-eips-matter}
 
-Las EIP desempeñan un papel importante en la forma en que ocurren los cambios y se documentan en Ethereum. Son la forma de que la gente proponga, debata y adopte cambios. Existen [diferentes tipos de EIP](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1.md#eip-types), incluidas las EIP centrales para cambios de protocolo de bajo nivel que afectan al consenso y requieren una actualización de la red, así como [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) y ERC para estándares de la aplicación como [EIP-20](https://eips.ethereum.org/EIPS/eip-20) y [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
+Las EIP desempeñan un papel importante en la forma en que ocurren los cambios y se documentan en Ethereum. Son la forma de que la gente proponga, debata y adopte cambios. Existen [diferentes tipos de EIP](https://eips.ethereum.org/EIPS/eip-1#eip-types), incluidas las EIP centrales para cambios de protocolo de bajo nivel que afectan al consenso y requieren una actualización de la red, así como [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) y ERC para estándares de la aplicación como [EIP-20](https://eips.ethereum.org/EIPS/eip-20) y [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
 
 Cada actualización de red consta de un conjunto de EIP que debe implementar cada [cliente de Ethereum](/learn/#clients-and-nodes) en la red. Esto implica que para mantener el consenso con otros clientes en la red principal de Ethereum, los desarrolladores de clientes deben asegurarse de que todos hayan implementado las EIP necesarias.
 

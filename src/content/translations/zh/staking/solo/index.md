@@ -17,6 +17,8 @@ summaryPoints:
 
 单独质押是指运行一个连接到互联网的[以太坊节点](/run-a-node/)，并存入 32 个以太币以激活一个[验证者](#faq)，使你有能力直接参与网络共识。
 
+**单独质押增强了以太坊网络的去中心化**，使以太坊更加抗审查，更加稳健，能够抵御攻击。 其他质押方法可能不会给网络带来同样的助益。 单独质押是保护以太坊的最佳质押方案。
+
 一个以太坊节点既包括执行层 (EL) 客户端，也包括共识层 (CL) 客户端。 这些客户端是一套共同工作的软件，拥有一套有效的签名密钥，以验证交易和区块、证明链头的正确性、汇总认证和提交区块。
 
 单独质押用户负责操作运行这些客户端所需的硬件。 强烈建议使用一台专用机器在家进行操作，这对网络安全非常有益。
@@ -25,18 +27,12 @@ summaryPoints:
 
 ## 为什么要单独质押？ {#why-stake-solo}
 
-单独质押会带来更多责任，但也为你提供了对资金和质押设置的最大控制权。
+单独质押让你承担更大的责任，但会让你对资金和质押设置拥有最大的控制权。
 
 <CardGrid>
-  <Card title="赚取以太币" emoji="💸">
-    当你的验证者在线时，可以直接从协议中赚取以太币奖励，没有任何中间商从中抽成。
-  </Card>
-  <Card title="完全控制" emoji="🎛️">
-    自己保存密钥， 自己选择客户端和硬件组合，使你的风险最小化，也为以太坊网络的健康和安全做出最大贡献。 第三方质押服务可以为你做这些决定，但他们并不总是能做出最安全的选择。
-  </Card>
-  <Card title="网络安全" emoji="🔐">
-    单独质押是最具影响的质押方式。 通过在自己的家用硬件上运行验证者，便能增强加以太坊协议的稳定性、去中心化程度和安全性。
-  </Card>
+  <Card title="赚取以太币" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
+  <Card title="完全控制" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
+  <Card title="网络安全" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
 ## 单独质押前的考量 {#considerations-before-staking-solo}
@@ -57,7 +53,7 @@ summaryPoints:
     <p style={{marginTop: "1rem"}}><a href="/security">以太坊安全和预防欺诈措施</a></p>
   </ExpandableCard>
   <ExpandableCard title="无法提款（暂时性）" eventCategory="SoloStaking" eventName="clicked no withdrawing">
-    目前还不支持从验证者余额中提取质押的以太币或奖励。 计划为即将到来的上海升级提供提款支持。 预计你的以太币至少会被锁定一到两年。 在上海升级后，如果你愿意，你将能够自由提取质押的以太币。
+    目前还不支持从验证者余额中提取质押的以太币或奖励。 计划为即将到来的上海升级提供提款支持。 此后，用户可以选择自动接收奖励付款，并且可以提取全部余额以收回他们的资金。
   </ExpandableCard>
   <ExpandableCard title="维护" eventCategory="SoloStaking" eventName="clicked maintenance">
     硬件设施会发生故障，网络连接会出错，客户端软件也需要升级。 因此节点维护不可避免，需要你偶尔关注。 你要确保知道任何预期的网络升级，或其他关键的客户端升级。
@@ -78,9 +74,13 @@ summaryPoints:
 
 <StakingHowSoloWorks />
 
-如果需要，你可以验证者身份退出，这样就不需要在线，也不会再有任何奖励。 请注意，在上海升级之前，这些资金无法*提取*。
+在线时你将赢得以太币奖励，奖励将定期存入你的提款地址。
 
-上海升级之后，用户可以选择提取他们的质押物及奖励。
+如果需要，你可以验证者身份退出，这样就不需要在线，也不会再有任何奖励。 之后，你的余额将提取到你在设置过程指定的提款地址。
+
+_上海升级后，才支持已退出验证者的奖励支付和全额提款。_
+
+[更多关于质押提款的信息](/staking/withdrawals/)
 
 ## 开始使用 Staking Launchpad {#get-started-on-the-staking-launchpad}
 
@@ -175,6 +175,18 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 离线处罚与有多少其他验证者同时离线成正比。 使用虚拟专用服务器会大大增加离线处罚的风险，并在大范围宕机的情况下增加你的二次惩罚或罚没的风险。 为了尽量降低你自己的风险，以及以太坊网络的风险，我们强烈建议用户获取并操作自己的硬件。
 
 <a href="https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/">更多关于奖励和惩罚的信息</a>
+</ExpandableCard>
+
+<ExpandableCard title="我如何解锁我的奖励或收回我的以太币？">
+实施上海升级时，将开始支持已退出验证者的奖励支付和全额提款。 从信标链上进行任何类型的提款都需要设置提款凭据。
+
+新质押人在生成密钥和存款时设置提款凭据。 尚未设置提款凭据的现有质押人可以升级他们的密钥，以便在上海升级后支持提款功能。
+
+设置提款凭据后，奖励支付（最初的 32 个以太币累积的以太币奖励）将自动定期分发到提款地址。
+
+要解锁并收回全部余额，还必须完成验证者退出流程。
+
+<ButtonLink to="/staking/withdrawals/">更多关于质押提款的信息</ButtonLink>
 </ExpandableCard>
 
 ## 延伸阅读 {#further-reading}
