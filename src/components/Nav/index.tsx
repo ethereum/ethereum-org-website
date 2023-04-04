@@ -7,9 +7,10 @@ import {
   Text,
   useColorMode,
   useToken,
+  Box,
+  List,
 } from "@chakra-ui/react"
 import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
-import styled from "@emotion/styled"
 import { cloneDeep } from "lodash"
 
 import Menu from "./Menu"
@@ -18,78 +19,8 @@ import ButtonLink from "../ButtonLink"
 import Link from "../Link"
 import Search from "../Search"
 import Translation from "../Translation"
-import { NavLink } from "../SharedStyledComponents"
 import { EthHomeIcon } from "../icons"
 import { IItem, ISections } from "./types"
-
-const NavContainer = styled.div`
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  width: 100%;
-`
-
-const StyledNav = styled.nav`
-  height: ${(props) => props.theme.variables.navHeight};
-  padding: 1rem 2rem;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  background-color: ${(props) => props.theme.colors.background};
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* TODO use theme variable */
-`
-
-const SubNav = styled.nav`
-  padding: 1rem 2rem;
-  box-sizing: border-box;
-  display: flex;
-  background: ${(props) => props.theme.colors.ednBackground};
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
-  /* TODO sort out mobile */
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
-
-const NavContent = styled.div`
-  display: flex;
-  width: 100%;
-  max-width: ${(props) => props.theme.breakpoints.xl};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    align-items: center;
-    justify-content: space-between;
-  }
-`
-
-const LeftItems = styled.ul`
-  margin: 0;
-  margin-left: 2rem;
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  list-style-image: none;
-`
-
-const RightItems = styled.div`
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.5rem;
-`
-
-const HomeLogoNavLink = styled(Link)`
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-`
-
-const HomeLogo = styled(EthHomeIcon)`
-  opacity: 0.85;
-  &:hover {
-    opacity: 1;
-  }
-`
 
 export interface IProps {
   path: string
@@ -372,22 +303,43 @@ const Nav: FC<IProps> = ({ path }) => {
       ? `?from=/${splitPath.slice(2).join("/")}`
       : ""
   return (
-    <NavContainer>
-      <StyledNav aria-label={t("nav-primary")}>
-        <NavContent>
-          <HomeLogoNavLink to="/" aria-label={t("home")}>
-            <HomeLogo />
-          </HomeLogoNavLink>
+    <Box position="sticky" top={0} zIndex={100} width="full">
+      <Flex
+        as="nav"
+        aria-label={t("nav-primary")}
+        bg="background"
+        borderBottom="1px"
+        borderColor="rgba(0, 0, 0, 0.1)"
+        height="4.75rem"
+        justifyContent="center"
+        px={8}
+        py={4}
+      >
+        <Flex
+          alignItems={{ base: "center", lg: "normal" }}
+          justifyContent={{ base: "space-between", lg: "normal" }}
+          width="full"
+          maxW="1440px"
+        >
+          <Link
+            to="/"
+            aria-label={t("home")}
+            display="inline-flex"
+            alignItems="center"
+            textDecor="none"
+          >
+            <EthHomeIcon opacity={0.85} _hover={{ opacity: 1 }} />
+          </Link>
           {/* Desktop */}
           <Flex
             justifyContent="space-between"
             w="100%"
             display={{ base: "none", lg: "flex" }}
           >
-            <LeftItems>
+            <Flex as={List} alignItems="center" m={0} ml={8}>
               <Menu path={path} sections={linkSections} />
-            </LeftItems>
-            <RightItems>
+            </Flex>
+            <Flex alignItems="center" justifyContent="space-between" gap={2}>
               <Search />
               <IconButton
                 aria-label={
@@ -409,7 +361,7 @@ const Nav: FC<IProps> = ({ path }) => {
                   <Translation id="languages" />
                 </Text>
               </ButtonLink>
-            </RightItems>
+            </Flex>
           </Flex>
           {/* Mobile */}
           <MobileNavMenu
@@ -421,22 +373,43 @@ const Nav: FC<IProps> = ({ path }) => {
             linkSections={mobileLinkSections}
             fromPageParameter={fromPageParameter}
           />
-        </NavContent>
-      </StyledNav>
+        </Flex>
+      </Flex>
       {shouldShowSubNav && (
-        <SubNav aria-label={t("nav-developers")}>
+        <Flex
+          as="nav"
+          aria-label={t("nav-developers")}
+          display={{ base: "none", lg: "flex" }}
+          bg="ednBackground"
+          borderBottom="1px"
+          borderColor="border"
+          boxSizing="border-box"
+        >
           {ednLinks.map((link, idx) => (
-            <NavLink
+            <Link
               key={idx}
               to={link.to}
               isPartiallyActive={link.isPartiallyActive}
+              color="text"
+              textDecor="none"
+              _hover={{
+                color: "primary",
+                svg: {
+                  fill: "currentColor",
+                },
+              }}
+              sx={{
+                svg: {
+                  fill: "currentColor",
+                },
+              }}
             >
               {link.text}
-            </NavLink>
+            </Link>
           ))}
-        </SubNav>
+        </Flex>
       )}
-    </NavContainer>
+    </Box>
   )
 }
 
