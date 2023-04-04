@@ -51,7 +51,7 @@
         - id: docs-nav-node-architecture
           to: /developers/docs/nodes-and-clients/node-architecture/
         - id: docs-nav-light-nodes
-          to: /developers/docs/nodes-and-clients/light-nodes
+          to: /developers/docs/nodes-and-clients/light-clients
         - id: docs-nav-archive-nodes
           to: /developers/docs/nodes-and-clients/archive-nodes/
         - id: docs-nav-bootnodes
