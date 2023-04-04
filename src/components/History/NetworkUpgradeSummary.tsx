@@ -73,7 +73,7 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
     blockTypeTranslation = (
       <Flex>
         <Emoji fontSize="sm" mr={2} text=":bricks:" />
-        <Translation id="page-history-beacon-block-number" />
+        <Translation id="page-history-slot-number" />
         :&nbsp;
         <Link to={`https://beaconscan.com/slot/${slotNumber}`}>
           {new Intl.NumberFormat(localeForStatsBoxNumbers).format(slotNumber)}
