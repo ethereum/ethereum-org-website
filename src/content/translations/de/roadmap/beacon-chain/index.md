@@ -16,7 +16,7 @@ summaryPoint4: Sie kennen das möglicherweise als „Phase 0“ in technischen D
 
 ## Welche Funktion hat die Beacon Chain? {#what-does-the-beacon-chain-do}
 
-Die Beacon Chain übernimmt die Koordination und Verknüpfung des Netzwerks der [Shards](/upgrades/sharding/) und [Staker](/staking/). Aber sie ist nicht mit dem [Ethereum-Mainnet](/glossary/#mainnet) von heute vergleichbar, da sie keine Konten oder Smart Contracts verarbeitet.
+Die Beacon Chain übernimmt die Koordination und Verknüpfung des Netzwerks der [Shards](/roadmap/danksharding/) und [Staker](/staking/). Aber sie ist nicht mit dem [Ethereum-Mainnet](/glossary/#mainnet) von heute vergleichbar, da sie keine Konten oder Smart Contracts verarbeitet.
 
 Mit der Zeit können sich Aufgabe und Rolle der Beacon Chain zwar verändern, sie ist jedoch ein fundamentaler Baustein für das [sichere, nachhaltige und skalierbare Ethereum der Zukunft](/roadmap/vision/).
 
@@ -32,7 +32,7 @@ Das Staking als Validator ist einfacher, als das [Mining](/developers/docs/minin
 Wenn Sie Interesse haben, die Beacon Chain als Validator sicherer zu machen, <a href="/staking/">können Sie hier mehr über das Staking</a> lernen.
 </InfoBanner>
 
-Das ist auch eine wichtige Änderung für ein anderes Upgrade: [Shard Chains](/upgrades/sharding/).
+Das ist auch eine wichtige Änderung für ein anderes Upgrade: [Shard Chains](/roadmap/danksharding/).
 
 ### Vorbereitung für Shard Chains {#setting-up-for-shard-chains}
 
@@ -48,7 +48,7 @@ Die Ethereum-Upgrades sind alle auf eine Weise miteinander verbunden. Zusammenfa
 
 Die Beacon Chain wird zunächst getrennt vom Ethereum-Mainnet existieren, welches wir derzeit nutzen. Letztlich werden jedoch beide verbunden sein. Der Plan ist, das Mainnet mit dem Proof-of-Stake-System zu "verschmelzen", das von der Beacon Chain kontrolliert und koordiniert wird.
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
     Die Zusammenführung
 </ButtonLink>
 
@@ -56,7 +56,7 @@ Die Beacon Chain wird zunächst getrennt vom Ethereum-Mainnet existieren, welche
 
 Shard Chains können nur dann sicher ins Ethereum-Netzwerk eingeführt werden, wenn ein funktionierender Proof-of-Stake-Konsensmechanismus bereits etabliert ist. Mit der Beacon Chain wird Staking eingeführt, wodurch der Weg für das Shard Chains-Upgrade geebnet wird.
 
-<ButtonLink to="/upgrades/sharding/">
+<ButtonLink to="/roadmap/danksharding/">
     Shard Chains
 </ButtonLink>
 

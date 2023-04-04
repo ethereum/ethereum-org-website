@@ -15,7 +15,7 @@ summaryPoint3: La Beacon Chain ha introdotto la logica del consenso e il protoco
 
 ## Cos'era la Beacon Chain? {#what-is-the-beacon-chain}
 
-La Beacon Chain era il nome della blockchain di Proof of stake originale, lanciata nel 2020. Fu creata per assicurare che la logica di consenso di Proof of stake fosse stabile e sostenibile prima di abilitarla sulla Rete principale di Ethereum. Di conseguenza, era eseguita insieme all'Ethereum Proof of Work originale. La disattivazione del Proof of Work e l'attivazione del Proof of stake su Ethereum ha richiesto di istruire la Beacon Chain ad accettare le transazioni dalla catena Ethereum originale, a raggrupparle in blocchi e organizzarle in una blockchain usando il meccanismo di consenso basato sul Proof of stake. Allo stesso momento, i client originali di Ethereum hanno disattivato il proprio mining, la propagazione dei blocchi e la logica di consenso, passando tutti questi aspetti alla Beacon Chain. Questo evento è noto come [La Fusione](/upgrades/merge/). Una volta verificatasi La Fusione, non esistevano più due blockchain; era stata creata un'unica catena Proof of stake di di Ethereum.
+La Beacon Chain era il nome della blockchain di Proof of stake originale, lanciata nel 2020. Fu creata per assicurare che la logica di consenso di Proof of stake fosse stabile e sostenibile prima di abilitarla sulla Rete principale di Ethereum. Di conseguenza, era eseguita insieme all'Ethereum Proof of Work originale. La disattivazione del Proof of Work e l'attivazione del Proof of stake su Ethereum ha richiesto di istruire la Beacon Chain ad accettare le transazioni dalla catena Ethereum originale, a raggrupparle in blocchi e organizzarle in una blockchain usando il meccanismo di consenso basato sul Proof of stake. Allo stesso momento, i client originali di Ethereum hanno disattivato il proprio mining, la propagazione dei blocchi e la logica di consenso, passando tutti questi aspetti alla Beacon Chain. Questo evento è noto come [La Fusione](/roadmap/merge/). Una volta verificatasi La Fusione, non esistevano più due blockchain; era stata creata un'unica catena Proof of stake di di Ethereum.
 
 ## Cosa faceva la Beacon Chain? {#what-does-the-beacon-chain-do}
 
@@ -47,7 +47,7 @@ La Proof of stake ha il vantaggio di avere un registro di tutti i produttori di 
 
 Questa responsabilità è in contrasto con il Poof of Work, in cui i miner non hanno obblighi verso la rete e potrebbero interrompere il mining e disattivare permanentemente il loro software del nodo in un istante, senza ripercussioni. Inoltre, non esiste alcun registro di propositori di blocchi noti e nessun modo affidabile per ripartire le responsabilità della rete in modo sicuro.
 
-[Scopri di più sullo sharding](/upgrades/sharding/)
+[Scopri di più sullo sharding](/roadmap/danksharding/)
 
 ## Relazione tra gli aggiornamenti {#relationship-between-upgrades}
 
@@ -57,7 +57,7 @@ Gli aggiornamenti di Ethereum sono tutti in qualche modo interconnessi. Quindi r
 
 Inizialmente la Beacon Chain esisteva separatamente dalla Rete principale di Ethereum, ma le due sono state fuse nel 2022.
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   La fusione
 </ButtonLink>
 
@@ -65,7 +65,7 @@ Inizialmente la Beacon Chain esisteva separatamente dalla Rete principale di Eth
 
 Lo sharding potrà entrare in modo sicuro nell'ecosistema Ethereum solo quando sarà presente un meccanismo di consenso Proof of stake. La Beacon Chain ha introdotto lo staking, che si è 'fuso' con la Rete principale, spianando la strada allo sharding per contribuire a ridimensionare ulteriormente Ethereum.
 
-<ButtonLink to="/upgrades/sharding/">
+<ButtonLink to="/roadmap/danksharding/">
   Shard chain
 </ButtonLink>
 

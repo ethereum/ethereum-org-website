@@ -16,7 +16,7 @@ summaryPoint4: Bunu teknik yol haritalarından "Aşama 0" olarak biliyor olabili
 
 ## İşaret (Beacon) Zinciri Ne Yapar? {#what-does-the-beacon-chain-do}
 
-İşaret Zinciri, [parçalardan](/upgrades/sharding/) ve [stake edenlerden](/staking/) oluşan genişletilmiş ağı yönetir veya koordine eder. Ancak günümüzün [Ethereum ana ağı](/glossary/#mainnet) gibi olmayacaktır. Hesapları veya akıllı sözleşmeleri ele alamaz.
+İşaret Zinciri, [parçalardan](/roadmap/danksharding/) ve [stake edenlerden](/staking/) oluşan genişletilmiş ağı yönetir veya koordine eder. Ancak günümüzün [Ethereum ana ağı](/glossary/#mainnet) gibi olmayacaktır. Hesapları veya akıllı sözleşmeleri ele alamaz.
 
 İşaret Zincirinin rolü zamanla değişecek ancak [geliştirmeye çalıştığımız güvenli, sürdürülebilir ve ölçeklenebilir Ethereum](/roadmap/vision/) için temel bir bileşendir.
 
@@ -32,7 +32,7 @@ Paydaşlık ve doğrulayıcı oluşturmak [madencilik](/developers/docs/mining/)
 Bir doğrulayıcı olarak İşaret Zincirinin güvenliğine yardımcı olmak istiyorsanız <a href="/staking/">stake etme konusunda daha fazla bilgi alın</a>.
 </InfoBanner>
 
-Bu ayrıca başka bir yükseltme için de önemli bir değişikliktir: [parça zincirleri](/upgrades/sharding/).
+Bu ayrıca başka bir yükseltme için de önemli bir değişikliktir: [parça zincirleri](/roadmap/danksharding/).
 
 ### Shard zincirleri kurulumu {#setting-up-for-shard-chains}
 
@@ -48,7 +48,7 @@ Ethereum yükseltmelerinin tamamı bir şekilde ilişkilidir. İşaret (Beacon) 
 
 İlk başta İşaret Zinciri, bugün kullandığımız Ethereum Mainnet'ten ayrı olarak kullanılacaktır. Ancak sonuç olarak bağlanacaklardır. Plan, İşaret Zinciri tarafından kontrol ve koordine edilen hisse ispatı sistemini ana ağ ile "birleştirmektir".
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
     Birleştirme
 </ButtonLink>
 
@@ -56,7 +56,7 @@ Ethereum yükseltmelerinin tamamı bir şekilde ilişkilidir. İşaret (Beacon) 
 
 Parça zincirleri, Ethereum ekosistemine yalnızca hisse ispatı mutabakat mekanizması ile güvenli bir şekilde girebilir. İşaret Zinciri, staking sistemini başlatarak gelecekte parça zinciri yükseltmesine olanak verir.
 
-<ButtonLink to="/upgrades/sharding/">
+<ButtonLink to="/roadmap/danksharding/">
     Parça zincirleri
 </ButtonLink>
 

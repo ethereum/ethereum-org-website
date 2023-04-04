@@ -15,7 +15,7 @@ summaryPoint3: Lanțul Beacon a introdus logica consensului și protocolul de b�
 
 ## Ce este lanțul Beacon? {#what-is-the-beacon-chain}
 
-Lanțul Beacon a fost numele blockchain-ului dovada mizei original, lansat în 2020. A fost creat pentru a ne asigura că logica de consens cu dovada mizei este sănătoasă și durabilă înainte de a o activa în Rețeaua principală Ethernet. Prin urmare, a funcționat împreună cu dovada muncii Ethereum originală. Dezactivarea și activarea dovezii muncii în Ethereum a necesitat o instrucțiune prin care Lanțul Beacon să accepte tranzacții din lanțul Ethereum original, să le regrupeze în blocuri și să le organizeze într-un blockchain folosind un mecanism de consens bazat pe dovada mizei. În același moment, clienții originali Ethereum au oprit minarea, propagarea blocului și logica consensului, transferând toate acestea în Lanțul Beacon. Acest eveniment a fost cunoscut sub numele de [Fuziunea](/upgrades/merge/). Odată ce Fuziunea a avut loc, nu au mai existat două blockchain-uri, ci doar un singur lanț dovada mizei Ethereum.
+Lanțul Beacon a fost numele blockchain-ului dovada mizei original, lansat în 2020. A fost creat pentru a ne asigura că logica de consens cu dovada mizei este sănătoasă și durabilă înainte de a o activa în Rețeaua principală Ethernet. Prin urmare, a funcționat împreună cu dovada muncii Ethereum originală. Dezactivarea și activarea dovezii muncii în Ethereum a necesitat o instrucțiune prin care Lanțul Beacon să accepte tranzacții din lanțul Ethereum original, să le regrupeze în blocuri și să le organizeze într-un blockchain folosind un mecanism de consens bazat pe dovada mizei. În același moment, clienții originali Ethereum au oprit minarea, propagarea blocului și logica consensului, transferând toate acestea în Lanțul Beacon. Acest eveniment a fost cunoscut sub numele de [Fuziunea](/roadmap/merge/). Odată ce Fuziunea a avut loc, nu au mai existat două blockchain-uri, ci doar un singur lanț dovada mizei Ethereum.
 
 ## Care a fost rolul Lanțului Beacon? {#what-does-the-beacon-chain-do}
 
@@ -47,7 +47,7 @@ Dovada mizei are avantajul de a deține un registru cu toți producătorii aprob
 
 Această responsabilitate contrastează cu dovada muncii, unde minerii nu au nicio obligație față de rețea și ar putea opri minarea și ar putea dezactiva permanent software-ul nodului într-o clipă, fără repercusiuni. De asemenea, nu există niciun registru al promotorilor de blocuri cunoscuți și nicio modalitate fiabilă de a împărți responsabilitățile din rețea în siguranță.
 
-[Aflați mai multe despre fragmentare](/upgrades/sharding/)
+[Aflați mai multe despre fragmentare](/roadmap/danksharding/)
 
 ## Relațiile dintre actualizări {#relationship-between-upgrades}
 
@@ -57,7 +57,7 @@ Toate actualizările Ethereum se află într-o anumită corelație. Deci, să re
 
 La început, Lanțul Beacon a existat separat de Rețeaua principală Ethereum, dar au fuzionat în 2022.
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   Fuziunea
 </ButtonLink>
 
@@ -65,7 +65,7 @@ La început, Lanțul Beacon a existat separat de Rețeaua principală Ethereum, 
 
 Fragmentarea poate intra în ecosistemul Ethereum în siguranță doar cu un mecanism de consens în vigoare, dovada mizei. Lanțul Beacon a introdus mizarea, care a „fuzionat” cu Rețeaua principală, deschizând calea pentru fragmentare, pentru o scalare și mai mare a Ethereum.
 
-<ButtonLink to="/upgrades/sharding/">
+<ButtonLink to="/roadmap/danksharding/">
   Lanțurile de fragmente
 </ButtonLink>
 

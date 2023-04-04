@@ -20,7 +20,7 @@ Połączenie to scalenie pierwotnej warstwy wykonania Ethereum (sieci głównej,
 
 <MergeInfographic />
 
-Początkowo [łańcuch śledzący](/upgrades/beacon-chain/) wdrażano oddzielnie od [sieci głównej](/glossary/#mainnet). Sieć główna Ethereum — wraz ze wszystkimi jej kontami, saldami, inteligentnymi kontraktami i stanem sieci blockchain — nadal była zabezpieczana przez mechanizm [proof-of-work](/developers/docs/consensus-mechanisms/pow/), nawet gdy łańcuch śledzący działał równolegle, używając [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). Połączenie to moment, w którym te dwa systemy w końcu się połączyły, a mechanizm proof-of-work został na stałe zastąpiony przez mechanizm proof-of-stake.
+Początkowo [łańcuch śledzący](/roadmap/beacon-chain/) wdrażano oddzielnie od [sieci głównej](/glossary/#mainnet). Sieć główna Ethereum — wraz ze wszystkimi jej kontami, saldami, inteligentnymi kontraktami i stanem sieci blockchain — nadal była zabezpieczana przez mechanizm [proof-of-work](/developers/docs/consensus-mechanisms/pow/), nawet gdy łańcuch śledzący działał równolegle, używając [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). Połączenie to moment, w którym te dwa systemy w końcu się połączyły, a mechanizm proof-of-work został na stałe zastąpiony przez mechanizm proof-of-stake.
 
 Wyobraź sobie, że Ethereum to statek kosmiczny, który wystartował, zanim był gotowy do podróży międzygwiezdnej. Dzięki łańcuchowi śledzącemu społeczność zbudowała nowy silnik i wzmocniony kadłub. Po intensywnych testach nadszedł czas, aby w czasie jazdy zamienić stary silnik na nowy. W ten sposób nowy, wydajniejszy silnik został zainstalowany w działającej maszynie, która dzięki temu nabrała kosmicznej prędkości.
 
@@ -37,7 +37,7 @@ Połączenie oznaczało oficjalne przejście na używanie łańcucha śledząceg
 Podczas Połączenia nie została utracona żadna historia. Gdy sieć główna połączyła się z łańcuchem śledzącym, połączona została również cała historia transakcyjna Ethereum.
 
 <InfoBanner>
-Przejście na proof-of-stake zmieniło sposób emisji etheru. Dowiedz się więcej o <a href="/upgrades/merge/issuance/">emisji etheru przed i po Połączeniu</a>.
+Przejście na proof-of-stake zmieniło sposób emisji etheru. Dowiedz się więcej o <a href="/roadmap/merge/issuance/">emisji etheru przed i po Połączeniu</a>.
 </InfoBanner>
 
 ### Użytkownicy i posiadacze {#users-holders}
@@ -197,7 +197,7 @@ Połączenie reprezentuje formalne przyjęcie łańcucha śledzącego jako nowej
 
 Bloki są natomiast proponowane przez węzły walidujące, które stakują ETH w zamian za prawo do udziału w konsensusie. Te uaktualnienia stanowią podstawę dla przyszłych uaktualnień skalowalności, w tym shardingu.
 
-<ButtonLink to="/upgrades/beacon-chain/">
+<ButtonLink to="/roadmap/beacon-chain/">
   Łańcuch śledzący
 </ButtonLink>
 
@@ -213,7 +213,7 @@ Pierwotnie planowano prace nad shardingiem przed Połączeniem, aby rozwiązać 
 
 Plany dotyczące shardingu szybko ewoluują, ale ze względu na rozwój i sukces technologii warstwy 2 do skalowania wykonania transakcji plany shardingu przesunęły się w kierunku znalezienia optymalnego sposobu rozłożenia ciężaru przechowywania skompresowanych calldata z kontraktów pakietów zbiorczych, co pozwala na wykładniczy wzrost przepustowości sieci. Nie byłoby to możliwe bez wcześniejszego przejścia na proof-of-stake.
 
-<ButtonLink to="/upgrades/sharding/">
+<ButtonLink to="/roadmap/danksharding/">
   Sharding
 </ButtonLink>
 

@@ -20,7 +20,7 @@ summaryPoint4: マージによりイーサリアムのエネルギー消費が�
 
 <MergeInfographic />
 
-当初、[メインネット](/glossary/#mainnet)とは別に[ビーコンチェーン](/upgrades/beacon-chain/)がリリースされました。 メインネットでは[プルーフ・オブ・ワーク](/developers/docs/consensus-mechanisms/pow/)によりすべてのアカウント、残高、スマートコントラクトおよびブロックチェーンの状態の安全性が保たれ、それと同時に[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos/)を活用したビーコンチェーンが並行して稼働していました。 マージでは、これらの 2 つのシステムが最終的に統合され、プルーフ・オブ・ワークが永久にプルーフ・オブ・ステークに置き換わりました。
+当初、[メインネット](/glossary/#mainnet)とは別に[ビーコンチェーン](/roadmap/beacon-chain/)がリリースされました。 メインネットでは[プルーフ・オブ・ワーク](/developers/docs/consensus-mechanisms/pow/)によりすべてのアカウント、残高、スマートコントラクトおよびブロックチェーンの状態の安全性が保たれ、それと同時に[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos/)を活用したビーコンチェーンが並行して稼働していました。 マージでは、これらの 2 つのシステムが最終的に統合され、プルーフ・オブ・ワークが永久にプルーフ・オブ・ステークに置き換わりました。
 
 イーサリアムが、恒星間航行への準備が不十分で打ち上げられた宇宙船だと想像してみてください。 ビーコンチェーンによって、新型のエンジンと強化された船体が構築されました。 大規模なテストが行われた後、旧式のエンジンと新型のエンジンを飛行中に入れ替える時期となりました。 より効率的な新型のエンジンを既存の宇宙船にマージしたことにより、何光年もの長い宇宙への旅ができるようになったのです。
 
@@ -37,7 +37,7 @@ summaryPoint4: マージによりイーサリアムのエネルギー消費が�
 マージにより、履歴は失われていません。 メインネットがビーコンチェーンにマージされ、イーサリアムのすべてのトランザクション履歴もマージされました。
 
 <InfoBanner>
-このプルーフ・オブ・ステークへの移行により、イーサ (ETH) の発行方法も変わりました。 マージ前後におけるイーサ (ETH) 発行の詳細については、<a href="/upgrades/merge/issuance/">こちら</a>をご覧ください。
+このプルーフ・オブ・ステークへの移行により、イーサ (ETH) の発行方法も変わりました。 マージ前後におけるイーサ (ETH) 発行の詳細については、<a href="/roadmap/merge/issuance/">こちら</a>をご覧ください。
 </InfoBanner>
 
 ### ユーザーと所有者 {#users-holders}
@@ -197,7 +197,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 ブロックは、コンセンサスに参加する権利を得るために、ETH をステーキングしたノードを検証することで提案されます。 これらのアップグレードは、シャーディングを含む将来のスケーラビリティのアップグレードの準備段階となります。
 
-<ButtonLink to="/upgrades/beacon-chain/">
+<ButtonLink to="/roadmap/beacon-chain/">
   ビーコンチェーン
 </ButtonLink>
 
@@ -213,7 +213,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 シャーディング計画は急速に進展していますが、トランザクションの実行をスケールリングするレイヤー 2 技術の台頭と成功により、ロールアップコントラクトからの圧縮コールデータ(calldata)の保存を負荷分散する最適な方法を見つけることにシフトしています。これにより、ネットワーク容量を指数関数的に増やすことができるようになります。 プルーフ・オブ・ステークへの移行がなければ、これは実現不可能なことでした。
 
-<ButtonLink to="/upgrades/sharding/">
+<ButtonLink to="/roadmap/danksharding/">
   シャーディング画像
 </ButtonLink>
 

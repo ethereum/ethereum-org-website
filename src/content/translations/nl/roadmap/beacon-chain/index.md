@@ -16,7 +16,7 @@ summaryPoint4: U kent dit wellicht als "Fase 0" op technische routekaarten.
 
 ## Wat doet de Beacon Chain? {#what-does-the-beacon-chain-do}
 
-De Beacon Chain zal het uitgebreide netwerk leiden of coördineren tussen [shards](/upgrades/sharding/) en [stakers](/staking/). Maar het zal niet zijn zoals het [Ethereum-hoofdnet](/glossary/#mainnet) dat we nu gebruiken. Het kan geen accounts of slimme contracten aan.
+De Beacon Chain zal het uitgebreide netwerk leiden of coördineren tussen [shards](/roadmap/danksharding/) en [stakers](/staking/). Maar het zal niet zijn zoals het [Ethereum-hoofdnet](/glossary/#mainnet) dat we nu gebruiken. Het kan geen accounts of slimme contracten aan.
 
 Het doel van de Beacon Chain zal in de loop van de tijd veranderen, maar het is een fundamenteel onderdeel voor [het veilige, duurzame en haalbare Ethereum waar we naartoe werken.](/roadmap/vision/).
 
@@ -32,7 +32,7 @@ Sstaken en een validator worden is makkelijker dan [mining](/developers/docs/min
 Als u geïnteresseerd bent om een validator te worden en de Beacon Chain te beveiligen, <a href="/staking/">hier vindt u meer informatie over staken</a>.
 </InfoBanner>
 
-Dit is ook een belangrijke verandering voor een andere upgrade: [shardketens](/upgrades/sharding/).
+Dit is ook een belangrijke verandering voor een andere upgrade: [shardketens](/roadmap/danksharding/).
 
 ### Opzetten van shardketens {#setting-up-for-shard-chains}
 
@@ -48,7 +48,7 @@ Alle Ethereum-upgrades zijn ietwat met elkaar verbonden. Laten we nu samenvatten
 
 In het begin zal de Beacon Chain apart bestaan van het Ethereum-hoofdnet dat we dagelijks gebruiken. Maar uiteindelijke zullen ze verbonden worden. Het plan is om het hoofdnet "samen te voegen" met het proof-of-stake systeem dat gecontroleerd en gecoördineerd wordt door de Beacon Chain.
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
     De Merge
 </ButtonLink>
 
@@ -56,7 +56,7 @@ In het begin zal de Beacon Chain apart bestaan van het Ethereum-hoofdnet dat we 
 
 Shardketens kunnen alleen op een veilige manier in het Ethereum-netwerk komen als er een proof-of-stake consensusmechanisme geïmplementeerd is. De Beacon Chain zal het staken introduceren en de weg vrijmaken voor de upgrade van de shardketen die zal volgen.
 
-<ButtonLink to="/upgrades/sharding/">
+<ButtonLink to="/roadmap/danksharding/">
     Shardketens
 </ButtonLink>
 

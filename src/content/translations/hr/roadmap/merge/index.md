@@ -20,7 +20,7 @@ Spajanje predstavlja objedinjavanje izvornog izvršnog sloja Ethereuma (glavne m
 
 <MergeInfographic />
 
-U početku je [Beacon Chain](/upgrades/beacon-chain/) bio odvojen od [glavne mreže](/glossary/#mainnet). Glavna mreža Ethereuma, sa svim svojim računima, stanjima, pametnim ugovorima i stanjima lanaca blokova, ostaje zaštićena [dokazom rada](/developers/docs/consensus-mechanisms/pow/), čak i za vrijeme paralelnog rada značajke Beacon Chain i njegova [dokaza uloga](/developers/docs/consensus-mechanisms/pos/). Spajanjem su ta dva sustava konačno objedinjena, pri čemu je dokaz rada trajno zamijenjen dokazom uloga.
+U početku je [Beacon Chain](/roadmap/beacon-chain/) bio odvojen od [glavne mreže](/glossary/#mainnet). Glavna mreža Ethereuma, sa svim svojim računima, stanjima, pametnim ugovorima i stanjima lanaca blokova, ostaje zaštićena [dokazom rada](/developers/docs/consensus-mechanisms/pow/), čak i za vrijeme paralelnog rada značajke Beacon Chain i njegova [dokaza uloga](/developers/docs/consensus-mechanisms/pos/). Spajanjem su ta dva sustava konačno objedinjena, pri čemu je dokaz rada trajno zamijenjen dokazom uloga.
 
 Zamislite Ethereum kao svemirski brod koji je izbačen u orbitu prije nogo što je bio spreman za zvjezdano putovanje. Uz Beacon Chain zajednica je izgradila novi stroj i ojačala njegov trup. Nakon iscrpnog testiranja, odlučeno je da je vrijeme za zamjenu starog stroja u radu novim. Time je uveden nov i učinkovitiji motor u postojeći brod koji mu omogućuje dodatne svjetlosne godine i osvajanje novih svjetova.
 
@@ -37,7 +37,7 @@ Spajanje je predstavljalo službeni prijelaz na Beacon Chain kao procesor proizv
 Spajanjem nisu izgubljeni povijesni podaci. Kako se glavna mreža objedinila s Beacon Chainom, tako je migrirana i cjelokupna povijest transakcija Ethereuma.
 
 <InfoBanner>
-Prijelaz na dokaz uloga promijenio je način izdavanja Ethera. Saznajte više o <a href="/upgrades/merge/issuance/">izdavanju Ethera prije i nakon Spajanja</a>.
+Prijelaz na dokaz uloga promijenio je način izdavanja Ethera. Saznajte više o <a href="/roadmap/merge/issuance/">izdavanju Ethera prije i nakon Spajanja</a>.
 </InfoBanner>
 
 ### Korisnici i vlasnici {#users-holders}
@@ -197,7 +197,7 @@ Spajanje predstavlja formalno usvajanje nadogradnje Beacon Chain kao novog sloja
 
 Blokove sada predlažu validirajući čvorovi s ulogom ETH-a u zamjenu za pravo da sudjeluju u konsenzusu. Te nadogradnje postavljaju temelj za buduće nadogradnje prilagođavanja, uključujući razdjeljivanje.
 
-<ButtonLink to="/upgrades/beacon-chain/">
+<ButtonLink to="/roadmap/beacon-chain/">
   Beacon Chain
 </ButtonLink>
 
@@ -213,7 +213,7 @@ Izvorni je plan bio razvijati razdjeljivanje prije spajanja kako bi se riješio 
 
 Planovi za razdjeljivanje brzo su se razvijali. Međutim, uzimajući u obzir rast i uspjeh tehnologija sloja 2 za skaliranje izvršavanja transakcija, planovi za razdjeljivanje prešli su u traženje najoptimalnijeg načina diobe opterećenja pohrane komprimiranih podataka iz poziva svih pametnih ugovora uz mogućnost eksponencijalnog rasta mrežnog kapaciteta. To ne bi bilo moguće bez prethodnog prelaska na koncept dokaza uloga.
 
-<ButtonLink to="/upgrades/sharding/">
+<ButtonLink to="/roadmap/danksharding/">
   Dijeljenje
 </ButtonLink>
 

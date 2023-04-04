@@ -20,7 +20,7 @@ La fusión fue la unión de la capa de ejecución inicial de Ethereum (la red pr
 
 <MergeInfographic />
 
-Inicialmente, la [cadena de baliza](/upgrades/beacon-chain/) se lanzó de manera separada de la [red principal](/glossary/#mainnet). La red principal de Ethereum, con todas sus cuentas, balances, contratos inteligentes y estado de la cadena de bloques, continúa siendo asegurdad por el mecanismo de [prueba de participación](/developers/docs/consensus-mechanisms/pow/), incluso cuando la cadena de baliza se ejecuta en paralelo usando la [prueba de participación](/developers/docs/consensus-mechanisms/pos/). La Fusión se produce cuando estos dos sistemas finalmente se unen, siendo la prueba de trabajo permanentemente remplazada por la prueba de participación.
+Inicialmente, la [cadena de baliza](/roadmap/beacon-chain/) se lanzó de manera separada de la [red principal](/glossary/#mainnet). La red principal de Ethereum, con todas sus cuentas, balances, contratos inteligentes y estado de la cadena de bloques, continúa siendo asegurdad por el mecanismo de [prueba de participación](/developers/docs/consensus-mechanisms/pow/), incluso cuando la cadena de baliza se ejecuta en paralelo usando la [prueba de participación](/developers/docs/consensus-mechanisms/pos/). La Fusión se produce cuando estos dos sistemas finalmente se unen, siendo la prueba de trabajo permanentemente remplazada por la prueba de participación.
 
 Imagina que Ethereum es una nave espacial que es lanzada antes de estar lista para un viaje interestelar. Con la cadena de baliza, la comunidad construyó un nuevo motor y un chasis más fuerte. Después de muchas pruebas, casi ha llegado el momento de cambiar el nuevo motor por el antiguo en pleno vuelo. De este modo, el nuevo motor, más eficiente, se integrará en la nave existente, preparada para recorrer grandes distancias y conquistar el universo.
 
@@ -37,7 +37,7 @@ La Fusión representa la transición oficial al uso de la cadena de baliza como 
 El historial no se ha perdido tras La Fusión. Ya que la red principal se fusionó con la cadena de baliza, también se produjo una fusión de todo el historial de transacciones de Ethereum.
 
 <InfoBanner>
-Esta transición a la prueba de participación ha cambiado la forma en la que se emiten Ethers. Más información sobre <a href="/upgrades/merge/issuance/">la emisión de ether antes y después de La Fusión</a>.
+Esta transición a la prueba de participación ha cambiado la forma en la que se emiten Ethers. Más información sobre <a href="/roadmap/merge/issuance/">la emisión de ether antes y después de La Fusión</a>.
 </InfoBanner>
 
 ### Usuarios y titulares {#users-holders}
@@ -197,7 +197,7 @@ La Fusión representa la adopción formal de la cadena de baliza como la nueva c
 
 En su lugar, los bloques serán propuestos desde un nodo validado que tenga ETH apostados a cambio del derecho de participar en el consenso. Estas actualizaciones sientan las bases para futuras mejoras de escalabilidad, incluida la fragmentación.
 
-<ButtonLink to="/upgrades/beacon-chain/">
+<ButtonLink to="/roadmap/beacon-chain/">
   La cadena de baliza
 </ButtonLink>
 
@@ -213,7 +213,7 @@ Originalmente, el plan era trabajar en la fragmentación antes de La Fusión par
 
 Los planes de fragmentación están evolucionando rápidamente, pero dado el auge y el éxito de las tecnologías de capa 2 para escalar la ejecución de transacciones, los planes de fragmentación han pasado a buscar la forma más óptima de distribuir la carga de almacenar los datos comprimidos de las llamadas procedentes de las acumulaciones, permitiendo un crecimiento exponencial de la capacidad de la red. Esto no sería posible sin pasar primero a la prueba de participación.
 
-<ButtonLink to="/upgrades/sharding/">
+<ButtonLink to="/roadmap/danksharding/">
   Fragmentación
 </ButtonLink>
 

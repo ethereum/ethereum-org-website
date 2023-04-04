@@ -15,7 +15,7 @@ summaryPoint3: The Beacon Chain introduced the consensus logic and block gossip 
 
 ## What was the Beacon Chain? {#what-is-the-beacon-chain}
 
-The Beacon Chain was the name of the original proof-of-stake blockchain that was launched in 2020. It was created to ensure the proof-of-stake consensus logic was sound and sustainable before enabling it on Ethereum Mainnet. Therefore, it ran alongside the original proof-of-work Ethereum. Switching off proof-of-work and switching on proof-of-stake on Ethereum required instructing the Beacon Chain to accept transactions from the original Ethereum chain, bundle them into blocks and then organize them into a blockchain using a proof-of-stake based consensus mechanism. At the same moment, the original Ethereum clients turned off their mining, block propagation and consensus logic, handing that all over to the Beacon Chain. This event was known as [The Merge](/upgrades/merge/). Once The Merge happened, there were no longer two blockchains; there was just one proof-of-stake Ethereum chain.
+The Beacon Chain was the name of the original proof-of-stake blockchain that was launched in 2020. It was created to ensure the proof-of-stake consensus logic was sound and sustainable before enabling it on Ethereum Mainnet. Therefore, it ran alongside the original proof-of-work Ethereum. Switching off proof-of-work and switching on proof-of-stake on Ethereum required instructing the Beacon Chain to accept transactions from the original Ethereum chain, bundle them into blocks and then organize them into a blockchain using a proof-of-stake based consensus mechanism. At the same moment, the original Ethereum clients turned off their mining, block propagation and consensus logic, handing that all over to the Beacon Chain. This event was known as [The Merge](/roadmap/merge/). Once The Merge happened, there were no longer two blockchains; there was just one proof-of-stake Ethereum chain.
 
 ## What did the Beacon Chain do? {#what-does-the-beacon-chain-do}
 
@@ -47,7 +47,7 @@ Proof-of-stake has the advantage of having a registry of all approved block prod
 
 This responsibility is in contrast to proof-of-work, where miners have no obligation to the network and could stop mining and turn their node software off permanently in an instant without repercussion. There is also no registry of known block proposers and no reliable way to split network responsibilities safely.
 
-[More on sharding](/upgrades/sharding/)
+[More on sharding](/roadmap/danksharding/)
 
 ## Relationship between upgrades {#relationship-between-upgrades}
 
@@ -57,7 +57,7 @@ The Ethereum upgrades are all somewhat interrelated. So let’s recap how the Be
 
 At first, The Beacon Chain existed separately from Ethereum Mainnet, but they were merged in 2022.
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   The Merge
 </ButtonLink>
 
@@ -65,7 +65,7 @@ At first, The Beacon Chain existed separately from Ethereum Mainnet, but they we
 
 Sharding can only safely enter the Ethereum ecosystem with a proof-of-stake consensus mechanism in place. The Beacon Chain introduced staking, which 'merged' with Mainnet, paving the way for sharding to help further scale Ethereum.
 
-<ButtonLink to="/upgrades/sharding/">
+<ButtonLink to="/roadmap/danksharding/">
   Shard chains
 </ButtonLink>
 
