@@ -161,13 +161,13 @@ export const TriangleSVG: React.FC<IProps> = ({
         {t("ethereum")}
       </Text>
       <Text x="460" y="150" isActive={isDecentralized}>
-        {t("page-upgrades-vision-trilemma-text-1")}
+        {t("page-roadmap-vision-trilemma-text-1")}
       </Text>
       <Text x="-24" y="486" isActive={isSecure}>
-        {t("page-upgrades-vision-trilemma-text-2")}
+        {t("page-roadmap-vision-trilemma-text-2")}
       </Text>
       <Text x="540" y="835" isActive={isScalable}>
-        {t("page-upgrades-vision-trilemma-text-3")}
+        {t("page-roadmap-vision-trilemma-text-3")}
       </Text>
     </chakra.svg>
   )

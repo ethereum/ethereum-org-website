@@ -1,5 +1,5 @@
 ---
-title: Web2 vs Web3
+title: Web2 et Web3
 description:
 lang: fr
 ---
@@ -15,7 +15,7 @@ De nombreux développeurs Web3 ont choisi de construire des dApps en raison de l
 - Quiconque sur le réseau a l'autorisation d'utiliser le service. En d'autres termes, aucune autorisation n'est requise.
 - Personne ne peut vous bloquer ni vous refuser l'accès au service.
 - Les paiements sont intégrés via le jeton natif, l'ether (ETH).
-- Ethereum est "Turing-complet", ce qui signifie que vous pouvez programmer à peu près tout ce que vous voulez.
+- Ethereum est « turing-complete », ce qui signifie que vous pouvez programmer à peu près tout ce qui vous passe par la tête.
 
 ## Comparaisons pratiques {#practical-comparisons}
 
@@ -27,11 +27,11 @@ De nombreux développeurs Web3 ont choisi de construire des dApps en raison de l
 
 Cela ne signifie pas pour autant que tous les services doivent être transformés en dApps. Ces exemples illustrent simplement les principales différences entre les services Web2 et Web3.
 
-## Limitations du Web3 {#web3-limitations}
+## Limitation du Web3 {#web3-limitations}
 
 Le Web3 affiche actuellement quelques limitations :
 
-- Évolutivité : Les transactions sont plus lentes sur le Web3 car elles sont décentralisées. Les changements d'état, comme un paiement, doivent être traités par un mineur et propagés sur le réseau.
+- Évolutivité : Les transactions sont plus lentes sur le Web3 car elles sont décentralisées. Les changements d'état, comme un paiement, doivent être réalisés par un nœud et diffusé sur le réseau.
 - UX : Interagir avec les applications Web3 peut nécessiter des étapes, des logiciels et des connaissances supplémentaires. Cela peut constituer un obstacle à son adoption.
 - Accessibilité – le manque d’intégration dans les navigateurs Web modernes rend le web3 moins accessible à la plupart des utilisateurs.
 - Coût : La plupart des dApps réussies publient de très petites portions de leur code sur la blockchain car c'est coûteux.
@@ -59,3 +59,4 @@ Notez qu'il s'agit là de modèles généraux qui ne sont pas nécessairement va
 - [The Meaning of Decentralization](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274) _- Vitalik Buterin, 6 février 2017 _
 - [Pourquoi la décentralisation est importante](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _- Chris Dixon, 18 février 2018_
 - [Qu'est-ce que le Web 3.0 et pourquoi c'est important](https://medium.com/fabric-ventures/what-is-web-3-0-why-it-matters-934eb07f3d2b) _ - Max Mersch et Richard Muirhead, 31 décembre 2019_
+- [Pourquoi nous avons besoin du Web 3.0](https://medium.com/@gavofyork/why-we-need-web-3-0-5da4f2bf95ab) _12 Sep 2018 - Gavin Wood_

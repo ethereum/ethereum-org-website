@@ -72,20 +72,20 @@ export const useTrilemma = () => {
     })
   }
 
-  let cardTitle = <Translation id="page-upgrades-vision-trilemma-title-1" />
-  let cardText = <Translation id="page-upgrades-vision-trilemma-press-button" />
+  let cardTitle = <Translation id="page-roadmap-vision-trilemma-title-1" />
+  let cardText = <Translation id="page-roadmap-vision-trilemma-press-button" />
   if (isEthereum) {
-    cardTitle = <Translation id="page-upgrades-vision-trilemma-title-2" />
-    cardText = <Translation id="page-upgrades-vision-trilemma-cardtext-1" />
+    cardTitle = <Translation id="page-roadmap-vision-trilemma-title-2" />
+    cardText = <Translation id="page-roadmap-vision-trilemma-cardtext-1" />
   } else if (state.isDecentralizedAndSecure) {
-    cardTitle = <Translation id="page-upgrades-vision-trilemma-title-3" />
-    cardText = <Translation id="page-upgrades-vision-trilemma-cardtext-2" />
+    cardTitle = <Translation id="page-roadmap-vision-trilemma-title-3" />
+    cardText = <Translation id="page-roadmap-vision-trilemma-cardtext-2" />
   } else if (state.isDecentralizedAndScalable) {
-    cardTitle = <Translation id="page-upgrades-vision-trilemma-title-4" />
-    cardText = <Translation id="page-upgrades-vision-trilemma-cardtext-3" />
+    cardTitle = <Translation id="page-roadmap-vision-trilemma-title-4" />
+    cardText = <Translation id="page-roadmap-vision-trilemma-cardtext-3" />
   } else if (state.isScalableAndSecure) {
-    cardTitle = <Translation id="page-upgrades-vision-trilemma-title-5" />
-    cardText = <Translation id="page-upgrades-vision-trilemma-cardtext-4" />
+    cardTitle = <Translation id="page-roadmap-vision-trilemma-title-5" />
+    cardText = <Translation id="page-roadmap-vision-trilemma-cardtext-4" />
   }
 
   return {
