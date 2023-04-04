@@ -236,6 +236,10 @@ Formal verification is considered important for smart contracts because it helps
 
 - [Website](https://nethermind.io/smart-contracts-audits)
 
+**Ackee Blockchain** - _Cybersecurity experts, researchers and creators of open-source security tooling._
+
+- [Website](https://ackeeblockchain.com)
+
 ### Bug bounty platforms {#bug-bounty-platforms}
 
 **Immunefi** - _Bug bounty platform for smart contracts and DeFi projects, where security researchers review code, disclose vulnerabilities, get paid, and make crypto safer._
