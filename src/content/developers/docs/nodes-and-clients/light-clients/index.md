@@ -18,7 +18,7 @@ On the execution layer there is no single specification for a light execution cl
 
 ## Why are light clients important? {#why-are-light-clients-important}
 
-Light clients matter because they allow users to verify incoming data rather than blindly trusting that their data provider is correct and honest, while using just a tiny fraction of the computational resources of a full node. The data light clients receive can be checked against block headers that they know have been signed by at least 2/3 of a random set of 512 Ethereum validators. This is very strong evidence that the data is correct. 
+Light clients matter because they allow users to verify incoming data rather than blindly trusting that their data provider is correct and honest, while using just a tiny fraction of the computational resources of a full node. The data light clients receive can be checked against block headers that they know have been signed by at least 2/3 of a random set of 512 Ethereum validators. This is very strong evidence that the data is correct.
 
 The light client only uses a tiny amount of computing power, memory and storage so it can be run on a mobile phone, embedded in an app or as part of a browser. Light clients are a way to make trust-minimized access to Ethereum just as frictionless as trusting a third-party provider.
 
@@ -55,7 +55,7 @@ Other [roadmap](/roadmap/) items such as [Verkle trees](/roadmap/verkle-trees/) 
 
 ## Further reading {#further-reading}
 
-[Zsolt Felfodhi on Geth light clients](https://www.youtube.com/watch?v=EPZeFXau-RE)
-[Etan Kissling on light client networking](https://www.youtube.com/watch?v=85MeiMA4dD8)
-[Etan Kissling on light clients after The Merge](https://www.youtube.com/watch?v=ZHNrAXf3RDE)
-[Piper Merriam: The winding road to functional light clients](https://snakecharmers.ethereum.org/the-winding-road-to-functional-light-clients/)
+- [Zsolt Felfodhi on Geth light clients](https://www.youtube.com/watch?v=EPZeFXau-RE)
+- [Etan Kissling on light client networking](https://www.youtube.com/watch?v=85MeiMA4dD8)
+- [Etan Kissling on light clients after The Merge](https://www.youtube.com/watch?v=ZHNrAXf3RDE)
+- [Piper Merriam: The winding road to functional light clients](https://snakecharmers.ethereum.org/the-winding-road-to-functional-light-clients/)
