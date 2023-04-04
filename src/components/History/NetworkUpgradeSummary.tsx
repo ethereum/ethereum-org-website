@@ -84,30 +84,34 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
 
   return (
     <Stack>
-      <Flex>
-        <Emoji fontSize="sm" mr={2} text=":calendar:" />
-        <Text fontFamily="monospace" m={0}>
-          {formattedUTC}
-        </Text>
-      </Flex>
+      {formattedUTC && (
+        <Flex>
+          <Emoji fontSize="sm" mr={2} text=":calendar:" />
+          <Text fontFamily="monospace" m={0}>
+            {formattedUTC}
+          </Text>
+        </Flex>
+      )}
       {blockTypeTranslation}
-      <Flex>
-        <Emoji fontSize="sm" mr={2} text=":money_bag:" />
-        <Translation id="page-history-eth-price" />
-        :&nbsp;
-        {new Intl.NumberFormat(localeForStatsBoxNumbers, {
-          style: "currency",
-          currency: "USD",
-          minimumSignificantDigits: 2,
-          maximumSignificantDigits: 3,
-        }).format(ethPriceInUSD)}
-      </Flex>
-      <Flex>
-        <Emoji fontSize="sm" mr={2} text=":desktop_computer:" />
-        <Link to={waybackLink}>
-          <Translation id="page-history-ethereum-org-wayback" />
-        </Link>
-      </Flex>
+      {ethPriceInUSD && (
+        <Flex>
+          <Emoji fontSize="sm" mr={2} text=":money_bag:" />
+          <Translation id="page-history-eth-price" />
+          :&nbsp;
+          {new Intl.NumberFormat(localeForStatsBoxNumbers, {
+            style: "currency",
+            currency: "USD",
+          }).format(ethPriceInUSD)}
+        </Flex>
+      )}
+      {waybackLink && (
+        <Flex>
+          <Emoji fontSize="sm" mr={2} text=":desktop_computer:" />
+          <Link to={waybackLink}>
+            <Translation id="page-history-ethereum-org-wayback" />
+          </Link>
+        </Flex>
+      )}
     </Stack>
   )
 }
