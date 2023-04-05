@@ -384,6 +384,9 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
       </TwoColumnContent>
       <Divider />
       <CalloutBanner
+        mx={4}
+        mt={24}
+        mb={40}
         titleKey="page-get-eth-use-your-eth"
         descriptionKey="page-get-eth-use-your-eth-dapps"
         image={getImage(data.dapps)!}

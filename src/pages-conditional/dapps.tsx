@@ -130,20 +130,6 @@ const StyledInfoBanner = styled(InfoBanner)`
   }
 `
 
-const StyledCalloutBanner = styled(CalloutBanner)`
-  margin: 8rem 0 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 0;
-  }
-`
-
-const MobileOptionContainer = styled(OptionContainer)`
-  text-align: center;
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    display: none;
-  }
-`
-
 const Column = styled.div`
   flex: 1 1 75%;
   margin-bottom: 1.5rem;

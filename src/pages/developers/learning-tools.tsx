@@ -305,6 +305,9 @@ const LearningToolsPage = ({
       </StackContainer>
       <Content>
         <CalloutBanner
+          mx={4}
+          mt={24}
+          mb={40}
           image={getImage(data.learn)!}
           alt={t("page-index-tout-enterprise-image-alt")}
           titleKey={"page-learning-tools-documentation"}
