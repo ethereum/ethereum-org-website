@@ -68,7 +68,7 @@ Data availability is different from data retrievability. Data availability is th
 
 Data retrievability is the ability of nodes to retrieve _historical information_ from the blockchain. This historical data is not needed for verifying new blocks, it is only required for syncing full nodes from the genesis block or serving specific historical requests.
 
-The core Ethereum protocol is primarily concerned with data availability, not data retrievability. Data retrievability cna be provided by a small population of archive nodes run by third parties, or it can be distributed across the network using decentralized file storage such as the [Portal Network](https://www.ethportal.net/).
+The core Ethereum protocol is primarily concerned with data availability, not data retrievability. Data retrievability can be provided by a small population of archive nodes run by third parties, or it can be distributed across the network using decentralized file storage such as the [Portal Network](https://www.ethportal.net/).
 
 ## Further reading {#further-reading}
 
