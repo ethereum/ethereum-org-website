@@ -75,6 +75,8 @@ The following options are possible for the defaultBlock parameter:
 - `HEX String` - an integer block number
 - `String "earliest"` for the earliest/genesis block
 - `String "latest"` - for the latest mined block
+- `String "safe"` - for the latest safe head block
+- `String "finalized"` - for the latest finalized block
 - `String "pending"` - for the pending state/transactions
 
 ## Examples

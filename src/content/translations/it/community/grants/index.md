@@ -20,7 +20,7 @@ Questi programmi supportano il grande ecosistema di Ethereum offrendo sovvenzion
 - [Moloch DAO](https://www.molochdao.com/) - _Privacy, ridimensionamento di livello 2, sicurezza del client e molto altro_
 - [Sovvenzioni aperte](https://opengrants.com/explore)
 - [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Foglio di calcolo di Google delle organizzazioni che offrono sovvenzioni_
-- [Sfida dei Dati della Fusione](https://esp.ethereum.foundation/merge-data-challenge) - _Chiamiamo tutti gli Ethereani, scienziati, ingegneri e visualizzatori di dati, sviluppatori e chiunque sia interessato, a indagare sui dati di Ethereum!_
+- [Sovvenzioni accademiche](https://esp.ethereum.foundation/academic-grants-2023) - _Sovvenzioni per sostenere il lavoro accademico correlato a Ethereum_
 
 ## Programmi per progetti specifici {#project-specific}
 
@@ -30,10 +30,11 @@ Questi progetti hanno creato le proprie sovvenzioni per progetti volti a svilupp
 - [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/) ecosystem fund_
 - [Chainlink Grants Program](https://chain.link/community/grants) - _Sovvenzioni per la comunity di [Chainlink](https://chain.link/)_
 - [Compound Grants Program](https://compoundgrants.org/) – _Ecosistema finanziario [Compound](https://compound.finance/)_
-- [Consensys Grants Program](https://consensys.net/grants/) – _Finanziamento della blockchain [Consensys](https://consensys.net/) e sovvenzioni connesse a Ethereum_
-- [Organizzazione di Sovvenzioni dell'Ecosistema di Lido (LEGO)](https://lego.lido.fi/) – _Ecosistema finanziario di [Lido](https://lido.fi/)_
+- [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _Ecosistema finanziario di [Lido](https://lido.fi/)_
+- [Programma di MetaMask](https://metamaskgrants.org/): _DAO di sovvenzioni operata dai dipendenti di [MetaMask](https://metamask.io/)_
 - [Programma di Sovvenzioni di mStable](https://docs.mstable.org/advanced/grants-program) - _Community di [mStable](https://mstable.org/)_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _Ecosistema di [The Graph](https://thegraph.com/)_
+- [Programma di Sovvenzioni UMA](https://grants.umaproject.org/): _Supporto per sviluppatori dell'[UMA](https://umaproject.org/)_
 - [Programma di Sovvenzioni di Uniswap](https://www.unigrants.org/) – _Community di [Uniswap](https://uniswap.org/)_
 - [Sovvenzioni Web3](https://web3grants.net): _Un elenco completo di programmi di sovvenzione relativi a web3/cripto_
 

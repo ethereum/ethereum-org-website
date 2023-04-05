@@ -57,7 +57,7 @@
   "layer-2-dyor-3": "前往 L2BEAT",
   "layer-2-use-layer-2-title": "使用二层网络",
   "layer-2-use-layer-2-1": "现在您知道二层网络为什么存在以及它是如何工作的，下面让我们开始运行起来吧！",
-  "layer-2-contract-accounts": "<strong>注意：</strong>当桥接并使用二层网络时，请务必注意，你将控制你外部帐户（外部帐户只有一个私钥控制帐户）的地址，就像在以太坊主网上一样。但是，如果你使用的是合约帐户，例如 <a href=\"https://safe.global/\"  target=”_blank”>Safe</a> 或 <a href=\"https://www.argent.xyz/\"  target=”_blank”>Argent</a>，在你将合约帐户重新部署到二层网络上的该地址之前，你将无法控制二层网络上的这一地址。如果你正在桥接或向合约帐户发送资金，并且没有控制合约账户的地址，你的资金可能会丢失。",
+  "layer-2-contract-accounts": "<strong>注意：</strong>当桥接并使用二层网络时，请务必注意，正如在以太坊主网上一样，你将控制外部帐户（外部帐户指只有一个私钥控制的帐户）的地址。但是，如果你使用的是合约帐户，例如 <a href=\"https://safe.global/\"  target=”_blank”>Safe</a> 或 <a href=\"https://www.argent.xyz/\"  target=”_blank”>Argent</a>，在你将合约帐户重新部署到二层网络上的地址之前，你将无法控制二层网络上的这一地址。如果你正在桥接或向合约帐户发送资金，并且无法控制合约帐户的地址，你的资金可能会丢失。",
   "layer-2-use-layer-2-generalized-title": "广义二层网络",
   "layer-2-use-layer-2-generalized-1": "广义二层网络的行为与以太坊别无二致，但成本更低。您在以太坊一层网络能做的任何事，在二层网络也能做到。许多去中心化应用已经开始迁移到这类二层网络，或是连同主网一起跳过，直接部署在二层网络上。",
   "layer-2-use-layer-2-application-specific-title": "应用特定的二层网络",

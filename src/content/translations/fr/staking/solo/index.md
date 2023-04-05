@@ -173,8 +173,6 @@ Bien qu'un serveur privé virtuel (VPS) puisse être utilisé en remplacement du
 Plus il y a de clients validateurs fonctionnant sur une seule solution de stockage en cloud centralisée, plus cela devient dangereux pour ces utilisateurs. Tout événement qui mettrait ces fournisseurs hors ligne, qu'il s'agisse d'une attaque, d'une demande réglementaire ou d'une simple panne de courant ou d'Internet, entraînera la mise hors ligne simultanée de tous les clients de validation qui dépendent de ce serveur.
 
 Les pénalités hors ligne sont proportionnelles au nombre de personnes se trouvant hors ligne au même moment. L'utilisation d'un VPS augmente considérablement le risque de voir les pénalités hors ligne devenir plus sévères, et accroît votre risque de fuite quadratique ou de délestage dans le cas où la panne serait suffisamment importante. Pour minimiser vos propres risques et ceux encourus par le réseau, les utilisateurs sont fortement encouragés à se procurer et à exploiter leur propre matériel.
-
-<a href="https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/">En savoir plus sur les récompenses et les pénalités</a>
 </ExpandableCard>
 
 ## Complément d'information {#further-reading}
@@ -185,4 +183,3 @@ Les pénalités hors ligne sont proportionnelles au nombre de personnes se trouv
 - [How To: Shop For Ethereum Validator Hardware](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
 - [Step by Step: How to join the Ethereum 2.0 Testnet](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Eth2 Slashing Prevention Tips](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
-- [Rewards and Penalties on Ethereum 2.0](https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/) - _James BeckMarch 2020_
