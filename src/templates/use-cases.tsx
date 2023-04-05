@@ -46,7 +46,6 @@ import TableOfContents, {
 } from "../components/TableOfContents"
 import Translation from "../components/Translation"
 import SectionNav from "../components/SectionNav"
-import { Divider } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
 import FeedbackCard from "../components/FeedbackCard"
@@ -84,6 +83,8 @@ const H4 = (props: HeadingProps) => (
     {...props}
   />
 )
+
+const Divider = () => <Box my={16} w="10%" h={1} bgColor="homeDivider" />
 
 const Pre = (props: ChildOnlyProp) => (
   <chakra.pre
