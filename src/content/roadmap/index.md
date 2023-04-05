@@ -103,7 +103,7 @@ We decided not to use this terminology because we wanted to use a simpler and mo
 
 ## What about sharding? {#what-about-sharding}
 
-Sharding is splitting up the Ethereum blockchain so that subsets of validators are only responsible for a fraction of the total data. This was originally intended to be the way for Ethereum to scale. However, layer 2 rollups have developed much faster than expected and have provided a lot of scaling already, and will provide much more after Proto-Danksharding is implemented. This means sharding the chain is no longer needed and has been dropped from the roadmap.
+Sharding is splitting up the Ethereum blockchain so that subsets of validators are only responsible for a fraction of the total data. This was originally intended to be the way for Ethereum to scale. However, layer 2 rollups have developed much faster than expected and have provided a lot of scaling already, and will provide much more after Proto-Danksharding is implemented. This means "shard chains" are no longer needed and have been dropped from the roadmap.
 
 ## Looking for specific technical upgrades? {#looking-for-specific-technical-upgrades}
 
