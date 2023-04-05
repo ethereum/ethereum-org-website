@@ -52,7 +52,6 @@ import YouTube from "../components/YouTube"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
 
-import { Item } from "../components/TableOfContents/utils"
 import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
 import { Lang } from "../utils/languages"
@@ -140,30 +139,35 @@ const HeroContainer = (props: ChildOnlyProp) => (
     boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
     flexDirection={{ base: "column-reverse", lg: "row" }}
     justifyContent="flex-end"
-    height="608px"
+    minHeight="608px"
+    maxHeight={{ base: "full", lg: "608px" }}
     width="full"
     {...props}
   />
 )
 
-const TitleCard = (props: ChildOnlyProp) => (
-  <Flex
-    bg={{ base: "ednBackground", lg: "background" }}
-    border="1px"
-    borderColor="border"
-    borderRadius="base"
-    boxShadow={{ lg: "4px 4px 0px 0px #ffab7c" }}
-    flexDirection="column"
-    maxWidth={{ lg: "container.sm" }}
-    mt={{ lg: 12 }}
-    zIndex="docked"
-    p={8}
-    position={{ base: "relative", lg: "absolute" }}
-    top={{ lg: 24 }}
-    left={{ lg: 24 }}
-    {...props}
-  />
-)
+const TitleCard = (props: ChildOnlyProp) => {
+  const boxShadow = useToken("colors", "cardBoxShadow")
+
+  return (
+    <Flex
+      bg={{ base: "ednBackground", lg: "background" }}
+      border="1px"
+      borderColor="border"
+      borderRadius="base"
+      boxShadow={{ lg: boxShadow }}
+      flexDirection="column"
+      maxWidth={{ base: "full", lg: "container.sm" }}
+      mt={{ base: 0, lg: 12 }}
+      zIndex="docked"
+      p={8}
+      position={{ base: "relative", lg: "absolute" }}
+      top={{ lg: 24 }}
+      left={{ lg: 24 }}
+      {...props}
+    />
+  )
+}
 
 const Title = (props: ChildOnlyProp) => <H1 mt={4} {...props} />
 
@@ -178,6 +182,7 @@ const HeroImage = chakra(GatsbyImage, {
     right: 0,
     bottom: 0,
     width: "full",
+    overflow: "initial",
     maxH: {
       base: "340px",
       lg: "full",
@@ -213,7 +218,7 @@ const InfoColumn = (props: ChildOnlyProp) => (
 const InfoTitle = (props: ChildOnlyProp) => (
   <H2
     fontSize={{ base: "2.5rem", lg: "5xl" }}
-    textAlign={{ lg: "right" }}
+    textAlign={{ base: "left", lg: "right" }}
     mt={0}
     {...props}
   />
@@ -343,7 +348,7 @@ const UseCasePage = ({
   return (
     <Box position="relative" width="full">
       <Show above={lgBreakpoint}>
-        <BannerNotification as={Flex} justifyContent="center" shouldShow>
+        <BannerNotification shouldShow>
           <Emoji text=":pencil:" fontSize="2xl" mr={4} flexShrink={0} />
           <div>
             <Translation id="template-usecase-banner" />{" "}
