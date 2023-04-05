@@ -61,5 +61,7 @@
   "page-wallets-your-ethereum-account": "您的以太坊账户",
   "page-wallets-your-ethereum-account-desc": "您的钱包是您与您的以太坊账户进行交互的窗口 - 查看余额、交易记录等等。但是您可以随时更换您的钱包提供商。",
   "page-wallets-your-login": "登录以太坊应用",
-  "page-wallets-your-login-desc": "您的钱包让您能够使用以太坊账户链接任何去中心化应用。它是各种去中心化应用的统一登录入口。"
+  "page-wallets-your-login-desc": "您的钱包让您能够使用以太坊账户链接任何去中心化应用。它是各种去中心化应用的统一登录入口。",
+  "additional-reading-how-to-register-an-ethereum-account": "如何“注册”以太坊帐户",
+  "additional-reading-how-to-use-a-wallet": "如何使用钱包"
 }

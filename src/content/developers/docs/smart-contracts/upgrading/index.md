@@ -76,7 +76,7 @@ From the [Solidity documentation](https://docs.soliditylang.org/en/latest/introd
 
 > _There exists a special variant of a message call, named **delegatecall** which is identical to a message call apart from the fact that the code at the target address is executed in the context (i.e. at the address) of the calling contract and `msg.sender` and `msg.value` do not change their values._ _This means that a contract can dynamically load code from a different address at runtime. Storage, current address and balance still refer to the calling contract, only the code is taken from the called address._
 
-The proxy contract knows to invoke `delegatecall` whenever a user calls a function because it has a `fallback` function built into it. In Solidity programming the [fallback function](https://docs.soliditylang.org/en/v0.8.9/contracts.html#fallback-function) is executed when a function call does not match functions specified in a contract.
+The proxy contract knows to invoke `delegatecall` whenever a user calls a function because it has a `fallback` function built into it. In Solidity programming the [fallback function](https://docs.soliditylang.org/en/latest/contracts.html#fallback-function) is executed when a function call does not match functions specified in a contract.
 
 Making the proxy pattern work requires writing a custom fallback function that specifies how the proxy contract should handle function calls it does not support. In this case the proxy's fallback function is programmed to initiate a delegatecall and reroute the user's request to the current logic contract implementation.
 
@@ -104,7 +104,7 @@ The main drawback is that this pattern is mostly useful for rolling out minor up
 
 The diamond pattern can be considered an improvement on the proxy pattern. Diamond patterns differ from proxy patterns because the diamond proxy contract can delegate function calls to more than one logic contract.
 
-The logic contracts in the diamond pattern are known as _facets_. To make the diamond pattern work, you need to create a mapping in the proxy contract that maps [function selectors](https://docs.soliditylang.org/en/v0.8.12/abi-spec.html#function-selector) to different facet addresses.
+The logic contracts in the diamond pattern are known as _facets_. To make the diamond pattern work, you need to create a mapping in the proxy contract that maps [function selectors](https://docs.soliditylang.org/en/latest/abi-spec.html#function-selector) to different facet addresses.
 
 When a user makes a function call, the proxy contract checks the mapping to find the facet responsible for executing that function. Then it invokes `delegatecall` (using the fallback function) and redirects the call to the appropriate logic contract.
 

@@ -384,6 +384,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "ur-in",
+    "hrefLang": "ur-in",
+    "name": "Urdu (India)",
+    "localName": "اردو",
+    "langDir": "rtl",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "uz",
     "hrefLang": "uz",
     "name": "Uzbek",

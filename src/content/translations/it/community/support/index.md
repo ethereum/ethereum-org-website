@@ -57,6 +57,7 @@ Ecco alcuni esempi più diffusi:
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
 - [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
+- [Tenderly](https://discord.gg/fBvDJYR)
 
 ## Eseguire un nodo {#node-support}
 

@@ -486,7 +486,6 @@ const HomePage = ({
               content={codeExamples}
               clickHandler={toggleCodeExample}
               headerKey="page-index-developers-code-examples"
-              icon="code"
               isCode
               border="1px"
               borderColor="text"
