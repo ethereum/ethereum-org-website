@@ -173,8 +173,6 @@ Obwohl ein virtueller privater Server (VPS) als Ersatz für Heim-Hardware verwen
 Je mehr Validator-Clients auf einer einzigen zentralisierten Cloud-Speicherlösung laufen, desto gefährlicher wird es für diese Benutzer. Jedes Ereignis, das diese Anbieter offline schaltet, sei es durch einen Angriff, behördliche Anforderungen oder nur Strom-/Internetausfälle, führt dazu, dass jeder Validator-Client, der sich auf diesen Server verlässt, gleichzeitig offline geht.
 
 Offline-Strafen sind proportional dazu, wie viele andere gleichzeitig offline sind. Die Verwendung eines VPS erhöht das Risiko, dass Offline-Strafen schwerwiegender sind, und erhöht Ihr Risiko von quadratischen Lecks oder Slashing, falls der Ausfall groß genug ist. Um Ihr eigenes Risiko und das Risiko für das Netzwerk zu minimieren, wird Benutzern dringend empfohlen, ihre eigene Hardware zu erwerben und zu betreiben.
-
-<a href="https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/">Mehr zu Belohnungen und Strafen</a>
 </ExpandableCard>
 
 ## Weiterführende Informationen {#further-reading}

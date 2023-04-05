@@ -173,8 +173,6 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 在一个中心化云存储解决方案上运行的验证者客户端越多，对这些用户来说就越危险。 任何使这些提供商离线的事件，无论是攻击、监管要求，还是电力/互联网中断，都会导致每个依赖于该服务器的验证者客户端同时离线。
 
 离线处罚与有多少其他验证者同时离线成正比。 使用虚拟专用服务器会大大增加离线处罚的风险，并在大范围宕机的情况下增加你的二次惩罚或罚没的风险。 为了尽量降低你自己的风险，以及以太坊网络的风险，我们强烈建议用户获取并操作自己的硬件。
-
-<a href="https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/">更多关于奖励和惩罚的信息</a>
 </ExpandableCard>
 
 <ExpandableCard title="我如何解锁我的奖励或收回我的以太币？">
@@ -197,4 +195,3 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 - [如何选购以太坊验证者的硬件](https://www.youtube.com/watch?v=C2wwu1IlhDc)- _EthStaker 2022_
 - [加入以太坊 2.0 测试网的详细步骤](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [以太坊 2 防止罚没小技巧](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
-- [以太坊 2.0 的奖惩措施](https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/) - _James BeckMarch 2020_
