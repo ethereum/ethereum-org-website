@@ -48,7 +48,7 @@ This relies on full nodes having access to full transaction data. An attacker wh
 
 The solution to this data availability problem is DAS. Light nodes download very small random chunks of the full state data and use the samples to verify that the full data set is available. The actual likelihood of incorrectly assuming full data availability after downloading N random chunks can be calculated ([for 100 chunks the chance is 10^-30](https://dankradfeist.de/ethereum/2019/12/20/data-availability-checks.html), i.e. incredibly unlikely).
 
-Even in this scenario, attacks that withold just a few bytes could feasibly go unnoticed by clients making random data requests. Erasure codeing fixes this by reconstructing small missing pieces of data that can be used to check proposed state changes. A fraud proof could then be constructed using the reconstructed data, preventing light nodes from accepting bad headers.
+Even in this scenario, attacks that withhold just a few bytes could feasibly go unnoticed by clients making random data requests. Erasure coding fixes this by reconstructing small missing pieces of data that can be used to check proposed state changes. A fraud proof could then be constructed using the reconstructed data, preventing light nodes from accepting bad headers.
 
 **Note:** DAS and fraud proofs have not yet been implemented for proof-of-stake Ethereum light clients, but they are on the roadmap, most likely taking the form of ZK-SNARK based proofs. Today's light clients rely on a form of DAC: they verify the identities of the sync-committee and then trust the signed block headers they receive.
 
