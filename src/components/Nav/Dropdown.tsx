@@ -1,6 +1,14 @@
 import React, { useState, createRef, useContext } from "react"
 import { useI18next } from "gatsby-plugin-react-i18next"
-import { Fade, Flex, Heading, Icon, List, ListItem } from "@chakra-ui/react"
+import {
+  Box,
+  Fade,
+  Flex,
+  Heading,
+  Icon,
+  List,
+  ListItem,
+} from "@chakra-ui/react"
 import { MdExpandMore } from "react-icons/md"
 
 import Link, { IProps as LinkProps } from "../Link"
@@ -115,26 +123,28 @@ const NavDropdown: React.FC<IProps> & {
           {section.text}
           <Icon
             as={MdExpandMore}
+            color="secondary"
             boxSize={6}
             transform={isOpen ? "rotate(180deg)" : undefined}
           />
         </Flex>
-        <Fade in={isOpen} unmountOnExit>
-          <List
-            bg="dropdownBackground"
-            border="1px"
-            borderColor="dropdownBorder"
-            m={0}
-            mt={hasSubNav ? "-4.5rem" : -4}
-            position="absolute"
-            top="100%"
-            py={4}
-            borderRadius="base"
-            width="auto"
-          >
-            {children}
-          </List>
-        </Fade>
+        <Box
+          as={Fade}
+          in={isOpen}
+          unmountOnExit
+          bg="dropdownBackground"
+          border="1px"
+          borderColor="dropdownBorder"
+          m={0}
+          mt={hasSubNav ? "-4.5rem" : -4}
+          position="absolute"
+          top="100%"
+          py={4}
+          borderRadius="base"
+          width="auto"
+        >
+          {children}
+        </Box>
       </ListItem>
     </DropdownContext.Provider>
   )
@@ -171,19 +181,14 @@ interface ITitleProps {
 
 const Title: React.FC<ITitleProps> = (props) => {
   return (
-    <Heading
-      fontStyle="normal"
-      fontWeight="bold"
+    <Box
+      as="span"
+      display="block"
+      fontFamily="heading"
       fontSize="1.3rem"
       lineHeight={1.4}
-      mt={4}
       mb={2}
       px={4}
-      sx={{
-        "&:first-child": {
-          mt: 5,
-        },
-      }}
       {...props}
     />
   )

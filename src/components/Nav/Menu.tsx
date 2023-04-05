@@ -1,6 +1,6 @@
 import React from "react"
 import { useI18next } from "gatsby-plugin-react-i18next"
-import { Flex } from "@chakra-ui/react"
+import { Flex, List } from "@chakra-ui/react"
 
 import NavDropdown from "./Dropdown"
 import { getDirection } from "../../utils/translations"
@@ -39,9 +39,9 @@ const Menu: React.FC<IProps> = ({ path, sections }) => {
 
       <NavDropdown section={learn} hasSubNav={shouldShowSubNav}>
         <Flex flexDir={direction === "rtl" ? "row-reverse" : "row"}>
-          <div>
+          <Flex flexDir="column" gap={4}>
             {[start, basics].map((section, index) => (
-              <React.Fragment key={index}>
+              <List m={0} key={index}>
                 <NavDropdown.Title>{section.text}</NavDropdown.Title>
                 {(section.items || []).map((item, index) => (
                   <NavDropdown.Item key={index}>
@@ -50,21 +50,23 @@ const Menu: React.FC<IProps> = ({ path, sections }) => {
                     </NavDropdown.Link>
                   </NavDropdown.Item>
                 ))}
-              </React.Fragment>
+              </List>
             ))}
-          </div>
+          </Flex>
           <div>
-            <NavDropdown.Title>{protocol.text}</NavDropdown.Title>
-            {(protocol.items || []).map((item, index) => (
-              <NavDropdown.Item
-                key={index}
-                isLast={index === (protocol.items || []).length - 1}
-              >
-                <NavDropdown.Link to={item.to} isPartiallyActive={false}>
-                  {item.text}
-                </NavDropdown.Link>
-              </NavDropdown.Item>
-            ))}
+            <List m={0}>
+              <NavDropdown.Title>{protocol.text}</NavDropdown.Title>
+              {(protocol.items || []).map((item, index) => (
+                <NavDropdown.Item
+                  key={index}
+                  isLast={index === (protocol.items || []).length - 1}
+                >
+                  <NavDropdown.Link to={item.to} isPartiallyActive={false}>
+                    {item.text}
+                  </NavDropdown.Link>
+                </NavDropdown.Item>
+              ))}
+            </List>
           </div>
         </Flex>
       </NavDropdown>
