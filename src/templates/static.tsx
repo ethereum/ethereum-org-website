@@ -43,14 +43,13 @@ import TranslationChartImage from "../components/TranslationChartImage"
 import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
 import QuizWidget from "../components/Quiz/QuizWidget"
+import { Item as ItemTableOfContents } from "../components/TableOfContents/utils"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
-import { Item as ItemTableOfContents } from "../components/TableOfContents/utils"
-import { ChildOnlyProp, Context } from "../types"
 
-// Apply styles for classes within markdown here
+import { ChildOnlyProp, Context } from "../types"
 
 const Pre = (props: ChildOnlyProp) => (
   <Text
