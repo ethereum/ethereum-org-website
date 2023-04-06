@@ -22,7 +22,7 @@ lang: zh
 
 本页主要处理以太坊执行客户端使用的 JSON-RPC 应用程序接口。 但是，共识客户端也有一个远程过程调用应用程序接口，允许用户直接从节点查询有关节点的信息、请求信标区块、信标状态和其他与共识相关的信息。 此应用程序接口记录在[信标应用程序接口网页](https://ethereum.github.io/beacon-APIs/#/)上。
 
-内部应用程序接口还用于节点内的客户端间通信——也就是说，它使共识客户端和执行客户端能够交换数据。 这被称为“引擎应用程序接口”，该规范可在 [Github](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) 上找到。
+内部应用程序接口还用于节点内的客户端间通信——也就是说，它使共识客户端和执行客户端能够交换数据。 它称为“引擎应用程序接口”，相关规范可在 [Github](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) 上找到。
 
 ## 执行客户端规范 {#spec}
 
@@ -213,7 +213,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67
 }
 ```
 
-### net_listening {#net_peercount}
+### net_listening {#net_listening}
 
 如果客户端正在主动监听网络连接，则返回 `true`。
 
@@ -238,7 +238,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":
 }
 ```
 
-### net_peerCount {#net_listening}
+### net_peerCount {#net_peercount}
 
 返回当前连接到客户端的对等点数。
 
@@ -265,7 +265,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":
 
 ### eth_protocolVersion {#eth_protocolversion}
 
-返回当前的以太坊协议版本。
+返回当前的以太坊协议版本。 请注意，此方法在 [Geth 中不可用](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924)。
 
 **参数**
 
@@ -1191,7 +1191,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberA
 1. `DATA`，32 字节- 交易的哈希
 
 ```js
-params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"]
+params: ["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"]
 ```
 
 **返回值** `Object` - 交易收据对象，如果没有找到收据，则为 `null`：
@@ -1202,36 +1202,44 @@ params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"]
 - `blockNumber`：`QUANTITY` - 此交易所在的区块号。
 - `from`：`DATA`，20 字节 - 发送者的地址。
 - `to`：`DATA`，20 字节 - 接收者的地址。 当它是合约创建交易时，则为 null。
-- `cumulativeGasUsed`：`QUANTITY` - 当在区块中执行此交易时使用的燃料总量。
-- `gasUsed`：`QUANTITY` - 仅此特定交易使用的燃料数量。
-- `contractAddress`：`DATA`，20 字节 - 如果交易是合约创建，则为创建的合约地址，否则为 `null`。
-- `logs`：`Array` - 此交易生成的日志对象数组。
-- `logsBloom`：`DATA`，256 字符 - 轻量客户端用于快速检索相关日志的 bloom 过滤器。 它还返回*以下两者之一*：
-- `root`：`DATA` 32 字节的交易后 stateroot（拜占庭之前）
-- `status`：`QUANTITY` - `1`（成功）或 `0`（失败）
+- `cumulativeGasUsed` : `QUANTITY` - 当在区块中执行此交易时使用的燃料总量。
+- `effectiveGasPrice` : `QUANTITY` - 为每单位燃料支付的基础费用和小费的总和。
+- `gasUsed`: `QUANTITY` - 仅此特定交易使用的燃料数量。
+- `contractAddress`: `DATA`，20 字节 - 如果交易是创建合约，则为创建的合约地址，否则为 `null`。
+- `logs`: `Array` - 此交易生成的日志对象数组。
+- `logsBloom`: `DATA`，256 字节 - 轻客户端用于快速检索相关日志的布隆过滤器。
+- `type`: `DATA` - 表示交易类型的整数，`0x00` 表示传统交易，`0x01` 表示访问列表类型，`0x02` 表示动态费用。 它还返回*以下两者之一*：
+- `root` : `DATA`，32 字节的交易后状态根（拜占庭之前）
+- `status`: `QUANTITY`，`1`（成功）或 `0`（失败）
 
 **示例**
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","params":["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","params":["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"],"id":1}'
 // Result
 {
-"id":1,
-"jsonrpc":"2.0",
-"result": {
-     transactionHash: '0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238',
-     transactionIndex:  '0x1', // 1
-     blockNumber: '0xb', // 11
-     blockHash: '0xc6ef2fc5426d6ad6fd9e2a26abeab0aa2411b7ab17f30a99d3cb96aed1d1055b',
-     cumulativeGasUsed: '0x33bc', // 13244
-     gasUsed: '0x4dc', // 1244
-     contractAddress: '0xb60e8dd61c5d32be8058bb8eb970870f07233155', // or null, if none was created
-     logs: [{
-         // logs as returned by getFilterLogs, etc.
-     }, ...],
-     logsBloom: "0x00...0", // 256 byte bloom filter
-     status: '0x1'
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "blockHash":
+      "0xa957d47df264a31badc3ae823e10ac1d444b098d9b73d204c40426e57f47e8c3",
+    "blockNumber": "0xeff35f",
+    "contractAddress": null, // string of the address if it was created
+    "cumulativeGasUsed": "0xa12515",
+    "effectiveGasPrice": "0x5a9c688d4",
+    "from": "0x6221a9c005f6e47eb398fd867784cacfdcfff4e7",
+    "gasUsed": "0xb4c8",
+    "logs": [{
+      // logs as returned by getFilterLogs, etc.
+    }],
+    "logsBloom": "0x00...0", // 256 byte bloom filter
+    "status": "0x1",
+    "to": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+    "transactionHash":
+      "0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5",
+    "transactionIndex": "0x66",
+    "type": "0x2"
   }
 }
 ```
@@ -1643,7 +1651,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x
 - `toBlock`：`QUANTITY|TAG` -（可选，默认值：`“latest”`）整数区块号，`“latest”`（对于最后开采的区块），或`“pending”`、`“earliest”`（对于尚未开采的交易）。
 - `address`：`DATA|Array`，20 字节 -（可选）日志起源的合同地址或地址列表。
 - `topics`：`Array of DATA` -（可选）32 字节 `DATA` 主题数组。 主题是顺序相关的。 每个主题也可以是带有“或”选项的 DATA 数组。
-- `blockhash`：`DATA`，32 字节 -（可选，**future**）添加 EIP-234 后，`blockHash` 将是一个新的过滤器选项，它会将返回的日志限制为具有 32 字节哈希 `blockHash` 的单一区块。 使用 `blockHash` 相当于 `fromBlock` = `toBlock` = 具有哈希`blockHash` 的区块号。 如果 `blockHash` 出现在过滤条件中，则 `fromBlock` 和 `toBlock` 都不允许。
+- `blockhash`：`DATA`，32 字节 -（可选，**future**）添加 EIP-234 后，`blockHash` 将是一个新的过滤器选项，它会将返回的日志限制为具有 32 字节哈希 `blockHash` 的单一区块。 使用 `blockHash` 相当于 `fromBlock` = `toBlock` = 具有哈希`blockHash` 的区块号。 如果 `blockHash` 出现在筛选条件中，则 `fromBlock` 和 `toBlock` 都不允许。
 
 ```js
 params: [
@@ -2059,7 +2067,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"shh_addToGroup","params":["0x04f
 1. `Object` - 过滤器选项：
 
 - `to`：`DATA`，60 字节 -（可选）接收者的身份。 _如果客户端持有此身份的私钥，它将尝试解密任何传入的消息。_
-- `topics`: `Array of DATA` - Array of `DATA` topics which the incoming message's topics should match. You can use the following combinations:
+- `topics`: `Array of DATA` - `DATA` 主题的数组，该主题应与传入消息的主题相匹配。 You can use the following combinations:
   - `[A, B] = A && B`
   - `[A, [B, C]] = A && (B || C)`
   - `[null, A, B] = ANYTHING && A && B` `null` 用作通配符
@@ -2216,14 +2224,12 @@ contract Multiply7 {
 首先要做的是确保启用了超文本传输协议远程过程调用接口。 这意味着我们在启动时为 Geth 提供 `--http` 标志。 在此示例中，我们使用私有开发链上的 Geth 节点。 使用这种方法，我们在真实网络上不需要以太币。
 
 ```bash
-
-geth --http --dev --mine --miner.threads 1 --unlock 0 console 2>>geth.log
-
+geth --http --dev console 2>>geth.log
 ```
 
 这将在 `http://localhost:8545` 上启动超文本传输协议远程过程调用接口。
 
-我们可以通过使用 [curl](https://curl.haxx.se/download.html) 检索 Coinbase 地址和余额来验证接口是否正在运行。 请注意，这些示例中的数据在您的本地节点上会有所不同。 如果你想尝试这些命令，请将第二个 curl 请求中的请求参数替换为第一个 curl 请求返回的结果。
+我们可以通过使用 [curl](https://curl.se) 检索 Coinbase 地址和余额来验证接口是否正在运行。 请注意，这些示例中的数据在您的本地节点上会有所不同。 如果你想尝试这些命令，请将第二个 curl 请求中的请求参数替换为第一个 curl 请求返回的结果。
 
 ```bash
 curl --data '{"jsonrpc":"2.0","method":"eth_coinbase", "id":1}' -H "Content-Type: application/json" localhost:8545
