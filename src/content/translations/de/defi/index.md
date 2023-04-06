@@ -5,7 +5,7 @@ lang: de
 template: use-cases
 emoji: ":money_with_wings:"
 image: ../../../../assets/use-cases/defi.png
-alt: Ein Eth-Logo aus Legosteinen.
+alt: Ein ETH-Logo aus Legosteinen.
 sidebarDepth: 2
 summaryPoint1: Eine globale, offene Alternative zum aktuellen Finanzsystem.
 summaryPoint2: Produkte, mit denen Sie Geld ausleihen, sparen, investieren, Handel treiben können und mehr.
@@ -98,7 +98,7 @@ Als Blockchain ist Ethereum für sichere und globale Transaktionen konzipiert. W
 
 #### Geld um die Welt „streamen“... {#stream-money}
 
-Über Ethereum lässt sich auch Geld streamen. So können Sie das Gehalt für Personen sekündlich überweisen und geben ihnen damit Zugang zu ihrem verdienten Geld, wann immer sie es gerade benötigen. Ein weiterer Anwendungsfall wäre beispielsweise das Mieten von Objekten wie z. B. Schließfächern oder E-Scootern auf sekündlicher Basis.
+Über Ethereum lässt sich auch Geld streamen. So können Sie das Gehalt für Personen sekündlich überweisen und geben ihnen damit Zugang zu ihrem verdienten Geld, wann immer sie es gerade benötigen. Ein weiterer Anwendungsfall wäre beispielsweise das Mieten von Objekten, wie z. B. Schließfächer oder E-Scooter, auf sekündlicher Basis.
 
 Und wenn Sie wegen der Volatilität kein [ETH](/eth/) senden oder streamen möchten, gibt es auf Ethereum alternative Währungen: Stablecoins.
 
@@ -121,7 +121,7 @@ Coins wie Dai oder USDC haben einen Wert der sich bis auf wenige Cent-Beträge a
 Es gibt zwei etablierte Möglichkeiten, um Geld von dezentralen Anbietern zu leihen:
 
 - Peer-to-Peer, das heißt der Kreditnehmer leiht direkt von einem bestimmten Kreditgeber.
-- Pool-basiert, das heißt Kreditgeber stellen Geldmittel (Liquidität) für ein Pool bereit, aus dem Kreditnehmer die Mittel leihen können.
+- Pool-basiert, das heißt Kreditgeber stellen Geldmittel (Liquidität) für einen Pool bereit, aus dem Kreditnehmer die Mittel leihen können.
 
 <ButtonLink to="/dapps/?category=finance">
   Siehe Lending-dApps
@@ -338,7 +338,6 @@ DeFi ist eine Open-Source-Bewegung. DeFi-Protokolle und -Anwendungen sind für j
 
 ### DeFi-Artikel {#defi-articles}
 
-- [Was sind dezentralisierte Finanzmärkte?](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) - _ETHHub, regelmäßig aktualisiert_
 - [DeFi-Leitfaden für Einsteiger](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6. Januar 2020_
 
 ### Videos {#videos}
