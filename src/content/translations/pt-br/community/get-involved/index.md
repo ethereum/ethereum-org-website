@@ -25,7 +25,8 @@ Você tem experiência em matemática, criptografia ou economia? Talvez você se
 
 - [Challenges.ethereum.org](https://challenges.ethereum.org/): uma série de pesquisas com recompensas de alto valor. Você pode ganhar > US$ 100.000
 - [Ethresear.ch](https://ethresear.ch): fórum principal para pesquisas do Ethereum e o fórum mais influente do mundo no que se refere à economia de criptomoedas
-- [Lista de desejos do Programa de apoio ao ecossistema](https://esp.ethereum.foundation/wishlist/): áreas de pesquisa onde o Programa de apoio ao ecossistema do Ethereum está ativamente buscando novos aplicativos
+- [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) – Uma série contínua de perguntas e respostas com pesquisadores. Conforme cada parte seguinte vai se abrindo, qualquer um pode postar perguntas.
+- [Lista de desejos do Programa de Apoio ao Ecossistema](https://esp.ethereum.foundation/wishlist/): áreas de pesquisa onde o Programa de Apoio ao Ecossistema do Ethereum está ativamente buscando novas aplicações de subvenção
 
 [Explore áreas de pesquisa mais ativas](/community/research/).
 
@@ -40,7 +41,7 @@ Se você não é um desenvolvedor, pode ser difícil saber por onde começar no 
 ### Escreva sobre Ethereum {#write-content}
 
 - Ethereum precisa de bons escritores que sejam capazes de explicar o seu valor em uma linguagem simples de entender
-- Não está preparado para publicar seu próprio artigo? Considere contribuir para recursos já existentes na comunidade como o [EthHub](https://docs.ethhub.io/), ou proponha novos conteúdos em ethereum.org!
+- Não está preparado para publicar seu próprio artigo? Considere contribuir para o conteúdo já existente nos recursos da comunidade, ou [proponha novos conteúdos para o ethereum.org](/contributing/)!
 
 ### Tome notas durante as reuniões da comunidade {#take-notes}
 
@@ -99,6 +100,8 @@ O ecossistema Ethereum pretende financiar bens públicos e projetos de impacto. 
 - [Empregos na Web3](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Empregos na Crypto Valley](https://cryptovalley.jobs/)
+- [Trabalhe para a Ethereum](https://startup.jobs/ethereum-jobs)
+- [CriptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## Participe de uma DAO {#decentralized-autonomous-organizations-daos}
 
