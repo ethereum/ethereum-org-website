@@ -62,5 +62,7 @@
   "page-get-eth-your-address": "ETH ünvanınız",
   "page-get-eth-your-address-desc": "Pulqabı yüklədiyiniz zaman o, sizin üçün ictimai ETH ünvanı yaradacaq. Nümunə kimi görünən budur:",
   "page-get-eth-your-address-desc-3": "Bunu e-poçt ünvanınız kimi düşünün, lakin poçt əvəzinə ETH qəbul edə bilər. ETH-ni mübadilədən pulqabına köçürmək istəyirsinizsə, ünvanınızı təyinat yeri kimi istifadə edin. Göndərməzdən əvvəl həmişə iki dəfə yoxladığınızdan əmin olun!",
-  "page-get-eth-your-address-wallet-link": "Pulqabıları yoxlayın"
+  "page-get-eth-your-address-wallet-link": "Pulqabıları yoxlayın",
+  "listing-policy-raise-issue-link": "Məsələ qaldır",
+  "page-find-wallet-last-updated": "Son yeniləmə"
 }
