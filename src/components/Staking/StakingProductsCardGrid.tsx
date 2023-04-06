@@ -30,6 +30,7 @@ import {
   CautionProductGlyphIcon,
   DefaultOpenSourceGlyphIcon,
   DockerIcon,
+  EthpoolGlyphIcon,
   GreenCheckProductGlyphIcon,
   KilnGlyphIcon,
   LidoGlyphIcon,
@@ -72,6 +73,7 @@ const getIconFromName = (
     dappnode: StakingDappnodeGlyphIcon,
     docker: DockerIcon,
     defaultOpenSource: DefaultOpenSourceGlyphIcon,
+    ethpools: EthpoolGlyphIcon,
     kiln: KilnGlyphIcon,
     lido: LidoGlyphIcon,
     rocketPool: RocketPoolGlyphIcon,
@@ -398,7 +400,7 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
   const getDiversityOfClients = (
     _pctMajorityClient: number | null
   ): FlagType => {
-    if (!_pctMajorityClient) return FlagType.UNKNOWN
+    if (_pctMajorityClient === null) return FlagType.UNKNOWN
     if (_pctMajorityClient > 50) return FlagType.WARNING
     return FlagType.VALID
   }

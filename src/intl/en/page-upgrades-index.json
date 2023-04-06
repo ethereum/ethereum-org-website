@@ -150,7 +150,7 @@
   "page-upgrades-secure": "More secure",
   "page-upgrades-secure-desc": "Ethereum needs to be more secure. As the adoption of Ethereum grows, the protocol needs to become more secure against all forms of attack.",
   "page-upgrades-shard-date": "Sharding will follow The Merge in multiple phases, sometime in 2023-2024.",
-  "page-upgrades-shard-desc": "Sharding will expand Ethereum's capacity to store data, and work harmoniously with L2s to scale throughput and reduce network fees. Sharding will be rolled out in multiple stages.",
+  "page-upgrades-shard-desc": "Danksharding will expand Ethereum's capacity to store data, and work harmoniously with L2s to scale throughput and reduce network fees. Danksharding will be rolled out in multiple stages, starting with ProtoDanksharding.",
   "page-upgrades-shard-estimate": "Estimate: 2023-2024",
   "page-upgrades-shard-lower": "More on sharding",
   "page-upgrades-shard-title": "Sharding",

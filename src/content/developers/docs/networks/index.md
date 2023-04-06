@@ -54,6 +54,7 @@ The Sepolia network uses a permissioned validator set. It's fairly new, meaning 
 
 ##### Faucets
 
+- [QuickNode Sepolia Faucet](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [PoW faucet](https://sepolia-faucet.pk910.de/)
 - [Sepolia faucet](https://faucet.sepolia.dev/)
@@ -80,6 +81,7 @@ Goerli is testnet for testing of validating and staking. The Goerli network is o
 
 ##### Faucets
 
+- [QuickNode Goerli Faucet](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [PoW faucet](https://goerli-faucet.pk910.de/)
 - [Goerli faucet](https://faucet.goerli.mudit.blog/)
