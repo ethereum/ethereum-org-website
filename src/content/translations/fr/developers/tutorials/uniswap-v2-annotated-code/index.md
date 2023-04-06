@@ -5,7 +5,7 @@ author: Ori Pomerantz
 tags:
   - "solidity"
   - "uniswap"
-skill: intermédiaire
+skill: intermediate
 published: 2021-05-01
 lang: fr
 ---
