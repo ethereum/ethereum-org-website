@@ -54,6 +54,15 @@
     "endDate": "2023-04-25"
   },
   {
+    "title": "ETHTallinn",
+    "to": "https://www.ethtallinn.org",
+    "sponsor": null,
+    "location": "Tallinn, Estonia",
+    "description": "ETHTallinn is the first Ethereum Hackathon in the Baltics, bringing together some of Europe's smartest tech, cybersecurity, and Web3 minds to solve Ethereum's biggest challenges.",
+    "startDate": "2023-05-05",
+    "endDate": "2023-05-07"
+  },
+  {
     "title": "ETHGlobal Lisbon",
     "to": "https://ethglobal.com/events/lisbon",
     "sponsor": null,
