@@ -5,9 +5,7 @@ lang: zh
 ---
 
 <InfoBanner emoji=":wave:">
-
-工作量证明不再是以太坊共识机制的基础，这意味着挖矿已终结。 取而代之的是，以太坊将由质押了以太币的验证者保护。 你可以立即开始质押以太币。 阅读有关 [The Merge](/upgrades/merge/)、[proof-of-stake](/developers/docs/consensus-mechanisms/pos/) 和 [staking](/staking/) 的更多信息。 此页面展示与历史有关的内容。
-
+工作量证明不再是以太坊共识机制的基础，这意味着挖矿已终结。 取而代之的是，以太坊将由质押了以太币的验证者保护。 你可以立即开始质押以太币。 详细了解<a href='/upgrades/merge/'>合并</a>、<a href='/developers/docs/consensus-mechanisms/pos/'>权益证明</a>和<a href='/staking/'>质押</a>。 此页面仅展示历史内容。
 </InfoBanner>
 
 ## 前提条件 {#prerequisites}
@@ -41,7 +39,9 @@ lang: zh
 
 要进一步探索挖矿收益，请使用挖矿收益计算器，例如 [Etherscan](https://etherscan.io/ether-mining-calculator) 提供的挖矿收益计算器。
 
-## 如何开采以太坊交易 {#how-ethereum-transactions-were-mined}
+## 如何挖掘以太坊交易 {#how-ethereum-transactions-were-mined}
+
+以下内容将简要介绍如何在以太坊工作量证明中挖掘交易。 在[这里](/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos)可以找到对以太坊权益证明中该过程的类比介绍。
 
 1. 用户编写和通过一些[帐户](/developers/docs/accounts/)私钥来签署[交易](/developers/docs/transactions/)请求。
 2. 用户通过一些[节点](/developers/docs/nodes-and-clients/)将自己的交易请求广播到整个以太坊网络。
@@ -54,9 +54,15 @@ lang: zh
 7. 每个节点将从其未完成的本地内存池的转账请求中删除新区块中已经存在的转账请求。
 8. 加入网络的新节点将按顺序下载所有块，包括未被打包的交易块。 初始化本地 EVM 副本（作为空白状态的 EVM 开始），在本地 EVM 副本上执行每个块中的每个转账，校验各块的校验和。
 
-每个交易都只会被挖矿（首次包含在新区块中并传播）一次，但在推进规范以太坊虚拟机状态的过程中，每个参与者都会执行和验证交易。 这凸显出区块链的核心准则之一：**不信任，就验证**。
+每个交易都只会被挖掘（首次包含在新区块中并传播）一次，但在推进规范以太坊虚拟机状态的过程中，每个参与者都会执行和验证交易。 这凸显出区块链的核心准则之一：**不信任，就验证**。
 
-## 视频演示 {#a-visual-demo}
+## 叔块 {#ommer-blocks}
+
+基于工作量证明的区块挖掘是概率性的，这意味着有时由于网络延迟而同时公布了两个有效的区块。 在这种情况下，协议必须确定最长链(因此大多数即是最“有效的”)，同时针对已提交但未被包含的有效区块，给予矿工部分奖励以确保公平。 这促使网络进一步去中心化，因为小矿工群体可能面临更大的延迟，但仍然可以通过[叔块](/glossary/#ommer)奖励获得收益。
+
+对于父区块的同级区块来说，“ommer”一词不分性别，因而为首选，但有时也被称为“uncle”（叔）。 **因为以太坊切换到权益证明机制后，叔块就不会被挖掘了**，因为每个时隙中只选择了一名提议者。 通过查看被挖掘叔块的[历史图表](https://ycharts.com/indicators/ethereum_uncle_rate)，你可以看到这种变化。
+
+## 直观演示 {#a-visual-demo}
 
 跟随 Austin 了解挖矿和工作量证明区块链。
 
@@ -67,16 +73,6 @@ lang: zh
 以太坊主网只使用过一种挖矿算法 - [“Ethash”](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash)。 Ethhash 是一种称为[“Dagger-Hashimoto”](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto)的最初研发挖矿算法的后续版本。
 
 [有关挖矿算法的更多信息](/developers/docs/consensus-mechanisms/pow/mining-algorithms/)。
-
-## 延伸阅读 {#further-reading}
-
-- [挖矿是什么意思？](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
-
-## 相关工具 {#related-tools}
-
-- [顶级以太坊矿工](https://etherscan.io/stat/miner?range=7&blocktype=blocks)
-- [Etherscan 挖矿收益计算器](https://etherscan.io/ether-mining-calculator)
-- [Minerstat 挖矿收益计算器](https://minerstat.com/coin/ETH)
 
 ## 相关主题 {#related-topics}
 

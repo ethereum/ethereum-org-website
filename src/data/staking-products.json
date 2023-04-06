@@ -382,6 +382,32 @@
       }
     },
     {
+      "name": "Ethpool",
+      "svgPath": "ethpool-glyph.svg",
+      "hue": 20,
+      "launchDate": "2021-10-20",
+      "url": "https://ethpool.org/",
+      "audits": [],
+      "minEth": 32,
+      "isFoss": false,
+      "hasBugBounty": false,
+      "isTrustless": false,
+      "isPermissionless": false,
+      "pctMajorityClient": 0,
+      "isSelfCustody": true,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "discord": "https://discord.io/ethermine",
+        "twitter": "https://twitter.com/ethermine_org"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Ethpool go to link"
+      }
+    },
+    {
       "name": "BloxStaking",
       "svgPath": "bloxstaking-glyph.svg",
       "hue": 341,
