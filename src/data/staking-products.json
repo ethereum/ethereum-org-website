@@ -383,7 +383,7 @@
     },
     {
       "name": "Ethpool",
-      "svgPath": "ethpool-glyph.svg",
+      "imageName": "ethpool",
       "hue": 20,
       "launchDate": "2021-10-20",
       "url": "https://ethpool.org/",
