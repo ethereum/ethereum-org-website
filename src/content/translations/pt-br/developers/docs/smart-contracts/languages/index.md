@@ -4,7 +4,7 @@ description: Uma visão geral e comparação de duas línguagens de contratos in
 lang: pt-br
 ---
 
-Um grande aspecto sobre a Ethereum é que os contratos inteligentes podem ser programados usando linguagens relativamente amigáveis para o desenvolvedor. Se você tem experiência com Python ou qualquer [linguagem de marcação](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), você pode encontrar um idioma com sintaxe familiar.
+Um grande aspecto sobre a Ethereum é que os contratos inteligentes podem ser programados usando linguagens relativamente amigáveis para o desenvolvedor. Se você tem experiência com Python ou qualquer [linguagem de marcação](https://wikipedia.org/wiki/List_of_programming_languages_by_type#Curly-bracket_languages), você pode encontrar uma linguagem com sintaxe familiar.
 
 As duas linguagens mais ativas e mantidas são:
 
@@ -17,7 +17,7 @@ Se você está curioso e gosta de ajudar a testar novas linguagens que ainda est
 
 ## Pré-requisitos {#prerequisites}
 
-Conhecimento anterior de linguagens de programação, especialmente de JavaScript ou Python, pode ajudá-lo a entender as diferenças nas linguagens de contratos inteligentes. Nós também recomendamos que você entenda os contratos inteligentes como um conceito, antes de se aprofundar nas comparações de idiomas. [Introdução aos contratos inteligentes](/developers/docs/smart-contracts/).
+Conhecimento anterior de linguagens de programação, especialmente de JavaScript ou Python, pode ajudá-lo a entender as diferenças nas linguagens de contratos inteligentes. Nós também recomendamos que você entenda os contratos inteligentes como um conceito, antes de se aprofundar nas comparações de linguagem. [Introdução aos contratos inteligentes](/developers/docs/smart-contracts/).
 
 ## Solidity {#solidity}
 
@@ -86,28 +86,35 @@ Esse exemplo deve dar a você, uma ideia de como é a sintaxe de um contrato na 
 ## Vyper {#vyper}
 
 - Linguagem de programação Pythonic
-- Forte digitação
+- Digitação sólida
 - Código de compilador pequeno e compreensível
-- Deliberadamente, tem menos recursos do que Solidity, com o objectivo de tornar os contratos mais seguros e mais fáceis de auditar. Vyper não suporta:
+- Geração de bytecode eficiente
+- Deliberadamente, tem menos recursos do que Solidity, com o objetivo de tornar os contratos mais seguros e mais fáceis de auditar. Vyper não suporta:
   - Modificadores
   - Herança
-  - Montagem Inline
+  - Montagem embutida
   - Sobrecarga de função
   - Sobrecarga do operador
   - Chamada recursiva
   - Repetições com comprimento infinito
   - Pontos fixos binários
 
-Para mais informações, [leia a lógica do Vyper](https://vyper.readthedocs.io/en/latest/index.html).
+Para obter mais informações, [leia a lógica do Vyper](https://vyper.readthedocs.io/en/latest/index.html).
 
 ### Links importantes {#important-links-1}
 
 - [Documentação](https://vyper.readthedocs.io)
 - [Vyper como exemplo](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
+- [Mais Vyper por Exemplo](https://vyper-by-example.org/)
 - [GitHub](https://github.com/vyperlang/vyper)
-- [Sala de bate-papo do Gitter sobre Vyper](https://gitter.im/vyperlang/community)
+- [Chat Discord da comunidade Vyper](https://discord.gg/SdvKC79cJk)
 - [Dicas](https://reference.auditless.com/cheatsheet)
-- [Atualização Jan 8, 2020](https://blog.ethereum.org/2020/01/08/update-on-the-vyper-compiler)
+- [Ferramentas e frameworks de desenvolvimento de contratos inteligentes para Vyper](/developers/docs/programming-languages/python/)
+- [VyperPunk - Aprenda a proteger e hackear contratos inteligentes Vyper](https://github.com/SupremacyTeam/VyperPunk)
+- [VyperExamples - Exemplos de vulnerabilidade Vyper](https://www.vyperexamples.com/reentrancy)
+- [Vyper Hub para desenvolvimento](https://github.com/zcor/vyper-dev)
+- [Exemplos de contratos inteligentes de maiores sucessos Vyper](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
+- [Recursos incríveis com curadoria do Vyper](https://github.com/spadebuilders/awesome-vyper)
 
 ### Exemplo {#example}
 
@@ -200,18 +207,18 @@ Esse exemplo deve dar-nos uma noção do que é a sintaxe do contrato Vyper. Par
 
 ## Yul e Yul+ {#yul}
 
-Se você é novo na Ethereum e ainda não fez qualquer codificação com linguagens de contrato inteligentes, recomendamos começar com Solidity ou Vyper. Apenas olhe para Yul ou Yul+ quando estiver familiarizado com as melhores práticas de segurança inteligente do contrato e com as especificações de trabalho com o EVM.
+Se você é novo na Ethereum e ainda não fez qualquer codificação com linguagens de contrato inteligentes, recomendamos começar com Solidity ou Vyper. Apenas olhe para Yul ou Yul+ quando estiver familiarizado com as melhores práticas de segurança inteligente do contrato e com as especificações de trabalho com a EVM.
 
 **Yul**
 
-- Linguagem intermediária para a Ethereum.
-- Suporta o [EVM](/developers/docs/evm) e [eWASM](https://github.com/ewasm), um Ethereum saborizado WebAssembly, e projetado para ser um denominador comum utilizável de ambas as plataformas.
-- Alvo para fases de otimização de alto nível que podem beneficiar tanto as plataformas eWASM como eWASM de forma igual.
+- Linguagem intermediária para Ethereum.
+- Suporta a [EVM](/developers/docs/evm) e [eWASM](https://github.com/ewasm), um WebAssembly com sabor de Ethereum e concebido para ser um denominador comum utilizável de ambas as plataformas.
+- Alvo para fases de otimização de alto nível que podem beneficiar tanto as plataformas EVM como Ewasm de forma igual.
 
 **Yul+**
 
 - Uma extensão de baixo nível altamente eficiente para Yul.
-- Inicialmente projetado para um [optimistic rollup](/developers/docs/scaling/optimistic-rollups/).
+- Inicialmente concebido para um [optimistic rollup](/developers/docs/scaling/optimistic-rollups/).
 - Yul+ pode ser visto como uma proposta de atualização experimental para Yul, adicionando novos recursos.
 
 ### Links Importantes {#important-links-2}
@@ -256,7 +263,7 @@ Se você já é bem experiente com contratos inteligentes, uma implementação d
 ### Links importantes {#important-links-3}
 
 - [GitHub](https://github.com/ethereum/fe)
-- [Anúncio de Fe](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
+- [Anúncio da Fe](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
 - [Fe 2021 Roadmap](https://notes.ethereum.org/LVhaTF30SJOpkbG1iVw1jg)
 - [Chat de Discord Fe](https://discord.com/invite/ywpkAXFjZH)
 - [Fe Twitter](https://twitter.com/official_fe)
@@ -286,14 +293,14 @@ contrate GuestBook:
 
 ## Como escolher {#how-to-choose}
 
-Como com qualquer outra linguagem de programação, trata-se principalmente de escolher a ferramenta certa para o trabalho certo, bem como preferências pessoais.
+Como com qualquer outra linguagem de programação, trata-se principalmente de escolher a ferramenta certa para o trabalho certo, assim como preferências pessoais.
 
 Aqui estão algumas coisas a considerar se você ainda não tentou nenhuma das linguagens:
 
 ### O que é que há de melhor em Solidity? {#solidity-advantages}
 
 - Se você for um iniciante, há muitos tutoriais e ferramentas de aprendizagem disponíveis. Veja mais sobre isso na seção [Aprenda programando](/developers/learning-tools/).
-- Boa ferramenta de desenvolvedor disponível.
+- Ótima ferramenta de desenvolvedor disponível.
 - Solidity tem uma grande comunidade de desenvolvedores, o que significa que você provavelmente encontrará respostas para as suas perguntas muito rapidamente.
 
 ### O que há de melhor em Vyper? {#vyper-advatages}
@@ -305,7 +312,7 @@ Aqui estão algumas coisas a considerar se você ainda não tentou nenhuma das l
 ### O que é ótimo sobre Yul e Yul+? {#yul-advantages}
 
 - Uma linguagem de baixo nível simples e funcional.
-- Permite aproximar-se muito mais do EVM bruto, o que pode ajudar a otimizar o uso de gás de seus contratos.
+- Permite aproximar-se muito mais da EVM bruta, o que pode ajudar a otimizar o uso de gás de seus contratos.
 
 ## Comparações de linguagens {#language-comparisons}
 
