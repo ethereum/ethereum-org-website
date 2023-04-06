@@ -210,13 +210,13 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
         edges {
           node {
             fields {
-              isOutdated
               slug
               relativePath
             }
             frontmatter {
               lang
               template
+              isOutdated
             }
           }
         }
@@ -314,7 +314,7 @@ export const createPages: GatsbyNode<any, Context>["createPages"] = async ({
         language,
         languagesToFetch: [language],
         slug,
-        isOutdated: !!node.fields.isOutdated,
+        isOutdated: !!node.frontmatter?.isOutdated,
         isDefaultLang: language === defaultLanguage,
         relativePath,
         // gatsby i18n plugin

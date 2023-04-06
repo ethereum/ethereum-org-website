@@ -256,6 +256,7 @@ const MobileButtonDropdown = styled(StyledButtonDropdown)`
 
 const Container = styled.div`
   position: relative;
+  overflow-x: hidden;
 `
 
 const HeroContainer = styled.div`
@@ -268,6 +269,7 @@ const HeroContainer = styled.div`
     max-height: 100%;
     padding-left: 0;
     padding-right: 0;
+    margin-bottom: 2em;
   }
 `
 
@@ -409,7 +411,7 @@ const RoadmapPage = ({
               <Title>{mdx.frontmatter.title}</Title>
               <Text>{mdx.frontmatter.description}</Text>
               {mdx?.frontmatter?.buttons && (
-                <Wrap spacing={2}>
+                <Wrap spacing={2} marginBottom={4}>
                   {mdx.frontmatter.buttons.map((button, idx) => {
                     if (button?.to) {
                       return (

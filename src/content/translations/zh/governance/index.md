@@ -91,7 +91,7 @@ _注：任何个人都可以属于多个组（如：协议开发者可以支持�
 
 ### 了解先前的工作 {#prior-work}
 
-以太坊改进提议倡导者应首先熟悉先前的工作和建议，然后认真考虑创建一个可部署到以太坊主网上的以太坊改进提议。 这样，该提议很有可能带入一些以前没有被拒绝过的新事物。 研究此问题的三个主要地方是 [以太坊改进提议存储库](https://github.com/ethereum/eips)、[Ethereum Magicians](https://ethereum-magicians.org/) 和 [ethresear.ch](https://ethresear.ch/)。
+以太坊改进提议倡导者应首先熟悉先前的工作和建议，然后认真考虑创建一个可部署到以太坊主网上的以太坊改进提议。 这样，该提议很有可能带入一些以前没有被拒绝过的新事物。 研究此问题的三个主要方面是[以太坊改进提案存储库](https://github.com/ethereum/EIPs)、[以太坊魔法师](https://ethereum-magicians.org/)和 [ethresear.ch](https://ethresear.ch/)。
 
 ### 工作组 {#working-groups}
 
@@ -153,7 +153,7 @@ _注：任何个人都可以属于多个组（如：协议开发者可以支持�
 
 虽然规范和实施开发一直是完全开源的，但并没有使用正式的程序提出上述更新。 这使研究人员和执行人员能够更快地确定和商定各种变化。
 
-当信标链与以太坊执行层合并时，提议修改的治理程序将得到协调。 实施合并的过程[已经在进行中](https://eips.ethereum.org/EIPS/eip-3675)。
+当信标链于 2022 年 9 月 15 日与以太坊执行层合并时，作为[巴黎网络升级](https://ethereum.org/en/history/#paris)的一部分，合并完成。 提案 [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) 从“上次调用”变为“最终版”，完成向权益正面的过渡。
 
 <ButtonLink to="/upgrades/merge/">
   关于合并的更多信息

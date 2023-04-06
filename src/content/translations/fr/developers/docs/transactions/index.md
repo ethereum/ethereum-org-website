@@ -4,7 +4,7 @@ description: "Présentation des transactions Ethereum : leur fonctionnement, leu
 lang: fr
 ---
 
-Les transactions sont des instructions signées cryptographiquement provenant des comptes. Un compte va initier une transaction pour mettre à jour l'état du réseau Ethereum. La transaction la plus simple consiste à transférer de l'ETH d'un compte à un autre.
+Les transactions sont des instructions signées cryptographiquement depuis des comptes. Un compte va initier une transaction pour mettre à jour l'état du réseau Ethereum. La transaction la plus simple consiste à transférer de l'ETH d'un compte à un autre.
 
 ## Prérequis {#prerequisites}
 
@@ -16,21 +16,22 @@ Une transaction Ethereum est une action initiée par un compte externe, c'est-à
 
 ![Diagramme montrant un changement d'état de cause de la transaction](./tx.png) _Schéma adapté à partir du document [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-Les transactions, qui modifient l'état de l'EVM, doivent être diffusées sur l'ensemble du réseau. N'importe quel nœud peut diffuser une demande pour qu'une transaction soit exécutée sur l'EVM. Un mineur exécutera ensuite la transaction et propagera au reste du réseau le changement d'état qui en résultera.
+Les transactions, qui modifient l'état de l'EVM, doivent être diffusées sur l'ensemble du réseau. N'importe quel nœud peut diffuser une demande pour qu'une transaction soit exécutée sur l'EVM. Un validateur exécutera ensuite la transaction et diffusera au reste du réseau le changement d'état qui en résultera.
 
-Les transactions impliquent le paiement de frais et doivent être minées pour être valides. Pour simplifier ce chapitre, nous aborderons les frais de gaz et le minage dans d'autres sections.
+Les transactions requièrent des frais et doivent être incluses dans un bloc validé. Pour simplifier ce chapitre, nous aborderons les frais de gaz et la validation dans d'autres sections.
 
 Une transaction soumise comprend les informations suivantes :
 
 - `recipient` : adresse de réception (S'il s'agit d'un compte externe, la transaction va transférer la valeur. S'il s'agit d'un compte de contrat, la transaction exécutera le code du contrat.)
 - `signature` : identifiant de l'expéditeur. Cette signature est générée lorsque la clé privée de l'expéditeur signe la transaction, et confirme que l'expéditeur a autorisé cette transaction.
+- `nonce` - un compteur d'incrémentation séquentielle qui indique le numéro de transaction du compte
 - `value` : quantité d'ETH à transférer de l'expéditeur au destinataire (en WEI, une dénomination de l'ETH).
-- `data` : champ facultatif pour inclure des données arbitraires.
+- `data` : champ facultatif destiné à inclure des données arbitraires.
 - `gasLimit` : Quantité maximum d’unités de gaz pouvant être consommée par la transaction. Les unités de gaz représentent les étapes de calcul.
-- `maxPriorityFeePerGas` : la quantité maximale de gaz à inclure comme un pourboire pour le mineur.
-- `maxFeePerGas` : Montant maximum de gaz prêt à être payé pour la transaction (incluant `baseFeePerGas` et `maxPriorityFeePerGas`).
+- `maxPriorityFeePerGas` : la quantité maximale de gaz à inclure comme pourboire pour le validateur
+- `maxFeePerGas` : montant maximum de gaz prêt à être payé pour la transaction (y compris `baseFeePerGas` et `maxPriorityFeePerGas`)
 
-Le gaz est une référence au calcul nécessaire au traitement de la transaction par un mineur. Les utilisateurs doivent payer des frais pour ce calcul. La `gasLimit` et le `gasPrice` déterminent les frais de transaction maximum payés au mineur. [Plus d'infos sur le gaz](/developers/docs/gas/)
+Le gaz est une référence au calcul nécessaire au traitement de la transaction par un validateur. Les utilisateurs doivent payer des frais pour ce calcul. `gasLimit` et `gasPrice` déterminent les frais de transaction maximum payés au validateur. [Plus d'infos sur le gaz](/developers/docs/gas/)
 
 L'objet de transaction ressemblera un peu à ceci :
 
@@ -39,10 +40,10 @@ L'objet de transaction ressemblera un peu à ceci :
   from: "0xEA674fdDe714fd979de3EdF0F56AA9716B898ec8",
   to: "0xac03bb73b6a9e108530aff4df5077c2b3d481e5a",
   gasLimit: "21000",
-  maxFeePerGas: "300",
-  maxPriorityFeePerGas: "10",
+  maxFeePerGas: "300"
+  maxPriorityFeePerGas: "10"
   nonce: "0",
-  value: "10000000000"
+  value: "10000000000",
 }
 ```
 
@@ -50,7 +51,7 @@ Un objet de transaction doit être signé avec la clé privée de l'expéditeur.
 
 Un client Ethereum comme Geth gérera ce processus de signature.
 
-Exemple d'appel [JSON-RPC](https://eth.wiki/json-rpc/API) :
+Exemple d'appel [JSON-RPC](/developers/docs/apis/json-rpc) :
 
 ```json
 {
@@ -104,9 +105,9 @@ Grâce au hachage de la signature, il est possible de prouver de façon cryptogr
 
 ### Le champ de données {#the-data-field}
 
-La grande majorité des transactions accèdent à un contrat provenant d'un compte externe. La plupart des contrats sont écrits en Solidity et interprètent leur champ de données conformément à l'[interface binaire-programme (ABI)](/glossary/#abi/).
+La grande majorité des transactions accèdent à un contrat provenant d'un compte externe. La plupart des contrats sont écrits en Solidity et interprètent leur champ de données conformément à l'[interface binaire-programme (ABI)](/glossary/#abi).
 
-Les quatre premiers octets indiquent la fonction à appeler, en utilisant l'empreinte numérique de son nom et de ses arguments. Vous pouvez parfois identifier la fonction depuis le sélecteur à l'aide de [cette base de données](https://www.4byte.directory/signatures/).
+Les quatre premiers octets indiquent la fonction à appeler, en utilisant les hachages de son nom et de ses arguments. Vous pouvez parfois identifier la fonction depuis le sélecteur à l'aide de [cette base de données](https://www.4byte.directory/signatures/).
 
 Le reste des calldata est constitué des arguments, [encodés comme indiqué dans les spécifications ABI](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
 
@@ -127,7 +128,7 @@ Selon les spécifications ABI, les valeurs entières (comme les adresses, qui so
 
 Sur Ethereum, il existe plusieurs types de transactions :
 
-- Transactions ordinaires : une transaction d'un portefeuille à un autre.
+- Transactions ordinaires : une transaction d'un portefeuille vers un autre.
 - Transactions de déploiement de contrats : une transaction sans adresse « to », où le champ de données est utilisé pour le code du contrat.
 - Exécution d'un contrat : une transaction qui interagit avec un contrat intelligent déployé. Dans ce cas précis, l'adresse "to" est celle du contrat intelligent.
 
@@ -143,13 +144,13 @@ Ainsi, pour envoyer 1 ETH à Alice avec un `baseFeePerGas` de 190 gwei et `maxPr
 0,0042 ETH
 ```
 
-Le compte de Marc sera débité de **-1,0042 ETH**.
+Le compte de Bob sera débité de **-1,0042 ETH** (1 ETH pour Alice + 0,0042 ETH en frais de gaz)
 
 Celui d'Alice sera crédité de **+1,0 ETH**.
 
 Les frais de base seront brûlés **-0.00399 ETH**
 
-Le mineur garde le pourboire **+0.000210 ETH**
+Le validateur conserve le pourboire de **+0,000210 ETH**
 
 Du gaz est également requis pour toute interaction avec un contrat intelligent.
 
@@ -161,13 +162,10 @@ Tout gaz non utilisé dans une transaction est remboursé sur le compte de l'uti
 
 Voici ce qui se passe une fois qu'une transaction a été soumise :
 
-1. Quand vous envoyez une transaction, la cryptographie génère un hash de transaction : `0x97d99bc77292111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`
+1. Quand vous envoyez une transaction, la cryptographie génère un hachage de transaction : `0x97d99bc77292111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`
 2. La transaction est ensuite diffusée sur le réseau et incluse dans un groupe comportant de nombreuses autres transactions.
-3. Un mineur doit sélectionner votre transaction et l'inclure dans un bloc pour la vérifier et la considérer comme "réussie".
-   - Il peut exister un délai d'attente à ce stade quand le réseau est occupé et que les mineurs ne sont pas en mesure de suivre.
-4. Votre transaction recevra des « confirmations ». Le nombre de confirmations est le nombre de blocs créés depuis le bloc qui a inclus votre transaction. Plus le nombre est élevé, plus la certitude que le réseau a traité et reconnu la transaction est grande.
-   - Les blocs récents peuvent être réorganisés, donnant l'impression que la transaction a échoué ; cependant, la transaction peut être encore valide mais incluse dans un bloc différent.
-   - La probabilité d'une réorganisation diminue à chaque bloc miné, c'est-à-dire plus le nombre de confirmations est élevé, plus la transaction est immuable.
+3. Un validateur doit sélectionner votre transaction et l'inclure dans un bloc pour la vérifier et la considérer comme « réussie ».
+4. Au fur et à mesure que le temps passe, le bloc contenant votre transaction sera mis à niveau vers « justifié » puis « finalisé ». Grâce à ces mises à niveau, vous êtes davantage assuré que votre transaction a été réussie et qu'elle ne sera jamais altérée. Une fois un bloc « finalisé », il ne pourrait être changé que par une attaque qui coûterait plusieurs milliards de dollars.
 
 ## Démonstration visuelle {#a-visual-demo}
 
@@ -183,9 +181,7 @@ Ethereum avait à l'origine un unique format pour les transactions. Chaque trans
 
 Ethereum a évolué pour prendre en charge plusieurs types de transactions afin de permettre l'implémentation de nouvelles fonctionnalités telles que les listes d'accès [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) sans affecter les formats de transactions existants.
 
-[EIP-2718 : Enveloppe de transaction saisie](https://eips.ethereum.org/EIPS/eip-2718) définit un type de transaction qui sert d'enveloppe à de futurs types de transaction.
-
-L'EIP-2718 est une nouvelle enveloppe généralisée pour les opérations saisies. Dans la nouvelle norme, les transactions sont interprétées comme :
+[EIP-2718](https://eips.ethereum.org/EIPS/eip-2718) spécifie la façon dont cela est géré. Les transactions sont interprétées comme :
 
 `TransactionType || TransactionPayload`
 
@@ -205,4 +201,3 @@ _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 - [Comptes](/developers/docs/accounts/)
 - [Machine Virtuelle d'Ethereum (EVM)](/developers/docs/evm/)
 - [Gaz](/developers/docs/gas/)
-- [Minage](/developers/docs/consensus-mechanisms/pow/mining/)
