@@ -20,7 +20,6 @@ interface IProps {
 }
 
 const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
-  let blockTypeTranslation
   const { language } = useI18next()
   const localeForStatsBoxNumbers = getLocaleForNumberFormat(language as Lang)
   const {
@@ -43,40 +42,14 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
   })
   const formattedUTC = `${formattedDate} +UTC`
 
-  if (blockNumber) {
-    blockTypeTranslation = (
+  const blockTypeTranslation = (translationKey, explorerUrl, number) => {
+    return (
       <Flex>
         <Emoji fontSize="sm" mr={2} text=":bricks:" />
-        <Translation id="page-history-block-number" />
+        <Translation id={translationKey} />
         :&nbsp;
-        <Link to={`https://etherscan.io/block/${blockNumber}`}>
-          {new Intl.NumberFormat(localeForStatsBoxNumbers).format(blockNumber)}
-        </Link>
-      </Flex>
-    )
-  }
-
-  if (epochNumber) {
-    blockTypeTranslation = (
-      <Flex>
-        <Emoji fontSize="sm" mr={2} text=":bricks:" />
-        <Translation id="page-history-epoch-number" />
-        :&nbsp;
-        <Link to={`https://beaconscan.com/epoch/${epochNumber}`}>
-          {new Intl.NumberFormat(localeForStatsBoxNumbers).format(epochNumber)}
-        </Link>
-      </Flex>
-    )
-  }
-
-  if (slotNumber) {
-    blockTypeTranslation = (
-      <Flex>
-        <Emoji fontSize="sm" mr={2} text=":bricks:" />
-        <Translation id="page-history-slot-number" />
-        :&nbsp;
-        <Link to={`https://beaconscan.com/slot/${slotNumber}`}>
-          {new Intl.NumberFormat(localeForStatsBoxNumbers).format(slotNumber)}
+        <Link to={`${explorerUrl}${number}`}>
+          {new Intl.NumberFormat(localeForStatsBoxNumbers).format(number)}
         </Link>
       </Flex>
     )
@@ -92,7 +65,24 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
           </Text>
         </Flex>
       )}
-      {blockTypeTranslation}
+      {blockNumber &&
+        blockTypeTranslation(
+          "page-history-block-number",
+          "https://etherscan.io/block/",
+          blockNumber
+        )}
+      {epochNumber &&
+        blockTypeTranslation(
+          "page-history-epoch-number",
+          "https://beaconscan.com/epoch/",
+          epochNumber
+        )}
+      {slotNumber &&
+        blockTypeTranslation(
+          "page-history-slot-number",
+          "https://beaconscan.com/slot/",
+          slotNumber
+        )}
       {ethPriceInUSD && (
         <Flex>
           <Emoji fontSize="sm" mr={2} text=":money_bag:" />
