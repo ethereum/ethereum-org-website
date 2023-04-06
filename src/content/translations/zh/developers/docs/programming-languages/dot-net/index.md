@@ -68,7 +68,7 @@ incomplete: true
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _在 Blazor 中具有 UI 的 Nethereum 代码生成_
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _.NET Wasm SPA 轻区块链浏览器和简单钱包_
 - [Wonka Business Rules Engine](https://docs.nethereum.com/en/latest/wonka/) - _业务规则引擎（同时适用于 .NET 平台和以太坊平台），本质上是由元数据驱动的_
-- [Nethermind](https://github.com/NethermindEth/nethermind) - _.NET 核心以太坊客户端，适用于 Linux、Windows 和 MacOs_
+- [Nethermind](https://github.com/NethermindEth/nethermind) - _面向 Linux、Windows、MacOS 操作系统的 .NET Core 以太坊客户端_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _使用以太坊相关代码库的实用函数工具_
 - [TestChains](https://github.com/Nethereum/TestChains) - _预先配置的 .NET devchains，用于快速回应 (PoA)_
 
@@ -76,7 +76,7 @@ incomplete: true
 
 ## .NET 社区贡献者 {#dot-net-community-contributors}
 
-在 Nethereum，我们主要活跃于 [Gitter](https://gitter.im/Nethereum/Nethereum) 上，任何人都可以前来提问/回答问题，获得帮助或者前来逛逛。 您可以自由地在 [Nethereum GitHub 库](https://github.com/Nethereum)上提交拉取请求或者开启问题，或者只是前来浏览我们已有的许多小项目/样本项目。 您可以在 [Discord](https://discord.gg/jQPrR58FxX) 上找到我们！
+在 Nethereum，我们主要活跃于 [Gitter](https://gitter.im/Nethereum/Nethereum) 上，任何人都可以前来提问/回答问题，获得帮助或者前来逛逛。 可以随意在 [Nethereum GitHub 存储库](https://github.com/Nethereum)上提交拉取请求或者打开一个问题，或者仅仅浏览我们提供的许多小项目/示例项目。 您可以在 [Discord](https://discord.gg/jQPrR58FxX) 上找到我们！
 
 如果你是 Nethermind 的新手并且需要入门帮助，请加入我们的 [Discord](http://discord.gg/PaCMRFdvWT)。 我们的开发人员随时准备回答你的问题。 不要犹豫，在 [Nethermind GitHub 存储库](https://github.com/NethermindEth/nethermind)上打开一个拉取请求或提出任何问题。
 
