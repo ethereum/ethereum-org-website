@@ -256,6 +256,7 @@ const MobileButtonDropdown = styled(StyledButtonDropdown)`
 
 const Container = styled.div`
   position: relative;
+  overflow-x: hidden;
 `
 
 const HeroContainer = styled.div`

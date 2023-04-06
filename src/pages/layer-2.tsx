@@ -829,16 +829,6 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             </Link>
           </Text>
         </ExpandableCard>
-        <ExpandableCard title={`${t("layer-2-faq-question-3-title")}`}>
-          <Text>
-            <Translation id="layer-2-faq-question-3-description-1" />{" "}
-          </Text>
-          <Text>
-            <Link to="/upgrades/sharding/">
-              <Translation id="layer-2-more-on-sharding" />
-            </Link>
-          </Text>
-        </ExpandableCard>
         <ExpandableCard title={`${t("layer-2-faq-question-4-title")}`}>
           <Text>
             <Translation id="layer-2-faq-question-4-description-1" />
@@ -896,11 +886,6 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
               <Translation id="rollups-the-ultimate-ethereum-scaling-strategy" />
             </Link>{" "}
             <i>- Finematics</i>
-          </ListItem>
-          <ListItem>
-            <Link to="/upgrades/sharding/">
-              <Translation id="scaling-layer-1-with-shard-chains" />
-            </Link>
           </ListItem>
           <ListItem>
             <Link to="https://barnabe.substack.com/p/understanding-rollup-economics-from?s=r">

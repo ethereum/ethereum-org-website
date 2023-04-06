@@ -173,8 +173,6 @@ Sebbene un server privato virtuale (VPS) possa essere usato come sostitutivo del
 Più client del validatore operano su una soluzione d'archiviazione su cloud centralizzata singola, più diventa pericoloso per questi utenti. Ogni evento che porta questi fornitori offline, che sia un attacco, domande regolatorie o solo guasti energetici o a Internet, manderanno offline al contempo ogni client del validatore che si basi su tale server.
 
 Le sanzioni offline sono proporzionali a quanti altri sono offline contemporaneamente. Usare un VPS aumenta notevolmente il rischio che le sanzioni offline saranno più severe e aumenta il rischio di fughe quadratiche o tagli nel caso in cui il guasto sia abbastanza grande. Per minimizzare i tuoi rischi e i rischi alla rete, gli utenti sono vivamente incoraggiati a procurarsi e utilizzare il proprio hardware.
-
-<a href="https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/">Ulteriori informazioni su ricompense e sanzioni</a>
 </ExpandableCard>
 
 ## Approfondimenti {#further-reading}
@@ -185,4 +183,3 @@ Le sanzioni offline sono proporzionali a quanti altri sono offline contemporanea
 - [How to: acquistare l'hardware del validatore di Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
 - [Passo dopo Passo: come unirsi alla Testnet di Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Suggerimenti per la prevenzione dei tagli di Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
-- [Ricompense e sanzioni su Ethereum 2.0](https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/) - _James BeckMarch 2020_
