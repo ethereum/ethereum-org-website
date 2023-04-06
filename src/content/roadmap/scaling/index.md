@@ -7,7 +7,7 @@ alt: "Ethereum roadmap"
 template: roadmap
 ---
 
-Ethereum is scaled using [rollups](/layer-2/#rollups), which batch transactions together and send the output to Ethereum. Even though rollups are up to eight times less expensive than Ethereum Mainnet, it's possible to optimize rollups further to reduce costs for end users. Rollups also rely on some centralized components that developers can remove as the rollups mature.
+Ethereum is scaled using [layer 2s](/layer-2/#rollups) (also known as rollups), which batch transactions together and send the output to Ethereum. Even though rollups are up to eight times less expensive than Ethereum Mainnet, it's possible to optimize rollups further to reduce costs for end users. Rollups also rely on some centralized components that developers can remove as the rollups mature.
 
 <InfoBanner mb={8} title="Transaction costs">
   <ul style="margin-bottom: 0">
