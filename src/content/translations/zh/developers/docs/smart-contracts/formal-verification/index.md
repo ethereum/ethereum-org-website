@@ -227,7 +227,7 @@ function safe_add(uint x, uint y) returns(uint z){
 
 ### 用于检查正确性的程序验证器 {#program-verifiers}
 
-**Certora Prover** - \_ Certora Prover 是一种检查智能合约代码正确性的自动形式化验证工具。 它使用 CVL（Certora 验证语言）编写规范，并组合使用静态分析和约束求解检测属性违反。</p>
+**Certora Prover** - \_ Certora Prover 是一种检查智能合约代码正确性的自动形式化验证工具。 它使用 CVL（Certora 验证语言）编写规范，并组合使用静态分析和约束求解检测属性违反。
 
 - [网站](https://www.certora.com/)
 - [相关文档](https://docs.certora.com/en/latest/index.html)
