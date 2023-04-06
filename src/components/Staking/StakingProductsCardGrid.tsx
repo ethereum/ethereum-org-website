@@ -36,6 +36,7 @@ import {
   CautionProductGlyphIcon,
   DefaultOpenSourceGlyphIcon,
   DockerIcon,
+  EthpoolGlyphIcon,
   GreenCheckProductGlyphIcon,
   KilnGlyphIcon,
   LidoGlyphIcon,
