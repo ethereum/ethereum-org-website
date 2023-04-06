@@ -36,6 +36,7 @@ import {
   CautionProductGlyphIcon,
   DefaultOpenSourceGlyphIcon,
   DockerIcon,
+  EthpoolGlyphIcon,
   GreenCheckProductGlyphIcon,
   KilnGlyphIcon,
   LidoGlyphIcon,
@@ -72,6 +73,7 @@ const getSvgFromPath = (
   const mapping = {
     "abyss-glyph.svg": AbyssGlyphIcon,
     "allnodes-glyph.svg": AllnodesGlyphIcon,
+    "ethpool-glyph.svg": EthpoolGlyphIcon,
     "ankr-glyph.svg": AnkrGlyphIcon,
     "avado-glyph.svg": AvadoGlyphIcon,
     "bloxstaking-glyph.svg": BloxstakingGlyphIcon,
