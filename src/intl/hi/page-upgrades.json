@@ -1,15 +1,15 @@
 {
-  "page-upgrades-beacon-date": "लादा गया!",
-  "page-upgrades-upgrades-guide": "Eth2 अपग्रेड के लिए मार्गदर्शिका",
-  "page-upgrades-upgrades-docking": "डॉकिंग मेननेट और Eth2",
-  "page-upgrades-shard-title": "शार्ड चेन",
-  "page-upgrades-upgrades-beacon-chain": "बीकन चेन",
-  "consensus-beaconcha-in-desc": "ओपन सोर्स बीकन चेन एक्सप्लोरर",
-  "consensus-beaconscan-desc": "बीकन चेन एक्सप्लोरर - सहमति परत का इथरस्कैन",
-  "consensus-become-staker": "स्टेकर बनें",
-  "consensus-become-staker-desc": "स्टेकिंग चालू है! यदि आप नेटवर्क को सुरक्षित रखने में मदद के लिए अपने ETH पर स्टेक लगाना चाहते हैं, तो सुनिश्चित करें कि आप जोखिमों से अवगत हैं।",
-  "consensus-explore": "डेटा का अन्वेषण करें",
-  "consensus-run-beacon-chain": "सहमति ग्राहक चलाएँ",
-  "consensus-run-beacon-chain-desc": "एथेरियम को ज़्यादा से ज़्यादा क्लाइंट चलाने की ज़रूरत होती है। इस एथेरियम सार्वजनिक हित में मदद करें!",
-  "read-more": "और पढ़ें"
+  "page-upgrades-merge-infographic-el": "एथेरियम स्टेट: लेनदेन, ऐप्स, अनुबंध, बैलेंस",
+  "page-upgrades-merge-infographic-alt-text": "इंफ़ोग्राफ़िक यह दर्शाता है कि कैसे बीकन चेन काम के सबूत से हिस्सेदारी के सबूत में ट्राज़िशन के दौरान एथेरियम की निष्पादन परत में मर्ज हो जाती है।",
+  "page-upgrades-beacon-date": "शिप कर दिया गया!",
+  "page-upgrades-merge-date": "सितंबर 2022",
+  "page-upgrades-shards-date": "~2023",
+  "page-upgrades-pbs": "Not imminent - expect 2024/25",
+  "page-upgrades-withdrawals": "Q1/Q2 2023",
+  "page-upgrades-merge-banner-intro": "मर्ज आगे बढ़ रहा है, और एथेरियम में बदलाव के साथ आता है।",
+  "page-upgrades-merge-banner-content-outdated": "इन बदलावों से संबंधित इस पेज का कुछ कंटेंट पुराना है। अपडेट जल्द ही आ रहे हैं।",
+  "page-upgrades-merge-banner-developers-landing": "कुछ दस्तावेज़ों में एक बैनर होता है जो दर्शता है कि वे पुराने हैं। अपडेट जल्द ही आ रहे हैं।",
+  "page-upgrades-post-merge-banner-tutorial-ood": "मर्ज के बाद यह ट्यूटोरियल पुराना हो गया है और शायद काम न करे। अगर आप योगदान देना चाहते हैं, तो कृपया PR बढ़ाएँ।",
+  "page-upgrades-post-merge-banner-tutorial-light-node-ood": "मर्ज के बाद यह ट्यूटोरियल पुराना हो चुका है। लाइट नोड्स फ़िलहाल हिस्सेदारी के सबूत पर काम नहीं करते हैं, लेकिन जल्दी ही शिप किए जाने की उम्मीद है।",
+  "page-upgrades-post-merge-banner-governance-ood": "मर्ज के बाद इस पेज का कुछ कंटेंट पुराना है। अगर आप योगदान देना चाहते हैं, तो कृपया PR बढ़ाएँ।"
 }
