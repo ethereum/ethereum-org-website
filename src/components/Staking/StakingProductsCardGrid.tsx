@@ -1,10 +1,4 @@
-import React, {
-  ComponentType,
-  ReactNode,
-  SVGProps,
-  useEffect,
-  useState,
-} from "react"
+import React, { ComponentType, SVGProps, useEffect, useState } from "react"
 import { shuffle } from "lodash"
 import {
   Badge,
@@ -67,29 +61,29 @@ enum FlagType {
   UNKNOWN = "unknown",
 }
 
-const getSvgFromPath = (
-  svgPath: string
+const getIconFromName = (
+  imageName: string
 ): ComponentType<SVGProps<SVGElement>> => {
   const mapping = {
-    "abyss-glyph.svg": AbyssGlyphIcon,
-    "allnodes-glyph.svg": AllnodesGlyphIcon,
-    "ethpool-glyph.svg": EthpoolGlyphIcon,
-    "ankr-glyph.svg": AnkrGlyphIcon,
-    "avado-glyph.svg": AvadoGlyphIcon,
-    "bloxstaking-glyph.svg": BloxstakingGlyphIcon,
-    "dappnode-glyph.svg": StakingDappnodeGlyphIcon,
-    "docker-icon.svg": DockerIcon,
-    "default-open-source-glyph.svg": DefaultOpenSourceGlyphIcon,
-    "kiln-glyph.svg": KilnGlyphIcon,
-    "lido-glyph.svg": LidoGlyphIcon,
-    "rocket-pool-glyph.svg": RocketPoolGlyphIcon,
-    "stafi-glyph.svg": StafiGlyphIcon,
-    "stakewise-glyph.svg": StakewiseGlyphIcon,
-    "stereum-glyph.svg": StereumGlyphIcon,
-    "wagyu-glyph.svg": WagyuGlyphIcon,
-    "stakefish-glyph.svg": StakefishGlyphIcon,
+    abyss: AbyssGlyphIcon,
+    allnodes: AllnodesGlyphIcon,
+    ankr: AnkrGlyphIcon,
+    avado: AvadoGlyphIcon,
+    bloxstaking: BloxstakingGlyphIcon,
+    dappnode: StakingDappnodeGlyphIcon,
+    docker: DockerIcon,
+    defaultOpenSource: DefaultOpenSourceGlyphIcon,
+    ethpools: EthpoolGlyphIcon,
+    kiln: KilnGlyphIcon,
+    lido: LidoGlyphIcon,
+    rocketPool: RocketPoolGlyphIcon,
+    stafi: StafiGlyphIcon,
+    stakewise: StakewiseGlyphIcon,
+    stereum: StereumGlyphIcon,
+    wagyu: WagyuGlyphIcon,
+    stakefish: StakefishGlyphIcon,
   }
-  return mapping[svgPath]
+  return mapping[imageName]
 }
 
 const Status: React.FC<{ status: FlagType }> = ({ status }) => {
@@ -129,7 +123,7 @@ const StakingBadge: React.FC<{
 
 type Product = {
   name: string
-  svgPath: string
+  imageName: string
   color: string
   url: string
   platforms: Array<string>
@@ -156,7 +150,7 @@ interface ICardProps {
 const StakingProductCard: React.FC<ICardProps> = ({
   product: {
     name,
-    svgPath,
+    imageName,
     color,
     url,
     platforms,
@@ -177,7 +171,7 @@ const StakingProductCard: React.FC<ICardProps> = ({
     matomo,
   },
 }) => {
-  const Svg = getSvgFromPath(svgPath)
+  const Svg = getIconFromName(imageName)
   const data = [
     {
       label: <Translation id="page-staking-considerations-solo-1-title" />,
@@ -416,14 +410,14 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
 
   const getBrandProperties = ({
     name,
-    svgPath,
+    imageName,
     hue,
     url,
     socials,
     matomo,
   }) => ({
     name,
-    svgPath,
+    imageName,
     color: `hsla(${hue}, ${SAT}, ${LUM}, 1)`,
     url,
     socials,
