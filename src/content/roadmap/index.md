@@ -100,3 +100,18 @@ Upgrades tend not to impact end-users except by providing better user-experience
 - The Splurge: other upgrades that don't fit well into the previous categories.
 
 We decided not to use this terminology because we wanted to use a simpler and more user-centric model. Although we use user-centric language, the vision remains the same as the one proposed by Vitalik.
+
+## What about sharding? {#what-about-sharding}
+
+Sharding is splitting up the Ethereum blockchain so that subsets of validators are only responsible for a fraction of the total data. This was originally intended to be the way for Ethereum to scale. However, layer 2 rollups have developed much faster than expected and have provided a lot of scaling already, and will provide much more after Proto-Danksharding is implemented. This means "shard chains" are no longer needed and have been dropped from the roadmap.
+
+## Looking for specific technical upgrades? {#looking-for-specific-technical-upgrades}
+
+- [Danksharding](/roadmap/danksharding) - Danksharding makes layer 2 rollups much cheaper for users by adding “blobs” of data to Ethereum blocks.
+- [Staking withdrawals](/staking/withdrawals) -The “Shapella” upgrade enables staking withdrawals on Ethereum, allowing people to unlock their staked ETH.
+- [Single slot finality](/roadmap/single-slot-finality) - Instead of waiting for fifteen minutes, blocks could get proposed and finalized in the same slot. This is more convenient for apps and much more difficult to attack.
+- [Proposer-builder separation](/roadmap/pbs) - Splitting the block building and block proposal tasks across separate validators creates a fairer, more censorship resistant and efficient way for Ethereum to come to consensus.
+- [Secret leader election](/roadmap/secret-leader-election) - Clever cryptography can be used to ensure that the identity of the current block proposer is not made public, protecting them from certain types of attack.
+- [Account abstraction](/roadmap/account-abstraction) - Account abstraction is a class of upgrades that support smart contract wallets natively on Ethereum, rather than having to use complex middleware.
+- [Verkle trees](/roadmap/verkle-trees) - Verkle trees are a data structure that can be used to enable stateless clients on Ethereum. These “stateless” clients will require a tiny amount of storage space but will still be able to verify new blocks.
+- [Statelessness](/roadmap/statelessness) - stateless clients will be able to verify new blocks without having to store large amounts of data. This will provide all the benefits of running a node with only a tiny fraction of today’s costs.
