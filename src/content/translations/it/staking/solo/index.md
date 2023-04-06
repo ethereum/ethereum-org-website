@@ -17,6 +17,8 @@ summaryPoints:
 
 Lo staking in solo è l'atto di [operare un nodo di Ethereum](/run-a-node/) connesso a Internet e depositare 32 ETH per attivare un [validatore](#faq), dandoti l'abilità di partecipare direttamente nel consenso della rete.
 
+**Lo staking in solo aumenta la decentralizzazione della rete di Ethereum**, rendendola più resistente alla censura e più robusto contro gli attacchi. Altri metodi di staking potrebbero non aiutare la rete nello stesso modo. Lo staking in solo è la migliore opzione di staking per proteggere Ethereum.
+
 Un nodo di Ethereum consiste sia nel client del livello di esecuzione (EL), che di un client del livello di consenso (CL). Questi client sono software che cooperano, insieme a una valida serie di chiavi di firma, per verificare le transazioni e i blocchi, attestare al capo corretto della catena, aggregare le attestazioni e proporre i blocchi.
 
 Gli staker in solo sono responsabili di operare l'hardware necessario a eseguire questi client. Si consiglia vivamente di usare una macchina dedicata per questo, che operi da casa, il che è estremamente vantaggioso per l'integrità della rete.
@@ -25,18 +27,12 @@ Uno staker in solo riceve ricompense direttamente dal protocollo per mantenere i
 
 ## Perché mettere in staking in solitaria? {#why-stake-solo}
 
-Lo staking in solo include maggiore responsabilità, ma ti fornisce il massimo controllo sui tuoi fondi e la tua configurazione di staking.
+Lo staking in solo richiede una maggiore responsabilità, ma fornisce il massimo controllo sui fondi e la configurazione di staking.
 
 <CardGrid>
-  <Card title="Ottieni nuovi ETH" emoji="💸">
-    Ottieni ricompense denominate in ETH direttamente dal protocollo quando il tuo validatore è online, senza alcun mediatore che prenda parti.
-  </Card>
-  <Card title="Controllo completo" emoji="🎛️">
-    Mantieni le tue chiavi. Scegli la combinazione di client e hardware che ti consente di minimizzare i tuoi rischi e meglio contribuire alla salute e integrità della rete. I servizi di staking di terze parti prendono per te queste decisioni e non fanno sempre le scelte più sicure.
-  </Card>
-  <Card title="Sicurezza della rete" emoji="🔐">
-    Lo staking in solo è il metodo più d'impatto per fare staking. Operando un validatore sul tuo hardware domestico, rafforzi la robustezza, decentralizzazione e sicurezza del protocollo di Ethereum.
-  </Card>
+  <Card title="Ottieni nuovi ETH" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
+  <Card title="Controllo completo" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
+  <Card title="Sicurezza della rete" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
 ## Considerazioni prima dello staking in solo {#considerations-before-staking-solo}
@@ -57,7 +53,7 @@ Per quanto vorremmo che lo staking in solo fosse accessibile e privo di rischi p
     <p style={{marginTop: "1rem"}}><a href="/security">Sicurezza di Ethereum e prevenzione delle truffe</a></p>
   </ExpandableCard>
   <ExpandableCard title="Nessun prelievo (per ora)" eventCategory="SoloStaking" eventName="clicked no withdrawing">
-    Il prelievo degli ETH in staking o delle ricompense dal saldo di un validatore non è ancora supportato. Il supporto per i prelievi è pianificato per il prossimo aggiornamento Shanghai. Dovresti anticipare che i tuoi ETH resteranno bloccati per almeno uno o due anni. Dopo l'aggiornamento Shanghai potrai prelevare liberamente porzioni o tutto il tuo stake se lo desideri.
+    Il prelievo degli ETH in staking o delle ricompense dal saldo di un validatore non è ancora supportato. Il supporto per i prelievi è pianificato per il prossimo aggiornamento Shanghai. Dopodiché, gli utenti potranno aderire per ricevere automaticamente i pagamenti delle ricompense e potranno prelevare il saldo per intero per ricevere i fondi.
   </ExpandableCard>
   <ExpandableCard title="Manutenzione" eventCategory="SoloStaking" eventName="clicked maintenance">
     L'hardware, talvolta, si guasta, le connessioni di rete generano errori e il software del client a volte necessita di aggiornamenti. La manutenzione del nodo è inevitabile e richiederà occasionalmente la tua attenzione. Vorrai assicurarti di esser consapevole di qualsiasi aggiornamento di rete anticipato o di altri aggiornamenti critici del client.
@@ -78,9 +74,13 @@ Per quanto vorremmo che lo staking in solo fosse accessibile e privo di rischi p
 
 <StakingHowSoloWorks />
 
-Se lo desideri, puoi smettere di essere un validatore; in questo modo viene meno il requisito di essere online e si interrompe qualsiasi ulteriore ricompensa. Ricorda che fino all'aggiornamento Shanghai pianificato, il _prelievo_ di questi fondi non sarà possibile.
+Quando saranno attivi, riceverai le ricompense in ETH, che saranno depositate periodicamente al tuo indirizzo di prelievo.
 
-Dopo Shanghai, gli utenti potranno prelevare le proprie ricompense nonché il proprio stake, se lo desiderano.
+Se lo desideri, puoi smettere di essere un validatore; in questo modo viene meno il requisito di essere online e si interrompe qualsiasi ulteriore ricompensa. Il saldo rimanente sarà poi prelevato all'indirizzo di prelievo che hai indicato durante la configurazione.
+
+_L'aggiornamento Shanghai è necessario per consentire i pagamenti delle ricompense e i prelievi completi dei validatori in uscita._
+
+[Di più sulle ricompense di staking](/staking/withdrawals/)
 
 ## Inizia con il Launchpad di Staking {#get-started-on-the-staking-launchpad}
 
@@ -173,6 +173,20 @@ Sebbene un server privato virtuale (VPS) possa essere usato come sostitutivo del
 Più client del validatore operano su una soluzione d'archiviazione su cloud centralizzata singola, più diventa pericoloso per questi utenti. Ogni evento che porta questi fornitori offline, che sia un attacco, domande regolatorie o solo guasti energetici o a Internet, manderanno offline al contempo ogni client del validatore che si basi su tale server.
 
 Le sanzioni offline sono proporzionali a quanti altri sono offline contemporaneamente. Usare un VPS aumenta notevolmente il rischio che le sanzioni offline saranno più severe e aumenta il rischio di fughe quadratiche o tagli nel caso in cui il guasto sia abbastanza grande. Per minimizzare i tuoi rischi e i rischi alla rete, gli utenti sono vivamente incoraggiati a procurarsi e utilizzare il proprio hardware.
+
+<a href="https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/">Ulteriori informazioni su ricompense e sanzioni</a>
+</ExpandableCard>
+
+<ExpandableCard title="Come sblocco le mie ricompense o riprendo i miei ETH?">
+Al momento dell'aggiornamento Shanghai, saranno disponibili i pagamenti delle ricompense e i prelievi completi per i validatori in uscita. I prelievi di ogni tipo dalla beacon chain richiedono l'impostazione delle credenziali di prelievo.
+
+I nuovi staker le hanno impostate al momento della generazione della chiave e del deposito. Gli staker esistenti che non le hanno già impostate, potranno aggiornare le proprie chiavi per supportare tale funzionalità, dopo l'aggiornamento Shanghai.
+
+Una volta impostate le credenziali di prelievo, i pagamenti delle ricompense (gli ETH accumulati oltre i 32 iniziali) saranno distribuiti periodicamente e automaticamente all'indirizzo di prelievo.
+
+Per sbloccare e ricevere il tuo intero saldo, devi inoltre completare il processo di uscita dal tuo validatore.
+
+<ButtonLink to="/staking/withdrawals/">Di più sulle ricompense di staking</ButtonLink>
 </ExpandableCard>
 
 ## Approfondimenti {#further-reading}
@@ -183,3 +197,4 @@ Le sanzioni offline sono proporzionali a quanti altri sono offline contemporanea
 - [How to: acquistare l'hardware del validatore di Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
 - [Passo dopo Passo: come unirsi alla Testnet di Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Suggerimenti per la prevenzione dei tagli di Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
+- [Ricompense e sanzioni su Ethereum 2.0](https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/) - _James BeckMarch 2020_
