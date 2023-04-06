@@ -83,7 +83,7 @@ Validium 中的数据可用性管理器通过签署每个 Validium 批次来证�
 
 Validium 的数据可用性管理方法不同。 一些依赖受信任方存储状态数据，而另一些则使用随机指定的验证者。
 
-#### 数据可用性委员会 (DAC) {#data-availability-committee)
+#### 数据可用性委员会 (DAC) {#data-availability-committee}
 
 为了保证链下数据的可用性，一些 Validium 解决方案指定了一组受信任的实体（统称为数据可用性委员会 (DAC)）来存储状态副本并提供数据可用性证明。 由于成员较少，数据可用性委员会更容易实施并且需要较少的协调。
 

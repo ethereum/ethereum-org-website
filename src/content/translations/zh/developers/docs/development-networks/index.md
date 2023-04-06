@@ -21,7 +21,7 @@ lang: zh
 你*可以*[运行节点](/developers/docs/nodes-and-clients/#running-your-own-node)，但由于开发网络是以开发为目的而建立的，它们往往会打包一些快捷方便的功能，例如：
 
 - 为本地区块链提供数据，这个功能很重要（例如使用以太币余额的帐户）
-- 在接受到每个交易时就立即按顺序和没有延迟地挖掘区块。
+- 用接收的每笔交易，按照顺序即时产生区块，毫不延迟。
 - 增强调试和日志功能
 
 ## 可用工具 {#available-projects}
@@ -57,10 +57,10 @@ Hardhat 网络内置了安全帽，安全帽是专业人员的以太坊开发环
 
 ### 公共以太坊测试链 {#public-beacon-testchains}
 
-当前有三个公共的、用于测试的以太坊实现。 建议使用长期受支持的 Goerli 测试网。 Sepolia 测试网在可预见的将来预期也会一直维护，但其验证者集合是经许可产生的，这意味着此测试网上的新验证者没有一般访问权限。 Ropsten 链预计将被弃用。
+以太坊还有两个维护中的公共测试网实现：Goerli 和 Sepolia。 推荐使用获得长期支持的测试网 Goerli，任何人都可以自由地在其上验证。 Sepolia 是一个较新、较小的测试链，预计在可预见的未来也会得到维护。Sepolia 上有具有权限的验证者集，这意味着不可以对此测试网上的新验证者进行常规访问。 Ropsten 链预计在 2022 第四季度弃用，Rinkeby 链预计将在 2023 第二/第三季度弃用。
 
 - [Goerli 质押启动板](https://goerli.launchpad.ethereum.org/)
-- [Ropsten 质押启动板](https://ropsten.launchpad.ethereum.org/)
+- [Ropsten、Rinkeby 和 Kiln 弃用公告](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
 
 ## 延伸阅读 {#further-reading}
 
