@@ -393,7 +393,7 @@
       "hasBugBounty": false,
       "isTrustless": false,
       "isPermissionless": false,
-      "pctMajorityClient": 15,
+      "pctMajorityClient": 0,
       "isSelfCustody": true,
       "platforms": ["Browser"],
       "ui": ["GUI"],
