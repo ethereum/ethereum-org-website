@@ -21,7 +21,7 @@ You should have a good understanding of all the foundational topics. Implementin
 
 ## On-Chain scaling {#on-chain-scaling}
 
-This method of scaling requires changes to the Ethereum protocol (layer 1 [Mainnet](/glossary/#mainnet)). Sharding is currently the main focus for this method of scaling.
+On-chain scaling requires changes to the Ethereum protocol (layer 1 [Mainnet](/glossary/#mainnet)). For a long time, sharding the blockchain was expected to scale Ethereum. This was going to involve splitting the blockchain into discrete pieces (shards) to be verified by subsets of validators. However, scaling by layer-2 rollups has taken over as the primary scaling technique. This is supported by the addition of a new cheaper form of data attached to Ethereum blocks that is specially designed to make rollups cheap for users.
 
 ### Sharding {#sharding}
 

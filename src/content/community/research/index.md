@@ -97,7 +97,7 @@ See the [nodes and clients page](/developers/docs/nodes-and-clients/) for more d
 
 ## Scaling and performance {#scaling-and-performance}
 
-Scaling Ethereum is a large area of focus for Ethereum researchers. Current approaches include offloading transactions onto rollups and makign them as cheap as possible using data blobs. Introductory information on scaling Ethereum is available on our [scaling page](/developers/docs/scaling).
+Scaling Ethereum is a large area of focus for Ethereum researchers. Current approaches include offloading transactions onto rollups and making them as cheap as possible using data blobs. Introductory information on scaling Ethereum is available on our [scaling page](/developers/docs/scaling).
 
 ### Layer 2 {#layer-2}
 
