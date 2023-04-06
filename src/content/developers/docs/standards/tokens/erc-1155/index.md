@@ -23,7 +23,7 @@ To better understand this page, we recommend you first read about [token standar
 - [Batch Transfer](#batch_transfers): Transfer multiple assets in a single call.
 - [Batch Balance](#batch_balance): Get the balances of multiple assets in a single call.
 - [Batch Approval](#batch_approval): Approve all tokens to an address.
-- [Hooks](#recieve_hook): Receive tokens hook.
+- [Hooks](#receive_hook): Receive tokens hook.
 - [NFT Support](#nft_support): If supply is only 1, treat it as NFT.
 - [Safe Transfer Rules](#safe_transfer_rule): Set of rules for secure transfer.
 

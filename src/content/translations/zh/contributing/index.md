@@ -27,7 +27,8 @@ Ethereum.org 网站，像开放的以太坊一样，也是一个开源项目。 
 - [创建/编辑内容](/contributing/#how-to-update-content) _– 建议新页面或调整这里已经存在的内容_
 - [添加二层网络](/contributing/adding-layer-2s/) _- 将二层网络添加到相关页面_
 - [添加质押产品或服务](/contributing/adding-staking-products/) - _添加有助于促进单独质押、联合质押或质押即服务的项目_
-- [添加钱包](/contributing/adding-wallets/) _- 为[查找钱包页面](/wallets/find-wallet/)添加钱包。_
+- [添加钱包](/contributing/adding-wallets/) *– 为[发现钱包页面](/wallets/find-wallet/)*添加钱包
+- [为我们的去中心化科学页面提出项目](/contributing/adding-desci-projects/) _- 添加以太坊上构建的项目，为去中心化科学做贡献_
 
 *有任何问题？*🤔 请访问我们的 [Discord 服务器](https://discord.gg/CetY6Y4)
 
