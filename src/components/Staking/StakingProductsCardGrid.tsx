@@ -406,7 +406,7 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
   const getDiversityOfClients = (
     _pctMajorityClient: number | null
   ): FlagType => {
-    if (!_pctMajorityClient) return FlagType.UNKNOWN
+    if (_pctMajorityClient === null) return FlagType.UNKNOWN
     if (_pctMajorityClient > 50) return FlagType.WARNING
     return FlagType.VALID
   }
