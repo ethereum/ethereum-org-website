@@ -332,13 +332,12 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 ### 去中心化金融数据 {#defi-data}
 
-- [去中心化金融 Prime](https://defiprime.com/)
-- [去中心化金融 Llama](https://defillama.com/)
+- [DeFi Prime](https://defiprime.com/)
+- [DeFi Llama](https://defillama.com/)
 - [DeFi Rate](https://defirate.com/)
 
 ### 去中心化金融相关文章 {#defi-articles}
 
-- [什么是去中心化金融？](https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/) – _ETHHub，定期更新_
 - [去中心化金融初学者指南](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) - _Sid Coelho-Prabhu，2020 年 1 月 6 日_
 
 ### 视频 {#videos}

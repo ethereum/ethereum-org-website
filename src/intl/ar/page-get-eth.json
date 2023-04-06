@@ -63,5 +63,6 @@
   "page-get-eth-your-address-desc": "عندما تقوم بتنزيل محفظة، ستقوم بإنشاء عنوان إثير العام لك. إليك ما يبدو عليه:",
   "page-get-eth-your-address-desc-3": "يمكنك اعتبار هذا مثل عنوان البريد الإلكتروني الخاص بك، ولكن بدلاً من البريد الإلكتروني يمكنه تلقي إثير. إذا كنت ترغب في نقل إثير من المبادلات إلى محفظتك، استخدم عنوانك كوجهة. تأكد دائمًا من التحقق بدقة قبل أن ترسل!",
   "page-get-eth-your-address-wallet-link": "اطلع على المحافظ",
-  "listing-policy-raise-issue-link": "طرح مشكلة"
+  "listing-policy-raise-issue-link": "طرح مشكلة",
+  "page-find-wallet-last-updated": "آخر تحديث"
 }
