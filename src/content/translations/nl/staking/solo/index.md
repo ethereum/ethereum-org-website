@@ -173,8 +173,6 @@ Hoewel een virtuele privé-server (VPS) kan worden gebruikt als vervanging voor 
 Hoe meer validator-clients draaien op een enkele gecentraliseerde cloud-opslagoplossing, hoe gevaarlijker het wordt voor deze gebruikers. Elke gebeurtenis die deze providers offline haalt, of dat nu het geval is door aanvallen, regelgevingseisen of gewoon door stroom- en internetproblemen, zorgt ervoor dat elke validator-client die van deze server afhankelijk is tegelijkertijd offline gaat.
 
 Offline boetes zijn evenredig aan hoeveel andere validators er tegelijkertijd offline zijn. Het gebruik van een VPS verhoogt het risico dat offline boetes zwaarder zullen zijn, en verhoogt uw risico op kwadratische lekkage of slashing in het geval dat de uitval groot genoeg is. Om uw eigen risico en het risico voor het netwerk te minimaliseren, worden gebruikers sterk aangemoedigd om hun eigen hardware te verkrijgen en gebruiken.
-
-<a href="https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/">Meer over beloningen en boetes</a>
 </ExpandableCard>
 
 ## Verder lezen {#further-reading}
@@ -185,4 +183,3 @@ Offline boetes zijn evenredig aan hoeveel andere validators er tegelijkertijd of
 - [How To: Shop For Ethereum Validator Hardware](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
 - [Step by Step: How to join the Ethereum 2.0 Testnet](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Eth2 Slashing Prevention Tips](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
-- [Rewards and Penalties on Ethereum 2.0](https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/) - _James BeckMarch 2020_

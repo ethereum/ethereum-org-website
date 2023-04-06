@@ -305,5 +305,6 @@
   "h005-c-label": "Eth1",
   "h005-c-explanation": "Eth1 was the original name given to the execution layer, not the consensus layer.",
   "h005-d-label": "Staking",
-  "h005-d-explanation": "Staking is depositing ETH into a smart contract to help secure the chain."
+  "h005-d-explanation": "Staking is depositing ETH into a smart contract to help secure the chain.",
+  "page-assets-merge": "The Merge"
 }

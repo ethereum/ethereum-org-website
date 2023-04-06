@@ -185,7 +185,7 @@ event Deposit(
 
 其中 `sender` 是用 `assets` 兑换 `shares`，并将这些 `shares` 转移给 `owner` 的用户。
 
-#### Widthdraw 事件
+#### 提款事件
 
 **必须**在存款人用 [`redeem`](#redeem) 或 [`withdraw`](#withdraw) 方法从资金库中取出份额时发出。
 
