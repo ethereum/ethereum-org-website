@@ -132,5 +132,13 @@
   "page-calltocontribute-link": "modelo de documentação flexível",
   "page-calltocontribute-link-2": "Servidor do Discord",
   "page-calltocontribute-span": "Editar página",
-  "page-calltocontribute-title": "Ajude-nos com esta página"
+  "page-calltocontribute-title": "Ajude-nos com esta página",
+  "layer-2-arbitrum-note": "Provas de fraude somente para usuários na lista de permissões, lista de permissões ainda não está aberta",
+  "layer-2-boba-note": "Validação de estado em desenvolvimento",
+  "layer-2-metis-note": "Provas de fraude em desenvolvimento",
+  "layer-2-optimism-note": "Provas de falha em desenvolvimento",
+  "back-to-top": "Voltar ao topo",
+  "banner-page-incomplete": "Esta página está incompleta e adoraríamos sua ajuda. Edite-a e adicione qualquer informação que você considere útil.",
+  "next": "Próximo",
+  "previous": "Anterior"
 }
