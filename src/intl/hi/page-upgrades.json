@@ -5,11 +5,10 @@
   "page-upgrades-merge-date": "सितंबर 2022",
   "page-upgrades-shards-date": "~2023",
   "page-upgrades-pbs": "Not imminent - expect 2024/25",
-  "page-upgrades-withdrawals": "Q1/Q2 2023",
-  "page-upgrades-merge-banner-intro": "मर्ज आगे बढ़ रहा है, और एथेरियम में बदलाव के साथ आता है।",
-  "page-upgrades-merge-banner-content-outdated": "इन बदलावों से संबंधित इस पेज का कुछ कंटेंट पुराना है। अपडेट जल्द ही आ रहे हैं।",
-  "page-upgrades-merge-banner-developers-landing": "कुछ दस्तावेज़ों में एक बैनर होता है जो दर्शता है कि वे पुराने हैं। अपडेट जल्द ही आ रहे हैं।",
   "page-upgrades-post-merge-banner-tutorial-ood": "मर्ज के बाद यह ट्यूटोरियल पुराना हो गया है और शायद काम न करे। अगर आप योगदान देना चाहते हैं, तो कृपया PR बढ़ाएँ।",
-  "page-upgrades-post-merge-banner-tutorial-light-node-ood": "मर्ज के बाद यह ट्यूटोरियल पुराना हो चुका है। लाइट नोड्स फ़िलहाल हिस्सेदारी के सबूत पर काम नहीं करते हैं, लेकिन जल्दी ही शिप किए जाने की उम्मीद है।",
-  "page-upgrades-post-merge-banner-governance-ood": "मर्ज के बाद इस पेज का कुछ कंटेंट पुराना है। अगर आप योगदान देना चाहते हैं, तो कृपया PR बढ़ाएँ।"
+  "page-upgrades-post-merge-banner-governance-ood": "मर्ज के बाद इस पेज का कुछ कंटेंट पुराना है। अगर आप योगदान देना चाहते हैं, तो कृपया PR बढ़ाएँ।",
+  "page-upgrades-upgrades-guide": "एथेरियम अपग्रेड के लिए मार्गदर्शिका",
+  "page-upgrades-upgrades-docking": "मर्ज",
+  "page-upgrades-shard-title": "शार्डिंग",
+  "page-upgrades-upgrades-beacon-chain": "बीकन चेन"
 }
