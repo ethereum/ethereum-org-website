@@ -111,7 +111,7 @@ API_URL = "your-api-url"
 PRIVATE_KEY = "your-private-key"
 ```
 
-<InfoBanner isWarning={true}>
+<InfoBanner isWarning>
 不要提交 <code>.env</code>！ 请确保永远不要与任何人共享或公开您的 <code>.env</code> 文件，因为这样做会泄露您的私钥。 如果您使用版本控制，请将您的 <code>.env</code> 添加到 <a href="https://git-scm.com/docs/gitignore">gitignore</a> 文件中。
 </InfoBanner>
 

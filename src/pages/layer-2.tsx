@@ -640,7 +640,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
       </ContentBox>
       {/* DYOR Section */}
       <ContentBox>
-        <InfoBanner isWarning={true}>
+        <InfoBanner isWarning>
           <SectionHeading>
             <Translation id="layer-2-dyor-title" />
           </SectionHeading>

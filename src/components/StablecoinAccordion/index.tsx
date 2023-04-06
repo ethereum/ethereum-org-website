@@ -164,7 +164,7 @@ const StablecoinAccordion: React.FC<IProps> = () => {
               descId="page-stablecoins-accordion-buy-requirement-1-description"
             />
           </StepBoxContainer>
-          <InfoBanner isWarning={true}>
+          <InfoBanner isWarning>
             <Translation id="page-stablecoins-accordion-buy-warning" />
           </InfoBanner>
         </LeftColumnPanel>
