@@ -128,6 +128,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "he",
+    "hrefLang": "he",
+    "name": "Hebrew",
+    "localName": "עִבְרִית",
+    "langDir": "rtl",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "hi",
     "hrefLang": "hi",
     "name": "Hindi",
