@@ -25,7 +25,7 @@ On-chain scaling requires changes to the Ethereum protocol (layer 1 [Mainnet](/g
 
 ### Sharding {#sharding}
 
-Sharding is the process of splitting a database. Subsets of validators would be responsible for individual shards rather than keeping track of all of Ethereum. Sharding was on the Ethereum [roadmap](/roadmap/) for a long time, and was once intended to be shipped before The Merge to proof-of-stake. However, but the rapid development of [layer 2 rollups](#layer-2-scaling) and the invention of [Danksharding](/roadmap/danksharding) (adding blobs of rollup data to Ethereum blocks that can be very efficiently verified by validators) has led the Ethereum community to favour rollup-centric scaling instead of scaling by sharding. This will also help to keep Ethereum's consensus logic simpler.
+Sharding is the process of splitting a database. Subsets of validators would be responsible for individual shards rather than keeping track of all of Ethereum. Sharding was on the Ethereum [roadmap](/roadmap/) for a long time, and was once intended to be shipped before The Merge to proof-of-stake. However, the rapid development of [layer 2 rollups](#layer-2-scaling) and the invention of [Danksharding](/roadmap/danksharding) (adding blobs of rollup data to Ethereum blocks that can be very efficiently verified by validators) has led the Ethereum community to favour rollup-centric scaling instead of scaling by sharding. This will also help to keep Ethereum's consensus logic simpler.
 
 ## Off-chain scaling {#off-chain-scaling}
 
