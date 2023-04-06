@@ -7,10 +7,10 @@ import { BattleTestedIcon } from "./BattleTestedIcon"
 import { BloxstakingGlyphIcon } from "./BloxstakingGlyphIcon"
 import { BugBountyIcon } from "./BugBountyIcon"
 import { CautionProductGlyphIcon } from "./CautionProductGlyphIcon"
-import { StakingDappnodeGlyphIcon } from "./StakingDappnodeGlyphIcon"
 import { DefaultOpenSourceGlyphIcon } from "./DefaultOpenSourceGlyphIcon"
 import { DockerIcon } from "./DockerIcon"
 import { EconomicalIcon } from "./EconomicalIcon"
+import { EthpoolGlyphIcon } from "./EthpoolGlyphIcon"
 import { GreenCheckProductGlyphIcon } from "./GreenCheckProductGlyphIcon"
 import { KilnGlyphIcon } from "./KilnGlyphIcon"
 import { LidoGlyphIcon } from "./LidoGlyphIcon"
@@ -23,6 +23,7 @@ import { SelfCustodyIcon } from "./SelfCustodyIcon"
 import { StafiGlyphIcon } from "./StafiGlyphIcon"
 import { StakefishGlyphIcon } from "./StakefishGlyphIcon"
 import { StakewiseGlyphIcon } from "./StakewiseGlyphIcon"
+import { StakingDappnodeGlyphIcon } from "./StakingDappnodeGlyphIcon"
 import { StakingGlyphCentralizedIcon } from "./StakingGlyphCentralizedIcon"
 import { StakingGlyphCloudIcon } from "./StakingGlyphCloudIcon"
 import { StakingGlyphCPUIcon } from "./StakingGlyphCPUIcon"
@@ -44,10 +45,10 @@ export {
   BloxstakingGlyphIcon,
   BugBountyIcon,
   CautionProductGlyphIcon,
-  StakingDappnodeGlyphIcon,
   DefaultOpenSourceGlyphIcon,
   DockerIcon,
   EconomicalIcon,
+  EthpoolGlyphIcon,
   GreenCheckProductGlyphIcon,
   KilnGlyphIcon,
   LidoGlyphIcon,
@@ -61,6 +62,7 @@ export {
   StakefishGlyphIcon,
   StakewiseGlyphIcon,
   StakingGlyphCentralizedIcon,
+  StakingDappnodeGlyphIcon,
   StakingGlyphCloudIcon,
   StakingGlyphCPUIcon,
   StakingGlyphEtherCircleIcon,
