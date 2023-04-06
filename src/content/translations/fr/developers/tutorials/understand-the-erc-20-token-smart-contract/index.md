@@ -6,9 +6,8 @@ tags:
   - "contrats intelligents"
   - "jetons"
   - "solidity"
-  - "premiers pas"
   - "erc-20"
-skill: beginner
+skill: débutant
 lang: fr
 published: 2020-04-05
 source: EthereumDev

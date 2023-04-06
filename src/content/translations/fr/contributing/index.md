@@ -26,7 +26,8 @@ Le site ethereum.org, comme Ethereum plus largement, est un projet open source. 
 - [Créer/modifier du contenu](/contributing/#how-to-update-content) _– Proposez de nouvelles pages ou des modifications de ce qui existe déjà_
 - [Ajouter une couche 2](/contributing/adding-layer-2s/) _– Ajoutez une couche 2 à une page pertinente_
 - [Ajouter un produit ou un service de mise en jeu](/contributing/adding-staking-products/) - _Ajouter un projet qui aide à faciliter la mise en jeu, mise en commun, ou mise en jeu en tant que service_
-- [Ajouter un portefeuille](/contributing/adding-wallets/) _- Ajouter un portefeuille pour la [page de recherche des portefeuilles.](/wallets/find-wallet/)_
+- [Ajouter un portefeuille](/contributing/adding-wallets/) _- Ajouter un portefeuille pour la [page de recherche des portefeuilles](/wallets/find-wallet/)_
+- [Suggérer un projet pour notre page DeSci](/contributing/adding-desci-projects/) _- Ajouter un projet construit sur Ethereum qui contribue à la science décentralisée_
 
 _Une question ?_ 🤔 Rejoignez-nous sur notre [serveur Discord](https://discord.gg/CetY6Y4)
 
