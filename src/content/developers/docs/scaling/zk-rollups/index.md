@@ -240,7 +240,7 @@ Projects working on zkEVMs include:
 
 - **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)** - _is a decentralized ZK Rollup on the Ethereum mainnet working on a zero-knowledge Ethereum Virtual Machine (zkEVM) that executes Ethereum transactions in a transparent way, including smart contracts with zero-knowledge-proof validations._
 
-- **[Taiko](https://taiko.xyz)** - _Taiko is building a fully decentralized, Ethereum-equivalent ZK-rollup._
+- **[Taiko](https://taiko.xyz)** - _Taiko is a fully decentralized, Ethereum-equivalent ZK Rollup (a [Type 1 ZK-EVM](https://vitalik.ca/general/2022/08/04/zkevm.html))._
 
 ## Further reading on ZK-rollups reading {#further-reading-on-zk-rollups}
 
