@@ -49,7 +49,7 @@ This is a curated list of user research done in web3 that may help with design a
 - [ETHhGlobal](https://ethglobal.com/)
 
 ## Design DAOs and communities {#Design-DAOs-and-communities}
-Get involved in community-driven organizations that are focused on professional design-related services in web3 or join design groups to discuss with other members design and research related topics and trends.
+Get involved in professional community-driven organizations or join design groups to discuss design and research related topics and trends with other members.
 
 - [Vectordao.com](https://vectordao.com/)
 - [Deepwork.studio](https://www.deepwork.studio/)
