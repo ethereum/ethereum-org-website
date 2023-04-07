@@ -4,57 +4,57 @@ description: Introduction to UX design an research in web3 space and Ethereum
 lang: en
 ---
 
-Web3 Design Resources for Ethereum.org
-Guides, resources, and tools for web3 Designers
+If you’re new to designing with Ethereum, you’re in the right place. These resources written by the Ethereum community will introduce you to the basics of the design and research in web3 and present core concepts that might be different from other app design you’re familiar with.
 
-## Designing for web3 {#designing-for-web3}
+Need a more basic understanding of crypto first? Check out [**Learn hub**](/learn/).
 
-- [Web3 Design Principles](https://medium.com/@lyricalpolymath/web3-design-principles-f21db2f240c1#2a8e)
-- [Blockchain Design Principles](https://medium.com/design-ibm/blockchain-design-principles-599c5c067b6e)
-- [Dimensions of web3 UX](https://uxdesign.cc/the-levels-of-web3-user-experience-4f2ad113e37d)
-- [Web3 Design Framework](https://medium.com/@lyricalpolymath/web3designdecisionframework-e84075816515)
-- [Web3 Product Design](https://www.youtube.com/watch?v=UaDHYfq_XKY&t=322s) (video)
-- [Web3 Design Systems](https://www.youtube.com/watch?v=TS6krLxJWr4) (video)
-- [Blockchain UX Roadmap](https://www.linkedin.com/pulse/blockchain-ux-roadmap-building-first-class-product-case-kos-chekanov?trk=organization-update-content_share-article)
-- [Web3 Mindset for UX Designers](https://medium.com/expedite-design/web3-mindset-for-ux-designers-expedite-design-7e8e7784b9bc)
-- [Blockchain Designs](https://blockchainz.design/)
-- [Web3 Design Patterns](https://www.web3designpatterns.io/)
+## Start with user research {#Start-with-user-research}
+Effective design goes beyond creating visually appealing user interfaces. It involves gaining a deep understanding of the user's needs, objectives, and driving factors. Therefore, we highly recommend that all designers adopt a design process, such as the [**double diamond process**](https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model)), to ensure that their work is deliberate and intentional.
 
+- [A complete guide to UX Research in web3](https://uxplanet.org/a-complete-guide-to-ux-research-for-web-3-0-products-d6bead20ebb1) - Simple guide how to do research
+- [How to Approach UX Decisions in Web3](https://archive.devcon.org/archive/watch/6/data-empathy-how-to-approach-ux-decisions-in-web3/) - A brief overview of quantitative and qualitative research and the differences between the two (video, 6 min)
+- [Being a ux researcher in web3](https://medium.com/@georgia.rakusen/what-its-like-being-a-user-researcher-in-web3-6a4bcc096849) - A personal view on what it is like being a UX researcher in crypto
 
-## Web3 Design Case Studies {#design-case-studies}
+## Research studies done in web3 {#Research-done-in-web3}
+- [Staking survey: Key trends, takeaways, and predictions - Eth Staker](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo)
+- [Usability and user satisfaction survey - Ethereum.org](https://lookerstudio.google.com/reporting/0a189a7c-a890-40db-a5c6-009db52c81c9)
+- [2022 DAO Research Update: What do DAO Builders Need?](https://blog.aragon.org/2022-dao-research-update/)
+- [ConSensys: DeFi User Research Report 2022](https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf)
+- [Going on Safari: Researching Users in the Metaverse](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube) (video, 27 min)
 
-- [Deep Work Studio](https://deepwork.studio/case-studies/))
+## Design for web3 {#Design-for-web3}
+
+- [Web3 Design Principles](https://medium.com/@lyricalpolymath/web3-design-principles-f21db2f240c1) - A framework of UX rules for blockchain based dapps
+- [Blockchain Design Principles](https://medium.com/design-ibm/blockchain-design-principles-599c5c067b6e) - Lessons learned by the blockchain design team at IBM
+- [Dimensions of web3 UX](https://uxdesign.cc/the-levels-of-web3-user-experience-4f2ad113e37d) - An analysis of different layers of web3 UX and its challenges
+- [Web3 Design Patterns](https://www.web3designpatterns.io/)- A curated library of design patterns from real Web3 products
+- [W3design.io](https://w3design.io/) - A curated library of UI flows of different projects in the ecosystem
+
+## Web3 Design Case Studies {#Design-case-studies}
+
+- [Deep Work Studio](https://deepwork.studio/case-studies/)
 - [Crypto UX Handbook](https://www.cryptouxhandbook.com/)
 
-## Starting with user research in web3 {#starting-with-user-research}
+## Design Bounties {Bounties}
+Start working on small projects in web3 or join web3 hackatons. 
 
-- [Complete guide to UX Research in web3](https://uxplanet.org/a-complete-guide-to-ux-research-for-web-3-0-products-d6bead20ebb1)
-- [Being a ux researcher in web3](https://medium.com/@georgia.rakusen/what-its-like-being-a-user-researcher-in-web3-6a4bcc096849)
-- [How to run usability test for web3 apps](https://youtu.be/NlNGbHgJbAU)
-- [Web3 usability test](https://archive.devcon.org/archive/watch/5/testing-dapps-with-realistic-web3-mocking/?playlist=Devcon%205&tab=YouTube)
-
-## Research studies done in web3 {#research-done-in-web3}
-- [Staking survey: Key trends, takeaways, and predictions - Eth Staker](https://uxplanet.org/a-complete-guide-to-ux-research-for-web-3-0-products-d6bead20ebb1)
-- [Usability and user satisfaction survey - Ethereum.org](https://medium.com/@georgia.rakusen/what-its-like-being-a-user-researcher-in-web3-6a4bcc096849)
-- [2022 DAO Research Update: What do DAO Builders Need?](https://youtu.be/NlNGbHgJbAU)
-- [ConSensys: DeFi User Research Report 2022](https://archive.devcon.org/archive/watch/5/testing-dapps-with-realistic-web3-mocking/?playlist=Devcon%205&tab=YouTube)
-
-## Bounties {#bounties}
 - [Dework](https://app.dework.xyz/bounties)
 - [Gitcoin](https://gitcoin.co/bounties)
-- [Gitcoin Hackathons](https://gitcoin.co/hackathons)
+- [Buildbox hackathons](https://gitcoin.co/hackathons)
+- [ETHhGlobal](https://ethglobal.com/)
 
-## Design DAOs {#design-DAOs}
+## Design DAOs and communities {Design-DAOs-and-communities}
+Get involved in community-driven organizations that are focused on professional design-related services in web3 or join design groups to discuss with other members design and research related topics and trends.
+
 - [Vectordao.com](https://vectordao.com/)
 - [Deepwork.studio](https://www.deepwork.studio/)
 - [Designer-dao.xyz](https://www.designer-dao.xyz/)
-
-## Communities {#communities}
 - [Openux.xyz](https://openux.xyz/about)
 - [t.me/web3uxdesign](https://t.me/web3uxdesign)
 
-## Design Systems {#design-systems}
-- [Optimism Design](https://www.figma.com/@oplabs)
+## Design Systems {Design-systems}
+- [Optimism Design](https://www.figma.com/@oplabs) (Figma)
+- [Ethereum.org Design system](https://www.figma.com/@ethdotorg) (Figma)
+- [Finity, a design system for Web3 by Polygon](https://finity.polygon.technology/) (Figma)
 - [ENS Design system](https://thorin.ens.domains/)
-- [Ethereum.org Design system](https://www.figma.com/@ethdotorg)
 
