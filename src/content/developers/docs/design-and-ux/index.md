@@ -41,14 +41,14 @@ This is a curated list of user research done in web3 that may help with design a
 - [Deep Work Studio](https://deepwork.studio/case-studies/)
 - [Crypto UX Handbook](https://www.cryptouxhandbook.com/)
 
-## Design Bounties {Bounties}
+## Design Bounties {#Bounties}
 
 - [Dework](https://app.dework.xyz/bounties)
 - [Gitcoin](https://gitcoin.co/bounties)
 - [Buildbox hackathons](https://gitcoin.co/hackathons)
 - [ETHhGlobal](https://ethglobal.com/)
 
-## Design DAOs and communities {Design-DAOs-and-communities}
+## Design DAOs and communities {#Design-DAOs-and-communities}
 Get involved in community-driven organizations that are focused on professional design-related services in web3 or join design groups to discuss with other members design and research related topics and trends.
 
 - [Vectordao.com](https://vectordao.com/)
