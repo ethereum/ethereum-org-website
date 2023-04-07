@@ -202,7 +202,7 @@ Formal verification is considered important for smart contracts because it helps
 - [GitHub](https://github.com/trailofbits/manticore)
 - [Documentation](https://github.com/trailofbits/manticore/wiki)
 
-**Diligence Fuzzing** - _A holistic fuzzing tool, powered by the Harvey fuzzing engine, that can automatically execute millions of inputs on a smart contract and generate unit and system tests for you._
+**Diligence Fuzzing** - _A holistic fuzzing tool that can automatically execute millions of inputs on a smart contract and generate unit and system tests for you which is powered by the Harvey fuzzing engine._
 
 - [Website](https://consensys.net/diligence/fuzzing/)
 - [Documentation](https://fuzzing-docs.diligence.tools/)
