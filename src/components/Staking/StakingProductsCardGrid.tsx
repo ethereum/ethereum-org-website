@@ -73,7 +73,7 @@ const getIconFromName = (
     dappnode: StakingDappnodeGlyphIcon,
     docker: DockerIcon,
     defaultOpenSource: DefaultOpenSourceGlyphIcon,
-    ethpools: EthpoolGlyphIcon,
+    ethpool: EthpoolGlyphIcon,
     kiln: KilnGlyphIcon,
     lido: LidoGlyphIcon,
     rocketPool: RocketPoolGlyphIcon,
