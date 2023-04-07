@@ -207,7 +207,7 @@ Formal verification is considered important for smart contracts because it helps
 - [Website](https://consensys.net/diligence/fuzzing/)
 - [Documentation](https://fuzzing-docs.diligence.tools/)
 
-**Diligence Scribble** - _Scribble is a specification language and runtime verification tool that allows you to annotate smart contracts with properties that allow you to automatically test smart contracts with tools such as Diligence Fuzzing._
+**Diligence Scribble** - _Scribble is a specification language and runtime verification tool that allows you to annotate smart contracts with properties that allow you to automatically test the contracts with tools such as Diligence Fuzzing or MythX._
 
 - [Website](https://consensys.net/diligence/scribble/)
 - [Documentation](https://docs.scribble.codes/)
