@@ -792,7 +792,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
             />
           ))}
         </StyledCardGrid>
-        <InfoBanner isWarning={true} shouldCenter={true}>
+        <InfoBanner isWarning shouldCenter>
           <H3>
             <Translation id="page-stablecoins-research-warning-title" />
           </H3>

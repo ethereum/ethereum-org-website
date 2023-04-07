@@ -4,11 +4,11 @@ description: Uma análise aprofundada na anatomia de um contrato inteligente - f
 lang: pt-br
 ---
 
-Um smart contract é um programa executado em um endereço no Ethereum. Eles são compostos por dados e funções que podem ser executadas ao receber uma transação. Aqui vai uma visão geral do que compõe um contrato inteligente.
+Um contrato inteligente (smart contract) é um programa executado em um endereço na Ethereum. Eles são compostos por dados e funções que podem ser executadas ao receber uma transação. Veja aqui uma visão geral do que compõe um contrato inteligente.
 
 ### Pré-requisitos {#prerequisites}
 
-É recomendável antes ler sobre [contratos inteligentes](/developers/docs/smart-contracts/). Este documento presume que você já está familiarizado com linguagens de programação como JavaScript ou Python.
+Não deixe de ler sobre [contratos inteligentes](/developers/docs/smart-contracts/). Este documento presume que você já está familiarizado com linguagens de programação como JavaScript ou Python.
 
 ## Dados {#data}
 
@@ -16,7 +16,7 @@ Quaisquer dados de contrato devem ser atribuídos a um local: seja para `armazen
 
 ### Armazenamento {#storage}
 
-Dados persistentes são referidos como armazenamento e são representados por variáveis de estado. Esses valores são armazenados permanentemente na blockchain. Você precisa declarar o tipo para que o contrato possa manter um registro de quanto espaço na cadeia de blocos será necessário quando ele compilar.
+Dados persistentes são referidos como armazenamento e são representados por variáveis de estado. Esses valores são armazenados permanentemente na blockchain. É necessário declarar o tipo para que o contrato possa manter um registro de quanto espaço na blockchain será necessário quando ele compilar.
 
 ```solidity
 // Exemplo Solidity
@@ -31,7 +31,7 @@ contract SimpleStorage {
 storedData: int128
 ```
 
-Se você já programou linguagens orientadas a objetos, provavelmente você estará familiarizado com a maioria dos tipos. No entanto, `address` (endereço) deve ser novo para você se você for novo no desenvolvimento com Ethereum.
+Se você já programou linguagens orientadas a objetos, provavelmente você estará familiarizado com a maioria dos tipos. Entretanto, `address` (endereço) deve ser novo para você se você for novo no desenvolvimento com Ethereum.
 
 Um tipo `address` pode conter um endereço Ethereum que equivale a 20 bytes ou 160 bits. Ele retorna em hexadecimal com um 0 à frente.
 
@@ -43,8 +43,8 @@ Outros tipos incluem:
 - arrays de bytes de tamanho fixo
 - arrays de bytes de tamanho dinâmico
 - Literais racionais e inteiros
-- String literals
-- Hexadecimais literais
+- Literais de strings
+- Literais hexadecimais
 - Enumeradores
 
 Para mais explicação, dê uma olhada na documentação:
@@ -54,13 +54,13 @@ Para mais explicação, dê uma olhada na documentação:
 
 ### Memória {#memory}
 
-Valores que são armazenados apenas para a duração da execução da função de contratos são chamadas de variáveis de memória. Como estas não são armazenadas permanentemente na cadeia de blocos, são muito mais baratas de usar.
+Valores que são armazenados apenas para a duração da execução da função de contratos são chamadas de variáveis de memória. Como estes não são armazenados permanentemente na blockchain, são muito mais baratos de usar.
 
-Saiba mais sobre como o EVM armazena dados (Storage, Memória e Stack) em [Solidity docs](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
+Saiba mais sobre como a EVM armazena dados (Storage, Memória e Stack) em [Solidity docs](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
 
 ### Variáveis de ambiente {#environment-variables}
 
-Além das variáveis definidas no seu contrato, existem algumas variáveis globais especiais. Elas são usadas principalmente para fornecer informações sobre a cadeia de blocos ou transação atual.
+Além das variáveis definidas no seu contrato, existem algumas variáveis globais especiais. Elas são usadas principalmente para fornecer informações sobre a blockchain (cadeia de blocos) ou transação atual.
 
 Exemplos:
 
@@ -203,7 +203,7 @@ Um contrato completo pode parecer algo assim. Aqui a função `construtor` forne
 
 ## Eventos e registros {#events-and-logs}
 
-Eventos permitem que você se comunique com seu contrato inteligente na interface do seu site ou de outros aplicativos de assinatura. Quando uma transação é minerada, os contratos inteligentes podem emitir eventos e escrever registros na cadeia de blocos que o frontend pode então processar.
+Eventos permitem que você se comunique com seu contrato inteligente na interface do seu site ou de outros aplicativos de assinatura. Quando uma transação é minerada, os contratos inteligentes podem emitir eventos e escrever registros na blockchain que o frontend pode então processar.
 
 ## Exemplos anotados {#annotated-examples}
 
@@ -264,11 +264,11 @@ contract Token {
 
     // Eventos permitem registro de atividade no blockchain.
     // Clientes Ethereum podem ouvir eventos para reagir às alterações do estado do contrato.
-    // Saiba mais: https://solidity.readthedocs.io/en/v0.5.10/contracts. tml#eventos
+    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#events
     event Transfer(address from, address to, uint amount);
 
-    // Inicializa os dados do contrato definindo o `owner`
-    // para o endereço do criador do contrato.
+    // Initializes the contract's data, setting the `owner`
+    // to the address of the contract creator.
     constructor() public {
     // Todos os contratos inteligentes dependem de transações externas para acionar suas funções.
         // `msg` é uma variável global que inclui dados relevantes sobre a transação em questão,

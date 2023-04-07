@@ -173,8 +173,6 @@ Embora um servidor virtual privado (VPS) possa ser usado como substituto do hard
 Quanto mais clientes validadores forem executados em uma única solução centralizada de armazenamento em nuvem, mais perigoso se torna para esses usuários. Qualquer evento que coloque esses provedores off-line, seja por um ataque, demandas regulatórias ou apenas quedas de energia/internet, fará com que todos os clientes validadores que dependem desse servidor fiquem off-line ao mesmo tempo.
 
 As penalidades por ficar off-line são proporcionais a quantos outros estão off-line ao mesmo tempo. O uso de um VPS aumenta muito o risco de que as penalidades por ficar offl-ine sejam mais severas e aumenta o risco de vazamento ou corte quadrático no caso de a interrupção ser grande o suficiente. Para minimizar seu próprio risco e o risco para a rede, os usuários são fortemente encorajados a obter e operar seu próprio hardware.
-
-<a href="https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/">Mais sobre recompensas e penalidades</a>
 </ExpandableCard>
 
 <ExpandableCard title="Como posso desbloquear minhas recompensas ou obter meu ETH de volta?">
@@ -197,4 +195,3 @@ Para desbloquear e receber todo o seu saldo de volta, você deve concluir o proc
 - [Como comprar o hardware validador do Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
 - [Passo a passo: Como ingressar na rede de testes da Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _ Butta_
 - [Dicas de prevenção de cortes Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020 _
-- [Recompensas e penalidades no Ethereum 2.0](https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/) - _James Beck, Maço de 2020_

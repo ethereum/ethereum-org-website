@@ -138,7 +138,7 @@ def decode_length(input):
         listLen = to_integer(substr(input, 1, lenOfListLen))
         return (1 + lenOfListLen, listLen, list)
     else:
-        raise Exception("input don't conform RLP encoding form")
+        raise Exception("input does not conform to RLP encoding form")
 
 def to_integer(b):
     length = len(b)
@@ -158,4 +158,4 @@ def to_integer(b):
 
 ## 相关主题 {#related-topics}
 
-- [默克尔前缀树](/developers/docs/data-structures-and-encoding/patricia-merkle-tries)
+- [默克尔前缀树](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)
