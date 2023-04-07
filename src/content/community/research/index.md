@@ -216,7 +216,7 @@ To onboard more people onto Ethereum, the ecosystem must improve the UX/UI. This
 
 ### Economics {#economics}
 
-Economics research in Ethereum broadly follows two approaches: validate the security of mechanisms relying on economic incentives ("microeconomics") and analyse the flows of value between protocols, applications and users ("macroeconomics"). There are complex crypto-economic factors relating to Ethereum's native asset (ether) and the tokens built on top of it (for example NFTs and ERC20 tokens).
+Economics research in Ethereum broadly follows two approaches: validate the security of mechanisms relying on economic incentives ("microeconomics") and analyze the flows of value between protocols, applications and users ("macroeconomics"). There are complex crypto-economic factors relating to Ethereum's native asset (ether) and the tokens built on top of it (for example NFTs and ERC20 tokens).
 
 #### Background reading {#background-reading-9}
 
@@ -248,7 +248,7 @@ Blockspace markets govern the inclusion of end-user transactions, either directl
 
 ### Proof-of-stake incentives {#proof-of-stake-incentives}
 
-Validators use Ethereum's native asset (ether) as collateral against dishonest behaviour. The cryptoeconomics of this determines the security of the network. Sophisticated validators may be able to exploit the nuances of the incentive layer to launch explicit attacks.
+Validators use Ethereum's native asset (ether) as collateral against dishonest behavior. The cryptoeconomics of this determines the security of the network. Sophisticated validators may be able to exploit the nuances of the incentive layer to launch explicit attacks.
 
 #### Background reading {#background-reading-11}
 
