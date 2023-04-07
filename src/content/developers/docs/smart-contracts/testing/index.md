@@ -197,18 +197,24 @@ Formal verification is considered important for smart contracts because it helps
 
 - [GitHub](https://github.com/crytic/echidna/)
 
-**Harvey** - _Automated fuzzing tool useful for detecting property violations in smart contract code._
-
-- [Website](https://consensys.net/diligence/fuzzing/)
-
 **Manticore** - _Dynamic symbolic execution framework for analyzing EVM bytecode._
 
 - [GitHub](https://github.com/trailofbits/manticore)
 - [Documentation](https://github.com/trailofbits/manticore/wiki)
 
+**Diligence Fuzzing** - _A holistic fuzzing tool, powered by the Harvey fuzzing engine, that can automatically execute millions of inputs on a smart contract and generate unit and system tests for you._
+
+- [Website](https://consensys.net/diligence/fuzzing/)
+- [Documentation](https://fuzzing-docs.diligence.tools/)
+
+**Diligence Scribble** - _Scribble is a specification language and runtime verification tool that allows you to annotate smart contracts with properties that allow you to automatically test smart contracts with tools such as Diligence Fuzzing._
+
+- [Website](https://consensys.net/diligence/scribble/)
+- [Documentation](https://docs.scribble.codes/)
+
 ### Smart contract auditing services {#smart-contract-auditing-services}
 
-**ConsenSys Diligence** - _Smart contract auditing service helping projects across the blockchain ecosystem ensure their protocols are ready for launch and built to protect users._
+**Consensys Diligence** - _Smart contract auditing service helping projects across the blockchain ecosystem ensure their protocols are ready for launch and built to protect users._
 
 - [Website](https://consensys.net/diligence/)
 
