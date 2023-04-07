@@ -214,7 +214,7 @@ Formal verification is considered important for smart contracts because it helps
 
 ### Smart contract auditing services {#smart-contract-auditing-services}
 
-**Consensys Diligence** - _Smart contract auditing service helping projects across the blockchain ecosystem ensure their protocols are ready for launch and built to protect users._
+**ConsenSys Diligence** - _Smart contract auditing service helping projects across the blockchain ecosystem ensure their protocols are ready for launch and built to protect users._
 
 - [Website](https://consensys.net/diligence/)
 
