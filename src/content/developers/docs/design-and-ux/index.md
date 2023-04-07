@@ -15,11 +15,17 @@ Effective design goes beyond creating visually appealing user interfaces. It inv
 - [How to Approach UX Decisions in Web3](https://archive.devcon.org/archive/watch/6/data-empathy-how-to-approach-ux-decisions-in-web3/) - A brief overview of quantitative and qualitative research and the differences between the two (video, 6 min)
 - [Being a ux researcher in web3](https://medium.com/@georgia.rakusen/what-its-like-being-a-user-researcher-in-web3-6a4bcc096849) - A personal view on what it is like being a UX researcher in crypto
 
-## Research studies done in web3 {#Research-done-in-web3}
+## Research studies in web3 {#Research-in-web3}
+This is a curated list of user research done in web3 that may help with design and product decisions or work as an inspiration to conduct own study.
 - [Staking survey: Key trends, takeaways, and predictions - Eth Staker](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo)
 - [Usability and user satisfaction survey - Ethereum.org](https://lookerstudio.google.com/reporting/0a189a7c-a890-40db-a5c6-009db52c81c9)
+- [Usability study: Coverage pools](https://github.com/threshold-network/UX-User-Research/tree/main/Keep%20Coverage%20Pool)
+- [Usability study: Multi App Staking](https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf)
 - [2022 DAO Research Update: What do DAO Builders Need?](https://blog.aragon.org/2022-dao-research-update/)
 - [ConSensys: DeFi User Research Report 2022](https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf)
+- [Stellar: Cryptourrency Adoption in 2022](https://resources.stellar.org/hubfs/Crypto-adoption-report-SDF-wirex-2022.pdf)
+- [Bitcoin UX report](https://github.com/patestevao/BitcoinUX-report/blob/master/report.md)
+- [User research repository](https://github.com/threshold-network/UX-User-Research)
 - [Going on Safari: Researching Users in the Metaverse](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube) (video, 27 min)
 
 ## Design for web3 {#Design-for-web3}
@@ -36,7 +42,6 @@ Effective design goes beyond creating visually appealing user interfaces. It inv
 - [Crypto UX Handbook](https://www.cryptouxhandbook.com/)
 
 ## Design Bounties {Bounties}
-Start working on small projects in web3 or join web3 hackatons. 
 
 - [Dework](https://app.dework.xyz/bounties)
 - [Gitcoin](https://gitcoin.co/bounties)
@@ -49,6 +54,7 @@ Get involved in community-driven organizations that are focused on professional 
 - [Vectordao.com](https://vectordao.com/)
 - [Deepwork.studio](https://www.deepwork.studio/)
 - [Designer-dao.xyz](https://www.designer-dao.xyz/)
+- [We3.co](https://we3.co/)
 - [Openux.xyz](https://openux.xyz/about)
 - [t.me/web3uxdesign](https://t.me/web3uxdesign)
 
