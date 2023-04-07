@@ -58,7 +58,7 @@ Get involved in community-driven organizations that are focused on professional 
 - [Openux.xyz](https://openux.xyz/about)
 - [t.me/web3uxdesign](https://t.me/web3uxdesign)
 
-## Design Systems {Design-systems}
+## Design Systems {#Design-systems}
 - [Optimism Design](https://www.figma.com/@oplabs) (Figma)
 - [Ethereum.org Design system](https://www.figma.com/@ethdotorg) (Figma)
 - [Finity, a design system for Web3 by Polygon](https://finity.polygon.technology/) (Figma)
