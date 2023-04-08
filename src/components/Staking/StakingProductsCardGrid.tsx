@@ -40,6 +40,7 @@ import {
   StakewiseGlyphIcon,
   StakingDappnodeGlyphIcon,
   StereumGlyphIcon,
+  SquidGlyphIcon,
   UnknownProductGlyphIcon,
   WagyuGlyphIcon,
   WarningProductGlyphIcon,
@@ -80,6 +81,7 @@ const getIconFromName = (
     stafi: StafiGlyphIcon,
     stakewise: StakewiseGlyphIcon,
     stereum: StereumGlyphIcon,
+    squid: SquidGlyphIcon,
     wagyu: WagyuGlyphIcon,
     stakefish: StakefishGlyphIcon,
   }
