@@ -5,6 +5,7 @@ import { Tag } from "./Tag"
 import { Modal } from "./Modal"
 import { Checkbox } from "./Checkbox"
 import { Tabs } from "./Tabs"
+import { Table } from "./Table"
 import {
   accordionDefaultTheme,
   avatarDefaultTheme,
@@ -20,7 +21,6 @@ import {
   selectDefaultTheme,
   spinnerDefaultTheme,
   switchDefaultTheme,
-  tableDefaultTheme,
 } from "./components.utils"
 
 export default {
@@ -43,7 +43,7 @@ export default {
   Select: selectDefaultTheme,
   Spinner: spinnerDefaultTheme,
   Switch: switchDefaultTheme,
-  Table: tableDefaultTheme,
+  Table,
   Tabs,
   Tag,
 }
