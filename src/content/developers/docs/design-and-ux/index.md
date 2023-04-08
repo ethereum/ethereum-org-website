@@ -38,6 +38,7 @@ This is a curated list of user research done in web3 that may help with design a
 
 ## Web3 Design Case Studies {#Design-case-studies}
 
+- [How to write better web3 error messages](https://medium.com/@JonCrabb/how-to-design-better-web3-error-messages-bd96e12fa582)
 - [Deep Work Studio](https://deepwork.studio/case-studies/)
 - [Crypto UX Handbook](https://www.cryptouxhandbook.com/)
 
