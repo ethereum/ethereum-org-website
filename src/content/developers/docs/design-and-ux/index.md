@@ -21,11 +21,11 @@ This is a curated list of user research done in web3 that may help with design a
 - [Usability and user satisfaction survey - Ethereum.org](https://lookerstudio.google.com/reporting/0a189a7c-a890-40db-a5c6-009db52c81c9)
 - [Usability study: Coverage pools](https://github.com/threshold-network/UX-User-Research/tree/main/Keep%20Coverage%20Pool)
 - [Usability study: Multi App Staking](https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf)
+- [UX in cryptocurrency: An overview of UX in apps](https://docs.google.com/presentation/d/1s2OPSH5sMJzxRYaJSSRTe8W2iIoZx0PseIV-WeZWD1s/edit?usp=sharing)
 - [2022 DAO Research Update: What do DAO Builders Need?](https://blog.aragon.org/2022-dao-research-update/)
 - [ConSensys: DeFi User Research Report 2022](https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf)
 - [Stellar: Cryptourrency Adoption in 2022](https://resources.stellar.org/hubfs/Crypto-adoption-report-SDF-wirex-2022.pdf)
 - [Bitcoin UX report](https://github.com/patestevao/BitcoinUX-report/blob/master/report.md)
-- [User research repository](https://github.com/threshold-network/UX-User-Research)
 - [Going on Safari: Researching Users in the Metaverse](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube) (video, 27 min)
 
 ## Design for web3 {#Design-for-web3}
@@ -44,7 +44,7 @@ This is a curated list of user research done in web3 that may help with design a
 ## Design Bounties {#Bounties}
 
 - [Dework](https://app.dework.xyz/bounties)
-- [Gitcoin](https://gitcoin.co/bounties)
+- [Gitcoin](https://bounties.gitcoin.co/explorer)
 - [Buildbox hackathons](https://gitcoin.co/hackathons)
 - [ETHhGlobal](https://ethglobal.com/)
 
