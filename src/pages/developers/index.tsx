@@ -13,119 +13,113 @@ import PageMetadata from "../../components/PageMetadata"
 import {
   CardContainer,
   Content,
-  Page,
   GrayContainer,
 } from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
 
 import { getImage } from "../../utils/image"
 
-import { Context } from "../../types"
+import { ChildOnlyProp, Context } from "../../types"
+import { Box, Heading, Text } from "@chakra-ui/react"
 
-const HeroContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column-reverse;
-  }
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-  background: ${(props) => props.theme.colors.cardGradient};
-`
+const Page = (props: ChildOnlyProp) => (
+  <Box
+    display="flex"
+    flexDirection="column"
+    alignItems="center"
+    w="full"
+    my={0}
+    mx="auto"
+    {...props}
+  />
+)
 
-const HeroCopyContainer = styled.div`
-  flex: 0 1 500px;
-  max-width: 500px;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex: 0 1 400px;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-    max-width: 100%;
-    max-height: 340px;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    max-height: 280px;
-  }
-`
+const HeroContainer = (props: ChildOnlyProp) => (
+  <Box
+    display="flex"
+    justifyContent="space-between"
+    flexDirection={{ base: "column-reverse", sm: "row" }}
+    mt={8}
+    mb={16}
+    bg="cardGradient"
+    {...props}
+  />
+)
 
-const HeroCopy = styled.div`
-  background: ${(props) => props.theme.colors.background};
-  padding: 2rem;
-  border-radius: 4px;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  margin: 2rem;
-  @media (max-width: 1240px) {
-    margin-top: -2rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: -4rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-top: 2rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin: 0;
-  }
-`
+const HeroCopyContainer = (props: ChildOnlyProp) => (
+  <Box
+    flex={{ base: "0 1 400px", md: "0 1 500px" }}
+    w={{ base: "100%", md: "auto" }}
+    maxWidth={{ base: "100%", md: "500px" }}
+    maxHeight={{ base: "280px", md: "340px" }}
+    {...props}
+  />
+)
 
-const H1 = styled.h1`
-  font-style: normal;
-  font-weight: normal;
-  font-family: ${(props) => props.theme.fonts.monospace};
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 2rem;
-  line-height: 110%;
-  background: ${(props) => props.theme.colors.ednBackground};
-  padding: 0.5rem;
-  margin-top: 0rem;
-`
+const HeroCopy = (props: ChildOnlyProp) => (
+  <Box
+    p={8}
+    m={{ base: 0, sm: 8 }}
+    mt={{ base: -2, md: 8 }}
+    bg="background"
+    borderRadius="4px"
+    border="1px solid border"
+    {...props}
+  />
+)
 
-const Subtitle = styled.div`
-  font-size: 1.25rem;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-`
-const SubtitleWithMargin = styled(Subtitle)`
-  margin-bottom: 1.5rem;
-`
+const H1 = (props: ChildOnlyProp) => (
+  <Heading
+    as="h1"
+    fontSize="4xl"
+    fontWeight="medium"
+    fontFamily="monospace"
+    fontStyle="normal"
+    textTransform="uppercase"
+    lineHeight="110%"
+    bg="ednBackground"
+    p={2}
+    mt={0}
+    {...props}
+  />
+)
 
-const MonoSubtitle = styled.h2`
-  margin-bottom: 0rem;
-`
+const Subtitle = (props: ChildOnlyProp) => (
+  <Box fontSize="xl" lineHeight="140%" color="text200" {...props} />
+)
 
-const Hero = styled(GatsbyImage)`
-  flex: 1 1 50%;
-  max-width: 800px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-top: 3rem;
-  margin-left: 2rem;
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    align-self: center;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-top: 0;
-    margin-left: 0;
-  }
-`
+const SubtitleWithMargin = (props: ChildOnlyProp) => (
+  <Box fontSize="xl" lineHeight="140%" color="text200" mb={6} {...props} />
+)
 
-const Image = styled(GatsbyImage)`
-  max-width: 400px;
-  margin-top: 4rem;
-`
+const MonoSubtitle = (props: ChildOnlyProp) => (
+  <Heading as="h2" fontSize="" mb={0} {...props} />
+)
 
-const ImageContainer = styled.div`
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
+const Hero = (props: ChildOnlyProp) => (
+  <Box
+    flex="1 1 50%"
+    maxW="800px"
+    bgSize="cover"
+    bgRepeat="no-repeat"
+    mt={{ base: 0, md: 12 }}
+    ml={{ base: 0, md: 8 }}
+    alignSelf={{ base: "center", md: "" }}
+    {...props}
+  ></Box>
+)
 
-const StyledCardContainer = styled(CardContainer)`
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-`
+const Image = (props: ChildOnlyProp) => (
+  <Box maxW="400px" mt={16} {...props}></Box>
+)
+
+const ImageContainer = (props: ChildOnlyProp) => (
+  <Box display={{ base: "none", lg: "block" }} {...props} />
+)
+
+const StyledCardContainer = (props: ChildOnlyProp) => (
+  <Box display="flex" flexWrap="wrap" mx={-4} mt={8} mb={12} {...props} />
+)
 
 const TwoColumnContent = styled.div`
   display: flex;
@@ -266,11 +260,13 @@ const DevelopersPage = ({
               </Subtitle>
             </HeroCopy>
           </HeroCopyContainer>
-          <Hero
-            image={getImage(data.ednHero)!}
-            alt={t("alt-eth-blocks")}
-            loading="eager"
-          />
+          <Hero>
+            <GatsbyImage
+              image={getImage(data.ednHero)!}
+              alt={t("alt-eth-blocks")}
+              loading="eager"
+            ></GatsbyImage>
+          </Hero>
         </HeroContainer>
         <MonoSubtitle>
           <Translation id="page-developers-get-started" />
@@ -373,7 +369,12 @@ const DevelopersPage = ({
               <Translation id="page-developers-language-desc" />
             </p>
             <ImageContainer>
-              <Image image={getImage(data.doge)!} alt={t("page-assets-doge")} />
+              <Image>
+                <GatsbyImage
+                  image={getImage(data.doge)!}
+                  alt={t("page-assets-doge")}
+                ></GatsbyImage>
+              </Image>
             </ImageContainer>
           </Column>
           <Column>
