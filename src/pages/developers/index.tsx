@@ -10,17 +10,12 @@ import Link from "../../components/Link"
 import Translation from "../../components/Translation"
 import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
-import {
-  CardContainer,
-  Content,
-  GrayContainer,
-} from "../../components/SharedStyledComponents"
 import FeedbackCard from "../../components/FeedbackCard"
 
 import { getImage } from "../../utils/image"
 
 import { ChildOnlyProp, Context } from "../../types"
-import { Box, Heading, Text } from "@chakra-ui/react"
+import { Box, Heading } from "@chakra-ui/react"
 
 const Page = (props: ChildOnlyProp) => (
   <Box
@@ -84,6 +79,22 @@ const H1 = (props: ChildOnlyProp) => (
   />
 )
 
+const GrayContainer = (props: ChildOnlyProp) => (
+  <Box
+    w="full"
+    py={16}
+    px={0}
+    mt={8}
+    bg="grayBackground"
+    boxShadow="inset 0px 1px 0px tableItemBoxShadow"
+    {...props}
+  />
+)
+
+const Content = (props: ChildOnlyProp) => (
+  <Box py={4} px={8} w="full" {...props} />
+)
+
 const Subtitle = (props: ChildOnlyProp) => (
   <Box fontSize="xl" lineHeight="140%" color="text200" {...props} />
 )
@@ -92,9 +103,7 @@ const SubtitleWithMargin = (props: ChildOnlyProp) => (
   <Box fontSize="xl" lineHeight="140%" color="text200" mb={6} {...props} />
 )
 
-const MonoSubtitle = (props: ChildOnlyProp) => (
-  <Heading as="h2" fontSize="" mb={0} {...props} />
-)
+const MonoSubtitle = (props: ChildOnlyProp) => <Box as="h2" mb={0} {...props} />
 
 const Hero = (props: ChildOnlyProp) => (
   <Box
@@ -121,77 +130,75 @@ const StyledCardContainer = (props: ChildOnlyProp) => (
   <Box display="flex" flexWrap="wrap" mx={-4} mt={8} mb={12} {...props} />
 )
 
-const TwoColumnContent = styled.div`
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`
+const TwoColumnContent = (props: ChildOnlyProp) => (
+  <Box
+    display="flex"
+    justifyContent="space-between"
+    alignItems={{ base: "flex-start", lg: "center" }}
+    flexDirection={{ base: "column", lg: "row" }}
+    w="100%"
+    {...props}
+  ></Box>
+)
 
-const ThreeColumnContent = styled.div`
-  display: flex;
-  align-items: flex-start;
-  padding: 0rem 2rem;
-  width: 100%;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`
+const ThreeColumnContent = (props: ChildOnlyProp) => (
+  <Box
+    display="flex"
+    py={0}
+    px={8}
+    w="full"
+    justifyContent="space-between"
+    alignItems={{ base: "flex-start", lg: "flex-start" }}
+    flexDirection={{ base: "column", lg: "row" }}
+    {...props}
+  />
+)
 
-const Column = styled.div`
-  flex: 1 1 33%;
-  margin-bottom: 1.5rem;
-  margin-right: 2rem;
-  width: 100%;
-`
-const RightColumn = styled(Column)`
-  margin-right: 0;
-`
-const IntroColumn = styled(Column)`
-  margin-top: 8rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 0;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-right: 0;
-  }
-`
+const Column = (props: ChildOnlyProp) => (
+  <Box flex="1 1 33%" mb={6} mr={8} w="full" {...props} />
+)
+const RightColumn = (props: ChildOnlyProp) => (
+  <Box flex="1 1 33%" mb={6} mr={0} w="full" {...props} />
+)
+const IntroColumn = (props: ChildOnlyProp) => (
+  <Box
+    flex="1 1 33%"
+    mb={6}
+    mt={{ base: 0, lg: 32 }}
+    mr={{ base: 0, sm: 8 }}
+    w="full"
+    {...props}
+  />
+)
 
-const StyledCard = styled(Card)`
-  flex: 1 1 22%;
-  min-width: 240px;
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  margin: 1rem;
-  padding: 1.5rem;
-  @media (max-width: 1120px) {
-    flex: 1 1 40%;
-  }
+const StyledCard = (props: ChildOnlyProp) => (
+  <Card
+    flex={{ base: "1 1 40%", lg: "1 1 22%" }}
+    minW="240px"
+    boxShadow="tableBoxShadow"
+    m={4}
+    p={6}
+    {...props}
+    _hover={{
+      borderRadius: "4px",
+      boxShadow: "0px 8px 17px rgba(0, 0, 0, 0.15)",
+      background: "tableBackgroundHover",
+      transition: "transform 0.1s",
+      transform: "scale(1.02)",
+    }}
+  ></Card>
+)
 
-  &:hover {
-    border-radius: 4px;
-    box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
-    transition: transform 0.1s;
-    transform: scale(1.02);
-  }
-`
-
-const StyledCallout = styled(Callout)`
-  min-height: 100%;
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    flex: 1 1 416px;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-right: 0;
-    margin-left: 0;
-  }
-`
+const StyledCallout = (props: ChildOnlyProp) => (
+  <Box
+    as={Callout}
+    // minH="full"
+    mr={{ base: 0, sm: 0 }}
+    ml={{ base: 0, sm: 0 }}
+    flex={{ base: "1 1 416px", md: "1 1 416px" }}
+    {...props}
+  ></Box>
+)
 
 interface IDevelopersPath {
   emoji: string
@@ -454,56 +461,48 @@ const DevelopersPage = ({
             <p>
               <Translation id="page-developers-smart-contracts-desc" />
             </p>
-
             <Link to="/developers/docs/frameworks/">
               <Translation id="page-developers-frameworks-link" />
             </Link>
             <p>
               <Translation id="page-developers-frameworks-desc" />
             </p>
-
             <Link to="/developers/docs/apis/javascript/">
               <Translation id="page-developers-js-libraries-link" />
             </Link>
             <p>
               <Translation id="page-developers-js-libraries-desc" />
             </p>
-
             <Link to="/developers/docs/apis/backend/">
               <Translation id="page-developers-api-link" />
             </Link>
             <p>
               <Translation id="page-developers-api-desc" />
             </p>
-
             <Link to="/developers/docs/data-and-analytics/block-explorers/">
               <Translation id="page-developers-block-explorers-link" />
             </Link>
             <p>
               <Translation id="page-developers-block-explorers-desc" />
             </p>
-
             <Link to="/developers/docs/smart-contracts/security/">
               <Translation id="page-developers-smart-contract-security-link" />
             </Link>
             <p>
               <Translation id="page-developers-smart-contract-security-desc" />
             </p>
-
             <Link to="/developers/docs/storage/">
               <Translation id="page-developers-storage-link" />
             </Link>
             <p>
               <Translation id="page-developers-storage-desc" />
             </p>
-
             <Link to="/developers/docs/ides/">
               <Translation id="page-developers-dev-env-link" />
             </Link>
             <p>
               <Translation id="page-developers-dev-env-desc" />
             </p>
-
             <h3>
               <Translation id="page-developers-advanced" />
             </h3>
@@ -513,21 +512,18 @@ const DevelopersPage = ({
             <p>
               <Translation id="page-developers-token-standards-desc" />
             </p>
-
             <Link to="/developers/docs/mev/">
               <Translation id="page-developers-mev-link" />
             </Link>
             <p>
               <Translation id="page-developers-mev-desc" />
             </p>
-
             <Link to="/developers/docs/oracles/">
               <Translation id="page-developers-oracles-link" />
             </Link>
             <p>
               <Translation id="page-developers-oracle-desc" />
             </p>
-
             <Link to="/developers/docs/scaling/">
               <Translation id="page-developers-scaling-link" />
             </Link>
