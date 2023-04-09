@@ -776,7 +776,7 @@ const DappsPage = ({
     {
       title: "SuperRare",
       description: t("page-dapps-dapp-description-superrare"),
-      link: "https://www.superrare.co",
+      link: "https://www.superrare.com",
       image: getImage(data.superrare),
       alt: t("page-dapps-superrare-logo-alt"),
     },
