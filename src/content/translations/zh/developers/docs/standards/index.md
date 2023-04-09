@@ -40,8 +40,12 @@ EIP 有 3 种类型：
 ### 代币标准 {#token-standards}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - 同质化（可互换）代币的标准接口，比如投票代币、质押代币或虚拟货币。
+  - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) - 为 ERC-20 代币定义一个代币接口，支持在转账函数或 transferFrom 函数后执行接收者代码，或批准后执行消费者代码。
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - 非同质化代币的标准接口，比如艺术作品或歌曲的契约。
-- [ERC-777](/developers/docs/standards/tokens/erc-777/) - 针对 ERC-20 改进的代币标准。
+  - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309) - 使用连续的代币标识符创建/转移一个或多个非同质化代币时，触发的标准事件。
+  - [ERC-4400](https://eips.ethereum.org/EIPS/eip-4400) - EIP-721 消费者角色的接口扩展
+  - [ERC-4907](https://eips.ethereum.org/EIPS/eip-4907) - 为 ERC-721 代币添加一个具有受限权限的限时角色。
+- [ERC-777](/developers/docs/standards/tokens/erc-777/) - **（不推荐）**在 ERC-20 基础上改进的代币标准。
 - [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - 可包含同质化和非同质化资产的代币标准。
 - [ERC-4626](/developers/docs/standards/tokens/erc-4626/) - 一个代币化的资金库标准，旨在优化和统一收益资金库的技术参数。
 

@@ -77,7 +77,7 @@ const Breadcrumbs: React.FC<IProps> = ({
         m: 0,
         lineHeight: 1,
         rowGap: 1.5,
-        flexWrap: "wrap"
+        flexWrap: "wrap",
       }}
       {...restProps}
     >

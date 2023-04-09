@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 # The Eth2 Medalla data challenge {#the-eth2-medalla-data-challenge}
 
-<InfoBanner emoji=":warning:" isWarning={true}>
+<InfoBanner emoji=":warning:" isWarning>
   This challenge is over. <a href="https://blog.ethereum.org/2020/11/17/medalla-data-challenge-results/" target="_blank">View the results</a>
 </InfoBanner>
 

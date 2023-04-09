@@ -70,7 +70,6 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Ethereum vision](/roadmap/vision/)
 - [The Beacon Chain](/upgrades/beacon-chain/)
 - [The Merge](/upgrades/merge/)
-- [Shard chains](/upgrades/sharding/)
 - [Ethereum upgrades get involved](/upgrades/get-involved/)
 - [Consensus layer bug bounty](/upgrades/bug-bounty/)
 - [Ethereum Improvement Proposals (EIPs)](/eips/)

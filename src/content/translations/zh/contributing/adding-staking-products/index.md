@@ -8,7 +8,7 @@ lang: zh
 
 我们想要确保我们上架的资源是最好的，能够让用户安全和放心。
 
-任何人都可以提出向 ethereum.org 添加质押产品或服务的建议。 如果我们有遗漏，**[请提出建议](https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_staking_product.md)！**
+任何人都可以提出向 ethereum.org 添加质押产品或服务的建议。 如果我们有遗漏，**[请提出建议](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml&title=Suggest+a+staking+product+or+service)！**
 
 我们目前在以下页面上架了质押产品和服务：
 
@@ -166,6 +166,6 @@ lang: zh
 
 如果您想将质押产品或服务添加到 ethereum.org，请在 GitHub 上创建一个提议。
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_staking_product.md">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml&title=Suggest+a+staking+product+or+service">
   创建一个提议
 </ButtonLink>

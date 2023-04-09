@@ -41,30 +41,30 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 
 - [Compilando, implantando e chamando Contratos Inteligentes Ethereum utilizando Python](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
 - [Analisando Smart Contracts em Solidity usando Slither](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
-- [Tutorial de cadeia de blocos Fintech: emprestar e pedir emprestado com Python](https://blog.chain.link/blockchain-fintech-defi-tutorial-lending-borrowing-python/)
+- [Tutorial de blockchain Fintech: emprestar e pedir emprestado com Python](https://blog.chain.link/blockchain-fintech-defi-tutorial-lending-borrowing-python/)
 
 ## Projetos e ferramentas em Python {#python-projects-and-tools}
 
 ### Ativo: {#active}
 
 - [Web3.py](https://github.com/ethereum/web3.py) - _Biblioteca em Python para interagir com Ethereum_
-- [Ape](https://github.com/ApeWorX/ape) - _The smart contract development tool for Pythonistas, Data Scientists, and Security Professionals_
-- [Brownie](https://github.com/eth-brownie/brownie) - _framework em Python para implantar, testar e interagir com smart contracts de Ethereum_
-- [Vyper](https://github.com/ethereum/vyper/) - _Linguagem de Contrato Inteligente em Python para a Máquina Virtual Ethereum_
+- [Vyper](https://github.com/ethereum/vyper/) - _Linguagem de Smart Contract em Python para a Máquina Virtual Ethereum_
+- [Ape](https://github.com/ApeWorX/ape) - _A ferramenta de desenvolvimento de contrato inteligente (smart contract) para Pythonistas, Cientistas de Dados e Profissionais de Segurança_
+- [Brownie](https://github.com/eth-brownie/brownie) - _Framework em Python para implantar, testar e interagir com contratos inteligentes Ethereum_
 - [py-evm](https://github.com/ethereum/py-evm) - _Implementação de uma Máquina Virtual Ethereum_
-- [eth-tester](https://github.com/ethereum/eth-tester) - _ferramentas para testar aplicativos baseados na Ethereum_
+- [eth-tester](https://github. com/ethereum/eth-tester) - _ferramentas para testar aplicativos baseados na Ethereum_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _funções de utilidade para trabalhar com bases de código relacionadas com a Ethereum_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _wrapper em Python em cima do compilador solc solidity com suporte à versão 0.5.x _
 - [py-wasm](https://github.com/ethereum/py-wasm) - _implementação em Python de um intérprete de montagem web _
-- [pydevp2p](https://github.com/ethereum/pydevp2p) - _Implementação de um Ethereum P2P stack_
+- [pydevp2p](https://github.com/ethereum/pydevp2p) - _Implementação de uma pilha P2P Ethereum_
 - [pymaker](https://github.com/makerdao/pymaker) - _API em Python para contratos Maker_
 - [siwe](https://github.com/spruceid/siwe-py) - _Registre-se com Ethereum (siwe) para Python_
-- [Pequenos contratos para teste](https://github.com/tradingstrategy-ai/smart-contracts-for-testing) - _Um pacote Python que vem com ERC-20, Uniswap e outros contratos comuns para escrita de testes com Web3.py_
+- [Web3 DeFi para integrações Ethereum](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _Um pacote Python com integrações prontas para ERC-20, Uniswap e outros projetos populares_
 
 ### Arquivado / Não mais mantido: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) - _cliente Ethereum Python_
-- [Mamba](https://github.com/arjunaskykok/mamba) - _framework para escrever, compilar e implantar smart contracts escritos em linguagem Vyper_
+- [Mamba](https://github.com/arjunaskykok/mamba) - _Framework para escrever, compilar e implantar contratos inteligentes escritos em linguagem Vyper_
 
 Procurando por mais recursos? Confira [ethereum.org/developers](/developers/).
 
@@ -72,16 +72,17 @@ Procurando por mais recursos? Confira [ethereum.org/developers](/developers/).
 
 Os seguintes projetos baseados na Ethereum usam ferramentas mencionadas nesta página. Os repositórios de código aberto relacionados servem como uma boa referência para exemplos de código e melhores práticas.
 
-- [Yearn Finance](https://yearn.finance/) e [Repositório de Contratos do Vault](https://github.com/yearn/yearn-vaults)
+- [Yearn Finance](https://yearn.finance/) e [Repositório de Contratos Vault](https://github.com/yearn/yearn-vaults)
 - [Repositório de contratos inteligentes Curve](https://curve.fi/) e [Curve](https://github.com/curvefi/curve-contract)
 - [BadgerDAO](https://badger.com/) e [contratos inteligentes usando ferramentas Brownie](https://github.com/Badger-Finance/badger-system)
-- [Sushi](https://sushi.com/) usa [Python na gestão e implantação dos seus contratos de venda](https://github.com/sushiswap/sushi-vesting-protocols)
+- [Sushi](https://sushi.com/) usa [Python na gestão e implantação dos seus contratos adquiridos](https://github.com/sushiswap/sushi-vesting-protocols)
 - [Alpha Finance](https://alphafinance.io/), da Alpha Homora fame, usa [Brownie para testar e implantar contratos inteligentes](https://github.com/AlphaFinanceLab/alpha-staking-contract)
 
-## Colaboradores da Comunidade Phyton {#python-community-contributors}
+## Comunidade de discussão Python {#python-community-contributors}
 
-A [comunidade Ethereum Python no Discord](https://discord.gg/9zk7snTfWe) é anfitriã de uma comunidade em rápido crescimento e é o recurso dedicado a discussões sobre qualquer um dos projetos acima e tópicos relacionados.
+- [Comunidade Discord Python Ethereum](https://discord.gg/9zk7snTfWe) Para discussões sobre Web3.py e outros frameworks Python
+- [Vyper Discord](<[https://discord.gg/9zk7snTfWe](https://discord.gg/SdvKC79cJk)>) Para discussão sobre programação de contrato inteligente com Vyper
 
-## Outras Listas Agregadas {#other-aggregated-lists}
+## Demais listas agregadas {#other-aggregated-lists}
 
-A wiki Vyper tem uma [incrível lista de recursos para Vyper](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources)
+A wiki Vyper tem uma [Lista incrível de recursos para Vyper](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources)

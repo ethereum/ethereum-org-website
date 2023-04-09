@@ -74,8 +74,6 @@ If you want to [run your own node](/developers/docs/nodes-and-clients/run-a-node
 
 Instead of downloading every block, light nodes download block headers. These headers only contain summary information about the contents of the blocks. Any other information required by the light node gets requested from a full node. The light node can then independently verify the data they receive against the state roots in the block headers. Light nodes enable users to participate in the Ethereum network without the powerful hardware or high bandwidth required to run full nodes. Eventually, light nodes might run on mobile phones or embedded devices. The light nodes do not participate in consensus (i.e. they cannot be miners/validators), but they can access the Ethereum blockchain with the same functionality and security guarantees as a full node.
 
-The execution client Geth includes a [light sync](https://github.com/ethereum/devp2p/blob/master/caps/les.md) option. However, a light Geth node relies upon full nodes serving light node data. Few full nodes opt to serve light node data, meaning light nodes often fail to find peers.
-
 Light clients are an area of active development for Ethereum and we expect to see new light clients for the consensus layer and execution layer soon.
 There are also potential routes to providing light client data over the [gossip network](https://www.ethportal.net/). This is advantageous because the gossip network could support a network of light nodes without requiring full nodes to serve requests.
 
@@ -261,7 +259,7 @@ Light client mode downloads all block headers, block data, and verifies some ran
 
 **NB** Light sync does not yet work with proof-of-stake Ethereum - new versions of light sync should ship soon!
 
-[More on Light clients](https://www.parity.io/blog/what-is-a-light-client/)
+[More on light clients](/developers/docs/nodes-and-clients/light-clients/)
 
 #### Snap sync {#snap-sync}
 
