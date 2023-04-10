@@ -20,8 +20,6 @@ tags:
 skill: intermediate
 lang: en
 published: 2023-04-11
-source: Kurtosis Docs
-sourceUrl: https://docs.kurtosis.com/quickstart
 ---
 
 ## Introduction {#introduction}
