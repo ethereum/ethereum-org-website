@@ -66,7 +66,46 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 - [Tenderly](https://tenderly.co) _a Web3 development platform that provides debugging, observability, and infrastructure building blocks for developing, testing, monitoring, and operating smart contracts_
 - [Unibright](https://unibright.io/) _a team of blockchain specialists, architects, developers and consultants with 20+ years of experience in business processes and integration_
 - [Zero Services GmbH](https://www.zeroservices.eu/) _provider of managed services spread across co-locations in Europe and Asia. Operates & monitors your nodes securely and reliably_
-
+- [Zeeve](https://www.zeeve.io/) _Zeeve is the most reliable Blockchain infrastructure management platform trusted by 20,000+ developers, startups and enterprises with 30+ blockchain protocols available including both permissioned and public.We make it very easy to deploy your Blockchain nodes and Decentralized Apps using our intuitive and no-code platform.. Our USPs are 100% automation, multi-cloud decentralized network deployments, as well as managed hosting , CI/CD automation for smart contracts and proactive monitoring that deliver hassle free, low code rapid chaincode deployments with faster incident management. W
+### OUR PLATFORM AND PRODUCTS
+Enterprise-grade infrastructure for Blockchain Consortiums
+Elastic APIs and Full/Archive Nodes
+Validator/Staking Node infrastructure
+Data Query API for permissioned protocols
+Monitoring & Analytics
+Zeeve CLI (Command Line Interface)
+Decentralized Storage (ZDFS)
+Provides API services and tools for building and monitoring applications on Ethereum
+### Why build on Etheruem? 
+Blockchain applications help businesses:
+Increase trust and reduce the cost of coordination between business parties
+Improve business network accountability and operational efficiency
+Build new business models and value creation opportunities
+Competitively future-proof their organization
+Enterprise blockchain applications can be built on the public permissionless Ethereum Mainnet, or on private blockchains that are based on Ethereum technology
+Node Type: Enterprise, Full/Dedicated and Shared
+### Key Features of Ethereum
+Ether (ETH)
+The native currency of the Ethereum protocol. Its primary use cases include executing transactions over Ethereum and as standard collateral in Defi lending
+### Smart contract, dApps and D.A.O. deployment
+Ethereum supports the development and deployment of Smart contracts (predefined set of codes aiding agreement between two parties) while allowing the creation of integrated decentralised apps and D.A.O.s
+### Ethereum Virtual machine
+Suggestive of the name, EVM is a virtual machine that forms the basis of Ethereum infrastructure, allowing smart contract deployment while facilitating Ethereum nodes to run on consensus mechanism
+### Consensus
+Ethereum is in the process of moving proof of work to proof of stake via protocol upgrades to invoke 3s’s - security, sustainability, and scalability
+Use Zeeve for your Ethereum node 
+### Rapid Node in seconds
+Deploy a dedicated Ethereum node in seconds on the cloud of your choice or use Zeeve Managed service. Develop dApps or deploy smart contracts, or manage transactions on the network.
+### Secure Endpoints
+Use the Zeeve proprietary architecture to deploy node with military-grade security – highly secure endpoints to securely connect with the Ethereum network.
+Developer Friendly
+Zeeve Ethereum Node service is highly optimized for availability, reliability, and performance to enable developers to focus on building dApps and smart contracts.
+### Ready plugins
+Work with flexible APIs, powerful tools and ready set of libraries available to setup with your secure Ethereum node via a simple control panel.
+Enterprise grade Uptime
+Automatedly choice to configure a redundant node to ensure reliability on the service or applications. Multi-cloud, multi-region support.
+## Leading Testnets Support
+Choose and deploy among all the available testnets to start with, including Ropsten, Rinkeby, Kovan and we are consistent in adding more.
 ### Tooling and libraries {#tooling-and-libraries}
 
 - [Alethio](https://explorer.aleth.io/) _Ethereum Data Analytics Platform_
