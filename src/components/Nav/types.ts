@@ -1,5 +1,3 @@
-import { TranslationKey } from "../../utils/translations"
-
 export type SectionKey =
   | "useEthereum"
   | "learn"
@@ -8,15 +6,15 @@ export type SectionKey =
   | "community"
 
 export interface IItem {
-  text: TranslationKey
-  to: string
+  text: string
+  to?: string
   items?: Array<IItem>
   isPartiallyActive?: boolean
 }
 
 export interface ISection {
-  text: TranslationKey
-  ariaLabel: TranslationKey
+  text: string
+  ariaLabel: string
   items: Array<IItem>
 }
 

@@ -7,7 +7,6 @@ import {
   Flex,
   Heading,
   Hide,
-  Show,
   Text,
   useToken,
 } from "@chakra-ui/react"
@@ -52,25 +51,21 @@ const Trilemma: React.FC<IProps> = () => {
         }}
       >
         <Heading fontSize="2rem" mt={0}>
-          <Translation id="page-upgrades-vision-trilemma-h2" />
+          <Translation id="page-roadmap-vision-trilemma-h2" />
         </Heading>
         <Text>
-          <Translation id="page-upgrades-vision-trilemma-p" />
+          <Translation id="page-roadmap-vision-trilemma-p" />
         </Text>
         <Text>
-          <Translation id="page-upgrades-vision-trilemma-p-1" />
+          <Translation id="page-roadmap-vision-trilemma-p-1" />
         </Text>
         <Text>
-          <Translation id="page-upgrades-vision-trilemma-p-2" />
+          <Translation id="page-roadmap-vision-trilemma-p-2" />
         </Text>
-        <Show below={lgBp}>
-          <Text fontWeight={600}>
-            <Translation id="page-upgrades-vision-trilemma-modal-tip" />:
-          </Text>
-        </Show>
-        <Hide below={lgBp}>
-          <Card {...cardDetail} mt={8} minH="300px" />
-        </Hide>
+        <Text fontWeight={600} hideFrom={lgBp}>
+          <Translation id="page-roadmap-vision-trilemma-modal-tip" />:
+        </Text>
+        <Card {...cardDetail} mt={8} minH="300px" hideBelow={lgBp} />
       </Flex>
       <Hide above={lgBp}>
         <Drawer

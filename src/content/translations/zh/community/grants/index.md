@@ -20,7 +20,7 @@ lang: zh
 - [Moloch 去中心化自治组织](https://www.molochdao.com/) - _隐私、二层网络扩容、客户端安全性等_
 - [开放资助](https://opengrants.com/explore)
 - [DAO 资助](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Google 资助组织电子表格_
-- [二层网络资助](https://esp.ethereum.foundation/layer-2-grants)-_以太坊基金会资助者为支持二层网络应用、分析和教育提供资助_
+- [学术资助](https://esp.ethereum.foundation/academic-grants-2023) - _为以太坊相关学术工作提供资助_
 
 ## 特定项目 {#project-specific}
 

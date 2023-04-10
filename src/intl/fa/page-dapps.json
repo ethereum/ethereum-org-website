@@ -209,5 +209,8 @@
   "page-dapps-more-on-nft-button": "اطلاعات بیشتر درباره کالاهای توکنی‌شده",
   "page-dapps-more-on-nft-gaming-button": "اطلاعات بیشتر درباره کالاهای توکنی‌شده داخل بازی",
   "page-dapps-dapp-description-pwn": "وام‌های آسان با پشتیبانی هر توکن یا NFT در اتریوم.",
-  "page-dapps-pwn-image-alt": "لوگوی PWN"
+  "page-dapps-pwn-image-alt": "لوگوی PWN",
+  "foundation": "بنیاد",
+  "transaction-fees": "هزینه تراکنش چیست؟",
+  "page-wallets-get-some": "کمی Eth بگیرید"
 }

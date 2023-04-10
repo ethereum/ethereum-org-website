@@ -240,7 +240,7 @@ Su `.env` debería ser parecido a:
 
 Para conectarlos a nuestro código, haremos referencia a estas variables en nuestro archivo hardhat.config.js en el paso 13.
 
-<InfoBanner isWarning={true}>
+<InfoBanner isWarning>
 ¡No exponga su <code>.env</code>! Asegúrese de que nunca comparte ni expone su archivo <code>.env</code> con nadie, ya que ello conlleva revelar sus secretos. Si está haciendo un control de la versión, añada <code>.env</code> a un archivo <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
 </InfoBanner>
 

@@ -2,7 +2,7 @@
 title: "Uniswap-v2 Contract Walk-Through"
 description: How does the Uniswap-v2 contract work? Why is it written that way?
 author: Ori Pomerantz
-tags: ["solidity", "uniswap"]
+tags: ["solidity"]
 skill: intermediate
 published: 2021-05-01
 lang: en
@@ -22,7 +22,7 @@ _Traders_ send one type of token to the pool and receive the other (for example,
 
 When liquidity providers want their assets back they can burn the pool tokens and receive back their tokens, including their share of the rewards.
 
-[Click here for a fuller description](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/swaps/).
+[Click here for a fuller description](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/).
 
 ### Why v2? Why not v3? {#why-v2}
 
@@ -454,7 +454,7 @@ Use the `UniswapV2ERC20._mint` function to actually create the additional liquid
     }
 ```
 
-If there is no fee set `kLast` to zero (if it isn't that already). When this contract was written there was a [gas refund feature](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3298.md) that encouraged contracts to reduce the overall size of the Ethereum state by zeroing out storage they did not need.
+If there is no fee set `kLast` to zero (if it isn't that already). When this contract was written there was a [gas refund feature](https://eips.ethereum.org/EIPS/eip-3298) that encouraged contracts to reduce the overall size of the Ethereum state by zeroing out storage they did not need.
 This code gets that refund when possible.
 
 #### Externally Accessible Functions {#pair-external}
@@ -816,7 +816,7 @@ These two functions allow `feeSetter` to control the fee recipient (if any), and
 
 [This contract](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implements the ERC-20 liquidity token. It is similar to the [OpenZeppelin ERC-20 contract](/developers/tutorials/erc20-annotated-code), so I will only explain the part that is different, the `permit` functionality.
 
-Transactions on Ethereum cost ether (ETH), which is equivalent to real money. If you have ERC-20 tokens but not ETH, you can't send transactions, so you can't do anything with them. One solution to avoid this problem is [meta-transactions](https://docs.uniswap.org/protocol/V2/guides/smart-contract-integration/supporting-meta-transactions/).
+Transactions on Ethereum cost ether (ETH), which is equivalent to real money. If you have ERC-20 tokens but not ETH, you can't send transactions, so you can't do anything with them. One solution to avoid this problem is [meta-transactions](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions).
 The owner of the tokens signs a transaction that allows somebody else to withdraw tokens off chain and sends it using the Internet to the recipient. The recipient, which does have ETH, then submits the permit on behalf of the owner.
 
 ```solidity
@@ -905,12 +905,12 @@ The periphery contracts are the API (application program interface) for Uniswap.
 
 ### UniswapV2Router01.sol {#UniswapV2Router01}
 
-[This contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) has problems, and [should no longer be used](https://uniswap.org/docs/v2/smart-contracts/router01/). Luckily, the periphery contracts are stateless and don't hold any assets, so it is easy to deprecate it and suggest people use the replacement, `UniswapV2Router02`, instead.
+[This contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) has problems, and [should no longer be used](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Luckily, the periphery contracts are stateless and don't hold any assets, so it is easy to deprecate it and suggest people use the replacement, `UniswapV2Router02`, instead.
 
 ### UniswapV2Router02.sol {#UniswapV2Router02}
 
 In most cases you would use Uniswap through [this contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol).
-You can see how to use it [here](https://uniswap.org/docs/v2/smart-contracts/router02/).
+You can see how to use it [here](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02).
 
 ```solidity
 pragma solidity =0.6.6;

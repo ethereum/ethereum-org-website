@@ -27,7 +27,7 @@ The easiest way to test out WebSockets is to install a command line tool for mak
 _Note: if you have an Alchemy account you can replace `demo` with your own API key. [Sign up for a free Alchemy account here!](https://auth.alchemyapi.io/signup)_
 
 ```
-$ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
+wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 >  {"jsonrpc":  "2.0", "id": 0, "method":  "eth_gasPrice"}
 
@@ -59,7 +59,7 @@ When connected through a WebSocket, you may use two additional methods: `eth_sub
 
 ### `eth_subscribe` {#eth-subscribe}
 
-Creates a new subscription for specified events. [Learn more about `eth_subscribe`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_subscribe).
+Creates a new subscription for specified events. [Learn more about `eth_subscribe`](https://docs.alchemy.com/reference/eth-subscribe).
 
 #### Parameters {#parameters}
 

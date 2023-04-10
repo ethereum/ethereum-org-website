@@ -4,7 +4,6 @@ description: Uniswap-v2 sözleşmesi nasıl çalışır? Neden bu şekilde yazı
 author: Ori Pomerantz
 tags:
   - "katılık"
-  - "uniswap"
 skill: intermediate
 published: 2021-05-01
 lang: tr
@@ -24,7 +23,7 @@ _Ticaret yapanlar_, havuza bir tür token gönderir ve (örneğin, **Token0** g�
 
 Likidite sağlayıcıları varlıklarını geri istediklerinde havuz token'larını yakabilir ve ödül payları da dahil olmak üzere token'larını geri alabilirler.
 
-[Daha geniş çaplı bir açıklama için buraya tıklayın](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/swaps/).
+[Daha geniş çaplı bir açıklama için buraya tıklayın](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/).
 
 ### Neden v2? Neden v3 değil? {#why-v2}
 
@@ -450,7 +449,7 @@ Ek likidite token'larını gerçekten oluşturmak ve bunları `feeTo` öğesine 
     }
 ```
 
-Herhangi bir ücret yoksa `kLast` öğesini sıfıra ayarlayın (zaten değilse). Bu sözleşme yazıldığında, ihtiyaç duymadıkları depolama alanını sıfırlayarak sözleşmeleri Ethereum durumunun genel boyutunu küçültmeye teşvik eden bir [gaz iadesi özelliği](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3298.md) bulunuyordu. Bu kod, mümkün olduğunda o iadeyi alır.
+Herhangi bir ücret yoksa `kLast` öğesini sıfıra ayarlayın (zaten değilse). Bu sözleşme yazıldığında, ihtiyaç duymadıkları depolama alanını sıfırlayarak sözleşmeleri Ethereum durumunun genel boyutunu küçültmeye teşvik eden bir [gaz iadesi özelliği](https://eips.ethereum.org/EIPS/eip-3298) bulunuyordu. Bu kod, mümkün olduğunda o iadeyi alır.
 
 #### Harici Erişilebilir Fonksiyonlar {#pair-external}
 
@@ -803,7 +802,7 @@ Bu iki fonksiyon, `feeSetter` öğesinin ücret alıcısını (varsa) kontrol et
 
 [Bu sözleşme](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol), ERC-20 likidite token'ını uygular. [OpenWhisk ERC-20 sözleşmesine](/developers/tutorials/erc20-annotated-code) benzer, bu yüzden sadece `permit` işlevselliği olan farklı kısmı açıklayacağım.
 
-Ethereum'daki işlemler, gerçek paraya eş değer olan ether'a (ETH) mal olur. ERC-20 token'larınız varsa ancak ETH'niz yoksa işlem gönderemezsiniz, bu nedenle onlarla hiçbir şey yapamazsınız. Bu sorundan kaçınmanın bir yolu [meta-işlemlerdir](https://docs.uniswap.org/protocol/V2/guides/smart-contract-integration/supporting-meta-transactions/). Token'ların sahibi, bir başkasının jetonları zincirden çekmesine ve interneti kullanarak alıcıya göndermesine izin veren bir işlem imzalar. Daha sonra ETH'ye sahip olan alıcı, token sahibi adına izni gönderir.
+Ethereum'daki işlemler, gerçek paraya eş değer olan ether'a (ETH) mal olur. ERC-20 token'larınız varsa ancak ETH'niz yoksa işlem gönderemezsiniz, bu nedenle onlarla hiçbir şey yapamazsınız. Bu sorundan kaçınmanın bir yolu [meta-işlemlerdir](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions). Token'ların sahibi, bir başkasının jetonları zincirden çekmesine ve interneti kullanarak alıcıya göndermesine izin veren bir işlem imzalar. Daha sonra ETH'ye sahip olan alıcı, token sahibi adına izni gönderir.
 
 ```solidity
     bytes32 public DOMAIN_SEPARATOR;
@@ -891,11 +890,11 @@ Her şey tamamsa bunu bir [ERC-20 onayı](https://eips.ethereum.org/EIPS/eip-20#
 
 ### UniswapV2Router01.sol {#UniswapV2Router01}
 
-[Bu sözleşmenin](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) sorunları vardır ve [artık kullanılmamalıdır](https://docs.uniswap.org/protocol/V2/reference/smart-contracts/router-01/). Neyse ki çevre sözleşmeler durumsuz olduğu ve herhangi bir varlık tutmadıkları için onları kullanımdan kaldırmak ve insanlara bunun yerine `UniswapV2Router02` kullanmayı önermek kolaydır.
+[Bu sözleşmenin](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) sorunları vardır ve [artık kullanılmamalıdır](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Neyse ki çevre sözleşmeler durumsuz olduğu ve herhangi bir varlık tutmadıkları için onları kullanımdan kaldırmak ve insanlara bunun yerine `UniswapV2Router02` kullanmayı önermek kolaydır.
 
 ### UniswapV2Router02.sol {#UniswapV2Router02}
 
-Çoğu durumda Uniswap'i [bu sözleşme](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol) aracılığıyla kullanırsınız. Nasıl kullanacağınızı [burada](https://docs.uniswap.org/protocol/V2/reference/smart-contracts/router-02/) görebilirsiniz.
+Çoğu durumda Uniswap'i [bu sözleşme](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol) aracılığıyla kullanırsınız. Nasıl kullanacağınızı [burada](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02) görebilirsiniz.
 
 ```solidity
 pragma solidity =0.6.6;

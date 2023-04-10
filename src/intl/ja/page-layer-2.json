@@ -1,7 +1,6 @@
 {
   "layer-2-arbitrum-note": "不正証明はホワイトリストに登録されたユーザーのみ、ホワイトリストはまだ未公開。",
   "layer-2-boba-note": "検証開発中",
-  "layer-2-metis-note": "不正証明は開発中",
   "layer-2-optimism-note": "不正証明は開発中",
   "layer-2-hero-title": "レイヤー2",
   "layer-2-hero-header": "すべての人に開かれたイーサリアム",
@@ -103,9 +102,6 @@
   "layer-2-faq-question-2-description-3": "現時点では、ゼロ知識ロールアップのほとんどはアプリケーションに特化している一方、オプティミスティック・ロールアップは、ほぼ広く一般化されています。",
   "layer-2-more-info-on-optimistic-rollups": "オプティミスティック・ロールアップの詳細情報",
   "layer-2-more-info-on-zk-rollups": "ゼロ知識ロールアップの詳細情報",
-  "layer-2-faq-question-3-title": "レイヤー1でのスケーリングの可能性",
-  "layer-2-faq-question-3-description-1": "レイヤー1でのスケーリングは可能で、現在のイーサリアムのロードマップではシャードチェーンが計画されています。ロードマップにはあるものの、レイヤー2ネットワークによるスケーリングはやはり必要になります。",
-  "layer-2-more-on-sharding": "シャーディングの詳細",
   "layer-2-faq-question-4-title": "レイヤー2でのリスク",
   "layer-2-faq-question-4-description-1": "レイヤー2プロジェクトには、イーサリアムメインネット上で直接資金を保有し取引する場合と比較して、リスクが高くなります。例えば、シーケンサーがダウンする可能性があり、その場合ご自身の資金にアクセスするのに待たなければならなくなる場合があります。",
   "layer-2-faq-question-4-description-2": "重要な資金をレイヤー2に移す前に、ご自身で調査することをお勧めします。レイヤー2の技術、リスク、信頼の前提に関する詳細については、各プロジェクトの包括的なリスク評価フレームワークを提供する<a href=\"https://l2beat.com/?view=risk\">L2BEAT</a>を確認することをお勧めします。",
@@ -131,5 +127,6 @@
   "layer-2-note": "注意:",
   "layer-2-ecosystem-portal": "エコシステムポータル",
   "layer-2-token-lists": "トークンリスト",
-  "layer-2-explore": "探索"
+  "layer-2-explore": "探索",
+  "page-dapps-ready-button": "次へ"
 }

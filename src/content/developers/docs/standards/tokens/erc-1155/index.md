@@ -10,7 +10,7 @@ A standard interface for contracts that manage multiple token types. A single de
 
 **What is meant by Multi-Token Standard?**
 
-The idea is simple and seeks to create a smart contract interface that can represent and control any number of fungible and non-fungible token types. In this way, the ERC-1155 token can do the same functions as an [ERC-20](/developers/docs/standards/tokens/erc-20/) and [ERC-721](/developers/docs/standards/tokens/erc-721/) token, and even both at the same time. And best of all, improving the functionality of both standards, making it more efficient, and correcting obvious implementation errors on the ERC-20 and ERC-721 standards.
+The idea is simple and seeks to create a smart contract interface that can represent and control any number of fungible and non-fungible token types. In this way, the ERC-1155 token can do the same functions as an [ERC-20](/developers/docs/standards/tokens/erc-20/) and [ERC-721](/developers/docs/standards/tokens/erc-721/) token, and even both at the same time. It improves the functionality of both the ERC-20 and ERC-721 standards, making it more efficient and correcting obvious implementation errors.
 
 The ERC-1155 token is described fully in [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155).
 
@@ -23,13 +23,13 @@ To better understand this page, we recommend you first read about [token standar
 - [Batch Transfer](#batch_transfers): Transfer multiple assets in a single call.
 - [Batch Balance](#batch_balance): Get the balances of multiple assets in a single call.
 - [Batch Approval](#batch_approval): Approve all tokens to an address.
-- [Hooks](#recieve_hook): Receive tokens hook.
+- [Hooks](#receive_hook): Receive tokens hook.
 - [NFT Support](#nft_support): If supply is only 1, treat it as NFT.
 - [Safe Transfer Rules](#safe_transfer_rule): Set of rules for secure transfer.
 
 ### Batch Transfers {#batch-transfers}
 
-The batch transfer works very similar to regular ERC-20 transfers. Let's look at the regular ERC-20 transferFrom function:
+The batch transfer works very similar to regular ERC-20 transfers. Let's look at the regular ERC-20 `transferFrom` function:
 
 ```solidity
 // ERC-20
@@ -45,7 +45,7 @@ function safeBatchTransferFrom(
 ) external;
 ```
 
-The only difference in ERC-1155 is that we pass the values as an array and we also pass an array of id's. For example given `ids=[3, 6, 13]` and `values=[100, 200, 5]`, the resulting transfers will be
+The only difference in ERC-1155 is that we pass the values as an array and we also pass an array of ids. For example given `ids=[3, 6, 13]` and `values=[100, 200, 5]`, the resulting transfers will be
 
 1. Transfer 100 tokens with id 3 from `_from` to `_to`.
 2. Transfer 200 tokens with id 6 from `_from` to `_to`.
@@ -97,7 +97,7 @@ function isApprovedForAll(
 
 The approvals are slightly different than ERC-20. Instead of approving specific amounts, you set an operator to approved or not approved via `setApprovalForAll`.
 
-Reading the current status can be done via `isApprovedForAll`. As you can see, it's an all or nothing. You cannot define how many tokens to approve or even which token class.
+Reading the current status can be done via `isApprovedForAll`. As you can see, it's an all-or-nothing operation. You cannot define how many tokens to approve or even which token class.
 
 This is intentionally designed with simplicity in mind. You can only approve everything for one address.
 

@@ -43,7 +43,6 @@
   "page-upgrades-bug-bounty-quality-repro-desc": ": Kérjük adj meg teszt kódot, scripteket és részletes instrukciókat. Minél egyszerűbb előteremtenünk és hitelesítenünk a sérülékenységet, annál nagyobb a díj.",
   "page-upgrades-bug-bounty-questions": "Kérdések?",
   "page-upgrades-bug-bounty-rules": "Szabályok elolvasása",
-  "page-upgrades-bug-bounty-shard-chains": "shard láncok",
   "page-upgrades-bug-bounty-slogan": "Eth2 bug vadászatok",
   "page-upgrades-bug-bounty-specs": "Teljes specifikáció elolvasása",
   "page-upgrades-bug-bounty-specs-docs": "Specifikáció dokumentumok",
@@ -91,5 +90,6 @@
   "page-upgrades-bug-bounty-card-text": "Egy támadó néha egy csomópontot olyan állapotba hozhat, ami miatt a validátor által elvégzett minden száz igazolásból egy kiesik",
   "page-upgrades-bug-bounty-card-text-1": " Egy támadó sikeresen végrehajthat \"eclipse\" támadásokat olyan csomópontokon, melyek 4 vezető nulla bájtos peer-idvel rendelkeznek",
   "page-upgrades-bug-bounty-card-text-2": "Van egy konszenzus bug két kliens között, de nehéz vagy nem praktikus a támadó számára beindítani a támadást.",
-  "page-upgrades-bug-bounty-card-text-3": "  Van egy konszenzus bug két kliens között és a támadó számára triviális beindítani a támadást."
+  "page-upgrades-bug-bounty-card-text-3": "  Van egy konszenzus bug két kliens között és a támadó számára triviális beindítani a támadást.",
+  "page-upgrades-question-title": "Gyakran ismételt kérdések"
 }

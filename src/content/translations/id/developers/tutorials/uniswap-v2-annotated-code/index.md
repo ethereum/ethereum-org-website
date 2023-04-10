@@ -4,7 +4,6 @@ description: Bagaimana cara kerja kontrak Uniswap-v2? Mengapa ditulis dengan car
 author: Ori Pomerantz
 tags:
   - "solidity"
-  - "uniswap"
 skill: intermediate
 published: 2021-05-01
 lang: id
@@ -24,7 +23,7 @@ _Pedagang_ mengirimkan satu jenis token ke pool dan menerima token lainnya (cont
 
 Ketika penyedia likuiditas menginginkan kembali aset mereka, mereka dapat membakar token pool dan menerima kembali token mereka, termasuk bagian imbalan mereka.
 
-[Klik di sini untuk deskripsi lengkapnya](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/swaps/).
+[Klik di sini untuk deskripsi lengkapnya](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/).
 
 ### Mengapa v2? Mengapa bukan v3? {#why-v2}
 
@@ -450,7 +449,7 @@ Gunakan fungsi `UniswapV2ERC20._mint` untuk benar-benar membuat token-token liku
     }
 ```
 
-Jika tidak ada biaya, tetapkan `kLast` menjadi nol (jika belum menjadi nol). Ketika kontrak ini ditulis terdapat [fitur pengembalian dana gas](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3298.md) yang mendorong kontrak untuk mengurangi ukuran keseluruhan status Ethereum dengan mengosongkan penyimpanan yang tidak diperlukan. Kode ini mendapatkan pengembalian dana tersebut jika memungkinkan.
+Jika tidak ada biaya, tetapkan `kLast` menjadi nol (jika belum menjadi nol). Ketika kontrak ini ditulis terdapat [fitur pengembalian dana gas](https://eips.ethereum.org/EIPS/eip-3298) yang mendorong kontrak untuk mengurangi ukuran keseluruhan status Ethereum dengan mengosongkan penyimpanan yang tidak diperlukan. Kode ini mendapatkan pengembalian dana tersebut jika memungkinkan.
 
 #### Fungsi yang Dapat Diakses secara Eksternal {#pair-external}
 
@@ -803,7 +802,7 @@ Kedua fungsi ini membuat `feeSetter` dapat mengendalikan penerima biaya (jika ad
 
 [Kontrak ini](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) menerapkan token likuiditas ERC-20. Sama dengan kontrak [ERC-20 OpenWhisk](/developers/tutorials/erc20-annotated-code), sehingga saya hanya akan menjelaskan perbedaannya, fungsionalitas `izin`.
 
-Transaksi di Ethereum membutuhkan ether (ETH), yang sama dengan uang sebenarnya. Jika Anda memiliki token ERC-20, tetapi bukan ETH, Anda tidak dapat mengirim transaksi, sehingga Anda tidak dapat melakukan apa pun dengannya. Satu solusi untuk menghindari masalah ini adalah [transaksi meta](https://docs.uniswap.org/protocol/V2/guides/smart-contract-integration/supporting-meta-transactions/). Pemilik token menandatangani transaksi yang membuat seseorang lainnya menarik token di luar rantai dan mengirimnya menggunakan Internet kepada penerima. Penerima, yang memiliki ETH, kemudian mengirim izin atas nama pemilik.
+Transaksi di Ethereum membutuhkan ether (ETH), yang sama dengan uang sebenarnya. Jika Anda memiliki token ERC-20, tetapi bukan ETH, Anda tidak dapat mengirim transaksi, sehingga Anda tidak dapat melakukan apa pun dengannya. Satu solusi untuk menghindari masalah ini adalah [transaksi meta](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions). Pemilik token menandatangani transaksi yang membuat seseorang lainnya menarik token di luar rantai dan mengirimnya menggunakan Internet kepada penerima. Penerima, yang memiliki ETH, kemudian mengirim izin atas nama pemilik.
 
 ```solidity
     bytes32 public DOMAIN_SEPARATOR;
@@ -891,11 +890,11 @@ Kontrak perifer adalah API (antarmuka program aplikasi) untuk Uniswap. Kontrak i
 
 ### UniswapV2Router01.sol {#UniswapV2Router01}
 
-[Kontrak ini](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) memiliki masalah, dan [seharusnya tidak lagi digunakan](https://docs.uniswap.org/protocol/V2/reference/smart-contracts/router-01/). Untungnya, kontrak perifer bersifat tanpa status dan tidak menampung aset apa pun, sehingga mudah untuk mengusangkannya dan menyarankan orang-orang menggunakan penggantinya, `UniswapV2Router02`, sebagai gantinya.
+[Kontrak ini](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) memiliki masalah, dan [seharusnya tidak lagi digunakan](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Untungnya, kontrak perifer bersifat tanpa status dan tidak menampung aset apa pun, sehingga mudah untuk mengusangkannya dan menyarankan orang-orang menggunakan penggantinya, `UniswapV2Router02`, sebagai gantinya.
 
 ### UniswapV2Router02.sol {#UniswapV2Router02}
 
-Dalam kebanyakan kasus, Anda akan menggunakan Uniswap melalui [kontrak ini](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). Anda dapat melihat cara menggunakannya [di sini](https://docs.uniswap.org/protocol/V2/reference/smart-contracts/router-02/).
+Dalam kebanyakan kasus, Anda akan menggunakan Uniswap melalui [kontrak ini](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). Anda dapat melihat cara menggunakannya [di sini](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02).
 
 ```solidity
 pragma solidity =0.6.6;

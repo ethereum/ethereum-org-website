@@ -1,7 +1,6 @@
 {
   "layer-2-arbitrum-note": "Fraud proofs only for whitelisted users, whitelist not open yet",
   "layer-2-boba-note": "State validation in development",
-  "layer-2-metis-note": "Fraud proofs in development",
   "layer-2-optimism-note": "Fault proofs in development",
   "layer-2-hero-title": "Layer 2",
   "layer-2-hero-header": "Ethereum for everyone",
@@ -103,9 +102,6 @@
   "layer-2-faq-question-2-description-3": "At the moment, most ZK-rollups are application specific, in contrast with optimistic rollups which have largely been generalizable.",
   "layer-2-more-info-on-optimistic-rollups": "More info on optimistic rollups",
   "layer-2-more-info-on-zk-rollups": "More info on zero-knowledge rollups",
-  "layer-2-faq-question-3-title": "Is scaling at layer 1 possible?",
-  "layer-2-faq-question-3-description-1": "Yes. Currently in the Ethereum roadmap there are plans for shard chains. While these are in the roadmap, further scaling through layer 2 networks is still necessary.",
-  "layer-2-more-on-sharding": "More info on sharding",
   "layer-2-faq-question-4-title": "What are the risks with layer 2?",
   "layer-2-faq-question-4-description-1": "Layer 2 projects contain additional risks compared to holding funds and transacting directly on Ethereum Mainnet. For instance, sequencers may go down, leading you to have to wait to access funds.",
   "layer-2-faq-question-4-description-2": "We encourage you to do your own research before transferring significant funds to a layer 2. For more information on the technology, risks, and trust assumptions of layer 2s, we recommend checking out <a href=\"https://l2beat.com/?view=risk\">L2BEAT</a>, which provides a comprehensive risk assessment framework of each project.",
@@ -131,5 +127,6 @@
   "layer-2-note": "Note:",
   "layer-2-ecosystem-portal": "Ecosystem Portal",
   "layer-2-token-lists": "Token Lists",
-  "layer-2-explore": "Explore"
+  "layer-2-explore": "Explore",
+  "page-dapps-ready-button": "Go"
 }

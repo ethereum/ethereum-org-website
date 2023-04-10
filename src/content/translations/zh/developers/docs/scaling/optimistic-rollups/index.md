@@ -34,7 +34,7 @@ lang: zh
 
 **链上合约**：乐观卷叠的操作由在以太坊上运行的智能合约控制。 这包括存储卷叠区块、监控卷叠状态更新以及跟踪用户存款的合约。 在这个意义上，以太坊充当乐观卷叠的基础层或“一层网络”。
 
-**链下虚拟机 (VM)**：虽然管理乐观卷叠协议的合约在以太坊上运行，但卷叠协议在[以太坊虚拟机](/developers/docs/evm/)之外的另一个虚拟机上执行计算和状态存储。 链下虚拟机是应用程序所在和执行状态更改的地方；它作为乐观卷叠的上层或“第 2 层”。
+**链下虚拟机 (VM)**：虽然管理乐观卷叠协议的合约在以太坊上运行，但卷叠协议在[以太坊虚拟机](/developers/docs/evm/)之外的另一个虚拟机上执行计算和状态存储。 应用程序在链下虚拟机上驻留并且状态更改在其上执行；链下虚拟机作为乐观卷叠的上层或“二层网络”。
 
 由于乐观卷叠旨在运行为以太坊虚拟机编写或编译的程序，因此链下虚拟机包含许多以太坊虚拟机设计规范。 此外，链上计算的欺诈证明允许以太坊网络强制执行在链下虚拟机中计算的状态更改的有效性。
 
@@ -46,7 +46,7 @@ lang: zh
 
 如前所述，乐观卷叠将交易数据作为 `calldata` 发布到以太坊。 由于卷叠链的执行基于提交的交易，任何人都可以使用此信息（锚定在以太坊的基础层）来执行卷叠的状态并验证状态转换的正确性。
 
-数据可用性至关重要，因为如果无法访问状态数据，挑战者就无法构建欺诈证明来对无效的卷叠操作提出异议。 有了以太坊提供的数据可用性，就降低了卷叠运营商逃脱恶意行为（例如，提交无效区块）的风险。
+[数据可用性](https://ethereum.org/en/developers/docs/data-availability/)至关重要，因为如果不能访问状态数据，挑战者就不能构造欺诈证明来质疑无效的卷叠操作。 有了以太坊提供的数据可用性，就降低了卷叠运营商逃脱恶意行为（例如，提交无效区块）的风险。
 
 ### 抗审查 {#censorship-resistance}
 
@@ -259,9 +259,7 @@ ii. 使用乐观卷叠的开发者和项目团队可以利用以太坊的基础�
 
 - [乐观卷叠如何工作（完整指南）](https://www.alchemy.com/overviews/optimistic-rollups)
 - [乐观卷叠知识大全](https://research.paradigm.xyz/rollups)
-- [EthHub 上关于乐观卷叠的介绍](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/optimistic_rollups/)
 - [Arbitrum 基本指南](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [乐观卷叠究竟如何工作？](https://research.paradigm.xyz/optimism)
 - [深入研究乐观虚拟机](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [什么是乐观虚拟机？](https://www.alchemy.com/overviews/optimistic-virtual-machine)
-- [乐观卷叠如何工作？ (完整指南)](https://www.alchemy.com/overviews/optimistic-rollups)

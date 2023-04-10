@@ -14,7 +14,7 @@ Nick Szabo stellte sich einen digitalen Marktplatz vor, der auf automatischen, k
 
 ## Wieso Verträge? {#what-are-contracts}
 
-Möglicherweise denken Sie: _„Ich bin kein Anwalt! Warum sollte ich mich um Verträge kümmern?"_. Die meisten Menschen denken bei Verträgen an unnötig lange Vertragsbedingungen oder langweilige Rechtsdokumente.
+Möglicherweise denken Sie: _"Ich bin kein Anwalt! Warum sollte ich mich um Verträge kümmern?"_. Die meisten Menschen denken bei Verträgen an unnötig lange Vertragsbedingungen oder langweilige Rechtsdokumente.
 
 Verträge sind einfach Vereinbarungen. Das heißt jede Art von Vereinbarung kann in Form von Vertragsbedingungen geschlossen werden. Mündliche Vereinbarungen oder schriftliche Verträge sind für viele Dinge akzeptabel, doch sie haben auch Schwachstellen.
 
