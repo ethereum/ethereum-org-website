@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react"
+import React, { FC, useRef, useState } from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Icon,
@@ -291,10 +291,11 @@ const Nav: FC<IProps> = ({ path }) => {
     setIsMenuOpen((prev) => !prev)
     document.documentElement.style.overflowY = isMenuOpen ? "scroll" : "hidden"
   }
-  const lgBreakpoint = useToken("breakpoints", "lg")
+
+  const searchRef = useRef<HTMLButtonElement>(null)
 
   const toggleSearch = (): void => {
-    document.getElementsByClassName("DocSearch-Button")[0].click()
+    searchRef.current?.click()
   }
   const shouldShowSubNav = path.includes("/developers/")
   const splitPath = path.split("/")
@@ -312,8 +313,8 @@ const Nav: FC<IProps> = ({ path }) => {
         borderColor="rgba(0, 0, 0, 0.1)"
         height="4.75rem"
         justifyContent="center"
-        px={8}
         py={4}
+        px={{ base: 8, lg: 4, xl: 8 }}
       >
         <Flex
           alignItems={{ base: "center", lg: "normal" }}
@@ -336,11 +337,9 @@ const Nav: FC<IProps> = ({ path }) => {
             w="100%"
             display={{ base: "none", lg: "flex" }}
           >
-            <Flex as={List} alignItems="center" m={0} ml={8}>
-              <Menu path={path} sections={linkSections} />
-            </Flex>
+            <Menu path={path} sections={linkSections} />
             <Flex alignItems="center" justifyContent="space-between" gap={2}>
-              <Search />
+              <Search ref={searchRef} />
               <IconButton
                 aria-label={
                   isDarkTheme ? "Switch to Light Theme" : "Switch to Dark Theme"

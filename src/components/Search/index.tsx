@@ -1,7 +1,18 @@
 // Import libraries
 import React, { FC } from "react"
 import { useTranslation, useI18next } from "gatsby-plugin-react-i18next"
-import { Portal, useDisclosure } from "@chakra-ui/react"
+import { MdSearch } from "react-icons/md"
+import {
+  IconButton,
+  Icon,
+  forwardRef,
+  Portal,
+  useDisclosure,
+  IconButtonProps,
+  useToken,
+  useMediaQuery,
+  useMergeRefs,
+} from "@chakra-ui/react"
 import { useDocSearchKeyboardEvents } from "@docsearch/react"
 import { DocSearchHit } from "@docsearch/react/dist/esm/types"
 import SearchButton from "./SearchButton"
@@ -9,9 +20,24 @@ import SearchModal from "./SearchModal"
 // Styles
 import "@docsearch/css"
 
-const Search: FC = () => {
+export const SearchIconButton = forwardRef<IconButtonProps, "button">(
+  (props, ref) => (
+    <IconButton
+      ref={ref}
+      icon={<Icon as={MdSearch} />}
+      fontSize="2xl"
+      variant="icon"
+      _hover={{ svg: { fill: "primary" } }}
+      {...props}
+    />
+  )
+)
+
+const Search = forwardRef<{}, "button">((_, ref) => {
   const searchButtonRef = React.useRef<HTMLButtonElement>(null)
   const { isOpen, onClose, onOpen } = useDisclosure()
+
+  const mergedButtonRefs = useMergeRefs(ref, searchButtonRef)
 
   useDocSearchKeyboardEvents({
     isOpen,
@@ -40,16 +66,28 @@ const Search: FC = () => {
     return newValue.substring(0, siteNameIndex)
   }
 
+  // Check for the breakpoint with theme token
+  const xlBreakpoint = useToken("breakpoints", "xl")
+  const [isLargerThanXl] = useMediaQuery(`(min-width: ${xlBreakpoint})`)
+
   return (
     <>
-      <SearchButton
-        ref={searchButtonRef}
-        onClick={onOpen}
-        translations={{
-          buttonText: t("search"),
-          buttonAriaLabel: t("search"),
-        }}
-      />
+      {isLargerThanXl ? (
+        <SearchButton
+          ref={mergedButtonRefs}
+          onClick={onOpen}
+          translations={{
+            buttonText: t("search"),
+            buttonAriaLabel: t("search"),
+          }}
+        />
+      ) : (
+        <SearchIconButton
+          onClick={onOpen}
+          ref={mergedButtonRefs}
+          aria-label={t("aria-toggle-search-button")}
+        />
+      )}
       <Portal>
         {isOpen ? (
           <SearchModal
@@ -119,6 +157,6 @@ const Search: FC = () => {
       </Portal>
     </>
   )
-}
+})
 
 export default Search

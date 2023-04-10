@@ -113,7 +113,6 @@ const NavDropdown: React.FC<IProps> & {
           alignItems="center"
           cursor="pointer"
           py={2}
-          mr={6}
           _hover={{
             "& > svg": {
               fill: "currentColor",

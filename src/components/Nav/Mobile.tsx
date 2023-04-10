@@ -12,7 +12,6 @@ import {
   forwardRef,
   DrawerFooter,
   Flex,
-  DrawerCloseButton,
 } from "@chakra-ui/react"
 import { MdBrightness2, MdLanguage, MdSearch, MdWbSunny } from "react-icons/md"
 import { useTranslation } from "gatsby-plugin-react-i18next"
@@ -24,6 +23,7 @@ import Translation from "../Translation"
 
 import { ISections } from "./types"
 import { ChildOnlyProp } from "../../types"
+import { SearchIconButton } from "../Search"
 
 const NavListItem = forwardRef<{ "aria-label"?: string }, typeof List>(
   (props, ref) => <ListItem ref={ref} mb={12} {...props} />
@@ -136,13 +136,9 @@ const MobileNavMenu: React.FC<IProps> = ({
       gap={4}
       sx={{ svg: { fill: "body" } }}
     >
-      <IconButton
-        icon={<Icon as={MdSearch} />}
-        fontSize="2xl"
+      <SearchIconButton
         onClick={toggleSearch}
         aria-label={t("aria-toggle-search-button")}
-        variant="icon"
-        _hover={{ svg: { fill: "primary" } }}
       />
       <IconButton
         icon={
