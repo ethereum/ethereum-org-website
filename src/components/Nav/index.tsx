@@ -336,6 +336,7 @@ const Nav: FC<IProps> = ({ path }) => {
             justifyContent="space-between"
             w="100%"
             display={{ base: "none", lg: "flex" }}
+            ml={{ base: 3, xl: 8 }}
           >
             <Menu path={path} sections={linkSections} />
             <Flex alignItems="center" justifyContent="space-between" gap={2}>
@@ -354,7 +355,11 @@ const Nav: FC<IProps> = ({ path }) => {
                 _hover={{ color: "primary" }}
                 onClick={toggleColorMode}
               />
-              <ButtonLink to={`/languages/${fromPageParameter}`} variant="icon">
+              <ButtonLink
+                to={`/languages/${fromPageParameter}`}
+                variant="icon"
+                me={{ base: 2, xl: 0 }}
+              >
                 <Icon as={MdLanguage} fontSize="2xl" />
                 <Text as="span" pl={2}>
                   <Translation id="languages" />
