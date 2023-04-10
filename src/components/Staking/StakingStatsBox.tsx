@@ -172,8 +172,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
           <Translation id="page-staking-stats-box-metric-1" />
           <BeaconchainTooltip>
             <Text>
-              Sum of ETH at stake on the Beacon Chain, not including balances
-              over 32 ETH
+              <Translation id="page-staking-stats-box-metric-1-tooltip" />
             </Text>
             <Translation id="data-provided-by" />{" "}
             <Link to="https://beaconcha.in/">Beaconcha.in</Link>
@@ -192,8 +191,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
           <Translation id="page-staking-stats-box-metric-2" />
           <BeaconchainTooltip>
             <Text>
-              Number of validator accounts currently activated on the Beacon
-              Chain
+              <Translation id="page-staking-stats-box-metric-2-tooltip" />
             </Text>
             <Translation id="data-provided-by" />{" "}
             <Link to="https://beaconcha.in/">Beaconcha.in</Link>
@@ -212,8 +210,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
           <Translation id="page-staking-stats-box-metric-3" />
           <BeaconchainTooltip>
             <Text>
-              Average annualized financial return per validator over the past
-              24-hour period
+              <Translation id="page-staking-stats-box-metric-3-tooltip" />
             </Text>
             <Translation id="data-provided-by" />{" "}
             <Link to="https://beaconcha.in/ethstore">Beaconcha.in</Link>
