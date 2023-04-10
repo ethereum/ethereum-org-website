@@ -27,7 +27,7 @@ sidebarDepth: 1
 
 ### 灰色冰川 {#gray-glacier}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>世界标准时间 2022 年 6 月 30 日上午 10 点 54 分 04 秒 </code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />区块编号：<a href="https://etherscan.io/block/15050000">15,050,000 </a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />以太币价格：1,069 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220630094629/https://ethereum.org/en/">网站时光机上的 ethereum.org</a>
+<NetworkUpgradeSummary name="grayGlacier" />
 
 #### 概览 {#gray-glacier-summary}
 
@@ -47,7 +47,7 @@ sidebarDepth: 1
 
 ### 箭形冰川 {#arrow-glacier}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>世界标准时间 2021 年 12 月 9 日晚上 7 点 55 分 23 秒 </code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />区块编号：<a href="https://etherscan.io/block/13773000">13,773,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />以太币价格：4,111 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211207064430/https://ethereum.org/en/">网站时光机上的 ethereum.org</a>
+<NetworkUpgradeSummary name="arrowGlacier" />
 
 #### 概览 {#arrow-glacier-summary}
 
@@ -66,7 +66,7 @@ sidebarDepth: 1
 
 ### 天鹰座 {#altair}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>世界标准时间 2021 年 10 月 27 日上午 10 点 56 分 23 秒</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />时段编号：74,240<br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />以太币价格：4,024 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211026174951/https://ethereum.org/en/">网站时光机上的 ethereum.org</a>
+<NetworkUpgradeSummary name="altair" />
 
 #### 概览 {#altair-summary}
 
@@ -84,7 +84,7 @@ sidebarDepth: 1
 
 ### 伦敦升级 {#london}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>世界标准时间 2021 年 8 月 5 日下午 12 点 33 分 42 秒 </code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块编号：<a href="https://etherscan.io/block/12965000">12,965,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 以太币价格：2,621 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210805124609/https://ethereum.org/en/">网站时光机上的 ethereum.org</a>
+<NetworkUpgradeSummary name="london" />
 
 #### 概览 {#london-summary}
 
@@ -108,7 +108,7 @@ sidebarDepth: 1
 
 ### 柏林升级 {#berlin}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>世界标准时间 2021 年 4 月 15 日上午 10 点 07 分 03 秒</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块编号：<a href="https://etherscan.io/block/12244000">12,244,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 以太币价格：2,454 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210415093618/https://ethereum.org/">网站时光机上的 ethereum.org</a>
+<NetworkUpgradeSummary name="berlin" />
 
 #### 概览 {#berlin-summary}
 
@@ -132,7 +132,7 @@ sidebarDepth: 1
 
 ### 信标链创世块 {#beacon-chain-genesis}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>世界标准时间 2020 年 12 月 1 日下午 12 点 00 分 35 秒</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 信标链区块编号：<a href="https://beaconscan.com/slot/1">1</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 以太币价格：586.23 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201207184633/https://www.ethereum.org/en/">网站时光机上的 ethereum.org</a>
+<NetworkUpgradeSummary name="beaconChainGenesis" />
 
 #### 概览 {#beacon-chain-genesis-summary}
 
@@ -148,7 +148,7 @@ sidebarDepth: 1
 
 ### 质押部署的存款合约 {#staking-deposit-contract}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>世界标准时间 2020 年 10 月 14 日上午 09 点 22 分 52 秒</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块编号：<a href="https://etherscan.io/block/11052984">11,052,984</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 以太币价格：379.04 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201104235727/https://ethereum.org/en/">网站时光机上的 ethereum.org</a>
+<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
 
 #### 概览 {#deposit-contract-summary}
 
@@ -164,7 +164,7 @@ sidebarDepth: 1
 
 ### 缪尔冰川 {#muir-glacier}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>世界标准时间 2020 年 1 月 2 日上午 08 点 30 分 49 秒 </code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块编号：<a href="https://etherscan.io/block/9200000">9,200,000 </a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 以太币价格：127.18 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><a href="https://web.archive.org/web/20200103093618/https://ethereum.org/">网站时光机上的 ethereum.org</a>
+<NetworkUpgradeSummary name="muirGlacier" />
 
 #### 概览 {#muir-glacier-summary}
 
@@ -185,7 +185,7 @@ sidebarDepth: 1
 
 ### 伊斯坦布尔 {#istanbul}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>世界标准时间 2019 年 12 月 8 日中午 12 点 25 分 09 秒</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块编号：<a href="https://etherscan.io/block/9069000">9,069,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 以太币价格：151.06 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20191216101254if*/https://ethereum.org/">网站时光机上的 ethereum.org</a>
+<NetworkUpgradeSummary name="istanbul" />
 
 #### 概览 {#istanbul-summary}
 
@@ -214,7 +214,7 @@ sidebarDepth: 1
 
 ### 君士坦丁堡 {#constantinople}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>世界标准时间 2019 年 2 月 28 日晚上 07 点 52 分 04 秒</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块编号：<a href="https://etherscan.io/block/7280000">7,280,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 以太币价格：136.29 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20190415163751/https://www.ethereum.org/">网站时光机上的 ethereum.org</a>
+<NetworkUpgradeSummary name="constantinople" />
 
 #### 概览 {#constantinople-summary}
 
@@ -241,7 +241,7 @@ sidebarDepth: 1
 
 ### 拜占庭 {#byzantium}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code> 世界标准时间 2017 年 10 月 16 日早上 05 点 22 分 11 秒</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块编号： <a href="https://etherscan.io/block/4370000">4,370,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 以太币价格：334.3 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><a href="https://web.archive.org/web/20171017201143/https://www.ethereum.org/">网站时光机上的 ethereum.org</a>
+<NetworkUpgradeSummary name="byzantium" />
 
 #### 概览 {#byzantium-summary}
 
@@ -274,7 +274,7 @@ sidebarDepth: 1
 
 ### 伪龙 {#spurious-dragon}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>世界标准时间 2016 年 11 月 22 日早上 04 点 15 分 44 秒</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块编号：<a href="https://etherscan.io/block/2675000">2,675,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 以太币价格：9.84 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161127154654/https://www.ethereum.org/">网站时光机上的 ethereum.org</a>
+<NetworkUpgradeSummary name="spuriousDragon" />
 
 #### 概览 {#spurious-dragon-summary}
 
@@ -299,7 +299,7 @@ sidebarDepth: 1
 
 ### 橘子口哨 {#tangerine-whistle}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>世界标准时间 2016 年 10 月 18 日下午 01 点 19 分 31 秒</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块编号：<a href="https://etherscan.io/block/2463000">2,463,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 以太币价格：12.50 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161030043727/https://www.ethereum.org/">网站时光机上的 ethereum.org</a>
+<NetworkUpgradeSummary name="tangerineWhistle" />
 
 #### 概览 {#tangerine-whistle-summary}
 
@@ -320,7 +320,7 @@ sidebarDepth: 1
 
 ### DAO 分叉 {#dao-fork}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>世界标准时间 2016 年 7 月 20 日下午 01 点 20 分 40 秒</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块编号：<a href="https://etherscan.io/block/1920000">1,920,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 以太币价格：12.54 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160803215306/https://ethereum.org/">网站时光机上的 ethereum.org</a>
+<NetworkUpgradeSummary name="daoFork" />
 
 #### 概览 {#dao-fork-summary}
 
@@ -336,7 +336,7 @@ DAO 分叉是为了响应 [2016 DAO 攻击](https://www.coindesk.com/markets/201
 
 ### 家园 {#homestead}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>世界标准时间 2016 年 3 月 14 日下午 06 点 49 分 53 秒</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块编号：<a href="https://etherscan.io/block/1150000">1,150,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 以太币价格：12.50 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160313203843/https://www.ethereum.org/">网站时光机上的 ethereum.org</a>
+<NetworkUpgradeSummary name="homestead" />
 
 #### 概览 {#homestead-summary}
 
@@ -358,7 +358,7 @@ DAO 分叉是为了响应 [2016 DAO 攻击](https://www.coindesk.com/markets/201
 
 ### 边境解冻 {#frontier-thawing}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>世界标准时间 2015 年 9 月 7 日晚上 09 点 33 分 09 秒</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块编号：<a href="https://etherscan.io/block/200000">200,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 以太币价格：1.24 美元<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150912193811/https://www.ethereum.org/">网站时光机上的 ethereum.org</a>
+<NetworkUpgradeSummary name="frontierThawing" />
 
 #### 概览 {#frontier-thawing-summary}
 
@@ -371,7 +371,7 @@ DAO 分叉是为了响应 [2016 DAO 攻击](https://www.coindesk.com/markets/201
 
 ### 边境 {#frontier}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>世界标准时间 2015 年 7 月 30 日下午 03 点 26 分 13 秒</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 区块编号：<a href="https://etherscan.io/block/0">0</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 以太币价格：不适用<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150802035735/https://www.ethereum.org/">网站时光机上的 ethereum.org</a>
+<NetworkUpgradeSummary name="frontier" />
 
 #### 概览 {#frontier-summary}
 
@@ -385,7 +385,7 @@ DAO 分叉是为了响应 [2016 DAO 攻击](https://www.coindesk.com/markets/201
 
 ### 公开募资 {#ether-sale}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 2014 年 7 月 22 日 - 9 月 2 日<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140804235628/https://www.ethereum.org/">网站时光机上的 ethereum.org</a>
+<NetworkUpgradeSummary name="etherSale" />
 
 以太币的预售期为 42 天， 可以使用比特币进行购买。
 
@@ -395,7 +395,7 @@ DAO 分叉是为了响应 [2016 DAO 攻击](https://www.coindesk.com/markets/201
 
 ### 黄皮书发布 {#yellowpaper}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 2014 年 4 月 1 日<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140509173418/https://www.ethereum.org/">网络时光机上的 ethereum.org</a>
+<NetworkUpgradeSummary name="yellowpaperRelease" />
 
 Gavin Wood 博士撰写的黄皮书，关于以太坊协议的技术定义。
 
@@ -407,7 +407,7 @@ Gavin Wood 博士撰写的黄皮书，关于以太坊协议的技术定义。
 
 ### 白皮书发布 {#whitepaper}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 2013 年 11 月 27 日<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140208030136/http://www.ethereum.org/">网站时光机上的 ethereum.org</a>
+<NetworkUpgradeSummary name="whitepaperRelease" />
 
 以太坊项目在 2015 年启动。但早在 2013 年，以太坊的创始人 Vitalik Buterin 就发表了这一介绍性文章。
 
