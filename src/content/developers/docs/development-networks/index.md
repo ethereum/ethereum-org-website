@@ -32,7 +32,7 @@ You _could_ [run a node](/developers/docs/nodes-and-clients/#running-your-own-no
 
 Kurtosis is a build system for multi-container test environments which enables developers to locally spin up reproducible instances of blockchain networks.
 
-The Ethereum Kurtosis package locally instantiates a containerized and parameterizable Ethereum testnet, with support for 9 different Execution Layer (EL) and Consensus Layer (CL) clients. Kurtosis gracefully handles all local port mappings and service connections for easy dApp and smart contract prototyping and testing.
+The Ethereum Kurtosis package locally instantiates a containerized and parameterizable Ethereum testnet, with support for multiple different Execution Layer (EL) and Consensus Layer (CL) clients and an n-number of nodes. Kurtosis gracefully handles all local port mappings and service connections for easy dApp and smart contract prototyping and testing.
 
 - [Ethereum network package](https://github.com/kurtosis-tech/eth-network-package)
 - [Website](https://www.kurtosis.com/)
