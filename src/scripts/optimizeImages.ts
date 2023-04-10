@@ -6,7 +6,8 @@ import util from "util"
 const rename = util.promisify(fs.rename)
 
 const matches = glob.sync(`src/assets/**/*.{png,jpg,jpeg}`)
-const MAX_WIDTH = 800 * 2
+const MAX_WIDTH = 800
+const QUALITY = 70
 
 Promise.all(
   matches.map(async (match) => {
@@ -19,16 +20,23 @@ Promise.all(
       return
     }
 
+    const ext = match.split(".").pop()
     const optimizedName = match.replace(
       /(\..+)$/,
       (_match, ext) => `-optimized${ext}`
     )
 
-    await stream
-      .resize({
-        width: MAX_WIDTH,
-      })
-      .toFile(optimizedName)
+    const resized = stream.resize({
+      width: MAX_WIDTH,
+    })
+
+    if (ext === "png") {
+      await resized.png({ quality: QUALITY }).toFile(optimizedName)
+    }
+
+    if (ext === "jpg" || ext === "jpeg") {
+      await resized.jpeg({ quality: QUALITY }).toFile(optimizedName)
+    }
 
     return rename(optimizedName, match)
   })
