@@ -23,7 +23,7 @@ const Menu: React.FC<IProps> = ({ path, sections }) => {
   const [start, basics, protocol] = learn.items
 
   return (
-    <Flex as={List} alignItems="center" m={0} ml={4} gap={4}>
+    <Flex as={List} alignItems="center" m={0} ml={{ base: 4, xl: 8 }} gap={4}>
       <NavDropdown section={useEthereum} hasSubNav={shouldShowSubNav}>
         {useEthereum.items.map((item, index) => (
           <NavDropdown.Item
