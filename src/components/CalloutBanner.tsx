@@ -12,8 +12,6 @@ export interface IProps extends FlexProps {
   titleKey: TranslationKey
   descriptionKey: TranslationKey
   alt: string
-  className?: string
-  id?: string
 }
 
 const CalloutBanner: React.FC<IProps> = ({
@@ -23,8 +21,6 @@ const CalloutBanner: React.FC<IProps> = ({
   descriptionKey,
   alt,
   children,
-  className,
-  id,
   ...restProps
 }) => (
   <Flex
@@ -32,8 +28,6 @@ const CalloutBanner: React.FC<IProps> = ({
     bg="layer2Gradient"
     p={{ base: 8, sm: 12 }}
     borderRadius="base"
-    className={className}
-    id={id}
     {...restProps}
   >
     <Image
