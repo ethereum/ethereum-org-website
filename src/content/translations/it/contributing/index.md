@@ -27,7 +27,8 @@ Il sito web di ethereum.org e, più in generale, Ethereum, è un progetto open-s
 - [Crea/modifica contenuti](/contributing/#how-to-update-content) _– Suggerisci nuove pagine o apporta modifiche a quelle già esistenti_
 - [Aggiungi un livello 2](/contributing/adding-layer-2s/) _- Aggiungi un livello 2 a una pagina pertinente_
 - [Aggiungi un prodotto o servizio di staking](/contributing/adding-staking-products/) - _Aggiungi un progetto che aiuti a facilitare lo staking in solo, in pool o lo staking come servizio_
-- [Aggiungi un portafoglio](/contributing/adding-wallets/) _- Aggiungi un portafoglio per la [pagina trova portafogli](/wallets/find-wallet/)._
+- [Aggiungi un portafoglio](/contributing/adding-wallets/) _– Aggiungi un portafoglio per la [pagina trova portafogli](/wallets/find-wallet/)_
+- [Suggerisci un progetto per la nostra pagina DeSci](/contributing/adding-desci-projects/) _- Aggiungi un progetto basato su Ethereum che contribuisca alla scienza decentralizzata_
 
 _Hai domande?_ Consulta il nostro [server Discord](https://discord.gg/CetY6Y4)
 

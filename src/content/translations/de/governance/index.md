@@ -17,15 +17,15 @@ Governance, also die Steuerung, erfolgt über die Systeme, die etabliert wurden,
 
 ## Dezentralisierte Governance {#decentralized-governance}
 
-Niemand besitzt oder kontrolliert das Ethereum-Protokoll. Dennoch müssen Entscheidungen über die Umsetzung von Änderungen getroffen werden, um die Beständigkeit und den Erfolg des Netzwerkes optimal zu gewährleisten. Wegen der fehlenden Besitzverhältnisse ist eine herkömmliche Form der Organisationsführung ungeeignet.
+Niemand besitzt oder kontrolliert das Ethereum-Protokoll. Dennoch müssen Entscheidungen über die Umsetzung von Änderungen getroffen werden, um die Beständigkeit und den Erfolg des Netzwerks optimal zu gewährleisten. Wegen der fehlenden Besitzverhältnisse ist eine herkömmliche Form der Organisationsführung ungeeignet.
 
 ## Ethereum-Governance {#ethereum-governance}
 
-Ethereum-Governance ist der Prozess, über den Protokolländerungen vorgenommen werden. Wichtig ist, zu betonen, dass dieser Prozess nicht damit zusammenhängt, wie Menschen und Anwendungen das Protokoll benutzen. Bei Ethereum gibt es keine Berechtigungen. Jeder kann von überall auf der Welt an On-Chain-Aktivitäten teilnehmen. Es gibt keine Regeln dafür, wer eine Anwendung erstellen oder eine Transaktion senden kann oder auch nicht. Allerdings gibt es einen Prozess, um Änderungen am Kernprotokoll vorzuschlagen, auf dem diese Anwendungen basieren. Da so viele Menschen abhängig von Ethereums Stabilität sind, gibt es einen sehr hohen Koordinationsschwellenwert für wesentliche Änderungen, einschließlich sozialer und technischer Prozesse. So ist sichergestellt, dass alle Veränderungen an Ethereum sicher sind und von der Community weiterhin unterstützt werden.
+Ethereum-Governance ist der Prozess, über den Protokolländerungen vorgenommen werden. Wichtig ist, zu betonen, dass dieser Prozess nicht damit zusammenhängt, wie Menschen und Anwendungen das Protokoll benutzen. Bei Ethereum gibt es keine Berechtigungen. Jeder kann von überall auf der Welt an On-Chain-Aktivitäten teilnehmen. Es gibt keine Regeln dafür, wer eine Anwendung erstellen oder eine Transaktion senden kann oder auch nicht. Allerdings gibt es einen Prozess, um Änderungen am Kernprotokoll vorzuschlagen, auf dem diese Anwendungen laufen. Da so viele Menschen abhängig von Ethereums Stabilität sind, gibt es einen sehr hohen Koordinationsschwellenwert für wesentliche Änderungen, einschließlich sozialer und technischer Prozesse. So ist sichergestellt, dass alle Veränderungen an Ethereum sicher sind und von der Community weiterhin unterstützt werden.
 
 ### Governance – On-Chain vs. Off-Chain {#on-chain-vs-off-chain}
 
-Die Blockchain-Technologie ermöglicht neue Governance-Fähigkeiten, die sogenannte On-Chain-Governance. Bei der On-Chain-Governance werden vorgeschlagene Protokolländerungen durch eine Abstimmung der Beteiligten beschlossen. In der Regel sind das Inhaber eines Governance-Tokens. Die Abstimmung erfolgt über die Blockchain. Bei einigen Formen der „On-Chain-Governance“ werden die vorgeschlagenen Protokolländerungen bereits im Code niedergeschrieben und automatisch umgesetzt, wenn die Interessenvertreter die Änderungen genehmigen.
+Die Blockchain-Technologie ermöglicht neue Governance-Fähigkeiten, die sogenannte On-Chain-Governance. Bei der On-Chain-Governance werden vorgeschlagene Protokolländerungen durch eine Abstimmung der Beteiligten beschlossen. In der Regel sind das Inhaber eines Governance-Tokens. Die Abstimmung erfolgt über die Blockchain. Bei einigen Formen der On-Chain-Governance werden die vorgeschlagenen Protokolländerungen bereits im Code niedergeschrieben und automatisch umgesetzt, wenn die Interessenvertreter die Änderungen genehmigen.
 
 Der gegenteilige Ansatz ist die Off-Chain-Governance. Dabei werden Entscheidungen über Protokolländerungen per informeller Diskussion besprochen. Werden sie genehmigt, wird die Änderung im Code implementiert.
 
@@ -48,7 +48,7 @@ Es gibt verschiedene Interessensvertreter in der [Ethereum-Community](/community
 - **Anwendungs-/Tool-Entwickler**: Diese Personen schreiben Anwendungen, die auf der Ethereum-Blockchain laufen (z. B. DeFi, NFTs usw.), oder erstellen Tools, um mit Ethereum zu interagieren (z. B. Wallets, Test-Suiten usw.). [Mehr zu dApps](/dapps/).
 - **Node-Betreiber**: Diese Personen betreiben Nodes (Knotenpunkte), die Blöcke und Transaktionen propagieren, indem sie ungültige Transaktionen, auf die sie stoßen, ablehnen oder blockieren. [Mehr zu Nodes](/developers/docs/nodes-and-clients/).
 - **EIP-Autoren**: Diese Personen schlagen Änderungen am Ethereum-Protokoll in Form von Ethereum-Verbesserungsvorschlägen (Ethereum Improvement Proposal, EIP) vor. [Mehr zu EIPs](/eips/).
-- **Miner/Validator**: Diese Personen betreiben Nodes, die neue Blöcke zur Ethereum-Blockchain hinzufügen können.
+- **Validatoren**: Diese Personen betreiben Nodes, die neue Blöcke zur Ethereum-Blockchain hinzufügen können.
 - **Protokollentwickler** (sogenannte „Core Developer“): Diese Personen pflegen die verschiedenen Ethereum-Implementierungen (z. B. go-ethereum, Nethermind, Besu, Erigon auf dem Ausführungslayer oder Prysm, Lighthouse, Nimbus, Teku, Lodestar auf dem Konsensuslayer). [Mehr zu Ethereum-Clients](/developers/docs/nodes-and-clients/).
 
 _Hinweis: Jede Person kann Teil von mehreren dieser Gruppen sein (z. B. ein Protokollentwickler kann sich für einen EIP einsetzen und einen Validator für die Beacon Chain ausführen und zudem auch DeFi-Anwendungen nutzen). Doch um das Konzept wirklich zu verstehen, sollte zwischen den einzelnen Gruppen unterschieden werden._
@@ -91,7 +91,7 @@ Dieser Ablauf ist zwar sehr vereinfacht, gibt aber einen Überblick über die wi
 
 ### Die Arbeit im Vorfeld {#prior-work}
 
-Vorreiter im Bereich EIP, sogenannte EIP-Champions, sollten sich mit bereits erfolgter Arbeit und Vorschlägen vertraut machen, bevor sie einen EIP erstellen, der ernsthaft für die Bereitstellung im Ethereum-Hauptnetz in Betracht gezogen werden kann. Damit kann ein EIP hoffentlich zu einer Neuerung führen, die nicht schon einmal abgelehnt wurde. Die drei wichtigsten Stellen, um das in Erfahrung zu bringen: [EIP Repository](https://github.com/ethereum/eips), [Ethereum Magicians](https://ethereum-magicians.org/) und [ethresear.ch](https://ethresear.ch/).
+Vorreiter im Bereich EIP, sogenannte EIP-Champions, sollten sich mit bereits erfolgter Arbeit und Vorschlägen vertraut machen, bevor sie einen EIP erstellen, der ernsthaft für die Bereitstellung im Ethereum-Hauptnetz in Betracht gezogen werden kann. Damit kann ein EIP hoffentlich zu einer Neuerung führen, die nicht schon einmal abgelehnt wurde. Die drei wichtigsten Stellen, um das in Erfahrung zu bringen: [EIP Repository](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/) und [ethresear.ch](https://ethresear.ch/).
 
 ### Arbeitsgruppen {#working-groups}
 
@@ -99,9 +99,9 @@ Es ist unwahrscheinlich, dass der erste Entwurf eines EIP ohne Änderungen in da
 
 ### Community-Konsens {#community-consensus}
 
-Einige EIPs bringen einfache technische Verbesserungen mit minimalen Nuancen, doch andere sind komplexer und sind daher mit Kompromissen verbunden, die sich auf unterschiedliche Weise auf verschiedene Interessengruppen auswirken werden. Daher sind auch manche EIPs in der Community umstrittener als andere.
+Einige EIPs sind einfache technische Verbesserungen mit wenigen Nuancen, während andere komplexer und mit Kompromissen verbunden sind, die unterschiedliche Interessengruppen auf unterschiedliche Weise beeinflussen werden. Das bedeutet, dass einige EIPs innerhalb der Gemeinschaft umstrittener sind als andere.
 
-Es gibt keinen klaren Leitfaden für den Umgang mit strittigen Vorschlägen. Da die Entwickler von Protokollen keine Möglichkeit haben, andere zur Annahme von Netzwerk-Upgrades zu zwingen, vermeiden sie für gewöhnlich die Implementierung von EIPs, bei denen die strittigen Punkte die Vorteile für die breitere Community überwiegen.
+Es gibt keinen klaren Leitfaden für den Umgang mit strittigen Vorschlägen. Dies ist ein Ergebnis des dezentralen Designs von Ethereum, bei dem keine einzelne Interessentenvertreter-Gruppe andere zu etwas zwingen kann: Protokollentwickler können sich entscheiden, keine Änderungen des Codes zu implementieren; Nodebetreiber können wählen, den aktuellsten Ethereum-Client nicht zu betreiben; Anwendungsteams und Benutzer können sich entscheiden, nicht auf der Blockchain zu handeln. Da die Entwickler von Protokollen keine Möglichkeit haben, andere zur Annahme von Netzwerk-Upgrades zu zwingen, vermeiden sie für gewöhnlich die Implementierung von EIPs, bei denen die strittigen Punkte die Vorteile für die breitere Community überwiegen.
 
 Von EIP-Champions wird erwartet, dass sie Feedback von allen relevanten Interessengruppen einholen. Wenn Sie sich als Verfechter eines umstrittenen EIP sehen, sollten Sie versuchen, auf Einwände einzugehen, um einen Konsens für Ihren EIP zu finden. In Anbetracht der Größe und Vielfalt der Ethereum-Community gibt es nicht die eine Herangehensweise (z. B. eine Coin-Abstimmung), die sich für die Beurteilung des Community-Konsens empfiehlt. Von EIP-Champions wird erwartet, dass sie sich an die Umstände anpassen, die sich für ihren Vorschlag herauskristallisieren.
 
@@ -147,13 +147,13 @@ Die Möglichkeit, sich angesichts erheblicher politischer, philosophischer oder 
 
 <Divider />
 
-## Beacon Chain-Entwicklung {#beacon-chain}
+## Beacon Chain governance {#beacon-chain}
 
 Beim Ethereum-Governance-Prozess geht es oft darum, Geschwindigkeit und Effizienz gegenüber Offenheit und Inklusivität abzuwägen. Um die Entwicklung der Beacon Chain zu beschleunigen, wurde sie getrennt vom Proof-of-Work-Ethereum -Netzwerk veröffentlicht. Sie folgt ihren eigenen Governance-Praktiken.
 
-Während die Entwicklung der Spezifikation und Implementierungen immer vollständig quelloffen erfolgte, wurden die oben beschriebenen formalen Verfahren zur Vorlage von Aktualisierungen nicht angewandt. So konnten Veränderungen schneller spezifiziert werden und die Experten und Implementatoren kamen schneller zu einer Einigung.
+Während die Entwicklung der Spezifikation und Implementierungen immer vollständig quelloffen erfolgte, wurden die oben beschriebenen formalen Verfahren um Aktualisierungen vorzuschlagen nicht angewandt. So konnten Veränderungen schneller spezifiziert werden und die Experten und Implementatoren kamen schneller zu einer Einigung.
 
-Wenn die Beacon Chain mit dem Ethereum-Ausführungslayer verschmilzt, erfolgt die Harmonisierung des Governance-Prozesses zum Vorschlagen von Änderungen. Dieser Prozess des Zusammenschlusses ist [bereits im Gange](https://eips.ethereum.org/EIPS/eip-3675).
+Am 15. September 2022 wurde die Fusion der Beacon Chain mit der Ethereum-Ausführungsschicht im Rahmen des [Paris-Netzwerk-Updates](https://ethereum.org/en/history/#paris) abgeschlossen. Der Vorschlag [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) wurde von "Last Call" auf "Final" geändert, womit der Übergang zum Proof-of-Stake-Verfahren vollständig abgeschlossen wurde.
 
 <ButtonLink to="/upgrades/merge/">
   Mehr zum Zusammenschluss
@@ -176,9 +176,8 @@ Wenn die Beacon Chain mit dem Ethereum-Ausführungslayer verschmilzt, erfolgt di
 Governance in Ethereum ist nicht starr definiert. Verschiedene Teilnehmer der Community haben unterschiedliche Ansichten dazu. Hier sind einige davon:
 
 - [Erläuterungen zur Blockchain-Governance](https://vitalik.ca/general/2017/12/17/voting.html) - _Vitalik Buterin_
-- [Governance bei Ethereum](https://docs.ethhub.io/ethereum-basics/governance/) – _ETHHub_
 - [Wie funktioniert die Ethereum-Governance?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
-- [So funktioniert Ethereum-Governance](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
-- [Was ist ein Ethereum-Core-Entwickler?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
+- [Wie Ethereum Governance funktioniert](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
+- [Was ist ein Ethereum Core Entwickler?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
 - [Governance, Teil 2: Plutokratie ist immer noch schlecht](https://vitalik.ca/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
 - [Governance per Münzabstimmung überwinden](https://vitalik.ca/general/2021/08/16/voting3.html) - _Vitalik Buterin_

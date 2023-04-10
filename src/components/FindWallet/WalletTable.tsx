@@ -145,7 +145,7 @@ const Wallet = styled(Grid)`
 `
 
 // https://react-select.com/styles#using-classnames
-// Pass menuIsOpen={true} to component to debug
+// Pass menuIsOpen to component to debug
 const StyledSelect = styled(Select)`
   .react-select__control {
     border: 1px solid ${(props) => props.theme.colors.text};
@@ -1056,7 +1056,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                       <Socials>
                         <Link
                           to={wallet.url}
-                          hideArrow={true}
+                          hideArrow
                           customEventOptions={{
                             eventCategory: "WalletExternalLinkList",
                             eventAction: `Go to wallet`,
@@ -1064,12 +1064,12 @@ const WalletTable = ({ data, filters, walletData }) => {
                             eventValue: filters,
                           }}
                         >
-                          <Icon name="webpage" size={"1.5rem"} color={true} />
+                          <Icon name="webpage" size={"1.5rem"} color />
                         </Link>
                         {wallet.twitter && (
                           <Link
                             to={wallet.twitter}
-                            hideArrow={true}
+                            hideArrow
                             customEventOptions={{
                               eventCategory: "WalletExternalLinkList",
                               eventAction: `Go to wallet`,
@@ -1077,13 +1077,13 @@ const WalletTable = ({ data, filters, walletData }) => {
                               eventValue: filters,
                             }}
                           >
-                            <Icon name="twitter" size={"1.5rem"} color={true} />
+                            <Icon name="twitter" size={"1.5rem"} color />
                           </Link>
                         )}
                         {wallet.discord && (
                           <Link
                             to={wallet.discord}
-                            hideArrow={true}
+                            hideArrow
                             customEventOptions={{
                               eventCategory: "WalletExternalLinkList",
                               eventAction: `Go to wallet`,
@@ -1091,7 +1091,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                               eventValue: filters,
                             }}
                           >
-                            <Icon name="discord" size={"1.5rem"} color={true} />
+                            <Icon name="discord" size={"1.5rem"} color />
                           </Link>
                         )}
                       </Socials>
