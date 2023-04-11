@@ -41,9 +41,9 @@ This is a curated list of user research done in web3 that may help with design a
 ## Web3 Design Case Studies {#Design-case-studies}
 
 - [How to write better web3 error messages](https://medium.com/@JonCrabb/how-to-design-better-web3-error-messages-bd96e12fa582)
+- [Defi design tips](https://medium.com/@JonCrabb/defi-design-tips-vol-12-8600f4374714)
 - [Deep Work Studio](https://deepwork.studio/case-studies/)
 - [Crypto UX Handbook](https://www.cryptouxhandbook.com/)
-- [Defi design tips](https://medium.com/@JonCrabb/defi-design-tips-vol-12-8600f4374714)
 
 ## Design Bounties {#Bounties}
 
@@ -60,7 +60,7 @@ Get involved in professional community-driven organizations or join design group
 - [Designer-dao.xyz](https://www.designer-dao.xyz/)
 - [We3.co](https://we3.co/)
 - [Openux.xyz](https://openux.xyz/about)
-- [t.me/web3uxdesign](https://t.me/web3uxdesign)
+- [Telegram web3uxdesign group](https://t.me/web3uxdesign)
 
 ## Design Systems {#Design-systems}
 - [Optimism Design](https://www.figma.com/@oplabs) (Figma)
