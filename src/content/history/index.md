@@ -26,13 +26,13 @@ Looking for future protocol upgrades? [Learn about upcoming upgrades on the Ethe
 
 ## 2023 {#2023}
 
-### Shanghai (_planned_) {#shanghai}
+### Shanghai {#shanghai}
 
 <NetworkUpgradeSummary name="shanghai" />
 
 #### Summary {#shanghai-summary}
 
-The Shanghai upgrade brings staking withdrawals to the execution layer. In tandem with the Capella upgrade, this enables blocks to accept withdrawal operations, which allow stakers to withdraw their ETH from the Beacon Chain to the execution layer.
+The Shanghai upgrade brought staking withdrawals to the execution layer. In tandem with the Capella upgrade, this enabled blocks to accept withdrawal operations, which allows stakers to withdraw their ETH from the Beacon Chain to the execution layer.
 
 <ExpandableCard title="Shanghai EIPs" contentPreview="Official improvements included in this upgrade.">
 
@@ -48,17 +48,17 @@ The Shanghai upgrade brings staking withdrawals to the execution layer. In tande
 
 ---
 
-### Capella (_planned_) {#capella}
+### Capella {#capella}
 
 <NetworkUpgradeSummary name="capella" />
 
 #### Summary {#capella-summary}
 
-The Capella upgrade is the third major upgrade to the consensus layer (Beacon Chain), which enables staking withdrawals. Capella is to occur simultaneous to the Shanghai upgrade occurring on the execution layer to enable withdrawal functionality in sync with one another.
+The Capella upgrade was the third major upgrade to the consensus layer (Beacon Chain) and enabled staking withdrawals. Capella occurred synchronously with the execution layer upgrade, Shanghai, and enabled staking withdrawal functionality.
 
-This consensus layer upgrade brings the ability for stakers who did not provide withdrawal credentials with their initial deposit to do so, thereby enabling withdrawals.
+This consensus layer upgrade brought the ability for stakers who did not provide withdrawal credentials with their initial deposit to do so, thereby enabling withdrawals.
 
-The upgrade also provides automatic account sweeping functionality, which continuously processes validator accounts for any available rewards payments or full withdrawals.
+The upgrade also provided automatic account sweeping functionality, which continuously processes validator accounts for any available rewards payments or full withdrawals.
 
 - [More on staking withdrawals](/staking/withdrawals/).
 - [Read the Capella upgrade specifications](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
