@@ -445,8 +445,6 @@ const BugBountiesPage = ({
         title={t("page-upgrades-bug-bounty-meta-title")}
         description={t("page-upgrades-bug-bounty-meta-description")}
       />
-      {/* TODO: Remove April 6 */}
-      <BugBountyBanner />
       <Content>
         <HeroCard>
           <HeroContainer>
