@@ -28,11 +28,7 @@ Looking for future protocol upgrades? [Learn about upcoming upgrades on the Ethe
 
 ### Shanghai (_planned_) {#shanghai}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Timestamp: Apr-12-2023 22:27:35 +UTC<br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Block number: TBD<br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: TBD<br />
-
-<!-- <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/{}/https://ethereum.org/">ethereum.org on waybackmachine</a> -->
+<NetworkUpgradeSummary name="shanghai" />
 
 #### Summary {#shanghai-summary}
 
@@ -54,11 +50,7 @@ The Shanghai upgrade brings staking withdrawals to the execution layer. In tande
 
 ### Capella (_planned_) {#capella}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Timestamp: Apr-12-2023 22:27:35 +UTC<br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Epoch number: 194048 (Slot 6209536)<br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: TBD<br />
-
-<!-- <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/{}/https://ethereum.org/en/">ethereum.org on waybackmachine</a> -->
+<NetworkUpgradeSummary name="capella" />
 
 #### Summary {#capella-summary}
 
@@ -77,10 +69,7 @@ The upgrade also provides automatic account sweeping functionality, which contin
 
 ### Paris (The Merge) {#paris}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Sep-15-2022 06:42:42 AM +UTC</code><br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Block number: <a href="https://etherscan.io/block/15537394">15537394</a><br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: $1,472 USD<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220915075314/https://ethereum.org/">ethereum.org on waybackmachine</a>
+<NetworkUpgradeSummary name="paris" />
 
 #### Summary {#paris-summary}
 
@@ -99,10 +88,7 @@ The Paris upgrade was triggered by the proof-of-work blockchain passing a [termi
 
 ### Bellatrix {#bellatrix}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Sep-06-2022 11:34:47 AM +UTC</code><br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Epoch number: 144,896<br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: $1,558 USD<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220906112525/https://ethereum.org/en/">ethereum.org on waybackmachine</a>
+<NetworkUpgradeSummary name="bellatrix" />
 
 #### Summary {#bellatrix-summary}
 
@@ -114,10 +100,7 @@ The Bellatrix upgrade was the second scheduled upgrade for the [Beacon Chain](/u
 
 ### Gray Glacier {#gray-glacier}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Jun-30-2022 10:54:04 AM +UTC</code><br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Block number: <a href="https://etherscan.io/block/15050000">15,050,000</a><br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: $1,069 USD<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220630094629/https://ethereum.org/en/">ethereum.org on waybackmachine</a>
+<NetworkUpgradeSummary name="grayGlacier" />
 
 #### Summary {#gray-glacier-summary}
 
@@ -137,10 +120,7 @@ The Gray Glacier network upgrade pushed back the [difficulty bomb](/glossary/#di
 
 ### Arrow Glacier {#arrow-glacier}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Dec-09-2021 07:55:23 PM +UTC</code><br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Block number: <a href="https://etherscan.io/block/13773000">13,773,000</a><br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: $4111 USD<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211207064430/https://ethereum.org/en/">ethereum.org on waybackmachine</a>
+<NetworkUpgradeSummary name="arrowGlacier" />
 
 #### Summary {#arrow-glacier-summary}
 
@@ -159,10 +139,7 @@ The Arrow Glacier network upgrade pushed back the [difficulty bomb](/glossary/#d
 
 ### Altair {#altair}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Oct-27-2021 10:56:23 AM +UTC</code><br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Epoch number: 74,240<br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH price: $4024 USD<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211026174951/https://ethereum.org/en/">ethereum.org on waybackmachine</a>
+<NetworkUpgradeSummary name="altair" />
 
 #### Summary {#altair-summary}
 
@@ -180,10 +157,7 @@ Altair was the first major network upgrade that had an exact rollout time. Every
 
 ### London {#london}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Aug-05-2021 12:33:42 PM +UTC</code><br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/12965000">12,965,000</a><br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH price: $2621 USD<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210805124609/https://ethereum.org/en/">ethereum.org on waybackmachine</a>
+<NetworkUpgradeSummary name="london" />
 
 #### Summary {#london-summary}
 
@@ -207,10 +181,7 @@ The London upgrade introduced [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559
 
 ### Berlin {#berlin}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Apr-15-2021 10:07:03 AM +UTC</code><br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/12244000">12,244,000</a><br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH price: $2454 USD<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210415093618/https://ethereum.org/">ethereum.org on waybackmachine</a>
+<NetworkUpgradeSummary name="berlin" />
 
 #### Summary {#berlin-summary}
 
@@ -234,10 +205,7 @@ The Berlin upgrade optimized gas cost for certain EVM actions, and increases sup
 
 ### Beacon Chain genesis {#beacon-chain-genesis}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Dec-01-2020 12:00:35 PM +UTC</code><br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Beacon Chain block number: <a href="https://beaconscan.com/slot/1">1</a><br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH price: $586.23 USD<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201207184633/https://www.ethereum.org/en/">ethereum.org on waybackmachine</a>
+<NetworkUpgradeSummary name="beaconChainGenesis" />
 
 #### Summary {#beacon-chain-genesis-summary}
 
@@ -253,10 +221,7 @@ The [Beacon Chain](/upgrades/beacon-chain/) needed 16384 deposits of 32 staked E
 
 ### Staking deposit contract deployed {#staking-deposit-contract}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Oct-14-2020 09:22:52 AM +UTC</code><br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/11052984">11,052,984</a><br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH price: $379.04 USD<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201104235727/https://ethereum.org/en/">ethereum.org on waybackmachine</a>
+<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
 
 #### Summary {#deposit-contract-summary}
 
@@ -272,10 +237,7 @@ The staking deposit contract introduced [staking](/glossary/#staking) to the Eth
 
 ### Muir Glacier {#muir-glacier}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Jan-02-2020 08:30:49 AM +UTC</code><br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/9200000">9,200,000</a><br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH price: $127.18 USD<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20200103093618/https://ethereum.org/">ethereum.org on waybackmachine</a>
+<NetworkUpgradeSummary name="muirGlacier" />
 
 #### Summary {#muir-glacier-summary}
 
@@ -296,10 +258,7 @@ The Muir Glacier fork introduced a delay to the [difficulty bomb](/glossary/#dif
 
 ### Istanbul {#istanbul}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Dec-08-2019 12:25:09 AM +UTC</code><br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/9069000">9,069,000</a><br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH price: $151.06 USD<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20191216101254if*/https://ethereum.org/">ethereum.org on waybackmachine</a>
+<NetworkUpgradeSummary name="istanbul" />
 
 #### Summary {#istanbul-summary}
 
@@ -328,10 +287,7 @@ The Istanbul fork:
 
 ### Constantinople {#constantinople}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Feb-28-2019 07:52:04 PM +UTC</code><br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/7280000">7,280,000</a><br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH price: $136.29 USD<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20190415163751/https://www.ethereum.org/">ethereum.org on waybackmachine</a>
+<NetworkUpgradeSummary name="constantinople" />
 
 #### Summary {#constantinople-summary}
 
@@ -358,10 +314,7 @@ The Constantinople fork:
 
 ### Byzantium {#byzantium}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Oct-16-2017 05:22:11 AM +UTC</code><br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/4370000">4,370,000</a><br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH price: $334.23 USD<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20171017201143/https://www.ethereum.org/">ethereum.org on waybackmachine</a>
+<NetworkUpgradeSummary name="byzantium" />
 
 #### Summary {#byzantium-summary}
 
@@ -394,10 +347,7 @@ The Byzantium fork:
 
 ### Spurious Dragon {#spurious-dragon}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Nov-22-2016 04:15:44 PM +UTC</code><br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/2675000">2,675,000</a><br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH price: $9.84 USD<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161127154654/https://www.ethereum.org/">ethereum.org on waybackmachine</a>
+<NetworkUpgradeSummary name="spuriousDragon" />
 
 #### Summary {#spurious-dragon-summary}
 
@@ -422,10 +372,7 @@ The Spurious Dragon fork was the second response to the denial of service (DoS) 
 
 ### Tangerine whistle {#tangerine-whistle}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Oct-18-2016 01:19:31 PM +UTC</code><br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/2463000">2,463,000</a><br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH price: $12.50 USD<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161030043727/https://www.ethereum.org/">ethereum.org on waybackmachine</a>
+<NetworkUpgradeSummary name="tangerineWhistle" />
 
 #### Summary {#tangerine-whistle-summary}
 
@@ -446,10 +393,7 @@ The Tangerine Whistle fork was the first response to the denial of service (DoS)
 
 ### DAO fork {#dao-fork}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Jul-20-2016 01:20:40 PM +UTC</code><br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/1920000">1,920,000</a><br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH price: $12.54 USD<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160803215306/https://ethereum.org/">ethereum.org on waybackmachine</a>
+<NetworkUpgradeSummary name="daoFork" />
 
 #### Summary {#dao-fork-summary}
 
@@ -465,10 +409,7 @@ Some miners refused to fork because the DAO incident wasn't a defect in the prot
 
 ### Homestead {#homestead}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Mar-14-2016 06:49:53 PM +UTC</code><br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/1150000">1,150,000</a><br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH price: $12.50 USD<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160313203843/https://www.ethereum.org/">ethereum.org on waybackmachine</a>
+<NetworkUpgradeSummary name="homestead" />
 
 #### Summary {#homestead-summary}
 
@@ -490,10 +431,7 @@ The Homestead fork that looked to the future. It included several protocol chang
 
 ### Frontier thawing {#frontier-thawing}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Sep-07-2015 09:33:09 PM +UTC</code><br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/200000">200,000</a><br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH price: $1.24 USD<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150912193811/https://www.ethereum.org/">ethereum.org on waybackmachine</a>
+<NetworkUpgradeSummary name="frontierThawing" />
 
 #### Summary {#frontier-thawing-summary}
 
@@ -506,10 +444,7 @@ The frontier thawing fork lifted the 5,000 [gas](/glossary/#gas) limit per [bloc
 
 ### Frontier {#frontier}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Jul-30-2015 03:26:13 PM +UTC</code><br />
-<Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/0">0</a><br />
-<Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH price: N/A<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150802035735/https://www.ethereum.org/">ethereum.org on waybackmachine</a>
+<NetworkUpgradeSummary name="frontier" />
 
 #### Summary {#frontier-summary}
 
@@ -523,8 +458,7 @@ Frontier was a live, but barebone implementation of the Ethereum project. It fol
 
 ### Ether sale {#ether-sale}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> July 22 - September 02, 2014<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140804235628/https://www.ethereum.org/">ethereum.org on waybackmachine</a>
+<NetworkUpgradeSummary name="etherSale" />
 
 Ether officially went on sale for 42 days. You could buy it with BTC.
 
@@ -534,8 +468,7 @@ Ether officially went on sale for 42 days. You could buy it with BTC.
 
 ### Yellowpaper released {#yellowpaper}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> April 01, 2014<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140509173418/https://www.ethereum.org/">ethereum.org on waybackmachine</a>
+<NetworkUpgradeSummary name="yellowpaperRelease" />
 
 The Yellow Paper, authored by Dr. Gavin Wood, is a technical definition of the Ethereum protocol.
 
@@ -547,8 +480,7 @@ The Yellow Paper, authored by Dr. Gavin Wood, is a technical definition of the E
 
 ### Whitepaper released {#whitepaper}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> November 27, 2013<br />
-<Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140208030136/http://www.ethereum.org/">ethereum.org on waybackmachine</a>
+<NetworkUpgradeSummary name="whitepaperRelease" />
 
 The introductory paper, published in 2013 by Vitalik Buterin, the founder of Ethereum, before the project's launch in 2015.
 

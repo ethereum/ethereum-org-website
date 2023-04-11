@@ -47,6 +47,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Introduction to smart contracts](/smart-contracts/)
 - [Decentralized identity)](/decentralized-identity/)
 - [Decentralized social networks)](/social-networks/)
+- [Decentralized science (DeSci))](/desci/)
 
 ## 6) Staking pages {#staking-pages}
 
@@ -55,6 +56,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Pooled staking](/staking/pools/)
 - [Staking as a service](/staking/saas/)
 - [Staking deposit contract](/staking/deposit-contract/)
+- [Staking withdrawals](/staking/withdrawals/)
 
 ## 7) Learn pages {#learn-pages}
 
@@ -63,19 +65,30 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Ethereum security and scam prevention](/security/)
 - [Blockchain bridges](/bridges/)
 - [Web3](/web3/)
+- [Zero-knowledge proofs](/zero-knowledge-proofs/)
 
-## 8) Upgrades {#upgrades}
+## 8) Learn hub & guides {#learn-hub}
 
-- [Ethereum upgrades](/upgrades/)
+- [Learn hub](/learn/)
+- [Ethereum guides](/guides/)
+- [How to "register" an Ethereum account](/guides/how-to-register-an-ethereum-account/)
+- [How to use a wallet](/guides/how-to-use-a-wallet/)
+- [How to revoke smart contract access to your crypto funds](/guides/how-to-revoke-token-access/)
+- [How to bridge tokens to layer 2](/guides/how-to-use-a-bridge/)
+- [How to swap tokens](/guides/how-to-swap-tokens/)
+- Learning quizzes
+
+## 9) Upgrades {#upgrades}
+
+- [Ethereum roadmap](/roadmap/)
 - [Ethereum vision](/roadmap/vision/)
-- [The Beacon Chain](/upgrades/beacon-chain/)
-- [The Merge](/upgrades/merge/)
-- [Shard chains](/upgrades/sharding/)
+- [The Beacon Chain](/roadmap/beacon-chain/)
+- [The Merge](/roadmap/merge/)
+- [How The Merge impacted ETH supply](/roadmap/merge/issuance/)
 - [Ethereum upgrades get involved](/upgrades/get-involved/)
-- [Consensus layer bug bounty](/upgrades/bug-bounty/)
 - [Ethereum Improvement Proposals (EIPs)](/eips/)
 
-## 9) Community pages {#community-pages}
+## 10) Community pages {#community-pages}
 
 - [Ethereum events](/community/events/)
 - [How can I get involved?](/community/get-involved/)
@@ -85,7 +98,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Ethereum support](/community/support/)
 - [Community hub](/community/)
 
-## 10) Foundational developer docs {#foundational-docs}
+## 11) Foundational developer docs {#foundational-docs}
 
 - [Overview](/developers/docs/)
 - [Intro to Ethereum](/developers/docs/intro-to-ethereum/)
@@ -96,19 +109,33 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Transactions](/developers/docs/transactions/)
 - [Blocks](/developers/docs/blocks/)
 - [Ethereum virtual machine (EVM)](/developers/docs/evm/)
+- [Opcodes for the EVM](/developers/docs/evm/opcodes/)
 - [Gas](/developers/docs/gas/)
 - [Nodes and clients](/developers/docs/nodes-and-clients/)
 - [Nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/)
+- [Ethereum archive node](/developers/docs/nodes-and-clients/archive-nodes/)
+- [Introduction to Ethereum bootnodes](/developers/docs/nodes-and-clients/bootnodes/)
+- [Light clients](/developers/docs/nodes-and-clients/light-clients/)
+- [Node architecture](/developers/docs/nodes-and-clients/node-architecture/)
 - [Networks](/developers/docs/networks/)
-- [Consensus mechanisms](/developers/docs/consensus-mechanisms/)
-- [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)
-- [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
-- [Proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 - [Client diversity](/developers/docs/nodes-and-clients/client-diversity/)
 - [Spin up your own Ethereum node](/developers/docs/nodes-and-clients/run-a-node/)
 - Developer docs sidebar
 
-## 11) Ethereum stack developer docs {#ethereum-stack-docs}
+## 12) Consensus mechanisms {#consensus}
+
+- [Consensus mechanisms](/developers/docs/consensus-mechanisms/)
+- [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)
+- [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
+- [Proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
+- [Ethereum proof-of-stake attack and defense](/developers/docs/consensus-mechanisms/pos/attack-and-defense/)
+- [Attestations](/developers/docs/consensus-mechanisms/pos/attestations/)
+- [Block proposal](/developers/docs/consensus-mechanisms/pos/block-proposal/)
+- [Proof-of-stake FAQs](/developers/docs/consensus-mechanisms/pos/faqs/)
+- [Keys in proof-of-stake Ethereum](/developers/docs/consensus-mechanisms/pos/keys/)
+- [Proof-of-stake rewards and penalties](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties/)
+
+## 13) Ethereum stack developer docs {#ethereum-stack-docs}
 
 - [Introduction to the Ethereum stack](/developers/docs/ethereum-stack/)
 - [Smart contracts](/developers/docs/smart-contracts/)
@@ -119,6 +146,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Compiling smart contracts](/developers/docs/smart-contracts/compiling)
 - [Deploying smart contracts](/developers/docs/smart-contracts/deploying)
 - [Composability](/developers/docs/smart-contracts/composability/)
+- [Formal verification of smart contracts](/developers/docs/smart-contracts/formal-verification/)
 - [Deployment networks](/developers/docs/development-networks/)
 - [Development frameworks](/developers/docs/frameworks/)
 - [JavaScript APIs](/developers/docs/apis/javascript/)
@@ -140,11 +168,11 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Ruby](/developers/docs/programming-languages/ruby/)
 - [Dart](/developers/docs/programming-languages/dart/)
 
-## 12) Whitepaper {#whitepaper}
+## 14) Whitepaper {#whitepaper}
 
 - [Whitepaper](/whitepaper/)
 
-## 13) Advanced developer docs {#advanced-docs}
+## 15) Advanced developer docs {#advanced-docs}
 
 - [Standards](/developers/docs/standards/)
 - [Token standards](/developers/docs/standards/tokens/)
@@ -162,8 +190,10 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Sidechains](/developers/docs/scaling/sidechains)
 - [Plasma](/developers/docs/scaling/plasma)
 - [Validium](/developers/docs/scaling/validium/)
+- [Bridges](/developers/docs/bridges/)
+- [Data availability](/developers/docs/data-availability/)
 
-## 14) Additional Learn and general pages {#general-pages}
+## 16) Additional Learn and general pages {#general-pages}
 
 - [About ethereum.org](/about/)
 - [Enterprise Ethereum](/enterprise/)
@@ -173,7 +203,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Brand assets](/assets/)
 - [About the Ethereum Foundation](/foundation/)
 
-## 15) Research documentation {#research-documentation}
+## 17) Research documentation {#research-documentation}
 
 - [Networking layer](/developers/docs/networking-layer/)
 - [Patricia Merkle Trees](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/)
@@ -186,8 +216,9 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Ethash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash/)
 - [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/)
 - [Weak subjectivity](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/)
+- [Web3 secret storage definition](/developers/docs/data-structures-and-encoding/web3-secret-storage/)
 
-## 16) Contributing {#contributing}
+## 18) Contributing {#contributing}
 
 - [Contributing to ethereum.org](/contributing/)
 - [Adding developer tools](/contributing/adding-developer-tools/)
@@ -197,14 +228,22 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Adding products](/contributing/adding-products/)
 - [Adding staking products](/contributing/adding-staking-products/)
 - [Adding content resources](/contributing/content-resources/)
+- [Adding DeSci projects](/contributing/adding-desci-projects/)
+- [Adding wallets](/contributing/adding-wallets/)
 - [Design principles](/contributing/design-principles/)
 - [Translation Program](/contributing/translation-program/)
 - [Translation guide](/contributing/translation-program/translation-guide/)
 - [Translator acknowledgements](/contributing/translation-program/)
 - [Our translators](/contributing/translation-program/contributors/)
 - [Translation FAQ](/contributing/translation-program/faq/)
+- [Ethereum Foundation blog translations](/contributing/translation-program/blog-translations/)
+- [Staking Launchpad translations](/contributing/translation-program/launchpad-translations/)
+- [How to translate](/contributing/translation-program/how-to-translate/)
+- [Translation Program mission and vision](/contributing/translation-program/mission-and-vision/)
+- [Translator resources](/contributing/translation-program/resources/)
 
-## 17) Developer tutorials 1 {#tutorials-1}
+
+## 19) Developer tutorials 1 {#tutorials-1}
 
 - [Calling a smart contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/)
 - [How to write & deploy an NFT (Part 1/3 of NFT tutorial series)](/developers/tutorials/how-to-write-and-deploy-an-nft/)
@@ -215,11 +254,13 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Uniswap-v2 contract walkthrough](/developers/tutorials/uniswap-v2-annotated-code/)
 - Submit a tutorial
 
-## 18) Developer tutorials 2 {#tutorials-2}
+## 20) Developer tutorials 2 {#tutorials-2}
 
 - [A Python developer's introduction to Ethereum](/developers/tutorials/a-developers-guide-to-ethereum-part-one/)
+- [All you can cache](/developers/tutorials/all-you-can-cache/)
 - [Downsizing contracts to fight the contract size limit](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/)
 - [ERC-20 contract walkthrough](/developers/tutorials/erc20-annotated-code/)
+- [ERC-20 with safety rails](/developers/tutorials/erc20-with-safety-rails/)
 - [Hello world smart contract for beginners](/developers/tutorials/hello-world-smart-contract/)
 - [How to turn your Raspberry Pi 4 into a node just by flashing the MicroSD card](/developers/tutorials/run-node-raspberry-pi/)
 - [How to run a light node with Geth](/developers/tutorials/run-light-node-geth/)
@@ -231,7 +272,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [The Graph: Fixing Web3 data querying](/developers/tutorials/the-graph-fixing-web3-data-querying/)
 - [Transfers and approval of ERC-20 tokens from a Solidity smart contract](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/)
 
-## 19) Developer tutorials 3 {#tutorials-3}
+## 21) Developer tutorials 3 {#tutorials-3}
 
 - [A guide to smart contract security tools](/developers/tutorials/guide-to-smart-contract-security-tools/)
 - [Create and deploy a DeFi app](/developers/tutorials/create-and-deploy-a-defi-app/)

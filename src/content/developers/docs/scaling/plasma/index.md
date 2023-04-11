@@ -157,6 +157,8 @@ Shard chains commit "collation headers" to Mainnet containing detailed informati
 
 Plasma is different because Mainnet only receives minimal information about the state of child chains. This means Mainnet cannot effectively verify transactions conducted on child chains, making them less secure.
 
+**Note** that sharding the Ethereum blockchain is no longer on the roadmap. It has been superseded by scaling via rollups and [Danksharding](/roadmap/danksharding).
+
 ### Use Plasma {#use-plasma}
 
 Multiple projects provide implementations of Plasma that you can integrate into your dapps:

@@ -263,9 +263,6 @@ const VisionPage = ({
             </Link>
           </Text>
           <Text>
-            <Translation id="page-roadmap-vision-security-desc-8" />
-          </Text>
-          <Text>
             <Translation id="page-roadmap-vision-security-desc-10" />
           </Text>
           <Text>

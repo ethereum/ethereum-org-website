@@ -2,7 +2,7 @@
 import React, { useState, useEffect, ReactNode } from "react"
 import { MdInfoOutline } from "react-icons/md"
 import { useI18next } from "gatsby-plugin-react-i18next"
-import { Code, Flex, Icon, Spinner, VStack } from "@chakra-ui/react"
+import { Code, Flex, Icon, Spinner, Text, VStack } from "@chakra-ui/react"
 // Import components
 import Translation from "../Translation"
 import Tooltip from "../Tooltip"
@@ -15,7 +15,6 @@ import { getLocaleForNumberFormat } from "../../utils/translations"
 // Constants
 const NA_ERROR = "n/a"
 const ZERO = "0"
-const MAX_EFFECTIVE_BALANCE = 32
 
 const Cell: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
@@ -64,19 +63,13 @@ const Label: React.FC<{ children: ReactNode }> = ({ children }) => {
 }
 
 // BeaconchainTooltip component
-const BeaconchainTooltip = ({ isEthStore }: { isEthStore?: boolean }) => (
-  <Tooltip
-    content={
-      <div>
-        <Translation id="data-provided-by" />{" "}
-        {isEthStore ? (
-          <Link to="https://beaconcha.in/ethstore">Beaconcha.in ETH.STORE</Link>
-        ) : (
-          <Link to="https://beaconcha.in/">Beaconcha.in</Link>
-        )}
-      </div>
-    }
-  >
+interface BeaconchainTooltipProps {
+  children: ReactNode
+}
+const BeaconchainTooltip: React.FC<BeaconchainTooltipProps> = ({
+  children,
+}) => (
+  <Tooltip content={children}>
     <Icon
       as={MdInfoOutline}
       color="text"
@@ -177,7 +170,13 @@ const StakingStatsBox: React.FC<IProps> = () => {
         )}
         <Label>
           <Translation id="page-staking-stats-box-metric-1" />
-          <BeaconchainTooltip />
+          <BeaconchainTooltip>
+            <Text>
+              <Translation id="page-staking-stats-box-metric-1-tooltip" />
+            </Text>
+            <Translation id="data-provided-by" />{" "}
+            <Link to="https://beaconcha.in/">Beaconcha.in</Link>
+          </BeaconchainTooltip>
         </Label>
       </Cell>
       <Cell>
@@ -190,7 +189,13 @@ const StakingStatsBox: React.FC<IProps> = () => {
         )}
         <Label>
           <Translation id="page-staking-stats-box-metric-2" />
-          <BeaconchainTooltip />
+          <BeaconchainTooltip>
+            <Text>
+              <Translation id="page-staking-stats-box-metric-2-tooltip" />
+            </Text>
+            <Translation id="data-provided-by" />{" "}
+            <Link to="https://beaconcha.in/">Beaconcha.in</Link>
+          </BeaconchainTooltip>
         </Label>
       </Cell>
       <Cell>
@@ -203,7 +208,13 @@ const StakingStatsBox: React.FC<IProps> = () => {
         )}
         <Label>
           <Translation id="page-staking-stats-box-metric-3" />
-          <BeaconchainTooltip isEthStore />
+          <BeaconchainTooltip>
+            <Text>
+              <Translation id="page-staking-stats-box-metric-3-tooltip" />
+            </Text>
+            <Translation id="data-provided-by" />{" "}
+            <Link to="https://beaconcha.in/ethstore">Beaconcha.in</Link>
+          </BeaconchainTooltip>
         </Label>
       </Cell>
     </Flex>

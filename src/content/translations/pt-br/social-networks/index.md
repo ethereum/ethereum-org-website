@@ -5,7 +5,7 @@ lang: pt-br
 template: use-cases
 emoji: ":mega:"
 sidebarDepth: 2
-image: ../../../../assets/ethereum-learn.png
+image: ../../assets/ethereum-learn.png
 summaryPoint1: Plataformas baseadas em blockchain para interação social, criação e distribuição de conteúdo.
 summaryPoint2: As redes de mídia social descentralizadas protegem a privacidade do usuário e aumentam a segurança dos dados.
 summaryPoint3: Tokens e NFTs criam formas de monetizar conteúdo.
@@ -79,7 +79,7 @@ O Reddit tem [pontos de comunidade divulgados](https://cointelegraph.com/news/re
 
 O programa já está ativo, com o subreddit r/CryptoCurrency [executando sua versão de pontuações comunitária chamada "Moons"](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki). Segundo a descrição oficial, Moons “recompensa pôsteres, comentaristas e moderadores por suas contribuições ao subreddit” Como esses tokens estão no blockchain (usuários os recebem em carteiras), eles são independentes do Reddit e não podem ser retirados.
 
-Depois de concluir uma fase beta na rede de testes Rinkeby, os Reddit Community Points estão agora no [Arbitrum Nova](https://nova.arbitrum.io/), um blockchain que combina propriedades de um [validium](/developers/docs/scaling/validium/) e um [rollup otimista](/developers/docs/scaling/optimistic-rollups/). Além de usar os pontos comunitários para desbloquear recursos especiais, os usuários também podem trocá-los por moeda fiduciária em trocas. Além disso, a quantidade de pontuações comunitárias que um usuário possui determina sua influência no processo de tomada de decisão na comunidade.
+Depois de concluir uma fase beta na rede de testes Rinkeby, os Pontos da Comunidade Reddit agora estão no [Arbitrum Nova](https://nova.arbitrum.io/), uma cadeia de blocos que combina propriedades de um [cadeia lateral](/developers/docs/scaling/sidechains/) e um [rollup otimista](/developers/docs/scaling/optimistic-rollups/). Além de usar os pontos comunitários para desbloquear recursos especiais, os usuários também podem trocá-los por moeda fiduciária em trocas. Além disso, a quantidade de pontuações comunitárias que um usuário possui determina sua influência no processo de tomada de decisão na comunidade.
 
 ### Twitter {#twitter}
 
@@ -94,16 +94,20 @@ Em maio de 2022, o [Instagram anunciou suporte para NFTs](https://about.instagra
 - **[Status.im](https://status.im/)** - _Status é um aplicativo de mensagens seguro que usa um protocolo ponto a ponto de código aberto e criptografia de ponta a ponta para proteger suas mensagens de terceiros._
 - **[Mirror.xyz](https://mirror.xyz/)** - _Mirror é uma plataforma de publicação descentralizada e de propriedade do usuário, construída no Ethereum para que os usuários financiem ideias, monetizem conteúdo e construam comunidades de alto valor._
 - **[Protocolo Lens](https://lens.xyz/)** - _Protocolo Lens é um gráfico social combinável e descentralizado que ajuda os criadores a se apropriarem de seu conteúdo onde quer que estejam no ambiente digital da internet descentralizada._
+- **[Farcaster](https://farcaster.xyz/)** — _Farcaster é uma rede social suficientemente descentralizada. É um protocolo aberto que pode oferecer suporte a muitos clientes, como o e-mail._
 
 ## Leitura adicional {#further-reading}
 
 ### Artigos {#articles}
 
-- [As redes sociais são a próxima grande oportunidade de descentralização](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
-- [A Web3 mantém a promessa de redes sociais descentralizadas e sustentadas pela comunidade.](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
+- [Descentralizando mídias sociais: um guia para a pilha social da Web3](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) — _Coinbase Ventures _
+- As redes sociais são a próxima grande oportunidade de descentralização< /a> — _Ben Goertzel_
+  - [A Web3 mantém a promessa de redes sociais descentralizadas e sustentadas pela comunidade.](https://venturebeat.com/2022/02/26/web3-holds-the-promise-of-decentralized-community-powered-social-networks/) — _Sumit Ghosh_
 - [Uma visão geral do cenário de mídia social do Blockchain](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
 - [Como o Blockchain pode resolver a privacidade das mídias sociais](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
-- [As redes de mídia social estão chegando ao Blockchain](https://businesstechguides.co/what-are-decentralized-social-networks) — _Emmanuel Awosika_
+- [As redes de mídia social estão chegando ao Blockchain](https://businesstechguides.co/what-are-decentralized-social-networks) — \_Emmanuel Awosika
+
+  - [Descentralização suficiente para as redes sociais](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
 
 ### Vídeos {#videos}
 
