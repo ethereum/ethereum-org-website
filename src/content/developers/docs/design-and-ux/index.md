@@ -11,7 +11,7 @@ Need a more basic understanding of web3 first? Check out [**Learn hub**](/learn/
 ## Start with user research {#Start-with-user-research}
 Effective design goes beyond creating visually appealing user interfaces. It involves gaining a deep understanding of the user's needs, objectives, and driving factors. Therefore, we highly recommend that all designers adopt a design process, such as the [**double diamond process**](https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model)), to ensure that their work is deliberate and intentional.
 
-- [A complete guide to UX Research in web3](https://uxplanet.org/a-complete-guide-to-ux-research-for-web-3-0-products-d6bead20ebb1) - Simple guide how to do research
+- [A simple guide to UX Research in web3](https://uxplanet.org/a-complete-guide-to-ux-research-for-web-3-0-products-d6bead20ebb1) - Simple guide how to do research
 - [How to Approach UX Decisions in Web3](https://archive.devcon.org/archive/watch/6/data-empathy-how-to-approach-ux-decisions-in-web3/) - A brief overview of quantitative and qualitative research and the differences between the two (video, 6 min)
 - [Being a ux researcher in web3](https://medium.com/@georgia.rakusen/what-its-like-being-a-user-researcher-in-web3-6a4bcc096849) - A personal view on what it is like being a UX researcher in web3
 
@@ -26,7 +26,6 @@ This is a curated list of user research done in web3 that may help with design a
 - [Usability study: Multi App Staking](https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf)
 - [2022 DAO Research Update: What do DAO Builders Need?](https://blog.aragon.org/2022-dao-research-update/)
 - [ConSensys: DeFi User Research Report 2022](https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf)
-- [Stellar: Cryptourrency Adoption in 2022](https://resources.stellar.org/hubfs/Crypto-adoption-report-SDF-wirex-2022.pdf)
 - [Bitcoin UX report](https://github.com/patestevao/BitcoinUX-report/blob/master/report.md)
 - [Going on Safari: Researching Users in the Metaverse](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube) (video, 27 min)
 
