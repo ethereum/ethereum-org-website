@@ -60,7 +60,7 @@ Get involved in professional community-driven organizations or join design group
 - [Designer-dao.xyz](https://www.designer-dao.xyz/)
 - [We3.co](https://we3.co/)
 - [Openux.xyz](https://openux.xyz/about)
-- [Telegram web3uxdesign group](https://t.me/web3uxdesign)
+- [web3trends.org/](https://web3trends.org/)
 
 ## Design Systems {#Design-systems}
 - [Optimism Design](https://www.figma.com/@oplabs) (Figma)
