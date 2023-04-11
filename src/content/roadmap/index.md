@@ -108,7 +108,7 @@ Sharding is splitting up the Ethereum blockchain so that subsets of validators a
 ## Looking for specific technical upgrades? {#looking-for-specific-technical-upgrades}
 
 - [Danksharding](/roadmap/danksharding) - Danksharding makes layer 2 rollups much cheaper for users by adding “blobs” of data to Ethereum blocks.
-- [Staking withdrawals](/staking/withdrawals) -The “Shapella” upgrade enables staking withdrawals on Ethereum, allowing people to unlock their staked ETH.
+- [Staking withdrawals](/staking/withdrawals) - The Shanghai/Capella upgrade enabled staking withdrawals on Ethereum, allowing people to unlock their staked ETH.
 - [Single slot finality](/roadmap/single-slot-finality) - Instead of waiting for fifteen minutes, blocks could get proposed and finalized in the same slot. This is more convenient for apps and much more difficult to attack.
 - [Proposer-builder separation](/roadmap/pbs) - Splitting the block building and block proposal tasks across separate validators creates a fairer, more censorship resistant and efficient way for Ethereum to come to consensus.
 - [Secret leader election](/roadmap/secret-leader-election) - Clever cryptography can be used to ensure that the identity of the current block proposer is not made public, protecting them from certain types of attack.
