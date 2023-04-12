@@ -182,6 +182,7 @@ const Title: React.FC<ITitleProps> = (props) => {
   return (
     <Box
       as="span"
+      color="text"
       display="block"
       fontFamily="heading"
       fontSize="1.3rem"
