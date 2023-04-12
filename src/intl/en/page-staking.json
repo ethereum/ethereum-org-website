@@ -1,7 +1,7 @@
 {
   "comp-withdrawal-comparison-current-title": "Current stakers",
   "comp-withdrawal-comparison-current-li-1": "Some users may have provided a withdrawal address when initially setting up their staking deposit—these users have nothing more they need to do",
-  "comp-withdrawal-comparison-current-li-2": "The majority of stakers did not provide a withdrawal address on initial deposit, and will need to update their withdrawal credentials. The <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Staking Launchpad</a> has instructions on when and how to do this",
+  "comp-withdrawal-comparison-current-li-2": "The majority of stakers did not provide a withdrawal address on initial deposit, and will need to update their withdrawal credentials. The <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Staking Launchpad</a> has instructions on how to do this",
   "comp-withdrawal-comparison-current-p": "You can enter your validator index number here to see if you still need to update your credentials <Text as=\"span\" fontWeight=\"normal\">(this can be found in your client logs):</Text>",
   "comp-withdrawal-comparison-new-title": "New stakers (not yet deposited)",
   "comp-withdrawal-comparison-new-li-1": "By default, new stakers looking to automatically enable reward payments and withdrawal functionality should provide an Ethereum withdrawal address they control when generating their validator keys using the Staking Deposit CLI tool",
@@ -17,7 +17,7 @@
   "comp-withdrawal-credentials-not-upgraded-2": "Instructions on how to upgrade can currently be found at <a href=\"https://launchpad.ethereum.org/withdrawals\" target=\"_blank\" rel=\"noopener noreferrer\">Staking Launchpad</a>",
   "comp-withdrawal-credentials-verify-mainnet": "Verify on Mainnet",
   "comp-withdrawal-credentials-verify-goerli": "Verify on Goerli",
-  "page-staking-withdrawals-when": "April 12, 2023",
+  "page-staking-withdrawals-when": "Shipped!",
   "page-staking-image-alt": "Image of the Rhino mascot for the staking launchpad.",
   "page-staking-benefits-1-title": "Earn rewards",
   "page-staking-benefits-1-description": "Rewards are given for actions that help the network reach consensus. You'll get rewards for running software that properly batches transactions into new blocks and checks the work of other validators because that's what keeps the chain running securely.",
