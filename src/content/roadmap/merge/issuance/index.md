@@ -68,11 +68,15 @@ Execution layer issuance since The Merge is zero. Proof-of-work is no longer a v
 
 ### Consensus layer issuance {#cl-issuance-post-merge}
 
-Consensus layer issuance continues today as before The Merge, with small rewards for validators who attest to and propose blocks. Validator rewards continue to accrue to _validator balances_ that are managed within the consensus layer. Unlike the current accounts, which can transact on Mainnet, these are separate Ethereum accounts where validator funds will not be withdrawable/transferrable until the upcoming Shanghai upgrade. This means that although new ETH is still being issued, 100% of consensus layer funds remain locked and unavailable to the market until this upgrade occurs.
+Consensus layer issuance continues today as before The Merge, with small rewards for validators who attest to and propose blocks. Validator rewards continue to accrue to _validator balances_ that are managed within the consensus layer. Unlike the current accounts ("execution" accounts), which can transact on Mainnet, these are separate Ethereum accounts cannot transact freely with other Ethereum accounts. Funds in these accounts can only be withdrawn to a single specified execution address.
 
-When validator withdrawals are enabled, stakers will be incentivized to remove their _earnings/rewards (balance over 32 ETH)_ as these funds are otherwise not contributing to their stake weight (which maxes at 32).
+Since the Shanghai/Capella upgrade that took place in April 2023, these withdraws have been enabled for stakers. Stakers are incentivized to remove their _earnings/rewards (balance over 32 ETH)_ as these funds are otherwise not contributing to their stake weight (which maxes at 32).
 
-After withdraw functionality is enabled, stakers may also choose to exit and withdraw their entire validator balance. To ensure Ethereum is stable, the number of validators leaving simultaneously is capped. Only six validators may exit in a given epoch (6.4 minute period) depending on the total ETH staked at the time. As more validators withdraw, the maximum number of exiting validators will gradually be reduced to four to intentionally prevent large destabilizing amounts of staked ETH from being withdrawn concurrently.
+Stakers may also choose to exit and withdraw their entire validator balance. To ensure Ethereum is stable, the number of validators leaving simultaneously is capped.
+
+Approximately 0.33% of the total validator count may exit in a given day. By default, four (4) validators may exit per epoch (every 6.4 minutes, or 900 per day). An additional one (1) validator is permitted to exit for every 65,536 (2<sup>16</sup>) additional validators over 262,144 (2<sup>18</sup>). For example, with over 327,680 validators, five (5) may leave per epoch (1,125 per day). Six (6) will be permitted with a total active validator count over 393,216, and so forth.
+
+As more validators withdraw, the maximum number of exiting validators will gradually be reduced to a minimum of four to intentionally prevent large destabilizing amounts of staked ETH from being withdrawn concurrently.
 
 ### Post-merge inflation breakdown {#post-merge-inflation-breakdown}
 

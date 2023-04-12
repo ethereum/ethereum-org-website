@@ -131,7 +131,7 @@ A _validator_ is a virtual entity that lives on Ethereum and participates in the
 <ExpandableCard title="Can I deposit more than 32 ETH?">
 Each key-pair associated with a validator requires exactly 32 ETH to be activated. More ETH deposited to a single set of keys does not increase rewards potential, as each validator is limited to an <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">effective balance</a> of 32 ETH. This means that staking is done in 32 ETH increments, each with it's own set of keys and balance.
 
-Do not deposit more than 32 ETH for a single validator. It will not increase your rewards, and it will be locked until the planned Shanghai update.
+Do not deposit more than 32 ETH for a single validator. It will not increase your rewards. If a withdrawal address has been set for the validator, excess funds over 32 ETH will be automatically withdrawn to this address during the next <a href="/staking/withdrawals/#validator-sweeping">validator sweep</a>.
 
 If solo staking seems too demanding for you, consider using a <a href="/staking/saas/">staking-as-a-service</a> provider, or if you're working with less than 32 ETH, check out the <a href="/staking/pools/">staking pools</a>.
 </ExpandableCard>
@@ -174,9 +174,9 @@ Offline penalties are proportional to how many others are offline at the same ti
 </ExpandableCard>
 
 <ExpandableCard title="How do I unlock my rewards or get my ETH back?">
-At time of the Shanghai upgrade, reward payments and full withdrawals for exited validators will begin. Withdrawals of any kind from the Beacon Chain require withdrawal credentials to be set.
+Withdrawals of any kind from the Beacon Chain require withdrawal credentials to be set.
 
-New stakers set this at time of key generation and deposit. Existing stakers who did not already set this can upgrade their keys to support this functionality after the Shanghai upgrade.
+New stakers set this at time of key generation and deposit. Existing stakers who did not already set this can upgrade their keys to support this functionality.
 
 Once withdrawal credentials are set, reward payments (accumulated ETH over the initial 32) will be periodically distributed to the withdrawal address automatically.
 
