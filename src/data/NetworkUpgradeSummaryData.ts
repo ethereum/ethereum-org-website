@@ -14,19 +14,21 @@ export interface NetworkUpgradeSummaryDataProps {
 const NetworkUpgradeSummaryData: NetworkUpgradeSummaryDataProps = {
   shanghai: {
     dateTimeAsString: "2023-04-12T22:27:35.000Z",
-    ethPriceInUSD: undefined,
-    waybackLink: undefined,
-    blockNumber: undefined,
+    ethPriceInUSD: 1917,
+    waybackLink:
+      "https://web.archive.org/web/20230411044526/https://ethereum.org/en/",
+    blockNumber: 17034870,
     epochNumber: undefined,
     slotNumber: undefined,
   },
   capella: {
     dateTimeAsString: "2023-04-12T22:27:35.000Z",
-    ethPriceInUSD: undefined,
-    waybackLink: undefined,
+    ethPriceInUSD: 1917,
+    waybackLink:
+      "https://web.archive.org/web/20230411044526/https://ethereum.org/en/",
     blockNumber: undefined,
     epochNumber: 194048,
-    slotNumber: undefined,
+    slotNumber: 6209536,
   },
   paris: {
     dateTimeAsString: "2022-09-15T06:42:42.000Z",
