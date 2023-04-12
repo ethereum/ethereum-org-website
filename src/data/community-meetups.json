@@ -1,5 +1,11 @@
 [
   {
+    "title": "Ethereum Bogota",
+    "emoji": ":co:",
+    "location": "Colombia",
+    "link": "https://www.meetup.com/ethereum-bogota"
+  },
+  {
     "title": "Bokky's Ethereum Workshop",
     "emoji": ":australia:",
     "location": "Sydney",
@@ -352,5 +358,11 @@
     "emoji": ":co:",
     "location": "Colombia",
     "link": "https://www.meetup.com/hash-house-medellin/"
+  },
+  {
+    "title": "Taipei Ethereum Meetup",
+    "emoji": ":taiwan:",
+    "location": "Taipei",
+    "link": "https://www.meetup.com/taipei-ethereum-meetup/"
   }
 ]

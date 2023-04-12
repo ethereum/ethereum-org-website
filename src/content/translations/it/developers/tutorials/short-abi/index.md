@@ -5,7 +5,6 @@ author: Ori Pomerantz
 lang: it
 tags:
   - "livello 2"
-  - "optimism"
   - "gas"
 skill: intermediate
 published: 2022-04-01

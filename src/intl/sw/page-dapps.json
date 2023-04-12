@@ -202,5 +202,8 @@
   "page-dapps-what-are-dapps": "Dapps ni nini?",
   "page-dapps-more-on-defi-button": "Zaidi juu fedha zilizogatuliwa (DeFi)",
   "page-dapps-more-on-nft-button": "Zaidi juu ya vifurushi vilivofanya tokeni/ishara",
-  "page-dapps-more-on-nft-gaming-button": "Zaidi juu ya michezo ya ndani iliofanya tokeni"
+  "page-dapps-more-on-nft-gaming-button": "Zaidi juu ya michezo ya ndani iliofanya tokeni",
+  "foundation": "Msingi",
+  "transaction-fees": "Ada ya manunuzi ni nini?",
+  "page-wallets-get-some": "Pata ETH"
 }

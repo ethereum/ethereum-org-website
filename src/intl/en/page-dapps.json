@@ -209,5 +209,8 @@
   "page-dapps-more-on-nft-button": "More on tokenised collectibles",
   "page-dapps-more-on-nft-gaming-button": "More on tokenised in-game items",
   "page-dapps-dapp-description-pwn": "Easy loans backed by any token or NFTs on Ethereum.",
-  "page-dapps-pwn-image-alt": "PWN logo"
+  "page-dapps-pwn-image-alt": "PWN logo",
+  "foundation": "Foundation",
+  "transaction-fees": "What are transaction fees?",
+  "page-wallets-get-some": "Get some ETH"
 }

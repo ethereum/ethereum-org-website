@@ -29,12 +29,12 @@ The ethereum.org website, like Ethereum more broadly, is an open-source project.
   _– Add an exchange to our [exchange finder](/get-eth/#country-picker)_
 - [Improve our research](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c)
   _– Let us know your feedback on our research or contribute your own_
-- [Request a feature](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=)
+- [Request a feature](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=)
   _– Let us know about any ideas you have for a new feature or design_
 - [Add a glossary term](/contributing/adding-glossary-terms)
   _– Help us continue to expand the Ethereum [glossary](/glossary/)_
 - [Create/edit content](/contributing/#how-to-update-content)
-  _– Suggest new pages or makes tweaks to what's here already_
+  _– Suggest new pages or make tweaks to what's here already_
 - [Add a layer 2](/contributing/adding-layer-2s/)
   _– Add a layer 2 to a relevant page_
 - [Add a staking product or service](/contributing/adding-staking-products/)

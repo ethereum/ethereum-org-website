@@ -24,15 +24,9 @@ summaryPoints:
 除了我们在[质押简介](/staking/)中概述的好处之外，联合质押还有许多独有益处。
 
 <CardGrid>
-  <Card title="准入门槛低" emoji="🐟">
-    没有“巨款”？ 没关系。 在单独行动中，你需要一口气质押 32 枚以太币。然而联合质押池允许你和其他质押者合作——这样你想质押多少以太币都可以。
-  </Card>
-  <Card title="快速质押" emoji=":stopwatch:">
-    在池中质押就和代币交换一样简单。 你不需要担心硬件设置和节点维护。 质押池允许你存入以太币，使节点操作者能够运行验证者。 在减去节点操作的费用后，剩余的奖励将分配给所有贡献者。
-  </Card>
-  <Card title="流动性代币" emoji=":droplet:">
-    多数质押池会给你提供代币，代表你在此质押的以太币及其产生的收益。 这使得你可以将质押中的以太币物尽其用，比如作为去中心化金融应用中的抵押品。
-  </Card>
+  <Card title="准入门槛低" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
+  <Card title="快速质押" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
+  <Card title="流动性代币" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -41,7 +35,11 @@ summaryPoints:
 
 联合质押和委托质押并未得到以太坊的原生支持，但是为满足用户质押少于 32 个以太币的需求，越来越多的方案已经开始建立。
 
-每个质押池和它们使用的工具和智能合约均由不同的团队创建，因此都有各自的优缺点。
+每种质押池和它们使用的工具或智能合约均由不同的团队创建，因此都各有优点和风险。 质押池能够让用户使用以太币兑换代表已质押以太币的代币。 这种代币称为“流动性质押衍生品”；其用处在于，用户可以在去中心化交易所将任意数量的以太币兑换成同等数量的可产生收益的代币，从底层质押以太币的质押奖励获得回报（反之亦然），即便实际上以太币仍然质押在信标链中。 这意味着，可以快速便捷地在产生收益的质押以太币产品和“原始以太币"之间进行双向兑换，同时兑换数量不必是 32 个以太币的整数倍。
+
+然而，这些流动性质押衍生品往往会导致类似垄断的行为 — 大量质押的以太币最终处于少数中心化组织的控制之下，而非散布于许多独立的个人手中。 这就为审查或价值提取创造了条件。 质押的黄金标准应该始终是尽可能在自己的硬件上运行验证者的个人。
+
+[更多关于质押代币相关风险的信息](https://notes.ethereum.org/@djrtwo/risks-of-lsd)。
 
 下面使用属性指标来表示所列质押池可能具有的显著优势或劣势。 选择要加入的池时，请使用本节作为参考，了解我们如何定义这些属性。
 
@@ -66,10 +64,15 @@ summaryPoints:
 </ExpandableCard>
 
 <ExpandableCard title="什么时候可以取出我的质押">
+目前，无法从以太坊验证者中提取资金，这限制了实际中用流动性代币<i>兑换</i>锁定在共识层中以太币奖励的能力。
 
-目前，无法从以太坊验证者中提取资金，这限制了你实际上用流动性代币兑换锁定在共识层中的以太币奖励的能力。
+上海网络升级将引入提取功能，计划于 2023 年第一季度/第二季度推出。 在此之前，所有质押的以太币都一直被锁定。
+
+上海升级后，支持质押池的验证者帐户将能够退出并将以太币提取到指定的提取地址。 这样，你便能够用自己的一部分质押兑换底层以太币。 请咨询你的提供商，了解他们如何支持此功能。
 
 或者，使用 ERC-20 流动性代币的资金池允许用户在公开市场上交易该代币，允许你出售你的质押店铺位置，有效地“取款”，而无需实际从质押合约中移除以太币。
+
+<ButtonLink to="/staking/withdrawals/">更多关于质押提取的信息</ButtonLink>
 </ExpandableCard>
 
 <ExpandableCard title="这与交易所质押有何不同？">

@@ -1,21 +1,17 @@
-import {
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  Box,
-  BoxProps,
-  MenuListProps,
-} from "@chakra-ui/react"
+// Libraries
 import React, { useState } from "react"
-import { translateMessageId, TranslationKey } from "../utils/translations"
+import { MdMenu } from "react-icons/md"
+
+// Components
+import Link from "./Link"
 import Button from "./Button"
 import Translation from "./Translation"
+
+// Utils
+import { Menu, MenuButton, MenuList, MenuItem, Box } from "@chakra-ui/react"
+import { TranslationKey } from "../utils/translations"
 import { trackCustomEvent } from "../utils/matomo"
-import { useIntl } from "react-intl"
-import Link, { IProps as LinkProps } from "./Link"
 import { Icon } from "@chakra-ui/react"
-import { MdMenu } from "react-icons/md"
 
 export interface List {
   text: TranslationKey
@@ -24,7 +20,7 @@ export interface List {
 }
 
 export interface ListItem {
-  text: TranslationKey
+  text: string
   to?: string
   matomo?: {
     eventCategory: string
@@ -34,7 +30,13 @@ export interface ListItem {
   callback?: (idx: number) => void
 }
 
-export interface IProps extends BoxProps {
+export interface List {
+  text: string
+  ariaLabel: string
+  items: Array<ListItem>
+}
+
+export interface IProps {
   list: List
 }
 
@@ -42,7 +44,6 @@ const MenuItemLink = ({ children, ...props }) => {
   return (
     <Link
       {...props}
-      // color="text"
       color="inherit"
       textDecoration="none"
       _hover={{ textDecoration: "none", color: { undefined } }}
@@ -52,31 +53,23 @@ const MenuItemLink = ({ children, ...props }) => {
   )
 }
 
-const ButtonDropdown: React.FC<IProps> = ({ list, ...props }) => {
-  const intl = useIntl()
-
+const ButtonDropdown: React.FC<IProps> = ({ list }) => {
   const [isActive, setIsActive] = useState<boolean>(false)
 
   return (
-    <Menu
-      aria-label={`Select ${translateMessageId(list.text, intl)}`}
-      matchWidth={true}
-      offset={[0, 4]}
-      flip={false}
-      placement="bottom-end"
-    >
+    <Menu aria-label={`Select ${list.text}`} matchWidth={true} offset={[0, 4]}>
       {({ isOpen }) => (
         <Box
           position="relative"
           display="flex"
           flexDir={{ base: "column-reverse", lg: "column" }}
           width={{ base: "100%", lg: "auto" }}
-          {...props}
         >
           <MenuButton
             as={Button}
             variant="outline"
             minW={{ base: "100%", lg: "240" }}
+            marginBottom={8}
             paddingTop={2}
             paddingBottom={2}
             tabIndex={0}
@@ -98,7 +91,6 @@ const ButtonDropdown: React.FC<IProps> = ({ list, ...props }) => {
             borderColor="text"
             backgroundColor="dropdownBackground"
             color="text"
-            width={{ base: "100%", lg: "auto" }}
           >
             {list.items.map(({ text, to, matomo, callback }, idx) => (
               <MenuItem

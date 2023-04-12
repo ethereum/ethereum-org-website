@@ -26,5 +26,6 @@
   "page-learning-tools-sandbox-desc": "Ti će vam pješčanici pružiti prostor za eksperimentiranje s pisanjem pametnih ugovora i razumijevanjem Ethereuma.",
   "page-learning-tools-studio-description": "Internetski IDE na kojem možete slijediti upute za stvaranje i testiranje pametnih ugovora te za njih izraditi sučelje.",
   "page-learning-tools-vyperfun-description": "Naučite Vyper gradeći vlastitu igru Pokémon.",
-  "page-learning-tools-vyperfun-logo-alt": "Vyper.fun logo"
+  "page-learning-tools-vyperfun-logo-alt": "Vyper.fun logo",
+  "alt-eth-blocks": "Ilustracija blokova posloženih kao simbol ETH-a"
 }

@@ -61,5 +61,9 @@
   "page-calltocontribute-link": "dokumentáció sablon",
   "page-calltocontribute-link-2": "Discord szerver",
   "page-calltocontribute-span": "Oldal szerkesztése",
-  "page-calltocontribute-title": "Segíts nekünk ezzel a lappal"
+  "page-calltocontribute-title": "Segíts nekünk ezzel a lappal",
+  "back-to-top": "Vissza a tetejére",
+  "banner-page-incomplete": "Ez az oldal nem teljes, és szeretnénk a segítségét kérni. Szerkessze ezt az oldalt, és adjon hozzá bármit, ami Ön szerint hasznos lehet másoknak.",
+  "next": "Következő",
+  "previous": "Előző"
 }

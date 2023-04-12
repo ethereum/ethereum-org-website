@@ -17,6 +17,8 @@
 - [GitHub Actions](https://github.com/features/actions) - Manages CI/CD, and issue tracking
 - [Netlify](https://www.netlify.com/) - DNS management and primary host for `master` build.
 - [Gatsby Cloud](https://www.gatsbyjs.com/) - Site builds and automatic preview deployments for all pull requests
+- [Storybook](https://storybook.js.org/) - For UI development, testing, and documentation. Check out [our storybook!](https://dev--63b7ea99632763723c7f4d6b.chromatic.com/)
+- [Chromatic](https://www.chromatic.com/) - Visual testing & UI reviews. Visit [our chromatic project](https://www.chromatic.com/builds?appId=63b7ea99632763723c7f4d6b)
 
 ## Code structure
 

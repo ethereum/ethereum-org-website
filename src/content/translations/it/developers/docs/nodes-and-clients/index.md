@@ -140,7 +140,6 @@ Questa tabella riepiloga i diversi client. Tutti superano i [test dei client](ht
 | [Nethermind](http://nethermind.io/)             | C#, .NET   | Linux, Windows, macOS | Rete Principale, Sepolia, Görli, Ropsten, Rinkeby e altre | Snap (senza servire), Rapida, Completa | Archiviata, Tagliata      |
 | [Besu](https://besu.hyperledger.org/en/stable/) | Java       | Linux, Windows, macOS | Rete Principale, Sepolia, Görli, Ropsten, Rinkeby e altre | Rapida, Completa                       | Archiviata, Tagliata      |
 | [Erigon](https://github.com/ledgerwatch/erigon) | Go         | Linux, Windows, macOS | Rete Principale, Sepolia, Görli, Rinkeby, Ropsten e altre | Completa                               | Archiviata, Tagliata      |
-| [Akula](https://akula.app)                      | Rust       | Linux                 | Rete Principale, Sepolia, Görli, Rinkeby, Ropsten         | Completa                               | Archiviata, Tagliata      |
 
 **Sottolineiamo che OpenEthereum [è ormai obsoleto](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) e non viene più mantenuto.** Usalo con cautela e preferibilmente passa ad un'altra implementazione client.
 
@@ -156,7 +155,7 @@ L'ampia [documentazione](https://besu.hyperledger.org/en/stable/) di Besu ti gui
 
 ### Erigon {#erigon}
 
-Erigon, precedentemente noto come Turbo-Geth, è nato come una diramazione di Go Ethereum orientata alla velocità e all'efficienza dello spazio su disco. Erigon è un'implementazione completamente riprogettata di Ethereum, correntemente scritta in Go, ma con implementazioni in altri linguaggi in via di sviluppo, ad es. [Akula](https://medium.com/@vorot93/meet-akula-the-fastest-ethereum-implementation-ever-built-58eaca244c39). L'obiettivo di Erigon è fornire un'implementazione più veloce, modulare e ottimizzata di Ethereum. Può eseguire una sincronizzazione completa del nodo archivio usando circa 2TB di spazio su disco, in meno di 3 giorni.
+Erigon, precedentemente noto come Turbo-Geth, è nato come una diramazione di Go Ethereum orientata alla velocità e all'efficienza dello spazio su disco. Erigon è un'implementazione completamente riprogettata di Ethereum, correntemente scritta in Go, ma con implementazioni in altri linguaggi in via di sviluppo. L'obiettivo di Erigon è fornire un'implementazione più veloce, modulare e ottimizzata di Ethereum. Può eseguire una sincronizzazione completa del nodo archivio usando circa 2TB di spazio su disco, in meno di 3 giorni.
 
 ### Go Ethereum {#geth}
 

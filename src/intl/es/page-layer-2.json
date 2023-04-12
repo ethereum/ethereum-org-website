@@ -1,7 +1,6 @@
 {
   "layer-2-arbitrum-note": "Pruebas de fraude solo para los usuarios de la lista blanca, la lista blanca aún no está abierta.",
   "layer-2-boba-note": "Validación de estado en desarrollo",
-  "layer-2-metis-note": "Pruebas de fraude en desarrollo",
   "layer-2-optimism-note": "Pruebas de fallos en desarrollo",
   "layer-2-hero-title": "Capa 2",
   "layer-2-hero-header": "Ethereum para todos",
@@ -103,9 +102,6 @@
   "layer-2-faq-question-2-description-3": "Actualmente la mayoría de las agrupaciones de conocimiento cero son específicas a la aplicación, a diferencia de las agrupaciones optimistas, que usualmente son de uso genérico.",
   "layer-2-more-info-on-optimistic-rollups": "Más información sobre las agrupaciones optimistas",
   "layer-2-more-info-on-zk-rollups": "Más información sobre las agrupaciones de conocimiento cero",
-  "layer-2-faq-question-3-title": "¿Es posible escalar en la capa 1?",
-  "layer-2-faq-question-3-description-1": "Sí. Actualmente en la hoja de ruta de Ethereum hay planes de desarrollo de cadenas de fragmentos. Si bien están en la hoja de ruta, es necesario seguir escalando a través de soluciones de capa 2.",
-  "layer-2-more-on-sharding": "Más información sobre la fragmentación",
   "layer-2-faq-question-4-title": "¿Qué riesgos tiene la capa 2?",
   "layer-2-faq-question-4-description-1": "Los proyectos de la capa 2 contienen riesgos adicionales en comparación con la retención de fondos y la transacción directa en la red principal de Ethereum. Por ejemplo, los secuenciadores podrían dejar de funcionar, lo que obligaría a esperar para acceder a los fondos.",
   "layer-2-faq-question-4-description-2": "Le aconsejamos que indague por su cuenta antes de transferir fondos significativos a una capa 2. Para más información sobre la tecnología, los riesgos y los supuestos de confianza de la capa 2, recomendamos revisar <a href=\"https://l2beat.com/?view=risk\">L2BEAT</a>, que proporciona un marco integral de evaluación de riesgos de cada proyecto.",
@@ -131,5 +127,6 @@
   "layer-2-note": "Nota:",
   "layer-2-ecosystem-portal": "Portal del ecosistema",
   "layer-2-token-lists": "Listas de tókenes",
-  "layer-2-explore": "Explorar"
+  "layer-2-explore": "Explorar",
+  "page-dapps-ready-button": "Ir"
 }
