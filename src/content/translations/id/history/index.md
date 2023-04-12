@@ -19,7 +19,7 @@ Perubahan-perubahan aturan ini dapat membuat pemisahan sementara di jaringan. Bl
 
 </ExpandableCard>
 
-Sedang mencari peningkatan protokol di masa mendatang? [Pelajari tentang peningkatan Ethereum berikutnya](/upgrades/).
+Sedang mencari peningkatan protokol di masa mendatang? [Pelajari tentang peningkatan Ethereum berikutnya](/roadmap/).
 
 <Divider />
 
@@ -54,7 +54,7 @@ Pastikan untuk meningkatkan perangkat lunak klien Anda ke versi terbarunya sebel
 
 #### Ringkasan {#altair-summary}
 
-Peningkatan Altair adalah peningkatan pertama yang terjadwal untuk [Rantai Suar](/upgrades/beacon-chain). Peningkatan ini akan menambah dukungan pada "komite sinkronisasi", yang dapat mengaktifkan klien ringan, dan memberikan validator penalti ketidakaktifan dan pemotongan sampai nilai maksimumnya.
+Peningkatan Altair adalah peningkatan pertama yang terjadwal untuk [Rantai Suar](/roadmap/beacon-chain). Peningkatan ini akan menambah dukungan pada "komite sinkronisasi", yang dapat mengaktifkan klien ringan, dan memberikan validator penalti ketidakaktifan dan pemotongan sampai nilai maksimumnya.
 
 - [Baca spesifikasi peningkatan Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
@@ -120,11 +120,11 @@ Peningkatan Berlin mengoptimalkan harga gas untuk beberapa aksi EVM, dan meningk
 
 #### Ringkasan {#beacon-chain-genesis-summary}
 
-[Rantai Suar](/upgrades/beacon-chain/) memerlukan deposito 16384 dari 32 ETH yang ditaruhkan untuk diluncurkan secara aman. Ini terjadi pada 27 November yang berarti Rantai Suar mulai memproduksi blok pada 1 Desember 2020. Ini adalah langkah pertama yang penting untuk meraih [visi Ethereum](/roadmap/vision/).
+[Rantai Suar](/roadmap/beacon-chain/) memerlukan deposito 16384 dari 32 ETH yang ditaruhkan untuk diluncurkan secara aman. Ini terjadi pada 27 November yang berarti Rantai Suar mulai memproduksi blok pada 1 Desember 2020. Ini adalah langkah pertama yang penting untuk meraih [visi Ethereum](/roadmap/vision/).
 
 [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink to="/roadmap/beacon-chain/">
   Rantai Suar
 </DocLink>
 
@@ -136,7 +136,7 @@ Peningkatan Berlin mengoptimalkan harga gas untuk beberapa aksi EVM, dan meningk
 
 #### Ringkasan {#deposit-contract-summary}
 
-Kontrak setoran penaruhan memperkenalkan [penaruhan](/glossary/#staking) ke ekosistem Ethereum. Bahkan kontrak [Jaringan Utama](/glossary/#mainnet) memiliki dampak langsung pada linimasa peluncuran [Rantai Suar](/upgrades/beacon-chain/), yaitu [peningkatan Ethereum](/upgrades/) yang penting.
+Kontrak setoran penaruhan memperkenalkan [penaruhan](/glossary/#staking) ke ekosistem Ethereum. Bahkan kontrak [Jaringan Utama](/glossary/#mainnet) memiliki dampak langsung pada linimasa peluncuran [Rantai Suar](/roadmap/beacon-chain/), yaitu [peningkatan Ethereum](/roadmap/) yang penting.
 
 [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 

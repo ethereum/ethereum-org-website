@@ -19,7 +19,7 @@ Queste modifiche delle regole potrebbero creare una divisione temporanea nella r
 
 </ExpandableCard>
 
-Cerchi i prossimi aggiornamenti di protocollo? [Maggiori informazioni sui prossimi aggiornamenti a Ethereum](/upgrades/).
+Cerchi i prossimi aggiornamenti di protocollo? [Maggiori informazioni sui prossimi aggiornamenti a Ethereum](/roadmap/).
 
 <Divider />
 
@@ -68,7 +68,7 @@ L'aggiornamento prevede anche la funzionalità di sweeping automatico dei conti,
 
 #### Riepilogo {#paris-summary}
 
-L'aggiornamento "Paris" è stato attivato dal passaggio da una blockchain proof-of-work una [difficoltà totale terminale](/glossary/#terminal-total-difficulty) di 58750000000000000000000. Questo è avvenuto al blocco 15537393 il 15 settembre 2022, innescando l'aggiornamento "Paris" dal blocco successivo. Paris è stata la transizione [alla Fusione](/upgrades/merge/): la sua caratteristica principale è lo spegnimento dell'algoritmo di consenso [proof-of-work](/developers/docs/consensus-mechanisms/pow) e l'attivazione della [proof-of-stake](/developers/docs/consensus-mechanisms/pos). Paris è stata un aggiornamento ai [client di esecuzione](/developers/docs/nodes-and-clients/#execution-clients) (equivalente a Bellatrix sullo strato di consenso) che ha permesso loro di ricevere istruzioni dai loro [client di consenso](/developers/docs/nodes-and-clients/#consensus-clients). Questo ha richiesto l'attivazione di una nuova serie di metodi API interni, collettivamente noti come l'[API Engine](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md). Questo è stato probabilmente l'aggiornamento più significativo nella storia di Ethereum dopo [Homestead](#homestead)!
+L'aggiornamento "Paris" è stato attivato dal passaggio da una blockchain proof-of-work una [difficoltà totale terminale](/glossary/#terminal-total-difficulty) di 58750000000000000000000. Questo è avvenuto al blocco 15537393 il 15 settembre 2022, innescando l'aggiornamento "Paris" dal blocco successivo. Paris è stata la transizione [alla Fusione](/roadmap/merge/): la sua caratteristica principale è lo spegnimento dell'algoritmo di consenso [proof-of-work](/developers/docs/consensus-mechanisms/pow) e l'attivazione della [proof-of-stake](/developers/docs/consensus-mechanisms/pos). Paris è stata un aggiornamento ai [client di esecuzione](/developers/docs/nodes-and-clients/#execution-clients) (equivalente a Bellatrix sullo strato di consenso) che ha permesso loro di ricevere istruzioni dai loro [client di consenso](/developers/docs/nodes-and-clients/#consensus-clients). Questo ha richiesto l'attivazione di una nuova serie di metodi API interni, collettivamente noti come l'[API Engine](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md). Questo è stato probabilmente l'aggiornamento più significativo nella storia di Ethereum dopo [Homestead](#homestead)!
 
 - [Leggi le specifiche dell'aggiornamento Paris](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
@@ -87,7 +87,7 @@ L'aggiornamento "Paris" è stato attivato dal passaggio da una blockchain proof-
 
 #### Riepilogo {#bellatrix-summary}
 
-L'aggiornamento Bellatrix è stato il secondo aggiornamento programmato per la [Beacon Chain](/upgrades/beacon-chain), preparando la catena per [la Fusione](/upgrades/merge/). Porta le penalità dei validatori al valore pieno per inattività e azioni sanzionabili (slashing). Bellatrix include anche un aggiornamento alle regole di scelta della diramazione per preparare la catena per la Fusione e la transizione dall'ultimo blocco di proof-of-work al primo blocco proof-of-stake. A tale scopo occorre far sì che i client di consenso siano consapevoli della [difficoltà terminale totale](/glossary/#terminal-total-difficulty) di 58750000000000000000000.
+L'aggiornamento Bellatrix è stato il secondo aggiornamento programmato per la [Beacon Chain](/roadmap/beacon-chain), preparando la catena per [la Fusione](/roadmap/merge/). Porta le penalità dei validatori al valore pieno per inattività e azioni sanzionabili (slashing). Bellatrix include anche un aggiornamento alle regole di scelta della diramazione per preparare la catena per la Fusione e la transizione dall'ultimo blocco di proof-of-work al primo blocco proof-of-stake. A tale scopo occorre far sì che i client di consenso siano consapevoli della [difficoltà terminale totale](/glossary/#terminal-total-difficulty) di 58750000000000000000000.
 
 - [Leggi le specifiche dell'aggiornamento Bellatrix](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
 
@@ -138,7 +138,7 @@ L'aggiornamento di rete Arrow Glacier ha rimandato la [bomba di difficoltà](/gl
 
 #### Riepilogo {#altair-summary}
 
-L'aggiornamento Altair è stato il primo aggiornamento pianificato per la [Beacon Chain](/upgrades/beacon-chain). Ha aggiunto il supporto per le "commissioni di sincronizzazione", abilitando i "client leggeri", aumentando le penalità per inattività e slashing per i validatori man mano che lo sviluppo procedeva verso la Fusione.
+L'aggiornamento Altair è stato il primo aggiornamento pianificato per la [Beacon Chain](/roadmap/beacon-chain). Ha aggiunto il supporto per le "commissioni di sincronizzazione", abilitando i "client leggeri", aumentando le penalità per inattività e slashing per i validatori man mano che lo sviluppo procedeva verso la Fusione.
 
 - [Leggi le specifiche dell'aggiornamento di Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
@@ -204,11 +204,11 @@ L'aggiornamento Berlin ha ottimizzato i costi del carburante per certe azioni de
 
 #### Riepilogo {#beacon-chain-genesis-summary}
 
-La [Beacon Chain](/upgrades/beacon-chain/) necessita di 16.384 depositi da 32 ETH di staking per funzionare in sicurezza. Questo è successo il 27 novembre, quindi la Beacon Chain ha iniziato a produrre blocchi il 1 dicembre 2020. Si tratta di una prima fase importante nel percorso per raggiungere la [visione di Ethereum](/upgrades/vision/).
+La [Beacon Chain](/roadmap/beacon-chain/) necessita di 16.384 depositi da 32 ETH di staking per funzionare in sicurezza. Questo è successo il 27 novembre, quindi la Beacon Chain ha iniziato a produrre blocchi il 1 dicembre 2020. Si tratta di una prima fase importante nel percorso per raggiungere la [visione di Ethereum](/roadmap/vision/).
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink to="/roadmap/beacon-chain/">
   La beacon chain
 </DocLink>
 
@@ -220,7 +220,7 @@ La [Beacon Chain](/upgrades/beacon-chain/) necessita di 16.384 depositi da 32 ET
 
 #### Riepilogo {#deposit-contract-summary}
 
-Il contratto di deposito in staking ha introdotto lo [staking](/glossary/#staking) nell'ecosistema di Ethereum. Nonostante fosse un contratto della [Rete principale](/glossary/#mainnet), ha avuto un impatto diretto sulla linea temporale per il lancio della [Beacon Chain](/upgrades/beacon-chain/), un importante [aggiornamento di Ethereum](/upgrades/).
+Il contratto di deposito in staking ha introdotto lo [staking](/glossary/#staking) nell'ecosistema di Ethereum. Nonostante fosse un contratto della [Rete principale](/glossary/#mainnet), ha avuto un impatto diretto sulla linea temporale per il lancio della [Beacon Chain](/roadmap/beacon-chain/), un importante [aggiornamento di Ethereum](/roadmap/).
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 

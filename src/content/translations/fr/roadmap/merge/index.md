@@ -108,7 +108,7 @@ La Fusion marque la fin de la preuve de travail pour Ethereum, et le début de l
 
 ## La Fusion et la fragmentation {#merge-and-scaling}
 
-La Fusion permet également de préparer le terrain pour d'autres améliorations des mises à niveau non envisageables avec la preuve de travail, en rapprochant Ethereum d'une étape de la réalisation d'évolutivité, de sécurité et de durabilité décrite dans le [plan de développement d'Ethereum](/upgrades/vision/).
+La Fusion permet également de préparer le terrain pour d'autres améliorations des mises à niveau non envisageables avec la preuve de travail, en rapprochant Ethereum d'une étape de la réalisation d'évolutivité, de sécurité et de durabilité décrite dans le [plan de développement d'Ethereum](/roadmap/vision/).
 
 ## Les idées fausses sur La Fusion {#misconceptions}
 

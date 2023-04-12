@@ -15,7 +15,7 @@ Se você ainda não sabe o que são os nós e os clientes e como eles funcionam,
 
 ## Participantes {#stakoooooooooooooors}
 
-Os participantes individuais devem executar sua própria infraestrutura, em vez de depender de provedores de terceiros. Isso significa executar um cliente de execução acoplado a um cliente de consenso. Antes da [Fusão](/upgrades/merge), era possível executar apenas um cliente de consenso e usar um provedor centralizado para dados de execução; isso não é mais possível: um participante solo deve executar ambos os clientes. No entanto, há serviços disponíveis para facilitar este processo.
+Os participantes individuais devem executar sua própria infraestrutura, em vez de depender de provedores de terceiros. Isso significa executar um cliente de execução acoplado a um cliente de consenso. Antes da [Fusão](/roadmap/merge), era possível executar apenas um cliente de consenso e usar um provedor centralizado para dados de execução; isso não é mais possível: um participante solo deve executar ambos os clientes. No entanto, há serviços disponíveis para facilitar este processo.
 
 [Leia mais sobre execução de um nó](/developers/docs/nodes-and-clients/run-a-node/).
 

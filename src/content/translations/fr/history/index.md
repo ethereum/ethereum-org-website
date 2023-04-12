@@ -19,7 +19,7 @@ Ces changements de règles peuvent créer une scission temporaire dans le résea
 
 </ExpandableCard>
 
-Vous cherchez de prochaines mises à jour de protocole ? [En savoir plus sur les prochaines mises à jour d'Ethereum](/upgrades/).
+Vous cherchez de prochaines mises à jour de protocole ? [En savoir plus sur les prochaines mises à jour d'Ethereum](/roadmap/).
 
 <Divider />
 
@@ -68,7 +68,7 @@ La mise à jour fournit aussi des fonctionnalités de balayage automatique de co
 
 #### Résumé {#paris-summary}
 
-La mise à jour de Paris a été déclenchée par le passage de la blockchain de preuve de travail à une[difficulté totale finale](/glossary/#terminal-total-difficulty) de 5875000000000000000. Cela s'est produit au bloc 15537393 le 15 septembre 2022, déclenchant la mise à jour Paris du bloc suivant. Paris était la transition vers la [La Fusion](/upgrades/merge/) : sa principale fonctionnalité était de désactiver l'algorithme de minage [preuve de travail](/developers/docs/consensus-mechanisms/pow) et sa logique de consensus associée et d'activer la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos) à la place. Paris lui-même était une mise à jour vers les [clients d'exécution](/developers/docs/nodes-and-clients/#execution-clients) (équivalent de Bellatrix sur la couche de consensus) qui leur permettait de recevoir des instructions depuis leurs [clients de consensus](/developers/docs/nodes-and-clients/#consensus-clients) connectés. Cela nécessite un nouvel ensemble de méthodes internes d'API, collectivement connues sous le nom d'[API Moteur](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md), à activer. C'est sans doute la mise à jour la plus significative de l'histoire d'Ethereum depuis [Homestead](#homestead)!
+La mise à jour de Paris a été déclenchée par le passage de la blockchain de preuve de travail à une[difficulté totale finale](/glossary/#terminal-total-difficulty) de 5875000000000000000. Cela s'est produit au bloc 15537393 le 15 septembre 2022, déclenchant la mise à jour Paris du bloc suivant. Paris était la transition vers la [La Fusion](/roadmap/merge/) : sa principale fonctionnalité était de désactiver l'algorithme de minage [preuve de travail](/developers/docs/consensus-mechanisms/pow) et sa logique de consensus associée et d'activer la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos) à la place. Paris lui-même était une mise à jour vers les [clients d'exécution](/developers/docs/nodes-and-clients/#execution-clients) (équivalent de Bellatrix sur la couche de consensus) qui leur permettait de recevoir des instructions depuis leurs [clients de consensus](/developers/docs/nodes-and-clients/#consensus-clients) connectés. Cela nécessite un nouvel ensemble de méthodes internes d'API, collectivement connues sous le nom d'[API Moteur](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md), à activer. C'est sans doute la mise à jour la plus significative de l'histoire d'Ethereum depuis [Homestead](#homestead)!
 
 - [Lisez la spécification de la mise à jour Paris](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
@@ -87,7 +87,7 @@ La mise à jour de Paris a été déclenchée par le passage de la blockchain de
 
 #### Résumé {#bellatrix-summary}
 
-La mise à jour de Bellatrix était la seconde mise à jour planifiée pour la [Chaîne Phare](/upgrades/beacon-chain), préparant la chaîne à [La Fusion](/upgrades/merge/). Elle porte les pénalités de validateur à leurs valeurs maximales en cas d'inactivité ou d'infractions sanctionnable. Bellatrix inclut également une mise à jour des règles de choix de fourche pour préparer la chaîne à La Fusion et à la transition du dernier bloc de preuve de travail vers le premier bloc de preuve d'enjeu. Cela inclut la sensibilisation des clients de consensus à la [difficulté totale du terminal](/glossary/#terminal-total-difficulty) de 5875000000000000000.
+La mise à jour de Bellatrix était la seconde mise à jour planifiée pour la [Chaîne Phare](/roadmap/beacon-chain), préparant la chaîne à [La Fusion](/roadmap/merge/). Elle porte les pénalités de validateur à leurs valeurs maximales en cas d'inactivité ou d'infractions sanctionnable. Bellatrix inclut également une mise à jour des règles de choix de fourche pour préparer la chaîne à La Fusion et à la transition du dernier bloc de preuve de travail vers le premier bloc de preuve d'enjeu. Cela inclut la sensibilisation des clients de consensus à la [difficulté totale du terminal](/glossary/#terminal-total-difficulty) de 5875000000000000000.
 
 - [Lire les spécifications de la mise à niveau Bellatrix](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
 
@@ -138,7 +138,7 @@ La mise à niveau Arrow Glacier a retardé le déclenchement de la [bombe de dif
 
 #### Résumé {#altair-summary}
 
-La mise à niveau Altair était la première mise à niveau répertoriée pour la [chaîne phare](/upgrades/beacon-chain). La prise en charge des « comités de synchronisation » a été ajoutée, autorisant d'une part les clients légers et augmentant d'autre part les pénalités d'inactivité et de délestage des validateurs alors que la situation évoluait vers La Fusion.
+La mise à niveau Altair était la première mise à niveau répertoriée pour la [chaîne phare](/roadmap/beacon-chain). La prise en charge des « comités de synchronisation » a été ajoutée, autorisant d'une part les clients légers et augmentant d'autre part les pénalités d'inactivité et de délestage des validateurs alors que la situation évoluait vers La Fusion.
 
 - [Lire les spécifications de la mise à niveau Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
@@ -204,11 +204,11 @@ La mise à niveau Berlin a optimisé le coût en gaz de certaines actions EVM et
 
 #### Résumé {#beacon-chain-genesis-summary}
 
-La [chaîne phare](/upgrades/beacon-chain/) avait besoin de 16 384 dépôts de 32 ETH mis en jeu pour être déployée en toute sécurité. C'est arrivé le 27 novembre, ce qui signifie que la chaîne phare a commencé à produire des blocs le 1er décembre 2020. Ce fut une première étape importante dans la réalisation de la [vision Ethereum](/upgrades/vision/).
+La [chaîne phare](/roadmap/beacon-chain/) avait besoin de 16 384 dépôts de 32 ETH mis en jeu pour être déployée en toute sécurité. C'est arrivé le 27 novembre, ce qui signifie que la chaîne phare a commencé à produire des blocs le 1er décembre 2020. Ce fut une première étape importante dans la réalisation de la [vision Ethereum](/roadmap/vision/).
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink to="/roadmap/beacon-chain/">
   La chaîne phare
 </DocLink>
 
@@ -220,7 +220,7 @@ La [chaîne phare](/upgrades/beacon-chain/) avait besoin de 16 384 dépôts de 
 
 #### Résumé {#deposit-contract-summary}
 
-Le contrat de dépôt de mise en jeu a introduit la [mise en jeu](/glossary/#staking) dans l'écosystème Ethereum. Bien qu'il s'agisse d'un contrat sur le [réseau principal](/glossary/#mainnet), cela a eu des conséquences directes sur l'échéance du lancement de la [chaîne phare](/upgrades/beacon-chain/), une importante [mise à niveau d'Ethereum](/upgrades/).
+Le contrat de dépôt de mise en jeu a introduit la [mise en jeu](/glossary/#staking) dans l'écosystème Ethereum. Bien qu'il s'agisse d'un contrat sur le [réseau principal](/glossary/#mainnet), cela a eu des conséquences directes sur l'échéance du lancement de la [chaîne phare](/roadmap/beacon-chain/), une importante [mise à niveau d'Ethereum](/roadmap/).
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 

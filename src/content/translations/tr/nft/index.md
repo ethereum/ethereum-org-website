@@ -304,7 +304,7 @@ Ethereum, birkaç nedenden dolayı NFT'lerin çalışmasını mümkün kılıyor
 
 ## NFT'lerin çevreye etkisi {#environmental-impact-nfts}
 
-NFT'leri oluşturmak ve transfer etmek yanlızca Ethereum işlemleridir; oluşturmak, satın almak, el değiştirmek ya da NFT'ler ile etkileşime girmek doğrudan enerji harcamaz. ["Birleşim"](/upgrades/merge), Ethereum az enerji harcayan bir blokzincirdir. Bu NFTlerin çevresel etkisinin göz ardı edilebilecek kadar ufak olduğu anlamına geliyor.
+NFT'leri oluşturmak ve transfer etmek yanlızca Ethereum işlemleridir; oluşturmak, satın almak, el değiştirmek ya da NFT'ler ile etkileşime girmek doğrudan enerji harcamaz. ["Birleşim"](/roadmap/merge), Ethereum az enerji harcayan bir blokzincirdir. Bu NFTlerin çevresel etkisinin göz ardı edilebilecek kadar ufak olduğu anlamına geliyor.
 
 [Ethereum'un enerji tüketimi hakkında dahası](/energy-consumption/).
 

@@ -229,7 +229,7 @@ Fare qualche calcolo approssimativo su queste cifre può aiutare a mostrare i mi
 
 Questa è una stima piuttosto ottimistica, dato che le transazioni del rollup ottimistico non possono verosimilmente comprendere un intero blocco su Ethereum. Tuttavia, può dare un'idea approssimativa di quanti guadagni in termini di scalabilità i rollup ottimistici possono offrire agli utenti di Ethereum (le implementazioni correnti offrono fino a 2.000 TPS).
 
-L'introduzione dello [sharding dei dati](/upgrades/shard-chains/) su Ethereum dovrebbe migliorare la scalabilità nei rollup ottimistici. Poiché le transazioni del rollup devono condividere lo spazio del blocco con altre transazioni non del rollup, la loro capacità di elaborazione è limitata dal volume di dati sulla catena principale di Ethereum. Lo sharding aumenterà lo spazio disponibile per le catene del L2 per pubblicare dati per blocco, potenziando ulteriormente il volume sui rollup.
+L'introduzione dello [sharding dei dati](/roadmap/danksharding/) su Ethereum dovrebbe migliorare la scalabilità nei rollup ottimistici. Poiché le transazioni del rollup devono condividere lo spazio del blocco con altre transazioni non del rollup, la loro capacità di elaborazione è limitata dal volume di dati sulla catena principale di Ethereum. Lo sharding aumenterà lo spazio disponibile per le catene del L2 per pubblicare dati per blocco, potenziando ulteriormente il volume sui rollup.
 
 ### Pro e contro dei rollup ottimistici {#optimistic-rollups-pros-and-cons}
 

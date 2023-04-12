@@ -16,11 +16,11 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 **TL; DR** : Flashez votre Raspberry Pi 4, branchez-y un câble Ethernet, connectez le disque SSD et mettez l'appareil en marche pour transformer votre Raspberry Pi 4 en un nœud Ethereum complet exécutant la couche d'exécution ou la couche de consensus (chaîne phare / validateur)
 
-[En savoir plus sur les mises à jour d'Ethereum](/upgrades/)
+[En savoir plus sur les mises à jour d'Ethereum](/roadmap/)
 
 Pour commencer, un peu de contexte. Comme vous le savez, on peut rencontrer des problèmes de mémoire [[1]](/developers/tutorials/run-node-raspberry-pi/#references) puisque l'image du Raspberry Pi 4 dans le cadre du système d'exploitation Raspbian est toujours en 32 bits [[2]](/developers/tutorials/run-node-raspberry-pi/#references) (en tout cas l'espace utilisateur). Si on préfère s'en tenir au système d'exploitation officiel, nous sommes arrivés à la conclusion que, pour résoudre ces problèmes, il faut migrer vers un système d'exploitation natif 64 bits
 
-De plus, [les clients de consensus](/upgrades/get-involved/#clients) ne prennent pas en charge les binaires en 32 bits, donc l'utilisation de Raspbian exclurait le Raspberry Pi 4 de l'exécution d'un noeud de couche de consensus (et la possibilité de miser).
+De plus, les clients de consensus ne prennent pas en charge les binaires en 32 bits, donc l'utilisation de Raspbian exclurait le Raspberry Pi 4 de l'exécution d'un noeud de couche de consensus (et la possibilité de miser).
 
 Donc, après plusieurs tests, nous sortons 2 images différentes basées sur Ubuntu 20.4 64 bits [[3]](/developers/tutorials/run-node-raspberry-pi/#references) : une édition pour la couche d'exécution et l'autre pour la couche de consensus.
 

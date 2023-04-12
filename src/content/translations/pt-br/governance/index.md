@@ -155,7 +155,7 @@ Embora as implementações de especificação e desenvolvimento sempre tenham si
 
 Quando a Beacon Chain se uniu com a camada de execução do Ethereum no dia 15 de setembro de 2022, A Fusão foi concluída como parte da [atualização de rede Paris](https://ethereum.org/en/history/#paris). A proposta [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) foi alterada de "Última Chamada" para "Final", completando a transição para o prova de participação.
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   Mais sobre a integração
 </ButtonLink>
 

@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 La gestion de votre propre nœud vous offre divers avantages, ouvre de nouvelles possibilités et aide à soutenir l'écosystème. Cette page vous guidera en faisant tourner votre propre nœud et en participant à la validation des transactions Ethereum.
 
-Notez que depuis [La Fusion](/upgrades/merge), deux clients sont requis pour l'exécution d'un nœud Ethereum ; un client de **couche d'exécution (EL - Execution Layer)** et un client de **couche de consensus (CL - Consensus Layer)**. Cette page va vous montrer comment installer, configurer et connecter ces deux logiciels pour constituer un nœud Ethereum.
+Notez que depuis [La Fusion](/roadmap/merge), deux clients sont requis pour l'exécution d'un nœud Ethereum ; un client de **couche d'exécution (EL - Execution Layer)** et un client de **couche de consensus (CL - Consensus Layer)**. Cette page va vous montrer comment installer, configurer et connecter ces deux logiciels pour constituer un nœud Ethereum.
 
 ## Prérequis {#prerequisites}
 

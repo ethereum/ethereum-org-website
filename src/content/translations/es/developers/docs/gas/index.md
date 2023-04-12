@@ -133,7 +133,7 @@ El precio del gas por sí solo no determina cuánto tenemos que pagar por una de
 
 ## Iniciativas para reducir los costes del gas {#initiatives-to-reduce-gas-costs}
 
-Las [mejoras de escalabilidad](/upgrades/) de Ethereum deberían abordar algunos de los problemas de las comisiones de gas, lo que a su vez permitiría que la plataforma procesase cientos de transacciones por segundo y a escala global.
+Las [mejoras de escalabilidad](/roadmap/) de Ethereum deberían abordar algunos de los problemas de las comisiones de gas, lo que a su vez permitiría que la plataforma procesase cientos de transacciones por segundo y a escala global.
 
 La escala de la capa 2 es una iniciativa primaria para mejorar de manera considerable los costes del gas, la experiencia de usuario y la escalabilidad. [Más información sobre la escala de la capa 2](/developers/docs/scaling/#layer-2-scaling).
 
