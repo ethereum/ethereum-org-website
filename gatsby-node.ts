@@ -4,7 +4,7 @@ import path from "path"
 import util from "util"
 import child_process from "child_process"
 import { createFilePath } from "gatsby-source-filesystem"
-import type { GatsbyNode } from "gatsby"
+import type { GatsbyNode, Actions } from "gatsby"
 
 import type { Context } from "./src/types"
 
@@ -27,6 +27,7 @@ const commonRedirectProps = {
   isPermanent: true,
   ignoreCase: true,
   force: true,
+  redirectInBrowser: true,
 }
 
 /**
