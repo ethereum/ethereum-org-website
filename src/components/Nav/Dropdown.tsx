@@ -122,7 +122,7 @@ const NavDropdown: React.FC<IProps> & {
           {section.text}
           <Icon
             as={MdExpandMore}
-            color="secondary"
+            color="text200"
             boxSize={6}
             transform={isOpen ? "rotate(180deg)" : undefined}
           />
