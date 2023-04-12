@@ -24,7 +24,7 @@ export const SearchIconButton = forwardRef<IconButtonProps, "button">(
   (props, ref) => (
     <IconButton
       ref={ref}
-      icon={<Icon as={MdSearch} />}
+      icon={<MdSearch />}
       fontSize="2xl"
       variant="icon"
       _hover={{ svg: { fill: "primary" } }}
@@ -67,8 +67,8 @@ const Search = forwardRef<{}, "button">((_, ref) => {
   }
 
   // Check for the breakpoint with theme token
-  const xlBreakpoint = useToken("breakpoints", "xl")
-  const [isLargerThanXl] = useMediaQuery(`(min-width: ${xlBreakpoint})`)
+  const xlBp = useToken("breakpoints", "xl")
+  const [isLargerThanXl] = useMediaQuery(`(min-width: ${xlBp})`)
 
   return (
     <>
