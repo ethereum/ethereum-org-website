@@ -61,7 +61,6 @@ Once an account is flagged as "withdrawable", and withdrawal credentials have be
 
 Withdrawal functionality will be enabled through a two-part simultaneous network upgrade, **Shanghai + Capella**.
 
-<ShanghaiCapella />
 
 ## How do withdrawal payments work? {#how-do-withdrawals-work}
 
