@@ -30,9 +30,6 @@ incomplete: true
 
 ## 中級者向けの記事 {#intermediate-articles}
 
-- [Rust-Web3 ドキュメント](https://tomusdrw.github.io/rust-web3/web3/index.html)
-- [Rust-Web3 の実例](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-
 ## 発展的なユースケース {#advanced-use-patterns}
 
 - [pwasm_ethereum: イーサリアムライクなネットワークとやり取りするための extern ライブラリ](https://github.com/openethereum/pwasm-ethereum)
@@ -50,7 +47,6 @@ incomplete: true
 - [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS API リファレンス_
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Rust のイーサリアム仮想マシンの実装_
-- [rust-web3](https://github.com/tomusdrw/rust-web3) - _Web3.js ライブラリの Rust 実装_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rust での Wavelet スマートコントラクト_
 - [Foundry](https://github.com/gakonst/foundry)- _イーサリアムアプリケーション開発のためのツールキット_
 - [Ethers_rs](https://github.com/gakonst/ethers-rs)- _イーサリアムライブラリとウォレットの実装_

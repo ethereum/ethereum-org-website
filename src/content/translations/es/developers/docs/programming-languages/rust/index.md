@@ -30,9 +30,6 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 
 ## Artículos de nivel intermedio {#intermediate-articles}
 
-- [Documentación de Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
-- [Ejemplos de trabajo de Rust-Web3](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-
 ## Patrones de uso avanzado {#advanced-use-patterns}
 
 - [Biblioteca externa pwasm_ethereum para interactuar con redes similares a Ethereum](https://github.com/openethereum/pwasm-ethereum)
@@ -49,7 +46,6 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm): _Implementación de máquina virtual de Ethereum_
 - [Paridad](https://github.com/paritytech/parity-ethereum): _Cliente de Ethereum basado en Rust_
-- [rust-web3:](https://github.com/tomusdrw/rust-web3) _Implementación en Rust de la biblioteca de Web3.js_
 - [Wavelet:](https://wavelet.perlin.net/docs/smart-contracts) _Contrato inteligente de Wavelet en Rust_
 
 ¿Buscas más recursos? Echa un vistazo a [ethereum.org/developers.](/developers/)
