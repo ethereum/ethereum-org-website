@@ -78,7 +78,6 @@ export function defineMergeStyles(
 
 export const _notDisabled = "&:not([data-disabled], [disabled])"
 
-const INPUT_TRIGGER_DISABLE_COLOR = "--input-trigger-disable-color"
 const $inputTriggerDisableColor = cssVar("input-trigger-disable-color")
 
 export const commonInputTriggerStyles = {
