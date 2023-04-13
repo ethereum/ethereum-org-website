@@ -191,7 +191,7 @@ const HeroImage = chakra(GatsbyImage, {
   },
 })
 
-const Page = (props: ChildOnlyProp) => (
+const Page = (props: FlexProps) => (
   <Flex
     flexDirection={{ base: "column", lg: "row" }}
     justifyContent="space-between"
@@ -405,7 +405,7 @@ const UseCasePage = ({
           <Icon as={MdExpandMore} fontSize="2xl" color="secondary" />
         </Flex>
       </Show>
-      <Page>
+      <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
