@@ -1,7 +1,7 @@
 ---
 title: Programma di traduzione
 lang: it
-description: Informazioni sul Programma di Traduzione di ethereum.org
+description: Informazioni riguardo il Programma di Traduzione di Ethereum
 ---
 
 # Programma di traduzione {#translation-program}
@@ -20,6 +20,8 @@ Il Programma di Traduzione di ethereum.org è aperto e tutti possono contribuire
 4. Le traduzioni automatiche non saranno approvate.
 5. Tutte le traduzioni sono revisionate prima di essere aggiunte al sito, quindi vi sarà un breve ritardo prima che le tue traduzioni siano visibili a tutti.
 
+_Unisciti a [Discord di ethereum.org](/discord/) per collaborare alle traduzioni, fare domande, condividere feedback e idee, o unirsi a un gruppo di traduzione._
+
 <ButtonLink to="https://crowdin.com/project/ethereum-org/invite">
   Inizia a tradurre
 </ButtonLink>
@@ -34,9 +36,9 @@ Leggi di più sulla [missione e visione](/contributing/translation-program/missi
 
 ### I nostri progressi finora {#our-progress}
 
-- [**Oltre 4.100** traduttori](/contributing/translation-program/contributors/)
-- [**50** lingue presenti sul sito](/languages/)
-- [**2,5 milioni** di parole tradotte dall'inizio del 2022](/contributing/translation-program/acknowledgements/)
+- [**Oltre 4.700** traduttori](/contributing/translation-program/contributors/)
+- [**52** lingue presenti sul sito](/languages/)
+- [**3 milioni** di parole tradotte nel 2022](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 
@@ -56,6 +58,12 @@ Tutti i nostri traduttori hanno diritto a un POAP (Proof of Attendance Protocol)
 
 Riconoscimenti pubblici dei nostri migliori traduttori utilizzando le [classifiche](/contributing/translation-program/acknowledgements/) e un [elenco di tutti i collaboratori al Programma di Traduzione](/contributing/translation-program/contributors/).
 
+#### Ricompense {#rewards}
+
+In passato, abbiamo premiato retroattivamente i nostri contributori più attivi con i biglietti per le conferenze Ethereum come [Devcon](https://devcon.org/en/) e [Devconnect](https://devconnect.org/), così come il merchandising esclusivo di ethereum.org.
+
+Pensiamo costantemente a modi nuovi e innovativi per premiare i nostri collaboratori, quindi restate sintonizzati!
+
 ### A cosa stiamo lavorando {#our-projects}
 
 La nostra community di collaboratori sta traducendo attivamente diversi siti web e risorse ad elevato impatto per la community globale di Ethereum.
@@ -70,7 +78,7 @@ Partecipa:
 
 - Unisciti al [progetto di traduzione di ethereum.org su Crowdin](https://crowdin.com/project/ethereum-org/invite)
 
-#### Launchpad di Staking di Ethereum {#ethereum-staking-launchpad}
+#### Launchpad di staking di Ethereum {#ethereum-staking-launchpad}
 
 ![](./launchpad-screenshot.png)
 
@@ -101,7 +109,7 @@ Se stai contribuendo al Programma di Traduzione o stai pensando di partecipare, 
 - [Guida all'editor online di Crowdin](https://support.crowdin.com/online-editor/) _– una guida approfondita all'uso dell'editor online di Crowdin e di alcune funzionalità avanzate di Crowdin_
 - [Categorie di contenuti](/contributing/translation-program/content-buckets/) _– quali pagine sono incluse in ogni categoria di contenuto di ethereum.org_
 
-Per altri utili strumenti di traduzione, le community di traduttori e i post del blog del Programma di Traduzione, visita la [pagina delle Risorse](/contributing/translation-program/resources/).
+Per altri utili strumenti di traduzione, le community di traduttori e i post del blog del Programma di Traduzione, visita la [pagina delle risorse](/contributing/translation-program/resources/).
 
 ## Contattaci {#get-in-touch}
 

@@ -304,7 +304,7 @@ Ethereum maakt het mogelijk dat NFT's werken om een aantal redenen:
 
 ## De milieueffecten van NFT's {#environmental-impact-nfts}
 
-Het maken en overdragen van NFT's zijn gewoon Ethereum-transacties - het minten, kopen, ruilen van of ruilen met NFT's verbruikt niet direct energie. Sinds [de merge](/upgrades/merge) is Ethereum een energiezuinige blockchain, wat betekent dat de milieueffecten van het gebruik van NFT's verwaarloosbaar zijn.
+Het maken en overdragen van NFT's zijn gewoon Ethereum-transacties - het minten, kopen, ruilen van of ruilen met NFT's verbruikt niet direct energie. Sinds [de merge](/roadmap/merge) is Ethereum een energiezuinige blockchain, wat betekent dat de milieueffecten van het gebruik van NFT's verwaarloosbaar zijn.
 
 [Meer over Ethereums energieverbruik](/energy-consumption/).
 

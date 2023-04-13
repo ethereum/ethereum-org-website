@@ -54,6 +54,15 @@
     "endDate": "2023-04-25"
   },
   {
+    "title": "ETHTallinn",
+    "to": "https://www.ethtallinn.org",
+    "sponsor": null,
+    "location": "Tallinn, Estonia",
+    "description": "ETHTallinn is the first Ethereum Hackathon in the Baltics, bringing together some of Europe's smartest tech, cybersecurity, and Web3 minds to solve Ethereum's biggest challenges.",
+    "startDate": "2023-05-05",
+    "endDate": "2023-05-07"
+  },
+  {
     "title": "ETHGlobal Lisbon",
     "to": "https://ethglobal.com/events/lisbon",
     "sponsor": null,
@@ -79,6 +88,15 @@
     "description": "BlockSplit is the oldest web3 conference in the South-East Europe, taking place since 2018 and attracting over 600 attendees from all around the world.",
     "startDate": "2023-05-23",
     "endDate": "2023-05-24"
+  },
+  {
+    "title": "SpaghettETH II",
+    "to": "https://naples.spaghett-eth.com/",
+    "sponsor": "EF, Ambire, Zerion, ETHLocal, Yomi, Onlymusix, Oasis App",
+    "location": "Naples, Italy",
+    "description": "SpaghettETH is the umbrella of italian ETH communities, and annual touring conference. Join us in Naples and share your #rawStories about legal, security, narrative and education",
+    "startDate": "2023-05-24",
+    "endDate": "2023-05-26"
   },
   {
     "title": "ETH Belgrade 2023",
@@ -189,11 +207,11 @@
     "endDate": "2023-04-02"
   },
   {
-    "title": "ETH Miami",
+    "title": "ETHMobile Miami",
     "to": "https://www.ethmiami.ooo/",
     "sponsor": null,
     "location": "Hybrid",
-    "description": "We are Ethereum Miami. Joined the Road to DevCon and launched ETH Mobile at main stage of ETH Denver",
+    "description": "We are the first Ethereum festival expanding the global ecosystem through the mobile experience.",
     "startDate": "2023-09-15",
     "endDate": "2023-09-17"
   },

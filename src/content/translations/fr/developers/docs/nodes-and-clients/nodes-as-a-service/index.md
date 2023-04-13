@@ -15,7 +15,7 @@ Si vous ne savez pas encore ce que sont les nœuds et les clients, consultez la 
 
 ## Validateurs {#stakoooooooooooooors}
 
-Les validateurs individuels doivent gérer leur propre infrastructure plutôt que compter sur des fournisseurs tiers. Cela signifie qu'il est nécessaire d'utiliser un client d'exécution couplé à un client de consensus. Avant [La Fusion](/upgrades/merge), il était uniquement possible d'exécuter un client de consensus et d'utiliser un fournisseur centralisé pour les données d'exécution ; ce n'est plus possible - un validateur individuel doit exécuter les deux clients. Toutefois, des services sont disponibles pour faciliter ce processus.
+Les validateurs individuels doivent gérer leur propre infrastructure plutôt que compter sur des fournisseurs tiers. Cela signifie qu'il est nécessaire d'utiliser un client d'exécution couplé à un client de consensus. Avant [La Fusion](/roadmap/merge), il était uniquement possible d'exécuter un client de consensus et d'utiliser un fournisseur centralisé pour les données d'exécution ; ce n'est plus possible - un validateur individuel doit exécuter les deux clients. Toutefois, des services sont disponibles pour faciliter ce processus.
 
 [En savoir plus sur l'exécution d'un nœud](/developers/docs/nodes-and-clients/run-a-node/).
 

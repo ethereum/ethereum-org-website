@@ -154,7 +154,7 @@ Mientras que la especificación e implementaciones siempre han sido totalmente a
 
 Cuando la cadena de baliza se fusione con la capa de ejecución de Ethereum, el proceso de gobernanza para proponer cambios será uniforme. Este proceso para implementar la fusión ya está [en marcha](https://eips.ethereum.org/EIPS/eip-3675).
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   Más sobre la fusión
 </ButtonLink>
 

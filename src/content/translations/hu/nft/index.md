@@ -304,7 +304,7 @@ Az Ethereum több okból is lehetővé teszi az NFT-k működését:
 
 ## Az NFT-k környezeti hatása {#environmental-impact-nfts}
 
-Az NFT-k létrehozása és átadása csak Ethereum-tranzakció: az NFT-k kibocsátása, vásárlása, cseréje vagy az NFT-kkel való interakció nem fogyaszt közvetlenül energiát. A [beolvadás](/upgrades/merge) óta az Ethereum alacsony energiafelhasználású blokklánc, ami azt jelenti, hogy az NFT-k használatának környezeti hatása elhanyagolható.
+Az NFT-k létrehozása és átadása csak Ethereum-tranzakció: az NFT-k kibocsátása, vásárlása, cseréje vagy az NFT-kkel való interakció nem fogyaszt közvetlenül energiát. A [beolvadás](/roadmap/merge) óta az Ethereum alacsony energiafelhasználású blokklánc, ami azt jelenti, hogy az NFT-k használatának környezeti hatása elhanyagolható.
 
 [Bővebben az Ethereum energiafelhasználásáról](/energy-consumption/).
 

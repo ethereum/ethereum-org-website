@@ -133,7 +133,7 @@ Wie viel wir für eine bestimmte Transaktion bezahlen müssen, wird nicht allein
 
 ## Initiativen zur Senkung der Gaskosten {#initiatives-to-reduce-gas-costs}
 
-Die Ethereum-[Skalierbarkeits-Upgrades](/upgrades/) sollten letztendlich einige der Probleme mit den Gasgebühren lösen, was wiederum die Plattform in die Lage versetzen wird, Tausende von Transaktionen pro Sekunde zu verarbeiten und global zu skalieren.
+Die Ethereum-[Skalierbarkeits-Upgrades](/roadmap/) sollten letztendlich einige der Probleme mit den Gasgebühren lösen, was wiederum die Plattform in die Lage versetzen wird, Tausende von Transaktionen pro Sekunde zu verarbeiten und global zu skalieren.
 
 Die Skalierung auf Layer 2 ist eine der wichtigsten Initiativen, um die Gaskosten, das Nutzererlebnis und die Skalierbarkeit deutlich zu verbessern. [Mehr zur Skalierung mit Layer 2](/developers/docs/scaling/#layer-2-scaling)
 

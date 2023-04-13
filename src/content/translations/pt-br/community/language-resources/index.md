@@ -96,31 +96,35 @@ Se você for bilíngue e deseja nos ajudar a alcançar mais pessoas, também pod
 - [Microsoft Learn (conratos inteligentes)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) – Escrevendo contratos inteligentes com Solidity
 - [Microsoft Learn (dapps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) – crie uma interface de usuário com aplicativos descentralizados
 
+### Russo {#ru}
+
+- [Cyber Academy](https://cyberacademy.dev) – espaço educacional para criadores web3
+
 ### Espanhol {#es}
 
-- [Ethereum Madrid](https://ethereummadrid.com/) – cadeia de blocos, DeFi e cursos, eventos e blog sobre governança
+- [Ethereum Madrid](https://ethereummadrid.com/) – blockchain, DeFi e cursos, eventos e blog sobre governança
 - [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) – guia sobre o Ethereum em espanhol para iniciantes
 - [Tutoriais online](https://tutoriales.online/curso/solidity) – aprenda Solidity e programação em Ethereum
-- [Curso de introdução ao desenvolvimento do Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) – fundamentos, testes e implantação em Solidity do seu primeiro contrato inteligente
+- [Curso de introdução ao desenvolvimento do Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8y9pfUBjhkVa1IDMwyQz-fU) – noções básicas, testes e implantação em Solidity do seu primeiro contrato inteligente
 - [Curso de introdução à segurança e hacking no Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) – entendendo as vulnerabilidades comuns e os problemas de segurança em contratos inteligentes reais
 - [Curso de introdução ao desenvolvimento em DeFi](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) – aprendendo como funcionam os contratos inteligentes de DeFi em Solidity e criando seu próprio Automated Market Maker
-- [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) – Educação não técnica em cadeia de blocos do iniciante ao avançado. Aprenda tudo sobre criptomoedas e Ethereum.
+- [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) – Educação não técnica sobre blockchain do iniciante ao avançado. Aprenda tudo sobre criptomoedas e Ethereum.
 
 ### Turco {#tr}
 
-- [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) – curso com foco em cadeia de blocos e criptomoedas
-- [A grande mudança de nome – o que aconteceu com Eth2?](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) – tradução em turco da excelente publicação de blog sobre a mudança de nome, explicando o afastamento da terminologia "Eth2"
+- [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) – curso com foco em blockchain e criptomoedas
+- [A grande mudança de nome – o que aconteceu com Eth2?](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) – tradução em turco da excelente publicação de blog sobre a mudança de nome, explicando a mudança da terminologia "Eth2"
 
 ### Vietnamita {#vi}
 
 - [Tino Group](https://wiki.tino.org/ethereum-la-gi/) – visão geral do Ethereum, dapps, carteiras e perguntas frequentes
-- [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) – plataforma Web com subpáginas de noticias e educacionais sobre o Ethereum
+- [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) – plataforma Web com subpáginas de notícias e informações educativas sobre o Ethereum
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) – portal de criptomoedas com notícias e conteúdo educacional sobre o Ethereum
 
 ### Japonês {#ja}
 
 - [Associação japonesa de corretoras de ativos virtuais e de criptomoedas](https://jvcea.or.jp/)
 - [Associação japonesa de empresas de criptoativos](https://cryptocurrency-association.org/)
-- [Comece com o desenvolvimento de cadeia de blocos – Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) – Este caminho de aprendizagem apresenta a cadeia de blocos e o desenvolvimento na plataforma do Ethereum
+- [Comece com o desenvolvimento de cadeia de blocos – Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/paths/ethereum-blockchain-development/) – Este caminho de aprendizagem apresenta a blockchain e o desenvolvimento na plataforma do Ethereum
 - [ Mastering Ethereum](https://www.oreilly.co.jp/books/9784873118963/) – Dominando o Ethereum em Japonês
 - [Desenvolvimento de contratos inteligentes com Solidity e Ethereum](https://www.oreilly.co.jp/books/9784873119342/) – Desenvolvimento de contratos inteligentes com Solidity e Ethereum em Japonês

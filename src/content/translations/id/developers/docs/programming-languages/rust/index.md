@@ -30,9 +30,6 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 
 ## Artikel tingkat menengah {#intermediate-articles}
 
-- [Dokumentasi Rust-Web3](https://tomusdrw.github.io/rust-web3/web3/index.html)
-- [Contoh Rust-Web3 yang Sudah Berjalan](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-
 ## Pola penggunaan tingkat lanjut {#advanced-use-patterns}
 
 - [Pustaka eksternal pwasm_ethereum untuk berinteraksi dengan jaringan seperti Ethereum](https://github.com/openethereum/pwasm-ethereum)
@@ -49,7 +46,6 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Implementasi Mesin Virtual Ethereum Rust_
 - [Parity](https://github.com/paritytech/parity-ethereum) - _Klient Rust Ethereum_
-- [rust-web3](https://github.com/tomusdrw/rust-web3) - _Implementasi pustaka Web3.js Rust_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Kontrak pintar Wavelet di Rust_
 
 Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers.](/developers/)

@@ -199,7 +199,7 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
               </Link>
             </Text>
           </Text>
-          <InfoBanner emoji=":wave:" shouldCenter={true} mt={8}>
+          <InfoBanner emoji=":wave:" shouldCenter mt={8}>
             <Translation id="page-get-eth-new-to-eth" />{" "}
             <Link to="/eth/">
               <Translation id="page-get-eth-whats-eth-link" />
@@ -280,7 +280,7 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
             <Translation id="page-get-eth-swapping" />
           </Text>
           <CardList content={tokenSwaps} />
-          <InfoBanner isWarning={true}>
+          <InfoBanner isWarning>
             <Translation id="page-get-eth-warning" />
           </InfoBanner>
         </RightColumn>
@@ -384,6 +384,9 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
       </TwoColumnContent>
       <Divider />
       <CalloutBanner
+        mx={4}
+        mt={24}
+        mb={40}
         titleKey="page-get-eth-use-your-eth"
         descriptionKey="page-get-eth-use-your-eth-dapps"
         image={getImage(data.dapps)!}

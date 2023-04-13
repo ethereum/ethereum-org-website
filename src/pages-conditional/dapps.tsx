@@ -130,13 +130,6 @@ const StyledInfoBanner = styled(InfoBanner)`
   }
 `
 
-const StyledCalloutBanner = styled(CalloutBanner)`
-  margin: 8rem 0 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 0;
-  }
-`
-
 const Column = styled.div`
   flex: 1 1 75%;
   margin-bottom: 1.5rem;
@@ -776,7 +769,7 @@ const DappsPage = ({
     {
       title: "SuperRare",
       description: t("page-dapps-dapp-description-superrare"),
-      link: "https://www.superrare.co",
+      link: "https://www.superrare.com",
       image: getImage(data.superrare),
       alt: t("page-dapps-superrare-logo-alt"),
     },
@@ -1072,7 +1065,7 @@ const DappsPage = ({
                   <Translation id="page-dapps-finance-description" />
                 </Subtitle>
               </Column>
-              <StyledInfoBanner isWarning={true}>
+              <StyledInfoBanner isWarning>
                 <H2>
                   <Translation id="page-dapps-warning-header" />
                 </H2>
@@ -1135,7 +1128,10 @@ const DappsPage = ({
                 />
               </RightColumn>
             </TwoColumnContent>
-            <StyledCalloutBanner
+            <CalloutBanner
+              mt={32}
+              mx={0}
+              mb={{ base: 0, lg: 16 }}
               titleKey={"page-dapps-wallet-callout-title"}
               descriptionKey={"page-dapps-wallet-callout-description"}
               image={getImage(data.wallet)!}
@@ -1147,7 +1143,7 @@ const DappsPage = ({
                   <Translation id="page-dapps-wallet-callout-button" />
                 </ButtonLink>
               </div>
-            </StyledCalloutBanner>
+            </CalloutBanner>
           </Content>
         )}
         {selectedCategory === CategoryType.GAMING && (
@@ -1162,7 +1158,7 @@ const DappsPage = ({
                   <Translation id="page-dapps-gaming-description" />
                 </Subtitle>
               </Column>
-              <StyledInfoBanner isWarning={true}>
+              <StyledInfoBanner isWarning>
                 <H2>
                   <Translation id="page-dapps-warning-header" />
                 </H2>
@@ -1197,7 +1193,7 @@ const DappsPage = ({
                   <Translation id="page-dapps-technology-description" />
                 </Subtitle>
               </Column>
-              <StyledInfoBanner isWarning={true}>
+              <StyledInfoBanner isWarning>
                 <H2>
                   <Translation id="page-dapps-warning-header" />
                 </H2>
@@ -1246,7 +1242,7 @@ const DappsPage = ({
                   <Translation id="page-dapps-collectibles-description" />
                 </Subtitle>
               </Column>
-              <StyledInfoBanner isWarning={true}>
+              <StyledInfoBanner isWarning>
                 <H2>
                   <Translation id="page-dapps-warning-header" />
                 </H2>
