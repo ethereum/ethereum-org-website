@@ -12,7 +12,7 @@ summaryPoint4: La Fusión reduce el consumo de energía de Ethereum en un ~99.95
 
 <UpgradeStatus dateKey="page-upgrades-beacon-date">
   La Fusión se ejecutó el 15 de septiembre de 2022. Esto completó la transición de Ethereum al consenso de prueba de participación, dejando de lado oficialmente la prueba de trabajo y reduciendo el consumo de energía en un ~99,95%.
-</roadmaptatus>
+</UpgradeStatus>
 
 ## ¿Qué es La Fusión? {#what-is-the-merge}
 
