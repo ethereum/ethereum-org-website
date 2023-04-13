@@ -65,8 +65,8 @@ export {
  * @param styleObjs - The following style objects to be merged
  */
 export function defineMergeStyles(
-  defaultTheming?: SystemStyleObject,
-  ...styleObjs: SystemStyleObject[] | undefined[]
-) {
+  defaultTheming?: SystemStyleObject | unknown,
+  ...styleObjs: SystemStyleObject[] | unknown[]
+): Record<string, SystemStyleObject> {
   return merge(defaultTheming, ...styleObjs)
 }
