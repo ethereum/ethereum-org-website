@@ -237,7 +237,7 @@ const HomePage = ({
       alt: t("page-index-tout-upgrades-image-alt"),
       title: t("page-index-tout-upgrades-title"),
       description: t("page-index-tout-upgrades-description"),
-      to: "/upgrades/",
+      to: "/roadmap/",
     },
     {
       image: getImage(data.infrastructurefixed),

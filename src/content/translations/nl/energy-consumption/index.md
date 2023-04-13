@@ -22,13 +22,13 @@ Proof-of-work is een solide manier om het netwerk te beveiligen en eerlijke vera
 
 ## Proof-of-stake {#proof-of-stake}
 
-Een groenere toekomst voor Ethereum wordt al gebouwd in de vorm van een [**proof-of-stake (PoS)** chain](/upgrades/beacon-chain/). Onder [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) is het willekeurig oplossen van puzzels niet nodig. Het verwijderen van puzzeloplossingen vermindert drastisch de energieuitgaven die nodig zijn om het netwerk te beveiligen. Miners worden vervangen door validators die dezelfde functie uitvoeren, behalve dat in plaats van hun activa op voorhand uit te geven in de vorm van computerwerk, gaan ze ETH staken als onderpand tegen oneerlijk gedrag. Als de validator lui is (offline terwijl hij/zij een validatiedienst zou moeten uitvoeren), kan zijn/haar gestakete ETH langzaam verdwijnen, terwijl oneerlijk gedrag er waarschijnlijk toe leidt dat de gestakete activa worden weggenomen. Dit zorgt ervoor dat de validators actief en eerlijk gaan meewerken met het beveiligen van het netwerk.
+Een groenere toekomst voor Ethereum wordt al gebouwd in de vorm van een [**proof-of-stake (PoS)** chain](/roadmap/beacon-chain/). Onder [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) is het willekeurig oplossen van puzzels niet nodig. Het verwijderen van puzzeloplossingen vermindert drastisch de energieuitgaven die nodig zijn om het netwerk te beveiligen. Miners worden vervangen door validators die dezelfde functie uitvoeren, behalve dat in plaats van hun activa op voorhand uit te geven in de vorm van computerwerk, gaan ze ETH staken als onderpand tegen oneerlijk gedrag. Als de validator lui is (offline terwijl hij/zij een validatiedienst zou moeten uitvoeren), kan zijn/haar gestakete ETH langzaam verdwijnen, terwijl oneerlijk gedrag er waarschijnlijk toe leidt dat de gestakete activa worden weggenomen. Dit zorgt ervoor dat de validators actief en eerlijk gaan meewerken met het beveiligen van het netwerk.
 
 Op dezelfde manier als bij proof-of-work, zou een kwaadaardige entiteit ten minste 51 procent van de totale hoeveelheid ETH die gestaket is in het netwerk nodig zijn om een [aanval van 51%](/glossary/#51-attack) uit te voeren. Maar anders dan bij proof-of-work, waar het potentiële verlies van een mislukte aanval alleen de kosten is van het genereren van de hash-kracht die nodig is voor het minen, bij proof-of-stake is het mogelijke verlies van een aanval de totale hoeveelheid ETH die wordt gebruikt als onderpand. Deze ontmoedigende structuur maakt netwerkbeveiliging met proof-of-stake mogelijk, terwijl het niet langer nodig is om energie te besteden aan willekeurige berekeningen. Gedetailleerde uitleg van de netwerkbeveiliging onder proof-of-stake kan [hier](/developers/docs/consensus-mechanisms/pos/) en [hier](https://vitalik.ca/general/2017/12/31/pos_faq.html) worden gevonden.
 
 ## De merge {#the-merge}
 
-Er is een functionele proof-of-stake-keten genaamd de [Beacon Chain](/upgrades/beacon-chain/) die sinds december 2020 loopt en die de levensvatbaarheid van het proof-of-stake-protocol aantoont. De merge verwijst naar het moment waarop Ethereum proof-of-work achterlaat en proof-of-stake volledig accepteert. The Merge is expected to happen ~Q3/Q4 2022. [Meer over de merge](/upgrades/merge/).
+Er is een functionele proof-of-stake-keten genaamd de [Beacon Chain](/roadmap/beacon-chain/) die sinds december 2020 loopt en die de levensvatbaarheid van het proof-of-stake-protocol aantoont. De merge verwijst naar het moment waarop Ethereum proof-of-work achterlaat en proof-of-stake volledig accepteert. The Merge is expected to happen ~Q3/Q4 2022. [Meer over de merge](/roadmap/merge/).
 
 ## Energie-uitgaven van proof-of-stake {#proof-of-stake-energy}
 
@@ -76,9 +76,9 @@ Hoewel het energieverbruik van Ethereum historisch aanzienlijk is, is er veel ti
 ## Gerelateerde onderwerpen {#related-topics}
 
 - [De visie van Ethereum](/roadmap/vision/)
-- [De Beacon Chain](/upgrades/beacon-chain)
-- [De merge](/upgrades/merge/)
-- [Sharding](/upgrades/beacon-chain/)
+- [De Beacon Chain](/roadmap/beacon-chain)
+- [De merge](/roadmap/merge/)
+- [Sharding](/roadmap/beacon-chain/)
 
 ### Voetteksten en bronnen {#footnotes-and-sources}
 

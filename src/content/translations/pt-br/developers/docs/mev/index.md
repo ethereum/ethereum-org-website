@@ -8,7 +8,7 @@ Valor Máximo Extraível (MEV, na sigla em inglês) expressa o valor máximo que
 
 ### Valor máximo extraível {#miner-extractable-value}
 
-O valor máximo extraível foi aplicado pela primeira vez no contexto de [prova de trabalho](/developers/docs/consensus-mechanisms/pow/) e inicialmente referido como "valor extraível do minerador". Isto porque na prova de trabalho, os mineradores controlam a inclusão, exclusão e ordenação das transações. No entanto, desde a transição para a prova de participação via a [Fusão](/upgrades/merge), os validadores foram responsáveis por essas funções, e a mineração não faz mais parte do protocolo Ethereum. Como os métodos de extração de valor ainda existem, o termo "valor máximo extraível" agora é usado.
+O valor máximo extraível foi aplicado pela primeira vez no contexto de [prova de trabalho](/developers/docs/consensus-mechanisms/pow/) e inicialmente referido como "valor extraível do minerador". Isto porque na prova de trabalho, os mineradores controlam a inclusão, exclusão e ordenação das transações. No entanto, desde a transição para a prova de participação via a [Fusão](/roadmap/merge), os validadores foram responsáveis por essas funções, e a mineração não faz mais parte do protocolo Ethereum. Como os métodos de extração de valor ainda existem, o termo "valor máximo extraível" agora é usado.
 
 ## Pré-Requisitos {#prerequisites}
 
@@ -122,7 +122,7 @@ Conforme explicado, o MEV tem implicações negativas para a experiência geral 
 
 No Ethereum pós-fusão, os validadores (tendo feito depósitos de segurança de 32 ETH) chegam a um consenso sobre a validade dos blocos adicionados à Beacon Chain. Como 32 ETH podem estar fora do alcance de muitos, [entrar em um staking pool](/staking/pools/) pode ser uma opção mais viável. No entanto, uma distribuição saudável de [stakers individuais](/staking/solo/) é ideal, pois mitiga a centralização dos validadores e melhora a segurança do Ethereum.
 
-No entanto, acredita-se que a extração MEV seja capaz de acelerar a centralização de validadores. Isso em parte porque os validadores [ganham menos por propor blocos](/upgrades/merge/issuance/#how-the-merge-impacts-ETH-supply) do que os mineradores atualmente ganham. A extração MEV pode em muito [influenciar os ganhos do validador](https://github.com/flashbots/eth2-research/blob/main/notebooks/mev-in-eth2/eth2-mev-calc.ipynb) após a Fusão.
+No entanto, acredita-se que a extração MEV seja capaz de acelerar a centralização de validadores. Isso em parte porque os validadores [ganham menos por propor blocos](/roadmap/merge/issuance/#how-the-merge-impacts-ETH-supply) do que os mineradores atualmente ganham. A extração MEV pode em muito [influenciar os ganhos do validador](https://github.com/flashbots/eth2-research/blob/main/notebooks/mev-in-eth2/eth2-mev-calc.ipynb) após a Fusão.
 
 Staking pools maiores provavelmente terão mais recursos para investir em otimizações necessárias para capturar oportunidades de MEV. Quanto mais MEV essas pools extraem, mais recursos eles têm para melhorar suas capacidades de extração MEV (e aumentar a receita geral), criando essencialmente [economias de escala](https://www.investopedia.com/terms/e/economiesofscale.asp#).
 

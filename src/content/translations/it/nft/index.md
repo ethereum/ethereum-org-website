@@ -304,7 +304,7 @@ Ethereum rende possibile il funzionamento degli NFT per vari motivi:
 
 ## Impatto ambientale degli NFT {#environmental-impact-nfts}
 
-La creazione ed il trasferimento degli NFT sono solo transazioni su Ethereum - il conio, l'acquisto, lo scambio o l'interazione con gli NFT non consumano direttamente energia. Dal momento in cui [la Fusione](/upgrades/merge) è andata live nella Rete principale, Ethereum è una blockchain a bassa consumo energetico, il che significa che l'impatto ambientale dell'uso di NFT è trascurabile.
+La creazione ed il trasferimento degli NFT sono solo transazioni su Ethereum - il conio, l'acquisto, lo scambio o l'interazione con gli NFT non consumano direttamente energia. Dal momento in cui [la Fusione](/roadmap/merge) è andata live nella Rete principale, Ethereum è una blockchain a bassa consumo energetico, il che significa che l'impatto ambientale dell'uso di NFT è trascurabile.
 
 [Scopri di più sul consumo energetico di Ethereum](/energy-consumption/).
 

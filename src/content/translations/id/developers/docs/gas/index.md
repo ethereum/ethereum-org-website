@@ -133,7 +133,7 @@ Harga gas sendiri sebenarnya tidak menentukan jumlah yang harus kita bayarkan un
 
 ## Inisiatif untuk mengurangi biaya gas {#initiatives-to-reduce-gas-costs}
 
-[Peningkatan skalabilitas](/upgrades/) Ethereum seharusnya akan menyelesaikan beberapa masalah biaya gas, hasilnya yang akan memungkinkan platform untuk memroses ribuan transaksi per detik dan melakukan penskalaan secara global.
+[Peningkatan skalabilitas](/roadmap/) Ethereum seharusnya akan menyelesaikan beberapa masalah biaya gas, hasilnya yang akan memungkinkan platform untuk memroses ribuan transaksi per detik dan melakukan penskalaan secara global.
 
 Penskalaan lapisan 2 adalah inisiatif utama untuk sangat meningkatkan biaya gas, pengalaman pengguna, dan skalabilitas. [Selengkapnya tentang penskalaan lapisan 2](/developers/docs/scaling/#layer-2-scaling).
 

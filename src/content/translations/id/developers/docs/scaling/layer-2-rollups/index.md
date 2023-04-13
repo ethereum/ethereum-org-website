@@ -47,7 +47,7 @@ Rollup optimistic duduk sejajar dengan rantai Ethereum utama pada lapisan 2. Rol
 
 Dengan rollup Optimistic, transaksi ditulis ke rantai utama Ethereum sebagai `calldata`, mengoptimalkannya lebih jauh dengan mengurangi biaya gas.
 
-Karena komputasi adalah bagian yang lambat, mahal dari penggunaan Ethereum, rollup Optimistic dapat menawarkan peningkatan perluasan hingga 10-100x tergantung pada transaksi. Bahkan, jumlah ini akan semakin bertambah dengan pengenalan [rantai shard](/upgrades/shard-chains), karena akan semakin banyak data yang tersedia jika sebuah transaksi dipertentangkan.
+Karena komputasi adalah bagian yang lambat, mahal dari penggunaan Ethereum, rollup Optimistic dapat menawarkan peningkatan perluasan hingga 10-100x tergantung pada transaksi. Bahkan, jumlah ini akan semakin bertambah dengan pengenalan [rantai shard](/roadmap/danksharding), karena akan semakin banyak data yang tersedia jika sebuah transaksi dipertentangkan.
 
 #### Mempersengketakan transaksi {#disputing-transactions}
 

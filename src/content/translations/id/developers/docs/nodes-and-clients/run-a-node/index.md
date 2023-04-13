@@ -142,7 +142,7 @@ Anda perlu menjaga perangkat lunak klien Anda dalam versi terkini dengan patch k
 
 #### Menjalankan layanan tambahan {#running-additional-services}
 
-Menjalankan node Anda sendiri memungkinkan Anda menggunakan layanan yang membutuhkan akses langsung ke RPC klien Ethereum. Layanan ini dibangun di atas Ethereum seperti [solusi lapisan 2](/developers/docs/scaling/#layer-2-scaling), [klien konsensus](/upgrades/get-involved/#clients), dan infrastruktur Ethereum lainnya.
+Menjalankan node Anda sendiri memungkinkan Anda menggunakan layanan yang membutuhkan akses langsung ke RPC klien Ethereum. Layanan ini dibangun di atas Ethereum seperti [solusi lapisan 2](/developers/docs/scaling/#layer-2-scaling), klien konsensus, dan infrastruktur Ethereum lainnya.
 
 #### Memonitor node {#monitoring-the-node}
 

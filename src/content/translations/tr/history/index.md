@@ -19,7 +19,7 @@ Bu kural değişiklikleri ağda geçici bir bölünme oluşturabilir. Yeni blokl
 
 </ExpandableCard>
 
-Gelecekteki protokol yükseltmelerini mi arıyorsunuz? [Ethereum'da yapılacak yükseltmeler hakkında bilgi edinin](/upgrades/).
+Gelecekteki protokol yükseltmelerini mi arıyorsunuz? [Ethereum'da yapılacak yükseltmeler hakkında bilgi edinin](/roadmap/).
 
 <Divider />
 
@@ -70,7 +70,7 @@ The Arrow Glacier ağ yükseltmesi [zorluk bombasını](/glossary/#difficulty-bo
 
 #### Özet {#altair-summary}
 
-Altair yükseltmesi, [İşaret Zinciri](/upgrades/beacon-chain) için planlanmış ilk yükseltmedir. "Senkronizasyon komiteleri" için destek ekleyerek hafif istemcileri etkinleştirdi, doğrulayıcı hareketsizliği getirdi ve cezaları tam değerlerine getirdi.
+Altair yükseltmesi, [İşaret Zinciri](/roadmap/beacon-chain) için planlanmış ilk yükseltmedir. "Senkronizasyon komiteleri" için destek ekleyerek hafif istemcileri etkinleştirdi, doğrulayıcı hareketsizliği getirdi ve cezaları tam değerlerine getirdi.
 
 - [Altair yükseltme özelliklerini okuyun](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
@@ -136,11 +136,11 @@ Berlin güncellemesi, belirli EVM eylemleri için optimize edilmiş gaz maliyeti
 
 #### Özet {#beacon-chain-genesis-summary}
 
-[İşaret Zinciri](/upgrades/beacon-chain/)'nin güvenli bir şekilde gönderilmesi için 16.384 adet 32 stake edilmiş ETH yatırılması gerekiyordu. Bu, 27 Kasım'da meydana geldi, yani İşaret Zinciri blok üretmeye 1 Aralık 2020'de başladı. Bu, [Ethereum vizyonuna](/roadmap/vision/) ulaşmak için önemli bir ilk adımdır.
+[İşaret Zinciri](/roadmap/beacon-chain/)'nin güvenli bir şekilde gönderilmesi için 16.384 adet 32 stake edilmiş ETH yatırılması gerekiyordu. Bu, 27 Kasım'da meydana geldi, yani İşaret Zinciri blok üretmeye 1 Aralık 2020'de başladı. Bu, [Ethereum vizyonuna](/roadmap/vision/) ulaşmak için önemli bir ilk adımdır.
 
 [Ethereum Vakfı'nın duyurusunu okuyun](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink to="/roadmap/beacon-chain/">
   İşaret Zinciri
 </DocLink>
 
@@ -152,7 +152,7 @@ Berlin güncellemesi, belirli EVM eylemleri için optimize edilmiş gaz maliyeti
 
 #### Özet {#deposit-contract-summary}
 
-Staking depozitosu sözleşmesi, Ethereum ekosistemine [stake](/glossary/#staking) kazandırdı. Bir [Ana Ağ](/glossary/#mainnet) sözleşmesi olmasına rağmen önemli bir [Ethereum yükseltmesi](/upgrades/) olan [İşaret Zinciri](/upgrades/beacon-chain/)'nin çıkış zamanı üzerinde doğrudan bir etkisi oldu.
+Staking depozitosu sözleşmesi, Ethereum ekosistemine [stake](/glossary/#staking) kazandırdı. Bir [Ana Ağ](/glossary/#mainnet) sözleşmesi olmasına rağmen önemli bir [Ethereum yükseltmesi](/roadmap/) olan [İşaret Zinciri](/roadmap/beacon-chain/)'nin çıkış zamanı üzerinde doğrudan bir etkisi oldu.
 
 [Ethereum Vakfı'nın duyurusunu okuyun](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 

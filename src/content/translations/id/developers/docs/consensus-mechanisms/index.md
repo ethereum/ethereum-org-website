@@ -75,7 +75,7 @@ Saat ini secara teknis, bukti kerja dan bukti taruhan pada dasarnya bukan protok
 
 Kombinasi bukti kerja dan aturan rantai terpanjang dikenal sebagai "Konsensus Nakamoto."
 
-[Rantai Suar](/upgrades/beacon-chain/) menggunakan mekanisme konsensus yang disebut [Casper the Friendly Finality Gadget](https://arxiv.org/abs/1710.09437), yang berbasis bukti taruhan.
+[Rantai Suar](/roadmap/beacon-chain/) menggunakan mekanisme konsensus yang disebut [Casper the Friendly Finality Gadget](https://arxiv.org/abs/1710.09437), yang berbasis bukti taruhan.
 
 ## Bacaan lebih lanjut {#further-reading}
 

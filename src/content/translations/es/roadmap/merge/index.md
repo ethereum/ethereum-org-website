@@ -108,7 +108,7 @@ La Fusión pone fin a la prueba de trabajo de Ethereum, dando paso al inicio de 
 
 ## La Fusión y la fragmentación {#merge-and-scaling}
 
-La Fusión coloca a Ethereum en una nueva fase de actualizaciones escalables que no podrían realizarse bajo el mecanismo de prueba de trabajo, lo que permite que Ethereum dé un paso importante en la consecución de los objetivos de escalabilidad, seguridad y sustentabilidad contenidos en la [Visión de Ethereum](/upgrades/vision/).
+La Fusión coloca a Ethereum en una nueva fase de actualizaciones escalables que no podrían realizarse bajo el mecanismo de prueba de trabajo, lo que permite que Ethereum dé un paso importante en la consecución de los objetivos de escalabilidad, seguridad y sustentabilidad contenidos en la [Visión de Ethereum](/roadmap/vision/).
 
 ## Conceptos erróneos sobre La Fusión {#misconceptions}
 
