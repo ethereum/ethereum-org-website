@@ -379,9 +379,9 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
       </Content>
       <Box
         w="100%"
-        p="4rem 0rem"
-        mt="2rem"
-        mb="2rem"
+        py={16}
+        mt={8}
+        mb={8}
         background="cardGradient"
         shadow="tableItemBoxShadow"
       >
