@@ -7,17 +7,19 @@ image: ../../../assets/staking/leslie-withdrawal.png
 alt: Leslie the rhino with her staking rewards
 sidebarDepth: 2
 summaryPoints:
-  - The Shanghai upgrade enables staking withdrawals on Ethereum
+  - The Shanghai/Capella upgrade enabled staking withdrawals on Ethereum
   - Validator operators must provide a withdrawal address to enable
   - Rewards are automatically distributed every few days
   - Validators who fully exit staking will receive their remaining balance
 ---
 
 <UpgradeStatus dateKey="page-staking-withdrawals-when">
-  Staking withdrawals will be enabled through the Shanghai/Capella upgrade. This Ethereum network upgrade is expected to take place in the first half of 2023. <a href="#when" customEventOptions={{ eventCategory: "Anchor link", eventAction: "When's it shipping?", eventName: "click" }}>More below</a>
+Staking withdrawals were enabled with the Shanghai/Capella upgrade which occurred on April 12, 2023.&nbsp;<a href="#when" customEventOptions={{ eventCategory: "Anchor link", eventAction: "When's it shipping?", eventName: "click" }}>More about Shanghai/Capella</a>
 </UpgradeStatus>
 
-The Shanghai/Capella upgrade enables **staking withdrawals** on Ethereum, allowing people to unlock ETH staking rewards. Reward payments will automatically and regularly be sent to a provided withdrawal address linked to each validator. Users can also exit staking entirely, unlocking their full validator balance.
+**Staking withdrawals** refer to transfers of ETH from a validator account on Ethereum's consensus layer (the Beacon Chain), to the execution layer where it can be transacted with.
+
+**Reward payments of excess balance** over 32 ETH will automatically and regularly be sent to a withdrawal address linked to each validator, once provided by the user. Users can also **exit staking entirely**, unlocking their full validator balance.
 
 ## Staking rewards {#staking-rewards}
 
@@ -29,9 +31,9 @@ Any balance above 32 ETH earned through rewards does not actually contribute to 
 
 Over the past few years Ethereum has undergone several network upgrades transitioning to a network secured by ETH itself, instead of energy-intensive mining as it once was. Participating in consensus on Ethereum is now known as "staking", as participants have voluntarily locked up ETH, placing it "at stake" for the ability to participate in the network. Users who follow the rules will be rewarded, while attempts to cheat can be penalized.
 
-Since the launch of the staking deposit contract in November 2020, some brave Ethereum pioneers have voluntarily locked funds up to activate "validators", the accounts that have the right to formally attest to and propose blocks, following network rules.
+Since the launch of the staking deposit contract in November 2020, some brave Ethereum pioneers have voluntarily locked funds up to activate "validators", special accounts that have the right to formally attest to and propose blocks, following network rules.
 
-Before the Shanghai update, you couldn't use or access your staked ETH. But now, you can opt-in to automatically receive your rewards into a provided account, and you can also withdraw your staked ETH whenever you want.
+Before the Shanghai/Capella upgrade, you couldn't use or access your staked ETH. But now, you can opt-in to automatically receive your rewards into a chosen account, and you can also withdraw your staked ETH whenever you want.
 
 ### How do I prepare? {#how-do-i-prepare}
 
@@ -45,7 +47,7 @@ Providing a withdrawal address is a required step for any validator account befo
   <strong>Each validator account can only be assigned a single withdrawal address, one time.</strong> Once an address is chosen and submitted to the Beacon Chain, this cannot be undone or changed again. Double-check ownership and accuracy of the address provided before submitting.
 </InfoBanner>
 
-There is <strong>no threat to your funds in the meantime</strong> for not providing this. Failure to add withdrawal credentials will simply leave the ETH locked in the validator account as it has been until a withdrawal address is provided.
+There is <strong>no threat to your funds in the meantime</strong> for not providing this, assuming your mnemonic/seed phrase has remained safe offline, and has not been compromised in any way. Failure to add withdrawal credentials will simply leave the ETH locked in the validator account as it has been until a withdrawal address is provided.
 
 ## Exiting staking entirely {#exiting-staking-entirely}
 
@@ -59,9 +61,12 @@ Once an account is flagged as "withdrawable", and withdrawal credentials have be
 
 ## When are staking withdrawals enabled? {#when}
 
-Withdrawal functionality will be enabled through a two-part simultaneous network upgrade, **Shanghai + Capella**.
+Staking withdrawals are live! Withdrawal functionality was enabled as part of the Shanghai/Capella upgrade which occurred on April 12, 2023.
 
-<ShanghaiCapella />
+The Shanghai/Capella upgrade enabled previously staked ETH to be reclaimed into regular Ethereum accounts. This closed the loop on staking liquidity, and brought Ethereum one step closer on its journey towards building a sustainable, scalable, secure decentralized ecosystem.
+
+- [More on Ethereum history](/history/)
+- [More on the Ethereum roadmap](/roadmap/)
 
 ## How do withdrawal payments work? {#how-do-withdrawals-work}
 
@@ -98,7 +103,7 @@ There are only two actions that are taken by validator operators during the cour
 
 ### Gas free {#gas-free}
 
-This approach to staking withdrawals avoids requiring stakers to manually submit a transaction requesting a particular amount of ETH to be withdrawn. This also means there is **no gas (transaction fee) required**, and withdrawals also do not compete for existing execution layer block space.
+This approach to staking withdrawals avoids requiring stakers to manually submit a transaction requesting a particular amount of ETH to be withdrawn. This means there is **no gas (transaction fee) required**, and withdrawals also do not compete for existing execution layer block space.
 
 ### How frequently will I get my staking rewards? {#how-soon}
 
@@ -118,7 +123,7 @@ Expanding this calculation, we can estimate the time it will take to process a g
 
 </TableContainer>
 
-As you see this slows down as more validators are on the network. An increase in missed blocks could slow this down proportionally, but this will generally represent the slower side of possible outcomes.
+As you see this slows down as more validators are on the network. An increase in missed slots could slow this down proportionally, but this will generally represent the slower side of possible outcomes.
 
 ## Frequently asked questions {#faq}
 
@@ -147,19 +152,19 @@ title="What if I participate in liquid staking derivatives or pooled staking"
 eventCategory="FAQ"
 eventAction="What if I participate in liquid staking derivatives or pooled staking"
 eventName="read more">
+If you are part of a <a href="/staking/pools/">staking pool</a> or hold liquid staking derivatives, you should check with your provider for more details about how staking withdrawals are handled, as each service operates differently.
 
-<p>If you are part of a <a href="/staking/pools/">staking pool</a> or hold liquid staking derivatives, you should check with your provider for more details about how staking withdrawals will affect your arrangement, as each service operates differently.</p>
-<p>In general, users will likely have nothing they need to do, and these services will no longer be limited by the inability to withdraw rewards or exit validator funds after this upgrade.</p>
-<p>This means that users can now decide to redeem their underlying staked ETH, or change which staking provider they utilize. If a particular pool is getting too large, funds can be exited and redeemed, and re-staked with a <a href="https://pools.invis.cloud">smaller provider</a>. Or, if you’ve accumulated enough ETH you could <a href="/staking/solo/">stake from home</a>.</p>
+In general, users should be free to reclaim their underlying staked ETH, or change which staking provider they utilize. If a particular pool is getting too large, funds can be exited, redeemed, and re-staked with a [smaller provider](https://pools.invis.cloud). Or, if you’ve accumulated enough ETH you could [stake from home](/staking/solo/).
 </ExpandableCard>
+
+<!-- TODO: Check if https://pools.invis.cloud ^^^ is still live -->
 
 <ExpandableCard
 title="Do reward payments (partial withdrawals) happen automatically?"
 eventCategory="FAQ"
 eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
-
-<p>Yes, as long as your validator has provided a withdrawal address. This must be provided once to enable any withdrawals, then reward payments will be automatically triggered every few days with each validator sweep.</p>
+Yes, as long as your validator has provided a withdrawal address. This must be provided once to initially enable any withdrawals, then reward payments will be automatically triggered every few days with each validator sweep.
 </ExpandableCard>
 
 <ExpandableCard
@@ -167,27 +172,28 @@ title="Do full withdrawals happen automatically?"
 eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
 eventName="read more">
+No, if your validator is still active on the network, a full withdrawal will not happen automatically. This requires manually initiating a voluntary exit.
 
-<p>No, if your validator is still active on the network, a full withdrawal will not happen automatically. This requires manually initiating a voluntary exit.</p>
-<p>Once a validator has completed the exiting process, and assuming the account has withdrawal credentials, the remaining balance will <em>then</em> be withdrawn during the next validator sweep.</p>
+Once a validator has completed the exiting process, and assuming the account has withdrawal credentials, the remaining balance will _then_ be withdrawn during the next [validator sweep](#validator-sweeping).
 </ExpandableCard>
 
 <ExpandableCard title="Can I withdraw a custom amount?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
 eventName="read more">
+Withdrawals are designed to be pushed automatically, transferring any ETH that is not actively contributing to stake. This includes full balances for accounts that have completed the exiting process.
 
-<p>Withdrawals are designed to be pushed automatically, transferring any ETH that is not actively contributing to stake. This includes full balances for accounts </p>
-<p>It is not possible to manually request specific amounts of ETH to be withdrawn.</p>
+It is not possible to manually request specific amounts of ETH to be withdrawn.
 </ExpandableCard>
 
 <ExpandableCard
-title="I operate a validator, where can I find more information on preparing?"
+title="I operate a validator. Where can I find more information on enabling withdrawals?"
 eventCategory="FAQ"
-eventAction="I operate a validator, where can I find more information on preparing?"
+eventAction="I operate a validator. Where can I find more information on enabling withdrawals?"
 eventName="read more">
+Validator operators are recommended to visit the <a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals</a> page where you'll find more details about how to prepare your validator for withdrawals. prepared, timing of events, and more details about how withdrawals function.
 
-<p>Validator operators are recommended to visit the <a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals</a> page where you'll find more details about how to be prepared, timing of events, and more details about how withdrawals function.</p>
+To try out your setup on a testnet first, visit the the [Goerli Testnet Staking Launchpad](https://goerli.launchpad.ethereum.org) to get started.
 </ExpandableCard>
 
 <ExpandableCard
@@ -195,8 +201,7 @@ title="Can I re-activate my validator after exiting by depositing more ETH?"
 eventCategory="FAQ"
 eventAction="Can I re-activate my validator after exiting by depositing more ETH?"
 eventName="read more">
-
-<p>No. Once a validator has exited and its full balance has been withdrawn, any additional funds deposited to that validator will automatically be transferred to the withdrawal address during the next validator sweep. To re-stake ETH, a new validator must be activated.</p>
+No. Once a validator has exited and its full balance has been withdrawn, any additional funds deposited to that validator will automatically be transferred to the withdrawal address during the next validator sweep. To re-stake ETH, a new validator must be activated.
 </ExpandableCard>
 
 ## Further reading {#further-reading}
@@ -206,4 +211,4 @@ eventName="read more">
 - [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Staked ETH Withdrawal (Testing) with Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: Beacon chain push withdrawals as operations with Alex stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
-- [Understaning Validator Effective Balance](https://www.attestant.io/posts/understanding-validator-effective-balance/)
+- [Understanding Validator Effective Balance](https://www.attestant.io/posts/understanding-validator-effective-balance/)

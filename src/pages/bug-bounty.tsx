@@ -24,7 +24,6 @@ import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import ExpandableCard from "../components/ExpandableCard"
 import FeedbackCard from "../components/FeedbackCard"
-import BugBountyBanner from "../components/Banners/BugBountyBanner"
 import { getImage } from "../utils/image"
 
 import type { ChildOnlyProp, Context } from "../types"
