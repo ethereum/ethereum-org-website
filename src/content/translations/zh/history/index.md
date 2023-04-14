@@ -19,7 +19,7 @@ sidebarDepth: 1
 
 </ExpandableCard>
 
-想了解未来的协议升级？ [了解以太坊未来的升级计划](/upgrades/)。
+想了解未来的协议升级？ [了解以太坊未来的升级计划](/roadmap/)。
 
 <Divider />
 
@@ -70,7 +70,7 @@ sidebarDepth: 1
 
 #### 概览 {#altair-summary}
 
-天鹰座升级是对[信标链](/upgrades/beacon-chain)按计划进行的第一次升级。 此次升级增加了对“同步委员会”的支持——启用轻量级客户端、使验证者不活跃，并使罚没金额不超过其全部价值。
+天鹰座升级是对[信标链](/roadmap/beacon-chain)按计划进行的第一次升级。 此次升级增加了对“同步委员会”的支持——启用轻量级客户端、使验证者不活跃，并使罚没金额不超过其全部价值。
 
 - [阅读天鹰座升级说明](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
@@ -136,11 +136,11 @@ sidebarDepth: 1
 
 #### 概览 {#beacon-chain-genesis-summary}
 
-[信标链](/upgrades/beacon-chain/)需要 16384 个拥有 32 个质押以太币的账户，以确保安全上线。 这发生于 2020 年 11 月 27 日，意味着信标链在 2020 年 12 月 1 日开始生产区块。 这是实现[以太坊愿景](/roadmap/vision/)的第一步，十分重要。
+[信标链](/roadmap/beacon-chain/)需要 16384 个拥有 32 个质押以太币的账户，以确保安全上线。 这发生于 2020 年 11 月 27 日，意味着信标链在 2020 年 12 月 1 日开始生产区块。 这是实现[以太坊愿景](/roadmap/vision/)的第一步，十分重要。
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink to="/roadmap/beacon-chain/">
   信标链
 </DocLink>
 
@@ -152,7 +152,7 @@ sidebarDepth: 1
 
 #### 概览 {#deposit-contract-summary}
 
-质押存款合约将[质押](/glossary/#staking)引入以太坊生态系统。 虽然这是一个[主网](/glossary/#mainnet)合约，但它直接影响到[信标链](/upgrades/beacon-chain/)的发布时间，这是[以太坊升级](/upgrades/)的重要部分。
+质押存款合约将[质押](/glossary/#staking)引入以太坊生态系统。 虽然这是一个[主网](/glossary/#mainnet)合约，但它直接影响到[信标链](/roadmap/beacon-chain/)的发布时间，这是[以太坊升级](/roadmap/)的重要部分。
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 

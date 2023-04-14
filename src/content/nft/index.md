@@ -304,7 +304,7 @@ Ethereum makes it possible for NFTs to work for a number of reasons:
 
 ## The environmental impact of NFTs {#environmental-impact-nfts}
 
-Creating and transferring NFTs are just Ethereum transactions - minting, buying, swapping or interacting with NFTs does not directly consume energy. Since [The Merge](/upgrades/merge), Ethereum is a low-energy blockchain, meaning the environmental impact of using NFTs is negligible.
+Creating and transferring NFTs are just Ethereum transactions - minting, buying, swapping or interacting with NFTs does not directly consume energy. Since [The Merge](/roadmap/merge), Ethereum is a low-energy blockchain, meaning the environmental impact of using NFTs is negligible.
 
 [More on Ethereum's energy consumption](/energy-consumption/).
 

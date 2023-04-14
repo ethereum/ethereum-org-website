@@ -7,7 +7,7 @@ incomplete: true
 
 Ethereum, Bitcoin gibi şu anda **[İş ispatı (PoW)](https://wikipedia.org/wiki/Proof_of_work)** adlı bir mutabakat protokolünü kullanıyor. Bu, Ethereum ağının düğümlerinin, Ethereum blok zincirinde kaydedilen tüm bilgilerin durumu üzerinde anlaşmasını sağlar ve belirli türdeki ekonomik saldırıları önler.
 
-Önümüzdeki sene, **[Hisse ispatı (PoS)](/developers/docs/consensus-mechanisms/pos)** aşamalı olarak iş ispatının yerini alacaktır. Hisse ispatına geçiş ayrıca Ethereum madenciliğini de aşamalı olarak durduracaktır. [Birleştirme hakkında daha fazla bilgi](/upgrades/merge/)
+Önümüzdeki sene, **[Hisse ispatı (PoS)](/developers/docs/consensus-mechanisms/pos)** aşamalı olarak iş ispatının yerini alacaktır. Hisse ispatına geçiş ayrıca Ethereum madenciliğini de aşamalı olarak durduracaktır. [Birleştirme hakkında daha fazla bilgi](/roadmap/merge/)
 
 ## Ön koşullar {#prerequisites}
 

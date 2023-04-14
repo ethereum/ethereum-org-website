@@ -123,7 +123,7 @@ O preço do gás por si só não determina realmente quanto temos de pagar por u
 
 ## Iniciativas para reduzir os custos do gás {#initiatives-to-reduce-gas-costs}
 
-As [atualizações de escalabilidade](/upgrades/) do Ethereum deverão em última análise resolver algumas das questões de taxas de gás, o que, por sua vez, permitirá que a plataforma processe milhares de transações por segundo e escale globalmente.
+As [atualizações de escalabilidade](/roadmap/) do Ethereum deverão em última análise resolver algumas das questões de taxas de gás, o que, por sua vez, permitirá que a plataforma processe milhares de transações por segundo e escale globalmente.
 
 A escalabilidade da camada 2 é uma iniciativa primária para melhorar significativamente os custos do gás, a experiência do usuário e a escalabilidade. [Mais sobre a escalabilidade de camada 2](/developers/docs/scaling/#layer-2-scaling).
 

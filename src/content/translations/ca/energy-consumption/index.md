@@ -22,13 +22,13 @@ La prova de treball és una via resistent per protegir la xarxa i reforçar canv
 
 ## Prova de participació {#proof-of-stake}
 
-Un futur més sostenible per a Ethereum està éssent construït en la forma de cadena de [**proves de participació (PoS o «proof-of-stake» en anglès)**](/upgrades/beacon-chain/). Resoldre trencaclosques arbitraris és innecessari amb la [prova de participació](/developers/docs/consensus-mechanisms/pos/). Eliminar la resolució de trencaclosques redueix dràsticament el consum energètic requerit per a protegir la xarxa. Els miners són reemplaçats per validadors que fan la mateixa funció excepte que, en lloc de consumir els seus actius per endavant en forma de treball computacional, dipositen ETH com a garantia contra el comportament deshonest. Si el validador és gandul (està fora de línia quan se suposa que ha de complir amb el deure de validador) els seus ETH dipositats poden filtrar-se a poc a poc, mentre que un comportament deshonest fa que els actius dipositats siguin «retallats» («slashing»). Això incentiva fortament la participació activa i honesta en la protecció de la xarxa.
+Un futur més sostenible per a Ethereum està éssent construït en la forma de cadena de [**proves de participació (PoS o «proof-of-stake» en anglès)**](/roadmap/beacon-chain/). Resoldre trencaclosques arbitraris és innecessari amb la [prova de participació](/developers/docs/consensus-mechanisms/pos/). Eliminar la resolució de trencaclosques redueix dràsticament el consum energètic requerit per a protegir la xarxa. Els miners són reemplaçats per validadors que fan la mateixa funció excepte que, en lloc de consumir els seus actius per endavant en forma de treball computacional, dipositen ETH com a garantia contra el comportament deshonest. Si el validador és gandul (està fora de línia quan se suposa que ha de complir amb el deure de validador) els seus ETH dipositats poden filtrar-se a poc a poc, mentre que un comportament deshonest fa que els actius dipositats siguin «retallats» («slashing»). Això incentiva fortament la participació activa i honesta en la protecció de la xarxa.
 
 De forma similar a la prova de treball, una entitat maliciosa requeriria com a mínim el 51% del total d'ETH dipositats a la xarxa per a executar un [atac al 51%](/glossary/#51-attack). No obstant, a diferència de la prova de treball, on la pèrdua potencial en un atac fallit només és el cost de generar la potència de processament necessària per a minar, en la prova de participació la possible pèrdua en un atac és la quantitat total d'ETH utilitzats com a garantia. Aquesta estructura desincentivadora permet la protecció de la xarxa amb la prova de participació mentre elimina la necessitat de consumir energia en computacions arbitràries. Es poden trobar explicacions detallades sobre la seguretat a la xarxa sota la prova de participació [aquí](/developers/docs/consensus-mechanisms/pos/) i [aquí](https://vitalik.ca/general/2017/12/31/pos_faq.html).
 
 ## La Fusió {#the-merge}
 
-Existeix una cadena funcional de prova de participació anomenada [cadena de balisa](/upgrades/beacon-chain/) que s'ha estat executant des de desembre de 2020 que demostra la viabilitat del protocol de proves de participació. La Fusió es refereix a l'instant en el temps en què Ethereum deixa enrere la prova de treball i adopta totalment la prova de participació. Es preveu que succeeixi aproximadament al segon trimestre del 2022. [Més informació sobre la fusió](/upgrades/merge/).
+Existeix una cadena funcional de prova de participació anomenada [cadena de balisa](/roadmap/beacon-chain/) que s'ha estat executant des de desembre de 2020 que demostra la viabilitat del protocol de proves de participació. La Fusió es refereix a l'instant en el temps en què Ethereum deixa enrere la prova de treball i adopta totalment la prova de participació. Es preveu que succeeixi aproximadament al segon trimestre del 2022. [Més informació sobre la fusió](/roadmap/merge/).
 
 ## Consum energètic de la prova de participació {#proof-of-stake-energy}
 
@@ -76,9 +76,9 @@ Mentre que el consum energètic d'Ethereum històricament ha estat substancial, 
 ## Temes relacionats {#related-topics}
 
 - [La visió d'Ethereum](/roadmap/vision/)
-- [La Cadena de Balisa](/upgrades/beacon-chain)
-- [La Fusió](/upgrades/merge/)
-- [Fragmentació](/upgrades/beacon-chain/)
+- [La Cadena de Balisa](/roadmap/beacon-chain)
+- [La Fusió](/roadmap/merge/)
+- [Fragmentació](/roadmap/beacon-chain/)
 
 ### Notes a peu de pàgina i fonts {#footnotes-and-sources}
 

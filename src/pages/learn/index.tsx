@@ -602,7 +602,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
                   <CardImage>
                     <GatsbyImage image={getImage(data.merge)!} alt="" />
                   </CardImage>
-                  <ButtonLink to="/upgrades/">
+                  <ButtonLink to="/roadmap/">
                     <Translation id="ethereum-upgrades-card-button" />
                   </ButtonLink>
                 </>

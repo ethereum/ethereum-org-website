@@ -7,7 +7,7 @@ incomplete: true
 
 Ethereum verwendet, wie Bitcoin, derzeit ein Konsensprotokoll namens **[Proof-of-Work (PoW)](https://wikipedia.org/wiki/Proof_of_work)**. Dies ermöglicht es den Nodes des Ethereum-Netzwerks, sich über den Stand aller auf der Ethereum-Blockchain aufgezeichneten Informationen zu einigen, und verhindert bestimmte Arten von wirtschaftlichen Angriffen.
 
-Im Laufe des nächsten Jahres wird Proof-of-Work zugunsten von **[Proof-of-Stake (PoS)](/developers/docs/consensus-mechanisms/pos)** auslaufen. Mit dem Übergang zu Proof-of-Stake wird auch das Mining von Ethereum auslaufen. [Mehr zum Merge](/upgrades/merge/)
+Im Laufe des nächsten Jahres wird Proof-of-Work zugunsten von **[Proof-of-Stake (PoS)](/developers/docs/consensus-mechanisms/pos)** auslaufen. Mit dem Übergang zu Proof-of-Stake wird auch das Mining von Ethereum auslaufen. [Mehr zum Merge](/roadmap/merge/)
 
 ## Voraussetzungen {#prerequisites}
 

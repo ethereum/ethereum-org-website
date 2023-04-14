@@ -250,7 +250,7 @@ Algunes coses a recordar:
 
 ### Estafa del token «Eth2» {#eth2-token-scam}
 
-Amb [la fusió](/upgrades/merge/) que arriba el 2022, els estafadors han aprofitat la confusió al voltant del terme «Eth2» per provar de captar usuaris per bescanviar els seus ETH per tokens «ETH2». No hi ha cap token «ETH2» ni cap altre de nou introduït amb la fusió. Els ETH que teniu avui en dia continuaran sent els mateixos que tindreu després de la fusió i no hi ha cap necessitat de canviar-los a causa de la fusió.
+Amb [la fusió](/roadmap/merge/) que arriba el 2022, els estafadors han aprofitat la confusió al voltant del terme «Eth2» per provar de captar usuaris per bescanviar els seus ETH per tokens «ETH2». No hi ha cap token «ETH2» ni cap altre de nou introduït amb la fusió. Els ETH que teniu avui en dia continuaran sent els mateixos que tindreu després de la fusió i no hi ha cap necessitat de canviar-los a causa de la fusió.
 
 Els estafadors poden aparèixer sota la forma de «suport» dient que si dipositeu els vosters ETH, us retornaran «ETH2». No hi ha cap [suport oficial d'Ethereum](/community/support/) i no hi ha cap token nou. No compartiu mai la frase llavor de la vostra cartera amb ningú.
 

@@ -73,6 +73,6 @@ Native Web3-Finanzierungsplattformen für öffentliche Güter wie [Gitcoin](http
 ## Verwandte Themen {#related-topics}
 
 - [Die Vision von Ethereum](/roadmap/vision/)
-- [Die Beacon Chain](/upgrades/beacon-chain)
-- [Der Zusammenschluss](/upgrades/merge/)
-- [Sharding](/upgrades/beacon-chain/)
+- [Die Beacon Chain](/roadmap/beacon-chain)
+- [Der Zusammenschluss](/roadmap/merge/)
+- [Sharding](/roadmap/beacon-chain/)

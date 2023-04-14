@@ -19,7 +19,7 @@ Estos cambios de reglas pueden crear una ruptura temporal en la red. Los bloques
 
 </ExpandableCard>
 
-¿Busca futuras actualizaciones del protocolo? [Entérese de las próximas actualizaciones de Ethereum](/upgrades/).
+¿Busca futuras actualizaciones del protocolo? [Entérese de las próximas actualizaciones de Ethereum](/roadmap/).
 
 <Divider />
 
@@ -54,7 +54,7 @@ Asegúrese de actualizar su software de cliente a la última versión antes del 
 
 #### Resumen {#altair-summary}
 
-La actualización de Altair fue la primera programada para la [cadena de baliza](/upgrades/beacon-chain). Ha añadido soporte para los «Comités de Sincronización», que pueden habilitar a los clientes ligeros, y hará que las penalizaciones por inactividad y recorte alcancen sus valores completos.
+La actualización de Altair fue la primera programada para la [cadena de baliza](/roadmap/beacon-chain). Ha añadido soporte para los «Comités de Sincronización», que pueden habilitar a los clientes ligeros, y hará que las penalizaciones por inactividad y recorte alcancen sus valores completos.
 
 - [Lea las especificaciones de actualización de Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
@@ -120,11 +120,11 @@ La actualización de Berlín optimizó el coste del gas para ciertas acciones de
 
 #### Sumario {#beacon-chain-genesis-summary}
 
-La [cadena de baliza](/upgrades/beacon-chain/) necesita 16.384 depósitos de 32 ETH apostados para enviarse de forma segura. Esto sucedió el 27 de noviembre, es decir, la cadena de baliza comenzó a producir bloques el 1 de diciembre de 2020. Este es un primer paso importante en el cumplimiento de la [Visión de Ethereum](/roadmap/vision/).
+La [cadena de baliza](/roadmap/beacon-chain/) necesita 16.384 depósitos de 32 ETH apostados para enviarse de forma segura. Esto sucedió el 27 de noviembre, es decir, la cadena de baliza comenzó a producir bloques el 1 de diciembre de 2020. Este es un primer paso importante en el cumplimiento de la [Visión de Ethereum](/roadmap/vision/).
 
 [Leer el anuncio de Ethereum Foundation](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink to="/roadmap/beacon-chain/">
   La cadena de baliza
 </DocLink>
 
@@ -136,7 +136,7 @@ La [cadena de baliza](/upgrades/beacon-chain/) necesita 16.384 depósitos de 32 
 
 #### Resumen {#deposit-contract-summary}
 
-El contrato de depósito de apuesta introdujo la [apuesta](/glossary/#staking) en el ecosistema de Ethereum. A pesar de ser un contrato en la [red principal](/glossary/#mainnet), ha tenido impacto directo sobre la secuenciación de lanzamiento de [cadena de baliza](/upgrades/beacon-chain/), una importante [ actualización de Ethereum](/upgrades/).
+El contrato de depósito de apuesta introdujo la [apuesta](/glossary/#staking) en el ecosistema de Ethereum. A pesar de ser un contrato en la [red principal](/glossary/#mainnet), ha tenido impacto directo sobre la secuenciación de lanzamiento de [cadena de baliza](/roadmap/beacon-chain/), una importante [ actualización de Ethereum](/roadmap/).
 
 [Leer el anuncio de Ethereum Foundation](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 

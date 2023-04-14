@@ -243,9 +243,7 @@ Genau wie jede andere Konfiguration kann es mit der Startup-Flag oder in der Kon
 
 ## Konsens-Clients (früher als Eth2-Clients bekannt) {#consensus-clients}
 
-Es gibt mehrere Konsens-Clients (früher als Eth2-Clients bekannt), die dazu da sind, die [Konsens-Upgrades](/upgrades/beacon-chain/) zu unterstützen. Sie betreiben die Beacon Chain und werden den Ausführungen nach [The Merge](/upgrades/merge/) einen Proof-of-Stake-Konsensmechanismus zur Verfügung stellen.
-
-[Konsens-Clients anschauen](/upgrades/get-involved/#clients)
+Es gibt mehrere Konsens-Clients (früher als Eth2-Clients bekannt), die dazu da sind, die [Konsens-Upgrades](/roadmap/beacon-chain/) zu unterstützen. Sie betreiben die Beacon Chain und werden den Ausführungen nach [The Merge](/roadmap/merge/) einen Proof-of-Stake-Konsensmechanismus zur Verfügung stellen.
 
 | Client                                                      | Sprache    | Betriebssysteme       | Netzwerke                        |
 | ----------------------------------------------------------- | ---------- | --------------------- | -------------------------------- |

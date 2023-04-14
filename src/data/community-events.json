@@ -90,6 +90,15 @@
     "endDate": "2023-05-24"
   },
   {
+    "title": "SpaghettETH II",
+    "to": "https://naples.spaghett-eth.com/",
+    "sponsor": "EF, Ambire, Zerion, ETHLocal, Yomi, Onlymusix, Oasis App",
+    "location": "Naples, Italy",
+    "description": "SpaghettETH is the umbrella of italian ETH communities, and annual touring conference. Join us in Naples and share your #rawStories about legal, security, narrative and education",
+    "startDate": "2023-05-24",
+    "endDate": "2023-05-26"
+  },
+  {
     "title": "ETH Belgrade 2023",
     "to": "https://ethbelgrade.rs/",
     "sponsor": null,

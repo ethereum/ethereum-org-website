@@ -5,7 +5,7 @@ lang: id
 incomplete: true
 ---
 
-Ethereum beralih ke metode konsensus yang disebut bukti taruhan (PoS) dari [bukti kerja (PoW)](/developers/docs/consensus-mechanisms/pow/). Ini selalu menjadi rencana kami karena merupakan bagian penting dalam strategi komunitas untuk menskalakan Ethereum melalui [peningkatan](/upgrades/). Namun membuat PoS beroperasi dengan baik adalah tantangan teknis yang besar dan tidak semudah menggunakan PoW untuk mencapai konsensus di seluruh jaringan.
+Ethereum beralih ke metode konsensus yang disebut bukti taruhan (PoS) dari [bukti kerja (PoW)](/developers/docs/consensus-mechanisms/pow/). Ini selalu menjadi rencana kami karena merupakan bagian penting dalam strategi komunitas untuk menskalakan Ethereum melalui [peningkatan](/roadmap/). Namun membuat PoS beroperasi dengan baik adalah tantangan teknis yang besar dan tidak semudah menggunakan PoW untuk mencapai konsensus di seluruh jaringan.
 
 ## Prasyarat {#prerequisites}
 
@@ -22,7 +22,7 @@ Bukti taruhan hadir dengan sejumlah peningkatan pada sistem bukti kerja:
 - efisiensi energi yang lebih baik - Anda tidak perlu menggunakan banyak blok penambangan energi
 - hambatan masuk yang lebih rendah, persyaratan perangkat keras yang berkurang – Anda tidak memerlukan perangkat keras elit untuk mendapat peluang membuat blok baru
 - kekebalan yang lebih kuat terhadap sentralisasi - bukti taruhan harus mengarah ke lebih banyak node di jaringan
-- dukungan yang lebih kuat untuk [rantai shard](/upgrades/sharding/) – sebuah peningkatan kunci dalam perluasan jaringan Ethereum
+- dukungan yang lebih kuat untuk [rantai shard](/roadmap/danksharding/) – sebuah peningkatan kunci dalam perluasan jaringan Ethereum
 
 ## Bukti taruhan, penaruhan, dan validator {#pos-staking-validators}
 
@@ -36,7 +36,7 @@ Jika Anda melakukan pengesahan terhadap blok jahat, Anda akan kehilangan taruhan
 
 ### Rantai suar {#the-beacon-chain}
 
-Ketika Ethereum menggantikan bukti kerja dengan bukti taruhan, akan ada kompleksitas tambahan dari [rantai shard](/upgrades/sharding/). Ini adalah blockchain terpisah yang membutuhkan validator untuk memproses transaksi dan membuat blok baru. Rencananya adalah memiliki 64 rantai shard dan mereka semua membutuhkan pemahaman bersama tentang keadaan jaringan. Akibatnya, diperlukan koordinasi ekstra dan akan dilakukan oleh [rantai suar](/upgrades/beacon-chain/).
+Ketika Ethereum menggantikan bukti kerja dengan bukti taruhan, akan ada kompleksitas tambahan dari [rantai shard](/roadmap/danksharding/). Ini adalah blockchain terpisah yang membutuhkan validator untuk memproses transaksi dan membuat blok baru. Rencananya adalah memiliki 64 rantai shard dan mereka semua membutuhkan pemahaman bersama tentang keadaan jaringan. Akibatnya, diperlukan koordinasi ekstra dan akan dilakukan oleh [rantai suar](/roadmap/beacon-chain/).
 
 Rantai suar menerima informasi state dari shard dan membuatnya tersedia untuk shard lainnya, sehingga jaringan dapat terus disinkronkan. Rantai suar juga akan mengatur validator mulai dari mendaftarkan deposito taruhan mereka hingga menerbitkan imbalan dan penalti mereka.
 

@@ -239,8 +239,8 @@ const VisionPage = ({
           </Text>
           <Text>
             <Translation id="page-roadmap-vision-scalability-desc-4" />{" "}
-            <Link to="/upgrades/sharding/">
-              <Translation id="page-roadmap-vision-shard-upgrade" />
+            <Link to="/roadmap/danksharding/">
+              <Translation id="page-roadmap-vision-danksharding" />
             </Link>{" "}
           </Text>
           <H3>
@@ -300,7 +300,7 @@ const VisionPage = ({
             <Text>
               <Translation id="page-roadmap-vision-sustainability-desc-8" />
             </Text>
-            <ButtonLink to="/upgrades/merge/">
+            <ButtonLink to="/roadmap/merge/">
               <Translation id="page-upgrades-merge-btn" />
             </ButtonLink>
           </InfoBanner>

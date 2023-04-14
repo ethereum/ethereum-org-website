@@ -69,7 +69,7 @@ Cada [bloque](#block) tiene un precio conocido como «comisión base». Es la co
 
 Una actualización de la red que introduce una nueva capa de consenso, la cual se convertirá en coordinador de toda la red de Ethereum. Introduce [pruebas de participación](#pos) y [validadores](#validator) en Ethereum. Eventualmente se fusionará con la [red principal](#mainnet).
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink to="/roadmap/beacon-chain/">
   Cadena de baliza
 </DocLink>
 
@@ -229,7 +229,7 @@ Un periodo de 32 [ranuras](#slot) (6,4 minutos) en el sistema coordinado de [cad
 
 «Eth1» es un término que se refiere a la red principal de Ethereum, la cadena de prueba de trabajo (PoW) existente. Este término ha sido desestimado a favor de la «capa de ejecución». [Más información más acerca de este cambio de nombre](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   Más sobre las actualizaciones de Ethereum
 </DocLink>
 
@@ -237,7 +237,7 @@ Un periodo de 32 [ranuras](#slot) (6,4 minutos) en el sistema coordinado de [cad
 
 «Eth2» es un término que hace referencia a un conjunto de actualizaciones del protocolo de Ethereum, incluyendo la transición de Ethereum a prueba de participación. Desde entonces, este término ha quedado obsoleto a favor de la «capa de consenso». [Conozca más acerca de este cambio de nombre](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   Más sobre las actualizaciones de Ethereum
 </DocLink>
 
@@ -683,7 +683,7 @@ Un tipo de solución de escala de [capa 2](#layer-2) que agrupa varias transacci
 
 El estado de desarrollo de Ethereum que inició una serie de actualizaciones de escalabilidad y sustentabilidad, antes conocida como «Ethereum 2.0», o «Eth2».
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   Actualizaciones de Ethereum
 </DocLink>
 
@@ -695,7 +695,7 @@ Una familia de funciones de hash criptográficas publicadas por el NIST (siglas 
 
 Una cadena de [prueba de participación](#pos) coordinada por la [cadena de baliza](#beacon-chain) y asegurada mediante los [validadores](#validator). Se añadirán 64 a la red como parte de la actualización de la cadena de fragmentos. Las cadenas compartidas ofrecerán un aumento de transacciones y mayor rendimiento para Ethereum, proporcionando datos adicionales a la [capa 2](#layer-2) en soluciones como [Optimistic Rollups](#optimistic-rollups) y [rollups-ZK](#zk-rollups).
 
-<DocLink to="/upgrades/sharding">
+<DocLink to="/roadmap/danksharding">
   Cadenas de fragmentos
 </DocLink>
 

@@ -847,7 +847,7 @@ const WhatIsEthereumPage = ({
               <ButtonLink to="/energy-consumption/">
                 <Translation id="page-what-is-ethereum-more-on-energy-consumption" />
               </ButtonLink>
-              <ButtonLink to="/upgrades/merge/" variant="outline">
+              <ButtonLink to="/roadmap/merge/" variant="outline">
                 <Translation id="page-what-is-ethereum-the-merge-update" />
               </ButtonLink>
             </ButtonRow>

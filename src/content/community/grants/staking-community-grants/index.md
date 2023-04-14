@@ -237,7 +237,7 @@ title="How can I learn more about Eth2?">
    </p>
 
 - [Eth2 Overview](/eth2/) – _ethereum.org_
-- [The beacon chain](/upgrades/beacon-chain/) – _ethereum.org_
+- [The beacon chain](/roadmap/beacon-chain/) – _ethereum.org_
 - The Genesis of a Beacon Chain — Ben Edgington [https://hackmd.io/@benjaminion/genesis](https://hackmd.io/@benjaminion/genesis)
 - The Beacon Chain Ethereum 2.0 explainer — [https://ethos.dev/beacon-chain/](https://ethos.dev/beacon-chain/)
 - [The State of Eth2](https://blog.ethereum.org/2020/06/02/the-state-of-eth2-june-2020/) _– Danny Ryan_
@@ -287,7 +287,7 @@ contentPreview="You can stake, run clients, and join discord communities."
 title="How can I get more involved in Eth2?">
 
    <p>
-    For client information and the latest initiatives check out how to <a href="/upgrades/get-involved/">get involved in Eth2</a>.
+    For client information and the latest initiatives check out how to <a href="/roadmap/get-involved/">get involved in Eth2</a>.
    </p>
    <p>
     Join the following Discord communities:
@@ -308,7 +308,7 @@ title="How can I get more involved in Eth2?">
    </Card>
    <br />
    <Card title="The Beacon Chain" description="The Beacon Chain introduces staking and proof-of-stake to the Ethereum network. Learn more about this new piece of the ecosystem." emoji=":police_car_light:">
-      <ButtonLink to="/upgrades/beacon-chain/">
+      <ButtonLink to="/roadmap/beacon-chain/">
          More on the Beacon Chain
       </ButtonLink>
    </Card>

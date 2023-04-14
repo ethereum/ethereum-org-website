@@ -19,7 +19,7 @@ Diese Regeländerungen können eine temporäre Teilung im Netzwerk erzeugen. Neu
 
 </ExpandableCard>
 
-Suchst du nach weiteren Protokoll Verbesserungen? [Erfahre etwas über bevorstehende Upgrades von Ethereum](/upgrades/).
+Suchst du nach weiteren Protokoll Verbesserungen? [Erfahre etwas über bevorstehende Upgrades von Ethereum](/roadmap/).
 
 <Divider />
 
@@ -70,7 +70,7 @@ Das Arrow Glacier Netzwerk-Upgrade hat die [Schwierigkeitsbombe](/glossary/#diff
 
 #### Zusammenfassung {#altair-summary}
 
-Das Altair-Upgrade war das erste geplante Upgrade für die [Beacon Chain](/upgrades/beacon-chain). Es wurde als Unterstützung für „Sync-Komitees" hinzugefügt und somit das Aktivieren sogenannter „Light-Clients", die Inaktivität von Validatoren und die Reduzierung von Strafen bis hin zu ihren vollen Werten.
+Das Altair-Upgrade war das erste geplante Upgrade für die [Beacon Chain](/roadmap/beacon-chain). Es wurde als Unterstützung für „Sync-Komitees" hinzugefügt und somit das Aktivieren sogenannter „Light-Clients", die Inaktivität von Validatoren und die Reduzierung von Strafen bis hin zu ihren vollen Werten.
 
 - [Lesen Sie die Altair-Upgrade-Spezifikation](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
@@ -136,11 +136,11 @@ Mit dem Berliner Upgrade wurden die Gaskosten für bestimmte EVM-Aktionen optimi
 
 #### Zusammenfassung {#beacon-chain-genesis-summary}
 
-Die [Beacon Chain](/upgrades/beacon-chain/) benötigte zum sicheren Betrieb 16.384 Einzahlungen von 32 gestakten ETH. Dazu kam es am 27. November, was bedeutet, dass die Beacon Chain am 1. Dezember 2020 mit der Erzeugung von Blöcken begann. Dies ist ein wichtiger erster Schritt, um die [Vision von Ethereum](/roadmap/vision/) zu erreichen.
+Die [Beacon Chain](/roadmap/beacon-chain/) benötigte zum sicheren Betrieb 16.384 Einzahlungen von 32 gestakten ETH. Dazu kam es am 27. November, was bedeutet, dass die Beacon Chain am 1. Dezember 2020 mit der Erzeugung von Blöcken begann. Dies ist ein wichtiger erster Schritt, um die [Vision von Ethereum](/roadmap/vision/) zu erreichen.
 
 [Die Ankündigung der Ethereum Foundation lesen](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink to="/roadmap/beacon-chain/">
   Die Beacon Chain
 </DocLink>
 
@@ -152,7 +152,7 @@ Die [Beacon Chain](/upgrades/beacon-chain/) benötigte zum sicheren Betrieb 16.3
 
 #### Zusammenfassung {#deposit-contract-summary}
 
-Mit dem Stakingeinzahlungsvertrag wurde [Staking](/glossary/#staking) im Ökosystem von Ethereum eingeführt. Obwohl es sich um einen [Mainnet](/glossary/#mainnet)-Vertrag handelt, hatte er einen direkten Einfluss auf den Zeitplan für die Einführung der [Beacon Chain](/upgrades/beacon-chain/), einem wichtigen [Ethereum-Upgrade](/upgrades/).
+Mit dem Stakingeinzahlungsvertrag wurde [Staking](/glossary/#staking) im Ökosystem von Ethereum eingeführt. Obwohl es sich um einen [Mainnet](/glossary/#mainnet)-Vertrag handelt, hatte er einen direkten Einfluss auf den Zeitplan für die Einführung der [Beacon Chain](/roadmap/beacon-chain/), einem wichtigen [Ethereum-Upgrade](/roadmap/).
 
 [Die Ankündigung der Ethereum Foundation lesen](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 

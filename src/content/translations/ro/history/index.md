@@ -19,7 +19,7 @@ Aceste schimbări de reguli pot crea o separare temporară în rețea. Pot fi pr
 
 </ExpandableCard>
 
-Sunteți în căutarea unor viitoare actualizări ale protocolului? [Aflați despre viitoarele actualizări ale lui Ethereum](/upgrades/).
+Sunteți în căutarea unor viitoare actualizări ale protocolului? [Aflați despre viitoarele actualizări ale lui Ethereum](/roadmap/).
 
 <Divider />
 
@@ -54,7 +54,7 @@ Aveţi grijă să vă actualizați software-ul client la versiunea cea mai recen
 
 #### Rezumat {#altair-summary}
 
-Actualizarea Altair a fost prima actualizare programată pentru [Lanțul Beacon](/upgrades/beacon-chain). A adăugat acceptarea „comitetelor de sincronizare”—prin activarea clienților light (ușori) și aducând penalităţi pentru inactivitatea și slashing-ul validatorului la valorile lor maxime.
+Actualizarea Altair a fost prima actualizare programată pentru [Lanțul Beacon](/roadmap/beacon-chain). A adăugat acceptarea „comitetelor de sincronizare”—prin activarea clienților light (ușori) și aducând penalităţi pentru inactivitatea și slashing-ul validatorului la valorile lor maxime.
 
 - [Citiţi specificaţiile actualizărilor Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
@@ -120,11 +120,11 @@ Actualizarea Berlin a optimizat costul gazului pentru anumite acțiuni EVM și c
 
 #### Rezumat {#beacon-chain-genesis-summary}
 
-[Lanțul Beacon](/upgrades/beacon-chain/) avea nevoie de 16384 de depozite de 32 de ETH mizați pentru a transfera în siguranță. Acest lucru se întâmpla pe 27 noiembrie, ceea ce înseamnă că Lanțul Beacon a început să producă blocuri pe 1 decembrie 2020. Acesta este primul pas important în realizarea [viziunii Ethereum](/roadmap/vision/).
+[Lanțul Beacon](/roadmap/beacon-chain/) avea nevoie de 16384 de depozite de 32 de ETH mizați pentru a transfera în siguranță. Acest lucru se întâmpla pe 27 noiembrie, ceea ce înseamnă că Lanțul Beacon a început să producă blocuri pe 1 decembrie 2020. Acesta este primul pas important în realizarea [viziunii Ethereum](/roadmap/vision/).
 
 [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink to="/roadmap/beacon-chain/">
   Lanțul Beacon
 </DocLink>
 
@@ -136,7 +136,7 @@ Actualizarea Berlin a optimizat costul gazului pentru anumite acțiuni EVM și c
 
 #### Rezumat {#deposit-contract-summary}
 
-Contractul de depunere a mizei a introdus [mizarea](/glossary/#staking) în ecosistemul Ethereum. Cu toate că este un contract pe [Mainnet](/glossary/#mainnet), acesta a avut un impact direct asupra termenului de lansare a [Lanțului Beacon](/upgrades/beacon-chain/), o importantă [actualizare Ethereum](/upgrades/).
+Contractul de depunere a mizei a introdus [mizarea](/glossary/#staking) în ecosistemul Ethereum. Cu toate că este un contract pe [Mainnet](/glossary/#mainnet), acesta a avut un impact direct asupra termenului de lansare a [Lanțului Beacon](/roadmap/beacon-chain/), o importantă [actualizare Ethereum](/roadmap/).
 
 [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
