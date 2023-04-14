@@ -208,7 +208,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
 
         <Box
           as="article"
-          flex={`1 1 ${theme.breakpoints.l}`}
+          flex={`1 1 ${theme.breakpoints.lg}`}
           pb={8}
           px={8}
           id="content"
