@@ -130,7 +130,7 @@ When introducing an unfamiliar acronym, spell out the full term, and put the acr
 
 Many of the topics covered on ethereum.org are technically complex. To reduce confusion to the reader, terms should be used consistently. For example, don't cycle back-and-forth between proof-of-work and PoW at random.
 
-[Content standardization](/style-guide/content-standardization/) - Read more about proper usage of terminology and other aspects such as how to properly add an image, attribute etc.
+[Content standardization](/contributing/style-guide/content-standardization/) - Read more about proper usage of terminology and other aspects such as how to properly add an image, attribute etc.
 
 ## Anything else? {#anything-else}
 

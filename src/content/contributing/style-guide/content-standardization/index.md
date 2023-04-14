@@ -18,7 +18,6 @@ For words that have multiple spellings, use American English over British Englis
 
 ## Terminology {#Terminology}
 
-
 ### Ethereum {#ethereum}
 
 Ethereum is a proper noun and should always be capitalized.
