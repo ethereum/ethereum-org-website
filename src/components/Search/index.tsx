@@ -1,10 +1,9 @@
 // Import libraries
-import React, { FC } from "react"
+import React from "react"
 import { useTranslation, useI18next } from "gatsby-plugin-react-i18next"
 import { MdSearch } from "react-icons/md"
 import {
   IconButton,
-  Icon,
   forwardRef,
   Portal,
   useDisclosure,
