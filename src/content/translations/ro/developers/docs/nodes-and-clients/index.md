@@ -243,9 +243,7 @@ Ca orice altă configurație, aceasta poate fi definită cu ajutorul steguleţul
 
 ## Clienți de consens (anterior clienți „Eth2”) {#consensus-clients}
 
-There are multiple consensus clients (previously known as 'Eth2' clients) to support the [consensus upgrades](/upgrades/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/upgrades/merge/).
-
-[View consensus clients](/upgrades/get-involved/#clients).
+There are multiple consensus clients (previously known as 'Eth2' clients) to support the [consensus upgrades](/roadmap/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/roadmap/merge/).
 
 | Client                                                      | Limbaj     | Sisteme de operare    | Rețele                                 |
 | ----------------------------------------------------------- | ---------- | --------------------- | -------------------------------------- |

@@ -207,7 +207,7 @@ const DocsPage = ({
             slug={slug}
             editPath={absoluteEditPath}
             items={tocItems}
-            isMobile={true}
+            isMobile
             maxDepth={mdx.frontmatter.sidebarDepth!}
             hideEditButton={!!mdx.frontmatter.hideEditButton}
           />
@@ -239,7 +239,21 @@ const DocsPage = ({
 }
 
 export const query = graphql`
-  query DocsPage($relativePath: String) {
+  query DocsPage($languagesToFetch: [String!]!, $relativePath: String) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-developers-docs", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     siteData: site {
       siteMetadata {
         editContentUrl

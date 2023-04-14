@@ -1,14 +1,13 @@
 import React, { useState, createRef, useContext } from "react"
 import styled from "@emotion/styled"
-import { useIntl } from "react-intl"
+import { useI18next } from "gatsby-plugin-react-i18next"
 import { motion } from "framer-motion"
 
-import Translation from "../Translation"
 import Icon from "../Icon"
 import Link from "../Link"
 
 import { useOnClickOutside } from "../../hooks/useOnClickOutside"
-import { getDirection, translateMessageId } from "../../utils/translations"
+import { getDirection } from "../../utils/translations"
 import { Lang } from "../../utils/languages"
 
 import { ISection } from "./types"
@@ -140,10 +139,10 @@ const NavDropdown: React.FC<IProps> & {
   Title: typeof Title
 } = ({ children, section, hasSubNav }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const intl = useIntl()
+  const { language } = useI18next()
   const ref = createRef<HTMLLIElement>()
 
-  const direction = getDirection(intl.locale as Lang)
+  const direction = getDirection(language as Lang)
 
   const toggle = () => setIsOpen((isOpen) => !isOpen)
   const close = () => setIsOpen(false)
@@ -174,7 +173,7 @@ const NavDropdown: React.FC<IProps> & {
     <DropdownContext.Provider
       value={{ isOpen, toggle, close, tabInteractionHandler }}
     >
-      <NavListItem ref={ref} aria-label={translateMessageId(ariaLabel, intl)}>
+      <NavListItem ref={ref} aria-label={ariaLabel}>
         <DropdownTitle
           dir={direction}
           onClick={() => toggle()}
@@ -183,7 +182,7 @@ const NavDropdown: React.FC<IProps> & {
           role="button"
           aria-expanded={isOpen ? "true" : "false"}
         >
-          <Translation id={section.text} />
+          {section.text}
           <StyledIcon isOpen={isOpen} name="chevronDown" />
         </DropdownTitle>
 

@@ -5,7 +5,7 @@ lang: tr
 incomplete: true
 ---
 
-Ethereum, [iş ispatı(PoW)](/developers/docs/consensus-mekanizmas/pow/)'ndan hisse ispatı (PoS) adı verilen bir fikir birliği mekanizmasına geçiyor. Topluluğun, [yükseltmeler](/upgrades/) yoluyla Ethereum'u ölçeklendirme stratejisinin önemli bir parçası olduğu için bu her zaman öncelikli plandı. Ancak hisse ispatını doğru yapmak büyük bir teknik zorluktur ve ağ üzerinde mutabakata varmak için iş ispatı kullanmak kadar kolay değildir.
+Ethereum, [iş ispatı(PoW)](/developers/docs/consensus-mekanizmas/pow/)'ndan hisse ispatı (PoS) adı verilen bir fikir birliği mekanizmasına geçiyor. Topluluğun, [yükseltmeler](/roadmap/) yoluyla Ethereum'u ölçeklendirme stratejisinin önemli bir parçası olduğu için bu her zaman öncelikli plandı. Ancak hisse ispatını doğru yapmak büyük bir teknik zorluktur ve ağ üzerinde mutabakata varmak için iş ispatı kullanmak kadar kolay değildir.
 
 ## Ön koşullar {#prerequisites}
 
@@ -22,7 +22,7 @@ Hisse ispatı, bir dizi iyileştirme ile iş ispatının (PoW) yerini alacak:
 - daha iyi enerji verimliliği - blok madenciliği için yüksek enerji kullanmanıza gerek yok
 - daha düşük giriş bedeli ve donanım gereksinimleri - yeni bloklar oluşturma kabiliyeti için elit donanıma ihtiyacınız yok
 - merkezileştirmeye karşı daha güçlü bağışıklık - hisse ispatı ağdaki düğüm sayısını artıracaktır
-- [parça zincirleri](/upgrades/sharding/) için daha güçlü destek - Ethereum ağını ölçeklendirme için önemli bir yükseltme
+- [parça zincirleri](/roadmap/danksharding/) için daha güçlü destek - Ethereum ağını ölçeklendirme için önemli bir yükseltme
 
 ## Hisse ispatı, stake etme ve doğrulayıcılar {#pos-staking-validators}
 
@@ -36,7 +36,7 @@ Kötü niyetli blokları tasdiklerseniz, stake ettiğiniz miktarı kaybedersiniz
 
 ### İşaret (Beacon) zinciri {#the-beacon-chain}
 
-Ethereum, iş ispatını hisse ispatı ile değiştirdiğinde, [parça zincirlerinin (shard chain)](/upgrades/sharding/) karmaşıklığı artacaktır. Bunlar, işlemleri gerçekleştirmek ve yeni bloklar oluşturmak için doğrulayıcılara ihtiyaç duyacak ayrı blok zincirleridir. 64 parça zincirinin bulunması ve hepsinin ağın durumu hakkında ortak bir anlayışa sahip olması planlanır. Sonuç olarak, ekstra koordinasyon gereklidir ve bu koordinasyon [işaret zinciri](/upgrades/beacon-chain/) tarafından sağlanacaktır.
+Ethereum, iş ispatını hisse ispatı ile değiştirdiğinde, [parça zincirlerinin (shard chain)](/roadmap/danksharding/) karmaşıklığı artacaktır. Bunlar, işlemleri gerçekleştirmek ve yeni bloklar oluşturmak için doğrulayıcılara ihtiyaç duyacak ayrı blok zincirleridir. 64 parça zincirinin bulunması ve hepsinin ağın durumu hakkında ortak bir anlayışa sahip olması planlanır. Sonuç olarak, ekstra koordinasyon gereklidir ve bu koordinasyon [işaret zinciri](/roadmap/beacon-chain/) tarafından sağlanacaktır.
 
 İşaret zinciri, parçalardan durum bilgilerini alır ve ağın senkronize kalabilmesi için diğer parçalar için kullanılabilir hâle getirir. Aynı zamanda işaret zinciri, stake yatırımlarını kaydetmekten ödüllerini ve cezalarını vermeye kadar doğrulayıcıları yönetecektir.
 

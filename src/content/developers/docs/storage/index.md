@@ -62,7 +62,7 @@ IPFS is a distributed system for storing and accessing files, websites, applicat
 - [4EVERLAND](https://www.4everland.org/)_（IPFS pinning service）_
 - [Filebase](https://filebase.com) _(IPFS Pinning Service)_
 
-SWARM is a decentralised data storage and distribution technology with a storage incentive system and a storage rent price oracle.
+SWARM is a decentralized data storage and distribution technology with a storage incentive system and a storage rent price oracle.
 
 ## Data retention {#data-retention}
 
@@ -186,7 +186,7 @@ Proof-of-stake based:
 - [Documentation](https://docs.filebase.com/)
 - [GitHub](https://github.com/filebase)
 
-**4EVERLAND - _A Web 3.0 cloud computing platform that integrates storage, compute and networking core capabilities, is S3 compatible and provides synchronous data storage on decentralised storage networks such as IPFS and Arweave._**
+**4EVERLAND - _A Web 3.0 cloud computing platform that integrates storage, compute and networking core capabilities, is S3 compatible and provides synchronous data storage on decentralized storage networks such as IPFS and Arweave._**
 
 - [4everland.org](https://www.4everland.org/)
 - [Documentation](https://docs.4everland.org/)

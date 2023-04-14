@@ -15,7 +15,7 @@ Se non hai ancora chiaro cosa siano nodi e client, consulta [Nodi e client](/dev
 
 ## Staker {#stakoooooooooooooors}
 
-Gli staker in autonomia devono gestire la propria infrastruttura piuttosto che affidarsi a fornitori terzi. Ciò significa eseguire un client di esecuzione associato a un client di consenso. Prima de [La Fusione](/upgrades/merge), era possibile eseguire solo un client di consenso e usare un fornitore centralizzato per i dati di esecuzione; questo non è più possibile: uno staker in autonomia deve eseguire entrambi i client. Tuttavia, sono disponibili dei servizi per semplificare questo processo.
+Gli staker in autonomia devono gestire la propria infrastruttura piuttosto che affidarsi a fornitori terzi. Ciò significa eseguire un client di esecuzione associato a un client di consenso. Prima de [La Fusione](/roadmap/merge), era possibile eseguire solo un client di consenso e usare un fornitore centralizzato per i dati di esecuzione; questo non è più possibile: uno staker in autonomia deve eseguire entrambi i client. Tuttavia, sono disponibili dei servizi per semplificare questo processo.
 
 [Maggiori informazioni sull'esecuzione di un nodo](/developers/docs/nodes-and-clients/run-a-node/).
 

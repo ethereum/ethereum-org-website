@@ -5,7 +5,7 @@ lang: fr
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: ../../../../assets/eth-gif-cat.png
+image: ../../assets/eth-gif-cat.png
 summaryPoint1: Les systèmes traditionnels d'identité centralisent l'émission, le maintien et le contrôle de vos identifiants.
 summaryPoint2: L'identité décentralisée supprime la dépendance à l'égard de tiers centralisés.
 summaryPoint3: Grâce à la crypto, les utilisateurs ont maintenant les outils pour émettre, conserver et contrôler à nouveau leurs propres identifiants et attestations.
@@ -17,7 +17,7 @@ Cependant, les systèmes traditionnels de gestion d'identité reposent depuis lo
 
 Pour résoudre ces problèmes, nous avons des systèmes d'identité décentralisés construits sur des blockchains publiques comme Ethereum. L'identité décentralisée permet aux individus de gérer les informations relatives à leur identité. Avec des solutions d’identité décentralisées, _vous_ pouvez créer des identifiants et réclamer et détenir vos attestations sans compter sur les autorités centrales, comme les fournisseurs de services ou les gouvernements.
 
-## Qu'est-ce qu'une identité {#what-is-identity}
+## Qu'est-ce qu'une identité? {#what-is-identity}
 
 L'identité signifie le sentiment de soi d'un individu, défini par des caractéristiques uniques. L'identité désigne le fait d'être un _individu_, c'est-à-dire une entité humaine distincte. L'identité pourrait également se référer à d'autres entités non humaines, comme une organisation ou une autorité.
 
@@ -175,7 +175,7 @@ Il existe de nombreux projets ambitieux utilisant Ethereum comme base pour des s
 - [Identité décentralisée (Bonus Session Livestream)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Une formidable vidéo explicative sur l'identité décentralisée par Andreas Antonopolous_
 - [Connexion avec Ethereum et Decentralized Identity avec Ceramic, IDX, React, et 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _tutoriel YouTube sur la création d'un système de gestion d'identité pour créer, lire et mettre à jour un profil d'utilisateur en utilisant son portefeuille Ethereum par Nader Dabit_
 - [BrightID - Identité décentralisée sur Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Épisode de podcast non bancaire parlant de BrightID, une solution d'identité décentralisée pour Ethereum_
-- [The Off Chain Internet : Identités décentralisées & Références vérifiables](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — _Présentation EthDenver 2022 par Evin McMullen_
+- [The Off Chain Internet : Identités décentralisées & Références vérifiables](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — Présentation EthDenver 2022 par Evin McMullen
 
 ### Communautés {#communities}
 

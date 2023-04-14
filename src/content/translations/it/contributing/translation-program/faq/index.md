@@ -6,7 +6,7 @@ description: Domande frequenti sul Programma di Traduzione di ethereum.org
 
 # Guida alla traduzione di ethereum.org {#translating-ethereum-guide}
 
-Se sei nuovo nel Programma di Traduzione e non vedi l'ora di prendervi parte, ecco alcune FAQ che possono aiutarti a cominciare. Usa questa guida per trovare le risposte alle domande più comuni.
+Se sei nuovo nel Programma di Traduzione e non vedi l'ora di prendervi parte, ecco alcune domande frequenti che possono aiutarti a cominciare. Usa questa guida per trovare le risposte alle domande più comuni.
 
 ## Posso ricevere un compenso per le traduzioni su ethereum.org? {#compensation}
 

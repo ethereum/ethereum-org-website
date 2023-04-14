@@ -14,7 +14,7 @@ Qualquer um da comunidade Ethereum tem a capacidade de criar uma EIP. Diretrizes
 
 ## Por que as EIPs são importantes? {#why-do-eips-matter}
 
-As EIPs desempenham um papel central em como as mudanças acontecem e são documentadas no Ethereum. São a forma de as pessoas proporem, debaterem e adoptarem alterações. Existem [diferentes tipos de EIPs](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1.md#eip-types), incluindo EIPs centrais para alterações de protocolo de baixo nível, que afetam o consenso e exigem uma atualização de rede como [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) e ERCs para padrões de aplicativos como [EIP-20](https://eips.ethereum.org/EIPS/eip-20) e [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
+As EIPs desempenham um papel central em como as mudanças acontecem e são documentadas no Ethereum. São a forma de as pessoas proporem, debaterem e adoptarem alterações. Existem [diferentes tipos de EIPs](https://eips.ethereum.org/EIPS/eip-1#eip-types), incluindo EIPs centrais para alterações de protocolo de baixo nível, que afetam o consenso e exigem uma atualização de rede como [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) e ERCs para padrões de aplicativos como [EIP-20](https://eips.ethereum.org/EIPS/eip-20) e [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
 
 Cada atualização de rede consiste em um conjunto de EIPs que precisam ser implementadas por cada [cliente Ethereum](/learn/#clients-and-nodes) na rede. Isso significa que para estar em consenso com outros clientes na rede principal do Ethereum, os desenvolvedores do cliente precisam ter certeza de que todos implementaram as EIPs necessárias.
 
@@ -46,7 +46,7 @@ Os editores eméritos da EIP são
 
 Se você deseja se tornar um editor de EIP, confira [EIP-5069](https://eips.ethereum.org/EIPS/eip-5069).
 
-Os editores de EIP decidem quando uma proposta está pronta para se tornar uma EIP e ajudam os autores da EIP a avançar com suas propostas. [Ethereum Cat Herders](https://ethereumcatherders.com/) ajuda a organizar reuniões entre os editores de EIP e a comunidade (confira [EIPIP](https://github.com/ethereum-cat-herders/EIPIP)).
+Os editores de EIP decidem quando uma proposta está pronta para se tornar uma EIP e ajudam os autores da EIP a avançar com suas propostas. [Ethereum Cat Herders](https://ethereumcatherders.com/) ajuda a organizar reuniões entre os editores de EIP e a comunidade (confira [EIPIP](https://github.com/ethereum-cat -pastores/EIPIP)).
 
 O processo completo de padronização, juntamente com o gráfico, é descrito em [EIP-1](https://eips.ethereum.org/EIPS/eip-1)
 

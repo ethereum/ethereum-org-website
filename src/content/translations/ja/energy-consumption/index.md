@@ -69,7 +69,7 @@ lang: ja
 
 ## 関連トピック {#related-topics}
 
-- [イーサリアムのビジョン](/upgrades/vision/)
-- [ビーコンチェーン](/upgrades/beacon-chain)
-- [マージ](/upgrades/merge/)
-- [シャーディング](/upgrades/beacon-chain/)
+- [イーサリアムのビジョン](/roadmap/vision/)
+- [ビーコンチェーン](/roadmap/beacon-chain)
+- [マージ](/roadmap/merge/)
+- [シャーディング](/roadmap/beacon-chain/)
