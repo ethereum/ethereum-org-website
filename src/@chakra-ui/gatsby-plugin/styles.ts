@@ -19,6 +19,10 @@ const styles = {
       bg: mode("white", "gray.700")(props),
       lineHeight: "1.6rem",
     },
+    a: {
+      color: "primary",
+      textDecoration: "underline",
+    },
     // should be replace with https://chakra-ui.com/docs/components/text
     p: {
       margin: "0px 0px 1.45rem",
@@ -57,12 +61,6 @@ const styles = {
     },
     "li > p": {
       "margin-bottom": "calc(1.45rem / 2)",
-    },
-    // YouTube embeds
-    iframe: {
-      display: "block",
-      maxWidth: "560px",
-      margin: "32px 0",
     },
     // should be replace by the usage of https://chakra-ui.com/docs/components/heading
     // also, the media queries defined on each of these heading tags are bearly used

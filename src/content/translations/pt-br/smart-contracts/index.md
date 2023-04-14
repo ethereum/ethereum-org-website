@@ -6,11 +6,11 @@ lang: pt-br
 
 # Introdução aos contratos inteligentes {#introduction-to-smart-contracts}
 
-Os contratos inteligentes são os blocos fundamentais de construção de [aplicativos Ethereum](/dapps/). Eles são programas de computadores armazenados no blockchain que nos permite converter contratos tradicionais em contratos paralelos digitais. Os contratos inteligentes são muitos lógicos — seguindo a estrutura condicional "If This Hena That" (se isso acontecer, então faça aquilo). Isso significa que eles se comportam exatamente como programado e que não podem ser alterados.
+Os contratos inteligentes são os blocos fundamentais de construção de [aplicativos Ethereum](/dapps/). Eles são programas de computador armazenados na cadeia de blocos que nos permite converter contratos tradicionais em contratos paralelos digitais. Os contratos inteligentes são muitos lógicos — seguindo a estrutura condicional "If This Hena That" (se isso acontecer, então faça aquilo). Isso significa que eles se comportam exatamente como programado e que não podem ser alterados.
 
 Nick Szabo cunhou o termo "contrato inteligente". Em 1994, ele escreveu [uma introdução ao conceito](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) e, em 1996, [uma exploração do que os contratos inteligentes poderiam fazer](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
-Nick Szabo previu um mercado digital construído sobre estes processos automáticos, criptograficamente seguros. Um lugar onde transações e funções de negócio podem acontecer de forma confiável — sem intermediários. Contratos inteligentes no Ethereum colocam esta visão em prática.
+Nick Szabo previu um mercado digital construído sobre estes processos automáticos, criptograficamente seguros. Um lugar onde transações e funções de negócio podem acontecer com necessidade mínima de confiança — sem intermediários. Contratos inteligentes no Ethereum colocam esta visão em prática.
 
 ## O que são contratos? {#what-are-contracts}
 
@@ -74,7 +74,7 @@ Eles podem realizar computações, criar moedas, armazenar dados, criar NFTs, en
 
 - [Stablecoins](/stablecoins/)
 - [Criação e distribuição de ativos digitais únicos](/nft/)
-- [Uma troca de moeda automática e aberta](/get-eth/#dex)
+- [Uma negociação de moeda automática e aberta](/get-eth/#dex)
 - [Jogos descentralizados](/dapps/?category=gaming)
 - [Uma apólice de seguro que paga automaticamente](https://etherisc.com/)
 - [Um padrão que permite que pessoas criem moedas personalizadas e interoperáveis](/developers/docs/standards/tokens/)

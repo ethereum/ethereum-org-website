@@ -17,6 +17,7 @@ lang: ru
 - [Онлайн-встречи Core Dev](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w): смотрите или поучаствуйте сами
 - [Список предпочтений для программы поддержки экосистемы](https://esp.ethereum.foundation/wishlist/) — сферы инструментария, документации и инфраструктуры, в которых активно ищут заявителей на гранты в рамках программы поддержки экосистемы Ethereum
 - [Web3Bridge](https://www.web3bridge.com/) — присоединяйтесь к амбициозному сообществу web3 в их инициативе по выявлению, обучению и поддержке сотен разработчиков и членов сообщества по всей Африке
+- Присоединяйтесь к [Discord-каналу Ethereum Cat Herders](https://discord.io/EthCatHerders)
 
 ## Исследователи и академики <Emoji text=":mag:" size={1} />‍ {#researchers-and-academics}
 
@@ -25,6 +26,8 @@ lang: ru
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) — серия крупных исследовательских премий, с помощью которых вы можете заработать более 100 000 долл. США
 - [Ethresear.ch](https://ethresear.ch) — основной форум Ethereum по исследованиям и наиболее влиятельный в мире форум по криптоэкономике
 - [Список предпочтений для программы поддержки экосистемы](https://esp.ethereum.foundation/wishlist/) — области исследований, в которых активно ищут заявителей на гранты в рамках программы поддержки экосистемы Ethereum
+
+[Посмотрите больше активных областей исследований](/community/research/).
 
 ## Нетехнические навыки <Emoji text=":briefcase:" size={1} /> {#non-technical}
 
@@ -69,7 +72,7 @@ lang: ru
 
 ## Финансовые специалисты и бухгалтеры <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
 
-- Ethereum является средой для экосистемы децентрализованных финансов — сети протоколов и приложений, предлагающих альтернативную финансовую систему. Если вы профессионал в финансах, ознакомьтесь с некоторыми приложениями децентрализованных финансов (DeFi) на сайте [DeFi Pulse](https://defipulse.com/) или [DeFiPrime](https://defiprime.com)
+- Ethereum является средой для экосистемы децентрализованных финансов — сети протоколов и приложений, предлагающих альтернативную финансовую систему. Если вы профессионал в финансах, ознакомьтесь с некоторыми приложениями децентрализованных финансов (DeFi) на сайте [DeFi Llama](https://defillama.com/) или [DeFiPrime](https://defiprime.com)
 - Вы бухгалтер? Активы на основе Ethereum — эфиры (ETH), токены, децентрализованные финансы т. д. — создают множество новых бухгалтерских вопросов. Вы можете начать с некоторых проектов, которые призваны помочь пользователям криптовалюты решить их бухгалтерские и отчетные вопросы, например [Rotki](https://rotki.com/)
 
 ## Менеджеры по продукту <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
@@ -95,6 +98,7 @@ lang: ru
 - [Вакансии на useWeb3](https://www.useweb3.xyz/jobs)
 - [Вакансии на Web3](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
+- [Вакансии на Crypto Valley](https://cryptovalley.jobs/)
 
 ## Присоединитесь к DAO {#decentralized-autonomous-organizations-daos}
 
@@ -103,7 +107,7 @@ DAO — децентрализованные автономные организ
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) — _продвижение концепции децентрализованной автономной организации (DAO) в нетехнических отраслях и помощь в создании стоимости через DAO_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) — _сообщество разработчиков, которые верят в коллективное владение Интернетом_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) — _коллектив разработчиков-фрилансеров Web3, работающий как децентрализованная автономная организация (DAO)_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) — _децентрализованная разработка и управление для децентрализованных приложений и протоколов_
+- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) — _децентрализованная разработка и управление dApps и протоколами_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) — _управление сообщества DAOhaus_
 - [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) — _сообщество, создавшее франшизу супергероев_
 - [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) — _инжиниринг в сфере юридических вопросов_

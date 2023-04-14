@@ -16,10 +16,11 @@ lang: ru
 
 - [Программа поддержки экосистемы EF](https://esp.ethereum.foundation) — _финансирование проектов с открытым исходным кодом, которые приносят пользу Ethereum, с особым акцентом на универсальные инструменты, инфраструктуру, исследования и общественные блага_
 - [Запросы предложений (RFP) Ethereum](https://github.com/ethereum/requests-for-proposals) — _запросы предложений Фондом Ethereum для работы и проектов в экосистеме Ethereum_
-- [MetaCartel](https://www.metacartel.org/grants/) — _разработка децентрализованных приложений, создание децентрализованной автономной организации (DAO)_ Гранты в размере от 1000 до 8000 долл. США.
+- [MetaCartel](https://www.metacartel.org/grants/) — _разработка децентрализованных приложений, создание DAO_
 - [Децентрализованная автономная организация (DAO) Moloch](https://www.molochdao.com/) — _конфиденциальность, масштабирование второго уровня, безопасность клиентов и многое другое_
 - [Открытые гранты](https://opengrants.com/explore)
 - [Гранты DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) — _таблица Google организаций, предлагающих гранты_
+- [Вызов слияния данных](https://esp.ethereum.foundation/merge-data-challenge) — _мы обращаемся ко всем эфирианам, специалистам по данным, инженерам данных, визуализаторам данных, разработчикам и всем, кто заинтересован в изучении данных Ethereum!_
 
 ## Отдельные проекты {#project-specific}
 
@@ -27,12 +28,14 @@ lang: ru
 
 - [Программа грантов Aave](https://aavegrants.org/) — _гранты DAO от [Aave](https://aave.com/)_
 - [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) — _фонд экосистемы [Balancer](https://balancer.fi/)_
+- [Программа грантов Chainlink](https://chain.link/community/grants) — _гранты сообщества [Chainlink](https://chain.link/)_
 - [Программа грантов Compound](https://compoundgrants.org/) — _финансовая экосистема [Compound](https://compound.finance/)_
 - [Программа грантов Consensys](https://consensys.net/grants/) — _гранты Ethereum и финансирование блокчейна [Consensys](https://consensys.net/)_
 - [Организация грантов Lido Ecosystem (LEGO)](https://lego.lido.fi/) — _финансовая экосистема [Lido](https://lido.fi/)_
 - [Программа грантов mStable](https://docs.mstable.org/advanced/grants-program) — _сообщество [mStable](https://mstable.org/)_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) — _экосистема [The Graph](https://thegraph.com/)_
 - [Программа грантов Uniswap](https://www.unigrants.org/) — _сообщество [Uniswap](https://uniswap.org/)_
+- [Web3 Grants](https://web3grants.net) — _обширный список связанных грантов для web3/криптовалют_
 
 ## Квадратичное финансирование {#quadratic-funding}
 

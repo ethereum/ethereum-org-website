@@ -48,6 +48,14 @@
           to: /developers/docs/nodes-and-clients/client-diversity/
         - id: docs-nav-nodes-as-a-service
           to: /developers/docs/nodes-and-clients/nodes-as-a-service/
+        - id: docs-nav-node-architecture
+          to: /developers/docs/nodes-and-clients/node-architecture/
+        - id: docs-nav-light-clients
+          to: /developers/docs/nodes-and-clients/light-clients
+        - id: docs-nav-archive-nodes
+          to: /developers/docs/nodes-and-clients/archive-nodes/
+        - id: docs-nav-bootnodes
+          to: /developers/docs/nodes-and-clients/bootnodes
     - id: docs-nav-networks
       to: /developers/docs/networks/
       description: docs-nav-networks-description
@@ -64,8 +72,8 @@
                 - id: docs-nav-mining-algorithms
                   to: /developers/docs/consensus-mechanisms/pow/mining-algorithms/
                   items:
-                    - id: docs-nav-dagger-hashamoto
-                      to: /developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashamoto
+                    - id: docs-nav-dagger-hashimoto
+                      to: /developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto
                     - id: docs-nav-ethash
                       to: /developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash
         - id: docs-nav-proof-of-stake
@@ -79,8 +87,16 @@
               to: /developers/docs/consensus-mechanisms/pos/attestations
             - id: docs-nav-rewards-and-penalties
               to: /developers/docs/consensus-mechanisms/pos/rewards-and-penalties/
+            - id: docs-nav-attack-and-defense
+              to: /developers/docs/consensus-mechanisms/pos/attack-and-defense/
             - id: docs-nav-keys
               to: /developers/docs/consensus-mechanisms/pos/keys/
+            - id: docs-nav-pos-vs-pow
+              to: /developers/docs/consensus-mechanisms/pos/pos-vs-pow
+            - id: docs-nav-block-proposal
+              to: /developers/docs/consensus-mechanisms/pos/block-proposal/
+            - id: docs-nav-pos-faqs
+              to: /developers/docs/consensus-mechanisms/pos/faqs
 - id: docs-nav-ethereum-stack
   path: /developers/docs/
   items:

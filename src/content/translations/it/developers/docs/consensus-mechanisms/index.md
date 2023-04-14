@@ -72,7 +72,7 @@ La **resistenza di Sybil** misura l'efficacia di un protocollo contro un [attacc
 
 Per decidere quale catena sia quella "corretta" si usa una **regola di selezione della catena**. Bitcoin usa la regola della "catena più lunga", nel senso che la blockchain più lunga è quella che il resto dei nodi accetta come valida e con cui lavora. Per le catene di Proof of Work, la catena più lunga è determinata dalla difficoltà cumulativa e totale del Proof of Work della catena. Anche Ethereum usava la regola della catena più lunga; tuttavia, ora che Ethereum opera sul Proof of Stake, ha adottato un algoritmo di scelta della diramazione che misura il 'peso' della catena. Il peso è la somma cumulata dei voti dei validatori, ponderata dai saldi di ether in staking dei validatori.
 
-Ethereum usa un meccanismo di consenso noto come [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/), che combina il [Proof of Work Casper FFG](https://arxiv.org/abs/1710.09437) con la [regola di scelta della diramazione GHOST](https://arxiv.org/abs/2003.03052).
+Ethereum usa un meccanismo di consenso noto come [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/), che combina il [proof-of-work di Casper FFG](https://arxiv.org/abs/1710.09437) con la [regola di scelta della biforcazione di GHOST](https://arxiv.org/abs/2003.03052).
 
 ## Letture consigliate {#further-reading}
 

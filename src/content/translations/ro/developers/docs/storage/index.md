@@ -96,7 +96,7 @@ Bazate pe PoW:
 
 Bazate pe PoS:
 
-- [Lanțul Beacon](/upgrades/beacon-chain/)
+- [Lanțul Beacon](/roadmap/beacon-chain/)
 - Filecoin
 - 0Chain
 

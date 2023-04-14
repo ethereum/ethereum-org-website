@@ -173,7 +173,7 @@ Senkronizasyon modları, çeşitli değiş tokuşlarla bu sürece farklı yakla�
 
 Mainnet'e hazır istemcilerde kullanılan senkronizasyon yaklaşımlarına genel bakış:
 
-##### Full senkronizasyon {#full-sync}
+##### Full senkronizasyon
 
 Full senkronizasyon, tüm blokları (başlıklar, işlemler ve makbuzlar dahil) indirir ve her bloğu başlangıçtan yürüterek aşamalı olarak blok zincirinin durumunu oluşturur.
 
@@ -243,17 +243,15 @@ Diğer tüm yapılandırmalar gibi, başlangıç bayrağıyla veya yapılandırm
 
 ## Mutabakat istemcileri (eski adıyla "Eth2" istemcileri) {#consensus-clients}
 
-[Mutabakat yükseltmelerini](/upgrades/beacon-chain/) desteklemek için birden fazla mutabakat istemcisi (eskiden "Eth2" istemcisi olarak biliniyordu) vardır. İşaret Zincirini çalıştırırlar ve [Birleştirmeden](/upgrades/merge/) sonra yürütüm istemcilerine hisse ispatı mutabakat mekanizması sağlayacaklar.
-
-[Mutabakat istemcilerini görüntüle](/upgrades/get-involved/#clients).
+[Mutabakat yükseltmelerini](/roadmap/beacon-chain/) desteklemek için birden fazla mutabakat istemcisi (eskiden "Eth2" istemcisi olarak biliniyordu) vardır. İşaret Zincirini çalıştırırlar ve [Birleştirmeden](/roadmap/merge/) sonra yürütüm istemcilerine hisse ispatı mutabakat mekanizması sağlayacaklar.
 
 | İstemci                                                     | Dil        | İşletim sistemleri    | Ağlar                                   |
 | ----------------------------------------------------------- | ---------- | --------------------- | --------------------------------------- |
-| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | İşaret Zinciri, Prater                  |
-| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | İşaret Zinciri, Prater                  |
-| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | İşaret Zinciri, Prater, Pyrmont         |
-| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | İşaret Zinciri, Prater                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | İşaret Zinciri, Gnosis, Prater, Pyrmont |
+| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | İşaret Zinciri, Goerli                  |
+| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | İşaret Zinciri, Goerli                  |
+| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | İşaret Zinciri, Goerli, Pyrmont         |
+| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | İşaret Zinciri, Goerli                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | İşaret Zinciri, Gnosis, Goerli, Pyrmont |
 
 ## Donanım {#hardware}
 

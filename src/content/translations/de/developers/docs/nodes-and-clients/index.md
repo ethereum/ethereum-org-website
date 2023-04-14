@@ -173,7 +173,7 @@ Die Synchronisationsmodi stellen verschiedene Ansätze für diesen Prozess mit u
 
 Allgemeiner Überblick über die Synchronisierungsansätze, die in Mainnet-Ready-Clients verwendet werden:
 
-##### Full sync {#full-sync}
+##### Full sync
 
 Bei full sync werden alle Blöcke (einschließlich Headern, Transaktionen und Quittungen) heruntergeladen und der Zustand der Blockchain inkrementell generiert, indem jeder Block ab Genesis ausgeführt wird.
 
@@ -243,17 +243,15 @@ Genau wie jede andere Konfiguration kann es mit der Startup-Flag oder in der Kon
 
 ## Konsens-Clients (früher als Eth2-Clients bekannt) {#consensus-clients}
 
-Es gibt mehrere Konsens-Clients (früher als Eth2-Clients bekannt), die dazu da sind, die [Konsens-Upgrades](/upgrades/beacon-chain/) zu unterstützen. Sie betreiben die Beacon Chain und werden den Ausführungen nach [The Merge](/upgrades/merge/) einen Proof-of-Stake-Konsensmechanismus zur Verfügung stellen.
+Es gibt mehrere Konsens-Clients (früher als Eth2-Clients bekannt), die dazu da sind, die [Konsens-Upgrades](/roadmap/beacon-chain/) zu unterstützen. Sie betreiben die Beacon Chain und werden den Ausführungen nach [The Merge](/roadmap/merge/) einen Proof-of-Stake-Konsensmechanismus zur Verfügung stellen.
 
-[Konsens-Clients anschauen](/upgrades/get-involved/#clients)
-
-| Client                                                      | Sprache    | Betriebssysteme       | Netzwerke                             |
-| ----------------------------------------------------------- | ---------- | --------------------- | ------------------------------------- |
-| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, MacOS | Beacon Chain, Prater                  |
-| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, MacOS | Beacon Chain, Prater                  |
-| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, MacOS | Beacon Chain, Prater, Pyrmont         |
-| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, MacOS | Beacon Chain, Prater                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Los        | Linux, Windows, MacOS | Beacon Chain, Gnosis, Prater, Pyrmont |
+| Client                                                      | Sprache    | Betriebssysteme       | Netzwerke                        |
+| ----------------------------------------------------------- | ---------- | --------------------- | -------------------------------- |
+| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, MacOS | Mainnet, Goerli                  |
+| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, MacOS | Mainnet, Goerli                  |
+| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, MacOS | Mainnet, Goerli, Pyrmont         |
+| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, MacOS | Mainnet, Goerli                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Los        | Linux, Windows, MacOS | Mainnet, Gnosis, Goerli, Pyrmont |
 
 ## Hardware {#hardware}
 

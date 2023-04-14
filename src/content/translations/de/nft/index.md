@@ -7,14 +7,14 @@ emoji: ":frame_with_picture:"
 sidebarDepth: 2
 image: ../../../../assets/infrastructure_transparent.png
 alt: Ein als Hologramm abgebildetes ETH-Logo.
-summaryPoint1: Ein Weg, alles Einzigartige als eine Ethereum-basierte Anlage darzustellen
-summaryPoint2: NFTs geben Inhaltserstellern mehr Einfluss denn je
+summaryPoint1: Ein Weg, alles Einzigartige als eine Ethereum-basierte Anlage darzustellen.
+summaryPoint2: NFTs geben Inhaltserstellern mehr Einfluss denn je.
 summaryPoint3: Auf Grundlage von intelligenten Verträgen auf der Ethereum-Blockchain.
 ---
 
 NFTs erobern derzeit regelrecht die Welt der digitalen Kunst und Sammelgegenstände im Sturm. Digitale Künstler erleben dank der enormen Verkäufe an ein neues Krypto-Publikum gerade einen Wandel in ihrem Leben. Und auch prominente Personen springen auf diesen Zug auf, da sich neue Gelegenheiten eröffnen, um mit ihren Fans zu kommunizieren. Doch digitale Kunst ist nur eine Verwendungsform für NFTs. Tatsächlich lassen sie sich nutzen, um jegliche Form von Besitz an einem einzigartigen Asset darzustellen, wie zum Beispiel eine Urkunde für einen digitalen oder physischen Gegenstand.
 
-Wäre Andy Warhol Ende der 90er Jahre geboren, hätte er wohl die Suppe von Campbell als NFT geprägt. Es ist nur eine Frage der Zeit, bis Kanye West eine Kollektion Yeezys auf Ethereum umsetzt. Und eines Tages weisen Sie vielleicht den Besitz Ihres Autos per NFT nach.
+Wäre Andy Warhol Ende der 90er Jahre geboren, hätte er wohl die Suppe von Campbell als NFT geprägt. Es ist nur eine Frage der Zeit, bis Nike eine Auswahl von Jordans auf Ethereum umsetzt. Und eines Tages weisen Sie vielleicht den Besitz Ihres Autos per NFT nach.
 
 ## Was ist ein NFT? {#what-are-nfts}
 
@@ -104,28 +104,28 @@ NFTs haben einige besondere Eigenschaften:
 
 - Jeder erstellte Token hat eine einzigartige Kennung, die direkt mit einer Ethereum-Adresse verbunden ist.
 - Sie sind nicht mit anderen Token 1:1 austauschbar. Beispiel: Ein ETH enspricht exakt einem anderen ETH. Bei NFTs ist das nicht der Fall.
-- Jeder Token hat einen Eigentümer und diese Information lässt sich einfach verifizieren.
+- Jeder Token hat einen Eigentümer, und diese Information lässt sich einfach verifizieren.
 - Sie existieren auf Ethereum und können auf jedem Ethereum-basierten NFT-Marktplatz gehandelt werden.
 
 Mit anderen Worten, wenn Sie ein NFT _besitzen_:
 
 - Können Sie das Eigentum daran einfach nachweisen
   - Der Besitznachweis an einem NFT ist vergleichbar mit dem Nachweis, dass Sie ETH in Ihrer Wallet haben.
-  - Angenommen, SIe kaufen ein NFT. Das Eigentum an dem einzigartigen Token wird über Ihre öffentliche Adresse an Ihre Wallet übertragen.
+  - Angenommen, Sie kaufen ein NFT. Das Eigentum an dem einzigartigen Token wird über Ihre öffentliche Adresse an Ihre Wallet übertragen.
   - Der Token beweist, dass Ihre Kopie der digitalen Datei das Original ist.
   - Ihr privater Schlüssel ist der Eigentumsnachweis für das Original.
-  - Der öffentliche Schlüssel des Content Creators dient als Echtheitszertifikat für dieses spezielle digitale Artefakt.
-    - Der öffentliche Schlüssel des Creators ist fester Bestandteil des Tokenverlaufs. Über den öffentlichen Schlüssel des Creators lässt sich darlegen, dass der von Ihnen gehaltene Token von einer bestimmten Partei erstellt wurde. Auf diese Weise lassen sich Original und Fälschung leicht voneinander unterscheiden.
+  - Der öffentliche Schlüssel des Inhaltserstellers dient als Echtheitszertifikat für dieses spezielle digitale Artefakt.
+    - Der öffentliche Schlüssel des Erstellers ist fester Bestandteil des Token-Verlaufs. Über den öffentlichen Schlüssel des Erstellers lässt sich darlegen, dass der von Ihnen gehaltene Token von einer bestimmten Partei erstellt wurde. Auf diese Weise lassen sich Original und Fälschung leicht voneinander unterscheiden.
   - Ein anderer Weg des Besitznachweises für einen NFT ist, dass durch das Signieren einer Nachricht bewiesen wird, dass eine Person Eigentümer des privaten Schlüssels hinter einer Adresse ist.
     - Wie oben erwähnt fungiert also Ihr privater Schlüssel als Besitznachweis am Original. Das sagt uns, dass der private Schlüssel hinter dieser Adresse das NFT kontrolliert.
-    - Eine signierte Nachricht kann benutzt werden, umnachzuweisen, dass Sie den privaten Schlüssel besitzen ohne diesen zu offenbaren – und damit auch das Sie ein NFT besitzen.
+    - Eine signierte Nachricht kann benutzt werden, um nachzuweisen, dass Sie den privaten Schlüssel besitzen, ohne diesen zu offenbaren – und damit auch das Sie ein NFT besitzen.
 - Das NFT kann von niemanden auf irgendeine Weise manipuliert werden.
 - Sie können es verkaufen. In manchen Fällen verdienen die ursprünglichen Urheber Lizenzgebühren an Wiederverkäufen.
-- Sie können es natürlich auch für immer behalten, mit dem ruhigen Gewissen, dass das Asset durch Ihr Wallet auf Ethereum gesichert ist.
+- Sie können es natürlich auch für immer behalten, mit dem ruhigen Gewissen, dass das Asset durch Ihre Wallet auf Ethereum gesichert ist.
 
 Wenn Sie ein NFT _erstellen_:
 
-- Können Sie einfach nachweisen, dass Sie der Creator sind.
+- Können Sie einfach nachweisen, dass Sie der Ersteller sind.
 - Bestimmen Sie über die Knappheit.
 - Können Sie bei jedem Verkauf Lizenzgebühren verdienen.
 - Können Sie es auf einem NFT-Marktplatz oder Peer-to-Peer verkaufen. Sind Sie nicht an eine Plattform gebunden und Sie brauchen niemanden als Vermittler.
@@ -140,9 +140,9 @@ In diesen Fällen weist jedes NFT immer noch eine eindeutige Kennung (wie ein Ba
 
 ### Lizenzgebühren {#royalties}
 
-Manche NFTs zahlen automatisch Lizenzgebühren, sogenannte Royalties, an ihre Ersteller aus, wenn sie verkauft werden. Dieses Konzept ist noch in der Entwicklung, doch es ist sehr aussichtsreich. Die ursprünglichen Eigentümer von [EulerBeats Originals](https://eulerbeats.com/) verdienen jedes Mal 8 % Lizenzgebühr, wenn das NFT weiterverkauft wird. Und einige Plattformen wie [Foundation](https://foundation.app) und [Zora](https://zora.co/) unterstützen Lizenzgebühren für ihre Künstler.
+Manche NFTs zahlen automatisch Lizenzgebühren, sogenannte Royalties, an ihre Ersteller aus, wenn sie verkauft werden. Dieses Konzept ist noch in der Entwicklung, doch es ist sehr aussichtsreich. Die ursprünglichen Eigentümer von [EulerBeats Originals](https://eulerbeats.com/) verdienen jedes Mal 8 % Lizenzgebühr, wenn der NFT weiterverkauft wird. Und einige Plattformen wie [Foundation](https://foundation.app) und [Zora](https://zora.co/) unterstützen Lizenzgebühren für ihre Künstler.
 
-Das alles läuft völlig automatisch ab, sodass sich die Ersteller einfach zurücklehnen und Lizenzgebühren verdienen können, während ihr Werk von Person zu Person weiterverkauft wird. Derzeit erfolgt die Ermittlung von Lizenzgebühren noch weitestgehend manuell und ist nicht sehr präzise – viele Creators bekommen nicht das bezahlt, was sie eigentlich verdienen. Wenn Sie eine Lizenzgebühr in Ihr NFT programmiert haben, dann entgeht Ihnen nichts.
+Das alles läuft völlig automatisch ab, sodass sich die Ersteller einfach zurücklehnen und Lizenzgebühren verdienen können, während ihr Werk von Person zu Person weiterverkauft wird. Derzeit erfolgt die Ermittlung von Lizenzgebühren noch weitestgehend manuell und ist nicht sehr präzise – viele Ersteller bekommen nicht das bezahlt, was sie eigentlich verdienen. Wenn Sie eine Lizenzgebühr in Ihr NFT programmiert haben, dann entgeht Ihnen nichts.
 
 ## Wofür werden NFTs verwendet? {#nft-use-cases}
 
@@ -153,18 +153,19 @@ Im Folgenden erfahren Sie mehr über ein paar der besser entwickelten Anwendungs
 - [Domänennamen](#nft-domains)
 - [Physische Gegenstände](#nft-physical-items)
 - [Investitionen und Sicherheiten](#nfts-and-defi)
+- [Tokenschranke](#tokengating)
 
 <Divider />
 
 ### Einnahmen für die Urheber maximieren {#nfts-for-creators}
 
-Am häufigsten werden NFTs derzeit im Bereich digitaler Inhalte eingesetzt. Das liegt daran, dass diese Branche heutzutage zerrütet ist. Content Creators sehen, wie ihre Gewinne und das Verdienstpotenzial von den Plattformen verschlungen werden.
+Am häufigsten werden NFTs derzeit im Bereich digitaler Inhalte eingesetzt. Das liegt daran, dass diese Branche heutzutage zerrüttet ist. Inhaltsersteller sehen, wie ihre Gewinne und das Verdienstpotenzial von den Plattformen verschlungen werden.
 
 Ein Künstler, der Werke in einem sozialen Netzwerk publiziert, verdient Geld für die Plattform, die Werbung an die Follower des Künstlers verkauft. Im Gegenzug erhalten Sie Reichweite, doch Reichweite bezahlt keine Rechnungen.
 
-NFTs befeuern eine neue Creator-Ökonomie, in der die Urheber die Eigentumsrechte an ihren Inhalten nicht den Plattformen übergeben, die sie veröffentlichen. Das Eigentumsrecht wird den Inhalt selbst eingebrannt.
+NFTs befeuern eine neue Ersteller-Ökonomie, in der die Urheber die Eigentumsrechte an ihren Inhalten nicht die Plattformen übergeben, die sie veröffentlichen. Das Eigentumsrecht wird im Inhalt selbst eingebrannt.
 
-Wenn sie ihre Inhalte verkaufen, erhalten auch sie direkt das Geld. Wenn der neue Eigentümer das NFT dann verkauft, kann der ursprüngliche Creator sogar automatisch Lizenzgebühren erhalten. Das ist bei jedem Verkauf garantiert, da die Adresse des Creators Teil der Token-Metadaten ist – Metadaten, die nicht verändert werden können.
+Wenn sie ihre Inhalte verkaufen, erhalten auch sie direkt das Geld. Wenn der neue Eigentümer den NFT dann verkauft, kann der ursprüngliche Ersteller sogar automatisch Lizenzgebühren erhalten. Das ist bei jedem Verkauf garantiert, da die Adresse des Erstellers Teil der Token-Metadaten ist – Metadaten, die nicht verändert werden können.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Entdecken, kaufen oder erstellen Sie Ihre eigene(n) NFT-Kunst/Sammlerstücke ...</div>
@@ -175,7 +176,7 @@ Wenn sie ihre Inhalte verkaufen, erhalten auch sie direkt das Geld. Wenn der neu
 
 #### Das Problem mit Copy und Paste {#nfts-copy-paste}
 
-Skeptiker behaupten oft das NFTs „dumm“ seien, während sie ein Bild posten, in dem sie einen Screenshot von einem NFT-Kunstwerk machen. „Schau, jetzt habe ich dieses Bild kostenlos bekommen!“, sagen sie süffisant.
+Skeptiker behaupten oft, dass NFTs „dumm“ seien, während sie ein Bild posten, in dem sie einen Screenshot von einem NFT-Kunstwerk machen. „Schau, jetzt habe ich dieses Bild kostenlos bekommen!“, sagen sie süffisant.
 
 Nun, ja. Aber macht Sie die Google-Suche nach Picassos Guernica zum stolzen neuen Besitzer eines Multimillionen-Dollar-Kunstwerks der Kunstgeschichte?
 
@@ -189,15 +190,15 @@ Das nachweisliche Eigentum an der realen Sache wird immer mehr Wert haben als ke
 
 NFTs sind für Spieleentwickler sehr interessant. NFTs können Aufzeichnungen über Eigentumsrechte für Elemente im Spiel liefern, die Wirtschaft im Spiel ankurbeln und den Spielern eine Menge Vorteile bringen.
 
-In vielen regulären Spielen können Sie Elemente kaufen, die Sie im Spiel benutzen können. Wenn es sich dabei aber um ein NFT handelt, können Sie sich Ihr Geld zurückholen, indem Sie es verkaufen, sobald Sie mit dem Spiel fertig sind. Sie können sogar Gewinne erzielen, wenn dieser Artikel begehrenswerter wird.
+In vielen regulären Spielen können Sie Elemente kaufen, die Sie im Spiel benutzen können. Wenn es sich dabei aber um einen NFT handelt, können Sie sich Ihr Geld zurückholen, indem Sie es verkaufen, sobald Sie mit dem Spiel fertig sind. Sie können sogar Gewinne erzielen, wenn dieser Artikel begehrenswerter wird.
 
-Spieleentwickler – als Emittenten der NFT – könnten jedes Mal, wenn ein Artikel auf dem offenen Markt wiederverkauft wird, eine Lizenzgebühr verdienen. Das schafft ein Geschäftsmodell, von dem beide Seiten, also sowohl Spieler als auch Entwickler vom NFT vom Sekundärmarkt stärker profitieren.
+Spieleentwickler – als Emittenten der NFT – könnten jedes Mal, wenn ein Artikel auf dem offenen Markt wiederverkauft wird, eine Lizenzgebühr verdienen. Das schafft ein Geschäftsmodell, von dem beide Seiten, also sowohl Spieler als auch Entwickler vom NFT, vom Sekundärmarkt stärker profitieren.
 
 Das bedeutet auch, dass die Elemente, die Sie gesammelt haben, Ihre bleiben, wenn ein Spiel von den Entwicklern nicht mehr betreut wird.
 
-Letztlich können also die Elemente, die Sie im Spiel erspielt haben, das Spiel selbst überleben. Selbst wenn ein Spiel nicht mehr weitergeführt wird, bleiben Ihre Elemente immer unter Ihrer Kontrolle. Sprich, Elemente in einem Spiels werden zu digitalen Erinnerungen und haben auch einen Wert außerhalb des Spiels.
+Letztlich können also die Elemente, die Sie im Spiel erspielt haben, das Spiel selbst überleben. Selbst wenn ein Spiel nicht mehr weitergeführt wird, bleiben Ihre Elemente immer unter Ihrer Kontrolle. Sprich, Elemente in einem Spiel werden zu digitalen Erinnerungen und haben auch einen Wert außerhalb des Spiels.
 
-In Decentraland, ein virtuelles Reality-Spiel, können Sie sogar NFTs kaufen, die virtuelle Grundstücke repräsentieren, die Sie nach Ihren Vorstellungen nutzen können.
+In Decentraland, einem virtuellen Reality-Spiel, können Sie sogar NFTs kaufen, die virtuelle Grundstücke repräsentieren, die Sie nach Ihren Vorstellungen nutzen können.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Ethereum-Spiele entdecken, die durch NFTs gestützt werden ...</div>
@@ -228,7 +229,7 @@ Die Tokenisierung physischer Gegenstände ist noch nicht so weit entwickelt wie 
 
 Da NFTs im Wesentlichen Urkunden sind, wird man eines Tages ein Auto oder Haus mit ETH kaufen können und die Urkunde als NFT im Gegenzug erhalten (in ein und der gleichen Transaktion). Angesichts der stark zunehmenden Technisierung, ist es nicht schwer, sich eine Welt vorzustellen, in der Ihre Ethereum-Wallet der Schlüssel zu Ihrem Auto oder zu Hause wird – Ihre Tür wird dann durch den kryptographischen Nachweis des Eigentums freigeschaltet.
 
-Mit wertvollen Vermögenswerten wie Autos und Immobilien, die sich auf Ethereum darstellen lassen, kann man NFTs als Sicherheiten für dezentralen Darlehen verwenden. Das ist besonders hilfreich, wenn Sie keine Unsummen an Bargeld oder Kryptowährung haben, sondern wertvolle physische Gegenstände besitzen. [Mehr zu DeFi](/defi/)
+Mit wertvollen Vermögenswerten wie Autos und Immobilien, die sich auf Ethereum darstellen lassen, kann man NFTs als Sicherheiten für dezentrale Darlehen verwenden. Das ist besonders hilfreich, wenn Sie keine Unsummen an Bargeld oder Kryptowährung haben, sondern wertvolle physische Gegenstände besitzen. [Mehr zu DeFi](/defi/)
 
 <Divider />
 
@@ -238,15 +239,15 @@ Die NFT-Welt und die [dezentralisierte Finanzwelt (DeFi)](/defi/) beginnen, auf 
 
 #### NFT-gesicherte Darlehen {#nft-backed-loans}
 
-Es gibt DeFi-Anwendungen, mit denen Sie Geld mithilfe von Sicherheiten leihen können. So können Sie beispielsweise 10 ETH als Sicherheit hinterlegen, um 5.000 DAI auszuleihen ([ein Stablecoin](/stablecoins/)). Das garantiert dem Kreditgeber eine Rückzahlung: Erfolgt vonseiten des Kreditnehmers keine Rückzahlund der DAI, wird die Sicherheit an den Kreditgeber geschickt. Allerdings hat nicht jeder genug Kryptowährung, um sie als Sicherheit zu verwenden.
+Es gibt DeFi-Anwendungen, mit denen Sie Geld mithilfe von Sicherheiten leihen können. So können Sie beispielsweise 10 ETH als Sicherheit hinterlegen, um 5.000 DAI auszuleihen ([ein Stablecoin](/stablecoins/)). Das garantiert dem Kreditgeber eine Rückzahlung: Erfolgt seitens des Kreditnehmers keine Rückzahlung der DAI, wird die Sicherheit an den Kreditgeber geschickt. Allerdings hat nicht jeder genug Kryptowährung, um sie als Sicherheit zu verwenden.
 
-Stattdessen gibt es Projekte, sie sich damit auseinandersetzen, wie sich NFTs als Sicherheit nutzen lassen. Angenommen, Sie hätten vor einer Weile einen seltenen CryptoPunk NFT gekauft – heutzutage wird dafür bis zu 1.000 $ bezahlt. Wenn Sie diesen als Sicherheit hinterlegen, können Sie ein Darlehen mit dem gleichen Regelsatz beanspruchen. Wenn Sie die DAI nicht zurückzahlen, wird Ihr CryptoPunk als Sicherheit an den Kreditgeber geschickt. Das könnte irgendwann mit allem funktionieren, das sich als NFT tokenisieren lässt.
+Stattdessen gibt es Projekte, die sich damit auseinandersetzen, wie sich NFTs als Sicherheit nutzen lassen. Angenommen, Sie hätten vor einer Weile einen seltenen KryptoPunk NFT gekauft – heutzutage wird dafür bis zu 1.000 $ bezahlt. Wenn Sie diesen als Sicherheit hinterlegen, können Sie ein Darlehen mit dem gleichen Regelsatz beanspruchen. Wenn Sie die DAI nicht zurückzahlen, wird Ihr KryptoPunk als Sicherheit an den Kreditgeber geschickt. Das könnte irgendwann mit allem funktionieren, das sich als NFT tokenisieren lässt.
 
 Und auf Ethereum ist das gar nicht schwer, da beide Welten (NFT und DeFi) die gleiche Infrastruktur haben.
 
 #### Anteilseigentum {#fractional-ownership}
 
-NFT-Ersteller können auch „Shares“, also Anteile, für ihre NFTs erstellen. Damit haben Investoren und Fans die Möglichkeit, einen Teil eines NFTs zu besitzen, ohne iht komplett kaufen zu müssen. Damit erhalten NFT-Minter und -Sammler gleichermaßen noch mehr Möglichkeiten.
+NFT-Ersteller können auch „Shares“, also Anteile, für ihre NFTs erstellen. Damit haben Investoren und Fans die Möglichkeit, einen Teil eines NFTs zu besitzen, ohne ihn komplett kaufen zu müssen. Damit erhalten NFT-Minter und -Sammler gleichermaßen noch mehr Möglichkeiten.
 
 - Fraktionalisierte NFTs können nicht nur auf [NFT-Marktplätzen](/dapps?category=collectibles), sondern auch auf auf [DEXs](/defi/#dex) wie Uniswap gehandelt werden. Das bedeutet mehr Käufer und Verkäufer.
 - Der Gesamtpreis eines NFT lässt sich durch den Preis seiner Bruchteile definieren.
@@ -261,7 +262,7 @@ Theoretisch würde das die Möglichkeit schaffen, ein Stück von einem Picasso z
 
 Dabei handelt es sich um Ethereum-gestützte Organisationen, die es Fremden wie z. B. globalen Anteilshaltern eines Vermögens gestatten, sich sicher zu koordinieren, ohne dass sie dabei den anderen Beteiligten vertrauen müssen. Das liegt daran, dass ohne die Genehmigung der Gruppe kein einziger Cent ausgegeben werden kann.
 
-Wie bereits erwähnt, ist das alles noch in Entwicklungsstadium. NFTs, DAOs und fraktionalisierte Token entwickeln sich alle unterschiedlich schnell. Doch die jeweiligen Infrastrukturen sind bereits vorhanden und können problemlos zusammenarbeiten, da sie alle die gleiche Sprache sprechen: Ethereum. Bleiben Sie bei den Entwicklungen auf dem Laufenden.
+Wie bereits erwähnt, ist das alles noch im Entwicklungsstadium. NFTs, DAOs und fraktionalisierte Token entwickeln sich alle unterschiedlich schnell. Doch die jeweiligen Infrastrukturen sind bereits vorhanden und können problemlos zusammenarbeiten, da sie alle die gleiche Sprache sprechen: Ethereum. Bleiben Sie bei den Entwicklungen auf dem Laufenden.
 
 [Mehr zu DAOs](/dao/)
 
@@ -270,6 +271,24 @@ Wie bereits erwähnt, ist das alles noch in Entwicklungsstadium. NFTs, DAOs und 
 Berichten zufolge ist das Anbieten gefälschter Hochschulabschlüsse eine Milliarden-Dollar-Branche, die mithilfe von NFTs bekämpft werden könnte. Mit NFTs können auf sichere und schnelle Weise Abschlusszeugnisse geprüft werden.
 
 [In Südkorea gibt es bereits eine Universität, die Abschlusszertifikate als NFT ausgibt](https://forkast.news/headlines/south-korea-nfts-graduates-hoseo/), mit der Hoffnung, dass NFTs den Zugang zu Verwaltungsdiensten verbessern und das Fälschen oder Ändern von Zertifikaten verhindern. [Die Trinity Business School (TBS) in Irland plant auch, NFTs ab 2023](https://trinitynews.ie/2022/04/business-school-to-offer-degree-nfts/) anzubieten.
+
+<Divider />
+
+### Tokenschranke {#tokengating}
+
+Tokenschranke ist eine Möglichkeit, den Zugriff auf etwas einzuschränken und NFTs als Optiont zum Entsperren eines Zugriffs zu verwenden. Diese Möglichkeiten können je nach Plattform sehr unterschiedlich gestalet sein. Einige beliebte Beispiele sind geschlossene Inhalte, private Chat-Server und in der Welt des E-Commerce exklusive Produkte.
+
+Eine Plattform, die Tokenschranken durchführt, wird Sie in der Regel auffordern, Ihre Wallet zu verbinden, um nachzuweisen, dass Sie die erforderliche NFT besitzen. Wenn Sie über das geforderte NFT verfügen erhalten Sie Zugriff. Wenn nicht, bleibt die angeforderte Sache verschlossen. NFTs sind aufgrund ihrer Einzigartigkeit eine großartige Möglichkeit für die Valdierung – Sie können das Eigentum nicht vortäuschen, um Zugang zu der angestrebten Sache zu erhalten.
+
+Da sich die NFTs auf Ethereum befinden, können sie zum Entsperren von Ethereum-Tokenschranken auf jeder Plattform verwendet werden, die sie implementiert. Ein einziges NFT in Ihren Besitz könnte geschützte Inhalte, private Chat-Server und exklusive Produkte für völlig unterschiedliche Websites und Anwendungen freischalten.
+
+Wenn das Prägen und Verteilen von NFTs um Gemeinschaftsgenerierung oder Digitalisierung von Gemeinschaften geht, dann geht es bei Tokenschranken um die Pflege von Gemeinschaften. Sie sieht NFTs mehr als Werkzeug für Mitgliedschaft oder Loyalität - und eine großartige Möglichkeit, Belohnungen zuverlässig zu distributieren.
+
+#### Beispiele
+
+- [Collab.land](https://collab.land/) nutzt Tokenschranken für Discord-Chat-Server oder Telegram-Gruppen
+- [Unlock protocol](https://unlock-protocol.com/) ist ein Protokoll für Tokenschranken
+- [Shopify](https://help.shopify.com/en/manual/products/digital-service-product/nfts) hat eine wachsende Liste von Apps, die Händlern ermöglichen, Zugang zu Produkten und Rabatten mithilfe von Tokengating zu reglementieren
 
 <Divider />
 
@@ -285,39 +304,34 @@ Es gibt eine Reihe von Gründen, weshalb Ethereum ermöglicht, dass NFTs funktio
 
 ## Die Umweltauswirkungen von NFTs {#environmental-impact-nfts}
 
-NFTs werden immer beliebter, was bedeutet, dass sie auch vermehrt unter die Lupe genommen werden – vor allem was ihren CO2-Fußabdruck angeht.
+Das Erstellen und Übertragen von NFTs sind einfache Ethereum-Transaktionen - Das Prägen, Kaufen, Tauschen oder Interagieren mit NFTs verbraucht keine Energie. Seit [The Merge](/roadmap/merge) ist Ethereum eine energieeffiziente Blockchain. Demnach sind die Umweltauswirkungen bei der Nutzung von NFTs gering.
 
-Zum Verständnis:
-
-- Das Erschaffen oder Versenden von NFTs sind lediglich Ethereum-Transaktionen - sie haben weder einen direkten Einfluss auf den Energiekonsum von Ethereum, noch verbrauchen sie anderweitig Energie.
-- Ethereum ist eine energiesparende Blockchain. Das bedeutet, dass der Einfluss auf die Umwelt durch das Erschaffen, Kaufen und Versenden von NFTs sehr gering ist.
-
-Die nächsten Abschnitte erklären dies etwas genauer...
+[ Mehr zum Energieverbrauch von Ethereum](/energy-consumption/).
 
 ### Die NFTs trifft keine Schuld {#nft-qualities}
 
 Das gesamte NFT-Ökosystem funktioniert, weil Ethereum dezentral und sicher ist.
 
-Dezentralisiert bedeutet, dass Sie und alle anderen verifizieren können, dass Sie etwas besitzen. Und das alles ohne Vertrauen oder die Verwahrung an Drittparteien abzugeben, die Ihnen nach Belieben ihre eigenen Regeln aufzwingen können. Das bedeutet auch, dass die NFTs über viele verschiedene Produkte und Märkte bewegt werden können.
+Dezentralisiert bedeutet, dass Sie und alle anderen verifizieren können, dass Sie etwas besitzen. Und das alles ohne Vertrauen oder die Verwahrung an Drittparteien abzugeben, die Ihnen nach Belieben ihre eigenen Regeln aufzwingen können. Das bedeutet auch, dass die NFTs über viele verschiedene Produkte und Märkte hinweg bewegt werden können.
 
-Sicher bedeutet, dass niemand Ihr NFT per Copy-and-paste kopieren oder stehlen kann.
+Sicher bedeutet, dass niemand Ihren NFT per Copy-and-paste kopieren oder stehlen kann.
 
-Diese Eigenschaften von Ethereum ermöglichen den Besitz von digitalen Einzelstücken. Außerdem erhalten Ihre Inhalte einen fairen Preis. Ethereum schützt Vermögenswerte durch einen dezentralisierten Konsensmechanismus, darunter einen ["Proof-of-Stake"](/developers/docs/consensus-mechanisms/pos). Dies ist eine CO2-effiziente Methode, um zu bestimmen, wer einen Block von Transaktionen zur Blockchain hinzufügen darf. Außerdem ist sie bekanntlich viel sicherer als die energieintensive Alternative ["Proof-of-Work"](/developers/docs/consensus-mechanisms/pow). NFTs werden mit einem hohen Energieverbrauch in Verbindung gebracht, weil Ethereum in der Vergangenheit durch Proof-of-Work abgesichert wurde. Dies ist nun nicht mehr der Fall.
+Diese Eigenschaften von Ethereum ermöglichen den Besitz von digitalen Einzelstücken. Außerdem erhalten Ihre Inhalte einen fairen Preis. Ethereum schützt Vermögenswerte durch einen dezentralisierten Konsensmechanismus, darunter einen [„Proof-of-Stake"](/developers/docs/consensus-mechanisms/pos). Dies ist eine CO2-effiziente Methode, um zu bestimmen, wer einen Block von Transaktionen zur Blockchain hinzufügen darf. Außerdem ist sie bekanntlich viel sicherer als die energieintensive Alternative [„Proof-of-Work"](/developers/docs/consensus-mechanisms/pow). NFTs werden mit einem hohen Energieverbrauch in Verbindung gebracht, weil Ethereum in der Vergangenheit durch Proof-of-Work abgesichert wurde. Dies ist nun nicht mehr der Fall.
 
 #### NFTs prägen {#minting-nfts}
 
-Wenn Sie einen NFT minten, müssen einige Dinge passieren:
+Wenn Sie einen NFT prägen, müssen einige Dinge passieren:
 
 - Es muss als Asset in der Blockchain bestätigt werden.
 - Der Kontostand des Eigentümers muss aktualisiert werden, um dieses Asset einzubinden. Dadurch wird es möglich, es zu handeln oder es nachweislich zu „besitzen“.
 - Die Transaktionen, welche die vorherigen Schritte repräsentieren, müssen zu einem Block hinzugefügt, und dadurch auf der Blockchain quasi „verewigt" werden.
-- Der Block muss von allen im Netzwerk als „korrekt“ bestätigt werden. Mit diesem Konsens erübrigt sich die Notwendigkeit von Zwischenhändlern, da das Netzwerk darin übereinkommt, dass Ihr NFT existiert und zu Ihnen gehört. Und da es auf der Blockchain ist kann es jeder selbst überprüfen. Auf diese Weise hilft Ethereum, die Einnahmen von NT-Erstellern zu maximieren.
+- Der Block muss von allen im Netzwerk als „korrekt“ bestätigt werden. Mit diesem Konsens erübrigt sich die Notwendigkeit von Zwischenhändlern, da das Netzwerk darin übereinkommt, dass Ihr NFT existiert und zu Ihnen gehört. Und da es auf der Blockchain ist, kann es jeder selbst überprüfen. Auf diese Weise hilft Ethereum, die Einnahmen von NFT-Erstellern zu maximieren.
 
 Alle diese Aufgaben werden von Blockherstellern und Validatoren erledigt. Ihre NFT-Transaktion wird zu einem vorgeschlagenen Block hinzugefügt und danach auf das restliche Netzwerk übertragen. Validatoren überprüfen die Gültigkeit der Transaktion und fügen sie danach ihren Datenbanken hinzu. Es gibt viele finanzielle Anreize, um zu gewährleisten, dass die Validatoren ehrlich handeln. Sonst könnte jeder behaupten, dass sich der NFT, den Sie gerade geprägt haben, in deren Besitz befindet und fälschlicherweise einen Eigentumstransfer veranlassen.
 
 #### NFT-Sicherheit {#nft-security}
 
-Die Sicherheit von Ethereum basiert auf Proof-of-Stake. Das System ist darauf ausgelegt, böswillige Handlungen mithilfe finanziell negativer Anreize zu verhindern und Ethereum dadurch Manipulationen gegenüber sicherer zu machen. Das macht NFTs überhaupt erst möglich. Sobald der Block, welcher Ihre NFT-Transaktion beinhaltet, endgültig festgelegt wird, würde es einen Angreifer Millionen von ETH kosten, um dies wieder zu ändern. Sobald der Block, welcher Ihre NEU-Transaktion beinhaltet, endgültig festgelegt wird, würde es einen Angreifer Millionen von ETH kosten, um dies wieder zu ändern.
+Die Sicherheit von Ethereum basiert auf Proof-of-Stake. Das System ist darauf ausgelegt, böswillige Handlungen mithilfe finanziell negativer Anreize zu verhindern und Ethereum dadurch Manipulationen gegenüber sicherer zu machen. Das macht NFTs überhaupt erst möglich. Sobald der Block, welcher Ihre NFT-Transaktion beinhaltet, endgültig festgelegt wird, würde es einen Angreifer Millionen von ETH kosten, um dies wieder zu ändern. Sobald der Block, welcher Ihre neue Transaktion beinhaltet, endgültig festgelegt wird, würde es einen Angreifer Millionen von ETH kosten, um dies wieder zu ändern.
 
 Sicherheitsprobleme mit NFTs stehen oft im Zusammenhang mit Phishing-Betrügereien, Schwachstellen bei intelligenten Verträgen oder Benutzerfehlern (z. B. unbeabsichtigtes Veröffentlichen privater Schlüssel). Damit wird eine sichere Wallet für NFT-Besitzer umso wichtiger.
 
@@ -325,9 +339,9 @@ Sicherheitsprobleme mit NFTs stehen oft im Zusammenhang mit Phishing-Betrügerei
   Weiteres zur Sicherheit
 </ButtonLink>
 
-## Gestalten mit NFTs {#build-with-nfts}
+## NFTs erstellen {#build-with-nfts}
 
-Die meisten NFTs werden mit dem einheitlichen Standard [ERC-721](/developers/docs/standards/tokens/erc-721/) erstellt. Es gibt jedoch noch andere Standards, die für Sie unter Umständen von Interesse sind. Der Standard [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) erlaubt halb-fungible Token, die besonders im Gaming-Bereich nützlich sind. Kürzlich wurde [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) vorgeschlagen, um das Prägen von NFTs wesentlich effizienter zu machen. Mit diesem Standard können Sie beliebig viele Stücke in einer Transaktion prägen.
+Die meisten NFTs werden mit dem einheitlichen Standard [ERC-721](/developers/docs/standards/tokens/erc-721/) erstellt. Es gibt jedoch noch andere Standards, die für Sie unter Umständen von Interesse sind. Der Standard [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) erlaubt halb-fungible Token, die besonders im Gaming-Bereich nützlich sind. Kürzlich wurde [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) vorgeschlagen, um das Prägen von NFTs wesentlich effizienter zu machen. Dieser Standard ermöglicht es Ihnen, so viele Tokens wie Sie möchten in einer Transaktion zu prägen!
 
 ## Weiterführende Informationen {#further-reading}
 
@@ -337,4 +351,5 @@ Die meisten NFTs werden mit dem einheitlichen Standard [ERC-721](/developers/doc
 - [Alles, was Sie über das Metaverse wissen müssen](https://foundation.app/blog/enter-the-metaverse) – _Foundation-Team, foundation.app_
 - [Nein, Krypto-Künstler schaden dem Planeten nicht](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
 - [Der Energieverbrauch von Ethereum](/energy-consumption/)
-- [Der Strombedarf eines Landes, nicht mehr](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, 18. Mai 2021_
+
+<QuizWidget quizKey="nfts" />

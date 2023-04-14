@@ -6,7 +6,7 @@ lang: it
 
 Le reti sono ambienti Ethereum diversi ai quali si può accedere per sviluppare, testare o produrre. Poiché Ethereum è un protocollo, possono esistere diverse "reti" indipendenti conformi al protocollo senza che interagiscano tra loro.
 
-Un account Ethereum funzionerà su reti diverse ma il saldo dell'account e la cronologia delle transazioni non verranno riportati dalla rete Ethereum principale. Per utilizzi di test è utile sapere quali reti sono disponibili e come ottenere ETH per le reti di prova per poter sperimentare.
+Il tuo conto di Ethereum opererà su reti diverse, ma il saldo del tuo conto e lo storico delle transazioni non saranno riportati dalla Rete Principale di Ethereum. Per utilizzi di test è utile sapere quali reti sono disponibili e come ottenere ETH per le reti di prova per poter sperimentare.
 
 ## Prerequisiti {#prerequisites}
 
@@ -24,11 +24,11 @@ Quando per persone e scambi si parla di prezzi in ETH, si parla di ETH della ret
 
 ### Rete di prova di Ethereum {#ethereum-testnets}
 
-Oltre alla rete principale, sono disponibili reti di test pubbliche. Si tratta di reti utilizzate da sviluppatori di protocolli o di Smart Contract per testare sia gli aggiornamenti del protocollo che potenziali Smart Contract in un ambiente simile a quello di produzione prima della distribuzione sulla rete principale. In pratica, è analogo ad ambiente di produzione rispetto a server di staging.
+Oltre alla rete principale, sono disponibili reti di test pubbliche. Queste, sono reti usate dagli sviluppatori di protocolli o contratti intelligenti per testare sia gli aggiornamenti del protocollo che i potenziali contratti intelligenti, in un ambiente simile a quello di produzione prima della distribuzione alla Rete Principale. In pratica, è analogo ad ambiente di produzione rispetto a server di staging.
 
 Dovresti testare il codice di ogni contratto che scrivi su una rete di prova prima di distribuirlo alla rete principale. Tra le dApp che si integrano con contratti intelligenti esistenti, gran parte dei progetti hanno copie distribuite alle reti di prova.
 
-La maggior parte delle reti di prova è partita utilizzando un meccanismo di consenso Proof of Authority. Significa che viene scelto un ristretto numero di nodi per convalidare le transazioni e creare nuovi blocchi, e questi fanno staking con la propria identità in questo processo. In alternativa, alcune reti di prova sono nate usando un meccanismo di consenso Proof of Work, con solamente pochi miner autorizzati. Tuttavia, in preparazione per [La Fusione](/upgrades/merge), queste reti di prova hanno attraversato una transazione al Proof of Stake, offrendo l'opportunità di numerose 'prove generali' prima che gli sviluppatori fondessero la Rete principale di Ethereum. Le reti di prova di Ethereum sono ora Proof of Stake, come la Rete principale di Ethereum.
+La maggior parte delle reti di prova è partita utilizzando un meccanismo di consenso Proof of Authority. Significa che viene scelto un ristretto numero di nodi per convalidare le transazioni e creare nuovi blocchi, e questi fanno staking con la propria identità in questo processo. In alternativa, alcune reti di prova sono nate usando un meccanismo di consenso Proof of Work, con solamente pochi miner autorizzati. Tuttavia, in preparazione per [La Fusione](/roadmap/merge), queste reti di prova hanno attraversato una transazione al Proof of Stake, offrendo l'opportunità di numerose 'prove generali' prima che gli sviluppatori fondessero la Rete principale di Ethereum. Le reti di prova di Ethereum sono ora Proof of Stake, come la Rete principale di Ethereum.
 
 Gli ETH sulle reti di prova non hanno valore reale, quindi non c'è un mercato per gli ETH delle reti di prova. Siccome serviranno ETH per interagire con Ethereum, molti ottengono ETH delle reti di prova da faucet. La maggior parte dei faucet sono webapp dove è possibile inserire un indirizzo al quale verranno inviati gli ETH.
 

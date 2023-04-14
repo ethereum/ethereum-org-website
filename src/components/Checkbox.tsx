@@ -11,7 +11,7 @@ const CustomIcon = (props: CheckboxIconProps) => {
     <Icon
       viewBox="0 0 24 24"
       fill="none"
-      stroke="white"
+      stroke="buttonColor"
       strokeWidth="2px"
       w="100%"
       h="100%"

@@ -173,7 +173,7 @@ Erigon که قبلاً به عنوان Erigon شناخته می‌شد، یک ف
 
 نگاهی اجمالی بر رویکردهای همگام‌سازی استفاده‌شده در شبکه‌ی اصلی کلاینت‌های آماده:
 
-##### همگام‌سازی کامل {#full-sync}
+##### همگام‌سازی کامل
 
 همگام‌سازی کامل همه‌ی بلوک‌ها (از جمله هدرها، تراکنش‌ها و رسیدها) را بارگیری می‌کند و با اجرای هر بلوک از پیدایش، وضعیت زنجیره‌ی بلوکی را به صورت تدریجی ایجاد می‌کند.
 
@@ -243,17 +243,15 @@ Erigon که قبلاً به عنوان Erigon شناخته می‌شد، یک ف
 
 ## کلاینت‌های اجماع («کلاینت‌های Eth2» سابق) {#consensus-clients}
 
-چندین کلاینت اجماع (که قبلاً به‌عنوان کلاینت‌های «Eth2» شناخته می‌شدند) وجود دارد که از [ارتقاهای اجماع](/upgrades/beacon-chain/) پشتیبانی می‌کنند. They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/upgrades/merge/).
-
-[کلاینت‌های اجماع را مشاهده کنید](/upgrades/get-involved/#clients).
+چندین کلاینت اجماع (که قبلاً به‌عنوان کلاینت‌های «Eth2» شناخته می‌شدند) وجود دارد که از [ارتقاهای اجماع](/roadmap/beacon-chain/) پشتیبانی می‌کنند. They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/roadmap/merge/).
 
 | کلاینت                                                      | زبان       | سیستم‌عامل              | شبکه‌ها                                  |
 | ----------------------------------------------------------- | ---------- | ----------------------- | ---------------------------------------- |
-| [Teku](https://pegasys.tech/teku)                           | جاوا       | لینوکس، ویندوز، مک‌اواس | زنجیره‌ی بیکن، Prater                    |
-| [Nimbus](https://nimbus.team/)                              | Nim        | لینوکس، ویندوز، مک‌اواس | زنجیره‌ی بیکن، Prater                    |
-| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | لینوکس، ویندوز، مک‌اواس | زنجیره‌ی بیکن، Prater،‏ Pyrmont          |
-| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | لینوکس، ویندوز، مک‌اواس | زنجیره‌ی بیکن، Prater                    |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | لینوکس، ویندوز، مک‌اواس | زنجیره‌ی بیکن، Gnosis،‏ Prater،‏ Pyrmont |
+| [Teku](https://pegasys.tech/teku)                           | جاوا       | لینوکس، ویندوز، مک‌اواس | زنجیره‌ی بیکن، Goerli                    |
+| [Nimbus](https://nimbus.team/)                              | Nim        | لینوکس، ویندوز، مک‌اواس | زنجیره‌ی بیکن، Goerli                    |
+| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | لینوکس، ویندوز، مک‌اواس | زنجیره‌ی بیکن، Goerli،‏ Pyrmont          |
+| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | لینوکس، ویندوز، مک‌اواس | زنجیره‌ی بیکن، Goerli                    |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | لینوکس، ویندوز، مک‌اواس | زنجیره‌ی بیکن، Gnosis،‏ Goerli،‏ Pyrmont |
 
 ## سخت‌افزار {#hardware}
 

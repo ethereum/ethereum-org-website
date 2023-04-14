@@ -2,7 +2,6 @@
 title: Resources for translators
 lang: en
 description: Useful resources for ethereum.org translators
-sidebar: true
 ---
 
 # Resources {#resources}

@@ -8,7 +8,7 @@ image: ../../../../../assets/staking/leslie-solo.png
 alt: Leslie il rinoceronte sul suo chip informatico.
 sidebarDepth: 2
 summaryPoints:
-  - Ricevi ricompense massime direttamente dal protocollo (incluse le commissioni non bruciate dopo La Fusione) per mantenere il tuo validatore propriamente funzionante e online
+  - Ricevi le ricompense massime direttamente dal protocollo per mantenere il tuo validatore propriamente in funzione e online
   - Opera hardware domestico e aggiungi personalmente alla sicurezza e decentralizzazione della rete di Ethereum
   - Rimuovi la fiducia e non lasciar mai perdere il controllo delle chiavi dei tuoi fondi
 ---
@@ -16,6 +16,8 @@ summaryPoints:
 ## Cos'è lo staking in solo? {#what-is-solo-staking}
 
 Lo staking in solo è l'atto di [operare un nodo di Ethereum](/run-a-node/) connesso a Internet e depositare 32 ETH per attivare un [validatore](#faq), dandoti l'abilità di partecipare direttamente nel consenso della rete.
+
+**Lo staking in solo aumenta la decentralizzazione della rete di Ethereum**, rendendola più resistente alla censura e più robusto contro gli attacchi. Altri metodi di staking potrebbero non aiutare la rete nello stesso modo. Lo staking in solo è la migliore opzione di staking per proteggere Ethereum.
 
 Un nodo di Ethereum consiste sia nel client del livello di esecuzione (EL), che di un client del livello di consenso (CL). Questi client sono software che cooperano, insieme a una valida serie di chiavi di firma, per verificare le transazioni e i blocchi, attestare al capo corretto della catena, aggregare le attestazioni e proporre i blocchi.
 
@@ -25,18 +27,12 @@ Uno staker in solo riceve ricompense direttamente dal protocollo per mantenere i
 
 ## Perché mettere in staking in solitaria? {#why-stake-solo}
 
-Lo staking in solo include maggiore responsabilità, ma ti fornisce il massimo controllo sui tuoi fondi e la tua configurazione di staking.
+Lo staking in solo richiede una maggiore responsabilità, ma fornisce il massimo controllo sui fondi e la configurazione di staking.
 
 <CardGrid>
-  <Card title="Ottieni nuovi ETH" emoji="💸">
-    Ottieni ricompense denominate in ETH direttamente dal protocollo quando il tuo validatore è online, senza alcun mediatore che prenda parti.
-  </Card>
-  <Card title="Controllo completo" emoji="🎛️">
-    Mantieni le tue chiavi. Scegli la combinazione di client e hardware che ti consente di minimizzare i tuoi rischi e meglio contribuire alla salute e integrità della rete. I servizi di staking di terze parti prendono per te queste decisioni e non fanno sempre le scelte più sicure.
-  </Card>
-  <Card title="Sicurezza della rete" emoji="🔐">
-    Lo staking in solo è il metodo più d'impatto per fare staking. Operando un validatore sul tuo hardware domestico, rafforzi la robustezza, decentralizzazione e sicurezza del protocollo di Ethereum.
-  </Card>
+  <Card title="Ottieni nuovi ETH" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
+  <Card title="Controllo completo" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
+  <Card title="Sicurezza della rete" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
 ## Considerazioni prima dello staking in solo {#considerations-before-staking-solo}
@@ -57,7 +53,7 @@ Per quanto vorremmo che lo staking in solo fosse accessibile e privo di rischi p
     <p style={{marginTop: "1rem"}}><a href="/security">Sicurezza di Ethereum e prevenzione delle truffe</a></p>
   </ExpandableCard>
   <ExpandableCard title="Nessun prelievo (per ora)" eventCategory="SoloStaking" eventName="clicked no withdrawing">
-    Il prelievo degli ETH in staking o delle ricompense dal saldo di un validatore non è ancora supportato. Il supporto per i prelievi è pianificato per l'aggiornamento Shanghai, consecutivo alla Fusione. Dovresti anticipare che i tuoi ETH resteranno bloccati per almeno uno o due anni. Dopo l'aggiornamento Shanghai potrai prelevare liberamente porzioni o tutto il tuo stake se lo desideri.
+    Il prelievo degli ETH in staking o delle ricompense dal saldo di un validatore non è ancora supportato. Il supporto per i prelievi è pianificato per il prossimo aggiornamento Shanghai. Dopodiché, gli utenti potranno aderire per ricevere automaticamente i pagamenti delle ricompense e potranno prelevare il saldo per intero per ricevere i fondi.
   </ExpandableCard>
   <ExpandableCard title="Manutenzione" eventCategory="SoloStaking" eventName="clicked maintenance">
     L'hardware, talvolta, si guasta, le connessioni di rete generano errori e il software del client a volte necessita di aggiornamenti. La manutenzione del nodo è inevitabile e richiederà occasionalmente la tua attenzione. Vorrai assicurarti di esser consapevole di qualsiasi aggiornamento di rete anticipato o di altri aggiornamenti critici del client.
@@ -78,19 +74,19 @@ Per quanto vorremmo che lo staking in solo fosse accessibile e privo di rischi p
 
 <StakingHowSoloWorks />
 
-Se lo desideri, puoi smettere di essere un validatore; in questo modo viene meno il requisito di essere online e si interrompe qualsiasi ulteriore ricompensa. Ricorda che fino all'aggiornamento Shanghai pianificato, il _prelievo_ di questi fondi non sarà possibile.
+Quando saranno attivi, riceverai le ricompense in ETH, che saranno depositate periodicamente al tuo indirizzo di prelievo.
 
-Dopo Shanghai, gli utenti potranno prelevare le proprie ricompense nonché il proprio stake, se lo desiderano.
+Se lo desideri, puoi smettere di essere un validatore; in questo modo viene meno il requisito di essere online e si interrompe qualsiasi ulteriore ricompensa. Il saldo rimanente sarà poi prelevato all'indirizzo di prelievo che hai indicato durante la configurazione.
+
+_L'aggiornamento Shanghai è necessario per consentire i pagamenti delle ricompense e i prelievi completi dei validatori in uscita._
+
+[Di più sulle ricompense di staking](/staking/withdrawals/)
 
 ## Inizia con il Launchpad di Staking {#get-started-on-the-staking-launchpad}
 
 Il Launchpad di Staking è un'applicazione open source che ti aiuterà a diventare uno staker. Ti guiderà per la scelta dei tuoi client, la generazione delle tue chiavi e il deposito dei tuoi ETH al contratto di deposito di staking. Una lista di controllo è fornita per assicurarsi che tu abbia coperto tutto per configurare in sicurezza il tuo validatore.
 
 <StakingLaunchpadWidget />
-
-<InfoBanner emoji=":panda:" isWarning>
-<strong>Nota per gli staker esistenti:</strong> La Fusione si avvicina, il che porta qualche modifica rispetto al lancio dello staking. Assicurati di conoscere bene con la <a href="https://launchpad.ethereum.org/en/merge-readiness">Lista di controllo di preparazione alla Fusione</a> sul Launchpad di Staking.
-</InfoBanner>
 
 ## Cosa considerare con il nodo e gli strumenti di configurazione del client {#node-tool-considerations}
 
@@ -129,7 +125,9 @@ Hai un suggerimento per uno strumento di staking che abbiamo dimenticato? Dai un
 Esistono alcune domande molto comuni sullo staking che meritano di essere affrontate.
 
 <ExpandableCard title="Cos'è un validatore?">
-Un <em>validatore</em> è un'entità virtuale che risiede sulla Beacon Chain e partecipa al consenso del protocollo di Ethereum. I validatori sono rappresentati da un saldo, una chiave pubblica e altre proprietà. Un <em>client del validatore</em> è il software che agisce per conto del validatore detenendone e usandone la chiave privata. Un singolo client del validatore può detenere molte coppie di chiavi, controllando molti validatori.
+
+Un _validatore_ è un'entità virtuale che risiede su Ethereum e partecipa al consenso del protocollo di Ethereum. I validatori sono rappresentati da un saldo, una chiave pubblica e altre proprietà. Un _client del validatore_ è il software che agisce per conto del validatore, detenendone e usandone la chiave privata. Un singolo client del validatore può detenere molte coppie di chiavi, controllando molti validatori.
+
 </ExpandableCard>
 
 <ExpandableCard title="Posso depositare più di 32 ETH?">
@@ -145,7 +143,7 @@ Andare offline quando la rete sta finalizzando correttamente NON comporterà alc
 
 Nota che le sanzioni per inattività sono proporzionali a quanti validatori sono offline contemporaneamente. Nei casi in cui una grande porzione della rete è offline in una volta sola, le sanzioni per ciascuno di questi validatori saranno maggiori rispetto a quando non è disponibile un singolo validatore.
 
-In casi estremi, se la rete interrompe la finalizzazione a causa del fatto che più di un terzo dei validatori è offline, questi utenti subiranno quella che è nota come una <em>fuga d'inattività quadratica</em>, una perdita esponenziale di ETH dai conti del validatore offline. Questo consente alla rete, eventualmente, di auto-curarsi bruciando gli ETH dei validatori inattivi finché il loro saldo non raggiunge i 16 ETH, e a quel punto saranno automaticamente espulsi dal pool del validatore. I validatori online rimanenti alla fine comprenderanno ancora oltre i 2/3 della rete, soddisfacendo la super maggioranza necessaria per finalizzare nuovamente la catena.
+In casi estremi, se la rete interrompe la finalizzazione poiché più di un terzo dei validatori è offline, questi utenti subiranno quella che è nota come <em>fuga d'inattività quadratica</em>, una riduzione esponenziale di ETH dai conti offline dei validatori. Questo consente alla rete, eventualmente, di auto-curarsi bruciando gli ETH dei validatori inattivi finché il loro saldo non raggiunge i 16 ETH, e a quel punto saranno automaticamente espulsi dal pool del validatore. I validatori online rimanenti alla fine comprenderanno ancora oltre i 2/3 della rete, soddisfacendo la super maggioranza necessaria per finalizzare nuovamente la catena.
 </ExpandableCard>
 
 <ExpandableCard title="Come mi assicuro di non esser tagliato?">
@@ -157,7 +155,7 @@ Operare un client di super maggioranza (ogni client usato da oltre 2/3 della ret
 
 I bug equivalenti in un <em>client di minoranza non sarebbero mai finalizzati</em> e, ciò risulterebbe in un voto di contorno, con la semplice conseguenza di sanzioni d'inattività, <em>non tagli</em>.
 
-<p><a href="https://hackernoon.com/ethereums-client-diversity-problem">Scopri di più sull'importanza di operare un client di minoranza.</a></p>
+<p><a href="https://hackernoon.com/ethereums-client-diversity-problem">Scopri di più sull'importanza di eseguire un client di minoranza.</a></p>
 <p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Scopri di più sulla prevenzione dei tagli</a></p>
 </ExpandableCard>
 
@@ -179,16 +177,16 @@ Le sanzioni offline sono proporzionali a quanti altri sono offline contemporanea
 <a href="https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/">Ulteriori informazioni su ricompense e sanzioni</a>
 </ExpandableCard>
 
-<ExpandableCard title="Devo fare qualcosa prima della Fusione?">
-Gli staker che operano correntemente sul client del livello di consenso (Beacon Chain) dovranno anche eseguire un client del livello di esecuzione dopo La Fusione. La nuova API di Engine sarà usata per interfacciarsi tra i due livelli, richiedendo un codice segreto JWT. Se attualmente utilizzi una Beacon Chain senza un client del livello di esecuzione, dovrai sincronizzare il livello di esecuzione prima della Fusione per restare sincronizzato con la rete.
+<ExpandableCard title="Come sblocco le mie ricompense o riprendo i miei ETH?">
+Al momento dell'aggiornamento Shanghai, saranno disponibili i pagamenti delle ricompense e i prelievi completi per i validatori in uscita. I prelievi di ogni tipo dalla beacon chain richiedono l'impostazione delle credenziali di prelievo.
 
-La Fusione porterà anche le commissioni di transazione non bruciate ai validatori. Queste commissioni non si accumulano nel saldo associato alle chiavi del validatore ma possono essere dirette a un regolare indirizzo di Ethereum di tua scelta. Per ricevere le tue mance (commissioni prioritarie) dai blocchi proposti, dovresti aggiornare le impostazioni del tuo client con l'indirizzo verso cui desideri siano inviate.
+I nuovi staker le hanno impostate al momento della generazione della chiave e del deposito. Gli staker esistenti che non le hanno già impostate, potranno aggiornare le proprie chiavi per supportare tale funzionalità, dopo l'aggiornamento Shanghai.
 
-I collegamenti alla documentazione del singolo client e le informazioni aggiuntive si possono trovare sulla lista di controllo di preparazione alla Fusione sul Launchpad.
+Una volta impostate le credenziali di prelievo, i pagamenti delle ricompense (gli ETH accumulati oltre i 32 iniziali) saranno distribuiti periodicamente e automaticamente all'indirizzo di prelievo.
 
-<ButtonLink to="https://launchpad.ethereum.org/merge-readiness/">
-Lista di controllo di preparazione alla Fusione
-</ButtonLink>
+Per sbloccare e ricevere il tuo intero saldo, devi inoltre completare il processo di uscita dal tuo validatore.
+
+<ButtonLink to="/staking/withdrawals/">Di più sulle ricompense di staking</ButtonLink>
 </ExpandableCard>
 
 ## Approfondimenti {#further-reading}

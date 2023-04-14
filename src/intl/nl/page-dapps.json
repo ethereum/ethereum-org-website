@@ -6,6 +6,7 @@
   "page-dapps-audius-logo-alt": "Audius logo",
   "page-dapps-augur-logo-alt": "Augur logo",
   "page-dapps-axie-infinity-logo-alt": "Axie Infinity-logo",
+  "page-dapps-balancer-logo-alt": "Balancer logo",
   "page-dapps-brave-logo-alt": "Brave logo",
   "page-dapps-category-arts": "Kunst en mode",
   "page-dapps-category-browsers": "Browsers",
@@ -47,6 +48,7 @@
   "page-dapps-dapp-description-audius": "Gedecentraliseerd streamingplatform. Luisterbeurten = geld voor makers, niet labels.",
   "page-dapps-dapp-description-augur": "Wed op uitkomsten van sport, economie en andere wereldevenementen.",
   "page-dapps-dapp-description-axie-infinity": "Handel en vecht met wezens genaamd Axies. En verdien terwijl u speelt - beschikbaar op mobiel",
+  "page-dapps-dapp-description-balancer": "Balancer is een geautomatiseerde portfolio-manager en handelsplatform.",
   "page-dapps-dapp-description-brave": "Verdien tokens door te surfen en ondersteun hiermee uw favoriete makers.",
   "page-dapps-dapp-description-cent": "Een sociaal netwerk waar u geld verdient door NFT's te posten.",
   "page-dapps-dapp-description-compound": "Leen uw tokens uit om er rente op te verdienen en neem deze op elk gewenst moment op.",
@@ -77,6 +79,7 @@
   "page-dapps-dapp-description-zapper": "Volg uw portfolio en gebruik een bereik van DeFi-producten uit één enkele interface.",
   "page-dapps-dapp-description-zerion": "Beheer uw portfolio en beoordeel eenvoudig alle DeFi-activa op de markt.",
   "page-dapps-dapp-description-rotki": "Tool voor opensource portfolio-tracking, analyse, boekhouding en fiscale verslaglegging die uw privacy respecteert.",
+  "page-dapps-dapp-description-krystal": "Een one-stop platform om toegang te krijgen tot al uw favoriete DeFi-diensten.",
   "page-dapps-dapp-description-rarible": "Maak, verkoop en koop getokeniseerde verzamelobjecten.",
   "page-dapps-dapp-description-sablier": "Stream geld in real-time.",
   "page-dapps-dapp-description-superrare": "Koop digitale kunstwerken rechtsreeks van kunstenaars of op secundaire markten.",
@@ -93,6 +96,7 @@
   "page-dapps-zapper-logo-alt": "Zapper logo",
   "page-dapps-zerion-logo-alt": "Zerion logo",
   "page-dapps-rotki-logo-alt": "Rotki logo",
+  "page-dapps-krystal-logo-alt": "Krystal logo",
   "page-dapps-desc": "Zoek een Ethereum-applicatie om uit te proberen.",
   "page-dapps-doge-img-alt": "Illustratie van een doge die een computer gebruikt",
   "page-dapps-editors-choice-dark-forest": "Speel tegen anderen om planeten te veroveren en probeer bleeding-edge Ethereum scaling/privacy-technologie uit. Misschien iets voor degenen die al bekend zijn met Ethereum.",
@@ -203,5 +207,10 @@
   "page-dapps-what-are-dapps": "Wat zijn dapps?",
   "page-dapps-more-on-defi-button": "Meer over gedecentraliseerd financiën",
   "page-dapps-more-on-nft-button": "Meer over getokeniseerde verzamelobjecten",
-  "page-dapps-more-on-nft-gaming-button": "Meer over getokeniseerde in-game items"
+  "page-dapps-more-on-nft-gaming-button": "Meer over getokeniseerde in-game items",
+  "page-dapps-dapp-description-pwn": "Eenvoudige leningen ondersteund door eender welke token of NFT's op Ethereum.",
+  "page-dapps-pwn-image-alt": "PWN logo",
+  "foundation": "Foundation",
+  "transaction-fees": "Wat zijn transactiekosten?",
+  "page-wallets-get-some": "Verkrijg ETH"
 }

@@ -72,7 +72,7 @@ If the challenge period elapses without anyone providing a fraud-proof, Alice's 
 
 ### Dispute arbitration {#dispute-arbitration}
 
-Like any blockchain, plasma chains need a mechanism for enforcing the integrity of transactions in case participants to start acting maliciously (e.g., double-spending funds). To this end, plasma chains use fraud proofs to arbitrate disputes concerning the validity of state transitions and penalize bad behavior.
+Like any blockchain, plasma chains need a mechanism for enforcing the integrity of transactions in case participants act maliciously (e.g. double-spending funds). To this end, plasma chains use fraud proofs to arbitrate disputes concerning the validity of state transitions and penalize bad behavior. Fraud proofs are used as a mechanism through which a Plasma child chain files a complaint to its parent chain or to the root chain.
 
 A fraud-proof is simply a claim that a particular state transition is invalid. An example is if a user (Alice) tries to spend the same funds twice. Perhaps she spent the UTXO in a transaction with Bob and wants to spend the same UTXO (which is now Bob's) in another transaction.
 
@@ -94,7 +94,7 @@ Plasma chains primarily store transaction data with the operator and **do not pu
 
 The problem starts when the operator, not just any user, is the party acting maliciously. Because the operator is in sole control of the blockchain, they have more incentive to advance invalid state transitions on a larger scale, such as stealing funds belonging to users on the plasma chain.
 
-In this case, using the classic fraud-proof system cannot work. The operator could easily make an invalid transaction transferring Alice and Bob's funds to their wallet and hide the data necessary for creating the fraud-proof. This is possible because the operator isn't required to make data available to users or Mainnet.
+In this case, using the classic fraud-proof system does not work. The operator could easily make an invalid transaction transferring Alice and Bob's funds to their wallet and hide the data necessary for creating the fraud-proof. This is possible because the operator isn't required to make data available to users or Mainnet.
 
 Therefore, the most optimistic solution is to attempt a "mass exit" of users from the plasma chain. The mass exit slows down the malicious operator's plan to steal funds and provides some measure of protection for users. Withdrawal requests are ordered based on when each UTXO (or token) was created, preventing malicious operators from front-running honest users.
 
@@ -151,11 +151,13 @@ Conversely, plasma chains derive their security from Mainnet. This makes them me
 
 ### Plasma vs sharding {#plasma-vs-sharding}
 
-Both plasma chains and [shard chains](/upgrades/sharding/) periodically publish cryptographic proofs to Ethereum Mainnet. However, both have different security properties.
+Both plasma chains and shard chains periodically publish cryptographic proofs to Ethereum Mainnet. However, both have different security properties.
 
 Shard chains commit "collation headers" to Mainnet containing detailed information about each data shard. Nodes on Mainnet verify and enforce the validity of data shards, reducing the possibility of invalid shard transitions and protecting the network against malicious activity.
 
 Plasma is different because Mainnet only receives minimal information about the state of child chains. This means Mainnet cannot effectively verify transactions conducted on child chains, making them less secure.
+
+**Note** that sharding the Ethereum blockchain is no longer on the roadmap. It has been superseded by scaling via rollups and [Danksharding](/roadmap/danksharding).
 
 ### Use Plasma {#use-plasma}
 
@@ -168,7 +170,6 @@ Multiple projects provide implementations of Plasma that you can integrate into 
 
 ## Further reading {#further-reading}
 
-- [EthHub on Plasma](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/plasma/)
 - [Learn Plasma](https://www.learnplasma.org/en/)
 - [A quick reminder of what "shared security" means and why it's so important](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
 - [Sidechains vs Plasma vs Sharding](https://vitalik.ca/general/2019/06/12/plasma_vs_sharding.html)

@@ -2,7 +2,7 @@
 title: How to Write & Deploy an NFT (Part 1/3 of NFT Tutorial Series)
 description: This tutorial is Part 1 of a series on NFTs that will take you step by step on how to write and deploy a Non Fungible Token (ERC-721 token) smart contract using Ethereum and Inter Planetary File System (IPFS).
 author: "Sumi Mudgil"
-tags: ["NFTs", "ERC-721", "Alchemy", "Solidity", "smart contracts"]
+tags: ["ERC-721", "Alchemy", "Solidity", "smart contracts"]
 skill: beginner
 lang: en
 published: 2021-04-22
@@ -235,7 +235,7 @@ Your `.env` should now look like this:
 
 To actually connect these to our code, we’ll reference these variables in our hardhat.config.js file in step 13.
 
-<InfoBanner isWarning={true}>
+<InfoBanner isWarning>
 Don't commit <code>.env</code>! Please make sure never to share or expose your <code>.env</code> file with anyone, as you are compromising your secrets in doing so. If you are using version control, add your <code>.env</code> to a <a href="https://git-scm.com/docs/gitignore">gitignore</a> file.
 </InfoBanner>
 

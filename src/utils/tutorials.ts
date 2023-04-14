@@ -8,25 +8,26 @@ export const filterTutorialsByLang = (
   externalTutorials: Array<IExternalTutorial>,
   locale: Lang
 ): Array<ITutorial> => {
-  const internalTutorialsMap = internalTutorials.map((tutorial) => ({
-    to:
-      tutorial?.fields?.slug?.substr(0, 3) === "/en"
-        ? tutorial.fields.slug.substr(3)
-        : tutorial.fields?.slug || "/",
-    title: tutorial?.frontmatter?.title || "",
-    description: tutorial?.frontmatter?.description || "",
-    author: tutorial?.frontmatter?.author || "",
-    tags: tutorial?.frontmatter?.tags?.map((tag) =>
-      (tag || "").toLowerCase().trim()
-    ),
-    skill: tutorial?.frontmatter?.skill as Skill,
-    timeToRead: tutorial?.fields?.readingTime?.minutes
-      ? Math.round(tutorial?.fields?.readingTime?.minutes)
-      : null,
-    published: tutorial?.frontmatter?.published,
-    lang: tutorial?.frontmatter?.lang || "en",
-    isExternal: false,
-  }))
+  const internalTutorialsMap = internalTutorials.map((tutorial) => {
+    const lang = tutorial?.frontmatter?.lang || "en"
+
+    return {
+      to: tutorial.fields?.slug.replace(`/${lang}/`, "/") || "/",
+      title: tutorial?.frontmatter?.title || "",
+      description: tutorial?.frontmatter?.description || "",
+      author: tutorial?.frontmatter?.author || "",
+      tags: tutorial?.frontmatter?.tags?.map((tag) =>
+        (tag || "").toLowerCase().trim()
+      ),
+      skill: tutorial?.frontmatter?.skill as Skill,
+      timeToRead: tutorial?.fields?.readingTime?.minutes
+        ? Math.round(tutorial?.fields?.readingTime?.minutes)
+        : null,
+      published: tutorial?.frontmatter?.published,
+      lang,
+      isExternal: false,
+    }
+  })
 
   const externalTutorialsMap = externalTutorials.map<ITutorial>(
     (tutorial: IExternalTutorial) => ({

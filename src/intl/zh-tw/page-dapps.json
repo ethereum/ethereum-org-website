@@ -6,6 +6,7 @@
   "page-dapps-audius-logo-alt": "Audius 標誌",
   "page-dapps-augur-logo-alt": "Augur 標誌",
   "page-dapps-axie-infinity-logo-alt": "Axie Infinity 標誌",
+  "page-dapps-balancer-logo-alt": "Balancer 標誌",
   "page-dapps-brave-logo-alt": "Brave 標誌",
   "page-dapps-category-arts": "藝術與時尚",
   "page-dapps-category-browsers": "瀏覽器",
@@ -47,6 +48,7 @@
   "page-dapps-dapp-description-audius": "去中心化串流服務平台。聽眾聆聽音樂等於為創作者創造收益，而非為品牌創造收益。",
   "page-dapps-dapp-description-augur": "針對運動賽事、經濟和更多世界活動的結果下賭注。",
   "page-dapps-dapp-description-axie-infinity": "與稱為 Axies 的生物進行交易和戰鬥。邊玩遊戲邊賺錢，可在行動裝置上遊玩",
+  "page-dapps-dapp-description-balancer": "Balancer 是一個自動的投資組合管理工具及交易平台。",
   "page-dapps-dapp-description-brave": "跟他們一起瀏覽並支持您喜愛的創作者，並賺取代幣。",
   "page-dapps-dapp-description-cent": "社交網路讓您能藉由上傳非同質化代幣賺取資金。",
   "page-dapps-dapp-description-compound": "將您的代幣借給他人以賺取利息，並可隨時取回代幣。",
@@ -77,6 +79,7 @@
   "page-dapps-dapp-description-zapper": "使用單一介面追蹤您的投資組合及去中心化金融產品。",
   "page-dapps-dapp-description-zerion": "管理您的投資組合，並簡單評估各個市場上的去中心化金融資產。",
   "page-dapps-dapp-description-rotki": "尊重您隱私的開源投資組合追蹤、分析、管理，及稅金報告工具。",
+  "page-dapps-dapp-description-krystal": "一個能夠存取所有您最喜愛的去中心化金融服務的一站式平台。",
   "page-dapps-dapp-description-rarible": "創作、販賣及購買代幣化收藏品。",
   "page-dapps-dapp-description-sablier": "即時流通資金。",
   "page-dapps-dapp-description-superrare": "直接從藝術家或二級市場購買數位藝術品。",
@@ -93,6 +96,7 @@
   "page-dapps-zapper-logo-alt": "Zapper 標誌",
   "page-dapps-zerion-logo-alt": "Zerion 標誌",
   "page-dapps-rotki-logo-alt": "Rotki 標誌",
+  "page-dapps-krystal-logo-alt": "Krystal 標誌",
   "page-dapps-desc": "找個以太坊應用程式試一試。",
   "page-dapps-doge-img-alt": "插圖：狗狗使用電腦",
   "page-dapps-editors-choice-dark-forest": "對抗其他玩家、征服星球，並嘗試以太坊最新擴張/隱私技術。也許您的對手已經對以太坊很熟悉。",
@@ -203,5 +207,10 @@
   "page-dapps-what-are-dapps": "什麼是去中心化應用程式？",
   "page-dapps-more-on-defi-button": "更多關於去中心化金融",
   "page-dapps-more-on-nft-button": "更多關於代幣化收藏品",
-  "page-dapps-more-on-nft-gaming-button": "更多關於代幣化遊戲物品"
+  "page-dapps-more-on-nft-gaming-button": "更多關於代幣化遊戲物品",
+  "page-dapps-dapp-description-pwn": "由以太坊上的任何代幣或非同質化代幣支持的簡式貸款。",
+  "page-dapps-pwn-image-alt": "PWN 標誌",
+  "foundation": "基金會",
+  "transaction-fees": "什麼是交易手續費？",
+  "page-wallets-get-some": "取得一些以太幣"
 }

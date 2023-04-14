@@ -173,7 +173,7 @@ Erigon (в прошлом — Turbo-Geth) представляет собой о
 
 Общий обзор подходов к синхронизации, используемых в клиентах с поддержкой основной сети:
 
-##### Полная синхронизация {#full-sync}
+##### Полная синхронизация
 
 Полная синхронизация загружает все блоки (включая заголовки, транзакции и квитанции) и генерирует состояние блокчейна постепенно, выполняя каждый блок из начала.
 
@@ -243,17 +243,15 @@ Erigon (в прошлом — Turbo-Geth) представляет собой о
 
 ## Консенсус-клиенты (ранее — «клиенты Eth2») {#consensus-clients}
 
-Существует несколько консенсус-клиентов (ранее известных как «клиенты Eth2»), поддерживающих [обновления консенсуса](/upgrades/beacon-chain/). Они управляют цепочкой Beacon Chain и предоставят механизм консенсуса с доказательством владения клиентам-исполнителям после [слияния](/upgrades/merge/).
-
-[Взгляните на обзор консенсус-клиентов](/upgrades/get-involved/#clients).
+Существует несколько консенсус-клиентов (ранее известных как «клиенты Eth2»), поддерживающих [обновления консенсуса](/roadmap/beacon-chain/). Они управляют цепочкой Beacon Chain и предоставят механизм консенсуса с доказательством владения клиентам-исполнителям после [слияния](/roadmap/merge/).
 
 | Клиент                                                      | Язык       | Операционные системы  | Сети                                  |
 | ----------------------------------------------------------- | ---------- | --------------------- | ------------------------------------- |
-| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | Beacon Chain, Prater                  |
-| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Beacon Chain, Prater                  |
-| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Beacon Chain, Prater, Pyrmont         |
-| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Beacon Chain, Prater                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Prater, Pyrmont |
+| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | Beacon Chain, Goerli                  |
+| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Beacon Chain, Goerli                  |
+| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Beacon Chain, Goerli, Pyrmont         |
+| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Beacon Chain, Goerli                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Beacon Chain, Gnosis, Goerli, Pyrmont |
 
 ## Аппаратное обеспечение {#hardware}
 

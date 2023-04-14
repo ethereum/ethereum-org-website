@@ -20,6 +20,8 @@ The ethereum.org Translation Program is open and anyone can contribute!
 4. Machine translations will not be approved.
 5. All translations are reviewed before being added to the site, so there will be a short delay before your translations go live.
 
+_Join the [ethereum.org Discord](/discord/) to collaborate on translations, ask questions, share feedback and ideas, or join a translation group._
+
 <ButtonLink to="https://crowdin.com/project/ethereum-org/invite">
   Start translating
 </ButtonLink>
@@ -34,9 +36,9 @@ Read more about the ethereum.org Translation Program [mission and vision](/contr
 
 ### Our progress so far {#our-progress}
 
-- [**4,100 +** translators](/contributing/translation-program/contributors/)
-- [**50** languages live on site](/languages/)
-- [**2.5 million** words translated in 2022 so far](/contributing/translation-program/acknowledgements/)
+- [**4,700 +** translators](/contributing/translation-program/contributors/)
+- [**52** languages live on site](/languages/)
+- [**3 million** words translated in 2022](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
 
@@ -56,6 +58,12 @@ All of our translators are eligible for a POAP (Proof of Attendance Protocol) - 
 #### Translator acknowledgements {#translator-acknowledgements}
 
 Public acknowledgements of our top translators using [leaderboards](/contributing/translation-program/acknowledgements/) and a [list of all contributors to the Translation Program](/contributing/translation-program/contributors/).
+
+#### Rewards {#rewards}
+
+In the past, we have retroactively rewarded our most active contributors with tickets to Ethereum conferences like [Devcon](https://devcon.org/en/) and [Devconnect](https://devconnect.org/), as well as exclusive ethereum.org merch.
+
+We're constantly thinking of new and innovative ways to reward our contributors, so stay tuned!
 
 ### What we're working on {#our-projects}
 

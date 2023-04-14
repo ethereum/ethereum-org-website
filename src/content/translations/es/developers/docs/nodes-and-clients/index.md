@@ -173,7 +173,7 @@ Los modos de sincronización representan diferentes enfoques de este proceso con
 
 Resumen general de los enfoques de sincronización utilizados en clientes listos para la red principal:
 
-##### Sincronización total {#full-sync}
+##### Sincronización total
 
 La sincronización total descarga todos los bloques (incluidos los encabezados, las transacciones y los recibos) y va generando de manera creciente el estado del la cadena de bloques al ejecutar cada bloque desde el principio.
 
@@ -243,17 +243,15 @@ Como cualquier otra configuración, puede establecerse con un parámetro de inic
 
 ## Clientes de consenso (anteriormente, clientes Eth2) {#consensus-clients}
 
-Existen múltiples clientes de consenso (antes conocidos como clientes "Eth2") que respaldan las [actualizaciones de conseso](/upgrades/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/upgrades/merge/).
-
-[Ver clientes de consenso](/upgrades/get-involved/#clients).
+Existen múltiples clientes de consenso (antes conocidos como clientes "Eth2") que respaldan las [actualizaciones de conseso](/roadmap/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/roadmap/merge/).
 
 | Cliente                                                     | Idioma     | Sistemas operativos   | Redes                                     |
 | ----------------------------------------------------------- | ---------- | --------------------- | ----------------------------------------- |
-| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | Cadena de baliza, Prater                  |
-| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Cadena de baliza, Prater                  |
-| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Cadena de baliza, Prater, Pyrmont         |
-| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Cadena de baliza, Prater                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Cadena de baliza, Gnosis, Prater, Pyrmont |
+| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | Cadena de baliza, Goerli                  |
+| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Cadena de baliza, Goerli                  |
+| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Cadena de baliza, Goerli, Pyrmont         |
+| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Cadena de baliza, Goerli                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Cadena de baliza, Gnosis, Goerli, Pyrmont |
 
 ## Hardware {#hardware}
 

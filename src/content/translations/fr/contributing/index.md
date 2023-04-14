@@ -16,7 +16,7 @@ Le site ethereum.org, comme Ethereum plus largement, est un projet open source. 
 
 - [Travailler sur un ticket ouvert](https://github.com/ethereum/ethereum-org-website/issues) _– Travail que nous avons identifié comme devant être fait_
 - [Rejoindre le programme de traduction](/contributing/translation-program/) _– Aidez-nous à traduire ethereum.org dans les autres langues_
-- [Ajouter un article communautaire](/contributing/content-resources/) _– Ajoutez un article utile à la page adéquate_
+- [Ajouter un article de la Communauté](/contributing/content-resources/) _– Ajoutez un article utile à la page adéquate_
 - [Ajouter un produit/service](/contributing/adding-products/) _– Ajoutez une application décentralisée (DApp) ou un portefeuille à la page adéquate_
 - [Ajouter des outils de développement](/contributing/adding-developer-tools/) _– Ajoutez un outil de développement à la page adéquate_
 - [Ajouter un échange](/contributing/adding-exchanges/) _– Ajoutez une plateforme d'échange à notre [outil de recherche d'échange](/get-eth/#country-picker)_
@@ -26,7 +26,8 @@ Le site ethereum.org, comme Ethereum plus largement, est un projet open source. 
 - [Créer/modifier du contenu](/contributing/#how-to-update-content) _– Proposez de nouvelles pages ou des modifications de ce qui existe déjà_
 - [Ajouter une couche 2](/contributing/adding-layer-2s/) _– Ajoutez une couche 2 à une page pertinente_
 - [Ajouter un produit ou un service de mise en jeu](/contributing/adding-staking-products/) - _Ajouter un projet qui aide à faciliter la mise en jeu, mise en commun, ou mise en jeu en tant que service_
-- [Ajouter un portefeuille](/contributing/adding-wallets/) _- Ajouter un portefeuille pour la [page de recherche des portefeuilles.](/wallets/find-wallet/)_
+- [Ajouter un portefeuille](/contributing/adding-wallets/) _- Ajouter un portefeuille pour la [page de recherche des portefeuilles](/wallets/find-wallet/)_
+- [Suggérer un projet pour notre page DeSci](/contributing/adding-desci-projects/) _- Ajouter un projet construit sur Ethereum qui contribue à la science décentralisée_
 
 _Une question ?_ 🤔 Rejoignez-nous sur notre [serveur Discord](https://discord.gg/CetY6Y4)
 
@@ -72,7 +73,7 @@ Si votre contribution est fusionnée au contenu d'ethereum.org, nous vous remett
 ### Comment l'obtenir {#how-to-claim}
 
 1. Rejoignez notre [serveur Discord](https://discord.gg/E8dET2ux8y).
-2. Collez un lien vers votre contribution dans le salon `#🥇 | poaps`.
+2. Collez un lien vers votre contribution dans le `# 🥇poaps`[canal](https://discord.com/channels/714888181740339261/804005643211898911).
 3. Attendez qu'un membre de notre équipe vous envoie un lien vers votre POAP.
 4. Récupérez votre POAP !
 

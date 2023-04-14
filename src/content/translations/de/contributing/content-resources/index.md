@@ -10,7 +10,7 @@ Ethereum vollständig abzubilden, ist wegen des Umfangs nicht möglich. Daher ve
 
 Wenn Sie eine Ressource kennen, die Ihrer Meinung nach nützlich ist, können Sie sie an geeigneter Stelle zur Hinzufügung vorschlagen.
 
-## So treffen wir Entscheidungen {#how-we-decide}
+## Die Entscheidungsfindung {#how-we-decide}
 
 Die Lernressourcen werden anhand der folgenden Kriterien bewertet:
 

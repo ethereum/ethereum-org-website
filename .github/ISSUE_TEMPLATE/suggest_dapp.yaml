@@ -96,3 +96,14 @@ body:
       description: Is usage globally accessible, or do you have restrictions?
     validations:
       required: true
+  - type: checkboxes
+    id: dapp_work_on
+    attributes:
+      label: Would you like to work on this issue?
+      options:
+        - label: "Yes"
+          required: false
+        - label: "No"
+          required: false
+    validations:
+      required: true

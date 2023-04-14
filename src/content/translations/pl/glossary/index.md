@@ -27,7 +27,7 @@ Obiekt zawierający [adres](#address), saldo, [nonce](#nonce) oraz opcjonalną p
 
 ### adres {#address}
 
-Najczęściej jest to [EOA](#eoa) lub [umowa](#contract-accouint), która może odbierać (adres docelowy) lub wysyłać (adres źródłowy) [transakcje](#transaction) w łańcuchu bloków. Dokładniej rzecz ujmując, jest to 160 skrajnych prawych bitów [Keccak hash](#keccak-256) z [ECDSA](#ecdsa) [klucza publicznego](#public-key).
+Najczęściej jest to [EOA](#eoa) lub [umowa](#contract-account), która może odbierać (adres docelowy) lub wysyłać (adres źródłowy) [transakcje](#transaction) w łańcuchu bloków. Dokładniej rzecz ujmując, jest to 160 skrajnych prawych bitów [Keccak hash](#keccak-256) z [ECDSA](#ecdsa) [klucza publicznego](#public-key).
 
 ### Interfejs binarny aplikacji (ABI) {#abi}
 
@@ -57,7 +57,7 @@ Walidator głosuje na [łańcuch śledzący](#beacon-chain) lub [blok](#block) [
 
 Ulepszenie Eth2, które stanie się koordynatorem sieci Ethereum. Wprowadza [proof of stake](#proof-of-stake) i [walidatorów](#validator) do Ethereum. Zostanie on ostatecznie połączony z [siecią główną](#mainnet).
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink to="/roadmap/beacon-chain/">
   Łańcuch śledzący
 </DocLink>
 
@@ -617,7 +617,7 @@ Typ rozwiązania skalowania [warstwy 2](#layer-2) który zawiera wiele transakcj
 
 Czwarty i ostatni etap rozwoju Ethereum, znany pod nazwą Ethereum 2.0.
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   Ethereum 2.0 (Eth2)
 </DocLink>
 
@@ -629,7 +629,7 @@ Rodzina kryptograficznych funkcji skrótu opublikowanych przez Narodowy Instytut
 
 Łańcuch [proof-of-stake](#proof-of-stake) koordynowany przez [łańcuch śledzący](#beacon-chain) i zabezpieczony przez [walidatorów](#validator). Do sieci zostaną dodane 64 w ramach aktualizacji łańcucha odłamkowego Eth2. Łańcuchy odłamkowe będą oferować Ethereum zwiększoną przepustowość transakcji dzięki dostarczeniu dodatkowych danych do rozwiązań [warstwy 2](#layer-2) takich jak [optymistyczne pakiety zbiorcze](#optimistic-rollups) i [pakiety zbiorcze ZK](#zk-rollups).
 
-<DocLink to="/upgrades/shard-chains">
+<DocLink to="/roadmap/danksharding">
   Łańcuchy szczątkowe
 </DocLink>
 

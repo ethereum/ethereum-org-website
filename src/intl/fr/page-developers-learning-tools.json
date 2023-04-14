@@ -35,6 +35,8 @@
   "page-learning-tools-remix-logo-alt": "Logo Remix",
   "page-learning-tools-sandbox": "Boîtes à sable de code",
   "page-learning-tools-sandbox-desc": "Ces espaces de test vous permettront de faire des expériences avec la rédaction de contrats intelligents et de mieux comprendre d'Ethereum.",
+  "page-learning-tools-speed-run-ethereum-description": "Speed Run Ethereum est un ensemble de défis pour tester vos connaissances en Solidity en utilisant Scaffold-ETH",
+  "page-learning-tools-speed-run-ethereum-logo-alt": "Logo de Speed Run Ethereum",
   "page-learning-tools-studio-description": "Un IDE basé sur le Web où vous pouvez suivre des tutoriels pour créer et tester des contrats intelligents, et construire un frontend pour eux.",
   "page-learning-tools-vyperfun-description": "Apprenez à développer avec Vyper en construisant votre propre jeu de Pokémon.",
   "page-learning-tools-vyperfun-logo-alt": "Logo Vyper.fun",
@@ -43,5 +45,6 @@
   "page-learning-tools-pointer-description": "Apprenez à développer pour le Web3 grâce à des tutoriels interactifs et amusants. Gagnez des récompenses en cryptomonnaies tout au long du parcours",
   "page-learning-tools-pointer-logo-alt": "Logo de Pointer",
   "page-learning-tools-platzi-description": "Apprenez à construire des DApps sur Web3 et maîtrisez toutes les compétences nécessaires pour être un développeur blockchain.",
-  "page-learning-tools-platzi-logo-alt": "Logo de Platzi"
+  "page-learning-tools-platzi-logo-alt": "Logo de Platzi",
+  "alt-eth-blocks": "Illustration de blocs organisés comme un symbole ETH"
 }

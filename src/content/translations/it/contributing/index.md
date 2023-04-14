@@ -27,13 +27,14 @@ Il sito web di ethereum.org e, più in generale, Ethereum, è un progetto open-s
 - [Crea/modifica contenuti](/contributing/#how-to-update-content) _– Suggerisci nuove pagine o apporta modifiche a quelle già esistenti_
 - [Aggiungi un livello 2](/contributing/adding-layer-2s/) _- Aggiungi un livello 2 a una pagina pertinente_
 - [Aggiungi un prodotto o servizio di staking](/contributing/adding-staking-products/) - _Aggiungi un progetto che aiuti a facilitare lo staking in solo, in pool o lo staking come servizio_
-- [Aggiungi un portafoglio](/contributing/adding-wallets/) _- Aggiungi un portafoglio per la [pagina trova portafogli](/wallets/find-wallet/)._
+- [Aggiungi un portafoglio](/contributing/adding-wallets/) _– Aggiungi un portafoglio per la [pagina trova portafogli](/wallets/find-wallet/)_
+- [Suggerisci un progetto per la nostra pagina DeSci](/contributing/adding-desci-projects/) _- Aggiungi un progetto basato su Ethereum che contribuisca alla scienza decentralizzata_
 
 _Hai domande?_ Consulta il nostro [server Discord](https://discord.gg/CetY6Y4)
 
 ## Come lavorare su ethereum.org {#how-to-update-content}
 
-Che tu stia contribuendo al sito, creando contenuti o lavorando su ticket aperti, avrai bisogno di un profilo [GitHub](https://github.com).
+Che tu stia contribuendo al sito, creando contenuti o lavorando su ticket aperti, avrai bisogno di un profilo di [GitHub](https://github.com).
 
 Tutti gli aggiornamenti sono effettuati tramite il processo PR di GitHub. Questo significa che crei una copia locale del sito web, effettui le modifiche e richiedi di unire le tue modifiche. Se non lo hai mai fatto prima, segui le istruzioni in fondo al nostro [repository di GitHub](https://github.com/ethereum/ethereum-org-website).
 
@@ -77,7 +78,7 @@ Se il tuo contributo viene inserito su ethereum.org, conieremo per te un POAP di
 3. Attendi che un membro del nostro team ti invii un link al tuo POAP.
 4. Richiedi il tuo POAP!
 
-Dovresti usare solo portafogli autosufficienti per rivendicare i POAP. Non usare conti di scambio o altri conti per i quali non possiedi le chiavi private, poiché non ti consentiranno di accedere e gestire i tuoi POAP.
+Dovresti usare solo portafogli autosufficienti per rivendicare i POAP. Non usare conti di scambio o altri conti di cui non possiedi le chiavi private, poiché non ti consentiranno di accedere a e di gestire i tuoi POAP.
 
 ## Collaboratori {#contributors}
 

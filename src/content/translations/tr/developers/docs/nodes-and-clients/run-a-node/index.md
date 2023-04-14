@@ -144,7 +144,7 @@ Her istemci uygulamasının, eşler arası protokolde kullanılan insan tarafın
 
 #### Ek hizmetler çalıştırma {#running-additional-services}
 
-Kendi düğümünüzü çalıştırmak Ethereum istemci RPC'sine doğrudan erişim gerektiren hizmetleri kullanmanızı sağlar. Bu hizmetler, Ethereum'un üzerinde inşa edilen [katman 2 çözümleri](/developers/docs/scaling/#layer-2-scaling), [mutabakat katmanı istemcileri](/upgrades/get-involved/#clients) ve diğer Ethereum altyapıları gibi hizmetlerdir.
+Kendi düğümünüzü çalıştırmak Ethereum istemci RPC'sine doğrudan erişim gerektiren hizmetleri kullanmanızı sağlar. Bu hizmetler, Ethereum'un üzerinde inşa edilen [katman 2 çözümleri](/developers/docs/scaling/#layer-2-scaling), [mutabakat katmanı istemcileri](/developers/docs/nodes-and-clients/#consensus-clients) ve diğer Ethereum altyapıları gibi hizmetlerdir.
 
 #### Düğümü gözetleme {#monitoring-the-node}
 

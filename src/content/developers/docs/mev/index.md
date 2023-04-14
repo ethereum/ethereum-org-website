@@ -8,7 +8,7 @@ Maximal extractable value (MEV) refers to the maximum value that can be extracte
 
 ### Miner extractable value {#miner-extractable-value}
 
-Maximal extractable value was first applied in the context of [proof-of-work](/developers/docs/consensus-mechanisms/pow/), and initially referred to as "miner extractable value". This is because in proof-of-work, miners control transaction inclusion, exclusion, and ordering. However, since the transition to proof-of-stake via [The Merge](/upgrades/merge) validators have been responsible for these roles, and mining is no longer part of the Ethereum protocol. The value extraction methods still exist, though, so the term "Maximal extractable value" is now used instead.
+Maximal extractable value was first applied in the context of [proof-of-work](/developers/docs/consensus-mechanisms/pow/), and initially referred to as "miner extractable value". This is because in proof-of-work, miners control transaction inclusion, exclusion, and ordering. However, since the transition to proof-of-stake via [The Merge](/roadmap/merge) validators have been responsible for these roles, and mining is no longer part of the Ethereum protocol. The value extraction methods still exist, though, so the term "Maximal extractable value" is now used instead.
 
 ## Prerequisites {#prerequisites}
 
@@ -112,7 +112,7 @@ MEV extraction ballooned in early 2021, resulting in extremely high gas prices i
 
 While many searchers are still making good money from MEV, as opportunities become more well-known and more and more searchers compete for the same opportunity, validators will capture more and more total MEV revenue (because the same sort of gas auctions as originally described above also occur in Flashbots, albeit privately, and validators will capture the resulting gas revenue). MEV is also not unique to Ethereum, and as opportunities become more competitive on Ethereum, searchers are moving to alternate blockchains like Binance Smart Chain, where similar MEV opportunities as those on Ethereum exist with less competition.
 
-On the other hand, the transition from proof-of-work to proof-of-stake and the ongoing effort to scale Ethereum using rollups and sharding all change the MEV landscape in ways that are still somewhat unclear. It is not yet well known how having guaranteed block-proposers known slightly in advance changes the dynamics of MEV extraction compared to the probabilistic model in proof-of-work or how this will be disrupted when [single secret leader election](https://ethresear.ch/t/secret-non-single-leader-election/11789) and [distributed validator technology](https://github.com/ethereum/distributed-validator-specs) get implemented. Similarly, it remains to be seen what MEV opportunities exist when most user activity is ported away from Ethereum and onto its layer 2 rollups and shards.
+On the other hand, the transition from proof-of-work to proof-of-stake and the ongoing effort to scale Ethereum using rollups all change the MEV landscape in ways that are still somewhat unclear. It is not yet well known how having guaranteed block-proposers known slightly in advance changes the dynamics of MEV extraction compared to the probabilistic model in proof-of-work or how this will be disrupted when [single secret leader election](https://ethresear.ch/t/secret-non-single-leader-election/11789) and [distributed validator technology](https://github.com/ethereum/distributed-validator-specs) get implemented. Similarly, it remains to be seen what MEV opportunities exist when most user activity is ported away from Ethereum and onto its layer 2 rollups and shards.
 
 ## MEV in Ethereum Proof-of-Stake (PoS) {#mev-in-ethereum-proof-of-stake}
 
@@ -122,7 +122,7 @@ As explained, MEV has negative implications for overall user experience and cons
 
 In post-Merge Ethereum, validators (having made security deposits of 32 ETH) come to consensus on the validity of blocks added to the Beacon Chain. Since 32 ETH may be out of the reach of many, [joining a staking pool](/staking/pools/) may be a more feasible option. Nevertheless, a healthy distribution of [solo stakers](/staking/solo/) is ideal, as it mitigates the centralization of validators and improves Ethereum’s security.
 
-However, MEV extraction is believed to be capable of accelerating validator centralization. This is partly because, as validators [earn less for proposing blocks](/upgrades/merge/issuance/#how-the-merge-impacts-ETH-supply) than miners currently do, MEV extraction may greatly [influence validator earnings](https://github.com/flashbots/eth2-research/blob/main/notebooks/mev-in-eth2/eth2-mev-calc.ipynb) after The Merge.
+However, MEV extraction is believed to be capable of accelerating validator centralization. This is partly because, as validators [earn less for proposing blocks](/roadmap/merge/issuance/#how-the-merge-impacts-ETH-supply) than miners currently do, MEV extraction may greatly [influence validator earnings](https://github.com/flashbots/eth2-research/blob/main/notebooks/mev-in-eth2/eth2-mev-calc.ipynb) after The Merge.
 
 Larger staking pools will likely have more resources to invest in necessary optimizations to capture MEV opportunities. The more MEV these pools extract, the more resources they have to improve their MEV-extraction capabilities (and increase overall revenue), essentially creating [economies of scale](https://www.investopedia.com/terms/e/economiesofscale.asp#).
 
@@ -148,7 +148,7 @@ The combination of block producer and block proposer roles is what introduces mo
 
 Under PBS, a block builder creates a transaction bundle and places a bid for its inclusion in a Beacon Chain block (as the “execution payload”). The validator selected to propose the next block then checks the different bids and chooses the bundle with the highest fee. PBS essentially creates an auction market, where builders negotiate with validators selling blockspace.
 
-Current PBS designs use a [commit-reveal scheme](https://gitcoin.co/blog/commit-reveal-scheme-on-ethereum/) in which builders only publish a cryptographic commitment to a block’s contents (block header) along with their bids. After accepting the winning bid, the proposer creates a signed block proposal that includes the block header. The block builder is expected to publish the full block body after seeing the signed block proposal, and it must also receive receive enough [attestations](/glossary/#attestation) from validators before it is finalized.
+Current PBS designs use a [commit-reveal scheme](https://gitcoin.co/blog/commit-reveal-scheme-on-ethereum/) in which builders only publish a cryptographic commitment to a block’s contents (block header) along with their bids. After accepting the winning bid, the proposer creates a signed block proposal that includes the block header. The block builder is expected to publish the full block body after seeing the signed block proposal, and it must also receive enough [attestations](/glossary/#attestation) from validators before it is finalized.
 
 #### How does proposer-builder separation mitigate MEV’s impact? {#how-does-pbs-curb-mev-impact}
 
@@ -164,7 +164,7 @@ Similarly, validators don’t have to trust builders not to withhold block bodie
 
 While proposer-builder separation promises to reduce the effects of MEV extraction, implementing it requires changes to the consensus protocol. Specifically, the [fork choice](/developers/docs/consensus-mechanisms/pos/#fork-choice) rule on the Beacon Chain would need to be updated. The [Builder API](https://github.com/ethereum/builder-specs) is a temporary solution aimed at providing a working implementation of proposer-builder separation, albeit with higher trust assumptions.
 
-The Builder API is a modified version of the [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/specification.md) used by consensus layer clients to request execution payloads from execution layer clients. As outlined in the [honest validator specification](https://github.com/ethereum/consensus-specs/blob/dev/specs/bellatrix/validator.md), validators selected for block proposing duties request a transaction bundle from a connected execution client, which they include in the proposed Beacon Chain block.
+The Builder API is a modified version of the [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) used by consensus layer clients to request execution payloads from execution layer clients. As outlined in the [honest validator specification](https://github.com/ethereum/consensus-specs/blob/dev/specs/bellatrix/validator.md), validators selected for block proposing duties request a transaction bundle from a connected execution client, which they include in the proposed Beacon Chain block.
 
 The Builder API also acts as a middleware between validators and execution-layer clients; but it is different because it allows validators on the Beacon Chain to source blocks from external entities (instead of building a block locally using an execution client).
 
@@ -204,7 +204,7 @@ Some projects, such as MEV Boost, use the Builder API as part of an overall stru
 
 - [Flashbots docs](https://docs.flashbots.net/)
 - [Flashbots GitHub](https://github.com/flashbots/pm)
-- [MEV-Explore](https://explore.flashbots.net/) _Dashboard and live transaction explorer for MEV transactions_
+- [MEV-Explore](https://explore.flashbots.net/) - _Dashboard and live transaction explorer for MEV transactions_
 - [mevboost.org](https://www.mevboost.org/) - _Tracker with real-time stats for MEV-Boost relays and block builders_
 
 ## Further reading {#further-reading}

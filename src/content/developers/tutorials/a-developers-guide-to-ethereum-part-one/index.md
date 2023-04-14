@@ -3,7 +3,7 @@ title: A Python developer's introduction to Ethereum, part 1
 description: An introduction to Ethereum development, especially useful for those with knowledge of the Python programming language
 author: Marc Garreau
 lang: en
-tags: ["getting started", "python", "blockchain", "web3.py"]
+tags: ["python", "web3.py"]
 skill: beginner
 published: 2020-09-08
 source: Snake charmers
@@ -83,19 +83,19 @@ In this walkthrough, we’ll just be working within a Python interpreter. We won
 First, install [IPython](https://ipython.org/) for a user-friendly environment to explore in. IPython offers tab completion, among other features, making it much easier to see what’s possible within Web3.py.
 
 ```bash
-$ pip install ipython
+pip install ipython
 ```
 
 Web3.py is published under the name `web3`. Install it like so:
 
 ```bash
-$ pip install web3
+pip install web3
 ```
 
 One more thing – we're going to simulate a blockchain later, which requires a couple more dependencies. You can install those via:
 
 ```bash
-$ pip install 'web3[tester]'
+pip install 'web3[tester]'
 ```
 
 You’re all set up to go!
@@ -105,7 +105,7 @@ You’re all set up to go!
 Open up a new Python environment by running `ipython` in your terminal. This is comparable to running `python`, but comes with more bells and whistles.
 
 ```bash
-$ ipython
+ipython
 ```
 
 This will print out some information about the versions of Python and IPython you’re running, then you should see a prompt waiting for input:
@@ -124,7 +124,7 @@ In [1]: from web3 import Web3
 
 Besides being a gateway to Ethereum, the [Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api) module offers a few convenience functions. Let’s explore a couple.
 
-In an Ethereum application, you will commonly need to convert currency denominations. The Web3 module provides a couple of helper methods just for this: [fromWei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.fromWei) and [toWei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toWei).
+In an Ethereum application, you will commonly need to convert currency denominations. The Web3 module provides a couple of helper methods just for this: [from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei) and [to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei).
 
 <div class="featured">
 Note: Computers are notoriously bad at handling decimal math. To get around this, developers often store dollar amounts in cents. For example, an item with a price of $5.99 may be stored in the database as 599.
@@ -140,10 +140,10 @@ A similar pattern is used when handling transactions in <b>ether</b>. However, i
 Try converting some values to and from wei. Note that [there are names for many of the denominations](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations) in between ether and wei. One of the better known among them is **gwei**, as it’s often how transaction fees are represented.
 
 ```python
-In [2]: Web3.toWei(1, 'ether')
+In [2]: Web3.to_wei(1, 'ether')
 Out[2]: 1000000000000000000
 
-In [3]: Web3.fromWei(500000000, 'gwei')
+In [3]: Web3.from_wei(500000000, 'gwei')
 Out[3]: Decimal('0.5')
 ```
 
@@ -211,7 +211,7 @@ Out[7]: 1000000000000000000000000
 That’s a lot of zeros! Before you go laughing all the way to the fake bank, recall that lesson about currency denominations from earlier. Ether values are represented in the smallest denomination, wei. Convert that to ether:
 
 ```python
-In [8]: w3.fromWei(1000000000000000000000000, 'ether')
+In [8]: w3.from_wei(1000000000000000000000000, 'ether')
 Out[8]: Decimal('1000000')
 ```
 
@@ -246,7 +246,7 @@ We’re stuck at block zero until there’s a pending transaction, so let’s gi
 In [10]: tx_hash = w3.eth.send_transaction({
    'from': w3.eth.accounts[0],
    'to': w3.eth.accounts[1],
-   'value': w3.toWei(3, 'ether'),
+   'value': w3.to_wei(3, 'ether'),
    'gas': 21000
 })
 ```
@@ -281,13 +281,15 @@ We can also easily verify the success of this transaction by checking the balanc
 
 ```python
 In [12]: w3.eth.get_balance(w3.eth.accounts[0])
-Out[12]: 999996999999999999969000
+Out[12]: 999996999979000000000000
 
 In [13]: w3.eth.get_balance(w3.eth.accounts[1])
 Out[13]: 1000003000000000000000000
 ```
 
-The latter looks good! The balance went from 1,000,000 to 1,000,003 ether. But what happened to the first account? It appears to have lost slightly more than three ether. Alas, nothing in life is free, and using the Ethereum public network requires that you compensate your peers for their supporting role. A small transaction fee was deducted from the account making the transaction to the tune of 31000 wei.
+The latter looks good! The balance went from 1,000,000 to 1,000,003 ether. But what happened to the first account? It appears to have lost slightly more than three ether. Alas, nothing in life is free, and using the Ethereum public network requires that you compensate your peers for their supporting role. A small transaction fee was deducted from the account that submitted the transaction - this fee is the amount of gas burned (21000 units of gas for an ETH transfer) multiplied by a base fee that varies according to network activity plus a tip that goes to the validator that includes the transaction in a block.
+
+More on [gas](https://ethereum.org/en/developers/docs/gas/#post-london)
 
 <div class="featured">Note: On the public network, transaction fees are variable based on network demand and how quickly you'd like a transaction to be processed. If you're interested in a breakdown of how fees are calculated, see my earlier post on <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">how transactions are included in a block</a>.</div>
 

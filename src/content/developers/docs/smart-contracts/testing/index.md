@@ -277,18 +277,20 @@ The major difference is that bug bounty programs are open to the wider developer
 
 - **[Echidna](https://github.com/crytic/echidna/)** - _Fast contract fuzzer for detecting vulnerabilities in smart contracts through property-based testing._
 
-- **[Harvey](https://consensys.net/diligence/fuzzing/)** - _Automated fuzzing tool useful for detecting property violations in smart contract code._
+- **[Diligence Fuzzing](https://consensys.net/diligence/fuzzing/)** - _Automated fuzzing tool useful for detecting property violations in smart contract code._
 
 - **[Manticore](https://manticore.readthedocs.io/en/latest/index.html)** - _Dynamic symbolic execution framework for analyzing EVM bytecode._
 
 - **[Mythril](https://github.com/ConsenSys/mythril-classic)** - _EVM bytecode assessment tool for detecting contract vulnerabilities using taint analysis, concolic analysis, and control flow checking._
+
+- **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _Scribble is a specification language and runtime verification tool that allows you to annotate smart contracts with properties that allow you to automatically test the contracts with tools such as Diligence Fuzzing or MythX._
 
 ## Related tutorials {#related-tutorials}
 
 - [How to setup Travis or Circle Continuous Integration (CI) for Truffle testing](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/)
 - [An overview and comparison of different testing products](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [How to use Echidna to test smart contracts](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [How to use Manticore to find smart contract bugs](/developers/tutorials/how-to-use-manticor-to-find-smart-contract-bugs/)
+- [How to use Manticore to find smart contract bugs](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [How to use Slither to find smart contract bugs](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [How to mock Solidity contracts for testing](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [How to migrate from Truffle Tests to OpenZeppelin Test Environment](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)

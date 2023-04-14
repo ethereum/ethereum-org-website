@@ -9,6 +9,7 @@
   - [Gatsby Docs](https://www.gatsbyjs.org/docs/)
 - [React](https://reactjs.org/) - A JavaScript library for building component-based user interfaces
 - [Typescript](https://www.typescriptlang.org/) - TypeScript is a strongly typed programming language that builds on JavaScript
+- [Chakra UI](https://chakra-ui.com/) - A UI library (Migration in progress)
 - [GraphQL](https://graphql.org/) - A query language for APIs
 - [Algolia](https://www.algolia.com/) - Site indexing, rapid intra-site search results, and search analytics. [Learn more on how we implement Algolia for site search](./docs/ALGOLIA_DOCSEARCH.md).
   - Primary implementation: `/src/components/Search/index.ts`
@@ -16,6 +17,8 @@
 - [GitHub Actions](https://github.com/features/actions) - Manages CI/CD, and issue tracking
 - [Netlify](https://www.netlify.com/) - DNS management and primary host for `master` build.
 - [Gatsby Cloud](https://www.gatsbyjs.com/) - Site builds and automatic preview deployments for all pull requests
+- [Storybook](https://storybook.js.org/) - For UI development, testing, and documentation. Check out [our storybook!](https://dev--63b7ea99632763723c7f4d6b.chromatic.com/)
+- [Chromatic](https://www.chromatic.com/) - Visual testing & UI reviews. Visit [our chromatic project](https://www.chromatic.com/builds?appId=63b7ea99632763723c7f4d6b)
 
 ## Code structure
 

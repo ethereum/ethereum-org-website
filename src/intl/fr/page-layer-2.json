@@ -1,7 +1,6 @@
 {
   "layer-2-arbitrum-note": "Preuves de fraude uniquement pour les utilisateurs en liste blanche, liste blanche non encore ouverte",
   "layer-2-boba-note": "Validation de l'état en cours de développement",
-  "layer-2-metis-note": "Preuves de fraude en cours de développement",
   "layer-2-optimism-note": "Preuves de défaillance en développement",
   "layer-2-hero-title": "Couche 2",
   "layer-2-hero-header": "Ethereum pour tous",
@@ -31,7 +30,7 @@
   "layer-2-why-do-we-need-layer-2-2": "Ethereum a atteint la capacité actuelle du réseau avec <a href=\"https://etherscan.io/chart/tx\" target=\"_blank\">plus d'un million de transactions par jour</a> et une forte demande pour chacune de ces transactions. Le succès d'Ethereum et la demande d'utilisation ont causé une hausse substantielle des prix du gaz. Par conséquent, le besoin de solutions de mise à l'échelle a également augmenté. C'est là que les réseaux de la couche 2 entrent en jeu.",
   "layer-2-why-do-we-need-layer-2-scalability": "Évolutivité",
   "layer-2-why-do-we-need-layer-2-scalability-1": "L'objectif principal de l'évolutivité est d'augmenter la vitesse des transactions (finalité plus rapide) et le débit des transactions (plus de transactions par seconde) sans sacrifier la décentralisation ou la sécurité.",
-  "layer-2-why-do-we-need-layer-2-scalability-2": "La communauté Ethereum a adopté une position ferme : elle ne sacrifiera ni la décentralisation ni la sécurité pour gagner en évolutivité. La <a href=\"/upgrades/sharding/\">fragmentation</a> n'a pas encore été implémentée, le réseau principal Ethereum (couche 1) ne peut donc traiter qu'<a href=\"https://ethtps.info/Network/Ethereum\">environ 15 transactions par seconde</a>. Lorsqu'Ethereum est très utilisé, le réseau est encombré, ce qui augmente les frais de transaction et exclut du réseau les utilisateurs qui ne peuvent pas supporter ces frais. C'est sur ce point précis que la couche 2 permettra à Ethereum d'évoluer.",
+  "layer-2-why-do-we-need-layer-2-scalability-2": "La communauté Ethereum a adopté une position ferme : elle ne sacrifiera ni la décentralisation ni la sécurité pour gagner en évolutivité. La <a href=\"/roadmap/danksharding/\">fragmentation</a> n'a pas encore été implémentée, le réseau principal Ethereum (couche 1) ne peut donc traiter qu'<a href=\"https://ethtps.info/Network/Ethereum\">environ 15 transactions par seconde</a>. Lorsqu'Ethereum est très utilisé, le réseau est encombré, ce qui augmente les frais de transaction et exclut du réseau les utilisateurs qui ne peuvent pas supporter ces frais. C'est sur ce point précis que la couche 2 permettra à Ethereum d'évoluer.",
   "layer-2-why-do-we-need-layer-2-scalability-3": "En savoir plus sur la vision d'Ethereum",
   "layer-2-benefits-of-layer-2-title": "Les avantages de la couche 2",
   "layer-2-lower-fees-title": "Des frais plus bas",
@@ -58,7 +57,7 @@
   "layer-2-dyor-3": "Accéder à L2BEAT",
   "layer-2-use-layer-2-title": "Utilisez la couche 2",
   "layer-2-use-layer-2-1": "Maintenant que vous comprenez pourquoi la couche 2 existe et comment elle fonctionne, il est temps de vous lancer !",
-  "layer-2-contract-accounts": "<strong>REMARQUE :</strong> Lors de l'utilisation de la couche 2, il est important de noter que vous contrôlerez l'adresse de votre compte EOA (un compte où une seule clé privée contrôle le compte) comme sur le réseau principal d'Ethereum. Cependant, si vous utilisez un compte de contrat, comme <a href=\"https://gnosis-safe.io/\"  target=”_blank”>Gnosis Safe</a> ou <a href=\"https://www.argent.xyz/\"  target=”_blank”>Argent</a>, vous n'aurez pas le contrôle de cette adresse sur une couche 2 jusqu'à ce que vous redéployiez votre compte de contrat à cette adresse sur la couche 2. Si vous utilisez une passerelle ou envoyez des fonds à un compte contractuel, et que vous ne contrôlez pas cette adresse, vos fonds peuvent être perdus.",
+  "layer-2-contract-accounts": "<strong>REMARQUE :</strong> Lors de l'utilisation de la couche 2, il est important de noter que vous contrôlerez l'adresse de votre compte EOA (un compte où une seule clé privée contrôle le compte) comme sur le réseau principal d'Ethereum. Cependant, si vous utilisez un compte de contrat, comme <a href=\"https://safe.global/\"  target=”_blank”>Safe</a> ou <a href=\"https://www.argent.xyz/\"  target=”_blank”>Argent</a>, vous n'aurez pas le contrôle de cette adresse sur une couche 2 jusqu'à ce que vous redéployiez votre compte de contrat à cette adresse sur la couche 2. Si vous utilisez une passerelle ou envoyez des fonds à un compte contractuel, et que vous ne contrôlez pas cette adresse, vos fonds peuvent être perdus.",
   "layer-2-use-layer-2-generalized-title": "Les couches 2 à visée générale",
   "layer-2-use-layer-2-generalized-1": "Les couches généralisées de couche 2 se comportent exactement comme Ethereum — mais en moins cher. Tout ce que vous pouvez faire sur la couche 1 Ethereum, vous pouvez également le faire sur la couche 2. Beaucoup de DApps ont déjà commencé à migrer vers ces réseaux ou ont complètement ignoré le réseau principal pour se déployer directement sur une couche 2.",
   "layer-2-use-layer-2-application-specific-title": "Application spécifique de la couche 2",
@@ -103,9 +102,6 @@
   "layer-2-faq-question-2-description-3": "Pour le moment, la plupart des zk-rollups sont spécifiques à une application, contrairement aux rollups optimistes qui ont pu être largement généralisés.",
   "layer-2-more-info-on-optimistic-rollups": "Plus d'informations sur les rollups optimistes",
   "layer-2-more-info-on-zk-rollups": "Plus d'informations sur les rollups sans connaissances",
-  "layer-2-faq-question-3-title": "La mise à l'échelle de la couche 1 est-elle possible ?",
-  "layer-2-faq-question-3-description-1": "Oui. La feuille de route d'Ethereum prévoit actuellement des chaînes de fragments. Bien qu'elles figurent dans la feuille de route, une évolutivité supplémentaire par le biais de réseaux de couche 2 est toujours nécessaire.",
-  "layer-2-more-on-sharding": "Plus d'informations sur la fragmentation",
   "layer-2-faq-question-4-title": "Quels sont les risques de la couche 2 ?",
   "layer-2-faq-question-4-description-1": "Les projets de couche 2 présentent des risques supplémentaires par rapport à la détention de fonds et à la réalisation de transactions directement sur le réseau principal Ethereum . Par exemple, les séquenceurs peuvent tomber en panne, vous obligeant à attendre pour accéder à vos fonds.",
   "layer-2-faq-question-4-description-2": "Nous vous encourageons à faire vos propres recherches avant de transférer des fonds importants sur une couche 2. Pour plus d'information sur la technologie, les risques et les hypothèses de confiance d'une couche 2, nous vous recommandons de consulter <a href=\"https://l2beat.com/?view=risk\">L2BEAT</a>, qui vous fournira un cadre complet d'évaluation des risques de chaque projet.",
@@ -124,7 +120,6 @@
   "arbitrum-description": "Arbitrum est un rollup optimiste qui vise à faire ressentir exactement comme si on interagissait avec Ethereum, mais avec des transactions qui coûtent une fraction de ce qu'elles coutent sur  la couche 1.",
   "optimism-description": "Optimism est un équivalent EVM du rollup optimiste, rapide, simple et sécurisé. Il met à l'échelle la technologie d'Ethereum tout en redimensionnant ses valeurs grâce au financement rétroactif des biens publics.",
   "boba-description": "Boba est un rollup optimiste initialement dérivé de Optimism qui est une solution de mise à l'échelle qui vise à réduire les frais de gaz, améliorer le débit des transactions et étendre les capacités des contrats intelligents.",
-  "dydx-description": "dYdX vise à construire une plateforme d'échange puissante et professionnelle pour le trading de crypto-actifs où les utilisateurs peuvent réellement posséder leurs actifs et, finalement, la plateforme elle-même.",
   "loopring-description": "La solution de rollup ZK L2 de Loopring vise à offrir les mêmes garanties de sécurité que le réseau principal Ethereum, avec une grande montée en charge : vitesse multipliée par 1000, et coût réduit à seulement 0,1 % du L1.",
   "zksync-description": "zkSync est une plateforme orientée utilisateur de rollups ZK par Matter Labs. Il s'agit d'une solution de mise à l'échelle pour Ethereum, déjà en lancée sur le réseau principal Ethereum. Elle prend en charge les paiements, les échanges de jetons ainsi que la frappe de NFT.",
   "zkspace-description": "La plate-forme ZKSpace est composée de trois parties principales : un échangeur décentralisé AMM de couche 2utilisant une technologie Rollups ZK appelée ZKSwap, un service de paiement nommé ZKSquare, et un marché NFT appelé ZKSea.",
@@ -132,5 +127,6 @@
   "layer-2-note": "Remarque :",
   "layer-2-ecosystem-portal": "Portail de l'écosystème",
   "layer-2-token-lists": "Listes de jetons",
-  "layer-2-explore": "Explorer"
+  "layer-2-explore": "Explorer",
+  "page-dapps-ready-button": "Aller"
 }

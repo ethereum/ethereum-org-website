@@ -11,7 +11,7 @@ summaryPoint2: Las redes sociales descentralizadas protegen la privacidad del us
 summaryPoint3: Tókenes y NFT crean nuevas formas de monetizar contenido.
 ---
 
-Las redes sociales juegan un enorme papel en nuestras comunicaciones e interacciones diarias. Sin embargo el control centralizado de estas plataformas ha generado importantes problemas: brechas en la custodia de datos, servidores fuera de servicio, desviaciones de las plataformas, censura y violación de la privacidad son algunos de los inconvenientes que suelen producir las redes sociales. Para combatir estos problemas, los desarrolladores están contruyendo redes sociales en Ethereum. Las redes sociales descentraliadas pueden solucionar muchos de los problemas de las plataformas de redes sociales tradicionales y mejorar las experiencia de los usuarios de forma global.
+Las redes sociales juegan un enorme papel en nuestras comunicaciones e interacciones diarias. Sin embargo el control centralizado de estas plataformas ha generado importantes problemas: brechas en la custodia de datos, servidores fuera de servicio, desviaciones de las plataformas, censura y violación de la privacidad son algunos de los inconvenientes que suelen producir las redes sociales. Para combatir estos problemas, los desarrolladores están construyendo redes sociales en Ethereum. Las redes sociales descentralizadas pueden solucionar muchos de los problemas de las plataformas de redes sociales tradicionales y mejorar las experiencia de los usuarios de forma global.
 
 ## ¿Qué son las redes sociales descentralizadas? {#what-are-decentralized-social-networks}
 
@@ -21,7 +21,7 @@ Muchas redes sociales descentralizadas existen como alternativa a los servicios 
 
 ### ¿Cómo funcionan las redes sociales descentralizadas? {#decentralized-social-networks-overview}
 
-Las redes sociales descentralizadas son una clase de [aplicaciones descentralizadas (dapps)](/dapps/) - aplicaiones impulsadas por [ contratos inteligentes ](/developers/docs/smart-contracts/) desplegados en la cadena de bloques. El código de contrato sirve como el backend para estas aplicaciones y define su lógica de negocio.
+Las redes sociales descentralizadas son una clase [aplicaciones descentralizadas (dapps)](/dapps/) - aplicaiones impulsadas por [contratos inteligentes](/developers/docs/smart-contracts/) desplegados en la cadena de bloques. El código de contrato sirve como el backend para estas aplicaciones y define su lógica de negocio.
 
 Las plataformas tradicionales de redes sociales se basan en bases de datos para almacenar información del usuario, el código del programa y otras formas de datos. Aunque esto crea puntos únicos de fallo y supone un riesgo significativo. Por ejemplo, los servidores de Facebook, de forma notoria, [se desconectaron durante horas](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) el año pasado, dejando a los usuarios fuera de la plataforma.
 
@@ -29,7 +29,7 @@ Las redes sociales descentralizadas existen en redes entre pares que comprenden 
 
 Utilizando sistemas de almacenamiento descentralizados como [el sistema de archivos interplanetario IPFS](https://ipfs.io/), las redes sociales construidas sobre Ethereum pueden proteger la información del usuario de la explotación y el uso malicioso. Nadie venderá su información personal a los anunciantes, ni los hackers podrán robar sus datos confidenciales.
 
-Muchas plataformas de redes sociales basadas en la cadena de bloques tienen tókenes nativos que potencian la monetización a falta de ingresos publicitarios. Los usuarios pueden comprar esos tokens para acceder a ciertas cracteristicas, completar compras en la aplicación o dar propinas a sus creadores de contenido favoritos.
+Muchas plataformas de redes sociales basadas en la cadena de bloques tienen tókenes nativos que potencian la monetización a falta de ingresos publicitarios. Los usuarios pueden comprar esos tokens para acceder a ciertas características, completar compras en la aplicación o dar propinas a sus creadores de contenido favoritos.
 
 ## Beneficios de las redes sociales descentralizadas {#benefits}
 

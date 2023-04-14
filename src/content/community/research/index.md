@@ -20,7 +20,7 @@ This report published in May 2022 by [DelphiDigital](https://members.delphidigit
 
 ## Sources of Funding {#sources-of-funding}
 
-You can get involved with Ethereum research and get paid for it! For example, [the Ethereum Foundation](/foundation/) recently ran an [Academic Grants funding round](/community/grants/academic-grants-round/). You can find information on active and upcoming funding opportunities on [the Ethereum grants page](/community/grants/).
+You can get involved with Ethereum research and get paid for it! For example, [the Ethereum Foundation](/foundation/) recently ran an [Academic Grants funding round](https://esp.ethereum.foundation/academic-grants). You can find information on active and upcoming funding opportunities on [the Ethereum grants page](/community/grants/).
 
 ## Protocol research {#protocol-research}
 
@@ -81,7 +81,7 @@ Ethereum clients are implementations of the Ethereum protocol. Client developmen
 An Ethereum node is required to run two pieces of software:
 
 1. a consensus client to keep track of the head of the blockchain, gossip blocks and handle consensus logic
-2. an execution client to support the Ethereum Virtual Machine and execute transactions.
+2. an execution client to support the Ethereum Virtual Machine and execute transactions and smart contracts
 
 See the [nodes and clients page](/developers/docs/nodes-and-clients/) for more detail on nodes and clients and for a list of all current client implementations. You can also find a history of all Ethereum upgrades on the [history page](/history/).
 
@@ -97,7 +97,7 @@ See the [nodes and clients page](/developers/docs/nodes-and-clients/) for more d
 
 ## Scaling and performance {#scaling-and-performance}
 
-Scaling Ethereum is a large area of focus for Ethereum researchers. Current approaches include sharding the blockchain, danksharding, and using rollups. Introductory information on scaling Ethereum is available on our [scaling page](/developers/docs/scaling).
+Scaling Ethereum is a large area of focus for Ethereum researchers. Current approaches include offloading transactions onto rollups and making them as cheap as possible using data blobs. Introductory information on scaling Ethereum is available on our [scaling page](/developers/docs/scaling).
 
 ### Layer 2 {#layer-2}
 
@@ -106,7 +106,6 @@ There are now several Layer 2 protocols that scale Ethereum using different tech
 #### Background reading {#background-reading-2}
 
 - [Introduction to layer 2](/layer-2/)
-- [EthHub Layer 2](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
 - [Polynya: Rollups, DA and modular chains](https://polynya.medium.com/rollups-data-availability-layers-modular-blockchains-introductory-meta-post-5a1e7a60119d)
 
 #### Recent research {#recent-research-2}
@@ -137,7 +136,6 @@ Sharding Ethereum's blockchain has long been part of the development roadmap. Ho
 
 #### Background reading {#background-reading-4}
 
-- [Introduction to Ethereum sharding](/upgrades/sharding/)
 - [Proto-Danksharding notes](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq)
 - [Bankless Danksharding video](https://www.youtube.com/watch?v=N5p0TB77flM)
 - [Ethereum Sharding Research Compendium](https://notes.ethereum.org/@serenity/H1PGqDhpm?type=view)
@@ -145,7 +143,7 @@ Sharding Ethereum's blockchain has long been part of the development roadmap. Ho
 
 #### Recent research {#recent-research-4}
 
-- [EIP-4844: Proto-Danksharding](https://github.com/ethereum/EIPs/pull/5088)
+- [EIP-4844: Proto-Danksharding](https://eips.ethereum.org/EIPS/eip-4844)
 - [Vitalik on sharding and data availability sampling](https://hackmd.io/@vbuterin/sharding_proposal)
 
 ### Hardware {#hardware}
@@ -171,15 +169,12 @@ Zero-knowledge proofs (ZKP) and cryptography are critical for building privacy a
 #### Background reading {#background-reading-6}
 
 - [0xparc blog](https://0xparc.org/blog)
-
 - [zkp.science](https://zkp.science/)
-
 - [Zero Knowledge podcast](https://zeroknowledge.fm/)
 
 #### Recent research {#recent-research-6}
 
 - [Recent advance in elliptic curve cryptography](https://ethresear.ch/t/the-ec-fft-algorithm-without-elliptic-curve-and-isogenies/11346)
-
 - [Ethresear.ch ZK](https://ethresear.ch/c/zk-s-nt-arks/13)
 
 ### Wallets {#wallets}
@@ -199,7 +194,7 @@ Ethereum wallets can be browser extensions, desktop and mobile apps or smart con
 - [Validation focused smart contract wallets](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
 - [The future of accounts](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
 - [EIP-3074 AUTH and AUTHCALL Opcodes](https://eips.ethereum.org/EIPS/eip-3074)
-- [Publishing code at an EOA address](https://github.com/ethereum/EIPs/pull/5003)
+- [Publishing code at an EOA address](https://eips.ethereum.org/EIPS/eip-5003)
 
 ## Community, education and outreach {#community-education-and-outreach}
 
@@ -219,9 +214,9 @@ To onboard more people onto Ethereum, the ecosystem must improve the UX/UI. This
 - [Web3 Design Principles](https://www.web3designprinciples.com/)
 - [Ethereum Magicians UX discussion](https://ethereum-magicians.org/t/og-council-ux-follow-up/9032/3)
 
-## Economics {#economics}
+### Economics {#economics}
 
-Economics research in Ethereum broadly follows two approaches: validate the security of mechanisms relying on economic incentives ("microeconomics") and analyse the flows of value between protocols, applications and users ("macroeconomics"). There are complex crypto-economic factors relating to Ethereum's native asset (ether) and the tokens built on top of it (for example NFTs and ERC20 tokens).
+Economics research in Ethereum broadly follows two approaches: validate the security of mechanisms relying on economic incentives ("microeconomics") and analyze the flows of value between protocols, applications and users ("macroeconomics"). There are complex crypto-economic factors relating to Ethereum's native asset (ether) and the tokens built on top of it (for example NFTs and ERC20 tokens).
 
 #### Background reading {#background-reading-9}
 
@@ -253,7 +248,7 @@ Blockspace markets govern the inclusion of end-user transactions, either directl
 
 ### Proof-of-stake incentives {#proof-of-stake-incentives}
 
-Validators use Ethereum's native asset (ether) as collateral against dishonest behaviour. The cryptoeconomics of this determines the security of the network. Sophisticated validators may be able to exploit the nuances of the incentive layer to launch explicit attacks.
+Validators use Ethereum's native asset (ether) as collateral against dishonest behavior. The cryptoeconomics of this determines the security of the network. Sophisticated validators may be able to exploit the nuances of the incentive layer to launch explicit attacks.
 
 #### Background reading {#background-reading-11}
 

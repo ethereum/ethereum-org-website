@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 Running your own node provides you various benefits, opens new possibilities, and helps to support the ecosystem. This page will guide you through spinning up your own node and taking part in validating Ethereum transactions.
 
-Note that after [The Merge](/upgrades/merge), two clients are required to run an Ethereum node; an **execution layer (EL)** client and a **consensus layer (CL)** client. This page will show how to install, configure and connect these two clients to run an Ethereum node.
+Note that after [The Merge](/roadmap/merge), two clients are required to run an Ethereum node; an **execution layer (EL)** client and a **consensus layer (CL)** client. This page will show how to install, configure and connect these two clients to run an Ethereum node.
 
 ## Prerequisites {#prerequisites}
 
@@ -27,7 +27,7 @@ Decide whether to run the software on your own [hardware or in the cloud](#local
 
 After preparing the environment, install the chosen clients either with [beginner-friendly interface](#automatized-setup) or [manually](#manual-setup) using a terminal with advanced options.
 
-When the node is running and syncing, you are ready to [use it](#using-the-node), but make sure to keep an eye on its [maintanance](#operating-the-node).
+When the node is running and syncing, you are ready to [use it](#using-the-node), but make sure to keep an eye on its [maintenance](#operating-the-node).
 
 ![Client setup](./diagram.png)
 
@@ -54,6 +54,10 @@ Both options have different advantages summed up above. If you are looking for a
 - [QuikNode](https://www.quiknode.io/)
 - [Blockdaemon](https://blockdaemon.com)
 - [Alchemy](https://www.alchemy.com/)
+- [Blast](https://blastapi.io/)
+- [Getblock](https://getblock.io/)
+- [NodeReal](https://nodereal.io/)
+- [NOWNodes](https://nownodes.io/)
 
 Check out also [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/) for more options on hosted nodes.
 
@@ -77,22 +81,22 @@ The size of the database and speed of the initial synchronization depends on the
 
 Also make sure your internet connection is not limited by a [bandwidth cap](https://wikipedia.org/wiki/Data_cap). It's recommended to use an unmetered connection since initial sync and data broadcasted to the network could exceed your limit.
 
-##### Operating system {#operating-system}
+##### Operating system
 
 All clients support major operating systems - Linux, MacOS, Windows. This means you can run nodes on regular desktop or server machines with the operating system (OS) that suits you the best. Make sure your OS is up to date to avoid potential issues and security vulnerabilities.
 
-##### Minimum requirements {#minimum-requirements}
+##### Minimum requirements
 
 - CPU with 2+ cores
 - 8 GB RAM
-- 700GB free disk space
+- 2TB SSD
 - 10+ MBit/s bandwidth
 
-##### Recommended specifications {#recommended-hardware}
+##### Recommended specifications
 
 - Fast CPU with 4+ cores
 - 16 GB+ RAM
-- Fast SSD with 1+TB
+- Fast SSD with 2+TB
 - 25+ MBit/s bandwidth
 
 The sync mode and client you choose will affect space requirements, but we've estimated the disk space you'll need for each client below.
@@ -119,7 +123,7 @@ The easiest option for running a node with your own hardware is using plug-and-p
 
 An easy and cheap way of running an Ethereum node is to use a single board computer, even with an ARM architecture like the Raspberry Pi. [Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) provides easy-to-run images of multiple execution and consensus client for Raspberry Pi and other ARM boards.
 
-Small, affordable and efficient devices like these are ideal for running a node at home but keep in mind their limited performence.
+Small, affordable and efficient devices like these are ideal for running a node at home but keep in mind their limited performance.
 
 ## Spinning up the node {#spinning-up-node}
 
@@ -133,10 +137,11 @@ Multiple user-friendly projects aim to improve the experience of setting up a cl
 
 Below are a few projects which can help you install and control clients just with a few clicks:
 
-- [DappNode](https://docs.dappnode.io/get-started/installation/custom-hardware/installation/overview/) - DappNode doesn't come only with a machine from a vendor. The software, the actual node launcher and control center with many features can be used on arbitrary hardware.
-- [eth-docker](https://eth-docker.net/docs/About/Overview/) - Automatized setup using Docker focused on easy and secure staking, requires basic terminal and Docker knowledge, recommended for a bit more advanced users.
+- [DappNode](https://docs.dappnode.io/user/quick-start/first-steps/) - DappNode doesn't come only with a machine from a vendor. The software, the actual node launcher and control center with many features can be used on arbitrary hardware.
+- [eth-docker](https://eth-docker.net/) - Automated setup using Docker focused on easy and secure staking, requires basic terminal and Docker knowledge, recommended for a bit more advanced users.
 - [Stereum](https://stereum.net/ethereum-node-setup/) - Launcher for installing clients on a remote server via SSH connection with a GUI setup guide, control center, and many other features.
 - [NiceNode](https://www.nicenode.xyz/) - Launcher with a straightforward user experience to run a node on your computer. Just choose clients and start them with a few clicks. Still in development.
+- [Sedge](https://docs.sedge.nethermind.io/docs/intro) - Node setup tool which automatically generates a Docker configuration using CLI wizard. Written in Go by Nethermind.
 
 ### Manual clients setup {#manual-setup}
 
@@ -154,7 +159,7 @@ Instructions for installing each client are provided in the documentation linked
 
 Here are the release pages of clients where you can find their pre-built binaries or instructions on installation:
 
-##### Execution clients {#execution-clients}
+##### Execution clients
 
 - [Besu](https://github.com/hyperledger/besu/releases)
 - [Erigon](https://github.com/ledgerwatch/erigon#usage) (Doesn't provide a pre-built binary, has to be compiled)
@@ -163,7 +168,7 @@ Here are the release pages of clients where you can find their pre-built binarie
 
 It is also worth noting that client diversity is an [issue on the execution layer](/developers/docs/nodes-and-clients/client-diversity/#execution-layer). It is recommended that readers consider running a minority execution client.
 
-##### Consensus clients {#consensus-clients}
+##### Consensus clients
 
 - [Lighthouse](https://github.com/sigp/lighthouse/releases/latest)
 - [Lodestar](https://chainsafe.github.io/lodestar/install/source/) (Doesn't provide a pre-built binary, only a Docker image or to be build from source)
@@ -175,11 +180,11 @@ It is also worth noting that client diversity is an [issue on the execution laye
 
 [See the latest network client usage](https://clientdiversity.org/) and learn more about [client diversity](/developers/docs/nodes-and-clients/client-diversity).
 
-##### Verifying the software {#verifying-the-software}
+##### Verifying the software
 
-When downloading software from the internet, it's recommended to verify its integrity. This step is optional but especially with crucial infrastracture piece like the Ethereum client, it's important to be aware of potential attack vectors and avoid them. If you downloaded a pre-built binary, you need to trust it and risk that an attacker could swap the executable for a malicious one.
+When downloading software from the internet, it's recommended to verify its integrity. This step is optional but especially with crucial infrastructure piece like the Ethereum client, it's important to be aware of potential attack vectors and avoid them. If you downloaded a pre-built binary, you need to trust it and risk that an attacker could swap the executable for a malicious one.
 
-Developers sign released binaries with their PGP keys so you can cryptographically verify you are running exactly the software they created. You just need to obtain public keys used by developers, which can be found on client release pages or in documentation. After downloading the client release and its signature, you can use a PGP implementation, e.g. [GnuPG](https://gnupg.org/download/index.html) to easily verify them. Check out a tutorial on veryifing open-source software using `gpg` on [linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) or [Windows/MacOS](https://freedom.press/training/verifying-open-source-software/).
+Developers sign released binaries with their PGP keys so you can cryptographically verify you are running exactly the software they created. You just need to obtain public keys used by developers, which can be found on client release pages or in documentation. After downloading the client release and its signature, you can use a PGP implementation, e.g. [GnuPG](https://gnupg.org/download/index.html) to easily verify them. Check out a tutorial on verifying open-source software using `gpg` on [linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) or [Windows/MacOS](https://freedom.press/training/verifying-open-source-software/).
 
 Another form of verification is to make sure that the hash, a unique cryptographic fingerprint, of the software you downloaded matches the one provided by developers. This is even easier than using PGP, and some clients offer only this option. Just run the hash function on the downloaded software and compare it to the one from the release page. For example:
 
@@ -228,9 +233,9 @@ openssl rand -hex 32 > jwtsecret
 This section will guide you through starting execution clients. It only serves as an example of a basic configuration, which will start the client with these settings:
 
 - Specifies network to connect to, mainnet in our examples
-  - You can instead choose [one of testnets](/developers/docs/networks/) for prelimenary testing of your setup
+  - You can instead choose [one of testnets](/developers/docs/networks/) for preliminary testing of your setup
 - Defines data directory, where all the data including blockchain will be stored
-  - Make sure to subsitute the path with a real one, e.g. pointing to your external drive
+  - Make sure to substitute the path with a real one, e.g. pointing to your external drive
 - Enables interfaces for communicating with the client
   - Including JSON RPC and Engine API for communication with consensus client
 - Defines path to `jwtsecret` for authenticated API
@@ -282,12 +287,13 @@ This example starts Geth on mainnet, stores blockchain data at `/data/ethereum`,
 ```
 geth --mainnet \
     --datadir "/data/ethereum" \
-    --http --http.api="eth,web3,net" \
+    --http --authrpc.addr localhost \
     --authrpc.vhosts="localhost" \
+    --authrpc.port 8551
     --authrpc.jwtsecret=/path/to/jwtsecret
 ```
 
-Check [docs for all configuration options](https://geth.ethereum.org/docs/interface/command-line-options) and learn more about [running Geth with a consensus client](https://geth.ethereum.org/docs/interface/consensus-clients).
+Check [docs for all configuration options](https://geth.ethereum.org/docs/fundamentals/command-line-options) and learn more about [running Geth with a consensus client](https://geth.ethereum.org/docs/getting-started/consensus-clients).
 
 ##### Running Nethermind
 
@@ -320,7 +326,7 @@ When starting a Beacon Node on a testnet, you can save significant syncing time 
 Before running Lighthouse, learn more on how to install and configure it in [Lighthouse Book](https://lighthouse-book.sigmaprime.io/installation.html).
 
 ```
-lighthouse beacon_node
+lighthouse beacon_node \
     --network mainnet \
     --datadir /data/ethereum \
     --http \
@@ -360,7 +366,7 @@ Prysm comes with script which allows easy automatic installation. Details can be
 
 ```
 ./prysm.sh beacon-chain \
-    --mainnet
+    --mainnet \
     --datadir /data/ethereum  \
     --execution-endpoint=http://localhost:8551  \
     --jwt-secret=/path/to/jwtsecret
@@ -458,11 +464,9 @@ As part of your monitoring, make sure to keep an eye on your machine's performan
 - [Ethereum Staking Guides](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, updated often_
 - [Guide | How to setup a validator for Ethereum staking on mainnet](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, updated regularly_
 - [ETHStaker guides on running validators on testnets](https://github.com/remyroy/ethstaker#guides) – _ETHStaker, updated regularly_
-- [Ethereum Staking Guides](https://github.com/SomerEsat/ethereum-staking-guides) _– Somer Esat, updated regularly_
 - [The Merge FAQ for node operators](https://notes.ethereum.org/@launchpad/node-faq-merge) - _July 2022_
 - [Analyzing the hardware requirements to be an Ethereum full validated node](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 September 2018_
 - [Running Ethereum Full Nodes: A Guide for the Barely Motivated](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 November 2019_
-- [Running an Ethereum Node](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub, updated often_
 - [Running a Hyperledger Besu Node on the Ethereum Mainnet: Benefits, Requirements, and Setup](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 May 2020_
 - [Deploying Nethermind Ethereum Client with Monitoring Stack](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8 July 2020_
 

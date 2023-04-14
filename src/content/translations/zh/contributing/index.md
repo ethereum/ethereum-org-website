@@ -10,7 +10,7 @@ Ethereum.org 网站，像开放的以太坊一样，也是一个开源项目。 
 
 <InfoBanner shouldCenter emoji=":tada:">
   领取您的 POAP 代币！ 如果您在 2022 年为 ethereum.org 做出了贡献，我们会给您发放一个独特的 POAP 徽章。{" "}
-<a href="#poap">有关 POAP 徽章的更多信息</a>
+<a href="#poap">关于 POAP 徽章的更多信息</a>
 </InfoBanner>
 
 ## 如何做出贡献 {#ways-to-contribute}
@@ -27,7 +27,8 @@ Ethereum.org 网站，像开放的以太坊一样，也是一个开源项目。 
 - [创建/编辑内容](/contributing/#how-to-update-content) _– 建议新页面或调整这里已经存在的内容_
 - [添加二层网络](/contributing/adding-layer-2s/) _- 将二层网络添加到相关页面_
 - [添加质押产品或服务](/contributing/adding-staking-products/) - _添加有助于促进单独质押、联合质押或质押即服务的项目_
-- [添加钱包](/contributing/adding-wallets/) _- 为[查找钱包页面](/wallets/find-wallet/)添加钱包。_
+- [添加钱包](/contributing/adding-wallets/) *– 为[发现钱包页面](/wallets/find-wallet/)*添加钱包
+- [为我们的去中心化科学页面提出项目](/contributing/adding-desci-projects/) _- 添加以太坊上构建的项目，为去中心化科学做贡献_
 
 *有任何问题？*🤔 请访问我们的 [Discord 服务器](https://discord.gg/CetY6Y4)
 
@@ -73,7 +74,7 @@ Ethereum.org 网站，像开放的以太坊一样，也是一个开源项目。 
 ### 如何领取 {#how-to-claim}
 
 1. 加入我们的 [Discord 服务器](https://discord.gg/E8dET2ux8y)。
-2. 在 `#🥇 | poaps` [频道](https://discord.com/channels/714888181740339261/804005643211898911)中粘贴指向你的贡献的链接 。
+2. 在 `#🥇 | poaps` [频道](https://discord.com/channels/714888181740339261/804005643211898911)中粘贴指向你的贡献的链接。
 3. 等待我们的团队成员向您发送 POAP 徽章领取链接。
 4. 领取您的 POAP 徽章！
 

@@ -5,7 +5,7 @@ lang: en
 ---
 
 <InfoBanner emoji=":wave:">
-   Ethash was Ethereum's proof-of-work mining algorithm. Proof-of-work has now been **switched off entirely** and Ethereum is now secured using [proof-of-stake](/developers/docs/consensus-mechanisms/pos) instead. Read more on <a href="/upgrades/merge/">The Merge</a>, <a href="/developers/docs/consensus-mechanisms/pos/">proof-of-stake</a> and <a href="/staking/">staking</a>. This page is for historical interest!  
+   Ethash was Ethereum's proof-of-work mining algorithm. Proof-of-work has now been **switched off entirely** and Ethereum is now secured using <a href="/developers/docs/consensus-mechanisms/pos/">proof-of-stake</a> instead. Read more on <a href="/roadmap/merge/">The Merge</a>, <a href="/developers/docs/consensus-mechanisms/pos/">proof-of-stake</a> and <a href="/staking/">staking</a>. This page is for historical interest!  
 </InfoBanner>
 
 [Ethash](https://github.com/ethereum/wiki/wiki/Ethash) is a modified version of the [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto) algorithm. Ethash proof-of-work is [memory hard](https://wikipedia.org/wiki/Memory-hard_function), which was thought to make the algorithm ASIC resistant. Ethash ASICs were eventually developed but GPU mining was still a viable option until proof-of-work was switched off. Ethash is still used to mine other coins on other non-Ethereum proof-of-work networks.
@@ -47,7 +47,7 @@ ACCESSES = 64                     # number of accesses in hashimoto loop
 Ethereum's development coincided with the development of the SHA3 standard, and the
 standards process made a late change in the padding of the finalized hash algorithm, so that Ethereum's
 "sha3_256" and "sha3_512" hashes are not standard sha3 hashes, but a variant often referred
-to as "Keccak-256" and "Keccak-512" in other contexts. See discussion, e.g. [here](https://github.com/ethereum/EIPs/issues/59), [here](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use), or [here](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
+to as "Keccak-256" and "Keccak-512" in other contexts. See discussion, e.g. [here](https://eips.ethereum.org/EIPS-1803), [here](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use), or [here](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
 
 Please keep that in mind as "sha3" hashes are referred to in the description of the algorithm below.
 

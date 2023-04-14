@@ -173,7 +173,7 @@ Synchronization modes represent different approaches to this process with variou
 
 Prezentare generală a metodelor de sincronizare utilizate în cazul clienților pregătiți pentru Mainnet:
 
-##### Sincronizare completă {#full-sync}
+##### Sincronizare completă
 
 Sincronizarea completă descarcă toate blocurile (inclusiv anteturile, tranzacțiile și chitanțele) și generează incremental starea blockchain-ului, executând fiecare bloc de la geneză.
 
@@ -243,17 +243,15 @@ Ca orice altă configurație, aceasta poate fi definită cu ajutorul steguleţul
 
 ## Clienți de consens (anterior clienți „Eth2”) {#consensus-clients}
 
-There are multiple consensus clients (previously known as 'Eth2' clients) to support the [consensus upgrades](/upgrades/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/upgrades/merge/).
-
-[View consensus clients](/upgrades/get-involved/#clients).
+There are multiple consensus clients (previously known as 'Eth2' clients) to support the [consensus upgrades](/roadmap/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/roadmap/merge/).
 
 | Client                                                      | Limbaj     | Sisteme de operare    | Rețele                                 |
 | ----------------------------------------------------------- | ---------- | --------------------- | -------------------------------------- |
-| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | Lanţul Beacon, Prater                  |
-| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Lanţul Beacon, Prater                  |
-| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Lanţul Beacon, Prater, Pyrmont         |
-| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Lanţul Beacon, Prater                  |
-| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Lanţul Beacon, Gnosis, Prater, Pyrmont |
+| [Teku](https://pegasys.tech/teku)                           | Java       | Linux, Windows, macOS | Lanţul Beacon, Goerli                  |
+| [Nimbus](https://nimbus.team/)                              | Nim        | Linux, Windows, macOS | Lanţul Beacon, Goerli                  |
+| [Lighthouse](https://lighthouse-book.sigmaprime.io/)        | Rust       | Linux, Windows, macOS | Lanţul Beacon, Goerli, Pyrmont         |
+| [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Lanţul Beacon, Goerli                  |
+| [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Lanţul Beacon, Gnosis, Goerli, Pyrmont |
 
 ## Hardware {#hardware}
 

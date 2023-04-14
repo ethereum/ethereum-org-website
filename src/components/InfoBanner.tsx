@@ -1,14 +1,15 @@
 import React from "react"
-import { Flex } from "@chakra-ui/react"
+import { Flex, FlexProps, Text } from "@chakra-ui/react"
 import Emoji from "./Emoji"
 
-export interface IProps {
+export interface IProps extends FlexProps {
   children?: React.ReactNode
   className?: string
   emoji?: string
   isWarning?: boolean
   shouldCenter?: boolean
   shouldSpaceBetween?: boolean
+  title?: string
 }
 
 const InfoBanner: React.FC<IProps> = ({
@@ -18,6 +19,7 @@ const InfoBanner: React.FC<IProps> = ({
   isWarning = false,
   shouldCenter = false,
   shouldSpaceBetween = false,
+  title,
   ...props
 }) => {
   const banner = (
@@ -26,7 +28,11 @@ const InfoBanner: React.FC<IProps> = ({
       p={6}
       borderRadius={"sm"}
       maxW={shouldCenter ? "55rem" : "100%"}
-      color="black300"
+      sx={{
+        "*": {
+          color: "black300 !important",
+        },
+      }}
       bg={isWarning ? "warning" : "infoBanner"}
       direction={{ base: "column", sm: "row" }}
       {...props}
@@ -48,6 +54,11 @@ const InfoBanner: React.FC<IProps> = ({
         w={shouldSpaceBetween ? "100%" : "auto"}
         justify={shouldSpaceBetween ? "space-between" : "auto"}
       >
+        {title && (
+          <Text fontSize="lg" fontWeight="700">
+            {title}
+          </Text>
+        )}
         {children}
       </Flex>
     </Flex>
