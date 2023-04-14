@@ -8,7 +8,7 @@ Maksimal çıkarılabilir değer (MEV), bir bloktaki işlemlerin sırasını dah
 
 ### Madenci çıkarılabilirlik değeri
 
-Bu kavram ilk olarak [iş ispatı](/developers/docs/consensus-mechanisms/pow/) bağlamında uygulandı ve başlangıçta "Madenci çıkarılabilirlik değeri" olarak adlandırıldı. Bunun sebebi, iş ispatında madencilerin katılım, çıkarım ve sıralamayı kontrol etmesidir. Ancak, [Birleştirme](/upgrades/merge) aracılığıyla hisse ispatına geçişten sonra bu rollerden doğrulayıcılar sorumlu olacak ve madencilik artık geçerli olmayacak. Buradaki değer çıkarma yöntemleri, bu geçişten sonra da devam edeceği için bir isim değişikliğine ihtiyaç duyuldu. Süreklilik için aynı kısaltmayı korurken aynı temel anlamı korumak için "maksimal çıkarılabilir değer" artık daha kapsayıcı bir ikame olarak kullanılmaktadır.
+Bu kavram ilk olarak [iş ispatı](/developers/docs/consensus-mechanisms/pow/) bağlamında uygulandı ve başlangıçta "Madenci çıkarılabilirlik değeri" olarak adlandırıldı. Bunun sebebi, iş ispatında madencilerin katılım, çıkarım ve sıralamayı kontrol etmesidir. Ancak, [Birleştirme](/roadmap/merge) aracılığıyla hisse ispatına geçişten sonra bu rollerden doğrulayıcılar sorumlu olacak ve madencilik artık geçerli olmayacak. Buradaki değer çıkarma yöntemleri, bu geçişten sonra da devam edeceği için bir isim değişikliğine ihtiyaç duyuldu. Süreklilik için aynı kısaltmayı korurken aynı temel anlamı korumak için "maksimal çıkarılabilir değer" artık daha kapsayıcı bir ikame olarak kullanılmaktadır.
 
 ## Ön koşullar {#prerequisites}
 
@@ -16,7 +16,7 @@ Bu kavram ilk olarak [iş ispatı](/developers/docs/consensus-mechanisms/pow/) b
 
 ## MEV çıkarma {#mev-extraction}
 
-Teoride MEV, madenciler kârlı bir MEV fırsatının yürütülmesini garanti edebilecek tek taraf oldukları için tamamen madencilere tahakkuk eder (en azından mevcut iş ispatı zincirinde böyle, bu durum [Birleştirme](/upgrades/merge/)'den sonra değişecektir). Ancak pratikte, MEV'in büyük bir kısmı "arayıcılar" olarak bilinen bağımsız ağ katılımcıları tarafından çıkarılır. Arayıcılar kârlı MEV fırsatlarını tespit etmek için blok zinciri verisi üzerinde karmaşık algoritmalar çalıştırırlar ve botların otomatik olarak bu karlı işlemleri ağa göndermesini sağlarlar.
+Teoride MEV, madenciler kârlı bir MEV fırsatının yürütülmesini garanti edebilecek tek taraf oldukları için tamamen madencilere tahakkuk eder (en azından mevcut iş ispatı zincirinde böyle, bu durum [Birleştirme](/roadmap/merge/)'den sonra değişecektir). Ancak pratikte, MEV'in büyük bir kısmı "arayıcılar" olarak bilinen bağımsız ağ katılımcıları tarafından çıkarılır. Arayıcılar kârlı MEV fırsatlarını tespit etmek için blok zinciri verisi üzerinde karmaşık algoritmalar çalıştırırlar ve botların otomatik olarak bu karlı işlemleri ağa göndermesini sağlarlar.
 
 Madenciler tüm MEV miktarının bir kısmını her şekilde alırlar çünkü arayıcılar kârlı işlemlerinin bir bloğa katılımının yüksek ihtimali karşılığında yüksek gaz ücretleri (madencilere giden) ödemeye razılardır. Arayıcıların ekonomik olarak rasyonel olduklarını varsayarsak, bir arayıcının ödemeye razı olduğu gaz ücreti, arayıcının MEV'sinin %100'üne kadar bir miktar olacaktır (çünkü gaz ücreti daha yüksek olsaydı, arayıcı para kaybederdi).
 

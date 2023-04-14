@@ -128,6 +128,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "he",
+    "hrefLang": "he",
+    "name": "Hebrew",
+    "localName": "עִבְרִית",
+    "langDir": "rtl",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "hi",
     "hrefLang": "hi",
     "name": "Hindi",
@@ -381,6 +389,14 @@
     "name": "Ukrainian",
     "localName": "Українська",
     "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
+    "code": "ur-in",
+    "hrefLang": "ur-in",
+    "name": "Urdu (India)",
+    "localName": "اردو",
+    "langDir": "rtl",
     "dateFormat": "MM/DD/YYYY"
   },
   {

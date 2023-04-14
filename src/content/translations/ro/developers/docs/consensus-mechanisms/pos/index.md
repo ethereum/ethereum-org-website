@@ -5,7 +5,7 @@ lang: ro
 incomplete: true
 ---
 
-Ethereum trece de la [dovada-muncii (PoW)](/developers/docs/consensus-mechanisms/pow/) la un mecanism de consens numit dovada-mizei (PoS). Acest lucru a fost prevăzut dintotdeauna, deoarece o parte fundamentală a strategiei comunității este de a scala Ethereum prin [actualizări](/upgrades/). Cu toate acestea, realizarea corectă a PoS este o mare provocare tehnică și nu la fel de simplă ca utilizarea PoW pentru a se ajunge la consens pe întreaga rețea.
+Ethereum trece de la [dovada-muncii (PoW)](/developers/docs/consensus-mechanisms/pow/) la un mecanism de consens numit dovada-mizei (PoS). Acest lucru a fost prevăzut dintotdeauna, deoarece o parte fundamentală a strategiei comunității este de a scala Ethereum prin [actualizări](/roadmap/). Cu toate acestea, realizarea corectă a PoS este o mare provocare tehnică și nu la fel de simplă ca utilizarea PoW pentru a se ajunge la consens pe întreaga rețea.
 
 ## Condiții prealabile {#prerequisites}
 
@@ -22,7 +22,7 @@ Dovada-mizei aduce o serie de îmbunătățiri ale sistemului dovezii-muncii:
 - eficiență energetică mai bună – nu trebuie utilizată multă energie pentru minarea blocurilor
 - bariere mai mici la intrare, cerințe hardware reduse – nu aveți nevoie de hardware super performant pentru a avea o șansă de a crea blocuri noi
 - imunitate mai puternică la centralizare – dovada-mizei ar trebui să conducă la mai multe noduri în rețea
-- o compatibilitate mai mare pentru [lanțurile de fragmente](/upgrades/sharding/) – o actualizare esențială în scalarea rețelei Ethereum
+- o compatibilitate mai mare pentru [lanțurile de fragmente](/roadmap/danksharding/) – o actualizare esențială în scalarea rețelei Ethereum
 
 ## Dovada-mizei, mizarea și validatorii {#pos-staking-validators}
 
@@ -36,7 +36,7 @@ Dacă atestați blocuri rău intenționate, veți pierde miza.
 
 ### Lanțul Beacon {#the-beacon-chain}
 
-Când Ethereum va înlocui dovada-muncii (PoW) cu dovada-mizei (PoS), se va adăuga o complexitate numită [lanțuri de fragmente](/upgrades/sharding/). Acestea sunt blockchain-uri separate care vor avea nevoie de validatori pentru a procesa tranzacțiile și a crea noi blocuri. Se prevede să avem 64 de lanțuri de fragmente și toate au nevoie de o înțelegere comună a stării rețelei. Din acest motiv este necesară o coordonare suplimentară și va fi realizată de [lanțul beacon](/upgrades/beacon-chain/).
+Când Ethereum va înlocui dovada-muncii (PoW) cu dovada-mizei (PoS), se va adăuga o complexitate numită [lanțuri de fragmente](/roadmap/danksharding/). Acestea sunt blockchain-uri separate care vor avea nevoie de validatori pentru a procesa tranzacțiile și a crea noi blocuri. Se prevede să avem 64 de lanțuri de fragmente și toate au nevoie de o înțelegere comună a stării rețelei. Din acest motiv este necesară o coordonare suplimentară și va fi realizată de [lanțul beacon](/roadmap/beacon-chain/).
 
 Lanțul beacon primește informații de stare de la fragmente și le face disponibile altor fragmente, astfel încât rețeaua să poată rămâne sincronizată. Lanțul beacon va gestiona și validatorii, de la înregistrarea depozitelor de miză ale acestora până la emiterea recompenselor și a penalităților.
 

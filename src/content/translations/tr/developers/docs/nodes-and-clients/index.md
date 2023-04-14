@@ -243,9 +243,7 @@ Diğer tüm yapılandırmalar gibi, başlangıç bayrağıyla veya yapılandırm
 
 ## Mutabakat istemcileri (eski adıyla "Eth2" istemcileri) {#consensus-clients}
 
-[Mutabakat yükseltmelerini](/upgrades/beacon-chain/) desteklemek için birden fazla mutabakat istemcisi (eskiden "Eth2" istemcisi olarak biliniyordu) vardır. İşaret Zincirini çalıştırırlar ve [Birleştirmeden](/upgrades/merge/) sonra yürütüm istemcilerine hisse ispatı mutabakat mekanizması sağlayacaklar.
-
-[Mutabakat istemcilerini görüntüle](/upgrades/get-involved/#clients).
+[Mutabakat yükseltmelerini](/roadmap/beacon-chain/) desteklemek için birden fazla mutabakat istemcisi (eskiden "Eth2" istemcisi olarak biliniyordu) vardır. İşaret Zincirini çalıştırırlar ve [Birleştirmeden](/roadmap/merge/) sonra yürütüm istemcilerine hisse ispatı mutabakat mekanizması sağlayacaklar.
 
 | İstemci                                                     | Dil        | İşletim sistemleri    | Ağlar                                   |
 | ----------------------------------------------------------- | ---------- | --------------------- | --------------------------------------- |

@@ -155,7 +155,7 @@ The DAO ハッキング事件をもっと見る
 
 ビーコンチェーンがイーサリアムの実行レイヤーにマージされると、変更を提案するガバナンスプロセスは調和されます。 このマージの実装プロセスは、[すでに進行中](https://eips.ethereum.org/EIPS/eip-3675)です。
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   マージの詳細
 </ButtonLink>
 

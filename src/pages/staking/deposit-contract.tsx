@@ -478,7 +478,7 @@ const DepositContractPage = ({
                   </ButtonRow>
                 </>
               )}
-              <InfoBanner isWarning={true} emoji=":warning:">
+              <InfoBanner isWarning emoji=":warning:">
                 <div>
                   <Translation id="page-staking-deposit-contract-warning-2" />{" "}
                   <Link to="https://launchpad.ethereum.org">

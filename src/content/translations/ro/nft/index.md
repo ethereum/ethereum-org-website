@@ -348,9 +348,9 @@ _Este important să ne amintim că Ethereum nu doar efectuează tranzacții fina
 
 #### Desfășurarea în timp {#timelines}
 
-Procesul a început deja. [Lanțul Beacon](/upgrades/beacon-chain/), prima actualizare a fost lansată în decembrie 2020. Acesta oferă fundamentul pentru mizare, permițând stakerilor să intre în sistem. Pasul următor, important pentru eficiența energetică, este fuzionarea lanțului actual, cel securizat de miner-i, cu Lanțul Beacon, unde nu mai este nevoie de minare. Deocamdată, termenele de implementare nu pot fi exacte, dar se estimează că acest lucru se va întâmpla la un moment dat în 2022. Procesul este cunoscut sub numele de fuziune (cunoscut anterior sub numele de andocare). [Aflați mai multe despre fuziune](/upgrades/merge/).
+Procesul a început deja. [Lanțul Beacon](/roadmap/beacon-chain/), prima actualizare a fost lansată în decembrie 2020. Acesta oferă fundamentul pentru mizare, permițând stakerilor să intre în sistem. Pasul următor, important pentru eficiența energetică, este fuzionarea lanțului actual, cel securizat de miner-i, cu Lanțul Beacon, unde nu mai este nevoie de minare. Deocamdată, termenele de implementare nu pot fi exacte, dar se estimează că acest lucru se va întâmpla la un moment dat în 2022. Procesul este cunoscut sub numele de fuziune (cunoscut anterior sub numele de andocare). [Aflați mai multe despre fuziune](/roadmap/merge/).
 
-<ButtonLink to="/upgrades/">
+<ButtonLink to="/roadmap/">
   Mai multe despre actualizările Ethereum
 </ButtonLink>
 
@@ -405,7 +405,7 @@ Se estimează că actualizările de scalabilitate vor permite rețelei să proce
 
 [Vitalik Buterin despre potențialul tranzacțiilor pe secundă cu sistemul de fragmentare](https://twitter.com/VitalikButerin/status/1312905884549300224)
 
-Fragmentarea va permite cel puțin un număr de tranzacții de 64 de ori mai mare decât numărul actual, care este de aproximativ 15 tranzacții. Este cantitatea de lanțuri de fragmente (date și capacitate în plus) care va fi introdusă. [Mai multe informații despre lanțurile de fragmente](/upgrades/sharding/)
+Fragmentarea va permite cel puțin un număr de tranzacții de 64 de ori mai mare decât numărul actual, care este de aproximativ 15 tranzacții. Este cantitatea de lanțuri de fragmente (date și capacitate în plus) care va fi introdusă. [Mai multe informații despre lanțurile de fragmente](/roadmap/danksharding/)
 
 Asta înseamnă că putem estima cât timp va dura procesarea a 100.000 de tranzacții, astfel încât să putem compara cu exemplul Visa de mai sus.
 

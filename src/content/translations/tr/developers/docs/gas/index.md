@@ -133,7 +133,7 @@ Gaz fiyatı tek başına belirli bir işlem için ne kadar ödememiz gerektiğin
 
 ## Gaz maliyetlerini azaltmak için girişimler {#initiatives-to-reduce-gas-costs}
 
-Ethereum [ölçeklenebilirlik yükseltmeleri](/upgrades/) nihayetinde platformun saniyede binlerce işlemi işlemesini ve küresel olarak ölçeklenmesini sağlayacak olan bazı gaz ücreti sorunlarını çözecektir.
+Ethereum [ölçeklenebilirlik yükseltmeleri](/roadmap/) nihayetinde platformun saniyede binlerce işlemi işlemesini ve küresel olarak ölçeklenmesini sağlayacak olan bazı gaz ücreti sorunlarını çözecektir.
 
 Katman 2 ölçekleme; gaz maliyetlerini, kullanıcı deneyimini ve ölçeklenebilirliği büyük ölçüde iyileştirmeye yönelik birincil bir girişimdir. [Katman 2 ölçekleme hakkında daha fazla bilgi](/developers/docs/scaling/#layer-2-scaling).
 

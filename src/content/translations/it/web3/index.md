@@ -117,7 +117,7 @@ Nonostante i numerosi benefici di Web3 nella sua forma corrente, esistono ancora
 
 ### Accessibilità {#accessibility}
 
-Importanti funzionalità di Web3, come Accedi con Ethereum, sono già disponibili per esser usati da chiunque, a costo zero. Ma, il costo relativo delle transazioni è ancora proibitivo per molti. A causa delle commissioni di transazione elevate, è meno probabile che Web3 sia usato nei paesi meno sviluppati e in via di sviluppo. Su Ethereum, queste difficoltà sono risolte tramite gli [aggiornamenti della rete](/upgrades/) e le [soluzioni di ridimensionamento del livello 2](/developers/docs/scaling/). La tecnologia è pronta, ma necessitiamo di una maggiore adozione del livello 2 per rendere Web3 accessibile a tutti.
+Importanti funzionalità di Web3, come Accedi con Ethereum, sono già disponibili per esser usati da chiunque, a costo zero. Ma, il costo relativo delle transazioni è ancora proibitivo per molti. A causa delle commissioni di transazione elevate, è meno probabile che Web3 sia usato nei paesi meno sviluppati e in via di sviluppo. Su Ethereum, queste difficoltà sono risolte tramite gli [aggiornamenti della rete](/roadmap/) e le [soluzioni di ridimensionamento del livello 2](/developers/docs/scaling/). La tecnologia è pronta, ma necessitiamo di una maggiore adozione del livello 2 per rendere Web3 accessibile a tutti.
 
 ### Esperienza utente {#user-experience}
 

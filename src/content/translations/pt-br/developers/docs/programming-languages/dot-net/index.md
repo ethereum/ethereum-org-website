@@ -22,7 +22,7 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 - [Escreva seu primeiro contrato inteligente](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Aprenda como Compilar e Implantar Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Referências e Links para Iniciantes {#beginner-references-and-links}
+## Referências e links para iniciantes {#beginner-references-and-links}
 
 **Introduzindo a biblioteca Nethereum e o VS Code Solidity**
 
@@ -33,7 +33,7 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 - [Contratos Inteligentes entre o .NET e a Ethereum Blockchain com a Nethereum](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933), também em [├](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
 - [Nethereum - Uma biblioteca de integração .NET de código aberto para cadeia de blocos](https://kauri.io/#collections/a%20hackathon%20survival%20guide/nethereum-an-open-source-.net-integration-library/)
 - [Escrevendo transações Ethereum para a base de dados SQL usando Nethereum](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
-- [Veja o como é facil implantar contratos inteligentes Ethereum usando C# e VirtualStudio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c)
+- [Veja o como é fácil implantar contratos inteligentes Ethereum usando C# e VirtualStudio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c)
 
 **Deseja ignorar a configuração por enquanto e pular direto para as amostras?**
 
@@ -66,19 +66,19 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 
 - [Nethereum Playground](http://playground.nethereum.com/) - _Compile, crie e execute trechos de código Nethereum no navegador_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Gerador de código Nethereum com UI em Blazor_
-- [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _Um explorador de cadeia de blocos leve e uma carteira simples em .NET Wasm SPA_
+- [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _Um explorador de blockchain leve e uma carteira simples em .NET Wasm SPA_
 - [Wonka Business Rules Engine](https://docs.nethereum.com/en/latest/wonka/) - _Um mecanismo de regras de negócio (para a plataforma .NET e para a plataforma Ethereum) que é inerentemente orientado a metadados_
-- [Nethermind](https://github.com/NethermindEth/nethermind) - _Um cliente .NET Core Ethereum para Linux, Windows, MacOs_
+- [Nethermind](https://github.com/NethermindEth/nethermind) - _Um cliente .NET Core Ethereum para Linux, Windows, MacOS_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _funções de utilidade para trabalhar com bases de código relacionadas com a Ethereum_
 - [TestChains](https://github.com/Nethereum/TestChains) - _Devchains .NET pré-configuradas para respostas rápidas (PoA)_
 
 Procurando por mais recursos? Confira [ethereum.org/developers](/developers/).
 
-## Colaboradores Comunitários.NET {#dot-net-community-contributors}
+## Colaboradores comunitários .NET {#dot-net-community-contributors}
 
-Na Nethereum, nós geralmente nos encontramos no [Gitter](https://gitter.im/Nethereum/Nethereum) onde todos são bem vindos para fazer e responder perguntas, obter ajuda ou simplesmente relaxar. Sinta-se à vontade para fazer um PR ou abrir uma questão no [repositório da Nethereum no GitHub](https://github.com/Nethereum), ou apenas para navegar pelos vários projetos paralelos e exemplos que temos. Você também pode nos encontrar em [Discord](https://discord.gg/jQPrR58FxX)!
+Na Nethereum, nós geralmente nos encontramos no [Gitter](https://gitter.im/Nethereum/Nethereum) onde todos são bem vindos para fazer e responder perguntas, obter ajuda ou simplesmente relaxar. Sinta-se à vontade para fazer uma PR ou abrir uma questão no [repositório da Nethereum no Github](https://github.com/Nethereum), ou apenas para navegar pelos vários projetos paralelos e exemplos que temos. Você também pode nos encontrar em [Discord](https://discord.gg/jQPrR58FxX)!
 
-Na Nethermind, vamos entrar em contato pelo [Gitter](https://gitter.im/nethermindeth/nethermind). Para PRs ou questões, confira o [repositório do GitHub da Nethermind](https://github.com/NethermindEth/nethermind).
+Se você é novo no Nethermind e precisa de ajuda para começar, junte-se ao nosso [Discord](http://discord.gg/PaCMRFdvWT). Os nossos desenvolvedores estão prontos para responder às suas perguntas. Para PRs ou problemas, confira o [repositório do Github da Nethermind](https://github.com/NethermindEth/nethermind).
 
 ## Outras listas agregadas {#other-aggregated-lists}
 

@@ -154,7 +154,7 @@ _Примітка. Будь-хто може належати до кількох
 
 Коли Beacon Chain об’єднається з виконавчим рівнем Ethereum, процес керування пропозиціями змін буде узгоджено. Виконання об’єднання [вже триває](https://eips.ethereum.org/EIPS/eip-3675).
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   Докладніше про об’єднання
 </ButtonLink>
 

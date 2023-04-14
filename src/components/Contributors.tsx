@@ -73,7 +73,7 @@ const Contributors: React.FC<IProps> = () => {
                   color="text"
                   textDecoration="none"
                   _hover={{ textDecoration: "none" }}
-                  isExternal={true}
+                  isExternal
                 >
                   {contributor.name}
                 </LinkOverlay>

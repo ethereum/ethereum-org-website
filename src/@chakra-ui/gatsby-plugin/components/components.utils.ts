@@ -67,9 +67,6 @@ export {
 export function defineMergeStyles(
   defaultTheming?: SystemStyleObject | unknown,
   ...styleObjs: SystemStyleObject[] | unknown[]
-) {
-  return merge(defaultTheming, ...styleObjs) as Record<
-    string,
-    SystemStyleObject | any
-  >
+): Record<string, SystemStyleObject> {
+  return merge(defaultTheming, ...styleObjs)
 }

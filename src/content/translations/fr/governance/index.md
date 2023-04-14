@@ -155,7 +155,7 @@ Bien que le développement des spécifications et des implémentations ait toujo
 
 Lorsque la chaîne phare fusionnera avec la couche d'exécution Ethereum, le processus de gouvernance pour proposer des changements sera harmonisé. Ce processus d'implémentation de la fusion est [déjà en cours](https://eips.ethereum.org/EIPS/eip-3675).
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   Plus d'infos sur la fusion
 </ButtonLink>
 
