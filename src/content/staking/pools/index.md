@@ -37,7 +37,7 @@ Pooled or delegated staking is not natively supported by the Ethereum protocol, 
 
 Each pool and the tools or smart contracts they use have been built out by different teams, and each comes with benefits and risks. Pools enable users to swap their ETH for a token representing staked ETH. The token is known as a "liquid staking derivative"; this is useful because it allows users to swap any amount of ETH to an equivalent amount of a yield-bearing token that generates a return from the staking rewards applied to the underlying staked ETH (and vice versa) on decentralized exchanges even though the actual ETH stays staked on the Beacon Chain. This means swaps back and forth from a yield-bearing staked-ETH product and "raw ETH" is quick, easy and not only available in multiples of 32 ETH.
 
-However, these liquid staking derivatives tend to create cartel-like behaviours where a large amount of staked ETH ends up under the control of a few centralized organizations rather than spread across many independent individuals. This creates conditions for censorship or value extraction. The gold standard for staking should always be individuals running validators on their own hardware whenever possible.
+However, these liquid staking derivatives tend to create cartel-like behaviors where a large amount of staked ETH ends up under the control of a few centralized organizations rather than spread across many independent individuals. This creates conditions for censorship or value extraction. The gold standard for staking should always be individuals running validators on their own hardware whenever possible.
 
 [More on risks of staking tokens](https://notes.ethereum.org/@djrtwo/risks-of-lsd).
 
@@ -64,11 +64,7 @@ Typically ERC-20 liquidity tokens are issued to stakers that represents the valu
 </ExpandableCard>
 
 <ExpandableCard title="When can I withdraw my stake?">
-Currently, withdrawing funds from an Ethereum validator is not possible, which limits the ability to actually <i>redeem</i> your liquidity token for the ETH rewards locked in the consensus layer.
-
-The Shanghai network upgrade will introduce withdrawal functionality which is scheduled for April 12, 2023. All staked ETH will remain locked until then.
-
-After this upgrade, the validator accounts that back staking pools will have the ability to exit and withdraw ETH to their designated withdrawal address. This will enable the ability to redeem your portion of stake for the underlying ETH. Check with your provider to see how they support this functionality.
+Right now! The Shanghai/Capella network upgrade occurred in April 2023, and introduced staking withdrawals. Validator accounts that back staking pools now have the ability to exit and withdraw ETH to their designated withdrawal address. This enables the ability to redeem your portion of stake for the underlying ETH. Check with your provider to see how they support this functionality.
 
 Alternatively, pools that utilize an ERC-20 liquidity token allow users to trade this token in the open market, allowing you to sell your staking position, effectively "withdrawing" without actually removing ETH from the staking contract.
 

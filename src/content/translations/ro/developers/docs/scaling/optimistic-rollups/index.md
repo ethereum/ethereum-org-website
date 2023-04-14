@@ -14,7 +14,7 @@ Rollup-urile Optimistic stau în paralel cu lanțul Ethereum principal pe nivelu
 
 Cu rollup-urile Optimistic, tranzacțiile sunt scrise în lanțul Ethereum principal ca şi `calldata`, optimizându-le și mai mult prin reducerea costului gazului.
 
-Deoarece calculul este partea lentă și costisitoare a utilizării lui Ethereum, rollup-urile Optimistic pot oferi ameliorarea de până la 10-100 de ori a scalabilității, în funcție de tranzacție. Acest număr va crește și mai mult odată cu introducerea [lanţurilor de fragmente](/upgrades/shard-chains), deoarece vor fi disponibile mai multe date dacă o tranzacție este contestată.
+Deoarece calculul este partea lentă și costisitoare a utilizării lui Ethereum, rollup-urile Optimistic pot oferi ameliorarea de până la 10-100 de ori a scalabilității, în funcție de tranzacție. Acest număr va crește și mai mult odată cu introducerea [lanţurilor de fragmente](/roadmap/danksharding), deoarece vor fi disponibile mai multe date dacă o tranzacție este contestată.
 
 ### Contestarea tranzacțiilor {#disputing-transactions}
 

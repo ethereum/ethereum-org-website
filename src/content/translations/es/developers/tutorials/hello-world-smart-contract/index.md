@@ -231,7 +231,7 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 Para conectarlos efectivamente a nuestro código, vincularemos estas variables en nuestro `hardhat.config.js` en el paso 13.
 
-<InfoBanner isWarning={true}>
+<InfoBanner isWarning>
 ¡No exponga su <code>.env</code>! Asegúrese de que nunca comparte ni expone su archivo <code>.env</code> con nadie, ya que ello conlleva revelar sus secretos. Si está haciendo un control de la versión, añada <code>.env</code> a un archivo <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
 </InfoBanner>
 

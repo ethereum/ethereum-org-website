@@ -13,7 +13,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 In the previous tutorial we studied [the anatomy of an ERC-20 token in Solidity](/developers/tutorials/understand-the-erc-20-token-smart-contract/) on the Ethereum blockchain. In this article we’ll see how we can use a smart contract to interact with a token using the Solidity language.
 
-For this smart contract, we’ll create a really dummy decentralized exchange where a user can trade Ethereum for our newly deployed [ERC-20 token](/developers/docs/standards/tokens/erc-20/).
+For this smart contract, we’ll create a really dummy decentralized exchange where a user can trade ether for our newly deployed [ERC-20 token](/developers/docs/standards/tokens/erc-20/).
 
 For this tutorial we’ll use the code we wrote in the previous tutorial as a base. Our DEX will instantiate an instance of the contract in its constructor and perform the operations of:
 
@@ -192,7 +192,7 @@ function sell(uint256 amount) public {
 }
 ```
 
-If everything works you should see 2 events (a `Transfer` and `Sold`) in the transaction and your token balance and Ethereum balance updated.
+If everything works you should see 2 events (a `Transfer` and `Sold`) in the transaction and your token balance and ether balance updated.
 
 ![Two events in the transaction: Transfer and Sold](./transfer-and-sold-events.png)
 

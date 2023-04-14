@@ -243,9 +243,7 @@ Erigon که قبلاً به عنوان Erigon شناخته می‌شد، یک ف
 
 ## کلاینت‌های اجماع («کلاینت‌های Eth2» سابق) {#consensus-clients}
 
-چندین کلاینت اجماع (که قبلاً به‌عنوان کلاینت‌های «Eth2» شناخته می‌شدند) وجود دارد که از [ارتقاهای اجماع](/upgrades/beacon-chain/) پشتیبانی می‌کنند. They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/upgrades/merge/).
-
-[کلاینت‌های اجماع را مشاهده کنید](/upgrades/get-involved/#clients).
+چندین کلاینت اجماع (که قبلاً به‌عنوان کلاینت‌های «Eth2» شناخته می‌شدند) وجود دارد که از [ارتقاهای اجماع](/roadmap/beacon-chain/) پشتیبانی می‌کنند. They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/roadmap/merge/).
 
 | کلاینت                                                      | زبان       | سیستم‌عامل              | شبکه‌ها                                  |
 | ----------------------------------------------------------- | ---------- | ----------------------- | ---------------------------------------- |

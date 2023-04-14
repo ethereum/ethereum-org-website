@@ -22,13 +22,13 @@ Bukti kerja adalah cara yang kuat untuk mengamankan jaringan dan menegakkan peru
 
 ## Bukti taruhan {#proof-of-stake}
 
-Masa depan yang lebih ramah lingkungan untuk Ethereum sedang dibangun dalam [bentuk rantai **bukti taruhan (PoS)**](/upgrades/beacon-chain/). Di bawah [bukti taruhan](/developers/docs/consensus-mechanisms/pos/), penyelesaian teka-teki arbitrari tidak diperlukan. Menghilangkan penyelesaian teka-teki secara drastis mengurangi pemakaian energi yang diperlukan untuk mengamankan jaringan. Para penambang digantikan oleh para validator yang melakukan fungsi yang sama, kecuali alih-alih membayarkan aset mereka di muka dalam bentuk daya komputasional, mereka menaruhkan ETH sebagai jaminan terhadap perilaku curang. Jika validator malas (luring ketika mereka seharusnya memenuhi beberapa tugas validator) ETH mereka yang ditaruhkan dapat secara perlahan berkurang, sedangkan perilaku curang yang dapat dibuktikan menyebabkan aset yang ditaruhkan "dipotong". Ini sangat mendorong partisipasi aktif dan jujur dalam mengamankan jaringan.
+Masa depan yang lebih ramah lingkungan untuk Ethereum sedang dibangun dalam [bentuk rantai **bukti taruhan (PoS)**](/roadmap/beacon-chain/). Di bawah [bukti taruhan](/developers/docs/consensus-mechanisms/pos/), penyelesaian teka-teki arbitrari tidak diperlukan. Menghilangkan penyelesaian teka-teki secara drastis mengurangi pemakaian energi yang diperlukan untuk mengamankan jaringan. Para penambang digantikan oleh para validator yang melakukan fungsi yang sama, kecuali alih-alih membayarkan aset mereka di muka dalam bentuk daya komputasional, mereka menaruhkan ETH sebagai jaminan terhadap perilaku curang. Jika validator malas (luring ketika mereka seharusnya memenuhi beberapa tugas validator) ETH mereka yang ditaruhkan dapat secara perlahan berkurang, sedangkan perilaku curang yang dapat dibuktikan menyebabkan aset yang ditaruhkan "dipotong". Ini sangat mendorong partisipasi aktif dan jujur dalam mengamankan jaringan.
 
 Sama dengan bukti kerja, entitas yang jahat akan mengharuskan setidaknya 51% total ETH yang ditaruhkan dalam jaringan untuk mengeksekusi [serangan 51%](/glossary/#51-attack). Namun, tidak seperti pada bukti kerja, di mana kerugian potensial dari serangan yang gagal hanya merupakan biaya pembuatan daya hash yang diperlukan untuk menambang, pada bukti taruhan, kerugian yang mungkin dari suatu serangan adalah seluruh jumlah ETH yang digunakan sebagai jaminan. Struktur yang tidak mendukung ini memungkinkan keamanan jaringan dengan bukti taruhan, sekaligus menghapus kebutuhan untuk memakai energi pada komputasi arbitrari. Penjelasan lengkap dari keamanan jaringan di bawah bukti taruhan dapat ditemukan [di sini](/developers/docs/consensus-mechanisms/pos/) dan [di sini](https://vitalik.ca/general/2017/12/31/pos_faq.html).
 
 ## Penggabungan {#the-merge}
 
-Ada rantai bukti taruhan fungsional yang disebut [Rantai Suar](/upgrades/beacon-chain/) yang telah beoperasi sejak Desember 2020 yang menunjukkan kemungkinan penerapan protokol bukti taruhan. Penggabungan merujuk pada titik waktu ketika Ethereum meninggalkan bukti kerja dan sepenuhnya mengadopsi bukti taruhan. Penggabungan diharapkan terjadi ~Q3/Q4 2022. [Selengkapnya tentang penggabungan](/upgrades/merge/).
+Ada rantai bukti taruhan fungsional yang disebut [Rantai Suar](/roadmap/beacon-chain/) yang telah beoperasi sejak Desember 2020 yang menunjukkan kemungkinan penerapan protokol bukti taruhan. Penggabungan merujuk pada titik waktu ketika Ethereum meninggalkan bukti kerja dan sepenuhnya mengadopsi bukti taruhan. Penggabungan diharapkan terjadi ~Q3/Q4 2022. [Selengkapnya tentang penggabungan](/roadmap/merge/).
 
 ## Pemakaian energi bukti taruhan {#proof-of-stake-energy}
 
@@ -76,9 +76,9 @@ Sekalipun pemakaian energi Ethereum secara historis telah menjadi penting, telah
 ## Topik Terkait {#related-topics}
 
 - [Visi Ethereum](/roadmap/vision/)
-- [Rantai Suar](/upgrades/beacon-chain)
-- [Penggabungan](/upgrades/merge/)
-- [Sharding](/upgrades/beacon-chain/)
+- [Rantai Suar](/roadmap/beacon-chain)
+- [Penggabungan](/roadmap/merge/)
+- [Sharding](/roadmap/beacon-chain/)
 
 ### Catatan kaki dan sumber referensi {#footnotes-and-sources}
 

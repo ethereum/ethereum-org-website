@@ -69,11 +69,8 @@ export {
 export function defineMergeStyles(
   defaultTheming?: SystemStyleObject | unknown,
   ...styleObjs: SystemStyleObject[] | unknown[]
-) {
-  return merge(defaultTheming, ...styleObjs) as Record<
-    string,
-    SystemStyleObject
-  >
+): Record<string, SystemStyleObject> {
+  return merge(defaultTheming, ...styleObjs)
 }
 
 export const _notDisabled = "&:not([data-disabled], [disabled])"

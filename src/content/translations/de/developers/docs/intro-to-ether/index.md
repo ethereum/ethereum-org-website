@@ -18,7 +18,7 @@ Die erste Kryptowährung war Bitcoin, die vom Pseudonym Satoshi Nakamoto erschaf
 
 ## Was ist Ether? {#what-is-ether}
 
-**Ether (ETH)** ist die Kryptowährung, die für viele Dinge im Ethereum-Netzwerk verwendet wird. Grundsätzlich ist es die einzig akzeptable Form der Bezahlung von Transaktionsgebühren, und nach [The Merge](/upgrades/merge) wird Ether erforderlich sein, um Blöcke im Mainnet zu validieren und vorzuschlagen. Ether werden u. a. auch als primäre Form von Sicherheiten auf den [DeFi](/defi)-Kreditmärkten, als Rechnungseinheit auf NFT-Marktplätzen, als Bezahlung für die Erbringung von Dienstleistungen oder für den Verkauf von Gütern in der realen Welt und mehr verwendet.
+**Ether (ETH)** ist die Kryptowährung, die für viele Dinge im Ethereum-Netzwerk verwendet wird. Grundsätzlich ist es die einzig akzeptable Form der Bezahlung von Transaktionsgebühren, und nach [The Merge](/roadmap/merge) wird Ether erforderlich sein, um Blöcke im Mainnet zu validieren und vorzuschlagen. Ether werden u. a. auch als primäre Form von Sicherheiten auf den [DeFi](/defi)-Kreditmärkten, als Rechnungseinheit auf NFT-Marktplätzen, als Bezahlung für die Erbringung von Dienstleistungen oder für den Verkauf von Gütern in der realen Welt und mehr verwendet.
 
 Ethereum ermöglicht es Entwicklern, [**dezentrale Anwendungen (dapps)**](/developers/docs/dapps) zu erstellen, die sich alle einen Pool von Rechenleistung teilen. Da dieser gemeinsame Pool endlich ist, braucht Ethereum einen Mechanismus, um zu bestimmen, wer ihn nutzen darf. Andernfalls könnte eine App versehentlich oder böswillig alle Netzwerkressourcen verbrauchen, was anderen den Zugriff auf die App verwehren würde.
 

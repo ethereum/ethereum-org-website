@@ -75,7 +75,7 @@ Ethereum планируется перевести на консенсусный
 
 Комбинация принципа доказательства работы и самой длинной цепочки известна как «консенсус Накамото».
 
-[Сеть Beacon Chain](/upgrades/beacon-chain/) использует механизм консенсуса под названием [Casper the Friendly Finality Gadget](https://arxiv.org/abs/1710.09437), основанный на доказательстве владения.
+[Сеть Beacon Chain](/roadmap/beacon-chain/) использует механизм консенсуса под названием [Casper the Friendly Finality Gadget](https://arxiv.org/abs/1710.09437), основанный на доказательстве владения.
 
 ## Дополнительные ресурсы {#further-reading}
 

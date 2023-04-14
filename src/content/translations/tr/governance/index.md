@@ -154,7 +154,7 @@ Ethereum yönetişim süreci, genellikle açıklık ve kapsayıcılık için hı
 
 İşaret Zinciri, Ethereum yürütüm katmanıyla birleştiğinde, değişiklikleri önermek için yönetişim süreci uyumlu hâle getirilecektir. Birleştirmeyi uygulamaya yönelik bu süreç [çoktan başladı](https://eips.ethereum.org/EIPS/eip-3675).
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   Birleştirme hakkında ek bilgi
 </ButtonLink>
 

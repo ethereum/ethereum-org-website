@@ -144,31 +144,6 @@ const VisionPage = ({
     alt: t("page-eth-whats-eth-hero-alt"),
   }
 
-  const upgrades = [
-    // TODO: Check/update string keys after affiliates pre-merge content changes are pulled in
-    {
-      image: getImage(data.beaconchain),
-      title: <Translation id="page-upgrades-beacon-chain-title" />,
-      description: <Translation id="page-upgrades-beacon-chain-desc" />,
-      to: "/upgrades/beacon-chain/",
-      date: <Translation id="page-upgrades-beacon-chain-estimate" />,
-    },
-    {
-      image: getImage(data.themerge),
-      title: <Translation id="page-upgrades-docking" />,
-      description: <Translation id="page-upgrades-merge-desc" />,
-      to: "/upgrades/merge/",
-      date: <Translation id="page-upgrades-merge-estimate" />,
-    },
-    {
-      image: getImage(data.shards),
-      title: <Translation id="page-upgrades-shard-title" />,
-      description: <Translation id="page-upgrades-shard-desc" />,
-      to: "/upgrades/sharding/",
-      date: <Translation id="page-upgrades-shard-estimate" />,
-    },
-  ]
-
   return (
     <Page>
       <PageMetadata
@@ -264,8 +239,8 @@ const VisionPage = ({
           </Text>
           <Text>
             <Translation id="page-roadmap-vision-scalability-desc-4" />{" "}
-            <Link to="/upgrades/sharding/">
-              <Translation id="page-roadmap-vision-shard-upgrade" />
+            <Link to="/roadmap/danksharding/">
+              <Translation id="page-roadmap-vision-danksharding" />
             </Link>{" "}
           </Text>
           <H3>
@@ -286,9 +261,6 @@ const VisionPage = ({
             <Link to="/developers/docs/consensus-mechanisms/pow/">
               <Translation id="page-roadmap-vision-security-desc-5-link" />
             </Link>
-          </Text>
-          <Text>
-            <Translation id="page-roadmap-vision-security-desc-8" />
           </Text>
           <Text>
             <Translation id="page-roadmap-vision-security-desc-10" />
@@ -328,32 +300,13 @@ const VisionPage = ({
             <Text>
               <Translation id="page-roadmap-vision-sustainability-desc-8" />
             </Text>
-            <ButtonLink to="/upgrades/merge/">
+            <ButtonLink to="/roadmap/merge/">
               <Translation id="page-upgrades-merge-btn" />
             </ButtonLink>
           </InfoBanner>
         </CentralContent>
       </PageContent>
       <PageDivider />
-      <PageContent>
-        <H2>
-          <Translation id="page-roadmap-vision-explore-upgrades" />
-        </H2>
-        <StyledCardContainer>
-          {upgrades.map((upgrade, idx) => (
-            <ActionCard
-              isRight
-              key={idx}
-              image={upgrade.image!}
-              title={upgrade.title}
-              description={upgrade.description}
-              to={upgrade.to}
-            >
-              <H6>{upgrade.date}</H6>
-            </ActionCard>
-          ))}
-        </StyledCardContainer>
-      </PageContent>
       <FeedbackCard />
     </Page>
   )
@@ -400,36 +353,6 @@ export const query = graphql`
     merge: file(relativePath: { eq: "upgrades/merge.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    beaconchain: file(relativePath: { eq: "upgrades/core.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 420
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    shards: file(relativePath: { eq: "upgrades/newrings.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 420
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    themerge: file(relativePath: { eq: "upgrades/merge.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 420
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
       }
     }
   }

@@ -634,7 +634,7 @@ const StakingPage = ({
               <p>
                 <Translation id="page-staking-faq-4-answer-p3" />
               </p>
-              <ButtonLink to="/upgrades/merge/">
+              <ButtonLink to="/roadmap/merge/">
                 <Translation id="page-upgrades-merge-btn" />
               </ButtonLink>
             </ExpandableCard>

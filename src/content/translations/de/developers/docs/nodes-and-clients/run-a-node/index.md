@@ -144,7 +144,7 @@ Jede Client-Implementierung hat eine von Menschen lesbare Versionszeichenfolge, 
 
 #### Durchführung zusätzlicher Dienste {#running-additional-services}
 
-Wenn du deinen eigenen Node betreibst, kannst du Dienste nutzen, die einen direkten Zugang zum Ethereum-Client-RPC erfordern. Dies sind Dienste, die auf Ethereum aufbauen, wie [Layer-2-Lösungen](/developers/docs/scaling/#layer-2-scaling), [Konsens-Clients](/upgrades/get-involved/#clients) und andere Ethereum-Infrastruktur.
+Wenn du deinen eigenen Node betreibst, kannst du Dienste nutzen, die einen direkten Zugang zum Ethereum-Client-RPC erfordern. Dies sind Dienste, die auf Ethereum aufbauen, wie [Layer-2-Lösungen](/developers/docs/scaling/#layer-2-scaling), Konsens-Clients und andere Ethereum-Infrastruktur.
 
 #### Überwachung des Nodes {#monitoring-the-node}
 

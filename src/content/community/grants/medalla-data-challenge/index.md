@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 # The Eth2 Medalla data challenge {#the-eth2-medalla-data-challenge}
 
-<InfoBanner emoji=":warning:" isWarning={true}>
+<InfoBanner emoji=":warning:" isWarning>
   This challenge is over. <a href="https://blog.ethereum.org/2020/11/17/medalla-data-challenge-results/" target="_blank">View the results</a>
 </InfoBanner>
 
@@ -30,7 +30,7 @@ The Ethereum 2.0 [Medalla testnet](https://github.com/goerli/medalla) is live. V
 
 **Document your best Medalla data insights in the most readable blog post possible – for prizes!**
 
-The Ethereum Foundation are running this challenge because there's a lot to learn and discover from Medalla testnet activity. Your findings will give the Ethereum community —from beginners to core researchers— important insight into Medalla, the last step en route to Phase 0, the [Beacon Chain](/upgrades/beacon-chain/).
+The Ethereum Foundation are running this challenge because there's a lot to learn and discover from Medalla testnet activity. Your findings will give the Ethereum community —from beginners to core researchers— important insight into Medalla, the last step en route to Phase 0, the [Beacon Chain](/roadmap/beacon-chain/).
 
 If Medalla proves stable, Mainnet launch is next! And so, this is a critical moment to get involved in the Ethereum community <Emoji svg text=":rocket:" />
 

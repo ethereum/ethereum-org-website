@@ -42,7 +42,7 @@ Ethereum non è eseguibile usando il popolare OS Linux per Raspberry Pi "Raspbia
 
 ## Nota sui client di esecuzione e di consenso {#note-on-execution-and-consensus-clients}
 
-La documentazione di Ethereum on Arm spiega come configurare un client di esecuzione _O_ un client di consenso, ad eccezione di due reti di prova di Ethereum (Kiln e Ropsten). Questa scelta è possibile solo prima dell'imminente transizione di Ethereum dal Proof of Work (PoW) al Proof of Stake (PoS), nota come [La Fusione](/upgrades/merge).
+La documentazione di Ethereum on Arm spiega come configurare un client di esecuzione _O_ un client di consenso, ad eccezione di due reti di prova di Ethereum (Kiln e Ropsten). Questa scelta è possibile solo prima dell'imminente transizione di Ethereum dal Proof of Work (PoW) al Proof of Stake (PoS), nota come [La Fusione](/roadmap/merge).
 
 <InfoBanner>
 Dopo La Fusione non sarà possibile eseguire separatamente i client di esecuzione e di consenso, che dovranno essere eseguiti in coppia. Pertanto, in questo tutorial eseguiremo insieme una coppia client di esecuzione- client di consenso su una rete di prova di Ethereum (Kiln).
