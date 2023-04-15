@@ -6,9 +6,7 @@ import {
   Flex,
   Text,
   useColorMode,
-  useToken,
   Box,
-  List,
 } from "@chakra-ui/react"
 import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
 import { cloneDeep } from "lodash"
@@ -18,7 +16,6 @@ import MobileNavMenu from "./Mobile"
 import ButtonLink from "../ButtonLink"
 import Link from "../Link"
 import Search from "../Search"
-import Translation from "../Translation"
 import { EthHomeIcon } from "../icons"
 import { IItem, ISections } from "./types"
 
