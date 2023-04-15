@@ -314,7 +314,7 @@ const Nav: FC<IProps> = ({ path }) => {
         height="4.75rem"
         justifyContent="center"
         py={4}
-        px={{ base: 8, lg: 4, xl: 8 }}
+        px={{ base: 4, xl: 8 }}
       >
         <Flex
           alignItems={{ base: "center", lg: "normal" }}
