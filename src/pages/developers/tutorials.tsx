@@ -9,7 +9,6 @@ import ButtonLink from "../../components/ButtonLink"
 import Link from "../../components/Link"
 import Modal from "../../components/Modal"
 import PageMetadata from "../../components/PageMetadata"
-import Tag from "../../components/Tag"
 import TutorialTags from "../../components/TutorialTags"
 import Emoji from "../../components/Emoji"
 import {
@@ -29,7 +28,7 @@ import {
   filterTutorialsByLang,
   getSortedTutorialTagsForLang,
 } from "../../utils/tutorials"
-import { Badge } from "@chakra-ui/react"
+import { Badge, Button, chakra, forwardRef } from "@chakra-ui/react"
 
 const SubSlogan = styled.p`
   font-size: 1.25rem;
@@ -148,11 +147,39 @@ const TagContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  gap: 0.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     max-width: 100%;
     margin-bottom: 1rem;
   }
 `
+
+const FilterTag = forwardRef<{ isActive: boolean; name: string }, "button">(
+  (props, ref) => (
+    <chakra.button
+      ref={ref}
+      bg="none"
+      bgImage="radial-gradient(46.28% 66.31% at 66.95% 58.35%,rgba(127, 127, 213, 0.2) 0%,rgba(134, 168, 231, 0.2) 50%,rgba(145, 234, 228, 0.2) 100%)"
+      border="1px"
+      borderColor={props.isActive ? "primary300" : "white800"}
+      borderRadius="base"
+      boxShadow={!props.isActive ? "table" : undefined}
+      color="text"
+      fontSize="sm"
+      opacity={props.isActive ? 1 : 0.7}
+      p={2}
+      textTransform="uppercase"
+      _hover={{
+        color: "primary",
+        borderColor: "text200",
+        opacity: "1",
+      }}
+    >
+      {props.name}
+    </chakra.button>
+  )
+)
+
 const ClearLink = styled.button`
   color: ${(props) => props.theme.colors.primary};
   text-decoration: underline;
@@ -380,13 +407,9 @@ const TutorialsPage = ({
               const name = `${tagName} (${tagCount})`
               const isActive = selectedTags.includes(tagName)
               return (
-                <Tag
-                  name={name}
-                  key={name}
-                  isActive={isActive}
-                  shouldShowIcon={false}
-                  onClick={handleTagSelect}
-                  value={tagName}
+                <FilterTag
+                  onClick={() => handleTagSelect(tagName)}
+                  {...{ name, isActive }}
                 />
               )
             })}
