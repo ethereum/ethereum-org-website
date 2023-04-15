@@ -320,7 +320,7 @@ const Nav: FC<IProps> = ({ path }) => {
           alignItems={{ base: "center", lg: "normal" }}
           justifyContent={{ base: "space-between", lg: "normal" }}
           width="full"
-          maxW="1440px"
+          maxW="container.2xl"
         >
           <Link
             to="/"
