@@ -30,7 +30,7 @@ export interface IProps {
 const Nav: FC<IProps> = ({ path }) => {
   const { colorMode, toggleColorMode } = useColorMode()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   const isDarkTheme = colorMode === "dark"
 
@@ -362,7 +362,10 @@ const Nav: FC<IProps> = ({ path }) => {
               >
                 <Icon as={MdLanguage} fontSize="2xl" />
                 <Text as="span" pl={2}>
-                  <Translation id="languages" />
+                  <Box as="span" hideBelow="lg">
+                    {t("languages")}
+                  </Box>{" "}
+                  {i18n.language.toUpperCase()}
                 </Text>
               </ButtonLink>
             </Flex>
