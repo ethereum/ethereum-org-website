@@ -6,6 +6,7 @@ import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Badge,
   Box,
+  BoxProps,
   Center,
   Divider,
   DividerProps,
@@ -72,20 +73,20 @@ const SectionHeading = (props: HeadingProps) => {
   return <Heading {...mergeProps} />
 }
 
-const ContentBox = (
-  props: HTMLAttributes<"div"> & {
-    children: ReactNode
-    isLightGrayBg?: boolean
-  }
-) => (
+const ContentBox = ({
+  isLightGrayBg,
+  ...rest
+}: BoxProps & {
+  children: ReactNode
+  isLightGrayBg?: boolean
+}) => (
   <Box
     px={8}
     py={12}
     width="full"
-    {...(props.isLightGrayBg && { background: "layer2ContentSecondary" })}
-  >
-    {props.children}
-  </Box>
+    {...(isLightGrayBg && { background: "layer2ContentSecondary" })}
+    {...rest}
+  />
 )
 
 const StyledInfoIcon = () => (
