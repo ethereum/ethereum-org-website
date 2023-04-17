@@ -33,7 +33,7 @@ Provide feedback on our website by:
 Ethereum.org is a fast growing website with many features and content. Some of the UI can easily become obsolete or could be improved. If you encounter any such instance, please report it so that it gets our attention.
 
 1. Go through the website and pay attention to its design.
-2. Take screenshots and notes and if you see any visual or UX issues.
+2. Take screenshots and notes if you see any visual or UX issues.
 3. Report the found issues using a [bug report](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
 ### <Emoji text=":four:" size={1} /> Propose design changes {#propose-design-changes}
