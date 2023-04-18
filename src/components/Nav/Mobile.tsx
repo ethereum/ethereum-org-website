@@ -17,7 +17,6 @@ import { MdBrightness2, MdLanguage, MdSearch, MdWbSunny } from "react-icons/md"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { motion } from "framer-motion"
 
-// import Icon from "../Icon"
 import Link from "../Link"
 import Translation from "../Translation"
 
