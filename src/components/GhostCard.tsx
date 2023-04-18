@@ -1,13 +1,12 @@
 import React from "react"
-import { Box } from "@chakra-ui/react"
+import { Box, BoxProps } from "@chakra-ui/react"
 
-export interface IProps {
-  children?: React.ReactNode
+export interface IProps extends BoxProps {
   className?: string
 }
 
-const GhostCard: React.FC<IProps> = ({ children, className }) => (
-  <Box position="relative" mt="2" alignSelf="stretch" className={className}>
+const GhostCard: React.FC<IProps> = ({ children, className, ...rest }) => (
+  <Box position="relative" alignSelf="stretch" className={className} {...rest}>
     <Box
       zIndex="hide"
       position="absolute"

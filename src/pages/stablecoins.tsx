@@ -12,6 +12,7 @@ import {
   Grid,
   BoxProps,
   FlexProps,
+  HeadingProps,
 } from "@chakra-ui/react"
 
 import ButtonLink from "../components/ButtonLink"
@@ -55,6 +56,10 @@ const Page = (props: FlexProps) => (
     mx="auto"
     {...props}
   />
+)
+
+const H2 = (props: HeadingProps) => (
+  <Heading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4} {...props} />
 )
 
 type EthereumDataResponse = Array<{
@@ -339,10 +344,11 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
           mb={8}
           direction={{ base: "column", lg: "row" }}
         >
+          {/* // TODO: fix this */}
           <Box mr={8} w="full" margin={{ base: "auto 0rem", lg: "" }}>
-            <Heading as="h2" mt={0}>
+            <H2 mt={0}>
               <Translation id="page-stablecoins-why-stablecoins" />
-            </Heading>
+            </H2>
             <p>
               <Translation id="page-stablecoins-prices-definition" />{" "}
               <Link to="#how">
@@ -352,15 +358,15 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
           </Box>
         </Flex>
         <Flex
+          direction={{ base: "column", lg: "row" }}
           align="flex-start"
           width="full"
-          mr={8}
+          mr={{ base: 0, lg: 8 }}
           mb={8}
-          direction={{ base: "column", lg: "row" }}
         >
-          <Box mr={8} w="full" margin={{ base: "auto 0rem", lg: "" }}>
+          <Box w="full" margin={{ base: "auto 0", lg: "0 2rem 0" }}>
             {tokens.map((token, idx) => (
-              <Box minWidth="full" my={2} borderRadius={0}>
+              <Box minWidth="full" my={2}>
                 <HorizontalCard
                   key={idx}
                   emoji={token.emoji}
@@ -370,17 +376,19 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
               </Box>
             ))}
           </Box>
-          <Box maxW="640px" mr={8} mt={{ base: 16, lg: 0 }}>
-            <GhostCard>
-              <Emoji text=":pizza:" fontSize="5xl" />
-              <h3>
-                <Translation id="page-stablecoins-bitcoin-pizza" />
-              </h3>
-              <p>
-                <Translation id="page-stablecoins-bitcoin-pizza-body" />{" "}
-              </p>
-            </GhostCard>
-          </Box>
+          <GhostCard
+            maxW="640px"
+            mr={{ base: 0, lg: 8 }}
+            mt={{ base: 16, lg: 2 }}
+          >
+            <Emoji text=":pizza:" fontSize="5xl" />
+            <h3>
+              <Translation id="page-stablecoins-bitcoin-pizza" />
+            </h3>
+            <p>
+              <Translation id="page-stablecoins-bitcoin-pizza-body" />{" "}
+            </p>
+          </GhostCard>
         </Flex>
       </Content>
       <Box
