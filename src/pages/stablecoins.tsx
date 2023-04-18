@@ -42,7 +42,7 @@ const tooltipContent = (
   </div>
 )
 
-const Content = (props: BoxProps) => <Box py={4} px={8} {...props} />
+const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />
 
 const Divider = () => <Box my={16} w="10%" h={1} bg="homeDivider" />
 
@@ -618,7 +618,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
       <Flex
         alignItems="center"
         w="full"
-        m={{ base: "0rem", lg: "0 auto" }}
+        m={{ base: "0rem", lg: "0 auto" }} // TODO: fix this
         pl={{ base: "0rem", lg: "2rem" }}
         pr={{ base: "0rem", lg: "2rem" }}
         pb={16}
@@ -644,11 +644,9 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
             <ButtonLink to="/dapps/">
               <Translation id="page-stablecoins-explore-dapps" />
             </ButtonLink>
-            <Box whiteSpace="break-spaces">
-              <ButtonLink variant="outline" to="/defi/">
-                <Translation id="page-stablecoins-more-defi-button" />
-              </ButtonLink>
-            </Box>
+            <ButtonLink variant="outline" to="/defi/" whiteSpace="normal">
+              <Translation id="page-stablecoins-more-defi-button" />
+            </ButtonLink>
           </Flex>
         </CalloutBanner>
         <h2>
