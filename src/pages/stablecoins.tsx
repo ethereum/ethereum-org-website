@@ -7,10 +7,11 @@ import {
   Flex,
   Heading,
   Text,
-  useToken,
   Img,
   Icon,
   Grid,
+  BoxProps,
+  FlexProps,
 } from "@chakra-ui/react"
 
 import ButtonLink from "../components/ButtonLink"
@@ -25,7 +26,6 @@ import Link from "../components/Link"
 import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
 import ProductList from "../components/ProductList"
-import { Content, Divider, Page } from "../components/SharedStyledComponents"
 import SimpleTable from "../components/SimpleTable"
 import StablecoinAccordion from "../components/StablecoinAccordion"
 import StablecoinBoxGrid from "../components/StablecoinBoxGrid"
@@ -40,6 +40,14 @@ const tooltipContent = (
     <Translation id="data-provided-by" />{" "}
     <Link to="https://www.coingecko.com/en/api">coingecko.com</Link>
   </div>
+)
+
+const Content = (props: BoxProps) => <Box py={4} px={8} {...props} />
+
+const Divider = () => <Box my={16} w="10%" h={1} bg="homeDivider" />
+
+const Page = (props: FlexProps) => (
+  <Flex direction="column" align="center" my={0} mx="auto" {...props} />
 )
 
 type EthereumDataResponse = Array<{
@@ -77,8 +85,6 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
     marketsHasError: false,
   })
   const { t } = useTranslation()
-
-  const cardBoxShadow = useToken("colors", "cardBoxShadow")
 
   // Stablecoin types
   const FIAT = t("page-stablecoins-stablecoins-table-type-fiat-backed")
@@ -327,6 +333,8 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
           direction={{ base: "column", lg: "row" }}
         >
           <Box mr={8} w="full" margin={{ base: "auto 0rem", lg: "" }}>
+            {" "}
+            // TODO: fix this
             <Heading as="h2" mt={0}>
               <Translation id="page-stablecoins-why-stablecoins" />
             </Heading>
