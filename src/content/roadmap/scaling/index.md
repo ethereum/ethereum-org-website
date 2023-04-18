@@ -24,7 +24,7 @@ Rollups collect large numbers of transactions, execute them and submit the resul
 
 ### Proto-Danksharding {#proto-danksharding}
 
-Rollup data is stored on Ethereum permanently, which is expensive. Over 90% of the transaction cost users pay on rollups is due to this data storage. To reduce transaction costs, we can move the data into a new temporary 'blob' storage. Blobs are cheaper because they are not permanent; they get deleted from Ethereum once they are no longer needed. Storing rollup data long term becomes the responsibility of the poeple that need it, such as rollup operators, exchanges, indexing services etc. Adding blob transactions to Ethereum is part of an upgrade known as "Proto-Danksharding". It is expected to be shipped relatively soon—perhaps in late 2023.
+Rollup data is stored on Ethereum permanently, which is expensive. Over 90% of the transaction cost users pay on rollups is due to this data storage. To reduce transaction costs, we can move the data into a new temporary 'blob' storage. Blobs are cheaper because they are not permanent; they get deleted from Ethereum once they are no longer needed. Storing rollup data long term becomes the responsibility of the people that need it, such as rollup operators, exchanges, indexing services etc. Adding blob transactions to Ethereum is part of an upgrade known as "Proto-Danksharding". It is expected to be shipped relatively soon—perhaps in late 2023.
 
 After blob transactions have become part of the Ethereum protocol through Proto-Danksharding, it will be possible to add many blobs to Ethereum blocks. This will be another substantial (>100x) scale-up to Ethereum’s throughput and scale-down to transaction costs.
 
