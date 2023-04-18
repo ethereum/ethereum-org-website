@@ -270,7 +270,7 @@ const MobileNavMenu: React.FC<IProps> = ({
             <FooterItem onClick={toggleTheme}>
               <Icon as={isDarkTheme ? MdWbSunny : MdBrightness2} />
               <FooterItemText>
-                <Translation id={isDarkTheme ? "dark-mode" : "light-mode"} />
+                <Translation id={isDarkTheme ? "light-mode" : "dark-mode"} />
               </FooterItemText>
             </FooterItem>
             <FooterItem onClick={handleClick}>
