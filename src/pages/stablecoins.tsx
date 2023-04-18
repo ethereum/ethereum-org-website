@@ -320,14 +320,14 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
       <Divider />
       <Content>
         <Flex
-          alignItems="flex-start"
-          width="100%"
-          mr="2rem"
-          mb="2rem"
-          flexDirection={{ base: "column", lg: "row" }}
+          align="flex-start"
+          width="full"
+          mr={8}
+          mb={8}
+          direction={{ base: "column", lg: "row" }}
         >
-          <Box mr="2rem" w="100%" margin={{ base: "auto 0rem", lg: "" }}>
-            <Heading as="h2" mt="0rem">
+          <Box mr={8} w="full" margin={{ base: "auto 0rem", lg: "" }}>
+            <Heading as="h2" mt={0}>
               <Translation id="page-stablecoins-why-stablecoins" />
             </Heading>
             <p>
@@ -339,15 +339,15 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
           </Box>
         </Flex>
         <Flex
-          alignItems="flex-start"
-          width="100%"
-          mr="2rem"
-          mb="2rem"
-          flexDirection={{ base: "column", lg: "row" }}
+          align="flex-start"
+          width="full"
+          mr={8}
+          mb={8}
+          direction={{ base: "column", lg: "row" }}
         >
-          <Box mr="2rem" w="100%" margin={{ base: "auto 0rem", lg: "" }}>
+          <Box mr={8} w="full" margin={{ base: "auto 0rem", lg: "" }}>
             {tokens.map((token, idx) => (
-              <Box minWidth="100%" m="0.5rem 0rem" borderRadius="0px">
+              <Box minWidth="full" my={2} borderRadius={0}>
                 <HorizontalCard
                   key={idx}
                   emoji={token.emoji}
@@ -357,12 +357,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
               </Box>
             ))}
           </Box>
-          <Box
-            maxW="640px"
-            mr="2rem"
-            margin={{ base: "0rem", lg: "" }}
-            mt={{ base: "4rem", lg: "" }}
-          >
+          <Box maxW="640px" mr={8} mt={{ base: 16, lg: 0 }}>
             <GhostCard>
               <Emoji size={3} text=":pizza:" />
               <h3>
@@ -376,25 +371,25 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
         </Flex>
       </Content>
       <Box
-        w="100%"
+        w="full"
         py={16}
         mt={8}
         mb={8}
         background="cardGradient"
         shadow="tableItemBoxShadow"
       >
-        <Box mb="-2rem" p="1rem 2rem" w="100%">
-          <Heading as="h2" mt="0rem">
+        <Box mb={-8} py={4} px={8} w="full">
+          <Heading as="h2" mt={0}>
             <Translation id="page-stablecoins-find-stablecoin" />
           </Heading>
           <Box
             display="flex"
-            w="100%"
-            width={{ base: "100%", lg: "50%" }}
+            w="full"
+            width={{ base: "full", lg: "50%" }}
             justifyContent="center"
             flexDirection="column"
-            mr="2rem"
-            margin={{ base: "auto 0rem", lg: "" }}
+            mr={8}
+            margin={{ base: "auto 0rem", lg: "" }} // TODO: fix this
           >
             <p>
               <Translation id="page-stablecoins-find-stablecoin-intro" />
@@ -417,46 +412,47 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
             fontSize="1.25rem"
             fontWeight="700"
             textAlign="left"
-            mt="0"
-            mb="1rem"
+            mt={0}
+            mb={4}
           >
             <Translation id="page-stablecoins-editors-choice" />
           </Heading>
           <p>
             <Translation id="page-stablecoins-editors-choice-intro" />
           </p>
-          <Flex width="100%" flexDirection={{ base: "column", lg: "row" }}>
+          <Flex width="full" flexDirection={{ base: "column", lg: "row" }}>
             <Box
               border="1.5px solid"
               borderColor="text"
               boxShadow="gridYellowBoxShadow"
-              borderRadius="2px"
+              borderRadius="sm"
               background="background"
               justifyContent="space-between"
               display="flex"
-              width="100%"
-              marginRight={{ base: "0rem", lg: "2rem" }}
-              marginBottom="2rem"
+              width="full"
+              mr={{ base: 0, lg: 8 }}
+              mb={8}
               color="text"
               flexDirection={{ base: "column-reverse", lg: "row" }}
-              padding={{ base: "2rem 2rem", lg: "1rem 6rem" }}
+              px={{ base: 8, lg: 24 }}
+              py={{ base: 8, lg: 4 }}
             >
               <Box
                 display="flex"
-                w="100%"
-                width={{ base: "100%", lg: "50%" }}
+                w="full"
+                width={{ base: "full", lg: "50%" }}
                 justifyContent="center"
                 flexDirection="column"
-                mr="2rem"
-                margin={{ base: "auto 0rem", lg: "" }}
+                mr={8}
+                margin={{ base: "auto 0rem", lg: "" }} // TODO: fix this
               >
-                <div>
+                <Box>
                   <Heading
                     as="h2"
                     fontSize="2rem"
                     fontWeight="700"
-                    mt="0"
-                    mb="0.5rem"
+                    mt={0}
+                    mb={2}
                   >
                     <Translation id="page-stablecoins-dai-banner-title" />
                   </Heading>
@@ -469,25 +465,21 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                     <Translation id="page-stablecoins-dai-banner-body" />
                   </Text>
                   <Flex direction="column">
-                    <div>
-                      <ButtonLink
-                        mb={"1rem"}
-                        mr={"1rem"}
-                        to="https://1inch.exchange"
-                      >
+                    <Box>
+                      <ButtonLink mb={4} mr={4} to="https://1inch.exchange">
                         <Translation id="page-stablecoins-dai-banner-swap-button" />
                       </ButtonLink>
-                    </div>
-                    <div>
+                    </Box>
+                    <Box>
                       <ButtonLink
                         variant="outline"
                         to="https://kb.oasis.app/help/what-is-dai"
                       >
                         <Translation id="page-stablecoins-dai-banner-learn-button" />
                       </ButtonLink>
-                    </div>
+                    </Box>
                   </Flex>
-                </div>
+                </Box>
               </Box>
               <Img
                 as={GatsbyImage}
@@ -496,46 +488,47 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                 backgroundSize="cover"
                 backgroundRepeat="repeat"
                 alignSelf="center"
-                width="100%"
+                width="full"
                 flex="1"
                 maxWidth={{ base: "96px", sm: "160px", md: "240px" }}
-                margin={{ base: "2rem 0rem", sm: "2rem 2rem" }}
                 minWidth={{ base: "96px", sm: "160px" }}
-                marginTop={{ base: "0rem", lg: "" }}
+                mx={{ base: 0, lg: 8 }}
+                mb={{ base: 8, lg: 8 }}
+                mt={0}
               />
             </Box>
 
             <Box
               border="1.5px solid"
               borderColor="text"
-              boxShadow={"gridBlueBowShadow"}
-              borderRadius="2px"
+              boxShadow="gridBlueBowShadow"
+              borderRadius="sm"
               background="background"
               justifyContent="space-between"
               display="flex"
-              width="100%"
-              padding="2rem"
-              marginLeft={{ base: "0rem", lg: "2rem" }}
-              marginBottom="2rem"
+              width="full"
+              p={8}
+              ml={{ base: 0, lg: 8 }}
+              mb={8}
               color="text"
               flexDirection={{ base: "column-reverse", lg: "row" }}
             >
               <Box
                 display="flex"
-                w="100%"
-                width={{ base: "100%", lg: "50%" }}
+                w="full"
+                width={{ base: "full", lg: "50%" }}
                 justifyContent="center"
                 flexDirection="column"
-                mr="2rem"
-                margin={{ base: "auto 0rem", lg: "" }}
+                mr={8}
+                margin={{ base: "auto 0rem", lg: "" }} // TODO: fix this
               >
                 <div>
                   <Heading
                     as="h2"
                     fontSize="2rem"
                     fontWeight="700"
-                    mt="0"
-                    mb="0.5rem"
+                    mt={0}
+                    mb={2}
                   >
                     <Translation id="page-stablecoins-usdc-banner-title" />
                   </Heading>
@@ -550,8 +543,8 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                   <Flex direction="column">
                     <div>
                       <ButtonLink
-                        mb={"1rem"}
-                        mr={"1rem"}
+                        mb={4}
+                        mr={4}
                         to="https://matcha.xyz/markets/ETH/USDC"
                       >
                         <Translation id="page-stablecoins-usdc-banner-swap-button" />
@@ -575,19 +568,20 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                 backgroundSize="cover"
                 backgroundRepeat="repeat"
                 alignSelf="center"
-                width="100%"
+                width="full"
                 flex="1"
                 maxWidth={{ base: "96px", sm: "160px", md: "240px" }}
-                margin={{ base: "2rem 0rem", sm: "2rem 2rem" }}
                 minWidth={{ base: "96px", sm: "160px" }}
-                marginTop={{ base: "0rem", lg: "" }}
+                mx={{ base: 0, lg: 8 }}
+                mb={{ base: 8, lg: 8 }}
+                mt={0}
               />
             </Box>
           </Flex>
           <h3>
             <Translation id="page-stablecoins-top-coins" />
             <Tooltip content={tooltipContent}>
-              <Icon ml="0.5rem" fill="'text" name="info" fontSize="14" />
+              <Icon ml={2} fill="'text" name="info" fontSize="14px" />
             </Tooltip>
           </h3>
           <p>
@@ -595,7 +589,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
             <Translation id="page-stablecoins-top-coins-intro-code" />
           </p>
         </Box>
-        <Box padding="1rem 2rem" width="100%" overflowX="scroll">
+        <Box px={8} py={4} width="full" overflowX="scroll">
           <SimpleTable
             columns={tableColumns}
             content={state.markets}
@@ -610,12 +604,12 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
       </Content>
       <Flex
         alignItems="center"
-        w="100%"
+        w="full"
         m={{ base: "0rem", lg: "0 auto" }}
         pl={{ base: "0rem", lg: "2rem" }}
         pr={{ base: "0rem", lg: "2rem" }}
-        pb="4rem"
-        mt="-2rem"
+        pb={16}
+        mt={-8}
       >
         <StablecoinAccordion />
       </Flex>
@@ -649,12 +643,14 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
         </h2>
         <Flex
           alignItems="flex-start"
-          width="100%"
-          mr="2rem"
-          mb="2rem"
+          width="full"
+          mr={8}
+          mb={8}
           flexDirection={{ base: "column", lg: "row" }}
         >
-          <Box mr="2rem" w="100%" margin={{ base: "auto 0rem", lg: "" }}>
+          <Box mr={8} w="full" margin={{ base: "auto 0rem", lg: "" }}>
+            {" "}
+            // TODO: fix this
             <p>
               <Translation id="page-stablecoins-save-stablecoins-body" />
             </p>
@@ -670,16 +666,16 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
             display="flex"
             justifyContent="center"
             flexDirection="column"
-            borderRadius="2px"
-            padding="2rem"
-            w="100%"
+            borderRadius="sm"
+            p={8}
+            w="full"
             border="1.5px solid"
             boxShadow="cardBoxShadow"
             borderColor="text"
-            margin={{ base: "auto 0rem", lg: "" }}
+            margin={{ base: "auto 0rem", lg: "" }} // TODO: fix this
           >
             <div>
-              <Emoji size={5} mb={"1rem"} text=":bank:" />
+              <Emoji size={5} mb={4} text=":bank:" />
               <Text as="p" fontSize="64px" lineHeight="100%">
                 <Translation id="page-stablecoins-bank-apy" />
               </Text>
@@ -693,9 +689,9 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
           </Box>
         </Flex>
         <Grid
-          mb="4rem"
           templateColumns="repeat(auto-fill, minmax(min(100%, 280px), 1fr))"
-          gap="2rem"
+          gap={8}
+          mb={16}
         >
           {dapps.map((dapp, idx) => (
             <DataProductCard
@@ -715,8 +711,8 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
             fontSize="1.25rem"
             fontWeight="700"
             textAlign="left"
-            mt="0"
-            mb="1rem"
+            mt={0}
+            mb={4}
           >
             <Translation id="page-stablecoins-research-warning-title" />
           </Heading>
@@ -725,30 +721,30 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
       </Content>
       <Divider />
       <Content id="how">
-        <Heading as="h2" mt="0rem">
+        <Heading as="h2" mt={0}>
           <Translation id="page-stablecoins-types-of-stablecoin" />
         </Heading>
         <StablecoinBoxGrid items={features} />
       </Content>
-      <Box pt="3rem" pb="3rem" w="100%" p="1rem 2rem" id="tools">
+      <Box id="tools" py={12} px={8} w="full">
         <h2>
           <Translation id="page-stablecoins-tools-title" />
         </h2>
         <Flex
           alignItems="flex-start"
-          width="100%"
-          mr="2rem"
-          mb="2rem"
+          width="full"
+          mr={8}
+          mb={8}
           flexDirection={{ base: "column", lg: "row" }}
         >
           <Box
             display="flex"
-            w="100%"
-            width={{ base: "100%", lg: "50%" }}
+            w="full"
+            width={{ base: "full", lg: "50%" }}
             justifyContent="center"
             flexDirection="column"
-            mr="2rem"
-            margin={{ base: "auto 0rem", lg: "" }}
+            mr={8}
+            margin={{ base: "auto 0rem", lg: "" }} // TODO: fix this
           >
             <ProductList
               category="Dashboards & Education"
