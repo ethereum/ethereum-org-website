@@ -133,7 +133,7 @@ Nu este numai preţul gazului cel care determină de fapt cât trebuie să plăt
 
 ## Inițiative de reducere a costurilor gazului {#initiatives-to-reduce-gas-costs}
 
-[Actualizările de scalabilitate](/upgrades/) ale lui Ethereum ar trebui să rezolve câteva din problemele taxei pe gaz, ceea ce va permite la rândul său platformei să proceseze mii de tranzacții pe secundă și să se extindă la nivel global.
+[Actualizările de scalabilitate](/roadmap/) ale lui Ethereum ar trebui să rezolve câteva din problemele taxei pe gaz, ceea ce va permite la rândul său platformei să proceseze mii de tranzacții pe secundă și să se extindă la nivel global.
 
 Scalarea de Nivel 2 este o inițiativă primordială pentru a îmbunătăți considerabil costurile gazului, satisfacţia utilizatorilor și scalabilitatea. [Mai multe despre scalarea de nivel 2](/developers/docs/scaling/#layer-2-scaling).
 

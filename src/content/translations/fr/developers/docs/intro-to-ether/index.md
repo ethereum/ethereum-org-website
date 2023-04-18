@@ -18,7 +18,7 @@ La première cryptomonnaie a été le Bitcoin, créé par Satoshi Nakamoto. Depu
 
 ## Qu'est-ce-que l'ether ? {#what-is-ether}
 
-**Ether (ETH)** est la cryptomonnaie utilisée pour de multiples choses sur le réseau Ethereum. Fondamentalement, il s'agit de la seule forme de paiement valide pour les frais de transaction, et après [la fusion](/upgrades/merge), l'ether sera nécessaire pour valider et proposer des blocs sur le réseau principal. L'Ether est également utilisé comme principale forme de garantie dans les marchés de prêts [DeFi](/defi), en tant qu'unité de compte sur les places de marché NFT, comme paiement gagné pour l'exécution de services ou la vente de biens réels, et bien plus encore.
+**Ether (ETH)** est la cryptomonnaie utilisée pour de multiples choses sur le réseau Ethereum. Fondamentalement, il s'agit de la seule forme de paiement valide pour les frais de transaction, et depuis [la fusion](/roadmap/merge), l'ether est nécessaire pour valider et proposer des blocs sur le réseau principal. L'Ether est également utilisé comme principale forme de garantie dans les marchés de prêts [DeFi](/defi), en tant qu'unité de compte sur les places de marché NFT, comme paiement gagné pour l'exécution de services ou la vente de biens réels, et bien plus encore.
 
 Ethereum permet aux développeurs de créer des [**applications décentralisées (dApps)**](/developers/docs/dapps), qui partagent toutes une réserve de puissance informatique. Ce pool partagé est fini ainsi, Ethereum a besoin d'un mécanisme pour déterminer qui peut l'utiliser. Dans le cas contraire, une dapp pourrait consommer accidentellement ou de manière malveillante toutes les ressources du réseau, ce qui empêcherait les autres d'y accéder.
 
@@ -32,19 +32,19 @@ Il est [courant](https://www.reuters.com/article/us-crypto-currencies-lending-in
 
 Frapper de l'ether est le processus par lequel de nouveaux éther sont créés sur le registre Ethereum. Le protocole Ethereum sous-jacent crée le nouvel éther. Il est impossible pour un utilisateur de créer de l'éther.
 
-L'ether est frappé quand un mineur crée un bloc sur la blockchain Ethereum. Pour inciter les mineurs, le protocole accorde une récompense à chaque bloc, augmentant le solde d'une adresse établie par le mineur du bloc. La récompense de bloc a changé au fil du temps et aujourd'hui elle est de 2 ETH par bloc.
+L'Ether est frappé comme une récompense pour chaque bloc proposé et à chaque point de contrôle de période pour les autres activités du validateur liées à l'obtention d'un consensus. Le montant total émis dépend du nombre de validateurs et de la quantité d'Ether qu'ils ont misé. Cette émission totale est répartie équitablement entre les validateurs dans le cas idéal où tous les validateurs sont honnêtes et en ligne, mais en réalité, il varie en fonction de la performance du validateur. Environ 1/8ème de l'émission totale va à la personne proposant le bloc ; le reste est réparti entre les autres validateurs. Les proposants de blocs reçoivent également des pourboires provenant des frais de transaction et des revenus liés au MEV, mais ceux-ci proviennent de l'Ether recyclé, et non d'une nouvelle émission.
 
 ## Brûler de l'ether {#burning-ether}
 
-En plus de créer de l'ether à travers les récompenses de bloc, l'ether peut être détruit par un processus appelé « brûlage ». Quand l'ether est brûlé, il est retiré de la circulation de façon permanente.
+L'éther peut être créé par le biais de récompenses en bloc. Il peut aussi être détruit par un processus appelé « burn ». Quand l'ether est brûlé, il est retiré de la circulation de façon permanente.
 
 Le brûlage d'ether se produit pour chaque transaction sur Ethereum. Lorsque les utilisateurs paient pour leurs transactions, des frais de base de gaz fixés par le réseau en fonction de la demande transactionnelle, sont détruits. Ceci, couplé à des tailles variables de blocs et à des frais de gaz maximaux, simplifie l'estimation des frais de transaction sur Ethereum. Lorsque la demande du réseau est élevée, les [blocs](https://etherscan.io/block/12965263) peuvent brûler plus d'ether qu'ils n'en frappent, compensant ainsi efficacement la création d'ether.
 
-Le fait de brûler les frais de base empêche les mineurs de les manipuler de diverses manières. Par exemple, les mineurs qui obtiennent les frais de base pourraient inclure leurs propres transactions gratuitement et augmenter les frais de base pour tous les autres. Ils pourraient également rembourser les frais de base à certains utilisateurs hors chaîne, engendrant un marché des frais de transaction plus opaque et plus complexe.
+Brûler les frais de base entrave la capacité des producteurs de blocs à manipuler les transactions. Par exemple, si les créateurs de blocs obtiennent les frais de base, ils pourraient inclure leurs propres transactions gratuitement et augmenter les frais de base pour tous les autres. Ils pourraient également rembourser les frais de base à certains utilisateurs hors chaîne, engendrant un marché des frais de transaction plus opaque et plus complexe.
 
 ## Dénominations d'ether {#denominations}
 
-Étant donné que de nombreuses transactions sur Ethereum sont d'un faible montant, éther dispose de plusieurs coupures qui peuvent être référencées pour de plus petites sommes. Parmi ces unités, le wei et le gwei sont particulièrement importantes.
+Étant donné que de nombreuses transactions sur Ethereum sont d'un faible montant, l'éther dispose de plusieurs unités de valeur qui peuvent être référencées pour de plus petites sommes. Parmi ces unités, le wei et le gwei sont particulièrement importantes.
 
 Le Wei est la plus petite quantité possible d'éther, et par conséquent, de nombreuses implémentations techniques, comme le [livre jaune d'Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf), baseront tous leurs calculs sur le Wei.
 
@@ -67,11 +67,12 @@ Quand l'adresse du destinataire est un [contrat intelligent](/developers/docs/sm
 
 Les utilisateurs peuvent interroger le solde en ether de n'importe quel [compte](/developers/docs/accounts/) en inspectant son champ du `balance`, qui indique la quantité d'ether possédée en wei.
 
-[Etherscan](https://etherscan.io) est un outil populaire pour inspecter les soldes d'adresses via une application basée sur le Web. Par exemple, [cette page Etherscan](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) affiche le solde de l'Ethereum Foundation.
+[Etherscan](https://etherscan.io) est un outil populaire pour inspecter les soldes d'adresses via une application basée sur le Web. Par exemple, [cette page Etherscan](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) affiche le solde de l'Ethereum Foundation. Les soldes du compte peuvent également être interrogés en utilisant des portefeuilles ou directement, en faisant des requêtes aux nœuds.
 
 ## Complément d'information {#further-reading}
 
 - [Définition d'Ether et d'Ethereum](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _Groupe CME_
 - [Livre blanc Ethereum](/whitepaper/): La proposition originale pour Ethereum. Ce document contient une description de l'ether et les motivations de sa création.
+- [Calculatrice de Gwei](https://www.alchemy.com/gwei-calculator) : Utilisez cette calculatrice de Gwei pour facilement convertir Wei, Gwei et Ether. Il vous suffit d'introduire n'importe quelle quantité de Wei, Gwei ou ETH et de calculer automatiquement la conversion.
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_

@@ -69,7 +69,7 @@ Fiecare [bloc](#block) are un preț rezervat, cunoscut sub numele de „taxa de 
 
 O actualizare a reţelei care a introdus un nou nivel de consens, care va deveni coordonatorul întregii rețele Ethereum. Introduce [dovada-mizei](#pos) (PoS) și [validatorii](#validator) în Ethereum. În cele din urmă va fuziona cu [Mainnet-ul](#mainnet).
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink to="/roadmap/beacon-chain/">
   Lanțul Beacon
 </DocLink>
 
@@ -229,7 +229,7 @@ O perioadă de 32 de [sloturi](#slot) (6,4 minute) în sistemul coordonat de [la
 
 'Eth1' is a term that referred to Mainnet Ethereum, the existing proof-of-work blockchain. This term has since been deprecated in favor of the 'execution layer'. [Learn more about this name change](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   Aflați mai multe despre actualizările Ethereum
 </DocLink>
 
@@ -237,7 +237,7 @@ O perioadă de 32 de [sloturi](#slot) (6,4 minute) în sistemul coordonat de [la
 
 'Eth2' is a term that referred to a set of Ethereum protocol upgrades, including Ethereum's transition to proof-of-stake. This term has since been deprecated in favor of the 'consensus layer'. [Learn more about this name change](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   Aflați mai multe despre actualizările Ethereum
 </DocLink>
 
@@ -683,7 +683,7 @@ Pachetele (rollups) sunt un tip de soluție de scalare [layer 2](#layer-2) care 
 
 Etapa de dezvoltare a lui Ethereum care a inițiat o serie de actualizări de scalare și sustenabilitate, cunoscută anterior sub numele de „Ethereum 2.0” sau „Eth2”.
 
-<DocLink to="/upgrades/">
+<DocLink to="/roadmap/">
   Actualizările Ethereum
 </DocLink>
 
@@ -695,7 +695,7 @@ O familie de funcții hash criptografice publicate de Institutul Național de St
 
 Un lanț de [dovadă-a-mizei](#pos) coordonat de [Lanțul Beacon](#beacon-chain) și securizat de [validatori](#validator). În cadrul actualizării prin lanţuri de fragmente vor fi adăugate 64 la rețea. Lanțurile de fragmente vor oferi un randament sporit al tranzacțiilor pentru Ethereum prin furnizarea de date suplimentare [nivelului 2](#layer-2), soluții precum [ rollup-urile optimistic](#optimistic-rollups) și [rollup-urile ZK](#zk-rollups).
 
-<DocLink to="/upgrades/shard-chains">
+<DocLink to="/roadmap/danksharding">
   Lanțuri de fragmente
 </DocLink>
 

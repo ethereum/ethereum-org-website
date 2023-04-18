@@ -348,9 +348,9 @@ _És important també recordar que Ethereum fa més que només transaccions fina
 
 #### Terminis {#timelines}
 
-El procés ja ha començat. [La cadena de balisa](/upgrades/beacon-chain/), la primera millora, llençada el desembre de 2020. Proporciona la base per a les participacions permetent als apostadors accedir al sistema. El següent pas rellevant per a l'eficiència energètica és fusionar la cadena actual, la que està protegida pels miners, amb la cadena de balisa, on la mineria no és necessària. Els terminis poden no ser exactes en aquest punt, però s'estima que succeirà en algun moment de 2022. Aquest procés es coneix com La Fusió (anteriorment anomenada l'acoblament). [Més informació sobre la fusió](/upgrades/merge/).
+El procés ja ha començat. [La cadena de balisa](/roadmap/beacon-chain/), la primera millora, llençada el desembre de 2020. Proporciona la base per a les participacions permetent als apostadors accedir al sistema. El següent pas rellevant per a l'eficiència energètica és fusionar la cadena actual, la que està protegida pels miners, amb la cadena de balisa, on la mineria no és necessària. Els terminis poden no ser exactes en aquest punt, però s'estima que succeirà en algun moment de 2022. Aquest procés es coneix com La Fusió (anteriorment anomenada l'acoblament). [Més informació sobre la fusió](/roadmap/merge/).
 
-<ButtonLink to="/upgrades/">
+<ButtonLink to="/roadmap/">
   Més informació sobre les millores d'Ethereum
 </ButtonLink>
 
@@ -405,7 +405,7 @@ S'estima que les millores en l'escalabilitat permetran la xarxa processar entre 
 
 [Vitalik Buterin parla sobre el potencial de les transaccions per segon amb la fragmentació](https://twitter.com/VitalikButerin/status/1312905884549300224)
 
-Amb un mínim, la fragmentació permetrà una quantitat de transaccions multiplicada per 64 en comparació amb les que es fan avui en dia que ronden les 15. Aquesta és la quantitat de cadenes fragmentades (capacitat i dades extra) que s'han introduït. [Més informació sobre les cadenes de fragments](/upgrades/sharding/)
+Amb un mínim, la fragmentació permetrà una quantitat de transaccions multiplicada per 64 en comparació amb les que es fan avui en dia que ronden les 15. Aquesta és la quantitat de cadenes fragmentades (capacitat i dades extra) que s'han introduït. [Més informació sobre les cadenes de fragments](/roadmap/danksharding/)
 
 Això vol dir que podem estimar quant es trigaria a processar 100.000 transaccions per poder comparar-ho amb l'exemple de Visa esmentat.
 

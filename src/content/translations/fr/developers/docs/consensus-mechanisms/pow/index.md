@@ -7,7 +7,7 @@ incomplete: true
 
 Ethereum, comme Bitcoin, utilise actuellement un protocole de consensus appelé **[preuve de travail (PoW)](https://wikipedia.org/wiki/Proof_of_work)**. Celui-ci permet à l'ensemble du réseau Ethereum de s'accorder sur l'état de toutes les informations enregistrées sur la blockchain Ethereum, empêchant ainsi certains types d'attaques économiques.
 
-Au cours de la prochaine année, la preuve de travail sera progressivement abandonnée au profit de la **[preuve d'enjeu (PoS)](/developers/docs/consensus-mechanisms/pos)**. La transition vers la preuve d'enjeu supprimera également progressivement le minage depuis Ethereum. [En savoir plus sur la fusion.](/upgrades/merge/)
+Au cours de la prochaine année, la preuve de travail sera progressivement abandonnée au profit de la **[preuve d'enjeu (PoS)](/developers/docs/consensus-mechanisms/pos)**. La transition vers la preuve d'enjeu supprimera également progressivement le minage depuis Ethereum. [En savoir plus sur la fusion.](/roadmap/merge/)
 
 ## Prérequis {#prerequisites}
 
