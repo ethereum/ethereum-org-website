@@ -23,7 +23,7 @@ import PageMetadata from "../components/PageMetadata"
 import RandomAppList from "../components/RandomAppList"
 import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents, {
-  Item as ItemTableOfContents,
+  type Item as ItemTableOfContents,
 } from "../components/TableOfContents"
 import FeedbackCard from "../components/FeedbackCard"
 import SectionNav from "../components/SectionNav"
@@ -37,7 +37,6 @@ import {
 import Emoji from "../components/OldEmoji"
 import YouTube from "../components/YouTube"
 import Breadcrumbs from "../components/Breadcrumbs"
-import ShanghaiCapella from "../components/Staking/ShanghaiCapella"
 import StakingLaunchpadWidget from "../components/Staking/StakingLaunchpadWidget"
 import StakingProductsCardGrid from "../components/Staking/StakingProductsCardGrid"
 import StakingComparison from "../components/Staking/StakingComparison"
@@ -357,7 +356,6 @@ const components = {
   MeetupList,
   RandomAppList,
   SectionNav,
-  ShanghaiCapella,
   StakingComparison,
   StakingConsiderations,
   StakingGuides,
@@ -383,7 +381,7 @@ const StakingPage = ({
     throw new Error("Required `title` property missing for staking template")
 
   const isRightToLeft = isLangRightToLeft(mdx.frontmatter.lang as Lang)
-  const tocItems = mdx.tableOfContents?.items as Array<ItemTableOfContents>
+  const tocItems = mdx.tableOfContents?.items as ItemTableOfContents[]
   const { summaryPoints } = mdx.frontmatter
 
   const dropdownLinks: ButtonDropdownList = {
@@ -452,7 +450,7 @@ const StakingPage = ({
           <MobileTableOfContents
             items={tocItems}
             maxDepth={mdx.frontmatter.sidebarDepth!}
-            isMobile={true}
+            isMobile
           />
         </TitleCard>
         <Image

@@ -173,8 +173,6 @@ ETH のソロステーキングを支援するツールやサービスは増え�
 単一の中央集権型クラウドストレージソリューション上で動作するバリデータクライアントが多ければ多いほど、これらを使用しているユーザーにとって危険になります。 攻撃、規制要求、あるいは単なる停電/インターネットの停止にかかわらず、これらのプロバイダーがオフラインになるような障害があれば、このサーバに依存しているすべてのバリデータクライアントが同時にオフラインになることになるためです。
 
 オフラインのペナルティは、同時にオフラインになった他のバリデータクライアントの数に比例します。 VPS を使用すると、オフラインのペナルティがより厳しくなり、停止が大規模になった場合にクアドラティックリークやスラッシングのリスクが大幅に高まります。 ご自身のリスク、およびネットワークへのリスクを最小限に抑えるため、ご自身でハードウェアを入手し、運用されることを強くお勧めします。
-
-<a href="https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/">報酬とペナルティの詳細</a>
 </ExpandableCard>
 
 ## 参考文献 {#further-reading}
@@ -185,4 +183,3 @@ ETH のソロステーキングを支援するツールやサービスは増え�
 - [イーサリアムバリデータ用のハードウェアの購入方法](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
 - [イーサリアム 2.0 テストネットに参加するステップ・バイ・ステップ手順](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
 - [Eth2 スラッシング防止のためのヒント](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
-- [イーサリアム 2.0 における報酬とペナルティ](https://consensys.net/blog/codefi/rewards-and-penalties-on-ethereum-20-phase-0/) - _James BeckMarch 2020_

@@ -1,5 +1,5 @@
 ---
-title: Dapp Desenvolvimento de Infraestrutura
+title: Frameworks de Desenvolvimento de Dapp
 description: Explore as vantagens de frameworks e compare as opções disponíveis.
 lang: pt-br
 ---
@@ -22,17 +22,17 @@ Antes de mergulhar em frameworks, recomendamos que você primeiro leia a nossa i
 
 ## Frameworks disponíveis {#available-frameworks}
 
-**Truffle -** **_Um ambiente de desenvolvimento, teste de framework, compilação e outras ferramentas._**
+**Truffle -\*\***_Um ambiente de desenvolvimento, teste de framework, compilação e outras ferramentas._\*\*
 
 - [trufflesuite.com](https://www.trufflesuite.com/)
 - [GitHub](https://github.com/trufflesuite/truffle)
 
-**Hardhat -** **_Ethereum development environment for professionals._**
+**Hardhat -** **_Ambiente de desenvolvimento da Ethereum para profissionais._**
 
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
-**Ape -** **_The smart contract development tool for Pythonistas, Data Scientists, and Security Professionals._**
+**Macaco -** **_A ferramenta de desenvolvimento de contratos inteligentes para Pythonistas, Cientistas de Dados e Profissionais de Segurança._**
 
 - [Documentação](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
@@ -42,7 +42,12 @@ Antes de mergulhar em frameworks, recomendamos que você primeiro leia a nossa i
 - [Documentação](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
 
-**Web3j -** **_A platform for developing blockchain applications on the JVM._**
+**Embark -\*\***_Um ambiente de desenvolvimento, teste de framework e outras ferramentas integradas com a Ethereum, IPFS e Whisper._\*\*
+
+- [Documentação](https://embark.status.im/docs/)
+- [GitHub](https://github.com/embark-framework/embark)
+
+**Web3j -** **_Uma plataforma para desenvolver aplicativos blockchain na JVM._**
 
 - [Página inicial](https://www.web3labs.com/web3j-sdk)
 - [Documentação](https://docs.web3j.io)
@@ -63,31 +68,37 @@ Antes de mergulhar em frameworks, recomendamos que você primeiro leia a nossa i
 
 - [GitHub](https://github.com/austintgriffith/scaffold-eth)
 
-**The Graph -** **_The Graph for querying blockchain data efficiently._**
+**Tenderly -** **_Plataforma de desenvolvimento web3 que permite aos desenvolvedores de blockchain construir, testar, debugar, monitorar e operar contratos inteligentes e melhora a UX do dapp._**
 
-- [Website](https://thegraph.com/)
+- [Website](https://tenderly.co/)
+- [Documentação](https://docs.tenderly.co/ethereum-development-practices)
+
+**The Graph -** **_The Graph para consultar dados de blockchain com eficiência._**
+
+- [Site](https://thegraph.com/)
 - [Tutorial](/developers/tutorials/the-graph-fixing-web3-data-querying/)
 
-Alchemy - Plataforma de Desenvolvimento Ethereum
+**Alchemy -** **_Plataforma de Desenvolvimento Ethereum_**
 
 - [alchemy.com](https://www.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
 
-**Dapptools -** **_Um conjunto de ferramentas CLI focadas na Ethereum seguindo a filosofia de design Unix, favorecendo componibilidade, configuração e extensibilidade._**
-
-- [Início](https://dapp.tools/)
-- [GitHub](https://github.com/dapphub/dapptools/)
-
-**Foundry -** **_Um conjunto de ferramentas rápido, portátil e modular para o desenvolvimento do aplicativo Ethereum, escrito em Rust._**
+**Foundry -** **_Um conjunto de ferramentas rápido, portátil e modular para o desenvolvimento do aplicativo Ethereum, programado em Rust._**
 
 - [Documentação](https://book.getfoundry.sh/)
 - [GitHub](https://github.com/gakonst/foundry/)
 - [Ferramentas para Foundry](https://github.com/crisgarner/awesome-foundry)
 
+**NodeReal -** **_Plataforma de Desenvolvimento Ethereum._**
+
+- [Nodereal.io](https://nodereal.io/)
+- [GitHub](https://github.com/node-real)
+- [Discord](https://discord.gg/V5k5gsuE)
+
 ## Leitura adicional {#further-reading}
 
-_Conhece algum recurso da comunidade que o ajudou? Edite essa página e adicione!_
+_Conhece um recurso da comunidade que te ajudou? Edite essa página e adicione!_
 
 ## Tópicos relacionados {#related-topics}
 

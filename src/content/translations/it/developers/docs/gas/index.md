@@ -123,7 +123,7 @@ Il prezzo del gas da solo in realtà non determina quanto dobbiamo pagare per un
 
 ## Iniziative per ridurre i costi del gas {#initiatives-to-reduce-gas-costs}
 
-Gli [aggiornamenti di scalabilità](/upgrades/) di Ethereum dovrebbero infine risolvere alcuni problemi delle commissioni del gas, che, a loro volta, consentiranno alla piattaforma di elaborare migliaia di transazioni al secondo e di scalare globalmente.
+Gli [aggiornamenti di scalabilità](/roadmap/) di Ethereum dovrebbero infine risolvere alcuni problemi delle commissioni del gas, che, a loro volta, consentiranno alla piattaforma di elaborare migliaia di transazioni al secondo e di scalare globalmente.
 
 Il ridimensionamento del Livello 2 è un'iniziativa fondamentale per migliorare notevolmente i costi del gas, l'esperienza utente e la scalabilità. [Maggiori informazioni sul ridimensionamento del Livello 2](/developers/docs/scaling/#layer-2-scaling).
 

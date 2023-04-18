@@ -19,7 +19,7 @@ Bu kural değişiklikleri ağda geçici bir bölünme oluşturabilir. Yeni blokl
 
 </ExpandableCard>
 
-Gelecekteki protokol yükseltmelerini mi arıyorsunuz? [Ethereum'da yapılacak yükseltmeler hakkında bilgi edinin](/upgrades/).
+Gelecekteki protokol yükseltmelerini mi arıyorsunuz? [Ethereum'da yapılacak yükseltmeler hakkında bilgi edinin](/roadmap/).
 
 <Divider />
 
@@ -27,7 +27,7 @@ Gelecekteki protokol yükseltmelerini mi arıyorsunuz? [Ethereum'da yapılacak y
 
 ### Gray Glacier {#gray-glacier}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>30 Haz 2022 10:54:04 (+UTC)</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Blok sayısı: <a href="https://etherscan.io/block/15050000">15.050.000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH fiyatı: $1.069<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220630094629/https://ethereum.org/en/">waybackmachine'de ethereum.org</a>
+<NetworkUpgradeSummary name="grayGlacier" />
 
 #### Özet {#gray-glacier-summary}
 
@@ -47,7 +47,7 @@ Gray Glacier ağ yükseltmesi, [zorluk bombasını](/glossary/#difficulty-bomb) 
 
 ### Arrow Buzulu {#arrow-glacier}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code> 09 Aralık 2021 07:55:23 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Blok numarası:<a href="https://etherscan.io/block/12965000">12,965,000</a><br /><Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH fiyatı: $2621 USD<br /><Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><a href="https://web.archive.org/web/20210805124609/https://ethereum.org/en/"> waybackmachine ile ethereum.org</a>
+<NetworkUpgradeSummary name="arrowGlacier" />
 
 #### Özet {#arrow-glacier-summary}
 
@@ -66,11 +66,11 @@ The Arrow Glacier ağ yükseltmesi [zorluk bombasını](/glossary/#difficulty-bo
 
 ### Altair {#altair}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Ekim-27-2021 10:56:23 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Devir numarası: 74,240<br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH fiyatı: $4024 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211026174951/https://ethereum.org/en/">ethereum.org waybackmachine'de</a>
+<NetworkUpgradeSummary name="altair" />
 
 #### Özet {#altair-summary}
 
-Altair yükseltmesi, [İşaret Zinciri](/upgrades/beacon-chain) için planlanmış ilk yükseltmedir. "Senkronizasyon komiteleri" için destek ekleyerek hafif istemcileri etkinleştirdi, doğrulayıcı hareketsizliği getirdi ve cezaları tam değerlerine getirdi.
+Altair yükseltmesi, [İşaret Zinciri](/roadmap/beacon-chain) için planlanmış ilk yükseltmedir. "Senkronizasyon komiteleri" için destek ekleyerek hafif istemcileri etkinleştirdi, doğrulayıcı hareketsizliği getirdi ve cezaları tam değerlerine getirdi.
 
 - [Altair yükseltme özelliklerini okuyun](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
@@ -84,7 +84,7 @@ Altair, kesin bir kullanıma sunma süresi olan ilk büyük ağ yükseltmesiydi.
 
 ### London {#london}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code> 06 Ağustos 2021 03:33:42 UTC+3</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Blok numarası:<a href="https://etherscan.io/block/12965000">12,965,000</a><br /><Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH değeri: $2621 USD<br /><Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><a href="https://web.archive.org/web/20210805124609/https://ethereum.org/en/"> waybackmachine ile ethereum.org</a>
+<NetworkUpgradeSummary name="london" />
 
 #### Özet {#london-summary}
 
@@ -108,7 +108,7 @@ Londra yükseltmesi, işlem ücreti pazarını yeniden şekillendiren [EIP-1559]
 
 ### Berlin {#berlin}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>15 Nisan 2021 13:07:03 UTC+3</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Blok numarası: <a href="https://etherscan.io/block/12244000">12,244,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH değeri. $2454 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><a href="https://web.archive.org/web/20210415093618/https://ethereum.org/"> ethereum.org waybackmachine de </a>
+<NetworkUpgradeSummary name="berlin" />
 
 #### Özet {#berlin-summary}
 
@@ -132,15 +132,15 @@ Berlin güncellemesi, belirli EVM eylemleri için optimize edilmiş gaz maliyeti
 
 ### İşaret (Beacon) Zinciri {#beacon-chain-genesis}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code> 2 Aralık 2020 03:00:35 UTC+3</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> İşaret Zincirinin blok numarası:<a href="https://beaconscan.com/slot/1">1</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH değeri: $586.23 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><a href="https://web.archive.org/web/20201207184633/https://www.ethereum.org/en/"> waybackmachine ile ethereum.org</a>
+<NetworkUpgradeSummary name="beaconChainGenesis" />
 
 #### Özet {#beacon-chain-genesis-summary}
 
-[İşaret Zinciri](/upgrades/beacon-chain/)'nin güvenli bir şekilde gönderilmesi için 16.384 adet 32 stake edilmiş ETH yatırılması gerekiyordu. Bu, 27 Kasım'da meydana geldi, yani İşaret Zinciri blok üretmeye 1 Aralık 2020'de başladı. Bu, [Ethereum vizyonuna](/roadmap/vision/) ulaşmak için önemli bir ilk adımdır.
+[İşaret Zinciri](/roadmap/beacon-chain/)'nin güvenli bir şekilde gönderilmesi için 16.384 adet 32 stake edilmiş ETH yatırılması gerekiyordu. Bu, 27 Kasım'da meydana geldi, yani İşaret Zinciri blok üretmeye 1 Aralık 2020'de başladı. Bu, [Ethereum vizyonuna](/roadmap/vision/) ulaşmak için önemli bir ilk adımdır.
 
 [Ethereum Vakfı'nın duyurusunu okuyun](https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/)
 
-<DocLink to="/upgrades/beacon-chain/">
+<DocLink to="/roadmap/beacon-chain/">
   İşaret Zinciri
 </DocLink>
 
@@ -148,11 +148,11 @@ Berlin güncellemesi, belirli EVM eylemleri için optimize edilmiş gaz maliyeti
 
 ### Depozito sözleşmesi dağıtıldı {#staking-deposit-contract}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Ekim-14-2020 09:22:52 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Blok numarası: <a href="https://etherscan.io/block/11052984">11,052,984</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH fiyatı: $379.04 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201104235727/https://ethereum.org/en/">ethereum.org waybackmachine'de</a>
+<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
 
 #### Özet {#deposit-contract-summary}
 
-Staking depozitosu sözleşmesi, Ethereum ekosistemine [stake](/glossary/#staking) kazandırdı. Bir [Ana Ağ](/glossary/#mainnet) sözleşmesi olmasına rağmen önemli bir [Ethereum yükseltmesi](/upgrades/) olan [İşaret Zinciri](/upgrades/beacon-chain/)'nin çıkış zamanı üzerinde doğrudan bir etkisi oldu.
+Staking depozitosu sözleşmesi, Ethereum ekosistemine [stake](/glossary/#staking) kazandırdı. Bir [Ana Ağ](/glossary/#mainnet) sözleşmesi olmasına rağmen önemli bir [Ethereum yükseltmesi](/roadmap/) olan [İşaret Zinciri](/roadmap/beacon-chain/)'nin çıkış zamanı üzerinde doğrudan bir etkisi oldu.
 
 [Ethereum Vakfı'nın duyurusunu okuyun](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
@@ -164,7 +164,7 @@ Staking depozitosu sözleşmesi, Ethereum ekosistemine [stake](/glossary/#stakin
 
 ### Muir Glacier {#muir-glacier}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Ocak-02-2020 08:30:49 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Blok numarası: <a href="https://etherscan.io/block/9200000">9,200,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH fiyatı: $127.18 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20200103093618/https://ethereum.org/">ethereum.org waybackmachine</a>
+<NetworkUpgradeSummary name="muirGlacier" />
 
 #### Özet {#muir-glacier-summary}
 
@@ -185,7 +185,7 @@ Muir Glacier çatalı, [zorluk bombasına](/glossary/#difficulty-bomb) bir gecik
 
 ### İstanbul {#istanbul}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Aralık-08-2019 12:25:09 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Blok numarası: <a href="https://etherscan.io/block/9069000">9,069,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH fiyatı: $151.06 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20191216101254if*/https://ethereum.org/">ethereum.org waybackmachine'de</a>
+<NetworkUpgradeSummary name="istanbul" />
 
 #### Özet {#istanbul-summary}
 
@@ -214,7 +214,7 @@ Muir Glacier çatalı, [zorluk bombasına](/glossary/#difficulty-bomb) bir gecik
 
 ### Konstantinopolis {#constantinople}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Şubat-28-2019 07:52:04 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Blok numarası: <a href="https://etherscan.io/block/7280000">7,280,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH fiyatı: $136.29 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20190415163751/https://www.ethereum.org/">ethereum.org waybackmachine'de</a>
+<NetworkUpgradeSummary name="constantinople" />
 
 #### Özet {#constantinople-summary}
 
@@ -241,7 +241,7 @@ Konstantinopolis çatallanması:
 
 ### Bizans {#byzantium}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>16 Ekim 2017 05:22:11 +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Blok numarası:<a href="https://etherscan.io/block/4370000">4,370,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH değeri: $334.23 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><a href="https://web.archive.org/web/20171017201143/https://www.ethereum.org/">waybackmachine ile ethereum.org</a>
+<NetworkUpgradeSummary name="byzantium" />
 
 #### Özet {#byzantium-summary}
 
@@ -274,7 +274,7 @@ Bizans çatallanması:
 
 ### Sahte Ejderha {#spurious-dragon}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>22 Kasım 2016 öğleden sonra 04:15:44 +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Blok numarası: <a href="https://etherscan.io/block/2675000">2,675,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH değeri: $9.84 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><a href="https://web.archive.org/web/20161127154654/https://www.ethereum.org/">waybackmachine ile ethereum.org</a>
+<NetworkUpgradeSummary name="spuriousDragon" />
 
 #### Özet {#spurious-dragon-summary}
 
@@ -299,7 +299,7 @@ Sahte Ejderha çatallanması, ağdaki hizmet reddi (DoS) saldırılarına (Eylü
 
 ### Tangerine whistle {#tangerine-whistle}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>18 Ekim 2016 öğleden sonra 01:19:31 +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Blok numarası: <a href="https://etherscan.io/block/2463000">2,463,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH değeri: $12.50 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><a href="https://web.archive.org/web/20161030043727/https://www.ethereum.org/">waybackmachine ile ethereum.org</a>
+<NetworkUpgradeSummary name="tangerineWhistle" />
 
 #### Özet {#tangerine-whistle-summary}
 
@@ -320,7 +320,7 @@ Tangerine Whistle çatallanması, ağdaki (Eylül/Ekim 2016) hizmet reddi (DoS) 
 
 ### DAO çatallanması {#dao-fork}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>20 Nisan 2016 öğleden sonra 01:20:40 +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Blok numarası: <a href="https://etherscan.io/block/1920000">1,920,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH değeri: $12.54 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160803215306/https://ethereum.org/">waybackmachine ile ethereum.org</a>
+<NetworkUpgradeSummary name="daoFork" />
 
 #### Özet {#dao-fork-summary}
 
@@ -336,7 +336,7 @@ Bazı madenciler, DAO olayı protokolde bir kusur olmadığı için çatallanmay
 
 ### Homestead {#homestead}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>14 Mart 2016 öğleden sonra 06:49:53 +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Blok numarası: <a href="https://etherscan.io/block/1150000">1,150,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH değeri: $12.50 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160313203843/https://www.ethereum.org/">waybackmachine ile ethereum.org</a>
+<NetworkUpgradeSummary name="homestead" />
 
 #### Özet {#homestead-summary}
 
@@ -358,7 +358,7 @@ Geleceğe dönük Homestead çatallanması. Birkaç protokol değişikliği ve E
 
 ### Sınır eritme {#frontier-thawing}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>7 Eylül 2015 öğleden sonra 09:33:09 +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> Blok numarası: <a href="https://etherscan.io/block/200000">200,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH değeri: $1.24 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150912193811/https://www.ethereum.org/">waybackmachine ile ethereum.org</a>
+<NetworkUpgradeSummary name="frontierThawing" />
 
 #### Özet {#frontier-thawing-summary}
 
@@ -371,7 +371,7 @@ Sınır eritme çatalı, [blok](/glossary/#block) başına 5.000 [gaz](/glossary
 
 ### Frontier {#frontier}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code> 31 Temmuz 2015 06:26:13 UTC+3 </code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />Blok numarası: <a href="https://etherscan.io/block/0">0</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH değeri: Yok<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><a href="https://web.archive.org/web/20150802035735/https://www.ethereum.org/">waybackmachine ile ethereum.org</a>
+<NetworkUpgradeSummary name="frontier" />
 
 #### Özet {#frontier-summary}
 
@@ -385,7 +385,7 @@ Frontier, Ethereum projesinin canlı ancak yalın bir uygulamasıydı. Başarıl
 
 ### Ethereum satışı {#ether-sale}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 22 Temmuz - 2 Eylül 2014<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><a href="https://web.archive.org/web/20140804235628/https://www.ethereum.org/">waybackmachine'de ethereum.org</a>
+<NetworkUpgradeSummary name="etherSale" />
 
 Ethereum resmî olarak 42 gün boyunca satışa çıktı. Bitcoin ile satın alabilirsiniz.
 
@@ -395,7 +395,7 @@ Ethereum resmî olarak 42 gün boyunca satışa çıktı. Bitcoin ile satın ala
 
 ### Sarı kağıt yayınlandı {#yellowpaper}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 01 Nisan 2014<br /><Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><a href="https://web.archive.org/web/20140509173418/https://www.ethereum.org/"> ethereum.org, waybackmachine'de</a>
+<NetworkUpgradeSummary name="yellowpaperRelease" />
 
 Dr. Gavin Wood tarafından yazılan Sarı Kağıt, Ethereum protokolünün teknik bir tanımıdır.
 
@@ -407,7 +407,7 @@ Dr. Gavin Wood tarafından yazılan Sarı Kağıt, Ethereum protokolünün tekni
 
 ### Teknik İnceleme yayınlandı {#whitepaper}
 
-<Emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 27 Kasım, 2013<br /><Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><a href="https://web.archive.org/web/20140208030136/http://www.ethereum.org/">waybackmachine ile ethereum.org</a>
+<NetworkUpgradeSummary name="whitepaperRelease" />
 
 Projenin 2015'teki lansmanından önce, Ethereum'un kurucusu Vitalik Buterin tarafından 2013'te yayınlanan tanıtım yazısı.
 

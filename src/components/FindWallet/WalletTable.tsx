@@ -3,7 +3,6 @@ import React, { ReactNode, useState } from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { keyframes } from "@emotion/react"
 import styled from "@emotion/styled"
-import { Icon as ChakraIcon } from "@chakra-ui/react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
 // Components
@@ -146,7 +145,7 @@ const Wallet = styled(Grid)`
 `
 
 // https://react-select.com/styles#using-classnames
-// Pass menuIsOpen={true} to component to debug
+// Pass menuIsOpen to component to debug
 const StyledSelect = styled(Select)`
   .react-select__control {
     border: 1px solid ${(props) => props.theme.colors.text};
@@ -204,7 +203,7 @@ const StyledSelect = styled(Select)`
   }
 
   .react-select__control--is-focused {
-    border: border: 1px solid ${(props) => props.theme.colors.primary};
+    border: 1px solid ${(props) => props.theme.colors.primary};
     background: ${(props) => props.theme.colors.primary};
     svg {
       fill: ${(props) => props.theme.colors.background};
@@ -336,8 +335,8 @@ const WalletMoreInfoCategory = styled.div`
   h4 {
     color: ${(props) => props.theme.colors.primary};
     margin: 0 0.2rem 0.5rem;
-    display:block;
-    font-size; 1rem;
+    display: block;
+    font-size: 1rem;
   }
 `
 
@@ -761,7 +760,7 @@ const WalletTable = ({ data, filters, walletData }) => {
     const walletHasFilter = (filterKey) => {
       return wallet[filterKey] === true
     }
-    // Cast as Number because TypeScript warned about sorting implictily by true/false
+    // Cast as Number because TypeScript warned about sorting implicitly by true/false
     const orderedFeatureDropdownItems = [...featureDropdownItems].sort(
       (a, b) =>
         Number(walletHasFilter(b.filterKey)) -
@@ -1057,7 +1056,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                       <Socials>
                         <Link
                           to={wallet.url}
-                          hideArrow={true}
+                          hideArrow
                           customEventOptions={{
                             eventCategory: "WalletExternalLinkList",
                             eventAction: `Go to wallet`,
@@ -1065,12 +1064,12 @@ const WalletTable = ({ data, filters, walletData }) => {
                             eventValue: filters,
                           }}
                         >
-                          <Icon name="webpage" size={"1.5rem"} color={true} />
+                          <Icon name="webpage" size={"1.5rem"} color />
                         </Link>
                         {wallet.twitter && (
                           <Link
                             to={wallet.twitter}
-                            hideArrow={true}
+                            hideArrow
                             customEventOptions={{
                               eventCategory: "WalletExternalLinkList",
                               eventAction: `Go to wallet`,
@@ -1078,13 +1077,13 @@ const WalletTable = ({ data, filters, walletData }) => {
                               eventValue: filters,
                             }}
                           >
-                            <Icon name="twitter" size={"1.5rem"} color={true} />
+                            <Icon name="twitter" size={"1.5rem"} color />
                           </Link>
                         )}
                         {wallet.discord && (
                           <Link
                             to={wallet.discord}
-                            hideArrow={true}
+                            hideArrow
                             customEventOptions={{
                               eventCategory: "WalletExternalLinkList",
                               eventAction: `Go to wallet`,
@@ -1092,7 +1091,7 @@ const WalletTable = ({ data, filters, walletData }) => {
                               eventValue: filters,
                             }}
                           >
-                            <Icon name="discord" size={"1.5rem"} color={true} />
+                            <Icon name="discord" size={"1.5rem"} color />
                           </Link>
                         )}
                       </Socials>

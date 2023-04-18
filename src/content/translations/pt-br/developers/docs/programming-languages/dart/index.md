@@ -13,10 +13,10 @@ incomplete: true
   1.  Instalando o [Truffle development suite](https://www.trufflesuite.com/)
   2.  Escrevendo um contrato inteligente em [Solidity](https://soliditylang.org/)
   3.  Escrevendo uma interface de usuário no Dart
-- [Building a Mobile dApp with Flutter](https://medium.com/dash-community/building-a-mobile-dapp-with-flutter-be945c80315a) é bem mais curto, o que pode ser melhor se você já sabe o básico.
+- [Construir um dapp para dispositivos móveis com Flutter](https://medium.com/dash-community/building-a-mobile-dapp-with-flutter-be945c80315a) é muito mais curto, o que pode ser melhor
 - Se você prefere aprender através de vídeos, você pode assistir [Build Your First Blockchain Flutter App](https://www.youtube.com/watch?v=3Eeh3pJ6PeA), que leva aproximadamente uma hora
 - Se você é impaciente, talvez prefira o [Building a Blockchain Decentralized-app with Flutter and Dart on Ethereum](https://www.youtube.com/watch?v=jaMFEOCq_1s), que leva apenas vinte minutos
-- [Integrating MetaMask in Flutter application](https://youtu.be/8qzVDje3IWk) - Esse vídeo curto leva você através das etapas de integração do MetaMask na suas aplicações Flutter.
+- [Integrating MetaMask in Flutter application](https://youtu.be/8qzVDje3IWk) - Este pequeno vídeo mostra as etapas de integração do MetaMask em seus aplicativos Flutter
 
 ## Trabalhando com clientes Ethereum {#working-with-ethereum-clients}
 

@@ -623,28 +623,29 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
       </Flex>
       <Divider />
       <Content>
-        <Box m="2rem 0 4rem">
-          <CalloutBanner
-            titleKey={"page-stablecoins-stablecoins-dapp-callout-title"}
-            descriptionKey={
-              "page-stablecoins-stablecoins-dapp-callout-description"
-            }
-            image={getImage(data.doge)!}
-            maxImageWidth={600}
-            alt={t("page-stablecoins-stablecoins-dapp-callout-image-alt")}
-          >
-            <Flex flexFlow="wrap" gap="1em">
-              <ButtonLink to="/dapps/">
-                <Translation id="page-stablecoins-explore-dapps" />
+        <CalloutBanner
+          mt={8}
+          mb={16}
+          mx={0}
+          titleKey={"page-stablecoins-stablecoins-dapp-callout-title"}
+          descriptionKey={
+            "page-stablecoins-stablecoins-dapp-callout-description"
+          }
+          image={getImage(data.doge)!}
+          maxImageWidth={600}
+          alt={t("page-stablecoins-stablecoins-dapp-callout-image-alt")}
+        >
+          <Flex flexFlow="wrap" gap="1em">
+            <ButtonLink to="/dapps/">
+              <Translation id="page-stablecoins-explore-dapps" />
+            </ButtonLink>
+            <Box whiteSpace="break-spaces">
+              <ButtonLink variant="outline" to="/defi/">
+                <Translation id="page-stablecoins-more-defi-button" />
               </ButtonLink>
-              <Box whiteSpace="break-spaces">
-                <ButtonLink variant="outline" to="/defi/">
-                  <Translation id="page-stablecoins-more-defi-button" />
-                </ButtonLink>
-              </Box>
-            </Flex>
-          </CalloutBanner>
-        </Box>
+            </Box>
+          </Flex>
+        </CalloutBanner>
         <h2>
           <Translation id="page-stablecoins-save-stablecoins" />
         </h2>
@@ -710,7 +711,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
             />
           ))}
         </Grid>
-        <InfoBanner isWarning={true} shouldCenter={true}>
+        <InfoBanner isWarning shouldCenter>
           <Heading
             as="h3"
             fontSize="1.25rem"

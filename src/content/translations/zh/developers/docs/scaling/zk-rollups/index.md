@@ -90,7 +90,7 @@ SNARK 和 STARK 都有助于证明零知识卷叠中链下计算的完整性，�
 
 一些零知识卷叠尝试通过采用[多方计算仪式 (MPC)](https://zkproof.org/2021/06/30/setup-ceremonies/amp/) 解决这一问题，即让受信任个人为 ZK-SNARK 线路生成公共参数。 每一方都提供一些随机性（称为“有毒废物”）来构建公共参考字符串，而且必须立即将其销毁。
 
-使用受信任的设置，因为它们提高了公共参考字符串设置的安全性。 只要诚实参与者销毁其输入，ZK-SNARK 系统的安全性就得到了保证。 尽管如此，这种方法仍然需要信任相关人员删除他们的抽样随机性，并且不会破坏系统的安全保障。
+使用受信任的设置，因为它们提高了公共参考字符串设置的安全性。 只要诚实参与者销毁其输入，ZK-SNARK 系统的安全性就得到了保证。 这种方法仍然需要信任相关人员删除他们抽样的随机性，并且不会破坏系统的安全保障。
 
 撇开信任假设不谈，ZK-SNARK 因其更小的证明大小和恒定时间验证而广受欢迎。 由于运行零知识卷叠的较大一部分成本用于一层网络上的证明验证，因此二层网络使用 ZK-SNARK 生成可在主网上快速、经济实惠地验证的证明。
 
@@ -102,7 +102,7 @@ ZK-STARK 是“透明的”，因为无需受信任的公共参考字符串 (CRS
 
 ZK-STARK 还提供了更强的可扩展性，因为证明和验证有效性证明所需的时间相对于底层计算的复杂性呈*准线性*增加。 对于 ZK-SNARK，证明和验证时间相对于底层计算的规模呈*线性*增加。 这意味着在涉及大型数据集时，ZK-STARK 比 ZK-SNARK 的证明和验证时间更少，这使得前者适用于大批量应用。
 
-ZK-STARK 对于量子计算机也是安全的，而 ZK-SNARK 中使用的椭圆曲线密码学 (ECC) 被广泛认为容易受到量子计算攻击。 ZK-STARK 的缺点是它们产生的证明尺寸更大，在以太坊上验证的成本更高。 此外，它们不支持递归，而递归是使用零知识证明扩展链下计算的关键。
+ZK-STARK 对于量子计算机也是安全的，而 ZK-SNARK 中使用的椭圆曲线密码学 (ECC) 被广泛认为容易受到量子计算攻击。 ZK-STARK 的缺点是它们产生的证明尺寸更大，在以太坊上验证的成本更高。
 
 #### 有效性证明如何在零知识卷叠中运作？ {#validity-proofs-in-zk-rollups}
 
@@ -115,7 +115,7 @@ ZK-STARK 对于量子计算机也是安全的，而 ZK-SNARK 中使用的椭圆�
 - 交易是正确的并与卷叠中发送者的公钥匹配。
 - 发送者的随机数是正确的，等等。
 
-在零知识卷叠节点有足够的交易后，该节点将这些交易聚合成一个批次，并为证明线路编译输入以编译成简单的零知识证明。 其中包括：
+在零知识卷叠节点有足够的交易后，该节点将这些交易聚合成一个批次并为证明线路编译输入，从而编译成简单的零知识证明。 其中包括：
 
 - 包含批次中所有交易的默克尔树。
 - 用于证明交易包含在批次中的默克尔交易证明。
@@ -238,16 +238,15 @@ ZK-STARK 对于量子计算机也是安全的，而 ZK-SNARK 中使用的椭圆�
 
 - **[Scroll](https://scroll.io/blog/zkEVM)** - _Scroll 是 一家致力于为以太坊构建原生零知识以太坊虚拟机二层解决方案的技术驱动型公司。_
 
-- **[Polygon Hermez](https://docs.hermez.io/zkEVM/architecture/introduction/)** - _Hermez 2.0 是以太坊主网上的去中心化零知识卷叠，它在零知识以太坊虚拟机 (zkEVM) 上运行，以透明的方式执行以太坊交易，包括具有零知识证明验证的智能合约。_
+- **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)** - _是以太坊主网上的去中心化零知识卷叠，它在零知识以太坊虚拟机 (zkEVM) 上运行，以透明的方式执行以太坊交易，包括智能合约与零知识证明验证。_
 
-## 进一步阅读 ZK-rollups 阅读 {#further-reading-on-zk-rollups}
+## 进一步阅读零知识卷叠的相关内容 {#further-reading-on-zk-rollups}
 
 - [什么是零知识卷叠？](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
 - [什么是零知识卷叠？](https://alchemy.com/blog/zero-knowledge-rollups)
-- [EthHub 上关于零知识卷叠的介绍](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/zk-rollups/)
-- [STARKs 和 SNARKs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
-- [什么是 zkEVM？](https://www.alchemy.com/overviews/zkevm)
-- [zkEVM 简介](https://hackmd.io/@yezhang/S1_KMMbGt)
-- [Awesome-zkEVM 资源](https://github.com/LuozhuZhang/awesome-zkevm)
-- [ZK-SNARKS 底层技术](https://vitalik.ca/general/2017/02/01/zk_snarks.html)
-- [SNARK，怎么可能？](https://vitalik.ca/general/2021/01/26/snarks.html)
+- [STARK（可扩容透明知识论证）和 SNARK（简洁非交互式知识论证）](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
+- [什么是 zkEVM（零知识以太坊虚拟机）？](https://www.alchemy.com/overviews/zkevm)
+- [zkEVM（零知识以太坊虚拟机）简介](https://hackmd.io/@yezhang/S1_KMMbGt)
+- [超赞的 zkEVM（零知识以太坊虚拟机）资源](https://github.com/LuozhuZhang/awesome-zkevm)
+- [ZK-SNARK（零知识简洁非交互式知识论证）底层技术](https://vitalik.ca/general/2017/02/01/zk_snarks.html)
+- [SNARK（简洁非交互式知识论证），怎么可能？](https://vitalik.ca/general/2021/01/26/snarks.html)

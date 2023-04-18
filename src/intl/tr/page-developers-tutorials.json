@@ -1,7 +1,4 @@
 {
-  "page-tutorial-beginner": "Yeni başlayan",
-  "page-tutorial-intermediate": "Orta düzey",
-  "page-tutorial-advanced": "Gelişmiş",
   "comp-tutorial-metadata-minute-read": "dakikalık okuma",
   "page-tutorial-listing-policy-intro": "Eğitime başlamadan önce listeleme politikalarımızı okuyun.",
   "comp-tutorial-metadata-tip-author": "İpucu yazarı",
@@ -23,6 +20,9 @@
   "page-tutorials-meta-description": "İncelenen Ethereum topluluğu eğitimlerine konuya göre göz atın ve filtreleyin.",
   "page-tutorial-external-link": "Harici",
   "page-tutorials-meta-title": "Ethereum Geliştirme Öğreticileri",
+  "page-tutorial-beginner": "Yeni başlayan",
+  "page-tutorial-intermediate": "Orta düzey",
+  "page-tutorial-advanced": "Gelişmiş",
   "page-find-wallet-try-removing": "Bir veya iki özelliği kaldırmayı deneyin",
   "page-find-wallet-clear": "Filtreleri temizle"
 }

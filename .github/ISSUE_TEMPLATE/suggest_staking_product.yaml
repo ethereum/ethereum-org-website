@@ -166,13 +166,18 @@ body:
   - type: textarea
     id: staking_product_signing_keys
     attributes:
-      label: If listing as staking-as-a-service, who holds the signing keys, and withdrawal keys?
+      label: If listing as staking-as-a-service, who has access to the signing keys?
       description: What keys does the user maintain access to? What keys does the service gain access to?
+  - type: textarea
+    id: staking_product_withdrawal_credentials
+    attributes:
+      label: If a pooled staking service or SaaS provider, what type of withdrawal credentials are being utilized / who holds the withdrawal keys?
+      description: Are withdrawal credentials utilizing `0x01` type credentials that point to an execution layer address? If so, is this an account chosen by the user, or a pre-determined smart contract?
   - type: textarea
     id: staking_product_supermajority
     attributes:
-      label: If a pooled staking service, what percent of node operators are running a super-majority consensus layer client?
-      description: As of last edit, Prysm is the consensus layer client being run by a super-majority of the node operators, which is dangerous for the network. If there is currently a super-majority and this data is known, please list it here with a link to evidence.
+      label: If a pooled staking service or SaaS provider, what percent of node operators are running a super-majority client?
+      description: As of last edit, Prysm and Lighthouse are the consensus clients being run by >75% of the node operators, and Geth is the execution client being run by >60% of node operators. This presents risks to the network. If there is currently a super-majority and this data is known, please list it here with a link to evidence.
   - type: textarea
     id: staking_product_consensus_layer_client_support
     attributes:
@@ -193,3 +198,14 @@ body:
     attributes:
       label: Social media links
       description: List available social media links. ie. Discord, Twitter, Telegram, Reddit
+  - type: checkboxes
+    id: staking_product_work_on
+    attributes:
+      label: Would you like to work on this issue?
+      options:
+        - label: "Yes"
+          required: false
+        - label: "No"
+          required: false
+    validations:
+      required: true

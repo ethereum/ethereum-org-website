@@ -4,7 +4,6 @@ description: Uniswap-v2 sözleşmesi nasıl çalışır? Neden bu şekilde yazı
 author: Ori Pomerantz
 tags:
   - "katılık"
-  - "uniswap"
 skill: intermediate
 published: 2021-05-01
 lang: tr

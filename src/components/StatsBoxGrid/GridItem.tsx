@@ -94,7 +94,7 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
           stroke="#8884d8"
           fillOpacity={0.3}
           fill={`url(#colorUv-${kebabCase(title)})`}
-          connectNulls={true}
+          connectNulls
         />
         <XAxis dataKey="timestamp" axisLine={false} tick={false} />
       </AreaChart>

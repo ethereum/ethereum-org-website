@@ -65,8 +65,6 @@ sidebarDepth: 2
 
 [Erigon](https://github.com/ledgerwatch/erigon)
 
-[Akula](https://akula.app)
-
 [Go-Ethereum](https://geth.ethereum.org/)
 
 ### 共识客户端 {#consensus-clients}

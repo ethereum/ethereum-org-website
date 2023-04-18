@@ -3,13 +3,7 @@ const { propNames } = require("@chakra-ui/react")
 const { babelConfig } = require("./babel-storybook-config")
 
 module.exports = {
-  stories: [
-    {
-      directory: "../src/components",
-      titlePrefix: "Components",
-      files: "**/*.stories.tsx",
-    },
-  ],
+  stories: ["../src/components/**/*.stories.tsx"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
@@ -86,8 +80,5 @@ module.exports = {
         return !(isStyledSystemProp || isHTMLElementProp)
       },
     },
-  },
-  docs: {
-    autodocs: true,
   },
 }

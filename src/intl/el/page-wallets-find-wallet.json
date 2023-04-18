@@ -5,12 +5,12 @@
   "page-find-wallet-last-updated": "Τελευταία ενημέρωση",
   "page-find-wallet-meta-description": "Βρείτε και συγκρίνετε πορτοφόλια Ethereum με βάση τα χαρακτηριστικά που χρειάζεστε.",
   "page-find-wallet-meta-title": "Βρείτε ένα πορτοφόλι Ethereum",
-  "page-find-wallet-multisig": "Λογαριασμοί πολλαπλής ασφαλείας",
-  "page-find-wallet-multisig-desc": "Για επιπλέον ασφάλεια, τα πορτοφόλια πολλαπλής ασφάλειας απαιτούν περισσότερους από έναν κωδικούς για να εγκρίνουν ορισμένες συναλλαγές.",
-  "page-find-wallet-showing": "Εμφανίζονται ",
-  "page-find-wallet-swaps": "Μετατροπή με αποκεντρωμένα στοιχεία",
-  "page-find-wallet-swaps-desc": "Ανταλλαγή μεταξύ ETH και άλλων νομισμάτων απευθείας από το πορτοφόλι σας.",
   "page-find-wallet-title": "Επιλογή πορτοφολιού",
   "page-find-wallet-try-removing": "Δοκιμάστε να αφαιρέσετε ένα ή δύο χαρακτηριστικά",
-  "page-stake-eth": "Αποθήκευση ΕΤΗ"
+  "page-stake-eth": "Αποθήκευση ΕΤΗ",
+  "page-find-wallet-swaps": "Μετατροπή με αποκεντρωμένα στοιχεία",
+  "page-find-wallet-swaps-desc": "Ανταλλαγή μεταξύ ETH και άλλων νομισμάτων απευθείας από το πορτοφόλι σας.",
+  "page-find-wallet-multisig": "Λογαριασμοί πολλαπλής ασφαλείας",
+  "page-find-wallet-multisig-desc": "Για επιπλέον ασφάλεια, τα πορτοφόλια πολλαπλής ασφάλειας απαιτούν περισσότερους από έναν κωδικούς για να εγκρίνουν ορισμένες συναλλαγές.",
+  "page-find-wallet-showing": "Εμφανίζονται "
 }

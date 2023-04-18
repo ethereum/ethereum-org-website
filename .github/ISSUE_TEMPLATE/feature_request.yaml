@@ -33,6 +33,14 @@ body:
     attributes:
       value: |
         **Want to contribute?**
-  - type: markdown
+  - type: checkboxes
+    id: feature_request_work_on
     attributes:
-      value: We love contributions from the Ethereum community! Please comment on an issue if you're interested in helping out with a PR.
+      label: Would you like to work on this issue?
+      options:
+        - label: "Yes"
+          required: false
+        - label: "No"
+          required: false
+    validations:
+      required: true

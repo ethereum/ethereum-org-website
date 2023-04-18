@@ -22,13 +22,13 @@ Dovada-muncii este o modalitate solidă de a securiza rețeaua și de a impune m
 
 ## Dovada-mizei {#proof-of-stake}
 
-Un viitor mai ecologic pentru Ethereum este deja în curs de construcție sub forma unui [lanț bazat pe **dovada-mizei (PoS)**](/upgrades/beacon-chain/). În cadrul [dovezii-mizei](/developers/docs/consensus-mechanisms/pos/), nu mai este necesară rezolvarea de puzzle-uri arbitrare. Eliminarea rezolvării puzzle-urilor scade semnificativ cheltuielile cu energia necesară pentru a securiza rețeaua. Miner-ii sunt înlocuiți cu validatori, care îndeplinesc aceeași funcție, cu deosebirea că, în loc să-și cheltuiască activele în avans sub forma muncii de calcul, aceștia mizează ETH drept garanție față de un comportament necinstit. Dacă validatorul este leneș, (este off-line atunci când acesta ar trebui să îndeplinească o anumită obligație de validator), ETH-ul pe care a mizat se poate scurge încet-încet, în timp ce un comportament necinstit demonstrabil poate duce la o „reducere” a activelor mizate. Aceasta stimulează semnificativ participarea activă și onestă la securizarea rețelei.
+Un viitor mai ecologic pentru Ethereum este deja în curs de construcție sub forma unui [lanț bazat pe **dovada-mizei (PoS)**](/roadmap/beacon-chain/). În cadrul [dovezii-mizei](/developers/docs/consensus-mechanisms/pos/), nu mai este necesară rezolvarea de puzzle-uri arbitrare. Eliminarea rezolvării puzzle-urilor scade semnificativ cheltuielile cu energia necesară pentru a securiza rețeaua. Miner-ii sunt înlocuiți cu validatori, care îndeplinesc aceeași funcție, cu deosebirea că, în loc să-și cheltuiască activele în avans sub forma muncii de calcul, aceștia mizează ETH drept garanție față de un comportament necinstit. Dacă validatorul este leneș, (este off-line atunci când acesta ar trebui să îndeplinească o anumită obligație de validator), ETH-ul pe care a mizat se poate scurge încet-încet, în timp ce un comportament necinstit demonstrabil poate duce la o „reducere” a activelor mizate. Aceasta stimulează semnificativ participarea activă și onestă la securizarea rețelei.
 
 În mod asemănător cu dovada-muncii, o entitate rău intenționată ar avea nevoie de cel puțin 51% din totalul ETH-ului mizat pentru un [atac de 51%](/glossary/#51-attack). Însă, spre deosebire de dovada-muncii, unde pierderea potențială în urma unui astfel de atac constă numai din costul generării puterii hash necesare pentru minare, în cazul dovezii-mizei pierderea potențială în urma unui atac este întreaga sumă de ETH folosită ca garanție. Această structură de descurajare permite securitatea rețelei cu ajutorul dovezii-mizei, eliminând în același timp nevoia de a cheltui energie pe calcule aleatorii. Puteți afla explicații amănunțite cu privire la securitatea rețelei prin dovada-mizei [aici](/developers/docs/consensus-mechanisms/pos/) și [aici](https://vitalik.ca/general/2017/12/31/pos_faq.html).
 
 ## Fuziunea {#the-merge}
 
-În prezent, există o un lanț funcțional bazat pe dovada-mizei, numit [Lanțul Beacon](/upgrades/beacon-chain/), care funcționează din decembrie 2020 și care demonstrează viabilitatea protocolului dovezii-mizei. Fuziunea are loc la momentul în care Ethereum va renunța la dovada-muncii și va adopta în întregime dovada-mizei. Se preconizează că fuziunea se va realiza ~T2 2022. [Aflați mai multe despre fuziune](/upgrades/merge/).
+În prezent, există o un lanț funcțional bazat pe dovada-mizei, numit [Lanțul Beacon](/roadmap/beacon-chain/), care funcționează din decembrie 2020 și care demonstrează viabilitatea protocolului dovezii-mizei. Fuziunea are loc la momentul în care Ethereum va renunța la dovada-muncii și va adopta în întregime dovada-mizei. Se preconizează că fuziunea se va realiza ~T2 2022. [Aflați mai multe despre fuziune](/roadmap/merge/).
 
 ## Cheltuieli de energie la dovada-mizei {#proof-of-stake-energy}
 
@@ -75,9 +75,9 @@ _Totodată, trebuie să luăm în considerare că Ethereum nu se limitează la s
 ## Subiecte corelate {#related-topics}
 
 - [Viziunea Ethereum](/roadmap/vision/)
-- [Lanțul Beacon](/upgrades/beacon-chain)
-- [Fuziunea](/upgrades/merge/)
-- [Fragmentare](/upgrades/beacon-chain/)
+- [Lanțul Beacon](/roadmap/beacon-chain)
+- [Fuziunea](/roadmap/merge/)
+- [Fragmentare](/roadmap/beacon-chain/)
 
 ### Note de subsol și surse {#footnotes-and-sources}
 
