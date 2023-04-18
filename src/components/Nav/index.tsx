@@ -65,7 +65,7 @@ const Nav: FC<IProps> = ({ path }) => {
             ml={{ base: 3, xl: 8 }}
           >
             <Menu path={path} sections={linkSections} />
-            <Flex alignItems="center" justifyContent="space-between" gap={2}>
+            <Flex alignItems="center" justifyContent="space-between" gap={1}>
               <Search ref={searchRef} />
               <IconButton
                 aria-label={
