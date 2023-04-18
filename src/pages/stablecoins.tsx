@@ -1,8 +1,17 @@
 import React, { useEffect, useState, useMemo } from "react"
-import styled from "@emotion/styled"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
+import {
+  Box,
+  Flex,
+  Heading,
+  Text,
+  useToken,
+  Img,
+  Icon,
+  Grid,
+} from "@chakra-ui/react"
 
 import ButtonLink from "../components/ButtonLink"
 import CalloutBanner from "../components/CalloutBanner"
@@ -25,17 +34,6 @@ import Translation from "../components/Translation"
 
 import { getData } from "../utils/cache"
 import { getImage } from "../utils/image"
-
-import {
-  Box,
-  Flex,
-  Heading,
-  Text,
-  useToken,
-  Img,
-  Icon,
-  Grid,
-} from "@chakra-ui/react"
 
 const tooltipContent = (
   <div>
