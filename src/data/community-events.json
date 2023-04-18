@@ -233,6 +233,15 @@
     "startDate": "2023-06-23",
     "endDate": "2023-06-25"
   },
+    {
+    "title": "ETHMilan",
+    "to": "https://ethmilan.xyz/",
+    "sponsor": null,
+    "location": "Milan, Italy",
+    "description": "The conference will take place in the heart of Milan, in a location rich in history and culture. Join us to discuss all things Ethereum, DeFi, Account Abstraction, DAOs & NFTs.",
+    "startDate": "2023-10-05",
+    "endDate": "2023-10-06"
+  },
   {
     "title": "ETHToronto",
     "to": "https://www.ethtoronto.ca/",
