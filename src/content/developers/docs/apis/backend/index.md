@@ -32,7 +32,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [blockcypher.com](https://www.blockcypher.com/)
 - [Documentation](https://www.blockcypher.com/dev/ethereum/)
 
-**Blast by Bware Labs -** **_Decentralized APIs for Ethereum Mainnet ant Testnets._**
+**Blast by Bware Labs -** **_Decentralized APIs for Ethereum Mainnet and Testnets._**
 
 - [blastapi.io](https://blastapi.io/)
 - [Documentation](https://docs.blastapi.io)
