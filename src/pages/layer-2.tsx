@@ -749,16 +749,22 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
             <Text>
               <Translation id="layer-2-sidechains-2" />
             </Text>
-            <Text>
+            <ul>
+              <li>
+                <Text>
               <Link to="/developers/docs/scaling/sidechains/">
                 <Translation id="layer-2-more-on-sidechains" />
               </Link>
             </Text>
-            <Text>
+           </li>
+           <li>
+           <Text>
               <Link to="/developers/docs/scaling/validium/">
                 <Translation id="layer-2-more-on-validiums" />
               </Link>
             </Text>
+           </li>
+            </ul>
           </Box>
           <Box flex="50%">
             <Text>
