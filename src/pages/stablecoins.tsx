@@ -16,7 +16,7 @@ import {
 import ButtonLink from "../components/ButtonLink"
 import CalloutBanner from "../components/CalloutBanner"
 import DataProductCard from "../components/DataProductCard"
-import Emoji from "../components/OldEmoji"
+import Emoji from "../components/Emoji"
 import FeedbackCard from "../components/FeedbackCard"
 import GhostCard from "../components/GhostCard"
 import HorizontalCard from "../components/HorizontalCard"
@@ -359,7 +359,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
           </Box>
           <Box maxW="640px" mr={8} mt={{ base: 16, lg: 0 }}>
             <GhostCard>
-              <Emoji size={3} text=":pizza:" />
+              <Emoji text=":pizza:" fontSize="5xl" />
               <h3>
                 <Translation id="page-stablecoins-bitcoin-pizza" />
               </h3>
@@ -675,7 +675,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
             margin={{ base: "auto 0rem", lg: "" }} // TODO: fix this
           >
             <div>
-              <Emoji size={5} mb={4} text=":bank:" />
+              <Emoji mb={4} text=":bank:" fontSize="5rem" />
               <Text as="p" fontSize="64px" lineHeight="100%">
                 <Translation id="page-stablecoins-bank-apy" />
               </Text>
