@@ -4,7 +4,7 @@ description:
 lang: en
 ---
 
-Web2 refers to the version of the internet most of us know today. An internet dominated by companies that provide services in exchange for your personal data. Web3, in the context of Ethereum, refers to decentralized apps that run on the blockchain. These are apps that allow anyone to participate without monetising their personal data.
+Web2 refers to the version of the internet most of us know today. An internet dominated by companies that provide services in exchange for your personal data. Web3, in the context of Ethereum, refers to decentralized apps that run on the blockchain. These are apps that allow anyone to participate without monetising their personal data. Overall, Web3 aims to empower users, eliminate intermediaries, and promote openness, interoperability, and trust in the online world.
 
 Looking for a more beginner-friendly resource? See our [introduction to web3](/web3/).
 
@@ -14,6 +14,7 @@ Many Web3 developers have chosen to build dapps because of Ethereum's inherent d
 
 - Anyone who is on the network has permission to use the service – or in other words, permission isn't required.
 - No one can block you or deny you access to the service.
+- Users have greater control over their online activities, including data ownership, privacy, and governance.
 - Payments are built in via the native token, ether (ETH).
 - Ethereum is turing-complete, meaning you can program pretty much anything.
 
@@ -35,6 +36,7 @@ Web3 has some limitations right now:
 - UX – interacting with web3 applications can require extra steps, software, and education. This can be a hurdle to adoption.
 - Accessibility – the lack of integration in modern web browsers makes web3 less accessible to most users.
 - Cost – most successful dapps put very small portions of their code on the blockchain as it's expensive.
+- Security - the vulnerabilities in smart contracts can be misused for illegal activities.
 
 ## Centralization vs decentralization {#centralization-vs-decentralization}
 
