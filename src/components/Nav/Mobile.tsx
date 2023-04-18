@@ -1,4 +1,4 @@
-import React, { Fragment, ReactNode } from "react"
+import React, { Fragment, ReactNode, RefObject } from "react"
 import {
   Box,
   IconButton,
@@ -112,6 +112,7 @@ export interface IProps {
   toggleSearch: () => void
   linkSections: ISections
   fromPageParameter: string
+  drawerContainerRef: RefObject<HTMLElement | null>
 }
 
 const MobileNavMenu: React.FC<IProps> = ({
@@ -122,6 +123,7 @@ const MobileNavMenu: React.FC<IProps> = ({
   toggleSearch,
   linkSections,
   fromPageParameter,
+  drawerContainerRef,
 }) => {
   const { t } = useTranslation()
 
@@ -173,9 +175,11 @@ const MobileNavMenu: React.FC<IProps> = ({
         onClick={toggleMenu}
         aria-label={t("aria-toggle-search-button")}
         variant="icon"
+        zIndex={2000}
         _hover={{ svg: { fill: "primary" } }}
       />
       <Drawer
+        portalProps={{ containerRef: drawerContainerRef }}
         isOpen={isMenuOpen}
         onClose={handleClick}
         placement="left"

@@ -1,4 +1,4 @@
-import React, { FC } from "react"
+import React, { FC, useRef } from "react"
 import { Icon, IconButton, Flex, Text, Box } from "@chakra-ui/react"
 import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
 
@@ -29,9 +29,12 @@ const Nav: FC<IProps> = ({ path }) => {
     mobileNavProps,
   } = useNav({ path })
 
+  const navWrapperRef = useRef(null)
+
   return (
     <Box position="sticky" top={0} zIndex={100} width="full">
       <Flex
+        ref={navWrapperRef}
         as="nav"
         aria-label={t("nav-primary")}
         bg="background"
@@ -93,7 +96,10 @@ const Nav: FC<IProps> = ({ path }) => {
             </Flex>
           </Flex>
           {/* Mobile */}
-          <MobileNavMenu {...mobileNavProps} />
+          <MobileNavMenu
+            {...mobileNavProps}
+            drawerContainerRef={navWrapperRef}
+          />
         </Flex>
       </Flex>
       {shouldShowSubNav && (
