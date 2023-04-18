@@ -47,7 +47,14 @@ const Content = (props: BoxProps) => <Box py={4} px={8} {...props} />
 const Divider = () => <Box my={16} w="10%" h={1} bg="homeDivider" />
 
 const Page = (props: FlexProps) => (
-  <Flex direction="column" align="center" my={0} mx="auto" {...props} />
+  <Flex
+    width="full"
+    direction="column"
+    align="center"
+    my={0}
+    mx="auto"
+    {...props}
+  />
 )
 
 type EthereumDataResponse = Array<{
@@ -333,8 +340,6 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
           direction={{ base: "column", lg: "row" }}
         >
           <Box mr={8} w="full" margin={{ base: "auto 0rem", lg: "" }}>
-            {" "}
-            // TODO: fix this
             <Heading as="h2" mt={0}>
               <Translation id="page-stablecoins-why-stablecoins" />
             </Heading>
@@ -384,7 +389,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
         mt={8}
         mb={8}
         background="cardGradient"
-        shadow="tableItemBoxShadow"
+        boxShadow="tableItemBoxShadow"
       >
         <Box mb={-8} py={4} px={8} w="full">
           <Heading as="h2" mt={0}>
