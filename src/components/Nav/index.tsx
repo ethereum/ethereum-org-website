@@ -81,11 +81,7 @@ const Nav: FC<IProps> = ({ path }) => {
                 _hover={{ color: "primary" }}
                 onClick={toggleColorMode}
               />
-              <ButtonLink
-                to={`/languages/${fromPageParameter}`}
-                variant="icon"
-                me={{ base: 2, xl: 0 }}
-              >
+              <ButtonLink to={`/languages/${fromPageParameter}`} variant="icon">
                 <Icon as={MdLanguage} fontSize="2xl" />
                 <Text as="span" pl={2}>
                   <Box as="span" hideBelow="lg">
