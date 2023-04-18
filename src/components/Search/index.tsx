@@ -85,6 +85,7 @@ const Search = forwardRef<{}, "button">((_, ref) => {
           onClick={onOpen}
           ref={mergedButtonRefs}
           aria-label={t("aria-toggle-search-button")}
+          size="sm"
         />
       )}
       <Portal>

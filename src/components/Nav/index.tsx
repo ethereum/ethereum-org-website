@@ -68,23 +68,31 @@ const Nav: FC<IProps> = ({ path }) => {
             ml={{ base: 3, xl: 8 }}
           >
             <Menu path={path} sections={linkSections} />
-            <Flex alignItems="center" justifyContent="space-between" gap={1}>
+            <Flex
+              alignItems="center"
+              justifyContent="space-between"
+              gap={{ base: 1, xl: 0 }}
+            >
               <Search ref={searchRef} />
               <IconButton
                 aria-label={
                   isDarkTheme ? "Switch to Light Theme" : "Switch to Dark Theme"
                 }
-                icon={
-                  <Icon
-                    as={isDarkTheme ? MdWbSunny : MdBrightness2}
-                    fontSize="2xl"
-                  />
-                }
+                icon={<Icon as={isDarkTheme ? MdWbSunny : MdBrightness2} />}
                 variant="icon"
+                size="sm"
+                fontSize="2xl"
+                ms={{ xl: 2 }}
                 _hover={{ color: "primary" }}
                 onClick={toggleColorMode}
               />
-              <ButtonLink to={`/languages/${fromPageParameter}`} variant="icon">
+              <ButtonLink
+                to={`/languages/${fromPageParameter}`}
+                variant="icon"
+                px={{ base: 1, xl: 1.5 }}
+                size="sm"
+                fontSize="md"
+              >
                 <Icon as={MdLanguage} fontSize="2xl" />
                 <Text as="span" pl={2}>
                   <Box as="span" hideBelow="lg">
