@@ -10,6 +10,7 @@ import {
   getLocaleForNumberFormat,
   isLangRightToLeft,
 } from "../../utils/translations"
+import { Lang } from "../../utils/languages"
 
 export const ranges = ["30d", "90d"] as const
 
@@ -81,7 +82,7 @@ export const useStatsBoxGrid = () => {
   const [selectedRangeTxs, setSelectedRangeTxs] = useState<string>(ranges[0])
 
   useEffect(() => {
-    const localeForStatsBoxNumbers = getLocaleForNumberFormat(language)
+    const localeForStatsBoxNumbers = getLocaleForNumberFormat(language as Lang)
 
     const formatPrice = (price: number): string => {
       return new Intl.NumberFormat(localeForStatsBoxNumbers, {
@@ -237,6 +238,9 @@ export const useStatsBoxGrid = () => {
         <RangeSelector
           state={selectedRangePrice}
           setState={setSelectedRangePrice}
+          eventCategory="Stats"
+          eventAction="click"
+          eventName="eth price"
         />
       ),
       state: ethPrices,
@@ -251,6 +255,9 @@ export const useStatsBoxGrid = () => {
         <RangeSelector
           state={selectedRangeTxs}
           setState={setSelectedRangeTxs}
+          eventCategory="Stats"
+          eventAction="click"
+          eventName="transactions"
         />
       ),
       state: txs,
@@ -265,6 +272,9 @@ export const useStatsBoxGrid = () => {
         <RangeSelector
           state={selectedRangeTvl}
           setState={setSelectedRangeTvl}
+          eventCategory="Stats"
+          eventAction="click"
+          eventName="defi tvl"
         />
       ),
       state: valueLocked,
@@ -279,13 +289,16 @@ export const useStatsBoxGrid = () => {
         <RangeSelector
           state={selectedRangeNodes}
           setState={setSelectedRangeNodes}
+          eventCategory="Stats"
+          eventAction="click"
+          eventName="nodes"
         />
       ),
       state: nodes,
       range: selectedRangeNodes,
     },
   ]
-  const dir: Direction = isLangRightToLeft(language) ? "rtl" : "ltr"
+  const dir: Direction = isLangRightToLeft(language as Lang) ? "rtl" : "ltr"
 
   return {
     metrics,

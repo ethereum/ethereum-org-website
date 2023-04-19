@@ -465,9 +465,10 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
   const dropdownLinks: ButtonDropdownList = {
     text: "Staking Considerations",
     ariaLabel: "Dropdown menu for staking considerations",
-    items: pageData.map(({ title }) => ({
+    items: pageData.map(({ title, matomo }) => ({
       text: title,
       callback: setActiveIndex,
+      matomo: matomo,
     })),
   }
 

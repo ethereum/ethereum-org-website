@@ -245,6 +245,9 @@ const WalletsPage = ({
       {
         to: "/wallets/find-wallet/",
         content: t("page-wallets-find-wallet-link"),
+        eventCategory: "wallet hero buttons",
+        eventAction: "click",
+        eventName: "find wallet",
       },
     ],
   }
