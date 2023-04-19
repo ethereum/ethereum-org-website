@@ -46,8 +46,6 @@ const TableOfContents: React.FC<IProps> = ({
 }) => {
   const { isZenMode, handleZenModeChange } = useContext(ZenModeContext)
 
-  console.log(isZenMode)
-
   const titleIds: Array<string> = []
 
   if (!isMobile) {
