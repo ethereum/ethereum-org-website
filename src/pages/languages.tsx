@@ -1,7 +1,9 @@
 import React, { useState } from "react"
+import { graphql } from "gatsby"
+import { IconButton } from "@chakra-ui/react"
 import styled from "@emotion/styled"
 import { useLocation } from "@reach/router"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
@@ -9,10 +11,9 @@ import Link from "../components/Link"
 import { Page, Content } from "../components/SharedStyledComponents"
 
 import { Language, languageMetadata } from "../utils/languages"
-import { translateMessageId, TranslationKey } from "../utils/translations"
+import { TranslationKey } from "../utils/translations"
 import { CardItem as LangItem } from "../components/SharedStyledComponents"
 import Icon from "../components/Icon"
-import NakedButton from "../components/NakedButton"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -58,19 +59,8 @@ const StyledInput = styled.input`
   }
 `
 
-const IconButton = styled(NakedButton)`
-  position: absolute;
-  top: 50%;
-  margin-top: -12px;
-  right: 6px;
-`
-
-const ResetIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
-`
-
 const LanguagesPage = () => {
-  const intl = useIntl()
+  const { t } = useTranslation()
   const location = useLocation()
   const redirectTo =
     location.search.split("from=").length > 1
@@ -81,15 +71,12 @@ const LanguagesPage = () => {
     e.preventDefault()
     setKeyword("")
   }
-  const searchString = translateMessageId(
-    "page-languages-filter-placeholder",
-    intl
-  )
+  const searchString = t("page-languages-filter-placeholder")
   let translationsCompleted: Array<Language> = []
   for (const lang in languageMetadata) {
     const langMetadata = {
       ...languageMetadata[lang],
-      name: translateMessageId(`language-${lang}` as TranslationKey, intl),
+      name: t(`language-${lang}` as TranslationKey),
     }
 
     const nativeLangTitle = langMetadata.localName
@@ -106,8 +93,8 @@ const LanguagesPage = () => {
   return (
     <StyledPage>
       <PageMetadata
-        title={translateMessageId("page-languages-meta-title", intl)}
-        description={translateMessageId("page-languages-meta-desc", intl)}
+        title={t("page-languages-meta-title")}
+        description={t("page-languages-meta-desc")}
       />
       <Content>
         <ContentContainer>
@@ -140,10 +127,16 @@ const LanguagesPage = () => {
               placeholder={searchString}
               onChange={(e) => setKeyword(e.target.value)}
             />
-            {keyword === "" ? null : (
-              <IconButton onClick={resetKeyword}>
-                <ResetIcon name="close" />
-              </IconButton>
+            {keyword !== "" && (
+              <IconButton
+                icon={<Icon name="close" />}
+                onClick={resetKeyword}
+                position="absolute"
+                insetInlineEnd={1}
+                aria-label={t("clear")}
+                variant="icon"
+                _hover={{ svg: { fill: "primary" } }}
+              />
             )}
           </Form>
           <LangContainer>
@@ -171,3 +164,22 @@ const LanguagesPage = () => {
 }
 
 export default LanguagesPage
+
+export const query = graphql`
+  query LanguagesPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-languages", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`

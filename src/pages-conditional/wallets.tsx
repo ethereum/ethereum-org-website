@@ -1,7 +1,7 @@
 import React from "react"
 import { Center, Heading, Box, Flex, chakra, BoxProps } from "@chakra-ui/react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import { useIntl } from "react-intl"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, PageProps } from "gatsby"
 import PageHero from "../components/PageHero"
 import Translation from "../components/Translation"
@@ -15,7 +15,6 @@ import { StyledCard } from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
 
-import { translateMessageId } from "../utils/translations"
 import { getImage, getSrc } from "../utils/image"
 import { Context } from "../types"
 
@@ -188,18 +187,18 @@ const guides = [
 const WalletsPage = ({
   data,
 }: PageProps<Queries.WalletsPageQuery, Context>) => {
-  const intl = useIntl()
+  const { t } = useTranslation()
 
   const heroContent = {
-    title: translateMessageId("page-wallets-title", intl),
-    header: translateMessageId("page-wallets-slogan", intl),
-    subtitle: translateMessageId("page-wallets-subtitle", intl),
+    title: t("page-wallets-title"),
+    header: t("page-wallets-slogan"),
+    subtitle: t("page-wallets-subtitle"),
     image: getImage(data.hero)!,
-    alt: translateMessageId("page-wallets-alt", intl),
+    alt: t("page-wallets-alt"),
     buttons: [
       {
         to: "/wallets/find-wallet/",
-        content: translateMessageId("page-wallets-find-wallet-link", intl),
+        content: t("page-wallets-find-wallet-link"),
       },
     ],
   }
@@ -207,8 +206,8 @@ const WalletsPage = ({
   return (
     <Page>
       <PageMetadata
-        title={translateMessageId("page-wallets-meta-title", intl)}
-        description={translateMessageId("page-wallets-meta-description", intl)}
+        title={t("page-wallets-meta-title")}
+        description={t("page-wallets-meta-description")}
         image={getSrc(data.ogImage)}
       />
       <PageHero content={heroContent} isReverse />
@@ -386,14 +385,8 @@ const WalletsPage = ({
               marginBottom={4}
               key="0"
               emoji=":white_check_mark:"
-              title={translateMessageId(
-                "page-wallets-take-responsibility",
-                intl
-              )}
-              description={translateMessageId(
-                "page-wallets-take-responsibility-desc",
-                intl
-              )}
+              title={t("page-wallets-take-responsibility")}
+              description={t("page-wallets-take-responsibility-desc")}
             />
             <ChecklistItem
               border={0}
@@ -402,11 +395,8 @@ const WalletsPage = ({
               marginBottom={4}
               key="1"
               emoji=":white_check_mark:"
-              title={translateMessageId("page-wallets-seed-phrase", intl)}
-              description={translateMessageId(
-                "page-wallets-seed-phrase-desc",
-                intl
-              )}
+              title={t("page-wallets-seed-phrase")}
+              description={t("page-wallets-seed-phrase-desc")}
             >
               <p>
                 <Translation id="page-wallets-seed-phrase-example" />
@@ -427,11 +417,8 @@ const WalletsPage = ({
               marginBottom={4}
               key="2"
               emoji=":white_check_mark:"
-              title={translateMessageId("page-wallets-bookmarking", intl)}
-              description={translateMessageId(
-                "page-wallets-bookmarking-desc",
-                intl
-              )}
+              title={t("page-wallets-bookmarking")}
+              description={t("page-wallets-bookmarking-desc")}
             />
             <ChecklistItem
               border={0}
@@ -440,11 +427,8 @@ const WalletsPage = ({
               marginBottom={4}
               key="3"
               emoji=":white_check_mark:"
-              title={translateMessageId("page-wallets-triple-check", intl)}
-              description={translateMessageId(
-                "page-wallets-triple-check-desc",
-                intl
-              )}
+              title={t("page-wallets-triple-check")}
+              description={t("page-wallets-triple-check-desc")}
             />
           </div>
         </Box>
@@ -481,7 +465,7 @@ const WalletsPage = ({
             minH="full"
             image={getImage(data.eth)}
             titleKey="page-wallets-get-some"
-            alt={translateMessageId("page-wallets-get-some-alt", intl)}
+            alt={t("page-wallets-get-some-alt")}
             descriptionKey="page-wallets-get-some-desc"
           >
             <div>
@@ -495,7 +479,7 @@ const WalletsPage = ({
             minH="full"
             image={getImage(data.dapps)}
             titleKey="page-wallets-try-dapps"
-            alt={translateMessageId("page-wallets-try-dapps-alt", intl)}
+            alt={t("page-wallets-try-dapps-alt")}
             descriptionKey="page-wallets-try-dapps-desc"
           >
             <div>
@@ -547,7 +531,21 @@ export const listImage = graphql`
 `
 
 export const query = graphql`
-  query WalletsPage {
+  query WalletsPage($languagesToFetch: [String!]!) {
+    locales: allLocale(
+      filter: {
+        language: { in: $languagesToFetch }
+        ns: { in: ["page-wallets", "learn-quizzes", "common"] }
+      }
+    ) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     hero: file(relativePath: { eq: "wallets/find-wallet-hero.png" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)

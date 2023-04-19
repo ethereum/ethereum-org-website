@@ -6,7 +6,7 @@ lang: fr
 
 # Introduction aux contrats intelligents {#introduction-to-smart-contracts}
 
-Les contrats intelligents sont les éléments fondamentaux des [applications Ethereum](/dapps/). Il s'agit de programmes informatiques stockés sur la blockchain qui sont l'équivalent numérique de contrats classiques. Les contrats intelligents suivent strictement une structure dite logique de type « Si » et « alors ». Cela implique qu'ils se comportent exactement tels qu'ils sont programmés et ne peuvent pas être modifiés.
+Les contrats intelligents sont les éléments fondamentaux des [applications Ethereum](/dapps/). Ce sont des programmes informatiques stockés sur la blockchain qui permettent de convertir des contrats traditionnels en parallèles numériques. Les contrats intelligents suivent strictement une structure dite logique de type « Si » et « alors ». Cela implique qu'ils se comportent exactement tels qu'ils sont programmés et ne peuvent pas être modifiés.
 
 L'expression « contrat intelligent » a été utilisée en premier par Nick Szabo. En 1994, il a rédigé [une présentation du concept](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) puis, en 1996, [une étude approfondie sur les possibilités offertes par les contrats intelligents](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 

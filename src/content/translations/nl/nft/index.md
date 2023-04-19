@@ -14,7 +14,7 @@ summaryPoint3: Mogelijk gemaakt door slimme contracten op de Ethereum-blockchain
 
 NFT's veroveren momenteel de wereld van digitale kunst en verzamelobjecten. Digitale kunstenaars zien hun leven veranderen dankzij de enorme verkoop aan nieuw crypto-publiek. Beroemdheden doen ook mee omdat ze een nieuwe kans zien om in contact te komen met fans. Maar digitale kunst is slechts één manier om NFT's te gebruiken. Eigenlijk kunnen ze worden gebruikt om eigendom van unieke activa te vertegenwoordigen, zoals een eigendomsbewijs voor een item in het digitale of fysieke domein.
 
-Als Andy Warhol eind jaren negentig zou zijn geboren, zou hij waarschijnlijk Campbell's Soup een NFT genoemd hebben. Het is slechts een kwestie van tijd voordat Kanye een assortiment Yeezys op Ethereum zet. En op een dag kan het bezit van uw auto bewezen worden met een NFT.
+Als Andy Warhol eind jaren negentig zou zijn geboren, zou hij waarschijnlijk Campbell's Soup een NFT genoemd hebben. Het is slechts een kwestie van tijd voordat Nike een assortiment Jordans op Ethereum zet. En op een dag kan het bezit van uw auto bewezen worden met een NFT.
 
 ## Wat is een NFT? {#what-are-nfts}
 
@@ -153,6 +153,7 @@ Hier is meer informatie over de beter ontwikkelde use-cases en visies voor NFT's
 - [Domeinnamen](#nft-domains)
 - [Fysieke items](#nft-physical-items)
 - [Investeringen en als onderpand](#nfts-and-defi)
+- [Tokengating](#tokengating)
 
 <Divider />
 
@@ -273,26 +274,39 @@ Bedrijven die vervalste certificaten voor universitaire diploma's aanbieden zijn
 
 <Divider />
 
+### Tokengating {#tokengating}
+
+Tokengating is een manier om toegang tot iets te beperken waarbij NFT's gebruikt worden als toegangspas. Deze dingen kunnen sterk variëren op basis van het platform, maar populaire voorbeelden zijn beschermde content, privé-chatservers en, in de wereld van ecommerce, exclusieve producten.
+
+Een platform dat aan tokengating doet zal u meestal vragen om verbinding te maken met uw portemonnee om te bewijzen dat u eigenaar bent van de NFT. Als u de nodige NFT bezit, krijgt u toegang. Zo niet, dan blijft de gate gesloten. NFT's zijn een geweldige manier om dit te doen vanwege hun uniciteit - je kan het eigendom ervan niet vervalsen.
+
+Omdat NFT's op Ethereum staan, kunnen ze worden gebruikt om Ethereum-tokengates op elk platform dat ze implementeert te ontgrendelen. Een enkele NFT die u bezit zou gegatede inhoud, privé-chatservers en exclusieve producten kunnen ontgrendelen op volledig verschillende websites en toepassingen.
+
+Als minten en distribueren van NFT's gaat over de generatie of digitalisering van communities, dan gaat tokengating over het ondersteunen van communities. Het ziet NFT's meer gebruikt als een instrument voor lidmaatschap of loyaliteit – en een geweldige manier om de bijbehorende beloningen op betrouwbare wijze te leveren.
+
+#### Voorbeelden
+
+- [Collab.land](https://collab.land/)-tokengates Discord-chatservers of Telegram-groepen
+- [Unlock Protocol](https://unlock-protocol.com/) is een protocol voor tokengating
+- [Shopify](https://help.shopify.com/en/manual/products/digital-service-product/nfts) heeft een groeiende lijst met apps waarmee handelaren de toegang tot producten en kortingen kunnen tokengaten
+
+<Divider />
+
 ## Ethereum en NFTs {#ethereum-and-nfts}
 
 Ethereum maakt het mogelijk dat NFT's werken om een aantal redenen:
 
-- De transactiegeschiedenis en tokenmetadata zijn publiekelijk verifieerbaar – het is eenvoudig om de geschiedenis van het eigendom te bewijzen.
+- De transactiegeschiedenis en tokenmetadata zijn publiekelijk verifieerbaar – het is eenvoudig om de geschiedenis van het eigenaarschap te bewijzen.
 - Zodra een transactie is bevestigd, is het bijna onmogelijk om die gegevens te manipuleren om het eigenaarschap te "stelen".
-- NFT-handel kan peer-to-peer plaatsvinden zodat dat er platforms nodig zijn die grote percentages in rekening kunnen brengen als compensatie.
-- Alle Ethereum-producten delen dezelfde "backend". Met andere woorden, alle Ethereum-producten kunnen elkaar gemakkelijk begrijpen - dit maakt NFT's draagbaar verspreid over alle producten. U kunt een NFT kopen gekoppeld aan een product en het gemakkelijk verkopen gekoppeld aan een ander product. Als maker kunt u uw NFT's op meerdere producten tegelijk laten noteren - elk product heeft de meest recente eigendomsinformatie.
+- NFT-handel kan peer-to-peer plaatsvinden zonder dat er platforms nodig zijn die grote percentages in rekening kunnen brengen als compensatie.
+- Alle Ethereum-producten delen dezelfde "backend". Met andere woorden, alle Ethereum-producten kunnen elkaar gemakkelijk begrijpen - dit maakt NFT's draagbaar, verspreid over alle producten. U kunt een NFT kopen gekoppeld aan een product en deze gemakkelijk verkopen gekoppeld aan een ander product. Als maker kunt u uw NFT's op meerdere producten tegelijk laten noteren - elk product heeft de meest recente eigendomsinformatie.
 - Ethereum is nooit uitgeschakeld, wat betekent dat uw tokens altijd beschikbaar zijn om te verkopen.
 
 ## De milieueffecten van NFT's {#environmental-impact-nfts}
 
-NFT's worden steeds populairder, wat betekent dat ze ook onder meer toezicht komen te staan – met name over hun koolstofvoetafdruk.
+Het maken en overdragen van NFT's zijn gewoon Ethereum-transacties - het minten, kopen, ruilen van of ruilen met NFT's verbruikt niet direct energie. Sinds [de merge](/roadmap/merge) is Ethereum een energiezuinige blockchain, wat betekent dat de milieueffecten van het gebruik van NFT's verwaarloosbaar zijn.
 
-Een paar dingen ter verduidelijking:
-
-- Het maken en overdragen van NFT's zijn gewoon Ethereum-transacties - ze hebben geen directe invloed op een verhoging van het energieverbruik van Ethereum, en ze verbruiken ook niet zelfstandig hun eigen energie.
-- Ethereum is een energiezuinige blockchain, wat betekent dat de impact op het milieu voor het creëren, kopen en overdragen van NFT's zeer klein is.
-
-De volgende hoofdstukken leggen dit verder uit met wat meer technische details...
+[Meer over Ethereums energieverbruik](/energy-consumption/).
 
 ### Geef de NFT's niet de schuld {#nft-qualities}
 
@@ -302,22 +316,22 @@ Gedecentraliseerd betekent dat u en iedereen kan verifiëren dat u iets bezit. D
 
 Veilig betekent dat niemand uw NFT kan kopiëren/plakken of stelen.
 
-Deze kwaliteiten van Ethereum maken het digitaal bezit van unieke items en het krijgen van een eerlijke prijs voor uw content mogelijk. Ethereum beschermt de assets met een gedecentraliseerd consensusmechanisme dat ['proof-of-stake'](/developers/docs/consensus-mechanisms/pos) omvat. Dit is een koolstofarme methode om te bepalen wie een transactieblok aan de chain kan toevoegen, en wordt beschouwd als veiliger dan het energie-intensieve alternatief, ['proof-of-work'](/developers/docs/consensus-mechanisms/pow). NFT's zijn geassocieerd met hoge energiekosten, omdat Ethereum werd beveiligd met proof-of-work. Dit is niet meer van toepassing.
+Deze kwaliteiten van Ethereum maken het digitaal bezit van unieke items en het krijgen van een eerlijke prijs voor uw content mogelijk. Ethereum beschermt de activa met een gedecentraliseerd consensusmechanisme dat ['proof-of-stake'](/developers/docs/consensus-mechanisms/pos) omvat. Dit is een koolstofarme methode om te bepalen wie een transactieblok aan de chain kan toevoegen, en wordt beschouwd als veiliger dan het energie-intensieve alternatief, ['proof-of-work'](/developers/docs/consensus-mechanisms/pow). NFT's zijn in verband gebracht met hoge energiekosten, omdat Ethereum werd beveiligd met proof-of-work. Dit is niet langer de waarheid.
 
 #### Minten van NFT's {#minting-nfts}
 
-Wanneer u een NFT slaat, moeten er een paar dingen gebeuren:
+Wanneer u een NFT mint, moeten er een paar dingen gebeuren:
 
 - Het moet worden bevestigd als een asset op de blockchain.
 - Het accountsaldo van de eigenaar moet worden bijgewerkt om die asset op te nemen. Vervolgens is het mogelijk om de asset te verhandelen of verifieerbaar te "bezitten".
 - De transacties die het bovenstaande bevestigen moeten worden toegevoegd aan een blok en "geïmmortaliseerd" worden in de keten.
 - Het blok moet door iedereen in het netwerk worden bevestigd als "juist". Deze consensus neemt de noodzaak voor tussenpersonen weg omdat het netwerk akkoord gaat met het bestaan van uw NFT en met het feit dat het van u is. En het is in de blockchain zodat iedereen het kan controleren. Dit is een van de manieren waarop Ethereum de NFT-makers helpt om hun inkomsten te maximaliseren.
 
-Al deze taken worden uitgevoerd door blokproducenten en -validators. Blokvoorstellers voegen uw NFT-transactie toe aan een blok en zenden deze uit naar de rest van het netwerk. Validators controleren of de transactie geldig is en voegen deze toe aan hun databases. Er zijn veel crypto-economische motieven die ervoor zorgen dat validators eerlijk handelen. Anders zou iedereen kunnen beweren dat hij eigenaar is van het NFT dat u zojuist heeft gemint en deze op frauduleuze wijze kunnen overgedragen.
+Al deze taken worden uitgevoerd door blokproducenten en -validators. Blokvoorstellers voegen uw NFT-transactie toe aan een blok en zenden deze uit naar de rest van het netwerk. Validators controleren of de transactie geldig is en voegen deze toe aan hun databases. Er zijn veel crypto-economische stimulansen die ervoor zorgen dat validators eerlijk handelen. Anders zou iedereen kunnen beweren dat hij eigenaar is van de NFT die u zojuist heeft gemint en deze op frauduleuze wijze kunnen overgedragen.
 
 #### NFT-beveiliging {#nft-security}
 
-De veiligheid van Ethereum komt van proof-of-stake. Het systeem is ontworpen om kwaadaardige acties economisch te ontmoedigen, dit maakt Ethereum manipulatiebestendig. Dit is wat NFT's mogelijk maakt. Zodra het blok met uw NFT-transactie wordt afgerond, zou het een aanvaller miljoenen ETH kosten om het te veranderen. Iedereen die Ethereum-software gebruikt, zou onmiddellijk in staat zijn om oneerlijke manipulatie met een NFT te detecteren, en de slechte speler wordt dan economisch gestraft en verwijderd.
+De veiligheid van Ethereum komt van proof-of-stake. Het systeem is ontworpen om kwaadaardige acties economisch te ontmoedigen, waardoor Ethereum manipulatiebestendig is. Dit is wat NFT's mogelijk maakt. Zodra het blok met uw NFT-transactie wordt afgerond, zou het een aanvaller miljoenen ETH kosten om het te veranderen. Iedereen die Ethereum-software gebruikt, zou onmiddellijk in staat zijn om oneerlijke manipulatie met een NFT te detecteren, en de slechte speler wordt dan economisch gestraft en verwijderd.
 
 Beveiligingskwesties met betrekking tot NFT's hebben meestal te maken met phishing-scams, kwetsbaarheden van slimme contracten of gebruikersfouten (zoals het per ongeluk blootstellen van privésleutels), waardoor goede portemonneebeveiliging van cruciaal belang is voor NFT-eigenaren.
 
@@ -337,4 +351,5 @@ De meeste NFT's zijn gebouwd met een consistente standaard bekend als [ERC-721](
 - [Everything you need to know about the metaverse](https://foundation.app/blog/enter-the-metaverse) – _Foundation-team, foundation.app_
 - [Nee, cryptokunstenaars schaden de planeet niet](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
 - [Energieverbruik van Ethereum](/energy-consumption/)
-- [A country's worth of power, no more](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, 18 mei 2021_
+
+<QuizWidget quizKey="nfts" />

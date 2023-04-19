@@ -36,7 +36,7 @@ Como o Bitcoin, o Ethereum já usou um protocolo de consenso baseado em **prova 
 
 #### Criação de blocos {#pow-block-creation}
 
-Validadores criam blocos. Um validador é selecionado aleatoriamente em cada espaço para ser o proponente do bloco. Seu cliente de consenso solicita um pacote de transações como uma "carga de execução" de seu cliente de execução emparelhado. Eles envolvem isso em dados de consenso para formar um bloco, o qual eles enviam para outros nós na rede Ethereum. Essa produção de blocos é recompensada em ETH. Em casos raros, quando existem múltiplos blocos possíveis para um único espaço, ou os nós ouvem sobre blocos em tempos diferentes, o algoritmo de escolha da bufurcação escolhe o bloco que forma a cadeia com o maior peso de atestações (em que o peso é o número de validadores que atestam o escalado pelo seu saldo ETH).
+Os mineradores competem para criar novos blocos preenchidos com transações processadas. O ganhador compartilha o novo bloco com o restante da rede e ganha alguns ETH recentemente cunhados. A corrida é vencida pelo computador que é capaz de resolver um quebra-cabeça matemático mais rápido. Isso produz o link criptográfico entre o bloco atual e o bloco anterior. Resolver o quebra-cabeça é o trabalho na “prova de trabalho”. A cadeia padrão é então determinada por uma regra de escolha de bifurcação que seleciona o conjunto de blocos que tiveram mais trabalho para minerá-los.
 
 #### Segurança {#pow-security}
 
@@ -50,7 +50,7 @@ O Ethereum agora usa um protocolo de consenso baseado em **prova de participaç�
 
 #### Criação de blocos {#pos-block-creation}
 
-A prova de participação é feita por validadores que tiverem comprometido o ETH para participar do sistema. Um validador é escolhido aleatoriamente para criar novos blocos, compartilhá-los com a rede e ganhar recompensas. Em vez de precisar fazer um intenso trabalho computacional, você só precisa ter apostado seus ETH na rede. É isso que incentiva o comportamento saudável da rede.
+Validadores criam blocos. Um validador é selecionado aleatoriamente em cada espaço para ser o proponente do bloco. Seu cliente de consenso solicita um pacote de transações como uma “carga de execução” de seu cliente de execução emparelhado. Eles envolvem isso em dados de consenso para formar um bloco, o qual eles enviam para outros nós na rede Ethereum. Essa produção de blocos é recompensada em ETH. Em casos raros, quando existem múltiplos blocos possíveis para um único espaço, ou os nós ouvem sobre blocos em tempos diferentes, o algoritmo da bifurcação escolhido seleciona o bloco que forma a cadeia com o maior peso de atestações (em que o peso é o número de validadores que atestam a escala pelo seu saldo ETH).
 
 #### Segurança {#pos-security}
 

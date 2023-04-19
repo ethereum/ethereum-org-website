@@ -6,6 +6,7 @@
   "page-dapps-audius-logo-alt": "Audius logosu",
   "page-dapps-augur-logo-alt": "Augur logosu",
   "page-dapps-axie-infinity-logo-alt": "Axie Infinity logosu",
+  "page-dapps-balancer-logo-alt": "Balancer logosu",
   "page-dapps-brave-logo-alt": "Brave logosu",
   "page-dapps-category-arts": "Sanat ve moda",
   "page-dapps-category-browsers": "Tarayıcılar",
@@ -47,6 +48,7 @@
   "page-dapps-dapp-description-audius": "Merkezi olmayan akış platformu = yaratıcılar için para, etiketler için değil.",
   "page-dapps-dapp-description-augur": "Spor, ekonomi ve diğer dünya olaylarının sonuçlarına bahse girin.",
   "page-dapps-dapp-description-axie-infinity": "Axies denen yaratıklarla ticaret yapın ve savaşın. Ve oynadıkça kazanın - mobil cihazlarda kullanılabilir",
+  "page-dapps-dapp-description-balancer": "Balancer, otomatik bir portföy yöneticisi ve ticaret platformudur.",
   "page-dapps-dapp-description-brave": "Göz atmak için token kazanın ve en sevdiğiniz içerik oluşturucularını onlarla destekleyin.",
   "page-dapps-dapp-description-cent": "NFT üreterek para kazanabileceğin bir sosyal ağdır.",
   "page-dapps-dapp-description-compound": "Faiz kazanmak ve istediğiniz zaman para çekmek için token'larınızı ödünç verin.",
@@ -205,5 +207,10 @@
   "page-dapps-what-are-dapps": "Merkezi olmayan uygulamalar nelerdir?",
   "page-dapps-more-on-defi-button": "Merkeziyetsiz finans hakkında daha fazla bilgi",
   "page-dapps-more-on-nft-button": "Tokenize edilmiş koleksiyonlar hakkında daha fazla bilgi",
-  "page-dapps-more-on-nft-gaming-button": "Tokenize edilmiş oyun içi öğeler hakkında daha fazla bilgi"
+  "page-dapps-more-on-nft-gaming-button": "Tokenize edilmiş oyun içi öğeler hakkında daha fazla bilgi",
+  "page-dapps-dapp-description-pwn": "Ethereum'da herhangi bir jeton veya NFT ile desteklenen kolay krediler.",
+  "page-dapps-pwn-image-alt": "PWN logosu",
+  "foundation": "Kurum",
+  "transaction-fees": "İşlem ücretleri nedir?",
+  "page-wallets-get-some": "Bir miktar ETH edin"
 }

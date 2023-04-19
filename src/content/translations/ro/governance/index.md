@@ -154,7 +154,7 @@ Deși dezvoltarea specificațiilor și implementărilor a fost întotdeauna comp
 
 Când Lanțul Beacon se va uni cu nivelul execuției în Ethereum, procesul de guvernanță pentru a propune modificări va fi armonizat. Acest proces de implementare a fuziunii este [deja în curs de desfășurare](https://eips.ethereum.org/EIPS/eip-3675).
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   Mai multe despre fuziune
 </ButtonLink>
 

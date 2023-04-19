@@ -246,7 +246,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
   creatures we call CryptoKitties.
 - [Sorare](https://sorare.com/) is a global fantasy football game where you can collect limited editions collectibles,
   manage your teams and compete to earn prizes.
-- [The Ethereum Name Service (ENS)](https://ens.domains/) offers a secure & decentralised way to address resources both
+- [The Ethereum Name Service (ENS)](https://ens.domains/) offers a secure & decentralized way to address resources both
   on and off the blockchain using simple, human-readable names.
 - [POAP](https://poap.xyz) delivers free NFTs to people who attend events or complete specific actions. POAPs are free to create and distribute.
 - [Unstoppable Domains](https://unstoppabledomains.com/) is a San Francisco-based company building domains on

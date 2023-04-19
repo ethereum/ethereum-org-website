@@ -67,4 +67,6 @@ Bien que ce site soit open source et que tout le monde puisse y travailler, nous
 
 Nous publierons les offres d'emploi ici. Si aucun poste ne vous correspond, rendez-vous sur [Discord](https://discord.gg/CetY6Y4) et faites-nous savoir de quelle manière vous aimeriez travailler avec nous !
 
+- [Responsable de la communauté](/about/community-lead/)
+
 Vous cherchez un poste en dehors de l'équipe d'Ethereum.org ? [Découvrez d'autres emplois liés à Ethereum](/community/get-involved/#ethereum-jobs/).

@@ -7,7 +7,7 @@ incomplete: true
 
 Ethereum, seperti Bitcoin, saat ini menggunakan protokol konsensus yang disebut **[Bukti kerja (PoW)](https://wikipedia.org/wiki/Proof_of_work)**. Ini memungkinkan node jaringan Ethereum untuk berkesesuaian dengan state dari semua informasi yang terekam dalam blockchain Ethereum, dan mencegah beberapa jenis serangan ekonomi tertentu.
 
-Pada tahun depan, bukti kerja akan dihentikan untuk digantikan dengan **[Bukti taruhan (PoS)](/developers/docs/consensus-mechanisms/pos)**. Transisi ke bukti taruhan juga akan menghapuskan penambangan dari Ethereum. [Selengkapnya tentang penggabungan.](/upgrades/merge/)
+Pada tahun depan, bukti kerja akan dihentikan untuk digantikan dengan **[Bukti taruhan (PoS)](/developers/docs/consensus-mechanisms/pos)**. Transisi ke bukti taruhan juga akan menghapuskan penambangan dari Ethereum. [Selengkapnya tentang penggabungan.](/roadmap/merge/)
 
 ## Prasyarat {#prerequisites}
 

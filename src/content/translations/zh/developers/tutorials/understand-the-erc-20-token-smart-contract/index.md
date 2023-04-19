@@ -6,9 +6,8 @@ tags:
   - "智能合约"
   - "通证"
   - "solidity"
-  - "入门指南"
   - "erc-20"
-skill: beginner
+skill: 初学者
 lang: zh
 published: 2020-04-05
 source: EthereumDev

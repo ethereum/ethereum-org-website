@@ -6,7 +6,7 @@ lang: en
 
 ## What is proof-of-stake {#what-is-proof-of-stake}
 
-Proof-of-stake is a class of algorithm that can provide security to blockchains by ensuring that assets of value are lost by attackers who act dishonestly. Proof-of-stake systems require a set of validators to make some asset available that can be destroyed if the validator engages in some provably dishonest behaviour. Ethereum uses a proof-of-stake mechanism to secure the blockchain.
+Proof-of-stake is a class of algorithm that can provide security to blockchains by ensuring that assets of value are lost by attackers who act dishonestly. Proof-of-stake systems require a set of validators to make some asset available that can be destroyed if the validator engages in some provably dishonest behavior. Ethereum uses a proof-of-stake mechanism to secure the blockchain.
 
 ## How does proof-of-stake compare to proof-of-work? {#comparison-to-proof-of-work}
 
@@ -76,7 +76,7 @@ Validators have to stake ETH so that they have something to lose if they misbeha
 
 A single validator is pseudo-randomly chosen to propose a block in each slot using an algorithm called RANDAO that mixes a hash from the block proposer with a seed that gets updated every block. This value is used to select a specific validator from the total validator set. The validator selection is fixed four epochs in advance.
 
-[More on validator selection](/developers/docs/consensus-mechanisms/pos/block_proposal)
+[More on validator selection](/developers/docs/consensus-mechanisms/pos/block-proposal)
 
 ## What is stake grinding? {#what-is-stake-grinding}
 
@@ -93,7 +93,7 @@ Social slashing is the ability of the community to coordinate a fork of the bloc
 
 ## Will I get slashed? {#will-i-get-slashed}
 
-As a validator, it is very difficult to get slashed unless you deliberately engage in malicious behaviour. Slashing is only implemented in very specific scenarios where validators propose multiple blocks for the same slot or contradict themselves with their attestations - these are very unlikely to arise accidentally.
+As a validator, it is very difficult to get slashed unless you deliberately engage in malicious behavior. Slashing is only implemented in very specific scenarios where validators propose multiple blocks for the same slot or contradict themselves with their attestations - these are very unlikely to arise accidentally.
 
 [More on slashing conditions](https://eth2book.info/altair/part2/incentives/slashing)
 
@@ -163,7 +163,7 @@ No, there are several proof-of-stake blockchains. None are identical to Ethereum
 
 The Merge was the moment when Ethereum switched off its proof-of-work-based consensus mechanism and switched on its proof-of-stake-based consensus mechanism. The Merge happened on September 15, 2022.
 
-[More on The Merge](/upgrades/merge)
+[More on The Merge](/roadmap/merge)
 
 ## What are liveness and safety? {#what-are-liveness-and-safety}
 

@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 Running your own node provides you various benefits, opens new possibilities, and helps to support the ecosystem. This page will guide you through spinning up your own node and taking part in validating Ethereum transactions.
 
-Note that after [The Merge](/upgrades/merge), two clients are required to run an Ethereum node; an **execution layer (EL)** client and a **consensus layer (CL)** client. This page will show how to install, configure and connect these two clients to run an Ethereum node.
+Note that after [The Merge](/roadmap/merge), two clients are required to run an Ethereum node; an **execution layer (EL)** client and a **consensus layer (CL)** client. This page will show how to install, configure and connect these two clients to run an Ethereum node.
 
 ## Prerequisites {#prerequisites}
 
@@ -56,6 +56,8 @@ Both options have different advantages summed up above. If you are looking for a
 - [Alchemy](https://www.alchemy.com/)
 - [Blast](https://blastapi.io/)
 - [Getblock](https://getblock.io/)
+- [NodeReal](https://nodereal.io/)
+- [NOWNodes](https://nownodes.io/)
 
 Check out also [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/) for more options on hosted nodes.
 
@@ -87,14 +89,14 @@ All clients support major operating systems - Linux, MacOS, Windows. This means 
 
 - CPU with 2+ cores
 - 8 GB RAM
-- 700GB free disk space
+- 2TB SSD
 - 10+ MBit/s bandwidth
 
 ##### Recommended specifications
 
 - Fast CPU with 4+ cores
 - 16 GB+ RAM
-- Fast SSD with 1+TB
+- Fast SSD with 2+TB
 - 25+ MBit/s bandwidth
 
 The sync mode and client you choose will affect space requirements, but we've estimated the disk space you'll need for each client below.
@@ -135,7 +137,7 @@ Multiple user-friendly projects aim to improve the experience of setting up a cl
 
 Below are a few projects which can help you install and control clients just with a few clicks:
 
-- [DappNode](https://docs.dappnode.io/get-started/installation/custom-hardware/installation/overview/) - DappNode doesn't come only with a machine from a vendor. The software, the actual node launcher and control center with many features can be used on arbitrary hardware.
+- [DappNode](https://docs.dappnode.io/user/quick-start/first-steps/) - DappNode doesn't come only with a machine from a vendor. The software, the actual node launcher and control center with many features can be used on arbitrary hardware.
 - [eth-docker](https://eth-docker.net/) - Automated setup using Docker focused on easy and secure staking, requires basic terminal and Docker knowledge, recommended for a bit more advanced users.
 - [Stereum](https://stereum.net/ethereum-node-setup/) - Launcher for installing clients on a remote server via SSH connection with a GUI setup guide, control center, and many other features.
 - [NiceNode](https://www.nicenode.xyz/) - Launcher with a straightforward user experience to run a node on your computer. Just choose clients and start them with a few clicks. Still in development.
@@ -291,7 +293,7 @@ geth --mainnet \
     --authrpc.jwtsecret=/path/to/jwtsecret
 ```
 
-Check [docs for all configuration options](https://geth.ethereum.org/docs/interface/command-line-options) and learn more about [running Geth with a consensus client](https://geth.ethereum.org/docs/interface/consensus-clients).
+Check [docs for all configuration options](https://geth.ethereum.org/docs/fundamentals/command-line-options) and learn more about [running Geth with a consensus client](https://geth.ethereum.org/docs/getting-started/consensus-clients).
 
 ##### Running Nethermind
 
@@ -329,7 +331,7 @@ lighthouse beacon_node \
     --datadir /data/ethereum \
     --http \
     --execution-endpoint http://127.0.0.1:8551 \
-    --execution-jwt /path/to/jwtsecret \
+    --execution-jwt /path/to/jwtsecret
 ```
 
 ##### Running Lodestar
@@ -376,7 +378,7 @@ Prysm comes with script which allows easy automatic installation. Details can be
 teku --network mainnet \
     --data-path "/data/ethereum" \
     --ee-endpoint http://localhost:8551 \
-    --ee-jwt-secret-file "/path/to/jwtsecret" \
+    --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
 When a consensus client connects to the execution client to read the deposit contract and identify validators, it also connects to other Beacon Node peers and begins syncing consensus slots from genesis. Once the Beacon Node reaches the current epoch, the Beacon API becomes usable for your validators. Learn more about [Beacon Node APIs](https://eth2docs.vercel.app/).
@@ -462,7 +464,6 @@ As part of your monitoring, make sure to keep an eye on your machine's performan
 - [Ethereum Staking Guides](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, updated often_
 - [Guide | How to setup a validator for Ethereum staking on mainnet](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, updated regularly_
 - [ETHStaker guides on running validators on testnets](https://github.com/remyroy/ethstaker#guides) – _ETHStaker, updated regularly_
-- [Ethereum Staking Guides](https://github.com/SomerEsat/ethereum-staking-guides) _– Somer Esat, updated regularly_
 - [The Merge FAQ for node operators](https://notes.ethereum.org/@launchpad/node-faq-merge) - _July 2022_
 - [Analyzing the hardware requirements to be an Ethereum full validated node](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 September 2018_
 - [Running Ethereum Full Nodes: A Guide for the Barely Motivated](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 November 2019_

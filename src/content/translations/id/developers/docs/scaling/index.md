@@ -8,7 +8,7 @@ lang: id
 
 Seiring bertambahnya jumlah orang yang menggunakan Ethereum, blockchain telah mencapai batasan kapasitas tertentu. Ini telah menaikkan biaya penggunaan jaringan, menimbulkan kebutuhan akan "solusi penskalaan." Ada beberapa solusi yang sedang diteliti, diuji, dan diimplementasikan yang menggunakan pendekatan berbeda untuk mencapai tujuan yang sama.
 
-Tujuan utama skalabilitas adalah untuk meningkatkan kecepatan transaksi (finalitas lebih cepat), dan keluaran transaksi (transaksi tinggi per detik), tanpa mengorbankan desentralisasi atau keamanan (selengkapnya di [visi Ethereum](/upgrades/vision/)). Pada blockchain Ethereum lapisan 1, permintaan yang tinggi menyebabkan transaksi yang lebih lambat dan harga gas yang tidak stabil. Meningkatkan kapasitas jaringan dalam hal kecepatan dan throughput sangat penting untuk adopsi Ethereum yang bermakna dan massal.
+Tujuan utama skalabilitas adalah untuk meningkatkan kecepatan transaksi (finalitas lebih cepat), dan keluaran transaksi (transaksi tinggi per detik), tanpa mengorbankan desentralisasi atau keamanan (selengkapnya di [visi Ethereum](/roadmap/vision/)). Pada blockchain Ethereum lapisan 1, permintaan yang tinggi menyebabkan transaksi yang lebih lambat dan harga gas yang tidak stabil. Meningkatkan kapasitas jaringan dalam hal kecepatan dan throughput sangat penting untuk adopsi Ethereum yang bermakna dan massal.
 
 Meskipun kecepatan dan throughput penting, solusi penskalaan yang memungkinkan tujuan ini tetap terdesentralisasi dan aman juga penting. Menjaga agar hambatan masuk tetap rendah bagi operator node sangat penting dalam mencegah kemajuan menuju daya komputasi yang terpusat dan tidak aman.
 
@@ -26,7 +26,7 @@ Metode penskalaan ini memerlukan perubahan pada protokol Ethereum (lapisan 1 [Ja
 
 Sharding adalah proses pemisahan basis data secara horizontal untuk menyebarkan muatan. Dalam konteks Ethereum, sharding akan mengurangi kemacetan jaringan dan meningkatkan transaksi per detik dengan membuat rantai baru, yang dikenal sebagai “shard.” Ini juga akan meringankan beban setiap validator yang tidak lagi diharuskan untuk memroses keseluruhan transaksi di seluruh jaringan.
 
-Pelajari lebih lanjut tentang [sharding](/upgrades/sharding/).
+Pelajari lebih lanjut tentang [sharding](/roadmap/danksharding/).
 
 ## Penskalaan off-chain {#off-chain-scaling}
 
@@ -72,7 +72,7 @@ Pelajari lebih lanjut tentang [Plasma](/developers/docs/scaling/plasma/).
 - Beberapa solusi dapat membantu mengurangi kemacetan secara keseluruhan pada salah satu bagian jaringan, dan juga mencegah satu titik kegagalan.
 - Keseluruhannya lebih besar dari jumlah bagian-bagiannya. Berbagai solusi bisa ada dan bekerja dalam harmoni, memungkinkan efek yang sangat besar terhadap kecepatan dan throughput di masa depan.
 - Tidak semua solusi memerlukan penggunaan algoritma konsensus Ethereum secara langsung, dan berbagai alternatif bisa menawarkan manfaat yang tanpanya akan sulit untuk diperoleh.
-- Tidak ada satu pun solusi penskalaan yang cukup untuk memenuhi [visi Ethereum](/upgrades/vision/).
+- Tidak ada satu pun solusi penskalaan yang cukup untuk memenuhi [visi Ethereum](/roadmap/vision/).
 
 ## Selengkapnya tentang pelajar visual? {#visual-learner}
 

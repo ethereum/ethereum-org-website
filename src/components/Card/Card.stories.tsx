@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react"
-import { ComponentMeta, ComponentStory } from "@storybook/react"
+import { Meta, StoryFn } from "@storybook/react"
 import React from "react"
 import Card, { IProps } from "."
 import Button from "../Button"
@@ -15,7 +15,7 @@ export default {
       </Box>
     ),
   ],
-} as ComponentMeta<typeof Component>
+} as Meta<typeof Component>
 
 const defaultProps: IProps = {
   emoji: ":woman_student:",
@@ -23,7 +23,7 @@ const defaultProps: IProps = {
   description: "Read up on core concepts and the Ethereum stack with our docs",
 }
 
-export const Default: ComponentStory<typeof Component> = (args) => (
+export const Default: StoryFn<typeof Component> = (args) => (
   <Component {...defaultProps} {...args}>
     <Button>Read the docs</Button>
   </Component>

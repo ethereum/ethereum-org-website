@@ -5,7 +5,7 @@ lang: it
 template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
-image: ../../../../assets/eth-gif-cat.png
+image: ../../assets/eth-gif-cat.png
 summaryPoint1: I sistemi d'identità tradizionali hanno centralizzato l'emissione, manutenzione e controllo dei tuoi identificativi.
 summaryPoint2: L'identità decentralizzata rende possibile non fare affidamento su terze parti centralizzate.
 summaryPoint3: Grazie alle cripto, gli utenti hanno ora nuovamente gli strumenti per emettere, detenere e controllare i propri identificativi e attestazioni.
@@ -17,7 +17,7 @@ Tuttavia, i sistemi di gestione dell'identità tradizionali si sono a lungo affi
 
 Per risolvere questi problemi, abbiamo decentralizzato i sistemi d'identità costruiti sulle blockchain pubbliche come Ethereum. L'identità decentralizzata consente agli individui di gestire le proprie informazioni correlate all'identità. Con le soluzioni d'identità decentralizzate, _tu_ puoi creare identificativi e rivendicare e detenere le tue attestazioni senza affidarti ad autorità centrali, come fornitori di servizi o governi.
 
-## Cos'è l'identità {#what-is-identity}
+## Cos'è l'identità? {#what-is-identity}
 
 L'identità indica il senso di sé della persona, definito da caratteristiche uniche. L'identità si riferisce all'essere un _individuo_, cioè, un'entità umana distinta. L'identità potrebbe anche riferirsi ad altre entità non umane, come un'organizzazione o un'autorità.
 

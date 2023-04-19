@@ -439,7 +439,7 @@ export const OptionText = styled.span<{ fontSize?: string }>`
 `
 
 // https://react-select.com/styles#using-classnames
-// Pass menuIsOpen={true} to component to debug
+// Pass menuIsOpen to component to debug
 export const StyledSelect = styled(Select)`
   width: 100%;
   color: black;

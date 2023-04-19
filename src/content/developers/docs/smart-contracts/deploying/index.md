@@ -12,7 +12,7 @@ To deploy a smart contract, you merely send an Ethereum transaction containing t
 
 You should understand [Ethereum networks](/developers/docs/networks/), [transactions](/developers/docs/transactions/) and the [anatomy of smart contracts](/developers/docs/smart-contracts/anatomy/) before deploying smart contracts.
 
-Deploying a contract also costs ether (ETH), so you should be familiar with [gas and fees](/developers/docs/gas/) on Ethereum.
+Deploying a contract also costs ether (ETH) since they are stored on the blockchain, so you should be familiar with [gas and fees](/developers/docs/gas/) on Ethereum.
 
 Finally, you'll need to compile your contract before deploying it, so make sure you've read about [compiling smart contracts](/developers/docs/smart-contracts/compiling/).
 

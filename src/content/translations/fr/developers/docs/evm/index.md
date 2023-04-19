@@ -6,15 +6,15 @@ lang: fr
 
 L’instanciation physique de l’EVM ne peut pas être décrite aussi facilement qu'on pointerait du doigt un nuage ou une vague, mais elle _existe_ en tant qu'entité unique gérée par des milliers d'ordinateurs connectés exécutant un client Ethereum.
 
-Le protocole Ethereum existe par lui même uniquement dans le but de maintenir le fonctionnement continu, ininterrompu et immuable de cette machine d'état. C'est dans cet environnement que prennent vie tous les comptes et contrats intelligents Ethereum. Pour tout bloc de la chaîne, Ethereum a un seul et unique état « canonique » (conforme), et l'EVM est ce qui définit les règles pour le calcul d'un nouvel état valide de bloc en bloc.
+Le protocole Ethereum en lui-même existe uniquement dans le but de maintenir le fonctionnement continu, ininterrompu et immuable de cette machine d'état spéciale. Il s'agit de l'environnement dans lequel existent tous les comptes Ethereum et les contrats intelligents. Pour tout bloc donné de la chaîne, Ethereum a un seul et unique état « canonique » (conforme), et l'EVM est ce qui définit les règles pour le calcul d'un nouvel état valide de bloc en bloc.
 
 ## Prérequis {#prerequisites}
 
-Une certaine familiarité avec la terminologie commune en informatique, comme [les octets](https://wikipedia.org/wiki/Byte), [la mémoire](https://wikipedia.org/wiki/Computer_memory), et une [pile](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) sont nécessaires pour comprendre l'EVM. Il est également utile d'être à l'aise avec les concepts de cryptographie/blockchain comme les [fonctions de hachage](https://wikipedia.org/wiki/Cryptographic_hash_function), la [Preuve de travail](https://wikipedia.org/wiki/Proof_of_work) et l'[arbre de Merkle](https://wikipedia.org/wiki/Merkle_tree).
+Une certaine familiarité avec la terminologie commune en informatique, comme [les octets](https://wikipedia.org/wiki/Byte), [la mémoire](https://wikipedia.org/wiki/Computer_memory), et une [pile](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) sont nécessaires pour comprendre l'EVM. Il peut se révéler utile d'être à l'aise avec les concepts de cryptographie/blockchain comme les [fonctions de hachage](https://wikipedia.org/wiki/Cryptographic_hash_function), et [l'arbre de Merkle](https://wikipedia.org/wiki/Merkle_tree).
 
 ## Du registre à la machine d'état {#from-ledger-to-state-machine}
 
-L'analogie avec un « registre distribué » est souvent utilisée pour décrire les blockchains comme Bitcoin, qui permettent l'existence d'une monnaie décentralisée utilisant des outils de cryptographie fondamentaux. Une cryptomonnaie se comporte comme une monnaie « traditionnelle » en raison des règles qui régissent ce qui est autorisé ou pas pour modifier le registre. Par exemple, une adresse Bitcoin ne peut pas dépenser plus de Bitcoin qu'elle n'en a reçu. Ces règles sont appliquées à toutes les transactions sur Bitcoin et de nombreuses autres blockchains.
+L'analogie avec un « registre distribué » est souvent utilisée pour décrire les blockchains comme Bitcoin, qui permettent l'existence d'une monnaie décentralisée utilisant des outils de cryptographie fondamentaux. Le registre tient un enregistrement des activités devant se conformer à un ensemble de règles, celles-ci régissant ce que quelqu'un peut, ou ne peut pas faire, pour modifier le registre. Par exemple, une adresse Bitcoin ne peut pas dépenser plus de Bitcoin qu'elle n'en a reçu. Ces règles sont appliquées à toutes les transactions sur Bitcoin et de nombreuses autres blockchains.
 
 Alors qu'Ethereum dispose de sa propre cryptomonnaie native (Ether) qui suit presque exactement les mêmes règles intuitives, il offre également une fonction beaucoup plus puissante : [les contrats intelligents](/developers/docs/smart-contracts/). Pour cette fonctionnalité plus complexe, une analogie plus sophistiquée est nécessaire. Au lieu d'un registre distribué, Ethereum est une [machine d'état distribuée](https://wikipedia.org/wiki/Finite-state_machine). L'état d'Ethereum est une grande structure de données qui contient non seulement tous les comptes et tous les soldes, mais aussi une _machine à état_ qui peut changer d'un bloc à l'autre selon un ensemble de règles prédéfinies, et qui peut exécuter du code machine arbitraire. Les règles spécifiques de changement d'état d'un bloc à l'autre sont définies par l'EVM.
 
@@ -32,7 +32,7 @@ Y(S, T) = S'
 
 ### État {#state}
 
-Dans le contexte d'Ethereum, l'état est une énorme structure de données appelée [arbre de Patricia Merkle modifié](https://eth.wiki/en/fundamentals/patricia-tree), qui conserve tous [les comptes](/developers/docs/accounts/) liés par hachages et réduits à un seul hash racine stocké sur la blockchain.
+Dans le contexte d'Ethereum, l'état est une énorme structure de données appelée [arbre de Patricia Merkle modifié](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/), qui conserve tous [les comptes](/developers/docs/accounts/) liés par hachages et réduits à un seul hash racine stocké sur la blockchain.
 
 ### Transactions {#transactions}
 
@@ -56,9 +56,9 @@ Le bytecode du contract intelligent compilé s'exécute comme un certain nombre 
 
 Toutes les implémentations de l'EVM doivent respecter les spécifications décrites dans les pages jaunes Ethereum.
 
-Au cours des 5 ans d'histoire d'Ethereum, l'EVM a subi plusieurs révisions et il existe plusieurs implémentations dans différents langages de programmation.
+Au cours des neuf années d'existence d'Ethereum, l'EVM a fait l'objet de plusieurs révisions, et il existe plusieurs implémentations de l'EVM dans divers langages de programmation.
 
-Tous les [clients Ethereum](/developers/docs/nodes-and-clients/#execution-clients) incluent une implémentation de l'EVM. Il existe également plusieurs implémentations intelligents, y compris :
+Les [clients d'exécution Ethereum](/developers/docs/nodes-and-clients/#execution-clients) incluent une implémentation de l'EVM. Il existe également plusieurs implémentations autonomes, telles que :
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_

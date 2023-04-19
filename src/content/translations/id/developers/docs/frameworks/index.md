@@ -37,11 +37,6 @@ Sebelum menyelami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca 
 - [Dokumentasi](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
 
-**Embark -** **_Lingkungan pengembangan, kerangka kerja pengujian, dan peralatan lainnya yang terintegrasi dengan Ethereum, IPFS, dan Whisper._**
-
-- [Dokumentasi](https://embark.status.im/docs/)
-- [GitHub](https://github.com/embark-framework/embark)
-
 **Web3j -** **_Sebuah platform untuk mengembangkan aplikasi blockchain di JVM_**
 
 - [Halaman beranda](https://www.web3labs.com/web3j-sdk)

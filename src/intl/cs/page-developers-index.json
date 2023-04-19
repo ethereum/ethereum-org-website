@@ -8,7 +8,6 @@
   "page-developers-advanced": "Další",
   "page-developers-api-desc": "Používání knihoven pro komunikaci s chytrými kontrakty",
   "page-developers-api-link": "Backendová API",
-  "page-developers-aria-label": "Nabídka pro vývojáře",
   "page-developers-block-desc": "Dávky transakcí přidané do blockchainu",
   "page-developers-block-explorers-desc": "Brána k datům v síti Ethereum",
   "page-developers-block-explorers-link": "Prohlížeče bloků",
@@ -84,5 +83,6 @@
   "page-developers-transactions-desc": "Způsob, kterým se mění stav sítě Ethereum",
   "page-developers-transactions-link": "Transakce",
   "page-developers-web3-desc": "Jak se liší vývoj ve světě web3",
-  "page-developers-web3-link": "Web2 vs. Web3"
+  "page-developers-web3-link": "Web2 vs. Web3",
+  "alt-eth-blocks": "Obrázek bloků sestavených jako symbol ETH"
 }

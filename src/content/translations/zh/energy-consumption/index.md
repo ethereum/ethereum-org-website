@@ -72,7 +72,7 @@ Web3 原生公共物品融资平台，如 [Gitcoin](https://gitcoin.co) 就运�
 
 ## 相关主题 {#related-topics}
 
-- [以太坊愿景](/upgrades/vision/)
-- [信标链](/upgrades/beacon-chain)
-- [合并](/upgrades/merge/)
-- [分片](/upgrades/beacon-chain/)
+- [以太坊愿景](/roadmap/vision/)
+- [信标链](/roadmap/beacon-chain)
+- [合并](/roadmap/merge/)
+- [分片](/roadmap/beacon-chain/)
