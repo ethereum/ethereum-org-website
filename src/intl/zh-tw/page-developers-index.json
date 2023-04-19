@@ -51,7 +51,7 @@
   "page-developers-meta-desc": "Ethereum 開發人員文件、教學課程和工具。",
   "page-developers-mev-desc": "最大可提取價值 (MEV) 簡介",
   "page-developers-mev-link": "最大可提取價值 (MEV)",
-  "page-developers-mining-desc": "如何建立新區塊並達到共識",
+  "page-developers-mining-desc": "如何使用工作量證明產生新的區塊並達成共識",
   "page-developers-mining-link": "挖礦",
   "page-developers-mining-algorithms-desc": "關於以太坊挖礦算法的資訊",
   "page-developers-mining-algorithms-link": "挖礦算法",
@@ -92,5 +92,6 @@
   "page-developers-data-structures-and-encoding": "資料結構和編碼",
   "page-developers-data-structures-and-encoding-link": "資料結構和編碼",
   "page-developers-data-structures-and-encoding-desc": "以太坊技術堆棧中使用的資料結構和編碼方案的簡介",
-  "alt-eth-blocks": "插圖：由積木組成的以太幣符號"
+  "alt-eth-blocks": "插圖：由積木組成的以太幣符號",
+  "page-assets-doge": "在使用去中心化應用程式的狗狗"
 }
