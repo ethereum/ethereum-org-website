@@ -4,9 +4,9 @@ import {
   Heading,
   Box,
   Flex,
-  chakra,
   BoxProps,
   Text,
+  Img,
 } from "@chakra-ui/react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
@@ -17,7 +17,9 @@ import Translation from "../components/Translation"
 import Callout from "../components/Callout"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
-import HorizontalCard from "../components/HorizontalCard"
+import HorizontalCard, {
+  IProps as HorizontalCardProps,
+} from "../components/HorizontalCard"
 import CardList from "../components/CardList"
 import { StyledCard } from "../components/SharedStyledComponents"
 import FeedbackCard from "../components/FeedbackCard"
@@ -38,9 +40,7 @@ const GrayContainer = (props: BoxProps) => (
   />
 )
 
-const Content = (props: BoxProps) => (
-  <Box py={4} px={8} width="full" {...props} />
-)
+const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />
 
 const TwoColumnContent = (props: BoxProps) => (
   <Content
@@ -65,20 +65,22 @@ const RightColumn = (props: BoxProps) => (
   <Box flex="0 1 50%" ml={{ lg: 8 }} maxW="full" {...props} />
 )
 
-const FindWallet = chakra(GatsbyImage)
-
-const ChecklistItem = chakra(HorizontalCard)
-
-const WalletType = chakra(HorizontalCard)
-
-const StyledCallout = chakra(Callout)
+const ChecklistItem = (props: HorizontalCardProps) => (
+  <HorizontalCard
+    border={0}
+    display="flex"
+    alignItems="flex-start"
+    mb={4}
+    {...props}
+  />
+)
 
 const H2 = (props: ChildOnlyProp) => (
   <Heading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4} {...props} />
 )
 
 const CalloutCardContainer = (props: ChildOnlyProp) => (
-  <CardContainer marginTop={16} {...props} />
+  <CardContainer mt={16} {...props} />
 )
 const CardContainer = (props: BoxProps) => (
   <Box
@@ -91,14 +93,7 @@ const CardContainer = (props: BoxProps) => (
 )
 
 const Divider = (props: BoxProps) => (
-  <Box
-    mb="4rem"
-    mt="4rem"
-    w="10%"
-    h="0.25rem"
-    bgColor="homeDivider"
-    {...props}
-  />
+  <Box my={16} w="10%" h="0.25rem" bgColor="homeDivider" {...props} />
 )
 
 const Page = (props: BoxProps) => (
@@ -287,7 +282,7 @@ const WalletsPage = ({
           </Text>
           <Box>
             {types.map((type, idx) => (
-              <WalletType
+              <HorizontalCard
                 minWidth="100%"
                 marginTop={2}
                 marginBottom={2}
@@ -325,7 +320,8 @@ const WalletsPage = ({
             <ButtonLink to="/wallets/find-wallet/">
               <Translation id="page-wallets-find-wallet-btn" />
             </ButtonLink>
-            <FindWallet
+            <Img
+              as={GatsbyImage}
               image={getImage(data.findWallet)!}
               alt=""
               mt={8}
@@ -347,20 +343,12 @@ const WalletsPage = ({
           </Box>
           <Box>
             <ChecklistItem
-              border={0}
-              display="flex"
-              alignItems="flex-start"
-              marginBottom={4}
               key="0"
               emoji=":white_check_mark:"
               title={t("page-wallets-take-responsibility")}
               description={t("page-wallets-take-responsibility-desc")}
             />
             <ChecklistItem
-              border={0}
-              display="flex"
-              alignItems="flex-start"
-              marginBottom={4}
               key="1"
               emoji=":white_check_mark:"
               title={t("page-wallets-seed-phrase")}
@@ -379,20 +367,12 @@ const WalletsPage = ({
               </Text>
             </ChecklistItem>
             <ChecklistItem
-              border={0}
-              display="flex"
-              alignItems="flex-start"
-              marginBottom={4}
               key="2"
               emoji=":white_check_mark:"
               title={t("page-wallets-bookmarking")}
               description={t("page-wallets-bookmarking-desc")}
             />
             <ChecklistItem
-              border={0}
-              display="flex"
-              alignItems="flex-start"
-              marginBottom={4}
               key="3"
               emoji=":white_check_mark:"
               title={t("page-wallets-triple-check")}
@@ -416,7 +396,7 @@ const WalletsPage = ({
           <Translation id="page-wallets-explore" />
         </H2>
         <CalloutCardContainer>
-          <StyledCallout
+          <Callout
             flex="1 1 424px"
             minH="full"
             image={getImage(data.eth)}
@@ -429,8 +409,8 @@ const WalletsPage = ({
                 <Translation id="page-wallets-get-some-btn" />
               </ButtonLink>
             </Box>
-          </StyledCallout>
-          <StyledCallout
+          </Callout>
+          <Callout
             flex="1 1 424px"
             minH="full"
             image={getImage(data.dapps)}
@@ -443,7 +423,7 @@ const WalletsPage = ({
                 <Translation id="page-wallets-more-on-dapps-btn" />
               </ButtonLink>
             </div>
-          </StyledCallout>
+          </Callout>
         </CalloutCardContainer>
       </Content>
       <Content>
