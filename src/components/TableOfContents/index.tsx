@@ -23,6 +23,8 @@ import Mobile from "./TableOfContentsMobile"
 import ItemsList from "./ItemsList"
 import { getCustomId, Item, outerListProps } from "./utils"
 
+export { Item }
+
 export interface IProps extends BoxProps {
   items: Array<Item>
   maxDepth?: number

@@ -43,4 +43,4 @@ It is possible that a sophisticated attacker could identify upcoming validators 
 
 ## Current progress {#current-progress}
 
-Staking withdrawals are the next major upgrade coming to Ethereum. They are planned for inclusion with the Shanghai/Capella upgrade scheduled for April 12, 2023. They have already been rolled out on public testnets and the next step in launching on Ethereum Mainnet. The other security upgrades on the roadmap are in advanced stages of research, but they are not expected to be implemented for some time. The next steps for view-merge, PBS, SSF and SLE is to finalize a specification and start building prototypes.
+Security upgrades on the roadmap are in advanced stages of research, but they are not expected to be implemented for some time. The next steps for view-merge, PBS, SSF and SLE is to finalize a specification and start building prototypes.

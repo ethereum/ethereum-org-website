@@ -10,10 +10,6 @@ import Translation from "../Translation"
 import { trackCustomEvent } from "../../utils/matomo"
 import { getImage } from "../../utils/image"
 
-const StyledCallout = styled(CalloutBanner)`
-  margin: 4rem 0;
-`
-
 const ButtonContainer = styled.div`
   display: flex;
   gap: 1rem;
@@ -50,8 +46,10 @@ const StakingCommunityCallout: React.FC<IProps> = (props) => {
   `)
 
   return (
-    <StyledCallout
+    <CalloutBanner
       {...props}
+      mx={0}
+      my={16}
       image={getImage(image)!}
       alt={t("page-staking-image-alt")}
       titleKey={"page-staking-join-community"}
@@ -95,7 +93,7 @@ const StakingCommunityCallout: React.FC<IProps> = (props) => {
           <Translation id="rollup-component-website" />
         </StyledButtonLink>
       </ButtonContainer>
-    </StyledCallout>
+    </CalloutBanner>
   )
 }
 

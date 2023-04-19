@@ -149,7 +149,7 @@ Os comitês de disponibilidade de dados da prova de participação são consider
 
 Embora os rollups possam aumentar a taxa de transferência com computação off-chain, sua capacidade é limitada pela vazão dos dados na blockchain subjacente. Se os rollups usarem o Ethereum como uma camada de disponibilidade de dados, eles deverão aumentar seus recursos de armazenamento e processamento de dados.
 
-[Particionamento](/upgrades/shard-chains/) (sharding) é um método proposto para aumentar a taxa de transferência de dados na camada de execução do Ethereum. Com o particionamento, a rede é dividida em um número selecionado de subcadeias, cada uma com um conjunto dedicado de validadores.
+[Particionamento](/roadmap/danksharding/) (sharding) é um método proposto para aumentar a taxa de transferência de dados na camada de execução do Ethereum. Com o particionamento, a rede é dividida em um número selecionado de subcadeias, cada uma com um conjunto dedicado de validadores.
 
 Os validadores só precisarão executar nós completos para seus shards e executar em capacidade de cliente leve para outros shards. O particionamento aumenta o espaço de dados disponível para rollups, pois o trabalho de armazenamento de dados é dividido em diferentes fragmentos.
 

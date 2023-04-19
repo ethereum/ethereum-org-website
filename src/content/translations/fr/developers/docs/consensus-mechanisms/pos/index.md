@@ -5,7 +5,7 @@ lang: fr
 incomplete: true
 ---
 
-Ethereum passe de [la preuve de travail (PoW)](/developers/docs/consensus-mechanisms/pow/) à un mécanisme de consensus appelé « preuve d'enjeu » (PoS) . Cela a toujours été prévu, car il s'agit d'un élément clé de la stratégie de la communauté pour faire évoluer Ethereum via [les mises à niveau](/upgrades/). Toutefois, instituer la preuve d'enjeu constitue un grand défi technique et ce procédé n'est pas aussi simple que l'utilisation de la preuve de travail pour parvenir à un consensus sur l'ensemble du réseau.
+Ethereum passe de [la preuve de travail (PoW)](/developers/docs/consensus-mechanisms/pow/) à un mécanisme de consensus appelé « preuve d'enjeu » (PoS) . Cela a toujours été prévu, car il s'agit d'un élément clé de la stratégie de la communauté pour faire évoluer Ethereum via [les mises à niveau](/roadmap/). Toutefois, instituer la preuve d'enjeu constitue un grand défi technique et ce procédé n'est pas aussi simple que l'utilisation de la preuve de travail pour parvenir à un consensus sur l'ensemble du réseau.
 
 ## Prérequis {#prerequisites}
 
@@ -22,7 +22,7 @@ La preuve d'enjeu apporte un certain nombre d'améliorations au système de preu
 - Meilleure efficacité énergétique : vous n'avez pas besoin d'utiliser beaucoup d'énergie en minant des blocs.
 - Réduction des barrières à l'entrée et des exigences matérielles : vous n'avez pas besoin de matériel haut de gamme pour avoir une chance de créer de nouveaux blocs.
 - Plus grande immunité à la centralisation : la preuve d'enjeu devrait conduire à plus de nœuds sur le réseau.
-- meilleur support des [chaînes fragmentées](/upgrades/sharding/) - un point clé dans le passage à l'échelle du réseau Ethereum
+- meilleur support des [chaînes fragmentées](/roadmap/danksharding/) - un point clé dans le passage à l'échelle du réseau Ethereum
 
 ## Preuve d'enjeu, mise et validateurs {#pos-staking-validators}
 
@@ -36,7 +36,7 @@ Si vous attestez la conformité de blocs malveillants, vous perdez votre mise.
 
 ### La chaîne phare {#the-beacon-chain}
 
-Quand Ethereum remplacera la preuve de travail par une preuve d'enjeu, cela entraînera la complexité supplémentaire des [chaînes de fragments](/upgrades/sharding/). Ce sont des blockchains séparées qui nécessitent des validateurs pour traiter les transactions et créer de nouveaux blocs. Le projet est de disposer de 64 chaînes de fragments, qui exigent toutes une compréhension partagée de l'état du réseau. Cela implique qu'une coordination suplémentaire est nécéssaire et celle ci sera réalisée par [la chaine phare](/upgrades/beacon-chain/).
+Quand Ethereum remplacera la preuve de travail par une preuve d'enjeu, cela entraînera la complexité supplémentaire des [chaînes de fragments](/roadmap/danksharding/). Ce sont des blockchains séparées qui nécessitent des validateurs pour traiter les transactions et créer de nouveaux blocs. Le projet est de disposer de 64 chaînes de fragments, qui exigent toutes une compréhension partagée de l'état du réseau. Cela implique qu'une coordination suplémentaire est nécéssaire et celle ci sera réalisée par [la chaine phare](/roadmap/beacon-chain/).
 
 La chaîne phare reçoit des informations d'état provenant de fragments et les met à la disposition d'autres fragments afin que le réseau puisse rester synchronisé. La chaîne phare gère également les validateurs, de l'enregistrement de leur mise jusqu'à l'émission de leurs récompenses et pénalités.
 

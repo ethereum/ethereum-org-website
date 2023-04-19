@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 Exdcutar um nó próprio proporciona vários benefícios, abre novas possibilidades e ajuda a dar suporte ao ecossistema. Esta página vai ajudar você a iniciar seu próprio nó, para assim participar na validação das transações de Ethereum.
 
-Observe que após [A Fusão](/upgrades/merge), dois clientes são necessários para executar um nó Ethereum; um cliente da **camada de execução (EL)** e um cliente da **camada de consenso (CL)**. Esta página mostrará como instalar, configurar e conectar esses dois clientes para executar um nó Ethereum.
+Observe que após [A Fusão](/roadmap/merge), dois clientes são necessários para executar um nó Ethereum; um cliente da **camada de execução (EL)** e um cliente da **camada de consenso (CL)**. Esta página mostrará como instalar, configurar e conectar esses dois clientes para executar um nó Ethereum.
 
 ## Pré-requisitos {#prerequisites}
 

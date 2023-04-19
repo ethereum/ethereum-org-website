@@ -241,9 +241,7 @@ Sama seperti konfigurasi lainnya, ia dapat ditentukan dengan bendera startup ata
 
 ## Klien konsensus (sebelumnya klien 'Eth2') {#consensus-clients}
 
-Ada beberapa klien konsensus (sebelumnya dikenal sebagai klien 'Eth2') untuk mendukung [peningkatan konsensus](/upgrades/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/upgrades/merge/).
-
-[Lihat klien konsensus](/upgrades/get-involved/#clients).
+Ada beberapa klien konsensus (sebelumnya dikenal sebagai klien 'Eth2') untuk mendukung [peningkatan konsensus](/roadmap/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/roadmap/merge/).
 
 | Klien                                                       | Bahasa     | Sistem operasi        | Jaringan                             |
 | ----------------------------------------------------------- | ---------- | --------------------- | ------------------------------------ |

@@ -229,7 +229,7 @@ Fazer alguns cálculos aproximados sobre esses números pode ajudar a mostrar as
 
 Esta é uma estimativa bastante otimista, uma vez que as transações de optimistic rollups não podem abranger um bloco inteiro no Ethereum. No entanto, pode dar uma ideia aproximada de quantos ganhos de dimensionamento os optimistic rollups podem proporcionar aos usuários do Ethereum (as implementações atuais oferecem até 2.000 TPS).
 
-Espera-se que a introdução de [particionamento de dados (sharding)](/upgrades/shard-chains/) no Ethereum melhore o dimensionamento do optimistic rollup. Como as transações de rollup devem compartilhar o espaço de blocos (blockspace) com outras transações não-rollup, sua capacidade de processamento é limitada pela taxa de transferência de dados na cadeia principal do Ethereum. O particionamento aumentará o espaço disponível para as cadeias L2, para publicar dados por bloco, aumentando ainda mais a taxa de transferência nos rollups.
+Espera-se que a introdução de [particionamento de dados (sharding)](/roadmap/danksharding/) no Ethereum melhore o dimensionamento do optimistic rollup. Como as transações de rollup devem compartilhar o espaço de blocos (blockspace) com outras transações não-rollup, sua capacidade de processamento é limitada pela taxa de transferência de dados na cadeia principal do Ethereum. O particionamento aumentará o espaço disponível para as cadeias L2, para publicar dados por bloco, aumentando ainda mais a taxa de transferência nos rollups.
 
 ### Prós e contras dos optimistic rollups {#optimistic-rollups-pros-and-cons}
 
