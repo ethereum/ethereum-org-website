@@ -155,7 +155,7 @@ _注：任何个人都可以属于多个组（如：协议开发者可以支持�
 
 当信标链于 2022 年 9 月 15 日与以太坊执行层合并时，作为[巴黎网络升级](https://ethereum.org/en/history/#paris)的一部分，合并完成。 提案 [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) 从“上次调用”变为“最终版”，完成向权益正面的过渡。
 
-<ButtonLink to="/upgrades/merge/">
+<ButtonLink to="/roadmap/merge/">
   关于合并的更多信息
 </ButtonLink>
 
