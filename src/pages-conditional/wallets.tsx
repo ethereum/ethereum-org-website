@@ -1,5 +1,13 @@
 import React from "react"
-import { Center, Heading, Box, Flex, chakra, BoxProps } from "@chakra-ui/react"
+import {
+  Center,
+  Heading,
+  Box,
+  Flex,
+  chakra,
+  BoxProps,
+  Text,
+} from "@chakra-ui/react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, PageProps } from "gatsby"
@@ -46,16 +54,18 @@ const TwoColumnContent = (props: BoxProps) => (
 )
 
 const Intro = (props: ChildOnlyProp) => (
-  <Content paddingBottom={0} sx={{ h2: { mb: 0 } }} {...props} />
+  <Content pb={0} sx={{ h2: { mb: 0 } }} {...props} />
 )
 
-const RightColumn = (props: ChildOnlyProp) => (
+const LeftColumn = (props: BoxProps) => (
+  <Box flex="0 1 50%" mr={{ base: 0, lg: 8 }} maxW="full" {...props} />
+)
+
+const RightColumn = (props: BoxProps) => (
   <Box flex="0 1 50%" ml={{ lg: 8 }} maxW="full" {...props} />
 )
 
 const FindWallet = chakra(GatsbyImage)
-
-const GradientContainer = chakra(GrayContainer)
 
 const ChecklistItem = chakra(HorizontalCard)
 
@@ -240,56 +250,42 @@ const WalletsPage = ({
         </Content>
       </GrayContainer>
       <TwoColumnContent marginBottom={-8} marginTop={8}>
-        <Box
-          flexGrow="0"
-          flexShrink="1"
-          flexBasis="50%"
-          mr={{ base: 0, lg: 8 }}
-          mt={{ lg: 0 }}
-          maxWidth={{ lg: "100%" }}
-        >
-          <Heading>
+        <LeftColumn>
+          <H2>
             <Translation id="page-wallets-accounts-addresses" />
-          </Heading>
-          <p>
+          </H2>
+          <Text>
             <Translation id="page-wallets-accounts-addresses-desc" />
-          </p>
+          </Text>
           <ul>
             <li>
-              <p>
+              <Text>
                 <Translation id="page-wallets-ethereum-account" />
-              </p>
+              </Text>
             </li>
             <li>
-              <p>
+              <Text>
                 <Translation id="page-wallets-accounts-ethereum-addresses" />
-              </p>
+              </Text>
             </li>
             <li>
-              <p>
+              <Text>
                 <Translation id="page-wallets-ethereum-wallet" />
-              </p>
+              </Text>
             </li>
           </ul>
-          <p>
+          <Text>
             <Translation id="page-wallets-most-wallets" />
-          </p>
-        </Box>
-        <Box
-          flexGrow="0"
-          flexShrink="1"
-          flexBasis="50%"
-          marginTop={{ lg: 12 }}
-          maxWidth={{ lg: "100%" }}
-          marginLeft={{ base: 8, lg: 0 }}
-        >
-          <Heading>
+          </Text>
+        </LeftColumn>
+        <RightColumn mt={{ base: 12, lg: 0 }}>
+          <H2>
             <Translation id="page-wallets-types" />
-          </Heading>
-          <p>
+          </H2>
+          <Text>
             <Translation id="page-wallets-types-desc" />
-          </p>
-          <div>
+          </Text>
+          <Box>
             {types.map((type, idx) => (
               <WalletType
                 minWidth="100%"
@@ -303,25 +299,26 @@ const WalletsPage = ({
                 emojiSize={2.5}
               />
             ))}
-          </div>
-        </Box>
+          </Box>
+        </RightColumn>
       </TwoColumnContent>
-      <GradientContainer
+      <GrayContainer
+        my={12}
         bgGradient="linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%,
     rgba(134, 168, 231, 0.2) 58.46%,
     rgba(145, 234, 228, 0.2) 97.05%)"
       >
         <Content>
           <Flex flexDirection="column" alignItems="center" mb="8">
-            <Heading>
+            <H2>
               <Translation id="page-wallets-features-title" />
-            </Heading>
+            </H2>
             <Box
-              fontSize={"xl"}
-              lineHeight={"140%"}
+              fontSize="xl"
+              lineHeight={1.4}
               color="text"
-              marginBottom={6}
-              textAlign={"center"}
+              textAlign="center"
+              mb={6}
             >
               <Translation id="page-wallets-features-desc" />
             </Box>
@@ -331,36 +328,24 @@ const WalletsPage = ({
             <FindWallet
               image={getImage(data.findWallet)!}
               alt=""
-              marginTop={8}
-              maxWidth="800px"
+              mt={8}
+              maxW="800px"
               backgroundSize="cover"
               backgroundRepeat="no-repeat"
-              width="100%"
+              w="full"
             />
           </Flex>
         </Content>
-      </GradientContainer>
+      </GrayContainer>
       <TwoColumnContent>
-        <Box
-          flexGrow="0"
-          flexShrink="1"
-          flexBasis="50%"
-          mr={{ base: 0, lg: 8 }}
-          mt={{ lg: 0 }}
-          maxWidth={{ lg: "100%" }}
-        >
-          <Heading>
+        <LeftColumn>
+          <H2>
             <Translation id="page-wallets-stay-safe" />
-          </Heading>
-          <Box
-            fontSize={"xl"}
-            lineHeight={"140%"}
-            marginBottom={6}
-            color="text300"
-          >
+          </H2>
+          <Box fontSize="xl" lineHeight={1.4} mb={6} color="text300">
             <Translation id="page-wallets-stay-safe-desc" />
           </Box>
-          <div>
+          <Box>
             <ChecklistItem
               border={0}
               display="flex"
@@ -381,17 +366,17 @@ const WalletsPage = ({
               title={t("page-wallets-seed-phrase")}
               description={t("page-wallets-seed-phrase-desc")}
             >
-              <p>
+              <Text>
                 <Translation id="page-wallets-seed-phrase-example" />
-              </p>
-              <Box bg="black" p="2" mb="4" borderRadius="base">
-                <Box fontFamily="monospace" color="white" mb="0">
+              </Text>
+              <Box bg="black" p={2} mb={4} borderRadius="base">
+                <Text fontFamily="monospace" fontSize="sm" color="white" mb={0}>
                   <Translation id="page-wallets-seed-phrase-snippet" />
-                </Box>
+                </Text>
               </Box>
-              <p>
+              <Text>
                 <Translation id="page-wallets-seed-phrase-write-down" />
-              </p>
+              </Text>
             </ChecklistItem>
             <ChecklistItem
               border={0}
@@ -413,35 +398,23 @@ const WalletsPage = ({
               title={t("page-wallets-triple-check")}
               description={t("page-wallets-triple-check-desc")}
             />
-          </div>
-        </Box>
-        <Box
-          flexGrow="0"
-          flexShrink="1"
-          flexBasis="50%"
-          marginTop={{ lg: 12 }}
-          maxWidth={{ lg: "100%" }}
-          marginLeft={{ base: 8, lg: 0 }}
-        >
-          <Heading>
+          </Box>
+        </LeftColumn>
+        <RightColumn mt={{ base: 12, lg: 0 }}>
+          <H2>
             <Translation id="page-wallets-tips" />
-          </Heading>
-          <Box
-            fontSize={"xl"}
-            lineHeight={"140%"}
-            marginBottom={6}
-            color="text300"
-          >
+          </H2>
+          <Box fontSize="xl" lineHeight={1.4} color="text300" mb={6}>
             <Translation id="page-wallets-tips-community" />
           </Box>
           <CardList content={articles} />
-        </Box>
+        </RightColumn>
       </TwoColumnContent>
       <Content>
         <Divider />
-        <Heading>
+        <H2>
           <Translation id="page-wallets-explore" />
-        </Heading>
+        </H2>
         <CalloutCardContainer>
           <StyledCallout
             flex="1 1 424px"
@@ -451,11 +424,11 @@ const WalletsPage = ({
             alt={t("page-wallets-get-some-alt")}
             descriptionKey="page-wallets-get-some-desc"
           >
-            <div>
+            <Box>
               <ButtonLink to="/get-eth/">
                 <Translation id="page-wallets-get-some-btn" />
               </ButtonLink>
-            </div>
+            </Box>
           </StyledCallout>
           <StyledCallout
             flex="1 1 424px"
