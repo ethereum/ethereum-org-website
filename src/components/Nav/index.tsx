@@ -22,6 +22,8 @@ import { NavLink } from "../SharedStyledComponents"
 import { EthHomeIcon } from "../icons"
 import { IItem, ISections } from "./types"
 
+import { trackCustomEvent } from "../../utils/matomo"
+
 const NavContainer = styled.div`
   position: sticky;
   top: 0;
@@ -371,6 +373,16 @@ const Nav: FC<IProps> = ({ path }) => {
     splitPath.length > 3 && splitPath[2] !== "languages"
       ? `?from=/${splitPath.slice(2).join("/")}`
       : ""
+
+  const changeColorMode = () => {
+    toggleColorMode()
+    trackCustomEvent({
+      eventCategory: "nav bar",
+      eventAction: "click",
+      eventName: isDarkTheme ? "light mode" : "dark mode", // This will be inverted as the state is changing
+    })
+  }
+
   return (
     <NavContainer>
       <StyledNav aria-label={t("nav-primary")}>
@@ -401,7 +413,7 @@ const Nav: FC<IProps> = ({ path }) => {
                 }
                 variant="icon"
                 _hover={{ color: "primary" }}
-                onClick={toggleColorMode}
+                onClick={changeColorMode}
               />
               <ButtonLink to={`/languages/${fromPageParameter}`} variant="icon">
                 <Icon as={MdLanguage} fontSize="2xl" />
@@ -416,7 +428,7 @@ const Nav: FC<IProps> = ({ path }) => {
             isMenuOpen={isMenuOpen}
             isDarkTheme={isDarkTheme}
             toggleMenu={toggleMenu}
-            toggleTheme={toggleColorMode}
+            toggleTheme={changeColorMode}
             toggleSearch={toggleSearch}
             linkSections={mobileLinkSections}
             fromPageParameter={fromPageParameter}
