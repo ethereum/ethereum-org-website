@@ -3,10 +3,10 @@ import { Center, Heading, Box, Flex, chakra, BoxProps } from "@chakra-ui/react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, PageProps } from "gatsby"
+
 import PageHero from "../components/PageHero"
 import Translation from "../components/Translation"
 import Callout from "../components/Callout"
-import Link from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import HorizontalCard from "../components/HorizontalCard"
@@ -16,54 +16,44 @@ import FeedbackCard from "../components/FeedbackCard"
 import QuizWidget from "../components/Quiz/QuizWidget"
 
 import { getImage, getSrc } from "../utils/image"
-import { Context } from "../types"
+import type { ChildOnlyProp, Context } from "../types"
 
-const StyledRightColumn = (props: { children: React.ReactNode }) => (
-  <Box flex="0 1 50%" ml={{ lg: 4 }} maxW="full" {...props} />
-)
-
-// const StyledGrayContainer = chakra(GrayContainer)
-
-const StyledGrayContainer = (props: { children: React.ReactNode }) => (
-  <GrayContainer marginTop={{ lg: 4 }} {...props} />
-)
 const GrayContainer = (props: BoxProps) => (
   <Box
-    width={"100%"}
-    padding={"4rem 0rem"}
-    marginTop={"2rem"}
+    width="full"
+    py={16}
+    px={0}
+    mt={{ base: 4, lg: 8 }}
     background="grayBackground"
-    boxShadow={"inset 0px 1px 0px tableItemBoxShadow"}
+    boxShadow="inset 0px 1px 0px var(--eth-colors-tableItemBoxShadow)"
     {...props}
   />
 )
 
-const FindWallet = chakra(GatsbyImage)
-
-// const IntroTwoColumnContent = chakra(TwoColumnContent)
-const IntroTwoColumnContent = (props: { children: React.ReactNode }) => (
-  <TwoColumnContent marginBottom={0} paddingBottom={0} {...props} />
+const Content = (props: BoxProps) => (
+  <Box py={4} px={8} width="full" {...props} />
 )
+
 const TwoColumnContent = (props: BoxProps) => (
   <Content
     display="flex"
     justifyContent="space-between"
-    padding="2rem"
-    marginBottom="3rem"
+    p={8}
+    mb={12}
     flexDirection={{ base: "column", lg: "row" }}
     {...props}
   />
 )
 
-const StyledTwoColumnContent = chakra(TwoColumnContent)
-
-// const Intro = chakra(Content)
-const Intro = (props: { children: React.ReactNode }) => (
+const Intro = (props: ChildOnlyProp) => (
   <Content paddingBottom={0} sx={{ h2: { mb: 0 } }} {...props} />
 )
-const Content = (props: BoxProps) => (
-  <Box padding={"1rem 2rem"} width="100%" {...props} />
+
+const RightColumn = (props: ChildOnlyProp) => (
+  <Box flex="0 1 50%" ml={{ lg: 8 }} maxW="full" {...props} />
 )
+
+const FindWallet = chakra(GatsbyImage)
 
 const GradientContainer = chakra(GrayContainer)
 
@@ -73,8 +63,11 @@ const WalletType = chakra(HorizontalCard)
 
 const StyledCallout = chakra(Callout)
 
-// const CalloutCardContainer = chakra(CardContainer)
-const CalloutCardContainer = (props: { children: React.ReactNode }) => (
+const H2 = (props: ChildOnlyProp) => (
+  <Heading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4} {...props} />
+)
+
+const CalloutCardContainer = (props: ChildOnlyProp) => (
   <CardContainer marginTop={16} {...props} />
 )
 const CardContainer = (props: BoxProps) => (
@@ -87,7 +80,6 @@ const CardContainer = (props: BoxProps) => (
   />
 )
 
-// Divider
 const Divider = (props: BoxProps) => (
   <Box
     mb="4rem"
@@ -99,17 +91,8 @@ const Divider = (props: BoxProps) => (
   />
 )
 
-// Page
 const Page = (props: BoxProps) => (
-  <Box
-    display="flex"
-    flexDirection="column"
-    alignItems="center"
-    width="100%"
-    maxW="1200px"
-    margin="0 auto"
-    {...props}
-  />
+  <Flex direction="column" align="center" width="full" m="0 auto" {...props} />
 )
 
 const cards = [
@@ -211,13 +194,13 @@ const WalletsPage = ({
         image={getSrc(data.ogImage)}
       />
       <PageHero content={heroContent} isReverse />
-      <StyledGrayContainer>
+      <GrayContainer>
         <Intro>
-          <Heading>
+          <H2>
             <Translation id="page-wallets-whats-a-wallet" />
-          </Heading>
+          </H2>
         </Intro>
-        <IntroTwoColumnContent>
+        <TwoColumnContent mb={0}>
           <Box
             flexGrow="0"
             flexShrink="1"
@@ -234,15 +217,15 @@ const WalletsPage = ({
             </p>
             <CardList content={guides} />
           </Box>
-          <StyledRightColumn>
+          <RightColumn>
             <p>
               <Translation id="page-wallets-desc-3" />
             </p>
             <p>
               <Translation id="page-wallets-desc-4" />
             </p>
-          </StyledRightColumn>
-        </IntroTwoColumnContent>
+          </RightColumn>
+        </TwoColumnContent>
         <Content>
           <CardContainer>
             {cards.map((card, idx) => (
@@ -255,8 +238,8 @@ const WalletsPage = ({
             ))}
           </CardContainer>
         </Content>
-      </StyledGrayContainer>
-      <StyledTwoColumnContent marginBottom={-8} marginTop={8}>
+      </GrayContainer>
+      <TwoColumnContent marginBottom={-8} marginTop={8}>
         <Box
           flexGrow="0"
           flexShrink="1"
@@ -322,7 +305,7 @@ const WalletsPage = ({
             ))}
           </div>
         </Box>
-      </StyledTwoColumnContent>
+      </TwoColumnContent>
       <GradientContainer
         bgGradient="linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%,
     rgba(134, 168, 231, 0.2) 58.46%,
