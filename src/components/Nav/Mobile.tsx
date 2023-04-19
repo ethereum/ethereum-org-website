@@ -256,10 +256,6 @@ const MobileNavMenu: React.FC<IProps> = ({
             px={4}
             py={0}
             mt="auto"
-            position="fixed"
-            bottom={0}
-            left={0}
-            right={0}
           >
             <FooterItem onClick={toggleSearch}>
               <Icon as={MdSearch} />
