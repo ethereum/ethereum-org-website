@@ -134,12 +134,13 @@ const MobileNavMenu: React.FC<IProps> = ({
   return (
     <Box
       display={{ base: "flex", lg: "none" }}
-      gap={4}
+      gap={2}
       sx={{ svg: { fill: "body" } }}
     >
       <SearchIconButton
         onClick={toggleSearch}
         aria-label={t("aria-toggle-search-button")}
+        size="sm"
       />
       <IconButton
         icon={
@@ -175,6 +176,7 @@ const MobileNavMenu: React.FC<IProps> = ({
         onClick={toggleMenu}
         aria-label={t("aria-toggle-search-button")}
         variant="icon"
+        size="sm"
         zIndex={2000}
         _hover={{ svg: { fill: "primary" } }}
       />
