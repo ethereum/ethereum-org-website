@@ -347,7 +347,7 @@ const UseCasePage = ({
         text: t("template-usecase-dropdown-defi"),
         to: "/defi/",
         matomo: {
-          eventCategory: "use cases menuy",
+          eventCategory: "use cases menu",
           eventAction: "click",
           eventName: "/defi/",
         },
