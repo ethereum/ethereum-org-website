@@ -75,7 +75,7 @@ Las **reglas de selección de cadena**se utilizan para decidir qué cadena es la
 
 La combinación de prueba de trabajo y la regla de la cadena más larga se conoce como «Consenso de Nakamoto».
 
-La [cadena de baliza](/upgrades/beacon-chain/) emplea un mecanismo de consenso llamado [Casper, el gadget de finalidad respetuosa](https://arxiv.org/abs/1710.09437), el cual está basado en la prueba de participación.
+La [cadena de baliza](/roadmap/beacon-chain/) emplea un mecanismo de consenso llamado [Casper, el gadget de finalidad respetuosa](https://arxiv.org/abs/1710.09437), el cual está basado en la prueba de participación.
 
 ## Más información {#further-reading}
 

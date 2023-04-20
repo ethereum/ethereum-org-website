@@ -304,7 +304,7 @@ Es gibt eine Reihe von Gründen, weshalb Ethereum ermöglicht, dass NFTs funktio
 
 ## Die Umweltauswirkungen von NFTs {#environmental-impact-nfts}
 
-Das Erstellen und Übertragen von NFTs sind einfache Ethereum-Transaktionen - Das Prägen, Kaufen, Tauschen oder Interagieren mit NFTs verbraucht keine Energie. Seit [The Merge](/upgrades/merge) ist Ethereum eine energieeffiziente Blockchain. Demnach sind die Umweltauswirkungen bei der Nutzung von NFTs gering.
+Das Erstellen und Übertragen von NFTs sind einfache Ethereum-Transaktionen - Das Prägen, Kaufen, Tauschen oder Interagieren mit NFTs verbraucht keine Energie. Seit [The Merge](/roadmap/merge) ist Ethereum eine energieeffiziente Blockchain. Demnach sind die Umweltauswirkungen bei der Nutzung von NFTs gering.
 
 [ Mehr zum Energieverbrauch von Ethereum](/energy-consumption/).
 

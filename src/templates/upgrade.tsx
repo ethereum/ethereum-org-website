@@ -341,11 +341,11 @@ const UpgradePage = ({
     items: [
       {
         text: t("page-upgrades-upgrades-beacon-chain"),
-        to: "/upgrades/beacon-chain/",
+        to: "/roadmap/beacon-chain/",
       },
       {
         text: t("page-upgrades-upgrades-docking"),
-        to: "/upgrades/merge/",
+        to: "/roadmap/merge/",
       },
     ],
   }

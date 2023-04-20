@@ -304,7 +304,7 @@ O Ethereum permite que NFTs funcionem por várias razões:
 
 ## O impacto ambiental dos NFTs {#environmental-impact-nfts}
 
-Criar e transferir NFTs são apenas transações Ethereum – cunhar, comprar, trocar ou interagir com NFTs não consome energia diretamente. Desde [A Fusão](/upgrades/merge), o Ethereum é uma blockchain de baixo consumo de energia, o que significa que o impacto ambiental do uso de NFTs é insignificante.
+Criar e transferir NFTs são apenas transações Ethereum – cunhar, comprar, trocar ou interagir com NFTs não consome energia diretamente. Desde [A Fusão](/roadmap/merge), o Ethereum é uma blockchain de baixo consumo de energia, o que significa que o impacto ambiental do uso de NFTs é insignificante.
 
 [Mais sobre o consumo de energia do Ethereum](/energy-consumption/).
 

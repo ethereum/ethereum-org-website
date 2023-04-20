@@ -18,7 +18,7 @@ Prima criptomonedă a fost Bitcoin, creată de Satoshi Nakamoto. Din momentul la
 
 ## Ce este ether-ul? {#what-is-ether}
 
-**Ether-ul (ETH)** este criptomoneda cu multe utilizări în rețeaua Ethereum. Fundamentally, it is the only acceptable form of payment for transaction fees, and after [The Merge](/upgrades/merge), ether will be required to validate and propose blocks on Mainnet. Ether-ul este utilizat şi ca formă principală de garanție pe piețele de împrumut [DeFi](/defi), ca unitate de cont pe piețele NFT, ca plată câștigată pentru prestarea de servicii sau vânzarea de bunuri din lumea reală și multe altele.
+**Ether-ul (ETH)** este criptomoneda cu multe utilizări în rețeaua Ethereum. Fundamentally, it is the only acceptable form of payment for transaction fees, and after [The Merge](/roadmap/merge), ether will be required to validate and propose blocks on Mainnet. Ether-ul este utilizat şi ca formă principală de garanție pe piețele de împrumut [DeFi](/defi), ca unitate de cont pe piețele NFT, ca plată câștigată pentru prestarea de servicii sau vânzarea de bunuri din lumea reală și multe altele.
 
 Ethereum permite dezvoltatorilor să creeze [**aplicații descentralizate (dapp-uri)**](/developers/docs/dapps), care împărtășesc toate un fond comun (pool) de putere de calcul. Acest fond comun este finit, așa că Ethereum are nevoie de un mecanism care să determine cine îl folosește. În caz contrar, o aplicație dapp ar putea consuma accidental sau rău intenționat toate resursele rețelei, ceea ar bloca accesul celorlalţi.
 

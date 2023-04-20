@@ -150,7 +150,7 @@ Inversamente, as cadeias Plasma derivam sua segurança da rede principal. Isto a
 
 ### Plasma vs fragmentação (sharding) {#plasma-vs-sharding}
 
-Tanto as cadeias Plasma quanto as [cadeias de shard](/upgrades/sharding/) publicam periodicamente provas criptográficas para a rede principal do Ethereum. No entanto, ambas têm propriedades de segurança diferentes.
+Tanto as cadeias Plasma quanto as [cadeias de shard](/roadmap/danksharding/) publicam periodicamente provas criptográficas para a rede principal do Ethereum. No entanto, ambas têm propriedades de segurança diferentes.
 
 As cadeias de shard gravam "cabeçalhos de agrupamento" na rede principal contendo informações detalhadas sobre cada shard de dados. Os nós na rede principal verificam e garantem a validade de shards de dados, reduzindo a possibilidade de transições de shards inválidos e protegendo a rede contra atividades maliciosas.
 

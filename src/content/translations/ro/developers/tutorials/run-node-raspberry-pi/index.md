@@ -16,11 +16,11 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 **TL;DR**: Flashați-vă Raspberry Pi 4, conectați un cablu ethernet, conectați discul SSD și porniți dispozitivul pentru a transforma Raspberry Pi 4 într-un nod Ethereum complet, care rulează nivelul de execuție sau nivelul de consens (Lanț Beacon / validator)
 
-[Aflaţi mai multe despre actualizările Ethereum](/upgrades/)
+[Aflaţi mai multe despre actualizările Ethereum](/roadmap/)
 
 Mai întâi câteva elemente de context. După cum știţi, am întâmpinat unele probleme de memorie [[1]](/developers/tutorials/run-node-raspberry-pi/#references) cu imaginea Raspberry PI 4, întrucât sistemul de operare al acestuia este încă pe 32 de biți [[2]](/developers/tutorials/run-node-raspberry-pi/#references) (cel puțin cu aplicația „userland”). Chiar dacă preferăm să rămânem cu sistemul de operare oficial, am ajuns la concluzia că, pentru a rezolva aceste probleme, trebuie să migrăm la un sistem de operare nativ de 64 de biți
 
-Pe de altă parte, [clienții de consens](/upgrades/get-involved/#clients) nu suportă binarele de 32 de biţi, de aceea utilizarea Raspbian ar exclude Raspberry Pi 4 de la executarea unui nod al nivelului de consens (și astfel, de la posibilitatea de mizare).
+Pe de altă parte, clienții de consens nu suportă binarele de 32 de biţi, de aceea utilizarea Raspbian ar exclude Raspberry Pi 4 de la executarea unui nod al nivelului de consens (și astfel, de la posibilitatea de mizare).
 
 Așa că, după mai multe teste, lansăm acum 2 imagini diferite bazate pe Ubuntu 20.04 64bit [[3]](/developers/tutorials/run-node-raspberry-pi/#references): ediții pentru nivelul de execuție și pentru nivelul de consens.
 

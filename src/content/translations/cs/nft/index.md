@@ -304,7 +304,7 @@ Ethereum umožňuje NFT fungovat z několika důvodů:
 
 ## Dopad NFT na životní prostředí {#environmental-impact-nfts}
 
-Vytváření a převod NFT jsou pouze transakce na síti Ethereum. Těžba, nákup, výměna nebo interakce s NFT přímo nespotřebovává energii. Od aktualizace [The Merge](/upgrades/merge) je Ethereum nízkoenergetickým blockchainem, což znamená, že dopad NFT na životní prostředí je zanedbatelný.
+Vytváření a převod NFT jsou pouze transakce na síti Ethereum. Těžba, nákup, výměna nebo interakce s NFT přímo nespotřebovává energii. Od aktualizace [The Merge](/roadmap/merge) je Ethereum nízkoenergetickým blockchainem, což znamená, že dopad NFT na životní prostředí je zanedbatelný.
 
 [Více o energetické spotřebě Etherea](/energy-consumption/).
 

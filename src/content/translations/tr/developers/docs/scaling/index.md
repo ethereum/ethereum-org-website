@@ -27,7 +27,7 @@ Bu ölçeklendirme yöntemi, Ethereum protokolünde değişiklik yapılmasını 
 
 Parçalama, yükü yaymak için bir veri tabanını yatay olarak bölme işlemidir. Ethereum bağlamında parçalama, "parça" olarak bilinen yeni zincirler oluşturarak ağ tıkanıklığını azaltır ve saniye başına işlem kapasitesini artırır. Bu, aynı zamanda doğrulayıcıların ağdaki işlemlerin tamamını işleme zorunluluğunu ortadan kaldırarak tüm doğrulayıcıların yükünü azaltır.
 
-[Parçalama](/upgrades/sharding/) hakkında daha fazla bilgi.
+[Parçalama](/roadmap/danksharding/) hakkında daha fazla bilgi.
 
 ## Zincir dışında ölçeklendirme {#off-chain-scaling}
 
