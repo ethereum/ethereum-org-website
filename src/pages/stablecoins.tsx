@@ -13,6 +13,7 @@ import {
   BoxProps,
   FlexProps,
   HeadingProps,
+  SimpleGrid,
 } from "@chakra-ui/react"
 
 import ButtonLink from "../components/ButtonLink"
@@ -46,6 +47,21 @@ const tooltipContent = (
 const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />
 
 const Divider = () => <Box my={16} w="10%" h={1} bg="homeDivider" />
+
+const EditorsChoice = (props: FlexProps) => (
+  <Flex
+    flexDirection={{ base: "column-reverse", lg: "row" }}
+    justifyContent="space-between"
+    width="full"
+    border="1.5px solid"
+    borderColor="text"
+    borderRadius="sm"
+    background="background"
+    color="text"
+    p={8}
+    mb={8}
+  />
+)
 
 const Page = (props: FlexProps) => (
   <Flex
@@ -409,7 +425,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
         mt={8}
         mb={8}
         background="cardGradient"
-        boxShadow="tableItemBoxShadow"
+        boxShadow="inset 0px 1px 0px var(--eth-colors-tableItemBoxShadow)"
       >
         <Box mb={-8} py={4} px={8} w="full">
           <H2 mt={0}>
@@ -446,25 +462,8 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
           <Text>
             <Translation id="page-stablecoins-editors-choice-intro" />
           </Text>
-          <Flex
-            width="full"
-            flexDirection={{ base: "column", lg: "row" }}
-            align="stretch"
-          >
-            <Flex
-              flexDirection={{ base: "column-reverse", lg: "row" }}
-              justifyContent="space-between"
-              width="full"
-              border="1.5px solid"
-              borderColor="text"
-              boxShadow="gridYellowBoxShadow"
-              borderRadius="sm"
-              background="background"
-              color="text"
-              p={8}
-              mb={8}
-              mr={{ base: 0, lg: 8 }}
-            >
+          <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={16}>
+            <EditorsChoice boxShadow="gridYellowBoxShadow">
               <Box
                 display="flex"
                 w="full"
@@ -472,7 +471,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                 justifyContent="center"
                 flexDirection="column"
                 ml={{ base: "auto", lg: 0 }}
-                mr={{ base: "auto", lg: 2 }}
+                mr={{ base: "auto", lg: 8 }}
               >
                 <Box>
                   <H2 fontSize="2rem" mt={0} mb={2}>
@@ -509,25 +508,11 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                 flex="1"
                 maxWidth={{ base: "96px", sm: "160px", md: "240px" }}
                 minWidth={{ base: "96px", sm: "160px" }}
-                my={{ base: 8, md: 8, lg: 0 }}
-                mx={{ base: 0, md: 8, lg: 0 }}
+                my={{ base: 8, md: 0 }}
               />
-            </Flex>
+            </EditorsChoice>
 
-            <Flex
-              flexDirection={{ base: "column-reverse", lg: "row" }}
-              justifyContent="space-between"
-              width="full"
-              border="1.5px solid"
-              borderColor="text"
-              boxShadow="gridBlueBowShadow"
-              borderRadius="sm"
-              background="background"
-              color="text"
-              p={8}
-              mb={8}
-              ml={{ base: 0, lg: 8 }}
-            >
+            <EditorsChoice boxShadow="gridBlueBowShadow">
               <Box
                 display="flex"
                 w="full"
@@ -535,7 +520,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                 justifyContent="center"
                 flexDirection="column"
                 ml={{ base: "auto", lg: 0 }}
-                mr={{ base: "auto", lg: 2 }}
+                mr={{ base: "auto", lg: 8 }}
               >
                 <H2 fontSize="2rem" mt={0} mb={2}>
                   <Translation id="page-stablecoins-usdc-banner-title" />
@@ -574,16 +559,14 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
                 flex="1"
                 maxWidth={{ base: "96px", sm: "160px", md: "240px" }}
                 minWidth={{ base: "96px", sm: "160px" }}
-                mx={{ base: 0, lg: 8 }}
-                mb={{ base: 8, lg: 8 }}
-                mt={0}
+                mb={{ base: 8, md: 0 }}
               />
-            </Flex>
-          </Flex>
+            </EditorsChoice>
+          </SimpleGrid>
           <H3>
             <Translation id="page-stablecoins-top-coins" />
             <Tooltip content={tooltipContent}>
-              <Icon ml={2} fill="'text" name="info" fontSize="14px" />
+              <Icon ml={2} fill="'text" name="info" boxSize={4} />
             </Tooltip>
           </H3>
           <Text>
